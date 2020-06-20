@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08a644f9de2f406ecb0abfaa30bf1c9e646213f0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766892"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964507"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Programmgesteuertes Laden und Ausführen eines lokalen Pakets
   Sie können [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete mit einer der unter [Ausführen von Paketen](../packages/run-integration-services-ssis-packages.md) beschriebenen Methoden bei Bedarf oder zu vorbestimmten Zeiten ausführen. Mit nur wenigen Codezeilen können Sie ein Paket jedoch auch mit einer benutzerdefinierten Anwendung wie einer Windows Forms-Anwendung, einer Konsolenanwendung, einem Webformular oder Webdienst von ASP.NET oder einem Windows-Dienst ausführen.  
@@ -59,7 +58,7 @@ ms.locfileid: "62766892"
   
 2.  Klicken Sie im Menü **Projekt** auf **Verweis hinzufügen**, und fügen Sie einen Verweis auf **Microsoft.SqlServer.ManagedDTS.dll** hinzu. Klicken Sie auf **OK**.  
   
-3.  Verwenden Sie die `Imports` Visual Basic-Anweisung oder die `using` c#-Anweisung, um den **Microsoft. SqlServer. DTS. Runtime** -Namespace zu importieren.  
+3.  Verwenden Sie die Visual Basic- `Imports` Anweisung oder die c#- `using` Anweisung, um den **Microsoft. SqlServer. DTS. Runtime** -Namespace zu importieren.  
   
 4.  Fügen Sie den folgenden Code in der Hauptroutine hinzu. Die abgeschlossene Konsolenanwendung sollte wie im folgenden Beispiel dargestellt aussehen.  
   

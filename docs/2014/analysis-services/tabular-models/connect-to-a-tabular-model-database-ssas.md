@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4685dc65c860776143f25f4299a62427adfcb31f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067657"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939891"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank (SSAS)
   Nachdem Sie ein tabellarisches Modell erstellt und auf einem Analysis Services-Tabellenmodus-Server bereitgestellt haben, müssen Sie Berechtigungen festlegen, die es für Clientanwendungen verfügbar machen. Dieses Thema erläutert die Vorgehensweise bei Berechtigungen und beim Verbindungsaufbau mit einer Datenbank ausgehend von Clientanwendungen.  
@@ -31,7 +30,7 @@ ms.locfileid: "66067657"
   
  [Herstellen einer Verbindung von Excel oder SharePoint aus](#bkmk_excelconn)  
   
- [Beheben von Verbindungsproblemen](#bkmk_Tshoot)  
+ [Problembehandlung bei Verbindungsproblemen](#bkmk_Tshoot)  
   
 ##  <a name="user-permissions-on-the-database"></a><a name="bkmk_userpermissions"></a>Benutzerberechtigungen für die Datenbank  
  Benutzer, die eine Verbindung mit Tabellendatenbanken herstellen, müssen die Mitgliedschaft in einer Datenbankrolle besitzen, die einen Lesezugriff festlegt.  
@@ -81,7 +80,7 @@ ms.locfileid: "66067657"
   
 2.  Wählen Sie **Aus Analysis Services**aus.  
   
-3.  Geben Sie unter **Servername**den Namen der Analysis Services-Instanz an, die die Datenbank hostet. Der Servername ist häufig der Name des Computers, auf dem die Software ausgeführt wird. Wenn der Server als benannte Instanz installiert wurde, müssen Sie den Namen im folgenden Format angeben: \<Servername>\\<instanceName.\>  
+3.  Geben Sie unter **Servername**den Namen der Analysis Services-Instanz an, die die Datenbank hostet. Der Servername ist häufig der Name des Computers, auf dem die Software ausgeführt wird. Wenn der Server als benannte Instanz installiert wurde, müssen Sie den Namen im folgenden Format angeben: \<servername> \\<instanceName \> .  
   
      Die Serverinstanz muss für die eigenständige tabellarische Bereitstellung konfiguriert sein, und die Serverinstanz muss eine eingehende Regel aufweisen, die den Zugriff darauf zulässt. Weitere Informationen finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) und [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66067657"
   
  Beim Importieren von Daten tritt dieser Microsoft Excel-Fehler auf, wenn Sie versuchen, mithilfe des Assistenten eine Verbindung mit einer Tabellenmodell-Datenbank auf einem Analysis Services-Remoteserver herzustellen und Sie nicht über ausreichende Berechtigungen verfügen. Um diesen Fehler zu beheben, müssen Sie über Benutzerzugriffsrechte für die Datenbank verfügen. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Benutzerzugriff auf Daten.  
   
- **Fehler beim Herstellen einer Verbindung mit der externen Datenquelle. Die folgenden Verbindungen wurden nicht aktualisiert: \<Modellname> Sandbox**  
+ **Fehler beim Herstellen einer Verbindung mit der externen Datenquelle. Die folgenden Verbindungen wurden nicht aktualisiert: \<model name> Sandbox**  
   
  In SharePoint tritt dieser Microsoft Excel-Fehler auf, wenn Sie eine Dateninteraktion, z. B. das Filtern von Daten, in einer PivotTable durchführen, die Modelldaten verwendet. Der Fehler tritt auf, da Sie nicht über ausreichende Berechtigungen für den Analysis Services-Remoteserver verfügen. Um diesen Fehler zu beheben, müssen Sie über Benutzerzugriffsrechte für die Datenbank verfügen. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Benutzerzugriff auf Daten.  
   

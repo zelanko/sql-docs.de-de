@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84918dd3f50d129485911fc880e67c0152fa905c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bec2f363cd8c4f7dea45935568a88722b19323fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882248"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060420"
 ---
 # <a name="replicate-schema-changes"></a>Replizieren von Schemaänderungen
   In diesem Thema wird beschrieben, wie Schemaänderungen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]repliziert werden.  
@@ -54,11 +53,11 @@ ms.locfileid: "73882248"
 -   Die ALTER TABLE ... Die DROP COLUMN-Anweisung wird grundsätzlich auf alle Abonnenten repliziert, deren Abonnement die Spalten enthält, die gelöscht werden, auch wenn Sie die Replikation von Schemaänderungen deaktiviert haben.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Wenn die Schemaänderungen nicht auf eine Veröffentlichung repliziert werden sollen, deaktivieren Sie im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** die Replikation der Schemaänderungen. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+ Wenn Sie Schema Änderungen für eine Veröffentlichung nicht replizieren möchten, deaktivieren Sie die Replikation von Schema Änderungen im Dialogfeld **Veröffentlichungs \<Publication> Eigenschaften-** . Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>So deaktivieren Sie die Replikation von Schemaänderungen  
   
-1.  Legen Sie auf der Seite **Abonnementoptionen** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** die Eigenschaft **Schemaänderungen replizieren** auf **FALSE** fest.  
+1.  Legen Sie im Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** auf der Seite **Abonnementoptionen** den Wert der Eigenschaft **Schema Änderungen replizieren** auf **false**fest.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -69,27 +68,27 @@ ms.locfileid: "73882248"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>So erstellen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung, die keine Schemaänderungen repliziert  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungs Datenbank [sp_addpublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)aus, und geben Sie für ** \@replicate_ddl**den Wert **0** an. Weitere Informationen finden Sie unter [Create a Publication](create-a-publication.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungs Datenbank [sp_addpublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)aus, und geben Sie für ** \@ replicate_ddl**den Wert **0** an. Weitere Informationen finden Sie unter [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>So erstellen Sie eine Mergeveröffentlichung, die keine Schemaänderungen repliziert  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungs Datenbank [sp_addmergepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)aus, und geben Sie für ** \@replicate_ddl**den Wert **0** an. Weitere Informationen finden Sie unter [Create a Publication](create-a-publication.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungs Datenbank [sp_addmergepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)aus, und geben Sie für ** \@ replicate_ddl**den Wert **0** an. Weitere Informationen finden Sie unter [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>So deaktivieren Sie vorübergehend die Replikation von Schemaänderungen in einer Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie für eine Veröffentlichung mit Replikation von Schema Änderungen [sp_changepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)aus, und geben Sie dabei den Wert **replicate_ddl** für ** \@** die-Eigenschaft und den Wert **0** für ** \@Value**an.  
+1.  Führen Sie für eine Veröffentlichung mit Replikation von Schema Änderungen [sp_changepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)aus, und geben Sie dabei den Wert **replicate_ddl** für die- ** \@ Eigenschaft** und den Wert **0** für ** \@ value**an.  
   
 2.  Führen Sie den DDL-Befehl für das veröffentlichte Objekt aus.  
   
-3.  Optionale Aktivieren Sie die Replikation von Schema Änderungen erneut, indem Sie [sp_changepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)ausführen, und ** \@** geben Sie dabei den Wert **replicate_ddl** für die-Eigenschaft und den Wert **1** für ** \@Value**an.  
+3.  Optionale Aktivieren Sie die Replikation von Schema Änderungen erneut, indem Sie [sp_changepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)ausführen, und geben Sie dabei den Wert **replicate_ddl** für die- ** \@ Eigenschaft** und den Wert **1** für ** \@ value**an.  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-merge-publication"></a>So deaktivieren Sie vorübergehend die Replikation von Schemaänderungen in einer Mergeveröffentlichung  
   
-1.  Führen Sie für eine Veröffentlichung mit Replikation von Schema Änderungen [sp_changemergepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)aus, und geben Sie dabei den Wert **replicate_ddl** für ** \@** die-Eigenschaft und den Wert **0** für ** \@Value**an.  
+1.  Führen Sie für eine Veröffentlichung mit Replikation von Schema Änderungen [sp_changemergepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)aus, und geben Sie dabei den Wert **replicate_ddl** für die- ** \@ Eigenschaft** und den Wert **0** für ** \@ value**an.  
   
 2.  Führen Sie den DDL-Befehl für das veröffentlichte Objekt aus.  
   
-3.  Optionale Aktivieren Sie die Replikation von Schema Änderungen erneut, indem Sie [sp_changemergepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)ausführen, und ** \@** geben Sie dabei den Wert **replicate_ddl** für die-Eigenschaft und den Wert **1** für ** \@Value**an.  
+3.  Optionale Aktivieren Sie die Replikation von Schema Änderungen erneut, indem Sie [sp_changemergepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)ausführen, und geben Sie dabei den Wert **replicate_ddl** für die- ** \@ Eigenschaft** und den Wert **1** für ** \@ value**an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](make-schema-changes-on-publication-databases.md)   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cca14f144e442fbe75e41dec6ce652c4603863b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d0390447c63bcc66428b886595e8c27a795a89f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226172"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044892"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Hinzufügen eines externen Tools zum Menü Extras (SQL Server Management Studio)
   Sie können eine beliebige [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows- oder [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]-Anwendung über [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] starten. Externe Anwendungen können dem Menü **Extras** hinzugefügt und über dieses Menü ausgeführt werden.  

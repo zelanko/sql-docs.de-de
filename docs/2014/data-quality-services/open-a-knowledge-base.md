@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0f55065d3c62d87b51af83a411e2ba302fcf0528
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac4f773ac783515a0eaea1684d70866f159e1372
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481289"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937461"
 ---
 # <a name="open-a-knowledge-base"></a>Öffnen einer Wissensdatenbank
   In diesem Thema wird beschrieben, wie eine vorhandene Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) geöffnet und auf die Domänenverwaltung, die Wissensermittlung und das Hinzufügen einer Abgleichsrichtlinie vorbereitet wird.  
@@ -77,7 +76,7 @@ ms.locfileid: "65481289"
 ##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>Status einer Wissensdatenbank  
  Das Statusfeld gibt an, in welcher Phase einer Aktivität sich die Wissensdatenbank befindet. Wenn Sie die Wissensdatenbank öffnen, wird sie in dieser Phase geöffnet.  
   
--   Leeres>: das Status Feld für eine Wissensdatenbank ist leer, wenn die Wissensdatenbank veröffentlicht wurde, indem Sie in der Domänen Verwaltungs Aktivität auf **veröffentlichen** geklickt und auf Ja klicken, um **die Wissensdatenbank zu veröffentlichen und zu beenden**. ** \< **  
+-   **\<Empty>**: Das Status Feld für eine Wissensdatenbank ist leer, wenn die Wissensdatenbank veröffentlicht wurde, indem Sie in der Domänen Verwaltungs Aktivität auf **veröffentlichen** geklickt und auf Ja klicken, um **die Wissensdatenbank zu veröffentlichen und zu beenden**.  
   
 -   **In Arbeit**: die Arbeit an der Wissensdatenbank wurde gespeichert, indem Sie in der Domänen Verwaltungs Aktivität auf **veröffentlichen** geklickt haben, und klicken Sie **auf Nein-die Arbeit in der Wissensdatenbank speichern und beenden**.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e0d2245dbba51d69d6dd31fd91044d3efd5b07b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97ba39d21df3ab77f32f1c15fbe9e55316a25089
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192028"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060084"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps-Eigenschaft (ClientNetworkProtocol-Klasse)
   Ruft die Anzahl der Eigenschaften ab, die das von der [SetOrderValue-Methode (ClientNetworkProtocol-Klasse)](clientnetworkprotocol-class.md)angegebene Clientnetzwerkprotokoll erfordert.  

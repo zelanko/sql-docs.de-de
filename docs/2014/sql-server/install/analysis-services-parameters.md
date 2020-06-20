@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 52083ddb-d677-49fc-ad59-285743f4921d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c70a75b08a3e9fcda2ae9a31a27477070d09e6e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 339758d99a2b0360be1073c39bcac77f43aec629
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096781"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045983"
 ---
 # <a name="analysis-services-parameters"></a>Analysis Services-Parameter
-  Zum Analysieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]von müssen Sie eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] angeben und Informationen darüber bereitstellen, wie Sie eine Verbindung mit dieser Instanz herstellen.  
+  Zum Analysieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] von müssen Sie eine Instanz von angeben [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und Informationen darüber bereitstellen, wie Sie eine Verbindung mit dieser Instanz herstellen.  
   
 ## <a name="options"></a>Optionen  
  **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Instanzname**  

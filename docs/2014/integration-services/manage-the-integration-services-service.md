@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc3b1eb4e73b3d77b49cc9f485e0a6fc456a8875
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: baa716eec75925c97f987656d11e39ba947918d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951360"
 ---
 # <a name="manage-the-integration-services-service"></a>Verwalten des Integration Services-Diensts
     
@@ -28,7 +27,7 @@ ms.locfileid: "66057792"
  Wenn Sie die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Komponente von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]installieren, wird auch der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst installiert. Standardmäßig wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst gestartet, und der Starttyp des Dienstes ist auf automatisch festgelegt. Sie müssen jedoch auch [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] installieren, um den Dienst zur Verwaltung gespeicherter und ausgeführter [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete verwenden zu können.  
   
 > [!NOTE]  
->  Mit der [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] -Version von [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]können Sie keine Verbindung mit einer Instanz des-Dienstanbieter herstellen. Das heißt, im Dialogfeld **Verbindung mit Server herstellen** können Sie keinen Server eingeben, auf dem nur die [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] -Version des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts ausgeführt wird. Sie können jedoch die Konfigurationsdatei für den Dienst von der [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] -Version von [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] aus bearbeiten und so Pakete verwalten, die in einer Instanz von [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]gespeichert sind. Weitere Informationen finden Sie unter [Konfigurieren des Integration Services-Diensts &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md).  
+>  Mit der-Version von können Sie keine Verbindung mit einer Instanz des- [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Dienstanbieter herstellen [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] . Das heißt, im Dialogfeld **Verbindung mit Server herstellen** können Sie keinen Server eingeben, auf dem nur die [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] -Version des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts ausgeführt wird. Sie können jedoch die Konfigurationsdatei für den Dienst von der [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] -Version von [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] aus bearbeiten und so Pakete verwalten, die in einer Instanz von [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]gespeichert sind. Weitere Informationen finden Sie unter [Konfigurieren des Integration Services-Diensts &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md).  
   
  Es kann nur eine einzige Instanz des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienstes auf einem Computer installiert werden. Der Dienst ist nicht spezifisch für eine bestimmte Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]. Sie melden sich beim Dienst mit dem Namen des Computers an, auf dem er ausgeführt wird.  
   

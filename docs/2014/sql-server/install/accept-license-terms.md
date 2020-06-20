@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d41879b84d98f72e570b00a61341a53d2e6187a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096839"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046450"
 ---
 # <a name="accept-license-terms"></a>Akzeptieren von Lizenzbedingungen
   Mithilfe der Seite **Lizenzbedingungen akzeptieren** des Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie die Lizenzbedingungen für diese Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]akzeptieren.  
@@ -46,13 +45,13 @@ ms.locfileid: "66096839"
   
  Informationen zur Funktionsverwendung werden an [!INCLUDE[msCoName](../../includes/msconame-md.md)]gesendet und dort mit eingeschränktem Zugriff gespeichert.  
   
- Um die CEIP-Berichterstellung nach Abschluss des Setups zu deaktivieren, verwenden Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tool Fehler-und Verwendungs Bericht** Erstellung im Menü **Konfigurationstools** .  
+ Um die CEIP-Berichterstellung nach Abschluss des Setups zu deaktivieren, verwenden Sie das Tool ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehler-und Verwendungs Bericht** Erstellung im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Menü **Konfigurationstools** .  
   
  Informationen zu Setupaktionen wie Installations-, Upgrade- oder Reparaturvorgängen usw. werden ausschließlich während der Ausführung des Setupprogramms erfasst und hochgeladen.  
   
  Für alle anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten werden einmal täglich Informationen zu allen aktivierten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erfasst. Der Zeitpunkt der Erfassung ist standardmäßig Mitternacht, um die Belastung des Servers zu minimieren. Wenn Sie diesen Zeitpunkt ändern möchten, können Sie manuell den Registrierungsschlüssel bearbeiten, durch den die Erfassungszeit gesteuert wird. Jede Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat ihren eigenen Registrierungsschlüssel:  
   
- HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12. \<InstanceId> \cpeer \timeofreporting  
+ HKLM\Software \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \mssql12. \<INSTANCEID> \Cpeer \timeofreporting  
   
  Der Wert dieses Registrierungsschlüssels enthält den Ausführungszeitpunkt der Sammlung als Anzahl von Minuten ab 00:00 Uhr (Mitternacht). Bei einem Wert von 60 würde die Erfassung also beispielsweise um 1:00 Uhr ausgeführt werden, bei einem Wert von 1200 um 8:00 Uhr usw.  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66096839"
   
  Wenn Sie die Fehlerberichterstellung aktivieren und ein schwerwiegender Fehler auftritt, wird möglicherweise im Windows-Ereignisprotokoll eine Meldung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] mit einem Verweis auf einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base-Artikel zu dem entsprechenden Fehler angezeigt.  
   
- Um nach Abschluss des Setups die Fehler- und Funktionsverwendungs-Berichterstellung für alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die dazugehörigen Komponenten zu deaktivieren, wechseln Sie in das Dialogfeld **Einstellungen für Fehler- und Verwendungsberichte** , und deaktivieren Sie die Kontrollkästchen für die **Funktionsverwendung**. Wenn **die Fehlerberichterstattung** für mehrere Komponenten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von (die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]freigegebenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Komponenten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)],, und) aktiviert ist, können Sie die Fehlerberichterstattung für jede Instanz einer einzelnen Komponente sowie für freigegebene Komponenten, die als **andere**aufgelistet sind, deaktivieren.  
+ Um nach Abschluss des Setups die Fehler- und Funktionsverwendungs-Berichterstellung für alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die dazugehörigen Komponenten zu deaktivieren, wechseln Sie in das Dialogfeld **Einstellungen für Fehler- und Verwendungsberichte** , und deaktivieren Sie die Kontrollkästchen für die **Funktionsverwendung**. Wenn die **Fehlerberichterstattung** für mehrere Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (die freigegebenen [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Komponenten,, und) aktiviert ist [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , können Sie die Fehlerberichterstattung für jede Instanz einer einzelnen Komponente sowie für freigegebene Komponenten, die als **andere**aufgelistet sind, deaktivieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Informationen zu den SQL Server-Lizenzbedingungen](../../../2014/getting-started/about-the-sql-server-license-terms.md)  

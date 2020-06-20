@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 06ae01a097b164abb1b55267853ee99f7e5bf445
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b8aa5b83756df36b133a339ba99b13406251947
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483835"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971460"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Ordner- und Dateiberechtigungen (Master Data Services)
-  Bei der Installation von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]werden Ordner und Dateien im Dateisystem in dem Installationspfad installiert, der für freigegebenen Funktionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] festgelegt wurde. Wenn Sie den Standard Installationspfad für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] freigegebene Funktionen verwenden, lautet der Installations [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Pfad für " *Laufwerk*: \Programme\Microsoft SQL server\120\master Data Services". Sie können den Installationspfad für freigegebene Funktionen ändern; achten Sie dabei jedoch auf Berechtigungen, die vom übergeordneten Ordner geerbt werden, und auf explizit für [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]festgelegte Berechtigungen.  
+  Bei der Installation von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]werden Ordner und Dateien im Dateisystem in dem Installationspfad installiert, der für freigegebenen Funktionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] festgelegt wurde. Wenn Sie den Standard Installationspfad für frei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gegebene Funktionen verwenden, lautet der Installationspfad für " [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] *Laufwerk*: \Programme\Microsoft SQL server\120\master Data Services". Sie können den Installationspfad für freigegebene Funktionen ändern; achten Sie dabei jedoch auf Berechtigungen, die vom übergeordneten Ordner geerbt werden, und auf explizit für [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]festgelegte Berechtigungen.  
   
 ## <a name="inherited-permissions"></a>Geerbte Berechtigungen  
  Der Order **Microsoft SQL Server** , der Ordner **Master Data Services** und die meisten Unterordner und Dateien erben Berechtigungen vom übergeordneten Ordner, der bei der Installation von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] angegeben wurde. Bei Auswahl des Standardinstallationspfads lautet der übergeordnete Ordner, von dem Berechtigungen geerbt werden, *Laufwerk*:\Programme. In der folgenden Tabelle werden die Standardberechtigungen für den Ordner **Programme**beschrieben.  
@@ -37,7 +36,7 @@ ms.locfileid: "65483835"
 |---------------------------|-----------------|  
 |CREATOR OWNER|Spezielle Berechtigungen|  
 |SYSTEM|Spezielle Berechtigungen|  
-|Administratoren|Spezielle Berechtigungen|  
+|Administrators|Spezielle Berechtigungen|  
 |Benutzer|Lesen & Ausführen, Ordnerinhalt auflisten, Lesen|  
 |TrustedInstaller|Ordnerinhalt auflisten, Spezielle Berechtigungen|  
   
@@ -49,7 +48,7 @@ ms.locfileid: "65483835"
 |Gruppen- oder Kontoname|Berechtigungen|  
 |---------------------------|-----------------|  
 |SYSTEM|Ändern, Lesen & Ausführen, Ordnerinhalt auflisten, Lesen, Schreiben|  
-|Administratoren|Ändern, Lesen & Ausführen, Ordnerinhalt auflisten, Lesen, Schreiben|  
+|Administrators|Ändern, Lesen & Ausführen, Ordnerinhalt auflisten, Lesen, Schreiben|  
 |MDS_ServiceAccounts|Ändern, Lesen & Ausführen, Ordnerinhalt auflisten, Lesen, Schreiben|  
   
 ###### <a name="webconfig-permissions"></a>Berechtigungen in der Datei "Web.config"  
@@ -57,7 +56,7 @@ ms.locfileid: "65483835"
 |Gruppen- oder Kontoname|Berechtigungen|  
 |---------------------------|-----------------|  
 |SYSTEM|Vollzugriff, Ändern, Lesen & Ausführen, Lesen, Schreiben|  
-|Administratoren|Vollzugriff, Ändern, Lesen & Ausführen, Lesen, Schreiben|  
+|Administrators|Vollzugriff, Ändern, Lesen & Ausführen, Lesen, Schreiben|  
 |MDS_ServiceAccounts|Lesen & Ausführen, Lesen|  
   
  Weitere Informationen zu den Inhalten der Web.config-Datei von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] finden Sie unter [Webkonfigurationsreferenz &#40;Master Data Services&#41;](web-configuration-reference-master-data-services.md).  

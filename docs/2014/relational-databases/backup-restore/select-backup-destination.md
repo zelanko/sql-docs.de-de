@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d9b4a0e07f32e074ff7e8875c263615bcebc12d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ffd1d2529dd13e42689bcf168c972d757fb5499
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874879"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956540"
 ---
 # <a name="select-backup-destination"></a>Sicherungsziel auswählen
   Wählen Sie im Dialogfeld **Sicherungsziel auswählen** ein Gerät als Sicherungsziel aus. Ein Sicherungsziel kann entweder ein Datenträger oder ein logisches Sicherungsmedium sein.  

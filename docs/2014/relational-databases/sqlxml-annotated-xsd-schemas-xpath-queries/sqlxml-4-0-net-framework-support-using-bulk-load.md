@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c84e6c6d9e35526f51f010ab27bbc9d46f83d508
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ef1bec93a1e0ce04c40f4333fa3450118da08df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717556"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060110"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Verwenden von SQLXML-Massenladen in der .NET-Umgebung
   In diesem Thema wird erklärt, wie die XML-Massenladefunktionalität in der .NET-Umgebung verwendet werden kann. Ausführliche Informationen zum XML-Massen Laden finden Sie unter [Durchführen von Massen Laden von XML-Daten &#40;SQLXML 4,0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
@@ -107,13 +106,13 @@ ms.locfileid: "82717556"
     </ROOT>  
     ```  
   
-4.  Starten Sie Visual Studio.  
+4.  Starten Sie Visual Studio.  
   
 5.  Erstellen Sie eine C#- Konsolenanwendung.  
   
 6.  Wählen Sie im Menü **Projekt** den Befehl **Verweis hinzufügen**aus.  
   
-7.  Wählen Sie auf der Registerkarte **com** **Microsoft SQLXML Bulkload 4,0 Type Library** (Xblkld4. dll) aus, und klicken Sie auf **OK**. Die im Projekt erstellte Assembly **Interop. SQLXMLBULKLOADLib** wird angezeigt.  
+7.  Wählen Sie auf der Registerkarte **com** **Microsoft SQLXML Bulkload 4,0 Type Library** (xblkld4.dll) aus, und klicken Sie auf **OK**. Die im Projekt erstellte Assembly **Interop. SQLXMLBULKLOADLib** wird angezeigt.  
   
 8.  Ersetzen Sie die Main()-Methode durch den folgenden Code. Aktualisieren Sie die **ConnectionString** -Eigenschaft und den Dateipfad zu den Schema-und Datendateien.  
   

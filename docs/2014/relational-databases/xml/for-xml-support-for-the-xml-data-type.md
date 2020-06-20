@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 537a3aaafcc2a0ad4ba2c59ae8d52f8e5ced5868
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ad905027458e7594a46e3ab416aaa1f4f43cbc59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716483"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061234"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>FOR XML-Unterstützung für den xml-Datentyp
   Wenn eine FOR XML-Abfrage eine Spalte vom `xml`-Typ in der SELECT-Klausel angibt, werden die Spaltenwerte unabhängig davon, ob die ELEMENTS-Direktive angegeben wird, im zurückgegebenen XML als Elemente zugeordnet. XML-Deklarationen in einer Spalte des `xml`-Typs werden nicht serialisiert.  

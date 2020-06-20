@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45430eea18d533855e00021f5fda46d80ac0e0c2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054838"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972650"
 ---
 # <a name="unpivot-transformation-editor"></a>Editor zum Entpivotieren von Transformationen
   Mithilfe des Dialogfelds **Transformations-Editor für UNPIVOT** können Sie die in Zeilen neu anzuordnenden Spalten, die Datenspalte sowie die Ausgabespalte für den neuen pivotierten Wert angeben.  
@@ -29,7 +28,7 @@ ms.locfileid: "66054838"
   
  Weitere Informationen zur Entpivotierungstransformation finden Sie unter [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Geben Sie mithilfe der Kontrollkästchen die Spalten an, die in Zeilen neu angeordnet werden sollen.  
   
@@ -63,6 +62,6 @@ ms.locfileid: "66054838"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Pivot-Transformation](data-flow/transformations/pivot-transformation.md)  
+ [Transformation für Pivot](data-flow/transformations/pivot-transformation.md)  
   
   

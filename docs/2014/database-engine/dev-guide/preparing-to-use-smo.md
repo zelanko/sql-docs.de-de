@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 05018a4d-2339-4ecf-8769-414ec781c535
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ebc622c0adb9fe2422c1cd215de36b6ba79057c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57dbecc278a3ddb0d544510873d9b40f29702451
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780831"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933441"
 ---
 # <a name="preparing-to-use-smo"></a>Vorbereiten der Verwendung von SMO
   Dieser Abschnitt enthält Informationen, die Sie in die Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) einführen. Die folgende Liste hilft Ihnen, Informationen zu Syntaxstilen in der Dokumentation, Systemanforderungen für die Programmierung in SMO, Dateien und Versionsnummern, eine Beschreibung der Neuigkeiten in SMO und ein Installationshandbuch zu finden.  

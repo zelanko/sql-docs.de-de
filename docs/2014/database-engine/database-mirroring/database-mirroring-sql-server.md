@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1221b1ff86b96490fb09a5785978dcc16ac40b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807918"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934291"
 ---
 # <a name="database-mirroring-sql-server"></a>Datenbankspiegelung (SQL Server)
     
@@ -211,7 +210,7 @@ ms.locfileid: "62807918"
 > [!NOTE]  
 >  Da gespiegelte Datenbanken voneinander unabhängig sind, ist für die Datenbanken kein Failover als Gruppe möglich.  
   
-###  <a name="client-connections"></a><a name="ClientConnections"></a>Client Verbindungen  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> Clientverbindungen  
  Unterstützung für Clientverbindungen wird vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereitgestellt. Weitere Informationen finden Sie unter [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)ausgetauscht werden.  
   
 ###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a>Auswirkungen des Anhaltens einer Sitzung auf das Prinzipal Transaktionsprotokoll  
@@ -229,11 +228,11 @@ ms.locfileid: "62807918"
   
 -   [Voll Text Kataloge](database-mirroring-and-full-text-catalogs-sql-server.md)  
   
--   [Datenbank-Momentaufnahmen](../../relational-databases/databases/database-snapshots-sql-server.md)  
+-   [Datenbankmomentaufnahmen](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
 -   [Replikation](database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="in-this-section"></a><a name="InThisSection"></a>In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> In diesem Abschnitt  
  [Voraussetzungen, Einschränkungen und Empfehlungen für die Datenbankspiegelung](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Beschreibt die Voraussetzungen und Empfehlungen zum Einrichten der Datenbankspiegelung.  
   
@@ -270,7 +269,7 @@ ms.locfileid: "62807918"
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 ### <a name="configuration-tasks"></a>Konfigurationstasks  
- **Verwenden von SQL Server Management Studio**  
+ **Verwendung von SQL Server Management Studio**  
   
 -   [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
@@ -296,7 +295,7 @@ ms.locfileid: "62807918"
   
 -   [Vorgehensweise: Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen](upgrading-mirrored-instances.md)  
   
--   [Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)  
+-   [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
 ### <a name="administrative-tasks"></a>Administrative Tasks  
  **Transact-SQL**  

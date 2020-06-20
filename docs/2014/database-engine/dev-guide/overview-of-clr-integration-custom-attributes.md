@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43db9f034a759e9c041f5cc6ab95baa5af4d7353
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781105"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933457"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Übersicht über benutzerdefinierte Attribute der CLR-Integration
   Die CLR-Komponente (Common Language Runtime) von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ermöglicht den Einsatz beschreibender Schlüsselwörter, so genannter Attribute. Diese Attribute stellen weitere Informationen für viele Elemente bereit, z. B. Methoden und Klassen. Die Attribute werden mit den Metadaten des Objekts in der Assembly gespeichert. Mit Attributen kann Code für andere Entwicklungstools beschrieben oder das Laufzeitverhalten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beeinflusst werden.  
   
- Wenn Sie eine CLR-Routine bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrieren, leitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Satz von Eigenschaften zu der Routine ab. Diese Routineneigenschaften bestimmen die Fähigkeiten der Routine, darunter auch, ob die Routine indiziert werden kann. Durch Festlegen von `DataAccess` für die `DataAccessKind.Read`-Eigenschaft können Sie beispielsweise innerhalb einer CLR-Funktion auf Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzertabellen zugreifen. Das folgende Beispiel zeigt einen einfachen Fall, in dem `DataAccess` die-Eigenschaft festgelegt ist, um den Datenzugriff aus einer Benutzertabelle **Table1**zu vereinfachen.  
+ Wenn Sie eine CLR-Routine bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrieren, leitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Satz von Eigenschaften zu der Routine ab. Diese Routineneigenschaften bestimmen die Fähigkeiten der Routine, darunter auch, ob die Routine indiziert werden kann. Durch Festlegen von `DataAccess` für die `DataAccessKind.Read`-Eigenschaft können Sie beispielsweise innerhalb einer CLR-Funktion auf Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzertabellen zugreifen. Das folgende Beispiel zeigt einen einfachen Fall, in dem die- `DataAccess` Eigenschaft festgelegt ist, um den Datenzugriff aus einer Benutzertabelle **Table1**zu vereinfachen.  
   
 ```csharp  
 using System;  

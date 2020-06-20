@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75667beed815ef93cd071935ce7e5a24cf5b7166
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7c7338500b68c157d5b555e29cf3a88bea3513c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702814"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009290"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>XML-Datentypunterstützung für SQLXML 4.0
   Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Eingabe von XML-Daten mithilfe des `xml`-Datentyps. Dieses Thema enthält Informationen, wie SQLXML 4.0 Instanzen von `xml`-Datentyp erkennt und unterstützt.  
@@ -34,7 +33,7 @@ ms.locfileid: "82702814"
   
 ## <a name="guidelines-and-limitations"></a>Richtlinien und Einschränkungen  
   
--   ** \< xsd: beliebige>können keiner** Spalte zugeordnet werden, einschließlich eines- `xml` Datentyps. Dieses Szenario wird in SQLXML durch die `sql:overflow-field`-Anmerkung unterstützt. Eine weitere Möglichkeit, das Problem zu umgehen, ist die Zuordnung eines `xml`-Datentypfelds als ein Element von `xsd:anyType`. Diese Problemumgehung wird im Beispiel "Zuordnen eines XML-Elements zu einer XML-Datentypspalte" gezeigt, auf das in der oben stehenden Tabelle verwiesen wird.  
+-   **\<xsd:any>** kann keiner Spalte zugeordnet werden, einschließlich eines- `xml` Datentyps. Dieses Szenario wird in SQLXML durch die `sql:overflow-field`-Anmerkung unterstützt. Eine weitere Möglichkeit, das Problem zu umgehen, ist die Zuordnung eines `xml`-Datentypfelds als ein Element von `xsd:anyType`. Diese Problemumgehung wird im Beispiel "Zuordnen eines XML-Elements zu einer XML-Datentypspalte" gezeigt, auf das in der oben stehenden Tabelle verwiesen wird.  
   
 -   XPath-Abfrage in den Inhalten von `xml`-Datentypspalten wird nicht unterstützt.  
   

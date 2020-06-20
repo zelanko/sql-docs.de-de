@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 22eeb621cb9c4ccdf0d853ff9d6d528c156c15a0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5acc2081212b0b732305949234e5f5d5ae73fa63
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706933"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926861"
 ---
 # <a name="getting-sql-server-assistance"></a>Informationsquellen für SQL Server
   Es gibt drei Hauptquellen für Informationen von [!INCLUDE[msCoName](../includes/msconame-md.md)] zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -77,7 +76,7 @@ ms.locfileid: "82706933"
   
  In der folgenden Tabelle werden diese Ressourcen und deren beabsichtigte Zielgruppen beschrieben.  
   
-|Resource|Zielgruppe|  
+|Ressource|Zielgruppe|  
 |--------------|--------------|  
 |[SQL Server Developer Center](https://msdn.microsoft.com/sqlserver/)|Entwickler von Datenbank-, Berichtsystem- und Business Intelligence-Lösungen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die ihre Anwendungen und Websites für die Verwendung dieser Systeme entwerfen möchten.|  
 |[XML Developer Center](https://go.microsoft.com/fwlink/?LinkId=42458)|Entwickler von Websites und Anwendungen, deren Sites und Anwendungen XML für die Datenspeicherung und -bearbeitung verwenden.|  
@@ -86,7 +85,7 @@ ms.locfileid: "82706933"
 ## <a name="additional-online-information"></a>Zusätzliche Onlineinformationen  
  Auf diesen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Websites sind zusätzliche [!INCLUDE[msCoName](../includes/msconame-md.md)]-Informationen verfügbar.  
   
-|Resource|BESCHREIBUNG|  
+|Ressource|Beschreibung|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Beinhaltet Produktinformationen, die eine Einschätzung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als Datenspeicher- und Business Intelligence-Tool ermöglichen.|  
 |[Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=42461)|Bietet ein durchsuchbares Repository mit Artikeln zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die vom [!INCLUDE[msCoName](../includes/msconame-md.md)] Support geschrieben wurden.|    

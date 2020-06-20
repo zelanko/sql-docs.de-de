@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 989e4b1b538144a1ead50cc3e28c64e0ae6e32c0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939561"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation für Fuzzygruppierung
   Die Transformation für Fuzzygruppierung führt Datenbereinigungsaufgaben durch, indem Datenzeilen identifiziert werden, die wahrscheinlich Duplikate sind, und eine kanonische Datenzeile ausgewählt wird, die zum Standardisieren der Daten verwendet wird.  
@@ -69,7 +68,7 @@ ms.locfileid: "62900559"
  Diese Transformation weist je eine Eingabe und eine Ausgabe auf. Eine Fehlerausgabe wird nicht unterstützt.  
   
 ## <a name="row-comparison"></a>Zeilenvergleich  
- Wenn Sie die Transformation für Fuzzygruppierung konfigurieren, können Sie den Vergleichsalgorithmus angeben, den die Transformation zum Vergleichen der Zeilen in der Transformationseingabe verwendet. Wenn Sie die-Eigenschaft auf `true`festlegen, vergleicht die Transformation jede Zeile in der Eingabe mit jeder anderen Zeile in der Eingabe. Dieser Vergleichsalgorithmus kann zwar präzisere Ergebnisse produzieren, führt jedoch wahrscheinlich zu einer Einschränkung der Transformationsleistung, sofern die Anzahl der Zeilen in der Eingabe nicht gering ist. Um Leistungsprobleme zu vermeiden, empfiehlt es sich, die Eigenschaft "voll `true` ständig" nur während der Paket Entwicklung auf festzulegen.  
+ Wenn Sie die Transformation für Fuzzygruppierung konfigurieren, können Sie den Vergleichsalgorithmus angeben, den die Transformation zum Vergleichen der Zeilen in der Transformationseingabe verwendet. Wenn Sie die-Eigenschaft auf festlegen `true` , vergleicht die Transformation jede Zeile in der Eingabe mit jeder anderen Zeile in der Eingabe. Dieser Vergleichsalgorithmus kann zwar präzisere Ergebnisse produzieren, führt jedoch wahrscheinlich zu einer Einschränkung der Transformationsleistung, sofern die Anzahl der Zeilen in der Eingabe nicht gering ist. Um Leistungsprobleme zu vermeiden, empfiehlt es sich, die Eigenschaft "vollständig" `true` nur während der Paket Entwicklung auf festzulegen.  
   
 ## <a name="temporary-tables-and-indexes"></a>Temporäre Tabellen und Indizes  
  Zur Laufzeit erstellt die Transformation für Fuzzygruppierung temporäre Objekte wie z. B. Tabellen und Indizes mit potenziell erheblicher Größe in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank, zu der die Transformation eine Verbindung herstellt. Die Größe der Tabellen und Indizes ist proportional zur Anzahl der Zeilen in der Transformationseingabe und zur Anzahl der von der Transformation für Fuzzygruppierung erstellten Token.  

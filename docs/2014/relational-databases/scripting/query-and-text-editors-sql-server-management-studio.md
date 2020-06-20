@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c3e064358b58844726daa6499dc6c2ed0eeedd1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b6d7e62118f4fe3a01bca158d9dce13d9e7bfb52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009660"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Abfrage- und Text-Editoren (SQL Server Management Studio)
   Mit den Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lassen sich [!INCLUDE[tsql](../../includes/tsql-md.md)]-, MDX-, DMX- oder XML/A-Skripts interaktiv bearbeiten und testen sowie XML- oder einfache Textdateien bearbeiten. Die einzelnen Editoren werden durch einen sprachspezifischen Dienst unterstützt, der Schlüsselwörter farblich kennzeichnet und den Code auf Syntaxfehler überprüft. Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor enthält einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger, mit dem Sie Probleme in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code beheben können.  
@@ -97,7 +96,7 @@ ms.locfileid: "82703795"
  **Clientstatistiken**  
  Zeigt Informationen zur Ausführung der Abfrage nach Kategorien geordnet an. Wenn **Clientstatistiken einschließen** vom Menü **Abfrage** ausgewählt ist, wird das Fenster **Clientstatistiken** nach jedem Ausführen einer Abfrage angezeigt. Statistiken von aufeinander ausgeführten Abfragen werden mit Durchschnittswerten aufgelistet. Wählen Sie **Clientstatistiken zurücksetzen** im Menü **Abfrage** aus, um den Durchschnitt zurückzusetzen.  
   
- **Code Ausschnitte**  
+ **Codeausschnitte**  
  Vorlagen, die Sie als Ausgangspunkt beim Hinzufügen von Anweisungen in dem Datenbank-Engine-Abfrage-Editor verwenden können. Sie können die vordefinierten in SQL Server enthaltenen Ausschnitte einfügen oder eigene Ausschnitte hinzufügen.  
   
  **SQLCMD-Modus**  

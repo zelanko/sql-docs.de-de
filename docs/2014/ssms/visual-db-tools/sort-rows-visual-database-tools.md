@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c689a30eb9357d940a547af503d8ff4edd7c087
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049151"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000907"
 ---
 # <a name="sort-rows-visual-database-tools"></a>Sortieren von Zeilen (Visual Database Tools)
   Sie können die Zeilen in einem Abfrageergebnis sortieren. Das heißt, Sie können eine bestimmte Spalte oder eine Spaltengruppe angeben und die Zeilen im Resultset anhand der Werte in diesen Spalten neu ordnen.  

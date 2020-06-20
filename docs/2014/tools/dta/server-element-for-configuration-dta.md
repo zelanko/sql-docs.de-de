@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2bc763d621d15f982a2670483683d3862e678c98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d569373f80a2f5488e8612cc30da264d283cd7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283674"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007654"
 ---
 # <a name="server-element-for-configuration-dta"></a>Server-Element für Konfiguration (DTA)
   Enthält die Identifikationsinformationen für den Server, auf dem der Datenbankoptimierungsratgeber die hypothetische Konfiguration auswerten soll (wird durch das `Configuration`-Element angegeben).  
@@ -50,7 +49,7 @@ ms.locfileid: "63283674"
 |**Untergeordnete Elemente**|[Name-Element für Server &#40;DTA&#41;](name-element-for-server-dta.md)<br /><br /> [Database-Element für Konfiguration &#40;DTA&#41;](database-element-for-configuration-dta.md)|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Sie können nur ein `Server` -Element für das `Configuration` -Element angeben. Dieses Element hat den Namen **ServerTypecomplexType** im [XML-Schema des Datenbankoptimierungsratgebers](https://go.microsoft.com/fwlink/?linkid=43100). Dieses `Server`-Element ist nicht mit dem untergeordneten Element für das `DTAInput`-Element identisch. Weitere Informationen finden Sie unter [Server-Element &#40;DTA&#41;](server-element-dta.md).  
+ Sie können nur ein- `Server` Element für das- `Configuration` Element angeben. Dieses Element hat den Namen **ServerTypecomplexType** im [XML-Schema des Datenbankoptimierungsratgebers](https://go.microsoft.com/fwlink/?linkid=43100). Dieses `Server`-Element ist nicht mit dem untergeordneten Element für das `DTAInput`-Element identisch. Weitere Informationen finden Sie unter [Server-Element &#40;DTA&#41;](server-element-dta.md).  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel für die Syntax finden Sie unter [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

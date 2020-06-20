@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25700bfb9e2cd28fd18efe59a2df4e68f468d39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767652"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965356"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>Schritt 1: Erstellen von Arbeitsordnern und Umgebungsvariablen
   In dieser Aufgabe erstellen Sie den Arbeitsordner (C:\DeploymentTutorial) und die neuen Systemumgebungsvariablen (`DataTransfer` und `LoadXMLData`), die in späteren Lernprogrammaufgaben verwendet werden.  
@@ -36,7 +35,7 @@ ms.locfileid: "62767652"
   
 3.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie anschließend auf **Ordner**.  
   
-4.  Benennen Sie den neuen `DeploymentTutorial`Ordner in um.  
+4.  Benennen Sie den neuen Ordner in um `DeploymentTutorial` .  
   
 ### <a name="to-create-local-environment-variables"></a>So erstellen Sie lokale Umgebungsvariablen  
   
@@ -48,11 +47,11 @@ ms.locfileid: "62767652"
   
 4.  Klicken Sie im Dialogfeld **Umgebungsvariablen** im Bereich **Systemvariablen** auf **Neu**.  
   
-5.  Geben `DataTransfer` Sie im Dialogfeld **neue System Variable** in das Feld **Variablenname** und `C:\DeploymentTutorial\datatransferconfig.dtsconfig` im Feld **Variablen Wert** ein.  
+5.  Geben Sie im Dialogfeld **neue System Variable** `DataTransfer` in das Feld **Variablenname** und `C:\DeploymentTutorial\datatransferconfig.dtsconfig` im Feld **Variablen Wert** ein.  
   
 6.  Klicken Sie auf **OK**.  
   
-7.  Klicken Sie erneut auf **neu** , `LoadXMLData` und geben **Variable name** Sie im Feld Variablenname `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` und im Feld **Variablen Wert** ein.  
+7.  Klicken Sie erneut auf **neu** , und geben Sie im Feld Variablen `LoadXMLData` **Name** und `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` im Feld **Variablen Wert** ein.  
   
 8.  Klicken Sie auf **OK** , um das Dialogfeld **Umgebungsvariablen** zu beenden.  
   
@@ -70,11 +69,11 @@ ms.locfileid: "62767652"
   
 4.  Klicken Sie im Dialogfeld **Umgebungsvariablen** unter **Systemvariablen** auf **Neu**.  
   
-5.  Geben `DataTransfer` Sie im Dialogfeld **neue System Variablen** in das Feld **Variablenname** und `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` im Feld **Variablen Wert** ein.  
+5.  Geben Sie im Dialogfeld **neue System Variablen** `DataTransfer` in das Feld **Variablenname** und `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` im Feld **Variablen Wert** ein.  
   
 6.  Klicken Sie auf **OK**.  
   
-7.  Klicken Sie erneut auf **neu** , `LoadXMLData` und geben **Variable name** Sie im Feld Variablenname `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` und im Feld **Variablen Wert** ein.  
+7.  Klicken Sie erneut auf **neu** , und geben Sie im Feld Variablen `LoadXMLData` **Name** und `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` im Feld **Variablen Wert** ein.  
   
 8.  Klicken Sie auf **OK** , um das Dialogfeld **Umgebungsvariablen** zu beenden.  
   

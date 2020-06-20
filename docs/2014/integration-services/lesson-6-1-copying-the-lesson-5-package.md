@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96f7f6ca45483fcfeb4e403659399972d81cda54
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890756"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951440"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 5
   In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 5 erstellten Pakets Lesson 5.dtsx. Wahlweise können Sie dem Projekt auch das im Lernprogramm enthaltene abgeschlossene Paket aus Lektion 5 hinzufügen und dann von diesem Paket eine Kopie erstellen. Sie verwenden diese neue Kopie im gesamten Rest der Lektion 6.  
@@ -38,7 +37,7 @@ ms.locfileid: "62890756"
   
 7.  Aktualisieren Sie im Eigenschaftenfenster die Name-Eigenschaft in Lesson 6.  
   
-8.  Aktivieren Sie das Kontrollkästchen für die ID-Eigenschaft, klicken Sie auf den Dropdown Pfeil \<, und klicken Sie dann auf neue ID generieren>.  
+8.  Klicken Sie in das Feld für die ID-Eigenschaft, auf den Dropdownpfeil und anschließend auf \<Generate New ID>.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>So fügen Sie das abgeschlossene Lektion 5-Paket hinzu  
   

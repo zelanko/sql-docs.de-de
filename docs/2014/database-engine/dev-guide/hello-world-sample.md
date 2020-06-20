@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac48f47b7455fd68245cec23c68132e4070835f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b6b8c303f056686efb5ba13b2924c9697fbd6e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637769"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933566"
 ---
 # <a name="hello-world-sample"></a>Beispiel "Hello World"
   Das Hello World-Beispiel veranschaulicht die grundlegenden Vorgänge, die beim Erstellen, Bereitstellen und Testen einer einfachen gespeicherten Prozedur, die auf einer CLR (Common Language Runtime)-Integration basiert, ausgeführt werden müssen. Diese Beispiel zeigt außerdem, wie Sie Daten über einen Datensatz, der dynamisch von der gespeicherten Prozedur erstellt und an den Aufrufer zurückgegeben wird, zurückgeben können.  
@@ -54,7 +53,7 @@ ms.locfileid: "73637769"
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
--   Wenn Sie kein Administrator für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete-Instanz sind, müssen Sie über einen Administrator verfügen, der Ihnen **die Berechtigung zum** Abschluss der Installation erteilt.  
+-   Wenn Sie kein Administrator für die verwendete- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz sind, müssen Sie über einen Administrator verfügen, der Ihnen **CreateAssembly** die Berechtigung zum Abschluss der Installation erteilt.  
   
 ## <a name="building-the-sample"></a>Erstellen des Beispiels  
   
@@ -78,7 +77,7 @@ ms.locfileid: "73637769"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und `test.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
+7.  Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
   
 8.  Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

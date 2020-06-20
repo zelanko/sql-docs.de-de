@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aaa1fb21c026d064c2b14db73aadc2b82e9c15d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524331"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996055"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Erste Schritte mit der Datenbank-Engine
   Willkommen bei den ersten Schritten im Lernprogramm zu [!INCLUDE[ssDE](../includes/ssde-md.md)] . Dieses Lernprogramm richtet sich an Benutzer, die noch nicht mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vertraut sind und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]installiert haben. Dieses kurze Lernprogramm hilft Ihnen bei den ersten Schritten mit [!INCLUDE[ssDE](../includes/ssde-md.md)].  

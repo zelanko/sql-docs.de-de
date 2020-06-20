@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5d44c980c7535b05d462d55e6f2aa1e87bf68c98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14b729156409fcf57b39c4bdefce95d3aa3eafcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637741"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933543"
 ---
 # <a name="in-process-data-access-sample"></a>Beispiel für In-Process-Datenzugriff
   Das `InProcessDataAccess`-Beispiel enthält eine bestimmte Anzahl von einfachen Funktionen zur Demonstration verschiedener Funktionen des prozessinternen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-CLR-Datenzugriffsanbieters.  
@@ -52,7 +51,7 @@ ms.locfileid: "73637741"
   
 -   Die AdventureWorks-Datenbank muss in der von Ihnen verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz installiert sein.  
   
--   Wenn Sie kein Administrator für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete-Instanz sind, müssen Sie über einen Administrator verfügen, der Ihnen **die Berechtigung zum** Abschluss der Installation erteilt.  
+-   Wenn Sie kein Administrator für die verwendete- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz sind, müssen Sie über einen Administrator verfügen, der Ihnen **CreateAssembly** die Berechtigung zum Abschluss der Installation erteilt.  
   
 ## <a name="building-the-sample"></a>Erstellen des Beispiels  
   
@@ -355,7 +354,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- Im folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) wird das Beispiel getestet, indem die in diesem Beispiel definierten gespeicherten Prozeduren und Funktionen durchgeführt werden.  
+ Im folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] ( `test.sql` ) wird das Beispiel getestet, indem die in diesem Beispiel definierten gespeicherten Prozeduren und Funktionen durchgeführt werden.  
   
 ```  
 USE AdventureWorks;  
