@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a37bafc9bac2601e3914455f431c639bce385f48
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a028ed31ff2f4936d5d7bd45ba7809467939718b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705348"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019902"
 ---
 # <a name="bcp_batch"></a>bcp_batch
   Führt einen Commit für alle zuvor aus Programmvariablen massenkopierten Zeilen aus, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bcp_sendrow [an](bcp-sendrow.md)gesendet wurden.  
@@ -45,7 +44,7 @@ hdbc
 ## <a name="returns"></a>Gibt zurück  
  Die Anzahl von Zeilen, die nach dem letzten Aufruf von **bcp_batch**gespeichert wurden, oder -1 im Fall eines Fehlers.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Batches von Massenkopiervorgängen stellen Transaktionen dar. Wenn eine Anwendung mit [bcp_bind](bcp-bind.md) und **bcp_sendrow** Zeilen von Programmvariablen in SQL-Server-Tabellen massenkopiert, wird für die Zeilen nur dann ein Commit durchgeführt, wenn das Programm **bcp_batch** oder [bcp_done](bcp-done.md)aufruft.  
   
  Sie können **bcp_batch** einmal für jede *n* Zeilen aufrufen oder dann, wenn bei den eingehenden Daten eine Pause auftritt (wie in einer Telemetrieanwendung). Wenn eine Anwendung **bcp_batch** nicht aufruft, wird nur dann ein Commit für die massenkopierten Zeilen ausgeführt, wenn **bcp_done** aufgerufen wird.  

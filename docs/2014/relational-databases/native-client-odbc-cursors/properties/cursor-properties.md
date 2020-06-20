@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 66a4fe9d231ea4d2a2231bdde65267a9cd47e4af
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9a33b3f99ff143b4c81de46a068bf088337ba204
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705583"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020574"
 ---
 # <a name="cursor-properties"></a>Cursoreigenschaften
   Die generellen Eigenschaften eines Cursors werden entweder durch die Einstellung des ODBC-Cursortyps oder das SQL-92/ISO-Cursorverhalten bestimmt. In den folgenden Themen werden weitere Anweisungs- und Verbindungsattribute beschrieben, die sich auf das Verhalten eines Cursors auswirken.  

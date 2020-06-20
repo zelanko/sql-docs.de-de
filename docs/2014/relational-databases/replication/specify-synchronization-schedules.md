@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d752817f7d620b2c6e5fdc5eeb2178c50c42040
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630805"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066580"
 ---
 # <a name="specify-synchronization-schedules"></a>Angeben von Synchronisierungszeitplänen
   In diesem Thema wird beschrieben, wie Synchronisierungszeitpläne in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angegeben werden. Während der Erstellung eines Abonnements kann ein Synchronisierungszeitplan definiert werden, der steuert, wann der Replikations-Agent für das Abonnement ausgeführt wird. Wenn Sie keine Zeitplanungsparameter angeben, wird der Standardzeitplan für das Abonnement verwendet.  
@@ -46,15 +45,15 @@ ms.locfileid: "62630805"
   
 |Agent|Auftragsname|  
 |-----------|--------------|  
-|Merge-Agent für Pullabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Abonnementdatenbank>-\<Ganzzahl>**|  
-|Merge-Agent für Pushabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Ganzzahl>**|  
-|Verteilungs-Agent für Pushabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Ganzzahl>** <sup>1</sup>|  
-|Verteilungs-Agent für Pullabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Abonnementdatenbank>-\<GUID>** <sup>2</sup>|  
-|Verteilungs-Agent für Pushabonnements für Nicht-SQL Server-Abonnenten|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Ganzzahl>**|  
+|Merge-Agent für Pullabonnements|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
+|Merge-Agent für Pushabonnements|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Verteilungs-Agent für Pushabonnements|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**<sup>1</sup>|  
+|Verteilungs-Agent für Pullabonnements|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**<sup>2</sup>|  
+|Verteilungs-Agent für Pushabonnements für Nicht-SQL Server-Abonnenten|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
   
- <sup>1</sup> Bei Pushabonnements für Oracle-Veröffentlichungen heißt es **\<Verleger>-\<Verleger**> anstatt **\<Verleger>-\<Veröffentlichungsdatenbank>** .  
+ <sup>1</sup> bei Pushabonnements für Oracle-Veröffentlichungen lautet der Wert * * \<Publisher> - \<Publisher**> und nicht**\<Publisher>-\<PublicationDatabase>**  
   
- <sup>2</sup> Bei Pullabonnements für Oracle-Veröffentlichungen heißt es **\<Verleger>-\<Verteilungsdatenbank**> anstatt **\<Verleger>-\<Veröffentlichungsdatenbank>** .  
+ <sup>2</sup> bei Pullabonnements für Oracle-Veröffentlichungen lautet der Wert * * \<Publisher> - \<DistributionDatabase**> und nicht**\<Publisher>-\<PublicationDatabase>**  
   
 #### <a name="to-specify-synchronization-schedules"></a>So geben Sie Synchronisierungszeitpläne an  
   
@@ -64,9 +63,9 @@ ms.locfileid: "62630805"
   
     -   **Nur bedarfsgesteuert ausführen**  
   
-    -   **\<Zeitplan definieren…>**  
+    -   **\<Define Schedule...>**  
   
-2.  Geben Sie bei der Auswahl von **\<Zeitplan definieren…>** im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Zeitplan an, und klicken Sie dann auf **OK**.  
+2.  Wenn Sie auswählen **\<Define Schedule...>** , geben Sie im Dialogfeld **Eigenschaften des Auftrags Zeitplans** einen Zeitplan an, und klicken Sie dann auf **OK**.  
   
 3.  Schließen Sie den Assistenten ab.  
   
@@ -78,9 +77,9 @@ ms.locfileid: "62630805"
   
 3.  Klicken Sie mit der rechten Maustaste auf ein Abonnement, und klicken Sie dann auf **Details anzeigen**.  
   
-4.  Klicken Sie im Fenster **Abonnement Abonnement \< Name>** auf **Aktion**, und klicken Sie dann auf ** \<Agentname> Auftrags Eigenschaften**.  
+4.  Klicken Sie im Fenster ** \< SubscriptionName> Abonnement** auf **Aktion**, und klicken Sie dann auf ** \<AgentName> Auftrags Eigenschaften**.  
   
-5.  Klicken Sie im Dialogfeld **Auftragseigenschaften -** JobName> **auf der Seite \<Zeitpläne** auf **Bearbeiten**.  
+5.  Klicken Sie im Dialogfeld **Auftrags Eigenschaften- \<JobName> ** auf der Seite **Zeitpläne** auf **Bearbeiten.**  
   
 6.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
@@ -102,7 +101,7 @@ ms.locfileid: "62630805"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Auftrag für den Verteilungs-Agent oder Merge-Agent, der dem Abonnement zugeordnet ist, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Klicken Sie im Dialogfeld **Auftragseigenschaften -** JobName> **auf der Seite \<Zeitpläne** auf **Bearbeiten**.  
+4.  Klicken Sie im Dialogfeld **Auftrags Eigenschaften- \<JobName> ** auf der Seite **Zeitpläne** auf **Bearbeiten.**  
   
 5.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62630805"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Auftrag für den Verteilungs-Agent oder Merge-Agent, der dem Abonnement zugeordnet ist, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Klicken Sie im Dialogfeld **Auftragseigenschaften -** JobName> **auf der Seite \<Zeitpläne** auf **Bearbeiten**.  
+4.  Klicken Sie im Dialogfeld **Auftrags Eigenschaften- \<JobName> ** auf der Seite **Zeitpläne** auf **Bearbeiten.**  
   
 5.  Wählen Sie im Dialogfeld **Eigenschaften des Auftragszeitplans** einen Wert aus der Dropdownliste **Zeitplantyp** aus:  
   
@@ -167,25 +166,25 @@ ms.locfileid: "62630805"
   
 1.  Erstellen Sie ein neues Pullabonnement für eine Transaktionsveröffentlichung. Weitere Informationen finden Sie unter [Create a Pull Subscription](create-a-pull-subscription.md).  
   
-2.  Führen Sie auf dem Abonnenten [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) aus. Geben **@publisher**Sie **@publisher_db**, **@publication**, und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen an, unter denen die Verteilungs-Agent auf **@job_name** dem **@password**Abonnenten für und ausgeführt wird. Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Verteilungs-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
+2.  Führen Sie auf dem Abonnenten [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) aus. Geben Sie **@publisher** , **@publisher_db** , **@publication** und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen an, unter denen die Verteilungs-Agent auf dem Abonnenten für **@job_name** und **@password** ausgeführt wird. Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Verteilungs-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>So definieren Sie den Synchronisierungszeitplan für ein Pushabonnement für eine Transaktionsveröffentlichung  
   
 1.  Erstellen Sie ein neues Pushabonnement für eine Transaktionsveröffentlichung. Weitere Informationen finden Sie unter [Create a Push Subscription](create-a-push-subscription.md).  
   
-2.  Führen Sie auf dem Abonnenten [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) aus. Geben **@subscriber**Sie **@subscriber_db**, **@publication**, und die Windows-Anmelde Informationen an, unter denen die Verteilungs-Agent auf **@job_name** dem **@password**Abonnenten für und ausgeführt wird. Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Verteilungs-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
+2.  Führen Sie auf dem Abonnenten [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) aus. Geben Sie **@subscriber** , **@subscriber_db** , **@publication** und die Windows-Anmelde Informationen an, unter denen die Verteilungs-Agent auf dem Abonnenten für und ausgeführt wird **@job_name** **@password** . Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Verteilungs-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>So definieren Sie den Synchronisierungszeitplan für ein Pullabonnement für eine Mergeveröffentlichung  
   
 1.  Erstellen Sie ein neues Pullabonnement für eine Mergeveröffentlichung. Weitere Informationen finden Sie unter [Create a Pull Subscription](create-a-pull-subscription.md).  
   
-2.  Führen Sie auf dem Abonnenten [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)aus. Geben **@publisher**Sie **@publisher_db**, **@publication**, und die Windows-Anmelde Informationen an, unter denen die Merge-Agent auf **@job_name** dem **@password**Abonnenten für und ausgeführt wird. Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Merge-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
+2.  Führen Sie auf dem Abonnenten [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)aus. Geben Sie **@publisher** , **@publisher_db** , **@publication** und die Windows-Anmelde Informationen an, unter denen die Merge-Agent auf dem Abonnenten für und ausgeführt wird **@job_name** **@password** . Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Merge-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>So definieren Sie den Synchronisierungszeitplan für ein Pushabonnement für eine Mergeveröffentlichung  
   
 1.  Erstellen Sie ein neues Pushabonnement für eine Mergeveröffentlichung. Weitere Informationen finden Sie unter [Create a Push Subscription](create-a-push-subscription.md).  
   
-2.  Führen Sie auf dem Abonnenten [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)aus. Geben **@subscriber**Sie **@subscriber_db**, **@publication**, und die Windows-Anmelde Informationen an, unter denen die Merge-Agent auf **@job_name** dem **@password**Abonnenten für und ausgeführt wird. Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Merge-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
+2.  Führen Sie auf dem Abonnenten [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)aus. Geben Sie **@subscriber** , **@subscriber_db** , **@publication** und die Windows-Anmelde Informationen an, unter denen die Merge-Agent auf dem Abonnenten für und ausgeführt wird **@job_name** **@password** . Geben Sie die oben beschriebenen Synchronisierungsparameter an, mit denen der Zeitplan für den Merge-Agentauftrag zur Synchronisierung des Abonnements definiert wird.  
   
 ##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Die Replikation verwendet den SQL Server-Agent, um Aufträge für regelmäßig auftretende Aktivitäten wie die Momentaufnahmegenerierung und die Abonnementsynchronisierung zu planen. Sie können Replikationsverwaltungsobjekte (RMO) programmgesteuert verwenden, um Zeitpläne für Replikations-Agentaufträge anzugeben.  
@@ -317,7 +316,7 @@ ms.locfileid: "62630805"
   
 3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> -Methode auf, um das Abonnement zu erstellen.  
   
-###  <a name="example-rmo"></a><a name="PShellExample"></a> Beispiel (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>Beispiel (RMO)  
  In diesem Beispiel werden ein Pushabonnement für eine Mergeveröffentlichung erstellt und der Zeitplan angegeben, mit dem das Abonnement synchronisiert wird.  
   
  [!code-csharp[HowTo#rmo_CreateMergePushSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepushsub)]  
@@ -325,7 +324,7 @@ ms.locfileid: "62630805"
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [Bewährte Sicherheitsmethoden für die Replikation](security/replication-security-best-practices.md)   
  [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)   
  [Synchronisieren eines Pushabonnements](synchronize-a-push-subscription.md)   
  [Synchronisieren eines Pullabonnements](synchronize-a-pull-subscription.md)   

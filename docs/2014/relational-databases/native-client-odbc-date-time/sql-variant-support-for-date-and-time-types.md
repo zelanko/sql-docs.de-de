@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4dcca38ab5b7b67ca92cf35b49852bcd88437328
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 73a8745f393b76dfadf574a1029b6687c406a748
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705421"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020055"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>sql_variant-Unterstützung für Datums- und Uhrzeittypen
   In diesem Thema wird beschrieben, in welcher Weise der `sql_variant`-Datentyp die erweiterte Datums- und Uhrzeitfunktionalität unterstützt.  
@@ -50,7 +49,7 @@ ms.locfileid: "82705421"
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE wird nicht festgelegt.|  
 |SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Die Skala ist auf SQL_DESC_PRECISION (der *DecimalDigits* -Parameter von) festgelegt `SQLBindParameter` .|  
 |SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Die Skala ist auf SQL_DESC_PRECISION (der *DecimalDigits* -Parameter von) festgelegt `SQLBindParameter` .|  
-|SQL_C_TYPE_DATE|Datum|SQL_CA_SS_VARIANT_SQL_TYPE wird ignoriert.|  
+|SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE wird ignoriert.|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE wird ignoriert.|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|Die Skala ist auf SQL_DESC_PRECISION (der *DecimalDigits* -Parameter von) festgelegt `SQLBindParameter` .|  
 |SQL_C_NUMERIC|Decimal|Die Genauigkeit wird auf SQL_DESC_PRECISION (der *ColumnSize* -Parameter von) festgelegt `SQLBindParameter` .<br /><br /> Skalierungs Gruppe auf SQL_DESC_SCALE (der *DecimalDigits* -Parameter von SQLBindParameter).|  

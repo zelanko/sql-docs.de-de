@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e700f5178a3520fe83f4d896662a8741aa166b9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c52fb9238a34140e3f710f2ceb5548e7e0916c17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066820"
 ---
 # <a name="isolate-performance-problems"></a>Isolieren von Leistungsproblemen
   In den meisten Fällen ist es effektiver, mehrere [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]- oder Microsoft Windows-Tools gleichzeitig zu verwenden, um Leistungsprobleme mit der Datenbank zu isolieren, anstatt immer nur ein Tool zu verwenden. So können Sie beispielsweise mithilfe der Funktion für den grafischen Ausführungsplan (auch Showplan genannt) Deadlocks in einer einzigen Abfrage erkennen. Einige andere Leistungsprobleme lassen sich wiederum einfacher ermitteln, indem Sie die Überwachungsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Windows zusammen verwenden.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eecbdf1bd3d3859e272ce2216bde660910795c97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789457"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936693"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Übersicht über PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell ist eine speziell für die Systemverwaltung entwickelte taskbasierte Befehlszeilenshell und Skriptsprache. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] stellt in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] einen Satz von PowerShell-Cmdlets bereit, mit denen Sie Verfügbarkeitsgruppen, Verfügbarkeitsreplikate und Verfügbarkeitsdatenbanken bereitstellen, verwalten und überwachen können.  
@@ -44,29 +43,29 @@ ms.locfileid: "62789457"
 -   [Überwachen der Integrität von Verfügbarkeitsgruppen](#MonitorTblshtAGs)  
   
 > [!NOTE]  
->  Eine Liste der Themen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] der-Online Dokumentation, die beschreiben, wie Cmdlets zum [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Ausführen von Aufgaben verwendet werden, finden Sie im Abschnitt "Verwandte Aufgaben" unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
+>  Eine Liste der Themen in der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Online Dokumentation, die beschreiben, wie Cmdlets zum Ausführen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] von Aufgaben verwendet werden, finden Sie im Abschnitt "Verwandte Aufgaben" unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="configuring-a-server-instance-for-alwayson-availability-groups"></a><a name="ConfiguringServerInstance"></a>Konfigurieren einer Server Instanz für AlwaysOn-Verfügbarkeitsgruppen  
   
-|Cmdlets|Beschreibung|Unterstützt auf|  
+|Cmdlets|BESCHREIBUNG|Unterstützt auf|  
 |-------------|-----------------|------------------|  
 |`Disable-SqlAlwaysOn`|Deaktiviert die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Funktion auf einer Serverinstanz.|Die Serverinstanz, die vom Parameter `Path`, `InputObject` oder `Name` angegeben wird. (Muss eine Edition von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sein, die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]unterstützt.)|  
-|`Enable-SqlAlwaysOn`|Aktiviert [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] auf einer Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , die die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Funktion unterstützt. Weitere Informationen zur-unter [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]Stützung für finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).|Eine beliebige Edition von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]unterstützt.|  
+|`Enable-SqlAlwaysOn`|Aktiviert [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] auf einer Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , die die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Funktion unterstützt. Weitere Informationen zur-Unterstützung für finden Sie unter [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).|Eine beliebige Edition von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]unterstützt.|  
 |`New-SqlHadrEndPoint`|Erstellt einen neuen Datenbankspiegelungs-Endpunkt auf einer Serverinstanz. Dieser Endpunkt ist zur Datenverschiebung zwischen primären und sekundären Datenbanken erforderlich.|Eine beliebige Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|Ändert die Eigenschaften eines vorhandenen Datenbankspiegelungs-Endpunkts, z. B. Namens-, Status- oder Authentifizierungseigenschaften.|Eine Serverinstanz, die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt und keinen Datenbankspiegelungs-Endpunkt aufweist|  
   
 ##  <a name="backing-up-and-restoring-databases-and-transaction-logs"></a><a name="BnRcmdlets"></a>Sichern und Wiederherstellen von Datenbanken und Transaktions Protokollen  
   
-|Cmdlets|Beschreibung|Unterstützt auf|  
+|Cmdlets|BESCHREIBUNG|Unterstützt auf|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|Erstellt eine Daten- oder Protokollsicherung.|Eine beliebige Onlinedatenbank (für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]eine Datenbank auf der Serverinstanz, die das primäre Replikat hostet)|  
-|`Restore-SqlDatabase`|Stellt eine Sicherung wieder her.|Eine beliebige Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]eine Serverinstanz, die ein sekundäres Replikat hostet)<br /><br /> **&#42;&#42; wichtige &#42;&#42;** Beim Vorbereiten einer sekundären Datenbank müssen Sie den `-NoRecovery` -Parameter in jedem `Restore-SqlDatabase` Befehl verwenden.|  
+|`Restore-SqlDatabase`|Stellt eine Sicherung wieder her.|Eine beliebige Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]eine Serverinstanz, die ein sekundäres Replikat hostet)<br /><br /> **&#42;&#42; wichtige &#42;&#42;** Beim Vorbereiten einer sekundären Datenbank müssen Sie den- `-NoRecovery` Parameter in jedem `Restore-SqlDatabase` Befehl verwenden.|  
   
  Informationen zur Verwendung dieser Cmdlets zum Vorbereiten einer sekundären Datenbank finden Sie unter [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
 ##  <a name="creating-and-managing-an-availability-group"></a><a name="DeployManageAGs"></a>Erstellen und Verwalten einer Verfügbarkeits Gruppe  
   
-|Cmdlets|Beschreibung|Unterstützt auf|  
+|Cmdlets|BESCHREIBUNG|Unterstützt auf|  
 |-------------|-----------------|------------------|  
 |`New-SqlAvailabilityGroup`|Erstellt eine neue Verfügbarkeitsgruppe.|Serverinstanz zum Hosten des primären Replikats|  
 |`Remove-SqlAvailabilityGroup`|Löscht eine Verfügbarkeitsgruppe.|HADR-fähige Serverinstanz|  
@@ -75,7 +74,7 @@ ms.locfileid: "62789457"
   
 ##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a>Erstellen und Verwalten eines verfügbarkeitsgruppenlistener  
   
-|Cmdlet|BESCHREIBUNG|Unterstützt auf|  
+|Cmdlet|Beschreibung|Unterstützt auf|  
 |------------|-----------------|------------------|  
 |`New-SqlAvailabilityGroupListener`|Erstellt einen neuen Verfügbarkeitsgruppenlistener und fügt ihn einer vorhandenen Verfügbarkeitsgruppe hinzu.|Serverinstanz, die das primäre Replikat hostet|  
 |`Set-SqlAvailabilityGroupListener`|Ändert die Porteinstellung eines vorhandenen Verfügbarkeitsgruppenlisteners.|Serverinstanz, die das primäre Replikat hostet|  
@@ -83,7 +82,7 @@ ms.locfileid: "62789457"
   
 ##  <a name="creating-and-managing-an-availability-replica"></a><a name="DeployManageARs"></a>Erstellen und Verwalten eines Verfügbarkeits Replikats  
   
-|Cmdlets|Beschreibung|Unterstützt auf|  
+|Cmdlets|BESCHREIBUNG|Unterstützt auf|  
 |-------------|-----------------|------------------|  
 |**New-SqlAvailabilityReplica**|Erstellt eine neue Verfügbarkeitsgruppe. Sie können mithilfe des `-AsTemplate`-Parameters ein Verfügbarkeitsreplikatobjekt im Arbeitsspeicher für jedes neue Verfügbarkeitsreplikat erstellen.|Serverinstanz, die das primäre Replikat hostet|  
 |`Join-SqlAvailabilityGroup`|Verknüpft ein sekundäres Replikat mit der Verfügbarkeitsgruppe.|Serverinstanz, die ein sekundäres Replikat hostet|  
@@ -92,7 +91,7 @@ ms.locfileid: "62789457"
   
 ##  <a name="adding-and-managing-an-availability-database"></a><a name="DeployManageDbs"></a>Hinzufügen und Verwalten einer Verfügbarkeits Datenbank  
   
-|Cmdlets|Beschreibung|Unterstützt auf|  
+|Cmdlets|BESCHREIBUNG|Unterstützt auf|  
 |-------------|-----------------|------------------|  
 |**Add-SqlAvailabilityDatabase**|Fügt auf dem primären Replikat einer Verfügbarkeitsgruppe eine Datenbank hinzu.<br /><br /> Verknüpft auf einem sekundären Replikat eine sekundäre Datenbank mit einer Verfügbarkeitsgruppe.|Eine beliebige Serverinstanz, die ein Verfügbarkeitsreplikat hostet (Verhalten unterscheidet sich für primäre und sekundäre Replikate)|  
 |**Remove-SqlAvailabilityDatabase**|Entfernt auf dem primären Replikat die Datenbank aus der Verfügbarkeitsgruppe.<br /><br /> Entfernt auf einem sekundären Replikat die lokale sekundäre Datenbank aus dem lokalen sekundären Replikat.|Eine beliebige Serverinstanz, die ein Verfügbarkeitsreplikat hostet (Verhalten unterscheidet sich für primäre und sekundäre Replikate)|  
@@ -105,7 +104,7 @@ ms.locfileid: "62789457"
 > [!IMPORTANT]  
 >  Sie müssen über CONNECT-, VIEW SERVER STATE- und VIEW ANY DEFINITION-Berechtigungen verfügen, um diese Cmdlets auszuführen.  
   
-|Cmdlet|BESCHREIBUNG|Unterstützt auf|  
+|Cmdlet|Beschreibung|Unterstützt auf|  
 |------------|-----------------|------------------|  
 |`Test-SqlAvailabilityGroup`|Bewertet die Integrität einer Verfügbarkeitsgruppe durch die Auswertung der Richtlinien der richtlinienbasierten SQL Server-Verwaltung.|Eine beliebige Serverinstanz, die ein Verfügbarkeitsreplikat hostet.*|  
 |`Test-SqlAvailabilityReplica`|Bewertet die Integrität von Verfügbarkeitsreplikaten durch die Auswertung der Richtlinien der richtlinienbasierten SQL Server-Verwaltung.|Eine beliebige Serverinstanz, die ein Verfügbarkeitsreplikat hostet.*|  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f5cdfc761b3b8c19e07b1818c2732414b03258cc
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: b7d785a7b8c2ce424f2f88b23024b0d22f399149
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929991"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Optionen (Abfrageergebnisse-SQL Server-Ergebnisse in Textseite)
   Mithilfe dieser Seite können Sie die Optionen für die Anzeige eines Abfrageresultsets im Textformat angeben. Die an diesen Optionen vorgenommenen Änderungen werden nur für neue Abfragen in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet. Um die Optionen für die aktuellen Abfragen zu ändern, klicken Sie im Menü **Abfrage** auf **Abfrage Optionen** , oder klicken Sie mit der rechten Maustaste in das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Abfragefenster, und wählen Sie **Abfrage Optionen**aus. Klicken Sie im Dialogfeld **Abfrageoptionen** unter **Ergebnisse**auf **Text**.  

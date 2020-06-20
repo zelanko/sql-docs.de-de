@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b03b4d9ecf31e9953fd3e22cec5c51bbacc0c25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957168"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060303"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
   In diesem Thema wird die Vorgehensweise zum Schutz einer Datenbank anhand von Transparent Data Encryption (TDE) und das Verschieben der Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] beschrieben. TDE führt die E/A-Verschlüsselung und -Entschlüsselung der Daten- und Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Datenbank-Verschlüsselungsschlüssel (DEK), der im Startdatensatz der Datenbank gespeichert wird und während der Wiederherstellung zur Verfügung steht. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der `master`-Datenbank des Servers gespeichertes Zertifikat gesichert wird, oder ein asymmetrischer Schlüssel, der von einem EKM-Modul geschützt wird.  
@@ -47,7 +46,7 @@ ms.locfileid: "74957168"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
--   Beim Verschieben einer TDE-geschützten Datenbank muss auch das Zertifikat oder der asymmetrische Schlüssel verschoben werden, mit dem der DEK geöffnet wird. Das Zertifikat oder der asymmetrische Schlüssel muss in der `master` -Datenbank des Zielservers installiert sein, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] damit auf die Datenbankdateien zugreifen kann. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](transparent-data-encryption.md).  
+-   Beim Verschieben einer TDE-geschützten Datenbank muss auch das Zertifikat oder der asymmetrische Schlüssel verschoben werden, mit dem der DEK geöffnet wird. Das Zertifikat oder der asymmetrische Schlüssel muss in der- `master` Datenbank des Zielservers installiert sein, damit auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Datenbankdateien zugreifen kann. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](transparent-data-encryption.md).  
   
 -   Bewahren Sie Kopien der Zertifikatdatei und der Datei mit dem privaten Schlüssel auf, um das Zertifikat wiederherzustellen. Das Kennwort für den privaten Schlüssel muss nicht mit dem Kennwort für den Datenbank-Hauptschlüssel übereinstimmen.  
   
@@ -57,9 +56,9 @@ ms.locfileid: "74957168"
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
   
--   Erfordert `CONTROL DATABASE` die-Berechtigung `master` für die Datenbank, um den Datenbank-Hauptschlüssel zu erstellen.  
+-   Erfordert die- `CONTROL DATABASE` Berechtigung für die `master` Datenbank, um den Datenbank-Hauptschlüssel zu erstellen.  
   
--   Erfordert `CREATE CERTIFICATE` die-Berechtigung `master` für die Datenbank zum Erstellen des Zertifikats, mit dem der DEK geschützt wird.  
+-   Erfordert die- `CREATE CERTIFICATE` Berechtigung für die `master` Datenbank zum Erstellen des Zertifikats, mit dem der DEK geschützt wird.  
   
 -   Erfordert die `CONTROL DATABASE`-Berechtigung für die verschlüsselte Datenbank und die `VIEW DEFINITION`-Berechtigung für das Zertifikat oder den asymmetrischen Schlüssel, die zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet werden.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "74957168"
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Verwenden von SQL Server Management Studio  
   
-1.  Erstellen Sie einen Datenbank-Hauptschlüssel und ein `master` Zertifikat in der Datenbank. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
+1.  Erstellen Sie einen Datenbank-Hauptschlüssel und ein Zertifikat in der `master` Datenbank. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
 2.  Erstellen Sie eine Sicherung des Serverzertifikats in der `master` Datenbank. Weitere Informationen finden Sie weiter unten unter **Verwenden von Transact-SQL** .  
   
@@ -168,7 +167,7 @@ ms.locfileid: "74957168"
      **Zu trennende Datenbanken**  
      Führt die zu trennenden Datenbanken auf.  
   
-     **Datenbankname**  
+     **Database Name**  
      Zeigt den Namen der zu trennenden Datenbank an.  
   
      **Verbindungen löschen**  
@@ -216,13 +215,13 @@ ms.locfileid: "74957168"
      **Anzufügende Datenbanken**  
      Zeigt Informationen zu den ausgewählten Datenbanken an.  
   
-     \<Keine Spaltenüberschrift>  
+     \<no column header>  
      Zeigt ein Symbol an, das den Status des Anfügevorgangs angibt. Die möglichen Symbole werden in der unten stehenden Beschreibung von **Status** beschrieben.  
   
      **Speicherort für MDF-Datei**  
      Zeigt den Pfad und den Dateinamen der ausgewählten MDF-Datei an.  
   
-     **Datenbankname**  
+     **Database Name**  
      Zeigt den Namen der Datenbank an.  
   
      **Anfügen als**  
@@ -238,7 +237,7 @@ ms.locfileid: "74957168"
     |----------|-----------------|-----------------|  
     |(Kein Symbol)|(Kein Text)|Das Anfügen hat noch nicht begonnen oder steht für dieses Objekt noch aus. Dies ist der Standardwert bei Öffnen des Dialogfelds.|  
     |Grünes, nach rechts zeigendes Dreieck|In Bearbeitung|Das Anfügen hat begonnen, ist aber noch nicht abgeschlossen.|  
-    |Grünes Häkchen|Erfolgreich|Das Objekt wurde erfolgreich angefügt.|  
+    |Grünes Häkchen|Erfolg|Das Objekt wurde erfolgreich angefügt.|  
     |Roter Kreis mit einem weißen Kreuz darin|Fehler|Beim Anfügen ist ein Fehler aufgetreten. Der Vorgang konnte deshalb nicht erfolgreich abgeschlossen werden.|  
     |Kreis mit zwei schwarzen Quadranten (links und rechts) und zwei weißen Quadranten (oben und unten) darin|Beendet|Das Anfügen wurde nicht erfolgreich abgeschlossen, weil der Benutzer den Vorgang angehalten hat.|  
     |Kreis mit einem gekrümmten Pfeil darin, der entgegengesetzt der Uhrzeigerrichtung zeigt|Rollback wurde ausgeführt|Anfügen war erfolgreich, es wurde jedoch ein Rollback durchgeführt, weil beim Anfügen eines anderen Objekts ein Fehler aufgetreten ist.|  
@@ -252,8 +251,8 @@ ms.locfileid: "74957168"
      **Remove**  
      Entfernt die ausgewählte Datei aus dem Raster **Anzufügende Datenbank** .  
   
-     **Daten Bank Details** **"** _<database_name>_ "  
-     Zeigt die Namen der anzufügenden Dateien an. Um den Pfadnamen einer Datei zu überprüfen oder zu ändern, klicken Sie auf die Schaltfläche zum **Durchsuchen** (**...**).  
+     **"** _<datenbankname>_ **" Datenbankdetails**  
+     Zeigt die Namen der anzufügenden Dateien an. Klicken Sie zum Überprüfen oder Ändern des Pfadnamens einer Datei auf die Schaltfläche **Durchsuchen** ( **…** ).  
   
     > [!NOTE]  
     >  Wenn eine Datei nicht vorhanden ist, wird in der Spalte **Meldung** "Nicht gefunden" angezeigt. Wenn keine Protokolldatei gefunden wird, liegt sie in einem anderen Verzeichnis oder wurde gelöscht. Dann müssen Sie entweder den Dateipfad im Raster **Datenbankdetails** ändern, um auf den richtigen Pfad zu verweisen, oder die Protokolldatei aus dem Raster entfernen. Wenn keine .ndf-Datei gefunden wurde, müssen Sie ihren Pfad im Raster aktualisieren, um auf den richtigen Pfad zu verweisen.  
@@ -268,7 +267,7 @@ ms.locfileid: "74957168"
      Zeigt den Pfad zur ausgewählten Datenbankdatei an Die Pfadangabe kann manuell bearbeitet werden.  
   
      **Meldung**  
-     Zeigt entweder eine leere Meldung oder einen "**Datei nicht gefunden**"-Link an.  
+     Zeigt entweder eine leere Meldung oder einen „**Datei nicht gefunden**“-Hyperlink an.  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Verwenden von Transact-SQL  
   

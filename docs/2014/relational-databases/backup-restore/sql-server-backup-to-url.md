@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6918a099e00b1de9e773320b5c6c0e4089859e02
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289228"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956348"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
   In diesem Thema werden die Konzepte, Anforderungen und Komponenten vorgestellt, die für die Verwendung des Azure-BLOB-Speicher Dienstanbieter als Sicherungs Ziel erforderlich sind. Die Sicherungs- und Wiederherstellungsfunktion sind gleich oder ähnlich wie beim Verwenden von DISK oder TAPE, mit wenigen Unterschieden. Die Unterschiede und alle wichtigen Ausnahmen sowie einige Codebeispiele werden in diesem Thema erörtert.  
@@ -47,12 +46,12 @@ ms.locfileid: "79289228"
 -   Beim Erstellen eines Containers für den Azure BLOB Storage-Dienst wird empfohlen, den Zugriff auf **Privat**festzulegen. Dadurch wird der Zugriff auf Benutzer oder Konten beschränkt, die über die erforderlichen Anmeldeinformationen zur Authentifizierung beim Azure-Konto verfügen.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erfordert, dass der Azure-Konto Name und die Zugriffsschlüssel Authentifizierung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Anmelde Informationen gespeichert werden. Diese Informationen werden verwendet, um beim Ausführen von Sicherungs-oder Wiederherstellungs Vorgängen bei dem Azure-Konto zu authentifizieren.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erfordert, dass der Azure-Konto Name und die Zugriffsschlüssel Authentifizierung in Anmelde Informationen gespeichert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Diese Informationen werden verwendet, um beim Ausführen von Sicherungs-oder Wiederherstellungs Vorgängen bei dem Azure-Konto zu authentifizieren.  
   
 -   Das zum Ausgeben von BACKUP- oder RESTORE-Befehlen verwendete Benutzerkonto sollte Mitglied der Datenbankrolle **db_backup operator** sein und über Berechtigungen zum **Ändern beliebiger Anmeldeinformationen** verfügen.  
   
 ###  <a name="introduction-to-key-components-and-concepts"></a><a name="intorkeyconcepts"></a>Einführung in die wichtigsten Komponenten und Konzepte  
- In den folgenden beiden Abschnitten werden der Azure BLOB Storage-Dienst und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die für die Sicherung oder Wiederherstellung im Azure-BLOB-Speicherdienst verwendeten Komponenten vorgestellt. Es ist wichtig, die Komponenten und die Interaktion zwischen den Komponenten zu verstehen, um eine Sicherung oder Wiederherstellung aus dem Azure-BLOB-Speicherdienst durchzuführen.  
+ In den folgenden beiden Abschnitten werden der Azure BLOB Storage-Dienst und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Sicherung oder Wiederherstellung im Azure-BLOB-Speicherdienst verwendeten Komponenten vorgestellt. Es ist wichtig, die Komponenten und die Interaktion zwischen den Komponenten zu verstehen, um eine Sicherung oder Wiederherstellung aus dem Azure-BLOB-Speicherdienst durchzuführen.  
   
  Der erste Schritt dieses Prozesses ist das Erstellen eines Azure-Kontos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet den **Azure Storage-Kontonamen** und seine **Zugriffsschlüssel** Werte, um BLOB-BLOB-Speicherdienste zu authentifizieren und zu schreiben und zu lesen. Diese Authentifizierungsinformationen werden in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen gespeichert und bei Sicherungs- und Wiederherstellungsvorgängen verwendet. Eine umfassende Exemplarische Vorgehensweise zum Erstellen eines Speicher Kontos und zum Durchführen einer einfachen Wiederherstellung finden [Sie unter Tutorial using Azure Storage Service for SQL Server Backup and Restore](https://go.microsoft.com/fwlink/?LinkId=271615).  
   
@@ -63,7 +62,7 @@ ms.locfileid: "79289228"
   
  **Container:** Ein Container stellt eine Gruppierung eines Satzes von blobspeicher bereit und kann eine unbegrenzte Anzahl von blobspeicher speichern. Um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherung in den Azure-BLOB-Dienst zu schreiben, muss mindestens der Stamm Container erstellt werden.  
   
- **BLOB:** Eine Datei eines beliebigen Typs und beliebiger Größe. Es gibt zwei Typen von BLOBs, die im Azure-BLOB-Speicherdienst gespeichert werden können: Block-und seitenblobs. Bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherung werden Seitenblobs als Blobtyp verwendet. BLOBs sind im folgenden URL-Format adressierbar: https://\<Storage Account>. BLOB.Core.Windows.net/\<Container>/\<BLOB>  
+ **BLOB:** Eine Datei eines beliebigen Typs und beliebiger Größe. Es gibt zwei Typen von BLOBs, die im Azure-BLOB-Speicherdienst gespeichert werden können: Block-und seitenblobs. Bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherung werden Seitenblobs als Blobtyp verwendet. BLOB können mithilfe des folgenden URL-Formats adressiert werden: https:// \<storage account> . BLOB.Core.Windows.net/\<container>/\<blob>  
   
  ![Azure Blob Storage](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
@@ -77,7 +76,7 @@ ms.locfileid: "79289228"
 > [!WARNING]  
 >  Wenn Sie eine Sicherungsdatei kopieren und in den Azure-BLOB-Speicherdienst hochladen möchten, verwenden Sie seitenblob als Speicher Option. Wiederherstellungen von Blockblobs werden nicht unterstützt. Die Ausführung von RESTORE für ein Blockblob verursacht einen Fehler.  
   
- Hier ist ein Beispiel-URL-Wert: http [s]\<://ACCOUNTNAME.BLOB.Core.Windows.NET/Container\<>/filename. bak>. HTTPS ist zwar nicht erforderlich, aber empfehlenswert.  
+ Hier ist ein Beispiel-URL-Wert: http [s]://ACCOUNTNAME.BLOB.Core.Windows.net/ \<CONTAINER> / \<FILENAME.bak> . HTTPS ist zwar nicht erforderlich, aber empfehlenswert.  
   
  **Anmeldeinformationen:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind.  Hier werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Sicherungs-und Wiederherstellungs Prozessen Anmelde Informationen für die Authentifizierung beim Azure BLOB Storage-Dienst verwendet. In den Anmeldeinformationen werden der Name des Speicherkontos und der **Zugriffsschlüssel** des Speicherkontos gespeichert. Sobald die Anmeldeinformationen erstellt wurden, müssen sie beim Ausgeben der BACKUP-/RESTORE-Anweisungen in der WITH CREDENTIAL-Option angegeben werden. Weitere Informationen zum Anzeigen, Kopieren oder erneuten Generieren von **access keys**für Speicherkonten finden Sie unter [Zugriffsschlüssel für Speicherkonten](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
@@ -188,7 +187,7 @@ ms.locfileid: "79289228"
 |REPLACE|&#x2713;|||  
 |RESTART|&#x2713;|||  
 |RESTRICTED_USER|&#x2713;|||  
-|FILE|&#x2713;|||  
+|DATEI|&#x2713;|||  
 |PASSWORD|&#x2713;|||  
 |MEDIANAME|&#x2713;|||  
 |MEDIAPASSWORD|&#x2713;|||  

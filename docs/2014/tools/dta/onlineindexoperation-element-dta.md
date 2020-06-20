@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bb877ae48153d4fabae13170eb5f072218012d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0911811eb95e1d3dd03e8a4d8e33cd7740277e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62657215"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040385"
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation-Element (DTA)
   Gibt an, ob die vom Datenbankoptimierungsratgeber empfohlenen Indizes, indizierten Sichten oder Partitionen online erstellt werden können.  
@@ -41,7 +40,7 @@ ms.locfileid: "62657215"
 |**Datentyp und -länge**|`string`, keine maximale Länge.|  
 |**Zulässige Werte**|**OFF**<br /> Es können keine empfohlenen physischen Entwurfsstrukturen online erstellt werden.<br /><br /> **ON**<br /> Alle empfohlenen physischen Entwurfsstrukturen können online erstellt werden.<br /><br /> **GEMISCHT**<br /> Der Datenbankoptimierungsratgeber versucht, sofern möglich physische Entwurfsstrukturen zu empfehlen, die online erstellt werden können.<br /><br /> Verwenden Sie einen dieser Werte mit diesem Element. Wenn Indizes online erstellt werden, wird das Schlüsselwort **ONLINE = ON** an die Objektdefinition angehängt.|  
 |**Standardwert**|Keine.|  
-|**Vorkommen**|Optional. Wenn Sie verwendet wird, kann nur einmal für das `TuningOptions` -Element verwendet werden.|  
+|**Vorkommen**|Optional. Wenn Sie verwendet wird, kann nur einmal für das-Element verwendet werden `TuningOptions` .|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 973680d07c3bd6a304e63f4b3fde0e228f0f7bff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c706613c828ce579af27a8c5a6890936a31814ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088880"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929261"
 ---
 # <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>Tabellen Datenbankoptimierungsratgeber-Arbeits Auslastungs Tabelle für SQL Server Profiler Quelle
   In Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] und im Optimierungsratgeber von [!INCLUDE[ssDE](../includes/ssde-md.md)] dient dieses Dialogfeld zur Auswahl von Tabellen.  
@@ -29,7 +28,7 @@ ms.locfileid: "66088880"
   
  Wählen Sie mithilfe des Dialogfelds [!INCLUDE[ssDE](../includes/ssde-md.md)]Arbeitsauslastungstabelle auswählen **im Optimierungsratgeber von** eine Datenbanktabelle mit Ablaufverfolgungsinformationen von [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] aus, die als zu optimierende Arbeitsauslastung oder zur Vorschau der Tabelleninhalte vor dem Starten der Optimierungsanalyse verwendet werden sollen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **SQL Server**  
  Gibt die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an, zu der zurzeit eine Verbindung besteht. Dieses Feld wird automatisch ausgefüllt und kann nicht aktualisiert werden.  
   
@@ -39,12 +38,12 @@ ms.locfileid: "66088880"
  **Besitzer**  
  Specifies the owner of the trace table. Dieses Feld wird automatisch mit **dbo**ausgefüllt.  
   
- **Glaub**  
+ **Tabelle**  
  Geben Sie den Namen der Ablaufverfolgungstabelle an, aus der die Ablaufverfolgung gelesen werden soll.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Speichern von Ablauf Verfolgungs Ergebnissen in einer Tabelle &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [SQL Server Profiler Vorlagen und Berechtigungen](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Speichern von Ablaufverfolgungsergebnissen in einer Tabelle &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [Vorlagen und Berechtigungen in SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Datenbankoptimierungsratgeber](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 472ca5cf27f7e7ea2b18daa961c19faadcf2251f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140447"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043039"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Zurückgeben von Daten von einer gespeicherten Prozedur
   Es gibt zwei Methoden, Resultsets oder Daten von einer Prozedur an ein aufrufendes Programm zurückzugeben: Ausgabeparameter und Rückgabecodes. Dieses Thema enthält Informationen zu beiden Ansätzen.  
@@ -71,7 +70,7 @@ GO
  Wenn beim Aufruf einer Prozedur OUTPUT für einen Parameter angegeben wird und dieser Parameter in der Prozedurdefinition nicht mithilfe von OUTPUT definiert worden ist, dann wird eine Fehlermeldung ausgegeben. Sie können eine Prozedur mit Ausgabeparameter ausführen, ohne OUTPUT beim Ausführen der Prozedur anzugeben. In diesem Fall wird kein Fehler zurückgegeben; der Ausgabewert kann jedoch nicht in dem aufrufenden Programm verwendet werden.  
   
 ### <a name="using-the-cursor-data-type-in-output-parameters"></a>Verwenden des Cursor-Datentyps in OUTPUT-Parametern  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]Prozeduren können `cursor` den-Datentyp nur für Ausgabeparameter verwenden. Wenn der `cursor` Datentyp für einen Parameter angegeben wird, müssen für diesen Parameter in der Prozedur Definition sowohl das variierende Schlüsselwort als auch das OUTPUT-Schlüsselwort angegeben werden. Ein Parameter kann nur als Ausgabe angegeben werden, aber wenn das Variation-Schlüsselwort in der Parameter Deklaration angegeben ist, muss `cursor` der Datentyp lauten, und das OUTPUT-Schlüsselwort muss ebenfalls angegeben werden.  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)]Prozeduren können den- `cursor` Datentyp nur für Ausgabeparameter verwenden. Wenn der `cursor` Datentyp für einen Parameter angegeben wird, müssen für diesen Parameter in der Prozedur Definition sowohl das variierende Schlüsselwort als auch das OUTPUT-Schlüsselwort angegeben werden. Ein Parameter kann nur als Ausgabe angegeben werden, aber wenn das Variation-Schlüsselwort in der Parameter Deklaration angegeben ist, muss der Datentyp lauten, `cursor` und das OUTPUT-Schlüsselwort muss ebenfalls angegeben werden.  
   
 > [!NOTE]  
 >  Der `cursor`-Datentyp kann nicht durch Datenbank-APIs, wie z. B. OLE DB, ODBC, ADO und DB-Library, an Anwendungsvariablen gebunden werden. Da OUTPUT-Parameter gebunden werden müssen, bevor eine Anwendung eine Prozedur ausführen kann, können Prozeduren mit `cursor`-OUTPUT-Parametern nicht aus den Datenbank-APIs heraus aufgerufen werden. Diese Prozeduren können von [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Batches, Prozeduren oder Triggern heraus aufgerufen werden, wenn die `cursor`-OUTPUT-Variable einer lokalen [!INCLUDE[tsql](../../../includes/tsql-md.md)]-`cursor`-Variablen zugewiesen wird.  
@@ -104,7 +103,7 @@ GO
     >  Der geschlossene Status ist nur zum Zeitpunkt der Rückgabe relevant. Beispielsweise ist es zulässig, einen Cursor während eines Teils der Prozedur zu schließen, ihn zu einem späteren Zeitpunkt in der Prozedur wieder zu öffnen und das Resultset dieses Cursors an den aufrufenden Batch, die aufrufende Prozedur oder den aufrufenden Trigger zurückzugeben.  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Beispiele für Cursorausgabeparameter  
- Im folgenden Beispiel wird eine Prozedur erstellt, die einen Output-Parameter `@currency``cursor` mit dem `cursor` -Datentyp definiert. Die Prozedur wird anschließend in einem Batch aufgerufen.  
+ Im folgenden Beispiel wird eine Prozedur erstellt, die einen Output-Parameter `@currency` `cursor` mit dem- `cursor` Datentyp definiert. Die Prozedur wird anschließend in einem Batch aufgerufen.  
   
  Zuerst wird die Prozedur erstellt, die einen Cursor für die Currency-Tabelle deklariert und dann öffnet.  
   
@@ -145,7 +144,7 @@ GO
 ```  
   
 ## <a name="returning-data-using-a-return-code"></a>Zurückgeben von Daten mithilfe eines Rückgabecodes  
- Eine Prozedur kann einen ganzzahligen Wert zurückgeben, der als Rückgabecode bezeichnet wird, um den Ausführungsstatus einer Prozedur anzuzeigen. Sie geben den Rückgabecode für eine Prozedur mithilfe der RETURN-Anweisung an. Wie schon die OUTPUT-Parameter müssen Sie auch den Rückgabecode in einer Variablen speichern, wenn die Prozedur ausgeführt wird, damit der Wert des Rückgabecodes in dem aufrufenden Programm verwendet werden kann. Beispielsweise wird die Zuweisungs `@result` Variable des- `int` Datentyps verwendet, um den Rückgabecode `my_proc`der Prozedur zu speichern, z. b.:  
+ Eine Prozedur kann einen ganzzahligen Wert zurückgeben, der als Rückgabecode bezeichnet wird, um den Ausführungsstatus einer Prozedur anzuzeigen. Sie geben den Rückgabecode für eine Prozedur mithilfe der RETURN-Anweisung an. Wie schon die OUTPUT-Parameter müssen Sie auch den Rückgabecode in einer Variablen speichern, wenn die Prozedur ausgeführt wird, damit der Wert des Rückgabecodes in dem aufrufenden Programm verwendet werden kann. Beispielsweise wird die Zuweisungs Variable `@result` des-Datentyps `int` verwendet, um den Rückgabecode der Prozedur zu speichern, z. b. `my_proc` :  
   
 ```  
 DECLARE @result int;  

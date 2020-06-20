@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d93a9f9a75bd869fd8ecc9bc17ec42750c4a94f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62936695"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067227"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Farbe (Dialogfeld) (Visual Database Tools)
   Das Dialogfeld **Farbe** gibt den RGB-Wert einer vom Benutzer ausgewählten Farbe zurück. Der Benutzer kann aus einer vom Bildschirmtreiber bestimmten Palette mit Grundfarben oder aus einer Palette mit benutzerdefinierten Farben auswählen. Wählen Sie aus den Grundfarben aus, oder erstellen Sie benutzerdefinierte Farben. Definieren Sie Farben durch Klicken in die Farbmatrix oder durch Eingabe in die Felder **Farbt.:** , **Sätt.:** , **Hell.:** , **Rot:** , **Grün:** und **Blau:** .  

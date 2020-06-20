@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2f182c7974eaf26cca2b666fcf9740dee675830
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63285769"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006769"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue-Element (ssbdiagnose)
   Meldet ein vom Hilfsprogramm **ssbdiagnose** gefundenes Problem. Die XML-Ausgabedatei von **ssbdiagnose** enthält für jedes gemeldete Problem ein Issue-Element.  
@@ -50,11 +49,11 @@ ms.locfileid: "63285769"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|`string`, die Länge ist unbegrenzt.|  
 |**Wert**|Gibt den Text der Fehlermeldung zurück.|  
-|**Vorkommt**|Einmal pro gemeldeten Fehler.|  
+|**Vorkommen**|Einmal pro gemeldeten Fehler.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf5fbc6c3a01b39079c8f63a2998490025c85e8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210816"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066933"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, Plancache-Objekt
   Das **Plancache** -Objekt stellt Indikatoren bereit, mit denen überwacht werden kann, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Arbeitsspeicher zum Speichern von Objekten verwendet, z. B. gespeicherten Prozeduren, Ad-hoc-Anweisungen, vorbereiteten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen sowie Triggern. Es können mehrere Instanzen des **Plancache** -Objekts gleichzeitig überwacht werden, wobei jede Instanz einen unterschiedlichen Typ von zu überwachendem Plan darstellt.  
@@ -28,7 +27,7 @@ ms.locfileid: "68210816"
 |SQL Server, Plancache-Leistungsindikatoren|BESCHREIBUNG|  
 |------------------------------------|-----------------|  
 |**Cachetrefferquote**|Das Verhältnis zwischen Cachetreffern und -suchvorgängen.|  
-|**Cacheobjektzähler**|Anzahl der Cacheobjekte im Cache.|  
+|**Cache Objekt Anzahl**|Anzahl der Cacheobjekte im Cache.|  
 |**Cacheseiten**|Anzahl der von Cacheobjekten verwendeten 8-KB-Seiten.|  
 |**Verwendete Cacheobjekte**|Anzahl der verwendeten Cacheobjekte.|  
   

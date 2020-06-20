@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 400a57693fbea10270a51f5735a19b9639112ce9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211209"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000741"
 ---
 # <a name="creating-a-login"></a>Erstellen einer Anmeldung
   Benutzer benötigen eine Anmeldung, damit sie auf [!INCLUDE[ssDE](../includes/ssde-md.md)]zugreifen können. Die Anmeldung kann die Identität des Benutzers als Windows-Konto oder als Mitglied einer Windows-Gruppe darstellen, oder es kann sich dabei um eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldung handeln, die nur in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]vorhanden ist. Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
@@ -26,7 +25,7 @@ ms.locfileid: "68211209"
   
 ### <a name="to-create-a-new-windows-account"></a>So erstellen Sie ein neues Windows-Konto  
   
-1.  Klicken Sie im **Startmenü**auf **Ausführen**, **Open** geben `%SystemRoot%\system32\compmgmt.msc /s`Sie im Feld Öffnen ein, und klicken Sie dann auf **OK** , um das Programm Computer Verwaltung zu öffnen.  
+1.  Klicken Sie im **Startmenü**auf **Ausführen**, geben Sie im Feld **Öffnen** ein `%SystemRoot%\system32\compmgmt.msc /s` , und klicken Sie dann auf **OK** , um das Programm Computer Verwaltung zu öffnen.  
   
 2.  Erweitern Sie unter **Systemprogramme**den Eintrag **Lokale Benutzer und Gruppen**, klicken Sie mit der rechten Maustaste auf **Benutzer**und anschließend auf **Neuer Benutzer**.  
   

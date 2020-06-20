@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a9f116ccd65e4763e382d1125ca0a8424ecd97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040957"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>Lektion 2: Schreiben von Transact-SQL-Code
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist eine integrierte Entwicklungsumgebung für das Schreiben von [!INCLUDE[tsql](../../includes/tsql-md.md)]-, MDX-, DMX- und XML-Abfragen sowie SQLCMD-Befehlen. Das Tutorial veranschaulicht das Verwenden des Datenbank-Engine-Abfrage-Editors, um ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript zu erstellen.  

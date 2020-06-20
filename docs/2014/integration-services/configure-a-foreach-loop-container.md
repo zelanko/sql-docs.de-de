@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 840011d1797c7ef9482af31ffc8b3ec3a6419b8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060875"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921971"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Konfigurieren eines Foreach-Schleifencontainers
   In diesem Verfahren wird das Konfigurieren eines Foreach-Schleifencontainers beschrieben, einschließlich der Eigenschaftsausdrücke auf Enumerator- und Containerebene.  
@@ -72,7 +71,7 @@ ms.locfileid: "66060875"
   
 7.  Klicken Sie optional auf **Variablenzuordnungen** , um Objekteigenschaften dem Auflistungswert zuzuordnen, und führen Sie dann folgende Aktionen aus:  
   
-    1.  Wählen Sie in der Liste **Variablen** eine Variable aus, oder klicken Sie ** \<auf neue Variable>** , um eine neue Variable zu erstellen.  
+    1.  Wählen Sie in der Liste **Variablen** eine Variable aus, oder klicken Sie **\<New Variable>** auf, um eine neue Variable zu erstellen.  
   
     2.  Wenn Sie eine neue Variable hinzufügen, legen Sie die Variableneigenschaften im Dialogfeld **Variable hinzufügen** fest, und klicken Sie auf **OK**.  
   
