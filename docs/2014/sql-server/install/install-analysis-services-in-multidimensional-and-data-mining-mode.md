@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afb5c9d4d6272608249e095c694e0a9c48b37feb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78280857"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054776"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Installieren von Analysis Services im mehrdimensionalen Modus und im Data Mining-Modus
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet OLAP- (Online Analytical Processing, Analytische Onlineverarbeitung) und Data Mining-Funktionalität für Business Intelligence-Anwendungen. In dieser Version ist die Unterstützung für OLAP-Datenbanken und Data Mining Modelle verfügbar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , wenn Sie im mehr *dimensionalen Modus*installieren. Der multidimensionale Modus ist einer von drei Servermodi, in denen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausgeführt werden kann. Es handelt sich hierbei um den Standardmodus. Wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit den Standardwerten installieren, erhalten Sie eine Instanz, die multidimensionale Datenbanken und Data Mining-Modelle ausführt.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet OLAP- (Online Analytical Processing, Analytische Onlineverarbeitung) und Data Mining-Funktionalität für Business Intelligence-Anwendungen. In dieser Version ist die Unterstützung für OLAP-Datenbanken und Data Mining Modelle verfügbar, wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im mehr *dimensionalen Modus*installieren. Der multidimensionale Modus ist einer von drei Servermodi, in denen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausgeführt werden kann. Es handelt sich hierbei um den Standardmodus. Wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mit den Standardwerten installieren, erhalten Sie eine Instanz, die multidimensionale Datenbanken und Data Mining-Modelle ausführt.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist eine Mehrfachinstanz-Funktion, d. h. Sie können mehrere Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf einem einzigen Computer installieren oder eine neue Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] parallel zu einer älteren Version ausführen. Der Servermodus ist für eine Instanz spezifisch. Um andere Modi zu verwenden, müssen Sie weitere Instanzen des Servers installieren.  
   
- Sie können [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] separat oder mit anderen Komponenten installieren. Wenn Sie nur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]installieren, werden die folgenden Funktionen installiert, wenn Sie **Analysis Services** auf der Seite Funktionsauswahl des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installations-Assistenten Analysis Services auswählen:  
+ Sie können [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] separat oder mit anderen Komponenten installieren. Wenn Sie nur installieren [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , werden die folgenden Funktionen installiert, wenn Sie auf der Seite Funktionsauswahl des Installations-Assistenten **Analysis Services** auswählen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Server zum Ausführen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbanken und Data Mining-Modellen  
   

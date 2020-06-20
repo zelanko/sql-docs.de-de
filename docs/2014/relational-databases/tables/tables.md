@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22e417a535454f88d6475a97d2d17ad794404175
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055045"
 ---
 # <a name="tables"></a>Tabellen
   Tabellen sind Datenbankobjekte, die sämtliche in einer Datenbank enthaltenen Daten umfassen. Die Daten in den Tabellen sind, ähnlich wie in einer Kalkulationstabelle, logisch in Zeilen und Spalten angeordnet. Jede Zeile stellt einen eindeutigen Datensatz und jede Spalte ein Feld im Datensatz dar. Eine Tabelle, die z. B. die Angestelltendaten für ein Unternehmen enthält, könnte eine Zeile für jeden Angestellten sowie Spalten enthalten, die Informationen zu einzelnen Angestellten angeben, wie z. B. die Mitarbeiternummer, den Namen, die Adresse, die Berufsbezeichnung und die private Telefonnummer.  
@@ -85,6 +84,6 @@ ms.locfileid: "68211787"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Primary-und FOREIGN KEY-Einschränkungen](primary-and-foreign-key-constraints.md)   
- [UNIQUE- und CHECK-Einschränkungen](unique-constraints-and-check-constraints.md)  
+ [Unique-Einschränkungen und Check-Einschränkungen](unique-constraints-and-check-constraints.md)  
   
   

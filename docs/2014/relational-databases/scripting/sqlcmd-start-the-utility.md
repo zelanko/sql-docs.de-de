@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 08ba399bd9ebe4a8ba4c064aa2e0bce39b82d533
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 304260311c2297f1849b3d0ac1b1771956dfca49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063385"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Starten des Hilfsprogramms "sqlcmd"
   Damit Sie mit der Verwendung von `sqlcmd` beginnen können, müssen Sie zunächst das Hilfsprogramm starten und eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen. Sie können die Verbindung mit einer Standardinstanz oder mit einer benannten Instanz herstellen. Der erste Schritt besteht darin, das Hilfsprogramm `sqlcmd` zu starten.  

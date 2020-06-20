@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0eb6de956884eb66990459b8b4c6a6336c8ed8ac
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45e72165eef621dc377b02ed3d2e7e1e3cf7ab8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705942"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021869"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
   Bei ausgeführten Anweisungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nimmt der Native Client-ODBC-Treiber den Server nicht an, um die Anzahl der Spalten in einem Resultset zu melden. In diesem Fall `SQLNumResultCols` verursacht keinen Serverroundtrip. Wie [SQLDescribeCol](sqldescribecol.md) und [SQLColAttribute](sqlcolattribute.md)wird durch `SQLNumResultCols` den Aufruf von für vorbereitete, aber nicht ausgeführte Anweisungen ein Serverroundtrip generiert.  

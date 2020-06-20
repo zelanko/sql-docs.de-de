@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2788847a52d47596c38a9f63161d122543fe8099
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a2721e3fc4d46d2cfbf5284986d343d5baca5862
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022149"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   In der Tabelle werden die von **SQLGetInfo**zurückgegebenen Werte angezeigt. Diese Werte können je nach Versionsnummer des verbundenen Servers unterschiedlich sein.  
   
- **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client unterscheidet sich von **SQLGetInfo** im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber (sqlsrv32). DLL), wenn **SQLGetInfo** mit SQL_KEYWORDS und einer Pufferlänge von 0 aufgerufen wird.  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client-Treiber gibt SQL_SUCCESS zurück, aber der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ODBC-Treiber gibt SQL_SUCCESS_WITH_INFO zurück.  Wenn jedoch eine Pufferlänge ungleich NULL aufgerufen wird, die kleiner ist als die OUTPUT-Schlüsselwort Zeichenfolge, gibt **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client SQL_SUCCESS_WITH_INFO und einen SQLSTATE 01004 zurück.  
+ **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client unterscheidet sich von **SQLGetInfo** im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC-Treiber (SQLSRV32.DLL), wenn **SQLGetInfo** mit SQL_KEYWORDS und einer Pufferlänge von 0 aufgerufen wird.  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client-Treiber gibt SQL_SUCCESS zurück, aber der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-ODBC-Treiber gibt SQL_SUCCESS_WITH_INFO zurück.  Wenn jedoch eine Pufferlänge ungleich NULL aufgerufen wird, die kleiner ist als die OUTPUT-Schlüsselwort Zeichenfolge, gibt **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client SQL_SUCCESS_WITH_INFO und einen SQLSTATE 01004 zurück.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -117,7 +116,7 @@ ms.locfileid: "82706008"
 |SQL_IDENTIFIER_QUOTE_CHAR|" (doppeltes Anführungszeichen)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|Anforderung wird nicht vom Treiber unterstützt.|  
-|SQL_INFO_SS_NETLIB_NAME|Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber spezifisches Attribut. Der Name der von der Verbindung verwendeten Netzwerkbibliothek.<br /><br /> Standardmäßig wird dbnetlib zurückgegeben.  In dieser Situation verweist dbnetlib auf die Netzwerk Bibliothek und steht nicht im Zusammenhang mit dbnetlib. dll.|  
+|SQL_INFO_SS_NETLIB_NAME|Für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber spezifisches Attribut. Der Name der von der Verbindung verwendeten Netzwerkbibliothek.<br /><br /> Standardmäßig wird dbnetlib zurückgegeben.  In dieser Situation verweist dbnetlib auf die Netzwerk Bibliothek und steht nicht im Zusammenhang mit dbnetlib.dll.|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5b3661c860ee32de8b0f9e6553cfe6171361861a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ca3fbfa00f087d3728fa9244efd4e06ed1610c42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697677"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998772"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Senden von Daten an eine FILESTREAM-Spalte mithilfe von IRowsetFastUpload (OLE DB)
   Dieses Beispiel verwendet die IRowsetFastUpload-Schnittstelle, um zwischen 4 MB und 4 GB Daten an eine FILESTREAM-Spalte zu senden.  

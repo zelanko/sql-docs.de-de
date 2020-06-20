@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3fb5e3fa319259df5ba0da1d6234fedee9cb604
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144810"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025189"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
   Zum Erhöhen der Sicherheit ist der Zugriff auf [!INCLUDE[ssDE](../includes/ssde-md.md)] der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express und Evaluation Edition von einem anderen Computer aus nach der Erstinstallation nicht möglich. In dieser Lektion erfahren Sie, wie Sie die Protokolle aktivieren, die Ports konfigurieren und die Windows-Firewall für das Herstellen von Verbindungen von anderen Computern konfigurieren.  
@@ -44,7 +43,7 @@ ms.locfileid: "63144810"
     > [!NOTE]  
     >  Möglicherweise steht sowohl die 32-Bit- als auch die 64-Bit-Option zur Verfügung.  
   
-2.  Erweitern **SQL Server Configuration Manager**Sie in SQL Server-Konfigurations-Manager **SQL Server Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für** _ \<instanceName>_.  
+2.  Erweitern Sie im **SQL Server-Konfigurations-Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie anschließend auf **Protokolle für** _\<InstanceName>_.  
   
      Die Standardinstanz (eine unbenannte Instanz) wird als **MSSQLSERVER**aufgelistet. Wenn Sie eine benannte Instanz installiert haben, wird der von Ihnen angegebene Name aufgeführt. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] wird als **SQLEXPRESS**installiert, es sei denn, der Name wurde während des Setups geändert.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63144810"
  Zum Erhöhen der Sicherheit wird die Windows-Firewall von Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]und Windows 7 aktiviert. Um von einem anderen Computer eine Verbindung mit dieser Instanz herzustellen, müssen Sie einen Kommunikationsport in der Firewall öffnen. Die Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] lauscht an Port 1433; aus diesem Grund ist es nicht erforderlich, einen festen Port zu konfigurieren. Benannte Instanzen, einschließlich [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , lauschen jedoch an dynamischen Ports. Bevor Sie einen Port in der Firewall öffnen können, müssen Sie [!INCLUDE[ssDE](../includes/ssde-md.md)] so konfigurieren, dass an einem bestimmten Port gelauscht wird, der als fester oder statischer Port bezeichnet wird. Andernfalls wird von [!INCLUDE[ssDE](../includes/ssde-md.md)] bei jedem Start möglicherweise ein anderer Port überwacht. Weitere Informationen zu Firewalls, den Standardeinstellungen der Windows-Firewall und eine Beschreibung der TCP-Ports, die sich auf Datenbank-Engine, Analysis Services, Reporting Services und Integration Services auswirken, finden Sie unter [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
->  Port Nummern Zuweisungen werden von der Internet Assigned Numbers Authority verwaltet und sind unter [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)aufgeführt. Port Nummern sollten aus den Zahlen 49152 bis 65535 zugewiesen werden.  
+>  Port Nummern Zuweisungen werden von der Internet Assigned Numbers Authority verwaltet und sind unter aufgeführt [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) . Port Nummern sollten aus den Zahlen 49152 bis 65535 zugewiesen werden.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Konfigurieren von SQL Server für das Lauschen an einem bestimmten Ports  
   
@@ -67,13 +66,13 @@ ms.locfileid: "63144810"
   
 3.  Klicken Sie im Dialogfeld **TCP/IP-Eigenschaften** auf die Registerkarte **IP-Adressen** .  
   
-4.  Geben Sie im Feld **TCP-Port** des Abschnitts **IPAll** eine verfügbare Portnummer ein. In diesem Tutorial verwenden `49172`wir.  
+4.  Geben Sie im Feld **TCP-Port** des Abschnitts **IPAll** eine verfügbare Portnummer ein. In diesem Tutorial verwenden wir `49172` .  
   
 5.  Klicken Sie auf **OK** , um das Dialogfeld zu schließen, und klicken Sie auf **OK** , um die Warnung zu bestätigen, dass der Dienst neu gestartet werden muss.  
   
 6.  Klicken Sie im linken Bereich auf **SQL Server-Dienste**.  
   
-7.  Klicken Sie im rechten Bereich mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]und anschließend auf **Neu starten**. Beim Neustart [!INCLUDE[ssDE](../includes/ssde-md.md)] wird der Port `49172`überwacht.  
+7.  Klicken Sie im rechten Bereich mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]und anschließend auf **Neu starten**. Beim [!INCLUDE[ssDE](../includes/ssde-md.md)] Neustart wird der Port überwacht `49172` .  
   
 ##  <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>Öffnen von Ports in der Firewall  
  Durch Firewallsysteme kann der nicht autorisierte Zugriff auf Computerressourcen verhindert werden. Um bei aktivierter Firewall von einem anderen Computer eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] herzustellen, müssen Sie einen Port in der Firewall öffnen.  

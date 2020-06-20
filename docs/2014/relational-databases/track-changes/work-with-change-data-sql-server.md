@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 018d5add95e5d0936f6055e1c6710b6a8ddabdab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63269889"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061471"
 ---
 # <a name="work-with-change-data-sql-server"></a>Arbeiten mit Änderungsdaten (SQL Server)
   Änderungsdaten werden über Tabellenwertfunktionen (Table Valued Function, TVF) für Change Data Capture-Consumer verfügbar gemacht. Für alle Abfragen dieser Funktionen sind zwei Parameter erforderlich, um den Bereich der Protokollfolgenummern (Log Sequence Number, LSN) zu definieren, die bei der Entwicklung des zurückgegebenen Resultsets ausgewählt werden können. Sowohl der untere als auch der obere LSN-Wert, die das Intervall begrenzen, werden in das Intervall eingeschlossen.  

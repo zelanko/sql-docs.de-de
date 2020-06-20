@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da8ada61df6a95a83f59bfb3791329728f2856c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952583"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036949"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Konfigurieren eines Dienstkontos (SSRS-Konfigurations-Manager)
   In einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation werden der Report Server-Webdienst, der Berichts-Manager und eine Hintergrundverarbeitungsanwendung innerhalb eines einzelnen Diensts ausgeführt. Das Konto, unter dem der Dienst ausgeführt wird, wird beim Setup definiert, wenn Sie das Konto auf der Seite für die Dienstidentität angeben. Wenn Sie ein anderes Konto verwenden oder das Kennwort aktualisieren möchten, können Sie jedoch das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationstool verwenden.  
   
- Wenn Sie über einen Berichts Server verfügen, der für die Verwendung des integrierten SharePoint-Modus konfiguriert ist, und Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Dienst Konto mit dem-Konfigurationstool ändern, müssen Sie auch die Share [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Point-zentral Administration öffnen und die Seite **Datenbankzugriff erteilen** verwenden, um den Berichts Server und die Instanzeinstellungen erneut anzuwenden. Mit diesem Schritt wird dem neuen Dienst Konto Zugriff auf die SharePoint-Datenbanken gewährt, die für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] die [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] Integration [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]mit oder erforderlich sind.  
+ Wenn Sie über einen Berichts Server verfügen, der für die Verwendung des integrierten SharePoint-Modus konfiguriert ist, und Sie das Dienst Konto mit dem- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Konfigurationstool ändern, müssen Sie auch die SharePoint-zentral Administration öffnen und die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Seite **Datenbankzugriff erteilen** verwenden, um den Berichts Server und die Instanzeinstellungen erneut anzuwenden. Mit diesem Schritt wird dem neuen Dienst Konto Zugriff auf die SharePoint-Datenbanken gewährt, die für die Integration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mit oder erforderlich sind [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .  
   
  Verwenden Sie zum Aktualisieren des Dienstkontos immer das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationstool, sodass andere Einstellungen, die von der Dienstidentität abhängen, gleichzeitig aktualisiert werden können.  
   

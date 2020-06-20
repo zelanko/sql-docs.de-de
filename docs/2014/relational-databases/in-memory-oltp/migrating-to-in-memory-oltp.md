@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00ef2590d21ad0d58acecf690342e92bb843ea2d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07381b5450ecb238d09b96cbf9a3983ff178d1f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026124"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Migrating to In-Memory OLTP
   In diesem Abschnitt wird erläutert, wie Datenbankobjekte für die Verwendung von In-Memory OLTP migriert werden.  
@@ -26,7 +25,7 @@ ms.locfileid: "82706450"
   
 -   [Ratgeber für Native Kompilierung](native-compilation-advisor.md)  
   
--   [Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+-   [Von in-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
 -   [Implementieren von LOB-Spalten in einer speicheroptimierten Tabelle](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)  
   

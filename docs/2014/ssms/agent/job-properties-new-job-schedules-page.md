@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 0b03585b-a510-484d-8a63-9b32459def9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c55200e2121cf642df4ff3d974ec98c65a8760a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62695672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062267"
 ---
 # <a name="job-properties-new-job-schedules-page"></a>Auftragseigenschaften: Neuer Auftrag (Seite „Zeitpläne“)
-  Verwenden Sie diese Seite, um Zeitpläne für einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzuzeigen und zu organisieren.  
+  Verwenden Sie diese Seite, um Zeitpläne für einen-Agentauftrag anzuzeigen und zu organisieren [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Optionen  
  **Zeitplanliste**  
@@ -35,7 +34,7 @@ ms.locfileid: "62695672"
  **Bearbeiten**  
  Bearbeitet den ausgewählten Zeitplan, um die Eigenschaften des Auftragszeitplans zu ändern.  
   
- **Remove**  
+ **Entfernen**  
  Entfernt den ausgewählten Zeitplan aus der Liste für den Auftrag. Wenn keine anderen Aufträge diesen Zeitplan verwenden, wird der Zeitplan aus der Datenbank gelöscht.  
   
 ## <a name="see-also"></a>Weitere Informationen  

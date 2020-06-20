@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4c341fb8-7cb1-4cab-921b-e80b751d6c19
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c190e95df57c80d29428b39b72a4115ac7d23de1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c876eb6fdd466349ac369dcff8e292bc0839c669
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175349"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927771"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Verwenden nicht gruppierter Columnstore-Indizes
   Beschreibt wichtige Aufgaben für die Verwendung eines nicht gruppierten Columnstore-Indexes für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Tabelle.
@@ -24,7 +23,7 @@ ms.locfileid: "78175349"
 
  Informationen zum Verwenden von gruppierten Columnstore-Indizes finden Sie unter [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).
 
-## <a name="contents"></a>Contents
+## <a name="contents"></a>Inhalte
 
 -   [Erstellen eines nicht gruppierten Columnstore-Indexes](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)
 

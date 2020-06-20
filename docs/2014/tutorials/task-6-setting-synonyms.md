@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4499a0a099c92a9b1802cc905da3d0a473808eeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6f4e870dca91e952fbeea95ef8f1198c64d8d6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054279"
 ---
 # <a name="task-6-setting-synonyms"></a>Aufgabe 6: Festlegen von Synonymen
   In dieser Aufgabe legen Sie zwei Domänen Werte ( **USA** und **USA**) der Domäne **Country** als Synonyme fest, wobei **USA** als führender Wert festgelegt ist. Da die Option **führende Werte verwenden** beim Erstellen der Domäne **Country** ausgewählt wurde, werden alle **US** -Werte für die Domäne **Country** als **USA** ausgegeben (da USA der führende Wert ist). Weitere Informationen finden Sie unter [Ändern von Domänen Werten](https://msdn.microsoft.com/library/hh510408.aspx) .

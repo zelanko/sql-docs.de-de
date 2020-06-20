@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31a7d1e52c53cb858039f1fd0ed403f255ad5ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010923"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten
   In diesem Thema wird beschrieben, wie ein Abonnement für einen Nicht-SQL Server-Abonnenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Von der Transaktionsreplikation und der Momentaufnahmereplikation wird das Veröffentlichen von Daten auf Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten unterstützt. Informationen zu den unterstützten Abonnentenplattformen finden Sie unter [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)erstellt wird.  
@@ -45,7 +44,7 @@ ms.locfileid: "62721672"
   
          Die Erstellung der Momentaufnahme erfolgt nach der Aktivierung der Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten, um sicherzustellen, dass der Momentaufnahme-Agent eine Momentaufnahme und Initialisierungsskripts generiert, die für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten geeignet sind.  
   
-3.  Verwenden Sie zur Aktivierung der Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichungsname>**. Weitere Informationen zu diesem Schritt finden Sie unter [Publication Properties, Subscription Options](publication-properties-subscription-options.md) .  
+3.  Aktivieren Sie die Veröffentlichung für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten mithilfe des Dialog Felds **Veröffentlichungs Eigenschaften- \<PublicationName> ** . Weitere Informationen zu diesem Schritt finden Sie unter [Publication Properties, Subscription Options](publication-properties-subscription-options.md) .  
   
 4.  Erstellen Sie mithilfe des Assistenten für neue Abonnements ein Abonnement. In diesem Thema sind weitere Informationen zu diesem Schritt enthalten.  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62721672"
   
 2.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, und klicken Sie dann auf **Status des Momentaufnahme-Agents anzeigen**.  
   
-3.  Klicken Sie im Dialogfeld **Status des Momentaufnahme-Agents anzeigen - \<Publication>** auf **Start**.  
+3.  Klicken Sie im Dialogfeld **Momentaufnahmen-Agent \<Publication> Status anzeigen-** auf **Start**.  
   
  Nachdem der Momentaufnahme-Agent die Momentaufnahme generiert hat, wird eine Meldung angezeigt, die beispielsweise wie folgt lautet: "[100%] Es wurde eine Momentaufnahme mit 17 Artikel(n) generiert."  
   
@@ -155,27 +154,27 @@ ms.locfileid: "62721672"
   
     -   Der Wert 1 für `enabled_for_het_sub` bedeutet, dass Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten unterstützt werden.  
   
-    -   Wenn der Wert von `enabled_for_het_sub` 0 ist, führen [Sie sp_changepublication &#40;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)-&#41;`enabled_for_het_sub` aus **@property** , `true` und **@value**geben Sie für und für an.  
+    -   Wenn der Wert von `enabled_for_het_sub` 0 ist, führen Sie [sp_changepublication &#40;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)-&#41;`enabled_for_het_sub` aus, und geben Sie für **@property** und `true` für an **@value** .  
   
         > [!NOTE]  
         >  Bevor Sie `enabled_for_het_sub` zu `true` ändern, müssen Sie alle vorhandenen Abonnements für die Veröffentlichung löschen. Sie können `enabled_for_het_sub` nicht auf `true` festlegen, wenn die Veröffentlichung auch Abonnements mit Update unterstützt. Die Änderung von `enabled_for_het_sub` beeinflusst andere Veröffentlichungseigenschaften. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
-3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) aus. Geben **@publication**Sie **@subscriber**,, den Wert **(Standardziel)** für **@destination_db**, den Wert **Push** für **@subscription_type**und den Wert 3 für **@subscriber_type** (gibt einen OLE DB-Anbieter an).  
+3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) aus. Geben Sie **@publication** , **@subscriber** , den Wert **(Standardziel)** für **@destination_db** , den Wert **Push** für **@subscription_type** und den Wert 3 für **@subscriber_type** (gibt einen OLE DB-Anbieter an).  
   
 4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) aus. Geben Sie Folgendes an:  
   
-    -   Die **@subscriber**- **@publication** und-Parameter.  
+    -   Die **@subscriber** -und- **@publication** Parameter.  
   
-    -   Der Wert **(Standardziel)** für **@subscriber_db**,  
+    -   Der Wert **(Standardziel)** für **@subscriber_db** ,  
   
-    -   Die Eigenschaften der nicht--[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle für **@subscriber_provider**, **@subscriber_datasrc**, **@subscriber_location**, **@subscriber_provider_string**und **@subscriber_catalog**.  
+    -   Die Eigenschaften der nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle für **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** und **@subscriber_catalog** .  
   
-    -   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen, unter denen die Verteilungs-Agent auf dem **@job_login** Verteiler **@job_password**für und ausgeführt wird.  
+    -   Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmelde Informationen, unter denen die Verteilungs-Agent auf dem Verteiler für und ausgeführt wird **@job_login** **@job_password** .  
   
         > [!NOTE]  
-        >  Bei Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, **@job_login** werden **@job_password**immer die Windows-Anmelde Informationen verwendet, Der Verteilungs-Agent stellt die lokale Verbindung mit dem Verteiler immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Abonnenten her.  
+        >  Bei Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die Windows-Anmelde Informationen verwendet, **@job_login** **@job_password** Der Verteilungs-Agent stellt die lokale Verbindung mit dem Verteiler immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Abonnenten her.  
   
-    -   Der Wert **0** für **@subscriber_security_mode** und die OLE DB Anbieter-Anmelde Informationen für **@subscriber_login** und **@subscriber_password**.  
+    -   Der Wert **0** für **@subscriber_security_mode** und die OLE DB Anbieter-Anmelde Informationen für **@subscriber_login** und **@subscriber_password** .  
   
     -   Einen Zeitplan für den Verteilungs-Agentauftrag für dieses Abonnement. Weitere Informationen finden Sie unter [Angeben von Synchronisierungs Zeitplänen](specify-synchronization-schedules.md).  
   

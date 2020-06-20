@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab42ba3eb6468aac3da2fa780d371818c8776690
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011659"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026296"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Formats zum Importieren oder Exportieren von Daten (SQL Server)
   Das systemeigene Format wird für die Massenübertragung von Daten zwischen mehreren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe einer Datendatei empfohlen, die keinen erweiterten oder Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS) enthält.  
@@ -57,10 +56,10 @@ ms.locfileid: "66011659"
   
 -   Daten vom Typ `char` oder `varchar`  
   
-     Am Anfang der einzelnen `char` -oder `varchar` -Felder fügt **bcp** die Präfix Länge hinzu.  
+     Am Anfang der einzelnen- `char` oder- `varchar` Felder fügt **bcp** die Präfix Länge hinzu.  
   
     > [!IMPORTANT]  
-    >  Wenn der einheitliche Modus verwendet wird, konvertiert das Hilfsprogramm **bcp** standardmäßig Zeichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus in OEM-Zeichen, bevor Sie in eine Datendatei kopiert werden. Das Hilfsprogramm **bcp** konvertiert Zeichen aus einer Datendatei in ANSI-Zeichen, bevor Sie in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle Massen importiert werden. Während dieser Konvertierungen kann es zum Verlust von Daten mit erweiterten Zeichen kommen. Verwenden Sie für erweiterte Zeichen entweder das systemeigene Unicode-Format, oder geben Sie eine Codepage an.  
+    >  Wenn der einheitliche Modus verwendet wird, konvertiert das Hilfsprogramm **bcp** standardmäßig Zeichen aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in OEM-Zeichen, bevor Sie in eine Datendatei kopiert werden. Das Hilfsprogramm **bcp** konvertiert Zeichen aus einer Datendatei in ANSI-Zeichen, bevor Sie in eine Tabelle Massen importiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Während dieser Konvertierungen kann es zum Verlust von Daten mit erweiterten Zeichen kommen. Verwenden Sie für erweiterte Zeichen entweder das systemeigene Unicode-Format, oder geben Sie eine Codepage an.  
   
 -   Daten vom Typ `sql_variant`  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66011659"
 |**bcp**|**-n**|Bewirkt, dass das Hilfsprogramm **bcp** die nativen Datentypen der Daten verwendet. <sup>1</sup>|  
 |BULK INSERT|DataFileType **= '** Native **'**|Verwendet die systemeigenen Datentypen (native oder widenative) der Daten. Beachten Sie, dass DATAFILETYPE nicht erforderlich ist, wenn eine Formatdatei die Datentypen angibt.|  
   
- <sup>1</sup> um systemeigene Daten (**-n**) in ein Format zu laden, das mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] früheren Versionen von-Clients kompatibel ist, verwenden Sie den Schalter **-V** . Weitere Informationen finden Sie unter [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> um systemeigene Daten (**-n**) in ein Format zu laden, das mit früheren Versionen von- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clients kompatibel ist, verwenden Sie den Schalter **-V** . Weitere Informationen finden Sie unter [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   

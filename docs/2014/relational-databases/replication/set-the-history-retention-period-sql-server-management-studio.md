@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0c927d68c597e64a477382a909aa6eda583d47e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13dcf2ad9a9d619a7fdef9c1ed3f7b970e420cdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676605"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055650"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>Festlegen der Beibehaltungsdauer für den Verlauf (SQL Server Management Studio)
-  Die Beibehaltungsdauer für den Verlauf wird auf der Seite **General** des Dialogfelds **Distribution Database Properties - \<DistributionDatabase>** angegeben. Mit dieser Einstellung wird angegeben, wie lange der Replikations-Agentverlauf gespeichert werden soll. Diese Seite ist über die Seite **General** des Dialogfelds **Verteilereigenschaften - \<Distributor>** verfügbar. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md).  
+  Geben Sie auf der Seite **Allgemein** des Dialog Felds Eigenschaften der **Verteilungs Datenbank- \<DistributionDatabase> ** die Beibehaltungs Dauer für den Verlauf an. Mit dieser Einstellung wird angegeben, wie lange der Replikations-Agentverlauf gespeichert werden soll. Diese Seite ist auf der Seite **Allgemein** des Dialog Felds **Verteiler Eigenschaften- \<Distributor> ** verfügbar. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md).  
   
 ### <a name="to-specify-the-history-retention-period"></a>So geben Sie die Beibehaltungsdauer für den Verlauf an  
   
-1.  Klicken Sie im Dialogfeld **Verteiler Eigenschaften- \<Verteiler>** auf der Seite **Allgemein** auf die Schaltfläche mit den Eigenschaften (**...**) für die Verteilungs Datenbank.  
+1.  Klicken Sie im Dialogfeld **Verteiler Eigenschaften- \<Distributor> ** auf der Seite **Allgemein** auf die Schaltfläche mit den Eigenschaften (**...**) für die Verteilungs Datenbank.  
   
 2.  Geben Sie im Feld **Replikationsleistungsverlauf speichern** einen Wert ein.  
   

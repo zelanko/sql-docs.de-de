@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e2b3318b9aae0412e827875af35cbdf0477e059f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5fe5915240130336bc1f16100a693e4b81e8d163
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736280"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056782"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>SetNumericalValue-Methode (ServerNetworkProtocolProperty-Klasse)
   Legt den numerischen Wert der Eigenschaft fest, auf die verwiesen wird.  
@@ -41,11 +40,11 @@ NumValue
   
 ## <a name="parts"></a>Bestandteile  
  *object*  
- Eine [ServerNetworkProtocolProperty-Klasse] ServerNetworkProtocolProperty-Class.MD)-Objekt, das ein Attribut des Netzwerk Protokolls in der Instanz [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]von darstellt.  
+ Eine [ServerNetworkProtocolProperty-Klasse] ServerNetworkProtocolProperty-Class.MD)-Objekt, das ein Attribut des Netzwerk Protokolls in der Instanz von darstellt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
 |*NumValue*|Ein `uint32`-Wert, der den neuen Wert der aktuellen Eigenschaft angibt.|  
   

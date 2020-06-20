@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d3462266279ed80e94871db4831918ad70b444be
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 19e9ba9013d592d752189adadfb761f1741fd91a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055462"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit-Datensätze
   Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht es, Ereignisgruppen und Ereignisse auf Serverebene und auf Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](sql-server-audit-database-engine.md). [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
@@ -50,7 +49,7 @@ ms.locfileid: "82922143"
 |**database_name**|Der Datenbankkontext, in dem die Aktion aufgetreten ist.|`sysname`|Nein|  
 |**schema_name**|Schemakontext, in dem die Aktion durchgeführt wurde|`sysname`|Nein|  
 |**object_name**|Name der Entität, für die die Überwachung durchgeführt wurde Dies schließt Folgendes ein:<br /><br /> Serverobjekte<br /><br /> databases<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte<br /><br /> TSQL-Anweisung (falls vorhanden)|`sysname`|Nein|  
-|**an**|TSQL-Anweisung (falls vorhanden)|`nvarchar(4000)`|Nein|  
+|**statement**|TSQL-Anweisung (falls vorhanden)|`nvarchar(4000)`|Nein|  
 |**additional_information**|Zusätzliche Informationen über das als XML gespeicherte Ereignis.|`nvarchar(4000)`|Nein|  
   
 ## <a name="remarks"></a>Bemerkungen  

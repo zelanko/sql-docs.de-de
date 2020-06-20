@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a26ef6e6f2c7b394191a292bd2d92155eb40450c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fb949573b73463712e9981cad90e9c7fad9c7c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939638"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970690"
 ---
 # <a name="creating-a-user-defined-type"></a>Erstellen eines benutzerdefinierten Typs
   Um einen benutzerdefinierten Typ (User-Defined Type, UDT) zu erstellen, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert werden kann, müssen Sie zuerst in einer der unterstützten .NET Framework-Programmiersprachen, z. B. Visual C# oder Visual Basic, eine Klasse definieren, die den Spezifikationen für die Erstellung von UDTs entspricht. Die Klasse kann dann in eine DLL (Dynamic Link Library) kompiliert werden, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden kann. Sie können UDTs auch mit Visual Studio erstellen und bereitstellen.  

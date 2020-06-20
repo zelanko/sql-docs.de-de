@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22cb73877dcea8fb880d4c565b809990e5ce7123
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0527fb6da8219176fccd9053b13d5f112f68d8ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030630"
 ---
 # <a name="brokerconnection-event-class"></a>Broker:Connection-Ereignisklasse
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Broker:Connection** -Ereignis, um den Status einer Transportverbindung zu melden, die von Service Broker verwaltet wird.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 301a751bf5b5959ab1fc434ac2a583a6b0378fdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198993"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055577"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Konflikterkennung bei der Peer-zu-Peer-Replikation
   Bei der Peer-zu-Peer-Transaktionsreplikation können Sie an einem beliebigen Knoten in der Topologie Daten einfügen, aktualisieren oder löschen, und Datenänderungen können an andere Knoten übermittelt werden. Da Sie Daten an einem beliebigen Knoten ändern können, können Datenänderungen an verschiedenen Knoten untereinander in Konflikt stehen. Wird eine Zeile an mehr als einem Knoten geändert, kann es zu einem Konflikt kommen, oder das Update kann sogar verloren gehen, wenn die Zeile an andere Knoten übermittelt wird.  
@@ -86,7 +85,7 @@ ms.locfileid: "68198993"
   
 -   Versuchen Sie, den Knoten wieder zu synchronisieren, indem Sie den Verteilungs-Agent aktivieren, damit dieser das Übernehmen von Änderungen fortsetzt:  
   
-    1.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): Geben Sie ' p2p_continue_onconflict ' für @property den- `true` Parameter und @value den-Parameter an.  
+    1.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): Geben Sie ' p2p_continue_onconflict ' für den @property -Parameter und `true` den- @value Parameter an.  
   
     2.  Starten Sie den Verteilungs-Agent neu.  
   
@@ -97,7 +96,7 @@ ms.locfileid: "68198993"
         > [!NOTE]  
         >  Wenn die Daten nach Ausführung dieses Schritts inkonsistent sind, müssen Sie die Zeilen auf dem Knoten mit der höchsten Priorität manuell aktualisieren und dann die Änderungen von diesem Knoten übertragen. Wenn die Topologie keine weiteren miteinander in Konflikt stehenden Änderungen aufweist, werden alle Knoten in einen konsistenten Status gebracht.  
   
-    5.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): Geben Sie ' p2p_continue_onconflict ' für @property den- `false` Parameter und @value den-Parameter an.  
+    5.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): Geben Sie ' p2p_continue_onconflict ' für den @property -Parameter und `false` den- @value Parameter an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Peer-zu-Peer-Transaktionsreplikation](peer-to-peer-transactional-replication.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3bb87bbf5e3e17f5468fabe50c158b30239777d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951490"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Schritt 4: Testen des Tutorialpakets aus Lektion 5
   Zur Laufzeit erhält Ihr Paket den Wert für die `Directory`-Eigenschaft von einer zur Laufzeit aktualisierten Variable. Es wird also nicht der ursprüngliche Verzeichnisname verwendet, den Sie beim Erstellen des Pakets angegeben haben. Der Wert der Variablen wird durch die Datei SSISTutorial.dtsConfig aufgefüllt.  
@@ -25,7 +24,7 @@ ms.locfileid: "62890942"
 ## <a name="checking-the-package-layout"></a>Überprüfen des Paketlayouts  
  Bevor Sie das Paket testen, sollten Sie überprüfen, ob Ablaufsteuerung und Datenfluss im Paket aus Lektion 5 die in den folgenden Diagrammen gezeigten Objekte enthalten. Die Ablaufsteuerung sollte mit der Ablaufsteuerung in Lektion 4 übereinstimmen. Der Datenfluss sollte mit dem Datenfluss in Lektion 4 übereinstimmen.  
   
- **Ablaufsteuerung**  
+ **Ablauf Steuerung**  
   
  ![Ablaufsteuerung im Paket](../../2014/tutorials/media/task4lesson2control.gif "Ablaufsteuerung im Paket")  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62890942"
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>So testen Sie das Lernprogrammpaket aus Lektion 5  
   
-1.  Klicken Sie im Menü **Debuggen** auf **Debugging starten**.  
+1.  Klicken Sie im Menü **Debuggen** auf **Debuggen starten**.  
   
 2.  Nachdem die Ausführung des Pakets abgeschlossen ist, klicken Sie im Menü **Debuggen** auf **Debuggen Debuggen**.  
   

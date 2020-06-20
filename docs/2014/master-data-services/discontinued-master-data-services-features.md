@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba09ba6110f5da2082f13d8277a00bfb9d590d2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479445"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961920"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Eingestellte Master Data Services-Funktionen in SQL Server 2014
   In diesem Thema werden die Funktionen von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] beschrieben, die in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nicht mehr verfügbar sind.  
@@ -58,9 +57,9 @@ ms.locfileid: "65479445"
  Wenn Sie bei einem [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]-Modellbereitstellungspaket, das eine Regel dieses Typs enthält, die Datenbank auf [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisieren, wird die Geschäftsregel ausgeschlossen.  
   
 ### <a name="bulk-updates-and-exporting"></a>Massenaktualisierungen und -export  
- In der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Webanwendung können Sie keine Attributwerte für mehrere Elemente im Stapel mehr aktualisieren. Verwenden Sie zum Ausführen von Massen Aktualisierungen den Stagingprozess [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]oder den.  
+ In der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Webanwendung können Sie keine Attributwerte für mehrere Elemente im Stapel mehr aktualisieren. Verwenden Sie zum Ausführen von Massen Aktualisierungen den Stagingprozess oder den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] .  
   
- In der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Webanwendung können Sie keine Elemente mehr nach Excel exportieren. Verwenden [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]Sie, um mit Membern in Excel zu arbeiten.  
+ In der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Webanwendung können Sie keine Elemente mehr nach Excel exportieren. Verwenden Sie, um mit Membern in Excel zu arbeiten [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] .  
   
 ### <a name="transactions"></a>Transaktionen  
  Im Funktionsbereich **Explorer** können Benutzer ihre eigenen Transaktionen nicht mehr zurücksetzen. Zuvor konnten Benutzer Änderungen, die Sie an Daten im **Explorer**vorgenommen haben, zurücksetzen. Administratoren können weiterhin Transaktionen für alle Benutzer im Funktionsbereich **Versionsverwaltung** zurücksetzen.  

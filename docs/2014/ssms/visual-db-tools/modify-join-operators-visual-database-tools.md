@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 573be4884c385f8e2c391334bf0f862a66e19efa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232849"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044366"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Ändern von Joinoperatoren (Visual Database Tools)
   In der Standardeinstellung verknüpft der [Abfrage- und Sicht-Designer](visual-database-tools.md) Tabellen mit einem Gleichheitszeichen (Gleichheitsjoin), durch das Werte in den zwei Joinspalten einander zugeordnet werden. Sie können ggf. den Operator für das Vergleichen der Werte in den Joinspalten ändern.  
