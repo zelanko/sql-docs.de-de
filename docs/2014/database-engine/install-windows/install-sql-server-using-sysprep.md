@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d35b8f27dc0ef6a1deb40bd86ed193973c2c40b0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775303"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932523"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Installieren von SQL Server 2014 mit SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep können Sie über das Installationscenter zugreifen. Die Seite **Erweitert** des **Installationscenters** enthält zwei Optionen - **Vorbereiten eines Images von einer eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** und **Abschließen eines Images von einer vorbereiteten eigenständigen Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . In den Abschnitten zum [Vorbereiten](#prepare) und [Abschließen](#complete) wird der Installationsvorgang detailliert beschrieben. Weitere Informationen finden Sie unter [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -69,7 +68,7 @@ ms.locfileid: "62775303"
   
 3.  Erstellen Sie den Windows-Failovercluster.  
   
-4.  Führen Sie setup.exe mit `/ACTION=PrepareFailoverCluster` für alle Knoten aus. Zum Beispiel:  
+4.  Führen Sie setup.exe mit `/ACTION=PrepareFailoverCluster` für alle Knoten aus. Beispiel:  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -115,7 +114,7 @@ ms.locfileid: "62775303"
   
      Die Seite **Typ der Imagevorbereitung** wird nur angezeigt, wenn auf dem Computer eine nicht konfigurierte vorbereitete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden ist. Sie können wahlweise eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorbereiten oder einer vorhandenen vorbereiteten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf dem Computer von SysPrep unterstützte Funktionen hinzufügen. Weitere Informationen zum Hinzufügen von Funktionen zu einer vorbereiteten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie im Thema zum [Hinzufügen von Funktionen zu einer vorbereiteten Instanz](#AddFeatures).  
   
-8.  Lesen Sie auf der Seite **Lizenzbedingungen** den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um die Lizenzbedingungen zu akzeptieren. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../includes/msconame-md.md)]senden.  
+8.  Lesen Sie auf der Seite **Lizenzbedingungen** den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um den Lizenzbestimmungen zuzustimmen. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../includes/msconame-md.md)]senden.  
   
 9. Wählen Sie auf der Seite **Funktionsauswahl** die Komponenten für die Installation aus:  
   
@@ -129,15 +128,15 @@ ms.locfileid: "62775303"
   
 10. Auf der Seite **Regeln zum Vorbereiten des Images** überprüft die Systemkonfigurationsprüfung den Systemstatus Ihres Computers, bevor Setup fortfährt. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen**klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen**klicken.  
   
-11. Geben Sie auf der Instanzkonfigurationsseite die Instanz-ID für die Instanz an. Klicken Sie auf **Weiter**, um fortzufahren.  
+11. Geben Sie auf der Instanzkonfigurationsseite die Instanz-ID für die Instanz an. Klicken Sie zum Fortfahren auf **Weiter** .  
   
-     **Instanz-ID** : die Instanz-ID wird verwendet, um Installationsverzeichnisse und Registrierungsschlüssel für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instanz von zu identifizieren. Dies ist der Fall für Standardinstanzen und benannte Instanzen. Wenn die vorbereitete Instanz während des Schritts "Abschließen" als Standardinstanz abgeschlossen wird, wird der Instanzname mit MSSQLSERVER überschrieben. Die Instanz-ID bleibt die gleiche wie angegeben.  
+     **Instanz-ID** : die Instanz-ID wird verwendet, um Installationsverzeichnisse und Registrierungsschlüssel für die Instanz von zu identifizieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dies ist der Fall für Standardinstanzen und benannte Instanzen. Wenn die vorbereitete Instanz während des Schritts "Abschließen" als Standardinstanz abgeschlossen wird, wird der Instanzname mit MSSQLSERVER überschrieben. Die Instanz-ID bleibt die gleiche wie angegeben.  
   
-     **Instanzstammverzeichnis** : Standardmäßig lautet [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]das Instanzstammverzeichnis. Verwenden Sie das dafür vorgesehene Feld, um ein nicht standardmäßiges Stammverzeichnis anzugeben. Alternativ können Sie auf **Durchsuchen** klicken, um einen Installationsordner zu suchen. Das im Vorbereitungsschritt angegebene Verzeichnis wird während der Konfiguration im Schritt "Abschließen" verwendet.  
+     **Instanzstammverzeichnis** : Standardmäßig lautet das Instanzstammverzeichnis [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)] . Verwenden Sie das dafür vorgesehene Feld, um ein nicht standardmäßiges Stammverzeichnis anzugeben. Alternativ können Sie auf **Durchsuchen** klicken, um einen Installationsordner zu suchen. Das im Vorbereitungsschritt angegebene Verzeichnis wird während der Konfiguration im Schritt "Abschließen" verwendet.  
   
      Alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Service Packs und Updates werden für jede Komponente einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übernommen.  
   
-     **Installierte Instanzen** : im Raster werden Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angezeigt, die sich auf dem Computer befinden, auf dem Setup ausgeführt wird.  
+     **Installierte Instanzen** : im Raster werden Instanzen von angezeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die sich auf dem Computer befinden, auf dem Setup ausgeführt wird.  
   
 12. Auf der Seite **Erforderlicher Speicherplatz** wird der für die angegebenen Funktionen erforderliche Speicherplatz berechnet. Der erforderliche Speicherplatz wird dann mit dem verfügbaren Speicherplatz auf dem Computer verglichen.  
   
@@ -167,7 +166,7 @@ ms.locfileid: "62775303"
   
 5.  Wählen Sie auf der Seite **Product Key** ein Optionsfeld aus, um anzugeben, ob Sie eine kostenlose Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installieren oder ob Sie über eine Produktionsversion des Produkts mit einem PID-Schlüssel verfügen. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md). Wenn Sie Evaluation Edition installieren, beginnt der 180-Tage-Testzeitraum mit dem Abschließen dieses Schritts.  
   
-6.  Lesen Sie auf der Seite **Lizenzbedingungen** den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um die Lizenzbedingungen zu akzeptieren. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../includes/msconame-md.md)]senden.  
+6.  Lesen Sie auf der Seite **Lizenzbedingungen** den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um den Lizenzbestimmungen zuzustimmen. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../includes/msconame-md.md)]senden.  
   
 7.  Wählen Sie auf der Seite **Vorbereitete Instanz auswählen** im Dropdownfeld die vorbereitete Instanz aus, die Sie abschließen möchten. Wählen Sie die nicht konfigurierte Instanz aus der Liste **Instanz-ID** aus.  
   
@@ -178,9 +177,9 @@ ms.locfileid: "62775303"
     > [!NOTE]  
     >  Sie können Funktionen hinzufügen, die für die Produktversion, die Sie installieren, verfügbar sind. Weitere Informationen finden Sie [unter von den-Editionen unterstützte Funktionen SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
-9. Geben Sie auf der Instanzkonfigurationsseite den Instanznamen für die vorbereitete Instanz an. Nach Abschluss der Konfiguration von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist dies der Name der Instanz. Klicken Sie auf **Weiter**, um fortzufahren.  
+9. Geben Sie auf der Instanzkonfigurationsseite den Instanznamen für die vorbereitete Instanz an. Nach Abschluss der Konfiguration von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist dies der Name der Instanz. Klicken Sie zum Fortfahren auf **Weiter** .  
   
-     **Instanz-ID** : die Instanz-ID wird verwendet, um Installationsverzeichnisse und Registrierungsschlüssel für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instanz von zu identifizieren. Dies ist der Fall für Standardinstanzen und benannte Instanzen. Wenn die vorbereitete Instanz während des Schritts "Abschließen" als Standardinstanz abgeschlossen wird, wird der Instanzname mit MSSQLSERVER überschrieben. Die Instanz-ID bleibt die gleiche wie während des Vorbereitungsschritts angegeben.  
+     **Instanz-ID** : die Instanz-ID wird verwendet, um Installationsverzeichnisse und Registrierungsschlüssel für die Instanz von zu identifizieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dies ist der Fall für Standardinstanzen und benannte Instanzen. Wenn die vorbereitete Instanz während des Schritts "Abschließen" als Standardinstanz abgeschlossen wird, wird der Instanzname mit MSSQLSERVER überschrieben. Die Instanz-ID bleibt die gleiche wie während des Vorbereitungsschritts angegeben.  
   
      **Instanzstammverzeichnis** : das im Vorbereitungsschritt angegebene Verzeichnis wird verwendet und kann in diesem Schritt nicht geändert werden.  
   
@@ -190,7 +189,7 @@ ms.locfileid: "62775303"
   
 10. Der Ablauf für die weiteren Vorgänge dieses Themas ist von den Funktionen abhängig, die Sie während des Vorbereitungsschritts ausgewählt haben. Je nach Auswahl werden möglicherweise nicht alle Seiten angezeigt.  
   
-11. Geben Sie auf der Seite **Server Konfiguration** -Dienst Konten Anmeldekonten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, ist von den Funktionen abhängig, die Sie für die Installation ausgewählt haben.  
+11. Geben Sie auf der Seite **Server Konfiguration** -Dienst Konten Anmeldekonten für- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, ist von den Funktionen abhängig, die Sie für die Installation ausgewählt haben.  
   
      Sie können allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Diensten dasselbe Anmeldekonto zuweisen, oder Sie können jedes Dienstkonto einzeln konfigurieren. Außerdem können Sie angeben, ob Dienste automatisch starten sollen, manuell gestartet werden oder deaktiviert sind. [!INCLUDE[msCoName](../../includes/msconame-md.md)] , die Dienstkonten einzeln zu konfigurieren, um möglichst geringe Rechte für jeden Dienst bereitzustellen. Dabei erhalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste die Berechtigungen, die mindestens erforderlich ist, um ihre Tasks auszuführen. Weitere Informationen finden Sie unter [Serverkonfiguration – Dienstkonten](../../sql-server/install/server-configuration-service-accounts.md) und [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -200,7 +199,7 @@ ms.locfileid: "62775303"
   
      Wenn Sie die Angabe der Anmeldeinformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste abgeschlossen haben, klicken Sie auf **Weiter**.  
   
-12. Verwenden Sie die Registerkarte **Server Konfiguration-Sortierung** , um nicht standardmäßige Sortierungen für [!INCLUDE[ssDE](../../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]anzugeben. Weitere Informationen finden Sie unter [Serverkonfiguration – Sortierung](../../sql-server/install/server-configuration-collation.md).  
+12. Verwenden Sie die Registerkarte **Server Konfiguration-Sortierung** , um nicht standardmäßige Sortierungen für [!INCLUDE[ssDE](../../includes/ssde-md.md)] und anzugeben [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Weitere Informationen finden Sie unter [Serverkonfiguration – Sortierung](../../sql-server/install/server-configuration-collation.md).  
   
 13. Geben Sie auf der Seite Konfiguration des [!INCLUDE[ssDE](../../includes/ssde-md.md)] s – Kontenbereitstellung folgende Informationen an:  
   
@@ -223,7 +222,7 @@ ms.locfileid: "62775303"
   
 16. Auf der Seite für die Konfiguration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können Sie die Art der zu erstellenden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation angeben. Weitere Informationen zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Konfigurationsmodi finden Sie unter [Reporting Services-Konfigurationsoptionen &#40;SSRS&#41;](../../sql-server/install/reporting-services-configuration-options-ssrs.md).  
   
-17. Geben Sie auf der Seite **Fehlerberichterstattung** die Informationen an, die Sie an senden [!INCLUDE[msCoName](../../includes/msconame-md.md)] möchten, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu verbessern. Die Option für Fehlerberichte ist standardmäßig aktiviert.  
+17. Geben Sie auf der Seite **Fehlerberichterstattung** die Informationen an, die Sie an senden möchten, um die zu [!INCLUDE[msCoName](../../includes/msconame-md.md)] verbessern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die Option für Fehlerberichte ist standardmäßig aktiviert.  
   
 18. Auf der Seite **Regeln zum Abschließen des Images** führt die Systemkonfigurationsprüfung alle Imageregeln vollständig aus, um die Konfiguration des Computers anhand der von Ihnen angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurationen zu überprüfen. Sie können die Details auf dem Bildschirm anzeigen, indem Sie auf **Details anzeigen**klicken, oder als HTML-Bericht, indem Sie auf **Detaillierten Bericht anzeigen**klicken.  
   
@@ -281,7 +280,7 @@ ms.locfileid: "62775303"
   
 4.  Wählen Sie auf der Seite **Instanz auswählen** die vorbereitete Instanz aus, die Sie ändern möchten. Der Name der vorbereiteten Instanz wird als "Nicht konfiguriert PreparedInstanceID" angezeigt, wobei PreparedInstanceID die Instanz ist, die Sie auswählen.  
   
-5.  Geben Sie auf der Seite **Funktionen auswählen** die Funktionen an, die aus der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt werden sollen. Klicken Sie auf **Weiter**, um fortzufahren.  
+5.  Geben Sie auf der Seite **Funktionen auswählen** die Funktionen an, die aus der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt werden sollen. Klicken Sie zum Fortfahren auf **Weiter** .  
   
 6.  Entfernungsregeln werden ausgeführt, um zu überprüfen, ob der Vorgang erfolgreich abgeschlossen werden kann.  
   
@@ -303,7 +302,7 @@ ms.locfileid: "62775303"
   
 4.  Wählen Sie auf der Seite **Instanz auswählen** die vorbereitete Instanz aus, die Sie ändern möchten. Der Name der vorbereiteten Instanz wird als "Nicht konfiguriert PreparedInstanceID" angezeigt, wobei PreparedInstanceID die Instanz ist, die Sie auswählen.  
   
-5.  Geben Sie auf der Seite **Funktionen auswählen** die Funktionen an, die aus der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt werden sollen. Klicken Sie auf **Weiter**, um fortzufahren.  
+5.  Geben Sie auf der Seite **Funktionen auswählen** die Funktionen an, die aus der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt werden sollen. Klicken Sie zum Fortfahren auf **Weiter** .  
   
 6.  Auf der Seite **Entfernungsregeln** führt Setup Regeln aus, um zu überprüfen, ob der Vorgang erfolgreich abgeschlossen werden kann.  
   
@@ -315,8 +314,8 @@ ms.locfileid: "62775303"
   
 10. Wiederholen Sie die Schritte 1 bis 9, bis alle Komponenten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] entfernt wurden.  
   
-##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a>Ändern oder Deinstallieren einer abgeschlossenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
- Das Verfahren zum Hinzufügen oder Entfernen von Funktionen sowie zum Deinstallieren einer abgeschlossenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ähnelt dem Verfahren für eine installierte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie in den folgenden Themen:  
+##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a>Ändern oder Deinstallieren einer abgeschlossenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Das Verfahren zum Hinzufügen oder Entfernen von Funktionen sowie zum Deinstallieren einer abgeschlossenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ähnelt dem Verfahren für eine installierte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter den folgenden Themen:  
   
 -   [Hinzufügen von Funktionen zu einer Instanz von SQL Server 2014 &#40;Setup&#41;](add-features-to-an-instance-of-sql-server-setup.md)  
   

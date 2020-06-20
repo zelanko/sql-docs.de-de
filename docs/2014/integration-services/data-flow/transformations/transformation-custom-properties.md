@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60798bb7bd856dd131592e3c67eb155cf64a6ae7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770728"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939251"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   Neben den Eigenschaften, die die meisten Datenflussobjekte im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Objektmodell aufweisen, verfügen zahlreiche Datenflussobjekte über benutzerdefinierte objektspezifische Eigenschaften. Diese benutzerdefinierten Eigenschaften sind nur zur Laufzeit verfügbar und sind nicht in der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed Programming Referenz-Dokumentation dokumentiert.  
@@ -101,7 +100,7 @@ ms.locfileid: "62770728"
 |AggregationType|Ganze Zahl (Enumeration)|Ein Wert, der den Aggregationsvorgang angibt, der für die Spalte ausgeführt werden soll. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Anzahl** (1)<br /><br /> **Alle zählen** (2)<br /><br /> **CountDistinct** (3)<br /><br /> **Summe** (4)<br /><br /> **Durchschnitt** (5)<br /><br /> **Maximum** (7)<br /><br /> **Minimum** (6)<br /><br /> **Gruppieren nach** (0)|  
 |CountDistinctKeys|Integer|Wenn der Aggregationstyp **COUNT DISTINCT**ist, ein Wert, der die genaue Anzahl von Schlüsseln angibt, die von der Aggregation geschrieben werden können. Wenn ein CountDistinctScale-Wert angegeben wird, hat der Wert in CountDistinctKeys Vorrang.|  
 |CountDistinctScale|Ganze Zahl (Enumeration)|Wenn der Aggregationstyp **COUNT DISTINCT**ist, ein Wert, der beschreibt, wie viele Schlüsselwerte ungefähr von der Aggregation geschrieben werden können. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Niedrig** (1):Gibt bis zu 500.000 Schlüsselwerte an.<br /><br /> **Mittel** (2): Gibt bis zu 5 Millionen Schlüsselwerte an.<br /><br /> **Hoch** (3): Gibt mehr als 25 Millionen Schlüsselwerte an.<br /><br /> **Keine Angabe** (0): Gibt an, dass kein CountDistinctScale-Wert verwendet wird.|  
-|IsBig|Boolean|Ein Wert, der angibt, ob die Spalte einen Wert größer als 4 Milliarden oder einen Wert mit einer höheren Genauigkeit als ein Gleitkommawert mit doppelter Genauigkeit enthält. Der Wert kann 0 oder 1 sein. der Wert 0 gibt an, `False` dass IsBig ist und die Spalte keinen großen Wert oder einen präzisen Wert enthält. Der Standardwert dieser Eigenschaft ist „1“.|  
+|IsBig|Boolean|Ein Wert, der angibt, ob die Spalte einen Wert größer als 4 Milliarden oder einen Wert mit einer höheren Genauigkeit als ein Gleitkommawert mit doppelter Genauigkeit enthält. Der Wert kann 0 oder 1 sein. der Wert 0 gibt an, dass IsBig ist `False` und die Spalte keinen großen Wert oder einen präzisen Wert enthält. Der Standardwert dieser Eigenschaft ist „1“.|  
   
  Die Eingabe und die Eingabespalten der Transformation für das Aggregieren verfügen nicht über benutzerdefinierte Eigenschaften.  
   
@@ -128,7 +127,7 @@ ms.locfileid: "62770728"
 |Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |ConnectionManager|String|Gibt den Namen des Verbindungs-Managers an.|  
-|ValidateExternalMetadata|Boolean|Gibt an, ob die Cachetransformation zur Entwurfszeit mit externen Datenquellen überprüft wird. Wenn die Eigenschaft auf `False` festgelegt wird, erfolgt zur Laufzeit eine Überprüfung anhand externer Datenquellen.<br /><br /> Der Standardwert `True`.|  
+|ValidateExternalMetadata|Boolean|Gibt an, ob die Cachetransformation zur Entwurfszeit mit externen Datenquellen überprüft wird. Wenn die Eigenschaft auf `False` festgelegt wird, erfolgt zur Laufzeit eine Überprüfung anhand externer Datenquellen.<br /><br /> Der Standardwert `True` .|  
 |AvailableInputColumns|String|Eine Liste der verfügbaren Eingabespalten.|  
 |InputColumns|String|Eine Liste der ausgewählten Eingabespalten.|  
 |CacheColumnName|String|Gibt den Namen der Spalte an, die einer ausgewählten Eingabespalte zugeordnet wird.<br /><br /> Der Name der Spalte in der CacheColumnName-Eigenschaft muss mit dem Namen der entsprechenden Spalte übereinstimmen, die auf der Seite **Spalten** des **Editors für den Cacheverbindungs-Manager**aufgelistet ist.<br /><br /> Weitere Informationen finden Sie unter [Cache Connection Manager Editor](../../cache-connection-manager-editor.md).|  
@@ -260,7 +259,7 @@ ms.locfileid: "62770728"
   
 |Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
-|Trennzeichen|String|Die von der Transformation verwendeten Tokentrennzeichen. Zu den Standardtrennzeichen zählen folgende Zeichen: Leerzeichen ( ), Komma (,), Punkt (.), Semikolon (;), Doppelpunkt (:), Bindestrich (-), doppeltes gerades Anführungszeichen ("), einfaches gerades Anführungszeichen ('), kaufmännisches Und-Zeichen (&), Schrägstrich (/), umgekehrter Schrägstrich (\\), at-Zeichen (@), Ausrufezeichen (!), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als (\<), größer als (>), öffnende eckige Klammer ([), schließende eckige Klammer (]), öffnende geschweifte Klammer ({), schließende geschweifte Klammer (}), senkrechter Strich (&#124;), Nummernzeichen (#), Sternchen (*), Caretzeichen (^) und Prozentzeichen (%).|  
+|Trennzeichen|String|Die von der Transformation verwendeten Tokentrennzeichen. Die Standard Trennzeichen umfassen die folgenden Zeichen: Leerzeichen (), Komma (,), Punkt (.), Semikolon (;), Doppelpunkt (:), Bindestrich (-), doppeltes gerades Anführungszeichen ("), einfaches einfaches Anführungszeichen ('), kaufmännisches und-Zeichen (&), Schrägstrich (/), umgekehrter Schrägstrich ( \\ ), Zeichen (@), Ausrufezeichen), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als ( \<), greater than (> ), öffnende eckige Klammer ([), schließende Klammer (]), öffnende geschweifte Klammer ({), schließende Klammer (}), Pipe (&#124;), Nummern Zeichen (#), Sternchen (*), Caretzeichen (^) und Prozent (%).|  
 |Exhaustive|Boolean|Ein Wert, der angibt, ob jeder Eingabedatensatz mit jedem anderen Eingabedatensatz verglichen wird. Der Wert von `True` wird meistens zu Debugzwecken verwendet. Der Standardwert dieser Eigenschaft ist `False`.<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Fuzzygruppierung**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
 |MaxMemoryUsage|Integer|Die Höchstmenge an Arbeitsspeicher zur Verwendung durch die Transformation. Der Standardwert dieser Eigenschaft ist **0**, wodurch die dynamische Speicherauslastung aktiviert wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Fuzzygruppierung**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
 |MinSimilarity|Double|Der Schwellenwert für die Ähnlichkeit, mit dem die Transformation Duplikate ermittelt, der als ein Wert zwischen 0 und 1 ausgedrückt wird.  Der Standardwert dieser Eigenschaft ist 0.8.|  
@@ -294,7 +293,7 @@ ms.locfileid: "62770728"
 |Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Gibt an, ob eine Kopie der Verweistabelle für die Indexerstellung der Fuzzysuche und nachfolgende Suchen erstellt werden soll. Der Standardwert dieser Eigenschaft ist `True`.|  
-|Trennzeichen|String|Die Trennzeichen, die von der Transformation verwendet werden, um Spaltenwerte mit Token zu versehen. Zu den Standardtrennzeichen zählen folgende Zeichen: Leerzeichen ( ), Komma (,), Punkt (.), Semikolon (;), Doppelpunkt (:), Bindestrich (-), doppeltes gerades Anführungszeichen ("), einfaches gerades Anführungszeichen ('), kaufmännisches Und-Zeichen (&), Schrägstrich (/), umgekehrter Schrägstrich (\\), at-Zeichen (@), Ausrufezeichen (!), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als (\<), größer als (>), öffnende eckige Klammer ([), schließende eckige Klammer (]), öffnende geschweifte Klammer ({), schließende geschweifte Klammer (}), senkrechter Strich (&#124;). Nummernzeichen (#), Sternchen (*), Caretzeichen (^) und Prozentzeichen (%).|  
+|Trennzeichen|String|Die Trennzeichen, die von der Transformation verwendet werden, um Spaltenwerte mit Token zu versehen. Die Standard Trennzeichen umfassen die folgenden Zeichen: Leerzeichen (), Komma (,), Punkt (.) Semikolon (;), Doppelpunkt (:) Bindestrich (-), doppeltes gerades Anführungszeichen ("), einfaches, einfaches Anführungszeichen ('), kaufmännisches und-Zeichen (&), Schrägstrich (/), umgekehrter Schrägstrich ( \\ ), at-Zeichen (@), Ausrufezeichen (!), Fragezeichen (?), öffnende Klammer ((), schließende Klammer ()), kleiner als ( \<), greater than (> ), öffnende eckige Klammer ([), schließende eckige Klammer (]), öffnende geschweifte Klammer ({), schließende geschweifte Klammer (}), Pipe (&#124;). Nummernzeichen (#), Sternchen (*), Caretzeichen (^) und Prozentzeichen (%).|  
 |DropExistingMatchIndex|Boolean|Ein Wert, der angibt, ob der in MatchIndexName angegebene Übereinstimmungsindex gelöscht wird, wenn MatchIndexOptions nicht auf ReuseExistingIndex festgelegt ist. Der Standardwert dieser Eigenschaft ist `True`.|  
 |Exhaustive|Boolean|Ein Wert, der angibt, ob jeder Eingabedatensatz mit jedem anderen Eingabedatensatz verglichen wird. Der Wert von `True` wird meistens zu Debugzwecken verwendet. Der Standardwert dieser Eigenschaft ist `False`.<br /><br /> Hinweis: Diese Eigenschaft ist im **Transformations-Editor für Fuzzysuche**nicht verfügbar, kann aber mit dem **Erweiterten Editor**festgelegt werden.|  
 |MatchIndexName|String|Der Name des Übereinstimmungsindexes. Der Übereinstimmungsindex ist die Tabelle, in der die Transformation den von ihr verwendeten Index erstellt und speichert. Wenn der Übereinstimmungsindex wiederverwendet wird, gibt MatchIndexName den wiederzuverwendenden Index an. MatchIndexName muss ein gültiger [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Bezeichnername sein. Wenn der Name z. B. Leerzeichen enthält, muss der Name in Klammern eingeschlossen werden.|  
@@ -422,7 +421,7 @@ ms.locfileid: "62770728"
   
 |Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
-|Aktiviert|Boolean|Legt die Ausgabe fest, an die die als Stichprobe entnommenen Zeilen weitergeleitet werden. In der ausgewählten Ausgabe ist ausgewählt auf festgelegt `True`, und bei der nicht ausgewählten Ausgabe wird ausgewählt auf festgelegt `False`.|  
+|Aktiviert|Boolean|Legt die Ausgabe fest, an die die als Stichprobe entnommenen Zeilen weitergeleitet werden. In der ausgewählten Ausgabe ist ausgewählt auf festgelegt, `True` und bei der nicht ausgewählten Ausgabe wird ausgewählt auf festgelegt `False` .|  
   
  Die Eingabe, die Eingabespalten und die Ausgabespalten der Transformation für Prozentwert-Stichproben verfügen nicht über benutzerdefinierten Eigenschaften.  
   
@@ -445,7 +444,7 @@ ms.locfileid: "62770728"
   
 |Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
-|PivotKeyValue|Zeichenfolge|Einer der möglichen Werte aus der Spalte, der durch den Wert seiner PivotUsage-Eigenschaft als Pivotschlüssel markiert wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
+|PivotKeyValue|String|Einer der möglichen Werte aus der Spalte, der durch den Wert seiner PivotUsage-Eigenschaft als Pivotschlüssel markiert wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.|  
 |SourceColumn|Integer|Die `LineageID` einer Eingabespalte, die einen pivotierten Wert oder -1 enthält. Der Wert -1 gibt an, dass die Spalte nicht in einem Pivotvorgang verwendet wird.|  
   
  Weitere Informationen finden Sie unter [Pivot Transformation](pivot-transformation.md).  
@@ -455,9 +454,9 @@ ms.locfileid: "62770728"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Zeilenanzahl. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Name der Eigenschaft|Datentyp|BESCHREIBUNG|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
-|VariableName|Zeichenfolge|Der Name der Variablen, die die Zeilenanzahl enthält.|  
+|VariableName|String|Der Name der Variablen, die die Zeilenanzahl enthält.|  
   
  Die Eingabe, die Eingabespalten, die Ausgabe und die Ausgabespalten der Transformation für Zeilenanzahl verfügen nicht über benutzerdefinierte Eigenschaften.  
   
@@ -475,9 +474,9 @@ ms.locfileid: "62770728"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgaben der Transformation für Zeilenstichproben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Name der Eigenschaft|Datentyp|BESCHREIBUNG|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
-|Aktiviert|Boolean|Legt die Ausgabe fest, an die die als Stichprobe entnommenen Zeilen weitergeleitet werden. In der ausgewählten Ausgabe ist ausgewählt auf festgelegt `True`, und bei der nicht ausgewählten Ausgabe wird ausgewählt auf festgelegt `False`.|  
+|Aktiviert|Boolean|Legt die Ausgabe fest, an die die als Stichprobe entnommenen Zeilen weitergeleitet werden. In der ausgewählten Ausgabe ist ausgewählt auf festgelegt, `True` und bei der nicht ausgewählten Ausgabe wird ausgewählt auf festgelegt `False` .|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Zeilenstichproben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
@@ -494,10 +493,10 @@ ms.locfileid: "62770728"
   
  In der folgenden Tabelle werden die benutzerdefinierten Eigenschaften der Skriptkomponente beschrieben. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Name der Eigenschaft|Datentyp|BESCHREIBUNG|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
-|ReadOnlyVariables|Zeichenfolge|Eine durch Trennzeichen getrennte Liste von Variablen für den schreibgeschützten Zugriff durch die Skriptkomponente.|  
-|ReadWriteVariables|Zeichenfolge|Eine durch Trennzeichen getrennte Liste von Variablen für den Lese-/Schreibzugriff durch die Skriptkomponente.|  
+|ReadOnlyVariables|String|Eine durch Trennzeichen getrennte Liste von Variablen für den schreibgeschützten Zugriff durch die Skriptkomponente.|  
+|ReadWriteVariables|String|Eine durch Trennzeichen getrennte Liste von Variablen für den Lese-/Schreibzugriff durch die Skriptkomponente.|  
   
  Die Eingabe, die Eingabespalten, die Ausgabe und die Ausgabespalten der Skriptkomponente verfügen nicht über benutzerdefinierte Eigenschaften, sofern der Skriptentwickler keine benutzerdefinierten Eigenschaften erstellt.  
   
@@ -510,13 +509,13 @@ ms.locfileid: "62770728"
   
 |Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
-|CurrentRowWhere|Zeichenfolge|Die WHERE-Klausel in der SELECT-Anweisung, die die aktuelle Zeile aus Zeilen mit demselben Geschäftsschlüssel auswählt.|  
+|CurrentRowWhere|String|Die WHERE-Klausel in der SELECT-Anweisung, die die aktuelle Zeile aus Zeilen mit demselben Geschäftsschlüssel auswählt.|  
 |EnableInferredMember|Boolean|Ein Wert, der angibt, ob Updates abgeleiteter Elemente erkannt werden. Der Standardwert dieser Eigenschaft ist `True`.|  
 |FailOnFixedAttributeChange|Boolean|Ein Wert, der angibt, ob die Transformation fehlschlägt, wenn Zeilen oder Spalten mit festen Attributen Änderungen enthalten oder die Suche in der Dimensionstabelle fehlschlägt. Wenn Sie davon ausgehen, dass eingehende Zeilen neue Datensätze enthalten, legen Sie diesen Wert auf `True` fest, damit die Transformation fortgesetzt wird, wenn die Suche fehlgeschlagen ist, da die Transformation den Ausfall verwendet, um neue Datensätze zu ermitteln. Der Standardwert dieser Eigenschaft ist `False`.|  
 |FailOnLookupFailure|Boolean|Ein Wert, der angibt, ob die Transformation fehlschlägt, wenn eine Suche nach einem vorhandenen Datensatz fehlschlägt. Der Standardwert dieser Eigenschaft ist `False`.|  
 |IncomingRowChangeType|Integer|Ein Wert, der angibt, ob alle eingehenden Zeilen neue Zeilen sind oder ob die Transformation die Art der Änderung erkennen sollte.|  
-|InferredMemberIndicator|Zeichenfolge|Der Spaltenname für das abgeleitete Element.|  
-|SqlCommand|Zeichenfolge|Die SQL-Anweisung, die zum Erstellen eines Schemarowsets verwendet wird.|  
+|InferredMemberIndicator|String|Der Spaltenname für das abgeleitete Element.|  
+|SqlCommand|String|Die SQL-Anweisung, die zum Erstellen eines Schemarowsets verwendet wird.|  
 |UpdateChangingAttributeHistory|Boolean|Ein Wert, der angibt, ob Updates historischer Attribute an die Transformationsausgabe für veränderliche Attributupdates weitergeleitet werden.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für langsam veränderliche Dimensionen. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
@@ -567,8 +566,8 @@ ms.locfileid: "62770728"
 |IsCaseSensitive|Boolean|Ein Wert, der angibt, ob beim Extrahieren von Nomen und nominalen Ausdrücken die Groß-/Kleinschreibung berücksichtigt wird. Der Standardwert dieser Eigenschaft ist `False`.|  
 |MaxLengthOfTerm|Integer|Ein numerischer Wert, der die maximale Länge eines Ausdrucks angibt. Diese Eigenschaft bezieht sich nur auf Ausdrücke. Der Standardwert dieser Eigenschaft ist **12**.|  
 |NeedRefenceData|Boolean|Ein Wert, der angibt, ob die Transformation eine in einer Verweistabelle gespeicherte Liste mit Ausschlussausdrücken verwendet. Der Standardwert dieser Eigenschaft ist `False`.|  
-|OutTermColumn|Zeichenfolge|Der Name der Spalte, die die Ausschlussausdrücke enthält.|  
-|OutTermTable|Zeichenfolge|Der Name der Tabelle, die die Spalte mit Ausschlussausdrücken enthält.|  
+|OutTermColumn|String|Der Name der Spalte, die die Ausschlussausdrücke enthält.|  
+|OutTermTable|String|Der Name der Tabelle, die die Spalte mit Ausschlussausdrücken enthält.|  
 |ScoreType|Integer|Ein Wert, der den Ergebnistyp angibt, der dem Ausdruck zugeordnet werden soll. Gültige Werte sind 0 für Häufigkeit und 1 für ein TFIDF-Ergebnis. Das TFIDF-Ergebnis ist das Produkt von Ausdruckshäufigkeit und umgekehrter Dokumenthäufigkeit, definiert als: TFIDF des Ausdrucks T = (Häufigkeit von T) \* log( (Anz. Zeilen in der Eingabe) / (Anz. Zeilen mit T) ). Der Standardwert dieser Eigenschaft ist **0**.|  
 |WordOrPhrase|Integer|Ein Wert, der den Ausdruckstyp angibt. Die gültigen Werte sind 0 zur Angabe von Wörtern, 1 zur Angabe von nominalen Ausdrücken und 2 zur Angabe von Wörtern und nominalen Ausdrücken. Der Standardwert dieser Eigenschaft ist **0**.|  
   
@@ -584,8 +583,8 @@ ms.locfileid: "62770728"
 |Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |IsCaseSensitive|Boolean|Ein Wert, der angibt, ob ein Vergleich mit Beachtung der Groß-/Kleinschreibung auf die Übereinstimmung des Texts in der Eingabespalte und den Suchbegriff angewendet wird. Der Standardwert dieser Eigenschaft ist `False`.|  
-|RefTermColumn|Zeichenfolge|Der Name der Spalte, die die Suchausdrücke enthält.|  
-|RefTermTable|Zeichenfolge|Der Name der Tabelle, die die Spalte mit Suchausdrücken enthält.|  
+|RefTermColumn|String|Der Name der Spalte, die die Suchausdrücke enthält.|  
+|RefTermTable|String|Der Name der Tabelle, die die Spalte mit Suchausdrücken enthält.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Eingabespalten der Transformation für Ausdruckssuche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
@@ -595,7 +594,7 @@ ms.locfileid: "62770728"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Transformation für Ausdruckssuche. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Name der Eigenschaft|Datentyp|BESCHREIBUNG|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |CustomLineageID|Integer|Die `LineageID` der entsprechenden Eingabespalte, wenn der `InputColumnType` dieser Spalte 0 oder 2 ist.|  
   
@@ -614,11 +613,11 @@ ms.locfileid: "62770728"
 |Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|---------------|-----------------|  
 |DestinationColumn|Integer|Die `LineageID` der Ausgabespalte, der die Eingabespalte zugeordnet wird. Ein Wert von -1 gibt an, dass die Eingabespalte keiner Ausgabespalte zugeordnet wird.|  
-|PivotKeyValue|Zeichenfolge|Ein Wert, der in eine Transformationsausgabespalte kopiert wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.<br /><br /> In dem in [Unpivot Transformation](unpivot-transformation.md)beschriebenen Entpivotierungsszenario sind die Pivotwerte die Textwerte Ham, Coke, Milk, Beer und Chips. Diese werden in der neuen Produktspalte, die durch die **Name der Pivotschlüsselwert-Spalte** -Option festgelegt wird, als Textwerte angezeigt.|  
+|PivotKeyValue|String|Ein Wert, der in eine Transformationsausgabespalte kopiert wird.<br /><br /> Der Wert dieser Eigenschaft kann mithilfe eines Eigenschaftsausdrucks angegeben werden.<br /><br /> In dem in [Unpivot Transformation](unpivot-transformation.md)beschriebenen Entpivotierungsszenario sind die Pivotwerte die Textwerte Ham, Coke, Milk, Beer und Chips. Diese werden in der neuen Produktspalte, die durch die **Name der Pivotschlüsselwert-Spalte** -Option festgelegt wird, als Textwerte angezeigt.|  
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Ausgabespalten der Entpivotierungstransformation. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Name der Eigenschaft|Datentyp|BESCHREIBUNG|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
 |PivotKey|Boolean|Gibt an, ob die Werte in der `PivotKeyValue`-Eigenschaft von Eingabespalten in diese Ausgabespalte geschrieben werden.<br /><br /> In dem in [Unpivot Transformation](unpivot-transformation.md)beschriebenen Entpivotierungsszenario lautete der Name der Pivotwertspalte **Product** und bezieht sich auf die neue **Product** -Spalte, in der die Pivotierung der Spalten Ham, Coke, Milk, Beer und Chips aufgehoben wird.|  
   

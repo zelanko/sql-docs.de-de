@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a4834e8a32f5cb2cb512061777715f314f84299
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637820"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916317"
 ---
 # <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
   Dieses Thema bietet Vorschläge, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete entworfen werden müssen, damit allgemeine Leistungsprobleme vermieden werden. Dieses Thema enthält zudem Informationen zu Funktionen und Tools, die Sie verwenden können, um Leistungsprobleme von Paketen zu beheben.  
@@ -94,7 +93,7 @@ ms.locfileid: "73637820"
  Es gibt zwei allgemeine Richtlinien, die von der Datenflusskomponente unabhängig sind, die Sie befolgen sollten, um die Leistung zu erhöhen: Optimieren Sie Abfragen, und vermeiden Sie unnötige Zeichenfolgen.  
   
 #### <a name="optimize-queries"></a>Optimieren von Abfragen  
- Zahlreiche Datenflusskomponenten verwenden Abfragen beim Extrahieren von Daten aus Quellen oder bei Suchvorgängen zum Erstellen von Verweistabellen. Die Standardabfrage verwendet die Syntax SELECT * FROM \<Tabellenname>. Bei diesem Abfragetyp werden alle Spalten in der Quelltabelle zurückgegeben. Wenn alle Spalten zur Entwurfszeit zur Verfügung stehen, ist es möglich, eine beliebige Spalte als Such-, Pass-Through- oder Quellspalte auszuwählen. Nachdem Sie die zu verwendenden Spalten ausgewählt haben, sollten Sie die Abfrage so ändern, dass sie nur diese ausgewählten Spalten enthält. Das Entfernen überflüssiger Spalten macht den Datenfluss in einem Paket effizienter, da durch weniger Spalten eine kleinere Zeile erstellt wird. Je kleiner eine Zeile ist, desto mehr Zeilen passen in einen Puffer und desto geringer ist der Aufwand für die Verarbeitung aller Zeilen im Dataset.  
+ Zahlreiche Datenflusskomponenten verwenden Abfragen beim Extrahieren von Daten aus Quellen oder bei Suchvorgängen zum Erstellen von Verweistabellen. Die Standard Abfrage verwendet die SELECT * FROM- \<tableName> Syntax. Bei diesem Abfragetyp werden alle Spalten in der Quelltabelle zurückgegeben. Wenn alle Spalten zur Entwurfszeit zur Verfügung stehen, ist es möglich, eine beliebige Spalte als Such-, Pass-Through- oder Quellspalte auszuwählen. Nachdem Sie die zu verwendenden Spalten ausgewählt haben, sollten Sie die Abfrage so ändern, dass sie nur diese ausgewählten Spalten enthält. Das Entfernen überflüssiger Spalten macht den Datenfluss in einem Paket effizienter, da durch weniger Spalten eine kleinere Zeile erstellt wird. Je kleiner eine Zeile ist, desto mehr Zeilen passen in einen Puffer und desto geringer ist der Aufwand für die Verarbeitung aller Zeilen im Dataset.  
   
  Wenn Sie eine Abfrage erstellen möchten, können Sie die Abfrage eingeben oder den Abfrage-Generator verwenden.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "73637820"
  Verbessern Sie mithilfe der Vorschläge in diesem Abschnitt die Leistung der Transformation für das Aggregieren, für Fuzzysuche, Fuzzygruppierung, Suche, Zusammenführungsjoin und für langsam veränderliche Dimensionen.  
   
 #### <a name="aggregate-transformation"></a>Transformation für das Aggregieren  
- Die Transformation für das Aggregieren enthält die `Keys`-, die `KeysScale`-, die `CountDistinctKeys`- und die `CountDistinctScale`-Eigenschaften. Diese Eigenschaften dienen einer verbesserten Leistung, indem es der Transformation ermöglicht wird, den zum Zwischenspeichern von Daten benötigten Speicher zuzuordnen. Wenn Sie die genaue oder ungefähre Anzahl von Gruppen kennen, die als Ergebnis eines **Group by** -Vorgangs erwartet werden, legen `Keys` Sie `KeysScale` die-Eigenschaft bzw. die-Eigenschaft fest. Wenn Sie die genaue oder ungefähre Anzahl der unterschiedlichen Werte kennen, die als Ergebnis eines unter **schiedlichen Anzahl** Vorgangs erwartet werden, `CountDistinctKeys` legen `CountDistinctScale` Sie die-Eigenschaft bzw. die-Eigenschaft fest.  
+ Die Transformation für das Aggregieren enthält die `Keys`-, die `KeysScale`-, die `CountDistinctKeys`- und die `CountDistinctScale`-Eigenschaften. Diese Eigenschaften dienen einer verbesserten Leistung, indem es der Transformation ermöglicht wird, den zum Zwischenspeichern von Daten benötigten Speicher zuzuordnen. Wenn Sie die genaue oder ungefähre Anzahl von Gruppen kennen, die als Ergebnis eines **Group by** -Vorgangs erwartet werden, legen Sie die `Keys` -Eigenschaft bzw. die-Eigenschaft fest `KeysScale` . Wenn Sie die genaue oder ungefähre Anzahl der unterschiedlichen Werte kennen, die als Ergebnis eines unter **schiedlichen Anzahl** Vorgangs erwartet werden, legen Sie die `CountDistinctKeys` -Eigenschaft bzw. die-Eigenschaft fest `CountDistinctScale` .  
   
  Wenn Sie in einem Datenfluss mehrere Aggregationen erstellen müssen, sollten Sie diese mit einer einzigen Transformation für das Aggregieren erstellen, anstatt mehrere Transformationen zu verwenden. Durch diesen Ansatz wird die Leistung verbessert, wenn eine Aggregation eine Untergruppe einer anderen Aggregation ist, da die Transformation den internen Speicher optimieren kann und die Eingangsdaten nur einmal durchsuchen muss. Wenn eine Aggregation z. B. eine GROUP BY-Klausel und eine AVG-Aggregation verwendet, kann die Leistung dadurch verbessert werden, dass sie in eine Transformation kombiniert werden. Das Ausführen mehrerer Aggregationen innerhalb einer Transformation für das Aggregieren serialisiert jedoch die Aggregationsvorgänge und verbessert daher möglicherweise nicht die Leistung, wenn mehrere Aggregationen unabhängig voneinander berechnet werden müssen.  
   

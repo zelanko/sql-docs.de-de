@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2773c2b837aa9344e2e8427c6f960fa098fa2408
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f513e8216bf5d8be269a7178601c368f6e597df1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067611"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939884"
 ---
 # <a name="column-properties-ssas-tabular"></a>Spalteneigenschaften (SSAS – tabellarisch)
   In diesem Thema werden die Spalteneigenschaften für tabellarische Modelle beschrieben.  
   
  Abschnitte in diesem Thema:  
   
--   [Spalteneigenschaften](#bkmk_properties)  
+-   [Spalten Eigenschaften](#bkmk_properties)  
   
 -   [So konfigurieren Sie Eigenschafteneinstellungen für Spalten](#bkmk_config_prop)  
   

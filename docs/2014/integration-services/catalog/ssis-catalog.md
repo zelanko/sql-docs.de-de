@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4657bf58a7160f075759a265fef883c92fee0c9
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: f24ea0800107caf026105e306ae39e1461077de5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921714"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924264"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
   Der- `SSISDB` Katalog ist der zentrale Punkt für die Arbeit mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS)-Projekten, die Sie auf dem-Server bereitgestellt haben [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
@@ -36,7 +35,7 @@ ms.locfileid: "82921714"
 >  Sie können die Datenbank nicht umbenennen `SSISDB` .  
   
 > [!NOTE]  
->  Wenn die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, `SSISDB` mit der die Datenbank verbunden ist, beendet wird oder nicht reagiert, wird der Prozess isserverexec. exe beendet. Eine Meldung wird in ein Windows-Ereignisprotokoll geschrieben.  
+>  Wenn die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, `SSISDB` an die die Datenbank angefügt ist, beendet wird oder nicht reagiert, wird der ISServerExec.exe Prozess beendet. Eine Meldung wird in ein Windows-Ereignisprotokoll geschrieben.  
 >   
 >  Wenn für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen ein Failover als Teil eines Clusterfailovers durchgeführt wird, werden die ausgeführten Pakete nicht neu gestartet. Sie können Prüfpunkte verwenden, um Pakete neu zu starten. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../packages/restart-packages-by-using-checkpoints.md).  
   
@@ -47,7 +46,7 @@ ms.locfileid: "82921714"
   
 -   Project  
   
--   Environment  
+-   Umgebung  
   
 -   Parameter  
   
@@ -56,7 +55,7 @@ ms.locfileid: "82921714"
 ### <a name="folder-project-environment"></a>Ordner, Projekt, Umgebung  
  Beachten Sie die folgenden Regeln, wenn Sie einen Ordner, ein Projekt oder eine Umgebung umbenennen.  
   
--   Zu ungültige Zeichen zählen die ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), größer als (>), senkrechter Strich (|), Rücktaste (\b), NULL (\0) und Tab (\t).  
+-   Ungültige Zeichen sind ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als ( \<), greater than (> ), Pipe (|), Rücktaste (\b), NULL (\ 0) und Tabulator (\t).  
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "82921714"
 ### <a name="environment-variable"></a>Umgebungsvariable  
  Beachten Sie die folgenden Regeln, wenn Sie eine Umgebungsvariable benennen.  
   
--   Zu ungültige Zeichen zählen die ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), größer als (>), senkrechter Strich (|), Rücktaste (\b), NULL (\0) und Tab (\t).  
+-   Ungültige Zeichen sind ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als ( \<), greater than (> ), Pipe (|), Rücktaste (\b), NULL (\ 0) und Tabulator (\t).  
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "82921714"
   
  Eine Änderung des Verschlüsselungsalgorithmus ist sehr aufwändig. Der Server muss zuerst alle Konfigurationswerte mithilfe des zuvor angegebenen Algorithmus entschlüsseln. Anschließend müssen die Werte vom Server mithilfe des neuen Algorithmus wieder verschlüsselt werden. In diesem Zeitraum können keine anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Vorgänge auf dem Server ausgeführt werden. Damit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Vorgänge weiterhin ohne Unterbrechung ausgeführt werden können, ist der Wert für den Verschlüsselungsalgorithmus im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]-Dialogfeld schreibgeschützt.  
   
- Um die Eigenschaften Einstellung **Verschlüsselungsalgorithmus** zu ändern, legen `SSISDB` Sie die Datenbank auf den Einzelbenutzermodus fest, und nennen Sie dann die gespeicherte Prozedur catalog. configure_catalog. Verwenden Sie ENCRYPTION_ALGORITHM für das *property_name* -Argument. Die unterstützten Eigenschaftswerte finden Sie unter [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Weitere Informationen zur gespeicherten Prozedur finden Sie unter [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Um die Eigenschaften Einstellung **Verschlüsselungsalgorithmus** zu ändern, legen `SSISDB` Sie die Datenbank auf den Einzelbenutzermodus fest, und wenden Sie dann die gespeicherte Prozedur catalog.configure_catalog an. Verwenden Sie ENCRYPTION_ALGORITHM für das *property_name* -Argument. Die unterstützten Eigenschaftswerte finden Sie unter [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Weitere Informationen zur gespeicherten Prozedur finden Sie unter [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Weitere Informationen zum Einzelbenutzermodus finden Sie unter [Festlegen des Einzelbenutzermodus für eine Datenbank](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Informationen zur Verschlüsselung sowie zu Algorithmen für die Verschlüsselung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]finden Sie in den Themen im Abschnitt [SQL Server-Verschlüsselung](../../relational-databases/security/encryption/sql-server-encryption.md).  
   

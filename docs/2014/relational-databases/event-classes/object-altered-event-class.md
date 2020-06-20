@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd38e8d1685b23cfeeb1793d02b0fff1d7de0640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a0d610b6541439124d2c289dfd319811c1e0d95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029357"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered-Ereignisklasse
   Durch die Object:Altered-Ereignisklasse wird angegeben, dass Objekt geändert wurde, beispielsweise durch eine ALTER INDEX-, ALTER TABLE- oder ALTER DATABASE-Anweisung. Dieses Ereignisklasse kann dazu verwendet werden, festzustellen, ob Objekte beispielsweise durch ODBC-Anwendungen geändert wurden, durch die häufig temporäre gespeicherte Prozeduren erstellt werden.  

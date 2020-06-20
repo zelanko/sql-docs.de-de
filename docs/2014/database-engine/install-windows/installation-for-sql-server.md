@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dafb1e971b85adfee2ecb3579ac20b83906b9dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228409"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932371"
 ---
 # <a name="installation-for-sql-server-2014"></a>Installation für SQLServer 2014
  ## <a name="download-sql-server-2014-express"></a>[Download SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -45,7 +44,7 @@ ms.locfileid: "75228409"
   
 -   Konnektivitätskomponenten  
   
- Sie können jede Komponente einzeln installieren oder eine Kombination der oben aufgelisteten Komponenten auswählen. Informationen zu den in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbaren Editionen und Komponenten finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) und Features, [die von den Editionen von SQL Server 2014 unterstützt](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)werden. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist als 32- und 64-Bit-Edition verfügbar.
+ Sie können jede Komponente einzeln installieren oder eine Kombination der oben aufgelisteten Komponenten auswählen. Informationen zu den in verfügbaren Editionen und Komponenten finden Sie unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) und Features, [die von den Editionen von SQL Server 2014 unterstützt](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)werden. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist als 32- und 64-Bit-Edition verfügbar.
  
  **Probieren Sie es aus:**  
   

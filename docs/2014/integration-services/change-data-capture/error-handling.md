@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7537a892e5453bb66c07ab4b2c6bd6513b754c7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835648"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923261"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
   Eine Oracle CDC-Instanz führt das Mining für Änderungen einer einzelnen Oracle-Quelldatenbank durch (ein Oracle RAC-Cluster wird als einzelne Datenbank angesehen) und schreibt die Änderungen mit ausgeführtem Commit in Änderungstabellen in einer CDC-Datenbank auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz.  
@@ -55,7 +54,7 @@ ms.locfileid: "62835648"
   
 -   In der Tabelle MSXDBCDC.dbo.xdbcdc_trace, die vom Hauptprozess des Oracle CDC Service für die allgemeine Protokollierung und die Ablaufverfolgung verwendet wird.  
   
--   In der Tabelle „\<cdc-database>.cdc.xdbcdc_trace“, die von Oracle CDC-Instanzen für die allgemeine Protokollierung und die Ablaufverfolgung verwendet wird. Dies bedeutet, dass auf eine bestimmte Oracle CDC-Instanz bezogene Fehler in der Ablaufverfolgungstabelle dieser Instanz protokolliert werden.  
+-   Die \<cdc-database> CDC. xdbcdc_trace-Tabelle, die für die allgemeine Protokollierung und Ablauf Verfolgung durch Oracle CDC-Instanzen verwendet wird. Dies bedeutet, dass auf eine bestimmte Oracle CDC-Instanz bezogene Fehler in der Ablaufverfolgungstabelle dieser Instanz protokolliert werden.  
   
  Die Informationen werden vom Oracle CDC Service protokolliert, wenn für den Dienst Folgendes gilt:  
   

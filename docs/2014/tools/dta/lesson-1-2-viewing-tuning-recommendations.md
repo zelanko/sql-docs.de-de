@@ -11,22 +11,21 @@ helpviewer_keywords:
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe8d52d898db35698155518646f074e7167687a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d0ab03b5152b0fe3f12de5e31b091b49d86cd4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110178"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048356"
 ---
 # <a name="viewing-tuning-recommendations"></a>Anzeigen von Empfehlungen für die Optimierung
-   In dieser Aufgabe wird die Optimierungssitzung verwendet, die Sie im Abschnitt [Optimieren einer Arbeitsauslastung](lesson-1-1-tuning-a-workload.md) angelegt haben. Nachdem Sie [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] die Datenbank mit dem Skript MyScript. [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL optimiert haben, [!INCLUDE[ssDE](../../includes/ssde-md.md)] zeigt der-Optimierungs Ratgeber die Ergebnisse auf der Registerkarte **Empfehlungen** an. Mit der folgenden Aufgabe wird **Recommendations** die Registerkarte Empfehlungen [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf der grafischen Benutzeroberfläche (GUI) des-Optimierungs Ratgebers eingeführt, und Sie werden dazu geführt, welche Informationen über die Ergebnisse der Optimierungs Sitzung bereitgestellt werden.  
+   In dieser Aufgabe wird die Optimierungssitzung verwendet, die Sie im Abschnitt [Optimieren einer Arbeitsauslastung](lesson-1-1-tuning-a-workload.md) angelegt haben. Nachdem Sie die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank mit dem Skript MyScript. SQL optimiert haben [!INCLUDE[tsql](../../includes/tsql-md.md)] , zeigt der-Optimierungs Ratgeber die [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ergebnisse auf der Registerkarte **Empfehlungen** an. Mit der folgenden Aufgabe wird die Registerkarte **Empfehlungen** auf der [!INCLUDE[ssDE](../../includes/ssde-md.md)] grafischen Benutzeroberfläche (GUI) des-Optimierungs Ratgebers eingeführt, und Sie werden dazu geführt, welche Informationen über die Ergebnisse der Optimierungs Sitzung bereitgestellt werden.  
   
 ### <a name="view-tuning-recommendations"></a>Optimierungsempfehlungen anzeigen  
   
 1.  Starten Sie den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber. Weitere Informationen finden Sie unter [Starten des Datenbankoptimierungsratgebers](../../relational-databases/performance/database-engine-tuning-advisor.md). Stellen Sie sicher, dass Sie eine Verbindung mit derselben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz herstellen, die Sie in der Übung [Optimieren einer Arbeitsauslastung](lesson-1-1-tuning-a-workload.md)verwendet haben.  
   
-2.  Doppelklicken Sie im Bereich **Sitzungsmonitor** auf **MySession** . [!INCLUDE[ssDE](../../includes/ssde-md.md)]Der-Optimierungs Ratgeber lädt die Sitzungsinformationen aus Ihrer vorherigen Optimierungs Sitzung und **Recommendations** zeigt die Registerkarte Empfehlungen [!INCLUDE[ssDE](../../includes/ssde-md.md)] an. Beachten Sie, dass der-Optimierungs Ratgeber keine **Partitions Empfehlungen** gegeben hat, da Sie alle Standardeinstellungen für die Optimierungs Option akzeptiert haben und auf der Registerkarte Optimierungs **Optionen** **keine Partitionierung** ausgewählt  
+2.  Doppelklicken Sie im Bereich **Sitzungsmonitor** auf **MySession** . [!INCLUDE[ssDE](../../includes/ssde-md.md)]Der-Optimierungs Ratgeber lädt die Sitzungsinformationen aus Ihrer vorherigen Optimierungs Sitzung und zeigt die Registerkarte **Empfehlungen** an. Beachten Sie, dass der-Optimierungs [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ratgeber keine **Partitions Empfehlungen** gegeben hat, da Sie alle Standardeinstellungen für die Optimierungs Option akzeptiert haben und auf der Registerkarte Optimierungs **Optionen** **keine Partitionierung** ausgewählt  
   
 3.  Verwenden Sie auf der Registerkarte **Empfehlungen** die Bildlaufleiste unten auf der Seite im Registerformat, um alle Spalten zu **Indexempfehlungen** anzuzeigen. Jede Zeile steht für ein Datenbankobjekt (Indizes oder indizierte Sichten), für das der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber die Empfehlung abgibt, es zu löschen oder anzulegen. Führen Sie einen Bildlauf zur Spalte ganz rechts durch, und klicken Sie auf **Definition**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Der Optimierungsratgeber zeigt das Fenster **SQL-Skriptvorschau** an, in dem das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript angezeigt werden kann, das das Datenbankobjekt in dieser Zeile anlegt oder löscht. Klicken Sie auf **Schließen** , um das Vorschaufenster zu schließen.  
   

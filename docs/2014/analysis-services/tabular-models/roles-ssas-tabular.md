@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdcf47e483c3a52879c66838a657b51d65bff8f8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284855"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938721"
 ---
 # <a name="roles-ssas-tabular"></a>Rollen (SSAS – tabellarisch)
   Mit Rollen werden in tabellarischen Modellen Elementberechtigungen für ein Modell definiert. Jede Rolle enthält Mitglieder in Form von Windows-Benutzernamen oder Windows-Gruppen sowie Berechtigungen (Lese-, Verarbeitungs- und Administratorberechtigungen). Rollenmitglieder können die durch die Rollenberechtigung definierten Aktionen für das Modell ausführen. Rollen, die mit Leseberechtigungen definiert wurden, können zusätzliche Sicherheit auf Zeilenebene bieten, indem Filter auf Zeilenebene verwendet werden.  
@@ -40,7 +39,7 @@ ms.locfileid: "67284855"
 -   [Verwandte Aufgaben](#bkmk_rt)  
   
 ##  <a name="understanding-roles"></a><a name="bkmk_underst"></a>Grundlegendes zu Rollen  
- Rollen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden in verwendet, um die Sicherheit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für-und-Daten zu verwalten. Die folgenden beiden Rollentypen stehen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zur Verfügung:  
+ Rollen werden in verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , um die Sicherheit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für-und-Daten zu verwalten. Die folgenden beiden Rollentypen stehen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zur Verfügung:  
   
 -   Die Serverrolle, bei der es sich um eine feste Rolle handelt, mit der der Administratorzugriff auf eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]bereitgestellt wird.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "67284855"
   
  Um dynamische Sicherheit zu implementieren, können Sie die folgenden Funktionen als Teil einer DAX-Formel verwenden, um den Benutzernamen des aktuell angemeldeten Benutzers oder die CustomData-Eigenschaft in einer Verbindungszeichenfolge zurückzugeben:  
   
-|Funktion|BESCHREIBUNG|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[USERNAME-Funktion &#40;DAX-&#41;](/dax/username-function-dax)|Gibt "domäne\benutzernamen" des aktuell angemeldeten Benutzers zurück.|  
 |[CustomData-Funktion &#40;DAX-&#41;](/dax/customdata-function-dax)|Gibt die CustomData-Eigenschaft in einer Verbindungszeichenfolge zurück.|  
@@ -113,8 +112,8 @@ ms.locfileid: "67284855"
 |--------------|---------------|-------------|--------------------|------------------|  
 |Brown|Kevin|Adventure-works\kevin0|Marketing|7|  
 |Bradley|David|Adventure-works\david0|Marketing|7|  
-|Dobney|JoLynn|Adventure-works\JoLynn0|Bereitstellung|4|  
-|Baretto DeMattos|Paula|Adventure-works\Paula0|Personalwesen|2|  
+|Dobney|JoLynn|Adventure-works\JoLynn0|Produktion|4|  
+|Baretto DeMattos|Paula|Adventure-works\Paula0|Human Resources|2|  
   
  **dimDepartment**  
   
@@ -123,7 +122,7 @@ ms.locfileid: "67284855"
 |1|Unternehmen|  
 |2|Geschäftsführung und Verwaltung|  
 |3|Bestandsmanagement|  
-|4|Herstellung|  
+|4|Fertigung|  
 |5|Qualitätssicherung|  
 |6|Forschung und Entwicklung|  
 |7|Vertrieb und Marketing|  

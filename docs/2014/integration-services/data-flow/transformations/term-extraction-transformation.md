@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1655b50f84fae99249b2170d92a49459a143d5b4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899933"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939272"
 ---
 # <a name="term-extraction-transformation"></a>Transformation für Ausdrucksextrahierung
   Die Transformation für Ausdrucksextrahierung extrahiert Ausdrücke aus Text in einer Transformationseingabespalte und schreibt die Ausdrücke dann in eine Transformationsausgabespalte. Diese Transformation ist nur mit englischem Text kompatibel und verwendet ein eigenes englisches Wörterbuch und linguistische Informationen für Englisch.  
@@ -44,7 +43,7 @@ ms.locfileid: "62899933"
   
  Die Transformation für Ausdrucksextrahierung generiert für jeden extrahierten Ausdruck ein Ergebnis. Das Ergebnis kann ein TFIDF-Wert oder die Häufigkeit sein, mit der der normalisierte Ausdruck in der Ausgabe auftritt. In beiden Fällen wird das Ergebnis durch eine reelle Zahl dargestellt, die größer als 0 ist. Beispielsweise könnte das TFIDF-Ergebnis den Wert 0,5 und die Häufigkeit den Wert 1,0 oder 2,0 aufweisen.  
   
- Die Ausgabe der Transformation für Ausdrucksextrahierung umfasst nur zwei Spalten. Eine Spalte enthält die extrahierten Ausdrücke, und die andere Spalte enthält das Ergebnis. Die Standardnamen der Spalten lauten **Term** und `Score`. Da die Textspalte in der Eingabe mehrere Ausdrücke enthalten kann, weist die Ausgabe der Transformation für Ausdrucksextrahierung in der Regel mehr Zeilen als die Eingabe auf.  
+ Die Ausgabe der Transformation für Ausdrucksextrahierung umfasst nur zwei Spalten. Eine Spalte enthält die extrahierten Ausdrücke, und die andere Spalte enthält das Ergebnis. Die Standardnamen der Spalten lauten **Term** und `Score` . Da die Textspalte in der Eingabe mehrere Ausdrücke enthalten kann, weist die Ausgabe der Transformation für Ausdrucksextrahierung in der Regel mehr Zeilen als die Eingabe auf.  
   
  Wenn die extrahierten Ausdrücke in eine Tabelle geschrieben werden, können sie von anderen Suchtransformationen wie z. B. Transformationen für Ausdruckssuche, Transformationen für Fuzzysuche und Transformationen für Suche, verwendet werden.  
   
@@ -146,7 +145,7 @@ ms.locfileid: "62899933"
   
 -   Kombinationen aus Zahlen, Satzzeichen und Buchstaben. Beispielsweise gibt *A23B#99* den Ausdruck *A23B*zurück.  
   
--   %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " und '.  
+-   Die Zeichen%, @, &, $, #, \* ,:,;,., **,** ,!,?, \<, > , +, =, ^, ~, |, \\ ,/, (,), [,], {,}, "und".  
   
     > [!NOTE]  
     >  Akronyme, die mindestens einen Punkt (.) enthalten, werden nicht in mehrere Sätze aufgeteilt.  

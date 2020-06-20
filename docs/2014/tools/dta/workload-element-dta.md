@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f409e978bf977d48fbfc3a9ec56d5ebfe2b545ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678718"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064088"
 ---
 # <a name="workload-element-dta"></a>Workload-Element (DTA)
   Gibt die für eine Optimierungssitzung zu verwendende Arbeitsauslastung an.  
@@ -57,7 +56,7 @@ ms.locfileid: "62678718"
  Die Angabe einer Arbeitsauslastung ist für jede Optimierungssitzung erforderlich.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codebeispiel gibt die **MyDatabase. MyDBOwner. TuningTable001** -Ablauf Verfolgungs Tabelle `Workload` für das-Element an. Die **TuningTable001** -Tabelle wurde mithilfe der Optimierungsvorlage von SQL Server Profiler und Speichern der Ablaufverfolgungsausgabe als Tabelle erstellt.  
+ Das folgende Codebeispiel gibt die **MyDatabase. MyDBOwner. TuningTable001** -Ablauf Verfolgungs Tabelle für das- `Workload` Element an. Die **TuningTable001** -Tabelle wurde mithilfe der Optimierungsvorlage von SQL Server Profiler und Speichern der Ablaufverfolgungsausgabe als Tabelle erstellt.  
   
 ```  
 <DTAXML ...>  

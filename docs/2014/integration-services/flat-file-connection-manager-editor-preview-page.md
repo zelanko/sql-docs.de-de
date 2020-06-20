@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 233bc63102243c60c7ed74b5beeadd2c921f399a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff01832b565b0cca2e1a2550606307552ee63a33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058737"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967090"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>Verbindungs-Manager-Editor für Flatfiles (Vorschauseite)
   Über den Knoten **Vorschau** im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** können Sie den Inhalt der Quelldatei im Tabellenformat anzeigen.  
   
  Weitere Informationen zum Verbindungs-Manager für Flatfiles finden Sie unter [Flat File Connection Manager](connection-manager/file-connection-manager.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Flatfile-Verbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer angezeigt.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66058737"
  **Auszulassende Datenzeilen**  
  Geben Sie an, wie viele Zeilen am Anfang von Flatfiles ausgelassen werden sollen.  
   
- **Aktualisieren**  
+ **Aktualisierung**  
  Zeigen Sie an, welche Auswirkung die Änderung der Anzahl der auszulassenden Zeilen hat, indem Sie auf **Aktualisieren**klicken. Diese Schaltfläche wird erst angezeigt, nachdem Sie andere Verbindungsoptionen geändert haben.  
   
  **Vorschau der Zeilen**  

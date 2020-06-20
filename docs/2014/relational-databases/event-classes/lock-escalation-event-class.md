@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bf476175245000ba63e058ca333953d07276076
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662369"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029433"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation-Ereignisklasse
   Die **Lock:Escalation** -Ereignisklasse zeigt an, dass eine differenziertere Sperre in eine gröbere Sperre konvertiert wurde (z.B. eine Zeilensperre, die in Objektsperre konvertiert wurde). Die Ausweitungsereignisklasse hat die Ereignis-ID 60.  
@@ -49,7 +48,7 @@ ms.locfileid: "62662369"
 |**NTUserName**|`nvarchar`|Windows-Benutzername.|6|Ja|  
 |**ObjectID**|`int`|Die vom System zugewiesene ID der Tabelle, für die die Sperrenausweitung ausgelöst wurde.|22|Ja|  
 |**ObjectID2**|`bigint`|Die ID des verbundenen Objekts oder der verbundenen Entität. (Die Heap- oder B-Struktur-ID, für die die Sperrenausweitung ausgelöst wurde.)|56|Ja|  
-|**Offset**|`int`|Der Startoffset der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.|61|Ja|  
+|**Kompensieren**|`int`|Der Startoffset der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.|61|Ja|  
 |**OwnerID**|`int`|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6 = WAITFOR_QUERY|58|Ja|  
 |**RequestId**|`int`|Die ID der Anforderung, die die Anweisung enthält.|49|Ja|  
 |**ServerName**|`nvarchar`|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
@@ -58,7 +57,7 @@ ms.locfileid: "62662369"
 |**StartTime**|`datetime`|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  
 |**TextData**|`ntext`|Der Text der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die die Sperrenausweitung ausgelöst hat.|1|Ja|  
 |**TransactionID**|`bigint`|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
-|**Type**|`int`|Granularität der Sperrenausweitung:<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT (Tabellenebene)<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13 = ALLOCATION_UNIT|57|Ja|  
+|**Typ**|`int`|Granularität der Sperrenausweitung:<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT (Tabellenebene)<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13 = ALLOCATION_UNIT|57|Ja|  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird mit der `sp_trace_create` -Prozedur eine Ablaufverfolgung erstellt, mit `sp_trace_setevent` werden der Ablaufverfolgung Spalten für die Sperrenausweitung hinzugefügt, und mit `sp_trace_setstatus` wird die Ablaufverfolgung gestartet. In Anweisungen wie `EXEC sp_trace_setevent @TraceID, 60, 22, 1`zeigt die Zahl `60` die Ausweitungsereignisklasse und die Zahl `22` die **ObjectID** -Spalte an. Durch `1` wird das Ablaufverfolgungsereignis auf ON festgelegt.  

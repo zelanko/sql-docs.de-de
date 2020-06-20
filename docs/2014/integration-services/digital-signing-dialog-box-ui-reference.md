@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f89d495aa8826250c04f3e0cfe5979d5f202ac8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059450"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966990"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Digitale Signatur (Dialogfeld, Referenz zur Benutzeroberfläche)
   Mithilfe des Dialogfelds **Digitale Signatur** können Sie ein Paket mit einer digitalen Signatur signieren oder die Signatur löschen. Das Dialogfeld **Digitale Signatur** steht in **unter der Option** Digitale Signatur **im Menü** SSIS [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]zur Verfügung.  
   
  Weitere Informationen finden Sie unter [Identifizieren der Quelle von Paketen mit digitalen Signaturen](security/identify-the-source-of-packages-with-digital-signatures.md) und [Signieren eines Pakets mit einem digitalen Zertifikat](../../2014/integration-services/sign-a-package-by-using-a-digital-certificate.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Gebärden**  
  Klicken Sie auf diese Option, um das Dialogfeld **Zertifikat auswählen** zu öffnen und das zu verwendende Zertifikat auszuwählen.  
   
- **Remove**  
+ **Entfernen**  
  Klicken Sie hierauf, um die digitale Signatur zu entfernen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

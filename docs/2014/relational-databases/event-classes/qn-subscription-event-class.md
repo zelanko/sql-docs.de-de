@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4916167e-8541-43b4-900e-ec8e6adcbc34
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fda0f61806c1fa2be33b1a231e877758c4c67ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cebcb693fc6f876c74f375c16de9ad3f09bbe9bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62650515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028896"
 ---
 # <a name="qnsubscription-event-class"></a>QN:Subscription (Ereignisklasse)
   Das QN:Subscription-Ereignis übermittelt Informationen über Benachrichtigungsabonnements.  
@@ -34,11 +33,11 @@ ms.locfileid: "62650515"
 |DatabaseName|`nvarchar`|Der Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|Ja|  
 |EventClass|`int`|Ereignistyp = 199.|27|Nein|  
 |EventSequence|`int`|Die Sequenznummer für dieses Ereignis.|51|Nein|  
-|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Subscription registered: Gibt an, wann das Abfragebenachrichtigungsabonnement erfolgreich in der Datenbank registriert wird.<br /><br /> Abonnement Rewound: gibt an, [!INCLUDE[ssDE](../../includes/ssde-md.md)] wann eine Abonnement Anforderung erhält, die genau mit einem vorhandenen Abonnement übereinstimmt. In diesem Fall legt [!INCLUDE[ssDE](../../includes/ssde-md.md)] für den Timeoutwert des vorhandenen Abonnements den in der neuen Abonnementanforderung festgelegten Timeoutwert fest.<br /><br /> Subscription fired: Gibt an, wann ein Benachrichtigungsabonnement eine Benachrichtigungsmeldung erzeugt.<br /><br /> Fehler beim Auslösen des Broker-Fehlers: gibt an, wann eine Benachrichtigungs [!INCLUDE[ssSB](../../includes/sssb-md.md)] Meldung aufgrund eines Fehlers fehlschlägt.<br /><br /> Fehler beim Auslösen ohne Broker-Fehler: gibt an, wann eine Benachrichtigungs Meldung fehlschlägt [!INCLUDE[ssSB](../../includes/sssb-md.md)] , aber nicht aufgrund eines Fehlers fehlschlägt.<br /><br /> Broker-Fehler abgefangen: gibt [!INCLUDE[ssSB](../../includes/sssb-md.md)] an, dass einen Fehler in der Konversation übermittelt hat, den die Abfrage Benachrichtigung verwendet.<br /><br /> Versuch zum Löschen von Abonnements: gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, dass versucht hat, ein abgelaufenes Abonnement zu löschen, um Ressourcen freizugeben.<br /><br /> Subscription deletion failed: Gibt an, dass beim Löschen eines abgelaufenen Abonnement ein Fehler generiert wurde. Die Löschung des Abonnements wird in [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatisch erneut geplant, um Ressourcen frei zu geben.<br /><br /> Abonnement zerstört: gibt an, [!INCLUDE[ssDE](../../includes/ssde-md.md)] dass erfolgreich ein abgelaufenes Abonnement gelöscht hat.|21|Ja|  
+|EventSubClass|`nvarchar`|Der Typ der Ereignisunterklasse, der weitere Informationen zu jeder Ereignisklasse liefert. Diese Spalte kann die folgenden Werte enthalten:<br /><br /> Subscription registered: Gibt an, wann das Abfragebenachrichtigungsabonnement erfolgreich in der Datenbank registriert wird.<br /><br /> Abonnement Rewound: gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, wann eine Abonnement Anforderung erhält, die genau mit einem vorhandenen Abonnement übereinstimmt. In diesem Fall legt [!INCLUDE[ssDE](../../includes/ssde-md.md)] für den Timeoutwert des vorhandenen Abonnements den in der neuen Abonnementanforderung festgelegten Timeoutwert fest.<br /><br /> Subscription fired: Gibt an, wann ein Benachrichtigungsabonnement eine Benachrichtigungsmeldung erzeugt.<br /><br /> Fehler beim Auslösen des Broker-Fehlers: gibt an, wann eine Benachrichtigungs Meldung aufgrund eines Fehlers fehlschlägt [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> Fehler beim Auslösen ohne Broker-Fehler: gibt an, wann eine Benachrichtigungs Meldung fehlschlägt, aber nicht aufgrund eines Fehlers fehlschlägt [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> Broker-Fehler abgefangen: gibt [!INCLUDE[ssSB](../../includes/sssb-md.md)] an, dass einen Fehler in der Konversation übermittelt hat, den die Abfrage Benachrichtigung verwendet.<br /><br /> Versuch zum Löschen von Abonnements: gibt an, dass versucht hat, [!INCLUDE[ssDE](../../includes/ssde-md.md)] ein abgelaufenes Abonnement zu löschen, um Ressourcen freizugeben.<br /><br /> Subscription deletion failed: Gibt an, dass beim Löschen eines abgelaufenen Abonnement ein Fehler generiert wurde. Die Löschung des Abonnements wird in [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatisch erneut geplant, um Ressourcen frei zu geben.<br /><br /> Abonnement zerstört: gibt an, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] erfolgreich ein abgelaufenes Abonnement gelöscht hat.|21|Ja|  
 |GroupID|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname durch den Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IsSystem|`int`|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> 0 = Benutzer<br /><br /> 1 = System|60|Nein|  
-|LoginName|`nvarchar`|Der Anmeldename des Benutzers (Anmeldung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheit oder Windows-Anmeldeinformationen im Format DOMAIN\Username).|11|Nein|  
+|LoginName|`nvarchar`|Der Anmeldename des Benutzers (Anmeldung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheit oder Windows-Anmeldeinformationen im Format DOMAIN\Username).|11|Nein |  
 |LoginSID|`image`|Die Sicherheits-ID (SID, Security Identification Number) des angemeldeten Benutzers. Diese Informationen finden Sie in der sys.server_principals-Katalogsicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|Ja|  
 |NTDomainName|`nvarchar`|Die Windows-Domäne, der der Benutzer angehört.|7|Ja|  
 |NTUserName|`nvarchar`|Der Name des Benutzers, der Besitzer der Verbindung ist, die dieses Ereignis generiert hat.|6|Ja|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 398b24ddbb9d128446012d36f4b691596433054c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a093432acae5f2ac41a9a8136db047130d7548c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662224"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028544"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile-Ereignisklasse
   Die Ereignisklasse „Showplan All for Query Compile“ tritt auf, wenn in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SQL-Anweisung kompiliert wird. Schließen Sie diese Ereignisklasse ein, um die Showplan-Operatoren zu identifizieren. Die enthaltenen Informationen sind eine Teilmenge der in der Showplan XML For Query Compile-Ereignisklasse verfügbaren Informationen.  

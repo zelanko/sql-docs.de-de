@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9f220f8908e92eaa861f64b0f896f78547b950e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068155"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940271"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Angeben der Spalten&#39;s-Inhalt und-Datentyps (Data Mining-Assistent)
   Verwenden Sie die Seite **Inhalt und Datentyp der Spalten angeben** , um den von dem Assistenten bereits festgelegten Spalten- oder Inhaltstyp zu ändern. Der Assistent verwendet die Datentypen der Quellspalten sowie den ausgewählten Algorithmus, um den Standarddaten- und Inhaltstyp zu bestimmen.  
   
  **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Spalten**  
  Eine Liste der Spalten, die Sie auf der Seite **Trainingsdaten angeben** des Assistenten definiert haben.  
   

@@ -1,5 +1,6 @@
 ---
 title: SQLDriverConnect | Microsoft-Dokumentation
+description: Erfahren Sie mehr über SQLDriverConnect-Verbindungs Attribute und Unterstützung für hohe Verfügbarkeit/Notfall Wiederherstellung und SPNs im SQL Server Native Client ODBC-Treibers.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,25 +15,25 @@ ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d1455f0b91313ea137ec9c13a2d318fba0807b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b2df8cd200acec558e2fb522bfbc43f3a4975d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967734"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber definiert Verbindungsattribute, die entweder Schlüsselwörter für Verbindungszeichenfolgen ersetzen oder verbessern. Mehrere Schlüsselwörter für Verbindungszeichenfolgen verfügen über vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber angegebene Standardwerte.  
   
- Eine Liste der Schlüsselwörter, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verfügbar sind, finden Sie unter Verwenden von [Verbindungs Zeichenfolgen-Schlüsselwörtern mit SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Eine Liste der Schlüsselwörter, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber verfügbar sind, finden [Sie unter Verwenden von Verbindungs Zeichenfolgen-Schlüsselwörtern mit SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Weitere Informationen zu Verbindungs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Attributen und Standardverhalten von Treibern finden Sie unter [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
+ Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindungs Attributen und Standardverhalten von Treibern finden Sie unter [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
- Eine Erläuterung der Schlüsselwörter für Verbindungs Zeichenfolgen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die für Native Client gültig sind, finden [Sie unter Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Eine Erläuterung der Schlüsselwörter für Verbindungs Zeichenfolgen, die für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client gültig sind, finden [Sie unter Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Wenn der Wert für den_DriverCompletion_ -Parameter von **SQLDriverConnect**SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE oder SQL_DRIVER_COMPLETE_REQUIRED [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist, ruft der Native Client-ODBC-Treiber Schlüsselwort Werte aus dem angezeigten Dialogfeld ab. Wenn der Schlüsselwortwert in der Verbindungszeichenfolge übergeben wird und der Benutzer den Schlüsselwortwert nicht im Dialogfeld ändert, verwendet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber den Wert aus der Verbindungszeichenfolge. Wenn der Wert in der Verbindungszeichenfolge nicht festgelegt wird und der Benutzer keine Zuweisung im Dialogfeld vornimmt, verwendet der Treiber den Standardwert.  
+ Wenn der Wert für den_DriverCompletion_ -Parameter von **SQLDriverConnect**SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE oder SQL_DRIVER_COMPLETE_REQUIRED ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruft der Native Client-ODBC-Treiber Schlüsselwort Werte aus dem angezeigten Dialogfeld ab. Wenn der Schlüsselwortwert in der Verbindungszeichenfolge übergeben wird und der Benutzer den Schlüsselwortwert nicht im Dialogfeld ändert, verwendet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber den Wert aus der Verbindungszeichenfolge. Wenn der Wert in der Verbindungszeichenfolge nicht festgelegt wird und der Benutzer keine Zuweisung im Dialogfeld vornimmt, verwendet der Treiber den Standardwert.  
   
  **SQLDriverConnect** muss ein gültiges *WindowHandle* zugewiesen werden, wenn ein *DriverCompletion* -Wert die Anzeige des Verbindungs Dialogfelds des Treibers erfordert (oder möglicherweise erfordert). Ein ungültiges Handle gibt SQL_ERROR zurück.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "81302551"
  Wenn der Wert für den *DriverCompletion* -Parameter SQL_DRIVER_COMPLETE oder SQL_DRIVER_PROMPT ist und die Sprache oder Datenbank ungültig ist, wird das Dialogfeld von **SQLDriverConnect** erneut angezeigt.  
   
 ## <a name="sqldriverconnect-support-for-high-availability-disaster-recovery"></a>SQLDriverConnect-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall  
- Weitere Informationen zur Verwendung von **SQLDriverConnect** zum Herstellen einer Verbindung [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] mit einem Cluster finden Sie [unter SQL Server Native Client-Unterstützung für hohe Verfügbarkeit und Notfall Wiederherstellung](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Weitere Informationen zur Verwendung von **SQLDriverConnect** zum Herstellen einer Verbindung mit einem [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] Cluster finden Sie [unter SQL Server Native Client-Unterstützung für hohe Verfügbarkeit und Notfall Wiederherstellung](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>SQLDriverConnect-Unterstützung für Dienstprinzipalnamen (Service Principal Names, SPNs)  
  SQLDDriverConnect verwendet das ODBC-Anmelde Dialogfeld, wenn die Eingabeaufforderung aktiviert ist. Damit können SPNs sowohl für den Prinzipalserver als auch für seinen Failoverpartner eingegeben werden.  
