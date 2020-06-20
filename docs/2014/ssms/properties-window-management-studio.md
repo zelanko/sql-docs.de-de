@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33a48ef65a29823abb2e9757575ed006c309969b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058470"
 ---
 # <a name="properties-window-management-studio"></a>Eigenschaftenfenster (Management Studio)
   Dieses Fenster wird zum Anzeigen der Eigenschaften von ausgewählten Elementen verwendet. Zudem können Sie mithilfe des Fensters Eiegnschaften Datei-, Projekt- und Projektmappeneigenschaften anzeigen. Das Eigenschaftenfenster ist verfügbar, wenn Sie im Menü **Ansicht** auf **Eigenschaftenfenster** klicken.  

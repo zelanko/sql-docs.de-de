@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a202327ad63cf7ef8f51d3572b257816ee6d9419
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064462"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
-  In diesem Thema wird beschrieben, wie Benachrichtigungs [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Optionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mithilfe [!INCLUDE[tsql](../../includes/tsql-md.md)]von, oder SQL Server Management Objects fest [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelegt werden, damit der-Agent Benachrichtigungen zu Aufträgen an Operatoren senden kann.  
+  In diesem Thema wird beschrieben, wie Benachrichtigungs Optionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects festgelegt werden, damit der- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Benachrichtigungen zu Aufträgen an Operatoren senden kann.  
   
  **In diesem Thema**  
   

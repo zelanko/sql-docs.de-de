@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e1fbea13b0ad9744e1cbe6240c9084f8fda6dc2e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 396cf66a3aa4650f60f818d5a9b6a783cf1a8349
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011135"
 ---
 # <a name="using-encryption-without-validation"></a>Verwenden von Verschlüsselung ohne Überprüfung
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verschlüsselt stets Netzwerkpakete, die mit der Anmeldung verbunden sind. Wenn auf dem Server beim Start kein Zertifikat bereitgestellt wird, erstellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein selbstsigniertes Zertifikat, mit dem Anmeldungspakete verschlüsselt werden.  

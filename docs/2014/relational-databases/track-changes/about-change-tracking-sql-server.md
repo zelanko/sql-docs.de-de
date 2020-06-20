@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e8a817421aeca7906d31e4a70c25a12b6af7c0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670922"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064516"
 ---
 # <a name="about-change-tracking-sql-server"></a>Informationen zur Änderungsnachverfolgung (SQL Server)
-  Die Änderungsnachverfolgung ist eine einfache Lösung, die einen effizienten Änderungsnachverfolgungsmechanismus für Anwendungen bereitstellt. Normalerweise mussten Anwendungsentwickler benutzerdefinierte Mechanismen zur Änderungsnachverfolgung implementieren, damit die Anwendungen Änderungen an Daten in einer Datenbank abfragen und auf Informationen im Zusammenhang mit den Änderungen zugreifen konnten. Das Erstellen dieser Mechanismen umfasste in der Regel viel Arbeit und beteiligte häufig eine Kombination von Triggern, `timestamp` Spalten, neuen Tabellen zum Speichern von nach Verfolgungs Informationen und benutzerdefinierten Cleanupprozessen.  
+  Die Änderungsnachverfolgung ist eine einfache Lösung, die einen effizienten Änderungsnachverfolgungsmechanismus für Anwendungen bereitstellt. Normalerweise mussten Anwendungsentwickler benutzerdefinierte Mechanismen zur Änderungsnachverfolgung implementieren, damit die Anwendungen Änderungen an Daten in einer Datenbank abfragen und auf Informationen im Zusammenhang mit den Änderungen zugreifen konnten. Das Erstellen dieser Mechanismen umfasste in der Regel viel Arbeit und beteiligte häufig eine Kombination von `timestamp` Triggern, Spalten, neuen Tabellen zum Speichern von nach Verfolgungs Informationen und benutzerdefinierten Cleanupprozessen.  
   
  Die Anforderungen an die Menge erforderlicher Informationen zu den Änderungen variieren je nach Anwendungstyp. Anwendungen können die Änderungsnachverfolgung verwenden, um die folgenden Fragen zu den an einer Benutzertabelle vorgenommenen Änderungen zu beantworten:  
   
