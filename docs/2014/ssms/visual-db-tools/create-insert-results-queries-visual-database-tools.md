@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5dfd7df8104519cf09ad72ffee3c5214af2a3d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031968"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058171"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Erstellen von Abfragen zum Einfügen von Ergebnissen (Visual Database Tools)
   Mit einer Abfrage zum Einfügen von Ergebnissen können Sie Zeilen aus einer Tabelle in eine andere oder innerhalb einer Tabelle kopieren. Aus der Tabelle `titles` können Sie beispielsweise mit einer Abfrage zum Einfügen von Ergebnissen Informationen über alle Titel eines Herausgebers in eine zweite Tabelle kopieren, die dem betreffenden Herausgeber zur Verfügung gestellt werden kann. Das Erstellen einer Abfrage zum Einfügen von Ergebnissen ähnelt dem Erstellen von Abfragen zum Erstellen von Tabellen. Im Unterschied dazu werden jedoch Zeilen in eine vorhandene Tabelle kopiert.  
@@ -80,7 +79,7 @@ WHERE (pub_id = '0766')
   
      Der Abfrage- und Sicht-Designer fügt die ausgewählten Spalten zur Spalte **Spalte** im Kriterienbereich hinzu.  
   
-5.  Wählen Sie im Kriterienbereich in der Spalte **Anfügen** für jede zu kopierende Spalte eine Zielspalte in der Zieltabelle aus. Wählen Sie *TableName\* aus.* beim Kopieren ganzer Zeilen. Die Spalten der Zieltabelle und der Quelltabelle müssen dieselben (oder kompatible) Datentypen aufweisen.  
+5.  Wählen Sie im Kriterienbereich in der Spalte **Anfügen** für jede zu kopierende Spalte eine Zielspalte in der Zieltabelle aus. Wählen Sie *TableName \* aus.* beim Kopieren ganzer Zeilen. Die Spalten der Zieltabelle und der Quelltabelle müssen dieselben (oder kompatible) Datentypen aufweisen.  
   
 6.  Geben Sie eine Sortierreihenfolge an, falls Sie die Zeilen in einer bestimmten Reihenfolge kopieren möchten. Ausführliche Informationen finden Sie unter [Sortieren und Gruppieren von Abfrageergebnissen &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md).  
   

@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 946d9035730512a626e710b1140a1ba01290908a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289478"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055634"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Ändern der Optionen für die Initialisierung von Momentaufnahmen für die SQL-Replikation
 
 In diesem Artikel wird erläutert, wie eine Reihe von Optionen geändert werden, wenn [ein Abonnement mit einer Momentaufnahme initialisiert](initialize-a-subscription-with-a-snapshot.md)wird.
 
 ## <a name="snapshot-format"></a>Momentaufnahme Format
-   Geben Sie das Momentaufnahmeformat auf der Seite **Momentaufnahme** des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** an. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+  Geben Sie das Momentaufnahme Format im Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** auf der Seite **Momentaufnahme** an. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
 
-1.  Wählen Sie auf der Seite **Momentaufnahme** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** die Option **Natives Format von SQL Server - alle Abonnenten müssen Server mit SQL Server sein** oder **Zeichen - erforderlich, wenn auf einem Verleger oder Abonnenten SQL Server nicht ausgeführt wird** aus. 
+1.  Wählen Sie auf der Seite **Momentaufnahme** des Dialog Felds **Veröffentlichungs Eigenschaften- \<Publication> ** die Option System eigen **SQL Server-alle Abonnenten müssen Server mit SQL Server** oder Zeichen erforderlich sein, **Wenn ein Verleger oder Abonnent nicht SQL Server ausgeführt wird**. 
 
     > [!NOTE]  
     >  Sie sollten das systemeigene Format auswählen, sofern diese Veröffentlichung keine Abonnements für eine [!INCLUDE[ssEW](../../../includes/ssew-md.md)] -Datenbank und keine Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank unterstützen muss.    
@@ -38,24 +37,24 @@ In diesem Artikel wird erläutert, wie eine Reihe von Optionen geändert werden,
 ### <a name="default-snapshot-location"></a>Standardspeicherort für Momentaufnahmen
 Geben Sie den standardmäßigen Momentaufnahme Speicherort (SQL Server Management Studio) den standardmäßigen Momentaufnahme Speicherort im Verteilungskonfigurations-Assistenten auf der Seite **Momentaufnahme Ordner** an. Weitere Informationen zum Verwenden dieses Assistenten finden Sie unter [Konfigurieren der Veröffentlichung und der Verteilung](configure-publishing-and-distribution.md). Wenn Sie eine Veröffentlichung auf einem Server erstellen, der nicht als Verteiler konfiguriert ist, geben Sie im Assistenten für neue Veröffentlichung auf der Seite **Momentaufnahmeordner** einen standardmäßigen Momentaufnahmespeicherort an. Weitere Informationen zum Zugreifen auf diesen Assistenten finden Sie unter [Erstellen einer Veröffentlichung](publish/create-a-publication.md).  
   
- Ändern Sie den standardmäßigen Momentaufnahmespeicherort im Dialogfeld **Verteilereigenschaften - \<Distributor>** auf der Seite **Verleger**. Weitere Informationen finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md). Bestimmen Sie den Momentaufnahmeordner für die einzelnen Veröffentlichungen im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>**. Weitere Informationen finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+ Ändern Sie den standardmäßigen Momentaufnahme Speicherort auf der Seite **Verleger** des Dialog Felds **Verteiler Eigenschaften- \<Distributor> ** . Weitere Informationen finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md). Legen Sie den Momentaufnahme Ordner für die einzelnen Veröffentlichungen im Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** fest. Weitere Informationen finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
 #### <a name="modify-the-default-snapshot-location"></a>Ändern des Standardspeicherorts für Momentaufnahmen  
   
-1.  Klicken Sie auf der Seite **Verleger** des Dialog Felds **Verteiler Eigenschaften \<-Verteiler>** auf die Schaltfläche mit den Eigenschaften (**...**) für den Verleger, dessen standardmäßiger Momentaufnahme Speicherort geändert werden soll.    
-2.  Geben Sie im Dialogfeld **Verlegereigenschaften - \<Publisher>** einen Wert für die Eigenschaft **Standardmomentaufnahmeordner** ein.
+1.  Klicken Sie im Dialogfeld **Verteiler Eigenschaften- \<Distributor> ** auf der Seite **Verleger** auf die Eigenschaften Schaltfläche (**...**) für den Verleger, dessen standardmäßiger Momentaufnahme Speicherort geändert werden soll.    
+2.  Geben Sie im Dialogfeld **Verleger Eigenschaften- \<Publisher> ** einen Wert für die Eigenschaft **Standard Momentaufnahme Ordner** ein.
 
     > [!NOTE]  
     >  Der Momentaufnahme-Agent muss Schreibberechtigungen für das angegebene Verzeichnis und der Verteilungs-Agent oder Merge-Agent muss Leseberechtigungen besitzen. Bei Verwendung von Pullabonnements müssen Sie ein freigegebenes Verzeichnis als UNC-Pfad angeben, wie z.B. \\\Computername\Momentaufnahme. Weitere Informationen finden Sie unter [Schützen des Momentaufnahmeordners](security/secure-the-snapshot-folder.md).    
 1.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
 ### <a name="alternate-snapshot-location"></a>Alternativer Snapshot-Speicherort
-  Geben Sie im Dialogfeld **Veröffentlichungseigenschaften - **Veröffentlichung>** auf der Seite \<Momentaufnahme** einen alternativen Momentaufnahmespeicherort an. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md). 
+  Geben Sie im Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** auf der Seite **Momentaufnahme** einen alternativen Momentaufnahme Speicherort an. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md). 
 
   
 #### <a name="specify-an-alternate-snapshot-location"></a>Angeben eines alternativen Momentaufnahme Speicher Orts  
   
-1.  Gehen Sie auf der Seite **Momentaufnahme** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** wie folgt vor:    
+1.  Auf der Seite **Momentaufnahme** des Dialog Felds **Veröffentlichungs \<Publication> Eigenschaften-** :    
     1.  Aktivieren Sie **Dateien im folgenden Ordner speichern**, und klicken Sie dann auf **Durchsuchen** , um ein Verzeichnis auszuwählen, oder geben Sie den Pfad zu dem Verzeichnis ein, in dem Sie die Momentaufnahmedateien speichern möchten.    
 
         > [!NOTE]  
@@ -66,9 +65,9 @@ Geben Sie den standardmäßigen Momentaufnahme Speicherort (SQL Server Managemen
 
 
 ## <a name="compress-snapshot-files"></a>Komprimieren von Momentaufnahme Dateien
-Auf der Seite **Momentaufnahme** können Sie im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** angeben, dass Dateien komprimiert werden sollen. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+Geben Sie an, dass Dateien im Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** auf der Seite **Momentaufnahme** komprimiert werden sollen. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
-1.  Gehen Sie auf der Seite **Momentaufnahme** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** wie folgt vor:  
+1.  Auf der Seite **Momentaufnahme** des Dialog Felds **Veröffentlichungs \<Publication> Eigenschaften-** :  
   
     1.  Aktivieren Sie **Dateien im folgenden Ordner speichern**, und klicken Sie dann auf **Durchsuchen** , um ein Verzeichnis auszuwählen, oder geben Sie den Pfad zu dem Verzeichnis ein, in dem Sie die Momentaufnahmedateien speichern möchten.    
         > [!NOTE]  
@@ -91,10 +90,10 @@ Auf der Seite **Momentaufnahme** können Sie im Dialogfeld **Veröffentlichungse
  Falls Sie die Momentaufnahmedatei komprimieren (indem sie in das CAB-Dateiformat von [!INCLUDE[msCoName](../../includes/msconame-md.md)] kopiert wird), werden die Skripts ebenfalls komprimiert und in der CAB-Datei platziert. Nachdem die komprimierte Momentaufnahmedatei zum Abonnenten übertragen und in ein Arbeitsverzeichnis auf dem Abonnenten dekomprimiert wurde, werden als Vor-Momentaufnahme-Skripts gekennzeichnete Skripts ausgeführt. Genauso werden alle Nach-Momentaufnahme-Skripts dekomprimiert und auf dem Abonnenten als letzter Schritt der Anwendung der Momentaufnahme ausgeführt.  
 
 ### <a name="execute-a-script-before-or-after-a-snapshot-is-applied"></a>Ausführen eines Skripts vor oder nach dem Anwenden einer Momentaufnahme  
-  Geben Sie auf der Seite **Momentaufnahme** des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** ein optionales Skript an, das vor oder nach dem Anwenden der Momentaufnahme ausgeführt wird. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+ Geben Sie ein optionales Skript an, das vor oder nach dem Anwenden der Momentaufnahme im Dialogfeld **Veröffentlichungs Eigenschaften \<Publication> -** auf der Seite **Moment** Aufnahme ausgeführt werden soll. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
 
 
-1.  Gehen Sie auf der Seite **Momentaufnahme** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** wie folgt vor:    
+1.  Auf der Seite **Momentaufnahme** des Dialog Felds **Veröffentlichungs \<Publication> Eigenschaften-** :    
     -   Wenn Sie ein Skript angeben möchten, das vor dem Anwenden der Momentaufnahme ausgeführt werden soll, klicken Sie auf **Durchsuchen** , um zum entsprechenden Skript zu navigieren, oder geben Sie im Textfeld **Dieses Skript vor Anwenden der Momentaufnahme ausführen** den Pfad zum gewünschten Skript ein. 
    
         > [!NOTE]  

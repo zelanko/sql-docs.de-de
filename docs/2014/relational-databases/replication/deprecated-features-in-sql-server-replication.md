@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 42538053b80565005e86e82a32b6c04bae1aa360
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: daae6d7b0829df68749224422b4595404843534a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721477"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010852"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Als veraltet markierte Funktionen der SQL Server-Replikation
   In diesem Thema werden die als veraltet markierten Replikationsfunktionen beschrieben, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]noch verfügbar sind. Diese Funktionen werden voraussichtlich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 840096c197a2e827281bb0023ad03a6d407f3758
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b5391479ad7f1db64383049a5a6c9aefa3abadd4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704056"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056866"
 ---
 # <a name="color-coding-in-query-editors"></a>Farbcodierung im Abfrage-Editor
   Der in die Code-Editoren eingegebene Text wird einer Kategorie zugeordnet, die jeweils durch durch Farben identifiziert werden. Mithilfe der Farben können Sie Text im Code schnell finden. Kommentare sind z. B. dunkelgrün. In der folgenden Tabelle werden die gängigsten Farben aufgelistet. Rufen Sie im Menü **Extras**die Option **Optionen** auf, in dem Sie die vollständige Liste der Farben und ihrer Kategorien anzeigen und ein benutzerdefiniertes Farbschema konfigurieren können. Weitere Informationen zum Ändern der Standardfarben finden Sie unter [Change Font Color, Size, and Style](change-font-color-size-and-style.md).  

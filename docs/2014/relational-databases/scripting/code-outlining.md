@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 01383ffade91cde641018b90be30dc92e644b151
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 03abb1dc601c7b329742f290b9ce62aefd08e7bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056887"
 ---
 # <a name="code-outlining"></a>Codegliederung
   Sie können die Gliederungsfunktion in den [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Abfrage-Editoren verwenden, um ausgewählten Code auszublenden, wenn Sie Abfragen bearbeiten. Auf diese Weise können Sie insbesondere in großen Abfragedateien den bearbeiteten Code besser anzeigen.
@@ -36,7 +35,7 @@ ms.locfileid: "82704068"
 
  ![XML-Code für Gliederung](../../database-engine/media/editoutlinexmlfull.gif "XML-Code für Gliederung")
 
- Wenn Sie auf das Minuszeichen in der \<InnerTag>-Zeile klicken, wird nur „InnerTag“ reduziert, wie in der folgenden Abbildung dargestellt.
+ Wenn Sie auf das Minuszeichen in der \<InnerTag> Zeile klicken, wird nur das InnerTag reduziert, wie in der folgenden Abbildung dargestellt.
 
  ![XML-Code mit verborgenem innerem Knoten](../../database-engine/media/editoutlinexmlinnercol.gif "XML-Code mit verborgenem innerem Knoten")
 
@@ -44,11 +43,11 @@ ms.locfileid: "82704068"
 
  ![XML-Code mit QuickInfo mit verborgenem Code](../../database-engine/media/editoutlinexmlmouse.gif "XML-Code mit QuickInfo mit verborgenem Code")
 
- Wenn Sie auf das Minuszeichen in der \<MiddleTag>-Zeile klicken, werden „MiddleTag“ und „InnerTag“ reduziert, wie in der folgenden Abbildung dargestellt.
+ Wenn Sie auf das Minuszeichen in der \<MiddleTag> Zeile klicken, werden "MiddleTag" und "InnerTag" reduziert, wie in der folgenden Abbildung dargestellt.
 
  ![XML-Code mit verborgenen inneren und mittleren Tags](../../database-engine/media/editoutlinexmlmiddlecol.gif "XML-Code mit verborgenen inneren und mittleren Tags")
 
- Wenn Sie auf das Minuszeichen in der \<OuterTag>-Zeile klicken, werden alle drei Zeilen reduziert, wie in der folgenden Abbildung dargestellt.
+ Wenn Sie auf das Minuszeichen in der \<OuterTag> Zeile klicken, werden alle drei Zeilen reduziert, wie in der folgenden Abbildung dargestellt.
 
  ![XML-Code, bei dem alle drei Tags verborgen sind](../../database-engine/media/editoutlinexmloutercol.gif "XML-Code, bei dem alle drei Tags verborgen sind")
 

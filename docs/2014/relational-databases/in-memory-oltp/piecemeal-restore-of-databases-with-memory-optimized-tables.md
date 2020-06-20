@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3c9ee00a81dd64ea1fa6093eaccc8d9b96e0aa59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed23f08d40e23b1d43c1b642f4089fe77646b675
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025839"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Schrittweise Wiederherstellung von Datenbanken mit speicheroptimierten Tabellen
   Die schrittweise Wiederherstellung wird für Datenbanken mit speicheroptimierten Tabellen unterstützt, allerdings mit der im Folgenden beschriebenen Einschränkung. Weitere Informationen zur schrittweisen Sicherung und Wiederherstellung finden Sie unter [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) und [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).  

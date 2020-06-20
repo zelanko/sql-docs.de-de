@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df9e157431a8330aed8357231c3b28d12cb4fbc1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 39f22fe37138fab22d79acc5bd667257f392737a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705013"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056297"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Neue Funktionen für Datum und Uhrzeit bei früheren SQL Server-Versionen (OLE DB)
   In diesem Thema wird das erwartete Verhalten beschrieben, wenn eine Client Anwendung, die verbesserte Datums-und Uhrzeit Funktionen verwendet, mit einer früheren Version von kommuniziert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und wenn ein Client, der mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client als kompiliert wurde, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Befehle an einen Server sendet, der erweiterte Funktionen für Datum und Uhrzeit unterstützt.  
@@ -31,7 +30,7 @@ ms.locfileid: "82705013"
   
 |OLE DB-Clienttyp|SQL Server 2005-Typ|SQL Server 2008 (oder höher)-Typ|Ergebniskonvertierung (Server zu Client)|Parameterkonvertierung (Client zu Server)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|Datum|OK|OK|  
+|DBTYPE_DBDATE|Datetime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Zeitfelder werden auf 0 (Null) festgelegt.|IRowsetChange schlägt fehl, weil die Zeichenfolge abgeschnitten wird, wenn das Zeitfeld ungleich 0 (null) ist.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Datumsfelder werden auf das aktuelle Datum festgelegt.|IRowsetChange schlägt fehl, weil die Zeichenfolge abgeschnitten wird, wenn Sekundenbruchteile ungleich 0 (null) sind.<br /><br /> Das Datum wird ignoriert.|  
@@ -39,7 +38,7 @@ ms.locfileid: "82705013"
 |DBTYPE_DBTIMESTAMP|||Schlägt fehl-ungültiges Zeit Literale.|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (3)|OK|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (7)|OK|OK|  
-|DBTYPE_DBDATE|Smalldatetime|Datum|OK|OK|  
+|DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Zeitfelder werden auf 0 (Null) festgelegt.|IRowsetChange schlägt fehl, weil die Zeichenfolge abgeschnitten wird, wenn das Zeitfeld ungleich 0 (null) ist.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Datumsfelder werden auf das aktuelle Datum festgelegt.|IRowsetChange schlägt fehl, weil die Zeichenfolge abgeschnitten wird, wenn Sekundenbruchteile ungleich 0 (null) sind.<br /><br /> Das Datum wird ignoriert.|  
@@ -65,7 +64,7 @@ ms.locfileid: "82705013"
   
 |Parametertyp|wType|ulParamSize|bPrecision|bscale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|Datum|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -79,7 +78,7 @@ ms.locfileid: "82705013"
   
 |Spaltentyp|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|Datum|DBTYPE_WSTR|10|NULL|NULL|  
+|date|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -91,7 +90,7 @@ ms.locfileid: "82705013"
   
 |Parametertyp|wType|ulColumnSize|bPrecision|bscale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|Datum|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -106,7 +105,7 @@ ms.locfileid: "82705013"
   
 |Spaltentyp|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|Datum|DBTYPE_WSTR|10|20|NULL|  
+|date|DBTYPE_WSTR|10|20|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
 |datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
@@ -118,7 +117,7 @@ ms.locfileid: "82705013"
   
 |Spaltentyp|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|Datum|DBTYPE_WSTR|10|20|date|  
+|date|DBTYPE_WSTR|10|20|date|  
 |time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
 |datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|datetime|  
@@ -128,7 +127,7 @@ ms.locfileid: "82705013"
 #### <a name="provider_types-rowset"></a>PROVIDER_TYPES-Rowset  
  Die folgenden Zeilen werden für date/time-Typen zurückgegeben:  
   
-|Eingeben von „->“<br /><br /> Spalte|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Eingeben von „->“<br /><br /> Column|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  

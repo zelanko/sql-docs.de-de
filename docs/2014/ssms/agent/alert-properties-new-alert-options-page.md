@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69f467af1c797b9bf1cfa55c7def8456ad4a32bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b84c2472c56d50fa5c0595ea7046ed3ab9a2b352
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061269"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056594"
 ---
 # <a name="alert-properties-new-alert-options-page"></a>Eigenschaften von Warnungen: Neue Warnung (Seite „Optionen“)
-  Mithilfe dieser Seite können Sie Optionen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen anzeigen und ändern.  
+  Mithilfe dieser Seite können Sie Optionen für-Agent-Warnungen anzeigen und ändern [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Optionen  
  **E**  
@@ -36,7 +35,7 @@ ms.locfileid: "63061269"
  Geben Sie hier zusätzlichen Text ein, der in die Benachrichtigungsmeldungen aufgenommen werden soll.  
   
  **Antwortverzögerung**  
- Geben Sie eine Verzögerung für das wiederholte Auftreten des Ereignisses an. Einige Ereignisse können innerhalb einer kurzen Zeitspanne häufig auftreten. In diesem Fall könnte es sinnvoll sein, zwar über das Auftreten des Ereignisses informiert zu werden, nicht aber für jedes Auftreten eine Meldung zu erhalten. Verwenden Sie diese Option, um ein Timeout anzugeben. Nachdem die Warnung auf ein Ereignis reagiert hat, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wartet der-Agent mit einer Verzögerung auf die angegebene Verzögerung, bevor erneut reagiert wird, unabhängig davon, ob das Ereignis während der Verzögerung auftritt.  
+ Geben Sie eine Verzögerung für das wiederholte Auftreten des Ereignisses an. Einige Ereignisse können innerhalb einer kurzen Zeitspanne häufig auftreten. In diesem Fall könnte es sinnvoll sein, zwar über das Auftreten des Ereignisses informiert zu werden, nicht aber für jedes Auftreten eine Meldung zu erhalten. Verwenden Sie diese Option, um ein Timeout anzugeben. Nachdem die Warnung auf ein Ereignis reagiert hat, wartet der-Agent mit einer Verzögerung auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die angegebene Verzögerung, bevor erneut reagiert wird, unabhängig davon, ob das Ereignis während der Verzögerung auftritt.  
   
  **Minuten**  
  Geben Sie eine Verzögerung in Minuten an. Wenn bei jedem Auftreten des Ereignisses geantwortet werden soll, geben Sie 0 Minuten und 0 Sekunden an.  

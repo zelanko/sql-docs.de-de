@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c1499020839e615b757fbdbb3a75fc53272249bf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 667bee5e1f3a6fabe47f18a4c36fee5ab8d03382
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011239"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Rowsets und SQL Server-Cursor
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt Consumern Resultsets mit zwei Methoden zurück:  
@@ -89,7 +88,7 @@ ms.locfileid: "82694344"
   
  Um ein bestimmtes Cursormodell zu verwenden, suchen Sie die dem Cursormodell entsprechende Spalte, und suchen Sie alle Rowseteigenschaften mit dem Wert "T" in der Spalte. Legen Sie diese Rowseteigenschaften auf VARIANT_TRUE fest, um das gewünschte Cursormodell zu verwenden. Die Rowseteigenschaften mit dem Wert "-" können entweder auf VARIANT_TRUE oder VARIANT_FALSE festgelegt werden.  
   
-|Rowseteigenschaften/Cursormodelle|Standard<br /><br /> result<br /><br /> set<br /><br /> (RO)|Fast<br /><br /> forward-<br /><br /> Machine Learning<br /><br /> (RO)|statischen<br /><br /> (RO)|Keyset<br /><br /> driven<br /><br /> (RO)|  
+|Rowseteigenschaften/Cursormodelle|Standard<br /><br /> result<br /><br /> set<br /><br /> (RO)|Schnell<br /><br /> forward-<br /><br /> Machine Learning<br /><br /> (RO)|statischen<br /><br /> (RO)|Keyset<br /><br /> driven<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

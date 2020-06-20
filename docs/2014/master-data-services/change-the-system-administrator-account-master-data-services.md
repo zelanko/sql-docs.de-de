@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 911bd20c7d232bca52fdf9dca294bd7a4924d984
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6266664bc4e1d1c782ce75a9de4edebe52d11f0c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054140"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972030"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>Ändern Systemadministratorkontos (Master Data Services)
-  Sie können das Benutzerkonto ändern, das als [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Systemadministrator festgelegt ist.  
+  Sie können das Benutzerkonto ändern, das als Systemadministrator festgelegt ist [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
 > [!WARNING]  
 >  Wenn Sie diese Prozedur ausführen, wird das Benutzerkonto des vorherigen Systemadministrators gelöscht.  
@@ -36,7 +35,7 @@ ms.locfileid: "66054140"
   
 1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , und stellen Sie eine Verbindung mit der [!INCLUDE[ssDE](../includes/ssde-md.md)] -Instanz für die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank her.  
   
-2.  Suchen Sie in MDM. tbluser den Benutzer, der als neuer Administrator verwendet werden soll, und kopieren Sie `SID` den Wert in der Spalte.  
+2.  Suchen Sie in MDM. tbluser den Benutzer, der als neuer Administrator verwendet werden soll, und kopieren Sie den Wert in der `SID` Spalte.  
   
 3.  Erstellen Sie eine neue Abfrage.  
   

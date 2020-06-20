@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 986e38ef42fe1af2aba8ba1625225a336f29158d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f9424846c714070ff6bf22043d174762f873117
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162462"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008943"
 ---
 # <a name="create-jobs"></a>Erstellen von Aufträgen
   Ein Auftrag besteht aus einer festgelegten Folge von Operationen, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent der Reihenfolge nach ausführt. Über einen Auftrag können zahlreiche Aktivitäten ausgeführt werden, u. a. das Ausführen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts, Eingabeaufforderungsanwendungen, Microsoft ActiveX-Skripts, Integration Services-Paketen, Analysis Services-Befehlen und -abfragen bzw. Replikationstasks. Aufträge können wiederholte oder planbare Tasks ausführen, und sie können Benutzer in Form von Warnungen hinsichtlich des Auftragsstatus benachrichtigen. Dies führt zu einer deutlichen Vereinfachung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltung.  
@@ -39,7 +38,7 @@ ms.locfileid: "63162462"
 |Beschreibt, wie Sie das Auftragsverlaufsprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents einrichten.|[Set Up the Job History Log](set-up-the-job-history-log.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten von Auftrags Schritten](manage-job-steps.md)   
+ [Verwalten von Auftragsschritten](manage-job-steps.md)   
  [Automatisierte Verwaltung in einem Unternehmen](automated-administration-across-an-enterprise.md)   
  [Erstellen und Anfügen von Zeitplänen an Aufträge](create-and-attach-schedules-to-jobs.md)   
  [Ausführen von Aufträgen](run-jobs.md)   

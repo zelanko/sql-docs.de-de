@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b76d4df23f5d8bb25664ba0f1d294deca9be0418
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62668986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057167"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Übersicht über die Benutzeroberfläche des Replikationsmonitors
   Der Replikationsmonitor in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bietet eine Sicht aller Replikationsaktivitäten, bei der der Verleger oder der Verteiler im Vordergrund steht, in einem Format mit zwei Bereichen an. Im linken Bereich fügen Sie dem Monitor einen Verleger hinzu, und im rechten Bereich zeigt der Monitor die Informationen zum Verleger, dessen Veröffentlichungen, Abonnements für diese Veröffentlichungen und die verschiedenen Replikations-Agents an. Neben der Darstellung der Informationen zur Replikationstopologie ermöglicht der Replikationsmonitor die Ausführung zahlreicher Aufgaben, wie beispielsweise des Startens und Anhaltens von Agents und des Überprüfens von Daten.  
@@ -225,7 +224,7 @@ ms.locfileid: "62668986"
   
      In diesem Dialogfeld können Sie die Eigenschaften von Profilen ändern, Profile erstellen und löschen, ein Standardprofil angeben und angeben, dass alle Agents eines bestimmten Typs (beispielsweise Momentaufnahme-Agents) ein bestimmtes Profil verwenden sollen.  
   
--   **\<AgentProfileName> Eigenschaften**  
+-   **\<AgentProfileName>Eigenschaften**  
   
      In diesem Dialogfeld können Sie die Parametereinstellungen in einem Profil anzeigen und bearbeiten.  
   

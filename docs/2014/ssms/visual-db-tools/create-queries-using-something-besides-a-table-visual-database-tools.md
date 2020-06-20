@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d28b8b6ba540ae361c3c6ab74a1a45763f7bee2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058131"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Erstellen von Abfragen mit anderen Quellen als einer Tabelle (Visual Database Tools)
   Wenn Sie eine Abrufabfrage erstellen, geben Sie die aufzunehmenden Spalten und Zeilen sowie den Ort an, von dem der Abfrageprozessor die Ausgangsdaten abrufen kann. Üblicherweise handelt es sich bei diesen Ausgangsdaten um eine Tabelle oder mehrere verknüpfte Tabellen. Die zugrunde liegenden Daten können jedoch auch aus anderen Quellen stammen. Dies können Sichten, Abfragen, Synonyme oder benutzerdefinierte Funktionen sein, die eine Tabelle zurückgeben.  

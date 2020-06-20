@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 73e991f46f2cadb0fe7e7e9d10e6e616d2d634c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5fe56688a009fd60a7731b199f32352d78bb5eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055590"
 ---
 # <a name="sort-columns"></a>Spalten sortieren
   Im Dialogfeld **Spalten sortieren** können Sie Raster im Replikationsmonitor nach einer oder mehreren Spalten sortieren. (Zum Sortieren nach einer einzelnen Spalte klicken Sie im Raster im Replikationsmonitor auf den betreffenden Spaltenheader.) Wenn Sie z. B. die Abonnements auf der Registerkarte **Alle Abonnements** nach Status und Verbindungstyp sortieren möchten, führen Sie die folgenden Schritte aus:  

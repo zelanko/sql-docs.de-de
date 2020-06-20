@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 779fdb9a-4ede-4784-b9eb-997a6683c26e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4439f96d79dd9ea2124009af300fa87af365e84c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4716394da91f97723ad740532cc74d71d3a6d4c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001314"
 ---
 # <a name="go-to-line-dialog-box"></a>Gehe zu Zeile (Dialogfeld)
   Geben Sie eine Zeilennummer ein, und klicken Sie dann auf **OK**, wenn Sie zu einer bestimmten Position im Fernster des Code-Editors gelangen möchten.  

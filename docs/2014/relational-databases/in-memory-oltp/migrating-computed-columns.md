@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac0eae2ad0f6b856495cb3a329cfe2f7e635dc1a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 706b029dbd811f2e1794e451291830bf15d37274
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719038"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026233"
 ---
 # <a name="migrating-computed-columns"></a>Migrieren von berechneten Spalten
   Berechnete Spalten werden in speicheroptimierten Tabellen nicht unterstützt. Sie können jedoch eine berechnete Spalte simulieren.  
@@ -86,6 +85,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md)  
+ [Migrieren zu in-Memory-OLTP](migrating-to-in-memory-oltp.md)  
   
   

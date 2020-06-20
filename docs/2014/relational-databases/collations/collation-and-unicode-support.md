@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9a7c6c48229aa827aaed178e5ed4448c20431b9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970570"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   Sortierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten Sortierregeln und die Berücksichtigung von Groß-/Kleinschreibung und Akzenten für die Daten. Sortierungen, die mit Zeichendatentypen wie `char` und `varchar` verwendet werden, geben die Codeseite und die entsprechenden Zeichen vor, die für den jeweiligen Datentyp dargestellt werden können. Bei der Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bei der Wiederherstellung einer Datenbanksicherung oder bei der Verbindung von Servern mit Clientdatenbanken ist es wichtig, dass Sie die Gebietsschemaanforderungen, die Sortierreihenfolge und das Verhalten in Bezug auf die Groß-/Kleinschreibung und Akzente der Daten kennen, mit denen Sie arbeiten. Informationen zum Auflisten von Sortierungen, die in Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verfügbar sind, finden Sie unter [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
@@ -49,7 +48,7 @@ ms.locfileid: "72688735"
   
  Die einer Sortierung zugeordneten Optionen sind die Berücksichtigung von Groß-/Kleinschreibung, Akzenten, Kana und Breite. Diese Optionen werden angegeben, indem sie an den Sortierungsnamen angefügt werden. Beispiel: Bei der Sortierung `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` wird nach Groß-/Kleinschreibung, nach Akzent, Kana und Breite unterschieden. In der folgenden Tabelle wird das diesen Optionen zugeordnete Verhalten beschrieben.  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Unterscheidung nach Groß-/Kleinschreibung (_CS)|Unterscheidet zwischen Groß- und Kleinbuchstaben. Wenn diese Option ausgewählt ist, stehen Kleinbuchstaben in der Sortierreihenfolge vor ihren entsprechenden Großbuchstaben. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung die Groß-/Kleinschreibung nicht beachtet. D. h. SQL Server betrachtet die groß- und die kleingeschriebenen Versionen von Buchstaben für Sortierzwecke als identisch. Sie können die Nichtunterscheidung nach Groß-/Kleinbuchstaben durch Angeben von "_CI" explizit auswählen.|  
 |Unterscheidung nach Akzent (_AS)|Unterscheidet zwischen Zeichen mit Akzent und Zeichen ohne Akzent. Beispielsweise ist "a" nicht gleich "&#x1EA5;". Wenn diese Option nicht aktiviert wird, werden bei der Sortierung Akzente nicht beachtet. D. h. SQL Server betrachtet die Versionen von Buchstaben mit und ohne Akzent für Sortierzwecke als identisch. Sie können die Nichtunterscheidung nach Akzent durch Angeben von "_AI" explizit auswählen.|  
@@ -144,7 +143,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="supplementary-characters"></a><a name="Supplementary_Characters"></a>Ergänzende Zeichen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt Datentypen wie `nchar` und zum `nvarchar` Speichern von Unicode-Daten bereit. Bei diesen Datentypen wird Text im Format *UTF-16*codiert. Das Unicode Consortium hat jedem Zeichen einen eindeutigen Codepunkt zugeordnet, der einem Wert im Bereich 0x0000 bis 0x10FFFF entspricht. Die am häufigsten verwendeten Zeichen weisen Codepunktwerte auf, die im Arbeitsspeicher und auf dem Datenträger in ein 16-Bit-Wort passen. Zeichen mit Codepunktwerten, die größer als 0xFFFF sind, erfordern jedoch zwei aufeinanderfolgende 16-Bit-Wörter. Diese Zeichen werden als *ergänzende Zeichen*bezeichnet, und die beiden aufeinanderfolgenden 16-Bit-Wörter werden als *Ersatzpaare*bezeichnet.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt Datentypen wie `nchar` und `nvarchar` zum Speichern von Unicode-Daten bereit. Bei diesen Datentypen wird Text im Format *UTF-16*codiert. Das Unicode Consortium hat jedem Zeichen einen eindeutigen Codepunkt zugeordnet, der einem Wert im Bereich 0x0000 bis 0x10FFFF entspricht. Die am häufigsten verwendeten Zeichen weisen Codepunktwerte auf, die im Arbeitsspeicher und auf dem Datenträger in ein 16-Bit-Wort passen. Zeichen mit Codepunktwerten, die größer als 0xFFFF sind, erfordern jedoch zwei aufeinanderfolgende 16-Bit-Wörter. Diese Zeichen werden als *ergänzende Zeichen*bezeichnet, und die beiden aufeinanderfolgenden 16-Bit-Wörter werden als *Ersatzpaare*bezeichnet.  
   
  Bei Verwendung ergänzender Zeichen:  
   

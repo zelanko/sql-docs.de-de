@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d296aae78434bcfff1c69770878705ef5f4bd0ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63145487"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025353"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine
   Welche Tools beim Installieren von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]installiert werden, hängt von der Edition und den von Ihnen ausgewählten Installationsoptionen ab. In dieser Lektion werden die Haupttools vorgestellt, und Sie erfahren, wie Sie Verbindungen herstellen und eine einfache Funktion (Autorisieren zusätzlicher Benutzer) ausführen.  
@@ -85,7 +84,7 @@ ms.locfileid: "63145487"
   
      Das Dialogfeld **Anmeldung – Neu** wird angezeigt.  
   
-2.  Geben Sie auf der Seite **Allgemein** im Feld **Anmelde Name** eine Windows-Anmeldung im Format * \<Domain \\><Login\>* ein.  
+2.  Geben Sie auf der Seite **Allgemein** im Feld **Anmelde Name** eine Windows-Anmeldung im Format<- * \<domain> \\ Anmeldung \> *ein.  
   
 3.  Wählen Sie (sofern verfügbar) **im Feld** Standarddatenbank [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] aus. Wählen Sie andernfalls **master**aus.  
   

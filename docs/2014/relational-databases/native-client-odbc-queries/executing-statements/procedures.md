@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 82f9d922d2192925033aceb6c253088ccb9f1d6f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a7ae4678d324ba7d07ae429793b1f75b57bb15e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056491"
 ---
-# <a name="procedures"></a>Verfahren
+# <a name="procedures"></a>Prozeduren
   Eine gespeicherte Prozedur ist ein vorkompiliertes ausführbares Objekt, das eine oder mehrere [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen enthält. Gespeicherte Prozeduren können Ein- und Ausgabeparameter enthalten und auch einen ganzzahligen Rückgabecode ausgeben. Eine Anwendung kann kann mithilfe von Katalogfunktionen verfügbare gespeicherte Prozeduren auflisten.  
   
  ODBC-Anwendungen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sollten gespeicherte Prozeduren nur mithilfe der direkten Ausführung aufrufen. Bei einer Verbindung mit früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert der Native Client-ODBC-Treiber die [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360) , indem eine temporäre gespeicherte Prozedur erstellt wird, die dann für **SQLExecute**aufgerufen wird. Es erhöht den Aufwand, damit **SQLPrepare** eine temporäre gespeicherte Prozedur erstellt, die nur die gespeicherte Ziel Prozedur aufruft und die gespeicherte Ziel Prozedur direkt ausführt. Selbst bei einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss der Aufruf eines zusätzlichen Roundtrips durch das Netzwerk vorbereitet und ein Ausführungsplan, mit dem nur der Ausführungsplan der gespeicherten Prozedur aufgerufen wird, erstellt werden.  

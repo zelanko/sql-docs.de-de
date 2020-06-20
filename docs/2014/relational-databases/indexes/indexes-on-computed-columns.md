@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ecbca9e7838c4c9395a8bcb6e11351c40f7037f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162451"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049888"
 ---
 # <a name="indexes-on-computed-columns"></a>Indizes in berechneten Spalten
   Sie können Indizes für berechnete Spalten definieren, sofern die folgenden Anforderungen erfüllt sind:  
@@ -88,7 +87,7 @@ ms.locfileid: "63162451"
   
  **Datentyp Anforderungen**  
   
--   Der *computed_column_expression* , der für die berechnete Spalte definiert ist `text`, `ntext`kann nicht `image` zu den Datentypen, oder ausgewertet werden.  
+-   Der *computed_column_expression* , der für die berechnete Spalte definiert ist, kann nicht zu den `text` `ntext` Datentypen, oder ausgewertet werden `image` .  
   
 -   Berechnete Spalten, die aus den Datentypen `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)` und `xml` abgeleitet wurden, können indiziert werden, solange der Datentyp der berechneten Spalte als Indexschlüsselspalte zulässig ist.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "63162451"
      Durch Festlegen von ANSI_WARNINGS auf ON wird implizit ARITHABORT auf ON festgelegt, wenn der Kompatibilitätsgrad der Datenbank auf 90 oder höher festgelegt ist.  
   
 ##  <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> Erstellen von Indizes für persistente berechnete Spalten  
- Sie können einen Index für eine berechnete Spalte erstellen, die mit einem deterministischen, jedoch unpräzisen Ausdruck definiert wird, wenn die Spalte in der CREATE TABLE- oder ALTER TABLE-Anweisung als PERSISTED markiert wurde. Dies bedeutet, dass [!INCLUDE[ssDE](../../../includes/ssde-md.md)] diese beibehaltenen Werte verwendet, wenn ein Index für die Spalte erstellt wird und wenn in einer Abfrage auf den Index verwiesen wird. Diese Option ermöglicht es Ihnen, einen Index für eine berechnete Spalte [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]zu erstellen, wenn, sowohl deterministisch als auch präzise ist.  
+ Sie können einen Index für eine berechnete Spalte erstellen, die mit einem deterministischen, jedoch unpräzisen Ausdruck definiert wird, wenn die Spalte in der CREATE TABLE- oder ALTER TABLE-Anweisung als PERSISTED markiert wurde. Dies bedeutet, dass diese beibehaltenen [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Werte verwendet, wenn ein Index für die Spalte erstellt wird und wenn in einer Abfrage auf den Index verwiesen wird. Diese Option ermöglicht es Ihnen, einen Index für eine berechnete Spalte zu erstellen [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)] , wenn, sowohl deterministisch als auch präzise ist.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

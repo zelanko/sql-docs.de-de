@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d16f4dc681042babcedc8d7ddffa8fbc0389506
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f8aeb34525bbe5c1b003e8fd95e7a414025965a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704100"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057197"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>Einsatzbedingungen für SQL Server Native Client
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ist eine Technologie, mit der Sie auf Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zugreifen können.  Eine Besprechung der unterschiedlichen Datenzugriffstechnologien finden Sie unter [Data Access Technologies Road Map (Übersicht über Datenzugriffstechnologien)](https://go.microsoft.com/fwlink/?LinkID=179186).  

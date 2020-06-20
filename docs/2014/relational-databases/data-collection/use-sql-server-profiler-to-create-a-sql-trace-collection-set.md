@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddfb1b83ccb225122edc19860c45480ec1c0c00a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873320"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970416"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes für die SQL-Ablaufverfolgung (SQL Server Management Studio)
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] können Sie die serverseitigen Ablaufverfolgungsfunktionen von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] nutzen, um eine Ablaufverfolgungsdefinition für das Erstellen eines Sammlungssatzes zu exportieren, der den generischen Sammlertyp für die SQL-Ablaufverfolgung verwendet. Dieser Vorgang besteht aus zwei Teilen:  
