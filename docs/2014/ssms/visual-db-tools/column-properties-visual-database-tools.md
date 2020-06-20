@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aeb4d01cae7c09c27cafa8284638bf0a7de9691
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058222"
 ---
 # <a name="column-properties-visual-database-tools"></a>Spalteneigenschaften (Visual Database Tools)
   Für Spalten gibt es zwei Gruppen von Eigenschaften: eine vollständige Gruppe, die auf der Registerkarte **Spalteneigenschaften** im Tabellen-Designer angezeigt wird (nur für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken verfügbar) und eine Teilgruppe, die im Eigenschaftenfenster des Server-Explorers angezeigt wird.  
@@ -179,7 +178,7 @@ ms.locfileid: "62990205"
  Zeigt, ob diese Spalte an einem anderen Speicherort repliziert wird.  
   
  **Ist RowGuid**  
- Gibt an, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Spalte als ROWGUID verwendet. Sie können diesen Wert nur für eine Spalte mit dem-Datentyp auf **Yes** festlegen `uniqueidentifier`. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
+ Gibt an, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Spalte als ROWGUID verwendet. Sie können diesen Wert nur für eine Spalte mit dem-Datentyp auf **Yes** festlegen `uniqueidentifier` . Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
   
  **Größe**  
  Zeigt die für den Datentyp der Spalte zulässige Größe in Byte an. Beispiel: Ein `nchar`-Datentyp kann eine Länge von 10 besitzen (die Anzahl der Zeichen), würde aber wegen der Unicode-Zeichensätze eine Größe von 20 Byte besitzen.  

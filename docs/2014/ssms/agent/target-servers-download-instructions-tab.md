@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39acaf350a4d63fc8896b3a55ca88fe4ed91461f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067489"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Zielserver (Registerkarte Anweisungen zum Herunterladen)
   Mithilfe dieser Seite können Sie die Downloadanweisungen für einen oder mehrere Zielserver anzeigen und aktualisieren.  
@@ -35,7 +34,7 @@ ms.locfileid: "63245334"
  **Vorgang**  
  Zeigt den Vorgang an, den die Downloadanweisung ausführen wird.  
   
- **Objektname**  
+ **Objektnamen**  
  Zeigt den Namen des Objekts an, auf das sich die Downloadanweisung auswirkt.  
   
  **Bereitstellungsdatum**  
@@ -50,7 +49,7 @@ ms.locfileid: "63245334"
  **Löschen**  
  Löscht die ausgewählte Downloadanweisung.  
   
- **Klartext**  
+ **Clear**  
  Entfernt den Status der ausgewählten Downloadanweisung.  
   
 ## <a name="see-also"></a>Weitere Informationen  

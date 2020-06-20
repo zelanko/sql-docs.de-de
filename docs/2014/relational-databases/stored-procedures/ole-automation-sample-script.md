@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e59f75a9-ed41-4f12-888e-ffc57f9b3882
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d4cfe904cc6a808efc6c8a7208b3825117b2909d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3893bc337ad4e274967b6b06838c9e5bdb47277e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197129"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062771"
 ---
 # <a name="ole-automation-sample-script"></a>OLE-Automatisierungsbeispielskript
   Dieses Thema enthält ein Beispiel für einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungsbatch, der mithilfe von gespeicherten OLE-Automatisierungsprozeduren ein SQL-DMO SQLServer-Objekt in der lokalen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erstellt und verwendet. Teile des Codes werden als Beispiele in den Referenzthemen zu den gespeicherten Systemprozeduren der OLE-Automatisierung verwendet.  

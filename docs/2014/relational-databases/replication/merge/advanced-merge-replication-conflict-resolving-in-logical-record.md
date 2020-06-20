@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d4190f096efaf80989d397f26a314454fe2171b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d617095f190c89131ec81326279c16ec1a927125
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175856"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049451"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Ermitteln und Lösen von Konflikten in logischen Datensätzen
   In diesem Thema werden die verschiedenen Kombinationsmöglichkeiten aus Konflikterkennung und Konfliktlösung bei der Verwendung logischer Datensätze behandelt. Konflikte treten bei der Mergereplikation auf, wenn ein und dieselben Daten von mehreren Knoten geändert werden oder wenn die Mergereplikation auf bestimmte Arten von Fehlern stößt, wie z. B. Einschränkungsverletzungen beim Replizieren von Änderungen. Weitere Informationen zur Konflikterkennung und -lösung finden Sie unter [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).
@@ -34,7 +33,7 @@ ms.locfileid: "78175856"
 
  Ein Konflikt wird erkannt, wenn zwei Benutzer Werte für den logischen Customer2-Datensatz in den **Customers**-, **Orders**- bzw. **OrderItems** -Tabellen ändern. Bei diesem Beispiel kommt es zu Änderungen durch eine UPDATE-Anweisung, der Konflikt würde aber auch erkannt werden, wenn die Änderungen durch eine INSERT- oder DELETE-Anweisung zustande gekommen wären.
 
-## <a name="conflict-resolution"></a>Konfliktlösung
+## <a name="conflict-resolution"></a>Konfliktauflösung
  Standardmäßig verwendet die Mergereplikation zum Lösen von Konflikten eine prioritätsbasierte Logik. Wenn eine Änderung, die zu einem Konflikt führt, in zwei Abonnentendatenbanken vorgenommen wird, hat die Änderung für den Abonnenten mit der höheren Abonnementpriorität Vorrang. Ist die Priorität bei beiden Abonnements identisch, erhält die Änderung den Vorzug, die den Verleger zuerst erreicht. Bei der Erkennung auf Zeilen- und Spaltenebene wird die unterlegene Zeile immer durch die gesamte Gewinnerzeile überschrieben.
 
  Für die **logical_record_level_conflict_resolution** -Artikeleigenschaft kann TRUE oder FALSE festgelegt werden. Der Wert sollte nur für den übergeordneten Artikel auf der obersten Ebene festgelegt werden. Von den untergeordneten Artikeln wird er ignoriert. Wenn für den Wert TRUE festgelegt wird, wird der unterlegene logische Datensatz durch den gesamten gewinnenden logischen Datensatz überschrieben. Wenn für den Wert FALSE festgelegt wird, können die einzelnen Gewinnerzeilen von unterschiedlichen Abonnenten oder Verlegern stammen. So könnte z. B. Abonnent A einen Konflikt in einer Zeile aus der **Orders** -Tabelle und Abonnent B einen Konflikt in einer zugehörigen Zeile aus der **OrderItems** -Tabelle gewinnen. Im Ergebnis entsteht ein logischer Datensatz mit der **Orders** -Zeile von Abonnent A und der **OrderItems** -Zeile von Abonnent B.

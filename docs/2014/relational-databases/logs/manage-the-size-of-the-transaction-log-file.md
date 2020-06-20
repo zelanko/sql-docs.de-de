@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 219ba0605d60bab0b13675f7f9f7ff01cace5755
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144331"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049735"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Verwalten der Größe der Transaktionsprotokolldatei
   In einigen Fällen kann sich das physische Verkleinern oder Vergrößern der physischen Protokolldatei des Transaktionsprotokolls einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank als nützlich erweisen. Dieses Thema enthält Informationen zum Überwachen der Größe eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokolls, Verkleinern des Transaktionsprotokolls, Hinzufügen oder Vergrößern einer Transaktionsprotokolldatei, Optimieren der Wachstumsrate des **tempdb** -Transaktionsprotokolls und Steuern der Vergrößerung einer Transaktionsprotokolldatei.  
@@ -55,7 +54,7 @@ ms.locfileid: "63144331"
 -   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (Informationen finden Sie in den Spalten **size**, **max_size** und **growth** für die Protokolldateien.)  
   
 > [!NOTE]  
->  Für das Verkleinern von Datenbank- und Protokolldateien kann eine automatische Ausführung festgelegt werden. Es wird jedoch von einer automatischen Verkleinerung abgeraten, und die `autoshrink`-Datenbankeigenschaft ist in den Standardeinstellungen auf FALSE festgelegt. Wenn `autoshrink` auf TRUE festgelegt ist, wird die Größe einer Datei nur dann automatisch verkleinert, wenn mehr als 25 Prozent des Speicherplatzes ungenutzt sind. Die Datei wird entweder auf eine Größe verkleinert, bei der 25 Prozent der Datei aus nicht verwendetem Speicherplatz bestehen, oder auf die ursprüngliche Dateigröße, je nachdem, welcher Wert größer ist. Weitere Informationen zum Ändern der Einstellung der- `autoshrink` Eigenschaft finden Sie unter [anzeigen oder Ändern der Eigenschaften einer Datenbank](../databases/view-or-change-the-properties-of-a-database.md): Verwenden Sie die **Automatisches Verkleinern** -Eigenschaft auf der **options** Seite oder [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-verwenden Sie die AUTO_SHRINK-Option.  
+>  Für das Verkleinern von Datenbank- und Protokolldateien kann eine automatische Ausführung festgelegt werden. Es wird jedoch von einer automatischen Verkleinerung abgeraten, und die `autoshrink`-Datenbankeigenschaft ist in den Standardeinstellungen auf FALSE festgelegt. Wenn `autoshrink` auf TRUE festgelegt ist, wird die Größe einer Datei nur dann automatisch verkleinert, wenn mehr als 25 Prozent des Speicherplatzes ungenutzt sind. Die Datei wird entweder auf eine Größe verkleinert, bei der 25 Prozent der Datei aus nicht verwendetem Speicherplatz bestehen, oder auf die ursprüngliche Dateigröße, je nachdem, welcher Wert größer ist. Weitere Informationen zum Ändern der Einstellung der `autoshrink` -Eigenschaft finden Sie unter [anzeigen oder Ändern der Eigenschaften einer Datenbank](../databases/view-or-change-the-properties-of-a-database.md): Verwenden Sie die **Automatisches Verkleinern** -Eigenschaft auf der **options** Seite oder [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-verwenden Sie die AUTO_SHRINK-Option.  
   
   
 ##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a>Hinzufügen oder Vergrößern einer Protokolldatei  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b13e3d30ac0afce5293cc0e104aa2b291112647f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13201a8b904a5fc5232b9fa860710e4e39cce67a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177280"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064759"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Aufgabe 3: Bereinigung von Daten anhand der Wissensdatenbank „Suppliers“
   In dieser Aufgabe führen Sie den computerunterstützten Bereinigungsprozess aus. DQS verwendet erweiterte Algorithmen und Vertrauensgrade auf Grundlage der angegebenen Schwellenwerte, um die Daten im Hinblick auf die ausgewählte Wissensdatenbank zu analysieren und dann zu bereinigen. Weitere Informationen finden Sie unter Bereinigen von [Daten mit dem (internen) DQS-wissen](https://msdn.microsoft.com/library/hh213061.aspx) .

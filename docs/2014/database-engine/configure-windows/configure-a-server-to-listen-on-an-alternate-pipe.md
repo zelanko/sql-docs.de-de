@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 68b082d125650d150676d545cfdf6ab27bd25da2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d610ec814097be44e189a663db5afaa1345d29c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813523"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935791"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe-sql-server-configuration-manager"></a>Konfigurieren eines Servers für die Überwachung einer alternativen Pipe (SQL Server-Konfigurations-Manager)
   In diesem Thema wird beschrieben, wie Sie einen Server konfigurieren können, um eine alternative Pipe in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe des SQL Server-Konfigurations-Managers überwachen zu können. Standardmäßig lauscht die Standardinstanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] an der Named Pipe \\\\.\pipe\sql\query. Benannte Instanzen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssEW](../../includes/ssew-md.md)] überwachen andere Pipes.  
@@ -37,7 +36,7 @@ ms.locfileid: "62813523"
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>So konfigurieren Sie die von der SQL Server-Datenbank-Engine verwendete Named Pipe  
   
-1.  Erweitern Sie **SQL Server-Netzwerkkonfiguration** im Konsolenbereich des SQL Server-Konfigurations-Managers, und klicken Sie dann auf **Protokolle für** *\<Instanzname>* .  
+1.  Erweitern Sie in SQL Server-Konfigurations-Manager im Konsolenfenster **SQL Server Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für** *\<instance name>* .  
   
 2.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **Named Pipes**, und klicken Sie dann auf **Eigenschaften**.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62813523"
   
 4.  Klicken Sie im linken Bereich auf **SQL Server-Dienste**.  
   
-5.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (** \<Instanzname> **)** , und klicken Sie dann auf **Neu starten**, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu beenden und neu zu starten.  
+5.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (** \<instance name> **)** , und klicken Sie dann auf **neu starten**, um anzuhalten und neu zu starten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine alternative Pipe überwacht, können Sie auf drei Arten mit einer Clientanwendung eine Verbindung zu einer bestimmten benannten Pipe herstellen:  
   

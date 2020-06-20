@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05b11804630de6bd57681a569225971864c15814
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952172"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036898"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Verschlüsselungsschlüssel (einheitlicher SSRS-Modus)
   Verwenden Sie die Seite "Verschlüsselungsschlüssel", um den symmetrischen Schlüssel zu verwalten, der zum Ver- und Entschlüsseln von Daten auf einem Berichtsserver verwendet wird. Die Verwaltung der Verschlüsselungsschlüssel ist ein wichtiger Teil der Berichtsserverkonfiguration. Der symmetrische Schlüssel wird automatisch beim Erstellen der Berichtsserver-Datenbank erstellt und angewendet. Erstellen Sie eine Sicherungskopie des symmetrischen Schlüssels, sodass Routinewartungsvorgänge durchgeführt werden können. Für die folgenden Wartungsaufgaben ist es erforderlich, dass Sie über eine gültige Kopie des symmetrischen Schlüssels verfügen:  
@@ -28,7 +27,7 @@ ms.locfileid: "71952172"
   
 -   Konfigurieren einer neuen Berichtsserverinstanz, um eine bereits vorhandene Berichtsserver-Datenbank gemeinsam zu nutzen oder zu verwenden.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus.  
+ [!INCLUDE[applies](../../includes/applies-md.md)]Einheitlicher [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modus.  
   
 > [!IMPORTANT]  
 >  Aus Sicherheitsgründen empfiehlt es sich, den Reporting Services-Verschlüsselungsschlüssel in regelmäßigen Abständen zu ändern. Ein guter Zeitpunkt, um den Schlüssel zu ändern, liegt direkt im Anschluss an ein größeres Versionsupgrade von Reporting Services. Indem der Schlüssel nach einem Upgrade geändert wird, lassen sich zusätzliche Dienstunterbrechungen, die durch eine Änderung des Reporting Services-Verschlüsselungsschlüssels außerhalb des Upgradezyklus verursacht würden, minimieren.  

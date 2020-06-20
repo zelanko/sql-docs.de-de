@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60b20a1ee5a90b2b51abbe71a189add066e1b7e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 227c8a5b3222bdddab9632ec2e80f0bb4dd54250
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703251"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015604"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Ausführen von Vorlagen, die XPath-Abfragen enthalten (SQLXMLOLEDB-Anbieter)
   In diesem Beispiel wird gezeigt, wie die folgenden für den SQLXMLOLEDB-Anbieter spezifischen Eigenschaften verwendet werden:  
@@ -34,7 +33,7 @@ ms.locfileid: "82703251"
   
 -   Zuordnungsschema  
   
- In dieser ADO-Beispielanwendung wird eine XML-Vorlage, die aus einer XPath-Abfrage (root) besteht, für das XSD-Zuordnungsschema (MySchema. Xml) angegeben, das unter [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](executing-xpath-queries-sqlxmloledb-provider.md)beschrieben wird.  
+ In dieser ADO-Beispielanwendung wird eine XML-Vorlage, die aus einer XPath-Abfrage (root) besteht, für das XSD-Zuordnungsschema (MySchema.xml) angegeben, das unter [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](executing-xpath-queries-sqlxmloledb-provider.md)beschrieben wird.  
   
  Die Mapping-Schema Eigenschaft stellt das XSD-Zuordnungsschema bereit, für das die XPath-Abfrage ausgeführt wird. Die Eigenschaft Basispfad stellt den Dateipfad zum Zuordnungsschema bereit.  
   

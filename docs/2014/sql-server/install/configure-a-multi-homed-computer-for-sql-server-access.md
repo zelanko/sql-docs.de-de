@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97ba04b8d41c3e5ca4927abb53cf27cfa3013fcd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211503"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036993"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff
   In einem Szenario, in dem ein Server eine Verbindung zu mindestens zwei Netzwerken oder Netzwerksubnetzen bereitstellen muss, wird normalerweise ein mehrfach vernetzter Computer verwendet. Häufig befindet sich dieser Computer in einem Umkreisnetzwerk (auch als DMZ, Demilitarized Zone oder überwachtes Subnetz bezeichnet). In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Windows-Firewall mit erweiterter Sicherheit konfiguriert werden, um Netzwerkverbindungen zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer mehrfach vernetzten Umgebung bereitzustellen.  
@@ -55,7 +54,7 @@ ms.locfileid: "68211503"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>So bestimmen Sie die verfügbaren IP-Adressen des Computers  
   
-1.  Klicken Sie auf dem Computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf dem installiert ist, auf **Start**, klicken `cmd` Sie auf [!INCLUDE[clickOK](../../includes/clickok-md.md)] **Ausführen**, geben Sie und dann ein.  
+1.  Klicken Sie auf dem Computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf dem installiert ist, auf **Start**, klicken Sie auf **Ausführen**, geben Sie `cmd` und dann ein [!INCLUDE[clickOK](../../includes/clickok-md.md)] .  
   
 2.  Geben Sie im Eingabeaufforderungsfenster `ipconfig,` ein, und drücken Sie anschließend die EINGABETASTE, um die auf diesem Computer verfügbaren IP-Adressen aufzulisten.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "68211503"
   
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], zeigen Sie dann auf **Konfigurationstools**, und klicken Sie dann auf **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager**.  
   
-2.  Erweitern Sie in der Konsolenstruktur des **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers** die Elemente **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfiguration** und **Protokolle für \<Instanzname>** . Doppelklicken Sie dann auf **TCP/IP**.  
+2.  Erweitern Sie in ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**im Konsolen Bereich den Knoten ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Netzwerkkonfiguration**, erweitern Sie **Protokolle \<instance name> für **, und doppelklicken Sie dann auf **TCP/IP**.  
   
 3.  Im Dialogfeld **TCP/IP-Eigenschaften** auf der Registerkarte **IP-Adressen** werden mehrere IP-Adressen im Format **IP1**, **IP2**und bis zu **IPAll**angezeigt. Eine dieser Angaben ist die IP-Adresse des Loopbackadapters (127.0.0.1). Für alle IP-Adressen, die auf dem Computer konfiguriert wurden, werden zusätzliche IP-Adressen angezeigt.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "68211503"
   
 1.  Melden Sie sich als Administrator auf dem Computer an, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.  
   
-2.  Klicken Sie im **Startmenü**auf **Ausführen**, geben `wf.msc`Sie ein, und klicken Sie auf **OK**.  
+2.  Klicken Sie im **Startmenü**auf **Ausführen**, geben Sie ein `wf.msc` , und klicken Sie auf **OK**.  
   
 3.  Klicken Sie im Dialogfeld **Benutzerkontensteuerung** auf **Weiter** , um unter Verwendung der Administratoranmeldeinformationen das Snap-In der Windows-Firewall mit erweiterter Sicherheit zu öffnen.  
   

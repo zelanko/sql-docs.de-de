@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bad2760a5dc9b16b24d75bb35617759543205f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484682"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064782"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Aufgabe 12: Wissensermittlung
   In dieser Aufgabe führen Sie die **Wissens** Ermittlungs Aktivität für die Domänen **Supplier ID** und **Supplier Name** aus. In diesem Szenario importiert der Wissensermittlungsprozess hauptsächlich Werte für diese zwei Domänen.  
@@ -28,7 +27,7 @@ ms.locfileid: "65484682"
   
 2.  Wählen Sie **Excel-Datei** für **Datenquelle**aus.  
   
-3.  Klicken Sie auf **Durchsuchen**, navigieren Sie zu **Suppliers. xls**, und klicken Sie auf **Öffnen**.  
+3.  Klicken Sie auf **Durchsuchen**, navigieren Sie zu **Suppliers.xls**, und klicken Sie auf **Öffnen**.  
   
 4.  Wählen Sie **Suppliers für** die Ermittlung für das **Arbeitsblatt**aus.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "65484682"
   
 6.  Klicken Sie auf **weiter** , um zur Seite **ermitteln** zu wechseln.  
   
-7.  Klicken Sie auf der Seite **ermitteln** auf **Start** , um den Ermittlungsprozess zu starten. Die Ermittlung erfolgt in den Spalten **SupplierID** und **Supplier Name** in der Datei **Suppliers. xls** . Die Domänen **Supplier ID** und **Supplier Name** müssen mit den von der Ermittlung erstellten Kenntnissen aufgefüllt werden.  
+7.  Klicken Sie auf der Seite **ermitteln** auf **Start** , um den Ermittlungsprozess zu starten. Die Ermittlung wird für die Spalten **SupplierID** und **Supplier Name** in der **Suppliers.xls** -Datei ausgeführt. Die Domänen **Supplier ID** und **Supplier Name** müssen mit den von der Ermittlung erstellten Kenntnissen aufgefüllt werden.  
   
      ![Seite "Ermitteln" im Ermittlungsprozess](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "Seite "Ermitteln" im Ermittlungsprozess")  
   

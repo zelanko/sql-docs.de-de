@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: edee56c6d162f92234e235f9369a0ab91457639e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8ced6d387dd6ba14ab997aefbe7f2b43426c868e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707319"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049588"
 ---
 # <a name="changing-passwords-programmatically"></a>Programmgesteuertes Ändern von Kennwörtern
   Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt Native Client die programmgesteuerte Verarbeitung des Kenn Wort Ablaufs sowohl über den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter als auch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über den Native Client-ODBC-Treiber und durch Änderungen an den **SQL Server Anmelde** Dialogfeldern.  

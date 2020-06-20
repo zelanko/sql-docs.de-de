@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 134c37bf2e509c44bfe459638e24ad24f4128aa0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cbced1bb62dcacb896a7ff30fdbd6b5aa28f20e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039592"
 ---
 # <a name="autotranslation-of-character-data"></a>Automatische Übersetzung der Zeichendaten
   Zeichendaten, wie z. b. ANSI-Zeichen Variablen, die mit SQL_C_CHAR deklariert wurden, oder Daten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die in mithilfe der Datentypen **char**, **varchar**oder **Text** gespeichert werden, können nur eine begrenzte Anzahl von Zeichen darstellen. Mit einem Byte pro Zeichen gespeicherte Zeichendaten können nur 256 Zeichen darstellen. Die in SQL_C_CHAR-Variablen gespeicherten Werte werden mithilfe der ANSI-Codepage (ACP) auf dem Clientcomputer interpretiert. Die Werte, die mit den Datentypen **char**, **varchar**oder **Text** auf dem Server gespeichert werden, werden mithilfe der ACP des Servers ausgewertet.  

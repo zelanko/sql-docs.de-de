@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fa9d36a446645b289f2c182e90782d6932cf20ef
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07cff70d32d7d39619ecf3ee4ce36e37f2dee924
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702248"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012884"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Platzhalterkomponenten und Inhaltsüberprüfung
   Platzhalterkomponenten werden verwendet, um die Flexibilität der zulässigen Inhalte in einem Inhaltsmodell zu erhöhen. Diese Komponenten werden in der XSD-Sprache auf folgende Weise unterstützt:  
   
--   Elementplatzhalterkomponenten. Diese werden durch das **\<xsd:any>** -Element dargestellt.  
+-   Elementplatzhalterkomponenten. Diese werden durch das- **\<xsd:any>** Element dargestellt.  
   
--   Attributplatzhalterkomponenten. Diese werden durch das **\<xsd:anyAttribute>** -Element dargestellt.  
+-   Attributplatzhalterkomponenten. Diese werden durch das- **\<xsd:anyAttribute>** Element dargestellt.  
   
- Beide Platzhalterzeichenelemente **\<xsd:any>** und **\<xsd: anyAttribute >** unterstützen die Verwendung eines **processContents** Attributs. Auf diese Weise können Sie einen Wert angeben, der angibt, wie XML-Anwendungen die Überprüfung des Dokumentinhalts durchführen, der diesen Platzhalterzeichenelementen zugeordnet ist. Die folgenden Werte und Auswirkungen werden bereitgestellt:  
+ Beide Platzhalter Zeichen Elemente **\<xsd:any>** und **\<xsd:anyAttribute>** unterstützen die Verwendung eines **processContents** -Attributs. Auf diese Weise können Sie einen Wert angeben, der angibt, wie XML-Anwendungen die Überprüfung des Dokumentinhalts durchführen, der diesen Platzhalterzeichenelementen zugeordnet ist. Die folgenden Werte und Auswirkungen werden bereitgestellt:  
   
 -   Der **strict** -Wert gibt an, dass der Inhalt vollständig überprüft wird.  
   

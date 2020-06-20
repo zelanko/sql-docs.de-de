@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22ec72bdbfe74d05277e4b6ff73f92c08d88039d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659932"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067996"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lektion 2: Erstellen und Verwalten von Daten in einer hierarchischen Tabelle
   In Lektion 1 haben Sie eine vorhandene Tabelle so geändert, dass sie den `hierarchyid`-Datentyp verwendet. Dann haben Sie die `hierarchyid`-Spalte entsprechend der in den vorhandenen Daten gegebenen hierarchischen Darstellung gefüllt. In dieser Lektion erstellen Sie eine neue Tabelle und verwenden hierarchische Methoden, um Daten in sie einzufügen. Dann fragen Sie Daten ab und bearbeiten sie, indem Sie hierarchische Methoden verwenden.  

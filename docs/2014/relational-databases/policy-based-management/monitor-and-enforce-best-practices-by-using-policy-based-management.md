@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68e02c4933f559bff62b8e352016a911990049a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049568"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung
-  Mit der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]Richtlinien basierten Verwaltung können Sie bewährte Methoden für überwachen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt eine Reihe von Richtlinien Dateien bereit, die Sie als Richtlinien für Best Practices importieren und dann die Richtlinien für einen Zielsatz auswerten können, der Instanzen, Instanzobjekte, Datenbanken oder Datenbankobjekte enthält. Sie können Richtlinien manuell auswerten, Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Zeitplan festlegen oder Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Ereignis angeben. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md).  
+  Mit der Richtlinien basierten Verwaltung können Sie bewährte Methoden für überwachen [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt eine Reihe von Richtlinien Dateien bereit, die Sie als Richtlinien für Best Practices importieren und dann die Richtlinien für einen Zielsatz auswerten können, der Instanzen, Instanzobjekte, Datenbanken oder Datenbankobjekte enthält. Sie können Richtlinien manuell auswerten, Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Zeitplan festlegen oder Richtlinien zum Auswerten eines Zielsatzes entsprechend einem Ereignis angeben. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Richtlinie und Regeln für Datenbank-Engine  
- In der folgenden Tabelle werden die Richtlinien aufgeführt, die in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation von enthalten sind. Sie enthalten Informationen zu den bewährten Methoden, die von den einzelnen Richtlinien ausgewertet werden. Die Richtlinien werden als XML-Dateien gespeichert und werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]importiert. Weitere Informationen über das Importieren von Richtlinien finden Sie unter [Importieren einer Richtlinie der richtlinienbasierten Verwaltung](import-a-policy-based-management-policy.md).  
+ In der folgenden Tabelle werden die Richtlinien aufgeführt, die in der Installation von enthalten sind. Sie enthalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Informationen zu den bewährten Methoden, die von den einzelnen Richtlinien ausgewertet werden. Die Richtlinien werden als XML-Dateien gespeichert und werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]importiert. Weitere Informationen über das Importieren von Richtlinien finden Sie unter [Importieren einer Richtlinie der richtlinienbasierten Verwaltung](import-a-policy-based-management-policy.md).  
   
 |Richtlinienname|Regel für Best Practice|  
 |-----------------|------------------------|  

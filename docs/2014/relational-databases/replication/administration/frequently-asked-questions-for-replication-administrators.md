@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02f12008b9ab8e9cd4c7d08ed81a902629b90827
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207067"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063841"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
   Die folgenden Fragen und Antworten bieten einen Leitfaden für zahlreiche Aufgaben, die Administratoren von replizierten Datenbanken ausführen müssen.  
@@ -121,7 +120,7 @@ ms.locfileid: "63207067"
   
 -   Die Definition eines Objekts, beispielsweise als CREATE TABLE-Anweisung. Bei der Replikation werden standardmäßig die Definitionen aller replizierten Objekte auf den Abonnenten kopiert.  
   
--   Der Namespace, in dem ein Objekt erstellt wird: \<<Database>\<.Schema>.\<Object>. Schemas werden mit der CREATE SCHEMA-Anweisung definiert.  
+-   Der Namespace, in dem ein Objekt erstellt wird: \<Database> . \<Schema> . \<Object> . Schemas werden mit der CREATE SCHEMA-Anweisung definiert.  
   
 -   Im Assistenten für neue Veröffentlichung weist die Replikation in Bezug auf Schemas und den Objektbesitz das folgende Standardverhalten auf:  
   
@@ -133,7 +132,7 @@ ms.locfileid: "63207067"
   
 -   Für Artikel in Veröffentlichungen, die Zeichenmodus-Momentaufnahmen verwenden (werden für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten und [!INCLUDE[ssEW](../../../includes/ssew-md.md)] -Abonnenten verwendet): Standardmäßig wird der Besitzer leer gelassen. Als Besitzer wird standardmäßig der Besitzer verwendet, der mit dem vom Verteilungs- oder Merge-Agent zum Herstellen einer Verbindung mit dem Abonnenten verwendeten Konto verknüpft ist.  
   
- Der Objektbesitzer kann im Dialogfeld **Artikeleigenschaften\<***Artikel***>** und über folgende gespeicherte Prozeduren festgelegt werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../publish/view-and-modify-publication-properties.md), [Definieren eines Artikels](../publish/define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](../publish/view-and-modify-article-properties.md).  
+ Der Objektbesitzer kann im Dialogfeld **Artikel \<***Article***> Eigenschaften-** und über die folgenden gespeicherten Prozeduren geändert werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../publish/view-and-modify-publication-properties.md), [Definieren eines Artikels](../publish/define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](../publish/view-and-modify-article-properties.md).  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>Wie können Erteilungen in der Abonnementdatenbank so konfiguriert werden, dass sie mit den Erteilungen in der Veröffentlichungsdatenbank übereinstimmen?  
  Bei der Replikation werden GRANT-Anweisungen standardmäßig nicht für die Abonnementdatenbank ausgeführt. Wenn die Berechtigungen für die Abonnementdatenbank mit denen für die Veröffentlichungsdatenbank übereinstimmen sollen, verwenden Sie eine der folgenden Methoden:  
@@ -153,7 +152,7 @@ ms.locfileid: "63207067"
   
     -   Führen Sie [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) oder [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie dabei für den**sp_changearticle**-Parameter den Wert 'pre_creation_cmd' (**sp_changemergearticle**) oder 'pre_creation_command' ( **@property** ) und für den **@value**.  
   
-    -   Wählen Sie im Dialogfeld **Artikeleigenschaften- \<Artikel>** im Abschnitt **Zielobjekt** einen Wert von **vorhandenes Objekt unverändert beibehalten**, **Daten löschen aus. Wenn der Artikel einen Zeilen Filter aufweist, löschen Sie nur die Daten, die dem Filter entsprechen.** oder **Alle Daten im vorhandenen Objekt abschneiden** für die Option **Action if name is in use** (Aktion, wenn der Name verwendet wird). Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../publish/view-and-modify-publication-properties.md).  
+    -   Wählen Sie im Dialogfeld **Artikeleigenschaften- \<Article> ** im Abschnitt **Zielobjekt** einen Wert von **vorhandenes Objekt unverändert beibehalten**, **Daten löschen aus. Wenn der Artikel einen Zeilen Filter aufweist, löschen Sie nur die Daten, die dem Filter entsprechen.** oder **Alle Daten im vorhandenen Objekt abschneiden** für die Option **Action if name is in use** (Aktion, wenn der Name verwendet wird). Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../publish/view-and-modify-publication-properties.md).  
   
 ## <a name="database-maintenance"></a>Datenbankwartung  
   
@@ -181,7 +180,7 @@ ms.locfileid: "63207067"
  In Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]war zum Verschieben oder zum Umbenennen von Datenbankdateien ein Trennen und erneutes Anfügen der Datenbank erforderlich. Da das Trennen einer replizierten Datenbank nicht möglich ist, musste die Replikation zuerst von diesen Datenbanken entfernt werden. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]können Sie Dateien ohne Trennen und erneutes Anfügen der Datenbank verschieben und umbenennen. Dies hat keine Auswirkungen auf die Replikation. Weitere Informationen zum Verschieben und Umbenennen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>Wie lösche ich eine Tabelle, die repliziert wird?  
- Löschen Sie zuerst mit [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) oder im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** den Artikel aus der Veröffentlichung, und löschen Sie ihn dann mit `DROP <Object>` aus der Datenbank. Artikel in Momentaufnahme- oder Transaktionsveröffentlichungen können nach dem Hinzufügen von Abonnements nicht mehr gelöscht werden; zuerst müssen die Abonnements gelöscht werden. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Löschen Sie zuerst den Artikel mithilfe [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)oder des Dialog Felds **Veröffentlichungs \<Publication> Eigenschaften-** aus der Veröffentlichung, und löschen Sie ihn dann mit aus der Datenbank `DROP <Object>` . Artikel in Momentaufnahme- oder Transaktionsveröffentlichungen können nach dem Hinzufügen von Abonnements nicht mehr gelöscht werden; zuerst müssen die Abonnements gelöscht werden. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Wie kann ich in einer veröffentlichten Tabelle Spalten hinzufügen bzw. löschen?  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt zahlreiche Schemaänderungen für veröffentliche Objekte einschließlich des Hinzufügens und Löschens von Spalten. Führen Sie beispielsweise Alter Table... Drop Column auf dem Verleger, und die-Anweisung wird auf den Abonnenten repliziert und dann ausgeführt, um die Spalte zu löschen. Auf Abonnenten, auf denen Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ausgeführt werden, wird das Hinzufügen und Löschen von Spalten über die gespeicherten Prozeduren [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) und [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql)unterstützt. Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../publish/make-schema-changes-on-publication-databases.md).  
@@ -192,10 +191,10 @@ ms.locfileid: "63207067"
  Führen Sie eine Überprüfung aus. Bei der Überprüfung wird angegeben, ob ein bestimmter Abonnent mit dem Verleger synchronisiert ist. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](../validate-data-at-the-subscriber.md). Bei der Überprüfung wird nicht angegeben, in welchen Zeilen die Synchronisierung möglicherweise nicht richtig ausgeführt wurde. Im [Hilfsprogramm "tablediff"](../../../tools/tablediff-utility.md) werden die entsprechenden Informationen hingegen angezeigt.  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>Wie füge ich einer vorhandenen Veröffentlichung eine Tabelle hinzu?  
- Wenn eine Tabelle (oder ein anderes Objekt) hinzugefügt werden soll, ist das Anhalten der Aktivität in der Veröffentlichungs- oder in der Abonnementdatenbank nicht erforderlich. Im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** oder über die gespeicherten Prozeduren [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) und [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) können Sie einer Veröffentlichung eine Tabelle hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Wenn eine Tabelle (oder ein anderes Objekt) hinzugefügt werden soll, ist das Anhalten der Aktivität in der Veröffentlichungs- oder in der Abonnementdatenbank nicht erforderlich. Fügen Sie eine Tabelle zu einer Veröffentlichung über das Dialogfeld **Veröffentlichungs Eigenschaften- \<Publication> ** bzw. die gespeicherten Prozeduren [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) und [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)hinzu. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>Wie entferne ich eine Tabelle in einer Veröffentlichung?  
- Mit [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) oder im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** können Sie eine Tabelle aus der Veröffentlichung entfernen. Artikel in Momentaufnahme- oder Transaktionsveröffentlichungen können nach dem Hinzufügen von Abonnements nicht mehr gelöscht werden; zuerst müssen die Abonnements gelöscht werden. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Entfernen Sie eine Tabelle aus der Veröffentlichung, indem Sie [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)oder das Dialogfeld **Veröffentlichungs Eigenschaften \<Publication> -** verwenden. Artikel in Momentaufnahme- oder Transaktionsveröffentlichungen können nach dem Hinzufügen von Abonnements nicht mehr gelöscht werden; zuerst müssen die Abonnements gelöscht werden. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>Für welche Aktionen müssen Abonnements erneut initialisiert werden?  
  Für einige Artikel- und Veröffentlichungsänderungen ist eine erneute Initialisierung der Abonnements erforderlich. Weitere Informationen finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../publish/change-publication-and-article-properties.md).  
