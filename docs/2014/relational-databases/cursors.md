@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 055482a8cf64527f58ed983b449121a99960f566
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918691"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970531"
 ---
 # <a name="cursors"></a>Cursor
   Vorgänge in einer relationalen Datenbank beziehen sich immer auf eine vollständige Gruppe von Zeilen. Beispielsweise besteht der Zeilensatz, der von einer SELECT-Anweisung zurückgegeben wird, aus allen Zeilen, die die Bedingungen der WHERE-Klausel der Anweisung erfüllen. Diese vollständige Gruppe von Zeilen, die von der Anweisung zurückgegeben wird, wird als Resultset bezeichnet. Anwendungen, vor allem interaktive Onlineanwendungen, sind nicht immer effektiv, wenn das gesamte Resultset als eine Einheit bearbeitet wird. Diese Anwendungen benötigen einen Mechanismus, um jeweils eine Zeile oder einen kleinen Zeilenblock zu bearbeiten. Cursor sind eine Erweiterung zu Resultsets und stellen diesen Mechanismus bereit.  
@@ -61,7 +60,7 @@ ms.locfileid: "62918691"
   
  Obwohl die Datenbank-API-Cursormodelle einen Vorwärtscursor als unterschiedlichen Cursortyp betrachten, gilt dies nicht für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] betrachtet sowohl die Vorwärts- als auch Bildlauffunktion als Optionen, die für statische, keysetgesteuerte und dynamische Cursor übernommen werden können. [!INCLUDE[tsql](../includes/tsql-md.md)] -Cursor unterstützen statische Vorwärtscursor sowie keysetgesteuerte und dynamische Cursor. Die Datenbank-API-Cursormodelle gehen davon aus, dass statische, keysetgesteuerte und dynamische Cursor immer bildlauffähig sind. Wenn das Cursorattribut oder die Cursoreigenschaft einer Datenbank-API auf FORWARD_ONLY festgelegt ist, wird dies von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als dynamischer Vorwärtscursor implementiert.  
   
- Statisch  
+ statischen  
  Das vollständige Resultset eines statischen Cursors wird in **tempdb** erstellt, wenn der Cursor geöffnet wird. Ein statischer Cursor zeigt das Resultset immer so an, wie es zur Verfügung stand, als der Cursor geöffnet wurde. Statische Cursor erkennen wenige oder keine Änderungen, beanspruchen beim Durchführen eines Bildlaufs jedoch relativ wenig Ressourcen.  
   
  Der Cursor spiegelt jedoch keinerlei Änderungen wider, die in der Datenbank ausgeführt wurden und die sich entweder auf die Mitgliedschaft des Resultsets oder auf Änderungen an den Werten in den Spalten der Zeilen beziehen, aus denen das Resultset besteht. Ein statischer Cursor zeigt neue Zeilen, die nach dem Öffnen des Cursors in die Datenbank eingefügt wurden, nicht an, selbst wenn sie die Suchbedingungen der SELECT-Anweisung des Cursors erfüllen. Wenn Zeilen, aus denen sich das Resultset zusammensetzt, von anderen Benutzern aktualisiert werden, werden die neuen Datenwerte im statischen Cursor nicht angezeigt. Der statische Cursor zeigt Zeilen an, die nach dem Öffnen des Cursors aus der Datenbank entfernt wurden. Die Operationen UPDATE, INSERT oder DELETE werden in einem statischen Cursor nicht widergespiegelt (es sei denn, der Cursor wird geschlossen und wieder geöffnet). Selbst Änderungen, die mithilfe derselben Verbindung, die den Cursor öffnete, durchgeführt wurden, sind nicht enthalten.  
@@ -117,7 +116,7 @@ ms.locfileid: "62918691"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [DECLARE CURSOR &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
- [Cursor &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/cursors-transact-sql)   
+ [Cursors &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/cursors-transact-sql)   
  [Cursor Funktionen &#40;Transact-SQL-&#41;](/sql/t-sql/functions/cursor-functions-transact-sql)   
  [Gespeicherte Cursorprozeduren &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql)  
   

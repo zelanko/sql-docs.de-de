@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ab93a3514fa260c8c3836da85c767da3c3051a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011179"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004055"
 ---
 # <a name="populate-full-text-indexes"></a>Auffüllen von Volltextindizes
   Das Erstellen und Verwalten eines Volltextindexes umfasst das Auffüllen des Indexes mithilfe eines Prozesses, der als *Auffüllung* (oder auch als *Crawl*) bezeichnet wird.  
@@ -145,7 +144,7 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate(Resume)
 GO  
 ```  
   
-### <a name="d-running-a-manual-population"></a>D. Ausführen einer manuellen Auffüllung  
+### <a name="d-running-a-manual-population"></a>D: Ausführen einer manuellen Auffüllung  
  Im folgenden Beispiel wird eine manuelle Auffüllung des Volltextindexes mit Änderungsnachverfolgung für die `HumanResources.JobCandidate` -Tabelle der `AdventureWorks` -Beispieldatenbank ausgeführt.  
   
 ```  
@@ -211,7 +210,7 @@ GO
 ##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>Problembehandlung bei Fehlern in einer voll Text Auffüllung (durch Forstung)  
  Tritt während eines Durchforstungsvorgangs ein Fehler auf, wird von der Durchforstungsprotokollfunktion der Volltextsuche ein Durchforstungsprotokoll erstellt und gewartet. Dabei handelt es sich um eine Nur-Text-Datei. Jedes Durchforstungsprotokoll gehört zu einem bestimmten Volltextkatalog. Standardmäßig befinden sich Durchforstungsprotokolle für eine bestimmte Instanz, in diesem Fall die erste Instanz, im Ordner %ProgramFiles%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG. Das Benennungsschema für Durchforstungsprotokolldateien lautet folgendermaßen:  
   
- Sqlft\<DatabaseID>\<FullTextCatalogID>. Protokoll [\<n>]  
+ Sqlft \<DatabaseID> \<FullTextCatalogID> . Log [ \<n> ]  
   
  <`DatabaseID`>  
  Die ID einer Datenbank. <`dbid`> ist eine fünfstellige Zahl mit führenden Nullen.  

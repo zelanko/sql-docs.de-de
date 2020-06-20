@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13ec879395358536485fb0d80e7ab1a2a19d4823
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98ac88aec42b53012e0f57233a089bddbd3c8cae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316464"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035714"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Entwicklungs-, Test- und Produktionsdatenbanken (Visual Database Tools)
   Wenn Sie zwei Datenbanken mit identischer Struktur besitzen, können Sie Änderungen an einer der beiden Datenbanken vornehmen und an die andere weitergeben. Wenn Sie z. B. über eine persönliche Entwicklungsdatenbank und eine für die Gruppe vorgesehene Testdatenbank verfügen, können Sie die Entwicklungsdatenbank ändern und die Änderungen dann an die Testdatenbank weitergeben.  

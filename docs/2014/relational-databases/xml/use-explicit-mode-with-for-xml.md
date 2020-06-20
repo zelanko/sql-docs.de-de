@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0592a7635b0208624ab511af4ef68382548090c8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e3db80333c74166301fcff7bb25edea4aca38a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059403"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Verwenden des EXPLICIT-Modus mit FOR XML
   Wie im Thema [Erstellen von XML mithilfe von FOR XML](../xml/for-xml-sql-server.md)beschrieben wird, bieten die Modi RAW und AUTO kaum Steuerungsmöglichkeiten für die Form des aus einem Abfrageergebnis generierten XML-Codes. Der EXPLICIT-Modus hingegen ermöglicht größte Flexibilität beim Generieren der gewünschten XML-Ausgabe aus einem Abfrageergebnis.  
@@ -111,7 +110,7 @@ ElementName!TagNumber!AttributeName!Directive
  Es folgt die Beschreibung der einzelnen Teile des Formats:  
   
  *ElementName*  
- Der allgemeine Bezeichner des Elements im Ergebnis. Wenn beispielsweise **Customers** als *ElementName* angegeben ist, wird das \<Customers>-Element generiert.  
+ Der allgemeine Bezeichner des Elements im Ergebnis. Wenn beispielsweise **Customers** als Element *Name*angegeben ist, wird das- \<Customers> Element generiert.  
   
  *TagNumber*  
  Ein eindeutiger, einem Element zugewiesener Tagwert. Dieser Wert bestimmt mithilfe der beiden Metadatenspalten **Tag** und **Parent**die Schachtelung der Elemente in der XML-Ausgabe.  

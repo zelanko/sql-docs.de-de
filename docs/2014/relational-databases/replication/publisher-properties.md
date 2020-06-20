@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3e14f82e855cc29f83859d85dfdaaf85a1bda37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63261975"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005104"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>SQL Server-Replikation Herausgeber Eigenschaften
   Dieser Abschnitt enthält Informationen zu den Verleger Eigenschaften, die auf dem Verteiler und dem Verleger verfügbar sind. 
@@ -58,7 +57,7 @@ ms.locfileid: "63261975"
    Mithilfe der Seite **Veröffentlichungsdatenbanken** des Dialogfelds **Verlegereigenschaften** können Benutzer mit der festen Serverrolle **sysadmin** Datenbanken für die Replikation aktivieren. Das Aktivieren der Datenbank führt nicht zur Veröffentlichung dieser Datenbank. Vielmehr ermöglicht dies allen Benutzern mit der festen Datenbankrolle **db_owner** für diese Datenbank eine oder mehrere Veröffentlichungen auf dieser Datenbank zu erstellen.  
   
 ### <a name="options"></a>Optionen  
- **Transaktions**  
+ **Transaktionsreplikation**  
  Aktivieren Sie dieses Kontrollkästchen, um es Benutzern mit der festen Datenbankrolle **db_owner** zu ermöglichen, Momentaufnahme- oder Transaktionsveröffentlichungen in der Datenbank zu erstellen. 
   
  **Merge** (Zusammenführen)  
@@ -72,7 +71,7 @@ ms.locfileid: "63261975"
  **Abonnenten**  
  Das Eigenschaftenraster **Abonnenten** zeigt Abonnenten an, die zum Empfangen von Daten von Veröffentlichungen auf diesem Verleger aktiviert sind. Klicken Sie neben einem Abonnenten auf die Eigenschaftenschaltfläche (die Schaltfläche mit den **drei Punkten**), um zusätzliche Eigenschaften anzuzeigen und festzulegen.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Klicken Sie auf **Hinzufügen** , um einen Abonnenten hinzuzufügen, und dann auf **SQL Server-Abonnenten hinzufügen** oder **Nicht-SQL Server-Abonnenten hinzufügen**.  
 
 ## <a name="see-also"></a>Weitere Informationen  

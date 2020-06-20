@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e71992a5bacfe895dd5f7a038e210d21c35c2884
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809478"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934981"
 ---
 # <a name="server-network-configuration"></a>Server-Netzwerkkonfiguration
   Zu den Aufgaben, die im Rahmen der Server-Netzwerkkonfiguration durchgeführt werden müssen, gehören das Aktivieren von Protokollen, das Ändern des Anschlusses oder der Pipe, der bzw. die von einem Protokoll verwendet wird, das Konfigurieren der Verschlüsselung, das Konfigurieren des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Diensts, das Offenlegen oder Verbergen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] im Netzwerk sowie das Registrieren des Serverprinzipalnamens (SPN). In den meisten Fällen ist es nicht erforderlich, die Server-Netzwerkkonfiguration zu ändern. Konfigurieren Sie die Server-Netzwerkprotokolle nur dann neu, wenn spezielle Netzwerkanforderungen erfüllt werden müssen.  
@@ -39,7 +38,7 @@ ms.locfileid: "62809478"
  Bei der Konfiguration für dynamische Anschlüsse verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise bei jedem Start einen anderen Anschluss. Wenn Sie durch eine Firewall eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen, müssen Sie den von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendeten Anschluss öffnen. Konfigurieren Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Verwendung eines bestimmten Anschlusses, damit Sie die Firewall so konfigurieren können, dass die Kommunikation mit dem Server möglich ist. Weitere Informationen finden Sie unter [Konfigurieren eines Servers zur Überwachung eines bestimmten TCP-Ports &#40;SQL Server-Konfigurations-Manager&#41;](configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Ändern einer Named Pipe  
- Sie können das Named Pipe-Protokoll so konfigurieren, dass an einer bestimmte Named Pipe gelauscht wird. Standardmäßig lauscht die Standardinstanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] an der Pipe „\\\\.\pipe\sql\query“ für die Standardinstanz und „\\\\.\pipe\MSSQL$ *\<Instanzname>* \sql\query“ für eine benannte Instanz. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann nur an einer benannten Pipe lauschen, aber Sie können die Pipe bei Bedarf ändern. Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser-Diensts können Clients die Pipe identifizieren, wenn sie eine Verbindung herstellen. Weitere Informationen finden Sie unter [Konfigurieren eines Servers für die Überwachung einer alternativen Pipe &#40;SQL Server-Konfigurations-Manager&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md).  
+ Sie können das Named Pipe-Protokoll so konfigurieren, dass an einer bestimmte Named Pipe gelauscht wird. Standardmäßig lauscht die Standard Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] an der Pipe \\ \\ .\pipe\sql\query für die Standard Instanz und \\ \\ .\pipe\MSSQL $ *\<instancename>* \sql\query für eine benannte Instanz. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann nur an einer benannten Pipe lauschen, aber Sie können die Pipe bei Bedarf ändern. Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser-Diensts können Clients die Pipe identifizieren, wenn sie eine Verbindung herstellen. Weitere Informationen finden Sie unter [Konfigurieren eines Servers für die Überwachung einer alternativen Pipe &#40;SQL Server-Konfigurations-Manager&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## <a name="force-encryption"></a>Erzwingen der Verschlüsselung  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann so konfiguriert werden, dass bei der Kommunikation mit Clientanwendungen eine Verschlüsselung erforderlich ist. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](enable-encrypted-connections-to-the-database-engine.md).  

@@ -21,19 +21,18 @@ helpviewer_keywords:
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b87e497c6610a2d75daa9432246e4f4b4690bab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa9596629ed8b4877b1793fa0c56956c52989499
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874447"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954550"
 ---
 # <a name="defining-udt-tables-and-columns"></a>Definieren von UDT-Tabellen und -Spalten
-  Nachdem die Assembly, die die UDT-Definition (User-Defined Type, benutzerdefinierter Typ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) enthält, in einer-Datenbank registriert wurde, kann Sie in einer Spaltendefinition verwendet werden.  
+  Nachdem die Assembly, die die UDT-Definition (User-Defined Type, benutzerdefinierter Typ) enthält, in einer-Datenbank registriert wurde [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , kann Sie in einer Spaltendefinition verwendet werden.  
   
 ## <a name="creating-tables-with-udts"></a>Erstellen von Tabellen mit UDTs  
- Es gibt keine spezielle Syntax für das Erstellen einer UDT-Spalte in einer Tabelle. Sie können den Namen des UDT in einer Spaltendefinition verwenden, als wäre er einer der systeminternen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen. Die folgende CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung erstellt eine Tabelle mit dem Namen " **Points**" mit einer Spalte mit dem Namen " `int` ID" **,** die als Identitäts Spalte und \ den Primärschlüssel für die Tabelle definiert ist. Die zweite Spalte hat den Namen **PointValue**und den Datentyp **Point**. Der in diesem Beispiel verwendete Schema Name lautet **dbo**. Beachten Sie, dass Sie über die erforderlichen Berechtigungen verfügen müssen, um einen Schemanamen anzugeben. Wenn Sie den Schemanamen nicht angeben, wird das Standardschema für den Datenbankbenutzer verwendet.  
+ Es gibt keine spezielle Syntax für das Erstellen einer UDT-Spalte in einer Tabelle. Sie können den Namen des UDT in einer Spaltendefinition verwenden, als wäre er einer der systeminternen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen. Die folgende CREATE TABLE- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung erstellt eine Tabelle mit dem Namen " **Points**" mit einer Spalte mit dem Namen " **ID",** die als `int` Identitäts Spalte und \ den Primärschlüssel für die Tabelle definiert ist. Die zweite Spalte hat den Namen **PointValue**und den Datentyp **Point**. Der in diesem Beispiel verwendete Schema Name lautet **dbo**. Beachten Sie, dass Sie über die erforderlichen Berechtigungen verfügen müssen, um einen Schemanamen anzugeben. Wenn Sie den Schemanamen nicht angeben, wird das Standardschema für den Datenbankbenutzer verwendet.  
   
 ```  
 CREATE TABLE dbo.Points   

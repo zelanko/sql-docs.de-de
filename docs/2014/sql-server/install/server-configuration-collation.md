@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d06735590d23da6e91151202dd421639ea433b97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092291"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036592"
 ---
 # <a name="server-configuration---collation"></a>Serverkonfiguration – Sortierung
   Auf der Seite Serverkonfiguration - Sortierung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistenten können Sie die Sortierungseinstellungen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Sortierung ändern. Wählen Sie die entsprechende Option aus, um die Sortierungseinstellungen von verschiedenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationen oder verschiedenen Computern abzugleichen.  
@@ -36,7 +35,7 @@ ms.locfileid: "66092291"
   
  Weitere Informationen finden Sie unter [Sortierungseinstellungen im Setup-Programm](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
-## <a name="best-practices"></a>Empfehlungen  
+## <a name="best-practices"></a>Bewährte Methoden  
  Weitere Informationen zu einer Tabelle von Windows-Systemgebietsschemas und den entsprechenden Standardsortierungen, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup verwendet werden, finden Sie unter [Sortierungseinstellungen im Setup-Programm](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
  Wenn möglich, sollte in Unternehmen eine Sortierung verwendet werden. Auf diese Weise müssen Sie die Sortierung nicht explizit für jede Datenbank, jede Spalte, jeden Ausdruck oder jeden Bezeichner angeben. Wenn Sie mit mehreren Sortierungen und Codepageeinstellungen arbeiten müssen, codieren Sie Ihre Abfragen so, dass diese den Regeln der Sortierungspriorität entsprechen. Weitere Informationen finden Sie in der Onlinedokumentation im Thema [Rangfolge von Sortierungen &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql).  

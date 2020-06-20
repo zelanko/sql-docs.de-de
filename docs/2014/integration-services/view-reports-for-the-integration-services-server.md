@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1cfce32afdb334ecba55f082dce80af580a73178
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d80ae1f3f6f29f7ee4dc015c26aa1cf3cc1e891
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054550"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972520"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Anzeigen von Berichten für den Integration Services-Server
   In der aktuellen Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]sind Standardberichte in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verfügbar, die zum Überwachen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekten hilfreich sind, die auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitgestellt wurden.  Weitere Informationen zu den Berichten finden Sie unter [Berichte für den Integration Services-Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  

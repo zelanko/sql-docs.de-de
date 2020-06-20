@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b5d59bf8398d43304f4888f3a3ad3a93b98b70ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1db667d8f7b81506ec6d68a4ebbbabd01f22ed1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037375"
 ---
 # <a name="generalflags-property-sinstance-class"></a>GeneralFlags-Eigenschaft (SInstance-Klasse)
-  Ruft die allgemeinen Flags ab, die einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zugeordnet sind.  
+  Ruft die allgemeinen Flags ab, die einer Instanz von zugeordnet sind [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>Syntax  
   

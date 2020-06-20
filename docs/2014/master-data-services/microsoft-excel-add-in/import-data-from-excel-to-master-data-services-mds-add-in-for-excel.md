@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ffb122b96182b1079c95adf13d26c9a4949f6ddf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e330e0841f32cbe44b33b7fe72e46eab15c3c1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478803"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961080"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Veröffentlichen von Daten von Excel nach MDS (MDS-Add-In für Excel)
   Veröffentlichen Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]Daten an das MDS-Repository, wenn Sie mit der Arbeit in Excel fertig sind und die Änderungen speichern möchten, damit andere Benutzer Zugriff auf sie haben.  

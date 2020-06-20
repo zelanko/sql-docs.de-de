@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aacaaf8fc69f4b18154e5a4df9a3662fb9ae0650
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096609"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037160"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Änderungen am Speicherformat für die Typen 'xs:dateTime', 'xs:date' und 'xs:time'
   Die XMLDATETIME-Regel gibt an, ob Ihre Datenbanken typisierte XML-Daten enthalten, die nach dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ungültig werden.  
