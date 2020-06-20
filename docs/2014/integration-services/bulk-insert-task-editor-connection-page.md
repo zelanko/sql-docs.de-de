@@ -13,38 +13,37 @@ helpviewer_keywords:
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061218"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924641"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Masseneinfügungstask-Editor (Seite Verbindung)
   Mithilfe der Seite **Verbindung** im Dialogfeld **Masseneinfügungstask-Editor** können Sie die Quelle und das Ziel des Masseneinfügevorgangs und das zu verwendende Format angeben.  
   
  Informationen zum Arbeiten mit Masseneinfügungen finden Sie unter [Masseneinfügungstask](control-flow/bulk-insert-task.md) und [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Connection**  
- Wählen Sie einen OLE DB Verbindungs-Manager aus der Liste aus \<, oder klicken Sie auf **neue Verbindung...**>, um eine neue Verbindung zu erstellen.  
+ Wählen Sie einen OLE DB Verbindungs-Manager aus der Liste aus, oder klicken Sie \<**New connection...**> auf, um eine neue Verbindung zu erstellen.  
   
  **Verwandte Themen:** [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md), [OLE DB-Verbindungs-Manager konfigurieren](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **DestinationTable**  
  Geben Sie den Namen der Zieltabelle oder Zielsicht ein, oder wählen Sie aus der Liste eine Tabelle oder Sicht aus.  
   
- **Ges**  
+ **Format**  
  Wählen Sie die Quelle des Formats für die Masseneinfügung aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Beschreibung|  
+|Value|Beschreibung|  
 |-----------|-----------------|  
 |**Use File**|Wählen Sie eine Datei mit Formatspezifikationen aus. Nach Auswahl dieser Option wird die dynamische Option **FormatFile**angezeigt.|  
-|**Specify**|Geben Sie das Format an. Wenn Sie diese Option auswählen, werden `RowDelimiter` die dynamischen `ColumnDelimiter`Optionen und angezeigt.|  
+|**Specify**|Geben Sie das Format an. Wenn Sie diese Option auswählen, werden die dynamischen Optionen `RowDelimiter` und angezeigt `ColumnDelimiter` .|  
   
  **File**  
- Wählen Sie eine Datei oder einen Flatfile-Verbindungs-Manager aus der \<Liste aus, oder klicken Sie auf **neue Verbindung...**>, um eine neue Verbindung zu erstellen.  
+ Wählen Sie eine Datei oder einen Flatfile-Verbindungs-Manager aus der Liste aus, oder klicken Sie \<**New connection...**> auf, um eine neue Verbindung zu erstellen  
   
  Der Speicherort ist relativ zur SQL Server-Datenbank-Engine, die im Verbindungs-Manager für diesen Task angegeben wurde. Die SQL Server-Datenbank-Engine muss auf die Textdatei zugreifen können, und zwar entweder auf einer lokalen Festplatte des Servers oder über eine Freigabe oder einem SQL Server zugeordneten Laufwerk. Auf die Datei wird nicht von der SSIS-Laufzeit zugegriffen.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "66061218"
 ## <a name="format-dynamic-options"></a>Format (dynamische Optionen)  
   
 ### <a name="format--use-file"></a>Format = Use File  
- **FormatFile**  
+ **Format file**  
  Geben Sie den Pfad der Format Datei **ein, oder** klicken Sie auf die Schaltfläche mit den drei Punkten, um die Format Datei zu suchen.  
   
 ### <a name="format--specify"></a>Format = Specify  
@@ -74,6 +73,6 @@ ms.locfileid: "66061218"
  [Massen Einfügungs Task-Editor &#40;Options Seite&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
  [Ausdrucks Seite](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [Ablaufsteuerung](control-flow/control-flow.md)  
+ [Ablauf Steuerung](control-flow/control-flow.md)  
   
   

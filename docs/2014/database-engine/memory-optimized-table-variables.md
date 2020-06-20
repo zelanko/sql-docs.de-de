@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f78615e20ac194f6d11d4aa2f31610ff6bb963
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774414"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930842"
 ---
 # <a name="memory-optimized-table-variables"></a>Speicheroptimierte Tabellenvariablen
   Zusätzlich zu speicheroptimierten Tabellen (für den effizienten Datenzugriff) und nativ kompilierten gespeicherten Prozeduren (für effiziente Abfrageverarbeitung und Ausführung von Geschäftslogik) wird mit [!INCLUDE[hek_2](../includes/hek-2-md.md)] eine dritte Objektart eingeführt: speicheroptimierte Tabellentypen. Eine Tabellenvariable, die mithilfe eines speicheroptimierten Tabellentyps erstellt wird, ist eine speicheroptimierte Tabellenvariable.  

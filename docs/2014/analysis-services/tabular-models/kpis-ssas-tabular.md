@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdfbc4825908f409392f7dcca67749cbe08a407c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067003"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938833"
 ---
 # <a name="kpis-ssas-tabular"></a>KPIs (SSAS – tabellarisch)
   Ein *KPI* (Key Performance Indicator) wird in einem Tabellenmodell verwendet, um die Leistung eines durch ein *Basismeasure* definierten Werts im Vergleich zu einem *Zielwert* zu messen, der ebenfalls durch ein Measure oder einen absoluten Wert definiert wird. Dieses Thema bietet Entwicklern von tabellarischen Modellen einen grundlegenden Überblick der in einem Tabellenmodell verwendeten KPIs.  
@@ -30,7 +29,7 @@ ms.locfileid: "66067003"
   
 -   [Verwandte Aufgaben](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Davon  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Vorteile  
  Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Messung der Umsetzung von Geschäftszielen darstellt. KPIs werden im Lauf der Zeit häufig ausgewertet. Die Vertriebsabteilung eines Unternehmens könnte KPIs beispielsweise verwenden, um den monatlichen Bruttogewinn mit dem vorausgesagten Bruttogewinn zu vergleichen. Die Buchhaltung könnte die monatlichen Ausgaben und Einnahmen gegenüberstellen, um eine Kostenauswertung vorzunehmen, und die Personalabteilung könnte den Quartalsumsatz pro Mitarbeiter ermitteln. Beides sind Beispiele für KPIs. Um eine schnelle und genaue Verlaufsübersicht ihrer Geschäftserfolge zu erhalten und Trends zu erkennen, greifen Fachanwender oft auf KPIs zurück, die in geschäftlichen Kennzahlensystemen gruppiert werden.  
   
  Ein KPI in einem Tabellenmodell enthält:  
@@ -44,7 +43,7 @@ ms.locfileid: "66067003"
  **Statusschwellenwerte**  
  Ein Statusschwellenwert wird durch den Bereich zwischen einem niedrigen und hohen Schwellenwert oder durch einen festen Wert definiert. Der Statusschwellenwert wird anhand einer Grafik dargestellt, damit Benutzer problemlos den Status des Basiswerts im Vergleich zum Zielwert ermitteln können.  
   
-##  <a name="example"></a><a name="bkmk_example"></a>Beispiel  
+##  <a name="example"></a><a name="bkmk_example"></a> Beispiel  
  Der Vertriebsleiter von Adventure Works möchte eine PivotTable erstellen, in der schnell angezeigt wird, ob Vertriebsmitarbeiter ihre Umsatzvorgaben in einem bestimmten Zeitraum (Jahr) erfüllen. Für jeden Vertriebsmitarbeiter möchte Sie, dass die Pivottabelle den tatsächlichen Umsatz in Dollar, den Umsatz Kontingent Betrag in Dollar und eine einfache Grafik Anzeige anzeigt, in der der Status der einzelnen Vertriebsmitarbeiter unter, at oder oberhalb des Vertriebs Kontingents angezeigt wird. Zudem möchte der Vertriebsleiter die Daten nach Jahr unterteilen.  
   
  Zu diesem Zweck trägt der Vertriebsleiter die Hilfe des BI-Lösungs Entwicklers der Organisation ein, um dem tabellarischen AdventureWorks-Modell einen Sales-KPI hinzuzufügen. Anschließend stellt er mithilfe von [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] eine Verbindung mit dem tabellarischen Adventure Works-Modell als Datenquelle her und erstellt eine PivotTable mit den Feldern (Measures und KPI) und Slicern, um zu analysieren, ob die Vertriebsmannschaft ihre Vorgaben erfüllt.  

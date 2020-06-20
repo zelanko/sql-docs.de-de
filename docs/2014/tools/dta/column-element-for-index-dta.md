@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23e6a3225dc8ddd3049f59986924c1fbb71c173b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149850"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007706"
 ---
 # <a name="column-element-for-index-dta"></a>Column-Element für Index (DTA)
   Gibt die Spalten an, für die der Index für eine benutzerspezifische Konfiguration erstellt wird.  
@@ -45,11 +44,11 @@ ms.locfileid: "63149850"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|Keine|  
-|**Standardwert**|Keine|  
-|**Vorkommt**|Angabe von bis zu 1024 Spalten für das `Index`-Element möglich.|  
+|**Datentyp und -länge**|Keine.|  
+|**Standardwert**|Keine.|  
+|**Vorkommen**|Angabe von bis zu 1024 Spalten für das `Index`-Element möglich.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

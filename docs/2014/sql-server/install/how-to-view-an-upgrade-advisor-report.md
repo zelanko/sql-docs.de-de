@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cbe8746faeba10fa023aa51e7d91a6fb074776e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094796"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042442"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>Gewusst wie: Anzeigen eines Berichts des Upgrade Advisors
   Der Upgrade Advisor erstellt Berichte für alle Komponenten, die Sie zur Analyse auswählen. In diesem Thema wird beschrieben, wie Sie einen Bericht des Upgrade Advisors über die Startseite des Upgrade Advisors anzeigen.  
@@ -31,7 +30,7 @@ ms.locfileid: "66094796"
   
 ### <a name="to-view-a-report"></a>So zeigen Sie einen Bericht an  
   
-1.  Klicken Sie im **Startmenü**auf **Alle Programme**, klicken Sie auf **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, und klicken Sie dann auf ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
+1.  Klicken Sie im **Startmenü**auf **Alle Programme**, klicken Sie auf **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** , und klicken Sie dann auf ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   
 2.  Klicken Sie auf der Startseite des Upgrade Advisors auf **Berichts-Viewer des Upgrade Advisors starten**.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66094796"
   
     -   **Wichtigkeit**gibt an, wie wichtig es ist, das Problem zu beheben.  
   
-    -   Wenn Sie den Fehler **beheben möchten**, gibt dies an, ob Sie das Problem vor oder nach dem Upgrade auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vor oder nach der Migration der Anwendung oder der Daten oder jederzeit beheben sollten.  
+    -   Wenn Sie den Fehler **beheben möchten**, gibt dies an, ob Sie das Problem vor oder nach dem Upgrade auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , vor oder nach der Migration der Anwendung oder der Daten oder jederzeit beheben sollten.  
   
     -   Eine kurze Beschreibung des Problems.  
   

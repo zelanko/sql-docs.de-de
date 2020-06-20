@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc6d8745d10ffac0d708da9a14ee838449f78fae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831477"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918526"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   Mit dem Task „Nachrichtenwarteschlange“ können Sie Message Queuing (auch als MSMQ bezeichnet) verwenden, um Nachrichten zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen zu senden und zu empfangen oder um Nachrichten an eine Anwendungswarteschlange zu senden, die von einer benutzerdefinierten Anwendung verarbeitet wird. Bei diesen Nachrichten kann es sich um einfachen Text, Dateien oder Variablen und deren Werte handeln.  
@@ -103,6 +102,6 @@ ms.locfileid: "62831477"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Aufgaben Integration Services](integration-services-tasks.md)   
- [Ablaufsteuerung](control-flow.md)  
+ [Ablauf Steuerung](control-flow.md)  
   
   

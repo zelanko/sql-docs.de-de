@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c04b5cc4dd75d2f9f8305b7af00e389317a92537
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952669"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045778"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Erweiterte Konfiguration mehrerer Websites (einheitlicher SSRS-Modus)
   In diesem Dialogfeld können Sie die URLs erstellen und verwalten, mit denen Sie einen Berichtsserver oder den Berichts-Manager aufrufen. Im Dialogfeld **Erweiterte Konfiguration mehrerer Websites** können Sie weitere URLs erstellen, benutzerdefinierte URLs, die einen Hostheadernamen enthalten oder in denen eine IP-Adresse im Format IPv4 oder IPv6 angegeben ist.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus.  
+ [!INCLUDE[applies](../../includes/applies-md.md)]Einheitlicher [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modus.  
   
  Die Erstellung mehrerer URLs ist nützlich, wenn Sie verschiedene Möglichkeiten konfigurieren möchten, um auf einen Berichtsserver zugreifen zu können. Beispielsweise erfordert der Zugriff auf einen Berichtsserver über eine Intranet- und Extranet-Verbindung normalerweise für jede Art der Verbindung andere URLs.  
   
@@ -40,12 +39,12 @@ ms.locfileid: "71952669"
   
 -   Mit**127.0.0.1** wird auf localhost zugegriffen. Sie unterstützt die lokale Verwaltung auf dem Berichtsservercomputer. Wenn Sie nur diesen Wert auswählen, können nur Benutzer, die lokal auf dem Berichtsservercomputer angemeldet sind, auf die Anwendung zugreifen.  
   
--   *Nnn.nnn.nnn.nnn* ist die IPv4-Adresse einer Netzwerkkarte auf Ihrem Computer. Wenn Ihr Netzwerk IPv6-Adressierung verwendet, ist die IP-Adresse ein 128-Bit-Wert von 8 4-Byte-Feldern ähnlich dem \<folgenden Format: Header>:*nnnn: nnnn: nnnn: nnnn*.  
+-   *Nnn.nnn.nnn.nnn* ist die IPv4-Adresse einer Netzwerkkarte auf Ihrem Computer. Wenn Ihr Netzwerk IPv6-Adressierung verwendet, ist die IP-Adresse ein 128-Bit-Wert von 8 4-Byte-Feldern ähnlich dem folgenden Format: \<header> :*nnnn: nnnn: nnnn: nnnn*.  
   
      Wenn Sie mehrere Karten haben, wird für jede Karte eine IP-Adresse angezeigt. Wenn Sie nur diesen Wert auswählen, wird der Anwendungszugriff auf genau diese IP-Adresse (und jeden Hostname, den ein Domänennamenserver dieser Adresse zuordnet) beschränkt. Sie können mit localhost nicht auf einen Berichtsserver zugreifen, und Sie können nicht die IP-Adressen der anderen Netzwerkkarten verwenden, die auf dem Berichtsservercomputer installiert sind.  
   
  **Port**  
- Gibt den Port an, den dieser Berichtsserver auf Anforderungen prüft. Port 80 ist der Standardport. Wenn Sie Port 80 verwenden, ist es ist nicht notwendig, diesen in die URL zu übernehmen. Wenn Sie eine andere Portnummer verwenden, müssen Sie Sie immer in die URL einschließen (z http://localhost:8181/reports). b.).  
+ Gibt den Port an, den dieser Berichtsserver auf Anforderungen prüft. Port 80 ist der Standardport. Wenn Sie Port 80 verwenden, ist es ist nicht notwendig, diesen in die URL zu übernehmen. Wenn Sie eine andere Portnummer verwenden, müssen Sie Sie immer in die URL einschließen (z. b http://localhost:8181/reports) .).  
   
  **Hostheader**  
  Wenn Sie bereits einen Hostheader in einem Domänennamenserver definiert haben, der auf Ihrem Computer aufgelöst wird, können Sie diesen Hostheader in einer URL angeben, die Sie für den Zugriff auf den Berichtsserver konfigurieren.  
@@ -65,13 +64,13 @@ ms.locfileid: "71952669"
  **Ausgestellt für**  
  Zeigt den Namen des Computers an, für den das Zertifikat erstellt wurde.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Definieren Sie eine zusätzliche URL.  
   
  **Bearbeiten**  
  Ändern Sie beliebige Teile der URL-Syntax.  
   
- **Remove**  
+ **Entfernen**  
  Entfernen Sie eine URL aus der Liste.  
   
 ## <a name="see-also"></a>Weitere Informationen  

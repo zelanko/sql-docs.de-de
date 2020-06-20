@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff7f60ce2ed883c47ef608c0964703bd1b98518d
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: b997d5144b113102ba0ed2d9d1df59b6707acbee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859272"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024545"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>Task 'Auftrag des SQL Server-Agents ausführen' (Wartungsplan)
   Verwenden Sie das Dialogfeld **Task 'Auftrag des SQL Server-Agents ausführen'** , um Aufträge des Microsoft SQL Server-Agents innerhalb eines Wartungsplans auszuführen. Diese Option ist nicht verfügbar, wenn für die ausgewählte Verbindung keine Aufträge des SQL Server-Agents vorliegen.  

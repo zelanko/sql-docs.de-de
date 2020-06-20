@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95782afe0de8567781316e3478d04a090f968ed5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63017188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007554"
 ---
 # <a name="osql-utility"></a>osql (Hilfsprogramm)
   Das Hilfsprogramm **osql** ermöglicht es Ihnen, [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, Systemprozeduren und Skriptdateien einzugeben. Dieses Hilfsprogramm verwendet ODBC, um Daten mit dem Server auszutauschen.  
@@ -93,8 +92,8 @@ C:\>osql
  **-E**  
  Verwendet eine vertrauenswürdige Verbindung, statt ein Kennwort anzufordern.  
   
- **-S** _server_name_[ **\\**_instance_name_]  
- Gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt wird. Geben Sie *server_name* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Server herzustellen. Geben Sie _server_name_**\\**_instance_name_ an, um eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einer benannten Instanz von auf diesem Server herzustellen. Falls kein Server angegeben ist, stellt **osql** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **osql** von einem Remotecomputer im Netzwerk ausgeführt wird.  
+ **-S** _server_name_[ **\\** _instance_name_]  
+ Gibt die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz an, mit der eine Verbindung hergestellt wird. Geben Sie *server_name* an, um eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Server herzustellen. Geben Sie _server_name_ **\\** _instance_name_ an, um eine Verbindung mit einer benannten Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf diesem Server herzustellen. Falls kein Server angegeben ist, stellt **osql** eine Verbindung mit der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf dem lokalen Computer her. Diese Option ist erforderlich, wenn **osql** von einem Remotecomputer im Netzwerk ausgeführt wird.  
   
  **-H** _wksta_name_  
  Der Name einer Arbeitsstation. Dieser Name ist in **sysprocesses.hostname** gespeichert und wird mithilfe von **sp_who**angezeigt. Wenn diese Option nicht angegeben ist, wird der Name des aktuellen Computers angenommen.  
@@ -112,7 +111,7 @@ C:\>osql
  Gibt die Anzahl der Zeilen an, die zwischen den Spaltenüberschriften gedruckt werden. Standardmäßig werden die Überschriften für jedes Resultset der Abfrage einmal gedruckt. Mit -1 können Sie angeben, dass keine Überschriften gedruckt werden sollen. Falls -1 verwendet wird, darf zwischen dem Parameter und der Einstellung kein Leerzeichen stehen ( **-h-1**und nicht **-h -1**).  
   
  **-s** _col_separator_  
- Gibt das Spaltentrennzeichen an. Standardmäßig wird ein Leerzeichen verwendet. Um Zeichen zu verwenden, die für das Betriebssystem eine besondere Bedeutung haben (z. b \< . |; & >), müssen Sie das Zeichen in doppelte Anführungszeichen (") einschließen.  
+ Gibt das Spaltentrennzeichen an. Standardmäßig wird ein Leerzeichen verwendet. Um Zeichen zu verwenden, die für das Betriebssystem eine besondere Bedeutung haben (z. b. |; & \< > ), müssen Sie das Zeichen in doppelte Anführungszeichen (") einschließen.  
   
  **-w** _column_width_  
  Ermöglicht dem Benutzer, die Bildschirmbreite für die Ausgabe festzulegen. Die Standardeinstellung ist 80 Zeichen. Wenn eine Ausgabezeile die maximale Bildschirmbreite erreicht hat, wird die Zeile umbrochen.  
@@ -194,7 +193,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>Bemerkungen  
  Das Hilfsprogramm **osql** wird direkt vom Betriebssystem aus mit den hier aufgelisteten Optionen gestartet, wobei bei den Optionen zwischen Groß- und Kleinschreibung unterschieden wird. Nachdem **osql**gestartet wurde, akzeptiert das Hilfsprogramm SQL-Anweisungen und sendet diese interaktiv an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Die Ergebnisse werden formatiert und auf dem Bildschirm angezeigt (**stdout**). Verwenden Sie QUIT oder EXIT zum Beenden von **osql**.  
   
- Wenn Sie beim Starten von **osql**keinen Benutzernamen angeben, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] überprüft die Umgebungsvariablen und verwendet diese, z.b. **OSQLUSER = (*`user`*)** oder **osqlserver = (*`server`*)**. Wenn keine Umgebungsvariablen festgelegt sind, wird der Benutzername der Arbeitsstation verwendet. Wenn Sie keinen Server angeben, wird der Name der Arbeitsstation verwendet.  
+ Wenn Sie beim Starten von **osql**keinen Benutzernamen angeben, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] überprüft die Umgebungsvariablen und verwendet diese, z.b. **OSQLUSER = ( *`user`* )** oder **osqlserver = ( *`server`* )**. Wenn keine Umgebungsvariablen festgelegt sind, wird der Benutzername der Arbeitsstation verwendet. Wenn Sie keinen Server angeben, wird der Name der Arbeitsstation verwendet.  
   
  Falls weder die Option **-U** noch die Option **-P** verwendet wird, versucht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die Verbindung mithilfe des [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Authentifizierungsmodus herzustellen. Die Authentifizierung basiert auf dem [!INCLUDE[msCoName](../includes/msconame-md.md)] -Windows-Konto des Benutzers, der **osql**ausführt.  
   
@@ -294,7 +293,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Führt den Batch aus, beendet dann das Hilfsprogramm und gibt keinen Wert zurück.  
   
--   Exit **(*`query`*)**  
+-   Exit **( *`query`* )**  
   
 > [!NOTE]  
 >  Führt den Batch einschließlich der Abfrage aus und beendet dann das Hilfsprogramm, nachdem die Ergebnisse der Abfrage zurückgegeben wurden.  
@@ -325,7 +324,7 @@ RAISERROR(50001, 10, 127)
      Beim Auswählen des Rückgabewerts ist ein Konvertierungsfehler aufgetreten.  
   
 ## <a name="displaying-money-and-smallmoney-data-types"></a>Anzeigen der Datentypen money und smallmoney  
- **osql** zeigt den `money` - `smallmoney` Datentyp und den-Datentyp [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit zwei Dezimalstellen an, obwohl den Wert intern mit vier Dezimalstellen speichert. Beachten Sie folgendes Beispiel:  
+ **osql** zeigt den `money` - `smallmoney` Datentyp und den-Datentyp mit zwei Dezimalstellen an, obwohl [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] den Wert intern mit vier Dezimalstellen speichert. Beachten Sie folgendes Beispiel:  
   
 ```  
 SELECT CAST(CAST(10.3496 AS money) AS decimal(6, 4))  

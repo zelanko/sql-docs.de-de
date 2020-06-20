@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1c3caf606e8cbf551d7b865b30996ae0f16450a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b2e02de3cb4a4c7be9615b328b8ec0703cab690
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480710"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937781"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services-Funktionen und -Tasks
   Informationen, die Data Stewards, Data Quality Services-Administratoren oder SQL Server-Administratoren zum Vorbereiten und Ausführen eines Data Quality-Projekts benötigen.  
@@ -27,7 +26,7 @@ ms.locfileid: "65480710"
   
  [Data Quality-Projekte &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)  
   
- [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)  
+ [Datenbereinigung](../../2014/data-quality-services/data-cleansing.md)  
   
  [Datenabgleich](../../2014/data-quality-services/data-matching.md)  
   

@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d46820f3542e562f43fc4ae4c4d4ee1f91fcdf3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175962"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956460"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung
   In diesem Thema werden bewährte Methoden und Tipps zur Problembehandlung beschrieben, die sich auf SQL Server-Sicherungs- und Wiederherstellungsvorgänge im Azure Blob-Dienst beziehen.  
   
  Weitere Informationen zur Verwendung des Azure Blob Storage-Diensts für SQL Server-Sicherungs- oder -Wiederherstellungsvorgänge finden Sie unter:  
   
--   [SQL Server-Sicherung und -Wiederherstellung mit dem Azure Blob Storage-Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+-   [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 -   [Tutorial: SQL Server-Sicherung und -Wiederherstellung mit dem Azure Blob Storage-Dienst](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
@@ -77,7 +76,7 @@ ms.locfileid: "70175962"
   
     -   Legen Sie das Ablaufverfolgungsflag 3051 wie folgt fest, um die Protokollierung in einem bestimmten Fehlerprotokoll zu aktivieren:  
   
-         BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log. Dabei entspricht \<action> einem der folgenden Schlüsselwörter:  
+         Backuptourl- \<instname> - \<dbname> -Action- \<PID> . log, wobei \<action> einer der folgenden ist:  
   
         -   `DB`  
   
@@ -94,11 +93,11 @@ ms.locfileid: "70175962"
 -   Bei der Wiederherstellung von einer komprimierten Sicherung kann eine Fehlermeldung mit etwa folgendem Wortlaut angezeigt werden:  
   
     -   **SqlException 3284 ist aufgetreten. Schweregrad: 16 Status: 5**  
-        **Die Nachrichten dateinmarkierung aufhttps://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bakdem Gerät "" ist nicht ausgerichtet. Wiederholen Sie die RESTORE-Anweisung mit derselben Blockgröße, die zum Erstellen des Sicherungs Aufruhrs verwendet wurde: "65536" sieht wie ein möglicher Wert aus.**  
+        **Die Nachrichten dateinmarkierung auf dem Gerät "" https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ist nicht ausgerichtet. Wiederholen Sie die RESTORE-Anweisung mit derselben Blockgröße, die zum Erstellen des Sicherungs Aufruhrs verwendet wurde: "65536" sieht wie ein möglicher Wert aus.**  
   
          Um diesen Fehler zu beheben, übergeben Sie die `BACKUP`-Anweisung erneut mit `BLOCKSIZE = 65536`.  
   
--   Sicherungsfehler aufgrund von BLOBs, die über eine aktive Leasedauer verfügen: Fehlerhafte Sicherungsaktivitäten können dazu führen, dass BLOBs eine aktive Leasedauer aufweisen.  
+-   Fehler während der Sicherung aufgrund von Blobs mit aktiver Lease: Eine fehlerhafte Sicherungsaktivität kann zu Blobs mit aktiven Leases führen.  
   
      Wenn die BACKUP-Anweisung erneut ausgeführt wird, kann ein Sicherungsvorgang einen Fehler mit etwa folgendem Wortlaut verursachen:  
   
@@ -117,7 +116,7 @@ ms.locfileid: "70175962"
   
  Proxyserver können über Einstellungen verfügen, die die Anzahl der Verbindungen pro Minute begrenzen. Der URL-Sicherungsprozess ist ein Multithreadprozess und kann diese Begrenzung folglich überschreiten. In diesem Fall wird die Verbindung vom Proxyserver abgebrochen. Um das Problem zu beheben, ändern Sie die Proxyeinstellungen, damit der Proxy von SQL Server nicht verwendet wird.   Im Folgenden einige Beispiele für Fehlertypen oder -meldungen, die im Fehlerprotokoll angezeigt werden können:  
   
--   Fehler beim Schreibenhttp://storageaccount.blob.core.windows.net/container/BackupAzurefile.bakin "": bei der URL-Sicherung wurde eine Ausnahme vom Remote Endpunkt empfangen. Ausnahmemeldung: Von der Übertragungsverbindung können keine Daten gelesen werden: Die Verbindung wurde geschlossen.  
+-   Fehler beim Schreiben in " http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak ": bei der URL-Sicherung wurde eine Ausnahme vom Remote Endpunkt empfangen. Ausnahmemeldung: Von der Übertragungsverbindung können keine Daten gelesen werden: Die Verbindung wurde geschlossen.  
   
 -   Nicht behebbarer E/A-Fehler für die Datei http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: Error could not be gathered from Remote Endpoint. (Fehler konnte am Endpunkt nicht erfasst werden.)  
   
@@ -125,7 +124,7 @@ ms.locfileid: "70175962"
   
      BACKUP DATABASE wird fehlerbedingt beendet.  
   
--   Backupiorequest:: reportioerror: Schreibfehler auf dem Sicherungsmediumhttp://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"". Betriebssystemfehler: Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Von der Übertragungsverbindung können keine Daten gelesen werden: Die Verbindung wurde geschlossen.  
+-   Backupiorequest:: reportioerror: Schreibfehler auf dem Sicherungsmedium " http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak ". Betriebssystemfehler: Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Von der Übertragungsverbindung können keine Daten gelesen werden: Die Verbindung wurde geschlossen.  
   
  Wenn Sie die ausführliche Protokollierung mit Ablaufverfolgungsflag 3051 aktivieren, können auch folgende Meldungen in den Protokollen angezeigt werden:  
   
@@ -133,7 +132,7 @@ ms.locfileid: "70175962"
   
  **Standardproxyeinstellungen wurden nicht abgerufen:**  
   
- In manchen Fällen werden die Standardeinstellungen nicht abgerufen, wodurch Proxy Authentifizierungsfehler wie die unten gezeigte verursacht werden:*ein nicht BEHEB barer e/a-Fehlerhttp://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:für die Datei "" bei der URL-Sicherung wurde eine Ausnahme vom Remote Endpunkt empfangen. Ausnahme Meldung: der Remote Server hat einen Fehler zurückgegeben: (407)* **Proxy Authentifizierung erforderlich**.  
+ In manchen Fällen werden die Standardeinstellungen nicht abgerufen, wodurch Proxy Authentifizierungsfehler wie die unten gezeigte verursacht werden:*ein nicht BEHEB barer e/a-Fehler für die Datei " http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: " bei der URL-Sicherung wurde eine Ausnahme vom Remote Endpunkt empfangen. Ausnahme Meldung: der Remote Server hat einen Fehler zurückgegeben: (407)* **Proxy Authentifizierung erforderlich**.  
   
  Um dieses Problem zu beheben, erstellen Sie mithilfe folgender Schritte eine Konfigurationsdatei, durch die beim URL-Sicherungsprozess die Standardproxyeinstellungen verwendet werden können:  
   
@@ -151,9 +150,9 @@ ms.locfileid: "70175962"
   
     ```  
   
-2.  Speichern Sie die Konfigurationsdatei im Ordner Binn der SQL Server-Instanz. Wenn z. b. meine SQL Server auf dem Laufwerk C des Computers installiert ist, platzieren Sie die Konfigurationsdatei hier: *c:\Programme\Microsoft SQL server\mssql12.\< InstanceName> \MSSQL\Binn*.  
+2.  Speichern Sie die Konfigurationsdatei im Ordner Binn der SQL Server-Instanz. Wenn z. b. meine SQL Server auf dem Laufwerk C des Computers installiert ist, platzieren Sie die Konfigurationsdatei hier: *c:\Programme\Microsoft SQL server\mssql12. \<InstanceName> \MSSQL\Binn*.  
   
-## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>Problembehandlung SQL Server verwalteten Sicherung in Azure  
+## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>Problembehandlung für die verwaltete SQL Server-Sicherung in Azure  
  Da SQL Server Managed Backup auf der URL-Sicherung aufbaut, gelten die in den vorherigen Abschnitten aufgeführten Tipps zur Fehlerbehebung für Datenbanken oder Instanzen, für die SQL Server Managed Backup verwendet wird.  Informationen zur Problembehandlung SQL Server verwalteten Sicherung in Azure finden Sie unter [Problembehandlung SQL Server verwaltete Sicherung in Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

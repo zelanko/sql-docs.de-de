@@ -13,13 +13,12 @@ dev_langs:
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 761c84612c207397e33ae96dfcfb088b05bc24b8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5a713b3c3f98d2510fa63ddd6a58e2f48f3b3495
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000665"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929701"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>Optionen (Text-Editor-Transact-SQL-Registerkarten Seite)
   Verwenden Sie dieses Dialogfeld, um das Tabulatorverhalten des [!INCLUDE[ssDE](../includes/ssde-md.md)]-Abfrage-Editors zu ändern, der zur Programmierung von [!INCLUDE[tsql](../includes/tsql-md.md)]-Skripts verwendet wird. Zum Anzeigen dieser Einstellungen klicken Sie im Menü **Extras** auf **Optionen**, erweitern nacheinander den Ordner **Text-Editor** und den Unterordner **Transact-SQL** und klicken dann auf **Tabstopps**.  

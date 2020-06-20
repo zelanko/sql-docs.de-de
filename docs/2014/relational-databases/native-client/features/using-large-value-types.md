@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4782a640d38c4f7a282f37fecb4765ce7677f93e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8a2e93ee36eb4bfadf18c5b78f552380d1c94266
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707211"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043552"
 ---
 # <a name="using-large-value-types"></a>Verwenden von Datentypen mit umfangreichen Werten
   Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] war für Datentypen mit umfangreichen Werten eine besondere Behandlung erforderlich. Datentypen mit hohen Werten überschreiten eine maximale Zeilengröße von 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]in wurde ein **Max** -Spezifizierer für die Datentypen **varchar**, **nvarchar** und **varbinary** eingeführt, um das Speichern von Werten bis zu 2 ^ 31-1 Bytes zuzulassen. Tabellen Spalten und- [!INCLUDE[tsql](../../../includes/tsql-md.md)] Variablen können die Datentypen " **varchar (max)**", " **nvarchar (max)** " oder " **varbinary (max)** " angeben.  

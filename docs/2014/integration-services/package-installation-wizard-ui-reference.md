@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b51049f0a55a10ae83af9e0f253c1c717f6d4962
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056827"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964860"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Referenz zur Benutzeroberfläche des Paketinstallations-Assistenten
   Mit dem **Paketinstallations-Assistenten** können Sie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt einschließlich der enthaltenen Pakete, verschiedenen Dateien und Paketabhängigkeiten bereitstellen.  
@@ -52,7 +51,7 @@ ms.locfileid: "66056827"
 ## <a name="configure-packages-page"></a>Seite "Pakete konfigurieren"  
  Mithilfe der Seite **Pakete konfigurieren** können Sie Paketkonfigurationen bearbeiten.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Konfigurationsdatei**  
  Bearbeiten Sie die Inhalte einer Konfigurationsdatei, indem Sie die Datei aus der Liste auswählen.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66056827"
 ## <a name="deploy-ssis-packages-page"></a>Seit "SSIS-Paket bereitstellen"  
  Mithilfe der Seite **SSIS-Pakete bereitstellen** können Sie angeben, an welcher Stelle [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete und ihre Abhängigkeiten installiert werden sollen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Bereitstellung im Dateisystem**  
  Stellen Sie Pakete und Abhängigkeiten in einem bestimmten Ordner im Dateisystem bereit.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "66056827"
 ## <a name="select-installation-folder-page"></a>Seite "Installationsordner auswählen"  
  Mithilfe der Seite **Installationsordner auswählen** können Sie den Dateisystemordner angeben, in dem die Pakete und deren Abhängigkeiten installiert werden sollen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Ordner**  
  Geben Sie den Pfad und den Ordner an, in den das Paket und seine Abhängigkeiten kopiert werden sollen.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "66056827"
 ## <a name="specify-target-sql-server-page"></a>Seite "Zielserver mit SQL Server angeben"  
  Auf der Seite **Zielserver mit SQL Server angeben** können Sie Optionen zur Bereitstellung des Pakets für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz angeben.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Servername**  
  Geben Sie den Namen des Servers an, auf dem die Pakete bereitgestellt werden sollen.  
   

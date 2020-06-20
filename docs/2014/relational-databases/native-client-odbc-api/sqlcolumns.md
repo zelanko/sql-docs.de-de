@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 92f7fbce5917826915186e9782f0f91d51ae8875
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8fe0a281be62f74a630bcb5be2e0fc3ce935b2d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022755"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns`gibt SQL_SUCCESS zurück, ob Werte für die Parameter *CatalogName*, *TableName*oder *ColumnName* vorhanden sind. **SQLFetch** gibt SQL_NO_DATA zurück, wenn in diesen Parametern ungültige Werte verwendet werden.  

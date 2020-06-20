@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: beee2fa576387eadb75ee5ab1bfefcb66453acc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9703628ff6fb6255bc73151bb9a39cb3ce8e43d7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76928028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931508"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd-Cmdlet
   **Invoke-Sqlcmd** ist ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Cmdlet, das Skripts ausführt, die Anweisungen aus den Sprachen ([!INCLUDE[tsql](../includes/tsql-md.md)] und XQuery) und Befehle enthalten, die vom Hilfsprogramm **sqlcmd** unterstützt werden.  
@@ -103,7 +102,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
   
  Nicht alle **sqlcmd** -Parameter werden in einer PowerShell-Umgebung benötigt. Beispielsweise formatiert Windows PowerShell alle Ausgaben von Cmdlets, sodass die **sqlcmd** -Parameter, die Formatierungsoptionen festlegen, nicht in **Invoke-Sqlcmd**implementiert werden. Die folgende Tabelle zeigt die Beziehung zwischen den **aufrufen-sqlcmd-** Parametern und den **sqlcmd** -Optionen:  
   
-|BESCHREIBUNG|sqlcmd-Option|Invoke-Sqlcmd-Parameter|  
+|Beschreibung|sqlcmd-Option|Invoke-Sqlcmd-Parameter|  
 |-----------------|-------------------|------------------------------|  
 |Server- und Instanzname.|-S|-ServerInstance|  
 |Die zu verwendende ursprüngliche Datenbank.|-d|-Database|  

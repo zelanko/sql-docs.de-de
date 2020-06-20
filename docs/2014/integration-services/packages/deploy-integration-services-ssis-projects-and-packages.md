@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a2212b44af9eb17625ef296deb9d6223deb313e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 807bece28f82759d0a708fa785f23141a0b4407d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890253"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964830"
 ---
 # <a name="deployment-of-projects-and-packages"></a>Bereitstellung von Projekten und Paketen
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt zwei Bereitstellungsmodelle: das Projektbereitstellungsmodell und das Paketbereitstellungsmodell. Mithilfe des Projektbereitstellungsmodells können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen.  
@@ -44,7 +43,7 @@ ms.locfileid: "62890253"
 ## <a name="features-of-project-deployment-model"></a>Funktionen des Projektbereitstellungsmodells  
  In der folgenden Tabelle sind die Funktionen aufgeführt, die für Projekte, die nur für das Projektbereitstellungsmodell entwickelt wurden, verfügbar sind.  
   
-|Funktion|Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |-------------|-----------------|  
 |Parameter|Ein Parameter gibt die Daten an, die von einem Paket verwendet werden. Sie können die Gültigkeit von Parametern Paketparametern und Projektparametern auf die Paketebene bzw. Projektebene beschränken. Parameter können in Ausdrücken oder Tasks verwendet werden. Wenn das Projekt im Katalog bereitgestellt wird, können Sie einen Literalwert für jeden Parameter zuweisen oder den Standardwert verwenden, der zur Entwurfszeit zugewiesen wurde. Statt eines Literalwerts kann auch auf eine Umgebungsvariable verwiesen werden. Umgebungsvariablenwerte werden zur Laufzeit der Paketausführung aufgelöst.|  
 |Umgebungen|Eine Umgebung ist ein Container für Variablen, auf die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekten verwiesen werden kann. Jedes Projekt kann über mehrere Umgebungsverweise verfügen, aber eine einzelne Instanz der Paketausführung kann nur auf Variablen von einer einzelnen Umgebung verweisen. Umgebungen ermöglichen es Ihnen, die Werte zu organisieren, die Sie einem Paket zuweisen. Sie könnten z. B. Umgebungen mit den Namen "Entwicklung", "Test" und "Produktion" definieren.|  

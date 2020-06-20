@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e05d920b21a2e99f5daed06f00183ce8bed85754
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667418"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060814"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Hinzufügen und Entfernen von Verlegern vom Replikationsmonitor aus
   Der Server, von dem aus Sie den Replikationsmonitor starten, wird, sofern es sich um einen Verleger handelt, automatisch dem Replikationsmonitor hinzugefügt. Weitere Verleger können im Dialogfeld **Verleger hinzufügen** hinzugefügt werden. Alle hinzugefügten Verleger werden als Gruppe im linken Bereich des Replikationsmonitors angezeigt. Die Gruppe **Meine Verleger** ist standardmäßig enthalten, Sie können aber zum Verwalten einer oder mehrerer Replikationstopologien auch neue Gruppen erstellen. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](start-the-replication-monitor.md).  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df6ab109451fbe7cf8df1b7c615f68a6cbad02f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771086"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922221"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Benutzerrollen für Change Data Capture Service für Oracle von Attunity
   In diesem Abschnitt werden die Benutzerrollen für den Change Data Capture Service für Oracle von Attunity beschrieben. Die beschriebenen Rollen sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankrollen, Windows-Rollen und Oracle-Datenbankrollen.  
@@ -139,7 +138,7 @@ ms.locfileid: "62771086"
   
  In der folgenden Liste sind die erforderlichen Berechtigungen beschrieben, die dem Log Mining-Benutzer gewährt werden sollten:  
   
--   SELECT on \<beliebige-aufgezeichnete-tabelle>  
+-   On auswählen\<any-captured-table>  
   
 -   SELECT ANY TRANSACTION  
   
