@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bcc2ddcb8c8fbf33c51fb82d1b1c2fd8308bd28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481315"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064837"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Aufgabe 1: Definieren einer Abgleichrichtlinie
   In dieser Aufgabe erstellen Sie eine Abgleichsrichtlinie mit einer Regel. Die Regel verfügt über eine Voraussetzung: **Lieferanten-ID**. Dies bedeutet, dass die Lieferanten-IDs erfüllt werden müssen, bevor die anderen Domänen in der Regel verwendet werden. Die Regel verwendet zwei andere Domänen: **Lieferanten Name** mit dem **Ähnlichkeits** Wert **70%** und **Contact Email** mit einem **Ähnlichkeits** Wert von **30%**.  
@@ -26,7 +25,7 @@ ms.locfileid: "65481315"
   
 2.  Wählen Sie **auf der Seite** zuordnen die Option **Excel-Datei** für **Datenquelle**aus.  
   
-3.  Klicken Sie auf **Durchsuchen**, stellen Sie sicher, dass Filter auf **Excel-Arbeitsmappe**festgelegt ist, und wählen Sie die Datei ". xls", die Sie nach der **Bereinigungs** Aktivität exportiert haben.  
+3.  Klicken Sie auf **Durchsuchen**, stellen Sie sicher, dass Filter auf **Excel-Arbeitsmappe**festgelegt ist, und wählen Sie die Option **bereinigter Lieferant List.xls** Datei aus  
   
     > [!NOTE]  
     >  Am Ende dieser Aktivität können Sie die Ergebnisse nicht exportieren, da diese Aktivität hauptsächlich auf die Definition der Abgleichsrichtlinie fokussiert ist. Sie erstellen ein Data Quality-Projekt für die Abgleichsaktivität, und führen es aus, um Duplikate aus der Lieferantenliste zu entfernen, indem Sie diese Abgleichsrichtlinie in der nächsten Lektion verwenden.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a3ea7a4c7d9189ace988ef57f25e99d61a4273dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3cb1a5ea33a5016c99fdf1f5a7f4e892c045b59
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876160"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958146"
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen (Vollständiges Wiederherstellungsmodell)
   Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken mit mehreren Dateien oder Dateigruppen im vollständigen Wiederherstellungsmodell relevant.  
@@ -83,7 +82,7 @@ ms.locfileid: "62876160"
   
 ## <a name="additional-examples"></a>Zusätzliche Beispiele  
   
--   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Beispiel: Schrittweise Wiederherstellung einer Datenbank &#40;Einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen &#40;einfaches Wiederherstellungsmodell&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   

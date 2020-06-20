@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9789ddf12272dd6c33c8cfbbb8677ecc3bb4b191
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 777aeb6dea50a3c49f8e68ee17907295f8d886fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049654"
 ---
 # <a name="set-large-data-ole-db"></a>Festlegen von großen Daten (OLE DB)
   Dieses Beispiel zeigt, wie BLOB-Daten festgelegt werden, eine Tabelle erstellt, ein Beispieldatensatz hinzugefügt, dieser Datensatz im Rowset abgerufen und anschließend der Wert des BLOB-Felds festgelegt wird. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
@@ -29,7 +28,7 @@ ms.locfileid: "82696199"
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
-## <a name="procedures"></a>Verfahren  
+## <a name="procedures"></a>Prozeduren  
   
 #### <a name="to-set-blob-data"></a>So legen Sie BLOB-Daten fest  
   
@@ -47,7 +46,7 @@ ms.locfileid: "82696199"
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
+### <a name="description"></a>BESCHREIBUNG  
  Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das folgende C++-Codelisting aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
 ### <a name="code"></a>Code  

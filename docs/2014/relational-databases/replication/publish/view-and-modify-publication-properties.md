@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5053cc16734cc18c75e163fec4c06b1768e590cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 89b969bc3e285bbdc633a2b39d237968b216069a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68941067"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005232"
 ---
 # <a name="view-and-modify-publication-properties"></a>Anzeigen und Ändern von Veröffentlichungseigenschaften
   In diesem Thema wird beschrieben, wie die Veröffentlichungseigenschaften in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden.  
@@ -55,9 +54,9 @@ ms.locfileid: "68941067"
 -   Nachdem eine Veröffentlichung erstellt wurde, ist für bestimmte Eigenschaftsänderungen eine neue Momentaufnahme erforderlich. Wenn für eine Veröffentlichung Abonnements erstellt wurden, müssen bei bestimmten Änderungen alle Abonnements erneut initialisiert werden. Weitere Informationen finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md) und [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Sie können die Eigenschaften von Veröffentlichungen im Dialogfeld **Veröffentlichungseigenschaften - \<<Veröffentlichung>** anzeigen und ändern. Dieses Dialogfeld ist in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und im Replikationsmonitor verfügbar. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../monitor/start-the-replication-monitor.md).  
+ Anzeigen und Ändern von Veröffentlichungs Eigenschaften im Dialogfeld **Veröffentlichungs \<Publication> Eigenschaften-** . dieses Dialogfeld ist in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und im Replikations Monitor verfügbar. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../monitor/start-the-replication-monitor.md).  
   
- Das Dialogfeld **Veröffentlichungseigenschaften - \<<Veröffentlichung>** enthält folgende Seiten:  
+ Das Dialogfeld **Veröffentlichungs \<Publication> Eigenschaften-** enthält die folgenden Seiten:  
   
 -   Die Seite **Allgemein** enthält den Namen und die Beschreibung der Veröffentlichung, den Datenbanknamen, den Typ der Veröffentlichung und die Einstellungen für den Abonnementablauf.  
   
@@ -170,7 +169,7 @@ ms.locfileid: "68941067"
   
 3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine oder mehrere festlegbaren Eigenschaften fest. Verwenden Sie den logischen and-`&` Operator (in Visual c# und `And` in Visual Basic), um zu <xref:Microsoft.SqlServer.Replication.PublicationAttributes> bestimmen, ob ein bestimmter <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> Wert für die-Eigenschaft festgelegt ist. Verwenden Sie den inklusiven logischen OR-Operator (`|` in Visual C# and `Or` in Visual Basic) und den exklusiven logischen OR-Operator (`^` in Visual C# und `Xor` in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes>-Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft zu ändern.  
+4.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine oder mehrere festlegbaren Eigenschaften fest. Verwenden Sie den logischen AND-Operator ( `&` in Visual c# und `And` in Visual Basic), um zu bestimmen, ob ein bestimmter <xref:Microsoft.SqlServer.Replication.PublicationAttributes> Wert für die-Eigenschaft festgelegt ist <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> . Verwenden Sie den inklusiven logischen OR-Operator (`|` in Visual C# and `Or` in Visual Basic) und den exklusiven logischen OR-Operator (`^` in Visual C# und `Xor` in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes>-Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft zu ändern.  
   
 5.  (Optional) Wenn Sie den Wert `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
   

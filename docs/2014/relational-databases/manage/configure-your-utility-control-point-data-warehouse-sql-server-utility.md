@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2c6f050-8cdb-4b8e-ad38-4aae0a949847
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d2a9f40c2d1566a1f8ca5f054467f61da1920e5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60b9623b468f2763cf619c325412373e3603f3a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62805936"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023641"
 ---
 # <a name="configure-your-utility-control-point-data-warehouse-sql-server-utility"></a>Konfigurieren des Data Warehouses für den Steuerungspunkt für das Hilfsprogramm (SQL Server-Hilfsprogramm)
   Die von verwalteten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen gesammelten Daten werden im UMDW (Utility Management Data Warehouse) gespeichert. Der UMDW-Dateiname lautet sysutility_mdw.  
@@ -28,7 +27,7 @@ ms.locfileid: "62805936"
   
 -   Uploadfrequenz für den Sammlungssatz: Alle 15 Minuten  
   
- Das UMDW-Verzeichnis ist konfigurierbar: \<Systemlaufwerk>:\Programme\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, wobei \<Systemlaufwerk> normalerweise Laufwerk C:\ entspricht. Die Protokolldatei „Sysutility_mdw_\<GUID>_LOG“ befindet sich im selben Verzeichnis.  
+ Das Verzeichnis "verdw" ist konfigurierbar: \<System drive> : \Programme\Microsoft SQL Server \ MSSQL10_50. <UCP_Name> \MSSQL\Data \\ , wobei \<System drive> normalerweise C:\ ist. Antrie. Die Protokolldatei, Sysutility_mdw_ \<GUID> _log, befindet sich im gleichen Verzeichnis.  
   
 > [!NOTE]  
 >  Der Speicherort der UMDW-Datei (sysutility_mdw) kann mithilfe von Detach/Attach oder ALTER DATABASE geändert werden. Es wird empfohlen, ALTER DATABASE zu verwenden. Weitere Informationen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b8d48b9a21d810f60b071c17dd89ad51c9e489a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62666940"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049385"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Anzeigen des Veröffentlichungs- und Abonnementstatus im Replikationsmonitor
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Im Replikations Monitor werden Statusinformationen für Veröffentlichungen und Abonnements angezeigt:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]Im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replikations Monitor werden Statusinformationen für Veröffentlichungen und Abonnements angezeigt:  
   
 -   Der Status einer Veröffentlichung wird durch den Status mit höchster Priorität der zugehörigen Abonnements bestimmt. Wenn beispielsweise ein Abonnement einer Veröffentlichung einen Fehler aufweist und bei einem anderen Abonnement ein leistungsbezogenes Problem vorliegt, wird für die Veröffentlichung ein Statusfehler gemeldet.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62666940"
 |Fehler|![Benutzeroberflächensymbol: Fehler](../media/repl-icon-error.gif "Benutzeroberflächensymbol: Fehler")|  
 |Leistung ist kritisch|![Benutzeroberflächensymbol: Warnung](../media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|  
 |fehlerhafter Befehl wird wiederholt|![Benutzeroberflächensymbol: Wiederholungsversuch des Replikations-Agents](../media/repl-icon-retry.gif "Benutzeroberflächensymbol: Wiederholungsversuch des Replikations-Agents")|  
-|OK|none|  
+|OK|Keine|  
   
 ## <a name="subscription-status-values"></a>Abonnementstatuswerte  
  In den nachfolgenden Tabellen werden Abonnementstatuswerte und ihre entsprechenden Symbole nach Priorität geordnet aufgeführt. Ein Abonnement kann zwei Statusangaben gleichzeitig aufweisen, beispielsweise **Läuft demnächst ab/Abgelaufen** und **fehlerhafter Befehl wird wiederholt**. Der Status mit der höchsten Priorität wird angezeigt.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2fcff4e55ca4a2935f90b360965a1bc5fefe5656
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd38540533e3e663fa23eee2c651f0beb9463546
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63261800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005078"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication-sql-server-2005-and-later"></a>Verlegerinformationen, Überwachungsliste für Abonnements (Mergeveröffentlichung, SQL Server 2005 und höher)
    Die Registerkarte **Überwachungsliste für Abonnements** ist für Verteiler verfügbar, auf denen [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen ausgeführt werden. Sie ist dafür konzipiert, Informationen zu Abonnements von allen Veröffentlichungen anzuzeigen, die für den ausgewählten Verleger verfügbar sind. Sie können die Liste der Abonnements filtern, um Fehler, Warnungen und Abonnements mit schlechter Leistung anzuzeigen. Diese Registerkarte stellt einen einzelnen Speicherort für Administratoren bereit, um alle Replikationsaktivitäten bei einem Verleger zu überwachen: Der Replikationsmonitor zeigt alle Abonnements an, die Aufmerksamkeit erfordern. Grundlage hierfür ist der ausgewählte Replikationstyp und die im Dropdownlistenfeld **Anzeigen** ausgewählte Option. Da die auf dieser Registerkarte angezeigten Elemente auf den aktuellen Daten für Status und Leistung basieren, werden auf dieser Seite nur Abonnements angezeigt, die mit der Option im Listenfeld **Anzeigen** zum aktuellen Zeitpunkt übereinstimmen.  
@@ -85,11 +84,11 @@ ms.locfileid: "63261800"
   
  Die folgenden Werte sind für die Leistungsbewertung möglich:  
   
--   Hervorragend  
+-   Ausgezeichnet  
   
 -   Gut  
   
--   Durchschnittlich  
+-   Mittelmäßig  
   
 -   Schlecht  
   
@@ -101,7 +100,7 @@ ms.locfileid: "63261800"
  **Letzte Synchronisierung**  
  Der Zeitpunkt der letzten Ausführung von Merge-Agent. Während dieser Synchronisierung können Änderungen verarbeitet worden sein oder nicht. Wenn sich eine Synchronisierung in Bearbeitung befindet, wird ein vollständiger Prozentwert angezeigt.  
   
- **Duration**  
+ **Dauer**  
  Der Zeitraum der Ausführung von Merge-Agent während der letzten Synchronisierung. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit synchronisierten Merge-Agents oder die Gesamtzeit des zuvor synchronisierten Merge-Agents an.  
   
  **Connection**  

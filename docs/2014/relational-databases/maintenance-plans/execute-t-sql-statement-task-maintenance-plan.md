@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aac0c6b837fcd25b0e1f06344a2745c68b05dea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d76ac1bd1214b84b2ba14733b37826bf0b7c0c6a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206033"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049756"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Task 'T-SQL-Anweisung ausführen' (Wartungsplan)
   Im Dialogfeld **Task 'T-SQL-Anweisung ausführen'** können Sie den Wartungsplan anpassen, indem Sie ihm [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen hinzufügen.  

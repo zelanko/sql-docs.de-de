@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 525dd41faa2c1f9d150ba7bd02442b125975c395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eee88533ee6048e85d4d1617b607c64d537fc996
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156375"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049973"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Beschreibung von gruppierten und nicht gruppierten Indizes
   Ein Index ist eine Struktur auf dem Datenträger, die einer Tabelle oder einer Sicht zugeordnet ist und durch die das Abrufen von Zeilen aus der Tabelle oder Sicht beschleunigt wird. Ein Index enthält Schlüssel, die aus einer oder mehreren Spalten in der Tabelle oder Sicht erstellt werden. Diese Schlüssel werden in einer Struktur (B-Struktur) gespeichert, die es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht, die den Schlüsselwerten zugeordneten Zeilen schnell und effizient zu finden.  

@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 0ea8837b-2596-4df1-b065-3bb717c9f22c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0f62efaa1550ea0b9e68ce4914e4852612d53f48
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67bb9f002356e94f2546527aacae13b56768930d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003531"
 ---
 # <a name="using-linked-servers-in-smo"></a>Verwenden von Verbindungsservern in SMO
   Ein Verbindungsserver stellt eine OLE DB-Datenquelle auf einem Remoteserver dar. Remote-OLE DB-Datenquellen werden mit dem <xref:Microsoft.SqlServer.Management.Smo.LinkedServer>-Objekt mithilfe der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verknüpft.  
   
- Remote-Datenbankserver können mithilfe eines OLE DB Anbieters mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der aktuellen Instanz von verknüpft werden. In SMO werden Verbindungsserver durch das <xref:Microsoft.SqlServer.Management.Smo.LinkedServer>-Objekt dargestellt. Die <xref:Microsoft.SqlServer.Management.Smo.LinkedServer.LinkedServerLogins%2A>-Eigenschaft verweist auf eine Auflistung von <xref:Microsoft.SqlServer.Management.Smo.LinkedServerLogin>-Objekten. Diese speichern die Anmeldeinformationen, die erforderlich sind, um eine Verbindung mit dem Verbindungsserver herzustellen.  
+ Remote-Datenbankserver können [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe eines OLE DB Anbieters mit der aktuellen Instanz von verknüpft werden. In SMO werden Verbindungsserver durch das <xref:Microsoft.SqlServer.Management.Smo.LinkedServer>-Objekt dargestellt. Die <xref:Microsoft.SqlServer.Management.Smo.LinkedServer.LinkedServerLogins%2A>-Eigenschaft verweist auf eine Auflistung von <xref:Microsoft.SqlServer.Management.Smo.LinkedServerLogin>-Objekten. Diese speichern die Anmeldeinformationen, die erforderlich sind, um eine Verbindung mit dem Verbindungsserver herzustellen.  
   
 ## <a name="ole-db-providers"></a>OLE DB-Anbieter  
  In SMO werden installierte OLE-DB-Anbieter durch eine Auflistung von <xref:Microsoft.SqlServer.Management.Smo.OleDbProviderSettings>-Objekten dargestellt.  

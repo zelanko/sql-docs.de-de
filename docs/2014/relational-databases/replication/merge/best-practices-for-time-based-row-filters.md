@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ccaafe71d4137fd4b31eec412c1e35595861bdd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "68210715"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049398"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Bewährte Methoden für zeitbasierte Zeilenfilter
   Benutzer von Anwendungen benötigen häufig eine zeitbasierte Teilmenge der Daten in einer Tabelle. Ein Verkäufer könnte z. B. Daten zu Bestellungen der letzten Woche benötigen und ein Ereignisplaner Daten zu Ereignissen in der kommenden Woche. Anwendungen verwenden in diesen Fällen häufig Abfragen mit der `GETDATE()`-Funktion. Betrachten Sie die folgende Zeilenfilteranweisung:  
@@ -26,7 +25,7 @@ ms.locfileid: "68210715"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Bei einem Filter dieses Typs wird davon ausgegangen, dass zwei Aktionen eingeleitet werden, wenn der Merge-Agent ausgeführt wird: Zeilen, die dem Filter entsprechen, werden auf die Abonnenten repliziert, und für Zeilen, die dem Filter nicht mehr entsprechen, wird auf den Abonnenten ein Cleanup ausgeführt. (Weitere Informationen zum Filtern mit `HOST_NAME()`finden Sie unter [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) Bei der Mergereplikation werden jedoch nur Daten repliziert und bereinigt, die seit der letzten Synchronisierung geändert wurden, unabhängig davon, wie ein Zeilen Filter für diese Daten definiert wird.  
+ Bei einem Filter dieses Typs wird davon ausgegangen, dass zwei Aktionen eingeleitet werden, wenn der Merge-Agent ausgeführt wird: Zeilen, die dem Filter entsprechen, werden auf die Abonnenten repliziert, und für Zeilen, die dem Filter nicht mehr entsprechen, wird auf den Abonnenten ein Cleanup ausgeführt. (Weitere Informationen zum Filtern mit `HOST_NAME()` finden Sie unter [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) Bei der Mergereplikation werden jedoch nur Daten repliziert und bereinigt, die seit der letzten Synchronisierung geändert wurden, unabhängig davon, wie ein Zeilen Filter für diese Daten definiert wird.  
   
  Damit eine Zeile bei der Mergereplikation verarbeitet wird, müssen die Daten in der Zeile dem Zeilenfilter entsprechen, und sie müssen seit der letzten Synchronisierung geändert worden sein. In der **SalesOrderHeader** -Tabelle wird **OrderDate** eingegeben, wenn eine Zeile eingefügt wird. Die Zeilen werden wie erwartet auf den Abonnenten repliziert, da die Einfügung eine Datenänderung darstellt. Befinden sich auf dem Abonnenten jedoch Zeilen, die dem Filter nicht mehr entsprechen (z. B. für Bestellungen, die mehr als sieben Tage zurückliegen), werden sie vom Abonnenten nicht entfernt, es sei denn, sie wurden aus einem anderen Grund aktualisiert.  
   

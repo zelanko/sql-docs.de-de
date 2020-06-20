@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 484919274e7b7df3c49ce03668950807c3627d30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 965a79143ce11b44e52fcb664aee47cb69e3c1c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63268373"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007494"
 ---
-# <a name="tutorial-database-engine-tuning-advisor"></a>Lernprogramm: Datenbankoptimierungsratgeber
+# <a name="tutorial-database-engine-tuning-advisor"></a>Tutorial: Datenbankoptimierungsratgeber
   Willkommen beim Lernprogramm zum Datenbankoptimierungsratgeber. Der Datenbankoptimierungsratgeber prüft, wie Abfragen in den von Ihnen angegebenen Datenbanken verarbeitet werden. Er gibt dann eine Empfehlung ab, wie Sie die Verarbeitung von Abfragen verbessern können, indem Sie Datenbankstrukturen ändern, wie z. B. Indizes, indizierte Sichten und die Partitionierung.  
   
  Der Datenbankoptimierungsratgeber bietet zwei Benutzeroberflächen: eine grafische Benutzeroberfläche (GUI) und das Befehlszeilenhilfsprogramm **dta** . Über die grafische Benutzeroberfläche können schnell die Ergebnisse von Optimierungssitzungen angezeigt werden. Das Hilfsprogramm **dta** ermöglicht die einfache Übernahme von Funktionen des Datenbankoptimierungsratgebers in Skripts für die automatische Optimierung. Darüber hinaus kann der Datenbankoptimierungsratgeber XML-Eingaben annehmen und bietet somit eine bessere Steuerung des Optimierungsprozesses.  
@@ -31,10 +30,10 @@ ms.locfileid: "63268373"
  [Lektion 1: Grundlagen zur Navigation im Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)  
  In dieser Lektion machen Sie sich mit der grafischen Benutzeroberfläche des neuen Datenbankoptimierungsratgebers vertraut und lernen, wie Sie die Anzeigeoptionen und das Layout festlegen.  
   
- [Lektion 2: Verwenden des Datenbankoptimierungsratgebers](lesson-2-using-database-engine-tuning-advisor.md)  
+ [Lektion 2: Verwenden des Datenbankoptimierungsratgebers](lesson-2-using-database-engine-tuning-advisor.md)  
  In dieser Lektion erfahren Sie, wie Sie einfache Optimierungsaufgaben mit der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers ausführen.  
   
- [Lesson 3: Using the dta Command Prompt Utility (Lektion 3: Verwenden des Befehlszeilenprogramms dta)](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Lektion 3: Verwenden des Befehlszeilenprogramms dta](lesson-3-using-the-dta-command-prompt-utility.md)  
  In dieser Lektion lernen Sie, wie Sie das Befehlszeilenprogramm **dta** starten und wie Sie einige einfache Optimierungsbefehle ausführen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 494b57b50115b5ed3cf5089448215b89e9422ccb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfcf97bd83b4892367b9b80c4ed301c22debd686
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069042"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>Anzeigen des SQL Server-Fehlerprotokolls (SQL Server Management Studio)
   Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält benutzerdefinierte Ereignisse und bestimmte Systemereignisse. Mit diesem Fehlerprotokoll können Sie Probleme im Zusammenhang mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behandeln.  

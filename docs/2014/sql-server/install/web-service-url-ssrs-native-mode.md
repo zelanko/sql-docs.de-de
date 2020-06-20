@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 01e5393ae638ddcecd04211a0a7e01e8116346a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f72b7f40c6733c48bb2d7fa2867799d7ad99d4f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952364"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065082"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Webdienst-URL (einheitlicher SSRS-Modus)
   Auf der Seite der Webdienst-URL können Sie die URL, mit der auf den Berichtsserver zugegriffen wird, konfigurieren bzw. ändern. Eine *URL-Reservierung* wird auf Grundlage des URL erstellt, den Sie angeben. Die URL-Reservierung definiert die Syntax und die Regeln für alle URLs, mit denen danach auf den Report Server-Webdienst zugegriffen werden kann. Die URL-Reservierung umfasst Präfix, Host, Port und das virtuelle Verzeichnis für den Report Server-Webdienst. Je nachdem, wie Sie den Host angeben, können mehrere URLs für eine einzelne Reservierung möglich sein. Der Standardwert für den Host ist ein Platzhalter. Mit einem Platzhalter können Sie in einer URL jeden beliebigen Hostnamen angeben, der in den Computer aufgelöst wird, auf dem der Berichtsserver gehostet wird. Weitere Informationen zur URL-Konfiguration und zu Reservierungen finden Sie unter [Konfigurieren einer URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) und [Konfigurieren von Berichts Server-URLs &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus.  
+ [!INCLUDE[applies](../../includes/applies-md.md)]Einheitlicher [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modus.  
   
  Um diese Seite zu öffnen, starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und klicken Sie im Navigationsbereich auf **Webdienst-URL** . Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
@@ -47,7 +46,7 @@ ms.locfileid: "71952364"
   
 -   Mit**127.0.0.1** wird auf localhost zugegriffen. Sie unterstützt die lokale Verwaltung auf dem Berichtsservercomputer. Wenn Sie nur diesen Wert auswählen, können nur Benutzer, die lokal auf dem Berichtsservercomputer angemeldet sind, auf die Anwendung zugreifen.  
   
--   *Nnn.nnn.nnn.nnn* ist die IPv4-Adresse einer Netzwerkkarte auf Ihrem Computer. Wenn Ihr Netzwerk IPv6-Adressierung verwendet, ist die IP-Adresse ein 128-Bit-Wert von 8 4-Byte-Feldern ähnlich dem \<folgenden Format: Header>:*nnnn: nnnn: nnnn: nnnn*  
+-   *Nnn.nnn.nnn.nnn* ist die IPv4-Adresse einer Netzwerkkarte auf Ihrem Computer. Wenn Ihr Netzwerk IPv6-Adressierung verwendet, ist die IP-Adresse ein 128-Bit-Wert von 8 4-Byte-Feldern ähnlich dem folgenden Format: \<header> :*nnnn: nnnn: nnnn: nnnn*  
   
      Wenn Sie mehrere Karten haben, wird für jede Karte eine IP-Adresse angezeigt. Wenn Sie nur diesen Wert auswählen, wird der Anwendungszugriff auf genau diese IP-Adresse (und jeden Hostname, den ein Domänennamenserver dieser Adresse zuordnet) beschränkt. Sie können mit localhost nicht auf einen Berichtsserver zugreifen, und Sie können nicht die IP-Adressen der anderen Netzwerkkarten verwenden, die auf dem Berichtsservercomputer installiert sind.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "71952364"
  Gibt den Port an, den der Berichtsserver auf http-Anforderungen für die URLs untersucht, die den Namen des virtuellen Verzeichnisses für den Berichtsserver enthalten.  
   
  **SSL-Zertifikat**  
- Verknüpft ein Zertifikat mit der IP-Adresse, die Sie angegeben haben. Das Zertifikat muss auf dem Computer installiert und konfiguriert werden. Reporting Services enthält keine Funktionen zum Verwalten von Zertifikaten. Das Zertifikat muss für den Namen des Computers oder Hosts ausgegeben werden, der in die IP-Adresse aufgelöst wird. Wenn Sie z. b. ein Zertifikat verwenden möchten, http://salesreportsdas für ausgestellt wurde, muss die angegebene IP-Adresse auf einen Server mit dem Namen "SalesReports" aufgelöst werden.  
+ Verknüpft ein Zertifikat mit der IP-Adresse, die Sie angegeben haben. Das Zertifikat muss auf dem Computer installiert und konfiguriert werden. Reporting Services enthält keine Funktionen zum Verwalten von Zertifikaten. Das Zertifikat muss für den Namen des Computers oder Hosts ausgegeben werden, der in die IP-Adresse aufgelöst wird. Wenn Sie z. b. ein Zertifikat verwenden möchten, das für ausgestellt wurde http://salesreports , muss die angegebene IP-Adresse auf einen Server mit dem Namen "SalesReports" aufgelöst werden.  
   
  Wenn Sie ein Zertifikat verwenden, müssen Sie die `UrlRoot`-Konfigurationseinstellung in der Datei RSReportServer.config so ändern, dass der vollqualifizierte Name des Computers angegeben wird, für den das Zertifikat registriert ist. Weitere Informationen finden Sie unter [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 270df8181fe42f48619736ba858dc0c16d9e30c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d32daf928392d94fd4d62def6b667892abf0b686
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781812"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003450"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>Verwenden von Dateigruppen und Dateien zur Speicherung von Daten
   Datendateien werden zur Speicherung von Datenbankdateien verwendet. Die Datendateien werden in Dateigruppen unterteilt. Das <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A>-Eigenschaft, die auf ein <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>-Objekt verweist. Jedes <xref:Microsoft.SqlServer.Management.Smo.FileGroup>-Objekt in dieser Auflistung verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A>-Eigenschaft. Diese Eigenschaft bezieht sich auf eine <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection>-Auflistung, die alle Datendateien enthält, die zur Datenbank gehören. Eine Dateigruppe wird prinzipiell verwendet, um Dateien zu gruppieren, die zur Speicherung eines Datenbankobjekts genutzt werden. Ein Grund für die Verteilung eines Datenbankobjekts über mehrere Dateien ist die Verbesserung der Leistung, insbesondere wenn die Dateien auf unterschiedlichen Laufwerken gespeichert sind.  
