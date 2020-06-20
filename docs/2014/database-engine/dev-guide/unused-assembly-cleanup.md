@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c7966d9d4a517902cf857856fd9bdeac7684de2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3edb481894bdf9c4b9ff6228abb27c51b1affc75
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637695"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933222"
 ---
 # <a name="unused-assembly-cleanup"></a>Bereinigung nicht verwendeter Assemblys
   Das `AssemblyCleanup`-Beispiel enthält eine gespeicherte .NET-Prozedur, die nicht verwendete Assemblys in der aktuellen Datenbank bereinigt, indem sie die Metadatenkataloge abfragt. Der einzige Parameter, `visible_assemblies`, wird verwendet, um anzugeben, ob nicht verwendete sichtbare Assemblys gelöscht werden sollen. Durch den Wert 'false' wird standardmäßig angegeben, dass nur nicht verwendete, unsichtbare Assemblys gelöscht werden, andernfalls werden alle nicht verwendeten Assemblys gelöscht. Der Satz an nicht verwendeten Assemblys umfasst die Assemblys, für die kein Einstiegspunkt definiert ist (Routinen, Typen und Aggregate) und auf die keine anderen Assemblys direkt oder indirekt verweisen.  
@@ -78,7 +77,7 @@ ms.locfileid: "73637695"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-8.  Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und `test.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
+8.  Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
   
 9. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   

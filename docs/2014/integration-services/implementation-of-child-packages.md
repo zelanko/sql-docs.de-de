@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7390434b1565c64b63e62c89d1e61b13f18cd6a6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058192"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965700"
 ---
 # <a name="implementation-of-child-packages"></a>Implementierung von untergeordneten Paketen
   Wenn Sie mithilfe von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]den Lastenausgleich implementieren, werden die untergeordneten Pakete auf anderen Servern installiert, um die verfügbare CPU bzw. die Serverzeit zu nutzen. Für das Erstellen und Ausführen der untergeordneten Pakete sind die folgenden Schritte erforderlich:  
@@ -51,7 +50,7 @@ ms.locfileid: "66058192"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>Debuggen der Aufträge des SQL Server-Agents und der untergeordneten Pakete  
  Sie können die Aufträge des SQL Server-Agents und ihre untergeordneten Pakete testen, indem Sie eine der folgenden Methoden verwenden:  
   
--   Ausführen der einzelnen untergeordneten Pakete im SSIS-Designer, indem Sie auf **Debuggen** / **Starten ohne Debugging**klicken.  
+-   Ausführen der einzelnen untergeordneten Pakete im SSIS-Designer, indem Sie auf **Debuggen**  /  **Starten ohne Debugging**klicken.  
   
 -   Ausführen der einzelnen Aufträge des SQL Server-Agents auf dem Remotecomputer mithilfe von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], um sicherzustellen, dass die Pakete ausgeführt werden.  
   

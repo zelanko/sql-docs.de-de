@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c183af3a8db4ad9e08f15083462806244aa8187
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 30f3dc8a9136a7cbe1d5897cb0bcc9fff8c35ab2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705558"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020675"
 ---
 # <a name="cursor-transaction-isolation-level"></a>Transaktionsisolationsstufen von Cursorn
   Das komplette Sperrverhalten von Cursorn basiert auf der Interaktion zwischen Parallelitätsattributen und der vom Client festgelegten Transaktionsisolationsstufe. ODBC-Clients legen die Transaktions Isolationsstufe mithilfe der Attribute [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION oder SQL_COPT_SS_TXN_ISOLATION fest. Das Transaktionssperrverhalten einer bestimmten Cursorumgebung wird durch die Kombination des Sperrverhaltens der Parallelitätseinstellung mit den Optionen für die Transaktionsisolationsstufen bestimmt.  

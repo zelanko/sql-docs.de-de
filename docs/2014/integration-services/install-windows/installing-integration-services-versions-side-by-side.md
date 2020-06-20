@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 903afa9ef25afcba7818862bc73dc33bf677b47a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93bfda24b0de9c3c4e621900037f59981899b626
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67140819"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965525"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>Interoperabilität und Koexistenz (Integration Services)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) können gleichzeitig mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services und [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services verwendet werden.  
@@ -26,9 +25,9 @@ ms.locfileid: "67140819"
 ## <a name="features-and-differences"></a>Funktionen und Unterschiede  
  In der folgenden Tabelle sind einige Unterschiede zwischen der aktuellen und der früheren Version von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]aufgelistet.  
   
-|Feature|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
+|Funktion|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
 |-------------|-------------------------------|---------------------------------|---------------------------------|  
-|Entwicklungsumgebung|[Vorgängerversionen von SQL Server Data Tools (SSDT und SSDT-BI)](https://docs.microsoft.com/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi?view=sql-server-2014)<br /><br /> [SQL Server 2014 Data Tools – Business Intelligence für Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools für Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools – Business Intelligence für Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
+|Entwicklungsumgebung|[Vorgängerversionen von SQL Server Data Tools (SSDT und SSDT-BI)](https://docs.microsoft.com/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi?view=sql-server-2014)<br /><br /> [SQL Server 2014 Data Tools – Business Intelligence für Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools für Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools – Business Intelligence für Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] )|  
 |Verwaltungsumgebung|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |Hauptsystemtabelle in msdb zum Speichern von Paketen|sysssispackages|sysssispackages|sysssispackages|  
 |Eingabeaufforderungs-Haupthilfsprogramm zum Ausführen von Paketen|**dtexec** (dtexec.exe), Version 2014|**dtexec** (dtexec.exe), Version 2012|**dtexec** (dtexec.exe), Version 2008|  

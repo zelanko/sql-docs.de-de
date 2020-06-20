@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8f1442011ddbdb010e5f498dbf3b42fa9ba333ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a5d0283837d9344eaf529cf9818e6629cdc68065
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060165"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Erstellen von CDATA-Abschnitten mit sql:use-cdata (SQLXML 4.0)
   In XML werden Textblöcke, die Zeichen enthalten, die andernfalls als Markup erkannt würden, mit CDATA-Abschnitten in Escapezeichen umgewandelt.  
   
- Eine Datenbank in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann manchmal Zeichen enthalten, die vom XML-Parser als Markup Zeichen behandelt werden, z. b. eckige Klammern ( \< und >), das kleiner-als-oder-gleich-Symbol (<=) und das kaufmännische und-Zeichen (&) als Markup Zeichen behandelt werden. Sie können diese Sonderzeichen in einem CDATA-Abschnitt jedoch umschließen, um zu verhindern, dass sie als Markupzeichen behandelt werden. Der Text innerhalb des CDATA-Abschnitts wird vom XML-Parser als Nur-Text behandelt.  
+ Eine Datenbank in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann manchmal Zeichen enthalten, die vom XML-Parser als Markup Zeichen behandelt werden, z. b. Spitze Klammern ( \< and > ), das kleiner-als-oder-gleich-Symbol (<=) und das kaufmännische und-Zeichen (&) als Markup Zeichen behandelt werden. Sie können diese Sonderzeichen in einem CDATA-Abschnitt jedoch umschließen, um zu verhindern, dass sie als Markupzeichen behandelt werden. Der Text innerhalb des CDATA-Abschnitts wird vom XML-Parser als Nur-Text behandelt.  
   
  Mit der `sql:use-cdata`-Anmerkung wird angegeben, dass die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegebenen Daten in einem CDATA-Abschnitt umschlossen werden (d. h., sie gibt an, ob der Wert aus einer Spalte, die von `sql:field` angegeben wird, in einem CDATA-Abschnitt eingeschlossen werden soll). Die `sql:use-cdata`-Anmerkung kann nur für Elemente angegeben werden, die einer Datenbankspalte zugeordnet werden.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "82703649"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. Angeben von sql:use-cdata für ein Element  
- Im folgenden Schema `sql:use-cdata` wird auf 1 (true) für den ** \< AddressLine1->** innerhalb des ** \< Address>** -Elements festgelegt. Daraufhin werden die Daten in einem CDATA-Abschnitt zurückgegeben.  
+ Im folgenden Schema `sql:use-cdata` wird für das-Element im-Element auf 1 (true) festgelegt **\<AddressLine1>** **\<Address>** . Daraufhin werden die Daten in einem CDATA-Abschnitt zurückgegeben.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
