@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: f2640e9018f29385851839932572aeaa3ee91ad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77600130"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215487"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Ausführen von Assistent für Datenbankexperimente an einer Eingabeaufforderung
 
@@ -34,17 +34,17 @@ In diesem Artikel wird beschrieben, wie Sie eine Ablauf Verfolgung in Assistent 
 
 Führen Sie an einer Eingabeaufforderung den folgenden Befehl aus, um eine neue Arbeits Auslastungs Erfassung zu starten:
 
-`Deacmd.exe -o StartCapture -h <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
+`Deacmd.exe -o StartCapture -n <Trace FileName> -x <Trace Format> -h <SQLServerInstance> -f <database name> -e <Encrypt Connection> -m <Authetication Mode> -u <user name> -p <password> -l <Location of Output Folder> -d <duration>`
 
 **Beispiel**
 
-`Deacmd.exe -o StartCapture -h localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
+`Deacmd.exe -o StartCapture -n sql2008capture -x 0 -h localhost -f adventureworks -e --trust -m 0 -l c:\test  -d 60`
 
 **Zusätzliche Optionen**
 
-Beim Starten einer neuen Arbeits Auslastungs `Deacmd.exe` Erfassung mit dem Befehl können Sie die folgenden zusätzlichen Optionen verwenden:
+Beim Starten einer neuen Arbeits Auslastungs Erfassung mit dem `Deacmd.exe` Befehl können Sie die folgenden zusätzlichen Optionen verwenden:
 
-| Option| BESCHREIBUNG |  
+| Option| Beschreibung |  
 | --- | --- |
 | -n, --name | Benötigten Name der Ablauf Verfolgungs Datei |
 | -x,--Format | Benötigten Format der Ablauf Verfolgung (Trace = 0, xevents = 1) |
@@ -72,11 +72,11 @@ Wenn Sie Distributed Replay verwenden, führen Sie die folgenden Schritte aus.
 
 3. Starten Sie auf dem Zielcomputer, auf dem SQL Server ausgeführt wird, eine Ablauf Verfolgungs Erfassung mit startreplaycapturetrace. SQL.
 
-    a.  Öffnen Sie in SQL Server Management Studio (SSMS) <Dea_InstallPath\>\script\startreplaycapturetrace.SQL.
+    a.  Öffnen Sie in SQL Server Management Studio (SSMS) <Dea_InstallPath \> \script\startreplaycapturetrace.SQL.
 
-    b.  Führen `Set @durationInMins=0` Sie aus, damit die Ablauf Verfolgungs Erfassung nach einem angegebenen Zeitpunkt nicht automatisch beendet wird.
+    b.  Führen Sie aus `Set @durationInMins=0` , damit die Ablauf Verfolgungs Erfassung nach einem angegebenen Zeitpunkt nicht automatisch beendet wird.
 
-    c.  Führen Sie aus, um die maximale Dateigröße pro Ablauf `Set @maxfilesize`Verfolgungs Datei festzulegen. Die empfohlene Größe ist 200 (in MB).
+    c.  Führen Sie aus, um die maximale Dateigröße pro Ablauf Verfolgungs Datei festzulegen `Set @maxfilesize` . Die empfohlene Größe ist 200 (in MB).
 
     d.  Bearbeiten `@Tracefile` Sie, um einen eindeutigen Namen für die Ablauf Verfolgungs Datei festzulegen.
 
@@ -86,12 +86,12 @@ Wenn Sie Distributed Replay verwenden, führen Sie die folgenden Schritte aus.
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
 
-    a.  Führen `DReplay status -f 1`Sie an einer Eingabeaufforderung aus, um den Status zu überwachen.
+    a.  Führen Sie an einer Eingabeaufforderung aus, um den Status zu überwachen `DReplay status -f 1` .
 
-    b.  Um die Wiedergabe anzuhalten, z. b. Wenn Sie sehen, dass der Durchlauf% niedriger als erwartet ist, führen `DReplay cancel`Sie an einer Eingabeaufforderung aus.
+    b.  Um die Wiedergabe anzuhalten, z. b. Wenn Sie sehen, dass der Durchlauf% niedriger als erwartet ist, führen Sie an einer Eingabeaufforderung aus `DReplay cancel` .
 
 5. Beendet die Ablauf Verfolgungs Erfassung auf der Ziel SQL Server Instanz.
-6. Öffnen `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql`Sie in SSMS.
+6. Öffnen Sie in SSMS `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql` .
 7. Bearbeiten `@Tracefile` Sie, um den Pfad der Ablauf Verfolgungs Datei auf dem Zielcomputer mit SQL Server abzugleichen.
 8. Führen Sie das Skript auf dem Zielcomputer mit SQL Server aus.
 
@@ -103,11 +103,11 @@ Wenn Sie die integrierte Wiedergabe verwenden, müssen Sie Distributed Replay ni
 
 Führen Sie an einer Eingabeaufforderung den folgenden Befehl aus, um eine neue Ablauf Verfolgungs Analyse zu starten:
 
-`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
+`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <username>`
 
 **Beispiel**
 
-`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
+`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -h localhost -e`
 
 Zum Anzeigen der Analyseberichte dieser Ablauf Verfolgungs Dateien müssen Sie die GUI zum Anzeigen von Diagrammen und organisierten Metriken verwenden.  Die Analysedatenbank wird jedoch in die angegebene SQL Server Instanz geschrieben, sodass Sie die generierten Analyse Tabellen auch direkt abfragen können.
 
@@ -115,7 +115,7 @@ Zum Anzeigen der Analyseberichte dieser Ablauf Verfolgungs Dateien müssen Sie d
 
 Beim Analysieren von Ablauf Verfolgungen mit dem Befehl "DEA" können Sie die folgenden zusätzlichen Optionen verwenden:
 
-| Option| BESCHREIBUNG |  
+| Option| Beschreibung |  
 | --- | --- |
 | -a,--tracea | Benötigten Dateipfad zur Ereignis Datei für eine-Instanz. Beispiel: c:\traces\sql2008trace.trc.  Wenn es einen Batch von Dateien gibt, wählen Sie die erste Datei aus, und die DEA überprüft automatisch, ob Rolloverdateien vorhanden sind. Wenn sich Dateien im BLOB befinden, geben Sie den Ordner Pfad an, in dem die Ereignis Dateien lokal gespeichert werden sollen.  Beispiel: c:\traces\ |
 | -b,--traceb | Benötigten Dateipfad zur Ereignis Datei für die B-Instanz. Beispiel: c:\traces\sql2014trace.trc. Wenn es einen Batch von Dateien gibt, wählen Sie die erste Datei aus, und die DEA überprüft automatisch, ob Rolloverdateien vorhanden sind. Wenn sich Dateien im BLOB befinden, geben Sie den Ordner Pfad an, in dem die Ereignis Dateien lokal gespeichert werden sollen.  Beispiel: c:\traces\ |
@@ -132,6 +132,6 @@ Beim Analysieren von Ablauf Verfolgungen mit dem Befehl "DEA" können Sie die fo
 | --Abu | BLOB-URL für eine-Instanz mit einem SAS-Schlüssel |
 | --BBU | BLOB-URL für B-Instanz mit SAS-Schlüssel |
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
 - Weitere Informationen zur Verwendung von DEA finden Sie unter [Übersicht über Assistent für Datenbankexperimente](database-experimentation-assistant-overview.md).
