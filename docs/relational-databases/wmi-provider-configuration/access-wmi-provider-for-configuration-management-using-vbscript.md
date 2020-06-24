@@ -1,5 +1,6 @@
 ---
 title: Zugreifen auf den WMI-Anbieter mit VBScript
+description: Erfahren Sie, wie Sie ein VBScript-Programm erstellen, das die Version der installierten Instanzen von SQL Server auflistet, die auf einem Computer ausgeführt werden.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5415e9d425087f42e3058328f061660ffbe8c1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd515a60802f429611c1ae272216fac93642093e
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658952"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295453"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit VBScript
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  In diesem Abschnitt wird beschrieben, wie Sie ein VBScript-Programm erstellen, das die Version [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der installierten Instanzen von auflistet, die auf einem Computer ausgeführt werden.  
+  In diesem Abschnitt wird beschrieben, wie Sie ein VBScript-Programm erstellen, das die Version der installierten Instanzen von auflistet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die auf einem Computer ausgeführt werden.  
   
  Mit dem Codebeispiel werden die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die auf dem Computer ausgeführt werden, und deren Version aufgeführt.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "73658952"
   
 4.  Verwenden Sie die `ExecQuery`-Methode und eine WQL-Abfrage, um den Namen und die Version der installierten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abzurufen.  
   
-5.  Speichern Sie die Datei.  
+5.  Speichern Sie die Datei .  
   
 6.  Führen Sie das Skript aus, indem Sie **cscript Test. VSB** an der Eingabeaufforderung eingeben.  
 

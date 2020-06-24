@@ -1,5 +1,6 @@
 ---
 title: Verwenden des WMI-Anbieters für die Konfigurations Verwaltung
+description: Erfahren Sie mehr über den WMI-Anbieter für die Konfigurations Verwaltung, einschließlich der Bindung, der Angabe einer Verbindungs Zeichenfolge und der Berechtigungen/Server Authentifizierung.
 ms.custom: seo-lt-2019
 ms.date: 04/12/2019
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c064c2927919ab4760903a9a3457f9c0be816647
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657374"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295393"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Arbeiten mit dem WMI-Anbieter für die Konfigurationsverwaltung
 
@@ -39,7 +40,7 @@ Dieser Artikel enthält Anleitungen zum Programmieren mit dem WMI-Anbieter für 
 
 Anwendungen leiten den WMI-Anbieter für die Konfigurationsverwaltung an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weiter, indem sie eine Verbindung zu einem vom Anbieter definierten WMI-Namespace herstellen. Der Windows WMI-Dienst ordnet diesen Namespace der Anbieter-DLL zu und lädt die dll in den Arbeitsspeicher. Alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mit einem einzigen WMI-Namespace dargestellt.
 
-Der Namespace weist standardmäßig das folgende Format auf. Im Format `VV` ist die Hauptversionsnummer von SQL Server. Die Zahl kann durch Ausführen `SELECT @@VERSION;`von ermittelt werden.
+Der Namespace weist standardmäßig das folgende Format auf. Im Format `VV` ist die Hauptversionsnummer von SQL Server. Die Zahl kann durch Ausführen von ermittelt werden `SELECT @@VERSION;` .
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
@@ -69,7 +70,7 @@ Sie können den folgenden PowerShell-Code verwenden, um alle verfügbaren WMI-Co
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **Hinweis:** Wenn Sie über die Windows-Firewall eine Verbindung herstellen, müssen Sie sicherstellen, dass Ihre Computer ordnungsgemäß konfiguriert sind. Weitere Informationen finden Sie im Artikel "Herstellen einer Verbindung über die Windows- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Firewall" in der Windows-Verwaltungsinstrumentation Dokumentation auf der MSDN- [Website](https://go.microsoft.com/fwlink/?linkid=15426).  
+ **Hinweis:** Wenn Sie über die Windows-Firewall eine Verbindung herstellen, müssen Sie sicherstellen, dass Ihre Computer ordnungsgemäß konfiguriert sind. Weitere Informationen finden Sie im Artikel "Herstellen einer Verbindung über die Windows-Firewall" in der Windows-Verwaltungsinstrumentation Dokumentation auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN- [Website](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="permissions-and-server-authentication"></a>Berechtigungen und Serverauthentifizierung  
  Für den Zugriff auf den WMI-Anbieter für die Konfigurationsverwaltung muss das WMI-Verwaltungsskript des Clients im Kontext eines Administrators auf dem Zielcomputer ausgeführt werden. Sie müssen ein Mitglied der lokalen Windows-Administratorengruppe auf dem Computer sein, den Sie verwalten möchten.  

@@ -1,5 +1,6 @@
 ---
 title: Erstellen einer SQL Server-Agent Warnung mit dem WMI-Anbieter
+description: Erstellen Sie eine SQL Server-Agent Warnung, die auf bestimmte Ereignisse antwortet. Diese einfache Warnung speichert XML-Deadlock Graph-Ereignisse in einer Tabelle zur späteren Analyse.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9ceab4fd40174a68bd512fedf2c1b6d5b159b99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1678379c2120ba4f2edbc2868d5651cbf403587
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660529"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295413"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Beispiel: Erstellen einer SQL Server-Agent-Warnung mit dem WMI-Anbieter
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "73660529"
  Die Warnung führt den Auftrag immer dann aus, wenn ein Deadlockdiagrammablaufverfolgungsereignis protokolliert werden würde. Für eine WMI-Warnung erstellt SQL Server-Agent mittels angegebenem Namespace und WQL-Anweisung eine Abfragebenachrichtigung. Für diese Warnung überwacht SQL Server-Agent die Standardinstanz auf dem lokalen Computer. Die WQL-Anweisung fordert ein beliebiges `DEADLOCK_GRAPH`-Ereignis in der Standardinstanz an. Zum Ändern der Instanz, das von der Warnung überwacht wird, ersetzen Sie den Instanznamen durch `MSSQLSERVER` im `@wmi_namespace` für die Warnung.  
   
 > [!NOTE]  
->  Damit SQL Server-Agent WMI-Ereignisse empfangen kann [!INCLUDE[ssSB](../../includes/sssb-md.md)] , muss in **msdb** und [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]aktiviert werden.  
+>  Damit SQL Server-Agent WMI-Ereignisse empfangen kann, [!INCLUDE[ssSB](../../includes/sssb-md.md)] muss in **msdb** und aktiviert werden [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 USE AdventureWorks ;  
@@ -90,7 +91,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>Testen des Beispiels  
- Um zu sehen, dass der Auftrag ausgeführt wird, provozieren Sie einen Deadlock. Öffnen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in zwei **SQL-Abfrage** Registerkarten, und verbinden Sie beide Abfragen mit derselben Instanz. Führen Sie auf einer der Abfrageregisterkarten das folgende Skript aus. Dieses Skript erzeugt ein Resultset und endet.  
+ Um zu sehen, dass der Auftrag ausgeführt wird, provozieren Sie einen Deadlock. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Öffnen Sie in zwei **SQL-Abfrage** Registerkarten, und verbinden Sie beide Abfragen mit derselben Instanz. Führen Sie auf einer der Abfrageregisterkarten das folgende Skript aus. Dieses Skript erzeugt ein Resultset und endet.  
   
 ```  
 USE AdventureWorks ;  
@@ -103,7 +104,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Führen Sie das folgende Skript auf der zweiten Abfrage Registerkarte aus. Dieses Skript erzeugt ein Resultset und dann einen Block, der darauf wartet, `Production.Product`eine Sperre zu erhalten.  
+ Führen Sie das folgende Skript auf der zweiten Abfrage Registerkarte aus. Dieses Skript erzeugt ein Resultset und dann einen Block, der darauf wartet, eine Sperre zu erhalten `Production.Product` .  
   
 ```  
 USE AdventureWorks ;  
@@ -119,7 +120,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Führen Sie das folgende Skript auf der ersten Abfrage Registerkarte aus. Dieses Skript wird blockiert und wartet darauf, eine Sperre `Production.Location`für zu erhalten. Nach einem kurzen Timeout wählt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Skript oder das Skript aus dem Beispiel als Deadlockopfer aus und beendet die Transaktion.  
+ Führen Sie das folgende Skript auf der ersten Abfrage Registerkarte aus. Dieses Skript wird blockiert und wartet darauf, eine Sperre für zu erhalten `Production.Location` . Nach einem kurzen Timeout wählt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Skript oder das Skript aus dem Beispiel als Deadlockopfer aus und beendet die Transaktion.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

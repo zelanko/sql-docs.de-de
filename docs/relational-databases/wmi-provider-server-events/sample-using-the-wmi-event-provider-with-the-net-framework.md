@@ -1,5 +1,6 @@
 ---
 title: 'Beispiel: Verwenden des WMI-Ereignis Anbieters in .net'
+description: In einer c#-Beispielanwendung wird der WMI-Ereignis Anbieter zum Zurückgeben von Ereignisdaten für alle Ereignisse in der Datendefinitionssprache verwendet, die auf einer Instanz von SQL Server auftreten.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c942954d43c40dd4461237f2692afaa65ea87c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f0216b39c9291bbce60fb39e4583ddeee2618b7
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660588"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295373"
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Beispiel: Verwenden des WMI-Ereignisanbieters mit .NET Framework
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
