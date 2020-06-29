@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dd4e53a1e6485d74ba2aff4039108b357d9c0c92
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9207e76191060c56acad37db734827579a83aae0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966230"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436827"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Dialogfeld 'Spaltenkonvertierungsdetails' (SQL Server-Import/Export-Assistent)
   Im Dialogfeld **Spalten Konvertierungs Details** können Sie ausführliche Konvertierungs Informationen zu einer einzelnen Spalte überprüfen. Diese Konvertierungsinformationen enthalten den Datentyp der Spalte an Quelle und Ziel sowie die Konvertierung, die der Assistent ausführt. Auf dieser Seite werden auch die Datentypzuordnungsdateien aufgelistet, anhand derer der Assistent die erforderlichen Datentypkonvertierungen bestimmt. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert diese Datentypzuordnungsdateien während des Setups.  

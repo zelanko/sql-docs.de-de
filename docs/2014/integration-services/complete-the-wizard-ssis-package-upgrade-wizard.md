@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.completewizard.f1
 ms.assetid: e07bd68e-4dc8-41f0-acfe-059e77688cfa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b684a20563bf73a50b4df9f624b59047c768865c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d84d932608303eefa2d13a2940eca2f8953611e7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922011"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434987"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>Assistenten abschließen (SSIS Paketupgrade-Assistent)
   Verwenden Sie die Seite **Assistenten abschließen** , um die Paketupgradeoptionen zu überprüfen und zu bestätigen, die Sie ausgewählt haben. Dies ist die letzte Seite des Assistenten, auf der Sie zurückgehen und die Optionen für diese Sitzung des Assistenten ändern können.  
@@ -25,7 +25,7 @@ ms.locfileid: "84922011"
   
 -   [Aktualisieren von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zusammenfassungsoptionen**  
  Überprüfen Sie die Upgradeoptionen, die Sie im Assistenten ausgewählt haben. Um Optionen zu ändern, klicken Sie auf **Zurück** , um zu den vorherigen Assistentenseiten zurückzukehren.  
   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 50c9419911f83c98fba5baf0f995ffbeafb916ad
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c47c5596d5674adf56105cffd7617a2e3436bc8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965650"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436837"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Ziel auswählen (SQL Server-Import/Export-Assistent)
   Verwenden Sie die Seite **Ziel auswählen** , um das Ziel der Daten anzugeben, die Sie kopieren möchten.  
@@ -69,7 +69,7 @@ ms.locfileid: "84965650"
  **Durchsuchen**  
  Suchen Sie nach einer Datei mithilfe des Dialogfelds **Öffnen**.  
   
- **Locale**  
+ **Gebietsschema**  
  Geben Sie die Gebietsschema-ID (LCID) an, die die Sortierreihenfolge für Zeichen und das Datums- und Zeitformat definiert.  
   
  **Unicode**  
@@ -81,7 +81,7 @@ ms.locfileid: "84965650"
  **Format**  
  Gibt an, ob die Datei Formatierung mit Trennzeichen, fester Breite oder rechtem Flatterrand verwendet.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Durch Trennzeichen getrennt|Spalten werden durch ein Trennzeichen getrennt, das auf der Seite **Spalten** angegeben wird.|  
 |Feste Breite|Spalten haben eine feste Breite.|  

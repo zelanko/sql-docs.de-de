@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4298cfec7478560c2cef01e7d3c6df577a2a8f16
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 18b97b67590bfff4f01e5dff332722a3aba1cf7e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966263"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436877"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Datenquelle auswählen (SQL Server-Import/Export-Assistent)
   Verwenden Sie die Seite **Datenquelle auswählen** , um die Quelle der Daten anzugeben, die Sie kopieren möchten.  
@@ -25,7 +25,7 @@ ms.locfileid: "84966263"
   
  Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Data Source**  
  Wählen Sie den Datenanbieter aus, dessen Datenspeicherformat mit dem der Quelle übereinstimmt. Möglicherweise sind für die Datenquelle mehrere Anbieter verfügbar. Mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie z [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . b. Native Client, den .NET Framework Datenanbieter für SQL Server oder den Microsoft OLE DB-Anbieter für SQL Server verwenden.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "84966263"
  Geben Sie den Namen der Quelldatenbank ein.  
   
  **Integrierte Sicherheit**  
- Geben Sie `True` an, um eine Verbindung mithilfe der integrierten Windows-Authentifizierung herzustellen, oder `False`, um mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung eine Verbindung herzustellen. Wenn Sie `False` angeben, müssen Sie eine Benutzer-ID und ein Kennwort eingeben. Standardwert: `False`.  
+ Geben Sie `True` an, um eine Verbindung mithilfe der integrierten Windows-Authentifizierung herzustellen, oder `False`, um mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung eine Verbindung herzustellen. Wenn Sie `False` angeben, müssen Sie eine Benutzer-ID und ein Kennwort eingeben. Der Standardwert ist `False`.  
   
  **Benutzer-ID**  
  Geben Sie einen Benutzernamen für die Datenbankverbindung an, wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden.  
