@@ -1,106 +1,196 @@
 ---
-title: Installieren und Konfigurieren der AdventureWorks-Beispieldatenbank
-description: Befolgen Sie diese Anweisungen, um AdventureWorks-Beispiel Datenbanken mit SQL Server Management Studio oder in Azure SQL-Datenbank herunterzuladen und zu installieren.
+title: AdventureWorks-Beispieldatenbanken
+description: Befolgen Sie diese Anweisungen, um AdventureWorks-Beispiel Datenbanken mithilfe von Transact-SQL (T-SQL), SQL Server Management Studio (SSMS) oder Azure Data Studio in SQL Server herunterzuladen und zu installieren.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
-ms.date: 06/19/2018
+ms.date: 06/16/2020
 ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7fa3d199450750a444f2b67ae3e4583549d449b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f84b6113f9f3904ca65831a00308ab56ee79daa
+ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484569"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409257"
 ---
-# <a name="adventureworks-installation-and-configuration"></a>Installation und Konfiguration von AdventureWorks
+# <a name="adventureworks-sample-databases"></a>AdventureWorks-Beispieldatenbanken
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-AdventureWorks Download Links und Installationsanweisungen. 
+Dieser Artikel enthält direkte Links zum Herunterladen von AdventureWorks-Beispiel Datenbanken sowie Anweisungen für die Wiederherstellung in SQL Server und Azure SQL-Datenbank. 
+
+Weitere Informationen zu Beispielen finden Sie im [GitHub-Repository "Beispiele](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases)". 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Verwenden Sie für die vollständige Version des Beispiels SQL Server Evaluation/Developer/Enterprise Edition.
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Um die besten Ergebnisse zu erzielen, verwenden Sie die Version vom Juni 2016 oder höher.
- 
-## <a name="oltp-downloads"></a>OLTP-Downloads
-
-Direkte Links zu den OLTP-Versionen von AdventureWorks finden Sie unten:
-
-- [AdventureWorks2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)
-- [AdventureWorks2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016.bak)
-- [AdventureWorks2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2014.bak)
-- [AdventureWorks2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2012.bak)
-- [AdventureWorks2008R2. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)
+- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/)
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) oder [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 
 
-## <a name="data-warehouse-downloads"></a>Data Warehouse Downloads
+## <a name="download-bak-files"></a>Herunterladen von BAK-Dateien 
 
-Direkt Links zu den Data Warehouse Versionen von AdventureWorks finden Sie unten:
+Verwenden Sie diese Links, um die entsprechende Beispieldatenbank für Ihr Szenario herunterzuladen. 
 
-- [AdventureWorksDW2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)
-- [AdventureWorksDW2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016.bak)
-- [AdventureWorksDW2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2014.bak)
-- [AdventureWorksDW2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2012.bak)
-- [AdventureWorksDW2008R2. bak](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak)
+- **OLTP** -Daten sind für die meisten typischen Online Transaktionsverarbeitungs-Workloads vorgesehen. 
+- **Data Warehouse (DW)** -Daten sind für Data Warehousing-Arbeits Auslastungen vorgesehen. 
+- Bei **Lightweight (lt)** -Daten handelt es sich um eine vereinfachte und abgefragte Version des **OLTP** -Beispiels. 
 
-## <a name="creation-scripts"></a>Erstellungs Skripts
-Die folgenden Skripts können verwendet werden, um unabhängig von der Version die gesamte AdventureWorks-Datenbank zu erstellen. 
+|**OLTP** |**Data Warehouse** |**Einfach**|
+|---------|---------|---------|
+|[AdventureWorks2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)|[AdventureWorksDW2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak)|[AdventureWorksLT2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak)|
+|[AdventureWorks2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)|[AdventureWorksDW2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)|[AdventureWorksLT2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2017.bak)|
+|[AdventureWorks2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016.bak)|[AdventureWorksDW2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016.bak)|[AdventureWorksLT2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2016.bak)|
+|[AdventureWorks2016_EXT. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)|[AdventureWorksDW2016_EXT. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016_EXT.bak)| – |
+|[AdventureWorks2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2014.bak)|[AdventureWorksDW2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2014.bak)|[AdventureWorksLT2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2014.bak)|
+|[AdventureWorks2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2012.bak)|[AdventureWorksDW2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2012.bak)|[AdventureWorksLT2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2012.bak)|
+|[AdventureWorks2008R2. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)| [AdventureWorksDW2008R2. bak](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak) | – |
 
-- [ZIP-Skripts für AdventureWorks-OLTP](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks-oltp-install-script.zip)
-- [ZIP-Skripts für AdventureWorks DW](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW-data-warehouse-install-script.zip)
+Weitere Dateien finden Sie direkt auf GitHub: 
 
-## <a name="github-links"></a>GitHub-Links
+- [SQL Server 2014-2019](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
+- [SQL Server 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)
+- [SQL Server 2008 und 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
 
-- [Alle AdventureWorks-Dateien für SQL 2014-2016](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
-- [Alle AdventureWorks-Dateien für SQL 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)
-- [Alle AdventureWorks-Dateien für SQL 2008 und 2008R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)
 
-## <a name="install-to-sql-server"></a>In SQL Server installieren
+## <a name="restore-to-sql-server"></a>In SQL Server wiederherstellen 
 
-### <a name="restore-backup"></a>Sicherung wiederherstellen
-Führen Sie die folgenden Schritte aus, um eine Sicherung der Datenbank mithilfe SQL Server Management Studio wiederherzustellen. 
+Sie können die- `.bak` Datei verwenden, um die Beispieldatenbank auf Ihrer SQL Server-Instanz wiederherzustellen. Verwenden Sie hierzu den Befehl [Restore (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) , oder verwenden Sie die grafische Benutzeroberfläche (GUI) in [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) oder [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md).
 
-1. Öffnen Sie SQL Server Management Studio und stellen Sie eine Verbindung mit der Ziel SQL Server Instanz her.
-2. Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**.
-3. Wählen Sie das **Gerät** aus, und klicken Sie auf die Ellipse (**...**)
-4. Wählen Sie im Dialogfeld **Sicherungs**Medien aus, klicken Sie auf **Hinzufügen**, navigieren Sie im Dateisystem des Servers zu der Datenbanksicherung, und wählen Sie die Sicherung aus. Klicken Sie auf **OK**.
-5. Ändern Sie ggf. den Zielort für die Daten-und Protokolldateien im Bereich " **Dateien** ". Beachten Sie, dass es eine bewährte Vorgehensweise ist, Daten-und Protokolldateien auf verschiedenen Laufwerken zu platzieren.
-6. Klicken Sie auf **OK**. Dadurch wird die Daten Bank Wiederherstellung initiiert. Nachdem der Vorgang abgeschlossen ist, wird die AdventureWorks-Datenbank auf Ihrer SQL Server-Instanz installiert.
+# <a name="transact-sql-t-sql"></a>[Transact-SQL (T-SQL)](#tab/tsql)
+
+Sie können die Beispieldatenbank mithilfe von Transact-SQL (T-SQL) wiederherstellen. Im folgenden finden Sie ein Beispiel für die Wiederherstellung von AdventureWorks2019. der Datenbankname und der Installations Dateipfad können jedoch je nach Umgebung variieren. 
+
+Um AdventureWorks2019 wiederherzustellen, ändern Sie die Werte entsprechend Ihrer Umgebung, und führen Sie dann den folgenden Transact-SQL-Befehl (T-SQL) aus:
+
+```sql
+USE [master]
+RESTORE DATABASE [AdventureWorks2019] 
+FROM  DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup\AdventureWorks2019.bak' 
+WITH  FILE = 1,  NOUNLOAD,  STATS = 5
+GO
+
+```
+
+# <a name="sql-server-management-studio-ssms"></a>[SQL Server Management Studio (SSMS)](#tab/ssms)
+
+Wenn Sie mit der Verwendung von SQL Server Management Studio (SSMS) nicht vertraut sind, finden Sie unter [Connect & Query](../ssms/tutorials/connect-query-sql-server.md) to Started. 
+
+Führen Sie die folgenden Schritte aus, um die Datenbank in SQL Server Management Studio wiederherzustellen:
+
+1. Laden Sie die entsprechende `.bak` Datei von einem der Links im Abschnitt [Download. bak-Dateien](#download-bak-files) herunter.
+2. Verschieben Sie die `.bak` Datei an den SQL Server Sicherungs Speicherort. Dies variiert abhängig vom Installationsort, dem Instanznamen und der Version von SQL Server. Der Standard Speicherort für eine Standard Instanz von SQL Server 2019 lautet wie folgt:
+
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
+
+3. Öffnen Sie SQL Server Management Studio (SSMS), und stellen Sie eine Verbindung mit Ihrem SQL Server in her. 
+4. Klicken Sie mit der rechten Maustaste auf **Datenbanken** **Objekt-Explorer**  >  **Restore Database...** , um den **Wiederherstellungs** -Assistenten zu starten. 
+
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-ssms.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen":::
+
+
+1. Wählen Sie **Gerät** aus, und wählen Sie dann die Auslassungs Punkte **(...)** aus, um ein Gerät auszuwählen. 
+1. Wählen Sie **Hinzufügen** aus, und wählen Sie dann die `.bak` Datei aus, die Sie vor kurzem in diesen Wenn Sie die Datei an diesen Speicherort verschoben haben, Sie aber nicht im Assistenten sehen können, weist dies in der Regel auf ein Berechtigungsproblem hin. SQL Server oder der Benutzer, der sich bei SQL Server angemeldet hat, verfügt nicht über die Berechtigung für diese Datei in diesem Ordner. 
+1. Wählen Sie **OK** aus, um die Auswahl der Datenbanksicherung zu bestätigen und das Fenster **Sicherungsmedien auswählen** zu schließen. 
+1. Überprüfen Sie die Registerkarte " **Dateien** ", um zu bestätigen, dass die **Wiederherstellung als** Speicherort und Dateinamen **mit dem gewünschten** Speicherort und den Dateinamen im Assistenten 
+1. Klicken Sie auf **OK**, um die Datenbank wiederherzustellen. 
+
+   :::image type="content" source="media/adventureworks-install-configure/restore-db-wizard-ssms.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen":::
 
 Weitere Informationen zum Wiederherstellen einer SQL Server Datenbank finden [Sie unter Wiederherstellen einer Datenbanksicherung mit SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
+# <a name="azure-data-studio"></a>[Azure Data Studio](#tab/data-studio)
 
-### <a name="attach-a-datafile"></a>Anfügen einer Datendatei
-Führen Sie die folgenden Schritte aus, um die Datendatei für Ihre Datenbank mithilfe von SQL Server Management Studio anzufügen.
+Wenn Sie mit [Azure Data Studio Studio](../azure-data-studio/download-azure-data-studio.md)nicht vertraut sind, finden Sie unter [Connect & Query](../azure-data-studio/quickstart-sql-server.md) to Started
 
-1. Öffnen Sie SQL Server Management Studio und stellen Sie eine Verbindung mit der Ziel SQL Server Instanz her.
-2. Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Anfügen**.
-3. Wählen Sie **Hinzufügen** aus, und navigieren Sie zum. MDF-Datei, die Sie anfügen möchten. 
-1. Wählen Sie die Datei aus, und klicken Sie auf **OK**. 
-    1. Die Datenbank, die Sie ausgewählt haben, sollte im unteren Fenster angezeigt werden. Wenn die Datei als "nicht gefunden" aufgeführt ist, wählen Sie die Auslassungs Punkte (**...**) neben dem Dateinamen aus, und aktualisieren Sie den Pfad auf den richtigen Pfad. 
-    1. Wenn Sie nur die Datendatei (. mdf) und nicht die Protokolldatei (. ldf) haben, markieren Sie die LDF-Datei im unteren Fenster, und wählen Sie **Entfernen**aus. Dadurch wird eine neue Protokolldatei erstellt. 
-1. Wählen Sie **OK** aus, um die Datei anzufügen. Nachdem die Datei angefügt wurde, wird die AdventureWorks-Datenbank auf Ihrer SQL Server-Instanz installiert.  
+Führen Sie die folgenden Schritte aus, um die Datenbank in Azure Data Studio wiederherzustellen:
 
-Weitere Informationen zum Anfügen von Datenbankdateien finden Sie unter [Anfügen einer Datenbank](../relational-databases/databases/attach-a-database.md). 
+1. Laden Sie die entsprechende `.bak` Datei von einem der Links im Abschnitt [Download. bak-Dateien](#download-bak-files) herunter.
+1. Verschieben Sie die `.bak` Datei an den SQL Server Sicherungs Speicherort. Dies variiert abhängig vom Installationsort, dem Instanznamen und der Version von SQL Server. Der Standard Speicherort für eine Standard Instanz von SQL Server 2019 lautet wie folgt:
 
-## <a name="install-to-azure-sql-database"></a>Installieren in Azure SQL-Datenbank
+    `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`.
 
+1. Öffnen Sie Azure Data Studio Studio, und stellen Sie eine Verbindung mit Ihrer SQL Server Instanz her
+1. Klicken Sie mit der rechten Maustaste auf Ihren Server, und wählen Sie **Verwalten**.
 
-Wenn Sie noch keine SQL Server in Azure haben, navigieren Sie zum [Azure-Portal](https://portal.azure.com/) , und erstellen Sie eine neue SQL-Datenbank. Beim Erstellen einer Datenbank erstellen Sie einen Server. Notieren Sie sich den Server. In [diesem Tutorial](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) erfahren Sie, wie Sie eine Datenbank in wenigen Minuten erstellen.
+   :::image type="content" source="media/adventureworks-install-configure/ads-manage.png" alt-text="Stellen Sie die Datenbank wieder her, indem Sie in Objekt-Explorer mit der rechten Maustaste auf Datenbanken und anschließend auf Datenbank wiederherstellen":::
+
+1. Auswählen der **Wiederherstellung**
+
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore-database.png" alt-text="Wählen Sie im oberen Menü wiederherstellen aus, um die Datenbank wiederherzustellen.":::
+
+1. Geben Sie auf der Registerkarte **Allgemein** die unter **Quelle**aufgeführten Werte ein.
+    1. Wählen Sie unter **Wiederherstellen von**die Option *Sicherungsdatei*aus.
+    1. Wählen Sie unter **Pfad der Sicherungsdatei**den Speicherort aus, an dem Sie die BAK-Datei gespeichert haben. 
+    
+   :::image type="content" source="media/adventureworks-install-configure/ads-source.png" alt-text="Wählen Sie den Pfad der Sicherungsdatei.":::
+    
+    Mit diesem Vorgang werden die restlichen Felder automatisch aufgefüllt, z. b. **Datenbank**, **Zieldatenbank** und **Wiederherstellung**. 
+
+   :::image type="content" source="media/adventureworks-install-configure/ads-destination-restore-plan.png" alt-text="Nachdem Sie einen Pfad für die Sicherungsdatei ausgewählt haben, wird der Rest der Felder unter":::
+
+1. Wählen Sie **Wiederherstellen** aus, um die Datenbank wiederherzustellen. 
+
+   :::image type="content" source="media/adventureworks-install-configure/ads-restore.png" alt-text="Wenn Sie fertig sind, wählen Sie wiederherstellen aus, um die Datenbank wiederherzustellen.":::
+
+---
+
+## <a name="deploy-to-azure-sql-database"></a>In Azure SQL-Datenbank bereitstellen
+
+Sie haben zwei Möglichkeiten, Beispiel Daten der Azure SQL-Datenbank anzuzeigen. Sie können ein Beispiel verwenden, wenn Sie eine neue Datenbank erstellen, oder Sie können eine Datenbank aus SQL Server direkt in Azure bereitstellen, indem Sie SQL Server Management Studio (SSMS) verwenden.
+
+Informationen zum Anzeigen von Beispiel Daten für Azure SQL-verwaltete Instanz finden Sie unter [Wiederherstellen von weltweiten Import Programmen für SQL verwaltete Instanz](/azure/azure-sql/managed-instance/restore-sample-database-quickstart). 
+
+### <a name="deploy-new-sample-database"></a>Neue Beispieldatenbank bereitstellen
+
+Wenn Sie eine neue Datenbank in Azure SQL-Datenbank erstellen, haben Sie die Möglichkeit, eine leere Datenbank oder eine Beispieldatenbank zu erstellen. 
+
+Führen Sie die folgenden Schritte aus, um eine-Beispieldatenbank zum Erstellen einer neuen Datenbank zu verwenden: 
 
 1. Stellen Sie eine Verbindung mit Ihrem Azure-Portal her
 1. Wählen Sie oben links im Navigationsbereich **Ressource erstellen** aus. 
 1. Wählen Sie **Datenbanken** und dann **SQL-Datenbank** aus. 
-1. Geben Sie die erforderlichen Informationen ein.
-1. Wählen Sie im Feld **Quelle auswählen** die Option **Sample (AdventureWorksLT)** aus, um eine Sicherung der neuesten AdventureWorksLT-Sicherung wiederherzustellen.
+1. Geben Sie die angeforderten Informationen ein, um die Datenbank zu erstellen. 
+1. Wählen Sie auf der Registerkarte **zusätzliche Einstellungen** die Option **Sample** als vorhandene Daten unter **Datenquelle**aus: 
+
+   :::image type="content" source="media/adventureworks-install-configure/deploy-sample-to-azure.png" alt-text="Wählen Sie Beispiel als Datenquelle auf der Registerkarte zusätzliche Einstellungen in der Azure-Portal aus, wenn Sie die Azure SQL-Datenbank erstellen.":::
+
 1. Wählen Sie **Erstellen** aus, um die neue SQL-Datenbank zu erstellen. Dies ist die wiederhergestellte Kopie der AdventureWorksLT-Datenbank. 
 
 
-## <a name="see-also"></a>Weitere Informationen:
-[Lernprogramme für SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
-[Tutorials für SQL Server Datenbank-Engine](../relational-databases/database-engine-tutorials.md)
+### <a name="deploy-database-from-sql-server"></a>Datenbank aus SQL Server bereitstellen
+
+SQL Server Management Studio bietet die Möglichkeit, eine Datenbank direkt in Azure SQL-Datenbank bereitzustellen. Diese Methode stellt derzeit keine Datenüberprüfung bereit, sodass Sie für Entwicklung und Tests vorgesehen ist und nicht für die Produktion verwendet werden sollte. 
+
+Führen Sie die folgenden Schritte aus, um eine Beispieldatenbank aus SQL Server in Azure SQL-Datenbank bereitzustellen:
+
+1. Stellen Sie in SQL Server Management Studio eine Verbindung mit Ihrem SQL Server her. 
+1. Wenn Sie dies noch nicht getan haben, stellen Sie [die-Beispieldatenbank in SQL Server wieder her](#restore-to-sql-server). 
+1. Klicken Sie mit der rechten Maustaste auf die wiederhergestellte Datenbank in **Objekt-Explorer**  >  **Tasks**  >  **Datenbank in Microsoft Azure SQL-Datenbank**bereitstellen.... 
+
+   :::image type="content" source="media/adventureworks-install-configure/deploy-db-to-azure.png" alt-text="Wählen Sie die Bereitstellung der Datenbank auf Microsoft Azure SQL-Datenbank aus, indem Sie mit der rechten Maustaste auf die Datenbank klicken und Aufgaben":::
+
+1. Befolgen Sie den Assistenten, um eine Verbindung mit Azure SQL-Datenbank herzustellen und die Datenbank bereitzustellen. 
+
+
+## <a name="creation-scripts"></a>Erstellungs Skripts
+
+Anstatt eine Datenbank wiederherzustellen, können Sie alternativ Skripts verwenden, um die AdventureWorks-Datenbanken unabhängig von der jeweiligen Version zu erstellen. 
+
+Die folgenden Skripts können verwendet werden, um die gesamte AdventureWorks-Datenbank zu erstellen: 
+
+- [ZIP-Skripts für AdventureWorks-OLTP](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks-oltp-install-script.zip)
+- [ZIP-Skripts für AdventureWorks DW](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW-data-warehouse-install-script.zip)
+
+Weitere Informationen zur Verwendung der Skripts finden Sie auf [GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). 
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Nachdem Sie die Beispieldatenbank wieder hergestellt haben, verwenden Sie die folgenden Tutorials für die ersten Schritte mit SQL Server: 
+
+
+[Tutorials für SQL Server Datenbank-Engine](../relational-databases/database-engine-tutorials.md)   
+[Verbinden und Abfragen mit SQL Server Management Studio (SSMS)](../ssms/tutorials/connect-query-sql-server.md)   
+[Verbinden und Abfragen mit Azure Data Studio](../ssms/tutorials/connect-query-sql-server.md)

@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - SMO Connection Manager Editor
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fd7d4696015110fc2df11bea87f045580424c361
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2dd9b6d61c5c00fc1330aa23a385d335dd164ada
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962950"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421407"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO-Verbindungs-Manager-Editor
   Verwenden Sie den **Editor für den SMO-Verbindungs-Manager** , um eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Verbindung zu konfigurieren, die von verschiedenen Tasks zur Übermittlung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekten verwendet werden kann.  
   
  Weitere Informationen zum SMO-Verbindungs-Manager finden Sie unter [SMO Connection Manager](connection-manager/smo-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Servername**  
  Geben Sie den Namen der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz ein, oder wählen Sie den Servernamen aus der Liste aus.  
   

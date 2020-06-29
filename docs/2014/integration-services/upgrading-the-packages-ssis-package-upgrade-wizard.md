@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.upgradingpackage.f1
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 95c4a27a6ef20ac52521c707ae4a83329a81716d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 238a4c936f1e0de5c993e2535a16106c502aece9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972660"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420377"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Pakete werden aktualisiert (SSIS Paketupgrade-Assistent)
   Verwenden Sie die Seite **Pakete werden aktualisiert** , um den Status der Paketaktualisierung anzuzeigen und um den Aktualisierungsprozess unterbrechen. Der [!INCLUDE[ssIS](../includes/ssis-md.md)] Paketaktualisierungs-Assistent aktualisiert die ausgewählten Pakete nacheinander.  
@@ -29,7 +29,7 @@ ms.locfileid: "84972660"
   
 -   Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im Projektmappen-Explorer das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt, und erweitern Sie dann den Knoten **SSIS-Pakete** , um die aktualisierten Pakete anzuzeigen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Bereich „Meldung“**  
  Zeigt während der Aktualisierung Statusmeldungen und Zusammenfassungsinformationen an.  
   

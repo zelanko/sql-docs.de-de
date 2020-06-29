@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b3a44a21e375d37115f71ff8762b941bd87ef2ae
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61e511aaff6c3c77338211537a685f8a1dc82981
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972720"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420607"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generieren von Dumpdateien für die Paketausführung
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Debugdumpdateien erstellen, die Informationen über die Ausführung eines Pakets enthalten. Die Informationen in diesen Dateien können Ihnen bei der Behebung von Problemen bei der Paketausführung helfen.  
@@ -47,7 +47,7 @@ ms.locfileid: "84972720"
   
 |Art der Informationen|Beschreibung|Beispiel|  
 |-------------------------|-----------------|-------------|  
-|Umgebung|Betriebssystemversion, Speicherauslastungsdaten, Prozess-ID und Name des Prozessimages. Die Umgebungsinformationen befinden sich am Anfang der TMP-Datei.|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Programme\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
+|Environment|Betriebssystemversion, Speicherauslastungsdaten, Prozess-ID und Name des Prozessimages. Die Umgebungsinformationen befinden sich am Anfang der TMP-Datei.|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Programme\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
 |Pfad und Version der Dynamic Link Library (DLL)|Pfad und Versionsnummer jeder DLL, die das System während der Verarbeitung eines Pakets lädt.|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Loaded Module: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Loaded Module: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
 |Letzte Meldungen|Letzte Meldungen, die vom System ausgegeben wurden. Schließt die Zeit, Typ, Beschreibung und Thread-ID jeder Meldung ein.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]       <<\<CRingBufferLogging::RingBufferLoggingRecord>>>  ( \@ 0282f 1)<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description: The component is missing, not registered, not upgradeable, or missing required interfaces. Die Kontaktinformationen für diese Komponente lauten "".|  
   

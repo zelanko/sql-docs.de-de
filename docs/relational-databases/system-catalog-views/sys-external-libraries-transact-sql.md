@@ -1,7 +1,7 @@
 ---
 title: sys. external_libraries (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 06/25/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -18,21 +18,21 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b1bfc00b403fa76f692db78593ed4c0e6b53ce8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 7303649ec6d7a849979871de3f4f91b978adc23a
+ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80664433"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409369"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 Unterstützt die Verwaltung von Paket Bibliotheken im Zusammenhang mit externen Laufzeiten, wie z. b. R, Python und Java.
 
 > [!NOTE]
-> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. R, Python und Java werden für die Windows- und die Linux-Plattform in SQL Server 2019 und höher unterstützt.
+> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. R, Python und Java werden für die Windows- und die Linux-Plattform in SQL Server 2019 und höher unterstützt. In Azure SQL verwaltete Instanz werden R und python unterstützt.
 
 ## <a name="sysexternal_libraries"></a>sys.external_libraries
 
@@ -41,15 +41,15 @@ In der Katalog Sicht sys. external_libraries wird eine Zeile für jede externe B
 |Spaltenname |Datentyp | BESCHREIBUNG|
 |------|------|------|
 |external_library_id |INT | ID des externen Bibliotheks Objekts. |
-|Name |sysname |Der Name der externen Bibliothek. Ist innerhalb der Datenbank pro Besitzer eindeutig.|
+|name |sysname |Der Name der externen Bibliothek. Ist innerhalb der Datenbank pro Besitzer eindeutig.|
 |principal_id |INT |ID des Prinzipals, der diese externe Bibliothek besitzt. |
 |language | sysname | Der Name der Sprache oder Laufzeit, die die externe Bibliothek unterstützt. Gültige Werte sind ' R ', ' python ' und ' Java '. Weitere Laufzeiten werden möglicherweise in der Zukunft hinzugefügt.|
 |scope |INT |0 für öffentlichen Bereich; 1 für privaten Bereich |  
 |scope_desc |varchar (7) |Gibt an, ob das Paket öffentlich oder privat ist.|
 
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Siehe auch  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [externe Bibliothek erstellen](../../t-sql/statements/create-external-library-transact-sql.md)  
-+ [Installieren neuer R-Pakete unter SQL Server](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)  
-+ [Installieren neuer Python-Pakete unter SQL Server](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md)  
++ [Installieren neuer R-Pakete](../../machine-learning/package-management/install-additional-r-packages-on-sql-server.md)  
++ [Installieren neuer Python-Pakete](../../machine-learning/package-management/install-additional-python-packages-on-sql-server.md)  

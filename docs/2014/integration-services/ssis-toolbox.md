@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.dts.designer.toolbox.F1
 - sql12.dts.designer.toolboxfavorites.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5ed9a0b96fced32a761e41d31c06447511fb4334
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed35218c84c77d3116ab8c897fe51fab5d6359aa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962400"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420887"
 ---
 # <a name="ssis-toolbox"></a>SSIS-Toolbox
   Alle Komponenten, die auf dem lokalen Computer installiert sind, einschließlich für SQL Server 2008 und 2008 R2 erstellte Komponenten von Drittanbietern, werden jetzt automatisch in der neuen **SSIS-Toolbox**angezeigt. Wenn Sie zusätzliche Komponenten installieren, klicken mit der rechten Maustaste in die Toolbox und dann auf **Toolbox aktualisieren** , um die Komponenten hinzuzufügen.  
