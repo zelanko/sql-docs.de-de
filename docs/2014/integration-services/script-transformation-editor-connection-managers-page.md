@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 11884b2bb52c2c38fcae708346afa54151502ffc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d4884ca83b1fc8dd53a0483d98920501c356a6bf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964070"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422147"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>Transformations-Editor für Skripterstellung (Seite Verbindungs-Manager)
   Auf der Seite **Verbindungs-Manager** von **Transformations-Editor für Skripterstellung** können Sie Verbindungen angeben, die vom Skript verwendet werden.  
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verbindungs-Manager**  
  Zeigen Sie die Liste der Verbindungen an, die durch das Skript verwendet werden können.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "84964070"
  **Beschreibung**  
  Geben Sie eine Beschreibung für die Verbindung ein.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Fügen Sie der Liste **Verbindungs-Manager** eine weitere Verbindung hinzu.  
   
  **Entfernen**  

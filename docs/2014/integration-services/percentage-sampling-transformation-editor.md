@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Percentage Sampling Transformation Editor
 ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1734dd95a0744e08e57bcdff3a80f882b926c2ba
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ee1227c874839c81625d054793e554a07e95b4a3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964691"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423327"
 ---
 # <a name="percentage-sampling-transformation-editor"></a>Transformations-Editor für Prozentwertstichprobe
   Im Dialogfeld **Transformations-Editor für Prozentwertstichprobe** können Sie einen Teil der Eingabe mithilfe des angegebenen Prozentsatzes von Zeilen als Stichprobe entnehmen. Durch diese Transformation wird die Eingabe in zwei getrennte Ausgaben geteilt.  
   
  Weitere Informationen zur Transformation für Prozentwert-Stichproben finden Sie unter [Percentage Sampling Transformation](data-flow/transformations/percentage-sampling-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Prozentsatz der Zeilen**  
  Geben Sie den Prozentsatz der Zeilen in der Eingabe an, die als Stichprobe verwendet werden sollen.  
   

@@ -9,21 +9,21 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.f1
 ms.assetid: 281a36c6-c2c2-4a25-8f48-5f372ed8b63f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0017111b0c5c0ab3e6414d801395eba99ececc82
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0954fdc7ea07521023e6de0c816d29174afe16e0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963660"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421787"
 ---
 # <a name="select-script-component-type"></a>Skriptkomponententyp auswählen
   Mithilfe des Dialogfelds **Skriptkomponententyp auswählen** können Sie angeben, ob eine Skripttransformation mit einer Vorkonfiguration als Quelle, Transformation oder Ziel verwendet wird.  
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Ihre Auswahl zwischen **Quelle**, **Ziel**und **Transformation** beeinflusst die Konfiguration der Skripttransformation und die Seiten des Transformations-Editors für die Skripterstellung.  
   
 ## <a name="see-also"></a>Weitere Informationen  

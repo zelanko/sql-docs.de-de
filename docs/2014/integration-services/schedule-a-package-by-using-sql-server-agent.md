@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 56fc015eb3bf089e573ece9df73f8ff08c3423be
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f4dd958ebeae0a62f73e23e5b8fad66c3ec4e665
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964318"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422497"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>Planen eines Pakets mit dem SQL Server-Agent
   Im Folgenden werden Schritte beschrieben, mit denen die Ausführung eines Pakets automatisiert werden kann, indem das Paket unter Verwendung eines Auftragsschritts des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Agents ausgeführt wird.  
@@ -50,7 +50,7 @@ ms.locfileid: "84964318"
   
      **In der folgenden Tabelle sind die möglichen Paketquellen beschrieben.**  
   
-    |Paketquelle|Beschreibung|  
+    |Paketquelle|BESCHREIBUNG|  
     |--------------------|-----------------|  
     |**SSIS-Katalog**|Pakete, die in der SSISDB-Datenbank gespeichert sind. Die Pakete sind in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekten enthalten, die auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitgestellt werden.|  
     |**SQL Server**|Pakete, die in der MSDB-Datenbank gespeichert sind. Sie verwenden den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst, um diese Pakete zu verwalten.|  
@@ -64,7 +64,7 @@ ms.locfileid: "84964318"
   
      **Paketquelle**: SSIS-Katalog  
   
-    |Registerkarte|Tastatur|  
+    |Registerkarte|Optionen|  
     |---------|-------------|  
     |**Pakete**|**Server**<br /><br /> Geben Sie den Namen der Datenbankserver-Instanz ein, die den SSISDB-Katalog hostet, oder wählen Sie den Namen aus.<br /><br /> Wenn die Paketquelle **SSIS-Katalog** lautet, können Sie sich nur unter Verwendung eines Microsoft Windows-Benutzerkontos beim Server anmelden. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentifizierung ist nicht verfügbar.|  
     ||**Pakete**<br /><br /> Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, und wählen Sie ein Paket aus.<br /><br /> Sie wählen ein Paket in einem Ordner unter dem Knoten **Integration Services-Kataloge** im **Objekt-Explorer**aus.|  
@@ -79,7 +79,7 @@ ms.locfileid: "84964318"
   
      Viele Optionen, die Sie für die in SQL Server, im SSIS-Paketspeicher oder im Dateisystem gespeicherten Pakete festlegen können, entsprechen den Befehlszeilenoptionen für das Eingabeaufforderungs-Hilfsprogramm `dtexec`. Weitere Informationen zum Hilfsprogramm und den Befehlszeilenoptionen finden Sie unter [dtexec (Hilfsprogramm)](packages/dtexec-utility.md).  
   
-    |Registerkarte|Tastatur|  
+    |Registerkarte|Optionen|  
     |---------|-------------|  
     |**Pakete**<br /><br /> Diese Registerkartenoptionen sind auf Pakete anwendbar, die in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher gespeichert sind.|**Server**<br /><br /> Geben Sie den Namen der Datenbankserver-Instanz für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst ein, oder wählen Sie den Namen aus.|  
     ||**Windows-Authentifizierung verwenden**<br /><br /> Wählen Sie diese Option aus, um sich unter Verwendung eines Microsoft Windows-Benutzerkontos beim Server anzumelden.|  
