@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e953cf4c8b3001b199523a747f934283e60473b8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6494c70226195f3cab10c3a3925c19dcfcdd954e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916260"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432267"
 ---
 # <a name="create-infosource"></a>InfoSource erstellen
   Verwenden Sie das Dialogfeld **InfoSource erstellen** , um eine neue InfoSource zu erstellen. Zum Erstellen der neuen InfoSource verwenden Sie entweder das Dialogfeld **InfoSource für Transaktionsdaten erstellen** oder **InfoSource für Masterdaten erstellen** .  
