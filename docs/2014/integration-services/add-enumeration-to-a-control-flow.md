@@ -13,14 +13,14 @@ helpviewer_keywords:
 - repeating workflows
 - enumerations [Integration Services]
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bff127798f7c36340a85fa72cebfdc9a012c0676
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3eb7a34978221a87b0e288f37c4f728a3a470465
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926101"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439647"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Hinzufügen einer Enumeration zu einer Ablaufsteuerung
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] umfasst den Foreach-Schleifencontainer. Dabei handelt es sich um ein Ablaufsteuerungselement, mit dem Sie auf einfache Weise eine Schleifenkonstruktion zum Aufzählen der Dateien und Objekte in der Ablaufsteuerung eines Pakets einbinden können. Weitere Informationen finden Sie unter [Foreach-Schleifencontainer](control-flow/foreach-loop-container.md).  

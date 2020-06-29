@@ -15,14 +15,14 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2c3b94bef3cf3549720321a0bcd47f7314ff1ff8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2818898e790aa92a27de1f224581a17a7ae4fa06
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924931"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439277"
 ---
 # <a name="creating-a-package-programmatically"></a>Programmgesteuertes Erstellen eines Pakets
   Das <xref:Microsoft.SqlServer.Dts.Runtime.Package>-Objekt ist der Container oberster Ebene für alle anderen Objekte in einer [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Projektmappe. Als Container der obersten Ebene ist das Paket das erste Objekt, das erstellt wird. Nachfolgende Objekte werden diesem hinzugefügt und dann in dem Kontext des Pakets ausgeführt. Das Paket selbst verschiebt oder transformiert keine Daten. Das Paket ist zur Ausführung der Arbeit auf die Tasks angewiesen, die es enthält. Tasks führen den Großteil der von einem Paket ausgeführten Arbeit aus und definieren die Funktionalität eines Pakets. Ein Paket wird mit nur drei Codezeilen erstellt und ausgeführt. Um dem Paket zusätzliche Funktionalität zu verleihen, können jedoch verschiedene Tasks und <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>-Objekte hinzugefügt werden. In diesem Abschnitt wird erläutert, wie ein Paket programmgesteuert erstellt wird. Er enthält keine Informationen zum Erstellen der Tasks oder des <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Diese Themen werden in späteren Abschnitten behandelt.  

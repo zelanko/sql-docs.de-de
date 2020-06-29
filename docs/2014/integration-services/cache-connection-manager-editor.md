@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 403210fd8a60cdfb7e92b18f9bb66ccb0a6f1f4c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d22744bd83daa70994e552965ea96d148800afef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924621"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439147"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor für den Cacheverbindungs-Manager
   Der Cacheverbindungs-Manager liest ein Verweisdataset aus der Cachetransformation oder einer Cachedatei (.caw) und kann die Daten in einer Cachedatei speichern. Die Daten werden immer im Arbeitsspeicher abgelegt.  
@@ -37,7 +37,7 @@ ms.locfileid: "84924621"
 ##  <a name="general-tab"></a><a name="generaltab"></a>Registerkarte Allgemein  
  Geben Sie auf der Registerkarte **Allgemein** des Dialogfelds **Editor für den Cacheverbindungs-Manager** an, ob der Cache aus einer Datei gelesen werden soll oder ob der Cache in einer Datei gespeichert werden soll.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Cacheverbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer angezeigt.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "84924621"
 ##  <a name="columns-tab"></a><a name="columnstab"></a>Registerkarte Spalten  
  Auf der Registerkarte **Spalten** des Dialogfelds **Editor für den Cacheverbindungs-Manager** können Sie die Eigenschaften jeder Spalte im Cache konfigurieren.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Spalte**  
  Geben Sie den Spaltennamen an.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "84924621"
 > [!NOTE]  
 >  Wenn die Transformation für Suche so konfiguriert ist, dass sie einen Cacheverbindungs-Manager verwendet, können nur Indexspalten im Verweisdataset Eingabespalten zugeordnet werden. Auch müssen alle Indexspalten zugeordnet werden.  
   
- **Typ**  
+ **Type**  
  Geben Sie den Datentyp der Spalte an.  
   
  `Length`  

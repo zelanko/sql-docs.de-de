@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2cd722fd8520ff011c0d57040a55d624178e15e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924641"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439167"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Masseneinfügungstask-Editor (Seite Verbindung)
   Mithilfe der Seite **Verbindung** im Dialogfeld **Masseneinfügungstask-Editor** können Sie die Quelle und das Ziel des Masseneinfügevorgangs und das zu verwendende Format angeben.  
   
  Informationen zum Arbeiten mit Masseneinfügungen finden Sie unter [Masseneinfügungstask](control-flow/bulk-insert-task.md) und [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Connection**  
  Wählen Sie einen OLE DB Verbindungs-Manager aus der Liste aus, oder klicken Sie \<**New connection...**> auf, um eine neue Verbindung zu erstellen.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "84924641"
  **Format**  
  Wählen Sie die Quelle des Formats für die Masseneinfügung aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Use File**|Wählen Sie eine Datei mit Formatspezifikationen aus. Nach Auswahl dieser Option wird die dynamische Option **FormatFile**angezeigt.|  
 |**Specify**|Geben Sie das Format an. Wenn Sie diese Option auswählen, werden die dynamischen Optionen `RowDelimiter` und angezeigt `ColumnDelimiter` .|  

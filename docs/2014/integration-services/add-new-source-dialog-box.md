@@ -9,19 +9,19 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addNewSource.f1
 ms.assetid: 619e437b-e00f-49a9-a94c-8feafc4af713
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ed1b5851868705000d5aa04eb885b8e188dd45ea
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 64e4b32dbfa591550fc1662e57a247d493c5a28d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925911"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439607"
 ---
 # <a name="add-new-source-dialog-box"></a>Neue Quelle hinzufügen (Dialogfeld)
   In der folgenden Tabelle sind die Optionen im Dialogfeld "Neue Quelle hinzufügen" aufgeführt.  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |Typen|Wählen Sie den Quelltyp aus, mit dem Sie eine Verbindung herstellen möchten.|  
 |Verbindungs-Manager|Wählen Sie einen vorhandenen Verbindungs-Manager aus, oder klicken Sie **\<New>** zum Erstellen eines neuen Verbindungs-Managers.|  

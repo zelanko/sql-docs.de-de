@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9c6cd168a852eca294e85de696a611b460423c5a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 49861de7be207875c554e02d3f3b1b2f941fff64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926551"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439797"
 ---
 # <a name="active-operations-dialog-box"></a>Aktive Vorgänge (Dialogfeld)
   Verwenden Sie das Dialogfeld **Aktive Vorgänge** , um den Status der derzeit ausgeführten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Vorgänge auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server anzuzeigen, z. B. Bereitstellung, Überprüfung und Paketausführung. Diese Daten werden im SSISDB-Katalog gespeichert.  
@@ -40,8 +40,8 @@ ms.locfileid: "84926551"
   
 ##  <a name="configure-the-options"></a><a name="options"></a>Konfigurieren der Optionen  
   
-### <a name="options"></a>Tastatur  
- **Typ**  
+### <a name="options"></a>Optionen  
+ **Type**  
  Gibt den Vorgangstyp an. Im folgenden finden Sie die möglichen Werte für das **typanfeld** und die entsprechenden Werte in der operations_type-Spalte der Transact-SQL- `catalog.operations` Sicht.  
   
 |||  

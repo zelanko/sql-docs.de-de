@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5539544afba4e2752baaefb2324b33d3ac897b0a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e4597f3100e7c867b888d8af1d05204e2c271208
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962240"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440037"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Ausschluss)
   Auf der Registerkarte **Ausschluss** des Dialogfelds **Transformations-Editor für Ausdrucksextrahierung** können Sie eine Verbindung mit einer Ausschlusstabelle einrichten und die Spalten mit den Ausschlussausdrücken angeben.  
   
  Weitere Informationen zur Transformation für Ausdrucksextrahierung finden Sie unter [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ausschlussausdrücke verwenden**  
  Geben Sie an, ob bei der Ausdrucksextrahierung bestimmte Ausdrücke ausgeschlossen werden sollen, indem eine Spalte mit Ausschlussausdrücken angegeben wird. Wenn Sie bestimmte Ausdrücke ausschließen möchten, müssen Sie folgende Quelleigenschaften angeben.  
   

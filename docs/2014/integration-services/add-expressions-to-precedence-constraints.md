@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combining constraints
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93b9b60d3042e690d2e3e23b05131fabe384e945
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3b86869a2b5d2e1ecd93227355509170db2bd5c7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926111"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439667"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Hinzufügen von Ausdrücken zu Rangfolgeneinschränkungen
   Eine Rangfolgeneinschränkung kann mithilfe eines Ausdrucks die Einschränkung zwischen zwei ausführbaren Dateien definieren, nämlich der ausführbaren Datei der Rangfolge und der eingeschränkten ausführbaren Datei. Bei den ausführbaren Dateien kann es sich um Tasks oder Container handeln. Der Ausdruck kann separat oder in Kombination mit dem Ausführungsergebnis der ausführbaren Datei der Rangfolge verwendet werden. Das Ausführungsergebnis einer ausführbaren Datei ist Erfolg oder Fehler. Wenn Sie das Ausführungsergebnis einer Rangfolgeneinschränkung konfigurieren, können Sie das Ausführungsergebnis auf `Success`, `Failure` oder `Completion` festlegen. Für `Success` muss die ausführbare Datei der Rangfolge erfolgreich ausgeführt werden, für `Failure` muss die ausführbare Datei der Rangfolge mit einem Fehler ausgeführt werden. `Completion` zeigt an, dass die eingeschränkte ausführbare Datei unabhängig von einer erfolgreichen Ausführung des Rangfolgentasks ausgeführt werden sollte. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](control-flow/precedence-constraints.md).  

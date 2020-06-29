@@ -11,13 +11,13 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPDWUPTASK.F1
 ms.assetid: 112cf764-f85a-4c1a-b732-d299d717c0d4
 author: yualan
-ms.author: janinez
-ms.openlocfilehash: 249f29e40701658ddcc85f4a2a79fc8c0ac2cff5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.author: chugu
+ms.openlocfilehash: adcc4cc06ac01ea833972ffcd7c1a5ade411bfb2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925131"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439317"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW-Uploadtask
 Der **Azure SQL DW-Uploadtask** ermöglicht einem SSIS-Paket, lokale Daten in eine Tabelle in Azure SQL Data Warehouse (DW) hochzuladen. Das gegenwärtig unterstützte Quelldatenformat ist Text mit Trennzeichen in UTF8-Codierung. Der Uploadprozess folgt dem effizienten polybase-Ansatz. Insbesondere werden Daten zunächst in Azure Blob Storage und dann in Azure SQL Data Warehouse hochgeladen. Darum ist ein Azure Blob Storage-Konto erforderlich, um diesen Task zu verwenden.
@@ -26,7 +26,7 @@ Um einen **Azure SQL DW-Uploadtask**hinzuzufügen, ziehen Sie ihn mittels Drag &
 
 Konfigurieren Sie auf der Seite **Allgemein** die folgenden Eigenschaften.
 
-Feld|Beschreibung
+Feld|BESCHREIBUNG
 -----|-----------
 LocalDirectory|Gibt das lokale Verzeichnis mit den Datendateien an, die hochgeladen werden sollen.
 Rekursiv|Gibt an, ob Unterverzeichnisse rekursiv durchsucht werden sollen.

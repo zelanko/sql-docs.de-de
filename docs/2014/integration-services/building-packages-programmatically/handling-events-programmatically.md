@@ -21,14 +21,14 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c54c3fe00842122b4b2fdeb4eb6c7bcbb38cf0a4
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8d4bcb0da97f603177aade6ada44a6efd0f53604
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924811"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439197"
 ---
 # <a name="handling-events-programmatically"></a>Programmgesteuerte Behandlung von Ereignissen
   Die [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Laufzeit stellt eine Auflistung von Ereignissen bereit, die vor, während und nach der Überprüfung und Ausführung eines Pakets auftreten. Diese Ereignisse können auf zwei Weisen aufgezeichnet werden. Die erste Methode besteht in der Implementierung der <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>-Schnittstelle in einer Klasse und der Bereitstellung der Klasse als Parameter für `Execute`- und `Validate`-Methoden des Pakets. Die zweite Methode besteht in der Erstellung von <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>-Objekten, die andere [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Objekte enthalten können, wie z. B. Tasks und Loops, die ausgeführt werden, wenn ein Ereignis in <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> auftritt. In diesem Abschnitt werden diese beiden Methoden beschrieben und zur Veranschaulichung ihrer Verwendung Codebeispiele bereitgestellt.  

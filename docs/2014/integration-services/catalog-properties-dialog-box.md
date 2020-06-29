@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.ssis.ssms.iscatalogprop.general.f1
 - sql12.ssis.ssms.iscreatecatalog.f1
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f5bf6ecd9b78e4e7c35c63a1b84316d59da7a10
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9f1a4a9d7a74e47d609c319f90b07d8ebfdce00e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924561"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439137"
 ---
 # <a name="catalog-properties-dialog-box"></a>Katalogeigenschaften (Dialogfeld)
   Verwenden Sie das Dialogfeld Katalogeigenschaften, um den SSISDB-Katalog zu konfigurieren. Katalog Eigenschaften definieren, wie sensible Daten verschlüsselt werden, wie Vorgänge und projektversionsversionsdaten aufbewahrt werden und wann ein Timeout bei Überprüfungs Vorgängen auftritt. Der ssisdb-Katalog ist ein zentraler Speicher-und Verwaltungspunkt für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Projekte, Pakete, Parameter und Umgebungen.  
@@ -42,10 +42,10 @@ ms.locfileid: "84924561"
   
 ##  <a name="configure-the-options"></a><a name="options"></a>Konfigurieren der Optionen  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  In der folgenden Tabelle werden spezifische Eigenschaften in dem Dialogfeld und die entsprechenden Eigenschaften in der catalog.catalog_property-Sicht beschrieben.  
   
-|Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_property-Sicht)|Beschreibung|  
+|Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_property-Sicht)|BESCHREIBUNG|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |Name des Verschlüsselungsalgorithmus|ENCRYPTION_CLEANUP_ENABLED|Gibt den Verschlüsselungstyp an, der zur Verschlüsselung der sensiblen Parameterwerte im Katalog verwendet wird. Folgende Werte sind möglich:<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (Standard)|  
 |Überprüfungstimeout (Sekunden)|VALIDATION_TIMEOUT|Geben Sie die maximale Ausführungsdauer in Sekunden ab, bevor eine Projektüberprüfung oder Paketüberprüfung beendet wird. Der Standardwert beträgt 300 Sekunden.<br /><br /> Die Validierung ist ein asynchroner Vorgang. Je größer das Projekt oder das Paket ist, desto länger dauert die Validierung.<br /><br /> Informationen zum Überprüfen von Projekten und Paketen finden Sie unter [Integration Services Data Types in Expressions](expressions/integration-services-data-types-in-expressions.md).|  

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - LogProvider object
 - packages [Integration Services], logs
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4eb09433e2b2db77e6a2f40c1acf204513585a9f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: da6fa76641aaf7a2a712158eb33808df9e672d40
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924913"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439257"
 ---
 # <a name="enabling-logging-programmatically"></a>Programmgesteuertes Aktivieren der Protokollierung
   Die Runtime-Engine stellt eine Auflistung von <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider>-Objekten bereit, mit deren Hilfe ereignisspezifische Informationen während der Paketüberprüfung und -ausführung aufgezeichnet werden können. <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider>-Objekte sind für <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>-Objekte verfügbar; hierzu zählen auch die Objekte <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> und <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. Die Protokollierung wird für einzelne Container oder das gesamte Paket aktiviert.

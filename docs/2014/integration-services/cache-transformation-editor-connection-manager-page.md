@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetranscon.f1
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cc44af33e79f1c419a13444cca021da59f4917ba
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 04a127d8d2da6f10053067584b35c650c61bf845
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924569"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439127"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Cachetransformations-Editor (Seite 'Verbindungs-Manager')
   Mithilfe der Registerkarte **Verbindungs-Manager** des Dialogfelds **Cachetransformations-Editor** können Sie einen vorhandenen Cacheverbindungs-Manager auswählen oder einen neuen erstellen.  
@@ -25,7 +25,7 @@ ms.locfileid: "84924569"
   
  Weitere Informationen zum Cacheverbindungs-Manager finden Sie unter [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Cacheverbindungs-Manager**  
  Wählen Sie einen vorhandenen Cacheverbindungs-Manager aus dem Listenfeld aus, oder erstellen Sie mithilfe der Schaltfläche **Neu** eine neue Verbindung.  
   

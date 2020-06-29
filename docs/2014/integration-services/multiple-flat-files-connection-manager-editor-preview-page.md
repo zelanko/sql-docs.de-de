@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f16df0120e58b987009f0e8e674901e27bbfbe43
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 192620afe223b6c11e8ce646a15da3ddcc3258e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965130"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440107"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>Verbindungs-Manager-Editor für mehrere Flatfiles (Seite Vorschau)
   Auf der Seite **Vorschau** des Dialogfelds **Verbindungs-Manager-Editor für mehrere Flatfiles** können Sie den Inhalt der ersten ausgewählten Quelldatei anzeigen, der in die von Ihnen definierten Spalten unterteilt ist.  
   
  Weitere Informationen zum Verbindungs-Manager für mehrere Flatfiles finden Sie unter [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Verbindung für mehrere Flatfiles im Workflow an. Der eingegebene Name wird im Bereich **Verbindungs-Manager** des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers angezeigt.  
   

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9115b2a41111d65c4855cffcdc44e7fcd755285b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6fc54343ef930d4fbca1bbe25f2e03ba4e539d44
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972746"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439907"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor für den Task 'SQL Server-Objekte übertragen' (Seite Objekte)
   Verwenden Sie die Seite **Objekte** des Dialogfelds **Editor für den Task 'SQL Server-Objekte übertragen'** , um die Eigenschaften für das Kopieren eines oder mehrerer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekte von einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in eine andere anzugeben. Tabellen, Sichten, gespeicherte Prozeduren und benutzerdefinierte Funktionen sind beispielsweise [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekte, die Sie kopieren können. Weitere Informationen zu diesem Task finden Sie unter [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "84972746"
  **ExistingData**  
  Bestimmen Sie, wie die Daten auf den Zielserver kopiert werden sollen. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Replace**|Daten auf dem Zielserver werden überschrieben.|  
 |**Append**|Die vom Quellserver kopierten Daten werden an die vorhandenen Daten auf dem Zielserver angehängt.|  

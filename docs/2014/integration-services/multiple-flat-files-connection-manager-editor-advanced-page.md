@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5da68a6379c0d65c4d5a83af2b359f96784d4ae2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a19d45b609f5e5ab848cdfc056966fe09c803eb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950910"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440177"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>Verbindungs-Manager-Editor für mehrere Flatfiles (Seite Erweitert)
   Legen Sie mithilfe der Seite **Erweitert** im Dialogfeld **Verbindungs-Manager-Editor für mehrere Flatfiles** Eigenschaften wie den Datentyp und Trennzeichen für jede einzelne Spalte in den Textdateien fest, mit denen der Verbindungs-Manager für Flatfiles eine Verbindung herstellt.  
@@ -27,7 +27,7 @@ ms.locfileid: "84950910"
   
  Weitere Informationen zum Verbindungs-Manager für mehrere Flatfiles finden Sie unter [Multiple Flat Files Connection Manager](connection-manager/multiple-flat-files-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für den Verbindungs-Manager für mehrere Flatfiles im Workflow an. Der eingegebene Name wird im Bereich **Verbindungs-Manager** des [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designers angezeigt.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "84950910"
  **Konfigurieren Sie die Eigenschaften für jede Spalte.**  
  Wählen Sie eine Spalte im linken Bereich, um im rechten Bereich ihre Eigenschaften anzuzeigen. In der folgenden Tabelle werden die Datentypeigenschaften beschrieben. Einige der aufgeführten Eigenschaften können nur für einige Flatfileformate konfiguriert werden.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**ColumnType**|Gibt an, ob eine Spalte getrennt ist, eine feste Breite hat bzw. einen unregelmäßigen rechten Rand aufweist. Diese Eigenschaft ist schreibgeschützt. Bei Dateien mit rechtem Flatterrand weisen alle Spalten mit Ausnahme der letzten eine feste Breite auf. Die letzte Spalte wird durch das Zeilentrennzeichen abgeschlossen.|  
 |**OutputColumnWidth**|Gibt an, welcher Wert als Anzahl von Bytes gespeichert werden soll; bei Unicode-Dateien wird dieser Wert als Zeichenanzahl angezeigt. Im Datenflusstask dient dieser Wert dem Festlegen der Breite der Ausgabespalte für die Flatfilequelle.<br /><br /> Hinweis: Im Objektmodell heißt diese Eigenschaft MaximumWidth.|  
@@ -52,7 +52,7 @@ ms.locfileid: "84950910"
  **Neu**  
  Durch Klicken auf **Neu**fügen Sie eine neue Spalte hinzu. Die neue Spalten wird beim Klicken auf **Neu** standardmäßig am Ende der Liste hinzugefügt. Ferner sind für die Schaltfläche folgende, über die Dropdownliste auswählbare Optionen verfügbar.  
   
-|Value|Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Spalte hinzufügen**|Fügt am Ende der Liste eine neue Spalte hinzu.|  
 |**Einfügen vor**|Fügt vor der ausgewählten Spalte eine neue Spalte ein.|  

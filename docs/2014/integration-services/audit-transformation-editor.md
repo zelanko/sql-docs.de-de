@@ -11,28 +11,28 @@ f1_keywords:
 helpviewer_keywords:
 - Audit Transformation Editor
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6a58d216b33f5fb8fd582050374d06463fd2c99e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95c144141e26415ac576589d36b98b54c52eecb6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925524"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439437"
 ---
 # <a name="audit-transformation-editor"></a>Transformations-Editor für Überwachung
   Mithilfe der Überwachungstransformation werden in den Datenfluss eines Pakets Daten zur Umgebung, in der das Paket ausgeführt wird, eingeschlossen. Dem Datenfluss kann z. B. der Name des Pakets, Computers und Operators hinzugefügt werden. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält Systemvariablen, die diese Informationen bereitstellen.  
   
  Weitere Informationen zur Überwachungstransformation finden Sie unter [Audit Transformation](data-flow/transformations/audit-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name der Ausgabe Spalte**  
  Geben Sie den Namen der neuen Ausgabespalte an, die die Überwachungsinformationen enthalten soll.  
   
  **Überwachungstyp**  
  Wählen Sie eine verfügbare Systemvariable zum Bereitstellen der Überwachungsinformationen aus.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**GUID der Ausführungsinstanz**|Fügen Sie die GUID ein, die die Ausführungsinstanz des Pakets eindeutig identifiziert.|  
 |**Paket-ID**|Fügen Sie die GUID ein, die das Paket eindeutig identifiziert.|  

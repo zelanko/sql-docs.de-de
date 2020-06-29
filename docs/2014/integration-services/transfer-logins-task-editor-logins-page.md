@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 67c81901e454c4e7a47e5d448f2aa17d6a8820fa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c849c57c0854757a75eecf163a384c06ae8f1c47
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972810"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439997"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Editor für den Task Anmeldungen übertragen (Seite Anmeldungen)
   Verwenden Sie die Seite **Anmeldungen** des Dialogfelds **Editor für den Task 'Anmeldungen übertragen'** , um die Eigenschaften für das Kopieren von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldungen von einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in eine andere anzugeben. Weitere Informationen zu diesem Task finden Sie unter [Transfer Logins Task](control-flow/transfer-logins-task.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "84972810"
 > [!IMPORTANT]  
 >  Wenn der Task Anmeldungen übertragen ausgeführt wird, werden auf dem Zielserver Anmeldungen mit zufällig erzeugten Kennwörtern erstellt, und die Kennwörter werden deaktiviert. Um diese Anmeldungen zu verwenden, muss ein Mitglied der festen Serverrolle **sysadmin** die Kennwörter ändern und aktivieren. Die Anmeldung **sa** kann nicht übertragen werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **SourceConnection**  
  Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie **\<New connection...>** auf, um eine neue Verbindung mit dem Quell Server zu erstellen.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "84972810"
  **LoginsToTransfer**  
  Wählen Sie die vom Quell- auf den Zielserver zu kopierenden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldungen aus. Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**AllLogins**|Alle auf dem Quellserver vorhandenen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldungen werden auf den Zielserver kopiert.|  
 |**SelectedLogins ausgewählt**|Nur die mit **LoginsList** angegebenen Anmeldungen werden auf den Zielserver kopiert.|  
@@ -53,7 +53,7 @@ ms.locfileid: "84972810"
   
  Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**FailTask**|Der Task schlägt fehl, wenn auf dem Zielserver bereits Anmeldungen mit demselben Namen vorhanden sind.|  
 |**Overwrite**|Der Task überschreibt auf dem Zielserver Anmeldungen mit demselben Namen.|  

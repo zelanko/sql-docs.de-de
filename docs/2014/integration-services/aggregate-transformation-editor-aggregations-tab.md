@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4799df229e96ce8488614d8ec7b0755332360fbc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 59bf17aa0c13fcc771a75253d5ac9f46a160c57c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925591"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439507"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Transformations-Editor für Aggregieren (Registerkarte Aggregationen)
   Auf der Registerkarte **Aggregationen** des Dialogfelds **Transformations-Editor für Aggregieren** können Sie die Spalten für Aggregationen und Aggregationseigenschaften angeben. Sie können mehrere Aggregationen anwenden. Durch diese Transformation wird keine Fehlerausgabe generiert.  
@@ -30,7 +30,7 @@ ms.locfileid: "84925591"
   
  Weitere Informationen zur Transformation für das Aggregieren finden Sie unter [Aggregate Transformation](data-flow/transformations/aggregate-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Erweitert/Standard**  
  Blenden Sie die Optionen ein oder aus, um mehrere Aggregationen für mehrere Ausgaben zu konfigurieren. Die erweiterten Optionen sind standardmäßig ausgeblendet.  
   
@@ -43,12 +43,12 @@ ms.locfileid: "84925591"
  **Schlüsselskala**  
  Geben Sie in der erweiterten Anzeige optional die ungefähre Anzahl der Schlüssel an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn die Eigenschaften **Schlüsselskala** und **Schlüssel** festgelegt sind, wird der Wert von **Schlüssel** vorrangig behandelt.  
   
-|Value|Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Nicht angegeben.|Die Eigenschaft Schlüsselskala wird nicht verwendet.|  
 |Niedrig|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
 |Medium|Die Aggregation kann ungefähr 5.000.000 Schlüssel schreiben.|  
-|High|Die Aggregation kann mehr als 25.000.000 Schlüssel schreiben.|  
+|Hoch|Die Aggregation kann mehr als 25.000.000 Schlüssel schreiben.|  
   
  **Schlüssel**  
  Geben Sie in der erweiterten Anzeige optional die genaue Anzahl der Schlüssel an, die durch die Aggregation geschrieben werden können. Wenn sowohl **Schlüsselskala** als auch **Schlüssel** angegeben sind, wird **Schlüssel** vorrangig behandelt.  
@@ -81,12 +81,12 @@ ms.locfileid: "84925591"
  **COUNT DISTINCT-Skala**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl `CountDistinctScale` als auch " **count-distinctkeys** " angegeben sind, hat " **count-distinctkeys** " Vorrang.  
   
-|Value|Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Nicht angegeben.|Die `CountDistinctScale`-Eigenschaft wird nicht verwendet.|  
 |Niedrig|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
 |Medium|Die Aggregation kann ungefähr 5.000.000 unterschiedliche Werte schreiben.|  
-|High|Die Aggregation kann mehr als 25.000.000 unterschiedliche Werte schreiben.|  
+|Hoch|Die Aggregation kann mehr als 25.000.000 unterschiedliche Werte schreiben.|  
   
  **COUNT DISTINCT-Schlüssel**  
  Gibt optional die genaue Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Wenn sowohl `CountDistinctScale` als auch " **count-distinctkeys** " angegeben sind, hat " **count-distinctkeys** " Vorrang.  

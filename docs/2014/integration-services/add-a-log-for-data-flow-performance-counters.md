@@ -11,14 +11,14 @@ helpviewer_keywords:
 - counters [Integration Services]
 - logs [Integration Services], data flow counters
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6c397a5e4361c1aca4edfc32807045e3da9cbed0
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0076d61c4ad8abe3ef8ada818ac00a95b7bbe7c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926391"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439747"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Hinzufügen eines Protokolls für Datenfluss-Leistungsindikatoren
   In diesem Verfahren wird beschrieben, wie ein Protokoll für die von der Datenfluss-Engine bereitgestellten Leistungsindikatoren hinzugefügt wird.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 365a22cc515a971ff460a6433973f884c640c973
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 207c6e9837f2a828316c91c642d7397b72c4ddc3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950810"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440167"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Verbindungs-Manager-Editor für mehrere Flatfiles (Seite Spalten)
   Verwenden Sie den Knoten **Spalten** im Dialogfeld **Verbindungs-Manager-Editor für mehrere Flatfiles** , um die Zeilen- und Spalteninformationen anzugeben und eine Vorschau der ersten ausgewählten Datei anzuzeigen.  
@@ -38,7 +38,7 @@ ms.locfileid: "84950810"
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**Programmiert**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
@@ -52,7 +52,7 @@ ms.locfileid: "84950810"
  **Spaltentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Spaltentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**Programmiert**|Als Trennzeichen für Spalten dient ein Wagenrücklauf.|  
@@ -93,7 +93,7 @@ ms.locfileid: "84950810"
  **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**Programmiert**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  

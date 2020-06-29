@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8a94ba92b44c00442f97f9e11bbd72d06556d8fe
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c437e15cbbcb3df64770ad0da4272eedf41cf0e9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925611"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439487"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Transformations-Editor für Aggregieren (Registerkarte Erweitert)
   Mithilfe der Registerkarte **Erweitert** des Dialogfelds **Transformations-Editor für Aggregieren** können Sie Komponenteneigenschaften festlegen, Aggregationen angeben und die Eigenschaften von Eingabe- und Ausgabespalten festlegen.  
@@ -30,16 +30,16 @@ ms.locfileid: "84925611"
   
  Weitere Informationen zur Transformation für das Aggregieren finden Sie unter [Aggregate Transformation](data-flow/transformations/aggregate-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Schlüsselskala**  
  Gibt optional die ungefähre Anzahl an Schlüsseln an, die von der Aggregation erwartet werden. Für die Transformation wird diese Information verwendet, um die anfängliche Cachegröße zu optimieren. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **Schlüsselskala** als auch **Anzahl von Schlüsseln** angegeben wurden, hat **Anzahl von Schlüsseln** Vorrang.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Nicht angegeben.|Die Eigenschaft **Schlüsselskala** wird nicht verwendet.|  
 |Niedrig|Die Aggregation kann ungefähr 500.000 Schlüssel schreiben.|  
 |Medium|Die Aggregation kann ungefähr 5.000.000 Schlüssel schreiben.|  
-|High|Die Aggregation kann mehr als 25.000.000 Schlüssel schreiben.|  
+|Hoch|Die Aggregation kann mehr als 25.000.000 Schlüssel schreiben.|  
   
  **Anzahl von Schlüsseln**  
  Gibt optional die genaue Anzahl an Schlüsseln an, die von der Aggregation erwartet werden. Für die Transformation wird diese Information verwendet, um die anfängliche Cachegröße zu optimieren. Wenn sowohl **Schlüsselskala** als auch **Anzahl von Schlüsseln** angegeben wurden, hat **Anzahl von Schlüsseln** Vorrang.  
@@ -47,12 +47,12 @@ ms.locfileid: "84925611"
  **Eindeutige Skala zählen**  
  Gibt optional die ungefähre Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Der Standardwert für diese Option ist **Keine Angabe**. Wenn sowohl **COUNT DISTINCT-Skala** als auch **COUNT DISTINCT-Schlüssel** angegeben wurden, hat **COUNT DISTINCT-Schlüssel** Vorrang.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Nicht angegeben.|Die CountDistinctScale-Eigenschaft wird nicht verwendet.|  
 |Niedrig|Die Aggregation kann ungefähr 500.000 unterschiedliche Werte schreiben.|  
 |Medium|Die Aggregation kann ungefähr 5.000.000 unterschiedliche Werte schreiben.|  
-|High|Die Aggregation kann mehr als 25.000.000 unterschiedliche Werte schreiben.|  
+|Hoch|Die Aggregation kann mehr als 25.000.000 unterschiedliche Werte schreiben.|  
   
  **Eindeutige Schlüssel zählen**  
  Gibt optional die genaue Anzahl unterschiedlicher Werte an, die durch die Aggregation geschrieben werden können. Wenn sowohl **COUNT DISTINCT-Skala** als auch **COUNT DISTINCT-Schlüssel** angegeben wurden, hat **COUNT DISTINCT-Schlüssel** Vorrang.  

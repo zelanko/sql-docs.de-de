@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fa1858469ec8756f05e186ca1cb50c966ee47268
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a0ff06e9001c943c294b9c7ba8f93d9cad21e9c3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972460"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439837"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor für den Task 'Webdienst' (Seite Eingabe)
   Mithilfe der Seite **Eingabe** des Dialogfelds **Editor für den Task 'Webdienst'** können Sie den Webdienst, die Webmethode sowie die Werte angeben, die der Webmethode als Eingabe zur Verfügung gestellt werden sollen. Die Werte können entweder durch Eingeben von Zeichenfolgen direkt in die Wert-Spalte oder durch Auswählen von Variablen in der Wert-Spalte bereitgestellt werden.  
   
  Weitere Informationen zu diesem Task finden Sie unter [Webdienst (Task)](control-flow/web-service-task.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Service**  
  Wählen Sie aus der Liste einen Webdienst aus, der zum Ausführen der Webmethode verwendet werden soll.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "84972460"
  **Name**  
  Führt die Namen der Eingaben in die Webmethode in einer Liste auf.  
   
- **Typ**  
+ **Type**  
  Führt die Datentypen der Eingaben in einer Liste auf.  
   
 > [!NOTE]  

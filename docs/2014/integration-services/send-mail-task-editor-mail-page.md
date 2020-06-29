@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ee2b7992065e31bc6ef57de9b22444cf2da1f963
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3beaed3fa3e03ddf9fa9b90349a3aa57a131c9b0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963486"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440057"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Editor für den Task 'Mail senden' (Seite E-Mail)
   Auf der Seite **E-Mail** im Dialogfeld **Editor für den Task „Mail senden“** können Sie die Empfänger, den Nachrichtentyp und die Priorität einer Nachricht angeben. Sie können der Nachricht auch Dateien anfügen. Bei dem Nachrichtentext kann es sich um eine bereitgestellte Zeichenfolge, eine Dateiverbindung mit einer Datei mit Text oder den Namen einer Variablen mit Text handeln.  
   
  Informationen, um sich mit diesem Thema vertraut zu machen, finden Sie unter [Send Mail Task](control-flow/send-mail-task.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **SMTPConnection**  
  Wählen Sie einen SMTP-Verbindungs-Manager aus der Liste aus, oder klicken Sie, **\<New connection...>** um einen neuen Verbindungs-Manager zu erstellen  
   
@@ -52,7 +52,7 @@ ms.locfileid: "84963486"
  **MessageSourceType**  
  Wählen Sie den Quelltyp der Nachricht aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direct input**|Legen Sie für die Quelle den Nachrichtentext fest. Bei Auswahl dieses Wertes wird die dynamische Option **MessageSource**angezeigt.|  
 |**File connection**|Legen Sie für die Quelle die Datei fest, die den Nachrichtentext enthält. Bei Auswahl dieses Wertes wird die dynamische Option **MessageSource**angezeigt.|  
