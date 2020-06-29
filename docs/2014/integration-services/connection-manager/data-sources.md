@@ -9,16 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 46d1f79079efd5b4816359cb97a14642f309cfbb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fe18c331a1fe1786392f94fa2a3d2623ce13d0bb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921021"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434347"
 ---
-# <a name="data-sources"></a>Projektmappen-Explorer
+# <a name="data-sources"></a>Datenquellen
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]umfasst ein Entwurfszeit Objekt, das Sie in-Paketen verwenden können [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : die Datenquelle.  
   
  Ein Datenquellenobjekt ist ein Verweis auf eine Verbindung und enthält zumindest eine Verbindungszeichenfolge und einen Datenquellenbezeichner. Außerdem können zusätzliche Metadaten enthalten sein, wie z. B. eine Beschreibung, ein Name, ein Benutzername und ein Kennwort.  

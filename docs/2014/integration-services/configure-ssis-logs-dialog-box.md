@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0de63b2c4d438faa0dea8b8fdefa5f50d071c7e4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921641"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434807"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>SSIS-Protokolle konfigurieren (Dialogfeld)
   Verwenden Sie das Dialogfeld **SSIS-Protokolle konfigurieren** , um Protokollierungsoptionen für ein Paket zu definieren.  
@@ -43,7 +43,7 @@ ms.locfileid: "84921641"
 ##  <a name="configure-the-options-in-the-containers-pane"></a><a name="container"></a>Konfigurieren Sie die Optionen im Bereich "Container".  
  Mithilfe des **Container** -Bereichs des Dialogfelds **SSIS-Protokolle konfigurieren** können Sie das Paket und seine Container für das Protokollieren aktivieren.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Container**  
  Aktivieren Sie die Kontrollkästchen in der hierarchischen Sicht, um das Paket und seine Container für die Protokollierung zu aktivieren:  
   
@@ -58,11 +58,11 @@ ms.locfileid: "84921641"
 ##  <a name="configure-the-options-on-the-providers-and-logs-tab"></a><a name="provider"></a>Konfigurieren der Optionen auf der Registerkarte "Anbieter und Protokolle"  
  Verwenden Sie die Registerkarte **Anbieter und Protokolle** des Dialogfelds **SSIS-Protokolle konfigurieren** , um Protokolle für das Aufzeichnen von Laufzeitereignissen zu erstellen und zu konfigurieren.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Anbietertyp**  
  Wählen Sie einen Protokollanbietertyp aus der Liste aus.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Fügen Sie der Auflistung der Protokollanbieter des Pakets ein Protokoll des angegebenen Typs hinzu.  
   
  **Name**  
@@ -82,7 +82,7 @@ ms.locfileid: "84921641"
 ##  <a name="configure-the-options-on-the-details-tab"></a><a name="detail"></a> Konfigurieren Sie die Optionen auf der Registerkarte "Details".  
  Auf der Registerkarte **Details** des Dialogfelds **SSIS-Protokolle konfigurieren** können Sie die Ereignisse für das Protokollieren sowie die zu protokollierenden Informationsdetails aktivieren. Die Informationen, die Sie auswählen, gelten für alle Protokollanbieter im Paket. Sie können z. B. nicht einige Informationen in die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz und andere Informationen in eine Textdatei schreiben.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Ereignisse**  
  Aktivieren oder Deaktivieren von Ereignissen für die Protokollierung.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "84921641"
  **Erweitert**  
  Auswählen oder Löschen zu protokollierender Ereignisse und Auswählen oder Löschen von Informationen, die für jedes Ereignis protokolliert werden sollen. Klicken Sie auf **Standard** , um alle Protokollierungsdetails mit Ausnahme der Liste der Ereignisse auszublenden. Die folgenden Informationen sind für die Protokollierung verfügbar:  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Computer**|Der Name des Computers, auf dem das protokollierte Ereignis aufgetreten ist.|  
 |**Operator**|Der Benutzername der Person, die das Paket gestartet hat.|  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2a0b782455e649659ca4c7ecfc3c05247a1768fb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: efa77442292b66f72886c8dad84e14df3ee0f985
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921002"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434237"
 ---
 # <a name="cache-connection-manager"></a>Cacheverbindungs-Manager
   Der Cacheverbindungs-Manager liest Daten aus der Cachetransformation oder einer Cachedatei (.caw) und kann die Daten in einer Cachedatei speichern. Unabhängig davon, ob der Cacheverbindungs-Manager für die Verwendung einer Cachedatei konfiguriert ist, werden die Daten stets im Arbeitsspeicher gespeichert.  

@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Configure ADO.NET Connection Manager dialog box
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 978f50d5b12088271d5cf89ba4513b95f175fdc2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 13efde1888c50e243f0d07a534f538646db1eaa5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921821"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434787"
 ---
 # <a name="configure-adonet-connection-manager"></a>ADO.NET-Verbindungs-Manager konfigurieren
   Verwenden Sie das Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** , um einer Datenquelle, auf die mithilfe eines .NET Framework-Datenanbieters (z. B. des SqlClient-Anbieters) zugegriffen werden kann, eine Verbindung hinzuzufügen. Der Verbindungs-Manager kann eine vorhandene Verbindung verwenden, oder Sie können eine neue erstellen.  
   
  Weitere Informationen zum ADO.NET-Verbindungs-Manager finden Sie unter [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Datenverbindungen**  
  Wählen Sie in der Liste eine vorhandene ADO.NET.Datenverbindung aus.  
   
