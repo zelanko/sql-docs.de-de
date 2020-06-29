@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d94df6a59043bee136b0dc42ad8fb013c6c77456
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d878306f095725c459a8d45ae8482d5f73e5f30
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967480"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429077"
 ---
 # <a name="cast-ssis-expression"></a>CAST (SSIS-Ausdruck)
   Konvertiert einen Ausdruck explizit in einen anderen Datentyp. Der Umwandlungsoperator kann auch als Operator zum Abschneiden dienen.
@@ -41,7 +41,7 @@ ms.locfileid: "84967480"
 ## <a name="result-types"></a>Ergebnistypen
  Der Datentyp von *type_spec*. Weitere Informationen finden Sie unter [Integration Services-Datentypen](../data-flow/integration-services-data-types.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
  Im folgenden Diagramm werden zulässige Umwandlungsvorgänge dargestellt.
 
  ![Zulässige und unzulässige Umwandlungen zwischen Datentypen](../media/data-conversion.gif "Zulässige und unzulässige Umwandlungen zwischen Datentypen")

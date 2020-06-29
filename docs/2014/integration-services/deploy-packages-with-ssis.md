@@ -17,14 +17,14 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f30221e3afb898834fcc13476760499fd3a5f9e8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2f5103c093666d59fb36b978e17dff5b51a0cdc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951840"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429767"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS-Tutorial: Bereitstellen von Paketen
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet Tools zum einfachen Bereitstellen von Paketen auf anderen Computern. Von den Bereitstellungstools werden auch mögliche Abhängigkeiten wie vom Paket benötigte Konfigurationen und Dateien verwaltet. In diesem Lernprogramm lernen Sie, wie Sie diese Tools verwenden, um Pakete und ihre Abhängigkeiten auf einem Zielrechner zu installieren.
@@ -44,7 +44,7 @@ ms.locfileid: "84951840"
 ## <a name="what-you-will-learn"></a>Lernziele
  Die beste Möglichkeit, sich mit den neuen Tools, Steuerelementen und Features vertraut zu machen, die in verfügbar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sind, besteht darin, Sie zu verwenden. Dieses Lernprogramm führt Sie schrittweise durch die Erstellung eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts und das anschließende Hinzufügen der Pakete und weiterer erforderlicher Dateien zum Projekt. Wenn das Projekt vollständig ist, erstellen Sie ein Bereitstellungspaket, kopieren es zum Zielcomputer und installieren dann die Pakete auf dem Zielcomputer.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
  Dieses Tutorial richtet sich an Benutzer, die bereits mit grundlegenden Dateisystem Vorgängen vertraut sind, aber nur über begrenzte Kenntnisse in Bezug auf die in verfügbaren neuen Features verfügen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Um die grundlegenden Konzepte besser zu verstehen, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] die Sie in diesem Tutorial verwenden werden, ist es möglicherweise hilfreich, zunächst die folgenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Tutorials [auszuführen: Ausführen des SQL Server-Import/Export-Assistenten](import-export-data/start-the-sql-server-import-and-export-wizard.md) und [SSIS-Tutorial: Erstellen eines einfachen ETL-Pakets](../integration-services/ssis-how-to-create-an-etl-package.md).
 
  **Quellcomputer.** Auf dem Computer, auf dem Sie das Bereitstellungspaket erstellen, müssen die folgenden Komponenten installiert sein:
