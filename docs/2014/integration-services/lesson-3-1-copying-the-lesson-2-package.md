@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3ae62c014baffec44c856587b99410b9c7228e6a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9ed7db19463b7383e5b2819ada624f9a3aa51b36
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965270"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440537"
 ---
 # <a name="step-1-copying-the-lesson-2-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 2
   In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 2 erstellten Pakets Lesson 2.dtsx. Wahlweise können Sie dem Projekt auch das im Tutorial enthaltene abgeschlossene Paket aus Lektion 2 hinzufügen und anschließend von diesem Paket eine Kopie erstellen. Sie verwenden diese neue Kopie im gesamten Rest der Lektion 3.  

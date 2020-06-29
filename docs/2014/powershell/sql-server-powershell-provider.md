@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 04d332e2c71e69b9a3e7d1d1b0c60eb9aabaf2e5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 679ce02fe6e0016dfe7fd2d81dd285fbacd6523f
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84960150"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469065"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell-Anbieter
   Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter für Windows PowerShell macht die Hierarchie von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objekten auf ähnliche Weise wie in Dateisystempfaden verfügbar. Mithilfe der Pfade können Sie Objekte finden und dann Methoden der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object-Modelle (SMO) verwenden, um Aktionen für die Objekte auszuführen.  
@@ -40,7 +40,7 @@ ms.locfileid: "84960150"
 |SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Richtlinienbasierte Verwaltungsobjekte, z. B. Richtlinien und Facets|  
 |SQLSERVER:\SQLRegistration|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|Registrierte Serverobjekte, z. B. Servergruppen und registrierte Server|  
 |SQLSERVER:\Utility|<xref:Microsoft.SqlServer.Management.Utility>|Hilfsprogrammobjekte, z. B. verwaltete [!INCLUDE[ssDE](../includes/ssde-md.md)]-Instanzen|  
-|SQLSERVER:\DAC|<xref:Microsoft.SqlServer.Management.DAC>|Datenebenenanwendungs-Objekte z. B. DAC-Pakete und Vorgänge wie das Bereitstellen einer DAC|  
+|SQLSERVER:\DAC|[Microsoft. SqlServer. Management. DAC](/dotnet/api/microsoft.sqlserver.management.utility.deployeddac)|Datenebenenanwendungs-Objekte z. B. DAC-Pakete und Vorgänge wie das Bereitstellen einer DAC|  
 |SQLSERVER:\DataCollection|<xref:Microsoft.SqlServer.Management.Collector>|Datensammler-Objekte, z. B. Sammlungssätze und Konfigurationsspeicher|  
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objekte, z. B. Projekte, Pakete und Umgebungen|  
 |SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte, z. B. Cubes, Aggregationen und Dimensionen|  

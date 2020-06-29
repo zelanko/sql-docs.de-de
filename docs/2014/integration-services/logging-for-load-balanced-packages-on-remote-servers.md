@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], remote packages
 ms.assetid: fd571567-b625-4f9a-8b7e-42c5c588b11b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f0adbcc17ad629f585cd04f43f757612a120ba4
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b45fa6607d6edc1559d8ebcbbbc7598e11eac408
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951240"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440287"
 ---
 # <a name="logging-for-load-balanced-packages-on-remote-servers"></a>Protokollierung für Pakete auf Remoteservern, für die ein Lastenausgleich ausgeführt wurde
   Für einen Administrator ist es einfacher, die Protokolle aller untergeordneten Pakete, die auf verschiedenen Servern ausgeführt werden, zu verwalten, wenn alle untergeordneten Pakete denselben Protokollanbieter verwenden und in dasselbe Ziel schreiben. Eine Möglichkeit zum Erstellen einer allgemeinen Protokolldatei für alle untergeordneten Pakete besteht darin, die untergeordneten Pakete für die Protokollierung ihrer Ereignisse in einem SQL Server-Protokollanbieter zu konfigurieren. Sie können alle Pakete für die Verwendung derselben Datenbank, desselben Servers und derselben Server-Instanz konfigurieren.  

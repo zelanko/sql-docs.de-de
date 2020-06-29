@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 4f10901625ece0a154248f99370e427c7a999c87
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: fc9a6d3ee38e50120ab22ec48b1a673013eb50da
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84546062"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468955"
 ---
 # <a name="move-an-analysis-services-database"></a>Verschieben einer Analysis Services Datenbank
   Es gibt oftmals Situationen, in denen ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankadministrator (DBA) eine mehrdimensionale oder tabellarische Modelldatenbank an einen anderen Speicherort verschieben möchte. Diese Situationen hängen in der Regel von Geschäftsforderungen ab, z. B. wenn die Datenbank zur Leistungssteigerung auf einen anderen Datenträger verschoben werden soll, wenn bei Datenbankzuwachs Platz geschaffen werden muss oder wenn ein Produkt aktualisiert werden soll.  
@@ -140,7 +140,7 @@ ms.locfileid: "84546062"
   
 ## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft. AnalysisServices. Database. Detach *](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Anfügen und trennen von Analysis Services Datenbanken](attach-and-detach-analysis-services-databases.md)   
  [Daten Bank Speicherort](database-storage-location.md)   
  [Datenbanklesemodusmodi](database-readwritemodes.md)   

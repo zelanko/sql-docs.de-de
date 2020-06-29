@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 63f8be6f47ef4a6abd20c42757648ca03a5701b3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 73c9371d28e64e41f7e0f7d2a53e94309fc66c28
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962060"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469085"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Erstellen eines benutzerdefinierten Workflows (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] verwendet Geschäftsregeln, um auf Basis der von Ihnen festgelegten Bedingungen grundlegende Workflowlösungen zu erstellen, beispielsweise das automatische Update und Validieren von Daten sowie das Senden von E-Mail-Benachrichtigungen. Wenn Sie Verarbeitungsfunktionen benötigen, die komplexer als die anhand der integrierten Workflowaktionen bereitgestellten Funktionen sind, verwenden Sie einen benutzerdefinierten Workflow. Ein benutzerdefinierter Workflow ist eine .NET-Assembly, die Sie erstellen. Wenn die Workflowassembly aufgerufen wird, kann der Code jede Aktion ausführen, die in Ihrer Situation erforderlich ist. Erfordert Ihr Workflow beispielsweise eine komplexe Ereignisverarbeitung wie Genehmigungen mit mehreren Ebenen oder komplizierte Entscheidungsstrukturen, können Sie [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] so konfigurieren, dass ein benutzerdefinierter Workflow gestartet wird, der die Daten analysiert und den Empfänger der Daten für die Genehmigung bestimmt.  
@@ -38,7 +38,7 @@ ms.locfileid: "84962060"
 ## <a name="configure-master-data-services-for-custom-workflows"></a>Konfigurieren von Master Data Services für benutzerdefinierte Workflows  
  Das Erstellen eines benutzerdefinierten Workflows erfordert das Schreiben von benutzerdefiniertem Code sowie das Konfigurieren von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] zur Übergabe von Workflowdaten an den Workflowhandler. Gehen Sie folgendermaßen vor, um die Verarbeitung von benutzerdefinierten Workflows zu aktivieren:  
   
-1.  Erstellen Sie eine .NET-Assembly, die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> implementiert.  
+1.  Erstellen Sie eine .NET-Assembly, die [Microsoft. masterdataservices. workflowtypeextender. iworkflowtypeextender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130))implementiert.  
   
 2.  Konfigurieren Sie den SQL Server MDS Workflow Integration Service, um eine Verbindung mit der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank herzustellen und dem Workflowhandler ein Tag zuzuordnen.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "84962060"
 5.  Wenden Sie die Geschäftsregel auf ein Element an, das den benutzerdefinierten Workflow auslöst.  
   
 ### <a name="create-the-workflow-handler-assembly"></a>Erstellen der Workflowhandlerassembly  
- Ein benutzerdefinierter Workflow ist eine .NET-Klassenbibliotheksassembly, die die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>-Schnittstelle implementiert. Der SQL Server MDS Workflow Integration Service ruft zum Ausführen des Codes die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>-Methode auf. Beispielcode, der <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> implementiert, finden Sie unter [Beispiel für einen benutzerdefinierten Workflow &#40;Master Data Services&#41;](create-a-custom-workflow-example.md).  
+ Ein benutzerdefinierter Workflow ist eine .net-Klassenbibliotheksassembly, die die [Microsoft. masterdataservices. workflowtypeextender. iworkflowtypeextender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) -Schnittstelle implementiert. SQL Server MDS-Workflow Integrations Dienst ruft die [Microsoft. masterdataservices. workflowtypeextender. iworkflowtypeextender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) -Methode auf, um den Code auszuführen. Beispielcode, der [Microsoft. masterdataservices. workflowtypeextender. iworkflowtypeextender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))implementiert, finden Sie unter Beispiel für einen [benutzerdefinierten Workflow &#40;Master Data Services&#41;](create-a-custom-workflow-example.md).  
   
  Gehen Sie wie folgt vor, um mit Visual Studio 2010 eine Assembly zu erstellen, die der SQL Server MDS Workflow Integration Service aufrufen kann, um einen benutzerdefinierten Workflow zu behandeln:  
   
@@ -59,9 +59,9 @@ ms.locfileid: "84962060"
   
 3.  Fügen Sie „using Microsoft.MasterDataServices.Core.Workflow;“ der C#-Codedatei hinzu.  
   
-4.  Erben Sie in der Klassendeklaration von <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Die Klassendeklaration sollte in etwa wie folgt aussehen: „public class WorkflowTester : IWorkflowTypeExtender“.  
+4.  Erben von [Microsoft. masterdataservices. workflowtypeextender. iworkflowtypeextender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) in der Klassen Deklaration. Die Klassendeklaration sollte in etwa wie folgt aussehen: „public class WorkflowTester : IWorkflowTypeExtender“.  
   
-5.  Implementieren Sie die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>-Schnittstelle. Die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A>-Methode wird vom SQL Server MDS Workflow Integration Service aufgerufen, um den Workflow zu starten.  
+5.  Implementieren Sie die [Microsoft. masterdataservices. workflowtypeextender. iworkflowtypeextender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) -Schnittstelle. Die [Microsoft. masterdataservices. workflowtypeextender. iworkflowtypeextender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) -Methode wird von SQL Server MDS Workflow Integration Service aufgerufen, um den Workflow zu starten.  
   
 6.  Kopieren Sie die Assembly an den Speicherort der ausführbaren Datei SQL Server MDS Workflow Integration Service mit dem Namen Microsoft.MasterDataServices.Workflow.exe in \<Your installation folder> \master Data services\webapplication\bin.  
   

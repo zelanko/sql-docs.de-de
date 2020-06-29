@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: e904333dc25e7ae58d8eae29ba00279d7e599033
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4373c881fae6599b0a470d154153250614b50627
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547102"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468985"
 ---
 # <a name="database-storage-location"></a>Datenbankspeicherort
   Es gibt oftmals Situationen, in denen ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankadministrator (DBA) eine bestimmte Datenbank außerhalb des Datenordners des Servers speichern möchte. Diese Situationen werden oft von Unternehmensanforderungen bestimmt, wie Verbesserung der Leistung oder Erweiterung des Speichers. In diesen Situationen ermöglicht die `DbStorageLocation`-Datenbankeigenschaft dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankadministrator, für den Datenbankspeicherort einen lokalen Datenträger oder ein Netzwerkgerät anzugeben.  
@@ -41,7 +41,7 @@ ms.locfileid: "84547102"
 >  Der Datenbankspeicherort sollte nicht mit einem `Alter`-Befehl geändert werden. Stattdessen wird die Verwendung einer Sequenz von `Detach` / `Attach` Daten Bank Befehlen empfohlen (Weitere Informationen finden Sie unter [Verschieben einer Analysis Services-Datenbank](move-an-analysis-services-database.md), [Anfügen und trennen von Analysis Services Datenbanken](attach-and-detach-analysis-services-databases.md)).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
+ [Microsoft. AnalysisServices. Database. dbstorageloation *](/dotnet/api/microsoft.analysisservices.core.database.dbstoragelocation)   
  [Anfügen und trennen von Analysis Services Datenbanken](attach-and-detach-analysis-services-databases.md)   
  [Verschieben einer Analysis Services Datenbank](move-an-analysis-services-database.md)   
  [Dbstorageloation-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   

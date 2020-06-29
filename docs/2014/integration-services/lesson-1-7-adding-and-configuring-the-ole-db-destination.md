@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b71e4254312c0dc07d6d8869a2e8b28eb02c36fe
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2d8576f664ae41dfa32230c6498069b62a8c87a3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966130"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440657"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Schritt 7: Hinzufügen und Konfigurieren des OLE DB-Ziels
   Von Ihrem Paket können jetzt Daten aus der Flatfilequelle extrahiert und in ein Format transformiert werden, das mit dem Ziel kompatibel ist. Die nächste Aufgabe besteht darin, die transformierten Daten tatsächlich in das Ziel zu laden. Um die Daten zu laden, müssen Sie ein OLE DB-Ziel zum Datenfluss hinzufügen. Vom OLE DB-Ziel kann eine Datenbanktabelle, eine Ansicht oder ein SQL-Befehl verwendet werden, um Daten in verschiedene OLE DB-kompatible Datenbanken zu laden.  

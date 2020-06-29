@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 550dd2bad920dc3538de011b7841c0174912e718
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: fc9186b0250f0bdb8dd5ad91cc7e84782218bbc2
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521254"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468905"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Miningmodellinhalt von Zeitreihenmodellen (Analysis Services &ndash; Data Mining)
   Zur Speicherung des Inhalts wird für alle Miningmodelle die gleiche Struktur verwendet. Diese Struktur wird nach dem Data Mining-Schemarowset für den Inhalt definiert. Innerhalb dieser standardmäßigen Struktur werden die Knoten, die Informationen enthalten, jedoch unterschiedlich angeordnet, sodass sie verschiedene Arten von Strukturen darstellen. In diesem Thema werden die Anordnung der Knoten und die Bedeutung der einzelnen Knoten für Miningmodelle erläutert, die auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus basieren.  
@@ -120,7 +120,7 @@ ms.locfileid: "84521254"
   
  **ARTxp**  
   
-|Knotentyp-ID|Beschreibung|  
+|Knotentyp-ID|BESCHREIBUNG|  
 |------------------|-----------------|  
 |1 (Model)|Zeitreihe|  
 |3 (Innen)|Stellt eine Verzweigung innerhalb einer ARTXP-Zeitreihenstruktur dar.|  
@@ -129,7 +129,7 @@ ms.locfileid: "84521254"
   
  **ARIMA**  
   
-|Knotentyp-ID|Beschreibung|  
+|Knotentyp-ID|BESCHREIBUNG|  
 |------------------|-----------------|  
 |27 (ARIMA-Stamm)|Der oberste Knoten einer ARIMA-Struktur.|  
 |28 (ARIMA Periodische Struktur)|Komponente einer ARIMA-Struktur, die eine einzelne periodische Struktur beschreibt.|  
@@ -423,7 +423,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Der Wert für *Differenzreihenfolge* gibt an, wie viele Male die Reihen verglichen bzw. differenziert werden.  
   
- Eine Auflistung der möglichen Werttypen finden Sie unter <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
+ Eine Enumeration der möglichen Werttypen finden Sie unter [Microsoft. AnalysisServices. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### <a name="using-the-arima-tree-information"></a>Verwenden der ARIMA-Strukturinformationen  
  Wenn Sie in einer Geschäftslösung Vorhersagen verwenden, die auf dem ARIMA-Algorithmus basieren, sollten Sie die Formel in ein Dokument einfügen, um zu veranschaulichen, mit welcher Methode die Vorhersage erstellt wurde. Sie können die Beschriftung oder die Beschreibung verwenden, um die Formeln in Kurzform bzw. in Langform darzustellen.  
@@ -436,7 +436,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   XML-Darstellung: XML-Abfrage  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Abfrage von Informationen aus einer ARTXP-Struktur kann kompliziert sein, da sich die Informationen für jede Teilung innerhalb der Struktur an einer anderen Position befinden. Wenn Sie mit einem ARTXP-Modell arbeiten, müssen Sie aus diesem Grund alle Teile abrufen und dann einige Verarbeitungsvorgänge ausführen, um die vollständige Formel wieder zusammenzusetzen. Das Abrufen einer Formel aus einem ARIMA-Modell ist einfacher, da die Formel strukturweit verfügbar gemacht wird. Informationen zum Erstellen einer Abfrage zum Abrufen dieser Informationen finden Sie unter [Abfragebeispiel Zeitreihenmodell](time-series-model-query-examples.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

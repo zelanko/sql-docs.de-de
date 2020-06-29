@@ -19,12 +19,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833758"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440707"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL-Datenbank)
 
@@ -53,7 +53,7 @@ ms.locfileid: "82833758"
 ## <a name="permissions"></a>Berechtigungen  
  Diese Ansicht ist nur in der **Master** -Datenbank für den Prinzipal Anmelde Namen auf Serverebene verfügbar.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Um diese Ansicht verwenden zu können, müssen Sie mit der **Master** -Datenbank verbunden sein. Verwenden Sie die- `sys.dm_operation_status` Sicht in der **Master** -Datenbank des- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Servers, um den Status der folgenden Vorgänge zu verfolgen, die auf einem ausgeführt werden [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Erstellen einer Datenbank  
@@ -73,7 +73,9 @@ ms.locfileid: "82833758"
 -   Datenbank wiederherstellen  
   
 -   Datenbank löschen  
-  
+
+Die Informationen in dieser Ansicht werden ungefähr eine Stunde lang aufbewahrt. Verwenden Sie das [Azure-Aktivitätsprotokoll](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log) , um Details zu den Vorgängen in den letzten 90 Tagen anzuzeigen. Wenn Sie mehr als 90 Tage aufbewahren möchten, sollten Sie [Aktivitätsprotokoll](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) Einträge an einen Log Analytics Arbeitsbereich senden.
+
 ## <a name="example"></a>Beispiel  
  Zeigt die letzten georeplikationsvorgänge an, die der Datenbank "MyDB" zugeordnet sind.  
   

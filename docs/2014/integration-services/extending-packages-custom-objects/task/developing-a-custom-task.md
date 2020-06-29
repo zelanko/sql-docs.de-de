@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0df04b8388bc54f0181e5d5b7bb7600faece6260
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: b4257d883b1f39e918f0f8a6eb8135e25b784a79
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427227"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469285"
 ---
 # <a name="developing-a-custom-task"></a>Entwickeln eines benutzerdefinierten Tasks
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] nutzt Tasks, um Arbeitseinheiten auszuführen, die das Extrahieren, Umwandeln und Laden von Daten unterstützen. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] beinhaltet verschiedene Tasks, durch die häufig auftretende Aktionen ausgeführt werden, z. B. das Ausführen von SQL-Anweisungen oder das Herunterladen einer Datei von einer FTP-Site. Wenn die enthaltenen Tasks und unterstützten Aktionen Ihre Anforderungen nicht vollständig erfüllen, können Sie einen benutzerdefinierten Task erstellen.  
   
- Zum Erstellen eines benutzerdefinierten Tasks müssen Sie eine Klasse erstellen, die von der <xref:Microsoft.SqlServer.Dts.Runtime.Task>-Basisklasse erbt, das <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>-Attribut auf die neue Klasse anwenden und die Hauptmethoden und -eigenschaften der Basisklasse, einschließlich der <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>-Methode, überschreiben.  
+ Zum Erstellen eines benutzerdefinierten Tasks müssen Sie eine Klasse erstellen, die von der Basisklasse [Microsoft. SqlServer. DTS. Runtime. Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) erbt, das- <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> Attribut auf die neue Klasse anwenden und die wichtigen Methoden und Eigenschaften der Basisklasse, einschließlich der-Methode, überschreiben <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> .  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In diesem Abschnitt wird beschrieben, wie Sie einen benutzerdefinierten Task und seine optionale benutzerdefinierte Benutzeroberfläche erstellen, konfigurieren und codieren.  

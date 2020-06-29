@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0dcf79644ba3e9bc337b14e4ff28fe703e81564d
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: a49aa41d158bf2c9fd1ebb1a711d6ff35c0df98b
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545432"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469015"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>Benutzerdefinierte Funktionen und gespeicherte Prozeduren
   Mit ADOMD.NET-Server Objekten können Sie benutzerdefinierte Funktionen (User Defined Function, UDF) oder gespeicherte Prozeduren für erstellen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , die mit Metadaten und Daten vom Server interagieren. Diese prozessinternen Methoden werden durch Multidimensional Expressions (MDX)- oder Data Mining Extensions (DMX)-Anweisungen aufgerufen, um zusätzliche Funktionen bereitzustellen, die nicht den Wartezeiten eines Netzwerks unterworfen sind.  
@@ -28,7 +28,7 @@ ms.locfileid: "84545432"
 ## <a name="udf-examples"></a>UDF-Beispiele  
  Eine benutzerdefinierte Funktion (UDF) ist eine Methode, die im Zusammenhang mit einer MDX- oder DMX-Anweisung aufgerufen wird, eine beliebige Anzahl an Parametern unterstützt und jede Art von Daten zurückgeben kann.  
   
- Eine mit MDX erstellte benutzerdefinierte Funktion ist mit einer für DMX erstellten vergleichbar. Der Hauptunterschied besteht darin, dass bestimmte Eigenschaften des <xref:Microsoft.AnalysisServices.AdomdServer.Context>-Objekts, wie zum Beispiel die Eigenschaften <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube%2A> und <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentMiningModel%2A>, nur für die eine oder die andere Skriptsprache verfügbar sind.  
+ Eine mit MDX erstellte benutzerdefinierte Funktion ist mit einer für DMX erstellten vergleichbar. Der Hauptunterschied besteht darin, dass bestimmte Eigenschaften von [Microsoft. das AnalysisServices. AdomdServer. Context](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120)) -Objekt, z. b. die Eigenschaften [Microsoft. AnalysisServices. AdomdServer. Context. CURRENTCUBE *](/previous-versions/sql/sql-server-2014/ms137081(v=sql.120)) und [Microsoft. AnalysisServices. AdomdServer. Context. CurrentMiningModel *](/previous-versions/sql/sql-server-2014/ms137178(v=sql.120)) , ist nur für eine Skriptsprache oder die andere verfügbar.  
   
  Die folgenden Beispiele zeigen, wie man mit einer benutzerdefinierten Funktion eine Knotenbeschreibung zurückgibt, Tupeln filtert und einen Filter auf ein Tupel anwendet.  
   

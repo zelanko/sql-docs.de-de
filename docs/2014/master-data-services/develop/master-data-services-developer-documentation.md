@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d6d2a99894dcfd0ef78a50b2bc7af441acc76cbe
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 8f859f28ba542d4a1cc3bd16f69473077ff13a6b
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84961910"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469025"
 ---
 # <a name="developer39s-guide-master-data-services"></a>Entwickler&#39;s Guide (Master Data Services)
   Hier finden Sie Informationen zum Schreiben von Code, um anzupassen, wie Sie und Ihre Benutzer mit [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] interagieren. In diesem Artikel werden folgende Themen erläutert:  
@@ -38,7 +38,7 @@ ms.locfileid: "84961910"
  Eine kategorisierte Liste der Webdienstvorgänge der <xref:Microsoft.MasterDataServices.ServiceClient>-Klasse.  
   
 ## <a name="custom-workflows"></a>Benutzerdefinierte Workflows  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] verwendet Geschäftsregeln, um grundlegende Workflowlösungen zu erstellen. Sie können Daten automatisch aktualisieren und validieren und E-Mail-Benachrichtigungen auf Basis von Bedingungen senden, die Sie angeben. Geschäftsregeln in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] dienen zur Verwaltung der häufigsten Workflowszenarios. Erfordert Ihr Workflow eine komplexere Ereignisverarbeitung wie Genehmigungen mit mehreren Ebenen oder komplexe Entscheidungsstrukturen, können Sie [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] so konfigurieren, dass Daten an eine von Ihnen erstellte benutzerdefinierte Assembly gesendet werden. Zur Handhabung von benutzerdefinierten Workflows müssen Sie den SQL Server MDS Workflow Integration Service über den Webanwendungscomputer konfigurieren und starten und eine Assembly erstellen, die die <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>-Schnittstelle implementiert.  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] verwendet Geschäftsregeln, um grundlegende Workflowlösungen zu erstellen. Sie können Daten automatisch aktualisieren und validieren und E-Mail-Benachrichtigungen auf Basis von Bedingungen senden, die Sie angeben. Geschäftsregeln in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] dienen zur Verwaltung der häufigsten Workflowszenarios. Erfordert Ihr Workflow eine komplexere Ereignisverarbeitung wie Genehmigungen mit mehreren Ebenen oder komplexe Entscheidungsstrukturen, können Sie [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] so konfigurieren, dass Daten an eine von Ihnen erstellte benutzerdefinierte Assembly gesendet werden. Zur Handhabung von benutzerdefinierten Workflows müssen Sie SQL Server MDS Workflow Integration Service auf dem Webanwendungs Computer konfigurieren und starten und eine Assembly erstellen, die die [Microsoft. masterdataservices. workflowtypeextender. iworkflowtypeextender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) -Schnittstelle implementiert.  
   
 ### <a name="custom-workflow-content"></a>Benutzerdefinierter Workflowinhalt  
  [Erstellen eines benutzerdefinierten Workflows &#40;Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)  
@@ -49,7 +49,7 @@ ms.locfileid: "84961910"
   
 |Namespace|BESCHREIBUNG|  
 |---------------|-----------------|  
-|<xref:Microsoft.MasterDataServices.Deployment>|Enthält Klassen, die zum Erstellen eines Bereitstellungspakets aus einem Modell und zum Bereitstellen eines Pakets in einer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank verwendet werden können.|  
+|[Microsoft. masterdataservices. Deployment](/previous-versions/sql/sql-server-2016/ff487448(v=sql.130))|Enthält Klassen, die zum Erstellen eines Bereitstellungspakets aus einem Modell und zum Bereitstellen eines Pakets in einer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Datenbank verwendet werden können.|  
 |<xref:Microsoft.MasterDataServices.Services>|Enthält eine Klasse zum Empfangen und Verarbeiten von Webdienstvorgängen, die durch die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webanwendung an den Webservercomputer übergeben wurden.|  
 |<xref:Microsoft.MasterDataServices.Services.DataContracts>|Enthält Klassen, mit denen definiert wird, wie Daten vom Clientcomputer über die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung an den Webservercomputer übergeben werden.|  
 |<xref:Microsoft.MasterDataServices.Services.MessageContracts>|Enthält Klassen, mit denen definiert wird, wie Anforderungen und Antworten vom Clientcomputer über die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung an den Webservercomputer übergeben werden.|  

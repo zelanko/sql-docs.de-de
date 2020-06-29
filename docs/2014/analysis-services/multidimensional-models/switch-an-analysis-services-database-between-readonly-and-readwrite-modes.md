@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 7d028c4ca47567a1f0f6b7d4b874ad78c98ea2d1
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 2a1496bee303e94720a354002e63cefcf479df85
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547342"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468915"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus
   In vielen Situationen muss vom [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankadministrator (DBA) der Lese-/Schreibmodus einer tabellarischen oder mehrdimensionalen Datenbank geändert werden. Diese Situationen hängen in der Regel von Geschäftsforderungen ab, z. B. der Freigabe der Datenbank für einen Pool von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Servern zur Vereinfachung der Nutzung.  
@@ -167,7 +167,7 @@ ms.locfileid: "84547342"
   
 ## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft. AnalysisServices. Database. Detach *](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Anfügen und trennen von Analysis Services Datenbanken](attach-and-detach-analysis-services-databases.md)   
  [Daten Bank Speicherort](database-storage-location.md)   
  [Datenbanklesemodusmodi](database-readwritemodes.md)   

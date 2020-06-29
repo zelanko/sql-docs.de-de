@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: a0c62698f1aed231128803cb91c80264a2fbdbf4
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 44698c89eff608d6c993c3cec030098883eb5aee
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544832"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469005"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Anfügen und Trennen von Analysis Services-Datenbanken
   Es gibt häufig Situationen, in denen ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankadministrator (DBA) eine Datenbank für eine bestimmte Zeit offline schalten und die Datenbank später auf derselben oder einer anderen Serverinstanz wieder online schalten möchte. Diese Situationen hängen in der Regel von Geschäftsforderungen ab, z. B. wenn die Datenbank zur Leistungssteigerung auf einen anderen Datenträger verschoben werden soll, wenn bei Datenbankzuwachs Platz geschaffen werden muss oder wenn ein Produkt aktualisiert werden soll. Für diese und weitere Fälle ermöglichen die Befehle `Attach` und `Detach` dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankadministrator, die Datenbank mit wenig Aufwand offline und später wieder online zu schalten.  
@@ -57,7 +57,7 @@ ms.locfileid: "84544832"
   
 ## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft. AnalysisServices. Database. Detach *](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Verschieben einer Analysis Services Datenbank](move-an-analysis-services-database.md)   
  [Datenbanklesemodusmodi](database-readwritemodes.md)   
  [Wechseln einer Analysis Services Datenbank zwischen Schreib geschütztem Modus und Lese-/Schreibmodus](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0943e3f98ae65ec6c142fb1b98f86da054e88638
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3cbfbf253bfd080084b8182b353b1efb8b535d3c
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521617"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468965"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Miningmodellinhalt (Analysis Services &ndash;</ph> Data Mining)
   Nachdem Sie ein Miningmodell, das Daten aus der zugrunde liegenden Miningstruktur enthält, entworfen und verarbeitet haben, ist das Miningmodell vollständig und enthält *Miningmodellinhalt*. Sie können diesen Inhalt verwenden, um Vorhersagen zu treffen oder die Daten zu analysieren.  
@@ -80,7 +80,7 @@ ms.locfileid: "84521617"
 |3|Interior|Innerer geteilter Knoten einer Struktur. Gilt für Entscheidungsstrukturmodelle.|  
 |4|Verteilung|Endknoten einer Struktur. Gilt für Entscheidungsstrukturmodelle.|  
 |5|Cluster|Vom Algorithmus erkanntes Cluster. Gilt für Clusteringmodelle und Sequenzclustermodelle.|  
-|6|Unbekannt|Unbekannter Knotentyp.|  
+|6|Unknown|Unbekannter Knotentyp.|  
 |7|ItemSet|Vom Algorithmus erkanntes Itemset. Gilt für Zuordnungsmodelle und Sequenzclustermodelle.|  
 |8|AssociationRule|Vom Algorithmus erkannte Zuordnungsregel. Gilt für Zuordnungsmodelle und Sequenzclustermodelle.|  
 |9|PredictableAttribute|Vorhersagbares Attribut. Gilt für alle Modelltypen.|  
@@ -227,11 +227,11 @@ ms.locfileid: "84521617"
 |13|Autoregressive Reihenfolge|Gibt an, dass der Wert die Anzahl der autoregressiven Reihen darstellt.<br /><br /> Gilt für Zeitreihenmodelle, die den ARIMA-Algorithmus verwenden.|  
 |14|Reihenfolge für gleitenden Durchschnitt|Wert, der die Anzahl der gleitenden Durchschnitte in einer Reihe angibt.<br /><br /> Gilt für Zeitreihenmodelle, die den ARIMA-Algorithmus verwenden.|  
 |15|Differenzreihenfolge|Gibt an, dass der Wert einen Wert darstellt, aus dem hervorgeht, wie oft für die Reihe eine Unterscheidung getroffen wurde.<br /><br /> Gilt für Zeitreihenmodelle, die den ARIMA-Algorithmus verwenden.|  
-|16|Boolesch|Stellt einen booleschen Typ dar.|  
-|17|Sonstiges|Stellt einen benutzerdefinierten Wert dar, der vom Algorithmus definiert wird.|  
+|16|Boolean|Stellt einen booleschen Typ dar.|  
+|17|Andere|Stellt einen benutzerdefinierten Wert dar, der vom Algorithmus definiert wird.|  
 |18|Zuvor gerenderte Zeichenfolge|Stellt einen benutzerdefinierten Wert dar, den der Algorithmus als Zeichenfolge rendert. Es wurde keine Formatierung vom Objektmodell angewendet.|  
   
- Die Werttypen werden von der ADMOMD.NET-Enumeration abgeleitet. Weitere Informationen finden Sie unter <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
+ Die Werttypen werden von der ADMOMD.NET-Enumeration abgeleitet. Weitere Informationen finden Sie unter [Microsoft. AnalysisServices. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### <a name="node-score"></a>Knotenergebnis  
  Die Bedeutung des Knotenergebnisses hängt vom verwendeten Modelltyp ab und kann außerdem je nach Knotentyp unterschiedlich ausfallen. Weitere Informationen über die jeweilige Berechnung von NODE_SCORE für die verschiedenen Modelle und Knotentypen finden Sie unter [Miningmodellinhalt nach Algorithmustyp](#bkmk_AlgoType).  

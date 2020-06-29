@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ffd151332fe5aa0c152ba66c159472dc9745f2d0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e3a8837cbf3b102435a94706ee277aab9a42fb73
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966120"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440677"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Schritt 8: Vereinfachen des Layouts des Pakets aus Lektion 1
   Nachdem Sie nun die Konfiguration des Lektion 1-Pakets abgeschlossen haben, bietet es sich an, den Inhalt des Paketlayouts wieder in eine klare Anordnung zu bringen. Wenn die Formen in den Ablaufsteuerungs- und Datenflusslayouts beliebig groß oder nicht ausgerichtet oder gruppiert sind, lässt sich die Funktionsweise des Pakets möglicherweise schwerer nachvollziehen.  

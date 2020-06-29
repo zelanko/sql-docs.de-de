@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dc1aeb650810f9b6d580dabcd22091a2e1eb9d49
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: b1e6079d12de5468a654e646c434ae72596f62dc
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427257"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469275"
 ---
 # <a name="creating-a-custom-task"></a>Erstellen eines benutzerdefinierten Tasks
   Die Schritte zum Erstellen eines benutzerdefinierten Tasks ähneln denen jedes anderen benutzerdefinierten Objekts für [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
   
--   Erstellen Sie eine neue Klasse, die von der Basisklasse erbt. Für einen Task ist die Basisklasse <xref:Microsoft.SqlServer.Dts.Runtime.Task>.  
+-   Erstellen Sie eine neue Klasse, die von der Basisklasse erbt. Für einen Task ist die Basisklasse [Microsoft. SqlServer. DTS. Runtime. Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task).  
   
 -   Weisen Sie das Attribut zu, das den Typ des Objekts für die Klasse identifiziert. Für einen Task ist das Attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "85427257"
 ## <a name="getting-started-with-a-custom-task"></a>Erste Schritte mit einem benutzerdefinierten Task  
   
 ### <a name="creating-projects-and-classes"></a>Erstellen von Projekten und Klassen  
- Da alle verwalteten Tasks von der <xref:Microsoft.SqlServer.Dts.Runtime.Task>-Basisklasse abgeleitet sind, besteht der erste Schritt beim Erstellen eines benutzerdefinierten Tasks darin, in Ihrer bevorzugten verwalteten Programmiersprache ein Klassenbibliotheksprojekt anzulegen und eine Klasse zu generieren, die von der Basisklasse erbt. In dieser abgeleiteten Klasse überschreiben Sie die Methoden und Eigenschaften der Basisklasse, um die benutzerdefinierten Funktionen zu implementieren.  
+ Da alle verwalteten Tasks von der Basisklasse [Microsoft. SqlServer. DTS. Runtime. Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) abgeleitet werden, besteht der erste Schritt beim Erstellen eines benutzerdefinierten Tasks darin, in Ihrer bevorzugten verwalteten Programmiersprache ein Klassen Bibliotheksprojekt zu erstellen und eine Klasse zu erstellen, die von der Basisklasse erbt. In dieser abgeleiteten Klasse überschreiben Sie die Methoden und Eigenschaften der Basisklasse, um die benutzerdefinierten Funktionen zu implementieren.  
   
  Erstellen Sie in der gleichen Lösung ein zweites Klassenbibliotheksprojekt für die individuelle Benutzeroberfläche. Für eine einfache Bereitstellung sollten Sie eine eigene Assembly für die Benutzeroberfläche verwenden, da Sie so den Verbindungs-Manager oder seine Benutzeroberfläche unabhängig aktualisieren und erneut bereitstellen können.  
   
