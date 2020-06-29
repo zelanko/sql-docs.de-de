@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.mapping.f1
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 396c43f0b7adaf9d2a9dcd6124194aa82a9f8cc0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 043077496e1ec1a1cad147725d7f722364f6a54c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966390"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425497"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Foreach-Schleifen-Editor (Seite Variablenzuordnungen)
   Auf der Seite **Variablenzuordnungen** des Dialogfelds **Foreach-Schleifen-Editor** können Sie dem Sammlungswert Variablen zuordnen. Der Wert der Variablen wird bei jeder Iteration der Schleife mit den Sammlungswerten aktualisiert.  
@@ -25,7 +25,7 @@ ms.locfileid: "84966390"
   
  Das [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Tutorial zum Erstellen eines einfachen ETL-Pakets enthält eine Lektion, in der Sie eine foreach-Schleife hinzufügen und konfigurieren können.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Variable**  
  Wählen Sie eine vorhandene Variable aus, oder klicken Sie \<**New variable...**> auf, um eine neue Variable zu erstellen.  
   

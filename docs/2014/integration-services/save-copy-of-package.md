@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Save Copy of Package dialog box
 ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 29e6b0cfe7d7646b317073298410c479c2cd5665
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 91c35defd543ae33ed45903e7888da905812d1fc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964331"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422447"
 ---
 # <a name="save-copy-of-package"></a>Kopie des Pakets speichern
   Verwenden Sie das in **verfügbare Dialogfeld** Kopie des Pakets speichern [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], um eine Kopie eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakets aus [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] an einem anderen Speicherort zu speichern und dabei optional die Schutzebene des Pakets zu ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Paketspeicherort**  
  Wählen Sie den Typ des Speicherortes aus, an dem das Paket gespeichert werden soll. Die folgenden Optionen sind verfügbar:  
   

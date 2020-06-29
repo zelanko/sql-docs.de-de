@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 86441b7ec5750ca4b7fce07fb7e0b5025e8a6eef
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6005c92d0d48850461c01353ddf94c61140d0f2e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939121"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437447"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Abfrage)
   Mithilfe der Registerkarte **Abfrage** des Dialogfelds **Data Mining-Abfragetask** können Sie Vorhersageabfragen auf der Grundlage eines Miningmodells erstellen. In diesem Dialogfeld können Sie auch Parameter und Resultsets an Variablen anbinden.  
@@ -53,7 +53,7 @@ ms.locfileid: "84939121"
  **Variablen Name**  
  Wählen Sie in der Liste eine Variable aus, um sie dem Parameter zuzuordnen.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Fügt der Liste einen Parameter hinzu.  
   
  **Entfernen**  
@@ -71,7 +71,7 @@ ms.locfileid: "84939121"
  **Ergebnistyp**  
  Gibt an, ob eine einzelne Zeile oder ein vollständiges Resultset zurückgegeben werden soll.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Fügt ein Resultset zur Liste hinzu.  
   
  **Entfernen**  

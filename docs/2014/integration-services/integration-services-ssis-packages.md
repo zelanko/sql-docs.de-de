@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 72dfbb5873728efb87a797f1fee9fb4aa469275c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4f2a7c3c1e70e8d402bcd73add2be04d93d182fe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965410"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436497"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services-Pakete (SSIS)
   Bei einem Paket handelt es sich um eine organisierte Sammlung von Verbindungen, Ablaufsteuerungselementen, Datenflusselementen, Ereignishandlern, Variablen, Parametern und Konfigurationen, die Sie entweder mit den grafischen Designtools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oder programmgesteuert erstellen.  Sie speichern dann das fertige Paket in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem, oder Sie können das ssISnoversion-Projekt auf dem Server [!INCLUDE[ssIS](../includes/ssis-md.md)] bereitstellen. Das Paket ist jene Arbeitseinheit, die abgerufen, ausgeführt und gespeichert wird.  
@@ -59,7 +59,7 @@ ms.locfileid: "84965410"
 ### <a name="event-handlers"></a>Ereignishandler  
  Ein Ereignishandler ist ein Workflow, der als Reaktion auf die Ereignisse ausgeführt wird, die von einem Paket, einem Task oder Container ausgelöst werden. Beispielsweise können Sie mit einem Ereignishandler den Speicherplatz überprüfen, wenn ein Ereignis vor der Ausführung oder ein Fehler auftritt, und eine E-Mail-Nachricht senden, um dem Administrator den verfügbaren Speicherplatz oder Fehlerinformationen zu melden. Ein Ereignishandler ist wie ein Paket aufgebaut, mit einer Ablaufsteuerung und optionalen Datenflüssen. Ereignishandler können einzelnen Tasks oder Containern im Paket hinzugefügt werden. Weitere Informationen finden Sie unter [Integration Services-Ereignishandler &#40;SSIS&#41;](integration-services-ssis-event-handlers.md).  
   
-### <a name="configurations"></a>Configurations  
+### <a name="configurations"></a>Konfigurationen  
  Eine Konfiguration enthält Paare aus einer Eigenschaft und einem Wert, die die Eigenschaften des Pakets und der zugehörigen Tasks, Containers, Variablen, Verbindungen und Ereignishandler beschreiben, wenn das Paket ausgeführt wird. Mithilfe von Konfigurationen können Eigenschaften aktualisiert werden, ohne das Paket zu ändern. Wenn das Paket ausgeführt wird, werden die Konfigurationsinformationen geladen und die Eigenschaftswerte aktualisiert. Beispielsweise kann mit einer Konfiguration die Verbindungszeichenfolge der Verbindung aktualisiert werden.  
   
  Die Konfiguration wird gespeichert und mit dem Paket bereitgestellt, wenn das Paket auf einem anderen Computer installiert wird. Die Konfigurationswerte können aktualisiert werden, wenn das Paket installiert wird, damit das Paket in einer anderen Umgebung unterstützt wird. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md).  
@@ -90,7 +90,7 @@ ms.locfileid: "84965410"
 ## <a name="custom-log-entries-available-on-the-package"></a>Verfügbare benutzerdefinierte Protokolleinträge für Pakete  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für Pakete aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../../2014/integration-services/custom-messages-for-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`PackageStart`|Zeigt den Beginn der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
 |`PackageEnd`|Zeigt den Abschluss der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  

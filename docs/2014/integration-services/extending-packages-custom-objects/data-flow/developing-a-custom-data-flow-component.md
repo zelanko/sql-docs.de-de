@@ -15,14 +15,14 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2e1a6af8407813a2a712b0c43c0b06097477f00f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ee2b30cf0796953d12f976745fb195169de86c68
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966514"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437077"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Entwickeln einer benutzerdefinierten Datenflusskomponente
   Die Datenflusstask besteht aus Komponenten, die eine Verbindung zu einer Reihe von Datenquellen herstellen und die Daten dann mit Hochgeschwindigkeit transformieren und routen. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt ein erweiterbares Objektmodell bereit, mit dem Entwickler benutzerdefinierte Quellen, Transformationen und Ziele erstellen können, die Sie in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] und in bereitgestellten Paketen verwenden können. Dieser Abschnitt enthält Themen, die Sie durch die Entwicklung benutzerdefinierter Datenflusskomponenten führen.
@@ -54,7 +54,7 @@ ms.locfileid: "84966514"
 
  [Entwickeln bestimmter Typen von Datenfluss Komponenten](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md) Enthält Informationen zum Entwickeln der drei Arten von Datenfluss Komponenten: Quellen, Transformationen und Ziele.
 
-## <a name="reference"></a>Reference
+## <a name="reference"></a>Verweis
  <xref:Microsoft.SqlServer.Dts.Pipeline>Enthält die Klassen und Schnittstellen, die zum Erstellen von benutzerdefinierten Datenfluss Komponenten verwendet werden.
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>Enthält die Klassen und Schnittstellen, die das Datenfluss Task-Objektmodell bilden, und wird zum Erstellen benutzerdefinierter Datenfluss Komponenten oder zum Erstellen eines Datenfluss Tasks verwendet.

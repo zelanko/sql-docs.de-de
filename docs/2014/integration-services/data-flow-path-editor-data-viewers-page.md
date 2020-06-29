@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 33d0d6ec4e462b38079c43bbb47e30feb4d34ed8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84e3e79831f65b88b55fe8769bf375a948512af0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917060"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437867"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>Datenflusspfad-Editor (Seite Daten-Viewer)
   Verwenden Sie die Seite **Daten-Viewer** des Dialogfelds **Datenflusspfad-Editor** , um die Daten-Viewer zu verwalten, die dem Pfad zugeordnet sind.  
@@ -30,7 +30,7 @@ ms.locfileid: "84917060"
  **Typ des Daten-Viewers**  
  Listet den Typ des Daten-Viewers auf.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Klicken Sie auf diese Schaltfläche, um mithilfe des Dialogfelds **Daten-Viewer konfigurieren** einen Daten-Viewer hinzuzufügen.  
   
  **Löschen**  

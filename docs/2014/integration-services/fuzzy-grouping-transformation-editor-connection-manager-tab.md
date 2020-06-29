@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 47b1446d-5331-473c-9cb5-a98b1f55bf5f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8b06f9202bc158d1f64a11c9814792c7fe63ee9d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2a8b0af9f36fdd386f7da375184fd4e4ec5c4be
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966330"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425297"
 ---
 # <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>Transformations-Editor für Fuzzygruppierung (Registerkarte Verbindungs-Manager)
   Mithilfe der Registerkarte **Verbindungs-Manager** des Dialogfelds **Transformations-Editor für Fuzzygruppierung** können Sie eine vorhandene Verbindung auswählen oder eine neue erstellen.  
@@ -28,7 +28,7 @@ ms.locfileid: "84966330"
   
  Weitere Informationen zur Transformation für Fuzzygruppierung finden Sie unter [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **OLE DB Verbindungs-Manager**  
  Wählen Sie einen vorhandenen OLE DB-Verbindungs-Manager aus dem Listenfeld aus, oder erstellen Sie mithilfe der Schaltfläche **Neu** eine neue Verbindung.  
   

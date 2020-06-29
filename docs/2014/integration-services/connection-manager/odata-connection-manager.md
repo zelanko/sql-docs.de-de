@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3c20d069a419a4d9f95a31489449a4726e25c304
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 57f87ec28e6c32f8e44abb3567878b85416ccd5e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920456"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434097"
 ---
 # <a name="odata-connection-manager"></a>OData-Verbindungs-Manager
   Mithilfe eines OData-Verbindungs-Managers kann ein Paket eine Verbindung mit einer OData-Quelle herstellen. Eine OData-Quellkomponente stellt über einen OData-Verbindungs-Manager eine Verbindung mit einer OData-Quelle her und verwendet die Daten des Diensts. Ausführliche Informationen einschließlich Installationsanweisungen für diese Komponenten finden Sie im Abschnitt [odata-Quelle](../data-flow/odata-source.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "84920456"
   
 |||  
 |-|-|  
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |url|Die URL zum Dienstdokument.|  
 |UserName|Der Benutzername, der für die Standardauthentifizierung verwendet wird.|  
 |Kennwort|Das Kennwort, das für die Standardauthentifizierung verwendet wird.|  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 55e71b6615afc15c2963b4dbb9bfbf2790e90b3b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963120"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421548"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Festlegen der Eigenschaften von Rangfolgeneinschränkungen
   Um Eigenschaften für Rangfolgeneinschränkungen festzulegen, verwenden Sie eines der folgenden Tools:  
@@ -67,13 +67,13 @@ ms.locfileid: "84963120"
   
     |Lese/Schreibeigenschaft|Konfigurationsaktion|  
     |--------------------------|--------------------------|  
-    |Beschreibung|Bereitstellen einer Beschreibung.|  
+    |BESCHREIBUNG|Bereitstellen einer Beschreibung.|  
     |EvalOp|Auswählen eines Auswertungsvorgangs. Wenn die Vorgänge `Expression` , **ExpressionAndConstant**oder **ExpressionOrConstant** ausgewählt sind, können Sie einen Ausdruck angeben.|  
     |expression|Wenn der Auswertungsvorgang einen Ausdruck einschließt, wird ein Ausdruck bereitgestellt. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden. Weitere Informationen zur Ausdruckssprache finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Legen `LogicalAnd` Sie fest, um anzugeben, ob die Rang folgen Einschränkung zusammen mit anderen Rang folgen Einschränkungen ausgewertet wird, wenn mehrere ausführbare Dateien vorausgehen und mit der eingeschränkten ausführbaren Datei verknüpft sind.|  
     |Name|Aktualisieren des Namens der Rangfolgeneinschränkung.|  
     |ShowAnnotation|Geben Sie den Typ der zu verwendenden Anmerkung ein. Wählen Sie **Never** aus, um Anmerkungen zu deaktivieren, **AsNeeded** , um Anmerkungen bei Bedarf zu aktivieren, **ConstraintName** , um automatisch den Wert mithilfe der Name-Eigenschaft anzumerken, **ConstraintDescription** , um automatisch den Wert mithilfe der Description-Eigenschaft anzumerken, und **ConstraintOptions** , um automatisch den Wert mithilfe der Eigenschaften Value und Expression anzumerken.|  
-    |Value|Wenn der Auswertungsvorgang in der EvalOP-Eigenschaft eine Einschränkung enthält, wählen Sie das Ausführungsergebnis der eingeschränkten ausführbaren Datei aus.|  
+    |Wert|Wenn der Auswertungsvorgang in der EvalOP-Eigenschaft eine Einschränkung enthält, wählen Sie das Ausführungsergebnis der eingeschränkten ausführbaren Datei aus.|  
   
 5.  Schließen Sie das Fenster Eigenschaften.  
   
