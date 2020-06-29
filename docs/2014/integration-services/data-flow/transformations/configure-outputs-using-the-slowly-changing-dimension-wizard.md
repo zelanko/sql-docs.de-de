@@ -11,14 +11,14 @@ helpviewer_keywords:
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 67ae47197636af037f3eb9e648a2d8ce6c4a63a2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 144c5c5bc19afe46215f85279e5586c02f27d4c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939679"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430917"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche Dimensionen
   Der Assistent für langsam veränderliche Dimensionen dient als Editor für die Transformation für langsam veränderliche Dimensionen. Das Erstellen und Konfigurieren des Datenflusses für langsam veränderliche Dimensionen kann eine komplexe Aufgabe sein. Der Assistent für langsam veränderliche Dimensionen bietet die einfachste Methode zum Erstellen des Datenflusses für die Ausgaben der Transformation für langsam veränderliche Dimensionen und führt durch die Schritte zum Zuordnen von Spalten, Auswählen von Geschäftsschlüsselspalten, Festlegen von Spaltenänderungsattributen und Konfigurieren der Unterstützung für abgeleitete Dimensionselemente.

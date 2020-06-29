@@ -38,14 +38,14 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 60798bb7bd856dd131592e3c67eb155cf64a6ae7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bcf5706f3c208dad54577c8dd3be4bfb6b4ea643
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939251"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430017"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   Neben den Eigenschaften, die die meisten Datenflussobjekte im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Objektmodell aufweisen, verfügen zahlreiche Datenflussobjekte über benutzerdefinierte objektspezifische Eigenschaften. Diese benutzerdefinierten Eigenschaften sind nur zur Laufzeit verfügbar und sind nicht in der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed Programming Referenz-Dokumentation dokumentiert.  
@@ -560,7 +560,7 @@ ms.locfileid: "84939251"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften der Transformation für Ausdrucksextrahierung. Alle Eigenschaften weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaft|Datentyp|Beschreibung|  
+|Eigenschaft|Datentyp|BESCHREIBUNG|  
 |--------------|--------------|-----------------|  
 |FrequencyThreshold|Integer|Ein numerischer Wert, der angibt, wie oft ein Ausdruck auftreten muss, bevor er extrahiert wird. Der Standardwert dieser Eigenschaft ist **2**.|  
 |IsCaseSensitive|Boolean|Ein Wert, der angibt, ob beim Extrahieren von Nomen und nominalen Ausdrücken die Groß-/Kleinschreibung berücksichtigt wird. Der Standardwert dieser Eigenschaft ist `False`.|  

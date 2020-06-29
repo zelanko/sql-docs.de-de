@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4e61e8c122b284dfe448f415cd05b20feab699ef
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 80513addcc1683b6238734bd72c0ddee3608c61d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939211"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429967"
 ---
 # <a name="use-a-recordset-destination"></a>Verwenden eines Recordsetziels
   Das Recordsetziel speichert keine Daten in einer externen Datenquelle. Stattdessen speichert das Recordsetziel Daten im Speicher eines Recordsets, das in einer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketvariablen des Datentyps `Object` gespeichert ist. Nachdem die Daten vom Recordsetziel gespeichert wurden, verwenden Sie typischerweise einen Foreach-Schleifencontainer mit dem Foreach-ADO-Enumerator zum Verarbeiten jeweils einer Zeile des Recordsets. Der Foreach-ADO-Enumerator speichert den Wert jeder einzelnen Spalte für die aktuelle Zeile in einer separaten Paketvariablen. Anschließend lesen die im Foreach-Schleifencontainer konfigurierten Tasks diese Werte in den Variablen und führen für diese Aktionen aus.  
