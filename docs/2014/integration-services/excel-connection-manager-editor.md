@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 08dc39cb21eec03a7cbdc5bd56c68212044dd211
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d9951d9bfe7e95499c2b967e6329d206cdc4aa44
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966890"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437407"
 ---
 # <a name="excel-connection-manager-editor"></a>Verbindungs-Manager-Editor für Excel
   Mithilfe des Dialogfelds **Verbindungs-Manager-Editor für Excel** können Sie einer vorhandenen oder neuen [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] -Arbeitsmappendatei eine Verbindung hinzufügen.  
@@ -28,7 +28,7 @@ ms.locfileid: "84966890"
 > [!NOTE]  
 >  Es ist nicht möglich, eine Verbindung mit einer kennwortgeschützten Excel-Datei herzustellen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Excel-Dateipfad**  
  Geben Sie den Pfad und den Dateinamen einer vorhandenen oder neuen Excel-Arbeitsmappendatei (XLS-Datei) ein.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "84966890"
  **Excel-Version**  
  Geben Sie die Version von Microsoft Excel an, die zum Erstellen der Datei verwendet wurde.  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |Excel 97-2003|Die Datei wurde mithilfe von Excel 97 oder höher erstellt.|  
 |Excel 3,0|Die Datei wurde mithilfe von Excel 3,0 erstellt.|  

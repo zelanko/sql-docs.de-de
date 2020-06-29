@@ -9,19 +9,19 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.eventhandlerwindow.f1
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4bd7e159a148b134d744481a76ac910af572c0c2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8777e6c0515a602198e3ed393714544d774f9958
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969410"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437417"
 ---
 # <a name="event-handlers-tab"></a>Registerkarte Ereignishandler
   Verwenden Sie die Registerkarte **Ereignishandler** von [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer zum Erstellen eines Steuerungsflusses in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket. Ein Ereignishandler wird als Reaktion auf ein Ereignis ausgeführt, das von einem Paket, Task oder Container ausgelöst wird.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ausführbare Datei**  
  Wählen Sie die ausführbare Datei aus, für die Sie einen Ereignishandler erstellen möchten. Bei der ausführbaren Datei kann es sich um ein Paket, einen Task oder Container im Paket handeln.  
   

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 00efb17903aa6827dafc48f007d6b63cd137c325
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fa94e484ea82f0ca5421ada5a6e8779e02dfd461
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917661"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438027"
 ---
 # <a name="wmi-data-reader-task"></a>WMI-Datenleser (Task)
   Der Task WMI-Datenleser führt Abfragen mithilfe von WQL (WMI Query Language) aus, womit Informationen von WMI zu einem Computersystem zurückgegeben werden. Der Task WMI-Datenleser kann für folgende Zwecke verwendet werden:  

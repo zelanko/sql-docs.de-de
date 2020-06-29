@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 43921efab592e6642fcc5adaef8caa869a1b524f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 027f3c77e84b47958e9fb6567acdb308c14eb1e7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966750"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437357"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>Editor für den Task 'SQL ausführen' (Seite Resultset)
   Mithilfe der Seite **Resultset** des Dialogfelds **Editor für den Task 'SQL ausführen'** können Sie das Ergebnis der SQL-Anweisung neuen oder vorhandenen Variablen zuordnen. Die Optionen in diesem Dialogfeld sind deaktiviert, wenn auf der Seite Allgemein für **ResultSet** der Wert **Keine**festgelegt ist.  
   
  Weitere Informationen zu diesem Task finden Sie unter [SQL ausführen (Task)](control-flow/execute-sql-task.md) und [Resultsets im Task „SQL ausführen“](../../2014/integration-services/result-sets-in-the-execute-sql-task.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ergebnisname**  
  Nachdem Sie durch Klicken auf **Hinzufügen**eine Resultsetzuordnung hinzugefügt haben, geben Sie einen Namen für das Ergebnis an. Je nach Resultsettyp müssen Sie bestimmte Ergebnisnamen verwenden.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "84966750"
  **Variablen Name**  
  Ordnen Sie das Resultset einer Variablen zu, indem Sie eine Variable auswählen, oder klicken Sie \<**New variable...**> auf, um mithilfe des Dialog Felds **Variable hinzufügen** eine neue Variable hinzuzufügen.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Klicken Sie auf diese Option, um eine Resultsetzuordnung hinzuzufügen.  
   
  **Entfernen**  

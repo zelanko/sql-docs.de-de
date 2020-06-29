@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfertasks.selectobjectsmodaldialogs.f1
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b2423afc2a16751ddb60c6ca679a2ee21121d238
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e631b902cad9735cafba28b72357be674d6497a7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918268"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438167"
 ---
 # <a name="select-objects-to-transfer"></a>Objekte auswählen (Übertragungsdialogfeld)
   Verwenden Sie dieses Dialogfeld, um die mithilfe eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Übertragungstasks von einer Instanz von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in eine andere zu übertragenden Objekte auszuwählen.  

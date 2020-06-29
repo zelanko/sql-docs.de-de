@@ -9,21 +9,21 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configureerroroutput.f1
 ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7f61748b3a1a691a943deec67fcbcfba4ece682b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ee37cae5e0d6d9d0f95ca5b9f71eec04742f94e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921571"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438417"
 ---
 # <a name="configure-error-output"></a>Fehlerausgabe konfigurieren
   Mithilfe des Dialogfelds **Fehlerausgabe konfigurieren** können Sie die Fehlerbehandlungsoptionen für Datenflusstransformationen konfigurieren, die eine Fehlerausgabe unterstützen.  
   
  Weitere Informationen zum Arbeiten mit Fehlerausgaben finden Sie unter [Fehlerbehandlung in Daten](data-flow/error-handling-in-data.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabe oder Ausgabe**  
  Zeigen Sie den Namen der Ausgabe an.  
   

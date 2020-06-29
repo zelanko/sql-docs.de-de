@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.ssdqs.designer.cleansing.f1
 - SQL12.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eaff1c5ac8ae5a804f546fc5e551dcb62e2fda7a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3f16adec193cebde1d30d1455e68240622b4ded8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966906"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437427"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Transformations-Editor für die DQS-Bereinigung (Dialogfeld)
   Im Dialogfeld **Transformations-Editor für die DQS-Bereinigung** können Sie Daten mithilfe von Data Quality Services (DQS) korrigieren. Weitere Informationen finden Sie unter [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md).  
@@ -103,7 +103,7 @@ ms.locfileid: "84966906"
  **Confidence**  
  Gibt an, ob der Vertrauensgrad für korrigierte Daten eingeschlossen wird. Der Vertrauensgrad gibt die DQS-Sicherheitsstufe der Korrektur oder des Vorschlags an. Weitere Informationen zu Vertrauensgraden finden Sie unter [Datenbereinigung](../../2014/data-quality-services/data-cleansing.md).  
   
- **Weshalb**  
+ **`Reason`**  
  Gibt an, ob der Grund für die Datenkorrektur eingeschlossen wird.  
   
  **Angefügte Daten**  

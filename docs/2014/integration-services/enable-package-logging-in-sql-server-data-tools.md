@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 73a4c6fc0795fde7a9b8e7378fd0a88447ff5cd2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0cae08e9d9eee75382321cac746e24d57982cc4b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966935"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437467"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Aktivieren der Paketprotokollierung in SQL Server Data Tools
   In diesem Verfahren wird beschrieben, wie einem Paket Protokolle hinzugefügt werden, die Protokollierung auf Paketebene konfiguriert wird und die Protokollierungskonfiguration in eine XML-Datei gespeichert wird. Sie können Protokolle nur auf der Paketebene hinzufügen, das Paket muss jedoch keine Protokollierung durchführen, um die Protokollierung in den Containern zu ermöglichen, die im Paket enthalten sind.  

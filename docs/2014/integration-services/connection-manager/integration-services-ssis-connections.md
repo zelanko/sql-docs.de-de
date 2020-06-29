@@ -17,14 +17,14 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: db78d2aef82e04846e7dff823c3448005beb1b22
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6765b2f0021aaa0ad787eb6685d1eb512f01c94
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920781"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438447"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services-Verbindungen (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete verwenden Verbindungen zum Ausführen verschiedener Tasks und zum Implementieren von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Features:  
@@ -65,7 +65,7 @@ ms.locfileid: "84920781"
 ### <a name="built-in-connection-managers"></a>Integrierte Verbindungs-Manager  
  In der folgenden Tabelle sind die von bereitgestellten Verbindungs-Manager-Typen aufgeführt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-|type|BESCHREIBUNG|Thema|  
+|Typ|BESCHREIBUNG|Thema|  
 |----------|-----------------|-----------|  
 |ADO|Stellt eine Verbindung mit ADO-Objekten (ActiveX Data Objects) her.|[ADO-Verbindungs-Manager](ado-connection-manager.md)|  
 |ADO.NET|Stellt eine Verbindung mit einer Datenquelle mithilfe eines .NET-Anbieters her.|[ADO.NET-Verbindungs-Manager](ado-net-connection-manager.md)|  
@@ -93,7 +93,7 @@ ms.locfileid: "84920781"
 > [!IMPORTANT]  
 >  Die in der folgenden Tabelle aufgelisteten Verbindungs-Manager funktionieren nur mit [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] und [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|type|BESCHREIBUNG|Thema|  
+|Typ|BESCHREIBUNG|Thema|  
 |----------|-----------------|-----------|  
 |ORACLE|Stellt eine Verbindung mit einem Oracle- \<version info> Server her.|Der Oracle-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Oracle von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
 |SAPBI|Stellt eine Verbindung mit einem System mit SAP NetWeaver BI, Version 7 her.|Der SAP BI-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für SAP BI enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440).|  

@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 43bda909-e48f-4243-9614-49f4eea84872
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 88bc9c648fde5e302347b243a9ea11f049798876
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bc3c3862cbff7d8e9db994ad3928ea4d0d87eed3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921668"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438507"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>Daten-Viewer konfigurieren (Registerkarte Histogramm)
   Mithilfe der Registerkarte **Histogramm** des Dialogfelds **Daten-Viewer konfigurieren** geben Sie die anzuzeigende Spalte an. Ein Histogramm zeigt Datenwerte einer numerischen Spalte als Verteilung der Werte an. Das Diagramm spiegelt jeweils nur den Inhalt eines Puffers wider.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Dargestellte Spalte**  
  Wählen Sie eine Spalte aus, die als Histogramm angezeigt werden soll.  
   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f24ea0800107caf026105e306ae39e1461077de5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e3f141ae1d77e5c346fe03e74366b0d94f4ca354
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924264"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439057"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
   Der- `SSISDB` Katalog ist der zentrale Punkt für die Arbeit mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS)-Projekten, die Sie auf dem-Server bereitgestellt haben [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Sie legen beispielsweise Projekt- und Paketparameter fest, konfigurieren Umgebungen, um Laufzeitwerte für Pakete anzugeben, führen Pakete aus, behandeln Paketprobleme und verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Servervorgänge.  
@@ -44,9 +44,9 @@ ms.locfileid: "84924264"
   
 -   Ordner  
   
--   Project  
+-   Projekt  
   
--   Umgebung  
+-   Environment  
   
 -   Parameter  
   

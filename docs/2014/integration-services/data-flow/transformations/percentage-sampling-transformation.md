@@ -17,14 +17,14 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e7f68e2a6affcdeb7970b457786d91c69967c72b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 09e8a4a4ccf4b6e018e8c8ef4a905f77e417b3e9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939363"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437587"
 ---
 # <a name="percentage-sampling-transformation"></a>Transformation für Prozentwert-Stichproben
   Die Transformation für Prozentwert-Stichproben erstellt ein Stichprobendataset, indem ein Prozentwert der Transformationseingabezeilen ausgewählt wird. Das Stichprobendataset ist eine zufällige Auswahl von Zeilen aus der Transformationseingabe, damit die Stichprobe für die Eingabe repräsentativ ist.  

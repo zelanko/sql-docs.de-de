@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93881c4e9b91e7ace4c250fbf90b8913484f2ce2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cfbb4468cb69947dfa54fb519b7698286393d578
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966760"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437367"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Editor für den Task 'SQL ausführen' (Seite Parameterzuordnung)
   Mithilfe der Seite **Parameterzuordnung** des Dialogfelds **Editor für den Task 'SQL ausführen'** können Sie Parametern in der SQL-Anweisung Variablen zuordnen.  
   
  Weitere Informationen zu diesem Task finden Sie unter [SQL ausführen (Task)](control-flow/execute-sql-task.md) und [Parameter und Rückgabecodes im Task „SQL ausführen“](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Variablen Name**  
  Nachdem Sie durch Klicken auf **Hinzufügen**eine Parameter Zuordnung hinzugefügt haben, wählen Sie in der Liste ein System oder eine benutzerdefinierte Variable aus, oder klicken Sie auf diese Option \<**New variable...**> , um mithilfe des Dialog Felds **Variable hinzufügen** eine neue Variable hinzuzufügen.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "84966760"
   
  Durch diese Einstellung wird sichergestellt, dass der Anbieter genügend Speicherplatz für Parameterwerte variabler Länge zuordnet.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Klicken Sie auf diese Option, um eine Parameterzuordnung hinzuzufügen.  
   
  **Entfernen**  

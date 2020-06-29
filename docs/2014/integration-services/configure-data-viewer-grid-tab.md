@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4ebdb6750c61373041653d7c65df01fa866b9b68
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a5180f3bf0064c9f77c4a093cc56e0294337a93
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921687"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438527"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>Daten-Viewer konfigurieren (Registerkarte Raster)
   Verwenden Sie die Registerkarte **Raster** des Dialogfelds **Daten-Viewer konfigurieren** , um die anzuzeigenden Spalten anzugeben. In einem Rasterdiagramm werden Datensätze als Zeilen in einem Raster angezeigt. Das Diagramm spiegelt jeweils nur den Inhalt eines Puffers wider.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Nicht verwendete Spalten**  
  Wählen Sie eine Spalte aus, und klicken Sie auf den einfachen Pfeil, um sie in die Liste **Angezeigte Spalten** zu verschieben. Klicken Sie auf den doppelten Pfeil, um alle Spalten in die Liste **Angezeigte Spalten** zu verschieben.  
   

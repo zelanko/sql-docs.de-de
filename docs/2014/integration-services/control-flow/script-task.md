@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6c44017e7f3746861209b62bcb8c7b8999712076
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 024c499d882a515286904229a9d9f7942d9b8056
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918361"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438207"
 ---
 # <a name="script-task"></a>Skripttask
   Der Skripttask stellt Code zum Ausführen von Funktionen bereit, die in den integrierten Tasks und Transformationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht verfügbar sind. Der Skripttask kann auch Funktionen in einem einzigen Skript zusammenfassen, statt mehrere Tasks und Transformationen zu verwenden. Sie verwenden den Skripttask für einmalige Aktionen in einem Paket (einmalig pro aufgezähltem Objekt), anstatt diese einmalig pro Datenzeile auszuführen.  
@@ -65,7 +65,7 @@ ms.locfileid: "84918361"
 ### <a name="configuring-the-script-task-in-the-designer"></a>Konfigurieren des Skripttasks im Designer  
  In der folgenden Tabelle wird das `ScriptTaskLogEntry`-Ereignis beschrieben, das für den Skripttask protokolliert werden kann. Das `ScriptTaskLogEntry` Ereignis wird für die Protokollierung auf der Registerkarte **Details** des Dialog Felds **SSIS-Protokolle konfigurieren** ausgewählt. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|Gibt die Ergebnisse des Implementierens der Protokollierung innerhalb des Skripts an. Der Task schreibt für jeden Aufruf der `Log`-Methode des `Dts`-Objekts einen Protokolleintrag. Der Task schreibt diese Einträge, wenn der Code ausgeführt wird. Weitere Informationen finden Sie unter [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   

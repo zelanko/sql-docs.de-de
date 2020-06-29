@@ -22,14 +22,14 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b7dc27ea31f17d011a8ad486f6dd9f4a101db2ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 11dd13bbf431413efe10f4ecdb0031b5a1650242
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966970"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437507"
 ---
 # <a name="dtutil-utility"></a>dtutil Utility
   Das Eingabeaufforderungs-Hilfsprogramm **dtutil** dient zum Verwalten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Paketen. Mit dem Hilfsprogramm kann ein Paket kopiert, verschoben oder gelöscht und das Vorhandensein eines Pakets überprüft werden. Diese Aktionen können für jedes [!INCLUDE[ssIS](../includes/ssis-md.md)]-Paket ausgeführt werden, das sich an einem der drei folgenden Speicherorte befindet: in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank, im [!INCLUDE[ssIS](../includes/ssis-md.md)]-Paketspeicher oder im Dateisystem. Falls das Hilfsprogramm auf ein Paket zugreift, das in **msdb**gespeichert ist, werden Sie möglicherweise zur Eingabe eines Benutzernamens und eines Kennworts aufgefordert. Wenn die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwendet, ist sowohl ein Benutzername als auch ein Kennwort erforderlich. Falls der Benutzername fehlt, versucht **dtutil** sich bei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der Windows-Authentifizierung anzumelden. Der Speichertyp des Pakets wird durch die Optionen `/SQL`, `/FILE` und `/DTS` identifiziert.  
@@ -116,7 +116,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>dtutil-Exitcodes  
  **dtutil** legt einen Exitcode fest, der Sie informiert, wenn Syntaxfehler erkannt, falsche Argumente verwendet oder ungültige Optionskombinationen angegeben werden. Andernfalls meldet das Hilfsprogramm „Der Vorgang wurde erfolgreich abgeschlossen“. In der folgenden Tabelle sind die Werte aufgeführt, die vom Hilfsprogramm **dtutil** beim Beenden festgelegt werden können.  
   
-|Value|Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Das Hilfsprogramm wurde erfolgreich ausgeführt.|  
 |1|Beim Ausführen des Hilfsprogramms ist ein Fehler aufgetreten.|  
@@ -124,7 +124,7 @@ dtutil /option [value] [/option [value]]...
 |5|Das Hilfsprogramm konnte das angeforderte Paket nicht laden.|  
 |6|Das Hilfsprogramm konnte die Befehlszeile nicht auflösen, da sie syntaktische oder semantische Fehler enthielt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Es ist nicht möglich, Befehlsdateien oder Umleitungen für **dtutil**zu verwenden.  
   
  Die Reihenfolge der Optionen in der Befehlszeile ist unerheblich.  

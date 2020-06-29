@@ -12,14 +12,14 @@ helpviewer_keywords:
 - regenerating package GUID
 - updating package properties
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d3d26ebc097267b736b78e83adc37eb484c41162
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ec876c6ce358e97bb68a80ddef1bb15ba85a2961
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917580"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438007"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Kopieren eines Pakets in SQL Server-Datentools
   In diesem Thema wird beschrieben, wie Sie ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Paket durch Kopieren eines vorhandenen Pakets erstellen und wie Sie die Eigenschaften `Name` und `GUID` des neuen Pakets aktualisieren.  
