@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 73186e55435f22545c5779ccd1925b4cb8be6d75
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: cfe6ed509cfa14ab97379df64f21562cb58d30b9
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85436637"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469305"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
-  In den folgenden Tabellen sind vordefinierte Fehler-, Warn- und Informationsmeldungen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in aufsteigender numerischer Reihenfolge innerhalb jeder Kategorie aufgeführt, inklusive der jeweiligen numerischen Codes und symbolischen Namen. Jeder dieser Fehler ist als Feld der Klasse <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> im Namespace <xref:Microsoft.SqlServer.Dts.Runtime> definiert.  
+  In den folgenden Tabellen sind vordefinierte Fehler-, Warn- und Informationsmeldungen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in aufsteigender numerischer Reihenfolge innerhalb jeder Kategorie aufgeführt, inklusive der jeweiligen numerischen Codes und symbolischen Namen. Jeder dieser Fehler wird als Feld in der [Microsoft. SqlServer. DTS. Runtime. HRESULTs](/dotnet/api/microsoft.sqlserver.dts.runtime.hresults) -Klasse im- <xref:Microsoft.SqlServer.Dts.Runtime> Namespace definiert.  
   
  Diese Liste kann nützlich sein, wenn ein Fehlercode ohne zugehörige Beschreibung angezeigt wird. Die Liste enthält zurzeit keine Informationen zur Problembehandlung.  
   
