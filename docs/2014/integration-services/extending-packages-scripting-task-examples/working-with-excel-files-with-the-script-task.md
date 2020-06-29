@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9a0f52b9bd12a91d546e33787853dd8883d77b48
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 52fcf25a0334edcff17ba024da501b248e9176cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968450"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426467"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Arbeiten mit Excel-Dateien mit dem Skripttask
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt den Excel-Verbindungs-Manager, die Excel-Quelle und das Excel-Ziel zum Arbeiten mit den in Kalkulationstabellen gespeicherten Daten im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Dateiformat bereit. Die in diesem Thema beschriebenen Verfahren verwenden den Skripttask zum Abrufen von Informationen über verfügbare Excel-Datenbanken (Arbeitsmappendateien) und -Tabellen (Arbeitsmappen und benannte Bereiche). Diese Beispiele können leicht geändert werden, um mit einer der anderen vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB-Anbieter unterstützten dateibasierten Datenquellen zu arbeiten.  
@@ -84,7 +84,7 @@ ms.locfileid: "84968450"
   
     -   Geben Sie `ExcelFile`ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die `ExcelFile` Variable aus.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "84968450"
   
     -   Geben Sie `ExcelFileExists`ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die `ExcelFileExists` Variable aus.  
   
@@ -154,7 +154,7 @@ public class ScriptMain
   
     -   Eingeben `ExcelTable` und `ExcelFile` durch Kommas getrennt`.`  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die `ExcelTable` Variablen und aus `ExcelFile` .  
   
@@ -162,7 +162,7 @@ public class ScriptMain
   
     -   Geben Sie `ExcelTableExists`ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die `ExcelTableExists` Variable aus.  
   
@@ -261,7 +261,7 @@ public class ScriptMain
   
     -   Geben Sie `ExcelFolder` ein  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable ExcelFolder aus.  
   
@@ -269,7 +269,7 @@ public class ScriptMain
   
     -   Geben Sie `ExcelFiles`ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable ExcelFiles aus.  
   
@@ -336,7 +336,7 @@ public class ScriptMain
   
     -   Geben Sie `ExcelFile`ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable ExcelFile aus.  
   
@@ -344,7 +344,7 @@ public class ScriptMain
   
     -   Geben Sie `ExcelTables`ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable exceltablesvariable aus.  
   
@@ -449,7 +449,7 @@ public class ScriptMain
   
     -   Geben Sie den Namen jeder Variable durch Trennzeichen getrennt ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben dem Eigenschafts Feld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variablen aus.  
   
