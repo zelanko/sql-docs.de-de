@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.createtablesql.f1
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9348dd5394aa3ff9bd3d2672b64fcd2327445d5d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d3fc2054711708a27691f2d7219c33749f11b977
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965590"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424957"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>SQL-Anweisung CREATE TABLE (SQL Server-Import/Export-Assistent)
   Verwenden Sie das Dialogfeld **SQL-Anweisung CREATE TABLE** , um die Anweisung anzuzeigen, die automatisch generiert wurde, oder um Sie für Ihre Zwecke zu ändern. Wenn Sie diese Anweisung ändern, müssen Sie möglicherweise auch entsprechende Änderungen an den Spaltenzuordnungen vornehmen und daher die bearbeitete SQL-Anweisung anschließend manuell warten.  
@@ -28,7 +28,7 @@ ms.locfileid: "84965590"
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **SQL-Anweisung**  
  Zeigt die automatisch generierte SQL-Anweisung an, die hier auch bearbeitet werden kann.  
   

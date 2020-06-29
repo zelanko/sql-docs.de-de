@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.deploymentwizard.f1
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 727eb2b745a732049d6eb4a5e2f1808f076167d0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2039968976df2e22a16c47abbcc3f51ba25bbeb2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968310"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424807"
 ---
 # <a name="integration-services-deployment-wizard"></a>Bereitstellungs-Assistent für Integration Services
   Der Bereitstellungs-Assistent für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt Projekte im SSISDB-Katalog auf einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz bereit, die das Projektbereitstellungsmodell verwendet.  
@@ -43,7 +43,7 @@ ms.locfileid: "84968310"
   
  Wenn Sie den Assistenten in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] starten, dann wählt der Assistent standardmäßig die verbundene Serverinstanz aus und gibt den Pfad für das ausgewählte Projekt ein. Sie können diese Werte ändern, um das Projekt an einem anderen Speicherort bereitzustellen.  
   
-## <a name="review"></a>Zusammenfassung  
+## <a name="review"></a>Überprüfung  
  Mit dem Assistenten können Sie die von Ihnen ausgewählten Einstellungen überprüfen, bevor Sie das Projekt bereitstellen. Sie können Ihre Auswahl ändern, indem Sie auf **Zurück**klicken oder indem Sie auf einen der Schritte im linken Bereich klicken.  
   
 ## <a name="deployresults"></a>Bereitstellen/Ergebnisse  

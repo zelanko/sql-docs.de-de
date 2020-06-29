@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 53ddc509c4f44677a2504b791502d530c2104bf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45820aa673f31ae9cea7d1f2f4e8b61d63b8670c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964870"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423947"
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
   Das Eingabeaufforderungs `dtexec` -Hilfsprogramm wird zum Konfigurieren und Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Paketen verwendet. Das Hilfsprogramm `dtexec` ermöglicht den Zugriff auf alle Funktionen der Paketkonfiguration und -ausführung, z. B. auf Parameter, Verbindungen, Eigenschaften, Variablen und Statusanzeigen. Das `dtexec` Hilfsprogramm ermöglicht das Laden von Paketen aus diesen Quellen: dem- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Server, einer ispac-Projektdatei, einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paket Speicher und dem Dateisystem.  
@@ -102,7 +102,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Wenn ein Paket ausgeführt wird, kann `dtexec` einen Exitcode zurückgeben. Der Exitcode wird dazu verwendet, die ERRORLEVEL-Variable aufzufüllen, deren Wert anschließend in bedingten Anweisungen oder in einer Verzweigungslogik innerhalb einer Batchdatei getestet werden kann. In der folgenden Tabelle sind die Werte aufgeführt, die das Hilfsprogramm `dtexec` beim Beenden festlegen kann.  
   
-|Value|Beschreibung|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Das Paket wurde erfolgreich ausgeführt.|  
 |1|Bei der Paketausführung ist ein Fehler aufgetreten.|  

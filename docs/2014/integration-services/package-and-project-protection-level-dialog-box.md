@@ -12,21 +12,21 @@ f1_keywords:
 helpviewer_keywords:
 - Package Protection Level dialog box
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6075d5156a9cc3662ac62e884787b8a650788be9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f5b8faaf754de56b930e37384e70c30e1cc494d1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964890"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423937"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Dialogfeld "Paket- und Projektschutzebene"
   Verwenden Sie das Dialogfeld **Paketschutzebene** , um die Schutzebene eines Pakets zu aktualisieren. Die Schutzebene bestimmt die Methode, das Kennwort oder den Benutzerschlüssel und den Bereich des Paketschutzes. Der Schutz kann alle Daten oder nur vertrauliche Daten einschließen.  
   
  Informationen zum besseren Verständnis der Anforderungen und Optionen für die Paketsicherheit finden Sie unter [Zugriffssteuerung für vertrauliche Daten in Paketen](security/access-control-for-sensitive-data-in-packages.md) und [Sicherheitsübersicht &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Paketschutzebene**  
  Wählen Sie eine Schutzebene aus der Liste aus.  
   

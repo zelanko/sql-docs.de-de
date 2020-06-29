@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02ffd6309ae31f538fecdf6af2cb8475608d6cf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 381493758306e3f7c638f46f7c331f0e6cc3e83f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966337"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425317"
 ---
 # <a name="ftp-task-editor-general-page"></a>Editor für den FTP-Task (Seite Allgemein)
   Mithilfe der Seite **Allgemein** des Dialogfelds **Editor für den FTP-Task** können Sie den FTP-Verbindungs-Manager angeben, der die Verbindung mit dem FTP-Server herstellt, mit dem der Task kommuniziert. Sie können den FTP-Task außerdem benennen und eine Beschreibung hinzufügen.  
   
  Informationen zu diesem Task finden Sie unter [FTP-Task](control-flow/ftp-task.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **FtpConnection**  
  Wählen Sie einen vorhandenen FTP-Verbindungs-Manager aus, oder klicken Sie \<**New connection...**> zum Erstellen eines Verbindungs-Managers.  
   

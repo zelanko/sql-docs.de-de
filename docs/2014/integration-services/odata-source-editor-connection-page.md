@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 64d40dd2a6f0f2568e7e7817a3a9366be8f83cc4
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e06b670e80d1f63d35d4d37b264c8dd9c9d9ad4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965080"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424427"
 ---
 # <a name="odata-source-editor-connection-page"></a>Quellen-Editor für OData (Seite 'Verbindung')
   Auf der Seite **Verbindung** des Dialogfelds **Quellen-Editor für OData** wählen Sie den OData-Verbindungs-Manager für die OData-Quelle aus. Auf dieser Seite können Sie außerdem eine Auflistung oder einen Ressourcenpfad sowie beliebige Abfrageoptionen angeben, mit denen die aus der OData-Quelle abzurufenden Daten bestimmt werden. Weitere Informationen zur OData-Quelle finden Sie unter [OData Source](data-flow/odata-source.md).  
@@ -31,9 +31,9 @@ ms.locfileid: "84965080"
  **Auflistung oder Ressourcenpfad verwenden**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
-|Collection|Rufen Sie mithilfe eines Auflistungsnamens Daten aus der OData-Quelle ab.|  
+|Sammlung|Rufen Sie mithilfe eines Auflistungsnamens Daten aus der OData-Quelle ab.|  
 |Ressourcenpfad|Rufen Sie mithilfe eines Ressourcenpfads Daten aus der OData-Quelle ab.|  
   
  **Abfrage Optionen**  

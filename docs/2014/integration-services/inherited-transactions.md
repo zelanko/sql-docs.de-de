@@ -11,14 +11,14 @@ helpviewer_keywords:
 - child packages
 - inherited transactions [Integration Services]
 ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 929624cf85f7146fa668632fa586a47caca743f0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 110dfa19f9251b1cd43fc7ad0d6f7b4ce894dfa1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965470"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424777"
 ---
 # <a name="inherited-transactions"></a>Vererbte Transaktionen
   Ein Paket kann mithilfe des Tasks "Paket ausführen" ein anderes Paket ausführen. Das untergeordnete Paket, d. h. das von dem Task Paket ausführen ausgeführte Paket, kann seine eigene Pakettransaktion erstellen oder aber die Pakettransaktion des übergeordneten Pakets erben.  

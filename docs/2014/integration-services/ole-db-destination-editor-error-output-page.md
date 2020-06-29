@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 33a152e645706507b00a6ae261fdaec8d9450f12
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86da6b855756fa6aca7d8423623638615eb7a981
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964970"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424127"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Ziel-Editor für OLE DB (Seite Fehlerausgabe)
   Auf der Seite **Fehlerausgabe** des Dialogfelds **Ziel-Editor für OLE DB** geben Sie Optionen für die Fehlerbehandlung an.  
   
  Weitere Informationen zum OLE DB-Ziel finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   

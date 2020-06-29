@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Package Configurations Organizer dialog box
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3b880e23bdc191da1f34f2261d7c87a32f03fb42
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c50a1cba2a2fcc44fab6a9836704c9da8d9798bf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964900"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423977"
 ---
 # <a name="package-configurations-organizer"></a>Paketkonfigurationsplaner
   Mithilfe des Dialogfelds **Paketkonfigurationsplaner** können Sie Paketkonfigurationen aktivieren, eine Liste der Konfigurationen für das aktuelle Paket anzeigen und die bevorzugte Reihenfolge angeben, in der die Konfigurationen geladen werden sollten.  
@@ -33,7 +33,7 @@ ms.locfileid: "84964900"
   
  Paketkonfigurationen aktualisieren die Werte der Eigenschaften von Paketobjekten zur Laufzeit. Beim Laden eines Pakets werden die beim Entwickeln des Pakets festgelegten Werte durch die Werte der Konfigurationen ersetzt. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt unterschiedliche Konfigurationstypen. Beispielsweise können Sie eine XML-Datei mit mehreren möglichen Konfigurationen oder eine Umgebungsvariable mit einer einzigen enthaltenen Konfiguration verwenden. Weitere Informationen finden Sie unter [Package Configurations](../../2014/integration-services/package-configurations.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Paketkonfigurationen aktivieren**  
  Wählen Sie diese Option aus, um mit dem Paket Konfigurationen zu verwenden.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "84964900"
  **Target-Eigenschaft**  
  Zeigt den Namen der durch die Konfiguration geänderten Eigenschaft an. Diese Spalte ist leer, wenn der Konfigurationstyp mehrere Konfigurationen unterstützt.  
   
- **Add (Hinzufügen)**  
+ **Hinzufügen**  
  Fügt mithilfe des Paketkonfigurationsassistenten eine Konfiguration hinzu.  
   
  **Bearbeiten**  

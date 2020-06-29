@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77604faa4cb32fc7babf273717422621b39648aa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 36e2c705382d553c9833776badfacd32aed7f6d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966420"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425517"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach-Schleifen-Editor (Seite Auflistung)
   Verwenden Sie die Seite **Auflistung** des Dialogfelds **Foreach-Schleifen-Editor** , um den Enumeratortyp anzugeben und den Enumerator zu konfigurieren.  
@@ -27,7 +27,7 @@ ms.locfileid: "84966420"
  **Enumerator**  
  Wählen Sie den Enumeratortyp aus der Liste aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Foreach-Dateienumerator**|Zählt Dateien auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Datei-Enumerator** die dynamischen Optionen angezeigt.|  
 |**Foreach-Elementenumerator**|Zählt Werte in einem Element auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Element-Enumerator** die dynamischen Optionen angezeigt.|  
@@ -167,7 +167,7 @@ ms.locfileid: "84966420"
  **DocumentSourceType**  
  Hiermit wählen Sie den Quelltyp des XML-Dokuments aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direct input**|Legt ein XML-Dokument als Quelle fest.|  
 |**File connection**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
@@ -187,7 +187,7 @@ ms.locfileid: "84966420"
  **EnumerationType**  
  Hiermit wählen Sie einen Enumerationstyp aus der Liste aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Navigator**|Die Enumeration erfolgt mithilfe eines XPathNavigator.|  
 |**Node**|Zählt Knoten auf, die von einem XPath-Vorgang zurückgegeben wurden.|  
@@ -197,7 +197,7 @@ ms.locfileid: "84966420"
  **OuterXPathStringSourceType**  
  Hiermit wählen Sie den Quelltyp der XPath-Zeichenfolge aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direct input**|Legt ein XML-Dokument als Quelle fest.|  
 |**File connection**|Wählt eine Datei aus, die das XML-Dokument enthält.|  
@@ -220,7 +220,7 @@ ms.locfileid: "84966420"
  **InnerXPathStringSourceType**  
  Hiermit wählen Sie den Quelltyp der inneren XPath-Zeichenfolge aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Value|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Direct input**|Legt ein XML-Dokument als Quelle fest.|  
 |**File connection**|Wählt eine Datei aus, die das XML-Dokument enthält.|  

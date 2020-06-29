@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ff01832b565b0cca2e1a2550606307552ee63a33
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: efcfde9920aa50e7df6a4b9de59aebf066092c57
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967090"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425547"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>Verbindungs-Manager-Editor für Flatfiles (Vorschauseite)
   Über den Knoten **Vorschau** im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** können Sie den Inhalt der Quelldatei im Tabellenformat anzeigen.  
   
  Weitere Informationen zum Verbindungs-Manager für Flatfiles finden Sie unter [Flat File Connection Manager](connection-manager/file-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Flatfile-Verbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer angezeigt.  
   
