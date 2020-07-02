@@ -1,7 +1,7 @@
 ---
 title: Migrieren von SQL Server zu Azure SQL-Datenbank mithilfe des Datenmigrations-Assistent
 description: Erfahren Sie, wie Sie mit Datenmigrations-Assistent eine lokale SQL Server zu Azure SQL-Datenbank migrieren.
-ms.date: 07/15/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6280a3ea803424dc2a6a72d673c59e1e48816601
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ec6b5ad0ab2047e72a1f3e3e5dfcd9fc49b954d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749786"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrieren von lokalen SQL Server oder SQL Server auf Azure-VMS zu Azure SQL-Datenbank mithilfe des Datenmigrations-Assistent
 
@@ -75,7 +75,7 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen zum Migrieren von SQL S
 4. Wählen Sie eine Zieldatenbank aus, zu der migriert werden soll.
 
    > [!NOTE]
-   > Wenn Sie beabsichtigen, Windows-Benutzer zu migrieren, stellen Sie im Textfeld **Ziel externer Benutzer Domänen Name** sicher, dass der Name der externen Ziel-Benutzer Domäne korrekt angegeben ist.
+   > Wenn Sie beabsichtigen, Windows-Benutzer zu migrieren, stellen Sie im Textfeld **Ziel externer Benutzer Domänen Name** sicher, dass der Ziel Name der externen Benutzer Domäne ordnungsgemäß angegeben ist.
 
     ![Zieldatenbank auswählen](../dma/media/select-target-database.png)
 
@@ -87,8 +87,8 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen zum Migrieren von SQL S
 
     ![Auswählen von Schemaobjekten](../dma/media/select-schema-objects.png)
 
-       > [!NOTE]
-       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
+    > [!NOTE]
+    > Für die Objekte, an denen Änderungen vorgenommen werden müssen, damit sie migriert werden können, gibt es Möglichkeiten zur automatischen Problembehandlung. Wenn Sie im linken Bereich auf diese Objekte klicken, werden die vorgeschlagenen Möglichkeiten zur Fehlerbehebung auf der rechten Seite angezeigt. Prüfen Sie diese, und entscheiden Sie für jedes Objekt, ob Sie alle Änderungen akzeptieren oder ignorieren möchten. Beachten Sie, dass es keine Auswirkungen auf Änderungen anderer Datenbankobjekte hat, wenn Sie alle Änderungen annehmen oder ignorieren. Anweisungen, die nicht konvertiert oder automatisch verbessert werden können, werden in der Zieldatenbank reproduziert und mit einem Kommentar versehen.
 
     ![Vorgeschlagene Lösung](../dma/media/suggested-fix.png)
 

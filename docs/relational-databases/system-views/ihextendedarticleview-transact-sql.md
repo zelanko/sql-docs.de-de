@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36ffc832e8e79e93eb3b158e7f99cfb64cea2dd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752648"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die **IHextendedArticleView** -Sicht macht Informationen zu Artikeln in einer Nicht-SQL Server-Veröffentlichung verfügbar. Diese Sicht wird in der **Verteilungs** Datenbank gespeichert.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68029543"
 |**destination_object**|**sysname**|Der Name des veröffentlichten Objekts auf dem Abonnenten.|  
 |**source_owner**|**sysname**|Der Besitzer des veröffentlichten Objekts auf dem Verleger.|  
 |**source_object**|**sysname**|Der Name des veröffentlichten Objekts auf dem Verleger.|  
-|**Beschreibung**|**nvarchar(255)**|Die Beschreibung des Artikels.|  
+|**description**|**nvarchar(255)**|Die Beschreibung des Artikels.|  
 |**creation_script**|**nvarchar(255)**|Das Schemaerstellungsskript für den Artikel|  
 |**del_cmd**|**nvarchar(255)**|Der für eine DELETE-Anweisung ausgeführte Befehl.|  
 |**filter**|**int**|Der Bezeichner für die gespeicherte Prozedur, die die horizontale Partition definiert.|  

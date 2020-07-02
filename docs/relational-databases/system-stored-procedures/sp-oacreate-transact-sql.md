@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d851461ae4cd07f3dd89e2cff4326d03e05a5d66
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 511101642570c9ddf28763b6303aa90bb985317a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752783"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Erstellt eine Instanz eines OLE-Objekts.  
   
@@ -77,7 +77,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Weitere Informationen zu HRESULT-Rückgabecodes finden Sie unter [Rückgabecodes und Fehlerinformationen der OLE-Automatisierung](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn OLE-Automatisierungs Prozeduren aktiviert sind, wird durch einen **sp_OACreate** die freigegebene Ausführungsumgebung der OLE-Automatisierung gestartet. Weitere Informationen zum Aktivieren der OLE-Automatisierung finden Sie unter [OLE-Automatisierungs Prozeduren (Server Konfigurations Option](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)).  
   
  Das erstellte OLE-Objekt wird automatisch am Ende des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungsbatches zerstört.  

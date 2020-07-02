@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d906e0b1eb275e8d6013a14d9a1485a9dd7a9f1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6aca6dc609835b88f741d573cbd67b95c1d72ce2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750024"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>PropertyIndex-Eigenschaft (SqlServiceAdvancedProperty-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ruft den Eigenschaftsindex ab, der die Position einer erweiterten Eigenschaft in einem Array erweiterter Eigenschaften angibt, das zu einem referenzierten Dienst gehört, oder legt diesen fest.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,7 +42,7 @@ object.PropertyIndex [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** , Wert, der die Position der erweiterten Eigenschaft in dem Array erweiterter Eigenschaften angibt, das zu einem referenzierten Dienst gehört.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

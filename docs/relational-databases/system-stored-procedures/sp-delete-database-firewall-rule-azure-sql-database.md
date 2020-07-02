@@ -18,17 +18,17 @@ ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 660405e7e7592557422e43655c35ec27c194aad3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b942b64b8d97ac69b03b9e1aef03056200f4eef4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130682"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750651"
 ---
 # <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL-Datenbank)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Entfernt die Firewalleinstellung auf Daten Bank [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Ebene aus dem. Datenbank-Firewallregeln können für die Master Datenbank und für Benutzer Datenbanken unter [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]konfiguriert und gelöscht werden.   
+  Entfernt die Firewalleinstellung auf Datenbankebene aus dem [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Datenbank-Firewallregeln können für die Master Datenbank und für Benutzer Datenbanken unter konfiguriert und gelöscht werden [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] .   
   
  
 ## <a name="syntax"></a>Syntax  
@@ -40,13 +40,13 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
   
 ## <a name="arguments"></a>Argumente  
  `[@name =] [N]'name'`  
- Der Name der Firewalleinstellung auf Datenbankebene, die entfernt wird. *Name ist vom Datentyp* **nvarchar (128)** und hat keinen Standardwert. Der Unicode- `N` Bezeichner ist [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]optional für. 
+ Der Name der Firewalleinstellung auf Datenbankebene, die entfernt wird. *Name ist vom Datentyp* **nvarchar (128)** und hat keinen Standardwert. Der Unicode-Bezeichner `N` ist optional für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] . 
   
 ## <a name="permissions"></a>Berechtigungen  
  Firewallregeln auf Datenbankebene können nur von der Prinzipal Anmeldung auf Serverebene oder einem Azure Active Directory Prinzipal, der als Administrator zugewiesen wurde, gelöscht werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Firewalleinstellung auf Daten Bank `Example DB Setting 1`Ebene mit dem Namen entfernt.
+ Im folgenden Beispiel wird die Firewalleinstellung auf Datenbankebene mit dem Namen entfernt `Example DB Setting 1` .
   
 ```  
 -- Remove database-level firewall setting  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c5bc3b603c7dba345def7132e37d46a7554e864f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06ab045b4ac0e7cecd62cdb8092860c3389e5f1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752762"
 ---
 # <a name="sp_syspolicy_subscribe_to_policy_category-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fügt ein Richtlinienkategorieabonnement für die angegebene Datenbank hinzu.  
   
@@ -41,12 +41,12 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ## <a name="arguments"></a>Argumente  
 `[ @policy_category = ] 'policy_category'`Der Name der Richtlinien Kategorie, die von der Datenbank abonniert werden soll. *policy_category* ist vom **Datentyp vom Datentyp sysname**und ist erforderlich.  
   
- Fragen Sie die Systemsicht msdb. dbo. syspolicy_policy_categories ab, um Werte für *policy_category*abzurufen.  
+ Wenn Sie Werte für *policy_category*abrufen möchten, Fragen Sie die msdb.dbo.syspolicy_policy_categories-Systemsicht ab.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Sie müssen sp_syspolicy_subscribe_to_policy_category im Kontext der Datenbank ausführen, in der Sie ein Richtlinienkategorieabonnement hinzufügen möchten.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5ebb27860d7b7da46680a61486c59de3929117ce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 36ac5833a4bf714c6f4b294f15f0cf6aca6fb64d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834203"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750427"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Tabelleninformationen zu den Tabellen auf dem angegebenen Verbindungsserver zurück.  
   
@@ -54,12 +54,12 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'`Der Typ der zurück zugebende Tabelle. *TABLE_TYPE* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL und kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Alias**|Der Name eines Alias|  
 |**GLOBAL TEMPORARY**|Der Name einer systemweit verfügbaren temporären Tabelle|  
 |**LOCAL TEMPORARY**|Der Name einer nur für den aktuellen Auftrag verfügbaren temporären Tabelle|  
-|**SYNONYM**|Der Name eines Synonyms|  
+|**Synonym**|Der Name eines Synonyms|  
 |**System Tabelle**|Der Name einer Systemtabelle|  
 |**System Ansicht**|Der Name einer Systemsicht|  
 |**Glaub**|Der Name einer Benutzertabelle|  
@@ -80,7 +80,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_TYPE**|**varchar(32)**|Tabelle, Systemtabelle oder Sicht.|  
 |**HINWEISE**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_tables_ex** wird ausgeführt, indem das TABLES-Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters abgefragt wird, der *table_server*entspricht. Die Parameter *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  
   
  **sp_tables_ex** gibt ein leeres Resultset zurück, wenn der OLE DB Anbieter des angegebenen Verbindungs Servers das TABLES-Rowset der **IDBSchemaRowset** -Schnittstelle nicht unterstützt.  

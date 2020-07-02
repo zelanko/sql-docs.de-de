@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfced9a7fa554149b491f8ff350ca81723c81d20
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3eac29c10b8f0204b3516051981fc29b3bee3ddc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824353"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751709"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Registriert einen Geschäftslogikhandler oder einen COM-basierten benutzerdefinierten Konfliktlöser, der während der Synchronisierung der Mergereplikation aufgerufen werden kann. Diese gespeicherte Prozedur wird auf dem Verteiler ausgeführt.  
   
@@ -54,7 +54,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_registercustomresolver** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9408727ed9a9f10a8ed223c8765591ff8327b99
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6cb269ec8ce866e02dcb4ea06a7fe66f0c49e5a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834004"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750688"
 ---
 # <a name="syssoap_endpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82834004"
 |**default_database**|**sysname**|Der Name der Standarddatenbank, der in der Option DATABASE = angegeben ist.<br /><br /> NULL = DEFAULT wurde angegeben.|  
 |**default_namespace**|**nvarchar (384)**|Der Standard Namespace, der in der Option Namespace = angegeben ist, oder, `https://tempuri.org` Wenn stattdessen default angegeben wurde.|  
 |**default_result_schema**|**tinyint**|Der Standardwert der Option SCHEMA = .<br /><br /> 0 = NONE<br /><br /> 1 = STANDARD|  
-|**default_result_schema_desc**|**nvarchar(60)**|Die Beschreibung des Standardwerts der Option SCHEMA = .<br /><br /> Keine<br /><br /> STANDARD|  
+|**default_result_schema_desc**|**nvarchar(60)**|Die Beschreibung des Standardwerts der Option SCHEMA = .<br /><br /> NONE<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = Die Option CHARACTER_SET = SQL wurde angegeben.<br /><br /> 1 = Die Option CHARACTER_SET = XML wurde angegeben.|  
 |**is_session_enabled**|**bit**|0 = Die Option SESSION = DISABLE wurde angegeben.<br /><br /> 1 = Die Option SESSION = ENABLED wurde angegeben.|  
 |**session_timeout**|**int**|Der in der Option SESSION_TIMEOUT = angegebene Wert.|  

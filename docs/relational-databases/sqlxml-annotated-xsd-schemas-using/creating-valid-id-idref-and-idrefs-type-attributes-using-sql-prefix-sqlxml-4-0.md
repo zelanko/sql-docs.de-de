@@ -24,15 +24,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 336db1dba88e245492fb4c2e9fcefddb751b59ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 832607a376c8c08dbcdcff0c70278401a166a7f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388186"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750812"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Erstellen gültiger Attribute vom Typ ID, IDREF und IDREFS mit 'sql:prefix' (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Für ein Attribut kann der ID-Attributtyp angegeben werden. Attribute vom Typ IDREF oder IDRES können dann verwendet werden, um auf das ID-Attribut zu verweisen. Auf diese Weise werden Links zwischen Dokumenten gebildet.  
   
  ID, IDREF und IDREFS entsprechen, abgesehen von wenigen Unterschieden, Primärschlüssel/Fremdschlüssel-Beziehungen in der Datenbank. In einem XML-Dokument müssen die Werte von ID-Typattributen eindeutig sein. Wenn **CustomerID** -und **OrderID** -Attribute als ID-Typ in einem XML-Dokument angegeben werden, müssen diese Werte unterschiedlich sein. In einer Datenbank können die Spalten CustomerID und SalesOrderID allerdings die gleichen Werte haben. (Zum Beispiel sind die Einträge CustomerID = 1 und OrderID = 1 in der Datenbank gültig).  
@@ -55,9 +55,9 @@ ms.locfileid: "81388186"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Angeben von ID- und IDREFS-Typen  
- Im folgenden Schema besteht das ** \<Customer>** -Element aus der ** \<Order>** untergeordneten-Elements. Das ** \<Order>** -Element verfügt auch über ein untergeordnetes-Element, das ** \<OrderDetail>** -Element.  
+ Im folgenden Schema besteht das-Element aus dem untergeordneten- **\<Customer>** **\<Order>** Element. Das-Element **\<Order>** verfügt auch über ein untergeordnetes-Element, das- **\<OrderDetail>** Element.  
   
- Das **OrderIDList** -Attribut von ** \<Customer>** ist ein Attribut vom Typ IDREFS, das auf das **OrderID** -Attribut des ** \<Order>** -Elements verweist.  
+ Das **OrderIDList** -Attribut von **\<Customer>** ist ein Attribut vom Typ IDREFS, das auf das **OrderID** -Attribut des- **\<Order>** Elements verweist.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

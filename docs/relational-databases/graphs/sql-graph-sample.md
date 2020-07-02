@@ -15,16 +15,16 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b08fdf07bf73b8d485ce9334d8998e055454dcb2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035875"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751149"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Erstellen einer Graph-Datenbank und Ausführen einiger Muster Vergleichs Abfragen mit T-SQL
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Dieses Beispiel stellt ein [!INCLUDE[tsql-md](../../includes/tsql-md.md)] Skript zum Erstellen einer Graph-Datenbank mit Knoten und Kanten bereit und verwendet dann die neue Match-Klausel, um einige Muster zu vergleichen und das Diagramm zu durchlaufen. Dieses Beispielskript funktioniert sowohl für Azure SQL-Datenbank als auch für[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
@@ -163,7 +163,7 @@ go
 ```
 
 ## <a name="script-explanation"></a>Erläuterung des Skripts  
-Dieses Skript verwendet die neue T-SQL-Syntax, um Knoten-und Edge-Tabellen zu erstellen. Zeigt, wie Daten mithilfe `INSERT` der-Anweisung in Knoten-und edgetabellen eingefügt werden und `MATCH` wie die-Klausel für den Musterabgleich und die Navigation verwendet wird.
+Dieses Skript verwendet die neue T-SQL-Syntax, um Knoten-und Edge-Tabellen zu erstellen. Zeigt, wie Daten mithilfe der-Anweisung in Knoten-und edgetabellen eingefügt werden `INSERT` und wie die `MATCH` -Klausel für den Musterabgleich und die Navigation verwendet wird.
 
 |Get-Help    |Notizen
 |---  |---  |

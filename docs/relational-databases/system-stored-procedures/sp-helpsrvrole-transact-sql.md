@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9abcbec940d9afa7b5aeb36183610b471bb3a3df
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 204668e8983ed3503e1a5697c47a4abde92d26cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833180"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750515"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Liste der festen Serverrollen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück.  
   
@@ -41,7 +41,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ## <a name="arguments"></a>Argumente  
 `[ @srvrolename = ] 'role'`Der Name der Server Rolle "Fixed". *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. die *Rolle* kann einen der folgenden Werte aufweisen.  
   
-|Server Rolle "Fixed"|Beschreibung|  
+|Server Rolle "Fixed"|BESCHREIBUNG|  
 |-----------------------|-----------------|  
 |Serverrollen|Systemadministratoren|  
 |securityadmin|Sicherheitsadministratoren|  
@@ -60,9 +60,9 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Name der Serverrolle.|  
-|Beschreibung|**sysname**|Beschreibung von ServerRole.|  
+|BESCHREIBUNG|**sysname**|Beschreibung von ServerRole.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Feste Serverrollen werden auf Serverebene definiert und haben Berechtigungen, um spezifische Verwaltungsfunktionen auf Serverebene auszuführen. Feste Serverrollen können nicht hinzugefügt, entfernt oder geändert werden.  
   
  Informationen zum Hinzufügen oder Entfernen von Mitgliedern zu Server Rollen finden Sie unter [Alter Server Role &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  

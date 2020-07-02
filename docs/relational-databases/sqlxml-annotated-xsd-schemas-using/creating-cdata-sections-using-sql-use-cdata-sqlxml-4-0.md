@@ -21,21 +21,21 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa359c1c1e855c3652d7c6486d3993f588bae46d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 700d2cb18bad966e1a2edfd1f11e5fde9ac1b040
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750854"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Erstellen von CDATA-Abschnitten mit sql:use-cdata (SQLXML 4.0)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In XML werden Textblöcke, die Zeichen enthalten, die andernfalls als Markup erkannt würden, mit CDATA-Abschnitten in Escapezeichen umgewandelt.  
   
- Eine Datenbank in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann manchmal Zeichen enthalten, die vom XML-Parser als Markup Zeichen behandelt werden. Beispielsweise werden spitzen Klammern (< und >), das kleiner-als-oder-gleich-Symbol (<=) und das kaufmännische und-Zeichen (&) als Markup Zeichen behandelt. Sie können diese Sonderzeichen in einem CDATA-Abschnitt jedoch umschließen, um zu verhindern, dass sie als Markupzeichen behandelt werden. Der Text innerhalb des CDATA-Abschnitts wird vom XML-Parser als Nur-Text behandelt.  
+ Eine Datenbank in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann manchmal Zeichen enthalten, die vom XML-Parser als Markup Zeichen behandelt werden, z. b. spitzen Klammern (< und >), das kleiner-als-oder-gleich-Symbol (<=) und das kaufmännische und-Zeichen (&) als Markup Zeichen behandelt werden. Sie können diese Sonderzeichen in einem CDATA-Abschnitt jedoch umschließen, um zu verhindern, dass sie als Markupzeichen behandelt werden. Der Text innerhalb des CDATA-Abschnitts wird vom XML-Parser als Nur-Text behandelt.  
   
- Die **SQL: use-cdata-** Anmerkung wird verwendet, um anzugeben, dass die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegebenen Daten in einen CDATA-Abschnitt eingeschlossen werden sollen (d. h., es wird angegeben, ob der Wert aus einer Spalte, die von **SQL: Field** angegeben wird, in einem CDATA-Abschnitt eingeschlossen werden soll). Die **SQL: use-cdata-** Anmerkung kann nur für Elemente angegeben werden, die einer Daten Bank Spalte zugeordnet sind.  
+ Die **SQL: use-cdata-** Anmerkung wird verwendet, um anzugeben, dass die von zurückgegebenen Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einen CDATA-Abschnitt eingeschlossen werden sollen (d. h., es wird angegeben, ob der Wert aus einer Spalte, die von **SQL: Field** angegeben wird, in einem CDATA-Abschnitt eingeschlossen werden soll). Die **SQL: use-cdata-** Anmerkung kann nur für Elemente angegeben werden, die einer Daten Bank Spalte zugeordnet sind.  
   
  Die **SQL: use-cdata-Anmerkung verwendet** einen booleschen Wert (0 = false, 1 = true). Zulässig sind die Werte 0, 1, true und false.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "81388192"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. Angeben von sql:use-cdata für ein Element  
- Im folgenden Schema ist **SQL: use-cdata** auf 1 (true) für den ** \<AddressLine1->** innerhalb des ** \<Address>** -Elements festgelegt. Daraufhin werden die Daten in einem CDATA-Abschnitt zurückgegeben.  
+ Im folgenden Schema ist **SQL: use-cdata** für das-Element im-Element auf 1 (true) festgelegt **\<AddressLine1>** **\<Address>** . Daraufhin werden die Daten in einem CDATA-Abschnitt zurückgegeben.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

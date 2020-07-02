@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e9873045fd7e4fb11ad19bbbce953a086512df9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d6414be15bcd33e8ae2a0ab267baaa039761fc04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824367"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750454"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert Informationen im Schema, die beim Auflisten von für die Veröffentlichung in Frage kommenden Oracle-Tabellen ausgeschlossen werden, und zeigt diese an.  
   
@@ -45,7 +45,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 `[ @operation = ] 'operation'`Die Aktion, die für dieses Schema ausgeführt werden soll. der *Vorgang* ist vom Datentyp **nvarchar (4)**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**add**|Fügt das angegebene Schema der Liste der Schemas hinzu, die für die Veröffentlichung nicht in Frage kommen.|  
 |**Dropdown**|Löscht das angegebene Schema aus der Liste der Schemas, die für die Veröffentlichung nicht in Frage kommen.|  
@@ -60,7 +60,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_schemafilter** sollten nur für heterogene Verleger verwendet werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

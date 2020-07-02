@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02f08a02236195d02f36c0b8e24b792adf46933e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 15fe17913bfb00d983772a84f625ff41e690f263
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750356"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; capture_instance &gt; _CT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die Änderungstabelle, die erstellt wird, wenn Change Data Capture für eine Quelltabelle aktiviert wird. Für jeden Einfüge- oder Löschvorgang, der in der Quelltabelle ausgeführt wird, gibt die Tabelle eine Zeile zurück, für jeden Updatevorgang in der Quelltabelle gibt sie zwei Zeilen zurück. Wird der Name der Änderungstabelle bei der Aktivierung der Quelltabelle nicht angegeben, wird der Name abgeleitet. Das Format des Namens ist CDC. *capture_instance*_CT, wobei *capture_instance* der Schema Name der Quell Tabelle und der Name der Quell Tabelle im Format *schema_table*ist. Wenn beispielsweise die Tabelle **Person. Address** in der **AdventureWorks** -Beispieldatenbank für Change Data Capture aktiviert ist, ist der Name der abgeleiteten Änderungs Tabelle **CDC. Person_Address_CT**.  
   
@@ -38,12 +38,12 @@ ms.locfileid: "82833092"
 |**__$start_lsn**|**binary(10)**|Protokollfolgenummer (LSN, Log Sequence Number), die dem Commit für die Änderung zugeordnet wurde.<br /><br /> Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN. Wenn z. b. bei einem Löschvorgang in der Quell Tabelle zwei Zeilen entfernt werden, enthält die Änderungs Tabelle zwei Zeilen mit demselben Wert von **__ $ start_lsn** .|  
 |**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hat diese Spalte immer den Wert NULL.|  
 |**__$seqval**|**binary(10)**|Sequenzwert, der verwendet wird, um die Zeilenänderungen innerhalb einer Transaktion zu sortieren.|  
-|**__ $-Vorgang**|**int**|Identifiziert den Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der der Änderung zugeordnet ist. Kann eines der folgenden Elemente sein:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Aktualisieren (alte Werte)<br /><br /> Spaltendaten verfügen vor der Ausführung der UPDATE-Anweisung über Zeilenwerte.<br /><br /> 4 = Aktualisieren (neue Werte)<br /><br /> Spaltendaten verfügen nach der Ausführung der UPDATE-Anweisung über Zeilenwerte.|  
+|**__ $-Vorgang**|**int**|Identifiziert den Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der der Änderung zugeordnet ist. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Aktualisieren (alte Werte)<br /><br /> Spaltendaten verfügen vor der Ausführung der UPDATE-Anweisung über Zeilenwerte.<br /><br /> 4 = Aktualisieren (neue Werte)<br /><br /> Spaltendaten verfügen nach der Ausführung der UPDATE-Anweisung über Zeilenwerte.|  
 |**__$update_mask**|**varbinary(128)**|Eine Bitmaske, die auf den Spalten Ordnungen der Änderungs Tabelle basiert, die die geänderten Spalten identifiziert.|  
-|*\<erfasste Quell Tabellen Spalten>*|Variiert|Bei den verbleibenden Spalten in der Änderungstabelle handelt es sich um die Spalten aus der Quelltabelle, die beim Erstellen der Aufzeichnungsinstanz als aufgezeichnete Tabellen identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle in diese Tabelle aufgenommen.|  
+|*\<captured source table columns>*|Variiert|Bei den verbleibenden Spalten in der Änderungstabelle handelt es sich um die Spalten aus der Quelltabelle, die beim Erstellen der Aufzeichnungsinstanz als aufgezeichnete Tabellen identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle in diese Tabelle aufgenommen.|  
 |**__ $ command_id** |**int** |Verfolgt die Reihenfolge der Vorgänge innerhalb einer Transaktion. |  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 
 Die Spalte " `__$command_id` Spalte war" wurde in einem kumulativen Update in den Versionen 2012 bis 2016 eingeführt. Informationen zur Version und zum Herunterladen finden Sie im KB-Artikel 3030352 unter [Korrektur: die Änderungs Tabelle wird nach dem Aktivieren von Change Data Capture für eine Microsoft SQL Server Datenbank falsch für aktualisierte Zeilen angeordnet](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Weitere Informationen finden Sie unter unter [Brechung der CDC-Funktion nach dem Upgrade auf das neueste Cu für SQL Server 2012, 2014 und 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a29933568cec147dc27ff7c9b5f026d62856e5b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 058d611f1ee9eaf73d8ca8c022728fb1920091ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752735"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Zeigt Konfigurationseinstellungen für Datenbank-E-Mail an.  
   
@@ -52,9 +52,9 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |**paramName**|**nvarchar(256)**|Der Name des Konfigurationsparameters.|  
 |**angegebene paramValue**|**nvarchar(256)**|Der Wert des Konfigurationsparameters.|  
-|**Beschreibung**|**nvarchar(256)**|Die Beschreibung des Konfigurationsparameters.|  
+|**description**|**nvarchar(256)**|Die Beschreibung des Konfigurationsparameters.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die gespeicherte Prozedur **sysmail_help_configure_sp** führt die aktuellen Konfigurationseinstellungen für Datenbank-E-Mail für die Instanz auf.  
   
  Wenn eine ** \@ parameter_name** angegeben wird, für ** \@ parameter_value**jedoch kein Ausgabeparameter bereitgestellt wird, erzeugt diese gespeicherte Prozedur keine Ausgabe.  

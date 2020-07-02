@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96708a8109594e0978757a163840d605d09cb522
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ae4203442a4596a8e52ab7212c21c7cc24759d50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751571"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jede in der Datenbank definierte Mergeveröffentlichung. Diese Tabelle wird in der Veröffentlichungs- und in der Abonnementdatenbank gespeichert.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82829824"
 |**publisher**|**sysname**|Entspricht dem Namen des Standardservers.|  
 |**publisher_db**|**sysname**|Der Name der Standardverlegerdatenbank.|  
 |**name**|**sysname**|Der Name der Veröffentlichung.|  
-|**Beschreibung**|**nvarchar(255)**|Eine kurze Beschreibung der Veröffentlichung.|  
+|**description**|**nvarchar(255)**|Eine kurze Beschreibung der Veröffentlichung.|  
 |**zurück**|**int**|Die Beibehaltungs Dauer für den gesamten Veröffentlichungs Satz, wobei die Einheit durch den Wert der **retention_period_unit** Spalte angegeben wird.|  
 |**publication_type**|**tinyint**|Zeigt an, ob die Veröffentlichung gefiltert wird.<br /><br /> **0** = nicht gefiltert.<br /><br /> **1** = gefiltert.|  
 |**pubid**|**uniqueidentifier**|Die eindeutige ID für diese Veröffentlichung. Dieser Wert wird beim Hinzufügen der Veröffentlichung generiert.|  
@@ -65,7 +65,7 @@ ms.locfileid: "82829824"
 |**allow_synctoalternate**|**bit**|Gibt an, ob ein alternativer Synchronisierungspartner für die Synchronisierung mit diesem Verleger zulässig ist. der Wert **0** bedeutet, dass ein Synchronisierungs Partner nicht zulässig ist.|  
 |**validate_subscriber_info**|**nvarchar (500)**|Listet die Funktionen auf, die zum Abrufen der Abonnenteninformationen sowie zum Überprüfen der parametrisierten Zeilenfilterkriterien für den Abonnenten verwendet werden.|  
 |**ad_guidname**|**sysname**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht wird. Eine gültige GUID gibt an, dass die Veröffentlichung in der Active Directory veröffentlicht wird, und die GUID ist das entsprechende Active Directory Veröffentlichungs Objekt **objectGUID**. Wenn dieser Wert NULL ist, wird die Veröffentlichung nicht in Active Directory veröffentlicht.|  
-|**backward_comp_level**|**int**|Datenbankkompatibilitätsgrad. Folgenden Werte sind möglich:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .|  
+|**backward_comp_level**|**int**|Datenbankkompatibilitätsgrad. Es kann sich um einen der folgenden Werte handeln:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .|  
 |**max_concurrent_merge**|**int**|Die maximal zulässige Anzahl gleichzeitiger Mergeprozesse. Der Wert **0** für diese Eigenschaft bedeutet, dass es keine Beschränkung für die Anzahl gleichzeitiger Mergeprozesse gibt, die zu einem beliebigen Zeitpunkt ausgeführt werden. Diese Eigenschaft legt eine Grenze für die Anzahl gleichzeitiger Mergeprozesse fest, die zu einem Zeitpunkt für eine Mergeveröffentlichung ausgeführt werden können. Wenn zum gleichen Zeitpunkt mehr Momentaufnahmeprozesse geplant sind, als der Wert für eine Ausführung zulässt, werden die überschüssigen Aufträge in eine Warteschlange eingereiht, in der diese darauf warten, dass ein aktuell ausgeführter Momentaufnahmeprozess beendet wird.|  
 |**max_concurrent_dynamic_snapshots**|**int**|Die maximal zulässige Anzahl gleichzeitiger Datenfilterungs-Momentaufnahmesitzungen, die für die Mergeveröffentlichung ausgeführt werden können. Wenn der Wert **0**ist, gibt es keine Beschränkung für die maximale Anzahl gleichzeitiger gefilterter Daten Momentaufnahme Sitzungen, die gleichzeitig für die Veröffentlichung ausgeführt werden können. Diese Eigenschaft legt eine Grenze für die Anzahl gleichzeitiger Momentaufnahmeprozesse fest, die zu einem Zeitpunkt für eine Mergeveröffentlichung ausgeführt werden können. Wenn zum gleichen Zeitpunkt mehr Momentaufnahmeprozesse geplant sind, als der Wert für eine Ausführung zulässt, werden die überschüssigen Aufträge in eine Warteschlange eingereiht, in der diese darauf warten, dass ein aktuell ausgeführter Momentaufnahmeprozess beendet wird.|  
 |**use_partition_groups**|**smallint**|Gibt an, ob die Veröffentlichung vorausberechnete Partitionen verwendet.|  

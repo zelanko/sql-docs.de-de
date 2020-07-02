@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05c00137acdf989456903fedddcc45a7b79e0e61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751634"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Fügt eine Spalte zu einem vorhandenen Tabellenartikel hinzu, der veröffentlicht worden ist. Dadurch kann die neue Spalte zu allen Verlegern hinzugefügt werden, die diese Tabelle veröffentlichen, oder die Spalte kann ausschließlich zu einer bestimmten Veröffentlichung hinzugefügt werden, die die Tabelle veröffentlicht. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -52,7 +52,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  [ @column =] '*Spalte*'  
  Ist der Name der Spalte in der für die Replikation hinzuzufügenden Tabelle. *Column* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
- [ @typetext =] '*TypeText*'  
+ [ @typetext = ] '*TypeText*'  
  Entspricht der Definition der Spalte, die hinzugefügt wird. *TypeText* ist vom Datentyp **nvarchar (3000)** und hat keinen Standardwert. Wenn z. b. die Spalte order_filled hinzugefügt wird und es sich um ein einzelnes Zeichenfeld (nicht null) handelt und den Standardwert **N**aufweist, ist order_filled der *Column* -Parameter, während die Definition der Spalte, **char (1) NOT NULL-Einschränkung constraint_name Standard ' n '** der *TypeText* -Parameterwert wäre.  
   
  [ @publication_to_add =] '*publication_to_add*'  

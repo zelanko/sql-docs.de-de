@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 507fc744-73d9-4cb7-8d2a-bcff88841c6a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f389e6fa58feba189955c3ac8f654a906f61588f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 654438872c4f202f8406bc035f0371f6ace536c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68009139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750582"
 ---
 # <a name="sp_delete_log_shipping_secondary_primary-transact-sql"></a>sp_delete_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Mit dieser gespeicherten Prozedur werden die Informationen zu dem angegebenen primären Server vom sekundären Server und der Kopier- und der Wiederherstellungsauftrag aus der sekundären Tabelle entfernt.  
   
@@ -49,9 +49,9 @@ sp_delete_log_shipping_secondary_primary
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ Keine.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_delete_log_shipping_secondary_primary** muss von der **master** -Datenbank aus auf dem sekundären Server ausgeführt werden. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
   
 1.  Löschen der Kopier- und Wiederherstellungsaufträge für die ID des sekundären Servers.  
@@ -64,7 +64,7 @@ sp_delete_log_shipping_secondary_primary
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Informationen zum Protokoll Versand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

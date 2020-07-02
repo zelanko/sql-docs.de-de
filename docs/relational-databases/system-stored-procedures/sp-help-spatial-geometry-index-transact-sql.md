@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e2e5d935fc3d6db5d243ec4b76841f13a60e5a11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56db1455b1b85ea50fc5bdea7f6f3d06778d329f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749338"
 ---
 # <a name="sp_help_spatial_geometry_index-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt die Namen und Werte für einen angegebenen Satz von Eigenschaften über einen **geometry** -Räumlichkeitsindex zurück. Das Ergebnis wird in einem Tabellenformat zurückgegeben. Sie können wählen, ob ein Kernsatz von Eigenschaften oder alle Eigenschaften des Indexes zurückgegeben werden sollen.  
   
@@ -50,11 +50,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Berechtigungen  
  Dem Benutzer muss eine PUBLIC-Rolle zugewiesen werden, um auf die Prozedur zuzugreifen. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Eigenschaften, die NULL-Werte enthalten sind, sind nicht in der zurückgegebenen Menge enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird `sp_help_spatial_geometry_index` verwendet, um den räumlichen Index **SIndx_SpatialTable_geometry_col2** zu untersuchen, der in Table **geometry_col** für das angegebene Abfrage Beispiel in ** \@QS**definiert ist. Dieses Beispiel gibt nur die Kerneigenschaften des angegebenen Indexes zurück.  
+ Im folgenden Beispiel wird verwendet `sp_help_spatial_geometry_index` , um den räumlichen Index **SIndx_SpatialTable_geometry_col2** zu untersuchen, der in Table **geometry_col** für das angegebene Abfrage Beispiel in ** \@ QS**definiert ist. Dieses Beispiel gibt nur die Kerneigenschaften des angegebenen Indexes zurück.  
   
 ```  
 declare @qs geometry  

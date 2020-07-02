@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1324d352ca113a441dc388a235d44b5274e441be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f3423eafc722de30642e3c96ebb6e8a7ddb9476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750032"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>IsReadOnly-Eigenschaft (SqlServiceAdvancedProperty-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ruft die boolesche Eigenschaft ab, die angibt, ob die erweiterte Eigenschaft schreibgeschützt ist, oder legt diese fest.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,7 +42,7 @@ object.IsReadOnly [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein boleescher Wert, der angibt, ob die erweiterte Eigenschaft schreibgeschützt ist oder nicht: **true** , wenn die erweiterte Eigenschaft schreibgeschützt ist, bzw. **false** , wenn die erweiterte Eigenschaft geändert werden kann.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

@@ -1,5 +1,5 @@
 ---
-title: dbo. sysproxylogin (Transact-SQL) | Microsoft-Dokumentation
+title: dbo.sysproxylogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfa29500a798cdcfe535a377abd8c649972415b0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b798627a09a9bb96e753221750711dbfe465657f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825951"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750294"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Zeichnet auf, welche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldungen den einzelnen Proxykonten des SQL Server-Agents zugeordnet sind. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
@@ -38,10 +38,10 @@ ms.locfileid: "82825951"
 |**principal_id**|**int**|ID des Benutzers oder der Gruppe, der bzw. die berechtigt ist, das Proxykonto für einen bestimmten Subsystemschritt zu verwenden.|  
 |**flags**|**int**|Anmeldungstyp:<br /><br /> **0** = Windows-Benutzer oder -Gruppe und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung.<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Systemrolle wird korrigiert<br /><br /> **2**  =  **msdb** -Daten Bank Rolle|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Nur Mitglieder der festen Serverrolle **sysadmin** können auf diese Tabelle zugreifen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [dbo. sysproxies &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
+ [dbo.sysProxys &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

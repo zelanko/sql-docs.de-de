@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60004b81134b550761e65eba2ce38e155732c77f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 14c013da5fed9a0a9477692ce6bdda20b5d921a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751674"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Diese gespeicherte Prozedur entfernt alle Replikationsobjekte aus der Veröffentlichungsdatenbank auf der Verlegerinstanz von SQL Server oder aus der Abonnementdatenbank auf der Abonnenteninstanz von SQL Server. Führen Sie sie in der entsprechenden Datenbank aus, oder geben Sie bei Ausführung im Kontext einer anderen Datenbank auf derselben Instanz die Datenbank an, aus der die Replikationsobjekte entfernt werden sollen. Diese Prozedur entfernt keine Objekte von anderen Datenbanken, wie z. B. der Verteilungsdatenbank.  
   
@@ -49,13 +49,13 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 |||  
 |-|-|  
 |**tran**|Entfernt Transaktionsreplikations-Veröffentlichungsobjekte.|  
-|**Merge**|Entfernt Mergereplikations-Veröffentlichungsobjekte.|  
+|**merge**|Entfernt Mergereplikations-Veröffentlichungsobjekte.|  
 |**both** (Standard)|Entfernt alle Replikationsveröffentlichungsobjekte.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_removedbreplication** wird für alle Replikationstypen verwendet.  
   
  **sp_removedbreplication** ist hilfreich beim Wiederherstellen einer replizierten Datenbank, für die keine Replikationsobjekte wiederhergestellt werden müssen.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1597a3b6f8366b74e713eaeeda2ce412762809b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9c45fa084aa6e7231ebb62a01d0192dc1e2c200
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738741"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt für jede in den Serveradressraum geladene verwaltete Benutzerassembly eine Zeile zurück. Verwenden Sie diese Ansicht, um die CLR-Integration verwaltete Datenbankobjekte, die in ausgeführt werden, zu verstehen und zu beheben [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82824726"
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die **dm_clr_loaded_assemblies.appdomain_address** -Sicht besitzt eine n:1-Beziehung mit  **dm_clr_appdomains.appdomain_address**. Die **dm_clr_loaded_assemblies.assembly_id** -Sicht besitzt eine 1:n-Beziehung mit **sys.assemblies.assembly_id**.  
   
 ## <a name="examples"></a>Beispiele  

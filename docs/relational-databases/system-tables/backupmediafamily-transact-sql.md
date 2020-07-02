@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e955cb7378a9da430608bf55d287be0fd7237ef5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be1df53780b7472d613c49d2d105c606a09de8df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750368"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jede Medienfamilie. Wenn sich eine Medienfamilie in einem gespiegelten Mediensatz befindet, verfügt die Familie über eine separate Zeile für jede Spiegelung im Mediensatz. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
     
@@ -40,9 +40,9 @@ ms.locfileid: "82807398"
 |**physical_device_name**|**nvarchar(260)**|Physischer Name des Sicherungsmediums. Kann den Wert NULL haben. Dieses Feld wird für den Sicherungs-und Wiederherstellungsprozess freigegeben. Sie kann den ursprünglichen Sicherungszielpfad oder den ursprünglichen Wiederherstellungs Quell Pfad enthalten. Abhängig davon, ob die Sicherung oder Wiederherstellung zuerst auf einem Server für eine Datenbank erfolgt ist. Beachten Sie, dass bei aufeinander folgenden Wiederherstellungen aus derselben Sicherungsdatei der Pfad unabhängig vom Speicherort des Wiederherstellungs Zeitraums nicht aktualisiert wird. Aus diesem Grund kann **physical_device_name** Feld nicht verwendet werden, um den verwendeten Wiederherstellungs Pfad anzuzeigen.|  
 |**device_type**|**tinyint**|Typ des Sicherungsmediums:<br /><br /> 2 = Datenträger<br /><br /> 5 = Band<br /><br /> 7 = Virtuelles Medium<br /><br /> 9 = Azure Storage<br /><br /> 105 = ein dauerhaftes Sicherungsmedium.<br /><br /> Kann den Wert NULL haben.<br /><br /> Alle permanenten Gerätenamen und Gerätenummern finden Sie in **sys. backup_devices**.|  
 |**physical_block_size**|**int**|Physische Blockgröße, die zum Schreiben der Medienfamilie verwendet wurde. Kann den Wert NULL haben.|  
-|**OL**|**tinyint**|Spiegelnummer (0-3).|  
+|**mirror**|**tinyint**|Spiegelnummer (0-3).|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  RESTORE VERIFYONLY FROM *backup_device* mit LOADHISTORY füllt die Spalten der **Backup Mediaset** -Tabelle mit den entsprechenden Werten aus dem Medien Satz Header auf.  
   
  Führen Sie die gespeicherte Prozedur [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) aus, um die Anzahl der Zeilen in dieser Tabelle und in anderen Sicherungs-und Verlaufs Tabellen zu verringern.  

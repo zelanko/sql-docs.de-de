@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 456911c1-9881-4574-8576-0070eff78c27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 89ef707d9dbca569f8b303356e10b4dc097f3b5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9266d43666a7c461324c0e52b0a93682ed55ed27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750087"
 ---
 # <a name="instancename-property-servernetworkprotocol-class"></a>InstanceName-Eigenschaft (ServerNetworkProtocol-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Ruft den Namen der-Instanz ab [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , auf die vom Server-Netzwerkprotokoll verwiesen wird.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  Ruft den Namen der-Instanz ab, auf die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vom Server-Netzwerkprotokoll verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ object.InstanceName [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgewert, der den Namen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] angibt, auf die durch das Server-Netzwerkprotokoll verwiesen wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

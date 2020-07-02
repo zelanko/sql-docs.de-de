@@ -19,15 +19,15 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 174c4e6c864dab1866326fdd69b5c588ec26b3b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738720"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL-Datenbank)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Gibt CPU-Nutzung, E/A und Arbeitsspeichernutzung für eine [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Datenbank zurück. Jede Zeile wird für 15 Sekunden beibehalten, auch wenn keine Aktivität in der Datenbank vorhanden ist. Verlaufs Daten werden ungefähr eine Stunde lang aufbewahrt.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "78175147"
 ## <a name="permissions"></a>Berechtigungen
  Diese Sicht erfordert die VIEW DATABASE STATE-Berechtigung.  
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
  Die von **sys. dm_db_resource_stats** zurückgegebenen Daten werden als Prozentsatz der maximal zulässigen Grenzwerte für die Dienst Ebene/Leistungsstufe ausgedrückt, die Sie ausführen.
  
  Wenn für die Datenbank innerhalb der letzten 60 Minuten ein Failover auf einen anderen Server durchgeführt wurde, gibt die Sicht nur Daten für den Zeitraum seit dem Failover zurück.  

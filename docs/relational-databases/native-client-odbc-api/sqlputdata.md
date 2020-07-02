@@ -14,23 +14,23 @@ ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e063d1053d8a6e5e10a1234d33893adf27fbc3ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241c7e6bd0bfbd3b0239e610606a26b50f6e112d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302351"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751921"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Die folgenden Einschränkungen gelten, wenn SQLPutData verwendet wird, um mehr als 65.535 Bytes an Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (für Version 4.21 a) oder 400 KB an Daten (für SQL Server Version 6,0 und höher) für eine SQL_LONGVARCHAR (**Text**), SQL_WLONGVARCHAR (**ntext**) oder SQL_LONGVARBINARY (**Image**)-Spalte zu senden:  
+  Die folgenden Einschränkungen gelten, wenn SQLPutData verwendet wird, um mehr als 65.535 Bytes an Daten (für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 4.21 a) oder 400 KB an Daten (für SQL Server Version 6,0 und höher) für eine SQL_LONGVARCHAR (**Text**), SQL_WLONGVARCHAR (**ntext**) oder SQL_LONGVARBINARY (**Image**)-Spalte zu senden:  
   
 -   Der Parameter, auf den verwiesen wird, kann der *insert_Value* in einer INSERT-Anweisung sein.  
   
 -   Der Parameter, auf den verwiesen wird, kann ein *Ausdruck* in der SET-Klausel einer Update-Anweisung sein.  
   
- Das Abbrechen einer Sequenz von SQLPutData-aufrufen, die Daten in Blöcken für einen Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit bereitstellen, bewirkt eine partielle Aktualisierung des Spaltenwerts bei Verwendung von Version 6,5 oder früher. Die **Text**-, **ntext**-oder **Image** -Spalte, auf die verwiesen wurde, als SQLCancel aufgerufen wurde, wird auf einen zwischen Platzhalter Wert festgelegt.  
+ Das Abbrechen einer Sequenz von SQLPutData-aufrufen, die Daten in Blöcken für einen Server mit bereitstellen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bewirkt eine partielle Aktualisierung des Spaltenwerts bei Verwendung von Version 6,5 oder früher. Die **Text**-, **ntext**-oder **Image** -Spalte, auf die verwiesen wurde, als SQLCancel aufgerufen wurde, wird auf einen zwischen Platzhalter Wert festgelegt.  
   
 > [!NOTE]  
 >  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Treiber unterstützt das Herstellen einer Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version 6.5 und niedriger nicht.  

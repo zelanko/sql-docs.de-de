@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bad747d2c88b7d159b9d043d12c81cc380c84c7b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ab7241fe17306fedf25c1562bcabe366d7754e84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749291"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert die Einstellungen für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Zeitplan.  
   
@@ -70,7 +70,7 @@ sp_update_schedule
 |**1**|Einmalig|  
 |**4**|Täglich|  
 |**8**|Wöchentlich|  
-|**Uhr**|Monatlich|  
+|**16**|Monatlich|  
 |**32**|Monatlich, relativ zum *freq-Intervall*|  
 |**64**|Ausführen beim Start des SQLServerAgent-Diensts|  
 |**128**|Ausführen, wenn sich der Computer im Leerlauf befindet|  
@@ -102,11 +102,11 @@ sp_update_schedule
   
 |Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
-|**1**|First (Erster)|  
-|**2**|Sekunde|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|Dritter|  
 |**8**|Vierter|  
-|**Uhr**|Last (Letzter)|  
+|**16**|Last (Letzter)|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *freq_recurrence_factor* wird nur verwendet, *freq_type* wenn freq_type **8**, **16**oder **32**ist. *freq_recurrence_factor*ist vom Datentyp **int**und hat den Standardwert **0**.  
   
@@ -127,7 +127,7 @@ sp_update_schedule
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Alle Aufträge, die den Zeitplan verwenden, verwenden sofort die neuen Einstellungen. Zurzeit ausgeführte Aufträge werden durch das Ändern eines Zeitplans jedoch nicht beendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

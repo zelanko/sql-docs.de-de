@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056403"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753251"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
 
   Gibt eine Such Bedingung für ein Diagramm an, das rekursiv oder wiederholt durchsucht wird. SHORTEST_PATH können in der SELECT-Anweisung innerhalb der Übereinstimmung mit Diagramm Knoten und Edge-Tabellen verwendet werden. 
   
@@ -93,7 +93,7 @@ Der letzte Knoten ist hingegen der letzte n-te Knoten im Ausgabe Diagramm Pfad f
 Diese Funktion gibt die Summe der angegebenen Knoten-/edgeattributwerte oder des Ausdrucks zurück, die im durchsuchten Pfad aufgetreten sind.
 
 ### <a name="count"></a>COUNT
-Diese Funktion gibt die Anzahl der Werte zurück, die nicht NULL sind. Die Count-Funktion unterstützt\*den-Operator mit einem Knoten-oder edgetabellenalias. Ohne den Knoten-oder edgetabellenalias ist die \* Verwendung von mehrdeutig und führt zu einem Fehler.
+Diese Funktion gibt die Anzahl der Werte zurück, die nicht NULL sind. Die Count-Funktion unterstützt den- \* Operator mit einem Knoten-oder edgetabellenalias. Ohne den Knoten-oder edgetabellenalias ist die Verwendung von \* mehrdeutig und führt zu einem Fehler.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
@@ -107,7 +107,7 @@ Gibt den minimalen Wert aus den angegebenen Knoten-/edgeattributwerten oder dem 
 ### <a name="max"></a>MAX
 Gibt den maximalen Wert aus den angegebenen Knoten-/edgeattributwerten oder dem Ausdruck zurück, der im durchsuchten Pfad aufgetreten ist.
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 shortest_path Funktion kann nur innerhalb von Match verwendet werden.     
 LAST_NODE wird nur in shortest_path unterstützt.     
 Das Auffinden von gewichtetem kürzesten Pfad wird nicht unterstützt.         
@@ -173,7 +173,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
-### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. Suchen von Personen, die von einer bestimmten Person 1-3 Hops entfernt wurden
+### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D: Suchen von Personen, die von einer bestimmten Person 1-3 Hops entfernt wurden
 Im folgenden Beispiel wird der kürzeste Pfad zwischen Jacob und allen Personen, mit denen er verbunden ist, im Graph 1-3-hophop gefunden. 
 
 ```

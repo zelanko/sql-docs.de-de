@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1e436807a5738a1ad844a07b3403eb99d1a5cf18
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3336905579401f17a5c3afa2509e64670e5ea1ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752638"
 ---
 # <a name="system-base-tables"></a>Systembasistabellen
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Systembasistabellen sind die zugrunde liegenden Tabellen, in denen die Metadaten für eine bestimmte Datenbank gespeichert werden. In dieser Hinsicht ist die **Master** -Datenbank besonders spezifisch, da Sie einige zusätzliche Tabellen enthält, die in keiner der anderen Datenbanken gefunden werden. Diese Tabellen enthalten permanente Metadaten, deren Bereich serverweit ist.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "82819812"
 |----------------|-----------------|  
 |**sys.sysschobjs**|Ist in jeder Datenbank vorhanden. Jede Zeile stellt ein Objekt in der Datenbank dar.|  
 |**sys.sysschobjs**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede Service Broker-Entität in der Datenbank. Service Broker-Entitäten schließen Folgendes ein:<br /><br /> Nachrichtentyp<br /><br /> Dienstvertrag<br /><br /> Dienst<br /><br /> Die Namen und Typen verwenden binäre Sortierung, die nicht geändert wird.|  
-|**sys. sysclsobjs**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede klassifizierte Entität, für die die gleichen allgemeinen Eigenschaften gelten, darunter die folgenden:<br /><br /> Assembly<br /><br /> Sicherungsmedium<br /><br /> Volltextkatalog<br /><br /> Partitionsfunktion<br /><br /> Partitionsschema<br /><br /> Dateigruppe<br /><br /> Verbergungsschlüssel|  
+|**sys.sysclsobjs**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede klassifizierte Entität, für die die gleichen allgemeinen Eigenschaften gelten, darunter die folgenden:<br /><br /> Assembly<br /><br /> Sicherungsmedium<br /><br /> Volltextkatalog<br /><br /> Partitionsfunktion<br /><br /> Partitionsschema<br /><br /> Dateigruppe<br /><br /> Verbergungsschlüssel|  
 |**sys.sysnsobjs**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede Namespace-bezogene Entität. Diese Tabelle wird zum Speichern von XML-Auflistungsentitäten verwendet.|  
 |**sys.syscolpars**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede Spalte in einer Tabelle, Sicht oder Tabellenwertfunktion. Sie enthält auch Zeilen für jeden Parameter einer Prozedur oder einer Funktion.|  
 |**sys.systypedsubobjs**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede typisierte untergeordnete Entität. Nur Parameter für Partitionsfunktionen fallen in diese Kategorie.|  
@@ -56,7 +56,7 @@ ms.locfileid: "82819812"
 |**sys.sysdbreg**|Ist nur in der **Master** -Datenbank vorhanden. Enthält eine Zeile für jede registrierte Datenbank.|  
 |**sys.sysxsrvs**|Ist nur in der **Master** -Datenbank vorhanden. Enthält eine Zeile für jeden lokalen, Verbindungs- oder Remoteserver.|  
 |**sys.sysrmtlgns**|Diese Systembasis Tabelle ist nur in der **Master** -Datenbank vorhanden. Enthält eine Zeile für jede Remoteanmeldungszuordnung. Sie wird für die Zuordnung von eingehenden lokalen Anmeldungen, die vorgeben, von einem entsprechenden Server zu stammen, an eine tatsächliche lokale Anmeldung verwendet.|  
-|**sys. syslnklgns**|Ist nur in der **Master** -Datenbank vorhanden. Enthält eine Zeile für jede verknüpfte Anmeldungszuordnung. Verknüpfte Anmeldungszuordnungen werden von Remoteprozeduraufrufen und verteilten Abfragen vom lokalen Server zum entsprechenden Verbindungsserver verwendet.|  
+|**sys.syslnklgns**|Ist nur in der **Master** -Datenbank vorhanden. Enthält eine Zeile für jede verknüpfte Anmeldungszuordnung. Verknüpfte Anmeldungszuordnungen werden von Remoteprozeduraufrufen und verteilten Abfragen vom lokalen Server zum entsprechenden Verbindungsserver verwendet.|  
 |**sys.sysxlgns**|Ist nur in der **Master** -Datenbank vorhanden. Enthält eine Zeile für jeden Serverprinzipal.|  
 |**sys.sysdbfiles**|Ist in jeder Datenbank vorhanden. Wenn die **DBID** -Spalte 0 (null) ist, stellt die Zeile eine Datei dar, die zu dieser Datenbank gehört. In der **Master** -Datenbank kann die **DBID** -Spalte nicht NULL sein. Wenn dies der Fall ist, steht die Zeile für eine Masterdatei.|  
 |**sys.sysusermsg**|Ist nur in der **Master** -Datenbank vorhanden. Jede Zeile stellt eine benutzerdefinierte Fehlermeldung dar.|  

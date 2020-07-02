@@ -20,15 +20,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8bc7636fb13674b51290417ee9eb639a6633bd3
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 50732a867c0329610b0a03eebcd97d3f3224d6e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750770"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtern von Werten mit 'sql:limit-field' und 'sql:limit-value' (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Sie können Zeilen, die von einer Datenbankabfrage zurückgegeben werden, mit einem Grenzwert beschränken. Die **SQL: limit-field-** und **SQL: limit-value-** Anmerkungen werden verwendet, um die Daten Bank Spalte zu identifizieren, die einschränkende Werte enthält, und um einen bestimmten Einschränkungs Wert anzugeben, der zum Filtern der zurückgegebenen Daten verwendet werden soll.  
   
  Die **SQL: limit-field-** Anmerkung wird verwendet, um eine Spalte zu identifizieren, die einen einschränkenden Wert enthält. Es ist für jedes zugeordnete Element oder Attribut zulässig.  

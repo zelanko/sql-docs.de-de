@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e2a80729738986d69f2eb78b16d119072d6e9e11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec81b3d330ad9dfdcd69d46188a02313fa94e275
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750104"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die **systranschemas** -Tabelle dient zum Nachverfolgen von Schema Änderungen in Artikeln, die in Transaktions-und Momentaufnahme Veröffentlichungen veröffentlicht werden. Diese Tabelle wird sowohl in Veröffentlichungs- als auch in Abonnementdatenbanken gespeichert.  
   

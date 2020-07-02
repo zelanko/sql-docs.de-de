@@ -26,15 +26,15 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af964cd3561a28db049baa49c2e74140db994784
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81b6570f0301d501f1f8899da70e60f04f1c5c44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388172"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750748"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Ausblenden von Elementen und Attributen mit sql:hide
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Wenn eine XPath-Abfrage mit einem XSD-Schema ausgeführt wird, verfügt das resultierende XML-Dokument über Elemente und Attribute, die im Schema angegeben sind. Mithilfe der **SQL: Hide** -Anmerkung können Sie angeben, dass einige Elemente und Attribute im Schema ausgeblendet werden. Dies ist hilfreich, wenn das Auswahlkriterium der Abfrage bestimmte Elemente oder Attribute im Schema erfordert, diese jedoch nicht im generierten XML-Dokument zurückgegeben werden sollen.  
   
  Die **SQL: Hide** -Anmerkung übernimmt einen booleschen Wert (0 = false, 1 = true). Zulässig sind die Werte 0, 1, true und false.  
@@ -43,9 +43,9 @@ ms.locfileid: "81388172"
  Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Angeben von sql:hide für ein Attribut  
- Das XSD-Schema in diesem Beispiel besteht aus einer ** \<Person. Contact>** -Element mit den Attributen **ContactID**, **FirstName**und **LastName** .  
+ Das XSD-Schema in diesem Beispiel besteht aus einem- **\<Person.Contact>** Element mit den Attributen **ContactID**, **FirstName**und **LastName** .  
   
- Das ** \<Person. Contact->** Element weist einen komplexen Typ auf und wird daher der gleichnamigen Tabelle zugeordnet (Standard Zuordnung). Alle Attribute von ** \<Person. Contact>** Element sind von einfachem Typ und werden den Spalten mit denselben Namen in der Person. contacables in der AdventureWorks-Datenbank zugeordnet. Im Schema wird die **SQL: Hide** -Anmerkung für das **ContactID** -Attribut angegeben. Wenn eine XPath-Abfrage für dieses Schema angegeben wird, wird die **ContactID** nicht im XML-Dokument zurückgegeben.  
+ Das **\<Person.Contact>** -Element weist einen komplexen Typ auf und wird daher der gleichnamigen Tabelle zugeordnet (Standard Zuordnung). Alle Attribute des **\<Person.Contact>** -Elements sind von einem einfachen Typ und werden den Spalten mit denselben Namen in der Person. contacables in der AdventureWorks-Datenbank zugeordnet. Im Schema wird die **SQL: Hide** -Anmerkung für das **ContactID** -Attribut angegeben. Wenn eine XPath-Abfrage für dieses Schema angegeben wird, wird die **ContactID** nicht im XML-Dokument zurückgegeben.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -92,7 +92,7 @@ ms.locfileid: "81388172"
 </ROOT>  
 ```  
   
- Wenn **SQL: Hide** für ein Element angegeben wird, werden das Element und seine Attribute oder untergeordneten Elemente nicht im generierten XML-Dokument angezeigt. Im folgenden finden Sie ein weiteres XSD-Schema, in dem **SQL: Hide** für das ** \<od>** -Element angegeben wird:  
+ Wenn **SQL: Hide** für ein Element angegeben wird, werden das Element und seine Attribute oder untergeordneten Elemente nicht im generierten XML-Dokument angezeigt. Im folgenden finden Sie ein weiteres XSD-Schema, in dem **SQL: Hide** für das-Element angegeben wird **\<OD>** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -147,7 +147,7 @@ ms.locfileid: "81388172"
 </xsd:schema>  
 ```  
   
- Wenn eine XPath-Abfrage (z `/Customers[@CID="1"]`. b.) für dieses Schema angegeben wird, enthält das generierte XML-Dokument nicht das ** \<od>** -Element und seine untergeordneten Elemente, wie in diesem partiellen Ergebnis gezeigt:  
+ Wenn eine XPath-Abfrage (z. b. `/Customers[@CID="1"]` ) für dieses Schema angegeben wird, schließt das generierte XML-Dokument das **\<OD>** -Element und seine untergeordneten Elemente nicht ein, wie in diesem partiellen Ergebnis gezeigt:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

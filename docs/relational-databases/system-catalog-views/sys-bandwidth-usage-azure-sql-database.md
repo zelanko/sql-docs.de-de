@@ -19,23 +19,23 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ea963c07a15cd5c2db3cca113680026d3100936b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54151b817b443d43f64e119841a7b69df7436d93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942577"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752919"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 > [!NOTE]
-> Dies gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11. * *  
+> Dies gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11. * *  
   
  Gibt Informationen zur Netzwerkbandbreite zurück, die von den einzelnen Datenbanken auf einem ** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11-Datenbankserver**verwendet wird. Jede Zeile, die für eine bestimmte Datenbank zurückgegeben wird, gibt eine einzelne Richtung und eine Verwendungsklasse über eine Stunde hinweg an.  
   
- **Dies ist in einer [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]veraltet.**  
+ **Dies ist in einer veraltet [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .**  
   
  Die **sys. bandwidth_usage** -Sicht enthält die folgenden Spalten.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67942577"
 |-----------------|-----------------|  
 |**time**|Die Stunde, als die Bandbreite verwendet wurde. Die Zeilen in dieser Sicht enthalten stündliche Angaben. Beispielsweise bedeutet 2009-09-19 02:00:00.000, dass die Bandbreite am 19. September 2009 zwischen 2:00 Uhr und 3:00 Uhr verwendet wurde.|  
 |**database_name**|Der Name der Datenbank, die Bandbreite verwendet hat.|  
-|**direction**|Der Typ der Bandbreite, der verwendet wurde. Dies kann eine der folgenden Optionen sein:<br /><br /> Input: Daten, die in den [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]verschoben werden.<br /><br /> Ausgang: Daten, die aus der verschoben werden [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**direction**|Der Typ der Bandbreite, der verwendet wurde. Dies kann eine der folgenden Optionen sein:<br /><br /> Input: Daten, die in den verschoben werden [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Ausgang: Daten, die aus der verschoben werden [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|  
 |**class**|Die Klasse der Bandbreite, die verwendet wurde. Dies kann eine der folgenden Optionen sein:<br />Intern: Daten, die innerhalb der Azure-Plattform verschoben werden.<br />Extern: Daten, die aus der Azure-Plattform heraus verschoben werden.<br /><br /> Diese Klasse wird nur zurückgegeben, wenn die Datenbank in einer kontinuierlichen Kopienbeziehung zwischen Regionen ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]) ist. Wenn eine bestimmte Datenbank nicht an einer fortlaufenden Kopier Beziehung teilnimmt, werden keine Interlink-Zeilen zurückgegeben. Weitere Informationen finden Sie im Abschnitt "Hinweise" weiter unten in diesem Thema.|  
 |**time_period**|Der Zeitraum, in dem die Verwendung aufgetreten ist, ist entweder Peak oder OffPeak. Die Spitzenzeit basiert auf der Region, in der der Server erstellt wurde. Wenn ein -Server beispielsweise in der Region "US_Northwest" erstellt wurde, liegt die Spitzenzeit laut Definition zwischen 10:00 Uhr und 18:00 Uhr PST.|  
 |**quantity**|Die Menge der verwendeten Bandbreite in KB.|  
@@ -52,7 +52,7 @@ ms.locfileid: "67942577"
 
  Diese Ansicht ist nur in der **Master** -Datenbank für den Prinzipal Anmelde Namen auf Serverebene verfügbar.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ### <a name="external-and-internal-classes"></a>Externe und interne Klassen
 

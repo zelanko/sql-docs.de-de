@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e150318d4c334c67c51f6cf47c127793a25edb2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cea339352a983028c161cef6fec8643955457b55
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831254"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750658"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Entfernt die angegebene Kategorie von Aufträgen, Warnungen oder Operatoren auf dem aktuellen Server.  
   
@@ -42,7 +42,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="arguments"></a>Argumente  
 `[ @class = ] 'class'`Die Klasse der Kategorie. die *Klasse* ist vom Datentyp **varchar (8)** und hat keinen Standardwert und muss einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Auftrag**|Löscht eine Auftragskategorie|  
 |**Warnung**|Löscht eine Warnungskategorie|  

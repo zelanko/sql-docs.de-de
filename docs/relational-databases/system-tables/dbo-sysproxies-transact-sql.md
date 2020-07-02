@@ -1,5 +1,5 @@
 ---
-title: dbo. sysproxies (Transact-SQL) | Microsoft-Dokumentation
+title: dbo.sysProxys (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08a0400e67dced91ca1a2340b70fd83dda2f83cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1e49698ae6692a06c141a4182df3c54cd4f61d43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750303"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Definiert Attribute eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykontos. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
@@ -37,16 +37,16 @@ ms.locfileid: "82829910"
 |**name**|**sysname**|Name des Proxykontos.|  
 |**credential_id**|**int**|ID der vom Proxykonto verwendeten Anmeldeinformationen.|  
 |**wodurch**|**tinyint**|Status des Proxykontos:<br /><br /> **0** = deaktiviert. **1** = aktiviert.|  
-|**Beschreibung**|**nvarchar(512)**|Beschreibung, die der Benutzer bei Erstellung des Proxykontos eingegeben hat.|  
+|**description**|**nvarchar(512)**|Beschreibung, die der Benutzer bei Erstellung des Proxykontos eingegeben hat.|  
 |**user_sid**|**varbinary(85)**|Microsoft Windows-Sicherheits-ID ( *security_identifier* ) des Benutzers oder der Gruppe, der bzw. die den Proxyanmeldeinformationen zugeordnet ist.|  
 |**credential_date_created**|**datetime**|Datum und Uhrzeit des Zeitpunkts, an dem die Anmeldeinformationen erstellt wurden.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Nur Mitglieder der festen Serverrolle **sysadmin** können auf die **sysproxies** -Tabelle zugreifen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [dbo. sysproxylogin &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
- [dbo. sysproxysubsystem &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [dbo. syssubsystems &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
+ [dbo.sysproxylogin &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
+ [dbo.sysproxysubsystem &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
+ [dbo.sysSubsysteme &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
   
   

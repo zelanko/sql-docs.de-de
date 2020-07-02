@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0efc86400b0858e387a83e8ea765f0058e30459
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e8097e5f528685a35038d4d20170277b7a922d64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749317"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Gibt die Eigenschaften der angegebenen Verteilungsdatenbank zurück. Diese gespeicherte Prozedur wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
   
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|Die Anzahl von Stunden, für die der Verlauf erhalten bleibt.|  
 |**history_cleanup_agent**|**sysname**|Der Name des Verlaufscleanup-Agents.|  
 |**distribution_cleanup_agent**|**sysname**|Der Name des Verteilungscleanup-Agents.|  
-|**status**|**int**|Nur zur internen Verwendung.|  
+|**status**|**int**|Nur interne Verwendung.|  
 |**data_folder**|**nvarchar(255)**|Der Name des Verzeichnisses zum Speichern der Datenbankdateien.|  
 |**data_file**|**nvarchar(255)**|Der Name der Datenbankdatei.|  
 |**data_file_size**|**int**|Die Anfangsgröße der Datendatei in Megabyte.|  
@@ -60,7 +60,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helpdistributiondb** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

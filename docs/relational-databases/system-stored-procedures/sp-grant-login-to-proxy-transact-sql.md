@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: bdfeab5754a2397c01ace2bb9f822fa168eeef6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7ac6bfbd157a72cee716b4a5a916cf2c7069ba8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72005856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750541"
 ---
 # <a name="sp_grant_login_to_proxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gewährt über einen Sicherheitsprinzipal den Zugriff auf einen Proxy.  
 
@@ -44,20 +44,20 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @login_name = ] 'login_name'`Der Anmelde Name, dem der Zugriff gewährt werden soll. *login_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@login_name**, ** \@fixed_server_role**oder ** \@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @login_name = ] 'login_name'`Der Anmelde Name, dem der Zugriff gewährt werden soll. *login_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@ login_name**, ** \@ fixed_server_role**oder ** \@ msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'`Die fixierte Server Rolle, für die der Zugriff gewährt werden soll. *fixed_server_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@login_name**, ** \@fixed_server_role**oder ** \@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @fixed_server_role = ] 'fixed_server_role'`Die fixierte Server Rolle, für die der Zugriff gewährt werden soll. *fixed_server_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@ login_name**, ** \@ fixed_server_role**oder ** \@ msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @msdb_role = ] 'msdb_role'`Die Daten Bank Rolle in der **msdb** -Datenbank, für die der Zugriff gewährt werden soll. *msdb_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@login_name**, ** \@fixed_server_role**oder ** \@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @msdb_role = ] 'msdb_role'`Die Daten Bank Rolle in der **msdb** -Datenbank, für die der Zugriff gewährt werden soll. *msdb_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@ login_name**, ** \@ fixed_server_role**oder ** \@ msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @proxy_id = ] id`Der Bezeichner für den Proxy, für den der Zugriff gewährt werden soll. *id* ist vom Datentyp **int**und hat den Standardwert NULL. Eine ** \@proxy_id** oder ** \@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @proxy_id = ] id`Der Bezeichner für den Proxy, für den der Zugriff gewährt werden soll. *id* ist vom Datentyp **int**und hat den Standardwert NULL. Eine ** \@ proxy_id** oder ** \@ proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @proxy_name = ] 'proxy_name'`Der Name des Proxys, für den der Zugriff gewährt werden soll. *proxy_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine ** \@proxy_id** oder ** \@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @proxy_name = ] 'proxy_name'`Der Name des Proxys, für den der Zugriff gewährt werden soll. *proxy_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine ** \@ proxy_id** oder ** \@ proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_grant_login_to_proxy** muss von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

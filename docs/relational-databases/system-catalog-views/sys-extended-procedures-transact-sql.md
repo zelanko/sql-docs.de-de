@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42ecb7a4199bd42c6f522e447f260c37e3ba3368
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bcc9d30d457e9042f2a667a7a71f846f6e07eb63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738761"
 ---
 # <a name="sysextended_procedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jedes Objekt, bei dem es sich um eine erweiterte gespeicherte Prozedur handelt, mit **sys. Objects. Type** = X. Da erweiterte gespeicherte Prozeduren in der **Master** -Datenbank installiert werden, sind Sie nur in diesem Daten Bank Kontext sichtbar. Wenn Sie aus der **sys. extended_procedures** -Sicht in einem anderen Daten Bank Kontext auswählen, wird ein leeres Resultset zurückgegeben.  
 
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**\<Von sys. Objects geerbte Spalten>**||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Columns inherited from sys.objects>**||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**dll_name**|**nvarchar(260)**|Name (einschließlich des Pfades) der DLL für diese erweiterte gespeicherte Prozedur.|  
   
 ## <a name="permissions"></a>Berechtigungen  

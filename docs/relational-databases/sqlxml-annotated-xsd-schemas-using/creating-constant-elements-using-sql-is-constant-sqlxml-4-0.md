@@ -20,16 +20,16 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 854378b57a4798375e4f97841c8bd72ef0d7d0f3
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 50e2a6efad0cf14739fe2ef28135ea797ce6140e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750822"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Erstellen von 'constant'-Elementen unter Verwendung von sql:is-constant (SQLXML 4.0)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Zum Angeben eines konstanten Elements, d. h. eines Elements im XSD-Schema, das keiner Datenbanktabelle oder-Spalte zugeordnet ist, können Sie die **SQL: is-constant-** Anmerkung verwenden. Diese Anmerkung akzeptiert einen booleschen Wert (0 = false, 1 = true). Zulässig sind die Werte 0, 1, true und false. Die **SQL: is-constant-** Anmerkung kann für ein Element angegeben werden, das keine Attribute besitzt. Wenn sie für ein Element mit dem Wert true (oder 1) festgelegt ist, wird dieses Element nicht der Datenbank zugeordnet, aber dennoch im XML-Dokument angezeigt.  
   
  Die **SQL: is-constant-** Anmerkung kann für Folgendes verwendet werden:  

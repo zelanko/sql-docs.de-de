@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 63fa5b02e681309e36b0c42ec5b504d9f07228ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d606cbca53810eaa9e19153e5de8b821391b2659
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752775"
 ---
 # <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Löscht ein Richtlinienkategorieabonnement für die aktuelle Datenbank.  
   
@@ -41,12 +41,12 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ## <a name="arguments"></a>Argumente  
 `[ @policy_category = ] 'policy_category'`Der Name des Richtlinienkategorieabonnements, das Sie löschen möchten. *policy_category* ist vom **Datentyp vom Datentyp sysname**und ist erforderlich.  
   
- Fragen Sie die Systemsicht msdb. dbo. syspolicy_policy_categories ab, um Werte für *policy_category*abzurufen.  
+ Wenn Sie Werte für *policy_category*abrufen möchten, Fragen Sie die msdb.dbo.syspolicy_policy_categories-Systemsicht ab.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Sie müssen sp_syspolicy_unsubscribe_from_policy_category im Kontext der Datenbank ausführen, in der Sie ein Richtlinienkategorieabonnement entfernen möchten.  
   
 ## <a name="permissions"></a>Berechtigungen  

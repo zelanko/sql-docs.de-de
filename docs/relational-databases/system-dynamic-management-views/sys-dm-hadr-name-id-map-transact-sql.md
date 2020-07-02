@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: e07bb8a9-37de-4a39-a257-950d7c3ae8fb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef571a14c0d4679930f04ed0353231ba5a0c44aa
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0bf0e07bd621161a512d7096bff2949039d3ba1b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752842"
 ---
 # <a name="sysdm_hadr_name_id_map-transact-sql"></a>sys.dm_hadr_name_id_map (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Zeigt die Zuordnung von Always on-Verfügbarkeitsgruppen an, die die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit drei eindeutigen IDs verknüpft hat: eine Verfügbarkeits Gruppen-ID, eine wsfc-Ressourcen-ID und eine wsfc-Gruppen-ID. Der Zweck dieser Zuordnung ist, das Szenario zu behandeln, in dem die WSFC-Ressource/Gruppe umbenannt wird.  
    
