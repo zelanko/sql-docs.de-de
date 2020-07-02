@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbba9ea2f9df7e9a9fd154193c8f52fe904899c7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3fe885be9072f24c18e6115efcf511faea2d8908
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820441"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634372"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Liste der Warnungen für einen bestimmten Operator oder eine Liste der Operatoren für eine bestimmte Warnung zurück.  
   
@@ -50,15 +50,15 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'`Die *object_type*Informationen, die zurückgegeben werden. *enum_type* ist in den meisten Fällen tatsächlich. *enum_type*ist vom Typ **char (10)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |ACTUAL|Listet nur die *object_types* auf, die dem *Namen*zugeordnet sind.|  
-|ALL|Listet alle*object_types* auf, einschließlich derjenigen, die nicht mit dem *Namen*verknüpft sind.|  
+|ALLE|Listet alle*object_types* auf, einschließlich derjenigen, die nicht mit dem *Namen*verknüpft sind.|  
 |TARGET|Listet nur die *object_types* auf, die mit dem angegebenen *target_name*übereinstimmen, unabhängig von der Zuordnung mit dem*Namen*.|  
   
 `[ @notification_method = ] notification_method`Ein numerischer Wert, der die zurück zugebende Benachrichtigungs Methoden Spalten bestimmt. *notification_method* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|E-Mail: gibt nur die **use_email** Spalte zurück.|  
 |**2**|Pager: gibt nur die **use_pager** Spalte zurück.|  
@@ -97,7 +97,7 @@ sp_help_notification
 |**has_pager**|**int**|Operator besitzt eine Pageradresse:<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
 |**has_netsend**|**int**|Für den Operator wurde eine net send-Benachrichtigung konfiguriert.<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese gespeicherte Prozedur muss von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

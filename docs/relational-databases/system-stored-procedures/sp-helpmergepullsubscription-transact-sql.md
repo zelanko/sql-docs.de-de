@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af38463c5104da636d04f961b0cee5210369e38d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e0abc3934e1cfec8e37a4b1f3060a7aeef38a06e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626940"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zu Pullabonnements zurück, die auf einem Abonnenten vorhanden sind. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   
@@ -63,7 +63,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|Typ des Abonnements:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = anonym|  
 |**haben**|**float (8)**|Abonnementpriorität. Der Wert muss kleiner als **100,00**sein.|  
 |**sync_type**|**tinyint**|Synchronisierungsart des Abonnements:<br /><br /> **1** = automatisch<br /><br /> **2** = Momentaufnahme wird nicht verwendet.|  
-|**Beschreibung**|**nvarchar(255)**|Kurze Beschreibung des Pullabonnements.|  
+|**description**|**nvarchar(255)**|Kurze Beschreibung des Pullabonnements.|  
 |**merge_jobid**|**Binary (16)**|Auftrags-ID des Merge-Agents.|  
 |**enabled_for_syncmgr**|**int**|Zeigt an, ob das Abonnement über die Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] synchronisiert werden kann.|  
 |**last_updated**|**nvarchar (26)**|Zeitpunkt, zu dem der Merge-Agent das Abonnement zuletzt erfolgreich synchronisiert hat.|  
@@ -101,7 +101,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helpmergepullsubscription** wird bei der Mergereplikation verwendet. Im Resultset wird das in **last_updated** zurückgegebene Datum als *YYYYMMDD hh: mm: SS. fff*formatiert.  
   
 ## <a name="permissions"></a>Berechtigungen  

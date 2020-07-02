@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f19226e4945d2f163247b7d94f029a6c5b6ee4af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b6ca5e83973c167ce2c39ffb0ac717a44c29b85
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091266"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640812"
 ---
 # <a name="localdbshareinstance-function"></a>LocalDBShareInstance-Funktion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Gibt die angegebene SQL Server Express-LocalDB-Instanz für andere Benutzer des Computers frei und verwendet den angegebenen Freigabenamen.  
   
  **Headerdatei:** sqlncli.h  
@@ -52,7 +52,7 @@ HRESULT LocalDBShareInstance(
  *dwFlags*  
  [Eingabe] Zur künftigen Verwendung reserviert. Muss derzeit auf 0 festgelegt sein.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  S_OK  
  Die Funktion wurde erfolgreich ausgeführt.  
   
@@ -80,7 +80,7 @@ HRESULT LocalDBShareInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Ein unerwarteter Fehler ist aufgetreten. Weitere Informationen finden Sie im Ereignisprotokoll.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Ein Codebeispiel, in dem die LocalDB-API verwendet wird, finden Sie unter [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

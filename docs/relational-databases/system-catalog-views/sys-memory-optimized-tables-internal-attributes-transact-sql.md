@@ -20,15 +20,15 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3aa9409d45586d996d28032df9e2af6e02ce36c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68102383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635080"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 Enthält eine Zeile für jede interne speicheroptimierte Tabelle, die zum Speichern von speicheroptimierten Benutzertabellen verwendet wird. Jede Benutzertabelle entspricht mindestens einer internen Tabelle. Eine einzelne Tabelle wird für die Speicherung von Kerndaten verwendet. Zusätzliche interne Tabellen werden für die Unterstützung von Funktionen wie dem temporalen Columnstore-Index und die Speicherung außerhalb von Zeilen (LOB) für speicheroptimierte Tabellen verwendet.
  
@@ -36,7 +36,7 @@ Enthält eine Zeile für jede interne speicheroptimierte Tabelle, die zum Speich
 | :------ |:----------| :-----|
 |object_id  |**int**|       Die ID der Benutzertabelle. Interne speicheroptimierte Tabellen, die der Unterstützung einer Benutzertabelle dienen (wie etwa Speicherung außerhalb der Zeile oder gelöschte Zeilen im Fall von Hk/Columnstore-Kombinationen), weisen die gleiche object_id wie ihr übergeordnetes Objekt auf. |
 |xtp_object_id  |**bigint**|    In-Memory-OLTP-Objekt-ID, die der internen speicheroptimierten Tabelle entspricht, die für die Unterstützung der Benutzertabelle verwendet wird. Sie ist innerhalb der Datenbank eindeutig und kann sich im Lauf der Lebensspanne des Objekts ändern. 
-|type|  **int** |   Der Typ der internen Tabelle.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|Typ|  **int** |   Der Typ der internen Tabelle.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   Beschreibung des Typs<br/><br/>DELETED_ROWS_TABLE -> Interne Tabelle zur Nachverfolgung gelöschter Zeilen für einen Columnstore-Index<br/>USER_TABLE -> Tabelle, die die zeileninternen Benutzerdaten enthält<br/>DICTIONARIES_TABLE -> Wörterbücher für einen Columnstore-Index<br/>SEGMENTS_TABLE -> Komprimierte Segmente für einen Columnstore-Index<br/>ROW_GROUPS_INFO_TABLE -> Metadaten zu komprimierten Zeilengruppen eines Columnstore-Indexes<br/>INTERNAL OFF-ROW DATA TABLE -> Interne Tabelle, die für die Speicherung einer Spalte außerhalb von Zeilen verwendet wird. In diesem Fall gibt minor_id die column_id an.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Heißes Endsegment der datenträgerbasierten Verlaufstabelle. Zeilen, die in den Verlauf eingefügt werden, werden zuerst in diese interne speicheroptimierte Tabelle eingefügt. Eine Hintergrundaufgabe verschiebt asynchron Zeilen aus dieser internen Tabelle in die datenträgerbasierte Verlaufstabelle. |
 |minor_id|  **int**|    0 gibt eine Benutzer- oder eine interne Tabelle an<br/><br/>Ein anderer Wert als 0 gibt die ID einer außerhalb von Zeilen gespeicherten Spalte an. Joins mit column_id in sys.columns.<br/><br/>Jeder außerhalb von Zeilen gespeicherten Spalte entspricht eine Zeile in dieser Systemansicht.|
 

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65f75b5f9830a19a973db0fffa06b7baf2bbdbae
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 194835abe2691a74116e51222fb069d941fd3c92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626267"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Erstellt einen Cleanup- oder Aufzeichnungsauftrag für Change Data Capture in der aktuellen Datenbank.  
   
@@ -89,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Da die Cleanup- und Aufzeichnungsaufträge standardmäßig erstellt werden, ist diese gespeicherte Prozedur nur dann erforderlich, wenn ein Auftrag explizit gelöscht wurde und erneut erstellt werden muss.  
   
- Der Name des Auftrags ist **CDC.** _ \< Daten \_ Bankname \> _** \_ Bereinigen** oder **CDC.** ** \_ Erfassung**von _ \< Daten \_ \> Banknamen_, bei der *<database_name>* der Name der aktuellen Datenbank ist. Wenn bereits ein Auftrag mit demselben Namen vorhanden ist, wird der Name mit einem Wert (**.**) gefolgt von einem eindeutigen Bezeichner (z. b. CDC) angehängt **. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Der Name des Auftrags ist **CDC.** _\<database\_name\>_ ** \_ Bereinigung** oder **CDC.** _\<database\_name\>_ ** \_ Erfassung**, wobei *<database_name>* der Name der aktuellen Datenbank ist. Wenn bereits ein Auftrag mit demselben Namen vorhanden ist, wird der Name mit einem Wert (**.**) gefolgt von einem eindeutigen Bezeichner (z. b. CDC) angehängt **. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Verwenden Sie [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md), um die aktuelle Konfiguration eines Bereinigungs-oder Aufzeichnungs Auftrags anzuzeigen. Verwenden Sie [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md), um die Konfiguration eines Auftrags zu ändern.  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4ba72a35ba3b8339a1ebc919327ce353b2c7697
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646938"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fügt eine Zeile in die core.snapshots-Sicht des Verwaltungs-Data Warehouse ein. Diese Prozedur wird jedes Mal aufgerufen, wenn Daten durch ein Uploadpaket in das Verwaltungs-Data Warehouse hochgeladen werden.  
   
@@ -60,7 +60,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  Der Name der Instanz für den Sammlungssatz. *named_instance* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
  [ @log_id =] *log_id*  
- Der eindeutige Bezeichner, der dem Ereignisprotokoll des Sammlungssatzes auf dem Server zugeordnet ist, der die Daten gesammelt hat. *log_id* ist vom Datentyp **bigint** und hat keinen Standardwert. Um den Wert für *log_id*abzurufen, Fragen Sie die dbo. syscollector_execution_log-Sicht in der msdb-Datenbank ab.  
+ Der eindeutige Bezeichner, der dem Ereignisprotokoll des Sammlungssatzes auf dem Server zugeordnet ist, der die Daten gesammelt hat. *log_id* ist vom Datentyp **bigint** und hat keinen Standardwert. Wenn Sie den Wert für *log_id*abrufen möchten, Fragen Sie die dbo.syscollector_execution_log Sicht in der msdb-Datenbank ab.  
   
  [ @snapshot_id =] *snapshot_id*  
  Der eindeutige Bezeichner für eine Zeile, die in die Core. Momentaufnahmen-Sicht eingefügt wird. *snapshot_id* ist vom Datentyp **int** und wird als Output zurückgegeben.  
@@ -68,7 +68,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Jedes Mal, wenn ein Uploadpaket mit dem Hochladen von Daten in das Verwaltungs-Data Warehouse startet, ruft die Laufzeitkomponente des Datensammlers core.sp_create_snapshot  auf.  
   
  Diese Prozedur führt eine Überprüfung auf Folgendes durch:  

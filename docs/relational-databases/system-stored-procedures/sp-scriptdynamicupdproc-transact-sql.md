@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3967b1e7c8e3b9da93d131a0b82eec1684009210
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c46a7e30f6f5163fba7b630e365f90e521a96e0c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645303"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Generiert die CREATE PROCEDURE-Anweisung, die eine dynamische gespeicherte Updateprozedur erstellt. Die UPDATE-Anweisung in der benutzerdefinierten gespeicherten Prozedur wird dynamisch erstellt. Als Grundlage wird die MCALL-Syntax verwendet, die angibt, welche Spalten geändert werden sollen. Verwenden Sie diese gespeicherte Prozedur, wenn die Anzahl von Indizes für die Abonnementtabelle vergrößert wird und die Anzahl von zu ändernden Spalten klein ist. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
   
@@ -42,7 +42,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="result-sets"></a>Resultsets  
  Gibt ein Resultset zurück, das aus einer einzelnen **nvarchar (4000)** -Spalte besteht. Das Resultset enthält die vollständige CREATE PROCEDURE-Anweisung, die zum Erstellen der benutzerdefinierten gespeicherten Prozedur verwendet wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_scriptdynamicupdproc** wird bei der Transaktions Replikation verwendet. Die standardmäßige MCALL-Skripterstellungslogik schließt alle Spalten in der UPDATE-Anweisung ein und verwendet ein Bitmuster, um die geänderten Spalten zu bestimmen. Wenn eine Spalte nicht geändert wurde, wird sie wieder auf den bestehenden Wert zurückgesetzt. Normalerweise ist dies unproblematisch. Wenn die Spalte indiziert ist, entsteht zusätzlicher Verarbeitungsaufwand. Beim dynamischen Vorgehen enthält das Update nur die Spalten, die geändert wurden, sodass eine optimale UPDATE-Zeichenfolge bereitgestellt wird. Zur Laufzeit entsteht jedoch zusätzlicher Verarbeitungsaufwand für das Erstellen der dynamischen UPDATE-Anweisung. Es wird empfohlen, dass Sie das dynamische und statische Vorgehen testen und dann die bessere Lösung auswählen.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -20,15 +20,15 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf694bcd82d57b0c021797677674ceb418f875a2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3534afe09635fdc626c51b63469c801a0c3ac418
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648595"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Gibt eine Zeile für jeden Arbeitsthread im System zurück. Weitere Informationen zu Workern finden Sie im [Handbuch zur Thread-und Task Architektur](../../relational-databases/thread-and-task-architecture-guide.md). 
   
@@ -38,7 +38,7 @@ ms.locfileid: "82811484"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary(8)**|Speicheradresse des Arbeitsthreads.|  
-|status|**int**|Nur zur internen Verwendung.|  
+|status|**int**|Nur interne Verwendung.|  
 |is_preemptive|**bit**|1 = Arbeitsthread wird mit präemptiver Zeitplanung ausgeführt. Jeder Arbeitsthread mit externem Code wird unter präemptiver Zeitplanung ausgeführt.|  
 |is_fiber|**bit**|1 = Arbeitsthread wird mit Lightweightpooling ausgeführt. Weitere Informationen finden Sie weiter unten in diesem Thema unter [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)noch nicht kennen.|  
 |is_sick|**bit**|1 = Arbeitsthread versucht fortlaufend, einen Spinlock abzurufen. Wenn dieses Bit festgelegt ist, kann ein Problem im Zusammenhang mit einem Konflikt bei einem Objekt vorliegen, auf das häufig zugegriffen wird.|  
@@ -58,14 +58,14 @@ ms.locfileid: "82811484"
 |exception_severity|**int**|Der Schweregrad der letzten Ausnahme, die bei diesem Arbeitsthread aufgetreten ist.|  
 |exception_address|**varbinary(8)**|Die Codeadresse, von der die Ausnahme ausgelöst wurde.|  
 |affinity|**bigint**|Die Threadaffinität des Arbeitsthreads. Entspricht der Affinität des Threads in [sys. dm_os_threads &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|state|**nvarchar(60)**|Der Status des Arbeitsthreads. Folgenden Werte sind möglich:<br /><br /> INIT = Der Arbeitsthread wird zurzeit initialisiert.<br /><br /> RUNNING = Arbeitsthread wird derzeit nicht präemptiv oder präemptiv ausgeführt.<br /><br /> RUNNABLE = Arbeitsthread kann im Zeitplanungsmodul ausgeführt werden.<br /><br /> SUSPENDED = Arbeitsthread wurde angehalten und wartet darauf, dass ein Ereignis ein Signal sendet.|  
+|state|**nvarchar(60)**|Der Status des Arbeitsthreads. Es kann sich um einen der folgenden Werte handeln:<br /><br /> INIT = Der Arbeitsthread wird zurzeit initialisiert.<br /><br /> RUNNING = Arbeitsthread wird derzeit nicht präemptiv oder präemptiv ausgeführt.<br /><br /> RUNNABLE = Arbeitsthread kann im Zeitplanungsmodul ausgeführt werden.<br /><br /> SUSPENDED = Arbeitsthread wurde angehalten und wartet darauf, dass ein Ereignis ein Signal sendet.|  
 |start_quantum|**bigint**|Zeit in Millisekunden zu Beginn der aktuellen Ausführung dieses Arbeitsthreads.|  
 |end_quantum|**bigint**|Zeit in Millisekunden am Ende der aktuellen Ausführung dieses Arbeitsthreads.|  
 |last_wait_type|**nvarchar(60)**|Typ des letzten Wartevorgangs. Eine Liste der Warte Typen finden Sie unter [sys. dm_os_wait_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
-|return_code|**int**|Rückgabewert des letzten Wartevorgangs. Folgenden Werte sind möglich:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
-|quantum_used|**bigint**|Nur zur internen Verwendung.|  
-|max_quantum|**bigint**|Nur zur internen Verwendung.|  
-|boost_count|**int**|Nur zur internen Verwendung.|  
+|return_code|**int**|Rückgabewert des letzten Wartevorgangs. Es kann sich um einen der folgenden Werte handeln:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|quantum_used|**bigint**|Nur interne Verwendung.|  
+|max_quantum|**bigint**|Nur interne Verwendung.|  
+|boost_count|**int**|Nur interne Verwendung.|  
 |tasks_processed_count|**int**|Anzahl der von diesem Arbeitsthread verarbeiteten Tasks.|  
 |fiber_address|**varbinary(8)**|Speicheradresse der Fiber, der dieser Arbeitsthread zugeordnet ist.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist nicht konfiguriert für Lightweightpooling.|  
 |task_address|**varbinary(8)**|Speicheradresse des aktuellen Tasks. Weitere Informationen finden Sie unter [sys. dm_os_tasks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
@@ -76,7 +76,7 @@ ms.locfileid: "82811484"
 |processor_group|**smallint**|Speichert die Prozessorgruppen-ID, die diesem Thread zugewiesen ist.|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn sich der Arbeitsthread im Status RUNNING befindet und der Arbeitsthread nicht präemptiv ausgeführt wird, stimmt die Adresse des Arbeitsthreads mit active_worker_address in sys.dm_os_schedulers überein.  
   
  Wird ein auf ein Ereignis wartender Arbeitsthread signalisiert, wird der Arbeitsthread an der vordersten Stelle in der ausführbaren Warteschlange platziert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht diesen Vorgang tausendmal nacheinander. Danach wird der Arbeitsthread an das Ende der Warteschlange verschoben. Wenn ein Arbeitsthread an das Ende der Warteschlange verschoben wird, wirkt sich dies negativ auf die Leistung aus.  

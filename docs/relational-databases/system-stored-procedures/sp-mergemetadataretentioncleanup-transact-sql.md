@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78ef8690e4f8dd374125d4c8e6e77a4a1964d329
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 272d40daaf3b3ae93493c7ea3f1f9b775cd5ca32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640153"
 ---
 # <a name="sp_mergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Führt eine manuelle Bereinigung der Metadaten in den Systemtabellen [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)und [MSmerge_current_partition_mappings](../../relational-databases/system-tables/msmerge-current-partition-mappings.md) durch. Diese gespeicherte Prozedur wird auf jedem Verleger und Abonnenten in der Topologie durchgeführt.  
   
@@ -51,7 +51,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 > [!IMPORTANT]  
 >  Wenn mehrere Veröffentlichungen in einer Datenbank vorhanden sind und eine dieser Veröffentlichungen eine unbegrenzte Beibehaltungs Dauer für die Veröffentlichung verwendet, werden durch das Ausführen von **sp_mergemetadataretentioncleanup** die Metadaten der Änderungs Nachverfolgung für die Mergereplikation für die Datenbank nicht bereinigt. Aus diesem Grund sollten Sie die unbegrenzte Aufbewahrungsdauer für Veröffentlichungen mit Vorsicht verwenden. Führen Sie [sp_helpmergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) auf dem Verleger aus, und notieren Sie alle Veröffentlichungen im Resultset mit einem Wert von **0** für die **Beibehaltung**, um zu bestimmen, ob eine Veröffentlichung über eine unbegrenzte Beibehaltungs Dauer verfügt.  

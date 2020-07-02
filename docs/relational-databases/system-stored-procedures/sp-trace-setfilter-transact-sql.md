@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eeb6fd370bfd107864845439086138fff3d379c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644849"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Wendet einen Filter auf eine Ablaufverfolgung an. **sp_trace_setfilter** werden möglicherweise nur für vorhandene Ablauf Verfolgungen ausgeführt, die beendet wurden (*Status* ist **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gibt einen Fehler zurück, wenn diese gespeicherte Prozedur für eine Ablauf Verfolgung ausgeführt wird, die nicht vorhanden ist oder deren *Status* nicht **0**ist.  
   
@@ -91,7 +91,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
 |16|Die Funktion ist für diese Ablaufverfolgung ungültig.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_trace_setfilter** ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Prozedur, die viele der Aktionen ausführt, die zuvor von erweiterten gespeicherten Prozeduren ausgeführt wurden, die in früheren Versionen von verfügbar waren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Verwenden Sie **sp_trace_setfilter** anstelle des **xp_trace_set \* Filtern** Sie erweiterte gespeicherte Prozeduren, um Filter für Ablauf Verfolgungen zu erstellen, anzuwenden, zu entfernen oder zu bearbeiten. Weitere Informationen finden Sie unter [Filtern einer Ablauf Verfolgung](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Alle Filter für eine bestimmte Spalte müssen in einer Ausführung von **sp_trace_setfilter**miteinander aktiviert werden. Wenn ein Benutzer z. B. zwei Filter auf die Spalte application name und einen Filter auf die Spalte username anwenden möchte, muss er die Filter für application name nacheinander angeben. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt einen Fehler zurück, wenn der Benutzer in einem Aufruf einer gespeicherten Prozedur einen Filter für application name angibt und danach ein Filter für username und ein weiterer Filter für application name folgt.  

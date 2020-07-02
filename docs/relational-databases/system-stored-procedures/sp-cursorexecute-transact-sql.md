@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3152e180ceb1681f259f0b1cfcfbccce224a68c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3da197547fcc0b08cb1154c6f32b11a65247304e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831738"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646270"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Erstellt einen Cursor, der auf dem von sp_cursorprepare erstellten Ausführungsplan basiert, und füllt ihn auf. Dieses Verfahren, das mit sp_cursorprepare gekoppelt ist, verfügt über die gleiche Funktion wie sp_cursoropen, ist jedoch in zwei Phasen unterteilt. sp_cursorexecute wird aufgerufen, indem ID = 4 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
@@ -84,7 +84,7 @@ sp_cursorexecute prepared_handle, cursor
 |-1|Die Anzahl der unbekannten Zeilen.|  
 |-n|Eine asynchrone Auffüllung ist wirksam.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>scrollopt-Parameter und ccopt-Parameter  
  *scrollopt* und *ccopt* sind nützlich, wenn die zwischengespeicherten Pläne für den Server Cache vorzeitig entfernt werden, was bedeutet, dass das vorbereitete handle, das die Anweisung identifiziert, neu kompiliert werden muss. Die *scrollopt* -und *ccopt* -Parameterwerte müssen den Werten entsprechen, die in der ursprünglichen Anforderung an sp_cursorprepare gesendet wurden.  

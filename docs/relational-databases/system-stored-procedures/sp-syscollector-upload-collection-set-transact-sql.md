@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9302728bf93a53ce333dce5a38bfa7e046d38fe0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 18e7f6ffa3e4796341a6d9e00774f0affa0931eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824237"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639846"
 ---
 # <a name="sp_syscollector_upload_collection_set-transact-sql"></a>sp_syscollector_upload_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Startet das Hochladen von Sammlungssatzdaten, wenn der Sammlungssatz aktiviert ist.  
   
@@ -51,7 +51,7 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Entweder *collection_set_id* oder *Name* muss einen Wert haben. Beide dürfen nicht NULL sein.  
   
  Diese Prozedur kann zum Starten eines bedarfsgesteuerten Hochladens für einen ausgeführten Sammlungssatz verwendet werden. Sie kann nur für Sammlungssätze verwendet werden, die für die Datensammlung im Modus mit Zwischenspeicherung und den Upload konfiguriert werden. So kann ein Benutzer Daten zur Analyse erhalten, ohne auf ein geplantes Hochladen warten zu müssen.  

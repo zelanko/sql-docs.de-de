@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4f027b31-4e03-43a6-849d-1ba9d8d34ae8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 916dd0be817512b398293a2a110fcd2a030b3d99
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 69cff79a8d9ef8de3bf6b38bb28884b2c0ade999
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829064"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648352"
 ---
 # <a name="sysdm_xe_session_events-transact-sql"></a>sys.dm_xe_session_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zu Sitzungsereignissen zurück. Ereignisse sind einzelne Ausführungspunkte. Auf Ereignisse können Prädikate angewendet werden, damit sie nicht mehr ausgelöst werden, wenn sie nicht die erforderlichen Informationen enthalten.  
    
@@ -43,7 +43,7 @@ ms.locfileid: "82829064"
   
 ### <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|Beschreibung|Beziehung|  
+|From|To|Beziehung|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_events.event_session_address|sys.dm_xe_sessions.address|n:1|  
 |sys. dm_xe_session_events. event_package_guid,<br /><br /> sys. dm_xe_session_events. event_name|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|n:1|  

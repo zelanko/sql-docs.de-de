@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 995e2072be85128ab58b85213c255ee35c042d5b
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: a337cc615a8566040a654829c4a2853117efcf9c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643516"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Geordnete und nicht geordnete Ausdrücke (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Standardmäßig wird der Reihenfolge Modus für alle Vorgänge [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in **geordnet**. Daher befinden sich die von den path-Ausdrücken und den FLWOR-Ausdrücken ohne die **Order by** -Klausel zurückgegebenen Knoten Sequenzen in der Dokument Reihenfolge.  
   

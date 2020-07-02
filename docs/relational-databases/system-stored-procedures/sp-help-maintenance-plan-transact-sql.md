@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9fac6fcf8e6728d666e46ace86f82c5f968bddb2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ca67d4b23ee91330939e5607dd3e32a0a79e808c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634382"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zum angegebenen Wartungsplan zurück. Wenn kein Plan angegeben ist, gibt die gespeicherte Prozedur Informationen zu allen Wartungsplänen zurück.  
   
@@ -59,7 +59,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**plan_id**|**uniqueidentifier**|ID des Wartungsplans.|  
 |**plan_name**|**sysname**|Name des Wartungsplans.|  
 |**date_created**|**datetime**|Erstellungsdatum des Wartungsplans.|  
-|**owner**|**sysname**|Besitzer des Wartungsplans.|  
+|**Eigentor**|**sysname**|Besitzer des Wartungsplans.|  
 |**max_history_rows**|**int**|Maximale Anzahl von Zeilen, die für das Aufzeichnen des Wartungsplanverlaufs in der Systemtabelle zugeordnet werden.|  
 |**remote_history_server**|**int**|Der Name des Remote Servers, auf den der Verlaufs Bericht geschrieben werden konnte.|  
 |**max_remote_history_rows**|**int**|Maximale Anzahl von Zeilen, die in der Systemtabelle auf einem Remoteserver zugeordnet wurden und in die der Verlaufsbericht geschrieben werden konnte.|  
@@ -80,7 +80,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|Die ID jedes Auftrags, der dem Wartungsplan zugeordnet ist. *job_id* ist vom Datentyp **uniqueidentifier**.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_help_maintenance_plan** in der **msdb** -Datenbank.  
   
 ## <a name="permissions"></a>Berechtigungen  

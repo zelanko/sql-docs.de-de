@@ -18,15 +18,15 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d642c8991a9043249f896d0d9b27fb23acd9632e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 34f524eb8e6c7a64a53f64eda67a370aace745c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829699"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648894"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL-Datenbank)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Gibt Ressourcenverwendungsstatistiken für alle Pools für elastische Datenbanken in einem SQL-Datenbank-Server zurück. Für jeden Pool für elastische Datenbanken ist eine Zeile pro 15-Sekunden-Berichtzeitfenster vorhanden (vier Zeilen pro Minute). Dies umfasst CPU-, E/A-, Protokoll-, Speicher- und gleichzeitige Anforderungs-/Sitzungsauslastung durch alle Datenbanken im Pool. Diese Daten werden 14 Tage lang aufbewahrt. 
   
@@ -49,7 +49,7 @@ ms.locfileid: "82829699"
 |**elastic_pool_storage_limit_mb**|**bigint**|Aktuelle maximale Speicherbeschränkung des Pools für elastische Datenbanken für einen bestimmten Pool für elastische Datenbanken und ein bestimmtes Intervall in MB.|
 |**avg_allocated_storage_percent**|**Dezimalzahl (5, 2)**|Der Prozentsatz des Daten Speicherplatzes, der von allen Datenbanken im elastischen Pool zugewiesen wird.  Dies ist das Verhältnis des Daten Speicherplatzes, der der maximalen Datengröße für den Pool für elastische Datenbanken zugeordnet ist.  Weitere Informationen finden Sie [unter: Dateispeicher Platz Verwaltung in SQL-DB](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|  
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
  Diese Sicht ist in der Master-Datenbank des SQL-Datenbankservers vorhanden. Sie müssen mit der Master-Datenbank verbunden sein, um **sys. elastic_pool_resource_stats**Abfragen zu können.  
   

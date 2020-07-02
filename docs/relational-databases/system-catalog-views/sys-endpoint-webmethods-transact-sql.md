@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1d3d9c528b7fd74055e5a98348b9766af320b7d7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c961900bf92133a2b5bddca21c1d67c2c5f8329c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829715"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648937"
 ---
 # <a name="sysendpoint_webmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -42,9 +42,9 @@ ms.locfileid: "82829715"
 |method_alias|**nvarchar (64)**|Alias für die Methode<br /><br /> Hinweis: Bezeichner [!INCLUDE[tsql](../../includes/tsql-md.md)] lassen Zeichen zu, die in WSDL-Methodennamen nicht zulässig sind.<br /><br /> Mit dem Alias wird der in der WSDL-Beschreibung des Endpunktes verfügbar gemachte Name dem eigentlichen zugrunde liegenden ausführbaren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Objekt zugeordnet, das beim Starten der Webmethode aufgerufen wird.|  
 |object_name|**nvarchar (776)**|Der Name des Objekts gemäß der Option NAME =, an das die Webmethode umgeleitet wird. Namens Teile sind durch einen Zeitraum (.) getrennt und durch eckige Klammern getrennt `[``]` .<br /><br /> Der Objektname muss gemäß der WSDL-Option dreiteilig sein.|  
 |result_schema|**tinyint**|Option, die bestimmt, welches XSD ggf. mit einer Antwort zurückgesendet wird.<br /><br /> 0 = Keine<br /><br /> 1 = Standard<br /><br /> 2 = Standardwert|  
-|result_schema_desc|**nvarchar(60)**|Beschreibung der Option, die bestimmt, welches XSD ggf. mit einer Antwort zurückgesendet wird.<br /><br /> Keine<br /><br /> STANDARD<br /><br /> DEFAULT|  
+|result_schema_desc|**nvarchar(60)**|Beschreibung der Option, die bestimmt, welches XSD ggf. mit einer Antwort zurückgesendet wird.<br /><br /> NONE<br /><br /> STANDARD<br /><br /> DEFAULT|  
 |result_format|**tinyint**|Option, die bestimmt, wie Ergebnisse in der Antwort formatiert werden.<br /><br /> 1 = ALL_RESULTS<br /><br /> 2 = ROWSETS_ONLY<br /><br /> 3 = NONE|  
-|result_format_desc|**nvarchar(60)**|Beschreibung der Option, die bestimmt, wie Ergebnisse in der Antwort formatiert werden.<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> Keine|  
+|result_format_desc|**nvarchar(60)**|Beschreibung der Option, die bestimmt, wie Ergebnisse in der Antwort formatiert werden.<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> NONE|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

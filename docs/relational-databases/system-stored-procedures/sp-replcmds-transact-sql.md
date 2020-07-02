@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829978"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645646"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Mit dieser Prozedur werden die Transaktionsbefehle zurückgegeben, die für die Replikation gekennzeichnet sind. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -48,7 +48,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |-----------------|---------------|-----------------|  
 |**Artikel-ID**|**int**|Die ID des Artikels.|  
 |**partial_command**|**bit**|Gibt an, ob es sich um einen Teilbefehl handelt.|  
-|**s**|**varbinary (1024)**|Der Befehlswert.|  
+|**command**|**varbinary (1024)**|Der Befehlswert.|  
 |**xactid**|**binary(10)**|Transaktions-ID|  
 |**xact_seqno**|**varbinary(16)**|Die Transaktionssequenznummer.|  
 |**publication_id**|**int**|Die ID der Veröffentlichung.|  
@@ -56,12 +56,12 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**command_type**|**int**|Der Typ des Befehls.|  
 |**originator_srvname**|**sysname**|Server, von dem die Transaktion stammt|  
 |**originator_db**|**sysname**|Datenbank, von der die Transaktion stammt|  
-|**pkHash**|**int**|Nur zur internen Verwendung.|  
+|**pkHash**|**int**|Nur interne Verwendung.|  
 |**originator_publication_id**|**int**|ID der Veröffentlichung, von der die Transaktion stammt|  
 |**originator_db_version**|**int**|Version der Datenbank, von der die Transaktion stammt|  
 |**originator_lsn**|**varbinary(16)**|Identifiziert die Protokollfolgenummer (LSN, Log Sequence Number) für den Befehl in der ursprünglichen Veröffentlichung|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_replcmds** wird vom Protokoll Leseprozess bei der Transaktions Replikation verwendet.  
   
  Bei der Replikation wird der erste Client, der **sp_replcmds** innerhalb einer bestimmten Datenbank ausführt, als Protokoll Leser behandelt.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 207b27a4d7006f8181cbfe7a6cb6e072ee741d82
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 49859c498b0c2cb8550d7153334252a35d5d0e42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646867"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aktualisiert eine vorhandene Zeile oder fügt eine neue Zeile in der core.source_info_internal-Tabelle des Verwaltungs-Data Warehouse ein. Diese Prozedur wird von der Laufzeitkomponente des Datensammlers bei jedem Hochladen von Daten in das Verwaltungs-Data Warehouse durch ein Uploadpaket aufgerufen.  
   
@@ -67,7 +67,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Jedes Mal, wenn ein Uploadpaket mit dem Hochladen von Daten in das Verwaltungs-Data Warehouse beginnt, ruft die Laufzeitkomponente des Datensammlers core.sp_update_data_source auf. Die core.source_info_internal-Tabelle wird aktualisiert, wenn nach dem letzten Hochladen eine der folgenden Änderungen durchgeführt wurde:  
   
 -   Ein neuer Sammlungssatz wurde hinzugefügt.  

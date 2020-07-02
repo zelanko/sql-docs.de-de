@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee9af1ee7057b7a64a62e0ead12ba7e386839587
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8bc377c269eeb6034ebbe0e5753f2605464ecd8a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828248"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645774"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Kennzeichnet das Abonnement für die erneute Initialisierung. Diese gespeicherte Prozedur wird auf dem Verleger für Pushabonnements ausgeführt.  
   
@@ -66,7 +66,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_reinitsubscription** wird bei der Transaktions Replikation verwendet.  
   
  **sp_reinitsubscription** wird für die Peer-zu-Peer-Transaktions Replikation nicht unterstützt.  

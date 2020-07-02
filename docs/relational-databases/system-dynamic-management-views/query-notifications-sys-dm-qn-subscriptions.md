@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57087264554d228ec02ed22baa2afb932e646b10
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c748dd4980fb7b3b142893f5a04dd36f1676f8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826386"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635004"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Abfrage Benachrichtigungen-sys. dm_qn_subscriptions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zu den aktiven Abfragebenachrichtigungsabonnements auf dem Server zurück. Diese Sicht können Sie verwenden, um in der Serverdatenbank oder in einer angegebenen Datenbank eine Überprüfung auf aktive Abonnements vorzunehmen oder um auf eine Überprüfung auf einen angegebenen Serverprinzipal vorzunehmen.  
   
@@ -42,12 +42,12 @@ ms.locfileid: "82826386"
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|Beschreibung|Ein|type|  
+|From|To|Ein|Typ|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|n:1|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|n:1|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der Statuscode 0 gibt einen nicht definierten Status an.  
   
  Die folgenden Statuscodes geben an, dass ein Abonnement aufgrund einer Änderung ausgelöst wurde:  
@@ -56,7 +56,7 @@ ms.locfileid: "82826386"
 |----------|------------------|----------|  
 |65798|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Abonnement wurde durch eine Einfügung ausgelöst.|  
 |65799|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Löschen|  
-|65800|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Aktualisieren|  
+|65800|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Update|  
 |65801|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Merge|  
 |65802|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Tabelle kürzen|  
 |66048|Abonnement wurde ausgelöst, da das Timeout abgelaufen ist.|Nicht definierter Infomodus|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac9221ee6a2e9b50cec8800ebb4e611211634b60
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ecb59448ff76114d25dbb8422cf7dc1fefc44e15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828318"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640270"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Diese Prozedur führt für die angegebene Zeile ein Pseudoupdate durch, sodass sie beim nächsten Mergevorgang erneut gesendet wird. Diese gespeicherte Prozedur kann auf dem Verleger für die Veröffentlichungsdatenbank oder auf dem Abonnenten für die Abonnementdatenbank ausgeführt werden.  
   
@@ -44,10 +44,10 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_mergedummyupdate** wird bei der Mergereplikation verwendet.  
   
- **sp_mergedummyupdate** ist nützlich, wenn Sie eine eigene Alternative zum Replikationskonflikt-Viewer (Wzcnflct. exe) schreiben.  
+ **sp_mergedummyupdate** ist nützlich, wenn Sie eine eigene Alternative zum Replikationskonflikt-Viewer (Wzcnflct.exe) schreiben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der **db_owner** Fixed-Daten Bank Rolle können **sp_mergedummyupdate**ausführen.  

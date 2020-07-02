@@ -1,5 +1,5 @@
 ---
-title: CDC. fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft-Dokumentation
+title: CDC. fn_cdc_get_all_changes_ &lt; capture_instance &gt; (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e05ef7753ae6375382bfd2bd6e199b6cabffd63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043047"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647999"
 ---
-# <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>CDC. fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>CDC. fn_cdc_get_all_changes_ &lt; capture_instance &gt; (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Zeile für jede auf die Quelltabelle innerhalb des angegebenen Bereichs der Protokollfolgenummer (Log Sequence Number, LSN) angewendete Änderung an. Wenn an einer Quellzeile während des Intervalls mehrere Änderungen vorgenommen wurden, wird jede Änderung im zurückgegebenen Resultset dargestellt. Zusätzlich zum Zurückgeben der Änderungsdaten stellen vier Metadatenspalten die Informationen bereit, die Sie zum Anwenden der Änderungen auf eine andere Datenquelle benötigen. Über Zeilenfilterungsoptionen werden der Inhalt der Metadatenspalten sowie die im Resultset zurückgegebenen Zeilen bestimmt. Wenn die Filteroption 'all' angegeben ist, verfügt jede Änderung über genau eine Zeile, um die Änderung zu identifizieren. Wenn die Option 'all update old' angegeben ist, werden die Updatevorgänge in zwei Zeilen dargestellt: Eine enthält die Werte der aufgezeichneten Spalten vor dem Update und die andere enthält die Werte der aufgezeichneten Spalten nach dem Update.  
   
@@ -60,7 +60,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  Eine der folgenden Optionen ist möglich:  
   
- all  
+ alle  
  Gibt alle Änderungen innerhalb des angegebenen LSN-Bereichs zurück. Bei Änderungen aufgrund eines Updatevorgangs gibt diese Option nur die Zeilen zurück, die die neuen Werte enthalten, nachdem das Update angewendet wurde.  
   
  all update old  
@@ -72,20 +72,20 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Commit-LSN, die der Änderung zugeordnet ist, die die Commitreihenfolge der Änderung beibehält. Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden denselben Commit-LSN-Wert.|  
 |**__$seqval**|**binary(10)**|Sequenzwert, der verwendet wird, um Änderungen an einer Zeile innerhalb einer Transaktion zu sortieren.|  
-|**__ $-Vorgang**|**int**|Identifiziert den Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der erforderlich ist, um die Zeile der Änderungsdaten auf die Zieldatenquelle anzuwenden. Kann eines der folgenden Elemente sein:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Update (die aufgezeichneten Spaltenwerte liegen vor dem Updatevorgang). Dieser Wert ist nur gültig, wenn die Zeilenfilteroption 'all update old' angegeben ist.<br /><br /> 4 = Update (die aufgezeichneten Spaltenwerte liegen nach dem Updatevorgang).|  
+|**__ $-Vorgang**|**int**|Identifiziert den Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der erforderlich ist, um die Zeile der Änderungsdaten auf die Zieldatenquelle anzuwenden. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Update (die aufgezeichneten Spaltenwerte liegen vor dem Updatevorgang). Dieser Wert ist nur gültig, wenn die Zeilenfilteroption 'all update old' angegeben ist.<br /><br /> 4 = Update (die aufgezeichneten Spaltenwerte liegen nach dem Updatevorgang).|  
 |**__$update_mask**|**varbinary(128)**|Eine Bitmaske mit einem Bit, das den einzelnen aufgezeichneten Spalten entspricht, die für die Aufzeichnungsinstanz identifiziert wurden. Für diesen Wert sind alle definierten Bits auf 1 festgelegt, wenn **__ $ Operation** = 1 oder 2 ist. Wenn **__ $ Operation** = 3 oder 4, werden nur die Bits, die den geänderten Spalten entsprechen, auf 1 festgelegt.|  
-|**\<erfasste Quell Tabellen Spalten>**|Variiert|Bei den verbleibenden Spalten, die von der Funktion zurückgegeben werden, handelt es sich um die aufgezeichneten Spalten, die beim Erstellen der Aufzeichnungsinstanz identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle zurückgegeben.|  
+|**\<captured source table columns>**|Variiert|Bei den verbleibenden Spalten, die von der Funktion zurückgegeben werden, handelt es sich um die aufgezeichneten Spalten, die beim Erstellen der Aufzeichnungsinstanz identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle zurückgegeben.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder **db_owner** festen Daten Bank Rolle. Für alle anderen Benutzer ist die SELECT-Berechtigung für alle aufgezeichneten Spalten in der Quelltabelle und, wenn eine Gatingrolle für die Aufzeichnungsinstanz definiert wurde, eine Mitgliedschaft in dieser Datenbankrolle erforderlich. Wenn der Aufrufer nicht über die Berechtigung zum Anzeigen der Quelldaten verfügt, gibt die Funktion den Fehler 229 zurück ("die SELECT-Berechtigung wurde für das Objekt ' fn_cdc_get_all_changes_..\<. ', Datenbank ' databasename> ', Schema ' CDC '." verweigert.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder **db_owner** festen Daten Bank Rolle. Für alle anderen Benutzer ist die SELECT-Berechtigung für alle aufgezeichneten Spalten in der Quelltabelle und, wenn eine Gatingrolle für die Aufzeichnungsinstanz definiert wurde, eine Mitgliedschaft in dieser Datenbankrolle erforderlich. Wenn der Aufrufer nicht über die Berechtigung zum Anzeigen der Quelldaten verfügt, gibt die Funktion den Fehler 229 zurück ("die SELECT-Berechtigung wurde für das Objekt ' fn_cdc_get_all_changes_... ', Datenbank ' \<DatabaseName> ', Schema ' CDC '." verweigert.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn der angegebene LSN-Bereich nicht in den Zeitraum der Änderungsnachverfolgung für die Aufzeichnungsinstanz fällt, gibt die Funktion Fehler 208 zurück ("Für die 'cdc.fn_cdc_get_all_changes'-Prozedur oder -Funktion wurden zu wenig Argumente bereitgestellt").  
   
  Spalten des Datentyps **Image**, **Text**und **ntext** wird immer ein NULL-Wert zugewiesen, wenn **__ $ Operation** = 1 oder **__ $ Operation** = 3. Spalten vom Datentyp **varbinary (max)**, **varchar (max)** oder **nvarchar (max)** wird ein NULL-Wert zugewiesen, wenn **__ $ Operation** = 3, es sei denn, die Spalte wurde während des Updates geändert. Wenn **__ $ Operation** = 1, werden diesen Spalten zum Zeitpunkt der Löschung ihre Werte zugewiesen. Berechnete Spalten in einer Aufzeichnungsinstanz besitzen immer den Wert NULL.  
   
 ## <a name="examples"></a>Beispiele  
- Es [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stehen mehrere Vorlagen zur Verfügung, die zeigen, wie die Change Data Capture Abfragefunktionen verwendet werden. Diese Vorlagen sind im Menü **Ansicht** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verfügbar. Weitere Informationen finden Sie unter [Vorlagen-Explorer](../../ssms/template/template-explorer.md).  
+ Es stehen mehrere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Vorlagen zur Verfügung, die zeigen, wie die Change Data Capture Abfragefunktionen verwendet werden. Diese Vorlagen sind im Menü **Ansicht** in verfügbar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Weitere Informationen finden Sie unter [Vorlagen-Explorer](../../ssms/template/template-explorer.md).  
   
  Im folgenden Beispiel wird die `Enumerate All Changes for Valid Range Template` veranschaulicht. Darin werden mit der Funktion `cdc.fn_cdc_get_all_changes_HR_Department` alle derzeit verfügbaren Änderungen für die Aufzeichnungsinstanz `HR_Department` gemeldet, die für die Quelltabelle HumanResources.Department in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank definiert ist.  
   

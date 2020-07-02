@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac86bea128939be70a3931183f23d4fdffa0d8c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12cfa8fa0ebde7fe2cb6d1a6e9402a0466a4895f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648032"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Meldet Arbeitsspeicherconsumer auf Systemebene für [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Der Arbeitsspeicher für diese Consumer stammt entweder aus dem Standard Pool (wenn die Zuordnung im Kontext eines Benutzer Threads erfolgt) oder aus dem internen Pool (wenn die Zuordnung im Kontext eines Systemthreads erfolgt).  
   
@@ -37,7 +37,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|Typ|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|Interne ID für Arbeitsspeicherconsumer.|  
 |memory_consumer_type|**int**|Eine ganze Zahl, die den Typ des arbeitsspeicherconsumers mit einem der folgenden Werte darstellt:<br /><br /> 0-es darf nicht angezeigt werden. Aggregiert die Speichernutzung von zwei oder mehreren Consumern.<br /><br /> 1-Lookaside: verfolgt die Arbeitsspeicher Nutzung für ein System Lookaside nach.<br /><br /> 2-varheap: verfolgt die Arbeitsspeicher Nutzung für einen Heap variabler Länge nach.<br /><br /> 4-e/a-Seiten Pool: verfolgt die Arbeitsspeicher Nutzung für einen für e/a-Vorgänge verwendeten System Seiten Pool.|  
@@ -48,10 +48,10 @@ select * from sys.dm_xtp_system_memory_consumers
 |allocated_bytes|**bigint**|Anzahl der für den Consumer reservierten Bytes.|  
 |used_bytes|**bigint**|Die von diesem Consumer verwendeten Bytes. Gilt nur für varheap-Arbeitsspeicherconsumer.|  
 |allocation_count|**int**|Anzahl der Zuordnungen.|  
-|partition_count|**int**|Nur zur internen Verwendung.|  
-|sizeclass_count|**int**|Nur zur internen Verwendung.|  
-|min_sizeclass|**int**|Nur zur internen Verwendung.|  
-|max_sizeclass|**int**|Nur zur internen Verwendung.|  
+|partition_count|**int**|Nur interne Verwendung.|  
+|sizeclass_count|**int**|Nur interne Verwendung.|  
+|min_sizeclass|**int**|Nur interne Verwendung.|  
+|max_sizeclass|**int**|Nur interne Verwendung.|  
 |memory_consumer_address|**varbinary**|Interne Adresse des Consumers.|  
   
 ## <a name="permissions"></a>Berechtigungen  

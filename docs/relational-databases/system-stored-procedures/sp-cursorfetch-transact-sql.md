@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831793"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646048"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ruft einen Puffer mit mindestens einer Zeile aus der Datenbank ab. Die Gruppe der Zeilen in diesem Puffer wird als *Fetchpuffer*des Cursors bezeichnet. sp_cursorfetch wird aufgerufen, indem ID = 7 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
@@ -46,7 +46,7 @@ sp_cursorfetch cursor
  *fetchType*  
  Gibt an, welcher Cursorpuffer abgerufen werden soll. *FetchType* ist ein optionaler Parameter, der einen der folgenden ganzzahligen Eingabewerte erfordert.  
   
-|Wert|Name|Beschreibung|  
+|Wert|Name|BESCHREIBUNG|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Ruft den ersten Puffer von *nrows* -Zeilen ab. Wenn *nrows* 0 (null) entspricht, wird der Cursor vor dem Resultset positioniert, und es werden keine Zeilen zurückgegeben.|  
 |0x0002|NEXT|Ruft den nächsten Puffer von *nrows* -Zeilen ab.|  
@@ -81,7 +81,7 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  :   Wenn keine Zeilen zurückgegeben werden, bleibt der Pufferinhalt unverändert.  
   
-|*\<rowNum->*|Festlegen auf|  
+|*\<rownum>*|Festlegen auf|  
 |------------------|------------|  
 |Falls nicht geöffnet|0|  
 |Falls vor dem Resultset positioniert|0|  
@@ -90,13 +90,13 @@ sp_cursorfetch cursor
 |Für DYNAMIC-Cursor|1|  
 |Für ABSOLUTE|-1 gibt die letzte Zeile in einem Satz zurück.<br /><br /> -2 gibt die vorletzte Zeile in einem Satz zurück usw.<br /><br /> Hinweis: Wenn in diesem Fall mehr als eine Zeile abgerufen werden soll, werden die letzten beiden Zeilen des Resultsets zurückgegeben.|  
   
-|*\<nrows->*|Festlegen auf|  
+|*\<nrows>*|Festlegen auf|  
 |-----------------|------------|  
 |Falls nicht geöffnet|0|  
 |Für KEYSET- und STATIC-Cursor|Normalerweise die aktuelle Keysetgröße.<br /><br /> **-m** , wenn sich der Cursor in einer asynchronen Erstellung befindet, wobei *m* Zeilen zu diesem Zeitpunkt gefunden werden.|  
 |Für DYNAMIC-Cursor|-1|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="cursor-parameter"></a>cursor-Parameter  
  Bevor Abrufvorgänge stattgefunden haben, befindet sich die Standardposition eines Cursors vor der ersten Zeile des Resultsets.  
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  Der RPC-Statusparameter wird auf einen der Werte in der folgenden Tabelle festgelegt.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0|Die Prozedur wurde erfolgreich ausgeführt.|  
 |0x0001|Fehler bei der Prozedur.|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  Die Zeilen werden als typisches Resultset zurückgegeben: Spaltenformat (0x2a), Zeilen (0xd1) gefolgt vom fertigen Resultset (0xfd). Metadatentoken werden im gleichen Format gesendet wie für sp_cursoropen angegeben: 0x81, 0xa5 und 0xa4 für SQL Server 7.0-Benutzer usw. Die Zeilenstatusindikatoren werden ähnlich dem BROWSE-Modus als ausgeblendete Spalten am Ende jeder Zeile mit dem Spaltennamen "rowstat" und dem Datentyp INT4 gesendet. Diese rowstat-Spalte verfügt über einen der Werte aus der folgenden Tabelle.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

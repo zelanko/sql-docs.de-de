@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27fd489c9076be08a814f3ea0c27ad92f1f07fa7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ffe3197f74e274792ee1a3f97d700492a018bef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80402690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633751"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Erzeugt eine Windows-Befehlsshell und übergibt eine Zeichenfolge für die Ausführung. Die Ausgabe wird ggf. in Textzeilen zurückgegeben.  
   
@@ -62,15 +62,15 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
- Der von **xp_cmdshell** erzeugte Windows-Prozess hat die gleichen Sicherheitsrechte wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Dienst Konto.  
+## <a name="remarks"></a>Hinweise  
+ Der von **xp_cmdshell** erzeugte Windows-Prozess hat die gleichen Sicherheitsrechte wie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto.  
   
  **xp_cmdshell** erfolgt synchron. Die Steuerung wird erst dann an den Aufrufer zurückgegeben, wenn der Befehl der Befehlsshell abgeschlossen wurde.  
   
  **xp_cmdshell** können mithilfe der Richtlinien basierten Verwaltung oder durch Ausführen von **sp_configure**aktiviert und deaktiviert werden. Weitere Informationen finden Sie unter [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md) und [xp_cmdshell Server Configuration Option](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 > [!IMPORTANT]
->  Wenn **xp_cmdshell** innerhalb eines Batches ausgeführt wird und einen Fehler zurückgibt, tritt ein Fehler auf. Dies ist eine Änderung des Verhaltens. In früheren Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde der Batch weiterhin ausgeführt.  
+>  Wenn **xp_cmdshell** innerhalb eines Batches ausgeführt wird und einen Fehler zurückgibt, tritt ein Fehler auf. Dies ist eine Änderung des Verhaltens. In früheren Versionen von wurde [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Batch weiterhin ausgeführt.  
   
 ## <a name="xp_cmdshell-proxy-account"></a>xp_cmdshell-Proxykonto  
  Wenn Sie von einem Benutzer aufgerufen wird, der kein Mitglied der festen Server Rolle **sysadmin** ist, stellt **xp_cmdshell** eine Verbindung mit Windows her, indem er den in den Anmelde Informationen mit dem Namen **# #xp_cmdshell_proxy_account # #** gespeicherten Kontonamen und das Kennwort verwendet. Wenn diese Proxy Anmelde Informationen nicht vorhanden sind, schlägt **xp_cmdshell** fehl.  
@@ -86,18 +86,18 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
 ## <a name="permissions"></a>Berechtigungen  
  Da böswillige Benutzer manchmal versuchen, ihre Berechtigungen mithilfe von **xp_cmdshell**zu erhöhen, ist **xp_cmdshell** standardmäßig deaktiviert. Verwenden Sie **sp_configure** oder **Richtlinien basierte Verwaltung** , um Sie zu aktivieren. Weitere Informationen finden Sie unter [xp_cmdshell (Serverkonfigurationsoption)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
- Bei der ersten Aktivierung erfordert **xp_cmdshell** die Control Server-Berechtigung für die Ausführung, und der von **xp_cmdshell** erstellte Windows-Prozess hat denselben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherheitskontext wie das Dienst Konto. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto verfügt häufig über mehr Berechtigungen, als für die Arbeit erforderlich sind, die von dem von **xp_cmdshell**erstellten Prozess ausgeführt wird. Um die Sicherheit zu erhöhen, sollte der Zugriff auf **xp_cmdshell** auf Benutzer mit hohen Privilegien eingeschränkt werden.  
+ Bei der ersten Aktivierung erfordert **xp_cmdshell** die Control Server-Berechtigung für die Ausführung, und der von **xp_cmdshell** erstellte Windows-Prozess hat denselben Sicherheitskontext wie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto verfügt häufig über mehr Berechtigungen, als für die Arbeit erforderlich sind, die von dem von **xp_cmdshell**erstellten Prozess ausgeführt wird. Um die Sicherheit zu erhöhen, sollte der Zugriff auf **xp_cmdshell** auf Benutzer mit hohen Privilegien eingeschränkt werden.  
   
- Führen Sie die folgenden Schritte aus, **xp_cmdshell**um nicht Administratoren die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verwendung von xp_cmdshell zu gestatten und das Erstellen von untergeordneten Prozessen mit dem Sicherheits Token eines Kontos mit geringen Rechten zu ermöglichen:  
+ Führen Sie die folgenden Schritte aus, um nicht Administratoren die Verwendung von **xp_cmdshell**zu gestatten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Erstellen von untergeordneten Prozessen mit dem Sicherheits Token eines Kontos mit geringen Rechten zu ermöglichen:  
   
 1.  Erstellen Sie ein lokales Windows-Benutzerkonto oder ein Domänenkonto mit den geringsten Berechtigungen, die von den Prozessen benötigt werden, und passen Sie es an.  
   
 2.  Verwenden Sie das Verfahren **sp_xp_cmdshell_proxy_account** System, um **xp_cmdshell** für die Verwendung dieses Kontos mit den geringsten Berechtigungen zu konfigurieren.  
   
     > [!NOTE]  
-    >  Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dieses Proxy Konto auch mithilfe von konfigurieren, indem Sie in Objekt-Explorer mit der rechten Maustaste auf **Eigenschaften** Ihres Server namens klicken und auf der Registerkarte **Sicherheit** für den Abschnitt **Server Proxy Konto** suchen.  
+    >  Sie können dieses Proxy Konto auch mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] von konfigurieren, indem Sie in Objekt-Explorer mit der rechten Maustaste auf **Eigenschaften** Ihres Server namens klicken und auf der Registerkarte **Sicherheit** für den Abschnitt **Server Proxy Konto** suchen.  
   
-3.  Führen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Sie in mithilfe der Master-Datenbank die `GRANT exec ON xp_cmdshell TO N'<some_user>';` -Anweisung aus, um bestimmten nicht-**sysadmin** -Benutzern die Ausführung von **xp_cmdshell**zu ermöglichen. Der angegebene Benutzer muss in der Master-Datenbank vorhanden sein.  
+3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Führen Sie in mithilfe der Master-Datenbank die-Anweisung aus, `GRANT exec ON xp_cmdshell TO N'<some_user>';` um bestimmten nicht-**sysadmin** -Benutzern die Ausführung von **xp_cmdshell**zu ermöglichen. Der angegebene Benutzer muss in der Master-Datenbank vorhanden sein.  
   
  Nicht Administratoren können jetzt Betriebssystem Prozesse mit **xp_cmdshell** starten, und diese Prozesse werden mit den Berechtigungen des von Ihnen konfigurierten Proxy Kontos ausgeführt. Benutzer mit Control Server-Berechtigung (Mitglieder der festen Server Rolle **sysadmin** ) empfangen weiterhin die Berechtigungen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Kontos für untergeordnete Prozesse, die von **xp_cmdshell**gestartet werden.  
   
@@ -150,7 +150,7 @@ ELSE
    PRINT 'Failure';  
 ```  
   
-### <a name="d-writing-variable-contents-to-a-file"></a>D. Schreiben des Inhalts von Variablen in eine Datei  
+### <a name="d-writing-variable-contents-to-a-file"></a>D: Schreiben des Inhalts von Variablen in eine Datei  
  Im folgenden Beispiel wird der Inhalt der `@var`-Variablen in die Datei `var_out.txt` im aktuellen Serververzeichnis geschrieben.  
   
 ```  

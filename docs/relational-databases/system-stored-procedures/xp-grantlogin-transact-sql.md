@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 957bbdc43c0f0adf3a545fee76e9f69df130d8f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81237214608b6fb0c04fa0857203d0488db375ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633543"
 ---
 # <a name="xp_grantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Erteilt einer Windows-Gruppe oder einem Windows-Benutzer Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,9 +42,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'`Der Name des hinzu zufügenden Windows-Benutzers oder der Windows-Gruppe. Der Windows-Benutzer oder die Windows-Gruppe muss mit einem Windows-Domänen Namen in der Form " *Domäne*\\*Benutzer*" qualifiziert werden. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @loginame = ] 'login'`Der Name des hinzu zufügenden Windows-Benutzers oder der Windows-Gruppe. Der Windows-Benutzer oder die Windows-Gruppe muss mit einem Windows-Domänen Namen in der Form " *Domäne* \\ *Benutzer*" qualifiziert werden. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
-`[ @logintype = ] 'logintype'`Die Sicherheitsstufe der Anmeldung, für die der Zugriff gewährt wird. *LoginType ist vom Datentyp* **varchar (5)** und hat den Standardwert NULL. Es kann nur **Admin** angegeben werden. Wenn **Admin** angegeben ist, erhält der *Anmelde* Name Zugriff [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]auf und wird als Mitglied der festen Server Rolle **sysadmin** hinzugefügt.  
+`[ @logintype = ] 'logintype'`Die Sicherheitsstufe der Anmeldung, für die der Zugriff gewährt wird. *LoginType ist vom Datentyp* **varchar (5)** und hat den Standardwert NULL. Es kann nur **Admin** angegeben werden. Wenn **Admin** angegeben ist, erhält der *Anmelde* Name Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und wird als Mitglied der festen Server Rolle **sysadmin** hinzugefügt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40eaf88f2bd0824d133571e53fd4d9b9831454b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646527"
 ---
 # <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fügt einen Wartungsplan hinzu und gibt seine Plan-ID zurück.  
   
@@ -47,7 +47,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="arguments"></a>Argumente  
 `[ @plan_name = ] 'plan_name'`Gibt den Namen des Wartungsplans an, der hinzugefügt werden soll. *plan_name* ist vom Datentyp **varchar (128)**.  
   
- *plan_id* ** @plan_id = '** plan_id **'**  
+ ** @plan_id = '** *plan_id* **'**  
  Gibt die ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

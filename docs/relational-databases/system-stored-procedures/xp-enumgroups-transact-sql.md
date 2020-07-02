@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e228f2a2363cab777c2b7ae44185e3c215e8f93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116771"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633701"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Stellt eine Liste lokaler Microsoft Windows-Gruppen oder lokaler Gruppen bereit, die in einer angegebenen Windows-Domäne definiert sind.  
   
@@ -50,12 +50,12 @@ xp_enumgroups [ 'domain_name' ]
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**group**|**sysname**|Name der Windows-Gruppe|  
-|**geäußert**|**sysname**|Eine von Windows bereitgestellte Beschreibung der Windows-Gruppe|  
+|**comment**|**sysname**|Eine von Windows bereitgestellte Beschreibung der Windows-Gruppe|  
   
-## <a name="remarks"></a>Bemerkungen  
- Wenn *domain_name* der Name des Windows-basierten Computers ist, auf dem eine Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von ausgeführt wird, oder kein Domänen Name angegeben ist, listet **xp_enumgroups** die lokalen Gruppen auf dem Computer auf, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird.  
+## <a name="remarks"></a>Hinweise  
+ Wenn *domain_name* der Name des Windows-basierten Computers ist, auf dem eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, oder kein Domänen Name angegeben ist, listet **xp_enumgroups** die lokalen Gruppen auf dem Computer auf, auf dem ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **xp_enumgroups** kann nicht verwendet werden, wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz von unter Windows 98 ausgeführt wird.  
+ **xp_enumgroups** kann nicht verwendet werden, wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Windows 98 ausgeführt wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Daten Bank Rolle **db_owner** in der **Master** -Datenbank oder die Mitgliedschaft in der festen Server Rolle **sysadmin** .  

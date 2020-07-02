@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634223"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Zeigt Informationen zu einem Artikel an. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt. Für Oracle-Verleger wird diese gespeicherte Prozedur auf dem Verteiler auf jeder Datenbank ausgeführt.  
   
@@ -66,7 +66,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**type**|**smallint**|Der Artikeltyp:<br /><br /> **1** = Protokoll basiert.<br /><br /> **3** = Protokoll basiert mit manuellem Filter.<br /><br /> **5** = Protokoll basiert mit manueller Sicht.<br /><br /> **7** = Protokoll basiert mit manuellem Filter und manueller Ansicht.<br /><br /> **8** = Ausführung gespeicherter Prozeduren.<br /><br /> **24** = serialisierbare Ausführung gespeicherter Prozeduren.<br /><br /> **32** = gespeicherte Prozedur (nur Schema).<br /><br /> **64** = Ansicht (nur Schema).<br /><br /> **96** = Aggregatfunktion (nur Schema).<br /><br /> **128** = Funktion (nur Schema).<br /><br /> **257** = Protokoll basierte indizierte Sicht.<br /><br /> **259** = Protokoll basierte indizierte Sicht mit manuellem Filter.<br /><br /> **261** = Protokoll basierte indizierte Sicht mit manueller Sicht.<br /><br /> **263** = Protokoll basierte indizierte Sicht mit manuellem Filter und manueller Sicht.<br /><br /> **320** = indizierte Sicht (nur Schema).<br /><br />|  
 |**status**|**tinyint**|Kann das [& (Bitweises and)-](../../t-sql/language-elements/bitwise-and-transact-sql.md) Ergebnis einer oder mehrerer oder dieser Artikeleigenschaften sein:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = der Artikel ist aktiv.<br /><br /> **0x08** = schließt den Spaltennamen in INSERT-Anweisungen ein.<br /><br /> **0x16** = parametrisierte Anweisungen verwenden.<br /><br /> **0x32** = parametrisierte Anweisungen verwenden und den Spaltennamen in INSERT-Anweisungen einschließen.|  
 |**filter**|**nvarchar (257)**|Die gespeicherte Prozedur, mit der die Tabelle horizontal gefiltert wird. Diese gespeicherte Prozedur muss mit der FOR REPLICATION-Klausel erstellt werden.|  
-|**Beschreibung**|**nvarchar(255)**|Beschreibungseintrag für den Artikel.|  
+|**description**|**nvarchar(255)**|Beschreibungseintrag für den Artikel.|  
 |**insert_command**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Einfügungen bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**update_command**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Updates bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**delete_command**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Löschungen bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
@@ -85,14 +85,14 @@ sp_helparticle [ @publication = ] 'publication'
 |**auto_identity_range**|**int**|Flag, das anzeigt, ob die automatische Behandlung von Identitätsbereichen für die Veröffentlichung bei ihrer Erstellung aktiviert wurde. **1** bedeutet, dass der automatische Identitäts Bereich aktiviert ist. der Wert **0** bedeutet, dass er deaktiviert ist.|  
 |**publisher_identity_range**|**int**|Bereichs Größe des Identitäts Bereichs auf dem Verleger, wenn für den Artikel *identityrangemanagementoption* auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist.|  
 |**identity_range**|**bigint**|Bereichs Größe des Identitäts Bereichs auf dem Abonnenten, wenn für den Artikel *identityrangemanagementoption* auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist.|  
-|**Mindest**|**bigint**|Prozentwert, der anzeigt, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist.|  
+|**threshold**|**bigint**|Prozentwert, der anzeigt, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist.|  
 |**identityrangemanagementoption**|**int**|Gibt die für den Artikel behandelte Identitätsbereichsverwaltung an.|  
 |**fire_triggers_on_snapshot**|**bit**|Gibt an, ob replizierte Benutzertrigger beim Anwenden der Anfangsmomentaufnahme ausgeführt werden.<br /><br /> **1** = Benutzer Trigger werden ausgeführt.<br /><br /> **0** = Benutzer Trigger werden nicht ausgeführt.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helparticle** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

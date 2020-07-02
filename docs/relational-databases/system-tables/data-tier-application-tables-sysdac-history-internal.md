@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 025c11a6d04f61378080c303a4935ce98e64f164
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0330c68c8399318b2db96a5f88880fdd566c9acd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833113"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625762"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tabellen von Datenschichtanwendung: sysdac_history_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält Informationen zu den Maßnahmen, die zur Verwaltung von Datenebenenanwendungen (DAC) ausgeführt werden. Diese Tabelle wird im **dbo** -Schema der **msdb** -Datenbank gespeichert.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "82833113"
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|Bezeichner der Aktion|  
 |**sequence_id**|**int**|Identifiziert einen Schritt innerhalb einer Aktion.|  
-|**instance_id**|**uniqueidentifier**|Der Bezeichner der DAC-Instanz. Diese Spalte kann in der Spalte **instance_id** in [dbo. sysdac_instances &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)verknüpft werden.|  
+|**instance_id**|**uniqueidentifier**|Der Bezeichner der DAC-Instanz. Diese Spalte kann in der Spalte **instance_id** in [dbo.sysdac_instances &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)verknüpft werden.|  
 |**action_type**|**tinyint**|Bezeichner des Aktionstyps:<br /><br /> **0** = bereitstellen<br /><br /> **1** = erstellen<br /><br /> **2** = umbenennen<br /><br /> **3** = trennen<br /><br /> **4** = löschen|  
-|**action_type_name**|**varchar (19)**|Name des Aktionstyps:<br /><br /> **deploy**<br /><br /> **erstellen**<br /><br /> **rename**<br /><br /> **Trennen**<br /><br /> **delete**|  
+|**action_type_name**|**varchar (19)**|Name des Aktionstyps:<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **Trennen**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Bezeichner des Typs des von der Aktion betroffenen Objekts:<br /><br /> **0** = dacpac<br /><br /> **1** = Anmeldung<br /><br /> **2** = Datenbank|  
 |**dac_object_type_name**|**varchar (8)**|Name des Typs des von der Aktion betroffenen Objekts:<br /><br /> **dacpac** = DAC-Instanz<br /><br /> **Anmel**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Code, der den aktuellen Status der Aktion identifiziert:<br /><br /> **0** = ausstehend<br /><br /> **1** = Erfolg<br /><br /> **2** = Fehler|  
@@ -51,7 +51,7 @@ ms.locfileid: "82833113"
 |**date_created**|**datetime**|Datum und Uhrzeit, zu denen dieser Eintrag erstellt wurde.|  
 |**date_modified**|**datetime**|Datum und Uhrzeit, zu denen der Eintrag zuletzt geändert wurde.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Durch DAC-Verwaltungsaktionen, z. B. das Bereitstellen oder Löschen einer DAC, werden mehrere Schritte generiert. Jeder Aktion wird ein Aktionsbezeichner zugewiesen. Jedem Schritt werden eine Sequenznummer und eine Zeile in **sysdac_history_internal**zugewiesen, in der der Status des Schritts aufgezeichnet wird. Die einzelnen Zeilen werden mit Beginn des Aktionsschritts erstellt und bei Bedarf aktualisiert, um dem Status des Vorgangs zu entsprechen. Beispielsweise könnte eine DAC-Bereitstellungs Aktion **action_id** 12 zugewiesen werden, und es können vier Zeilen in **sysdac_history_internal**erhalten werden:  
   
 |||||  
@@ -81,7 +81,7 @@ WHERE instance_id NOT IN
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo. sysdac_instances &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [dbo.sysdac_instances &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [sysdac_instances_internal &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

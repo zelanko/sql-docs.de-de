@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f100fe3fda3bc3d156c093696a21ebcd7afce2a5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 32ff25b25b7bf5fb2056196bc91b558beb353f09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829979"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645297"
 ---
 # <a name="sp_scriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Generiert ein Skript zum Erstellen einer Konflikttabelle auf dem Abonnenten für einen gegebenen Artikel in einem Abonnement mit Warteschlange. Das generierte Skript wird beim Abonnenten mit der Abonnementdatenbank ausgeführt. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -50,7 +50,7 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 |-----------------|---------------|-----------------|  
 |**cmdtext**|**nvarchar(4000)**|Gibt das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript für die Erstellung der Konflikttabelle beim Abonnementen für den Artikel in dem Abonnement mit Warteschlange zurück. Dieses Skript wird beim Abonnementen in der Abonnementendatenbank ausgeführt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_scriptsubconflicttable** wird für Abonnenten verwendet, die über Abonnements verfügen, bei denen die Anfangs Momentaufnahme manuell angewendet wird. Bei der Konflikttabelle handelt es sich um eine optionale Tabelle beim Abonnementen.  
   
 ## <a name="permissions"></a>Berechtigungen  

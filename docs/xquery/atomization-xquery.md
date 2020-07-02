@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70d623d8583535aae7ddcc23f26ab7c5e4e36fc7
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 0264c6d5c533510e7350e2f88e270d2cc7538dd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886886"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643593"
 ---
 # <a name="atomization-xquery"></a>Atomisierung (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Atomisierung ist das Verfahren, durch das der typisierte Wert eines Elements extrahiert wird. Dieses Verfahren wird unter bestimmten Umständen implizit verwendet. Bestimmte XQuery-Operatoren, wie z. B. arithmetische und Vergleichsoperatoren, sind von diesem Verfahren abhängig. Wenn Sie z. b. arithmetische Operatoren direkt auf Knoten anwenden, wird der typisierte Wert eines Knotens zuerst durch den impliziten Aufruf der [Data-Funktion](../xquery/data-accessor-functions-data-xquery.md)abgerufen. Auf diese Weise wird der atomare Wert dem arithmetischen Operator als Operand übergeben.  
   

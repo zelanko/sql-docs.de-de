@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c966899707c7e37dee82dda9c678b4ac40df026f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626980"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen über ein Abonnement (Push und Pull) für eine Mergeveröffentlichung zurück. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank oder auf dem Wiederveröffentlichungsabonnenten für die Abonnementdatenbank ausgeführt.  
   
@@ -55,7 +55,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscription_type = ] 'subscription_type'`Der Abonnementtyp. *subscription_type*ist vom Datentyp **nvarchar (15)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Push** (Standard)|Pushabonnement|  
 |**auszu**|Pull-Abonnement|  
@@ -78,7 +78,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|Typ des Abonnements:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = beides|  
 |**haben**|**float (8)**|Zahl zur Angabe der Priorität für das Abonnement.|  
 |**sync_type**|**tinyint**|Synchronisierungsart des Abonnements.|  
-|**Beschreibung**|**nvarchar(255)**|Kurze Beschreibung des Mergeabonnements.|  
+|**description**|**nvarchar(255)**|Kurze Beschreibung des Mergeabonnements.|  
 |**merge_jobid**|**Binary (16)**|Auftrags-ID des Merge-Agents.|  
 |**full_publication**|**tinyint**|Gibt an, ob das Abonnement für eine vollständige oder gefilterte Veröffentlichung besteht.|  
 |**offload_enabled**|**bit**|Gibt an, ob festgelegt wurde, dass die Auslagerungsausführung eines Replikations-Agents auf dem Abonnenten ausgeführt wird. Bei NULL erfolgt die Ausführung auf dem Verleger.|  
@@ -92,7 +92,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helpmergesubscription** wird bei der Mergereplikation verwendet, um auf dem Verleger oder dem wieder Veröffentlichungs Abonnenten gespeicherte Abonnement Informationen zurückzugeben.  
   
  Bei anonymen Abonnements ist der *subscription_type*Wert immer **1** (Pull). Sie müssen jedoch [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) auf dem Abonnenten ausführen, um Informationen zu anonymen Abonnements zu erhalten.  

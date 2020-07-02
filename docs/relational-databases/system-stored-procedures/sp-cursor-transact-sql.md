@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7550a640b723e77f3bfbc9b3473e762962ae2da3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820602"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646414"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fordert positionierte Updates an. Mithilfe dieser Prozedur werden Vorgänge für mindestens eine Zeile im Fetchpuffer eines Cursors ausgeführt. sp_cursor wird aufgerufen, indem ID = 1 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
@@ -98,7 +98,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Bei Verwendung eines RPC gibt ein positionierter DELETE-oder Update-Vorgang mit der Puffer Nummer 0 eine done-Meldung mit einer Zeilen *Anzahl* von 0 (Fehler) oder 1 (Erfolg) für jede Zeile im Fetchpuffer zurück.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="optype-parameter"></a>optype-Parameter  
  Mit Ausnahme der Kombinationen von SetPosition mit Update, DELETE, Refresh oder Lock. oder absolut mit Update oder DELETE schließen sich die *optype* -Werte gegenseitig aus.  
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  Wenn Update \< Table Name> angegeben wird, wird jeder für den *Table* -Parameter angegebene Wert ignoriert.  
+>  Wenn Update \<table name> angegeben ist, wird jeder für den *Table* -Parameter angegebene Wert ignoriert.  
   
  Wenn mehrere Parameter verwendet werden, muss der erste Parameter eine Zeichenfolge in der folgenden Form sein:  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- In diesem Fall ist der \< Tabellenname, der in der konstruierten Update-Anweisung> wird, der in der erstellten Update-Anweisung angegebene oder standardmäßig der *Tabellen* Parameter.  
+ In diesem Fall ist der \<table name> in der erstellten Update-Anweisung der Wert, der vom *Tabellen* Parameter entweder festgelegt oder standardmäßig festgelegt wurde.  
   
  Für INSERT:  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  Wenn Name der Einfügetabelle * \<>* angegeben wird, wird jeder für den *Tabellen* Parameter angegebene Wert ignoriert.  
+>  Wenn INSERT *\<table name>* angegeben wird, wird jeder für den *Table* -Parameter angegebene Wert ignoriert.  
   
  Wenn mehrere Parameter verwendet werden, muss der erste Parameter eine Zeichenfolge in der folgenden Form sein:  
   
@@ -168,7 +168,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- es sei denn, VALUES wurde angegeben; in diesem Fall muss der letzte Ausdruck mit einer abschließenden ")" enden. In diesem Fall ist der * \< Tabellenname* , der in der konstruierten Update-Anweisung>wird, der in der erstellten Update-Anweisung angegebene oder standardmäßig der *Tabellen* Parameter.  
+ es sei denn, VALUES wurde angegeben; in diesem Fall muss der letzte Ausdruck mit einer abschließenden ")" enden. In diesem Fall ist der *\<table name>* in der erstellten Update-Anweisung der Wert, der vom *Tabellen* Parameter entweder festgelegt oder standardmäßig festgelegt wurde.  
   
 > [!NOTE]  
 >  Es ist möglich, einen Parameter als benannten Parameter zu übermitteln, d. h. "`@VALUES`". In diesem Fall können keine weiteren benannten Parameter verwendet werden.  

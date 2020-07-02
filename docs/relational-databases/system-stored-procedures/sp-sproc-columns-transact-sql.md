@@ -18,15 +18,15 @@ ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24263a7e2428c0399fb7b655e9cb5d86e130e85d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ff8bf43db68acb2d29d8fe5310b86290391050e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820292"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645160"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Gibt Spalteninformationen für eine einzelne gespeicherte Prozedur oder benutzerdefinierte Funktion in der aktuellen Umgebung zurück.  
   
@@ -88,7 +88,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**IS_NULLABLE**|**varchar (254)**|NULL-Zulässigkeit der Spalte in der Tabelle. Die NULL-Zulässigkeit wird gemäß den ISO-Regeln bestimmt. Ein DBMS nach ISO kann keine leere Zeichenfolge zurückgeben.<br /><br /> YES, wenn die Spalte NULL-Werte einschließen kann. NO, wenn die Spalte keine NULL-Werte einschließen kann.<br /><br /> Die Spalte gibt eine leere Zeichenfolge zurück, wenn die NULL-Zulässigkeit unbekannt ist.<br /><br /> Der für diese Spalte zurückgegebene Wert ist ein anderer als der für die NULLABLE-Spalte zurückgegebene Wert.|  
 |**SS_DATA_TYPE**|**tinyint**|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp, der von erweiterten gespeicherten Prozeduren verwendet wird. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_sproc_columns** entspricht **sqlprocedurecolrens** in ODBC. Die zurückgegebenen Ergebnisse werden nach **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **procedure_name**und der Reihenfolge sortiert, in der die Parameter in der Prozedur Definition angezeigt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

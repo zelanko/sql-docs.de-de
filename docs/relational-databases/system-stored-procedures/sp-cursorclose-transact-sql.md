@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f21e6db8e9c1cb8ec33f9bddd9610d8179b3e5ac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2a0f6f23d38cb0841ba6e1b7891d9d32fc95b1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646260"
 ---
 # <a name="sp_cursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Schließt den Cursor und hebt deren Zuordnung auf und gibt alle zugeordneten Ressourcen frei. Das heißt, Sie löscht die temporäre Tabelle, die zur Unterstützung von Keyset oder statischem **Cursor**verwendet wird. sp_cursorclose wird aufgerufen, indem ID = 9 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
@@ -45,7 +45,7 @@ sp_cursorclose cursor
 > [!NOTE]  
 >  Der Eingabewert -1 gilt für alle Cursor der aktuellen Verbindung.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  der *Cursor* gibt Fehlermeldungen zurück, wenn die Prozedur ausgeführt wurde, nachdem der Cursor geschlossen wurde, oder wenn ein ungültiges Handle angegeben wurde.  
   
  Der RPC-Status gibt an, ob der Vorgang erfolgreich oder fehlerhaft war.  

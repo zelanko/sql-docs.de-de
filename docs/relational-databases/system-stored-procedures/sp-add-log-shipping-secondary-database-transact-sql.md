@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e26fa9b22578d91636eb554c75a55f184869d529
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ec2f258b02df154c2c629f19f8ea99f1a3950d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647371"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Richtet eine sekundäre Datenbank für den Protokoll Versand ein.  
   
@@ -108,7 +108,7 @@ sp_add_log_shipping_secondary_database
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Beispiel veranschaulicht die Verwendung der gespeicherten Prozedur **sp_add_log_shipping_secondary_database** , um die Datenbank **LogShipAdventureWorks** als sekundäre Datenbank in einer Protokoll Versand Konfiguration hinzuzufügen, wobei [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sich die primäre Datenbank auf dem primären Server befindet.  
+ Dieses Beispiel veranschaulicht die Verwendung der gespeicherten Prozedur **sp_add_log_shipping_secondary_database** , um die Datenbank **LogShipAdventureWorks** als sekundäre Datenbank in einer Protokoll Versand Konfiguration hinzuzufügen, wobei sich die primäre Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] auf dem primären Server befindet.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_database   
@@ -125,7 +125,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Informationen zum Protokoll Versand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 74a5865151cb283aed16efe8ef2ea2908a9f56c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626629"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Zeigt Informationen zu einer Zeile in einer Tabelle an, die als ein Artikel in einer Mergereplikation verwendet wird. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -56,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Name der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**db_nickname**|**Binary (6)**|Spitzname der Datenbank, in der dieser Eintrag vorgenommen wurde.|  
 |**version**|**int**|Version des Eintrags.|  
-|**current_state**|**nvarchar (9)**|Gibt Informationen zum aktuellen Status der Zeile zurück.<br /><br /> **y** -Zeilendaten stellt den aktuellen Status der Zeile dar.<br /><br /> **n** -Zeilendaten stellen nicht den aktuellen Status der Zeile dar.<br /><br /> nicht zutreffend ** \<>** : nicht zutreffend.<br /><br /> ** \< unbekannter>** -aktueller Status kann nicht bestimmt werden.|  
+|**current_state**|**nvarchar (9)**|Gibt Informationen zum aktuellen Status der Zeile zurück.<br /><br /> **y** -Zeilendaten stellt den aktuellen Status der Zeile dar.<br /><br /> **n** -Zeilendaten stellen nicht den aktuellen Status der Zeile dar.<br /><br /> **\<n/a>**-Nicht zutreffend.<br /><br /> **\<unknown>**-Der aktuelle Zustand kann nicht ermittelt werden.|  
 |**rowversion_table**|**NCHAR (17)**|Gibt an, ob die Zeilen Versionen in der [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) Tabelle oder der [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) Tabelle gespeichert werden.|  
 |**comment**|**nvarchar(255)**|Zusätzliche Informationen zu diesem Zeilenversionseintrag. Normalerweise ist dieses Feld leer.|  
   
@@ -74,7 +74,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ## <a name="result-set-for-both"></a>Resultset für beide  
  Wenn **der Wert für** " *anzeigen*" ausgewählt ist, werden die Resultsets für Zeilen und Spalten zurückgegeben.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_showrowreplicainfo** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

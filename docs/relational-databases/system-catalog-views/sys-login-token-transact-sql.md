@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fb396d47da69724d16c0d72e1373527f9c5e700f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 892a1ff4570f209b89866e1287cb55691d9b6189
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68102429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635297"
 ---
 # <a name="syslogin_token-transact-sql"></a>sys.login_token (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Zeile für jeden Serverprinzipal zurück, der Teil des Anmeldetoken ist.  
   

@@ -19,15 +19,15 @@ ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4215b5f677061926b13ec5d7b5411454fb818bbb
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: fe57fda774997f8439c44a75fa917ecb3db3495e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670141"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647635"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Gibt eine Zeile für jede Spalte zurück, auf die vom aktuellen Benutzer in der aktuellen Datenbank zugegriffen werden kann.  
   
@@ -59,8 +59,8 @@ ms.locfileid: "83670141"
 |**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Falls die Spalte Daten eines benutzerdefinierten Typs enthält, gibt diese Spalte den Namen des Schemas des benutzerdefinierten Datentyps zurück. Andernfalls wird NULL zurückgegeben.<br /><br /> **&#42;&#42; wichtige &#42;&#42;** Verwenden Sie INFORMATION_SCHEMA Sichten nicht, um das Schema eines Datentyps zu bestimmen. Die einzige zuverlässige Möglichkeit zum Finden des Schemas eines Typs besteht darin, die TYPEPROPERTY-Funktion zu verwenden.|  
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|Falls die Spalte Daten eines benutzerdefinierten Typs enthält, wird in dieser Spalte der Name des benutzerdefinierten Datentyps angezeigt. Andernfalls wird NULL zurückgegeben.|  
   
-## <a name="remarks"></a>Bemerkungen  
- Die **ORDINAL_POSITION** Spalte des **INFORMATION_SCHEMA. Die Spalten** Ansicht ist nicht mit dem Bitmuster von Spalten kompatibel, die von der COLUMNS_UPDATED-Funktion zurückgegeben werden. Wenn Sie ein Bitmuster abrufen möchten, das mit COLUMNS_UPDATED kompatibel ist, müssen Sie beim Abfragen der INFORMATION_SCHEMA auf die **ColumnID** -Eigenschaft der COLUMNPROPERTY-Systemfunktion verweisen **. Spalten** Ansicht. Zum Beispiel:  
+## <a name="remarks"></a>Hinweise  
+ Die **ORDINAL_POSITION** Spalte des **INFORMATION_SCHEMA. Die Spalten** Ansicht ist nicht mit dem Bitmuster von Spalten kompatibel, die von der COLUMNS_UPDATED-Funktion zurückgegeben werden. Wenn Sie ein Bitmuster abrufen möchten, das mit COLUMNS_UPDATED kompatibel ist, müssen Sie beim Abfragen der INFORMATION_SCHEMA auf die **ColumnID** -Eigenschaft der COLUMNPROPERTY-Systemfunktion verweisen **. Spalten** Ansicht. Beispiel:  
   
 ```  
 USE AdventureWorks2012;  

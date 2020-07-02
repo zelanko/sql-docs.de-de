@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 65c4cd3f6ca07f2c3cb35dc7dcbaad373930ecc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e1aa82b9ced4593bbc1341c3ef305519fb1d1eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634423"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Diese gespeicherte Prozedur ruft die Einstellungen für mindestens eine sekundäre Datenbank ab.  
   
@@ -52,7 +52,7 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |**secondary_id**|Die ID für den sekundären Server in der Protokollversandkonfiguration.|  
 |**primary_server**|Der Name der primären Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokollversandkonfiguration.|  
@@ -84,7 +84,7 @@ sp_help_log_shipping_secondary_database
 |**history_retention_period**|Die Zeitdauer in Minuten, die Verlaufsdatensätze des Protokollversands für eine bestimmte sekundäre Datenbank vor dem Löschen aufbewahrt werden.|  
 |**last_restored_latency**|Der Zeitraum in Minuten zwischen dem Erstellen der Protokollsicherung auf dem primären Server und dem Wiederherstellen auf dem sekundären Server.<br /><br /> Der Anfangswert ist NULL.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn Sie den *secondary_database* -Parameter einschließen, enthält das Resultset Informationen zu dieser sekundären Datenbank. Wenn Sie den *secondary_id* -Parameter einschließen, enthält das Resultset Informationen zu allen sekundären Datenbanken, die mit dieser sekundären ID verknüpft sind.  
   
  **sp_help_log_shipping_secondary_database** muss von der **Master** -Datenbank auf dem sekundären Server ausgeführt werden.  
@@ -94,7 +94,7 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_help_log_shipping_secondary_primary &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [Informationen zum Protokoll Versand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

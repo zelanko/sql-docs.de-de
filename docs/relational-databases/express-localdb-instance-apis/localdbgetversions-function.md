@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5263215c8ccac3d9337f415fe9c279bb3f3ad3ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1548b23aceb5eb4f622ada1289df88ff790c8645
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091207"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640852"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions-Funktion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Gibt alle auf dem Computer verfügbaren SQL Server Express LocalDB-Versionen zurück.  
   
  **Headerdatei:** sqlncli.h  
@@ -42,7 +42,7 @@ ms.locfileid: "68091207"
  [Eingabe/Ausgabe] Enthält bei Eingabe die Anzahl der Slots für Versionen im *pVersionNames* -Puffer.   
 Enthält bei Ausgabe die Anzahl der vorhandenen LocalDB-Versionen.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  S_OK  
  Die Funktion wurde erfolgreich ausgeführt.  
   
@@ -58,7 +58,7 @@ Enthält bei Ausgabe die Anzahl der vorhandenen LocalDB-Versionen.
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Ein unerwarteter Fehler ist aufgetreten. Weitere Informationen finden Sie im Ereignisprotokoll.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Ein Codebeispiel, in dem die LocalDB-API verwendet wird, finden Sie unter [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

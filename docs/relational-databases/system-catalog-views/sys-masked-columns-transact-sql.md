@@ -18,15 +18,15 @@ ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d05172c71a2e6a14a92d474a1a92c348e237286f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1872dfd9d7ffd90696743972d38d7ad4af1171c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648747"
 ---
 # <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Verwenden Sie die **sys. masked_columns** -Sicht zum Abfragen von Tabellen Spalten, auf die eine dynamische Daten Maskierungs Funktion angewendet wird. Diese Ansicht erbt von der **sys.columns** -Ansicht. Sie gibt alle Spalten in der **sys.columns** -Ansicht sowie die Spalten **is_masked** und **masking_function** zurück, wobei angegeben wird, ob die Spalte maskiert ist. Ist dies der Fall, gibt die Ansicht die definierte Maskierungsfunktion an. Diese Ansicht zeigt nur die Spalten an, auf die eine Maskierungsfunktion angewendet wird.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82825119"
 |is_masked|**bit**|Gibt an, ob die Spalte maskiert ist. 1 weist auf maskiert hin.|  
 |masking_function|**nvarchar(4000)**|Die Maskierungs Funktion für die Spalte.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese Sicht gibt Informationen zu Tabellen zurück, in denen der Benutzer über eine Berechtigung für die Tabelle verfügt, oder wenn der Benutzer über die VIEW ANY DEFINITION-Berechtigung verfügt.  

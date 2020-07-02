@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee0298a714394bdf90009657c3d5b7a4daafebcd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9619ee410e0df014961e9f46a7e536508e0616c1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639488"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Löscht E-Mail-Nachrichten dauerhaft aus den internen Tabellen der Datenbank-E-Mail.  
   
@@ -47,7 +47,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Datenbank-E-Mail Meldungen und deren Anhänge werden in der **msdb** -Datenbank gespeichert. Nachrichten sollten in regelmäßigen Abständen gelöscht werden, um zu verhindern, dass **msdb** größer als erwartet wird, und dass Sie dem Dokument Aufbewahrungs Programm Ihrer Organisation entsprechen. Verwenden Sie die gespeicherte Prozedur **sysmail_delete_mailitems_sp** , um e-Mail-Nachrichten dauerhaft aus den Datenbank-E-Mail Tabellen zu löschen. Mithilfe eines optionalen Arguments können Sie nur ältere E-Mails löschen, indem Sie ein Datum und eine Uhrzeit angeben. E-Mails, die älter sind als dieses Argument, werden gelöscht. Ein weiteres optionales Argument ermöglicht es Ihnen, nur e-Mails eines bestimmten Typs zu löschen, die als **sent_status** Argument angegeben sind. Sie müssen für ** \@ sent_before** oder ** \@ sent_status**ein Argument angeben. Um alle Nachrichten zu löschen, verwenden Sie ** \@ sent_before = getdate ()**.  
   
  Mit den E-Mails werden auch die Anlagen gelöscht, die zu diesen Nachrichten gehören. Beim Löschen von e-Mail werden die entsprechenden Einträge in **sysmail_event_log**nicht gelöscht. Verwenden Sie [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) , um Elemente aus dem Protokoll zu löschen.  

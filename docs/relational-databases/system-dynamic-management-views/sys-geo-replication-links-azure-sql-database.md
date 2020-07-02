@@ -17,16 +17,16 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e31935a52d4819023b5ed17ac0ef12c106ec49ba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c59f3379d2f210d96b97e497ecb8f332a6f93d2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828988"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647897"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (Azure SQL-Datenbank)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Enthält eine Zeile für jeden Replikations Link zwischen primären und sekundären Datenbanken in einer Partnerschaft für die georeplikation. Diese Sicht befindet sich in der logischen Masterdatenbank  
   
@@ -39,11 +39,11 @@ ms.locfileid: "82828988"
 |partner_server|**sysname**|Der Name des SQL-Datenbankservers, der die georeplizierte Datenbank enthält.|  
 |partner_database|**sysname**|Name der georeplizierten Datenbank auf dem verknüpften SQL-Datenbankserver.|  
 |replication_state|**tinyint**|Der Status der georeplikation für diese Datenbank, einer von:.<br /><br /> 0 = ausstehend. Die Erstellung der aktiven sekundären Datenbank ist geplant, aber die notwendigen Vorbereitungsschritte sind noch nicht abgeschlossen.<br /><br /> 1 = Seeding. Für das Ziel der georeplikation wird ein Seeding durchgeführt, die beiden Datenbanken sind jedoch noch nicht synchronisiert. Bis das Seeding abgeschlossen ist, können Sie keine Verbindung mit der sekundären Datenbank herstellen. Durch das Entfernen der sekundären Datenbank aus der primären Datenbank wird der Seeding Vorgang abgebrochen.<br /><br /> 2 = Catch-up. Die sekundäre Datenbank befindet sich in einem Transaktions konsistenten Zustand und wird ständig mit der primären Datenbank synchronisiert.|  
-|replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
+|replication_state_desc|**nvarchar(256)**|PENDING (AUSSTEHEND)<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |Rolle (role)|**tinyint**|Die georeplikationsrolle ist eine der folgenden:<br /><br /> 0 = primär. Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.<br /><br /> 1 = sekundär.  Der database_id bezieht sich auf die primäre Datenbank in der georeplikationspartnerschaft.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Der sekundäre Typ, einer der folgenden:<br /><br /> 0 = Nein. Der Zugriff auf die sekundäre Datenbank ist bis zum Failover nicht möglich.<br /><br /> 1 = schreibgeschützt. Auf die sekundäre Datenbank kann nur für Clientverbindungen mit applicationintent = schreibgeschützt zugegriffen werden.<br /><br /> 2 = Alle. Auf die sekundäre Datenbank kann jede Client Verbindung zugreifen.|  
-|secondary_allow_connections _DESC|**nvarchar(256)**|Nein<br /><br /> All<br /><br /> Schreibgeschützt|  
+|secondary_allow_connections _DESC|**nvarchar(256)**|Nein<br /><br /> Alle<br /><br /> Schreibgeschützt|  
   
 ## <a name="permissions"></a>Berechtigungen
 
