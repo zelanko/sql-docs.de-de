@@ -21,17 +21,17 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4bada5561a4e9af4b779ea26c13fac7ea57dad2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f75555473e529b44d0b1fa99d0b526db8be1e64b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303851"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773237"
 ---
 # <a name="changing-passwords-programmatically"></a>Programmgesteuertes Ändern von Kennwörtern
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Ab unterstützt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client die programmgesteuerte Verarbeitung des Kenn Wort Ablaufs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sowohl über den Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anbieter als auch über den Native Client-ODBC-Treiber und durch Änderungen an den **SQL Server Anmelde** Dialogfeldern.  
+  Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] konnte nur ein Administrator ein abgelaufenes Kennwort eines Benutzers zurücksetzen. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt Native Client die programmgesteuerte Verarbeitung des Kenn Wort Ablaufs sowohl über den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter als auch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über den Native Client-ODBC-Treiber und durch Änderungen an den **SQL Server Anmelde** Dialogfeldern.  
   
 > [!NOTE]  
 >  Fordern Sie, wenn möglich, Benutzer dazu auf, ihre Anmeldeinformationen zur Laufzeit einzugeben, um zu vermeiden, diese Informationen in einem persistenten Format speichern zu müssen. Wenn Sie die Anmeldeinformationen persistent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532). Weitere Informationen zur Verwendung von Kennwörtern finden Sie unter [Sichere Kennwörter](../../../relational-databases/security/strong-passwords.md).  
@@ -100,7 +100,7 @@ ms.locfileid: "81303851"
   
  Wenn für " **DriverCompletion** " ein beliebiger anderer Wert festgelegt wurde, wird dem Benutzer das **SQL Server Anmelde** Dialogfeld angezeigt, unabhängig davon, ob das Kennwort abgelaufen ist. Der Benutzer kann dann auf die Schaltfläche **Optionen** klicken und **Kennwort ändern** aktivieren, um das Kennwort zu ändern.  
   
- Wenn der Benutzer auf OK klickt und das Kennwort abgelaufen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist, werden Sie zur Eingabe und Bestätigung eines neuen Kennworts mithilfe des Dialog Felds **SQL Server Kennwort ändern** aufgefordert.  
+ Wenn der Benutzer auf OK klickt und das Kennwort abgelaufen ist, werden Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zur Eingabe und Bestätigung eines neuen Kennworts mithilfe des Dialog Felds **SQL Server Kennwort ändern** aufgefordert.  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>ODBC-Eingabeaufforderungsverhalten und gesperrte Konten  
  Verbindungsversuche schlagen möglicherweise fehl, weil das Konto gesperrt wurde. Falls dies nach der Anzeige des Dialogfelds **SQL Server-Anmeldung** geschieht, wird dem Benutzer die entsprechende Fehlermeldung des Servers ausgegeben, und die Verbindung wird abgebrochen. Dies geschieht unter Umständen auch nach der Anzeige des Dialogfelds **SQL Server-Kennwort ändern**, falls der Benutzer einen falschen Wert für das alte Kennwort eingibt. In diesem Fall wird dieselbe Fehlermeldung angezeigt, und der Verbindungsversuch wird abgebrochen.  

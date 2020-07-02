@@ -18,17 +18,17 @@ ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 788055ec21a215a99b2524310452d14ba390088a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 947e8da980dbdb4199245d18e44ec9df36dbf13a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300244"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773220"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Aktualisieren von Daten in SQL Server-Cursorn
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Beim Abrufen und Aktualisieren von Daten mittels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cursorn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird die Consumeranwendung eines Native Client OLE DB Anbieters durch die gleichen Überlegungen und Einschränkungen gebunden, die für jede andere Client Anwendung gelten.  
+  Beim Abrufen und aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Daten mittels Cursorn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird die Consumeranwendung eines Native Client OLE DB Anbieters durch die gleichen Überlegungen und Einschränkungen gebunden, die für jede andere Client Anwendung gelten.  
   
  Nur Zeilen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursorn nehmen an der gleichzeitigen Datenzugriffssteuerung teil. Wenn der Consumer ein änderbares Rowset anfordert, wird die Parallelitätssteuerung von DBPROP_LOCKMODE kontrolliert. Um die Steuerungsebene für den gleichzeitigen Zugriff zu ändern, legt der Consumer die DBPROP_LOCKMODE-Eigenschaft vor dem Öffnen des Rowsets fest.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81300244"
   
  In beiden Modi stellt ein Roundtrip eine separate Transaktion dar, wenn kein Transaktionsobjekt für das Rowset geöffnet ist.  
   
- Wenn Sie **IRowsetUpdate:: Update**verwenden, versucht der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, jede bestimmte Zeile zu verarbeiten. Aufgrund ungültiger Daten-, Längen-oder Statuswerte für eine Zeile wird die Verarbeitung von Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB-Anbietern nicht beendet. Es können nur alle oder keine der anderen am Update beteiligten Zeilen geändert werden. Der Consumer muss das zurückgegebene *prgRowStatus* -Array untersuchen, um den Fehler für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmte Zeile zu ermitteln, wenn der Native Client OLE DB-Anbieter DB_S_ERRORSOCCURRED zurückgibt.  
+ Wenn Sie **IRowsetUpdate:: Update**verwenden, versucht der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, jede bestimmte Zeile zu verarbeiten. Aufgrund ungültiger Daten-, Längen-oder Statuswerte für eine Zeile wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verarbeitung von Native Client OLE DB-Anbietern nicht beendet. Es können nur alle oder keine der anderen am Update beteiligten Zeilen geändert werden. Der Consumer muss das zurückgegebene *prgRowStatus* -Array untersuchen, um den Fehler für eine bestimmte Zeile zu ermitteln, wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter DB_S_ERRORSOCCURRED zurückgibt.  
   
  Ein Consumer darf nicht davon ausgehen, dass Zeilen in einer bestimmten Reihenfolge verarbeitet werden. Wenn ein Consumer es erfordert, dass die Verarbeitung von Datenänderungen in mehr als einer Zeile in einer bestimmten Reihenfolge durchgeführt wird, muss der Consumer diese Reihenfolge in der Anwendungslogik festlegen und eine Transaktion öffnen, um den Prozess darin einzuschließen.  
   

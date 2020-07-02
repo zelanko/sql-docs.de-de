@@ -18,17 +18,17 @@ ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e7419d0c39b05d23f60d3ff137672970fc20e6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2bc809e0e33083e95f87445bb4b0a5dbc0ee9c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306083"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773372"
 ---
 # <a name="retrieving-error-information"></a>Abrufen von Fehlerinformationen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  In diesem Beispiel werden Informationen aus den verschiedenen Fehler Schnittstellen abgerufen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die vom Native Client-OLE DB Anbieter verfügbar gemacht werden.  
+  In diesem Beispiel werden Informationen aus den verschiedenen Fehler Schnittstellen abgerufen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieter verfügbar gemacht werden.  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  
@@ -220,6 +220,6 @@ void DumpErrorInfo
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
+ [Fehler](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

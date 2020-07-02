@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7313e3784c5af9922fb5301b339087510a98e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773835"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zu den Schritten eines Auftrags zurück, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst verwendet, um automatisierte Aktivitäten auszuführen.  
   
@@ -65,14 +65,14 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**step_id**|**int**|Eindeutiger Bezeichner für den Schritt.|  
 |**step_name**|**sysname**|Name des Auftragsschritts.|  
 |**System**|**nvarchar(40)**|Subsystem, in dem der Schrittbefehl ausgeführt werden soll|  
-|**s**|**nvarchar(max)**|Befehl, der in dem Schritt ausgeführt wird.|  
+|**command**|**nvarchar(max)**|Befehl, der in dem Schritt ausgeführt wird.|  
 |**flags**|**int**|Bitmaske der Werte, die das Schrittverhalten steuern.|  
 |**cmdexec_success_code**|**int**|Bei einem **CmdExec** -Schritt ist dies der Prozessexitcode eines erfolgreichen Befehls.|  
 |**on_success_action**|**tinyint**|Auszuführende Aktion, wenn der Schritt erfolgreich ist:<br /><br /> **1** = Beenden der Auftrags Erfolgsmeldung.<br /><br /> **2** = beenden Sie den Fehler bei der Auftrags Berichterstattung.<br /><br /> **3** = fahren Sie mit dem nächsten Schritt fort.<br /><br /> **4** = gehe zu Schritt.|  
 |**on_success_step_id**|**int**|Wenn **on_success_action** 4 ist, gibt dies den nächsten Schritt an, der ausgeführt werden soll.|  
 |**on_fail_action**|**tinyint**|Was Sie tun sollten, wenn der Schritt fehlschlägt. Werte sind identisch mit **on_success_action**.|  
 |**on_fail_step_id**|**int**|Wenn **on_fail_action** 4 ist, gibt dies den nächsten Schritt an, der ausgeführt werden soll.|  
-|**Servers**|**sysname**|Reserviert.|  
+|**server**|**sysname**|Reserviert.|  
 |**database_name**|**sysname**|Für einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritt ist dies die Datenbank, in der der Befehl ausgeführt wird.|  
 |**database_user_name**|**sysname**|Für einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritt ist dies der Datenbank-Benutzerkontext, in dem der Befehl ausgeführt wird.|  
 |**retry_attempts**|**int**|Die maximale Anzahl von Wiederholungsversuchen für den Befehl (falls er nicht erfolgreich ist).|  
@@ -86,7 +86,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|Uhrzeit, zu der die Ausführung des Schritts zuletzt gestartet wurde|  
 |**proxy_id**|**int**|Proxy für den Auftragsschritt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_help_jobstep** in der **msdb** -Datenbank.  
   
 ## <a name="permissions"></a>Berechtigungen  

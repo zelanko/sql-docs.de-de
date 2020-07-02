@@ -14,17 +14,17 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f00744ce2f0363e7fcf38820b20e2b631df7adc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 940727c0b5b932017e9572a40e11a547a1f0a897
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773462"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Dieses Thema enthält Informationen über OLE DB ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client)-Typen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Datums-/Uhrzeit-Datentypen unterstützen.  
+  Dieses Thema enthält Informationen über OLE DB ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client)-Typen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datums-/Uhrzeit-Datentypen unterstützen.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern  
  OLE DB stellt zwei neue Datentypen bereit, um die neuen Servertypen zu unterstützen: DBTYPE_DBTIME2 und DBTYPE_DBTIMESTAMPOFFSET. Die folgende Tabelle zeigt die vollständige Servertypzuordnung:  
@@ -159,7 +159,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Anwendungen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu Native Client migrieren und **sql_variant** verwenden und auf der eingeschränkten Genauigkeit von **DateTime** basieren, müssen aktualisiert werden, wenn das zugrunde liegende Schema für die Verwendung von **datetime2** anstelle von **DateTime**aktualisiert wird.  
+ Anwendungen, die zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client migrieren und **sql_variant** verwenden und auf der eingeschränkten Genauigkeit von **DateTime** basieren, müssen aktualisiert werden, wenn das zugrunde liegende Schema für die Verwendung von **datetime2** anstelle von **DateTime**aktualisiert wird.  
   
  Die Zugriffsmakros für SSVARIANT wurden durch Hinzufügen von Folgendem ebenfalls erweitert:  
   

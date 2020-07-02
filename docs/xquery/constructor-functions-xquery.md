@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 105ba6fb68e8d8031858fcf54dddc56b655ddcea
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 56dd5919565d1cbb7d0b95ae4476aef9140cecd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773716"
 ---
 # <a name="constructor-functions-xquery"></a>Konstruktorfunktionen (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Die Konstruktorfunktionen erstellen Instanzen beliebiger integrierter oder benutzerdefinierter atomarer XSD-Typen aus den angegebenen Eingaben.  
   
@@ -44,7 +44,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *TYP*  
  Ein beliebiger integrierter XSD-Typ.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Konstruktoren werden von atomaren XSD-Basistypen sowie abgeleiteten Typen unterstützt. Allerdings werden die Untertypen von **xs: Duration**, einschließlich **xdt: yearMonthDuration und xdt: dayTimeDuration**und **xs: QName**, **xs: NMTOKEN**und **xs: Notation** , nicht unterstützt. Die benutzerdefinierten atomaren Typen, die in den damit verbundenen Schemaauflistungen verfügbar sind, stehen auch hier zur Verfügung, unter der Voraussetzung, dass sie direkt oder indirekt aus den folgenden Typen abgeleitet sind.  
   
 #### <a name="supported-base-types"></a>Unterstützte Basistypen  

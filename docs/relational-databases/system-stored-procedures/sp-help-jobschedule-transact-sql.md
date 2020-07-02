@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30ffe0203b3f9aacf23d811e48e6e6d8094a4ee2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 34cc7495b526b75f8da55046393aa45f3fd9a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773868"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zur Zeitplanung von Aufträgen zurück, mit denen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] automatisierte Aktivitäten ausführt.  
  
@@ -77,15 +77,15 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|Uhrzeit, zu der der Zeitplan gestartet wird.|  
 |**active_end_time**|**int**|Uhrzeit, zu der der Zeitplan beendet wird.|  
 |**date_created**|**datetime**|Datum, an dem der Zeitplan erstellt wird|  
-|**schedule_description**|**nvarchar(4000)**|Eine englische Beschreibung des Zeitplans, der von Werten in " **msdb. dbo. syszeitpläne**" abgeleitet wird. Wenn *include_description* **0**ist, enthält diese Spalte Text, der besagt, dass die Beschreibung nicht angefordert wurde.|  
+|**schedule_description**|**nvarchar(4000)**|Eine englische Beschreibung des Zeitplans, der von Werten inmsdb.dbo.sysZeit **Plänen**abgeleitet wird. Wenn *include_description* **0**ist, enthält diese Spalte Text, der besagt, dass die Beschreibung nicht angefordert wurde.|  
 |**next_run_date**|**int**|Datum, an dem der Zeitplan die nächste Ausführung des Auftrags bewirken wird|  
 |**next_run_time**|**int**|Uhrzeit, zu der der Zeitplan die nächste Ausführung des Auftrags bewirken wird|  
 |**schedule_uid**|**uniqueidentifier**|Bezeichner für den Zeitplan.|  
 |**job_count**|**int**|Die Anzahl der zurückgegebenen Aufträge.|  
   
-> **Hinweis: sp_help_jobschedule** gibt Werte aus den Systemtabellen **dbo. sysjobzeitpläne** und **dbo. syszeitpläne** in **msdb**zurück. **sysjobzeitpläne** werden alle 20 Minuten aktualisiert. Dies kann Auswirkungen auf die Werte haben, die von dieser gespeicherten Prozedur zurückgegeben werden.  
+> **Hinweis: sp_help_jobschedule** gibt Werte aus den **dbo.sysjobzeitpläne** und **dbo.sysplant** Systemtabellen in **msdb**zurück. **sysjobzeitpläne** werden alle 20 Minuten aktualisiert. Dies kann Auswirkungen auf die Werte haben, die von dieser gespeicherten Prozedur zurückgegeben werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Parameter von **sp_help_jobschedule** können nur in bestimmten Kombinationen verwendet werden. Wenn *schedule_id* angegeben wird, können weder *job_id* noch *job_name* angegeben werden. Andernfalls können die Parameter *job_id* oder *job_name* mit *schedule_name*verwendet werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
