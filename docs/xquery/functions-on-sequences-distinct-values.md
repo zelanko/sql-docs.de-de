@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c6e52209713ca94ab9cecc9f3c7910b6fc76ce9
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 1a82bfef35b0d8aec39f7f539f65e6ff1fe8f3ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215828"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753568"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Funktionen für Sequenzen – distinct-values
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Entfernt doppelte Werte aus der durch *$arg*angegebenen Sequenz. Wenn *$arg* eine leere Sequenz ist, gibt die Funktion die leere Sequenz zurück.  
   
@@ -39,7 +39,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  *$arg*  
  Sequenz der atomaren Werte.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Alle Typen von atomisierten Werten, die an unter **schiedliche Werte ()** übermittelt werden, müssen Untertypen desselben Basistyps sein. Zulässige Basis Typen sind Typen, die den **EQ** -Vorgang unterstützen. Diese Typen sind z. B. die drei integrierten numerischen Basistypen, die date/time-Basistypen, xs:string, xs:boolean und xdt:untypedAtomic. Werte des Typs xdt:untypedAtomic werden in xs:string umgewandelt. Wenn eine Mischung dieser Typen vorliegt oder andere Werte anderer Typen übergeben werden, wird ein statischer Fehler ausgelöst.  
   
  Das Ergebnis von unter **schiedlichen Werten ()** empfängt den Basistyp der Übergabe Typen, z. b. xs: String im Fall von xdt: untypedAtomic, mit der ursprünglichen Kardinalität. Wenn die Eingabe statisch leer ist, wird Empty impliziert und ein statischer Fehler ausgelöst.  

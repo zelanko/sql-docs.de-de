@@ -1,5 +1,5 @@
 ---
-title: sys. xml_schema_attributes (Transact-SQL) | Microsoft-Dokumentation
+title: sys.xml_schema_attributes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4af723da42b93b3a5a656c2f00f65d94ca1fb184
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 89a8a1f8ccd6458937de3266ec8c7bce58b73a17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832681"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754349"
 ---
 # <a name="sysxml_schema_attributes-transact-sql"></a>sys.xml_schema_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Zeile pro XML-Schema Komponente zurück, bei der es sich **um ein Attribut**handelt, **symbol_space** einer.  
 
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**\<geerbte Spalten>**|--|Erbt von [sys. xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**\<inherited columns>**|--|Erbt von [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_default_fixed**|**bit**|1 = Der Standardwert ist ein fester Wert. Dieser Wert kann in einer XML-Instanz nicht überschrieben werden.<br /><br /> 0 = Der Standardwert ist kein fester Wert für das Attribut. (Standard)|  
 |**must_be_qualified**|**bit**|1 = Das Attribut muss explizit mit einem Namespace qualifiziert werden.<br /><br /> 0 = Das Attribut kann implizit mit einem Namespace qualifiziert werden. (Standard)|  
 |**default_value**|**nvarchar**<br /><br /> **(4000)**|Standardwert des Attributs. Ist NULL, wenn kein Standardwert angegeben wird.|  

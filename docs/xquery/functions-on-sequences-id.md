@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45b7f9f7ee9fa301b10c29fafb663c3a307509d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dacb3e54898ece6222d2f9eb3d7a546c8aa7b76
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753549"
 ---
 # <a name="functions-on-sequences---id"></a>Funktionen für Sequenzen – id
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Gibt die Sequenz von Elementknoten mit xs: ID-Werten zurück, die den Werten eines oder mehrerer der xs: IDREF-Werte entsprechen, die in *$arg*bereitgestellt werden.  
   
@@ -39,18 +39,18 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Ein oder mehrere xs:IDREF-Werte.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Das Ergebnis der Funktion ist eine Sequenz von Elementen in der XML-Instanz in der Dokumentreihenfolge, die einen xs:ID-Wert gleich einem oder mehreren xs:IDREF-Werten in der Liste der xs:IDREF-Kandidaten besitzt.  
   
  Wenn der xs:IDREF-Wert keinem Element entspricht, gibt die Funktion die leere Sequenz zurück.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die **xml** in verschiedenen Spalten vom Typ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML in der-Datenbank gespeichert sind.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der-Datenbank gespeichert sind [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Abrufen von Elementen anhand des Werts des IDREF-Attributs  
- Im folgenden Beispiel wird FN: ID verwendet, um die `employee` <>-Elemente basierend auf dem IDREF-Manager-Attribut abzurufen. In diesem Beispiel ist das Manager-Attribut ein Attribut vom Typ IDREF, und das eid-Attribut ist ein Attribut vom Typ ID.  
+ Im folgenden Beispiel wird FN: ID verwendet, um die <`employee`>-Elemente basierend auf dem IDREF-Manager-Attribut abzurufen. In diesem Beispiel ist das Manager-Attribut ein Attribut vom Typ IDREF, und das eid-Attribut ist ein Attribut vom Typ ID.  
   
- Bei einem bestimmten Manager-Attribut Wert sucht die **ID ()** -Funktion die `employee` <> Elements, dessen ID-Attribut Wert mit dem eingegebenen IDREF-Wert übereinstimmt. Anders ausgedrückt: für einen bestimmten Mitarbeiter gibt die **ID ()** -Funktion den Employee Manager zurück.  
+ Bei einem bestimmten Manager-Attribut Wert sucht die **ID ()** -Funktion die <`employee`> Elements, dessen ID-Attribut Wert mit dem eingegebenen IDREF-Wert übereinstimmt. Anders ausgedrückt: für einen bestimmten Mitarbeiter gibt die **ID ()** -Funktion den Employee Manager zurück.  
   
  Im Beispiel geschieht Folgendes:  
   
@@ -58,7 +58,7 @@ fn:id($arg as xs:IDREF*) as element()*
   
 -   Eine typisierte **XML** -Variable wird mithilfe der XML-Schema Auflistung erstellt.  
   
--   Die Abfrage ruft das Element mit einem ID-Attribut Wert ab, auf den durch das IDREF- **Manager** - `employee` Attribut des <>-Elements verwiesen wird.  
+-   Die Abfrage ruft das Element mit einem ID-Attribut Wert ab, auf den durch das IDREF- **Manager** -Attribut des <>-Elements verwiesen wird `employee` .  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -99,9 +99,9 @@ Go
  Die Abfrage gibt "Dave" als Wert zurück. Dies gibt an, dass Dave Joes Manager ist.  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Abrufen von Elementen anhand des Werts des IDREFS-Attributs von OrderList  
- Im folgenden Beispiel ist das OrderList-Attribut des <`Customer`>-Elements ein Attribut vom Typ IDREFS. Es listet die Bestellungs-IDs für diesen bestimmten Kunden auf. Für jede Bestell-ID ist ein untergeordnetes `Order` <>-Element unter dem `Customer` <> der den Bestellwert bereitstellt.  
+ Im folgenden Beispiel ist das OrderList-Attribut des <`Customer`>-Elements ein Attribut vom Typ IDREFS. Es listet die Bestellungs-IDs für diesen bestimmten Kunden auf. Für jede Bestell-ID ist ein untergeordnetes <`Order`>-Element unter dem <`Customer`> der den Bestellwert bereitstellt.  
   
- Der Abfrageausdruck `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` ruft den ersten Wert aus der IDRES-Liste für den ersten Kunden ab. Dieser Wert wird dann an die **ID ()** -Funktion weitergegeben. Die-Funktion findet dann die `Order` <>-Elements, dessen OrderID-Attribut Wert mit der Eingabe der **ID ()** -Funktion übereinstimmt.  
+ Der Abfrageausdruck `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` ruft den ersten Wert aus der IDRES-Liste für den ersten Kunden ab. Dieser Wert wird dann an die **ID ()** -Funktion weitergegeben. Die-Funktion findet dann die <`Order`>-Elements, dessen OrderID-Attribut Wert mit der Eingabe der **ID ()** -Funktion übereinstimmt.  
   
 ```  
 drop xml schema collection SC  

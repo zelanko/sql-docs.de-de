@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a676688176e164736552460667432919250f8e99
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 610dcca5103e4a819b0e6c59629ddd4d510f5469
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82261851"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756357"
 ---
 # <a name="supported-net-framework-libraries"></a>Unterstützte .NET Framework-Bibliotheken
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Mit in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gehosteter CLR (Common Language Runtime) können Sie gespeicherte Prozeduren, Trigger, benutzerdefinierte Funktionen, benutzerdefinierte Typen (User-Defined Types, UDT) und benutzerdefinierte Aggregate in verwaltetem Code erstellen. Mit den in den Bibliotheken der .NET Framework-Klasse verfügbaren Funktionen haben Sie Zugriff auf vorgefertigte Klassen, die Funktionen u. a. zur Zeichenfolgenbearbeitung, für erweiterte mathematische Vorgänge, den Dateizugriff und die Kryptografie bereitstellen. Auf diese Klassen können Sie von jeder verwalteten gespeicherten Prozedur, jedem benutzerdefinierten Typ, jedem Trigger, jeder benutzerdefinierten Funktion oder jedem benutzerdefinierten Aggregat aus zugreifen.  
   
 > [!NOTE]  
@@ -57,7 +57,7 @@ https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-d
 ## <a name="unsupported-libraries"></a>Nicht unterstützte Bibliotheken  
  Nicht unterstützte Bibliotheken können Sie nach wie vor von Ihren verwalteten gespeicherten Prozeduren, Triggern, benutzerdefinierten Funktionen, benutzerdefinierten Typen (User-Defined Types, UDT) und benutzerdefinierten Aggregaten aus aufrufen. Die nicht unterstützte Bibliothek muss zunächst [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe der **Create Assembly** -Anweisung in der Datenbank registriert werden, bevor Sie in Ihrem Code verwendet werden kann. Alle nicht unterstützten Bibliotheken, die registriert und auf dem Server ausgeführt werden, sollten überprüft und auf Sicherheit und Zuverlässigkeit getestet werden.  
   
- Beispielsweise wird der **System. Director yservices** -Namespace nicht unterstützt. Sie müssen die System. DirectoryServices. dll-Assembly mit **unsicheren** Berechtigungen registrieren, bevor Sie Sie aus Ihrem Code abrufen können. Die **unsichere** Berechtigung ist erforderlich, da Klassen im **System. DirectoryServices** -Namespace die Anforderungen für **Safe** oder **EXTERNAL_ACCESS**nicht erfüllen. Weitere Informationen finden Sie unter [Einschränkungen für das CLR-Integrations Programmiermodell](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) und [CLR-Integration Code Zugriffssicherheit](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
+ Beispielsweise wird der **System. Director yservices** -Namespace nicht unterstützt. Sie müssen die System.DirectoryServices.dll Assembly mit **unsicheren** Berechtigungen registrieren, bevor Sie Sie aus Ihrem Code abrufen können. Die **unsichere** Berechtigung ist erforderlich, da Klassen im **System. DirectoryServices** -Namespace die Anforderungen für **Safe** oder **EXTERNAL_ACCESS**nicht erfüllen. Weitere Informationen finden Sie unter [Einschränkungen für das CLR-Integrations Programmiermodell](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) und [CLR-Integration Code Zugriffssicherheit](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f5a3e93ed2ae3b64828a3260743410b6d007560
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67898411"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755544"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zu Windows-Benutzern und Windows-Gruppen zurück.  
   
@@ -41,10 +41,10 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @acctname = ] 'account_name'`Der Name eines Windows-Benutzers oder einer Windows-Gruppe, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dem der Zugriff gewährt wird. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *account_name* nicht angegeben wird, werden alle Windows-Gruppen und Windows-Benutzer ausgegeben, denen explizit Anmeldeberechtigungen gewährt wurden. *account_name* muss vollqualifiziert sein. Beispiel: 'ADVWKS4\macraes' oder 'VORDEFINIERT\Administratoren'.  
+`[ @acctname = ] 'account_name'`Der Name eines Windows-Benutzers oder einer Windows-Gruppe, dem der Zugriff gewährt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *account_name* nicht angegeben wird, werden alle Windows-Gruppen und Windows-Benutzer ausgegeben, denen explizit Anmeldeberechtigungen gewährt wurden. *account_name* muss vollqualifiziert sein. Beispiel: 'ADVWKS4\macraes' oder 'VORDEFINIERT\Administratoren'.  
   
- **' all '** | **' Members '**  
- Gibt an, ob für das Konto die Informationen zu allen Berechtigungspfaden oder nur die Informationen zu den Mitgliedern der Windows-Gruppe ausgegeben werden sollen. die Option ist vom Datentyp **varchar (10)** und hat den Standardwert NULL. ** \@** Sofern nicht **all** angegeben wurde, wird nur der erste Berechtigungspfad angezeigt.  
+ **"alle"**  |  **' Members '**  
+ Gibt an, ob für das Konto die Informationen zu allen Berechtigungspfaden oder nur die Informationen zu den Mitgliedern der Windows-Gruppe ausgegeben werden sollen. die ** \@ Option** ist vom Datentyp **varchar (10)** und hat den Standardwert NULL. Sofern nicht **all** angegeben wurde, wird nur der erste Berechtigungspfad angezeigt.  
   
 `[ @privilege = ] variable_name`Ist ein Ausgabeparameter, der die Berechtigungsstufe des angegebenen Windows-Kontos zurückgibt. *variable_name* ist vom Datentyp **varchar(10)**. Der Standardwert ist "Not wanted". Die zurückgegebene Privilegstufe ist **user**, **admin**oder **null**.  
   

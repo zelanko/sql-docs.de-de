@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58f0258843995acc82e84d69a4d2d101594fc313
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 30aa54e93b30d2067e2ab02ba8d264920724cead
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754132"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt für jedes in den Serveradressbereich geladene Modul eine Zeile zurück.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "82820812"
 |**vorab**|**bit**|1 = Modul ist eine Vorabversion des geladenen Moduls.|  
 |**private_build**|**bit**|1 = Modul ist ein privater Build des geladenen Moduls.|  
 |**special_build**|**bit**|1 = Modul ist ein spezieller Build des geladenen Moduls.|  
-|**Kurse**|**int**|Sprache der Versionsinformationen des Moduls.|  
-|**company**|**nvarchar(256)**|Name des Unternehmens, von dem das Modul erstellt wurde.|  
-|**Beschreibung**|**nvarchar(256)**|Beschreibung des Moduls.|  
+|**language**|**int**|Sprache der Versionsinformationen des Moduls.|  
+|**Geschäfts**|**nvarchar(256)**|Name des Unternehmens, von dem das Modul erstellt wurde.|  
+|**description**|**nvarchar(256)**|Beschreibung des Moduls.|  
 |**name**|**nvarchar(255)**|Name des Moduls. Schließt den vollständigen Pfad des Moduls ein.|  
 |**pdw_node_id**|**int**|**Gilt für:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   

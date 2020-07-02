@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19e94b01667d666a714db22d85d866b0df2ec3fc
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: c1a4d3014286618639b045f5028935368321a3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881844"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753585"
 ---
 # <a name="functions-on-nodes---number"></a>Funktionen für Knoten – number
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Gibt den numerischen Wert des Knotens zurück, der durch *$arg*angegeben wird.  
   
@@ -40,7 +40,7 @@ fn:number($arg as node()?) as xs:double?
  *$arg*  
  Knoten, dessen Wert als Zahl zurückgegeben wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn *$arg* nicht angegeben wird, wird der numerische Wert des Kontext Knotens zurückgegeben, der in einen Double-Wert konvertiert wird. In SQL Server kann **FN: Number ()** ohne Argument nur im Kontext eines kontextabhängigen Prädikats verwendet werden. Insbesondere kann die Funktion nur innerhalb von Klammern ([ ]) verwendet werden. Der folgende Ausdruck gibt beispielsweise den <`ROOT`>-Element zurück.  
   
 ```  

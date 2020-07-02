@@ -20,15 +20,15 @@ ms.assetid: bf4032fe-7db1-40e9-a62e-d69cebff4b44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d933fd9974848437f9fa19983df14bed273fc7b0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1a8420517a23401a39bdd6935d8b09eed94bb0e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829363"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754059"
 ---
 # <a name="sysdm_os_memory_nodes-transact-sql"></a>sys.dm_os_memory_nodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Interne Zuordnungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden den Speicher-Manager von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie den Unterschied zwischen Prozess Speicher-Leistungsindikatoren aus **sys. dm_os_process_memory** und internen Leistungsindikatoren nachverfolgen, können Sie die Speicherauslastung von externen Komponenten im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Speicherbereich angeben.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "82829363"
 |**multi_pages_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Speichermenge in KB, für die ein Commit ausgeführt wurde und die mithilfe der Mehrfachseitenzuordnung durch Threads, die auf diesem Knoten ausgeführt werden, zugeordnet wird. Dieser Speicher wird von außerhalb des Pufferpools zugeordnet. Dieser Wert gibt den Knoten an, in dem die Zuordnungs Anforderungen aufgetreten sind, nicht den physischen Speicherort, an dem die Zuordnungs Anforderung erfüllt wurde|  
 |**shared_memory_reserved_kb**|**bigint**|Gibt die Menge an gemeinsam genutzten Speicher in KB an, die auf diesem Knoten reserviert wurde. Lässt keine NULL-Werte zu.|  
 |**shared_memory_committed_kb**|**bigint**|Gibt die Menge an gemeinsam genutzten Speicher in KB an, für die auf diesem Knoten ein Commit ausgeführt wurde. Lässt keine NULL-Werte zu.|  
-|**cpu_affinity_mask**|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Nur zur internen Verwendung. Lässt keine NULL-Werte zu.|  
-|**online_scheduler_mask**|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Nur zur internen Verwendung. Lässt keine NULL-Werte zu.|  
-|**processor_group**|**smallint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Nur zur internen Verwendung. Lässt keine NULL-Werte zu.|  
+|**cpu_affinity_mask**|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Nur interne Verwendung. Lässt keine NULL-Werte zu.|  
+|**online_scheduler_mask**|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Nur interne Verwendung. Lässt keine NULL-Werte zu.|  
+|**processor_group**|**smallint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Nur interne Verwendung. Lässt keine NULL-Werte zu.|  
 |**foreign_committed_kb**|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Gibt die Menge an zugesichertem Arbeitsspeicher von anderen Arbeitsspeicherknoten in KB an. Lässt keine NULL-Werte zu.|  
 |**target_kb** |**bigint** |**Gilt für:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Gibt das Speicher Ziel für den Speicher Knoten in KB an. |   
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 435bb6ab0585b7f453fe035fa99be913dffbf769
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7337369d856871643c576a06bd3d0708655650dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753767"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>ConnectionString-Eigenschaft (SqlServerAlias-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ruft die Verbindungszeichenfolge ab, die zum Herstellen der Verbindung für den Serververbindungsalias verwendet wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,5 +41,5 @@ object.ConnectionString [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Eine Zeichenfolge, die die Verbindungszeichenfolge angibt, die zum Herstellen der Verbindung für den Serververbindungsalias verwendet wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   

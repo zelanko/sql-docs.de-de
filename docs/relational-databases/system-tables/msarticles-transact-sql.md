@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98bd5295aadbe75928b4a05e7ec882235fb47313
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: daec387a9be288a44cbecc286bd77784ad776374
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832369"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753956"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die **MSarticles** -Tabelle enthält eine Zeile für jeden Artikel, der von einem Verleger repliziert wird. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82832369"
 |**destination_object**|**sysname**|Der Name der auf dem Abonnenten erstellten Tabelle.|  
 |**source_owner**|**sysname**|Der Name des Schemas der Quelltabelle auf dem Verleger.|  
 |**source_object**|**sysname**|Der Name des Quellobjekts, aus dem der Artikel hinzugefügt werden soll.|  
-|**Beschreibung**|**nvarchar(255)**|Die Beschreibung des Artikels.|  
+|**description**|**nvarchar(255)**|Die Beschreibung des Artikels.|  
 |**destination_owner**|**sysname**|Der Name des Schemas der auf dem Abonnenten erstellten Tabelle.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

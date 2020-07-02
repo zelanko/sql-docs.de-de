@@ -19,15 +19,15 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f63469fb4955895b1eb1e3e8466dfbce6306e502
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d4371de1240e64aa5465f6f2d58f5e2eef029acf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824626"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754265"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL-Datenbank)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Gibt Informationen über das Kopieren der Datenbank zurück.  
   
@@ -47,8 +47,8 @@ Verwenden Sie zum Zurückgeben von Informationen über georeplikationsverknüpfu
 |**copy_guid**|**uniqueidentifier**|Eindeutige ID des Kopiervorgangs.|  
 |**partner_server**|**sysname**|Der Name des SQL-Datenbankservers, auf dem die Kopie erstellt wird.|  
 |**partner_database**|**sysname**|Der Name der Daten Bank Kopie auf dem Partner Server.|  
-|**replication_state**|**tinyint**|Der Status der Replikation für fortlaufenden Kopiervorgang für diese Datenbank. Werte:<br /><br /> 0 = ausstehend. Die Erstellung der Daten Bank Kopie ist geplant, aber die erforderlichen Vorbereitungsschritte sind noch nicht abgeschlossen oder werden vorübergehend durch das Seeding Kontingent blockiert.<br /><br /> 1 = Seeding. Die Datenbank, für die das Seeding durchgeführt wird, ist noch nicht vollständig mit der Quelldatenbank synchronisiert. In diesem Zustand kann keine Verbindung mit der Kopie hergestellt werden. Um den laufenden Seeding Vorgang abzubrechen, muss die Kopier Datenbank gelöscht werden.|  
-|**replication_state_desc**|**nvarchar(256)**|Beschreibung von replication_state. Folgende Werte sind möglich:<br /><br /> PENDING<br /><br /> SEEDING<br />|  
+|**replication_state**|**tinyint**|Der Status der Replikation für fortlaufenden Kopiervorgang für diese Datenbank. Gültige Werte:<br /><br /> 0 = ausstehend. Die Erstellung der Daten Bank Kopie ist geplant, aber die erforderlichen Vorbereitungsschritte sind noch nicht abgeschlossen oder werden vorübergehend durch das Seeding Kontingent blockiert.<br /><br /> 1 = Seeding. Die Datenbank, für die das Seeding durchgeführt wird, ist noch nicht vollständig mit der Quelldatenbank synchronisiert. In diesem Zustand kann keine Verbindung mit der Kopie hergestellt werden. Um den laufenden Seeding Vorgang abzubrechen, muss die Kopier Datenbank gelöscht werden.|  
+|**replication_state_desc**|**nvarchar(256)**|Beschreibung von replication_state. Folgende Werte sind möglich:<br /><br /> PENDING (AUSSTEHEND)<br /><br /> SEEDING<br />|  
 |**maximum_lag**|**int**|Reserviertes Feld.|  
 |**is_continuous_copy**|**bit**|0 = gibt 0 zurück|  
 |**is_target_role**|**bit**|0 = Quelldatenbank<br /><br /> 1 = Datenbank kopieren|  
@@ -58,7 +58,7 @@ Verwenden Sie zum Zurückgeben von Informationen über georeplikationsverknüpfu
 ## <a name="permissions"></a>Berechtigungen  
  Diese Ansicht ist nur in der **Master** -Datenbank für den Prinzipal Anmelde Namen auf Serverebene verfügbar.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Sie können die **sys. dm_database_copies** -Sicht in der **Master** -Datenbank der Quell-oder Ziel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server verwenden. Wenn das Kopieren der Datenbank erfolgreich abgeschlossen und die neue Datenbank online geschaltet wird, wird die Zeile in der **sys. dm_database_copies** -Sicht automatisch entfernt.  
   
   

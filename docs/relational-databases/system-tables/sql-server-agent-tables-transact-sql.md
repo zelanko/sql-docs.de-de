@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4cbc772ff5dcc14c196a8c9b920f67b03bd70598
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a677a563666acff5c18f84a3f133b03b616072ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834189"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753876"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server-Agent-Tabellen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In den Themen in diesem Abschnitt werden die Systemtabellen beschrieben, in denen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendete Informationen gespeichert werden. Alle Tabellen befinden sich im dbo-Schema in der msdb-Datenbank.  
   
