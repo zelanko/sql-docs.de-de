@@ -18,19 +18,19 @@ ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0e422be747c2b47dacb1feb97ba6c00fa1131fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1b2305336391a29de559fa01bd2d67c1a4621b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775954"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Erstellen von SQL-Anweisungen für Cursor
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verwendet Server Cursor, um die in der ODBC-Spezifikation definierte Cursor Funktion zu implementieren. Eine ODBC-Anwendung steuert das Cursor Verhalten, indem [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) verwendet wird, um unterschiedliche Anweisungs Attribute festzulegen. Nachfolgend sind die Attribute und ihre Standardwerte aufgeführt.  
   
-|Attribut|Standard|  
+|attribute|Standard|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
@@ -38,7 +38,7 @@ ms.locfileid: "81291421"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- Wenn diese Optionen zum Zeitpunkt der Ausführung einer SQL-Anweisung auf ihre Standardwerte festgelegt sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verwendet der Native Client-ODBC-Treiber keinen Server Cursor zur Implementierung des Resultsets. Stattdessen wird ein Standardresultset verwendet. Wenn eine dieser Optionen zum Zeitpunkt der Ausführung einer SQL-Anweisung aus ihren Standardeinstellungen geändert wird, versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Native Client ODBC-Treiber, das Resultset mithilfe eines Server Cursors zu implementieren.  
+ Wenn diese Optionen zum Zeitpunkt der Ausführung einer SQL-Anweisung auf ihre Standardwerte festgelegt sind, verwendet der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber keinen Server Cursor zur Implementierung des Resultsets. stattdessen wird ein Standardresultset verwendet. Wenn eine dieser Optionen zum Zeitpunkt der Ausführung einer SQL-Anweisung aus ihren Standardeinstellungen geändert wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht der Native Client ODBC-Treiber, das Resultset mithilfe eines Server Cursors zu implementieren.  
   
  Standardresultsets unterstützen alle [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. Es gibt keine Einschränkungen hinsichtlich der Arten von SQL-Anweisungen, die bei Verwendung eines Standardresultsets ausgeführt werden können.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "81291421"
   
      SQL-Anweisungen, die eine gespeicherte Prozedur ausführen, die mehr als eine SELECT-Anweisung enthält Hierzu gehören auch SELECT-Anweisungen, mit denen Parameter- oder Variablenwerte abgerufen werden.  
   
--   Stichwörter  
+-   Keywords  
   
      SQL-Anweisungen, die die Schlüsselwörter FOR BROWSE oder INTO enthalten.  
   

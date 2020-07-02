@@ -16,17 +16,17 @@ ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d632d1d22cd8439a3d787e22301ec06ec4e0d93
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae8db3dad7c93b49f5698396e84b5feff1198393
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783482"
 ---
 # <a name="error-messages"></a>Fehlermeldungen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Der Text der Nachrichten, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Native Client-ODBC-Treiber zurückgegeben werden, wird im *MessageText* -Parameter von **SQLGetDiagRec**abgelegt. Die Quelle eines Fehlers wird im Header der Meldung angegeben:  
+  Der Text der Nachrichten, die vom Native Client-ODBC-Treiber zurückgegeben werden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird im *MessageText* -Parameter von **SQLGetDiagRec**abgelegt. Die Quelle eines Fehlers wird im Header der Meldung angegeben:  
   
  [Microsoft][ODBC-Treiber-Manager]  
  Diese Fehler werden vom ODBC-Treiber-Manager ausgelöst.  
@@ -41,7 +41,7 @@ ms.locfileid: "81291743"
  Diese Fehler werden von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Netzwerk Bibliothek ausgelöst, wobei *net-TransportName* der Anzeige Name eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Netzwerk Transports (z. b. Named Pipes, Shared Memory, TCP/IP Sockets oder via) ist. Die restliche Fehlermeldung enthält die aufgerufene Netzwerkbibliotheksfunktion und die von der TDS-Funktion in der zugrunde liegenden Netzwerk-API aufgerufene Funktion. Der mit diesen Fehlern zurückgegebene *pfNative* -Fehlercode ist der Fehlercode aus dem zugrunde liegenden Netzwerkprotokoll Stapel.  
   
  Microsoft [SQL Server Native Client] [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
- Diese Fehler werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgelöst. Die übrige Fehlermeldung entspricht dem Text der Fehlermeldung aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der mit diesen Fehlern zurückgegebene *pfNative* Code ist die Fehlernummer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von. Weitere Informationen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu einer Liste von Fehlermeldungen (und deren Zahlen), die von zurückgegeben werden können, finden Sie in den Spalten "Description" und "Error" der **sysmmeages** -Systemtabelle in der **Master** -Datenbank in. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Diese Fehler werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgelöst. Die übrige Fehlermeldung entspricht dem Text der Fehlermeldung aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der mit diesen Fehlern zurückgegebene *pfNative* Code ist die Fehlernummer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Weitere Informationen zu einer Liste von Fehlermeldungen (und deren Zahlen), die von zurückgegeben werden können, finden Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Spalten "Description" und "Error" der **sysmmeages** -Systemtabelle in der **Master** -Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Behandlung von Fehlern und Meldungen](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3dd772a1519ea856cac0302d31be9eb7d0f9d782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df0cbdda40b8e473ce81bf95b7c38e1cd2ec75c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283141"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783676"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert die Informationen in einem vorhandenen Konto für Datenbank-E-Mail.  
  
@@ -64,7 +64,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @description = ] 'description'`Die neue Beschreibung für das Konto. die *Beschreibung* ist vom Datentyp **nvarchar (256)** und hat den Standardwert NULL.  
   
-`[ @mailserver_name = ] 'server_name'`Der neue Name des SMTP-Mailservers, der für dieses Konto verwendet werden soll. Der Computer, auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem ausgeführt wird, muss in der Lage sein, den *server_name* in eine IP-Adresse aufzulösen. *server_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @mailserver_name = ] 'server_name'`Der neue Name des SMTP-Mailservers, der für dieses Konto verwendet werden soll. Der Computer, auf dem ausgeführt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird, muss in der Lage sein, den *server_name* in eine IP-Adresse aufzulösen. *server_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 `[ @mailserver_type = ] 'server_type'`Der neue Typ des e-Mail-Servers. *server_type* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Nur der Wert **"SMTP"** wird unterstützt.  
   
@@ -76,14 +76,14 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @password = ] 'password'`Das neue Kennwort, das für die Anmeldung beim e-Mail-Server verwendet werden soll. *Password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @use_default_credentials = ] use_default_credentials`Gibt an, ob die e-Mail mit den Anmelde Informationen des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Dienstanbieter an den SMTP-Server gesendet werden soll. **use_default_credentials** ist vom Datentyp bit und hat keinen Standardwert. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail die Anmeldeinformationen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Wenn dieser Parameter 0 ist, verwendet Datenbank-E-Mail den ** \@Benutzernamen** und ** \@das Kennwort** für die Authentifizierung auf dem SMTP-Server. Wenn ** \@Benutzername** und ** \@Kennwort** NULL sind, wird die anonyme Authentifizierung verwendet. Besprechen Sie die geeignete Angabe für diesen Parameter mit Ihrem SMTP-Administrator.  
+`[ @use_default_credentials = ] use_default_credentials`Gibt an, ob die e-Mail mit den Anmelde Informationen des Dienstanbieter an den SMTP-Server gesendet werden soll [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . **use_default_credentials** ist vom Datentyp bit und hat keinen Standardwert. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail die Anmeldeinformationen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Wenn dieser Parameter 0 ist, verwendet Datenbank-E-Mail den ** \@ Benutzernamen** und das ** \@ Kennwort** für die Authentifizierung auf dem SMTP-Server. Wenn ** \@ Benutzername** und ** \@ Kennwort** NULL sind, wird die anonyme Authentifizierung verwendet. Besprechen Sie die geeignete Angabe für diesen Parameter mit Ihrem SMTP-Administrator.  
   
 `[ @enable_ssl = ] enable_ssl`Gibt an, ob Datenbank-E-Mail die Kommunikation mit Transport Layer Security (TLS) verschlüsselt, das zuvor als Secure Sockets Layer (SSL) bezeichnet wurde. Verwenden Sie diese Option, wenn TLS auf dem SMTP-Server erforderlich ist. **enable_ssl** ist vom Datentyp bit und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn sowohl Kontoname als auch Konto-ID angegeben wird, aktualisiert die gespeicherte Prozedur nicht nur die Informationen für das Konto, sondern ändert auch noch den Kontonamen. Die Änderung des Kontonamens kann hilfreich sein, wenn ein fehlerhafter Kontoname korrigiert werden soll.  
   
  Die gespeicherte Prozedur **sysmail_update_account_sp** wird in der **msdb** -Datenbank gespeichert und befindet sich im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  

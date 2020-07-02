@@ -15,17 +15,17 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe223d890d443508cd32f6ab73c039848c4372a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79428151"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776471"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph-Verarbeitung mit SQL Server und Azure SQL-Datenbank
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bietet Graph-Datenbankfunktionen zum Modellieren von m:n-Beziehungen. Die Diagramm Beziehungen sind in [!INCLUDE[tsql-md](../../includes/tsql-md.md)] integriert und erhalten die Vorteile der Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von als grundlegendes Datenbankverwaltungssystem.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bietet Graph-Datenbankfunktionen zum Modellieren von m:n-Beziehungen. Die Diagramm Beziehungen sind in integriert [!INCLUDE[tsql-md](../../includes/tsql-md.md)] und erhalten die Vorteile der Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als grundlegendes Datenbankverwaltungssystem.
 
 
 ## <a name="what-is-a-graph-database"></a>Was ist eine Graphdatenbank?  
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Knoten und Kanten werden als Tabellen gespeichert.  
 
 ### <a name="query-language-extensions"></a>Abfrage Spracherweiterungen  
-Die `MATCH` neue Klausel wird eingeführt, um Musterabgleich und Multihop-Navigation durch das Diagramm zu unterstützen. Die `MATCH` -Funktion verwendet die ASCII-Art-Format Syntax für den Musterabgleich. Beispiel:  
+`MATCH`Die neue Klausel wird eingeführt, um Musterabgleich und Multihop-Navigation durch das Diagramm zu unterstützen. Die `MATCH` -Funktion verwendet die ASCII-Art-Format Syntax für den Musterabgleich. Beispiel:  
 
 ```   
 -- Find friends of John
@@ -69,11 +69,11 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-ssnoversion-engine"></a>Vollständig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine integriert 
-Graph-Erweiterungen sind vollständig [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in die-Engine integriert. Verwenden Sie die gleiche Speicher-Engine, Metadaten, den Abfrage Prozessor usw., um Diagramm Daten zu speichern und abzufragen. Abfragen über Diagramm-und relationale Daten in einer einzelnen Abfrage. Kombinieren von Diagramm Funktionen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit anderen Technologien wie z. b. columnstore, ha, R Services usw. Die SQL Graph-Datenbank unterstützt auch alle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbaren Sicherheits-und Kompatibilitäts Features.
+Graph-Erweiterungen sind vollständig in die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine integriert. Verwenden Sie die gleiche Speicher-Engine, Metadaten, den Abfrage Prozessor usw., um Diagramm Daten zu speichern und abzufragen. Abfragen über Diagramm-und relationale Daten in einer einzelnen Abfrage. Kombinieren von Diagramm Funktionen mit anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Technologien wie z. b. columnstore, ha, R Services usw. Die SQL Graph-Datenbank unterstützt auch alle in verfügbaren Sicherheits-und Kompatibilitäts Features [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
  
 ### <a name="tooling-and-ecosystem"></a>Tools und Ökosystem
 
-Profitieren Sie von vorhandenen Tools und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ökosystem, die von angeboten werden. Tools wie sichern und wiederherstellen, importieren und exportieren, bcp funktionieren einfach sofort. Andere Tools oder Dienste wie SSIS, SSRS oder Power BI funktionieren mit Diagramm Tabellen, genau so, wie Sie mit relationalen Tabellen funktionieren.
+Profitieren Sie von vorhandenen Tools und Ökosystem, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angeboten werden. Tools wie sichern und wiederherstellen, importieren und exportieren, bcp funktionieren einfach sofort. Andere Tools oder Dienste wie SSIS, SSRS oder Power BI funktionieren mit Diagramm Tabellen, genau so, wie Sie mit relationalen Tabellen funktionieren.
 
 ## <a name="edge-constraints"></a>Edgeeinschränkungen
 Eine Edge-Einschränkung wird für eine Diagramm Rahmen Tabelle definiert und ist ein paar von Knoten Tabellen, für die ein bestimmter Edge-Typ eine Verbindung herstellen kann. Dies ermöglicht Benutzern eine bessere Kontrolle über das Diagramm Schema. Mithilfe von Edge-Einschränkungen können Benutzer den Knotentyp einschränken, mit dem eine bestimmte Kante eine Verbindung herstellen darf. 

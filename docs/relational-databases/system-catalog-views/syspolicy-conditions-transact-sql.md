@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f047007397eb302859f80bb5efe4b106a33ae61
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 78c3fb8530875120aac2936f36770d9de936332d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833815"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783898"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Zeigt eine Zeile für jede Bedingung der Richtlinien basierten Verwaltung in der Instanz von an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . syspolicy_conditions gehört zum dbo-Schema in der msdb-Datenbank. In der folgenden Tabelle werden die Spalten in der syspolicy_conditions-Sicht beschrieben.  
   
@@ -34,16 +34,16 @@ ms.locfileid: "82833815"
 |condition_id|**int**|Bezeichner dieser Bedingung. Jede Bedingung stellt eine Auflistung eines oder mehrerer Bedingungsausdrücke dar.|  
 |name|**sysname**|Name der Bedingung.|  
 |date_created|**datetime**|Datum und Uhrzeit der Erstellung der Bedingung.|  
-|Beschreibung|**nvarchar(max)**|Beschreibung der Bedingung. Die Beschreibungsspalte ist optional und kann NULL sein.|  
+|description|**nvarchar(max)**|Beschreibung der Bedingung. Die Beschreibungsspalte ist optional und kann NULL sein.|  
 |created_by|**sysname**|Anmeldung, die die Bedingung erstellt hat.|  
 |modified_by|**sysname**|Anmeldung, die die Bedingung zuletzt geändert hat. Ist NULL, wenn nie geändert.|  
 |date_modified|**datetime**|Datum und Uhrzeit der Erstellung der Bedingung. Ist NULL, wenn nie geändert.|  
 |is_name_condition|**smallint**|Gibt an, ob die Bedingung eine Benennungsbedingung ist.<br /><br /> 0 = Der Bedingungsausdruck enthält nicht die Variable @Name.<br /><br /> 1 = Der Bedingungsausdruck enthält die Variable @Name.|  
 |Facet|**nvarchar(max)**|Name des Facets, auf dem die Bedingung basiert.|  
-|Ausdruck (Expression)|**nvarchar(max)**|Ausdruck des Facet-Status.|  
+|Ausdruck|**nvarchar(max)**|Ausdruck des Facet-Status.|  
 |obj_name|**sysname**|Der @Name zugewiesene Objektname, wenn der Bedingungsausdruck diese Variable enthält.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Bei der Problembehandlung in der richtlinienbasierten Verwaltung fragen Sie in der syspolicy_conditions-Sicht ab, wer die Bedingung erstellt oder zuletzt geändert hat.  
   
 ## <a name="permissions"></a>Berechtigungen  

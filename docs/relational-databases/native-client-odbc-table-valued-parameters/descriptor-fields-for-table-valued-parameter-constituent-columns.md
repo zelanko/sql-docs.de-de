@@ -13,29 +13,29 @@ ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08074ad57ca4f0e4f7c2c56d9eca595baf595b5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fc2ea564bff8899b3df82fd5d82297b7997c08c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783211"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Deskriptorfelder für aus Tabellenwertparameter bestehenden Spalten
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Die in diesem Abschnitt beschriebenen Tabellenwert Parameter-Deskriptorfelder werden mithilfe von [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) und [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) mit dem Handle für den Implementierungs Parameter Deskriptor (IPD) manipuliert.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  SQL_DESC_AUTO_UNIQUE_VALUE wird für Tabellenwertparameter sowie für andere Funktionen verwendet.  
   
-|Attributname|type|BESCHREIBUNG|  
+|Attributname|Typ|BESCHREIBUNG|  
 |--------------------|----------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE gibt an, dass es sich bei dieser Spalte um eine Identitätsspalte handelt.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann diese Informationen verwenden, um die Leistung zu optimieren, Anwendungen müssen jedoch nicht für Identitäts Spalten festgelegt werden.|  
 ||||
 
  Die folgenden Attribute werden allen Parametertypen im Anwendungsparameterdeskriptor (Application Parameter Descriptor, APD) und Implementierungsparameterdeskriptor (Implementation Parameter Descriptor, IPD) hinzugefügt:  
   
-|Attributname|type|BESCHREIBUNG|  
+|Attributname|Typ|BESCHREIBUNG|  
 |--------------------|----------|-----------------|  
 |SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE gibt an, dass diese Spalte berechnet wird.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann diese Informationen verwenden, um die Leistung zu optimieren, Anwendungen müssen Sie jedoch nicht für berechnete Spalten festlegen.<br /><br /> Dieses Attribut wird für Bindungen ignoriert, die keine Tabellenwertparameter-Spalten sind.|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE gibt an, dass eine Tabellenwertparameter-Spalte zu einem eindeutigen Schlüssel gehört. Dies kann zu einer verbesserten Abfrageleistung führen. Dieses Attribut wird für Bindungen ignoriert, die keine Tabellenwertparameter-Spalten sind.|  
@@ -46,7 +46,7 @@ ms.locfileid: "81297853"
 
  Diese Attribute sind nur für Tabellenwertparameter-Spalten gültig. Sie werden für andere Parameter ignoriert.  
   
- Wenn SQL_CA_SS_COL_HAS_DEFAULT_VALUE für eine Tabellenwertparameter-Spalte festgelegt wurde, muss SQL_DESC_DATA_PTR für diese Spalte ein NULL-Zeiger sein. Andernfalls wird von SQLExecute oder SQLExecDirect SQL_ERROR zurückgegeben. Es wird ein Diagnosedaten Satz mit SQLSTATE = 07s01 und der Meldung "Ungültige Verwendung des Standard Parameters für \<den Parameter p> \<, Spalte c>" \<generiert, wobei p> der Parameter Ordnungszahl und \<c> die Spalten Ordnungszahl ist.  
+ Wenn SQL_CA_SS_COL_HAS_DEFAULT_VALUE für eine Tabellenwertparameter-Spalte festgelegt wurde, muss SQL_DESC_DATA_PTR für diese Spalte ein NULL-Zeiger sein. Andernfalls wird von SQLExecute oder SQLExecDirect SQL_ERROR zurückgegeben. Es wird ein Diagnosedaten Satz mit SQLSTATE = 07s01 und der Meldung "Ungültige Verwendung des Standard Parameters für Parameter \<p> , Spalte \<c> " generiert, wobei \<p> die Parameter Ordinalzahl und \<c> die Spalten Ordnungszahl ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tabellenwert Parameter &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  

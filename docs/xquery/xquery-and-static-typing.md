@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b5d39e560b3137daf711ea49794fe6a2a0499743
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 1a0b9cf43331e45d4aa1253fe5ad4b90d0bbea92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775465"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery und statische Typisierung
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery ist in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine statisch typisierte Sprache. Sie gibt bei der Abfragekompilierung einen Typfehler aus, wenn ein Ausdruck einen Wert zurückliefert, dessen Typ oder Kardinalität von einer bestimmten Funktion oder einem Operator nicht angenommen wird. Darüber hinaus kann eine Überprüfung des statischen Typs auch erkennen, ob ein Pfadausdruck eines typisierten XML-Dokuments falsch typisiert ist. Der XQuery-Compiler realisiert zuerst die Normalisierungsphase, in der die impliziten Vorgänge, wie die Atomisierung, hinzugefügt werden. Anschließend erfolgen die Inferenz und die Überprüfung des statischen Typs.  
   

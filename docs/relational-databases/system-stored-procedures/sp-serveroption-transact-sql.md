@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 776e7b0c713e36f0d9f67112592dff6d24a46fbd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 933774af820c80abb70c5fbdad0441053533b451
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810279"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783707"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Legt Serveroptionen für Remoteserver und Verbindungsserver fest.  
   
@@ -60,7 +60,7 @@ sp_serveroption [@server = ] 'server'
 |**RPC-Ausgabe**|Aktiviert RPC zu dem betreffenden Server.|  
 |**sub**|Abonnenten.|  
 |**System**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Remote Sortierung verwenden**|Bestimmt, ob die Sortierung einer Remotespalte oder eines lokalen Servers verwendet wird.<br /><br /> **True**gibt an, dass die Sortierung von Remote Spalten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen verwendet wird, und die im **Sortierungs Namen** angegebene Sortierung wird für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen verwendet.<br /><br /> Wenn der Wert **false**ist, verwenden verteilte Abfragen immer die Standardsortierung des lokalen Servers, während der **Sortierungs Name** und die Sortierung von Remote Spalten ignoriert werden. Die Standardeinstellung ist **false**. (Der Wert **false** ist mit der in 7,0 verwendeten Sortierungs Semantik kompatibel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .)|  
+|**Remote Sortierung verwenden**|Bestimmt, ob die Sortierung einer Remotespalte oder eines lokalen Servers verwendet wird.<br /><br /> **True**gibt an, dass die Sortierung von Remote Spalten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen verwendet wird, und die im **Sortierungs Namen** angegebene Sortierung wird für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen verwendet.<br /><br /> Wenn der Wert **false**ist, verwenden verteilte Abfragen immer die Standardsortierung des lokalen Servers, während der **Sortierungs Name** und die Sortierung von Remote Spalten ignoriert werden. Der Standardwert ist **FALSE**. (Der Wert **false** ist mit der in 7,0 verwendeten Sortierungs Semantik kompatibel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .)|  
 |**Remote Proc Transaction Promotion**|Verwenden Sie diese Option, um die Aktionen einer Server-zu-Server-Prozedur durch eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator-Transaktion (MS DTC) zu schützen. Wenn diese Option auf TRUE (oder ON) festgelegt ist und eine remote gespeicherte Prozedur aufgerufen wird, wird eine verteilte Transaktion gestartet und bei MS DTC eingetragen. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die die remote gespeicherte Prozedur aufruft, wird als Transaktionsurheber bezeichnet und steuert die Beendigung der Transaktion. Wenn im Anschluss eine COMMIT TRANSACTION- oder ROLLBACK TRANSACTION-Anweisung für die Verbindung ausgegeben wird, fordert die steuernde Instanz MS DTC auf, die Beendigung der verteilten Transaktion auf den beteiligten Computern zu verwalten.<br /><br /> Nachdem eine verteilte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion gestartet wurde, können Aufrufe remote gespeicherter Prozeduren für weitere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen erfolgen, die als Verbindungsserver definiert wurden. Alle Verbindungsserver werden in der verteilten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion eingetragen, und MS DTC stellt sicher, dass die Transaktion für jeden Verbindungsserver abgeschlossen wird.<br /><br /> Wenn diese Option auf FALSE (oder OFF) festgelegt ist, wird eine lokale Transaktion beim Aufruf einer remote gespeicherten Prozedur für einen Verbindungsserver nicht zu einer verteilten Transaktion höher gestuft.<br /><br /> Falls die Transaktion vor dem Server-zu-Server-Prozeduraufruf bereits eine verteilte Transaktion ist, hat diese Option keine Auswirkung. Der Prozeduraufruf für einen Verbindungsserver wird unter der gleichen verteilten Transaktion ausgeführt.<br /><br /> Falls vor dem Server-zu-Server-Prozeduraufruf keine Transaktion in der Verbindung aktiv ist, hat diese Option keine Auswirkung. Die Prozedur wird dann für einen Verbindungsserver ohne aktive Transaktionen ausgeführt.<br /><br /> Der Standardwert für diese Option ist TRUE (oder ON).|  
   
 `[ @optvalue = ] 'option_value'`Gibt an, ob der *option_name* aktiviert (**true** oder **on**) oder deaktiviert (**false** oder **Off**) sein soll. *option_value* ist vom Datentyp **varchar (** 10 **)** und hat keinen Standardwert.  

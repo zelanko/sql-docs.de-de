@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a83d216b0830b035da72ad579a2448a12f41adba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783732"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt eine Liste von Attributnamen und entsprechenden Werten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], das Datenbankgateway oder die zugrunde liegende Datenquelle zurück.  
   
@@ -65,8 +65,8 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**13**|TABLE_LENGTH<br /><br /> Gibt die maximale Anzahl der Zeichen für einen Tabellennamen an.|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> Gibt die maximale Länge des Namens für einen Tabellenqualifizierer an (der erste Teil eines dreiteiligen Tabellennamens).|128|  
 |**15**|COLUMN_LENGTH<br /><br /> Gibt die maximale Anzahl der Zeichen für einen Spaltennamen an.|128|  
-|**Uhr**|IDENTIFIER_CASE<br /><br /> Gibt die benutzerdefinierten Namen (die Namen von Tabellen, Spalten, gespeicherten Prozeduren) in der Datenbank an (Groß- und Kleinschreibung der Objekte in den Systemkatalogen).|SENSITIVE|  
-|**Uhr**|TX_ISOLATION<br /><br /> Gibt die Ausgangsisolationsstufe des Servers für Transaktionen an, die einer in SQL-92 definierten Isolationsstufe entspricht.|2|  
+|**16**|IDENTIFIER_CASE<br /><br /> Gibt die benutzerdefinierten Namen (die Namen von Tabellen, Spalten, gespeicherten Prozeduren) in der Datenbank an (Groß- und Kleinschreibung der Objekte in den Systemkatalogen).|SENSITIVE|  
+|**17**|TX_ISOLATION<br /><br /> Gibt die Ausgangsisolationsstufe des Servers für Transaktionen an, die einer in SQL-92 definierten Isolationsstufe entspricht.|2|  
 |**Jahren**|COLLATION_SEQ<br /><br /> Gibt die Sortierung des Zeichensatzes für diesen Server an.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19.07.2016**|SAVEPOINT_SUPPORT<br /><br /> Gibt an, ob das zugrunde liegende DBMS benannte Sicherungspunkte unterstützt.|J|  
 |**20**|MULTI_RESULT_SETS<br /><br /> Gibt an, ob die zugrunde liegende Datenbank oder das Gateway selbst mehrere Resultsets unterstützt (mehrere Anweisungen können über das Gateway gesendet werden, wobei mehrere Resultsets an den Client zurückgegeben werden).|J|  
@@ -87,7 +87,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**113**|REMOTE_SPROC<br /><br /> Gibt an, ob gespeicherte Prozeduren über die remote gespeicherten Prozedurfunktionen in DB-Library ausgeführt werden können.|J|  
 |**500**|SYS_SPROC_VERSION<br /><br /> Gibt die Katalogversion der derzeit implementierten gespeicherten Prozeduren an.|Aktuelle Versionsnummer|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_server_info** gibt eine Teilmenge der Informationen zurück, die von **SQLGetInfo** in ODBC bereitgestellt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

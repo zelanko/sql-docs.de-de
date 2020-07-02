@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db0a9b0d2461e392f981ba3699a9efd3c1f3f8f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 878552c37b9d8d0345969e47f297df85089ce184
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660877"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784690"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>SqlServiceType-Eigenschaft (SqlService-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ruft den Typ des verwalteten Diensts ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,10 +42,10 @@ object.SqlServiceType [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein uint32-Wert, der den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Diensttyp angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Folgenden Rückgabewerte sind möglich:  
   
-|type|Definition|  
+|Typ|Definition|  
 |----------|----------------|  
 |*1*|MSSQLSERVER ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst.|  
 |*2*|SQLSERVERAGENT ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienst.|  
@@ -54,8 +54,8 @@ object.SqlServiceType [= value]
 |*5*|MSSQLServerOLAPService ist der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Dienst.|  
 |*6*|ReportServer ist der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienst.|  
 |*7*|SQLBrowser ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Browser-Dienst.|  
-|*88*|NSService ist der [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] Benachrichtigungsdienst.|  
-|*9*|MSSQLFDLauncher ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Start Programm Dienst des Volltextfilterdaemons.|  
+|*8*|NSService ist der [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] Benachrichtigungsdienst.|  
+|*9*|MSSQLFDLauncher ist der Start Programm [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Dienst des Volltextfilterdaemons.|  
 |*10*|Sqlpbengine ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] polybase-Engine-Dienst.|  
 |*11*|Sqlpbdms ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] polybase-Daten Verschiebungs Dienst.|  
 |*12*|Mssqllaunchpad ist der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Launchpad-Dienst.|  

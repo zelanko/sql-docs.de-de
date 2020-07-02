@@ -11,15 +11,15 @@ ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba9829fc2273959f2292d8a3e9ed8e3975c0a525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d58e2658f4dde3cbbe083c73b203b1a3f803a13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783253"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Inkrementelles Senden und Empfangen von Daten mit FILESTREAM (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Dieses Beispiel zeigt die Verwendung der FILESTREAM-Funktion zum inkrementellen Senden und Empfangen von Daten mit SQLPutData und SQLGetData.  
   
@@ -28,11 +28,11 @@ ms.locfileid: "81281810"
 ## <a name="example"></a>Beispiel  
  Aktivieren Sie die FILESTREAM-Unterstützung, bevor Sie dieses Beispiel kompilieren und ausführen ([Aktivieren und Konfigurieren von FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Das erste Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine Datenbank, die in diesem Beispiel verwendet wird. Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss Schreibzugriff zum Ausführen dieses Skripts haben (melden Sie sich z. B. als lokales Systemkonto an).  
+ Das erste [!INCLUDE[tsql](../../includes/tsql-md.md)] Codelisting () erstellt eine Datenbank, die in diesem Beispiel verwendet wird. Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss Schreibzugriff zum Ausführen dieses Skripts haben (melden Sie sich z. B. als lokales Systemkonto an).  
   
  Das zweite Codelisting ist der C++-Code. Sie müssen einen Server angeben. Ändern Sie im C++-Codelisting "MyServer" in einen gültigen Servernamen. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält. Kompilieren Sie das C++-Codelisting mit odbc32.lib, user32.lib, /D "_UNICODE", /D "UNICODE", odbc32.lib und /EHsc.  
   
- Das dritte Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die in diesem Beispiel verwendete Datenbank.  
+ Das dritte [!INCLUDE[tsql](../../includes/tsql-md.md)] Codelisting () löscht die in diesem Beispiel verwendete Datenbank.  
   
 ```sql
 USE master  

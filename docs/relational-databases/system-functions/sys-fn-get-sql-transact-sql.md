@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8ba54cf16819164bb8d356cae0a5a1b7569a373
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783931"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt den Text der SQL-Anweisung für das angegebene SQL-Handle zurück.  
   
@@ -61,14 +61,14 @@ sys.fn_get_sql ( SqlHandle )
 |objectid|**int**|ID des Datenbankobjekts. Dieser Wert ist für Ad-hoc-SQL-Anweisungen NULL.|  
 |number|**smallint**|Gibt die Nummer der Gruppe an, wenn die Prozeduren gruppiert sind.<br /><br /> 0 = Einträge sind keine Prozeduren.<br /><br /> NULL = Ad-hoc-SQL-Anweisungen.|  
 |encrypted|**bit**|Zeigt an, ob das Objekt verschlüsselt ist.<br /><br /> 0 = Nicht verschlüsselt<br /><br /> 1 = Verschlüsselt.|  
-|Text|**text**|Der Text der SQL-Anweisung. Der Wert ist für verschlüsselte Objekte NULL.|  
+|text|**text**|Der Text der SQL-Anweisung. Der Wert ist für verschlüsselte Objekte NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
  Sie können ein gültiges SQL-Handle aus der sql_handle-Spalte der dynamischen Verwaltungs Sicht [sys. dm_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) abrufen.  
   
  Wenn Sie ein Handle übergeben, das nicht mehr im Cache vorhanden ist, gibt fn_get_sq**l** ein leeres Resultset zurück. Wenn Sie ein ungültiges Handle übergeben, wird die Ausführung des Batches beendet und eine Fehlermeldung zurückgegeben.  
   
- Der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] kann einige [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen nicht zwischenspeichern, z. b. Massen Kopier Anweisungen und Anweisungen mit Zeichenfolgenliteralen, die größer als 8 KB sind. Handles für diese Anweisungen können nicht mithilfe von fn_get_sql abgerufen werden.  
+ Der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] kann einige Anweisungen nicht zwischenspeichern [!INCLUDE[tsql](../../includes/tsql-md.md)] , z. b. Massen Kopier Anweisungen und Anweisungen mit Zeichenfolgenliteralen, die größer als 8 KB sind. Handles für diese Anweisungen können nicht mithilfe von fn_get_sql abgerufen werden.  
   
  Die **Text** -Spalte des Resultsets wird nach Text gefiltert, der möglicherweise Kenn Wörter enthält. Weitere Informationen zu sicherheitsbezogenen gespeicherten Prozeduren, die nicht überwacht werden, finden Sie unter [Filtern einer Ablauf Verfolgung](../../relational-databases/sql-trace/filter-a-trace.md).  
   
@@ -95,7 +95,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [DBCC INPUTBUFFER &#40;Transact-SQL-&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys. sysprocesses &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.sysProzesse &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

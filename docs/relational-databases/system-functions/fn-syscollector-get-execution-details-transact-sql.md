@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44180a30c69a8da47cfad77c07f86ee6b9b8bfaa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775187"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt einen Teil des [!INCLUDE[ssIS](../../includes/ssis-md.md)] Protokolls (sysssislog) zurück, der mit dem package_execution_id für das angegebene Paket übereinstimmt. Die Tabelle enthält eine Zeile für jeden Protokollierungseintrag, der zur Laufzeit von Paketen oder deren Tasks und Containern generiert wird.  
   
@@ -56,7 +56,7 @@ fn_syscollector_get_execution_details ( log_id )
 |starttime|**datetime**|Die Uhrzeit, zu der die Paketausführung gestartet wurde.|  
 |endtime|**datetime**|Die Uhrzeit, zu der das Paket abgeschlossen wurde.|  
 |datacode|**int**|Ein ganzzahliger Wert, der das dem Protokolleintrag zugeordnete Ereignis angibt. "0" gibt an, dass das Ereignis keinen Bezeichner bereitgestellt hat.|  
-|databytes|**image**|Ein Bytearray, das einen Rückgabewert identifiziert.|  
+|databytes|**Bild**|Ein Bytearray, das einen Rückgabewert identifiziert.|  
 |message|**nvarchar**|Eine Beschreibung des Ereignisses sowie die mit dem Ereignis verknüpften Informationen.|  
   
 ## <a name="permissions"></a>Berechtigungen  

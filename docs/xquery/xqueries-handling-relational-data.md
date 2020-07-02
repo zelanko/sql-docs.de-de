@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9f1e69c10e4930a4a039528cffc4dbb13a67548
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 5ebd9c4d2bae1c491d2bd7a23e52c83457942fb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689476"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775474"
 ---
 # <a name="xqueries-handling-relational-data"></a>Behandlung relationaler Daten mit XQuery-Abfragen
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Sie geben XQuery für eine Spalte oder eine Variable vom Typ **XML** an, indem Sie eine der [XML-Datentyp Methoden](../t-sql/xml/xml-data-type-methods.md)verwenden. Hierzu zählen **Query ()**, **value ()**, **exist ()** oder **Modify ()**. Die XQuery wird für die XML-Instanz ausgeführt, die in der XML generierenden Abfrage angegeben ist.  
   

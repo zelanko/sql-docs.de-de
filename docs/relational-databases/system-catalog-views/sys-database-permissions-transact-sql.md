@@ -20,15 +20,15 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a87be6fe0a68172a99ade4704ae4111cabbe95f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e051d7351e5279bef3980d8fc8bfd77d20984eff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982727"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775255"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Gibt eine Zeile für jede Berechtigung oder Spaltenausnahmeberechtigung in der Datenbank zurück. Für Spalten gibt es eine Zeile für jede Berechtigung, die von der entsprechenden Berechtigung auf Objektebene abweicht. Wenn die Spalten Berechtigung mit der entsprechenden Objekt Berechtigung übereinstimmt, gibt es dafür keine Zeile, und die angewendete Berechtigung ist das des Objekts.  
   

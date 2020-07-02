@@ -14,15 +14,15 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79a85515322d492d4356d47f78da4b79489a223e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9484b4cb6f4b42dc8b496eff52b954938be9cc6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776787"
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph-Architektur  
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Erfahren Sie, wie SQL Graph entworfen wird. Wenn Sie die Grundlagen kennen, wird es einfacher, andere SQL Graph-Artikel zu verstehen.
  
@@ -35,9 +35,9 @@ Benutzer können ein Diagramm pro Datenbank erstellen. Bei einem Diagramm handel
 Abbildung 1: SQL Graph-Datenbankarchitektur
  
 ## <a name="node-table"></a>Knoten Tabelle
-Eine Knoten Tabelle stellt eine Entität in einem Diagramm Schema dar. Jedes Mal, wenn eine Knoten Tabelle zusammen mit den benutzerdefinierten Spalten erstellt wird, wird eine `$node_id` implizite Spalte erstellt, die einen bestimmten Knoten in der Datenbank eindeutig identifiziert. Die Werte in `$node_id` werden automatisch generiert und sind eine Kombination `object_id` aus dieser Knoten Tabelle und einem intern generierten bigint-Wert. Wenn jedoch die `$node_id` Spalte ausgewählt ist, wird ein berechneter Wert in Form einer JSON-Zeichenfolge angezeigt. Außerdem `$node_id` ist eine Pseudo Spalte, die einem internen Namen mit hexadezimal Zeichenfolge zugeordnet ist. Wenn Sie aus `$node_id` der Tabelle auswählen, wird der Spaltenname als `$node_id_<hex_string>`angezeigt. Die Verwendung von Pseudo Spaltennamen in Abfragen ist die empfohlene Methode zum Abfragen der internen `$node_id` Spalte, und die Verwendung des internen Namens mit hexadezimaler Zeichenfolge sollte vermieden werden.
+Eine Knoten Tabelle stellt eine Entität in einem Diagramm Schema dar. Jedes Mal, wenn eine Knoten Tabelle zusammen mit den benutzerdefinierten Spalten erstellt wird, wird eine implizite `$node_id` Spalte erstellt, die einen bestimmten Knoten in der Datenbank eindeutig identifiziert. Die Werte in `$node_id` werden automatisch generiert und sind eine Kombination aus `object_id` dieser Knoten Tabelle und einem intern generierten bigint-Wert. Wenn jedoch die `$node_id` Spalte ausgewählt ist, wird ein berechneter Wert in Form einer JSON-Zeichenfolge angezeigt. Außerdem `$node_id` ist eine Pseudo Spalte, die einem internen Namen mit hexadezimal Zeichenfolge zugeordnet ist. Wenn Sie `$node_id` aus der Tabelle auswählen, wird der Spaltenname als angezeigt `$node_id_<hex_string>` . Die Verwendung von Pseudo Spaltennamen in Abfragen ist die empfohlene Methode zum Abfragen der internen `$node_id` Spalte, und die Verwendung des internen Namens mit hexadezimaler Zeichenfolge sollte vermieden werden.
 
-Es wird empfohlen, dass Benutzer zum Zeitpunkt der Erstellung der Knoten Tabelle `$node_id` eine Unique-Einschränkung oder einen Index für die Spalte erstellen, wenn Sie jedoch nicht erstellt wird, wird automatisch ein eindeutiger Standard Index erstellt, der einen eindeutigen, nicht gruppierten Index aufweist. Allerdings wird ein beliebiger Index für eine Diagramm Pseudo Spalte für die zugrunde liegenden internen Spalten erstellt. Das heißt, ein Index, der für `$node_id` die Spalte erstellt wird, wird in `graph_id_<hex_string>` der internen Spalte angezeigt.   
+Es wird empfohlen, dass Benutzer zum Zeitpunkt der Erstellung der Knoten Tabelle eine Unique-Einschränkung oder einen Index für die `$node_id` Spalte erstellen, wenn Sie jedoch nicht erstellt wird, wird automatisch ein eindeutiger Standard Index erstellt, der einen eindeutigen, nicht gruppierten Index aufweist. Allerdings wird ein beliebiger Index für eine Diagramm Pseudo Spalte für die zugrunde liegenden internen Spalten erstellt. Das heißt, ein Index, der für die Spalte erstellt wird `$node_id` , wird in der internen `graph_id_<hex_string>` Spalte angezeigt.   
 
 
 ## <a name="edge-table"></a>Edge-Tabelle
@@ -45,13 +45,13 @@ Eine Edge-Tabelle stellt eine Beziehung in einem Diagramm dar. Kanten werden imm
 
 |Spaltenname    |BESCHREIBUNG  |
 |---   |---  |
-|`$edge_id`   |Identifiziert eine bestimmte Kante in der Datenbank eindeutig. Dabei handelt es sich um eine generierte Spalte, bei der es sich um eine Kombination aus object_id der Kanten Tabelle und einem intern generierten bigint-Wert handelt. Wenn jedoch die `$edge_id` Spalte ausgewählt ist, wird ein berechneter Wert in Form einer JSON-Zeichenfolge angezeigt. `$edge_id`ist eine Pseudo Spalte, die einem internen Namen mit hexadezimal Zeichenfolge zugeordnet ist. Wenn Sie aus `$edge_id` der Tabelle auswählen, wird der Spaltenname als `$edge_id_\<hex_string>`angezeigt. Die Verwendung von Pseudo Spaltennamen in Abfragen ist die empfohlene Methode zum Abfragen der internen `$edge_id` Spalte, und die Verwendung des internen Namens mit hexadezimaler Zeichenfolge sollte vermieden werden. |
+|`$edge_id`   |Identifiziert eine bestimmte Kante in der Datenbank eindeutig. Dabei handelt es sich um eine generierte Spalte, bei der es sich um eine Kombination aus object_id der Kanten Tabelle und einem intern generierten bigint-Wert handelt. Wenn jedoch die `$edge_id` Spalte ausgewählt ist, wird ein berechneter Wert in Form einer JSON-Zeichenfolge angezeigt. `$edge_id`ist eine Pseudo Spalte, die einem internen Namen mit hexadezimal Zeichenfolge zugeordnet ist. Wenn Sie `$edge_id` aus der Tabelle auswählen, wird der Spaltenname als angezeigt `$edge_id_\<hex_string>` . Die Verwendung von Pseudo Spaltennamen in Abfragen ist die empfohlene Methode zum Abfragen der internen `$edge_id` Spalte, und die Verwendung des internen Namens mit hexadezimaler Zeichenfolge sollte vermieden werden. |
 |`$from_id`   |Speichert den `$node_id` des Knotens, von dem der Edge stammt.  |
 |`$to_id`   |Speichert den `$node_id` des Knotens, an dem der Edge beendet wird. |
 
-Die Knoten, für die ein bestimmter Edge eine Verbindung herstellen kann, werden von den `$from_id` in `$to_id` die Spalten und eingefügten Daten gesteuert. In der ersten Version ist es nicht möglich, Einschränkungen für die Edge-Tabelle zu definieren, um eine Verbindung mit zwei Knoten Typen einzuschränken. Das heißt, dass eine Kante alle zwei Knoten im Diagramm unabhängig von ihren Typen verbinden kann.
+Die Knoten, für die ein bestimmter Edge eine Verbindung herstellen kann, werden von den in die Spalten und eingefügten Daten gesteuert `$from_id` `$to_id` . In der ersten Version ist es nicht möglich, Einschränkungen für die Edge-Tabelle zu definieren, um eine Verbindung mit zwei Knoten Typen einzuschränken. Das heißt, dass eine Kante alle zwei Knoten im Diagramm unabhängig von ihren Typen verbinden kann.
 
-Ähnlich wie in `$node_id` der-Spalte wird empfohlen, dass Benutzer zum Zeitpunkt der Erstellung der Edge- `$edge_id` Tabelle einen eindeutigen Index oder eine Einschränkung für die Spalte erstellen. Wenn jedoch keine erstellt wird, wird automatisch ein eindeutiger Standard Index für diese Spalte erstellt. Allerdings wird ein beliebiger Index für eine Diagramm Pseudo Spalte für die zugrunde liegenden internen Spalten erstellt. Das heißt, ein Index, der für `$edge_id` die Spalte erstellt wird, wird in `graph_id_<hex_string>` der internen Spalte angezeigt. Außerdem wird empfohlen, für OLTP-Szenarien, dass Benutzer einen Index für (`$from_id`, `$to_id`)-Spalten erstellen, um schnellere Suchvorgänge in der Richtung des Edge durchführen zu können.  
+Ähnlich wie in der- `$node_id` Spalte wird empfohlen, dass Benutzer zum Zeitpunkt der Erstellung der Edge-Tabelle einen eindeutigen Index oder eine Einschränkung für die `$edge_id` Spalte erstellen. Wenn jedoch keine erstellt wird, wird automatisch ein eindeutiger Standard Index für diese Spalte erstellt. Allerdings wird ein beliebiger Index für eine Diagramm Pseudo Spalte für die zugrunde liegenden internen Spalten erstellt. Das heißt, ein Index, der für die Spalte erstellt wird `$edge_id` , wird in der internen `graph_id_<hex_string>` Spalte angezeigt. Außerdem wird empfohlen, für OLTP-Szenarien, dass Benutzer einen Index `$from_id` für (, `$to_id` )-Spalten erstellen, um schnellere Suchvorgänge in der Richtung des Edge durchführen zu können.  
 
 Abbildung 2 zeigt, wie Knoten-und Kanten Tabellen in der-Datenbank gespeichert werden. 
 
@@ -65,7 +65,7 @@ Abbildung 2: Darstellung von Knoten-und Kanten Tabellen
 Verwenden Sie diese metadatenansichten, um die Attribute einer Knoten-oder Kanten Tabelle anzuzeigen.
  
 ### <a name="systables"></a>sys.tables
-Die folgenden neuen bittype-Spalten werden zu sys hinzugefügt. Spielern. Wenn `is_node` auf 1 festgelegt ist, gibt dies an, dass es sich bei der Tabelle `is_edge` um eine Knoten Tabelle handelt. wenn auf 1 festgelegt ist, gibt dies an, dass die Tabelle eine edgetabelle ist.
+Die folgenden neuen bittype-Spalten werden zu sys hinzugefügt. Spielern. Wenn `is_node` auf 1 festgelegt ist, gibt dies an, dass es sich bei der Tabelle um eine Knoten Tabelle handelt. wenn auf 1 festgelegt ist, gibt dies an, dass `is_edge` die Tabelle eine edgetabelle ist.
  
 |Spaltenname |Datentyp |BESCHREIBUNG |
 |--- |---|--- |
@@ -73,14 +73,14 @@ Die folgenden neuen bittype-Spalten werden zu sys hinzugefügt. Spielern. Wenn `
 |is_edge |bit |1 = Dies ist eine Edge-Tabelle. |
  
 ### <a name="syscolumns"></a>sys.columns
-Die `sys.columns` Sicht enthält zusätzliche Spalten `graph_type` und `graph_type_desc`, die den Typ der Spalte in Knoten-und Kanten Tabellen angeben.
+Die `sys.columns` Sicht enthält zusätzliche Spalten `graph_type` und `graph_type_desc` , die den Typ der Spalte in Knoten-und Kanten Tabellen angeben.
  
 |Spaltenname |Datentyp |BESCHREIBUNG |
 |--- |---|--- |
 |graph_type |INT |Interne Spalte mit einer Gruppe von Werten. Die Werte liegen zwischen 1-8 für Diagramm Spalten und NULL für andere.  |
 |graph_type_desc |nvarchar(60)  |interne Spalte mit einer Gruppe von Werten |
  
-In der folgenden Tabelle sind die gültigen Werte `graph_type` für die-Spalte aufgeführt.
+In der folgenden Tabelle sind die gültigen Werte für die-Spalte aufgeführt. `graph_type`
 
 |Spaltenwert  |BESCHREIBUNG  |
 |---   |---   |
@@ -117,7 +117,7 @@ Implizite Spalten in einer Edge-Tabelle
 |$to _id_\<hex_string>   |NVARCHAR   |0  |extern zu Knoten`node_id`  |
  
 ### <a name="system-functions"></a>Systemfunktionen
-Die folgenden integrierten Funktionen werden hinzugefügt. Diese können Benutzer dabei unterstützen, Informationen aus den generierten Spalten zu extrahieren. Beachten Sie, dass diese Methoden die Eingabe des Benutzers nicht validieren. Wenn der Benutzer einen ungültigen `sys.node_id` angibt, extrahiert die Methode den entsprechenden Teil und gibt ihn zurück. OBJECT_ID_FROM_NODE_ID nimmt z. b. einen `$node_id` als Eingabe an und gibt den object_id der Tabelle zurück, zu der dieser Knoten gehört. 
+Die folgenden integrierten Funktionen werden hinzugefügt. Diese können Benutzer dabei unterstützen, Informationen aus den generierten Spalten zu extrahieren. Beachten Sie, dass diese Methoden die Eingabe des Benutzers nicht validieren. Wenn der Benutzer einen ungültigen angibt, `sys.node_id` extrahiert die Methode den entsprechenden Teil und gibt ihn zurück. OBJECT_ID_FROM_NODE_ID nimmt z. b. einen `$node_id` als Eingabe an und gibt den object_id der Tabelle zurück, zu der dieser Knoten gehört. 
  
 |Integriert   |BESCHREIBUNG  |
 |---  |---  |
@@ -131,26 +131,26 @@ Die folgenden integrierten Funktionen werden hinzugefügt. Diese können Benutze
 
 
 ## <a name="transact-sql-reference"></a>Transact-SQL-Referenz 
-Erfahren Sie [!INCLUDE[tsql-md](../../includes/tsql-md.md)] mehr über die in SQL Server und Azure SQL-Datenbank eingeführten Erweiterungen, die das Erstellen und Abfragen von Diagramm Objekten ermöglichen. Die Abfrage Spracherweiterungen helfen dabei, das Diagramm mithilfe der ASCII-Grafik Syntax abzufragen und zu durchlaufen.
+Erfahren Sie mehr über die [!INCLUDE[tsql-md](../../includes/tsql-md.md)] in SQL Server und Azure SQL-Datenbank eingeführten Erweiterungen, die das Erstellen und Abfragen von Diagramm Objekten ermöglichen. Die Abfrage Spracherweiterungen helfen dabei, das Diagramm mithilfe der ASCII-Grafik Syntax abzufragen und zu durchlaufen.
  
 ### <a name="data-definition-language-ddl-statements"></a>Anweisungen der Data Definition Language (DDL)
 
 |Aufgabe   |Verwandter Artikel  |Hinweise
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE`wird jetzt erweitert, um das Erstellen einer Tabelle als Knoten oder als Edge zu unterstützen. Beachten Sie, dass eine Edge-Tabelle über benutzerdefinierte Attribute verfügen kann.  |
-|ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Knoten-und edgetabellen können mithilfe von auf dieselbe Weise wie eine relationale Tabelle `ALTER TABLE`geändert werden. Benutzer können benutzerdefinierte Spalten, Indizes oder Einschränkungen hinzufügen oder ändern. Das ändern interner Diagramm Spalten, wie `$node_id` z. `$edge_id`b. oder, führt jedoch zu einem Fehler.  |
+|ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Knoten-und edgetabellen können mithilfe von auf dieselbe Weise wie eine relationale Tabelle geändert werden `ALTER TABLE` . Benutzer können benutzerdefinierte Spalten, Indizes oder Einschränkungen hinzufügen oder ändern. Das ändern interner Diagramm Spalten, wie z `$node_id` `$edge_id` . b. oder, führt jedoch zu einem Fehler.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Benutzer können Indizes für Pseudo Spalten und benutzerdefinierte Spalten in Knoten-und Edge-Tabellen erstellen. Alle Index Typen werden unterstützt, einschließlich gruppierter und nicht gruppierter columnstore--Indizes.  |
 |Edge-Einschränkungen erstellen    |[Edge-Einschränkungen &#40;Transact-SQL-&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Benutzer können jetzt Edge-Einschränkungen für Edge-Tabellen erstellen, um eine bestimmte Semantik zu erzwingen und die Datenintegrität beizubehalten.  |
-|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Knoten-und Kanten Tabellen können auf die gleiche Weise wie eine relationale Tabelle mithilfe von `DROP TABLE`gelöscht werden. Allerdings gibt es in dieser Version keine Einschränkungen, um sicherzustellen, dass keine Ränder auf einen gelöschten Knoten verweisen und das überlappende Löschen von Kanten beim Löschen einer Knoten-oder Knoten Tabelle nicht unterstützt wird. Es wird empfohlen, dass beim Löschen einer Knoten Tabelle alle Kanten, die mit den Knoten in dieser Knoten Tabelle verbunden sind, manuell abgelegt werden, um die Integrität des Diagramms aufrechtzuerhalten.  |
+|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Knoten-und Kanten Tabellen können auf die gleiche Weise wie eine relationale Tabelle mithilfe von gelöscht werden `DROP TABLE` . Allerdings gibt es in dieser Version keine Einschränkungen, um sicherzustellen, dass keine Ränder auf einen gelöschten Knoten verweisen und das überlappende Löschen von Kanten beim Löschen einer Knoten-oder Knoten Tabelle nicht unterstützt wird. Es wird empfohlen, dass beim Löschen einer Knoten Tabelle alle Kanten, die mit den Knoten in dieser Knoten Tabelle verbunden sind, manuell abgelegt werden, um die Integrität des Diagramms aufrechtzuerhalten.  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Anweisungen der Data Manipulation Language (DML)
 
 |Aufgabe   |Verwandter Artikel  |Hinweise
 |---  |---  |---  |
-|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Das Einfügen in eine Knoten Tabelle unterscheidet sich nicht vom Einfügen in eine relationale Tabelle. Die Werte für `$node_id` die Spalte werden automatisch generiert. Der Versuch, einen Wert in `$node_id` die `$edge_id` Spalte oder einzufügen, führt zu einem Fehler. Benutzer müssen beim Einfügen in `$from_id` eine `$to_id` Rahmen Tabelle Werte für die Spalten und angeben. `$from_id`und `$to_id` sind die `$node_id` Werte der Knoten, die von einem bestimmten Edge verbunden werden.  |
+|INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Das Einfügen in eine Knoten Tabelle unterscheidet sich nicht vom Einfügen in eine relationale Tabelle. Die Werte für die `$node_id` Spalte werden automatisch generiert. Der Versuch, einen Wert in die `$node_id` Spalte oder einzufügen, `$edge_id` führt zu einem Fehler. Benutzer müssen `$from_id` `$to_id` beim Einfügen in eine Rahmen Tabelle Werte für die Spalten und angeben. `$from_id`und `$to_id` sind die `$node_id` Werte der Knoten, die von einem bestimmten Edge verbunden werden.  |
 |Delete | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Daten aus Knoten-oder edgetabellen können auf die gleiche Weise wie aus relationalen Tabellen gelöscht werden. Allerdings gibt es in dieser Version keine Einschränkungen, um sicherzustellen, dass keine Ränder auf einen gelöschten Knoten und das überlappende Löschen von Rändern zeigen, wenn ein Knoten nicht mehr unterstützt wird. Es wird empfohlen, dass jedes Mal, wenn ein Knoten gelöscht wird, alle Verbindungs Ränder mit diesem Knoten gelöscht werden, um die Integrität des Diagramms aufrechtzuerhalten.  |
-|UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |Werte in benutzerdefinierten Spalten können mithilfe der Update-Anweisung aktualisiert werden. Das Aktualisieren der internen Diagramm Spalten `$node_id`, `$edge_id`, `$from_id` und `$to_id` ist nicht zulässig.  |
+|UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |Werte in benutzerdefinierten Spalten können mithilfe der Update-Anweisung aktualisiert werden. Das Aktualisieren der internen Diagramm Spalten `$node_id` , `$edge_id` , `$from_id` und `$to_id` ist nicht zulässig.  |
 |MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE`die-Anweisung wird für eine Knoten-oder Kanten Tabelle unterstützt.  |
 
 
@@ -169,7 +169,7 @@ In dieser Version gibt es bestimmte Einschränkungen für Knoten-und Kanten Tabe
 * Tabellentypen und Tabellen Variablen können nicht als Knoten-oder Kanten Tabelle deklariert werden. 
 * Knoten-und Kanten Tabellen können nicht als Temporale Tabellen mit System Versionsverwaltung erstellt werden.   
 * Knoten-und Kanten Tabellen können keine Speicher optimierten Tabellen sein.  
-* Benutzer können die `$from_id` -und `$to_id` -Spalten eines Edge nicht mithilfe der Update-Anweisung aktualisieren. Zum Aktualisieren der Knoten, die von Edge verbunden werden, müssen Benutzer den neuen Edge einfügen, der auf neue Knoten zeigt, und die vorherige löschen.
+* Benutzer können die `$from_id` -und- `$to_id` Spalten eines Edge nicht mithilfe der Update-Anweisung aktualisieren. Zum Aktualisieren der Knoten, die von Edge verbunden werden, müssen Benutzer den neuen Edge einfügen, der auf neue Knoten zeigt, und die vorherige löschen.
 * Datenbankübergreifende Abfragen für Graph-Objekte werden nicht unterstützt. 
 
 

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8241e15643eb4aa25912451ddfed94699954797f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52d3c9676adbd95d219221270090dbcedc798bfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775421"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery-Erweiterungsfunktionen – sql:variable()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Macht eine Variable verfügbar, die einen relationalen SQL-Wert in einem XQuery-Ausdruck enthält.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "81388604"
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wie im Thema [binden relationaler Daten in XML](../t-sql/xml/binding-relational-data-inside-xml-data.md)beschrieben, können Sie diese Funktion verwenden, wenn Sie [XML-Datentyp Methoden](../t-sql/xml/xml-data-type-methods.md) zum verfügbar machen eines relationalen Werts in XQuery verwenden.  
   
  Beispielsweise wird die [Query ()-Methode](../t-sql/xml/query-method-xml-data-type.md) verwendet, um eine Abfrage für eine XML-Instanz anzugeben, die in einer Variablen oder Spalte des **XML** -Datentyps gespeichert ist. Manchmal sollen in einer Abfrage auch Werte aus einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Variablen oder einem -Parameter verwendet werden, um relationale und XML-Daten zu verbinden. Zu diesem Zweck verwenden Sie die **SQL: Variable** -Funktion.  
@@ -55,7 +55,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
 -   Einem Wert (`DiscountPrice`) aus einer [!INCLUDE[tsql](../includes/tsql-md.md)]-Variablen. Zum Binden dieses Werts im XML-Code wird die `sql:variable()`-Methode verwendet.  
   
--   Ein Wert (`ProductModelName`) aus einer Spalte vom Typ **XML** , um die Abfrage interessanter zu gestalten.  
+-   Ein Wert ( `ProductModelName` ) aus einer Spalte vom Typ **XML** , um die Abfrage interessanter zu gestalten.  
   
  Im Folgenden wird die Abfrage aufgeführt:  
   
@@ -83,7 +83,7 @@ WHERE ProductID=771
   
 -   Der XML-Code wird durch die XQuery-Abfrage in der `query()`-Methode erstellt.  
   
--   Das `namespace` -Schlüsselwort wird verwendet, um ein Namespace Präfix im [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md)zu definieren. Dies geschieht, weil der `ProductModelName`-Attributwert aus der Spalte des `CatalogDescription xml`-Typs abgerufen wird, der ein Schema zugeordnet ist.  
+-   Das- `namespace` Schlüsselwort wird verwendet, um ein Namespace Präfix im [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md)zu definieren. Dies geschieht, weil der `ProductModelName`-Attributwert aus der Spalte des `CatalogDescription xml`-Typs abgerufen wird, der ein Schema zugeordnet ist.  
   
  Dies ist das Ergebnis:  
   
@@ -97,8 +97,8 @@ WHERE ProductID=771
  [SQL Server XQuery-Erweiterungsfunktionen](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [SQL Server der XML-Daten &#40;&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [Erstellen von Instanzen von XML-Daten](../relational-databases/xml/create-instances-of-xml-data.md)   
- [XML-Datentyp Methoden](../t-sql/xml/xml-data-type-methods.md)   
+ [Erstellen von Instanzen der XML-Daten](../relational-databases/xml/create-instances-of-xml-data.md)   
+ [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md)   
  [XML DML &#40;Data Modification Language&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

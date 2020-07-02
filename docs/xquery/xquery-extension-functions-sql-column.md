@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb52e949b706f7e1af51f1c067d38ce23bb777f2
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 6b3aeded0476c809bd1bcdfbfdacb4eac3381751
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775414"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery-Erweiterungsfunktionen – sql:column()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Wie im Thema [binden relationaler Daten in XML](../t-sql/xml/binding-relational-data-inside-xml-data.md)beschrieben, können Sie die **SQL: column (()** -Funktion verwenden, wenn Sie [XML-Datentyp Methoden](../t-sql/xml/xml-data-type-methods.md) zum verfügbar machen eines relationalen Werts in XQuery verwenden.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "84881502"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Beachten Sie, dass der Verweis auf eine Spalte, die in der **SQL: column ()** -Funktion in einer XQuery angegeben ist, auf eine Spalte in der Zeile verweist, die verarbeitet wird.  
   
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können Sie nur auf eine **XML** -Instanz im Kontext des Quell Ausdrucks einer XML-DML-INSERT-Anweisung verweisen. andernfalls können Sie nicht auf Spalten verweisen, die vom Typ **XML** oder von einem benutzerdefinierten CLR-Typ sind.  

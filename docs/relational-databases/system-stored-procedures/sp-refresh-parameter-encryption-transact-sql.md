@@ -19,15 +19,15 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 87b905aa178aec6aa10d4d7585384183bdb5d6c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833140"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783008"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 Aktualisiert die Always Encrypted Metadaten für die Parameter der angegebenen nicht Schema gebundenen gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene in der aktuellen Datenbank. 
 
@@ -55,7 +55,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 0 (Erfolg) oder eine Zahl ungleich Null (Fehler)
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Verschlüsselungs Metadaten für die Parameter eines Moduls können veraltet sein, wenn:   
 * Die Verschlüsselungs Eigenschaften einer Spalte in einer Tabelle, auf die das Modul verweist, wurden aktualisiert. Beispielsweise wurde eine Spalte gelöscht, und es wurde eine neue Spalte mit demselben Namen, aber ein anderer Verschlüsselungstyp, ein verschlüsselter Verschlüsselungsschlüssel oder ein Verschlüsselungsalgorithmus hinzugefügt.  

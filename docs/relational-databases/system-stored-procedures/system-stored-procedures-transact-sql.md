@@ -22,21 +22,21 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6d46a0e06f96f646ebd68e383ad26f99e309082
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783640"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Gespeicherte Systemprozeduren (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] können viele Verwaltungs- und Informationsabläufe mithilfe gespeicherter Systemprozeduren ausgeführt werden. Die gespeicherten Systemprozeduren sind in die in der folgenden Tabelle gezeigten Kategorien unterteilt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Category|BESCHREIBUNG|  
+|Kategorie|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[Gespeicherte Prozeduren für die aktive georeplikation](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Dient zum Verwalten von zum Verwalten von Konfigurationen für die aktive georeplikation in Azure SQL-Datenbank.|  
 |[Gespeicherte Katalogprozeduren](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Implementieren Funktionen ODBC-Datenwörterbüchern und isolieren ODBC-Anwendungen von Änderungen an den zugrunde liegenden Systemtabellen.|  
@@ -71,7 +71,7 @@ ms.locfileid: "68037320"
 >  Alle gespeicherten Systemprozeduren geben den Wert 0 für einen erfolgreichen Vorgang zurück, wenn nicht anders angegeben. Ein Wert ungleich 0 wird zurückgegeben, um einen Fehler anzuzeigen.  
   
 ## <a name="api-system-stored-procedures"></a>Gespeicherte API-Systemprozeduren  
- Benutzer, die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] für ADO-, OLE DB- und ODBC-Anwendungen ausführen, werden möglicherweise feststellen, dass diese Anwendungen gespeicherte Systemprozeduren verwenden, die nicht in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Referenz behandelt werden. Diese gespeicherten Prozeduren werden vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Native Client-ODBC-Treiber verwendet, um die Funktionalität einer Datenbank-API zu implementieren. Diese gespeicherten Prozeduren sind lediglich der Mechanismus, mit dem der Anbieter oder Treiber Benutzeranforderungen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weitergeben. Sie sind ausschließlich für die interne Verwendung des Anbieters oder Treibers gedacht. Das explizite Aufrufen von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-basierten Anwendung wird nicht unterstützt.  
+ Benutzer, die [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] für ADO-, OLE DB- und ODBC-Anwendungen ausführen, werden möglicherweise feststellen, dass diese Anwendungen gespeicherte Systemprozeduren verwenden, die nicht in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Referenz behandelt werden. Diese gespeicherten Prozeduren werden vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter und dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verwendet, um die Funktionalität einer Datenbank-API zu implementieren. Diese gespeicherten Prozeduren sind lediglich der Mechanismus, mit dem der Anbieter oder Treiber Benutzeranforderungen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weitergeben. Sie sind ausschließlich für die interne Verwendung des Anbieters oder Treibers gedacht. Das explizite Aufrufen von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -basierten Anwendung wird nicht unterstützt.  
   
  Die gespeicherten Prozeduren sp_createorphan und sp_droporphans werden für die ODBC- **ntext**-, **Text**-und **Image** -Verarbeitung verwendet.  
   

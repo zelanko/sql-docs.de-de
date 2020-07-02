@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 1171740ae04b4fc03609659fa27a711bf36fa6f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775454"
 ---
 # <a name="xqueries-involving-order"></a>XQuery-Abfragen, die die Reihenfolge berücksichtigen
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   In relationalen Datenbanken spielt die Reihenfolge keine Rolle. Sie können z. B. keine Anforderung wie etwa "Ersten Kunden aus der Datenbank abrufen" erstellen. Sie können jedoch ein XML-Dokument Abfragen und das erste \<Customer> Element abrufen. In diesem Fall wird immer der gleiche Kunde abgerufen.  
   

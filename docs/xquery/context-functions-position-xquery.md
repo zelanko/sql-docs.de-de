@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45dffc809f223f9b18cd1dae1c5b951d5a8f1463
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 82774aa6d515d7056f59e432807c6560ecb70772
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881932"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783582"
 ---
 # <a name="context-functions---position-xquery"></a>Kontextfunktionen – position (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Gibt einen ganzzahligen Wert zurück, der die Position des Kontextelements in der Sequenz der Elemente angibt, die derzeit verarbeitet werden.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "84881932"
 fn:position() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann **FN: Position ()** nur im Kontext eines kontextabhängigen Prädikats verwendet werden. Die Funktion kann insbesondere nur innerhalb von eckigen Klammern ([ ]) verwendet werden. Das Vergleichen mit dieser Funktion verringert nicht die Kardinalität während des statischen Typrückschlusses.  
   
 ## <a name="examples"></a>Beispiele  

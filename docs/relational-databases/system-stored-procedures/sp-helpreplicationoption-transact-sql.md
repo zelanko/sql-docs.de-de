@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 395a7c2227fb23a177cb1b3980b26014f0651c0c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e04daaa5be757df60f07a8bd9205e1fd44f95502
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775739"
 ---
 # <a name="sp_helpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Zeigt die Replikationsoptionstypen an, die für einen Server aktiviert sind. Diese gespeicherte Prozedur wird auf jedem Server für jede Datenbank ausgeführt.  
   
@@ -39,27 +39,27 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="arguments"></a>Argumente  
 `[ @optname = ] 'option_name'`Der Name der Replikations Option, die abgefragt werden soll. *option_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Transaktions**|Ein Resultset wird zurückgegeben, wenn die Transaktionsreplikation aktiviert ist.|  
-|**Merge**|Ein Resultset wird zurückgegeben, wenn die Mergereplikation aktiviert ist.|  
+|**merge**|Ein Resultset wird zurückgegeben, wenn die Mergereplikation aktiviert ist.|  
 |NULL (Standard)|Es wird kein Resultset zurückgegeben.|  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|Name der Replikationsoption. Die folgenden Werte sind möglich:<br /><br /> **Transaktions**<br /><br /> **Merge**|  
+|**optname**|**sysname**|Name der Replikationsoption. Die folgenden Werte sind möglich:<br /><br /> **Transaktions**<br /><br /> **merge**|  
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**Novel**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helpreplicationoption** wird verwendet, um Informationen zu Replikations Optionen zu erhalten, die auf einem bestimmten Server aktiviert sind. Verwenden Sie **sp_helpreplicationdboption**, um Informationen zu einer bestimmten Datenbank zu erhalten.  
   
 ## <a name="permissions"></a>Berechtigungen  

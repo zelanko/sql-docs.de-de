@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3698431316b86a40e70e144bfac23d81678db45c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68122632"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783089"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Liste der Berechtigungen zurück, die dem Prinzipal eines sicherungsfähigen Elements effektiv gewährt wurden. Eine verwandte Funktion ist [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
   
@@ -51,7 +51,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>Zurückgegebene Spalten  
  In der folgenden Tabelle werden die Spalten aufgelistet, die **fn_my_permissions** zurückgibt. Jede zurückgegebene Zeile beschreibt eine Berechtigung, über die der aktuelle Sicherheitskontext für das sicherungsfähige Element verfügt. Gibt NULL zurück, wenn die Abfrage einen Fehler erzeugt.  
   
-|Spaltenname|type|Beschreibung|  
+|Spaltenname|Typ|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |Entitätsname|**sysname**|Der Name des sicherungsfähigen Elements, für das die aufgelisteten Berechtigungen effektiv gewährt wurden.|  
 |subentity_name|**sysname**|Der Spaltenname, sofern das sicherungsfähige Element über Spalten verfügt; andernfalls NULL.|  
@@ -111,7 +111,7 @@ SELECT * FROM fn_my_permissions('Sales.vIndividualCustomer', 'OBJECT')
 GO   
 ```  
   
-### <a name="d-listing-effective-permissions-of-another-user"></a>D. Auflisten der gültigen Berechtigungen eines anderen Benutzers  
+### <a name="d-listing-effective-permissions-of-another-user"></a>D: Auflisten der gültigen Berechtigungen eines anderen Benutzers  
  Das folgende Beispiel gibt eine Liste der gültigen Berechtigungen des Datenbankbenutzers `Wanida` für die `Employee`-Tabelle im `HumanResources`-Schema der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank zurück. Der Aufrufer benötigt die IMPERSONATE-Berechtigung für den Benutzer `Wanida`.  
   
 ```  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. Auflisten der gültigen Berechtigungen für eine XML-Schemaauflistung  
- Im folgenden Beispiel wird eine Liste der effektiven Berechtigungen des Aufrufers für eine XML-Schema Auflistung `ProductDescriptionSchemaCollection` mit dem [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Namen in der-Datenbank zurückgegeben.  
+ Im folgenden Beispiel wird eine Liste der effektiven Berechtigungen des Aufrufers für eine XML-Schema Auflistung mit dem Namen `ProductDescriptionSchemaCollection` in der-Datenbank zurückgegeben [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 USE AdventureWorks2012;  

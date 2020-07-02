@@ -11,15 +11,15 @@ ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79ace76e1652cad35c3c04a78e767c0e9a6b4228
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f86bf7fc6e473685d918e7109180e2bdb8bdb86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783217"
 ---
 # <a name="use-date-and-time-types"></a>Verwenden von Datums- und Uhrzeittypen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In diesem Beispiel wird gezeigt, wie die Datum/Uhrzeit-Datenstrukturen, die in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]hinzugefügt wurden, initialisiert werden. Anschließend werden die Eingabewerte vorbereitet, Parameter gebunden und die Abfrage ausgeführt. Weitere Informationen zur Verwendung dieser Typen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
@@ -30,11 +30,11 @@ ms.locfileid: "81298280"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Das erste Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine Tabelle, die in diesem Beispiel verwendet wird.  
+ Das erste [!INCLUDE[tsql](../../includes/tsql-md.md)] Codelisting () erstellt eine Tabelle, die in diesem Beispiel verwendet wird.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und user32.lib. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
- Das dritte Codelisting ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die in diesem Beispiel verwendete Tabelle.  
+ Das dritte [!INCLUDE[tsql](../../includes/tsql-md.md)] Codelisting () löscht die in diesem Beispiel verwendete Tabelle.  
   
 ```sql
 use tempdb  

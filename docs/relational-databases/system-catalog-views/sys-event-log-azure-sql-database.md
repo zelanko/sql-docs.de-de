@@ -20,16 +20,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831999"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784929"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL-Datenbank)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Gibt erfolgreiche [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Datenbankverbindungen, Verbindungsfehler und Deadlocks zurück. Sie können diese Informationen verwenden, um die Datenbankaktivität mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nachzuverfolgen oder um Fehler zu beheben.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "82831999"
 |**event_subtype_desc**|**nvarchar (64)**|Die Beschreibung des Ereignisuntertyps.<br /><br /> Eine Liste möglicher Werte finden Sie unter [Ereignis Typen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**severity**|**int**|Der Schweregrad des Fehlers. Mögliche Werte:<br /><br /> 0 = Information<br />1 = Warning<br />2 = Fehler|  
 |**event_count**|**int**|Gibt an, wie oft dieses Ereignis für die angegebene Datenbank innerhalb des angegebenen Zeitintervalls eingetreten ist (**start_time** und **end_time**).|  
-|**Beschreibung**|**nvarchar(max)**|Detaillierte Beschreibung des Ereignisses.<br /><br /> Eine Liste möglicher Werte finden Sie unter [Ereignis Typen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
+|**description**|**nvarchar(max)**|Detaillierte Beschreibung des Ereignisses.<br /><br /> Eine Liste möglicher Werte finden Sie unter [Ereignis Typen](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**additional_data**|**XML**|*Hinweis: dieser Wert ist für Azure SQL-Datenbank V12 immer NULL. Weitere Informationen zum Abrufen von Deadlockereignissen für V12 finden Sie im Abschnitt " [Beispiele](#Deadlock) ".*<br /><br /> Bei **Deadlock** -Ereignissen enthält diese Spalte das Deadlockdiagramm. Bei anderen Ereignistypen enthält diese Spalte NULL. |  
   
 ##  <a name="event-types"></a><a name="EventTypes"></a>Ereignis Typen
@@ -61,7 +61,7 @@ ms.locfileid: "82831999"
 > [!NOTE]  
 > Diese Sicht enthält nicht alle [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Datenbankereignisse, die eintreten können, sondern nur die hier aufgeführten. Zusätzliche Kategorien, Ereignistypen und Untertypen werden in zukünftigen Versionen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ggf. hinzugefügt.  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**Beschreibung**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**description**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**Stech**|**connection_successful**|0|**connection_successful**|0|Die Verbindung mit der Datenbank war erfolgreich.|  
 |**Stech**|**connection_failed**|0|**invalid_login_name**|2|Der Anmeldename ist in dieser SQL Server-Version nicht gültig.|  
@@ -76,7 +76,7 @@ ms.locfileid: "82831999"
 |**Stech**|**connection_failed**|9|**Neukonfiguration**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Verbindungsfehler, da die Datenbank zu diesem Zeitpunkt eine Neukonfiguration durchlaufen hat.|  
 |**Stech**|**connection_terminated**|0|**idle_connection_timeout**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Verbindung ist länger im Leerlauf, als der vom System definierte Schwellenwert angibt.|  
 |**Stech**|**connection_terminated**|1|**Neukonfiguration**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Die Sitzung wurde aufgrund einer Neukonfiguration der Datenbank beendet.|  
-|**Stech**|**Einschränkung**|*\<Ursachen Code>*|**reason_code**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Anforderung wird gedrosselt.  Ursachen Code für Drosselung: Ursachen * \< Code>*. Weitere Informationen finden Sie unter [Engine-Drosselung](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**Stech**|**Einschränkung**|*\<reason code>*|**reason_code**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Anforderung wird gedrosselt.  Ursachen Code für Drosselung: *\<reason code>* . Weitere Informationen finden Sie unter [Engine-Drosselung](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**Stech**|**throttling_long_transaction**|40549|**long_transaction**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Die Sitzung wird aufgrund einer Transaktion mit langer Laufzeit beendet. Verkürzen Sie die Transaktion. Weitere Informationen finden Sie unter [Ressourcen Limits](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**Stech**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Die Sitzung wurde beendet, da zu viele Sperren abgerufen wurden. Reduzieren Sie die Anzahl der in einer einzelnen Transaktion gelesenen oder geänderten Zeilen. Weitere Informationen finden Sie unter [Ressourcen Limits](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**Stech**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Hinweis: gilt nur für Azure SQL-Datenbank v11.*<br /><br /> Die Sitzung wurde aufgrund übermäßiger TEMPDB-Auslastung beendet. Ändern Sie die Abfrage, um die Verwendung des temporären Tabellenbereichs zu verringern. Weitere Informationen finden Sie unter [Ressourcen Limits](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
@@ -88,7 +88,7 @@ ms.locfileid: "82831999"
 
  Benutzer, die über die Berechtigung zum Zugriff auf die **Master** -Datenbank verfügen, haben schreibgeschützten Zugriff auf diese Sicht.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ### <a name="event-aggregation"></a>Ereignisaggregation
 
@@ -99,7 +99,7 @@ ms.locfileid: "82831999"
   
  Wenn ein Benutzer zum Beispiel aufgrund eines ungültigen Anmeldenamens sieben Mal zwischen 11:00 und 11:05 Uhr am 05.02.2012 (UTC) keine Verbindung mit der Datenbank Database1 herstellen kann, sind diese Informationen in dieser Sicht in einer einzelnen Zeile verfügbar:  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**Beschreibung**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**description**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   

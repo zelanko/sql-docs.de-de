@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 24a900409ae5979c13bdbff0d67d9d2670059208
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de61da8e636ff3f6e38dac6fe85d45eaff75df3c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783870"
 ---
 # <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Erstellt für einen Replikations-Agent ein neues Profil. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
   
@@ -58,7 +58,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
 `[ @profile_type = ] profile_type`Der Typ des Profils. *profile_type* ist vom Datentyp **int**und hat den Standardwert **1**.  
   
- **0** gibt ein Systemprofil an. **1** gibt ein benutzerdefiniertes Profil an. Mit dieser gespeicherten Prozedur können nur benutzerdefinierte Profile erstellt werden. Daher ist der einzige gültige Wert **1**. Erstellt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur Systemprofile.  
+ **0** gibt ein Systemprofil an. **1** gibt ein benutzerdefiniertes Profil an. Mit dieser gespeicherten Prozedur können nur benutzerdefinierte Profile erstellt werden. Daher ist der einzige gültige Wert **1**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Erstellt nur Systemprofile.  
   
 `[ @description = ] 'description'`Ist eine Beschreibung des Profils. die *Beschreibung* ist vom Datentyp **nvarchar (3000)** und hat keinen Standardwert.  
   
@@ -67,7 +67,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_add_agent_profile** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
  Benutzerdefinierte Agentprofile werden mit den standardmäßigen Agentparameterwerten hinzugefügt. Verwenden Sie [sp_change_agent_parameter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) , um diese Standardwerte zu ändern, oder [sp_add_agent_parameter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) , um zusätzliche Parameter hinzuzufügen.  

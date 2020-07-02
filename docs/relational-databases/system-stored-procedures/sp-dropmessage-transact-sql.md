@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa242b7adf46269402b28d459eace429fd247bc1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0c12c9fd481b8fdef50f9a2e0339b276598cd69a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783812"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Löscht eine angegebene benutzerdefinierte Fehlermeldung aus einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Benutzerdefinierte Meldungen können mithilfe der **sys.messages** -Katalogsicht angezeigt werden.  
   
@@ -53,7 +53,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in den festen Serverrollen **sysadmin** und **serveradmin** .  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Solange nicht **all** für *language*angegeben wird, müssen alle lokalisierten Versionen der Nachricht gelöscht werden, bevor die englische Version (USA) der Nachricht gelöscht werden kann.  
   
 ## <a name="examples"></a>Beispiele  

@@ -20,15 +20,15 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c090baea876c662b3fa31210d1eec59139bf4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ab99e0ce3e63a42795d17fc859bbbd3b6c8059d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785019"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Enthält eine Zeile pro Datei einer Datenbank, wie sie in der Datenbank selbst gespeichert ist. Hierbei handelt es sich um eine Sicht pro Datenbank.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82823487"
 |**type_desc**|**nvarchar(60)**|Beschreibung des Dateityps:<br /><br /> ROWS <br /><br /> PROTOKOLL<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|Der Wert kann 0 oder größer sein. Der Wert 0 stellt die Datenbankprotokolldatei dar, und ein Wert größer als 0 stellt die ID der Dateigruppe dar, in der diese Datendatei gespeichert ist.|  
 |**name**|**sysname**|Logischer Name der Datei in der Datenbank|  
-|**physical_name**|**nvarchar(260)**|Betriebssystem-Dateiname Wenn die Datenbank durch ein [lesbares sekundäres](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn-Replikat gehostet wird, gibt **physical_name** den Datei Speicherort der primären Replikat Datenbank an. Um den korrekten Datei Speicherort einer lesbaren sekundären Datenbank zu erhalten, Fragen Sie [sys. sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)ab.|  
+|**physical_name**|**nvarchar(260)**|Betriebssystem-Dateiname Wenn die Datenbank durch ein [lesbares sekundäres](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn-Replikat gehostet wird, gibt **physical_name** den Datei Speicherort der primären Replikat Datenbank an. Um den korrekten Datei Speicherort einer lesbaren sekundären Datenbank zu erhalten, Fragen Sie [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)ab.|  
 |**state**|**tinyint**|Dateistatus:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|Beschreibung des Dateistatus:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Weitere Informationen finden Sie im Abschnitt [Dateistatus](../../relational-databases/databases/file-states.md).|  
 |**size**|**int**|Aktuelle Größe der Datei in Seiten mit einer Größe von 8 KB.<br /><br /> 0 = Nicht zutreffend<br /><br /> Für eine Datenbankmomentaufnahme gibt size den Speicherplatz an, den die Momentaufnahme maximal für die Datei verwenden kann.<br /><br /> Bei FILESTREAM-Dateigruppen Containern entspricht Größe der aktuellen verwendeten Größe des Containers.|  
@@ -68,7 +68,7 @@ ms.locfileid: "82823487"
 >  Wenn Sie große Indizes löschen oder neu erstellen bzw. wenn Sie große Tabellen löschen oder abschneiden, verzögert [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Aufhebung der aktuellen Seitenzuordnungen sowie die zugehörigen Sperren, bis für die Transaktion ein Commit ausgeführt wird. Bei verzögerten Löschvorgängen wird der zugeordnete Speicherplatz nicht sofort freigegeben. Daher spiegeln die Werte, die von sys.database_files sofort nach dem Löschen oder Abschneiden eines großen Objekts zurückgegeben werden, möglicherweise nicht den tatsächlichen verfügbaren Speicherplatz wider.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **public** -Rolle.  Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Erfordert die Mitgliedschaft in der **public** -Rolle. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="examples"></a>Beispiele  
 Die folgende Anweisung gibt den Namen, die Dateigröße und die Menge des leeren Speicherplatzes für jede Datenbankdatei zurück.
