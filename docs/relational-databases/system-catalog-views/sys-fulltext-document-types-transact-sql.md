@@ -20,15 +20,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e60f977c220d14680499ca12a4884e912587b7b6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 454b1460b0f1db0da7298e640b7b4cf081bb90b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790545"
 ---
 # <a name="sysfulltext_document_types-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt eine Zeile für jeden für Volltextindizierungen verfügbaren Dokumenttyp zurück. Jede Zeile stellt eine in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz registrierte IFilter-Schnittstelle dar.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68133854"
 |**class_id**|**uniqueidentifier**|GUID der IFilter-Klasse, die die Dateierweiterung unterstützt.|  
 |**path**|**nvarchar(260)**|Der Pfad zur IFilter-DLL. Der Pfad ist nur für Mitglieder der festen Serverrolle **serveradmin** sichtbar.|  
 |**version**|**sysname**|Version der IFilter-DLL.|  
-|**Bauers**|**sysname**|Name des IFilter-Herstellers.<br /><br /> Hinweis: nur Dokumente mit dem Hersteller [!INCLUDE[msCoName](../../includes/msconame-md.md)] werden unter unterstützt [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|**Bauers**|**sysname**|Name des IFilter-Herstellers.<br /><br /> Hinweis: nur Dokumente mit dem Hersteller [!INCLUDE[msCoName](../../includes/msconame-md.md)] werden unter unterstützt [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

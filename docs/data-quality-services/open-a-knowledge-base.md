@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 91f5e7effe54b9955537d90d639a820b5428a5c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d6eebcf079fbb509838e2a3c08efbee5340c4ff
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809831"
 ---
 # <a name="open-a-knowledge-base"></a>Öffnen einer Wissensdatenbank
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In diesem Thema wird beschrieben, wie eine vorhandene Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) geöffnet und auf die Domänenverwaltung, die Wissensermittlung und das Hinzufügen einer Abgleichsrichtlinie vorbereitet wird.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75246009"
 ##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>Status einer Wissensdatenbank  
  Das Statusfeld gibt an, in welcher Phase einer Aktivität sich die Wissensdatenbank befindet. Wenn Sie die Wissensdatenbank öffnen, wird sie in dieser Phase geöffnet.  
   
--   Leeres>: das Status Feld für eine Wissensdatenbank ist leer, wenn die Wissensdatenbank veröffentlicht wurde, indem Sie in der Domänen Verwaltungs Aktivität auf **veröffentlichen** geklickt und auf Ja klicken, um **die Wissensdatenbank zu veröffentlichen und zu beenden**. ** \< **  
+-   **\<Empty>**: Das Status Feld für eine Wissensdatenbank ist leer, wenn die Wissensdatenbank veröffentlicht wurde, indem Sie in der Domänen Verwaltungs Aktivität auf **veröffentlichen** geklickt und auf Ja klicken, um **die Wissensdatenbank zu veröffentlichen und zu beenden**.  
   
 -   **In Arbeit**: die Arbeit an der Wissensdatenbank wurde gespeichert, indem Sie in der Domänen Verwaltungs Aktivität auf **veröffentlichen** geklickt haben, und klicken Sie **auf Nein-die Arbeit in der Wissensdatenbank speichern und beenden**.  
   
