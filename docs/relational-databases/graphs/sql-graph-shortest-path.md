@@ -1,7 +1,7 @@
 ---
 title: Kürzeste Pfade (SQL-Graph) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b959348aaf7ca293a9d475a8b4eb6cb5cfdee7aa
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753251"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834634"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
@@ -62,7 +62,7 @@ Die Reihenfolge der Diagramm Pfade bezieht sich auf die Reihenfolge der Daten im
 ## <a name="graph-path-aggregate-functions"></a>Diagramm Pfad-Aggregatfunktionen
 Da die Knoten und Kanten, die an einem beliebigen Längen Muster beteiligt sind, eine Auflistung (der Knoten (n) und die in diesem Pfad Traversierung (n) zurückgeben) können die Benutzer die Attribute nicht direkt mithilfe der herkömmlichen TableName. AttributeName-Syntax projizieren. Für Abfragen, bei denen es erforderlich ist, Attributwerte aus den zwischen Knoten-oder edgetabellen zu projizieren, verwenden Sie im durchsuchten Pfad die folgenden Diagramm Pfad Aggregatfunktionen: STRING_AGG, LAST_VALUE, Sum, AVG, min, Max und count. Die allgemeine Syntax für die Verwendung dieser Aggregatfunktionen in der SELECT-Klausel lautet wie folgt:
 
-```
+```syntaxsql
 <GRAPH_PATH_AGGREGATE_FUNCTION>(<expression> , <separator>)  <order_clause>
 
     <order_clause> ::=
@@ -95,8 +95,9 @@ Diese Funktion gibt die Summe der angegebenen Knoten-/edgeattributwerte oder des
 ### <a name="count"></a>COUNT
 Diese Funktion gibt die Anzahl der Werte zurück, die nicht NULL sind. Die Count-Funktion unterstützt den- \* Operator mit einem Knoten-oder edgetabellenalias. Ohne den Knoten-oder edgetabellenalias ist die Verwendung von \* mehrdeutig und führt zu einem Fehler.
 
-    {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
-
+```syntaxsql
+{  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
+```
 
 ### <a name="avg"></a>DURCHSCHN.
 Gibt den Durchschnitt der angegebenen Knoten-/edgeattributwerte oder des Ausdrucks zurück, der im durchsuchten Pfad aufgetreten ist.
@@ -120,7 +121,7 @@ Für die hier gezeigten Beispielabfragen verwenden wir die Knoten-und edgetabell
 ### <a name="a--find-shortest-path-between-2-people"></a>A.  Auffinden des kürzesten Pfads zwischen zwei Personen
  Im folgenden Beispiel finden Sie den kürzesten Pfad zwischen Jacob und Alice. Wir benötigen den Knoten "Person" und "friendof Edge", die aus dem Diagramm Beispielskript erstellt werden. 
 
- ```
+```sql
 SELECT PersonName, Friends
 FROM (  
     SELECT
@@ -135,12 +136,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
  ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  Auffinden des kürzesten Pfads von einem bestimmten Knoten zu allen anderen Knoten im Diagramm. 
  Im folgenden Beispiel werden alle Personen gefunden, mit denen Jakob im Diagramm verbunden ist, und der kürzeste Weg von Jakob zu allen diesen Personen. 
 
- ```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -150,12 +151,12 @@ FROM
     Person FOR PATH  AS Person2
 WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
- ```
+```
 
 ### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  Zählen Sie die Anzahl der Hops/Ebenen, die durchlaufen werden, um von einer Person zu einer anderen im Diagramm zu wechseln.
  Im folgenden Beispiel wird der kürzeste Pfad zwischen Jacob und Alice gefunden, und es wird die Anzahl der Hops ausgegeben, die für den Weg von Jacob zu Alice benötigt werden. 
 
- ```
+```sql
  SELECT PersonName, Friends, levels
 FROM (  
     SELECT
@@ -171,12 +172,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
 ### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D: Suchen von Personen, die von einer bestimmten Person 1-3 Hops entfernt wurden
 Im folgenden Beispiel wird der kürzeste Pfad zwischen Jacob und allen Personen, mit denen er verbunden ist, im Graph 1-3-hophop gefunden. 
 
-```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -191,7 +192,7 @@ AND Person1.name = 'Jacob'
 ### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>E. Suchen von Personen genau 2 Hops von einer bestimmten Person
 Im folgenden Beispiel wird der kürzeste Pfad zwischen Jacob und Personen, die genau 2 Hops sind, im Diagramm gefunden. 
 
-```
+```sql
 SELECT PersonName, Friends
 FROM (
     SELECT

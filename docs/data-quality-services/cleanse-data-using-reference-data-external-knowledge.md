@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: fc0135ed4e4956d6bd98fc0b467a5b6d0a25a013
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 199eac229d752cb019ec027124e83c85ead0176c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75557905"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813899"
 ---
 # <a name="cleanse-data-using-external-knowledge-reference-data---data-quality-services-dqs"></a>Bereinigen von Daten mit (extern) Knowledge Reference Data-Data Quality Services (DQS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In diesem Thema wird beschrieben, wie Daten mithilfe des Wissens von Verweisdatenanbietern bereinigt werden. Während alle Schritte zum Ausführen einer Bereinigungsaktivität dieselben für die Bereinigung Ihrer Daten mithilfe des Wissens der Anbieter von Verweisdaten bleiben, wie unter [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) erläutert, bietet dieses Thema Informationen, die für die Datenbereinigung mithilfe von Reference Data Service in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) spezifisch sind.  
 
@@ -71,20 +71,20 @@ ms.locfileid: "75557905"
     > [!NOTE]  
     >  DQS zeigt auf der Seite **Bereinigen** die Informationen zu den Domänen an, die auf die folgenden zwei Weisen mit dem Verweisdatendienst verbunden sind:  
     >   
-    >  -   Eine Meldung wird unter der Schaltfläche **Start** angezeigt: " \<Domains domain1> \<, Domäne2>,... \<Domainn-> werden mithilfe des Reference Data Service-Anbieters bereinigt. " In diesem Beispiel wird die folgende Meldung angezeigt: „Domain Address Verification is cleansed using reference data service provider“ (Domänenadressüberprüfung wird mithilfe von Verweisdaten-Dienstanbietern bereinigt).  
+    >  -   Eine Meldung wird unter der Schaltfläche **Start** angezeigt: "Domänen \<Domain1> , \<Domain2> ,... \<DomainN> werden mithilfe des Reference Data Service-Anbieters bereinigt. " In diesem Beispiel wird die folgende Meldung angezeigt: „Domain Address Verification is cleansed using reference data service provider“ (Domänenadressüberprüfung wird mithilfe von Verweisdaten-Dienstanbietern bereinigt).  
     > -   Ein Symbol, die ![Domäne ist an RDS angefügt](../data-quality-services/media/dqs-rdsindicator.JPG "Domäne ist an RDS angefügt"), wird im Bereich **Profiler** für die Domänen angezeigt, die dem Reference Data Service-Anbieter zugeordnet sind. In diesem Beispiel wird das Symbol für die Verbunddomäne **Adressüberprüfung** angezeigt.  
   
 4.  Prüfen Sie auf der Seite **Ergebnisse verwalten und anzeigen** Ihre Domänenwerte. Der Verweisdatendienst kann ggf. mehr als einen Vorschlag für einen Wert anzeigen, je nach der maximalen Anzahl von Vorschlägen, die im Feld **Vorgeschlagene Kandidaten** während der Zuordnung der Domäne zum Verweisdatendienst angegeben sind. Zwei Vorschläge werden z. B. für die folgende US-Adresse angezeigt:  
   
      **Ursprünglicher Wert:**  
   
-    |Adresszeile|City|State|Zip|  
+    |Adresszeile|City|Status|Zip|  
     |------------------|----------|-----------|---------|  
     |1 msft way|Redmond||98052|  
   
      **Vorgeschlagene Werte:**  
   
-    |Adresszeile|City|State|Zip|  
+    |Adresszeile|City|Status|Zip|  
     |------------------|----------|-----------|---------|  
     |1 Microsoft Way|Redmond|WA|98052|  
     |Postfach 1|Redmond|WA|98073|  
