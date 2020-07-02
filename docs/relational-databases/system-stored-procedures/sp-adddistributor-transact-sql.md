@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5c82ffa7ad254fc56f1c544a714d8633b7d1a33c
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: af202181425b751d684d833946a52df036633afb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760235"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Erstellt einen Eintrag in der [sys.sysServer](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) -Tabelle (sofern nicht vorhanden), markiert den Server Eintrag als Verteiler und speichert Eigenschafts Informationen. Diese gespeicherte Prozedur wird auf dem Verteiler für die master-Datenbank ausgeführt, um den Server als Verteiler zu registrieren und zu markieren. Im Falle eines Remoteverteilers wird sie zusätzlich auf dem Verleger für die master-Datenbank ausgeführt, um den Remoteverteiler zu registrieren.  
   

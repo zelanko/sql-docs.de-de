@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1c4cd06a540709b5e100a086a426fd5bdb46abf5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d18b7657ca1274a2058ef25543309bffb97de851
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760171"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Listet Datenbanken auf, die in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten sind bzw. auf die der Zugriff über ein Datenbank-Gateway möglich ist.  
   
@@ -49,7 +49,7 @@ sp_databases
 |**DATABASE_SIZE**|**int**|Die Größe der Datenbank in Kilobyte.|  
 |**HINWEISE**|**varchar (254)**|Im [!INCLUDE[ssDE](../../includes/ssde-md.md)]gibt dieses Feld immer NULL zurück.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die zurückgegebenen Datenbanknamen können als Parameter für die USE-Anweisung verwendet werden, um den aktuellen Datenbankkontext zu ändern.  
   
  Für**sp_databases** gibt es in Open Database Connectivity (ODBC) keine Entsprechung.  

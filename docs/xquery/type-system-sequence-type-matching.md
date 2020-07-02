@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8904ab2ea9e8f78037b03f886e6b61d692b65e60
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 9d2163610d1ea537301ec61e1a34c8b6e727d6e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759450"
 ---
 # <a name="type-system---sequence-type-matching"></a>Typensystem – Zuordnen des Sequenztyps
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  Der Wert eines XQuery-Ausdrucks ist immer eine Sequenz aus null oder mehreren Elementen. Ein Item kann entweder ein atomarer Wert oder ein Knoten sein. Der Sequenztyp bezieht sich auf die Möglichkeit, den von einem Abfrageausdruck zurückgegebenen Sequenztyp einem bestimmten Typ zuzuordnen. Zum Beispiel:  
+  Der Wert eines XQuery-Ausdrucks ist immer eine Sequenz aus null oder mehreren Elementen. Ein Item kann entweder ein atomarer Wert oder ein Knoten sein. Der Sequenztyp bezieht sich auf die Möglichkeit, den von einem Abfrageausdruck zurückgegebenen Sequenztyp einem bestimmten Typ zuzuordnen. Beispiel:  
   
 -   Wenn der Ausdruckswert atomar ist, möchten Sie vielleicht wissen, ob er vom Typ einer ganzen Zahl (integer), einem Dezimalwert (decimal) oder einer Zeichenfolge (string) entspricht.  
   

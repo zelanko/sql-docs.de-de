@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13ba20770fd97d0db193ab492ae0958cf4c7ad35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771355"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758031"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Erstellt eine neue Verteilungsdatenbank und installiert das Verteilerschema. Die Verteilungsdatenbank speichert Prozeduren, Schemas und Metadaten, die bei der Replikation verwendet werden. Diese gespeicherte Prozedur wird auf dem Verteiler für die master-Datenbank ausgeführt, um die Verteilungsdatenbank zu erstellen und um die erforderlichen Tabellen und gespeicherten Prozeduren zu installieren, die für die Aktivierung der Replikationsverteilung erforderlich sind.  
   
@@ -55,7 +55,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>Argumente  
 `[ @database = ] database'`Der Name der zu erstellenden Verteilungs Datenbank. *Database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn die angegebene Datenbank bereits vorhanden und noch nicht als Verteilungsdatenbank gekennzeichnet ist, werden die zum Aktivieren der Verteilung erforderlichen Objekte installiert, und die Datenbank wird als Verteilungsdatenbank gekennzeichnet. Wenn die angegebene Datenbank bereits als Verteilungsdatenbank aktiviert wurde, wird ein Fehler zurückgegeben.  
   
-`[ @data_folder = ] 'data_folder'_`Der Name des Verzeichnisses, in dem die Datendatei der Verteilungs Datenbank gespeichert wird. *data_folder* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Wenn der Wert NULL ist, wird das Datenverzeichnis [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für diese Instanz von verwendet, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`z. b..  
+`[ @data_folder = ] 'data_folder'_`Der Name des Verzeichnisses, in dem die Datendatei der Verteilungs Datenbank gespeichert wird. *data_folder* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Wenn der Wert NULL ist, wird das Datenverzeichnis für diese Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, z `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` . b..  
   
 `[ @data_file = ] 'data_file'`Der Name der Datenbankdatei. *data_file* ist vom Datentyp **nvarchar (255)** und hat den Standardwert **Database**. Bei NULL erstellt die gespeicherte Prozedur einen Dateinamen mithilfe des Datenbanknamens.  
   
@@ -65,7 +65,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @log_file = ] 'log_file'`Der Name der Protokolldatei. *log_file* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Bei NULL erstellt die gespeicherte Prozedur einen Dateinamen mithilfe des Datenbanknamens.  
   
-`[ @log_file_size = ] log_file_size`Die anfängliche Protokolldatei Größe in Megabyte (MB). *log_file_size* ist vom Datentyp **int**. der Standardwert ist 0 MB. Dies bedeutet, dass die Dateigröße mit der kleinsten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zulässigen Protokolldatei Größe erstellt wird.  
+`[ @log_file_size = ] log_file_size`Die anfängliche Protokolldatei Größe in Megabyte (MB). *log_file_size* ist vom Datentyp **int**. der Standardwert ist 0 MB. Dies bedeutet, dass die Dateigröße mit der kleinsten von zulässigen Protokolldatei Größe erstellt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @min_distretention = ] min_distretention`Die minimale Beibehaltungs Dauer in Stunden, bevor Transaktionen aus der Verteilungs Datenbank gelöscht werden. *min_distretention* ist vom Datentyp **int**und hat den Standardwert 0 Stunden.  
   
@@ -73,7 +73,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @history_retention = ] history_retention`Die Anzahl der Stunden, für die der Verlauf beibehalten werden soll. *history_retention* ist vom Datentyp **int**und hat den Standardwert 48 Stunden.  
   
-`[ @security_mode = ] security_mode`Der Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verteiler verwendet werden soll. *security_mode* ist vom Datentyp **int**und hat den Standardwert 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Authentifizierung an. **1** gibt die integrierte Windows-Authentifizierung an.  
+`[ @security_mode = ] security_mode`Der Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verteiler verwendet werden soll. *security_mode* ist vom Datentyp **int**und hat den Standardwert 1. **0** gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung an. **1** gibt die integrierte Windows-Authentifizierung an.  
   
 `[ @login = ] 'login'`Der Anmelde Name, der beim Herstellen einer Verbindung mit dem Verteiler verwendet wird, um die Verteilungs Datenbank zu erstellen. Dies ist erforderlich, wenn *security_mode* auf **0**festgelegt ist. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
@@ -97,7 +97,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_adddistributiondb** wird bei allen Replikations Typen verwendet. Diese gespeicherte Prozedur kann jedoch nur auf einem Verteiler ausgeführt werden.  
   
  Sie müssen den Verteiler konfigurieren, indem Sie [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) vor dem Ausführen **sp_adddistributiondb**ausführen.  

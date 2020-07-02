@@ -18,15 +18,15 @@ ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd18fe45b25f4537c06de46c612f0508f9f86f9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758010"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Fügt eine neue erweiterte Eigenschaft zu einem Datenbankobjekt hinzu.  
   
@@ -56,10 +56,10 @@ sp_addextendedproperty
  [ @name ] = {'*property_name*'}  
  Der Name der hinzu zufügenden Eigenschaft. *property_name* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein. Namen können auch leere oder nicht alphanumerische Zeichenfolgen sowie binäre Werte sein.  
   
- [ @value= ] {'*value*'}  
+ [ @value =] {'*Wert*'}  
  Der Wert, der der Eigenschaft zugeordnet werden soll. der Wert ist **sql_variant**. der Standard *Wert* ist NULL. *value* kann nicht größer als 7.500 Bytes sein.  
   
- [ @level0type= ] {'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  Der Typ des Objekts der Ebene 0. *level0_object_type* ist vom Datentyp **varchar (128)** und hat den Standardwert NULL.  
   
  Gültige Eingabewerte sind ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE und NULL.  
@@ -67,24 +67,24 @@ sp_addextendedproperty
 > [!IMPORTANT]  
 >  In zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird es nicht mehr möglich sein, USER als Typ der Ebene 0 in einer erweiterten Eigenschaft eines Typobjekts der Ebene 1 anzugeben. Verwenden Sie stattdessen SCHEMA als Typ der Ebene 0. Beispiel: Wenn Sie eine erweiterte Eigenschaft für eine Tabelle definieren, geben Sie das Schema der Tabelle statt eines Benutzernamens an. In zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann TYPE nicht mehr als Typ der Ebene 0 angegeben werden. Verwenden Sie für TYPE als Typ der Ebene 0 SCHEMA und TYPE als Typ der Ebene 1.  
   
- [ @level0name= ] {'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  Der Name des angegebenen Objekttyps der Ebene 0. *level0_object_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
- [ @level1type= ] {'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  Der Typ des Objekts der Ebene 1. *level1_object_type* ist vom Datentyp **varchar (128)** und hat den Standardwert NULL. Gültige Eingaben sind Aggregate, Default, Function, Logical File Name, PROCEDURE, Queue, Rule, Sequence, Synonym, Table, TABLE_TYPE, Type, View, XML Schema Collection und NULL.    
- [ @level1name= ] {'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  Der Name des angegebenen Objekttyps der Ebene 1. *level1_object_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
- [ @level2type= ] {'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  Der Typ des Objekts der Ebene 2. *level2_object_type* ist vom Datentyp **varchar (128)** und hat den Standardwert NULL. Gültige Eingabewerte sind COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL.  
   
- [ @level2name= ] {'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  Der Name des angegebenen Objekttyps der Ebene 2. *level2_object_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Für das Angeben erweiterter Eigenschaften werden die Objekte in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank in drei Ebenen unterteilt: 0, 1 und 2. Ebene 0 ist die höchste Ebene und als im Datenbankbereich enthaltene Objekte definiert. Objekte der Ebene 1 sind in einem Schema- oder Benutzerbereich enthalten, und Objekte der Ebene 2 sind in Objekten der Ebene 1 enthalten. Erweiterte Eigenschaften können für Objekte auf einer dieser Ebenen definiert werden.  
   
  Verweise auf ein Objekt einer Ebene müssen mit den Namen der Objekte der höheren Ebene gekennzeichnet werden, die diese besitzen oder enthalten. Wenn Sie beispielsweise einer Tabellenspalte (Ebene 2) eine erweiterte Eigenschaft hinzufügen, müssen Sie auch den Tabellenamen (Ebene 1) angeben, der die Spalte und das Schema (Ebene 0) enthält, in dem die Tabelle enthalten ist.  
@@ -149,7 +149,7 @@ EXEC sp_addextendedproperty
 GO  
 ```  
   
-### <a name="d-adding-an-extended-property-to-a-filegroup"></a>D. Hinzufügen einer erweiterten Eigenschaft zu einer Dateigruppe  
+### <a name="d-adding-an-extended-property-to-a-filegroup"></a>D: Hinzufügen einer erweiterten Eigenschaft zu einer Dateigruppe  
  Im folgenden Beispiel wird der `PRIMARY` -Dateigruppe eine erweiterte Eigenschaft hinzugefügt.  
   
 ```  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ee38ac3c19c9f5d5b36f896c1018a16e98e37cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758002"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Erstellt oder aktualisiert eine Zuordnung zwischen einem Anmeldenamen in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einem Sicherheitskonto auf einem Remoteserver.  
   
@@ -51,10 +51,10 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  Der Wert true gibt an, dass Anmeldungen ihre eigenen Anmelde Informationen verwenden, um eine Verbindung mit *rmtrvname*herzustellen, wobei die Argumente *rmtuser* und *rmtpassword* ignoriert werden. FALSE gibt an, dass die Argumente *rmtuser* und *rmtpassword* verwendet werden, um eine Verbindung mit *rmzrvname* für die angegebene *loczuweisung*herzustellen. Wenn *rmtuser* und *rmtpassword* ebenfalls auf NULL festgelegt sind, wird kein Anmelde Name oder Kennwort verwendet, um eine Verbindung mit dem Verbindungs Server herzustellen.  
   
  `[ @locallogin = ] 'locallogin'`  
- Ein Anmeldename auf dem lokalen Server. *loczuweisung* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. NULL gibt an, dass dieser Eintrag für alle lokalen Anmeldungen gilt, die eine Verbindung mit *rmstirvname*herstellen. Wenn der Wert nicht NULL ist, kann *loczuweisung* ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmelde Name oder ein Windows-Anmelde Name sein. Dem Windows-Anmeldenamen muss das Recht zum Zugreifen auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt worden sein. Dies kann entweder direkt oder über die Mitgliedschaft in einer Windows-Gruppe erfolgen, der das Zugriffsrecht erteilt wurde.  
+ Ein Anmeldename auf dem lokalen Server. *loczuweisung* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. NULL gibt an, dass dieser Eintrag für alle lokalen Anmeldungen gilt, die eine Verbindung mit *rmstirvname*herstellen. Wenn der Wert nicht NULL ist, kann *loczuweisung* ein- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name oder ein Windows-Anmelde Name sein. Dem Windows-Anmeldenamen muss das Recht zum Zugreifen auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt worden sein. Dies kann entweder direkt oder über die Mitgliedschaft in einer Windows-Gruppe erfolgen, der das Zugriffsrecht erteilt wurde.  
   
  `[ @rmtuser = ] 'rmtuser'`  
- Der Remote Anmelde Name, der verwendet wird, um eine Verbindung mit *rmtrvname* herzustellen, wenn @useself false ist. Wenn der Remote Server eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist, die keine Windows-Authentifizierung verwendet, ist *rmtuser* eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung. *rmtuser* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ Der Remote Anmelde Name, der verwendet wird, um eine Verbindung mit *rmtrvname* herzustellen, wenn @useself false ist. Wenn der Remote Server eine Instanz von ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die keine Windows-Authentifizierung verwendet, ist *rmtuser* eine- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung. *rmtuser* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
  Das Kennwort, das mit *rmtuser*verknüpft ist. *rmtpassword* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
@@ -62,13 +62,13 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn sich ein Benutzer beim lokalen Server anmeldet und eine verteilte Abfrage ausführt, die auf eine Tabelle auf dem Verbindungsserver zugreift, muss sich der lokale Server beim Verbindungsserver im Auftrag des Benutzers anmelden, um auf diese Tabelle zugreifen zu können. Geben Sie mithilfe von sp_addlinkedsrvlogin die Anmeldeinformationen an, die der lokale Server zum Anmelden beim Verbindungsserver verwendet.  
   
 > [!NOTE]  
 >  Um bei Verwendung einer Tabelle auf einem Verbindungsserver die besten Abfragepläne zu erstellen, muss der Abfrageprozessor Datenverteilungsstatistiken vom Verbindungsserver aufweisen. Benutzer, die über eingeschränkte Berechtigungen für beliebige Tabellenspalten verfügen, haben möglicherweise nicht die erforderlichen Berechtigungen, um alle nützlichen Statistiken abzurufen. Der Abfrageplan kann daher weniger effizient und die Leistung beeinträchtigt sein. Zum Anzeigen aller verfügbaren Statistiken muss der Benutzer Besitzer der Tabelle oder Mitglied der festen Serverrolle sysadmin, der festen Datenbankrolle db_owner oder der festen Datenbankrolle db_ddladmin auf dem Verbindungsserver sein, wenn der Verbindungsserver eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist. In SQL Server 2012 SP1 wurden die Berechtigungseinschränkungen zum Abrufen von Statistiken geändert. Benutzer mit der SELECT-Berechtigung können auf Statistiken zugreifen, die über DBCC SHOW_STATISTICS verfügbar sind. Weitere Informationen finden Sie im Abschnitt "Berechtigungen" in [DBCC SHOW_STATISTICS &#40;Transact-SQL-&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
   
- Eine Standardzuordnung zwischen allen Anmeldenamen auf dem lokalen Server und Remoteanmeldenamen auf dem Verbindungsserver wird durch Ausführen von sp_addlinkedserver automatisch erstellt. Die Standardzuordnung legt fest, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Anmeldeinformationen der lokalen Anmeldung für den Zugriff auf den Verbindungsserver im Auftrag des Anmeldenamens verwendet. Dies entspricht dem Ausführen von sp_addlinkedsrvlogin, @useself wobei für den Verbindungs Server auf **true** festgelegt ist, ohne dass ein lokaler Benutzername angegeben wird. Verwenden Sie sp_addlinkedsrvlogin nur, um die Standardzuordnung zu ändern oder um neue Zuordnungen für bestimmte lokale Anmeldenamen hinzuzufügen. Mithilfe von sp_droplinkedsrvlogin löschen Sie die Standardzuordnung oder eine beliebige andere Zuordnung.  
+ Eine Standardzuordnung zwischen allen Anmeldenamen auf dem lokalen Server und Remoteanmeldenamen auf dem Verbindungsserver wird durch Ausführen von sp_addlinkedserver automatisch erstellt. Die Standardzuordnung legt fest, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Anmeldeinformationen der lokalen Anmeldung für den Zugriff auf den Verbindungsserver im Auftrag des Anmeldenamens verwendet. Dies entspricht dem Ausführen @useself von sp_addlinkedsrvlogin, wobei für den Verbindungs Server auf **true** festgelegt ist, ohne dass ein lokaler Benutzername angegeben wird. Verwenden Sie sp_addlinkedsrvlogin nur, um die Standardzuordnung zu ändern oder um neue Zuordnungen für bestimmte lokale Anmeldenamen hinzuzufügen. Mithilfe von sp_droplinkedsrvlogin löschen Sie die Standardzuordnung oder eine beliebige andere Zuordnung.  
   
  Anstatt mit sp_addlinkedsrvlogin eine vordefinierte Anmeldenamenzuordnung erstellen zu müssen, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch die Windows-Anmeldeinformationen für die Sicherheit (Windows-Anmeldename und -Kennwort) eines Benutzers verwenden, der die Abfrage für den Zugriff auf einen Verbindungsserver ausgibt. Dazu müssen die folgenden Bedingungen erfüllt sein:  
   
@@ -97,7 +97,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 EXEC sp_addlinkedsrvlogin 'Accounts';  
 ```  
   
- Oder  
+ oder  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts', 'true';  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fc35a4c163642f711810f49a816e6c553855b6d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a26ca71a9db5d85f79787f19563e87ee7e49b78d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760130"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Statuszeilen für eine überwachte Datenbank aus der Statustabelle zurück, in der der Verlauf des Datenbankspiegelungs-Monitors gespeichert ist. Dabei können Sie angeben, ob die Prozedur zuvor den letzten Status abrufen soll.  
   
@@ -99,7 +99,7 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|Ungefähre Systemuhrzeit des Prinzipals, auf deren Stand die Spiegelungsdatenbank derzeit gebracht wird. Der Wert ist nur in der Prinzipalserverinstanz sinnvoll.|  
 |**local_time**|**datetime**|Systemuhrzeit in der lokalen Serverinstanz, zu der diese Zeile aktualisiert wurde.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_dbmmonitorresults** können nur im Kontext der **msdb** -Datenbank ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

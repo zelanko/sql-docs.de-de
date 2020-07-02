@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a41b725d46c96f1ab79444246ab538b0c3f539f0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: de9b846bf0ce5f821d7aeed213c353ac383d5944
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758748"
 ---
 # <a name="sp_restoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Mit dieser gespeicherten Prozedur werden Identitätsbereichszuweisungen aktualisiert. Dies stellt sicher, dass die automatische Identitätsbereichsverwaltung ordnungsgemäß ausgeführt wird, nachdem ein Verleger von einer Sicherung wiederhergestellt wurde. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -45,7 +45,7 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_restoremergeidentityrange** wird bei der Mergereplikation verwendet.  
   
  **sp_restoremergeidentityrange** Ruft die maximalen Informationen zur Identitäts Bereichs Zuordnung vom Verteiler ab und aktualisiert Werte in der Spalte **max_used** der [MSmerge_identity_range_allocations &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) für die Artikel, die die automatische Identitäts Bereichs Verwaltung verwenden.  

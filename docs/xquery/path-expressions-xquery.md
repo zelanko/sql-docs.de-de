@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b93fa36c-bf69-46b9-b137-f597d66fd0c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e4c87a0695c57461f444c8be4318bcd06cfdefe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d1eccee8a5acfbb810ed7636f5d073c2644f0342
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759485"
 ---
 # <a name="path-expressions-xquery"></a>Pfadausdrücke (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Über XQuery-Pfadausdrücke werden in einem Dokument enthaltene Knoten gesucht, z. B. Element-, Attribut- und Textknoten. Das Ergebnis eines Pfadausdrucks erscheint immer in der Dokumentreihenfolge ohne Duplikatknoten in der Ergebnissequenz. Beim Angeben eines Pfads können Sie entweder die vollständige oder die abgekürzte Syntax verwenden. Die folgenden Informationen beziehen sich auf die ungekürzte Syntax. Die abgekürzte Syntax wird anschließend beschrieben.  
   
@@ -34,17 +34,17 @@ ms.locfileid: "81388069"
   
  Ein Pfadausdruck kann relativ oder absolut sein. Beide sind im Folgenden beschrieben:  
   
--   Ein relativer Pfadausdruck besteht aus einem oder mehreren Schritten, die durch einen oder zwei Schrägstriche (/ oder //) getrennt sind. Beispiel: `child::Features` ist ein relativer Pfadausdruck, in dem `Child` nur auf die untergeordneten Knoten des Kontextknotens verweist. Dies ist der Knoten der gegenwärtig verarbeitet wird. Der Ausdruck ruft die \<Funktionen> untergeordneten Elementknoten des Kontext Knotens ab.  
+-   Ein relativer Pfadausdruck besteht aus einem oder mehreren Schritten, die durch einen oder zwei Schrägstriche (/ oder //) getrennt sind. Beispiel: `child::Features` ist ein relativer Pfadausdruck, in dem `Child` nur auf die untergeordneten Knoten des Kontextknotens verweist. Dies ist der Knoten der gegenwärtig verarbeitet wird. Der Ausdruck ruft die untergeordneten \<Features> Elementknoten des Kontext Knotens ab.  
   
--   Ein absoluter Pfadausdruck beginnt mit einem oder zwei Schrägstrichen (/ oder //), auf die ein optionaler relativer Pfad folgt. Beispiel: Der erste Schrägstrich des Ausdrucks `/child::ProductDescription` gibt an, dass es sich um einen absoluten Pfadausdruck handelt. Da ein Schrägstrich am Anfang eines Ausdrucks den Stamm Knoten des Dokuments des Kontext Knotens zurückgibt, gibt der Ausdruck alle unter \<geordneten Elemente des Knotens "ProductDescription"> dem Dokument Stamm zurück.  
+-   Ein absoluter Pfadausdruck beginnt mit einem oder zwei Schrägstrichen (/ oder //), auf die ein optionaler relativer Pfad folgt. Beispiel: Der erste Schrägstrich des Ausdrucks `/child::ProductDescription` gibt an, dass es sich um einen absoluten Pfadausdruck handelt. Da ein Schrägstrich am Anfang eines Ausdrucks den Stamm Knoten des Dokuments des Kontext Knotens zurückgibt, gibt der Ausdruck alle untergeordneten Elementknoten des Stamm Knotens zurück \<ProductDescription> .  
   
      Wenn ein absoluter Pfad mit einem einzelnen Schrägstrich beginnt, kann darauf ein relativer Pfad folgen. Wenn Sie nur einen Schrägstrich angeben, gibt der Ausdruck den Stammknoten des Kontextknotens zurück. Bei einem XML-Datentyp ist dies der Dokumentknoten.  
   
- Ein typischer Pfadausdruck besteht aus Schritten. Der absolute Pfad Ausdruck `/child::ProductDescription/child::Summary`enthält z. b. zwei durch einen Schrägstrich getrennte Schritte.  
+ Ein typischer Pfadausdruck besteht aus Schritten. Der absolute Pfad Ausdruck enthält z. b `/child::ProductDescription/child::Summary` . zwei durch einen Schrägstrich getrennte Schritte.  
   
--   Im ersten Schritt werden die unter \<geordneten Elemente des Knotens "ProductDescription"> "Element" abgerufen.  
+-   Der erste Schritt ruft die untergeordneten \<ProductDescription> Elementknoten des Dokument Stamms ab.  
   
--   Der zweite Schritt ruft die \<Zusammenfassung> untergeordneten Elementknoten für jeden \<abgerufenen ProductDescription> Element-Knoten ab, der wiederum zum Kontext Knoten wird.  
+-   Der zweite Schritt ruft die untergeordneten \<Summary> Elementknoten für jeden abgerufenen \<ProductDescription> Elementknoten ab, der wiederum zum Kontext Knoten wird.  
   
  Bei einem Schritt eines Pfadausdrucks kann es sich um einen Achsen- oder um einen allgemeinen Schritt handeln.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "81388069"
   
 -   Der relative Pfadausdruck `child::ProductDescription/child::Features` enthält zwei durch einen Schrägstrich getrennte Schritte. Beide Schritte geben eine untergeordnete Achse an. ProductDescription und Features sind Knotentests.  
   
--   Der relative Pfad Ausdruck `child::root/child::Location[attribute::LocationID=10]`enthält zwei durch einen Schrägstrich getrennte Schritte. Der erste Schritt gibt eine Achse (`child`) und einen Knotentest (`root`) an. Der zweite Schritt gibt alle drei Komponenten eines Achsenschritts an: eine Achse (child), einen Knotentest (`Location`) und ein Prädikat (`[attribute::LocationID=10]`).  
+-   Der relative Pfad Ausdruck `child::root/child::Location[attribute::LocationID=10]` enthält zwei durch einen Schrägstrich getrennte Schritte. Der erste Schritt gibt eine Achse (`child`) und einen Knotentest (`root`) an. Der zweite Schritt gibt alle drei Komponenten eines Achsenschritts an: eine Achse (child), einen Knotentest (`Location`) und ein Prädikat (`[attribute::LocationID=10]`).  
   
  Weitere Informationen zu den Komponenten eines Achsen Schritts finden Sie unter [angeben der Achse in einem Pfad Ausdrucks Schritt](../xquery/path-expressions-specifying-axis.md), [Angeben eines Knoten Tests in einem Pfad Ausdrucks](../xquery/path-expressions-specifying-node-test.md)Schritt und [Angeben von Prädikaten in einem Pfad Ausdrucks](../xquery/path-expressions-specifying-predicates.md)Schritt.  
   

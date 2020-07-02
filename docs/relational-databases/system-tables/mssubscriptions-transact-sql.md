@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4ed943e0768e031c07fa1748961e311373af8ad
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 787217996a491b37bb7b46ec505ac7d374d9aed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812207"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758675"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die **msabonnements** -Tabelle enthält eine Zeile für jeden veröffentlichten Artikel in einem Abonnement, das vom lokalen Verteiler bedient wird. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82812207"
 |**subscription_seqno**|**varbinary(16)**|Die Sequenznummer der Momentaufnahmetransaktion.|  
 |**snapshot_seqno_flag**|**bit**|Gibt die Quelle der Sequenznummer der Momentaufnahme Transaktion an, wobei der Wert **1** bedeutet, dass **subscription_seqno** die Momentaufnahme Sequenznummer ist.|  
 |**independent_agent**|**bit**|Zeigt an, ob ein Verteilungs-Agent im Einzelplatzmodus für diese Veröffentlichung vorhanden ist.|  
-|**subscription_time**|**datetime**|Nur zur internen Verwendung.|  
+|**subscription_time**|**datetime**|Nur interne Verwendung.|  
 |**loopback_detection**|**bit**|Gilt für Abonnements, die Teil einer bidirektionalen Transaktionsreplikationstopologie sind. Bestimmt, ob der Verteilungs-Agent Transaktionen des Abonnenten zurück an den Abonnenten sendet:<br /><br /> **1** = sendet nicht zurück.<br /><br /> **0** = sendet zurück.<br /><br />|  
 |**agent_id**|**int**|Die ID der Momentaufnahme.|  
 |**update_mode**|**tinyint**|Der Typ des Updates.|  

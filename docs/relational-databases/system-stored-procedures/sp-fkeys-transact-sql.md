@@ -18,15 +18,15 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cee63720a743de8e2aed496bf3f7f3e791780575
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6d5eded47338315fa69bcb7a9dd270108f69574c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820529"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757955"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Gibt logische Fremdschlüsselinformationen für die aktuelle Umgebung zurück. Diese Prozedur zeigt Fremdschlüsselbeziehungen an, wobei auch deaktivierte Fremdschlüssel berücksichtigt werden.  
   
@@ -89,7 +89,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  Die zurückgegebenen Informationen werden nach folgenden Spalten sortiert: FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME und KEY_SEQ.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Eine Anwendungscodierung, die Tabellen mit deaktivierten Fremdschlüsseln enthält, kann folgendermaßen implementiert werden:  
   
 -   Deaktivieren Sie bei Verwendung der Tabellen vorübergehend die Überprüfung von Einschränkungen (ALTER TABLE NOCHECK oder CREATE TABLE NOT FOR REPLICATION), und aktivieren Sie sie später wieder.  

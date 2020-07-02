@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0aaa6b412f1ccbbc71e9e5b19f68a518912f333
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 30488b669265b66036b591191e8e528e1ef74b35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757761"
 ---
 # <a name="mssubscription_articles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die **MSsubscription_articles** Tabelle enthält Informationen zu den Artikeln in einem in der Warteschlange befindlichen Abonnement. Diese Tabelle wird nur für die folgenden Replikationstypen aufgefüllt: Verzögertes Update über eine Warteschlange und sofortiges Update mit verzögertem Update über eine Warteschlange als Failover.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82812261"
 |**artid**|**int**|Die Artikel-ID aus der **sysarticles** -Tabelle.|  
 |**Artikel**|**sysname**|Der Name des Artikels in der **sysarticles** -Tabelle.|  
 |**dest_table**|**sysname**|Der Name der Ziel Tabelle aus der **sysarticles** -Tabelle.|  
-|**owner**|**sysname**|Der Besitzer des Abonnements.|  
+|**Eigentor**|**sysname**|Der Besitzer des Abonnements.|  
 |**cft_table**|**sysname**|Der Name der Konflikttabelle dieses Artikels für den Replikationstyp Verzögertes Update über eine Warteschlange.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

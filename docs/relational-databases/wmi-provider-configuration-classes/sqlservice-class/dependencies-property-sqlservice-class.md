@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 993c922562773648aac5460116ba6e343a72132f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 26ed0a670f5fafeee08cd6882d6a9f71cd071670
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659279"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759829"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies-Eigenschaft (SqlService-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ruft eine Liste von Diensten ab, die von dem Dienst, auf den verwiesen wird, abhängig sind.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,7 +42,7 @@ object.Dependencies [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenarray, das eine Liste von Diensten enthält, die von dem Dienst, auf den verwiesen wird, abhängig sind.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

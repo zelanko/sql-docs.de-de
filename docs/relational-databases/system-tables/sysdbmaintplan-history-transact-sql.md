@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 088dbf0fb51edddedd37fdd176becd413fc229ee
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a31ee86fa0b73d21ba6f6c91a068df2c8137b63c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758606"
 ---
 # <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82820975"
 |**database_name**|**sysname**|Der Name der Datenbank, die dem Datenbank-Wartungsplan zugeordnet ist.|  
 |**server_name**|**sysname**|Systemname.|  
 |**activity**|**nvarchar(128)**|Die vom Datenbankwartungsplan durchgeführte Aktivität (z. B. Transaktionsprotokoll sichern usw.).|  
-|**erfolgreich**|**bit**|**0** = Erfolgreich **1** = Fehler|  
+|**Erfolgreich**|**bit**|**0** = Erfolgreich **1** = Fehler|  
 |**end_time**|**datetime**|Zeitpunkt, an dem die Aktion abgeschlossen wurde.|  
 |**duration**|**int**|Erforderliche Zeitspanne, um die Aktion im Rahmen des Datenbankwartungsplans abzuschließen.|  
 |**start_time**|**datetime**|Zeitpunkt, an dem die Aktion gestartet wurde.|  

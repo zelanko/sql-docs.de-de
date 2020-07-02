@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53af39302f88f88633896e54301501ead8ff6f9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771340"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760211"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Erstellt einen Agentauftrag, der eine Momentaufnahme gefilterter Daten für eine Veröffentlichung mit parametrisierten Zeilenfiltern generiert. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt. Ein Administrator kann diese gespeicherte Prozedur verwenden, um manuell Aufträge für Momentaufnahmen gefilterter Daten für Abonnenten zu erstellen.  
   
@@ -80,8 +80,8 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|Einmalig|  
 |**2**|On-Demand-Streaming|  
 |**4** (Standard)|Täglich|  
-|**88**|Wöchentlich|  
-|**Uhr**|Monatlich|  
+|**8**|Wöchentlich|  
+|**16**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64**|Autostart|  
 |**128**|Wiederholt|  
@@ -92,8 +92,8 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |--------------------------------|-------------------------------------|  
 |**1**|*frequency_interval* wird nicht verwendet.|  
 |**4** (Standard)|Alle *frequency_interval* Tage, wobei der Standardwert täglich ist.|  
-|**88**|*frequency_interval* ist eine oder mehrere der folgenden (kombiniert mit einem [&#124; &#40;bitweisen or&#41; &#40;Transact-SQL-&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md) logischen Operator):<br /><br /> **1** = Sonntag &#124; **2** = Montag &#124; **4** = Dienstag &#124; **8** = Mittwoch &#124; **16** = Donnerstag &#124; **32** = Freitag &#124; **64** = Samstag|  
-|**Uhr**|Am *frequency_interval* Tag des Monats.|  
+|**8**|*frequency_interval* ist eine oder mehrere der folgenden (kombiniert mit einem [&#124; &#40;bitweisen or&#41; &#40;Transact-SQL-&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md) logischen Operator):<br /><br /> **1** = Sonntag &#124; **2** = Montag &#124; **4** = Dienstag &#124; **8** = Mittwoch &#124; **16** = Donnerstag &#124; **32** = Freitag &#124; **64** = Samstag|  
+|**16**|Am *frequency_interval* Tag des Monats.|  
 |**32**|*frequency_interval* ist einer der folgenden:<br /><br /> **1** = Sonntag &#124; **2** = Montag &#124; **3** = Dienstag &#124; **4** = Mittwoch &#124; **5** = Donnerstag &#124; **6** = Freitag &#124; **7** = Samstag &#124; **8** = Tag &#124; **9** = Weekday &#124; **10** = Wochenendtag|  
 |**64**|*frequency_interval* wird nicht verwendet.|  
 |**128**|*frequency_interval* wird nicht verwendet.|  
@@ -103,21 +103,21 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
-|**2**|Sekunde|  
+|**2**|Second|  
 |**4** (Standard)|Minute|  
-|**88**|Hour|  
+|**8**|Stunde|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Die Anzahl der *frequency_subday* Zeiträume, die zwischen den einzelnen Ausführungen des Auftrags auftreten. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert 5.  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das Vorkommen des Auftrags für eine Momentaufnahme gefilterter Daten in jedem Monat. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**1** (Standard)|First (Erster)|  
-|**2**|Sekunde|  
+|**1** (Standard)|First|  
+|**2**|Second|  
 |**4**|Dritter|  
-|**88**|Vierter|  
-|**Uhr**|Last (Letzter)|  
+|**8**|Vierter|  
+|**16**|Last (Letzter)|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert 0.  
   
@@ -140,7 +140,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_adddynamicsnapshot_job** wird bei der Mergereplikation für Veröffentlichungen verwendet, die einen parametrisierten Filter verwenden.  
   
 ## <a name="example"></a>Beispiel  

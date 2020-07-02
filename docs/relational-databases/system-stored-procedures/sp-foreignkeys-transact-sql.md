@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0951bd857b6fbf2e3bdc8f5bc1ff850f80c43bcd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 99e2db4ca29fc39a4cebbd0b2dfb0564a5837e80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760057"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt die Fremdschlüssel zurück, die auf Primärschlüssel in der Tabelle auf dem Verbindungsserver verweisen.  
   
@@ -84,7 +84,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
  Im Resultset geben die Spalten FK_NAME und PK_NAME immer NULL zurück.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_foreignkeys** fragt das FOREIGN_KEYS Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters ab, der *table_server*entspricht. Die Parameter *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  
   
 ## <a name="permissions"></a>Berechtigungen  

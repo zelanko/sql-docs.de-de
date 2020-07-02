@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bca86b00ca5b2d84cc1c737ecf9d253a0451ea9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 084063f7209692bdf3ffd124b8e2b73194068686
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760197"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert den Besitzer der aktuellen Datenbank.  
   
@@ -43,11 +43,11 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @loginame= ] "*Login*"  
- Die Anmelde-ID des neuen Besitzers der aktuellen Datenbank. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. die *Anmeldung* muss ein bereits vorhandener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmelde Name oder Windows-Benutzer sein. der *Anmelde* Name kann nicht zum Besitzer der aktuellen Datenbank werden, wenn er bereits über ein vorhandenes Benutzer Sicherheits Konto innerhalb der Datenbank auf die Datenbank zugreifen kann. Um dies zu vermeiden, löschen Sie zunächst den Benutzer innerhalb der aktuellen Datenbank.  
+ [ @loginame =] '*Login*'  
+ Die Anmelde-ID des neuen Besitzers der aktuellen Datenbank. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. die *Anmeldung* muss ein bereits vorhandener- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name oder Windows-Benutzer sein. der *Anmelde* Name kann nicht zum Besitzer der aktuellen Datenbank werden, wenn er bereits über ein vorhandenes Benutzer Sicherheits Konto innerhalb der Datenbank auf die Datenbank zugreifen kann. Um dies zu vermeiden, löschen Sie zunächst den Benutzer innerhalb der aktuellen Datenbank.  
   
- [ @map= ] *remap_alias_flag*  
- Der *remap_alias_flag* -Parameter ist veraltet, da die Anmeldungs Aliase aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt wurden. Die Verwendung des *remap_alias_flag* -Parameters führt nicht zu einem Fehler, hat jedoch keine Auswirkungen.  
+ [ @map =] *remap_alias_flag*  
+ Der *remap_alias_flag* -Parameter ist veraltet, da die Anmeldungs Aliase aus entfernt wurden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die Verwendung des *remap_alias_flag* -Parameters führt nicht zu einem Fehler, hat jedoch keine Auswirkungen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

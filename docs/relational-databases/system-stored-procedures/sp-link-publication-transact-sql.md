@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0948b01e404b5eca475b344390ff105d4e094cce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 976109aa0ef09575f818ff6daf82e742626dede7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756640"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Legt die Konfigurations- und Sicherheitsinformationen fest, die von den Synchronisierungstriggern der Abonnements mit sofortigem Update bei der Herstellung einer Verbindung mit dem Verleger verwendet werden. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   
@@ -72,7 +72,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_link_publication** wird von Abonnements mit sofortigem Update bei der Transaktions Replikation verwendet.  
   
  **sp_link_publication** können für Pushabonnements und Pullabonnements verwendet werden. Der Aufruf ist vor oder nach dem Erstellen des Abonnements möglich. Ein Eintrag wird in der [MSsubscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) Systemtabelle eingefügt oder aktualisiert.  

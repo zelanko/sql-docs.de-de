@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c57c6457f22cd54b85b7523a5641ab776ccfd1a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 004743a1992b2862dc55428fca87c152ce914cc7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757545"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>FriendlyName-Eigenschaft (SecurityCertificate-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ruft einen alternativen Anzeigenamen für das Sicherheitszertifikat ab oder legt diesen fest.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,7 +42,7 @@ object.FriendlyName [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der einen alternativen Anzeigenamen für das Sicherheitszertifikat angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

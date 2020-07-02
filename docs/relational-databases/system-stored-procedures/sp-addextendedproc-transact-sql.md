@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 715318b0b0ea38870317d05815845e1b6eaa3227
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760188"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Registriert den Namen einer neuen erweiterten gespeicherten Prozedur in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Registriert den Namen einer neuen erweiterten gespeicherten Prozedur in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen die [CLR-Integration](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
@@ -53,12 +53,12 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ## <a name="result-sets"></a>Resultsets  
  Keine  
   
-## <a name="remarks"></a>Hinweise  
- Nachdem eine erweiterte gespeicherte Prozedur erstellt wurde, muss Sie mit **sp_addextendedproc**hinzu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gefügt werden. Weitere Informationen finden Sie unter [Hinzufügen einer erweiterten gespeicherten Prozedur zu SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
+## <a name="remarks"></a>Bemerkungen  
+ Nachdem eine erweiterte gespeicherte Prozedur erstellt wurde, muss Sie mit sp_addextendedproc hinzugefügt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **sp_addextendedproc** Weitere Informationen finden Sie unter [Hinzufügen einer erweiterten gespeicherten Prozedur zu SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
   
  Diese Prozedur kann nur in der **Master** -Datenbank ausgeführt werden. Wenn Sie eine erweiterte gespeicherte Prozedur aus einer anderen Datenbank als der **Master**-Datenbank ausführen möchten, qualifizieren Sie den Namen der erweiterten gespeicherten Prozedur mit **Master**.  
   
- **sp_addextendedproc** fügt der [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalog Sicht Einträge hinzu, wobei der Name der neuen erweiterten gespeicherten Prozedur mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registriert wird. Außerdem wird ein Eintrag in der [sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) -Katalog Sicht hinzugefügt.  
+ **sp_addextendedproc** fügt der [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalog Sicht Einträge hinzu, wobei der Name der neuen erweiterten gespeicherten Prozedur mit registriert wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Außerdem wird ein Eintrag in der [sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) -Katalog Sicht hinzugefügt.  
   
 > [!IMPORTANT]  
 >  Vorhandene DLLs, die nicht mit einem vollständigen Pfad registriert wurden, sind nach dem Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht mehr funktionsfähig. Um das Problem zu beheben, verwenden Sie **sp_dropextendedproc** , um die Registrierung der dll aufzuheben, und registrieren Sie Sie dann erneut mit **sp_addextendedproc**, wobei Sie den gesamten Pfad angeben.  

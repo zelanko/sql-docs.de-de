@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4dfb2dba5ac59cae919a0153d41cbf7c15f660e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757881"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gewährt einem Subsystem einen Proxyzugriff.  
   
@@ -49,13 +49,13 @@ sp_grant_proxy_to_subsystem
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX-Skript<br /><br /> ** \* Wichtig \* \* ** Das ActiveX Scripting-Subsystem wird in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aus dem-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX-Skript<br /><br /> Wichtig das ActiveX Scripting-Subsystem wird in einer zukünftigen Version von aus dem-Agent entfernt ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |**3**|Betriebssystem (**CmdExec**)|  
 |**4**|Replikationsmomentaufnahme-Agent|  
 |**5**|Replikationsprotokolllese-Agent|  
 |**6**|Replikationsverteilungs-Agent|  
 |**7**|Replikationsmerge-Agent|  
-|**88**|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
+|**8**|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
 |**9**|Analysis Services-Abfrage|  
 |**10**|Analysis Services-Befehl|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketausführung|  
@@ -70,7 +70,7 @@ sp_grant_proxy_to_subsystem
 |**CmdExec**|Betriebssystem (**CmdExec**)|  
 |**Momentaufnahme**|Replikationsmomentaufnahme-Agent|  
 |**LogReader**|Replikationsprotokolllese-Agent|  
-|**Distribution**|Replikations Verteilungs-Agent|  
+|**Verteilung**|Replikations Verteilungs-Agent|  
 |**Merge** (Zusammenführen)|Replikationsmerge-Agent|  
 |**QueueReader**|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
 |**ANALYSISQUERY**|Analysis Services-Abfrage|  
@@ -79,7 +79,7 @@ sp_grant_proxy_to_subsystem
 |**PowerShell**|PowerShell-Skript|  
 | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Beim Gewähren eines Proxyzugriffs auf ein Subsystem werden nicht die Berechtigungen für den im Proxy angegebenen Prinzipal geändert.  
   
 ## <a name="permissions"></a>Berechtigungen  

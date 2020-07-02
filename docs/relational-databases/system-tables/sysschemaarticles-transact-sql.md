@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 44b95598af67b4842595d9570bcd57135924d6ad
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0276cc54809643ed53bd2ae30813e925b4d84475
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819762"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757734"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Protokolliert Artikel vom Typ schema only für Momentaufnahme- und Transaktionsveröffentlichungen. Diese Tabelle wird in der Veröffentlichungsdatenbank gespeichert.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "82819762"
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|Die Artikel-ID.|  
 |**creation_script**|**nvarchar(255)**|Der Pfad und der Name eines Artikelschemaskripts, mit dem die Zieltabelle erstellt wird.|  
-|**Beschreibung**|**nvarchar(255)**|Der Beschreibungseintrag für den Artikel.|  
+|**description**|**nvarchar(255)**|Der Beschreibungseintrag für den Artikel.|  
 |**dest_object**|**sysname**|Der Name des Objekts in der Abonnementdatenbank, wenn der Artikel vom Typ schema only ist, wie z. B. eine gespeicherte Prozedur, eine Sicht oder eine UDF.|  
 |**name**|**sysname**|Der Name des Artikels vom Typ schema only in einer Veröffentlichung.|  
 |**objid**|**int**|Der Objektbezeichner des Basisobjekts des Artikels. Dies kann der Objektbezeichner einer Prozedur, einer Sicht, einer indizierten Sicht oder einer UDF sein.|  

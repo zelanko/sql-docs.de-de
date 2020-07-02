@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55a0c2509a52bb77a4f8ea9779210dac27bc86db
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ac8b37eb3c21a9dbe7fa69eb6805a502993b7b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757893"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Wird von Replikations-Agents verwendet, um einen Verteiler abzufragen und zu bestimmen, ob der ursprüngliche Verleger umgeleitet wurde.  
   
@@ -56,7 +56,7 @@ sp_get_redirected_publisher
 |**error_severity**|**int**|Der Schweregrad des Überprüfungsfehlers.|  
 |**error_message**|**nvarchar(4000)**|Der Text der Überprüfungsfehlermeldung.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  *redirected_publisher* gibt den Namen des aktuellen Verlegers zurück. Gibt NULL zurück, wenn der Verleger und die Veröffentlichungs Datenbanken nicht mithilfe von **sp_redirect_publisher**umgeleitet wurden.  
   
  Wenn keine Überprüfung angefordert wird oder wenn kein Eintrag für den Verleger und die Veröffentlichungs Datenbank vorhanden ist, wird *ERROR_NUMBER* und *ERROR_SEVERITY* 0 zurückgegeben und *ERROR_MESSAGE* NULL zurückgegeben.  

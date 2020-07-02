@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 912db3acb6f6dc21952e99da31a1484a9745ed0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f28692cd1a5c3f60e823d6071244ae822fc557a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488310"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759044"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR-Integration und Codezugriffssicherheit
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Der Common Language Runtime (CLR) unterstützt ein Sicherheitsmodell namens Code Zugriffssicherheit für verwalteten Code. In diesem Modell werden Assemblys Berechtigungen auf Grundlage der Identität des Codes gewährt. Weitere Informationen finden Sie im Abschnitt "Codezugriffsicherheit" im .NET Framework Software Development Kit.  
   
  Die Sicherheitsrichtlinie, die die Berechtigungen für Assemblys bestimmt, wird an drei verschiedenen Stellen definiert:  
@@ -84,15 +84,15 @@ ms.locfileid: "81488310"
 |**WebPermission**|**Verbinden:** Ausgehende Verbindungen mit Webressourcen sind zulässig.|  
   
 ### <a name="unsafe"></a>UNSAFE  
- Unsicher ermöglicht Assemblys den uneingeschränkten Zugriff auf Ressourcen innerhalb und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]außerhalb von. Code, der aus einer **unsicheren** Assembly heraus ausgeführt wird, kann auch nicht verwalteten Code aufgerufen werden.  
+ Unsicher ermöglicht Assemblys den uneingeschränkten Zugriff auf Ressourcen innerhalb und außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Code, der aus einer **unsicheren** Assembly heraus ausgeführt wird, kann auch nicht verwalteten Code aufgerufen werden.  
   
  **Unsichere** Assemblys erhalten **FullTrust**.  
   
 > [!IMPORTANT]  
->  **Safe** ist die empfohlene Berechtigungseinstellung für Assemblys, die Berechnungs-und Daten Verwaltungs Tasks [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausführen, ohne auf Ressourcen außerhalb von zuzugreifen. **EXTERNAL_ACCESS** wird für Assemblys empfohlen, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]auf Ressourcen außerhalb von zugreifen. **EXTERNAL_ACCESS** Assemblys werden standardmäßig [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als Dienst Konto ausgeführt. **EXTERNAL_ACCESS** Code kann die Identität des Sicherheits Kontexts der Windows-Authentifizierung des Aufrufers explizit annehmen. Da standardmäßig als [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Dienst Konto ausgeführt wird, sollte die Berechtigung zum Ausführen von **EXTERNAL_ACCESS** nur Anmeldungen erteilt werden, die vertrauenswürdig sind, als Dienst Konto ausgeführt zu werden. Aus Sicht der Sicherheit sind **EXTERNAL_ACCESS** und **unsichere** Assemblys identisch. Allerdings bieten **EXTERNAL_ACCESS** Assemblys verschiedene Zuverlässigkeits-und Stabilitäts Schutzmaßnahmen, die sich nicht in **unsicheren** Assemblys befinden Durch die Angabe von **unsicher** kann der Code in der Assembly unzulässige Vorgänge [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für den Prozessbereich durchführen und somit die Stabilität und Skalierbarkeit von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]beeinträchtigen. Weitere Informationen zum Erstellen von CLR-Assemblys in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]finden Sie unter [Managing CLR Integration](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)Assemblys.  
+>  **Safe** ist die empfohlene Berechtigungseinstellung für Assemblys, die Berechnungs-und Daten Verwaltungs Tasks ausführen, ohne auf Ressourcen außerhalb von zuzugreifen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . **EXTERNAL_ACCESS** wird für Assemblys empfohlen, die auf Ressourcen außerhalb von zugreifen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . **EXTERNAL_ACCESS** Assemblys werden standardmäßig als [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Dienst Konto ausgeführt. **EXTERNAL_ACCESS** Code kann die Identität des Sicherheits Kontexts der Windows-Authentifizierung des Aufrufers explizit annehmen. Da standardmäßig als Dienst Konto ausgeführt wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sollte die Berechtigung zum Ausführen von **EXTERNAL_ACCESS** nur Anmeldungen erteilt werden, die vertrauenswürdig sind, als Dienst Konto ausgeführt zu werden. Aus Sicht der Sicherheit sind **EXTERNAL_ACCESS** und **unsichere** Assemblys identisch. Allerdings bieten **EXTERNAL_ACCESS** Assemblys verschiedene Zuverlässigkeits-und Stabilitäts Schutzmaßnahmen, die sich nicht in **unsicheren** Assemblys befinden Durch die Angabe von **unsicher** kann der Code in der Assembly unzulässige Vorgänge für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Prozessbereich durchführen und somit die Stabilität und Skalierbarkeit von beeinträchtigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Weitere Informationen zum Erstellen von CLR-Assemblys in finden Sie unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Managing CLR Integration](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)Assemblys.  
   
 ## <a name="accessing-external-resources"></a>Zugreifen auf externe Ressourcen  
- Wenn ein benutzerdefinierter Typ (User-Defined Type, UDT), eine gespeicherte Prozedur oder eine andere Art von konstruktionsassembly mit dem **Safe** -Berechtigungs Satz registriert ist, kann verwalteter Code, der im Konstrukt ausgeführt wird, nicht auf externe Ressourcen zugreifen. Wenn jedoch entweder der **EXTERNAL_ACCESS** oder **unsichere** Berechtigungs Sätze angegeben werden und verwalteter Code versucht, auf externe Ressourcen zuzugreifen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , wendet die folgenden Regeln an:  
+ Wenn ein benutzerdefinierter Typ (User-Defined Type, UDT), eine gespeicherte Prozedur oder eine andere Art von konstruktionsassembly mit dem **Safe** -Berechtigungs Satz registriert ist, kann verwalteter Code, der im Konstrukt ausgeführt wird, nicht auf externe Ressourcen zugreifen. Wenn jedoch entweder der **EXTERNAL_ACCESS** oder **unsichere** Berechtigungs Sätze angegeben werden und verwalteter Code versucht, auf externe Ressourcen zuzugreifen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wendet die folgenden Regeln an:  
   
 |Wenn|Then|  
 |--------|----------|  
