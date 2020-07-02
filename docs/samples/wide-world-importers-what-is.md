@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2fb0c990c03e0dfbf1cd279efa7a249bb5bc9645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adc2e7d74f8479384bd9f34b5442e796e4b74d66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718550"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Beispiel Datenbanken für Wide World-Import Programme für Microsoft SQL
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Dies ist eine Übersicht über die fiktiven unternehmensweiten Unternehmen und die Workflows, die in den wideworldimporters-Beispiel Datenbanken für SQL Server und Azure SQL-Datenbank adressiert sind.  
 
 Wide World Importeurs (WWI) ist ein Großhändler und Verteiler der Groß-und herfach Produkte aus dem San Francisco-Bay-Bereich.
@@ -63,6 +63,6 @@ Das Unternehmen arbeitet mit einem Finanz Jahr, das am 1. November beginnt.
 
 ## <a name="terms-of-use"></a>Nutzungsbedingungen
 
-Die Lizenz für die-Beispieldatenbank und den Beispielcode finden Sie hier: [License. txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
+Die Lizenz für die-Beispieldatenbank und den Beispielcode finden Sie hier: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
 Die Beispieldatenbank enthält öffentliche Daten, die aus Data.gov und natürlichen erddaten geladen wurden. Die Nutzungsbedingungen lauten wie folgt:[https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b1acf456bda88eeee0493d3f9d7ccc063a5bda50
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f7c3f1a4406ec64417c96fbc11387eb1b07f4eb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715869"
 ---
 # <a name="sp_help_log_shipping_monitor_secondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zu einer sekundären Datenbank aus den Überwachungstabellen zurück.  
   
@@ -51,7 +51,7 @@ sp_help_log_shipping_monitor_secondary
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Column|BESCHREIBUNG|  
+|Spalte|BESCHREIBUNG|  
 |------------|-----------------|  
 |**secondary_server**|Der Name der sekundären Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokoll Versand Konfiguration.|  
 |**secondary_database**|Der Name der sekundären Datenbank in der Protokollversandkonfiguration.|  
@@ -69,14 +69,14 @@ sp_help_log_shipping_monitor_secondary
 |**last_restored_date_utc**|Datum und Uhrzeit des letzten Wiederherstellungsvorgangs auf dem sekundären Server in UTC (Coordinated Universal Time).|  
 |**history_retention_period**|Die Zeitdauer in Minuten, die Verlaufsdatensätze des Protokollversands für eine bestimmte sekundäre Datenbank vor dem Löschen aufbewahrt werden.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_help_log_shipping_monitor_secondary** muss aus der **master** -Datenbank auf dem Überwachungsserver ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
-## <a name="see-also"></a>Weitere Informationen:  
- [Informationen zum Protokoll Versand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

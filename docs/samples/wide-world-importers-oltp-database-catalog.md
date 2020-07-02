@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9dc40928fddda2708a23a7fc927627cf0e9450d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718576"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Wideworldimporters-Daten Bank Katalog
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Die Datenbank "wideworldimporters" enthält alle Transaktionsinformationen und täglichen Daten für Verkäufe und Einkäufe sowie Sensordaten für Fahrzeuge und kalte Räume.
 
 ## <a name="schemas"></a>Schemas
@@ -29,9 +29,9 @@ Wideworldimporters verwendet Schemas für verschiedene Zwecke, z. b. das Speiche
 
 Diese Schemas enthalten die Daten. Eine Reihe von Tabellen werden von allen anderen Schemas benötigt und befinden sich im Anwendungsschema.
 
-|Schema|BESCHREIBUNG|
+|Schema|Beschreibung|
 |-----------------------------|---------------------|
-|Application|Anwendungs weite Benutzer, Kontakte und Parameter. Dies enthält auch Verweis Tabellen mit Daten, die von mehreren Schemas verwendet werden.|
+|Anwendung|Anwendungs weite Benutzer, Kontakte und Parameter. Dies enthält auch Verweis Tabellen mit Daten, die von mehreren Schemas verwendet werden.|
 |Erwerb|Bestands Artikel Käufe von Lieferanten und Details zu Zulieferern.|  
 |Sales|Bestands Element Verkäufe bei Einzelhandelskunden und Details zu Kunden und Vertriebsmitarbeitern. |  
 |Warehouse|Inventur und Transaktionen von Aktien Elementen.|  
@@ -102,7 +102,7 @@ Details zu Kunden, Vertriebsmitarbeitern und Bestands Element Verkäufen.
 |Specialdeals|Sonderpreise. Dies kann festes Preis, Rabatt in Dollar oder Rabatt in Prozent enthalten.|
 |Orders|Details der Kunden Bestellungen|
 |OrderLines|Detail Zeilen von Kunden Bestellungen|
-|Rechnungen|Details zu Kunden Rechnungen|
+|Invoices|Details zu Kunden Rechnungen|
 |Invoicelines|Detail Zeilen von Kunden Rechnungen|
 
 ### <a name="warehouse-schema"></a>Warehouse-Schema
@@ -122,7 +122,7 @@ Details zu Aktien Elementen, deren Bestand und Transaktionen.
 |Coldroomtemperaturen|Regelmäßig aufgezeichnete Temperaturen von kalt Raum chillern|
 
 
-## <a name="design-considerations"></a>Entwurfsüberlegungen
+## <a name="design-considerations"></a>Überlegungen zum Entwurf
 
 Der Daten bankentwurf ist subjektiv, und es gibt keine Rechte oder falsche Methode zum Entwerfen einer Datenbank. In den Schemas und Tabellen in dieser Datenbank werden Ideen zum Entwerfen Ihrer eigenen Datenbank angezeigt.
 
@@ -155,20 +155,20 @@ Gespeicherte Prozeduren werden in Schemas organisiert. Die meisten Schemas werde
 
 Das `Website` Schema enthält die gespeicherten Prozeduren, die von einem Web-Front-End verwendet werden können.
 
-Die `Reports` Schemas und `PowerBI` sind für Reporting Services und Power BI vorgesehen. Es wird empfohlen, diese Schemas für Berichts Zwecke zu verwenden.
+Die `Reports` `PowerBI` Schemas und sind für Reporting Services und Power BI vorgesehen. Es wird empfohlen, diese Schemas für Berichts Zwecke zu verwenden.
 
 ### <a name="website-schema"></a>Website Schema
 
 Dies sind die Verfahren, die von einer Client Anwendung verwendet werden, z. b. ein Web-Front-End.
 
-|Verfahren|Zweck|
+|Vorgehensweise|Zweck|
 |-----------------------------|---------------------|
-|Activatewebsitelogon|Ermöglicht es einer Person ( `Application.People`von), Zugriff auf die Website zu haben.|
+|Activatewebsitelogon|Ermöglicht es einer Person (von `Application.People` ), Zugriff auf die Website zu haben.|
 |ChangePassword|Ändert das Kennwort eines Benutzers (für Benutzer, die keine externen Authentifizierungsmechanismen verwenden).|
 |Insertcustomerorders|Ermöglicht das Einfügen von einem oder mehreren Kunden Bestellungen (einschließlich der Bestell Zeilen).|
 |Invoicecustomerorders|Führt eine Liste der Bestellungen aus, die in Rechnung gestellt werden, und verarbeitet die Rechnungen.|
 |Recordcoldroomtemperaturen|Nimmt eine Sensordaten Liste als Tabellenwert Parameter (TVP) an und wendet die Daten auf die `Warehouse.ColdRoomTemperatures` Temporale Tabelle an.|
-|Recordvehicletemperatur|Nimmt ein JSON-Array an und verwendet es `Warehouse.VehicleTemperatures`, um zu aktualisieren.|
+|Recordvehicletemperatur|Nimmt ein JSON-Array an und verwendet es, um zu aktualisieren `Warehouse.VehicleTemperatures` .|
 |Searchforcustomers|Sucht nach Kunden anhand des Namens oder eines Teils des Namens (entweder Firmenname oder Personen Name).|
 |Searchforpeople|Sucht nach Personen anhand des Namens oder eines Teils des Namens.|
 |Searchforstockitems|Sucht nach Aktien Elementen anhand des Namens oder eines Teils der Namens-oder Marketing Kommentare.|
@@ -181,9 +181,9 @@ Die gespeicherten Prozeduren in diesem Schema werden vom ETL-Prozess verwendet. 
 
 ### <a name="dataloadsimulation-schema"></a>Dataloadsimulation-Schema
 
-Simuliert eine Arbeitsauslastung, die Verkäufe und Einkäufe einfügt. Die Haupt gespeicherte Prozedur ist `PopulateDataToCurrentDate`, mit der Beispiel Daten bis zum aktuellen Datum eingefügt werden.
+Simuliert eine Arbeitsauslastung, die Verkäufe und Einkäufe einfügt. Die Haupt gespeicherte Prozedur ist `PopulateDataToCurrentDate` , mit der Beispiel Daten bis zum aktuellen Datum eingefügt werden.
 
-|Verfahren|Zweck|
+|Vorgehensweise|Zweck|
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|Erstellt die für die Daten Lade Simulation erforderlichen Prozeduren neu. Dies ist erforderlich, um Daten bis zum aktuellen Datum zu verschieben.|
 |Configuration_RemoveDataLoadSimulationProcedures|Dadurch werden die Prozeduren nach Abschluss der Daten Simulation wieder entfernt.|
@@ -196,16 +196,16 @@ Simuliert eine Arbeitsauslastung, die Verkäufe und Einkäufe einfügt. Die Haup
 
 Diese Prozeduren werden verwendet, um das Beispiel zu konfigurieren. Sie dienen zum Anwenden von Enterprise Edition-Features auf die Standard Edition-Version des Beispiels sowie zum Hinzufügen von Überwachungen und Volltextindizierung.
 
-|Verfahren|Zweck|
+|Vorgehensweise|Zweck|
 |-----------------------------|---------------------|
 |Addrolememberibernonstant|Fügt einer Rolle ein Mitglied hinzu, wenn der Member nicht bereits in der Rolle vorhanden ist.|
 |Configuration_ApplyAuditing|Fügt eine Überwachung hinzu. Die Server Überwachung wird für Standard Edition-Datenbanken angewendet. für Enterprise Edition wird eine zusätzliche Daten Bank Überwachung hinzugefügt.|
-|Configuration_ApplyColumnstoreIndexing|Wendet die columnstore-- `Sales.OrderLines` Indizierung entsprechend auf und `Sales.InvoiceLines` und neu auf.|
-|Configuration_ApplyFullTextIndexing|Wendet Volltextindizes auf `Application.People`, `Sales.Customers`, `Purchasing.Suppliers`und `Warehouse.StockItems`an. Ersetzt `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems` `Website.SearchForStockItemsByTags` durch Ersatz Prozeduren, die die Volltextindizierung verwenden.|
-|Configuration_ApplyPartitioning|Wendet die Tabellenpartitionierung `Purchasing.SupplierTransactions`auf und an `Sales.CustomerTransactions` und ordnet die Indizes entsprechend an.|
+|Configuration_ApplyColumnstoreIndexing|Wendet die columnstore--Indizierung `Sales.OrderLines` entsprechend auf und und neu auf `Sales.InvoiceLines` .|
+|Configuration_ApplyFullTextIndexing|Wendet Volltextindizes auf `Application.People` , `Sales.Customers` , `Purchasing.Suppliers` und an `Warehouse.StockItems` . Ersetzt `Website.SearchForPeople` , `Website.SearchForSuppliers` , `Website.SearchForCustomers` , `Website.SearchForStockItems` `Website.SearchForStockItemsByTags` durch Ersatz Prozeduren, die die Volltextindizierung verwenden.|
+|Configuration_ApplyPartitioning|Wendet die Tabellenpartitionierung auf `Sales.CustomerTransactions` und an `Purchasing.SupplierTransactions` und ordnet die Indizes entsprechend an.|
 |Configuration_ApplyRowLevelSecurity|Wendet die Sicherheit auf Zeilenebene an, um Kunden nach Vertriebs Gebiets bezogenen Rollen zu filtern.|
 |Configuration_ConfigureForEnterpriseEdition|Wendet die columnstore--Indizierung, den vollständigen Text, den in-Memory, polybase und die Partitionierung an.|
-|Configuration_EnableInMemory|Fügt eine Speicher optimierte Datei Gruppe hinzu (wenn Sie nicht in Azure verwendet wird) `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` ersetzt durch in-Memory-Entsprechungen und migriert die Daten, erstellt `Website.OrderIDList`die `Website.OrderList`Tabellen `Website.OrderLineList`Typen `Website.SensorDataList` ,,, mit Speicher optimierten Entsprechungen, löscht und erstellt sie neu `Website.InvoiceCustomerOrders`und `Website.InsertCustomerOrders`erstellt die `Website.RecordColdRoomTemperatures` Prozeduren, und, die diese Tabellentypen verwenden.|
+|Configuration_EnableInMemory|Fügt eine Speicher optimierte Datei Gruppe hinzu (wenn Sie nicht in Azure verwendet wird), ersetzt `Warehouse.ColdRoomTemperatures` `Warehouse.VehicleTemperatures` durch in-Memory-Entsprechungen und migriert die Daten, erstellt `Website.OrderIDList` die `Website.OrderList` `Website.OrderLineList` Tabellentypen,,, `Website.SensorDataList` mit Speicher optimierten Entsprechungen, löscht und erstellt sie neu und erstellt die Prozeduren, und, die `Website.InvoiceCustomerOrders` `Website.InsertCustomerOrders` `Website.RecordColdRoomTemperatures` diese Tabellentypen verwenden.|
 |Configuration_RemoveAuditing|Entfernt die Überwachungskonfiguration.|
 |Configuration_RemoveRowLevelSecurity|Entfernt die Sicherheitskonfiguration auf Zeilenebene (Dies wird für Änderungen an den zugeordneten Tabellen benötigt).|
 |"Kreateroleinicht verlassen"|Erstellt eine Daten Bank Rolle, wenn Sie nicht bereits vorhanden ist.|
@@ -215,7 +215,7 @@ Diese Prozeduren werden verwendet, um das Beispiel zu konfigurieren. Sie dienen 
 
 Prozeduren zum Konfigurieren der Sequenzen in der Datenbank.
 
-|Verfahren|Zweck|
+|Vorgehensweise|Zweck|
 |-----------------------------|---------------------|
 |Reseedallsequenzen|Ruft die Prozedur reseedsequencebeyondtablevalue für alle Sequenzen auf.|
 |Reseedsequencebeyondtablevalue|Wird verwendet, um den nächsten Sequenzwert hinter dem Wert in einer Tabelle, die dieselbe Sequenz verwendet, neu zu positionieren. (Z. b. eine DBCC CHECKIDENT für Identitäts Spalten, die für Sequenzen gleichwertig sind, aber über potenziell mehrere Tabellen hinweg|

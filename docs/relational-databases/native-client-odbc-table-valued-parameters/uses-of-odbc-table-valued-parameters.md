@@ -14,15 +14,15 @@ ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e88092c6566d9e5838f8a2cb59cd7c23564af9b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5be9838e0c4e989c6b802d9c74e240a0d01c354b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297736"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715319"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>Verwendungen von ODBC-Tabellenwertparametern
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In diesem Thema werden die wichtigsten Benutzerszenarien für die Verwendung von Tabellenwertparametern mit ODBC erläutert:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "81297736"
   
  Manchmal verwendet eine Anwendung einen Tabellenwertparameter mit dynamischem SQL, und der Name des Tabellenwertparameters muss bereitgestellt werden. Wenn dies der Fall ist und der Tabellenwert Parameter nicht im aktuellen Standardschema für die Verbindung definiert ist, müssen SQL_CA_SS_TYPE_CATALOG_NAME und SQL_CA_SS_TYPE_SCHEMA_NAME mithilfe von SQLSetDescField festgelegt werden. Da Tabellentypdefinitionen und Tabellenwertparameter in derselben Datenbank vorliegen müssen, darf SQL_CA_SS_TYPE_CATALOG_NAME nicht festgelegt werden, wenn die Anwendung Tabellenwertparameter verwendet. Andernfalls meldet SQLSetDescField einen Fehler.  
   
- Beispielcode für dieses Szenario finden `demo_fixed_TVP_binding` Sie unter Verwenden von [Tabellenwert Parametern &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Beispielcode für dieses Szenario finden Sie unter `demo_fixed_TVP_binding` Verwenden von [Tabellenwert Parametern &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="table-valued-parameter-with-row-streaming-send-data-as-a-tvp-using-data-at-execution"></a>Tabellenwertparameter mit Zeilenstreaming (Senden von Daten als Tabellenwertparameter mithilfe von Data-at-Execution)  
  In diesem Szenario stellt die Anwendung dem Treiber Zeilen nach Anforderung bereit. Diese werden an den Server gestreamt. Hierdurch wird das Puffern aller Zeilen im Arbeitsspeicher vermieden. Dies ist für Masseneinfügungs-/-updateszenarien repräsentativ. Tabellenwertparameter bieten eine Leistungsfähigkeit, die zwischen Parameterarrays und Massenkopieren liegt. Tabellenwertparameter sind ebenso einfach zu programmieren wie Parameterarrays, sie bieten jedoch eine größere Flexibilität auf dem Server.  
@@ -60,7 +60,7 @@ ms.locfileid: "81297736"
   
  Nachdem alle Tabellenwertparameter-Spalten verarbeitet wurden, kehrt der Treiber zum Tabellenwertparameter zurück, um weitere Tabellenwertparameter-Datenzeilen zu verarbeiten. Bei Data-at-Execution-Tabellenwertparametern führt der Treiber daher nicht den üblichen sequenziellen Scan gebundener Parameter durch. Ein gebundener Tabellenwert Parameter wird abgerufen, bis SQLPutData mit *StrLen_Or_IndPtr* gleich 0 aufgerufen wird. zu diesem Zeitpunkt überspringt der Treiber Tabellenwert Parameter-Spalten und wechselt zum nächsten tatsächlichen Parameter der gespeicherten Prozedur.  Wenn SQLPutData einen Indikator Wert größer oder gleich 1 übergibt, verarbeitet der Treiber Tabellenwert Parameter-Spalten und-Zeilen sequenziell, bis er über Werte für alle gebundenen Zeilen und Spalten verfügt. Anschließend kehrt der Treiber zum Tabellenwertparameter zurück. Zwischen dem empfangen des Tokens für den Tabellenwert Parameter von SQLParamData und dem Aufruf von SQLPutData (hstmt, NULL, n) für einen Tabellenwert Parameter muss die Anwendung Tabellenwert Parameter-Spaltendaten und Indikator Puffer Inhalte für die nächste Zeile oder Zeilen festlegen, die an den Server übergeben werden.  
   
- Beispielcode für dieses Szenario finden Sie in der `demo_variable_TVP_binding` Routine unter [Verwenden von Tabellenwert Parametern &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Beispielcode für dieses Szenario finden Sie in der Routine `demo_variable_TVP_binding` unter [Verwenden von Tabellenwert Parametern &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>Abrufen von Tabellenwertparameter-Metadaten aus dem Systemkatalog  
  Wenn eine Anwendung sqlprocedurecolenns für eine Prozedur mit Tabellenwert Parameter-Parametern aufruft, wird data_type als SQL_SS_TABLE zurückgegeben, und TYPE_NAME ist der Name des Tabellentyps für den Tabellenwert Parameter. Dem Resultset, das von sqlprocedurecolrens zurückgegeben wird, werden zwei weitere Spalten hinzugefügt: SS_TYPE_CATALOG_NAME gibt den Namen des Katalogs zurück, in dem der Tabellentyp des Tabellenwert Parameters definiert ist, und SS_TYPE_SCHEMA_NAME gibt den Namen des Schemas zurück, in dem der Tabellentyp des Tabellenwert Parameters definiert ist. In Übereinstimmung mit der ODBC-Spezifikation werden SS_TYPE_CATALOG_NAME und SS_TYPE_SCHEMA_NAME vor allen treiberspezifischen Spalten angezeigt, die in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hinzugefügt wurden sowie nach allen Spalten, die von ODBC selbst benötigt werden.  
@@ -71,7 +71,7 @@ ms.locfileid: "81297736"
   
  Eine Anwendung verwendet SQLColumns, um die Spalten für einen Tabellentyp auf die gleiche Weise zu bestimmen wie für persistente Tabellen, muss jedoch zuerst SQL_SOPT_SS_NAME_SCOPE festlegen, um anzugeben, dass Sie mit Tabellentypen anstelle tatsächlicher Tabellen arbeitet. SQLPrimaryKeys kann auch mit Tabellentypen verwendet werden, und zwar mithilfe von SQL_SOPT_SS_NAME_SCOPE.  
   
- Beispielcode für dieses Szenario finden Sie in der `demo_metadata_from_catalog_APIs` Routine unter [Verwenden von Tabellenwert Parametern &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Beispielcode für dieses Szenario finden Sie in der Routine `demo_metadata_from_catalog_APIs` unter [Verwenden von Tabellenwert Parametern &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="retrieving-table-valued-parameter-metadata-for-a-prepared-statement"></a>Abrufen von Tabellenwertparameter-Metadaten für eine vorbereitete Anweisung  
  In diesem Szenario verwendet eine Anwendung SQLNumParameters und SQLDescribeParam, um Metadaten für Tabellenwert Parameter abzurufen.  
@@ -84,7 +84,7 @@ ms.locfileid: "81297736"
   
  Eine Anwendung verwendet SQLColumns auch zum Abrufen von Spalten Metadaten für einen Tabellenwert Parameter in diesem Szenario, da SQLDescribeParam keine Metadaten für die Spalten einer Tabellenwert Parameter-Spalte zurückgibt.  
   
- Der Beispielcode für diesen Anwendungsfall befindet sich in `demo_metadata_from_prepared_statement` der Routine in [Verwenden von Tabellenwert Parametern &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Der Beispielcode für diesen Anwendungsfall befindet sich in der Routine `demo_metadata_from_prepared_statement` in [Verwenden von Tabellenwert Parametern &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tabellenwert Parameter &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  

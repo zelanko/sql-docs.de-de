@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3df27d1211807f1863ac40859a833d570191c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670565"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716608"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>System Informations Schema-Sichten (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Eine Informationsschemasicht ist eine der Methoden, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Abrufen von Metadaten bereitstellt. Informationsschemasichten stellen eine interne, von den Systemtabellen unabhängige Darstellung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Metadaten bereit. Informationsschemasichten ermöglichen die einwandfreie Ausführung von Anwendungen, auch wenn an den zugrunde liegenden Systemtabellen erhebliche Änderungen vorgenommen wurden. Die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthaltenen Informationsschemasichten entsprechen der Definition des ISO-Standards für INFORMATION_SCHEMA.
 
@@ -41,7 +41,7 @@ Eine Informationsschemasicht ist eine der Methoden, die [!INCLUDE[ssNoVersion](.
 |Datenbank|Katalog|
 |Schema|Schema|
 |Object|Object|
-|benutzerdefinierter Datentyp|Domain|
+|benutzerdefinierter Datentyp|Domäne|
 
 Diese Namenzuordnungskonvention betrifft die folgenden ISO-kompatiblen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sichten.
 

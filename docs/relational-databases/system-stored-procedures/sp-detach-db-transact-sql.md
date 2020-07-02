@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 25d292ed7f45d921d2fc9eafbc1d2d5fe5912dbe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9eaae9a00a125a2ffe2f290e2bd772eb40d84c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830226"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717358"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Trennt eine zurzeit nicht verwendete Datenbank von einer Serverinstanz und führt optional vor dem Trennvorgang für alle Tabellen UPDATE STATISTICS aus.  
   
@@ -68,7 +68,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 > [!NOTE]  
 >  Informationen dazu, wie Sie die Standarddatenbank aller Anmeldekonten anzeigen, finden Sie unter [sp_helplogins &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Wenn Sie über die erforderlichen Berechtigungen verfügen, können Sie die [Alter Login](../../t-sql/statements/alter-login-transact-sql.md) -Anweisung verwenden, um einer Anmeldung eine neue Standarddatenbank zuzuweisen.  
   
-## <a name="restrictions"></a>Beschränkungen  
+## <a name="restrictions"></a>Einschränkungen  
  Eine Datenbank kann nicht getrennt werden, wenn Folgendes zutrifft:  
   
 -   Die Datenbank ist zurzeit in Verwendung. Weitere Informationen finden Sie im Abschnitt "Erhalten exklusiven Zugriffs" weiter unten in diesem Thema.  

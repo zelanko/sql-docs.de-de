@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a89cf408bd1acdd19ae982dfc0afa92c3c6cbe02
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5c930347c18dc257b5a6c51d2b013d2429b269fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715986"
 ---
 # <a name="sp_browsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt den vollständigen Pfad für die aktuellste Momentaufnahme zurück, der für eine Mergeveröffentlichung generiert wurde. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -48,7 +48,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar (2000)**|Vollständiger Pfad zum Momentaufnahmeverzeichnis.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_browsemergesnapshotfolder** wird bei der Mergereplikation verwendet.  
   
  Wenn die Veröffentlichung so eingerichtet ist, dass sie Momentaufnahmedateien sowohl im Arbeitsverzeichnis als auch im Momentaufnahmeordner des Verlegers generiert, dann enthält das Resultset zwei Zeilen: Die erste Zeile enthält den Momentaufnahmeordner der Veröffentlichung, und die zweite Zeile enthält das Arbeitsverzeichnis des Verlegers.  

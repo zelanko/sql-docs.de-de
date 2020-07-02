@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e186b87680ec0592f5c69ee5659c3b9c74f680b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b905d3f362aa16e36caa0795357c1ec1619d5ec7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826048"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715843"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Stellt Informationen zu Prinzipalen auf Datenbankebene in der aktuellen Datenbank bereit.  
   
@@ -76,13 +76,13 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Users_in_role**|**sysname**|Mitglied der Rolle in der aktuellen Datenbank.|  
 |**UserID**|**smallint**|Benutzer-ID für das Rollenmitglied.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie [sys. database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md), um Informationen zur Mitgliedschaft in Daten bankrollen anzuzeigen. Um Informationen zu Server Rollen Mitgliedern anzuzeigen, verwenden Sie [sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md), und um Informationen über Prinzipale auf Serverebene anzuzeigen, verwenden Sie [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
- Die zurückgegebenen Informationen unterliegen den Einschränkungen, die für den Zugriff auf Metadaten gelten. Entitäten, für die der Prinzipal keine Berechtigungen besitzt, werden nicht angezeigt.  Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Die zurückgegebenen Informationen unterliegen den Einschränkungen, die für den Zugriff auf Metadaten gelten. Entitäten, für die der Prinzipal keine Berechtigungen besitzt, werden nicht angezeigt. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Beispiele  
   

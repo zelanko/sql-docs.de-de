@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 417f2c7d63b129fda187068325702b9ff9768895
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b361bdcf6daf9ad1efaf3a752228366ee661d1a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831197"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717379"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Meldet die Attribute eines Servercursors.  
   
@@ -89,7 +89,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |last_operation|**tinyint**|Der letzte Vorgang, der für den Cursor ausgeführt wurde:<br /><br /> 0 = Für den Cursor wurden keine Vorgänge ausgeführt.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = einfügen<br /><br /> 4 = UPDATE<br /><br /> 5 = löschen<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Ein eindeutiger Wert für den Cursor innerhalb des Serverbereichs|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  sp_describe_cursor beschreibt die für einen Servercursor globalen Attribute, wie z. B. die Optionen zum Durchführen eines Bildlaufs und zum Aktualisieren. Mit sp_describe_cursor_columns zeigen Sie eine Beschreibung der Attribute des vom Cursor zurückgegebenen Resultsets an. Mit sp_describe_cursor_tables zeigen Sie an, auf welche Basistabellen der Cursor verweist. Mit sp_cursor_list erhalten Sie einen Bericht der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor, die für die Verbindung sichtbar sind.  
   
  Eine DECLARE CURSOR-Anweisung kann einen Cursortyp anfordern, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der in DECLARE CURSOR enthaltenen SELECT-Anweisung nicht unterstützen kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert den Cursor implizit in einen Typ, der mithilfe der SELECT-Anweisung unterstützt werden kann. Wenn TYPE_WARNING in der DECLARE CURSOR-Anweisung angegeben wird, sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Anwendung eine Meldung zu Informationszwecken, dass eine Konvertierung durchgeführt wurde. sp_describe_cursor kann dann aufgerufen werden, um den Typ des implementierten Cursors zu bestimmen.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 76b5b8b5aa9f867c1dcf4b47940fce117c35bc69
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ac36d85a08763903cb42a5b48d0280a6366a1e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716575"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Fügt einen neuen Mergefilter hinzu, um eine Partition auf der Basis eines Joins mit einer anderen Tabelle zu erstellen. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -85,7 +85,7 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_addmergefilter** wird bei der Mergereplikation verwendet.  
   
  **sp_addmergefilter** können nur mit Tabellen Artikeln verwendet werden. Artikel für Sichten und indizierte Sichten werden nicht unterstützt.  

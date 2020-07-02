@@ -21,15 +21,15 @@ ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e91971d13b26d6a156307b2a0288de236456c880
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2879f5678c315d3e3921813a5d26a6c6034aa05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828098"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718819"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt Zusammenfassungsinformationen zu Gruppen fehlender Indizes, außer räumliche Indizes, zurück.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "82828098"
 |**avg_total_system_cost**|**float**|Die durchschnittlichen Kosten der Systemabfragen, die durch den Index in der Gruppe reduziert werden könnten.|  
 |**avg_system_impact**|**float**|Durchschnittlicher prozentualer Nutzen, der für Systemabfragen entstünde, wenn diese Gruppe fehlender Indizes implementiert würde. Der Wert bedeutet, dass die Abfragekosten durchschnittlich um diesen Prozentsatz verringert würden, wenn diese Gruppe fehlender Indizes implementiert würde.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die von **sys.dm_db_missing_index_group_stats** zurückgegebenen Informationen werden bei jeder Abfrageausführung aktualisiert, nicht bei jeder Abfragekompilierung oder Neukompilierung. Statistiken zur Verwendung sind nicht persistent und werden nur bis zum Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beibehalten. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Informationen zu fehlenden Indizes erstellen, wenn Sie die Verwendungsstatistiken nach dem Wiederverwenden des Servers beibehalten möchten.  
 
   >[!NOTE]
@@ -86,7 +86,7 @@ INNER JOIN sys.dm_db_missing_index_details AS mid
 WHERE migs.group_handle = 24;  
 ```  
   
- Die Abfrage stellt den Namen der Datenbank, des Schemas und der Tabelle bereit, für die ein Index fehlt. Außerdem werden die Namen der Spalten zurückgegeben, die für den Indexschlüssel verwendet werden sollten. Wenn Sie die CREATE INDEX-DDL-Anweisung zum Implementieren fehlender Indizes schreiben, Listen Sie zuerst Gleichheits Spalten und dann Ungleichheits Spalten in der on \< *table_name*>-Klausel der CREATE INDEX-Anweisung auf. Eingeschlossene Spalten sollten in der INCLUDE-Klausel der CREATE INDEX-Anweisung aufgeführt werden. Für eine effektive Reihenfolge der Gleichheitsspalten sortieren Sie sie nach ihrer Selektivität, wobei die selektivsten Spalten zuerst (am weitesten links in der Spaltenliste) aufgeführt werden.  
+ Die Abfrage stellt den Namen der Datenbank, des Schemas und der Tabelle bereit, für die ein Index fehlt. Außerdem werden die Namen der Spalten zurückgegeben, die für den Indexschlüssel verwendet werden sollten. Wenn Sie die CREATE INDEX-DDL-Anweisung zum Implementieren fehlender Indizes schreiben, Listen Sie zuerst Gleichheits Spalten und dann Ungleichheits Spalten in der on- \<*table_name*> Klausel der CREATE INDEX-Anweisung auf. Eingeschlossene Spalten sollten in der INCLUDE-Klausel der CREATE INDEX-Anweisung aufgeführt werden. Für eine effektive Reihenfolge der Gleichheitsspalten sortieren Sie sie nach ihrer Selektivität, wobei die selektivsten Spalten zuerst (am weitesten links in der Spaltenliste) aufgeführt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. dm_db_missing_index_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

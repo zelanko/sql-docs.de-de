@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b375c1861d532445cd39d42f59f0a8d753e53b85
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1db9dfdcb7941db0c253bf0b1c3f65b767a5cdec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828835"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719256"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Diese gespeicherte Prozedur aktualisiert die Remoteüberwachungstabellen mit den neuesten Informationen von einem angegebenen primären oder sekundären Server für den angegebenen Protokollversand-Agent. Die Prozedur wird auf dem primären oder sekundären Server aufgerufen.  
   
@@ -69,7 +69,7 @@ sp_refresh_log_shipping_monitor
 ## <a name="result-sets"></a>Resultsets  
  Keine.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_refresh_log_shipping_monitor** aktualisiert die Tabellen " **log_shipping_monitor_primary**", " **log_shipping_monitor_secondary**", " **log_shipping_monitor_history_detail**" und " **log_shipping_monitor_error_detail** " mit Sitzungsinformationen, die noch nicht übertragen wurden. Dies ermöglicht das Synchronisieren des Überwachungsservers mit dem primären oder einem sekundären Server, wenn der Überwachungsserver für einen bestimmten Zeitraum nicht mehr synchronisiert wurde. Zudem können Sie die Überwachungsinformationen auf dem Überwachungsserver bei Bedarf leeren.  
   
  **sp_refresh_log_shipping_monitor** muss von der **Master** -Datenbank auf dem primären oder sekundären Server ausgeführt werden.  
@@ -78,7 +78,7 @@ sp_refresh_log_shipping_monitor
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Informationen zum Protokoll Versand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 250d8687a97afdfa937abb9c49b2efa131195a52
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 460a3615517a0a0b62c70351613836c1b3bfb5d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716241"
 ---
 # <a name="sp_articlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Wird verwendet, um die in einem Artikel enthaltenen Spalten zum vertikalen Filtern der Daten in einer veröffentlichten Tabelle anzugeben. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -82,7 +82,7 @@ sp_articlecolumn [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_articlecolumn** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  Nur ein nicht abonnierter Artikel kann mit **sp_articlecolumn**gefiltert werden.  

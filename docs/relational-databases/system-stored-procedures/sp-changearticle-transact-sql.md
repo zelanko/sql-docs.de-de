@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717397"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ändert die Eigenschaften eines Artikels in einer Transaktions- oder Momentaufnahmeveröffentlichung. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -57,7 +57,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |--------------|------------|-----------------|  
 |**creation_script**||Pfad und Name eines Artikelschemaskripts, mit dem Zieltabellen erstellt werden. Die Standardeinstellung ist NULL.|  
 |**del_cmd**||Die auszuführende DELETE-Anweisung; andernfalls wird die Löschoperation aus dem Protokoll hergeleitet.|  
-|**Beschreibung**||Ein neuer Beschreibungseintrag für den Artikel.|  
+|**description**||Ein neuer Beschreibungseintrag für den Artikel.|  
 |**dest_object**||Dieser Parameter wird aus Gründen der Abwärtskompatibilität bereitgestellt. Verwenden Sie **dest_table**.|  
 |**dest_table**||Die neue Zieltabelle.|  
 |**destination_owner**||Name des Besitzers des Zielobjekts.|  
@@ -67,7 +67,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**identity_range**||Steuert die Größe der zugeordneten Identitätsbereiche, die am Abonnent zugeordnet wurden. Wird für die Peer-zu-Peer-Replikation nicht unterstützt.|  
 |**ins_cmd**||Die auszuführende INSERT-Anweisung; andernfalls wird die Operation aus dem Protokoll hergeleitet.|  
 |**pre_creation_cmd**||Ein Vorabbefehl, mit dem die Zieltabelle entfernt, gelöscht oder abgeschnitten werden kann, bevor die Synchronisierung angewendet wird.|  
-||**Keine**|Verwendet keinen Befehl.|  
+||**keine**|Verwendet keinen Befehl.|  
 ||**Dropdown**|Entfernt die Zieltabelle.|  
 ||**delete**|Löscht die Zieltabelle.|  
 ||**TRUNCATE**|Schneidet die Zieltabelle ab.|  
@@ -123,12 +123,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**include column names**|Spaltennamen sind in der replizierten INSERT-Anweisung enthalten.|  
 ||**no column names**|Spaltennamen sind nicht in der replizierten INSERT-Anweisung enthalten.|  
 ||**no dts horizontal partitions**|Die horizontale Partition für den Artikel wird nicht durch ein transformierbares Abonnement definiert.|  
-||**Keine**|Löscht alle Status Optionen in der [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) -Tabelle und markiert den Artikel als inaktiv.|  
+||**keine**|Löscht alle Status Optionen in der [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) -Tabelle und markiert den Artikel als inaktiv.|  
 ||**parameters**|Änderungen werden an den Abonnenten mit parametrisierten Befehlen weitergegeben. Dies ist die Standardeinstellung für einen neuen Artikel.|  
 ||**Zeichen folgen Literale**|Änderungen werden an den Abonnenten mit Werten von Literalzeichenfolgen weitergegeben.|  
 |**sync_object**||Der Name der Tabelle oder Sicht, mit der eine Synchronisierungsausgabedatei erstellt wird. Die Standardeinstellung ist NULL. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 |**Tabellenbereich**||Gibt den Tabellenbereich an, der von der Protokollierungstabelle für einen Artikel verwendet wird, der von einer Oracle-Datenbank veröffentlicht wird. Weitere Informationen finden Sie unter [Verwalten von Oracle-Tabellenbereichen](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
-|**Mindest**||Der Prozentwert, der steuert, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist. Wird für die Peer-zu-Peer-Replikation nicht unterstützt.|  
+|**threshold**||Der Prozentwert, der steuert, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist. Wird für die Peer-zu-Peer-Replikation nicht unterstützt.|  
 |**type**||Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 ||**logbased**|Protokollbasierter Artikel.|  
 ||**logbased manualboth**|Protokollbasierter Artikel mit manuell erstelltem Filter und manuell erstellter Sicht. Diese Option erfordert, dass die Eigenschaften *sync_object* und *Filter* ebenfalls festgelegt werden. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
@@ -165,7 +165,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_changearticle** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  Wenn ein Artikel zu einer Veröffentlichung gehört, die die Peer-zu-Peer-Transaktions Replikation unterstützt, können Sie nur die Eigenschaften **Description**, **ins_cmd**, **upd_cmd**und **del_cmd** ändern.  

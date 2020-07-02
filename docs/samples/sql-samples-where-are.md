@@ -9,16 +9,16 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 457cc9b1aa1055992322fb34ccc95b042f167604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ea8f0ae2c998b02343ae3a7575325afe2ef6820
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74318981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718587"
 ---
 # <a name="sql-samples"></a>SQL-Beispiele
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Speicherorte von Beispiel Datenbanken und Codebeispielen für Microsoft SQL-Produkte.
 
@@ -26,9 +26,9 @@ Speicherorte von Beispiel Datenbanken und Codebeispielen für Microsoft SQL-Prod
 
 Code Beispiele für SQL-Produkte finden Sie im GitHub-Repository [Microsoft SQL Server Samples](https://github.com/microsoft/sql-server-samples) . Jedes Beispiel enthält eine Infodatei, in der erläutert wird, wie das Beispiel ausgeführt und verwendet wird. Die Hauptinfo für das beispielrepository erläutert, wie Sie mitwirken können. 
 
-Die Beispiele und Vorlagen werden alle unter der mit-Lizenz lizenziert. Weitere Informationen finden Sie in der Datei License. txt im Stammverzeichnis.
+Die Beispiele und Vorlagen werden alle unter der mit-Lizenz lizenziert. Sehen Sie sich die license.txt-Datei im Stammverzeichnis an.
 
-E-Mail- sqlserversamples@microsoft.comFragen an:.
+E-Mail-Fragen an: sqlserversamples@microsoft.com .
 
 
 ## <a name="wideworldimporters-sample-database"></a>Wideworldimporters-Beispieldatenbank
@@ -49,7 +49,7 @@ AdventureWorks-Datenbanken finden Sie auf der Seite " [Installation](adventurewo
 
 
 ## <a name="azure-samples-and-templates"></a>Azure-Beispiele und-Vorlagen
-Auf GitHub in .net, Java, Python, Node. js, PHP und Ruby steht eine Reihe von Microsoft Azure Codebeispielen und Beispielen zur Verfügung. Darüber hinaus können Sie mit Azure Resource Manager ihre Anwendungen mithilfe einer deklarativen Vorlage bereitstellen. In einer Vorlage können Sie mehrere Dienste zusammen mit ihren Abhängigkeiten bereitstellen. Sie verwenden die gleiche Vorlage, um Ihre Anwendung während jeder Phase des Anwendungslebenszyklus wiederholt bereitzustellen.
+Auf GitHub in .net, Java, Python, Node.js, PHP und Ruby steht eine Reihe von Microsoft Azure Codebeispielen und Beispielen zur Verfügung. Darüber hinaus können Sie mit Azure Resource Manager ihre Anwendungen mithilfe einer deklarativen Vorlage bereitstellen. In einer Vorlage können Sie mehrere Dienste zusammen mit ihren Abhängigkeiten bereitstellen. Sie verwenden die gleiche Vorlage, um Ihre Anwendung während jeder Phase des Anwendungslebenszyklus wiederholt bereitzustellen.
 
 - [Azure-Beispiele](https://github.com/Azure-Samples)
 - [Azure-Schnellstartvorlagen](https://azure.microsoft.com/resources/templates/)

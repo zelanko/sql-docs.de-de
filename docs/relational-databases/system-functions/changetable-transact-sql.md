@@ -19,15 +19,15 @@ ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a5d247ae5e8e4cceb53bd3a093cabdff399d509
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042900"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718720"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt Änderungsnachverfolgungsinformationen für eine Tabelle zurück. Sie können diese Anweisung verwenden, um alle Änderungen für eine Tabelle oder die Änderungsnachverfolgungsinformationen für eine bestimmte Zeile abzurufen.  
   
@@ -68,7 +68,7 @@ CHANGETABLE (
  Versions *Tabelle*, {<primary_key_values>}  
  Gibt die letzten Änderungsnachverfolgungsinformationen für eine angegebene Zeile zurück. Primärschlüsselwerte müssen die Zeile identifizieren. <primary_key_values> identifiziert die Primärschlüssel Spalten und gibt die Werte an. Die Namen der Primärschlüsselspalten können in beliebiger Reihenfolge angegeben werden.  
   
- *Glaub*  
+ *Tabelle*  
  Die benutzerdefinierte Tabelle, von der Änderungsnachverfolgungsinformationen abgerufen werden sollen. Die Änderungsnachverfolgung muss für die Tabelle aktiviert sein. Es kann ein Tabellenname verwendet werden, der aus ein, zwei, drei oder vier Teilen besteht. Der Tabellenname kann synonym mit der Tabelle sein.  
   
  *column_name*  
@@ -101,7 +101,7 @@ CHANGETABLE (
 |SYS_CHANGE_OPERATION|**NCHAR (1)**|Gibt den Typ der Änderung an:<br /><br /> **U** = Update<br /><br /> **I** = einfügen<br /><br /> **D** = löschen|  
 |SYS_CHANGE_COLUMNS|**varbinary (4100)**|Listet die Spalten auf, die sich seit last_sync_version (der Baseline) geändert haben. Beachten Sie, dass berechnete Spalten niemals als geändert aufgeführt werden.<br /><br /> Der Wert ist NULL, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> Die Änderungsnachverfolgung für Spalten ist nicht aktiviert.<br /><br /> Der Vorgang ist ein Einfüge- oder Löschvorgang.<br /><br /> Alle Nicht-Primärschlüsselspalten wurden in einem Vorgang aktualisiert. Dieser Binärwert sollte nicht direkt interpretiert werden. Verwenden Sie stattdessen [CHANGE_TRACKING_IS_COLUMN_IN_MASK ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md), um es zu interpretieren.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Ändern Sie die Kontextinformationen, die optional mithilfe der [with](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) -Klausel als Teil einer INSERT-, Update-oder DELETE-Anweisung angegeben werden können.|  
-|\<Wert> der Primärschlüssel Spalte|Identisch mit den Benutzertabellenspalten.|Die Primärschlüsselwerte für die nachverfolgte Tabelle. Diese Werte identifizieren jede Zeile in der Benutzertabelle eindeutig.|  
+|\<primary key column value>|Identisch mit den Benutzertabellenspalten.|Die Primärschlüsselwerte für die nachverfolgte Tabelle. Diese Werte identifizieren jede Zeile in der Benutzertabelle eindeutig.|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  Wenn VERSION angegeben wird, wird eine Zeile, die die folgenden Spalten aufweist, zurückgegeben.  
@@ -110,9 +110,9 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Wert der aktuellen Änderungsversion, der mit der Zeile verknüpft ist.<br /><br /> Der Wert ist NULL, wenn für einen längeren Zeitraum als der Beibehaltungsdauer für die Änderungsnachverfolgung keine Änderung vorgenommen wurde oder wenn die Zeile seit Aktivierung der Änderungsnachverfolgung nicht geändert wurde.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Änderungskontextinformationen, die optional angegeben werden können, indem Sie die WITH-Klausel als Teil einer INSERT-, UPDATE- oder DELETE-Anweisung verwenden.|  
-|\<Wert> der Primärschlüssel Spalte|Identisch mit den Benutzertabellenspalten.|Die Primärschlüsselwerte für die nachverfolgte Tabelle. Diese Werte identifizieren jede Zeile in der Benutzertabelle eindeutig.|  
+|\<primary key column value>|Identisch mit den Benutzertabellenspalten.|Die Primärschlüsselwerte für die nachverfolgte Tabelle. Diese Werte identifizieren jede Zeile in der Benutzertabelle eindeutig.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die CHANGETABLE-Funktion wird in der Regel in der FROM-Klausel einer Abfrage verwendet, so als handele es sich um eine Tabelle.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
@@ -189,7 +189,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
         ON e.[Emp ID] = c.[Emp ID] AND e.SSN = c.SSN;  
 ```  
   
-### <a name="d-detecting-conflicts-by-using-changetableversion"></a>D. Erkennen von Konflikten mit CHANGETABLE(VERSION...)  
+### <a name="d-detecting-conflicts-by-using-changetableversion"></a>D: Erkennen von Konflikten mit CHANGETABLE(VERSION...)  
  Im folgenden Beispiel wird gezeigt, wie eine Zeile nur dann aktualisiert wird, wenn sie sich seit der letzten Synchronisierung nicht geändert hat. Die Versionsnummer der betreffenden Zeile wird mit `CHANGETABLE` abgerufen. Wenn die Zeile aktualisiert wurde, werden keine Änderungen vorgenommen, und die Abfrage gibt Informationen über die aktuelle Änderung der Zeile zurück.  
   
 ```sql  

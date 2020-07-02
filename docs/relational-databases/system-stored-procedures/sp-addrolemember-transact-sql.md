@@ -18,15 +18,15 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87fbcab87999c83c688ec4fa9e46f1aeed033bcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716419"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Fügt einer Datenbankrolle in der aktuellen Datenbank einen Datenbankbenutzer, eine Datenbankrolle, einen Windows-Anmeldenamen oder eine Windows-Gruppe hinzu.  
   
@@ -43,10 +43,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>Argumente  
- [ @rolename= ] "*Role*"  
+ [ @rolename =] '*Rolle*'  
  Der Name der Datenbankrolle in der aktuellen Datenbank. *role* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
- [ @membername= ] "*security_account*"  
+ [ @membername =] '*security_account*'  
  Das Sicherheitskonto, das der Rolle hinzugefügt wird. *security_account* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. *security_account* kann ein Datenbankbenutzer, eine Daten Bank Rolle, ein Windows-Anmelde Name oder eine Windows-Gruppe sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -75,7 +75,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-adding-a-windows-login"></a>A. Hinzufügen eines Windows-Anmeldenamens  
- Im folgenden Beispiel wird der Windows- `Contoso\Mary5` Anmelde Name `AdventureWorks2012` der-Datenbank `Mary5`als Benutzer hinzugefügt. Der Benutzer `Mary5` wird dann der `Production`-Rolle hinzugefügt.  
+ Im folgenden Beispiel wird der Windows-Anmelde Name `Contoso\Mary5` der- `AdventureWorks2012` Datenbank als Benutzer hinzugefügt `Mary5` . Der Benutzer `Mary5` wird dann der `Production`-Rolle hinzugefügt.  
   
 > [!NOTE]  
 >  Da `Contoso\Mary5` als Datenbankbenutzer `Mary5` in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank bekannt ist, muss der Benutzername `Mary5` angegeben werden. Die Anweisung führt zu einem Fehler, es sei denn, es ist ein Anmeldename `Contoso\Mary5` vorhanden. Testen Sie dies, indem Sie einen Anmeldenamen Ihrer Domäne verwenden.  
@@ -97,10 +97,10 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## <a name="examples-sspdw"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Hinzufügen eines Windows-Anmeldenamens  
- Im folgenden Beispiel wird der- `LoginMary` Anmelde Name `AdventureWorks2008R2` der-Datenbank `UserMary`als Benutzer hinzugefügt. Der Benutzer `UserMary` wird dann der `Production`-Rolle hinzugefügt.  
+ Im folgenden Beispiel wird der-Anmelde Name der- `LoginMary` `AdventureWorks2008R2` Datenbank als Benutzer hinzugefügt `UserMary` . Der Benutzer `UserMary` wird dann der `Production`-Rolle hinzugefügt.  
   
 > [!NOTE]  
->  Da der Anmelde `LoginMary` Name als Datenbankbenutzer `UserMary` in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank bezeichnet wird, muss `UserMary` der Benutzername angegeben werden. Die Anweisung führt zu einem Fehler, es sei denn, es ist ein Anmeldename `Mary5` vorhanden. Anmeldungen und Benutzer haben normalerweise denselben Namen. In diesem Beispiel werden verschiedene Namen verwendet, um die Aktionen zu unterscheiden, die sich auf die Anmeldung oder den Benutzer auswirken  
+>  Da der Anmelde `LoginMary` Name als Datenbankbenutzer `UserMary` in der- [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank bezeichnet wird, muss der Benutzername `UserMary` angegeben werden. Die Anweisung führt zu einem Fehler, es sei denn, es ist ein Anmeldename `Mary5` vorhanden. Anmeldungen und Benutzer haben normalerweise denselben Namen. In diesem Beispiel werden verschiedene Namen verwendet, um die Aktionen zu unterscheiden, die sich auf die Anmeldung oder den Benutzer auswirken  
   
 ```  
 -- Uses AdventureWorks  
@@ -110,7 +110,7 @@ GO
 EXEC sp_addrolemember 'Production', 'UserMary'  
 ```  
   
-### <a name="d-adding-a-database-user"></a>D. Hinzufügen eines Datenbankbenutzers  
+### <a name="d-adding-a-database-user"></a>D: Hinzufügen eines Datenbankbenutzers  
  Im folgenden Beispiel wird der Datenbankbenutzer `UserMary` der `Production`-Datenbankrolle in der aktuellen Datenbank hinzugefügt.  
   
 ```  

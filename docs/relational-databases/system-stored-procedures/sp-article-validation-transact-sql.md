@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f4d1b571bd32023b6ea47331c2757c814dc00ac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a3fa3274901d881be7d52ecd62c60a802b597a0a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716254"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Initiiert eine Datenüberprüfungsanforderung für den angegebenen Artikel. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank und auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
   
@@ -78,7 +78,7 @@ sp_article_validation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_article_validation** wird bei der Transaktions Replikation verwendet.  
   
  **sp_article_validation** bewirkt, dass Validierungs Informationen für den angegebenen Artikel erfasst und eine Überprüfungs Anforderung an das Transaktionsprotokoll gesendet werden. Wenn der Verteilungs-Agent diese Anforderung empfängt, vergleicht er die Überprüfungsinformationen in der Anforderung mit der Abonnententabelle. Die Ergebnisse der Überprüfung werden im Replikationsmonitor und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Warnungen angezeigt.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 4ff31939ce763f91ca706dfe9e7966b2a7b42f7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627619"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716349"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   Fügt einer Veröffentlichung ein Abonnement hinzu und legt den Status des Abonnenten fest. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -94,7 +94,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type =] '*sync_type*'  
  Der Synchronisierungstyp des Abonnements. *sync_type* ist vom Datentyp **nvarchar (255)** und kann einen der folgenden Werte aufweisen:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Keine|Der Abonnent besitzt bereits das Schema und die Ausgangsdaten für veröffentlichte Tabellen.<br /><br /> Hinweis: diese Option ist veraltet. Verwenden Sie stattdessen replication support only.|  
 |automatic (Standard)|Das Schema und die Ausgangsdaten für veröffentlichte Tabellen werden zuerst an den Abonnenten übertragen.|  
@@ -108,7 +108,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status =] '*Status*'  
  Der Abonnementstatus. der *Status* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn dieser Parameter nicht explizit festgelegt wird, wird er von der Replikation automatisch auf einen der folgenden Werte festgelegt.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |aktiv|Das Abonnement wird initialisiert und ist bereit, Änderungen anzunehmen. Diese Option wird festgelegt, wenn der Wert *sync_type* auf None, initialisieren with Backup oder Replication Support Only festgelegt ist.|  
 |subscribed|Das Abonnement muss initialisiert werden. Diese Option wird festgelegt, wenn der Wert *sync_type* automatisch ist.|  
@@ -122,7 +122,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode =] '*update_mode*'  
  Der Typ des Updates. *update_mode* ist vom Datentyp **nvarchar (30)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |read only (Standard)|Das Abonnement ist schreibgeschützt. Änderungen am Abonnenten werden nicht an den Verleger gesendet.|  
 |sync tran|Aktiviert die Unterstützung für das sofortige Aktualisieren von Abonnements. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
@@ -135,16 +135,16 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection =] '*loopback_detection*'  
  Gibt an, ob der Verteilungs-Agent Transaktionen, die vom Abonnenten stammen, zurück an den Abonnenten sendet. *loopback_detection* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |true|Der Verteilungs-Agent sendet Transaktionen des Abonnenten nicht an den Abonnenten zurück. Wird bei der bidirektionalen Transaktionsreplikation verwendet. Weitere Informationen finden Sie unter [bidirektionale Transaktions Replikation](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
-|false|Der Verteilungs-Agent sendet Transaktionen des Abonnenten an den Abonnenten zurück.|  
+|False|Der Verteilungs-Agent sendet Transaktionen des Abonnenten an den Abonnenten zurück.|  
 |NULL (Standard)|Wird für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten automatisch auf true und für einen Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten auf false festgelegt.|  
   
  [ @frequency_type =] *frequency_type*  
  Die Häufigkeit für die Zeitplanung des Verteilungstasks. *frequency_type* ist vom Datentyp int. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |1|Einmalig|  
 |2|On-Demand-Streaming|  
@@ -161,10 +161,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval =] *frequency_relative_interval*  
  Das Datum des Verteilungs-Agents. Dieser Parameter wird verwendet, wenn *frequency_type* auf 32 (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|1|First (Erster)|  
-|2|Sekunde|  
+|1|First|  
+|2|Second|  
 |4|Dritter|  
 |8|Vierter|  
 |16|Last (Letzter)|  
@@ -176,10 +176,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday =] *frequency_subday*  
  Die Häufigkeit (in Minuten) für die erneute geplante Ausführung während des definierten Zeitraums. *frequency_subday* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |1|Einmalig|  
-|2|Sekunde|  
+|2|Second|  
 |4|Minute|  
 |8|Stunde|  
 |NULL||  
@@ -241,7 +241,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicetype =] '*backupabvicetype*'  
  Gibt den Sicherungsmedientyp an, der beim Initialisieren eines Abonnenten von einer Sicherung verwendet wird. *backupabvicetype* ist vom Datentyp **nvarchar (20)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |logical (Standard)|Das Sicherungsmedium ist ein logisches Medium.|  
 |disk|Das Sicherungsmedium ist ein Laufwerk.|  
@@ -279,7 +279,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type =] *subscriber_type*  
  Der Typ des Abonnenten. *subscriber_type* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0 (Standard)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Abonnenten|  
 |1|ODBC-Datenquellenserver|  

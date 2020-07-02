@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f0704ff7d6764ca06c7de37d0d02bfbcb9148ce7
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 3d6d9401c9917e2d58416c5ca4e6bc29c64a1b49
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716548"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  
   Fügt einer Transaktionsveröffentlichung einen neuen geplanten Agent-Auftrag hinzu, mit dem ein Pullabonnement synchronisiert wird. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   
@@ -139,7 +139,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |**2** (Standardwert)|On-Demand-Streaming|  
 |**4**|Täglich|  
 |**8**|Wöchentlich|  
-|**Uhr**|Monatlich|  
+|**16**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64**|Autostart|  
 |**128**|Wiederholt|  
@@ -151,22 +151,22 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum der Verteilungs-Agent. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**1** (Standard)|First (Erster)|  
-|**2**|Sekunde|  
+|**1** (Standard)|First|  
+|**2**|Second|  
 |**4**|Dritter|  
 |**8**|Vierter|  
-|**Uhr**|Last (Letzter)|  
+|**16**|Last (Letzter)|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert **1**.  
   
 `[ @frequency_subday = ] frequency_subday`Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1** (Standard)|Einmalig|  
-|**2**|Sekunde|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Stunde|  
   
@@ -233,7 +233,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_addpullsubscription_agent** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
 ## <a name="example"></a>Beispiel  

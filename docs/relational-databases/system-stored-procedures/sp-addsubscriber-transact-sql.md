@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf49c44ca3de4325c8d5c6ecab22adc3ac0614cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 462fe9e3634ea1dfa844fe4a97f1086bdef82cba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833629"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716361"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   Fügt einen neuen Abonnenten zu einem Verleger hinzu, wobei dieser für den Empfang von Veröffentlichungen aktiviert wird. Diese gespeicherte Prozedur wird für Momentaufnahme- und Transaktionsveröffentlichungen auf dem Verleger in der Veröffentlichungsdatenbank ausgeführt. Für Mergeveröffentlichungen, die einen Remoteverteiler verwenden, wird diese gespeicherte Prozedur auf dem Verteiler ausgeführt.  
   
@@ -101,13 +101,13 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der der Replikations-Agent geplant werden soll. *frequency_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|On-Demand-Streaming|  
 |**4**|Täglich|  
 |**8**|Wöchentlich|  
-|**Uhr**|Monatlich|  
+|**16**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64** (Standard)|Autostart|  
 |**128**|Wiederholt|  
@@ -122,13 +122,13 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum des Replikations-Agents. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**1** (Standard)|First (Erster)|  
-|**2**|Sekunde|  
+|**1** (Standard)|First|  
+|**2**|Second|  
 |**4**|Dritter|  
 |**8**|Vierter|  
-|**Uhr**|Last (Letzter)|  
+|**16**|Last (Letzter)|  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Die-Eigenschaft wird jetzt auf Abonnement Basis angegeben, wenn [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)ausgeführt wird. Wenn ein Wert angegeben wird, wird er beim Erstellen von Abonnements auf diesem Abonnenten als Standard verwendet, und eine Warnmeldung wird zurückgegeben.  
@@ -140,10 +140,10 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday`Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
-|**2**|Sekunde|  
+|**2**|Second|  
 |**4** (Standard)|Minute|  
 |**8**|Stunde|  
   
@@ -192,7 +192,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_addsubscriber** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
  **sp_addsubscriber** ist nicht erforderlich, wenn der Abonnent nur anonyme Abonnements für Mergeveröffentlichungen hat.  

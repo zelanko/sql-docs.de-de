@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 963fa56dfba33c13eb2ce4d317f69a22b5cdd259
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 11dde97040adf3005c7e417a38f66088b8f3f7d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717497"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Meldet die Attribute der Spalten im Resultset eines Servercursors.  
   
@@ -89,7 +89,7 @@ sp_describe_cursor_columns
 |dbid|**int**|Die ID der Datenbank mit der Basistabelle, die die Spalte bereitstellt. Wenn die Resultsetspalte mit einem Ausdruck erstellt wurde, weist dbid den Wert -1 auf.|  
 |dbname|**sysname**<br /><br /> (NULL zulassen)|Der Name der Datenbank mit der Basistabelle, die die Spalte bereitstellt. Wenn die Resultsetspalte mit einem Ausdruck erstellt wurde, weist dbname den Wert NULL auf.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  sp_describe_cursor_columns beschreibt die Attribute der Spalten im Resultset eines Servercursors, wie z.B. den Namen und den Datentyp der einzelnen Cursor. Mit sp_describe_cursor zeigen Sie eine Beschreibung der globalen Attribute des Servercursors an. Mit sp_describe_cursor_tables zeigen Sie an, auf welche Basistabellen der Cursor verweist. Mit sp_cursor_list erhalten Sie einen Bericht der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor, die für die Verbindung sichtbar sind.  
   
 ## <a name="permissions"></a>Berechtigungen  

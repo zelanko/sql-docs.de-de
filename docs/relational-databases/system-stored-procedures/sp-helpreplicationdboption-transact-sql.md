@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84f009a2f2184ce2974f837006471d2b9bb97346
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0376653d2466bf756ba76575f90841f78956ade7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718678"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Zeigt an, ob die Datenbanken auf dem Verleger für die Replikation aktiviert sind. Diese gespeicherte Prozedur wird auf dem Verleger für jede Datenbank ausgeführt. *Diese Option wird für Oracle-Verleger nicht unterstützt.*  
   
@@ -43,7 +43,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 `[ @type = ] 'type'`Schränkt das Resultset so ein, dass es nur Datenbanken enthält, für die der angegebene Wert des Replikations options *Typs* aktiviert wurde *Type ist vom Datentyp* **vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**veröffentlichen**|Transaktionsreplikation ist zulässig.|  
 |**Zusammenführen der Veröffentlichung**|Mergereplikation ist zulässig.|  
@@ -67,7 +67,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helpreplicationdboption** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

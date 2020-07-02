@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d5a65254061160374120ef1d7cf54974f7a3dc2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a906e3b74e4682883dbddaf89ba58b5d4069936
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716218"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Erstellt die Sicht für die Definition des veröffentlichten Artikels, wenn eine Tabelle vertikal oder horizontal gefiltert wird. Diese Sicht wird als gefilterte Quelle des Schemas und der Daten für die Zieltabellen verwendet. Mit dieser gespeicherten Prozedur können nur nicht abonnierte Artikel geändert werden. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -84,7 +84,7 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_articleview** erstellt die Sicht, die den veröffentlichten Artikel definiert, und fügt die ID dieser Sicht in die Spalte **sync_objid** der Tabelle [sysarticles &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) ein und fügt den Text der Einschränkungs Klausel in die Spalte **filter_clause** ein. Wenn alle Spalten repliziert werden und keine **filter_clause**vorhanden ist, wird der **sync_objid** in der [sysarticles-&#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) Tabelle auf die ID der Basistabelle festgelegt, und die Verwendung **sp_articleview** ist nicht erforderlich.  
   
  Führen Sie zum Veröffentlichen einer vertikal gefilterten Tabelle (d. h. zum Filtern von Spalten) zuerst **sp_addarticle** ohne *sync_object* Parameter aus, führen Sie [sp_articlecolumn &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede zu replizierende Spalte aus (definieren Sie den vertikalen Filter), und führen Sie dann **sp_articleview** aus, um die Sicht zu erstellen, die den veröffentlichten Artikel definiert.  

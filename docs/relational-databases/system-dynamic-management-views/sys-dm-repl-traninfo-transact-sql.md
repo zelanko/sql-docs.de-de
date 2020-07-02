@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d27ca972fa5a20fbb22a6786e6be2ca3cf8c8153
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2def277c877311fc5bfaa77bbab5923563d39a75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830491"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716647"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen über jede replizierte Transaktion bzw. jede Change Data Capture-Transaktion zurück.  
 
@@ -43,7 +43,7 @@ ms.locfileid: "82830491"
 |**Streitigkeiten**|**int**|ID des replizierten Befehls in der Transaktion.|  
 |**xdesid für**|**nvarchar (64)**|Transaktions-ID|  
 |**artcache_table_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Artikeltabellenstruktur, die zuletzt für diese Transaktion verwendet wurde.|  
-|**Servers**|**nvarchar (514)**|Servername.|  
+|**server**|**nvarchar (514)**|Servername.|  
 |**server_len_in_bytes**|**smallint**|Zeichenlänge des Servernamens (in Bytes).|  
 |**database**|**nvarchar (514)**|Datenbankname.|  
 |**db_len_in_bytes**|**smallint**|Zeichenlänge des Datenbanknamens (in Bytes).|  
@@ -70,7 +70,7 @@ ms.locfileid: "82830491"
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung in der Veröffentlichungsdatenbank oder in der für Change Data Capture aktivierten Datenbank.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Informationen werden nur für replizierte Datenbankobjekte oder für für Change Data Capture aktivierte Tabellen zurückgegeben, die zurzeit in den Artikelcache geladen sind.  
   
 ## <a name="see-also"></a>Weitere Informationen  

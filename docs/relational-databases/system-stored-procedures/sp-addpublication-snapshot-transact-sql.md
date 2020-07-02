@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3447b9111ec6d6a6fd6a4084f884647cbd38eec2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 68540299b14af875f6625771d9d47f81f048f43d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716538"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Erstellt den Momentaufnahme-Agent für die angegebene Veröffentlichung. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -66,7 +66,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|Einmal.|  
 |**4** (Standard)|Tä.|  
 |**8**|Wöchentlich|  
-|**Uhr**|Monatlich.|  
+|**16**|Monatlich.|  
 |**32**|Monatlich, relativ zum Häufigkeitsintervall.|  
 |**64**|Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent gestartet wird.|  
 |**128**|Ausführen, wenn sich der Computer im Leerlauf befindet|  
@@ -78,7 +78,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|*frequency_interval* wird nicht verwendet.|  
 |**4** (Standard)|Alle *frequency_interval* Tage, wobei der Standardwert täglich ist.|  
 |**8**|*frequency_interval* ist eine oder mehrere der folgenden (kombiniert mit einem [&#124; (bitweisen OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) logischen Operator):<br /><br /> **1** = Sonntag &#124;<br /><br /> **2** = Montag &#124;<br /><br /> **4** = Dienstag &#124;<br /><br /> **8** = Mittwoch &#124;<br /><br /> **16** = Donnerstag &#124;<br /><br /> **32** = Freitag &#124;<br /><br /> **64** = Samstag|  
-|**Uhr**|Am *frequency_interval* Tag des Monats.|  
+|**16**|Am *frequency_interval* Tag des Monats.|  
 |**32**|*frequency_interval* ist einer der folgenden:<br /><br /> **1** = Sonntag &#124;<br /><br /> **2** = Montag &#124;<br /><br /> **3** = Dienstag &#124;<br /><br /> **4** = Mittwoch &#124;<br /><br /> **5** = Donnerstag &#124;<br /><br /> **6** = Freitag &#124;<br /><br /> **7** = Samstag &#124;<br /><br /> **8** = Tag &#124;<br /><br /> **9** = wochentags&#124;<br /><br /> **10** = Wochenendtag|  
 |**64**|*frequency_interval* wird nicht verwendet.|  
 |**128**|*frequency_interval* wird nicht verwendet.|  
@@ -88,7 +88,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
-|**2**|Sekunde|  
+|**2**|Second|  
 |**4** (Standard)|Minute|  
 |**8**|Stunde|  
   
@@ -135,7 +135,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_addpublication_snapshot** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="example"></a>Beispiel  

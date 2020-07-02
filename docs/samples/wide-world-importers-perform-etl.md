@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98ce2b9aa11b2e1381da1f16455df8a2c0d3f243
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1dfba407449b9517af2ed899f49387732c48353b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718528"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Wideworldimportersdw-ETL-Workflow
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Verwenden Sie das *WWI_Integration* ETL-Paket, um Daten aus der wideworldimporters-Datenbank in die Datenbank "wideworldimportersdw" zu migrieren, wenn sich Daten ändern. Das Paket wird in regelmäßigen Abständen ausgeführt (normalerweise täglich).
 
 Das Paket stellt eine hohe Leistung sicher, indem SQL Server Integration Services zum orchestrieren von T-SQL-Massen Vorgängen (anstelle von separaten Transformationen in Integration Services) verwendet wird.
@@ -43,13 +43,13 @@ Anschließend lädt eine Reihe von Datenfluss Tasks jede Dimension. Anschließen
   - Stellen Sie sicher, dass Sie einen Integration Services Katalog erstellen. Klicken Sie zum Erstellen eines Integration Services Katalogs in SQL Server Management Studio Objekt-Explorer mit der rechten Maustaste auf **Integration Services**, und wählen Sie dann **Katalog hinzufügen**aus. Überlassen Sie die Standardoptionen. Sie werden aufgefordert, SQLCLR zu aktivieren und ein Kennwort anzugeben.
 
 
-## <a name="download"></a>Download
+## <a name="download"></a>Herunterladen
 
 Die neueste Version des Beispiels finden Sie unter [Wide-World-importierungsrelease](https://go.microsoft.com/fwlink/?LinkID=800630). Laden Sie die *tägliche ETL. ispac* -Integration Services Paketdatei herunter.
 
 Informationen zum erneuten Erstellen der Beispieldatenbank durch den Quellcode finden Sie unter [Wide-World-Importierung.](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-ssis)
 
-## <a name="install"></a>Installation
+## <a name="install"></a>Installieren
 
 1. Stellen Sie das Integration Services Paket bereit:
    1. Öffnen Sie in Windows-Explorer das *tägliche ETL. ispac* -Paket. Dadurch wird der Assistent für die SQL Server Integration Services Bereitstellung gestartet.
@@ -59,11 +59,11 @@ Informationen zum erneuten Erstellen der Beispieldatenbank durch den Quellcode f
    5. Wählen **Sie** bereitstellen aus, um den Assistenten abzuschließen.
 
 2. Erstellen Sie einen SQL Server-Agent Auftrag für den ETL-Prozess:
-   1. Klicken Sie in Management Studio mit der rechten Maustaste auf **SQL Server-Agent**, und wählen Sie dann **neuer** > **Auftrag**aus.
+   1. Klicken Sie in Management Studio mit der rechten Maustaste auf **SQL Server-Agent**, und wählen Sie dann **neuer**  >  **Auftrag**aus.
    2. Geben Sie einen Namen ein, z. b. *wideworldimporters ETL*.
    3. Fügen Sie einen **Auftrags Schritt** des Typs **SQL Server Integration Services Pakets**hinzu.
    4. Wählen Sie den Server mit dem Integration Services Katalog aus, und wählen Sie dann das *tägliche ETL* -Paket aus.
-   5. Stellen Sie unter **Konfigurations** > **Verbindungs-Manager**sicher, dass die Verbindungen mit der Quelle und dem Ziel ordnungsgemäß konfiguriert sind. Der Standardwert besteht darin, eine Verbindung mit der lokalen Instanz herzustellen.
+   5. Stellen Sie unter **Konfigurations**  >  **Verbindungs-Manager**sicher, dass die Verbindungen mit der Quelle und dem Ziel ordnungsgemäß konfiguriert sind. Der Standardwert besteht darin, eine Verbindung mit der lokalen Instanz herzustellen.
    6. Wählen Sie **OK** aus, um den Auftrag zu erstellen.
 
 3. Ausführen oder Planen des Auftrags.

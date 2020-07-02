@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09f0b37d417374509a69a5362a759ff2558a8228
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bd963a39dddaca5cd2558ea95853fdebf366e2ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829965"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719223"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aktualisiert die Metadaten für die angegebene nicht schemagebundene Sicht. Persistente Metadaten für eine Sicht sind möglicherweise aufgrund von Änderungen an den zugrunde liegenden Objekten, von denen die Sicht abhängt, nicht mehr aktuell.  
   
@@ -44,7 +44,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn eine Sicht nicht mit SCHEMABINDING erstellt wird, sollten **sp_refreshview** ausgeführt werden, wenn Änderungen an den Objekten vorgenommen werden, die der Sicht zugrunde liegen, die sich auf die Definition der Sicht auswirken. Andernfalls liefert die Abfrage der Sicht möglicherweise unerwartete Ergebnisse.  
   
 ## <a name="permissions"></a>Berechtigungen  

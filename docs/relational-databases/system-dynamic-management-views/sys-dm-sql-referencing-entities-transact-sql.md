@@ -20,15 +20,15 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3557f9f77a310a9e72e8a9fb1e11a6976256d2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717442"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt eine Zeile für jede Entität in der aktuellen Datenbank zurück, die anhand des Namens auf eine andere benutzerdefinierte Entität verweist. Eine Abhängigkeit zwischen zwei Entitäten wird erstellt, wenn eine Entität, die als *Referenzierte Entität*bezeichnet wird, in einem permanenten SQL-Ausdruck einer anderen Entität, die als *verweisende Entität*bezeichnet wird, nach Namen Wird z. B. ein benutzerdefinierter Typ (User-Defined Type; UDT) als Entität angegeben, auf die verwiesen wird, gibt diese Funktion jede benutzerdefinierte Entität zurück, die anhand des Namens in der zugehörigen Definition auf diesen Typ verweist. Die Funktion gibt keine Entitäten in anderen Datenbanken zurück, die möglicherweise auf die angegebene Entität verweisen. Diese Funktion muss zusammen mit der master-Datenbank ausgeführt werden, um einen DDL-Trigger auf Serverebene als verweisende Entität zurückzugeben.  
   
@@ -96,7 +96,7 @@ sys.dm_sql_referencing_entities (
   
  Gibt einen Fehler zurück, wenn die angegebene Entität, auf die verwiesen wird, eine nummerierte gespeicherte Prozedur ist.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle werden die Typen von Entitäten aufgelistet, für die Abhängigkeitsinformationen erstellt und verwaltet werden. Für Regeln, Standardwerte, temporäre Tabellen, temporär gespeicherte Prozeduren oder Systemobjekte werden keine Abhängigkeitsinformationen erstellt oder verwaltet.  
   
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  

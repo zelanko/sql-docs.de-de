@@ -22,16 +22,16 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718772"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Gibt Informationen zu allen Spinlock-warte Vorgängen nach Typ organisiert zurück.  
   
@@ -47,14 +47,14 @@ Gibt Informationen zu allen Spinlock-warte Vorgängen nach Typ organisiert zurü
 
 
 ## <a name="permissions"></a>Berechtigungen  
-In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.    
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.    
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  
  sys. dm_os_spinlock_stats kann zum Identifizieren der Quelle von Spinlock-Konflikten verwendet werden. In einigen Situationen können Sie möglicherweise Spinlock-Konflikte auflösen oder verringern. Es kann jedoch Situationen geben, in denen Sie sich mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services in Verbindung setzen müssen.  
   
- Sie können den Inhalt von sys. dm_os_spinlock_stats zurücksetzen, `DBCC SQLPERF` indem Sie wie folgt verwenden:  
+ Sie können den Inhalt von sys. dm_os_spinlock_stats zurücksetzen, indem Sie `DBCC SQLPERF` wie folgt verwenden:  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -120,7 +120,7 @@ GO
 |DBSEEDING_OPERATION|Nur interne Verwendung.|
 |DBT_HASH|Nur interne Verwendung.|
 |DBT_IO_LIST|Nur interne Verwendung.|
-|DBTABLE|Steuert den Zugriff auf eine Datenstruktur im Arbeitsspeicher für jede Datenbank in einer SQL Server, die die Eigenschaften dieser Datenbank enthält. Weitere Informationen hierzu finden Sie in [diesem Artikel](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
+|DBTABLE|Steuert den Zugriff auf eine Datenstruktur im Arbeitsspeicher für jede Datenbank in einer SQL Server, die die Eigenschaften dieser Datenbank enthält. Weitere Informationen finden Sie in [diesem Artikel](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
 |DEFERRED_WF_EXT_DROP|Nur interne Verwendung.|
 |DEK_INSTANCE|Nur interne Verwendung.|
 |DELAYED_PARTITIONED_STACK|Nur interne Verwendung.|
@@ -130,7 +130,7 @@ GO
 |DIGEST_CACHE|Nur interne Verwendung.|
 |Dinpbuf|Nur interne Verwendung.|
 |Directlogconsumer|Nur interne Verwendung.|
-|DP_LIST|Steuert den Zugriff auf die Liste der geänderten Seiten für eine Datenbank, für die ein indirekter Prüfpunkt aktiviert ist. Weitere Informationen hierzu finden Sie in [diesem Artikel](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
+|DP_LIST|Steuert den Zugriff auf die Liste der geänderten Seiten für eine Datenbank, für die ein indirekter Prüfpunkt aktiviert ist. Weitere Informationen finden Sie in [diesem Artikel](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
 |DROP|Nur interne Verwendung.|
 |DROP_TEMPO|Nur interne Verwendung.|
 |DROPPED_ALLOC_UNIT|Nur interne Verwendung.|
@@ -187,7 +187,7 @@ GO
 |LANG_RES_LOAD|Nur interne Verwendung.|
 |LIVE_TARGET_TVF|Nur interne Verwendung.|
 |LOCK_FREE_LIST|Nur interne Verwendung.|
-|LOCK_HASH|Schützt den Zugriff auf die Hash Tabelle des Sperren-Managers, in der Informationen zu den Sperren gespeichert werden, die in einer Datenbank gespeichert sind. Weitere Informationen hierzu finden Sie in [diesem Artikel](https://support.microsoft.com/kb/2926217).|
+|LOCK_HASH|Schützt den Zugriff auf die Hash Tabelle des Sperren-Managers, in der Informationen zu den Sperren gespeichert werden, die in einer Datenbank gespeichert sind. Weitere Informationen finden Sie in [diesem Artikel](https://support.microsoft.com/kb/2926217).|
 |LOCK_NOTIFICATION|Nur interne Verwendung.|
 |LOCK_RESOURCE_ID|Nur interne Verwendung.|
 |LOCK_RW_ABTX_HASH_SET|Nur interne Verwendung.|
@@ -307,7 +307,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|Nur interne Verwendung.|
 |SOS_BLOCKALLOCPARTIALLIST|Nur interne Verwendung.|
 |SOS_BLOCKDESCRIPTORBUCKET|Nur interne Verwendung.|
-|SOS_CACHESTORE|Synchronisiert den Zugriff auf verschiedene in-Memory-Caches in SQL Server z. b. im Plancache oder temporären Tabellencache. Ein starker Konflikt bei diesem Spinlock-Typ kann viele verschiedene Dinge bedeuten, abhängig vom spezifischen Cache, der Konflikte verursacht. Wenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sie sich an Microsoft Support Services, um Hilfe bei der Behebung dieses Spinlock-Typs |
+|SOS_CACHESTORE|Synchronisiert den Zugriff auf verschiedene in-Memory-Caches in SQL Server z. b. im Plancache oder temporären Tabellencache. Ein starker Konflikt bei diesem Spinlock-Typ kann viele verschiedene Dinge bedeuten, abhängig vom spezifischen Cache, der Konflikte verursacht. Wenden Sie sich an Microsoft [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services, um Hilfe bei der Behebung dieses Spinlock-Typs |
 |SOS_CACHESTORE_CLOCK|Nur interne Verwendung.|
 |SOS_CLOCKALG_INTERNODE_SYNC|Nur interne Verwendung.|
 |SOS_DEBUG_HOOK|Nur interne Verwendung.|

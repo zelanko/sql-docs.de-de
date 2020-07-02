@@ -18,15 +18,15 @@ ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c01290f0f95a7e240931a9398ab7acea1b287be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 546e980aeb021f57a0267d1f668f7acd181b4dcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719277"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt die Typen der DML-Trigger zurück, die in der angegebenen Tabelle für die aktuelle Datenbank definiert sind. sp_helptrigger kann nicht mit DDL-Triggern verwendet werden. Fragen Sie stattdessen die Katalog Sicht der [gespeicherten System Prozeduren](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) ab.  
   
@@ -45,7 +45,7 @@ sp_helptrigger [ @tabname = ] 'table'
   
 `[ @triggertype = ] 'type'`Der Typ des DML-Triggers, über den Informationen zurückgegeben werden sollen. *Type ist vom Datentyp* **char (6)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**DELETE**|Gibt DELETE-Triggerinformationen zurück.|  
 |**INSERT**|Gibt INSERT-Triggerinformationen zurück.|  

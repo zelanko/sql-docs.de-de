@@ -13,26 +13,26 @@ ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fa94f57a783fc4bdb12f17baa0dbbcb54f61ee4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 571affb61db00386bc7e325c5491e5364d526ee2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719002"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen (OLE DB und ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In diesem Thema werden die Datum-/Uhrzeiterweiterungen beschrieben, die die Massenkopierfunktionalität unterstützen. Die Informationen in diesem Thema sind für OLE DB und ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client gültig.  
   
 ## <a name="format-files"></a>Formatdateien  
  Beim interaktiven Erstellen von Formatdateien beschreibt die folgende Tabelle die Eingaben, die zum Angeben von Datum-/Uhrzeittypen verwendet werden, sowie die entsprechenden Datentypnamen der Hostdatei.  
   
-|Dateispeichertyp|Datentyp in der Hostdatei|Antwort auf die Eingabeaufforderung: „Geben Sie den Dateispeichertyp des Felds <Feldname> ein [\<Standardwert>]:“|  
+|Dateispeichertyp|Datentyp in der Hostdatei|Antwort auf die Eingabeaufforderung: "geben Sie den Datei Speichertyp des Felds <FIELD_NAME> [ \<default> ]:" ein.|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|Datum|SQLDATE|de|  
+|Date|SQLDATE|de|  
 |Zeit|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -66,7 +66,7 @@ ms.locfileid: "81301831"
 ## <a name="character-data-files"></a>Zeichendatendateien  
  In Zeichen Datendateien werden Datums-und Uhrzeitwerte wie im Abschnitt "Datenformate: Zeichen folgen und Literale" der [Datentyp Unterstützung für ODBC-Datums-und Uhrzeit Verbesserungen](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md) für ODBC oder der [Datentyp Unterstützung für OLE DB Datums-und Uhrzeit Verbesserungen](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) für OLE DB dargestellt.  
   
- In systemeigenen Daten werden die Datums-und Uhrzeitwerte für die vier neuen Typen als TDS-Darstellungen mit einer Skala von 7 dargestellt (da dies der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützte Höchstwert ist und bcp-Datendateien die Skala dieser Spalten nicht speichern). Es erfolgt keine Änderung an der Speicherung der vorhandenen **datetime**- und **smalldatetime**-Typen oder ihrer Tabular Data Stream-Entsprechungen (TDS).  
+ In systemeigenen Daten werden die Datums-und Uhrzeitwerte für die vier neuen Typen als TDS-Darstellungen mit einer Skala von 7 dargestellt (da dies der von unterstützte höchst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wert ist und bcp-Datendateien die Skala dieser Spalten nicht speichern). Es erfolgt keine Änderung an der Speicherung der vorhandenen **datetime**- und **smalldatetime**-Typen oder ihrer Tabular Data Stream-Entsprechungen (TDS).  
   
  Die Speichergrößen für die anderen Speichertypen sind für OLE DB wie folgt:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "81301831"
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|Datum|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Zeit|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -110,18 +110,18 @@ ms.locfileid: "81301831"
   
  **OLE DB-Hinweis** Die folgenden Konvertierungen werden von IBCPSession ausgeführt. IRowsetFastLoad nutzt OLE DB-Konvertierungen gemäß der Definition unter [Konvertierungen von Client zu Server](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Beachten Sie, dass datetime-Werte auf 1/300stel einer Sekunde gerundet werden und dass für smalldatetime-Werte die Sekunden vom Server auf null festgelegt werden, nachdem die unten beschriebenen Clientkonvertierungen durchgeführt wurden. Datetime-Rundung wird durch Stunden und Minuten, aber nicht durch das Datum weitergegeben.  
   
-|Bis --><br /><br /> Von|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|Bis --><br /><br /> From|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|Datum|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Zeit|–|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|Zeit|Nicht zutreffend|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
-|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|–|–|  
-|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|–|–|  
-|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|–|–|  
-|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|–|–|  
+|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|Nicht zutreffend|Nicht zutreffend|  
+|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|Nicht zutreffend|Nicht zutreffend|  
+|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|Nicht zutreffend|Nicht zutreffend|  
+|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|Nicht zutreffend|Nicht zutreffend|  
 ||||||||||
 
 #### <a name="key-to-symbols"></a>Aufschlüsselung der Symbole  
@@ -141,7 +141,7 @@ ms.locfileid: "81301831"
 |10|Wenn es während einer Konvertierung vom Client zum Server zu Kürzungen mit Datenverlust kommt, wird ein Fehler angezeigt (OLE DB), und es wird ein Diagnosedatensatz mit SQLSTATE 22008 und der Meldung "Überlauf im Datetime-Feld" generiert. Dieser Fehler tritt auch dann auf, wenn der Wert außerhalb des Bereichs liegt, der vom UTC-Bereich, den der Server verwendet, dargestellt werden kann. Wenn während einer Konvertierung vom Server zum Client eine Kürzung der Sekunden oder Sekundenbruchteile auftritt, wird lediglich eine Warnung angezeigt.|  
 |11|Wenn eine Kürzung mit Datenverlust auftritt, wird ein Diagnosedatensatz generiert.<br /><br /> Bei einer Konvertierung vom Server zum Client handelt es sich dabei um eine Warnung (ODBC SQLSTATE S1000).<br /><br /> Bei einer Konvertierung vom Client zum Server handelt es sich dabei um einen Fehler (ODBC SQLSTATE 22001).|  
 |12|Die Sekunden werden auf null festgelegt, und die Sekundenbruchteile werden verworfen. Kein Kürzungsfehler ist möglich.|  
-|–|Das Verhalten von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und früheren Versionen ist beibehalten worden.|  
+|Nicht zutreffend|Das Verhalten von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und früheren Versionen ist beibehalten worden.|  
 |||
 
 ## <a name="see-also"></a>Weitere Informationen  

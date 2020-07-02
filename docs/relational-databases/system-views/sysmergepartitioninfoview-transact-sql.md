@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ae92407c52d84acaebbe157568e6d6476e4aa73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717255"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die **sysmergepartitioninfoview** -Sicht macht Partitionierungs Informationen für Tabellen Artikel verfügbar. Diese Sicht wird in der Veröffentlichungsdatenbank auf dem Verleger und in der Abonnementdatenbank auf dem Abonnenten gespeichert.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68094832"
 |**sync_objid**|**int**|Die Objekt-ID der Sicht, die das synchronisierte Dataset darstellt.|  
 |**view_type**|**tinyint**|Der Typ der Sicht:<br /><br /> **0** = keine Ansicht; Verwenden Sie das gesamte Basisobjekt.<br /><br /> **1** = permanente Ansicht.<br /><br /> **2** = temporäre Ansicht.|  
 |**artid**|**uniqueidentifier**|Die eindeutige ID des angegebenen Artikels.|  
-|**Beschreibung**|**nvarchar(255)**|Eine kurze Beschreibung des Artikels.|  
+|**description**|**nvarchar(255)**|Eine kurze Beschreibung des Artikels.|  
 |**pre_creation_command**|**tinyint**|Die Standardaktion, die durchgeführt wird, wenn der Artikel in der Abonnementdatenbank erstellt wird:<br /><br /> **0** = None: Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.<br /><br /> **1** = Drop-löscht die Tabelle, bevor Sie neu erstellt wird.<br /><br /> **2** = DELETE: gibt einen Löschvorgang basierend auf der WHERE-Klausel im Teilmengen Filter aus.<br /><br /> **3** = Abschneiden-identisch mit 2, löscht jedoch Seiten anstelle von Zeilen. Eine WHERE-Klausel wird jedoch nicht verwendet.|  
 |**pubid**|**uniqueidentifier**|Die ID der Veröffentlichung, zu der der aktuelle Artikel gehört.|  
 |**Namen**|**int**|Die Spitznamenzuordnung zur Identifikation des Artikels.|  
@@ -87,7 +87,7 @@ ms.locfileid: "68094832"
 |**compensate_for_errors**|**bit**|Zeigt an, ob kompensierende Aktionen ausgeführt werden, wenn während der Synchronisierung Fehler auftreten.<br /><br /> **0** = kompensierende Aktionen sind deaktiviert.<br /><br /> **1** = Änderungen, die nicht auf einem Abonnenten oder Verleger angewendet werden können, führen immer zu kompensierenden Aktionen, um diese Änderungen rückgängig zu machen. Dies ist das Standardverhalten der Mergereplikation.<br /><br /> Hinweis: der Wert **0** führt zu einer nicht Konvergenz.|  
 |**pub_range**|**bigint**|Die Größe des Identitätsbereichs für den Verleger.|  
 |**range**|**bigint**|Die Bereichsgröße der aufeinander folgenden Identitätswerte, die Abonnenten bei einer Anpassung zugewiesen würden.|  
-|**Mindest**|**int**|Als Prozentsatz angegebener Schwellenwert für den Identitätsbereich.|  
+|**threshold**|**int**|Als Prozentsatz angegebener Schwellenwert für den Identitätsbereich.|  
 |**stream_blob_columns**|**bit**|Gibt an, ob die Datenstromoptimierung für BLOB-Spalten (Binary Large Object) verwendet wird. der Wert **1** bedeutet, dass die Optimierung versucht wird.|  
 |**preserve_rowguidcol**|**bit**|Zeigt an, ob die Replikation eine vorhandene rowguid-Spalte verwendet. Der Wert **1** bedeutet, dass eine vorhandene ROWGUIDCOL-Spalte verwendet wird. **0** bedeutet, dass die Replikation die ROWGUIDCOL-Spalte hinzugefügt hat.|  
 |**partition_view_id**|**int**|Identifiziert die Sicht, die eine Abonnentenpartition definiert.|  

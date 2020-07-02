@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6aa435a7c0a65634323f6c3f90874cd3694fa876
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8275c27eac96a5cb6d88e7bd5e9e50d9a878a6be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816842"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718655"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Synchronisiert alle Multiserveraufträge auf dem angegebenen Zielserver neu.  
   
@@ -48,7 +48,7 @@ sp_resync_targetserver
 ## <a name="result-sets"></a>Resultsets  
  Meldet das Ergebnis von **sp_post_msx_operation** -Aktionen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_resync_targetserver** löscht die aktuellen Anweisungen für den Zielserver und stellt neue Anweisungen für den Zielserver zum Herunterladen bereit. Die neuen Anweisungen bestehen aus einer Anweisung zum Löschen aller Multiserveraufträge, gefolgt von einem Eintrag für jeden Auftrag, der an diesen Server gerichtet ist.  
   
 ## <a name="permissions"></a>Berechtigungen  

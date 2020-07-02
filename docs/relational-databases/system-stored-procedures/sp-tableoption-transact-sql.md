@@ -18,15 +18,15 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2e822d1ca6aff1e91a848f839b824bb4476fc5a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84e6c530b4887502346b69adcf2590bce9d0e8fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834205"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718687"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Legt Optionswerte für benutzerdefinierte Tabellen fest. sp_tableoption kann verwendet werden, um das Verhalten von Tabellen in Zeilen mit Spalten vom Typ **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **Text**, **ntext**, **Image**oder große benutzerdefinierte Spalten zu steuern.  
   
@@ -52,7 +52,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] '*option_name*'  
  Der Name einer Tabellenoption. *option_name* ist vom Datentyp **varchar (35)** und hat den Standardwert NULL. *option_name* kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |table lock on bulk load|Eine deaktivierte Option (Standard) führt dazu, dass der Massenladevorgang auf benutzerdefinierten Tabellen Zeilensperren erhält. Wenn diese Option aktiviert ist, erhalten die Massenladevorgänge auf benutzerdefinierten Tabellen eine Massenupdatesperre.|  
 |insert row lock|Wird nicht mehr unterstützt.<br /><br /> Diese Option wirkt sich nicht auf das Sperrverhalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und ist nur aus Gründen der Kompatibilität mit vorhandenen Skripts und Prozeduren enthalten.|  
@@ -68,7 +68,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Fehlernummer (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  sp_tableoption kann nur verwendet werden, um die Optionswerte für benutzerdefinierte Tabellen festzulegen. Verwenden Sie OBJECTPROPERTY, oder führen Sie die Abfrage sys. Tables aus, um Tabellen Eigenschaften anzuzeigen.  
   
  Die text in row-Option von sp_tableoption kann nur für Tabellen aktiviert oder deaktiviert werden, die Textspalten enthalten. Wenn die Tabelle nicht über eine Textspalte verfügt, löst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler aus.  

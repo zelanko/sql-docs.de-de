@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 96cd2abcc3e9bc76b2dd32026fedfe6ad774c19b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820702"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716582"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Erstellt ein Mergepushabonnement oder ein Mergepullabonnement. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -120,11 +120,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**1**|First (Erster)|  
-|**2**|Sekunde|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|Dritter|  
 |**8**|Vierter|  
-|**Uhr**|Last (Letzter)|  
+|**16**|Last (Letzter)|  
 |NULL (Standard)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor*ist vom Datentyp **int**und hat den Standardwert NULL.  
@@ -134,7 +134,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
-|**2**|Sekunde|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Stunde|  
 |NULL (Standard)||  
@@ -174,7 +174,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_addmergesubscription** wird bei der Mergereplikation verwendet.  
   
  Wenn **sp_addmergesubscription** von einem Mitglied der festen Server Rolle **sysadmin** ausgeführt wird, um ein Pushabonnement zu erstellen, wird der Merge-Agent Auftrag implizit erstellt und unter dem- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienst Konto ausgeführt. Es wird empfohlen, [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) auszuführen und die Anmelde Informationen eines anderen, agentspezifischen Windows-Kontos für ** \@ job_login** und ** \@ job_password**anzugeben. Weitere Informationen finden Sie unter [Sicherheitsmodell des Replikations-Agents](../../relational-databases/replication/security/replication-agent-security-model.md).  

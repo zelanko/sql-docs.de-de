@@ -19,20 +19,20 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 41d360ef2d0e9808f1ef4af49b14354cff637a14
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 95f251db2efe471455d18f4735be99ecee962a7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824723"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717501"
 ---
 # <a name="sysdm_cluster_endpoints-transact-sql"></a>sys. dm_cluster_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/applies-to-version/sqlserver2019.md)]
 
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |name|`sysname`|Name des Dienstanbieter, der extern in einem SQL Big Data-Cluster verfügbar gemacht wird. Eindeutiger Bezeichner für den Endpunkt. Der Schlüssel für diese Ansicht. Lässt keine NULL-Werte zu. |  
-|Beschreibung|`nvarchar(4000)`|Beschreibung des Diensts Lässt keine NULL-Werte zu. |
+|description|`nvarchar(4000)`|Beschreibung des Diensts Lässt keine NULL-Werte zu. |
 |endpoint|`sysname`|Endpunkt-URL oder Verbindungs Attribut. Lässt keine NULL-Werte zu. |
 |protocol_desc|`sysname`|Beschreibung des Endpunkt Protokolls |
 

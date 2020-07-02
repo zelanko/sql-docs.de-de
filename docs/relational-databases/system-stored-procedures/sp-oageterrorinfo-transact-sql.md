@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a6f56713f2ac50a5e367f23a7987b62e2fb9a78b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719241"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ruft OLE-Automatisierungsfehlerinformationen ab.  
   
@@ -77,7 +77,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**HelpFile**|**nvarchar (NN)**|Hilfedatei für die Quelle|  
 |**HelpID**|**int**|Hilfekontext-ID in der Hilfequelldatei|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Jeder-Aufrufsatz einer gespeicherten OLE-Automatisierungs Prozedur (außer **sp_OAGetErrorInfo**) setzt die Fehlerinformationen zurück. aus diesem Grund werden von **sp_OAGetErrorInfo** nur Fehlerinformationen für den letzten gespeicherten Prozedur Aufrufs der OLE-Automatisierung abgerufen. Beachten Sie, dass **sp_OAGetErrorInfo** die Fehlerinformationen nicht zurücksetzt, dass Sie mehrmals aufgerufen werden kann, um dieselben Fehlerinformationen zu erhalten.  
   
  In der folgenden Tabelle werden OLE-Automatisierungsfehler und deren übliche Ursachen aufgelistet.  
@@ -86,7 +86,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |-----------------------|------------------|  
 |**Falscher Variablentyp (0x80020008)**|Der Datentyp eines [!INCLUDE[tsql](../../includes/tsql-md.md)] als Methoden Parameter übergebenen Werts entsprach nicht dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Datentyp des Methoden Parameters, oder ein NULL-Wert wurde als Methoden Parameter übergeben.|  
 |**Unbekannter Name (0x8002006)**|Der angegebene Eigenschafts- oder Methodenname für das angegebene Objekt wurde nicht gefunden.|  
-|**Ungültige Klassenzeichenfolge (0x800401f3)**|Die angegebene ProgID oder CLSID wurde in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht als OLE-Objekt registriert. Benutzerdefinierte OLE-Automatisierungsserver müssen registriert werden, bevor Sie mit **sp_OACreate**instanziiert werden können. Hierzu können Sie das Hilfsprogramm regsvr32. exe für in-Process-Server (. dll) oder den **/RegServer** -Befehlszeilen Schalter für lokale (. exe-) Server verwenden.|  
+|**Ungültige Klassenzeichenfolge (0x800401f3)**|Die angegebene ProgID oder CLSID wurde in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht als OLE-Objekt registriert. Benutzerdefinierte OLE-Automatisierungsserver müssen registriert werden, bevor Sie mit **sp_OACreate**instanziiert werden können. Hierzu können Sie das Regsvr32.exe-Hilfsprogramm für Prozess interne (dll-) Server oder den Befehls Zeilenschalter **/RegServer** für lokale (. exe-) Server verwenden.|  
 |**Starten des Servers fehlgeschlagen (0x80080005)**|Das angegebene OLE-Objekt ist als lokaler OLE-Server (EXE-Datei) registriert, aber die EXE-Datei konnte nicht gefunden oder nicht ausgeführt werden.|  
 |**Das angegebene Modul wurde nicht gefunden (0x8007007e)**|Das angegebene OLE-Objekt ist als In-Process-OLE-Server (DLL-Datei) registriert, aber die DLL-Datei konnte nicht gefunden oder nicht geladen werden.|  
 |**Typenkonflikt (0x80020005)**|Der Datentyp einer lokalen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Variablen, die zum Speichern eines zurückgegebenen Eigenschaftswertes oder eines Rückgabewertes einer Methode verwendet wird, entspricht nicht dem [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentyp des Rückgabewertes der Eigenschaft oder Methode. Oder der Rückgabewert einer Eigenschaft oder einer Methode wurde angefordert, gibt jedoch keinen Wert zurück.|  

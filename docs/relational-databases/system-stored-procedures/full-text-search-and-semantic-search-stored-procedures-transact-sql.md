@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0d185a16-2b16-4958-884f-efe675e2e551
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9bfb3a2309b2e7d2d35f1b8f68c5caa9e9ac66c2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b3c700d5b5bc9c6e68f6ecab7186446c681b9d90
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820742"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716567"
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>Gespeicherte Prozeduren für Volltextsuche und semantische Suche (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt die folgenden gespeicherten System Prozeduren, die zum Implementieren und Abfragen von Volltextindizes und semantischen Indizes verwendet werden.  
   
@@ -109,6 +109,6 @@ ms.locfileid: "82820742"
  [Katalog Sichten für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)   
  [Dynamische Verwaltungs Sichten und Funktionen für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Voll Text Suche](../../relational-databases/search/full-text-search.md)  
+ [Volltextsuche](../../relational-databases/search/full-text-search.md)  
   
   

@@ -21,21 +21,21 @@ ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5afddee7cf2d8d5e61db8833df45b839e6f70eca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a6588e142fb17f0b90dfb302dda242255513ed3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717565"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Enthält eine Zeile für jedes Sequenzobjekt in einer Datenbank.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|\<geerbte Spalten>||Erbt alle Spalten von [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|\<inherited columns>||Erbt alle Spalten von [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**start_value**|**sql_variant nicht NULL**|Der Startwert für das Sequenzobjekt. Wenn das Sequenzobjekt mit ALTER SEQUENCE neu gestartet wird, dient dieser Wert als Ausgangspunkt. Wenn das Sequenz Objekt in den Zyklus wechselt, geht es zum **minimum_value** oder **maximum_value**, nicht zum **start_value**.|  
 |**increment**|**sql_variant nicht NULL**|Der Wert, um den das Sequenzobjekt nach jedem generierten Wert inkrementiert wird.|  
 |**minimum_value**|**sql_variant NULL**|Der minimale Wert, der vom Sequenzobjekt generiert werden kann. Nachdem dieser Wert erreicht wurde, gibt das Sequenz Objekt entweder einen Fehler zurück, wenn versucht wird, weitere Werte zu generieren oder neu zu starten, wenn die Option Cycle angegeben wird. Wenn kein MinValue angegeben wurde, gibt diese Spalte den minimalen Wert zurück, der vom Datentyp des Sequenz Generators unterstützt wird.|  
@@ -52,7 +52,7 @@ ms.locfileid: "82815824"
 |**last_used_value**|**sql_variant NULL**|Gibt den letzten von der [Next value for](../../t-sql/functions/next-value-for-transact-sql.md) -Funktion generierten Wert zurück. Gilt für SQL Server 2017 und höher.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und späteren Versionen ist die Sichtbarkeit der Metadaten in Katalogsichten auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde.  Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und späteren Versionen ist die Sichtbarkeit der Metadaten in Katalogsichten auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md)   

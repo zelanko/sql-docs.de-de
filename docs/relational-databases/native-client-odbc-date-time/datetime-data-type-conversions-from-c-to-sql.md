@@ -13,19 +13,19 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f8161ea07e394192e972caf4f772d9e7def36e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97867fb2debffab4684aaef302773ebe531d820b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719020"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime-Datentypkonvertierungen von C in SQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  In diesem Thema werden Probleme aufgeführt, die beim Konvertieren von C- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Typen in Datums-/Uhrzeittypen berücksichtigt werden müssen  
+  In diesem Thema werden Probleme aufgeführt, die beim Konvertieren von C-Typen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datums-/Uhrzeittypen berücksichtigt werden müssen  
   
- Die in der folgenden Tabelle beschriebenen Konvertierungen gelten für auf dem Client ausgeführte Konvertierungen. In Fällen, in denen der Client eine Sekundenbruchteile Genauigkeit für einen Parameter angibt, der von der auf dem Server definierten abweicht, kann die Client Konvertierung erfolgreich ausgeführt werden, der Server gibt jedoch einen Fehler zurück, wenn **SQLExecute** oder **SQLExecuteDirect** aufgerufen wird. Insbesondere behandelt ODBC das Abschneiden von Sekundenbruchteilen als Fehler, während das Verhalten für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Rundung gilt. beispielsweise erfolgt die Rundung bei der Umstellung von **datetime2 (6)** auf **datetime2 (2)**. Werte der Datetime-Spalte werden auf 1/300 einer Sekunde gerundet, und für smalldatetime -Spalten werden Sekunden vom Server auf null festgelegt.  
+ Die in der folgenden Tabelle beschriebenen Konvertierungen gelten für auf dem Client ausgeführte Konvertierungen. In Fällen, in denen der Client eine Sekundenbruchteile Genauigkeit für einen Parameter angibt, der von der auf dem Server definierten abweicht, kann die Client Konvertierung erfolgreich ausgeführt werden, der Server gibt jedoch einen Fehler zurück, wenn **SQLExecute** oder **SQLExecuteDirect** aufgerufen wird. Insbesondere behandelt ODBC das Abschneiden von Sekundenbruchteilen als Fehler, während das Verhalten bei der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Rundung erfolgt. beispielsweise erfolgt die Rundung, wenn Sie von **datetime2 (6)** zu **datetime2 (2)** wechseln. Werte der Datetime-Spalte werden auf 1/300 einer Sekunde gerundet, und für smalldatetime -Spalten werden Sekunden vom Server auf null festgelegt.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -33,17 +33,17 @@ ms.locfileid: "81301779"
 |SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
 |SQL_C_TIME|-|1|1|1,7|1, 5, 7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1, 5, 7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|–|–|1,10,11|–|–|–|–|  
+|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|Nicht zutreffend|Nicht zutreffend|1,10,11|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
 |SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|–|–|–|–|1,10,11|–|–|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|–|–|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|–|–|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|–|–|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|–|–|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|–|–|–|–|–|–|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|–|–|–|–|–|–|–|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|–|–|–|–|–|–|–|  
+|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|1,10,11|Nicht zutreffend|Nicht zutreffend|  
+|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|Nicht zutreffend|Nicht zutreffend|  
+|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|Nicht zutreffend|Nicht zutreffend|  
+|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|Nicht zutreffend|Nicht zutreffend|  
+|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|Nicht zutreffend|Nicht zutreffend|  
+|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|  
+|SQL_C_BINARY(SQL_TIME_STRUCT)|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|  
+|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|Nicht zutreffend|  
   
 ## <a name="key-to-symbols"></a>Aufschlüsselung der Symbole  
   

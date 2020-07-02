@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21f2bf7a43bd391044deb03d08cc86ebc9a772bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 67cf4522b88e9922027a671feeda02b3305dbfc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828235"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718631"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Gibt die Befehle für Transaktionen, die für die Replikation in lesbarem Format markiert sind, zurück. **sp_replshowcmds** können nur ausgeführt werden, wenn Clientverbindungen (einschließlich der aktuellen Verbindung) keine replizierten Transaktionen aus dem Protokoll lesen. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -49,9 +49,9 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**publisher_database_id**|**int**|ID der Verleger Datenbank, immer **0**.|  
 |**article_id**|**int**|ID des Artikels.|  
 |**type**|**int**|Der Typ des Befehls.|  
-|**s**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] verwenden, um die Migrationsdaten zu bereinigen.|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] verwenden, um die Migrationsdaten zu bereinigen.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_replshowcmds** wird bei der Transaktions Replikation verwendet.  
   
  Mithilfe **sp_replshowcmds**können Sie Transaktionen anzeigen, die derzeit nicht verteilt sind (die im Transaktionsprotokoll verbleibenden Transaktionen, die nicht an den Verteiler gesendet wurden).  

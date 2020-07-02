@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 755ba9552945e0e983fa5eef6cc53de1c29be5e3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 35de5fe106b437429265fcce03d49a9cb1b61401
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827635"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715192"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Listet Informationen zum Laufzeitstatus von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Aufträgen auf.  
   
@@ -75,10 +75,10 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**operator_id_netsent**|**int**|ID-Nummer des Operators, der bei Abschluss des Auftrags über **net send** benachrichtigt wurde.|  
 |**operator_id_paged**|**int**|ID des Operators, der durch einen Pager bei Beendigung des Auftrags benachrichtigt wurde.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Prozedur stellt eine Momentaufnahme des aktuellen Status des Auftrags bereit. Die zurückgegebenen Ergebnisse stellen Informationen zu dem Zeitpunkt der Anforderungsverarbeitung dar.  
   
- Vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent wird bei jedem Start des Agent-Diensts eine Sitzungs-ID erstellt. Die Sitzungs-ID wird in der **msdb. dbo. syssessions**-Tabelle gespeichert.  
+ Vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent wird bei jedem Start des Agent-Diensts eine Sitzungs-ID erstellt. Die Sitzungs-ID wird in der Tabelle **msdb.dbo.sysSitzungen**gespeichert.  
   
  Wenn keine *session_id* bereitgestellt wird, werden Informationen über die letzte Sitzung aufgelistet.  
   

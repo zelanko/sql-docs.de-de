@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf8ddb4e3794c8ad7889f395726fb325e071deb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97ee05c8deb88efcd451eb55007983833d0b1879
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719680"
 ---
 # <a name="filestream-support"></a>FILESTREAM-Unterstützung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
   Die FILESTREAM-Funktion bietet eine Möglichkeit, große binäre Werte zu speichern und entweder über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder durch direkten Zugriff auf das Windows-Dateisystem darauf zuzugreifen. Ein großer Binärwert ist ein Wert, der größer als 2 Gigabyte (GB) ist. Weitere Informationen zur verbesserten FILESTREAM-Unterstützung finden Sie unter [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
- Wenn eine Datenbankverbindung geöffnet wird, ** \@ \@wird TEXTSIZE** standardmäßig auf-1 ("unbegrenzt") festgelegt.  
+ Wenn eine Datenbankverbindung geöffnet wird, wird ** \@ \@ TEXTSIZE** standardmäßig auf-1 ("unbegrenzt") festgelegt.  
   
  Es ist auch möglich, mit Windows-Dateisystem-APIs auf FILESTREAM-Spalten zuzugreifen und diese zu aktualisieren.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81303864"
   
  Mithilfe der **is_filestream**-Spalte der [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)-Katalogsicht können Sie FILESTREAM-Spalten erstellen oder ermitteln, welche der vorhandenen Spalten FILESTREAM-Spalten sind.  
   
- Es folgt ein Beispiel:  
+ Hier ein Beispiel:  
   
 ```  
 -- Create a table with a FILESTREAM column.  
@@ -58,7 +58,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Kompabilität mit früheren Versionen  
- Wenn der Client mit der Version von Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kompiliert wurde, die im Liefer [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Umfang von enthalten war, und [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]die Anwendung eine Verbindung mit herstellt, wird das **varbinary (max)** -Verhalten mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]kompatibel sein. Das heißt, die Maximalgröße der zurückgegebenen Daten ist auf 2 GB beschränkt. Ergebniswerte, die größer als 2 GB sind, werden abgeschnitten, und es wird die Warnung „Zeichenfolgendaten werden rechts abgeschnitten“ zurückgegeben.  
+ Wenn der Client mit der Version von Native Client kompiliert wurde, die im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Lieferumfang von enthalten war [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , und die Anwendung eine Verbindung mit herstellt [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , wird das **varbinary (max)** -Verhalten mit kompatibel sein [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Das heißt, die Maximalgröße der zurückgegebenen Daten ist auf 2 GB beschränkt. Ergebniswerte, die größer als 2 GB sind, werden abgeschnitten, und es wird die Warnung „Zeichenfolgendaten werden rechts abgeschnitten“ zurückgegeben.  
   
  Wenn Datentypkompatibilität auf 80 festgelegt wird, ist das Clientverhalten mit dem Verhalten von Clients früherer Versionen konsistent.  
   

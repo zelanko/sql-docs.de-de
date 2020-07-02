@@ -18,15 +18,15 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4a4cfe5c86d39766bcd322b879172b00b33eb68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 583536c1b69951b18e6d30910f4e4d9d44b8d99f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73593701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717370"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Analysiert die angegebene [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung und ihre Parameter, um zu bestimmen, welche Parameterdaten Bank Spalten entsprechen, die mit dem Always Encrypted Feature geschützt werden. Gibt Verschlüsselungs Metadaten für die Parameter zurück, die verschlüsselten Spalten entsprechen.  
   
@@ -40,13 +40,13 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ \@t-QL =] ' Transact-SQL_batch '  
+ [ \@ tionql =] ' Transact-SQL_batch '  
  Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. Transact-SQL_batch kann vom Datentyp nvarchar (n) oder nvarchar (max) sein.  
   
- [ \@Parameter =] N ' Parameter '  
- Parameter stellt eine Deklarations Zeichenfolge für Parameter für den Transact-SQL-Batch bereit, der sp_executesql ähnelt. * \@* Parameter können nvarchar (n) oder nvarchar (max) sein.  
+ [ \@ Parameter =] n ' Parameter '  
+ Parameter stellt eine Deklarations Zeichenfolge für Parameter für den Transact-SQL-Batch bereit, der sp_executesql ähnelt. * \@ * Parameter können nvarchar (n) oder nvarchar (max) sein.  
   
- Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in die [!INCLUDE[tsql](../../includes/tsql-md.md)]_batch eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in der-Anweisung angegebene Parameter muss in * \@para*Metern definiert werden. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der-Batch in der Anweisung keine Parameter * \@enthält, ist* die Angabe von Parametern nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
+ Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in die _batch eingebettet wurden [!INCLUDE[tsql](../../includes/tsql-md.md)] . Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in der-Anweisung angegebene Parameter muss in * \@ para*Metern definiert werden. Wenn die- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der-Batch in der Anweisung keine Parameter enthält, ist die Angabe * \@ von para* Metern nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
 ## <a name="return-value"></a>Rückgabewert  
  0 gibt einen Erfolg an. Alles deutet auf einen Fehler hin.  
@@ -54,7 +54,7 @@ sp_describe_parameter_encryption
 ## <a name="result-sets"></a>Resultsets  
  **sp_describe_parameter_encryption** gibt zwei Resultsets zurück:  
   
--   Das Resultset, das für Daten Bank Spalten konfigurierte kryptografische Schlüssel beschreibt, [!INCLUDE[tsql](../../includes/tsql-md.md)] entspricht den Parametern der angegebenen Anweisung.  
+-   Das Resultset, das für Daten Bank Spalten konfigurierte kryptografische Schlüssel beschreibt, entspricht den Parametern der angegebenen [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.  
   
 -   Das Resultset, das beschreibt, wie bestimmte Parameter verschlüsselt werden sollen. Dieses Resultset verweist auf die Schlüssel, die im ersten Resultset beschrieben werden.  
   
@@ -77,13 +77,13 @@ sp_describe_parameter_encryption
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|ID der Zeile im Resultset.|  
-|**parameter_name**|**sysname**|Der Name eines Parameters, der im * \@params* -Argument angegeben ist.|  
+|**parameter_name**|**sysname**|Der Name eines Parameters, der im * \@ params* -Argument angegeben ist.|  
 |**column_encryption_algorithm**|**tinyint**|Code, der den für die Spalte konfigurierten Verschlüsselungsalgorithmus angibt, entspricht dem-Parameter. Die derzeit unterstützten Werte sind: 2 für **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
 |**column_encryption_type**|**tinyint**|Code, der den Verschlüsselungstyp angibt, der für die Spalte konfiguriert ist. der-Parameter entspricht. Die unterstützten Werte sind:<br /><br /> 0-Klartext (die Spalte ist nicht verschlüsselt)<br /><br /> 1: zufällige Verschlüsselung<br /><br /> 2-deterministische Verschlüsselung.|  
 |**column_encryption_key_ordinal**|**int**|Code der Zeile im ersten Resultset. In der Zeile, auf die verwiesen wird, wird der für die Spalte konfigurierte Spalten Verschlüsselungsschlüssel beschrieben. der Parameter entspricht.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Versionsnummer des typnormalisierungs Algorithmus.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Treiber, der Always Encrypted unterstützt, ruft automatisch **sp_describe_parameter_encryption** auf, um Verschlüsselungs Metadaten für parametrisierte Abfragen abzurufen, die von der Anwendung ausgegeben werden. Anschließend verwendet der Treiber die Verschlüsselungs Metadaten, um die Werte von Parametern zu verschlüsseln, die Daten Bank Spalten entsprechen, die mit Always Encrypted geschützt sind, und ersetzt die klar Text Parameterwerte, die von der Anwendung gesendet werden, mit den verschlüsselten Parameterwerten, bevor die Abfrage an die Datenbank-Engine gesendet wird.  
   
 ## <a name="permissions"></a>Berechtigungen  

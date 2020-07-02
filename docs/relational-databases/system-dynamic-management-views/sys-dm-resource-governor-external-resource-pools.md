@@ -3,7 +3,7 @@ title: sys. dm_resource_governor_external_resource_pools (Transact-SQL) | Micros
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.reviewer: ''
 ms.topic: language-reference
 f1_keywords:
@@ -20,24 +20,24 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cf77a073a1432df839bfd13046c66018496e79f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a143d4f7052995dddd8bc9cc5239b8ccc7a366f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68468514"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718746"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 Gibt Informationen zum aktuellen Status des externen Ressourcenpools, zur aktuellen Konfiguration von Ressourcenpools und Ressourcenpool Statistiken zurück. 
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 |Name des colmn      |Datentyp      |BESCHREIBUNG|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|Die ID des Ressourcenpools. Lässt keine NULL-Werte zu. |
-| Name|**sysname**|Der Name des Ressourcenpools. Lässt keine NULL-Werte zu. 
+| name|**sysname**|Der Name des Ressourcenpools. Lässt keine NULL-Werte zu. 
 | pool_version|**int**|Interne Versionsnummer.|
 | max_cpu_percent|**int**|Die aktuelle Konfiguration für die maximale durchschnittliche CPU-Bandbreite, die für alle Anforderungen im Ressourcenpool zulässig ist, wenn CPU-Konflikte bestehen. Lässt keine NULL-Werte zu. |
 | max_processes|**int**|Maximale Anzahl gleichzeitiger externer Prozesse. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.|

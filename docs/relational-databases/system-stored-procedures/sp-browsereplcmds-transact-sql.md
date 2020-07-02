@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e4f5b003eccda5fdada81e49d2a1f5347591869
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 695a45248185fe2c064cf94a9cf616efce475ecf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831796"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716064"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Wird als Diagnosetool verwendet und gibt ein Resultset mit einer lesbaren Version der replizierten Befehle zurück, die in der Verteilungsdatenbank gespeichert sind. Diese gespeicherte Prozedur wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
   
@@ -73,16 +73,16 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**article_id**|**int**|ID des Artikels.|  
 |**type**|**int**|Der Typ des Befehls.|  
 |**partial_command**|**bit**|Zeigt an, ob dies ein Teilbefehl ist.|  
-|**hashkey**|**int**|Nur zur internen Verwendung.|  
+|**hashkey**|**int**|Nur interne Verwendung.|  
 |**originator_publication_id**|**int**|ID der Veröffentlichung, von der die Transaktion stammt|  
 |**originator_db_version**|**int**|Version der Datenbank, von der die Transaktion stammt|  
 |**originator_lsn**|**varbinary(16)**|Identifiziert die Protokollfolgenummer (LSN, Log Sequence Number) für den Befehl in der ursprünglichen Veröffentlichung Wird in der Peer-zu-Peer-Transaktions Replikation verwendet.|  
-|**s**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] verwenden, um die Migrationsdaten zu bereinigen.|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] verwenden, um die Migrationsdaten zu bereinigen.|  
 |**command_id**|**int**|ID des Befehls in [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   
  Lange Befehle können auf mehrere Zeilen des Resultsets aufgeteilt werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_browsereplcmds** wird bei der Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

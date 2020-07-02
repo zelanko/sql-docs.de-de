@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c5807225c2bda185b61050433cc3378b25b6fe1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 86f1702d2b5444ded603c9e34ec01ae8b95133dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719171"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Erstellt ein benutzerdefiniertes Ereignis in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -60,7 +60,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**3**|Das angegebene Ereignis ist ungültig. Das Ereignis ist möglicherweise nicht vorhanden oder nicht für die gespeicherte Prozedur geeignet.|  
 |**13**|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_trace_generateevent** führt viele der Aktionen aus, die zuvor von **den \* xp_trace_** erweiterten gespeicherten Prozeduren ausgeführt wurden. Verwenden Sie **sp_trace_generateevent** anstelle von **xp_trace_generate_event**.  
   
  Mit **sp_trace_generateevent**können nur die ID-Nummern von benutzerdefinierten Ereignissen verwendet werden. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ein Fehler ausgelöst, wenn andere Ereignis-ID-Nummern verwendet werden.  
@@ -94,7 +94,7 @@ you were capturing the event id=82, you will see it in the Profiler output.
 INSERT INTO user_config_test VALUES(1, 'abc');  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md)  

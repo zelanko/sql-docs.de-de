@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 244811989bd5ab58a3ab1f6ffdfcf82649af1916
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02ba9c11d9c74daa6cc88051ada7037edc16f35b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715926"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert die Einstellungen primärer Datenbanken.  
   
@@ -111,7 +111,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Beispiel veranschaulicht die Verwendung von **sp_change_log_shipping_primary_database** , um die Einstellungen zu aktualisieren, die der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]primären Datenbank zugeordnet sind.  
+ Dieses Beispiel veranschaulicht die Verwendung von **sp_change_log_shipping_primary_database** , um die Einstellungen zu aktualisieren, die der primären Datenbank zugeordnet sind [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_primary_database   
@@ -128,7 +128,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Informationen zum Protokoll Versand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   

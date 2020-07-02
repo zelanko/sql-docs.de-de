@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e7ba3827b9a659c0100805d0a9895fad503b2a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117901"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716290"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fügt der aktuellen Datenbank einen neuen Benutzer hinzu.  
   
@@ -44,7 +44,7 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'`Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder der Windows-Anmeldung. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Login* muss ein vorhandener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmelde Name oder Windows-Anmelde Name sein.  
+`[ @loginame = ] 'login'`Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder der Windows-Anmeldung. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. *Login* muss ein vorhandener- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name oder Windows-Anmelde Name sein.  
   
 `[ @name_in_db = ] 'user'`Der Name des neuen Daten Bank Benutzers. *User* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der *Benutzer* nicht angegeben ist, wird der Name des neuen Daten Bank Benutzers standardmäßig auf den *Anmelde* Namen festgelegt. Durch Angeben eines *Benutzers* erhält der neue Benutzer einen anderen Namen als den Anmelde Namen auf Serverebene.  
   

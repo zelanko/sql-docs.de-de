@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b99d42216f188771219f711f34ccd7f105770f27
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c713c2d6dc07c9f9dfc9e31dfbf8a1749bb2c189
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833612"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716347"
 ---
 # <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Erstellt auf dem Abonnenten Trigger, die mit allen Typen aktualisierbarer Abonnements verwendet werden können (sofortiges Aktualisieren, verzögertes Aktualisieren über eine Warteschlange, sofortiges Aktualisieren mit verzögertem Aktualisieren über eine Warteschlange als Failover). Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   
@@ -96,7 +96,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_addsynctriggers** wird von der Verteilungs-Agent als Teil der Abonnement Initialisierung verwendet. Diese gespeicherte Prozedur wird normalerweise nicht von Benutzern ausgeführt, kann jedoch hilfreich sein, wenn der Benutzer manuell ein nosync-Abonnement einrichten muss.  
   
 ## <a name="permissions"></a>Berechtigungen  

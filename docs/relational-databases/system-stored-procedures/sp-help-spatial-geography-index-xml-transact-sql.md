@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c2503e5d3b94b5bc73d9bf2427e0162ba2eda2fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d25c8d57608357530e9344a41d23771d198ed23
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717279"
 ---
 # <a name="sp_help_spatial_geography_index_xml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt den Namen und den Wert für einen angegebenen Eigenschaftssatz über einen räumlichen **geography** -Index zurück. Sie können wählen, ob ein Kernsatz von Eigenschaften oder alle Eigenschaften des Indexes zurückgegeben werden sollen.  
   
@@ -53,11 +53,11 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Berechtigungen  
  Dem Benutzer muss eine PUBLIC-Rolle zugewiesen werden, um auf die Prozedur zuzugreifen. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Eigenschaften, die NULL-Werte enthalten sind, sind nicht in der zurückgegebenen Menge enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird `sp_help_spatial_geography_index_xml` verwendet, um den räumlichen Index **SIndx_SpatialTable_geography_col2** zu untersuchen, der in Table **geography_col** für das angegebene Abfrage Beispiel in ** \@QS**definiert ist. Dieses Beispiel gibt die Kerneigenschaften des angegebenen Index in einem XML-Fragment zurück, das den Namen und den Wert der ausgewählten Eigenschaften anzeigt.  
+ Im folgenden Beispiel wird verwendet `sp_help_spatial_geography_index_xml` , um den räumlichen Index **SIndx_SpatialTable_geography_col2** zu untersuchen, der in Table **geography_col** für das angegebene Abfrage Beispiel in ** \@ QS**definiert ist. Dieses Beispiel gibt die Kerneigenschaften des angegebenen Index in einem XML-Fragment zurück, das den Namen und den Wert der ausgewählten Eigenschaften anzeigt.  
   
  Anschließend wird eine [XQuery](../../xquery/xquery-basics.md) für das Resultset ausgeführt, die eine bestimmte Eigenschaft zurückgibt.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 429b908f01c7b0436f05622544b2aa8b241a6211
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2ad62613462575fb1bb33bf472e367d8f7640b03
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716337"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fügt in die Mergenachverfolgungstabellen Verweise auf alle Zeilen in einer Quelltabelle ein, die derzeit nicht in den Nachverfolgungstabellen eingeschlossen sind. Verwenden Sie diese Option, wenn Sie eine große Datenmenge mithilfe von **bcp**Massen geladen haben, wodurch keine mergeüberwachungsertrigger ausgelöst werden. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -48,7 +48,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_addtabletocontents** wird nur bei der Mergereplikation verwendet.  
   
  Auf die Zeilen in der *table_name* wird von der **ROWGUIDCOL** verwiesen, und die Verweise werden den mergeverfolgungs-Tabellen hinzugefügt. **sp_addtabletocontents** sollte nach dem Massen Kopieren von Daten in eine Tabelle verwendet werden, die mithilfe der Mergereplikation veröffentlicht wird. Die gespeicherte Prozedur veranlasst die Nachverfolgung der kopierten Zeilen und gewährleistet, dass die neuen Zeilen bei der nächsten Synchronisation berücksichtigt werden.  

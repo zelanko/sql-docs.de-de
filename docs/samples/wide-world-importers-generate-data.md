@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 01bca0b4e0c8d98d0a31451686f0396af99ed430
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af15f93b869fed56bed19a495c64810b0f2436c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112310"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718597"
 ---
 # <a name="wideworldimporters-data-generation"></a>Datengenerierung von wideworldimporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Die veröffentlichten Versionen der Datenbanken wideworldimporters und wideworldimportersdw verfügen über Daten vom 1. Januar 2013 bis zum Tag, an dem die Datenbanken generiert wurden.
 
 Wenn Sie diese Beispiel Datenbanken verwenden, möchten Sie möglicherweise aktuellere Beispiel Daten einschließen.
@@ -41,7 +41,7 @@ So generieren Sie Beispiel Daten bis zum aktuellen Datum:
 
     Diese Anweisung fügt der Datenbank bis zum aktuellen Datum Beispiel Verkäufe und Kauf Daten hinzu. Der Fortschritt der Datengenerierung nach Tag wird angezeigt. Die Datengenerierung kann etwa 10 Minuten für jedes Jahr dauern, für das Daten benötigt werden. Aufgrund eines zufälligen Faktors bei der Datengenerierung gibt es einige Unterschiede in den Daten, die zwischen den Ausführungen generiert werden.
 
-    Ändern Sie den Wert für den-Parameter `@AverageNumberOfCustomerOrdersPerDay`, um die Datenmenge zu erhöhen oder zu verringern, die für Bestellungen pro Tag generiert wurde. Verwenden Sie die `@SaturdayPercentageOfNormalWorkDay` Parameter `@SundayPercentageOfNormalWorkDay` und, um das Bestell Volume für Wochentage festzulegen.
+    Ändern Sie den Wert für den-Parameter, um die Datenmenge zu erhöhen oder zu verringern, die für Bestellungen pro Tag generiert wurde `@AverageNumberOfCustomerOrdersPerDay` . Verwenden Sie die Parameter `@SaturdayPercentageOfNormalWorkDay` und `@SundayPercentageOfNormalWorkDay` , um das Bestell Volume für Wochentage festzulegen.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Importieren generierter Daten in wideworldimportersdw
 
@@ -63,11 +63,11 @@ Wideworldimportersdw kann die Datengröße für Leistungstests beliebig erhöhen
 
 Eine der Herausforderungen besteht darin, die Größe des Downloads klein genug zu halten, um problemlos herunterzuladen, aber groß genug, um SQL Server Leistungs Features zu veranschaulichen. Beispielsweise werden bedeutende Vorteile für columnstore--Indizes nur erreicht, wenn Sie mit einer größeren Anzahl von Zeilen arbeiten. 
 
-Mit dem `Application.Configuration_PopulateLargeSaleTable` Verfahren können Sie die Anzahl der Zeilen in der `Fact.Sale` Tabelle erhöhen. Die Zeilen werden in das 2012-Kalenderjahr eingefügt, um zu vermeiden, dass mit den vorhandenen weltweiten importierungsdaten, die am 1. Januar 2013 beginnen, kollidieren
+Mit dem Verfahren können Sie `Application.Configuration_PopulateLargeSaleTable` die Anzahl der Zeilen in der Tabelle erhöhen `Fact.Sale` . Die Zeilen werden in das 2012-Kalenderjahr eingefügt, um zu vermeiden, dass mit den vorhandenen weltweiten importierungsdaten, die am 1. Januar 2013 beginnen, kollidieren
 
 ### <a name="procedure-details"></a>Prozedur Details
 
-#### <a name="name"></a>Name
+#### <a name="name"></a>name
 
     Application.Configuration_PopulateLargeSaleTable
 
@@ -77,6 +77,6 @@ Mit dem `Application.Configuration_PopulateLargeSaleTable` Verfahren können Sie
 
 #### <a name="result"></a>Ergebnis
 
-Ungefähr die erforderliche Anzahl von Zeilen wird in die `Fact.Sale` Tabelle im Jahr 2012 eingefügt. Die Prozedur schränkt die Anzahl der Zeilen künstlich auf 50.000 pro Tag ein. Sie können diese Einschränkung ändern, aber die Einschränkung hilft Ihnen, versehentliche overinflations der Tabelle zu vermeiden.
+Ungefähr die erforderliche Anzahl von Zeilen wird `Fact.Sale` in die Tabelle im Jahr 2012 eingefügt. Die Prozedur schränkt die Anzahl der Zeilen künstlich auf 50.000 pro Tag ein. Sie können diese Einschränkung ändern, aber die Einschränkung hilft Ihnen, versehentliche overinflations der Tabelle zu vermeiden.
 
 Die Prozedur wendet auch eine gruppierte columnstore--Indizierung an, wenn Sie noch nicht angewendet wurde.

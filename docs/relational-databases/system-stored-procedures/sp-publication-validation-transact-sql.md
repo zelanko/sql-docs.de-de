@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: db8a79e723d76cdf54377618cc94cb6a4b5431d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715180"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Initiiert eine Artikelüberprüfungsanforderung für jeden Artikel in der angegebenen Veröffentlichung. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -56,7 +56,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Führt eine vollständige Zählung mit COUNT(*) durch.|  
-|**1**|Führt eine schnelle Anzahl von **sysindexes. Rows**aus. Das zählen von Zeilen in [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) ist wesentlich schneller als das zählen der Zeilen in der eigentlichen Tabelle. Da [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) jedoch verzögert aktualisiert wird, ist die Zeilen Anzahl möglicherweise nicht korrekt.|  
+|**1**|Führt eine schnelle Anzahl von **sysindexes. Rows**aus. Das zählen von Zeilen in [sys.sysIndizes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) ist wesentlich schneller als das zählen der Zeilen in der eigentlichen Tabelle. Da [sys.sysIndizes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) jedoch verzögert aktualisiert werden, ist die Zeilen Anzahl möglicherweise nicht korrekt.|  
 |**2** (Standardwert)|Führt eine bedingte schnelle Zählung durch, indem zunächst versucht wird, die schnelle Methode anzuwenden. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *expected_rowcount* NULL ist und die gespeicherte Prozedur verwendet wird, um den Wert zu erhalten, wird immer eine vollständige Anzahl (*) verwendet.|  
   
 `[ @shutdown_agent = ] 'shutdown_agent'`Gibt an, ob der Verteilungs-Agent sofort nach Abschluss der Überprüfung heruntergefahren werden soll. *shutdown_agent* ist vom Typ **Bit**. der Standardwert ist **0**. Bei **0**wird der Replikations-Agent nicht heruntergefahren. Wenn der Wert **1**ist, wird der Replikations-Agent nach der Überprüfung des letzten Artikels heruntergefahren.  
@@ -69,7 +69,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_publication_validation** wird bei der Transaktions Replikation verwendet.  
   
  **sp_publication_validation** können jederzeit aufgerufen werden, nachdem die Artikel, die der Veröffentlichung zugeordnet sind, aktiviert wurden. Die Prozedur kann (einmalig) manuell ausgeführt werden oder als Bestandteil eines regelmäßig geplanten Auftrags, der die Daten überprüft.  

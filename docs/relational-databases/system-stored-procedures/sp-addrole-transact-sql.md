@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1711ec3941a5fced5ef9e0c32808d6153b673e2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c4c882111446a24ca0dc8e0ac5ec8c0c28abbd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030919"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716415"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Erstellt eine neue Datenbankrolle in der aktuellen Datenbank.  
   
 > [!IMPORTANT]
->  **sp_addrole** ist aus Gründen der Kompatibilität mit früheren Versionen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von enthalten und wird in einer zukünftigen Version möglicherweise nicht mehr unterstützt. Verwenden Sie stattdessen [Create Role](../../t-sql/statements/create-role-transact-sql.md) .  
+>  **sp_addrole** ist aus Gründen der Kompatibilität mit früheren Versionen von enthalten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und wird in einer zukünftigen Version möglicherweise nicht mehr unterstützt. Verwenden Sie stattdessen [Create Role](../../t-sql/statements/create-role-transact-sql.md) .  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die Namen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankrollen können zwischen 1 und 128 Zeichen (Buchstaben, Sonderzeichen und Ziffern) enthalten. Die Namen von Daten bankrollen können nicht: einen umgekehrten Schrägstrich\\(), NULL oder eine leere Zeichenfolge (**' '**) enthalten.  
+ Die Namen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankrollen können zwischen 1 und 128 Zeichen (Buchstaben, Sonderzeichen und Ziffern) enthalten. Die Namen von Daten bankrollen können nicht: einen umgekehrten Schrägstrich ( \\ ), NULL oder eine leere Zeichenfolge (**' '**) enthalten.  
   
  Nachdem Sie eine Daten Bank Rolle hinzugefügt haben, verwenden Sie [sp_addrolemember &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) , um der Rolle Prinzipale hinzuzufügen. Wenn mit den Anweisungen GRANT, DENY oder REVOKE Berechtigungen auf die Datenbankrolle angewendet werden, erben die Mitglieder der Datenbankrolle die Berechtigungen, als würden die Berechtigungen direkt auf die Konten dieser Mitglieder angewendet.  
   

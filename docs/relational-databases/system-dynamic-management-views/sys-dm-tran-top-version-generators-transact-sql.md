@@ -20,15 +20,15 @@ ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 552ca2de9ac8077beb25b9ad77f259790b92a1be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4d6484d5f9762590f3bef941f7deff5092c720ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819037"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718703"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Gibt eine virtuelle Tabelle für die Objekte zurück, die die meisten Versionen im Versionsspeicher erzeugen. **sys. dm_tran_top_version_generators** gibt die obersten 256 aggregierten Daten Satzlängen zurück, die nach **database_id** und **rowset_id**gruppiert sind. **sys. dm_tran_top_version_generators** Ruft Daten ab, indem die **dm_tran_version_store** virtuelle Tabelle abgefragt wird. **sys. dm_tran_top_version_generators** ist eine ineffiziente Sicht, die ausgeführt werden kann, da in dieser Ansicht der Versionsspeicher abgefragt wird und der Versionsspeicher sehr groß sein kann. Die Verwendung dieser Funktion wird empfohlen, um die größten Consumer des Versionsspeichers zu suchen.  
   
@@ -56,7 +56,7 @@ sys.dm_tran_top_version_generators
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Da **sys. dm_tran_top_version_generators** möglicherweise viele Seiten lesen muss, während Sie den gesamten Versionsspeicher scannt, kann die Ausführung von **sys. dm_tran_top_version_generators** die Systemleistung beeinträchtigen.  
   
 ## <a name="examples"></a>Beispiele  

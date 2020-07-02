@@ -25,22 +25,22 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca0e048d09b838663895d31de155d84c6294ed01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b560aa650140e4b94bbea4491fb28e5f1bf656f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487089"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717897"
 ---
 # <a name="getting-started-with-clr-integration"></a>Erste Schritte mit der CLR-Integration
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
-Dieses Thema bietet einen Überblick über die Namespaces und Bibliotheken, die zum Kompilieren von Daten Bank [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Objekten mithilfe der-Integration in die .NET Framework Common Language Runtime (CLR) erforderlich sind. In diesem Thema wird außerdem erläutert, wie eine einfache gespeicherte CLR-Prozedur in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# geschrieben, kompiliert und ausgeführt wird.  
+Dieses Thema bietet einen Überblick über die Namespaces und Bibliotheken, die zum Kompilieren von Datenbankobjekten mithilfe der- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Integration in die .NET Framework Common Language Runtime (CLR) erforderlich sind. In diesem Thema wird außerdem erläutert, wie eine einfache gespeicherte CLR-Prozedur in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# geschrieben, kompiliert und ausgeführt wird.  
   
 ## <a name="required-namespaces"></a>Erforderliche Namespaces  
 
-Die zum Entwickeln grundlegender CLR-Datenbankobjekte erforderlichen Komponenten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]werden mit installiert. Die CLR-Integrationsfunktionalität wird in einer Assembly mit dem Namen system.data.dll verfügbar gemacht, die Teil von .NET Framework ist. Diese Assembly befindet sich im globalen Assemblycache (GAC) sowie im .NET Framework-Verzeichnis. Ein Verweis auf diese Assembly wird in der Regel sowohl von Befehlszeilentools als auch von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio automatisch hinzugefügt und muss daher nicht manuell hinzugefügt werden.  
+Die zum Entwickeln grundlegender CLR-Datenbankobjekte erforderlichen Komponenten werden mit installiert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Die CLR-Integrationsfunktionalität wird in einer Assembly mit dem Namen system.data.dll verfügbar gemacht, die Teil von .NET Framework ist. Diese Assembly befindet sich im globalen Assemblycache (GAC) sowie im .NET Framework-Verzeichnis. Ein Verweis auf diese Assembly wird in der Regel sowohl von Befehlszeilentools als auch von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio automatisch hinzugefügt und muss daher nicht manuell hinzugefügt werden.  
   
 Die system.data.dll-Assembly enthält die folgenden Namespaces, die zum Kompilieren von CLR-Datenbankobjekten erforderlich sind:  
   
@@ -92,7 +92,7 @@ End Class
   
 Dieses einfache Programm enthält eine einzelne statische Methode in einer öffentlichen Klasse. Diese Methode verwendet zwei neue Klassen, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** und **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** zum Erstellen von verwalteten Datenbankobjekten, um eine einfache Textnachricht auszugeben. Die-Methode weist auch die Zeichenfolge "Hello World!" zu. als Wert eines out-Parameters. Diese Methode kann als gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deklariert und anschließend auf dieselbe Weise wie eine gespeicherte [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Prozedur ausgeführt werden.  
   
-Kompilieren Sie dieses Programm als Bibliothek, laden Sie es [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]in, und führen Sie es als gespeicherte Prozedur aus.  
+Kompilieren Sie dieses Programm als Bibliothek, laden Sie es in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , und führen Sie es als gespeicherte Prozedur aus.  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>Erstellen Sie die gespeicherte Prozedur "Hallo Welt".  
 

@@ -19,25 +19,25 @@ ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8bb984c789f759eb764ad580f971ab71c9fc946
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4190b13819bddc6a4bdc40d2eae4e09f1a98e7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297650"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715275"
 ---
 # <a name="data-source-objects-ole-db"></a>Datenquellenobjekte (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client verwendet den Begriff Datenquelle für den Satz von OLE DB Schnittstellen, die zum Herstellen einer Verknüpfung mit einem Datenspeicher verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], z. b.. Das Erstellen einer Instanz des Datenquellen Objekts des Anbieters ist die erste Aufgabe eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Consumers.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client verwendet den Begriff Datenquelle für den Satz von OLE DB Schnittstellen, die zum Herstellen einer Verknüpfung mit einem Datenspeicher verwendet werden, z [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . b.. Das Erstellen einer Instanz des Datenquellen Objekts des Anbieters ist die erste Aufgabe eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Consumers.  
   
  Jeder OLE DB-Anbieter deklariert einen Klassenbezeichner (CLSID) für sich. Die CLSID für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ist die C/C++-GUID CLSID_SQLNCLI10 (das Symbol SQLNCLI_CLSID wird in die korrekte ProgID in der Datei sqlncli. h aufgelöst, auf die Sie verweisen). Mit der CLSID verwendet der Consumer die OLE-Funktion **CoCreateInstance** zum Erstellen einer Instanz des Datenquellenobjekts.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ist ein in-Process-Server. Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Objekten werden mithilfe des CLSCTX_INPROC_SERVER-Makros erstellt, um den ausführbaren Kontext anzugeben.  
   
- Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen Objekt des Native Client OLE DB-Anbieters macht die OLE DB Initialisierungs Schnittstellen verfügbar, die es dem Consumer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglichen, eine Verbindung mit vorhandenen Datenbanken herzustellen.  
+ Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen Objekt des Native Client OLE DB-Anbieters macht die OLE DB Initialisierungs Schnittstellen verfügbar, die es dem Consumer ermöglichen, eine Verbindung mit vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken herzustellen.  
   
- Jede Verbindung, die über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Native Client OLE DB-Anbieter hergestellt wird, legt diese Optionen automatisch fest:  
+ Jede Verbindung, die über den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter hergestellt wird, legt diese Optionen automatisch fest:  
   
 -   SET ANSI_WARNINGS ON  
   
@@ -51,7 +51,7 @@ ms.locfileid: "81297650"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- In diesem Beispiel wird das Klassenbezeichnermakro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um ein Datenquellen Objekt des Native Client OLE DB-Anbieters zu erstellen und einen Verweis auf seine **IDBInitialize** -Schnittstelle zu erhalten  
+ In diesem Beispiel wird das Klassenbezeichnermakro verwendet, um ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen Objekt des Native Client OLE DB-Anbieters zu erstellen und einen Verweis auf seine **IDBInitialize** -Schnittstelle zu erhalten  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -72,9 +72,9 @@ else
 }  
 ```  
   
- Bei erfolgreicher Erstellung einer Instanz eines Datenquellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekts des Native Client OLE DB Anbieters kann die Consumeranwendung fortgesetzt werden, indem die Datenquelle initialisiert und Sitzungen erstellt werden. OLE DB-Sitzungen präsentieren die Schnittstellen, die Datenzugriff und -bearbeitung ermöglichen.  
+ Bei erfolgreicher Erstellung einer Instanz eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen Objekts des Native Client OLE DB Anbieters kann die Consumeranwendung fortgesetzt werden, indem die Datenquelle initialisiert und Sitzungen erstellt werden. OLE DB-Sitzungen präsentieren die Schnittstellen, die Datenzugriff und -bearbeitung ermöglichen.  
   
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die erste Verbindung zu einer angegebenen Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von als Teil einer erfolgreichen Datenquellen Initialisierung her. Die Verbindung wird beibehalten, solange eine Referenz auf einer beliebigen Datenquellen-Initialisierungsschnittstelle beibehalten wird oder bis die Methode **IDBInitialize::Uninitialize** aufgerufen wird.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die erste Verbindung zu einer angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Teil einer erfolgreichen Datenquellen Initialisierung her. Die Verbindung wird beibehalten, solange eine Referenz auf einer beliebigen Datenquellen-Initialisierungsschnittstelle beibehalten wird oder bis die Methode **IDBInitialize::Uninitialize** aufgerufen wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

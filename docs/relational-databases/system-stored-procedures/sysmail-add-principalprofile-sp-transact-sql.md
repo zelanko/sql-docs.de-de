@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d752015dab48058af18cb981a009691f407da171
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 387761d2275025f70a769cf3068693d08dbecc58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718628"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Erteilt einem msdb-Daten Bank Prinzipal die Berechtigung, ein Datenbank-E-Mail Profil zu verwenden. Der Daten Bank Prinzipal muss einem SQL Server Authentifizierungs Benutzer, einem Windows-Benutzer oder einer Windows-Gruppe zugeordnet werden.
   
@@ -54,7 +54,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn Sie ein Profil als öffentlich festlegen möchten, geben Sie die ** \@ principal_id** **0** oder eine ** \@ principal_name** **Public**an. Ein öffentliches Profil ist für alle Benutzer der **msdb** -Datenbank verfügbar. Allerdings müssen diese Benutzer auch Mitglieder von **DatabaseMailUserRole** sein, wenn sie **sp_send_dbmail**ausführen können sollen.  
   
  Ein Datenbankbenutzer kann nur ein Standardprofil besitzen. Wenn ** \@ is_default** '**1**' ist und der Benutzer bereits einem oder mehreren Profilen zugeordnet ist, wird das angegebene Profil zum Standardprofil für den Benutzer. Das zuvor als Standardprofil verwendete Profil ist dem Benutzer weiter zugeordnet, es ist jedoch nicht mehr als Standardprofil festgelegt.  

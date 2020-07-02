@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 355eaa254fcc7bb6cd4aa9a39c2cbcb269d88396
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d37575864666c5aa2b8c47484b5bcac798b3e9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718664"
 ---
 # <a name="installation-and-configuration"></a>Installation und Konfiguration
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Anweisungen zur Installation und Konfiguration der OLTP-Datenbank für Wide World.
 
 ## <a name="prerequisites"></a>Voraussetzungen
@@ -26,7 +26,7 @@ Anweisungen zur Installation und Konfiguration der OLTP-Datenbank für Wide Worl
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (oder höher) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Verwenden Sie für die vollständige Version des Beispiels SQL Server Evaluation/Developer/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Um die besten Ergebnisse zu erzielen, verwenden Sie die Version vom Juni 2016 oder höher.
 
-## <a name="download"></a>Download
+## <a name="download"></a>Herunterladen
 
 Die neueste Version des Beispiels:
 
