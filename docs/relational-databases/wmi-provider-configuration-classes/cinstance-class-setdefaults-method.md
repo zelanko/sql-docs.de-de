@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d75a202b368df339b97a4a9588ad3ac073429c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 99512ce28daae39df9484ea554ba81b23d99e05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675100"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>CInstance-Klasse – SetDefaults-Methode
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Legt alle Standardwerte für die Instanz des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients fest, wobei die Option zum Überschreiben vorhandener Daten besteht.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+  Legt alle Standardwerte für die Instanz des- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clients fest, wobei die Option zum Überschreiben vorhandener Daten besteht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ object.SetDefaults(OverwriteAll)
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)  

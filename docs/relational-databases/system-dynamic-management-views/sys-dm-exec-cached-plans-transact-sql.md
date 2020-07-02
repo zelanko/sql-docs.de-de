@@ -20,15 +20,15 @@ ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd09fde00399dc2e96dc67334a0446ca9f618c3e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 214c5aed0447fe63b941e32a13a4306b1a0209a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676845"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt eine Zeile für jeden Abfrageplan zurück, der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine schnellere Abfrageausführung zwischengespeichert wird. In dieser dynamischen Verwaltungssicht können Sie zwischengespeicherte Abfragepläne, zwischengespeicherten Abfragetext, den von zwischengespeicherten Plänen verwendeten Arbeitsspeicher und die Anzahl der Wiederverwendungen für zwischengespeicherte Pläne suchen.  
   

@@ -19,15 +19,15 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 56dd563d63518c18db6448d2c86f21e6ad676144
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677579"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL-Datenbank)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die während des Vorgangs ausgeführt wurden. In dieser aggregierten Sicht können Sie Leistungsprobleme bei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sowie bei bestimmten Abfragen und Batches diagnostizieren.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82830854"
 |max_wait_time_ms|**bigint**|Maximale Wartezeit für diesen Wartetyp.|  
 |signal_wait_time_ms|**bigint**|Differenz zwischen dem Zeitpunkt der Signalisierung des wartenden Threads und dem Beginn der Ausführung.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 -   In dieser dynamischen Verwaltungssicht werden nur Daten für die aktuelle Datenbank angezeigt.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "82830854"
   
  In der folgenden Tabelle werden die Wartetypen für Tasks in einer Liste aufgeführt.  
   
-|Wartetyp|Beschreibung|  
+|Wartetyp|BESCHREIBUNG|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|Tritt während des exklusiven Zugriffs auf das Laden einer Assembly auf.|  
@@ -168,7 +168,7 @@ ms.locfileid: "82830854"
 |FSAGENT|Tritt auf, wenn ein FILESTREAM-Datei-E/A-Vorgang auf eine FILESTREAM-Agent-Ressource wartet, die gerade von einem anderen Datei-E/A-Vorgang verwendet wird.|  
 |FSTR_CONFIG_MUTEX|Tritt bei einem Wartevorgang auf eine andere Neukonfiguration eines FILESTREAM-Funktionen auf, die abgeschlossen werden soll.|  
 |FSTR_CONFIG_RWLOCK|Tritt bei einem Wartevorgang auf die Serialisierung des Zugriffs auf die FILESTREAM-Konfigurationsparameter auf.|  
-|FT_METADATA_MUTEX|Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_METADATA_MUTEX|Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
 |FT_RESTART_CRAWL|Tritt auf, wenn ein Volltextcrawl von einem letzten bekannten fehlerfreien Punkt neu gestartet werden muss, um nach einem vorübergehenden Fehler wiederhergestellt zu werden. Durch die Wartezeit können die Arbeitstasks, die zurzeit an der jeweiligen Auffüllung arbeiten, abgeschlossen werden oder den aktuellen Schritt beenden.|  
 |FULLTEXT GATHERER|Tritt bei der Synchronisierung von Volltextvorgängen auf.|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -256,8 +256,8 @@ ms.locfileid: "82830854"
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|Wird verwendet, um zu warten, während Benutzerprozesse in einer Datenbank beendet werden, die mithilfe der ALTER DATABASE-Beendigungsklausel von einem Status in einen anderen versetzt wurde. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
-|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Tritt auf, wenn ein Hintergrundtask auf die Beendigung des Hintergrundtasks wartet, der (über Abruf) Windows Server-Failoverclusteringbenachrichtigungen empfängt.  Nur zur internen Verwendung.|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|Ein Anfüge-, Ersetzungs-und/oder Entfernungs Vorgang wartet darauf, eine Schreibsperre für eine Always on interne Liste (z. b. eine Liste von Netzwerken, Netzwerkadressen oder verfügbarkeitsgruppenlistener) zu erfassen.  Nur zur internen Verwendung.|  
+|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Tritt auf, wenn ein Hintergrundtask auf die Beendigung des Hintergrundtasks wartet, der (über Abruf) Windows Server-Failoverclusteringbenachrichtigungen empfängt.  Nur interne Verwendung.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|Ein Anfüge-, Ersetzungs-und/oder Entfernungs Vorgang wartet darauf, eine Schreibsperre für eine Always on interne Liste (z. b. eine Liste von Netzwerken, Netzwerkadressen oder verfügbarkeitsgruppenlistener) zu erfassen.  Nur interne Verwendung.|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Ein Always on Drop Availability Group-Vorgang wartet darauf, dass die Ziel Verfügbarkeits Gruppe offline geschaltet wird, bevor Windows Server-Failoverclustering-Objekte zerstört werden.|  
 |PWAIT_HADR_ONLINE_COMPLETED|Ein Always on Vorgang zum Erstellen oder Failover von Verfügbarkeits Gruppen wartet darauf, dass die Ziel Verfügbarkeits Gruppe online geschaltet wird.|  
 |PWAIT_HADR_POST_ONLINE_COMPLETED|Eine Always on Drop Availability Group-Vorgang wartet auf die Beendigung eines Hintergrund Tasks, der als Teil eines vorherigen Befehls geplant wurde. Es darf z. B. einen Hintergrundtask geben, der Verfügbarkeitsdatenbanken an die primäre Rolle übergibt. Die DROP AVAILABILITY GROUP-DDL muss auf den Abschluss dieses Hintergrundtasks warten, um Racebedingungen zu verhindern.|  
@@ -379,11 +379,11 @@ ms.locfileid: "82830854"
 |XE_MODULEMGR_SYNC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_OLS_LOCK|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_PACKAGE_LOCK_BACKOFF|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FT_COMPROWSET_RWLOCK|Volltext wartet auf Metadatenvorgang für Fragment. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
-|FT_IFTS_RWLOCK|Volltext wartet auf interne Synchronisierung. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_COMPROWSET_RWLOCK|Volltext wartet auf Metadatenvorgang für Fragment. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_IFTS_RWLOCK|Volltext wartet auf interne Synchronisierung. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
 |FT_IFTS_SCHEDULER_IDLE_WAIT|Volltext-Wartetyp für den Ruhezustand des Zeitplanungsmoduls. Das Zeitplanungsmodul befindet sich im Leerlauf.|  
-|FT_IFTSHC_MUTEX|Volltext wartet auf einen fdhost-Steuerungsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
-|FT_IFTSISM_MUTEX|Volltext wartet auf einen Kommunikationsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
-|FT_MASTER_MERGE|Volltext wartet auf Masterzusammenführungsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_IFTSHC_MUTEX|Volltext wartet auf einen fdhost-Steuerungsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_IFTSISM_MUTEX|Volltext wartet auf einen Kommunikationsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_MASTER_MERGE|Volltext wartet auf Masterzusammenführungsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
   
   

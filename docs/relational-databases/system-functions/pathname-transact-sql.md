@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251951"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662883"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt den Pfad eines FILESTREAM BLOB (Binary Large Object) zurück. Die OpenSqlFilestream-API verwendet diesen Pfad zum Zurückgeben eines Handles, das eine Anwendung verwenden kann, um mit den BLOB-Daten mithilfe von Win32-APIs zu arbeiten. PathName ist schreibgeschützt.  
   
@@ -45,7 +45,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  Wenn der Pfadname für eine Spalte eines beliebigen anderen Datentyps oder für eine **varbinary (max)** -Spalte angefordert wird, die nicht über das FILESTREAM-Speicher Attribut verfügt, führt dies zu einem Kompilierzeitfehler der Abfrage.  
   
  *\@andere*  
- Ein ganzzahliger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , der definiert, wie die Serverkomponente des Pfads formatiert werden soll. die Option kann einen der folgenden Werte aufweisen. * \@* Der Standardwert ist 0.  
+ Ein ganzzahliger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , der definiert, wie die Serverkomponente des Pfads formatiert werden soll. die * \@ Option* kann einen der folgenden Werte aufweisen. Die Standardeinstellung ist 0.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -72,7 +72,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>Rückgabewert  
  Der zurückgegebene Wert ist der vollqualifizierte logische oder NETBIOS-Pfad des BLOB. Pfadname gibt keine IP-Adresse zurück. NULL wird zurückgegeben, wenn das FILESTREAM BLOB nicht erstellt wurde.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Spalte ROWGUID muss in jeder Abfrage sichtbar sein, die PathName aufruft.  
   
  Ein FILESTREAM BLOB kann nur mit [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt werden.  

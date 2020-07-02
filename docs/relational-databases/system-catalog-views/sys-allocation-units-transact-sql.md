@@ -20,15 +20,15 @@ ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c996a258ae9f0dacec09fc58b3f433e620b6d663
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 58ae604f06e97e07560d55bc8eea103b27002aaa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82822092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652856"
 ---
 # <a name="sysallocation_units-transact-sql"></a>sys.allocation_units (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Enthält eine Zeile für jede Zuordnungseinheit in der Datenbank.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "82822092"
 >  Wenn Sie große Indizes löschen oder neu erstellen bzw. wenn Sie große Tabellen löschen oder abschneiden, verzögert [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Aufhebung der aktuellen Seitenzuordnungen sowie die zugehörigen Sperren, bis für die Transaktion ein Commit ausgeführt wird. Bei verzögerten Löschvorgängen wird der zugeordnete Speicherplatz nicht sofort freigegeben. Daher spiegeln die von sys.allocation_units zurückgegebenen Werte sofort nach dem Löschen oder Abschneiden großer Objekte möglicherweise nicht den tatsächlich verfügbaren Speicherplatz wider.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **public** -Rolle.  Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Erfordert die Mitgliedschaft in der **public** -Rolle. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. Partitions &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   

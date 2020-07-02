@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f7526cc2902829aef7e4e029428e21faa94d2a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663976"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Zeigt die folgenden Informationen an: ausgeführte Bedingungsausdrücke, Ziele der Ausdrücke, Ergebnis der einzelnen Ausführungen, Details zu eventuell aufgetretenen Fehlern. In der folgenden Tabelle werden die Spalten in der syspolicy_execution_history_details-Sicht beschrieben.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68094825"
 |exception_message|**nvarchar(max)**|Von der Ausnahme (falls aufgetreten) generierte Meldung.|  
 |exception|**nvarchar(max)**|Beschreibung der Ausnahme, falls aufgetreten.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Bei der Problembehandlung in der richtlinienbasierten Verwaltung fragen Sie in der syspolicy_policy_execution_history_details-Sicht ab, welche Kombinationen aus Ziel und Bedingungsausdruck fehlgeschlagen sind und wann sie fehlgeschlagen sind. Darüber hinaus überprüfen Sie zugehörige Fehler.  
   
  Die folgende Abfrage verbindet die `syspolicy_policy_execution_history_details` -Sicht mit den Sichten `syspolicy_policy_execution_history_details` und `syspolicy_policies` , um den Namen der Richtlinie, den Namen der Bedingung und die Details zu Fehlern anzuzeigen.  

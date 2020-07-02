@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c92a9271575a725aef6981b97cb9b35c81829044
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a779585dedcfa5fef86d7c3db4543b9ec74df7bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828056"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677775"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Einige Features von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ändern die Art und Weise, [!INCLUDE[ssDE](../../includes/ssde-md.md)] in der Informationen in den Datenbankdateien gespeichert werden. Diese Funktionen sind nicht in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Datenbank, die diese Funktionen enthält, kann nicht in eine Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschoben werden, die sie nicht unterstützt. Verwenden Sie die dynamische Verwaltungs Sicht sys. dm_db_persisted_sku_features, um Editions spezifische Funktionen aufzulisten, die in der aktuellen Datenbank aktiviert sind.
   
@@ -41,7 +41,7 @@ ms.locfileid: "82828056"
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung für die Datenbank.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn von der Datenbank keine Features verwendet werden, die möglicherweise durch eine bestimmte Edition eingeschränkt sind, gibt die Sicht keine Zeilen zurück.  
   
  sys. dm_db_persisted_sku_features kann die folgenden Daten Bank veränderlichen Features auflisten, die auf bestimmte Editionen beschränkt sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  

@@ -21,15 +21,15 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97339050b2bb6b81945b6bc7604befdfd45f360b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8dcde5de27764979cf2258d3d1895574a4ca4e54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829522"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677915"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt Größen- und Fragmentierungsinformationen für die Daten und Indizes der angegebenen Tabelle oder Sicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. Bei einem Index wird eine Zeile für jede B-Strukturebene in den einzelnen Partitionen zurückgegeben. Bei einem Heap wird eine Zeile für die IN_ROW_DATA-Zuordnungseinheit jeder Partition zurückgegeben. Bei LOB-Daten (Large Object) wird eine Zeile für die LOB_DATA-Zuordnungseinheit jeder Partition zurückgegeben. Falls Zeilenüberlaufdaten in der Tabelle vorhanden sind, wird eine Zeile für die ROW_OVERFLOW_DATA-Zuordnungseinheit in jeder Partition zurückgegeben. Gibt keine Informationen zu speicheroptimierten xVelocity-ColumnStore-Indizes zurück.  
   
@@ -114,7 +114,7 @@ sys.dm_db_index_physical_stats (
 |column_store_delete_buffer_state|TINYINT|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = ableiten<br /><br /> 3 = leeren<br /><br /> 4 = wird abgekoppelt<br /><br /> 5 = bereit|  
 |column_store_delete_buff_state_desc||**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Ungültig-der übergeordnete Index ist kein columnstore--Index.<br /><br /> Open-deleters und Scanner verwenden diesen.<br /><br /> Löschvorgänge werden entsperrt, aber von den Scannern weiterhin verwendet.<br /><br /> Der leeren Puffer ist geschlossen, und die Zeilen im Puffer werden in die Delete-Bitmap geschrieben.<br /><br /> Das Zurückziehen von Zeilen im geschlossenen Lösch Puffer wurde in die Delete-Bitmap geschrieben, aber der Puffer wurde nicht abgeschnitten, da er von den Scannern noch verwendet wird. Neue Scanner müssen nicht den abkoppeln Puffer verwenden, da der geöffnete Puffer ausreichend ist.<br /><br /> Bereit: dieser Lösch Puffer ist einsatzbereit.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die dynamische Verwaltungsfunktion sys.dm_db_index_physical_stats ersetzt die DBCC SHOWCONTIG-Anweisung.  
   
 ## <a name="scanning-modes"></a>Scanmodi  
@@ -425,7 +425,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Index bezogene dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Index Related Dynamic Management Views and Functions (Transact-SQL) (Indexbezogene dynamische Verwaltungssichten und -funktionen (Transact-SQL))](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys. dm_db_index_usage_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys. dm_db_partition_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   

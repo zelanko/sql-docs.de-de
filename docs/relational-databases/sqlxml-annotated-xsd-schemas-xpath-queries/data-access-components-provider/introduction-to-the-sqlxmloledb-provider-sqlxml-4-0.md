@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15375e7aaf860c5419e68cc64bb8e6e2cac125c1
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: aafc93dd9cf83a648cc4eecfe9301ad6e3ab24c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650080"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Einführung in den SQLXMLOLEDB-Anbieter (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Der SQLXMLOLEDB-Anbieter ist ein OLE DB-Anbieter, der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML-Funktionalität durch ADO (ActiveX Data Objects) verfügbar macht. Der Anbieter kann Befehle jedoch nur im ADO-Modus zum Schreiben in einen Ausgabedatenstrom ausführen. Der SQLXMLOLEDB-Anbieter ist kein Rowsetanbieter. Wenn Sie einen Befehl ausführen, müssen Sie das Flag adExecuteStream angeben, das ADO anweist, den von Ihnen angegebenen Ausgabestream zu verwenden.  
   
  Das folgende Beispiel zeigt die Syntax für den Execute-Befehl, in dem das adExecuteStream-Flag angegeben ist:  
@@ -40,13 +40,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Anbieterspezifische SQLXMLOLEDB-Eigenschaften  
  Der SQLXMLOLEDB-Anbieter stellt die folgenden anbieterspezifischen Verbindungseigenschaften zur Verfügung.  
   
-|Verbindung<br /><br /> property|Standard<br /><br /> (ggf.)|Beschreibung|  
+|Verbindung<br /><br /> property|Standard<br /><br /> (ggf.)|BESCHREIBUNG|  
 |-----------------------------|----------------------------|-----------------|  
 |Datenanbieter||Stellt die PROGID des OLE DB-Anbieters zur Verfügung, durch die SQLXMLOLEDB die Befehle ausführt. Ab SQLXML 4.0 und [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ist dieser Anbieter in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enthalten. Daher ist dieser Eigenschaftswert auf "SQLNCLI11" beschränkt. Weitere Informationen finden Sie unter [SQL Server Native Client-Programmierung](../../../relational-databases/native-client/sql-server-native-client-programming.md).|  
   
  Der SQLXMLOLEDB-Anbieter stellt die folgenden anbieterspezifischen Befehlseigenschaften zur Verfügung.  
   
-|Get-Help<br /><br /> property|Standard<br /><br /> (ggf.)|Beschreibung|  
+|Befehl<br /><br /> property|Standard<br /><br /> (ggf.)|BESCHREIBUNG|  
 |--------------------------|----------------------------|-----------------|  
 |Basispfad|""|Gibt den Basispfad der Datei an. Der Basispfad der Datei gibt den Speicherort der XSL-Dateien (XML Stylesheet Language) oder der Zuordnungsschemadateien an. Der Basisdatei Pfad wird auch verwendet, um die relativen Pfade der XSL-Datei oder der Zuordnung von Schema Dateien aufzulösen, die in den XSL-oder Mapping-Schema Eigenschaften angegeben wurden.<br /><br /> Ein Beispiel für die Verwendung dieser Eigenschaft finden Sie unter [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
 |ClientSideXML|False|Legen Sie diese Eigenschaft auf True fest, wenn die Konvertierung des Rowsets in XLM statt auf dem Server auf dem Client erfolgen soll. Dies ist nützlich, wenn Sie die Ladeleistungslast auf die mittlere Ebene verschieben möchten.<br /><br /> Ein Beispiel für die Verwendung dieser Eigenschaft finden Sie unter [Ausführen von SQL-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) oder [Ausführen von Vorlagen, die SQL-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;enthalten ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  
@@ -59,7 +59,7 @@ oTestCommand.Execute , , adExecuteStream
   
  Die folgende Tabelle enthält Beschreibungen der Eigenschaftswerte der SS-Stream-Flags.  
   
-|Eigenschaftswert|Beschreibung|  
+|Eigenschaftswert|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|URLs werden nicht zum Zuordnen von Schemas oder XSL akzeptiert.|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|Ein für das Zuordnungschema oder für XSL angegebener Pfad muss sich auf den Basispfad der Vorlage selbst beziehen.|  

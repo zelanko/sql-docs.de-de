@@ -15,15 +15,15 @@ ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1302798ac92456b4b2ce483ddcc2ae2e3b4f6067
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 5b321928d3e898edfcbae041391a85152d69e058
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665973"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0-Programmierkonzepte
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   SQLXML 3.0 wurde als Webversion angeboten, um zusätzliche clientseitige XML-Funktionalitäten und Erweiterungen zu bestehenden Funktionen wie XSD-Schemas mit Anmerkungen, XML-Massenladen, Unterstützung für Webdienste (SOAP) und Updategrams bereitzustellen.  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] führt Version 4.0 von SQLXML ein, die dieselbe Funktionalität wie SQLXML 3.0 bereitstellt. Darüber hinaus bietet sie zusätzliche Updates, um mit neuen Funktionen, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wurden, zu funktionieren.  

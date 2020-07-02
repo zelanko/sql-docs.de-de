@@ -18,15 +18,15 @@ ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1591c84de006308e96a3b8079ea05ef9ad6802b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a9597d1852cb16c4f212989d42b1b614f0e5e8fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830614"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676482"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Diese dynamische Verwaltungsfunktion übernimmt eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung als Parameter und beschreibt die Metadaten des ersten Resultsets für die-Anweisung.  
   
@@ -101,12 +101,12 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type**|**int**|Enthält eine ganze Zahl, die den zurückgegebenen Fehler darstellt. Wird error_type_desc zugeordnet. Siehe Liste unter Hinweisen.|  
 |**error_type_desc**|**nvarchar(60)**|Enthält eine kurze Zeichenfolge in Großbuchstaben, die den zurückgegebenen Fehler darstellt. Wird error_type zugeordnet. Siehe Liste unter Hinweisen.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Funktion verwendet den gleichen Algorithmus wie **sp_describe_first_result_set**. Weitere Informationen finden Sie unter [sp_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  In der folgenden Tabelle werden die Fehlertypen und deren Beschreibungen aufgeführt.  
   
-|error_type|error_type|Beschreibung|  
+|error_type|error_type|BESCHREIBUNG|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|Alle Fehler, die nicht anderweitig beschrieben sind.|  
 |2|SYNTAX|Im Batch ist ein Syntaxfehler aufgetreten.|  

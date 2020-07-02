@@ -1,5 +1,5 @@
 ---
-title: sys. systypes (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sysTypen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 99a970b5be9f28569942b4378c488b710b13cd32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018079"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652339"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Gibt eine Zeile für jeden vom System bereitgestellten und jeden benutzerdefinierten Datentyp zurück, der in der Datenbank definiert ist.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68018079"
 |**xscale**|**tinyint**|Vom Server verwendete interne Dezimalstellen. Darf in Abfragen nicht verwendet werden.|  
 |**tdefault**|**int**|ID der gespeicherten Prozedur zur Integritätsprüfung für diesen Datentyp.|  
 |**-**|**int**|ID der gespeicherten Prozedur zur Integritätsprüfung für diesen Datentyp.|  
-|**UID**|**smallint**|Schema-ID des Typbesitzers.<br /><br /> Bei Datenbanken, die von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisiert wurden, ist die Schema-ID gleich der Benutzer-ID des Besitzers.<br /><br /> ** \* Wichtig \* \* ** Wenn Sie eine der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DDL-Anweisungen verwenden, müssen Sie die [sys. types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) -Katalog Sicht anstelle von **sys. systypes**verwenden.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl von Benutzern und Rollen 32.767 übersteigt.|  
+|**uid**|**smallint**|Schema-ID des Typbesitzers.<br /><br /> Bei Datenbanken, die von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisiert wurden, ist die Schema-ID gleich der Benutzer-ID des Besitzers.<br /><br /> Wichtig Wenn Sie eine der folgenden DDL-Anweisungen verwenden, müssen Sie die ** \* sys. types-Katalog Sicht anstelle vonsys.sys-Typen verwenden. \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) **sys.systypes**<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl von Benutzern und Rollen 32.767 übersteigt.|  
 |**bleiben**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|Wenn Zeichen basiert, ist **collationid** die ID der Sortierung der aktuellen Datenbank. Andernfalls ist der Wert NULL.|  
 |**usertype**|**smallint**|User type ID. Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl der Datentypen 32.767 übersteigt.|  

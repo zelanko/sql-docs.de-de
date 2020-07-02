@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8904e3c08789eb0cb50b0f5a20b66c851578ac5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6c181ad19d3027c5262b988a8c32fdcff52e901
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678589"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API für erweiterte gespeicherte Prozeduren)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
@@ -98,10 +98,10 @@ srcdata
   
  Wenn *desttype* den Wert SRVDECIMAL oder SRVNUMERIC aufweist, muss der *srcdata*-Parameter ein Zeiger auf eine DBNUMERIC- oder DBDECIMAL-Struktur sein, und die Felder für Genauigkeit und Dezimalstellen müssen bereits auf die gewünschten Werte festgelegt worden sein. Mit DEFAULTPRECISION können Sie eine Standardgenauigkeit angeben und mit DEFAULTSCALE einen Standardwert für die Dezimalstellen.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Die Nummer der beschriebenen Spalte. Die erste Spalte ist die Spalte 1. Tritt ein Fehler auf, wird 0 zurückgegeben.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die **srv_describe**-Funktion muss einmal für jede Spalte in der Zeile aufgerufen werden, bevor der erste Aufruf von **srv_sendrow** erfolgt. Die Spalten einer Zeile können in jeder Reihenfolge beschrieben werden.  
   
  Verwenden Sie **srv_setcoldata** bzw. **srv_setcollen**, um den Speicherort und die Länge der Quelldaten in Spaltenzeilen zu ändern, bevor das gesamte Resultset gesendet wurde.  

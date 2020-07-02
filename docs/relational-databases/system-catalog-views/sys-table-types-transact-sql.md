@@ -23,21 +23,21 @@ ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e000d4e4f7f46d57bb1ae9a4e5c370169eb1227f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c8faf838b12c82fd2dff25db87dbae96ff891e81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664040"
 ---
 # <a name="systable_types-transact-sql"></a>sys.table_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Zeigt Eigenschaften von benutzerdefinierten Tabellentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an. Ein Tabellentyp ist ein Typ, von dem Tabellenvariablen oder Tabellenwertparameter deklariert werden können. Jeder Tabellentyp verfügt über eine **type_table_object_id** , bei der es sich um einen Fremdschlüssel in die [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalog Sicht handelt. Sie können diese ID-Spalte verwenden, um verschiedene Katalog Sichten auf eine Weise abzufragen, die mit einer **object_id** -Spalte einer regulären Tabelle vergleichbar ist, um die Struktur des Tabellentyps, wie z. b. die Spalten und Einschränkungen, zu ermitteln.    
  
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|*\<geerbte Spalten>*||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys. types &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
+|*\<inherited columns>*||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys. types &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
 |**type_table_object_id**|**int**|Objekt-ID. Diese Nummer ist innerhalb einer Datenbank eindeutig.|  
 |**is_memory_optimized**|**bit**|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Folgende Werte sind möglich:<br /><br /> 0 = ist nicht speicheroptimiert<br /><br /> 1 = ist speicheroptimiert<br /><br /> Der Standardwert ist 0 (null).<br /><br /> Tabellentypen werden immer mit DURABILITY = SCHEMA_ONLY erstellt. Nur das Schema wird auf dem Datenträger beibehalten.|  
   

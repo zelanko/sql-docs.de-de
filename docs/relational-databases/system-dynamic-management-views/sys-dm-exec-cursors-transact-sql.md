@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 79959d61b1753d833523e0618a41eef89dcb5e58
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5769ffe206c1fc84107707acc980ab94c51ac932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676605"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen über die Cursor zurück, die in verschiedenen Datenbanken geöffnet sind.  
   
@@ -71,17 +71,17 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle stellt Informationen zur Cursordeklarationsschnittstelle bereit und enthält die möglichen Werte für die Eigenschaftenspalte.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |API|Cursor wurde mithilfe einer der Datenzugriffs-APIs (ODBC, OLE DB) deklariert.|  
 |TSQL|Cursor wurde mithilfe der DECLARE CURSOR-Syntax von Transact-SQL deklariert.|  
   
  Die folgende Tabelle stellt Informationen zum Cursortyp bereit und enthält die möglichen Werte für die Eigenschaftenspalte.  
   
-|type|Beschreibung|  
+|Typ|BESCHREIBUNG|  
 |----------|-----------------|  
 |Keyset|Cursor wurde als Keyset deklariert.|  
 |Dynamisch|Cursor wurde als dynamisch deklariert.|  
@@ -90,7 +90,7 @@ dm_exec_cursors (session_id | 0 )
   
  Die folgende Tabelle stellt Informationen zur Cursorparallelität bereit und enthält die möglichen Werte für die Eigenschaftenspalte.  
   
-|Parallelität|Beschreibung|  
+|Parallelität|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |Nur Leseberechtigung|Cursor wurde als schreibgeschützt deklariert.|  
 |Scroll Locks|Cursor verwendet Scrollsperren.|  

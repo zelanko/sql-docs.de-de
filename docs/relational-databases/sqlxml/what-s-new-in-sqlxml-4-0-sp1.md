@@ -21,15 +21,15 @@ ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 684711a9fc1fbab2d4556868d051df0b503eac23
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: cdb176233f3490daa428e7cf6bb8f7c9b0b58255
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665611"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Neues in SQLXML 4,0 SP1&#39;s
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 umfasst verschiedene Updates und Erweiterungen. Dieses Thema fasst die Updates zusammen und enthält Links zu ausführlicheren Informationen, sofern verfügbar. SQLXML 4.0 SP1 bietet zusätzliche Erweiterungen zur Unterstützung der neuen Datentypen in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Dieses Thema enthält die folgenden Themen:  
   
 -   Installieren von SQLXML 4.0 SP1  
@@ -147,7 +147,7 @@ ms.locfileid: "83689785"
   
      Dieser Schlüssel wurde eingeführt, sodass Sie die Leerzeichen in den Daten bei Bedarf beibehalten können. Wenn Sie diesen Registrierungsschlüssel hinzufügen und seinen Wert auf 0 (NULL) setzen, werden Leerzeichen (LF, CR und TAB) in XML bei Attributwerten codiert zurückgegeben. Bei Elementwerten wird nur CR codiert zurückgegeben.  
   
-     Zum Beispiel:  
+     Beispiel:  
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  

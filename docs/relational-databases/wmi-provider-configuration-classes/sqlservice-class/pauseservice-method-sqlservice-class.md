@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37b0020c00af771096a2e9066ef99752c66d9e04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75cd8fd66ef7ca0f0cfc06ce7ab18b8140b73b94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662253"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>PauseService-Methode (SqlService-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Versucht, den Dienst anzuhalten.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,7 +42,7 @@ object.PauseService()
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein uint32-Wert, der 0 beträgt, wenn der Dienst erfolgreich angehalten wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

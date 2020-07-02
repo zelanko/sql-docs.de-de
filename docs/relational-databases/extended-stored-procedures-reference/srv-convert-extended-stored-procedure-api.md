@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60acbb6044842c097aa222b7a831addac7cf11d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678699"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API für erweiterte gespeicherte Prozeduren)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
@@ -86,10 +86,10 @@ destlen
  *destlen*  
  Gibt die Länge der Zielvariable in Byte an. Dieser Parameter wird für Datentypen fester Länge ignoriert. Für eine Zielvariable des Typs SRVCHAR muss der Wert von *destlen* der Gesamtlänge des Zielpufferspeichers entsprechen. Eine Länge von -1 für eine Zielvariable des Typs SRVCHAR oder SRVBINARY gibt an, dass genügend Speicher verfügbar ist. Für eine Zielvariable des Typs *srvchar* führt eine Länge von –1 zur NULL-Terminierung der Zeichenfolge.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Die Länge der konvertierten Daten (in Byte) bei erfolgreicher Konvertierung des Datentyps. Wenn **srv_convert** eine Konvertierungsanforderung erhält, die nicht unterstützt wird, wird – sofern vorhanden – der vom Entwickler bereitgestellte Fehlerhandler aufgerufen, eine globale Fehlernummer festgelegt und der Wert –1 zurückgegeben.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die **srv_willconvert**-Funktion bestimmt, ob eine bestimmte Konvertierung zulässig ist.  
   
  Das Konvertieren von SRVFLT4 oder SRVFLT8 in die ungefähren numerischen Datentypen kann zu einem Genauigkeitsverlust führen. Ein Genauigkeitsverlust kann auch durch Konvertieren der ungefähren numerischen Datentypen SRVFLT4 oder SRVFLT8 in SRVCHAR oder SRVTEXT auftreten.  

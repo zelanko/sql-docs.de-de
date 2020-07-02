@@ -18,15 +18,15 @@ ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d0c08c6e0d41781783cf7aaffd1f26d6e7b4e417
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827988"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676759"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Diese dynamische Verwaltungsfunktion nimmt einen @object_id als Parameter an und beschreibt die ersten Ergebnis Metadaten für das Modul mit dieser ID. Der @object_id angegebene kann die ID einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur oder eines- [!INCLUDE[tsql](../../includes/tsql-md.md)] Auslösers sein. Wenn es sich um die ID eines beliebigen anderen Objekts (z. B. einer Sicht, Tabelle, Funktion oder CLR-Prozedur) handelt, wird in den Fehlerspalten des Ergebnisses ein Fehler angegeben.  
   
@@ -96,7 +96,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type**|**int**|Enthält eine ganze Zahl, die den zurückgegebenen Fehler darstellt. Wird error_type_desc zugeordnet. Siehe Liste unter Hinweisen.|  
 |**error_type_desc**|**nvarchar(60)**|Enthält eine kurze Zeichenfolge in Großbuchstaben, die den zurückgegebenen Fehler darstellt. Wird error_type zugeordnet. Siehe Liste unter Hinweisen.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Funktion verwendet den gleichen Algorithmus wie **sp_describe_first_result_set**. Weitere Informationen finden Sie unter [sp_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  In der folgenden Tabelle werden die Fehlertypen und deren Beschreibungen aufgeführt.  

@@ -1,5 +1,5 @@
 ---
-title: sys. syscacheobjects (Transact-SQL) | Microsoft-Dokumentation
+title: sys.syscacheobjects (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df4b83cb7b1e69191e8964730a534c1b24fbac2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b33ff1cb4b46334f0b42d81f87920ef666a82e81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663440"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält Informationen zur Verwendung des Caches.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "68010782"
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|Bucket-ID. Der Wert liegt im Bereich von 0 bis (Verzeichnisgröße - 1). Die Verzeichnisgröße ist die Größe der Hashtabelle.|  
 |**cacheobjtype**|**nvarchar (17)**|Typ des Objekts im Cache:<br /><br /> Kompilierter Plan<br /><br /> Ausführbarer Plan<br /><br /> Analysestruktur<br /><br /> Cursor<br /><br /> Erweiterte gespeicherte Prozedur|  
-|**objtype**|**nvarchar (8)**|Typ des Objekts:<br /><br /> Gespeicherte Prozedur<br /><br /> Vorbereitete Anweisung<br /><br /> Ad-hoc-Abfrage ([!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen, die als Sprachereignisse von den Hilfsprogrammen **sqlcmd** oder **osql** aus übermittelt wurden, im Gegensatz zu Remoteprozeduraufrufen)<br /><br /> ReplProc (Replikationsprozedur)<br /><br /> Trigger<br /><br /> Anzeigen<br /><br /> Standard<br /><br /> Benutzertabelle<br /><br /> Systemtabelle<br /><br /> Azure Functions<br /><br /> Regel|  
+|**objtype**|**nvarchar (8)**|Typ des Objekts:<br /><br /> Gespeicherte Prozedur<br /><br /> Vorbereitete Anweisung<br /><br /> Ad-hoc-Abfrage ([!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen, die als Sprachereignisse von den Hilfsprogrammen **sqlcmd** oder **osql** aus übermittelt wurden, im Gegensatz zu Remoteprozeduraufrufen)<br /><br /> ReplProc (Replikationsprozedur)<br /><br /> Trigger<br /><br /> Ansicht<br /><br /> Standard<br /><br /> Benutzertabelle<br /><br /> Systemtabelle<br /><br /> Azure Functions<br /><br /> Regel|  
 |**objid**|**int**|Einer der Hauptschlüssel zur Suche nach einem Objekt im Cache. Für Datenbankobjekte (Prozeduren, Sichten, Trigger usw.) ist dies die Objekt-ID, die in **sysobjects** gespeichert wird. Bei Cacheobjekten, wie Ad-hoc-SQL-Code oder vorbereiteter SQL-Code, ist **objid** ein intern generierter Wert.|  
 |**DBID**|**smallint**|ID der Datenbank, in der das Cacheobjekt kompiliert wurde.|  
 |**dbidexec**|**smallint**|Datenbank-ID, von der die Abfrage ausgeführt wird.<br /><br /> Bei den meisten Objekten besitzt **dbidexec** denselben Wert wie **dbid**.<br /><br /> Bei Systemsichten ist **dbidexec** die Datenbank-ID, von der die Abfrage ausgeführt wird.<br /><br /> Für Ad-hoc-Abfragen ist **dbidexec** 0. Dies bedeutet, dass **dbidexec** denselben Wert besitzt wie **dbid**.|  
-|**UID**|**smallint**|Bei Ad-hoc-Abfrageplänen und vorbereiteten Plänen zeigt diese ID den Ersteller des Plans an.<br /><br /> -2 = Der abgesendete Batch hängt nicht von der impliziten Namensauflösung ab und kann von verschiedenen Benutzern gemeinsam genutzt werden. Dies ist die bevorzugte Methode. Jeder andere Wert stellt den Benutzernamen des Benutzers dar, der die Abfrage in der Datenbank absendet.<br /><br /> Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl von Benutzern und Rollen 32.767 übersteigt.|  
+|**uid**|**smallint**|Bei Ad-hoc-Abfrageplänen und vorbereiteten Plänen zeigt diese ID den Ersteller des Plans an.<br /><br /> -2 = Der abgesendete Batch hängt nicht von der impliziten Namensauflösung ab und kann von verschiedenen Benutzern gemeinsam genutzt werden. Dies ist die bevorzugte Methode. Jeder andere Wert stellt den Benutzernamen des Benutzers dar, der die Abfrage in der Datenbank absendet.<br /><br /> Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl von Benutzern und Rollen 32.767 übersteigt.|  
 |**refcounts**|**int**|Anzahl von anderen Cacheobjekten, die auf dieses Cacheobjekt verweisen. Eine Anzahl von 1 ist die Basis.|  
 |**usecounts**|**int**|Anzahl von Verwendungen dieses Cacheobjekts seit Beginn.|  
 |**pagesused**|**int**|Anzahl der Seiten, die vom Cacheobjekt belegt werden.|  

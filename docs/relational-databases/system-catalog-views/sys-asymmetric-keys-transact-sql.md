@@ -20,15 +20,15 @@ ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5266b758c965574e7b810804fbbbfd3bb4958ca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdd5636a3b3cf700dccc855e26bb64f85f0c1207
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652370"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt eine Zeile für jeden asymmetrischen Schlüssel zurück.  
   
@@ -37,10 +37,10 @@ ms.locfileid: "82829155"
 |**name**|**sysname**|Name des Schlüssels. Ist in der Datenbank eindeutig.|  
 |**principal_id**|**int**|ID des Datenbankprinzipals, der der Besitzer des Schlüssels ist.|  
 |**asymmetric_key_id**|**int**|ID des Schlüssels. Ist in der Datenbank eindeutig.|  
-|**pvt_key_encryption_type**|**char (2)**|Die Verschlüsselungsart des Schlüssels.<br /><br /> NA = Nicht verschlüsselt<br /><br /> MK = Schlüssel ist mit dem Hauptschlüssel verschlüsselt<br /><br /> PW = Schlüssel ist mit einem benutzerdefinierten Kennwort verschlüsselt<br /><br /> SK = Schlüssel ist mit dem Diensthauptschlüssel verschlüsselt|  
+|**pvt_key_encryption_type**|**char(2)**|Die Verschlüsselungsart des Schlüssels.<br /><br /> NA = Nicht verschlüsselt<br /><br /> MK = Schlüssel ist mit dem Hauptschlüssel verschlüsselt<br /><br /> PW = Schlüssel ist mit einem benutzerdefinierten Kennwort verschlüsselt<br /><br /> SK = Schlüssel ist mit dem Diensthauptschlüssel verschlüsselt|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Die Beschreibung der Verschlüsselungsart des privaten Schlüssels.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
 |**Fingerabdruck**|**varbinary(32)**|SHA-1-Hash des Schlüssels. Der Hash ist global eindeutig.|  
-|**projiziert**|**char (2)**|Der mit dem Schlüssel verwendete Algorithmus.<br /><br /> 1R = 512-Bit-RSA<br /><br /> 2R = 1024-Bit-RSA<br /><br /> 3R = 2048-Bit-RSA|  
+|**projiziert**|**char(2)**|Der mit dem Schlüssel verwendete Algorithmus.<br /><br /> 1R = 512-Bit-RSA<br /><br /> 2R = 1024-Bit-RSA<br /><br /> 3R = 2048-Bit-RSA|  
 |**algorithm_desc**|**nvarchar(60)**|Beschreibung des mit dem Schlüssel verwendeten Algorithmus.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|Bitlänge des Schlüssels.|  
 |**sid**|**varbinary(85)**|Anmelde-SID für diesen Schlüssel. Bei Extensible Key Management-Schlüsseln ist dieser Wert NULL.|  

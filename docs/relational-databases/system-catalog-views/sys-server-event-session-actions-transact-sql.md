@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1f19e3d6588aa336c671e03179cf3936556ddb8d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dc3aa8a3dc8fd33e0e2b1a4b57968ad08f312f0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834049"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664619"
 ---
 # <a name="sysserver_event_session_actions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt für jede Aktion jedes Ereignisses einer Ereignissitzung eine Zeile zurück.  
   
@@ -37,18 +37,18 @@ ms.locfileid: "82834049"
 |event_session_id|**int**|Die ID der Ereignissitzung. Lässt keine NULL-Werte zu.|  
 |event_id|**int**|Die ID des Ereignisses. Diese ID ist innerhalb des Ereignissitzungsobjekts eindeutig. Lässt keine NULL-Werte zu.|  
 |name|**sysname**|Der Name der Aktion Lässt NULL-Werte zu.|  
-|Paket|**sysname**|Der Name des Pakets, welches das Ereignis enthält. Lässt NULL-Werte zu.|  
+|package|**sysname**|Der Name des Pakets, welches das Ereignis enthält. Lässt NULL-Werte zu.|  
 |module|**sysname**|Der Name des Moduls, welches das Ereignis enthält. Lässt NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Sicht hat die folgende Kardinalität der Beziehungen.  
   
 ||||  
 |-|-|-|  
-|Von|Beschreibung|Beziehung|  
+|From|To|Beziehung|  
 |sys.server_event_session_actions.event_session_id|sys.sys.server_event_sessions.event_session_id|n:1|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|n:1|  
   

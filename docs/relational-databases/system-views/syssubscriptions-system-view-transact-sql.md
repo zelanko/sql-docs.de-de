@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 517d9359085f7cb4bc4c94eb941981a09ca06eef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8162726591f08329ddfc5cb800adece8bfd1fd59
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304787"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692716"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions (Systemsicht) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die **sysabonnements** -Sicht macht Abonnement Informationen verfügbar. Diese Sicht wird in der distribution-Datenbank gespeichert.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "72304787"
 |**update_mode**|**tinyint**|Updatemodus:<br /><br /> **0** = schreibgeschützt.<br /><br /> **1** = sofortige Aktualisierung.|  
 |**loopback_detection**|**bit**|Gilt für Abonnements, die Teil einer bidirektionalen Transaktionsreplikationstopologie sind. Bestimmt, ob der Verteilungs-Agent Transaktionen des Abonnenten zurück an den Abonnenten sendet:<br /><br /> **0** = sendet zurück.<br /><br /> **1** = sendet nicht zurück.|  
 |**queued_reinit**|**bit**|Gibt an, ob der Artikel für die Initialisierung oder erneute Initialisierung markiert ist. Der Wert **1** gibt an, dass der abonnierte Artikel für die Initialisierung oder erneute Initialisierung markiert ist.|  
-|**nosync_type**|**tinyint**|Der Typ der Abonnementinitialisierung:<br /><br /> **0** = automatisch (Momentaufnahme)<br /><br /> **1** = nur Replikations Unterstützung<br /><br /> **2** = mit Sicherung initialisieren<br /><br /> **3** = Initialisieren von der Protokoll Folge Nummer (Log Sequence Number, LSN)<br /><br /> Weitere Informationen finden Sie unter dem ** \@sync_type** -Parameter von [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).<br /><br /> **€** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**nosync_type**|**tinyint**|Der Typ der Abonnementinitialisierung:<br /><br /> **0** = automatisch (Momentaufnahme)<br /><br /> **1** = nur Replikations Unterstützung<br /><br /> **2** = mit Sicherung initialisieren<br /><br /> **3** = Initialisieren von der Protokoll Folge Nummer (Log Sequence Number, LSN)<br /><br /> Weitere Informationen finden Sie unter dem ** \@ sync_type** -Parameter von [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).<br /><br /> **€** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**srvname**|**sysname**|Den Namen des Abonnenten.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

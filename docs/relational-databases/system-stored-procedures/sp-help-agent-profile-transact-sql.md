@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ae3e555f48958aec87ed012244fae9775fae1619
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 24a95d193d483c35dac0f94a839555fecb52afca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826098"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662442"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Zeigt das Profil eines bestimmten Agents an. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
   
@@ -57,14 +57,14 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_id**|**int**|ID des Profils.|  
 |**profile_name**|**sysname**|Eindeutig für den Agenttyp.|  
 |**agent_type**|**int**|**1** = Momentaufnahmen-Agent<br /><br /> **2** = Protokolllese-Agent<br /><br /> **3** = Verteilungs-Agent<br /><br /> **4** = Merge-Agent<br /><br /> **9** = Warteschlangenlese-Agent|  
-|**Typ**|**int**|**0** = System<br /><br /> **1** = Benutzer definiert|  
-|**Beschreibung**|**varchar (3000)**|Beschreibung des Profils.|  
+|**Type**|**int**|**0** = System<br /><br /> **1** = Benutzer definiert|  
+|**description**|**varchar (3000)**|Beschreibung des Profils.|  
 |**def_profile**|**bit**|Gibt an, ob dieses Profil das Standardprofil für diesen Agenttyp ist.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_help_agent_profile** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

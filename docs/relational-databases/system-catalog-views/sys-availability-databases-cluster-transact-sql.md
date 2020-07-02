@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c36c1574ae1ad289c9980e1df9bfbe3b241e164
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c520cf9e836f8db051599ed00735763c85632aab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829159"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649129"
 ---
 # <a name="sysavailability_databases_cluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jede Verfügbarkeits Datenbank in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die ein Verfügbarkeits Replikat für jede Always on Verfügbarkeits Gruppe im wsfc-Cluster (Windows Server Failover Clustering) hostet, unabhängig davon, ob die lokale Kopie der Datenbank noch mit der Verfügbarkeits Gruppe verknüpft wurde.  
   
@@ -47,10 +47,10 @@ ms.locfileid: "82829159"
  Wenn der Aufrufer von **sys.availability_databases_cluster** nicht der Besitzer der Datenbank ist, sind zum Anzeigen der entsprechenden Zeile mindestens die Berechtigungen ALTER ANY DATABASE oder VIEW ANY DATABASE auf Serverebene oder die CREATE DATABASE-Berechtigung für die **master** -Datenbank oder aktuelle Datenbank erforderlich.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. availability_groups &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
+ [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. dm_hadr_database_replica_states &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)   
  [sys. dm_hadr_database_replica_cluster_states &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)   
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Übersicht über Always on Verfügbarkeits Gruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

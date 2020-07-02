@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140573"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662573"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Tabelle mit keiner, einer oder mehreren Zeilen für die Schlüsselausdrücke zurück, die den angegebenen Spalten in der angegebenen Tabelle zugeordnet sind.  
   
@@ -50,7 +50,7 @@ SEMANTICKEYPHRASETABLE
   
  Dieser Name kann einteilig sein oder aus bis zu vier Teilen bestehen, aber ein Remoteservername ist nicht zugelassen.  
   
- **Kolumne**  
+ **column**  
  Name der indizierten Spalte, für die Ergebnisse zurückgegeben werden sollen. Für die Spalte muss die semantische Indizierung aktiviert sein.  
   
  **column_list**  
@@ -67,12 +67,12 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
  In der folgenden Tabelle werden die Schlüsselausdrücke beschrieben, die von dieser Rowset-Funktion zurückgegeben werden.  
   
-|Column_name|type|BESCHREIBUNG|  
+|Column_name|Typ|BESCHREIBUNG|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|Die ID der Spalte, aus der der aktuelle Schlüsselausdruck extrahiert und indiziert wurde.<br /><br /> Im Abschnitt über die COL_NAME-Funktion und COLUMNPROPERTY-Funktion finden Sie ausführliche Informationen zum Abrufen des Spaltennamens aus "column_id" und umgekehrt.|  
 |**document_key**|**\***<br /><br /> Dieser Schlüssel stimmt mit dem Typ des eindeutigen Schlüssels in der Quelltabelle überein.|Eindeutiger Schlüsselwert des Dokuments oder der Zeile, anhand dem der aktuelle Schlüsselausdruck indiziert wurde.|  
 |**Schlüssel Ausdruck**|**NVARCHAR**|Der Schlüsselausdruck in der durch "column_id" angegebenen Spalte, der dem durch "document_key" angegebenen Dokument zugeordnet ist.|  
-|**Endergebnis**|**real**|Ein relativer Wert für diesen Schlüsselausdruck in der Beziehung mit allen anderen Schlüsselausdrücken im gleichen Dokument in der indizierten Spalte.<br /><br /> Der Wert ist eine Dezimalzahl im Bereich [0,0; 1,0], wobei ein höheres Ergebnis eine höhere Gewichtung und 1,0 ein perfektes Ergebnis darstellt.|  
+|**Endergebnis**|**Wirkliche**|Ein relativer Wert für diesen Schlüsselausdruck in der Beziehung mit allen anderen Schlüsselausdrücken im gleichen Dokument in der indizierten Spalte.<br /><br /> Der Wert ist eine Dezimalzahl im Bereich [0,0; 1,0], wobei ein höheres Ergebnis eine höhere Gewichtung und 1,0 ein perfektes Ergebnis darstellt.|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Weitere Informationen finden Sie untersuchen von [Schlüssel Ausdrücken in Dokumenten mit der semantischen Suche](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d22d7f3b21e4bc02846df2b5f764a2fd5bca9dd0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d6ef37acf6e75d2a55a39995906cbda7a18b61d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829809"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675112"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Verfolgt Artikel vom Typ schema only für die Mergereplikation nach. Diese Tabelle wird in der Veröffentlichungs- und in der Abonnementdatenbank gespeichert.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82829809"
 |**type**|**tinyint**|Zeigt den Typ des Artikels vom Typ schema only an, der einen der folgenden Werte annehmen kann:<br /><br /> **0x20** = Schema Only-Artikel für gespeicherte Prozeduren.<br /><br /> **0x40** = nur Schema-oder indizierte Sicht Artikel anzeigen.|  
 |**objid**|**int**|Der Objektbezeichner des Basisobjekts des Artikels. Kann der Objektbezeichner einer Prozedur, einer Sicht, einer indizierten Sicht oder einer benutzerdefinierten Funktion sein.|  
 |**artid**|**uniqueidentifier**|Die Artikel-ID.|  
-|**Beschreibung**|**nvarchar(255)**|Die Beschreibung des Artikels.|  
+|**description**|**nvarchar(255)**|Die Beschreibung des Artikels.|  
 |**pre_creation_command**|**tinyint**|Standardaktion, die ausgeführt wird, wenn der Artikel in der Abonnementdatenbank erstellt wird:<br /><br /> **0 =** Keine: Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.<br /><br /> **1** = Drop-löscht die Tabelle, bevor Sie neu erstellt wird.<br /><br /> **2** = DELETE: gibt einen Löschvorgang basierend auf der WHERE-Klausel im Teilmengen Filter aus.<br /><br /> **3** = Abschneiden-identisch mit **2**, löscht jedoch Seiten anstelle von Zeilen. Eine WHERE-Klausel wird jedoch nicht verwendet.|  
 |**pubid**|**uniqueidentifier**|Der eindeutige Bezeichner der Veröffentlichung.|  
 |**status**|**tinyint**|Gibt den Status des Artikels vom Typ schema only an, der einen der folgenden Werte annehmen kann:<br /><br /> **1** = nicht synchronisiert-das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle wird ausgeführt, wenn die Momentaufnahmen-Agent das nächste Mal ausgeführt wird.<br /><br /> **2** = aktiv: das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle wurde ausgeführt.<br /><br /> **5** = New_inactive hinzuzufügen.<br /><br /> **6** = New_active hinzuzufügen.|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf03396170972cf1e0c44a7a668e3651385579fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1a4bfcd7d9f03e41e32551653788386612a43835
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715150"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Zeigt Verleger Eigenschaften für nicht--Verleger an oder ändert diese [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Diese gespeicherte Prozedur wird auf dem Verteiler ausgeführt.  
   
@@ -43,7 +43,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 `[ @propertyname = ] 'propertyname'`Der Name der Eigenschaft, die festgelegt wird. *propertyName* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**xactsetbatching**|Gibt an, ob Transaktionen auf dem Verleger zur weiteren Verarbeitung gruppiert werden, in Mengen, die im Hinblick auf Transaktionen konsistent sind und als Xactsets bezeichnet werden. Der Wert **aktiviert** bedeutet, dass Xactsets erstellt werden können. Dies ist die Standardeinstellung. Der Wert **deaktiviert** bedeutet, dass vorhandene Xactsets verarbeitet werden, ohne dass neue Xactsets erstellt werden.|  
 |**xactsetjob**|Gibt an, ob der Xactset-Auftrag zum Erstellen von Xactsets aktiviert ist. Der Wert **aktiviert** bedeutet, dass der Xactset-Auftrag regelmäßig ausgeführt wird, um Xactsets auf dem Verleger zu erstellen. Der Wert **deaktiviert** bedeutet, dass die Xactsets nur vom Protokolllese-Agent erstellt werden, wenn der Verleger nach Änderungen abfragt.|  
@@ -64,7 +64,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_publisherproperty** wird bei der Transaktions Replikation für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger verwendet.  
   
  Wenn nur *Publisher* angegeben ist, enthält das Resultset die aktuellen Einstellungen für alle Eigenschaften, die festgelegt werden können.  

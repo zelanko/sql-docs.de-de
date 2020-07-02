@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67f25c6f4d39eb8cbd3b09d2e7710462f91ed397
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 727943423817c51b646ed151c79d7fdfc255d8b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821592"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664946"
 ---
 # <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung in einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -39,8 +39,8 @@ ms.locfileid: "82821592"
 |**create_date**|**datetime**|Das UTC-Datum, an dem die Überwachung erstellt wurde|  
 |**modify_date**|**datetime**|Das UTC-Datum, an dem die Überwachung zuletzt geändert wurde.|  
 |**principal_id**|**int**|Die ID des Besitzers der Überwachung gemäß Registrierung beim Server.|  
-|**type**|**char (2)**|Überwachungstyp:<br /><br /> SL-NT-Sicherheits Ereignisprotokoll<br /><br /> Al-NT-Anwendungs Ereignisprotokoll<br /><br /> FL-Datei im Dateisystem|  
-|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPLICATION LOG<br /><br /> FILE|  
+|**type**|**char(2)**|Überwachungstyp:<br /><br /> SL-NT-Sicherheits Ereignisprotokoll<br /><br /> Al-NT-Anwendungs Ereignisprotokoll<br /><br /> FL-Datei im Dateisystem|  
+|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPLICATION LOG<br /><br /> DATEI|  
 |**on_failure**|**tinyint**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> 0-fortfahren<br /><br /> 1-Serverinstanz herunterfahren<br /><br /> 2-fehlerhafter Vorgang|  
 |**on_failure_desc**|**nvarchar(60)**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0 – Deaktiviert<br /><br /> 1 – Aktiviert|  

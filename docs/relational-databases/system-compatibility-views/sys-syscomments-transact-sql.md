@@ -1,5 +1,5 @@
 ---
-title: sys. syscomments (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sysKommentare (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 183fa2fc1a674ec1cc987c265f5a0d4c399e27cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a121794c98b41cea7db6357e703a7993d9188699
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010750"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663371"
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die Tabelle enthält Einträge für alle Sichten, Regeln, Standards, Trigger, CHECK-Einschränkungen, DEFAULT-Einschränkungen und gespeicherten Prozeduren innerhalb der Datenbank. Die **Text** -Spalte enthält die ursprünglichen SQL-Definitions Anweisungen.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "68010750"
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**ctext**|**varbinary(8000)**|Die Rohbytes der SQL-Definitionsanweisung.|  
 |**TextType**|**smallint**|0 = Vom Benutzer anzugebender Kommentar<br /><br /> 1 = Vom System anzugebender Kommentar<br /><br /> 4 = Verschlüsselter Kommentar|  
-|**Kurse**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**.**|**bit**|Gibt an, ob die Prozedurdefinition verborgen ist.<br /><br /> 0 = Nicht verborgen<br /><br /> 1 = Verborgen<br /><br /> ** \* Wichtig \* \* ** Verwenden Sie CREATE PROCEDURE mit dem Schlüsselwort Encryption, um Definitionen gespeicherter Prozeduren zu verbergen.|  
+|**language**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**.**|**bit**|Gibt an, ob die Prozedurdefinition verborgen ist.<br /><br /> 0 = Nicht verborgen<br /><br /> 1 = Verborgen<br /><br /> Wichtig um Definitionen gespeicherter Prozeduren zu verbergen, verwenden Sie CREATE PROCEDURE mit dem Schlüsselwort ENCRYPTION. ** \* \* \* \* **|  
 |**komprimierte**|**bit**|Es wird immer 0 zurückgegeben. Zeigt an, ob die Prozedur komprimiert ist.|  
-|**text**|**nvarchar(4000)**|Tatsächlicher Text der SQL-Definitionsanweisung.<br /><br /> Die Semantik des decodierten Ausdrucks entspricht dem ursprünglichen Text. Es gibt jedoch keine syntaktische Garantie. Leerzeichen werden beispielsweise aus dem decodierten Ausdruck entfernt.<br /><br /> Mit [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]dieser kompatiblen Ansicht werden Informationen aus aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Strukturen abgerufen, und es können mehr Zeichen als die **nvarchar (4000)** -Definition zurückgegeben werden. **sp_help** gibt **nvarchar (4000)** als Datentyp der Text Spalte zurück. Bei der Arbeit mit **syscomments** sollten Sie **nvarchar (max)** verwenden. Verwenden Sie für neue Entwicklungsaufgaben nicht **syscomments**.|  
+|**text**|**nvarchar(4000)**|Tatsächlicher Text der SQL-Definitionsanweisung.<br /><br /> Die Semantik des decodierten Ausdrucks entspricht dem ursprünglichen Text. Es gibt jedoch keine syntaktische Garantie. Leerzeichen werden beispielsweise aus dem decodierten Ausdruck entfernt.<br /><br /> Mit dieser [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] kompatiblen Ansicht werden Informationen aus aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Strukturen abgerufen, und es können mehr Zeichen als die **nvarchar (4000)** -Definition zurückgegeben werden. **sp_help** gibt **nvarchar (4000)** als Datentyp der Text Spalte zurück. Bei der Arbeit mit **syscomments** sollten Sie **nvarchar (max)** verwenden. Verwenden Sie für neue Entwicklungsaufgaben nicht **syscomments**.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Zuordnung von Systemtabellen zu System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

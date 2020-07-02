@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 260a0252d096a926eee8ea81c68320dc3b035b31
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 29fc1b3b62b78ef6a0380087c878a34773df7c13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664693"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Zeile für jede anpassbare Spalte zurück, die explizit für Ereignisse und Ziele festgelegt wurde.  
   
@@ -42,12 +42,12 @@ ms.locfileid: "82834020"
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Sicht hat die folgende Kardinalität der Beziehungen.  
   
 ||||  
 |-|-|-|  
-|Von|Beschreibung|Beziehung|  
+|From|To|Beziehung|  
 |sys.server_event_session_actions.event_session_id|sys. server_event_sessions. event_session_id|n:1|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.object_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|n:1|  
 |sys.server_event_session_actions.event_session_id<br /><br /> sys.server_event_session_actions.object_id|sys.server_event_session_targets.event_session_id<br /><br /> sys.server_event_session_targets.target_id|n:1|  

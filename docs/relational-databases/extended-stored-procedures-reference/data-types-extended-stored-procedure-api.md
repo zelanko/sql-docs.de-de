@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e135e6706454fe1f03b4c7ab762e5234e1b7d35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b510e74d507cb540fa617b6c0da48c3090429192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064209"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679049"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Datentypen (API für erweiterte gespeicherte Prozeduren)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
  Um die API-Datentypen für erweiterte gespeicherte Prozeduren zu verwenden, schließen Sie die Headerdatei Srv.h ins Programm ein.  
   
-|Datentyp|SQL Server-Datentyp|Beschreibung|  
+|Datentyp|SQL Server-Datentyp|BESCHREIBUNG|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|**binary**|**binary**-Datentyp mit einer Länge von 0 bis 8000 Byte.|  
 |SRVBIGCHAR|**char**|**character**-Datentyp mit einer Länge von 0 bis 8000 Byte.|  
 |SRVBIGVARBINARY|**varbinary**|**binary**-Datentyp mit variabler Länge zwischen 0 und 8000 Byte.|  
 |SRVBIGVARCHAR|**varchar**|**character**-Datentyp mit variabler Länge zwischen 0 und 8000 Byte.|  
-|SRVBINARY|**binary**|**binary**-Datentyp|  
+|SRVBINARY|**binary**|**Binary** -Datentyp.|  
 |SRVBIT|**Trate**|**bit**-Datentyp|  
 |SRVBITN|**bit null**|**bit**-Datentyp, NULL-Werte sind zulässig.|  
 |SRVCHAR|**char**|**character**-Datentyp|  
@@ -46,7 +46,7 @@ ms.locfileid: "68064209"
 |SRVFLT4|**real**|**real**-Datentyp mit einer Länge von 4 Byte|  
 |SRVFLT8|**float**|**float**-Datentyp mit einer Länge von 8 Byte|  
 |SRVFLTN|**real** \| **float null**|**real**- oder **float**-Datentyp, NULL-Werte sind zulässig.|  
-|SRVIMAGE|**image**|**image**-Datentyp|  
+|SRVIMAGE|**Bild**|**image**-Datentyp|  
 |SRVINT1|**tinyint**|**tinyint**-Datentyp mit einer Länge von einem Byte|  
 |SRVINT2|**smallint**|**smallint**-Datentyp mit einer Länge von 2 Byte|  
 |SRVINT4|**int**|**int**-Datentyp mit einer Länge von 4 Byte|  

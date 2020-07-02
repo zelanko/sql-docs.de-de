@@ -13,17 +13,17 @@ ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71e22c7945edb2014fc5c14ffcb5644fcc96a846
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f7432fa4fa6129207ac627085e63977e7d06cb65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659186"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>Tabellenwertparameter-Typermittlung
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Der Consumer, d. h. die Client Anwendung, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die den Native Client OLE DB-Anbieter verwendet, kann den Typ jedes Befehls Parameters ermitteln, wenn der Befehls Text an den OLE DB Anbieter übergeben wurde. Nachdem der Typ des Tabellenwertparameters ermittelt wurde, kann der Consumer die Metadateninformationen für jede einzelne Spalte des Tabellenwertparameters ermitteln.  
+  Der Consumer, d. h. die Client Anwendung, die den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwendet, kann den Typ jedes Befehls Parameters ermitteln, wenn der Befehls Text an den OLE DB Anbieter übergeben wurde. Nachdem der Typ des Tabellenwertparameters ermittelt wurde, kann der Consumer die Metadateninformationen für jede einzelne Spalte des Tabellenwertparameters ermitteln.  
   
  Die Typinformationen für Prozedurparameter werden von ICommandWithParameters::GetParameterInfo für die meisten Parametertypen unterstützt. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und der Einführung von benutzerdefinierten Typen und dem Datentyp **XML ** reichte die Methode „GetParameterInfo“ für diesen Zweck nicht mehr aus, da keine Informationen für benutzerdefinierte Typen (Name, Schema und Katalog) mit „ICommandWithParameters“ angegeben werden konnten. Es wurde eine neue Schnittstelle, ISSCommandWithParameters, definiert, um erweiterte Typinformationen bereitzustellen.  
   

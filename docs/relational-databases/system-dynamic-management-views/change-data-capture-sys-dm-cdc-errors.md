@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 81908d815818c0274615e9bd2bd3bf40037e2b99
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b99676242133179bbfc26421c5d740b95c7c16d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652199"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>Change Data Capture-sys. dm_cdc_errors
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt für jeden während der Change Data Capture-Protokollscansitzung gefundenen Fehler eine Zeile zurück.  
  
@@ -45,7 +45,7 @@ ms.locfileid: "82833820"
 |**begin_lsn**|**nvarchar (23)**|LSN-Anfangswert der Transaktion, die beim Auftreten des Fehlers verarbeitet wurde.<br /><br /> 0 = Der Fehler trat nicht während einer Protokollscansitzung auf.|  
 |**sequence_value**|**nvarchar (23)**|LSN-Wert der Zeilen, die beim Auftreten des Fehlers verarbeitet wurden.<br /><br /> 0 = Der Fehler trat nicht während einer Protokollscansitzung auf.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sys. dm_cdc_errors** enthält Fehlerinformationen für die vorherigen 32-Sitzungen.  
   
 ## <a name="permissions"></a>Berechtigungen  

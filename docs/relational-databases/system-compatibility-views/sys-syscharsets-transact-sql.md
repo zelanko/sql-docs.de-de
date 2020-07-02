@@ -1,5 +1,5 @@
 ---
-title: sys. syscharsets (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sysZeichensätze (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4332159765791addfdfcc32a9d19d29836f2460c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f414dbf0fc210f742db305cc49023399e091fc65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053546"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663550"
 ---
 # <a name="syssyscharsets-transact-sql"></a>sys.syscharsets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Enthält eine Zeile für jeden Zeichensatz und jede Sortierreihenfolge, die für die Verwendung in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]definiert sind. Eine der Sortierreihenfolgen ist in **sysconfigures** als Standard-Sortierreihenfolge markiert. Dies ist die einzige Sortierreihenfolge, die tatsächlich verwendet wird.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "68053546"
 |**csid**|**tinyint**|Wenn die Zeile einen Zeichensatz darstellt, ist dieses Feld ungenutzt. Wenn die Zeile eine Sortierreihenfolge darstellt, ist dieses Feld die ID des Zeichensatzes, auf dem die Sortierreihenfolge aufgebaut ist. Es wird davon ausgegangen, dass eine Zeichensatzzeile mit dieser ID in dieser Tabelle vorhanden ist.|  
 |**status**|**smallint**|Bits für Informationen über den internen Systemstatus.|  
 |**name**|**sysname**|Eindeutiger Name für den Zeichensatz oder die Sortierreihenfolge. Dieses Feld darf nur die Buchstaben A-Z oder a-z, die Zahlen 0-9 und Unterstriche (_) enthalten; es muss außerdem mit einem Buchstaben beginnen.|  
-|**Beschreibung**|**nvarchar(255)**|Optionale Beschreibung der Funktionen des Zeichensatzes oder der Sortierreihenfolge.|  
+|**description**|**nvarchar(255)**|Optionale Beschreibung der Funktionen des Zeichensatzes oder der Sortierreihenfolge.|  
 |**binarydefinition**|**varbinary (6000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Definition**|**image**|Interne Definition des Zeichensatzes oder der Sortierreihenfolge. Die Struktur der Daten in diesem Feld hängt vom Typ ab.|  
+|**Definition**|**Bild**|Interne Definition des Zeichensatzes oder der Sortierreihenfolge. Die Struktur der Daten in diesem Feld hängt vom Typ ab.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Zuordnung von Systemtabellen zu System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

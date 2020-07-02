@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f1724f86f9bfc34e505b9ba6ecddae4104270cd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a1048a31ab0970165a82abb332e29c7f814e5f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692632"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (Systemsicht) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die Ansicht " **syspublications** " zeigt Veröffentlichungsinformationen an. Diese Sicht wird in der distribution-Datenbank gespeichert.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68094770"
 |**alt_snapshot_folder**|**nvarchar (510)**|Gibt den Speicherort des anderen Ordners für die Momentaufnahme an.|  
 |**pre_snapshot_script**|**nvarchar (510)**|Gibt einen Zeiger auf einen **SQL** -Datei Speicherort an. Der Verteilungs-Agent führt das vor der Momentaufnahme ausgeführte Skript vor allen Skripts für replizierte Objekte aus, wenn die Momentaufnahme auf einem Abonnenten angewendet wird.|  
 |**post_snapshot_script**|**nvarchar (510)**|Gibt einen Zeiger auf einen **SQL** -Datei Speicherort an. Der Verteilungs-Agent führt das Skript nach der Momentaufnahme aus, nachdem alle anderen Skripts für replizierte Objekte und Daten während der erst Synchronisierung angewendet wurden.|  
-|**compress_snapshot**|**bit**|Gibt an, dass die Momentaufnahme, die an den *alt_snapshot_folder* Speicherort geschrieben wird, [!INCLUDE[msCoName](../../includes/msconame-md.md)] in das CAB-Format komprimiert werden soll. **1** bedeutet, dass die Momentaufnahme komprimiert wird.|  
+|**compress_snapshot**|**bit**|Gibt an, dass die Momentaufnahme, die an den *alt_snapshot_folder* Speicherort geschrieben wird, in das CAB-Format komprimiert werden soll [!INCLUDE[msCoName](../../includes/msconame-md.md)] . **1** bedeutet, dass die Momentaufnahme komprimiert wird.|  
 |**ftp_address**|**sysname**|Die Netzwerkadresse des FTP-Dienstanbieter für den Verteiler. Gibt an, wo die Veröffentlichungsmomentaufnahmedateien zum Aufnehmen durch den Verteilungs-Agent gespeichert sind.|  
 |**ftp_port**|**int**|Die Portnummer des FTP-Dienstanbieter für den Verteiler. Gibt an, wo sich die Veröffentlichungs Momentaufnahme-Dateien befinden, damit die Verteilungs-Agent abgerufen werden können.|  
 |**ftp_subdirectory**|**nvarchar (510)**|Gibt an, wo die Momentaufnahmedateien für den Verteilungs-Agent zum Aufnehmen verfügbar sind, wenn die Veröffentlichung das Weitergeben von Momentaufnahmen mithilfe von FTP unterstützt.|  
@@ -64,13 +64,13 @@ ms.locfileid: "68094770"
 |**centralized_conflicts**|**bit**|Gibt an, ob Konfliktdatensätze auf dem Verleger gespeichert werden:<br /><br /> **0** = Konflikt Datensätze werden sowohl auf dem Verleger als auch auf dem Abonnenten gespeichert, der den Konflikt verursacht hat.<br /><br /> **1** = Konflikt Datensätze werden auf dem Verleger gespeichert.|  
 |**conflict_retention**|**int**|Gibt die Beibehaltungsdauer für Konfliktdatensätze in Tagen an.|  
 |**conflict_policy**|**int**|Gibt die Richtlinie zur Konfliktlösung an, die für die Option zur verzögerten Aktualisierung über eine Warteschlange verwendet wird. Einer der folgenden Werte ist möglich:<br /><br /> **1** = der Verleger gewinnt den Konflikt.<br /><br /> **2** = Abonnent gewinnt den Konflikt.<br /><br /> **3** = das Abonnement wird erneut initialisiert.|  
-|**queue_type**|**int**|Gibt an, welcher Wartenschlangentyp verwendet wird. Einer der folgenden Werte ist möglich:<br /><br /> **1** =. MSMQ, der Message Queuing [!INCLUDE[msCoName](../../includes/msconame-md.md)] zum Speichern von Transaktionen verwendet.<br /><br /> **2** =. SQL, das zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Speichern von Transaktionen verwendet.<br /><br /> Hinweis: die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Verwendung von Message Queuing wurde als veraltet markiert und wird nicht mehr unterstützt.|  
+|**queue_type**|**int**|Gibt an, welcher Wartenschlangentyp verwendet wird. Einer der folgenden Werte ist möglich:<br /><br /> **1** =. MSMQ, der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing zum Speichern von Transaktionen verwendet.<br /><br /> **2** =. SQL, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen verwendet.<br /><br /> Hinweis: die Verwendung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing wurde als veraltet markiert und wird nicht mehr unterstützt.|  
 |**ad_guidname**|**sysname**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht wird. Ein gültiger GUID (Globally Unique Identifier) gibt an, dass die Veröffentlichung in Active Directory veröffentlicht wird, und der GUID ist das entsprechende Active Directory-Veröffentlichungsobjekt objectGUID. Wenn dieser Wert NULL ist, wird die Veröffentlichung nicht in Active Directory veröffentlicht.<br /><br /> Hinweis: das Veröffentlichen in Active Directory wird nicht mehr unterstützt.|  
-|**backward_comp_level**|**int**|Datenbankkompatibilitätsgrad, der einen der folgenden Werte annehmen kann:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Datenbankkompatibilitätsgrad, der einen der folgenden Werte annehmen kann:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .|  
 |**allow_initialize_from_backup**|**bit**|Gibt an, ob Abonnenten ein Abonnement für diese Veröffentlichung aus einer Sicherung anstelle einer Anfangs Momentaufnahme initialisieren können. **1** bedeutet, dass Abonnements aus einer Sicherung initialisiert werden können, und **0** bedeutet, dass Sie nicht möglich sind. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.|  
 |**min_autonosync_lsn**|**Binary (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|Gibt an, ob die Schemareplikation für die Veröffentlichung unterstützt wird.<br /><br /> **1** = auf dem Verleger ausgeführte DDL-Anweisungen werden repliziert.<br /><br /> **0** = gibt an, dass DDL-Anweisungen nicht repliziert werden. Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
-|**options**|**int**|Ein Bitmuster, mit dem zusätzliche Veröffentlichungsoptionen angegeben werden. Dabei gibt es folgende bitweise Optionswerte:<br /><br /> **0x1** : für die Peer-zu-Peer-Replikation aktiviert.<br /><br /> **0x2** -nur lokale Änderungen für die Peer-zu-Peer-Replikation veröffentlichen.<br /><br /> **0x4** -aktiviert für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten.<br /><br /> **0x8** : für Peer-zu-Peer-Konflikterkennung aktiviert.|  
+|**options**|**int**|Ein Bitmuster, mit dem zusätzliche Veröffentlichungsoptionen angegeben werden. Dabei gibt es folgende bitweise Optionswerte:<br /><br /> **0x1** : für die Peer-zu-Peer-Replikation aktiviert.<br /><br /> **0x2** -nur lokale Änderungen für die Peer-zu-Peer-Replikation veröffentlichen.<br /><br /> **0x4** -aktiviert für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.<br /><br /> **0x8** : für Peer-zu-Peer-Konflikterkennung aktiviert.|  
 |**originator_id**|**smallint**|Kennzeichnet jeden Knoten in einer Peer-zu-Peer-Replikationstopologie zum Zweck der Konflikterkennung. Weitere Informationen finden Sie unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Weitere Informationen  

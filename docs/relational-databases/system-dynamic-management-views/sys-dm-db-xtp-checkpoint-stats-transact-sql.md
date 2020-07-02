@@ -1,5 +1,6 @@
 ---
 title: sys. dm_db_xtp_checkpoint_stats (Transact-SQL) | Microsoft-Dokumentation
+description: Gibt Statistiken zu den In-Memory OLTP-Prüfpunktvorgängen in der aktuellen Datenbank zurück. Erfahren Sie, wie sich diese Sicht bei Versionen von SQL Server unterscheidet.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c93cc5f34d86e15645b4d53c02244e2705bbeda5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 29e08f4fd023717a186a900f288e47f864af218e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677447"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]und höher  
  In der folgenden Tabelle werden die Spalten in beschrieben `sys.dm_db_xtp_checkpoint_stats` , die mit beginnen **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Spaltenname|type|Beschreibung|  
+|Spaltenname|Typ|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|Die letzte LSN, die vom Controller erkannt wird.|  
 |end_of_log_lsn|**numerisch (38)**|Die LSN für das Ende des Protokolls.|  
@@ -86,7 +87,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  In der folgenden Tabelle werden die Spalten in beschrieben `sys.dm_db_xtp_checkpoint_stats` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Spaltenname|type|Beschreibung|  
+|Spaltenname|Typ|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|Die Anzahl von Protokollbytes zwischen der aktuellen Protokollfolgenummer (LSN) und dem Protokollende des Threads.|  
 |total_log_blocks_processed|**bigint**|Gesamtzahl der Protokollblöcke, die seit dem Start des Servers verarbeitet wurden.|  

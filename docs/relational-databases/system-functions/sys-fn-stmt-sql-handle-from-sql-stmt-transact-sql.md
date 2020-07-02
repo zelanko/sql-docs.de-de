@@ -13,15 +13,15 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f7111f4e0f67e1102712c140737b68914feada6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059271"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652021"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Ruft den **stmt_sql_handle** für eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung unter dem angegebenen parameterisierungstyp (einfach oder erzwungen) ab. Dies ermöglicht es Ihnen, auf Abfragen zu verweisen, die in der Abfragespeicher gespeichert sind, indem Sie Ihre **stmt_sql_handle** verwenden, wenn Sie Ihren Text kennen.  
   
@@ -57,7 +57,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>Zurückgegebene Spalten  
  In der folgenden Tabelle sind die Spalten aufgelistet, die von sys. fn_stmt_sql_handle_from_sql_stmt zurückgegeben werden.  
   
-|Spaltenname|type|Beschreibung|  
+|Spaltenname|Typ|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|Das SQL-handle.|  
 |**query_sql_text**|**nvarchar(max)**|Der Text der [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.|  
@@ -66,13 +66,13 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die **Execute** -Berechtigung für die Datenbank und die **Delete** -Berechtigung für die Katalog Sichten des Abfrage Speicher.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird eine-Anweisung ausgeführt, und `sys.fn_stmt_sql_handle_from_sql_stmt` dann wird verwendet, um das SQL-Handle dieser Anweisung zurückzugeben.  
+ Im folgenden Beispiel wird eine-Anweisung ausgeführt, und dann wird verwendet, `sys.fn_stmt_sql_handle_from_sql_stmt` um das SQL-Handle dieser Anweisung zurückzugeben.  
   
 ```  
 SELECT * FROM sys.databases;   

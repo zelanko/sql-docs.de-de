@@ -20,17 +20,17 @@ ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f41a5cc500ef8d893180804091e5f905961aa637
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665356"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Gibt eine Zeile für jedes Mitglied jeder Datenbankrolle zurück.  Datenbankbenutzer, Anwendungs Rollen und andere Daten bankrollen können Mitglieder einer Daten Bank Rolle sein. Um Mitglieder zu einer Rolle hinzuzufügen, verwenden Sie die [Alter Role](../../t-sql/statements/alter-role-transact-sql.md) - `ADD MEMBER` Anweisung mit der-Option. Fügen Sie mit [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ein, um die Namen `principal_id` der Werte zurückzugeben.
+  Gibt eine Zeile für jedes Mitglied jeder Datenbankrolle zurück.  Datenbankbenutzer, Anwendungs Rollen und andere Daten bankrollen können Mitglieder einer Daten Bank Rolle sein. Um Mitglieder zu einer Rolle hinzuzufügen, verwenden Sie die [Alter Role](../../t-sql/statements/alter-role-transact-sql.md) -Anweisung mit der- `ADD MEMBER` Option. Fügen Sie mit [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ein, um die Namen der Werte zurückzugeben `principal_id` .
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "68079467"
 |**member_principal_id**|**int**|Die Daten Bank Prinzipal-ID des Mitglieds.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Jeder Benutzer kann die eigenen Rollenmitgliedschaften anzeigen. Zum Anzeigen anderer Rollen Mitgliedschaften ist die Mitgliedschaft in `db_securityadmin` der Fixed-Daten `VIEW DEFINITION` Bank Rolle oder in der-Datenbank erforderlich.  
+ Jeder Benutzer kann die eigenen Rollenmitgliedschaften anzeigen. Zum Anzeigen anderer Rollen Mitgliedschaften ist die Mitgliedschaft in der `db_securityadmin` Fixed-Daten Bank Rolle oder in `VIEW DEFINITION` der-Datenbank erforderlich.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

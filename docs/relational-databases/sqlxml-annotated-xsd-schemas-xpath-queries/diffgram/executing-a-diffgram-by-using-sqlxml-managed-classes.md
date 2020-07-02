@@ -17,16 +17,16 @@ ms.assetid: 81c687ca-8c9f-4f58-801f-8dabcc508a06
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 722fe01366c0c86c2c536cd9f1639a91c4b791fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d94e27e2853bf6d8b1f55828125c4e3db1157cd6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388004"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650087"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Ausführen eines DiffGram-Objekts mit verwalteten SQLXML-Klassen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Dieses Beispiel zeigt, wie Sie eine DiffGram-Datei in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] der .NET Framework Umgebung ausführen, um Daten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Aktualisierungen mithilfe von verwalteten SQLXML-Klassen (Microsoft. Data. SqlXml) auf Tabellen anzuwenden.  
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+  Dieses Beispiel zeigt, wie Sie eine DiffGram-Datei in der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework Umgebung ausführen, um Datenaktualisierungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von verwalteten SQLXML-Klassen (Microsoft. Data. SqlXml) auf Tabellen anzuwenden.  
   
  In diesem Beispiel aktualisiert das DiffGram Kundeninformationen (CompanyName und ContactName) für den Kunden ALFKI.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81388004"
 </ROOT>  
 ```  
   
- Der ** \<before>** -Block enthält ein ** \<Customer>** -Element (**diffgr: ID = "Customer1"**). Der ** \<DataInstance->** Block enthält das entsprechende ** \<Customer>** -Element mit derselben **ID**. Das ** \<Customer>** -Element in ** \<NewDataSet>** auch **diffgr: hasChanges = "modified"** angibt. Dadurch wird ein Updatevorgang angezeigt und der Kundendatensatz in der Cust-Tabelle entsprechend aktualisiert. Beachten Sie Folgendes: Wenn das **diffgr: hasChanges** -Attribut nicht angegeben ist, ignoriert die DiffGram-Verarbeitungslogik dieses Element, und es werden keine Updates durchgeführt.  
+ Der- **\<before>** Block enthält ein- **\<Customer>** Element (**diffgr: ID = "Customer1"**). Der- **\<DataInstance>** Block enthält das entsprechende- **\<Customer>** Element mit derselben **ID**. Das- **\<customer>** Element in **\<NewDataSet>** gibt auch **diffgr: hasChanges = "modified"** an. Dadurch wird ein Updatevorgang angezeigt und der Kundendatensatz in der Cust-Tabelle entsprechend aktualisiert. Beachten Sie Folgendes: Wenn das **diffgr: hasChanges** -Attribut nicht angegeben ist, ignoriert die DiffGram-Verarbeitungslogik dieses Element, und es werden keine Updates durchgeführt.  
   
  Der folgende Code zeigt eine c#-Lernprogramm Anwendung, die veranschaulicht, wie die verwalteten SQLXML-Klassen verwendet werden, um das obige DiffGram auszuführen und zwei Tabellen (cust, Ord) zu aktualisieren, die Sie ebenfalls in der **tempdb** -Datenbank erstellen.  
   

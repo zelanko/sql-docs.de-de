@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 2624ed4800a247b0847adc5839346758aa50f140
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 213b8301a471e00107ce7d3ac6bf493e6aea87c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67463563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662466"
 ---
 # <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Entfernt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen oder einen Windows-Benutzer bzw. eine -Gruppe aus einer festen Serverrolle.
 
@@ -43,10 +43,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 
 ## <a name="arguments"></a>Argumente
 
-**[ @loginame = ]** "_Login_"  
+**[ @loginame =]** '_Login_'  
 Der Name einer Anmeldung, die aus der festen Serverrolle entfernt werden soll. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. der *Anmelde* Name muss vorhanden sein.  
 
-**[ @rolename = ]** "_Role_"  
+**[ @rolename =]** '_Rolle_'  
 Der Name einer Serverrolle. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. die *Rolle* muss einen der folgenden Werte aufweisen:  
 
 -   Serverrollen  
@@ -68,7 +68,7 @@ Der Name einer Serverrolle. *role* ist vom Datentyp **sysname**und hat den Stand
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Nur mithilfe von sp_dropsrvrolemember können Anmeldenamen aus einer festen Serverrolle entfernt werden. Verwenden Sie sp_droprolemember, um ein Mitglied aus einer Datenbankrolle zu entfernen.  
   
  Es ist nicht möglich, den Anmeldenamen sa aus einer festen Serverrolle zu entfernen.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 807ed6a6f0d59444cd38f7fdf902a7c3fc1b47d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d97ef8c7dfc617cb6cd56dbcc6d83e0540051d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488043"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695363"
 ---
 # <a name="assemblies---implementing"></a>Assemblys: Implementierung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Dieser Abschnitt enthält Informationen zu folgenden Themen, die Sie hilfreich beim Implementieren und Arbeiten mit Assemblys in der Datenbank sind:  
   
 -   Erstellen von Assemblys  
@@ -32,7 +32,7 @@ ms.locfileid: "81488043"
 -   Verwalten von Assembly-Versionen  
   
 ## <a name="creating-assemblies"></a>Erstellen von Assemblys  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Assemblys mit der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung CREATE ASSEMBLY erstellt. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mit dem Assembly-Editorassistenten. Außerdem wird beim Bereitstellen eines SQL Server [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Projekts in eine Assembly in der Datenbank registriert, die für das Projekt angegeben wurde. Weitere Informationen finden Sie unter [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Assemblys mit der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung CREATE ASSEMBLY erstellt. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mit dem Assembly-Editorassistenten. Außerdem wird beim Bereitstellen eines SQL Server Projekts in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] eine Assembly in der Datenbank registriert, die für das Projekt angegeben wurde. Weitere Informationen finden Sie unter [Deploying CLR Database Objects](../../relational-databases/clr-integration/deploying-clr-database-objects.md).  
   
  **Erstellen einer Assembly mit Transact-SQL**  
   
@@ -72,14 +72,14 @@ ms.locfileid: "81488043"
   
 -   [Objekte löschen](../../ssms/object/delete-objects.md)  
   
- Standardmäßig ist die Ausführung aller in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellten Assemblys deaktiviert. Sie können die Option **CLR-fähig** der gespeicherten System Prozedur **sp_configure** verwenden, um die Ausführung aller Assemblys zu deaktivieren oder zu aktivieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die in hochgeladen werden. Die Deaktivierung der Assemblyausführung verhindert die Ausführung von CLR-Funktionen (Common Language Runtime), gespeicherter Prozeduren, Trigger, Aggregate und benutzerdefinierter Typen – gerade ausgeführte werden beendet. Die Deaktivierung der Assemblyausführung deaktiviert nicht die Möglichkeit, Assemblys zu erstellen, zu ändern oder zu löschen. Weitere Informationen finden Sie unter [CLR-fähig (Server Konfigurations Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)).  
+ Standardmäßig ist die Ausführung aller in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellten Assemblys deaktiviert. Sie können die Option **CLR-fähig** der gespeicherten System Prozedur **sp_configure** verwenden, um die Ausführung aller Assemblys zu deaktivieren oder zu aktivieren, die in hochgeladen werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die Deaktivierung der Assemblyausführung verhindert die Ausführung von CLR-Funktionen (Common Language Runtime), gespeicherter Prozeduren, Trigger, Aggregate und benutzerdefinierter Typen – gerade ausgeführte werden beendet. Die Deaktivierung der Assemblyausführung deaktiviert nicht die Möglichkeit, Assemblys zu erstellen, zu ändern oder zu löschen. Weitere Informationen finden Sie unter [CLR-fähig (Server Konfigurations Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)).  
   
  **Deaktivieren und Aktivieren der Assemblyausführung**  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
 ##  <a name="managing-assembly-versions"></a><a name="_managing"></a>Verwalten von Assembly-Versionen  
- Wenn eine Assembly in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz hochgeladen wird, wird es in den Datenbanksystemkatalogen gespeichert und verwaltet. Alle Änderungen, die an der Definition der-Assembly in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] vorgenommen werden, sollten an die Assembly weitergegeben werden, die im Daten Bank Katalog gespeichert ist.  
+ Wenn eine Assembly in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz hochgeladen wird, wird es in den Datenbanksystemkatalogen gespeichert und verwaltet. Alle Änderungen, die an der Definition der-Assembly in vorgenommen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] werden, sollten an die Assembly weitergegeben werden, die im Daten Bank Katalog gespeichert ist.  
   
  Zum Ändern einer Assembly müssen Sie eine ALTER ASSEMBLY-Anweisung ausgeben, die die Assembly in der Datenbank aktualisiert. Dadurch wird die Assembly mit der aktuellsten Kopie der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Module aktualisiert, die ihre Implementierung enthalten.  
   

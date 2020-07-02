@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 01c5c21ef7886773e162fe1f17cbcbaae177075b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692664"
 ---
 # <a name="replication-views-transact-sql"></a>Replikationssichten (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Diese Sichten enthalten Informationen, die von der Replikation in verwendet werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die Sichten ermöglichen einen einfacheren Zugriff auf Daten in den [Replikationssystem Tabellen](../../relational-databases/system-tables/replication-tables-transact-sql.md). Sichten werden in einer Benutzerdatenbank erstellt, wenn diese Datenbank als Veröffentlichungs- oder Abonnementdatenbank aktiviert wird. Wird die Datenbank aus der Replikationstopologie entfernt, dann werden auch alle Replikationsobjekte aus Benutzerdatenbanken entfernt. Die bevorzugte Methode für den Zugriff auf Replikations Metadaten ist die Verwendung [gespeicherter Replikations Proze](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
