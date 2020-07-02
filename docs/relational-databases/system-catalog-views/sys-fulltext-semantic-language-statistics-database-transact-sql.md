@@ -19,15 +19,15 @@ ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 993715676a6abd5d6687b7b1adbbeb3ab121d39f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133790"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764692"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Zeile zur semantischen Sprachstatistikdatenbank zurück, die in der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68133790"
   
 ||||  
 |-|-|-|  
-|**Spaltenname**|**Typ**|**Beschreibung**|  
+|**Spaltenname**|**Type**|**Beschreibung**|  
 |**database_id**|**int**|ID der Datenbank und innerhalb einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz eindeutig.|  
 |**register_date**|**datetime**|Datum, an dem die Datenbank für die semantische Verarbeitung registriert wurde.|  
 |**registered_by**|**int**|ID des Serverprinzipals, der die Datenbank für die semantische Verarbeitung registriert hat.|  
@@ -54,7 +54,7 @@ ms.locfileid: "68133790"
  Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird gezeigt, wie **sys. fulltext_semantic_language_statistics_database** abgefragt wird, um Informationen über die semantische sprach Statistik Datenbank zu erhalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die für die aktuelle Instanz von registriert ist.  
+ Im folgenden Beispiel wird gezeigt, wie **sys. fulltext_semantic_language_statistics_database** abgefragt wird, um Informationen über die semantische sprach Statistik Datenbank zu erhalten, die für die aktuelle Instanz von registriert ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  

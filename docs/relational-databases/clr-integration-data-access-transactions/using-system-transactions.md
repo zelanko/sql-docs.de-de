@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fed4e8106fc5348c94a3c7afda0ec903f570eff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765362"
 ---
 # <a name="using-systemtransactions"></a>Verwenden von 'System.Transactions'
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Durch den **System.Transactions** -Namespace wird ein neues Transaktionsframework bereitgestellt, das voll in ADO.NET und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (Common Language Runtime) integriert ist. Die **System.Transactions.TransactionScope** -Klasse bewirkt, dass ein Codeblock transaktional wird, indem sie Verbindungen implizit in einer verteilten Transaktion einträgt. Sie müssen am Ende des Codeblocks, der durch **Complete** markiert wird, die **TransactionScope**-Methode aufrufen. Die **Dispose** -Methode wird aufgerufen, wenn die Programmausführung einen Codeblock verlässt, was dazu führt, dass die Transaktion nicht fortgeführt wird, wenn die **Complete** -Methode nicht aufgerufen wird. Wenn eine Ausnahme ausgelöst wurde, die dazu führt, dass der Code den Bereich verlässt, wird die Transaktion als nicht fortgeführt betrachtet.  
   
  Wir empfehlen die Verwendung eines **using** -Blocks um sicherzustellen, dass die **Dispose** -Methode für das **TransactionScope** -Objekt aufgerufen wird, wenn der **using** -Block verlassen wird. Wird für ausstehende Transaktionen kein Commit oder Rollback ausgeführt, wird die Leistung unter Umständen stark beeinträchtigt, da der Timeout für **TransactionScope** standardmäßig eine Minute beträgt. Wenn Sie keine **using** -Anweisung verwenden, müssen Sie alle Arbeiten in einem **Try** -Block ausführen und die **Dispose** -Methode im **Finally** -Block explizit aufrufen.  

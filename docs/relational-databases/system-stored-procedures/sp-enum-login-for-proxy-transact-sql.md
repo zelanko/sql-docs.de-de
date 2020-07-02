@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a26f9ab251bbea3de121a26035d397d17cee5f24
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771133"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Listet Zuordnungen zwischen Sicherheitsprinzipalen und Proxys auf.  
   
@@ -58,10 +58,10 @@ sp_enum_login_for_proxy
 |**proxy_id**|**int**|ID des Proxys.|  
 |**proxy_name**|**sysname**|Der Name des Proxys.|  
 |**name**|**sysname**|Name des Sicherheitsprinzipals für die Zuordnung|  
-|**flags**|**int**|Typ des Sicherheitsprinzipals.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name<br /><br /> **1** = Systemrolle wird korrigiert<br /><br /> **2** = Daten Bank Rolle in **msdb**|  
+|**flags**|**int**|Typ des Sicherheitsprinzipals.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name<br /><br /> **1** = Systemrolle wird korrigiert<br /><br /> **2** = Daten Bank Rolle in **msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn keine Parameter angegeben werden, werden in **sp_enum_login_for_proxy** Informationen zu allen Anmeldungen in der-Instanz für jeden Proxy aufgelistet.  
   
  Wenn eine Proxy-ID oder ein Proxy Name bereitgestellt wird, werden in **sp_enum_login_for_proxy** Anmeldungen mit Zugriff auf den Proxy aufgeführt. Wenn ein Anmelde Name angegeben wird, werden in **sp_enum_login_for_proxy** die Proxys aufgelistet, auf die der Anmelde Name Zugriff hat.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f951aaee96bccf0c2876c781aaebdd2a009b51d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11af27e5b94f7fa95c66e13b198ff6134df23912
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140476"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772273"
 ---
 # <a name="sp_add_log_file_recover_suspect_db-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fügt einer Dateigruppe eine Protokolldatei hinzu, wenn die Wiederherstellung für eine Datenbank wegen unzureichendem Protokollspeicherplatzes (Fehler 9002) nicht ausgeführt werden kann. Nachdem die Datei hinzugefügt wurde, deaktiviert **sp_add_log_file_recover_suspect_db** die Fehler verdächtige Einstellung und schließt die Wiederherstellung der Datenbank ab. Die Parameter sind dieselben wie für ALTER DATABASE *database_name* Add Log File.  
   
@@ -46,7 +46,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ## <a name="arguments"></a>Argumente  
 `[ @dbName = ] 'database'`Der Name der Datenbank. *Database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @name = ] 'logical_file_name'`Der Name, der in verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird, wenn auf die Datei verwiesen wird. Der Name muss auf dem Server eindeutig sein. *logical_file_name* ist vom Datentyp **nvarchar (260)** und hat keinen Standardwert.  
+`[ @name = ] 'logical_file_name'`Der Name, der in verwendet wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wenn auf die Datei verwiesen wird. Der Name muss auf dem Server eindeutig sein. *logical_file_name* ist vom Datentyp **nvarchar (260)** und hat keinen Standardwert.  
   
 `[ @filename = ] 'os_file_name'`Der Pfad und der Dateiname, die vom Betriebssystem für die Datei verwendet werden. Die Datei muss sich auf dem Server befinden, auf dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] installiert ist. *os_file_name* ist vom Datentyp **nvarchar (260)** und hat keinen Standardwert.  
   

@@ -21,22 +21,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981778"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764704"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Diese Katalogsicht enthält eine Zeile pro Sprache, deren Wörtertrennungen bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden. Jede Zeile zeigt die LCID und den Namen der Sprache an. Wenn Wörter Trennungen für eine Sprache registriert sind, werden die anderen linguistischen Ressourcen Wort Stamm Erkennungen, Füll Wörter (Stoppwörter) und Thesaurusdateien für Volltextindizierungs-und-Abfrage Vorgänge verfügbar. Der Wert von **Name** oder **LCID** kann in den voll Text Abfragen und Volltextindex [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen angegeben werden.  
+  Diese Katalogsicht enthält eine Zeile pro Sprache, deren Wörtertrennungen bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden. Jede Zeile zeigt die LCID und den Namen der Sprache an. Wenn Wörter Trennungen für eine Sprache registriert sind, werden die anderen linguistischen Ressourcen Wort Stamm Erkennungen, Füll Wörter (Stoppwörter) und Thesaurusdateien für Volltextindizierungs-und-Abfrage Vorgänge verfügbar. Der Wert von **Name** oder **LCID** kann in den voll Text Abfragen und Volltextindex-Anweisungen angegeben werden [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
    
 |Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (Locale Identifier, LCID) für die Sprache.|  
-|**name**|**sysname**|Ist entweder der Wert des Alias in [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) , der dem Wert von **LCID** entspricht, oder die Zeichen folgen Darstellung der numerischen LCID.|  
+|**name**|**sysname**|Ist entweder der Wert des Alias in [sys.sysSprachen](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) , der dem Wert von **LCID** entspricht, oder die Zeichen folgen Darstellung der numerischen LCID.|  
   
 ## <a name="values-returned-for-default-languages"></a>Werte, die für Standardsprachen zurückgegeben wurden  
  In der folgenden Tabelle sind Werte für die Sprachen aufgeführt, deren Wörtertrennungen standardmäßig registriert werden.  
@@ -90,14 +90,14 @@ ms.locfileid: "73981778"
 |Schwedisch|1053|  
 |Tamilisch|1097|  
 |Telugu|1.098|  
-|Thailändisch|1054|  
+|Thai|1054|  
 |Chinesisch (traditionell)|1028|  
 |**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Türkisch|1.055|  
 |Ukrainisch|1058|  
 |Urdu|1056|  
 |Vietnamesisch|1066|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Um die Liste der bei der Volltextsuche registrierten Sprachen zu aktualisieren, verwenden Sie [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**".  
   
 ## <a name="permissions"></a>Berechtigungen  

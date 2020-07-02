@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22f23dc69576d61c16d0ea35e10686603b03c455
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d40cd1b29c2b2f1b8ad5ce08a4e229fec73d32d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768223"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>ProtocolName-Eigenschaft (ServerNetworkProtocolIPAddress-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ruft den Namen des Servernetzwerkprotokolls ab, das auf die IP-Adresse verweist.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,7 +42,7 @@ object.ProtocolName [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der den Namen des Server-Netzwerkprotokolls angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

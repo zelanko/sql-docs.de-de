@@ -19,17 +19,17 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e85a74b203d270223d215ace08a58a0eea980fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772987"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (Azure SQL-Datenbank)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Gibt CPU-Auslastung, e/a und Speicherdaten für eine Azure SQL-verwaltete Instanz zurück. Die Daten werden in Intervallen von fünf Minuten gesammelt und aggregiert. Es gibt eine Zeile für jede 15-Sekunden-Berichterstattung. Die zurückgegebenen Daten umfassen CPU-Auslastung, Speichergröße, e/a-Auslastung und SKU für verwaltete Instanzen. Verlaufsdaten werden ungefähr 14 Tage lang beibehalten.
+Gibt CPU-Auslastung, e/a und Speicherdaten für eine Azure SQL-verwaltete Instanz zurück. Die Daten werden in Intervallen von fünf Minuten gesammelt und aggregiert. Für jede 15-Sekunden-Berichterstattung ist eine Zeile vorhanden. Die zurückgegebenen Daten enthalten Informationen zu CPU-Nutzung, Speichergröße, E/A-Auslastung und SKU der verwalteten Instanz. Verlaufsdaten werden ungefähr 14 Tage lang beibehalten.
 
 Die **sys. server_resource_stats** -Sicht hat abhängig von der Version der verwalteten Azure SQL-Instanz, der die Datenbank zugeordnet ist, unterschiedliche Definitionen. Berücksichtigen Sie diese Unterschiede und alle Änderungen, die Ihre Anwendung erfordert, beim Upgrade auf eine neue Serverversion.
  
@@ -59,7 +59,7 @@ Die **sys. server_resource_stats** -Sicht hat abhängig von der Version der verw
 ## <a name="permissions"></a>Berechtigungen  
  Diese Ansicht ist für alle Benutzer Rollen verfügbar, die über Berechtigungen zum Herstellen einer Verbindung mit der **Master** -Datenbank verfügen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Daten, die von **sys. server_resource_stats** zurückgegeben werden, werden als der Gesamtwert ausgedrückt, der in Byte oder Megabyte (angegeben in Spaltennamen) verwendet wird, und nicht als avg_cpu, der als Prozentsatz der maximal zulässigen Grenzwerte für die Dienst Ebene/Leistungsstufe ausgedrückt wird, die Sie ausführen.  
  
 ## <a name="examples"></a>Beispiele  

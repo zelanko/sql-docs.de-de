@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 93a55b28325bd9b04af569120ad34baeb689e8f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b857472b72081c6368fa3c0a112c7d4729e2c72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771116"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Listet die Berechtigungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Proxys für den Zugriff auf Subsysteme auf.  
   
@@ -64,7 +64,7 @@ sp_enum_proxy_for_subsystem
 |**proxy_name**|**sysname**|Der Name des Proxys.|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn keine Parameter angegeben werden, werden in **sp_enum_proxy_for_subsystem** Informationen zu allen Proxys in der Instanz für jedes Subsystem aufgelistet.  
   
  Wenn eine Proxy-ID oder ein Proxy Name bereitgestellt wird, werden in **sp_enum_proxy_for_subsystem** Subsysteme aufgelistet, auf die der Proxy Zugriff hat. Wenn eine Subsystem-ID oder ein Subsystemname bereitgestellt wird, werden **sp_enum_proxy_for_subsystem** Proxys aufgelistet, die Zugriff auf dieses Subsystem haben.  

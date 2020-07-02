@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65ec62997eb25564e19696a8df2895b980d728be
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1232f5eb7917606d7f7e88c912be163d13de33ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827497"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767490"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Liest den als Eingabe bereitgestellten XML-Text, analysiert diesen mit dem MSXML-Parser (Msxmlsql.dll) und stellt das analysierte Dokument für die Verwendung bereit. Das analysierte Dokument ist eine strukturierte Darstellung der verschiedenen Knoten im XML-Dokument: Elemente, Attribute, Text, Kommentare usw.  
   
@@ -71,7 +71,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  Gibt die Namespacedeklarationen an, die in XPATH-Ausdrücken für Zeilen und Spalten in OPENXML verwendet werden. *xpath_namespaces* ist ein Text Parameter: **char**, **NCHAR**, **varchar**, **nvarchar**, **Text**, **ntext** oder **XML**.  
   
- Der Standardwert ist ** \< root xmlns: MP = "urn: Schemas-Microsoft-com: XML-metaprop" #b0 **. *xpath_namespaces* stellt die Namespace-URIs für die Präfixe bereit, die in den XPath-Ausdrücken in OPENXML mithilfe eines wohlgeformten XML-Dokuments verwendet werden. *xpath_namespaces* deklariert das Präfix, das verwendet werden muss, um auf den Namespace **urn: Schemas-Microsoft-com: XML-metaprop**zu verweisen. Dadurch werden Metadaten zu den analysierten XML-Elementen bereitgestellt. Obwohl Sie das Namespacepräfix für den Namespace der Metaeigenschaften mit diesem Verfahren neu definieren können, geht dieser Namespace nicht verloren. Das Präfix- **MP** ist weiterhin gültig für **urn: Schemas-Microsoft-com: XML-metaprop** , auch wenn *xpath_namespaces* keine solche Deklaration enthält.  
+ Der Standardwert ist **\<root xmlns:mp="urn:schemas-microsoft-com:xml-metaprop">** . *xpath_namespaces* stellt die Namespace-URIs für die Präfixe bereit, die in den XPath-Ausdrücken in OPENXML mithilfe eines wohlgeformten XML-Dokuments verwendet werden. *xpath_namespaces* deklariert das Präfix, das verwendet werden muss, um auf den Namespace **urn: Schemas-Microsoft-com: XML-metaprop**zu verweisen. Dadurch werden Metadaten zu den analysierten XML-Elementen bereitgestellt. Obwohl Sie das Namespacepräfix für den Namespace der Metaeigenschaften mit diesem Verfahren neu definieren können, geht dieser Namespace nicht verloren. Das Präfix- **MP** ist weiterhin gültig für **urn: Schemas-Microsoft-com: XML-metaprop** , auch wenn *xpath_namespaces* keine solche Deklaration enthält.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder >0 (Fehler)  

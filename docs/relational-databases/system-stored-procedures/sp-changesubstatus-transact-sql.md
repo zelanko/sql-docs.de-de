@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2daa7d007783434e0994846e41300c31b3e35162
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824055"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771352"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ändert den Status eines vorhandenen Abonnenten. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -75,7 +75,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**active**|Der Abonnent ist synchronisiert und empfängt Daten.|  
-|**VSTE**|Es ist ein Eintrag für einen Abonnenten ohne Abonnement vorhanden.|  
+|**inactive**|Es ist ein Eintrag für einen Abonnenten ohne Abonnement vorhanden.|  
 |**subscribed**|Der Abonnent fordert Daten an, ist aber noch nicht synchronisiert.|  
   
 `[ @previous_status = ] 'previous_status'`Der vorherige Status des Abonnements. *previous_status* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Mithilfe dieses Parameters können Sie alle Abonnements ändern, die den Status aktuell aufweisen, sodass Sie Gruppenfunktionen für einen bestimmten Satz von Abonnements zulassen (z. b. das Zurücksetzen aller aktiven Abonnements auf **abonniert**).  
@@ -90,11 +90,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**1**|First (Erster)|  
-|**2**|Sekunde|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|Dritter|  
 |**8**|Vierter|  
-|**Uhr**|Last (Letzter)|  
+|**16**|Last (Letzter)|  
 |NULL (Standard)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert NULL.  
@@ -104,7 +104,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
-|**2**|Sekunde|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Stunde|  
 |NULL (Standard)||  
@@ -156,7 +156,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_changesubstatus** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  **sp_changesubstatus** ändert den Status des Abonnenten in der **sysabonnements** -Tabelle mit dem geänderten Status. Bei Bedarf wird der Artikel Status in der **sysarticles** -Tabelle aktualisiert, um den Status "aktiv" oder "inaktiv" anzugeben. Bei Bedarf wird das Replikationsflag in der **sysobjects** -Tabelle für die replizierte Tabelle auf on oder OFF festgelegt.  

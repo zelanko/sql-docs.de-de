@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8f9260aad5b07e57ff3d95b8943d85a15756077d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771479"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert die Eigenschaften einer Mergeveröffentlichung. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -78,7 +78,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**Abonnenten**|Die Konfliktdatensätze werden auf dem Abonnenten gespeichert, der den Konflikt verursacht hat. Wird für Abonnenten nicht unterstützt [!INCLUDE[ssEW](../../includes/ssew-md.md)] *.*|  
 ||**zwar**|Die Konfliktdatensätze werden auf dem Verleger und auf dem Abonnenten gespeichert.|  
 |**conflict_retention**||Ein **int** -Wert, der die Beibehaltungs Dauer (in Tagen) angibt, für die Konflikte beibehalten werden. Das Festlegen von *conflict_retention* auf **0** bedeutet, dass keine Konflikt Bereinigung erforderlich ist.|  
-|**Beschreibung**||Die Beschreibung der Veröffentlichung.|  
+|**description**||Die Beschreibung der Veröffentlichung.|  
 |**dynamic_filters**|**true**|Die Veröffentlichung wird anhand einer dynamischen Klausel gefiltert.|  
 ||**false**|Die Veröffentlichung wird nicht dynamisch gefiltert.|  
 |**enabled_for_internet**|**true**|Die Veröffentlichung ist für das Internet aktiviert. File Transfer Protocol (FTP) kann verwendet werden, um die Momentaufnahmedateien an einen Abonnenten zu übertragen. Die Synchronisierungsdateien für die Veröffentlichung werden im Verzeichnis C:\Programme\Microsoft SQL Server\MSSQL\Repldata\ftp gespeichert.|  
@@ -111,7 +111,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**snapshot_ready**|**true**|Die Momentaufnahme für die Veröffentlichung ist verfügbar.|  
 ||**false**|Die Momentaufnahme für die Veröffentlichung ist nicht verfügbar.|  
 |**status**|**active**|Die Veröffentlichung weist einen aktiven Status auf.|  
-||**VSTE**|Die Veröffentlichung weist einen inaktiven Status auf.|  
+||**inactive**|Die Veröffentlichung weist einen inaktiven Status auf.|  
 |**sync_mode**|**native** oder<br /><br /> **bcp Native**|Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus wird für die Anfangsmomentaufnahme verwendet.|  
 ||**Art**<br /><br /> oder **bcp-Zeichen**|Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus wird für die Anfangsmomentaufnahme verwendet. Dies ist für alle Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten erforderlich.|  
 |**use_partition_groups**<br /><br /> Hinweis: Wenn Sie partition_groups verwenden, die Verwendung von **setupes**wiederherstellen und **use_partition_groups = false** im **changemergearticle**festlegen, wird dies möglicherweise nicht ordnungsgemäß wiedergegeben, nachdem eine Momentaufnahme erstellt wurde. Die Trigger, die von der Momentaufnahme generiert werden, sind mit Partitionsgruppen kompatibel.<br /><br /> Die Problem Umgehung für dieses Szenario besteht darin, den Status auf "inaktiv" festzulegen, die **use_partition_groups**zu ändern und dann den Status "aktiv" festzulegen.|**true**|Die Veröffentlichung verwendet vorausberechnete Partitionen.|  
@@ -139,7 +139,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_changemergepublication** wird bei der Mergereplikation verwendet.  
   
  Das Ändern der folgenden Eigenschaften erfordert die Generierung einer neuen Momentaufnahme. Sie müssen den Wert **1** für den *force_invalidate_snapshot* -Parameter angeben.  

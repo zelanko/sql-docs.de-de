@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17a26c5897ff10ce636297151cef9f300f4f3056
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487528"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765425"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe-Objekt
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]war es üblich, eine gespeicherte Prozedur (oder eine erweiterte gespeicherte Prozedur) zu schreiben, die Ergebnisse oder Ausgabeparameter an den aufrufenden Client sendet.  
   
  In einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur sendet jede **SELECT** -Anweisung, die NULL oder mehr Zeilen zurückgibt, die Ergebnisse an die "Pipe" des verbundenen Aufrufers.  
@@ -31,7 +31,7 @@ ms.locfileid: "81487528"
  Für CLR-Datenbankobjekte (Common Language Runtime), die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden, können Sie die Ergebnisse mit der **Send** -Methode des **SqlPipe** -Objekts an die verbundene Pipe senden. Greifen Sie auf die **Pipe** -Eigenschaft des **SqlContext** -Objekts zu, um das **SqlPipe** -Objekt abzurufen. Die **SqlPipe** -Klasse gleicht konzeptionell der **Response** -Klasse in ASP.NET. Weitere Informationen finden Sie in der Referenzdokumentation zur SqlPipe-Klasse im .NET Framework Software Development Kit.  
   
 ## <a name="returning-tabular-results-and-messages"></a>Zurückgeben von Tabellenergebnissen und Meldungen  
- **SqlPipe** verfügt über eine **Send** -Methode, die drei Überladungen besitzt. Dies sind:  
+ **SqlPipe** verfügt über eine **Send** -Methode, die drei Überladungen besitzt. Sie lauten wie folgt:  
   
 -   `void Send(string message)`  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81487528"
   
  Die **Send** -Methode sendet Daten direkt an den Client oder Aufrufer. Normalerweise verwendet der Client die Ausgabe der **SqlPipe**-Methode, im Fall von geschachtelten gespeicherten CLR-Prozeduren kann es sich beim Consumer der Ausgabe jedoch auch um eine gespeicherte Prozedur handeln. Beispiel: Procedure1 ruft SqlCommand.ExecuteReader() mit dem Befehlstext "EXEC Procedure2" auf. Bei Procedure2 handelt es sich ebenfalls um eine verwaltete gespeicherte Prozedur. Wenn Procedure2 jetzt SqlPipe.Send( SqlDataRecord ) aufruft, wird die Zeile an den Reader von Procedure1 und nicht an den Client gesendet.  
   
- Die **Send** -Methode sendet eine Zeichen folgen Nachricht, die auf dem Client als Informations Meldung angezeigt wird, die [!INCLUDE[tsql](../../includes/tsql-md.md)]dem Ausdruck in entspricht. Die Methode kann mit **SqlDataRecord**auch ein einzeiliges Resultset oder mit **SqlDataReader**ein mehrzeiliges Resultset senden.  
+ Die **Send** -Methode sendet eine Zeichen folgen Nachricht, die auf dem Client als Informations Meldung angezeigt wird, die dem Ausdruck in entspricht [!INCLUDE[tsql](../../includes/tsql-md.md)] . Die Methode kann mit **SqlDataRecord**auch ein einzeiliges Resultset oder mit **SqlDataReader**ein mehrzeiliges Resultset senden.  
   
  Das **SqlPipe** -Objekt stellt außerdem eine **ExecuteAndSend** -Methode bereit. Mit dieser Methode kann ein Befehl (der als **SqlCommand** -Objekt übergeben wird) ausgeführt und Ergebnisse direkt zurück an den Aufrufer gesendet werden. Wenn im übermittelten Befehl Fehler vorhanden sind, werden Ausnahmen an die Pipe gesendet. Es wird jedoch auch eine Kopie an den aufrufenden verwalteten Code gesendet. Wenn der aufrufende Code die Ausnahme nicht abfängt, wird sie in der Liste aufwärts weitergeleitet an den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code und dann zweimal in der Ausgabe angezeigt. Wenn der aufrufende Code die Ausnahme abfängt, wird dem Client der Fehler angezeigt, es gibt jedoch keinen doppelten Fehler.  
   

@@ -21,15 +21,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3daeaabe86d91d0986fb764c3a60304ec5e09faf
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: bfa6234aae5e2744a88c4fcfb158575cb07000f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885159"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764902"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Angeben eines Zielnamespaces mit dem 'targetNamespace'-Attribut (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Beim Schreiben von XSD-Schemas können Sie das XSD- **targetNamespace** -Attribut verwenden, um einen Ziel Namespace anzugeben. In diesem Thema wird beschrieben, wie das XSD-Attribut " **targetNamespace**", das **Element Form default**-Attribut und das **attributeFormDefault** -Attribut funktionieren, wie Sie sich auf die generierte XML-Instanz auswirken und wie XPath-Abfragen mit Namespaces angegeben werden.  
   
  Sie können das **xsd: targetNamespace** -Attribut verwenden, um Elemente und Attribute aus dem Standard Namespace in einen anderen Namespace zu platzieren. Sie können auch festlegen, ob lokal deklarierte Elemente und Attribute des Schemas durch einen Namespace qualifiziert werden sollen, sei es explizit durch ein Präfix oder standardmäßig implizit. Sie können die Attribute Element **Form default** und **attributeFormDefault** für das- **\<xsd:schema>** Element verwenden, um die Qualifizierung lokaler Elemente und Attribute global anzugeben, oder Sie können das **Form** -Attribut verwenden, um einzelne Elemente und Attribute separat anzugeben.  

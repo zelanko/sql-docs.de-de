@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c59b4ba84981ff4cb1240d78e1d6d472be61289
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 97c6a7d309578ebe0cc6e93b5408ad6d9fad6296
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771505"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert die Eigenschaften eines Mergeartikels. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -68,11 +68,11 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**creation_script**||Pfad und Name eines optionalen Artikelschemaskripts, mit dem der Artikel in der Abonnementdatenbank erstellt wurde|  
 |**delete_tracking**|**true**|DELETE-Anweisungen werden repliziert. Dies ist das Standardverhalten.|  
 ||**false**|DELETE-Anweisungen werden nicht repliziert.<br /><br /> Eine ** \* \* wichtige \* Einstellung \* ** **delete_tracking** **false** führt zu einer nicht Konvergenz, und gelöschte Zeilen müssen manuell entfernt werden.|  
-|**Beschreibung**||Beschreibungseintrag für den Artikel.|  
+|**description**||Beschreibungseintrag für den Artikel.|  
 |**destination_owner**||Der Name des Besitzers des Objekts in der Abonnement Datenbank, wenn es sich nicht um **dbo**handelt.|  
 |**identity_range**||**bigint** , das die beim Zuweisen neuer Identitäts Werte zu verwendende Bereichs Größe angibt, wenn für den Artikel **identityrangemanagementoption** auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist. Gilt nur für einen Tabellenartikel. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identityrangemanagementoption**|**Manuell**|Deaktiviert die automatische Verwaltung des Identitätsbereichs. Kennzeichnet Identitätsspalten mithilfe von NOT FOR REPLICATION, um die manuelle Handhabung des Identitätsbereichs zu aktivieren. Weitere Informationen finden Sie unter [Replizieren von Identitätsspalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-||**Keine**|Deaktiviert die gesamte Verwaltung des Identitätsbereichs.|  
+||**keine**|Deaktiviert die gesamte Verwaltung des Identitätsbereichs.|  
 |**logical_record_level_conflict_detection**|**true**|Ein Konflikt wird erkannt, wenn an einer beliebigen Stelle im logischen Datensatz Änderungen vorgenommen werden. Erfordert, dass **logical_record_level_conflict_resolution** auf **true**festgelegt werden.|  
 ||**false**|Die Standard Konflikterkennung wird wie durch **column_tracking**angegeben verwendet.|  
 |**logical_record_level_conflict_resolution**|**true**|Der gesamte gewinnende logische Datensatz überschreibt den verlierenden logischen Datensatz.|  
@@ -81,7 +81,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|Die Partitionen überlappen, und beim Abonnenten vorgenommene DML-Updates können nicht die Partition ändern, zu der eine Zeile gehört.|  
 ||**2**|Das Filtern für den Artikel ergibt nicht überlappende Partitionen. Mehrere Abonnenten können jedoch die gleiche Partition erhalten.|  
 ||**3**|Das Filtern für den Artikel ergibt nicht überlappende Partitionen, die für jedes Abonnement eindeutig sind.<br /><br /> Hinweis: Wenn Sie für **partition_options**den Wert **3** angeben, kann in diesem Artikel nur ein einzelnes Abonnement für jede Daten Partition vorhanden sein. Wird ein zweites Abonnement erstellt, in dem das Filterkriterium des neuen Abonnements die gleiche Partition ergibt wie das vorhandene Abonnement, wird das vorhandene Abonnement gelöscht.|  
-|**pre_creation_command**|**Keine**|Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.|  
+|**pre_creation_command**|**keine**|Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.|  
 ||**delete**|Ein Löschvorgang wird auf der Grundlage der WHERE-Klausel im Teilmengenfilter ausgegeben.|  
 ||**Dropdown**|Die Tabelle wird vor dem erneuten Erstellen gelöscht.|  
 ||**TRUNCATE**|Schneidet die Zieltabelle ab.|  
@@ -139,7 +139,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|Änderungen sind bei einem Abonnenten mit einem Clientabonnement zulässig, werden jedoch nicht auf den Verleger hochgeladen.|  
 ||**2**|Änderungen sind bei einem Abonnenten mit einem Clientabonnement nicht zulässig.|  
 |**subset_filterclause**||WHERE-Klausel für das horizontale Filtern. Gilt nur für einen Tabellen Artikel.<br /><br /> Wichtig aus Leistungsgründen wird empfohlen, dass Sie keine Funktionen auf Spaltennamen in parametrisierten Zeilen Filter Klauseln anwenden, wie z. b.. ** \* \* \* \* ** `LEFT([MyColumn]) = SUSER_SNAME()` Wenn Sie [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) in einer Filter Klausel verwenden und den HOST_NAME Wert überschreiben, müssen Sie möglicherweise Datentypen mithilfe von [Convert](../../t-sql/functions/cast-and-convert-transact-sql.md)konvertieren. Weitere Informationen zu bewährten Methoden für diesen Fall finden Sie im Abschnitt "Überschreiben des HOST_NAME ()-Werts" in [parametrisierten Zeilen filtern](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
-|**Mindest**||Prozentwert, der für Abonnenten verwendet wird, die [!INCLUDE[ssEW](../../includes/ssew-md.md)] oder frühere Versionen von ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Schwellenwert** steuert, wenn der Merge-Agent einen neuen Identitäts Bereich zuweist. Wenn der im Schwellenwert angegebene Prozentsatz verwendet wird, erstellt der Merge-Agent einen neuen Identitätsbereich. Wird verwendet, wenn " **identityrangemanagementoption** " auf " **Auto** " oder " **auto_identity_range** auf" **true**"festgelegt ist. Gilt nur für einen Tabellenartikel. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**threshold**||Prozentwert, der für Abonnenten verwendet wird, die [!INCLUDE[ssEW](../../includes/ssew-md.md)] oder frühere Versionen von ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Schwellenwert** steuert, wenn der Merge-Agent einen neuen Identitäts Bereich zuweist. Wenn der im Schwellenwert angegebene Prozentsatz verwendet wird, erstellt der Merge-Agent einen neuen Identitätsbereich. Wird verwendet, wenn " **identityrangemanagementoption** " auf " **Auto** " oder " **auto_identity_range** auf" **true**"festgelegt ist. Gilt nur für einen Tabellenartikel. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**1**|Die digitale Signatur in einem benutzerdefinierten Konfliktlöser wird überprüft, um festzustellen, ob er aus einer vertrauenswürdigen Quelle stammt.|  
 ||**0**|Die digitale Signatur in einem benutzerdefinierten Konfliktlöser wird nicht überprüft, um festzustellen, ob er aus einer vertrauenswürdigen Quelle stammt.|  
 |NULL (Standard)||Gibt die Liste der unterstützten Werte für die- *Eigenschaft*zurück.|  
@@ -163,7 +163,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_changemergearticle** wird bei der Mergereplikation verwendet.  
   
  Da **sp_changemergearticle** zum Ändern von Artikeleigenschaften verwendet wird, die anfänglich mit [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)angegeben wurden, finden Sie unter [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) Weitere Informationen zu diesen Eigenschaften.  

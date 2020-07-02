@@ -23,22 +23,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c165ca271c3230399d54363f22d2b220e5427830
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6567b5dfa6a6b83298793c9e5f2962d9c1bdb878
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388656"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764831"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Einführung in XSD-Schemas mit Anmerkungen (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Sie können mit der XML-Schemadefinitionssprache (XSD) XML-Sichten von relationalen Daten erstellen. Diese Sichten können dann mit XPath (XML Path)-Abfragen abgefragt werden. Dieser Vorgang gleicht prinzipiell dem Erstellen von Sichten mit CREATE VIEW-Anweisungen und dem Definieren von SQL-Abfragen für diese Sichten.  
   
  Ein XML-Schema beschreibt die Struktur eines XML-Dokuments und beschreibt außerdem die verschiedenen Einschränkungen der Daten im Dokument. Wenn XQuery-Abfragen mit dem XSD-Schema angegeben werden, wird die Struktur des resultierenden XML-Dokuments durch das Schema bestimmt, mit dem die Abfrage ausgeführt wird.  
   
- In einem XSD-Schema schließt das ** \<XSD: Schema>** -Element das gesamte Schema ein. Alle Element Deklarationen müssen im ** \<XSD: Schema>** -Element enthalten sein. Sie können Attribute beschreiben, die den Namespace definieren, in dem sich das Schema befindet, und die Namespaces, die im Schema als Eigenschaften des ** \<XSD: Schema->** Elements verwendet werden.  
+ In einem XSD-Schema **\<xsd:schema>** umschließt das-Element das gesamte Schema; alle Element Deklarationen müssen im- **\<xsd:schema>** Element enthalten sein. Sie können Attribute beschreiben, die den Namespace definieren, in dem sich das Schema befindet, und die Namespaces, die im Schema als Eigenschaften des Elements verwendet werden **\<xsd:schema>** .  
   
- Ein gültiges XSD-Schema muss das ** \<XSD: Schema>** -Element enthalten, das wie folgt definiert ist:  
+ Ein gültiges XSD-Schema muss das-Element enthalten, das **\<xsd:schema>** wie folgt definiert ist:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -47,7 +47,7 @@ ms.locfileid: "81388656"
 </xsd:schema>  
 ```  
   
- Das ** \<XSD: Schema>** -Element wird von der XML-Schema-Namespace http://www.w3.org/2001/XMLSchemaSpezifikation unter abgeleitet.  
+ Das- **\<xsd:schema>** Element wird von der XML-Schema-Namespace Spezifikation unter abgeleitet http://www.w3.org/2001/XMLSchema .  
   
 ## <a name="annotations-to-the-xsd-schema"></a>Anmerkungen zum XSD-Schema  
  Sie können ein XSD-Schema mit Anmerkungen angeben, welche die Zuordnung zu einer Datenbank beschreiben, die Datenbank abfragen und die Ergebnisse in Form eines XML-Dokuments zurückgeben. Anmerkungen werden bereitgestellt, um ein XSD-Schema Datenbanktabellen und -spalten zuzuordnen. XPath-Abfragen können für die XML-Sicht, die durch das XSD-Schema erstellt wird, angegeben werden, um die Datenbank abzufragen und die Ergebnisse als XML-Dokument zu erhalten.  
@@ -58,7 +58,7 @@ ms.locfileid: "81388656"
  Im Kontext relationaler Datenbanken ist es nützlich, das beliebige XSD-Schema einem relationalen Datenspeicher zuzuordnen. Dies lässt sich beispielsweise erreichen, indem das XSD-Schema mit Anmerkungen versehen wird. Ein XSD-Schema mit Anmerkungen wird als Zuordnungsschema *mapping schema*bezeichnet, das Informationen dazu bereitstellt, wie XML-Daten dem relationalen Speicher zugeordnet werden. Ein Zuordnungsschema ist im Grunde eine XML-Sicht der relationalen Daten. Diese Zuordnungen können verwendet werden, um relationale Daten als XML-Dokument abzurufen.  
   
 ## <a name="namespace-for-annotations"></a>Namespace für Anmerkungen  
- In einem XSD-Schema werden Anmerkungen mithilfe des Namespace **urn: Schemas-Microsoft-com: Mapping-Schema**angegeben. Wie im folgenden Beispiel gezeigt, besteht die einfachste Möglichkeit, den Namespace anzugeben, darin, ihn im ** \<XSD: Schema->** -Tag anzugeben.  
+ In einem XSD-Schema werden Anmerkungen mithilfe des Namespace **urn: Schemas-Microsoft-com: Mapping-Schema**angegeben. Wie im folgenden Beispiel gezeigt, ist die einfachste Möglichkeit, den Namespace anzugeben, im- **\<xsd:schema>** Tag anzugeben.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -70,7 +70,7 @@ ms.locfileid: "81388656"
  Es kann ein beliebiges Namespacepräfix verwendet werden. In dieser Dokumentation wird das **SQL** -Präfix verwendet, um den Namespace der Anmerkung anzugeben und Anmerkungen in diesem Namespace von denjenigen in anderen Namespaces zu unterscheiden.  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>Beispiel eines XSD-Schemas mit Anmerkungen  
- Im folgenden Beispiel besteht das XSD-Schema aus einem ** \<Person. Contact->** Element. Das ** \<Employee>** -Element verfügt über das **ContactID** -Attribut und ** \<den FirstName->** und den ** \<LastName->** untergeordneten Elementen:  
+ Im folgenden Beispiel besteht das XSD-Schema aus einem- **\<Person.Contact>** Element. Das- **\<Employee>** Element verfügt über ein **ContactID** -Attribut und untergeordnete **\<FirstName>** - **\<LastName>** Elemente:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -111,7 +111,7 @@ ms.locfileid: "81388656"
 </xsd:schema>  
 ```  
   
- Im Zuordnungs Schema wird das ** \<Contact>** -Element der Person. Contact-Tabelle in der AdventureWorks-Beispieldatenbank mithilfe der **SQL: Relation** -Anmerkung zugeordnet. Die Attribute "konid", "fname" und "lname" werden den Spalten "ContactID", "FirstName" und "LastName" in der Tabelle "Person. Contact" mithilfe der **SQL: Field** -Anmerkungen zugeordnet.  
+ Im Zuordnungs Schema wird das- **\<Contact>** Element der Person. Contact-Tabelle in der AdventureWorks-Beispieldatenbank mithilfe der **SQL: Relation** -Anmerkung zugeordnet. Die Attribute "konid", "fname" und "lname" werden den Spalten "ContactID", "FirstName" und "LastName" in der Tabelle "Person. Contact" mithilfe der **SQL: Field** -Anmerkungen zugeordnet.  
   
  Dieses XSD-Schema mit Anmerkungen stellt die XML-Sicht der relationalen Daten bereit. Diese XML-Sicht kann mit der XPath-Sprache abgefragt werden. Xpath-Abfragen geben als Ergebnis ein XML-Dokument zurück statt eines Rowsets, das von SQL-Abfragen zurückgegeben wird.  
   

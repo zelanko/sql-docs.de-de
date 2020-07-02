@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26480fa1adb8493a1c29e5b67a163e9cbff54920
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9e821b1ea7688ed80adba7385e465366e7f69e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772969"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zu einer Mergeveröffentlichung zurück. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -66,7 +66,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |id|**int**|Sequenzielle Position der Veröffentlichung in der Liste im Resultset.|  
 |name|**sysname**|Name der Veröffentlichung.|  
-|Beschreibung|**nvarchar(255)**|Die Beschreibung der Veröffentlichung.|  
+|description|**nvarchar(255)**|Die Beschreibung der Veröffentlichung.|  
 |status|**tinyint**|Gibt an, wann Veröffentlichungsdaten verfügbar sind.|  
 |retention|**int**|Die Zeit, die Metadaten zu Änderungen in Artikeln in der Veröffentlichung gespeichert werden sollen. Die Einheiten für diesen Zeitraum kann Tage, Wochen, Monate oder Jahre sein. Informationen zu Einheiten finden Sie in der retention_period_unit-Spalte.|  
 |sync_mode|**tinyint**|Synchronisierungsmodus dieser Veröffentlichung.<br /><br /> **0** = System eigenes Massen Kopier Programm (**bcp** -Hilfsprogramm)<br /><br /> **1** = Massen Kopieren von Zeichen|  
@@ -117,7 +117,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  sp_helpmergepublication wird für die Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4aa5ea4d06ac5b8da69eec246387007ba5d03606
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da1735c17a4d87e085fbe1e8b5f960d14a70b86c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765428"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord-Objekt
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Das **SqlDataRecord** -Objekt stellt eine einzelne Zeile der Daten mit den zugehörigen Metadaten dar.  
   
  Verwaltete gespeicherte Prozeduren können Resultsets an den Client senden, die nicht von **SqlDataReader**stammen. Die **SqlDataRecord** -Klasse ermöglicht zusammen mit den Methoden **SendResultsStart**, **SendResultsRow**und **SendResultsEnd** des **SqlPipe** -Objekts gespeicherten Prozeduren, benutzerdefinierte Resultsets an den Client zu senden.  

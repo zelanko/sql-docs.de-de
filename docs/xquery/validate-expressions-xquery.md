@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fb2592a1-1fad-41f9-8ff8-74c5905dbae9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc909fcf942bc73bed6c39357b494ecaeabcb97c
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: ba7b28277db82a39de449a51776b9893419d9db6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215848"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765571"
 ---
 # <a name="validate-expressions-xquery"></a>Überprüfen von Ausdrücken (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   In dieser Implementierung wird der **Validate** -Ausdruck nicht unterstützt. Die Ergebnisse von Ausdrücken, die mit XQuery konstruiert wurden, sind niemals typisiert. Wenn das Ergebnis eines XQuery-Ausdrucks eingegeben werden soll, verwenden Sie den SQL Cast-Ausdruck, um das Ergebnis in einen **XML** -Datentyp mit der bevorzugten Schema Auflistung umzuwandeln.  
   

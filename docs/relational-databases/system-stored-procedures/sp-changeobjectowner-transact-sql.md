@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6f00b788ecf6b6e4c02d4b8343ba14fa2c345e6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e6f664cc763e56135ddf1c35f5f0057d97ec2d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771460"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert den Besitzer eines Objekts in der aktuellen Datenbank.  
   
 > [!IMPORTANT]
->  Diese gespeicherte Prozedur funktioniert nur mit den in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]verfügbaren Objekten. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Alter Schema](../../t-sql/statements/alter-schema-transact-sql.md) oder [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** ändert sowohl das Schema als auch den Besitzer. Aus Gründen der Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändert diese gespeicherte Prozedur nur Objektbesitzer, wenn sowohl der aktuelle Besitzer als auch der neue Besitzer Schemas besitzen, die den gleichen Namen wie die Datenbankbenutzernamen aufweisen.  
+>  Diese gespeicherte Prozedur funktioniert nur mit den in verfügbaren Objekten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Alter Schema](../../t-sql/statements/alter-schema-transact-sql.md) oder [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** ändert sowohl das Schema als auch den Besitzer. Aus Gründen der Kompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändert diese gespeicherte Prozedur nur Objektbesitzer, wenn sowohl der aktuelle Besitzer als auch der neue Besitzer Schemas besitzen, die den gleichen Namen wie die Datenbankbenutzernamen aufweisen.  
 > 
 > [!IMPORTANT]
 >  Dieser gespeicherten Prozedur wurde eine neue Berechtigungsanforderung hinzugefügt.  
@@ -47,7 +47,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ## <a name="arguments"></a>Argumente  
 `[ @objname = ] 'object'`Der Name einer vorhandenen Tabelle, Sicht, benutzerdefinierten Funktion oder gespeicherten Prozedur in der aktuellen Datenbank. *Object* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. Das *Objekt* kann mit dem Besitzer des vorhandenen Objekts im Formular _existing_owner_qualifiziert werden **.** _Objekt_ , wenn das Schema und der zugehörige Besitzer denselben Namen haben.  
   
-`[ @newowner = ] 'owner_ '`Der Name des Sicherheits Kontos, das den neuen Besitzer des Objekts sein wird. *Owner* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. der *Besitzer* muss ein gültiger Datenbankbenutzer, eine Server [!INCLUDE[msCoName](../../includes/msconame-md.md)] Rolle, eine Windows-Anmeldung oder eine Windows-Gruppe mit Zugriff auf die aktuelle Datenbank sein. Wenn es sich beim neuen Besitzer um einen Windows-Benutzer oder eine Windows-Gruppe handelt, für den bzw. die kein entsprechender Datenbankprinzipal vorhanden ist, wird ein Datenbankbenutzer erstellt.  
+`[ @newowner = ] 'owner_ '`Der Name des Sicherheits Kontos, das den neuen Besitzer des Objekts sein wird. *Owner* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. der *Besitzer* muss ein gültiger Datenbankbenutzer, eine Server Rolle, eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldung oder eine Windows-Gruppe mit Zugriff auf die aktuelle Datenbank sein. Wenn es sich beim neuen Besitzer um einen Windows-Benutzer oder eine Windows-Gruppe handelt, für den bzw. die kein entsprechender Datenbankprinzipal vorhanden ist, wird ein Datenbankbenutzer erstellt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

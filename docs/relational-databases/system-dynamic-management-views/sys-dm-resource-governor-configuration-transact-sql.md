@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df38bbb333e3cadb328b9701c19f21ae657a544b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 872b11372a8051d7a2cd7fcea7fe3bc6106762f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764325"
 ---
 # <a name="sysdm_resource_governor_configuration-transact-sql"></a>sys.dm_resource_governor_configuration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Zeile mit dem aktuellen Konfigurationsstatus der Ressourcenkontrolle im Arbeitsspeicher zurück.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "82830479"
 |is_reconfiguration_pending|**bit**|Gibt an, ob mit der ALTER RESOURCE GOVERNOR RECONFIGURE-Anweisung Änderungen an einer Gruppe oder einem Pool vorgenommen wurden, die jedoch noch nicht auf die Konfiguration im Arbeitsspeicher angewendet wurden. Einer der folgenden Werte wird zurückgegeben:<br /><br /> 0 - Eine Anweisung zur Neukonfiguration ist nicht erforderlich.<br /><br /> 1 - Es ist eine Anweisung zur Neukonfiguration oder ein Serverneustart erforderlich, damit ausstehende Konfigurationsänderungen übernommen werden können.<br /><br /> **Hinweis:** Der zurückgegebene Wert ist immer 0, wenn Resource Governor deaktiviert ist.<br /><br /> Lässt keine NULL-Werte zu.|  
 |max_outstanding_io_per_volume|**int**|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Die maximale Anzahl der ausstehenden E/A-Vorgänge pro Volume.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese dynamische Verwaltungssicht zeigt die Konfiguration im Arbeitsspeicher an. Verwenden Sie die entsprechende Katalogsicht, um die gespeicherten Konfigurationsmetadaten anzuzeigen.  
   
  Das folgende Beispiel veranschaulicht, wie die gespeicherten Metadatenwerte und die Arbeitsspeicherwerte der Ressourcenkontrollenkonfiguration abgerufen und verglichen werden.  

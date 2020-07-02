@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e965a11708b2d4bbb72903a05846cb14300a5c6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826099"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772128"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zu einem bestimmten Remoteserver oder Replikationsserver oder zu beiden Servertypen zurück. Stellt den Servernamen, den Netzwerknamen des Servers, den Replikationsstatus des Servers, die ID des Servers und den Sortierungsnamen bereit. Gibt außerdem Timeoutwerte für die Verbindungsherstellung zu sowie Abfragen auf Verbindungsservern an.  
   
@@ -41,11 +41,11 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @server = ] 'server'`Gibt den Server an, über welche Informationen berichtet werden. Wenn *Server* nicht angegeben ist, meldet alle Server in **Master. sys. Servers**. *Server* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @server = ] 'server'`Gibt den Server an, über welche Informationen berichtet werden. Wenn *Server* nicht angegeben ist, meldet alle Server in **master.sys. Server**. *Server* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 `[ @optname = ] 'option'`Die Option, die den Server beschreibt. die Option ist vom Datentyp **varchar (** 35 **)**. der Standardwert ist NULL. die folgenden Werte sind *möglich* .  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**kompatibel mit Sortierung**|Betrifft die Ausführung verteilter Abfragen für Verbindungsserver. Wenn diese Option auf "true" festgelegt wird,|  
 |**Datenzugriff**|Aktiviert und deaktiviert den Zugriff auf verteilte Abfragen für Verbindungsserver.|  
@@ -76,7 +76,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|Der Timeout Wert für die Verbindung mit dem Verbindungs Server.|  
 |**query_timeout**|**int**|Timeoutwert für Abfragen auf einem Verbindungsserver.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Ein Server kann mehr als einen Status haben.  
   
 ## <a name="permissions"></a>Berechtigungen  
