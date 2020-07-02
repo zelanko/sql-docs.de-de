@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2aeaeb5d4eb06d6d632a59300225d01cc4376369
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 593318f929f3e0cb7862aab957e8864a35a618e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488055"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727694"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Hostschutzattribute und Programmierung der CLR-Integration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Die CLR (Common Language Runtime) stellt Mechanismen zur Verfügung, um verwaltete Anwendungsprogrammierschnittstellen (Application Programming Interfaces, APIs), die Teil von .NET Framework sind, mit Anmerkungen in Form von bestimmten Attributen zu versehen, die für einen Host der CLR, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], von Interesse sein können. Beispiele für solche Hostschutzattribute sind:  
   
 -   **SharedState**: gibt an, ob die API die Fähigkeit zur Erstellung oder Verwaltung eines freigegebenen Zustands (z. b. statische Klassen Felder) verfügbar macht.  
@@ -50,7 +50,7 @@ ms.locfileid: "81488055"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lässt die Verwendung eines Typs oder Members mit einem **Hostschutzattribute** , das ein System angibt, nicht zu **. Security. Berechtigungs-und hostschutzressourcenenumeration** mit einem Wert von **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronisierung**oder **UI**. Dies verhindert, dass Assemblys Elemente aufrufen, die die Freigabe des Zustands aktivieren, Synchronisierungen durchführen, einen Ressourcenverlust bei der Beendigung hervorrufen oder die Integrität des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses beeinträchtigen.  
   
 ### <a name="disallowed-types-and-members"></a>Unzulässige Typen und Member  
- In den folgenden Themen werden Typen und Member identifiziert, deren **hostschutzressourcenwerte** durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht zulässig sind.  
+ In den folgenden Themen werden Typen und Member identifiziert, deren **hostschutzressourcenwerte** durch nicht zulässig sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Die Listen in diesen Themen wurden von den unterstützten Assemblys generiert.  Weitere Informationen finden Sie [unter Supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  

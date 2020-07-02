@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 549c60eff284c4302f3695786bc87074c9b0d617
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84fd6a1b23287b53115a21cd519244525d7939ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725792"
 ---
 # <a name="sysdatabase_mirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jede Datenbank in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Wenn die Datenbank nicht ONLINE ist oder die Datenbankspiegelung nicht aktiviert ist, weisen alle Spalten, ausgenommen database_id, den Wert NULL auf.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "82821706"
 |**mirroring_role_desc**|**nvarchar(60)**|Beschreibung der Rolle der lokalen Datenbank im Rahmen der Spiegelung. Folgende Werte sind möglich:<br /><br /> PRINCIPAL<br /><br /> MIRROR|  
 |**mirroring_role_sequence**|**int**|Die Anzahl von Rollenwechseln zwischen den Spiegelungspartnern (Prinzipal und Spiegel) aufgrund eines Failovers oder eines erzwungenen Diensts.<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_safety_level**|**tinyint**|Sicherheitseinstellung für Updates in der Spiegeldatenbank:<br /><br /> 0 = Unbekannter Status<br /><br /> 1 = Deaktiviert [asynchron]<br /><br /> 2 = Vollständige Sicherheit [synchron]<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
-|**mirroring_safety_level_desc**|**nvarchar(60)**|Transaktionssicherheitseinstellung für Updates in der Spiegeldatenbank. Folgende Werte sind möglich:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL|  
+|**mirroring_safety_level_desc**|**nvarchar(60)**|Transaktionssicherheitseinstellung für Updates in der Spiegeldatenbank. Folgende Werte sind möglich:<br /><br /> UNBEKANNT<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL|  
 |**mirroring_safety_sequence**|**int**|Updatesequenznummer für Änderungen an der Transaktionssicherheitsstufe.<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_partner_name**|**nvarchar(128)**|Servername des Datenbank-Spiegelungspartners.<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_partner_instance**|**nvarchar(128)**|Instanzname und Computername des anderen Partners. Clients benötigen diese Information, um die Verbindung mit dem Partner herstellen zu können, wenn dieser zum Prinzipalserver wird.<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_witness_name**|**nvarchar(128)**|Servername des Datenbank-Spiegelungszeugen.<br /><br /> NULL = Es gibt keinen Zeugen.|  
 |mirroring_witness_state|**tinyint**|Status des Zeugen in der Datenbankspiegelungssitzung der Datenbank. Folgende Werte sind möglich:<br /><br /> 0 = Unbekannt<br /><br /> 1 = Verbunden<br /><br /> 2 = Getrennt<br /><br /> NULL = Es ist kein Zeuge vorhanden, die Datenbank befindet sich nicht online, oder die Datenbank wird nicht gespiegelt.|  
-|**mirroring_witness_state_desc**|**nvarchar(60)**|Beschreibung des Status. Folgende Werte sind möglich:<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL|  
+|**mirroring_witness_state_desc**|**nvarchar(60)**|Beschreibung des Status. Folgende Werte sind möglich:<br /><br /> UNBEKANNT<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL|  
 |**mirroring_failover_lsn**|**numeric(25,0)**|Protokollsequenznummer (Log Sequence Number, LSN) des aktuellsten Transaktionsprotokoll-Datensatzes, für den das Festschreiben auf der Festplatte auf beiden Partnern garantiert wird. Nach einem Failover wird der **mirroring_failover_lsn** von den Partnern als Punkt der Abstimmung verwendet, bei dem der neue Spiegel Server mit der Synchronisierung der neuen Spiegel Datenbank mit der neuen Prinzipal Datenbank beginnt.|  
 |**mirroring_connection_timeout**|**int**|Timeout für die Spiegelungsverbindung in Sekunden. Dieser Wert entspricht der Anzahl von Sekunden, die auf eine Antwort vom Partner oder Zeugen gewartet wird, bis dieser als nicht verfügbar eingestuft wird. Standardmäßig beträgt der Timeoutwert 10 Sekunden.<br /><br /> NULL = Auf die Datenbank kann nicht zugegriffen werden, oder die Datenbank wird nicht gespiegelt.|  
 |**mirroring_redo_queue**|**int**|Maximaler Umfang des Protokolls für die Wiederholung auf dem Spiegel. Wenn mirroring_redo_queue_type auf UNLIMITED festgelegt ist (Standardeinstellung), ist der Wert dieser Spalte NULL. Wenn die Datenbank nicht online ist, ist der Wert dieser Spalte ebenfalls NULL.<br /><br /> Andernfalls enthält diese Spalte den maximalen Protokollumfang in MB. Wenn das Maximum erreicht ist, wird das Protokoll auf dem Prinzipal vorübergehend angehalten, bis der Spiegelserver den aktuellen Stand erreicht hat. Durch diese Funktion wird die Failoverzeit begrenzt.<br /><br /> Weitere Informationen finden Sie unter [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)ausgetauscht werden.|  

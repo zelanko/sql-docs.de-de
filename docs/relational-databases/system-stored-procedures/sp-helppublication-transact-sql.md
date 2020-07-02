@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59f47194e94e256ddb6e2ded61dc61198dea26b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b4c5d3157c6683a793f30eccd878aa9e691c7023
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729219"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Gibt Informationen zu einer Veröffentlichung zurück. Für eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Veröffentlichung wird diese gespeicherte Prozedur auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt. Bei einer Veröffentlichung für Oracle wird diese gespeicherte Prozedur auf dem Verteiler für eine beliebige Datenbank ausgeführt.  
   
@@ -59,7 +59,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |task||Dieser Parameter wird aus Gründen der Abwärtskompatibilität verwendet.|  
 |replication frequency|**tinyint**|Art der Replikationshäufigkeit:<br /><br /> **0** = transaktional<br /><br /> **1** = Momentaufnahme|  
 |synchronization method|**tinyint**|Synchronisierungsmethode:<br /><br /> **0** = System eigenes Massen Kopier Programm (**bcp** -Hilfsprogramm)<br /><br /> **1** = Massen Kopieren von Zeichen<br /><br /> **3** = gleichzeitig, d. h., es wird ein System eigenes Massen Kopiervorgang (**bcp**-Hilfsprogramm) verwendet, aber Tabellen sind während der Momentaufnahme<br /><br /> **4** = concurrent_c. Dies bedeutet, dass das Massen Kopieren von Zeichen verwendet wird, Tabellen jedoch während der Momentaufnahme nicht gesperrt sind.|  
-|Beschreibung|**nvarchar(255)**|Optionale Beschreibung für die Veröffentlichung.|  
+|description|**nvarchar(255)**|Optionale Beschreibung für die Veröffentlichung.|  
 |immediate_sync|**bit**|Gibt an, ob die Synchronisierungsdateien bei jeder Ausführung des Momentaufnahme-Agents erstellt oder neu erstellt werden.|  
 |enabled_for_internet|**bit**|Gibt an, ob die Synchronisierungsdateien für die Veröffentlichung im Internet über FTP (File Transfer Protocol) oder andere Dienste bereitgestellt werden.|  
 |allow_push|**bit**|Gibt an, ob Pushabonnements für die Veröffentlichung zulässig sind.|  
@@ -88,7 +88,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |conflict_retention|**int**|Gibt die Konfliktaufbewahrungsdauer in Tagen an.|  
 |conflict_policy|**int**|Gibt die Richtlinie zur Konfliktlösung an, die für die Option zur verzögerten Aktualisierung über eine Warteschlange verwendet wird. Einer der folgenden Werte ist möglich:<br /><br /> **1** = der Verleger gewinnt den Konflikt.<br /><br /> **2** = Abonnent gewinnt den Konflikt.<br /><br /> **3** = das Abonnement wird erneut initialisiert.|  
 |queue_type||Gibt an, welcher Wartenschlangentyp verwendet wird. Einer der folgenden Werte ist möglich:<br /><br /> **MSMQ** = verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing, um Transaktionen zu speichern.<br /><br /> **SQL** = wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen verwendet.<br /><br /> Hinweis: die Unterstützung für Message Queuing wurde eingestellt.|  
-|backward_comp_level||Der Datenbank-Kompatibilitätsgrad. Folgende Werte sind möglich:<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100**  =  100 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level||Der Datenbank-Kompatibilitätsgrad. Folgende Werte sind möglich:<br /><br /> **90**  =  90 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100**  =  100 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht wird. Der Wert **1** gibt an, dass Sie veröffentlicht wird, und der Wert **0** gibt an, dass Sie nicht veröffentlicht wird.|  
 |allow_initialize_from_backup|**bit**|Gibt an, ob Abonnenten ein Abonnement für diese Veröffentlichung über eine Sicherung anstelle einer Anfangsmomentaufnahme initialisieren können. **1** bedeutet, dass Abonnements aus einer Sicherung initialisiert werden können, und **0** bedeutet, dass Sie nicht möglich sind. Weitere Informationen finden Sie unter [Initialisieren eines Transaktions Abonnements ohne Momentaufnahme](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) einen Transaktions Abonnenten ohne Momentaufnahme.|  
 |replicate_ddl|**int**|Gibt an, ob die Schema Replikation für die Veröffentlichung unterstützt wird. **1** gibt an, dass DDL-Anweisungen (Data Definition Language), die auf dem Verleger ausgeführt werden, repliziert werden, und **0** bedeutet, dass DDL-Anweisungen nicht repliziert werden Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
@@ -104,7 +104,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  sp_helppublication wird bei der Momentaufnahme- und Transaktionsreplikation verwendet.  
   
  sp_helppublication gibt Informationen zu allen Veröffentlichungen zurück, die sich im Besitz des Benutzers befinden, der diese Prozedur ausführt.  

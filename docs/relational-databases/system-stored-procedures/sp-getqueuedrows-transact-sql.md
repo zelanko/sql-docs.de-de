@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f12da71985fc0d2629c28500c4561eb1495c0ca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 227b83f8171122bfd5c7f328628ccb07c359de87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731637"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ruft beim Abonnenten Zeilen ab, die über ausstehende Updates in der Warteschlange verfügen. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   
@@ -58,7 +58,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |**table column1...n**||Der Wert für jede Spalte der Tabelle, die in *TableName*angegeben ist.|  
 |**msrepl_tran_version**|**uniqueidentifier**|Diese Spalte wird zum Nachverfolgen von Änderungen an replizierten Daten und für die Konflikterkennung auf dem Verleger verwendet. Diese Spalte wird automatisch der Tabelle hinzugefügt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_getqueuedrows** wird auf Abonnenten verwendet, die am verzögertem Update über eine Warteschlange  
   
  **sp_getqueuedrows** ermittelt Zeilen einer bestimmten Tabelle in einer Abonnement Datenbank, die an einem verzögertem Update in der Warteschlange beteiligt waren, aber derzeit noch nicht vom Warteschlangen Lese-Agent aufgelöst wurden.  

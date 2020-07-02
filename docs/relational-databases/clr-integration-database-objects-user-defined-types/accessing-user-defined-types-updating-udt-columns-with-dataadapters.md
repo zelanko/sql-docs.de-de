@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08c36963088684d415534e091a2764f576a86d22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07b1dc9d3f7beca9f048ec0e367c33922e388f32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727828"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Zugreifen auf benutzerdefinierte Typen: Aktualisieren von UDT-Spalten mit DataAdapters
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Benutzerdefinierte Typen (User-Defined Types, UDTs) werden mithilfe von **System. Data. DataSet** und **System. Data. SqlClient. SqlDataAdapter** zum Abrufen und Ändern von Daten unterstützt.  
   
 ## <a name="populating-a-dataset"></a>Auffüllen eines Datasets  
@@ -68,7 +68,7 @@ da.Fill(datTable);
   
 -   Stellen Sie benutzerdefinierte **InsertCommand**-, **UpdateCommand** -und **DeleteCommand** -Objekte für ein **SqlDataAdapter** -Objekt bereit.  
   
--   Verwenden Sie den Befehls-Generator (**System. Data. SqlClient. SqlCommandBuilder**), um automatisch die INSERT-, Update-und DELETE-Befehle für Sie zu erstellen. Fügen Sie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle, die den UDT enthält, eine **Zeitstempel** -Spalte (Alias- **rowversion**) hinzu, um eine Konflikterkennung zu erhalten. Der **Zeitstempel** -Datentyp ermöglicht es Ihnen, die Zeilen in einer Tabelle zu versionstempeln und innerhalb einer Datenbank eindeutig zu sein. Wird ein Wert in der Tabelle geändert, aktualisiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die binäre 8-Bit-Zahl für die von der Änderung betroffenen Zeile.  
+-   Verwenden Sie den Befehls-Generator (**System. Data. SqlClient. SqlCommandBuilder**), um automatisch die INSERT-, Update-und DELETE-Befehle für Sie zu erstellen. Fügen Sie der Tabelle, die den UDT enthält, eine **Zeitstempel** -Spalte (Alias- **rowversion**) hinzu, um eine Konflikterkennung zu erhalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Der **Zeitstempel** -Datentyp ermöglicht es Ihnen, die Zeilen in einer Tabelle zu versionstempeln und innerhalb einer Datenbank eindeutig zu sein. Wird ein Wert in der Tabelle geändert, aktualisiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die binäre 8-Bit-Zahl für die von der Änderung betroffenen Zeile.  
   
  Beachten Sie, dass **SqlCommandBuilder** den UDT nicht für die Konflikterkennung berücksichtigt, es sei denn, in der zugrunde liegenden Tabelle ist eine **Zeitstempel** -Spalte vorhanden. UDTs können zwar vergleichbar sein, sie sind jedoch nicht in der WHERE-Klausel enthalten, wenn die Option zum Vergleichen der ursprünglichen Werte verwendet wird, um einen Befehl zu erstellen.  
   

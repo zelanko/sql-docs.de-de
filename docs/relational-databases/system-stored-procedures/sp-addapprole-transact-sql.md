@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 74860a8f4c8dee263ea7ee0eea75679c721d1fa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28eb993cc6755d596d49e7930a3fd68b884b8f29
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68032979"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731722"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fügt der aktuellen Datenbank eine Anwendungsrolle hinzu.  
   
@@ -44,17 +44,17 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="arguments"></a>Argumente  
 `[ @rolename = ] 'role'`Der Name der neuen Anwendungs Rolle. *Role* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die *Rolle* muss ein gültiger Bezeichner sein und darf nicht bereits in der aktuellen Datenbank vorhanden sein.  
   
- Namen von Anwendungsrollen können zwischen 1 und 128 Zeichen (Buchstaben, Sonderzeichen und Ziffern) enthalten. Rollennamen dürfen keinen umgekehrten Schrägstrich (\\) und keinen NULL-Wert oder eine leere Zeichenfolge (' ') enthalten.  
+ Namen von Anwendungsrollen können zwischen 1 und 128 Zeichen (Buchstaben, Sonderzeichen und Ziffern) enthalten. Rollennamen dürfen keinen umgekehrten Schrägstrich ( \\ ) und keinen NULL-Wert oder eine leere Zeichenfolge (' ') enthalten.  
   
 `[ @password = ] 'password'`Das Kennwort, das zum Aktivieren der Anwendungs Rolle erforderlich ist. *Password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Das *Kennwort* darf nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterscheiden sich Benutzer (und Rollen) nicht vollständig von Schemas. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] unterscheiden sich Schemas und Rollen vollständig. Diese neue Architektur spiegelt sich im Verhalten von CREATE APPLICATION ROLE wider. Diese Anweisung ersetzt **sp_addapprole**.  
   
- Um die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu gewährleisten, werden **sp_addapprole** folgende Aktionen ausführen:  
+ Um die Abwärtskompatibilität mit früheren Versionen von zu gewährleisten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , werden **sp_addapprole** folgende Aktionen ausführen:  
   
 -   Wenn nicht bereits ein Schema mit dem gleichen Namen wie die Anwendungsrolle vorhanden ist, wird ein solches Schema erstellt. Das neue Schema ist im Besitz der Anwendungsrolle und wird als Standardschema der Anwendungsrolle verwendet.  
   
@@ -73,7 +73,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
  Erfordert die ALTER ANY APPLICATION ROLE-Berechtigung in der Datenbank. Ist nicht bereits ein Schema mit dem gleichen Namen und Besitzer wie die neue Rolle vorhanden, ist auch die CREATE SCHEMA-Berechtigung für die Datenbank erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird der aktuellen Datenbank die `SalesApp` neue Anwendungs Rolle `x97898jLJfcooFUYLKm387gf3` mit dem Kennwort hinzugefügt.  
+ Im folgenden Beispiel wird der aktuellen Datenbank die neue Anwendungs Rolle `SalesApp` mit dem Kennwort hinzugefügt `x97898jLJfcooFUYLKm387gf3` .  
   
 ```  
 EXEC sp_addapprole 'SalesApp', 'x97898jLJfcooFUYLKm387gf3' ;  

@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fdd552b0954f0eda838743530ab94e73aa27067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 749be1b26a7802119346434b016b376ea94910cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727603"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Data Access from CLR Database Objects
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Eine Common Language Runtime-Routine (CLR) kann problemlos auf Daten zugreifen, die in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Instanz von gespeichert sind, in der Sie ausgeführt wird, sowie auf Daten, die in Remote Instanzen gespeichert sind. Auf welche Daten die Routine zugreifen kann, wird durch den Benutzerkontext bestimmt, in dem der Code ausgeführt wird. Greifen Sie in einem CLR-Datenbankobjekt auf Daten zu, indem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Sie die .NET Framework Datenanbieter für verwenden. Dies wird auch als **SqlClient**bezeichnet. Dies ist der gleiche Anbieter, den Entwickler zum Zugriff von verwalteten Clientanwendungen und Anwendungen der mittleren Ebene auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Daten verwenden. Aus diesem Grund können Sie Ihre Kenntnisse über ADO.net und **SqlClient** in Client Anwendungen und Anwendungen der mittleren Ebene nutzen.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  Eine Common Language Runtime-Routine (CLR) kann problemlos auf Daten zugreifen, die in der Instanz von gespeichert [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sind, in der Sie ausgeführt wird, sowie auf Daten, die in Remote Instanzen gespeichert sind. Auf welche Daten die Routine zugreifen kann, wird durch den Benutzerkontext bestimmt, in dem der Code ausgeführt wird. Greifen Sie in einem CLR-Datenbankobjekt auf Daten zu, indem Sie die .NET Framework Datenanbieter für verwenden. Dies wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auch als **SqlClient**bezeichnet. Dies ist der gleiche Anbieter, den Entwickler zum Zugriff von verwalteten Clientanwendungen und Anwendungen der mittleren Ebene auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Daten verwenden. Aus diesem Grund können Sie Ihre Kenntnisse über ADO.net und **SqlClient** in Client Anwendungen und Anwendungen der mittleren Ebene nutzen.  
   
 > [!NOTE]  
 >  Benutzerdefinierten Typmethoden und benutzerdefinierten Funktionen wird nicht ermöglicht, standardmäßig auf Daten zuzugreifen. Sie müssen die **DataAccess** -Eigenschaft von **SqlMethodAttribute** oder **SqlFunctionAttribute** auf **DataAccessKind. Read** festlegen, um schreibgeschützten Datenzugriff von benutzerdefinierten Typen (User-Defined Type, UDT) oder benutzerdefinierten Funktionen zu aktivieren. Datenänderungsvorgänge von UDTs oder benutzerdefinierten Funktionen ausgehend sind nicht zulässig. Ein solcher Versuch löst zur Ausführungszeit eine Ausnahme aus.  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac12bf75588d70f12b4550260f9911796c1c3a56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727626"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR-Integrationsarchitektur: Leistung
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  In diesem Thema werden einige der Entwurfs Optionen erläutert, die die Leistung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Integration in [!INCLUDE[msCoName](../../includes/msconame-md.md)] die .NET Framework Common Language Runtime (CLR) verbessern.  
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+  In diesem Thema werden einige der Entwurfs Optionen erläutert, die die Leistung der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration in die [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR) verbessern.  
   
 ## <a name="the-compilation-process"></a>Der Kompilierungsprozess  
  Wenn während der Kompilierung von SQL-Ausdrücken ein Verweis auf eine verwaltete Routine gefunden wird, wird ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language (MSIL)-Stub generiert. Dieser Stub enthält Code zum Marshallen der Routineparameter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu CLR, zum Aufrufen der Funktion und zur Rückgabe des Ergebnisses. Dieser "Verbindungscode" basiert auf dem Parametertyp und der Parameterrichtung (IN, OUT oder Verweis).  
@@ -56,7 +56,7 @@ ms.locfileid: "81488152"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Zeichendaten, wie z. b. **varchar**, können in verwalteten Funktionen vom Typ SqlString oder SqlChars sein. SqlString-Variablen erstellen im Arbeitsspeicher eine Instanz des gesamten Werts. SqlChars-Variablen stellen eine Streamingschnittstelle bereit, mit der eine höhere Leistung und bessere Skalierbarkeit erreicht wird, die jedoch nicht zum Erstellen einer Instanz des gesamten Werts im Arbeitsspeicher verwendet werden kann. Dies ist besonders für Daten großer Objekte (Large Objects, LOB) wichtig. Darüber hinaus kann auf die Server-XML-Daten über eine von **SQLXML. kreatereader ()** zurückgegebene Streamingschnittstelle zugegriffen werden.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR und erweiterte gespeicherte Prozeduren im Vergleich  
- Die Microsoft.SqlServer.Server-APIs (Application Programming Interfaces), die es verwalteten Prozeduren ermöglichen, Resultsets zurück an den Client zu senden, sind leistungsfähiger als die von erweiterten gespeicherten Prozeduren verwendeten Open Data Services(ODS)-APIs. Außerdem unterstützen die System. Data. SqlServer-APIs Datentypen wie **XML**, **varchar (max)**, **nvarchar (max)** und **varbinary (max)**, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]eingeführt wurden, während die ODS-APIs nicht für die Unterstützung der neuen Datentypen erweitert wurden.  
+ Die Microsoft.SqlServer.Server-APIs (Application Programming Interfaces), die es verwalteten Prozeduren ermöglichen, Resultsets zurück an den Client zu senden, sind leistungsfähiger als die von erweiterten gespeicherten Prozeduren verwendeten Open Data Services(ODS)-APIs. Außerdem unterstützen die System. Data. SqlServer-APIs Datentypen wie **XML**, **varchar (max)**, **nvarchar (max)** und **varbinary (max)**, die in eingeführt wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , während die ODS-APIs nicht für die Unterstützung der neuen Datentypen erweitert wurden.  
   
  Mit verwaltetem Code verwaltet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Verwendung von Ressourcen wie beispielsweise Arbeitsspeicher, Threads und Synchronisierung. Das rührt daher, dass die verwalteten APIs, die diese Ressourcen verfügbar machen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen-Manager implementiert werden. Hingegen verfügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über keine Sicht für oder Kontrolle über die Ressourcenverwendung der erweiterten gespeicherten Prozedur. Wenn eine erweiterte gespeicherte Prozedur beispielsweise zu viel CPU- oder Speicherressourcen belegt, gibt es keine Möglichkeit, dies mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu erkennen oder zu kontrollieren. Mit verwaltetem Code kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hingegen erkennen, dass ein bestimmter Thread längere Zeit nicht aktiv war, und dann die Ausführung des Tasks erzwingen, damit andere Arbeit geplant werden kann. Infolgedessen kann mit verwaltetem Code eine bessere Skalierbarkeit und Systemressourcenverwendung erreicht werden.  
   

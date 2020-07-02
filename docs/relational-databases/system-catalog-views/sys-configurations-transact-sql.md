@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7986fc4286cf681507a80a72f2f308b6a96f413a
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 2cb91576a8ef3d8aaa4dd5e9369b8420e53ae52d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215861"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725822"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jeden serverweiten Konfigurations Optionswert im System.  
 
@@ -37,13 +37,13 @@ ms.locfileid: "84215861"
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
 |**value**|**sql_variant**|Der für diese Option konfigurierte Wert.|  
 |**Garantien**|**sql_variant**|Der Mindestwert für die Konfigurationsoption.|  
-|**maximum**|**sql_variant**|Der Höchstwert für die Konfigurationsoption.|  
+|**maximale**|**sql_variant**|Der Höchstwert für die Konfigurationsoption.|  
 |**value_in_use**|**sql_variant**|Ausgeführter Wert, der derzeit für diese Option wirksam ist.|  
 |**description**|**nvarchar(255)**|Beschreibung der Konfigurationsoption.|  
 |**is_dynamic**|**bit**|1 = Variable, die bei Ausführung der RECONFIGURE-Anweisung wirksam wird.|  
 |**is_advanced**|**bit**|1 = die Variable wird nur angezeigt, wenn die **Option advancedoption anzeigen** festgelegt ist.|  
   
- ## <a name="remarks"></a>Bemerkungen
+ ## <a name="remarks"></a>Hinweise
   Eine Liste aller Server Konfigurationsoptionen finden Sie unter [Server Configuration options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ select * from sys.configurations where value != value_in_use
 
 Wenn der Wert der Änderung für die von Ihnen vorgenommene Konfigurationsoption entspricht, der **value_in_use** jedoch nicht identisch ist, wurde entweder der RECONFIGURE-Befehl nicht ausgeführt, oder es ist ein Fehler aufgetreten, oder die Server-Engine muss neu gestartet werden.
 
-Es gibt Konfigurationsoptionen, bei denen der Wert und die value_in_use möglicherweise nicht identisch sind und dieses Verhalten erwartet wird. Zum Beispiel:
+Es gibt Konfigurationsoptionen, bei denen der Wert und die value_in_use möglicherweise nicht identisch sind und dieses Verhalten erwartet wird. Beispiel:
 
 "Max. Server Arbeitsspeicher (MB)": der konfigurierte Standardwert "0" wird als value_in_use = 2147483647 "min. Server Arbeitsspeicher (MB)" angezeigt. der konfigurierte Standardwert "0" wird möglicherweise als value_in_use = 8 (32-Bit) oder 16 (64 Bit) angezeigt. 
 

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88ec07ae0655f6a4617f15ed5f486a8fbb1b61d4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 66a4d334719707d8f906b6026737037d7ea28175
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725655"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Weist den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent an, die Ausführung des Auftrags zu beenden.  
 
@@ -64,7 +64,7 @@ sp_stop_job
 ## <a name="remarks"></a>Bemerkungen  
  **sp_stop_job** sendet ein Stoppsignal an die Datenbank. Einige Prozesse können sofort beendet werden, und einige müssen einen stabilen Punkt (oder einen Einstiegspunkt zum Codepfad) erreichen, bevor Sie beendet werden können. Bei einigen zeitaufwändigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, etwa BACKUP, RESTORE oder einigen DBCC-Befehlen, kann es längere Zeit dauern, bis sie abgeschlossen sind. Wenn diese ausgeführt werden, kann es einige Zeit dauern, bis der Auftrag abgebrochen wird. Der Abbruch eines Auftrags führt dazu, dass ein entsprechender Eintrag im Auftragsverlauf aufgezeichnet wird.  
   
- Wenn ein Auftrag aktuell einen Schritt des Typs **CmdExec** oder **PowerShell**ausführt, wird der ausgeführte Prozess (z. b. MyProgram. exe) vorzeitig beendet. Ein vorzeitiger Abbruch kann unvorhersehbare Folgen haben, z. B. dass Dateien, die von dem Prozess verwendet wurden, geöffnet bleiben. Folglich sollten **sp_stop_job** nur in extremen Fällen verwendet werden, wenn der Auftrag Schritte des Typs **CmdExec** oder **PowerShell**enthält.  
+ Wenn ein Auftrag aktuell einen Schritt des Typs **CmdExec** oder **PowerShell**ausführt, wird der ausgeführte Prozess (z. b. MyProgram.exe) vorzeitig beendet. Ein vorzeitiger Abbruch kann unvorhersehbare Folgen haben, z. B. dass Dateien, die von dem Prozess verwendet wurden, geöffnet bleiben. Folglich sollten **sp_stop_job** nur in extremen Fällen verwendet werden, wenn der Auftrag Schritte des Typs **CmdExec** oder **PowerShell**enthält.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6084f17cca92211d1ec102fe941c98774c105e9a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6df2b3b8ac52211cc7a558724549870da8ff85e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730035"
 ---
 # <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt die Anzahl von Aufträgen an, an die ein Zeitplan angefügt ist.  
   
@@ -55,7 +55,7 @@ sp_help_jobcount
 |-----------------|---------------|-----------------|  
 |**JOBCOUNT**|**int**|Anzahl von Aufträgen für den angegebenen Zeitplan.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In dieser Prozedur wird die Anzahl von Aufträgen aufgelistet, die an den angegebenen Zeitplan angefügt sind.  
   
 ## <a name="permissions"></a>Berechtigungen  

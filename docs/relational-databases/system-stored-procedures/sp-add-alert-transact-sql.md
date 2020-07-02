@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e917afd75495ed2e6c2506bc0c012d4bfa7a8e4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71174257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727216"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Erstellt eine Warnung.  
   
@@ -53,14 +53,14 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'`Der Name der Warnung. Der Name wird in der E-Mail- oder Pagernachricht angezeigt, die als Reaktion auf die Warnung gesendet wird. Er muss eindeutig sein und kann das Prozentzeichen (**%**) enthalten. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @name = ] 'name'`Der Name der Warnung. Der Name wird in der E-Mail- oder Pagernachricht angezeigt, die als Reaktion auf die Warnung gesendet wird. Er muss eindeutig sein und kann das Prozentzeichen ( **%** ) enthalten. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
   
 `[ @message_id = ] message_id`Die Nachrichten Fehlernummer, die die Warnung definiert. (Dies entspricht in der Regel einer Fehlernummer in der Tabelle **sysmess** .) *message_id* ist vom Datentyp **int**und hat den Standardwert **0**. Wenn der *Schweregrad* zum Definieren der Warnung verwendet wird, muss *message_id* **0** oder NULL sein.  
   
 > [!NOTE]  
 >  Nur **sysmess** -Fehler, die in das Microsoft Windows-Anwendungsprotokoll geschrieben werden, können dazu führen, dass eine Warnung gesendet wird.  
   
-`[ @severity = ] severity`Der Schweregrad (von **1** bis **25**), der die Warnung definiert. Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der **sysmess** -Tabelle gespeicherte Nachricht, die mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] dem angegeben Schweregrad an das Windows-Anwendungsprotokoll gesendet wird, bewirkt, dass die Warnung gesendet wird. der *Schweregrad* ist vom Datentyp **int**. der Standardwert ist 0. Wenn *message_id* zum Definieren der Warnung verwendet wird, muss der *Schweregrad* **0**sein.  
+`[ @severity = ] severity`Der Schweregrad (von **1** bis **25**), der die Warnung definiert. Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der **sysmess** -Tabelle gespeicherte Nachricht, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] mit dem angegeben Schweregrad an das Windows-Anwendungsprotokoll gesendet wird, bewirkt, dass die Warnung gesendet wird. der *Schweregrad* ist vom Datentyp **int**. der Standardwert ist 0. Wenn *message_id* zum Definieren der Warnung verwendet wird, muss der *Schweregrad* **0**sein.  
   
 `[ @enabled = ] enabled`Gibt den aktuellen Status der Warnung an. *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist 1 (aktiviert). Wenn der Wert **0**ist, ist die Warnung nicht aktiviert und wird nicht ausgelöst.  
   
@@ -74,10 +74,10 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @notification_message = ] 'notification_message'`Ist eine optionale zusätzliche Nachricht, die als Teil der e-Mail-, **net send**-oder Pager-Benachrichtigung an den Operator gesendet wird. *notification_message* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL. Das Angeben von *notification_message* ist nützlich zum Hinzufügen von speziellen Notizen, wie z. b  
   
-`[ @include_event_description_in = ] include_event_description_in`Gibt an, ob die Beschreibung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des Fehlers als Teil der Benachrichtigungs Meldung eingeschlossen werden soll. *include_event_description_in*ist vom Datentyp **tinyint**. der Standardwert ist **5** (e-Mail und **net send**), und ein oder mehrere dieser Werte können mit einem logischen **or** -Operator kombiniert werden.  
+`[ @include_event_description_in = ] include_event_description_in`Gibt an, ob die Beschreibung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlers als Teil der Benachrichtigungs Meldung eingeschlossen werden soll. *include_event_description_in*ist vom Datentyp **tinyint**. der Standardwert ist **5** (e-Mail und **net send**), und ein oder mehrere dieser Werte können mit einem logischen **or** -Operator kombiniert werden.  
   
 > [!IMPORTANT]
->  Die Pager-und **net send** -Optionen werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aus dem-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
+>  Die Pager-und **net send** -Optionen werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer zukünftigen Version von aus dem-Agent entfernt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -101,9 +101,9 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @performance_condition = ] 'performance_condition'`Ein Wert, der im Format '*itemcomparatorvalue*' ausgedrückt wird. *performance_condition* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL und besteht aus diesen Elementen.  
   
-|Format-Element|BESCHREIBUNG|  
+|Format-Element|Beschreibung|  
 |--------------------|-----------------|  
-|*Position*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
+|*Item*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
 |*Vergleichs Operator*|Einer dieser Operatoren: >, < oder =|  
 |*Wert*|Numerischer Wert des Indikators|  
   
@@ -142,7 +142,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   Die Warnung ist aktiviert.  
   
--   Ereignisse, die mit **xp_logevent** generiert werden, treten in der master-Datenbank auf. Daher löst **xp_logevent** nur dann eine Warnung aus, wenn der ** \@database_name** für die Warnung **"Master"** oder NULL ist.  
+-   Ereignisse, die mit **xp_logevent** generiert werden, treten in der master-Datenbank auf. Daher löst **xp_logevent** nur dann eine Warnung aus, wenn der ** \@ database_name** für die Warnung **"Master"** oder NULL ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** die Prozedur **sp_add_alert**ausführen.  
@@ -172,7 +172,7 @@ GO
  [sp_delete_alert &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [sp_update_alert &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [sys. sysperfinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sys.sysperfinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

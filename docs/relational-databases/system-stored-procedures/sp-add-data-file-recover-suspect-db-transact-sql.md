@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c95b74b5c1875f2a1f1db40ec42e3f3ada87a63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 144d563bf27f0d6133da0ab4facb26edd3a23d44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942365"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731747"
 ---
 # <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fügt einer Dateigruppe eine Datendatei hinzu, wenn die Wiederherstellung für eine Datenbank wegen unzureichendem Speicherplatzes (Fehler 1105) für die Dateigruppe nicht ausgeführt werden kann. Nachdem die Datei hinzugefügt wurde, deaktiviert diese gespeicherte Prozedur die Einstellung, die die Datenbank als fehlerverdächtig kennzeichnet, und führt die Wiederherstellung der Datenbank durch. Die Parameter sind dieselben wie für ALTER DATABASE *database_name* Add File.  
   
@@ -49,7 +49,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
   
 `[ @filegroup = ] 'filegroup_name_ '`Die Datei Gruppe, der die Datei hinzugefügt werden soll. *filegroup_name* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL, der die primäre Datei angibt.  
   
-`[ @name = ] 'logical_file_name_ '`Der Name [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , der in verwendet wird, um auf die Datei zu verweisen. Der Name muss auf dem Server eindeutig sein. *logical_file_name* ist vom Datentyp **nvarchar (260)** und hat keinen Standardwert.  
+`[ @name = ] 'logical_file_name_ '`Der Name, der in verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um auf die Datei zu verweisen. Der Name muss auf dem Server eindeutig sein. *logical_file_name* ist vom Datentyp **nvarchar (260)** und hat keinen Standardwert.  
   
 `[ @filename = ] 'os_file_name_ '`Der Pfad und der Dateiname, die vom Betriebssystem für die Datei verwendet werden. Die Datei muss sich auf einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s befinden. *os_file_name* ist vom Datentyp **nvarchar (260)** und hat keinen Standardwert.  
   

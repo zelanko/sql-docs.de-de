@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d35db27e171c8cc31a463ad9ae91613d1c0708c
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: ad25db1aa5a10039bc80766b30e1d2ba478df123
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305709"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730979"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>XQuery-Funktionen für den xml-Datentyp
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   In diesem Thema und seinen Unterthemen werden die Funktionen beschrieben, die Sie verwenden können, wenn Sie XQuery für den **XML** -Datentyp angeben. Informationen zu den W3C-Spezifikationen finden Sie unter [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873) .  
   
@@ -33,7 +33,7 @@ ms.locfileid: "84305709"
   
  In der folgenden Tabelle sind die XQuery-Funktionen aufgelistet, die für den **XML**-Datentyp unterstützt werden.  
   
-|Category|Funktionsname|  
+|Kategorie|Funktionsname|  
 |--------------|-------------------|  
 |[Funktionen für numerische Werte](https://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[Grenze](../xquery/numeric-values-functions-ceiling.md)|  
 ||[Steh](../xquery/numeric-values-functions-floor.md)|  
@@ -42,7 +42,7 @@ ms.locfileid: "84305709"
 ||[contains](../xquery/functions-on-string-values-contains.md)|  
 ||[substring](../xquery/functions-on-string-values-substring.md)|  
 ||[&#40;XQuery-&#41;für Kleinbuchstaben](../xquery/functions-on-string-values-lower-case.md)|  
-||[Zeichen folgen Länge](../xquery/functions-on-string-values-string-length.md)|  
+||[string-length](../xquery/functions-on-string-values-string-length.md)|  
 ||[&#40;XQuery-&#41;für Großbuchstaben](../xquery/functions-on-string-values-upper-case.md)|  
 |Funktionen für boolesche Werte|[not](../xquery/functions-on-boolean-values-not-function.md)|  
 |[Funktionen auf Knoten](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[Zahl](../xquery/functions-on-nodes-number.md)|  

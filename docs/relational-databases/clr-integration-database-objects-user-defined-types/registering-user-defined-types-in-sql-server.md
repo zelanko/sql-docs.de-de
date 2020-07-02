@@ -33,16 +33,16 @@ helpviewer_keywords:
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4383e245048035d4c05f7be3bedb7d3d13f835d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8918b20e02eb0d7045ad7e6603ed1f6cf4db40b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727780"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrieren benutzerdefinierter Typen in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Um einen benutzerdefinierten Typ (User-Defined Type, UDT) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in zu verwenden, müssen Sie ihn registrieren. Beim Registrieren eines UDT muss die Assembly registriert werden und der Typ in der Datenbank, in der er verwendet werden soll, erstellt werden. UDTs beschränken sich auf eine einzelne Datenbank und können nicht in mehreren Datenbanken verwendet werden, es sei denn die gleiche Assembly und der gleiche UDT wurden in jeder Datenbank registriert. Nachdem die UDT-Assembly registriert und der Typ erstellt wurden, können Sie den UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] und im Clientcode verwenden. Weitere Informationen finden Sie unter [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Um einen benutzerdefinierten Typ (User-Defined Type, UDT) in zu verwenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , müssen Sie ihn registrieren. Beim Registrieren eines UDT muss die Assembly registriert werden und der Typ in der Datenbank, in der er verwendet werden soll, erstellt werden. UDTs beschränken sich auf eine einzelne Datenbank und können nicht in mehreren Datenbanken verwendet werden, es sei denn die gleiche Assembly und der gleiche UDT wurden in jeder Datenbank registriert. Nachdem die UDT-Assembly registriert und der Typ erstellt wurden, können Sie den UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] und im Clientcode verwenden. Weitere Informationen finden Sie unter [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Verwenden von Visual Studio zum Bereitstellen von UDTs  
  Am einfachsten stellen Sie den UDT mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio bereit. Verwenden Sie jedoch bei komplexeren Bereitstellungsszenarios und für eine größere Flexibilität [!INCLUDE[tsql](../../includes/tsql-md.md)], wie nachfolgend in diesem Thema beschrieben.  
@@ -70,7 +70,7 @@ ms.locfileid: "81486934"
  Wenn CREATE ASSEMBLY mit dem SAFE- oder EXTERNAL_ACCESS-Berechtigungssatz ausgeführt wird, wird die Assembly überprüft, um sicherzustellen, dass sie überprüfbar und typsicher ist. Wenn Sie keinen Berechtigungssatz angeben, wird standardmäßig SAFE vorausgesetzt. Code mit dem UNSAFE-Berechtigungssatz wird nicht überprüft. Weitere Informationen zu Assemblyberechtigungen finden Sie unter [Entwerfen von Assemblys](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 #### <a name="example"></a>Beispiel  
- Mit der [!INCLUDE[tsql](../../includes/tsql-md.md)] folgenden-Anweisung wird die Point [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Assembly in in der **AdventureWorks** -Datenbank mit dem Safe-Berechtigungs Satz registriert. Wenn die WITH PERMISSION_SET-Klausel nicht angegeben wird, wird die Assembly mit dem SAFE-Berechtigungssatz registriert.  
+ Mit der folgenden- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung wird die Point-Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der **AdventureWorks** -Datenbank mit dem Safe-Berechtigungs Satz registriert. Wenn die WITH PERMISSION_SET-Klausel nicht angegeben wird, wird die Assembly mit dem SAFE-Berechtigungssatz registriert.  
   
 ```  
 USE AdventureWorks;  
@@ -79,7 +79,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- Mit der [!INCLUDE[tsql](../../includes/tsql-md.md)] folgenden Anweisung wird die Assembly mithilfe *<assembly_bits>* -Arguments in der from-Klausel registriert. Dieser **varbinary** -Wert stellt die Datei als Datenstrom von Bytes dar.  
+ Mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung wird die Assembly mithilfe *<assembly_bits>* -Arguments in der from-Klausel registriert. Dieser **varbinary** -Wert stellt die Datei als Datenstrom von Bytes dar.  
   
 ```  
 USE AdventureWorks;  
@@ -214,7 +214,7 @@ SELECT CAST(content AS varchar(8000))
   
  In diesen Szenarios findet die für den Server erforderliche Konvertierung automatisch statt. Sie können die Konvertierung nicht explizit mit den [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST- oder CONVERT-Funktionen durchführen.  
   
- Beachten Sie, dass Sie keine Maßnahmen ergreifen müssen, um UDTs zu verwenden [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , wenn Arbeits Tabellen in der **tempdb** -Systemdatenbank erstellt. Dies schließt die Handhabung von Cursorn, Tabellen Variablen und benutzerdefinierten Tabellenwert Funktionen ein, die UDTs enthalten und die **tempdb**transparent nutzen. Wenn Sie jedoch explizit eine temporäre Tabelle in **tempdb** erstellen, die eine UDT-Spalte definiert, muss der UDT in **tempdb** auf die gleiche Weise wie für eine Benutzerdatenbank registriert werden.  
+ Beachten Sie, dass Sie keine Maßnahmen ergreifen müssen, um UDTs zu verwenden, wenn [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Arbeits Tabellen in der **tempdb** -Systemdatenbank erstellt. Dies schließt die Handhabung von Cursorn, Tabellen Variablen und benutzerdefinierten Tabellenwert Funktionen ein, die UDTs enthalten und die **tempdb**transparent nutzen. Wenn Sie jedoch explizit eine temporäre Tabelle in **tempdb** erstellen, die eine UDT-Spalte definiert, muss der UDT in **tempdb** auf die gleiche Weise wie für eine Benutzerdatenbank registriert werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  

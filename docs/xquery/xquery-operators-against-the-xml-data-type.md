@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5692aa5b46d79c68165fa6f1320034fdb7e03b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3fc0fece7f57957f38344a557c88fbedb908090
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388304"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730946"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>XQuery-Operatoren für den xml-Datentyp
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery unterstützt die folgenden Operatoren:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "81388304"
   
 -   Operatoren für Wertvergleiche (eq, ne, lt, gt, le, ge)  
   
--   Operatoren für allgemeine Vergleiche (=,! = \<,, > \<, =, >=)  
+-   Operatoren für allgemeine Vergleiche (=,! =, \<, > , \<=, > =)  
   
  Weitere Informationen zu diesen Operatoren finden Sie unter [Vergleichsausdrücke &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
   

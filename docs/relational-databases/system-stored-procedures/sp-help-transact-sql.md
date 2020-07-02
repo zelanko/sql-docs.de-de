@@ -18,17 +18,17 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac6e69db443bd23c3e9b1119b21d8fd98ebe39c4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 57a435db1aca6c2ab9f093792e26f7e88dcbf21a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727177"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Meldet Informationen zu einem Datenbankobjekt (alle in der **sys. sysobjects** -Kompatibilitäts Sicht aufgeführten Objekte), einen benutzerdefinierten Datentyp oder einen-Datentyp.  
+  Meldet Informationen zu einem Datenbankobjekt (alle in dersys.sys-Objekt Kompatibilitäts Sicht aufgeführten **Objekte** ), einen benutzerdefinierten Datentyp oder einen-Datentyp.  
   
  
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -78,7 +78,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Name**|**nvarchar (** 128 **)**|Tabellenname|  
     |**Besitzer**|**nvarchar (** 128 **)**|Tabellenbesitzer|  
-    |**Typ**|**nvarchar (** 31 **)**|Tabellentyp|  
+    |**Type**|**nvarchar (** 31 **)**|Tabellentyp|  
     |**Created_datetime**|**datetime**|Erstellungsdatum der Tabelle|  
   
      Abhängig vom angegebenen Datenbankobjekt gibt **sp_help** zusätzliche Resultsets zurück.  
@@ -90,7 +90,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Spaltenname|Datentyp|BESCHREIBUNG|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar (** 128 **)**|Spaltenname.|  
-        |**Typ**|**nvarchar (** 128 **)**|Der Spaltendatentyp.|  
+        |**Type**|**nvarchar (** 128 **)**|Der Spaltendatentyp.|  
         |**Berechnete**|**varchar (** 35 **)**|Zeigt an, ob die Werte in der Spalte berechnet werden: Yes oder No.|  
         |**Länge**|**int**|Spaltenlänge in Bytes<br /><br /> Hinweis: Wenn der Spaltendatentyp ein Typ mit umfangreichen Werten (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** oder **XML**) ist, wird der Wert als-1 angezeigt.|  
         |**Prec**|**char (** 5 **)**|Spaltengenauigkeit|  
@@ -104,7 +104,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Spaltenname|Datentyp|BESCHREIBUNG|  
         |-----------------|---------------|-----------------|  
-        |**Identity**|**nvarchar (** 128 **)**|Name der Spalte, deren Datentyp als Identität deklariert wird|  
+        |**Identität**|**nvarchar (** 128 **)**|Name der Spalte, deren Datentyp als Identität deklariert wird|  
         |**Seed**|**numeric**|Startwert für die Identitätsspalte|  
         |**Inkrement**|**numeric**|Schrittweite für Werte in dieser Spalte|  
         |**Nicht für Replikation**|**int**|Die Identity-Eigenschaft wird nicht erzwungen, wenn eine Replikations Anmeldung, z. b. **sqlrepl**, Daten in die Tabelle einfügt:<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -152,13 +152,13 @@ sp_help [ [ @objname = ] 'name' ]
         |Spaltenname|Datentyp|BESCHREIBUNG|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|Name des Parameters der gespeicherten Prozedur|  
-        |**Typ**|**nvarchar (** 128 **)**|Datentyp des Parameters der gespeicherten Prozedur|  
+        |**Type**|**nvarchar (** 128 **)**|Datentyp des Parameters der gespeicherten Prozedur|  
         |**Länge**|**smallint**|Maximale physische Speicherlänge in Bytes|  
         |**Prec**|**int**|Genauigkeit oder Gesamtzahl der Ziffern|  
         |**Skalierung**|**int**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
         |**Param_order**|**smallint**|Reihenfolge der Parameter|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Prozedur **sp_help** sucht nur in der aktuellen Datenbank nach einem Objekt.  
   
  Wenn *Name* nicht angegeben wird, werden in **sp_help** Objektnamen, Besitzer und Objekttypen für alle Objekte in der aktuellen Datenbank aufgelistet. **sp_helptrigger** enthält Informationen zu Triggern.  
@@ -198,6 +198,6 @@ GO
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. sysobjects &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [sys.sysObjekte &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

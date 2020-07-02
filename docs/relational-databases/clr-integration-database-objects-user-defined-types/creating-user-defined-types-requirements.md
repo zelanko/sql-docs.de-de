@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b19a9179cba2225a2209255ce48220669e4bbef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b20192a3804dfba713b04706d528738ceb8768c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727806"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Erstellen benutzerdefinierter Typen: Anforderungen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Beim Erstellen eines benutzerdefinierten Typs (User-Defined Type, UDT), der in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert werden soll, müssen Sie einige wichtige Entwurfsentscheidungen treffen. Für die meisten UDTs wird das Erstellen als Struktur empfohlen, obwohl auch das Erstellen als Klasse möglich ist. Die UDT-Definition muss den Spezifikationen für das Erstellen von UDTs entsprechen, um mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden zu können.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Beim Erstellen eines benutzerdefinierten Typs (User-Defined Type, UDT), der in installiert werden soll, müssen Sie einige wichtige Entwurfsentscheidungen treffen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Für die meisten UDTs wird das Erstellen als Struktur empfohlen, obwohl auch das Erstellen als Klasse möglich ist. Die UDT-Definition muss den Spezifikationen für das Erstellen von UDTs entsprechen, um mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden zu können.  
   
 ## <a name="requirements-for-implementing-udts"></a>Anforderungen für das Implementieren von UDTs  
  Um in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt zu werden, muss der UDT die folgenden Anforderungen in der UDT-Definition implementieren:  
@@ -42,7 +42,7 @@ ms.locfileid: "81486969"
   
 -   Ein UDT mit einem benutzerdefinierten Serialisierungsformat muss die **System. Data. IBinarySerialize** -Schnittstelle implementieren und eine **Read** -und **Write** -Methode bereitstellen.  
   
--   Der UDT muss **System. Xml. Serialisierung. ixmlserialisierbar**implementieren, oder alle öffentlichen Felder und Eigenschaften müssen von Typen sein, die XML-serialisierbar sind oder mit dem **XmlIgnore** -Attribut ergänzt werden, wenn das Überschreiben der Standardserialisierung erforderlich ist.  
+-   Der UDT muss **System.Xml implementieren. Serialisierung. ixmlserialisierbar**oder alle öffentlichen Felder und Eigenschaften müssen von Typen sein, die XML-serialisierbar sind oder mit dem **XmlIgnore** -Attribut ergänzt werden, wenn das Überschreiben der Standardserialisierung erforderlich ist.  
   
 -   Es darf nur eine Serialisierung eines UDT-Objekts geben. Die Überprüfung schlägt fehl, wenn die Serialisierungs- oder Deserialisierungsroutinen mehr als eine Darstellung eines bestimmten Objekts erkennen.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "81486969"
 >  Obwohl Sie nicht vom Server zum Durchführen von Vergleichen verwendet wird, können Sie optional die **System. ivergleichbare** -Schnittstelle implementieren, die eine einzelne Methode ( **CompareTo**) verfügbar macht. Diese Methode wird auf Clientseite in Situationen verwendet, in denen UDT-Werte präzise verglichen oder geordnet werden sollen.  
   
 ## <a name="native-serialization"></a>Systemeigene Serialisierung  
- Die Auswahl der richtigen Serialisierungsattribute für den UDT hängt vom Typ des UDTs ab, den Sie erstellen möchten. Das systemeigene Serialisierungsformat nutzt eine sehr einfache Struktur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mit der eine effiziente systemeigene Darstellung des UDTs **auf dem Daten** Träger gespeichert werden kann. Das **native** Format wird empfohlen, wenn der UDT einfach ist und nur Felder der folgenden Typen enthält:  
+ Die Auswahl der richtigen Serialisierungsattribute für den UDT hängt vom Typ des UDTs ab, den Sie erstellen möchten. Das **Native** systemeigene Serialisierungsformat nutzt eine sehr einfache Struktur, mit der eine effiziente systemeigene Darstellung des UDTs auf dem Datenträger gespeichert werden kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Das **native** Format wird empfohlen, wenn der UDT einfach ist und nur Felder der folgenden Typen enthält:  
   
  **bool**, **Byte**, **SByte**, **Short**, **UShort**, **int**, **uint**, **Long**, **ulong**, **float**, **Double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
@@ -107,7 +107,7 @@ ms.locfileid: "81486969"
  Gibt abhängig von den Datentypen des UDT das Serialisierungsformat an, das System **eigen oder** **Benutzer definiert**sein kann.  
   
  **IsByteOrdered**  
- Ein **boolescher** Wert, der bestimmt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wie binäre Vergleiche für den UDT ausführt.  
+ Ein **boolescher** Wert, der bestimmt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] binäre Vergleiche für den UDT ausführt.  
   
  **' IsFixedLength '**  
  Gibt an, ob alle Instanzen dieses UDTs dieselbe Länge haben.  
@@ -146,13 +146,13 @@ ms.locfileid: "81486969"
 -   Kleiner oder gleich (<=)  
   
 ### <a name="implementing-nullability"></a>Implementieren von NULL-Zulässigkeit  
- Zusätzlich zum ordnungsgemäßen Angeben der Attribute für die Assemblys muss die Klasse auch NULL-Zulässigkeit unterstützen. UDTs, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in geladen werden, sind NULL-fähig, aber damit der UDT einen NULL-Wert erkennt, muss die Klasse die **INullable** -Schnittstelle implementieren. Weitere Informationen und ein Beispiel für die Implementierung der NULL-Zulässigkeit in einem UDT finden Sie unter Programmieren von [benutzerdefinierten Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ Zusätzlich zum ordnungsgemäßen Angeben der Attribute für die Assemblys muss die Klasse auch NULL-Zulässigkeit unterstützen. UDTs, die in geladen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden, sind NULL-fähig, aber damit der UDT einen NULL-Wert erkennt, muss die Klasse die **INullable** -Schnittstelle implementieren. Weitere Informationen und ein Beispiel für die Implementierung der NULL-Zulässigkeit in einem UDT finden Sie unter Programmieren von [benutzerdefinierten Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
 ### <a name="string-conversions"></a>Zeichenfolgenkonvertierungen  
  Um die Zeichen folgen Konvertierung in und aus dem UDT zu unterstützen, müssen Sie eine **Analysemethode und eine Methode "** **destring** " in der Klasse bereitstellen. Mit **der Analyse** Methode kann eine Zeichenfolge in einen UDT konvertiert werden. Er muss als **statisch** deklariert werden (oder in Visual Basic frei **gegeben** werden) und einen Parameter vom Typ **System. Data. SqlTypes. SqlString**annehmen. Weitere Informationen und ein Beispiel für die Implementierung der Methoden "Analyse" und " **ToString** " finden Sie unter Program **mieren** [benutzerdefinierter Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
 ## <a name="xml-serialization"></a>XML-Serialisierung  
- UDTs müssen die Konvertierung in und aus dem **XML** -Datentyp unterstützen, indem Sie dem Vertrag für die XML-Serialisierung entsprechen. Der **System. Xml. Serialization** -Namespace enthält Klassen, die zum Serialisieren von Objekten in Dokumente oder Streams im XML-Format verwendet werden. Sie können die **XML** -Serialisierung mithilfe der **ixmlserialisierbaren** -Schnittstelle implementieren, die eine benutzerdefinierte Formatierung für die XML-Serialisierung und-Deserialisierung bereitstellt.  
+ UDTs müssen die Konvertierung in und aus dem **XML** -Datentyp unterstützen, indem Sie dem Vertrag für die XML-Serialisierung entsprechen. Der **System.Xml. Der Serialisierungsnamespace** enthält Klassen, die zum Serialisieren von Objekten in Dokumente oder Streams im XML-Format verwendet werden. Sie können die **XML** -Serialisierung mithilfe der **ixmlserialisierbaren** -Schnittstelle implementieren, die eine benutzerdefinierte Formatierung für die XML-Serialisierung und-Deserialisierung bereitstellt.  
   
  Zusätzlich zum Ausführen expliziter Konvertierungen von UDT in **XML**ermöglicht Ihnen die XML-Serialisierung Folgendes:  
   

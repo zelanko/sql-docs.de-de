@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c9e0a996728c6bf0b352afc9615808773eefec0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 70c189733cdc45c8d496f2842486dbec433c32db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818390"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733162"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Stellt Informationen zu den für einen bestimmten Verbindungsserver definierten Anmeldenamenzuordnungen bereit, die für verteilte Abfragen und gespeicherte Remoteprozeduren verwendet werden.  
   
@@ -56,7 +56,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |**Is Self Mapping**|**smallint**|0 = der **lokale Anmelde Name** wird **entfernte Anmeldung** zugeordnet, wenn eine Verbindung mit dem Verbindungs **Server**hergestellt wird.<br /><br /> 1 = der **lokale Anmelde Name** wird demselben Anmelde Namen und Kennwort zugeordnet, wenn eine Verbindung mit dem Verbindungs **Server**hergestellt wird.|  
 |**Remote Login**|**sysname**|Der Anmelde Name auf dem **LinkedServer** , der **loczumapping** zugeordnet ist, wenn **isselfmapping** den Wert 0 hat. Wenn **isselfmapping** den Wert 1 hat, ist **RemoteLogin** NULL.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Bevor Sie Anmelde Namen Zuordnungen löschen, verwenden Sie **sp_helplinkedsrvlogin** , um die beteiligten Verbindungs Server zu ermitteln.  
   
 ## <a name="permissions"></a>Berechtigungen  

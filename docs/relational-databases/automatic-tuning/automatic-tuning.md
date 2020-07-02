@@ -14,15 +14,15 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c76481db7044deb3cc7f9c4e1c99230ef16ea3a3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 5617630853a700c906949cfa9a9bc2acf719c2ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727906"
 ---
 # <a name="automatic-tuning"></a>Automatische Optimierung
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Die automatische Datenbankoptimierung bietet einen Einblick in die potentiellen Abfrageleistungsprobleme, empfiehlt Lösungen und kann identifizierte Probleme automatisch beheben.
 
@@ -90,7 +90,7 @@ Ohne automatische Optimierung müssen Benutzer das System in regelmäßigen Abst
 
 In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] können Sie mit Abfragespeicher System Sichten Plan Auswahl Regressionen suchen. In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erkennt und zeigt mögliche Regressionen der Plan Auswahl und die empfohlenen Aktionen an, die in der&#41;Sicht [sys. dm_db_tuning_recommendations &#40;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) angewendet werden sollen. Die Sicht zeigt Informationen zum Problem, die Wichtigkeit des Problems und Details wie z. b. die identifizierte Abfrage, die ID des zurück gestellten Plans, die ID des Plans, der als Baseline für den Vergleich verwendet wurde, und die Anweisung, die [!INCLUDE[tsql_md](../../includes/tsql-md.md)] ausgeführt werden kann, um das Problem zu beheben.
 
-| type | description | datetime | Ergebnis Ihrer App | Details | ... |
+| Typ | description | datetime | Ergebnis Ihrer App | Details | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Die CPU-Zeit wurde von 4 ms auf 14 ms geändert. | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Die CPU-Zeit wurde von 37 MS auf 84 MS geändert. | 16.3.2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

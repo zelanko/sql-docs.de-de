@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 299272377d8bbc55781d671a94240d6c309877ec
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2ac552c5fe8efe897ea9066819215c82a115d1d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725472"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die **MSdbms_datatype** Tabelle enthält die komplette Liste der systemeigenen Datentypen an jedem unterstützten Datenbank-Management System (DBMS), das bei der heterogenen Daten Bank Replikation entweder als Verleger oder Abonnent verwendet wird. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82832327"
 |**type**|**sysname**|Der Name des Datentyps (systemeigen).|  
 |**"kreateparameams"**|**int**|Das Bitmap, das beschreibt, welche Kombination aus Länge, Genauigkeit und Dezimalstellen für jeden Datentyp gilt:<br /><br /> **0x1** = Genauigkeit.<br /><br /> **0x2** = skalieren.<br /><br /> **0x4** = Länge.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Tabelle enthält Einträge für SQL Server-Datentypen, weil eine Instanz von SQL Server eine Nicht-SQL Server-Datenbank abonnieren und in einem Nicht-SQL Server-Abonnenten veröffentlichen kann.  
   
 ## <a name="see-also"></a>Weitere Informationen  

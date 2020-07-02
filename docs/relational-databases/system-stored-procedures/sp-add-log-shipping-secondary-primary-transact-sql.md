@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 155f59426e8167d5d888f3890089dd4b2ea3bf7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87c243c1eaffdcbf471347a677bb7e5d9c9ffbb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909687"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731740"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Richtet die primären Informationen ein, fügt Links zur lokalen und Remoteüberwachung hinzu und erstellt auf dem sekundären Server Kopier- und Wiederherstellungsaufträge für die angegebene primäre Datenbank.  
   
@@ -65,7 +65,7 @@ sp_add_log_shipping_secondary_primary
   
 `[ @restore_job_name = ] 'restore_job_name'`Der Name des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agentauftrags auf dem sekundären Server, von dem die Sicherungen in der sekundären Datenbank wieder hergestellt werden. *restore_job_name* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein.  
   
-`[ @file_retention_period = ] 'file_retention_period'`Die Zeitspanne in Minuten, die eine Sicherungsdatei auf dem sekundären Server in dem vom- @backup_destination_directory Parameter angegebenen Pfad aufbewahrt wird, bevor Sie gelöscht wird. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Wert 14420 wird verwendet, falls kein anderer Wert angegeben wird.  
+`[ @file_retention_period = ] 'file_retention_period'`Die Zeitspanne in Minuten, die eine Sicherungsdatei auf dem sekundären Server in dem vom-Parameter angegebenen Pfad aufbewahrt wird, @backup_destination_directory bevor Sie gelöscht wird. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Wert 14420 wird verwendet, falls kein anderer Wert angegeben wird.  
   
 `[ @monitor_server = ] 'monitor_server'`Der Name des Überwachungs Servers. *Monitor_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert und darf nicht NULL sein.  
   
@@ -114,7 +114,7 @@ sp_add_log_shipping_secondary_primary
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel wird die Verwendung der gespeicherten Prozedur **sp_add_log_shipping_secondary_primary** zum Einrichten von Informationen für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] primäre Datenbank auf dem sekundären Server veranschaulicht.  
+ In diesem Beispiel wird die Verwendung der gespeicherten Prozedur **sp_add_log_shipping_secondary_primary** zum Einrichten von Informationen für die primäre Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] auf dem sekundären Server veranschaulicht.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -134,7 +134,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Informationen zum Protokoll Versand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

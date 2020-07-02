@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc69a273dfa331e558f076429be95c2462b551d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730036"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zu Aufträgen zurück, mit denen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent automatisierte Aktivitäten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführt.  
   
@@ -61,7 +61,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'`Das anzuzeigende Auftrags Attribut. *job_aspect* ist vom Datentyp **varchar (9)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**ALL**|Auftragsaspektinformationen|  
 |**Auftrag**|Auftragsinformationen|  
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Unterbrochen|  
 |**7**|Abschlussaktionen werden ausgeführt|  
   
-`[ @date_comparator = ] 'date_comparison'`Der Vergleichs Operator, der in Vergleichen von *Date_Created* und *date_modified*verwendet werden soll. *date_comparison* ist vom Typ **char (1)** und kann =, \< oder > sein.  
+`[ @date_comparator = ] 'date_comparison'`Der Vergleichs Operator, der in Vergleichen von *Date_Created* und *date_modified*verwendet werden soll. *date_comparison* ist vom Typ **char (1)** und kann =, sein \<, or > .  
   
 `[ @date_created = ] date_created`Das Datum, an dem der Auftrag erstellt wurde. *Date_Created*ist vom **Datentyp DateTime**und hat den Standardwert NULL.  
   
@@ -111,10 +111,10 @@ sp_help_job { [ @job_id = ] job_id
 |**originating_server**|**nvarchar(30)**|Name des Servers, von dem der Auftrag stammt|  
 |**name**|**sysname**|Der Name des Auftrags.|  
 |**wodurch**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
-|**Beschreibung**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
+|**description**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
 |**category**|**sysname**|Auftragskategorie|  
-|**owner**|**sysname**|Auftragsbesitzer|  
+|**Eigentor**|**sysname**|Auftragsbesitzer|  
 |**notify_level_eventlog**|**int**|**Bitmaske** , die anzeigt, unter welchen Umständen ein Benachrichtigungs Ereignis im Microsoft Windows-Anwendungsprotokoll protokolliert werden soll. Einer der folgenden Werte ist möglich:<br /><br /> **0** = Nie<br /><br /> **1** = bei erfolgreicher Auftragsausführung<br /><br /> **2** = Bei Fehlschlagen des Auftrags<br /><br /> **3** = Immer, wenn der Auftrag abgeschlossen ist (unabhängig vom Ergebnis des Auftrags)|  
 |**notify_level_email**|**int**|**Bitmaske** , die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Benachrichtigungs-e-Mail gesendet werden soll Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|**Bitmaske** , die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Netzwerk Meldung gesendet werden soll. Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
@@ -149,14 +149,14 @@ sp_help_job { [ @job_id = ] job_id
 |**step_id**|**int**|Eindeutiger Bezeichner (für diesen Auftrag) für den Schritt|  
 |**step_name**|**sysname**|Name des Schritts|  
 |**System**|**nvarchar(40)**|Subsystem, in dem der Schrittbefehl ausgeführt werden soll|  
-|**s**|**nvarchar (3200)**|Auszuführender Befehl|  
+|**command**|**nvarchar (3200)**|Auszuführender Befehl|  
 |**flags**|**nvarchar(4000)**|**Bitmaske** der Werte, die das Schritt Verhalten steuern.|  
 |**cmdexec_success_code**|**int**|Bei einem **CmdExec** -Schritt ist dies der Prozessexitcode eines erfolgreichen Befehls.|  
 |**on_success_action**|**nvarchar(4000)**|Mögliche Aktionen, wenn der Schritt erfolgreich durchgeführt wird:<br /><br /> **1** = beenden mit Erfolg.<br /><br /> **2** = beenden mit Fehler.<br /><br /> **3** = fahren Sie mit dem nächsten Schritt fort.<br /><br /> **4** = gehe zu Schritt.|  
 |**on_success_step_id**|**int**|Wenn **on_success_action** **4**ist, gibt dies den nächsten Schritt an, der ausgeführt werden soll.|  
 |**on_fail_action**|**nvarchar(4000)**|Auszuführende Aktion, wenn der Schritt einen Fehler erzeugt. Werte sind identisch mit denen für **on_success_action**.|  
 |**on_fail_step_id**|**int**|Wenn **on_fail_action** **4**ist, gibt dies den nächsten Schritt an, der ausgeführt werden soll.|  
-|**Servers**|**sysname**|Reserviert.|  
+|**server**|**sysname**|Reserviert.|  
 |**database_name**|**sysname**|Für einen [!INCLUDE[tsql](../../includes/tsql-md.md)] Schritt ist dies die Datenbank, in der der Befehl ausgeführt wird.|  
 |**database_user_name**|**sysname**|Für einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritt ist dies der Datenbank-Benutzerkontext, in dem der Befehl ausgeführt wird.|  
 |**retry_attempts**|**int**|Die maximale Anzahl von Wiederholungsversuchen für den Befehl (falls er nicht erfolgreich ist), bevor der Schritt als fehlgeschlagen angesehen wird|  

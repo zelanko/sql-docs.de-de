@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d275b0666ae80ff933d7d236d0d04f2648b744fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6e128b63ebe77467e7c3fd6ea2486f3fdc043334
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834284"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725719"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Gibt detaillierte Artikelinformationen zu einer bestimmten Replikationsmerge-Agent-Sitzung zurück, mit der die Mergereplikation überwacht wird. Das Resultset enthält eine detaillierte Zeile für jeden Artikel, der während der Sitzung synchronisiert wurde. Es enthält außerdem eine Zeile, die die Sitzungsinitialisierung darstellt, und Zeilen mit Zusammenfassungen der Upload- und Downloadphasen der Sitzung. Diese gespeicherte Prozedur wird auf dem Verteiler für die Verteilungsdatenbank oder auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
   
@@ -61,7 +61,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_replmonitorhelpmergesessiondetail** wird zum Überwachen der Mergereplikation verwendet.  
   
  Wenn **sp_replmonitorhelpmergesessiondetail** auf dem Abonnenten ausgeführt wird, werden nur ausführliche Informationen zu den letzten 5 Merge-Agent Sitzungen zurückgegeben.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04d1397494aec0d35e0ecfa9debcb6f844e6ebc2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733127"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zu einem Artikel zurück. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank oder auf dem Wiederveröffentlichungsabonnenten für die Abonnementdatenbank ausgeführt.  
   
@@ -52,7 +52,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**source_object**|**sysname**|Name des Quellobjekts, aus dem der Artikel hinzugefügt werden soll|  
 |**sync_object_owner**|**sysname**|Name des Besitzers der Sicht, die den veröffentlichten Artikel definiert|  
 |**sync_object**|**sysname**|Name des benutzerdefinierten Objekts, mit dem die Anfangsdaten für die Partition eingerichtet werden|  
-|**Beschreibung**|**nvarchar(255)**|Beschreibung des Artikels|  
+|**description**|**nvarchar(255)**|Beschreibung des Artikels|  
 |**status**|**tinyint**|Status des Artikels. Die folgenden Werte sind möglich:<br /><br /> **1** = inaktiv<br /><br /> **2** = aktiv<br /><br /> **5** = DDL-Vorgang (Data Definition Language) steht aus.<br /><br /> **6** = DDL-Vorgang mit einer neu generierten Momentaufnahme<br /><br /> Hinweis: Wenn ein Artikel erneut initialisiert wird, werden die Werte **5** und **6** in **2**geändert.|  
 |**creation_script**|**nvarchar(255)**|Pfad und Name eines optionalen Artikelschemaskripts, mit dem der Artikel in der Abonnementdatenbank erstellt wurde|  
 |**conflict_table**|**nvarchar (270)**|Name der Tabelle, in der die Einfüge- oder Updatekonflikte gespeichert werden.|  
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|, Wenn die automatische Handhabung von Identitäts Bereichen aktiviert ist. Dabei ist **1** aktiviert, und **0** ist deaktiviert.|  
 |**pub_identity_range**|**bigint**|Die beim Zuweisen neuer Identitätswerte zu verwendende Bereichsgröße. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identity_range**|**bigint**|Die beim Zuweisen neuer Identitätswerte zu verwendende Bereichsgröße. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**Mindest**|**int**|Prozentwert, der für Abonnenten verwendet wird, die [!INCLUDE[ssEW](../../includes/ssew-md.md)] oder frühere Versionen von ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Schwellenwert** steuert, wenn der Merge-Agent einen neuen Identitäts Bereich zuweist. Wenn der im Schwellenwert angegebene Prozentsatz verwendet wird, erstellt der Merge-Agent einen neuen Identitätsbereich. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**threshold**|**int**|Prozentwert, der für Abonnenten verwendet wird, die [!INCLUDE[ssEW](../../includes/ssew-md.md)] oder frühere Versionen von ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Schwellenwert** steuert, wenn der Merge-Agent einen neuen Identitäts Bereich zuweist. Wenn der im Schwellenwert angegebene Prozentsatz verwendet wird, erstellt der Merge-Agent einen neuen Identitätsbereich. Weitere Informationen finden Sie im Abschnitt "Mergereplikation" unter [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**int**|Wenn eine digitale Signatur überprüft wird, bevor ein Konflikt Löser bei der Mergereplikation verwendet wird. Dabei bedeutet **0** , dass die Signatur nicht überprüft wird, und **1** bedeutet, dass die Signatur überprüft wird, um festzustellen, ob Sie aus einer vertrauenswürdigen Quelle ist.|  
 |**destination_object**|**sysname**|Name des Zielobjekts. Nur anwendbar beim Zusammenführen gespeicherter Prozeduren, Sichten und UDF-Schemaartikel.|  
 |**allow_interactive_resolver**|**int**|, Wenn der interaktive Konflikt Löser für einen Artikel verwendet wird. Dabei bedeutet **1** , dass dieser Konflikt Löser verwendet wird, und **0** bedeutet, dass er nicht verwendet wird.|  
@@ -87,7 +87,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helpmergearticle** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

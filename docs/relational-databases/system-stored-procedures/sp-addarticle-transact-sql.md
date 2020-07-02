@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e1360140898495518485394878cc74f04ee35923
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 35aa02236cf3e8a11d03539042ccdaf9049dd8f9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807595"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731707"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Erstellt einen Artikel und fügt ihn zu einer Veröffentlichung hinzu. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -87,7 +87,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`Der Typ des Artikels. *Type ist vom Datentyp* **vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**aggregate schema only**|Aggregatfunktion vom Typ schema only.|  
 |**func schema only**|Funktion vom Typ schema only.|  
@@ -111,7 +111,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @ins_cmd = ] 'ins_cmd'`Der beim Replizieren von Einfügungen für diesen Artikel verwendete Replikations Befehlstyp. *ins_cmd* ist vom Datentyp **nvarchar (255)** und kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**NONE**|Es wird keine Aktion ausgeführt.|  
 |**CALL sp_MSins_**<br /> **_Tabelle_** (Standard)<br /><br /> - oder -<br /><br /> **CALL custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>sp_Msins_*Tabelle* </strong> enthält den Namen der Ziel Tabelle anstelle des *_table* Teils des Parameters. Wenn *destination_owner* angegeben wird, wird es dem Ziel Tabellennamen vorangestellt. Beispielsweise wäre der-Parameter für die **ProductCategory** -Tabelle, deren Besitzer das **Produktions** Schema auf dem Abonnenten ist, `CALL sp_MSins_ProductionProductCategory` . Bei einem Artikel in einer Peer-zu-Peer-Replikations Topologie wird *_table* mit einem GUID-Wert angefügt. Das Angeben von *custom_stored_procedure* wird für Update Abonnenten nicht unterstützt.|  
@@ -121,7 +121,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @del_cmd = ] 'del_cmd'`Der Replikations Befehlstyp, der beim Replizieren von Löschungen für diesen Artikel verwendet wird. *del_cmd* ist vom Datentyp **nvarchar (255)** und kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**NONE**|Es wird keine Aktion ausgeführt.|  
 |**CALLsp_MSdel_**<br /> **_Tabelle_** (Standard)<br /><br /> - oder -<br /><br /> **CALL custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>sp_MSdel_*Tabelle* </strong> enthält den Namen der Ziel Tabelle anstelle des *_table* Teils des Parameters. Wenn *destination_owner* angegeben wird, wird es dem Ziel Tabellennamen vorangestellt. Beispielsweise wäre der-Parameter für die **ProductCategory** -Tabelle, deren Besitzer das **Produktions** Schema auf dem Abonnenten ist, `CALL sp_MSdel_ProductionProductCategory` . Bei einem Artikel in einer Peer-zu-Peer-Replikations Topologie wird *_table* mit einem GUID-Wert angefügt. Das Angeben von *custom_stored_procedure* wird für Update Abonnenten nicht unterstützt.|  
@@ -132,7 +132,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @upd_cmd = ] 'upd_cmd'`Der Replikations Befehlstyp, der beim Replizieren von Updates für diesen Artikel verwendet wird. *upd_cmd* ist vom Datentyp **nvarchar (255)** und kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**NONE**|Es wird keine Aktion ausgeführt.|  
 |**CALL sp_MSupd_**<br /> **_glaub_**<br /><br /> - oder -<br /><br /> **CALL custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels.|  
@@ -150,7 +150,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`Gibt an, was das System tun soll, wenn beim Anwenden der Momentaufnahme für diesen Artikel ein vorhandenes Objekt mit demselben Namen auf dem Abonnenten erkannt wird. *pre_creation_cmd* ist vom Datentyp **nvarchar (10)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**keine**|Verwendet keinen Befehl.|  
 |**delete**|Löscht Daten aus der Zieltabelle vor dem Anwenden der Momentaufnahme. Wird der Artikel horizontal gefiltert, werden nur Daten in Spalten gelöscht, die von der Filterklausel angegeben werden. Wird von Oracle-Verlegern nicht unterstützt, wenn ein horizontaler Filter definiert wurde.|  
@@ -164,7 +164,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Ist dieser Wert NULL, generiert das System automatisch eine gültige Schemaoption für den Artikel, abhängig von anderen Artikeleigenschaften. Die in den Hinweisen angegebene **Standard Schema Optionen** -Tabelle zeigt den Wert, der basierend auf der Kombination des Artikel Typs und des Replikations Typs ausgewählt wird.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0x00**|Deaktiviert die Skripterstellung durch den Momentaufnahmen-Agent und verwendet *creation_script*.|  
 |**0x01**|Generiert das Objekterstellungsskript (CREATE TABLE, CREATE PROCEDURE usw.). Dies ist der Standardwert für alle Artikel mit gespeicherten Prozeduren.|  
@@ -251,7 +251,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @auto_identity_range = ] 'auto_identity_range'`Aktiviert und deaktiviert die automatische Behandlung von Identitäts Bereichen für eine Veröffentlichung zu dem Zeitpunkt, zu dem Sie erstellt wird. *auto_identity_range* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**true**|Aktiviert die automatische Behandlung von Identitätsbereichen|  
 |**false**|Deaktiviert die automatische Behandlung von Identitätsbereichen|  
@@ -285,7 +285,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`Gibt an, wie die Identitäts Bereichs Verwaltung für den Artikel behandelt wird. die *identityrangemanagementoption* ist vom Datentyp **nvarchar (10)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**keine**|Die Replikation führt keine explizite Identitätsbereichsverwaltung aus. Diese Option wird nur aus Gründen der Abwärtskompatibilität mit früheren Versionen von SQL Server verwendet. Ist für die Peer-Replikation nicht zulässig.|  
 |**Manuell**|Markiert die Identitätsspalte mithilfe von NOT FOR REPLICATION, um die manuelle Identitätsbereichsverwaltung zu ermöglichen.|  
@@ -306,7 +306,7 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_addarticle** wird bei der Momentaufnahme-oder Transaktions Replikation verwendet.  
   
  Standardmäßig werden bei der Replikation keine Spalten in der Quelltabelle veröffentlicht, wenn der Spaltendatentyp nicht von der Replikation unterstützt wird. Wenn Sie eine solche Spalte veröffentlichen müssen, müssen Sie [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) ausführen, um die Spalte hinzuzufügen.  

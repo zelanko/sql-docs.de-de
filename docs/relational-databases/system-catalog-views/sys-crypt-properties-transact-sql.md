@@ -20,15 +20,15 @@ ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9655866d4fd2d6f98b38532f77f94bc12f16f9b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a4c03687f6adac3f67f3e6aa231c384a6d5e009
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68109481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725804"
 ---
 # <a name="syscrypt_properties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt eine Zeile für jede Kryptografieeigenschaft zurück, die einem sicherungsfähigen Element zugeordnet ist.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68109481"
  [Sicherheits Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Verschlüsselungs Hierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Sicherungs fähige Elemente](../../relational-databases/security/securables.md)   
- [Erstellen eines Zertifikats &#40;Transact-SQL-&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
+ [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [Erstellen eines symmetrischen Schlüssels &#40;Transact-SQL-&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [Erstellen eines asymmetrischen Schlüssels &#40;Transact-SQL-&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
