@@ -13,15 +13,15 @@ ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab3541f354af26f32f4071c2a6d09648cd53af6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1c474427c4c62b667e27f299e2e7b4d9a65e1b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719657"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Tabellenwertparameter-Rowseterstellung
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Consumer können zwar ein beliebiges Rowsetobjekt für Tabellenwertparameter bereitstellen, typische Rowsetobjekte werden jedoch mit Back-End-Datenspeichern implementiert und bieten somit nur eine eingeschränkte Leistung. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ermöglicht es somit Consumern, ein spezielles Rowsetobjekt auf speicherinternen Daten zu erstellen. Dieses spezielle, in-Memory-Rowsetobjekt ist ein neues COM-Objekt, das als Tabellenwert Parameter-Rowset bezeichnet wird. Es bietet ähnliche Funktionen wie Parametersätze.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "81283120"
   
  Zum Abrufen von Informationen über den NULL-, eindeutigen, berechneten und Update Status der einzelnen Spalten verwendet der Consumer IColumnsRowset:: GetColumnsRowset oder IColumnsInfo:: GetColumnInfo. Diese Methoden stellen ausführliche Informationen über jede Tabellenwertparameter-Rowsetspalte bereit.  
   
- Der Consumer gibt den Typ jeder Spalte des Tabellenwertparameters an. Dies ähnelt der Angabe von Spalten, wenn in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Tabelle erstellt wird. Der Consumer erhält ein Tabellenwert Parameter-Rowsetobjekt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Native Client OLE DB-Anbieter über den *ppRowset* -Ausgabeparameter.  
+ Der Consumer gibt den Typ jeder Spalte des Tabellenwertparameters an. Dies ähnelt der Angabe von Spalten, wenn in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Tabelle erstellt wird. Der Consumer erhält ein Tabellenwert Parameter-Rowsetobjekt vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter über den *ppRowset* -Ausgabeparameter.  
   
 ## <a name="dynamic-scenario"></a>Dynamisches Szenario  
  Wenn der Consumer keine Typinformationen hat, sollte er IOpenRowset:: OPENROWSET verwenden, um Tabellenwert Parameter-Rowsetobjekte zu instanziieren. Der Consumer muss dem Anbieter somit nur den Typnamen zur Verfügung stellen.  

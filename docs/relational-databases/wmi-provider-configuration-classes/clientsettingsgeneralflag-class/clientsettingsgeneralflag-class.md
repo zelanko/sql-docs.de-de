@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 545c13aaa062c0aa55a72d74c52cf4cc112dc9a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8cfb4c0a03b387d4445a9252b769edaa2f5ffba8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725339"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>ClientSettingsGeneralFlag-Klasse
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Die [ClientSettingsGeneralFlag-Klasse](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) stellt die allgemeinen Flageinstellungen in einer Instanz des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clients dar.  
   
  Die [ClientSettingsGeneralFlag-Klasse](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) kann für folgende Aufgaben verwendet werden:  

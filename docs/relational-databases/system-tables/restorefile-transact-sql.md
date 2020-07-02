@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7003ce993893261d2381f11895ee4df2e6fef71b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ba9110c12249db334443af3744efd3cdb6125bee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834154"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725410"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jede wiederhergestellte Datei. Dies gilt auch für Dateien, die indirekt nach Dateigruppennamen wiederhergestellt werden. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82834154"
 |**destination_phys_drive**|**nvarchar(260)**|Laufwerk oder Partition, in welche(s) die Datei wiederhergestellt wurde. Kann den Wert NULL haben.<br /><br /> Wird eine Datenbankmomentaufnahme einer Datenbank wiederhergestellt, wird dieser Wert auf die gleiche Weise wie bei einer vollständigen Wiederherstellung aufgefüllt.|  
 |**destination_phys_name**|**nvarchar(260)**|Name der Datei, in welche die Datei wiederhergestellt wurde, ohne die Informationen zu Laufwerk oder Partition. Kann den Wert NULL haben.<br /><br /> Wird eine Datenbankmomentaufnahme einer Datenbank wiederhergestellt, wird dieser Wert auf die gleiche Weise wie bei einer vollständigen Wiederherstellung aufgefüllt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Führen Sie die gespeicherte Prozedur [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) aus, um die Anzahl der Zeilen in dieser Tabelle und in anderen Sicherungs-und Verlaufs Tabellen zu verringern.  
   
 ## <a name="see-also"></a>Weitere Informationen  

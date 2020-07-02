@@ -14,15 +14,15 @@ ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a696107a82b5f64109b115e3e1c360d81117344
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9634cf553750045c6c773ee9f804dc5358883852
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298340"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725113"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Erstellen einer Formatdatei für das Massenkopieren (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In diesem Beispiel wird gezeigt, wie mit Funktionen zum Massenkopieren sowohl eine Datendatei als auch eine Formatdatei erstellt werden können. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "81298340"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Führen Sie das erste [!INCLUDE[tsql](../../../includes/tsql-md.md)]Codelisting () aus, um die im Beispiel verwendete Tabelle zu erstellen.  
+ Führen Sie das erste [!INCLUDE[tsql](../../../includes/tsql-md.md)] Codelisting () aus, um die im Beispiel verwendete Tabelle zu erstellen.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und odbcbcp.lib.  
   
- Führen Sie das dritte [!INCLUDE[tsql](../../../includes/tsql-md.md)]Codelisting () aus, um die im Beispiel verwendete Tabelle zu löschen.  
+ Führen Sie das dritte [!INCLUDE[tsql](../../../includes/tsql-md.md)] Codelisting () aus, um die im Beispiel verwendete Tabelle zu löschen.  
   
 ```  
 use AdventureWorks  

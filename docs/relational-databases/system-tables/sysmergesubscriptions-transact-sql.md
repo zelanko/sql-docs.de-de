@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0722ccd8c4f18fd16ed4abdb3630e80bc7d5de53
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9c4cef3b1a088f0ae0a085fd4769a8e252713df4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824775"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725386"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jeden bekannten Abonnenten und stellt eine lokale Tabelle auf dem Verleger dar. Diese Tabelle wird in der Veröffentlichungs- und in der Abonnementdatenbank gespeichert.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82824775"
 |subscriber_type|**int**|Der Typ des Abonnenten:<br /><br /> **1** = Global.<br /><br /> **2** = lokal.<br /><br /> **3** = anonym.|  
 |subscription_type|**int**|Der Typ des Abonnements:<br /><br /> **0** = Push.<br /><br /> **1** = Pull.<br /><br /> **2** = anonym.|  
 |sync_type|**tinyint**|Typ der Synchronisierung:<br /><br /> **1** = automatisch.<br /><br /> **2** = keine Synchronisierung.|  
-|Beschreibung|**nvarchar(255)**|Kurze Beschreibung des Abonnements.|  
+|description|**nvarchar(255)**|Kurze Beschreibung des Abonnements.|  
 |priority|**real**|Gibt die Priorität des Abonnements an und lässt die Implementierung von prioritätsbasierten Routinen zur Konfliktlösung zu. Ist für alle lokalen oder anonymen Abonnements **0,00** .|  
 |recgen|**bigint**|Die Nummer der zuletzt empfangenen Generierung.|  
 |recguid|**uniqueidentifier**|Die eindeutige ID der zuletzt empfangenen Generierung.|  
@@ -59,9 +59,9 @@ ms.locfileid: "82824775"
 |partition_id|**int**|Identifiziert die vorausberechnete Partition, zu der das Abonnement gehört.|  
 |cleanedup_unsent_changes|**bit**|Gibt an, dass Metadaten für nicht gesendete Änderungen auf dem Abonnenten bereinigt wurden.|  
 |replica_version|**int**|Identifiziert die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für den Abonnenten, zu dem das Abonnement gehört. Die folgenden Werte sind möglich:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|supportability_mode|**int**|Nur zur internen Verwendung.|  
-|application_name|**nvarchar(128)**|Nur zur internen Verwendung.|  
-|subscriber_number|**int**|Nur zur internen Verwendung.|  
+|supportability_mode|**int**|Nur interne Verwendung.|  
+|application_name|**nvarchar(128)**|Nur interne Verwendung.|  
+|subscriber_number|**int**|Nur interne Verwendung.|  
 |last_makegeneration_datetime|**datetime**|Der letzte **DateTime** -Wert, den der makegeneration-Prozess für den Verleger ausgeführt hat. Weitere Informationen finden Sie unter dem-MakeGenerationInterval-Parameter in der [Replikations Merge-Agent](../../relational-databases/replication/agents/replication-merge-agent.md).|  
   
 ## <a name="see-also"></a>Weitere Informationen  

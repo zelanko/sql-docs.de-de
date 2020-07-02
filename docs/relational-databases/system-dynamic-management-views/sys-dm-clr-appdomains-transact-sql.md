@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d374b244b265d6bc46ca9e6073f9a688fcd2b4a5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c6a542e44f33a64b5cdd4727aab891592338b880
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824762"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724623"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Zeile für jede Anwendungsdomäne auf dem Server zurück. Die Anwendungsdomäne (**AppDomain**) ist ein Konstrukt im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), das die Isolationseinheit für eine Anwendung ist. Mit dieser Ansicht können Sie CLR-Integrations Objekte, die in ausgeführt werden, verstehen und beheben [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -51,20 +51,20 @@ ms.locfileid: "82824762"
 |**total_allocated_memory_kb**|**bigint**|Gesamtgröße, in Kilobyte, aller Speicherbelegungen durch die Anwendungsdomäne seit der Erstellung, ohne Abzug des bei Sammlungsvorgängen freigegebenen Speichers. Dies entspricht **System. AppDomain. monitoringtotalzustellungs-Speicher MemorySize**.|  
 |**survived_memory_kb**|**bigint**|Menge der Daten in KB, die die letzte vollständige Sammlung mit exklusivem Zugriff überdauert haben, und von denen bekannt ist, dass sie von der aktuellen Anwendungsdomäne referenziert werden. Dies entspricht **System. AppDomain. MonitoringSurvivedMemorySize**.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Zwischen **dm_clr_appdomains. appdomain_address** und **dm_clr_loaded_assemblies. appdomain_address**besteht eine 1: Mai-Beziehung.  
   
  In den folgenden Tabellen sind mögliche **Zustands** Werte, deren Beschreibungen und deren Auftreten im **AppDomain** -Lebenszyklus aufgeführt. Sie können diese Informationen verwenden, um den Lebenszyklus einer **AppDomain** zu verfolgen und um zu überwachen, dass verdächtige oder sich wiederholende **AppDomain** -Instanzen entladen werden, ohne dass das Windows-Ereignisprotokoll analysiert werden muss.  
   
 ## <a name="appdomain-initialization"></a>AppDomain-Initialisierung  
   
-|Staat|Beschreibung|  
+|State|Beschreibung|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|Die **AppDomain** wird erstellt.|  
   
 ## <a name="appdomain-usage"></a>AppDomain-Verwendung  
   
-|Staat|Beschreibung|  
+|State|Beschreibung|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|Die **AppDomain** der Laufzeit kann von mehreren Benutzern verwendet werden.|  
 |E_APPDOMAIN_SINGLEUSER|Die **AppDomain** ist bereit für die Verwendung in DDL-Vorgängen. Diese unterscheiden sich von E_APPDOMAIN_SHARED, indem im Gegensatz zu DDL-Vorgängen freigegebene AppDomains für die CLR-Integration verwendet werden, . Solche AppDomains werden von anderen gleichzeitigen Vorgängen isoliert.|  
@@ -72,7 +72,7 @@ ms.locfileid: "82824762"
   
 ## <a name="appdomain-cleanup"></a>AppDomain-Cleanup  
   
-|Staat|BESCHREIBUNG|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hat angefordert, dass die CLR die **AppDomain**entladen soll, in der Regel, weil die Assembly, die die verwalteten Datenbankobjekte enthält, geändert oder gelöscht wurde.|  
 |E_APPDOMAIN_UNLOADED|Die CLR hat die **AppDomain**entladen. Dies ist normalerweise das Ergebnis eines Eskalations Verfahrens aufgrund von **ThreadAbort**, **outhfmemory**oder einer nicht behandelten Ausnahme im Benutzercode.|  

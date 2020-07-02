@@ -26,63 +26,63 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 360a94229b107e9f24bb2a769157c75cdeb3c143
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 911b56023ea78ec75e605a39a39b705724101dee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488458"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719938"
 ---
 # <a name="mapping-clr-parameter-data"></a>Zuordnen von CLR-Parameterdaten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In der folgenden Tabelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind die-Datentypen, ihre Entsprechungen in der Common Language Runtime ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR) für im **System. Data. SqlTypes** -Namespace und ihre systemeigenen CLR-Entsprechungen in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework aufgelistet.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  In der folgenden Tabelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind die-Datentypen, ihre Entsprechungen in der Common Language Runtime (CLR) für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im **System. Data. SqlTypes** -Namespace und ihre systemeigenen CLR-Entsprechungen in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework aufgelistet.  
   
 ||||  
 |-|-|-|  
 |**SQL Server-Datentyp**|Typ (in System.Data.SqlTypes oder Microsoft.SqlServer.Types)|**CLR-Datentyp (.NET Framework)**|  
-|**bigint**|**SqlInt64**|**Int64, Nullable\<Int64>**|  
+|**bigint**|**SqlInt64**|**Int64, NULL-Werte zulassen\<Int64>**|  
 |**binary**|**SqlBytes, SqlBinary**|**Byte []**|  
-|**bit**|**SqlBoolean**|**Boolescher Wert, auf\<NULL festleg barer boolescher>**|  
+|**bit**|**SqlBoolean**|**Boolescher Wert, NULL-Werte zulassen\<Boolean>**|  
 |**char**|Keine|Keine|  
 |**Cursor**|Keine|Keine|  
-|**date**|**SqlDateTime**|**DateTime, auf NULL\<festleg Bare DateTime->**|  
-|**datetime**|**SqlDateTime**|**DateTime, auf NULL\<festleg Bare DateTime->**|  
-|**datetime2**|Keine|**DateTime, auf NULL\<festleg Bare DateTime->**|  
-|**DateTimeOffset**|**Keine**|**DateTimeOffset, auf NULL\<festleg Bare DateTimeOffset->**|  
-|**decimal**|**SqlDecimal**|**Decimal, NULL-\<Werte zulassen Dezimal>**|  
-|**float**|**SqlDouble**|**Double, auf NULL\<festleg Bare doppelte>**|  
-|**geography**|**SqlGeography**<br /><br /> **SqlGeography** wird in der Datei Microsoft. SqlServer. types. dll definiert, die mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)heruntergeladen werden kann.|Keine|  
-|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** ist in der Datei Microsoft. SqlServer. types. dll definiert, die mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)heruntergeladen werden kann.|Keine|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** ist in der Datei Microsoft. SqlServer. types. dll definiert, die mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)heruntergeladen werden kann.|Keine|  
-|**image**|Keine|Keine|  
-|**int**|**SqlInt32**|**Int32, Nullable\<Int32>**|  
-|**money**|**SqlMoney**|**Decimal, NULL-\<Werte zulassen Dezimal>**|  
+|**date**|**SqlDateTime**|**DateTime, NULL-Werte zulassen\<DateTime>**|  
+|**datetime**|**SqlDateTime**|**DateTime, NULL-Werte zulassen\<DateTime>**|  
+|**datetime2**|Keine|**DateTime, NULL-Werte zulassen\<DateTime>**|  
+|**DateTimeOffset**|**None**|**DateTimeOffset, NULL-Werte zulassen\<DateTimeOffset>**|  
+|**decimal**|**SqlDecimal**|**Decimal, NULL-Werte zulassen\<Decimal>**|  
+|**float**|**SqlDouble**|**Double, NULL-Werte zulassen\<Double>**|  
+|**geography**|**SqlGeography**<br /><br /> **SqlGeography** wird in Microsoft.SqlServer.Types.dll definiert, das mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)heruntergeladen werden kann.|Keine|  
+|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** wird in Microsoft.SqlServer.Types.dll definiert, das mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)heruntergeladen werden kann.|Keine|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** wird in Microsoft.SqlServer.Types.dll definiert, das mit SQL Server installiert wird und aus dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)heruntergeladen werden kann.|Keine|  
+|**Bild**|Keine|Keine|  
+|**int**|**SqlInt32**|**Int32, NULL-Werte zulassen\<Int32>**|  
+|**money**|**SqlMoney**|**Decimal, NULL-Werte zulassen\<Decimal>**|  
 |**nchar**|**SqlChars, SqlString**|**String, Char[]**|  
 |**ntext**|Keine|Keine|  
-|**numeric**|**SqlDecimal**|**Decimal, NULL-\<Werte zulassen Dezimal>**|  
+|**numeric**|**SqlDecimal**|**Decimal, NULL-Werte zulassen\<Decimal>**|  
 |**nvarchar**|**SqlChars, SqlString**<br /><br /> **SqlChars** eignet sich besser für die Datenübertragung und den Zugriff, und **SqlString** ist eine bessere Entsprechung für die Durchführung von Zeichen folgen Vorgängen.|**String, Char[]**|  
-|**nvarchar (1), nchar (1)**|**SqlChars, SqlString**|**Char, String, Char [], NULL-\<Werte zulassen char>**|  
-|**real**|**SqlSingle** (der Bereich von **SqlSingle**ist jedoch größer als **real**).|**Single>, die\<NULL-Werte zulassen**|  
+|**nvarchar (1), nchar (1)**|**SqlChars, SqlString**|**Char, String, Char [], Nullable\<char>**|  
+|**real**|**SqlSingle** (der Bereich von **SqlSingle**ist jedoch größer als **real**).|**Single, Nullable\<Single>**|  
 |**rowversion**|Keine|**Byte []**|  
-|**smallint**|**SqlInt16**|**Int16, Nullable\<Int16>**|  
-|**smallmoney**|**SqlMoney**|**Decimal, NULL-\<Werte zulassen Dezimal>**|  
-|**sql_variant**|Keine|**Object**|  
+|**smallint**|**SqlInt16**|**Int16, NULL-Werte zulassen\<Int16>**|  
+|**smallmoney**|**SqlMoney**|**Decimal, NULL-Werte zulassen\<Decimal>**|  
+|**sql_variant**|Keine|**Objekt**|  
 |**Tabelle**|Keine|Keine|  
 |**text**|Keine|Keine|  
 |**time**|Keine|**TimeSpan, Nullable\<TimeSpan>**|  
 |**timestamp**|Keine|Keine|  
-|**tinyint**|**SqlByte**|**Byte, NULL-\<Werte zulassen>**|  
-|**uniqueidentifier**|**SqlGuid**|**GUID, auf NULL\<festleg Bare GUID>**|  
+|**tinyint**|**SqlByte**|**Byte, NULL-Werte zulassen\<Byte>**|  
+|**uniqueidentifier**|**SqlGuid**|**GUID, NULL-Werte zulassen\<Guid>**|  
 |**Benutzerdefinierter Typ (User-Defined Type, UDT)**|Keine|Dieselbe Klasse, die in derselben Assembly oder einer abhängigen Assembly an den benutzerdefinierten Typ gebunden ist.|  
 |**varbinary**|**SqlBytes, SqlBinary**|**Byte []**|  
-|**varbinary (1), binär (1)**|**SqlBytes, SqlBinary**|**Byte, Byte [], auf NULL\<festleg Bare Byte>**|  
+|**varbinary (1), binär (1)**|**SqlBytes, SqlBinary**|**Byte, Byte [], NULL-Werte zulassen\<byte>**|  
 |**varchar**|Keine|Keine|  
 |**xml**|**SQLXML**|Keine|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Automatische Datentypkonvertierung mit Out-Parametern  
- Eine CLR-Methode kann Informationen an den aufrufenden Code bzw. das aufrufende Programm zurückgeben, indem Sie einen Eingabeparameter mit dem **out** -Modifizierer (Microsoft Visual c#) oder ** \<out () > ByRef** (Microsoft Visual Basic) kennzeichnet, wenn der Eingabeparameter ein CLR-Datentyp im **System ist. der Data. SqlTypes** -Namespace, und das aufrufende Programm gibt seinen äquivalenten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp als Eingabeparameter an. eine Typkonvertierung erfolgt automatisch, wenn die CLR-Methode den-Datentyp zurückgibt.  
+ Eine CLR-Methode kann Informationen an den aufrufenden Code bzw. das aufrufende Programm zurückgeben, indem Sie einen Eingabeparameter mit dem **out** -Modifizierer (Microsoft Visual c#) oder ** \<Out()> ByRef** (Microsoft Visual Basic) kennzeichnet, wenn der Eingabeparameter ein CLR-Datentyp im **System ist. der Data. SqlTypes** -Namespace, und das aufrufende Programm gibt seinen äquivalenten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp als Eingabeparameter an. eine Typkonvertierung erfolgt automatisch, wenn die CLR-Methode den-Datentyp zurückgibt.  
   
- Beispielsweise verfügt die folgende gespeicherte CLR-Prozedur über einen Eingabeparameter des **SqlInt32** CLR-Datentyps, der mit **out** (c#) oder ** \<out () > ByRef** (Visual Basic) gekennzeichnet ist:  
+ Beispielsweise verfügt die folgende gespeicherte CLR-Prozedur über einen Eingabeparameter des **SqlInt32** CLR-Datentyps, der mit **out** (c#) oder ** \<Out()> ByRef** (Visual Basic) gekennzeichnet ist:  
   
 ```csharp  
 [Microsoft.SqlServer.Server.SqlProcedure]  
@@ -97,7 +97,7 @@ Public Shared Sub PriceSum( \<Out()> ByRef value As SqlInt32)
 End Sub  
 ```  
   
- Nachdem die Assembly erstellt und in der Datenbank erstellt wurde, wird die gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit dem folgenden Transact-SQL-Code erstellt, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Datentyp **int** als Ausgabeparameter angibt:  
+ Nachdem die Assembly erstellt und in der Datenbank erstellt wurde, wird die gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit dem folgenden Transact-SQL-Code erstellt, der den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp **int** als Ausgabeparameter angibt:  
   
 ```  
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
@@ -111,9 +111,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR-Datentyp (SQL Server)**|**SQL Server-Datentyp**|  
-|**Dezimal**|SMALLMONEY|  
+|**Decimal**|SMALLMONEY|  
 |**SqlMoney**|SMALLMONEY|  
-|**Dezimal**|money|  
+|**Decimal**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   

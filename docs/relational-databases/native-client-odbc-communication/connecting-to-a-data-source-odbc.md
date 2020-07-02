@@ -24,15 +24,15 @@ ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae59e0bdb005d296341970f4582100b15a0dfdf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd54f05b336284f08892022537641a1e1af99712
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719835"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Herstellen einer Verbindung mit einer Datenquelle (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Nach dem Zuweisen der Umgebungs- und Verbindungshandles und dem Festlegen der Verbindungsattribute stellt die Anwendung eine Verbindung zur Datenquelle oder zum Treiber her. Es gibt drei Funktionen, die Sie verwenden können, um eine Verbindung herzustellen:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "81307711"
   
 -   Um eine Verbindung herzustellen, ohne eine ODBC-Datenquelle zu verwenden.  
   
- Die **SQLDriverConnect** -Verbindungs Zeichenfolge enthält eine Reihe von Schlüsselwort-Wert-Paaren, mit denen alle von einem ODBC-Treiber unterstützten Verbindungsinformationen angegeben werden. Bei allen vom Treiber unterstützten Verbindungsinformationen unterstützt jeder Treiber über die treiberspezifischen Schlüsselwörter hinaus die standardmäßigen ODBC-Schlüsselwörter (DSN, FILEDSN, DRIVER, UID, PWD und SAVEFILE). **SQLDriverConnect** kann verwendet werden, um eine Verbindung ohne Datenquelle herzustellen. Beispielsweise kann eine Anwendung, die so konzipiert ist, dass Sie eine DSN-lose Verbindung mit einer Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von herstellt, **SQLDriverConnect** mit einer Verbindungs Zeichenfolge aufruft, die die Anmelde-ID, das Kennwort, die Netzwerk Bibliothek, den Servernamen für die Verbindung und die zu verwendende Standarddatenbank definiert.  
+ Die **SQLDriverConnect** -Verbindungs Zeichenfolge enthält eine Reihe von Schlüsselwort-Wert-Paaren, mit denen alle von einem ODBC-Treiber unterstützten Verbindungsinformationen angegeben werden. Bei allen vom Treiber unterstützten Verbindungsinformationen unterstützt jeder Treiber über die treiberspezifischen Schlüsselwörter hinaus die standardmäßigen ODBC-Schlüsselwörter (DSN, FILEDSN, DRIVER, UID, PWD und SAVEFILE). **SQLDriverConnect** kann verwendet werden, um eine Verbindung ohne Datenquelle herzustellen. Beispielsweise kann eine Anwendung, die so konzipiert ist, dass Sie eine DSN-lose Verbindung mit einer Instanz von herstellt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLDriverConnect** mit einer Verbindungs Zeichenfolge aufruft, die die Anmelde-ID, das Kennwort, die Netzwerk Bibliothek, den Servernamen für die Verbindung und die zu verwendende Standarddatenbank definiert.  
   
  Bei der Verwendung von **SQLDriverConnect**stehen zwei Optionen zur Verfügung, um den Benutzer zur Eingabe von erforderlichen Verbindungsinformationen aufzufordern:  
   
@@ -100,7 +100,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- Sie können die Meldungen 5701 und 5703 ignorieren; sie dienen nur zu Informationszwecken. Den Rückgabecode SQL_SUCCESS_WITH_INFO hingegen sollten Sie nicht ignorieren, da auch andere Meldungen als 5701 oder 5703 zurückgegeben werden können. Wenn ein Treiber z. b. eine Verbindung mit einem Server herstellt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem eine Instanz von mit veralteten gespeicherten Katalog Prozeduren ausgeführt wird, ist einer der Fehler, der durch **SQLGetDiagRec** nach einer SQL_SUCCESS_WITH_INFO zurückgegeben wird,  
+ Sie können die Meldungen 5701 und 5703 ignorieren; sie dienen nur zu Informationszwecken. Den Rückgabecode SQL_SUCCESS_WITH_INFO hingegen sollten Sie nicht ignorieren, da auch andere Meldungen als 5701 oder 5703 zurückgegeben werden können. Wenn ein Treiber z. b. eine Verbindung mit einem Server herstellt, auf dem eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit veralteten gespeicherten Katalog Prozeduren ausgeführt wird, ist einer der Fehler, der durch **SQLGetDiagRec** nach einer SQL_SUCCESS_WITH_INFO zurückgegeben wird,  
   
 ```  
 SqlState:   01000  

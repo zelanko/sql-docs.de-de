@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c3c329474b27507b3e2a3bf0796c66025391ffa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cb5dc5eea2070d394c227c741991c92a86e6661
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722752"
 ---
 # <a name="flagvalue-property-serversettingsgeneralflag-class"></a>FlagValue-Eigenschaft (ServerSettingsGeneralFlag-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ruft den Wert des Flags ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,7 +42,7 @@ object.FlagValue [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein boleescher Wert, der den Wert des Flags angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

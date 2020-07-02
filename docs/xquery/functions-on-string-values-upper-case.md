@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c757e46f861d6652b3c8c151c3e002dba13e84ef
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 9fa783dfb2ac1d7e3cbca735c9f2a2cbca19dbda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720021"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Funktionen für Zeichenfolgenwerte – upper-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Diese Funktion konvertiert jedes Zeichen in *$arg* in den entsprechenden Großbuchstaben. Die binäre Konvertierung der Groß-/Kleinschreibung für Unicode-Codepunkte von Microsoft Windows gibt an, wie Zeichen in Großbuchstaben konvertiert werden. Dieser Standard unterscheidet sich vom Unicode-Standard für die Zuordnung von Codepunkten.  
   
@@ -42,7 +42,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 |Begriff|Definition|  
 |*$arg*|Der Zeichenfolgenwert, der in Großbuchstaben konvertiert werden soll.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn der Wert *$arg* leer ist, wird eine Zeichenfolge der Länge 0 (null) zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  

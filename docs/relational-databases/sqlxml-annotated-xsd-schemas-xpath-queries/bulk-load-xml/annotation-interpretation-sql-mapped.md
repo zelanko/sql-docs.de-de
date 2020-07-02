@@ -19,15 +19,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20fec5c2625c87b2add23738b5b9d22ccfc77c4f
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: b38ef4e89db99239759ad0809a5b4828fd1906e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84884882"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724710"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interpretation von Anmerkungen – sql:mapped
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Beim XML-Massen laden wird die **SQL:** zugeordnete Anmerkung im XSD-Schema erwartungsgemäß verarbeitet, d. h., wenn das Zuordnungsschema für ein beliebiges Element oder Attribut **SQL: zugeordnet = "false"** angibt, versucht XML-Massen laden nicht, die zugeordneten Daten in der entsprechenden Spalte zu speichern.  
   
  XML-Massen laden ignoriert Elemente und Attribute, die nicht zugeordnet sind (entweder weil Sie im Schema nicht beschrieben werden, oder weil Sie im XSD-Schema mit **SQL: zugeordnet = "false"**) kommentiert werden. Alle nicht zugeordneten Daten werden in die Überlauf Spalte umgewandelt, wenn eine solche Spalte mithilfe von **SQL: overflow-field**angegeben wird.  

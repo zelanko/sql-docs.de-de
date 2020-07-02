@@ -25,16 +25,16 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f581c1a5c0d925d48df5a16d95cdb141e2d48f83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2d1d8c72851c945f178bb9e206ad536a23f24891
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388109"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724763"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Verwenden der Anmerkungen 'sql:identity' und 'sql:guid'
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Sie können die Anmerkungen " **SQL: Identity** " und " **SQL: GUID** " in einem XSD-Schema auf allen Knoten angeben, die einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Daten Bank Spalte in zugeordnet sind. Das Update Gram-Format unterstützt zwar die Attribute **updg: at-Identity** und **updg: GUID** , aber das DiffGram-Format nicht. Das **updg: at-Identity** -Attribut definiert das Verhalten beim Aktualisieren einer Spalte vom Typ Identity. Mithilfe des **updg: GUID** -Attributs können Sie einen GUID- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wert von abrufen und im Update Gram verwenden. Weitere Informationen und funktionierende Beispiele finden Sie unter [Einfügen von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  Sie können die Anmerkungen " **SQL: Identity** " und " **SQL: GUID** " in einem XSD-Schema auf allen Knoten angeben, die einer Daten Bank Spalte in zugeordnet sind [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Das Update Gram-Format unterstützt zwar die Attribute **updg: at-Identity** und **updg: GUID** , aber das DiffGram-Format nicht. Das **updg: at-Identity** -Attribut definiert das Verhalten beim Aktualisieren einer Spalte vom Typ Identity. Mithilfe des **updg: GUID** -Attributs können Sie einen GUID-Wert von abrufen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und im Update Gram verwenden. Weitere Informationen und funktionierende Beispiele finden Sie unter [Einfügen von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
  Die Anmerkungen " **SQL: Identity** " und " **SQL: GUID** " erweitern diese Funktionalität auf DiffGrams.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81388109"
  Die Anmerkungen " **SQL: Identity** " und " **SQL: GUID** " können für ein komplexes Inhalts Element definiert werden.  
   
 ## <a name="sqlidentity-annotation"></a>'sql:identity'-Anmerkung  
- Sie können die **SQL: Identity** -Anmerkung im XSD-Schema auf jedem Knoten angeben, der einer Daten Bank Spalte vom Typ IDENTITY zugeordnet ist. Der für diese Anmerkung angegebene Wert definiert, wie die Identity-Type-Spalte aktualisiert wird (entweder mit dem im Update Gram angegebenen Wert, um die Spalte zu ändern, oder indem der Wert ignoriert wird. in diesem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fall wird ein von generierter Wert für diese Spalte verwendet).  
+ Sie können die **SQL: Identity** -Anmerkung im XSD-Schema auf jedem Knoten angeben, der einer Daten Bank Spalte vom Typ IDENTITY zugeordnet ist. Der für diese Anmerkung angegebene Wert definiert, wie die Identity-Type-Spalte aktualisiert wird (entweder mit dem im Update Gram angegebenen Wert, um die Spalte zu ändern, oder indem der Wert ignoriert wird. in diesem Fall wird ein von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierter Wert für diese Spalte verwendet).  
   
  Der **SQL: Identity** -Anmerkung können zwei Werte zugewiesen werden:  
   

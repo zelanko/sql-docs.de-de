@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 3b6ba41157e7e13651eb5810502a41e7c8abde67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689238"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724703"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interpretation von Anmerkungen – sql:overflow-field
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   In einem Schema können Sie eine Spalte als Überlaufspalte festlegen, die alle nicht verbrauchten Daten aus dem XML-Dokument aufnimmt. Diese Spalte wird im Schema mithilfe der **sql:overflow-field** -Anmerkung angegeben. Sie können mit mehreren Überlaufspalten arbeiten.  
   
  Immer, wenn ein XML-Knoten (Element oder Attribut), für den eine **sql:overflow-field** -Anmerkung definiert ist, in den Bereich eintritt, wird die Überlaufspalte aktiviert und empfängt nicht verbrauchte Daten. Wenn der Knoten den Bereich verlässt, ist die Überlaufspalte nicht mehr aktiv und das vorherige Überlauffeld (sofern vorhanden) wird durch das XML-Massenladen aktiviert.  
   
  Bei der Speicherung der Daten in der Überlaufspalte speichert der XML-Massenladevorgang ebenfalls die Start- und Endtags des übergeordneten Elements, für das **sql:overflow-field** definiert ist.  
   
- Im folgenden Schema werden z. b. die>Elemente ** \< Customers>** und ** \< CustOrder** beschrieben. Beide Elemente geben eine Überlaufspalte an:  
+ Im folgenden Schema werden z **\<Customers>** . b. die-und- **\<CustOrder>** Elemente beschrieben. Beide Elemente geben eine Überlaufspalte an:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -76,9 +76,9 @@ ms.locfileid: "83689238"
 </xsd:schema>  
 ```  
   
- Im Schema wird das ** \< Customer>** -Element der Cust-Tabelle und das ** \< Order>** -Element der CustOrder-Tabelle zugeordnet.  
+ Im Schema wird das **\<Customer>** -Element der Cust-Tabelle und das- **\<Order>** Element der CustOrder-Tabelle zugeordnet.  
   
- Sowohl das ** \< Customer>** -als auch das ** \< Order>** -Element identifizieren eine Überlauf Spalte. Folglich speichert XML-Massen laden alle nicht verbrauchten untergeordneten Elemente und Attribute des ** \< Customer>** -Elements in der Überlauf Spalte der Cust-Tabelle und alle nicht verbrauchten untergeordneten Elemente und Attribute des ** \< Order>** -Elements in der Überlauf Spalte der CustOrder-Tabelle.  
+ Sowohl das **\<Customer>** -Element als auch das- **\<Order>** Element identifizieren eine Überlauf Spalte. Folglich speichert XML-Massen laden alle nicht verbrauchten untergeordneten Elemente und Attribute des- **\<Customer>** Elements in der Überlauf Spalte der Cust-Tabelle und alle nicht verbrauchten untergeordneten Elemente und Attribute des- **\<Order>** Elements in der Überlauf Spalte der CustOrder-Tabelle.  
   
 ### <a name="to-test-a-working-sample"></a>So testen Sie ein funktionstüchtiges Beispiel  
   

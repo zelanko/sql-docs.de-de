@@ -15,15 +15,15 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 32655955bc150a57a6f15ebccdcf30187d3128fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d257f5b52c6dfea82868b69570f2655675bb7ca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720284"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL-Datenbank)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Führt eine- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung für eine einzelne Azure SQL-Remote Datenbank oder eine Gruppe von Datenbanken aus, die als Shards in einem horizontalen Partitionierungsschema fungieren.  
   
@@ -72,7 +72,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `ALTER ANY EXTERNAL DATA SOURCE`-Berechtigung.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  `sp_execute_remote`Parameter müssen in der spezifischen Reihenfolge eingegeben werden, wie im obigen Abschnitt Syntax beschrieben. Wenn die Parameter nicht in der vorgegebenen Reihenfolge eingegeben werden, wird eine Fehlermeldung ausgegeben.  
   
  `sp_execute_remote`hat das gleiche Verhalten wie [Execute &#40;Transact-SQL-&#41;](../../t-sql/language-elements/execute-transact-sql.md) in Bezug auf Batches und den Umfang der Namen. Die Transact-SQL-Anweisung oder der Batch im sp_execute_remote * \@ stmt* -Parameter wird erst kompiliert, wenn die sp_execute_remote-Anweisung ausgeführt wird.  

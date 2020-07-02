@@ -23,15 +23,15 @@ ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1d9fdfcd7bcc4f86afacc75dff5b40b77bb7b2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 00a3245009d7f7db437a990fdf5dc814d6b19f7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724988"
 ---
 # <a name="fetching-result-data"></a>Abrufen von Ergebnisdaten
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Eine ODBC-Anwendung bietet drei Optionen zum Abrufen von Ergebnisdaten.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "81304611"
   
  Beim Verwenden von SQL_C_DEFAULT zur Angabe des Typs der C-Variablen müssen Sie mit Bedacht vorgehen. SQL_C_DEFAULT gibt an, dass der Typ der C-Variablen mit dem SQL-Datentyp der Spalte oder des Parameters übereinstimmt. Wenn SQL_C_DEFAULT für eine **ntext**-, **NCHAR**-oder **nvarchar** -Spalte angegeben ist, werden Unicode-Daten an die Anwendung zurückgegeben. Dies kann verschiedene Probleme verursachen, wenn die Anwendung nicht codiert wurde, um Unicode-Daten zu behandeln. Die gleichen Probleme können mit dem Datentyp **uniqueidentifier** (SQL_GUID) auftreten.  
   
- **Text**-, **ntext**-und **Image** -Daten sind in der Regel zu groß, um in eine einzelne Programm Variable zu passen, und werden in der Regel mit **SQLGetData** anstelle von **SQLBindCol**verarbeitet. Bei der Verwendung von Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cursorn wird der Native Client-ODBC-Treiber so optimiert, dass die Daten für ungebundene **Text**-, **ntext**-oder **Image** -Spalten zum Zeitpunkt der Zeilen Abruf nicht übertragen werden. Die **Text**-, **ntext**-oder **Image** -Daten werden erst dann vom Server abgerufen, wenn die Anwendung **SQLGetData** für die Spalte ausgibt.  
+ **Text**-, **ntext**-und **Image** -Daten sind in der Regel zu groß, um in eine einzelne Programm Variable zu passen, und werden in der Regel mit **SQLGetData** anstelle von **SQLBindCol**verarbeitet. Bei der Verwendung von Server Cursorn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Native Client-ODBC-Treiber so optimiert, dass die Daten für ungebundene **Text**-, **ntext**-oder **Image** -Spalten zum Zeitpunkt der Zeilen Abruf nicht übertragen werden. Die **Text**-, **ntext**-oder **Image** -Daten werden erst dann vom Server abgerufen, wenn die Anwendung **SQLGetData** für die Spalte ausgibt.  
   
  Diese Optimierung kann auf Anwendungen angewendet werden, sodass keine Text-, **ntext**-oder **Image** -Daten angezeigt werden, während ein Benutzer einen **Bildlauf**nach oben oder unten durchführt. Nachdem der Benutzer eine Zeile ausgewählt hat, kann die Anwendung **SQLGetData** aufrufen, um die **Text**-, **ntext**-oder **Image** -Daten abzurufen. Dadurch wird die Übertragung von **Text**-, **ntext**-oder **Image** -Daten für alle Zeilen, die der Benutzer nicht ausgewählt hat, und die Übertragung sehr großer Datenmengen gespart.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c9f5fe3a3fa9a58b8c1a103bcb2cf359d842190
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: e69f48867cc5dd66d72d30f6fa72b2d44d5fc54c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83806761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719900"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR-Skalarwertfunktionen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Eine Skalarwertfunktion (SVF) gibt einen einzelnen Wert zurück, z. B. eine Zeichenfolge, eine ganze Zahl oder einen Bitwert. Sie können benutzerdefinierte Skalarwertfunktionen in verwaltetem Code erstellen, indem Sie eine beliebige .NET Framework Programmiersprache verwenden. Auf diese Funktionen kann über [!INCLUDE[tsql](../../includes/tsql-md.md)] oder anderen verwalteten Code zugegriffen werden. Informationen zu den Vorteilen der CLR-Integration und zur Auswahl zwischen verwaltetem Code und [!INCLUDE[tsql](../../includes/tsql-md.md)] finden Sie unter [Übersicht über die CLR-Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Anforderungen für CLR-Skalarwertfunktionen  

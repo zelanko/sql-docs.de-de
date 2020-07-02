@@ -20,17 +20,17 @@ ms.assetid: 732d23c5-1f6c-4e96-bc85-8f29b520cf0e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84278124664b72c45e038de7981057eaff1014f0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 863da6499e788b07576066a1890c4532f3a06456
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819838"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720380"
 ---
 # <a name="change-tracking---sysdm_tran_commit_table"></a>Änderungsnachverfolgung-sys. dm_tran_commit_table
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Zeigt eine Zeile für jede Transaktion an, für die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Änderungsnachverfolgung ein Commit für eine Tabelle ausgeführt wird, die nachverfolgt wird. Die Verwaltungs Sicht sys. dm_tran_commit_table, die für die unter Stütz barkeit bereitgestellt wird und die transaktionsbezogenen Informationen verfügbar macht, die von der Änderungs Nachverfolgung in der Systemtabelle sys. syscommittab gespeichert werden. Die Tabelle sys.syscommittab ermöglicht eine effiziente persistente Zuordnung zwischen einer datenbankspezifischen Transaktions-ID und den Commit-Protokollfolgenummern (Log Sequence Number, LSN) und den Commit-Timestamps der Transaktion. Die Daten, die in der sys. syscommittab-Tabelle gespeichert und in dieser Verwaltungs Sicht verfügbar gemacht werden, unterliegen der Bereinigung gemäß der Beibehaltungs Dauer, die bei der Konfiguration der Änderungs Nachverfolgung angegeben wurde.  
+  Zeigt eine Zeile für jede Transaktion an, für die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Änderungsnachverfolgung ein Commit für eine Tabelle ausgeführt wird, die nachverfolgt wird. Die Verwaltungs Sicht sys. dm_tran_commit_table, die für die unter Stütz barkeit bereitgestellt wird und die transaktionsbezogenen Informationen verfügbar macht, die von der Änderungs Nachverfolgung in der sys.syscommittab-Systemtabelle gespeichert werden. Die Tabelle sys.syscommittab ermöglicht eine effiziente persistente Zuordnung zwischen einer datenbankspezifischen Transaktions-ID und den Commit-Protokollfolgenummern (Log Sequence Number, LSN) und den Commit-Timestamps der Transaktion. Die Daten, die in der sys.syscommittab-Tabelle gespeichert und in dieser Verwaltungs Sicht verfügbar gemacht werden, unterliegen der Bereinigung gemäß der Beibehaltungs Dauer, die bei der Konfiguration der Änderungs Nachverfolgung angegeben wurde.  
   
 > [!NOTE]  
 >  Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_tran_commit_table**.  

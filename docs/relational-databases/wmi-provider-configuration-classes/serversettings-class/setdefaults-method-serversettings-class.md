@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86e15376bd56a439e0763e79a5c166d7023125ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e507eede2ba7abb036eb33f74a0d1a1ab1ba2dce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722777"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults-Methode (ServerSettings-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Legt alle Standardwerte für die Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fest, wobei die Option zum Überschreiben vorhandener Daten vorhanden ist.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  Legt alle Standardwerte für die Instanz von fest [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , wobei die Option zum Überschreiben vorhandener Daten vorhanden ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,12 +43,12 @@ object.SetDefaults(OverwriteAll)
   
 |Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
-|*Overschreiteall*|Ein boolescher Wert, der angibt, ob vorhandene Werte für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]überschrieben werden sollen: **true** , wenn vorhandene Daten überschrieben werden sollen, oder **false** , wenn vorhandene Daten nicht überschrieben werden sollen.|  
+|*Overschreiteall*|Ein boolescher Wert, der angibt, ob vorhandene Werte für die Instanz von überschrieben werden sollen: true, wenn vorhandene Daten überschrieben werden sollen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , oder **false** , wenn vorhandene Daten nicht überschrieben werden sollen. **true**|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein u**Int32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird, und jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

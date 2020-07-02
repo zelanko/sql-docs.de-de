@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f016abf2113afef3e02f01fd9842b91b742d50a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c81ba685de223f213da150da0edb930385b84d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719929"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Zulässigkeit von NULL-Werten und Vergleiche mit dreiwertiger Logik
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Wenn Sie mit den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen vertraut sind, finden Sie eine ähnliche Semantik und Genauigkeit im **System.Data.SqlTypes** -Namespace in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Es gibt jedoch einige Unterschiede, und die wichtigsten dieser Unterschiede werden in diesem Thema behandelt.  
   
 ## <a name="null-values"></a>NULL-Werte  
@@ -37,7 +37,7 @@ ms.locfileid: "81488446"
  Zur Darstellung dieser dreiwertigen Logik wurde im **System.Data.SqlTypes** -Namespace der **SqlBoolean** -Typ eingeführt. Vergleiche zwischen beliebigen Werten des Typs **SqlTypes** ergeben einen Wert des **SqlBoolean** -Typs. Der UNKNOWN-Wert wird durch den NULL-Wert des **SqlBoolean** -Typs dargestellt. Die Eigenschaften **IsTrue**, **IsFalse**und **IsNull** dienen zur Überprüfung des Werts eines **SqlBoolean** -Typs.  
   
 ## <a name="operations-functions-and-null-values"></a>Vorgänge, Funktionen und NULL-Werte  
- Alle arithmetischen Operatoren (+, \*-,,/,%), bitweise Operatoren (~, & und |) und die meisten Funktionen geben NULL zurück, wenn einer der Operanden oder Argumente von **SqlTypes** NULL ist. Die **IsNull** -Eigenschaft gibt stets den Wert true oder false zurück.  
+ Alle arithmetischen Operatoren (+,-, \* ,/,%), bitweise Operatoren (~, & und |) und die meisten Funktionen geben NULL zurück, wenn einer der Operanden oder Argumente von **SqlTypes** NULL ist. Die **IsNull** -Eigenschaft gibt stets den Wert true oder false zurück.  
   
 ## <a name="precision"></a>Precision  
  Für Dezimaldatentypen in der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -CLR gelten andere Maximalwerte als für die numerischen Datentypen und Dezimaldatentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Außerdem wird bei den Dezimaldatentypen der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -CLR die maximale Genauigkeit angenommen. In der CLR für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bietet **SqlDecimal** jedoch die gleiche maximale Genauigkeit und Dezimalstellenanzahl sowie die gleiche Semantik wie die Dezimaldatentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

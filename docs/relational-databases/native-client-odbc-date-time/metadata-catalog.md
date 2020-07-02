@@ -14,19 +14,19 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebf39ceb63a814b90bc5e6f0e2ebddeec401b126
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e80eeb64344c062d06c55e1eae1a85d8e5f0e02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719759"
 ---
 # <a name="metadata---catalog"></a>Metadaten: Katalog
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In diesem Thema werden die von **SQLColumns** und **sqlprocedurecolumschlag**zurückgegebenen Spalten Metadaten sowie die von **SQLGetTypeInfo**zurückgegebenen Metadaten des Datentyps beschrieben.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die folgenden Spaltenwerte werden für Datums-/Uhrzeittypen von **SQLColumns** und **sqlprocedurecolumschlag**zurückgegeben.  
   
 |Parametertyp|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  

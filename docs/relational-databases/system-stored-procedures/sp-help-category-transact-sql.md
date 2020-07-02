@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c09dfe73df914a38e53a39b99c99388590c8d9c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8d34f37256e36049b4766a4059068a2e7bd6cfd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827746"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724579"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Stellt Informationen zu den angegebenen Klassen von Aufträgen, Warnungen oder Operatoren bereit.  
    
@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Argumente  
 `[ @class = ] 'class'`Die Klasse, über die Informationen angefordert werden. die *Klasse* ist vom Datentyp **varchar (8)** und hat den Standardwert **Job**. die *Klasse* kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Auftrag**|Stellt Informationen zu einer Auftragskategorie bereit.|  
 |**Warnung**|Stellt Informationen zu einer Warnungskategorie bereit.|  
@@ -52,7 +52,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'`Der Typ der Kategorie, für die Informationen angefordert werden. *Type ist vom Datentyp* **varchar (12)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Nah**|Lokale Auftrags Kategorie.|  
 |**MULTI-SERVER**|Multiserver-Auftragskategorie|  
@@ -82,7 +82,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|Art der Kategorie: Eine von " **local**", " **MultiServer**" oder " **None** ".|  
 |**name**|**sysname**|Kategoriename|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_help_category** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
  Werden keine Parameter angegeben, stellt das Resultset Informationen zu allen Auftragskategorien bereit.  

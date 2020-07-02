@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58d93574b2e9b71b47e9c145619e9fb153c6e91d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75320002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723045"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **sp_validate_replica_hosts_as_publishers** ist eine Erweiterung von **sp_validate_redirected_publisher** , mit der alle sekundären Replikate überprüft werden können, und nicht nur das aktuelle primäre Replikat. **sp_validate_replicat_hosts_as_publisher** überprüft eine gesamte Always on Replikations Topologie. **sp_validate_replica_hosts_as_publishers** muss direkt auf dem Verteiler ausgeführt werden, indem eine Remote Desktop Sitzung verwendet wird, um einen Double-Hop-Sicherheitsfehler (21892) zu vermeiden.  
   
@@ -51,10 +51,10 @@ sp_validate_replica_hosts_as_publishers
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine  
+ Keine.  
   
-## <a name="remarks"></a>Bemerkungen  
- Wenn kein Eintrag für den Verleger und die Veröffentlichungs Datenbank vorhanden ist, gibt **sp_validate_redirected_publisher** für den * \@redirected_publisher*Output-Parameter den Wert NULL zurück. Andernfalls wird der zugeordnete umgeleitete Verleger zurückgegeben, sowohl bei Erfolg und als auch bei Fehler.  
+## <a name="remarks"></a>Hinweise  
+ Wenn kein Eintrag für den Verleger und die Veröffentlichungs Datenbank vorhanden ist, gibt **sp_validate_redirected_publisher** für den * \@ redirected_publisher*Output-Parameter den Wert NULL zurück. Andernfalls wird der zugeordnete umgeleitete Verleger zurückgegeben, sowohl bei Erfolg und als auch bei Fehler.  
   
  Wenn die Überprüfung erfolgreich ist, gibt **sp_validate_redirected_publisher** eine Erfolgs Angabe zurück.  
   

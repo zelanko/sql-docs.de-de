@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 02697937d5a0402edbaf959ed52731010eab1ce6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723066"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert die Einstellung für einen Schritt eines Auftrags, mit dem automatische Aktivitäten ausgeführt werden.  
   
@@ -125,7 +125,7 @@ sp_update_jobstep
 |**2**|An Ausgabedatei anfügen|  
 |**4**|Ausgabe des Transact-SQL-Auftragsschrittes in Schrittverlauf schreiben|  
 |**8**|Protokoll in Tabelle schreiben (vorhandenen Verlauf überschreiben)|  
-|**Uhr**|Protokoll in Tabelle schreiben (an vorhandenen Verlauf anfügen)|  
+|**16**|Protokoll in Tabelle schreiben (an vorhandenen Verlauf anfügen)|  
   
 `[ @proxy_id = ] proxy_id`Die ID-Nummer des Proxys, als der der Auftrags Schritt ausgeführt wird. *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn keine *proxy_id* angegeben wird, kein *proxy_name* angegeben wird und keine *user_name* angegeben ist, wird der Auftrags Schritt als Dienst Konto für den- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ausgeführt.  
   
@@ -134,7 +134,7 @@ sp_update_jobstep
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_update_jobstep** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
  Beim Aktualisieren eines Auftragsschrittes wird die Versionsnummer des Auftrags erhöht.  

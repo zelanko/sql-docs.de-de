@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09ef147b9051ecbacdc1a33468100f4be2b372e9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8a38d4a197b5e86b41b8a7b791321d8a7ded7ab3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809081"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723034"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Überprüft, ob der aktuelle Host für die Veröffentlichungsdatenbank die Replikation unterstützen kann. Muss von einer Verteilungsdatenbank ausgeführt werden. Diese Prozedur wird von **sp_get_redirected_publisher**aufgerufen.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "82809081"
 ## <a name="result-sets"></a>Resultsets  
  Keine.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn kein Eintrag für den Verleger und die Veröffentlichungs Datenbank vorhanden ist, gibt **sp_validate_redirected_publisher** im * \@ redirected_publisher*Output-Parameter den Wert NULL zurück. Wenn ein Eintrag vorhanden ist, wird er im Ausgabeparameter in Erfolgs- und Fehlerfällen zurückgegeben.  
   
  Wenn die Überprüfung erfolgreich ist, gibt **sp_validate_redirected_publisher** eine Erfolgs Angabe zurück.  

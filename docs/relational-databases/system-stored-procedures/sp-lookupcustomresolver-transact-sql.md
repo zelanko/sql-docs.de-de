@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eba554a2472a17f67d0b03faceb8d546da4996c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b86fd5bd04c41d10437a8a0f7bcc21b61ab22fef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831059"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720235"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt die Informationen zu einem Geschäftslogikhandler oder den Wert des Klassenbezeichners (CLSID, Class Identifier) einer COM-basierten Komponente für benutzerdefinierte Konfliktlöser zurück, die auf dem Verteiler registriert sind. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -57,7 +57,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_lookupcustomresolver** wird bei der Mergereplikation verwendet.  
   
  **sp_lookupcustomresolver** gibt einen NULL-Wert für *resolver_clsid* zurück, wenn die Komponente nicht bei der Verteilung registriert ist, und den Wert "00000000-0000-0000-0000-000000000000", wenn die Registrierung zu einer .NET Framework Assembly gehört, die als Geschäftslogik Handler registriert ist.  

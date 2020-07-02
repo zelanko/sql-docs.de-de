@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 31f7d9c3e5d297a39fd0278c51014793a4b8dbd0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ab6ea491a766bdb829a152ed02f92fcd2e71d39c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725419"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die **MSpublications** -Tabelle enthält eine Zeile für jede Veröffentlichung, die von einem Verleger repliziert wird. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82829234"
 |**allow_push**|**bit**|Zeigt an, ob für die angegebene Veröffentlichung Pushabonnements erstellt werden können.|  
 |**allow_pull**|**bit**|Zeigt an, ob für die angegebene Veröffentlichung Pullabonnements erstellt werden können.|  
 |**allow_anonymous**|**bit**|Zeigt an, ob für die angegebene Veröffentlichung anonyme Abonnements erstellt werden können.|  
-|**Beschreibung**|**nvarchar(255)**|Die Beschreibung der Veröffentlichung.|  
+|**description**|**nvarchar(255)**|Die Beschreibung der Veröffentlichung.|  
 |**vendor_name**|**nvarchar (100)**|Der Name des Herstellers, wenn der Verleger keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank ist.|  
 |**zurück**|**int**|Die Beibehaltungsdauer der Veröffentlichung (in Stunden).|  
 |**sync_method**|**int**|Die Synchronisierungsmethode:<br /><br /> **0** = System eigen (erzeugt eine Massen Kopier Ausgabe aller Tabellen im einheitlichen Modus).<br /><br /> **1** = Zeichen (erzeugt eine Massen Kopier Ausgabe aller Tabellen im Zeichenmodus).<br /><br /> **3** = gleichzeitig (erzeugt eine Massen Kopier Ausgabe aller Tabellen im einheitlichen Modus, sperrt jedoch die Tabelle während der Momentaufnahme nicht).<br /><br /> **4** = Concurrent_c (erzeugt eine Massen Kopier Ausgabe aller Tabellen im Zeichenmodus, sperrt jedoch die Tabelle während der Momentaufnahme nicht)<br /><br /> Die Werte **3** und **4** stehen für die Transaktions Replikation und Mergereplikation zur Verfügung, jedoch nicht für die Momentaufnahme Replikation.|  

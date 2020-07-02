@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7c949e62261e710854aefda9b83a7ca20c222b78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b46db697c7f8d6a7f402d98093323f47ece47d69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78866480"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722955"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Stellt Informationen über aktuelle Benutzer, Sitzungen und Prozesse in einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]bereit. Die Informationen können gefiltert werden, damit nur die Prozesse zurückgegeben werden, die sich nicht im Leerlauf befinden, die zu einem bestimmten Benutzer gehören oder die zu einer bestimmten Sitzung gehören.  
+  Stellt Informationen über aktuelle Benutzer, Sitzungen und Prozesse in einer Instanz von bereit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Die Informationen können gefiltert werden, damit nur die Prozesse zurückgegeben werden, die sich nicht im Leerlauf befinden, die zu einem bestimmten Benutzer gehören oder die zu einer bestimmten Sitzung gehören.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  *Login* ist vom **Datentyp vom Datentyp sysname** , der die zu einer bestimmten Anmeldung gehörenden Prozesse identifiziert.  
   
- die *Sitzungs-ID* ist eine Sitzungs-ID, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die zur Instanz gehört. die *Sitzungs-ID* ist " **smallint**".  
+ die *Sitzungs-ID* ist eine Sitzungs-ID, die zur Instanz gehört [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . die *Sitzungs-ID* ist " **smallint**".  
   
  **Aktiv** schließt Sitzungen aus, die auf den nächsten Befehl vom Benutzer warten.  
   
@@ -67,9 +67,9 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |**cmd**|**NCHAR (16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]-Befehl ([!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, interner [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Prozess usw.), der für den Prozess ausgeführt wird. In SQL Server 2019 wurde der Datentyp in **NCHAR (26)** geändert.|  
 |**request_id**|**int**|ID für Anforderungen, die in einer bestimmten Sitzung ausgeführt werden.|  
   
- Bei paralleler Verarbeitung werden für die bestimmte Sitzungs-ID Subthreads erstellt. Der Hauptthread wird mit `spid = <xxx>` und `ecid =0` angegeben. Die anderen Subthreads haben dieselbe `spid = <xxx>`, aber mit **ECID** > 0.  
+ Bei paralleler Verarbeitung werden für die bestimmte Sitzungs-ID Subthreads erstellt. Der Hauptthread wird mit `spid = <xxx>` und `ecid =0` angegeben. Die anderen Subthreads haben dieselbe `spid = <xxx>` , aber mit **ECID** > 0.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Ein blockierender Prozess, möglicherweise mit einer exklusiven Sperre, hat Ressourcen, die von einem anderen Prozess benötigt werden.  
   
  Allen verwaisten verteilten Transaktionen wird der Sitzungs-ID-Wert '-2' zugewiesen. Verwaiste verteilte Transaktionen sind verteilte Transaktionen, denen keine Sitzungs-ID zugeordnet ist. Weitere Informationen finden Sie unter [Wiederherstellen von verwandten Datenbanken mithilfe von markierten Transaktionen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
@@ -110,7 +110,7 @@ EXEC sp_who 'active';
 GO  
 ```  
   
-### <a name="d-displaying-a-specific-process-identified-by-a-session-id"></a>D. Anzeigen eines von einer Sitzungs-ID identifizierten bestimmten Prozesses  
+### <a name="d-displaying-a-specific-process-identified-by-a-session-id"></a>D: Anzeigen eines von einer Sitzungs-ID identifizierten bestimmten Prozesses  
   
 ```  
 USE master;  
@@ -121,7 +121,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_lock &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sys. sysprocesses &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.sysProzesse &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

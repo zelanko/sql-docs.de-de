@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7bd195499313eaa24afd12ab424ae3bf832841b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e01cc51b12d92fefbca760541d433fbf27bb0191
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724653"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Stellt Informationen über einen Sammlungssatz oder ein Paket bereit, wenn das Ausführungsprotokoll voll ist.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82824899"
 |log_id|**bigint**|Identifiziert jede Sammlungssatzausführung. Wird verwendet, um diese Sicht mit anderen ausführlichen Protokollen zu verknüpfen. Lässt NULL-Werte zu.|  
 |parent_log_id|**bigint**|Identifiziert das übergeordnete Paket oder den Sammlungssatz. Lässt keine NULL-Werte zu. Die IDs werden in der Über-/Unterordnungsbeziehung verkettet. Auf diese Weise können Sie bestimmen, welches Paket von welchem Sammlungssatz gestartet wurde. In dieser Ansicht werden die Protokolleinträge nach der über-/unterordnungsverknüpfung gruppiert und die Namen der Pakete so eingeblendet, dass die-Rückruf Kette deutlich sichtbar ist.|  
 |name|**nvarchar(4000)**|Der Name des Sammlungssatzes oder des Pakets, der bzw. das von diesem Protokolleintrag dargestellt wird. Lässt NULL-Werte zu.|  
-|status|**smallint**|Gibt den aktuellen Status des Sammlungssatzes oder des Pakets an. Lässt NULL-Werte zu.<br /><br /> Werte:<br /><br /> 0 = Wird ausgeführt<br /><br /> 1 = Beendet<br /><br /> 2 = fehlgeschlagen|  
+|status|**smallint**|Gibt den aktuellen Status des Sammlungssatzes oder des Pakets an. Lässt NULL-Werte zu.<br /><br /> Gültige Werte:<br /><br /> 0 = Wird ausgeführt<br /><br /> 1 = Beendet<br /><br /> 2 = fehlgeschlagen|  
 |runtime_execution_mode|**smallint**|Gibt an, ob die Sammlungs Satz Aktivität Daten gesammelt oder Daten hochgeladen hat. Lässt NULL-Werte zu.|  
 |start_time|**datetime**|Die Startzeit für den Sammlungssatz oder das Paket. Lässt NULL-Werte zu.|  
 |last_iteration_time|**datetime**|Für kontinuierlich ausgeführte Pakete der letzte Zeitpunkt, zu dem das Paket eine Momentaufnahme aufgezeichnet hat. Lässt NULL-Werte zu.|  

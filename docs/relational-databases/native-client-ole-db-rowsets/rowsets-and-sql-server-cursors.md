@@ -17,15 +17,15 @@ ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26d849cf68bdb64cef35a45b73a329d37d3966b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af296d099b4858b9a554ad6d1fee54ecdc4189b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300301"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724816"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Rowsets und SQL Server-Cursor
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt Consumern Resultsets mit zwei Methoden zurück:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "81300301"
   
     -   Keine Unterstützung einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, die mehr als ein einzelnes Resultset zurückgibt  
   
- Consumer können andere Cursorverhaltensweisen in einem Rowset anfordern, indem sie bestimmte Rowseteigenschaften festlegen. Wenn der Consumer keine Rowseteigenschaften festlegt oder alle Eigenschaften auf die Standardwerte festlegt, implementiert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter das Rowset mit einem Standardresultset. Wenn eine dieser Eigenschaften auf einen anderen Wert als den Standardwert festgelegt ist, implementiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Native Client OLE DB-Anbieter das Rowset mithilfe eines Server Cursors.  
+ Consumer können andere Cursorverhaltensweisen in einem Rowset anfordern, indem sie bestimmte Rowseteigenschaften festlegen. Wenn der Consumer keine Rowseteigenschaften festlegt oder alle Eigenschaften auf die Standardwerte festlegt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementiert der Native Client OLE DB-Anbieter das Rowset mit einem Standardresultset. Wenn eine dieser Eigenschaften auf einen anderen Wert als den Standardwert festgelegt ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementiert der Native Client OLE DB-Anbieter das Rowset mithilfe eines Server Cursors.  
   
  Die folgenden Rowseteigenschaften weisen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter an, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursor zu verwenden. Einige Eigenschaften können mit anderen problemlos kombiniert werden. Ein Rowset mit den Eigenschaften DBPROP_IRowsetScroll und DBPROP_IRowsetChange entspricht beispielsweise einem Lesezeichenrowset mit sofortigem Updateverhalten. Andere Eigenschaften schließen sich hingegen gegenseitig aus. Zum Beispiel kann ein Rowset, das DBPROP_OTHERINSERT aufweist, keine Lesezeichen enthalten.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "81300301"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können nicht über das Rowset aktualisiert werden. Das Rowset unterstützt nur den Bildlauf vorwärts. Die relative Zeilenpositionierung wird unterstützt. Befehlstext kann eine ORDER BY-Klausel enthalten, wenn ein Index für die Spalten vorhanden ist, auf die verwiesen wird.<br /><br /> DBPROP_IMMOBILEROWS ist nur in Rowsets verfügbar, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zeilen anzeigen können, die von Befehlen in anderen Sitzungen oder von anderen Benutzern eingefügt wurden. Wenn Sie versuchen, ein Rowset mit einer auf VARIANT_FALSE festgelegten Eigenschaft für ein Rowset zu öffnen, für das DBPROP_OTHERINSERT nicht VARIANT_TRUE sein kann, tritt ein Fehler auf.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten können nicht über das Rowset aktualisiert werden. Das Rowset unterstützt nur den Bildlauf vorwärts. Die relative Zeilenpositionierung wird unterstützt. Befehlstext kann eine ORDER BY-Klausel enthalten, sofern keine Beschränkung durch eine andere Eigenschaft vorliegt.|  
   
- Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einem Server Cursor unterstütztes Native Client OLE DB-anbieterowset kann mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **IOpenRowset:: OPENROWSET** -Methode problemlos für eine Basistabelle oder Sicht erstellt werden. Geben Sie die Tabelle oder die Sicht mit Namen an, indem die erforderlichen Eigenschaftensätze für das Rowset im *rgPropertySets*-Parameter übergeben werden.  
+ Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einem Server Cursor unterstütztes Native Client OLE DB-anbieterowset kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der **IOpenRowset:: OPENROWSET** -Methode problemlos für eine Basistabelle oder Sicht erstellt werden. Geben Sie die Tabelle oder die Sicht mit Namen an, indem die erforderlichen Eigenschaftensätze für das Rowset im *rgPropertySets*-Parameter übergeben werden.  
   
  Befehlstext, der ein Rowset erstellt, ist eingeschränkt, wenn der Consumer erfordert, dass das Rowset von einem Servercursor unterstützt wird. Der Befehlstext ist insbesondere entweder auf eine einzelne SELECT-Anweisung, die ein einzelnes Rowsetergebnis zurückgibt, oder auf eine gespeicherte Prozedur beschränkt, die eine einzelne SELECT-Anweisung implementiert, mit der ein einzelnes Rowsetergebnis zurückgegeben wird.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "81300301"
   
  Um ein bestimmtes Cursormodell zu verwenden, suchen Sie die dem Cursormodell entsprechende Spalte, und suchen Sie alle Rowseteigenschaften mit dem Wert "T" in der Spalte. Legen Sie diese Rowseteigenschaften auf VARIANT_TRUE fest, um das gewünschte Cursormodell zu verwenden. Die Rowseteigenschaften mit dem Wert "-" können entweder auf VARIANT_TRUE oder VARIANT_FALSE festgelegt werden.  
   
-|Rowseteigenschaften/Cursormodelle|Standard<br /><br /> result<br /><br /> set<br /><br /> (RO)|Schnell<br /><br /> forward-<br /><br /> Machine Learning<br /><br /> (RO)|Statisch<br /><br /> (RO)|Keyset<br /><br /> driven<br /><br /> (RO)|  
+|Rowseteigenschaften/Cursormodelle|Standard<br /><br /> result<br /><br /> set<br /><br /> (RO)|Schnell<br /><br /> forward-<br /><br /> Machine Learning<br /><br /> (RO)|statischen<br /><br /> (RO)|Keyset<br /><br /> driven<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

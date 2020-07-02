@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9dd52e6d2e4bf8a1a099ea2391a2c6ce2d6decdc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dee2cdf797bb3336bdf2645c42435ae441c63607
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724562"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Listet alle Zeilen in der **sysdownloadlist** -Systemtabelle für den angegebenen Auftrag oder alle Zeilen auf, wenn kein Auftrag angegeben wird.  
   
@@ -55,7 +55,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'`Der gültige Vorgang für den angegebenen Auftrag. *Operation* ist vom Datentyp **varchar (64)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Mängel**|Der Server Vorgang, der den Austritt des Zielservers vom Master- **SQLServerAgent** -Dienst anfordert.|  
 |**DELETE**|Auftragsvorgang, mit dem ein gesamter Auftrag entfernt wird|  

@@ -13,15 +13,15 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c4f0ff3a5cc18845bc2fcc2bec682c6bd8e2db4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724659"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Gibt eine Zeile für jedes Rowset zurück, das interne Daten für columnstore--Indizes für Datenträger basierte Tabellen nachverfolgt. Diese Rowsets sind für columnstore--Indizes intern und Nachverfolgen gelöschter Zeilen, Zeilen Gruppen Zuordnungen und Delta Speicher-Zeilen Gruppen. Sie verfolgen Daten für jede Tabellen Partition nach. jede Tabelle verfügt über mindestens eine Partition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt jedes Mal, wenn der columnstore--Index neu erstellt wird, die Rowsets neu.   
   
@@ -41,7 +41,7 @@ ms.locfileid: "72304820"
 |optimize_for_sequential_key|**bit**|1 = Partition verfügt über die aktivierte INSERT-Optimierung der letzten Seite.<br><br>0 = Standardwert. Bei der Partition wurde die INSERT-Optimierung der letzten Seite deaktiviert.|
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der Rolle `public`.  Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Erfordert die Mitgliedschaft in der Rolle `public`. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt bei jedem Erstellen oder Neuerstellen eines columnstore--Indexes neue interne columnstore--Indizes neu.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e96326c97dde209f37104e66e562b66e96c8acd3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9fb4347ca545a695f2ab1f223f564ca152ba8d0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723050"
 ---
 # <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die gespeicherte Prozedur sp_upgrade_log_shipping wird automatisch zum Aktualisieren von Metadaten aufgerufen, die für den Protokoll Versand spezifisch sind.  
   
@@ -47,7 +47,7 @@ sp_upgrade_log_shipping
 ## <a name="result-sets"></a>Resultsets  
  Keine.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese gespeicherte Prozedur wird automatisch während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Upgrades aufgerufen, um Metadaten für den Protokollversand zu aktualisieren. Sie müssen diese Prozedur nicht explizit aufrufen, es sei denn, beim Upgrade tritt ein Problem mit den Metadaten auf.  
   
  sp_upgrade_log_shipping muss in der master-Datenbank auf dem primären, sekundären oder Überwachungsserver ausgeführt werden.  
@@ -56,7 +56,7 @@ sp_upgrade_log_shipping
  Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Informationen zum Protokoll Versand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

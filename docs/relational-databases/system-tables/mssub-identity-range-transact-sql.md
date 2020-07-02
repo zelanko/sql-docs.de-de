@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 965d8530b38aad7d01d9735e603eb3c3a7be0876
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0e7d5c15bd0ff4a20b4b8fe93719c573e03e2cd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820995"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722866"
 ---
 # <a name="mssub_identity_range-transact-sql"></a>MSsub_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die **MSsub_identity_range** Tabelle bietet Unterstützung für die Identitäts Bereichs Verwaltung für Abonnements. Diese Tabelle wird in Abonnementdatenbanken gespeichert.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82820995"
 |**objid**|**int**|Die ID der Tabelle, die die durch Replikation verwaltete Identitätsspalte enthält.|  
 |**range**|**bigint**|Steuert die Bereichsgröße der aufeinander folgenden Identitätswerte, die auf dem Abonnenten bei einer Anpassung zugewiesen würden.|  
 |**last_seed**|**bigint**|Die untere Grenze des aktuellen Bereichs.|  
-|**Mindest**|**int**|Der Prozentwert, der steuert, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist. Wenn der in *Schwellenwert* angegebene Prozentsatz der Werte verwendet wird, erstellt der Verteilungs-Agent einen neuen Identitäts Bereich.|  
+|**threshold**|**int**|Der Prozentwert, der steuert, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist. Wenn der in *Schwellenwert* angegebene Prozentsatz der Werte verwendet wird, erstellt der Verteilungs-Agent einen neuen Identitäts Bereich.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
