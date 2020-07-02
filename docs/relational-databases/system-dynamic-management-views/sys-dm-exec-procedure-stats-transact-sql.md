@@ -20,15 +20,15 @@ ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3620efe22d2a285aed7f78f6573bdc2280be47f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9c180e31958c6d1a6c9cdd728de5ea9a2e6b32ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734778"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte gespeicherte Prozeduren zurück. Diese Sicht gibt eine Zeile für jeden Plan der zwischengespeicherten gespeicherten Prozedur zurück, und die Lebensdauer der Zeile entspricht der Verweildauer der gespeicherten Prozedur im Cache. Bei Entfernung einer gespeicherten Prozedur aus dem Cache wird die entsprechende Zeile aus dieser Sicht gelöscht. Zu diesem Zeitpunkt wird ein Leistungsstatistik-SQL-Ablaufverfolgungsereignis ausgelöst, das **sys.dm_exec_query_stats** entspricht.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82829424"
 |-----------------|---------------|-----------------| 
 |**database_id**|**int**|ID der Datenbank, in der sich die gespeicherte Prozedur befindet.|  
 |**object_id**|**int**|Objekt-ID der gespeicherten Prozedur.|  
-|**type**|**char (2)**|Der Objekttyp:<br /><br /> P = Gespeicherte SQL-Prozedur<br /><br /> PC = Gespeicherte Assemblyprozedur (CLR)<br /><br /> X = Erweiterte gespeicherte Prozedur|  
+|**type**|**char(2)**|Der Objekttyp:<br /><br /> P = Gespeicherte SQL-Prozedur<br /><br /> PC = Gespeicherte Assemblyprozedur (CLR)<br /><br /> X = Erweiterte gespeicherte Prozedur|  
 |**type_desc**|**nvarchar(60)**|Beschreibung des Objekttyps:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
 |**sql_handle**|**varbinary(64)**|Dies kann verwendet werden, um mit Abfragen in **sys. dm_exec_query_stats** zu korrelieren, die in dieser gespeicherten Prozedur ausgeführt wurden.|  
 |**plan_handle**|**varbinary(64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit der dynamischen Verwaltungssicht **sys.dm_exec_cached_plans** verwendet werden.<br /><br /> Ist immer 0x000, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
@@ -87,7 +87,7 @@ ms.locfileid: "82829424"
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
    
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Statistik in der Sicht wird aktualisiert, wenn die Ausführung einer gespeicherten Prozedur abgeschlossen ist.  
   
 ## <a name="examples"></a>Beispiele  

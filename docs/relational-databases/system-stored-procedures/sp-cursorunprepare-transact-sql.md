@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b46d4813-c4a9-4f9d-9979-2b5082ecf06a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47d68b6b6322b7597bf27128942757c149fea877
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e95828dcee6ea75c24df350379e6ac1e3c43d5ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826244"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733289"
 ---
 # <a name="sp_cursorunprepare-transact-sql"></a>sp_cursorunprepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Verwirft den Ausführungsplan, der in der gespeicherten Prozedur sp_cursorprepare entwickelt wurde. sp_cursorunprepare wird aufgerufen, indem ID = 6 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   

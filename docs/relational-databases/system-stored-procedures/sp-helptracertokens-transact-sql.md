@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b04bf618bccb5d4d49724e0b62f03ba193dc0f2a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cee4dd07152a20310b920b93ae70ee5589d7ae13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826035"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736915"
 ---
 # <a name="sp_helptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Gibt eine Zeile für jedes Überwachungstoken zurück, das in eine Veröffentlichung eingefügt wurde, um Latenzzeiten zu bestimmen. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank oder auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
   
@@ -58,7 +58,7 @@ sp_helptracertokens [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helptracertokens** wird bei der Transaktions Replikation verwendet.  
   
  **sp_helptracertokens** wird zum Abrufen von Überwachungs Token-IDs verwendet, wenn [sp_helptracertokenhistory &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)ausgeführt wird.  

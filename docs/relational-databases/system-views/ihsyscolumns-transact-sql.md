@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a432685809676f997049940ea5aa1ce43dc38a60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a965be50e45300aeca3ba158251c665e8204a6f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029628"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736670"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die **ihsyscolenns** -Sicht macht Spalten Informationen für Artikel verfügbar, die von einem nicht-SQL Server-Verleger veröffentlicht wurden. Diese Sicht wird in der Verteil Datenbank gespeichert.  
   
@@ -33,10 +33,10 @@ ms.locfileid: "68029628"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name der Spalte oder des Prozedurparameters.|  
 |**id**|**int**|Die Objekt-ID der Tabelle, zu der diese Spalte gehört, oder die ID der gespeicherten Prozedur, der dieser Parameter zugeordnet ist.|  
-|**xtype**|**tinyint**|Der physische Speichertyp aus [sys. systypes &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**xtype**|**tinyint**|Der physische Speichertyp aus [sys.sysTypen &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|Die ID des erweiterten benutzerdefinierten Datentyps.|  
-|**length**|**bigint**|Die maximale physische Speicher Länge aus [sys. systypes &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**length**|**bigint**|Die maximale physische Speicher Länge von [sys.sysTypen &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**int**|Die Spalten- oder Parameter-ID.|  
@@ -51,10 +51,10 @@ ms.locfileid: "68029628"
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|Der Offset in die Zeile, in der diese Spalte angezeigt wird.|  
 |**collationid**|**int**|Die ID der Spaltensortierung. Ist für nicht zeichenbasierte Spalten NULL.|  
-|**Kurse**|**int**|Die Sprachen-ID für die Spalte.|  
+|**language**|**int**|Die Sprachen-ID für die Spalte.|  
 |**status**|**int**|Das Bitmuster, das zum Beschreiben einer Eigenschaft der Spalte oder des Parameters verwendet wird:<br /><br /> **0x08** = die Spalte lässt NULL-Werte zu.<br /><br /> **0x10** = ANSI-Auffüll Zeichen war wirksam, als **varchar** -oder **varbinary** -Spalten hinzugefügt wurden. Nachfolgende Leerzeichen werden bei **varchar** -Spalten beibehalten, nachfolgende Nullen werden bei **varbinary** -Spalten beibehalten.<br /><br /> **0x40** = der Parameter ist ein Output-Parameter.<br /><br /> **0x80** = die Spalte ist eine Identitäts Spalte.|  
-|**type**|**int**|Der physische Speichertyp aus [sys. systypes &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
-|**usertype**|**tinyint**|Die ID des benutzerdefinierten Datentyps aus [sys. systypes &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**type**|**int**|Der physische Speichertyp aus [sys.sysTypen &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**usertype**|**tinyint**|Die ID des benutzerdefinierten Datentyps aus [sys.sysTypen &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|Der Genauigkeitsgrad für diese Spalte.|  
 |**scale**|**int**|Die Dezimalstellen in dieser Spalte.|  

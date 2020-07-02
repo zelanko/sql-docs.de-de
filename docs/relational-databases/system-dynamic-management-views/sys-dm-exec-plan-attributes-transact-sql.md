@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829447"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734791"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Zeile pro Planattribut für den vom Planhandle angegebenen Plan zurück. Mit dieser Tabellenwertfunktion können Sie Details zu einem bestimmten Plan abrufen, z. B. die Cacheschlüsselwerte oder die Anzahl der aktuellen, gleichzeitigen Ausführungen des Plans.  
   
 > [!NOTE]  
->  Einige der Informationen, die über diese Funktion zurückgegeben werden, werden der Ansicht " [sys. syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) -Abwärtskompatibilität" zugeordnet.
+>  Einige der Informationen, die über diese Funktion zurückgegeben werden, werden der [sys.sysCache Objects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) -abwärts Kompatibilitäts Ansicht zugeordnet.
 
 ## <a name="syntax"></a>Syntax  
 ```  
@@ -59,7 +59,7 @@ In der obigen Tabelle kann das- **Attribut** die folgenden Werte aufweisen:
 |dbid|**int**|Die ID der Datenbank, welche die Entität enthält, auf die der Plan verweist.<br /><br /> Für Ad-hoc-Pläne oder vorbereitete Pläne ist dies die Datenbank-ID, von der der Batch ausgeführt wird.|  
 |dbid_execute|**int**|Für Systemobjekte, die in der **Ressourcen** Datenbank gespeichert sind, die Datenbank-ID, aus der der zwischengespeicherte Plan ausgeführt wird. In allen anderen Fällen ist der Wert gleich 0.|  
 |user_id|**int**|Mit dem Wert -2 wird angegeben, dass der abgesendete Batch nicht von der impliziten Namensauflösung abhängt und von verschiedenen Benutzern gemeinsam verwendet werden kann. Dies ist die bevorzugte Methode. Jeder andere Wert stellt den Benutzernamen des Benutzers dar, der die Abfrage in der Datenbank absendet.| 
-|language_id|**smallint**|ID der Sprache der Verbindung, die das Cacheobjekt erstellt hat. Weitere Informationen finden Sie unter [sys. syslanguages &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|language_id|**smallint**|ID der Sprache der Verbindung, die das Cacheobjekt erstellt hat. Weitere Informationen finden Sie unter [sys.sysSprachen &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Datumsformat der Verbindung, die das Cacheobjekt erstellt hat. Weitere Informationen finden Sie unter [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Erster Datumswert. Weitere Informationen finden Sie unter [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |status|**int**|Interne Statusbits, die Teil des Cachesuchschlüssels sind.|  
@@ -83,7 +83,7 @@ In der obigen Tabelle kann das- **Attribut** die folgenden Werte aufweisen:
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="set-options"></a>SET-Optionen  
  Kopien desselben kompilierten Plans können sich nur durch den Wert in der Spalte **set_options** unterscheiden. Dies weist darauf hin, dass verschiedene Verbindungen für die gleiche Abfrage unterschiedliche Sätze von SET-Optionen verwenden. Die Verwendung unterschiedlicher Sätze von Optionen ist meist unerwünscht, da dies zusätzliche Kompilierungen, einen geringeren Anteil von Wiederverwendungen von Plänen sowie, da im Cache mehrere Pläne vorhanden sind, eine Vergrößerung des Plancaches verursachen kann.  

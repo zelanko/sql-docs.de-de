@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6304e6381b9bbfcc17b218122631d06293e15830
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180088"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734710"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 Gibt den Abfrage Ausführungsplan für in-Flight-Anforderungen zurück. Verwenden Sie diese DMV zum Abrufen von Showplan XML mit vorübergehenden Statistiken. 
 
@@ -54,8 +54,8 @@ sys.dm_exec_query_statistics_xml(session_id)
 |plan_handle|**varbinary(64)**|Ein Token, das einen Abfrage Ausführungsplan für einen momentan ausgeführten Batch eindeutig identifiziert. NULL-Werte sind zulässig.|
 |query_plan|**xml**|Enthält die Showplan-Lauf Zeit Darstellung des Abfrage Ausführungs Plans, der mit *plan_handle* angegeben wird, die partielle Statistiken enthält. Der Showplan liegt im XML-Format vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert. NULL-Werte sind zulässig.|
 
-## <a name="remarks"></a>Bemerkungen
-Diese Systemfunktion ist ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 verfügbar. Siehe KB [3190871](https://support.microsoft.com/help/3190871)
+## <a name="remarks"></a>Hinweise
+Diese Systemfunktion ist ab SP1 verfügbar [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] . Siehe KB [3190871](https://support.microsoft.com/help/3190871)
 
 Diese Systemfunktion funktioniert sowohl mit der **standardmäßigen** als auch der **Lightweight** -Abfrage für die Abfrage Ausführungs Statistik. Weitere Informationen finden Sie unter [Infrastruktur für die Abfrage Profilerstellung](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
@@ -66,13 +66,13 @@ Unter den folgenden Bedingungen wird keine Show Plan Ausgabe in der **query_plan
 Aufgrund einer Einschränkung in der Anzahl der zulässigen, im **XML** -Datentyp zulässigen Werte kann **sys. dm_exec_query_statistics_xml** keine Abfrage Pläne zurückgeben, die 128 Ebenen von geschachtelte-Elementen erfüllen oder überschreiten. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verhinderte diese Bedingung das Zurückgeben des Abfrageplans, wobei der Fehler 6335 generiert wurde. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 und höheren Versionen gibt die **query_plan** -Spalte NULL zurück.   
 
 ## <a name="permissions"></a>Berechtigungen  
-Unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung auf dem Server erforderlich.  
-Bei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.
+Unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist `VIEW SERVER STATE` die-Berechtigung auf dem Server erforderlich.  
+Bei [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.
 
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Überprüfen des Live-Abfrage Plans und der Ausführungs Statistik für einen laufenden Batch  
- Im folgenden Beispiel wird **sys. dm_exec_requests** abgefragt, um die interessante Abfrage zu `session_id` suchen und deren aus der Ausgabe zu kopieren.  
+ Im folgenden Beispiel wird **sys. dm_exec_requests** abgefragt, um die interessante Abfrage zu suchen und deren `session_id` aus der Ausgabe zu kopieren.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_requests;  

@@ -22,15 +22,15 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8c18ce07ba5e36dcbdb5750db77edf17495c7b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 870ce66d87ec063e75a01769aaa34433ac80f577
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285473"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738680"
 ---
-# <a name="sysdm_db_tuning_recommendations-transact-sql"></a>Empfehlungen für die sys.DM\_-Datenbankoptimierung (Transact-SQL)\_\_
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+# <a name="sysdm_db_tuning_recommendations-transact-sql"></a>Empfehlungen für die sys.DM-Datenbankoptimierung \_ \_ \_ (Transact-SQL)
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   Gibt ausführliche Informationen zu Optimierungsempfehlungen zurück.  
   
@@ -41,52 +41,52 @@ ms.locfileid: "81285473"
 | **name** | **nvarchar(4000)** | Eindeutiger Name der Empfehlung. |
 | **type** | **nvarchar(4000)** | Der Name der automatischen Optimierungs Option, die die Empfehlung erzeugt hat, z. b.`FORCE_LAST_GOOD_PLAN` |
 | **reason** | **nvarchar(4000)** | Grund, warum diese Empfehlung bereitgestellt wurde. |
-| **gültig\_seit** | **datetime2** | Der erste Zeitpunkt, an dem diese Empfehlung generiert wurde. |
-| **letzte\_Aktualisierung** | **datetime2** | Der Zeitpunkt, zu dem diese Empfehlung zuletzt generiert wurde. |
+| **gültig \_ seit** | **datetime2** | Der erste Zeitpunkt, an dem diese Empfehlung generiert wurde. |
+| **letzte \_ Aktualisierung** | **datetime2** | Der Zeitpunkt, zu dem diese Empfehlung zuletzt generiert wurde. |
 | **state** | **nvarchar(4000)** | JSON-Dokument, das den Status der Empfehlung beschreibt. Folgende Felder sind verfügbar:<br />-   `currentValue`-Aktueller Status der Empfehlung.<br />-   `reason`-Konstante, die beschreibt, warum die Empfehlung den aktuellen Status aufweist.|
-| **ist\_Ausführ\_Bare Aktion** | **bit** | 1 = die Empfehlung kann mithilfe eines [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Skripts für die Datenbank ausgeführt werden.<br />0 = die Empfehlung kann nicht für die Datenbank ausgeführt werden (z. b. "nur Informationen" oder "zurückgesetzte Empfehlung"). |
-| **is\_revertable\_-Aktion** | **bit** | 1 = die Empfehlung kann von der Datenbank-Engine automatisch überwacht und wieder hergestellt werden.<br />0 = die Empfehlung kann nicht automatisch überwacht und wieder hergestellt werden. Die &quot;meisten&quot; ausführbaren Aktionen &quot;werden Rück&quot;gängig gemacht. |
-| **\_Startzeit\_\_der Ausführungs Aktion** | **datetime2** | Datum, an dem die Empfehlung angewendet wird. |
-| **Ausführungs\_\_Dauer** | **time** | Dauer der Ausführungs Aktion. |
-| **von\_initiierte\_\_Aktion ausführen von** | **nvarchar(4000)** | `User`= Der Benutzer hat den Plan in der Empfehlung manuell erzwungen. <br /> `System`= Automatisch angewendete Empfehlung. |
-| **initiierte\_\_Zeit\_für Ausführungs Aktion** | **datetime2** | Datum, an dem die Empfehlung angewendet wurde. |
-| **\_Startzeit\_\_der Wiederherstellungs Aktion** | **datetime2** | Datum, an dem die Empfehlung wieder hergestellt wurde. |
-| **Dauer\_der\_Aktions Wiederherstellung** | **time** | Dauer der Rückgängig-Aktion. |
-| **zurück\_setzen\_von\_Aktionen initiiert von** | **nvarchar(4000)** | `User`= Benutzer manuell nicht erzwungener empfohlener Plan. <br /> `System`= System hat automatisch eine Empfehlung zurückgesetzt. |
-| **\_Aktion zum\_initiieren\_der Aktion** | **datetime2** | Datum, an dem die Empfehlung wieder hergestellt wurde. |
+| **ist \_ ausführbare \_ Aktion** | **bit** | 1 = die Empfehlung kann mithilfe eines Skripts für die Datenbank ausgeführt werden [!INCLUDE[tsql_md](../../includes/tsql-md.md)] .<br />0 = die Empfehlung kann nicht für die Datenbank ausgeführt werden (z. b. "nur Informationen" oder "zurückgesetzte Empfehlung"). |
+| **is \_ revertable- \_ Aktion** | **bit** | 1 = die Empfehlung kann von der Datenbank-Engine automatisch überwacht und wieder hergestellt werden.<br />0 = die Empfehlung kann nicht automatisch überwacht und wieder hergestellt werden. Die meisten &quot; ausführbaren &quot; Aktionen werden Rück &quot; gängig gemacht &quot; . |
+| **\_Startzeit der Ausführungs Aktion \_ \_** | **datetime2** | Datum, an dem die Empfehlung angewendet wird. |
+| **Ausführungs \_ \_ Dauer** | **time** | Dauer der Ausführungs Aktion. |
+| **\_ \_ von initiierte Aktion ausführen \_ von** | **nvarchar(4000)** | `User`= Der Benutzer hat den Plan in der Empfehlung manuell erzwungen. <br /> `System`= Automatisch angewendete Empfehlung. |
+| **\_ \_ initiierte \_ Zeit für Ausführungs Aktion** | **datetime2** | Datum, an dem die Empfehlung angewendet wurde. |
+| **Startzeit der Wiederherstellungs \_ Aktion \_ \_** | **datetime2** | Datum, an dem die Empfehlung wieder hergestellt wurde. |
+| **\_Dauer der Aktions Wiederherstellung \_** | **time** | Dauer der Rückgängig-Aktion. |
+| **zurück \_ setzen \_ von Aktionen initiiert \_ von** | **nvarchar(4000)** | `User`= Benutzer manuell nicht erzwungener empfohlener Plan. <br /> `System`= System hat automatisch eine Empfehlung zurückgesetzt. |
+| **\_Aktion zum \_ Initiieren der Aktion \_** | **datetime2** | Datum, an dem die Empfehlung wieder hergestellt wurde. |
 | **Endergebnis** | **int** | Geschätzter Wert/Auswirkung für diese Empfehlung auf der 0-100-Skala (je höher die bessere) |
-| **Einzel** | **nvarchar(max)** | JSON-Dokument, das weitere Details zur Empfehlung enthält. Folgende Felder sind verfügbar:<br /><br />`planForceDetails`<br />-    `queryId`-Abfrage\_-ID der zurück gestellten Abfrage.<br />-    `regressedPlanId`-plan_id des zurück gestellten Plans.<br />-   `regressedPlanExecutionCount`-Anzahl der Ausführungen der Abfrage mit einem zurück gestellten Plan, bevor die Regression erkannt wird.<br />-    `regressedPlanAbortedCount`-Anzahl der erkannten Fehler während der Ausführung des zurück gestellten Plans.<br />-    `regressedPlanCpuTimeAverage`-Durchschnittliche CPU-Zeit (in Mikrosekunden), die von der zurück gestellten Abfrage beansprucht wird, bevor die Regression erkannt wird.<br />-    `regressedPlanCpuTimeStddev`-Standard Abweichung der CPU-Zeit, die von der zurück gestellten Abfrage beansprucht wird, bevor die Regression erkannt wird.<br />-    `recommendedPlanId`-plan_id des Plans, der erzwungen werden soll.<br />-   `recommendedPlanExecutionCount`-Anzahl der Ausführungen der Abfrage mit dem Plan, der erzwungen werden soll, bevor die Regression erkannt wird.<br />-    `recommendedPlanAbortedCount`-Anzahl der erkannten Fehler während der Ausführung des Plans, der erzwungen werden soll.<br />-    `recommendedPlanCpuTimeAverage`-Durchschnittliche CPU-Zeit (in Mikrosekunden), die von der Abfrage genutzt wird, die mit dem Plan ausgeführt wird, der erzwungen werden soll (berechnet, bevor die Regression erkannt wird).<br />-    `recommendedPlanCpuTimeStddev`Standard Abweichung der CPU-Zeit, die von der zurück gestellten Abfrage beansprucht wird, bevor die Regression erkannt wird.<br /><br />`implementationDetails`<br />-  `method`: Die Methode, die verwendet werden soll, um die Regression zu korrigieren. Der Wert ist `TSql`immer.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)]Skript, das ausgeführt werden soll, um den empfohlenen Plan zu erzwingen. |
+| **Einzel** | **nvarchar(max)** | JSON-Dokument, das weitere Details zur Empfehlung enthält. Folgende Felder sind verfügbar:<br /><br />`planForceDetails`<br />-    `queryId`-Abfrage- \_ ID der zurück gestellten Abfrage.<br />-    `regressedPlanId`-plan_id des zurück gestellten Plans.<br />-   `regressedPlanExecutionCount`-Anzahl der Ausführungen der Abfrage mit einem zurück gestellten Plan, bevor die Regression erkannt wird.<br />-    `regressedPlanAbortedCount`-Anzahl der erkannten Fehler während der Ausführung des zurück gestellten Plans.<br />-    `regressedPlanCpuTimeAverage`-Durchschnittliche CPU-Zeit (in Mikrosekunden), die von der zurück gestellten Abfrage beansprucht wird, bevor die Regression erkannt wird.<br />-    `regressedPlanCpuTimeStddev`-Standard Abweichung der CPU-Zeit, die von der zurück gestellten Abfrage beansprucht wird, bevor die Regression erkannt wird.<br />-    `recommendedPlanId`-plan_id des Plans, der erzwungen werden soll.<br />-   `recommendedPlanExecutionCount`-Anzahl der Ausführungen der Abfrage mit dem Plan, der erzwungen werden soll, bevor die Regression erkannt wird.<br />-    `recommendedPlanAbortedCount`-Anzahl der erkannten Fehler während der Ausführung des Plans, der erzwungen werden soll.<br />-    `recommendedPlanCpuTimeAverage`-Durchschnittliche CPU-Zeit (in Mikrosekunden), die von der Abfrage genutzt wird, die mit dem Plan ausgeführt wird, der erzwungen werden soll (berechnet, bevor die Regression erkannt wird).<br />-    `recommendedPlanCpuTimeStddev`Standard Abweichung der CPU-Zeit, die von der zurück gestellten Abfrage beansprucht wird, bevor die Regression erkannt wird.<br /><br />`implementationDetails`<br />-  `method`: Die Methode, die verwendet werden soll, um die Regression zu korrigieren. Der Wert ist immer `TSql` .<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)]Skript, das ausgeführt werden soll, um den empfohlenen Plan zu erzwingen. |
   
-## <a name="remarks"></a>Bemerkungen  
- Die von `sys.dm_db_tuning_recommendations` zurückgegebenen Informationen werden aktualisiert, wenn die Datenbank-Engine die mögliche Regression der Abfrageleistung identifiziert und nicht persistent ist. Empfehlungen werden nur beibehalten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis neu gestartet wird. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Optimierungs Empfehlung erstellen, wenn Sie Sie nach dem wieder verwenden des Servers beibehalten möchten. 
+## <a name="remarks"></a>Hinweise  
+ Die von zurückgegebenen Informationen `sys.dm_db_tuning_recommendations` werden aktualisiert, wenn die Datenbank-Engine die mögliche Regression der Abfrageleistung identifiziert und nicht persistent ist. Empfehlungen werden nur beibehalten, bis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wird. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Optimierungs Empfehlung erstellen, wenn Sie Sie nach dem wieder verwenden des Servers beibehalten möchten. 
 
- `currentValue`das Feld in `state` der Spalte kann die folgenden Werte aufweisen:
+ `currentValue`das Feld in der `state` Spalte kann die folgenden Werte aufweisen:
  
  | Status | BESCHREIBUNG |
  |--------|-------------|
  | `Active` | Die Empfehlung ist aktiv und wurde noch nicht angewendet. Der Benutzer kann ein Empfehlungs Skript erstellen und manuell ausführen. |
- | `Verifying` | Die Empfehlung wird von [!INCLUDE[ssde_md](../../includes/ssde_md.md)] angewendet, und der interne Überprüfungsprozess vergleicht die Leistung des erzwungenen Plans mit dem zurück gestellten Plan. |
+ | `Verifying` | Die Empfehlung wird von angewendet, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] und der interne Überprüfungsprozess vergleicht die Leistung des erzwungenen Plans mit dem zurück gestellten Plan. |
  | `Success` | Die Empfehlung wurde erfolgreich angewendet. |
  | `Reverted` | Die Empfehlung wurde zurückgesetzt, da es keine signifikanten Leistungssteigerungen gibt. |
  | `Expired` | Die Empfehlung ist abgelaufen und kann nicht mehr angewendet werden. |
 
-Das JSON- `state` Dokument in der Spalte enthält den Grund, warum die Empfehlung im aktuellen Zustand ist. Die Werte im Feld "Grund" können wie folgt lauten: 
+Das JSON-Dokument in der `state` Spalte enthält den Grund, warum die Empfehlung im aktuellen Zustand ist. Die Werte im Feld "Grund" können wie folgt lauten: 
 
 | `Reason` | BESCHREIBUNG |
 |--------|-------------|
 | `SchemaChanged` | Die Empfehlung ist abgelaufen, weil das Schema einer Tabelle geändert wird, auf die verwiesen wird. Es wird eine neue Empfehlung erstellt, wenn eine neue Abfrageplan Regression für das neue Schema erkannt wird. |
 | `StatisticsChanged`| Die Empfehlung ist aufgrund der statistischen Änderung einer Tabelle, auf die verwiesen wird, abgelaufen. Es wird eine neue Empfehlung erstellt, wenn eine neue Abfrageplan Regression basierend auf neuen Statistiken erkannt wird. |
-| `ForcingFailed` | Der empfohlene Plan kann für eine Abfrage nicht erzwungen werden. Suchen Sie `last_force_failure_reason` in der [sys. query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) -Sicht, um die Ursache des Fehlers zu ermitteln. |
-| `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN`die Option wird vom Benutzer während der Überprüfung deaktiviert. Aktivieren `FORCE_LAST_GOOD_PLAN` Sie die Option mithilfe von [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) -Anweisung, oder erzwingen Sie `[details]` den Plan manuell mithilfe des Skripts in der Spalte. |
-| `UnsupportedStatementType` | Der Plan kann für die Abfrage nicht erzwungen werden. Beispiele für nicht unterstützte Abfragen sind Cursors `INSERT BULK` und Statement. |
+| `ForcingFailed` | Der empfohlene Plan kann für eine Abfrage nicht erzwungen werden. Suchen `last_force_failure_reason` Sie in der [sys. query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) -Sicht, um die Ursache des Fehlers zu ermitteln. |
+| `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN`die Option wird vom Benutzer während der Überprüfung deaktiviert. Aktivieren `FORCE_LAST_GOOD_PLAN` Sie die Option mithilfe von [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) -Anweisung, oder erzwingen Sie den Plan manuell mithilfe des Skripts in der `[details]` Spalte. |
+| `UnsupportedStatementType` | Der Plan kann für die Abfrage nicht erzwungen werden. Beispiele für nicht unterstützte Abfragen sind Cursors und `INSERT BULK` Statement. |
 | `LastGoodPlanForced` | Die Empfehlung wurde erfolgreich angewendet. |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)]Es wurde eine potenzielle Leistungs Regression erkannt `FORCE_LAST_GOOD_PLAN` , aber die Option ist nicht aktiviert-siehe [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Anwenden der Empfehlung manuell oder `FORCE_LAST_GOOD_PLAN` Aktivieren der Option. |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)]Es wurde eine potenzielle Leistungs Regression erkannt, aber die `FORCE_LAST_GOOD_PLAN` Option ist nicht aktiviert-siehe [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Anwenden der Empfehlung manuell oder Aktivieren der `FORCE_LAST_GOOD_PLAN` Option. |
 | `VerificationAborted`| Der Überprüfungs Vorgang wurde aufgrund des Neustarts oder Abfragespeicher Bereinigungs Vorgangs abgebrochen. |
 | `VerificationForcedQueryRecompile`| Die Abfrage wird neu kompiliert, weil keine signifikante Leistungsverbesserung vorliegt. |
 | `PlanForcedByUser`| Der Benutzer hat den Plan mithilfe [sp_query_store_force_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) Prozedur manuell erzwungen. Das Datenbankmodul wendet die Empfehlung nicht an, wenn sich der Benutzer explizit für das Erzwingen eines Plans entschieden hat. |
 | `PlanUnforcedByUser` | Der Benutzer hat den Plan mithilfe [sp_query_store_unforce_plan &#40;Transact-SQL-&#41;Prozedur manuell enterzwingt](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) . Da der Benutzer den empfohlenen Plan explizit wieder hergestellt hat, verwendet die Datenbank-Engine weiterhin den aktuellen Plan und generiert eine neue Empfehlung, wenn eine Plan Regression in Zukunft erfolgt. |
 
- Die Statistik in der Spalte "Details" zeigt keine Statistiken für den Lauf Zeit Plan an (z. b. aktuelle CPU-Zeit). Die Empfehlungs Details werden zum Zeitpunkt der Regressions Erkennung verwendet, und es [!INCLUDE[ssde_md](../../includes/ssde_md.md)] wird beschrieben, warum die Leistungs Regression erkannt wurde. Verwenden `regressedPlanId` Sie `recommendedPlanId` und, um [Abfragespeicher Katalog Sichten](../../relational-databases/performance/how-query-store-collects-data.md) abzufragen, um genaue Lauf Zeit Plan Statistiken zu ermitteln.
+ Die Statistik in der Spalte "Details" zeigt keine Statistiken für den Lauf Zeit Plan an (z. b. aktuelle CPU-Zeit). Die Empfehlungs Details werden zum Zeitpunkt der Regressions Erkennung verwendet, und es wird beschrieben, warum die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Leistungs Regression erkannt wurde. Verwenden `regressedPlanId` `recommendedPlanId` Sie und, um [Abfragespeicher Katalog Sichten](../../relational-databases/performance/how-query-store-collects-data.md) abzufragen, um genaue Lauf Zeit Plan Statistiken zu ermitteln.
 
 ## <a name="examples-of-using-tuning-recommendations-information"></a>Beispiele für die Verwendung von Optimierungs Empfehlungs Informationen  
 
@@ -171,12 +171,12 @@ INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
 INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
 ```
 
-Weitere Informationen zu JSON-Funktionen, die verwendet werden können, um Werte in der Empfehlungs Ansicht abzufragen, finden Sie [!INCLUDE[ssde_md](../../includes/ssde_md.md)] [unter JSON-Unterstützung](../../relational-databases/json/index.md) in.
+Weitere Informationen zu JSON-Funktionen, die verwendet werden können, um Werte in der Empfehlungs Ansicht abzufragen, finden Sie [unter JSON-Unterstützung](../../relational-databases/json/index.md) in [!INCLUDE[ssde_md](../../includes/ssde_md.md)] .
   
 ## <a name="permissions"></a>Berechtigungen  
 
-Erfordert `VIEW SERVER STATE` die- [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]Berechtigung in.   
-Erfordert die `VIEW DATABASE STATE` -Berechtigung für die- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Datenbank in.   
+Erfordert die- `VIEW SERVER STATE` Berechtigung in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .   
+Erfordert die- `VIEW DATABASE STATE` Berechtigung für die-Datenbank in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .   
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Automatische Optimierung](../../relational-databases/automatic-tuning/automatic-tuning.md)   

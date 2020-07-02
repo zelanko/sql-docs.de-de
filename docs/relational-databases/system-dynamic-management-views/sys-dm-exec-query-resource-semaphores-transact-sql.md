@@ -20,15 +20,15 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ea2f693b49f2b8eebd2c2348883607e08112600
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1489905b5f91743892906655b2987c702c048516
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734722"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Gibt Informationen zum aktuellen Status des Abfrageressourcensemaphors in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. **sys. dm_exec_query_resource_semaphores** stellt den allgemeinen Speicherstatus der Abfrage Ausführung bereit und ermöglicht es Ihnen zu bestimmen, ob das System auf genügend Arbeitsspeicher zugreifen kann. Diese Ansicht ergänzt die Speicherinformationen aus [sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) , um ein umfassendes Bild des Server Speicherstatus bereitzustellen. **sys. dm_exec_query_resource_semaphores** gibt eine Zeile für das reguläre Ressourcen Semaphor und eine weitere Zeile für das Ressourcen Semaphor für kleine Abfragen zurück. Es gibt zwei Anforderungen an ein kleines Abfrage-Semaphor:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "82827958"
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Abfragen mithilfe dynamischer Verwaltungssichten, die ORDER BY oder Aggregate enthalten, können die Arbeitsspeichernutzung erhöhen und so zu dem Problem beitragen, das mit ihnen behandelt werden soll.  
   
  Verwenden Sie **sys. dm_exec_query_resource_semaphores** zur Problembehandlung, aber schließen Sie es nicht in Anwendungen ein, die zukünftige Versionen von verwenden werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

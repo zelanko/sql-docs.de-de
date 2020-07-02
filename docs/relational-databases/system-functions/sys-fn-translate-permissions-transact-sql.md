@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3d7a464f3faba633dd09be12ef4c3d006ef19ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68055376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738585"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Übersetzt die von der SQL-Ablaufverfolgung zurückgegebene Bitmaske von Berechtigungen in eine Tabelle von Berechtigungsnamen.  
   
@@ -43,23 +43,23 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *geringen*  
+ *Level*  
  Die Art eines sicherungsfähigen Elements, für die die Berechtigung übernommen wird. *Ebene* ist vom Datentyp **nvarchar (60)**.  
   
  *perms*  
  Eine Bitmaske, die in der Berechtigungsspalte zurückgegeben wird. *perms* ist **varbinary (16)**.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  **Tabelle**  
   
 ## <a name="remarks"></a>Hinweise  
- Der in der Spalte **Berechtigungen** einer SQL-Ablauf Verfolgung zurückgegebene Wert ist eine ganzzahlige Darstellung einer Bitmaske, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, um effektive Berechtigungen zu berechnen. Jede der 25 Arten sicherungsfähiger Elemente verfügt über einen eigenen Satz Berechtigungen mit entsprechenden numerischen Werten. **sys. fn_translate_permissions** übersetzt diese Bitmaske in eine Tabelle von Berechtigungs Namen.  
+ Der in der Spalte **Berechtigungen** einer SQL-Ablauf Verfolgung zurückgegebene Wert ist eine ganzzahlige Darstellung einer Bitmaske, die von verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um effektive Berechtigungen zu berechnen. Jede der 25 Arten sicherungsfähiger Elemente verfügt über einen eigenen Satz Berechtigungen mit entsprechenden numerischen Werten. **sys. fn_translate_permissions** übersetzt diese Bitmaske in eine Tabelle von Berechtigungs Namen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="example"></a>Beispiel  
- Die folgende-Abfrage `sys.fn_builtin_permissions` verwendet, um die Berechtigungen anzuzeigen, die für Zertifikate gelten, `sys.fn_translate_permissions` und verwendet dann, um die Ergebnisse der Berechtigungs Bitmaske zurückzugeben.  
+ Die folgende-Abfrage verwendet `sys.fn_builtin_permissions` , um die Berechtigungen anzuzeigen, die für Zertifikate gelten, und verwendet dann `sys.fn_translate_permissions` , um die Ergebnisse der Berechtigungs Bitmaske zurückzugeben.  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  

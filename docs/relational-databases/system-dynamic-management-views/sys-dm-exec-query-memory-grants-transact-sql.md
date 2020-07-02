@@ -20,15 +20,15 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c336c329f5e610d90637f80ef8ef24569bb204
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: f39ef72cb01ecef7fca9d26cc87d003807089e16
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734762"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt Informationen zu allen Abfragen zurück, die angefordert haben und auf eine Arbeitsspeicher Zuweisung warten oder eine Speicherzuweisung erhalten haben. Abfragen, die keine Arbeitsspeicher Zuweisung erfordern, werden in dieser Ansicht nicht angezeigt. Beispielsweise verfügen Sortier-und HashJoin-Vorgänge über Arbeitsspeicher Zuweisungen für die Abfrage Ausführung, während Abfragen ohne **Order by** -Klausel keine Arbeitsspeicher Zuweisung haben.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "83731889"
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.   
    
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Ein typisches Debugszenario für ein Abfragetimeout sieht folgendermaßen aus:  
   
 -   Überprüfen Sie den Arbeitsspeicherstatus im Gesamtsystem mithilfe von [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) und verschiedenen Leistungsindikatoren.  

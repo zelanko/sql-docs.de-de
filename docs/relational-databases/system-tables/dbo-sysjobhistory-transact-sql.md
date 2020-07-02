@@ -1,5 +1,5 @@
 ---
-title: dbo. sysjobhistory (Transact-SQL) | Microsoft-Dokumentation
+title: dbo.sysJobHistory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/24/2019
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ff3c872b195123608c12515fb3c19a03c3e3f44
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 43c35f7963ec7b817f6bcf98f95f950c4fc0a5fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736876"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 Enthält Informationen zur Ausführung geplanter Aufträge durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent.
   
@@ -53,7 +53,7 @@ Diese Tabelle wird in der **msdb** -Datenbank gespeichert.
 |**operator_id_netsent**|**int**|ID des Operators, der bei Abschluss des Auftrags durch eine Meldung benachrichtigt wurde.|  
 |**operator_id_paged**|**int**|ID des Operators, der mithilfe eines Pagers bei Abschluss des Auftrags benachrichtigt wurde.|  
 |**retries_attempted**|**int**|Anzahl der Wiederholungsversuche für den Auftrag oder Schritt.|  
-|**Servers**|**sysname**|Name des Servers, auf dem der Auftrag ausgeführt wurde.|  
+|**server**|**sysname**|Name des Servers, auf dem der Auftrag ausgeführt wurde.|  
   
   ## <a name="example"></a>Beispiel
  Mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage werden die **run_time** -und **run_duration** Spalten in ein benutzerfreundliches Format konvertiert.  Führen Sie das Skript in aus [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .

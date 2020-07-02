@@ -20,15 +20,15 @@ ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ce1025ab54ced5162777c1c30f87f7f6262e0f3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8edb87ce16f87592727ba45bb897d8a1f9634ec4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833909"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734816"
 ---
 # <a name="syssymmetric_keys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Gibt eine Zeile für jeden symmetrischen Schlüssel zurück, der mit der CREATE SYMMETRIC KEY-Anweisung erstellt wird.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82833909"
 |**principal_id**|**int**|ID des Datenbankprinzipals, der der Besitzer des Schlüssels ist.|  
 |**symmetric_key_id**|**int**|ID des Schlüssels. Ist innerhalb der Datenbank eindeutig.|  
 |**key_length**|**int**|Länge des Schlüssels in Bits.|  
-|**key_algorithm**|**char (2)**|Der mit dem Schlüssel verwendete Algorithmus:<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> N.V. = EKM-Schlüssel|  
+|**key_algorithm**|**char(2)**|Der mit dem Schlüssel verwendete Algorithmus:<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> N.V. = EKM-Schlüssel|  
 |**algorithm_desc**|**nvarchar(60)**|Beschreibung des mit dem Schlüssel verwendeten Algorithmus:<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (nur Extensible Key Management-Algorithmen)|  
 |**create_date**|**datetime**|Das Datum, an dem der Schlüssel erstellt wurde.|  
 |**modify_date**|**datetime**|Das Datum, an dem der Schlüssel geändert wurde.|  
@@ -51,7 +51,7 @@ ms.locfileid: "82833909"
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der RC4-Algorithmus ist veraltet. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!NOTE]  

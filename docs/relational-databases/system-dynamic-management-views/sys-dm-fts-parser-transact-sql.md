@@ -19,16 +19,16 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552dbdce5da12db4fedadecb5a4bd7e9c55c278
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900917"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738656"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt das endgültige Tokenisierungsergebnis zurück, nachdem eine bestimmte Kombination aus [Wörter](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)Trennung, [Thesaurus](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)und [Stopp Liste](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) auf eine Eingabe der Abfrage Zeichenfolge angewendet wurde. Das Tokenisierungsergebnis entspricht der Ausgabe der Volltext-Engine für die angegebene Abfragezeichenfolge.  
   
@@ -61,7 +61,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |1|Sensibel<br /><br /> Wörter wie "Café" und "Café" werden anders behandelt.|  
   
 > [!NOTE]  
->  Um die [!INCLUDE[tsql](../../includes/tsql-md.md)] aktuelle Einstellung dieses Werts für einen voll Text Katalog anzuzeigen, führen Sie die folgende Anweisung aus: `SELECT fulltextcatalogproperty('` *Catalog_Name*`', 'AccentSensitivity');`.  
+>  Um die aktuelle Einstellung dieses Werts für einen voll Text Katalog anzuzeigen, führen Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung aus: `SELECT fulltextcatalogproperty('` *Catalog_Name* `', 'AccentSensitivity');` .  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -80,7 +80,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  **sys. dm_fts_parser** unterstützt die Syntax und Features von voll Text Prädikaten, wie z. b. " [enthält](../../t-sql/queries/contains-transact-sql.md) " und "frei [Text](../../t-sql/queries/freetext-transact-sql.md)", sowie Funktionen wie " [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) " und " [fretexfähige](../../relational-databases/system-functions/freetexttable-transact-sql.md)".  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>Verwenden von Unicode zum Analysieren von Sonderzeichen  
- Wenn Sie eine Abfrage Zeichenfolge analysieren, verwendet **sys. dm_fts_parser** die Sortierung der Datenbank, mit der Sie verbunden sind, es sei denn, Sie geben die Abfrage Zeichenfolge als Unicode an. Daher kann die Ausgabe für eine nicht-Unicode-Zeichenfolge, die Sonderzeichen enthält, wie z. b. "ü" oder "ç", abhängig von der Sortierung der Datenbank unerwartet ausfallen. Um eine Abfrage Zeichenfolge unabhängig von der Daten Bank Sortierung zu verarbeiten, stellen `N`Sie die Zeichenfolge `N'`mit dem Präfix *QUERY_STRING*`'`.  
+ Wenn Sie eine Abfrage Zeichenfolge analysieren, verwendet **sys. dm_fts_parser** die Sortierung der Datenbank, mit der Sie verbunden sind, es sei denn, Sie geben die Abfrage Zeichenfolge als Unicode an. Daher kann die Ausgabe für eine nicht-Unicode-Zeichenfolge, die Sonderzeichen enthält, wie z. b. "ü" oder "ç", abhängig von der Sortierung der Datenbank unerwartet ausfallen. Um eine Abfrage Zeichenfolge unabhängig von der Daten Bank Sortierung zu verarbeiten, stellen Sie die Zeichenfolge mit dem Präfix `N` `N'` *QUERY_STRING* `'` .  
   
  Weitere Informationen finden Sie unter "C. Anzeigen der Ausgabe einer Zeichenfolge mit Sonderzeichen" später in diesem Thema.  
   

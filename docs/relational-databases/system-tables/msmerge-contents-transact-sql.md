@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d0dc39424f0636d975195b00580a4ff7649ec64
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 07ae3a15b05226ed6d518bbf70f22e4950c70fd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805387"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736779"
 ---
 # <a name="msmerge_contents-transact-sql"></a>MSmerge_contents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Die **MSmerge_contents** Tabelle enthält eine Zeile für jede Zeile, die seit der Veröffentlichung in der aktuellen Datenbank geändert wurde. Diese Tabelle wird vom Mergeprozess verwendet, um die geänderten Zeilen zu ermitteln. Diese Tabelle wird in der Veröffentlichungs- und in der Abonnementdatenbank gespeichert.  
   

@@ -19,15 +19,15 @@ ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6f7e9d8d9ab99ebe4a7c5749033eacf85b8feb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 948b2b1e9ee9a8827322cf05fcb2f812d925de93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042991"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734426"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Interpretiert den SYS_CHANGE_COLUMNS Wert, der von der CHANGETABLE (changes...)-Funktion zurückgegeben wird. Dies ermöglicht es einer Anwendung zu ermitteln, ob die angegebene Spalte in den Werten enthalten ist, die für SYS_CHANGE_COLUMNS zurückgegeben werden.  
   
@@ -58,11 +58,11 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 |0|Die angegebene Spalte befindet sich nicht in der *change_columns* Liste.|  
 |1|Die angegebene Spalte ist in der *change_columns* Liste enthalten.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK führt keine Überprüfungen aus, um den *column_id* Wert zu überprüfen, oder der *change_columns* Parameter wurde aus der Tabelle abgerufen, aus der der *column_id* abgerufen wurde.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird bestimmt, ob die `Salary`-Spalte in der `Employees`-Tabelle aktualisiert wurde. Die `COLUMNPROPERTY` -Funktion gibt die Spalten-ID `Salary` der Spalte zurück. Für die lokale Variable `@change_columns` müssen die Ergebnisse einer Abfrage unter Verwendung von CHANGETABLE als Datenquelle festgelegt werden.  
+ Im folgenden Beispiel wird bestimmt, ob die `Salary`-Spalte in der `Employees`-Tabelle aktualisiert wurde. Die- `COLUMNPROPERTY` Funktion gibt die Spalten-ID der `Salary` Spalte zurück. Für die lokale Variable `@change_columns` müssen die Ergebnisse einer Abfrage unter Verwendung von CHANGETABLE als Datenquelle festgelegt werden.  
   
 ```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  

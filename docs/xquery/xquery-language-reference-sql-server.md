@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35a1418e416e32ab5b8dc9647c4a9aa24700b624
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a50ed63856e9998066db0b4d0791feb79478726c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734159"
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery-Sprachreferenz (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[tsql](../includes/tsql-md.md)]unterstützt eine Teilmenge der XQuery-Sprache, die zum Abfragen des **XML** -Datentyps verwendet wird. Diese XQuery-Implementierung orientiert sich am Arbeitsentwurf für XQuery (Juli 2004). Diese Sprache wird zurzeit vom W3C (World Wide Web Consortium) unter Mitwirkung aller großen Datenbankhersteller und Microsoft entwickelt. Da die W3C-Spezifikationen möglicherweise überarbeitet werden, bevor eine W3C-Empfehlung ausgesprochen wird, kann sich diese Implementierung von der endgültigen Empfehlung unterscheiden. Dieses Thema beschreibt die Semantik und Syntax der Teilmenge von XQuery, die in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt wird.  
   
  Weitere Informationen finden Sie in der [W3C XQuery 1,0-Sprachspezifikation](https://go.microsoft.com/fwlink/?LinkId=48846).  
   
- XQuery ist eine Sprache, die strukturierte oder halbstrukturierte XML-Daten abfragen kann. Mit der Unterstützung des **XML** -Datentyps [!INCLUDE[ssDE](../includes/ssde-md.md)], die in bereitgestellt wird, können Dokumente in einer Datenbank gespeichert und dann mithilfe von XQuery abgefragt werden.  
+ XQuery ist eine Sprache, die strukturierte oder halbstrukturierte XML-Daten abfragen kann. Mit der Unterstützung des **XML** -Datentyps, die in bereitgestellt wird [!INCLUDE[ssDE](../includes/ssde-md.md)] , können Dokumente in einer Datenbank gespeichert und dann mithilfe von XQuery abgefragt werden.  
   
  XQuery basiert auf der vorhandenen XPath-Abfragesprache. Dieser wurde Unterstützung für bessere Iteration, bessere Sortierergebnisse und eine Funktion zum Erstellen des erforderlichen XML hinzugefügt. XQuery wird auf der Grundlage des XQuery-Datenmodells ausgeführt. Dabei handelt es sich um eine Abstraktion von XML-Dokumenten und die XQuery-Ergebnisse, die typisiert oder nicht typisiert sein können. Die Typinformationen basieren auf den von der W3C XML-Schemasprache bereitgestellten Typen. Wenn keine Typisierungsinformationen verfügbar sind, behandelt XQuery die Daten so, als wären sie nicht typisiert. XPath, Version 1.0, verarbeitet XML auf ähnliche Weise.  
   
@@ -53,7 +53,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Die XQuery enthält die Namespace Deklaration `declare namespace``AWMI=...`, und den Abfrage Ausdruck `/AWMI:root/AWMI:Location[@LocationID=10]`.  
+ Die XQuery enthält die Namespace Deklaration, `declare namespace``AWMI=...` und den Abfrage Ausdruck `/AWMI:root/AWMI:Location[@LocationID=10]` .  
   
  Beachten Sie, dass XQuery für die Instructions-Spalte vom Typ **XML** angegeben wird. Die [Query ()-Methode](../t-sql/xml/query-method-xml-data-type.md) des XML-Datentyps wird zum Angeben der XQuery verwendet.  
   
@@ -61,12 +61,12 @@ WHERE ProductModelID=7
   
 |Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|Erläutert die Unterstützung für den **XML** [!INCLUDE[ssDE](../includes/ssde-md.md)] -Datentyp in und die Methoden, die Sie für diesen Datentyp verwenden können. Der **XML** -Datentyp bildet das Eingabe-XQuery-Datenmodell, für das die XQuery-Ausdrücke ausgeführt werden.|  
+|[XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|Erläutert die Unterstützung für den **XML**-Datentyp in [!INCLUDE[ssDE](../includes/ssde-md.md)] und die Methoden, die Sie für diesen Datentyp verwenden können. Der **XML** -Datentyp bildet das Eingabe-XQuery-Datenmodell, für das die XQuery-Ausdrücke ausgeführt werden.|  
 |[XML-Schemaauflistungen &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)|Beschreibt, wie die in einer Datenbank gespeicherten XML-Instanzen typisiert werden können. Dies bedeutet, dass Sie der Spalte vom Typ **XML** eine XML-Schema Auflistung zuordnen können. Alle in der Spalte gespeicherten Instanzen werden in der Auflistung anhand des Schemas überprüft und typisiert und stellen die Typinformationen für XQuery bereit.|  
 |||  
   
 > [!NOTE]  
->  Die Organisation dieses Abschnitts basiert auf der Arbeitsentwurfspezifikation für XQuery des World Wide Web Consortium (W3C). Einige der in diesem Abschnitt bereitgestellten Diagramme stammen aus dieser Spezifikation. In diesem Abschnitt wird die Microsoft XQuery-Implementierung mit der W3C-Spezifikation verglichen, es werden die Unterschiede zwischen XQuery und W3C beschrieben und die nicht unterstützten W3C-Funktionen genannt. Die W3C-Spezifikation ist unter [http://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846)verfügbar.  
+>  Die Organisation dieses Abschnitts basiert auf der Arbeitsentwurfspezifikation für XQuery des World Wide Web Consortium (W3C). Einige der in diesem Abschnitt bereitgestellten Diagramme stammen aus dieser Spezifikation. In diesem Abschnitt wird die Microsoft XQuery-Implementierung mit der W3C-Spezifikation verglichen, es werden die Unterschiede zwischen XQuery und W3C beschrieben und die nicht unterstützten W3C-Funktionen genannt. Die W3C-Spezifikation ist unter verfügbar [http://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846) .  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

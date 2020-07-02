@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9031f4b2e5923d1382c10c97dd6886959af108a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21aeb49750c0a451166da8147b424589b3902856
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734443"
 ---
 # <a name="change-data-capture-functions-transact-sql"></a>Change Data Capture-Funktionen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Change Data Capture zeichnet Einfüge-, Aktualisierungs- und Löschvorgänge auf, die an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabellen vorgenommen wurden, und stellt Details zu den Änderungen in einem leicht verwendbaren relationalen Format bereit. Für die geänderten Zeilen werden Spaltendaten, die die Spaltenstruktur der nachverfolgten Quelltabelle widerspiegeln, sowie die Metadaten aufgezeichnet, die zur Anwendung der Änderungen in einer Zielumgebung erforderlich sind. Zum Zurückgeben von Informationen zu den Änderungen werden die folgenden Funktionen verwendet.  
   

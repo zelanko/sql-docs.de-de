@@ -20,19 +20,19 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: eff5e947caed2471d63c980418688f6945c78b21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151965"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734682"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt eine Zeile pro authentifizierter Sitzung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. sys.dm_exec_sessions ist eine Sicht des Serverbereichs mit Informationen zu allen aktiven Benutzerverbindungen und internen Tasks. Zu diesen Informationen zählen u. a. die Clientversion, der Name des Clientprogramms, die Clientanmeldezeit, der angemeldete Benutzer und die aktuelle Sitzungseinstellung. Mit sys.dm_exec_sessions zeigen Sie zuerst die aktuelle Systemauslastung an und identifizieren eine interessante Sitzung, und informieren Sie sich dann in dynamischen Verwaltungssichten oder dynamischen Verwaltungsfunktionen weiter über diese Sitzung.  
   
- Die dynamischen Verwaltungs Sichten sys. dm_exec_connections, sys. dm_exec_sessions und sys. dm_exec_requests werden der [sys. sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) -Systemtabelle zugeordnet.  
+ Die dynamischen Verwaltungs Sichten sys. dm_exec_connections, sys. dm_exec_sessions und sys. dm_exec_requests werden der [sys.sysProzesse](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) -Systemtabelle zugeordnet.  
   
 > **Hinweis:** Um dies von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys. dm_pdw_nodes_exec_sessions**.  
   
@@ -97,7 +97,7 @@ Jeder Benutzer kann seine eigenen Sitzungsinformationen sehen.
 ** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Erfordert `VIEW DATABASE STATE` , dass alle Verbindungen mit der aktuellen Datenbank angezeigt werden. `VIEW DATABASE STATE`kann nicht in der Datenbank erteilt werden `master` . 
   
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn die Server Konfigurationsoption **Common Criteria-Konformität aktiviert** aktiviert ist, werden die Anmelde Statistiken in den folgenden Spalten angezeigt.  
   
 -   last_successful_logon  
@@ -114,7 +114,7 @@ Jeder Benutzer kann seine eigenen Sitzungsinformationen sehen.
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|Beschreibung|Für/Anwendung|Beziehung|  
+|From|To|Für/Anwendung|Beziehung|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|1:0 oder 1:viele|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|1:0 oder 1:viele|  

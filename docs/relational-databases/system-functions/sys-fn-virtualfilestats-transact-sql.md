@@ -21,17 +21,17 @@ ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b805e9db3c9a5472f78cffd24624cf0a26a463dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738601"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Gibt E/A-Statistiken für Datenbankdateien zurück, einschließlich Protokolldateien. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sind diese Informationen auch in der dynamischen Verwaltungs Sicht [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) verfügbar.  
+  Gibt E/A-Statistiken für Datenbankdateien zurück, einschließlich Protokolldateien. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind diese Informationen auch in der dynamischen Verwaltungs Sicht [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) verfügbar.  
 
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|Datenbank-ID|  
 |**FileID**|**smallint**|Die Datei-ID|  
-|**TimeStamp**|**bigint**|Datenbanktimestamp für den Zeitpunkt, zu dem die Daten erhoben wurden **int** in Versionen vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|**Zeitstempel**|**bigint**|Datenbanktimestamp für den Zeitpunkt, zu dem die Daten erhoben wurden **int** in Versionen vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] . |  
 |**NumberReads**|**bigint**|Die Anzahl der Lesevorgänge, die für die Datei ausgegeben wurden.|  
 |**BytesRead**|**bigint**|Anzahl der Bytes, die aus der Datei gelesen wurden|  
 |**IoStallReadMS**|**bigint**|Gesamtzeit in Millisekunden, die die Benutzer darauf gewartet haben, dass E/A-Leseoperationen für die Datei abgeschlossen wurden|  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. Anzeigen von statistischen Informationen zu einer benannten Datenbank und Datei  
- Das folgende Beispiel zeigt statistische Informationen zur Protokolldatei in der Beispieldatenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] an. Die-System `DB_ID` Funktion wird verwendet, um den *database_id* -Parameter anzugeben.  
+ Das folgende Beispiel zeigt statistische Informationen zur Protokolldatei in der Beispieldatenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] an. Die-Systemfunktion `DB_ID` wird verwendet, um den *database_id* -Parameter anzugeben.  
   
 ```sql  
 SELECT *  

@@ -20,22 +20,22 @@ ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb36dddcab514692a7d6b59dee969846430d75b5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 35d2682709e1f9d19fe51dfae331e0999c0e3570
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733567"
 ---
 # <a name="extended-properties-catalog-views---sysextended_properties"></a>Katalog Sichten für erweiterte Eigenschaften-sys. extended_properties
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Gibt eine Zeile für jede erweiterte Eigenschaft in der aktuellen Datenbank zurück.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|class|**tinyint**|Identifiziert die Elementklasse, für die die Eigenschaft vorhanden ist. Kann eines der folgenden Elemente sein:<br /><br /> 0 = Datenbank<br /><br /> 1 = Objekt oder Spalte<br /><br /> 2 = Parameter<br /><br /> 3 = Schema<br /><br /> 4 = Datenbankprinzipal<br /><br /> 5 = Assembly<br /><br /> 6 = Typ<br /><br /> 7 = Index<br /><br /> 10 = XML-Schemaauflistung<br /><br /> 15 = Nachrichtentyp<br /><br /> 16 = Dienstvertrag<br /><br /> 17 = Dienst<br /><br /> 18 = Remotedienstbindung<br /><br /> 19 = Route<br /><br /> 20 = Datenspeicher (Dateigruppe oder Partitionsschema)<br /><br /> 21 = Partitionsfunktion<br /><br /> 22 = Datenbankdatei<br /><br /> 27 = Planhinweisliste|  
-|class_desc|**nvarchar(60)**|Beschreibung der Klasse, für die die erweiterte Eigenschaft vorhanden ist. Kann eines der folgenden Elemente sein:<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> PARAMETER<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
+|class|**tinyint**|Identifiziert die Elementklasse, für die die Eigenschaft vorhanden ist. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> 0 = Datenbank<br /><br /> 1 = Objekt oder Spalte<br /><br /> 2 = Parameter<br /><br /> 3 = Schema<br /><br /> 4 = Datenbankprinzipal<br /><br /> 5 = Assembly<br /><br /> 6 = Typ<br /><br /> 7 = Index<br /><br /> 10 = XML-Schemaauflistung<br /><br /> 15 = Nachrichtentyp<br /><br /> 16 = Dienstvertrag<br /><br /> 17 = Dienst<br /><br /> 18 = Remotedienstbindung<br /><br /> 19 = Route<br /><br /> 20 = Datenspeicher (Dateigruppe oder Partitionsschema)<br /><br /> 21 = Partitionsfunktion<br /><br /> 22 = Datenbankdatei<br /><br /> 27 = Planhinweisliste|  
+|class_desc|**nvarchar(60)**|Beschreibung der Klasse, für die die erweiterte Eigenschaft vorhanden ist. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> PARAMETER<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
 |major_id|**int**|ID des Elements, für das die erweiterte Eigenschaft vorhanden ist, interpretiert gemäß der entsprechenden Klasse. Bei den meisten Elementen ist dies die ID, die für die Darstellung der Klasse gilt. Die Interpretation von Haupt-IDs, die nicht dem Standard entsprechen, lautet wie folgt:<br /><br /> Wenn class gleich 0 ist, ist major_id immer 0.<br /><br /> Wenn die Klasse den Wert 1, 2 oder 7 hat, major_id object_id ist.|  
 |minor_id|**int**|Sekundäre ID des Elements, für das die erweiterte Eigenschaft vorhanden ist, interpretiert gemäß der entsprechenden Klasse. Bei den meisten Elementen ist dies der Wert 0; andernfalls lautet die ID wie folgt:<br /><br /> Wenn class = 1, ist minor_id bei einer Spalte gleich column_id, bei einem Objekt gleich 0.<br /><br /> Wenn class = 2, ist minor_id gleich parameter_id.<br /><br /> Wenn class 7 = minor_id ist die index_id.|  
 |name|**sysname**|Eigenschaftenname, durch class, major_id und minor_id eindeutig bestimmt.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 812be95c9584e75d8452c946d1935625468a79a1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 70c59031b56b4ec7a5f670ecc3a9c5692181d8d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733195"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt die physischen Namen und Attribute der Dateien zurück, die der aktuellen Datenbank zugeordnet sind. Bestimmen Sie mithilfe dieser gespeicherten Prozedur die Namen von Dateien, die an den Server angefügt oder von diesem getrennt werden sollen.  
   
@@ -50,7 +50,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Logischer Dateiname der Datei.|  
 |**FileID**|**smallint**|Numerischer Bezeichner der Datei. Wird nicht zurückgegeben, wenn *Name* angegeben ist *.*|  
-|**Einfügen**|**NCHAR (260)**|Physischer Dateiname.|  
+|**filename**|**NCHAR (260)**|Physischer Dateiname.|  
 |**Dateigruppe (filegroup)**|**sysname**|Dateigruppe, zu der die Datei gehört.<br /><br /> NULL = Die Datei ist eine Protokolldatei. Sie gehört nie zu einer Dateigruppe.|  
 |**size**|**nvarchar (15)**|Die Dateigröße in KB.|  
 |**MaxSize**|**nvarchar (15)**|Maximale Größe, auf die die Datei vergrößert werden kann. Mit UNLIMITED in diesem Feld kann die Datei so lange vergrößert werden, bis der Datenträger voll ist.|  

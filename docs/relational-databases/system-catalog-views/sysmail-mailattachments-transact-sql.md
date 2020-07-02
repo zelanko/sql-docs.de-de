@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab020c70d1d1062f507bbb745f2e5f00d9faba6a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2d5a9063447752406a2898f6d72ea6e43ff316ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824875"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733392"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jede Anlage, die an die Datenbank-E-Mail übermittelt wurde. Verwenden Sie diese Sicht, wenn Sie Informationen zu Datenbank-E-Mail-Anlagen benötigen. Zum Überprüfen aller von Datenbank-E-Mail verarbeiteten e-Mails verwenden Sie [sysmail_allitems &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md).  
   
@@ -33,13 +33,13 @@ ms.locfileid: "82824875"
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|Der Bezeichner für die Anlage.|  
 |**mailitem_id**|**int**|Der Bezeichner für das E-Mail-Element, das die Anlage enthält.|  
-|**Einfügen**|**nvarchar (520)**|Der Dateiname der Anlage. Wenn **attach_query_result** 1 und **query_attachment_filename** NULL ist, erstellt Datenbank-E-Mail einen beliebigen Dateinamen.|  
+|**filename**|**nvarchar (520)**|Der Dateiname der Anlage. Wenn **attach_query_result** 1 und **query_attachment_filename** NULL ist, erstellt Datenbank-E-Mail einen beliebigen Dateinamen.|  
 |**Filesize**|**int**|Die Größe der Anlage in Bytes.|  
 |**Angeklag**|**varbinary(max)**|Der Inhalt der Anlage.|  
 |**last_mod_date**|**datetime**|Das Datum und die Uhrzeit der letzten Änderung der Zeile.|  
 |**last_mod_user**|**sysname**|Der Benutzer, der die Zeile zuletzt geändert hat.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn Sie Probleme mit der Datenbank-E-Mail behandeln, können Sie diese Sicht verwenden, um die Eigenschaften der Anlagen anzuzeigen.  
   
  In den Systemtabellen gespeicherte Anlagen können dazu führen, dass die **msdb** -Datenbank vergrößert wird. Verwenden Sie **sysmail_delete_mailitems_sp** , um e-Mail-Elemente und ihre zugehörigen Anlagen zu löschen Weitere Informationen finden Sie unter [Erstellen eines SQL Server-Agent Auftrags zum Archivieren Datenbank-E-Mail Nachrichten und Ereignisprotokollen](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  

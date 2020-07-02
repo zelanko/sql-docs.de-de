@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 560c425c5bda4ee1f9dd7ecf454c65d3ba7eab1e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0bc0c7973ad8ac653c2d9e7f613a3ec0325c12fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733320"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Legt Cursor Optionen fest oder gibt Cursor Informationen zurück, die von der gespeicherten Prozedur sp_cursoropen erstellt wurden. sp_cursoroption wird aufgerufen, indem ID = 8 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
@@ -45,7 +45,7 @@ sp_cursoroption cursor, code, value
  *code*  
  Wird verwendet, um verschiedene Faktoren der Cursorrückgabewerte festzulegen. *Code* erfordert einen der folgenden **int** -Eingabewerte:  
   
-|Wert|Name|Beschreibung|  
+|Wert|Name|BESCHREIBUNG|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|Gibt für bestimmte angegebene Text- oder Bildspalten den Textzeiger, nicht aber die tatsächlichen Daten zurück.<br /><br /> TEXTPTR_ONLY ermöglicht das Verwenden von Text Zeigern als *Handles* für BLOB-Objekte, die später selektiv mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] oder DBLIB-Funktionen (z. b. "Read Text" oder " [!INCLUDE[tsql](../../includes/tsql-md.md)] DBLIB dbwrite-Text") selektiv abgerufen oder aktualisiert werden können.<br /><br /> Wenn der Wert "0" zugewiesen wird, geben alle Text- und Bildspalten in der Auswahlliste Textzeiger anstelle von Daten zurück.|  
 |0x0002|CURSOR_NAME|Weist dem Cursor den in *value* angegebenen Namen zu. Dies ermöglicht ODBC wiederum, [!INCLUDE[tsql](../../includes/tsql-md.md)] positionierte UPDATE/DELETE-Anweisungen für Cursor zu verwenden, die über sp_cursoropen geöffnet wurden.<br /><br /> Die Zeichenfolge kann als beliebiges Zeichen oder Unicode-Datentyp angegeben werden.<br /><br /> Da [!INCLUDE[tsql](../../includes/tsql-md.md)] positionierte UPDATE/DELETE-Anweisungen standardmäßig in der ersten Zeile eines FAT-Cursors ausgeführt werden, sollte sp_cursor SetPosition zum Positionieren des Cursors verwendet werden, bevor die positionierte UPDATE/DELETE-Anweisung ausgegeben wird.|  
@@ -63,7 +63,7 @@ sp_cursoroption cursor, code, value
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Der *value* -Parameter kann einen der folgenden *Codewerte* zurückgeben.  
   
-|Rückgabewert|Beschreibung|  
+|Rückgabewert|BESCHREIBUNG|  
 |------------------|-----------------|  
 |0x0004|SCROLLOPT|  
 |0X0005|CCOPT|  
@@ -71,7 +71,7 @@ sp_cursoroption cursor, code, value
   
  Der *value* -Parameter gibt einen der folgenden scrollopt-Werte zurück.  
   
-|Rückgabewert|Beschreibung|  
+|Rückgabewert|BESCHREIBUNG|  
 |------------------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -80,7 +80,7 @@ sp_cursoroption cursor, code, value
   
  Der *value* -Parameter gibt einen der folgenden ccopt-Werte zurück.  
   
-|Rückgabewert|Beschreibung|  
+|Rückgabewert|BESCHREIBUNG|  
 |------------------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS|  

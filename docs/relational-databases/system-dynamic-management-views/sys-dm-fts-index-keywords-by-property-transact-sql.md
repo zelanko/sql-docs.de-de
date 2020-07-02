@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 82f433d18ff0940c9283f93cfa5e3f87179d31ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cffa7327162b4ae333719ad0e50c02002d0a4528
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734553"
 ---
 # <a name="sysdm_fts_index_keywords_by_property-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt alle eigenschaftsbezogenen Inhalte im Volltextindex einer angegebenen Tabelle zurück. Dies schließt alle Daten ein, die zu Eigenschaften gehören, die von der diesem Volltextindex zugeordneten Sucheigenschaftenliste registriert wurden.  
   
@@ -74,7 +74,7 @@ OBJECT_ID('table_name')
 |document_id|**int**|Die ID des Dokuments bzw. der Zeile für die Volltextindizierung des aktuellen Ausdrucks. Diese ID entspricht dem Volltextschlüsselwert dieses Dokuments bzw. dieser Zeile.|  
 |property_id|**int**|Interne Eigenschaften-ID der Such Eigenschaft im Volltextindex der Tabelle, die Sie im object_id Parameter ('*table_name*') angegeben haben.<br /><br /> Wenn einer Sucheigenschaftenliste eine angegebene Eigenschaft hinzugefügt wird, registriert die Volltext-Engine die Eigenschaft und weist ihr eine interne Eigenschaften-ID zu, die für diese Eigenschaftenliste spezifisch ist. Die interne Eigenschaften-ID stellt eine ganze Zahl dar und ist für eine bestimmte Sucheigenschaftenliste eindeutig. Wenn eine bestimmte Eigenschaft für mehrere Sucheigenschaftenlisten registriert wird, kann für jede Sucheigenschaftenliste eine andere interne Eigenschaften-ID zugewiesen werden.<br /><br /> Hinweis: die interne Eigenschaften-ID unterscheidet sich vom ganzzahligen Eigenschafts Bezeichner, der angegeben wird, wenn die Eigenschaft der Such Eigenschaften Liste hinzugefügt wird. Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> So zeigen Sie die Zuordnung zwischen property_id und dem Eigenschaftsnamen an:<br />                    [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese dynamische Verwaltungs Sicht kann Fragen wie die folgenden beantworten:  
   
 -   Welcher Inhalt wird in einer angegebenen Eigenschaft für eine angegebene DocID gespeichert?  
@@ -85,7 +85,7 @@ OBJECT_ID('table_name')
   
  Wenn die Volltextschlüsselspalte wie empfohlen mit dem integer-Datentyp definiert ist, kann die document_id direkt dem Volltextschlüsselwert in der Basistabelle zugeordnet werden.  
   
- Wenn als Datentyp für die Volltextschlüsselspalte jedoch ein anderer Typ als Integer festgelegt ist, stellt document_id nicht den Volltextschlüsselwert in der Basistabelle dar. Um in diesem Fall die Zeile in der Basistabelle zu identifizieren, die von dm_fts_index_keywords_by_property zurückgegeben wird, müssen Sie diese Ansicht mit den von [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)zurückgegebenen Ergebnissen verknüpfen. Speichern Sie jedoch zuvor die Ausgabe der gespeicherten Prozedur in eine temporäre Tabelle. Anschließend können Sie die Spalte document_id dm_fts_index_keywords_by_property mit der DocId-Spalte verknüpfen, die von dieser gespeicherten Prozedur zurückgegeben wird. Beachten Sie, dass eine **Zeitstempel** -Spalte keine Werte zum Zeitpunkt des Einfügens empfangen kann, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]da Sie von automatisch generiert werden. Daher muss die **Zeitstempel** -Spalte in **varbinary (8)** -Spalten konvertiert werden. Das folgende Beispiel zeigt die erforderlichen Schritte: In diesem Beispiel ist *table_id* die ID der Tabelle, *database_name* der Name der Datenbank und *table_name* der Name der Tabelle ist.  
+ Wenn als Datentyp für die Volltextschlüsselspalte jedoch ein anderer Typ als Integer festgelegt ist, stellt document_id nicht den Volltextschlüsselwert in der Basistabelle dar. Um in diesem Fall die Zeile in der Basistabelle zu identifizieren, die von dm_fts_index_keywords_by_property zurückgegeben wird, müssen Sie diese Ansicht mit den von [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)zurückgegebenen Ergebnissen verknüpfen. Speichern Sie jedoch zuvor die Ausgabe der gespeicherten Prozedur in eine temporäre Tabelle. Anschließend können Sie die Spalte document_id dm_fts_index_keywords_by_property mit der DocId-Spalte verknüpfen, die von dieser gespeicherten Prozedur zurückgegeben wird. Beachten Sie, dass eine **Zeitstempel** -Spalte keine Werte zum Zeitpunkt des Einfügens empfangen kann, da Sie von automatisch generiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Daher muss die **Zeitstempel** -Spalte in **varbinary (8)** -Spalten konvertiert werden. Das folgende Beispiel zeigt die erforderlichen Schritte: In diesem Beispiel ist *table_id* die ID der Tabelle, *database_name* der Name der Datenbank und *table_name* der Name der Tabelle ist.  
   
 ```  
 USE database_name;  

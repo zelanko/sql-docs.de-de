@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59b7f4a0cf0c3ba3335a181b35560af8847fca8b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 83da8c71ce35f26c44cf0c5fc0caab8bd44b9c64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738483"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Meldet Informationen zu Microsoft® SQL Server™-Sicherungsmedien.  
   
@@ -53,12 +53,12 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Logischer Medienname.|  
 |**physical_name**|**nvarchar(260)**|Physischer Dateiname.|  
-|**Beschreibung**|**nvarchar(255)**|Beschreibung des Mediums.|  
+|**description**|**nvarchar(255)**|Beschreibung des Mediums.|  
 |**status**|**int**|Eine Nummer, die der Statusbeschreibung in der **description** -Spalte entspricht.|  
 |**cntrltype**|**smallint**|Controllertyp des Mediums:<br /><br /> 2 = Datenträgermedium<br /><br /> 5 = Bandmedium|  
 |**size**|**int**|Mediengröße in Seiten von je 2 KB.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn *name* angegeben wird, zeigt **sp_helpdevice** Informationen zu dem angegebenen Sicherungsmedium an. Wenn *name* nicht angegeben wird, zeigt **sp_helpdevice** Informationen zu allen Sicherungsmedien in der **sys.backup_devices** -Katalogsicht an.  
   
  Sicherungsmedien werden dem System mithilfe von **sp_addumpdevice**hinzugefügt.  

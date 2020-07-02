@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3bd7aa786466f3bde9aa42d75437d2406ef1e808
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656992"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734753"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Gibt den-Wert des letzten bekannten tatsächlichen Ausführungs Plans für einen zuvor zwischengespeicherten Abfrageplan zurück.
 
@@ -61,7 +61,7 @@ Ein Token, das einen Abfrage Ausführungsplan für einen Batch eindeutig identif
 |**.**|**bit**|Zeigt an, ob die entsprechende Prozedur verschlüsselt ist.<br /><br /> 0 = nicht verschlüsselt<br /><br /> 1 = verschlüsselt<br /><br /> NULL-Werte sind in der Spalte nicht zulässig.|  
 |**query_plan**|**xml**|Enthält die letzte bekannte Runtime-Showplan-Darstellung des tatsächlichen Abfrage Ausführungs Plans, der mit *plan_handle*angegeben wird. Der Showplan liegt im XML-Format vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert.<br /><br /> Die Spalte lässt NULL-Werte zu.| 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 Diese Systemfunktion ist ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4 verfügbar.
 
 Hierbei handelt es sich um ein optionales Feature, für das das [Ablaufverfolgungsflag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 aktiviert sein muss. Informationen dazu, wie Sie dies ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 auf der Datenbankebene erreichen, finden Sie in der LAST_QUERY_PLAN_STATS-Option unter [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
@@ -84,7 +84,7 @@ Unter den folgenden Bedingungen wird eine **vereinfachte <sup>1</sup> ** Showpla
     **AND**    
 -   Die Abfrage ist einfach genug und wird normalerweise als Teil einer OLTP-Arbeitsauslastung kategorisiert.
 
-<sup>1</sup> ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,5 bezieht sich dies auf einen Showplan, der nur den Stamm Knoten Operator (Select) enthält. Für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4 bezieht sich dies auf den zwischengespeicherten Plan, `sys.dm_exec_cached_plans`der über verfügbar ist.
+<sup>1</sup> ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,5 bezieht sich dies auf einen Showplan, der nur den Stamm Knoten Operator (Select) enthält. Für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4 bezieht sich dies auf den zwischengespeicherten Plan, der über verfügbar ist `sys.dm_exec_cached_plans` .
 
 Unter den folgenden Bedingungen **wird keine Ausgabe** aus **sys. dm_exec_query_plan_stats**zurückgegeben:
 
@@ -93,7 +93,7 @@ Unter den folgenden Bedingungen **wird keine Ausgabe** aus **sys. dm_exec_query_
 -   Der Abfrageplan konnte nicht an erster Stelle zwischengespeichert werden. Weitere Informationen finden Sie unter zwischen [Speichern und wieder verwenden von Ausführungsplänen ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
-> Aufgrund einer Beschränkung der im **xml** -Datentyp zulässigen Anzahl geschachtelter Ebenen kann **sys.dm_exec_query_plan** keine Abfragepläne zurückgeben, die 128 oder mehr Ebenen geschachtelter Elemente aufweisen. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verhinderte diese Bedingung, dass der Abfrageplan nicht zurückgegeben wurde, und generiert den [Fehler 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 und höheren Versionen gibt die **query_plan** -Spalte NULL zurück.  
+> Aufgrund einer Beschränkung der im **xml** -Datentyp zulässigen Anzahl geschachtelter Ebenen kann **sys.dm_exec_query_plan** keine Abfragepläne zurückgeben, die 128 oder mehr Ebenen geschachtelter Elemente aufweisen. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhinderte diese Bedingung, dass der Abfrageplan nicht zurückgegeben wurde, und generiert den [Fehler 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 und höheren Versionen gibt die **query_plan** -Spalte NULL zurück.  
 
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW SERVER STATE`-Berechtigung auf dem Server.  
@@ -101,14 +101,14 @@ Unter den folgenden Bedingungen **wird keine Ausgabe** aus **sys. dm_exec_query_
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. Betrachten des letzten bekannten Abfrage Ausführungs Plans für einen bestimmten zwischengespeicherten Plan  
- Im folgenden Beispiel wird **sys. dm_exec_cached_plans** abgefragt, um den interessanten Plan zu `plan_handle` suchen und dessen aus der Ausgabe zu kopieren.  
+ Im folgenden Beispiel wird **sys. dm_exec_cached_plans** abgefragt, um den interessanten Plan zu suchen und dessen `plan_handle` aus der Ausgabe zu kopieren.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_cached_plans;  
 GO  
 ```  
   
-Verwenden Sie dann zum Abrufen des letzten bekannten Abfrage Ausführungs Plans den, der mit `plan_handle` der Systemfunktion **sys. dm_exec_query_plan_stats**kopiert wurde.  
+Verwenden Sie dann zum Abrufen des letzten bekannten Abfrage Ausführungs Plans den, der `plan_handle` mit der Systemfunktion **sys. dm_exec_query_plan_stats**kopiert wurde.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);  
@@ -136,7 +136,7 @@ WHERE st.text LIKE 'SELECT * FROM Person.Person%';
 GO  
 ```   
 
-### <a name="d-look-at-cached-events-for-trigger"></a>D. Suchen nach zwischengespeicherten Ereignissen für den Triggertyp
+### <a name="d-look-at-cached-events-for-trigger"></a>D: Suchen nach zwischengespeicherten Ereignissen für den Triggertyp
 
 ```sql
 SELECT *

@@ -22,17 +22,17 @@ ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae1f88ba7694f99546382d9b1450aea4c555f4d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042764"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734377"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Eine Funktion, die in der [from-Klausel](../../t-sql/queries/from-transact-sql.md) einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um eine Volltextsuche für voll Text indizierte Spalten mit Zeichen basierten Datentypen durchzuführen. Diese Funktion gibt eine Tabelle mit keiner, einer oder mehreren Zeilen für die Spalten zurück, die Werte enthalten, die der Bedeutung und nicht nur dem genauen Wortlaut des Texts im angegebenen *freetext_string*entsprechen. Auf FREETEXTTABLE wird wie auf einen regulären Tabellennamen verwiesen.  
+  Eine Funktion, die in der [from-Klausel](../../t-sql/queries/from-transact-sql.md) einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung verwendet wird, um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Volltextsuche für voll Text indizierte Spalten mit Zeichen basierten Datentypen durchzuführen. Diese Funktion gibt eine Tabelle mit keiner, einer oder mehreren Zeilen für die Spalten zurück, die Werte enthalten, die der Bedeutung und nicht nur dem genauen Wortlaut des Texts im angegebenen *freetext_string*entsprechen. Auf FREETEXTTABLE wird wie auf einen regulären Tabellennamen verwiesen.  
   
  "Fretexamp;" ist für die gleichen Arten von Übereinstimmungen geeignet wie für den [&#40;Transact-SQL-&#41;](../../t-sql/queries/freetext-transact-sql.md).  
   
@@ -84,14 +84,14 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  In Form einer Zeichenfolge entspricht *language_term* dem Wert der **alias**-Spalte in der [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)-Kompatibilitätssicht.  Die Zeichenfolge muss in einfache Anführungszeichen gesetzt werden, z.B. '*language_term*'. In Form einer ganzen Zahl ist *language_term* der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. In Form eines Hexadezimalwerts ist *language_term* gleich 0x, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
   
- Wenn der Wert im DBCS-Format (Double-Byte Character Set, Doppel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Byte-Zeichensatz) vorliegt, wird er von in Unicode konvertiert.  
+ Wenn der Wert im DBCS-Format (Double-Byte Character Set, Doppelbyte-Zeichensatz) vorliegt, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird er von in Unicode konvertiert.  
   
  Ist die angegebene Sprache ungültig oder sind keine Ressourcen installiert, die dieser Sprache entsprechen, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück. Geben Sie 0x0 als *language_term* an, um neutrale Sprachressourcen zu verwenden.  
   
  *top_n_by_rank*  
  Gibt an, dass nur die *n*höchsten Übereinstimmungen in absteigender Reihenfolge zurückgegeben werden. Gilt nur, wenn ein ganzzahliger Wert ( *n*) angegeben wird. Wenn *top_n_by_rank* mit anderen Parametern kombiniert wird, werden von der Abfrage möglicherweise weniger Zeilen zurückgegeben als die Anzahl von Zeilen, die mit allen Prädikaten übereinstimmen. mit *top_n_by_rank* können Sie die Abfrageleistung erhöhen, indem Sie nur die relevantesten Treffer abrufen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Volltextprädikate und -funktionen gelten für eine einzelne Tabelle, die im FROM-Prädikat enthalten ist. Um eine Suche in mehreren Tabellen auszuführen, können Sie eine verknüpfte Tabelle in der FROM-Klausel verwenden, um in einem Resultset zu suchen, das aus mindestens zwei Tabellen erstellt wird.  
   
  FREETEXTTABLE verwendet die gleichen Suchbedingungen wie das FREETEXT-Prädikat.  
@@ -125,7 +125,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');
 ```  
   
 ### <a name="b-using-freetext-in-an-inner-join"></a>B. Verwenden von FREETEXT in einem INNER JOIN  
- Im folgenden Beispiel werden die Beschreibung und der Rang aller Produkte zurückgegeben, deren Beschreibung der Bedeutung von `high level of performance`entspricht.  
+ Im folgenden Beispiel werden die Beschreibung und der Rang aller Produkte zurückgegeben, deren Beschreibung der Bedeutung von entspricht `high level of performance` .  
   
 ```  
 USE AdventureWorks2012;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>C. Angeben der Sprache und der höchsten Übereinstimmungen  
- Das folgende Beispiel ist identisch und zeigt die Verwendung `LANGUAGE`der Parameter " *language_term* " und " *top_n_by_rank* ".  
+ Das folgende Beispiel ist identisch und zeigt die Verwendung der Parameter " `LANGUAGE` *language_term* " und " *top_n_by_rank* ".  
   
 ```  
 USE AdventureWorks2012;  

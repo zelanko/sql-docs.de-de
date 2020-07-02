@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a0929d4a0b88a954a0beef9789b3aeb7d9ab092d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 93aaf92104db30c13d5cfdd8474935009cf4de88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660317"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736607"
 ---
 # <a name="servernetworkprotocol-class"></a>ServerNetworkProtocol-Klasse
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Die [ServerNetworkProtocol-Klasse](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) stellt Netzwerkprotokolle dar, die in einer die Kommunikation von Clients über das Netzwerk unterstützenden Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert sind.  
   
  Die [ServerNetworkProtocol-Klasse](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md)ermöglicht Folgendes:  

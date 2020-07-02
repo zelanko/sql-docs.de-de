@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7b44d76ad893775216e6566add3636603ea7dce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e27de1c2b303474117a0ea442dde81606a9f48f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830624"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734604"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Zeigt eine Liste mit E/A-Anforderungen an, die im betreffenden Moment vom Namespace-Besitzer (NSO) verarbeitet werden.  
   
-|Spalte|Typ|Beschreibung|  
+|Spalte|Typ|BESCHREIBUNG|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary(8)**|Zeigt die interne Adresse des NSO-Speicherblocks an, der die E/A-Anforderung des Treibers enthält. Lässt keine NULL-Werte zu.|  
 |**current_spid**|**smallint**|Zeigt die System Prozess-ID (SPID) für die Verbindung des aktuellen SQL Server an. Lässt keine NULL-Werte zu.|  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b57d657f0f6b1113db6b36bfa7c559110f77e84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734733"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Gibt für den vom Planhandle angegebenen Batch den Showplan im XML-Format zurück. Der vom Planhandle angegebene Plan ist möglicherweise zwischengespeichert oder wird gerade ausgeführt.  
   
@@ -66,7 +66,7 @@ Ein Token, das einen Abfrage Ausführungsplan für einen Batch eindeutig identif
 |**.**|**bit**|Zeigt an, ob die entsprechende Prozedur verschlüsselt ist.<br /><br /> 0 = nicht verschlüsselt<br /><br /> 1 = verschlüsselt<br /><br /> NULL-Werte sind in der Spalte nicht zulässig.|  
 |**query_plan**|**xml**|Enthält eine zur Kompilierzeit erstellte Showplandarstellung des Abfrageausführungsplans, der mit *plan_handle*angegeben ist. Der Showplan liegt im XML-Format vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Unter den folgenden Bedingungen wird keine Showplanausgabe in der **query_plan**-Spalte der zurückgegebenen Tabelle für **sys.dm_exec_query_plan** zurückgegeben:  
   
 -   Falls der mit *plan_handle* angegebene Abfrageplan aus dem Plancache entfernt wurde, enthält die **query_plan** -Spalte der zurückgegebenen Tabelle den Wert NULL. Diese Bedingung kann z. B. auftreten, wenn es eine Zeitverzögerung zwischen der Erfassung des Planhandles und seiner Verwendung mit **sys.dm_exec_query_plan** gibt.  
@@ -87,7 +87,7 @@ Ein Token, das einen Abfrage Ausführungsplan für einen Batch eindeutig identif
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Verwendung der dynamischen Verwaltungssicht **sys.dm_exec_query_plan** gezeigt.  
   
- Führen Sie zum Anzeigen der XML-Showpläne die folgenden Abfragen im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aus, und klicken Sie dann in der **query_plan**-Spalte der von **sys.dm_exec_query_plan** zurückgegebenen Tabelle auf **ShowPlanXML**. Der XML-Showplan wird im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Zusammenfassungsbereich angezeigt. Um den XML-Showplan in einer Datei zu speichern, klicken Sie mit der rechten Maustaste in der Spalte **query_plan** auf **ShowPlanXML** , klicken Sie auf **Ergebnisse speichern**unter, benennen Sie die Datei im Format \< *file_name*>. sqlplan, z. b. MyXMLShowplan. sqlplan.  
+ Führen Sie zum Anzeigen der XML-Showpläne die folgenden Abfragen im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aus, und klicken Sie dann in der **query_plan**-Spalte der von **sys.dm_exec_query_plan** zurückgegebenen Tabelle auf **ShowPlanXML**. Der XML-Showplan wird im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Zusammenfassungsbereich angezeigt. Um den XML-Showplan in einer Datei zu speichern, klicken Sie mit der rechten Maustaste in der Spalte **query_plan** auf **ShowPlanXML** , klicken Sie auf **Ergebnisse speichern**unter, und benennen Sie die Datei im Format \<*file_name*> . sqlplan, z. b. MyXMLShowplan. sqlplan.  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Abrufen des zwischengespeicherten Abfrageplans für eine langsam ausgeführte Transact-SQL-Abfrage oder einen langsam ausgeführten Transact-SQL-Batch  
  Abfragepläne für unterschiedliche Typen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batches z. B. Ad-hoc-Batches, gespeicherte Prozeduren und benutzerdefinierte Funktionen, werden in einem Bereich des Arbeitsspeichers zwischengespeichert, der als Plancache bezeichnet wird. Jeder zwischengespeicherte Abfrageplan wird durch einen eindeutigen Bezeichner identifiziert, der Planhandle genannt wird. Dieses Planhandle kann mit der dynamischen Verwaltungssicht **sys.dm_exec_query_plan** angegeben werden, um den Ausführungsplan für bestimmte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfragen oder -Batches abzurufen.  

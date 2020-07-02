@@ -12,15 +12,15 @@ ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f5aeb8a5eda8e4e49e478cbc53cd0ad90e3cc890
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7302e8d81a8e79c3fb54960fad597a47d88872d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733702"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB-Header und Versionsinformationen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Es gibt keine separate Headerdatei für die SQL Server Express LocalDB-Instanz-API. Die Signaturen und Fehlercodes der LocalDB-Funktion sind in der SQL Server Native Client-Headerdatei (sqlncli.h) definiert. Zur Verwendung der LocalDB-Instanz-API müssen Sie die Headerdatei sqlncli.h in das Projekt einfügen.  
   
 ## <a name="localdb-versioning"></a>LocalDB-Versionsverwaltung  
@@ -45,7 +45,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- Unter diesem Schlüssel befindet sich eine Liste Schlüssel, einer für jede Version der auf dem Computer installierten LocalDB. Jeder dieser Schlüssel wird mit der localdb-Versionsnummer im Format * \<Haupt Versions>* benannt. Neben Versions>(z. b. lautet der Schlüssel [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] für den Namen 13,0). * \<* Unter jedem Versionsschlüssel dort ist ein `InstanceAPIPath`-Name-Wert-Paar, das den vollständigen Pfad zur mit dieser Version installierten SQLUserInstance.dll-Datei definiert. Das folgende Beispiel zeigt die Registrierungseinträge für einen Computer, auf dem localdb-Versionen 11,0 und 13,0 installiert sind:  
+ Unter diesem Schlüssel befindet sich eine Liste Schlüssel, einer für jede Version der auf dem Computer installierten LocalDB. Jeder dieser Schlüssel wird mit der localdb-Versionsnummer im Format benannt *\<major-version>* .*\<minor-version>* (der Schlüssel für hat z [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . b. den Namen 13,0.) Unter jedem Versionsschlüssel dort ist ein `InstanceAPIPath`-Name-Wert-Paar, das den vollständigen Pfad zur mit dieser Version installierten SQLUserInstance.dll-Datei definiert. Das folgende Beispiel zeigt die Registrierungseinträge für einen Computer, auf dem localdb-Versionen 11,0 und 13,0 installiert sind:  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\13.0]  
@@ -67,7 +67,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
   
 ```  
   
- 64-Bit-Programme, `Installed Versions` die den Schlüssel lesen, sehen Werte, die auf 64-Bit-Versionen der **sqluserinstance** -dll verweisen, während 32-Bit-Programme (die auf 64-Bit-Fenstern im WOW64 `Installed Versions` -Modus ausgeführt werden `Wow6432Node` ) automatisch an einen Schlüssel in der Hive umgeleitet werden. Dieser Schlüssel enthält Werte, die auf 32-Bit-Versionen der **sqluserinstance** -dll verweisen.  
+ 64-Bit-Programme, die den `Installed Versions` Schlüssel lesen, sehen Werte, die auf 64-Bit-Versionen der **sqluserinstance** -dll verweisen, während 32-Bit-Programme (die auf 64-Bit-Fenstern im WOW64-Modus ausgeführt werden) automatisch an einen `Installed Versions` Schlüssel in der Hive umgeleitet werden `Wow6432Node` . Dieser Schlüssel enthält Werte, die auf 32-Bit-Versionen der **sqluserinstance** -dll verweisen.  
   
 ## <a name="using-localdb_define_proxy_functions"></a>Verwenden von LOCALDB_DEFINE_PROXY_FUNCTIONS  
  Die API der localdb-Instanz definiert eine Konstante mit dem Namen LOCALDB_DEFINE_PROXY_FUNCTIONS, die das erkennen und Laden der **sqluserinstance** -dll automatisiert.  
