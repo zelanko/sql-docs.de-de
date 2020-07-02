@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1645b1f7ab0cd470d5cb51a5b1a10394dcc5115b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251730"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812535"
 ---
 # <a name="data-quality-client-home-screen"></a>Startbildschirm des Data Quality-Clients
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Über diesen Bildschirm können Sie auf die Benutzeroberflächen für die drei wichtigsten [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] -Taskgruppen (DSQ) zugreifen: Wissensdatenbank-Verwaltung, Data Quality-Projekte und Verwaltung.  
   
@@ -55,10 +55,10 @@ ms.locfileid: "75251730"
 ### <a name="administration"></a>Verwaltung  
  Die DQS-Verwaltung ermöglicht die Überwachung, Konfiguration und Wartung von DQS.  
   
- **Aktivitätsüberwachung**  
+ **Aktivitäts Überwachung**  
  Zeigen Sie eine Sicht mit dem Status aller (aktuellen und vergangenen) Aktivitäten an, die sich auf den verbundenen [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]beziehen. Die überwachten Aktivitätstypen umfassen die Wissensverwaltung, ein Data Quality-Projekt und die SSIS-basierte Datenkorrektur.  
   
- **Konfiguration**  
+ **Configuration**  
  Zeigen Sie die Konfigurations Eigenschaften für Verweis Datendienst Konten (sowohl über Azure Marketplace als auch direkt auf Verweis Datendienste), allgemeine Einstellungen (interaktive Bereinigung, Abgleich und Profilerstellung) und Einstellungen für den Protokoll Schweregrad an.  
   
 ## <a name="see-also"></a>Weitere Informationen  

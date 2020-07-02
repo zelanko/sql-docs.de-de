@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f4855daea163d799d8f880dc74e5fee8d2a50c93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a543cc6c153af6cd40617d4fe7699ccabad8f9a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812365"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Bearbeiten und Löschen eines Indexes (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Sie können einen Index, den Sie mit Attributen erstellt haben, bearbeiten und löschen.  
   

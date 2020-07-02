@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 95c29509d9b08390a21598c94cdb64ccdd92cf36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a89ed871f18f52efa32b088e02d4432166866cb
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812906"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services - Features und Tasks
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Erfahren Sie, wie Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] verwenden können, um die Masterdaten Ihrer Organisation zu verwalten. Erfahren Sie, wie Modellobjekte zu erstellen und zu bearbeiten sind, die als Container für Daten dienen. Erfahren Sie, wie die Masterdaten an sich organisiert und verwaltet werden. Erfahren Sie, wie Masterdaten zu importieren und exportieren sind und wie sich Modelle zwischen Test- und Produktionsumgebungen freigeben lassen. Abschließend erfahren Sie, wie sich benutzerdefinierte Anwendungen, die auf den [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webdienst zugreifen, entwickeln lassen.  
   

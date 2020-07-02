@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1e5c51996ba85b9645650f453a0e4ed18478ccf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab254c9deaee5a9e31a89d2a44d281e83a2beead
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80607824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812556"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Datenprofilerstellung und Benachrichtigungen in DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Datenprofilerstellung in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ist der Prozess des Analysierens der Daten in einer vorhandenen Datenquelle und des Anzeigens von Statistiken zu den Daten in DQS-Aktivitäten. Sie versorgt Sie mit automatischen Messungen der Datenqualität. DQS-Profilerstellung wird in DQS-Wissensverwaltung und Data Quality-Projekte integriert. Es ist dynamisch und anpassbar. Die Profilerstellung hat zwei Hauptziele: erstens, Sie durch Data Quality-Prozesse zu führen und Ihre Entscheidungen zu unterstützen, und zweitens, die Effektivität der Prozesse zu bewerten. Der DQS-Profilerstellungsprozess hat die folgenden Vorteile:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "80607824"
 ##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a> Profilerstellungsdaten bei der Aktivitätsüberwachung  
  Profil Erstellungs Informationen für die Wissens Ermittlung, abgleichsrichtlinien-, Abgleichs-und Bereinigungs Aktivitäten sind nicht nur auf den Aktivitätsseiten im Data Quality-Client verfügbar, sondern auch in der Aktivitäts Überwachung. Die Aktivitätsüberwachung stellt Ihnen eine Übersicht über aktuelle und vergangene Aktivitäten bereit. Zusätzlich zu den Eigenschaften und verknüpften Berechnungsprozessen von Aktivitäten können Sie die für jede Aktivität an einem Speicherort generierten Profilerstellungsinformationen anzeigen. Sie wählen eine Aktivität in der Aktivitätstabelle aus, um Profilerstellungsergebnisse in einer Tabelle weiter unten anzuzeigen. Sie können die Profilerstellungsergebnisse auch exportieren. Weitere Informationen finden Sie unter [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-##  <a name="notifications"></a><a name="Notifications"></a>Anbot  
+##  <a name="notifications"></a><a name="Notifications"></a> Benachrichtigungen  
  Zusätzlich zum Sammeln und Anzeigen von wichtigen Statistiken und wichtiger Metrik durch die Profilerstellung generiert DQS Benachrichtigungen (wenn aktiviert), um anzugeben, wann Sie auf Grundlage der angezeigten Profilerstellungsstatistiken eine Aktion ausführen können. DQS verwendet Benachrichtigungen, um wichtige Fakten zur Datenquelle hervorzuheben und die Effektivität der aktuellen Aktivität im Vergleich zum Zweck der Ausführung anzuzeigen. Benachrichtigungen stellen Tipps und Empfehlungen bereit, die eine Bedingung angeben und empfehlen, wie Sie eine Wissensermittlungs-, Datenbereinigungs- oder Datenabgleichsaktivität verbessern können.  
   
  Eine DQS-Benachrichtigung wird verwendet, um ein Problem auszulösen, das Sie möglicherweise interessiert, oder um ein potenzielles Problem zu behandeln. Ob Sie auf die Benachrichtigung reagieren, hängt davon ab, ob Sie für Ihre Zwecke relevant ist. Nehmen Sie zum Beispiel an, dass DQS eine Benachrichtigung ausgibt, wenn die Datenbereinigung keine korrigierten Werte oder vorgeschlagenen Werte erzeugt, während Vollständigkeit und Genauigkeit beide bei 100 % sind. Diese Benachrichtigung würde angeben, dass die Aktivität möglicherweise nicht ausgeführt werden muss. Ob Sie die Aktivität ausführen, ist jedoch Ihre Entscheidung.  

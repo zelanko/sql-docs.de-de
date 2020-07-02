@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 859eb2c829b7d6f35aa39cb2301a4a380c0d039e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db37dd8b4eed5c887cfceceb382fe57aa0d2fc33
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729628"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812445"
 ---
 # <a name="create-a-changeset-master-data-services"></a>Erstellen eines Changesets (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Ein Changeset ist eine Auflistung der ausstehenden Änderungen an den Masterdaten. Wenn für die Entität eine Genehmigung der Änderungen erforderlich ist, müssen die ausstehenden Änderungen in einem Changeset gespeichert und dann für die Genehmigung durch den Administrator übermittelt werden.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73729628"
   
 ## <a name="to-create-a-local-changeset"></a>So erstellen Sie ein lokales Changeset  
   
-1.  Wählen Sie [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] auf der Startseite das Modell und die Version aus, und klicken Sie dann auf **Explorer**.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]Wählen Sie auf der Startseite das Modell und die Version aus, und klicken Sie dann auf **Explorer**.  
   
 2.  Klicken Sie im Menü **Entitäten** auf eine Entität.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73729628"
   
 ## <a name="to-create-a-changeset-for-approval"></a>So erstellen Sie ein Changeset für die Genehmigung  
   
-1.  Wählen Sie [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] auf der Startseite das Modell und die Version aus, und klicken Sie dann auf **Explorer**.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]Wählen Sie auf der Startseite das Modell und die Version aus, und klicken Sie dann auf **Explorer**.  
   
 2.  Klicken Sie im Menü **Entitäten** auf eine Entität.  
   

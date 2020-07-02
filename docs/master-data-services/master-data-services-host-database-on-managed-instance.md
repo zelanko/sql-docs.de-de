@@ -12,16 +12,16 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8f122f6fbc746b025b0354265ff9e176845333f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84999962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812916"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hosten einer MDS-Datenbank auf einer verwalteten Instanz
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In diesem Artikel wird beschrieben, wie Sie eine MDS-Datenbank (Master Data Services) auf einer verwalteten Instanz konfigurieren.
   
@@ -228,7 +228,7 @@ Um dieses Problem zu beheben, müssen Sie die Datenbankversion aktualisieren:
 
 1. Wählen Sie **Fertig** stellen aus, nachdem alle Aufgaben abgeschlossen sind.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Master Data Services-Datenbank](../master-data-services/master-data-services-database.md)
 - [Master Data Manager-Webanwendung [Master Data Services]](../master-data-services/master-data-manager-web-application.md)

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7ea15c85d3591bf573945d06c49903ee2869aaa0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da27d391ac6f0a77f839e60b439c4b195f6a5b5a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811515"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Funktionsbereich "Explorer" (Master Data Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Im Funktionsbereich "Explorer" können Sie Daten aktualisieren und mit Hierarchien und Auflistungen arbeiten.  
   

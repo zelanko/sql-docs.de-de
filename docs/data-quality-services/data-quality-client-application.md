@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4a789386fbbef91590ec025787e47c7655753a3b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c788f20aa0b24d4058578119dc7b4bc139ded73
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812585"
 ---
 # <a name="data-quality-client-application"></a>Data Quality-Clientanwendung
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Die Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ermöglicht es Ihnen, Data Quality-Vorgänge mithilfe eines eigenständigen Tools auszuführen. Diese Anwendung ermöglicht es Ihnen, Wissensdatenbanken zu erstellen, Data Quality-Projekte zu erstellen und auszuführen sowie administrative Aufgaben auszuführen.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "75251735"
 |Inhaltsbeschreibung|Thema|  
 |-------------------------|-----------|  
 |Beschreibt die Verwendung von Wissensdatenbanken und Domänen in DQS.|[DQS-Wissensdatenbanken und -Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|Beschreibt die Bereinigung Ihrer Daten in DQS.|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
+|Beschreibt die Bereinigung Ihrer Daten in DQS.|[Datenbereinigung](../data-quality-services/data-cleansing.md)|  
 |Beschreibt das Ausführen des Abgleichs in DQS.|[Datenabgleich](../data-quality-services/data-matching.md)|  
 |Beschreibt die Verwaltung von DQS.|[DQS-Administration](../data-quality-services/dqs-administration.md)|  
   
