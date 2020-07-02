@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6559be1c680c45b75154cea222ddfece355f49cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762752"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aktualisiert die Einstellungen einer vorhandenen Warnung.  
   
@@ -84,7 +84,7 @@ sp_update_alert
 |**1**|E-Mail|  
 |**2**|Pager|  
 |**4**|**NET SEND**|  
-|**7**|All|  
+|**7**|Alle|  
   
 `[ @database_name = ] 'database'`Der Name der Datenbank, in der der Fehler auftreten muss, damit die Warnung ausgelöst wird. *Database* ist vom **Datentyp sysname.** In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
   
@@ -114,7 +114,7 @@ sp_update_alert
   
 |Format-Element|Beschreibung|  
 |--------------------|-----------------|  
-|*Element*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
+|*Item*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
 |*Vergleichs Operator*|Einer dieser Operatoren: **>** , **<** ,**=**|  
 |*Wert*|Numerischer Wert des Indikators|  
   
@@ -127,7 +127,7 @@ sp_update_alert
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Nur **sysmess** -Dateien, die in das Windows-Anwendungsprotokoll geschrieben werden, [!INCLUDE[msCoName](../../includes/msconame-md.md)] können eine Warnung auslösen.  
   
  **sp_update_alert** ändert nur die Warnungs Einstellungen, für die Parameterwerte angegeben werden. Wird ein Parameter nicht angegeben, wird die aktuelle Einstellung beibehalten.  

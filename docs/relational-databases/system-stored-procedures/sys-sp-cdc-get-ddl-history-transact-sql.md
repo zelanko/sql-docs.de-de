@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e7b22c489c7237bd9793aa590e92c1145f071b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61306f3ec3141d9e1b73f41c6b71c6b32779454a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808081"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762693"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt den Änderungsverlauf der Datendefinitionssprache (DDL, Data Definition Language), die der angegebenen Aufzeichnungsinstanz zugeordnet ist, zurück. Dabei werden alle Daten ab dem Zeitpunkt berücksichtigt, ab dem Change Data Capture für die entsprechende Aufzeichnungsinstanz aktiviert wurde. Change Data Capture ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -61,7 +61,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_lsn|**binary(10)**|Protokollfolgenummer (Log Sequence Number, LSN), die der DDL-Änderung zugeordnet wurde.|  
 |ddl_time|**datetime**|Der mit der DDL-Änderung verknüpfte Zeitpunkt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  DDL-Änderungen an der Quell Tabelle, die die Spalten Struktur der Quell Tabelle ändern, z. b. das Hinzufügen oder Löschen einer Spalte oder das Ändern des Datentyps einer vorhandenen Spalte, werden in der Tabelle [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) beibehalten. Diese Änderungen können mithilfe dieser gespeicherten Prozedur gemeldet werden. Die Einträge in cdc.ddl_history erfolgen zu dem Zeitpunkt, zu dem der Aufzeichnungsprozess die DDL-Transaktion im Protokoll vorfindet.  
   
 ## <a name="permissions"></a>Berechtigungen  

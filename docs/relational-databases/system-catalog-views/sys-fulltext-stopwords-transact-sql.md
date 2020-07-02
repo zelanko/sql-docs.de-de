@@ -23,15 +23,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa89a799711c354da1ba61b27653ad25c046200a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1123009c0bfd73b1012476d30b6d633ee038f18c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070453"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760369"
 ---
 # <a name="sysfulltext_stopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Enthält eine Zeile pro Stoppwort für alle Stopplisten in der Datenbank.  
  
@@ -39,7 +39,7 @@ ms.locfileid: "68070453"
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|ID der Stoppliste, zu der das **stopword** gehört. Diese ID ist innerhalb der Datenbank eindeutig.|  
 |**Stoppwort**|**nvarchar (64)**|Der Ausdruck, der für eine Stoppwortübereinstimmung berücksichtigt werden muss.|  
-|**Kurse**|**sysname**|Ist entweder der Wert des Alias in [sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md), der dem Wert des Gebiets Schema Bezeichners (Locale Identifier,**LCID**) entspricht, oder ist die Zeichen folgen Darstellung der numerischen LCID.|  
+|**language**|**sysname**|Ist entweder der Wert des Alias in [sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md), der dem Wert des Gebiets Schema Bezeichners (Locale Identifier,**LCID**) entspricht, oder ist die Zeichen folgen Darstellung der numerischen LCID.|  
 |**language_id**|**int**|Die für die Wörtertrennung verwendete LCID.|  
   
 ## <a name="permissions"></a>Berechtigungen  

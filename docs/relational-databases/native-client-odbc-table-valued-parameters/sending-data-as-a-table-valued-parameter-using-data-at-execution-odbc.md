@@ -13,15 +13,15 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b07341dbf3beba66ee7ad6e7cc4861142792fa0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f2df587de4be458e520f8486b1e81e00916e6df8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297830"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760685"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Senden von Daten als Tabellenwertparameter mit Data-at-Execution (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Dies ähnelt der Vorgehensweise " [alles im Arbeitsspeicher](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) ", verwendet jedoch Data-at-Execution für den Tabellenwert Parameter.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "81297830"
   
  Wenn SQLPutData für einen Tabellenwert aufgerufen wird, wird *DataPtr* für die Anzahl der verfügbaren Zeilen verwendet (in diesem Beispiel immer 1). *StrLen_or_IndPtr* muss immer 0 sein. Wenn alle Zeilen des Tabellen Werts weitergegeben wurden, wird SQLPutData mit einem *DataPtr* -Wert von 0 aufgerufen.  
   
-## <a name="prerequisite"></a>Voraussetzung  
+## <a name="prerequisite"></a>Voraussetzungen  
  In dieser Prozedur wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehl auf dem Server ausgeführt wurde:  
   
 ```sql
@@ -187,7 +187,7 @@ from @Items
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>BESCHREIBUNG  
- Dieses Beispiel zeigt, dass Sie mit ODBC TVP Zeilen Streaming, eine Zeile pro SQLPutData-Befehl, verwenden können, ähnlich wie bei der Verwendung von bcp. exe zum Laden von Daten in eine Datenbank.  
+ Dieses Beispiel zeigt, dass Sie das Zeilen Streaming, eine Zeile pro SQLPutData-Befehl, mit ODBC TVP verwenden können, ähnlich wie bei der Verwendung von BCP.exe zum Laden von Daten in eine Datenbank.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  
   
@@ -375,7 +375,7 @@ EXIT:
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>BESCHREIBUNG  
- Dieses Beispiel zeigt, dass Sie mit ODBC TVP Zeilen Streaming, mehrere Zeilen pro aufzurufenden SQLPutData-Vorgang verwenden können, ähnlich wie bei der Verwendung von bcp. exe zum Laden von Daten in eine Datenbank.  
+ Dieses Beispiel zeigt, dass Sie mit ODBC TVP Zeilen Streaming, mehrere Zeilen pro aufzurufenden SQLPutData-Vorgang verwenden können, ähnlich wie bei der Verwendung von BCP.exe zum Laden von Daten in eine Datenbank.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  
   
