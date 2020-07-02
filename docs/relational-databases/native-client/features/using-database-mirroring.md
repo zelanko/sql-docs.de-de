@@ -18,15 +18,15 @@ ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9c702d8d0508dcb64090f0b753da64019736ceb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40879f902b6d014f90e6e2493b1761018c29ce40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303212"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787838"
 ---
 # <a name="using-database-mirroring"></a>Verwenden der Datenbankspiegelung
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 > [!NOTE]  
@@ -62,7 +62,7 @@ ms.locfileid: "81303212"
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB-Anbieter  
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt die Daten Bank Spiegelung über Verbindungs-und Verbindungs Zeichen folgen Attribute. Die Eigenschaft SSPROP_INIT_FAILOVERPARTNER wurde dem DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz hinzugefügt, und das Schlüsselwort **FailoverPartner** ist ein neues Verbindungszeichenfolgen-Attribut für DBPROP_INIT_PROVIDERSTRING. Weitere Informationen finden Sie unter [Verwenden von Schlüsselwörtern für Verbindungs Zeichenfolgen mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Der Failovercache wird so lange beibehalten, wie der Anbieter geladen wird. Dies ist der Zeitpunkt, zu dem die **Initialisierung** aufgerufen wird, oder solange die Anwendung über einen Verweis auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein Objekt verfügt, das vom Native Client OLE DB-Anbieter verwaltet wird, z. b. ein Datenquellen Objekt.  
+ Der Failovercache wird so lange beibehalten, wie der Anbieter geladen wird. Dies ist der Zeitpunkt, zu dem die **Initialisierung** aufgerufen wird, oder solange die Anwendung über einen Verweis auf ein Objekt verfügt, das vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwaltet wird, z. b. ein Datenquellen Objekt.  
   
  Ausführliche Informationen zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Unterstützung von Native Client OLE DB Anbietern für die Daten Bank Spiegelung finden Sie unter [Initialisierungs-und Autorisierungs Eigenschaften](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
@@ -75,7 +75,7 @@ ms.locfileid: "81303212"
 >  Der ODBC-Treiber-Manager wurde verbessert, um die Spezifikation des Failoverservernamens zu unterstützen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Verbinden von Clients mit einer Datenbank-Spiegelungs Sitzung &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

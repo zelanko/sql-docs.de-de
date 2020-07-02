@@ -14,15 +14,15 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87470f9dc2c0bedbb3dd6fd0e45de64e256775cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55abc5e347639f50593a5efc4223713e79bd2207
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388034"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787564"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Systemanforderungen für SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Um Datenzugriffsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wie z. B. MARS, zu verwenden, muss die folgende Software installiert sein:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "81388034"
 >  Melden Sie sich vor der Installation dieser Software mit Administratorberechtigungen an.  
   
 ## <a name="operating-system-requirements"></a>Betriebssystemanforderungen  
- Eine Liste der Betriebssysteme, die native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client unterstützen, finden Sie [unter Support Policies for SQL Server Native Client](../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md).  
+ Eine Liste der Betriebssysteme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Native Client unterstützen, finden Sie [unter Support Policies for SQL Server Native Client](../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md).  
   
 ## <a name="sql-server-requirements"></a>SQL Server-Anforderungen  
  Um mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client auf Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken zugreifen zu können, muss eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert sein.  
@@ -65,14 +65,14 @@ ms.locfileid: "81388034"
   
  IDBInfo::GetKeywords wird immer eine Liste mit Schlüsselwörtern zurückgeben, die der Serverversion auf der Verbindung entspricht und nicht von **DataTypeCompatibility** beeinträchtigt wird.  
   
-|Datentyp|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC und<br /><br /> SQL Server Native Client OLE DB-Anwendungen mit DataTypeCompatibility=80|  
+|Datentyp|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC und<br /><br /> SQL Server Native Client OLE DB-Anwendungen mit DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 KB)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|Bild|  
+|varbinary(max)|varbinary|varbinary|Image|  
 |varchar(max)|varchar|varchar|Text|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |Xml|Xml|Xml|Ntext|  
-|CLR-UDT (> 8KB)|udt|varbinary|Bild|  
+|CLR-UDT (> 8KB)|udt|varbinary|Image|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  

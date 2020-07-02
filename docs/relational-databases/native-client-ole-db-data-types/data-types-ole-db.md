@@ -16,17 +16,17 @@ ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 501e73cd5db2fbf79cd84c0184161f0c6ec6a341
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2813653f46573ad0e5b1db558fbc31de50e1071d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785470"
 ---
 # <a name="data-types-ole-db"></a>Datentypen (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Um-Anweisungen auszuführen [!INCLUDE[tsql](../../includes/tsql-md.md)] und die Ergebnisse mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter zu verarbeiten, müssen Sie wissen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wie der Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB-Anbieter Datentypen OLE DB-Datentypen zuordnet, wenn Parameter oder Spalten in einem Rowset gebunden werden, und wenn die **ITableDefinition** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Schnittstelle verwendet wird, um eine Tabelle in zu erstellen.  
+  Um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen auszuführen und die Ergebnisse mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter zu verarbeiten, müssen Sie wissen, wie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anbieter Datentypen OLE DB-Datentypen zuordnet, wenn Parameter oder Spalten in einem Rowset gebunden werden, und wenn die **ITableDefinition** -Schnittstelle verwendet wird, um eine Tabelle in zu erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

@@ -18,15 +18,15 @@ ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 961e44e22ba7db89537f4505a8dec401f9fd69b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 045c1956de89a25b115c695b3c93eef60d9bba83
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787742"
 ---
 # <a name="using-catalog-functions"></a>Verwenden von Katalogfunktionen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Alle Datenbanken verfügen über eine Struktur, die die in der Datenbank gespeicherten Daten enthält. Eine Definition dieser Struktur ist zusammen mit anderen Informationen, wie beispielsweise Berechtigungen, in einem Katalog gespeichert, der als Satz Systemtabellen implementiert und auch als Datenwörterbuch bezeichnet wird.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "81303631"
   
      Gibt eine Liste der in einem Verbindungsserver enthaltenen Kataloge zurück.  
   
- Nachdem Sie einen Verbindungs Servernamen und einen Katalognamen haben, unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stützt der Native Client-ODBC-Treiber das erhalten von Informationen aus dem Katalog mithilfe eines zweiteiligen namens _linked_server_name_**.** _Katalog_ für *CatalogName* in den folgenden ODBC-Katalog Funktionen:  
+ Nachdem Sie einen Verbindungs Servernamen und einen Katalognamen haben, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt der Native Client-ODBC-Treiber das erhalten von Informationen aus dem Katalog mithilfe eines zweiteiligen namens _linked_server_name_**.** _Katalog_ für *CatalogName* in den folgenden ODBC-Katalog Funktionen:  
   
 -   **SQLColumnPrivileges**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "81303631"
   
 -   sqlncli11.dll  
   
-     Muss zur Ausführungszeit verfügbar sein. sqlncli11. dll wird mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC-Treiber von Native Client verteilt.  
+     Muss zur Ausführungszeit verfügbar sein. sqlncli11.dll wird mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC-Treiber von Native Client verteilt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client &#40;ODBC-&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   

@@ -13,15 +13,15 @@ ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a69eec3bd515ae82cf6d23fc37da9226800349ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02f7e2cc2dac68ef252074ed5971590bcf3b1ac6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785465"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   IBCPSession2::BCPSetBulkMode bietet eine Alternative zu [IBCPSession::BCPColFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) zum Angeben des Spaltenformats. Anders als bei IBCPSession::BCPColFmt, wo einzelne Spaltenformatattribute festgelegt werden, werden von IBCPSession2::BCPSetBulkMode alle Attribute festgelegt.  
   
@@ -54,7 +54,7 @@ HRESULT BCPSetBulkMode (
  cbRow  
  Die Länge in Bytes des Zeilenabschlusszeichenwerts.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  IBCPSession2::BCPSetBulkMode kann einen der folgenden Werte zurückgeben:  
   
 |||  
@@ -65,7 +65,7 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|Das Argument war ungültig.|  
 |**E_OUTOFMEMORY**|Fehler aufgrund von nicht genügend Arbeitsspeicher.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  IBCPSession2::BCPSetBulkMode kann für einen Massenkopiervorgang aus einer Abfrage oder Tabelle verwendet werden. Wenn IBCPSession2::BCPSetBulkMode zum Massenkopieren aus einer Abfrageanweisung verwendet wird, muss es vor dem Aufruf von `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` aufgerufen werden, um die Abfrageanweisung anzugeben.  
   
  Kombinieren Sie nicht in einem einzelnen Befehlstext die RPC-Aufrufsyntax mit der Batchabfragesyntax (z. B.`{rpc func};SELECT * from Tbl`).  Dies bewirkt, dass ICommandPrepare::Prepare einen Fehler zurückgibt, und verhindert das Abrufen von Metadaten. Verwenden Sie ODBC CALL-Syntax (z. B.`{call func}; SELECT * from Tbl`), wenn Sie die Ausführung gespeicherter Prozeduren und die Batchabfrage in einem einzelnen Befehlstext kombinieren müssen.  

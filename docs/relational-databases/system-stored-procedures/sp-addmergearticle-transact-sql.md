@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ba2cebf6c4b779119696f19ee78b7ce8ec1cf66
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ebb47597b5d08e0f14d37490304001811d0b33e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786275"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Fügt einer vorhandenen Mergeveröffentlichung einen Artikel hinzu. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -81,7 +81,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`Der Typ des Artikels. *Type ist vom Datentyp* **vom Datentyp sysname**. der Standardwert ist **Table**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Tabelle** (Standard)|Tabelle mit Schema und Daten. Die Replikation überwacht die Tabelle, um die zu replizierenden Daten zu ermitteln.|  
 |**func schema only**|Funktion vom Typ schema only.|  
@@ -101,9 +101,9 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`Gibt an, was das System tun soll, wenn die Tabelle beim Anwenden der Momentaufnahme auf dem Abonnenten vorhanden ist. *pre_creation_cmd* ist vom Datentyp **nvarchar (10)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Keine**|Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.|  
+|**keine**|Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.|  
 |**delete**|Ein Löschvorgang wird auf der Grundlage der WHERE-Klausel im Teilmengenfilter ausgegeben.|  
 |**Drop** (Standard)|Die Tabelle wird vor dem erneuten Erstellen gelöscht. Erforderlich zur Unterstützung von- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten.|  
 |**TRUNCATE**|Schneidet die Zieltabelle ab.|  
@@ -115,7 +115,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option`Ist eine Bitmap der Schema Generierungs Option für den angegebenen Artikel. *schema_option* ist **Binär (8)** und kann das [| (Bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt mindestens eines der folgenden Werte.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0x00**|Deaktiviert die Skripterstellung durch den Momentaufnahmen-Agent und verwendet das in *creation_script*definierte Skript für die vorab Erstellung von Schemas.|  
 |**0x01**|Generiert die Objekterstellung (CREATE TABLE, CREATE PROCEDURE usw.). Dieser Wert ist der Standardwert für alle Artikel mit gespeicherten Prozeduren.|  
@@ -212,7 +212,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions`Ist eine Bitmap der Berechtigungen auf Tabellenebene, die überprüft werden, wenn die Merge-Agent Änderungen auf den Verleger anwendet. Wenn der vom Mergeprozess verwendete Benutzername bzw. das Benutzerkonto auf dem Verleger nicht über die entsprechenden Tabellenberechtigungen verfügt, werden die ungültigen Änderungen als Konflikte protokolliert. *check_permissions* ist vom Datentyp **int**und kann das [| (Bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt mindestens eines der folgenden Werte.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0x00** (Standard)|Berechtigungen werden nicht überprüft.|  
 |**0x10**|Überprüft Berechtigungen auf dem Verleger, bevor auf einem Abonnenten ausgeführte Einfügevorgänge hochgeladen werden können.|  
@@ -280,9 +280,9 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`Gibt an, wie die Identitäts Bereichs Verwaltung für den Artikel behandelt wird. die *identityrangemanagementoption* ist vom Datentyp **nvarchar (10)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Keine**|Deaktiviert die Verwaltung des Identitätsbereichs.|  
+|**keine**|Deaktiviert die Verwaltung des Identitätsbereichs.|  
 |**Manuell**|Markiert die Identitätsspalte mithilfe von NOT FOR REPLICATION, um die manuelle Identitätsbereichsverwaltung zu ermöglichen.|  
 |**auto**|Gibt die automatisierte Verwaltung von Identitätsbereichen an.|  
 |NULL (Standard)|Der Standardwert ist **None**, wenn der Wert von *auto_identity_range* nicht **true**ist.|  

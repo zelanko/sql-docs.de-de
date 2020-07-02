@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d3800388f5c47d575f649ea83c05830fbe77fbc8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6a033243b552495734a9a3cc9aad69e0518d2c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786060"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Enabled-Eigenschaft (ServerNetworkProtocolIpAddress-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Ruft die boolesche Eigenschaft ab, die angibt, ob eine IP-Adresse aktiviert ist.  
   
 ## <a name="syntax"></a>Syntax  

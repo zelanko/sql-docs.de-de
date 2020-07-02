@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f2f0888daf214e91127e8caed3c3bbb04424f0a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f8f07a38d612375030f43e2faf2194d4bc65bca8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817140"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786126"
 ---
 # <a name="sp_replmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Gibt Informationen zur Anzahl der ausstehenden Befehle für ein Abonnement einer Transaktionsveröffentlichung zurück sowie eine grobe Schätzung, wie viel Zeit ihre Verarbeitung in Anspruch nimmt. Die gespeicherte Prozedur gibt eine Zeile für jedes zurückgegebene Abonnement zurück. Diese gespeicherte Prozedur, die zur Überwachung der Replikation verwendet wird, wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
   
@@ -55,7 +55,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
   
 `[ @subscription_type = ] subscription_type`Gibt an, ob der Abonnementtyp ist. *publication_type* ist vom Datentyp **int**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Pushabonnement|  
 |**1**|Pull-Abonnement|  
@@ -70,7 +70,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_replmonitorsubscriptionpendingcmds** wird bei der Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -14,19 +14,19 @@ ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54fe59caad74c856ef7a548fb54433f66c216a2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bfabd9ad0a5ff9e59e8e7f91f1fc9709abef17f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787901"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Unterstützung für Spalten mit geringer Dichte in SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt Sparsespalten. Weitere Informationen zu Sparsespalten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../../relational-databases/tables/use-sparse-columns.md) und [Verwenden von Spaltensätzen](../../../relational-databases/tables/use-column-sets.md).  
   
- Weitere Informationen zur Unterstützung für sparsespalten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client finden Sie unter Unterstützung für [sparsespalten &#40;ODBC-&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) und [&#41;OLE DB &#40;Unterstützung für sparsespalten ](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)  
+ Weitere Informationen zur Unterstützung für sparsespalten in Native Client finden Sie unter Unterstützung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [sparsespalten &#40;ODBC-&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) und [&#41;OLE DB &#40;unter ](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)Stützung für sparsespalten  
   
  Informationen zu Beispielanwendungen, die diese Funktion veranschaulichen, finden Sie unter [Programmierbeispiele für SQL Server-Daten](https://msftdpprodsamples.codeplex.com/).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "81388459"
 |**queryout**-Verhalten für BCP.|Keine Änderung in der Behandlung explizit benannter Spalten im Vergleich zu vorherigen Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.<br /><br /> In Szenarien, die das Importieren und Exportieren zwischen Tabellen mit unterschiedlichen Schemas umfassen, ist möglicherweise eine besondere Behandlung erforderlich.<br /><br /> Weitere Informationen über BCP finden Sie unter „Massenkopierunterstützung (BCP) für Spalten mit geringer Dichte” weiter unten in diesem Thema.|  
   
 ## <a name="down-level-client-behavior"></a>Downlevelclient-Verhalten  
- Downlevelclients geben Metadaten nur für Spalten zurück, die nicht Elemente der Sparsespalte **column_set** für SQLColumns und DBSCHMA_COLUMNS sind. Die zusätzlichen OLE DB Schemarowsets, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] die in Native Client eingeführt werden, sind nicht verfügbar, und die Änderungen an SQLColumns in ODBC über SQL_SOPT_SS_NAME_SCOPE.  
+ Downlevelclients geben Metadaten nur für Spalten zurück, die nicht Elemente der Sparsespalte **column_set** für SQLColumns und DBSCHMA_COLUMNS sind. Die zusätzlichen OLE DB Schemarowsets, die in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client eingeführt werden, sind nicht verfügbar, und die Änderungen an SQLColumns in ODBC über SQL_SOPT_SS_NAME_SCOPE.  
   
  Downlevelclients können auf Spalten, die Elemente der Sparsespalte **column_set** sind, über den Namen zugreifen. Auf die Spalte **column_set** kann als XML-Spalte für [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]-Clients zugegriffen werden.  
   

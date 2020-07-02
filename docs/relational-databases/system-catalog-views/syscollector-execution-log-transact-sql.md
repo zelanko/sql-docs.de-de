@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48c4bc9a4d7cbcb01839bc37b1f74819252c3ea9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f824085977135eba54bc04679e3cd8fd82d58644
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790502"
 ---
 # <a name="syscollector_execution_log-transact-sql"></a>syscollector_execution_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Stellt Informationen aus dem Ausführungsprotokoll für einen Sammlungssatz oder ein Paket bereit.   
   
@@ -39,8 +39,8 @@ ms.locfileid: "82824928"
 |start_time|**datetime**|Die Startzeit für den Sammlungssatz oder das Paket. Lässt keine NULL-Werte zu.|  
 |last_iteration_time|**datetime**|Für kontinuierlich ausgeführte Pakete der letzte Zeitpunkt, zu dem das Paket eine Momentaufnahme aufgezeichnet hat. Lässt NULL-Werte zu.|  
 |finish_time|**datetime**|Der Zeitpunkt, zu dem der Testlauf für abgeschlossene Pakete und Sammlungssätze beendet wurde. Lässt NULL-Werte zu.|  
-|runtime_execution_mode|**smallint**|Gibt an, ob die Sammlungs Satz Aktivität Daten gesammelt oder Daten hochgeladen hat. Lässt NULL-Werte zu.<br /><br /> Werte:<br /><br /> 0 = Sammlung<br /><br /> 1 = Upload|  
-|status|**smallint**|Gibt den aktuellen Status des Sammlungssatzes oder des Pakets an. Lässt keine NULL-Werte zu.<br /><br /> Werte:<br /><br /> 0 = Wird ausgeführt<br /><br /> 1 = Beendet<br /><br /> 2 = fehlgeschlagen|  
+|runtime_execution_mode|**smallint**|Gibt an, ob die Sammlungs Satz Aktivität Daten gesammelt oder Daten hochgeladen hat. Lässt NULL-Werte zu.<br /><br /> Gültige Werte:<br /><br /> 0 = Sammlung<br /><br /> 1 = Upload|  
+|status|**smallint**|Gibt den aktuellen Status des Sammlungssatzes oder des Pakets an. Lässt keine NULL-Werte zu.<br /><br /> Gültige Werte:<br /><br /> 0 = Wird ausgeführt<br /><br /> 1 = Beendet<br /><br /> 2 = fehlgeschlagen|  
 |Operator|**nvarchar(128)**|Gibt an, wer den Sammlungssatz oder das Paket gestartet hat. Lässt keine NULL-Werte zu.|  
 |package_id|**uniqueidentifier**|Gibt den Sammlungssatz oder das Paket an, der bzw. das das Protokoll generiert hat. Lässt NULL-Werte zu.|  
 |package_name|**nvarchar(4000)**|Der Name des Pakets, von dem dieses Protokoll generiert wurde. Lässt NULL-Werte zu.|  

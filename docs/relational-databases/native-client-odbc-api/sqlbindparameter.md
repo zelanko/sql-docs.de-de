@@ -14,17 +14,17 @@ ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74122d531eba1f714e16c168838ee1653a8f1293
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc270cb83833e3fcfc54ef4721a62ccaf3980729
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302681"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789431"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  **SQLBindParameter** kann die Last der Datenkonvertierung eliminieren, wenn Sie zum Bereitstellen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten für den Native Client-ODBC-Treiber verwendet wird. Dies führt zu erheblichen Leistungssteigerungen für die Client-und Serverkomponenten von Anwendungen. Zu den weiteren Vorteilen gehören geringere Verluste der Genauigkeit, wenn ungefähre numerische Datentypen eingefügt oder aktualisiert werden.  
+  **SQLBindParameter** kann die Last der Datenkonvertierung eliminieren, wenn Sie zum Bereitstellen von Daten für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verwendet wird. Dies führt zu erheblichen Leistungssteigerungen für die Client-und Serverkomponenten von Anwendungen. Zu den weiteren Vorteilen gehören geringere Verluste der Genauigkeit, wenn ungefähre numerische Datentypen eingefügt oder aktualisiert werden.  
   
 > [!NOTE]  
 >  Wenn Sie **char** -und **WCHAR** -Typdaten in eine Image-Spalte einfügen, wird die Größe der Daten, die in der Spalte übermittelt werden, anstelle der Größe der Daten nach der Konvertierung in ein binäres Format verwendet.  
@@ -33,7 +33,7 @@ ms.locfileid: "81302681"
   
  Wenn Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Native Client-ODBC-Treiber verwenden, geben Sie SQL_PARAM_INPUT an, wenn Eingabeparameter gebunden werden. Geben Sie nur SQL_PARAM_OUTPUT oder SQL_PARAM_INPUT_OUTPUT an, wenn mit dem OUTPUT-Schlüsselwort definierte gespeicherte Prozedurparameter gebunden werden.  
   
- [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) ist mit dem Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client-ODBC-Treiber unzuverlässig, wenn ein Array Element eines gebundenen Parameter Arrays einen Fehler bei der Ausführung der Anweisung verursacht. Das ODBC-Anweisungsattribut SQL_ATTR_PARAMS_PROCESSED_PTR meldet die Anzahl von Zeilen, die vor dem Auftreten des Fehler verarbeitet wurden. Die Anwendung kann dann das Parameterstatusarray durchlaufen, um ggf. die Anzahl erfolgreich verarbeiteter Anweisungen zu ermitteln.  
+ [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) ist mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unzuverlässig, wenn ein Array Element eines gebundenen Parameter Arrays einen Fehler bei der Ausführung der Anweisung verursacht. Das ODBC-Anweisungsattribut SQL_ATTR_PARAMS_PROCESSED_PTR meldet die Anzahl von Zeilen, die vor dem Auftreten des Fehler verarbeitet wurden. Die Anwendung kann dann das Parameterstatusarray durchlaufen, um ggf. die Anzahl erfolgreich verarbeiteter Anweisungen zu ermitteln.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>Binden von Parametern für SQL-Zeichentypen  
  Wenn es sich bei dem in der Übergabe des SQL-Datentyps um einen Zeichentyp handelt, ist *ColumnSize* die Größe in Zeichen (nicht Bytes). Wenn die Länge der Daten Zeichenfolge in Bytes größer als 8000 ist, sollte *ColumnSize* auf **SQL_SS_LENGTH_UNLIMITED**festgelegt werden, was bedeutet, dass die Größe des SQL-Typs nicht begrenzt ist.  

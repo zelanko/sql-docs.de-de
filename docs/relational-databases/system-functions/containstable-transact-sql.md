@@ -33,15 +33,15 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1e4af8a90a4f83d8200f02910f3e445b49fca91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3107dbb5771731fd15bb1432b2a180af612c86fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983213"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790447"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt eine Tabelle mit keiner, einer oder mehreren Zeilen für die Spalten zurück, die genaue oder ungenaue (Fuzzy) Übereinstimmungen mit einzelnen Wörtern und Ausdrücken, die Nähe von Wörtern in einer bestimmten Entfernung untereinander oder gewichtete Übereinstimmungen enthalten. CONTAINSTABLE wird in der [from-Klausel](../../t-sql/queries/from-transact-sql.md) einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung verwendet, und es wird darauf verwiesen, als ob es sich um einen regulären Tabellennamen handelt. Es wird eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuche für volltextindizierte Spalten mit zeichenbasierten Datentypen durchgeführt.  
   
@@ -132,9 +132,9 @@ CONTAINSTABLE
   
  Wenn Dokumente anderer Sprachen zusammen als BLOBs (Binary Large Objects) in einer einzelnen Spalte gespeichert werden, legt der Gebietsschemabezeichner (LCID) eines bestimmten Dokuments die zur Indizierung seines Inhalts zu verwendende Sprache fest. Beim Abfragen einer solchen Spalte kann die Angabe von *LANGUAGE**language_term* die Wahrscheinlichkeit einer hohen Übereinstimmung steigern.  
   
- Bei Angabe als Zeichenfolge entspricht *language_term* dem **Alias** Spaltenwert in der [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) -Kompatibilitäts Sicht.  Die Zeichenfolge muss in einfache Anführungszeichen gesetzt werden, z.B. '*language_term*'. In Form einer ganzen Zahl ist *language_term* der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. In Form eines Hexadezimalwerts ist *language_term* gleich 0x, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
+ Wenn die Angabe als Zeichenfolge festgelegt ist, entspricht *language_term* dem Wert der **Alias** Spalte in der Kompatibilitäts Ansicht [sys.sysSprachen](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  Die Zeichenfolge muss in einfache Anführungszeichen gesetzt werden, z.B. '*language_term*'. In Form einer ganzen Zahl ist *language_term* der eigentliche Gebietsschemabezeichner, der die Sprache identifiziert. In Form eines Hexadezimalwerts ist *language_term* gleich 0x, gefolgt vom Hexadezimalwert des Gebietsschemabezeichners. Der Hexadezimalwert darf acht Ziffern nicht überschreiten, einschließlich führender Nullen.  
   
- Wenn der Wert im DBCS-Format (Double-Byte Character Set, Doppel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Byte-Zeichensatz) vorliegt, wird er von in Unicode konvertiert.  
+ Wenn der Wert im DBCS-Format (Double-Byte Character Set, Doppelbyte-Zeichensatz) vorliegt, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird er von in Unicode konvertiert.  
   
  Ist die angegebene Sprache ungültig oder sind keine Ressourcen installiert, die dieser Sprache entsprechen, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück. Geben Sie 0x0 als *language_term* an, um neutrale Sprachressourcen zu verwenden.  
   
@@ -144,7 +144,7 @@ CONTAINSTABLE
  <contains_search_condition>  
  Gibt den Suchtext in *column_name* und die Bedingungen für eine Übereinstimmung an. Weitere Informationen zu Suchbedingungen finden Sie unter [enthält &#40;Transact-SQL-&#41;](../../t-sql/queries/contains-transact-sql.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Volltextprädikate und -funktionen gelten für eine einzelne Tabelle, die im FROM-Prädikat enthalten ist. Um eine Suche in mehreren Tabellen auszuführen, können Sie eine verknüpfte Tabelle in der FROM-Klausel verwenden, um in einem Resultset zu suchen, das aus mindestens zwei Tabellen erstellt wird.  
   
  Die zurückgegebene Tabelle verfügt über eine Spalte mit dem Namen **Key** , die voll Text Schlüsselwerte enthält. Jede voll Text indizierte Tabelle verfügt über eine Spalte, deren Werte garantiert eindeutig sind, und die Werte, die in der **Schlüssel** Spalte zurückgegeben werden, sind die voll Text Schlüsselwerte der Zeilen, die mit den Auswahlkriterien übereinstimmen, die in der Such Bedingung "enthält" angegeben sind. Die **TableFulltextKeyColumn** -Eigenschaft, die von der OBJECTPROPERTYEX-Funktion abgerufen wird, stellt die Identität dieser eindeutigen Schlüssel Spalte bereit. Zum Abrufen der ID der Spalte, die dem voll Text Schlüssel des voll Text Indexes zugeordnet ist, verwenden Sie **sys. fulltext_indexes**. Weitere Informationen finden Sie unter [sys. fulltext_indexes &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
@@ -232,7 +232,7 @@ GO
 > [!NOTE]  
 >  Wenn eine Volltextabfrage keine ganze Zahl als maximalen Abstand angibt, entspricht ein Dokument, das nur Treffer enthält, deren Abstand größer als 100 logische Begriffe ist, die NEAR-Anforderungen nicht, und der Rang ist 0.  
   
-### <a name="d-returning-top-5-ranked-results-using-top_n_by_rank"></a>D. Zurückgeben der obersten 5 Ergebnisse mithilfe von top_n_by_rank  
+### <a name="d-returning-top-5-ranked-results-using-top_n_by_rank"></a>D: Zurückgeben der obersten 5 Ergebnisse mithilfe von top_n_by_rank  
  Im folgenden Beispiel wird die Beschreibung der ersten 5 Produkte zurückgegeben, bei denen die `Description`-Spalte das Wort "aluminium" in der Nähe des Worts "light" oder "lightweight" enthält.  
   
 ```  

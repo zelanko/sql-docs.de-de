@@ -1,5 +1,5 @@
 ---
-title: sys. sysindexes (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sysIndizes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8ae519a06d98c3c70cdd01064c220e5f2e4ed424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053444"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786326"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jeden Index und jede Tabelle in der aktuellen Datenbank. XML-Indizes werden in dieser Sicht nicht unterstützt. Partitionierte Tabellen und Indizes werden in dieser Sicht nicht vollständig unterstützt. Verwenden Sie stattdessen die [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalogsicht.  
   
@@ -63,11 +63,11 @@ ms.locfileid: "68053444"
 |**pgmodctr**|**int**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**or**|**varbinary(816)**|Liste der Spalten-IDs der Spalten, aus denen der Indexschlüssel besteht.<br /><br /> Gibt NULL zurück.<br /><br /> Verwenden Sie zum Anzeigen der Indexschlüsselspalten [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
 |**name**|**sysname**|Name des Indexes oder der Statistik. Gibt NULL zurück, wenn **indid** = 0. Ändern Sie die Anwendung so, dass nach einem Heapnamen mit dem Wert NULL gesucht wird.|  
-|**statblob**|**image**|Statistik-BLOB (Binary Large Object).<br /><br /> Gibt NULL zurück.|  
+|**statblob**|**Bild**|Statistik-BLOB (Binary Large Object).<br /><br /> Gibt NULL zurück.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Streitigkeiten**|**int**|Zeilen Anzahl auf Datenebene, basierend auf **indid** = 0 und **indid** = 1, und der Wert wird für **indid** >1 wiederholt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Als reserviert definierte Spalten sollten nicht verwendet werden.  
   
  Die Spalten **dpages**, **reserved**und **used** geben keine genauen Ergebnisse zurück, wenn die Tabelle bzw. der Index Daten in der ROW_OVERFLOW-Zuordnungseinheit enthält. Zudem werden die Seitenanzahlen aller Indizes separat nachverfolgt und nicht für die Basistabelle aggregiert. Verwenden Sie zum Anzeigen der Seitenanzahlen die Katalogsichten [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) oder [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) oder die dynamische Verwaltungssicht [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) .  

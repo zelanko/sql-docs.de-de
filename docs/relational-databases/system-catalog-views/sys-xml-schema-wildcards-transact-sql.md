@@ -1,5 +1,5 @@
 ---
-title: sys. xml_schema_wildcards (Transact-SQL) | Microsoft-Dokumentation
+title: sys.xml_schema_wildcards (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,24 +19,24 @@ helpviewer_keywords:
 ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7687acb160e872fbe85dc7789115a14e14e875f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3c73cdf4cbc1c366f3266dd81883f428897ee928
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787055"
 ---
 # <a name="sysxml_schema_wildcards-transact-sql"></a>sys.xml_schema_wildcards (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Zeile pro XML-Schema Komponente zurück, bei der es sich um einen Attribut Platzhalter (**Art** **V**) oder um einen Element Platzhalter (**Art** von **W**) handelt, beides mit **symbol_space** **N**.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**\<geerbte Spalten>**||Erbt Spalten von [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**\<inherited columns>**||Erbt Spalten von [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**process_content**|**char (1)**|Gibt an, wie Inhalt verarbeitet wird.<br /><br /> S = Strenge Überprüfung (muss überprüft werden)<br /><br /> L = Weniger strenge Überprüfung (Überprüfung falls möglich)<br /><br /> P = Überprüfung überspringen|  
 |**process_content_desc**|**nvarchar(60)**|Beschreibung der Art, wie Inhalt verarbeitet wird:<br /><br /> **STRICT_VALIDATION**<br /><br /> **LAX_VALIDATION**<br /><br /> **SKIP_VALIDATION**|  
-|**disallow_namespaces**|**bit**|0 = Namespaces, die in [sys. xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md) aufgelistet sind, sind die einzigen zulässigen Namespaces.<br /><br /> 1 = Namespaces sind als einzige nicht zulässig.|  
+|**disallow_namespaces**|**bit**|0 = Namespaces, die in [sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md) aufgelistet sind, sind die einzigen zulässig.<br /><br /> 1 = Namespaces sind als einzige nicht zulässig.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -20,20 +20,20 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 719f7ea686f1a93842d837c002ef2bca4a8c7a78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 047e6d6f9f6e7c0405eab27655ee9e2d97e1236b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787132"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL-Datenbank)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Enthält Statistiken für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Datenbankverbindungs-Ereignisse und bietet einen Überblick über erfolgreiche und fehlgeschlagene Datenbankverbindungen. **connectivity** Weitere Informationen zu konnektivitätsereignissen finden Sie unter Ereignis Typen in [sys. event_log &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Statistik|type|Beschreibung|  
+|Statistik|Typ|BESCHREIBUNG|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Der Name der Datenbank.|  
 |**start_time**|**datetime2**|UTC-Datum und -Zeit des Beginns des Aggregationsintervalls. Die Uhrzeit ist immer ein Vielfaches von 5 Minuten. Beispiel:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -44,7 +44,7 @@ ms.locfileid: "82828524"
 |**terminated_connection_count**|**int**|**_Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Anzahl beendeter Verbindungen.|  
 |**throttled_connection_count**|**int**|**_Gilt nur für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Anzahl gedrosselter Verbindungen.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ### <a name="event-aggregation"></a>Ereignisaggregation
 

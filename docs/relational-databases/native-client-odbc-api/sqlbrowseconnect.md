@@ -14,28 +14,28 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a2b6d1b5bdc722a362c5ed67bff611602a860e2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c1bdf37018f75e1683fa0879ce4e25872efe20c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302651"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789420"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **Sqlbrowseconnetct** verwendet Schlüsselwörter, die in drei Ebenen von Verbindungsinformationen kategorisiert werden können. In der folgenden Tabelle wird für jedes Schlüsselwort angegeben, ob eine Liste gültiger Werte zurückgegeben wird und ob das Schlüsselwort optional ist.  
   
 ## <a name="level-1"></a>Ebene 1  
   
-|Stichwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
+|Schlüsselwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|–|Nein|Der Name der von **SQLDataSources**zurückgegebenen Datenquelle. Das DSN-Schlüsselwort kann nicht verwendet werden, wenn das DRIVER-Schlüsselwort verwendet wird.|  
-|DRIVER|–|Nein|Der Name [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des ODBC-Treibers für Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ® Native Client lautet {Native Client 11}. Das DRIVER-Schlüsselwort kann nicht verwendet werden, wenn das DSN-Schlüsselwort verwendet wird.|  
+|DRIVER|–|Nein|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Name des ODBC-Treibers für Microsoft® Native Client lautet { [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Das DRIVER-Schlüsselwort kann nicht verwendet werden, wenn das DSN-Schlüsselwort verwendet wird.|  
   
 ## <a name="level-2"></a>Ebene 2  
   
-|Stichwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
+|Schlüsselwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|Ja|Nein |Name des Servers in dem Netzwerk, auf dem die Datenquelle gespeichert ist. Für den Server kann der Begriff "(local)" eingegeben werden. In diesem Fall kann eine lokale Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, auch wenn dies keine vernetzte Version ist.|  
 |UID|Nein|Ja|Benutzeranmelde-ID.|  
@@ -45,7 +45,7 @@ ms.locfileid: "81302651"
   
 ## <a name="level-3"></a>Level 3  
   
-|Stichwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
+|Schlüsselwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|Ja|Ja|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |LANGUAGE|Ja|Ja|Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Landessprache.|  
@@ -61,7 +61,7 @@ ms.locfileid: "81302651"
 |SQL_COPT_SS_BROWSE_CACHE_DATA|Wenn die Pufferlänge nicht groß genug ist, um das Ergebnis aufzunehmen, können Sie das Attribut SQL_COPT_SS_BROWSE_CACHE_DATA auf SQL_CACHE_DATA_YES festlegen und Daten in Abschnitten abrufen. Diese Länge wird im BufferLength-Argument für sqlbrowseconnetct angegeben.<br /><br /> Wenn weitere Daten verfügbar sind, wird SQL_NEED_DATA zurückgegeben. Wenn keine weiteren Daten abrufbar sind, wird SQL_SUCCESS zurückgegeben.<br /><br /> Der Standardwert ist SQL_CACHE_DATA_NO.|  
   
 ## <a name="sqlbrowseconnect-support-for-high-availability-disaster-recovery"></a>SQLBrowseConnect-Unterstützung für hohe Verfügbarkeit, Wiederherstellung im Notfall  
- Weitere Informationen zur Verwendung von **sqlbrowseconnetct** für die Verbindung mit [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] einem-Cluster finden Sie [unter SQL Server Native Client-Unterstützung für hohe Verfügbarkeit und Notfall Wiederherstellung](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Weitere Informationen zur Verwendung von **sqlbrowseconnetct** für die Verbindung mit einem- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] Cluster finden Sie [unter SQL Server Native Client-Unterstützung für hohe Verfügbarkeit und Notfall Wiederherstellung](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="sqlbrowseconnect-support-for-service-principal-names-spns"></a>SQLBrowseConnect-Unterstützung für Dienstprinzipalnamen (Service Principal Names, SPNs)  
  Wenn eine Verbindung hergestellt wird, legt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für SQL_COPT_SS_MUTUALLY_AUTHENTICATED und SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD die für das Herstellen der Verbindung zu verwendende Authentifizierungsmethode fest.  

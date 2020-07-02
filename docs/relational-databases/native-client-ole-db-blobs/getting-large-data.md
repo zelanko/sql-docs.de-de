@@ -16,15 +16,15 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ba1762bdc54c5ffe3e3879d21edd5e48c096f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4927ffc7ded9a291e5910cd359cb59edea0bf3bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303621"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785562"
 ---
 # <a name="getting-large-data"></a>Abrufen großer Datenmengen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Im Allgemeinen sollten Consumer Code isolieren, der ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Speicher Objekt des Anbieters aus anderem Code erstellt, der Daten verarbeitet, auf die nicht über einen **ISequentialStream** -Schnittstellen Zeiger verwiesen wird.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81303621"
   
  Wenn die DBPROP_ACCESSORDER-Eigenschaft (in der Rowset-Eigenschaften Gruppe) auf einen der Werte DBPROPVAL_AO_SEQUENTIAL oder DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS festgelegt ist, sollte der Consumer nur eine einzelne Daten Zeile in einem Aufrufen der **GetNextRows** -Methode abrufen, da die BLOB-Daten nicht gepuffert werden. Ist der Wert von DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM festgelegt, kann der Consumer mehrere Datenzeilen mit **GetNextRows** abrufen.  
   
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ruft große Daten von erst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab, wenn er vom Consumer dazu aufgefordert wird. Der Consumer sollte alle kleinen Datenmengen in einem Accessor zusammenfassen und dann einen oder mehrere Accessoren zum Abrufen großer Datenwerte verwenden.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ruft große Daten von erst ab, wenn er [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Consumer dazu aufgefordert wird. Der Consumer sollte alle kleinen Datenmengen in einem Accessor zusammenfassen und dann einen oder mehrere Accessoren zum Abrufen großer Datenwerte verwenden.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird ein großer Datenwert aus einer einzelnen Spalte abgerufen:  

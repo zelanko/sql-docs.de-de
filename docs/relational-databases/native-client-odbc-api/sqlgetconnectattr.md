@@ -14,15 +14,15 @@ ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 590d47d65ab3893dbc9eefc3facd224671668378
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b09c9edcd684135e4cd72d0e09407c12c9cbfd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302148"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789207"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber definiert treiberspezifische Verbindungsattribute. Einige der Attribute sind für **SQLGetConnectAttr**verfügbar, und die-Funktion wird verwendet, um Ihre aktuellen Einstellungen zu melden. Die für diese Attribute gemeldeten Werte werden erst nach dem Herstellen einer Verbindung oder dem Festlegen des Attributs mithilfe von [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)sichergestellt.  
   

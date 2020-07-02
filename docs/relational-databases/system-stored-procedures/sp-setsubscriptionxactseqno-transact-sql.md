@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60d27260378a8f0d6706b85ea02232ffca6a05c8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8cce1f1fd046d2b93f41f010b82a067c5a936670
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790357"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Wird während der Problembehandlung verwendet, um die zuletzt übermittelte Transaktion mithilfe der Protokoll Folge Nummer (Log Sequence Number, LSN) anzugeben, sodass die Verteilungs-Agent die Übermittlung bei der nächsten Transaktion beginnen kann. Beim Neustart gibt das Verteilungs-Agent Transaktionen zurück, die größer sind als dieses Wasserzeichen (LSN) aus dem Cache der Verteilungs Datenbank (MSrepl_commands). Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt. Wird nicht für Nicht-SQL Server-Abonnenten unterstützt.  
   
@@ -62,7 +62,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_setsubscriptionxactseqno** wird bei der Transaktions Replikation verwendet.  
   
  **sp_setsubscriptionxactseqno** kann nicht in einer Peer-zu-Peer-Transaktions Replikations Topologie verwendet werden.  
@@ -78,6 +78,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_setsubscriptionxactseqno**ausführen.  
   
-## <a name="see-more"></a>Mehr anzeigen
+## <a name="see-more"></a>Weitere Informationen
 
 [Blog: Überspringen einer Transaktion](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

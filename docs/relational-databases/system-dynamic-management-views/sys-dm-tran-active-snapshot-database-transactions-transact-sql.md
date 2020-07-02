@@ -20,15 +20,15 @@ ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42ed4cebfda43801cdbc3ab42225783c674612e0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4dd4273074d543c97161ce0fdca9b585bb1a6d5c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790507"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz gibt diese dynamische Verwaltungssicht eine virtuelle Tabelle für alle aktiven Transaktionen zurück, die Zeilenversionen generieren oder potenziell auf sie zugreifen. Transaktionen für mindestens eine der folgenden Bedingungen sind enthalten:  
   
@@ -76,7 +76,7 @@ sys.dm_tran_active_snapshot_database_transactions
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sys. dm_tran_active_snapshot_database_transactions** meldet Transaktionen, denen eine Transaktions Sequenznummer (XSN) zugewiesen ist. Die XSN wird zugewiesen, wenn die Transaktion zum ersten Mal auf den Versionsspeicher zugreift. In den folgenden Beispielen wird gezeigt, wann in einer Datenbank, die für die Momentaufnahmeisolation oder die READ COMMITTED-Isolation aktiviert ist, die die Zeilenversionsverwaltung verwendet, einer Transaktion eine XSN zugewiesen wird:  
   
 -   Wenn eine Transaktion unter der serialisierbaren Isolationsstufe ausgeführt wird, wird eine XSN zugewiesen, wenn die Transaktion zum ersten Mal eine Anweisung ausführt, die die Erstellung einer Zeilenversion verursacht, z. B. einen UPDATE-Vorgang.  

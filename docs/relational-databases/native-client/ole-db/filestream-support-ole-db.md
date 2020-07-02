@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da09fc65de4be75798730fd0cc9785204a0c6917
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48202e2a4dea8447d02e093f731915cbf3ab6ee4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787728"
 ---
 # <a name="filestream-support-ole-db"></a>FILESTREAM-Unterstützung (OLE DB)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
-  Ab [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] und Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client 10,0 unterstützt OLE DB die erweiterte FILESTREAM-Funktion. Weitere Informationen zu dieser Funktion finden Sie [unter FILESTREAM-Unterstützung](../../../relational-databases/native-client/features/filestream-support.md). Beispiele finden Sie unter [FILESTREAM und OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md).  
+  Ab [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10,0 unterstützt OLE DB die erweiterte FILESTREAM-Funktion. Weitere Informationen zu dieser Funktion finden Sie [unter FILESTREAM-Unterstützung](../../../relational-databases/native-client/features/filestream-support.md). Beispiele finden Sie unter [FILESTREAM und OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md).  
   
  Eine Anwendung verwendet **DBTYPE_IUNKNOWN** in Parameter- und Ergebnisbindungen, um **varbinary(max)**-Werte zu senden und zu empfangen, die größer als 2 GB sind. Der Anbieter muss für Parameter IUnknown::QueryInterface für ISequentialStream und für Ergebnisse abrufen, die ISequentialStream zurückgeben.  
   

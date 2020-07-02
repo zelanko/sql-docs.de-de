@@ -14,17 +14,17 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6113316f3be68ca03b5c107ed54965577b6963c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b539e532d6de43bf646652a1d4845eaf38d8bd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302625"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789388"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Sie können **SQLColAttribute** verwenden, um ein Attribut einer Resultsetspalte für vorbereitete oder ausgeführte ODBC-Anweisungen abzurufen. Das Aufrufen von **SQLColAttribute** für vorbereitete-Anweisungen verursacht einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Roundtrip zu. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber empfängt im Rahmen der Anweisungs Ausführung Spaltendaten im Resultset, sodass das Aufrufen von **SQLColAttribute** nach dem Abschluss von **SQLExecute** oder **SQLExecDirect** keinen Serverroundtrip umfasst.  
+  Sie können **SQLColAttribute** verwenden, um ein Attribut einer Resultsetspalte für vorbereitete oder ausgeführte ODBC-Anweisungen abzurufen. Das Aufrufen von **SQLColAttribute** für vorbereitete-Anweisungen verursacht einen Roundtrip zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber empfängt im Rahmen der Anweisungs Ausführung Spaltendaten im Resultset, sodass das Aufrufen von **SQLColAttribute** nach dem Abschluss von **SQLExecute** oder **SQLExecDirect** keinen Serverroundtrip umfasst.  
   
 > [!NOTE]  
 >  ODBC-Spaltenbezeichnerattribute sind nicht für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Resultsets verfügbar.  
@@ -78,7 +78,7 @@ ms.locfileid: "81302625"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]in wurden Treiber spezifische Deskriptorfelder eingeführt, um zusätzliche Informationen bereitzustellen, mit denen der Name der XML-Schema Auflistung, der Schema Name und der Katalog Name bezeichnet werden. Diese Eigenschaften erfordern keine Anführungszeichen oder ein Escapezeichen, wenn sie nicht-alphanumerische Zeichen enthalten. In der folgenden Tabelle sind diese neuen Deskriptorfelder aufgelistet:  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|Typ|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Der Name des Katalogs, in dem ein XML-Schemasammlungsname definiert ist. Wenn der Katalogname nicht gefunden werden kann, enthält diese Variable eine leere Zeichenfolge.<br /><br /> Diese Informationen werden vom SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME-Datensatzfeld vom IRD zurückgegeben, das ein Lese-/Schreibfeld ist.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|Der Name des Schemas, in dem eine XML-Schemaauflistung definiert ist. Wenn der Schemaname nicht gefunden werden kann, enthält diese Variable eine leere Zeichenfolge.<br /><br /> Diese Informationen werden vom SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME-Datensatzfeld vom IRD zurückgegeben, das ein Lese-/Schreibfeld ist.|  
@@ -86,7 +86,7 @@ ms.locfileid: "81302625"
   
  Außerdem wurden in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] neue treiberspezifische Deskriptorfelder eingeführt, um zusätzliche Informationen für entweder einen benutzerdefinierten Spaltentyp (UDT) eines Resultsets oder für einen UDT-Parameter einer gespeicherten Prozedur oder einer parametrisierten Abfrage bereitzustellen. Diese Eigenschaften erfordern keine Anführungszeichen oder ein Escapezeichen, wenn sie nicht-alphanumerische Zeichen enthalten. In der folgenden Tabelle sind diese neuen Deskriptorfelder aufgelistet:  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|Typ|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Der Name des Katalogs, der den UDT enthält.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Der Name des Schemas, das den UDT enthält.|  

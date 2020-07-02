@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e214f2247009af8e43aefd9cb3274ea59332bcd5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a644e06ca84bbc4ae5d4da6c9620c4afe1aeccba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786993"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Meldet die Attribute der Servercursor, die aktuell für die Verbindung geöffnet sind.  
   
@@ -78,7 +78,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |last_operation|**smallint**|Der zuletzt ausgeführte Vorgang für den Cursor:<br /><br /> 0 = Für den Cursor wurden keine Vorgänge ausgeführt.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = einfügen<br /><br /> 4 = UPDATE<br /><br /> 5 = löschen<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Ein eindeutiger Wert für den Cursor innerhalb des Serverbereichs.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  sp_cursor_list erstellt eine Liste der aktuellen Servercursor, die für die Verbindung geöffnet sind, und beschreibt die globalen Cursorattribute, wie z. B. die Scrolloptionen und die Aktualisierbarkeit des Cursors. sp_cursor_list listet die folgenden Cursor auf:  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor.  

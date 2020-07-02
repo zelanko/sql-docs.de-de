@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ae6596579942a3292c3467f4d3489346eb4aa42
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be04cfff11e30baf2212401bd07b9ca74782ca14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786217"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Erstellt eine Momentaufnahme- oder Transaktionsveröffentlichung. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -316,7 +316,7 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_addpublication** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  Wenn mehrere Veröffentlichungen vorhanden sind, die das gleiche Datenbankobjekt veröffentlichen, replizieren nur Veröffentlichungen mit dem *replicate_ddl* Wert **1** die DDL-Anweisungen ALTER TABLE, Alter View, ALTER PROCEDURE, Alter Function und Alter Triggern. Eine ALTER TABLE DROP COLUMN DDL-Anweisung wird hingegen von allen Veröffentlichungen repliziert, die die gelöschte Spalte veröffentlichen.  

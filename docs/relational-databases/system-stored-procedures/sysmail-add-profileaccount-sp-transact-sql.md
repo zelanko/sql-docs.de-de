@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47100dfc6e63c0b3c47e8405b664362a1f1c2d0b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 68d09a8149234651b4741caaeb8436f6b6cda6da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786113"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Fügt einem Profil für die Datenbank-E-Mail ein Konto für die Datenbank-E-Mail hinzu. Führen Sie **sysmail_add_profileaccount_sp** aus, nachdem ein Daten Bankkonto mit [sysmail_add_account_sp &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)erstellt und ein Datenbankprofil mit [sysmail_add_profile_sp &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md)erstellt wurde.  
   
@@ -54,7 +54,7 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Sowohl das Profil als auch das Konto müssen bereits vorhanden sein. Andernfalls gibt die gespeicherte Prozedur einen Fehler zurück.  
   
  Beachten Sie, dass diese gespeicherte Prozedur nicht die Sequenznummer eines Kontos ändert, das bereits dem angegebenen Profil zugeordnet ist. Weitere Informationen zum Aktualisieren der Sequenznummer eines Kontos finden Sie unter [sysmail_update_profileaccount_sp &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md).  

@@ -14,17 +14,17 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 341a9fe5c5919093853b0c62c7148515380a0551
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3a056a9e6b5f02cc7dc3eb76837731d5a312cba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789192"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber macht nur Treiber spezifische Deskriptorfelder für den Implementierungs Zeilen Deskriptor (IRD) verfügbar. Im IRD wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Deskriptorfelder durch Treiber spezifische Spalten Attribute verwiesen. Weitere Informationen über eine komplette Liste der verfügbaren treiberspezifischen Deskriptorfelder finden Sie unter [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md).  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber macht nur Treiber spezifische Deskriptorfelder für den Implementierungs Zeilen Deskriptor (IRD) verfügbar. Im IRD wird auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Deskriptorfelder durch Treiber spezifische Spalten Attribute verwiesen. Weitere Informationen über eine komplette Liste der verfügbaren treiberspezifischen Deskriptorfelder finden Sie unter [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md).  
   
  Deskriptorfelder, die Spaltenbezeichner-Zeichenfolgen enthalten, sind häufig Zeichenfolgen der Länge 0 (null). Alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen Deskriptorfeldwerte sind schreibgeschützt.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81299576"
   
  Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Ab kann SQLGetDescField **SQL_C_SS_TIME2** (für **Zeit** Typen) oder **SQL_C_SS_TIMESTAMPOFFSET** (für **DateTimeOffset**) anstelle von **SQL_C_BINARY**zurückgeben, wenn die Anwendung ODBC 3,8 verwendet.  
+ Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] kann SQLGetDescField **SQL_C_SS_TIME2** (für **Zeit** Typen) oder **SQL_C_SS_TIMESTAMPOFFSET** (für **DateTimeOffset**) anstelle von **SQL_C_BINARY**zurückgeben, wenn die Anwendung ODBC 3,8 verwendet.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField-Unterstützung für große CLR-UDTs  
  **SQLGetDescField** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  

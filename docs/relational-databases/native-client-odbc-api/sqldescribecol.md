@@ -14,17 +14,17 @@ ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0e9a03b2e8635618afbdc615a6f77dfe05c533e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 413e8f65cb135a46a7dd440b687beb448e15ede2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789339"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Bei ausgeführten Anweisungen muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Native Client-ODBC-Treiber den Server nicht Abfragen, um Spalten in einem Resultset zu beschreiben. In diesem Fall verursacht **SQLDescribeCol** keinen Serverroundtrip. Wie [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)und[SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)wird beim Aufrufen von **SQLDescribeCol** für vorbereitete, aber nicht ausgeführte Anweisungen ein Serverroundtrip generiert.  
+  Bei ausgeführten Anweisungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss der Native Client-ODBC-Treiber den Server nicht Abfragen, um Spalten in einem Resultset zu beschreiben. In diesem Fall verursacht **SQLDescribeCol** keinen Serverroundtrip. Wie [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)und[SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md)wird beim Aufrufen von **SQLDescribeCol** für vorbereitete, aber nicht ausgeführte Anweisungen ein Serverroundtrip generiert.  
   
  Wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder ein Anweisungsstapel mehrere Resultsets für Zeilen zurückgibt, kann eine Spalte, auf die mit einer Ordnungszahl verwiesen wird, ihren Ursprung in einer separaten Tabelle haben oder auf eine vollständig andere Spalte im Resultset verweisen. **SQLDescribeCol** sollte für jeden Satz aufgerufen werden. Wenn sich das Resultset ändert, sollte die Anwendung Datenwerte vor dem Abrufen von Zeilenergebnissen erneut binden. Weitere Informationen zum Verarbeiten mehrerer Resultsets finden Sie unter [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "81302579"
   
  Bei Datentypen mit umfangreichen Werten ist der in *DataTypePtr* zurückgegebene Wert SQL_VARCHAR, SQL_VARBINARY oder SQL_NVARCHAR. Der Wert SQL_SS_LENGTH_UNLIMITED in *ColumnSizePtr* gibt an, dass die Größe unbegrenzt ist.  
   
- Verbesserungen in der Datenbank- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Engine, beginnend mit ermöglichen SQLDescribeCol, genauere Beschreibungen der erwarteten Ergebnisse zu erhalten. Diese präziseren Ergebnisse können sich von den Werten unterscheiden, die von SQLDescribeCol in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]früheren Versionen von zurückgegeben wurden. Weitere Informationen finden Sie unter [Metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Verbesserungen in der Datenbank-Engine, beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ermöglichen SQLDescribeCol, genauere Beschreibungen der erwarteten Ergebnisse zu erhalten. Diese präziseren Ergebnisse können sich von den Werten unterscheiden, die von SQLDescribeCol in früheren Versionen von zurückgegeben wurden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Weitere Informationen finden Sie unter [Metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## <a name="sqldescribecol-support-for-enhanced-date-and-time-features"></a>SQLDescribeCol-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Die für Datums-/Uhrzeittypen zurückgegebenen Werte lauten wie folgt:  

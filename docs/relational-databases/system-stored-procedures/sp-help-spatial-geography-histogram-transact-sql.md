@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c2b94b4c76054fb1e9ce6e078f3490ad263a52c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1ed475c78decb3891185b90d3dc032ab896bdf0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085193"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790350"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ermöglicht es, Rasterparameter für einen räumlichen Index mit Schlüsseln zu versehen.  
   
@@ -62,7 +62,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss ein Mitglied der Datenbankrolle **public** sein. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Auf der räumlichen SSMS-Registerkarte wird eine grafische Darstellung der Ergebnisse angezeigt. Sie können die Ergebnisse für das räumliche Fenster abfragen, um die ungefähre Anzahl von Ergebniselementen abzurufen.  
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  Das umgebende Feld für den **geography** -Typ ist der gesamte Globus.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird **sp_help_spatial_geography_histogram** für die `Person.Address` -Tabelle in [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] der-Datenbank aufgerufen.  
+ Im folgenden Beispiel wird **sp_help_spatial_geography_histogram** für die- `Person.Address` Tabelle in der- [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank aufgerufen.  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

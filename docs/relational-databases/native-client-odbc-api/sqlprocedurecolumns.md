@@ -14,23 +14,23 @@ ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b942126a5ad73d5c41f28f60a63d22ef8584f24
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 96c68eac12677109975fce5beea04eec071e70b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280052"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787976"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  **Sqlprocedurecolrens** gibt eine Zeile zurück, in der die Rückgabewert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Attribute aller gespeicherten Prozeduren gemeldet werden.  
+  **Sqlprocedurecolrens** gibt eine Zeile zurück, in der die Rückgabewert Attribute aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherten Prozeduren gemeldet werden.  
   
  **Sqlprocedurecolrens** gibt SQL_SUCCESS an, ob Werte für die Parameter *CatalogName* *, Schema*Name, *procname*oder *ColumnName* vorhanden sind. **SQLFetch** gibt SQL_NO_DATA zurück, wenn in diesen Parametern ungültige Werte verwendet werden.  
   
  **Sqlprocedurecolrens** kann in einem statischen Server Cursor ausgeführt werden. Der Versuch, **SQLProcedureColumns** für einen aktualisierbaren (dynamischen oder Keyset-) Cursor auszuführen, gibt SQL_SUCCESS_WITH_INFO zurück, der angibt, dass der Cursortyp geändert wurde.  
   
- In der folgenden Tabelle sind die vom Resultset zurückgegebenen Spalten und deren Erweiterung zum Verarbeiten der **UDT** -und **XML** -Datentypen über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Native Client-ODBC-Treiber aufgeführt:  
+ In der folgenden Tabelle sind die vom Resultset zurückgegebenen Spalten und deren Erweiterung zum Verarbeiten der **UDT** -und **XML** -Datentypen über den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber aufgeführt:  
   
 |Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  

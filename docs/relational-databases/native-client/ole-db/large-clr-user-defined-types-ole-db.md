@@ -13,15 +13,15 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5de109f0f26dcc8b892f7856f889ea93089c1205
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2358894c1303856fc3e1b9db06bca1f7e9427509
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787694"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Große benutzerdefinierte CLR-Typen (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   In diesem Abschnitt werden Änderungen an OLE DB in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client erläutert, durch die große benutzerdefinierte Common Language Runtime-Typen (CLR-UDTs) unterstützt werden.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "81304371"
   
  Die folgenden Spalten werden ebenfalls für UDTs definiert:  
   
-|Spalten-ID|type|BESCHREIBUNG|  
+|Spalten-ID|Typ|BESCHREIBUNG|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Für UDT-Spalten der Name des Katalogs, in dem der UDT definiert ist.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Für UDT-Spalten der Name des Schemas, in dem der UDT definiert ist.|  
@@ -105,7 +105,7 @@ ms.locfileid: "81304371"
   
  Die folgenden zusätzlichen Spalten werden für UDTs definiert:  
   
-|Spaltenbezeichner|type|BESCHREIBUNG|  
+|Spaltenbezeichner|Typ|BESCHREIBUNG|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Für UDT-Spalten der Name des Katalogs, in dem der UDT definiert ist.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Für UDT-Spalten der Name des Schemas, in dem der UDT definiert ist.|  
@@ -121,13 +121,13 @@ ms.locfileid: "81304371"
 |Binding-Datentyp|UDT zu Server|Nicht-UDT zu Server|UDT von Server|Nicht-UDT von Server|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Unterstützt (5)|Fehler (1)|Unterstützt (5)|Fehler (4)|  
-|DBTYPE_BYTES|Unterstützt (5)|–|Unterstützt (5)|–|  
-|DBTYPE_WSTR|Unterstützt (2), (5)|–|Unterstützt (3), (5), (6)|–|  
-|DBTYPE_BSTR|Unterstützt (2), (5)|–|Unterstützt (3), (5)|–|  
-|DBTYPE_STR|Unterstützt (2), (5)|–|Unterstützt (3), (5)|–|  
-|DBTYPE_IUNKNOWN|Unterstützt (6)|–|Unterstützt (6)|–|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Unterstützt (5)|–|Unterstützt (3), (5)|–|  
-|DBTYPE_VARIANT (VT_BSTR)|Unterstützt (2), (5)|–|–|–|  
+|DBTYPE_BYTES|Unterstützt (5)|Nicht zutreffend|Unterstützt (5)|Nicht zutreffend|  
+|DBTYPE_WSTR|Unterstützt (2), (5)|Nicht zutreffend|Unterstützt (3), (5), (6)|Nicht zutreffend|  
+|DBTYPE_BSTR|Unterstützt (2), (5)|Nicht zutreffend|Unterstützt (3), (5)|Nicht zutreffend|  
+|DBTYPE_STR|Unterstützt (2), (5)|Nicht zutreffend|Unterstützt (3), (5)|Nicht zutreffend|  
+|DBTYPE_IUNKNOWN|Unterstützt (6)|Nicht zutreffend|Unterstützt (6)|Nicht zutreffend|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Unterstützt (5)|Nicht zutreffend|Unterstützt (3), (5)|Nicht zutreffend|  
+|DBTYPE_VARIANT (VT_BSTR)|Unterstützt (2), (5)|Nicht zutreffend|–|–|  
   
 ### <a name="key-to-symbols"></a>Aufschlüsselung der Symbole  
   
@@ -167,7 +167,7 @@ ms.locfileid: "81304371"
   
 |Clientversion|DBTYPE_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|DBTYPE_UDT<br /><br /> (Länge größer als 8.000 Bytes)|  
 |--------------------|------------------------------------------------------------------|---------------------------------------------------------|  
-|SQL Server 2005|UDT|varbinary(max)|  
+|SQL Server 2005|UDT|varbinary(max)|  
 |SQL Server 2008 und höher|UDT|UDT|  
   
  Wenn **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) auf „80“ festgelegt ist, werden UDT-Typen für Clients ebenso angezeigt wie für Downlevelclients.  

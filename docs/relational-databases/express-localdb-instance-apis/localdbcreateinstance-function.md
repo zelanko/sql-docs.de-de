@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 297dd5ca109e7b35d8d74d5daf1f8b1c7fd06703
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7e06c3c309b29f52d68b765210999469973331ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789513"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance-Funktion
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Erstellt eine neue SQL Server Express LocalDB-Instanz.  
   
  **Headerdatei:** sqlncli.h  
@@ -48,7 +48,7 @@ HRESULT LocalDBCreateInstance(
  *dwFlags*  
  [Eingabe] Zur künftigen Verwendung reserviert. Muss derzeit auf 0 festgelegt sein.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  S_OK  
  Die Funktion wurde erfolgreich ausgeführt.  
   
@@ -97,7 +97,7 @@ HRESULT LocalDBCreateInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Ein unerwarteter Fehler ist aufgetreten. Weitere Informationen finden Sie im Ereignisprotokoll.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn eine vollständig funktionierende LocalDB-Instanz mit dem angegebenen Namen bereits vorhanden ist und ihre Version der angeforderten entspricht oder höher ist, ist das Ergebnis S_OK.  
   
  Wenn eine vorhandene Instanz beschädigt wird, schlagen nachfolgende Aufrufe der **LocalDBCreateInstance** API-Methode fehl. Beschädigte Instanzen müssen manuell korrigiert oder explizit gelöscht werden, bevor sie wieder verwendet werden können.  

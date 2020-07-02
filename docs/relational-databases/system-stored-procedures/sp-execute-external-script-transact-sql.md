@@ -5,7 +5,7 @@ ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -20,16 +20,16 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 45273b83d5beb033d8c3aad60fa9919a885e55c4
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790397"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Die gespeicherte Prozedur **sp_execute_external_script** führt ein als Eingabe Argument bereitgestelltes Skript für die Prozedur aus und wird mit [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) -und [Spracherweiterungen](../../language-extensions/language-extensions-overview.md)verwendet. 
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`Eine Liste von Werten für die Eingabeparameter, die vom externen Skript verwendet werden.  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!IMPORTANT]
 > Die Abfrage Struktur wird von SQL Machine Learning gesteuert, und Benutzer können keine beliebigen Vorgänge für die Abfrage ausführen.
@@ -189,7 +189,7 @@ Sowohl der `@r_rowsPerRead` Parameter für das Streaming als auch das- `@paralle
 > [!NOTE]  
 > Streaming und parallele Verarbeitung werden nur in der Enterprise Edition unterstützt. Sie können die Parameter in den Abfragen in der Standard Edition einschließen, ohne einen Fehler zu erhalten, aber die Parameter haben keine Auswirkung, und R-Skripts werden in einem einzelnen Prozess ausgeführt.  
   
-## <a name="restrictions"></a>Beschränkungen  
+## <a name="restrictions"></a>Einschränkungen  
 
 ### <a name="data-types"></a>Datentypen
 

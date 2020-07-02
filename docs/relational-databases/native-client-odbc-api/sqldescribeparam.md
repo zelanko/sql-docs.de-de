@@ -14,21 +14,21 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efe1fdccbef4f5c4a393083f6eb81efee759be5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7612fc4da7cb12b4e38f20404cbf9481d610877c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789332"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Um die Parameter einer SQL-Anweisung zu beschreiben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und führt der Native Client ODBC- [!INCLUDE[tsql](../../includes/tsql-md.md)] Treiber eine SELECT-Anweisung aus, wenn SQLDescribeParam für ein vorbereitetes ODBC-Anweisungs Handle aufgerufen wird. Die Metadaten des Resultsets bestimmen die Eigenschaften der Parameter in der vorbereiteten Anweisung. SQLDescribeParam kann jeden Fehlercode zurückgeben, der von SQLExecute oder SQLExecDirect zurückgegeben werden kann.  
+  Um die Parameter einer SQL-Anweisung zu beschreiben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und führt der Native Client ODBC-Treiber eine SELECT-Anweisung aus, [!INCLUDE[tsql](../../includes/tsql-md.md)] Wenn SQLDescribeParam für ein vorbereitetes ODBC-Anweisungs Handle aufgerufen wird. Die Metadaten des Resultsets bestimmen die Eigenschaften der Parameter in der vorbereiteten Anweisung. SQLDescribeParam kann jeden Fehlercode zurückgeben, der von SQLExecute oder SQLExecDirect zurückgegeben werden kann.  
   
- Verbesserungen in der Datenbank- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Engine, beginnend mit "SQLDescribeParam", können genauere Beschreibungen der erwarteten Ergebnisse erhalten. Diese präziseren Ergebnisse können sich von den Werten unterscheiden, die von SQLDescribeParam in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]früheren Versionen von zurückgegeben wurden. Weitere Informationen finden Sie unter [Metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Verbesserungen in der Datenbank-Engine, beginnend mit " [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SQLDescribeParam", können genauere Beschreibungen der erwarteten Ergebnisse erhalten. Diese präziseren Ergebnisse können sich von den Werten unterscheiden, die von SQLDescribeParam in früheren Versionen von zurückgegeben wurden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Weitere Informationen finden Sie unter [Metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
   
- Außerdem gibt [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] *ParameterSizePtr* , das in neu ist, nun einen Wert zurück, der der Definition der Spalte oder des Ausdrucks der entsprechenden Parameter Markierung entsprechend der Definition in der [ODBC-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=207044)entspricht. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client konnte *ParameterSizePtr* der entsprechende Wert **SQL_DESC_OCTET_LENGTH** für den-Typ oder ein irrelevante Spaltengrößen Wert sein, der für SQLBindParameter für einen Typ bereitgestellt wurde. der Wert von, der ignoriert werden soll (z. b.**SQL_INTEGER**).  
+ Außerdem [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] gibt *ParameterSizePtr* , das in neu ist, nun einen Wert zurück, der der Definition der Spalte oder des Ausdrucks der entsprechenden Parameter Markierung entsprechend der Definition in der [ODBC-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=207044)entspricht. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client konnte *ParameterSizePtr* der entsprechende Wert **SQL_DESC_OCTET_LENGTH** für den-Typ oder ein irrelevante Spaltengrößen Wert sein, der für SQLBindParameter für einen Typ bereitgestellt wurde. der Wert von, der ignoriert werden soll (z. b.**SQL_INTEGER**).  
   
  Der Treiber unterstützt das Aufrufen von SQLDescribeParam in folgenden Situationen nicht:  
   
@@ -42,9 +42,9 @@ ms.locfileid: "81302580"
   
 -   Für Abfragen, bei denen einer der Parameter ein Parameter für eine Funktion ist.  
   
--   Wenn im [!INCLUDE[tsql](../../includes/tsql-md.md)] Befehl Kommentare (/* \*/) vorhanden sind.  
+-   Wenn im Befehl Kommentare (/* \* /) vorhanden sind [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- Beim Verarbeiten eines Batches von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen unterstützt der Treiber auch das Aufrufen von SQLDescribeParam für Parameter Markierungen in-Anweisungen nach der ersten Anweisung im Batch nicht.  
+ Beim Verarbeiten eines Batches von- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen unterstützt der Treiber auch das Aufrufen von SQLDescribeParam für Parameter Markierungen in-Anweisungen nach der ersten Anweisung im Batch nicht.  
   
  Beim Beschreiben der Parameter vorbereiteter gespeicherter Prozeduren verwendet SQLDescribeParam die gespeicherte System Prozedur [sp_sproc_columns](../../relational-databases/system-stored-procedures/sp-sproc-columns-transact-sql.md) , um Parameter Eigenschaften abzurufen. sp_sproc_columns können Daten für gespeicherte Prozeduren innerhalb der aktuellen Benutzerdatenbank melden. Durch das Vorbereiten eines voll qualifizierten Namens einer gespeicherten Prozedur kann SQLDescribeParam Daten Bank übergreifend ausgeführt werden. So kann z. b. die gespeicherte System Prozedur [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) in einer beliebigen Datenbank wie folgt vorbereitet und ausgeführt werden:  
   

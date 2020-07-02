@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dba7904f4e28b6bea50c802fd83b9c24c147defb
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: bc2d295f43dfab4327ac1b0ea47382324a22db41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524475"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786517"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Pfadausdrücke – Angeben eines Knotentests
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Ein Achsenschritt in einem Pfadausdruck besteht aus den folgenden Komponenten:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "84524475"
 >  Für Knotennamen, die in XQuery Pfadausdrücken angegeben werden, gelten nicht die gleichen sortierungsabhängigen Regeln, die für Transact-SQL-Abfragen gelten. Außerdem wird immer Groß- und Kleinschreibung unterschieden.  
   
 ## <a name="node-name-as-node-test"></a>Knotenname als Knotentest  
- Wenn Sie einen Knotennamen als Knotentest in einem Schritt eines Pfadausdrucks angeben, sollten Sie das Konzept der Hauptknotenart verstanden haben. Jede Achse (child, parent, attribute und self) verfügt über eine Hauptknotenart. Zum Beispiel:  
+ Wenn Sie einen Knotennamen als Knotentest in einem Schritt eines Pfadausdrucks angeben, sollten Sie das Konzept der Hauptknotenart verstanden haben. Jede Achse (child, parent, attribute und self) verfügt über eine Hauptknotenart. Beispiel:  
   
 -   Eine attribute-Achse kann nur Attribute enthalten. Daher ist der attribute-Knoten die Hauptknotenart der attribute-Achse.  
   

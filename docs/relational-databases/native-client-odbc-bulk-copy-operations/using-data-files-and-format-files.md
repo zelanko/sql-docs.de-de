@@ -18,15 +18,15 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7cf91baeb6771f0abb52fb5b8f4c4dc2bddafe0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc87b341a4ca9685e070395e003d8187e8593b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787985"
 ---
 # <a name="using-data-files-and-format-files"></a>Verwenden von Datendateien und Formatdateien
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Das einfachste Massenkopierprogramm geht wie folgt vor:  
   

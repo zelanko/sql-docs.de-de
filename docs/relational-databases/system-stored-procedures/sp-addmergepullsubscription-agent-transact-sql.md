@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b9af4f3564c5834b856632db70bd6b12368a22c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786238"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Fügt einen neuen Agentauftrag für die geplante Synchronisierung eines Pullabonnements mit einer Mergeveröffentlichung hinzu. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   
@@ -155,7 +155,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**2**|On-Demand-Streaming|  
 |**4**|Täglich|  
 |**8**|Wöchentlich|  
-|**Uhr**|Monatlich|  
+|**16**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64**|Autostart|  
 |**128**|Wiederholt|  
@@ -184,11 +184,11 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**1**|First (Erster)|  
-|**2**|Sekunde|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|Dritter|  
 |**8**|Vierter|  
-|**Uhr**|Last (Letzter)|  
+|**16**|Last (Letzter)|  
 |NULL (Standard)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert NULL.  
@@ -198,7 +198,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
-|**2**|Sekunde|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Stunde|  
 |NULL (Standard)||  
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`Gibt an, dass die Websynchronisierung aktiviert ist. *use_web_sync* ist vom Typ **Bit**. der Standardwert ist 0. **1** gibt an, dass das Pullabonnement mithilfe von http über das Internet synchronisiert werden kann.  
   
-`[ @internet_url = ] 'internet_url'`Der Speicherort des Replikations-Listener (replisapi). DLL) für die Websynchronisierung. *internet_url* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. *internet_url* ist eine voll qualifizierte URL im Format `http://server.domain.com/directory/replisapi.dll` . Wenn der Server so konfiguriert ist, dass er einen anderen Port als Port 80 überwacht, muss auch die Portnummer im Format `http://server.domain.com:portnumber/directory/replisapi.dll` angegeben werden, wobei `portnumber` den Port darstellt.  
+`[ @internet_url = ] 'internet_url'`Der Speicherort des Replikations-Listener (REPLISAPI.DLL) für die Websynchronisierung. *internet_url* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. *internet_url* ist eine voll qualifizierte URL im Format `http://server.domain.com/directory/replisapi.dll` . Wenn der Server so konfiguriert ist, dass er einen anderen Port als Port 80 überwacht, muss auch die Portnummer im Format `http://server.domain.com:portnumber/directory/replisapi.dll` angegeben werden, wobei `portnumber` den Port darstellt.  
   
 `[ @internet_login = ] 'internet_login'`Der Anmelde Name, den der Merge-Agent verwendet, wenn eine Verbindung mit dem Webserver hergestellt wird, der die Websynchronisierung mithilfe der http-Standard Authentifizierung verwendet. *internet_login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   

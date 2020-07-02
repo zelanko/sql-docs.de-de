@@ -1,5 +1,5 @@
 ---
-title: sys. sysdevices (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sysGeräte (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cbd14a7ce8dd1cfb1571874a83a615065200014
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23c6f77ab2ffe78a478a168a917339cb90e50df2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786380"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält eine Zeile für jede Sicherungsdatei auf dem Datenträger und auf Band sowie für jede Datenbankdatei.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "68053524"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Logischer Name der Sicherungs- oder Datenbankdatei.|  
 |**size**|**int**|Größe der Datei in Seiten mit einer Größe von 2 Kilobytes (KB)|  
-|**Preis**|**int**|Nur aus Gründen der Abwärtskompatibilität beibehalten.|  
-|**hochrangiger**|**int**|Nur aus Gründen der Abwärtskompatibilität beibehalten.|  
+|**niedrig**|**int**|Nur aus Gründen der Abwärtskompatibilität beibehalten.|  
+|**high**|**int**|Nur aus Gründen der Abwärtskompatibilität beibehalten.|  
 |**status**|**smallint**|Bitmuster, das den Medientyp anzeigt:<br /><br /> 1 = Standarddatenträger<br /><br /> 2 = Physischer Datenträger<br /><br /> 4 = Logischer Datenträger<br /><br /> 8 = Header auslassen<br /><br /> 16 = Sicherungsdatei<br /><br /> 32 = Serielle Schreibvorgänge<br /><br /> 4096 = Schreibgeschützt|  
 |**cntrltype**|**smallint**|Controllertyp:<br /><br /> 0 = Nicht-CD-ROM-Datenbankdatei<br /><br /> 2 = Sicherungsdatei auf Datenträger<br /><br /> 3 - 4 = Sicherungsdatei auf Diskette<br /><br /> 5 = Sicherungsdatei auf Band<br /><br /> 6 = Named Pipe-Datei|  
 |**phyname**|**nvarchar(260)**|Name der physischen Datei|  

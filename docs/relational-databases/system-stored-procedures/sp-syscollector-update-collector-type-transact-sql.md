@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 224ee81383c247d3b2ba8d02aaa99f5a649d0e74
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d68443daf5f6e694dc0da8e838dfad897739af05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816413"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790343"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aktualisiert einen Sammlertyp für ein Sammelelement. Aktualisiert anhand des Namens und der GUID eines Sammlertyps die Sammlertypkonfiguration, einschließlich des Sammlungs- und Uploadpakets, des Parameterschemas und des Parameterformatierungsschemas.  
   
@@ -50,9 +50,9 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
   
 `[ @parameter_schema = ] 'parameter_schema'`Ist das XML-Schema für diesen Sammlertyp. *parameter_schema* ist **XML** und kann für bestimmte Sammlertypen erforderlich sein. Wenn nicht erforderlich, kann dieses Argument NULL sein.  
   
-`[ @collection_package_id = ] collection_package_id`Ein eindeutiger lokaler Bezeichner, der auf das Sammlungs Paket verweist, das [!INCLUDE[ssIS](../../includes/ssis-md.md)] vom Sammlungs Satz verwendet wird. *collection_package_id* ist vom datnoch **uniqueidentifier** und ist erforderlich. Um den Wert für *collection_package_id*abzurufen, Fragen Sie die dbo. syscollector_collector_types-Systemsicht in der msdb-Datenbank ab.  
+`[ @collection_package_id = ] collection_package_id`Ein eindeutiger lokaler Bezeichner, der auf das Sammlungs Paket verweist, das [!INCLUDE[ssIS](../../includes/ssis-md.md)] vom Sammlungs Satz verwendet wird. *collection_package_id* ist vom datnoch **uniqueidentifier** und ist erforderlich. Wenn Sie den Wert für *collection_package_id*abrufen möchten, Fragen Sie die dbo.syscollector_collector_types-Systemsicht in der msdb-Datenbank ab.  
   
-`[ @upload_package_id = ] upload_package_id`Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)] Uploadpaket verweist, das vom Sammlungs Satz verwendet wird. *upload_package_id* ist vom Datentyp **uniqueidentifier** und ist erforderlich. Um den Wert für *upload_package_id*abzurufen, Fragen Sie die dbo. syscollector_collector_types-Systemsicht in der msdb-Datenbank ab.  
+`[ @upload_package_id = ] upload_package_id`Ein eindeutiger lokaler Bezeichner, der auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)] Uploadpaket verweist, das vom Sammlungs Satz verwendet wird. *upload_package_id* ist vom Datentyp **uniqueidentifier** und ist erforderlich. Wenn Sie den Wert für *upload_package_id*abrufen möchten, Fragen Sie die dbo.syscollector_collector_types-Systemsicht in der msdb-Datenbank ab.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

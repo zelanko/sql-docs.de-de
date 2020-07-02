@@ -20,21 +20,21 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25661cc9d9166da61bd7cef8e3368c2a393a931e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc6b21029c829194c5287b450e266119b08a934f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821287"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787100"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Gibt eine Zeile für jede Benutzertabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|\<geerbte Spalten>||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|\<inherited columns>||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |lob_data_space_id|**int**|Ein Wert ungleich 0 (null) ist die ID des Datenbereichs (Dateigruppe oder Partitionsschema), der die LOB-Binärdaten (Large Object) für diese Tabelle enthält. Beispiele für LOB-Datentypen sind **varbinary (max)**, **varchar (max)**, **geography**oder **XML**.<br /><br /> 0 = Die Tabelle enthält keine LOB-Daten.|  
 |filestream_data_space_id|**int**|Die ID des Datenbereichs für eine FILESTREAM-Dateigruppe oder ein Partitionsschema, das aus FILESTREAM-Dateigruppen besteht.<br /><br /> Um den Namen einer FILESTREAM-Datei Gruppe zu melden, führen Sie die Abfrage aus `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` .<br /><br /> sys.tables kann zu den folgenden Sichten über filestream_data_space_id = data_space_id verknüpft werden.<br /><br /> -sys. File Groups<br /><br /> -sys. partition_schemes<br /><br /> -sys. Indexes<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -Backup File Group (Join on filegroup_id)|  
 |max_column_id_used|**int**|Höchste Spalten-ID, die von dieser Tabelle je verwendet wurde|  

@@ -15,15 +15,15 @@ ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f01c5e43d7d451cbcdca30dd66cf2ca70227541
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2efa78a44fa0d8c99a6a1c5f968b0b8f59f9d666
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787629"
 ---
 # <a name="stored-procedures---running"></a>Gespeicherte Prozeduren: Ausführen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Wenn beim Ausführen von Anweisungen eine gespeicherte Prozedur in der Datenquelle ausgeführt wird (anstelle der Ausführung oder der Vorbereitung einer Anweisung direkt in der Clientanwendung), kann dies folgende Vorteile haben:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "81305343"
   
 -   Zusätzliche Funktionalität  
   
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt drei der Mechanismen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die gespeicherte Prozeduren zum Zurückgeben von Daten verwenden:  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt drei der Mechanismen, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gespeicherte Prozeduren zum Zurückgeben von Daten verwenden:  
   
 -   Jede SELECT-Anweisung in der Prozedur generiert ein Resultset.  
   

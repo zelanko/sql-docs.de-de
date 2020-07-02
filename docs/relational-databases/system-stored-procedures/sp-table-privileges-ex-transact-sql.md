@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab1630f6dd172410d26f48d0485b23d257c6d408
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3131a5e0a44cf0ccbdb4537dc8e409cc8b56be39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786109"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Privileginformationen zu der angegebenen Tabelle vom angegebenen Verbindungsserver zurück.  
   
@@ -68,7 +68,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**Ehre**|**varchar (** 32 **)**|Eine der verfügbaren Tabellenberechtigungen. Tabellenberechtigungen können folgende Werte annehmen bzw. auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden.<br /><br /> Select = **GRANTEE** kann Daten für eine oder mehrere Spalten abrufen.<br /><br /> INSERT = **GRANTEE** kann für eine oder mehrere Spaltendaten für neue Zeilen bereitstellen.<br /><br /> Update = **GRANTEE** kann vorhandene Daten für eine oder mehrere Spalten ändern.<br /><br /> DELETE = **GRANTEE** kann Zeilen aus der Tabelle entfernen.<br /><br /> References = **GRANTEE** kann in einer Primärschlüssel-/Fremdschlüssel Beziehung auf eine Spalte in einer fremd Tabelle verweisen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Primär-/Fremdschlüsselbeziehungen mithilfe von Tabelleneinschränkungen definiert.<br /><br /> Der **dem Empfänger durch ein** bestimmtes Tabellen Privileg erteilte Aktionsbereich ist Datenquellen abhängig. Beispielsweise **kann die Berechtigung** aktualisieren dem Empfänger ermöglichen, alle Spalten in einer Tabelle in einer Datenquelle zu aktualisieren, und nur die Spalten, für die der **GRANTOR** über die Berechtigung aktualisieren für eine andere Datenquelle verfügt.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Gibt an, **ob der Empfänger** berechtigt ist, anderen Benutzern Berechtigungen zu erteilen. Dies wird häufig als "Berechtigung mit Recht zum Erteilen" bezeichnet. Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist auf eine Datenquelle, für die die "Berechtigung mit Recht zum Erteilen" nicht anwendbar ist.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die zurückgegebenen Ergebnisse werden nach **TABLE_QUALIFIER**, **TABLE_OWNER**, **table_name**und **Berechtigungen**geordnet.  
   
 ## <a name="permissions"></a>Berechtigungen  

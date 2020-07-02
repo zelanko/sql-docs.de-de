@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0c2666b30a0a9618aa03f68a7266d14b7c37d625
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a1c622b94e5f81a27f1835d36d7bc41d0a051bcd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787168"
 ---
 # <a name="sysdatabase_audit_specification_details-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält Informationen über die Datenbank-Überwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz für alle Datenbanken. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Eine Liste aller audit_action_id und deren Namen finden Sie unter [sys. dm_audit_actions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82828548"
 |**database_specification_id**|**int**|ID der Überwachungsspezifikation.|  
 |**audit_action_id**|**int**|ID der Überwachungsaktion.|  
 |**audit_action_name**|**Vom Datentyp sysname**|Name der Überwachungsaktion oder Überwachungsaktionsgruppe|  
-|**Class**|**int**|Identifiziert die Klasse des überwachten Objekts.|  
+|**Klasse**|**int**|Identifiziert die Klasse des überwachten Objekts.|  
 |**class_**|**Nvarchar (60)**|Beschreibung der Klasse des überwachten Objekts:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|Haupt-ID des überwachten Objekts, z. B. eine Tabellen-ID einer Tabellenüberwachungsaktion.|  
 |**minor_id**|**Int**|Sekundäre, entsprechend der Klasse interpretierte ID des überwachten Objekts, z. B. eine Spalten-ID einer Tabellenüberwachungsaktion.|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c15a9051c6d706ddec55d031e93858a3d33c9d3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4ab8250e12f5b553a9c2c080b0a1e4efe9eb1657
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815848"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786189"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Gibt alle Spalten in der zugrunde liegenden Tabelle zurück. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt. Für Oracle-Verleger wird diese gespeicherte Prozedur auf dem Verteiler auf jeder Datenbank ausgeführt.  
   
@@ -61,7 +61,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |**Verlegertyp**|**sysname**|Datentyp der Spalte auf dem Verleger.|  
 |**Abonnenten Typen**|**sysname**|Datentyp der Spalte auf dem Abonnenten.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_helparticlecolumns** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  **sp_helparticlecolumns** ist hilfreich beim Überprüfen einer vertikalen Partition.  

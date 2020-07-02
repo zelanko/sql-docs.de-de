@@ -14,15 +14,15 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abce98b64da8de6039f81025201cce25269763a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feae55d486eae6b269cef94320fe9468edb6e672
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302608"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789370"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLColumns** gibt SQL_SUCCESS zurück, ob Werte für die Parameter *CatalogName*, *TableName*oder *ColumnName* vorhanden sind. **SQLFetch** gibt SQL_NO_DATA zurück, wenn in diesen Parametern ungültige Werte verwendet werden.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "81302608"
   
  Für den benutzerdefinierten Typ von Parametern können Sie die neuen, weiter oben in diesem Abschnitt definierten treiberspezifischen Deskriptoren verwenden, um die zusätzlichen Metadateneigenschaften eines UDT abzurufen oder festzulegen, falls der Server diese Informationen zurückgibt bzw. anfordert.  
   
- Wenn ein Client eine Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit SQLColumns herstellt und diese aufruft, werden bei Verwendung von NULL-oder Platzhalterwerten für den Catalog-Eingabeparameter keine Informationen aus anderen Katalogen zurückgegeben. Stattdessen werden nur Informationen über den aktuellen Katalog zurückgegeben. Der Client kann zuerst SQLTables aufzurufen, um zu bestimmen, in welchem Katalog sich die gewünschte Tabelle befindet. Der Client kann dann diesen Katalogwert für den Catalog-Eingabeparameter im Befehl SQLColumns verwenden, um Informationen über die Spalten in dieser Tabelle abzurufen.  
+ Wenn ein Client eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLColumns herstellt und diese aufruft, werden bei Verwendung von NULL-oder Platzhalterwerten für den Catalog-Eingabeparameter keine Informationen aus anderen Katalogen zurückgegeben. Stattdessen werden nur Informationen über den aktuellen Katalog zurückgegeben. Der Client kann zuerst SQLTables aufzurufen, um zu bestimmen, in welchem Katalog sich die gewünschte Tabelle befindet. Der Client kann dann diesen Katalogwert für den Catalog-Eingabeparameter im Befehl SQLColumns verwenden, um Informationen über die Spalten in dieser Tabelle abzurufen.  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns und Tabellenwertparameter  
  Das Resultset, das von SQLColumns zurückgegeben wird, hängt von der Einstellung SQL_SOPT_SS_NAME_SCOPE ab. Weitere Informationen finden Sie unter [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Die folgenden Spalten wurden für Tabellenwertparameter hinzugefügt:  
   
-|Spaltenname|Datentyp|Contents|  
+|Spaltenname|Datentyp|Inhalte|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|Für eine Spalte vom Datentyp TABLE_TYPE ist dies SQL_TRUE, wenn es sich um eine berechnete Spalte handelt, andernfalls SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE, wenn die Spalte eine Identitätsspalte ist, andernfalls SQL_FALSE.|  
@@ -84,7 +84,7 @@ ms.locfileid: "81302608"
 |SS_IS_SPARSE|**Smallint**|SQL_TRUE, wenn die Spalte eine Sparsespalte ist, andernfalls SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Wenn es sich bei der Spalte um die **column_set** Spalte handelt, ist dies SQL_TRUE. andernfalls SQL_FALSE.|  
   
- In Übereinstimmung mit der ODBC-Spezifikation werden SS_IS_SPARSE und SS_IS_COLUMN_SET vor allen treiberspezifischen Spalten angezeigt, die früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Versionen als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]hinzugefügt wurden, und nach allen Spalten, die von ODBC selbst vorgeschrieben wurden.  
+ In Übereinstimmung mit der ODBC-Spezifikation werden SS_IS_SPARSE und SS_IS_COLUMN_SET vor allen treiberspezifischen Spalten angezeigt, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] früheren Versionen als hinzugefügt wurden [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , und nach allen Spalten, die von ODBC selbst vorgeschrieben wurden.  
   
  Das Resultset, das von SQLColumns zurückgegeben wird, hängt von der Einstellung SQL_SOPT_SS_NAME_SCOPE ab. Weitere Informationen finden Sie unter [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   

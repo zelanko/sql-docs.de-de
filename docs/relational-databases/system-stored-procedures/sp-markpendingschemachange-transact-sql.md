@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91fb437d0b280f8739f0c6d1b6b90efeb73ab3c0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 500547ba6fa2fb53675dfd6eb8e5a32ffb293e49
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790369"
 ---
 # <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Wird für die Unterstützung von Mergeveröffentlichungen verwendet, indem ein Administrator die Möglichkeit erhält, bestimmte ausstehende Schemaänderungen auszulassen, sodass sie nicht repliziert werden. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -49,7 +49,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_markpendingschemachange** wird bei der Mergereplikation verwendet.  
   
  **sp_markpendingschemachange** ist eine gespeicherte Prozedur für die Unterstützung der Mergereplikation und sollte nur verwendet werden, wenn andere Korrekturmaßnahmen, wie z. b. die erneute Initialisierung, die Situation nicht beheben konnten oder zu teuer in Bezug auf die Leistung sind.  

@@ -13,17 +13,17 @@ ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42c8a45bb50e5fda8946cc3819aa4702f5c2fb3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d53cded519d054ae0782eceb66972193a5645d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789166"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  In diesem Thema werden die SQLGetDescRec-Funktionalität erläutert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die für Native Client spezifisch ist.  
+  In diesem Thema werden die SQLGetDescRec-Funktionalität erläutert, die für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client spezifisch ist.  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec und Tabellenwertparameter  
  SQLGetDescRec kann verwendet werden, um Werte für Attribute von Tabellenwert Parametern und Tabellenwert Parameter-Spalten zu erhalten. Der *RecNumber* -Parameter von sqlgetdebug entspricht dem *ParameterNumber* -Parameter von SQLBindParameter.  

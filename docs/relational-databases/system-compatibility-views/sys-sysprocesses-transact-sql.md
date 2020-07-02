@@ -1,5 +1,5 @@
 ---
-title: sys. sysprocesses (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sysProzesse (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9e90b22dc5542d83533bff584af326abdcc4902
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78866368"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787045"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält Informationen zu Prozessen, die in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Bei diesen Prozessen kann es sich um Clientprozesse oder Systemprozesse handeln. Für den Zugriff auf sysprocesses müssen Sie sich im Kontext der master-Datenbank befinden, oder Sie müssen den dreiteiligen Namen master.dbo.sysprocesses verwenden.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "78866368"
 |last_batch|**datetime**|Der Zeitpunkt, zu dem ein Clientprozess zuletzt einen RPC-Aufruf oder eine EXECUTE-Anweisung ausgeführt hat.|  
 |ecid|**smallint**|Kontext-ID der Ausführung, die zur eindeutigen Bezeichnung der Subthreads verwendet wird, die für einen einzelnen Prozess ausgeführt werden.|  
 |open_tran|**smallint**|Anzahl der offenen Transaktionen für den Prozess.|  
-|status|**NCHAR (30)**|Der Prozess-ID-Status. Mögliche Werte sind:<br /><br /> **ruhende**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird die Sitzung zurückgesetzt.<br /><br /> wird **ausgeführt** = die Sitzung führt einen oder mehrere Batches aus. Wenn MARS (Multiple Active Result Sets) aktiviert ist, kann eine Sitzung mehrere Batches ausführen. Weitere Informationen finden Sie unter [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **Background** = die Sitzung führt einen Hintergrund Task aus, z. b. die Deadlockerkennung.<br /><br /> **Rollback** = für die Sitzung ist ein Transaktionsrollback in Verarbeitung.<br /><br /> **Pending** = die Sitzung wartet darauf, dass ein Arbeits Thread verfügbar wird.<br /><br /> **ausführbaren** = der Task in der Sitzung befindet sich in der ausführbaren Warteschlange eines Zeit Planungs Moduls, während er darauf wartet, ein Zeit Quantum zu erhalten.<br /><br /> **SPINLOOP** = der Task in der Sitzung wartet darauf, dass ein Spinlock frei wird.<br /><br /> angeh **alten = die** Sitzung wartet auf den Abschluss eines Ereignisses, z. b. der e/a-Vorgänge.|  
+|status|**NCHAR (30)**|Der Prozess-ID-Status. Mögliche Werte sind:<br /><br /> **ruhende**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setzt die Sitzung zurück.<br /><br /> wird **ausgeführt** = die Sitzung führt einen oder mehrere Batches aus. Wenn MARS (Multiple Active Result Sets) aktiviert ist, kann eine Sitzung mehrere Batches ausführen. Weitere Informationen finden Sie unter [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **Background** = die Sitzung führt einen Hintergrund Task aus, z. b. die Deadlockerkennung.<br /><br /> **Rollback** = für die Sitzung ist ein Transaktionsrollback in Verarbeitung.<br /><br /> **Pending** = die Sitzung wartet darauf, dass ein Arbeits Thread verfügbar wird.<br /><br /> **ausführbaren** = der Task in der Sitzung befindet sich in der ausführbaren Warteschlange eines Zeit Planungs Moduls, während er darauf wartet, ein Zeit Quantum zu erhalten.<br /><br /> **SPINLOOP** = der Task in der Sitzung wartet darauf, dass ein Spinlock frei wird.<br /><br /> angeh **alten = die** Sitzung wartet auf den Abschluss eines Ereignisses, z. b. der e/a-Vorgänge.|  
 |sid|**Binary (86)**|Global eindeutiger Bezeichner (GUID, Globally Unique Identifier) für den Benutzer.|  
 |hostname|**NCHAR (128)**|Name der Arbeitsstation.|  
 |program_name|**NCHAR (128)**|Name des Anwendungsprogramms.|  
@@ -69,9 +69,9 @@ ms.locfileid: "78866368"
 |stmt_start|**int**|Der Startoffset der aktuellen SQL-Anweisung für den angegebenen sql_handle-Wert.|  
 |stmt_end|**int**|Der Endoffset der aktuellen SQL-Anweisung für den angegebenen sql_handle-Wert.<br /><br /> -1 = Die aktuelle Anweisung wird bis zum Ende der Ergebnisse ausgeführt, die von der fn_get_sql-Funktion für den angegebenen sql_handle-Wert zurückgegeben werden.|  
 |request_id|**int**|Die ID der Anforderung. Hiermit werden Anforderungen identifiziert, die in einer bestimmten Sitzung ausgeführt werden.|
-|page_resource |**Binär (8)** |**Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Eine 8-Byte-hexadezimale Darstellung der Seiten Ressource, `waitresource` wenn die Spalte eine Seite enthält. |  
+|page_resource |**Binär (8)** |**Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Eine 8-Byte-hexadezimale Darstellung der Seiten Ressource, wenn die `waitresource` Spalte eine Seite enthält. |  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn ein Benutzer die VIEW SERVER STATE-Berechtigung auf dem Server besitzt, kann er alle zurzeit ausgeführten Sitzungen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen; andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt.  
   
 ## <a name="see-also"></a>Weitere Informationen  

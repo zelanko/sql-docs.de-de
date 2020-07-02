@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2da1f6d7c76880181996d2f41bce617c42e2f83
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 570027303636dce9c037e22f9f4857af03a62e92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830039"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786136"
 ---
 # <a name="sp_mschange_merge_agent_properties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert die Eigenschaften eines Merge-Agent Auftrags, der auf einem Verteiler mit oder einer höheren Version ausgeführt wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Diese gespeicherte Prozedur wird zum Ändern von Eigenschaften verwendet, wenn der Verleger in einer Instanz von [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ausgeführt wird. Diese gespeicherte Prozedur wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
   
@@ -59,9 +59,9 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
  Diese Tabelle beschreibt die änderbaren Eigenschaften des Merge-Agent-Auftrags sowie die Einschränkungen für die Werte dieser Eigenschaften.  
   
-|Eigenschaft|Wert|Beschreibung|  
+|Eigenschaft|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**Beschreibung**||Kurze Beschreibung des Abonnements.|  
+|**description**||Kurze Beschreibung des Abonnements.|  
 |**merge_job_login**||Anmeldename für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird.|  
 |**merge_job_password**||Kennwort für das Windows-Konto, unter dem der Agentauftrag ausgeführt wird.|  
 |**publisher_login**||Anmeldename, der beim Herstellen der Verbindung mit einem Verleger zum Synchronisieren des Abonnements verwendet werden soll.|  
@@ -79,7 +79,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_MSchange_merge_agent_properties** wird bei der Mergereplikation verwendet.  
   
  Wenn der Verleger auf einer Instanz von oder einer höheren [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Version ausgeführt wird, sollten Sie [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) verwenden, um die Eigenschaften eines Merge-Agent Auftrags zu ändern, der ein Pushabonnement synchronisiert, das auf dem Verteiler ausgeführt wird.  

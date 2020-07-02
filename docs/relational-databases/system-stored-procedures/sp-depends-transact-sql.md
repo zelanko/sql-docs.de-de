@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 396e370e7cb271c516033eb160332ac749a27aca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787005"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Zeigt Informationen zu den Abhängigkeiten von Datenbankobjekten an, z. B. die Sichten und Prozeduren, die von einer Tabelle oder Sicht abhängen, und die Tabellen und Sichten, die von der Sicht oder Prozedur abhängen. Verweise auf Objekte außerhalb der aktuellen Datenbank werden nicht angezeigt.  
   
@@ -63,7 +63,7 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>Resultsets  
  **sp_depends** zeigt zwei Resultsets an.  
   
- Das folgende Resultset zeigt die Objekte an, von denen die * \< Objekt>* abhängig sind.  
+ Das folgende Resultset zeigt die Objekte an, *\<object>* von denen abhängt.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -73,7 +73,7 @@ sp_depends [ @objname = ] '<object>'
 |**gewählte**|**nvarchar (8)**|Gibt an, ob das Element in einer SELECT-Anweisung verwendet wird.|  
 |**column**|**sysname**|Spalte oder Parameter, für die bzw. den die Abhängigkeit vorhanden ist.|  
   
- Im folgenden Resultset werden die Objekte angezeigt, die von * \< Objekt>* abhängig sind.  
+ Das folgende Resultset zeigt die Objekte an, die von abhängen *\<object>* .  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  

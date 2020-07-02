@@ -14,23 +14,23 @@ ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69457daccbc7868e58f91c71a48b4b25f15f5318
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10bb4cf287d8cd2bcc2c0396659b1c2adad595d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302717"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789445"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Beachten Sie als allgemeine Regel die Auswirkungen der Verwendung von **SQLBindCol** , um Daten zu konvertieren. Bindungskonvertierungen sind Clientprozesse. Wenn Sie beispielsweise einen Gleitkommawert, der an eine Zeichenspalte gebunden ist, abrufen, führt der Treiber die Gleitkomma-in-Zeichen-Konvertierung lokal durch, wenn eine Zeile abgerufen wird. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT-Funktion kann zum Übertragen der Kosten einer Datenkonvertierung auf den Server verwendet werden.  
   
  Eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann mehrere Sets an Ergebniszeilen bei einer einzelnen Anweisungsausführung zurückgeben. Jedes Resultset muss getrennt gebunden sein. Weitere Informationen zum Binden mehrerer Resultsets finden Sie unter [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md).  
   
- Der Entwickler kann mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *TargetType* -Werts **SQL_C_BINARY**Spalten an bestimmte C-Datentypen binden. An [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Typen gebundene Spalten sind nicht übertragbar. Die definierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen ODBC-C-Datentypen entsprechen den Typdefinitionen für DB-Library, und DB-Library-Entwickler, die Anwendungen übertragen, können diese Funktion nutzen.  
+ Der Entwickler kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des *TargetType* -Werts **SQL_C_BINARY**Spalten an bestimmte C-Datentypen binden. An [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Typen gebundene Spalten sind nicht übertragbar. Die definierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen ODBC-C-Datentypen entsprechen den Typdefinitionen für DB-Library, und DB-Library-Entwickler, die Anwendungen übertragen, können diese Funktion nutzen.  
   
- Das Abschneiden von Berichtsdaten ist ein kostspieliger Prozess [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für den Native Client-ODBC-Treiber. Sie können das Abschneiden vermeiden, indem Sie sicherstellen, dass alle gebundenen Datenpuffer weit genug sind, um Daten zurückzugeben. Bei Zeichendaten sollte die Breite ausreichend Platz für ein Zeichenfolgeabschlusszeichen bieten, wenn das Standardtreiberverhalten für den Zeichenfolgenabschluss verwendet wird. Wenn Sie z. b [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . eine **char (5)** -Spalte an ein Array mit fünf Zeichen binden, wird für jeden abgerufenen Wert ein Abschneiden erzielt. Wenn Sie die gleiche Spalte an ein Array mit sechs Zeichen binden, wird die Abschneidung vermieden, indem ein Zeichenelement bereitgestellt wird, in dem das Null-Abschlusszeichen gespeichert werden soll. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) kann verwendet werden, um lange Zeichen-und Binärdaten ohne Abschneiden effizient abzurufen.  
+ Das Abschneiden von Berichtsdaten ist ein kostspieliger Prozess für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber. Sie können das Abschneiden vermeiden, indem Sie sicherstellen, dass alle gebundenen Datenpuffer weit genug sind, um Daten zurückzugeben. Bei Zeichendaten sollte die Breite ausreichend Platz für ein Zeichenfolgeabschlusszeichen bieten, wenn das Standardtreiberverhalten für den Zeichenfolgenabschluss verwendet wird. Wenn Sie z. b [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . eine **char (5)** -Spalte an ein Array mit fünf Zeichen binden, wird für jeden abgerufenen Wert ein Abschneiden erzielt. Wenn Sie die gleiche Spalte an ein Array mit sechs Zeichen binden, wird die Abschneidung vermieden, indem ein Zeichenelement bereitgestellt wird, in dem das Null-Abschlusszeichen gespeichert werden soll. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) kann verwendet werden, um lange Zeichen-und Binärdaten ohne Abschneiden effizient abzurufen.  
   
  Wenn für Datentypen mit umfangreichen Werten der vom Benutzer bereitgestellte Puffer nicht groß genug ist, um den gesamten Wert der Spalte zu speichern, wird **SQL_SUCCESS_WITH_INFO** zurückgegeben, und die Zeichen folgen Daten; Right trunation "wird ausgegeben. Das **StrLen_or_IndPtr** -Argument enthält die Anzahl der im Puffer gespeicherten Zeichen/bytes.  
   
