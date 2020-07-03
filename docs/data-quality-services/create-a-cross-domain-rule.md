@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b42733965fc41662ba81514da59460a0d02d5ac8
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3124e5d844e3b0e1adc2053b0d62bdb000591f9d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812175"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900475"
 ---
 # <a name="create-a-cross-domain-rule"></a>Erstellen einer domänenübergreifenden Regel
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   In diesem Thema wird beschrieben, wie eine domänenübergreifende Regel für eine Verbunddomäne in einer Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellt wird. Eine domänenübergreifende Regel testet die Beziehung zwischen Werten in einzelnen Domänen, die in einer Verbunddomäne enthalten sind. Eine domänenübergreifende Regel muss über eine Verbunddomäne hinweg wahr sein, damit Domänenwerte als genau betrachtet werden und den Geschäftsanforderungen entsprechen. Eine domänenübergreifende Regel wird verwendet, um Domänenwerte zu validieren, zu korrigieren und zu standardisieren.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e869cd092dd242caff859298b97502693abe2116
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 382be73e4047c1d75b5ab95d1b3959cb05af68c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812099"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901182"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Enthält eine Zeile für jede Nachricht, die von der Datenbank-E-Mail gesendet wurde. Verwenden Sie **sysmail_sentitems** , wenn Sie sehen möchten, welche Nachrichten erfolgreich gesendet wurden.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82812099"
 |**/Kleinschreibung**|**varchar (12)**|Der **Sensitivitäts** Parameter der Nachricht.|  
 |**file_attachments**|**varchar(max)**|Eine durch Semikolons getrennte Liste der Dateinamen, die an die E-Mail-Nachricht angehängt wurden.|  
 |**attachment_encoding**|**varchar (20)**|Der Typ der E-Mail-Anlage.|  
-|**query**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
+|**Frage**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
 |**execute_query_database**|**sysname**|Der Datenbankkontext, in dem das E-Mail-Programm die Abfrage ausgeführt hat.|  
 |**attach_query_result_as_file**|**bit**|Bei einem Wert von 0 wurden die Abfrageergebnisse hinter dem Inhalt des Textkörpers in den Textkörper der E-Mail-Nachricht eingeschlossen. Bei einem Wert von 1 wurden die Ergebnisse als Anlage zurückgegeben.|  
 |**query_result_header**|**bit**|Bei einem Wert von 1 enthielten die Abfrageergebnisse Spaltenheader. Bei einem Wert von 0 enthielten die Abfrageergebnisse keine Spaltenheader.|  
@@ -61,7 +61,7 @@ ms.locfileid: "82812099"
 |**last_mod_date**|**datetime**|Das Datum und die Uhrzeit der letzten Änderung der Zeile.|  
 |**last_mod_user**|**sysname**|Der Benutzer, der die Zeile zuletzt geändert hat.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn Sie Probleme mit der Datenbank-E-Mail behandeln, kann diese Sicht Ihnen helfen, die Ursache des Problems zu identifizieren, da sie die Attribute der Nachrichten anzeigt, die erfolgreich gesendet wurden. Die Datenbank-E-Mail markiert Nachrichten als gesendet, wenn sie erfolgreich an einen SMTP-Mailserver übermittelt wurden. E-Mails werden normalerweise innerhalb weniger Minuten empfangen, können sich jedoch aufgrund von Problemen mit dem SMTP-Server verzögern. Die Datenbank-E-Mail markiert die Nachricht als gesendet, wenn sie vom SMTP-Mailserver akzeptiert wurde. E-Mail-Fehler, die auf dem SMTP-Mailserver auftreten, z. B. eine unzustellbare Empfänger-E-Mail-Adresse, werden nicht an die Datenbank-E-Mail zurückgegeben. Diese E-Mails werden als gesendet markiert, obwohl sie nicht übermittelt wurden. Diese Art von Problem müssen Sie auf dem SMTP-Server behandeln. Darüber hinaus sendet der SMTP-Mailserver möglicherweise eine Benachrichtigung, dass die Nachricht nicht zugestellt werden konnte, an die Antwort-E-Mail-Adresse für ein Datenbank-E-Mail-Konto.  
   
 ## <a name="permissions"></a>Berechtigungen  

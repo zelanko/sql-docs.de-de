@@ -16,17 +16,17 @@ ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 14eff405fd4eb1b96f4f5e5b50624d2c1251d546
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c749f1d0a1cd5076d09de9fb38bba75c637fd130
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148758"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900639"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Herstellen einer Verbindung zu einer Instanz von SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  Der erste Programmier Schritt in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)-Anwendung besteht darin, eine Instanz des <xref:Microsoft.SqlServer.Management.Smo.Server> -Objekts zu erstellen und eine Verbindung mit einer Instanz [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]von herzustellen.  
+  Der erste Programmier Schritt in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)-Anwendung besteht darin, eine Instanz des <xref:Microsoft.SqlServer.Management.Smo.Server> -Objekts zu erstellen und eine Verbindung mit einer Instanz von herzustellen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Es stehen drei Möglichkeiten zur Verfügung, um eine Instanz des <xref:Microsoft.SqlServer.Management.Smo.Server>-Objekts zu erstellen und eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herzustellen. Die erste Methode verwendet eine <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objektvariable, um die Verbindungsinformationen bereitzustellen. Die zweite Methode besteht darin, die Verbindungsinformationen durch die explizite Angabe der <xref:Microsoft.SqlServer.Management.Smo.Server>-Objekteigenschaften anzugeben. Bei der dritten Methode wird der Name der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz im <xref:Microsoft.SqlServer.Management.Smo.Server>-Objektkonstruktor angegeben. 
   
@@ -51,7 +51,7 @@ ms.locfileid: "70148758"
 ## <a name="connecting-to-an-instance-of-sql-server-for-rmo"></a>Herstellen einer Verbindung zu einer Instanz von SQL Server für RMO  
  Replikationsverwaltungsobjekte (RMO) unterscheiden sich im Aufbau einer Verbindung zu einem Replikationsserver leicht von SMO.  
   
- Bei RMO-Programmier Objekten ist es erforderlich, dass eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verbindung mit einer Instanz von <xref:Microsoft.SqlServer.Management.Common.ServerConnection> mithilfe des-Objekts hergestellt wird, das vom **Microsoft. SqlServer. Management. Common** -Namespace implementiert wird. Diese Verbindung zum Server erfolgt unabhängig von einem RMO-Programmierobjekt. Sie wird anschließend entweder während der Erstellung der Instanz oder durch die Zuweisung zur <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft des Objekts an das RMO-Objekts weitergegeben. Dadurch können ein RMO-Programmierobjekt und die Instanzen des Verbindungsobjekts getrennt erstellt und verwaltet werden. Zudem kann ein einzelnes Verbindungsobjekt mit mehreren RMO-Programmierobjekten verwendet werden. Für Verbindungen mit einem Replikationsserver gelten die folgenden Regeln:  
+ Bei RMO-Programmier Objekten ist es erforderlich, dass eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe des-Objekts hergestellt wird, das <xref:Microsoft.SqlServer.Management.Common.ServerConnection> vom **Microsoft. SqlServer. Management. Common** -Namespace implementiert wird. Diese Verbindung zum Server erfolgt unabhängig von einem RMO-Programmierobjekt. Sie wird anschließend entweder während der Erstellung der Instanz oder durch die Zuweisung zur <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>-Eigenschaft des Objekts an das RMO-Objekts weitergegeben. Dadurch können ein RMO-Programmierobjekt und die Instanzen des Verbindungsobjekts getrennt erstellt und verwaltet werden. Zudem kann ein einzelnes Verbindungsobjekt mit mehreren RMO-Programmierobjekten verwendet werden. Für Verbindungen mit einem Replikationsserver gelten die folgenden Regeln:  
   
 -   Alle Eigenschaften für die Verbindung werden für ein angegebenes <xref:Microsoft.SqlServer.Management.Common.ServerConnection> Objekt definiert.  
   
@@ -99,7 +99,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Herstellen einer Verbindung zur Remoteinstanz von SQL Server mithilfe der Windows-Authentifizierung in Visual Basic  
  Wenn Sie mithilfe der Windows-Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellen, müssen Sie den Authentifizierungstyp nicht angeben. Die Windows-Authentifizierung ist als Standard vorgegeben.  
   
- Dieses Beispiel ist [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ein .NET-Code, der mithilfe der Windows [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung eine Verbindung mit der Remote Instanz von herstellt. Die Zeichen folgen *Variable "* ".  
+ Dieses Beispiel ist ein [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET-Code, der mithilfe der Windows-Authentifizierung eine Verbindung mit der Remote Instanz von herstellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Die Zeichen folgen *Variable "* ".  
   
 ```VBNET   
 'Connect to a remote instance of SQL Server.
@@ -131,7 +131,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-basic"></a>Herstellen einer Verbindung zu einer Instanz von SQL Server mithilfe der SQL Server-Authentifizierung in Visual Basic  
  Wenn Sie mithilfe der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellen, müssen Sie den Authentifizierungstyp angeben. In diesem Beispiel ist eine Alternativmethode angegeben, mit der Sie eine <xref:Microsoft.SqlServer.Management.Common.ServerConnection>-Objektvariable deklarieren und die Verbindungsinformationen wiederverwenden können.  
   
- Das Beispiel ist [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ein .NET-Code, der veranschaulicht, wie eine Verbindung mit dem Remote-und dem *vpassword* -Anmelde-und-Kennwort hergestellt  
+ Das Beispiel ist ein [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET-Code, der veranschaulicht, wie eine Verbindung mit dem Remote-und dem *vpassword* -Anmelde-und-Kennwort hergestellt  
   
 ```VBNET  
 ' compile with:   

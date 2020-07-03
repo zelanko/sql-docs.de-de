@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b33ff1cb4b46334f0b42d81f87920ef666a82e81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4d065ba57ab90e1bb035a6ef92100d351d93603
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663440"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899939"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält Informationen zur Verwendung des Caches.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "85663440"
 |-----------------|---------------|-----------------|  
 |**bucketid**|**int**|Bucket-ID. Der Wert liegt im Bereich von 0 bis (Verzeichnisgröße - 1). Die Verzeichnisgröße ist die Größe der Hashtabelle.|  
 |**cacheobjtype**|**nvarchar (17)**|Typ des Objekts im Cache:<br /><br /> Kompilierter Plan<br /><br /> Ausführbarer Plan<br /><br /> Analysestruktur<br /><br /> Cursor<br /><br /> Erweiterte gespeicherte Prozedur|  
-|**objtype**|**nvarchar (8)**|Typ des Objekts:<br /><br /> Gespeicherte Prozedur<br /><br /> Vorbereitete Anweisung<br /><br /> Ad-hoc-Abfrage ([!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen, die als Sprachereignisse von den Hilfsprogrammen **sqlcmd** oder **osql** aus übermittelt wurden, im Gegensatz zu Remoteprozeduraufrufen)<br /><br /> ReplProc (Replikationsprozedur)<br /><br /> Trigger<br /><br /> Ansicht<br /><br /> Standard<br /><br /> Benutzertabelle<br /><br /> Systemtabelle<br /><br /> Azure Functions<br /><br /> Regel|  
+|**objtype**|**nvarchar (8)**|Typ des Objekts:<br /><br /> Gespeicherte Prozedur<br /><br /> Vorbereitete Anweisung<br /><br /> Ad-hoc-Abfrage ([!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen, die als Sprachereignisse von den Hilfsprogrammen **sqlcmd** oder **osql** aus übermittelt wurden, im Gegensatz zu Remoteprozeduraufrufen)<br /><br /> ReplProc (Replikationsprozedur)<br /><br /> Trigger<br /><br /> Anzeigen<br /><br /> Standard<br /><br /> Benutzertabelle<br /><br /> Systemtabelle<br /><br /> Azure Functions<br /><br /> Regel|  
 |**objid**|**int**|Einer der Hauptschlüssel zur Suche nach einem Objekt im Cache. Für Datenbankobjekte (Prozeduren, Sichten, Trigger usw.) ist dies die Objekt-ID, die in **sysobjects** gespeichert wird. Bei Cacheobjekten, wie Ad-hoc-SQL-Code oder vorbereiteter SQL-Code, ist **objid** ein intern generierter Wert.|  
 |**DBID**|**smallint**|ID der Datenbank, in der das Cacheobjekt kompiliert wurde.|  
 |**dbidexec**|**smallint**|Datenbank-ID, von der die Abfrage ausgeführt wird.<br /><br /> Bei den meisten Objekten besitzt **dbidexec** denselben Wert wie **dbid**.<br /><br /> Bei Systemsichten ist **dbidexec** die Datenbank-ID, von der die Abfrage ausgeführt wird.<br /><br /> Für Ad-hoc-Abfragen ist **dbidexec** 0. Dies bedeutet, dass **dbidexec** denselben Wert besitzt wie **dbid**.|  

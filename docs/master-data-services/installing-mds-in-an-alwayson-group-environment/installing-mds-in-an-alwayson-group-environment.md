@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cf37f6c9951107e901b05b21f4b7947bcfa381bb
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: f17290773a3becf0b33b28eb5e95bf914d53af06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440967"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901728"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 In diesem Artikel wird eine Lösung für Master Data Service (MDS) beschrieben, die auf Always on Konfiguration der Verfügbarkeits Gruppe gehostet wird. In diesem Artikel wird beschrieben, wie Sie SQL 2016 Master Data Services auf einer SQL 2016 Always on Availability Group (AG) installieren und konfigurieren. Der Hauptzweck dieser Lösung ist die Verbesserung der Hochverfügbarkeit und der Notfallwiederherstellung von MDS-Back-End-Daten, die auf einer SQL Server-Datenbank gehostet werden.
 
@@ -309,7 +309,7 @@ Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Kn
 
 8. Klicken Sie auf der Seite **Replikate angeben** auf die Registerkarte **Listener** und tun Sie Folgendes: Weitere Informationen in Abbildung 18.
 
-   ein. Klicken Sie auf **Verfügbarkeitsgruppenlistener erstellen**, um einen Verfügbarkeitsgruppenlistener für die MDS-Datenbankverbindung einzurichten.
+   a. Klicken Sie auf **Verfügbarkeitsgruppenlistener erstellen**, um einen Verfügbarkeitsgruppenlistener für die MDS-Datenbankverbindung einzurichten.
 
    b. Geben Sie einen **DNS-Namen des Listeners** ein, z.B. MDSSQLServer.
 

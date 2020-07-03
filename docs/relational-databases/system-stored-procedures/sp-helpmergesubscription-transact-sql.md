@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c966899707c7e37dee82dda9c678b4ac40df026f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c1c2ff23ecde51f13270fca3f674c58412858f6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626980"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899562"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen über ein Abonnement (Push und Pull) für eine Mergeveröffentlichung zurück. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank oder auf dem Wiederveröffentlichungsabonnenten für die Abonnementdatenbank ausgeführt.  
   
@@ -55,7 +55,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscription_type = ] 'subscription_type'`Der Abonnementtyp. *subscription_type*ist vom Datentyp **nvarchar (15)**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Push** (Standard)|Pushabonnement|  
 |**auszu**|Pull-Abonnement|  

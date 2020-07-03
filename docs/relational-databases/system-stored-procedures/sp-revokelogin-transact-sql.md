@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f7b0c3e906fdd9576970ed1e8dfd69893b0759a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95727b3cb27e5ac72af38374da01b203f1a076cc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750473"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901335"
 ---
 # <a name="sp_revokelogin-transact-sql"></a>sp_revokelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Entfernt die Anmelde Einträge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für einen Windows-Benutzer oder eine Windows-Gruppe, die mit Create Login, **sp_grantlogin**oder **sp_denylogin**erstellt wurde.  
   
@@ -72,7 +72,7 @@ sp_revokelogin [ADVWORKS\john]
 EXEC sp_revokelogin 'Corporate\MollyA';  
 ```  
   
- oder  
+ Oder  
   
 ```  
 EXEC sp_revokelogin [Corporate\MollyA];  

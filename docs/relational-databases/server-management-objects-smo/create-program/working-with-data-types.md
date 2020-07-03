@@ -16,17 +16,17 @@ ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2d92f83980c52ab09e846345f9197349c836f0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ee6c9bdd036d79eb6af1c1d353272a88251e181
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148685"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901072"
 ---
 # <a name="working-with-data-types"></a>Arbeiten mit Datentypen
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  Daten sind in vielen Typen und Größen verfügbar, beispielsweise als Zeichenfolge mit einer definierten Länge, als Zahl mit einer bestimmten Genauigkeit oder als benutzerdefinierter Datentyp, bei dem es sich um ein anderes Objekt mit einem eigenen Satz an Regeln handelt. Das <xref:Microsoft.SqlServer.Management.Smo.DataType> -Objekt klassifiziert den Typ der Daten, sodass er von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ordnungsgemäß verarbeitet werden kann. Das <xref:Microsoft.SqlServer.Management.Smo.DataType>-Objekt ist Objekten zugeordnet, die Daten akzeptieren. Die folgenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)-Objekte akzeptieren Daten, die durch eine <xref:Microsoft.SqlServer.Management.Smo.DataType>-Objekteigenschaft definiert sein müssen:  
+  Daten sind in vielen Typen und Größen verfügbar, beispielsweise als Zeichenfolge mit einer definierten Länge, als Zahl mit einer bestimmten Genauigkeit oder als benutzerdefinierter Datentyp, bei dem es sich um ein anderes Objekt mit einem eigenen Satz an Regeln handelt. Das- <xref:Microsoft.SqlServer.Management.Smo.DataType> Objekt klassifiziert den Typ der Daten, sodass er von ordnungsgemäß verarbeitet werden kann [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Das <xref:Microsoft.SqlServer.Management.Smo.DataType>-Objekt ist Objekten zugeordnet, die Daten akzeptieren. Die folgenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)-Objekte akzeptieren Daten, die durch eine <xref:Microsoft.SqlServer.Management.Smo.DataType>-Objekteigenschaft definiert sein müssen:  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Column>  
   
@@ -50,13 +50,13 @@ ms.locfileid: "70148685"
   
 -   Geben Sie <xref:Microsoft.SqlServer.Management.Smo.DataType> inline im Objektkonstruktor an.  
   
--   Verwenden Sie eines der statischen Member der- <xref:Microsoft.SqlServer.Management.Smo.DataType> Klasse, z. b. **int**. Dadurch wird tatsächlich eine Instanz eines- <xref:Microsoft.SqlServer.Management.Smo.DataType> Objekts zurückgegeben.  
+-   Verwenden Sie eines der statischen Member der- <xref:Microsoft.SqlServer.Management.Smo.DataType> Klasse, z. b. **int**. Dadurch wird tatsächlich eine Instanz eines-Objekts zurückgegeben <xref:Microsoft.SqlServer.Management.Smo.DataType> .  
   
  Das <xref:Microsoft.SqlServer.Management.Smo.DataType>-Objekt verfügt über einige Eigenschaften, die den Datentyp definieren. Beispielsweise gibt die <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>-Eigenschaft den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp an. Die konstanten Werte, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen darstellen, werden in der <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>-Enumeration aufgelistet. Dies gilt für Datentypen wie **varchar**, **nchar**, **currency**, **integer**, **float**und **datetime**.  
   
  Nachdem der Datentyp definiert wurde, müssen bestimmte Eigenschaften für die Daten festgelegt werden. Beispielsweise muss bei einem **nchar** -Typ die Länge der Zeichenfolgenddaten mit der **Length** -Eigenschaft angegeben werden. Das Gleiche gilt für numerische Werte, für die Genauigkeit und Dezimalstellenanzahl angegeben werden muss.  
   
- Der <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>-Datentyp und der <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>-Datentyp beziehen sich auf Objekte, die die Definition des vom Benutzer definierten Datentyps enthalten. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> basiert auf den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen aus der <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>-Enumeration. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType> Basiert auf [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET-Datentypen. In der Regel würden diese Daten eines bestimmten Typs darstellen, der wegen der von der Organisation definierten Geschäftsregeln in der Datenbank häufig verwendet wird. Beispielsweise wäre ein Datentyp, mit dem ein Währungsbetrag und ein Währungsbezeichner gespeichert wird, für eine Firma hilfreich, die mit mehreren Währungen arbeitet.  
+ Der <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>-Datentyp und der <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>-Datentyp beziehen sich auf Objekte, die die Definition des vom Benutzer definierten Datentyps enthalten. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> basiert auf den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen aus der <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>-Enumeration. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>Basiert auf .net- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Datentypen. In der Regel würden diese Daten eines bestimmten Typs darstellen, der wegen der von der Organisation definierten Geschäftsregeln in der Datenbank häufig verwendet wird. Beispielsweise wäre ein Datentyp, mit dem ein Währungsbetrag und ein Währungsbezeichner gespeichert wird, für eine Firma hilfreich, die mit mehreren Währungen arbeitet.  
   
  Die <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>-Enumeration enthält eine Liste aller von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]- unterstützten Datentypen.  
   
@@ -95,7 +95,7 @@ dt = new DataType(SqlDataType.Decimal, 10, 2);
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-basic"></a>Konstruktion eines DataType-Objekts mithilfe des Standardkonstruktors in Visual Basic  
  Im folgenden Codebeispiel wird gezeigt, wie mit dem Standardkonstruktor Instanzen von Datentypen erstellt werden, die auf verschiedenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentypen basieren. Mithilfe der Eigenschaften wird der Datentyp dann angegeben.  
   
- **Hinweis** Die <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>XML <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>-Typen, und erfordern einen namens Wert zur Identifizierung des Objekts.  
+ **Hinweis** Die <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType> <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> XML-Typen, und erfordern einen namens Wert zur Identifizierung des Objekts.  
   
 ```VBNET
 'Declare and create a DataType object variable.
@@ -110,7 +110,7 @@ dt.MaximumLength = 100
 ## <a name="constructing-a-datatype-object-by-using-the-default-constructor-in-visual-c"></a>Konstruktion eines DataType-Objekts mithilfe des Standardkonstruktors in Visual C#  
  Im folgenden Codebeispiel wird gezeigt, wie mit dem Standardkonstruktor Instanzen von Datentypen erstellt werden, die auf verschiedenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentypen basieren. Mithilfe der Eigenschaften wird der Datentyp dann angegeben.  
   
- **Hinweis** Die <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType>XML <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType>-Typen, und erfordern einen namens Wert zur Identifizierung des Objekts.  
+ **Hinweis** Die <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType> <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> XML-Typen, und erfordern einen namens Wert zur Identifizierung des Objekts.  
   
 ```csharp  
 {   

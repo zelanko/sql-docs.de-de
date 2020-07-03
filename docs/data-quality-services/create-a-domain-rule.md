@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2615b71c19011b42bb8497ef07096cc27084409b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e77d3966476bba662f864cb2f81dbbfa983d4740
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85810606"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900449"
 ---
 # <a name="create-a-domain-rule"></a>Erstellen einer Domänenregel
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   In diesem Thema wird beschrieben, wie Sie eine Domänenregel in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellen. Eine Domänenregel ist eine Bedingung, mit der Domänenwerte validiert, korrigiert und standardisiert werden. Eine Domänenregel muss über eine Domäne hinweg wahr sein, damit Domänenwerte als genau betrachtet werden und den Geschäftsanforderungen entsprechen. Domänenregeln können Überprüfungsregeln enthalten, die für die Überprüfung von Domänenwerten, aber nicht für die Korrektur von Daten in Data Quality-Projekten verwendet werden. Regeln umfassen auch Standardisierungsregeln, die auf gültige Daten angewendet und in der Datenkorrektur verwendet werden.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "85810606"
   
  Beim Erstellen einer Domänenregel stehen verschiedene Alternativen zur Auswahl. Um beispielsweise zu überprüfen, ob Werte mit dem Buchstaben A, B oder C beginnen, können Sie eine einfache Regel mit einer komplexen Bedingung (z. B. ein regulärer Ausdruck mit Pipezeichen) erstellen, oder Sie können eine komplexe Regel erstellen, die mehrere einfache Bedingungen enthält. Beispiel für die erste Regel: „Wert enthält regulären Ausdruck (^A|^B|^C)“. Beispiel für die zweite Regel: „'Wert beginnt mit A' OR 'Wert beginnt mit B' OR 'Wert beginnt mit C'“.  
   
-|Bedingung|BESCHREIBUNG|Beispiel|  
+|Bedingung|Beschreibung|Beispiel|  
 |---------------|-----------------|-------------|  
 |Länge ist gleich|Nur die Werte, die die vom Operanden festgelegte Anzahl an Zeichen enthalten, sind gültig.|Beispieloperand: 3<br /><br /> Gültiger Wert: BB1<br /><br /> Ungültiger Wert: AA|  
 |Länge ist größer als oder gleich|Nur die Werte, die mindestens die vom Operanden festgelegte Anzahl an Zeichen enthalten, sind gültig.|Beispieloperand: 3<br /><br /> Gültige Werte: BB1, BBAA<br /><br /> Ungültiger Wert: AA|  

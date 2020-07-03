@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 204668e8983ed3503e1a5697c47a4abde92d26cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9319cc35d3059bc1efafa3c4640b164c39d8bbfa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750515"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899482"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Liste der festen Serverrollen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück.  
   
@@ -41,7 +41,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ## <a name="arguments"></a>Argumente  
 `[ @srvrolename = ] 'role'`Der Name der Server Rolle "Fixed". *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. die *Rolle* kann einen der folgenden Werte aufweisen.  
   
-|Server Rolle "Fixed"|BESCHREIBUNG|  
+|Server Rolle "Fixed"|Beschreibung|  
 |-----------------------|-----------------|  
 |Serverrollen|Systemadministratoren|  
 |securityadmin|Sicherheitsadministratoren|  
@@ -60,7 +60,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Name der Serverrolle.|  
-|BESCHREIBUNG|**sysname**|Beschreibung von ServerRole.|  
+|Beschreibung|**sysname**|Beschreibung von ServerRole.|  
   
 ## <a name="remarks"></a>Hinweise  
  Feste Serverrollen werden auf Serverebene definiert und haben Berechtigungen, um spezifische Verwaltungsfunktionen auf Serverebene auszuführen. Feste Serverrollen können nicht hinzugefügt, entfernt oder geändert werden.  
