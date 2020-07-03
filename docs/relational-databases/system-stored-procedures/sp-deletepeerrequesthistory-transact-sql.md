@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7605a1f05fd99dcbd5b870cb78e15d6192708537
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe3a7edbb00eb7d3a4da1aa78689685a54e56277
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693097"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861414"
 ---
 # <a name="sp_deletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Löscht den Verlauf im Zusammenhang mit einer Veröffentlichungsstatus Anforderung, die den Anforderungs Verlauf ([MSpeer_request &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mspeer-request-transact-sql.md)) sowie den Antwort Verlauf ([MSpeer_response &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mspeer-response-transact-sql.md)) enthält. Diese gespeicherte Prozedur wird für die Veröffentlichungs Datenbank auf einem Verleger ausgeführt, der Teil einer Peer-zu-Peer-Replikations Topologie ist. Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
