@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fe885be9072f24c18e6115efcf511faea2d8908
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9fad9d93a1c0d4781f792fedfe3fe7649e17c98
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634372"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891731"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Liste der Warnungen für einen bestimmten Operator oder eine Liste der Operatoren für eine bestimmte Warnung zurück.  
   
@@ -50,7 +50,7 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'`Die *object_type*Informationen, die zurückgegeben werden. *enum_type* ist in den meisten Fällen tatsächlich. *enum_type*ist vom Typ **char (10)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |ACTUAL|Listet nur die *object_types* auf, die dem *Namen*zugeordnet sind.|  
 |ALLE|Listet alle*object_types* auf, einschließlich derjenigen, die nicht mit dem *Namen*verknüpft sind.|  
@@ -58,7 +58,7 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method`Ein numerischer Wert, der die zurück zugebende Benachrichtigungs Methoden Spalten bestimmt. *notification_method* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**1**|E-Mail: gibt nur die **use_email** Spalte zurück.|  
 |**2**|Pager: gibt nur die **use_pager** Spalte zurück.|  

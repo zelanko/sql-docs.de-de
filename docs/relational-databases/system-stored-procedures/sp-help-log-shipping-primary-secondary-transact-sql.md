@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25d3c2133ee02bc25a869ad3a465081de4d7d38e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a52339c2ff0b609b2c9f0dab4a3a893135be2d31
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634500"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893644"
 ---
 # <a name="sp_help_log_shipping_primary_secondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Diese gespeicherte Prozedur gibt Informationen zu allen sekundären Datenbanken für eine bestimmte primäre Datenbank zurück.  
   
@@ -47,7 +47,7 @@ sp_help_log_shipping_primary_secondary
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|BESCHREIBUNG|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |**secondary_server**|Der Name der sekundären Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokoll Versand Konfiguration.|  
 |**secondary_database**|Der Name der sekundären Datenbank in der Protokollversandkonfiguration.|  

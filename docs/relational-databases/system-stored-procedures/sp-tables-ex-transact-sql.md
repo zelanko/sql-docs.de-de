@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36ac5833a4bf714c6f4b294f15f0cf6aca6fb64d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3e986d5d998864a343eab31e238a8f7df56a5d0c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750427"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892624"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Tabelleninformationen zu den Tabellen auf dem angegebenen Verbindungsserver zurück.  
   
@@ -54,7 +54,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'`Der Typ der zurück zugebende Tabelle. *TABLE_TYPE* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL und kann einen der folgenden Werte aufweisen.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Alias**|Der Name eines Alias|  
 |**GLOBAL TEMPORARY**|Der Name einer systemweit verfügbaren temporären Tabelle|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e64d2f053696c16acbd72782501487adb726675
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea8b10c2cb788a8f778479487c0f39f95613f524
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756619"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893516"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert die Eigenschaften eines Momentaufnahmen-Agent Auftrags, der auf einem Verteiler mit oder einer höheren Version ausgeführt wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Diese gespeicherte Prozedur wird zum Ändern von Eigenschaften verwendet, wenn der Verleger in einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ausgeführt wird. Diese gespeicherte Prozedur wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
   
@@ -120,7 +120,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_type = ] 'publisher_type'`Gibt den Verlegertyp an, wenn der Verleger nicht in einer Instanz von ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an.|  
 |**Orakel**|Gibt einen standardmäßigen Oracle-Verleger an.|  

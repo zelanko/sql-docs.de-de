@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e8b2c1a1ec0bb6c1417fa68720f2d345c6bc4ccb
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 068ae31abe61fac86d740fe3e03787fd32dde465
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813842"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894221"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Konfigurieren von Schweregraden für DQS-Protokolldateien
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   In diesem Thema wird beschrieben, wie Schweregrade für verschiedene Aktivitäten und Module in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) mit [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]konfiguriert werden. Schweregrade definieren die Intensität von Ereignissen, die in DQS auftreten. DQS-Ereignisse verfügen über die folgenden Schweregrade, angefangen mit dem höchsten Schweregrad:  
   

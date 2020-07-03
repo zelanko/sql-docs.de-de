@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ba144f6cf06104f406545e3c7651072784de3c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4ba169522f0deac50dd840a5eeceff63c9eb178e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824887"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891965"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Enthält eine Zeile für jede Nachricht, die von der Datenbank-E-Mail verarbeitet wurde. Verwenden Sie diese Sicht, wenn Sie den Status aller Nachrichten anzeigen möchten.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82824887"
 |**/Kleinschreibung**|**varchar (12)**|Der **Sensitivitäts** Parameter der Nachricht.|  
 |**file_attachments**|**varchar(max)**|Eine durch Semikolons getrennte Liste der Dateinamen, die an die E-Mail-Nachricht angehängt wurden.|  
 |**attachment_encoding**|**varchar (20)**|Der Typ der E-Mail-Anlage.|  
-|**query**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
+|**Frage**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
 |**execute_query_database**|**sysname**|Der Datenbankkontext, in dem das E-Mail-Programm die Abfrage ausgeführt hat.|  
 |**attach_query_result_as_file**|**bit**|Bei einem Wert von 0 wurden die Abfrageergebnisse hinter dem Inhalt des Textkörpers in den Textkörper der E-Mail-Nachricht eingeschlossen. Bei einem Wert von 1 wurden die Ergebnisse als Anlage zurückgegeben.|  
 |**query_result_header**|**bit**|Bei einem Wert von 1 enthielten die Abfrageergebnisse Spaltenheader. Bei einem Wert von 0 enthielten die Abfrageergebnisse keine Spaltenheader.|  
@@ -61,7 +61,7 @@ ms.locfileid: "82824887"
 |**last_mod_date**|**datetime**|Das Datum und die Uhrzeit der letzten Änderung der Zeile.|  
 |**last_mod_user**|**sysname**|Der Benutzer, der die Zeile zuletzt geändert hat.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie die Ansicht **sysmail_allitems** , um den Status aller Nachrichten anzuzeigen, die von Datenbank-E-Mail verarbeitet werden. Wenn Sie Probleme mit der Datenbank-E-Mail behandeln, kann diese Sicht Ihnen helfen, die Ursache des Problems zu identifizieren, da sie die Attribute der gesendeten Nachrichten im Vergleich zu den Attributen der ungesendeten Nachrichten anzeigt.  
   
  Die von dieser Sicht verfügbar gemachten Systemtabellen enthalten alle Nachrichten und können dazu führen, dass die **msdb** -Datenbank vergrößert wird. Löschen Sie alte Nachrichten regelmäßig aus der Sicht, um die Größe der Tabellen zu reduzieren. Weitere Informationen finden Sie unter [Erstellen eines SQL Server-Agent Auftrags zum Archivieren Datenbank-E-Mail Nachrichten und Ereignisprotokollen](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  

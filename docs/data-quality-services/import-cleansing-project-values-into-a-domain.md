@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ffc5e2c36590fc1128eb1c073d51051fed2e4d1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 8688d5d20f1b5ac600e75327725ab18e9f8dba1b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814090"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892389"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importieren von Bereinigungsprojektwerten in eine Domäne
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   In [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) können Sie während des Bereinigungsprozesses in einem Datenqualitätsbereinigungsprojekt oder einem Integration Services-Paket mit der DQS-Bereinigungskomponente erfasstes Datenqualitätswissen in eine Domäne importieren. Dadurch wird sichergestellt, dass vertrauenswürdiges Wissen nicht verloren geht und dass die Wissensdatenbank ständig verbessert wird.  
   

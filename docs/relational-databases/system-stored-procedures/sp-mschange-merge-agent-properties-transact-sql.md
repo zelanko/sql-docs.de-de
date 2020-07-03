@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 570027303636dce9c037e22f9f4857af03a62e92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 65cb1e298293c0be44439fb732554baa2914788a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786136"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893498"
 ---
 # <a name="sp_mschange_merge_agent_properties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert die Eigenschaften eines Merge-Agent Auftrags, der auf einem Verteiler mit oder einer höheren Version ausgeführt wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Diese gespeicherte Prozedur wird zum Ändern von Eigenschaften verwendet, wenn der Verleger in einer Instanz von [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ausgeführt wird. Diese gespeicherte Prozedur wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
   
@@ -59,7 +59,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
  Diese Tabelle beschreibt die änderbaren Eigenschaften des Merge-Agent-Auftrags sowie die Einschränkungen für die Werte dieser Eigenschaften.  
   
-|Eigenschaft|Wert|BESCHREIBUNG|  
+|Eigenschaft|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**description**||Kurze Beschreibung des Abonnements.|  
 |**merge_job_login**||Anmeldename für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird.|  

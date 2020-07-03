@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6a542e44f33a64b5cdd4727aab891592338b880
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c3c0351bd541738e2540cc1a0624cf0ca9836c5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724623"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893985"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Zeile für jede Anwendungsdomäne auf dem Server zurück. Die Anwendungsdomäne (**AppDomain**) ist ein Konstrukt im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), das die Isolationseinheit für eine Anwendung ist. Mit dieser Ansicht können Sie CLR-Integrations Objekte, die in ausgeführt werden, verstehen und beheben [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "85724623"
   
 ## <a name="appdomain-cleanup"></a>AppDomain-Cleanup  
   
-|State|BESCHREIBUNG|  
+|State|Beschreibung|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hat angefordert, dass die CLR die **AppDomain**entladen soll, in der Regel, weil die Assembly, die die verwalteten Datenbankobjekte enthält, geändert oder gelöscht wurde.|  
 |E_APPDOMAIN_UNLOADED|Die CLR hat die **AppDomain**entladen. Dies ist normalerweise das Ergebnis eines Eskalations Verfahrens aufgrund von **ThreadAbort**, **outhfmemory**oder einer nicht behandelten Ausnahme im Benutzercode.|  

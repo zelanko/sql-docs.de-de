@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1e42b3dda674a235c764c03df313bac5d1081d3e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 163d3502303ee046a8b931bc81271594c874ca3f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730106"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894638"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>Dynamische Verwaltungssichten in Verbindung mit dem SQL Server-Betriebssystem (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Abschnitt werden dynamische Verwaltungs Sichten (DMV) dokumentiert, die dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Betriebs System (SQLOS) zugeordnet sind. SQLOS ist für die Verwaltung von Betriebssystemressourcen zuständig, die für spezifisch sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 

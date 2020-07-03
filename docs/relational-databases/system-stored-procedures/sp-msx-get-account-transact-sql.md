@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 82c26d20933562b05bb95796140dcc51bbc0777d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddb3d983b37bdad5db334073fe168b518aaee77a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734327"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893464"
 ---
 # <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Listet Informationen zu den Anmeldeinformationen auf, die der Zielserver für die Anmeldung am Masterserver verwendet.  
   
@@ -44,7 +44,7 @@ sp_msx_get_account
 ## <a name="result-sets"></a>Resultsets  
  Gibt das folgende Resultset zurück:  
   
-|Spaltenname|Typ|BESCHREIBUNG|  
+|Spaltenname|Typ|Beschreibung|  
 |-----------------|----------|-----------------|  
 |msx_connection|**int**|Nummer der Masterserververbindung|  
 |msx_credential_id|**int**|ID der Anmeldeinformationen, die für diese Masterserververbindung verwendet werden.|  

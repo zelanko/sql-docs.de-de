@@ -9,15 +9,15 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 370316f6f2c77a270117aca3f59d42c11914175c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75238653"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894973"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server Shared Management Objects (SMO) License Terms (Lizenzbedingungen für SQL Server Shared Management Objects (SMO))
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
 ## <a name="microsoft-software-license-terms"></a>MICROSOFT-SOFTWARE-LIZENZBEDINGUNGEN
 **Freigegebene Verwaltungs Objekte für Microsoft SQL Server 2017**
@@ -77,7 +77,7 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
 
 **6.    DOKUMENTATION.** Jede Person, die einen gültigen Zugang zu Ihrem Computer oder internen Netzwerk besitzt, darf die Dokumentation für interne und Referenzzwecke kopieren und verwenden.
 
-**7.    EXPORTEINSCHRÄNKUNGEN.** Die Software unterliegt den Exportgesetzen und -regelungen der USA. Sie müssen alle inländischen und internationalen Gesetze und Bestimmungen einhalten, die für die Software gelten. Zu diesen Gesetzen zählen Einschränkungen zu Zielen, Endbenutzern und zur Endverwendung. Weitere Informationen finden [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)Sie unter.
+**7.    EXPORTEINSCHRÄNKUNGEN.** Die Software unterliegt den Exportgesetzen und -regelungen der USA. Sie müssen alle inländischen und internationalen Gesetze und Bestimmungen einhalten, die für die Software gelten. Zu diesen Gesetzen zählen Einschränkungen zu Zielen, Endbenutzern und zur Endverwendung. Weitere Informationen finden Sie unter [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting) .
 
 **8.    SUPPORTDIENSTE.** Da diese Software „wie besehen“ zur Verfügung gestellt wird, stellen wir möglicherweise keine Supportservices für sie bereit.
 

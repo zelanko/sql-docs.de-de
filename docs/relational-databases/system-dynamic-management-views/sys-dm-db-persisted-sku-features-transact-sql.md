@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a779585dedcfa5fef86d7c3db4543b9ec74df7bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c41fcc673152f0cb253c0a5f10721beb40cf7628
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677775"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894572"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Einige Features von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ändern die Art und Weise, [!INCLUDE[ssDE](../../includes/ssde-md.md)] in der Informationen in den Datenbankdateien gespeichert werden. Diese Funktionen sind nicht in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Datenbank, die diese Funktionen enthält, kann nicht in eine Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschoben werden, die sie nicht unterstützt. Verwenden Sie die dynamische Verwaltungs Sicht sys. dm_db_persisted_sku_features, um Editions spezifische Funktionen aufzulisten, die in der aktuellen Datenbank aktiviert sind.
   

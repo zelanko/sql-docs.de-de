@@ -13,16 +13,16 @@ ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8fc10bd6ebb44e0f8b45edb3c669e8216cc313b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7eee04fd4d3ad5b56f72c1bf13b5a2c27c7741ff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095569"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894089"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Erstellen, Ändern und Löschen von benutzerdefinierten Funktionen
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  Das <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> -Objekt stellt Funktionen bereit, mit denen Benutzer benutzerdefinierte Funktionen in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Programm gesteuert verwalten können. Benutzerdefinierte Funktionen unterstützen sowohl Eingabe- und Ausgabeparameter als auch direkte Verweise auf Tabellenspalten.  
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+  Das- <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> Objekt stellt Funktionen bereit, mit denen Benutzer benutzerdefinierte Funktionen in Programm gesteuert verwalten können [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Benutzerdefinierte Funktionen unterstützen sowohl Eingabe- und Ausgabeparameter als auch direkte Verweise auf Tabellenspalten.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erfordert, dass Assemblys in einer Datenbank registriert werden, bevor diese in gespeicherten Prozeduren, benutzerdefinierten Funktionen, Trigger und benutzerdefinierten Datentypen verwendet werden können. SMO unterstützt diese Funktion mit dem <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>-Objekt.  
   

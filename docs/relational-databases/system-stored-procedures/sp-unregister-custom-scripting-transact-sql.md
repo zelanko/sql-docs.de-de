@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c638c37da5907295cf4f8ef0dbb63d7eef17f05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9cd0ff590213b5dd687235328696d4956b0bb224
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762768"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892562"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Mit dieser gespeicherten Prozedur wird eine benutzerdefinierte gespeicherte Prozedur oder [!INCLUDE[tsql](../../includes/tsql-md.md)] Skriptdatei entfernt, die durch Ausführen von [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)registriert wurde. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
@@ -41,7 +41,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>Argumente  
 `[ @type = ] 'type'`Der Typ der benutzerdefinierten gespeicherten Prozedur oder des Skripts, das entfernt wird. *Type ist vom Datentyp* **varchar (16)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**setze**|Registrierte benutzerdefinierte gespeicherte Prozedur oder Skript wird ausgeführt, wenn eine INSERT-Anweisung repliziert wird.|  
 |**update**|Registrierte benutzerdefinierte gespeicherte Prozedur oder Skript wird ausgeführt, wenn eine UPDATE-Anweisung repliziert wird.|  

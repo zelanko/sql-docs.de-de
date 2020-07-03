@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e21038736343ecce98ded93d87f32d64b7ebe4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8327dc8beafb5d4e219cdaf25c44c75af3e85e5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750406"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892604"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Erstellt eine Ablaufverfolgungsdefinition. Die neue Ablaufverfolgung weist einen beendeten Status auf.  
   
@@ -53,7 +53,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  In der folgenden Tabelle werden die Optionen, Beschreibungen und die zugehörigen Werte aufgeführt.  
   
-|Optionsname|Optionswert|BESCHREIBUNG|  
+|Optionsname|Optionswert|Beschreibung|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|Gibt an, dass die aktuelle Ablauf Verfolgungs Datei geschlossen und eine neue Datei erstellt wird, wenn der *max_file_size* erreicht wird. Alle neuen Datensätze werden in die neue Datei geschrieben. Die neue Datei hat denselben Namen wie die vorherige Datei, es wird jedoch eine ganze Zahl angehängt, um die zugehörige Reihenfolge anzugeben. Ist z. B. der Name der ursprünglichen Ablaufverfolgungsdatei filename.trc, so wird die nächste Datei mit filename_1.trc benannt, dann folgt filename_2.trc usw.<br /><br /> Wenn weitere Ablaufverfolgungs-Rolloverdateien erstellt werden, erhöht sich der an die Dateinamen angefügte ganzzahlige Wert sequenziell.<br /><br /> SQL Server verwendet den Standardwert *max_file_size* (5 MB), wenn diese Option ohne Angabe eines Werts für *max_file_size*angegeben wird.|  
 |SHUTDOWN_ON_ERROR|**4**|Gibt an, dass SQL Server heruntergefahren wird, wenn die Ablaufverfolgung nicht in die Datei geschrieben werden kann, unabhängig vom Grund. Diese Option ist beim Ausführen von Ablaufverfolgungen zur Sicherheitsüberwachung hilfreich.|  
@@ -91,7 +91,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  In der folgenden Tabelle werden die Codewerte beschrieben, die die Benutzer nach Abschluss der gespeicherten Prozedur möglicherweise erhalten.  
   
-|Rückgabecode|BESCHREIBUNG|  
+|Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |0|Kein Fehler.|  
 |1|Unbekannter Fehler.|  

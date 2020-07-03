@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2dc82e34234082013b1c590008ef610f1492f9a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc11f219d98e4b8018bc7d763345feb279790e13
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733069"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893247"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Legt Werte für Sperrenoptionen für benutzerdefinierte gruppierte und nicht gruppierte Indizes oder Tabellen ohne gruppierten Index fest.  
   
@@ -50,7 +50,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 `[ @OptionName = ] 'option_name'`Ist ein Index Options Name. *option_name* ist vom Datentyp **varchar (35)** und hat keinen Standardwert. *option_name* kann einen der folgenden Werte aufweisen.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Mit TRUE sind Zeilensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Zeilensperren verwendet werden. Mit FALSE werden keine Zeilensperren verwendet. Der Standardwert ist TRUE.|  
 |**AllowPageLocks**|Mit TRUE sind Seitensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Seitensperren verwendet werden. Mit FALSE werden keine Seitensperren verwendet. Der Standardwert ist TRUE.|  

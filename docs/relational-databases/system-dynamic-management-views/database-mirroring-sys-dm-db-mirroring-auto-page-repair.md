@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b030903602a5356d273e3bd5ce46995a83ea9bf3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6f86d9c0c334ed5ce86b0227e4fd4f0ce408087
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720336"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894723"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>Daten Bank Spiegelung-sys. dm_db_mirroring_auto_page_repair
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Zeile für jede automatische Seitenreparatur für jede gespiegelte Datenbank der Serverinstanz zurück. Diese Sicht enthält Zeilen für die letzte automatische Seitenreparatur einer bestimmten gespiegelten Datenbank. Pro Datenbank können maximal 100 Zeilen angezeigt werden. Sobald das Maximum in der Datenbank erreicht ist, ersetzt die Zeile bei der nächsten automatischen Seitenreparatur einen der bereits vorhandenen Einträge. In der folgenden Tabelle wird die Bedeutung der einzelnen Spalten definiert.  
   

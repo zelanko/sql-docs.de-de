@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: ebae9f75ac25698582b7f3e4c78c2fb773bd803e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84929091"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891996"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Einrichten der verwalteten SQL Server-Sicherung in Azure für Verfügbarkeitsgruppen
   Dieses Thema ist ein Lernprogramm zum Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für Datenbanken, die an AlwaysOn-Verfügbarkeitsgruppen teilnehmen.  
@@ -80,7 +80,7 @@ ms.locfileid: "84929091"
   
 6.  **Aktivieren und konfigurieren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für agtestdb auf Node1:** starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der Instanz auf Node1 her, auf der die Verfügbarkeits Datenbank installiert ist. Führen Sie im Abfragefenster folgende Anweisung aus, nachdem Sie die Werte für Datenbankname, Speicher-URL, SQL-Anmeldeinformationen und Beibehaltungsdauer Ihren Anforderungen entsprechend angepasst haben:  
   
-    ```  
+    ```sql  
     Use msdb;  
     GO  
     EXEC smart_admin.sp_set_db_backup   
@@ -92,14 +92,13 @@ ms.locfileid: "84929091"
                     ,@encryptor_name='MyBackupCert'  
                     ,@enable_backup=1;  
     GO  
-  
     ```  
   
      Weitere Informationen zum Erstellen eines Zertifikats für die Verschlüsselung finden Sie im Schritt **Erstellen eines Sicherungs Zertifikats** unter [Erstellen einer verschlüsselten Sicherung](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
 7.  **Aktivieren und konfigurieren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für agtestdb auf Node2:** starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der Instanz auf Node2 her, auf der die Verfügbarkeits Datenbank installiert ist. Führen Sie im Abfragefenster folgende Anweisung aus, nachdem Sie die Werte für Datenbankname, Speicher-URL, SQL-Anmeldeinformationen und Beibehaltungsdauer Ihren Anforderungen entsprechend angepasst haben:  
   
-    ```  
+    ```sql  
     Use msdb;  
     GO  
     EXEC smart_admin.sp_set_db_backup   
@@ -111,15 +110,14 @@ ms.locfileid: "84929091"
                     ,@encryptor_name='MyBackupCert'  
                     ,@enable_backup=1;  
     GO  
-  
     ```  
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ist damit für die angegebene Datenbank aktiviert. Es kann bis zu 15 Minuten dauern, bis die Sicherungsvorgänge für die Datenbank gestartet werden. Die Sicherung wird auf dem bevorzugten Sicherungsreplikat durchgeführt.  
   
 8.  **Überprüfen Sie die Standardkonfiguration für erweiterte Ereignisse:**  Überprüfen Sie die Konfiguration für erweiterte Ereignisse, indem Sie die folgende Transact-SQL-Anweisung auf dem Replikat ausführen, das [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] von zum Planen der Sicherungen verwendet wird. Dies ist i. d. R. die Einstellung für das bevorzugte Sicherungsreplikat der Verfügbarkeitsgruppe, zu der die Datenbank gehört.  
   
-    ```  
-    SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
+    ```sql  
+    SELECT * FROM smart_admin.fn_get_current_xevent_settings(); 
     ```  
   
      Stellen Sie sicher, dass Ereignisse der Kanäle Admin, Operational und Analytical standardmäßig aktiviert sind und nicht deaktiviert werden können. Dies sollte ausreichen, um alle Ereignisse zu überwachen, die ein manuelles Eingreifen erfordern.  Sie können die Debugereignisse aktivieren. Diese Kanäle enthalten jedoch Informations- und Debugereignisse, die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] zur Erkennung und Behebung von Fehlern verwendet. Weitere Informationen finden Sie unter [überwachen SQL Server verwalteten Sicherung in Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
@@ -132,11 +130,10 @@ ms.locfileid: "84929091"
   
     3.  **Aktivieren der E-mail-Benachrichtigungen für den Empfang von Sicherungsfehlern und Warnungen:** Führen Sie im Abfragefenster die folgenden Transact-SQL-Anweisungen aus:  
   
-        ```  
+        ```sql  
         EXEC msdb.smart_admin.sp_set_parameter  
         @parameter_name = 'SSMBackup2WANotificationEmailIds',  
         @parameter_value = '<email>'  
-  
         ```  
   
          Weitere Informationen und ein vollständiges Beispielskript finden [Sie unter Überwachen SQL Server verwalteten Sicherung in Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
@@ -145,7 +142,7 @@ ms.locfileid: "84929091"
   
 11. **Überwachen des Integritätsstatus:**  Sie können die zuvor konfigurierten E-Mail-Benachrichtigungen verwenden oder die protokollierten Ereignisse manuell überwachen. Die folgenden Beispiele zeigen einige Transact-SQL-Anweisungen, mit denen die Ereignisse angezeigt werden können:  
   
-    ```  
+    ```sql  
     --  view all admin events  
     Use msdb;  
     Go  
@@ -166,18 +163,16 @@ ms.locfileid: "84929091"
   
     SELECT * from @eventresult  
     WHERE event_type LIKE '%admin%'  
-  
     ```  
   
-    ```  
+    ```sql  
     -- to enable debug events  
     Use msdb;  
     Go  
-             EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
-    ```  
+    ```sql  
     --  View all events in the current week  
     Use msdb;  
     Go  
@@ -187,7 +182,6 @@ ms.locfileid: "84929091"
     SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
   
     EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
-  
     ```  
   
  Die in diesem Abschnitt beschriebenen Schritte sind speziell für die erste Konfiguration von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für die Datenbank vorgesehen. Sie können die vorhandenen Konfigurationen mithilfe derselben gespeicherten System Prozedur smart_admin ändern **. sp_set_db_backup** und die neuen Werte bereitstellen. Weitere Informationen finden Sie unter [SQL Server verwaltete Sicherung in Azure-Beibehaltungs-und Speichereinstellungen](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
