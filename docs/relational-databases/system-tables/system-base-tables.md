@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3336905579401f17a5c3afa2509e64670e5ea1ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd89fffb6513306c8877ce6b02a3fadfceb6f1cf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752638"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889228"
 ---
 # <a name="system-base-tables"></a>Systembasistabellen
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Systembasistabellen sind die zugrunde liegenden Tabellen, in denen die Metadaten für eine bestimmte Datenbank gespeichert werden. In dieser Hinsicht ist die **Master** -Datenbank besonders spezifisch, da Sie einige zusätzliche Tabellen enthält, die in keiner der anderen Datenbanken gefunden werden. Diese Tabellen enthalten permanente Metadaten, deren Bereich serverweit ist.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "85752638"
 ## <a name="system-base-tables"></a>Systembasistabellen  
  In der folgenden Tabelle werden die Systembasistabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgeführt und beschrieben.  
   
-|Basistabelle|BESCHREIBUNG|  
+|Basistabelle|Beschreibung|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|Ist in jeder Datenbank vorhanden. Jede Zeile stellt ein Objekt in der Datenbank dar.|  
 |**sys.sysschobjs**|Ist in jeder Datenbank vorhanden. Enthält eine Zeile für jede Service Broker-Entität in der Datenbank. Service Broker-Entitäten schließen Folgendes ein:<br /><br /> Nachrichtentyp<br /><br /> Dienstvertrag<br /><br /> Dienst<br /><br /> Die Namen und Typen verwenden binäre Sortierung, die nicht geändert wird.|  

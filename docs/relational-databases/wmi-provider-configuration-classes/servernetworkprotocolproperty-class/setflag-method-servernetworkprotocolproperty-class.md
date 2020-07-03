@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 853b9f401d08692efe737a66107ebf2e27150f5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c042ae6dee0ad8e621d4de47faa93b0c6b8de96b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775688"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888644"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>SetFlag-Methode (ServerNetworkProtocolProperty-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Legt das Flag der Eigenschaft fest, auf die verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,7 +41,7 @@ object.SetFlag(BoolValue)
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|BESCHREIBUNG|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*Booleer Wert*|Ein boleescher Wert, der den neuen Wert des Flags angibt.|  
   

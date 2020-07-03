@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2184904e7de2fe30afc50cf7a76e575baafb1de8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef51af586bd54eb7a8059de870bf1adf5dc0badc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731439"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889035"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps-Eigenschaft (ClientNetworkProtocol-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Ruft die Anzahl der Eigenschaften ab, die das von der [SetOrderValue-Methode (ClientNetworkProtocol-Klasse)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md)angegebene Clientnetzwerkprotokoll erfordert.  
   
 ## <a name="syntax"></a>Syntax  

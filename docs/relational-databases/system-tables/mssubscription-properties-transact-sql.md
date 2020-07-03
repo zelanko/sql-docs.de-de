@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 03dcac4c5e4a74503e7ad30cc499a2319375f950
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d63855b5619392ba2c2bd7c286e4aec7b10a43db
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758682"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889345"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Die **MSsubscription_properties** Tabelle enthält Zeilen für die Parameterinformationen, die zum Ausführen von Replikations-Agents auf dem Abonnenten erforderlich sind. Diese Tabelle wird für ein Pullabonnement auf dem Abonnenten in der Abonnementdatenbank und für ein Pushabonnement auf dem Verteiler in der Verteilungsdatenbank gespeichert.  
   
