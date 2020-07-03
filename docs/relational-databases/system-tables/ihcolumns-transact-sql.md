@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47fcad03fb8329c3d39150aa0aaf9b5688e0456f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1870e1d826fef593f5458004d424a02185028e2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764250"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890314"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Die **IHcolumns** -Systemtabelle enthält eine Zeile für jede veröffentlichte Spalte. Mit dieser Tabelle wird definiert, wie Spaltendatentypen von einem Nicht-SQL Server-Verleger beim Veröffentlichen dargestellt werden. Im Prinzip werden Datentypen zwischen einem Nicht-SQL Server-Datenbank-Managementsystem (DBMS) und SQL Server zugeordnet. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   

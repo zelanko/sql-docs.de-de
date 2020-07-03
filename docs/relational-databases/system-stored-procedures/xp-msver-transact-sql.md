@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 385bae0bd40fd392f038ef4dd85204c853a81773
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 995668cb4b36e7086c2777d9cb7cd663e7d33ef4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762626"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890748"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Versionsinformationen zu zurück [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **xp_msver** gibt auch Informationen über die tatsächliche Buildnummer des Servers und Informationen zur Serverumgebung zurück. Die Informationen, die **xp_msver** zurückgibt, können in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen,-Batches, gespeicherten Prozeduren usw. verwendet werden, um die Logik für plattformunabhängigen Code zu verbessern.  
   
@@ -42,7 +42,7 @@ xp_msver [ optname ]
  *optname*  
  Der Name einer Option. Die folgenden Werte sind möglich.  
   
-|Options-/Spaltenname|BESCHREIBUNG|  
+|Options-/Spaltenname|Beschreibung|  
 |-------------------------|-----------------|  
 |**ProductName**|Produktname; Beispiel: [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**ProductVersion**|Die Produktversion.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 387761d2275025f70a769cf3068693d08dbecc58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dac2c362e2aac2b09969ba7193e44b06facebb51
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718628"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891018"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Erteilt einem msdb-Daten Bank Prinzipal die Berechtigung, ein Datenbank-E-Mail Profil zu verwenden. Der Daten Bank Prinzipal muss einem SQL Server Authentifizierungs Benutzer, einem Windows-Benutzer oder einer Windows-Gruppe zugeordnet werden.
   

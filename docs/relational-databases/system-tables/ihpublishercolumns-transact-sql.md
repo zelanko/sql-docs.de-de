@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1de331740a0c67642de314155bfdd4ee53ef8f3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 221586cec5acaf94954454076fcf948cc62cf577
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773793"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890263"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Die **IHpublishercolumns** -Systemtabelle stellt Metadaten dar, die auf dem Verleger gespeichert werden. Diese Tabelle enthält eine Zeile für jede Spalte, die mithilfe des aktuellen Verteilers aus Nicht-SQL Server-Verlegern repliziert wurden. Die Datentyp Informationen in **IHpublishercolumns** sind spezifisch für das nicht SQL Server Database Management System (DBMS), aus dem die Daten veröffentlicht werden. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   

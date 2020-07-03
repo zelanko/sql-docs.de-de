@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36d16c7a23f2c586378136b6dd045231941708e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6e3c700e28ff105c6e99ebde9e7dbe8c4a82109a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736771"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889834"
 ---
 # <a name="msmerge_dynamic_snapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In der **MSmerge_dynamic_snapshots** Tabelle wird der Speicherort der gefilterten Daten Momentaufnahme für jede Partition nachverfolgt, die für eine Mergeveröffentlichung mit parametrisierten Zeilen filtern definiert ist. Diese Tabelle wird in der **Veröffentlichungs** Datenbank gespeichert.  
   

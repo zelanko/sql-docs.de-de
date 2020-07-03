@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09ece580c45e1ec93b183f2d830c9daf68287ab1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 397fecaadad721529671a69daaf1c704e28268ea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750256"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890391"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Enthält Informationen zu Auftragszeitplänen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "85750256"
 |**64** (wird gestartet, wenn SQL Server-Agent Dienst gestartet wird)|**freq_interval** nicht verwendet (**0**)|  
 |**128** (wird ausgeführt, wenn der Computer im Leerlauf ist)|**freq_interval** nicht verwendet (**0**)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [dbo.sysjobzeitpläne &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

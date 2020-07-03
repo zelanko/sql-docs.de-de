@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46c68043b1b04f888fb154862ca5e4368ba604e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ffc2075f3994ec24339cc74e0d87085679e379c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736822"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889899"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Die **MSmerge_agents** Tabelle enthält eine Zeile für jede Merge-Agent, die auf dem Abonnenten ausgeführt wird. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   

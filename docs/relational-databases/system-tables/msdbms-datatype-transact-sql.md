@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ac552c5fe8efe897ea9066819215c82a115d1d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62efb2fa9bf434af4cb9b237b133d3f705eaa7eb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725472"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890026"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Die **MSdbms_datatype** Tabelle enthält die komplette Liste der systemeigenen Datentypen an jedem unterstützten Datenbank-Management System (DBMS), das bei der heterogenen Daten Bank Replikation entweder als Verleger oder Abonnent verwendet wird. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
