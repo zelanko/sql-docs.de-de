@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ff0439ff6b418006f3da5f0356169574509ebb7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 0e6ca6b5ed0eb94b7293dfd5aab6623ea2a61454
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84932831"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885996"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementieren von LOB-Spalten in einer speicheroptimierten Tabelle
   Speicher optimierte Tabellen weisen keinen außerhalb von Zeilen liegenden oder LOB-Speicher (Large Object) auf (diese Einschränkung wurde in SQL Server 2016 und höher entfernt. siehe [unterstützte Datentypen für in-Memory OLTP](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), und die Zeilen Größenbeschränkung beträgt 8060 Bytes. Das Speichern von Zeichenfolgenwerten oder großen binären Werten kann auf zwei Arten durchgeführt werden:  
@@ -25,7 +25,7 @@ ms.locfileid: "84932831"
   
  Im folgenden Beispiel wird ein binärer LOB-Wert auf mehrere Zeilen aufgeteilt, die dann in die speicheroptimierte Tabelle eingefügt werden:  
   
-<pre><code>tsql  
+```sql  
 create table BlobTable_inmem (  
    BlobId binary(16) not null,  
    SegmentationId int not null,  
@@ -75,7 +75,8 @@ where BlobId = @BlobId
 order by SegmentationId  
   
 select @Blob  
-go</code></pre>  
+go
+```
   
  Alternativ können Sie eine datenträgerbasierte Tabelle für LOB-Spalten definieren. Jede Zeile in der speicheroptimierten Tabelle verfügt dann über eine entsprechende Zeile in der datenträgerbasierten Tabelle mit allen LOB-Werten für diese Zeile. Im folgenden Beispiel werden die Mitarbeiterdaten in einer speicheroptimierten Tabelle und die Fotos der Mitarbeiter in einer datenträgerbasierten Tabelle gespeichert.  
   

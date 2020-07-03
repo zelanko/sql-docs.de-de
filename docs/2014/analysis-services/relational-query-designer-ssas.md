@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 79765f589dcc649bdb2d12bd9dda0d4c955ae916
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84539682"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883932"
 ---
 # <a name="relational-query-designer-ssas"></a>Relationaler Abfrage-Designer (SSAS)
   Mit dem relationalen Abfrage-Designer können Sie eine Abfrage erstellen, die die Daten angibt, die aus [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] relationalen Datenbanken und [!INCLUDE[msCoName](../includes/msconame-md.md)] abgerufen werden sollen [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] . Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen von Metadaten, zum interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Ergebnisse Ihrer Abfrage.  Verwenden Sie den textbasierten Abfrage-Designer, um die Abfrage anzuzeigen, die vom grafischen Abfrage-Designer erstellt wurde, oder um eine Abfrage zu ändern. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  
@@ -219,7 +219,7 @@ ms.locfileid: "84539682"
 #### <a name="example"></a>Beispiel  
  Die folgende Abfrage gibt die Liste der Nachnamen aus einer Tabelle mit dem Namen `ContactType` zurück.  
   
-```  
+```sql  
 SELECT Name FROM ContactType  
 ```  
   
@@ -242,7 +242,7 @@ SELECT Name FROM ContactType
 #### <a name="example"></a>Beispiel  
  Die folgende Abfrage ruft eine gespeicherte Prozedur mit dem Namen `uspGetWhereUsedProductID` auf. Wenn die gespeicherte Prozedur Eingabeparameter hat, müssen Sie Parameterwerte angeben, wenn Sie die Abfrage ausführen.  
   
-```  
+```sql  
 uspGetWhereUsedProductID  
 ```  
   

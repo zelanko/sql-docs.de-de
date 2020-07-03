@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d418d0b83951c0b9d91f858f54aab79f197be3d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10d27989dd5f6fe224d3fc8a70da27634b70ce32
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85664001"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883604"
 ---
 # <a name="systrace_event_bindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Die **sys.trace_event_bindings** -Katalogsicht enthält eine Liste aller möglichen Verwendungskombinationen von Ereignissen und Spalten. In der **trace_column_id** -Spalte werden alle verfügbaren Spalten für jedes in der **trace_event_id** -Spalte aufgeführte Ereignis aufgelistet. Nicht alle verfügbaren Spalten werden beim Eintreten eines bestimmten Ereignisses aufgefüllt. Diese Werte ändern sich abhängig von der jeweiligen Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]nicht.  
   

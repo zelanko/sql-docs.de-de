@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5b098d42c8e770496b67f365dd8ccd7bd8ad640
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3405cf5aaf6e25c8d2efc3c0e4753b52e63f2372
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528416"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882116"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung in SQL Server
 
@@ -231,7 +231,7 @@ GO
   
      Ein Phantomlesezugriff ist eine Situation, bei der zwei identische Abfragen ausgeführt werden, wobei die von der zweiten Abfrage zurückgegebene Zeilensammlung abweicht. Im unten stehenden Beispiel wird veranschaulicht, wie eine solche Situation auftreten kann. Angenommen, die beiden unten stehenden Transaktionen werden gleichzeitig ausgeführt. Die zwei SELECT-Anweisungen in der ersten Transaktion können ggf. andere Ergebnisse zurückgeben, da die INSERT-Anweisung in der zweiten Transaktion die von beiden verwendeten Daten ändert.  
   
-    ```  
+    ```sql  
     --Transaction 1  
     BEGIN TRAN;  
     SELECT ID FROM dbo.employee  
@@ -240,10 +240,9 @@ GO
     SELECT ID FROM dbo.employee  
     WHERE ID > 5 and ID < 10;  
     COMMIT;  
-  
     ```  
   
-    ```  
+    ```sql  
     --Transaction 2  
     BEGIN TRAN;  
     INSERT INTO dbo.employee  
@@ -474,7 +473,7 @@ GO
   
 ||Vorhandener erteilter Modus||||||  
 |------|---------------------------|------|------|------|------|------|  
-|**Angeforderter Modus**|**Richtet**|**Hymnen**|**U**|**IX**|**Einhalb**|**X**|  
+|**Angeforderter Modus**|**Richtet**|**E**|**U**|**IX**|**Einhalb**|**X**|  
 |**Beabsichtigte freigegebene Sperre (Intent Shared, IS)**|Ja|Ja|Ja|Ja|Ja|Nein|  
 |**Shared (S)**|Ja|Ja|Ja|Nein|Nein|Nein|  
 |**Update (U)**|Ja|Ja|Nein|Nein|Nein|Nein|  
@@ -521,7 +520,7 @@ GO
   
 ||Vorhandener erteilter Modus|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
-|**Angeforderter Modus**|**Hymnen**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
+|**Angeforderter Modus**|**E**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
 |**Shared (S)**|Ja|Ja|Nein|Ja|Ja|Ja|Nein|  
 |**Update (U)**|Ja|Nein|Nein|Ja|Nein|Ja|Nein|  
 |**Exclusive (X)**|Nein|Nein|Nein|Nein|Nein|Ja|Nein|  
@@ -572,7 +571,7 @@ GO
 
  Um sicherzustellen, dass eine Bereichsscanabfrage serialisierbar ist, sollte dieselbe Abfrage immer dieselben Ergebnisse zurückgeben, wenn sie innerhalb derselben Transaktion ausgeführt wird. Neue Zeilen dürfen innerhalb der Bereichsscanabfrage nicht von anderen Transaktionen eingefügt werden, da diese sonst zu Phantomeinfügungen werden. In der nachfolgenden Abfrage werden beispielsweise die Tabelle und der Index in der obigen Abbildung verwendet:  
   
-```  
+```sql  
 SELECT name  
     FROM mytable  
     WHERE name BETWEEN 'A' AND 'C';  
@@ -587,7 +586,7 @@ SELECT name
 
  Wenn eine Abfrage in einer Transaktion versucht, eine nicht vorhandene Zeile auszuwählen, muss die Abfrage, wenn sie zu einem späteren Zeitpunkt innerhalb derselben Transaktion erneut ausgegeben wird, zu demselben Ergebnis führen. Es darf für keine andere Transaktion zulässig sein, diese nicht vorhandene Zeile einzufügen. Angenommen, die folgende Abfrage wird ausgeführt:  
   
-```  
+```sql 
 SELECT name  
     FROM mytable  
     WHERE name = 'Bill';  
@@ -599,7 +598,7 @@ SELECT name
 
  Wenn ein Wert in einer Transaktion gelöscht wird, muss der Bereich, in dem der Wert liegt, nicht für die gesamte Dauer der Transaktion, die den Löschvorgang ausführt, gesperrt werden. Die Serialisierbarkeit wird bereits dann aufrechterhalten, wenn der gelöschte Schlüsselwert bis zum Ende der Transaktion gesperrt wird. Angenommen, folgende DELETE-Anweisung wird ausgeführt:  
   
-```  
+```sql  
 DELETE mytable  
     WHERE name = 'Bob';  
 ```  
@@ -612,7 +611,7 @@ DELETE mytable
 
  Wenn ein Wert in einer Transaktion eingefügt wird, muss der Bereich, in dem der Wert liegt, nicht für die gesamte Dauer der Transaktion, die den Einfügungsvorgang ausführt, gesperrt werden. Die Serialisierbarkeit wird bereits dann aufrechterhalten, wenn der eingefügte Schlüsselwert bis zum Ende der Transaktion gesperrt wird. Angenommen, folgende INSERT-Anweisung wird ausgeführt:  
   
-```  
+```sql  
 INSERT mytable VALUES ('Dan');  
 ```  
   
@@ -638,7 +637,7 @@ INSERT mytable VALUES ('Dan');
   
 ### <a name="deadlocking"></a>Deadlocks  
 
- Ein Deadlock tritt auf, wenn zwei Tasks einander dauerhaft gegenseitig blockieren, weil jeder der Tasks eine Sperre für eine Ressource aufrecht erhält, die die anderen Tasks zu sperren versuchen. Zum Beispiel:  
+ Ein Deadlock tritt auf, wenn zwei Tasks einander dauerhaft gegenseitig blockieren, weil jeder der Tasks eine Sperre für eine Ressource aufrecht erhält, die die anderen Tasks zu sperren versuchen. Beispiel:  
   
 -   Die Transaktion A richtet eine freigegebene Sperre für Zeile 1 ein.  
   
@@ -976,7 +975,7 @@ deadlock-list
   
  Mit diesen [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen werden Testobjekte erstellt, die in den folgenden Beispielen verwendet werden.  
   
-```  
+```sql  
 -- Create a test table.  
 CREATE TABLE TestTable  
     (col1        int);  
@@ -998,7 +997,7 @@ GO
   
  Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die beabsichtigte freigegebene Sperre für die Partitions-ID 7 aktiviert wird.  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1011,7 +1010,7 @@ BEGIN TRANSACTION
   
  Eine Transaktion wird gestartet, und die im Rahmen dieser Transaktion ausgeführte `SELECT`-Anweisung aktiviert und hält eine freigegebene Sperre (S) für die Tabelle. Die S-Sperre wird für alle Partitionen aktiviert, was mehrere Tabellensperren ergibt, und zwar eine für jede Partition. Auf einem System mit 16 CPUs werden z. B. 16 S-Sperren für die Sperrpartitions-IDs 0 bis 15 aktiviert. Da die S-Sperre mit der beabsichtigten freigegebenen Sperre kompatibel ist, die von der Transaktion in Sitzung 1 für die Partitions-ID 7 gehalten wird, kommt es zu keiner Blockierung zwischen den Transaktionen.  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1022,7 +1021,7 @@ BEGIN TRANSACTION
   
  Die folgende `SELECT`-Anweisung wird unter der Transaktion ausgeführt, die unter Sitzung 1 immer noch aktiv ist. Aufgrund des exklusiven (X) Tabellenblockhinweises versucht die Transaktion, eine X-Sperre für die Tabelle zu aktivieren. Allerdings blockiert die S-Sperre, die durch die Transaktion in Sitzung 2 gehalten wird, die X-Sperre für die Partitions-ID 0.  
   
-```  
+```sql  
 SELECT col1  
     FROM TestTable  
     WITH (TABLOCKX);  
@@ -1034,7 +1033,7 @@ SELECT col1
   
  Im Rahmen einer Transaktion wird eine `SELECT`-Anweisung ausgeführt. Aufgrund des `HOLDLOCK`-Sperrhinweises aktiviert und hält diese Anweisung eine beabsichtigte freigegebene Sperre für die Tabelle (in dieser Veranschaulichung werden Zeilen- und Seitensperren ignoriert). Die beabsichtigte freigegebene Sperre wird nur für die Partition aktiviert, die der Transaktion zugewiesen ist. In diesem Beispiel wird vorausgesetzt, dass die beabsichtigte freigegebene Sperre für die Partitions-ID 6 aktiviert wird.  
   
-```  
+```sql  
 -- Start a transaction.  
 BEGIN TRANSACTION  
     -- This SELECT statement will acquire an IS lock on the table.  
@@ -1049,7 +1048,7 @@ BEGIN TRANSACTION
   
  Für die Partitions-IDs 7 bis 15, die die X-Sperre noch nicht erreicht hat, können andere Transaktionen weiterhin Sperren aktivieren.  
   
-```  
+```sql  
 BEGIN TRANSACTION  
     SELECT col1  
         FROM TestTable  
@@ -1154,7 +1153,7 @@ BEGIN TRANSACTION
 
  Das Framework für die Zeilenversionsverwaltung unterstützt die folgenden in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verfügbaren Funktionen:  
   
--   Trigger  
+-   Auslöser  
   
 -   Multiple Active Results Sets (MARS)  
   
@@ -1314,7 +1313,7 @@ BEGIN TRANSACTION
   
  Für Sitzung 1:  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or the 2008 or 2008R2 version of the AdventureWorks database.  
 GO  
   
@@ -1337,7 +1336,7 @@ BEGIN TRANSACTION;
   
  Für Sitzung 2:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1359,7 +1358,7 @@ BEGIN TRANSACTION;
   
  Für Sitzung 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this shows  
     -- the employee having 48 vacation hours.  The  
     -- snapshot transaction is still reading data from  
@@ -1371,7 +1370,7 @@ BEGIN TRANSACTION;
   
  Für Sitzung 2:  
   
-```  
+```sql  
 -- Commit the transaction; this commits the data  
 -- modification.  
 COMMIT TRANSACTION;  
@@ -1380,7 +1379,7 @@ GO
   
  Für Sitzung 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still   
     -- shows the employee having 48 vacation hours  
     -- even after the other transaction has committed  
@@ -1415,7 +1414,7 @@ GO
   
  Für Sitzung 1:  
   
-```  
+```sql  
 USE AdventureWorks2012;  -- Or any earlier version of the AdventureWorks database.  
 GO  
   
@@ -1442,7 +1441,7 @@ BEGIN TRANSACTION;
   
  Für Sitzung 2:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -1465,7 +1464,7 @@ BEGIN TRANSACTION;
   
  Für Sitzung 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement - this still shows  
     -- the employee having 48 vacation hours.  The  
     -- read-committed transaction is still reading data   
@@ -1479,7 +1478,7 @@ BEGIN TRANSACTION;
   
  Für Sitzung 2:  
   
-```  
+```sql  
 -- Commit the transaction.  
 COMMIT TRANSACTION;  
 GO  
@@ -1488,7 +1487,7 @@ GO
   
  Für Sitzung 1:  
   
-```  
+```sql  
     -- Reissue the SELECT statement which now shows the   
     -- employee having 40 vacation hours.  Being   
     -- read-committed, this transaction is reading the   
@@ -1518,7 +1517,7 @@ GO
   
  Die folgende [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung aktiviert READ_COMMITTED_SNAPSHOT:  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET READ_COMMITTED_SNAPSHOT ON;  
 ```  
@@ -1527,7 +1526,7 @@ ALTER DATABASE AdventureWorks2012
   
  Die folgende [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung aktiviert ALLOW_SNAPSHOT_ISOLATION:  
   
-```  
+```sql  
 ALTER DATABASE AdventureWorks2012  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
 ```  
@@ -1557,7 +1556,7 @@ ALTER DATABASE AdventureWorks2012
   
 -   READ COMMITTED (Commit vor dem Lesevorgang) mit Zeilenversionsverwaltung, indem die `READ_COMMITTED_SNAPSHOT`-Datenbankoption auf `ON` (wie im folgenden Codebeispiel gezeigt) festgelegt wird:  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET READ_COMMITTED_SNAPSHOT ON;  
     ```  
@@ -1566,14 +1565,14 @@ ALTER DATABASE AdventureWorks2012
   
 -   Die Momentaufnahmeisolation durch Festlegen der Datenbankoption `ALLOW_SNAPSHOT_ISOLATION` auf `ON`, wie im folgenden Codebeispiel gezeigt:  
   
-    ```  
+    ```sql  
     ALTER DATABASE AdventureWorks2012  
         SET ALLOW_SNAPSHOT_ISOLATION ON;  
     ```  
   
      Eine Transaktion, die unter Momentaufnahmeisolation ausgeführt wird, kann auf Tabellen in der Datenbank zugreifen, die für die Snapshotfunktion aktiviert wurden. Wenn auf Tabellen zugegriffen werden soll, die nicht für Momentaufnahmen aktiviert wurden, muss die Isolationsstufe geändert werden. Das folgende Codebeispiel zeigt z. B. eine `SELECT`-Anweisung, die während der Ausführung unter einer Momentaufnahmetransaktion zwei Tabellen verknüpft. Eine der Tabellen gehört zu einer Datenbank, in der Momentaufnahmeisolation nicht aktiviert ist. Wenn die `SELECT`-Anweisung unter Momentaufnahmeisolation ausgeführt wird, ist die Ausführung nicht erfolgreich.  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1584,7 +1583,7 @@ ALTER DATABASE AdventureWorks2012
   
      Das folgende Codebeispiel zeigt die gleiche `SELECT`-Anweisung, die so bearbeitet wurde, dass die Transaktionsisolationsstufe in READ COMMITTED geändert wurde. Durch diese Änderung wird die `SELECT`-Anweisung erfolgreich ausgeführt.  
   
-    ```  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
     BEGIN TRAN  
         SELECT t1.col5, t2.col5  
@@ -1618,7 +1617,7 @@ ALTER DATABASE AdventureWorks2012
   
      Ein Datenbankadministrator führt z. B. die folgende `ALTER INDEX`-Anweisung aus.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     ALTER INDEX AK_Employee_LoginID  
@@ -1648,7 +1647,7 @@ ALTER DATABASE AdventureWorks2012
   
  Um die aktuelle LOCK_TIMEOUT Einstellung zu ermitteln, führen Sie die @- @LOCK_TIMEOUT Funktion aus:  
   
-```  
+```sql  
 SELECT @@lock_timeout;  
 GO  
 ```  
@@ -1671,7 +1670,7 @@ GO
   
  Im folgenden Beispiel wird die `SERIALIZABLE`-Isolationsstufe festgelegt:  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1688,7 +1687,7 @@ GO
   
  Wenn Sie die derzeit für die Transaktion festgelegte Isolationsstufe ermitteln möchten, verwenden Sie die `DBCC USEROPTIONS`-Anweisung, wie im nachfolgenden Beispiel gezeigt. Das hier aufgeführte Resultset weicht möglicherweise von dem auf Ihrem System angezeigten Resultset ab.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  
@@ -1736,7 +1735,7 @@ GO
   
  Wenn – wie im folgenden Beispiel gezeigt – die Isolationsstufe für Transaktionen als `SERIALIZABLE` festgelegt wurde und der `NOLOCK`-Sperrhinweis auf Tabellenebene mit der `SELECT`-Anweisung verwendet wird, werden keine Schlüsselbereichssperren angewendet, die in der Regel zur Aufrechterhaltung der Serialisierbarkeit von Transaktionen verwendet werden.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;  
@@ -1793,7 +1792,7 @@ GO
   
  Im folgenden Beispiel wird dargestellt, wie geschachtelte Transaktionen verwendet werden sollten. Die `TransProc`-Prozedur erzwingt eine Transaktion, unabhängig vom Transaktionsmodus des Prozesses, der die Prozedur ausführt. Wird `TransProc` aufgerufen, wenn eine Transaktion aktiv ist, wird die geschachtelte Transaktion in `TransProc` überwiegend ignoriert, und für ihre INSERT-Anweisungen wird ein Commit oder Rollback ausgeführt, je nachdem, welche endgültige Aktion für die äußere Transaktion durchgeführt wurde. Wenn `TransProc` von einem Prozess ausgeführt wird, der keine ausstehende Transaktion aufweist, führt COMMIT TRANSACTION am Ende der Prozedur tatsächlich einen Commit für die INSERT-Anweisungen aus.  
   
-```  
+```sql  
 SET QUOTED_IDENTIFIER OFF;  
 GO  
 SET NOCOUNT OFF;  

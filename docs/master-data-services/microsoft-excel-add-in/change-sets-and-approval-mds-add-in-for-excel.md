@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cca345024fcf34cee4abd3695621c9548cee6121
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca89eb84abc1826a91b4ee8ef285246f6c3de719
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728022"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882325"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>Changesets und Genehmigung (MDS-Add-in für Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Im [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Add-In für Excel können Sie ausstehende Änderungen als Entität in einem Changeset speichern. Sie können ein vorhandenes Changeset anwenden, um die ausstehenden Änderungen anzuzeigen und zu ändern, und Sie können einen Commit für ein vorhandenes Changeset ausführen.  
   

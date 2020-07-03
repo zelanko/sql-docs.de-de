@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: d17fa458e1699ab73bb8105fa2cc4cccc44dd597
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 34a91283d735730bcc5f011377b1f1e729e7e753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544664"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883347"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorisieren des Zugriffs auf Objekte und Vorgänge (Analysis Services)
   Der Zugriff für Nichtadministratorbenutzer auf Cubes, Dimensionen und Miningmodelle innerhalb einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank wird durch die Mitgliedschaft in mindesten einer Datenbankrolle gewährt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratoren erstellen diese Datenbankrollen, gewähren Lese- oder Lese-/Schreibberechtigungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte und weisen dann jeder Rolle [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzer und Gruppen zu.  
@@ -40,7 +40,7 @@ ms.locfileid: "84544664"
   
 2.  Geben Sie die folgende Abfrage ein, und drücken Sie F5, um sie auszuführen:  
   
-    ```  
+    ```sql  
     Select * from $SYSTEM.DBSCHEMA_CATALOGS  
     ```  
   
@@ -72,7 +72,7 @@ ms.locfileid: "84544664"
   
  Sie können Berechtigungen auch auf der Basis der Benutzeridentität variieren. Dies wird oft als dynamische Sicherheit bezeichnet und wird über die Funktion [UserName &#40;MDX&#41;](/sql/mdx/username-mdx) implementiert.  
   
-## <a name="best-practices"></a>Bewährte Methoden  
+## <a name="best-practices"></a>Empfohlene Methoden  
  Für eine bessere Verwaltung von Berechtigungen schlagen wir einen Ansatz wie den folgenden vor:  
   
 1.  Erstellen Sie Rollen nach Funktion (zum Beispiel dbadmin, cubedeveloper, processadmin), damit derjenige, der die Rollen verwaltet, auf einen Blick sehen kann, was die Rolle zulässt. Wie bereits erwähnt, können Sie Rollen in der Modelldefinition definieren und diese Rollen damit über nachfolgende Lösungsbereitstellungen beibehalten.  
