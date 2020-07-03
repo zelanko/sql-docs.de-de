@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7550a640b723e77f3bfbc9b3473e762962ae2da3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a92b502368756fd86fc4facda7c0726260d88fea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646414"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869684"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fordert positionierte Updates an. Mithilfe dieser Prozedur werden Vorgänge für mindestens eine Zeile im Fetchpuffer eines Cursors ausgeführt. sp_cursor wird aufgerufen, indem ID = 1 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
@@ -50,7 +50,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  Ein erforderlicher Parameter, der festlegt, welcher Vorgang vom Cursor ausgeführt wird. *optype* erfordert einen der folgenden **int** -Eingabewerte.  
   
-|Wert|Name|BESCHREIBUNG|  
+|Wert|Name|Beschreibung|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Wird zum Update mindestens einer Zeile im Fetchpuffer verwendet.  Die in *rowNum* angegebenen Zeilen werden erneut aufgerufen und aktualisiert.|  
 |0x0002|Delete|Wird zum Löschen mindestens einer Zeile im Fetchpuffer verwendet. Die in *rowNum* angegebenen Zeilen werden erneut aufgerufen und gelöscht.|  

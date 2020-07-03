@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 620a174f50d133c4a1dd34ed54c74abb7ee06a71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30529fbb5d4b80b0835ddb502c9a2c964ca8776
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81012446"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870631"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Wird zum Hinzufügen oder Löschen von Anmeldeinformationen verwendet, die das zum Öffnen des Datenbank-Hauptschlüssels benötigte Kennwort enthalten.  
   
@@ -47,13 +47,13 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  Gibt das Kennwort des Hauptschlüssels an. Das *Kennwort* ist " **nvarchar**".  
   
  @action= N ' Add '  
- Gibt an, dass dem Anmeldeinformationenspeicher Anmeldeinformationen für die angegebene Datenbank hinzugefügt werden. In den Anmeldeinformationen ist das Kennwort für den Datenbank-Hauptschlüssel enthalten. Der an @action Übergabe Wert ist **nvarchar**.  
+ Gibt an, dass dem Anmeldeinformationenspeicher Anmeldeinformationen für die angegebene Datenbank hinzugefügt werden. In den Anmeldeinformationen ist das Kennwort für den Datenbank-Hauptschlüssel enthalten. Der an Übergabe Wert @action ist **nvarchar**.  
   
  @action= N ' Drop '  
- Gibt an, dass Anmeldeinformationen für die angegebene Datenbank aus dem Anmeldeinformationenspeicher gelöscht werden. Der an @action Übergabe Wert ist **nvarchar**.  
+ Gibt an, dass Anmeldeinformationen für die angegebene Datenbank aus dem Anmeldeinformationenspeicher gelöscht werden. Der an Übergabe Wert @action ist **nvarchar**.  
   
-## <a name="remarks"></a>Bemerkungen  
- Wenn von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Datenbank-Hauptschlüssel zum Entschlüsseln oder Verschlüsseln eines Schlüssels benötigt wird, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, den Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel der Instanz zu entschlüsseln. Wenn bei der Entschlüsselung ein Fehler [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auftritt, wird im Anmelde Informationsspeicher nach Anmelde Informationen des Haupt Schlüssels durchsucht, die dieselbe Familien-GUID wie die Datenbank aufweisen, für die der Hauptschlüssel benötigt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den Datenbank-Hauptschlüssel mit allen übereinstimmenden Anmeldeinformationen zu entschlüsseln, bis die Entschlüsselung erfolgreich ausgeführt wurde oder keine Anmeldeinformationen mehr vorhanden sind.  
+## <a name="remarks"></a>Hinweise  
+ Wenn von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Datenbank-Hauptschlüssel zum Entschlüsseln oder Verschlüsseln eines Schlüssels benötigt wird, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, den Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel der Instanz zu entschlüsseln. Wenn bei der Entschlüsselung ein Fehler auftritt, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Anmelde Informationsspeicher nach Anmelde Informationen des Haupt Schlüssels durchsucht, die dieselbe Familien-GUID wie die Datenbank aufweisen, für die der Hauptschlüssel benötigt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den Datenbank-Hauptschlüssel mit allen übereinstimmenden Anmeldeinformationen zu entschlüsseln, bis die Entschlüsselung erfolgreich ausgeführt wurde oder keine Anmeldeinformationen mehr vorhanden sind.  
   
 > [!CAUTION]  
 >  Wenn von sa und anderen Serverprinzipalen mit hohen Privilegien nicht auf eine Datenbank zugegriffen werden soll, ist das Erstellen von Hauptschlüssel-Anmeldeinformationen nicht empfehlenswert. Sie können eine Datenbank so konfigurieren, dass ihre Schlüsselhierarchie nicht vom Diensthauptschlüssel entschlüsselt werden kann. Diese Option wird als sicherer Schutz für Datenbanken mit verschlüsselten Informationen unterstützt, auf die von sa oder anderen Serverprinzipalen mit hohen Privilegien nicht zugegriffen werden soll. Durch das Erstellen eines Hauptschlüssels für eine Datenbank dieser Art wird der sichere Schutz entfernt, sodass sa und andere Serverprinzipale mit hohen Privilegien die Datenbank entschlüsseln können.  
@@ -82,7 +82,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. Erstellen von Anmeldeinformationen für den AdventureWorks2012-Hauptschlüssel  
- Im folgenden Beispiel werden Anmeldeinformationen für den Hauptschlüssel der `AdventureWorks2012`-Datenbank erstellt, und das Kennwort für den Hauptschlüssel wird als geheimer Eintrag in den Anmeldeinformationen gespeichert. Da alle Parameter, die an `sp_control_dbmasterkey_password` übermittelt werden, vom Datentyp **nvarchar**sein müssen, werden die Text Zeichenfolgen `N`mit dem Umwandlungs Operator konvertiert.  
+ Im folgenden Beispiel werden Anmeldeinformationen für den Hauptschlüssel der `AdventureWorks2012`-Datenbank erstellt, und das Kennwort für den Hauptschlüssel wird als geheimer Eintrag in den Anmeldeinformationen gespeichert. Da alle Parameter, die an übermittelt werden, `sp_control_dbmasterkey_password` vom Datentyp **nvarchar**sein müssen, werden die Text Zeichenfolgen mit dem Umwandlungs Operator konvertiert `N` .  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   

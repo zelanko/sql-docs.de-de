@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646048"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868960"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ruft einen Puffer mit mindestens einer Zeile aus der Datenbank ab. Die Gruppe der Zeilen in diesem Puffer wird als *Fetchpuffer*des Cursors bezeichnet. sp_cursorfetch wird aufgerufen, indem ID = 7 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
@@ -46,7 +46,7 @@ sp_cursorfetch cursor
  *fetchType*  
  Gibt an, welcher Cursorpuffer abgerufen werden soll. *FetchType* ist ein optionaler Parameter, der einen der folgenden ganzzahligen Eingabewerte erfordert.  
   
-|Wert|Name|BESCHREIBUNG|  
+|Wert|Name|Beschreibung|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Ruft den ersten Puffer von *nrows* -Zeilen ab. Wenn *nrows* 0 (null) entspricht, wird der Cursor vor dem Resultset positioniert, und es werden keine Zeilen zurückgegeben.|  
 |0x0002|NEXT|Ruft den nächsten Puffer von *nrows* -Zeilen ab.|  
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  Der RPC-Statusparameter wird auf einen der Werte in der folgenden Tabelle festgelegt.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Die Prozedur wurde erfolgreich ausgeführt.|  
 |0x0001|Fehler bei der Prozedur.|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  Die Zeilen werden als typisches Resultset zurückgegeben: Spaltenformat (0x2a), Zeilen (0xd1) gefolgt vom fertigen Resultset (0xfd). Metadatentoken werden im gleichen Format gesendet wie für sp_cursoropen angegeben: 0x81, 0xa5 und 0xa4 für SQL Server 7.0-Benutzer usw. Die Zeilenstatusindikatoren werden ähnlich dem BROWSE-Modus als ausgeblendete Spalten am Ende jeder Zeile mit dem Spaltennamen "rowstat" und dem Datentyp INT4 gesendet. Diese rowstat-Spalte verfügt über einen der Werte aus der folgenden Tabelle.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

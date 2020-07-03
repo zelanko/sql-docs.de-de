@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f4141dc0a7c424ce1ccee021da7cf82c2a6b44b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2a43abe560238f13f76cebc837adaac6a536f7fb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771188"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869861"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Erstellt eine oder mehrere Planhinweislisten aus einem Abfrageplan im Plancache. Sie können diese gespeicherte Prozedur verwenden, um sicherzustellen, dass der Abfrageoptimierer einen bestimmten Abfrageplan für eine bestimmte Abfrage verwendet. Weitere Informationen zu Planhinweislisten finden Sie unter [Planhinweislisten](../../relational-databases/performance/plan-guides.md).  
   

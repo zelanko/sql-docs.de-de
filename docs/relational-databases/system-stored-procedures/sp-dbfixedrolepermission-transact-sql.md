@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 52aeca25fd6fcf112adcb2410269fdcb1c049a52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69c80caccabb81fd2da1b3bdbe13ada8c5aa2582
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771150"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85867679"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Zeigt die Berechtigungen einer festen Datenbankrolle an. **sp_dbfixedrolepermission** gibt korrekte Informationen in zurück [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . Die Ausgabe spiegelt nicht die Änderungen an der Berechtigungs Hierarchie wider, die in implementiert wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Weitere Informationen finden Sie unter [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), die eine Liste fester Daten bankrollen und zugehöriger Berechtigungen anzeigen.  
   

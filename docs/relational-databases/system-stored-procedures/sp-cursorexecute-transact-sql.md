@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3da197547fcc0b08cb1154c6f32b11a65247304e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 800e70591e4ebb508bd5edd6426d43bdc3a16987
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646270"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869732"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Erstellt einen Cursor, der auf dem von sp_cursorprepare erstellten Ausführungsplan basiert, und füllt ihn auf. Dieses Verfahren, das mit sp_cursorprepare gekoppelt ist, verfügt über die gleiche Funktion wie sp_cursoropen, ist jedoch in zwei Phasen unterteilt. sp_cursorexecute wird aufgerufen, indem ID = 4 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
