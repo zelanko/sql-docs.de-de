@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9c788f20aa0b24d4058578119dc7b4bc139ded73
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 88deed9104d231b666a1ab3e6dfd72da94ad1465
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812585"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899126"
 ---
 # <a name="data-quality-client-application"></a>Data Quality-Clientanwendung
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   Die Anwendung [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ermöglicht es Ihnen, Data Quality-Vorgänge mithilfe eines eigenständigen Tools auszuführen. Diese Anwendung ermöglicht es Ihnen, Wissensdatenbanken zu erstellen, Data Quality-Projekte zu erstellen und auszuführen sowie administrative Aufgaben auszuführen.  
   

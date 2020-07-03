@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb9512bcf60d7a82d19cb383a87618c7d4c30393
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48dac5345df6d9e963f3601741aa93a68e2dfa3f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767479"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899222"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Synchronisiert ein Mergeabonnement in einen bekannten Validierungsstatus neu, der von Ihnen angegeben wird. Dies ermöglicht es Ihnen, die Konvergenz zu erzwingen oder die Abonnementdatenbank mit der Version eines bestimmten Zeitpunkts zu synchronisieren. Dabei kann es sich z. B. um die letzte erfolgreiche Überprüfung oder um ein angegebenes Datum handeln. Die Momentaufnahme wird bei der erneuten Synchronisierung eines Abonnements mithilfe dieser Methode nicht erneut angewendet. Diese gespeicherte Prozedur wird nicht für Momentaufnahme- oder Transaktionsreplikationsabonnements verwendet. Diese gespeicherte Prozedur wird auf dem Verleger, in der Veröffentlichungs Datenbank oder auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   

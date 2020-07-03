@@ -17,24 +17,24 @@ ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a7d7e7dd9bf7e6d5ad6dfa5776d76892f96ad05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42f1adda80e8b47e2cea7faebdc374df29d29a39
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148665"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895974"
 ---
 # <a name="files-and-version-numbers"></a>Dateien und Versionsnummern
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   Alle erforderlichen SQL Server Management Object (SMO)-Komponenten sind im nuget-Paket Microsoft. SqlServer. sqlmanagementobjects enthalten. SMO ist in mehreren verwalteten Assemblys implementiert. Sie können SMO-Anwendungen entweder auf einem Client oder auf einem Server entwickeln.  
 
 > > [!Important]
 > > Die Dateiversion der SMO-Assemblys wird als Hauptversion angezeigt. **0**. Build. Revision. Die eingebettete Assemblyversion ist jedoch sehr groß. **100**. Build. Revision. Dies geschieht, um die Version von SMO zu verwenden, die in jeder Anwendung verwendet wird, sodass Updates zu einem anderen nicht betroffen sind.
 > > 
-> > Aus diesem Grund sollten Sie diese Versionen der Assemblys **nicht** im globalen Assemblycache (GAC) installieren. Dies könnte dazu führen, dass andere Anwendungen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie z. b. Management Studio, unterbrechen. 
+> > Aus diesem Grund sollten Sie diese Versionen der Assemblys **nicht** im globalen Assemblycache (GAC) installieren. Dies könnte dazu führen, dass andere Anwendungen, wie z [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . b. Management Studio, unterbrechen. 
   
-|Datei|BESCHREIBUNG|  
+|Datei|Beschreibung|  
 |-----------|-----------------|  
 |Microsoft.SqlServer.ConnectionInfo.dll|Unterstützt das Herstellen von Verbindungen mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Microsoft.SqlServer.ServiceBrokerEnum.dll|Unterstützt die Programmierung des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker. Dies ist nur in Programmen erforderlich, die auf Service Broker zugreifen.|  

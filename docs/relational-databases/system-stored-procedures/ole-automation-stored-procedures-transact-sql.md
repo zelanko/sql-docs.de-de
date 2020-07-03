@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 81820891cbd7d5dda273b633818f9ace057745ca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28e5344dfe0b5e026df51e5accda6edecd6c4487
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758048"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898148"
 ---
 # <a name="ole-automation-stored-procedures-transact-sql"></a>Gespeicherte OLE-Automatisierungsprozeduren (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden gespeicherten Systemprozeduren, die die Verwendung von OLE-Automatisierungsobjekten in einem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batch zulassen. Standardmäßig blockiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Zugriff auf gespeicherte OLE-Automatisierungsprozeduren, da diese Komponente im Rahmen der Sicherheitskonfiguration für diesen Server deaktiviert wird. Ein Systemadministrator kann den Zugriff auf OLE-Automatisierungsprozeduren mit sp_configure aktivieren. Weitere Informationen finden Sie unter [Oberflächenkonfiguration](../../relational-databases/security/surface-area-configuration.md).  
   

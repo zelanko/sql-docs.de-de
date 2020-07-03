@@ -1,6 +1,6 @@
 ---
-title: Exportieren und Importieren von DQS-Wissensdatenbanken mit dqsinstaller. exe
-description: Erfahren Sie, wie Sie dqsinstaller. exe zum Exportieren und Importieren von DQS-Wissensdatenbanken für SQL Server Data Quality Services (DQS) verwenden.
+title: Exportieren und Importieren von DQS-Wissensdatenbanken mithilfe von DQSInstaller.exe
+description: Erfahren Sie, wie Sie die DQSInstaller.exe zum Exportieren und Importieren von DQS-Wissensdatenbanken für SQL Server Data Quality Services (DQS) verwenden.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ae87b9daebdef6b81c4d96abc253820cf7cb8228
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81308fb45447a87a349e0fbbd50c56f2f6237228
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75558143"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895191"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export und Importieren von DQS-Wissensdatenbanken mit DQSInstaller.exe
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Bei einer vorhandenen DQS-Installation können Sie alle Wissensdatenbanken auf dem [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] gleichzeitig in eine DQS-Sicherungsdatei (DQSB) exportieren und dann später die DQSB-Datei verwenden, um alle Wissensdatenbanken gleichzeitig auf einen anderen [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] zu importieren, indem Sie die Datei DQSInstaller.exe an der Eingabeaufforderung ausführen. Weitere Informationen zum Ausführen von DQSInstaller.exe von der Eingabeaufforderung finden Sie unter [Ausführen von „DQSInstaller.exe“ über Befehlszeile](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) in [Ausführen von DQSInstaller.exe zum Abschließen der Installation von Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
@@ -59,7 +59,7 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
  Wenn auf dem [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] Wissensdatenbanken mit dem gleichen Namen wie den zu importierenden vorhanden sind, wird an die Namen der importierten Wissensdatenbanken ein Unterstrich (_) angefügt, gefolgt von einem ganzzahligen Wert, beginnend mit 1. Wenn die Domäne „Firmenname“ z. B. doppelt vorkommt, ist der importierte Domänenname „Firmenname_1“.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Ausführen von "dqsinstaller. exe" zum Abschluss der Installation von Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [Ausführen von DQSInstaller.exe zum Abschluss der Installation von Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Installieren von Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Exportieren einer Wissensdatenbank in eine DQS-Datei](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
  [Importieren einer Wissensdatenbank aus einer DQS-Datei](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  

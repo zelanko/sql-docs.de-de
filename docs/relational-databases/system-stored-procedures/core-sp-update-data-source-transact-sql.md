@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 49859c498b0c2cb8550d7153334252a35d5d0e42
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6b25dfb47c49bd53a4544649d8e10e4c092d04de
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646867"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898218"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Aktualisiert eine vorhandene Zeile oder fügt eine neue Zeile in der core.source_info_internal-Tabelle des Verwaltungs-Data Warehouse ein. Diese Prozedur wird von der Laufzeitkomponente des Datensammlers bei jedem Hochladen von Daten in das Verwaltungs-Data Warehouse durch ein Uploadpaket aufgerufen.  
   

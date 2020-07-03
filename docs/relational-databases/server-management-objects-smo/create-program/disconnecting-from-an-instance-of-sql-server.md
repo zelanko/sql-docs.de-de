@@ -16,32 +16,32 @@ ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de53acd4ef3d9feb6ed1a5026d8890f83e88d557
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 51d3adb75a7ffe19a6f157fe51af89f831064eb6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148736"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898006"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>Trennen der Verbindung zu einer Instanz von SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   Das manuelle Schließen und Trennen der Verbindung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) ist nicht erforderlich. Verbindungen werden bei Bedarf hergestellt und geschlossen.  
   
 ## <a name="connection-pooling"></a>Verbindungspooling  
- Wenn die [Connect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect) -Methode aufgerufen wird, wird die Verbindung nicht automatisch freigegeben. Die [Disconnect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect) -Methode muss explizit aufgerufen werden, um die Verbindung zum Verbindungspool freizugeben. Sie können auch eine nicht in einem Pool enthaltene Verbindung anfordern. Hierzu legen Sie die [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection) -Eigenschaft der- <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> Eigenschaft fest, die auf das [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) -Objekt verweist.  
+ Wenn die [Connect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect) -Methode aufgerufen wird, wird die Verbindung nicht automatisch freigegeben. Die [Disconnect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect) -Methode muss explizit aufgerufen werden, um die Verbindung zum Verbindungspool freizugeben. Sie können auch eine nicht in einem Pool enthaltene Verbindung anfordern. Hierzu legen Sie die [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection) -Eigenschaft der-Eigenschaft fest, die auf <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> das [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) -Objekt verweist.  
   
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>Trennen der Verbindung zu einer Instanz von SQL&#160;Server für RMO  
  Das Schließen von Serververbindungen beim Programmieren mit RMO funktioniert etwas anders als mit SMO.  
   
- Da die Server Verbindung für ein RMO-Objekt durch das [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) -Objekt verwaltet wird, wird dieses Objekt auch verwendet, wenn eine Verbindung mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einer Instanz von hergestellt wird, wenn Sie mithilfe von RMO programmieren. Um eine Verbindung mit dem [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) -Objekt zu schließen, müssen Sie die [Disconnect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect) -Methode des RMO-Objekts aufzurufen. Nachdem die Verbindung geschlossen wurde, können keine RMO-Objekte verwendet werden.  
+ Da die Server Verbindung für ein RMO-Objekt durch das [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) -Objekt verwaltet wird, wird dieses Objekt auch verwendet, wenn eine Verbindung mit einer Instanz von hergestellt wird, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Wenn Sie mithilfe von RMO programmieren. Um eine Verbindung mit dem [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) -Objekt zu schließen, müssen Sie die [Disconnect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect) -Methode des RMO-Objekts aufzurufen. Nachdem die Verbindung geschlossen wurde, können keine RMO-Objekte verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
 Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C-&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
  
   
 ## <a name="closing-and-disconnecting-an-smo-object-in-visual-basic"></a>Schließen und Trennen der Verbindung eines SMO-Objekts in Visual Basic  
- In diesem Codebeispiel wird veranschaulicht, wie Sie eine nicht in einem Pool zusammengefasste Verbindung anfordern, indem Sie die <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection) -Eigenschaft der-Objekt Eigenschaft festlegen.  
+ In diesem Codebeispiel wird veranschaulicht, wie Sie eine nicht in einem Pool zusammengefasste Verbindung anfordern, indem Sie die [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection) -Eigenschaft der- <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> Objekt Eigenschaft festlegen.  
   
 ```VBNET
 Dim srv As Server
@@ -57,7 +57,7 @@ srv.ConnectionContext.Disconnect()
 ```
   
 ## <a name="closing-and-disconnecting-an-smo-object-in-visual-c"></a>Schließen und Trennen der Verbindung eines SMO-Objekts in Visual C#  
- In diesem Codebeispiel wird veranschaulicht, wie Sie eine nicht in einem Pool zusammengefasste Verbindung anfordern, indem Sie die <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection) -Eigenschaft der-Objekt Eigenschaft festlegen.  
+ In diesem Codebeispiel wird veranschaulicht, wie Sie eine nicht in einem Pool zusammengefasste Verbindung anfordern, indem Sie die [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection) -Eigenschaft der- <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> Objekt Eigenschaft festlegen.  
   
 ```csharp  
 {   

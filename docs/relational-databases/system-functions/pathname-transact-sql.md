@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 348069dcab86747bccd179f85fd343e5c9d2c47f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662883"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898452"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt den Pfad eines FILESTREAM BLOB (Binary Large Object) zurück. Die OpenSqlFilestream-API verwendet diesen Pfad zum Zurückgeben eines Handles, das eine Anwendung verwenden kann, um mit den BLOB-Daten mithilfe von Win32-APIs zu arbeiten. PathName ist schreibgeschützt.  
   
@@ -47,7 +47,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *\@andere*  
  Ein ganzzahliger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , der definiert, wie die Serverkomponente des Pfads formatiert werden soll. die * \@ Option* kann einen der folgenden Werte aufweisen. Die Standardeinstellung ist 0.  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Gibt den Servernamen in ein BIOS-Format konvertiert zurück, z. B.: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Gibt den Servernamen ohne Konvertierung zurück, z. B.: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Wenn die Datenbank zu einer Always on-Verfügbarkeits Gruppe gehört, hat der Wert von *use_replica_computer_name* die folgenden Auswirkungen auf die Ausgabe der **pathname** -Funktion:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Nicht angegeben.|Die Funktion gibt den virtuellen Netzwerknamen in (VNN) im Pfad zurück.|  
 |0|Die Funktion gibt den virtuellen Netzwerknamen in (VNN) im Pfad zurück.|  

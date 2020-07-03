@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 40cc138d811aae6377d0928c3b63a824e223adad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 559a88809e903c56221088e811b1b04875f3849a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756665"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899439"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zu Mitgliedern einer festen Serverrolle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück.  
   
@@ -43,7 +43,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
  die *Rolle* kann einen der folgenden Werte aufweisen.  
   
-|Server Rolle "Fixed"|BESCHREIBUNG|  
+|Server Rolle "Fixed"|Beschreibung|  
 |-----------------------|-----------------|  
 |Serverrollen|Systemadministratoren|  
 |securityadmin|Sicherheitsadministratoren|  

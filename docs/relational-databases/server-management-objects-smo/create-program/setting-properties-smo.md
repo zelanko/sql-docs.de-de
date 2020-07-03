@@ -15,15 +15,15 @@ ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdf4d998eb87cc213f7ce6b3068c4bc142790e5a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148713"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899063"
 ---
 # <a name="setting-properties---smo"></a>Festlegen von Eigenschaften – SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   Eigenschaften sind Werte, die aussagekräftige Informationen über das Objekt speichern. Beispielsweise [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Konfigurationsoptionen durch die Eigenschaften des <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> -Objekts dargestellt. Auf Eigenschaften kann mit der Eigenschaftsauflistung entweder direkt oder indirekt zugegriffen werden. Für den direkten Zugriff auf Eigenschaften wird die folgende Syntax verwendet:  
   
@@ -62,7 +62,7 @@ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebun
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Abrufen und Festlegen einer Eigenschaft in Visual Basic  
- <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> Dieses Codebeispiel zeigt, wie die-Eigenschaft des- <xref:Microsoft.SqlServer.Management.Smo.Information> Objekts und die <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> -Eigenschaft der- <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> Eigenschaft auf den **ExecuteSQL** -Member des <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerierten Typs festgelegt werden.  
+ Dieses Codebeispiel zeigt, wie die <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> -Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Information> -Objekts und die- <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> Eigenschaft der- <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> Eigenschaft auf den **ExecuteSQL** -Member des <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerierten Typs festgelegt werden.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -75,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Abrufen und Festlegen einer Eigenschaft in Visual C#  
- <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> Dieses Codebeispiel zeigt, wie die-Eigenschaft des- <xref:Microsoft.SqlServer.Management.Smo.Information> Objekts und die <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> -Eigenschaft der- <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> Eigenschaft auf den **ExecuteSQL** -Member des <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerierten Typs festgelegt werden.  
+ Dieses Codebeispiel zeigt, wie die <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> -Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Information> -Objekts und die- <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> Eigenschaft der- <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> Eigenschaft auf den **ExecuteSQL** -Member des <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerierten Typs festgelegt werden.  
   
 ```csharp  
 {   
@@ -154,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Durchlaufen aller Eigenschaften eines Objekts in Visual Basic  
- Dieses Codebeispiel durchläuft die **Properties** -Auflistung des- <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> Objekts und zeigt Sie auf dem [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Ausgabebildschirm an.  
+ Dieses Codebeispiel durchläuft die **Properties** -Auflistung des <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> -Objekts und zeigt Sie auf dem [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Ausgabebildschirm an.  
   
  In dem Beispiel wurde das <xref:Microsoft.SqlServer.Management.Smo.Property>-Objekt in eckige Klammern gesetzt, da es auch ein [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]-Schlüsselwort ist.  
   
@@ -178,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Durchlaufen aller Eigenschaften eines Objekts in Visual C#  
- Dieses Codebeispiel durchläuft die **Properties** -Auflistung des- <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> Objekts und zeigt Sie auf dem [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Ausgabebildschirm an.  
+ Dieses Codebeispiel durchläuft die **Properties** -Auflistung des <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> -Objekts und zeigt Sie auf dem [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Ausgabebildschirm an.  
   
 ```csharp  
 {   

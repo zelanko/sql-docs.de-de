@@ -2,19 +2,19 @@
 title: Verwalten von Kenn Wörtern (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/01/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 5d8886f28a30f264e0357af82724567e42e3bd5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df94b295e7695dc79c78876b5d42f8a0ece7dce6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907187"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897580"
 ---
 # <a name="managing-passwords-accesstosql"></a>Verwalten von Kenn Wörtern (accesstosql)
 In diesem Abschnitt geht es um das Sichern von Daten Bank Kennwörtern und das Verfahren zum Importieren oder Exportieren von Datenbankservern:  
@@ -32,52 +32,64 @@ Geben Sie ein gültiges Kennwort an, indem Sie eine der folgenden drei Methoden 
   
 1.  **Klartext löschen:** Geben Sie das Daten Bank Kennwort in das Attribut Wert des Knotens "Password" ein. Sie befindet sich unter dem Knoten Server Definition im Abschnitt Server der Skriptdatei oder der Server Verbindungs Datei.  
   
-    Kenn Wörter im Klartext sind nicht sicher. Aus diesem Grund wird in der Konsolenausgabe folgende Warnmeldung angezeigt: *"Server &lt;Server-ID&gt; Kennwort wird in unsicherem Klartext bereitgestellt. die SSMA-Konsolenanwendung bietet eine Option zum Schützen des Kennworts durch Verschlüsselung. Weitere Informationen finden Sie unter der Option"-SecurePassword "in der SSMA-Hilfedatei.*  
+    Kenn Wörter im Klartext sind nicht sicher. Aus diesem Grund wird in der Konsolenausgabe folgende Warnmeldung angezeigt: *"Server &lt; Server-ID &gt; Kennwort wird in unsicherem Klartext bereitgestellt. die SSMA-Konsolenanwendung bietet eine Option zum Schützen des Kennworts durch Verschlüsselung. Weitere Informationen finden Sie unter der Option"-SecurePassword "in der SSMA-Hilfedatei.*  
   
     **Verschlüsselte Kenn Wörter:** Das angegebene Kennwort wird in diesem Fall in verschlüsselter Form auf dem lokalen Computer in ProtectedStorage. SSMA gespeichert.  
   
     -   **Sichern von Kenn Wörtern**  
   
-        -   Führen Sie `SSMAforAccessConsole.exe` das mit `-securepassword` dem und den Switch-Schalter in der Befehlszeile aus, und übergeben Sie die Server Verbindung oder die Skriptdatei mit dem Kenn Wort Knoten im Abschnitt Server Definition.  
+        -   Führen `SSMAforAccessConsole.exe` Sie das mit dem `-securepassword` und den Switch-Schalter in der Befehlszeile aus, und übergeben Sie die Server Verbindung oder die Skriptdatei mit dem Kenn Wort Knoten im Abschnitt Server Definition.  
   
         -   Bei der Eingabeaufforderung wird der Benutzer aufgefordert, das Daten Bank Kennwort einzugeben und zu bestätigen.  
   
             Die Server Definitions-IDs und die zugehörigen verschlüsselten Kenn Wörter werden in einer Datei auf dem lokalen Computer gespeichert.  
-  
-            Beispiel 1:
+
+            &nbsp;
+
+            _Beispiel 1:_
             
-                Specify password
+            Kennwort angeben
+
+            ```console
+            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml"
+            ```
+
+            Kennwort für server_id ' XXX_1 ' eingeben: XXXXXXX
                 
-                C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml"
+            Kennwort für server_id ' XXX_1 ' erneut eingeben: XXXXXXX  
+
+            &nbsp;
+
+            _Beispiel 2:_
+
+            ```console
+            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml" -o
+            ```
+
+            Kennwort für server_id ' source_1 ' eingeben: XXXXXXX
                 
-                Enter password for server_id 'XXX_1': xxxxxxx
+            Kennwort für server_id ' source_1 ' erneut eingeben: XXXXXXX
                 
-                Re-enter password for server_id 'XXX_1': xxxxxxx  
-            
-            Beispiel 2:
-            
-                C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml" -o
+            Kennwort für server_id ' target_1 ' eingeben: XXXXXXX
                 
-                Enter password for server_id 'source_1': xxxxxxx
-                
-                Re-enter password for server_id 'source_1': xxxxxxx
-                
-                Enter password for server_id 'target_1': xxxxxxx
-                
-                Re-enter password for server_id 'target _1': xxxxxxx  
+            Kennwort für server_id "Ziel _1" erneut eingeben: XXXXXXX  
   
     -   **Entfernen verschlüsselter Kenn Wörter**  
   
-        Führen Sie `SSMAforAccessConsole.exe` das mit`-securepassword` dem `-remove` aus, und wechseln Sie in der Befehlszeile zum übergeben der Server-IDs, um die verschlüsselten Kenn Wörter aus der geschützten Speicherdatei auf dem lokalen Computer zu entfernen.  
-  
-            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove all
-            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove "source_1,target_1"  
+        Führen `SSMAforAccessConsole.exe` Sie das mit `-securepassword` dem `-remove` aus, und wechseln Sie in der Befehlszeile zum übergeben der Server-IDs, um die verschlüsselten Kenn Wörter aus der geschützten Speicherdatei auf dem lokalen Computer zu entfernen.  
+
+        ```console
+        C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove all
+        C:\SSMA\SSMAforAccessConsole.EXE -securepassword -remove "source_1,target_1"
+        ```
   
     -   **Auflisten von Server-IDs, deren Kenn Wörter verschlüsselt sind**  
   
-        Führen Sie die Datei "ssmaforaccessconsole. `-securepassword` exe `-list` " mit dem aus, und wechseln Sie in der Befehlszeile, um alle Server-IDs aufzulisten, deren Kenn Wörter verschlüsselt wurden.  
-  
-            C:\SSMA\SSMAforAccessConsole.EXE -securepassword -list  
+        Führen Sie die SSMAforAccessConsole.exe mit dem aus `-securepassword` `-list` , und wechseln Sie in der Befehlszeile, um alle Server-IDs aufzulisten, deren Kenn Wörter verschlüsselt wurden.  
+
+        ```console
+        C:\SSMA\SSMAforAccessConsole.EXE -securepassword -list
+        ```
   
     > [!NOTE]  
     > 1.  Das Kennwort im Klartext, das in der Skript-oder Server Verbindungs Datei angegeben ist, hat Vorrang vor dem verschlüsselten Kennwort in der gesicherten Datei.  
@@ -86,40 +98,38 @@ Geben Sie ein gültiges Kennwort an, indem Sie eine der folgenden drei Methoden 
 ## <a name="exporting-or-importing-encrypted-passwords"></a>Exportieren oder importieren verschlüsselter Kenn Wörter  
 Mit der SSMA-Konsolenanwendung können Sie verschlüsselte Daten Bank Kennwörter, die in einer Datei auf dem lokalen Computer vorhanden sind, in eine gesicherte Datei exportieren und umgekehrt. Dies hilft bei der unabhängigen Erstellung der verschlüsselten Kenn Wörter. Die Export Funktion liest die Server-ID und das Kennwort aus dem lokalen geschützten Speicher und speichert die Informationen in einer verschlüsselten Datei. Der Benutzer wird aufgefordert, das Kennwort für die gesicherte Datei einzugeben. Stellen Sie sicher, dass das eingegebene Kennwort mindestens 8 Zeichen lang ist. Diese gesicherte Datei ist auf verschiedenen Computern portabel. Die Import Funktion liest die Server-ID und die Kenn Wort Informationen aus der gesicherten Datei. Der Benutzer wird aufgefordert, das Kennwort für die gesicherte Datei einzugeben, und fügt die Informationen an den lokalen geschützten Speicher an.  
 
+### <a name="export-password"></a>Kennwort exportieren
 
-    Export password
-    
-    Enter password for protecting the exported file
-    
-    C:\SSMA\SSMAforAccessConsole.EXE -securepassword -export all "machine1passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforAccessConsole.EXE -p -e "AccessDB_1_1,Sql_1" "machine2passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
+1. Kennwort zum Schutz der exportierten Datei eingeben
 
+2. `C:\SSMA\SSMAforAccessConsole.EXE -securepassword -export all "machine1passwords.file"`
 
-    Import an encrypted password
-    
-    Enter password for protecting the imported file
-    
-    C:\SSMA\SSMAforAccessConsole.EXE -securepassword -import all "machine1passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforAccessConsole.EXE -p -i "AccessDB_1,Sql_1" "machine2passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
-  
+3. Geben Sie das Kennwort zum Schutz der exportierten Datei ein: xxxxxxxx
+
+4. Bestätigen Sie das Kennwort: xxxxxxxx
+
+5. `C:\SSMA\SSMAforAccessConsole.EXE -p -e "AccessDB_1_1,Sql_1" "machine2passwords.file"`
+
+6. Geben Sie das Kennwort zum Schutz der exportierten Datei ein: xxxxxxxx
+
+7. Bestätigen Sie das Kennwort: xxxxxxxx  
+
+### <a name="import-an-encrypted-password"></a>Importieren eines verschlüsselten Kennworts
+
+1. Kennwort zum Schutz der importierten Datei eingeben
+
+2. `C:\SSMA\SSMAforAccessConsole.EXE -securepassword -import all "machine1passwords.file"`
+
+3. Kennwort eingeben, um die Server aus der verschlüsselten Datei zu importieren: xxxxxxxx
+
+4. Bestätigen Sie das Kennwort: xxxxxxxx
+
+5. `C:\SSMA\SSMAforAccessConsole.EXE -p -i "AccessDB_1,Sql_1" "machine2passwords.file"`
+
+6. Kennwort eingeben, um die Server aus der verschlüsselten Datei zu importieren: xxxxxxxx
+
+7. Bestätigen Sie das Kennwort: xxxxxxxx  
+
 ## <a name="see-also"></a>Weitere Informationen  
 [Ausführen der SSMA-Konsole (Zugriff)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

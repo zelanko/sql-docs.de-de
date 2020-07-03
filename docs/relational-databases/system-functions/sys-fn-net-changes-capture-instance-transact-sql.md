@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: add3f81793b2dc21c08ca601bb1c48cc7d4588be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783076"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898319"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_net_changes_ &lt; capture_instance &gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Wrapper für die Abfragefunktionen der **net-Änderungen** . Die zum Erstellen dieser Funktionen erforderlichen Skripts werden von der gespeicherten Prozedur sys.sp_cdc_generate_wrapper_function generiert.  
   
@@ -93,7 +93,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Spaltentyp|BESCHREIBUNG|  
+|Spaltenname|Spaltentyp|Beschreibung|  
 |-----------------|-----------------|-----------------|  
 |\<columns from @column_list>|**variiert**|Die Spalten, die im **column_list** -Argument für die sp_cdc_generate_wrapper_function identifiziert werden, wenn Sie aufgerufen wird, um das Skript zum Erstellen des Wrappers zu generieren. Wenn *column_list* NULL ist, werden alle nach verfolgten Quell Spalten im Resultset angezeigt.|  
 |__CDC_OPERATION|**nvarchar (2)**|Ein Vorgangscode, der angibt, welcher Vorgang auf die Zeile der Zielumgebung angewendet werden muss. Der Vorgang variiert basierend auf dem Wert des Argument *row_filter_option* , das im folgenden-Befehl bereitgestellt wird:<br /><br /> *row_filter_option* = ' all ', ' all with mask '<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Aktualisierungsvorgang<br /><br /> *row_filter_option* = ' all with merge '<br /><br /> 'D' - Löschvorgang<br /><br /> 'M' - Einfüge- oder Aktualisierungsvorgang|  

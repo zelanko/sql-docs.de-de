@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf1406488424febe0ea98a686b91068fe2d07eda
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58e6166060c5e2099051403361b2eb2c51ad4c18
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725772"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898917"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt eine Zeile für jedes Objekt zurück, bei dem es sich um eine interne Tabelle handelt. Interne Tabellen werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch generiert und dienen der Unterstützung verschiedener Funktionen. Wenn Sie beispielsweise einen primären XML-Index erstellen, erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch eine interne Tabelle zur persistenten Aufbewahrung der aufgeteilten XML-Dokumentdaten. Interne Tabellen werden im **sys** -Schema jeder Datenbank angezeigt und verfügen über eindeutige, vom systemgenerierte Namen, die ihre Funktion angeben, z. b. **xml_index_nodes_2021582240_32001** oder **queue_messages_1977058079**  
   

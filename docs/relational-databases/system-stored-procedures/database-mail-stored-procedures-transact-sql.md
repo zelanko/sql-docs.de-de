@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8f81d6839346de07eb84ed5250bb5986dbd2fff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6127fae185a556387d0469998c383445d74e6fc8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826347"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898172"
 ---
 # <a name="database-mail-stored-procedures-transact-sql"></a>Gespeicherte Prozeduren für Datenbank-E-Mail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt die folgenden gespeicherten System Prozeduren, die zum Ausführen von e-Mail-Vorgängen in einer Instanz von verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

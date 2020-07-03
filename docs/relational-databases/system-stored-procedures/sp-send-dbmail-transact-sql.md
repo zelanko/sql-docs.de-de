@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42dbd7a5bf6e1bc7b705bcf017987da959faa114
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 63b7029c69fff73615d34bd723b97290b2557afb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827524"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899205"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Sendet eine E-Mail-Nachricht an die angegebenen Empfänger. Die Nachricht kann ein Abfrageresultset, Dateianlagen oder beides enthalten. Wenn e-Mail-Nachrichten erfolgreich in der Datenbank-E-Mail Warteschlange platziert werden, gibt **sp_send_dbmail** den **mailitem_id** der Nachricht zurück. Diese gespeicherte Prozedur wird in der **msdb** -Datenbank gespeichert.  
   
@@ -93,7 +93,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   Normal  
   
--   High  
+-   Hoch  
   
  Der Standardwert ist Normal.  
   
@@ -161,7 +161,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ## <a name="result-sets"></a>Resultsets  
  Bei Erfolg wird die Nachricht "E-Mail in der Warteschlange" zurückgegeben.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Vor der Verwendung müssen Datenbank-E-Mail mithilfe des Datenbank-E-Mail Konfigurations-Assistenten oder **sp_configure**aktiviert werden.  
   
  **sysmail_stop_sp** beendet Datenbank-E-Mail, indem die vom externen Programm verwendeten Service Broker Objekte beendet werden. **sp_send_dbmail** akzeptiert weiterhin e-Mails, wenn Datenbank-E-Mail mit **sysmail_stop_sp**beendet wird. Starten Sie Datenbank-E-Mail mithilfe von **sysmail_start_sp**.  
