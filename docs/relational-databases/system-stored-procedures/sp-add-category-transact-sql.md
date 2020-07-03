@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 251c9992285084123df7afb3c27678c2886b531c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70810556"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880005"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Fügt dem Server die angegebene Kategorie von Aufträgen, Warnungen oder Operatoren hinzu. Informationen zur alternativen Methode finden [Sie unter CREATE Job Category Using SQL Server Management Studio](/sql/ssms/agent/create-a-job-category).
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > Auf [verwaltete Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)werden die meisten, aber nicht alle SQL Server-Agent Features derzeit unterstützt. Weitere Informationen finden Sie [unter verwaltete Azure SQL-Datenbank-Instanz T-SQL-Unterschiede von SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
+ > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ sp_add_category
 ## <a name="arguments"></a>Argumente  
 `[ @class = ] 'class'`Die Klasse der Kategorie, die hinzugefügt werden soll. die *Klasse* ist vom Datentyp **varchar (8)** und hat den Standardwert Job. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |JOB|Fügt eine Auftragskategorie hinzu|  
 |ALERT|Fügt eine Warnungskategorie hinzu|  
@@ -55,11 +55,11 @@ sp_add_category
   
 `[ @type = ] 'type'`Der Typ der Kategorie, die hinzugefügt werden soll. *Type ist vom Datentyp* **varchar (12)** und hat den Standardwert **local**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |LOCAL|Lokale Auftragskategorie|  
 |MultiServer|Eine Multiserver-Auftrags Kategorie.|  
-|Keine|Eine Kategorie für eine andere Klasse als Job **.**|  
+|NONE|Eine Kategorie für eine andere Klasse als Job **.**|  
   
 `[ @name = ] 'name'`Der Name der Kategorie, die hinzugefügt werden soll. Der Name muss innerhalb der angegebenen Klasse eindeutig sein. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
   
@@ -93,8 +93,8 @@ GO
  [sp_delete_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [dbo. sysjobs &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
- [dbo. sysjobservers &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
+ [dbo.sysAufträge &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo.sysjobservers &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

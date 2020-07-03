@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7dc40a463ef04568097923c2a9804b0b25860372
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 93c4b91d6091cf8ed60cf7923d31460f37d5f4bb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717228"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881058"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>SetProtocolsOrder-Methode (ClientNetworkProtocol-Klasse)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Ändert die Reihenfolge der Protokollliste.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,7 +41,7 @@ object.SetProtocolsOrder(ProtocolOrderList)
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|BESCHREIBUNG|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*Protocolorderlist*|Eine Zeichenfolgenarray, das die Clientnetzwerkprotokolle in der neuen Reihenfolge auflistet.|  
   

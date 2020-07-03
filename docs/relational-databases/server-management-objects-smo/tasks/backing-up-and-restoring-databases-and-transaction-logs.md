@@ -20,21 +20,21 @@ ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26d6ca64dfbca8bc63a81989d7c3c34a841e4f5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 91b5c4e79839a3ec8936ee004dbc7b832b952223
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095343"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880065"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Sichern und Wiederherstellen von Datenbanken und Transaktionsprotokollen
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  In SMO sind die Klassen <xref:Microsoft.SqlServer.Management.Smo.Backup> und <xref:Microsoft.SqlServer.Management.Smo.Restore> Hilfsprogrammklassen, die die Tools zur Durchführung bestimmter Tasks, wie Sichern und Wiederherstellen, bereitstellen. Ein <xref:Microsoft.SqlServer.Management.Smo.Backup> -Objekt stellt eine bestimmte Sicherungs Aufgabe dar, die anstelle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eines-Objekts auf der Serverinstanz erforderlich ist.  
+  In SMO sind die Klassen <xref:Microsoft.SqlServer.Management.Smo.Backup> und <xref:Microsoft.SqlServer.Management.Smo.Restore> Hilfsprogrammklassen, die die Tools zur Durchführung bestimmter Tasks, wie Sichern und Wiederherstellen, bereitstellen. Ein- <xref:Microsoft.SqlServer.Management.Smo.Backup> Objekt stellt eine bestimmte Sicherungs Aufgabe dar, die anstelle eines- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Objekts auf der Serverinstanz erforderlich ist.  
   
  Wenn Datenverlust oder -beschädigung auftritt, muss die Sicherung entweder vollständig oder teilweise wiederhergestellt werden. Die partielle Wiederherstellung verwendet die <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>-Auflistung, um die zu wiederherstellenden Daten zu unterteilen. Bei der Sicherung eines Transaktionsprotokolls erfolgt die Datenwiederherstellung bis zu einem gewissen Zeitpunkt mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Restore>-Objekts. Die Daten können auch mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>-Methode validiert werden. Der empfohlene Sicherungsvorgang besteht aus der Prüfung der Sicherung auf Integrität durch die Vornahme eines Wiederherstellungsvorgangs und durch die regelmäßige Prüfung der Daten in der Datenbank.  
   
- Ebenso wie <xref:Microsoft.SqlServer.Management.Smo.Backup> das-Objekt <xref:Microsoft.SqlServer.Management.Smo.Restore> muss das-Objekt nicht mithilfe einer **Create** -Methode erstellt werden, da es kein-Objekt für die-Instanz darstellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Beim <xref:Microsoft.SqlServer.Management.Smo.Restore>-Objekt handelt es sich um eine Gruppe von Eigenschaften und Methoden, die zur Wiederherstellung einer Datenbank verwendet werden.  
+ Ebenso wie das- <xref:Microsoft.SqlServer.Management.Smo.Backup> Objekt muss das- <xref:Microsoft.SqlServer.Management.Smo.Restore> Objekt nicht mithilfe einer **Create** -Methode erstellt werden, da es kein-Objekt für die-Instanz darstellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Beim <xref:Microsoft.SqlServer.Management.Smo.Restore>-Objekt handelt es sich um eine Gruppe von Eigenschaften und Methoden, die zur Wiederherstellung einer Datenbank verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C-&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

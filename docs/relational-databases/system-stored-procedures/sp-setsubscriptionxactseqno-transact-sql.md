@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8cce1f1fd046d2b93f41f010b82a067c5a936670
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d17675f8443db2a726ceb72237d184d665f9d7e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790357"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881543"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Wird während der Problembehandlung verwendet, um die zuletzt übermittelte Transaktion mithilfe der Protokoll Folge Nummer (Log Sequence Number, LSN) anzugeben, sodass die Verteilungs-Agent die Übermittlung bei der nächsten Transaktion beginnen kann. Beim Neustart gibt das Verteilungs-Agent Transaktionen zurück, die größer sind als dieses Wasserzeichen (LSN) aus dem Cache der Verteilungs Datenbank (MSrepl_commands). Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt. Wird nicht für Nicht-SQL Server-Abonnenten unterstützt.  
   
