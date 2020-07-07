@@ -18,15 +18,14 @@ ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 947e8da980dbdb4199245d18e44ec9df36dbf13a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 5627da0643b35bac430e59d9cbc0685ac6f44e38
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773220"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86013088"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Aktualisieren von Daten in SQL Server-Cursorn
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Beim Abrufen und aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Daten mittels Cursorn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird die Consumeranwendung eines Native Client OLE DB Anbieters durch die gleichen Überlegungen und Einschränkungen gebunden, die für jede andere Client Anwendung gelten.  
   

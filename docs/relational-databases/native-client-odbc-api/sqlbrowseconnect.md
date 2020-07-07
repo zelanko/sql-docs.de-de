@@ -14,28 +14,27 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c1bdf37018f75e1683fa0879ce4e25872efe20c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 690e853ceb908cb85d27831c0c9a4961591158f8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789420"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012089"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **Sqlbrowseconnetct** verwendet Schlüsselwörter, die in drei Ebenen von Verbindungsinformationen kategorisiert werden können. In der folgenden Tabelle wird für jedes Schlüsselwort angegeben, ob eine Liste gültiger Werte zurückgegeben wird und ob das Schlüsselwort optional ist.  
   
 ## <a name="level-1"></a>Ebene 1  
   
-|Schlüsselwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
+|Stichwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|–|Nein|Der Name der von **SQLDataSources**zurückgegebenen Datenquelle. Das DSN-Schlüsselwort kann nicht verwendet werden, wenn das DRIVER-Schlüsselwort verwendet wird.|  
 |DRIVER|–|Nein|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Name des ODBC-Treibers für Microsoft® Native Client lautet { [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Das DRIVER-Schlüsselwort kann nicht verwendet werden, wenn das DSN-Schlüsselwort verwendet wird.|  
   
 ## <a name="level-2"></a>Ebene 2  
   
-|Schlüsselwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
+|Stichwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|Ja|Nein |Name des Servers in dem Netzwerk, auf dem die Datenquelle gespeichert ist. Für den Server kann der Begriff "(local)" eingegeben werden. In diesem Fall kann eine lokale Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, auch wenn dies keine vernetzte Version ist.|  
 |UID|Nein|Ja|Benutzeranmelde-ID.|  
@@ -45,7 +44,7 @@ ms.locfileid: "85789420"
   
 ## <a name="level-3"></a>Level 3  
   
-|Schlüsselwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
+|Stichwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|Ja|Ja|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |LANGUAGE|Ja|Ja|Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Landessprache.|  
@@ -54,7 +53,7 @@ ms.locfileid: "85789420"
   
  Die folgenden Attribute, die durch den Aufruf von [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)festgelegt werden, bestimmen das von **sqlbrowseconnetct**zurückgegebene Resultset.  
   
-|Attribut|BESCHREIBUNG|  
+|attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Wenn Sie auf SQL_MORE_INFO_YES festgelegt ist, gibt **sqlbrowseconnetct** eine erweiterte Zeichenfolge mit Server Eigenschaften zurück.<br /><br /> Im folgenden finden Sie ein Beispiel für eine erweiterte Zeichenfolge, die von **sqlbrowseconnetct**zurückgegeben wird:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> In dieser Zeichenfolge werden verschiedene durch Semikolons getrennte Informationen zum Server aufgeführt. Informationen zu verschiedenen Serverinstanzen werden durch Kommas getrennt.|  
 |SQL_COPT_SS_BROWSE_SERVER|Wenn ein Servername angegeben wird, gibt **sqlbrowseconnetct** Informationen für den angegebenen Server zurück. Wenn SQL_COPT_SS_BROWSE_SERVER auf NULL festgelegt ist, gibt **sqlbrowseconnetct** Informationen für alle Server in der Domäne zurück.<br /><br /> <br /><br /> Beachten Sie, dass **sqlbrowseconnetct** aufgrund von Netzwerkproblemen möglicherweise keine rechtzeitige Antwort von allen Servern empfängt. Daher kann die Liste der zurückgegebenen Server bei jeder Anforderung unterschiedlich sein.|  

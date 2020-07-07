@@ -14,15 +14,14 @@ ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a90a9bd5e3259e80dcd16550e3553c9c3dbdaf34
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 26f4127421d80c8652856c9cc887a374ef62a878
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725116"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009545"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Vorgehensweisen: Massenkopieren mit dem SQL Server-ODBC-Treiber (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Wird er zusammen mit Microsoft® SQL Server™ 2005 verwendet, unterstützt der SQL Server-ODBC-Treiber dieselben Massenkopierfunktionen wie die DB-Library-API.  
   
