@@ -18,15 +18,14 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5082230054064f41134f553660999314b5b51897
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
-ms.translationtype: MT
+ms.openlocfilehash: 438c3126277dfe61c7faef84f82b11dc16d7cfb2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834751"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001067"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Bei einigen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client APIs werden Verbindungszeichenfolgen zur Angabe von Verbindungsattributen verwendet. Verbindungszeichenfolgen sind Listen von Schlüsselwörtern und zugehörigen Werten. Jedes Schlüsselwort bezeichnet ein spezielles Verbindungsattribut.  
 
@@ -58,7 +57,7 @@ ms.locfileid: "85834751"
   
  In der folgenden Tabelle werden die Schlüsselwörter beschrieben, die in einer ODBC-Verbindungszeichenfolge verwendet werden können.  
   
-|Schlüsselwort|BESCHREIBUNG|  
+|Stichwort|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Addr**|Synonym für "Address".|  
 |**Adresse**|Die Netzwerkadresse des Servers, auf dem eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird. **Address** ist normalerweise der Netzwerkname des Servers, kann jedoch auch ein anderer Name sein, beispielsweise der einer Pipe, einer IP-Adresse oder eines TCP/IP-Ports und einer Socketadresse.<br /><br /> Wenn Sie eine IP-Adresse angeben, stellen Sie im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager sicher, dass die Protokolle für TCP/IP oder Named Pipes aktiviert sind.<br /><br /> Der Wert von **Address** hat Vorrang vor dem Wert, der in ODBC-Verbindungs Zeichenfolgen bei Verwendung von Native Client an den **Server** übergeben wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Zudem ist zu beachten, dass mit der Angabe `Address=;` eine Verbindung mit dem im **Server**-Schlüsselwort angegebenen Server hergestellt wird. Die Angaben `Address= ;, Address=.;`, `Address=localhost;` und `Address=(local);` führen dagegen zu einer Verbindungsherstellung mit dem lokalen Server.<br /><br /> Die vollständige Syntax für das **Address**-Schlüsselwort ist folgendermaßen:<br /><br /> [_Protokoll_ **:** ]*Address*[ **,** _port &#124;\pipe\pipename_]<br /><br /> *Protokoll* kann Folgendes sein: **tcp** (TCP/IP), **lpc** (Shared Memory) oder **np** (Named Pipes). Weitere Informationen zu Protokollen finden Sie unter [Konfigurieren von Clientprotokollen](../../../database-engine/configure-windows/configure-client-protocols.md).<br /><br /> Wenn weder das *Protokoll* noch das **Netzwerk** Schlüsselwort angegeben wird, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet Native Client die in Configuration Manager angegebene Protokoll Reihenfolge [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .<br /><br /> *port* gibt den Port auf dem angegebenen Server an, zu dem eine Verbindung hergestellt werden soll. In der Standardeinstellung verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den Port 1433.|  

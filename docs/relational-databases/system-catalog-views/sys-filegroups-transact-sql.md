@@ -20,15 +20,14 @@ ms.assetid: 9e851f72-1f8e-4515-a25d-152ebc12ed56
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b676878f0e42e57d5a6081ce927ca9892e3e62c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 191def5ab0620c143739da388ba468efd308ce28
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754464"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005946"
 ---
 # <a name="sysfilegroups-transact-sql"></a>sys.filegroups (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Enthält eine Zeile für jeden Datenspeicher, der einer Dateigruppe entspricht.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "85754464"
 |**filegroup_guid**|**uniqueidentifier**|GUID für die Dateigruppe.<br /><br /> NULL = PRIMARY-Dateigruppe|  
 |**log_filegroup_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist der Wert NULL.|  
 |**is_read_only**|**bit**|1 = Die Dateigruppe ist schreibgeschützt.<br /><br /> 0 = Auf die Dateigruppe besteht Lese-/Schreibzugriff.|  
-|**is_autogrow_all_files**|**bit**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 1 = Wenn eine Datei in der Datei Gruppe den Schwellenwert für die automatische Vergrößerung erreicht, werden alle Dateien in der Datei Gruppe vergrößert.<br /><br /> 0 = wenn eine Datei in der Datei Gruppe den Schwellenwert für die automatische Vergrößerung erreicht, wird nur diese Datei vergrößert. Dies ist die Standardeinstellung.|  
+|**is_autogrow_all_files**|**bit**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 1 = Wenn eine Datei in der Datei Gruppe den Schwellenwert für die automatische Vergrößerung erreicht, werden alle Dateien in der Datei Gruppe vergrößert.<br /><br /> 0 = wenn eine Datei in der Datei Gruppe den Schwellenwert für die automatische Vergrößerung erreicht, wird nur diese Datei vergrößert. Dies ist die Standardoption.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

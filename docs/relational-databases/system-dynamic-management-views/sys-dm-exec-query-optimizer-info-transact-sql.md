@@ -20,15 +20,14 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d544d95cc2a0159a3502544489cf58514fe19fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 6febd2233e15794bd72874bd92aab6e31c0266f1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734772"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005223"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Gibt ausführliche Statistiken zur Ausführung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierers zurück. Diese Sicht können Sie beim Optimieren einer Arbeitsauslastung verwenden, um Probleme oder Verbesserungen bei der Abfrageoptimierung zu identifizieren. Sie können beispielsweise anhand der Gesamtanzahl der Optimierungen, des Wertes für die verstrichene Zeit und des Endkostenwertes die Abfrageoptimierungen der aktuellen Arbeitsauslastung und sämtliche während des Optimierungsvorgangs beobachteten Änderungen vergleichen. Einige Leistungsindikatoren stellen Daten bereit, die nur für die interne Diagnose von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relevant sind. Diese Leistungsindikatoren sind als "Internal only" gekennzeichnet.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "85734772"
   
 |Name|Datentyp|BESCHREIBUNG|  
 |----------|---------------|-----------------|  
-|**Zähler**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
+|**Indikator**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
 |**occurrence**|**bigint**|Anzahl der Vorkommen von Optimierungsereignissen für diesen Leistungsindikator.|  
 |**value**|**float**|Durchschnittlicher Eigenschaftswert pro Ereignisvorkommen.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
@@ -50,7 +49,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `V
 ## <a name="remarks"></a>Hinweise  
  **sys. dm_exec_query_optimizer_info** enthält die folgenden Eigenschaften (Indikatoren). Alle Vorkommenwerte sind kumulativ und werden beim Neustarten des Systems auf 0 festgelegt. Alle Werte für Wertfelder werden beim Neustarten des Systems auf NULL festgelegt. Alle Wertspaltenwerte, die einen Durchschnitt angeben, verwenden den Vorkommenwert aus derselben Zeile als Nenner bei der Berechnung des Durchschnitts. Alle Abfrage Optimierungen werden gemessen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Änderungen an **dm_exec_query_optimizer_info**bestimmt, einschließlich Benutzer-und System generierter Abfragen. Durch die Ausführung eines bereits zwischengespeicherten Plans werden Werte in **dm_exec_query_optimizer_info**nicht geändert, nur Optimierungen sind von Bedeutung.  
   
-|Zähler|Vorkommen|Wert|  
+|Leistungsindikator|Vorkommen|Wert|  
 |-------------|----------------|-----------|  
 |optimizations|Gesamtzahl der Optimierungen.|Nicht verfügbar|  
 |elapsed time|Gesamtzahl der Optimierungen.|Durchschnittlich verstrichene Zeit pro Optimierung einer einzelnen Anweisung (Abfrage), in Sekunden.|  

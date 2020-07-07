@@ -12,16 +12,15 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 07/01/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 90821de148c245038b01eda3ebbe5c0b09379255
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
-ms.translationtype: MT
+ms.openlocfilehash: 0be2ffbfb7160d5be8f5ebb2a2ed688103a54b4d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834811"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004612"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Bindung und Datenübertragung von Tabellenwertparametern und Spaltenwerten
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Tabellenwert Parameter (TVP) müssen wie andere Parameter gebunden werden, bevor Sie an den Server übermittelt werden. Die Anwendung bindet Tabellenwert Parameter auf dieselbe Weise, wie andere Parameter gebunden werden: mithilfe von SQLBindParameter oder gleichwertigen Aufrufen von SQLSetDescField oder SQLSetDescRec. Tabellenwertparameter haben den Serverdatentyp SQL_SS_TABLE. Der C-Typ kann entweder als SQL_C_DEFAULT oder SQL_C_BINARY angegeben werden.  
 

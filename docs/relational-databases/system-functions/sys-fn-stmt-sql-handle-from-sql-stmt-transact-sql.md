@@ -13,15 +13,14 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f7111f4e0f67e1102712c140737b68914feada6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9ffc1ca0ec2e44377012f4149255bca80bce6af7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652021"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002995"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Ruft den **stmt_sql_handle** für eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung unter dem angegebenen parameterisierungstyp (einfach oder erzwungen) ab. Dies ermöglicht es Ihnen, auf Abfragen zu verweisen, die in der Abfragespeicher gespeichert sind, indem Sie Ihre **stmt_sql_handle** verwenden, wenn Sie Ihren Text kennen.  
   
@@ -57,7 +56,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>Zurückgegebene Spalten  
  In der folgenden Tabelle sind die Spalten aufgelistet, die von sys. fn_stmt_sql_handle_from_sql_stmt zurückgegeben werden.  
   
-|Spaltenname|Typ|BESCHREIBUNG|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|Das SQL-handle.|  
 |**query_sql_text**|**nvarchar(max)**|Der Text der [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.|  
