@@ -16,15 +16,14 @@ ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2813653f46573ad0e5b1db558fbc31de50e1071d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 62d7a3b828effb7b7daa3f8a92e18f8408b5d46d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785470"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998210"
 ---
 # <a name="data-types-ole-db"></a>Datentypen (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Um [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen auszuführen und die Ergebnisse mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter zu verarbeiten, müssen Sie wissen, wie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anbieter Datentypen OLE DB-Datentypen zuordnet, wenn Parameter oder Spalten in einem Rowset gebunden werden, und wenn die **ITableDefinition** -Schnittstelle verwendet wird, um eine Tabelle in zu erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
