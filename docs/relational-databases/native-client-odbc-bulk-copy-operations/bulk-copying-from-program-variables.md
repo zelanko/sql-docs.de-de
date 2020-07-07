@@ -19,15 +19,14 @@ ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b22b180eb2467455e4dce34906ab7481801c139d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 543d14bf67cfc4587c315090533c1066646493c7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760748"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012337"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Massenkopieren aus Programmvariablen
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Sie können Massenkopiervorgänge direkt aus Programmvariablen durchführen. Nachdem Sie Variablen zugeordnet haben, die die Daten für eine Zeile enthalten, und [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) aufrufen, um das Massen kopieren zu starten, rufen Sie [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) für jede Spalte auf, um den Speicherort und das Format der Programmvariablen anzugeben, die der Spalte zugeordnet werden soll. Füllen Sie jede Variable mit Daten aus, und wenden Sie dann [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) an, um eine Daten Zeile an den Server zu senden. Wiederholen Sie den Vorgang zum Auffüllen der Variablen und zum Aufrufen von **bcp_sendrow** , bis alle Zeilen an den Server gesendet wurden. Rufen Sie dann [bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) auf, um anzugeben, dass der Vorgang abgeschlossen ist.  
   

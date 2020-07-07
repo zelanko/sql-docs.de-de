@@ -18,15 +18,14 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12c4be2e1145d488ed057df5b206042b31bdb5b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b443a3ecd3e96740939a1cbef3f2a732a129d9a8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774286"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010098"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Gibt den SQL-Typnamen für ein angegebenes BCP-Typtoken zurück.  
   
@@ -46,7 +45,7 @@ RETCODE bcp_gettypename (
  *Flächen*  
  Gibt an, wenn ein angefordertes Token ein max-Typ ist.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  Eine Zeichenfolge, die den SQL-Typnamen enthält, der dem BCP-Typ entspricht. Wenn ein ungültiger BCP-Typ angegeben wird, wird eine leere Zeichenfolge zurückgegeben.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -82,7 +81,7 @@ RETCODE bcp_gettypename (
 |**SQLFLTN**|Sowohl als auch|**float-null**|  
 |**Sqlaopsum**|Sowohl als auch|**Pauschalen**|  
 |**Sqlaopavg**|Sowohl als auch|**AVG**|  
-|**Sqlaopcnt**|Sowohl als auch|**Anzahl**|  
+|**Sqlaopcnt**|Sowohl als auch|**Count**|  
 |**Sqlaopmin**|Sowohl als auch|**Man**|  
 |**Sqlaopmax**|Sowohl als auch|**Max**|  
 |**SQLDATETIM4**|Sowohl als auch|**smalldatetime**|  

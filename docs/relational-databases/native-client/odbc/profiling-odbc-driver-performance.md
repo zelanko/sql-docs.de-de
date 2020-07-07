@@ -20,15 +20,14 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f9a4abc2977d73041582a0ed0eeb21b45437094
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 35d920f13329b336969dbfd91da2265917f2fbe4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787778"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009726"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Leistungsprofilerstellung des ODBC-Treibers
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber kann Profile von zwei Typen von Leistungsdaten erstellen:  
   
@@ -71,7 +70,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Netzwerk  
   
--   Zeit  
+-   Time  
   
  In der folgenden Tabelle gelten die Beschreibungen der Felder in der SQLPERF-Datenstruktur auch für die in der Leistungsprotokolldatei erfassten Statistiken.  
   

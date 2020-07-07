@@ -20,15 +20,14 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c994be809f9f0376637b3397150600654e65cb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ee313bdcda6b005a3f3a80725908244d3a496b67
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734466"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011599"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die ausgeführt wurden. In dieser aggregierten Sicht können Sie Leistungsprobleme bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie bei bestimmten Abfragen und Batches diagnostizieren. [sys. dm_exec_session_wait_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) stellt ähnliche Informationen nach Sitzung bereit.  
   
@@ -88,9 +87,9 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
   
  In der folgenden Tabelle werden die Wartetypen für Tasks in einer Liste aufgeführt.  
 
-|Typ |BESCHREIBUNG| 
+|type |BESCHREIBUNG| 
 |-------------------------- |--------------------------| 
-|ABR |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| | 
+|ABR |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| | 
 |AM_INDBUILD_ALLOCATION |Nur interne Verwendung. <br />**Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |AM_SCHEMAMGR_UNSHARED_CACHE |Nur interne Verwendung. <br />**Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |ASSEMBLY_FILTER_HASHTABLE |Nur interne Verwendung. <br />**Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
@@ -140,7 +139,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |BROKER_TRANSMITTER |Tritt auf, wenn der Service Broker Sender auf Arbeit wartet. Service Broker verfügt über eine Komponente, die als Sender bezeichnet wird, der Nachrichten aus mehreren Dialogfeldern plant, die über das Netzwerk über eine oder mehrere Verbindungs Endpunkte gesendet werden sollen. Der Sender verfügt zu diesem Zweck über zwei dedizierte Threads. Dieser Wartetyp wird in Rechnung gestellt, wenn diese senderthreads darauf warten, dass Dialog Meldungen mithilfe der Transportverbindungen gesendet werden. Hohe Werte waiting_tasks_count für diesen Wartetyp zeigen auf zeitweilig auftretende Arbeit für diese senderthreads und sind keine Anzeichen für Leistungsprobleme. Wenn Service Broker überhaupt nicht verwendet wird, sollte waiting_tasks_count 2 (für die zwei Übermittlers) und wait_time_ms die doppelte Dauer seit dem Instanzstart sein. Siehe [Service Broker-warte Statistik](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types).|
 |BUILTIN_HASHKEY_MUTEX |Kann nach dem Start einer Instanz auftreten, während interne Datenstrukturen initialisiert werden. Tritt nach dem Initialisieren der Datenstrukturen nicht erneut auf.| 
 |CHANGE_TRACKING_WAITFORCHANGES |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
-|CHECK_PRINT_RECORD |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|CHECK_PRINT_RECORD |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |CHECK_SCANNER_MUTEX |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
 |CHECK_TABLES_INITIALIZATION |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
 |CHECK_TABLES_SINGLE_SCAN |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
@@ -172,8 +171,8 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |CXROWSET_SYNC |Tritt während eines parallelen Bereichsscans auf.| 
 |DAC_INIT |Tritt während des Initialisierungsvorgangs der dedizierten Administratorverbindung auf.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
-|DBMIRROR_DBM_EVENT |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|DBMIRROR_DBM_MUTEX |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|DBMIRROR_DBM_EVENT |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|DBMIRROR_DBM_MUTEX |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |DBMIRROR_EVENTS_QUEUE |Tritt auf, wenn die Datenbankspiegelung auf die Verarbeitung von Ereignissen wartet.| 
 |DBMIRROR_SEND |Tritt auf, wenn ein Task auf die Beseitigung eines Kommunikationsrückstands auf der Netzwerkebene wartet, um Nachrichten senden zu können. Weist darauf hin, dass die Kommunikationsebene möglicherweise überlastet ist, was sich negativ auf den Datendurchsatz bei der Datenbankspiegelung auswirken kann.| 
 |DBMIRROR_WORKER_QUEUE |Zeigt an, dass der Arbeitstask der Datenbankspiegelung auf weitere Arbeit wartet.| 
@@ -209,8 +208,8 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |Dtcpntsync |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |DUMP_LOG_COORDINATOR |Tritt auf, wenn ein Haupttask darauf wartet, dass ein untergeordneter Task Daten generiert. Normalerweise tritt dieser Status nicht auf. Eine lange Wartezeit weist auf eine unerwartete Blockierung hin. In diesem Fall sollte der untergeordnete Task überprüft werden.| 
 |DUMP_LOG_COORDINATOR_QUEUE |Nur interne Verwendung.| 
-|DUMPTRIGGER |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|EC |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|DUMPTRIGGER |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|EC |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |EE_PMOLOCK |Tritt bei der Synchronisierung bestimmter Typen von Speicherbelegungen während der Ausführung von Anweisungen auf.| 
 |EE_SPECPROC_MAP_INIT |Tritt bei der Synchronisierung der Erstellung der internen Prozedurhashtabelle auf. Dieser Warte Vorgang kann nur beim ersten Zugriff auf die Hash Tabelle erfolgen, nachdem die SQL Server Instanz gestartet wurde.| 
 |ENABLE_EMPTY_VERSIONING |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
@@ -230,7 +229,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |FABRIC_REPLICA_PUBLISHER_EVENT_PUBLISH |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
 |FABRIC_REPLICA_PUBLISHER_SUBSCRIBER_LIST |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
 |FABRIC_WAIT_FOR_BUILD_REPLICA_EVENT_PROCESSING |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
-|FAILPOINT |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|FAILPOINT |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |FCB_REPLICA_READ |Tritt bei der Synchronisierung der Lesevorgänge einer Sparsedatei der Momentaufnahme (oder einer von DBCC erstellten temporären Momentaufnahme) auf.| 
 |FCB_REPLICA_WRITE |Tritt beim Synchronisieren der Push- oder Pullvorgänge einer Seite in eine Sparsedatei der Momentaufnahme (oder einer von DBCC erstellten temporären Momentaufnahme) auf.| 
 |FEATURE_SWITCHES_UPDATE |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
@@ -269,14 +268,14 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |FSAGENT |Tritt auf, wenn ein FILESTREAM-Datei-E/A-Vorgang auf eine FILESTREAM-Agent-Ressource wartet, die gerade von einem anderen Datei-E/A-Vorgang verwendet wird.| 
 |FSTR_CONFIG_MUTEX |Tritt bei einem Wartevorgang auf eine andere Neukonfiguration eines FILESTREAM-Funktionen auf, die abgeschlossen werden soll.| 
 |FSTR_CONFIG_RWLOCK |Tritt bei einem Wartevorgang auf die Serialisierung des Zugriffs auf die FILESTREAM-Konfigurationsparameter auf.| 
-|FT_COMPROWSET_RWLOCK |Volltext wartet auf Metadatenvorgang für Fragment. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|FT_IFTS_RWLOCK |Volltext wartet auf interne Synchronisierung. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|FT_COMPROWSET_RWLOCK |Volltext wartet auf Metadatenvorgang für Fragment. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|FT_IFTS_RWLOCK |Volltext wartet auf interne Synchronisierung. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |FT_IFTS_SCHEDULER_IDLE_WAIT |Volltext-Wartetyp für den Ruhezustand des Zeitplanungsmoduls. Das Zeitplanungsmodul befindet sich im Leerlauf.| 
-|FT_IFTSHC_MUTEX |Volltext wartet auf einen fdhost-Steuerungsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|FT_IFTSISM_MUTEX |Volltext wartet auf einen Kommunikationsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|FT_MASTER_MERGE |Volltext wartet auf Masterzusammenführungsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|FT_IFTSHC_MUTEX |Volltext wartet auf einen fdhost-Steuerungsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|FT_IFTSISM_MUTEX |Volltext wartet auf einen Kommunikationsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|FT_MASTER_MERGE |Volltext wartet auf Masterzusammenführungsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |FT_MASTER_MERGE_COORDINATOR |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
-|FT_METADATA_MUTEX |Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|FT_METADATA_MUTEX |Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |FT_PROPERTYLIST_CACHE |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |FT_RESTART_CRAWL |Tritt auf, wenn ein Volltextcrawl von einem letzten bekannten fehlerfreien Punkt neu gestartet werden muss, um nach einem vorübergehenden Fehler wiederhergestellt zu werden. Durch die Wartezeit können die Arbeitstasks, die zurzeit an der jeweiligen Auffüllung arbeiten, abgeschlossen werden oder den aktuellen Schritt beenden.| 
 |FULLTEXT GATHERER |Tritt bei der Synchronisierung von Volltextvorgängen auf.| 
@@ -289,7 +288,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |GLOBAL_QUERY_PRODUCER |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und höher.| 
 |GLOBAL_TRAN_CREATE |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
 |GLOBAL_TRAN_UCS_SESSION |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
-|GUARDIAN |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|GUARDIAN |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |HADR_AG_MUTEX |Tritt auf, wenn eine Always on DDL-Anweisung oder ein Windows Server-Failoverclustering-Befehl auf exklusiven Lese-/Schreibzugriff auf die Konfiguration einer Verfügbarkeits Gruppe wartet. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |HADR_AR_CRITICAL_SECTION_ENTRY |Tritt auf, wenn eine Always on DDL-Anweisung oder ein Windows Server-Failoverclustering-Befehl auf exklusiven Lese-/Schreibzugriff auf den Lauf Zeit Status des lokalen Replikats der zugeordneten Verfügbarkeits Gruppe wartet. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |HADR_AR_MANAGER_MUTEX |Tritt auf, wenn das Herunterfahren eines Verfügbarkeitsreplikats auf das Abschließen des Startvorgangs wartet oder wenn der Start eines Verfügbarkeitsreplikats auf das Abschließen des Herunterfahrens wartet. Nur interne Verwendung., <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
@@ -370,20 +369,20 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |HTTP_STORAGE_CONNECTION |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
 |IMPPROV_IOWAIT |Tritt auf, wenn SQL Server auf den Abschluss eines Bulkload-e/a-Vorgangs wartet.| 
 |INSTANCE_LOG_RATE_GOVERNOR |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
-|INTERNAL_TESTING |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|INTERNAL_TESTING |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |IO_AUDIT_MUTEX |Tritt während der Synchronisierung von Ereignispuffern der Ablaufverfolgung auf.| 
 |IO_COMPLETION |Tritt auf, während auf den Abschluss von E/A-Vorgängen gewartet wird. Dieser Wartetyp stellt in der Regel Nicht-Datenseiten-E/A-Vorgänge dar. E/a-Abschluss Wartezeiten für Datenseiten werden als PAGEIOLATCH-warte Vorgänge angezeigt \_ \* .| 
 |IO_QUEUE_LIMIT |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
 |IO_RETRY |Tritt auf, wenn ein E/A-Vorgang, z. B. das Lesen von oder Schreiben auf einen Datenträger, aufgrund unzureichender Ressourcen scheitert und dann wiederholt wird.| 
-|IOAFF_RANGE_QUEUE |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|IOAFF_RANGE_QUEUE |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |KSOURCE_WAKEUP |Wird vom Dienststeuerungstask verwendet, während auf Anforderungen vom Dienstkontroll-Manager gewartet wird. Lange Wartezeiten werden erwartet und zeigen kein Problem an.| 
-|KTM_ENLISTMENT |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|KTM_RECOVERY_MANAGER |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|KTM_RECOVERY_RESOLUTION |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|KTM_ENLISTMENT |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|KTM_RECOVERY_MANAGER |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|KTM_RECOVERY_RESOLUTION |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |LATCH_DT |Tritt beim Warten auf einen DT-Latch (Löschlatch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys. dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
 |LATCH_EX |Tritt beim Warten auf einen EX-Latch (exklusiven Latch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys. dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
 |LATCH_KP |Tritt beim Warten auf einen KP-Latch (Beibehaltungslatch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys. dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
-|LATCH_NL |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|LATCH_NL |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |LATCH_SH |Tritt beim Warten auf einen SH-Latch (gemeinsamen Latch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys. dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
 |LATCH_UP |Tritt beim Warten auf einen UP-Latch (Updatelatch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Auflistung von Latchwartezeiten \_ \* ist in sys. dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.| 
 |LAZYWRITER_SLEEP |Tritt auf, wenn Lazy Writer-Tasks angehalten werden. Dieser Wartetyp gibt die Zeitdauer von wartenden Hintergrundtasks an. Wenn Sie nach durch den Benutzer bedingtem Hängen des Computers suchen, sollten Sie diesen Status nicht verwenden.| 
@@ -454,9 +453,9 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |LOG_RATE_GOVERNOR |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
 |LOGBUFFER |Tritt auf, wenn ein Task auf Speicherplatz im Protokollpuffer zum Speichern eines Protokolldatensatzes wartet. Durchgehend hohe Werte können darauf hinweisen, dass die Protokollgeräte die Menge der vom Server generierten Protokolldaten nicht bewältigen können.| 
 |LOGCAPTURE_LOGPOOLTRUNCPOINT |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
-|LOGGENERATION |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|LOGGENERATION |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |LOGMGR |Tritt auf, wenn ein Task beim Schließen der Datenbank vor dem Beenden des Protokolls auf das Fertigstellen ausstehender Protokoll-E/A-Vorgänge wartet.| 
-|LOGMGR_FLUSH |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|LOGMGR_FLUSH |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |LOGMGR_PMM_LOG |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
 |LOGMGR_QUEUE |Tritt auf, während der Protokollschreibertask auf Arbeitsanforderungen wartet.| 
 |LOGMGR_RESERVE_APPEND |Tritt auf, wenn ein Task darauf wartet, feststellen zu können, ob durch das Abschneiden von Protokollen Speicherplatz freigegeben wird, damit der Task einen neuen Protokolldatensatz schreiben kann. Erwägen Sie, die Größe der Protokolldatei(en) für die betroffene Datenbank zu erhöhen, um diese Wartezeit zu reduzieren.| 
@@ -474,8 +473,8 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |MEMORY_GRANT_UPDATE |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und höher.| 
 |METADATA_LAZYCACHE_RWLOCK |Nur interne Verwendung. <br /> **Gilt für**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] nur. |  
 |Migrationbuffer |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und höher.| 
-|MISCELLANEOUS |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|MISCELLANEOUS |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|MISCELLANEOUS |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|MISCELLANEOUS |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |MSQL_DQ |Tritt auf, wenn ein Task auf das Ende eines verteilten Abfragevorgangs wartet. Dieser Wartetyp wird verwendet, um mögliche MARS-Anwendungsdeadlocks (Multiple Active Result Sets) zu erkennen. Die Wartezeit wird mit dem Ende des Aufrufs der verteilten Abfrage beendet.| 
 |MSQL_XACT_MGR_MUTEX |Tritt auf, wenn ein Task darauf wartet, in den Besitz des Sitzungstransaktions-Managers zu gelangen, um einen Transaktionsvorgang auf Sitzungsebene auszuführen.| 
 |MSQL_XACT_MUTEX |Tritt während der Synchronisierung der Transaktionsverwendung auf. Eine Anforderung muss den Mutex abrufen, bevor sie die Transaktion verwenden kann.| 
@@ -489,13 +488,13 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |PAGEIOLATCH_DT |Tritt auf, wenn ein Task auf einen Latch für einen Puffer in einer E/A-Anforderung wartet. Die Latchanforderung erfolgt im Löschmodus. Lange Wartezeiten können Probleme mit dem Datenträgersubsystem anzeigen.| 
 |PAGEIOLATCH_EX |Tritt auf, wenn ein Task auf einen Latch für einen Puffer in einer E/A-Anforderung wartet. Die Latchanforderung erfolgt im exklusiven Modus: Lange Wartezeiten können Probleme mit dem Datenträgersubsystem anzeigen.| 
 |PAGEIOLATCH_KP |Tritt auf, wenn ein Task auf einen Latch für einen Puffer in einer E/A-Anforderung wartet. Die Latchanforderung erfolgt im Beibehaltungsmodus. Lange Wartezeiten können Probleme mit dem Datenträgersubsystem anzeigen.| 
-|PAGEIOLATCH_NL |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|PAGEIOLATCH_NL |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |PAGEIOLATCH_SH |Tritt auf, wenn ein Task auf einen Latch für einen Puffer in einer E/A-Anforderung wartet. Die Latchanforderung erfolgt im freigegebenen Modus. Lange Wartezeiten können Probleme mit dem Datenträgersubsystem anzeigen.| 
 |PAGEIOLATCH_UP |Tritt auf, wenn ein Task auf einen Latch für einen Puffer in einer E/A-Anforderung wartet. Die Latchanforderung erfolgt im Updatemodus. Lange Wartezeiten können Probleme mit dem Datenträgersubsystem anzeigen.| 
 |PAGELATCH_DT |Tritt auf, wenn ein Task auf einen Latch für einen Puffer außerhalb einer E/A-Anforderung wartet. Die Latchanforderung erfolgt im Löschmodus.| 
 |PAGELATCH_EX |Tritt auf, wenn ein Task auf einen Latch für einen Puffer außerhalb einer E/A-Anforderung wartet. Die Latchanforderung erfolgt im exklusiven Modus:| 
 |PAGELATCH_KP |Tritt auf, wenn ein Task auf einen Latch für einen Puffer außerhalb einer E/A-Anforderung wartet. Die Latchanforderung erfolgt im Beibehaltungsmodus.| 
-|PAGELATCH_NL |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|PAGELATCH_NL |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |PAGELATCH_SH |Tritt auf, wenn ein Task auf einen Latch für einen Puffer außerhalb einer E/A-Anforderung wartet. Die Latchanforderung erfolgt im freigegebenen Modus.| 
 |PAGELATCH_UP |Tritt auf, wenn ein Task auf einen Latch für einen Puffer außerhalb einer E/A-Anforderung wartet. Die Latchanforderung erfolgt im Updatemodus.| 
 |PARALLEL_BACKUP_QUEUE |Tritt beim Serialisieren der Ausgabe auf, die von RESTORE HEADERONLY, RESTORE FILELISTONLY oder RESTORE LABELONLY erstellt wurde.| 
@@ -509,7 +508,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |PERFORMANCE_COUNTERS_RWLOCK |Nur interne Verwendung.| 
 |PHYSICAL_SEEDING_DMV |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
 |POOL_LOG_RATE_GOVERNOR |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
-|PREEMPTIVE_ABR |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|PREEMPTIVE_ABR |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |PREEMPTIVE_AUDIT_ACCESS_EVENTLOG |Tritt auf, wenn das Zeitplanungsmodul für das [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -Betriebssystem (SQLOS) in den präemptiven Modus wechselt, um ein Überwachungsereignis in das Windows-Ereignisprotokoll zu schreiben. <br /> **Gilt für**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] nur. |  
 |PREEMPTIVE_AUDIT_ACCESS_SECLOG |Tritt auf, wenn das SQLOS-Zeitplanungsmodul in den präemptiven Modus wechselt, um ein Überwachungsereignis in das Windows-Sicherheitsprotokoll zu schreiben. <br /> **Gilt für**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] nur. |  
 |PREEMPTIVE_CLOSEBACKUPMEDIA |Tritt auf, wenn das SQLOS-Zeitplanungsmodul in den präemptiven Modus wechselt, um Sicherungsmedien zu schließen.| 
@@ -687,13 +686,13 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |PREEMPTIVE_SHAREDMEM_GETDATA |Nur interne Verwendung.| 
 |PREEMPTIVE_SNIOPEN |Nur interne Verwendung.| 
 |PREEMPTIVE_SOSHOST |Nur interne Verwendung.| 
-|PREEMPTIVE_SOSTESTING |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|PREEMPTIVE_SOSTESTING |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |PREEMPTIVE_SP_SERVER_DIAGNOSTICS |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |PREEMPTIVE_STARTRM |Nur interne Verwendung.| 
 |PREEMPTIVE_STREAMFCB_CHECKPOINT |Nur interne Verwendung.| 
 |PREEMPTIVE_STREAMFCB_RECOVER |Nur interne Verwendung.| 
-|PREEMPTIVE_STRESSDRIVER |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|PREEMPTIVE_TESTING |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|PREEMPTIVE_STRESSDRIVER |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|PREEMPTIVE_TESTING |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |PREEMPTIVE_TRANSIMPORT |Nur interne Verwendung.| 
 |PREEMPTIVE_UNMARSHALPROPAGATIONTOKEN |Nur interne Verwendung.| 
 |PREEMPTIVE_VSS_CREATESNAPSHOT |Nur interne Verwendung.| 
@@ -708,7 +707,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |PREEMPTIVE_XE_TARGETFINALIZE |Nur interne Verwendung.| 
 |PREEMPTIVE_XE_TARGETINIT |Nur interne Verwendung.| 
 |PREEMPTIVE_XE_TIMERRUN |Nur interne Verwendung.| 
-|PREEMPTIVE_XETESTING |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|PREEMPTIVE_XETESTING |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |PRINT_ROLLBACK_PROGRESS |Wird verwendet, um zu warten, während Benutzerprozesse in einer Datenbank beendet werden, die mithilfe der ALTER DATABASE-Beendigungsklausel von einem Status in einen anderen versetzt wurde. Weitere Informationen finden Sie unter ALTER DATABASE (Transact-SQL).| 
 |PRU_ROLLBACK_DEFERRED |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |PWAIT_ALL_COMPONENTS_INITIALIZED |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
@@ -767,16 +766,16 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |QRY_MEM_GRANT_INFO_MUTEX |Tritt auf, wenn die Arbeitsspeicherverwaltung für die Abfrageausführung den Zugriff auf statische Listen mit Informationen zu zugewiesenen Arbeitsspeichern steuert. Dieser Status listet Informationen zu den aktuellen zugewiesenen und wartenden Speicheranforderungen auf. Dieser Status ist ein einfacher Zugriffssteuerungsstatus. In diesem Status sollte es nie zu langen Wartezeiten kommen. Wird dieser Mutex nicht freigegeben, antworten alle neuen speicherbeanspruchenden Abfragen nicht mehr.| 
 |QRY_PARALLEL_THREAD_MUTEX |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |QRY_PROFILE_LIST_MUTEX |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
-|QUERY_ERRHDL_SERVICE_DONE |Nur für Informationszwecke identifiziert. Nicht unterstützt. <br /> **Gilt für**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] nur. |  
-|QUERY_WAIT_ERRHDL_SERVICE |Nur für Informationszwecke identifiziert.  Nicht unterstützt. <br /> **Gilt für**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] nur.  |  
+|QUERY_ERRHDL_SERVICE_DONE |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. <br /> **Gilt für**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] nur. |  
+|QUERY_WAIT_ERRHDL_SERVICE |Nur für Informationszwecke identifiziert.  Wird nicht unterstützt. <br /> **Gilt für**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] nur.  |  
 |QUERY_EXECUTION_INDEX_SORT_EVENT_OPEN |Tritt in bestimmten Fällen auf, wenn eine Offlineindexerstellung parallel ausgeführt wird und die unterschiedlichen Arbeitsthreads, die die Sortierung ausführen, den Zugriff auf die Sortierungsdateien synchronisieren.| 
 |QUERY_NOTIFICATION_MGR_MUTEX |Tritt während der Synchronisierung der Garbage Collection-Warteschlange im Abfragebenachrichtigungs-Manager auf.| 
 |QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX |Tritt während der Statussynchronisierung für Transaktionen in Abfragebenachrichtigungen auf.| 
 |QUERY_NOTIFICATION_TABLE_MGR_MUTEX |Tritt während der internen Synchronisierung im Abfragebenachrichtigungs-Manager auf.| 
-|QUERY_NOTIFICATION_UNITTEST_MUTEX |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|QUERY_NOTIFICATION_UNITTEST_MUTEX |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |QUERY_OPTIMIZER_PRINT_MUTEX |Tritt während der Synchronisierung der Erstellung der Diagnoseausgabe des Abfrageoptimierers auf. Dieser Wartetyp tritt nur auf, wenn Diagnose Einstellungen Unterrichtung des Microsoft-Produkt Supports aktiviert wurden.| 
 |QUERY_TASK_ENQUEUE_MUTEX |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
-|QUERY_TRACEOUT |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|QUERY_TRACEOUT |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |RBIO_WAIT_VLF |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und höher.| 
 |RBIO_RG_STORAGE |Tritt auf, wenn ein hyperskalierungsdatenbankcomputeknoten aufgrund von verzögertem Protokoll Verbrauch auf Seiten Servern gedrosselt wird. <br /> **Gilt für**: hyperskalierung von Azure SQL-Datenbank.|
 |RBIO_RG_DESTAGE |Tritt auf, wenn ein hyperskalierungsdatenbankcomputeknoten aufgrund von verzögertem Protokoll Verbrauch durch den langfristigen Protokoll Speicher gedrosselt wird. <br /> **Gilt für**: hyperskalierung von Azure SQL-Datenbank.|
@@ -916,7 +915,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |TRAN_MARKLATCH_DT |Tritt auf, wenn auf einen Latch im Löschmodus für einen Transaktionsmarkierungslatch gewartet wird. Transaktionsmarkierungslatches werden für die Synchronisierung von Commit-Vorgängen mit markierten Transaktionen verwendet.| 
 |TRAN_MARKLATCH_EX |Tritt auf, wenn auf einen Latch im exklusiven Modus für eine markierte Transaktion gewartet wird. Transaktionsmarkierungslatches werden für die Synchronisierung von Commit-Vorgängen mit markierten Transaktionen verwendet.| 
 |TRAN_MARKLATCH_KP |Tritt auf, wenn auf einen Latch im Beibehaltungsmodus für eine markierte Transaktion gewartet wird. Transaktionsmarkierungslatches werden für die Synchronisierung von Commit-Vorgängen mit markierten Transaktionen verwendet.| 
-|TRAN_MARKLATCH_NL |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|TRAN_MARKLATCH_NL |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |TRAN_MARKLATCH_SH |Tritt auf, wenn auf einen Latch im freigegebenen Modus für eine markierte Transaktion gewartet wird. Transaktionsmarkierungslatches werden für die Synchronisierung von Commit-Vorgängen mit markierten Transaktionen verwendet.| 
 |TRAN_MARKLATCH_UP |Tritt auf, wenn auf einen Latch im Updatemodus für eine markierte Transaktion gewartet wird. Transaktionsmarkierungslatches werden für die Synchronisierung von Commit-Vorgängen mit markierten Transaktionen verwendet.| 
 |TRANSACTION_MUTEX |Tritt während der Synchronisierung des Zugriffs auf eine Transaktion durch mehrere Batches auf.| 
@@ -958,9 +957,9 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |WAIT_XTP_TRAN_DEPENDENCY |Tritt auf, wenn auf Transaktions Abhängigkeiten gewartet wird. <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
 |WAITFOR |Tritt als Ergebnis einer WAITFOR Transact-SQL-Anweisung auf. Die Dauer des Wartevorgangs wird durch die Parameter der Anweisung bestimmt. Hierbei handelt es sich um einen vom Benutzer initiierten Wartevorgang.| 
 |WAITFOR_PER_QUEUE |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
-|WAITFOR_TASKSHUTDOWN |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|WAITFOR_TASKSHUTDOWN |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |WAITSTAT_MUTEX |Tritt während der Synchronisierung des Zugriffs auf die Statistikauflistung auf, die zum Auffüllen von sys.dm_os_wait_stats verwendet wird.| 
-|WCC |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|WCC |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
 |WINDOW_AGGREGATES_MULTIPASS |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
 |WINFAB_API_CALL |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
 |WINFAB_REPLICA_BUILD_OPERATION |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
@@ -986,9 +985,9 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |XE_DISPATCHER_WAIT |Tritt auf, wenn ein für Sitzungen für erweiterte Ereignisse verwendeter Hintergrundthread auf die Verarbeitung von Ereignispuffern wartet.| 
 |XE_FILE_TARGET_TVF |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
 |XE_LIVE_TARGET_TVF |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
-|XE_MODULEMGR_SYNC |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|XE_OLS_LOCK |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
-|XE_PACKAGE_LOCK_BACKOFF |Nur für Informationszwecke identifiziert. Nicht unterstützt. <br /> **Gilt für**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] nur. |  
+|XE_MODULEMGR_SYNC |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|XE_OLS_LOCK |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| 
+|XE_PACKAGE_LOCK_BACKOFF |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. <br /> **Gilt für**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] nur. |  
 |XE_SERVICES_EVENTMANUAL |Nur interne Verwendung.| 
 |XE_SERVICES_MUTEX |Nur interne Verwendung.| 
 |XE_SERVICES_RWLOCK |Nur interne Verwendung.| 

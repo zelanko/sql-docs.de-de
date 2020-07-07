@@ -15,16 +15,15 @@ ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0edf65b4ae0841cd25bbb3c685bf10320fdd30dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 15f45d404a21345cec76b975054c1ecdbcb63c0f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751875"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012422"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber ignoriert die Einstellung von SQL_ATTR_CONNECTION_TIMEOUT.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "85751875"
 |SQL_COPT_SS_USER_DATA|Sowohl als auch|  
 |SQL_COPT_SS_WARN_ON_CP_ERROR|Vorher|  
   
- Wenn ein Vorverbindungsattribut und der äquivalente [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehl für denselben Sitzung-, Datenbank- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Status verwendet werden, kann ein unerwartetes Verhalten auftreten. Ein auf ein Objekt angewendeter  
+ Wenn ein Vorverbindungsattribut und der äquivalente [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehl für denselben Sitzung-, Datenbank- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Status verwendet werden, kann ein unerwartetes Verhalten auftreten. Beispiel:  
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
@@ -158,7 +157,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |SQL_EN_ON|Die Verbindung wird verschlüsselt.|  
-|SQL_EN_OFF|Die Verbindung wird nicht verschlüsselt. Dies ist die Standardeinstellung.|  
+|SQL_EN_OFF|Die Verbindung wird nicht verschlüsselt. Dies ist die Standardoption.|  
 
 <a name="sqlcoptssenlistindtc"></a>
 ## <a name="sql_copt_ss_enlist_in_dtc"></a>SQL_COPT_SS_ENLIST_IN_DTC  

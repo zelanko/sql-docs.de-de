@@ -13,15 +13,14 @@ ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec1628907bec95b5d8416bda3abd4a9b65e9074c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b49d1afd2fbac4f10dc8120ba428c6392efb5b60
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787842"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009883"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Tabellenwertparameter (SQL Server Native Client)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Tabellenwertparameter wurden in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] eingeführt und bieten eine effiziente Möglichkeit, mehrere Datenzeilen an den Server zu übergeben. Tabellenwertparameter stellen eine Funktionalität bereit, die der von Parameterarrays gleicht, bieten jedoch eine größere Flexibilität und eine engere Integration mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Oft verbessern sie auch die Leistung. Tabellenwertparameter können auch in setbasierten Vorgängen verwendet werden, während dies mit Parameterarrays nicht möglich ist.  
   

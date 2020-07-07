@@ -20,15 +20,14 @@ ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1489905b5f91743892906655b2987c702c048516
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d252d5976b07f688d890ed8ccf43a7b0a0c96b2c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734722"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012876"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Gibt Informationen zum aktuellen Status des Abfrageressourcensemaphors in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück. **sys. dm_exec_query_resource_semaphores** stellt den allgemeinen Speicherstatus der Abfrage Ausführung bereit und ermöglicht es Ihnen zu bestimmen, ob das System auf genügend Arbeitsspeicher zugreifen kann. Diese Ansicht ergänzt die Speicherinformationen aus [sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) , um ein umfassendes Bild des Server Speicherstatus bereitzustellen. **sys. dm_exec_query_resource_semaphores** gibt eine Zeile für das reguläre Ressourcen Semaphor und eine weitere Zeile für das Ressourcen Semaphor für kleine Abfragen zurück. Es gibt zwei Anforderungen an ein kleines Abfrage-Semaphor:  
   

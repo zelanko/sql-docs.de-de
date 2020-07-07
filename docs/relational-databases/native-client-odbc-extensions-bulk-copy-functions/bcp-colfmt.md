@@ -18,15 +18,14 @@ ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bebe50f7a31168455d21c45aa28cc7c0efa796e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d01e3c08ea1554fcc10c986bb6e6b9bbd9570d54
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783448"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009142"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Gibt das Quell- oder Zielformat der Daten in einer Benutzerdatei an. Bei Verwendung als Quellformat gibt **bcp_colfmt** das Format einer vorhandenen Datendatei an, die als Datenquelle in einem Massen Kopiervorgang in eine Tabelle verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Bei Verwendung als Zielformat wird die Datendatei mithilfe der mit **bcp_colfmt**angegebenen Spalten Formate erstellt.  
   
@@ -108,7 +107,7 @@ RETCODE bcp_colfmt (
   
  Wenn dieser Wert 0 ist, wird beim Massenkopieren die Spalte in der Datendatei ignoriert.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
 ## <a name="remarks"></a>Hinweise  

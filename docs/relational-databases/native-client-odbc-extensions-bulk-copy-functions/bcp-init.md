@@ -19,15 +19,14 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19914bb99a2812035e6833b389a62e6ed3139463
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 87cbd2a6de772aa0886ee47d0c4d27fc734cbc3e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774266"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010082"
 ---
 # <a name="bcp_init"></a>bcp_init
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Initialisiert den Massenkopiervorgang.  
 
@@ -66,7 +65,7 @@ Unicode-und ANSI-Namen:
  *eDirection*  
  Die Richtung der Kopie, entweder DB_IN oder DB_OUT. DB_IN bedeutet eine Kopie aus Programmvariablen oder aus einer Benutzerdatei in eine Tabelle. DB_OUT bedeutet eine Kopie von einer Datenbanktabelle in eine Benutzerdatei an. Sie müssen einen Benutzerdateinamen mit DB_OUT angeben.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
 ## <a name="remarks"></a>Hinweise  
