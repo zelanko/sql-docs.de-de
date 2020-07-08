@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2d9a354b23a751a657ca10acc7e6cc19c6b586b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27556251ca186661928de29b8a1f6dd4ac0e9fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137415"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694952"
 ---
 # <a name="database-mail"></a>Datenbank-E-Mail
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Datenbank-E-Mail bietet eine Unternehmenslösung, die zum Senden von E-Mail-Nachrichten von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder der [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) verwendet werden kann. Mit Datenbank-E-Mail können Datenbankanwendungen E-Mail-Nachrichten an Benutzer senden. Diese Nachrichten können neben Abfrageergebnissen auch Dateien von anderen Ressourcen im Netzwerk enthalten.  
   
 > [!NOTE] 

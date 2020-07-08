@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031646"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692493"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Lektion 2: Erstellen und Verwalten von Daten in einer hierarchischen Tabelle
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 In Lektion 1 haben Sie eine vorhandene Tabelle so geändert, dass sie den **hierarchyid** -Datentyp verwendet. Dann haben Sie die **hierarchyid** -Spalte entsprechend der in den vorhandenen Daten gegebenen hierarchischen Darstellung gefüllt. In dieser Lektion erstellen Sie eine neue Tabelle und verwenden hierarchische Methoden, um Daten in sie einzufügen. Dann fragen Sie Daten ab und bearbeiten sie, indem Sie hierarchische Methoden verwenden. 
 
 ## <a name="prerequisites"></a>Voraussetzungen  
@@ -289,7 +289,7 @@ Nachdem die Tabelle HumanResources.EmployeeOrg nun vollständig gefüllt ist, ze
    
   
 ## <a name="reorder-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Neuanordnen von Daten in einer hierarchischen Tabelle mit hierarchischen Methoden
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Eine Hierarchie neu zu ordnen, ist eine allgemeine Wartungsaufgabe. In dieser Aufgabe werden wir eine UPDATE-Anweisung mit der [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) -Methode verwenden, um zunächst eine einzelne Zeile an eine neue Position in der Hierarchie zu verschieben. Dann verschieben wir eine ganze Teilstruktur an eine neue Position.  
   
 Die `GetReparentedValue` -Methode benötigt zwei Argumente. Das erste Argument beschreibt den Teil der Hierarchie, der geändert werden soll. Möchten Sie zum Beispiel in der Hierarchie **/1/4/2/3/** den Abschnitt **/1/4/** so ändern, dass die Hierarchie zu **/2/1/2/3/** wird, wobei die beiden letzten Knoten (**2/3/** ) unverändert bleiben, müssen Sie die zu ändernden Knoten ( **/1/4/** ) als erstes Argument angeben. Das zweite Argument gibt die neue Hierarchieebene an, in unserem Beispiel **/2/1/** . Die zwei Argumente dürfen nicht die gleichen Ebenennummern enthalten.  

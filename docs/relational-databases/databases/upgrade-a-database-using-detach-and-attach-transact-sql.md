@@ -1,9 +1,7 @@
 ---
 title: Aktualisieren einer Datenbank durch Trennen und Anfügen (Transact-SQL)
-ms.custom: seo-dt-2019
-ms.date: 11/26/2018
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -17,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8e26f678ae13fac11c39569d15e26c0e79e46deb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-dt-2019
+ms.openlocfilehash: cbaa67dbde197e1e59df92380945a0d969180add
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095536"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85694723"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Aktualisieren einer Datenbank durch Trennen und Anfügen (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 In diesem Thema wird beschrieben, wie Sie Trenn- und Anfügevorgänge verwenden, um eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu aktualisieren. Nach dem Anfügen an [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Dies verhindert, dass die Datenbank mit einer älteren Version der [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verwendet wird. Die Aktualisierung der Metadaten besitzt jedoch keine Auswirkungen auf die Einstellung [Datenbank-Kompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) einer Datenbank. Weitere Informationen finden Sie unter [Datenbank-Kompatibilitätsgrad nach dem Upgrade](#dbcompat) weiter unten in diesem Thema.  
   
  **In diesem Thema**  
