@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c71cc0537f79330742282e7a0389187c8424d1f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67681c110015ae119c9f5a28812f9fba68f968a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715335"
 ---
 # <a name="toolbox-component-f1-help"></a>Toolboxkomponente (F1-Hilfe)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In der **Toolbox** wird eine Vielzahl von Elementen angezeigt, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Projekten verwendet werden können. Die **Toolbox** können Sie über das Menü **Ansicht** öffnen. Bei Bedarf können Sie das Fenster der Toolbox verankern. Eine verankerte **Toolbox** kann in geöffnetem Zustand fixiert werden oder für die Zeit, in der sie nicht verwendet wird, auf **Automatisch ausblenden** gesetzt werden.  
   
  Elemente der**Toolbox** können per Drag und Drop verschoben sowie kopiert und in Code-Editoren und in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]auf Flächen der Entwurfssicht eingefügt werden.  

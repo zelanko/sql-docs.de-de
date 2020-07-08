@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 073095217dc08f2f11605f8b0e7b5da11035e34a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1690e0022ae45444f8f25f9a7704622e55c0a06c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716892"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Überwachen der Serverleistung und -aktivität
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Ziel der Überwachung von Datenbanken ist es, die Leistung eines Servers zu bewerten. Eine effektive Überwachung umfasst die regelmäßige Erstellung von Momentaufnahmen der aktuellen Leistung, um problematische Prozesse zu isolieren, und die kontinuierliche Sammlung von Daten, um Leistungstrends über längere Zeit zu verfolgen. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Betriebssystem stellen Hilfsprogramme bereit, mit denen Sie den aktuellen Zustand der Datenbank anzeigen und die Leistung bei Änderung der Bedingungen nachverfolgen können.  
   
  Der folgende Abschnitt enthält Themen zum Verwenden der Leistungs- und Aktivitätsüberwachungstools von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Windows. Die Lektion enthält die folgenden Themen:  

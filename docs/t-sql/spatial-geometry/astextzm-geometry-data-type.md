@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 437859afd1f21cba5c47f93c86173d71e3ae89d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7754190fe629412ddc08e7087626b05ff2c093d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68027642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700827"
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (geometry-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Gibt die OGC-WKB-Darstellung (Open Geospatial Consortium, Well-Known Binary) einer geometry-Instanz zurück, die um alle **Z**-Werte (Höhe) und **M**-Werte (Measure) der Instanz erweitert ist.
   

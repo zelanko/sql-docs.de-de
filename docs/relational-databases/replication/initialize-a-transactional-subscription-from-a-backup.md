@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7d2da79cc46ac546099e492af3b6d5f4f726a2a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b72158e5274c188baeda24ab17d82be68dbdc7be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75320477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716775"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Initialisieren eines Transaktionsabonnements von einer Sicherung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Obwohl ein Abonnement für eine Transaktionsveröffentlichung in der Regel mit einer Momentaufnahme initialisiert wird, kann ein Abonnement auch mit gespeicherten Replikationsprozeduren von einer Sicherung initialisiert werden. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  
   
 ### <a name="to-initialize-a-transactional-subscriber-from-a-backup"></a>So initialisieren Sie einen Transaktionsabonnenten von einer Sicherung  

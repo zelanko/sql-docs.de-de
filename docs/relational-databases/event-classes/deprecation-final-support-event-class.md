@@ -13,15 +13,15 @@ ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c1f01d9a51a46090237a609cab538ea1ea92841
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b5c9f0878d2a35dc82565a799b3c09725b65dd4a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089624"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716971"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support (Ereignisklasse)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die **Deprecation Final Support** -Ereignisklasse tritt auf, wenn Sie eine Funktion verwenden, die aus der nächsten Hauptversion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt wird. Damit Ihre Anwendungen möglichst langlebig sind, sollten Sie keine Funktionen verwenden, die die **Deprecation Announcement** -Ereignisklasse oder die **Deprecation Final Support** -Ereignisklasse auslösen. Ändern Sie Anwendungen mit veralteten Funktionen so bald wie möglich.  
   
 ## <a name="deprecation-final-support-event-class-data-columns"></a>Deprecation Final Support-Ereignisklasse (Datenspalten)  

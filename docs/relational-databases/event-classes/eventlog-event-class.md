@@ -12,15 +12,15 @@ ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54214db537dc894ce3d31875b8b24635bae60912
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9cb676d77ba77bc3ea5b7d8d04de31e8204ba0c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716922"
 ---
 # <a name="eventlog-event-class"></a>EventLog-Ereignisklasse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die EventLog-Ereignisklasse zeigt an, dass Ereignisse im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokoll protokolliert wurden.  
   
 ## <a name="eventlog-event-class-data-columns"></a>Datenspalten der EventLog-Ereignisklasse  

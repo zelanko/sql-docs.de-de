@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fe91a9f5-8de6-464e-88db-00650eae79b0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 869ddd79f3c4f7ca2eea30ddaf1f704a233c15fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc6ef49da5803e47ba2f42ab713c1e363ff5dde9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68131942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702960"
 ---
 # <a name="stmpointfromtext-geography-data-type"></a>STMPointFromText (geography-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Gibt eine **geography** -Instanz von einer Open Geospatial Consortium (OGC) Well-Known Text (WKT)-Darstellung zurück, die um alle von der Instanz getragenen Z (Höhe)- und M (Measure)-Werte erweitert ist.
   

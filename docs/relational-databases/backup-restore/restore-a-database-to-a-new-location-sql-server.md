@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cc3681d52768cbd35fe0189739646c2752e5fb4d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 89abaf77c605574ef05a88a7cc18a09c0840a9c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180822"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717992"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Wiederherstellen einer Datenbank an einem neuen Speicherort (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von SQL Server Management Studio(SSMS) oder [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Datenbank an einem neuen Speicherort wiederherstellen und sie optional umbenennen können. Sie können eine Datenbank in ein neues Verzeichnis verschieben oder eine Kopie einer Datenbank entweder auf der gleichen oder einer anderen Serverinstanz erstellen.  
     
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  

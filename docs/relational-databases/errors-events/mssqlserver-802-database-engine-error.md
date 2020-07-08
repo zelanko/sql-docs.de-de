@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f880cd41cdde662913099e06ef93eacc17d94265
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49dc8f238ca553a1b94a88c8add528a5068b48cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007034"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715420"
 ---
 # <a name="mssqlserver_802---database-engine-error"></a>Datenbank-Engine-Fehler MSSQLSERVER_802
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |  
+| :-------- | :---- |  
 |Produktname|SQL Server|  
 |Ereignis-ID|802|  
 |Ereignisquelle|MSSQLSERVER|  
@@ -40,7 +40,7 @@ In der folgenden Liste werden allgemeine Schritte erläutert, die bei der Proble
   
 1.  Überprüfen Sie, ob andere Anwendungen oder Dienste Arbeitsspeicher auf dem Server beanspruchen. Rekonfigurieren Sie weniger kritische Anwendungen oder Dienste, damit sie weniger Speicher beanspruchen.  
   
-2.  Beginnen Sie die Sammlung der Leistungsindikatoren für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Puffer-Manager** und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Speicher-Manager**.  
+2.  Beginnen Sie die Sammlung der Systemmonitorzähler für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Puffer-Manager**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Speicher-Manager**.  
   
 3.  Überprüfen Sie die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicherkonfigurationsparameter:  
   

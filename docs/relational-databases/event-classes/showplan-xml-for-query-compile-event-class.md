@@ -12,15 +12,15 @@ ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d50634744e1af85bf750fdc21f9101912fb02b6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: add53789c727e2c86fabd54d98cbe9c00efee254
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717778"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile (Ereignisklasse)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die „Showplan XML For Query Compile“-Ereignisklasse tritt auf, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine SQL-Anweisung kompiliert. Schließen Sie diese Ereignisklasse ein, um die Showplan-Operatoren in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu identifizieren.  
   
  Die Showplan XML For Query Compile-Ereignisklasse zeigt vollständige Kompilierzeitdaten an, sodass Ablaufverfolgungen, in denen diese Ereignisklasse enthalten ist, zu einer deutlich geringeren Systemleistung führen können. Um diesen zu minimieren, sollten Sie die Verwendung dieser Ereignisklasse auf Ablaufverfolgungen beschränken, die bestimmte Probleme für kurze Zeiträume überwachen.  

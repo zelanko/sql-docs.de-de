@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f0c5a07b7ff618b3857d9e67b11d50a5a29e8248
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14ca7d3675242a16c8b1952aecc324ff2f7f67a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67894789"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706523"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Definiert die Attribute eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursors, wie z. B. dessen Scrollverhalten, sowie die Abfrage, die zum Erstellen des Resultsets verwendet wird, auf das der Cursor ausgeführt wird. `DECLARE CURSOR` unterstützt sowohl die Syntax basierend auf dem ISO-Standard als auch eine Syntax, für die eine Teilmenge der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Erweiterungen verwendet wird.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67894789"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 ISO Syntax  
 DECLARE cursor_name [ INSENSITIVE ] [ SCROLL ] CURSOR   
      FOR select_statement   
@@ -73,7 +73,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert den Cursor implizit in einen anderen Typ, wenn die Klauseln in *select_statement* in Konflikt mit der Funktionalität des angeforderten Cursortyps stehen.  
   
  READ ONLY  
- Verhindert, dass über diesen Cursor Updates vorgenommen werden. Auf den Cursor kann in einer `UPDATE`- oder `DELETE`-Anweisung nicht in einer `WHERE CURRENT OF`-Klausel verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
+ Verhindert, dass über diesen Cursor Updates vorgenommen werden. Auf den Cursor kann in einer `WHERE CURRENT OF`- oder `UPDATE`-Anweisung nicht in einer `DELETE`-Klausel verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
   
  UPDATE [OF *column_name* [ **,** ...*n*]]  
  Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn OF <column_name> [, <... n>] angegeben wird, können nur in den aufgeführten Spalten Änderungen vorgenommen werden. Wenn `UPDATE` ohne Spaltenliste angegeben wird, können alle Spalten aktualisiert werden.  
@@ -115,7 +115,7 @@ Gibt einen `FORWARD_ONLY`-, `READ_ONLY`-Cursor mit aktivierten Leistungsoptimier
 > `FAST_FORWARD` und `FORWARD_ONLY` können nicht in der gleichen `DECLARE CURSOR`-Anweisung verwendet werden.  
   
 READ_ONLY  
-Verhindert, dass über diesen Cursor Updates vorgenommen werden. Auf den Cursor kann in einer `UPDATE`- oder `DELETE`-Anweisung nicht in einer `WHERE CURRENT OF`-Klausel verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
+Verhindert, dass über diesen Cursor Updates vorgenommen werden. Auf den Cursor kann in einer `WHERE CURRENT OF`- oder `UPDATE`-Anweisung nicht in einer `DELETE`-Klausel verwiesen werden. Diese Option überschreibt die Standardeinstellung, nach der ein Cursor aktualisiert werden kann.  
   
 SCROLL_LOCKS  
 Gibt an, dass positionierte Updates oder Löschungen durch den Cursor garantiert erfolgreich sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sperrt die Zeilen, während sie in den Cursor eingelesen werden, um ihre Verfügbarkeit für spätere Änderungen sicherzustellen. `SCROLL_LOCKS` kann nicht angegeben werden, wenn `FAST_FORWARD` oder `STATIC` ebenfalls angegeben ist.  

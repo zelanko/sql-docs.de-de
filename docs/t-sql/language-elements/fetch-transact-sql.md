@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f226dd4b96774de236a3938662be2bf506db8cad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71974402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706432"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Ruft eine bestimmte Zeile aus einem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor ab.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "71974402"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 FETCH   
           [ [ NEXT | PRIOR | FIRST | LAST   
                     | ABSOLUTE { n | @nvar }   
@@ -83,7 +83,7 @@ FETCH
  Ermöglicht die Zuweisung von Daten aus den Spalten, die durch einen Abruf zurückgegeben werden, an lokale Variablen. Jeder Variablen in der Liste wird (von links nach rechts) die entsprechende Spalte im Cursorresultset zugeordnet. Die Datentypen aller Variablen müssen mit dem Datentyp der entsprechenden Resultsetspalte übereinstimmen oder implizit in diesen Datentyp konvertiert werden können. Die Anzahl von Variablen muss mit der Anzahl von Spalten in der SELECT-Liste des Cursors übereinstimmen.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wird `SCROLL` in der ISO-Anweisung `DECLARE CURSOR` nicht angegeben, wird lediglich die `FETCH`-Option `NEXT` unterstützt. Wird `SCROLL` in der ISO-Anweisung `DECLARE CURSOR` angegeben, werden alle `FETCH`-Optionen unterstützt.  
+ Wird `SCROLL` in der ISO-Anweisung `DECLARE CURSOR` nicht angegeben, wird lediglich die `NEXT`-Option `FETCH` unterstützt. Wird `SCROLL` in der ISO-Anweisung `DECLARE CURSOR` angegeben, werden alle `FETCH`-Optionen unterstützt.  
   
  Wenn die DECLARE CURSOR-Erweiterungen von [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet werden, gelten folgende Regeln:  
   

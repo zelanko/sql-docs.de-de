@@ -12,15 +12,15 @@ ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95b4c8c58591ac0846b9774a97bbcc1f389d31c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7f9a9b57817e65ded5bb75ce64a9a1bac5355f3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717828"
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission-Ereignisklasse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die **Audit Statement Permission** -Ereignisklasse tritt immer dann auf, wenn eine Anweisungsberechtigung (wie CREATE TABLE) verwendet wird.  
   
  Die **Audit Statement Permission** -Ereignisklasse ist in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]möglicherweise nicht mehr enthalten. Es wird empfohlen, stattdessen die **Audit Schema Object Management** -Ereignisklasse zu verwenden.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8c4c252de5a9d23ecfbaee06ca6322f3b08b275f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f9f7c65eb69a79ff2190ab1371c594fa7b305093
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716877"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Wenn die PARAMETERIZATION-Datenbankoption auf SIMPLE festgelegt ist, kann der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfrageoptimierer die Abfragen ggf. parametrisieren. Dies bedeutet, dass alle eventuell in einer Abfrage enthaltenen Literalwerte durch Parameter ersetzt werden. Dieses Verfahren wird als einfache Parametrisierung bezeichnet. Wenn die einfache Parametrisierung aktiviert ist, können Sie nicht steuern, welche Abfragen parametrisiert werden sollen und welche nicht. Sie können jedoch angeben, dass alle Abfragen einer Datenbank parametrisiert werden sollen, indem Sie die PARAMETERIZATION-Datenbankoption auf FORCED festlegen. Dieses Verfahren wird als erzwungene Parametrisierung bezeichnet.  
   
  Sie können das Parametrisierungsverhalten einer Datenbank überschreiben, in dem Sie Planhinweislisten verwenden. Es gibt dabei folgende Möglichkeiten:  
