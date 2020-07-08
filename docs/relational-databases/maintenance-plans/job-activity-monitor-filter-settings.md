@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2532ca83c063d029015560b22e1a89317b90b5b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d143c4c52c122c159e7c80dd58d8cee847849360
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115809"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666935"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Auftragsaktivitätsmonitor (Filtereinstellungen)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Mithilfe dieser Seite können Sie die Anzahl der eingeblendeten Zeilen im Auftragsaktivitätsmonitor verringern. Geben Sie die Kriterien in die verfügbaren Felder ein, damit nur die Zeilen angezeigt werden, die den festgelegten Werten entsprechen. Einige der Felder, z. B. **Status** oder **Blockierungstyp** , bieten eine vorgegebene Anzahl von möglichen Werten, die in einer Dropdownliste verfügbar sind. Andere, z. B. **Anwendung** , ermöglichen die Eingabe beliebiger Werte in beliebiger Anzahl in Form einer Liste mit durch Trennzeichen getrennten Angaben. Symbole auf der Symbolleiste ermöglichen das Sortieren der verfügbaren Felder nach Kategorie oder alphabetisch. Klicken Sie auf die Kriterien, um eine kurze Beschreibung zu ihnen anzuzeigen.  
   
  Geben Sie zum Filtern des Auftragsaktivitätsmonitors alle gewünschten Filterkriterien an, klicken Sie auf **Filter anwenden**, und dann auf **OK**.  

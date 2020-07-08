@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 65e9ae2e44816ca761594acd3e2e907d7bd938a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217091"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818230"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase-Erweiterungsgruppen
 
@@ -58,10 +58,6 @@ Die PolyBase-Engine ist die zentrale Komponente von PolyBase-Abfragen. Es analys
   
 Der PolyBase-Datenverschiebungsdienst erhält Anweisungen von der PolyBase-Engine und überträgt die Daten zwischen HDFS und SQL Server sowie zwischen SQL Server-Instanzen auf den Haupt- und Serverknoten.
   
-## <a name="editions-availability"></a>Verfügbarkeit in den einzelnen Editionen  
-
-Nach dem Setup von SQL Server kann die Instanz entweder als Hauptknoten oder als Computeknoten festgelegt werden. Die Wahl hängt davon ab, auf welcher Version von SQL Server PolyBase ausgeführt wird. In einer Installation der Enterprise-Version kann die Instanz entweder als Hauptknoten oder als Computeknoten festgelegt werden. Bei einer Standard Edition kann die Instanz nur als Computeknoten festgelegt werden.
-
 ## <a name="next-steps"></a>Nächste Schritte
 
 Um eine PolyBase-Erweiterungsgruppe konfigurieren zu können, lesen Sie den folgenden Leitfaden:

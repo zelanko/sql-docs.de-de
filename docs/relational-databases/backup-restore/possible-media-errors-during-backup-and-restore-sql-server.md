@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85b6077e5dfa2d70ecbbe6aead13fd02dbdf43b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c364c7dca1e8ea7a74a526bdb69dc8a7b3cf296d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670107"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Mögliche Medienfehler während der Sicherung und Wiederherstellung (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] haben Sie die Möglichkeit, trotz erkannter Fehler eine Datenbank wiederherzustellen. Ein wichtiger neuer Fehlererkennungsmechanismus ist die optionale Erstellung einer Sicherungsprüfsumme, die von einem Sicherungsvorgang erstellt und von einem Wiederherstellungsvorgang überprüft wird. Sie können steuern, ob vom Vorgang auf Fehler geprüft wird, und ob der Vorgang beim Auftreten eines Fehlers beendet oder fortgesetzt wird. Wenn eine Sicherung eine Sicherungsprüfsumme enthält, kann mithilfe von RESTORE- und RESTORE VERIFYONLY-Anweisungen auf Fehler hin geprüft werden.  
   
 > [!NOTE]  
