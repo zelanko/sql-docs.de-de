@@ -20,15 +20,14 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: a61484691e4e5a2ea5ca4c08b6382b501f1cc851
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824720"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091863"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Gibt eine Zeile für jede Eigenschaft in Verbindung mit der CLR-Integration (Common Language Runtime) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück, einschließlich der Version und des Status der gehosteten CLR. Die gehostete CLR wird durch Ausführen der Anweisungen [Create Assembly](../../t-sql/statements/create-assembly-transact-sql.md), [Alter Assembly](../../t-sql/statements/alter-assembly-transact-sql.md)oder [Drop Assembly](../../t-sql/statements/drop-assembly-transact-sql.md) oder durch Ausführen einer beliebigen CLR-Routine, eines Typs oder eines Auslösers initialisiert. Die **sys. dm_clr_properties** -Sicht gibt nicht an, ob die Ausführung von Benutzer-CLR-Code auf dem Server aktiviert wurde. Die Ausführung von CLR-Benutzercode wird mithilfe der gespeicherten Prozedur [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) aktiviert, bei der die Option [CLR-fähig](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) auf 1 festgelegt ist.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "82824720"
   
  Der **Zustand der CLR** -Beendigung ist nur sichtbar, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerade heruntergefahren wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Eigenschaften und Werte dieser Sicht können sich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgrund von Verbesserungen der CLR-Integrations Funktionalität ändern.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 1e383b01ce40dbb03f5134bf5374b9b39bc2a99e
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937065"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053486"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Enthält eine Zeile für jeden Batch von migrierten Daten aus jeder Stretch-aktivierten Tabelle in der lokalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instanz von. Batches werden anhand ihrer Startzeit und Endzeit identifiziert.  
+  Enthält eine Zeile für jeden Batch von migrierten Daten aus jeder Stretch-aktivierten Tabelle in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Batches werden anhand ihrer Startzeit und Endzeit identifiziert.  
   
  **sys. dm_db_rda_migration_status** ist auf den aktuellen Daten Bank Kontext beschränkt. Stellen Sie sicher, dass Sie sich im Daten Bank Kontext der Stretch-enable-Tabellen befinden, für die Sie den Migrationsstatus anzeigen möchten.  
   
- In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]ist die Ausgabe von **sys. dm_db_rda_migration_status** auf 200 Zeilen beschränkt.  
+ In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist die Ausgabe von **sys. dm_db_rda_migration_status** auf 200 Zeilen beschränkt.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  

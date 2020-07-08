@@ -11,12 +11,11 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
-ms.translationtype: MT
+ms.openlocfilehash: 16303c34d44a056f1f505a2d1876b2ee23df994c
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85063320"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091892"
 ---
 # <a name="full-text-search"></a>Volltextsuche
   Mit der Volltextsuche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] können Benutzer und Anwendungen Volltextabfragen für zeichenbasierte Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen ausführen. Bevor Sie Volltextabfragen für eine bestimmte Tabelle ausführen können, muss der Datenbankadministrator einen Volltextindex für die Tabelle erstellen. Der Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten der Tabelle. Diese Spalten können jeden der folgenden Datentypen aufweisen: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` oder `varbinary(max)` und FILESTREAM. Jeder Volltextindex indiziert mindestens eine Spalte aus der Basistabelle. Für jede Spalte kann hierbei eine eigene Sprache verwendet werden.
@@ -149,7 +148,7 @@ ms.locfileid: "85063320"
  [In diesem Thema](#top)
 
 ##  <a name="linguistic-components-and-language-support-in-full-text-search"></a><a name="components"></a>Linguistische Komponenten und Sprachunterstützung in der voll Text Suche
- Die Volltextsuche unterstützt fast 50 verschiedene Sprachen, z. B. Englisch, Spanisch, Chinesisch, Japanisch, Arabisch, Bangla und Hindi. Eine vollständige Liste der unterstützten Volltextsprachen finden Sie unter [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql). Jeder Spalte, die im Volltextindex enthalten ist, ist ein Microsoft Windows-Gebietsschemabezeichner (LCID) zugeordnet, der einer von der Volltextsuche unterstützten Sprache entspricht. Der LCID 1033 entspricht beispielsweise US-Englisch, und der LCID 2057 steht für britisches Englisch. Für jede unterstützte Volltextsprache bietet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] linguistische Komponenten, die die Indizierung und Abfrage von in dieser Sprache gespeicherten Volltextdaten unterstützen.
+ Die Volltextsuche unterstützt fast 50 verschiedene Sprachen, wie z. b. Englisch, Spanisch, Chinesisch, Japanisch, Arabisch, Bangla und Hindi. Eine vollständige Liste der unterstützten Volltextsprachen finden Sie unter [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql). Jeder Spalte, die im Volltextindex enthalten ist, ist ein Microsoft Windows-Gebietsschemabezeichner (LCID) zugeordnet, der einer von der Volltextsuche unterstützten Sprache entspricht. Der LCID 1033 entspricht beispielsweise US-Englisch, und der LCID 2057 steht für britisches Englisch. Für jede unterstützte Volltextsprache bietet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] linguistische Komponenten, die die Indizierung und Abfrage von in dieser Sprache gespeicherten Volltextdaten unterstützen.
 
  Sprachspezifische Komponenten umfassen Folgendes:
 
@@ -234,5 +233,3 @@ ms.locfileid: "85063320"
 -   [DDL, Funktionen, gespeicherte Prozeduren und Sichten für Volltextsuche](../views/views.md)
 
  [In diesem Thema](#top)
-
-

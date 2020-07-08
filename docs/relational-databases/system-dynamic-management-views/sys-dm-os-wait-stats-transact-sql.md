@@ -20,11 +20,11 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee313bdcda6b005a3f3a80725908244d3a496b67
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011599"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091544"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -87,7 +87,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
   
  In der folgenden Tabelle werden die Wartetypen für Tasks in einer Liste aufgeführt.  
 
-|type |BESCHREIBUNG| 
+|Typ |BESCHREIBUNG| 
 |-------------------------- |--------------------------| 
 |ABR |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| | 
 |AM_INDBUILD_ALLOCATION |Nur interne Verwendung. <br />**Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
@@ -166,8 +166,8 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |CONNECTION_ENDPOINT_LOCK |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
 |Countrytrecoverymgr |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |CREATE_DATINISERVICE |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
-|CXCONSUMER |Tritt bei parallelen Abfrage Plänen auf, wenn ein Consumerthread auf das Senden von Zeilen durch einen Producer-Thread wartet. Dies ist ein normaler Bestandteil der parallelen Abfrage Ausführung. <br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Tritt bei parallelen Abfrage Plänen beim Synchronisieren des Austausch Iterators des Abfrage Prozessors und beim Erstellen und Verarbeiten von Zeilen auf. Wenn die Wartezeit zu lang ist und durch eine Abfrageoptimierung (beispielsweise durch das Hinzufügen von Indizes) nicht verkürzt werden kann, sollten Sie erwägen, den Kostenschwellenwert für Parallelität anzupassen oder den Grad an Parallelität zu verringern.<br /> **Hinweis:** Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] cxpacket bezieht sich nur auf das Synchronisieren des Austausch Iterators des Abfrage Prozessors und das Erstellen von Zeilen für Consumerthreads. Consumerthreads werden separat im cxconsumer-Wartetyp nachverfolgt.| 
+|CXCONSUMER<a name="cxconsumer"></a>|Tritt bei parallelen Abfrage Plänen auf, wenn ein Consumerthread (übergeordnetes Element) darauf wartet, dass ein Producer-Thread Zeilen sendet. Cxconsumer-warte Vorgänge werden von einem Exchange-Iterator verursacht, der außerhalb der Zeilen aus dem zugehörigen Producer-Thread läuft. Dies ist ein normaler Bestandteil der parallelen Abfrage Ausführung. <br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET<a name="cxpacket"></a>|Tritt bei parallelen Abfrage Plänen beim Synchronisieren des Austausch Iterators des Abfrage Prozessors und beim Erstellen und Verarbeiten von Zeilen auf. Wenn der Warte Vorgang übermäßig groß ist und nicht durch Optimieren der Abfrage (z. b. Hinzufügen von Indizes) reduziert werden kann, sollten Sie den Kosten Schwellenwert für Parallelität oder den maximalen Grad an Parallelität (MAXDOP) verringern.<br /> **Hinweis:** Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] cxpacket bezieht sich nur auf das Synchronisieren des Austausch Iterators des Abfrage Prozessors und das Erstellen von Zeilen. Wenn die Consumerthreads zu langsam sind, kann der Exchange-iteratorpuffer voll werden und cxpacket-warte Vorgänge verursachen. Consumerthreads werden separat im cxconsumer-Wartetyp nachverfolgt.| 
 |CXROWSET_SYNC |Tritt während eines parallelen Bereichsscans auf.| 
 |DAC_INIT |Tritt während des Initialisierungsvorgangs der dedizierten Administratorverbindung auf.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 

@@ -13,12 +13,11 @@ helpviewer_keywords:
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 1e36f718ebef46a63b52f309ccd28eed15a8e2b4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
-ms.translationtype: MT
+ms.openlocfilehash: 195805ac2257df8a7f1951d761c83432ff7d0578
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84523786"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091594"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Erstellen einer neuen OLAP-Miningstruktur
   Sie können den Data Mining-Assistenten in verwenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , um eine Mining Struktur zu erstellen, in der Daten aus einem mehrdimensionalen Modell verwendet werden. Miningmodelle, die auf OLAP-Cubes basieren, können die Spalte und Werte in Faktentabellen, Dimensionen und Measuregruppen als Attribute für die Analyse verwenden.  
@@ -102,7 +101,7 @@ ms.locfileid: "84523786"
   
     -   **Filterausdruck**: Geben Sie einen Wert oder Ausdruck ein, den Sie als Filterbedingung festlegen möchten, oder wählen Sie in der Dropdownliste einen Wert in der Liste der Elemente auf der angegebenen Ebene der Hierarchie aus.  
   
-         Beispiel: Wenn Sie als Dimension [Geography] und [Region Country Name] als Hierarchieebene ausgewählt haben, enthält die Dropdownliste alle gültigen Länder, die Sie als Filterbedingung verwenden können. Sie können mehrere Optionen auswählen. Infolgedessen werden die Daten in der Miningstruktur auf Cubedaten aus diesen geografischen Bereichen beschränkt.  
+         Wenn Sie z. b. [Geography] als Dimension und [Region Country Name] als Hierarchieebene ausgewählt haben, enthält die Dropdown Liste alle gültigen Länder/Regionen, die Sie als Filterbedingung verwenden können. Sie können mehrere Optionen auswählen. Infolgedessen werden die Daten in der Miningstruktur auf Cubedaten aus diesen geografischen Bereichen beschränkt.  
   
     -   **Parameter**: Ignorieren Sie dieses Kontrollkästchen. Dieses Dialogfeld unterstützt mehrere Cubefilteszenarien, und diese Option ist nicht für die Erstellung einer Miningstruktur relevant.  
   
@@ -130,5 +129,3 @@ ms.locfileid: "84523786"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tasks und Anweisungen für Miningstrukturen](mining-structure-tasks-and-how-tos.md)  
-  
-  

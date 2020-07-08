@@ -15,12 +15,11 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
-ms.translationtype: MT
+ms.openlocfilehash: 27545026fcf426e024237ff837ce078fed3c4a00
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544341"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091574"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Tipps und Best Practices für die Globalisierung (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Nur mehrdimensional  
@@ -69,7 +68,7 @@ ms.locfileid: "84544341"
   
      In Taiwan kommt häufiger traditionelles Chinesisch vor, bei dem die empfohlene Sortierreihenfolge auf der Anzahl der Striche basiert: Chinese_Taiwan_Stroke (für SQL Server 2000), Chinese_Taiwan_Stroke_90 (für SQL Server 2005) oder Chinese_Traditional_Stroke_Count_100 (für SQL Server 2008 und höher).  
   
-     Auch andere Regionen (z. b. Hongkong und Macau) verwenden traditionelles Chinesisch. Für Sortierungen in Hongkong wird häufig Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005) verwendet. In Macau wird Chinese_Traditional_Stroke_Count_100 (auf SQL Server 2008 und höher) Recht häufig verwendet.  
+     Andere Regionen (z. b. Hong Kong SAR und Macau SAR) verwenden auch traditionelles Chinesisch. Für Sortierungen in Hongkong wird häufig Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005) verwendet. In Macau wird Chinese_Traditional_Stroke_Count_100 (auf SQL Server 2008 und höher) Recht häufig verwendet.  
   
 -   Für Japanisch ist die am häufigsten verwendete Sortierung Japanese_CI_AS. Japanese_XJIS_100 wird bei Installationen verwendet, die [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)unterstützen. Japanese_BIN2 wird in der Regel in Datenmigrationsprojekten verwendet, deren Daten von anderen als Windows-Plattformen oder aus anderen Datenquellen als der relationalen Datenbank-Engine von SQL Server stammen.  
   
@@ -159,7 +158,5 @@ ms.locfileid: "84544341"
     ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Globalisierungs Szenarien für Analysis Services-multidimensionalen](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Globalisierungs Szenarien für Analysis Services mehrdimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Schreiben internationaler Transact-SQL-Anweisungen](../relational-databases/collations/write-international-transact-sql-statements.md)  
-  
-  

@@ -10,11 +10,11 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: e2c45c4aea17448af7ed496c1c56b8629c30e429
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7e898fa94dda37342765001ba87283b986ac9eb1
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85978842"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091764"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Neues in SSMA für Access (Access Token SQL)
 
@@ -213,7 +213,7 @@ Die Vorschauversion von SSMA vom März 2016 für Access bietet Unterstützung f�
 Die Wartungsversion von SSMA vom Januar 2016 für den Zugriff enthält die folgenden Änderungen:
 
 * Korrigiert ungültige Funktion für den Standardwert eines GUID-Felds (RFC 3894811).
-* Fehler beim Importieren von Datensätzen in SQL-Datenbank (Azure) (RFC 4919573).
+* Es wurde ein Problem behoben, bei dem das System beim Importieren von Datensätzen in SQL-Datenbank (Azure) (RFC 4919573) nicht reagiert
 * Menü Element "View Log" zu SSMA hinzugefügt (RFC 5706203).
 * Telemetrie hinzugefügt.
 

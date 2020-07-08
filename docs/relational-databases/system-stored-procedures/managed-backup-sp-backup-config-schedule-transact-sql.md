@@ -20,17 +20,16 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77507533"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053460"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Konfiguriert die automatisierten oder benutzerdefinierten Planungsoptionen [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]für.  
+  Konfiguriert die automatisierten oder benutzerdefinierten Planungsoptionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
     
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,16 +57,16 @@ EXEC managed_backup.sp_backup_config_schedule
  Der Häufigkeitstyp für den verwalteten Sicherungs Vorgang, der auf "täglich" oder "wöchentlich" festgelegt werden kann.  
   
  @days_of_week  
- Die Wochentage für die Sicherungen, wenn @full_backup_freq_type auf wöchentlich festgelegt ist. Geben Sie vollständige Zeichen folgen Namen wie "Montag" an.  Sie können auch mehr als einen Tagnamen angeben, der durch eine Pipe getrennt ist. Beispielsweise n ' Montag | Mittwoch | Freitag '.  
+ Die Wochentage für die Sicherungen @full_backup_freq_type , wenn auf wöchentlich festgelegt ist. Geben Sie vollständige Zeichen folgen Namen wie "Montag" an.  Sie können auch mehr als einen Tagnamen angeben, der durch eine Pipe getrennt ist. Beispielsweise n ' Montag | Mittwoch | Freitag '.  
   
  @backup_begin_time  
- Die Startzeit des Sicherungs Fensters. Sicherungen werden außerhalb des Zeitfensters, das durch eine Kombination aus @backup_begin_time und @backup_durationdefiniert wird, nicht gestartet.  
+ Die Startzeit des Sicherungs Fensters. Sicherungen werden außerhalb des Zeitfensters, das durch eine Kombination aus und definiert wird, nicht @backup_begin_time gestartet @backup_duration .  
   
  @backup_duration  
- Die Dauer des Zeitfensters für die Sicherung. Beachten Sie, dass es keine Garantie gibt, dass Sicherungen während des durch @backup_begin_time und @backup_durationdefinierten Zeitfensters abgeschlossen werden. Sicherungs Vorgänge, die in diesem Zeitfenster gestartet werden, aber die Dauer des Fensters überschreiten, werden nicht abgebrochen.  
+ Die Dauer des Zeitfensters für die Sicherung. Beachten Sie, dass es keine Garantie gibt, dass Sicherungen während des durch und definierten Zeitfensters abgeschlossen werden @backup_begin_time @backup_duration . Sicherungs Vorgänge, die in diesem Zeitfenster gestartet werden, aber die Dauer des Fensters überschreiten, werden nicht abgebrochen.  
   
  @log_backup_freq  
- Dadurch wird die Häufigkeit der Transaktionsprotokoll Sicherungen bestimmt. Diese Sicherungen erfolgen in regelmäßigen Abständen anstelle des Zeitplans, der für die Datenbanksicherungen festgelegt wurde. @log_backup_freqkann innerhalb von Minuten oder Stunden liegen `0:00` und ist gültig und weist auf keine Protokoll Sicherungen hin. Die Deaktivierung von Protokoll Sicherungen ist nur für Datenbanken mit einem einfachen Wiederherstellungs Modell geeignet.  
+ Dadurch wird die Häufigkeit der Transaktionsprotokoll Sicherungen bestimmt. Diese Sicherungen erfolgen in regelmäßigen Abständen anstelle des Zeitplans, der für die Datenbanksicherungen festgelegt wurde. @log_backup_freqkann innerhalb von Minuten oder Stunden liegen und `0:00` ist gültig und weist auf keine Protokoll Sicherungen hin. Die Deaktivierung von Protokoll Sicherungen ist nur für Datenbanken mit einem einfachen Wiederherstellungs Modell geeignet.  
   
 > [!NOTE]  
 >  Wenn das Wiederherstellungs Modell von einfach in vollständig geändert wird, müssen Sie die log_backup_freq von `0:00` auf einen Wert ungleich 0 (null) umkonfigurieren.  

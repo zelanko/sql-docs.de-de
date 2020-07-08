@@ -20,15 +20,14 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc68be51382b72dee1b143a3535d631ae93dbb7c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 2281586bfe77b7cadaa2b3a8f7ae7a9b18c655ab
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833276"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091788"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Gibt Zuordnungen zwischen Dokumentbezeichnern (DocIds) und Volltextschlüsselwerten zurück. Die DocId-Spalte enthält Werte für eine **bigint** -Ganzzahl, die einem bestimmten voll Text Schlüsselwert in einer voll Text indizierten Tabelle zugeordnet ist. DocId-Werte, die eine Suchbedingung erfüllen, werden von der Volltext-Engine an die Datenbank-Engine übergeben. Dort werden sie Volltextschlüsselwerten aus der abgefragten Basistabelle zugeordnet. Die Volltextschlüsselspalte ist ein eindeutiger Index, der in einer Spalte der Tabelle erforderlich ist.  
   
@@ -62,14 +61,14 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|Eine interne Dokumentbezeichnerspalte (DocId), die dem Schlüsselwert entspricht.|  
-|Schlüssel|*|Der Wert des Volltextschlüssels aus der angegebenen Tabelle.<br /><br /> Wenn in der Zuordnungstabelle keine Volltextschlüssel vorhanden sind, wird ein leeres Rowset zurückgegeben.|  
+|Key|*|Der Wert des Volltextschlüssels aus der angegebenen Tabelle.<br /><br /> Wenn in der Zuordnungstabelle keine Volltextschlüssel vorhanden sind, wird ein leeres Rowset zurückgegeben.|  
   
  <sup>*</sup>Der Datentyp für Key ist identisch mit dem Datentyp der voll Text Schlüssel Spalte in der Basistabelle.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese Funktion ist öffentlich und erfordert keine besonderen Berechtigungen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle sind die Auswirkungen beschrieben, die sich ergeben, wenn ein, zwei oder drei Parameter verwendet werden.  
   
 |Diese Parameterliste...|Hat dieses Ergebnis...|  

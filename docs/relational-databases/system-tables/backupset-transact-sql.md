@@ -20,15 +20,14 @@ ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 5cd91cd99d70a90e3aaec5972ddcdccf472a18f1
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827363"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091856"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Enthält eine Zeile für jeden Sicherungssatz. Ein *Sicherungssatz* enthält die Sicherung aus einem einzelnen, erfolgreichen Sicherungsvorgang. Die Anweisungen RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY und RESTORE VERIFYONLY verarbeiten einen einzelnen Sicherungssatz innerhalb des Mediensatzes auf den angegebenen Sicherungsmedien.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "82827363"
 |**expiration_date**|**datetime**|Datum und Uhrzeit des Zeitpunkts, zu dem die Gültigkeit des Sicherungssatzes endet. Kann den Wert NULL haben.|  
 |**software_vendor_id**|**int**|ID des Softwareanbieters, der den Sicherungsmedienheader schreibt. Kann den Wert NULL haben.|  
 |**name**|**nvarchar(128)**|Name des Sicherungssatzes. Kann den Wert NULL haben.|  
-|**Beschreibung**|**nvarchar(255)**|Beschreibung des Sicherungssatzes. Kann den Wert NULL haben.|  
+|**description**|**nvarchar(255)**|Beschreibung des Sicherungssatzes. Kann den Wert NULL haben.|  
 |**user_name**|**nvarchar(128)**|Name des Benutzers, der den Sicherungsvorgang durchführt. Kann den Wert NULL haben.|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Hauptversionsnummer. Kann den Wert NULL haben.|  
 |**software_minor_version**|**tinyint**|Nebenversionsnummer von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Kann den Wert NULL haben.|  
@@ -101,7 +100,7 @@ ms.locfileid: "82827363"
 |**encryptor_thumbprint**|**varbinary(20)**|Der Fingerabdruck der Verschlüsselung, der verwendet werden kann, um das Zertifikat oder den asymmetrischen Schlüssel in der Datenbank zu ermitteln. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Der verwendete Verschlüsselungstyp: Zertifikat oder Asymmetrischer Schlüssel. . Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  RESTORE VERIFYONLY FROM *backup_device* mit LOADHISTORY füllt die Spalte der **Backup Mediaset** -Tabelle mit den entsprechenden Werten aus dem Medien Satz Header auf.  
   
  Führen Sie die gespeicherte Prozedur [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) aus, um die Anzahl der Zeilen in dieser Tabelle und in anderen Sicherungs-und Verlaufs Tabellen zu verringern.  

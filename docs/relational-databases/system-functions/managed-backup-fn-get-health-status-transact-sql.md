@@ -20,19 +20,18 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155807"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053436"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Gibt eine Tabelle mit keiner, einer oder mehreren Zeilen der aggregierten Anzahl der Fehler zurück, die durch erweiterte Ereignisse während eines bestimmten Zeitraums gemeldet wurden.  
   
- Die-Funktion wird verwendet, um den Integritäts Status von Diensten unter Smart admin zu melden.  Wird [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] zurzeit unter dem intelligenten Administrator unterstützt. Daher beziehen sich die zurückgegebenen Fehler auf [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ Die-Funktion wird verwendet, um den Integritäts Status von Diensten unter Smart admin zu melden.  Wird zurzeit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] unter dem intelligenten Administrator unterstützt. Daher beziehen sich die zurückgegebenen Fehler auf [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -48,7 +47,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
  Der Beginn des Zeitraums, von dem an die aggregierte Anzahl von Fehlern berechnet wird.  Der @begin_time Parameter ist "DateTime". Der Standardwert ist NULL. Wenn der Wert NULL ist, verarbeitet die Funktion die Ereignisse, die bereits 30 Minuten vor der aktuellen Zeit gemeldet wurden.  
   
  [ @end_time]  
- Das Ende des Zeitraums, von dem an die aggregierte Anzahl von Fehlern berechnet wird. Der @end_time -Parameter ist vom Datentyp DateTime und hat den Standardwert NULL. Wenn der Wert NULL ist, verarbeitet die Funktion erweiterte Ereignisse bis zur aktuellen Zeit.  
+ Das Ende des Zeitraums, von dem an die aggregierte Anzahl von Fehlern berechnet wird. Der- @end_time Parameter ist vom Datentyp DateTime und hat den Standardwert NULL. Wenn der Wert NULL ist, verarbeitet die Funktion erweiterte Ereignisse bis zur aktuellen Zeit.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -62,7 +61,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_backup_loops|INT|Die Anzahl der Scans, die der Sicherungs-Agent für alle mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfigurierten Datenbanken ausführt sind.|  
 |number_of_retention_loops|INT|Die Anzahl der Datenbankscans, die zur Ermittlung der festgelegten Beibehaltungsdauer ausgeführt werden.|  
   
-## <a name="best-practices"></a>Empfehlungen  
+## <a name="best-practices"></a>Bewährte Methoden  
  Anhand dieser aggregierten Anzahl kann die Systemintegrität überwacht werden. Wenn die Spalte number_ of_retention_loops nach 30 Minuten beispielsweise 0 ist, dauert die Überwachung der Beibehaltungsdauer entweder sehr lange oder funktioniert nicht ordnungsgemäß. Spalten mit Werten ungleich 0 können auf Probleme hindeuten. Sie sollten die Protokolle der erweiterten Ereignisse prüfen, um das Problem einzugrenzen. Verwenden Sie alternativ die gespeicherte Prozedur **managed_backup. sp_get_backup_diagnostics** , um eine Liste der erweiterten Ereignisse zum Ermitteln der Details des Fehlers zu erhalten.  
   
 ## <a name="security"></a>Sicherheit  
