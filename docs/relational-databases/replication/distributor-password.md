@@ -13,15 +13,15 @@ ms.assetid: 52787c5e-c9ef-440e-a000-0787111b7dbb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 53605b1e88c47c5fa9b2f0ee37147993e0375808
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76143a4158aab90a96b015566bc993a7f70ef0d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76283979"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653383"
 ---
 # <a name="distributor-password"></a>Verteilerkennwort
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Wenn Sie auf der Seite **Verleger** des Assistenten mindestens einen Verleger für die Verwendung dieses Servers als Remoteverteiler aktivieren, müssen Sie für die von der Replikation hergestellte Verbindung zwischen dem Verleger und dem Remoteverteiler mithilfe des Anmeldenamens **distributor_admin** ein Kennwort angeben. Dieses Kennwort muss auch für jeden Verleger eingegeben werden, von dem der Verteiler über die Seite **Administratorkennwort** des Assistenten für neue Veröffentlichung oder des Verteilungskonfigurations-Assistenten verwendet wird. Weitere Informationen zur Sicherheit für Verteiler finden Sie unter [Schützen des Verteilers](../../relational-databases/replication/security/secure-the-distributor.md).  
   
 ## <a name="options"></a>Tastatur  

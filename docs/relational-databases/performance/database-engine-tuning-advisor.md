@@ -11,15 +11,15 @@ f1_keywords:
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 52b3154649a06bfb899e6993eb875a04190c59d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5e5dbbe43dfb0bff348f68bcd0f237e570eed75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67946942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655499"
 ---
 # <a name="database-engine-tuning-advisor"></a>Datenbankoptimierungsratgeber
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Der [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Datenbankoptimierungsratgeber (DTA) analysiert Datenbanken und gibt Empfehlungen zum Optimieren der Abfrageleistung. Mit dem Datenbankoptimierungsratgeber können Sie einen optimalen Satz von Indizes, indizierten Sichten oder Tabellenpartitionen auswählen und erstellen, auch wenn Sie nicht über detaillierte Kenntnisse bezüglich der Datenbankstruktur oder der internen Mechanismen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügen. Mit dem DTA können Sie die folgenden Aufgaben ausführen:  
   
 -   Beheben der Leistungsprobleme einer bestimmten Problemabfrage  

@@ -18,15 +18,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58e73100fce87fb6eda3827a41ae6c747eec4104
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132278"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629444"
 ---
 # <a name="limit-search-results-with-rank"></a>Einschränken von Suchergebnissen mit RANK
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Die Funktionen [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) und [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) geben eine Spalte mit dem Namen RANK zurück, die Ordinalwerte zwischen 0 und 1000 (Rangwerte) enthält. Diese Werte werden verwendet, um die Rangfolge der zurückgegebenen Zeilen gemäß ihrer Übereinstimmung mit den Auswahlkriterien festzulegen. Die Rangwerte geben lediglich eine relative Relevanzreihenfolge der Zeilen im Resultset an, wobei ein niedrigerer Wert eine niedrigere Relevanz anzeigt. Die tatsächlichen Werte sind nicht von Bedeutung und unterscheiden sich i. d. R. bei jeder Ausführung der Abfrage.  
   
 > [!NOTE]  

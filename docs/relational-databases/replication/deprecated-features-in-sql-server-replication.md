@@ -13,15 +13,15 @@ ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9f414d0ac6fc35e8ad65cedad2b04f88eb3b3553
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9e95b509ceac733ce540ecac067d78a757697af1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653837"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Als veraltet markierte Funktionen der SQL Server-Replikation
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   In diesem Thema werden die als veraltet markierten Replikationsfunktionen beschrieben, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]noch verfügbar sind. Diese Funktionen werden voraussichtlich in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  
   
 ## <a name="items-deprecated-in-sssql15"></a>Veraltete Elemente in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  

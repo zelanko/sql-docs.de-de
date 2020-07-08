@@ -14,15 +14,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e638dfe871d2ba4582228c097291d7f118fa47d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056184"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629457"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Die Volltextverwaltung für eine Serverinstanz enthält Folgendes:  
   
 -   Die Systemverwaltungsaufgaben wie z. B. das Verwalten des FDHOST-Startprogrammdiensts (MSSQLFDLauncher), das Neustarten des Filterdaemonhost-Prozesses nach dem Ändern der Dienstkontoinformationen, das Konfigurieren der serverweiten Volltexteigenschaften und das Sichern des Volltextkatalogs. Auf der Serverebene können Sie beispielsweise eine Standardvolltextsprache festlegen, die sich vollständig von der Standardsprache der Serverinstanz unterscheidet.  

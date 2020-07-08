@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8a3de3bf8c09149c21357a6d6b8c3e1aed4f995c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58027f9fa617b5fb77fc02f1268197930ea169cf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655221"
 ---
 # <a name="start-system-monitor-windows"></a>Starten des Systemmonitors (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Verwenden Sie den Systemmonitor zum Überwachen der Auslastung der Systemressourcen. Sammeln Sie Echtzeit-Leistungsdaten in Form von Leistungsindikatoren, und zeigen Sie sie an. Sie können Leistungsindikatoren für Serverressourcen wie Prozessor und Arbeitsspeicher verwenden. Außerdem können Sie sie für viele Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen wie Sperren und Transaktionen verwenden.  
   
 ## <a name="start-system-monitor-in-windows"></a>Starten des Systemmonitors in Windows  

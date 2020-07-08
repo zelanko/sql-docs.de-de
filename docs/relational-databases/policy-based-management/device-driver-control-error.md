@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6ab246e886e4f439fbf1dca600372a6816bc198b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2dd7ec5d8c7c321887d2553690e80dda12156203
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654592"
 ---
 # <a name="device-driver-control-error"></a>Gerätetreiber-Steuerungsfehler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Diese Regel überprüft das Systemereignisprotokoll auf EventId 11. Dies könnte durch einen fehlerhaften Gerätetreiber, ein Hardwareproblem, eine fehlerhafte Verkabelung oder Konnektivitätsprobleme verursacht werden.  
   
 ## <a name="best-practices-recommendations"></a>Empfehlungen zu Best Practices  

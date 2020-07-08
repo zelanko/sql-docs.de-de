@@ -11,15 +11,15 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 85293f063efa905d83ae8a07e9f66f8f36239a66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908026"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629609"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Erste Schritte mit Columnstore für die operative Echtzeitanalyse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Mit SQL Server 2016 wird die operative Echtzeitanalyse eingeführt, die Möglichkeit, Analyse- und OLTP-Arbeitsauslastungen zugleich auf den gleichen Datenbanktabellen auszuführen. Damit können Sie nicht nur Analysen in Echtzeit ausführen, sondern benötigen auch keine ETL-Aufträge und kein Data Warehouse mehr.  
   

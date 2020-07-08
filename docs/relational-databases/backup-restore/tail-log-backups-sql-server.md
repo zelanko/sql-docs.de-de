@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: b719e284c56a1b2a83c4be2dd6db14fa431cc242
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fa48e2e96c5066ee2a2bd5d2757a3ae8f669225b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829784"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631366"
 ---
 # <a name="tail-log-backups-sql-server"></a>Protokollfragmentsicherungen (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Dieses Thema ist nur Sicherungen und Wiederherstellungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant, die das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden.  
   
  Eine *Sicherung des Protokollfragments* zeichnet Protokolldatensätze auf, die bisher noch nicht gesichert wurden (das *Protokollfragment*), um Datenverlust zu vermeiden und die Protokollkette intakt zu halten. Bevor Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank auf den letzten Zeitpunkt wiederherstellen können, müssen Sie das Transaktionsprotokollfragment sichern. Die Sicherung des Protokollfragments ist die letzte relevante Sicherung im Wiederherstellungsplan für die Datenbank.  

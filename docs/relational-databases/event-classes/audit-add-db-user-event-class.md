@@ -12,15 +12,17 @@ ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7536c32a511f1792a1d3f50e775d6b94d237dae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 752361d6ebf7d8171a2a40551932db5beed69a71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903682"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635746"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User-Ereignisklasse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sql-asdb.md](../../includes/applies-to-version/sql-asdb.md)]
+
   Die **Audit Add DB User** -Ereignisklasse tritt auf, wenn ein Anmeldename als Datenbankbenutzer in einer Datenbank hinzugefügt oder entfernt wird. Diese Ereignisklasse wird für die gespeicherten Prozeduren **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**und **sp_dropuser** verwendet.  
   
  Es kann sein, dass diese Ereignisklasse in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt wird. Es wird empfohlen, stattdessen die **Audit Database Principal Management** -Ereignisklasse zu verwenden.  

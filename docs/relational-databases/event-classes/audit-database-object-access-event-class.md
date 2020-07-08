@@ -12,15 +12,15 @@ ms.assetid: 0294ba51-6085-4de2-a52d-dac1a87fbd4d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9091dde65ff39668a7cde9595cf31251d8b43eef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8e4d40ab803dd280fc0a05a21bf08c35d9f2e88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630619"
 ---
 # <a name="audit-database-object-access-event-class"></a>Audit Database Object Access-Ereignisklasse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die **Audit Database Object Access** -Ereignisklasse tritt auf, wenn auf Datenbankobjekte, z. B. Schemas, zugegriffen wird.  
   
 ## <a name="audit-database-object-access-event-class-data-columns"></a>Audit Database Object Access-Ereignisklasse (Datenspalten)  

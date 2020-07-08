@@ -17,15 +17,15 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653551"
 ---
 # <a name="distributor-information-publications"></a>Verteilerinformationen, Veröffentlichungen
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Die Registerkarte **Veröffentlichungen** enthält Zusammenfassungsinformationen zu allen Veröffentlichungen auf dem Verteiler, die Sie im linken Bereich ausgewählt haben.  
   
 Die Informationen, die bezüglich der vom Verteiler unterstützten Veröffentlichungen angezeigt werden, umfassen eine Spalte mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz des Verlegers. Ansonsten stimmten die Veröffentlichungsinformationen mit den Informationen überein, die beim Anzeigen von Veröffentlichungen in der Verlegeransicht des Replikationsmonitors bereitgestellt werden. Weitere Informationen zu den Spalten auf der Registerkarte **Veröffentlichungen** finden Sie unter [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md).  

@@ -12,15 +12,15 @@ ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a7cd3bb6fd625b588624d38b777788a2f84c814f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629256"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Verwalten und Überwachen der semantischen Suche
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema werden der Prozess der semantischen Indizierung sowie die Tasks im Zusammenhang mit der Verwaltung und Überwachung der Indizes beschrieben.  
   
 ##  <a name="check-the-status-of-semantic-indexing"></a><a name="HowToMonitorStatus"></a> Überprüfen des Status der semantischen Indizierung  

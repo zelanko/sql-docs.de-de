@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6c79f2e87ccb6706eab6621cc72bb2fa45b7e9e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2962d457ce079bd0ec2164f9fdd2a982b983f14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77179281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85638133"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Ein Datentyp, der automatisch generierte eindeutige, binäre Zahlen in einer Datenbank verfügbar macht. **rowversion** wird normalerweise als Mechanismus für die Erstellung einer Versionskennung von Tabellenzeilen verwendet. Die Speichergröße beträgt 8 Byte. Der **rowversion**-Datentyp ist nur eine inkrementelle Nummer und behält ein Datum oder eine Uhrzeit nicht bei. Zum Aufzeichnen eines Datums oder einer Uhrzeit verwenden Sie einen **datetime2**-Datentyp.
   

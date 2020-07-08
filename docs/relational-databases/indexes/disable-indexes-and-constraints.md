@@ -24,15 +24,15 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6a012fc4aca38401a7476b759a9a13995dad87b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68107146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629782"
 ---
 # <a name="disable-indexes-and-constraints"></a>Deaktivieren von Indizes und Einschränkungen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In diesem Thema wird beschrieben, wie ein Index oder Einschränkungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]deaktiviert werden. Wenn Indizes deaktiviert werden, können Benutzer nicht mehr darauf zugreifen, und bei gruppierten Indizes können sie auch nicht mehr auf die dem Index zugrunde liegenden Tabellendaten zugreifen. Die Indexdefinition verbleibt jedoch in den Metadaten, und bei nicht gruppierten Indizes werden die Indexstatistiken beibehalten. Beim Deaktivieren eines nicht gruppierten oder gruppierten Indexes in einer Sicht werden die Indexdaten physisch gelöscht. Das Deaktivieren eines gruppierten Indexes für eine Tabelle verhindert lediglich das Zugreifen auf die Daten; diese verbleiben in der Tabelle, sind jedoch erst für DML-Vorgänge (Datenbearbeitungssprache) verfügbar, wenn der Index gelöscht oder neu erstellt wurde.  
   
