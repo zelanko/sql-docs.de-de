@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83b73909cf1844796640a83910ee609eadd7dba4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5f04017124520f6e2acd0669946d5d43d4e83f4
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488533"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160168"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Beschränkungen des Programmiermodells für die CLR-Integration
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Wenn Sie eine verwaltete gespeicherte Prozedur oder ein anderes verwaltetes Datenbankobjekt entwickeln, werden bestimmte Code Überprüfungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durchgeführt, die berücksichtigt werden müssen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]führt Überprüfungen der verwalteten Codeassembly aus, wenn Sie zum ersten Mal in der Datenbank registriert wird, mithilfe der **Create Assembly** -Anweisung und auch zur Laufzeit. Der verwaltete Code wird außerdem zur Laufzeit überprüft, da in einer Assembly Codepfade vorhanden sein können, die zur Laufzeit eigentlich nicht erreicht werden.  Dadurch wird Flexibilität für die Registrierung von Assemblys von Drittanbietern geschaffen, sodass eine Assembly nicht blockiert wird, wenn ein "Unsafe"-Code vorliegt, der in einer Clientumgebung ausgeführt werden soll, jedoch nie in der gehosteten CLR ausgeführt wird. Die Anforderungen, die der verwaltete Code erfüllen muss, hängen davon ab, ob die Assembly als **sicher**, **EXTERNAL_ACCESS**oder **unsicher**, **sicher, sicher** und im folgenden aufgeführt ist.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+  Wenn Sie eine verwaltete gespeicherte Prozedur oder ein anderes verwaltetes Datenbankobjekt entwickeln, werden bestimmte Code Überprüfungen durchgeführt, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die berücksichtigt werden müssen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]führt Überprüfungen der verwalteten Codeassembly aus, wenn Sie zum ersten Mal in der Datenbank registriert wird, mithilfe der **Create Assembly** -Anweisung und auch zur Laufzeit. Der verwaltete Code wird außerdem zur Laufzeit überprüft, da in einer Assembly Codepfade vorhanden sein können, die zur Laufzeit eigentlich nicht erreicht werden.  Dadurch wird Flexibilität für die Registrierung von Assemblys von Drittanbietern geschaffen, sodass eine Assembly nicht blockiert wird, wenn ein "Unsafe"-Code vorliegt, der in einer Clientumgebung ausgeführt werden soll, jedoch nie in der gehosteten CLR ausgeführt wird. Die Anforderungen, die der verwaltete Code erfüllen muss, hängen davon ab, ob die Assembly als **sicher**, **EXTERNAL_ACCESS**oder **unsicher**, **sicher, sicher** und im folgenden aufgeführt ist.  
   
  Neben den Einschränkungen, die für verwaltete Codeassemblys gelten, werden außerdem Sicherheitsberechtigungen für Code erteilt. Die CLR (Common Language Runtime) unterstützt ein Sicherheitsmodell, das als Codezugriffssicherheit für verwalteten Code bezeichnet wird. In diesem Modell werden Assemblys Berechtigungen auf Grundlage der Identität des Codes gewährt. **Sichere**, **EXTERNAL_ACCESS**und **unsichere** Assemblys verfügen über unterschiedliche CAS-Berechtigungen. Weitere Informationen finden Sie unter [CLR-Integration Code Zugriffssicherheit](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
@@ -38,9 +38,9 @@ ms.locfileid: "81488533"
   
 -   Die Assembly ist eine der unterstützten Assemblys. Weitere Informationen finden Sie [unter Supported .NET Framework Libraries](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   Sie verwenden **Create Assembly from**_\<Location>,_ und alle referenzierten Assemblys und ihre Abhängigkeiten sind an * \<Location>* verfügbar.  
+-   Sie verwenden **Create Assembly aus**_ \<location> ,_ und alle referenzierten Assemblys und ihre Abhängigkeiten sind in verfügbar *\<location>* .  
   
--   Sie verwenden **Create Assembly from**_\<bytes... >,_ und alle Verweise werden mit durch Leerzeichen getrennten Bytes angegeben.  
+-   Sie verwenden **Create Assembly aus**_ \<bytes ...> ,_ und alle Verweise werden über durch Leerzeichen getrennte Bytes angegeben.  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  Alle **EXTERNAL_ACCESS** -Assemblys müssen die folgenden Kriterien erfüllen:  
@@ -98,7 +98,7 @@ ms.locfileid: "81488533"
   
 -   SelfAffectingThreading  
   
--   Synchronization  
+-   Synchronisierung  
   
 -   SharedState  
   
