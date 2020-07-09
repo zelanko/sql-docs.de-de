@@ -15,34 +15,38 @@ helpviewer_keywords:
 - current configuration information
 - configuration functions [SQL Server]
 ms.assetid: 066f15e7-3406-437e-93c4-3f247c529169
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 237495794802488d0fd6d69047555731b89c6442
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8bd661144614ee335f540691258c22913b5f57d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732579"
 ---
 # <a name="configuration-functions-transact-sql"></a>Konfigurationsfunktionen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Diese skalaren Funktionen geben Informationen zu den aktuellen Einstellungen der Konfigurationsoptionen zurück:
   
-|||  
-|-|-|  
-|[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|[@@OPTIONS](../../t-sql/functions/options-transact-sql.md)|  
-|[@@DBTS](../../t-sql/functions/dbts-transact-sql.md)|[@@REMSERVER](../../t-sql/functions/remserver-transact-sql.md)|  
-|[@@LANGID](../../t-sql/functions/langid-transact-sql.md)|[@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)|  
-|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|[@@SERVICENAME](../../t-sql/functions/servicename-transact-sql.md)|  
-|[@@LOCK_TIMEOUT](../../t-sql/functions/lock-timeout-transact-sql.md)|[@@SPID](../../t-sql/functions/spid-transact-sql.md)|  
-|[@@MAX_CONNECTIONS](../../t-sql/functions/max-connections-transact-sql.md)|[@@TEXTSIZE](../../t-sql/functions/textsize-transact-sql.md)|  
-|[@@MAX_PRECISION](../../t-sql/functions/max-precision-transact-sql.md)|[@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md)|  
-|[@@NESTLEVEL](../../t-sql/functions/nestlevel-transact-sql.md)||  
-  
+- [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)
+- [@@DBTS](../../t-sql/functions/dbts-transact-sql.md)
+- [@@LANGID](../../t-sql/functions/langid-transact-sql.md)
+- [@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)
+- [@@LOCK_TIMEOUT](../../t-sql/functions/lock-timeout-transact-sql.md)
+- [@@MAX_CONNECTIONS](../../t-sql/functions/max-connections-transact-sql.md)
+- [@@MAX_PRECISION](../../t-sql/functions/max-precision-transact-sql.md)
+- [@@NESTLEVEL](../../t-sql/functions/nestlevel-transact-sql.md)
+- [@@OPTIONS](../../t-sql/functions/options-transact-sql.md)
+- [@@REMSERVER](../../t-sql/functions/remserver-transact-sql.md)
+- [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md)
+- [@@SERVICENAME](../../t-sql/functions/servicename-transact-sql.md)
+- [@@SPID](../../t-sql/functions/spid-transact-sql.md)
+- [@@TEXTSIZE](../../t-sql/functions/textsize-transact-sql.md)
+- [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md)
+
 Alle Konfigurationsfunktionen arbeiten in nicht deterministischer Weise. Das heißt, dass diese Funktionen nicht stets dasselbe Ergebnis zurückgeben, selbst wenn sie mit denselben Eingabewerten aufgerufen werden. Weitere Informationen zu Funktionsdeterminismus finden Sie unter [Deterministische und nicht deterministische Funktionen](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="see-also"></a>Weitere Informationen
+
 [Functions &#40;Transact-SQL&#41; (Funktionen (Transact-SQL))](../../t-sql/functions/functions.md)
-  
-  

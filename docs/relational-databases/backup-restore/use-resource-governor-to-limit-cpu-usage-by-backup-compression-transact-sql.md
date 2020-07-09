@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6446ad935f2388f2fd2d8df898232f897e475cc3
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: b018053582e6bddafe744be1d9a0411132fc3e06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849808"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730879"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Standardmäßig steigt die CPU-Nutzung durch die Sicherung mit Komprimierung erheblich, und die bei der Komprimierung zusätzlich benötigten CPU-Ressourcen können sich negativ auf gleichzeitig ausgeführte Vorgänge auswirken. Daher ist es u.U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch den[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) eingeschränkt ist, eine komprimierte Sicherung mit niedriger Priorität zu erstellen, wenn CPU-Konflikte bestehen. In diesem Thema wird ein Szenario dargestellt, in dem die Sitzungen eines bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzers klassifiziert werden, indem diese einer Arbeitsauslastungsgruppe der Ressourcenkontrolle zugeordnet werden, die die CPU-Nutzung in solchen Fällen einschränkt.  
   

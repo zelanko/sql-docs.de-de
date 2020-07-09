@@ -16,12 +16,12 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f543848759b737892998d913fa87ea6de7c6735
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140300"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858582"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Anzeigen der Abhängigkeiten einer Tabelle
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68140300"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So zeigen Sie die Abhängigkeiten einer Tabelle mit folgenden Elementen an:**  
   
@@ -49,13 +49,13 @@ ms.locfileid: "68140300"
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
-#### <a name="to-view-the-dependencies-of-a-table"></a>So zeigen Sie die Abhängigkeiten einer Tabelle an  
+#### <a name="to-view-the-objects-on-which-a-table-depends"></a>So zeigen Sie die Objekte an, von denen eine Tabelle abhängt  
   
 1.  Erweitern Sie im **Objekt-Explorer**den Ordner **Datenbanken**, erweitern Sie eine Datenbank, und erweitern Sie dann **Tabellen**.  
   
 2.  Klicken Sie mit der rechten Maustaste auf eine Tabelle, und klicken Sie dann auf **Abhängigkeiten anzeigen**.  
   
-3.  Klicken Sie im Dialogfeld **Objektabhängigkeiten –** _\<Objektname\>_ entweder auf **Objekte, die von** _Objektname\<\> abhängig sind_ oder auf **Objekte, von denen** _\<Objektname\>_ **abhängt**.  
+3.  Klicken Sie im Dialogfeld **Objektabhängigkeiten –** _\<Objektname\>_ entweder auf **Objekte, die von _\<Objektname\>_ abhängig sind** oder auf **Objekte, von denen** _\<Objektname\>_ **abhängt**.  
   
 4.  Wählen Sie im Raster **Abhängigkeiten** ein Objekt aus. Der Objekttyp (z.B. „Trigger“ oder „Gespeicherte Prozedur“) wird im Feld **Typ** angezeigt.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68140300"
   
     ```  
   
-#### <a name="to-view-the-objects-on-which-a-table-depends"></a>So zeigen Sie die Objekte an, von denen eine Tabelle abhängt  
+#### <a name="to-view-the-dependencies-of-a-table"></a>So zeigen Sie die Abhängigkeiten einer Tabelle an  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   

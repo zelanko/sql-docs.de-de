@@ -13,16 +13,16 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 546490349b2d80135c873ff0917ab571f3cae830
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731585"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Angeben von berechneten Spalten in einer Tabelle
 
-[!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb.md)]
 
 Eine berechnete Spalte ist eine virtuelle Spalte, die nicht physisch in der Tabelle gespeichert ist, es sei denn, die Spalte wurde (mit PERSISTED) als persistente Spalte markiert. Der Ausdruck für eine berechnete Spalte kann aus Daten anderer Spalten einen Wert für die Spalte berechnen, der er zuwiesen ist. Sie können mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] einen Ausdruck für eine berechnete Spalte in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angeben.
 

@@ -12,15 +12,15 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49691cea038a121ac27bdea729e3646e3375889f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730199"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Aktivieren der semantischen Suche in Tabellen und Spalten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Beschreibt, wie die statistische semantische Indizierung für ausgewählte Spalten, die Dokumente oder Text enthalten, aktiviert bzw. deaktiviert wird.  
   
  Die statistische semantische Suche verwendet die Indizes, die von der Volltextsuche erstellt werden, und erstellt zusätzliche Indizes. Als Ergebnis dieser Abhängigkeit von der Volltextsuche erstellen Sie einen neuen semantischen Index, wenn Sie einen neuen Volltextindex definieren oder einen vorhandenen Volltextindex ändern. Einen neuen semantischen Index können Sie mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen oder mit dem Volltextindizierungs-Assistenten und anderen Dialogfeldern in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]erstellen, wie in diesem Thema beschrieben.  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 220080e231c63f0224af9054039298fddd83ad96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4821091d350abd3396d524aa7ea3a1b4dd131318
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726526"
 ---
 # <a name="database-mail-external-program"></a>Externes Datenbank-E-Mail-Programm
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Die ausführbare Datei für das externe Datenbank-E-Mail-Programm ist **DatabaseMail.exe**und ist im Verzeichnis **MSSQL\Binn** der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation gespeichert. Datenbank-E-Mail verwendet die Service Broker-Aktivierung, um das externe Programm zu starten, wenn E-Mail-Nachrichten zur Verarbeitung vorhanden sind. Datenbank-E-Mail startet eine Instanz des externen Programms. Das externe Programm wird im Sicherheitskontext des Dienstkontos für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt.  
   
  **In diesem Thema:**  

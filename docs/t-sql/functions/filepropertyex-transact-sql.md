@@ -19,15 +19,15 @@ helpviewer_keywords:
 - file names [SQL Server], FILEPROPERTYEX
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 955cfe87f93bedc41c6aeb29951ee1c81d0a4d6e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0eb763436bc4dd26815879c33c9a8461d9a38d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68425932"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732323"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Gibt den Wert für die angegebene erweiterte Dateieigenschaft zurück, wenn ein Dateiname in der aktuellen Datenbank und ein Eigenschaftsname angegeben sind. Gibt für Dateien, die es in der aktuellen Datenbank nicht gibt, oder für erweiterte Dateieigenschaften, die nicht vorhanden sind, den Wert NULL zurück. Derzeit gibt es erweiterte Dateieigenschaften nur für Datenbanken, die sich in Azure Blob-Speicher befinden.  
   

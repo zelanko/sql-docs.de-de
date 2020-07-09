@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 41c77ad93bf129fa84f5d039b64a63593a335aee
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: cc24afebe163f3fbab8c7f1a2317b62d8c818223
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849838"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729294"
 ---
 # <a name="resource-governor"></a>Resource Governor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor ist ein Feature, mit dem Sie die Arbeitsauslastung und den Systemressourcenverbrauch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwalten können. Mit Resource Governor können Sie für CPU, physische E/A und Arbeitsspeicher Grenzwerte für die Menge angeben, die für eingehende Anwendungsanforderungen zur Verfügung steht.  
   
 ## <a name="benefits-of-resource-governor"></a>Vorteile der Ressourcenkontrolle  

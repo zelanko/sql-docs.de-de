@@ -12,15 +12,15 @@ ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bdc25063da64321b0be4cbcbd078e8cf5792c932
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9c1d26fb993544fd58ecb6dd9e33f6d6fd26cd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100254"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727402"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template (Ereignisklasse)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Das QN:Template-Ereignis übermittelt Informationen zur internen Verwendung von Abfragevorlagen. Abfragevorlagen bilden den von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendeten Mechanismus zur Freigabe von Definitionen einer Abfrage für die Benachrichtigung. Diese Vorlagen werden zusammen mit den Parametertabellen erstellt. [!INCLUDE[ssDE](../../includes/ssde-md.md)] erstellt ein Ereignis dieses Typs, wenn eine Abfragevorlage erstellt, verwendet oder gelöscht wird.  
   
 ## <a name="qntemplate-event-class-data-columns"></a>Datenspalten der QN:Template-Ereignisklasse  

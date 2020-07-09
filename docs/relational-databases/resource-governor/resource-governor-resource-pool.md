@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0a65cb01d34082e59d85198505740c345bb7bd08
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0236841f3f3c6944d411fd18cb0222afb1802947
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67942664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729283"
 ---
 # <a name="resource-governor-resource-pool"></a>Ressourcenpool für die Ressourcenkontrolle
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   In der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcenkontrolle stellt ein Ressourcenpool eine Teilmenge der physischen Ressourcen einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]s dar. Über die Ressourcenkontrolle können Sie Grenzwerte für die CPU, physische E/A und den Arbeitsspeicher festlegen, d. h. Ressourcen, die eingehenden Anwendungsanforderungen im Ressourcenpool zur Verfügung stehen. Jeder Ressourcenpool kann eine oder mehrere Arbeitsauslastungsgruppen enthalten. Wenn eine Sitzung gestartet wird, weist die Klassifizierungsfunktion der Ressourcenkontrolle die Sitzung einer bestimmten Arbeitsauslastungsgruppe zu, und die Sitzung muss mit den der Arbeitsauslastungsgruppe zugewiesenen Ressourcen ausgeführt werden.  
   

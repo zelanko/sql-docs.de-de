@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: a8657a91-ec75-4649-a09a-21920e0030ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 068f4737a3367acdd01862cc800a4255a472c843
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0d4c51bd7f4e1eca3bf57fbcfa89aec93357fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001917"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723739"
 ---
 # <a name="mssqlserver_3151"></a>MSSQLSERVER_3151
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |  
+| :-------- | :---- |  
 |Produktname|SQL Server|  
 |Ereignis-ID|3151|  
 |Ereignisquelle|MSSQLSERVER|  
@@ -36,5 +36,5 @@ ms.locfileid: "68001917"
 Dies ist eine allgemeine Fehlermeldung, die auf verschiedene Probleme bei der **master**-Datenbank verweist.  
   
 ## <a name="user-action"></a>Benutzeraktion  
-Überprüfen Sie das Fehlerprotokoll auf weitere Informationen. Führen Sie zum Erstellen einer verwendbaren **master**-Datenbank Setup.exe mit der Option REBUILDDATABASE aus. Weitere Informationen finden Sie unter "Vorgehensweise: Installieren von SQL Server von der Eingabeaufforderung" in der SQL Server-Onlinedokumentation.  
+Überprüfen Sie das Fehlerprotokoll auf weitere Informationen. Führen Sie zum Erstellen einer verwendbaren **master**-Datenbank Setup.exe mit der Option REBUILDDATABASE aus. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt „Vorgehensweise: Installieren von SQL Server von der Eingabeaufforderung“ in der SQL Server-Onlinedokumentation.  
   

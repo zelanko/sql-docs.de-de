@@ -16,15 +16,15 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09fb423dc4d3685b22c67b2a86a74443633ba74a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 362cb5e43414e6f43453f8efe201d8e4a2369f6d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78370543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727081"
 ---
 # <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Ebenso wie Funktionen in Programmiersprachen sind auch benutzerdefinierte Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Routinen, die Parameter annehmen, eine Aktion ausführen (z. B. eine komplexe Berechnung) und das Ergebnis dieser Aktion als Wert zurückgeben können. Der Rückgabewert kann ein einzelner Skalarwert oder ein Resultset sein.  
    
 ##  <a name="user-defined-functions"></a><a name="Benefits"></a> Benutzerdefinierte Funktionen  

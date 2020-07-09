@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1679bf9e-a2ef-4f90-8907-a002f7341a7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8fb34965fe6392ac09b2582f5d840f0da90294d5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84fe7ae204c14a0ecaebb3141d4f08175bfee793
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727273"
 ---
 # <a name="unexpected-system-failures"></a>Unerwartete Systemfehler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Diese Regel überprüft das SYSTEM-Ereignis 6008 im Ereignisprotokoll auf dem Computer. Dieses Ereignis gibt ein unerwartetes Herunterfahren des Systems an. Das System ist möglicherweise instabil und bietet nicht die Stabilität und Integrität, die für das Hosten einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erforderlich ist.  
   
 ## <a name="best-practices-recommendations"></a>Empfehlungen zu Best Practices  

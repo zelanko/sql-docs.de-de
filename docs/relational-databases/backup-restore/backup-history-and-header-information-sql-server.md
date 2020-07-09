@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c9500198b88d9a01317ee82ac652a231d1753309
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3bcec97642ead8a53c0703cdcfafbbe59cc4bbe1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824112"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728483"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Sicherungsverlauf und Headerinformationen (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Ein vollständiger Verlauf aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungs- und -Wiederherstellungsvorgänge auf einer Serverinstanz wird in der **msdb** -Datenbank gespeichert. Dieses Thema stellt die Sicherungs- und Wiederherstellungsverlaufstabellen vor sowie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die zum Zugreifen auf den Sicherungsverlauf verwendet werden. In diesem Thema wird auch erläutert, wann die Auflistung von Datenbank- und Transaktionsprotokolldateien sinnvoll ist und wann Medienheaderinformationen bzw. Sicherungsheaderinformationen verwendet werden sollten.  
   
 > [!IMPORTANT]  
