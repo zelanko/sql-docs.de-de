@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 0418352c-0ab2-4dc7-b8b9-5c3bad94560c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e87c0983ac7e74b45251bb72c44265f2134aa3b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8a3d87f96ffdedb5f9f5c0c8330e34cd7ec3722
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68103729"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780346"
 ---
 # <a name="mssqlserver_2533"></a>MSSQLSERVER_2533
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |  
+| :-------- | :---- |  
 |Produktname|SQL Server|  
 |Ereignis-ID|2533|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC_PAGE_WAS_NOT_SEEN|  
-|Meldungstext|Tabellenfehler: Seite P_ID, die der Objekt-ID O_ID zugeordnet ist, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ) wurde nicht betrachtet. Die Seite ist möglicherweise ungültig oder enthält eine falsche Zuordnungseinheits-ID im Header.|  
+|Meldungstext|Tabellenfehler: Der Objekt-ID „O_ID“ zugeordnete Seite „P_ID“, Index-ID „I_ID“, Partitions-ID „PN_ID“ und Zuordnungseinheits-ID „A_ID“ (TYPE-Typ) nicht gefunden. Die Seite ist möglicherweise ungültig oder enthält eine falsche Zuordnungseinheits-ID im Header.|  
   
 ## <a name="explanation"></a>Erklärung  
 Eine Seite wird der Zuordnungseinheits-ID *A_ID* zugeordnet, aber diese Zuordnungseinheits-ID befindet sich nicht im Header der Seite. Der Header hat eine andere Zuordnungseinheits-ID. Wenn die Zuordnungseinheits-ID im Header der Seite einem gültigen Objekt zugewiesen ist, tritt für die Seite möglicherweise ein entsprechender MSSQLEngine_2534-Fehler auf.  

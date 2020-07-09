@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: 567fb571-7cda-4ce8-a702-cdff2df5d419
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5001efe04b24c987b37e269e3081abdd3a665bf7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c1e30294f89beb5f456953e26a33ee0cef13ea52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780615"
 ---
 # <a name="mssqlserver_2"></a>MSSQLSERVER_2
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |  
+| :-------- | :---- |  
 |Produktname|SQL Server|  
 |Ereignis-ID|2|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name||  
-|Meldungstext|Fehler beim Herstellen einer Verbindung mit dem Server.  Beim Herstellen einer Verbindung mit SQL Server kann dieser Fehler durch den Umstand verursacht werden, dass die Standardeinstellungen von SQL Server keine Remoteverbindungen zulassen. (Anbieter: Named Pipes-Anbieter, Fehler: 40 – Es konnte keine Verbindung mit SQL Server hergestellt werden) (.Net SqlClient-Datenanbieter)|  
+|Meldungstext|Fehler beim Herstellen einer Verbindung mit dem Server.  Beim Herstellen einer Verbindung mit SQL Server kann dieser Fehler durch den Umstand verursacht werden, dass die Standardeinstellungen von SQL Server keine Remoteverbindungen zulassen. (Anbieter: Named Pipes-Anbieter, Fehler: 40 - Es konnte keine Verbindung zu SQL Server hergestellt werden) (.Net SqlClient-Datenanbieter)|  
   
 ## <a name="explanation"></a>Erklärung  
 Keine Antwort von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf die Clientanforderung, da der Server wahrscheinlich nicht gestartet wurde.  

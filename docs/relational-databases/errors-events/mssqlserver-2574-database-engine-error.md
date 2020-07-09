@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: efba507a-b5ad-4f1d-b0c8-f73b663a0562
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 80529814a7933ef2e9310872fdfc63cb339355fb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f79f52f60fc93e7c134b66f4e6430677c36e05f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68023070"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780256"
 ---
 # <a name="mssqlserver_2574"></a>MSSQLSERVER_2574
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |  
+| :-------- | :---- |  
 |Produktname|SQL Server|  
 |Ereignis-ID|2574|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|Meldungstext|Tabellenfehler: Die Seite P_ID ist in der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ) leer. Dies ist auf der LEVEL-Ebene der B-Struktur unzulässig.|  
+|Meldungstext|Tabellenfehler: Die Seite „P_ID“ ist in der Objekt-ID „O_ID“, Index-ID „I_ID“, Partitions-ID „PN_ID“ und Zuordnungseinheits-ID „A_ID“ (TYPE-Typ) leer. Dies ist auf der LEVEL-Ebene der B-Struktur unzulässig.|  
   
 ## <a name="explanation"></a>Erklärung  
 Eine Seite der B-Struktur über der Blattebene des angegebenen Indexes ist leer, hat also keine Zeilen. Dieses Verhalten ist möglich für Seiten auf der Blattebene in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], war jedoch niemals möglich in Strukturebenen.  

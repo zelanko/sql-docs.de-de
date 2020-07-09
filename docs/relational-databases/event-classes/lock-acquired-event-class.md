@@ -12,15 +12,15 @@ ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bde8e1552b13f165d928f1e9275512e22426f9f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91899bddfc872487d29866c3c854563f22353827
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780179"
 ---
 # <a name="lockacquired-event-class"></a>Lock:Acquired (Ereignisklasse)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Die Lock:Acquired-Ereignisklasse zeigt den Erhalt einer Sperre auf einer Ressource an, z.B. einer Datenseite.  
   
  Die Ereignisklassen Lock:Acquired und Lock:Released können zum Überwachen verwendet werden, wenn Objekte gesperrt werden, der Sperrentyp bekannt ist und wenn aufgezeichnet wurde, wie lange die Sperren beibehalten wurden. Sperren, die für längere Zeit beibehalten werden, können zu Konflikten führen und sollten untersucht werden. So kann z. B. eine Anwendung Sperren für Zeilen in einer Tabelle erhalten und anschließend auf Benutzereingaben warten. Da bis zur Benutzereingabe längere Zeit vergehen kann, besteht die Möglichkeit, dass die Sperren andere Benutzer blockieren. In diesem Fall sollte die Anwendung geändert werden, damit Sperranforderungen nur bei Bedarf ausgegeben werden und keine Benutzereingaben notwendig sind, wenn Sperren bereits eingerichtet wurden.  

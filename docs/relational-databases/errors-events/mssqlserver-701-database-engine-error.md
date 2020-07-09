@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db307d221b8c90f478c21ab1605362e7fdf2ffd6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0ad5eb99009a6f9f980edc062c10a5c98831984
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907719"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780231"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |  
+| :-------- | :---- |  
 |Produktname|SQL Server|  
 |Ereignis-ID|701|  
 |Ereignisquelle|MSSQLSERVER|  
@@ -46,7 +46,7 @@ In der folgenden Liste werden allgemeine Schritte erläutert, die bei der Proble
   
 1.  Überprüfen Sie, ob andere Anwendungen oder Dienste Arbeitsspeicher auf dem Server beanspruchen. Rekonfigurieren Sie weniger kritische Anwendungen oder Dienste, damit sie weniger Speicher beanspruchen.  
   
-2.  Starten Sie die Sammlung der Leistungsindikatoren für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Puffer-Manager**, **SQL Server: Speicher-Manager**.  
+2.  Beginnen Sie die Sammlung der Systemmonitorzähler für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Puffer-Manager**, **SQL Server: Speicher-Manager**.  
   
 3.  Überprüfen Sie die folgenden SQL Server-Speicherkonfigurationsparameter:  
   

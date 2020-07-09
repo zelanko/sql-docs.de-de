@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 0af6ff69-d75a-4c39-8da2-9bd0695277c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b6f07d54fbc04d3ddd9ff6d0a25c2f940f0ca54
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f31350a9e8cc3751d79de7b4eefc4416e9291ac5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68103619"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780338"
 ---
 # <a name="mssqlserver_2537"></a>MSSQLSERVER_2537
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |  
+| :-------- | :---- |  
 |Produktname|SQL Server|  
 |Ereignis-ID|2537|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC_RECORD_CHECK_FAILED|  
-|Meldungstext|Tabellenfehler: Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ), Seite P_ID, Zeile ROW_ID. Fehler bei der Datensatzüberprüfung (CHECK_TEXT). Die Werte sind VALUE1 und VALUE2.|  
+|Meldungstext|Tabellenfehler: Objekt-ID „O_ID“, Index-ID „I_ID“, Partitions-ID „PN_ID“, Zuordnungseinheits-ID „A_ID“ (TYPE-Typ), Seite „P_ID“, Zeile „ROW_ID“. Fehler bei der Datensatzüberprüfung (CHECK_TEXT). Die Werte sind VALUE1 und VALUE2.|  
   
 ## <a name="explanation"></a>Erklärung  
 Bei der Zeile ROW_ID (or a column in the row) ist bei dem durch CHECK_TEXT beschriebenen Test bzw. Bedingungsvorgang ein Fehler aufgetreten.  
