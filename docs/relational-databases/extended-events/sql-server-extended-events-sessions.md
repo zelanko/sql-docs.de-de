@@ -1,7 +1,7 @@
 ---
 title: SQL Server Extended Events Sessions
 description: Eine SQL Server-Sitzung für erweiterte Ereignisse wird in dem SQL Server-Prozess erstellt, der die Engine für erweiterte Ereignisse hostet. In diesem Artikel erfahren Sie mehr über Sitzungszustände und Sitzungsinhalte.
-ms.date: 03/14/2017
+ms.date: 05/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cce8dfb0d96059f577adb4e86e6fc5556d9fd90c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fec4a507a8a40cb38bf9b5faf58545aa89a55167
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756847"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sitzung für erweiterte Ereignisse wird in dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess erstellt, der die Engine für erweiterte Ereignisse hostet. Die folgenden Aspekte einer Sitzung für erweiterte Ereignisse bieten grundlegende Informationen zur Extended Events-Infrastruktur und zur allgemeinen Verarbeitung, die stattfindet:  
   
@@ -34,9 +34,9 @@ ms.locfileid: "79487668"
   
 ## <a name="session-states"></a>Sitzungsstatus  
  Im Folgenden werden die verschiedenen Status einer Sitzung für erweiterte Ereignisse veranschaulicht.  
-  
- ![Sitzung für erweiterte Ereignisse – Status](../../relational-databases/extended-events/media/xesessionstate.gif "Sitzung für erweiterte Ereignisse – Status")  
-  
+
+![Sitzung für erweiterte Ereignisse – Status](../../relational-databases/extended-events/media/xesessionstate.png "Sitzung für erweiterte Ereignisse – Status")
+
  In Bezug auf die vorangehende Abbildung müssen Sie beachten, dass sich der Sitzungsstatus ändert, wenn die verschiedenen DDL-Befehle für eine Ereignissitzung ausgegeben werden. Eine Beschreibung dieser Statusänderungen finden Sie in der folgenden Tabelle.  
   
 |Bezeichnung in der Abbildung|DDL-Anweisung|BESCHREIBUNG|  

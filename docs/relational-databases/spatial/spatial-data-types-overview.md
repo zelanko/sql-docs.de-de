@@ -15,15 +15,15 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fb9acb0aa03184f038c2dda9be10b36e6ca32ee
-ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
+ms.openlocfilehash: 7bc2464e8304a46fcbeada30453e2295e4fd2015
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82784675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758821"
 ---
 # <a name="spatial-data-types-overview"></a>Übersicht über räumliche Datentypen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   
 Es gibt zwei Typen von räumlichen Daten. Der **geometry** -Datentyp unterstützt planare bzw. euklidische Daten (flache Erdabbildung). Der **geometry** -Datentyp entspricht der Version 1.1.0. der Simple Features for SQL-Spezifikation des Open Geospatial Consortium (OGC) und ist auch mit SQL MM (ISO-Standard) kompatibel.
 Zudem unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den **geography** -Datentyp, der ellipsenförmige Daten speichert (runde Erdabbildung), z.B. GPS-Breiten- und -Längenkoordinaten.

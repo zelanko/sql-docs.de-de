@@ -16,16 +16,16 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffa5587415d9f4bc689a37a5ba49be87eaf14716
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d58b32c64ff8114b21f815617ce2daa8b54fc242
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487588"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756806"
 ---
 # <a name="use-the-system_health-session"></a>Verwenden der system_health-Sitzung
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Bei der system_health-Sitzung handelt es sich um eine standardmäßig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthaltene Sitzung für erweiterte Ereignisse. Diese Sitzung wird automatisch beim Start von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gestartet und ohne merkliche Auswirkungen auf die Leistung ausgeführt. In der Sitzung werden Systemdaten erfasst, mit deren Hilfe Sie Leistungsprobleme in [!INCLUDE[ssDE](../../includes/ssde-md.md)]beheben können. 
 

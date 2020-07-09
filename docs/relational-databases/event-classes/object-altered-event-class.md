@@ -12,15 +12,15 @@ ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8cdf780816d16450ce9487a80c282fa1a0820631
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9757556741c36f5644d3d58a44744270a02b9c82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756018"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered-Ereignisklasse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Durch die Object:Altered-Ereignisklasse wird angegeben, dass Objekt geändert wurde, beispielsweise durch eine ALTER INDEX-, ALTER TABLE- oder ALTER DATABASE-Anweisung. Dieses Ereignisklasse kann dazu verwendet werden, festzustellen, ob Objekte beispielsweise durch ODBC-Anwendungen geändert wurden, durch die häufig temporäre gespeicherte Prozeduren erstellt werden.  
   
  Die Object:Altered-Ereignisklasse tritt immer als zwei Ereignisse auf. Das erste Ereignis gibt die Phase des Begins an. Das zweite Ereignis gibt die Rollback- oder Commitphase an.  

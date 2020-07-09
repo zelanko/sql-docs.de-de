@@ -12,15 +12,15 @@ ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6dff2998686c73693f73ecbcad0b9b7f360ca86
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ef18eed87b0a01c16ad71285ff8adf1386383172
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753321"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics-Ereignisklasse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die Performance Statistics-Ereignisklasse kann zur Leistungsüberwachung der ausgeführten Abfragen, gespeicherten Prozeduren und Trigger verwendet werden. Jede der sechs Ereignisunterklassen zeigt ein Ereignis für die Lebensdauer von Abfragen, gespeicherten Prozeduren und Triggern innerhalb des Systems an. Mithilfe einer Kombination aus diesen Ereignisunterklassen und den zugehörigen dynamischen Verwaltungssichten sys.dm_exec_query_stats, sys.dm_exec_procedure_stats und sys.dm_exec_trigger_stats können Sie den Leistungsverlauf einer bestimmten Abfrage, gespeicherten Prozedur oder eines Triggers nachvollziehen.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Datenspalten der Performance Statistics-Ereignisklasse  

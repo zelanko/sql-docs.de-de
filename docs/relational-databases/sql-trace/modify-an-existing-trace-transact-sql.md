@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2d1f0eeb0591bd4a51b79b8e83fbbd8d6023535f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 278dd48749168495c2678e58e25ae732060b12fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73632997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750994"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Ändern einer vorhandenen Ablaufverfolgung (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie gespeicherte Prozeduren verwendet werden können, um eine vorhandene Ablaufverfolgung zu ändern.  
   
 ### <a name="to-modify-an-existing-trace"></a>So ändern Sie eine vorhandene Ablaufverfolgung  

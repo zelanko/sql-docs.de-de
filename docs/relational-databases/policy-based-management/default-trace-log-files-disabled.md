@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c27761e6-75ed-4ee4-a236-0cbc42e500a1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1407f55e2edab15768fb10288b78dd59ff93ddd1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e8335f3fa61cc446db748a4913d6eaa22388659
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940496"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749459"
 ---
 # <a name="default-trace-log-files-disabled"></a>Protokolldateien für Standardablaufverfolgung deaktiviert
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Diese Regel überprüft den Wert der Option Standardablaufverfolgung aktiviert der gespeicherten Prozedur sp_configure, um festzustellen, ob die Standardablaufverfolgung auf ON (1) oder OFF (0) festgelegt ist. Wenn diese Option aktiviert ist, stellt die Standardablaufverfolgung Informationen über Konfigurations- und DDL-Änderungen an [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]bereit. In manchen Fällen sind diese Informationen für Kunden sowie den Kundendienst- und Support von [!INCLUDE[msCoName](../../includes/msconame-md.md)] bei der Behebung von Fehlern bei [!INCLUDE[ssDE](../../includes/ssde-md.md)]hilfreich.  
   
 ## <a name="best-practices-recommendations"></a>Empfehlungen zu Best Practices  

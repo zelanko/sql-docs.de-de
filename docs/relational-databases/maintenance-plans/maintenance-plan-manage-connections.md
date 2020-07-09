@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a388792d24ce033dce0ffb4c6f0120a6ea341ae0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 495ec4a69d960cfec8534b37490b10fe66c5934d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115962"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754539"
 ---
 # <a name="maintenance-plan-manage-connections"></a>Wartungsplan (Verbindungen verwalten)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Geben Sie mithilfe des Dialogfelds **Verbindungen verwalten** die Eigenschaften der von Wartungsplänen verwendeten Verbindungen an. Beim Erstellen eines Wartungsplans wird eine lokale Verbindung zu dem Server erstellt, auf dem Sie den Plan erstellt haben. Erstellen Sie mithilfe dieser Verbindung Tasks, von denen Vorgänge für diese lokale Verbindung ausgeführt werden. Gegebenenfalls können Sie mithilfe des Dialogfelds **Verbindungen verwalten** auch Verbindungen hinzufügen. Beim Konfigurieren werden zusätzlich hinzugefügte Verbindungen im Feld mit den Verbindungen für die jeweiligen Tasks angezeigt.  
   
 ## <a name="options"></a>Tastatur  

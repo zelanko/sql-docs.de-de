@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f67b291da8de3dcb0ec84891ac69789d132b420b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49d0d65ae6f8eed112847b471620ba8ccb3c825d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101226"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759549"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (geometry-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Gibt eine Meldung zurück, die Informationen zur Identifizierung von Problemen mit einem räumlichen Objekt enthält, das nicht gültig ist. Wenn das Objekt nicht gültig ist, wird nur der erste Fehler zurückgegeben. Wenn das Objekt gültig ist, wird der Wert 24400 zurückgegeben.
   

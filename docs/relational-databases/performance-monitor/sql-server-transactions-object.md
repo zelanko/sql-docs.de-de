@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 80c62c0048f40ba945d3204c414180be9f8e0d7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 635bb13a1d6e44f5fc8f694cb2618a19c08831f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758953"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transaktionen-Objekt
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Das **Transaktionen** -Objekt in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Leistungsindikatoren zum Überwachen der Anzahl aktiver Transaktionen in einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]und der Auswirkungen solcher Transaktionen auf Ressourcen wie dem Momentaufnahmeisolations-Zeilenversionsspeicher in **tempdb**. Transaktionen sind logische Arbeitseinheiten - eine Reihe von Vorgängen, die entweder alle erfolgreich ausgeführt oder aber komplett aus einer Datenbank gelöscht werden müssen, damit die logische Integrität der Daten beibehalten werden kann. Jede Veränderung an Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken wird in Transaktionen vorgenommen.  
   
  Wenn für eine Datenbank die Möglichkeit der Momentaufnahmeisolationsstufe gegeben ist, muss von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Datensatz der Änderungen beibehalten werden, die an jeder Zeile in einer Datenbank vorgenommen wurden. Bei jeder Änderung an einer Zeile wird eine Kopie der Zeile im Zustand vor der Änderung in einem Zeilenversionsspeicher in **tempdb**aufgezeichnet. Viele der Leistungsindikatoren im **Transaction** -Objekt können zum Überwachen der Größe und Wachstumsrate des Zeilenversionsspeichers in **tempdb**verwendet werden.  

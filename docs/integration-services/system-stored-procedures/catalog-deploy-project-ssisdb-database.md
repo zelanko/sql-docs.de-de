@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f85e27484378d1074564a320aea7f8ed1766e1ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f9771910ecfa69e6fa0cfb81a5d40ee9af4c1b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72251327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749572"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stellt ein Projekt in einem Ordner im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Katalog bereit oder aktualisiert ein vorhandenes Projekt, das zuvor bereitgestellt wurde.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "72251327"
   
 ```sql  
 catalog.deploy_project [@folder_name =] folder_name   
-      , [@project_name =] project_name   
-      , [@project_stream =] projectstream   
-    [ , [@operation_id ] = operation_id OUTPUT ]   
+      , [ @project_name = ] project_name   
+      , [ @project_stream = ] projectstream   
+    [ , [ @operation_id = ] operation_id OUTPUT ]   
 ```  
   
 ## <a name="arguments"></a>Argumente  

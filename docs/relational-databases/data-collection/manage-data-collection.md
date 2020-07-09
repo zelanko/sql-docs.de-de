@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53869016813d3950f35fa5b926cbba295df63237
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e63c3bd8f95e8edf20b51f22ee828636f7160b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68133610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758131"
 ---
 # <a name="manage-data-collection"></a>Verwalten von Datensammlungen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
  Verwenden Sie gespeicherte Prozeduren und Funktionen von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] , um unterschiedliche Aspekte der Datensammlung zu verwalten, beispielsweise das Aktivieren oder Deaktivieren der Datensammlung, das Ändern einer Sammlungssatzkonfiguration oder das Anzeigen von Daten im Verwaltungs-Data Warehouse.  
   
 ## <a name="manage-data-collection-using-ssms"></a>Verwalten der Datensammlung mithilfe von SSMS  

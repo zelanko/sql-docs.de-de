@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 92e12a2991d03c125e3247d1dd681b0a5754e2f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9baaecd792c2dae1d23a47fa6ab7a72933412a55
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760945"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt die Eigenschaften einer PRIMARY KEY-, UNIQUE-, FOREIGN KEY- oder CHECK-Einschränkung bzw. eine DEFAULT-Definition an, die einer Tabelle mit der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)-Anweisung hinzugefügt wurde.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "73981993"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 [ CONSTRAINT constraint_name ]   
 {   
     { PRIMARY KEY | UNIQUE }   

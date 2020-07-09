@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a9c34408dd1f7731579830802fd8ac62d1f0bae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759036"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Wiederherstellen einer Datenbank zu einer Datenbank-Momentaufnahme
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Wenn Daten in einer Onlinedatenbank beschädigt werden, empfiehlt es sich gelegentlich, die Datenbank aus einer Datenbank-Momentaufnahme eines Zeitpunkts vor der Beschädigung wiederherzustellen, anstatt die Datenbank aus einer Sicherungskopie wiederherzustellen. Durch das Wiederherstellen einer Datenbank kann beispielsweise ein kürzlich zurückliegender, schwerwiegender Benutzerfehler (z. B. eine gelöschte Tabelle) rückgängig gemacht werden. Alle nach Erstellung der Momentaufnahme vorgenommenen Änderungen gehen jedoch verloren.  
   
 -   **Vorbereitungen:**  

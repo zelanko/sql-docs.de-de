@@ -14,15 +14,15 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1475b0b2145d40f22760edb5a23e040cb9fef58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757595"
 ---
 # <a name="dml-triggers"></a>DML-Trigger
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Bei DML-Triggern handelt es sich um einen bestimmten Typ einer gespeicherten Prozedur, die automatisch wirksam wird, sobald ein DML-Ereignis (Data Manipulation Language, Datenbearbeitungssprache) ausgeführt wird, das sich auf die im Trigger definierte Tabelle oder Sicht auswirkt. DML-Ereignisse schließen die Anweisungen INSERT, UPDATE oder DELETE ein. DML-Trigger können zum Erzwingen von Geschäftsregeln und Datenintegrität, Abfragen anderer Tabellen und Einschließen komplexer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden. Der Trigger und die auslösende Anweisung werden wie eine einzige Transaktion behandelt, für die aus dem Trigger heraus ein Rollback ausgeführt werden kann. Tritt ein schwerer Fehler auf (z B. bei unzureichendem Speicherplatz), wird für die gesamte Transaktion automatisch ein Rollback ausgeführt.  
   
 ## <a name="dml-trigger-benefits"></a>Vorteile von DML-Triggern  

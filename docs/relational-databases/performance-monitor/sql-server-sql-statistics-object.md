@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 42dd497f32dc322a7b7808beca0779292198e5e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995660"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758948"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, SQL-Statistik-Objekt
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Das **SQLServer:SQL-Statistik** -Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Indikatoren bereit, mit denen Sie die Kompilierung und die Art der Anforderungen, die an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gesendet werden, überwachen können. Das Überwachen der Anzahl der Kompilierungen und Neukompilierungen von Abfragen sowie der Anzahl der Batches, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erhalten hat, gibt Ihnen einen Hinweis auf die Verarbeitungsgeschwindigkeit von Benutzerabfragen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie auf die Effektivität, mit der der Abfrageoptimierer die Abfragen verarbeitet.  
   
  Das Kompilieren ist ein wesentlicher Bestandteil der Verarbeitungszeit einer Abfrage. Um Kompilierungskosten zu sparen, speichert [!INCLUDE[ssDE](../../includes/ssde-md.md)] den kompilierten Abfrageplan in einem Abfragecache. Das Ziel des Caches liegt darin, die Kompilierung durch Speichern der kompilierten Abfragen zur späteren Wiederverwendung zu reduzieren, wodurch vermieden wird, dass die Abfragen bei einer späteren Ausführung erneut kompiliert werden müssen. Jede eindeutige Abfrage muss jedoch mindestens einmal kompiliert werden. Das Neukompilieren von Abfragen kann durch die folgenden Faktoren ausgelöst werden:  

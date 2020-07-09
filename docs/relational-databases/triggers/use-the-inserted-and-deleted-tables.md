@@ -18,15 +18,15 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 242ae654ede8a827b89e630369965faee4505840
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 7a6f374a7ee13da5dc2da181327045bd9856ac46
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751542"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Verwenden der Tabellen inserted und deleted
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   DML-Triggeranweisungen verwenden zwei besondere Tabellen: die inserted-Tabelle und die deleted-Tabelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwendet diese Tabellen automatisch. Sie können diese temporären, speicherresidenten Tabellen verwenden, um die Auswirkungen bestimmter Datenänderungen zu testen und Bedingungen für DML-Triggeraktionen festzulegen. Das direkte Ändern der Daten in den Tabellen bzw. das Ausführen von Data Definition Language-(DDL-)Vorgängen für die Tabellen, beispielsweise CREATE INDEX, ist nicht möglich.  
   
  In DML-Triggern werden die Tabellen inserted und deleted hauptsächlich für folgende Vorgänge verwendet:  

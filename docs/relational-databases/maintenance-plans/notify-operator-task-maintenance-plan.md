@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a8b8e698dc6799847ddd462904da2eadeae14279
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd22da4ecbbef25ac02fb5c937307f4ccc1919a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755730"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Task 'Operator benachrichtigen' (Wartungsplan)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Mithilfe des Dialogfelds **Task 'Operator benachrichtigen'** können Sie dem Wartungsplan eine automatische Benachrichtigung hinzufügen. Um diesen Task zu verwenden, müssen Datenbank-E-Mails aktiviert und ordnungsgemäß mit msdb als Mailhostdatenbank konfiguriert sein. Außerdem muss der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentoperator über eine gültige E-Mail-Adresse verfügen.  
   
  Dieser Task verwendet die gespeicherte Prozedur sp_notify_operator.  

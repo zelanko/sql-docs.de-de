@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 83eacf49b6653f7faba016c9f07a7adb88a09cb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: caba17d326c15420762a0224bc0d2d1eb3a0ea53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749387"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Dialogfeld 'Facet-Eigenschaften', Seite 'Allgemein'
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Mithilfe dieses Dialogfelds können Sie die Eigenschaften eines Facets der richtlinienbasierten Verwaltung anzeigen. Jedes Facet kann auf ein oder mehrere Zieltypen angewendet werden, z. B.: auf Server, Datenbank oder Tabelle. Mit dieser Seite können Sie anzeigen, welche Zieltypen sich auf dieses Facet beziehen. Die Eigenschaften eines Facets werden bei der Erstellung des Facets definiert und können mit dieser Seite nicht geändert werden.  
   
 ## <a name="options"></a>Tastatur  

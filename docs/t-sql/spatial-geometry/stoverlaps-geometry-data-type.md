@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 392b39ae14819aa645e4714189f17e6d4604bf44
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5de112961599421eb7ce2d85d8152f1aa1339e0c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762252"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (geometry-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Gibt 1 zurück, wenn eine **geometry** -Instanz eine andere **geometry** -Instanz überlappt. Andernfalls wird 0 zurückgegeben.
   

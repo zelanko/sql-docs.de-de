@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 639d661dd9a7196119bbb34f11f0ed5a9161a978
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b2239718cae70fc5df05e65e7d310e86efe65efc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760553"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, Datenbankspiegelung (Objekt)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Das **SQLServer:Datenbankspiegelung** -Leistungsobjekt enthält Leistungsindikatoren, die Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankspiegelung melden. In der nachfolgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
   
 |Name|BESCHREIBUNG|  
