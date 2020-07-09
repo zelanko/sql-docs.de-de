@@ -1,7 +1,7 @@
 ---
 title: Herstellen einer Verbindung mit einer Oracle-Datenquelle (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c114a5e17c95d21d999819e73dcfd53f84179802
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285434"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773555"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Verbinden mit einer Oracle-Datenquelle (SQL Server-Import/Export-Assistent)
 
@@ -36,6 +36,7 @@ Nachdem Sie **.NET Framework-Datenanbieter für Oracle** auf der Seite **Datenqu
 |---|---|
 |Servername|**Data Source**|
 |Authentifizierungsinformationen (Anmeldung)|**Benutzer-ID** und **Kennwort**, oder **Integrierte Sicherheit**|
+|||
 
 Sie müssen die Verbindungszeichenfolge nicht im Feld **ConnectionString** in der Liste eintragen. Nachdem Sie einzelne Werte für den Oracle-Servernamen (**Datenquelle**) und die Anmeldedaten eingegeben haben, assembliert der Assistent die Verbindungszeichenfolge aus den einzelnen Eigenschaften und deren Werten. 
 
@@ -70,9 +71,9 @@ Die Benutzer-ID und das Kennwort für die Verbindung.
 ### <a name="connection-string-format"></a>Format der Verbindungszeichenfolge
 Im Folgenden finden Sie das Format einer typischen Verbindungszeichenfolge.
 
-    ```
-    Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
-    ```
+```console
+Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+```
 
 ### <a name="enter-the-connection-string"></a>Eingeben der Verbindungszeichenfolge
 Geben Sie die Verbindungszeichenfolge in das Feld **ConnectionString** ein, oder geben Sie den DSN-Namen in das Feld **Dsn** auf den Seiten **Datenquelle auswählen** oder **Ziel auswählen** ein. Nach der Eingabe der Verbindungszeichenfolge analysiert der Assistent die Zeichenfolge und zeigt die einzelnen Eigenschaften und deren Werte in der Liste an.

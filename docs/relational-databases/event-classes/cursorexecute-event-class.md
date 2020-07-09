@@ -12,15 +12,15 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfcbafc4e178d01dd35ddeebfcc83ffab4cf1edf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db1b52180a644c4350b66833f559845ab0f9c181
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762950"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute-Ereignisklasse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die **CursorExecute** -Ereignisklasse beschreibt Cursorausführungsereignisse, die in API-Cursorn (Application Programming Interface, Schnittstelle für Anwendungsprogrammierung) auftreten. Cursorausführungsereignisse treten auf, wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] mithilfe des Ausführungsplans, der von einem Cursorvorbereitungsereignis erstellt wurde, einen Cursor erstellt und befüllt.  
   
  Schließen Sie die **CursorExecute** -Ereignisklasse in Ablaufverfolgungen ein, von denen die Leistung von Cursorn aufgezeichnet wird. Wenn die **CursorExecute** -Ereignisklasse in eine Ablaufverfolgung eingeschlossen wird, hängt der entstehende Verwaltungsaufwand davon ab, wie häufig Cursor während der Ablaufverfolgung in Bezug auf die Datenbank verwendet werden. Wenn Cursor sehr häufig verwendet werden, kann die Ablaufverfolgung die Leistung erheblich beeinträchtigen.  

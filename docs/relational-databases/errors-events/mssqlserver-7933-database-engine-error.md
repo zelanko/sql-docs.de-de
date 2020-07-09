@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b7cc3e42abfdb31da50b7db329f9c61c2a195111
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 17bd7cfa51701de32398345cb6221b0ad21da0eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773560"
 ---
 # <a name="mssqlserver_7933"></a>MSSQLSERVER_7933
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |  
+| :-------- | :---- |  
 |Produktname|SQL Server|  
 |Ereignis-ID|7933|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|Meldungstext|Tabellenfehler: Eine FileStream-Verzeichnis-ID F_ID für eine Partition ist vorhanden, die entsprechende Partition ist jedoch nicht in der Datenbank enthalten.|  
+|Meldungstext|Tabellenfehler: Eine Filestream-Verzeichnis-ID F_ID für eine Partition ist vorhanden, die entsprechende Partition ist jedoch nicht in der Datenbank enthalten.|  
   
 ## <a name="explanation"></a>Erklärung  
 Während DBCC CHECKDB wurde ein Rowsetverzeichnis im FILESTREAM-Datenspeicher gefunden; die entsprechende Partition ist jedoch in der Datenbank nicht vorhanden.  

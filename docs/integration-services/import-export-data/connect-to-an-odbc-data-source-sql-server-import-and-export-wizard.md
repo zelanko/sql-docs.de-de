@@ -2,7 +2,7 @@
 title: Herstellen einer Verbindung mit einer ODBC-Datenquelle (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 description: In diesem Artikel erfahren Sie, wie Sie für die Verwendung mit dem SQL Server-Import/Export-Assistent einen ODBC-DSN konfigurieren oder eine ODBC-Verbindungszeichenfolge erstellen.
 ms.custom: ''
-ms.date: 12/31/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: integration-services
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73259121c31fcfc74352bf47938fcf28b294b894
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75608029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773581"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer ODBC-Datenquelle (SQL Server-Import/Export-Assistent)
 
@@ -93,9 +93,9 @@ Wenn Sie die Verbindungsinformationen über eine Verbindungszeichenfolge bereits
 
 In diesem Beispiel wir die folgende Verbindungszeichenfolge verwendet, die eine Verbindung mit Microsoft SQL Server herstellt. Das hier verwendete Datenbankbeispiel ist **WideWorldImporters**, und es wird auf dem lokalen Computer eine Verbindung zu SQL Server hergestellt.
 
-    ```
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 Geben Sie die Verbindungszeichenfolge in das **ConnectionString**-Feld auf den Seiten **Datenquelle auswählen** oder **Ziel auswählen** ein. Nach der Eingabe der Verbindungszeichenfolge analysiert der Assistent die Zeichenfolge und zeigt die einzelnen Eigenschaften und deren Werte in der Liste an.
 
@@ -140,7 +140,7 @@ Sie können das Applet **ODBC-Datenquellen-Administrator** in den Einstellungen 
 
 10. Öffnen Sie die gespeicherte Datei im Editor oder einem anderen Text-Editor. Im Folgenden werden die Inhalte des SQL Server-Beispiels angezeigt.
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -155,9 +155,9 @@ Sie können das Applet **ODBC-Datenquellen-Administrator** in den Einstellungen 
 
     Nachdem Sie die benötigten Werte aus der Beispiel-DSN-Datei assembliert haben, verfügen Sie über die folgende Verbindungszeichenfolge.
     
-        ```
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     Sie benötigen nicht alle Einstellungen in einem DSN, der vom ODBC-Datenquellen-Administrator erstellt wurde, um eine funktionierende Verbindungszeichenfolge zu erstellen.  
     -   Sie müssen stets den ODBC-Treiber angeben.

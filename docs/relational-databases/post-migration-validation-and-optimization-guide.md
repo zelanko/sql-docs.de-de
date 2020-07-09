@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 82b9b9b02931aee0a7ea5411cb367b394c1d1d74
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774065"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Handbuch für die Überprüfung und Optimierung nach der Migration
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 Die Schritte in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die nach der der Migration ausgeführt werden, sind sehr wichtig für das Abgleichen der Genauigkeit und der Vollständigkeit der Daten sowie für das Aufdecken von Leistungsproblemen mit der Arbeitsauslastung.
 

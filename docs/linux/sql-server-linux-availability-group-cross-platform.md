@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 651467463e0563c9da00e23115ffb7bc4f151d23
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2eec1f7f24f8465fb5d2bd4406de4c11aef8a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479681"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773588"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Konfigurieren einer SQL Server Always On-Verfügbarkeitsgruppe unter Windows und Linux (plattformübergreifend)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/applies-to-version/sqlserver2017.md)]
 
 In diesem Artikel werden die Schritte zum Erstellen einer Always On-Verfügbarkeitsgruppe (VG) mit einem Replikat auf einem Windows-Server und dem anderen Replikat auf einem Linux-Server erläutert. Diese Konfiguration ist plattformübergreifend, da die Replikate unter unterschiedlichen Betriebssystemen ausgeführt werden. Verwenden Sie diese Konfiguration für die Migration von einer Plattform zur anderen oder zur Notfallwiederherstellung. Diese Konfiguration unterstützt keine Hochverfügbarkeit, da keine Clusterlösung vorhanden ist, um eine plattformübergreifende Konfiguration zu verwalten. 
 

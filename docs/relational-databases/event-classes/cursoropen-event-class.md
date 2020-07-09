@@ -12,15 +12,15 @@ ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45c72a45776abb6a6f3215560d2b1aafd974d720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e7851febee7a47c57a5e376cfe5b92ed2999927
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093702"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773533"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen-Ereignisklasse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die **CursorOpen** -Ereignisklasse beschreibt cursoröffnende Ereignisse, die in API-Cursors (Application Programming Interface, Anwendungsprogrammierschnittstelle) auftreten. CursorOpen-Ereignisse treten auf, wenn [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die SQL-Anweisung so definiert, dass sie dem Cursor und den Cursoroptionen zugeordnet wird und anschließend den Cursor füllt.  
   
  Schließen Sie die **CursorOpen** -Ereignisklasse in Ablaufverfolgungen ein, die die Leistung von Cursorn aufzeichnen. Wenn die **CursorOpen** -Ereignisklasse in eine Ablaufverfolgung eingeschlossen wird, hängt der Aufwand davon ab, wie oft Cursor für die Datenbank während der Ablaufverfolgung verwendet werden. Wenn Cursor sehr häufig verwendet werden, kann die Ablaufverfolgung die Leistung erheblich beeinträchtigen.  

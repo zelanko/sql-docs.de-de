@@ -12,15 +12,15 @@ ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86d0ae46f4b75caa8bf5967d8936fe8cb815c04f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86ce502c1f57fcef4aa4e4ede5bfb4ef025dddae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762916"
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog-Ereignisklasse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Verwenden Sie die TransactionLog-Ereignisklasse, um Aktivitäten in den Transaktionsprotokollen in einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]zu überwachen.  
   
 ## <a name="transactionlog-event-class-data-columns"></a>Datenspalten der TransactionLog-Ereignisklasse  

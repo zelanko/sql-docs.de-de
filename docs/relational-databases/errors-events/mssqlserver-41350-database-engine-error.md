@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 45e47831-9cbc-406d-9e23-5f1f8569b304
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5c981a4a2bd74fe7cfa374310c4bbe240b4846a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d28442aa32fcccef08a7c9d145bd4c0e910abc7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123180"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765328"
 ---
 # <a name="mssqlserver_41350"></a>MSSQLSERVER_41350
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |  
+| :-------- | :---- |  
 |Produktname|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Ereignis-ID|41350|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|HK_CREATE_TABLE_WITH_ENCRYPTION|  
-|Meldungstext|Warnung: Eine speicheroptimierte Tabelle mit SCHEMA_AND_DATA-Dauerhaftigkeit wurde in einer Datenbank mit aktivierter Verschlüsselung erstellt. Die Daten in der speicheroptimierten Tabelle werden nicht verschlüsselt.|  
+|Meldungstext|Warnung: In einer Datenbank, für die die Verschlüsselung aktiviert ist, wurde eine speicheroptimierte Tabelle mit SCHEMA_AND_DATA-Dauerhaftigkeit erstellt. Die Daten in der speicheroptimierten Tabelle werden nicht verschlüsselt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

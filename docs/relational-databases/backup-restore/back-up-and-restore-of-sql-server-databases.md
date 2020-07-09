@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bea2f639677de4869b537d3fb6cfbd1faa271134
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: a39bffb27177281b5e5c89330bb605ce7fd90acf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771727"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Dieser Artikel erläutert die Vorteile der Sicherung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken und grundlegende Begriffe zu Sicherung und Wiederherstellung. Darüber hinaus bietet der Artikel eine Einführung in Sicherungs- und Wiederherstellungsstrategien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie Sicherheitsüberlegungen zu Sicherungen und Wiederherstellungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > In diesem Artikel werden SQL Server-Sicherungen vorgestellt. Die spezifischen Schritte zum Sichern von SQL Server-Datenbanken finden Sie unter [Erstellen von Sicherungen](#creating-backups).

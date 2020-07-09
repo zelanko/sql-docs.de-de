@@ -15,16 +15,16 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 089cc2fd9a2131ab18fea01262f9bc0d476355e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72289321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773145"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>Analysieren eines tatsächlichen Ausführungsplans
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Thema wird das Analysieren tatsächlicher grafischer Ausführungspläne mithilfe des Plananalysefeatures von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] beschrieben. Dieses Feature ist ab [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Version 17.4, verfügbar. Wir empfehlen generell, [die neueste Version von SSMS zu installieren](../../ssms/download-sql-server-management-studio-ssms.md).
 

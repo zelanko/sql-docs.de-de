@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: f656bf46-e5be-4c7b-9ea4-0f2eee7441fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3adcba99280331fd604cf71544d85a87f996109
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6dcca3cbe67a6cdfba4ffd24418fb5ac0fe23cab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087554"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767906"
 ---
 # <a name="mssqlserver_7934"></a>MSSQLSERVER_7934
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |  
+| :-------- | :---- |  
 |Produktname|SQL Server|  
 |Ereignis-ID|7934|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|Meldungstext|Tabellenfehler: Die Filestream-Verzeichnis-ID F_ID für Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID wurde nicht gefunden.|  
+|Meldungstext|Tabellenfehler: Die Filestream-Verzeichnis-ID „F_ID“ für Objekt-ID „O_ID“, Index-ID „I_ID“, und Partitions-ID „PN_ID“ wurde nicht gefunden.|  
   
 ## <a name="explanation"></a>Erklärung  
 Während DBCC CHECKDB wurde eine Partition gefunden; das entsprechende FILESTREAM-Rowsetverzeichnis im FILESTREAM-Datenspeicher wurde nicht gefunden.  
