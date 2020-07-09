@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ac5510320783c35c83f84118e9679da4fd351415
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 86014f1a4c7ee4f9c002df67d2f739124dc70e2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785080"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Einige Typen von richtlinienbasierten Verwaltungsrichtlinien können Trigger erstellen, um die zukünftige Einhaltung der Richtlinie zu erzwingen. In dieser Lektion erstellen Sie eine Richtlinie, die einen Benennungsstandard für Tabellen erzwingt. Anschließend testen Sie die Richtlinie, indem Sie versuchen, eine Tabelle zu erstellen, die gegen die Richtlinie verstößt.  
 
 

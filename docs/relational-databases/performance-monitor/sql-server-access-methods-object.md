@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 296cdb3433ff0e40ea73987ef5a53b985a550f1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787409"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Zugriffsmethoden-Objekt
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Das **Zugriffsmethoden** -Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Leistungsindikatoren zum Überwachen des Zugriffs auf die logischen Daten in der Datenbank bereit. Der physische Zugriff auf die Datenbankseiten auf dem Datenträger wird mithilfe der **Puffer-Manager** -Leistungsindikatoren überwacht. Durch die Überwachung der Methoden, die für den Zugriff auf in der Datenbank gespeicherte Daten verwendet werden, können Sie leichter bestimmen, ob die Abfrageleistung verbessert werden kann, indem Sie Indizes hinzufügen oder ändern, Partitionen hinzufügen oder verschieben, Dateien oder Dateigruppen hinzufügen, Indizes defragmentieren oder Abfragen neu schreiben. Die **Zugriffsmethoden** -Leistungsindikatoren können auch zum Überwachen des Umfangs der Daten, Indizes und des freien Speicherplatzes in der Datenbank verwendet werden und dadurch einen Hinweis auf das Datenvolumen und die Fragmentierung der einzelnen Serverinstanzen geben. Eine zu starke Fragmentierung kann die Leistung beeinträchtigen.  
   
  Einzelheiten über Datenmengen, Fragmentierung und Auslastung finden Sie in den folgenden dynamischen Verwaltungssichten:  

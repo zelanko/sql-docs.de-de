@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: abbd4cd516985dcebd28a5fd2fa28e9d83a413b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ee30e1ce318276d9cf5bd7af3d13e291bfa2ea06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907779"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781666"
 ---
 # <a name="monitor-data-tier-applications"></a>Überwachen von Datenebenenanwendungen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Eine Datenebenenanwendung (DAC) kann vom **Hilfsprogramm-Explorer** und **Objekt-Explorer** zusammen mit Systemsichten und -tabellen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) überwacht werden. Zusätzlich können alle Objekte der in der DAC enthaltenen Datenbank mithilfe standardmäßiger Datenbank- und [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Überwachungsverfahren überwacht werden.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  

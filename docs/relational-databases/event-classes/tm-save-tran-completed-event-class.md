@@ -12,15 +12,15 @@ ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44528a58b1ef57a2fd54958d68e4c6ac7089e8d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d42d182b1026e72ffe4a4ab17722eaf49a50d657
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790827"
 ---
 # <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed-Ereignisklasse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die TM: Save Tran Completed-Ereignisklasse zeigt an, dass eine SAVE TRANSACTION-Anforderung abgeschlossen wurde. Die Anforderung wurde vom Client über die Schnittstelle zur Transaktionsverwaltung gesendet.  
   
 ## <a name="tm-save-tran-completed-event-class-data-columns"></a>TM: Save Tran Completed (Ereignisklassen-Datenspalten)  

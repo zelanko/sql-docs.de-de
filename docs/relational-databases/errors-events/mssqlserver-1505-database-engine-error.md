@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b581fd45021820039b09edc69151ebea34a913e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e30483860b6bdd29f485d90ef1145150910e0e31
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780979"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |  
+| :-------- | :---- |  
 |Produktname|SQL Server|  
 |Ereignis-ID|1505|  
 |Ereignisquelle|MSSQLSERVER|  
@@ -59,7 +59,7 @@ Ziehen Sie die folgenden Lösungen in Betracht:
   
 -   Wählen Sie die als NOT NULL definierten Spalten aus, wenn Sie die Spalten für einen eindeutigen Index bzw. eine eindeutige Einschränkung auswählen. Damit können Sie die Möglichkeit eines Verstoßes gegen die Eindeutigkeit vermeiden, wenn die Schlüsselwerte mehrerer Zeilen NULL-Werte enthalten.  
   
--   Wenn die doppelten Werte durch Dateneingabefehler entstanden sind, korrigieren Sie die Daten manuell, und erstellen Sie dann den Index bzw. die Einschränkung. Informationen zum Entfernen von doppelten Zeilen aus einer Tabelle finden Sie im Knowledge Base-Artikel 139444: [Entfernen von doppelten Zeilen aus einer Tabelle in SQL Server](https://support.microsoft.com/kb/139444).  
+-   Wenn die doppelten Werte durch Dateneingabefehler entstanden sind, korrigieren Sie die Daten manuell, und erstellen Sie dann den Index bzw. die Einschränkung. Informationen zum Entfernen doppelter Zeilen in einer Tabelle finden Sie im Wissensdatenbankartikel 139444: [Entfernen von doppelten Zeilen aus einer Tabelle in SQL Server](https://support.microsoft.com/kb/139444)  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  

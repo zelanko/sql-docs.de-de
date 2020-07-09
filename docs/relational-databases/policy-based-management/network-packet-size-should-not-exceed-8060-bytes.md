@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 86db5da1-afe4-4fbb-8bf8-33cedc7e4361
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1b153ab4f5fa1e3443d29c195d6b60004dcab8e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7800bf2c9724cec7ba8100e7268e1760e39d3afe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087052"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785071"
 ---
 # <a name="network-packet-size-should-not-exceed-8060-bytes"></a>Netzwerkpaketgröße darf 8060 Bytes nicht überschreiten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Wenn der für sp_configure 'Netzwerkpaketgröße' angegebene Wert oder die Netzwerkpaketgröße eines angemeldeten Benutzers 8060 Bytes überschreitet, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschiedene Speicherbelegungsvorgänge aus. Dies kann zu einer Zunahme des virtuellen Adressraums führen, der nicht für den Pufferpool reserviert ist.  
   
 ## <a name="best-practices-recommendations"></a>Empfehlungen zu Best Practices  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: eb73d1b82d1a58a756c2ec6287429cee88315fd7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ba69baf585aca6d6dd30c6a0ab0016a76ef6047
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091035"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787468"
 ---
 # <a name="monitor-cpu-usage"></a>Überwachen der CPU-Auslastung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Überwachen Sie eine Instanz von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in regelmäßigen Abständen, um sicherzustellen, dass sich die CPU-Nutzungsraten im Normalbereich bewegen. Eine konstant hohe CPU-Nutzungsrate kann ein Anzeichen dafür sein, dass die CPU aktualisiert werden muss oder weitere Prozessoren hinzugefügt werden müssen. Darüber hinaus kann eine hohe CPU-Nutzungsrate auf eine schlecht angepasste oder entwickelte Anwendung hinweisen. Eine Optimierung der Anwendung kann die CPU-Nutzung senken.  
   
  Um die CPU-Nutzungsrate festzustellen, rufen Sie am besten im Systemmonitor den Leistungsindikator **Prozessor: Prozessorzeit (%)** auf. Dieser Leistungsindikator überwacht die Zeit, die die CPU zur Verarbeitung eines Threads benötigt, der sich nicht im Leerlauf befindet. Ein konstanter Status von 80-90 % kann darauf hinweisen, dass ein CPU-Upgrade notwendig ist oder weitere Prozessoren hinzugefügt werden müssen. Bei Multiprozessorsystemen sollte für jeden Prozessor eine separate Instanz dieses Leistungsindikators überwacht werden. Dieser Wert stellt die Summe der Prozessorzeit für einen bestimmten Prozessor dar. Um den Durchschnitt für alle Prozessoren zu ermitteln, müssen Sie dagegen den Leistungsindikator **System: Gesamtprozessorzeit (%)** aufrufen.  

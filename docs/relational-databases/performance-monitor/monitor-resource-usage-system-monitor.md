@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 02d42e48116e893c6bf7d04c2027762555be06f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f451dcfbe7f3463a1b99445efe52a3b31d02a75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787448"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Überwachen der Ressourcenverwendung (Systemmonitor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Wenn Sie das Microsoft Windows-Serverbetriebssystem ausführen, können Sie das grafische Tool Systemmonitor verwenden, um die Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu messen. Es ist möglich, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte, Leistungsindikatoren und das Verhalten anderer Objekte anzuzeigen, wie z. B. Prozessoren, Arbeitsspeicher, Cache, Threads und Prozesse. Jedes dieser Objekte verfügt über eine zugeordnete Gruppe von Leistungsindikatoren, durch die die Geräteverwendung, Länge von Warteschlangen, Wartezeiten sowie andere Indikatoren für den Durchsatz und die interne Auslastung ermittelt werden können.  
   
 > [!NOTE]  

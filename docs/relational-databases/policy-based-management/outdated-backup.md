@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 307a4ad0-675a-4f97-9a3c-cedd61bdfae5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 929262bc559730b99407415a9b907091a479289f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 06828fc48cffdaba01befd0eb46051e3810883d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087036"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787294"
 ---
 # <a name="outdated-backup"></a>Obsolete Sicherung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Diese Regel überprüft, ob aktuelle Sicherungen einer Datenbank existieren. Die Planung regelmäßiger Sicherungen ist wichtig, um die Datenbanken vor Datenverlust aufgrund vieler verschiedener Fehler zu schützen. Die geeignete Häufigkeit der Datensicherung hängt vom Wiederherstellungsmodell der Datenbank und von den Unternehmensrichtlinien hinsichtlich potenziellen Datenverlusts ab sowie davon, wie oft die Datenbank aktualisiert wird. Wird die Datenbank häufig aktualisiert, steigt die Gefahr des Datenverlusts zwischen den Sicherungsvorgängen stark an.  
   
 ## <a name="best-practices-recommendations"></a>Empfehlungen zu Best Practices  

@@ -10,15 +10,15 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62d3177a3fc8b0b88e3cd65e8675041be3250a3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0124f027ce4b3293afe754acfd5ad19354372cb9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907347"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787536"
 ---
 # <a name="modify-a-partition-function"></a>Ändern einer Partitionsfunktion
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Sie können Tabellen- oder Indexpartitionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ändern, indem Sie mit [!INCLUDE[tsql](../../includes/tsql-md.md)]die angegebene Partitionsanzahl in Einerschritten in der Partitionsfunktion der partitionierten Tabelle bzw. des Indexes hinzufügen oder abziehen. Beim Hinzufügen einer Partition "teilen" Sie eine vorhandene Partition "auf" und definieren die Partitionsbegrenzungen erneut. Wenn Sie eine Partition löschen, "führen" Sie die Begrenzungen von zwei Partitionen "zusammen". Diese Aktion füllt eine Partition neu und belässt die andere Partition ohne Zuordnung.  
   
 > [!CAUTION]  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 1525449c-ea7d-4222-b294-1ba1fe99c9ac
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 60168c1622ebe7660bb10d421b9d35a6d41523f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1ee155b97823b419623d0296928db5334c71e7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091019"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787479"
 ---
 # <a name="monitor-disk-usage"></a>Überwachen der Datenträgerverwendung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet Aufrufe für die Microsoft Windows-Betriebssystemeingabe/-ausgabe, um Lese- und Schreibvorgänge auf dem Datenträger auszuführen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwaltet wann und wie Datenträger-E/A ausgeführt wird, aber das Windows-Betriebssystem führt die zugrunde liegenden E/A-Vorgänge aus. Das E/A-Teilsystem umfasst Systembus, Datenträgercontrollerkarten, Datenträger, Bandlaufwerke, CD-ROM-Laufwerk und zahlreiche andere E/A-Geräte. Datenträger-E/A ist häufig die Ursache von Engpässen in einem System.  
   
  Die Überwachung der Datenträgeraktivitäten ist auf zwei Bereiche konzentriert:  

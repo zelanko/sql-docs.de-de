@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e50e68eefd4b59aa617742baf8d3264aeed333e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74190116"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781715"
 ---
 # <a name="deploy-a-data-tier-application"></a>Bereitstellen einer Datenebenenanwendung
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Mithilfe eines Assistenten oder eines PowerShell-Skripts können Sie eine Datenebenenanwendung (DAC) von einem DAC-Paket für eine vorhandene Instanz der Datenbank-Engine oder der Azure SQL-Datenbank bereitstellen. 
   
  Beim Bereitstellungsprozess wird eine DAC-Instanz registriert, indem die DAC-Definition in der **msdb**-Systemdatenbank (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) gespeichert und eine Datenbank erstellt wird, die anschließend mit allen in der DAC definierten Datenbankobjekten aufgefüllt wird.  

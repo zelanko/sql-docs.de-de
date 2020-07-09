@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 478641bed0931fc78db3c7df166b860374034f90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1bbd8bbac55c3cf9631f37702504b72bed3d473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983259"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784504"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt an, ob eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung Element der angegebenen Serverrolle ist.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "73983259"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
   
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
@@ -86,7 +86,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
  Diese Funktion wertet die Rollenmitgliedschaft aus, nicht die zugrunde liegende Berechtigung. Die feste Serverrolle **sysadmin** besitzt z.B. die **CONTROL SERVER**-Berechtigung. Wenn der Benutzer die **CONTROL SERVER**-Berechtigung besitzt, aber nicht Mitglied der Rolle ist, meldet diese Funktion ordnungsgemäß, dass der Benutzer nicht Mitglied der **sysadmin**-Rolle ist, obwohl der Benutzer dieselben Berechtigungen besitzt.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
- Verwenden Sie [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md), um zu ermitteln, ob der aktuelle Benutzer ein Mitglied der angegebenen Windows-Gruppe oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankrolle ist. Zum Bestimmen, ob eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung ein Mitglied einer Datenbankrolle ist, verwenden Sie [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md).  
+ Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]IS_MEMBER &#40;Transact-SQL&#41;[, um zu ermitteln, ob der aktuelle Benutzer ein Mitglied der angegebenen Windows-Gruppe oder der ](../../t-sql/functions/is-member-transact-sql.md)-Datenbankrolle ist. Zum Bestimmen, ob eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung ein Mitglied einer Datenbankrolle ist, verwenden Sie [IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DEFINITION-Berechtigung für die Serverrolle.  

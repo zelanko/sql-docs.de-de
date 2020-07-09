@@ -16,15 +16,15 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 043e1e570efc42988dcf6b0fb66098cbcd7fc9ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0a039d898915c6e1c2290dfadad630d1907acbc9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286804"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787518"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Tabellen- und Indexpartitionierung. Die Daten partitionierter Tabellen und Indizes werden in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt sein können. Die Daten werden horizontal partitioniert, sodass Gruppen von Zeilen einzelnen Partitionen zugeordnet werden. Alle Partitionen eines einzelnen Indexes oder einer Tabelle müssen sich in der gleichen Datenbank befinden. Die Tabelle oder der Index wird als einzelne logische Entität behandelt, wenn Abfragen oder Aktualisierungen für die Daten ausgeführt werden. Vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 waren partitionierte Tabellen und Indizes nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!IMPORTANT]  

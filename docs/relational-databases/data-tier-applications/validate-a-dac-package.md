@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7df5bb3b2ef677e597d12dad8b8d92ddbb22fcba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62ea7a75bc9ed691f282aa0d886f64d006deb94b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781631"
 ---
 # <a name="validate-a-dac-package"></a>Überprüfen eines DAC-Pakets
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Es wird empfohlen, den Inhalt eines DAC-Pakets vor der Bereitstellung in der Produktionsumgebung sowie die Upgradeaktionen vor dem Aktualisieren einer vorhandenen DAC zu überprüfen. Dies gilt insbesondere für die Bereitstellung von Paketen, die nicht im Unternehmen entwickelt wurden.  
   
 1.  **Vorbereitungen:**  [Voraussetzungen](#Prerequisites)  

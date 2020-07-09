@@ -17,15 +17,15 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 445453f6be42c6015fc3b6728eb12ee9a78f0ef6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3240f9cd3e94418572482a5e73950e2b522ec663
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928167"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786883"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Deterministische und nicht deterministische Funktionen
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Deterministische Funktionen geben bei jedem Aufrufen dasselbe Ergebnis zurück, wenn sie mit einem bestimmten Satz von Eingabewerten aufgerufen werden und die Datenbank denselben Status aufweist. Nicht deterministische Funktionen können bei jedem Aufrufen unterschiedliche Ergebnisse zurückgeben, wenn sie mit einem bestimmten Satz von Eingabewerten aufgerufen werden – selbst wenn die Datenbank, auf die zugegriffen wird, immer denselben Status aufweist. Beispielsweise gibt die AVG-Funktion immer dasselbe Ergebnis zurück, sofern die zuvor genannten Bedingungen erfüllt sind. Die GETDATE-Funktion hingegen, die den aktuellen datetime-Wert liefert, gibt immer ein anderes Ergebnis zurück.  
   
  Benutzerdefinierte Funktionen weisen eine Reihe von Eigenschaften auf, mit denen festgelegt wird, ob das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Lage ist, die Ergebnisse der Funktion zu indizieren – entweder durch Indizes für berechnete Spalten, die die Funktion aufrufen, oder durch indizierte Sichten, die auf die Funktion verweisen. Der Determinismus einer Funktion ist eine solche Eigenschaft. Für eine Sicht kann z. B. kein gruppierter Index erstellt werden, falls die Sicht auf nicht deterministische Funktionen verweist. Weitere Informationen zu Eigenschaften von Funktionen, einschließlich Determinismus, finden Sie unter [Benutzerdefinierte Funktionen](../../relational-databases/user-defined-functions/user-defined-functions.md).  

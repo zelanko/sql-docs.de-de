@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 753c7c08164de1583dd8de1aa1720fcad6a98dff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b3d0c8197f275801140bec48ab05dc6bc19324eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787382"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server-Agent, Auftragsschritte-Objekt
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent: **Auftragsschritte** -Leistungsobjekt enthält Leistungsindikatoren, die Informationen zu den Auftragsschritten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents angeben. In der nachfolgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
   
  Die folgende Tabelle enthält die Leistungsindikatoren von **SQLAgent:Auftragsschritte** .  

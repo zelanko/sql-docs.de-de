@@ -20,15 +20,15 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94e1353d8fb3d49a71b98e53f6ec92a6db469e2b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786075"
 ---
 # <a name="track-data-changes-sql-server"></a>Nachverfolgen von Datenänderungen (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] stellt zwei Funktionen bereit, mit denen Änderungen in einer Datenbank nachverfolgt werden: [Change Data Capture](#Capture) und [Änderungsnachverfolgung](#Tracking). Mit diesen Funktionen können Anwendungen die DML-Änderungen (Einfüge-, Aktualisierungs- und Löschvorgänge) ermitteln, die an Benutzertabellen in einer Datenbank vorgenommen wurden. Change Data Capture und die Änderungsnachverfolgung können auf derselben Datenbank aktiviert werden, d. h., es sind keine zusätzlichen Überlegungen erforderlich. Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Change Data Capture und die Änderungsnachverfolgung unterstützen, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Änderungsnachverfolgung wird von [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]unterstützt. Change Data Capture wird nur in SQL Server und in verwalteten Azure SQL-Datenbank-Instanzen unterstützt.
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Vorteile der Verwendung von Change Data Capture oder der Änderungsnachverfolgung  
