@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 4a8bf90f-a083-4c53-84f0-d23c711c8081
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 112ba12a568190967a31789ca6cd69d2056d9e8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60736413f572f997bdad1e10eb1fdf79b612aa48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896762"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893063"
 ---
 # <a name="mssqlserver_2020"></a>MSSQLSERVER_2020
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |  
+| :-------- | :---- |  
 |Produktname|SQL Server|  
 |Ereignis-ID|2020|  
 |Ereignisquelle|MSSQLSERVER|  
@@ -38,7 +38,8 @@ Die Systemfunktion **sys.dm_sql_referenced_entities** meldet jede Abhängigkeit 
 ## <a name="user-action"></a>Benutzeraktion  
 Korrigieren Sie alle in der Meldung vor Fehler 2020 identifizierten Fehler. Im folgenden Codebeispiel wird z. B. die Sicht `Production.ApprovedDocuments` für die Spalten `Title`, `ChangeNumber` und `Status` in der Tabelle `Production.Document` definiert. Die Systemfunktion **sys.dm_sql_referenced_entities** wird für die Objekte und Spalten abgefragt, von denen die `ApprovedDocuments`-Sicht abhängig ist. Da die Sicht nicht mit der WITH SCHEMA_BINDING-Klausel erstellt wird, können die Spalten, auf die in der Sicht verwiesen wird, in der Tabelle geändert werden, auf die verwiesen wird. Im Beispiel wird die Spalte `ChangeNumber` in der Tabelle `Production.Document` geändert, indem sie in `TrackingNumber` umbenannt wird. Die Katalogsicht wird erneut für die `ApprovedDocuments`-Sicht abgefragt. Es ist jedoch keine Bindung an alle in der Sicht definierten Spalten möglich. Die Fehler 207 und 2020 werden zurückgegeben und geben das Problem an. Um das Problem zu beheben, muss die Sicht geändert so werden, dass der neue Name der Spalte angegeben wird.  
   
-<pre>USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2012;  
 GO  
 CREATE VIEW Production.ApprovedDocuments  
 AS  
@@ -57,11 +58,13 @@ SELECT referenced_schema_name AS schema_name
 ,referenced_entity_name AS table_name  
 ,referenced_minor_name AS referenced_column  
 FROM sys.dm_sql_referenced_entities ('Production.ApprovedDocuments', 'OBJECT');  
-GO</pre>  
+GO
+```
   
 Die Abfrage gibt die folgenden Fehlermeldungen zurück:  
   
-<pre>Msg 207, Level 16, State 1, Procedure ApprovedDocuments, Line 3  
+```
+Msg 207, Level 16, State 1, Procedure ApprovedDocuments, Line 3  
 Invalid column name 'ChangeNumber'.  
 Msg 2020, Level 16, State 1, Line 1  
 The dependencies reported for entity  
@@ -70,18 +73,21 @@ columns. This is either because the entity references an
 object that does not exist or because of an error in one or  
 more statements in the entity. Before rerunning the query,  
 ensure that there are no errors in the entity and that all  
-objects referenced by the entity exist.</pre>  
+objects referenced by the entity exist.
+```
   
 Im folgenden Beispiel wird der Spaltenname in der Sicht korrigiert.  
   
-<pre>USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2012;  
 GO  
 ALTER VIEW Production.ApprovedDocuments  
 AS  
 SELECT Title,TrackingNumber, Status  
 FROM Production.Document  
 WHERE Status = 2;  
-GO</pre>  
+GO
+```
   
 ## <a name="see-also"></a>Weitere Informationen  
 [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1af7d13c9bee8d3ba46fc940467d8f13a2d40e45
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 36df84c6bd88ff7525f2a335d140358d4370064f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631991"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895515"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Erstellt eine benutzerdefinierte Aggregatfunktion, deren Implementierung in einer Klasse einer Assembly in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] definiert ist. Damit [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Aggregatfunktion an die Implementierung bindet, muss zunächst die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly, die die Implementierung enthält, mithilfe einer CREATE ASSEMBLY-Anweisung in eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hochgeladen werden.  
   

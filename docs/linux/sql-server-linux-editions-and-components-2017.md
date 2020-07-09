@@ -25,16 +25,16 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: c7394bf48f6bc32664e7d0a96af96ac0f3d1116f
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 860d2a8c903a918e95ef38214e25a18efc3590d2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402668"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893097"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2017 unter Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Dieser Artikel bietet detaillierte Informationen zu den Funktionen, die von den verschiedenen Editionen von SQL Server 2017 für Linux unterstützt werden. Informationen zu den Editionen und unterstützten Funktionen von SQL Server für Windows finden Sie unter [SQL Server 2017 – Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
@@ -229,7 +229,6 @@ Die folgenden Features und Dienste stehen in SQL Server 2017 für Linux nicht zu
 | &nbsp; | Alerts |
 | &nbsp; | Protokolllese-Agent |
 | &nbsp; | Managed Backup |
-| &nbsp; | Multiserververwaltung mithilfe von MSX/TSX |
 | **Hochverfügbarkeit** | Datenbankspiegelung  |
 | **Security** | Erweiterbare Schlüsselverwaltung |
 | &nbsp; | Azure AD-Authentifizierung für Verbindungsserver | 

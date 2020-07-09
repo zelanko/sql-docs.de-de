@@ -9,16 +9,16 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: e026fd9dd9bd0aa9cf78f5cf6d15303b0063ade5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ba7827a637c1317500894fcfda85cd1d5122cce7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750803"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888109"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Konfigurieren der Leseskalierung für eine Always On-Verfügbarkeitsgruppe
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Sie können eine SQL Server-Always On-Verfügbarkeitsgruppe unter Windows für Workloads zur Leseskalierung konfigurieren. Es gibt zwei Architekturtypen für Verfügbarkeitsgruppen:
 * Eine Architektur für Hochverfügbarkeit, die einen Cluster-Manager zur Gewährleistung einer verbesserten Geschäftskontinuität verwendet und lesbare sekundäre Replikate enthalten kann. Informationen zur Erstellung dieser Architektur für Hochverfügbarkeit finden Sie unter [Erstellung und Konfiguration von Verfügbarkeitsgruppen unter Windows](creation-and-configuration-of-availability-groups-sql-server.md). 

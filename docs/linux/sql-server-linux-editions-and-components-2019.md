@@ -24,16 +24,16 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: b1ebc05fcae4bbf6065b0821101618b7eb64f541
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: d84f7a508d9ae6d46ba529d8139ecc8c0deaf3e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002786"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894031"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2019 unter Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Dieser Artikel bietet detaillierte Informationen zu den Funktionen, die von den verschiedenen Editionen von SQL Server 2019 für Linux unterstützt werden. Informationen zu den Editionen und unterstützten Funktionen von SQL Server für Windows finden Sie unter [SQL Server 2019 – Windows](../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
