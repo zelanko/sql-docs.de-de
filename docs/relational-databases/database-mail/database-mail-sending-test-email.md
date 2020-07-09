@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a689daf33baece845ddf81c09b99fc61c96509a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72906071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726496"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Senden einer Test-E-Mail mit Datenbank-E-Mail  
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Verwenden Sie das Dialogfeld „Test-E-Mail senden“, um zu testen, ob E-Mails mit einem bestimmten Profil gesendet werden können.
 

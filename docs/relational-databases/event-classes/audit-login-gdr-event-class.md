@@ -12,15 +12,15 @@ ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fefb0d64710fda5c499747fb9f3205563240a6a4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a0e3cfda6f67bff76ce001cdf4b98bfdac0b215
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726373"
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR-Ereignisklasse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die **Audit Login GDR** -Ereignisklasse tritt auf, wenn ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldungsrecht hinzugefügt oder entfernt wird. Diese Ereignisklasse ist für die gespeicherten Prozeduren **sp_grantlogin**, **sp_revokelogin**und **sp_denylogin** .  
   
  Es kann sein, dass diese Ereignisklasse in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt wird. Es wird empfohlen, dass Sie stattdessen die **Audit Server Principal Management** -Ereignisklasse verwenden.  
