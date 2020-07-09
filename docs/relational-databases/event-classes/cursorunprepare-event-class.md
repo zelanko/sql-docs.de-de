@@ -12,15 +12,15 @@ ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 174cd2a4bc07d5de1cd664f715b9442846073502
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4748a1232f22f41f3ed079d90c980d7476f595e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68092937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719846"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare (Ereignisklasse)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die **CursorUnprepare** -Ereignisklasse stellt Informationen zu Ereignissen bereit, mit denen die Vorbereitung eines Cursors aufgehoben wird und die in Cursorn von Anwendungsprogrammierschnittstellen (Application Programming Interface; API) auftreten. Ereignisse zur Aufhebung der Vorbereitung eines Cursors treten ein, wenn ein Ausführungsplan durch [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] verworfen wird.  
   
  Nehmen Sie die **CursorUnprepare** -Ereignisklasse in Ablaufverfolgungen auf, mit denen die Leistung von Cursorn verfolgt wird. Ist die **CursorUnprepare** -Ereignisklasse ein Bestandteil einer Ablaufverfolgung, ergibt sich der anfallende Aufwand daraus, wie häufig Cursor für die Datenbank während der Ablaufverfolgung verwendet werden. Falls Cursor intensiv verwendet werden, kann die Leistung durch die Ablaufverfolgung erheblich beeinträchtigt werden.  

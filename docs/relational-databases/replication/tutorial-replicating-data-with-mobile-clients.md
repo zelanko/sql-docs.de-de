@@ -14,15 +14,15 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84a07ef89bc42538a5043a46ed3bcd23bc588caf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4110d523762a147a569caaf03d71dbdc4567c5c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720692"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Die Mergereplikation stellt eine geeignete Lösung für das Problem des Verschiebens von Daten zwischen einem zentralen Server und mobilen Clients dar, die nur gelegentlich miteinander verbunden sind. Mithilfe der Replikations-Assistenten können Sie eine Mergereplikationstopologie auf einfache Weise konfigurieren und verwalten. 
 
 In diesem Lernprogramm wird die Konfiguration einer Replikationstopologie für mobile Clients erläutert. Weitere Informationen zur Mergereplikation finden Sie unter [Mergereplikation](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).

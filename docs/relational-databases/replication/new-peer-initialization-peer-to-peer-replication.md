@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 050c00e1-78bd-4d9c-affe-40e22feb4d94
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5841e80156b177d63e5975498a667e3f95cabcd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a89f539aa8d03b14be4dbcd81e08c308a2c72d30
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321917"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721215"
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>Neue Peerinitialisierung (Peer-zu-Peer-Replikation)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Auf der Seite **Neue Peerinitialisierung** können Sie angeben, wie Peerdatenbanken initialisiert wurden. (Peers müssen initialisiert werden, bevor Sie diesen Assistenten abschließen.) Peers werden manuell oder mithilfe der Funktionalität **initialize with backup** initialisiert, die durch die Transaktionsreplikation zur Verfügung gestellt wird. (Die Peer-zu-Peer-Transaktionsreplikation bietet keine Unterstützung für die Initialisierung von Peers mithilfe von Momentaufnahmen.) Wenn verschiedene Peers mithilfe unterschiedlicher Methoden initialisiert werden müssen, müssen Sie diesen Assistenten mehrfach ausführen, um die Peers einzeln hinzuzufügen.  
   
 ## <a name="options"></a>Tastatur  

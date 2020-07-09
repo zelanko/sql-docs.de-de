@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 23ff55d4fcb9e9cf398e732376a01ab5495b2a4b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: acb23caea9e74af5a1f25f8d6d2acab31fbeb39f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720456"
 ---
 # <a name="enable-resource-governor"></a>Aktivieren der Ressourcenkontrolle
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Die Ressourcenkontrolle ist standardmäßig deaktiviert. Sie können die Ressourcenkontrolle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mit Transact-SQL aktivieren.  
   
 -   **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  

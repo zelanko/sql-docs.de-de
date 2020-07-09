@@ -1,7 +1,6 @@
 ---
 title: 'Offlinewiederherstellung: primäre Dateigruppe und eine weitere Dateigruppe'
 description: In diesem Beispiel werden eine primäre Dateigruppe und eine weitere Dateigruppe für eine Datenbank in SQL Server offline wiederhergestellt, wobei das vollständige Wiederherstellungsmodell mit mehreren Dateigruppen verwendet wird.
-ms.description: Full recovery model
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cecd3a4bdf237b8ba0c1794489ccb624d3641fbb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c708d0f8743b993e8df58d9eff607e615ee7b7fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718097"
 ---
 # <a name="example-offline-restore-of-primary-and-1-other-filegroup-full-recovery-model"></a>Beispiel: Offlinewiederherstellung der primären Dateigruppe und einer weiteren Dateigruppe (vollständiges Wiederherstellungsmodell)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Dieses Thema ist nur für Datenbanken relevant, in denen mehrere Dateigruppen enthalten sind und für die das vollständige Wiederherstellungsmodell verwendet wird.  
   

@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a371ac7f8cad6f90f83c7408b315fa35d571d1f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718066"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dateimomentaufnahme-Sicherungen verwenden Azure-Momentaufnahmen, um nahezu sofortige Sicherungen und schnellere Wiederherstellungen für Datenbankdateien mithilfe von Azure Blob Storage zu nutzen. Sicherungs- und Wiederherstellungsrichtlinien lassen sich dank dieser Funktion vereinfachen. Eine Livedemo finden Sie unter [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(in englischer Sprache). Weitere Informationen zum Speichern von Datenbankdateien mithilfe von Azure Blob Storage finden Sie unter [SQL Server-Datendateien in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
  ![Architekturdiagramm für die Momentaufnahmesicherung](../../relational-databases/backup-restore/media/snapshotbackups.PNG "Architekturdiagramm für die Momentaufnahmesicherung")  

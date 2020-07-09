@@ -1,21 +1,20 @@
 ---
 title: 'Tutorial: Erstellen einer Erweiterung'
-titleSuffix: Azure Data Studio
 description: Dieses Tutorial veranschaulicht, wie Sie eine Erweiterung erstellen, um benutzerdefinierte Funktionen zu Azure Data Studio hinzuzufügen.
 ms.custom: seodec18
 ms.date: 12/10/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: tutorial
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8a8481653f7161b39cc752878f4544f98751261
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 668e2f4292fb20a85329bbb0716e6945d44e8e02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75241756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719045"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>Tutorial: Erstellen einer Azure Data Studio-Erweiterung
 

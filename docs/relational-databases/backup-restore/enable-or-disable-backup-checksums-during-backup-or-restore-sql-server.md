@@ -3,7 +3,6 @@ title: Aktivieren | Deaktivieren von Sicherungsprüfsummen
 description: In diesem Artikel erfahren Sie, wie Sie Sicherungsprüfsummen für eine Datenbank in SQL Server mithilfe von SQL Server Management Studio oder Transact-SQL aktivieren oder deaktivieren.
 ms.custom: ''
 ms.date: 03/17/2017
-ms.description: Enable or disable backup checksums during backup or restore of SQL Server databases.
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a3552fc8ccc44522d7bd2a520d5b9ad646ee586d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3675b4557bae7a394ef5b1b3ac47d2d1da9b2af3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718150"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Aktivieren oder Deaktivieren von Sicherungsprüfsummen während der Sicherung oder Wiederherstellung (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In diesem Thema wird beschrieben, wie Sie Sicherungsprüfsummen aktivieren oder deaktivieren, wenn Sie eine Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]sichern oder wiederherstellen.  
   

@@ -15,15 +15,15 @@ ms.assetid: 74bdf5e1-b886-4284-b5fb-332bf79ae083
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 85f175d82c84351e0abc42038c378beab35167f7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7256bc010e5320d63502cce834996f2be01c2a08
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68769269"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720612"
 ---
 # <a name="validate-subscription"></a>Abonnement überprüfen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   Im Dialogfeld **Abonnements überprüfen** können Sie angeben, dass ein Abonnement für eine Mergeveröffentlichung überprüft werden soll, sobald der Merge-Agent für das Abonnement das nächste Mal ausgeführt wird. Die Ergebnisse der Überprüfung werden im Replikationsmonitor angezeigt. Weitere Informationen finden Sie unter [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
  Wenn Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zunächst mit der rechten Maustaste auf eine Veröffentlichung und dann auf **Alle Abonnements überprüfen** klicken, können Sie auch alle Abonnements einer Mergeveröffentlichung überprüfen.  

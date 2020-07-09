@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8012115ff5f5a7fbd85de36b6263ea4380b44ccc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722236"
 ---
 # <a name="plan-guides"></a>Planhinweislisten
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Mit Planhinweislisten können Sie die Leistung von Abfragen optimieren, wenn Sie den Text der eigentlichen Abfrage in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht direkt ändern möchten oder können. Planhinweislisten beeinflussen die Abfrageoptimierung, indem Abfragehinweise oder ein fester Abfrageplan an die Abfragen angefügt werden. Die Verwendung von Planhinweislisten bietet sich z. B. an, wenn eine kleine Teilmenge von Abfragen in der Datenbankanwendung eines Drittanbieters nicht erwartungsgemäß funktioniert. In der Planhinweisliste geben Sie die Transact-SQL-Anweisung an, die optimiert werden soll, sowie entweder eine OPTION-Klausel mit den zu verwendenden Abfragehinweisen oder einen spezifischen Abfrageplan, der für die Optimierung der Abfrage verwendet werden soll. Wenn die Abfrage ausgeführt wird, vergleicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Transact-SQL-Anweisung mit der Planhinweisliste und fügt der Abfrage entweder zur Laufzeit die OPTION-Klausel hinzu oder verwendet den angegebenen Abfrageplan.  
   
  Die maximale Anzahl der erstellbaren Planhinweislisten ist lediglich durch die verfügbaren Systemressourcen begrenzt. Planhinweislisten sollten jedoch nur begrenzt für unternehmenswichtige Abfragen verwendet werden, deren Leistung verbessert oder stabilisiert werden soll. Planhinweislisten sollten nicht verwendet werden, um die überwiegende Abfragelast einer bereitgestellten Anwendung zu beeinflussen.  

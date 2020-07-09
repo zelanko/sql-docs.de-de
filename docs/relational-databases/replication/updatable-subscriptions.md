@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 8e9a13a0-6b24-47c6-9d83-3cbaf08f673d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d89c8a18804722a3d7727b56833c2513ec994518
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3cf65d8667e0fcedcb148e926a80969ec7a05642
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67895256"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720663"
 ---
 # <a name="updatable-subscriptions"></a>Aktualisierbare Abonnements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Bei der Transaktionsreplikation müssen replizierte Daten als schreibgeschützte Daten behandelt werden. Allerdings können Sie replizierte Daten auf einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten ändern, indem Sie aktualisierbare Abonnements verwenden. Wenn Sie Daten auf dem Abonnenten ändern möchten, wählen Sie in Abhängigkeit von Ihren Anforderungen eine der folgenden Optionen aus:  
   
 |Aktualisierbarer Abonnementtyp|Requirements (Anforderungen)|  

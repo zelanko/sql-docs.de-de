@@ -1,8 +1,7 @@
 ---
 title: Automatisches Formatieren der JSON-Ausgabe im AUTO-Modus
-ms.date: 07/17/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +9,18 @@ helpviewer_keywords:
 ms.assetid: 178a2a4e-e0f6-49b9-9895-396956d3c7d9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1472c05c2ac4a9308a0fc941ed706d155203ca03
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 083e8503b659be0f03af08c5f514e30baf012ae8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095809"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722304"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>Automatisches Formatieren der JSON-Ausgabe im AUTO-Modus (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Wenn die Ausgabe der **FOR JSON**-Klausel automatisch entsprechend der Struktur der **SELECT**-Anweisung formatiert werden soll, geben Sie die Option **AUTO** an.  
   

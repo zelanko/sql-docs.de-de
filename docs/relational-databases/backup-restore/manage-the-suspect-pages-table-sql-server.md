@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d364f28e1d27d9eeb758c174e7e8062e7540873
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2effd97ab34bd59d0dbebf283bff398508f21cbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718030"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Verwalten der suspect_pages-Tabelle (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie Sie die **suspect_pages** -Tabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verwalten. Die **suspect_pages** -Tabelle, die zum Verwalten von Informationen über fehlerverdächtige Seiten verwendet wird, ist hilfreich für die Entscheidung, ob eine Wiederherstellung erforderlich ist. Die [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) -Tabelle befindet sich in der [msdb](../../relational-databases/databases/msdb-database.md)-Datenbank.  
   
  Eine Seite wird als "fehlerverdächtig" betrachtet , wenn das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] bei dem Versuch, eine Datenseite zu lesen, einen der folgenden Fehler findet:  

@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 019b7c49-dcca-445d-8969-5982a8ccbc1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d56e6191276d97cd1286089db6a934d122a60e76
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 123fe0cfb6233eb640befb6521720b8cdeebf6e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721044"
 ---
 # <a name="oracle-publisher"></a>Oracle-Verleger
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Ab [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] erlaubt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ihnen das Veröffentlichen von Daten aus einer Oracle-Datenbank mithilfe einer Momentaufnahme und der Transaktionsreplikation. Weitere Informationen finden Sie unter [Veröffentlichungen mit Oracle (Übersicht)](../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
   
  Der Oracle-Verleger muss einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Remoteverteiler verwenden, und auf diesem Server muss der Assistent ausgeführt werden, nachdem die erforderliche Oracle-Netzwerksoftware installiert und getestet wurde. Weitere Informationen finden Sie unter [Konfigurieren eines Oracle-Verlegers](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  

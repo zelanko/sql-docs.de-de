@@ -19,15 +19,15 @@ ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f05ede948892b7f9ae6a9f9ee24a3b6878586917
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 54b656c95323c8f6cb2a4f5f6d4666555de5e02a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719571"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reduzieren der Optimierungsauslastung des Produktionsservers
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber nutzt den Abfrageoptimierer, um die Arbeitsauslastung zu analysieren und Optimierungsempfehlungen zu geben. Wenn diese Analyse auf dem Produktionsserver ausgeführt wird, erhöht sich die Serverlast. Dies kann zu Einbußen bei der Serverleistung während der Optimierungssitzung führen. Sie reduzieren die Serverlast während einer Optimierungssitzung, indem Sie zusätzlich zum Produktionsserver einen Testserver verwenden.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Verwendung eines Testservers durch den Datenbankoptimierungsratgeber  

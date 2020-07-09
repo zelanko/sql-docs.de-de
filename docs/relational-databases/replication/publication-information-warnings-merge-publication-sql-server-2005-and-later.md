@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 41e709bcbc533c3cf7ff294dd2b07a6c638a0c52
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d12b863ad925a80a3403df4861faafeddaf230d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720914"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Veröffentlichungsinformationen, Warnungen (Mergeveröffentlichung, SQL Server 2005 und höher)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Die Registerkarte **Warnungen** ist für Verteiler verfügbar, auf denen [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen ausgeführt werden. Auf der Registerkarte **Warnungen** können Sie folgende Tasks für die ausgewählte Veröffentlichung ausführen:  
   
 -   Aktivieren von Warnungen.  

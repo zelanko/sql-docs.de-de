@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af90d16e4e81b5d2ee1dc73de78826073d1cbff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a88bbccbe0fd1a57455343858f463afe072ed99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67909463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722324"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>Transaktionsprotokollspeicherplatz für Indexvorgänge
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Umfangreiche Indexvorgänge können riesige Datenmengen erzeugen, die zu einem schnellen Füllen des Transaktionsprotokolls führen können. Um sicherzustellen, dass ein Rollback des Indexvorgangs möglich ist, kann das Transaktionsprotokoll nicht abgeschnitten werden, bis der Indexvorgang abgeschlossen ist. Die Sicherung des Protokolls während des Indexvorgangs ist jedoch möglich. Deshalb muss das Transaktionsprotokoll über ausreichend Speicherplatz verfügen, um sowohl die Transaktionen des Indexvorgangs als auch alle gleichzeitigen Benutzertransaktionen für die Dauer des Indexvorgangs aufnehmen zu können. Das gilt sowohl für Offline- als auch für Onlineindexvorgänge. Da während eines Offlineindexvorgangs der Zugriff auf die zugrunde liegenden Tabellen nicht möglich ist, treten dabei evtl. nur wenige Benutzertransaktionen auf, und das Protokoll wächst nicht so schnell an. Bei Onlineindexvorgängen erfolgt jedoch keinerlei Einschränkung von gleichzeitigen Benutzeraktivitäten. Daher können umfangreiche Onlineindexvorgänge in Kombination mit zahlreichen gleichzeitigen Benutzertransaktionen zu einem kontinuierlichen Anwachsen des Transaktionsprotokolls führen, ohne dass es eine Möglichkeit zum Abschneiden des Protokolls gibt.  
   
 ## <a name="recommendations"></a>Empfehlungen  

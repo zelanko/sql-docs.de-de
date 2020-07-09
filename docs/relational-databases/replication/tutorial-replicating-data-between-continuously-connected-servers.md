@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15b114b66462be069b4c67d3bedc662af6c6cbfd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720707"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (Transaktionsreplikation)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Die Transaktionsreplikation stellt eine bewährte Lösung für das Problem des Verschiebens von Daten zwischen Servern mit kontinuierlicher Verbindung dar. Mithilfe des Replikations-Assistenten können Sie eine Replikationstopologie auf einfache Weise konfigurieren und verwalten. 
 
 In diesem Tutorial wird die Konfiguration einer Topologie für Transaktionsreplikationen für Server mit kontinuierlicher Verbindung erläutert. Weitere Informationen zur Funktionsweise der Transaktionsreplikation finden Sie unter [Übersicht über die Transaktionsreplikation](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication). 

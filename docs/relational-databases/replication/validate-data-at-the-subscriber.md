@@ -17,15 +17,15 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e666a14b93725b833ec8a050bb637ee71c39c6ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720651"
 ---
 # <a name="validate-replicated-data"></a>Überprüfen von replizierten Daten
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   In diesem Thema wird beschrieben, wie Daten beim Abonnenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) überprüft werden.  
   
 Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die Daten auf dem Abonnenten mit denen auf dem Verleger übereinstimmen. Die Überprüfung kann für bestimmte Abonnements oder für alle Abonnements für eine Veröffentlichung ausgeführt werden. Geben Sie einen der folgenden Überprüfungstypen an. Bei der nächsten Ausführung des Verteilungs-Agents oder des Merge-Agents werden die Daten dann überprüft:  
