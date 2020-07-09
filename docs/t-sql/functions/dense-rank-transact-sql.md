@@ -18,18 +18,18 @@ helpviewer_keywords:
 - tied rows [SQL Server]
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 569e02b434d3e2f8d919b30fb91dc922f0588a5c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68135923"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005935"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Diese Funktion gibt den Rang jeder Zeile innerhalb einer Resultsetpartition ohne Lücken in den Rangwerten zurück. Der Rang einer bestimmten Zeile ist 1 plus die Anzahl der unterschiedlichen Rangwerte vor dieser Zeile.  
   

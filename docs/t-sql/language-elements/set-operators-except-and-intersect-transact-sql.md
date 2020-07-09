@@ -23,15 +23,15 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7469e9b19650c88986d4f0658d28a7e0481abf2a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a76fa18b50c62127208db9430fafcfb5668225c1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630252"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004988"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Mengenoperatoren – EXCEPT und INTERSECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Gibt durch den Vergleich zweier Abfragen eindeutige Zeilen zurück.  
   
@@ -101,7 +101,7 @@ Wenn ein EXCEPT-Vorgang mithilfe dem Feature des grafischen Showplans von [!INCL
 ## <a name="examples"></a>Beispiele  
 In den folgenden Beispielen wird die Verwendung der Operatoren `INTERSECT` und `EXCEPT` veranschaulicht. Die erste Abfrage gibt alle Werte aus der `Production.Product`-Tabelle zum Vergleich mit den Ergebnissen mit `INTERSECT` und `EXCEPT` zurück.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -111,7 +111,7 @@ FROM Production.Product ;
   
 Die folgende Abfrage gibt alle eindeutigen Werte zurück, die von den Abfragen auf der linken und rechten Seite des `INTERSECT`-Operators zurückgegeben werden.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -124,7 +124,7 @@ FROM Production.WorkOrder ;
   
 Die folgende Abfrage gibt alle eindeutigen Werte aus der Abfrage links vom `EXCEPT`-Operator zurück, die nicht auch in der rechten Abfrage gefunden werden.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -137,7 +137,7 @@ FROM Production.WorkOrder ;
   
 Die folgende Abfrage gibt alle eindeutigen Werte aus der Abfrage links vom `EXCEPT`-Operator zurück, die nicht auch in der rechten Abfrage gefunden werden. Die Tabellen sind die Umkehrung des vorherigen Beispiels.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID   
@@ -151,7 +151,7 @@ FROM Production.Product ;
 ## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 In den folgenden Beispielen wird die Verwendung der Operatoren `INTERSECT` und `EXCEPT` veranschaulicht. Die erste Abfrage gibt alle Werte aus der `FactInternetSales`-Tabelle zum Vergleich mit den Ergebnissen mit `INTERSECT` und `EXCEPT` zurück.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -161,7 +161,7 @@ FROM FactInternetSales;
   
 Die folgende Abfrage gibt alle eindeutigen Werte zurück, die von den Abfragen auf der linken und rechten Seite des `INTERSECT`-Operators zurückgegeben werden.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   
@@ -176,7 +176,7 @@ ORDER BY CustomerKey;
   
 Die folgende Abfrage gibt alle eindeutigen Werte aus der Abfrage links vom `EXCEPT`-Operator zurück, die nicht auch in der rechten Abfrage gefunden werden.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CustomerKey   

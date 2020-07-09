@@ -16,15 +16,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9dc47ecc9056c2344b64feb4eb0f122e340927b5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3d87bce11cc657ef437a0f57ce07d0eda89bdeb3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980612"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007206"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Beibehalten von Identitätswerten beim Massenimport von Daten (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Datendateien, die Identitätswerte enthalten, können per Massenimport in eine Instanz von Microsoft SQL Server übertragen werden.  Standardmäßig werden die Werte für die Identitätsspalte in der importierten Datendatei ignoriert, und von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden automatisch eindeutige Werte zugewiesen.  Die eindeutigen Werte basieren auf dem Ausgangswert und den inkrementellen Werten, die bei der Tabellenerstellung angegeben werden.
 
 Wenn die Datendatei keine Werte für die Bezeichnerspalte in der Tabelle enthält, sollten Sie eine Formatdatei verwenden, um anzugeben, dass die Bezeichnerspalte beim Importieren von Daten ausgelassen werden soll.  Weitere Informationen finden Sie unter [Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md) .

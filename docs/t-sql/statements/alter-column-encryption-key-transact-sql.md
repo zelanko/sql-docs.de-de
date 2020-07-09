@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 1a3906278e7d4770fa71a8931b3889f9f03d955a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 43cc2ebbb5b06edda65d841f29da03da9a552280
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629382"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008505"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Ändert durch das Hinzufügen oder Entfernen eines verschlüsselten Werts einen Spaltenverschlüsselungsschlüssel (Column encryption key, CEK) in einer Datenbank. Ein Spaltenverschlüsselungsschlüssel kann bis zu zwei Werte enthalten, was die Rotation des zugehörigen Spaltenhauptschlüssels ermöglicht. Ein Spaltenverschlüsselungsschlüssel wird beim Verschlüsseln von Spalten mit [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) oder [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) verwendet. Vor dem Hinzufügen eines Werts für den Spaltenverschlüsselungsschlüssel müssen Sie den Spaltenhauptschlüssel definieren, mit dem der Wert unter Verwendung von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder der [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)-Anweisung verschlüsselt wurde.  
   

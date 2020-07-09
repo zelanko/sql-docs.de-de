@@ -17,15 +17,15 @@ ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6790d66ad3a5f80a0964ada3c68311ef3d83b25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5bcd1b8b4cd08a3bb2cb0c8700c82de8d7657779
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68016438"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002099"
 ---
 # <a name="delete-unique-constraints"></a>Löschen von Unique-Einschränkungen
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine UNIQUE-Einschränkung in [!INCLUDE[tsql](../../includes/tsql-md.md)]löschen. Wenn eine Unique-Einschränkung gelöscht wird, werden die Forderung nach Eindeutigkeit für die Werte, die in die Spalte oder Spaltenkombination im Einschränkungsausdruck eingegeben werden, und der zugehörige eindeutige index entfernt.  
   

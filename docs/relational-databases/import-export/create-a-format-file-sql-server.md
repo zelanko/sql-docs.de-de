@@ -14,15 +14,15 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95ac8a8a42523d513a6025d85308c4e130c044c8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980482"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009921"
 ---
 # <a name="create-a-format-file-sql-server"></a>Erstellen einer Formatdatei (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Beim Massenimportieren bzw. -exportieren von Daten in eine bzw. aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle können Sie eine Formatdatei für ein flexibles System für das Schreiben von Datendateien verwenden, bei denen nur geringfügige oder keine Bearbeitung erforderlich ist, um sie mit anderen Datenformaten oder für das Lesen von Datendateien aus anderen Softwareprogrammen kompatibel zu machen.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt zwei Typen von Formatdateien: Nicht-XML- und XML-Formatdateien. Nicht-XML ist das ursprüngliche Format, das von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt wird.  

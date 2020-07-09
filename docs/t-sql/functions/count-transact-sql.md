@@ -20,18 +20,18 @@ helpviewer_keywords:
 - number of group items
 - COUNT function [Transact-SQL]
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e0c4ebccf102051d3144ca8a9955bfa0f1aef1ee
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026491"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011489"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Diese Funktion gibt die Anzahl der in einer Gruppe gefundenen Elemente zurück. `COUNT` arbeitet wie die [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md)-Funktion. Diese Funktionen unterscheiden sich nur in den Datentypen ihrer Rückgabewerte. `COUNT` gibt immer einen Wert vom Datentyp **int** zurück. `COUNT_BIG` gibt immer einen Wert vom Datentyp **bigint** zurück.
   
@@ -39,7 +39,7 @@ Diese Funktion gibt die Anzahl der in einer Gruppe gefundenen Elemente zurück. 
   
 ## <a name="syntax"></a>Syntax  
   
-```sql
+```syntaxsql
 
 -- Aggregation Function Syntax  
 COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )  
@@ -136,7 +136,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>D: Verwenden der OVER-Klausel  
-In diesem Beispiel werden die Funktionen `MIN`, `MAX`, `AVG` und `COUNT` zusammen mit der `OVER`-Klausel verwendet, um aggregierte Werte für jede Abteilung in der `HumanResources.Department`-Tabelle der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückzugeben.
+In diesem Beispiel werden die Funktionen `MIN`, `MAX`, `AVG` und `COUNT` zusammen mit der `OVER`-Klausel verwendet, um aggregierte Werte für jede Abteilung in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Tabelle der `HumanResources.Department`-Datenbank zurückzugeben.
   
 ```sql
 SELECT DISTINCT Name  

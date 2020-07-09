@@ -29,15 +29,15 @@ ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06f36ff1e8891ad3753f3899fd5696d5e6ea365a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a58f92ebb7e6c59d80277cc17457927cff01ff8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934442"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002950"
 ---
 # <a name="file-states"></a>Dateistatus
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird der Status einer Datenbankdatei unabhängig vom Status der Datenbank verwaltet. Eine Datei befindet sich immer in einem bestimmten Status, wie ONLINE oder OFFLINE. Um den aktuellen Status einer Datei anzuzeigen, verwenden Sie die Katalogsicht [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) oder [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) . Wenn die Datenbank offline ist, kann der Status der Dateien über die [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) -Katalogsicht angezeigt werden.  
   
  Der Status der Dateien in einer Dateigruppe legt die Verfügbarkeit der gesamten Dateigruppe fest. Damit eine Dateigruppe verfügbar ist, müssen alle Dateien in der Dateigruppe online sein. Wenn Sie den aktuellen Status einer Dateigruppe anzeigen möchten, verwenden Sie die [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) -Katalogsicht. Wenn eine Dateigruppe offline ist und Sie versuchen, mit einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung auf die Dateigruppe zuzugreifen, führt dies zu einem Fehler. Wenn der Abfrageoptimierer Abfragepläne für SELECT-Anweisungen erstellt, vermeidet er nicht gruppierte Indizes und indizierte Sichten, die in Offlinedateigruppen gespeichert sind, damit die Anweisungen erfolgreich ausgeführt werden. Enthält die Offlinedateigruppe jedoch den Heap oder gruppierten Index der Zieltabelle, schlagen die SELECT-Anweisungen fehl. Auch alle INSERT-, UPDATE- oder DELETE-Anweisungen, die eine Tabelle mit einem Index in einer Offlinedateigruppe ändern, schlagen fehl.  

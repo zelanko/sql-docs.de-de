@@ -31,15 +31,15 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fca606be32cc3b9e73defd52a30257ad09c0e099
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75884005"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007314"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Bestimmt, ob eine bestimmte Zeichenfolge mit einem angegebenen Muster übereinstimmt. Ein Muster kann normale Zeichen und Platzhalterzeichen einschließen. Bei einem Mustervergleich müssen normale Zeichen exakt mit den angegebenen Zeichen in der Zeichenfolge übereinstimmen. Platzhalterzeichen können jedoch mit beliebigen Teilen der Zeichenfolge übereinstimmen. Das Verwenden der Vergleichsoperatoren für Zeichenfolgen = und != ist nicht so flexibel wie das Verwenden von Platzhalterzeichen mit dem LIKE-Operator. Wenn eins der Argumente kein Zeichenfolgen-Datentyp ist, wird es von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in einen Zeichenfolgen-Datentyp konvertiert, sofern dies möglich ist.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "75884005"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 match_expression [ NOT ] LIKE pattern  
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. Verwenden von LIKE mit dem Platzhalterzeichen _  
- Im folgenden Beispiel werden alle Telefonnummern in der `DimEmployee`-Tabelle gefunden, die eine Vorwahl aufweisen, die mit `6` beginnt und mit `2` endet. Das Platzhalterzeichen % wird am Ende des Suchmusters eingefügt, um alle folgenden Zeichen im Spaltenwert für Telefonnummern abzugleichen.  
+ Im folgenden Beispiel werden alle Telefonnummern in der `6`-Tabelle gefunden, die eine Vorwahl aufweisen, die mit `2` beginnt und mit `DimEmployee` endet. Das Platzhalterzeichen % wird am Ende des Suchmusters eingefügt, um alle folgenden Zeichen im Spaltenwert für Telefonnummern abzugleichen.  
   
 ```sql  
 -- Uses AdventureWorks  

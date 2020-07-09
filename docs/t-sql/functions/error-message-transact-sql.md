@@ -19,18 +19,18 @@ helpviewer_keywords:
 - TRY...CATCH [SQL Server]
 - CATCH block
 ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e38e57bf64d20dcc4e16a8d7b31c372d877c038f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35241a392ef91c13b48da1bcdfa66a707d4c7680
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67904393"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010387"
 ---
 # <a name="error_message-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Diese Funktion gibt den Meldungstext des Fehlers zurück, der die Ausführung des CATCH-Blocks eines TRY...CATCH-Konstrukts ausgelöst hat.  
   
@@ -55,7 +55,7 @@ Wenn `ERROR_MESSAGE` in einem CATCH-Block aufgerufen wird, wird der vollständig
   
 `ERROR_MESSAGE` gibt unabhängig von der Anzahl der Aufrufe und dem Bereich des `CATCH`-Blocks eine relevante Fehlermeldung zurück. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur eine Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf die Anweisung folgt, die einen Fehler auslöst.  
   
-`ERROR_MESSAGE` gibt in geschachtelten `CATCH`-Blöcken die Fehlermeldung für den entsprechenden Bereich des `CATCH`-Blocks zurück, der auf den `CATCH`-Block verwiesen hat. Zum Beispiel könnte der `CATCH`-Block eines äußeren TRY...CATCH-Konstrukts ein inneres `TRY...CATCH`-Konstrukt aufweisen. In diesem inneren `CATCH`-Block gibt `ERROR_MESSAGE` die Meldung des Fehlers zurück, der den inneren `CATCH`-Block aufgerufen hat. Wenn `ERROR_MESSAGE` im äußeren `CATCH`-Block ausgeführt wird, wird die Meldung des Fehlers zurückgegeben, der den äußeren `CATCH`-Block aufgerufen hat.  
+`CATCH` gibt in geschachtelten `ERROR_MESSAGE`-Blöcken die Fehlermeldung für den entsprechenden Bereich des `CATCH`-Blocks zurück, der auf den `CATCH`-Block verwiesen hat. Zum Beispiel könnte der `CATCH`-Block eines äußeren TRY...CATCH-Konstrukts ein inneres `TRY...CATCH`-Konstrukt aufweisen. In diesem inneren `CATCH`-Block gibt `ERROR_MESSAGE` die Meldung des Fehlers zurück, der den inneren `CATCH`-Block aufgerufen hat. Wenn `ERROR_MESSAGE` im äußeren `CATCH`-Block ausgeführt wird, wird die Meldung des Fehlers zurückgegeben, der den äußeren `CATCH`-Block aufgerufen hat.  
   
 ## <a name="examples"></a>Beispiele  
   

@@ -17,15 +17,15 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287474"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009680"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet bei Sortier-, Schnittmengen- und Vereinigungsvorgängen sowie bei Vorgängen zum Feststellen von Unterschieden arbeitsspeicherinterne Sortierverfahren und Hashjointechniken. Beim Verwenden dieses Abfrageplantyps unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die vertikale Tabellenpartitionierung, auch spaltenweise Speicherung genannt.   
 

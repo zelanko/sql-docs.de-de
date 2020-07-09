@@ -22,15 +22,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9c4a92c1d98bfc7af773cac1be7aedb7113c5b28
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ca3b994cb831e78807b8aeb44c5fe6f8fc454f41
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980382"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001199"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Beibehalten von NULL-Werten oder Standardwerten während des Massenimports (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Wenn Daten in eine Tabelle importiert werden, werden standardmäßig alle für die Spalten in der Tabelle definierten Standardwerte durch den Befehl [bcp](../../tools/bcp-utility.md) und die Anweisung [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) überwacht.  Wenn beispielsweise ein NULL-Feld in einem Datenfeld vorkommt, wird stattdessen der Standardwert für die Spalte geladen.  Sowohl mit dem Befehl [bcp](../../tools/bcp-utility.md) als auch mit der Anweisung [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) können Sie angeben, dass NULL-Werte beibehalten werden sollen.
 

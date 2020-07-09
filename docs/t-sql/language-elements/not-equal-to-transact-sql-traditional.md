@@ -24,15 +24,15 @@ ms.assetid: 34cf9b38-d589-4be9-925a-116e224609a0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fb95da97a5fbe9df9024a48b30d581e771d2ea7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da89851626c18eb6ea2fac655484ba705d71dbbf
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68122007"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007285"
 ---
 # <a name="not-equal-to-transact-sql---traditional"></a>Ungleich (Transact SQL) – Standard
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Vergleicht zwei Ausdrücke (ein Vergleichsoperator). Beim Vergleich von Ausdrücken, die ungleich NULL sind, ist das Ergebnis TRUE, wenn der linke Operand einen anderen Wert als der rechte Operand besitzt; andernfalls ist das Ergebnis FALSE. Wenn einer oder beide Operanden NULL sind, finden Sie weitere Informationen unter [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   

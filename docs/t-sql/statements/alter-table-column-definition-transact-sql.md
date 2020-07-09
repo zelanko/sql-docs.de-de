@@ -21,15 +21,15 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56343f07a4a53b92aa9ab61d99aefd057f9430e4
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2d635f43e607109cd1dc361f8d7252af57daaafe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631778"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000688"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Gibt die Eigenschaften einer Spalte an, die mithilfe von [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) einer Tabelle hinzugefügt wird.  
   
@@ -119,7 +119,7 @@ DOCUMENT
  Gibt an, dass jede Instanz des **xml**-Datentyps in *column_name* nur ein allgemeines Element enthalten kann. DOCUMENT gilt nur für den **xml**-Datentyp und kann nur angegeben werden, wenn *xml_schema_collection* ebenfalls angegeben ist.  
   
  *xml_schema_collection*  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gilt nur für den **xml**-Datentyp zum Verknüpfen einer XML-Schemaauflistung mit diesem Typ. Vor der Typisierung einer **xml**-Spalte mit einem Schema muss das Schema zuerst mithilfe von [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) in der Datenbank erstellt werden.  
   
@@ -178,12 +178,12 @@ IDENTITY
  Der Inkrementwert, der zum Identitätswert der zuvor geladenen Zeile addiert wird.  
   
 NOT FOR REPLICATION  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Kann für die IDENTITY-Eigenschaft angegeben werden. Wenn diese Klausel für die IDENTITY-Eigenschaft angegeben wird, werden Werte in Identitätsspalten nicht inkrementiert, wenn Replikations-Agents Einfügevorgänge ausführen.  
   
 ROWGUIDCOL  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt an, dass die Spalte eine Spalte mit für alle Zeilen global eindeutigen Bezeichnern ist. ROWGUIDCOL kann nur einer **uniqueidentifier**-Spalte zugewiesen werden, und nur eine **uniqueidentifier**-Spalte pro Tabelle kann als ROWGUIDCOL-Spalte gekennzeichnet werden. ROWGUIDCOL kann keinen Spalten des benutzerdefinierten Datentyps zugewiesen werden.  
   

@@ -33,15 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 350ece68d98f8333eb6281a5cbb6fdacf792e51a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632348"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003432"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS zeigt die aktuelle Abfrageoptimierungsstatistik für eine Tabelle oder eine indizierte Sicht an. Der Abfrageoptimierer verwendet Statistiken, um die Kardinalität oder Anzahl der Zeilen im Abfrageergebnis zu schätzen. Hierdurch wird es dem Abfrageoptimierer ermöglicht, einen hochwertigen Abfrageplan zu erstellen. Beispielsweise kann der Abfrageoptimierer Kardinalitätsschätzungen verwenden, um im Abfrageplan statt des Index Scan-Operators den Index Seek-Operator auszuwählen und so die Abfrageleistung zu verbessern, indem ein ressourcenintensiver Indexscan vermieden wird.
   
@@ -167,8 +167,9 @@ Die folgenden Voraussetzungen müssen erfüllt sein, damit der Befehl erfolgreic
 -   Wenn eine der Spalten innerhalb eines Statistikobjekts mit dynamischen Datenmaskierungsregeln maskiert ist, muss der Benutzer neben der SELECT-Berechtigung über die UNMASK-Berechtigung verfügen.
 
 In Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 muss der Benutzer die Tabelle besitzen oder Mitglied der festen Serverrollen `sysadmin`, `db_owner` oder `db_ddladmin` sein.
-[!NOTE]
-Verwenden Sie das Ablaufverfolgungsflag 9485, um das Verhalten in das Verhalten vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 zu ändern.
+
+ > [!NOTE]
+ > Verwenden Sie das Ablaufverfolgungsflag 9485, um das Verhalten in das Verhalten vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 zu ändern.
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>Berechtigungen für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS erfordert eine SELECT-Berechtigung in der Tabelle oder Mitgliedschaft in einer der folgenden Rollen:

@@ -2,7 +2,7 @@
 title: Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server) | Microsoft-Dokumentation
 description: In diesem Artikel wird beschrieben, wie eine Formatdatei zum Überspringen des Imports einer Tabellenspalte verwendet wird, wenn die Daten für die übersprungene Spalte nicht in der Quelldatendatei vorhanden sind.
 ms.custom: ''
-ms.date: 02/15/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a568d1bfbfb461a8749699e0f7e175ed2c002f9e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5a83155dd566812248e37d509e34600a1beeb677
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980415"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007196"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 In diesem Artikel wird beschrieben, wie eine Formatdatei zum Überspringen des Imports einer Tabellenspalte verwendet wird, wenn die Daten für die übersprungene Spalte nicht in der Quelldatendatei vorhanden sind. Eine Datendatei kann weniger Felder enthalten als Spalten in der Zieltabelle vorhanden sind. Das bedeutet, dass Sie das Importieren einer Spalte überspringen können – allerdings nur, wenn eine der folgenden zwei Bedingungen in der Zieltabelle erfüllt ist:
 -   Für die übersprungene Spalte ist NULL zulässig.
@@ -46,7 +46,7 @@ GO
   
 In den Beispielen in diesem Artikel wird auch eine Beispieldatendatei verwendet: `myTestSkipCol2.dat`. Diese Datendatei enthält nur zwei Felder, obwohl die Zieltabelle drei Spalten enthält.
 
-```  
+```
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
@@ -221,9 +221,9 @@ GO
 
 Um eine XML-Formatdatei zu verwenden, die unter Verwendung von `OPENROWSET(BULK...)` eine Tabellenspalte überspringt, muss eine explizite Liste von Spalten in der Auswahlliste und in der Zieltabelle angegeben werden:  
   
-    ```sql
-    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
-    ```
+```sql
+INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
+```
 
 Im folgenden Beispiel werden der Massenrowsetanbieter `OPENROWSET` und die Formatdatei `myTestSkipCol2.xml` verwendet. Die Datendatei `myTestSkipCol2.dat` wird per Massenimport in die `myTestSkipCol` -Tabelle übertragen. Die Anweisung enthält anforderungsgemäß eine explizite Liste der Spalten in der Auswahlliste und in der Zieltabelle.  
   

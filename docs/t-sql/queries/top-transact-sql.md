@@ -21,15 +21,15 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faab44501aa1cae4245d745598e32fab8d66a9f6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948246"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012585"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Begrenzt die zurückgegebenen Zeilen in einem Abfrageresultset auf die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angegebene Anzahl bzw. den darin angegebenen diesbezüglichen Prozentwert. Wenn TOP in Verbindung mit der ORDER BY-Klausel verwendet wird, ist das Resultset auf die ersten *N* sortierten Zeilen beschränkt. Andernfalls gibt TOP die ersten *N* Zeilen in zufälliger Reihenfolge zurück. Verwenden Sie diese Klausel, um die Anzahl der von einer SELECT-Anweisung zurückgegebenen Zeilen anzugeben. Oder verwenden Sie TOP, um die Zeilen anzugeben, die von einer INSERT-, UPDATE-, MERGE- oder DELETE-Anweisung betroffen sind.  
   

@@ -34,15 +34,15 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0eca253ab85302555b84e35a3118b1e8a0873402
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981924"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007340"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Beendet einen Benutzerprozess basierend auf der Sitzungs-ID oder Arbeitseinheit (Unit of Work, UOW). Falls für die angegebene Sitzungs-ID oder UOW viele Vorgänge rückgängig gemacht werden müssen, kann die KILL-Anweisung einige Zeit in Anspruch nehmen. Es ist besonders mehr Zeit erforderlich, wenn dabei ein Rollback für eine lange Transaktion ausgeführt wird.  
   
@@ -123,7 +123,7 @@ Dieser Fehler wird nur ausgegeben, wenn kein Rollback für die Sitzungs-ID oder 
 Der gleiche Statusbericht wird durch Wiederholen der gleichen Anweisung KILL _session ID_|_UOW_ ohne die WITH STATUSONLY-Option erstellt. Es wird allerdings nicht empfohlen, die Option auf diese Weise zu wiederholen. Durch das Wiederholen einer KILL _session ID_-Anweisung wird der neue Prozess möglicherweise beendet, falls das Rollback bereits abgeschlossen war und die Sitzungs-ID vor der Ausführung der neuen KILL-Anweisung einem neuen Task zugewiesen worden ist. Durch die Angabe von WITH STATUSONLY kann verhindert werden, dass der neue Prozess beendet wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Erfordert die Berechtigung ALTER ANY CONNECTION. ALTER ANY CONNECTION ist mit der Mitgliedschaft in den festen Serverrollen sysadmin und processadmin verbunden.  
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Erfordert die ALTER ANY CONNECTION-Berechtigung. ALTER ANY CONNECTION ist mit der Mitgliedschaft in den festen Serverrollen sysadmin und processadmin verbunden.  
   
 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Erfordert die Berechtigung KILL DATABASE CONNECTION. Das Prinzipalkonto auf Serverebene verfügt über die Berechtigung KILL DATABASE CONNECTION.  
   
