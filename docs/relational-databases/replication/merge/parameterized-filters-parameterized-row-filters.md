@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e7d5eae242525d57618050516f6368f016e3d89
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71711067"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882302"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Parametrisierte Filter – Parametrisierte Zeilenfilter
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Mit parametrisierten Zeilenfiltern können verschiedene Datenpartitionen an verschiedene Abonnenten gesendet werden, ohne dass hierfür mehrere Veröffentlichungen erstellt werden müssen (parametrisierte Filter wurden in früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]als dynamische Filter bezeichnet). Der Begriff Partition bezeichnet nichts weiter als eine Teilmenge der Zeilen in einer Tabelle. Abhängig von den Einstellungen für den parametrisierten Zeilenfilter, die im Zuge der Erstellung des Filters festgelegt werden, kann jede Zeile in einer veröffentlichten Tabelle entweder nur zu einer Partition (nicht überlappende Partitionen) oder aber zu mehreren Partitionen (überlappende Partitionen) gehören.  
   
  Nicht überlappende Partitionen können für mehrere Abonnenten freigegeben werden, oder es kann einschränkend festgelegt werden, dass eine bestimmte Partition einem Abonnement zugewiesen wird. Die Einstellungen, mit denen das Verhalten der Partition gesteuert wird, werden weiter unten unter "Verwenden der richtigen Filteroptionen" erläutert. Mithilfe dieser Einstellungen können Sie die parametrisierten Filter an die jeweiligen Anwendungs- und Leistungsanforderungen anpassen. Allgemein gilt, dass überlappende Partitionen ein höheres Maß an Flexibilität ermöglichen, während nicht überlappende Partitionen, die nur für ein einzelnes Abonnement repliziert werden, eine höhere Leistungsfähigkeit aufweisen.  

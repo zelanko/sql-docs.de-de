@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2decc7e78b599ebcd0c16e3373a0b62401d09428
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75720830"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882572"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Verwenden von schreibgeschützten Always On-Verfügbarkeitsgruppen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Eine Verfügbarkeitsgruppe ist eine umfassende Lösung, die hohe Verfügbarkeit für SQL Server bereitstellt und darüber hinaus integrierte Skalierungslösungen bietet. In einer typischen Datenbankanwendung führen mehrere Clients verschiedene Arten von Arbeitsauslastung aus. Manchmal können sich Engpässe aufgrund von Ressourceneinschränkungen entwickeln. 
 

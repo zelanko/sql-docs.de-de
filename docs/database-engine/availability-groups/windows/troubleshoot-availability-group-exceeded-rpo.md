@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822183"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882361"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Nachdem Sie ein erzwungenes manuelles Failover für eine Verfügbarkeitsgruppe für ein sekundäres Replikat im asynchronen Commitmodus ausgeführt haben, stellen Sie eventuell fest, dass der Datenverlust Ihre Recovery Point Objective (RPO) überschreitet. Ein anderer Fall: Wenn Sie den möglichen Datenverlust eines sekundären Replikats im asynchronen Commit mit der Methode unter [Überwachen der Leistung für Always On-Verfügbarkeitsgruppen](monitor-performance-for-always-on-availability-groups.md) berechnen, stellen Sie fest, dass dieser Ihre RPO überschreitet.  
   
  Bei einem sekundären Replikat für synchrone Commits wird sichergestellt, dass keine Daten verloren gehen. Der mögliche Datenverlust eines sekundären Replikats im asynchronen Commitmodus hängt jedoch davon ab, wie groß der Protokollanteil ist, der auf eine Festschreibung im sekundären Replikat wartet.  

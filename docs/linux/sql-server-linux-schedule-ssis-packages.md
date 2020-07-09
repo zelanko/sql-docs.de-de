@@ -8,16 +8,16 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ac7648287b4e4b609f4dd4f25b1b07a512065364
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0526dea857f7ed3cb354e74bf3580d4e6a06669
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065159"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882632"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Zeitliches Planen der Ausführung von SSIS-Paketen unter Linux mit Cron
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Wenn Sie SQL Server Integration Services (SSIS) und SQL Server unter Windows ausführen, können Sie die Ausführung von SSIS-Paketen mit dem SQL Server-Agent automatisieren. Wenn Sie SQL Server und SSIS unter Linux ausführen, ist das SQL Server-Agent-Hilfsprogramm jedoch nicht zum Planen von Aufträgen unter Linux verfügbar. Stattdessen verwenden Sie den Cron-Dienst, der häufig auf Linux-Plattformen verwendet wird, um die Paketausführung zu automatisieren.
 

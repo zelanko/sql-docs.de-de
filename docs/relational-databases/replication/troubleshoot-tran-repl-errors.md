@@ -2,7 +2,7 @@
 title: Suchen nach Fehlern bei der Transaktionsreplikation
 description: Hier wird beschrieben, wie Sie Fehler bei der Transaktionsreplikation identifizieren. Der Artikel erläutert auch die Methodik für die Behandlung von Problemen bei der Replikation.
 ms.custom: seo-lt-2019
-ms.date: 04/27/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -12,15 +12,15 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9a079838d343ba8de93e270d01d704eb32219ee9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7c818e48c916a8ad3da7dfda7eaad6230c16ebd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286987"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882283"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Problembehandlung: Suchen von Fehlern bei SQL Server-Transaktionsreplikationen 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Die Problembehandlung von Replikationsfehlern kann ohne grundlegende Kenntnisse der Transaktionsreplikation frustrierend sein. Der erste Schritt beim Erstellen einer Veröffentlichung besteht darin, den Momentaufnahmen-Agent eine Momentaufnahme erstellen zu lassen und diese im Ordner für Momentaufnahmen zu speichern. Anschließend wendet der Verteilungs-Agent die Momentaufnahme auf den Abonnenten an. 
 
@@ -77,8 +77,10 @@ Der Momentaufnahmen-Agent generiert die Momentaufnahme und schreibt diese in den
 
     ![Fehler „Zugriff verweigert“ im Momentaufnahmen-Agent](media/troubleshooting-tran-repl-errors/snapshot-access-denied.png)
 
-        The replication agent had encountered an exception.
-        Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```console
+    The replication agent had encountered an exception.
+    Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```
 
 Wenn Ihre Windows-Berechtigungen für Ihren Momentaufnahmeordner nicht ordnungsgemäß konfiguriert wurden, wird Ihnen beim Momentaufnahmen-Agent der Fehler „Zugriff verweigert“ angezeigt. Sie müssen die Berechtigungen für den Ordner überprüfen, in dem Ihre Momentaufnahme gespeichert ist, und sicherstellen, dass das Konto, das verwendet wird, um den Momentaufnahmen-Agent auszuführen, für den Zugriff auf die Freigabe berechtigt ist.  
 
@@ -108,10 +110,12 @@ Der Protokolllese-Agent stellt eine Verbindung mit Ihrer Verlegerdatenbank her u
     
     ![Fehlerdetails für den Protokolllese-Agent](media/troubleshooting-tran-repl-errors/log-reader-error.png)
 
-       Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
-       The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
-       Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
-       Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```console
+    Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
+    The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
+    Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
+    Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```
 
 6. Dieser Fehler tritt üblicherweise auf, wenn der Besitzer der Verlegerdatenbank nicht ordnungsgemäß festgelegt ist. Dies kann beim Wiederherstellen einer Datenbank geschehen. So überprüfen Sie, ob dies der Fall ist:
 
@@ -127,7 +131,7 @@ Der Protokolllese-Agent stellt eine Verbindung mit Ihrer Verlegerdatenbank her u
 
     ```sql
     -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
-    EXEC sp_changedbowner '<useraccount>'
+    EXECUTE sp_changedbowner '<useraccount>'
     -- example for sa: exec sp_changedbowner 'sa'
     -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
     ```
@@ -158,9 +162,11 @@ Der Verteilungs-Agent sucht Daten in der Verteilungsdatenbank und wendet diese a
 2. Das Dialogfeld **Distributor to Subscriber History** (Verlauf von Verteiler zu Abonnent) wird geöffnet und zeigt an, welches Problem bei dem Agent aufgetreten ist: 
 
      ![Fehlerdetails des Verteilungs-Agents](media/troubleshooting-tran-repl-errors/dist-history-error.png)
-    
-        Error messages:
-        Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+
+    ```console
+    Error messages:
+    Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+    ```
 
 3. Die Fehlermeldung gibt an, dass der Verteilungs-Agent den Vorgang wiederholt. Überprüfen Sie den Auftragsverlauf des Verteilungs-Agents, um weitere Informationen zu erhalten: 
 
@@ -175,9 +181,11 @@ Der Verteilungs-Agent sucht Daten in der Verteilungsdatenbank und wendet diese a
 5. Wählen Sie einen der Fehlereinträge aus, und zeigen Sie die Fehlermeldung im unteren Bereich des Fensters an:  
 
     ![Fehlertext, der angibt, dass ein falsches Kennwort für den Verteilungs-Agent vorliegt](media/troubleshooting-tran-repl-errors/dist-pw-wrong.png)
-    
-        Message:
-        Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+
+    ```console
+    Message:
+    Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+    ```
 
 6. Dieser Fehler gibt an, dass das vom Verteilungs-Agent verwendete Kennwort falsch ist. So beheben Sie dieses Problem:
 
@@ -194,11 +202,13 @@ Der Verteilungs-Agent sucht Daten in der Verteilungsdatenbank und wendet diese a
     Öffnen Sie den **Distributor to Subscriber History** (Verlauf von Verteiler zu Abonnent), indem Sie mit der rechten Maustaste auf das Abonnement unter **Replikationsmonitor** > **Details anzeigen** klicken. Hier lautet der Fehler nun anders: 
 
     ![Fehler, der angibt, dass der Verteilungs-Agent keine Verbindung herstellen kann](media/troubleshooting-tran-repl-errors/dist-agent-cant-connect.png)
-           
-        Connecting to Subscriber 'NODE2\SQL2016'        
-        Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
-        Number:  18456
-        Message: Login failed for user 'NODE2\repl_distribution'.
+
+    ```console
+    Connecting to Subscriber 'NODE2\SQL2016'        
+    Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
+    Number:  18456
+    Message: Login failed for user 'NODE2\repl_distribution'.
+    ```
 
 8. Dieser Fehler gibt an, dass der Verteilungs-Agent keine Verbindung mit dem Abonnenten herstellen konnte, da die Anmeldung des Benutzers **NODE2\repl_distribution** fehlgeschlagen ist. Sie können dies näher untersuchen, indem Sie eine Verbindung mit dem Abonnenten herstellen und das *aktuelle* SQL-Fehlerprotokoll unter dem Knoten **Verwaltung** im Objekt-Explorer öffnen: 
 
@@ -234,8 +244,10 @@ Sie können die ausführliche Protokollierung verwenden, um detailliertere Infor
 
 1. Beginnen Sie im Feld **Befehl** eine neue Zeile, geben Sie folgenden Text ein, und klicken Sie auf **OK**: 
 
-       -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
-    
+    ```console
+    -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
+    ```
+
     Sie können den Speicherort und den Ausführlichkeitsgrad beliebig ändern.
 
     ![Ausführliche Ausgabe in den Eigenschaften des Auftragsschritts](media/troubleshooting-tran-repl-errors/verbose.png)
