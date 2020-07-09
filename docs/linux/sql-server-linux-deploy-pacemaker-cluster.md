@@ -8,16 +8,16 @@ ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da852f20d9109c5c4e2988cbdfc3915fe226718f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077473"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896518"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Bereitstellen eines Pacemaker-Clusters für SQL Server für Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 In diesem Tutorial werden die Aufgaben dokumentiert, die zum Bereitstellen eines Linux Pacemaker-Clusters für eine [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On-Verfügbarkeitsgruppe oder eine Failoverclusterinstanz (FCI) durchgeführt werden müssen. Im Gegensatz zum eng gekoppelten Windows Server-/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Stapel, kann die Erstellung des Pacemaker-Clusters und die Konfiguration der Verfügbarkeitsgruppe unter Linux sowohl vor als auch nach der Installation von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] durchgeführt werden. Die Integration und Konfiguration von Ressourcen für den Pacemaker-Teil der Bereitstellung einer Verfügbarkeitsgruppe oder Failoverclusterinstanz wird abgeschlossen, nachdem der Cluster konfiguriert wurde.
 > [!IMPORTANT]

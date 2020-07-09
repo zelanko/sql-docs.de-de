@@ -9,16 +9,16 @@ ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 729aacf69f8aa36964f33c0bcb282351a67ab444
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635431"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902315"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes Service
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Erfahren Sie, wie Sie eine SQL Server-Instanz für Kubernetes in AKS (Azure Kubernetes Service) mit persistenten Speicher für Hochverfügbarkeit konfigurieren. Die Lösung stellt Resilienz bereit. Wenn die SQL Server-Instanz fehlschlägt, erstellt Kubernetes sie automatisch in einem neuen Pod neu. Kubernetes bietet auch Resilienz für Knotenausfälle.
 
@@ -160,12 +160,15 @@ In diesem Schritt erstellen Sie ein Manifest, um den Container zu beschreiben, d
 1. Erstellen Sie ein Manifest (eine YAML-Datei), um die Bereitstellung zu beschreiben. Im folgenden Beispiel wird eine Bereitstellung beschrieben, die einen Container enthält, der auf dem SQL Server-Containerimage basiert.
 
    ```yaml
-   apiVersion: apps/v1beta1
+   apiVersion: apps/v1
    kind: Deployment
    metadata:
      name: mssql-deployment
    spec:
      replicas: 1
+     selector:
+        matchLabels:
+          app: mssql
      template:
        metadata:
          labels:

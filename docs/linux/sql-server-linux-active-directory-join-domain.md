@@ -9,16 +9,16 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c787409d4e8772d89fc748d39c605506f5dcb520
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216191"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896970"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Verknüpfen eines Hosts für SQL Server für Linux mit einer Active Directory-Domäne
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Dieser Artikel enthält allgemeine Anleitungen zum Verknüpfen eines Hostcomputers für SQL Server für Linux mit einer Active Directory-Domäne (AD). Es gibt zwei Möglichkeiten: Sie können entweder ein integriertes SSSD-Paket oder ein Drittanbietertool für Active Directory verwenden. Beispielsweise können Sie die folgenden Drittanbieterprodukte für den Domänenbeitritt verwenden: [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) und [Centrify](https://www.centrify.com/). Außerdem wird in diesem Artikel ausführlich beschrieben, wie Sie Ihre Active Directory-Konfiguration überprüfen können. Wir werden jedoch keine Anweisungen dazu bereitstellen, wie Sie mithilfe von Drittanbietertools einen Computer mit einer Domäne verknüpfen können.
 

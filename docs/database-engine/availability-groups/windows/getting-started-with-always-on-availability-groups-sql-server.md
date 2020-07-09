@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a7e0e50e22fc257b3a8429e556fe7fd2cec2c97d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c27141b4932e40a3220fa9e3cdd802a7a0d05559
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68017501"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896430"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Erste Schritte mit Always On-Verfügbarkeitsgruppen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Dieses Thema enthält eine Einführung in die Schritte zum Konfigurieren von Instanzen von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] für die Unterstützung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sowie zum Erstellen, Verwalten und Überwachen von Verfügbarkeitsgruppen.  
   

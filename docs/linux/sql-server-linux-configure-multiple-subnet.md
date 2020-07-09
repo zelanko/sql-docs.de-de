@@ -9,16 +9,16 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: af017cf5d36075fdba6de31aa841e980cc20e175
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6cd6b4cdd25c6da0a7d034e2f980ad583a6561b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76911013"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901550"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Konfigurieren von Always On-Verfügbarkeitsgruppen für und Failoverclusterinstanzen für Multisubnetze
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Wenn eine Always On-Verfügbarkeitsgruppe (Availability Group, AG) oder eine Failoverclusterinstanz (FCI) mehrere Standorte umfasst, verfügt jeder Standort in der Regel über ein eigenes Netzwerk. Dies bedeutet häufig, dass jeder Standort über eine eigene IP-Adressierung verfügt. Beispielsweise beginnen die Adressen von Standort A mit 192.168.1*x* und die Adressen von Standort B mit 192.168.2.*x*, wobei *x* der Teil der IP-Adresse ist, der für den Server eindeutig ist. Wenn auf der Netzwerkebene kein Routing vorhanden ist, sind diese Server nicht in der Lage, miteinander zu kommunizieren. Es gibt zwei Möglichkeiten, dieses Szenario zu behandeln: richten Sie ein Netzwerk ein, das als Brücke zwischen den beiden unterschiedlichen Subnetzen dient – auch als VLAN bezeichnet – oder konfigurieren Sie das Routing zwischen den Subnetzen.
 

@@ -12,16 +12,16 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c93711eae4a6a2eea397940811089f366e47829
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198377"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896964"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Verwenden der Active Directory-Authentifizierung für SQL Server für Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 In diesem Tutorial wird erläutert, wie Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter Linux konfigurieren, um die Active Directory-Authentifizierung (AD) zu unterstützen, die auch als integrierte Authentifizierung bezeichnet wird. Eine Übersicht dazu finden Sie unter [Active Directory-Authentifizierung für SQL Server für Linux](sql-server-linux-active-directory-auth-overview.md).
 

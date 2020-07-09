@@ -19,17 +19,17 @@ helpviewer_keywords:
 - connections [SQL Server], simultaneous
 - number of simultaneous user connections
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0066488fd917e5ffbe88767318954c1727adf238
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6f005f603a3fa63fa55a94f3e8900758f5799279
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68130328"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899158"
 ---
 # <a name="x40x40max_connections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt die maximale Anzahl gleichzeitiger Benutzerverbindungen an, die für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zulässig sind. Die zurückgegebene Anzahl ist nicht notwendigerweise die aktuell konfigurierte Anzahl.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68130328"
 ## <a name="remarks"></a>Bemerkungen  
  Die tatsächliche Anzahl der zulässigen Benutzerverbindungen hängt außerdem von der installierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie den Beschränkungen durch Ihre Anwendungen und Hardware ab.  
   
- Verwenden Sie **sp_configure**, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine kleinere Anzahl von Verbindungen neu zu konfigurieren.  
+ Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_configure **, um**  für eine kleinere Anzahl von Verbindungen neu zu konfigurieren.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die maximale Anzahl von Benutzerverbindungen für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben. Im Beispiel wird vorausgesetzt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht für eine geringere Anzahl von Benutzerverbindungen neu konfiguriert wurde.  

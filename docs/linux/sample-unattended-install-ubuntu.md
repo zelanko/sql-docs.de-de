@@ -8,16 +8,16 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 427aff5fe9911fde59f3f37077fc9c2306d2bd42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e9921f6b2639d533674a487de26c1d26aa365a0f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487598"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900166"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Beispiel: Skript für die unbeaufsichtigte SQL Server-Installation unter Ubuntu
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Dieses Bash-Beispielskript installiert SQL Server 2017 unter Ubuntu 16.04 ohne interaktive Eingabe. Es stellt Beispiele für die Installation von Datenbank-Engine, SQL Server-Befehlszeilentools und SQL Server-Agent bereit und führt Schritte nach der Installation aus. Optional können Sie die Volltextsuche installieren und einen Administratorbenutzer erstellen.
 

@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: a4ed76cde2cd8ff8b9d862b981dcbed2361c6ae8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 063ef8f06b6a93e54f7189c1a68cbfa176f21208
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73049742"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896545"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Konnektivitätsbibliotheken und-Frameworks für Microsoft SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Arbeiten Sie die [Erste-Schritte-Tutorials](https://aka.ms/sqldev) durch, um schnell erste Schritte mit Programmiersprachen wie C#, Java, Node.js, PHP und Python auszuführen und eine App mit SQL Server für Linux oder Windows oder Docker für macOS zu erstellen.
 

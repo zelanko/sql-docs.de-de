@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 287e6cd2fd4f1004aaa79a69ec7388eb3b695a68
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251264"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898059"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Failoveroption für die Integritätserkennung auf Datenbankebene in einer Verfügbarkeitsgruppe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Ab SQL Server 2016 ist die Option „Integritätserkennung auf Datenbankebene“ (DB_FAILOVER) verfügbar, wenn eine Always On-Verfügbarkeitsgruppe konfiguriert wird. Die Integritätserkennung auf Datenbankebene erkennt, wenn eine Datenbank sich nicht mehr im Onlinestatus befindet oder ein Fehler auftritt und löst ein automatisches Failover der Verfügbarkeitsgruppe aus.
 
 Die Integritätserkennung auf Datenbankebene ist für die gesamte Verfügbarkeitsgruppe aktiviert, wodurch die Datenbank-Integritätserkennung jede Datenbank in der Verfügbarkeitsgruppe überwacht. Sie kann nicht selektiv für bestimmte Datenbanken in der Verfügbarkeitsgruppe aktiviert werden.

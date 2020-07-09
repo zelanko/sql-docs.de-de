@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 38bbab7ea9ae6aa7ddd70ede2161988c01431573
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a563558f6b7d20dd4ca8d5f6573d1b16f598fa1f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254090"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900876"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>Verwenden von automatischem Seeding zum Initialisieren einer Always On-Verfügbarkeitsgruppe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Mit SQL Server 2016 wurde das automatische Seeding von Verfügbarkeitsgruppen eingeführt. Beim Erstellen einer Verfügbarkeitsgruppe mit automatischem Seeding erstellt SQL Server automatisch die sekundären Replikate für jede Datenbank in der Gruppe. Sie müssen sekundäre Replikate nicht mehr manuell sichern und wiederherstellen. Erstellen Sie zum Aktivieren des automatischen Seedings die Verfügbarkeitsgruppe mit T-SQL, oder verwenden Sie die neueste Version von SQL Server Management Studio.
 
