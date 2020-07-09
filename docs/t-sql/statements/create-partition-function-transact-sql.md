@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7529d06f5adacb930debea499059b4df42a71dea
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 30e57f094256004d90d82df175fff9f9e2e17ddd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735786"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Erstellt eine Funktion in der aktuellen Datenbank, die Zeilen einer Tabelle oder eines Indexes Partitionen zuordnet. Dies erfolgt auf Grundlage der Werte einer angegebenen Spalte. Das Verwenden von CREATE PARTITION FUNCTION ist der erste Schritt beim Erstellen einer partitionierten Tabelle oder eines partitionierten Index. Eine Tabelle oder ein Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann maximal 15.000 Partitionen aufweisen.  
   

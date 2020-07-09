@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1b95797a5725a620d545b51ac2afb5b55464cbb9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e2ad92efd8a02f783885a72299bae6bfd77b44bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748488"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Vollständige Datenbankwiederherstellungen (einfaches Wiederherstellungsmodell)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Das Ziel einer vollständigen Datenbankwiederherstellung besteht in der Wiederherstellung der gesamten Datenbank. Die gesamte Datenbank ist für die Dauer der Wiederherstellung offline. Bevor Teile der Datenbank wieder online zur Verfügung gestellt werden können, müssen alle Daten bis zu einem konsistenten Zeitpunkt wiederhergestellt werden. Ein solcher Punkt ist gegeben, wenn für alle Teile der Datenbank derselbe Zeitpunkt gilt und keine Transaktionen ohne Commit vorhanden sind.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "82829777"
 ##  <a name="overview-of-database-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> Übersicht über die Datenbankwiederherstellung mit dem einfachen Wiederherstellungsmodell  
  Für eine vollständige Datenbankwiederherstellung mit dem einfachen Wiederherstellungsmodell sind nur ein oder zwei [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) -Anweisungen erforderlich, je nachdem, ob Sie eine differenzielle Datenbanksicherung wiederherstellen möchten. Stellen Sie lediglich die letzte Sicherung wieder her, wie in der folgenden Abbildung dargestellt, wenn Sie nur eine vollständige Datenbanksicherung verwenden:  
   
- ![Wiederherstellung nur einer vollständigen Datenbanksicherung](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "Wiederherstellung nur einer vollständigen Datenbanksicherung")  
+ ![Wiederherstellung nur einer vollständigen Datenbanksicherung](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.png "Wiederherstellung nur einer vollständigen Datenbanksicherung")  
   
  Wenn Sie auch eine differenzielle Datenbanksicherung verwenden, stellen Sie die letzte vollständige Datenbanksicherung wieder her, ohne die Datenbank wiederherzustellen. Anschließend stellen Sie die letzte differenzielle Datenbanksicherung wieder her und stellen die Datenbank wieder her. Die folgende Abbildung veranschaulicht diesen Prozess:  
   
- ![Wiederherstellung von vollständigen und von differenziellen Datenbanksicherungen](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.gif "Wiederherstellung von vollständigen und von differenziellen Datenbanksicherungen")  
+ ![Wiederherstellung von vollständigen und von differenziellen Datenbanksicherungen](../../relational-databases/backup-restore/media/bnrr-rmsimple2-diffdbbu.png "Wiederherstellung von vollständigen und von differenziellen Datenbanksicherungen")  
   
 > [!NOTE]  
 >  Informationen zum Wiederherstellen einer Datenbanksicherung auf einer anderen Serverinstanz finden Sie unter [Kopieren von Datenbanken durch Sichern und Wiederherstellen](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  

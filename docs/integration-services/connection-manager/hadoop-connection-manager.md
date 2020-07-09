@@ -1,7 +1,7 @@
 ---
 title: Hadoop-Verbindungs-Manager | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cf042d2ab9c2d3e7c492fa008282cbcbe730f8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903787"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735110"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop-Verbindungs-Manager
 
@@ -83,7 +83,7 @@ Gehen Sie auf dem SSIS-Computer wie folgt vor:
 
     Der Computer muss als Mitglied einer Arbeitsgruppe konfiguriert werden, da sich ein Kerberos-Bereich von einer Windows-Domäne unterscheidet. Legen Sie wie im folgenden Beispiel gezeigt den Kerberos-Bereich fest, und fügen Sie einen KDC-Server hinzu. Ersetzen Sie `REALM.COM` ggf. durch Ihren eigenen entsprechenden Bereich.
 
-    ```    
+    ```console
     C:> Ksetup /setdomain REALM.COM`
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     ```
@@ -92,7 +92,7 @@ Gehen Sie auf dem SSIS-Computer wie folgt vor:
 
 2.  Überprüfen Sie die Konfiguration mit dem **Ksetup**-Befehl. Die Ausgabe sollte wie folgt aussehen:
 
-    ```
+    ```console
     C:> Ksetup
     default realm = REALM.COM (external)
     REALM.com:
@@ -114,7 +114,7 @@ Gehen Sie auf dem KDC-Server wie folgt vor:
 
 1.  Bearbeiten Sie die KDC-Konfiguration in der Datei **krb5.conf**. Erlauben Sie KDC, der Windows-Domäne zu vertrauen, indem Sie auf die folgende Konfigurationsvorlage verweisen. Standardmäßig befindet sich die Konfiguration unter **/etc/krb5.conf**.
 
-    ```
+    ```console
     [logging]
     default = FILE:/var/log/krb5libs.log
     kdc = FILE:/var/log/krb5kdc.log
@@ -162,7 +162,7 @@ Gehen Sie auf dem Domänencontroller wie folgt vor:
 
 1.  Führen Sie die folgenden **Ksetup**-Befehle aus, um einen Bereichseintrag hinzuzufügen:
 
-    ```
+    ```console
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
@@ -201,10 +201,10 @@ Gehen Sie auf dem Gatewaycomputer wie folgt vor:
 
 Führen Sie die folgenden **Ksetup**-Befehle aus, um einen Bereichseintrag hinzuzufügen.
 
-    ```
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-    C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
-    ```
+```console
+C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
+C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
+```
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Hadoop Hive-Task](../../integration-services/control-flow/hadoop-hive-task.md)   

@@ -17,17 +17,17 @@ helpviewer_keywords:
 - '@@OPTIONS function'
 - current SET options
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e33ca6d8afdb7aa9245bbdc6b0ad225dcd00dade
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 4103fef5cf8faa87de2ed0870687d7880135ee04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738061"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt Informationen zu den aktuellen SET-Optionen zurück.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73982469"
   
  Die **\@\@OPTIONS**-Funktion gibt eine Bitmap der Optionen zurück, die in einen Integer zur Basis 10 (dezimal) konvertiert wurde. Die Biteinstellungen werden an den in einer Tabelle im Artikel [Konfigurieren der Benutzeroptionen für die Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) beschriebenen Orten gespeichert.  
   
- Konvertieren Sie den von **\@\@OPTIONS** zurückgegebenen Integer in das Binärformat, und suchen Sie in der unter [Konfigurieren der Benutzeroptionen für die Serverkonfigurationsoption](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) aufgeführten Tabelle nach den Werten, um den **\@\@OPTIONS**-Wert zu decodieren. Wenn beispielsweise `SELECT @@OPTIONS;` den Wert `5496` zurückgibt, verwenden Sie den Windows-Rechner (**calc.exe**), um die Dezimalzahl `5496` ins Binärformat zu konvertieren. Das Ergebnis ist `1010101111000`. Die am weitesten rechts stehenden Zeichen (Binärwerte 1, 2 und 4) haben den Wert 0 (null), was darauf hindeutet, dass die ersten drei Elemente in der Tabelle deaktiviert sind. In der Tabelle sehen Sie, dass die Elemente **DISABLE_DEF_CNST_CHK**, **IMPLICIT_TRANSACTIONS** und **CURSOR_CLOSE_ON_COMMIT** lauten. Das nächste Element (**ANSI_WARNINGS** an der Position `1000`) ist aktiviert. Fahren Sie auf der linken Seite mit der Bitmap und der Liste der Optionen fort. Wenn die ganz links stehenden Optionen einen Wert von 0 (null) aufweisen, wurden sie durch die Typkonvertierung abgeschnitten. Bei der Bitmap `1010101111000` handelt es sich tatsächlich um `001010101111000`, um alle 15 Optionen darzustellen.  
+ Konvertieren Sie den von **\@\@OPTIONS** zurückgegebenen Integer in das Binärformat, und suchen Sie in der unter **Konfigurieren der Benutzeroptionen für die Serverkonfigurationsoption\@ aufgeführten Tabelle nach den Werten, um den \@** [OPTIONS](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)-Wert zu decodieren. Wenn beispielsweise `SELECT @@OPTIONS;` den Wert `5496` zurückgibt, verwenden Sie den Windows-Rechner (**calc.exe**), um die Dezimalzahl `5496` ins Binärformat zu konvertieren. Das Ergebnis ist `1010101111000`. Die am weitesten rechts stehenden Zeichen (Binärwerte 1, 2 und 4) haben den Wert 0 (null), was darauf hindeutet, dass die ersten drei Elemente in der Tabelle deaktiviert sind. In der Tabelle sehen Sie, dass die Elemente **DISABLE_DEF_CNST_CHK**, **IMPLICIT_TRANSACTIONS** und **CURSOR_CLOSE_ON_COMMIT** lauten. Das nächste Element (**ANSI_WARNINGS** an der Position `1000`) ist aktiviert. Fahren Sie auf der linken Seite mit der Bitmap und der Liste der Optionen fort. Wenn die ganz links stehenden Optionen einen Wert von 0 (null) aufweisen, wurden sie durch die Typkonvertierung abgeschnitten. Bei der Bitmap `1010101111000` handelt es sich tatsächlich um `001010101111000`, um alle 15 Optionen darzustellen.  
   
 ## <a name="examples"></a>Beispiele  
   

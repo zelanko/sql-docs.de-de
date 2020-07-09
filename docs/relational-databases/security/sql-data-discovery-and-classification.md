@@ -8,18 +8,18 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 09/12/2019
-ms.author: mibar
-author: barmichal
-ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.date: 06/10/2020
+ms.author: datrigan
+author: DavidTrigano
+ms.openlocfilehash: 7c23b7faa93281ab34ed4b500d10dfd50e9c8c76
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75548328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737041"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL-Datenermittlung und -klassifizierung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Die Datenermittlung und -klassifizierung führt ein neues Tool in [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) für das **Ermitteln**, **Klassifizieren**, **Bezeichnen**  &  **Melden** von vertraulichen Daten in Ihren Datenbanken ein.
 Die Ermittlung und Klassifizierung Ihrer sensibelsten Daten (geschäftliche, finanzielle, gesundheitliche usw.) kann im Informationsschutzformat Ihres Unternehmens eine entscheidende Rolle spielen. Sie kann für Folgendes als Infrastruktur gelten:
@@ -126,7 +126,9 @@ SELECT
     O.NAME AS table_name,
     C.NAME AS column_name,
     information_type,
-    label
+    label,
+    rank,
+    rank_desc
 FROM sys.sensitivity_classifications sc
     JOIN sys.objects O
     ON  sc.major_id = O.object_id

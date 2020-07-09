@@ -12,15 +12,15 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c3bc0a8e805b8a416cba9e7bf7786cfc9840e046
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 1e49a379ed12123c684497d84804c9ebd1ebf9ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220474"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748470"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Konfigurieren der erweiterten Optionen für die verwaltete Sicherung von SQL Server zu Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Das folgende Tutorial beschreibt, wie Sie erweiterte Optionen für [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]festlegen. Diese Prozeduren sind nur notwendig, wenn Sie die Funktionen benötigen, die sie bieten. Andernfalls können Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] aktivieren und sich auf das Standardverhalten verlassen.  
   
  In jedem Szenario wird die Sicherung mit dem `database_name` -Parameter angegeben. Wenn `database_name` NULL oder * ist, wirken sich die Änderungen auf die Standardeinstellungen auf Instanzebene aus. Instanzebeneneinstellungen wirken sich auch auf neue Datenbanken aus, die nach der Änderung erstellt wurden.  

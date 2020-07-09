@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 09b3759af6fc956d83daee464b5120fa80462dcf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 466fa0d08af2fa91aefa4d206037080a5aa8f0b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72278312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737605"
 ---
 # <a name="create-a-database-mail-profile"></a>Erstellen eines Profils für Datenbank-E-Mail
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Verwenden Sie den **Assistenten zum Konfigurieren von Datenbank-E-Mail** oder [!INCLUDE[tsql](../../includes/tsql-md.md)] , um öffentliche und private Datenbank-E-Mail-Profile zu erstellen. Weitere Informationen über E-Mail-Profile finden Sie unter [Profile für Datenbank-E-Mail](database-mail-configuration-objects.md).
   
 -   **Vorbereitungen:** [Anforderungen](#Prerequisites), [Sicherheit](#Security)  

@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f48d933dec2dc87d0171641146f652a4e881045e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155058"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735680"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS-Klausel (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie den Ausführungskontext der folgenden benutzerdefinierten Module definieren: Funktionen (außer Inline-Tabellenwertfunktionen), Prozeduren, Warteschlangen und Trigger.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "70155058"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 -- SQL Server Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   
@@ -58,7 +58,7 @@ Queues
 { EXEC | EXECUTE } AS { SELF | OWNER | 'user_name' }   
 ```  
   
-```  
+```syntaxsql
   
 -- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
@@ -101,7 +101,7 @@ DDL Triggers with Database Scope
  Die Benutzer-ID des Ausführungskontexts wird in Metadaten gespeichert und kann in der **execute_as_principal_id**-Spalte der **sys.sql_modules**- oder **sys.assembly_modules**-Katalogsicht angezeigt werden.  
   
  **'** *login_name* **'**  
- Gibt an, dass die Anweisungen innerhalb des Moduls im Kontext des in *login_name* angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamens ausgeführt werden. Berechtigungen für alle Objekte innerhalb des Moduls werden gegen *login_name* geprüft. *login_name* kann nur für DDL-Trigger im Serverbereich oder für LOGON-Trigger angegeben werden.  
+ Gibt an, dass die Anweisungen innerhalb des Moduls im Kontext des in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_name*angegebenen*-Anmeldenamens ausgeführt werden. Berechtigungen für alle Objekte innerhalb des Moduls werden gegen *login_name* geprüft. *login_name* kann nur für DDL-Trigger im Serverbereich oder für LOGON-Trigger angegeben werden.  
   
  *login_name* kann kein(e) Gruppe, Rolle, Zertifikat, Schlüssel oder integriertes Konto sein, wie z.B. NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService oder NT AUTHORITY\LocalSystem.  
   

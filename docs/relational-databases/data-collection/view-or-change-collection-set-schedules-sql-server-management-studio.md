@@ -1,7 +1,6 @@
 ---
 title: Anzeigen oder Ändern von Sammlungssatzzeitplänen
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -18,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8e72be7c753db0871191e44bbc431d755ddfa193
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733812"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Anzeigen oder Ändern von Sammlungssatz-Zeitplänen (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Sie können Zeitpläne für den Sammlungssatz mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen oder ändern.  
   
  Der Auflistmodus (mit oder ohne Zwischenspeicherung) bestimmt, wie Sie Änderungen an einem Zeitplan vornehmen können. Der Modus mit Zwischenspeicherung verwendet separate Zeitpläne für Sammlung und Hochladen. Der Modus ohne Zwischenspeicherung verwendet für Sammlung und Hochladen denselben Zeitplan. Die einzelnen Systemdaten-Sammlungssätze weisen den folgenden Auflistmodustyp auf:  
@@ -110,10 +110,11 @@ ms.locfileid: "74055331"
  **Datensammlung und -upload**  
  Gibt an, wie Daten aufgelistet und in das Verwaltungs-Data Warehouse hochgeladen werden. Wählen Sie eine der folgenden Optionen aus.  
   
-|||  
-|-|-|  
+| Option | BESCHREIBUNG |
+| :----- | :---------- |
 |**Nicht zwischengespeichert. Für Datensammlung und -upload wird derselbe Zeitplan verwendet.**|Wenn diese Option aktiviert ist, geben Sie einen der folgenden Werte an:<br /><br /> **Zeitplan** Daten werden nach einem Zeitplan aufgelistet und hochgeladen. Klicken Sie auf **Auswählen** , um einen vordefinierten Zeitplan aus der Liste auszuwählen, oder klicken Sie auf **Neu** , um einen neuen Zeitplan zu erstellen.<br /><br /> **Bedarfsgesteuert**. Daten werden nach Bedarf aufgelistet und hochgeladen.|  
 |**Zwischengespeichert. Sammeln und Zwischenspeichern von Daten gemäß bestimmten Sammlungshäufigkeiten. Zwischengespeicherte Daten werden gemäß einem separaten Zeitplan hochgeladen.**|Daten werden gemäß bestimmten Sammlungshäufigkeiten aufgelistet und zwischengespeichert. Die aufgelisteten Daten werden gemäß einem separaten Zeitplan hochgeladen.|  
+|||
   
  **Sammelhäufigkeit (Sek)**  
  Zeigt die Sammelelemente im Sammlungssatz an. Die folgenden Informationen werden für jedes Sammelelement bereitgestellt:  
@@ -133,11 +134,12 @@ ms.locfileid: "74055331"
  **Festlegen, wie lang gesammelte Daten im Verwaltungs-Data Warehouse beibehalten werden**  
  Gibt an, wie lange aufgelistete Daten beibehalten werden. Wählen Sie eine der folgenden Optionen aus.  
   
-|||  
-|-|-|  
+| Option | BESCHREIBUNG |
+| :----- | :---------- |
 |**Daten beibehalten für**|Diese Option ist standardmäßig aktiviert, und die Standardbeibehaltungsdauer ist 14 Tage.|  
 |**Daten unbegrenzt beibehalten**|Daten können für unbegrenzte Zeit beibehalten werden.|  
-  
+|||
+
  **Uploads (Seite)**  
   
  Auf dieser Seite können Sie den Uploadzeitplan für Daten konfigurieren, die von diesem Sammlungssatz aufgelistet werden.  

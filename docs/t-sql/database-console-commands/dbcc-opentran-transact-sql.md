@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 02a90a155bcfcc2ad2294fb03c4e8b832701e36c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e7ccef337d7b693561ec2d328fcc3a2f8afae72c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632401"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748918"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Mithilfe von DBCC OPENTRAN können aktive Transaktionen identifiziert werden, die die Protokollkürzung möglicherweise verhindern. DBCC OPENTRAN zeigt Informationen zur ältesten aktiven Transaktion sowie zu den ältesten verteilten und nicht verteilten replizierten Transaktionen (sofern vorhanden) im Transaktionsprotokoll der angegebenen Datenbank an. Ergebnisse werden nur angezeigt, wenn im Protokoll eine aktive Transaktion vorhanden ist oder die Datenbank Replikationsinformationen enthält. Wenn keine aktiven Transaktionen im Protokoll enthalten sind, wird eine Informationsmeldung angezeigt.
   

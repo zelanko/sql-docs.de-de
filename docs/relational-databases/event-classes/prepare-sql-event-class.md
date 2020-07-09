@@ -12,15 +12,15 @@ ms.assetid: 4ff3aa04-0f1a-49e2-a43d-7251bab4a458
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9723919b4b95b4cf482fb1af9c393e5a791bb4f0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 767c1a4d4848fbaf08b86b95eb0349e2d73caac2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68027164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733743"
 ---
 # <a name="prepare-sql-event-class"></a>Prepare SQL (Ereignisklasse)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Von der Prepare SQL-Ereignisklasse wird angegeben, dass von SqlClient, ODBC, OLE DB oder DB-Library mindestens eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung zum Verwenden vorbereitet worden ist.  
   
 ## <a name="prepare-sql-event-class-data-columns"></a>Prepare SQL-Ereignisklassen-Datenspalten  

@@ -26,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 26ed3efa0738579d9abfde909f161105d95f91a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75a8ee28972b2b80fc1244a80b35b7c9d5d6daee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737095"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Wenn der Datenbankoptimierungsratgeber Datenbanken optimiert, erstellt er Zusammenfassungen, Empfehlungen, Berichte und Optimierungsprotokolle. Sie können die Optimierungsprotokollausgabe dazu verwenden, Probleme bei Optimierungssitzungen des Datenbankoptimierungsratgebers zu beheben. Mithilfe der Zusammenfassungen, Empfehlungen und Berichte können Sie bestimmen, ob Sie Optimierungsempfehlungen implementieren oder die Optimierung fortsetzen möchten, bis Sie die Abfrageleistungsverbesserungen erreicht haben, die Sie für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation benötigen. Informationen über die Verwendung des Datenbankoptimierungsratgebers zum Erstellen von Arbeitslasten und zum Optimieren einer Datenbank finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   

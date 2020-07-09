@@ -17,17 +17,17 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: c9f0034e6f3fb620bd55410d345c1c2291db280f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67914595"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738073"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   OPENXML stellt eine Rowsetsicht eines XML-Dokuments bereit. Da OPENXML ein Rowsetanbieter ist, kann OPENXML in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen überall dort verwendet werden, wo Rowsetanbieter, wie z. B. eine Tabelle, eine Sicht oder die OPENROWSET-Funktion, verwendet werden können.  
   
@@ -143,7 +143,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- Wenn dieselbe `SELECT`-Anweisung mit dem Wert `2` für *flags* ausgeführt wird, wodurch die **elementzentrierte** Zuordnung angezeigt wird, werden die Werte von `CustomerID` und `ContactName` für beide Kunden im XML-Dokument als NULL zurückgegeben, da das XML-Dokument keine Elemente mit dem Namen `CustomerID` oder `ContactName` enthält.  
+ Wenn dieselbe `SELECT`-Anweisung mit dem Wert *für*flags`2` ausgeführt wird, wodurch die **elementzentrierte** Zuordnung angezeigt wird, werden die Werte von `CustomerID` und `ContactName` für beide Kunden im XML-Dokument als NULL zurückgegeben, da das XML-Dokument keine Elemente mit dem Namen `CustomerID` oder `ContactName` enthält.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -163,7 +163,7 @@ NULL       NULL
   
 -   Die `ProdID`-Spalte des Rowsets wird dem `ProductID`-Attribut und die `Qty`-Spalte des Rowsets wird dem `Quantity`-Attribut der Knoten zugeordnet, die in *rowpattern* identifiziert sind.  
   
- Zwar ist durch den *flags*-Parameter die **elementzentrierte** Zuordnung angegeben, die im *ColPattern*-Parameter angegebene Zuordnung überschreibt jedoch diese Zuordnung.  
+ Zwar ist durch den **flags**-Parameter die *elementzentrierte* Zuordnung angegeben, die im *ColPattern*-Parameter angegebene Zuordnung überschreibt jedoch diese Zuordnung.  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   
@@ -190,11 +190,11 @@ EXEC sp_xml_preparedocument @idoc OUTPUT, @doc;
 -- SELECT stmt using OPENXML rowset provider  
 SELECT *  
 FROM   OPENXML (@idoc, '/ROOT/Customer/Order/OrderDetail',2)   
-         WITH (OrderID       int         '../@OrderID',   
-               CustomerID  varchar(10) '../@CustomerID',   
-               OrderDate   datetime    '../@OrderDate',   
-               ProdID      int         '@ProductID',   
-               Qty         int         '@Quantity');  
+         WITH (OrderID       int         '../@OrderID',
+               CustomerID  varchar(10) '../@CustomerID',
+               OrderDate   datetime    '../@OrderDate',
+               ProdID      int         '@ProductID',
+               Qty         int         '@Quantity');
   
 ```  
   

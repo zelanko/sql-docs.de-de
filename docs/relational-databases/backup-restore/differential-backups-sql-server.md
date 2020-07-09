@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf10fdcdee4d3fcca3cf3e119bf18bb341352edb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9452fc4f3ca4a0ccfa4983b8e47f97f47108eb75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737811"
 ---
 # <a name="differential-backups-sql-server"></a>Differenzielle Sicherungen (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Dieses Thema zu Sicherung und Wiederherstellung ist für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant.  
   
  Diese Sicherung basiert auf der letzten vollständigen Datensicherung. Mit einer differenziellen Sicherung werden nur die Daten erfasst, die sich seit dieser vollständigen Sicherung geändert haben. Die vollständige Sicherung, auf der eine differenzielle Sicherung basiert wird, wird als *Basis* der differenziellen Sicherung bezeichnet. Vollständige Sicherungen, mit Ausnahme von Kopiesicherungen, können als Basis für eine Reihe differenzieller Sicherungen dienen, einschließlich Datenbanksicherungen, Teilsicherungen und Dateisicherungen. Die Basissicherung für eine differenzielle Dateisicherung kann in einer vollständigen Sicherung, einer Dateisicherung oder einer Teilsicherung enthalten sein.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3641401fbb2314bf4712cc524777a490ced01541
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d98470daf000115061fde1d5b8a276f1bd76a4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85743937"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Vermeiden von Konflikten mit Datenbankvorgängen in FILESTREAM-Anwendungen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Bei Anwendungen, die SqlOpenFilestream() zum Öffnen von Win32-Dateihandles zum Lesen oder Schreiben von FILESTREAM-BLOB-Daten verwenden, können Konfliktfehler mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen auftreten, die in einer gemeinsamen Transaktion verwaltet werden. Dies gilt auch für [!INCLUDE[tsql](../../includes/tsql-md.md)] - oder MARS-Abfragen, bei denen das Beenden der Ausführung viel Zeit in Anspruch nimmt. Anwendungen müssen sorgfältig entworfen werden, wenn diese Art von Konflikten vermieden werden soll.  
   
  Wenn die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] oder Anwendungen versuchen, FILESTREAM-BLOBs zu öffnen, überprüft die [!INCLUDE[ssDE](../../includes/ssde-md.md)] den zugeordneten Transaktionskontext. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] lässt die Anforderung zu bzw. verweigert sie in Abhängigkeit davon, ob der geöffnete Vorgang mit DDL-Anweisungen oder DML-Anweisungen arbeitet, Daten abruft oder Transaktionen verwaltet. Die folgende Tabelle zeigt, wie die [!INCLUDE[ssDE](../../includes/ssde-md.md)] ermittelt, ob eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung basierend auf dem Typ der Dateien, die in der Transaktion geöffnet sind, zugelassen oder verweigert wird.  

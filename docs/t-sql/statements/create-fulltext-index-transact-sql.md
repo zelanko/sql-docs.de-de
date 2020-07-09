@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7653a59cd250c2a1abe524c0b12c366de4bd0bc4
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 134320f838e2d65090599f7172283e74de87c6df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735799"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Erstellt einen Volltextindex für eine Tabelle oder eine indizierte Sicht in einer Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pro Tabelle oder indizierter Sicht ist nur ein Volltextindex zulässig, und jeder Volltextindex gilt für eine einzelne Tabelle oder indizierte Sicht. Ein Volltextindex kann bis zu 1024 Spalten enthalten.  
   
