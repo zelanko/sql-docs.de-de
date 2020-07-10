@@ -20,13 +20,15 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50b5ae0a00161b00c432f0ea88c1cd08c45b4219
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a9346aa6dbf98bbc827b90423f02b5027481f956
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011885"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196444"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Gibt das Statistik Histogramm für das angegebene Datenbankobjekt (Tabelle oder indizierte Sicht) in der aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank zurück. Vergleichbar zu `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
@@ -60,7 +62,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |distinct_range_rows |**bigint** |Geschätzte Anzahl von Zeilen mit einem unterschiedlichen Spaltenwert innerhalb eines Histogrammschritts ohne den oberen Grenzwert. |
 |average_range_rows |**real** |Die durchschnittliche Anzahl von Zeilen mit doppelten Spaltenwerten in einem Histogrammschritt, ohne die obere Grenze ( `RANGE_ROWS / DISTINCT_RANGE_ROWS` für `DISTINCT_RANGE_ROWS > 0` ). |
   
- ## <a name="remarks"></a>Hinweise  
+ ## <a name="remarks"></a>Bemerkungen  
  
  Das Resultset für `sys.dm_db_stats_histogram` gibt Informationen zurück, die mit vergleichbar `DBCC SHOW_STATISTICS WITH HISTOGRAM` sind, und umfasst auch `object_id` , `stats_id` und `step_number` .
 
@@ -74,7 +76,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  Das folgende Diagramm zeigt ein Histogramm mit sechs Schritten. Der Bereich links vom ersten oberen Grenzwert ist der erste Schritt.  
   
- ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram")  
+ ![Histogramm](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogramm")  
   
  Für jeden Histogrammschritt gilt:  
   

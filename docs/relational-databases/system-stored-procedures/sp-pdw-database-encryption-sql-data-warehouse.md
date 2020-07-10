@@ -11,17 +11,17 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 47d7aca62ddbf2637b54d77171a08817b842555c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f2c4fde17918e148ac26581fcb6f99057e38800
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008912"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197319"
 ---
 # <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Verwenden Sie **sp_pdw_database_encryption** , um die transparente Datenverschlüsselung für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ein Gerät zu aktivieren. Wenn **sp_pdw_database_encryption** auf 1 festgelegt ist, verwenden Sie die **ALTER DATABASE** -Anweisung, um eine Datenbank mithilfe von TDE zu verschlüsseln.  
+  Verwenden Sie **sp_pdw_database_encryption** , um die transparente Datenverschlüsselung für ein Gerät zu aktivieren [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Wenn **sp_pdw_database_encryption** auf 1 festgelegt ist, verwenden Sie die **ALTER DATABASE** -Anweisung, um eine Datenbank mithilfe von TDE zu verschlüsseln.  
   
 ## <a name="syntax"></a>Syntax  
   

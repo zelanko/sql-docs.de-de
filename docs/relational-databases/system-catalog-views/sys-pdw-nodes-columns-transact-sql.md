@@ -12,27 +12,27 @@ ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 201af9001703bb8f1dfbdaf2c41151697b945df3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b5e9e05e65a7121f30bfc0fc296229e943a8cd9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68059401"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197393"
 ---
 # <a name="syspdw_nodes_columns-transact-sql"></a>sys. pdw_nodes_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Zeigt Spalten für benutzerdefinierte Tabellen und benutzerdefinierte Sichten an.  
   
 |Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|Die ID des Objekts, zu dem diese Spalte gehört.||  
-|Name|**sysname**|Name der Spalte. Eindeutig im Objekt.||  
+|name|**sysname**|Name der Spalte. Eindeutig im Objekt.||  
 |column_id|**int**|ID der Spalte. Eindeutig im Objekt.||  
 |system_type_id|**tinyint**|ID des System Typs der Spalte.||  
 |user_type_id|**int**|Die ID des vom Benutzer definierten Typs der Spalte.||  
 |max_length|**smallint**|Maximale Länge (in Byte) für die Spalte.|Enthält-1 (ungültig) für nicht unterstützte Spaltentypen.|  
-|precision|**tinyint**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert; andernfalls 0.||  
+|precision (Genauigkeit)|**tinyint**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert; andernfalls 0.||  
 |Skalierung|**tinyint**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert; andernfalls 0.||  
 |collation_name|**sysname**|Name der Sortierung der Spalte, wenn diese zeichenbasiert ist, andernfalls NULL.||  
 |is_nullable|**bit**|1 = Spalte lässt NULL-Werte zu.||  
@@ -51,7 +51,7 @@ ms.locfileid: "68059401"
 |rule_object_id|**int**|ID der eigenständigen Regel, die an die Spalte gebunden ist. <br />0 = Keine eigenständige Regel.|Immer 0.|  
 |is_sparse|**bit**|1 = Spalte ist eine Sparsespalte.|Immer 0.|  
 |is_column_set|**bit**|1 = Spalte ist ein Spaltensatz.|Immer 0.|  
-|pdw_node_id|**int**|Eindeutiger Bezeichner [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] eines Knotens.|NOT NULL|  
+|pdw_node_id|**int**|Eindeutiger Bezeichner eines [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knotens.|NOT NULL|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL SERVER-Berechtigung.  

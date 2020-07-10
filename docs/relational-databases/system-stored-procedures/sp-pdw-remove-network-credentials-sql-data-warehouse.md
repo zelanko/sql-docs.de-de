@@ -14,15 +14,15 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 12adbc7c7f10b16591b2fc8c6b0473e86036957b
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: be447109a1432fdf8c3f3ae4a44f34a2eed1fd46
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627570"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196780"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Dadurch werden die in gespeicherten Netzwerk Anmelde Informationen [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] für den Zugriff auf eine Netzwerkdatei Freigabe entfernt. Verwenden Sie diese gespeicherte Prozedur beispielsweise, um die Berechtigung zum [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Ausführen von Sicherungs-und Wiederherstellungs Vorgängen auf einem Server zu entfernen, der sich in Ihrem eigenen Netzwerk befindet.  
   

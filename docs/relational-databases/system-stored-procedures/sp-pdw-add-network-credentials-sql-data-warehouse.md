@@ -12,15 +12,15 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a4f4fac6f7b7dc1f7809042bd9b784b754bec1a2
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: c7be9d3eb55800c2fa5c4f155aff6fd81301490c
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627490"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197338"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Dadurch werden Netzwerk Anmelde Informationen in gespeichert [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und einem Server zugeordnet. Verwenden Sie diese gespeicherte Prozedur z. b., um [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] geeignete Lese-/Schreibberechtigungen zum Durchführen von Daten Bank Sicherungs-und Wiederherstellungs Vorgängen auf einem Zielserver zu erhalten, oder um eine Sicherung eines für TDE verwendeten Zertifikats zu erstellen.  
   

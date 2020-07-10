@@ -12,26 +12,26 @@ ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f47fb9d9047e02fde6a7e8a7f758e455e3fc789
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899419"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197106"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys. dm_pdw_exec_connections (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Gibt Informationen über die zu dieser Instanz von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] hergestellten Verbindungen zurück, sowie Details zu jeder der Verbindungen.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|Identifiziert die Sitzung, die dieser Verbindung zugeordnet ist. Verwenden `SESSION_ID()` Sie, um `session_id` den der aktuellen Verbindung zurückzugeben.|  
+|session_id|**int**|Identifiziert die Sitzung, die dieser Verbindung zugeordnet ist. Verwenden `SESSION_ID()` Sie, um den `session_id` der aktuellen Verbindung zurückzugeben.|  
 |connect_time|**datetime**|Zeitstempel, der angibt, wann die Verbindung eingerichtet wurde. Lässt keine NULL-Werte zu.|  
 |encrypt_option|**nvarchar(40)**|Gibt true (die Verbindung ist verschlüsselt) oder false (die Verbindung ist nicht "tctypred").|  
 |auth_scheme|**nvarchar(40)**|Gibt das mit dieser Verbindung verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-/Windows-Authentifizierungsschema an. Lässt keine NULL-Werte zu.|  
 |client_id|**varchar(48)**|Die IP-Adresse des Clients, der eine Verbindung mit diesem Server herstellt. Lässt NULL-Werte zu.|  
-|sql_spid|**int**|Die Server Prozess-ID der Verbindung. Verwenden `@@SPID` Sie, um `sql_spid` den der aktuellen Verbindung zurückzugeben. Verwenden Sie für den spezifischsten Zweck `session_id` stattdessen den.|  
+|sql_spid|**int**|Die Server Prozess-ID der Verbindung. Verwenden `@@SPID` Sie, um den `sql_spid` der aktuellen Verbindung zurückzugeben. Verwenden Sie für den spezifischsten Zweck `session_id` stattdessen den.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die **View Server State** -Berechtigung auf dem Server.  

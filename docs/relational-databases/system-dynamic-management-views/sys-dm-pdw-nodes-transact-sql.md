@@ -12,17 +12,17 @@ ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 61593522e09ed86ec10f08a6ad8ff7a941a2e10e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ba367379795408a79b412c5b4c04097484bfd2b
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899349"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197205"
 ---
 # <a name="sysdm_pdw_nodes-transact-sql"></a>sys. dm_pdw_nodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Enthält Informationen zu allen Knoten in [!INCLUDE[ssAPS](../../includes/ssaps-md.md)]. Es wird eine Zeile pro Knoten in der Appliance aufgelistet.  
+  Enthält Informationen zu allen Knoten in [!INCLUDE[ssAPS](../../includes/ssaps-md.md)] . Es wird eine Zeile pro Knoten in der Appliance aufgelistet.  
   
 |Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
