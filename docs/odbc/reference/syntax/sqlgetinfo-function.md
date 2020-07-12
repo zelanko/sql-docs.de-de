@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 418102c7573f27278282a67e3119d07a2c6d1342
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 7ce6c9e6032201f41eae058c9553f9bd61c4f079
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215612"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279574"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo-Funktion
 
@@ -71,7 +71,7 @@ SQLRETURN SQLGetInfo(
   
  Für alle anderen Datentypen wird der Wert von *BufferLength* ignoriert, und der Treiber geht davon aus, dass die Größe von \* *infovalueptr* abhängig vom *InfoType*sqlusmallint oder SQLUINTEGER ist.  
   
-## <a name="return-value"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
 
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   

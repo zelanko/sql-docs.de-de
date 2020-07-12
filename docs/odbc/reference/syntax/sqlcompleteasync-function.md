@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4e09d61ef516e846798dd3af2d07dafa78af4605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299655"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279588"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync-Funktion
 **Konformitäts**  
- Eingeführte Version: ODBC 3,8  
-  
- Einhaltung von Standards: keine  
+ Eingeführte Version: ODBC 3,8 Standards Compliance: None  
   
  **Zusammenfassung**  
  **Sqlcompleteasync** kann verwendet werden, um zu bestimmen, wann eine asynchrone Funktion mithilfe der Benachrichtigungs-oder Abruf basierten Verarbeitung abgeschlossen wurde. Weitere Informationen zu asynchronen Vorgängen finden Sie unter [asynchrone Ausführung](../../../odbc/reference/develop-app/asynchronous-execution.md).  
@@ -76,4 +74,4 @@ SQLRETURN SQLCompleteAsync(
  Im Abruf basierten asynchronen Verarbeitungsmodus kann *asynkretcodeptr* SQL_STILL_EXECUTING werden, wenn **sqlcompleteasync** SQL_SUCCESS zurückgibt. Die Anwendung sollte den Abruf fortsetzen, bis *asynkretcodeptr* nicht SQL_STILL_EXECUTING ist. Im Benachrichtigungs basierten asynchronen Verarbeitungsmodus wird *asynkretcodeptr* nie SQL_STILL_EXECUTING.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Asynchrone Ausführung (Abrufmethode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+ [Asynchrone Ausführung (Abruf Methode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

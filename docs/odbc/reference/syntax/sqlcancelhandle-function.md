@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 059ed283032feb96ca5e6b12520682ccb034752a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3f9dcb6ccdef290b937b1317271758dddc0e848
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299665"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279600"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle-Funktion
 **Konformitäts**  
- Eingeführte Version: ODBC 3,8  
-  
- Einhaltung von Standards: keine  
+ Eingeführte Version: ODBC 3,8 Standards Compliance: None  
   
  Es wird erwartet, dass die meisten ODBC 3,8-Treiber (und höher) diese Funktion implementieren. Wenn ein Treiber nicht durch einen **sqlcancelhandle** -Befehl mit einem Verbindungs Handle im *handle* -Parameter wird SQL_ERROR mit dem SQLSTATE-Wert zurückgegeben, und der Message-Treiber unterstützt diese Funktion **nicht. ein** **sqlcancelhandle** -Befehl mit einem Anweisungs Handle, weil der *handle* -Parameter einem **SQLCancel-Befehl durch den** Treiber-Manager zugeordnet wird Eine Anwendung kann **SQLGetFunctions** verwenden, um zu bestimmen, ob ein Treiber **sqlcancelhandle**unterstützt.  
   
@@ -58,10 +56,10 @@ SQLRETURN SQLCancelHandle(
   
  In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **sqlcancelhandle** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) im Argument * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und seine Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) im Argument * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und seine Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY010|Funktions Sequenz Fehler|Eine asynchron ausgeführte, Anweisungs bezogene Funktion wurde für eines der Anweisungs Handles aufgerufen, die mit dem *handle*verknüpft sind, und der *Typ "tortype* " wurde auf SQL_HANDLE_DBC festgelegt. Die asynchrone Funktion wurde noch ausgeführt, als " **sqlcancelhandle** " aufgerufen wurde.<br /><br /> (DM) das *handlentypargument* wurde SQL_HANDLE_STMT. für das zugeordnete Verbindungs Handle wurde eine asynchron ausgeführte Funktion aufgerufen. die Funktion wurde noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für eines der Anweisungs Handles aufgerufen, die mit dem *handle* verknüpft sind, und der *Tortyp* wurde auf SQL_HANDLE_DBC festgelegt und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> **Sqlbrowseconnetct** wurde für *connectionHandle*aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor der Suchvorgang abgeschlossen wurde.|  
 |HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
@@ -109,4 +107,4 @@ SQLRETURN SQLCancelHandle(
 ## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Header Dateien](../../../odbc/reference/install/odbc-header-files.md)   
- [Asynchrone Ausführung (Abrufmethode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+ [Asynchrone Ausführung (Abruf Methode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

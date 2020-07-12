@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57a7af110956bdf557ad751723f2497b6aa3ede0
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73593750"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279560"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Sendet Spalten Verschlüsselungsschlüssel, die in der Datenbank definiert sind, an den serverseitigen sicheren Enclave, der mit [Always Encrypted mit sicheren Enklaven](../security/encryption/always-encrypted-enclaves.md)verwendet wird.
 
@@ -38,7 +38,7 @@ Sendet Spalten Verschlüsselungsschlüssel, die in der Datenbank definiert sind,
 - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]um die Wiederherstellung von Indizes für verschlüsselte Spalten abzuschließen. Siehe [Daten Bank Wiederherstellung](../security/encryption/always-encrypted-enclaves.md#database-recovery).
 - Eine Anwendung, die .NET Framework Datenanbieter für die SQL Server zum Massen Laden von Daten in verschlüsselte Spalten verwendet.
 
-Um erfolgreich aufrufen `sp_enclave_send_keys`zu können, müssen Sie eine Verbindung mit der Datenbank herstellen, wobei Always Encrypted und Enclave-Berechnungen für die Datenbankverbindung aktiviert sind. Außerdem benötigen Sie Zugriff auf Spalten Hauptschlüssel, um die Spalten Verschlüsselungsschlüssel zu schützen, die Sie senden werden, und Sie benötigen Berechtigungen für den Zugriff auf Always Encrypted Schlüssel Metadaten in der Datenbank. 
+Um erfolgreich aufrufen zu `sp_enclave_send_keys` können, müssen Sie eine Verbindung mit der Datenbank herstellen, wobei Always Encrypted und Enclave-Berechnungen für die Datenbankverbindung aktiviert sind. Außerdem benötigen Sie Zugriff auf Spalten Hauptschlüssel, um die Spalten Verschlüsselungsschlüssel zu schützen, die Sie senden werden, und Sie benötigen Berechtigungen für den Zugriff auf Always Encrypted Schlüssel Metadaten in der Datenbank. 
 
 ## <a name="syntax"></a>Syntax  
   
@@ -61,7 +61,7 @@ Diese gespeicherte Prozedur hat keine Resultsets.
   
 ## <a name="permissions"></a>Berechtigungen
 
- Erfordert die `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` - `VIEW ANY COLUMN MASTER KEY DEFINITION` Berechtigung und die-Berechtigung in der Datenbank.  
+ Erfordert die `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` -Berechtigung und die- `VIEW ANY COLUMN MASTER KEY DEFINITION` Berechtigung in der Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -69,7 +69,7 @@ Diese gespeicherte Prozedur hat keine Resultsets.
 EXEC sp_enclave_send_keys;  
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 - [Always Encrypted mit Secure Enclaves](../security/encryption/always-encrypted-enclaves.md) 
  
 - [Erstellen und Verwenden von Indizes in Spalten mithilfe von Always Encrypted mit Secure Enclaves](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)

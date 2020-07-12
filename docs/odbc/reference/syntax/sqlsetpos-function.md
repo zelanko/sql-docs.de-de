@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7a8839f1ae540ac9e5f29e144f7f57fb754e50ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: abeb377b614619e8c6359db7ae1d5b388cf2dd82
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287330"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279551"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos-Funktion
 **Konformitäts**  
@@ -71,7 +71,7 @@ SQLRETURN SQLSetPos(
   
  Weitere Informationen finden Sie unter "comments".  
   
- **Rückgabe**  
+## <a name="returns"></a>Rückgabe  
   
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
@@ -80,7 +80,7 @@ SQLRETURN SQLSetPos(
   
  Für alle Sqlstates, die SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurückgeben können (außer 01xxx Sqlstates), wird SQL_SUCCESS_WITH_INFO zurückgegeben, wenn ein Fehler in einer oder mehreren, aber nicht in allen Zeilen eines mehr Zeilen Vorgangs auftritt. SQL_ERROR wird zurückgegeben, wenn ein Fehler bei einem einzeiligen Vorgang auftritt.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01001|Konflikt beim Cursor Vorgang|Das *Vorgangs* Argument wurde SQL_DELETE oder SQL_UPDATE, und es wurden keine Zeilen oder mehr als eine Zeile gelöscht oder aktualisiert. (Weitere Informationen zu Updates für mehr als eine Zeile finden Sie in der Beschreibung des SQL_ATTR_SIMULATE_CURSOR- *Attributs* in **SQLSetStmtAttr**.) (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> Das *Vorgangs* Argument war SQL_DELETE oder SQL_UPDATE, und der Vorgang konnte aufgrund der vollständigen Parallelität nicht ausgeführt werden. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -102,7 +102,7 @@ SQLRETURN SQLSetPos(
 |40003|Anweisungs Vervollständigung unbekannt|Bei der zugeordneten Verbindung ist während der Ausführung dieser Funktion ein Fehler aufgetreten, und der Status der Transaktion kann nicht bestimmt werden.|  
 |42000|Syntax Fehler oder Zugriffsverletzung|Der Treiber konnte die Zeile nicht nach Bedarf sperren, um den im Argument *Vorgang*angeforderten Vorgang auszuführen.<br /><br /> Der Treiber konnte die Zeile nicht wie im Argument *LockType*angefordert sperren.|  
 |44000|WITH CHECK OPTION-Verstoß|Das *Vorgangs* Argument wurde SQL_UPDATE, und das Update wurde für eine angezeigte Tabelle oder eine Tabelle ausgeführt, die von der angezeigten Tabelle abgeleitet wurde, die durch die Angabe von **with Check Option**erstellt wurde, sodass mindestens eine von der Aktualisierung betroffene Zeile nicht mehr in der angezeigten Tabelle enthalten ist.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen, und anschließend wurde die Funktion für " *StatementHandle*" erneut aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
 |HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die SQLSetPos-Funktion aufgerufen wurde.<br /><br /> (DM) das angegebene *StatementHandle* war nicht in einem ausgeführten Zustand. Die Funktion wurde aufgerufen, ohne zuerst **SQLExecDirect**, **SQLExecute**oder eine Katalog Funktion aufzurufen.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *StatementHandle* aufgerufen und wird noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) der Treiber war ein ODBC *2. x* -Treiber, und **SQLSetPos** wurde für ein *StatementHandle* aufgerufen, nachdem **SQLFetch** aufgerufen wurde.|  
@@ -222,9 +222,9 @@ SQLRETURN SQLSetPos(
   
 1.  Platziert Werte in den Daten-und Längen-/indikatorpuffern, die mit **SQLBindCol**gebunden sind:  
   
-    -   Für normale Spalten fügt die Anwendung den neuen Spaltenwert in den * \*targetvalueptr* -Puffer und die Länge dieses Werts im * \*StrLen_or_IndPtr* Puffer ein. Wenn die Zeile nicht aktualisiert werden soll, fügt die Anwendung SQL_ROW_IGNORE in das-Element der Zeile des Zeilen Vorgangs Arrays ein.  
+    -   Für normale Spalten fügt die Anwendung den neuen Spaltenwert in den * \* targetvalueptr* -Puffer und die Länge dieses Werts im * \* StrLen_or_IndPtr* Puffer ein. Wenn die Zeile nicht aktualisiert werden soll, fügt die Anwendung SQL_ROW_IGNORE in das-Element der Zeile des Zeilen Vorgangs Arrays ein.  
   
-    -   Bei Data-at-Execution-Spalten platziert die Anwendung einen Anwendungs definierten Wert, z. b. die Spaltennummer, im * \*targetvalueptr* -Puffer. Der Wert kann später verwendet werden, um die Spalte zu identifizieren.  
+    -   Bei Data-at-Execution-Spalten platziert die Anwendung einen Anwendungs definierten Wert, z. b. die Spaltennummer, im * \* targetvalueptr* -Puffer. Der Wert kann später verwendet werden, um die Spalte zu identifizieren.  
   
          Die Anwendung platziert das Ergebnis des SQL_LEN_DATA_AT_EXEC (*length*)-Makros im **StrLen_or_IndPtr* Puffer. Wenn der SQL-Datentyp der Spalte SQL_LONGVARBINARY, SQL_LONGVARCHAR oder ein langer Datenquellen spezifischer Datentyp ist und der Treiber "Y" für den SQL_NEED_LONG_DATA_LEN Informationstyp in **SQLGetInfo**zurückgibt, ist *length* die Anzahl der Daten bytes, die für den Parameter gesendet werden sollen. Andernfalls muss Sie ein nicht negativer Wert sein und wird ignoriert.  
   
@@ -234,7 +234,7 @@ SQLRETURN SQLSetPos(
   
     -   Wenn Data-at-Execution-Spalten vorhanden sind, gibt die Funktion SQL_NEED_DATA zurück und geht mit Schritt 3 fort.  
   
-3.  Ruft **SQLParamData** auf, um die Adresse des * \*targetvalueptr* -Puffers für die erste zu verarbeitende Data-at-Execution-Spalte abzurufen. **SQLParamData** gibt SQL_NEED_DATA zurück. Die Anwendung ruft den von der Anwendung definierten Wert aus dem * \*targetvalueptr* -Puffer ab.  
+3.  Ruft **SQLParamData** auf, um die Adresse des * \* targetvalueptr* -Puffers für die erste zu verarbeitende Data-at-Execution-Spalte abzurufen. **SQLParamData** gibt SQL_NEED_DATA zurück. Die Anwendung ruft den von der Anwendung definierten Wert aus dem * \* targetvalueptr* -Puffer ab.  
   
     > [!NOTE]  
     >  Obwohl Data-at-Execution-Parameter mit Data-at-Execution-Spalten vergleichbar sind, ist der von **SQLParamData** zurückgegebene Wert für jeden Wert anders.  
@@ -245,7 +245,7 @@ SQLRETURN SQLSetPos(
     > [!NOTE]  
     >  Data-at-Execution-Spalten sind Spalten in einem Rowset, für die Daten mit **SQLPutData** gesendet werden, wenn eine Zeile mit **SQLSetPos**aktualisiert wird. Sie sind mit **SQLBindCol**gebunden. Der von **SQLParamData** zurückgegebene Wert ist die Adresse der Zeile im **targetvalueptr* -Puffer, der verarbeitet wird.  
   
-4.  Ruft **SQLPutData** ein oder mehrere Male auf, um Daten für die Spalte zu senden. Wenn alle Datenwerte nicht im in **SQLPutData**angegebenen * \*targetvalueptr* -Puffer zurückgegeben werden können, ist mehr als ein-Rückruf erforderlich. mehrere Aufrufe von **SQLPutData** für die gleiche Spalte sind nur zulässig, wenn Zeichen-c-Daten an eine Spalte mit einem Zeichen-, Binär-oder Datenquellen spezifischen Datentyp gesendet werden oder wenn binäre C-Daten an eine Spalte mit einem Zeichen-, Binär-oder Datenquellen spezifischen Datentyp gesendet werden.  
+4.  Ruft **SQLPutData** ein oder mehrere Male auf, um Daten für die Spalte zu senden. Wenn alle Datenwerte nicht im in **SQLPutData**angegebenen * \* targetvalueptr* -Puffer zurückgegeben werden können, ist mehr als ein-Rückruf erforderlich. mehrere Aufrufe von **SQLPutData** für die gleiche Spalte sind nur zulässig, wenn Zeichen-c-Daten an eine Spalte mit einem Zeichen-, Binär-oder Datenquellen spezifischen Datentyp gesendet werden oder wenn binäre C-Daten an eine Spalte mit einem Zeichen-, Binär-oder Datenquellen spezifischen Datentyp gesendet werden.  
   
 5.  Ruft **SQLParamData** erneut auf, um zu signalisieren, dass alle Daten für die Spalte gesendet wurden.  
   
