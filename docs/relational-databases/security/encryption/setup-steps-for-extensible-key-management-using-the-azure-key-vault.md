@@ -1,78 +1,169 @@
 ---
-title: Einrichten der erweiterbaren Schlüsselverwaltung (TDE) mit Azure Key Vault
-description: Hier werden die Schritte zum Installieren und Konfigurieren des SQL Server-Connectors für Azure Key Vault beschrieben.
+title: Einrichten der erweiterbaren Schlüsselverwaltung für Transparent Data Encryption (TDE) mit Azure Key Vault
+description: Installieren und Konfigurieren des SQL Server-Connectors für Azure Key Vault
 ms.custom: seo-lt-2019
-ms.date: 09/12/2019
+ms.date: 06/15/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
+- Extensible Key Management
 - EKM, with key vault setup
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: jaszymas
-ms.author: jaszymas
-ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: f0be0697b0820b2d134e69742a7ffc50048b94e7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557490"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883052"
 ---
-# <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server-TDE): Setupschritte
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Einrichten der erweiterbaren Schlüsselverwaltung für SQL Server-TDE mit Azure Key Vault
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  In den folgenden Schritten wird die Installation und Konfiguration des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connectors für Azure Key Vault exemplarisch durchlaufen.  
+In diesem Artikel installieren und konfigurieren Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connector für Azure Key Vault.  
   
-## <a name="before-you-start"></a>Vorbereitungen  
- Damit Sie Azure Key Vault mit Ihrem SQL Server verwenden können, müssen einige Voraussetzungen erfüllt sein:  
-  
--   Sie müssen über ein Azure-Abonnement verfügen  
-  
--   Installieren Sie die neueste Version von [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 oder höher).  
+## <a name="prerequisites"></a>Voraussetzungen
 
--   Erstellen Sie ein Azure Active Directory  
-
--   Machen Sie sich mit den Grundlagen der EKM-Speicherung mithilfe von Azure Key Vault vertraut, indem Sie [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md) durcharbeiten.  
-
--   Überprüfen Sie, ob die für die ausgeführte SQL Server-Version geeignete Version der weitervertreibbaren Visual Studio C++-Komponente installiert ist:
+Bevor Sie Azure Key Vault mit Ihrer SQL Server-Instanz verwenden, müssen Sie sicherstellen, dass die folgenden Voraussetzungen erfüllt sind:  
   
-SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente    
----------|--------- 
-2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable-Pakete für Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)    
-2016 | [Visual C++ Redistributable für Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
+- Sie benötigen ein Azure-Abonnement.
+  
+- Installieren Sie [Azure PowerShell Version 5.2.0 oder höher](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+
+- Erstellen Sie eine Azure Active Directory-Instanz (Azure AD).
+
+- Machen Sie sich anhand des Artikels [Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md) mit den Speicherungsgrundlagen der erweiterbaren Schlüsselverwaltung (EKM) mit Azure Key Vault vertraut.  
+
+- Installieren Sie die Version von Visual C++ Redistributable für Visual Studio, die auf der von Ihnen ausgeführten Version von SQL Server basiert:
+  
+  SQL Server-Version  | Version von Visual C++ Redistributable für Visual Studio    
+  ---------|--------- 
+  2008, 2008 R2, 2012, 2014 | [Visual C++ Redistributable-Pakete für Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)    
+  2016 | [Visual C++ Redistributable für Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>Teil I: Einrichten eines Azure Active Directory-Dienstprinzipals  
- Um SQL Server-Zugriffsberechtigungen auf Ihrem Azure Key Vault zu erteilen, benötigen Sie ein Dienstprinzipalkonto in Azure Active Directory (AAD).  
+## <a name="step-1-set-up-an-azure-ad-service-principal"></a>Schritt 1: Einrichten eines Azure AD-Dienstprinzipals
+
+Um Ihren SQL Server-Instanzen Zugriffsberechtigungen für Ihren Azure Key Vault zu erteilen, benötigen Sie ein Dienstprinzipalkonto in Azure AD.  
   
-1.  Navigieren Sie zum [Azure-Portal](https://ms.portal.azure.com/), und melden Sie sich an.  
+1.  Melden Sie sich beim [Azure-Portal](https://ms.portal.azure.com/) an, und führen Sie einen der folgenden Schritte aus:
+
+    * Wählen Sie die Schaltfläche **Azure Active Directory** aus.
+
+      ![Screenshot des Bereichs „Azure-Dienste“](../../../relational-databases/security/encryption/media/ekm/ekm-part1-login-portal.png)
+
+    * Wählen Sie **Weitere Dienste** aus, und geben Sie dann im Feld **Alle Dienste** **Azure Active Directory** ein.
+
+      ![Screenshot des Bereichs „Alle Azure-Dienste“](../../../relational-databases/security/encryption/media/ekm/ekm-part1-select-aad.png)  
+
+1. Registrieren Sie wie unten beschrieben eine Anwendung mit Azure Active Directory. (Eine ausführliche schrittweise Anleitung finden Sie im Abschnitt über das Einrichten einer Identität für die Anwendung im [Azure Key Vault-Blogbeitrag](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/).)
+
+    a. Wählen Sie in Azure Active Directory im Bereich **Übersicht** die Option **App-Registrierungen** aus. 
+
+    ![Screenshot des Bereichs „Azure Active Directory-Übersicht“](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-app-register.png)
+
+    b. Wählen Sie im Bereich **App-Registrierungen** die Option **Neue Registrierung** aus.
+
+    ![Screenshot des Bereichs „App-Registrierungen“](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-registration.png)  
+
+    c. Geben Sie im Bereich **Anwendung registrieren** den Benutzernamen für die App ein, und wählen Sie dann **Registrieren** aus.
+
+    ![Screenshot des Bereichs „Anwendung registrieren“](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-register.png)
+
+    d. Wählen Sie im linken Bereich **Zertifikate und Geheimnisse** und dann **Neuer geheimer Clientschlüssel** aus.
+
+    ![Screenshot des Bereichs „Zertifikate und Geheimnisse“](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-certs-secrets.png)  
+
+    e. Geben Sie unter **Geheimen Clientschlüssel hinzufügen** eine Beschreibung und eine entsprechende Ablaufzeit ein, und wählen Sie dann **Hinzufügen** aus.
+
+    ![Screenshot des Abschnitts „Geheimen Clientschlüssel hinzufügen“](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-add-secret.png)  
+
+    f. Wählen Sie im Bereich **Zertifikate und Geheimnisse** unter **"Wert"** die Schaltfläche **Kopieren** neben dem Wert des geheimen Clientschlüssels aus, der zum Erstellen eines asymmetrischen Schlüssels in SQL Server verwendet werden soll.
+
+    ![Screenshot des Bereichs „Zertifikate und Geheimnisse“](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-new-secret.png)  
+
+    g. Wählen Sie im linken Bereich **Übersicht** aus, und kopieren Sie dann im Feld **Anwendungs-ID (Client)** den Wert, der zum Erstellen eines asymmetrischen Schlüssels in SQL Server verwendet werden soll.
+
+    ![Screenshot des Werts „Anwendungs-ID (Client)“ im Bereich „Übersicht“](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-appid.png)  
+
+## <a name="step-2-create-a-key-vault"></a>Schritt 2: Erstellen eines Schlüsseltresors
+
+Wählen Sie die Methode aus, mit der Sie einen Schlüsseltresor erstellen möchten.
+
+## <a name="azure-portal"></a>[Azure portal](#tab/portal)
+
+### <a name="create-a-key-vault-by-using-the-azure-portal"></a>Erstellen eines Schlüsseltresors über das Azure-Portal 
+
+Sie können das Azure-Portal verwenden, um den Schlüsseltresor zu erstellen und ihm anschließend einen Azure AD-Prinzipal hinzuzufügen.
+
+1. Erstellen Sie eine Ressourcengruppe.
+
+   Alle Azure-Ressourcen, die Sie über das Azure-Portal erstellen, müssen in einer Ressourcengruppe enthalten sein, die Sie für Ihren Schlüsseltresor anlegen. Der Ressourcenname in diesem Beispiel lautet *ContosoDevRG*. Wählen Sie Ihren eigenen Ressourcengruppen- und Schlüsseltresornamen, da alle Schlüsseltresornamen global eindeutig sein müssen.
+
+   Geben Sie im Bereich **Ressourcengruppe erstellen** unter **Projektdetails** die Werte ein, und wählen Sie dann **Überprüfen + erstellen** aus.
+      
+      ![Screenshot des Bereichs „Ressourcengruppe erstellen“](../../../relational-databases/security/encryption/media/ekm/ekm-part2-create-resource-group.png)  
+
+1.  Erstellen eines Schlüsseltresors
+
+    Wählen Sie im Bereich **Schlüsseltresor erstellen** die Registerkarte **Grundlagen** aus, geben Sie die entsprechenden Werte ein, und wählen Sie dann **Überprüfen + erstellen** aus.
+
+    ![Screenshot des Bereichs „Schlüsseltresor erstellen“](../../../relational-databases/security/encryption/media/ekm/ekm-part2-create-key-vault.png)  
+
+1.  Wählen Sie im Bereich **Zugriffsrichtlinien** die Option **Zugriffsrichtlinie hinzufügen** aus.
+
+    ![Screenshot des Links „Zugriffsrichtlinie hinzufügen“ im Bereich „Zugriffsrichtlinien“](../../../relational-databases/security/encryption/media/ekm/ekm-part2-add-access-policy.png)  
+
+1.  Führen Sie im Bereich **Zugriffsrichtlinie hinzufügen** die folgenden Schritte aus:
   
-2.  Registrieren Sie eine Anwendung bei Azure Active Directory. Ausführliche Schrittanleitungen zum Registrieren einer Anwendung finden Sie im Abschnitt **Get an identity for the application** (Erhalten einer Identität für die Anwendung) im [Azure Key Vault-Blogbeitrag](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/).  
+    a. Wählen Sie in der Dropdownliste **Anhand einer Vorlage konfigurieren (optional)** die Option **Schlüsselverwaltung** aus.
+    
+    b. Wählen Sie im linken Bereich die Registerkarte **Schlüsselberechtigungen** aus, und vergewissern Sie sich dann, dass die Kontrollkästchen **Abrufen**, **Auflisten**, **Schlüssel entpacken** und **Schlüssel packen** aktiviert sind.
+
+    c. Wählen Sie **Hinzufügen**.
+   
+    ![Screenshot des Bereichs „Zugriffsrichtlinie hinzufügen“](../../../relational-databases/security/encryption/media/ekm/ekm-part2-access-policy-permission.png)
+
+1.  Wählen Sie im linken Bereich die Registerkarte **Prinzipal auswählen** aus, und gehen Sie dann wie folgt vor:
+
+    a. Geben Sie im Bereich **Prinzipal** unter **Auswählen** die ersten Zeichen des Namens Ihrer Azure AD-Anwendung ein, und wählen Sie dann in der Ergebnisliste die Anwendung aus, die Sie hinzufügen möchten.
+
+    ![Screenshot des Anwendungssuchfelds im Bereich „Prinzipal“](../../../relational-databases/security/encryption/media/ekm/ekm-part2-select-principal.png)  
+
+    b. Wählen Sie die Schaltfläche **Auswählen** aus, um den Prinzipal zu Ihrem Schlüsseltresor hinzuzufügen.
+
+    ![Screenshot der Schaltfläche „Auswählen“ im Bereich „Prinzipal“](../../../relational-databases/security/encryption/media/ekm/ekm-part2-save-principal.png)
+
+    c. Wählen Sie unten links **Hinzufügen** aus, um die Änderungen zu speichern.
+
+    ![Screenshot der Schaltfläche „Hinzufügen“ im Bereich „Zugriffsrichtlinie hinzufügen“](../../../relational-databases/security/encryption/media/ekm/ekm-part2-add-principal.png)
+ 
+1. Wählen Sie im Bereich **Zugriffsrichtlinien** die Option **Speichern** aus.
+   
+   ![Screenshot der Schaltfläche „Speichern“ im Bereich „Zugriffsrichtlinie hinzufügen“](../../../relational-databases/security/encryption/media/ekm/ekm-part2-save-access-policy.png)  
+ 
+## <a name="powershell"></a>[PowerShell](#tab/powershell)
+
+### <a name="create-a-key-vault-and-key-by-using-powershell"></a>Erstellen eines Schlüsseltresors und eines Schlüssels mithilfe von PowerShell
+
+Der hier erstellte Schlüsseltresor und der hier erstellte Schlüssel werden von der SQL Server-Datenbank-Engine zum Schutz des Verschlüsselungsschlüssels verwendet.  
   
-3.  Kopieren Sie die **Client-ID** und den **geheimen Clientschlüssel** für einen späteren Schritt, in dem sie verwendet werden, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Zugriff auf Ihren Schlüsseltresor zu erteilen.  
+> [!IMPORTANT] 
+> Das Abonnement, in dem der Schlüsseltresor erstellt wird, muss sich in derselben Azure AD-Standardinstanz befinden, in der der Azure AD-Dienstprinzipal erstellt wurde. Wenn Sie eine von der Standardinstanz abweichende Azure AD-Instanz zum Erstellen eines Dienstprinzipals für den SQL Server-Connector verwenden möchten, müssen Sie die Azure AD-Standardinstanz in Ihrem Azure-Konto ändern, bevor Sie den Schlüsseltresor erstellen. Informationen zum Ändern der Azure AD-Standardinstanz in die von Ihnen gewünschte Instanz finden Sie im Abschnitt „Häufig gestellte Fragen“ unter [SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
   
- ![ekm-client-id](../../../relational-databases/security/encryption/media/ekm-client-id.png "ekm-client-id")  
   
- ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
-  
-## <a name="part-ii-create-a-key-vault-and-key"></a>Teil II: Erstellen eines Schlüsseltresors und eines Schlüssels  
- Der hier erstellte Schlüsseltresor und Schlüssel werden von der SQL Server-Datenbank-Engine zum Schutz des Verschlüsselungsschlüssels verwendet.  
-  
-> [!IMPORTANT]  
->  Das Abonnement, in dem der Schlüsseltresor erstellt wird, muss sich im gleichen standardmäßigen Azure Active Directory befinden, in dem der Azure Active Directory-Dienstprinzipal erstellt wurde. Wenn Sie ein anderes Active Directory als das standardmäßige Active Directory zum Erstellen eines Dienstprinzipals für den SQL Server-Connector verwenden möchten, müssen Sie das standardmäßige Active Directory in Ihrem Azure-Konto ändern, bevor Sie Ihren Schlüsseltresor erstellen. Weitere Informationen zum Ändern des standardmäßigen Active Directory in ein von Ihnen bevorzugtes Active Directory finden Sie in den [Häufig gestellten Fragen (FAQs)](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)zum SQL Server-Connector.  
-  
-1.  **Öffnen Sie PowerShell, und melden Sie sich an**  
-  
-     Installieren und Starten Sie die [neueste Version von Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 oder höher). Melden Sie sich beim Azure-Konto mit dem folgenden Befehl an:  
+1.  Installieren Sie mit dem folgenden Befehl [Azure PowerShell Version 5.2.0 oder höher](https://azure.microsoft.com/documentation/articles/powershell-install-configure/), und melden Sie sich bei dieser an:  
   
     ```powershell  
     Connect-AzAccount  
     ```  
   
-     Die Anweisung gibt Folgendes zurück:  
+    Die Anweisung gibt Folgendes zurück:  
   
     ```  
     Environment           : AzureCloud  
@@ -83,17 +174,17 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
     ```  
   
     > [!NOTE]  
-    >  Wenn Sie über mehrere Abonnements verfügen und ein bestimmtes zur Verwendung durch den Tresor angeben möchten, verwenden Sie `Get-AzSubscription` , um die Abonnements anzuzeigen und `Select-AzSubscription` , um das richtige Abonnement auszuwählen. Andernfalls sucht PowerShell standardmäßig ein Abonnement aus.  
+    > Wenn Sie über mehrere Abonnements verfügen und ein bestimmtes Abonnement zur Verwendung für den Tresor angeben möchten, verwenden Sie `Get-AzSubscription`, um die Abonnements anzuzeigen, und `Select-AzSubscription`, um das richtige Abonnement auszuwählen. Andernfalls sucht PowerShell standardmäßig ein Abonnement aus.  
   
-2.  **Erstellen einer neuen Ressourcengruppe**  
-  
-     Alle mithilfe des Azure-Ressourcen-Managers erstellten Ressourcen müssen in Ressourcengruppen enthalten sein. Erstellen Sie eine Ressourcengruppe, die Ihren Schlüsseltresor aufnehmen soll. In diesem Beispiel wird `ContosoDevRG` verwendet. Wählen Sie Ihren eigenen **eindeutigen** Ressourcengruppen- und Schlüsseltresornamen, da alle Schlüsseltresornamen global eindeutig sind.  
+1.  Erstellen Sie eine Ressourcengruppe.   
+
+    Alle Azure-Ressourcen, die Sie mithilfe von PowerShell erstellen, müssen in Ressourcengruppen enthalten sein, die Sie für Ihren Schlüsseltresor anlegen. Der Ressourcenname in diesem Beispiel lautet *ContosoDevRG*. Wählen Sie Ihren eigenen Ressourcengruppen- und Schlüsseltresornamen, da alle Schlüsseltresornamen global eindeutig sein müssen.  
   
     ```powershell  
     New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  
     ```  
   
-     Die Anweisung gibt Folgendes zurück:  
+    Die Anweisung gibt Folgendes zurück:  
   
     ```  
     ResourceGroupName: ContosoDevRG  
@@ -104,30 +195,30 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
                         resourceGroups/ContosoDevRG  
     ```  
   
-    > [!NOTE]  
-    >  Verwenden Sie für den `-Location parameter`den `Get-AzureLocation` -Befehl, um zu ermitteln, wie Sie einen alternativen Speicherort zu dem in diesem Beispiel verwendeten Speicherort angeben können. Falls Sie weitere Informationen benötigen, geben Sie Folgendes ein: `Get-Help Get-AzureLocation`  
+    > [!NOTE] 
+    > Verwenden Sie für den Parameter `-Location` den Befehl `Get-AzureLocation`, um einen anderen Speicherort als den in diesem Beispiel verwendeten Speicherort anzugeben. Wenn Sie weitere Informationen hierzu benötigen, geben Sie **Get-Help Get-AzureLocation** ein.  
   
-3.  **Erstellen einer Key Vault-Instanz**  
-  
-     Das `New-AzKeyVault` -Cmdlet benötigt einen Ressourcengruppennamen, einen Schlüsseltresornamen und einen geografischen Standort. Geben Sie z. B. für einen Schlüsseltresor mit dem Namen `ContosoDevKeyVault`Folgendes ein:  
+1.  Erstellen eines Schlüsseltresors    
+
+    Das `New-AzKeyVault` -Cmdlet benötigt einen Ressourcengruppennamen, einen Schlüsseltresornamen und einen geografischen Standort. Führen Sie z. B. für einen Schlüsseltresor mit dem Namen `ContosoEKMKeyVault` Folgendes aus:  
   
     ```powershell  
-    New-AzKeyVault -VaultName 'ContosoDevKeyVault' `  
+    New-AzKeyVault -VaultName 'ContosoEKMKeyVault' `  
        -ResourceGroupName 'ContosoDevRG' -Location 'East Asia'  
     ```  
   
-     Notieren Sie den Namen Ihres Schlüsseltresors.  
+    Notieren Sie den Namen Ihres Schlüsseltresors.  
   
-     Die Anweisung gibt Folgendes zurück:  
-  
+    Die Anweisung gibt Folgendes zurück:
+
     ```  
-    Vault Name                       : ContosoDevKeyVault  
+    Vault Name                       : ContosoEKMKeyVault  
     Resource Group Name              : ContosoDevRG  
     Location                         : East Asia  
     ResourceId                       : /subscriptions/<subscription_id>/  
                                         resourceGroups/ContosoDevRG/providers/  
-                                        Microsoft/KeyVault/vaults/ContosoDevKeyVault  
-    Vault URI: https://ContosoDevKeyVault.vault.azure.net  
+                                        Microsoft/KeyVault/vaults/ContosoEKMKeyVault  
+    Vault URI: https://ContosoEKMKeyVault.vault.azure.net  
     Tenant ID                        : <tenant_id>  
     SKU                              : Standard  
     Enabled For Deployment?          : False  
@@ -144,221 +235,291 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
     Tags                             :  
     ```  
   
-4.  **Erteilen Sie dem Azure Active Directory-Dienstprinzipal die Berechtigung zum Zugriff auf den Schlüsseltresor**  
+1.  Erteilen Sie dem Azure AD-Dienstprinzipal Berechtigungen für den Zugriff auf den Azure-Schlüsseltresor.  
   
-     Sie können andere Benutzer und andere Anwendungen autorisieren, Ihren Schlüsseltresor zu verwenden.   
-    Nutzen wir im Rahmen dieses Beispiels den in Teil I erstellten Azure Active Directory-Dienstprinzipal zum Autorisieren der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz.  
+    Sie können andere Benutzer und andere Anwendungen autorisieren, Ihren Schlüsseltresor zu verwenden.  In unserem Beispiel verwenden wir den Dienstprinzipal, den Sie in [Schritt 1: Einrichten eines Azure AD-Dienstprinzipals](#step-1-set-up-an-azure-ad-service-principal) erstellt haben, um die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz zu autorisieren.  
   
-    > [!IMPORTANT]  
-    >  Der Azure Active Directory-Dienstprinzipal benötigt mindestens die Berechtigungen `get`, `wrapKey` und `unwrapKey` für den Schlüsseltresor.  
+    > [!IMPORTANT] 
+    > Der Azure AD-Dienstprinzipal muss mindestens über die Berechtigungen *Abrufen*, *Auflisten*,*Schlüssel packen*und *Schlüssel entpacken* für den Schlüsseltresor verfügen.  
   
-     Verwenden Sie die **Client-ID** aus Teil I für den `ServicePrincipalName` -Parameter, wie unten dargestellt. Die `Set-AzKeyVaultAccessPolicy` wird lautlos ausgeführt und gibt bei erfolgreicher Ausführung keinen Wert zurück.  
+    Wie im folgenden Befehl gezeigt, verwenden Sie die **App-ID (Client)** aus [Schritt 1: Einrichten eines Azure AD-Dienstprinzipals](#step-1-set-up-an-azure-ad-service-principal) für den `ServicePrincipalName`-Parameter. `Set-AzKeyVaultAccessPolicy` wird lautlos ausgeführt und gibt bei erfolgreicher Ausführung keinen Wert zurück.  
   
     ```powershell  
-    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
-      -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
-      -PermissionsToKeys get, wrapKey, unwrapKey  
+    Set-AzKeyVaultAccessPolicy -VaultName 'ContosoEKMKeyVault' `  
+      -ServicePrincipalName 9A57CBC5-4C4C-40E2-B517-EA677 `  
+      -PermissionsToKeys get, list, wrapKey, unwrapKey  
     ```  
   
-     Rufen Sie das `Get-AzKeyVault` -Cmdlet auf, um die Berechtigungen zu bestätigen. In der Ausgabe der Anweisung sollten Sie unter „Zugriffsrichtlinien“ den Namen Ihrer AAD-Anwendung als weiteren Mandanten finden, der Zugriff auf diesen Schlüsseltresor hat.  
+    Rufen Sie das `Get-AzKeyVault` -Cmdlet auf, um die Berechtigungen zu bestätigen. In der Ausgabe der Anweisung sollten Sie unter `Access Policies` den Namen Ihrer Azure AD-Anwendung als weiteren Mandanten finden, der Zugriff auf diesen Schlüsseltresor hat.  
   
        
-5.  **Erstellen Sie einen asymmetrischen Schlüssel im Schlüsseltresor**  
-  
-     Es gibt zwei Möglichkeiten, einen Schlüssel in Azure Key Vault zu erstellen: 1) Importieren eines vorhandenes Schlüssels oder 2) Erstellen eines neuen Schlüssels.  
+1.  Erstellen Sie einen asymmetrischen Schlüssel im Schlüsseltresor. Dies ist auf zwei Arten möglich: Importieren eines vorhandenen Schlüssels oder Erstellen eines neuen Schlüssels.  
                   
-      > [!NOTE]
-        >  SQL Server unterstützt nur 2048-Bit-RSA-Schlüssel.
+     > [!NOTE] 
+     > SQL Server unterstützt nur 2048-Bit-RSA-Schlüssel.
         
-    ### <a name="best-practice"></a>Best Practice:
+### <a name="best-practices"></a>Bewährte Methoden
     
-    Es wird die folgende bewährte Methode empfohlen, um die schnelle Wiederherstellung von Schlüsseln sicherzustellen und den Zugriff auf Ihre Daten außerhalb von Azure zu ermöglichen:
+Es werden die folgenden bewährten Methoden empfohlen, um die schnelle Wiederherstellung von Schlüsseln sicherzustellen und den Zugriff auf Ihre Daten außerhalb von Azure zu ermöglichen:
  
-    1. Erstellen Sie Ihren Verschlüsselungsschlüssel lokal auf einem lokalen HSM-Gerät. (Stellen Sie sicher, dass dies ein asymmetrischer RSA-2048-Schlüssel ist, damit er von SQL Server unterstützt wird.)
-    2. Importieren Sie den Verschlüsselungsschlüssel in Azure Key Vault. Informationen zur Vorgehensweise finden Sie unter den folgenden Schritten.
-    3. Bevor Sie den Schlüssel zum ersten Mal in Azure Key Vault verwenden, erstellen Sie eine Azure Key Vault-Schlüsselsicherung. Weitere Informationen über den Befehl [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
-    4. Sobald Änderungen am Schlüssel vorgenommen werden (z.B. durch Hinzufügen von ACLs, Tags oder Schlüsselattributen), müssen Sie sicherstellen, dass Sie eine weitere Azure Key Vault-Schlüsselsicherung erstellen.
+- Erstellen Sie Ihren Verschlüsselungsschlüssel lokal auf einem lokalen HSM-Gerät (Hardware Security Module). Stellen Sie sicher, dass Sie einen asymmetrischen RSA-2048-Schlüssel verwenden, damit er von SQL Server unterstützt wird.
+- Importieren Sie den Verschlüsselungsschlüssel in Ihren Azure Key Vault. Dieser Prozess wird in den folgenden Abschnitten beschrieben.
+- Bevor Sie den Schlüssel zum ersten Mal in Ihrem Azure Key Vault verwenden, erstellen Sie eine Schlüsselsicherung Ihres Azure Key Vaults. Weitere Informationen finden Sie im Zusammenhang mit dem Befehl [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
+- Stellen Sie sicher, dass Sie jedes Mal eine neue Schlüsselsicherung Ihres Azure Key Vaults erstellen, wenn Sie Änderungen am Schlüssel vornehmen (z. B. wenn Sie ACLs, Tags oder Schlüsselattribute hinzufügen).
 
-        > [!NOTE]  
-        >  Die Sicherung eines Schlüssels ist ein Azure Key Vault-Schlüsselvorgang, der eine Datei zurückgibt, die an einer beliebigen Stelle gespeichert werden kann.
+  > [!NOTE]
+  > Die Sicherung eines Schlüssels ist ein Azure Key Vault-Schlüsselvorgang, der eine Datei zurückgibt, die an einer beliebigen Stelle gespeichert werden kann.
 
-    ### <a name="types-of-keys"></a>Schlüsselarten:
-    Es gibt zwei Arten von Schlüsseln, die in Azure Key Vault generiert werden können und mit SQL Server funktionieren. Bei beiden handelt es sich um asymmetrische 2048-Bit-RSA-Schlüssel.  
-  
-    -   **Softwaregeschützt:** In Software verarbeitet und in Ruhezeiten verschlüsselt. Vorgänge für softwaregeschützte Schlüssel erfolgen auf virtuellen Azure-Computern. Für Schlüssel empfohlen, die nicht in einer Produktionsumgebung verwendet werden.  
-  
-    -   **HSM-geschützt:** Von einem Hardwaresicherheitsmodul (HSM) erstellt und geschützt, um zusätzliche Sicherheit zu erreichen. Die Kosten liegen bei ungefähr $ 1 pro Schlüsselversion.  
-  
-        > [!IMPORTANT]  
-        >  Für den SQL Server-Connector ist es erforderlich, dass im Schlüsselnamen nur die Zeichen „a-z“, „A-Z“, „0-9“ und „-“ bei einem Zeichenlimit von 26 Zeichen verwendet werden.   
-        > Verschiedene Schlüsselversionen unter dem gleichen Schlüsselnamen in Azure Key Vault funktionieren in Verbindung mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector nicht. Informationen zur rotierenden Verwendung eines Azure Key Vault-Schlüssels, der von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird, finden Sie in den Schritten zum Schlüsselrollover unter [SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
+### <a name="types-of-keys"></a>Schlüsseltypen
 
-    ### <a name="import-an-existing-key"></a>Importieren eines vorhandenen Schlüssels   
+In einem Azure Key Vault können zwei Typen von Schlüsseln generiert werden, die mit SQL Server kompatibel sind. Bei beiden Typen handelt es sich um asymmetrische 2048-Bit-RSA-Schlüssel.  
   
-    Wenn Sie über einen vorhandenen softwaregeschützten 2048-Bit-RSA-Schlüssel verfügen, können Sie den Schlüssel in den Azure Key Vault hochladen. Wenn beispielsweise eine PFX-Datei auf Ihrem Laufwerk `C:\\` in einer Datei mit dem Namen `softkey.pfx` gespeichert ist, die Sie in den Azure Key Vault hochladen möchten, geben Sie Folgendes ein, um die Variable `securepfxpwd` für das Kennwort `12987553` für die PFX-Datei festzulegen:  
+  - **Softwaregeschützt**: In Software verarbeitet und in Ruhezeiten verschlüsselt. Vorgänge für softwaregeschützte Schlüssel erfolgen auf virtuellen Azure-Computern. Dieser Typ wird für Schlüssel empfohlen, die nicht in einer Produktionsbereitstellung verwendet werden.  
+
+  - **HSM-geschützt**: Dieser Typ wird für zusätzliche Sicherheit von einem Hardwaresicherheitsmodul (HSM) erstellt und geschützt. Die Kosten betragen ungefähr 1 USD pro Schlüsselversion.  
   
-    ``` powershell  
-    $securepfxpwd = ConvertTo-SecureString -String '12987553' `  
-      -AsPlainText -Force  
-    ```  
+    > [!IMPORTANT] 
+    > Verwenden Sie für den SQL Server-Connector nur die Zeichen a-z, A-Z, 0-9 und Bindestriche (-). Das Zeichenlimit beträgt 26 Zeichen.   
+    > In Verbindung mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connector funktionieren verschiedene Schlüsselversionen unter dem gleichen Schlüsselnamen nicht in einem Azure Key Vault. Informationen zur Rotation eines Azure Key Vault-Schlüssels, der von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird, finden Sie in den Schritten zum Schlüsselrollover in Abschnitt A. „Wartungsanweisungen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connector“ des Artikels [SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
+
+### <a name="import-an-existing-key"></a>Importieren eines vorhandenen Schlüssels   
   
-    Anschließend können Sie Folgendes eingeben, um den Schlüssel aus der PFX-Datei, die ihn durch die Hardware schützt (empfohlen), in den Schlüsseltresordienst zu importieren:  
+Wenn Sie bereits über einen softwaregeschützten 2048-Bit-RSA-Schlüssel verfügen, können Sie diesen Schlüssel in den Azure Key Vault hochladen. Wenn beispielsweise eine PFX-Datei auf Ihrem Laufwerk `C:\\` in einer Datei mit dem Namen *softkey.pfx* gespeichert ist, die Sie in den Azure-Schlüsseltresor hochladen möchten, führen Sie den folgenden Befehl aus, um die Variable `securepfxpwd` für das Kennwort `12987553` für die PFX-Datei festzulegen:  
   
-    ``` powershell  
-        Add-AzureKeyVaultKey -VaultName 'ContosoKeyVault' `  
-          -Name 'ContosoFirstKey' -KeyFilePath 'c:\softkey.pfx' `  
-          -KeyFilePassword $securepfxpwd $securepfxpwd  -Destination 'HSM'  
-    ```  
+``` powershell  
+$securepfxpwd = ConvertTo-SecureString -String '12987553' `  
+  -AsPlainText -Force  
+```  
+
+Anschließend können Sie den folgenden Befehl ausführen, um den Schlüssel aus der PFX-Datei, die ihn durch die Hardware schützt (empfohlen), in den Schlüsseltresordienst zu importieren:  
+  
+``` powershell  
+    Add-AzureKeyVaultKey -VaultName 'ContosoKeyVault' `  
+      -Name 'ContosoFirstKey' -KeyFilePath 'c:\softkey.pfx' `  
+      -KeyFilePassword $securepfxpwd $securepfxpwd  -Destination 'HSM'  
+```  
  
-    > [!IMPORTANT]  
-    > Das Importieren des asymmetrischen Schlüssels wird für Produktionsszenarien dringend empfohlen, da der Administrator dann den Schlüssel in einem Schlüsselhinterlegungssystem hinterlegen kann. Wenn der asymmetrische Schlüssel im Tresor erstellt wird, kann er nicht hinterlegt werden, da der private Schlüssel nie den Tresor verlassen kann. Schlüssel zum Schützen wichtiger Daten sollten hinterlegt werden. Der Verlust eines asymmetrischen Schlüssels führt zu permanenten Datenverlust.  
+> [!CAUTION]
+> Das Importieren des asymmetrischen Schlüssels wird für Produktionsszenarios dringend empfohlen, da der Administrator dann den Schlüssel in einem Schlüsselhinterlegungssystem hinterlegen kann. Wenn der asymmetrische Schlüssel im Tresor erstellt wird, kann er nicht hinterlegt werden, da der private Schlüssel nie den Tresor verlassen kann. Schlüssel zum Schützen kritischer Daten sollten hinterlegt werden. Der Verlust eines asymmetrischen Schlüssels führt zu permanenten Datenverlust.  
 
-    ### <a name="create-a-new-key"></a>Erstellen eines neuen Schlüssels
-    #### <a name="example"></a>Beispiel:  
-    Alternativ können Sie einen neuen Verschlüsselungsschlüssel direkt in Azure Key Vault erstellen und ihn per Software oder HSM schützen.  In diesem Beispiel erstellen wir mithilfe des `Add-AzureKeyVaultKey cmdlet` einen softwaregeschützten Schlüssel:  
+### <a name="create-a-new-key"></a>Erstellen eines neuen Schlüssels 
 
-    ``` powershell  
-    Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
-      -Name 'ContosoRSAKey0' -Destination 'Software'  
-    ```  
-  
-    Die Anweisung gibt Folgendes zurück:  
-  
-    ```  
-    Attributes : Microsoft.Azure.Commands.KeyVault.Models.KeyAttributes  
-    Key        :  {"kid":"https:contosodevKeyVault.azure.net/keys/  
-                   ContosoRSAKey0/<guid>","dty":"RSA:,"key_ops": ...  
-    VaultName  : contosodevkeyvault  
-    Name       : contosoRSAKey0  
-    Version    : <guid>  
-    Id         : https://contosodevkeyvault.vault.azure.net:443/  
-                 keys/ContosoRSAKey0/<guid>  
-    ```  
- > [!IMPORTANT]  
- > Der Schlüsseltresor unterstützt mehrere Versionen eines Schlüssels unter dem gleichen Namen, für vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector verwendete Schlüssel sollte aber weder Versionierung noch Rollover ausgeführt werden. Wenn der Administrator den Schlüssel für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselung wieder verwenden möchte, sollte ein neuer Schlüssel mit einem anderen Namen im Tresor erstellt und zum Verschlüsseln des Datenverschlüsselungsschlüssels verwendet werden.  
-   
-  
-## <a name="part-iii-install-the-ssnoversion-connector"></a>Teil III: Installieren des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors  
- Laden Sie den SQL Server-Connector aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700)herunter. (Dies sollte vom Administrator des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Computers ausgeführt werden.)  
+Alternativ können Sie einen neuen Verschlüsselungsschlüssel direkt in Azure Key Vault erstellen und mittels Software oder HSM schützen.  In diesem Beispiel erstellen wir mit dem Cmdlet `Add-AzureKeyVaultKey` einen softwaregeschützten Schlüssel:  
 
-> [!NOTE]  
->  Die Versionen 1.0.0.440 und älter wurden ersetzt und werden nicht länger in Produktionsumgebungen unterstützt. Führen Sie ein Upgrade auf Version 1.0.1.0 oder höher durch, indem Sie das [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) besuchen und die Anweisungen auf der Seite [SQL Server-Connector Wartung & Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) unter „Upgrade des SQL Server-Connectors“ ausführen.
+``` powershell  
+Add-AzureKeyVaultKey -VaultName 'ContosoEKMKeyVault' `  
+  -Name 'ContosoRSAKey0' -Destination 'Software'  
+```  
+  
+Die Anweisung gibt Folgendes zurück:  
+  
+```
+Attributes : Microsoft.Azure.Commands.KeyVault.Models.KeyAttributes  
+Key        :  {"kid":"https:contosoekmkeyvault.azure.net/keys/  
+                ContosoRSAKey0/<guid>","dty":"RSA:,"key_ops": ...  
+VaultName  : contosodevkeyvault  
+Name       : contosoRSAKey0  
+Version    : <guid>  
+Id         : https://contosoekmkeyvault.vault.azure.net:443/  
+              keys/ContosoRSAKey0/<guid>  
+```  
 
-> [!NOTE]  
-> In Version 1.0.5.0 gibt es einen Breaking Change hinsichtlich des Fingerabdruckalgorithmus. Nach dem Upgrade auf Version 1.0.5.0 tritt möglicherweise ein Fehler bei der Wiederherstellung auf. Weitere Informationen erhalten Sie im KB-Artikel [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
+> [!IMPORTANT] 
+> Der Schlüsseltresor unterstützt mehrere Versionen eines Schlüssels unter dem gleichen Namen, für vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connector verwendete Schlüssel sollte aber weder Versionierung noch Rollover ausgeführt werden. Wenn der Administrator den für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verschlüsselung verwendeten Schlüssel wiederverwenden möchte, sollte ein neuer Schlüssel mit einem anderen Namen im Schlüsseltresor erstellt und zum Verschlüsseln des Verschlüsselungsschlüssels verwendet werden.  
+
+---
+       
+## <a name="step-3-install-the-ssnoversion-connector"></a>Schritt 3: Installieren des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors  
+
+Laden Sie den SQL Server-Connector aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700)herunter. Der Download sollte vom Administrator des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Computers ausgeführt werden.  
+
+> [!NOTE] 
+> Die Versionen 1.0.0.440 und früher wurden ersetzt und werden nicht mehr in Produktionsumgebungen unterstützt. Führen Sie ein Upgrade auf Version 1.0.1.0 oder höher durch, indem Sie das [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) besuchen. Befolgen Sie die Anweisungen unter „Upgrade des SQL Server-Connectors“ auf der Seite [SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).
+
+> [!NOTE]
+> In Version 1.0.5.0 gibt es einen Breaking Change hinsichtlich des Fingerabdruckalgorithmus. Nach dem Upgrade auf Version 1.0.5.0 tritt möglicherweise ein Fehler bei der Wiederherstellung auf. Weitere Informationen finden Sie im [KB-Artikel 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
   
- ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
+  ![Screenshot des Installationsassistenten für den SQL Server-Connector](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   
- Standardmäßig wird der Connector hier installiert: C:\Programme\SQL Server Connector for Microsoft Azure Key Vault. Dieser Speicherort kann während des Setups geändert werden. (Wenn Sie ihn ändern, passen Sie die unten angegebenen Skripts entsprechend an.)  
+In der Standardeinstellung ist der Connector unter C:\Programme\SQL Server-Connector für Microsoft Azure Key Vault installiert. Dieser Speicherort kann während des Setups geändert werden. Wenn Sie ihn ändern, müssen Sie die Skripts im nächsten Abschnitt anpassen.  
   
- Der Connector hat keine Benutzeroberfläche, doch wenn er erfolgreich installiert wurde, befindet sich die Datei **Microsoft.AzureKeyVaultService.EKM.dll** auf dem Computer. Dies ist die DLL des EKM-Kryptografieanbieters, die bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe der `CREATE CRYPTOGRAPHIC PROVIDER` -Anweisung registriert werden muss.  
+Der Connector hat keine Benutzeroberfläche, doch wenn er erfolgreich installiert wurde, befindet sich die Datei *Microsoft.AzureKeyVaultService.EKM.dll* auf dem Computer. Diese Assembly ist die DLL des EKM-Kryptografieanbieters, die mithilfe der `CREATE CRYPTOGRAPHIC PROVIDER`-Anweisung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] registriert werden muss.  
   
- Die SQL Server-Connectorinstallation ermöglicht außerdem den Download von Beispieldateien für die SQL Server-Verschlüsselung.  
+Die SQL Server-Connectorinstallation ermöglicht außerdem den Download von Beispieldateien für die SQL Server-Verschlüsselung.  
   
- Fehlercodeerläuterungen, Konfigurationseinstellungen oder Wartungsaufgaben für SQL Server-Connector finden Sie im Anhang unten in diesem Thema:  
+Fehlercodeerläuterungen, Konfigurationseinstellungen oder Wartungsaufgaben für SQL Server-Connector finden Sie unter:  
   
--   [A. Wartungsanweisungen für SQL Server-Connector](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixA)  
+- [A. Wartungsanweisungen für SQL Server-Connector](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixA)  
+- [C. Erläuterungen zu Fehlercodes für SQL Server-Connector](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
--   [C. Fehlercodeerläuterungen für SQL Server-Connector](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
+## <a name="step-4-configure-ssnoversion"></a>Schritt 4: Konfigurieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+
+Einen Hinweis zu den minimal erforderlichen Berechtigungsstufen für jede Aktion in diesem Abschnitt finden Sie unter [B. Häufig gestellte Fragen](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
   
-## <a name="part-iv-configure-ssnoversion"></a>Teil IV: Konfigurieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- Einen Hinweis zu den mindestens erforderlichen Berechtigungsstufen für jede Aktion in diesem Abschnitt finden Sie unter [B. Häufig gestellte Fragen (FAQ)](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
+1.  Führen Sie *sqlcmd.exe* aus, oder öffnen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio.  
   
-1.  **Starten Sie „sqlcmd.exe“ oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio**  
-  
-2.  **Konfigurieren Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für die Verwendung von EKM**  
-  
-     Führen Sie das folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript aus, um das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] für die Verwendung eines EKM-Anbieters zu konfigurieren.  
+1.  Konfigurieren Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für die EKM-Verwendung durch Ausführen des folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skripts:  
   
     ```sql  
     -- Enable advanced options.  
     USE master;  
     GO  
-  
-    sp_configure 'show advanced options', 1;  
+
+    EXEC sp_configure 'show advanced options', 1;  
     GO  
     RECONFIGURE;  
     GO  
-  
+
     -- Enable EKM provider  
-    sp_configure 'EKM provider enabled', 1;  
+    EXEC sp_configure 'EKM provider enabled', 1;  
     GO  
     RECONFIGURE;  
     ```  
   
-3.  **Registrieren (erstellen) Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector als EKM-Anbieter bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
+1. Registrieren Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connector bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als EKM-Anbieter.  
   
-     Erstellen Sie einen Kryptografieanbieter mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connectors, der einen EKM-Anbieter für den Azure-Schlüsseltresor darstellt.    
-    In diesem Beispiel wird der Name `AzureKeyVault_EKM_Prov`verwendet.  
+    Erstellen Sie einen Kryptografieanbieter mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connectors, der einen EKM-Anbieter für den Azure-Schlüsseltresor darstellt.    
+    
+    In diesem Beispiel lautet der Name des Anbieters `AzureKeyVault_EKM`.  
   
     ```sql  
-    CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
+    CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
     GO  
     ```  
+    
+    > [!NOTE]
+    > Der Dateipfad darf höchstens 256 Zeichen umfassen.  
   
-    > [!NOTE]  
-    >  Der Dateipfad darf höchstens 256 Zeichen umfassen.  
+1. Richten Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldung zur Verwendung des Schlüsseltresors ein.  
   
+    Für jede Anmeldung, die eine Verschlüsselung mithilfe eines Schlüssels aus dem Schlüsseltresor ausführen soll, müssen Anmeldeinformationen hinzugefügt werden. Dazu können beispielsweise gehören:  
   
-4.  **Richten Sie eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformation für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung zur Verwendung des Schlüsseltresors ein**  
+    - Eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Administratoranmeldung, die den Schlüsseltresor verwendet, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verschlüsselungsszenarios einzurichten und zu verwalten.  
   
-     Für jede Anmeldung, die Verschlüsselung mithilfe eines Schlüssels aus dem Schlüsseltresor ausführen soll, müssen Anmeldeinformationen erstellt werden. Dazu können beispielsweise gehören:  
+    - Andere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldungen, die TDE oder andere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verschlüsselungsfeatures aktivieren können.  
   
-    -   Eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Administratoranmeldung, die den Schlüsseltresor verwenden soll, um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselungsszenarien einzurichten und zu verwalten.  
+    Es besteht eine Eins-zu-Eins-Zuordnung zwischen Anmeldeinformationen und Anmeldungen. Da heißt, für jede Anmeldung müssen eindeutige Anmeldeinformationen vorhanden sein.  
   
-    -   Andere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen, die möglicherweise die transparente Datenverschlüsselung (Transparent Data Encryption, TDE) oder andere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselungsfunktionen aktivieren.  
+    Ändern Sie dieses [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skript wie folgt:  
   
-     Es besteht eine Eins-zu-Eins-Zuordnung zwischen Anmeldeinformationen und Anmeldungen. Da heißt, für jede Anmeldung müssen eindeutige Anmeldeinformationen vorhanden sein.  
+    - Bearbeiten Sie das `IDENTITY`-Argument (`ContosoEKMKeyVault`), damit es auf Ihren Azure-Schlüsseltresor verweist.
+      - Wenn Sie eine *globale Azure-Cloud* verwenden, ersetzen Sie das `IDENTITY`-Argument durch den Namen Ihres Azure-Schlüsseltresors aus [Schritt 2: Erstellen eines Schlüsseltresors](#step-2-create-a-key-vault).
+      - Wenn Sie eine *private Azure Cloud* (z. B. Azure Government, Azure China 21ViaNet oder Azure Deutschland) verwenden, ersetzen Sie das `IDENTITY`-Argument durch den Tresor-URI, der in Schritt 3 des Abschnitts [Erstellen eines Schlüsseltresors und eines Schlüssels mithilfe von PowerShell](#create-a-key-vault-and-key-by-using-powershell) zurückgegeben wurde. Schließen Sie „https://“ nicht in den Tresor-URI ein.   
+    - Ersetzen Sie den ersten Teil des `SECRET`-Arguments durch die ID des Azure Active Directory-Clients aus [Schritt 1: Einrichten eines Azure AD-Dienstprinzipals](#step-1-set-up-an-azure-ad-service-principal). In diesem Beispiel lautet die **Client-ID** `9A57CBC54C4C40E2B517EA677E0EFA00`.  
   
-     Ändern Sie das [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript unten in der folgenden Weise:  
+      > [!IMPORTANT] 
+      > Achten Sie darauf, die Bindestriche aus der App-ID (Client) zu entfernen.  
   
-    -   Bearbeiten Sie das `IDENTITY` -Argument (`ContosoDevKeyVault`), damit es auf Ihren Azure Key Vault verweist.
-        - Wenn Sie eine **globale Azure-Cloud** verwenden, ersetzen Sie das `IDENTITY`-Argument durch den Namen Ihres Azure-Schlüsseltresors aus Teil II.
-        - Wenn Sie eine **private Azure-Cloud** verwenden (z. B. Azure für Behörden, Azure China oder Azure Deutschland), ersetzen Sie das `IDENTITY` -Argument durch den Tresor-URI, der in Teil II, Schritt 3 zurückgegeben wird. Schließen Sie „https://“ nicht in den Tresor-URI ein.   
-    -   Ersetzen Sie den ersten Teil des `SECRET` -Arguments durch die Azure Active Directory- **Client-ID** aus Teil I. In diesem Beispiel ist die **Client-ID**`EF5C8E094D2A4A769998D93440D8115D`.  
-  
-        > [!IMPORTANT]  
-        >  Bindestriche müssen aus der **Client-ID**entfernt werden.  
-  
-    -   Setzen Sie in den zweiten Teil des `SECRET` -Arguments den **geheimen Clientschlüssel** aus Teil I ein. In diesem Beispiel ist der **geheime Clientschlüssel** aus Teil I `Replace-With-AAD-Client-Secret`. Die endgültige Zeichenfolge für das `SECRET` -Argument ist eine lange Abfolge von Buchstaben und Ziffern *ohne Bindestriche*.  
+    - Vervollständigen Sie den zweiten Teil des `SECRET`-Arguments mit dem **geheimen Clientschlüssel** aus [Schritt 1: Einrichten eines Azure AD-Dienstprinzipals](#step-1-set-up-an-azure-ad-service-principal).  In diesem Beispiel lautet der geheime Clientschlüssel `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`. Die endgültige Zeichenfolge für das `SECRET`-Argument ist eine lange Abfolge von Buchstaben und Ziffern ohne Bindestriche.  
   
     ```sql  
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
-        WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
-        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
-    FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
+        WITH IDENTITY = 'ContosoEKMKeyVault',                            -- for public Azure
+        -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.usgovcloudapi.net', -- for Azure Government
+        -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.azure.cn',          -- for Azure China 21Vianet
+        -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.microsoftazure.de', -- for Azure Germany
+               --<----Application (Client) ID ---><--Azure AD app (Client) ID secret-->
+        SECRET = '9A57CBC54C4C40E2B517EA677E0EFA0008:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m'   
+    FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM;  
   
     -- Add the credential to the SQL Server administrator's domain login   
     ALTER LOGIN [<domain>\<login>]  
     ADD CREDENTIAL sysadmin_ekm_cred;  
     ```  
   
-     Ein Beispiel für die Verwendung von Variablen für die **CREATE CREDENTIAL**-Argumente und die programmgesteuerte Entfernung der Bindestriche aus der Client-ID finden Sie unter [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../../t-sql/statements/create-credential-transact-sql.md).  
+    Ein Beispiel für die Verwendung von Variablen für das `CREATE CREDENTIAL`-Argument und die programmgesteuerte Entfernung der Bindestriche aus der Client-ID finden Sie unter [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../../t-sql/statements/create-credential-transact-sql.md).  
   
-5.  **Öffnen Sie in Ihren Azure Key Vault-Schlüssel in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
+1. Öffnen Sie Ihren Azure Key Vault-Schlüssel in Ihrer SQL Server-Instanz.  
+
+    Sie müssen den Schlüssel öffnen – unabhängig davon, ob Sie einen neuen Schlüssel erstellt oder einen asymmetrischen Schlüssel wie in [Schritt 2: Erstellen eines Schlüsseltresors](#step-2-create-a-key-vault) beschrieben importiert haben. Öffnen Sie den Schlüssel, indem Sie im folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skript Ihren Schlüsselnamen angeben.  
   
-     Unabhängig davon, ob Sie einen neuen Schlüssel erstellt oder wie in Teil II beschrieben einen asymmetrischen Schlüssel importiert haben, müssen Sie den Schlüssel öffnen. Öffnen Sie den Schlüssel, indem Sie im folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skript Ihren Schlüsselnamen angeben:  
-  
-    -   Ersetzen Sie `CONTOSO_KEY` durch den Namen, den der Schlüssel in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthalten soll.  
-  
-    -   Ersetzen Sie `ContosoRSAKey0` durch den Namen Ihres Schlüssels im Azure Key Vault.  
+    - Ersetzen Sie `EKMSampleASYKey` durch den Namen, den der Schlüssel in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthalten soll.  
+    - Ersetzen Sie `ContosoRSAKey0` durch den Namen Ihres Schlüssels im Azure Key Vault.  
   
     ```sql  
-    CREATE ASYMMETRIC KEY CONTOSO_KEY   
-    FROM PROVIDER [AzureKeyVault_EKM_Prov]  
+    CREATE ASYMMETRIC KEY EKMSampleASYKey   
+    FROM PROVIDER [AzureKeyVault_EKM]  
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
     CREATION_DISPOSITION = OPEN_EXISTING;  
     ```  
-## <a name="next-step"></a>Nächster Schritt  
+    
+1. Erstellen Sie mit dem asymmetrischen Schlüssel in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], den Sie im vorherigen Schritt erstellt haben, eine neue Anmeldung.
+
+     ```sql  
+    --Create a Login that will associate the asymmetric key to this login
+    CREATE LOGIN TDE_Login
+    FROM ASYMMETRIC KEY EKMSampleASYKey;
+    ```  
+
+1. Erstellen Sie mithilfe des asymmetrischen Schlüssels in SQL Server eine neue Anmeldung. Löschen Sie die Zuordnung der Anmeldeinformationen aus Schritt 4: Konfigurieren Sie SQL Server so, dass die Anmeldeinformationen der neuen Anmeldung zugeordnet werden können.
+
+     ```sql  
+    --Now drop the credential mapping from the original association
+    ALTER LOGIN [<domain>\<login>]
+    DROP CREDENTIAL sysadmin_ekm_cred;
+    ```     
+
+1. Ändern Sie die neue Anmeldung, und ordnen Sie die EKM-Anmeldeinformationen der neuen Anmeldung zu.
+
+     ```sql  
+    --Now drop the credential mapping from the original association
+    ALTER LOGIN TDE_Login
+    ADD CREDENTIAL sysadmin_ekm_cred;
+    ```  
+
+1. Erstellen Sie eine Testdatenbank, die mit dem Schlüssel des Azure Key Vaults verschlüsselt wird.
+
+     ```sql
+    --Create a test database that will be encrypted with the Azure key vault key
+    CREATE DATABASE TestTDE
+    ```  
+
+1. Erstellen Sie mithilfe von ASYMMETRIC KEY (EKMSampleASYKey) einen Verschlüsselungsschlüssel für die Datenbank.
+
+    ```sql  
+    --Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
+    CREATE DATABASE ENCRYPTION KEY   
+    WITH ALGORITHM = AES_256   
+    ```  
   
-Jetzt, da Sie die Grundkonfiguration abgeschlossen haben, erfahren Sie mehr zum [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+1. Verschlüsseln Sie die Testdatenbank. Aktivieren Sie TDE, indem Sie ENCRYPTION ON festlegen.
+
+     ```sql  
+    --Enable TDE by setting ENCRYPTION ON
+    ALTER DATABASE TestTDE   
+    SET ENCRYPTION ON;  
+     ```  
+    
+1. Bereinigen Sie die Testobjekte. Löschen Sie alle Objekte, die in diesem Testskript erstellt wurden.
+
+    ```sql  
+    -- CLEAN UP
+    USE Master
+    ALTER DATABASE [TestTDE] SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+    DROP DATABASE [TestTDE]
+
+    ALTER LOGIN [TDE_Login] DROP CREDENTIAL [sysadmin_ekm_cred]
+    DROP LOGIN [TDE_Login]
+
+    DROP CREDENTIAL [sysadmin_ekm_cred]  
+
+    USE MASTER
+    DROP ASYMMETRIC KEY [EKMSampleASYKey]
+    DROP CRYPTOGRAPHIC PROVIDER [AzureKeyVault_EKM]
+    ```  
+    
+Beispielskripts finden Sie im Blog zum Thema [SQL Server Transparent Data Encryption und erweiterbare Schlüsselverwaltung mit Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
+
+
+## <a name="next-steps"></a>Nächste Schritte  
+  
+Da Sie nun die Grundkonfiguration abgeschlossen haben, folgt als Nächstes das Thema [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erweiterbare Schlüsselverwaltung mit Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
-[SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)
+
+* [Erweiterbare Schlüsselverwaltung mit Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
+* [SQL Server-Connector – Verwaltung und Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)
+

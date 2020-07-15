@@ -1,7 +1,8 @@
 ---
 title: Handbuch zur Thread- und Taskarchitektur | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die Thread- und Taskarchitektur in SQL Server, einschließlich der Aufgabenplanung, des Hinzufügens von CPUs bei laufendem Systembetrieb und der bewährten Methoden für die Verwendung von Computern mit mehr als 64 CPUs.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 07/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +15,15 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6e8ee2bd3910f3b7ae4bbdba37b973c095fef00
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287354"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091918"
 ---
 # <a name="thread-and-task-architecture-guide"></a>Handbuch zur Thread- und Taskarchitektur
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="operating-system-task-scheduling"></a>Planung von Betriebssystemtasks
 Threads sind die kleinsten Verarbeitungseinheiten, die von einem Betriebssystem ausgeführt werden können, und ermöglichen die Trennung der Anwendungslogik in mehrere gleichzeitige Ausführungspfade. Threads sind insbesondere dann hilfreich, wenn komplexe Anwendungen viele Tasks aufweisen, die gleichzeitig ausgeführt werden können. 
@@ -34,16 +35,111 @@ Threads ermöglichen, dass komplexe Anwendungen Prozessoren (CPUs) effizienter n
 ## <a name="sql-server-task-scheduling"></a>Planen von SQL Server-Tasks
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist eine **Anforderung** die logische Darstellung einer Abfrage oder eines Batches. Eine Anforderung stellt auch Vorgänge dar, die für Systemthreads erforderlich sind, wie z. B. Prüfpunkt- oder Protokollschreibvorgänge. Anforderungen existieren während ihrer gesamten Lebensdauer in verschiedenen Zuständen und können Wartezeiten anhäufen, wenn Ressourcen, die zur Ausführung der Anforderung erforderlich sind, nicht verfügbar sind, z. B. aufgrund von [Sperren](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks) oder [Latches](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches). Weitere Informationen zu Anforderungszuständen finden Sie unter [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
 
-Ein **Task** stellt die Arbeitseinheit dar, die abgeschlossen werden muss, um die Anforderung zu erfüllen. Ein oder mehrere Tasks können einer einzelnen Anforderung zugewiesen werden. Parallele Anforderungen weisen mehrere aktive Tasks auf, die gleichzeitig statt seriell ausgeführt werden. Eine seriell ausgeführte Anforderung hat zu einem bestimmten Zeitpunkt nur einen aktiven Task. Tasks existieren während ihrer gesamten Lebensdauer in verschiedenen Zuständen. Weitere Informationen zu Zuständen von Tasks finden Sie unter [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Tasks im Zustand SUSPENDED warten darauf, dass Ressourcen, die für ihre Ausführung benötigt werden, verfügbar werden. Weitere Informationen zu wartenden Tasks finden Sie unter [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
+Ein **Task** stellt die Arbeitseinheit dar, die abgeschlossen werden muss, um die Anforderung zu erfüllen. Ein oder mehrere Tasks können einer einzelnen Anforderung zugewiesen werden. 
+-  Parallele Anforderungen verfügen über mehrere aktive Tasks, die gleichzeitig anstatt seriell ausgeführt werden, einschließlich eines **übergeordneten Tasks** (bzw. koordinierenden Tasks) und mehrerer **untergeordneter Tasks**. Ein Ausführungsplan für eine parallele Anforderung kann serielle Branches umfassen, d. h. Bereiche des Plans mit Operatoren, die nicht parallel ausgeführt werden. Der übergeordnete Task ist auch für die Ausführung dieser seriellen Operatoren verantwortlich.
+-  Serielle Anforderungen verfügen während der Ausführung immer nur über einen einzigen aktiven Task.     
+Tasks existieren während ihrer gesamten Lebensdauer in verschiedenen Zuständen. Weitere Informationen zu Zuständen von Tasks finden Sie unter [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Tasks im Zustand SUSPENDED warten darauf, dass Ressourcen, die für ihre Ausführung benötigt werden, verfügbar werden. Weitere Informationen zu wartenden Tasks finden Sie unter [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
 
-Ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Arbeitsthread**in**, auch bekannt als Worker oder Thread, ist eine logische Darstellung eines Betriebssystemthreads. Bei der Ausführung serieller Anforderungen erzeugt [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Worker, um den aktiven Task auszuführen. Bei der Ausführung paralleler Anforderungen im [Zeilenmodus](../relational-databases/query-processing-architecture-guide.md#execution-modes) weist die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Worker zu, der die untergeordneten Worker koordiniert, die für die Ausführung der ihnen zugewiesenen Tasks zuständig sind. Die Anzahl der Arbeitsthreads, die für jeden Task erzeugt werden, hängt von folgenden Faktoren ab:
+Ein **Arbeitsthread** in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], auch bekannt als Worker oder Thread, ist eine logische Darstellung eines Betriebssystemthreads. Bei der Ausführung **serieller Anforderungen** erzeugt die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Worker, um den aktiven Task (1:1) auszuführen. Bei der Ausführung **paralleler Anforderungen** im [Zeilenmodus](../relational-databases/query-processing-architecture-guide.md#execution-modes) weist die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Worker zu, der die untergeordneten Worker koordiniert, die für die Ausführung (ebenfalls 1:1) der ihnen zugewiesenen Tasks zuständig sind. Dies wird als **übergeordneter Thread** bezeichnet. Dem übergeordneten Thread ist ein übergeordneter Task zugeordnet. Die Anzahl der Arbeitsthreads, die für jeden Task erzeugt werden, hängt von folgenden Faktoren ab:
 -   Ob die Anforderung entsprechend der Bestimmung durch den Abfrageoptimierer für Parallelität geeignet war.
 -   Wie hoch der tatsächlich verfügbare [Grad an Parallelität (Degree Of Parallelism, DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) im System basierend auf der aktuellen Last ist. Dies kann vom geschätzten DOP abweichen, der auf der Serverkonfiguration des maximalen Grads an Parallelität (MAXDOP) basiert. So kann beispielsweise die Serverkonfiguration für MAXDOP 8 sein, aber der zur Laufzeit verfügbare DOP kann nur 2 sein, was die Abfrageleistung beeinträchtigt. 
 
 > [!NOTE]
-> Der Grenzwert des **maximalen Grads an Parallelität (MAXDOP)** wird task- und nicht anforderungsbezogen festgelegt. Dies bedeutet, dass während einer parallelen Abfrageausführung eine einzelne Anforderung mehrere Tasks erzeugen kann, wobei jeder Task mehrere Worker bis zum Grenzwert für MAXDOP nutzen kann. Weitere Informationen zu MAXDOP finden Sie unter [Konfigurieren der Serverkonfigurationsoption „Max. Grad an Parallelität“](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+> Der Grenzwert des **maximalen Grads an Parallelität (MAXDOP)** wird task- und nicht anforderungsbezogen festgelegt. Dies bedeutet, dass eine einzelne Anforderung während einer parallelen Abfrageausführung mehrere Tasks bis zum Grenzwert MAXDOP erzeugen kann, wobei jeder Task einen Worker nutzt. Weitere Informationen zu MAXDOP finden Sie unter [Konfigurieren der Serverkonfigurationsoption „Max. Grad an Parallelität“](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 Ein **Planer**, auch bekannt als SOS-Planer, verwaltet Arbeitsthreads, die Verarbeitungszeit benötigen, um Aufgaben im Rahmen von Tasks auszuführen. Jeder Planer ist einem einzelnen Prozessor (CPU) zugeordnet. Die Zeit, die ein Worker in einem Planer aktiv bleiben kann, wird als Betriebssystemquantum bezeichnet, wobei das Maximum bei 4 ms liegt. Nach Ablauf seiner Quantumzeit gibt ein Worker seine Zeit an andere Worker weiter, die auf CPU-Ressourcen zugreifen müssen, und ändert seinen Zustand. Diese Zusammenarbeit zwischen Workern zur Maximierung des Zugriffs auf CPU-Ressourcen wird als **kooperative Planung** oder auch nicht präemptive Planung bezeichnet. Die Änderung des Workerzustands wiederum wird an den Task, der diesem Worker zugeordnet ist, und an die mit dem Task verbundene Anforderung weitergegeben. Weitere Informationen zu Zuständen von Workern finden Sie unter [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). Weitere Informationen zu Planern finden Sie unter [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
+
+Zusammenfassend kann eine **Anforderung** eine oder mehrere **Tasks** erzeugen, um Arbeitseinheiten auszuführen. Jeder Task wird einem **Arbeitsthread** zugewiesen, der für das Abschließen des Tasks zuständig ist. Jeder Arbeitsthread muss für die aktive Ausführung des Tasks geplant (d. h. auf einem **Scheduler** platziert) werden. 
+
+### <a name="scheduling-parallel-tasks"></a>Planen von parallelen Tasks
+Angenommen, ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist mit MAXDOP 8 konfiguriert, und die CPU-Affinität ist für 24 CPUs (Scheduler) zwischen den NUMA-Knoten 0 und 1 konfiguriert. Die Scheduler 0 bis 11 gehören zum NUMA-Knoten 0, die Scheduler 12 bis 23 zum NUMA-Knoten 1. Eine Anwendung sendet die folgende Abfrage (Anforderung) an die [!INCLUDE[ssde_md](../includes/ssde_md.md)]:
+
+```sql
+SELECT h.SalesOrderID, h.OrderDate, h.DueDate, h.ShipDate
+FROM Sales.SalesOrderHeaderBulk AS h 
+INNER JOIN Sales.SalesOrderDetailBulk AS d ON h.SalesOrderID = d.SalesOrderID 
+WHERE (h.OrderDate >= '2014-3-28 00:00:00');
+```
+
+> [!TIP]
+> Die Beispielabfrage kann mithilfe der [AdventureWorks2016_EXT-Beispieldatenbank](../samples/adventureworks-install-configure.md) ausgeführt werden. Die Tabellen `Sales.SalesOrderHeader` und `Sales.SalesOrderDetail` wurden 50-mal vergrößert und in `Sales.SalesOrderHeaderBulk` und `Sales.SalesOrderDetailBulk` umbenannt.
+
+Der Ausführungsplan zeigt einen [Hashjoin](../relational-databases/performance/joins.md#hash) zwischen zwei Tabellen sowie alle parallel ausgeführten Operatoren, wie dies durch den gelben Kreis mit den beiden Pfeilen angegeben wird. Jeder Parallelitätsoperator ist ein anderer Branch im Plan. Daher weist der nachfolgende Ausführungsplan drei Branches auf. 
+
+![Paralleler Abfrageplan](../relational-databases/media/schedule-parallel-query-plan.png)
+
+> [!NOTE]
+> Wenn Sie sich einen Ausführungsplan als Struktur vorstellen, ist ein **Branch** ein Bereich des Plans, der einen oder mehrere Operatoren zwischen Parallelitätsoperatoren gruppiert. Hierfür wird auch die Bezeichnung Exchange-Iteratoren verwendet. Weitere Informationen zu Planoperatoren finden Sie unter [Referenz zu logischen und physischen Showplanoperatoren](../relational-databases/showplan-logical-and-physical-operators-reference.md). 
+
+Zwar enthält der Ausführungsplan drei Branches, während der Ausführung können jedoch immer nur zwei Branches gleichzeitig in diesem Ausführungsplan ausgeführt werden:
+1.  Der Branch, in dem ein *gruppierter Indexscan* im `Sales.SalesOrderHeaderBulk` (Buildeingabe des Joins) verwendet wird, wird gleichzeitig mit dem Branch ausgeführt, in dem ein *gruppierter Indexscan* für den `Sales.SalesOrderDetailBulk` (Testeingabe des Joins) verwendet wurde.
+2. Der Branch, in dem ein *gruppierter Indexscan* im `Sales.SalesOrderDetailBulk` (Testeingabe des Joins) verwendet wird, wird gleichzeitig mit dem Branch ausgeführt, in dem die *Bitmap* erstellt wurde und in dem zur selben Zeit der *Hashvergleich* ausgeführt wird.
+
+Die Showplan-XML-Datei zeigt, dass 16 Arbeitsthreads reserviert und auf den NUMA-Knoten 0 und 1 verwendet wurden:
+
+```xml
+<ThreadStat Branches="2" UsedThreads="16">
+  <ThreadReservation NodeId="0" ReservedThreads="8" />
+  <ThreadReservation NodeId="1" ReservedThreads="8" />
+</ThreadStat>
+```
+
+Die Threadreservierung stellt sicher, dass die [!INCLUDE[ssde_md](../includes/ssde_md.md)] über genügend Arbeitsthreads verfügt, um alle Tasks auszuführen, die für die Anforderung benötigt werden. Threads können für alle NUMA-Knoten oder nur in einem NUMA-Knoten reserviert werden. Die Threadreservierung erfolgt zur Laufzeit vor Beginn der Ausführung und hängt von der Auslastung des Schedulers ab. Die Anzahl der reservierten Arbeitsthreads wird generisch mithilfe der Formel ***gleichzeitige Branches* * *Laufzeit-DOP*** ermittelt und schließt den übergeordneten Arbeitsthread aus. Jeder Branch ist auf eine Anzahl von Arbeitsthreads beschränkt, die MAXDOP entspricht. In diesem Beispiel gibt es zwei gleichzeitige Branches, und MAXDOP ist auf 8 festgelegt, daher gilt **2 * 8 = 16**.
+
+Beachten Sie als Referenz den Live-Ausführungsplan im Artikel [Live-Abfragestatistik](../relational-databases/performance/live-query-statistics.md), bei dem ein Branch abgeschlossen ist und zwei Branches gleichzeitig ausgeführt werden.
+
+![Paralleler Live-Abfrageplan](../relational-databases/media/schedule-parallel-query-live-plan.png)
+
+Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] weist einen Arbeitsthread zum Ausführen eines aktiven Tasks (1:1) zu. Dies kann während der Abfrageausführung beobachtet werden, indem die DMV [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) wie im folgenden Beispiel gezeigt abgefragt wird:
+
+```sql
+SELECT parent_task_address, task_address, 
+       task_state, scheduler_id, worker_address
+FROM sys.dm_os_tasks
+WHERE session_id = <insert_session_id>
+ORDER BY parent_task_address, scheduler_id;
+```
+
+> [!TIP]
+> Die Spalte `parent_task_address` ist für den übergeordneten Task stets NULL. 
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)] Beachten Sie, dass es 17 aktive Tasks für die gleichzeitig ausgeführten Branches gibt: 16 untergeordnete Tasks, die den reservierten Threads entsprechen, sowie der übergeordnete bzw. koordinierende Task.
+
+|parent_task_address|task_address|task_state|scheduler_id|worker_address|
+|--------|--------|--------|--------|--------|
+|NULL|**0x000001EF4758ACA8**|SUSPENDED|3|0x000001EFE6CB6160|
+|0x000001EF4758ACA8|0x000001EFE43F3468|SUSPENDED|0|0x000001EF6DB70160|
+|0x000001EF4758ACA8|0x000001EEB243A4E8|SUSPENDED|0|0x000001EF6DB7A160|
+|0x000001EF4758ACA8|0x000001EC86251468|SUSPENDED|5|0x000001EEC05E8160|
+|0x000001EF4758ACA8|0x000001EFE3023468|SUSPENDED|5|0x000001EF6B46A160|
+|0x000001EF4758ACA8|0x000001EFE3AF1468|SUSPENDED|6|0x000001EF6BD38160|
+|0x000001EF4758ACA8|0x000001EFE4AFCCA8|SUSPENDED|6|0x000001EF6ACB4160|
+|0x000001EF4758ACA8|0x000001EFDE043848|SUSPENDED|7|0x000001EEA18C2160|
+|0x000001EF4758ACA8|0x000001EF69038108|SUSPENDED|7|0x000001EF6AEBA160|
+|0x000001EF4758ACA8|0x000001EFCFDD8CA8|SUSPENDED|8|0x000001EFCB6F0160|
+|0x000001EF4758ACA8|0x000001EFCFDD88C8|SUSPENDED|8|0x000001EF6DC46160|
+|0x000001EF4758ACA8|0x000001EFBCC54108|SUSPENDED|9|0x000001EFCB886160|
+|0x000001EF4758ACA8|0x000001EC86279468|SUSPENDED|9|0x000001EF6DE08160|
+|0x000001EF4758ACA8|0x000001EFDE901848|SUSPENDED|10|0x000001EFF56E0160|
+|0x000001EF4758ACA8|0x000001EF6DB32108|SUSPENDED|10|0x000001EFCC3D0160|
+|0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
+|0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
+
+> [!TIP]
+> Bei einer stark ausgelasteten [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] überschreitet die Anzahl der aktiven Tasks möglicherweise den von reservierten Threads festgelegten Grenzwert. Diese Tasks können zu einem Branch gehören, der nicht mehr verwendet wird und sich in einem Übergangszustand befindet, während er auf seine Bereinigung wartet. 
+
+Beachten Sie, dass jedem der 16 untergeordneten Tasks ein anderer Arbeitsthread zugewiesen ist (siehe Spalte `worker_address`), aber alle Worker demselben Pool von acht Schedulern (0, 5, 6, 7, 8, 9, 10, 11) zugewiesen sind, und dass der übergeordnete Tasks einem Scheduler außerhalb dieses Pools (3) zugewiesen ist.
+
+> [!IMPORTANT]
+> Sobald die ersten parallelen Tasks für einen bestimmten Branch eingeplant wurden, verwendet die [!INCLUDE[ssde_md](../includes/ssde_md.md)] denselben Pool von Schedulern für alle zusätzlichen Tasks in anderen Branches. Dies bedeutet, dass dieselben Scheduler für alle parallelen Tasks im gesamten Ausführungsplan verwendet werden, nur begrenzt durch MAXDOP.      
+> Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versucht stets, Scheduler aus demselben NUMA-Knoten für die Taskausführung zuzuweisen. Der dem übergeordneten Task zugewiesene Arbeitsthread kann jedoch von anderen Tasks in einem anderen NUMA-Knoten platziert werden.
+
+Ein Arbeitsthread kann im Scheduler nur für die Dauer seines Quantums (4 ms) aktiv bleiben und muss seinen Scheduler nach Ablauf dieses Quantums anhalten, sodass möglicherweise ein Arbeitsthread aktiv wird, der einem anderen Task zugewiesen ist. Wenn das Quantum eines Workers abläuft und nicht mehr aktiv ist, wird der betreffende Task im Status RUNNABLE in einer FIFO-Warteschlange abgelegt, bis er nochmals in den Status RUNNING wechselt. Dabei wird vorausgesetzt, dass der Task keinen Zugriff auf Ressourcen benötigt, die momentan nicht verfügbar sind, z. B. ein Latch oder eine Sperre. Andernfalls würde der Task nicht in den Status RUNNABLE, sondern in den Status SUSPENDED versetzt, bis die Ressourcen verfügbar sind.  
+
+> [!TIP] 
+> Für die Ausgabe der oben gezeigten DMV befinden sich alle aktiven Tasks im Status SUSPENDED. Ausführlichere Informationen zu wartenden Tasks erhalten Sie durch Abfragen der DMV [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md). 
+
+Zusammenfassend lässt sich sagen, dass eine parallele Anforderung mehrere Tasks erzeugt, wobei jeder Task einem einzelnen Arbeitsthread und jeder Arbeitsthread wiederum einem einzelnen Scheduler zugewiesen werden muss. Daher kann die Anzahl der in Verwendung befindlichen Scheduler nicht die Anzahl der parallelen Tasks pro Branch überschreiten, die durch MAXDOP festgelegt ist. 
 
 ### <a name="allocating-threads-to-a-cpu"></a>Zuteilen von Threads zu einer CPU
 Standardmäßig startet jede Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] jeden Thread, und das Betriebssystem verteilt Threads von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzen je nach Last auf die Prozessoren (CPUs) eines Computers. Wenn Prozessaffinität auf Betriebssystemebene aktiviert wurde, weist das Betriebssystem jeden Thread einer bestimmten CPU zu. Im Gegensatz dazu weist [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-**Arbeitsthreads** zu **Planern** zu, die die Threads gleichmäßig auf die CPUs verteilen.
