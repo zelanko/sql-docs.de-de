@@ -1,5 +1,6 @@
 ---
 title: Hardware für SQL Server und In-Memory-OLTP | Microsoft-Dokumentation
+description: Erfahren Sie mehr über Hardwareaspekte für die In-Memory-OLTP-Leistung in SQL Server. In-Memory-OLTP verwendet Arbeitsspeicher und Datenträger anders als datenträgerbasierte Tabellen.
 ms.custom: ''
 ms.date: 03/28/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 21293308f2b21d0a41cca901a084d65ca0250573
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e5486dddb1b71d2a32055cb4175ed300ce19320f
+ms.sourcegitcommit: 7a47aaffbd82bab2707cd69f44571a9037d2273b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951139"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85377621"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>Überlegungen zur Hardware für In-Memory-OLTP in SQL Server
 

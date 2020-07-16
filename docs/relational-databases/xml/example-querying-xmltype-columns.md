@@ -1,5 +1,6 @@
 ---
 title: 'Beispiel: Abfragen von Spalten des Typs XML | Microsoft-Dokumentation'
+description: Sehen Sie sich ein Beispiel für das Abfragen von Spalten vom Datentyp XML an.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9dcfe0dd5dea972145c35ddce9b75b1fb009ccb9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d5e28c3b6a68e765287cfcc2934c06fb25270f5d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664535"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633119"
 ---
 # <a name="example-querying-xmltype-columns"></a>Beispiel: Abfragen von Spalten des Typs XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Die folgende Abfrage schließt Spalten vom Typ **xml** ein. Die Abfrage ruft die Produktmodell-ID, den Namen und die Produktionsschritte am ersten Standort aus der `Instructions` -Spalte vom Typ **xml** ab.  
   
 ## <a name="example"></a>Beispiel  

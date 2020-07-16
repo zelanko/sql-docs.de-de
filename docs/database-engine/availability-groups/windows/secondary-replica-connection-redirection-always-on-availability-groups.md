@@ -1,6 +1,6 @@
 ---
 title: Weiterleiten von Lese-/Schreibverbindungen mit primären Replikaten
-description: In diesem Artikel erfahren Sie, wie Lese-/Schreibverbindungen immer und unabhängig vom in der Verbindungszeichenfolge angegebenen Zielserver an das primäre Replikat einer Always On-Verfügbarkeitsgruppe weitergeleitet werden.
+description: In diesem Artikel erfahren Sie, wie Lese-/Schreibverbindungen unabhängig vom in der Verbindungszeichenfolge angegebenen Zielserver an das primäre Replikat einer Always On-Verfügbarkeitsgruppe weitergeleitet werden.
 ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77256663"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637816"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat (Always On-Verfügbarkeitsgruppen)
 
-[!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
 In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 wird eine *Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat* für Always On-Verfügbarkeitsgruppen eingeführt. Die Umleitung von Lese-/Schreibverbindungen ist auf jeder Betriebssystemplattform verfügbar. Durch dieses Feature können Clientanwendungsverbindungen zum primären Replikat weitergeleitet werden, unabhängig davon, ob der Zielserver in der Verbindungszeichenfolge angegeben ist. 
 
