@@ -3,7 +3,7 @@ title: Installieren von SQL Server Migration Assistant für den Zugriff (Access 
 description: Informieren Sie sich über die Installations Voraussetzungen für SQL Server Migration Assistant (SSMA) für den Zugriff und das installieren, lizenzieren, aktualisieren und deinstallieren.
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/15/2017
+ms.date: 07/14/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -21,75 +21,67 @@ helpviewer_keywords:
 - uninstalling SSMA
 - upgrading SSMA
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5ca42e406bb7483617afe6364027014650e838f2
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 97974e649c27e8cf1182baa3b168d3490371a4cf
+ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293754"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411628"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Installieren von SQL Server Migration Assistant für den Zugriff (Access Token)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) für den Zugriff wird mithilfe eines Windows Installer basierten Assistenten installiert. Dieses Thema enthält Informationen zu Installations Voraussetzungen, einen Link zur neuesten Version von SSMA sowie Anweisungen zum Installieren, lizenzieren, deinstallieren und Aktualisieren von SSMA.  
-  
-## <a name="prerequisites"></a>Voraussetzungen  
-Stellen Sie vor der Installation von SSMA sicher, dass Ihr System die folgenden Anforderungen erfüllt:  
-  
--   Windows 7 oder höher oder Windows Server 2008 oder eine höhere Version.  
-  
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 oder eine höhere Version.  
-  
--   Der [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework Version 4,0 oder eine höhere Version. Die .NET Framework Version 4,0 ist auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Produkt-CD verfügbar, und Sie erhalten Informationen im [Microsoft .net Handbuch](https://docs.microsoft.com/dotnet/framework/).
-  
--   Zugriff auf und ausreichende Berechtigungen auf dem Computer, der die Ziel Instanz von hostet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure DB, zu der Datenbankobjekte und-Daten migriert werden sollen.  
-  
--   Microsoft Data Access Object (DAO)-Anbieter Version 12,0 oder 14,0. Sie können den DAO-Anbieter aus Microsoft Office 2010/2007-Produkt installieren oder von der Microsoft-Website herunterladen.  
-  
--   Die SQL Server Native Access Client (SNAC) Version 10,5 und höher für die Migration zu SQL Azure. Sie können die neueste Version von SNAC von [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272) abrufen.  
-  
--   4 GB RAM (empfohlen).  
-  
-## <a name="installing-ssma"></a>Installieren von SSMA  
-SSMA ist ein Webdownload. Informationen zum Herunterladen der neuesten Version finden Sie auf der [SQL Server Migration Assistant Downloadseite](https://aka.ms/ssmaforaccess).  
-  
-Nachdem Sie die aktuelle Version heruntergeladen haben, müssen Sie die Installationsdateien von extrahieren, bevor Sie SSMA installieren können.
 
-> [!IMPORTANT]  
-> -   Deinstallieren Sie alle früheren Versionen von SSMA für den Zugriff, bevor Sie die neue Version installieren.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) für den Zugriff wird mithilfe eines Windows Installer basierten Assistenten installiert. Dieses Thema enthält Informationen zu Installations Voraussetzungen, einen Link zur neuesten Version von SSMA sowie Anweisungen zum Installieren, lizenzieren, deinstallieren und Aktualisieren von SSMA.
+
+## <a name="prerequisites"></a>Voraussetzungen
+
+Stellen Sie vor der Installation von SSMA sicher, dass Ihr System die folgenden Anforderungen erfüllt:
+
+- Windows 7 oder höher oder Windows Server 2008 oder eine höhere Version.
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 oder eine höhere Version.
+- Die [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework Version 4.7.2 oder eine spätere Version. Der .NET Framework ist in [Microsoft .net Handbuch](https://docs.microsoft.com/dotnet/framework/)verfügbar.
+- Zugriff auf und ausreichende Berechtigungen auf dem Computer, der die Ziel Instanz von hostet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] auf die Datenbankobjekte und-Daten migriert werden sollen.
+- Microsoft Data Access Object (DAO)-Anbieter Version 12,0 oder 14,0. Sie können den DAO-Anbieter aus Microsoft Office 2010/2007-Produkt installieren oder von der Microsoft-Website herunterladen.
+- 4 GB RAM (empfohlen).
+
+## <a name="installing-ssma"></a>Installieren von SSMA
+
+SSMA ist ein Webdownload. Informationen zum Herunterladen der neuesten Version finden Sie auf der [SQL Server Migration Assistant Downloadseite](https://aka.ms/ssmaforaccess).
+
+> [!IMPORTANT]
+> Deinstallieren Sie alle früheren Versionen von SSMA für den Zugriff, bevor Sie die neue Version installieren.
+
+So installieren Sie SSMA:
   
-**So installieren Sie SSMA**  
+1. Doppelklicken Sie auf **SSMAforAccess_*n*. msi**, wobei *n* für die Buildnummer steht.
+2. Klicken Sie auf der Seite Willkommenauf **Weiter**.
+
+   Wenn die erforderlichen Komponenten nicht installiert sind, wird eine Meldung mit dem Hinweis angezeigt, dass Sie zunächst erforderliche Komponenten installieren müssen. Stellen Sie sicher, dass Sie alle erforderlichen Komponenten installiert haben, und führen Sie das Installationsprogramm dann erneut aus.
+
+3. Lesen Sie den Lizenzvertrag für Endbenutzer. Wenn Sie zustimmen, wählen Sie **Ich akzeptiere die Vereinbarung**aus, und klicken Sie dann auf **weiter**.
+4. Klicken Sie auf der Seite Setuptyp **auswählen** auf **typisch**.
+5. Auf der Seite **bereit zur Installation** können Sie bei jedem Start des Tools Telemetrie-und automatische Aktualisierungs Prüfungen aktivieren bzw. deaktivieren. Klicken Sie auf **Installieren**, um die Installation zu starten.
   
-1.  Doppelklicken Sie auf SSMA für Access *n*. msi, wobei *n* für die Buildnummer steht.  
-  
-2.  Klicken Sie auf der Seite Willkommenauf **Weiter**.  
-  
-    Wenn die erforderlichen Komponenten nicht installiert sind, wird eine Meldung mit dem Hinweis angezeigt, dass Sie zunächst erforderliche Komponenten installieren müssen. Stellen Sie sicher, dass Sie alle erforderlichen Komponenten installiert haben, und führen Sie das Installationsprogramm dann erneut aus.  
-  
-3.  Lesen Sie den Lizenzvertrag für Endbenutzer. Wenn Sie zustimmen, wählen Sie **Ich akzeptiere die Vereinbarung**aus, und klicken Sie dann auf **weiter**.  
-  
-4.  Klicken Sie auf der Seite Setuptyp auswählen auf **typisch**.  
-  
-5.  Klicken Sie auf **Installieren**.  
-  
-Der Standard Speicherort für die Installation ist c:\Programme\Microsoft SQL Server Migration Assistant für den Zugriff.  
-  
-## <a name="uninstalling-ssma-for-access"></a>Deinstallieren von SSMA für den Zugriff  
-Deinstallieren **Sie SSMA mithilfe der** Option Software in der Systemsteuerung. Beachten Sie, dass beim Deinstallieren des Programms keine SSMA-Projektdateien oder-Protokolldateien gelöscht werden.  
-  
-**So deinstallieren Sie SSMA**  
-  
-1.  Klicken Sie auf **Start**, klicken Sie auf **Systemsteuerung**, und klicken Sie dann auf **Programme hinzufügen oder entfernen**.  
-  
-2.  Wählen Sie **Microsoft SQL Server Migration Assistant für den Zugriff aus**, und klicken Sie dann auf **Entfernen**.  
-  
-## <a name="upgrading-to-a-later-version"></a>Aktualisieren auf eine höhere Version  
-Wenn Sie für den Zugriff auf eine höhere Version von SSMA aktualisieren möchten, müssen Sie zunächst SSMA für den Zugriff deinstallieren und dann die neuere Version installieren. Befolgen Sie die Anweisungen im Abschnitt Deinstallieren von SSMA for Access, um diesen Vorgang abzuschließen.  
-  
-Wenn Sie ein Projekt öffnen, das in einer früheren Version von SSMA für den Zugriff erstellt wurde, fragt SSMA, ob das Projekt in die neuere Version konvertiert werden soll. Klicken Sie auf **Ja** , um mit dem Projekt in der neueren Version von SSMA zu arbeiten.  
-  
-## <a name="see-also"></a>Weitere Informationen  
-[Vorbereiten der Zugriffs Datenbanken für die Migration](preparing-access-databases-for-migration-accesstosql.md)  
-[Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[Verknüpfen von Zugriffs Anwendungen mit SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  
-  
+Das Standardinstallationsverzeichnis ist `C:\Program Files\Microsoft SQL Server Migration Assistant for Access`.
+
+## <a name="uninstalling-ssma-for-access"></a>Deinstallieren von SSMA für den Zugriff
+
+Deinstallieren **Sie SSMA mithilfe der** Option Software in der Systemsteuerung. Beachten Sie, dass beim Deinstallieren des Programms keine SSMA-Projektdateien oder-Protokolldateien gelöscht werden.
+
+So deinstallieren Sie SSMA:
+
+1. Klicken Sie auf **Start**, klicken Sie auf **Systemsteuerung**, und klicken Sie dann auf **Programme hinzufügen oder entfernen**.
+2. Wählen Sie **Microsoft SQL Server Migration Assistant für den Zugriff aus**, und klicken Sie dann auf **Entfernen**.
+
+## <a name="upgrading-to-a-later-version"></a>Aktualisieren auf eine höhere Version
+
+Wenn Sie für den Zugriff auf eine höhere Version von SSMA aktualisieren möchten, müssen Sie zunächst SSMA für den Zugriff deinstallieren und dann die neuere Version installieren. Befolgen Sie die Anweisungen im Abschnitt Deinstallieren von SSMA for Access, um diesen Vorgang abzuschließen.
+
+Wenn Sie ein Projekt öffnen, das in einer früheren Version von SSMA für den Zugriff erstellt wurde, fragt SSMA möglicherweise, ob Sie das Projekt in die neuere Version konvertieren möchten. Klicken Sie auf **Ja** , um mit dem Projekt in der neueren Version von SSMA zu arbeiten.
+
+## <a name="see-also"></a>Weitere Informationen
+
+- [Vorbereiten der Zugriffs Datenbanken für die Migration](preparing-access-databases-for-migration-accesstosql.md)
+- [Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)
+- [Verknüpfen von Zugriffs Anwendungen mit SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

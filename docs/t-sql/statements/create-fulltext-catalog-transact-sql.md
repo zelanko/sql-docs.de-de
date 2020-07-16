@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 888be4bfe27530a726d7352494959af05fe240e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d335faa965f3cd03cffcdece6f5e782ada8a59c5
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735822"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392908"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,9 @@ CREATE FULLTEXT CATALOG catalog_name
   
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *catalog_name*  
  Der Name des neuen Katalogs. Der Katalogname muss für alle Katalognamen in der aktuellen Datenbank eindeutig sein. Zudem muss der Name der Datei, die dem Volltextkatalog entspricht (siehe ON FILEGROUP), für alle Dateien in der Datenbank eindeutig sein. Wenn der Name des Katalogs bereits für einen anderen Katalog in der Datenbank verwendet wird, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Fehler zurückgegeben.  
   

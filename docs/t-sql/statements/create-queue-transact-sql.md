@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8247b0fe0e17ae717fddd89ff4a608481e0777ad
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6bf798524d8ccdc4ee1a5971e3c78a1302dcde58
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633998"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391735"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Erstellt eine neue Warteschlange in einer Datenbank. Fügt einer Warteschlange gespeicherte Nachrichten hinzu. Wenn eine Nachricht für einen Dienst eintrifft, platziert [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Nachricht in der dem Dienst zugeordneten Warteschlange.
 
@@ -67,6 +67,8 @@ CREATE QUEUE <object>
 
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumente
 
 *database_name* (Objekt) ist der Name der Datenbank, in der die neue Warteschlange erstellt werden soll. *database_name* muss dem Namen einer vorhandenen Datenbank entsprechen. Wird *database_name* nicht bereitgestellt, wird die Warteschlange in der aktuellen Datenbank erstellt.
@@ -86,7 +88,7 @@ ACTIVATION gibt Informationen über die gespeicherte Prozedur an, die Sie für d
 
 STATUS (Aktivierung) gibt an, ob [!INCLUDE[ssSB](../../includes/sssb-md.md)] die gespeicherte Prozedur startet. Ist STATUS = ON, startet die Warteschlange die mit PROCEDURE_NAME angegebene gespeicherte Prozedur, wenn die Anzahl der zurzeit ausgeführten Prozeduren kleiner als MAX_QUEUE_READERS ist und wenn Nachrichten schneller in der Warteschlange ankommen, als die gespeicherten Prozeduren Nachrichten empfangen. Ist STATUS = OFF, startet die Warteschlange die gespeicherte Prozedur nicht. Wird diese Klausel nicht angegeben, ist die Standardeinstellung ON.
 
-PROCEDURE_NAME = \<Prozedur> gibt den Namen der gespeicherten Prozedur an, die für die Verarbeitung von Nachrichten in dieser Warteschlange gestartet werden soll. Dieser Wert muss ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner sein.
+PROCEDURE_NAME = \<procedure> Gibt den Namen der gespeicherten Prozedur an, die für die Verarbeitung von Nachrichten in dieser Warteschlange gestartet werden soll. Dieser Wert muss ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner sein.
 
 *database_name*(Prozedur) ist der Name der Datenbank, die die gespeicherte Prozedur enthält.
 

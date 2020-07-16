@@ -24,15 +24,15 @@ ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 586848ae7fceda7e31b3002e8e1d9a3c63259006
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: f06c3e2b95fa571b26404a69653471738d7648ee
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138262"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392998"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Erstellt ein Schema in der aktuellen Datenbank. Mit der CREATE SCHEMA-Transaktion können auch Tabellen und Sichten innerhalb des neuen Schemas erstellt und GRANT-, DENY- oder REVOKE-Berechtigungen für diese Objekte festgelegt werden.  
   
@@ -65,7 +65,9 @@ CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]
 CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *schema_name*  
  Der Name, mit dem das Schema innerhalb der Datenbank identifiziert wird.  
   
@@ -123,7 +125,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  Dieses Verhalten ist erforderlich, damit auf Windows-Gruppen basierende Benutzer Objekte erstellen und besitzen können. Es kann jedoch zur unbeabsichtigten Erstellung von Schemata und Benutzern führen. Um das implizite Erstellen von Benutzern und Schemata tu vermeiden, sollten Sie soweit möglich Datenbankprinzipale explizit erstellen und ein Standardschema zuweisen. Oder geben Sie bei der Erstellung von Objekten in einer Datenbank explizit ein vorhandenes Schema anhand von zwei- oder dreiteiligen Objektnamen an.  
 
 > [!NOTE]
->  Eine implizite Erstellung eines Azure Active Directory-Benutzers ist für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] nicht möglich. Da bei der Erstellung eines Azure AD-Benutzers über einen externen Anbieter der Benutzerstatus in AAD überprüft werden muss, wird der Fehler 2760 ausgelöst: **The specified schema name "\<user_name@domain>" either does not exist or you do not have permission to use it.** (Den angegebenen Schemanamen "<user_name@domain>" gibt es entweder nicht oder Sie verfügen nicht über die Berechtigung, diesen zu verwenden.). Anschließend wird der Fehler 2759 ausgelöst: **CREATE SCHEMA failed due to previous errors.** (Fehler bei CREATE SCHEMA wegen vorheriger Fehler.). Erstellen Sie zum Umgehen dieser Fehler zuerst den Azure AD-Benutzer über einen externen Anbieter und führen Sie die Anweisung erneut aus, indem Sie das Objekt erstellen.
+>  Eine implizite Erstellung eines Azure Active Directory-Benutzers ist für [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] nicht möglich. Da bei der Erstellung eines Azure AD-Benutzers über einen externen Anbieter der Benutzerstatus in AAD überprüft werden muss, wird der Fehler 2760 ausgelöst: **The specified schema name "\<user_name@domain>>" either does not exist or you do not have permission to use it.** (Den angegebenen Schemanamen "\<user_name@domain>" gibt es entweder nicht, oder Sie verfügen nicht über die Berechtigung, diesen zu verwenden.). Anschließend wird der Fehler 2759 ausgelöst: **CREATE SCHEMA failed due to previous errors.** (Fehler bei CREATE SCHEMA wegen vorheriger Fehler.). Erstellen Sie zum Umgehen dieser Fehler zuerst den Azure AD-Benutzer über einen externen Anbieter und führen Sie die Anweisung erneut aus, indem Sie das Objekt erstellen.
  
   
 ## <a name="deprecation-notice"></a>Hinweis zur Abwärtskompatibilität  

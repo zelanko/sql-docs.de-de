@@ -1,5 +1,5 @@
 ---
-title: nodes()-Methode (XML-Datentyp) | Microsoft-Dokumentation
+title: nodes()-Methode (xml-Datentyp)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 65cff00f57d98746c77b51c38ed426a14d1dd066
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee5721f2fef1117f1f4d6da5664a644f32dadb92
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731053"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393058"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes()-Methode (xml-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ Sie können mehrere Werte aus dem Rowset abrufen. Sie können die **value()** -M
 nodes (XQuery) as Table(Column)  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 *XQuery*  
 Ist ein Zeichenfolgenliteral, ein XQuery-Ausdruck. Wenn der Abfrageausdruck Knoten konstruiert, werden diese konstruierten Knoten im resultierenden Rowset verfügbar gemacht. Wenn der Abfrageausdruck eine leere Sequenz ergibt, ist auch das Rowset leer. Wenn der Abfrageausdruck statisch eine Sequenz ergibt, die anstelle von Knoten atomare Werte enthält, wird ein statischer Fehler ausgelöst.  
   

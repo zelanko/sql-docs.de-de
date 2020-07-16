@@ -1,5 +1,5 @@
 ---
-title: insert (XML DML) | Microsoft-Dokumentation
+title: insert (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc19088f8ee34202b5157015ac9ef71a8d24922c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 895fda87dd1c78744f7f95b334927940c76fdcd7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731073"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393068"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ insert
                 )  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *Expression1*  
  Gibt einen oder mehrere einzufügende Knoten an. Dabei kann es sich um eine konstante XML-Instanz, einen Verweis auf eine typisierte XML-Datentypinstanz der gleichen XML-Schemaauflistung, auf der die modify-Methode angewendet wird, eine nicht typisierte XML-Datentypinstanz mit einer eigenständigen **sql:column()** /**sql:variable()** -Funktion oder einen XQuery-Ausdruck handeln. Der Ausdruck kann als Ergebnis einen Knoten, einen Textknoten oder eine geordnete Sequenz von Knoten haben. Der Ausdruck kann nicht den Stammknoten (/) auflösen. Wenn das Ergebnis des Ausdrucks ein Wert oder eine Sequenz von Werten ist, werden diese Werte als einzelner Textknoten eingefügt, wobei ein Leerzeichen die einzelnen Werte in der Sequenz trennt. Wenn Sie mehrere Knoten als Konstante angeben, werden die Knoten in Klammern eingeschlossen und durch Kommas getrennt. Sie können keine heterogenen Sequenzen wie z. B. eine Sequenz aus Elementen, Attributen oder Werten einfügen. Wenn *Expression1* in eine leere Sequenz aufgelöst wird, findet kein Einfügevorgang statt, und es werden keine Fehler zurückgegeben.  
   

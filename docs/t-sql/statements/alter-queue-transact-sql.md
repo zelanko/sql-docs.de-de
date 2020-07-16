@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e7856a54070b58f6a834dd5a65b18b58e9667682
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982055"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381184"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ändert die Eigenschaften einer Warteschlange.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73982055"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 ALTER QUEUE <object>   
    queue_settings  
    | queue_action  
@@ -78,7 +78,10 @@ WITH
   
 ```  
   
-## <a name="arguments"></a>Argumente  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *database_name* (Objekt)  
  Der Name der Datenbank, die die zu ändernde Warteschlange enthält. Wenn *database_name* nicht bereitgestellt wird, wird standardmäßig die aktuelle Datenbank verwendet.  
   
@@ -104,12 +107,12 @@ WITH
  Gibt an, ob die gespeicherten Prozedur von der Warteschlange aktiviert wird. Ist STATUS = ON, startet die Warteschlange die mit PROCEDURE_NAME angegebene gespeicherte Prozedur, wenn die Anzahl der zurzeit ausgeführten Prozeduren kleiner als MAX_QUEUE_READERS ist und wenn Nachrichten schneller in der Warteschlange ankommen, als die gespeicherten Prozeduren Nachrichten empfangen. Ist STATUS = OFF, aktiviert die Warteschlange die gespeicherte Prozedur nicht.  
   
  REBUILD [ WITH \<queue_rebuild_options> ]  
- **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.  
   
  Erstellt alle Indizes für die interne Tabelle der Warteschlange neu. Verwenden Sie diese Funktion, wenn Fragmentierungsprobleme aufgrund von Überlastung auftreten. MAXDOP ist die einzige unterstützte Option zum erneuten Erstellen von Warteschlangen. REBUILD ist immer ein Offlinevorgang.  
   
  REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
- **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.  
   
  Organisiert alle Indizes für die interne Tabelle der Warteschlange neu.   
 Im Gegensatz zu REORGANIZE bei Benutzertabellen wird REORGANIZE bei einer Warteschlange immer als Offlinevorgang durchgeführt, da bei Warteschlangen Sperren auf Seitenebene explizit deaktiviert werden.  
@@ -118,7 +121,7 @@ Im Gegensatz zu REORGANIZE bei Benutzertabellen wird REORGANIZE bei einer Wartes
 >  Bei der Indexfragmentierung empfiehlt es sich generell, den Index neu zu organisieren, wenn die Fragmentierung zwischen 5% und 30% beträgt. Wenn die Fragmentierung mehr als 30% beträgt, sollten Sie den Index neu erstellen. Diese Angaben stellen jedoch nur einen groben Richtwert als Ausgangspunkt für Ihre Umgebung dar. Informationen und Beispiele zur Ermittlung des Indexfragmentierungsgrads finden Sie in Artikel [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) in Beispiel G.  
   
  MOVE TO { *file_group* | "default" }  
- **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.  
   
  Verschiebt die interne Tabelle der Warteschlange (mit den Indizes) in eine vom Benutzer angegebene Dateigruppe.  Die neue Dateigruppe darf nicht schreibgeschützt sein.  
   
@@ -223,7 +226,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
 ### <a name="g-rebuilding-queue-indexes"></a>G. Erneutes Erstellen von Indizes  
   
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.  
   
  Im folgenden Beispiel werden Warteschlangenindizes neu erstellt.  
   
@@ -233,7 +236,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
 ### <a name="h-reorganizing-queue-indexes"></a>H. Neuorganisieren von Warteschlangenindizes  
   
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.  
   
  Im folgenden Beispiel werden Warteschlangenindizes neu erstellt.  
   
@@ -243,7 +246,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 ### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I: Verschieben der internen Tabelle einer Warteschlange in eine andere Dateigruppe  
   
-**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.  
   
 ```  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   

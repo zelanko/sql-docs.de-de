@@ -1,5 +1,5 @@
 ---
-title: replace value of (XML DML) | Microsoft-Dokumentation
+title: replace value of (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1269b119a6f8bdcfe14890a911a4dd6b0e618328
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70ef0ec9f3cec26b7e0a55df770a3983d0d8594e
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731038"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393048"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ replace value of Expression1
 with Expression2  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 *Expression1*  
 Gibt einen Knoten an, dessen Wert aktualisiert werden soll. Der Ausdruck darf nur einen einzelnen Knoten angeben. Das heißt, *Expression1* muss ein statisches Singleton sein. Wenn das XML typisiert ist, muss der Typ des Knotens ein simple-Typ sein. Wenn mehrere Knoten ausgewählt werden, wird ein Fehler ausgelöst. Wenn *Expression1* eine leere Sequenz zurückgibt, tritt keine Wertersetzung auf, und es werden keine Fehler zurückgegeben. *Expression1* muss ein einzelnes Element zurückgeben, das einfachen Typinhalt hat (wie bei den Typen „list“ und „atomic“) oder ein Textknoten bzw. ein Attributknoten ist. *Expression1* kann nicht den Typ „union“ bzw. einem komplexen Typ haben oder eine Verarbeitungsanweisung, ein Dokumentknoten oder ein Kommentarknoten sein. Andernfalls wird ein Fehler zurückgegeben.  
   

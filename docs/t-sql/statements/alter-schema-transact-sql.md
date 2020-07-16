@@ -22,15 +22,15 @@ ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bccc7152a13000d667a5f980847eb251c08d1182
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 47df9b8bb3d6beb5706bff8869d92b351e855f5b
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626780"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380983"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Überträgt ein sicherungsfähiges Element zwischen Schemas.  
   
@@ -59,7 +59,10 @@ ALTER SCHEMA schema_name
 [;]  
 ```  
   
-## <a name="arguments"></a>Argumente  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *schema_name*  
  Der Name eines Schemas in der aktuellen Datenbank, in das das sicherungsfähige Element verschoben wird. Kann weder SYS noch INFORMATION_SCHEMA sein.  
   
@@ -83,6 +86,8 @@ ALTER SCHEMA schema_name
  Beim Verschieben eines Objekts wie z.B. einer Tabelle oder eines Synonyms werden Verweise auf das Objekt nicht automatisch aktualisiert. Sie müssen Objekte, die auf das verschobene Objekt verweisen, manuell ändern. Wenn Sie z.B. eine Tabelle verschieben und in einem Trigger auf diese Tabelle verwiesen wird, müssen Sie den Trigger ändern, damit für ihn der Schemaname verwendet wird. Mit [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) können Sie Objektabhängigkeiten auflisten, bevor Sie das Objekt verschieben.  
 
  Wenn Sie das Schema einer Tabelle mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ändern möchten, können Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle und anschließend auf **Entwurf** klicken. Drücken Sie **F4**, um das Eigenschaftenfenster zu öffnen. Wählen Sie im Feld **Schema** ein neues Schema aus.  
+ 
+ ALTER SCHEMA verwendet eine Sperre auf Schemaebene.
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  

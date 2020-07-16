@@ -26,16 +26,16 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 953faba1da7f4fbe1283d3aacf74a1c3e902ed2f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 705e5f381d8df82aff6f662b97d9742586ab498a
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629970"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302028"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Ändert den Besitz eines sicherungsfähigen Elements.    
     
@@ -121,8 +121,10 @@ ALTER AUTHORIZATION ON
 }    
 ```    
     
-## <a name="arguments"></a>Argumente    
-\<class_type> ist die sicherungsfähige Klasse der Entität, für die der Besitzer geändert wird. OBJECT ist der Standardwert.    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
+\<class_type> Die sicherungsfähige Klasse der Entität, für die der Besitzer geändert wird. OBJECT ist der Standardwert.    
     
 |||    
 |-|-|    
