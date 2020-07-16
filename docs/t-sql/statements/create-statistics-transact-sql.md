@@ -26,15 +26,15 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d8240965a5cc057e3c22e8a721a05542aca17db
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3a2d74236b0c58776a43f4f2a56f7f240de72d2c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632122"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002506"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Erstellt Abfrageoptimierungsstatistiken in einer oder mehreren Spalten einer Tabelle, einer indizierten Sicht oder einer externen Tabelle. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan; in einigen Fällen müssen Sie weitere Statistiken mithilfe von CREATE STATISTICS erstellen oder den Abfrageentwurf ändern, um die Abfrageleistung zu verbessern.  
   
@@ -196,10 +196,10 @@ CREATE STATISTICS statistics_name
 -   Statistiken, die für interne Tabellen erstellt wurden.  
 -   Statistiken, die mit räumlichen Indizes oder XML-Indizes erstellt wurden.  
   
-**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
   
 MAXDOP = *max_degree_of_parallelism*  
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3)  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Überschreibt die Konfigurationsoption **max degree of parallelism** (Max. Grad an Parallelität) für die Dauer des Statistikvorgangs. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
@@ -243,6 +243,7 @@ MAXDOP = *max_degree_of_parallelism*
 * Sie können bis zu 64 Spalten pro Statistikobjekt auflisten.
 * Die Option MAXDOP ist nicht mit den Optionen STATS_STREAM, ROWCOUNT und PAGECOUNT kompatibel.
 * Die Option MAXDOP ist, falls verwendet, durch die Einstellung „MAX_DOP“ der Resource Governor-Arbeitsauslastungsgruppe eingeschränkt.
+* CREATE und DROP STATISTICS werden nicht auf externen Tabellen in Azure SQL-Datenbank unterstützt.
   
 ## <a name="examples"></a>Beispiele  
 
@@ -278,7 +279,7 @@ GO
 ```  
   
 ### <a name="d-create-statistics-on-an-external-table"></a>D: Erstellen von Statistiken für eine externe Tabelle  
- Sie müssen beim Erstellen von Statistiken für eine externe Tabelle abgesehen von der Bereitstellung einer Liste der Spalten lediglich entscheiden, ob die Statistiken durch Stichprobenentnahme aus den Zeilen oder durch einen Scan aller Zeilen erstellt werden soll.  
+ Sie müssen beim Erstellen von Statistiken für eine externe Tabelle abgesehen von der Bereitstellung einer Liste der Spalten lediglich entscheiden, ob die Statistiken durch Stichprobenentnahme aus den Zeilen oder durch einen Scan aller Zeilen erstellt werden soll. CREATE und DROP STATISTICS werden nicht auf externen Tabellen in Azure SQL-Datenbank unterstützt.
   
  Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten aus der externen Tabelle in eine temporäre Tabelle importiert, um Statistiken zu erstellen, nimmt die FULL SCAN-Option wesentlich mehr Zeit in Anspruch. Bei einer großen Tabelle ist die Standardmethode für die Stichprobenentnahme in der Regel ausreichend.  
   

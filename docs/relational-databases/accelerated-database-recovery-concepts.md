@@ -1,6 +1,6 @@
 ---
 title: Schnellere Datenbankwiederherstellung | Microsoft-Dokumentation
-ms.date: 08/12/2019
+ms.date: 05/20/2020
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58c31d9b5e0e8858cc1953a2961107caea08d381
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc137d1f94ad1919c41e3f25eb38829941d99023
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80342525"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010160"
 ---
 # <a name="accelerated-database-recovery"></a>Verbesserte Wiederherstellung von Datenbanken
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Durch die schnellere Datenbankwiederherstellung (Accelerated Database Recovery, ADR) wird die Verfügbarkeit von Datenbanken enorm verbessert, insbesondere bei zeitintensiven Transaktionen. Hierfür wurde der Wiederherstellungsprozess der SQL-Datenbank-Engine vollständig überarbeitet. Das neue ADR-Feature für SQL Server 2019 ist auch für einzelne Datenbanken und Pooldatenbanken in Azure SQL Database und Datenbanken in Azure SQL Data Warehouse (derzeit in der Public Preview) verfügbar. Die Hauptvorteile der schnellen Datenbankwiederherstellung sind:
 
@@ -135,7 +135,9 @@ ADR ist für die folgenden Kundentypen geeignet:
 - Kunden, bei denen aktive Transaktionen in manchen Fällen dazu führen, dass die Transaktionsprotokolle sehr groß werden.  
 - Kunden, bei denen es vorgekommen ist, dass die Datenbank länger nicht verfügbar war, da die SQL Server-Wiederherstellung lange gedauert hat (wie bei einem unerwarteten SQL Server-Neustart oder einem manuellen Transaktionsrollback).
 
+>[!IMPORTANT]
+>ADR wird für Datenbanken, die für Datenbankspiegelung registriert sind, nicht unterstützt.
 
 ## <a name="see-also"></a>Weitere Informationen  
 
-  
+[Verwalten der schnelleren Datenbankwiederherstellung](accelerated-database-recovery-management.md)

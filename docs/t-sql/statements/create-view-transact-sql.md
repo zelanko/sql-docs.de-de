@@ -37,15 +37,15 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f29027f7b9ab16b1cb9de5c92f5aaf7dccf9765
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: de62120fd28e67c4323a88f73bc5bac939aedc64
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634850"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002497"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Erstellt eine virtuelle Tabelle, deren Inhalt (Spalten und Zeilen) durch eine Abfrage definiert wird. Verwenden Sie diese Anweisung, um in einer oder mehreren Tabellen in der Datenbank eine Sicht der Daten zu erstellen. Eine Sicht kann z. B. für folgende Zwecke verwendet werden:  
   
@@ -131,7 +131,7 @@ OR ALTER
   
 -   Ein Verweis auf eine temporäre Tabelle oder auf eine Tabellenvariable  
   
- Da *select_statement* die SELECT-Anweisung verwendet, ist es zulässig, die Hinweise \<join_hint> und \<table_hint> zu verwenden, wie in der FROM-Klausel angegeben. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) und [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md). 
+ Da *select_statement* die SELECT-Anweisung verwendet, ist es zulässig, die Hinweise \<join_hint>und \<table_hint> zu verwenden, wie in der FROM-Klausel angegeben. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) und [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md). 
   
  In *select_statement* können Funktionen und mehrere SELECT-Anweisungen verwendet werden, die durch UNION oder UNION ALL getrennt sind.  
   

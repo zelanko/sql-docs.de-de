@@ -20,16 +20,16 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f72290faba54a8130c42b0736945c6d1a2f39448
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cec953dc8bbb6f0baf51f996306f7a960ebc2fdd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631874"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007636"
 ---
 # <a name="set-operators---union-transact-sql"></a>Mengenoperatoren - UNION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Verkettet die Ergebnisse von zwei Abfragen zu einem einzelnen Resultset. Sie steuern, ob das Resultset doppelte Zeilen enthält:
 
@@ -59,7 +59,7 @@ Für die Kombination der Resultsets von zwei Abfragen mit **UNION** gelten die f
 ```  
   
 ## <a name="arguments"></a>Argumente  
-\<query_specification> | ( \<query_expression> ) ist eine Abfrageangabe oder ein Abfrageausdruck, die bzw. der Daten zurückgibt, die mit den Daten aus einer andren Abfrageangabe oder einem anderen Abfrageausdruck zu kombinieren sind. Die Definitionen der Spalten, die Bestandteil eines UNION-Vorgangs sind, müssen nicht identisch, jedoch durch implizite Konvertierung kompatibel sein. Wenn sich die Datentypen unterscheiden, wird der Datentyp anhand der Regeln für die [Rangfolge der Datentypen](../../t-sql/data-types/data-type-precedence-transact-sql.md) bestimmt. Wenn die Typen identisch sind, sich aber in Genauigkeit, Dezimalstellen oder Länge unterscheiden, basiert das Ergebnis auf denselben Regeln wie für das Kombinieren von Ausdrücken. Weitere Informationen finden Sie unter [Genauigkeit, Dezimalstellen und Länge (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+\<query_specification> | ( \<query_expression> ) Ist eine Abfragespezifikation oder ein Abfrageausdruck, deren bzw. dessen Rückgabedaten mit den Daten aus anderen Abfragespezifikationen oder Abfrageausdrücken kombiniert werden sollen. Die Definitionen der Spalten, die Bestandteil eines UNION-Vorgangs sind, müssen nicht identisch, jedoch durch implizite Konvertierung kompatibel sein. Wenn sich die Datentypen unterscheiden, wird der Datentyp anhand der Regeln für die [Rangfolge der Datentypen](../../t-sql/data-types/data-type-precedence-transact-sql.md) bestimmt. Wenn die Typen identisch sind, sich aber in Genauigkeit, Dezimalstellen oder Länge unterscheiden, basiert das Ergebnis auf denselben Regeln wie für das Kombinieren von Ausdrücken. Weitere Informationen finden Sie unter [Genauigkeit, Dezimalstellen und Länge (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 Spalten, die dem **xml**-Datentyp angehören, müssen gleich sein. Alle Spalten müssen entweder einen XML-Schematyp aufweisen oder nicht typisiert sein. Wenn sie typisiert sein, müssen sie derselben XML-Schemaauflistung zugeordnet werden.  
   

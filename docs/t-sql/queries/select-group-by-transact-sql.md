@@ -32,15 +32,15 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e93f24bcd2b136cdc055faf3a100a76fa5bb4db
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 03c9b8dae913f7fb8dd770effcfd56a32e368c96
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634248"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999782"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT – GROUP BY – Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Die Klausel der SELECT-Anweisung, die die Abfrageergebnisse in Gruppen von Zeilen unterteilt. Wird in der Regel für das Ausführen einer oder mehrerer Aggregationen für jede Gruppe verwendet. Die SELECT-Anweisung gibt eine Zeile pro Gruppe zurück.  
   
@@ -112,7 +112,7 @@ Gibt eine Spalte oder eine nicht-aggregierbare Berechnung für eine Spalte an. D
 
 Gültige Ausdrücke finden Sie unter [expression](~/t-sql/language-elements/expressions-transact-sql.md).    
 
-Die Spalte muss in der FROM-Klausel der SELECT-Anweisung angezeigt werden. Es ist jedoch nicht erforderlich, dass sie auch in der SELECT-Liste angezeigt wird. Allerdings muss jede Tabellen- oder Sichtspalte in einem nicht aggregierten Ausdruck in der \<select>-Liste in die GROUP BY-Liste aufgenommen werden.  
+Die Spalte muss in der FROM-Klausel der SELECT-Anweisung angezeigt werden. Es ist jedoch nicht erforderlich, dass sie auch in der SELECT-Liste angezeigt wird. Allerdings muss jede Tabellen- oder Sichtspalte in einem nicht aggregierten Ausdruck in der \<select>-Liste in die GROUP BY-Liste aufgenommen werden:  
   
 Die folgenden Anweisungen sind zulässig:  
   

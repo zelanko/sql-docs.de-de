@@ -22,15 +22,15 @@ ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77c80984ec2224e59a01184220c93cbc2eda8721
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b27eaa16660058c37cac34173787c7ad51341c87
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632849"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011347"
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Gibt die Suchbedingung für die von einer Abfrage zurückgegebenen Zeilen an.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81632849"
 ```  
   
 ## <a name="arguments"></a>Argumente  
-\< *search_condition* > definiert die Bedingung, die erfüllt sein muss, damit die Zeilen zurückgegeben werden. Es gibt keinen Höchstwert hinsichtlich der Anzahl von Prädikaten in einer Suchbedingung. Weitere Informationen zu Suchbedingungen und Prädikaten finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+\< *search_condition* > Definiert die Bedingung, die erfüllt sein muss, damit die Zeilen zurückgegeben werden. Es gibt keinen Höchstwert hinsichtlich der Anzahl von Prädikaten in einer Suchbedingung. Weitere Informationen zu Suchbedingungen und Prädikaten finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen wird gezeigt, wie einige allgemeine Suchbedingungen in der `WHERE`-Klausel verwendet werden.  

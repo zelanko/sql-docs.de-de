@@ -19,15 +19,15 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b7341273c36bacdbfd49596df535b9c73ba5049
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b39ab62ed76269869ae8c9327f5aaa0996672fba
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287174"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053746"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 In jeder Datenbank führt die fehlerhafte Verwaltung von Transaktionen bei Systemen mit zahlreichen Benutzern häufig zu Konflikten und Leistungsproblemen. Mit steigender Anzahl von Benutzern, die auf die Daten zugreifen, wird der Einsatz von Anwendungen, die Transaktionen effizient verwenden, immer wichtiger. In diesem Handbuch werden Mechanismen für Sperren und die Zeilenversionsverwaltung beschrieben, durch die das [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die physische Integrität jeder Transaktion sicherstellt. Darüber hinaus erfahren Sie, wie Transaktionen von Anwendungen effizient gesteuert werden.  
   
