@@ -10,15 +10,15 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c62a2dfb1a6728098c3faeed32ce842dbab4304e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fe880bc4296985811d21b06b905b3ceb4bef58a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77146732"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659478"
 ---
 # <a name="sql-server-back-up-applications---volume-shadow-copy-service-vss-and-sql-writer"></a>SQL Server-Sicherungsanwendungen – Volumeschattenkopie-Dienst und SQL Writer
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server unterstützt den Volumeschattenkopie-Dienst (Volume Shadow Copy Service, VSS), indem ein Writer (der SQL Writer) bereitgestellt wird, mit dem Drittanbieter-Sicherungsanwendungen über das VSS-Framework Datenbankdateien sichern können. In diesem Artikel werden die SQL Writer-Komponente und ihre Rolle bei der Erstellung einer VSS-Momentaufnahme und der Wiederherstellung von SQL Server-Datenbanken beschrieben. Außerdem erfahren Sie Näheres dazu, wie Sie den SQL Writer für die Arbeit mit Sicherungsanwendungen im VSS-Framework konfigurieren und anschließend verwenden.
 
