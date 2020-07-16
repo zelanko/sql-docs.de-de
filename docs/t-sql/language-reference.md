@@ -15,12 +15,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6020e1907f6d8b161a8e9dddb14f9e7befb7641a
-ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
+ms.openlocfilehash: 05b5bf44dd2a00d3d40800806f5fe222a8d93d1a
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82598656"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197051"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL-Referenz (Datenbank-Engine)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ Dieses Thema gilt beispielsweise für alle Versionen und hat folgende Bezeichnun
 
 Ein weiteres Beispiel ist die folgende Bezeichnung für ein Thema, das nur für Azure SQL Data Warehouse und Parallel Data Warehouse gilt.
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
 In einigen Fällen wird das Thema von einem Produkt oder Dienst verwendet, jedoch werden nicht alle Argumente unterstützt. In diesem Fall werden zusätzliche **Applies to** -Abschnitte in den Beschreibungen der entsprechenden Arguments in den Text des Themas eingefügt.  
  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 76af9a82a53004d01443a0442946e28fed73d0f0
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999422"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858872"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -51,7 +51,7 @@ Mit Secure Enclaves schützt Always Encrypted die Vertraulichkeit von Daten und 
 
 - **Direkte Verschlüsselung**: Kryptografische Vorgänge für vertrauliche Daten, wie z.B. die anfängliche Datenverschlüsselung oder das Rotieren eines Spaltenverschlüsselungsschlüssels, werden innerhalb der Secure Enclave ausgeführt und erfordern kein Verschieben der Daten an einen Ort außerhalb der Datenbank. Sie können die direkte Verschlüsselung mit der Transact-SQL-Anweisung ALTER TABLE ausführen. Sie benötigen keine Tools wie etwa den Always Encrypted-Assistenten in SSMS oder das PowerShell-Cmdlet „Set-SqlColumnEncryption“.
 
-- **Umfangreiche Berechnungen (Vorschau)** : Vorgänge in verschlüsselten Spalten, wie z.B. Musterabgleich (das LIKE-Prädikat) und Bereichsvergleiche, werden innerhalb der Secure Enclave unterstützt. Damit lässt sich Always Encrypted für eine Vielzahl von Anwendungen und Szenarien verwenden, bei denen solche Berechnungen innerhalb des Datenbanksystems ausgeführt werden müssen.
+- **Umfangreiche Berechnungen**: Vorgänge in verschlüsselten Spalten, wie z.B. Musterabgleich (das LIKE-Prädikat) und Bereichsvergleiche, werden innerhalb der Secure Enclave unterstützt. Damit lässt sich Always Encrypted für eine Vielzahl von Anwendungen und Szenarien verwenden, bei denen solche Berechnungen innerhalb des Datenbanksystems ausgeführt werden müssen.
 
 ## <a name="secure-enclave-attestation"></a>Nachweis von Secure Enclaves
 

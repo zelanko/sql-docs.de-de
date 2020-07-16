@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3b81c44b5475592b471f71e1815468a61140da65
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: aaa37425d2de461cd5f7bdd1bb3ae37da53ce249
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636413"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682287"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Diese Funktion entschlüsselt Daten, die ursprünglich mit einer Passphrase verschlüsselt wurden.  
   
@@ -48,17 +48,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 Die Passphrase, die zum Generieren des Entschlüsselungsschlüssels verwendet wird.  
   
  @passphrase  
-Eine Variable vom Typ
-
-+ **char**
-+ **nchar**
-+ **nvarchar**
-
-oder
-
-+ **varchar**
-
-, die die Passphrase zum Generieren des Entschlüsselungsschlüssels enthält.  
+Eine Variable vom Typ **char**, **nchar**, **nvarchar** oder **varchar**, die die Passphrase enthält, die zum Generieren des Entschlüsselungsschlüssels verwendet wird.  
   
 '*ciphertext*'  
 Die Zeichenfolge der Daten, die mit dem Schlüssel verschlüsselt wurden. *ciphertext* verfügt über einen **varbinary**-Datentyp.  
@@ -93,14 +83,14 @@ Im folgenden Beispiel wird der unter [EncryptByPassPhrase](../../t-sql/functions
   
 ```  
 USE AdventureWorks2012;  
--- Get the pass phrase from the user.  
+-- Get the passphrase from the user.  
 DECLARE @PassphraseEnteredByUser nvarchar(128);  
 SET @PassphraseEnteredByUser   
 = 'A little learning is a dangerous thing!';  
   
 -- Decrypt the encrypted record.  
 SELECT CardNumber, CardNumber_EncryptedbyPassphrase   
-    AS 'Encrypted card number', CONVERT(nvarchar,  
+    AS 'Encrypted card number', CONVERT(varchar,  
     DecryptByPassphrase(@PassphraseEnteredByUser, CardNumber_EncryptedbyPassphrase, 1   
     , CONVERT(varbinary, CreditCardID)))  
     AS 'Decrypted card number' FROM Sales.CreditCard   

@@ -1,5 +1,6 @@
 ---
 title: Erstellen von Variablen und Spalten des XML-Datentyps | Microsoft-Dokumentation
+description: Erfahren Sie, wie in SQL Server Spalten und Variablen des Datentyps XML erstellt werden.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 71bda739146d1729cdf09d510c8d8c7dfb835a84
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0471d842c56abf7ca888542d36ea9b688797dd64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691476"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Erstellen von Variablen und Spalten des XML-Datentyps
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Der **xml** -Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt ein wenig anderen integrierten Typen wie **int** und **varchar**. Wie andere integrierte Typen können Sie den **xml** -Datentyp als Spaltentyp, wenn Sie eine Tabelle erstellen, als Variablentyp, als Parametertyp, als Funktionsrückgabestyp oder in [CAST und CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)verwenden.  
   
 ## <a name="creating-columns-and-variables"></a>Erstellen von Variablen und Spalten  

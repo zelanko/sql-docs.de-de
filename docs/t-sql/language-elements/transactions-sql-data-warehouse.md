@@ -12,15 +12,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121589"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197405"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transaktionen (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Eine Transaktion ist eine Gruppe von mindestens einer Datenbankanweisung, für die als Ganzes entweder ein Commit oder ein Rollback ausgeführt wird. Alle Transaktionen sind unteilbar, konsistent, isoliert und von Dauer (atomic, consistent, isolated, durable: ACID). Wenn die Transaktion erfolgreich ist, wird für alle Anweisungen darin ein Commit ausgeführt. Wenn die Transaktion fehlschlägt, d.h. bei mindestens einer Anweisung in der Gruppe ein Fehler auftritt, wird für die gesamte Gruppe ein Rollback ausgeführt.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68121589"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 BEGIN TRANSACTION [;]  
 COMMIT [ TRAN | TRANSACTION | WORK ] [;]  
 ROLLBACK [ TRAN | TRANSACTION | WORK ] [;]  
@@ -78,7 +78,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Wenn eine explizite Transaktion aufgrund eines anderen Fehlers als eines Anweisungsfehlers zur Laufzeit nicht erfolgreich beendet werden kann, führt [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] automatisch ein Rollback für die Transaktion aus und gibt alle Ressourcen frei, die von der Transaktion beansprucht wurden. Wenn z.B. die Netzwerkverbindung des Clients mit einer Instanz von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] unterbrochen ist oder sich der Client von der Anwendung abmeldet, wird für alle Transaktionen dieser Verbindung, für die noch kein Commit ausgeführt wurde, ein Rollback ausgeführt, sobald das Netzwerk die Instanz über die Unterbrechung benachrichtigt.  
   
- Wenn ein Anwendungsfehler zur Laufzeit in einem Batch auftritt, verhält sich [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] konsistent mit der auf **ON** festgelegten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT**-Einstellung, und für die gesamte Transaktion wird ein Rollback ausgeführt. Weitere Informationen zur **XACT_ABORT**-Einstellung finden Sie unter [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ Wenn ein Anwendungsfehler zur Laufzeit in einem Batch auftritt, verhält sich [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] konsistent mit der auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ON**festgelegten** **XACT_ABORT**-Einstellung, und für die gesamte Transaktion wird ein Rollback ausgeführt. Weitere Informationen zur **XACT_ABORT**-Einstellung finden Sie unter [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Eine Sitzung kann jeweils nur eine Transaktion zu einem bestimmten Zeitpunkt ausführen. Sicherungspunkte und geschachtelte Transaktionen werden nicht unterstützt.  

@@ -11,15 +11,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a24ea6315575233d1f3fb052334d2a1edb66c05e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055183"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629203"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version (SQL Server-Suche)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installiert und aktiviert eine Version der Wörtertrennung und Wortstammerkennung für alle von der Volltextsuche unterstützten Sprachen, mit Ausnahme von Koreanisch. Dieser Artikel beschreibt, wie Sie von der neuen Version dieser Komponenten zur früheren Version wechseln und von der früheren Version zur neuen Version zurückwechseln.  
   
  Die folgenden Sprachen werden in diesem Artikel nicht berücksichtigt:  
@@ -154,7 +154,7 @@ ms.locfileid: "74055183"
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
   
-5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\CLSID**.  
+5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 6.  Fügen Sie mithilfe der folgenden Schritte für die COM ClassIDs für die Schnittstellen der früheren Wörtertrennung und die Wortstammerkennung für die ausgewählte Sprache neue Schlüssel hinzu:  
   
@@ -166,7 +166,7 @@ ms.locfileid: "74055183"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der vorherigen Wortstammerkennung aus der Tabelle.  
   
-7.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\Sprache\<Sprachschlüssel>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+7.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 8.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die aktuelle Wörtertrennung.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "74055183"
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
   
-3.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\CLSID**.  
+3.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 4.  Wenn die folgenden Schlüssel nicht vorhanden sind, gehen Sie folgendermaßen vor, um neue Schlüssel für die COM ClassIDs für die Schnittstellen der aktuellen Wörtertrennung und der Wortstammerkennung für die ausgewählte Sprache hinzuzufügen:  
   
@@ -195,7 +195,7 @@ ms.locfileid: "74055183"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der aktuellen Wortstammerkennung aus der Tabelle.  
   
-5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\Sprache\<Sprachschlüssel>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 6.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die vorherige Wörtertrennung.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "74055183"
   
 1.  Entfernen Sie die Dateien für die aktuelle Version der Komponenten nicht aus dem Ordner "Binn".  
   
-2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\CLSID**.  
+2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 3.  Fügen Sie mithilfe der folgenden Schritte für die COM ClassIDs für die Schnittstellen der früheren Wörtertrennung und die Wortstammerkennung für die ausgewählte Sprache neue Schlüssel hinzu:  
   
@@ -287,7 +287,7 @@ ms.locfileid: "74055183"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der vorherigen Wortstammerkennung aus der Tabelle.  
   
-4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\Sprache\<Sprachschlüssel>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 5.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die aktuelle Wörtertrennung.  
   
@@ -299,7 +299,7 @@ ms.locfileid: "74055183"
   
 1.  Entfernen Sie die Dateien für die vorherige Version der Komponenten nicht aus dem Ordner "Binn".  
   
-2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\CLSID**.  
+2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID**.  
   
 3.  Wenn die folgenden Schlüssel nicht vorhanden sind, gehen Sie folgendermaßen vor, um neue Schlüssel für die COM ClassIDs für die Schnittstellen der aktuellen Wörtertrennung und der Wortstammerkennung für die ausgewählte Sprache hinzuzufügen:  
   
@@ -311,7 +311,7 @@ ms.locfileid: "74055183"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der aktuellen Wortstammerkennung aus der Tabelle.  
   
-4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<Instanzstamm>\MSSearch\Sprache\<Sprachschlüssel>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** . *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 5.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die vorherige Wörtertrennung.  
   

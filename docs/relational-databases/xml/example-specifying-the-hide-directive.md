@@ -1,5 +1,6 @@
 ---
 title: 'Beispiel: Angeben der HIDE-Direktive | Microsoft-Dokumentation'
+description: Sehen Sie ein Beispiel zum Verwenden der HIDE-Direktive in einer SQL-Abfrage an.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d656dd0022a3c3234baf1e032e26ef77c80b9421
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f8f8f5a8eeeff444832d5cd6142f1bb0099c5913
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632494"
 ---
 # <a name="example-specifying-the-hide-directive"></a>Beispiel: Angeben der HIDE-Direktive
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In diesem Beispiel wird die Verwendung der **HIDE** -Direktive veranschaulicht. Diese Direktive erweist sich als hilfreich, wenn die Abfrage ein Attribut zum Sortieren der Zeilen in der Universaltabelle zurückgeben soll, das Attribut jedoch nicht im endgültigen XML-Dokument enthalten sein soll.  
   
  Diese Abfrage konstruiert diese XML-Ausgabe:  

@@ -1,5 +1,6 @@
 ---
-title: 'Beispiel: Angeben der ID- und der IDREF-Direktive | Microsoft-Dokumentation'
+title: 'Beispiel: Angeben der ID- und IDREF-Anweisungen | Microsoft-Dokumentation'
+description: Sehen Sie sich ein Beispiel zum Angeben der Direktiven ID und IDREF in einer SQL-Abfrage an.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a98637671787e70dff614779c9e49393cae8a6e8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a3afe4f049cf74353a790f6a9e3fdcdc42902d72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664218"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632467"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>Beispiel: Angeben der ID- und der IDREF-Direktive
+# <a name="example-specifying-the-id-and-idref-directives"></a>Beispiel: Angeben der ID- und IDREF-Anweisungen
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Dieses Beispiel entspricht fast dem Beispiel unter [Angeben der ELEMENTXSINIL-Direktive](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . Der einzige Unterschied ist, dass in der Abfrage die **ID** -Direktive und die **IDREF** -Direktive angegeben werden. Diese Direktiven überschreiben die Typen des **SalesPersonID**-Attributs im <`OrderHeader`>-Element und im <`OrderDetail`>-Element. Auf diese Weise werden dokumentinterne Links gebildet. Sie benötigen das Schema, um die überschriebenen Typen anzuzeigen. Um das Schema abzurufen, gibt die Abfrage die Option **XMLDATA** in der FOR XML-Klausel an.  
   

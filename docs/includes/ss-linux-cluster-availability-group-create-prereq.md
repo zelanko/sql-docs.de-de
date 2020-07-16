@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-Weitere Informationen zu dieser XE-Sitzung finden Sie unter [AlwaysOn Extended Events](https://msdn.microsoft.com/library/dn135324.aspx).
+Weitere Informationen zu dieser XE-Sitzung finden Sie unter [Always On erweiterte Ereignisse](../database-engine/availability-groups/windows/always-on-extended-events.md).
 
 ## <a name="create-a-certificate"></a>Erstellen eines Zertifikats
 

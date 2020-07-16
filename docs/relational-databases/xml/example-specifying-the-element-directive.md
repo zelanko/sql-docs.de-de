@@ -1,5 +1,6 @@
 ---
-title: 'Beispiel: Angeben der ELEMENT-Direktive | Microsoft-Dokumentation'
+title: 'Beispiel: Angeben der ELEMENT-Anweisung | Microsoft-Dokumentation'
+description: Sehen Sie sich ein Beispiel zum Angeben der ELEMENT-Direktive in einer SQL-Abfrage an, um elementzetrierten XML-Code zu generieren.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5e0760c0d1ee59725e074f55d3730f574a5fac3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6e8f74e0d5d8d90afa09c733e5b46b47b533995
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006723"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632613"
 ---
 # <a name="example-specifying-the-element-directive"></a>Beispiel: Angeben der ELEMENT-Direktive
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Dadurch werden Mitarbeiterinformationen abgerufen und wird elementzentriertes XML generiert, wie nachfolgend zu sehen ist:  
   
 ```  

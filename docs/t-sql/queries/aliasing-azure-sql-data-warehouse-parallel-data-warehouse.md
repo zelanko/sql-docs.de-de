@@ -12,16 +12,16 @@ ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e3505d476350d3342ebb57d1b0ae43d88e6b52a8
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 01afcc83b2a7094ea65607cac87437854e828e11
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151910"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197305"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Aliasing (Azure SQL Data Warehouse, Parallel Data Warehouse)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 Aliasing ermöglicht das temporäre Ersetzen eines Tabellen- oder Spaltennamens in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]- oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Abfragen durch eine kurze und leicht zu merkenden Zeichenfolge. Tabellenaliase werden häufig in JOIN-Abfragen verwendet, da die JOIN-Syntax vollqualifizierte Objektnamen erfordert, wenn sie auf Spalten verweist.  
 

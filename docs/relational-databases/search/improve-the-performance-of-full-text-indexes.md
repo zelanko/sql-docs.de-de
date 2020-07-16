@@ -17,15 +17,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4fd63c14206848107e2fea8c2e8972e76b77cc1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68021219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629500"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 In diesem Thema werden einige häufige Ursachen für eine geringe Leistung für Volltextindizes und -Abfragen beschrieben. Darüber hinaus werden einige Vorschläge für das Verringern dieser Probleme und das Verbessern der Leistung gemacht.
   
 ##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
@@ -140,7 +140,7 @@ Wichtige Informationen zu den folgenden Formeln finden Sie in den Notizen unter 
 2.  500 MB ist eine Schätzung des erforderlichen Speichers, der von den anderen Prozessen im System benötigt wird. Wenn das System noch weitere Aufgaben durchführt, sollten Sie diesen Wert entsprechend erhöhen.  
 3.  .*ism_size* wird 8 MB für x64-Plattformen angenommen.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Beispiel: Schätzen der Arbeitsspeicheranforderungen von „fdhost.exe“  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Beispiel: Schätzen der Arbeitsspeicheranforderungen von fdhost.exe  
   
  Dieses Beispiel gilt für einen 64-Bit-Computer mit 8 GM RAM und 4 dual-Core-Prozessoren. Die erste Berechnung schätzt den Speicher, der von „fdhost.exe“ benötigt wird: *F*. Die Anzahl der Durchforstungsbereiche beträgt `8`.  
   
@@ -150,7 +150,7 @@ Wichtige Informationen zu den folgenden Formeln finden Sie in den Notizen unter 
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>Beispiel: Festlegen von "max server memory"  
+ #### <a name="example-setting-max-server-memory"></a>Beispiel: Festlegen des maximalen Serverarbeitsspeichers  
   
  In diesem Beispiel werden die Anweisungen [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) und [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) von [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet, um **maximalen Serverarbeitsspeicher** auf den Wert festzulegen, der im vorherigen Beispiel für *M* berechnet wurde, also `7052`:  
   
