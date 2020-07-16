@@ -1,5 +1,6 @@
 ---
 title: Pfad- und Optimierungshinweise für selektive XML-Indizes | Microsoft-Dokumentation
+description: Erfahren Sie, wie beim Erstellen oder Ändern selektiver XML-Indizes Knotenpfade und Optimierungshinweise angegeben werden.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,15 +11,15 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6053f7fbff8126976d607cb7423a93976621fa8c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 460ad75c1596ce6eaf45e35d9c03b2db2d5267bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665230"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729846"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Angeben von Pfaden und Optimierungshinweisen für selektive XML-Indizes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In diesem Thema wird beschrieben, wie Sie Knotenpfade zum Index angeben, und es werden Optimierungshinweise für die Indizierung aufgeführt, wenn Sie selektive XML-Indizes erstellen oder ändern.  
   
  Sie geben Knotenpfade und Optimierungshinweise gleichzeitig in einer der folgenden Anweisungen an:  
@@ -30,7 +31,7 @@ ms.locfileid: "80665230"
  Weitere Informationen über selektive XML-Indizes finden Sie unter [Selektive XML-Indizes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
 ##  <a name="understanding-xquery-and-sql-server-types-in-untyped-xml"></a><a name="untyped"></a> Grundlegendes zu XQuery- und SQL Server-Typen in nicht typisiertem XML  
- Selektive XML-Indizes unterstützen zwei Typsysteme: XQuery-Typen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Typen. Der indizierte Pfad kann verwendet werden, um entweder eine Entsprechung für einen XQuery-Ausdruck oder um eine Entsprechung für den Rückgabetyp der value()-Methode des XML-Datentyps zu finden.  
+ Selektive XML-Indizes unterstützen zwei Typsysteme: XQuery-Typen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typen. Der indizierte Pfad kann verwendet werden, um entweder eine Entsprechung für einen XQuery-Ausdruck oder um eine Entsprechung für den Rückgabetyp der value()-Methode des XML-Datentyps zu finden.  
   
 -   Wenn ein zu indizierender Pfad nicht kommentiert ist oder mit dem XQUERY-Schlüsselwort kommentiert ist, entspricht der Pfad einem XQuery-Ausdruck. Es gibt zwei Varianten von XQUERY-kommentierten Knotenpfaden:  
   
@@ -111,7 +112,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Typen entsprechen dem Rückgabewert der value()-Methode.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Typen unterstützen diesen Optimierungshinweis: SINGLETON.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typen unterstützen diesen Optimierungshinweis: SINGLETON.  
   
  Die Angabe eines Typs ist für Pfade erforderlich, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Typen zurückgeben. Verwenden Sie den gleichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Typ, den Sie in der value()-Methode verwenden würden.  
   
@@ -215,7 +216,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ### <a name="choosing-the-nodes-to-index"></a>Auswählen der zu indizierenden Knoten  
  Mithilfe der beiden folgenden einfachen Prinzipien können Sie die richtige Teilmenge der Knoten ermitteln, die einem selektiven XML-Index hinzugefügt werden soll.  
   
-1.  **Prinzip 1**: Indizieren Sie alle Knoten, die Sie untersuchen müssen, um einen bestimmten XQuery-Ausdruck auszuwerten.  
+1.  **Prinzip 1:** Indizieren Sie alle Knoten, die Sie untersuchen müssen, um einen bestimmten XQuery-Ausdruck auszuwerten.  
   
     -   Indizieren Sie alle Knoten, deren Vorhandensein oder Wert im XQuery-Ausdruck verwendet wird.  
   
@@ -234,7 +235,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   Knoten `b`, da ein Prädikat auf den Knoten`b` im XQuery-Ausdruck angewendet wird.  
   
-2.  **Prinzip 2**: Um eine optimale Leistung zu erzielen, indizieren Sie alle Knoten, die für die Auswertung eines bestimmten XQuery-Ausdrucks erforderlich sind. Wenn Sie nur einige der Knoten indizieren, dann verbessert der selektive XML-Index die Auswertung der Teilausdrücke, die nur indizierte Knoten umfassen.  
+2.  **Prinzip 2:** Indizieren Sie alle Knoten, die zum Auswerten eines bestimmten XQuery-Ausdrucks erforderlich sind, um die optimale Leistung zu erzielen. Wenn Sie nur einige der Knoten indizieren, dann verbessert der selektive XML-Index die Auswertung der Teilausdrücke, die nur indizierte Knoten umfassen.  
 
  Um die Leistung der oben aufgeführten SELECT-Anweisung zu verbessern, können Sie den folgenden selektiven XML-Index erstellen:  
   
@@ -391,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Wenn eine Abfrage den Wert eines Knotens erfordert, der mit dem node()-Hinweis indiziert wurde, dann kann der selektive XML-Index nicht verwendet werden.  
   
 ### <a name="singleton-optimization-hint"></a>SINGLETON-Optimierungshinweis  
- Gilt für: XQuery- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen  
+ Gilt für: XQuery- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen  
   
  Der SINGLETON-Optimierungshinweis gibt die Kardinalität eines Knotens an. Dieser Hinweis verbessert die Abfrageleistung, da im Voraus bekannt ist, dass ein Knoten höchstens einmal in seinem übergeordneten Element oder Vorgänger angezeigt wird.  
   

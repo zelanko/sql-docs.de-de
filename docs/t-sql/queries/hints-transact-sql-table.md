@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731329"
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL): Tabelle
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Tabellenhinweise überschreiben das Standardverhalten des Abfrageoptimierers für die Dauer der DML-Anweisung (Data Manipulation Language, Datenbearbeitungssprache) durch Angabe einer Sperrmethode, eines Index oder mehrerer Indizes, eines Abfrageverarbeitungsvorgangs, beispielsweise einen Tabellenscan oder eine Indexsuche, oder anderer Optionen. Tabellenhinweise werden in der FROM-Klausel der DML-Anweisung angegeben und wirken sich nur auf die Tabelle oder Sicht aus, auf die in der betreffenden Klausel verwiesen wird.  
   

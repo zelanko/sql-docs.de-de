@@ -18,16 +18,16 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727074"
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 In diesem Artikel wird beschrieben, wie Sie Indizes für eine Sicht erstellen. Der erste Index, der für eine Sicht erstellt wird, muss ein eindeutiger gruppierter Index sein. Nachdem der eindeutige gruppierte Index erstellt wurde, können Sie weitere nicht gruppierte Indizes erstellen. Das Erstellen eines eindeutigen gruppierten Indexes für eine Sicht verbessert die Abfrageleistung, da die Sicht wie eine Tabelle mit einem gruppierten Index in der Datenbank gespeichert wird. Der Abfrageoptimierer kann indizierte Sichten verwenden, um die Abfrageausführung zu beschleunigen. Es ist nicht erforderlich, dass in der Abfrage auf die jeweilige Sicht verwiesen wird, damit der Optimierer diese Sicht als Ersatz berücksichtigt.
 
@@ -92,7 +92,7 @@ Zusätzlich zu den Anforderungen bzgl. SET-Optionen und deterministischen Funkti
 - Wenn Sie den Index erstellen, muss die Option `IGNORE_DUP_KEY` auf OFF (Standardeinstellung) festgelegt sein.
 - Auf Tabellen muss in der Sichtdefinition mit dem zweiteiligen Namen _Schema_ **.** _Tabellenname_ verwiesen werden.
 - Benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, müssen mit der Option `WITH SCHEMABINDING` erstellt werden.
-- Beim Verweis auf benutzerdefinierte Funktionen in der Sicht müssen zweiteilige Namen verwendet werden: _\<Schema\>_ **.** _\<Funktion\>_ .
+- Auf benutzerdefinierte Funktionen, auf die in der Sicht verwiesen wird, muss mit zweiteiligen Namen verwiesen werden: _\<schema\>_ **.** _\<function\>_ .
 - Die Datenzugriffseigenschaft einer benutzerdefinierten Funktion muss `NO SQL` lauten, und die Eigenschaft für den externen Zugriff muss `NO` lauten.
 - CLR-Funktionen (Common Language Runtime) können in der SELECT-Liste der Sicht angezeigt werden, können aber nicht Teil der Definition des gruppierten Indexschlüssels sein. CLR-Funktionen können nicht in der WHERE-Klausel der Sicht oder in der ON-Klausel einer JOIN-Operation in der Sicht auftreten.
 - Für CLR-Funktionen und -Methoden der CLR-benutzerdefinierten Typen, die in der Sichtdefinition verwendet werden, müssen die in der folgenden Tabelle dargestellten Eigenschaften festgelegt werden.

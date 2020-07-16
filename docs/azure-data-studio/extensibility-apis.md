@@ -1,25 +1,24 @@
 ---
 title: Erweiterbarkeits-APIs
-titleSuffix: Azure Data Studio
 description: Weitere Informationen zu den Erweiterbarkeits-APIs für Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8a4ebe26cbbf768222c7b97b95fa7df238faded3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c94935e7d8b1a72b6a99f83618fb0e8855379ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75001895"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774638"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Erweiterbarkeits-APIs für Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] bietet eine API, mit der Erweiterungen mit anderen Teilen von Azure Data Studio interagieren können, z.B. dem Objekt-Explorer. Diese APIs sind in der [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.d.ts)-Datei verfügbar und werden nachfolgend beschrieben.
+Azure Data Studio bietet eine API, mit der Erweiterungen mit anderen Teilen von Azure Data Studio interagieren können, z. B. dem Objekt-Explorer. Diese APIs sind in der [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.d.ts)-Datei verfügbar und werden nachfolgend beschrieben.
 
 ## <a name="connection-management"></a>Verbindungsverwaltung
 `azdata.connection`
@@ -159,6 +158,6 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 
 ## <a name="proposed-apis"></a>Vorgeschlagene APIs
 
-Wir haben vorgeschlagene APIs hinzugefügt, um Erweiterungen neben anderen Funktionen die Anzeige benutzerdefinierter Benutzeroberflächen in Dialogfeldern, Assistenten und Dokumentregisterkarten zu ermöglichen. Weitere Dokumentation finden Sie in der [Datei der vorgeschlagenen API-Typen](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.proposed.d.ts). Beachten Sie jedoch, dass diese APIs jederzeit geändert werden können. Beispiele für die Verwendung einiger dieser APIs finden Sie in der [Beispielerweiterung „sqlservices“](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
+Wir haben vorgeschlagene APIs hinzugefügt, um Erweiterungen neben anderen Funktionen die Anzeige benutzerdefinierter Benutzeroberflächen in Dialogfeldern, Assistenten und Dokumentregisterkarten zu ermöglichen. Weitere Dokumentation finden Sie in der [Datei der vorgeschlagenen API-Typen](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.proposed.d.ts). Beachten Sie jedoch, dass diese APIs jederzeit geändert werden können. Beispiele für die Verwendung einiger dieser APIs finden Sie in der [Beispielerweiterung „sqlservices“](https://github.com/Microsoft/azuredatastudio/tree/main/samples/sqlservices).
 
 

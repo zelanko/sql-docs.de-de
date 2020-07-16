@@ -30,19 +30,19 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12d392c73d1e68bee57bb0a534bd65d39e48946d
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: fc69b2a0615745966971ad83da2b0acadf3b2488
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773157"
 ---
 # <a name="use-sql-server-objects"></a>Verwenden von SQL Server-Objekten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Objekte und Leistungsindikatoren bereitgestellt, die vom Systemmonitor zum Überwachen der Aktivität von Computern, die eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausführen, verwendet werden können. Ein Objekt ist eine beliebige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressource, z.B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sperre oder ein Windows-Prozess. Jedes Objekt enthält einen oder mehrere Leistungsindikatoren, die verschiedene Aspekte der zu überwachenden Objekte ermitteln. So enthält z.B. das Objekt **SQL Server-Sperren** Leistungsindikatoren für die **Anzahl der Deadlocks/Sekunde** und die **Sperrtimeouts/Sekunde**.  
   
- Einige Objekte verfügen über mehrere Instanzen, wenn mehrere Ressourcen eines bestimmten Typs auf dem Computer vorhanden sind. So weist z.B. der Objekttyp **Prozessor** mehrere Instanzen auf, wenn ein System über mehrere Prozessoren verfügt. Der Objekttyp **Datenbanken** verfügt über eine Instanz für jede Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Einige Objekttypen (z.B. für den **Speicher-Manager** ) verfügen nur über eine Instanz. Wenn ein Objekttyp über mehrere Instanzen verfügt, können Sie Leistungsindikatoren hinzufügen, um die Statistiken für jede Instanz (oder in vielen Fällen für alle Instanzen gleichzeitig) nachzuverfolgen. Leistungsindikatoren für die Standardinstanz werden im Format **SQLServer:** _\<<Objektname>_ angezeigt. Leistungsindikatoren für benannte Instanzen werden im Format **MSSQL$** _\<<Instanzname>_ **:** _\<Indikatorname>_ oder **SQLAgent$** _\<Instanzname>_ **:** _\<Indikatorname>_ angezeigt.  
+ Einige Objekte verfügen über mehrere Instanzen, wenn mehrere Ressourcen eines bestimmten Typs auf dem Computer vorhanden sind. So weist z.B. der Objekttyp **Prozessor** mehrere Instanzen auf, wenn ein System über mehrere Prozessoren verfügt. Der Objekttyp **Datenbanken** verfügt über eine Instanz für jede Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Einige Objekttypen (z.B. für den **Speicher-Manager** ) verfügen nur über eine Instanz. Wenn ein Objekttyp über mehrere Instanzen verfügt, können Sie Leistungsindikatoren hinzufügen, um die Statistiken für jede Instanz (oder in vielen Fällen für alle Instanzen gleichzeitig) nachzuverfolgen. Leistungsindikatoren für die Standardinstanz werden im Format **SQLServer:** _\<object name>_ angezeigt. Leistungsindikatoren für benannte Instanzen werden im Format **MSSQL$** _\<instance name>_ **:** _\<counter name>_ oder **SQLAgent$** _\<instance name>_ **:** _\<counter name>_ angezeigt.  
   
 Werte von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsindikatoren werden mithilfe der Windows-Leistungsindikator-Engine (Windows Performance Counter, WPC) generiert. Einige Indikatorwerte werden nicht direkt von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] berechnet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Basiswerte für die WPC-Engine bereit, die die erforderlichen Berechnungen durchführt (z. B. die der Prozentsätze). Die dynamische Verwaltungssicht [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) stellt alle Indikatoren mit dem ursprünglichen, von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierten Wert bereit. Die Spalte `cntr_type` gibt den Typ des Indikators an. Wie die WPC-Engine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Indikatorwerte verarbeitet, hängt von diesem Typ ab. Weitere Informationen zu Typen von Leistungsindikatoren finden Sie in der [WMI-Dokumentation](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types).
   

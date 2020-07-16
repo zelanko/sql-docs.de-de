@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f3cd285b7a90f5addd01b479eb37898827605b87
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ad3a4659009ceb6d36aba9e3e97dc4e6f170788c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633633"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736514"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Entspricht einem speziellen Datentyp, der zum Speichern eines Resultsets für die Verarbeitung zu einem späteren Zeitpunkt verwendet wird. **table** wird hauptsächlich für die temporäre Speicherung eines Zeilensatzes verwendet, der als Resultset einer Tabellenwertfunktion zurückgegeben wird. Für Funktionen und Variablen kann der Typ **table** angegeben werden. **table**-Variablen können in Funktionen, gespeicherten Prozeduren und Batches verwendet werden. Verwenden Sie zum Deklarieren von Variablen des **table**-Typs die Anweisung [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
@@ -82,7 +82,7 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
 ```  
   
 **table**-Variablen bieten die folgenden Vorteile für Abfragen mit kleinerem Umfang, die über Abfragepläne verfügen, die sich nicht ändern (gilt auch für Szenarios mit vorwiegend vorhandenen Neukompilierungsaspekten):
--   Eine **table**-Variable verhält sich wie eine lokale Variable. Sie hat einen fest definierten Bereich. Diese Variable ist die Funktion, die gespeicherte Prozedur oder der Batch, in der bzw. dem sie deklariert ist.  
+-   Eine **table**-Variable verhält sich wie eine lokale Variable. Sie hat einen fest definierten Bereich. Diese Variable kann in der Funktion, der gespeicherten Prozedur oder dem Batch verwendet werden, in der bzw. dem sie deklariert ist.  
      Innerhalb dieses Bereichs kann eine **table**-Variable wie eine reguläre Tabelle verwendet werden. Sie kann überall angewendet werden, wo eine Tabelle oder ein Tabellenausdruck in SELECT-, INSERT-, UPDATE- und DELETE-Anweisungen verwendet wird. **table** kann jedoch nicht in der folgenden Anweisung verwendet werden:  
   
 ```sql

@@ -17,15 +17,15 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f1bd6350c31b29855915de1be8288ec1fcbe2a56
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048709"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751113"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Erstellen, Ändern und Löschen von räumlichen Indizes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Mit einem räumlichen Index lassen sich bestimmte Operationen mit Spalten des Datentyps **Geometrie** oder **Geografie** ( *räumliche Spalten*) effizienter ausführen. Für eine räumliche Spalte können mehrere räumliche Indizes angegeben werden. Dies ist beispielsweise hilfreich, wenn verschiedene Mosaikparameter in einer Spalte indiziert werden sollen.  
   
  Die Erstellung von räumlichen Indizes unterliegt einigen Einschränkungen. Weitere Informationen zu den Beschränkungen von räumlichen Indizes finden Sie unter [Erstellen, Ändern und Löschen von räumlichen Indizes](#restrictions) in diesem Thema.  
@@ -56,7 +56,7 @@ ms.locfileid: "68048709"
   
 7.  Klicken Sie auf **Hinzufügen**, um die räumliche Spalte anzugeben, die indiziert werden soll.  
   
-8.  Wählen Sie im Dialogfeld **Spalten auswählen aus** *\<Tabellenname>* eine Spalte vom Typ **Geometrie** oder **Geografie** aus, indem Sie das entsprechende Kontrollkästchen aktivieren. Alle anderen räumlichen Spalten werden daraufhin nicht editierbar. Wenn Sie eine andere räumliche Spalte auswählen möchten, müssen Sie zuerst die Auswahl der aktuell ausgewählten Spalte aufheben. Wenn Sie fertig sind, klicken Sie auf **OK**.  
+8.  Wählen Sie im Dialogfeld **Spalten auswählen aus** *\<table name>* eine Spalte vom Typ **Geometrie** oder **Geografie** aus, indem Sie das entsprechende Kontrollkästchen aktivieren. Alle anderen räumlichen Spalten werden daraufhin nicht editierbar. Wenn Sie eine andere räumliche Spalte auswählen möchten, müssen Sie zuerst die Auswahl der aktuell ausgewählten Spalte aufheben. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
 9. Überprüfen Sie die Spaltenauswahl im Raster **Indexschlüsselspalten** .  
   

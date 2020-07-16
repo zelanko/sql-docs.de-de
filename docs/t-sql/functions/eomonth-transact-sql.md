@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - EOMONTH function
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33677a8613631c757fa038741b9a407466eccd55
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3092c848f11ba62301755d9c112b49d6fb4d2fa7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732402"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -57,11 +57,12 @@ Die Funktion `EOMONTH` kann auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)
   
 ### <a name="a-eomonth-with-explicit-datetime-type"></a>A. EOMONTH mit explizitem datetime-Typ  
   
-```  
+```sql 
 DECLARE @date DATETIME = '12/1/2011';  
 SELECT EOMONTH ( @date ) AS Result;  
 GO  
-```  
+```
+
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
@@ -74,13 +75,13 @@ Result
 
 ### <a name="b-eomonth-with-string-parameter-and-implicit-conversion"></a>B. EOMONTH mit Zeichenfolgenparameter und impliziter Konvertierung  
   
-```  
+```sql
 DECLARE @date VARCHAR(255) = '12/1/2011';  
 SELECT EOMONTH ( @date ) AS Result;  
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
 Result  
@@ -92,13 +93,7 @@ Result
   
 ### <a name="c-eomonth-with-and-without-the-month_to_add-parameter"></a>C. EOMONTH mit und ohne den month_to_add-Parameter  
   
-Hinweis: Die in diesen Resultsets gezeigten Werte stellen ein Ausführungsdatum zwischen und einschließlich der folgenden dar:
-        
-        12/01/2011
-        
-        and
-        
-        12/31/2011
+Die in diesen Resultsets gezeigten Werte stellen ein Ausführungsdatum zwischen `12/01/2011` und `12/31/2011` einschließlich dar.
 
 ```sql  
 DECLARE @date DATETIME = GETDATE();  
@@ -128,7 +123,4 @@ Last Month
 2011-11-30  
   
 (1 row(s) affected)  
-```  
-  
-  
-
+```

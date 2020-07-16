@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie Namespaces mithilfe der WITH XMLNAMESPACES-Klausel zu Abfragen hinzufügen.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b575cfdf7f35326d661ef9ef312601c7b9b8bca3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: df623b61194f04f673d72b0b13ae4ffa8eaca5aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752594"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [WITH XMLNAMESPACES (Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) bietet folgende Namespace-URI-Unterstützung:  
   
 -   Macht das Namespacepräfix für die URI-Zuordnung bei Abfragen mit [Erstellen von XML mit FOR XML](../../relational-databases/xml/for-xml-sql-server.md) verfügbar.  

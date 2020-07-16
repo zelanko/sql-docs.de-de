@@ -1,5 +1,6 @@
 ---
 title: Verwenden von FOR XML-Ergebnissen in Anwendungscode | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie die Ergebnisse einer SQL-Abfrage mit FOR XML-Klauseln in einer Anwendung verwenden.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9927e5a4477961fbd7122ae96b05e42c74bf2196
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 430c7118d4185f123973c0ca7b00b02fb8ba39a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665048"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775541"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Verwenden von FOR XML-Ergebnissen in Anwendungscode
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Mithilfe von FOR XML-Klauseln in SWL-Abfragen können Sie Abfrageergebnisse abrufen und sogar in XML-Daten umwandeln. Diese Funktionalität bietet Ihnen die folgenden Möglichkeiten, wenn FOR XML-Abfrageergebnisse in XML-Anwendungscode verwendet werden können:  
   
 -   Abfragen von SQL-Tabellen für Instanzen von Werten von [XML-Daten&#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
@@ -154,9 +155,9 @@ ms.locfileid: "80665048"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>Clientseitiges Verarbeiten von XML-Dokument MyDataIsle  
   
--   **AnnualSales:** 1500000  
+-   **AnnualSales:** 1.500.000  
   
--   **AnnualRevenue:** 150000  
+-   **AnnualRevenue:** 150.000  
   
 -   **BankName:** Primary International  
   
@@ -164,9 +165,9 @@ ms.locfileid: "80665048"
   
 -   **YearOpened:** 1974  
   
--   **Specialty:** Road  
+-   **Specialty:** Straße  
   
--   **SquareFeet:** 38000  
+-   **SquareFeet:** 38.000  
   
 -   **Brands:** 3  
   

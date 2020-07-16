@@ -1,23 +1,22 @@
 ---
 title: Servergruppen
-titleSuffix: Azure Data Studio
 description: Informationen zu Servergruppen in Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a1edfb7566d47b8c02dbd53fcccbd7441239a949
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dfdc9f3c80b61d65d164b8328122a4785b37ba54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959309"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758397"
 ---
-# <a name="server-groups-in-name-sos"></a>Servergruppen in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="server-groups-in-azure-data-studio"></a>Servergruppen in Azure Data Studio
 
 Servergruppen stellen eine Möglichkeit dar, Ihre Verbindungen zu Servern und Datenbanken zu organisieren, mit denen Sie arbeiten. Wenn Sie Servergruppen erstellen, werden die Konfigurationsdetails unter *Benutzereinstellungen* gespeichert.
 
