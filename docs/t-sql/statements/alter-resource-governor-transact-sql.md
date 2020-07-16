@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e83131031e3504e8ace98d7e410baeb33f33f928
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2bec2a5008b65ea5e20b8e6b784d9fe3ecda64c2
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895625"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381134"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,10 @@ ALTER RESOURCE GOVERNOR
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumente  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  DISABLE  
  Deaktiviert die Ressourcenkontrolle. Wenn Sie Resource Governor deaktivieren, geschieht Folgendes:  
   
