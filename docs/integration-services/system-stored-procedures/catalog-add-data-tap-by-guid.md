@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d31ad18b9a7de5b045a9ed868d20a0f35ab441b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 486820bf4e3bbae793a23625fe687bd875210cc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281373"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749788"
 ---
 # <a name="catalogadd_data_tap_by_guid"></a>catalog.add_data_tap_by_guid 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fügt einem bestimmten Datenflusspfad in einem Paketdatenfluss für eine Instanz der Ausführung eine Datenabzweigung hinzu.  
   
 ## <a name="syntax"></a>Syntax  
   
 ```sql  
-catalog add_data_tap_by_guid [ @execution_id = ] execution_id  
+catalog.add_data_tap_by_guid [ @execution_id = ] execution_id  
 , [ @dataflow_task_guid = ] dataflow_task_guid   
 , [ @dataflow_path_id_string = ] dataflow_path_id_string  
 , [ @data_filename = ] data_filename  
@@ -52,7 +52,7 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  Das Argument *dataflow_path_id_string* ist vom Typ **nvarchar(4000)** .  
   
  [ @data_filename = ] *data_filename*  
- Der Name der Datei, in der die abgezweigten Daten gespeichert werden. Wenn der Datenflusstask in einer Foreach-Schleife oder einem For-Schleifencontainer ausgeführt wird, werden die abgezweigten Daten für jede Iteration der Schleife in separaten Dateien gespeichert. Jeder Datei wird eine Zahl für die jeweilige Iteration als Präfix vorangestellt. Datenabzweigungsdateien werden in den Ordner „ *\<Ordner für die SQL Server-Installation>* \130\DTS\\“ geschrieben. Das Argument *data_filename* ist vom Typ **nvarchar(4000)** .  
+ Der Name der Datei, in der die abgezweigten Daten gespeichert werden. Wenn der Datenflusstask in einer Foreach-Schleife oder einem For-Schleifencontainer ausgeführt wird, werden die abgezweigten Daten für jede Iteration der Schleife in separaten Dateien gespeichert. Jeder Datei wird eine Zahl für die jeweilige Iteration als Präfix vorangestellt. Datenabzweigungsdateien werden in den Ordner " *\<SQL Server installation folder>* \130\DTS\\\" geschrieben. Das Argument *data_filename* ist vom Typ **nvarchar(4000)** .  
   
  [ @max_rows = ] max_rows  
  Die Anzahl der Zeilen, die während der Datenabzweigung aufgezeichnet werden. Wenn dieser Wert nicht angegeben wird, werden alle Zeilen aufgezeichnet. Das Argument „max_rows“ ist vom Typ **int**.  

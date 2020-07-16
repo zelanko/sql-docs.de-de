@@ -1,5 +1,6 @@
 ---
 title: Heraufstufen häufiger XML-Werte mit berechneten Spalten | Microsoft-Dokumentation
+description: Erfahren Sie, wie häufig verwendete XML-Werte durch Erstellen von berechneten Spalten für eine effizientere Ausführung von Abfragen höher gestuft werden können.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9ca8eb44f7dad50d22b36a1cd795b3695836cb6b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772099"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Wenn Abfragen in erster Linie nur für eine geringe Anzahl von Element- und Attributwerten ausgeführt werden, kann es sinnvoll sein, diese Mengen in relationale Spalten heraufzustufen. Dies ist nützlich, wenn Abfragen für einen kleinen Teil der XML-Daten ausgegeben werden, während die gesamte XML-Instanz abgerufen wird. Das Erstellen eines XML-Indexes für die XML-Spalte ist nicht erforderlich. Stattdessen kann die heraufgestufte Spalte indiziert werden. Um die heraufgestufte Spalte zu verwenden, müssen Abfragen geschrieben werden. Das heißt, der Abfrageoptimierer richtet die Abfragen für die XML-Spalte nicht erneut an die heraufgestufte Spalte aus.  
   
  Die heraufgestufte Spalte kann entweder eine berechnete Spalte in derselben Tabelle oder eine getrennte, benutzerverwaltete Spalte in einer Tabelle sein. Dies ist ausreichend, wenn Singleton-Werte aus jeder XML-Instanz heraufgestuft werden. Allerdings müssen Sie für mehrwertige Eigenschaften eine getrennte Tabelle für die Eigenschaft erstellen, was im folgenden Abschnitt beschrieben wird.  
@@ -29,7 +30,7 @@ ms.locfileid: "80664881"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Berechnete Spalte auf der Basis des xml-Datentyps  
  Eine berechnete Spalte kann mithilfe einer benutzerdefinierten Funktion erstellt werden, die **xml** -Datentypmethoden aufruft. Der Typ der berechneten Spalte kann jeder SQL-Typ sein, einschließlich XML. Dies wird im folgenden Beispiel veranschaulicht.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Beispiel: Berechnete Spalte auf der Basis der xml-Datentypmethode  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Beispiel: Berechnete Spalten basierend auf der XML-Datentypmethode  
  Erstellen Sie die benutzerdefinierte Funktion für die ISBN-Nummer eines Buchs:  
   
 ```  
@@ -51,7 +52,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  Die berechnete Spalte kann auf gewöhnliche Weise indiziert werden.  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Beispiel: Abfragen für eine berechnete Spalte auf der Basis der xml-Datentypmethoden  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Beispiel: Abfragen für eine berechnete Spalte basierend auf XML-Datentypmethoden  
  So erhalten Sie das <`book`>-Element, dessen ISBN 0-7356-1588-2 ist:  
   
 ```  
@@ -164,7 +165,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Beispiel: Projektmappe mit Verwendung der Streaming-Tabellenwertfunktion in CLR  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Beispiel: Lösung mit der Streaming-Tabellenwertfunktion in CLR  
  Diese Projektmappe umfasst die folgenden Schritte:  
   
 1.  Definieren Sie eine CLR-Klasse (SqlReaderBase), die ISqlReader implementiert und eine Tabellenwert-Streaming-Ausgabe generiert, indem ein Pfadausdruck auf eine XML-Instanz angewendet wird.  

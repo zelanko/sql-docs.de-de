@@ -14,15 +14,15 @@ dev_langs:
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 912db4ce3841791e2bddde6f53be9869093bbcd2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6fb75992f2bcd229217c40582cd8087c6099d34f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636039"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766320"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (selektive XML-Indizes)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Löscht einen vorhandenen selektiven XML-Index oder sekundären selektiven XML-Index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Selektive XML-Indizes &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -48,7 +48,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  Der Name des vorhandenen, zu löschenden Indexes.  
   
- *\< object>* ist die Tabelle, die die indizierte XML-Spalte enthält. Verwenden Sie eines der folgenden Formate:  
+ *\< object>* Die Tabelle, die die indizierte XML-Spalte enthält. Verwenden Sie eines der folgenden Formate:  
   
 -   `database_name.schema_name.table_name`  
   

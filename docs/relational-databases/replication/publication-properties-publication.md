@@ -22,15 +22,15 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 952d0be032c470eae7dc34b468afc3b33f5040b9
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 01d90b3a146c8e110b5cfad11b4d198a1f97c609
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720878"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>Dialogfeld „Veröffentlichungseigenschaften“ für die SQL Server-Replikation
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Auf dieser Seite werden die Seiten im Dialogfeld „Veröffentlichungseigenschaften“ beschrieben. 
 
@@ -108,7 +108,7 @@ Wenn Sie die optimale Leistung Ihrer Anwendung sicherstellen und den am Remotest
  **Tabelle suchen**  
  Nur Mergeveröffentlichungen. Klicken Sie auf **Tabelle suchen** , um eine Tabelle in einer komplexen Filterstruktur zu suchen. In einer Datenbank mit komplexen Beziehungen kann eine Tabelle mit mehreren Tabellen verknüpft sein. Deshalb kann sie in der Filterstruktur mehrmals angezeigt werden.  
   
- Die eigentliche Tabelle wird in der Struktur nur einmal angezeigt. An den übrigen Stellen wird die Tabelle durch eine Verknüpfung dargestellt. Bei einer Verknüpfung mit einer Tabelle handelt es sich nur um einen Verweis auf die Tabelle. Es werden keine untergeordneten Knoten der Tabelle angezeigt. Ein Verknüpfungsknoten ist mit einem Verknüpfungspfeil markiert. Wenn Sie den Knoten erweitern, wird der Text **Klicken Sie auf „Tabelle suchen“, um die Tabelle für \<Tabellenname> anzuzeigen** angezeigt.  
+ Die eigentliche Tabelle wird in der Struktur nur einmal angezeigt. An den übrigen Stellen wird die Tabelle durch eine Verknüpfung dargestellt. Bei einer Verknüpfung mit einer Tabelle handelt es sich nur um einen Verweis auf die Tabelle. Es werden keine untergeordneten Knoten der Tabelle angezeigt. Ein Verknüpfungsknoten ist mit einem Verknüpfungspfeil markiert. Wenn Sie den Knoten erweitern, wird der Text **Klicken Sie auf „Tabelle suchen“, um die Tabelle für \<tablename> anzuzeigen** angezeigt.  
   
  Wählen Sie im Bereich einen Verknüpfungsknoten aus, und klicken Sie auf **Tabelle suchen** . Der Bereich wird erweitert, und die Tabelle wird hervorgehoben. Wenn Sie auf **Tabelle suchen** klicken, ohne dass ein Verknüpfungsknoten ausgewählt wurde, wird ein Dialogfeld **Tabelle suchen** aufgerufen.  
   
@@ -166,7 +166,7 @@ Wenn Sie die optimale Leistung Ihrer Anwendung sicherstellen und den am Remotest
 
 ## <a name="data-partitions"></a>Datenpartitionen
 Datenpartitionen  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]  
   Mithilfe der Seite **Datenpartitionen** des Dialogfelds **Veröffentlichungseigenschaften** können Sie Datenpartitionen für Mergeveröffentlichungen mit parametrisierter Filterung definieren. Nach dem Definieren von Partitionen können Sie Momentaufnahmen für diese Partitionen generieren und verschiedenen Abonnenten auf der Grundlage ihrer Verbindungseigenschaften (Anmelde- und Computername) verschiedene Anfangsdatasets zur Verfügung stellen. Sie können es Abonnenten auch ermöglichen, die Übermittlung und das Generieren von Momentaufnahmen anzufordern, wenn für ihre Partition zum Zeitpunkt der ersten Synchronisierung keine Momentaufnahme verfügbar ist. Weitere Informationen finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ### <a name="options"></a>Tastatur  
@@ -190,7 +190,7 @@ Datenpartitionen
 
 ## <a name="snapshot"></a>Momentaufnahme
 Momentaufnahme  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]  
   Mithilfe der Seite **Momentaufnahme** des Dialogfelds **Veröffentlichungseigenschaften** können Sie das Momentaufnahmeformat, den Speicherort des Momentaufnahmeordners und Skripts, die vor und nach der Anwendung der Momentaufnahme ausgeführt werden, festlegen. Der Momentaufnahmeordner muss als Freigabe definiert sein und über ausreichend Berechtigungen verfügen, sodass Agents Dateien im Ordner lesen und schreiben können. Weitere Informationen zum Sichern des Ordners finden Sie unter [Sichern des Momentaufnahmeordners](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 > [!NOTE]  

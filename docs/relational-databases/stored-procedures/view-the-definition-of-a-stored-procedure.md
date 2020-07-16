@@ -15,17 +15,19 @@ ms.assetid: 93318587-a0c5-4788-946f-3b5dc8372ea9
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de250fd158bdd02764e992e0ccbb69e072b4c6ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 72ee7154ec834e30522d0eb49486b7de6ccb34ce
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907336"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85997424"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Anzeigen der Definition einer gespeicherten Prozedur
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
     
-##  <a name="you-can-view-the-definition-of-a-stored-procedure-in-ssmanstudiofull-using-object-explorer-menu-options-or-in-the-query-editor-using-tsql-this-topic-describes-how-to-view-the-definition-of-procedure-in-object-explorer-and-by-using-a-system-stored-procedure-system-function-and-object-catalog-view-in-the-query-editor"></a><a name="Top"></a> Sie können die Definition einer gespeicherten Prozedur in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mit Objekt-Explorer-Menüoptionen oder im Abfrage-Editor mit [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen. In diesem Thema wird beschrieben, wie die Definition der Prozedur im Objekt-Explorer und mit einer gespeicherten Systemprozedur, Systemfunktion und der Objektkatalogsicht im Abfrage-Editor angezeigt wird.  
+##  <a name="view-the-definition-of-a-stored-procedure"></a><a name="Top"></a> Anzeigen der Definition einer gespeicherten Prozedur 
+
+In diesem Thema wird beschrieben, wie die Definition der Prozedur im Objekt-Explorer und mit einer gespeicherten Systemprozedur, Systemfunktion und der Objektkatalogsicht im Abfrage-Editor angezeigt wird.  
   
 -   **Vorbereitungen:**  [Sicherheit](#Security)  
   

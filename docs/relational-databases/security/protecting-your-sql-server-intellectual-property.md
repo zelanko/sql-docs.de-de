@@ -1,5 +1,6 @@
 ---
 title: Schutz Ihres geistigen SQL Server-Eigentums | Microsoft-Dokumentation
+description: Erwerben Sie ein Verständnis Ihrer Optionen zum Schutz geistigen Eigentums in einer SQL Server-Datenanwendung, die an Kunden verteilt wird.
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: afe179023f72ec509af5828bb89afb51f93b53a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dc6b2c88fc2405aea99ac8ce7de9c38cf43c99aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773880"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Schutz Ihres geistigen SQL Server-Eigentums
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Softwareentwickler fragen sich häufig, wie sie ihre [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Datenanwendung am besten an die Kunden verteilen können, dabei aber gleichzeitig verhindern, dass die Kunden die Anwendung analysieren und dekonstruieren. Entscheidend hierbei ist, dass der Schutz Ihres geistigen Eigentums ein rechtliches Problem und Teil Ihres Lizenzvertrags ist. Wenn [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] auf einem Computer installiert ist, der von anderen Benutzern verwaltet wird, verlieren Sie grundsätzlich einen Teil der Kontrolle. 
 

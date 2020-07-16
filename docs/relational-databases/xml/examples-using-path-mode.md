@@ -1,5 +1,6 @@
 ---
 title: 'Beispiele: Verwenden des PATH-Modus | Microsoft-Dokumentation'
+description: Sehen Sie Beispiele zur Verwendung des PATH-Modus zum Generieren von XML-Code aus einer SELECT-Abfrage an.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dd4b9487f6a185b76b5f4ee52d7a39f349906d46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74e447caefd30eba8ccfc9ab27db2c74d2f63c20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729951"
 ---
 # <a name="examples-using-path-mode"></a>Beispiele: Verwenden des PATH-Modus
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Diese Beispiele veranschaulichen die Verwendung des PATH-Modus beim Generieren von XML-Code aus einer SELECT-Abfrage. Viele dieser Abfragen beziehen sich auf die XML-Dokumente mit den Fahrradfertigungsanweisungen, die in der Instructions-Spalte der ProductModel-Tabelle gespeichert sind.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Angeben einer einfachen Abfrage im PATH-Modus  

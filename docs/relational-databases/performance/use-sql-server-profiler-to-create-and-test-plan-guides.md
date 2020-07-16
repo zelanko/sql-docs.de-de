@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2879807d7eb64446a26ea5857f33c52fe7b78970
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ee56255d55a8676fd55b903af70c002cefc9bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737096"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Wenn Sie eine Planhinweisliste erstellen, können Sie durch Verwenden von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] den genauen Abfragetext aufzeichnen, um diesen im *statement_text* -Argument der gespeicherten Prozedur **sp_create_plan_guide** zu verwenden. Damit kann sichergestellt werden, dass die Planhinweisliste zum Zeitpunkt der Kompilierung mit der Abfrage in Übereinstimmung gebracht wird. Nach dem Erstellen der Planhinweisliste kann [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auch verwendet werden, um zu testen, ob die Planhinweisliste tatsächlich in Übereinstimmung mit der Abfrage gebracht wird. Im Allgemeinen sollten Sie Planhinweislisten mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] testen, um zu überprüfen, dass Ihre Abfrage mit Ihrer Planhinweisliste übereinstimmt.  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Aufzeichnen von Abfragetext mithilfe von SQL Server Profiler  
@@ -96,7 +96,7 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  Das Ereignis **Showplan XML for Query Compile** kann nicht verwendet werden. **PlanGuideDB** ist in diesem Ereignis nicht vorhanden.  
   
-5.  Wenn die Planhinweisliste vom Typ OBJECT oder SQL ist, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **PlanGuideDB** und **PlanGuideName** für die Planhinweisliste enthält, die mit der Abfrage übereinstimmen soll. Handelt es sich um eine Planhinweisliste vom Typ TEMPLATE, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **TemplatePlanGuideDB** und **TemplatePlanGuideName** für die erwartete Planhinweisliste enthält. Damit wird die Funktionsfähigkeit der Planhinweisliste überprüft. Diese Attribute sind im **\<<StmtSimple**-Element der Planhinweisliste enthalten.  
+5.  Wenn die Planhinweisliste vom Typ OBJECT oder SQL ist, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **PlanGuideDB** und **PlanGuideName** für die Planhinweisliste enthält, die mit der Abfrage übereinstimmen soll. Handelt es sich um eine Planhinweisliste vom Typ TEMPLATE, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **TemplatePlanGuideDB** und **TemplatePlanGuideName** für die erwartete Planhinweisliste enthält. Damit wird die Funktionsfähigkeit der Planhinweisliste überprüft. Diese Attribute sind im **\<StmtSimple>** -Element des Plans enthalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  

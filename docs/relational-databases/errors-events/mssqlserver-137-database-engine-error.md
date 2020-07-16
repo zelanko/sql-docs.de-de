@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 834f3e28b8e368b29c2465f44f6a23528ad32626
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f26d4324170b6a8c35b1785865c0ba614a3a181c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781084"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279088"
 ---
 # <a name="mssqlserver_137"></a>MSSQLSERVER_137
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,12 +35,15 @@ ms.locfileid: "85781084"
 ## <a name="explanation"></a>Erklärung  
 Dieser Fehler tritt auf, wenn in einem SQL-Skript eine Variable verwendet wird, ohne dass die Variable zuerst deklariert wurde. Im folgenden Beispiel wird beispielsweise Fehler 137 für die SET- und die SELECT-Anweisung zurückgegeben, weil **\@mycol** nicht deklariert wurde.  
   
+```sql
 SET @mycol = 'ContactName';  
   
-SELECT @mycol;  
+SELECT @mycol; 
+```
   
 Eine der etwas komplizierteren Ursachen für diesen Fehler ist u. a. die Verwendung einer Variablen, die außerhalb der EXECUTE-Anweisung deklariert wurde. Angenommen, die in der SELECT-Anweisung angegebene Variable **\@mycol** ist für die SELECT-Anweisung lokal. Das bedeutet, dass sie sich außerhalb der EXECUTE-Anweisung befindet.  
   
+```sql
 USE AdventureWorks2012;  
   
 GO  
@@ -49,13 +52,15 @@ DECLARE @mycol nvarchar(20);
   
 SET @mycol = 'Name';  
   
-EXECUTE ('SELECT @mycol FROM Production.Product;');  
+EXECUTE ('SELECT @mycol FROM Production.Product;'); 
+```
   
 ## <a name="user-action"></a>Benutzeraktion  
 Überprüfen Sie, ob alle in einem SQL-Skript verwendeten Variablen deklariert wurden, bevor sie an anderer Stelle im Skript verwendet werden.  
   
 Schreiben Sie das Skript um, sodass es nicht auf Variablen in der EXECUTE-Anweisung verweist, die außerhalb davon deklariert wurden. Beispiel:  
   
+```sql
 USE AdventureWorks2012;  
   
 GO  
@@ -64,7 +69,8 @@ DECLARE @mycol nvarchar(20) ;
   
 SET @mycol = 'Name';  
   
-EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;  
+EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;
+```
   
 ## <a name="see-also"></a>Weitere Informationen  
 [EXECUTE &#40;Transact-SQL&#41;](~/t-sql/language-elements/execute-transact-sql.md)  

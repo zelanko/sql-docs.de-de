@@ -15,15 +15,15 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 79f24f3115f61b088fce684d0b7ada0bc1d39697
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1ac16f73cc6b61aab0a47308179663b65bf50ff4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729316"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Synchronisieren eines Pullabonnements
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   In diesem Thema wird beschrieben, wie ein Pullabonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [Replikations-Agents](../../relational-databases/replication/agents/replication-agents-overview.md)oder Replikationsverwaltungsobjekten (RMO) synchronisiert wird.  
   
  **In diesem Thema**  
@@ -49,7 +49,7 @@ ms.locfileid: "76287041"
   
 3.  Klicken Sie mit der rechten Maustaste auf das zu synchronisierende Abonnement, und klicken Sie dann auf **Synchronisierungsstatus anzeigen**.  
   
-4.  Klicken Sie im Dialogfeld **Synchronisierungsstatus anzeigen - \<Abonnent>:\<SubscriptionDatabase>** auf **Start**. Nach Abschluss der Synchronisierung wird die Meldung **Synchronisierung abgeschlossen** eingeblendet.  
+4.  Klicken Sie im Dialogfeld **Synchronisierungsstatus anzeigen – \<Subscriber>:\<SubscriptionDatabase>** auf **Start**. Nach Abschluss der Synchronisierung wird die Meldung **Synchronisierung abgeschlossen** eingeblendet.  
   
 5.  Klicken Sie auf **Schließen**.  
   

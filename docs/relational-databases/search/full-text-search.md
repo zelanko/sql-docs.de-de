@@ -12,15 +12,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87924fccd112be6090d24e64826c72b79381e062
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72930270"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091754"
 ---
 # <a name="full-text-search"></a>Volltextsuche
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Mit der Volltextsuche in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] können Benutzer und Anwendungen Volltextabfragen für zeichenbasierte Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen ausführen.
   
@@ -79,7 +79,7 @@ Ein Volltextindex umfasst eine oder mehrere zeichenbasierte Spalten in einer Tab
  Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md).  
   
 ##  <a name="compare-full-text-search-queries-to-the-like-predicate"></a><a name="like"></a> Vergleich der Volltextsuchabfragen mit dem LIKE-Prädikat
- Im Gegensatz zur Volltextsuche verarbeitet das [-Prädikat ](../../t-sql/language-elements/like-transact-sql.md)LIKE[!INCLUDE[tsql](../../includes/tsql-md.md)] ausschließlich Zeichenmuster. Darüber hinaus können Sie mit dem LIKE-Prädikat keine formatierten Binärdaten abfragen. Eine LIKE-Abfrage in umfangreichen unstrukturierten Textdaten ist sehr viel langsamer als eine entsprechende Volltextabfrage in denselben Daten. Eine LIKE-Abfrage für Millionen von Zeilen von Textdaten kann Minuten in Anspruch nehmen; eine Volltextabfrage kann dagegen in Sekunden oder weniger für dieselben Daten ein Ergebnis liefern, je nach Anzahl der zurückgegebenen Zeilen.  
+ Im Gegensatz zur Volltextsuche verarbeitet das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prädikat [LIKE](../../t-sql/language-elements/like-transact-sql.md) ausschließlich Zeichenmuster. Darüber hinaus können Sie mit dem LIKE-Prädikat keine formatierten Binärdaten abfragen. Eine LIKE-Abfrage in umfangreichen unstrukturierten Textdaten ist sehr viel langsamer als eine entsprechende Volltextabfrage in denselben Daten. Eine LIKE-Abfrage für Millionen von Zeilen von Textdaten kann Minuten in Anspruch nehmen; eine Volltextabfrage kann dagegen in Sekunden oder weniger für dieselben Daten ein Ergebnis liefern, je nach Anzahl der zurückgegebenen Zeilen.  
   
 ##  <a name="full-text-search-architecture"></a><a name="architecture"></a> Architektur der Volltextsuche
  Die Architektur der Volltextsuche besteht aus den folgenden Prozessen:  
@@ -254,4 +254,3 @@ Nur ein Volltextindex pro Tabelle ist zulässig. Damit ein Volltextindex für ei
  Wörtertrennung (und Wortstammerkennung) sowie Filter werden im Filterdaemon-Hostprozess (fdhost.exe) ausgeführt.  
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: abc81687b3d75575d1bf8c7727ae3415fc7b3c91
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3cd5a1b5404728dde5f72928111391e13842fe35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634040"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735339"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE (Typberechtigungen) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Hebt die Berechtigungen für einen Typ auf.  
   
@@ -72,7 +72,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  Durch ein kaskadiertes Aufheben einer Berechtigung, die mit WITH GRANT OPTION erteilt wurde, werden sowohl GRANT als auch DENY für diese Berechtigung aufgehoben.  
   
- AS \<database_principal> gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet.  
+ AS \<database_principal> Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet.  
   
  *Database_user*  
  Gibt einen Datenbankbenutzer an.  

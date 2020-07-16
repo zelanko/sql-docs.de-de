@@ -25,15 +25,15 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 078a6b8ebdef8604c4023f6e652f5f431ee59d5b
-ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
+ms.openlocfilehash: 8bed7fa9d84cc3100d5da0f784c9e2551071156e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643367"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012846"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Entfernt alle Zeilen oder angegebenen Partitionen einer Tabelle, ohne die einzelnen Löschungen zu protokollieren. TRUNCATE TABLE entspricht DELETE ohne WHERE-Klausel. TRUNCATE TABLE ist jedoch schneller und verwendet weniger Systemressourcen und Ressourcen für die Transaktionsprotokollierung.  
   
@@ -76,7 +76,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  Gibt die Partitionen an, die abgeschnitten oder aus denen alle Zeilen entfernt werden sollen. Wenn die Tabelle nicht partitioniert ist, erzeugt das Argument `WITH PARTITIONS` einen Fehler. Wenn die `WITH PARTITIONS`-Klausel nicht bereitgestellt wird, wird die gesamte Tabelle abgeschnitten.  
   
- *\<partition_number_expression>* kann auf die folgenden Weisen angegeben werden: 
+ *\<partition_number_expression>* kann wie folgt angegeben werden: 
   
 -   Geben Sie die Nummer einer Partition an, beispielsweise: `WITH (PARTITIONS (2))`  
   
@@ -84,7 +84,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
 -   Geben Sie sowohl Bereiche als auch einzelne Partitionen an, beispielsweise: `WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   Für *\<range>* können durch das Wort **TO** getrennte Partitionsnummern angegeben werden, beispielsweise: `WITH (PARTITIONS (6 TO 8))`  
+-   Für *\<range>* können durch das Wort **TO** getrennte Partitionsnummern angegeben werden, z. B. `WITH (PARTITIONS (6 TO 8))`.  
   
  Um eine partitionierte Tabelle abzuschneiden, müssen die Tabelle und Indizes ausgerichtet werden (partitioniert auf dieselbe Partitionsfunktion).  
   

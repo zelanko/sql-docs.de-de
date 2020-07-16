@@ -1,5 +1,6 @@
 ---
 title: Vergleichen von typisiertem XML mit nicht typisiertem XML | Microsoft-Dokumentation
+description: Erfahren Sie mehr zu den Unterschieden zwischen typisiertem und nicht typisiertem XML.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6df31e36aabbf6df0a964c45873ef9bf2ad624a6
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a31b8e27147f0c9b06c79bf56c1b8ae34f4e8e14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664682"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775551"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Vergleichen von typisiertem XML mit nicht typisiertem XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Sie können Variablen, Parameter und Spalten des **xml** -Datentyps erstellen. Optional können Sie eine Auflistung von XML-Schemas mit einer Variablen, einem Parameter oder einer Spalte vom Typ **xml** verknüpfen. In diesem Fall wird die Instanz des **xml** -Datentyps als *typisiert*bezeichnet. Anderenfalls wird die XML-Instanz als *nicht typisiert*bezeichnet.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>Wohlgeformtes XML und der xml-Datentyp  
@@ -68,14 +69,14 @@ ms.locfileid: "80664682"
   
  Im folgenden Beispiel wird eine zweiteilige Benennungskonvention zum Angeben des Namens der XML-Schemaauflistung verwendet. Der erste Teil ist der Schemaname, der zweite Teil der Name der XML-Schemaauflistung.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Beispiel: Verknüpfen einer Schemaauflistung mit einer Variablen vom Typ xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Beispiel: Verknüpfen einer Schemasammlung mit einer XML-Variable  
  Im folgenden Beispiel wird eine Variable vom Typ **xml** erstellt und eine Schemaauflistung mit dieser verknüpft. Die im Beispiel angegebene Schemaauflistung wurde bereits in die **AdventureWorks** -Datenbank importiert.  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Beispiel: Angeben eines Schemas für eine Spalte vom Typ xml  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Beispiel: Angeben eines Schemas für eine XML-Spalte  
  Im folgenden Beispiel wird eine Tabelle mit einer Spalte vom Typ **xml** erstellt und ein Schema für die Spalte angegeben:  
   
 ```  
@@ -84,7 +85,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Beispiel: Übergeben eines Parameters vom Typ xml an eine gespeicherte Prozedur  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Beispiel: Übergeben eines XML-Parameters an eine gespeicherte Prozedur  
  Im folgenden Beispiel wird ein Parameter vom Typ **xml** an eine gespeicherte Prozedur übergeben und ein Schema für die Variable angegeben:  
   
 ```  
@@ -106,7 +107,7 @@ AS
   
  In der Datentyphierarchie nimmt der **xml** -Datentyp einen Platz unter **sql_variant** und benutzerdefinierten Typen ein, steht jedoch über allen integrierten Typen.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Beispiel: Angeben von Facets zum Einschränken einer typisierten xml-Spalte  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Beispiel: Angeben von Facets zum Einschränken einer typisierten XML-Spalte  
  Typisierte **xml** -Spalten können so eingeschränkt werden, dass nur einzelne Elemente der obersten Ebene für jede darin gespeicherte Instanz zulässig sind. Sie geben zu diesem Zweck beim Erstellen der Tabelle den optionalen `DOCUMENT` -Facet an, wie das folgende Beispiel zeigt:  
   
 ```  

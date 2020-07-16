@@ -1,5 +1,6 @@
 ---
 title: Verwenden geschachtelter FOR XML-Abfragen in ASP.NET | Microsoft-Dokumentation
+description: Erfahren Sie, wie geschachtelte FOR XML-Abfragen in einer ASP.NET-Anwendung zum Generieren von elementzentrischem XML verwendet werden.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1cc0fa2ffe432d3edef8aa8f51e4f230c1e40d2e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: def3cb5a9e77324a0d062ec26c0d042afcc0bc3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665040"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738380"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>Verwenden geschachtelter FOR XML-Abfragen in ASP.NET
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In diesem Beispiel gibt eine ASP.NET-Anwendung XML-Code an einen Browser zurück, indem sie eine gespeicherte Prozedur in SQL Server ausführt. Die gespeicherte Prozedur generiert mithilfe von geschachtelten Abfragen XML. Eine ähnliche SELECT-Anweisung enthält das Thema [Geschachtelte FOR XML-Abfragen](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md). In diesem Beispiel wird eine Möglichkeit veranschaulicht, geschachtelte FOR XML-Abfragen zu verwenden, um elementzentriertes XML in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu generieren.  
   
 ## <a name="example"></a>Beispiel  

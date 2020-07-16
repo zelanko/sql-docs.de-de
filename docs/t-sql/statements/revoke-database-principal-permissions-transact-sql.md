@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3fd1af3bc801b2ad46739e12d02b07289e0bc1f8
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d92713b06958dbfd8e2aef995779a25ed76d9d09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735400"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE (Berechtigungen für Datenbankprinzipal) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Hebt Berechtigungen auf, die für einen Datenbankbenutzer, eine Datenbankrolle oder Anwendungsrolle erteilt oder verweigert wurden.  
   
@@ -86,7 +86,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  Durch ein kaskadiertes Aufheben einer Berechtigung, die mit WITH GRANT OPTION erteilt wurde, werden sowohl GRANT als auch DENY für diese Berechtigung aufgehoben.  
   
- AS \<database_principal> gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet.  
+ AS \<database_principal> Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet.  
   
  *Database_user*  
  Gibt einen Datenbankbenutzer an.  
