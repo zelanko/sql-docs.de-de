@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d03b67e5a047d615a53e1053d39b75d41f7cbc09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 514e0d342fb542ade5cefaf0f405f9caf1cd0b1d
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733821"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279606"
 ---
 # <a name="mssqlserver_605"></a>MSSQLSERVER_605
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,6 +54,7 @@ Wenn der Fehler 605 nicht vorübergehend auftritt, ist das Problem schwerwiegend
   
 1.  Geben Sie die Tabellen an, die den in der Meldung angegebenen Zuordnungseinheiten angehören, indem Sie folgende Abfrage ausführen. Ersetzen Sie `allocation_unit_id` durch die in der Fehlermeldung angegebenen Zuordnungseinheiten.  
   
+    ```sql  
     USE`database_name`;  
   
     GO  
@@ -73,6 +74,7 @@ Wenn der Fehler 605 nicht vorübergehend auftritt, ist das Problem schwerwiegend
     ORDER BY au.allocation_unit_id;  
   
     GO  
+    ```
   
 2.  Führen Sie DBCC CHECKTABLE ohne REPAIR-Klausel für die Tabelle aus, die zur zweiten in der Fehlermeldung angegebenen Zuordnungseinheits-ID gehört.  
   
