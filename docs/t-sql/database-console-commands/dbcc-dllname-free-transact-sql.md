@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: cc9716cbd1e27c6589b964c3c3d6208105f4863c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aeac2877165b3d0b00d33fd62e8e81086d951f0b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101948"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894887"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Entfernt die angegebene DLL einer erweiterten gespeicherten Prozedur aus dem Arbeitsspeicher.
   
 ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -65,7 +65,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** oder der festen Datenbankrolle **db_owner** .
   
 ## <a name="examples"></a>Beispiele  
-Bei dem folgenden Beispiel wird vorausgesetzt, dass `xp_sample` als xp_sample.dll implementiert ist und ausgeführt wurde. DBCC \<*dllname*> (FREE) entfernt die Datei „xp_sample.dll“ aus dem Arbeitsspeicher, die der erweiterten Prozedur `xp_sample` zugeordnet ist.
+Bei dem folgenden Beispiel wird vorausgesetzt, dass `xp_sample` als xp_sample.dll implementiert ist und ausgeführt wurde. DBCC \<*dllname*> (FREE) entfernt die Datei xp_sample.dll, die der erweiterten Prozedur `xp_sample` zugeordnet ist, aus dem Arbeitsspeicher.
   
 ```sql  
 DBCC xp_sample (FREE);  

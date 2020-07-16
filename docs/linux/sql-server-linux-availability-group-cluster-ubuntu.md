@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: a42d031ee66ee455af91dbcce233140a7ab0a171
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c929e689f68def3b267dced2001468814d8747d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001100"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892326"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Konfigurieren von Ubuntu-Clustern und Verfügbarkeitsgruppenressource
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 In diesem Dokument wird erläutert, wie ein Cluster mit drei Knoten unter Ubuntu erstellt und eine zuvor erstellte Verfügbarkeitsgruppe als Ressource im Cluster hinzugefügt wird. Zur Gewährleistung von Hochverfügbarkeit benötigt eine Verfügbarkeitsgruppe unter Linux drei Knoten. Weitere Informationen hierzu finden Sie unter [Hochverfügbarkeit und Schutz von Daten für Verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md).
 
@@ -187,7 +187,7 @@ sudo apt-get install mssql-server-ha
 
 ## <a name="create-availability-group-resource"></a>Erstellen von Verfügbarkeitsgruppenressourcen
 
-Verwenden Sie den Befehl `pcs resource create`, und legen Sie die Ressourceneigenschaften fest, um die Verfügbarkeitsgruppenressource zu erstellen. Der folgende Befehl erstellt eine `ocf:mssql:ag`-Ressource vom Typ Master/Slave für die Verfügbarkeitsgruppe mit dem Namen `ag1`. 
+Verwenden Sie den Befehl `pcs resource create`, und legen Sie die Ressourceneigenschaften fest, um die Verfügbarkeitsgruppenressource zu erstellen. Der folgende Befehl erstellt eine `ocf:mssql:ag`-Ressource vom Typ Master/untergeordnet für die Verfügbarkeitsgruppe mit dem Namen `ag1`. 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master meta notify=true

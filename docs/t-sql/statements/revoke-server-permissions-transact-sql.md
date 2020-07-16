@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 342b7c627d974a2de127a7178a7257de067f9714
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 39617f16278c74f978d604cfee02d01e408c5854
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634114"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894555"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE (Serverberechtigungen) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Entfernt die GRANT- und DENY-Berechtigungen auf Serverebene.  
   
@@ -58,9 +58,9 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Gibt eine Berechtigung an, die für einen Server erteilt werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- { TO | FROM } \<grantee_principal> gibt den Prinzipal an, für den die Berechtigung aufgehoben wird.  
+ { TO | FROM } \<grantee_principal> Gibt den Prinzipal an, für den die Berechtigung aufgehoben wird.  
   
- AS \<grantor_principal> gibt den Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet.  
+ AS \<grantor_principal> Gibt den Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet.  
   
  GRANT OPTION FOR  
  Gibt an, dass das Recht zum Erteilen der angegebenen Berechtigung für andere Prinzipale aufgehoben wird. Die Berechtigung selbst wird nicht aufgehoben.  

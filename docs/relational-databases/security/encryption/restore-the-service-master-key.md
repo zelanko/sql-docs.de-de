@@ -1,5 +1,6 @@
 ---
 title: Wiederherstellen des Diensthauptschlüssels | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie den Diensthauptschlüssel in SQL Server mithilfe von Transact-SQL wiederherstellen. Der Diensthauptschlüssel ist der Stamm der SQL Server -Verschlüsselungshierarchie.
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: e27516fb2b0931c2df8f4a76a4153ee8c38616b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4e2d053a232d374360177159cb3b97785f73a4f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957384"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898027"
 ---
 # <a name="restore-the-service-master-key"></a>Wiederherstellen des Diensthauptschlüssels
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie der Diensthauptschlüssel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]wiederhergestellt wird.  
   
 > [!WARNING]  

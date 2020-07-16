@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2c7e46b1225c63bc0c84b9474abed55a89896571
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c2ad1a4191a1ea3bbba6bcb34ee33dcdc89c94ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634169"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897634"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT (Berechtigungen für XML-Schemaauflistungen) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Erteilt Berechtigungen für eine XML-Schemaauflistung.   
   

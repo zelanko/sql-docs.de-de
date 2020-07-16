@@ -8,21 +8,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 3ddc3ffa91b62956fdfef91ff3c19a784fc2fe2b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8520c3741102597ac3b7e93aceabc3ec6c114230
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216657"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883920"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Verwenden von SQL Server Management Studio unter Windows zum Verwalten von SQL Server für Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 In diesem Artikel wird [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) vorgestellt, und Sie werden schrittweise durch einige häufige Aufgaben geführt. SSMS ist eine Windows-Anwendung und kann daher auf einem Windows-Computer ausgeführt werden, der eine Verbindung mit einer SQL Server-Remoteinstanz unter Linux herstellen kann.
 
 > [!TIP]
-> Wenn Sie nicht über einen Windows-Computer verfügen, auf dem SSMS ausgeführt werden kann, sollten Sie die Verwendung des neuen Tools [Azure Data Studio](../azure-data-studio/index.md) in Erwägung ziehen. Es bietet ein grafisches Tool zum Verwalten von SQL Server und kann sowohl unter Linux als auch unter Windows ausgeführt werden.
+> Wenn Sie nicht über einen Windows-Computer verfügen, auf dem SSMS ausgeführt werden kann, sollten Sie die Verwendung des neuen Tools [Azure Data Studio](../azure-data-studio/index.yml) in Erwägung ziehen. Es bietet ein grafisches Tool zum Verwalten von SQL Server und kann sowohl unter Linux als auch unter Windows ausgeführt werden.
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) ist Teil einer Suite von SQL-Tools, die Microsoft kostenlos für Ihre Entwicklungs- und Verwaltungsanforderungen anbietet. SSMS ist eine integrierte Umgebung, in der Sie auf alle SQL Server-Komponenten zugreifen sowie diese konfigurieren, verwalten und entwickeln können. Sie können damit eine Verbindung mit SQL Server herstellen, unabhängig davon, ob SQL Server auf einer lokalen Plattform in Docker-Containern oder in der Cloud ausgeführt wird. Außerdem kann eine Verbindung mit Azure SQL-Datenbank und Azure SQL Data Warehouse hergestellt werden. SSMS kombiniert eine Vielzahl grafischer Tools mit mehreren umfassenden Skript-Editoren, um Entwicklern und Administratoren mit unterschiedlichem Kenntnisstand den Zugriff auf SQL Server zu ermöglichen.
 
@@ -58,7 +58,7 @@ Führen Sie zum Herstellen einer Verbindung die folgenden grundlegenden Schritte
    | Einstellung | BESCHREIBUNG |
    |-----|-----|
    | **Servertyp** | Der Standardwert ist die Datenbank-Engine. Ändern Sie diesen Wert nicht. |
-   | **Servername** | Geben Sie den Namen des Linux-Zielcomputers für SQL Server oder dessen IP-Adresse ein. |
+   | **Servername** | Geben Sie den Namen des Linux-Zielcomputers für SQL Server oder dessen IP-Adresse und Port im Format `IP,port` ein. |
    | **Authentifizierung** | Verwenden Sie für SQL Server für Linux **SQL Server-Authentifizierung**. |
    | **Anmeldung** | Geben Sie den Namen eines Benutzers ein, der Zugriff auf eine Datenbank auf dem Server hat (z. B. das standardmäßig beim Setup erstellte **SA**-Konto). |
    | **Kennwort** | Geben Sie das Kennwort für den angegebenen Benutzer ein (für das **SA**-Konto haben Sie dieses während des Setups erstellt). |

@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: Installieren, aktualisieren und deinstallieren Sie SQL Server unter Linux. In diesem Artikel erhalten Sie Informationen zu Online-, Offline- und unbeaufsichtigten Szenarios.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/13/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 915aaabeedeb7c240495e635ebb679c252112385
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79319840"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897316"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Leitfaden für die Installation von SQL Server unter Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 In diesem Artikel erfahren Sie, wie Sie SQL Server 2017 und SQL Server 2019 unter Linux installieren, aktualisieren und deinstallieren.
 
@@ -47,7 +47,7 @@ SQL Server wird unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Ser
 
 | Plattform | Unterstützte Version(en) | Herunterladen
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [RHEL 7.6 herunterladen](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8  | [RHEL 7.6 herunterladen](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 herunterladen](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04 herunterladen](http://releases.ubuntu.com/xenial/)
 | **Docker-Engine** | ab 1.8 | [Docker herunterladen](https://www.docker.com/get-started)
@@ -57,12 +57,7 @@ SQL Server wird unter Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Ser
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| Plattform | Unterstützte Version(en) | Herunterladen
-|-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [RHEL 8.0 herunterladen](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2, SP3, SP4, SP5 | [SLES v12 herunterladen](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04, 18.04 | [Ubuntu 18.04 herunterladen](http://releases.ubuntu.com/bionic/)
-| **Docker-Engine** | ab 1.8 | [Docker herunterladen](https://www.docker.com/get-started)
+[!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
 ::: moniker-end
 

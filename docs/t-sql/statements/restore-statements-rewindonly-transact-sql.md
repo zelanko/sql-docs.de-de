@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d7629abf8e458ccbc2cb1b24624d0cbb91918830
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 50f114b01f72f48dd0ebd28123dfabdeef3a4b91
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625687"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896582"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE-Anweisungen - REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Führt das Zurückspulen und Schließen der angegebenen Bandmedien aus, die durch mit der Option NOREWIND ausgeführte BACKUP- oder RESTORE-Anweisungen offen geblieben sind. Diese Option wird nur für Bandmedien verwendet.  
   
@@ -64,7 +64,7 @@ FROM <backup_device> [ ,...n ]
  Dies ist der logische Name der von **sp_addumpdevice** erstellten Sicherungsmedien, von denen die Datenbank wiederhergestellt wird. Der Name muss den Regeln für Bezeichner entsprechen. Bei Angabe in Form einer Variablen ( **@** _logical\_backup\_device\_name\_var_) kann der Name des Sicherungsmediums entweder als Zeichenfolgenkonstante ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
   
  {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
- Ermöglicht die Wiederherstellung von Sicherungen von den angegebenen Datenträgern- oder Bandmedien. Die Gerätetypen von Datenträgern und Bändern müssen durch die tatsächlichen Namen des Geräts angegeben werden (z.B. vollständiger Pfad und Dateiname): DISK = 'C:\Programme\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' oder TAPE = '\\\\.\TAPE0'. Bei Angabe in Form einer Variablen ( **@** _physical\_backup\_device\_name\_var_) kann der Gerätename entweder als Zeichenfolgenkonstante ( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
+ Ermöglicht die Wiederherstellung von Sicherungen von den angegebenen Datenträgern- oder Bandmedien. Die Gerätetypen von Datenträgern und Bändern sollten durch die tatsächlichen Namen des Geräts angegeben werden (z. B. vollständiger Pfad und Dateiname): DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'. Bei Angabe in Form einer Variablen ( **@** _physical\_backup\_device\_name\_var_) kann der Gerätename entweder als Zeichenfolgenkonstante ( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.  
   
  Wenn Sie einen Netzwerkserver mit einem UNC-Namen (der einen Computernamen enthalten muss) verwenden, geben Sie die Geräteart Datenträger (DISK) an. Weitere Informationen zum Verwenden von UNC-Namen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -89,7 +89,7 @@ FROM <backup_device> [ ,...n ]
  Gibt an, dass das Band nach einem RESTORE-Vorgang nicht automatisch aus dem Bandlaufwerk ausgeworfen wird. NOUNLOAD bleibt festgelegt, bis UNLOAD angegeben wird.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- RESTORE REWINDONLY ist eine Alternative zu RESTORE LABELONLY FROM TAPE = \<Name> WITH REWIND. Die dynamische Verwaltungssicht [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) stellt eine Liste offener Bandlaufwerke bereit.  
+ RESTORE REWINDONLY ist eine Alternative zu RESTORE LABELONLY FROM TAPE = \<name> WITH REWIND. Die dynamische Verwaltungssicht [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) stellt eine Liste offener Bandlaufwerke bereit.  
   
 ## <a name="security"></a>Sicherheit  
   

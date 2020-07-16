@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 64b5d7f680379265a25bb8aa6566b1905cb7ca4c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cce49d6dcad43375dc1c1e25721116f18be039e9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633060"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897031"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE-Objektberechtigungen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Hebt Berechtigungen für eine Tabelle, Sicht, Tabellenwertfunktion, gespeicherte Prozedur, erweiterte gespeicherte Prozedur, Skalarfunktion, Aggregatfunktion, Dienstwarteschlange oder für ein Synonym auf. 
   
@@ -62,15 +62,15 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  ALL  
  Mit ALL werden nicht alle möglichen Berechtigungen aufgehoben. Das Aufheben von Berechtigungen mit ALL entspricht dem Aufheben aller [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92-Berechtigungen, die für das angegebene Objekt gelten. Die Bedeutung von ALL variiert wie folgt:  
   
- Berechtigungen für Skalarfunktionen: EXECUTE, REFERENCES.  
+ Berechtigungen für Skalarwertfunktion: EXECUTE, REFERENCES.  
   
- Berechtigungen für Tabellenwertfunktionen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ Berechtigungen für Tabellenwertfunktion: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
- Berechtigungen für gespeicherte Prozeduren: EXECUTE.  
+ Berechtigungen für gespeicherte Prozedur: EXECUTE.  
   
- Berechtigungen für Tabellen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ Tabellenberechtigungen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
- Berechtigungen für Sichten: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ Berechtigungen anzeigen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
  PRIVILEGES  
  Dient zur Kompatibilität mit [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92. Ändert das Verhalten von ALL nicht.  
@@ -95,7 +95,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 > [!CAUTION]  
 >  Durch ein kaskadiertes Aufheben einer Berechtigung, die mit WITH GRANT OPTION erteilt wurde, werden sowohl GRANT als auch DENY für diese Berechtigung aufgehoben.  
   
- AS \<database_principal> gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet.  
+ AS \<database_principal> Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, sein Recht zum Aufheben der Berechtigung ableitet.  
   
  *Database_user*  
  Gibt einen Datenbankbenutzer an.  

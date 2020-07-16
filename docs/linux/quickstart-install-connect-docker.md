@@ -13,16 +13,16 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 0cd776b547c60ddbb144415f7185d1c770d9e6df
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: 864abdb32dceaaa18e221295eebebc4f8382d4bb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872798"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901565"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Schnellstart: Ausführen von SQL Server-Containerimages mit Docker
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -133,7 +133,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    | Parameter | BESCHREIBUNG |
    |-----|-----|
    | **-e „ACCEPT_EULA = Y“** |  Legen Sie für die Variable **ACCEPT_EULA** einen beliebigen Wert fest, um Ihre Zustimmung zum [End-User Licensing Agreement (Benutzerlizenzvertrag)](https://go.microsoft.com/fwlink/?LinkId=746388) zu geben. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
-   | **-e „SA_PASSWORD=\<YourStrong@Passw0rd\>“** | Geben Sie ein starkes Kennwort ein, das aus mindestens acht Zeichen besteht und den [Kennwortanforderungen von SQL Server](../relational-databases/security/password-policy.md) entspricht. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
+   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Geben Sie ein starkes Kennwort ein, das aus mindestens acht Zeichen besteht und den [Kennwortanforderungen von SQL Server](../relational-databases/security/password-policy.md) entspricht. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
    | **-p 1433:1433** | Ordnen Sie einen TCP-Port in der Hostumgebung (erster Wert) einem TCP-Port im Container zu (zweiter Wert). In diesem Beispiel lauscht SQL Server an TCP 1433 im Container. Diese Informationen werden für Port 1433 auf dem Host offen gelegt. |
    | **--name sql1** | Geben Sie dem Container selbst einen Namen, anstatt einen willkürlich generierten zu verwenden. Wenn Sie mehrere Container ausführen, können Sie nicht denselben Namen mehrfach verwenden. |
    | **-d** | Hiermit wird der Container im Hintergrund ausgeführt (Daemon) |
@@ -187,23 +187,23 @@ Wenn Sie für `-h` und `--name` denselben Wert festlegen, kann der Zielcontainer
 
 Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anfang dieses Artikels Ihre bevorzugte Shell (bash, PowerShell oder cmd) ausgewählt haben.
 
-1. Übertragen Sie das Linux-Containerimage von SQL Server 2019 mithilfe von Pull aus dem Docker Hub.
+1. Pullen Sie das Linux-Containerimage von SQL Server 2019 aus Microsoft Container Registry.
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -222,7 +222,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+      -d mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -230,7 +230,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+      -d mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -238,7 +238,7 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+      -d mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -253,10 +253,10 @@ Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie am Anf
    | Parameter | BESCHREIBUNG |
    |-----|-----|
    | **-e „ACCEPT_EULA = Y“** |  Legen Sie für die Variable **ACCEPT_EULA** einen beliebigen Wert fest, um Ihre Zustimmung zum [End-User Licensing Agreement (Benutzerlizenzvertrag)](https://go.microsoft.com/fwlink/?LinkId=746388) zu geben. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
-   | **-e „SA_PASSWORD=\<YourStrong@Passw0rd\>“** | Geben Sie ein starkes Kennwort ein, das aus mindestens acht Zeichen besteht und den [Kennwortanforderungen von SQL Server](../relational-databases/security/password-policy.md) entspricht. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
+   | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Geben Sie ein starkes Kennwort ein, das aus mindestens acht Zeichen besteht und den [Kennwortanforderungen von SQL Server](../relational-databases/security/password-policy.md) entspricht. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
    | **-p 1433:1433** | Ordnen Sie einen TCP-Port in der Hostumgebung (erster Wert) einem TCP-Port im Container zu (zweiter Wert). In diesem Beispiel lauscht SQL Server an TCP 1433 im Container. Diese Informationen werden für Port 1433 auf dem Host offen gelegt. |
    | **--name sql1** | Geben Sie dem Container selbst einen Namen, anstatt einen willkürlich generierten zu verwenden. Wenn Sie mehrere Container ausführen, können Sie nicht denselben Namen mehrfach verwenden. |
-   | **mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04** | Das Ubuntu Linux-Containerimage von SQL Server 2019 |
+   | **mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04** | Das Ubuntu Linux-Containerimage von SQL Server 2019 |
 
 3. Verwenden Sie den Befehl `docker ps`, um Ihre Docker-Container anzeigen zu lassen.
 

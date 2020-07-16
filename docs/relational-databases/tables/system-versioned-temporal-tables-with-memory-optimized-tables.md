@@ -11,16 +11,16 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99d4cd492ffd35f36a1f44754128ce54f028aaed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165461"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85984524"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Temporale Tabellen mit Systemversionsverwaltung und speicheroptimierten Tabellen
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Temporale Tabellen mit Systemversionsverwaltung für [speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) bieten eine kostengünstige Lösung für Szenarien, in denen zusätzlich zur Datensammlung mit In-Memory-OLTP-Arbeitsauslastungen [Datenüberwachung und Zeitpunktanalyse](https://msdn.microsoft.com/library/mt631669.aspx) erforderlich sind. Sie bieten hohen Transaktionsdurchsatz, sperrenfreie Parallelität und gleichzeitig die Möglichkeit, große Mengen von Verlaufsdaten zu speichern, die leicht abgefragt werden können.
 

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 89f8616b13f80642a62922d9a1e1023f153b23cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6c5ecf91349a94acb2b18156f28056ce04da3a1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558445"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892334"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Konfigurieren von SLES-Clustern für eine SQL Server-Verfügbarkeitsgruppe
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Diese Anleitung enthält Anweisungen zum Erstellen eines Clusters mit drei Knoten für SQL Server unter SuSE Linux Enterprise Server (SLES) 12 SP2. Zur Gewährleistung von Hochverfügbarkeit benötigt eine Verfügbarkeitsgruppe unter Linux drei Knoten. Weitere Informationen hierzu finden Sie unter [Hochverfügbarkeit und Schutz von Daten für Verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die Clusteringebene basiert auf der SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability), die auf [Pacemaker](https://clusterlabs.org/) aufbaut. 
 
@@ -28,6 +28,7 @@ Weitere Informationen zu Clusterkonfiguration, Ressourcen-Agent-Optionen, Verwal
 >[!NOTE]
 >An diesem Punkt ist die Integration von SQL Server in Pacemaker unter Linux nicht so stark gekoppelt wie in WSFC unter Windows. SQL Server-Dienst unter Linux ist nicht clusterfähig. Pacemaker steuert die gesamte Orchestrierung der Clusterressourcen, darunter auch die Verfügbarkeitsgruppenressource. Unter Linux sollten Sie sich nicht auf dynamische Verwaltungssichten (Dynamic Management Views, DMVs) von Always On-Verfügbarkeitsgruppen verlassen, die Clusterinformationen wie sys.dm_hadr_cluster bereitstellen. Ferner gilt der virtuelle Netzwerkname für WSFC. Dazu gibt es in Pacemaker keine Entsprechung. Sie können weiterhin einen Listener erstellen, um ihn nach einem Failover für eine transparente erneute Verbindung zu verwenden. Sie müssen jedoch den Listenernamen im DNS-Server manuell mit der IP-Adresse registrieren, die zum Erstellen der virtuellen IP-Ressource verwendet wurde. (Eine Erläuterung hierzu finden Sie in den folgenden Abschnitten.)
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 ## <a name="roadmap"></a>Roadmap
 
@@ -313,8 +314,8 @@ Die Kollokationseinschränkung weist eine implizite Sortierungseinschränkung au
 1. Der Benutzer gibt an den Verfügbarkeitsgruppenmaster eine Ressourcenmigration von „node1“ zu „node2“ aus.
 2. Die virtuelle IP-Ressource wird auf Knoten 1 angehalten.
 3. Die virtuelle IP-Ressource wird auf Knoten 2 gestartet. Zu diesem Zeitpunkt verweist die IP-Adresse vorübergehend auf Knoten 2, während Knoten 2 noch ein sekundäres Replikat vor dem Failover darstellt. 
-4. Der Verfügbarkeitsgruppen-Master auf Knoten 1 wird zum Slave herabgestuft.
-5. Der Verfügbarkeitsgruppen-Slave auf Knoten 2 wird zum Master heraufgestuft. 
+4. Der Verfügbarkeitsgruppen-Master auf Knoten 1 wird herabgestuft.
+5. Die Verfügbarkeitsgruppe auf Knoten 2 wird zum Master heraufgestuft. 
 
 Fügen Sie eine Sortierungseinschränkung hinzu, um zu vermeiden, dass die IP-Adresse vorübergehend auf den Knoten mit dem sekundären Replikat vor dem Failover verweist. Führen Sie den folgenden Befehl auf einem Knoten aus, um eine Sortierungseinschränkung hinzuzufügen: 
 

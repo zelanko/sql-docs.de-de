@@ -1,5 +1,6 @@
 ---
 title: Wiederherstellen eines Datenbank-Hauptschlüssels | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie in SQL Server mithilfe von SQL Server Management Studio mit Transact-SQL den Datenbank-Hauptschlüssel wiederherstellen.
 ms.custom: ''
 ms.date: 01/02/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: cf48b449fc10f0f6837c86768878a77f0727594f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9860b952751937b18ca5e95e92ac959bb86abd23
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957365"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892244"
 ---
 # <a name="restore-a-database-master-key"></a>Wiederherstellen eines Datenbank-Hauptschlüssels
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie der Datenbank-Hauptschlüssel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]wiederhergestellt wird.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  

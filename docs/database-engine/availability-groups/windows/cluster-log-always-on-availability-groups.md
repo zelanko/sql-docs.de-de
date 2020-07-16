@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e13715681f5b86647662a37b982878b3ad77468
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 4b0cd86318c4ff884ba31fed56e31202c70990ff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925283"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896120"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Erstellen und Analysieren der Protokolldatei „CLUSTER.LOG“ für eine Always On-Verfügbarkeitsgruppe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Als Failoverclusterressource stehen externe Interaktionen zwischen SQL Server, dem WSFC-Cluster (Windows Server-Failovercluster) und der SQL Server-Ressourcen-DLL (hadrres.dll) zur Verfügung, die innerhalb von SQL Server nicht überwacht werden können. Das WSFC-Protokoll, CLUSTER.LOG, kann Probleme im WSFC-Cluster oder in der SQL Server-Ressourcen-DLL diagnostizieren. 
   
 ## <a name="generate-cluster-log"></a>Generieren einer Clusterprotokolldatei  
@@ -59,9 +59,9 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 |Bezeichner|`Source`|Beispiel aus CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
-|Nachrichten mit dem Präfix `[RES]` und `[hadrag]`|hadrres.dll (Always On-Ressourcen-DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Offline request.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server Availability Group \<ag>: `[hadrag]` Lease Thread terminated<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Free SQL statement<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server Availability Group \<ag>: `[hadrag]` Disconnect from SQL Server|  
+|Nachrichten mit dem Präfix `[RES]` und `[hadrag]`|hadrres.dll (Always On-Ressourcen-DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Offline request. (00002cc4.00001264::2011/08/05-13:47:42.543 INFO [RES] SQL Server-Verfügbarkeitsgruppe \<ag>ag>:`[hadrag]` Offlineanforderung.)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] SQL Server Availability Group \<ag>: `[hadrag]` Lease Thread terminated (00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] SQL Server-Verfügbarkeitsgruppe \<ag>ag>:`[hadrag]` Leasethread beendet)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Free SQL statement (00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] SQL Server-Verfügbarkeitsgruppe \<ag>ag>: `[hadrag]`Freie SQL-Anweisung)<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] SQL Server Availability Group \<ag>: `[hadrag]` Disconnect from SQL Server (00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] SQL Server-Verfügbarkeitsgruppe \<ag>ag>: `[hadrag]` Verbindung mit SQL Server trennen)|  
 |Nachrichten mit dem Präfix `[RHS]`|RHS.EXE (Ressourcenhosting-Subsystem, Hostprozess von „hadrres.dll“)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] Resource ag has come offline. RHS is about to report resource status to RCM.|  
-|Nachrichten mit dem Präfix `[RCM]`|Ressourcensteuerungsmonitor (Clusterdienst)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: Bringing group 'ag' offline first...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
+|Nachrichten mit dem Präfix `[RCM]`|Ressourcensteuerungsmonitor (Clusterdienst)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO [RCM] rcm::RcmGroup::Move: Bringing group 'ag' offline first... (000011d0.00000f80::2011/08/05-13:47:42.480 INFO [RCM] rcm::RcmGroup::Move: Zuerst wird die Gruppe 'ag' offline geschaltet.<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO  [RCM] TransitionToState(ag) Online-->OfflineCallIssued.|  
 |RcmApi/ClusAPI|Ein API-Aufruf, der hauptsächlich bedeutet, dass SQL Server die Aktion anfordert|000011d0.00000f80::2011/08/05-13:47:42.465 INFO  [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  
   
 ## <a name="debug-always-on-resource-dll-in-isolation"></a>Debuggen einer isolierten Always On-Ressourcen-DLL  
@@ -69,7 +69,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  Um eine Verfügbarkeitsgruppe von den anderen Clusterressourcen-DLLs wie anderen Verfügbarkeitsgruppen zu isolieren, gehen Sie wie folgt vor, um „hadrres.dll“ in einem separaten „rhs.exe“-Prozess auszuführen:  
   
-1.  Öffnen Sie den **Registrierungs-Editor**, und navigieren Sie zum folgenden Schlüssel: HKEY_LOCAL_MACHINE\Cluster\Resources. Dieser Schlüssel enthält die Schlüssel für alle Ressourcen, jeweils mit einer anderen GUID.  
+1.  Öffnen Sie den **Registrierungs-Editor**, und navigieren Sie zum folgenden Registrierungsschlüssel: HKEY_LOCAL_MACHINE\Cluster\Resources. Dieser Schlüssel enthält die Schlüssel für alle Ressourcen, jeweils mit einer anderen GUID.  
   
 2.  Suchen Sie den Ressourcenschlüssel mit einem **Name**-Wert, der dem Namen Ihrer Verfügbarkeitsgruppe entspricht.  
   
