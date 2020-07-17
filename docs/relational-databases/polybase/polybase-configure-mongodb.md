@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5d74fd03a75b9b583eb92d34c45e7e0004ff9912
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215871"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85741765"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in MongoDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Artikel wird erläutert, wie Sie PolyBase in einer SQL Server-Instanz verwenden, um externe Daten in MongoDB abzufragen.
 
@@ -75,20 +75,19 @@ In diesem Abschnitt werden die folgenden Transact-SQL-Befehle verwendet:
 >Sobald Sie eine externe Datenquelle erstellt haben, können Sie über den Befehl [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) eine abfragbare Tabelle für diese Quelle erstellen. 
 
 ## <a name="flattening"></a>Vereinfachen
- Die Vereinfachung (Flattening) ist für geschachtelte und wiederholte Daten aus MongoDB-Dokumentsammlungen aktiviert. Der Benutzer muss `create an external table` aktivieren und ein relationales Schema über MongoDB-Dokumentsammlungen explizit angeben, die möglicherweise geschachtelte und/oder wiederholte Daten besitzen. In zukünftigen Meilensteinen wird die automatische Schemaerkennung über MongoDB-Dokumentsammlungen aktiviert.
-Geschachtelte/wiederholte JSON-Datentypen werden wie folgt vereinfacht
+Die Vereinfachung (Flattening) ist für geschachtelte und wiederholte Daten aus MongoDB-Dokumentsammlungen aktiviert. Der Benutzer muss `create an external table` aktivieren und ein relationales Schema über MongoDB-Dokumentsammlungen explizit angeben, die möglicherweise geschachtelte und/oder wiederholte Daten besitzen. Geschachtelte/wiederholte JSON-Datentypen werden wie folgt vereinfacht
 
 * Objekt: unsortierte Schlüssel-/Wertsammlung, die in geschweiften Klammern eingeschlossen wird (geschachtelt)
 
-   - Wir erstellen eine Tabellenspalte für jeden Objektschlüssel
+   - SQL Server erstellt eine Tabellenspalte für jeden Objektschlüssel.
 
      * Spaltenname: objectname_keyname
 
 * Array: durch Kommas getrennte geordnete Werte, die in eckigen Klammern eingeschlossen sind (wiederholt)
 
-   - Für jedes Arrayelement wird eine neue Tabellenzeile hinzugefügt.
+   - SQL Server fügt eine neue Tabellenzeile für jedes Arrayelement hinzu.
 
-   - Es wird pro Array eine Spalte erstellt, um den Arrayelementindex zu speichern.
+   - SQL Server erstellt eine Spalte pro Array, um den Arrayelementindex zu speichern.
 
      * Spaltenname: arrayname_index
 
@@ -100,7 +99,7 @@ Es können mehrere potenzielle Probleme mit diesem Verfahren auftreten. Zwei dav
 
 * Das Vorhandensein mehrerer wiederholter Felder kann zu einer Explosion der Anzahl erzeugter Zeilen führen.
 
-Als Beispiel werten wir das die MongoDB-Beispieldatensammlung „Restaurant“ aus, die im nicht-relationalen JSON-Format gespeichert ist. Jedes Restaurant verfügt über geschachtelte Adressfelder sowie ein Array von Schulnoten, die an verschiedenen Tagen vergeben wurden. In der Abbildung unten wird ein typisches Restaurant mit geschachtelter Adresse und geschachtelten-wiederholten Schulnoten dargestellt.
+Beispielsweise wertet SQL Server die Auflistung der im nicht relationalen JSON-Format gespeicherten Restaurants für das MongoDB-Beispieldataset aus. Jedes Restaurant verfügt über geschachtelte Adressfelder sowie ein Array von Schulnoten, die an verschiedenen Tagen vergeben wurden. In der Abbildung unten wird ein typisches Restaurant mit geschachtelter Adresse und geschachtelten-wiederholten Schulnoten dargestellt.
 
 ![MongoDB-Vereinfachung](../../relational-databases/polybase/media/mongo-flattening.png "MongoDB-Vereinfachung für Restaurant")
 

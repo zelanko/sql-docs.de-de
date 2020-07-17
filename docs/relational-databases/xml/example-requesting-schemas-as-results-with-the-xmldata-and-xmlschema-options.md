@@ -1,5 +1,6 @@
 ---
 title: Anfordern von Schemas als Ergebnisse mithilfe von XMLDATA und XMLSCHEMA | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie die Optionen XMLDATA und XMLSCHEMA im RAW-Modus mit der FOR XML-Klausel verwenden, um ein XML-DATA-Schema oder ein XSD-Schema im Abfrageergebnis anzufordern.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ed72f442fa85a505ace0a1826028ee43f1ea6e97
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e7dfada43a7f899339f9f6ab59ef94dda9853c36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664514"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632931"
 ---
 # <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>Anfordern von Schemas als Ergebnisse mithilfe von XMLDATA und XMLSCHEMA
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Die folgende Abfrage gibt das XML-Datenschema zurück, das die Dokumentstruktur beschreibt.  
   
 ## <a name="example"></a>Beispiel  
@@ -53,7 +54,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Das <`Schema`> ist als Namespace deklariert. Damit Namespacekonflikte vermieden werden, wenn mehrere XML-Datenschemas in verschiedenen FOR XML-Abfragen angefordert werden, wird der Namespacebezeichner – in diesem Beispiel `Schema1` – bei jeder Abfrageausführung geändert. Der Namespacebezeichner setzt sich aus **Schema** _**n**_ zusammen, wobei _**n**_ eine ganze Zahl ist.  
+>  Das <`Schema`> ist als Namespace deklariert. Damit Namespacekonflikte vermieden werden, wenn mehrere XML-Datenschemas in verschiedenen FOR XML-Abfragen angefordert werden, wird der Namespacebezeichner – in diesem Beispiel `Schema1` – bei jeder Abfrageausführung geändert. Der Namespacebezeichner setzt sich aus **Schema**_**n**_ zusammen, wobei _**n**_ eine ganze Zahl ist.  
   
  Durch Angeben der Option `XMLSCHEMA` können Sie das XSD-Schema für das Ergebnis anfordern.  
   

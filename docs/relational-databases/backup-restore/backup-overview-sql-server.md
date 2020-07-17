@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6cae13ac9137a7c7f47e9574367115d6133338be
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: d13429793a2dcab0247042fcac49ee03174527ac
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220493"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834801"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Dieses Thema bietet eine Einführung in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungskomponente. Die Sicherung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank ist wichtig für den Schutz Ihrer Daten. In dieser Diskussion werden Sicherungstypen und Sicherungseinschränkungen behandelt. Darüber hinaus bietet das Thema eine Einführung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungsmedien und -Sicherungsgeräte.  
   
   
@@ -101,7 +101,7 @@ ms.locfileid: "82220493"
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] können Sicherungen komprimiert werden, und ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ist die Wiederherstellung komprimierter Sicherungen möglich. Weitere Informationen finden Sie unter [Sicherungskomprimierung &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
 ##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  Einschränkungen für Sicherungsvorgänge 
- Eine Sicherung kann erfolgen, während die Datenbank online ist und verwendet wird. Es gelten dabei jedoch folgende Einschränkungen.  
+ Eine Sicherung kann erfolgen, während die Datenbank online ist und verwendet wird. Dabei gelten jedoch folgende Einschränkungen:  
   
 ### <a name="cannot-back-up-offline-data"></a>Offline-Daten können nicht gesichert werden  
  Wenn im Rahmen eines Sicherungsvorgangs implizit oder explizit auf Offlinedaten verwiesen wird, tritt bei diesem Vorgang ein Fehler auf. Einige typische Fälle:  
@@ -155,7 +155,7 @@ ms.locfileid: "82220493"
  **So erstellen Sie eine Sicherung**  
   
 > [!NOTE]  
->  Verwenden Sie für Teilsicherungen oder Kopiesicherungen die [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) -Anweisung mit der Option PARTIAL bzw. COPY_ONLY.  
+>  Für Teilsicherungen oder Kopiesicherungen müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung [BACKUP](../../t-sql/statements/backup-transact-sql.md) mit der Option PARTIAL bzw. COPY_ONLY verwenden.  
   
 -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   

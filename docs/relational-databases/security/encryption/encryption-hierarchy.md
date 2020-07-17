@@ -1,5 +1,6 @@
 ---
 title: Verschlüsselungshierarchie | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die hierarchische Verschlüsselung und die Schlüsselverwaltungsinfrastruktur in SQL Server. Speichern Sie die Schlüssel in einem erweiterbaren Schlüsselverwaltungsmodul.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 672631b7ef5e6453e49b269d035586949f03ece6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 805a468d462a28c3e43bddc32cfd2673546a26e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764995"
 ---
 # <a name="encryption-hierarchy"></a>Verschlüsselungshierarchie
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Daten anhand einer hierarchischen Verschlüsselungs- und Schlüsselverwaltungsinfrastruktur verschlüsselt. Jede Ebene verschlüsselt die Ebene darunter, indem eine Kombination aus Zertifikaten, asymmetrischen und symmetrischen Schlüsseln verwendet wird. Asymmetrische Schlüssel und symmetrische Schlüssel können außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einem EKM-Modul (erweiterbare Schlüsselverwaltung) gespeichert werden.  
   
  In der folgenden Abbildung wird dargestellt, wie jede Ebene der Verschlüsselungshierarchie die Ebene darunter verschlüsselt und die häufigsten Verschlüsselungskonfigurationen anzeigt. Der Zugriff auf den Anfang der Hierarchie wird normalerweise durch ein Kennwort geschützt.  

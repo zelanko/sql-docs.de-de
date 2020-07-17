@@ -1,25 +1,24 @@
 ---
 title: Hinzufügen zusätzlicher Funktionen durch Erweiterbarkeit
-titleSuffix: Azure Data Studio
 description: Erfahren Sie mehr über das Erweiterbarkeitsmodell und die wichtigsten Erweiterbarkeitsbereiche zum Erweitern der Funktionalität von Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8ca24836766307584c43e1636bb33f5bd198f585
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774648"
 ---
-# <a name="getting-started-with-name-sos-extensibility"></a>Erste Schritte mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]-Erweiterbarkeit
+# <a name="azure-data-studio-extensibility"></a>Erweiterbarkeit für Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] verfügt über mehrere Erweiterbarkeitsmechanismen, um die Benutzeroberfläche anzupassen und diese Anpassungen der gesamten Benutzercommunity zur Verfügung zu stellen. Die Kern der [!INCLUDE[name-sos](../includes/name-sos.md)]-Plattform basiert auf Visual Studio Code, sodass die meisten Erweiterbarkeits-APIs von Visual Studio Code verfügbar sind. Außerdem haben wir zusätzliche Erweiterbarkeitspunkte für Aktivitäten bereitgestellt, die für die Datenverwaltung spezifisch sind.
+Azure Data Studio verfügt über mehrere Erweiterbarkeitsmechanismen, um die Benutzeroberfläche anzupassen und diese Anpassungen der gesamten Benutzercommunity zur Verfügung zu stellen. Die Kern der Azure Data Studio-Plattform basiert auf Visual Studio Code, sodass die meisten Erweiterbarkeits-APIs von Visual Studio Code verfügbar sind. Außerdem haben wir zusätzliche Erweiterbarkeitspunkte für Aktivitäten bereitgestellt, die für die Datenverwaltung spezifisch sind.
 
 Zu den wichtigsten Erweiterbarkeitspunkten gehören:
 
@@ -32,7 +31,7 @@ Zu den wichtigsten Erweiterbarkeitspunkten gehören:
 
 ## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code-Erweiterbarkeits-APIs
 
-Da die Kernplattform von [!INCLUDE[name-sos](../includes/name-sos.md)] auf Visual Studio Code basiert, finden Sie ausführliche Informationen zu den Erweiterbarkeits-APIs von Visual Studio Code in der Dokumentation zu [Erweiterungserstellung](https://code.visualstudio.com/docs/extensions/overview) und [Erweiterungs-APIs](https://code.visualstudio.com/docs/extensionAPI/overview) auf der Visual Studio Code-Website.
+Da die Kernplattform von Azure Data Studio auf Visual Studio Code basiert, finden Sie ausführliche Informationen zu den Erweiterbarkeits-APIs von Visual Studio Code in der Dokumentation zu [Erweiterungserstellung](https://code.visualstudio.com/docs/extensions/overview) und [Erweiterungs-APIs](https://code.visualstudio.com/docs/extensionAPI/overview) auf der Visual Studio Code-Website.
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>Verwalten von Beiträgen zum Dashboard-Registerkartenbereich
 

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f468697c165eefca98e5d5d7492b9a3d5eab25e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558325"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897273"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Konfigurieren einer Failoverclusterinstanz: SQL Server für Linux (RHEL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Eine SQL Server-Failoverclusterinstanz mit zwei Knoten auf einem freigegebenen Datenträger bietet Redundanz für Hochverfügbarkeit auf Serverebene. In diesem Tutorial lernen Sie, wie Sie eine Failoverclusterinstanz von SQL Server für Linux mit zwei Knoten erstellen. Sie führen dabei die folgenden Schritte durch:
 
@@ -184,7 +184,7 @@ In diesem Beispiel wird eine FCI in der Gruppe NewLinFCIGrp erstellt. Der Name d
 
     \<LogicalVolumeName> ist der Name des erstellten logischen Volumes.  
 
-    \<FolderToMountiSCSIDIsk> ist der Ordner für die Bereitstellung des Datenträgers (bei Systemdatenbanken und dem Standardspeicherort wäre das „/var/opt/mssql/data“).
+    \<FolderToMountiSCSIDIsk> ist der Ordner für die Einbindung des Datenträgers (bei Systemdatenbanken und dem Standardspeicherort wäre das „/var/opt/mssql/data“).
 
     \<FileSystemType> wäre EXT4 oder XFS, je nachdem, wie formatiert wurde und was die Verteilung unterstützt. 
 
@@ -221,9 +221,9 @@ In diesem Beispiel wird eine FCI in der Gruppe NewLinFCIGrp erstellt. Der Name d
 
     \<FolderName> ist der Name des Ordners, der im letzten Schritt erstellt wurde.
     
-    \<UserName> ist der Name des Benutzers, der auf die Freigabe zugreift.
+    \<UserName> ist der Name des Benutzers, der auf die Freigabe zugreifen soll.
 
-    \<Password> ist das Kennwort des Benutzers.
+    \<Password> ist das Kennwort für den Benutzer.
 
     \<ADDomain> ist die AD DS-Domäne (falls zutreffend, wenn eine Windows Server-basierte SMB-Freigabe verwendet wird).
 

@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren der Spaltenverschlüsselung mit dem Always Encrypted-Assistenten | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie die Always Encrypted-Konfiguration für Datenbankspalten festlegen, indem Sie den Always Encrypted-Assistent in SQL Server verwenden.
 ms.custom: ''
 ms.date: 10/30/2019
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f592004e96a9b469a56bc9ff85b8f4080af38406
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627445"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Konfigurieren der Spaltenverschlüsselung mit dem Always Encrypted-Assistenten
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 Der Always Encrypted-Assistent ist ein leistungsstarkes Tool, mit dem Sie die gewünschte [Always Encrypted](always-encrypted-database-engine.md)-Konfiguration für ausgewählte Datenbankspalten festlegen können. Der Assistent kann Spalten je nach aktueller Konfiguration und gewünschter Zielkonfiguration verschlüsseln, entschlüsseln (die Verschlüsselung entfernen) oder erneut verschlüsseln (z. B. mithilfe eines neuen Spaltenverschlüsselungsschlüssels oder eines anderen Verschlüsselungstyps als dem aktuellen, der für die Spalte konfiguriert ist). Während einer einzigen Ausführung des Assistenten können mehrere Spalten konfiguriert werden.
 

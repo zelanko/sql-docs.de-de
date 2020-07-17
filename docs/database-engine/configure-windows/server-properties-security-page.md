@@ -1,5 +1,6 @@
 ---
 title: Servereigenschaften (Seite „Sicherheit“) | Microsoft-Dokumentation
+description: Hier lernen Sie die Serversicherheitseinstellungen in SQL Server kennen. Sie erhalten Informationen über Optionen, die die Serverauthentifizierung, Proxykonten und andere Features steuern.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.security.f1
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 11a8e63d75f4194727344009dfac6f2fed77edaa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e864eced90a190dc7e7c0f204691ed02b9a2cff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723998"
 ---
 # <a name="server-properties---security-page"></a>Servereigenschaften (Seite „Sicherheit“)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Auf dieser Seite können Sie die Optionen für die Serversicherheit anzeigen oder bearbeiten.  
   
 ## <a name="server-authentication"></a>Serverauthentifizierung  

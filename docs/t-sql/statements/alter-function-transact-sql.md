@@ -20,12 +20,12 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62b4b1a9d98e289590b35e463add7125f6421cc5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b9afe006b96d7b447b508d59a55163f8838caa1e
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628392"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85195817"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -274,10 +274,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- _\<_Definition\_des\_Tabellentyps_\>_ **(** { \<Spaltendefinition\> \<Spaltenconstraint\> | \<Definition\_berechnete\_Spalte\> } [ \<Tabellenconstraint\> ] [ **,** ...*n* ] **)**  
+ _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  Definiert den Tabellendatentyp für eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion. Die Tabellendeklaration schließt Spaltendefinitionen und Spalten- oder Tabelleneinschränkungen ein.  
   
-\< Definition_des_CLR-Tabellentyps \> **(** { *Spaltenname**Datentyp* } [ **,** ...*n* ] **)** **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([in einigen Regionen als Vorschau verfügbar](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([in einigen Regionen als Vorschau verfügbar](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Definiert die Tabellendatentypen für eine CLR-Funktion. Die Tabellendeklaration schließt nur Spaltennamen und Datentypen ein.  
   
@@ -295,7 +295,7 @@ RETURNS return_data_type
  SCHEMABINDING  
  Das Argument SCHEMABINDING ist für nativ kompilierte, benutzerdefinierte Skalarfunktionen erforderlich.  
   
- **\<function_option>::= and \<clr_function_option>::=**  
+ **\<function_option>::= und \<clr_function_option>::=**  
   
  Gibt an, dass die Funktion mindestens über eine der folgenden Optionen verfügen wird.  
   
@@ -305,7 +305,7 @@ RETURNS return_data_type
  Gibt an, dass die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Katalogsichtspalten, die den Text der ALTER FUNCTION-Anweisung enthalten, verschlüsselt. Mit ENCRYPTION verhindern Sie, dass die Funktion als Teil der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikation veröffentlicht wird. ENCRYPTION kann nicht für CLR-Funktionen angegeben werden.  
   
  SCHEMABINDING  
- Gibt an, dass die Funktion an die Datenbankobjekte gebunden ist, auf die sie verweist. Dadurch wird verhindert, dass die Funktion geändert wird, wenn andere schemagebundene Objekte auf sie verweisen.  
+ Gibt an, dass die Funktion an die Datenbankobjekte gebunden ist, auf die sie verweist. Wenn SCHEMABINDING angegeben ist, können an Basisobjekten keine Änderungen vorgenommen werden, die die Funktionsdefinition betreffen können. Zunächst muss die Funktionsdefinition selbst geändert oder gelöscht werden, um Abhängigkeiten in dem zu ändernden Objekt zu entfernen.  
   
  Die Bindung der Funktion an die Objekte, auf die sie verweist, wird nur bei einer der folgenden Aktionen entfernt:  
   
@@ -364,7 +364,7 @@ Eine Liste der Bedingungen, die erfüllt sein müssen, damit eine Funktion an ei
  *increment*  
  Der ganzzahlige Wert, der dem *seed*-Wert für nachfolgende Zeilen in der Tabelle hinzugefügt werden soll.  
   
-**\< column_constraint >::= and \< table_constraint>::=**
+**\< column_constraint >::= und \< table_constraint>::=**
   
  Definiert die Einschränkung für eine bestimmte Spalte oder Tabelle. Für CLR-Funktionen ist der einzige zulässige Einschränkungstyp NULL. Benannte Einschränkungen sind nicht zulässig.  
   

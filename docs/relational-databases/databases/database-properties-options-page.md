@@ -1,5 +1,6 @@
 ---
 title: Datenbankeigenschaften (Seite Optionen) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie die Registerkarte „Optionen“ im Dialogfeld „Datenbankeigenschaften“ verwenden, um die Sortierung, das Wiederherstellungsmodell und andere Einstellungen einer Datenbank anzuzeigen oder zu ändern.
 ms.custom: ''
 ms.date: 08/28/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 98fcdb49facbc1bae6e7a0b76388c385a0fc05e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630949"
 ---
 # <a name="database-properties-options-page"></a>Datenbankeigenschaften (Seite Optionen)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Mithilfe dieser Seite können Sie Optionen für die ausgewählte Datenbank anzeigen und ändern. Weitere Informationen zu den auf dieser Seite verfügbaren Optionen finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) und [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
@@ -29,7 +30,7 @@ ms.locfileid: "79286744"
  Geben Sie die Sortierung der Datenbank durch eine Auswahl aus der Liste an. Weitere Informationen finden Sie unter [Festlegen oder Ändern der Datenbanksortierung](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Wiederherstellungsmodell**  
- Geben Sie eines der folgenden Modelle für die Wiederherstellung der Datenbank an: **Vollständig**, **Massenprotokolliert**oder **Einfach**. Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Geben Sie eines der folgenden Modelle für die Wiederherstellung der Datenbank an: **Full** (Vollständig), **Bulk-Logged** (Massenprotokolliert) oder **Simple** (Einfach). Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Kompatibilitätsgrad**  
  Geben Sie die letzte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die von der Datenbank unterstützt wird. Mögliche Werte finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Wenn eine SQL Server-Datenbank aktualisiert wird, wird der Kompatibilitätsgrad für diese Datenbank nach Möglichkeit beibehalten oder wird auf den mindestens erforderlichen Grad geändert, der von der neuen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt wird. 
@@ -121,17 +122,17 @@ Wenn Sie eine Verbindung mit Azure SQL-Datenbank hergestellt haben, finden Sie i
  Aktiviert oder deaktiviert die Parameterermittlung auf sekundären Objekten (sofern vorhanden). Dies entspricht dem [Ablaufverfolgungsflag 4136](https://support.microsoft.com/kb/980653).  
   
  **Fehlerbehebungen durch Abfrageoptimierer**  
- Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung auf dem primären Objekt unabhängig vom Kompatibilitätsgrad der Datenbank. Dies entspricht dem [Ablaufverfolgungsflag 4199](https://support.microsoft.com/kb/974006).  
+ Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung auf dem primären Objekt unabhängig vom Kompatibilitätsgrad der Datenbank. Dies entspricht dem [Ablaufverfolgungsflag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Weitere Informationen finden Sie unter [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes).  
   
  **Fehlerbehebungen durch Abfrageoptimierer für sekundäre Objekte**  
- Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung auf den sekundären Objekten (sofern vorhanden) unabhängig vom Kompatibilitätsgrad der Datenbank. Dies entspricht dem [Ablaufverfolgungsflag 4199](https://support.microsoft.com/kb/974006).  
+ Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung auf den sekundären Objekten (sofern vorhanden) unabhängig vom Kompatibilitätsgrad der Datenbank. Dies entspricht dem [Ablaufverfolgungsflag 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Weitere Informationen finden Sie unter [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes).  
   
 ## <a name="filestream"></a>FILESTREAM  
  **FILESTREAM-Verzeichnisname**  
  Geben Sie den Verzeichnisnamen für die FILESTREAM-Daten an, die der ausgewählten Datenbank zugeordnet sind.  
   
  **Nicht transaktionsgebundener FILESTREAM-Zugriff**  
- Geben Sie eine der folgenden Optionen für nicht transaktionalen Zugriff über das Dateisystem auf FILESTREAM-Daten an, die in FileTables gespeichert sind: **OFF**, **READ_ONLY**oder **FULL**. Wenn FILESTREAM nicht auf dem Server aktiviert ist, wird dieser Wert auf OFF festgelegt und deaktiviert. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Geben Sie eine der folgenden Optionen für nicht transaktionalen Zugriff über das Dateisystem auf FILESTREAM-Daten an, die in Dateitabellen gespeichert sind: **OFF**, **READ_ONLY** oder **FULL**. Wenn FILESTREAM nicht auf dem Server aktiviert ist, wird dieser Wert auf OFF festgelegt und deaktiviert. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Sonstiges  
 **Zulassen der Momentaufnahmeisolation**  

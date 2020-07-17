@@ -1,5 +1,6 @@
 ---
 title: Zugreifen auf FileTables mit Datei-E/A-APIs | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie die APIs für E/A-Vorgänge der Datei mit Dateitabellen verwenden und welche Dateisystemvorgänge mit Dateitabellen kompatibel sind.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d73f6f8e993784def2dd9325933778e2048d5eae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744695"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Zugreifen auf FileTables mit Datei-E/A-APIs
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Beschreibt, wie Dateisystem-E/A in einer FileTable funktioniert.  
   
 ##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> Erste Schritte mit Datei-E/A-APIs mit FileTables  
@@ -123,7 +124,7 @@ ms.locfileid: "72908776"
 |**Bytebereichssperren**|Ja|Anforderungen zur Bytebereichssperre werden an das NTFS-Dateisystem übergeben.|  
 |**Im Speicher abgebildete Dateien**|Nein||  
 |**Abbrechen von E/A**|Ja||  
-|**Sicherheit**|Nein|Sicherheit auf Windows-Freigabeebene und Sicherheit auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen-/Spaltenebene wird erzwungen.|  
+|**Security**|Nein|Sicherheit auf Windows-Freigabeebene und Sicherheit auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen-/Spaltenebene wird erzwungen.|  
 |**USN-Journal**|Nein|Metadatenänderungen an Dateien und Verzeichnissen in einer FileTable sind DML-Vorgänge in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank. Daher werden sie in der entsprechenden Datenbankprotokolldatei protokolliert. Sie werden jedoch (abgesehen von Änderungen an der Größe) nicht im NTFS-USN-Journal protokolliert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Änderungsnachverfolgung kann verwendet werden, um ähnliche Informationen zu erfassen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

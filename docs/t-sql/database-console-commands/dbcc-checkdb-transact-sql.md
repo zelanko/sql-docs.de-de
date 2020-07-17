@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 743c3c6d24be39ae9c2b56da26017bd4b15852a6
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4003b08205f1c7db98d2656e17fe653a3616638d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748957"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Überprüft die logische und physische Integrität aller Objekte in der angegebenen Datenbank durch Ausführen der folgenden Vorgänge:    
     
@@ -221,7 +221,13 @@ Nach der Fertigstellung des Befehls DBCC CHECKDB wird eine Meldung in das [!INCL
 |3|Dies weist auf eine Beschädigung der Metadaten hin, die zur Beendigung des DBCC-Befehls geführt hat.|    
 |4|Eine Assertations- oder Zugriffsverletzung wurde entdeckt.|    
 |5|Ein unbekannter Fehler ist aufgetreten, der den DBCC-Befehl beendet hat.|    
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zeichnet das Datum und die Uhrzeit der Ausführung einer Konsistenzprüfung für eine fehlerfreie Datenbank (oder eine „saubere“ Konsistenzprüfung) auf. Dies wird als `last known clean check` bezeichnet. Wenn eine Datenbank erstmalig gestartet wird, wird dieses Datum im folgenden Format in das Ereignisprotokoll (EventID-17573) und in ERRORLOG geschrieben: 
+>
+>`CHECKDB for database '<database>' finished without errors on 2019-05-05 18:08:22.803 (local time). This is an informational message only; no user action is required.`
     
+
 ## <a name="error-reporting"></a>Fehlerberichterstellung    
 Eine Dumpdatei (`SQLDUMP*nnnn*.txt`) wird jedes Mal im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokollverzeichnis erstellt, wenn DBCC CHECKDB einen Fehler durch eine Beschädigung erkennt. Falls die Features zur Datensammlung zur *Verwendung von Features* und zur *Fehlerberichterstellung* für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aktiviert sind, wird die Datei automatisch an [!INCLUDE[msCoName](../../includes/msconame-md.md)] weitergeleitet. Die gesammelten Daten werden zur Verbesserung der Funktionalität von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet.
 Die Sicherungsdatei enthält die Ergebnisse des DBCC CHECKDB-Befehls sowie eine zusätzliche Diagnoseausgabe. Der Zugriff ist auf das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto und Mitglieder der Systemadministratorrolle beschränkt. Die Systemadministratorrolle enthält standardmäßig alle Mitglieder der Windows-Gruppe `BUILTIN\Administrators` und der lokalen Administratorgruppe. Ein Fehler bei der Datensammlung verursacht keinen Fehler des DBCC-Befehls.

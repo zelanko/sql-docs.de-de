@@ -1,5 +1,6 @@
 ---
 title: Nativ kompilierte gespeicherte Prozeduren und SET-Optionen
+description: Die SET-Optionen einer Sitzung wirken sich nicht auf die Ausführung einer gespeicherten Prozedur aus, es sei den, bestimmte SET-Optionen sorgen dafür, dass gespeicherte Prozeduren nicht ausgeführt werden.
 ms.custom: seo-dt-2019
 ms.date: 10/26/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f626c997ac0615eefa7caede0f379c22fed25ab6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e92014f68ad400183bf2e0332a9ea7d2f1a7b2d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722430"
 ---
 # <a name="natively-compiled-stored-procedures-and-execution-set-options"></a>Systemintern kompilierte gespeicherte Prozeduren und deren Ausführung mit SET-Optionen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Sitzungsoptionen sind in ATOMIC-Blöcken fixiert, wie in [Atomic Blocks (ATOMIC-Blöcken)](atomic-blocks-in-native-procedures.md) beschrieben. Die Ausführung einer gespeicherten Prozedur wird durch die SET-Optionen einer Sitzung nicht beeinflusst, da ATOMIC-Blöcke benötigt werden. Bestimmte SET-Optionen, wie SET NOEXEC und SET SHOWPLAN_XML, bewirken jedoch, dass gespeicherte Prozeduren (einschließlich systemintern kompilierter gespeicherter Prozeduren) nicht ausgeführt werden.   
   

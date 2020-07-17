@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e5937edb162883ac0dfde2d6c444b86092e0a4a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 25574476947c3232c8491923d1e5c69b87c43960
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633422"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902252"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -83,13 +83,15 @@ Stellt das Konnektivitätsprotokoll und den Pfad zur externe Datenquelle bereit.
 | Externe Datenquelle    | Speicherort-Präfix | Location path (Pfad zum Speicherort)                                         | Unterstützte Standorte nach Produkt/Dienst |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
 | Cloudera oder Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | Seit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]                       |
-| Azure Blob Storage      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | Seit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]                       |
+| Azure Storage-Konto (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] werden hierarchische Namespaces **nicht** unterstützt. |
 | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | Seit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
 | Oracle                  | `oracle`        | `<server_name>[:port]`                                | Seit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
 | Teradata                | `teradata`      | `<server_name>[:port]`                                | Seit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
 | MongoDB oder CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | Seit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
 | ODBC                    | `odbc`          | `<server_name>[:port]`                                | Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (nur unter Windows)        |
 | Massenvorgänge         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Seit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
+| Edge Hub         | `edgehub`         | Nicht zutreffend | EdgeHub befindet sich immer lokal bei der [Azure SQL Edge](/azure/azure-sql-edge/overview/)-Instanz. Daher ist es nicht erforderlich, einen Pfad- oder Portwert anzugeben. Nur in Azure SQL Edge verfügbar.                      |
+| Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Nur in Azure SQL Edge verfügbar.                      |
 
 Speicherortpfad:
 
@@ -106,7 +108,9 @@ Zusätzliche Hinweise und Anweisungen für das Festlegen des Speicherorts:
 - Verwenden Sie beim Abfragen von Hadoop für alle Tabellen die gleiche externe Datenquelle, um eine konsistente Abfragesemantik zu ermöglichen.
 - Sie können das Speicherort-Präfix `sqlserver` verwenden, um eine Verbindung zwischen einer [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]-Instanz und einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, einer [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Instanz oder mit Azure Synapse Analytics herzustellen.
 - Geben Sie `Driver={<Name of Driver>}` an, wenn Sie sich über `ODBC` verbinden.
-- `wasb` ist das Standardprotokoll für Azure Blob Storage. `wasbs` ist optional, wird allerdings empfohlen, da Daten mithilfe einer sicheren TLS/SSL-Verbindung gesendet werden.
+- `wasbs` ist optional, wird jedoch für den Zugriff auf Azure Storage-Konten empfohlen, da Daten mithilfe einer sicheren TLS/SSL-Verbindung gesendet werden.
+- `abfs`- oder `abfss`-APIs werden beim Zugriff auf Azure Storage-Konten nicht unterstützt.
+- Die Option „Hierarchischer Namespace“ für Azure Storage-Konten (V2) wird nicht unterstützt. Stellen Sie sicher, dass diese Option weiterhin **deaktiviert** ist.
 - Für erfolgreiche PolyBase-Abfragen während eines Hadoop-`Namenode`-Failovers sollten Sie in Betracht ziehen, eine virtuelle IP-Adresse für den `Namenode` des Hadoop-Clusters zu verwenden. Falls nicht, führen Sie den Befehl [ALTER EXTERNAL DATA SOURCE][alter_eds] aus, um auf den neuen Speicherort zu verweisen.
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -131,13 +135,13 @@ Gibt die datenbankbezogenen Anmeldeinformationen für die Authentifizierung mit 
 
 Zusätzliche Hinweise und Anweisungen für das Erstellen der Anmeldeinformationen:
 
-- `CREDENTIAL` ist nur erforderlich, wenn das Blob gesichert wurde. `CREDENTIAL` ist für Datasets, die den anonymen Zugriff zulassen, nicht erforderlich.
-- Wenn `TYPE` = `BLOB_STORAGE`, müssen die Anmeldeinformationen mithilfe von `SHARED ACCESS SIGNATURE` als Identität erstellt werden. Darüber hinaus sollte das SAS-Token wie folgt konfiguriert werden:
+- `CREDENTIAL` ist nur erforderlich, wenn die Daten gesichert wurden. `CREDENTIAL` ist für Datasets, die den anonymen Zugriff zulassen, nicht erforderlich.
+- Wenn `TYPE` = `BLOB_STORAGE`, müssen die Anmeldeinformationen mithilfe einer `SHARED ACCESS SIGNATURE` als Identität erstellt werden. Darüber hinaus sollte das SAS-Token wie folgt konfiguriert werden:
   - Schließen Sie bei der Konfiguration als Geheimnis das führende `?` aus.
   - Für die zu ladende Datei (z. B. `srt=o&sp=r`) benötigen Sie mindestens eine Leseberechtigung.
   - Verwenden Sie einen gültigen Ablaufzeitraum (alle Daten in UTC-Zeit).
 
-Ein Beispiel für das Verwenden von `CREDENTIAL` mit `SHARED ACCESS SIGNATURE` und `TYPE` = `BLOB_STORAGE` finden Sie unter [Erstellen einer externe Datenquelle zum Ausführen von Massenvorgängen und Abrufen von Daten von Azure Blob Storage in SQL-Datenbank](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
+Ein Beispiel für die Verwendung von `CREDENTIAL` mit `SHARED ACCESS SIGNATURE` und `TYPE` = `BLOB_STORAGE` finden Sie unter [Erstellen einer externen Datenquelle für Massenvorgänge, die Daten aus Azure Storage abrufen](#i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage).
 
 Weitere Informationen zum Erstellen datenbankweit gültiger Anmeldeinformationen finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -145,13 +149,13 @@ Weitere Informationen zum Erstellen datenbankweit gültiger Anmeldeinformationen
 
 Gibt den Typ der externe Datenquelle an, die konfiguriert wird. Dieser Parameter ist nicht immer erforderlich.
 
-- Verwenden Sie HADOOP, wenn die externe Datenquelle Cloudera, Hortonworks oder Azure Blob Storage ist.
-- Verwenden Sie BLOB_STORAGE beim Ausführen von Massenvorgängen mithilfe von [BULK INSERT][bulk_insert] oder [OPENROWSET][openrowset] mit [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+- Verwenden Sie HADOOP, wenn die externe Datenquelle Cloudera, Hortonworks oder ein Azure Storage-Konto ist.
+- Verwenden Sie BLOB_STORAGE, wenn Sie mithilfe von [BULK INSERT][bulk_insert] oder [OPENROWSET][openrowset] mit [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] Massenvorgänge aus Azure Storage-Konten ausführen.
 
 > [!IMPORTANT]
 > Legen Sie `TYPE` nicht fest, wenn Sie eine andere externe Datenquelle verwenden.
 
-Ein Beispiel der Verwendung von `TYPE` = `HADOOP` zum Laden von Daten aus Azure Blob Storage finden Sie unter [Erstellen externer Datenquellen zum Verweisen auf Azure Blob Storage](#e-create-external-data-source-to-reference-azure-blob-storage).
+Ein Beispiel für die Verwendung von `TYPE` = `HADOOP` zum Laden von Daten aus einem Azure Storage-Konto finden Sie unter [Erstellen einer externen Datenquelle für den Zugriff auf Daten in Azure Storage mithilfe der Schnittstelle „wasb://“](#e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface). <!--[Create external data source to reference Azure Storage](#e-create-external-data-source-to-reference-azure-storage).-->
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -276,11 +280,10 @@ WITH
   );
 ```
 
-### <a name="e-create-external-data-source-to-reference-azure-blob-storage"></a>E. Erstellen einer externen Datenquelle, um auf Azure Blob Storage zu verweisen
+### <a name="e-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface"></a>E. Erstellen einer externen Datenquelle für den Zugriff auf Daten in Azure Storage mithilfe der Schnittstelle „wasb://“
+In diesem Beispiel ist die externe Datenquelle ein Azure Storage-Konto (V2) namens `logs`. Der Container heißt `daily`. Die externe Azure Storage-Datenquelle dient nur der Datenübertragung. Die Prädikatweitergabe wird nicht unterstützt. Hierarchische Namespaces werden nicht unterstützt, wenn der Datenzugriff über die Schnittstelle `wasb://` erfolgt.
 
-In diesem Beispiel ist die externe Datenquelle ein Azure Blob Storage-Container namens `daily` im Azure-Speicherkonto`logs`. Die externe Datenquelle für Azure Storage steht nur für die Datenübertragung zur Verfügung. Die Prädikatweitergabe wird nicht unterstützt.
-
-Dieses Beispiel zeigt, wie Sie die datenbankweit gültigen Anmeldeinformationen für die Authentifizierung für Azure Storage erstellen. Geben Sie den Azure-Speicherkontoschlüssel in den Anmeldeinformation für die Datenbank an. Sie können eine beliebige Zeichenfolge in der datenbankweit gültigen Identität der Anmeldeinformationen angeben, da sie nicht für die Authentifizierung bei Azure Storage verwendet wird.
+In diesem Beispiel wird gezeigt, wie Sie die datenbankweit gültigen Anmeldeinformationen für die Authentifizierung bei einem Azure Storage-Konto (V2) erstellen. Geben Sie den Azure Storage-Kontoschlüssel im Anmeldeinformationsgeheimnis der Datenbank an. Sie können eine beliebige Zeichenfolge in der datenbankweit gültigen Identität der Anmeldeinformationen angeben, da sie nicht für die Authentifizierung bei Azure Storage verwendet wird.
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
@@ -297,11 +300,11 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/' ,
     CREDENTIAL = AzureStorageCredential ,
-    TYPE = BLOB_STORAGE
+    TYPE = HADOOP
   ) ;
 ```
 
-### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. Erstellen einer externen Datenquelle als Verweis auf eine benannte SQL Server-Instanz über die PolyBase-Konnektivität ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. Erstellen einer externen Datenquelle für einen Verweis auf eine benannte SQL Server-Instanz über die PolyBase-Konnektivität ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Sie können eine externe Datenquelle erstellen, die auf eine benannte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verweist, indem Sie den Instanznamen mit CONNECTION_OPTIONS angeben. Im folgenden Beispiel ist `WINSQL2019` der Hostname und `SQL2019` der Instanzname.
 
@@ -324,12 +327,36 @@ WITH (
 ) ;
 ```
 
+### <a name="g-create-external-data-source-to-reference-kafka"></a>G. Erstellen einer externen Datenquelle für einen Verweis auf Kafka
+
+In diesem Beispiel ist die externe Datenquelle ein Kafka-Server mit der IP-Adresse xxx.xxx.xxx.xxx, der an Port 1900 lauscht. Die externe Kafka-Datenquelle dient nur zum Streamen von Daten und unterstützt keinen Prädikatpushdown.
+
+```sql
+-- Create an External Data Source for Kafka
+CREATE EXTERNAL DATA SOURCE MyKafkaServer WITH (
+    LOCATION = 'kafka://xxx.xxx.xxx.xxx:1900'
+)
+go
+```
+
+### <a name="h-create-external-data-source-to-reference-edgehub"></a>H. Erstellen einer externen Datenquelle für einen Verweis auf EdgeHub
+
+In diesem Beispiel ist die externe Datenquelle eine EdgeHub-Instanz, die auf demselben Edgegerät wie Azure SQL Edge ausgeführt wird. Die externe EdgeHub-Datenquelle dient nur zum Streamen von Daten und unterstützt keinen Prädikatpushdown.
+
+```sql
+-- Create an External Data Source for Kafka
+CREATE EXTERNAL DATA SOURCE MyEdgeHub WITH (
+    LOCATION = 'edgehub://'
+)
+go
+```
+
 ## <a name="examples-bulk-operations"></a>Beispiele: Massenvorgänge
 
 > [!IMPORTANT]
 > An das Ende der `LOCATION`-URL darf kein **/** , Dateiname oder Shared Access Signature-Parameter hinzugefügt werden, wenn Sie eine externe Datenquelle für Massenvorgänge konfigurieren.
 
-### <a name="g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>G. Erstellen einer externen Datenquelle für Massenvorgänge, die Daten aus Azure Blob Storage abruft
+### <a name="i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>I. Erstellen einer externen Datenquelle für Massenvorgänge, die Daten aus Azure Storage abrufen
 
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
 Verwenden Sie die folgende Datenquelle für Massenvorgänge mit [BULK INSERT][bulk_insert] oder [OPENROWSET][openrowset]. Die Anmeldeinformationen müssen `SHARED ACCESS SIGNATURE` als Identität festgelegt haben, dürfen kein führendes `?` im SAS-Token aufweisen, müssen mindestens Leseberechtigung für die zu ladende Datei besitzen (z. B. `srt=o&sp=r`), und ihr Ablaufdatum muss gültig sein (alle Datumsangaben sind in UTC-Zeit). Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)][sas_token].
@@ -363,7 +390,7 @@ Dies wird beim [BULK INSERT][bulk_insert_example]-Beispiel praktisch veranschaul
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
@@ -447,14 +474,14 @@ Gibt die datenbankbezogenen Anmeldeinformationen für die Authentifizierung mit 
 
 Zusätzliche Hinweise und Anweisungen für das Erstellen der Anmeldeinformationen:
 
-- Verwenden Sie einen Azure Storage-Schlüssel, um Daten aus Azure Blob Storage in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] zu laden.
-- `CREDENTIAL` ist nur erforderlich, wenn das Blob gesichert wurde. `CREDENTIAL` ist für Datasets, die den anonymen Zugriff zulassen, nicht erforderlich.
+- Wenn Sie Daten aus Azure Storage in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] laden möchten, verwenden Sie einen Azure Storage-Schlüssel.
+- `CREDENTIAL` ist nur erforderlich, wenn die Daten gesichert wurden. `CREDENTIAL` ist für Datasets, die den anonymen Zugriff zulassen, nicht erforderlich.
 - Wenn `TYPE` = `BLOB_STORAGE`, müssen die Anmeldeinformationen mithilfe von `SHARED ACCESS SIGNATURE` als Identität erstellt werden. Darüber hinaus sollte das SAS-Token wie folgt konfiguriert werden:
   - Schließen Sie bei der Konfiguration als Geheimnis das führende `?` aus.
   - Für die zu ladende Datei (z. B. `srt=o&sp=r`) benötigen Sie mindestens eine Leseberechtigung.
   - Verwenden Sie einen gültigen Ablaufzeitraum (alle Daten in UTC-Zeit).
 
-Ein Beispiel für das Verwenden von `CREDENTIAL` mit `SHARED ACCESS SIGNATURE` und `TYPE` = `BLOB_STORAGE` finden Sie unter [Erstellen einer externe Datenquelle zum Ausführen von Massenvorgängen und Abrufen von Daten von Azure Blob Storage in SQL-Datenbank](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
+Ein Beispiel für die Verwendung von `CREDENTIAL` mit `SHARED ACCESS SIGNATURE` und `TYPE` = `BLOB_STORAGE` finden Sie unter [Erstellen einer externen Datenquelle für Massenvorgänge, die Daten aus Azure Storage abrufen](#c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage).
 
 Weitere Informationen zum Erstellen datenbankweit gültiger Anmeldeinformationen finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -548,7 +575,7 @@ Sie finden ein ausführliches Tutorial für RDBMS unter [Getting started with cr
 > [!IMPORTANT]
 > An das Ende der `LOCATION`-URL darf kein **/** , Dateiname oder Shared Access Signature-Parameter hinzugefügt werden, wenn Sie eine externe Datenquelle für Massenvorgänge konfigurieren.
 
-### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. Erstellen einer externen Datenquelle für Massenvorgänge, die Daten aus Azure Blob Storage abruft
+### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>C. Erstellen einer externen Datenquelle für Massenvorgänge, die Daten aus Azure Storage abrufen
 
 Verwenden Sie die folgende Datenquelle für Massenvorgänge mit [BULK INSERT][bulk_insert] oder [OPENROWSET][openrowset]. Die Anmeldeinformationen müssen `SHARED ACCESS SIGNATURE` als Identität festgelegt haben, dürfen kein führendes `?` im SAS-Token aufweisen, müssen mindestens Leseberechtigung für die zu ladende Datei besitzen (z. B. `srt=o&sp=r`), und ihr Ablaufdatum muss gültig sein (alle Datumsangaben sind in UTC-Zeit). Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)][sas_token].
 
@@ -580,7 +607,7 @@ Sie finden dieses Beispiel unter [BULK INSERT][bulk_insert_example].
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
 [create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
@@ -643,9 +670,9 @@ Stellt das Konnektivitätsprotokoll und den Pfad zur externe Datenquelle bereit.
 
 | Externe Datenquelle        | Speicherort-Präfix | Location path (Pfad zum Speicherort)                                         |
 | --------------------------- | --------------- | ----------------------------------------------------- |
-| Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 | Azure Data Lake Storage Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
 | Azure Data Lake Storage Gen 2 | `abfs[s]`       | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Azure Storage-Konto (V2)    | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 Speicherortpfad:
 
@@ -657,7 +684,8 @@ Zusätzliche Hinweise und Anweisungen für das Festlegen des Speicherorts:
 - Bei der Bereitstellung von Azure Data Lake Storage Gen2 ist die Standardoption `enable secure SSL connections`. Wenn diese Option aktiviert ist, müssen Sie `abfss` verwenden, wenn eine sichere TLS/SSL-Verbindung ausgewählt ist. Beachten Sie, dass `abfss` auch für unsichere TLS-Verbindungen funktioniert.
 - Azure Synapse überprüft die Existenz der externen Datenquelle nicht, wenn das Objekt erstellt wird. erforderlich. Erstellen Sie zum Überprüfen mithilfe der externe Datenquelle eine externe Tabelle.
 - Verwenden Sie beim Abfragen von Hadoop für alle Tabellen die gleiche externe Datenquelle, um eine konsistente Abfragesemantik zu ermöglichen.
-- `wasb` ist das Standardprotokoll für Azure Blob Storage. `wasbs` ist optional, wird allerdings empfohlen, da Daten mithilfe einer sicheren TLS-Verbindung gesendet werden.
+- `wasbs` wird empfohlen, da Daten mithilfe einer sicheren TLS-Verbindung gesendet werden.
+- Hierarchische Namespaces werden für Azure Storage-Konten (V2) nicht unterstützt, wenn der Datenzugriff über PolyBase mithilfe der Schnittstelle „wasb://“ erfolgt.
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
@@ -665,8 +693,8 @@ Gibt die datenbankbezogenen Anmeldeinformationen für die Authentifizierung mit 
 
 Zusätzliche Hinweise und Anweisungen für das Erstellen der Anmeldeinformationen:
 
-- Verwenden Sie einen Azure Storage-Schlüssel, um Daten aus Azure Blob Storage oder Azure Data Lake Storage (ADLS) Generation 2 in SQL DW zu laden.
-- `CREDENTIAL` ist nur erforderlich, wenn das Blob gesichert wurde. `CREDENTIAL` ist für Datasets, die den anonymen Zugriff zulassen, nicht erforderlich.
+- Verwenden Sie einen Azure Storage-Schlüssel, um Daten aus Azure Storage oder Azure Data Lake Storage Gen2 (ADLS) in SQL DW zu laden.
+- `CREDENTIAL` ist nur erforderlich, wenn die Daten gesichert wurden. `CREDENTIAL` ist für Datasets, die den anonymen Zugriff zulassen, nicht erforderlich.
 
 Weitere Informationen zum Erstellen datenbankweit gültiger Anmeldeinformationen finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -674,12 +702,9 @@ Weitere Informationen zum Erstellen datenbankweit gültiger Anmeldeinformationen
 
 Gibt den Typ der externe Datenquelle an, die konfiguriert wird. Dieser Parameter ist nicht immer erforderlich.
 
-- Verwenden Sie HADOOP, wenn die externe Datenquelle Azure Blob Storage, ADLS Generation 1 oder ADLS Generation 2 ist.
+- Verwenden Sie HADOOP, wenn die externe Datenquelle Azure Storage, ADLS Gen1 oder ADLS Gen2 ist.
 
-> [!IMPORTANT]
-> Legen Sie `TYPE` nicht fest, wenn Sie eine andere externe Datenquelle verwenden.
-
-Ein Beispiel der Verwendung von `TYPE` = `HADOOP` zum Laden von Daten aus Azure Blob Storage finden Sie unter [Erstellen externer Datenquellen zum Verweisen auf Azure Blob Storage](#a-create-external-data-source-to-reference-azure-blob-storage).
+Ein Beispiel für die Verwendung von `TYPE` = `HADOOP` zum Laden von Daten aus Azure Storage finden Sie unter [Erstellen einer externen Datenquelle für Verweise auf Azure Data Lake Storage Gen1 oder Gen2 mithilfe eines Dienstprinzipals](#b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal).
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -701,11 +726,10 @@ Derzeit wird ein SAS-Token des Typs `HADOOP` nicht unterstützt. Dieses Token wi
 
 ## <a name="examples"></a>Beispiele:
 
-### <a name="a-create-external-data-source-to-reference-azure-blob-storage"></a>A. Erstellen einer externen Datenquelle, um auf Azure Blob Storage zu verweisen
+### <a name="a-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface"></a>A. Erstellen einer externen Datenquelle für den Zugriff auf Daten in Azure Storage mithilfe der Schnittstelle „wasb://“
+In diesem Beispiel ist die externe Datenquelle ein Azure Storage-Konto (V2) namens `logs`. Der Container heißt `daily`. Die externe Azure Storage-Datenquelle dient nur der Datenübertragung. Die Prädikatweitergabe wird nicht unterstützt. Hierarchische Namespaces werden nicht unterstützt, wenn der Datenzugriff über die Schnittstelle `wasb://` erfolgt.
 
-In diesem Beispiel ist die externe Datenquelle ein Azure Blob Storage-Container namens `daily` im Azure-Speicherkonto`logs`. Die externe Datenquelle für Azure Storage steht nur für die Datenübertragung zur Verfügung. Die Prädikatweitergabe wird nicht unterstützt.
-
-Dieses Beispiel zeigt, wie Sie die datenbankweit gültigen Anmeldeinformationen für die Authentifizierung für Azure Storage erstellen. Geben Sie den Azure-Speicherkontoschlüssel in den Anmeldeinformation für die Datenbank an. Sie können eine beliebige Zeichenfolge in der datenbankweit gültigen Identität der Anmeldeinformationen angeben, da sie nicht für die Authentifizierung bei Azure Storage verwendet wird.
+In diesem Beispiel wird gezeigt, wie Sie die datenbankweit gültigen Anmeldeinformationen für die Authentifizierung bei Azure Storage erstellen. Geben Sie den Azure Storage-Kontoschlüssel im Anmeldeinformationsgeheimnis der Datenbank an. Sie können eine beliebige Zeichenfolge in der datenbankweit gültigen Identität der Anmeldeinformationen angeben, da sie nicht für die Authentifizierung bei Azure Storage verwendet wird.
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
@@ -722,13 +746,13 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/' ,
     CREDENTIAL = AzureStorageCredential ,
-    TYPE = BLOB_STORAGE
+    TYPE = HADOOP
   ) ;
 ```
 
 ### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal"></a>B. Erstellen einer externen Datenquelle für Verweise auf Azure Data Lake Storage Gen1 oder Gen2 mithilfe eines Dienstprinzipals
 
-Die Azure Data Lake Storage-Konnektivität kann auf Ihrem ADLS-URI und dem Dienstprinzipal Ihrer Azure Active Directory-Anwendung basieren. Die Dokumentation zum Erstellen dieser Anwendung finden Sie unter [Authentifizierung in Data Lake Storage mit Active Directory] [azure_ad[].
+Die Azure Data Lake Storage-Konnektivität kann auf Ihrem ADLS-URI und dem Dienstprinzipal Ihrer Azure Active Directory-Anwendung basieren. Die Dokumentation zum Erstellen dieser Anwendung finden Sie unter [Authentifizierung bei Data Lake Storage mit Active Directory][azure_ad].
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -790,7 +814,7 @@ WITH
   ) ;
 ```
 
-### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2"></a>D: Erstellen einer externen Datenquelle für Verweise auf PolyBase-Verbindungen mit Azure Data Lake Storage Gen 2
+### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2-using-abfs"></a>D: Erstellen einer externen Datenquelle für einen Verweis auf PolyBase-Verbindungen mit Azure Data Lake Storage Gen2 mithilfe von „abfs://“
 
 Wenn eine Verbindung mit einem Konto in Azure Data Lake Storage Gen 2 mithilfe einer [verwalteten Identität](/azure/active-directory/managed-identities-azure-resources/overview
 ) hergestellt wird, muss SECRET nicht angegeben werden.
@@ -827,7 +851,7 @@ WITH
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
@@ -895,7 +919,7 @@ Stellt das Konnektivitätsprotokoll und den Pfad zur externe Datenquelle bereit.
 | Externe Datenquelle    | Speicherort-Präfix | Location path (Pfad zum Speicherort)                                         |
 | ----------------------- | --------------- | ----------------------------------------------------- |
 | Cloudera oder Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   |
-| Azure Blob Storage      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
+| Azure Storage-Konto   | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 Speicherortpfad:
 
@@ -908,7 +932,8 @@ Zusätzliche Hinweise und Anweisungen für das Festlegen des Speicherorts:
 
 - Die PDW-Engine überprüft die Existenz der externen Datenquelle nicht, wenn das Objekt erstellt wird. Erstellen Sie zum Überprüfen mithilfe der externe Datenquelle eine externe Tabelle.
 - Verwenden Sie beim Abfragen von Hadoop für alle Tabellen die gleiche externe Datenquelle, um eine konsistente Abfragesemantik zu ermöglichen.
-- `wasb` ist das Standardprotokoll für Azure Blob Storage. `wasbs` ist optional, wird allerdings empfohlen, da Daten mithilfe einer sicheren TLS-Verbindung gesendet werden.
+- `wasbs` wird empfohlen, da Daten mithilfe einer sicheren TLS-Verbindung gesendet werden.
+- Hierarchische Namespaces können nicht zusammen mit Azure Storage-Konten in „wasb://“ verwendet werden.
 - Für erfolgreiche PolyBase-Abfragen während eines Hadoop-`Namenode`-Failovers sollten Sie in Betracht ziehen, eine virtuelle IP-Adresse für den `Namenode` des Hadoop-Clusters zu verwenden. Falls nicht, führen Sie den Befehl [ALTER EXTERNAL DATA SOURCE][alter_eds] aus, um auf den neuen Speicherort zu verweisen.
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
@@ -917,19 +942,16 @@ Gibt die datenbankbezogenen Anmeldeinformationen für die Authentifizierung mit 
 
 Zusätzliche Hinweise und Anweisungen für das Erstellen der Anmeldeinformationen:
 
-- Verwenden Sie einen Azure Storage-Schlüssel, um Daten aus Azure Blob Storage oder Azure Data Lake Storage (ADLS) Gen 2 in SQL DW oder PDW zu laden.
-- `CREDENTIAL` ist nur erforderlich, wenn das Blob gesichert wurde. `CREDENTIAL` ist für Datasets, die den anonymen Zugriff zulassen, nicht erforderlich.
+- Wenn Sie Daten aus Azure Storage in Azure Synapse oder PDW laden möchten, verwenden Sie einen Azure Storage-Schlüssel.
+- `CREDENTIAL` ist nur erforderlich, wenn die Daten gesichert wurden. `CREDENTIAL` ist für Datasets, die den anonymen Zugriff zulassen, nicht erforderlich.
 
 ### <a name="type---hadoop-"></a>TYPE = *[ HADOOP ]*
 
 Gibt den Typ der externe Datenquelle an, die konfiguriert wird. Dieser Parameter ist nicht immer erforderlich.
 
-- Verwenden Sie HADOOP, wenn die externe Datenquelle Cloudera, Hortonworks oder Azure Blob Storage ist.
+- Verwenden Sie HADOOP, wenn die externe Datenquelle Cloudera, Hortonworks oder Azure Storage ist.
 
-> [!IMPORTANT]
-> Legen Sie `TYPE` nicht fest, wenn Sie eine andere externe Datenquelle verwenden.
-
-Ein Beispiel der Verwendung von `TYPE` = `HADOOP` zum Laden von Daten aus Azure Blob Storage finden Sie unter [Erstellen externer Datenquellen zum Verweisen auf Azure Blob Storage](#d-create-external-data-source-to-reference-azure-blob-storage).
+Ein Beispiel für die Verwendung von `TYPE` = `HADOOP` zum Laden von Daten aus Azure Storage finden Sie unter [Erstellen einer externen Datenquelle, um auf Hadoop zu verweisen](#a-create-external-data-source-to-reference-hadoop).
 
 ### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -1028,9 +1050,9 @@ WITH
   ) ;
 ```
 
-### <a name="d-create-external-data-source-to-reference-azure-blob-storage"></a>D: Erstellen einer externen Datenquelle, um auf Azure Blob Storage zu verweisen
+### <a name="d-create-external-data-source-to-access-data-in-azure-storage-using-the-wasb-interface"></a>D: Erstellen einer externen Datenquelle für den Zugriff auf Daten in Azure Storage mithilfe der Schnittstelle „wasb://“
 
-In diesem Beispiel ist die externe Datenquelle ein Azure Blob Storage-Container namens `daily` im Azure-Speicherkonto`logs`. Die externe Datenquelle für Azure Storage steht nur für die Datenübertragung zur Verfügung. Die Prädikatweitergabe wird nicht unterstützt.
+In diesem Beispiel ist die externe Datenquelle ein Azure Storage-Konto (V2) namens `logs`. Der Container heißt `daily`. Die externe Azure Storage-Datenquelle dient nur der Datenübertragung. Die Prädikatweitergabe wird nicht unterstützt. Hierarchische Namespaces werden nicht unterstützt, wenn der Datenzugriff über die Schnittstelle `wasb://` erfolgt.
 
 Dieses Beispiel zeigt, wie Sie die datenbankweit gültigen Anmeldeinformationen für die Authentifizierung für Azure Storage erstellen. Geben Sie den Azure-Speicherkontoschlüssel in den Anmeldeinformation für die Datenbank an. Sie können eine beliebige Zeichenfolge in der datenbankweit gültigen Identität der Anmeldeinformationen angeben, da sie nicht für die Authentifizierung bei Azure Storage verwendet wird.
 
@@ -1049,9 +1071,10 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage
 WITH
   ( LOCATION = 'wasbs://daily@logs.blob.core.windows.net/'
     CREDENTIAL = AzureStorageCredential
-    TYPE = BLOB_STORAGE
+    TYPE = HADOOP
   ) ;
 ```
+
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -1064,7 +1087,7 @@ WITH
 <!-- links to external pages -->
 <!-- SQL Docs -->
 [bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-storage
 [openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql

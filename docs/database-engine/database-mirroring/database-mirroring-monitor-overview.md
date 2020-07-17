@@ -1,5 +1,6 @@
 ---
 title: Datenbankspiegelungs-Monitor (Übersicht) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie den Datenbankspiegelungs-Monitor zum Überwachen gespiegelter Datenbanken verwenden, um den Datenfluss in der Datenbankspiegelungssitzung und für die Problembehandlung zu überprüfen.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 07ad2379f82552a3db0ceee30305f7fdc38003fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d5dbfd56f461da431843d1788d9226a72448b57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730918"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Datenbankspiegelungs-Monitor (Übersicht)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Wenn Sie über die richtigen Berechtigungen verfügen, können Sie den Datenbankspiegelungs-Monitor verwenden, um eine beliebige Teilmenge der gespiegelten Datenbanken auf einer Serverinstanz zu überwachen. Durch das Überwachen können Sie das Vorhandensein und die Qualität des Datenflusses in der Datenbank-Spiegelungssitzung überprüfen. Der Datenbankspiegelungs-Monitor ist auch bei der Problembehandlung der Ursachen für reduzierten Datenfluss hilfreich.  
   
  Sie können jede der gespiegelten Datenbanken für die Überwachung auf jedem der Failoverpartner einzeln registrieren. Wenn Sie eine Datenbank registrieren, werden die folgenden Informationen zur Datenbank vom Datenbankspiegelungs-Monitor zwischengespeichert:  
@@ -82,7 +83,7 @@ ms.locfileid: "68006404"
   
  Ein Systemadministrator kann die aktuelle Konfiguration der Warnungen für die Datenbank anzeigen, indem er die Seite im Registerformat **Warnungen** auswählt. Von dort aus kann der Administrator das Dialogfeld **Schwellenwerte für Warnung festlegen** öffnen, um einen oder mehrere Schwellenwerte für Warnungen zu aktivieren und zu konfigurieren.  
   
- Im Banner über den Registerkarten zeigt der Detailbereich den Zeitpunkt an, zu dem die Statusinformationen zuletzt vom Monitor aktualisiert wurden: **Letzte Aktualisierung:** _\<Datum>\<Uhrzeit>_ . Normalerweise ruft der Datenbankspiegelungs-Monitor Statusinformationen von der Prinzipal- und der Spiegelserverinstanz zu unterschiedlichen Zeiten ab. Die ältere dieser beiden Aktualisierungszeiten wird angezeigt.  
+ Im Banner über den Registerkarten wird im Detailbereich der Zeitpunkt angezeigt, zu dem die Statusinformationen zuletzt vom Monitor aktualisiert wurden: **Letzte Aktualisierung:** _\<date>\<time>_ . Normalerweise ruft der Datenbankspiegelungs-Monitor Statusinformationen von der Prinzipal- und der Spiegelserverinstanz zu unterschiedlichen Zeiten ab. Die ältere dieser beiden Aktualisierungszeiten wird angezeigt.  
   
 ## <a name="action-menu"></a>Menü Aktion  
  Das Menü **Aktion** enthält immer die folgenden Befehle:  

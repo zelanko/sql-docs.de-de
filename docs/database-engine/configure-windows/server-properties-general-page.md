@@ -1,5 +1,6 @@
 ---
 title: Servereigenschaften (Seite „Allgemein“) - SQL Server Management Studio | Microsoft-Dokumentation
+description: Machen Sie sich mit den schreibgeschützten Eigenschaften in SQL Server vertraut. Beispiele hierfür sind der Servername, das Betriebssystem, die Sortierung und die SQL Server-Version.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,17 +13,17 @@ f1_keywords:
 - sql13.swb.serverproperties.activedirectory.f1
 - sql13.swb.serverproperties.prodinfo.f1
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: dbc306b3ec8d23c4ddc7aec6477c407f21e345a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: da2180230cfc80775f07a73dbc41f12ad9e46641
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726651"
 ---
 # <a name="server-properties---general-page"></a>Servereigenschaften (Seite „Allgemein“)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Auf dieser Seite können Sie sich schreibgeschützte Informationen zu Ihrer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation anzeigen lassen.  
   
 ## <a name="property-grid"></a>Eigenschaftsraster  

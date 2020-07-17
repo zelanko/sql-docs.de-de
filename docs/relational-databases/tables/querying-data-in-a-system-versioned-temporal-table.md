@@ -1,7 +1,7 @@
 ---
 title: Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/30/2020
+ms.date: 03/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c64fbfa127f3e5992f2e924d7498fc68fec5db13
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 2ed4bcd1fb72c25520e935879305ff1c7d894707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402686"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002330"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Wenn Sie den letzten (aktuellsten) Zustand der Daten in einer temporalen Tabelle abrufen möchten, können Sie die Abfrage wie gewohnt durchführen, so wie auch bei nicht temporalen Tabellen. Wenn die PERIOD-Spalten nicht ausgeblendet sind, erscheinen ihre Werte in einer SELECT \* -Abfrage. Wenn Sie die **PERIOD**-Spalten ausgeblendet haben, erscheinen ihre Werte nicht in einer SELECT \*-Abfrage. Wenn die **PERIOD** -Spalten ausgeblendet wurden, verweisen Sie in der SELECT-Klausel explizit auf die **PERIOD** -Spalten, um die Werte für diese Spalten zurückzugeben.
 
@@ -32,7 +32,7 @@ Verwenden Sie die neue **FOR SYSTEM_TIME**-Klausel mit vier temporal-spezifische
 - CONTAINED IN (<Startdatum_Uhrzeit>, <Enddatum_Uhrzeit>)
 - ALL
 
-**FOR SYSTEM_TIME** kann unabhängig für jede Tabelle in einer Abfrage angegeben werden. Es kann in allgemeinen Tabellenausdrücken, Tabellenwertfunktionen und gespeicherten Prozeduren verwendet werden. Bei Verwendung eines Tabellenalias mit temporalen Tabellen muss die **FOR SYSTEM_TIME**-Klausel zwischen dem Namen der temporalen Tabelle und dem Alias eingefügt werden. Sehen Sie sich hierzu das zweite Beispiel unter [Abfrage für einen bestimmten Zeitpunkt mithilfe der AS OF-Unterklausel](#query-for-a-specific-time-using-the-as-of-sub-clause) an.
+**FOR SYSTEM_TIME** kann unabhängig für jede Tabelle in einer Abfrage angegeben werden. Es kann in allgemeinen Tabellenausdrücken, Tabellenwertfunktionen und gespeicherten Prozeduren verwendet werden. Bei Verwendung eines Tabellenalias mit temporalen Tabellen muss die **FOR SYSTEM_TIME**-Klausel zwischen dem Namen der temporalen Tabelle und dem Alias eingefügt werden. Sehen Sie sich hierzu das zweite Beispiel unter „Abfrage für einen bestimmten Zeitpunkt mithilfe der AS OF-Unterklausel“ an.
 
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>Abfrage für einen bestimmten Zeitpunkt mithilfe der AS OF-Unterklausel
 

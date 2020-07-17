@@ -1,5 +1,6 @@
 ---
 title: Einschränkung für eindeutige Partikelzuordnung | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie die Einschränkungsregel für die eindeutige Partikelzuordnung ein XSD-Schema ablehnt, wenn es einen Typ mit einem potenziell mehrdeutigen Inhaltsmodell enthält.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2c64ff3f819e0d30db6654cbeed6cf5c19e43aa7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 9d7b6de76fdb5310a5121908779d4565a4b6ff1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729833"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Einschränkung für eindeutige Partikelzuordnung
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In XSD werden komplexe Inhaltsmodelle durch die UPA-Einschränkungsregel (Unique Particle Attribution, eindeutige Partikelzuordnung) eingeschränkt. Diese Regel verlangt, dass jedes Element in einem Instanzdokument eindeutig genau einem `<xsd:element>` - oder `<xsd:any>` -Partikel im übergeordneten Inhaltsmodell entspricht. Jedes Schema, das einen Typ mit einem potenziell mehrdeutigen Inhaltsmodell enthält, wird zurückgewiesen.  
   
  Die häufigste Ursache für Mehrdeutigkeit sind `<xsd:any>`-Platzhalterzeichen und -partikel, die variable Vorkommensbereiche aufweisen, z. B. minOccurs < maxOccurs. Das folgende Inhaltsmodell ist z. B. mehrdeutig, da ein <`e1`>-Element dem `<xsd:element>`- oder dem `<xsd:any>`-Element entsprechen kann.  
@@ -81,11 +82,11 @@ ms.locfileid: "80665214"
 ## <a name="finding-more-information"></a>Weitere Informationsquellen  
  Das folgende Dokument wird vom W3C (World Wide Web Consortium) veröffentlicht; es enthält die technische Beschreibung der UPA-Einschränkung:  
   
- "XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation":  
+ "XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation" (XML Schema Part 1: Strukturen 2. Ausgabe, vom W3C empfohlene Ausgabe):  
   
--   Section 3.8.6: Constraints on Model Group Schema Components  
+-   Abschnitt 3.8.6: Constraints on Model Group Schema Components (Einschränkungen für Komponenten des Modellgruppenschemas)  
   
--   Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)  
+-   Anhang H: Analysis of the Unique Particle Attribution Constraint (non-normative) (Analyse der Einschränkung für die eindeutige Partikelzuordnung (nicht-normativ))  
   
  Besuchen Sie [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881), um das Dokument anzuzeigen.  
   

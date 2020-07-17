@@ -1,5 +1,6 @@
 ---
 title: ObjectType (Spalte für Ablaufverfolgungsereignisse) | Microsoft-Dokumentation
+description: Hier finden Sie die möglichen Werte für die Objekttypspalte eines Ablaufverfolgungsereignisses, die in einer Vielzahl von Ablaufverfolgungsereignissen in SQL Server verwendet wird.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,20 +16,20 @@ ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f583813ae44cb180005b0cb9eeb592b3a946508c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755970"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType (Spalte für Ablaufverfolgungsereignisse)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die ObjectType-Spalte wird für eine Vielzahl von Ablaufverfolgungsereignissen verwendet. In diesem Thema werden die möglichen Werte dieser Spalte und eine Definition des jeweiligen Wertes aufgeführt.  
   
 ## <a name="object-type-column-values"></a>Werte der ObjectType-Spalte  
   
-|value|Definition|  
+|Wert|Definition|  
 |-----------|----------------|  
 |8259|CHECK-Einschränkung|  
 |8260|Standard (Einschränkung oder eigenständig)|  

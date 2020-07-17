@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 848c53ce4ca004cec84609b12869a98fa45fa78d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292763"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469325"
 ---
 # <a name="error-handling-in-data"></a>Fehlerbehandlung in Daten
 
@@ -144,7 +144,7 @@ Mithilfe des Dialogfelds **Fehlerausgabe konfigurieren** können Sie die Fehlerb
   
     -   Schließen Sie die Fehlerbeschreibung in einer zusätzlichen Spalte ein, indem Sie für den Aufruf der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> -Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> -Schnittstelle eine einzelne Zeile des Skripts verwenden.  
   
-    -   Schließen Sie den Spaltennamen in einer zusätzlichen Spalte ein, indem Sie für den Aufruf der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> -Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> -Schnittstelle eine einzelne Zeile des Skripts verwenden.  
+    -   Fügen Sie den Spaltennamen in eine zusätzliche Spalte ein, indem Sie eine einzelne Skriptzeile verwenden, um die Methode [Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID*] (/previous-versions/sql/sql-server-2016/mt657629(v=sql.130)) der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle aufzurufen.  
   
      Sie können die Skriptkomponente dem Fehlersegment des Datenflusses an einem beliebigen Ort unterhalb der Datenflusskomponenten hinzufügen, deren Fehler Sie erfassen möchten. In der Regel setzen Sie die Skriptkomponente unmittelbar bevor die Fehlerzeilen in ein Ziel geschrieben werden. Auf diese Weise sucht das Skript nur nach Beschreibungen für geschriebene Fehlerzeilen. Das Fehlersegment des Datenflusses korrigiert u.U. einige Fehler und schreibt diese Zeilen nicht in ein Fehlerziel.  
 

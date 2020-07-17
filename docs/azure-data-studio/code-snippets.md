@@ -1,27 +1,26 @@
 ---
 title: Erstellen von wiederverwendbaren Codeausschnitten
-titleSuffix: Azure Data Studio
 description: Erfahren Sie, wie Sie SQL-Codeausschnitte in Azure Data Studio erstellen und verwenden.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e2c6883840513fb9f09f8dc58080d36402bdf9f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774694"
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-name-sos"></a>Erstellen und Verwenden von Codeausschnitten, um schnell Transact-SQL-Skripts in [!INCLUDE[name-sos](../includes/name-sos-short.md)] zu erstellen
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Erstellen und Verwenden von Codeausschnitten zum schnellen Erstellen von Transact-SQL-Skripts in Azure Data Studio
 
-Codeausschnitte in [!INCLUDE[name-sos](../includes/name-sos-short.md)] sind Vorlagen, die das Erstellen von Datenbanken und Datenbankobjekten vereinfachen. 
+Codeausschnitte in Azure Data Studio sind Vorlagen, die das Erstellen von Datenbanken und Datenbankobjekten vereinfachen. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] stellt mehrere T-SQL-Codeausschnitte (Transact-SQL) bereit, mit denen Sie schnell Skripts mit richtiger Syntax generieren können. 
+Azure Data Studio stellt mehrere T-SQL-Codeausschnitte (Transact-SQL) bereit, mit denen Sie schnell Skripts mit richtiger Syntax generieren können. 
 
 Es können auch benutzerdefinierte Codeausschnitte erstellt werden.
 
@@ -58,7 +57,7 @@ Sie können eigene Codeausschnitte definieren. So öffnen Sie die Datei mit SQL-
 1. Wählen Sie **SQL** aus:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] erbt seine Codeausschnittfunktionalität von Visual Studio Code, sodass in diesem Artikel insbesondere die Verwendung von SQL-Ausschnitten erläutert wird. Ausführlichere Informationen finden Sie unter [Snippets in Visual Studio Code: Create your own snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) (Codeausschnitte in Visual Studio Code: Erstellen eigener Codeausschnitte) in der Visual Studio Code-Dokumentation. 
+   > Azure Data Studio erbt die Codeausschnittfunktionalität von Visual Studio Code, weshalb in diesem Artikel insbesondere die Verwendung von SQL-Ausschnitten erläutert wird. Ausführlichere Informationen finden Sie unter [Snippets in Visual Studio Code: Create your own snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets) (Codeausschnitte in Visual Studio Code: Erstellen eigener Codeausschnitte) in der Visual Studio Code-Dokumentation. 
 
    ![Vorlagenfeld ersetzen](media/code-snippets/select-sql.png)
 

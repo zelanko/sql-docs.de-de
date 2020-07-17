@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cecd24ccf5aba44beff0a258ee75cf26722358f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75322010"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773904"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie ein Abonnement für einen Nicht-SQL Server-Abonnenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Die Transaktionsreplikation und die Momentaufnahmereplikation unterstützen das Veröffentlichen von Daten an Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten. Informationen zu den unterstützten Abonnentenplattformen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)erstellt wird.  
   
  **In diesem Thema**  
@@ -47,7 +47,7 @@ ms.locfileid: "75322010"
   
          Die Erstellung der Momentaufnahme erfolgt nach der Aktivierung der Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten, um sicherzustellen, dass der Momentaufnahme-Agent eine Momentaufnahme und Initialisierungsskripts generiert, die für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten geeignet sind.  
   
-3.  Verwenden Sie zur Aktivierung der Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichungsname>** . Weitere Informationen zu diesem Schritt finden Sie unter [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) .  
+3.  Verwenden Sie zur Aktivierung der Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten das Dialogfeld **Veröffentlichungseigenschaften – \<PublicationName>** . Weitere Informationen zu diesem Schritt finden Sie unter [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) .  
   
 4.  Erstellen Sie mithilfe des Assistenten für neue Abonnements ein Abonnement. In diesem Thema sind weitere Informationen zu diesem Schritt enthalten.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "75322010"
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>So behalten Sie Tabellen auf dem Abonnenten bei  
   
--   Standardmäßig wird durch das Aktivieren einer Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten der Wert der **pre_creation_cmd** -Artikeleigenschaft auf 'drop' festgelegt. Mit dieser Einstellung wird angegeben, dass bei der Replikation auf dem Abonnenten eine Tabelle gelöscht werden soll, wenn sie mit dem Namen der Tabelle in dem Artikel übereinstimmt. Wenn auf dem Abonnenten Tabellen vorhanden sind, die Sie beibehalten möchten, verwenden Sie für jeden Artikel die gespeicherte Prozedur [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) . Geben Sie für **pre_creation_cmd**den Wert 'none' an. [https://login.microsoftonline.com/consumers/](`sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`).  
+-   Standardmäßig wird durch das Aktivieren einer Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten der Wert der **pre_creation_cmd** -Artikeleigenschaft auf 'drop' festgelegt. Mit dieser Einstellung wird angegeben, dass bei der Replikation auf dem Abonnenten eine Tabelle gelöscht werden soll, wenn sie mit dem Namen der Tabelle in dem Artikel übereinstimmt. Wenn auf dem Abonnenten Tabellen vorhanden sind, die Sie beibehalten möchten, verwenden Sie für jeden Artikel die gespeicherte Prozedur [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) . Geben Sie für **pre_creation_cmd**den Wert 'none' an. `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
 #### <a name="to-generate-a-snapshot-for-the-publication"></a>So generieren Sie eine Momentaufnahme für die Veröffentlichung  
   
@@ -139,7 +139,7 @@ ms.locfileid: "75322010"
   
 2.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, und klicken Sie dann auf **Status des Momentaufnahme-Agents anzeigen**.  
   
-3.  Klicken Sie im Dialogfeld **Status des Momentaufnahme-Agents anzeigen - \<Publication>** auf **Start**.  
+3.  Klicken Sie im Dialogfeld **Status des Momentaufnahmen-Agents anzeigen – \<Publication>** auf **Start**.  
   
  Nachdem der Momentaufnahme-Agent die Momentaufnahme generiert hat, wird eine Meldung angezeigt, die beispielsweise wie folgt lautet: "[100%] Es wurde eine Momentaufnahme mit 17 Artikel(n) generiert."  
   

@@ -4,30 +4,33 @@ titleSuffix: SQL Server on Linux
 description: Hier erfahren Sie, wie Sie Momentaufnahmeordnerfreigaben mit vom Standard abweichenden Ports für die SQL Server-Replikation unter Linux konfigurieren.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikerayW
+ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb715e2a0a056c18352361b58ce8ffd67e3da78e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdb90854984c195258891178be8a3fd07345929b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558593"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882685"
 ---
 # <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>Konfigurieren der Replikation mit vom Standard abweichenden Ports (SQL Server für Linux)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Sie können Replikation mit SQL Server für Linux Instanzen konfigurieren, die an einem Port lauschen, der mit der „mssql-conf“-Einstellung „network.tcpport“ konfiguriert wurde. Der Port muss während der Konfiguration an den Servernamen angehängt werden, wenn die folgenden Bedingungen zutreffen:
 
 1. Zur Replikationseinrichtung gehört eine Instanz von SQL Server für Linux.
 2. Jede Instanz (Windows oder Linux) lauscht an einem Nicht-Standardport. 
 
-Der Servername einer Instanz kann ermittelt werden, indem @@servername für die Instanz ausgeführt wird.
+Der Servername einer Instanz kann ermittelt werden, indem @@servername für die Instanz ausgeführt wird. Verwenden Sie nicht die IP-Adresse anstelle des Servernamens. Die Verwendung der IP-Adresse für den Herausgeber, Verteiler oder Abonnenten kann zu einem Fehler führen.
+
+> [!NOTE]
+> Das Erstellen einer SQL Server-Replikation unter Linux mit anderen Ports als dem Standardport funktioniert nur mit SQL Server 2019 und höher.
 
 ## <a name="examples"></a>Beispiele
 

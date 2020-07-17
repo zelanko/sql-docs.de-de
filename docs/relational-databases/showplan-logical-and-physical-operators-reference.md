@@ -137,15 +137,15 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ff043c2b88fd18666dad1bac3e2430e67ad2bce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3fd29114074ea0e83e04b7c434264d1666efb59
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76037035"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091555"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Referenz zu logischen und physischen Showplanoperatoren
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   Operatoren beschreiben, wie eine Abfrage oder eine DML-Anweisung (Data Manipulation Language) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird. Der Abfrageoptimierer verwendet Operatoren, um einen Abfrageplan für das in der Abfrage angegebene Ergebnis zu erstellen, oder zum Ausführen des in der DML-Anweisung angegebenen Vorgangs. Der Abfrageplan ist eine Struktur, die aus physischen Operatoren besteht. Sie können den Abfrageplan mit den SET SHOWPLAN-Anweisungen, den grafischen Ausführungsplanoptionen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], oder den SQL Server Profiler Showplan-Ereignisklassen anzeigen.  
   
  Operatoren werden als logische und physische Operatoren klassifiziert.  
@@ -158,15 +158,15 @@ ms.locfileid: "76037035"
   
  Über die physischen Operatoren werden Daten initialisiert, aufgelistet und beendet. Der physische Operator kann insbesondere die folgenden drei Methodenaufrufe beantworten:  
   
--   **Init()** : Mit der **Init()-Methode** wird ein physischer Operator initialisiert und dazu angewiesen, gegebenenfalls Datenstrukturen einzurichten. Der physische Operator kann mehrere **Init()** -Aufrufe empfangen; in der Regel empfängt er jedoch nur einen.  
+-   **Init():** Mit der Methode **Init()** wird ein physischer Operator initialisiert und dazu angewiesen, erforderliche Datenstrukturen einzurichten. Der physische Operator kann mehrere **Init()** -Aufrufe empfangen; in der Regel empfängt er jedoch nur einen.  
   
--   **GetNext()** : Mit der **GetNext()** -Methode wird ein Operator angewiesen, die erste oder nächste Datenzeile abzurufen. Der physische Operator kann null oder mehrere **GetNext()** -Aufrufe empfangen.  
+-   **GetNext():** Mit der Methode **GetNext()** wird ein Operator angewiesen, die erste oder nächste Datenzeile abzurufen. Der physische Operator kann null oder mehrere **GetNext()** -Aufrufe empfangen.  
   
--   **Close()** : Mit der **Close()** -Methode wird der physische Operator dazu angewiesen, einige Cleanupvorgänge auszuführen und sich selbst zu beenden. Ein physischer Operator empfängt nur einen **Close()** -Aufruf.  
+-   **Close():** Mit der Methode **Close()** wird der physische Operator dazu angewiesen, einige Cleanupvorgänge auszuführen und sich selbst zu beenden. Ein physischer Operator empfängt nur einen **Close()** -Aufruf.  
   
-Die **GetNext()** -Methode gibt eine Datenzeile zurück, und die Anzahl der Aufrufe wird als **ActualRows** in der durch SET STATISTICS PROFILE ON oder SET STATISTICS XML ON erstellten Showplanausgabe angezeigt. Weitere Informationen zu diesen SET-Optionen finden Sie unter [SET STATISTICS PROFILE &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-profile-transact-sql.md) und [SET STATISTICS XML &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-xml-transact-sql.md).  
+Die **GetNext()** -Methode gibt eine Datenzeile zurück, und die Anzahl der Aufrufe wird als **ActualRows** in der durch `SET STATISTICS PROFILE ON` oder `SET STATISTICS XML ON` erstellten Showplanausgabe angezeigt. Weitere Informationen zu diesen SET-Optionen finden Sie unter [SET STATISTICS PROFILE &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-profile-transact-sql.md) und [SET STATISTICS XML &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-xml-transact-sql.md).  
   
-Die **ActualRebinds**- und **ActualRewinds**-Zähler, die in der Showplanausgabe angezeigt werden, beziehen sich auf die Anzahl der Aufrufe der **Init()** -Methode. **ActualRebinds** entspricht 1 und **ActualRewinds** entspricht 0, es sei denn, ein Operator befindet sich innerhalb eines Schleifenjoins. Wenn sich ein Operator innerhalb eines Schleifenjoins befindet, muss die Summe der erneuten Bindungen und Zurückspulvorgänge der Anzahl der verarbeiteten Vorgänge außerhalb des Joins entsprechen. Unter 'erneuter Bindung' wird verstanden, dass sich mindestens ein korrelierter Parameter des Joins geändert hat und daher das Innere des Joins neu ausgewertet werden muss. Unter 'Zurückspulvorgang' wird verstanden, dass sich keiner der korrelierten Parameter geändert hat und das vorherige innere Resultset daher wiederverwendet werden kann.  
+Die **ActualRebinds**- und **ActualRewinds**-Zähler, die in der Showplanausgabe angezeigt werden, beziehen sich auf die Anzahl der Aufrufe der **Init()** -Methode. **ActualRebinds** entspricht 1 und **ActualRewinds** entspricht 0, es sei denn, ein Operator befindet sich innerhalb eines geschachtelten Schleifenjoins. Wenn sich ein Operator innerhalb eines Schleifenjoins befindet, muss die Summe der erneuten Bindungen und Zurückspulvorgänge der Anzahl der verarbeiteten Vorgänge außerhalb des Joins entsprechen. Unter 'erneuter Bindung' wird verstanden, dass sich mindestens ein korrelierter Parameter des Joins geändert hat und daher das Innere des Joins neu ausgewertet werden muss. Unter 'Zurückspulvorgang' wird verstanden, dass sich keiner der korrelierten Parameter geändert hat und das vorherige innere Resultset daher wiederverwendet werden kann.  
   
 **ActualRebinds** und **ActualRewinds** sind in der mithilfe von SET STATISTICS XML ON erstellten XML-Showplanausgabe vorhanden. Sie werden nur für die Operatoren **Nonclustered Index Spool**, **Remote Query**, **Row Count Spool**, **Sort**, **Table Spool**und **Table-valued Function** aufgefüllt. **ActualRebinds** und **ActualRewinds** können auch für den **Assert** - und den **Filter** -Operator aufgefüllt werden, wenn das **StartupExpression** -Attribut auf TRUE festgelegt ist.  
   
@@ -181,6 +181,9 @@ Ein entsprechender Zähler, **ActualEndOfScans**, ist verfügbar, wenn die Showp
   
 ## <a name="operator-descriptions"></a>Beschreibung der Operatoren  
  In diesem Abschnitt finden Sie Beschreibungen der logischen und physischen Operatoren.  
+
+ > [!TIP]
+ > Wenn ein bestimmtes grafisches Ausführungsplansymbol einen gelben Kreis mit zwei Pfeil von rechts nach links aufweist, bedeutet dies, dass der Operator parallel ausgeführt wird. Weitere Informationen zur Parallelität finden Sie im [Handbuch zur Thread- und Taskarchitektur](../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling).
   
 |Symbol für grafischen Ausführungsplan|Showplanoperator|BESCHREIBUNG|  
 |-----------------------------------|-----------------------|-----------------|  

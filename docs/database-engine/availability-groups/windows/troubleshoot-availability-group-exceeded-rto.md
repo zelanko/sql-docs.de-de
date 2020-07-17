@@ -1,5 +1,6 @@
 ---
 title: 'Problembehandlung: Verfügbarkeitsgruppe hat RTO überschritten (SQL Server) | Microsoft-Dokumentation'
+description: Hier erfahren Sie, wie Sie die Problembehandlung bei einem Failover einer AlwaysOn-Verfügbarkeitsgruppe durchführen, wenn das Failover mehr Zeit als Ihr RTO (Recovery Time Objective, Wiederherstellungszeitziel) in SQL Server benötigt.
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013754"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888022"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Problembehandlung: Verfügbarkeitsgruppe hat RTO überschritten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Nach einem automatischen Failover oder einem geplanten manuellen Failover ohne Datenverlust für eine Verfügbarkeitsgruppe stellen Sie möglicherweise fest, dass die Failoverzeit Ihre Recovery Time Objective (RTO) überschritten hat. Ein anderer Fall: Wenn Sie die Failoverzeit eines sekundären Replikats im synchronen Commitmodus (z.B. eines Partners für das automatische Failover) mithilfe der Methode (siehe [Überwachen der Leistung von Always On-Verfügbarkeitsgruppen](monitor-performance-for-always-on-availability-groups.md)) einschätzen, stellen Sie fest, dass diese Ihre RTO überschreitet.  
   
  Wenn Ihr automatische Failover trotzdem nicht abgeschlossen wurde, lesen Sie [Problembehandlung bei automatischen Failover in SQL Server 2012 Always On-Umgebungen](https://support.microsoft.com/kb/2833707).  

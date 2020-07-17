@@ -1,5 +1,6 @@
 ---
 title: Fehler- und Ereignisreferenz (Datenbank-Engine) | Microsoft-Dokumentation
+description: Informieren Sie sich über ausgewählte Fehlermeldungen der SQL Server-Datenbank-Engine, die einer weiteren Erläuterung bedürfen und Links zu externen Ressourcen verwenden.
 ms.custom: ''
 ms.date: 10/15/2019
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d9bf4de57b77e3f036cb842e53efe816de862559
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 89907738aa2e496e082a633f00882a72de5c07aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781599"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Fehler- und Ereignisreferenz (Datenbank-Engine)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Dieser Abschnitt enthält ausgewählte [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Fehlermeldungen, die weiterer Erläuterung bedürfen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
@@ -35,10 +36,10 @@ ms.locfileid: "72908692"
   
  In der folgenden Tabelle finden Sie Links und Beschreibungen zu diesen Ressourcen.  
   
-|Ressource|und Beschreibung|  
+|Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[SQL Server-Community](https://go.microsoft.com/fwlink/?LinkId=42455)|Diese Site bietet Links zu Newsgroups und Foren, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community überwacht werden. Hier sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community ist bei Problemen ausgesprochen hilfreich, obwohl die Beantwortung von Fragen nicht unbedingt sichergestellt ist.|  
-|[SQL Server Developer Center-Community](/sql/sql-server/index.yml)|Diese Site ist speziell auf Newsgroups, Foren und andere Communityressourcen ausgerichtet, die für Entwickler von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Interesse sind.|  
+|[SQL Server Developer Center-Community](/sql/sql-server/)|Diese Site ist speziell auf Newsgroups, Foren und andere Communityressourcen ausgerichtet, die für Entwickler von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Interesse sind.|  
 |[Microsoft Hilfe- und Supportcenter](https://go.microsoft.com/fwlink/?linkid=16419)|Verwenden Sie diese Website, um sich mit einer Frage an einen Supportmitarbeiter von [!INCLUDE[msCoName](../../includes/msconame-md.md)] zu wenden.|  
   
   

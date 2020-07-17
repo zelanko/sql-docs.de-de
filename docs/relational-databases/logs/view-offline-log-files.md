@@ -1,5 +1,6 @@
 ---
 title: Anzeigen von Offlineprotokolldateien | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie SQL Server-Protokolldateien einer lokalen Instanz oder einer Remoteinstanz von SQL Server anzeigen, wenn die Zielinstanz offline ist oder nicht gestartet werden kann.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908559"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667856"
 ---
 # <a name="view-offline-log-files"></a>Anzeigen von Offlineprotokolldateien
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokolldateien von einer lokalen oder Remoteinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen, wenn die Zielinstanz offline ist oder nicht gestartet werden kann.  
   
  Auf die Offlineprotokolldateien können Sie von Registrierte Server oder programmgesteuert mit WMI- und WQL (WMI Query Language)-Abfragen zugreifen.  
@@ -51,9 +52,9 @@ ms.locfileid: "72908559"
   
 -   Lesezugriff auf den **Root\Microsoft\SqlServer\ComputerManagement12** -WMI-Namespace. Standardmäßig verfügt jeder Benutzer durch die Berechtigung Konto aktivieren über Lesezugriff. Weitere Informationen finden Sie im Verfahren "So überprüfen Sie WMI-Berechtigungen" weiter unten in diesem Abschnitt.  
   
--   Leseberechtigung für den Ordner mit den Fehlerprotokolldateien. Standardmäßig befinden sich die Fehlerprotokolldateien unter dem folgenden Pfad (wobei <\<*Laufwerk>* das Laufwerk darstellt, auf dem Sie installiert haben[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und\< *<Instanzname* den Namen der Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] darstellt):  
+-   Leseberechtigung für den Ordner mit den Fehlerprotokolldateien. Standardmäßig befinden sich die Fehlerprotokolldateien unter dem folgenden Pfad (wobei \<*Drive>* das Laufwerk, auf dem Sie die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durchgeführt haben, und \<*InstanceName*> den Namen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] darstellt):  
   
-     **\<Laufwerk>:\Programme\Microsoft SQL Server\MSSQL13.\<Instanzname>\MSSQL\Log**  
+     **\<Drive>:\Programme\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Log**  
   
  Zum Überprüfen der Sicherheitseinstellungen für den WMI-Namespace können Sie das Snap-In WMI-Kontrolle verwenden.  
   

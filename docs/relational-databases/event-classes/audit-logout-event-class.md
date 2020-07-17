@@ -1,5 +1,6 @@
 ---
 title: Audit Logout (Ereignisklasse) | Microsoft-Dokumentation
+description: Die Ereignisklasse „Audit Logout“ gibt an, dass sich ein Benutzer aus SQL Server abgemeldet hat. In diesem Artikel werden die Datenspalten der Ereignisklasse „Audit Logout“ beschrieben.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72a37ac98e6b4c557b06294c1d0ddeb1a3072356
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5848a29de18615da895572bede48014f9aecff2f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726345"
 ---
 # <a name="audit-logout-event-class"></a>Audit Logout (Ereignisklasse)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die Ereignisklasse **Audit Logout** gibt an, dass sich ein Benutzer aus [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abgemeldet hat. Ereignisse in dieser Klasse werden durch neue Verbindungen oder durch Verbindungen ausgelöst, die aus einem Verbindungspool wiederverwendet werden.  
   
 ## <a name="audit-logout-event-class-data-columns"></a>Datenspalten für die Audit Logout-Ereignisklasse  

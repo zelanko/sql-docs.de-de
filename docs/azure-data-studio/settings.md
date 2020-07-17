@@ -1,29 +1,28 @@
 ---
 title: Benutzer- und Arbeitsbereichseinstellungen
-titleSuffix: Azure Data Studio
 description: Vorgehensweise beim Anpassen von Azure Data Studio durch Ändern von Benutzer -und Arbeitsbereichseinstellungen.
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00c7248050d3bf7e0d5d31df6a1e628dbcc03605
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287064"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758387"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Ändern von Benutzer- und Arbeitsbereichseinstellungen
 
-Es ist einfach, [!INCLUDE[name-sos](../includes/name-sos-short.md)] mittels Einstellungen nach Ihren Wünschen zu konfigurieren. Nahezu jeder Teil des Editors von [!INCLUDE[name-sos](../includes/name-sos-short.md)], Benutzeroberfläche und funktionales Verhalten bieten Optionen, die Sie ändern können.
+Es ist einfach, Azure Data Studio mittels Einstellungen nach Ihren Wünschen zu konfigurieren. Nahezu jeder Teil des Editors von Azure Data Studio, Benutzeroberfläche und funktionales Verhalten bieten Optionen, die Sie ändern können.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] bietet zwei unterschiedliche Bereiche für Einstellungen:
+Azure Data Studio bietet zwei unterschiedliche Bereiche für Einstellungen:
 
-* **Benutzer** Diese Einstellungen gelten global für jede Instanz von [!INCLUDE[name-sos](../includes/name-sos-short.md)], die Sie öffnen.
+* **Benutzer** Diese Einstellungen gelten global für jede Instanz von Azure Data Studio, die Sie öffnen.
 * **Arbeitsbereich** Arbeitsbereichseinstellungen sind spezifische Einstellungen für einen Ordner auf Ihrem Computer und nur verfügbar, wenn der Ordner in der Explorer-Randleiste geöffnet ist. Für diesen Bereich definierte Einstellungen überschreiben den Benutzerbereich.
 
 ## <a name="creating-user-and-workspace-settings"></a>Erstellen von Benutzer- und Arbeitsbereichseinstellungen
@@ -36,9 +35,10 @@ Im folgenden Beispiel werden die Zeilennummern im Editor deaktiviert und Codezei
 
 ![Beispieleinstellungen](media/settings/sample-settings.png)
 
-Änderungen an den Einstellungen werden von [!INCLUDE[name-sos](../includes/name-sos-short.md)] neu geladen, nachdem die geänderte `settings.json`-Datei gespeichert wurde.
+Änderungen an den Einstellungen werden von Azure Data Studio neu geladen, nachdem die geänderte `settings.json`-Datei gespeichert wurde.
 
->**Hinweis:** Arbeitsbereichseinstellungen sind nützlich für die gemeinsame Nutzung von projektspezifischen Einstellungen in einem Team.
+> [!NOTE] 
+> Arbeitsbereichseinstellungen sind nützlich für die gemeinsame Nutzung von projektspezifischen Einstellungen in einem Team.
 
 ## <a name="settings-file-locations"></a>Speicherorte für Einstellungsdateien
 
@@ -48,7 +48,7 @@ Abhängig von Ihrer Plattform befindet sich die Datei mit den Benutzereinstellun
 * **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
 * **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
-Die Datei mit den Arbeitsbereichseinstellungen befindet sich unter dem `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]`-Ordner in Ihrem Projekt.
+Die Datei mit den Arbeitsbereichseinstellungen befindet sich unter dem `.Azure Data Studio`-Ordner in Ihrem Projekt.
 
 ## <a name="hot-exit"></a>Hot-Exit
 
@@ -63,4 +63,4 @@ Um mühelos zu erkennen, mit welchen Verbindungen Sie arbeiten, können Sie die 
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-Da [!INCLUDE[name-sos](../includes/name-sos-short.md)] die Funktionalität von Benutzer- und Arbeitsbereichseinstellungen von Visual Studio Code erbt, finden Sie ausführliche Informationen zu den Einstellungen im Artikel [User and Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings) (Benutzer- und Arbeitsbereichseinstellungen).
+Da Azure Data Studio die Funktionalität von Benutzer- und Arbeitsbereichseinstellungen von Visual Studio Code erbt, finden Sie ausführliche Informationen zu den Einstellungen im Artikel [Benutzer- und Arbeitsbereichseinstellungen](https://code.visualstudio.com/docs/getstarted/settings).

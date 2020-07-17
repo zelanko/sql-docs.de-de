@@ -1,5 +1,6 @@
 ---
 title: SQL_VARIANT in einer speicheroptimierten Tabelle
+description: Anhand dieses Beispiels lernen Sie, wie Sie SQL_VARIANT in eine speicheroptimierte Tabelle in SQL Server und Azure SQL-Datenbank implementieren.
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e156de3313889fd29d0745e0cf5cdf23d5192c59
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76acc2e061ff550d2da90b167637ad7efa76b1d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723162"
 ---
 # <a name="implementing-sql_variant-in-a-memory-optimized-table"></a>Implementieren von SQL_VARIANT in einer speicheroptimierten Tabelle
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Hier sehen Sie ein Beispiel für eine Tabelle mit einer **SQL_VARIANT** -Spalte:  
   

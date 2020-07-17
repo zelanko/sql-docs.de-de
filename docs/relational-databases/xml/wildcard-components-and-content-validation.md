@@ -1,5 +1,6 @@
 ---
 title: Platzhalterkomponenten und Inhaltsüberprüfung | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Platzhalterkomponenten für XML-Elemente und -Attribute verwendet werden, um die Flexibilität der zulässigen Inhalte in einem Inhaltsmodell zu erhöhen.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b8613bed755158854851483faf3ea6af4fb60402
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e1fac8a7a0e7eafc4b3bb04809ad51ee2f1b970e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665354"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729821"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Platzhalterkomponenten und Inhaltsüberprüfung
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Platzhalterkomponenten werden verwendet, um die Flexibilität der zulässigen Inhalte in einem Inhaltsmodell zu erhöhen. Diese Komponenten werden in der XSD-Sprache auf folgende Weise unterstützt:  
   
 -   Elementplatzhalterkomponenten. Diese werden durch das **\<xsd:any>** -Element dargestellt.  
   
 -   Attributplatzhalterkomponenten. Diese werden durch das **\<xsd:anyAttribute>** -Element dargestellt.  
   
- Beide Platzhalterzeichenelemente **\<xsd:any>** und **\<xsd: anyAttribute >** unterstützen die Verwendung eines **processContents** Attributs. Auf diese Weise können Sie einen Wert angeben, der angibt, wie XML-Anwendungen die Überprüfung des Dokumentinhalts durchführen, der diesen Platzhalterzeichenelementen zugeordnet ist. Die folgenden Werte und Auswirkungen werden bereitgestellt:  
+ Die beiden Platzhalterzeichenelemente **\<xsd:any>** und **\<xsd:anyAttribute>** unterstützen die Verwendung eines **processContents**-Attributs. Auf diese Weise können Sie einen Wert angeben, der angibt, wie XML-Anwendungen die Überprüfung des Dokumentinhalts durchführen, der diesen Platzhalterzeichenelementen zugeordnet ist. Die folgenden Werte und Auswirkungen werden bereitgestellt:  
   
 -   Der **strict** -Wert gibt an, dass der Inhalt vollständig überprüft wird.  
   

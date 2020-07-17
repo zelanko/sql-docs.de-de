@@ -1,12 +1,13 @@
 ---
-title: Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine | Microsoft-Dokumentation
-ms.custom: ''
+title: Aktivieren von verschlüsselten Verbindungen | Microsoft-Dokumentation
+ms.custom: contperfq4
 ms.date: 08/29/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
+description: Verschlüsseln von Daten über Kommunikationskanäle Hier erfahren Sie, wie Sie verschlüsselte Verbindungen für eine Instanz der SQL Server-Datenbank-Engine mithilfe des SQL Server-Konfigurations-Managers aktivieren.
 helpviewer_keywords:
 - connections [SQL Server], encrypted
 - SSL [SQL Server]
@@ -23,24 +24,31 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 53ca4d2631e41e0a815dbf240fc0a7006ec8ce8b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab9b5b9a52656b948a63d2b283a0637f56da5037
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772508"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  In diesem Thema wird beschrieben, wie Sie verschlüsselte Verbindungen für eine Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] durch Angeben eines Zertifikats für die [!INCLUDE[ssDE](../../includes/ssde-md.md)] mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers aktivieren können. Für den Servercomputer muss ein Zertifikat bereitgestellt worden sein, und der Clientcomputer muss so eingerichtet sein, dass er die Stammzertifizierungsstelle des Zertifikats als vertrauenswürdig einstuft. Zertifikate werden bereitgestellt, indem sie mithilfe eines Importvorgangs in Windows installiert werden.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+  Hier erfahren Sie, wie Sie Daten über Kommunikationskanäle verschlüsseln.  Aktivieren Sie verschlüsselte Verbindungen für eine Instanz der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], und geben Sie mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers ein Zertifikat an.
+ 
+ Der Servercomputer muss über ein Zertifikat verfügen. [Importieren Sie das Zertifikat in Windows](#single-server), um es für den Servercomputer bereitzustellen. Der Clientcomputer muss so eingerichtet werden, dass er die [Stammzertifizierungsstelle des Zertifikats als vertrauenswürdig einstuft](#about).  
   
 > [!IMPORTANT]
 > Seit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wird Secure Sockets Layer (SSL) nicht mehr unterstützt. Verwenden Sie stattdessen Transport Layer Security (TLS).
 
 ## <a name="transport-layer-security-tls"></a>Transport Layer Security (TLS)
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Transport Layer Security (TLS) zum Verschlüsseln der Daten verwendet werden, die über ein Netzwerk zwischen einer Clientanwendung und einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übertragen werden. Die TLS-Verschlüsselung erfolgt auf Protokollebene und steht allen unterstützten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clients zur Verfügung.
-TLS kann für die Serverüberprüfung verwendet werden, wenn die Verschlüsselung von einer Clientverbindung angefordert wird. Wird die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer ausgeführt, dem ein Zertifikat von einer öffentlichen Zertifizierungsstelle zugewiesen wurde, wird die Identität des Computers und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die Zertifikatkette sichergestellt, die zur vertrauenswürdigen Stammzertifizierungsstelle führt. Für diese Serverüberprüfung wird vorausgesetzt, dass der Computer, auf dem die Clientanwendung ausgeführt wird, so konfiguriert ist, dass der Stammzertifizierungsstelle des vom Server verwendeten Zertifikats vertraut wird. Die Verschlüsselung mit einem selbstsignierten Zertifikat ist möglich und wird im folgenden Abschnitt beschrieben, selbstsignierte Zertifikate bieten jedoch nur begrenzt Schutz.
+
+TLS kann für die Serverüberprüfung verwendet werden, wenn die Verschlüsselung von einer Clientverbindung angefordert wird. Wird die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer ausgeführt, dem ein Zertifikat von einer öffentlichen Zertifizierungsstelle zugewiesen wurde, wird die Identität des Computers und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch die Zertifikatkette sichergestellt, die zur vertrauenswürdigen Stammzertifizierungsstelle führt. Für diese Serverüberprüfung wird vorausgesetzt, dass der Computer, auf dem die Clientanwendung ausgeführt wird, so konfiguriert ist, dass der Stammzertifizierungsstelle des vom Server verwendeten Zertifikats vertraut wird. 
+
+Die Verschlüsselung mit einem selbstsignierten Zertifikat ist möglich und wird im folgenden Abschnitt beschrieben, selbstsignierte Zertifikate bieten jedoch nur begrenzt Schutz.
 Die von TLS verwendete Verschlüsselungsstufe, 40 Bit oder 128 Bit, hängt von der Version des Microsoft Windows-Betriebssystems ab, unter der die Anwendungs- und Datenbankcomputer ausgeführt werden.
 
 > [!WARNING]
@@ -54,7 +62,8 @@ Das Aktivieren der TLS-Verschlüsselung erhöht die Sicherheit von Daten, die ne
 -  Die von der Anwendung an die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz gesendeten Pakete müssen vom Client-TLS-Stapel verschlüsselt und vom Server-TLS-Stapel entschlüsselt werden.
 -  Die von der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an die Anwendung gesendeten Pakete müssen vom Server-TLS-Stapel verschlüsselt und vom Client-TLS-Stapel entschlüsselt werden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="about-certificates"></a><a name="about"></a> Informationen zu Zertifikaten
+
  Das Zertifikat muss für die **Serverauthentifizierung**ausgegeben sein. Der Name des Zertifikats muss der vollqualifizierte Domänenname (FQDN) des Computers sein.  
   
  Zertifikate werden lokal für diesen Benutzer auf dem Computer gespeichert. Sie müssen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Configuration Manager mit einem Konto mit lokalen Administratorberechtigungen ausführen, um ein Zertifikat zu installieren, das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden soll.
@@ -62,12 +71,13 @@ Das Aktivieren der TLS-Verschlüsselung erhöht die Sicherheit von Daten, die ne
  Der Client muss in der Lage sein, den Besitzer des vom Server verwendeten Zertifikats zu überprüfen. Wenn der Client über das Zertifikat für öffentliche Schlüssel der Zertifizierungsstelle verfügt, die das Serverzertifikat signiert hat, sind keine weiteren Konfigurationsschritte erforderlich. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows enthält die Zertifikate für öffentliche Schlüssel von vielen Zertifizierungsstellen. Wenn das Serverzertifikat von einer öffentlichen oder privaten Zertifizierungsstelle signiert wurde, für die der Client kein öffentliches Schlüsselzertifikat besitzt, müssen Sie das Zertifikat für öffentliche Schlüssel der Zertifizierungsstelle installieren, die das Serverzertifikat signiert hat.  
   
 > [!NOTE]  
-> Wenn Sie die Verschlüsselung bei einem Failovercluster verwenden möchten, müssen Sie das Serverzertifikat mit dem vollqualifizierten DNS-Namen des virtuellen Servers auf allen Knoten im Failovercluster installieren. Wenn Sie z. B. über einen Cluster mit zwei Knoten verfügen, wobei die Knotennamen ***test1.\*\<Ihr_Unternehmen>\*.com*** und ***test2.\*\<Ihr_Unternehmen>\*.com*** lauten, und ein virtueller Server den Namen ***virtsql*** trägt, müssen Sie ein Zertifikat für ***virtsql.\*\<Ihr_Unternehmen>\*.com*** auf beiden Knoten installieren. Sie können den Wert der Option **ForceEncryption** im Eigenschaftsfeld **Protokolle für virtsql** von **SQL Server-Netzwerkkonfiguration** auf **Ja** setzen.
+> Wenn Sie die Verschlüsselung bei einem Failovercluster verwenden möchten, müssen Sie das Serverzertifikat mit dem vollqualifizierten DNS-Namen des virtuellen Servers auf allen Knoten im Failovercluster installieren. Wenn Sie beispielsweise über einen Cluster mit zwei Knoten (mit den Namen ***test1.\*\<your company>\*.com*** und ***test2.\*\<your company>\*.com***) und einen virtuellen Server mit dem Namen ***virtsql*** verfügen, müssen Sie auf beiden Knoten ein Zertifikat für ***virtsql.\*\<your company>\*.com*** installieren. Sie können den Wert der Option **ForceEncryption** im Eigenschaftsfeld **Protokolle für virtsql** von **SQL Server-Netzwerkkonfiguration** auf **Ja** setzen.
 
 > [!NOTE]
 > Wenn Sie eine verschlüsselte Verbindung für einen Azure Search-Indexer zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einer Azure-VM erstellen wollen, finden Sie weitere Informationen unter [Konfigurieren einer Verbindung eines Azure Search-Indexers mit SQL Server auf einer Azure-VM](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
 
 ## <a name="certificate-requirements"></a>Zertifikatanforderungen
+
 Damit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein TLS-Zertifikat geladen wird, müssen für das Zertifikat folgende Bedingungen erfüllt sein:
 
 - Das Zertifikat muss sich im Zertifikatspeicher des lokalen Computers oder im Zertifikatspeicher des aktuellen Benutzers befinden.
@@ -88,7 +98,8 @@ Damit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein TLS-Zerti
   > [!WARNING]  
   > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
-## <a name="to-provision-install-a-certificate-on-a-single-server"></a>So stellen Sie ein Zertifikat auf einem einzelnen Server bereit bzw. installieren Sie ein Zertifikat  
+## <a name="install-on-single-server"></a><a name="single-server"></a>Installieren auf einem einzelnen Server
+
 Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ist die Zertifikatverwaltung im SQL Server-Konfigurations-Manager integriert. Der SQL Server-Konfigurations-Manager für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] kann mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Informationen zum Hinzufügen eines Zertifikats auf einer einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz finden Sie unter [Zertifikatverwaltung (SQL Server-Konfigurations-Manager)](../../database-engine/configure-windows/manage-certificates.md).
 
 Wenn Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] verwenden und der SQL Server-Konfigurations-Manager für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] nicht verfügbar ist, führen Sie die folgenden Schritte aus:
@@ -113,34 +124,39 @@ Wenn Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL
   
 10. Ergänzen Sie die Angaben im **Zertifikatimport-Assistenten**, um dem Computer ein Zertifikat hinzuzufügen, und schließen Sie dann die MMC-Konsole. Weitere Informationen zum Hinzufügen von Zertifikaten zu einem Computer finden Sie in der Windows-Dokumentation.  
   
-## <a name="to-provision-install-a-certificate-across-multiple-servers"></a>So stellen Sie ein Zertifikat auf mehreren Servern bereit bzw. installieren Sie ein Zertifikat
+## <a name="install-across-multiple-servers"></a>Installieren auf mehreren Servern
+
 Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ist die Zertifikatverwaltung im SQL Server-Konfigurations-Manager integriert. Der SQL Server-Konfigurations-Manager für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] kann mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Weitere Informationen zum Hinzufügen eines Zertifikats in einer Failoverclusterkonfiguration oder in einer Verfügbarkeitsgruppenkonfiguration finden Sie unter [Zertifikatverwaltung (SQL Server-Konfigurations-Manager)](../../database-engine/configure-windows/manage-certificates.md).
 
-Wenn Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] verwenden und der SQL Server-Konfigurations-Manager für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] nicht verfügbar ist, führen Sie für jeden Server die Schritte im Abschnitt [So stellen Sie ein Zertifikat auf einem einzelnen Server bereit bzw. installieren Sie ein Zertifikat](#to-provision-install-a-certificate-on-a-single-server) aus.
+Wenn Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] verwenden und der SQL Server-Konfigurations-Manager für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] nicht verfügbar ist, führen Sie für jeden Server die Schritte im Abschnitt [So stellen Sie ein Zertifikat auf einem einzelnen Server bereit bzw. installieren Sie ein Zertifikat](#single-server) aus.
 
-## <a name="to-export-the-server-certificate"></a>So exportieren Sie das Serverzertifikat  
+## <a name="export-server-certificate"></a>Exportieren des Serverzertifikats  
   
 1. Erweitern Sie im **Zertifikate** -Snap-In den Ordner **Zertifikate** / **Eigene Zertifikate** , klicken Sie mit der rechten Maustaste auf das **Zertifikat**, zeigen Sie auf **Alle Tasks**, und klicken Sie dann auf **Exportieren**.  
   
 2. Führen Sie den **Zertifikatexport-Assistenten**aus, und speichern Sie die Zertifikatsdatei in einem geeigneten Speicherort.  
   
-## <a name="to-configure-the-server-to-force-encrypted-connections"></a>So konfigurieren Sie den Server zum Erzwingen verschlüsselter Verbindungen
+## <a name="configure-server"></a>Konfigurieren des Servers
+
+Konfigurieren Sie den Server, sodass er verschlüsselte Verbindungen erzwingt.
 
 > [!IMPORTANT]
-> Das SQL Server-Dienstkonto muss über Leseberechtigungen für das Zertifikat verfügen, das zum Erzwingen der Verschlüsselung auf dem SQL Server verwendet wird. Für ein nicht privilegiertes Dienstkonto müssen dem Zertifikat Leseberechtigungen hinzugefügt werden. Ist dies nicht der Fall, kann beim Neustart des SQL Server-Diensts ein Fehler auftreten.
+> Das SQL Server-Dienstkonto muss über Leseberechtigungen für das Zertifikat verfügen, das zum Erzwingen der Verschlüsselung auf der SQL Server-Instanz verwendet wird. Für ein nicht privilegiertes Dienstkonto müssen dem Zertifikat Leseberechtigungen hinzugefügt werden. Ist dies nicht der Fall, kann beim Neustart des SQL Server-Diensts ein Fehler auftreten.
   
-1. Erweitern Sie im **SQL Server-Konfigurations-Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<Serverinstanz>_ , und klicken Sie dann auf **Eigenschaften**.  
+1. Erweitern Sie im **SQL Server-Konfigurations-Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<server instance>_ , und klicken Sie dann auf **Eigenschaften**.  
   
-2. Wählen Sie im Dialogfeld **Eigenschaften** von _Protokolle für\<_ **Instanzname>** auf der Registerkarte **Zertifikat** das gewünschte Zertifikat aus der Dropdownliste für das Feld **Zertifikat** aus, und klicken Sie dann auf **OK**.  
+2. Wählen Sie auf der Registerkarte **Zertifikat** im Dialogfeld **Eigenschaften** unter **Protokolle für** _\<instance name>_ das gewünschte Zertifikat aus der Dropdownliste für das Feld **Zertifikat** aus, und klicken Sie dann auf **OK**.  
   
 3. Aktivieren Sie auf der Registerkarte **Flags** im Feld **ForceEncryption** die Option **Ja**, und klicken Sie dann auf **OK** , um das Dialogfeld zu schließen.  
   
 4. Starten Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst neu.  
 
 > [!NOTE]
-> Konfigurieren Sie den Client so, dass verschlüsselte Verbindungen angefordert werden, um eine sichere Verbindung zwischen Client und Server zu gewährleisten. Weitere Informationen finden Sie [weiter unten in diesem Artikel](#to-configure-the-client-to-request-encrypted-connections).
+> Konfigurieren Sie den Client so, dass verschlüsselte Verbindungen angefordert werden, um eine sichere Verbindung zwischen Client und Server zu gewährleisten. Weitere Informationen finden Sie [weiter unten in diesem Artikel](#configure-client).
 
-## <a name="to-configure-the-client-to-request-encrypted-connections"></a>So konfigurieren Sie den Client zum Anfordern verschlüsselter Verbindungen  
+## <a name="configure-client"></a><a name="configure-client"></a>Konfigurieren des Clients
+
+Konfigurieren Sie den Client, sodass er verschlüsselte Verbindungen anfordert.
 
 1. Kopieren Sie entweder das Originalzertifikat oder die exportierte Zertifikatsdatei auf den Clientcomputer.  
   
@@ -150,8 +166,10 @@ Wenn Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL
   
 4. Klicken Sie auf der Seite **Flags** im Feld **Protokollverschlüsselung erzwingen** auf **Ja**.  
   
-## <a name="to-encrypt-a-connection-from-sql-server-management-studio"></a>So verschlüsseln Sie eine Verbindung in SQL Server Management Studio  
+## <a name="use-sql-server-management-studio"></a>Verwenden von SQL Server Management Studio
   
+Führen Sie die folgenden Schritte aus, um eine Verbindung in SQL Server Management Studio zu verschlüsseln:  
+
 1. Klicken Sie auf der Symbolleiste des Objekt-Explorers auf **Verbinden**, und klicken Sie dann auf **Datenbank-Engine**.  
   
 2. Vervollständigen Sie im Dialogfeld **Verbindung mit Server herstellen** die Verbindungseinstellungen, und klicken Sie dann auf **Optionen**.  
@@ -161,6 +179,7 @@ Wenn Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL
 ## <a name="internet-protocol-security-ipsec"></a>Internetprotokollsicherheit (Internet Protocol Security, IPsec)
 Mithilfe von IPSec können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten während der Übertragung verschlüsselt werden. IPSec wird von Client- und Serverbetriebssystemen bereitgestellt und muss in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht konfiguriert werden. Informationen zu IPSec finden Sie in der Windows-Dokumentation oder in der Netzwerkdokumentation.
 
-## <a name="see-also"></a>Weitere Informationen
-[TLS 1.2-Unterstützung für Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
-[Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
+## <a name="next-steps"></a>Nächste Schritte
+
++ [TLS 1.2-Unterstützung für Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
++ [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     

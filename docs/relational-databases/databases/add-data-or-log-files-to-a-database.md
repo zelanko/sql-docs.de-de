@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie einer SQL Server 2019-Datenbank mithilfe von SQL Server Management Studio oder Transact-SQL Daten oder Protokolldateien hinzufügen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 34e976dca163289450c3aa481d1f72bb46712046
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 563a075ec3cba0cc25980e59a228a5c319075caa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727576"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie Daten- oder Protokolldateien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]einer Datenbank hinzugefügt werden.  
   
  **In diesem Thema**  
@@ -35,7 +36,7 @@ ms.locfileid: "68137399"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So fügen Sie einer Datenbank Daten- oder Protokolldateien hinzu mit:**  
   
@@ -72,7 +73,7 @@ ms.locfileid: "68137399"
   
 6.  Wählen Sie den Dateityp aus: Daten- oder Protokolldatei.  
   
-7.  Wählen Sie für eine Datendatei in der Liste die Dateigruppe aus, in der die Datei eingeschlossen werden soll, oder wählen Sie **\<neue Dateigruppe>** aus, um eine neue Dateigruppe zu erstellen. Transaktionsprotokolle können nicht in Dateigruppen platziert werden.  
+7.  Wählen Sie für eine Datendatei in der Liste die Dateigruppe aus, in die die Datei eingeschlossen werden soll, oder wählen Sie **\<new filegroup>** aus, um eine neue Dateigruppe zu erstellen. Transaktionsprotokolle können nicht in Dateigruppen platziert werden.  
   
 8.  Geben Sie die Anfangsgröße der Datei an. Legen Sie die Datendatei so groß wie möglich aus. Orientieren Sie sich dabei an dem maximal zu erwartenden Umfang der Datei, die in der Datenbank gespeichert werden soll.  
   

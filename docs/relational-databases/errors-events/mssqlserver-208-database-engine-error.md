@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_208 | Microsoft-Dokumentation
+description: Das angegebene Objekt wird nicht gefunden, wodurch eine Meldung zu einem ungültigen Objektnamen ausgelöst wird. Hier finden Sie eine Erläuterung des Fehlers sowie mögliche Lösungen.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 4b1895f5-3197-4da1-af86-954c93507956
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1b39638bf7ac09cac4a37d948ba13753ffb6d04
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d61a9510e87eff01b33aef43e3b0db2836fb40c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780558"
 ---
 # <a name="mssqlserver_208"></a>MSSQLSERVER_208
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |  
+| :-------- | :---- |  
 |Produktname|SQL Server|  
 |Ereignis-ID|208|  
 |Ereignisquelle|MSSQLSERVER|  

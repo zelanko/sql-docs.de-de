@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5f1920374f62f98eed81323eca05ce1e45e66fc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fbc22ea4b3673d6ed4d0d4ee581da8fadb473fb8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433757"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888051"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replikation, Änderungsnachverfolgung und Change Data Capture (Always On-Verfügbarkeitsgruppen)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation, Change Data Capture (CDC) und Änderungsnachverfolgung (CT) werden unter [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]unterstützt. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] bietet Hochverfügbarkeit und zusätzliche Funktionen zur Datenbankwiederherstellung.  
   
@@ -196,9 +196,9 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
   
 -   Verwendung der Mergereplikation, während die Veröffentlichungsdatenbank einer Verfügbarkeitsgruppe angehört:  
   
-    -   Pushabonnement: Sowohl auf dem Verleger als auch auf dem Verteiler muss mindestens [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]ausgeführt werden.  
+    -   Pushabonnement: Sowohl auf dem Verleger als auch auf dem Verteiler muss mindestens [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ausgeführt werden.  
   
-    -   Pullabonnement: Die Verleger-, Verteiler- und Abonnentendatenbank müssen mindestens unter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]ausgeführt werden. Das liegt daran, dass der Merge-Agent des Abonnenten verstehen muss, wie eine Verfügbarkeitsgruppe ein Failover auf die sekundäre Datenbank ausführen kann.  
+    -   Pullabonnement: Die Verleger-, Verteiler- und Abonnentendatenbanken müssen mindestens unter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ausgeführt werden. Das liegt daran, dass der Merge-Agent des Abonnenten verstehen muss, wie eine Verfügbarkeitsgruppe ein Failover auf die sekundäre Datenbank ausführen kann.  
   
 -   Die Verlegerinstanzen erfüllen alle zur Teilnahme an einer Always On-Verfügbarkeitsgruppe erforderlichen Voraussetzungen. Weitere Informationen finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)unterstützt.  
   
@@ -217,11 +217,15 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
   
 ### <a name="considerations"></a>Überlegungen  
   
--   Die Verteilerdatenbank wird für die Verwendung mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] oder der Datenbankspiegelung nicht unterstützt. Die Replikationskonfiguration ist mit der SQL Server-Instanz verknüpft, auf der der Verteiler konfiguriert wird. Daher kann die Verteilungsdatenbank nicht gespiegelt oder repliziert werden. Verwenden Sie einen SQL Server-Failovercluster, um Hochverfügbarkeit für den Verteiler bereitzustellen. Weitere Informationen finden Sie unter [Always On-Failoverclusterinstanzen &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)unterstützt.  
+-   Die Verteilungsdatenbank wird nicht für die Verwendung mit Datenbankspiegelung unterstützt. Sie wird jedoch mit bestimmten Einschränkungen mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt. Weitere Informationen finden Sie unter [Konfigurieren der Verteilung in Verfügbarkeitsgruppen](../../../relational-databases/replication/configure-distribution-availability-group.md#limitations-or-exclusions). Die Replikationskonfiguration ist mit der SQL Server-Instanz verknüpft, auf der der Verteiler konfiguriert wird. Daher kann die Verteilungsdatenbank nicht gespiegelt oder repliziert werden. Sie können auch einen SQL Server-Failovercluster verwenden, um Hochverfügbarkeit für den Verteiler bereitzustellen. Weitere Informationen finden Sie unter [Always On-Failoverclusterinstanzen &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)unterstützt.  
   
 -   Abonnentenfailover zu einer sekundären Datenbank wird zwar unterstützt, ist aber eine manuelle Prozedur für Abonnenten für Mergereplikation. Die Prozedur ist im Wesentlichen identisch mit der Methode zum Ausführen des Failovers einer gespiegelten Abonnentendatenbank identisch. Abonnenten einer Transaktionsreplikation erfordern keine besonderen Aktionen, solange sie zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]gehören. Abonnenten müssen [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] oder höher ausführen, um an einer Verfügbarkeitsgruppe teilzunehmen.  Weitere Informationen finden Sie unter [Replikationsabonnenten und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md).
   
 -   Metadaten und Objekte, die außerhalb der Datenbank vorhanden sind, werden nicht an sekundäre Replikate weitergegeben. Das betrifft Benutzernamen, Aufträge, Verbindungsserver usw. Wenn Sie die Metadaten und Objekte in der neuen primären Datenbank nach einem Failover benötigen, müssen Sie diese manuell kopieren. Weitere Informationen finden Sie unter [Verwaltung von Anmeldungen und Aufträgen für die Datenbanken einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md)ausgetauscht werden.  
+
+### <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
+
+Die Verleger- oder Verteilungsdatenbank in einer Verfügbarkeitsgruppe kann nicht als Teil einer verteilten Verfügbarkeitsgruppe konfiguriert werden. Sowohl die Verlegerdatenbank als auch die Verteilungsdatenbank benötigen in einer Verfügbarkeitsgruppe einen Listenerendpunkt, damit sie ordnungsgemäß konfiguriert und verwendet werden können. Es ist jedoch nicht möglich, für eine verteilte Verfügbarkeitsgruppe einen Listenerendpunkt zu konfigurieren.
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **Replikation**  
@@ -252,7 +256,7 @@ Wenn Change Data Capture in einer Datenbank deaktiviert werden muss, die Teil ei
  [Replikationsabonnenten und Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On-Verfügbarkeitsgruppen: Interoperabilität (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Always On-Verfügbarkeitsgruppen: Interoperabilität &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Always On-Failoverclusterinstanzen (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Informationen zur Änderungsnachverfolgung &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   

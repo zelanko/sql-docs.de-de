@@ -1,27 +1,26 @@
 ---
-title: Verwenden der Azure Active Directory-Authentifizierung (Kerberos)
-titleSuffix: Azure Data Studio
+title: Herstellen einer Verbindung mit SQL Server über die Windows-Authentifizierung (Kerberos)
 description: Erfahren Sie, wie Sie Kerberos zur Verwendung für die Active Directory-Authentifizierung für Azure Data Studio aktivieren.
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: meet-bhagdev
-ms.author: meetb
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2e6b303217d420d439d510fc3fc24886657684b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957064"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774658"
 ---
-# <a name="connect-name-sos-to-your-sql-server-using-windows-authentication---kerberos"></a>Stellen Sie eine Verbindung von [!INCLUDE[name-sos](../includes/name-sos-short.md)] mit Ihrer SQL Server-Instanz mithilfe der Windows-Authentifizierung (Kerberos) her. 
+# <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>Herstellen einer Verbindung zwischen Azure Data Studio und SQL Server über die Windows-Authentifizierung – Kerberos
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] unterstützt das Herstellen der Verbindung mit SQL Server mithilfe von Kerberos.
+Azure Data Studio unterstützt das Herstellen der Verbindung mit SQL Server mithilfe von Kerberos.
 
-Um die integrierte Authentifizierung (Windows-Authentifizierung) unter macOS oder Linux verwenden zu können, müssen Sie ein **Kerberos-Ticket** einrichten, mit dem Ihr aktueller Benutzer mit einem Windows-Domänenkonto verknüpft wird. 
+Um die integrierte Authentifizierung (Windows-Authentifizierung) unter macOS oder Linux verwenden zu können, müssen Sie ein **Kerberos-Ticket** einrichten, mit dem Ihr aktueller Benutzer mit einem Windows-Domänenkonto verknüpft wird.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -167,7 +166,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-name-sos"></a>Herstellen einer Verbindung mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="connect-using-azure-data-studio"></a>Verbindungsherstellung mithilfe von Azure Data Studio
 
 * Erstellen Sie ein neues Verbindungsprofil.
 

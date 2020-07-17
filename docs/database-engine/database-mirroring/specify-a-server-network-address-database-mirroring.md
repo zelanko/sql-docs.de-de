@@ -1,6 +1,6 @@
 ---
 title: Angeben einer Servernetzwerkadresse (Datenbankspiegelung)
-description: Geben Sie die Servernetzwerkadresse für einen Datenbankspiegelungsendpunkt an.
+description: Hier erfahren Sie, wie Sie eine Servernetzwerkadresse für einen Datenbankspiegelungs-Endpunkt angeben. Für eine Datenbankspiegelungs-Sitzung benötigt jede Serverinstanz eine Adresse.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87872d393af6b9312a3cfc4b33cc39233be3a463
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75252762"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789611"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Angeben einer Servernetzwerkadresse (Datenbankspiegelung)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Beim Einrichten einer Datenbank-Spiegelungssitzung ist für jede Serverinstanz eine Server-Netzwerkadresse erforderlich. Die Server-Netzwerkadresse der Serverinstanz muss die Instanz eindeutig identifizieren, indem sie eine Systemadresse und die Nummer des Ports angibt, den die Instanz überwacht.  
   
  Bevor Sie einen Port in einer Server-Netzwerkadresse angeben können, muss der Endpunkt der Datenbankspiegelung auf der Serverinstanz vorhanden sein. Weitere Informationen finden Sie unter [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "75252762"
 ##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a> Syntax für eine Server-Netzwerkadresse  
  Die Syntax für eine Server-Netzwerkadresse lautet:  
   
- TCP<strong>://</strong> *\<Systemadresse>* <strong>:</strong> *\<Port>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  Hierbei gilt:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75252762"
         > [!NOTE]  
         >  Informationen zum Ermitteln eines vollqualifizierten Domänennamens finden Sie nachfolgend in diesem Thema unter "Ermitteln des vollqualifizierten Domänennamens".  
   
--   *\<Port>* ist die Portnummer, die vom Spiegelungsendpunkt der Partnerserverinstanz verwendet wird. Weitere Informationen zum Angeben eines Endpunkts finden Sie unter [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
+-   *\<port>* ist die Portnummer, die vom Spiegelungsendpunkt der Partnerserverinstanz verwendet wird. Weitere Informationen zum Angeben eines Endpunkts finden Sie unter [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
      Ein Datenbankspiegelungs-Endpunkt kann jeden verfügbaren Port im Computersystem verwenden. Jede Portnummer in einem Computersystem darf nur einem Endpunkt zugeordnet werden, und jeder Endpunkt ist einer einzelnen Serverinstanz zugeordnet. Daher lauschen unterschiedliche Serverinstanzen auf dem gleichen Server an unterschiedliche Endpunkten mit unterschiedlichen Ports. Aus diesem Grund leitet der Port, den Sie beim Einrichten einer Datenbank-Spiegelungssitzung in der Server-Netzwerkadresse angeben, die Sitzung immer an die Serverinstanz weiter, deren Endpunkt dem jeweiligen Port zugeordnet ist.  
   

@@ -1,5 +1,6 @@
 ---
 title: Abfragen von Spalten mithilfe von Always Encrypted mit SQL Server Management Studio | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Spalten in Always Encrypted mithilfe von SQL Server Management Studio abgefragt werden. Abrufen von in verschlüsselten Spalten gespeicherten Chiffretextwerten oder Textwerten
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f33d58a0fe9b61519c8946708dcd22c84dff90ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627403"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Abfragen von Spalten mithilfe von Always Encrypted mit SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 In diesem Artikel wird beschrieben, wie Sie mithilfe von [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md) mit [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) verschlüsselte Spalten abfragen. Mit SSMS können Sie folgende Aktionen ausführen:
 - Abrufen von in verschlüsselten Spalten gespeicherten Chiffretextwerten 
@@ -172,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 Voraussetzungen für eine erfolgreiche Parametrisierung:   
 - Der Typ des Literals, der für die Initialisierung der zu parametrisierenden Variablen verwendet wird, muss dem Typ in der Variablendeklaration entsprechen.   
-- Wenn der deklarierte Typ der Variablen ein „date“- oder „time“-Typ ist, muss die Variable mithilfe einer Zeichenfolge in einem der folgenden ISO 8601-kompatiblen Formate initialisiert werden.   
+- Wenn die deklarierten Variablen vom Typ „date“ oder „time“ sind, müssen diese mithilfe einer Zeichenfolge in einem der folgenden [ISO 8601-kompatiblen Formate](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles) initialisiert werden.    
 
 Es folgen Beispiele von Transact-SQL-Variablendeklarationen, die zu Parametrisierungsfehlern führen:   
 ```sql

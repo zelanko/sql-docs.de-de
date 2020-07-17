@@ -1,5 +1,6 @@
 ---
 title: Überwachen des Protokollversands (Transact-SQL) | Microsoft-Dokumentation
+description: Erfahren Sie, welche Tabellen einen Verlauf mit Überwachungsinformationen und gespeicherten Prozeduren für die Überwachung des Protokollversands in SQL Server speichern.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 33bb8320abf11400e5224af747d71bcb49fc2d16
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87d17a3f6051e497b64dd88c1dd2e005a4411e27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68030710"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695875"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Überwachen des Protokollversands (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Nach der Konfiguration des Protokollversands können Sie Informationen zum Status aller Protokollversandserver überwachen. Der Verlauf und der Status von Protokollversandvorgängen werden immer lokal durch die Protokollversandaufträge gespeichert. Der Verlauf und der Status des Sicherungsvorgangs werden auf dem primären Server gespeichert, und der Verlauf und der Status von Kopier- und Wiederherstellungsvorgängen werden auf dem sekundären Server gespeichert. Falls Sie einen Remoteüberwachungsserver implementiert haben, werden diese Informationen auch auf dem Überwachungsserver gespeichert.  
   
  Sie können Warnungen konfigurieren, die ausgelöst werden, falls Protokollversandvorgänge nicht wie geplant ausgeführt werden können. Fehler werden durch einen Warnungsauftrag ausgelöst, der den Status der Sicherungs- und Wiederherstellungsvorgänge überwacht. Sie können Warnungen definieren, mit denen ein Operator benachrichtigt wird, wenn diese Fehler ausgelöst werden. Falls ein Überwachungsserver konfiguriert ist, wird ein Warnungsauftrag auf dem Überwachungsserver ausgeführt, der Fehler für alle Vorgänge in der Protokollversandkonfiguration auslöst. Falls kein Überwachungsserver angegeben ist, wird ein Warnungsauftrag in der primären Serverinstanz ausgeführt, die den Sicherungsvorgang überwacht. Falls kein Überwachungsserver angegeben ist, wird außerdem ein Warnungsauftrag in jeder sekundären Serverinstanz ausgeführt, um die lokalen Kopier- und Wiederherstellungsvorgänge zu überwachen.  

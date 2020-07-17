@@ -1,5 +1,6 @@
 ---
 title: Lesen und Anzeigen der Setupprotokolldateien von SQL Server | Microsoft-Dokumentation
+description: In diesem Artikel werden die Protokolldateien beschrieben, die beim Setup von SQL Server erstellt werden. Die Protokolldateien werden in einem Ordner gespeichert, der mit Datum und Uhrzeit versehen wird.
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b3ddfa9ee8866086fa16a384efb63a5392394d3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edeb881f5d589e0a2e09848cc4b4c7f7c958f9ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76929128"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900176"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Lesen und Anzeigen der Setupprotokolldateien von SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Das SQL Server-Setup erstellt standardmäßig Protokolldateien in einem Ordner mit Datum und Zeitstempel in **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log**, wobei *nnn* Zahlen sind, die der installierten Version von SQL entsprechen. Das Namensformat für mit einem Zeitstempel versehene Protokollordner ist JJJJMMTT_hhmmss. Wenn Setup im unbeaufsichtigten Modus ausgeführt wird, werden die Protokolle in „%temp%\sqlsetup*.log“ erstellt. Alle Dateien im Protokollordner werden in der Log\*.cab-Datei im jeweiligen Protokollordner archiviert.  
 
@@ -84,18 +85,18 @@ In den folgenden Abschnitten werden die [!INCLUDE[ssNoVersion](../../includes/ss
   >[!NOTE]
   > Beachten Sie, dass beim Patchen mehrere Unterordner vorliegen können (einer für jede Instanz, die gepatcht wird, und einer für freigegebene Features), die ähnliche Dateien enthalten (d. h. %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Standort  
  Die Datei „summary.txt“ befindet sich in „% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\“.
   
  Um Fehler in der Textdatei zu finden, die die Zusammenfassung enthält, durchsuchen Sie die Datei nach den Schlüsselwörtern "error" oder "failed".
   
-## <a name="summary_machinename_yyyymmdd_hhmmsstxt-file"></a>Datei „Summary_\<Computername>_JJJJMMTT_SSMMss.txt“
+## <a name="summary_machinename_yyyymmdd_hhmmsstxt-file"></a>Datei „Summary_\<MachineName>_JJJJMMTT_SSMMss.txt“
   
 ### <a name="overview"></a>Übersicht  
  Die summary_engine-Basisdatei ähnelt der Zusammenfassungsdatei und wird während des Hauptworkflows generiert.
   
-### <a name="location"></a>Location  
- Die Datei „Summary_\<Computername>_JJJJMMTT_SSMMss.txt“ befindet sich unter „%ProgramFiles%"\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<JJJJMMTT_SSMM>\\.
+### <a name="location"></a>Standort  
+ Die Datei „Summary_\<MachineName>_JJJJMMTT_SSMMss.txt“ befindet sich unter „%ProgramFiles%"\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<JJJJMMTT_SSMM>\\“.
   
   
 ## <a name="detailtxt-file"></a>Datei „Detail.txt“
@@ -103,7 +104,7 @@ In den folgenden Abschnitten werden die [!INCLUDE[ssNoVersion](../../includes/ss
 ### <a name="overview"></a>Übersicht
  Die Datei Detail.txt wird für den Hauptworkflow wie Installation oder Upgrade generiert und liefert Einzelheiten zur Ausführung. Die Protokolle in der Datei werden entsprechend dem Zeitpunkt erstellt, zu dem jede Aktion für die Installation aufgerufen wurde. In der Textdatei sind sowohl die Reihenfolge, in der die Aktionen ausgeführt wurden, als auch deren Abhängigkeiten festgehalten.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Standort  
  Die Datei „Detail.txt“ befindet sich in „%ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<JJJJMMTT_SSMM>\Detail.txt“.  
   
  Wenn während des Setupvorgangs ein Fehler auftritt, wird die Ausnahme oder der Fehler am Ende dieser Datei protokolliert. Um die Fehler in dieser Datei zu finden, prüfen Sie daher zunächst das Ende der Datei, und suchen Sie dann nach dem Schlüsselwort „Fehler“ oder „Ausnahme“.
@@ -115,11 +116,11 @@ In den folgenden Abschnitten werden die [!INCLUDE[ssNoVersion](../../includes/ss
   
  Typen von MSI-Protokolldateien:
   
--   \<Feature>_\<Architektur>\_\<Interaktion>.log   
--   \<Feature>_\<Architektur>\_\<Sprache>\_\<Interaktion>.log   
--   \<Feature>_\<Architecture>\_\<Interaktion>\_\<Workflow>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log   
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log   
+-   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Standort  
  Die MSI-Protokolldateien befinden sich unter %Programme%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log.  
   
  Am Ende der Datei befindet sich eine Zusammenfassung der Ausführung, die die Erfolgs- und Fehlerstatus sowie Eigenschaften enthält. Um den Fehler in der MSI-Datei zu finden, suchen Sie nach „value 3“, und prüfen Sie den Text davor und danach.  
@@ -129,7 +130,7 @@ In den folgenden Abschnitten werden die [!INCLUDE[ssNoVersion](../../includes/ss
 ### <a name="overview"></a>Übersicht  
  Die Konfigurationsdatei enthält die Eingabeeinstellungen, die während der Installation angegeben werden. Sie kann verwendet werden, um eine Installation neu zu starten, ohne die Einstellungen manuell eingeben zu müssen. Kennwörter für die Konten, die PID und einige Parameter werden jedoch nicht in der Konfigurationsdatei gespeichert. Diese Einstellungen können der Datei entweder hinzugefügt oder über die Befehlszeile oder die Setupbenutzeroberfläche angegeben werden. Weitere Informationen finden Sie unter [Installieren von SQL Server 2016 mithilfe einer Konfigurationsdatei](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Standort  
  Die Datei „ConfigurationFile.ini“ befindet sich unter „%ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<JJJJMMTT_SSMM>\\“.  
   
 ## <a name="systemconfigurationcheck_reporthtm-file"></a>Datei „SystemConfigurationCheck_Report.htm“
@@ -137,7 +138,7 @@ In den folgenden Abschnitten werden die [!INCLUDE[ssNoVersion](../../includes/ss
 ### <a name="overview"></a>Übersicht  
  Im Bericht zur Systemkonfigurationsprüfung sind eine kurze Beschreibung für jede ausgeführte Regel sowie der Ausführungsstatus enthalten.
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Standort  
 Die Datei „SystemConfigurationCheck_Report.htm“ befindet sich unter „%ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<JJJJMMTT_SSMM>\\“.
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]

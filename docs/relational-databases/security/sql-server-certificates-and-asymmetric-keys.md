@@ -1,5 +1,6 @@
 ---
 title: SQL Server-Zertifikate und asymmetrische Schlüssel | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über Zertifikate und asymmetrische Schlüssel in SQL Server, einschließlich extern oder in SQL Server generierte Zertifikate, Tools und zugehörige Aufgaben.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153125"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001028"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server-Zertifikate und asymmetrische Schlüssel
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
  Die Verschlüsselung mit öffentlichen Schlüsseln ist eine Form der Nachrichtenverschlüsselung, bei der ein Benutzer einen *öffentlichen* Schlüssel und einen *privaten* Schlüssel erstellt. Der private Schlüssel wird geheim gehalten, der öffentliche Schlüssel kann an andere verteilt werden. Zwar sind die Schlüssel mathematisch miteinander verknüpft, jedoch kann der private Schlüssel nicht einfach aus dem öffentlichen Schlüssel abgeleitet werden. Der öffentliche Schlüssel kann zum Verschlüsseln von Daten verwendet werden, die dann nur vom entsprechenden privaten Schlüssel wieder entschlüsselt werden können. Er kann zum Verschlüsseln von Benachrichtigungen an den Besitzer des privaten Schlüssels verwendet werden. Auf ähnliche Weise kann der Besitzer eines privaten Schlüssels Daten verschlüsseln, die nur mit dem öffentlichen Schlüssel entschlüsselt werden können. Dies bildet die Grundlage des digitalen Zertifikats, bei dem Informationen, die im Zertifikat enthalten sind, vom Besitzer des privaten Schlüssels verschlüsselt werden und dadurch der Autor der Inhalte versichert wird. Da sich die verschlüsselnden und entschlüsselnden Schlüssel unterscheiden, werden sie als *asymmetrische* Schlüssel bezeichnet.
   

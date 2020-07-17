@@ -1,5 +1,6 @@
 ---
 title: Schnellere temporäre Tabellen und Tabellenvariablen
+description: Erfahren Sie, wie Sie temporäre Tabellen, Tabellenvariablen oder Tabellenwertparameter in speicheroptimierte Tabellen und Tabellenvariablen konvertieren, um die Leistung zu verbessern.
 ms.custom: seo-dt-2019
 ms.date: 06/01/2018
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e8f6369de798c04805e2c5facb01fcfd6dc31153
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723242"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Schnellere temporäre Tabellen und Tabellenvariablen durch Speicheroptimierung
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   
 Wenn Sie temporäre Tabellen, Tabellenvariablen oder Tabellenwertparameter verwenden, sollten Sie die Konvertierungen auf Speicheroptimierte Tabellen und Tabellenvariablen zur Verbesserung der Leistung nutzen. Die Codeänderungen sind normalerweise minimal.  
@@ -57,7 +58,7 @@ In-Memory-OLTP stellt die folgenden Objekte bereit, die für speicheroptimierte 
 - Speicheroptimierte Tabellenvariablen  
   - Muss in zwei Schritten (statt inline) deklariert werden:  
     - `CREATE TYPE my_type AS TABLE ...;` , dann  
-    - [https://login.microsoftonline.com/consumers/](`DECLARE @mytablevariable my_type;`).  
+    - `DECLARE @mytablevariable my_type;`.  
   
   
 ## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Szenario: Ersetzen von globaler tempd &#x23;&#x23;table  
@@ -190,7 +191,7 @@ Drittens: Im allgemeinen T-SQL-Code:
   
   
   
-## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D: Szenario: Eine Tabellenvariable kann die WITH-Klausel MEMORY_OPTIMIZED=ON enthalten.  
+## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D: Szenario: Eine Tabellenvariable kann MEMORY_OPTIMIZED=ON sein  
   
   
 Eine herkömmliche Tabellenvariable stellt eine Tabelle in der tempdb-Datenbank dar. Für eine schnellere Leistung können Sie den Speicher Ihrer Tabellenvariable optimieren.  
@@ -420,7 +421,7 @@ Batch execution completed 5001 times.
 Sie können lernen, wie sie die Bedürfnisse des aktiven Arbeitsspeichers für Ihre speicheroptimierten Tabellen mit den folgenden Ressourcen vorhersagen können:  
   
 - [Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
-- [Tabellen- und Zeilengröße in speicheroptimierten Tabellen: Beispielrechnung](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+- [Tabellen- und Zeilengröße in speicheroptimierten Tabellen: Beispielberechnung](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
 Nicht gruppierte Indizes nutzen für größere Tabellenvariablen mehr Arbeitsspeicher als für speicheroptimierte *Tabellen*. Je größer die Anzahl der Zeilen und der Indexschlüssel, desto größer wird der Unterschied.  
   

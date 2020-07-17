@@ -1,7 +1,8 @@
 ---
 title: Datenbankdateien und Dateigruppen | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 01/07/2018
+description: Hier erfahren Sie mehr über Datenbankdateien und zum Erstellen von Dateigruppen in SQL Server für Zuteilungen und zu Verwaltungszwecken. Zeigen Sie Beispiele, Regeln und Empfehlungen an.
+ms.custom: contperfq4
+ms.date: 05/29/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -32,15 +33,15 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58c4cd1b0f3df19365772aa3bee751ac73a7cd1a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287984"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756268"
 ---
 # <a name="database-files-and-filegroups"></a>Datenbankdateien und Dateigruppen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank verfügt über mindestens zwei Betriebssystemdateien: eine Datendatei und eine Protokolldatei. Datendateien enthalten Daten und Objekte wie z. B. Tabellen, Indizes, gespeicherte Prozeduren und Sichten. Protokolldateien enthalten die Informationen, die zum Wiederherstellen aller Transaktionen in der Datenbank erforderlich sind. Datendateien können für die Zuordnung und Verwaltung in Dateigruppen zusammengefasst werden.  
   
 ## <a name="database-files"></a>Datenbankdateien  
@@ -48,20 +49,22 @@ ms.locfileid: "79287984"
   
 |Datei|BESCHREIBUNG|  
 |----------|-----------------|  
-|Primär|Die primäre Datendatei enthält die Startinformationen für die Datenbank und verweist auf die anderen Dateien in der Datenbank. Benutzerdaten und -objekte können in dieser Datei oder in sekundären Datendateien gespeichert werden. Jede Datenbank verfügt über eine primäre Datendatei. Die empfohlene Dateinamenerweiterung für primäre Datendateien ist MDF.|  
-|Secondary|Sekundäre Datendateien sind optional, benutzerdefiniert und speichern Benutzerdaten. Sekundäre Dateien können verwendet werden, um Daten auf mehrere Datenträger zu verteilen, indem jede Datei auf einem anderen Datenträger gespeichert wird. Wenn eine Datenbank die maximal zulässige Größe für eine einzige Datei überschreitet, haben Sie zudem die Möglichkeit, sekundäre Datendateien zu verwenden, sodass die Datenbank weiter vergrößert werden kann.<br /><br /> Die empfohlene Dateinamenerweiterung für sekundäre Datendateien ist NDF.|  
-|Transaktionsprotokoll|Die Transaktionsprotokolldateien speichern die Protokollinformationen, die zum Wiederherstellen der Datenbank verwendet werden. Für jede Datenbank muss mindestens eine Protokolldatei vorhanden sein. Die empfohlene Dateinamenerweiterung für Transaktionsprotokolle ist LDF.|  
+|Primär|Diese Datei enthält die Startinformationen für die Datenbank und verweist auf die anderen Dateien in der Datenbank. Jede Datenbank verfügt über eine primäre Datendatei. Die empfohlene Dateinamenerweiterung für primäre Datendateien ist MDF.|  
+|Secondary|Hierbei handelt es sich um optionale, benutzerdefinierte Datendateien. Daten können auf mehrere Datenträger verteilt werden, indem jede Datei auf einem anderen Laufwerk abgelegt wird. Die empfohlene Dateinamenerweiterung für sekundäre Datendateien ist NDF.|  
+|Transaktionsprotokoll|Das Protokoll enthält Informationen, die zum Wiederherstellen der Datenbank verwendet werden. Für jede Datenbank muss mindestens eine Protokolldatei vorhanden sein. Die empfohlene Dateinamenerweiterung für Transaktionsprotokolle ist LDF.|  
   
- Sie können z. B. eine einfache Datenbank ( **Sales** ), die eine primäre Datei umfasst, die alle Daten und Objekte enthält, und eine Protokolldatei erstellen, die die Transaktionsprotokollinformationen enthält. Es kann auch eine komplexere Datenbank namens **Orders** erstellt werden, die eine primäre Datei und fünf sekundäre Dateien enthält. Die Daten und Objekte in der Datenbank verteilen sich auf alle sechs Dateien, und die vier Protokolldateien enthalten die Transaktionsprotokollinformationen.  
+ Beispielsweise umfasst eine einfache Datenbank mit dem Namen **Sales** eine primäre Datei, die alle Daten und Objekte enthält, sowie eine Protokolldatei, die die Informationen aus dem Transaktionsprotokoll enthält. Es kann auch eine komplexere Datenbank namens **Orders** erstellt werden, die eine primäre Datei und fünf sekundäre Dateien enthält. Die Daten und Objekte in der Datenbank verteilen sich auf alle sechs Dateien, und die vier Protokolldateien enthalten die Transaktionsprotokollinformationen.  
   
- Standardmäßig werden die Daten und Transaktionsprotokolle auf dem gleichen Laufwerk und im gleichen Pfad gespeichert. Dadurch werden auch Systeme mit nur einem Datenträger berücksichtigt. Diese Vorgehensweise ist für Produktionsumgebungen jedoch  möglicherweise nicht optimal. Es wird empfohlen, Daten und Protokolldateien auf verschiedenen Datenträgern zu speichern.  
+ Standardmäßig werden die Daten und Transaktionsprotokolle auf dem gleichen Laufwerk und unter dem gleichen Pfad abgelegt. Dies ist für Produktionsumgebungen möglicherweise nicht die optimale Wahl. Es wird empfohlen, Daten und Protokolldateien auf verschiedenen Datenträgern zu speichern.  
 
 ### <a name="logical-and-physical-file-names"></a>Logische und physische Dateinamen
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateien weisen zwei Arten von Dateinamen auf: 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateien weisen zwei Arten von Dateinamen auf:
 
-**logical_file_name:**  Der logische Dateiname wird dazu verwendet, in allen Transact-SQL-Anweisungen auf die physische Datei zu verweisen. Der logische Dateiname muss den Regeln für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner entsprechen und innerhalb der logischen Dateinamen in der Datenbank eindeutig sein. Dies wird durch das `NAME`-Argument in `ALTER DATABASE` festgelegt. Weitere Informationen finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**logical_file_name:**  Der logische Dateiname wird dazu verwendet, in allen Transact-SQL-Anweisungen auf die physische Datei zu verweisen. Der logische Dateiname muss den Regeln für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner entsprechen und innerhalb der logischen Dateinamen in der Datenbank eindeutig sein.
 
-**os_file_name:** Der Name der Betriebssystemdatei ist der Name der physischen Datei inklusive des Verzeichnispfads. Er muss den betriebssystemspezifischen Regeln für Dateinamen entsprechen. Dies wird durch das `FILENAME`-Argument in `ALTER DATABASE` festgelegt. Weitere Informationen finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**os_file_name:** Der Name der Betriebssystemdatei ist der Name der physischen Datei inklusive des Verzeichnispfads. Er muss den betriebssystemspezifischen Regeln für Dateinamen entsprechen.
+
+ Weitere Informationen zum `NAME`- und `FILENAME`-Argument finden Sie unter [ALTER DATABASE-Optionen für Dateien und Dateigruppen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten und -Protokolldateien können auf FAT- oder NTFS-Dateisystemen platziert werden. Aufgrund seiner Sicherheitsaspekte wird für Windows-Systeme die Verwendung des NTFS-Dateisystems empfohlen. 
@@ -77,14 +80,14 @@ Die Seiten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Da
 
 ![Datendateiseiten](../../relational-databases/databases/media/data-file-pages.gif)
 
-Die erste Seite in jeder Datei ist eine Dateiheaderseite, die Informationen zu den Attributen der Datei enthält. Viele der anderen Seiten am Anfang der Datei enthalten ebenfalls Systeminformationen, wie z. B. Zuordnungstabellen. Eine der Systemseiten, die sowohl in der primären Datendatei als auch in der ersten Protokolldatei gespeichert ist, ist eine Datenbank-Startseite, die Informationen zu den Attributen der Datenbank enthält. Weitere Informationen zu Seiten und Seitentypen finden Sie im [Handbuch zur Architektur von Seiten und Blöcken](../..//relational-databases/pages-and-extents-architecture-guide.md).
-
+Eine Dateiheaderseite ist die erste Seite, die Informationen zu den Attributen der Datei enthält. Viele der anderen Seiten am Anfang der Datei enthalten ebenfalls Systeminformationen, wie z. B. Zuordnungstabellen. Eine der Systemseiten, die sowohl in der primären Datendatei als auch in der ersten Protokolldatei gespeichert ist, ist eine Datenbank-Startseite, die Informationen zu den Attributen der Datenbank enthält.
 ### <a name="file-size"></a>Dateigröße
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateien können automatisch über ihre ursprünglich angegebene Größe wachsen. Wenn Sie eine Datei definieren, können Sie eine bestimmte Schrittweite für die Vergrößerung angeben. Sobald die Datei vollständig aufgefüllt ist, wird sie um den als Schrittweite festgelegten Wert vergrößert. Wenn eine Dateigruppe mehrere Dateien enthält, beginnt die automatische Vergrößerung erst dann, wenn alle Dateien vollständig gefüllt sind. Die Vergrößerung wird dann nach dem Round-Robin-Schema mit [proportionaler Füllung](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill) vorgenommen.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateien können automatisch über ihre ursprünglich angegebene Größe wachsen. Wenn Sie eine Datei definieren, können Sie eine bestimmte Schrittweite für die Vergrößerung angeben. Sobald die Datei vollständig aufgefüllt ist, wird sie um den als Schrittweite festgelegten Wert vergrößert. Wenn eine Dateigruppe mehrere Dateien enthält, beginnt die automatische Vergrößerung erst dann, wenn alle Dateien vollständig gefüllt sind.
 
-Für jede Datei kann zudem eine Maximalgröße angegeben werden. Wenn keine Maximalgröße angegeben wird, kann die Datei so lange vergrößert werden, bis der gesamte verfügbare Speicherplatz auf dem Datenträger verbraucht ist. Diese Funktion ist insbesondere dann hilfreich, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Datenbank verwendet wird, die in eine Anwendung eingebettet ist, und der Benutzer sich nicht ohne weiteres mit einem Systemadministrator in Verbindung setzen kann. Der Benutzer kann festlegen, dass die Dateien nach Bedarf automatisch vergrößert werden, sodass die administrative Arbeit reduziert werden kann, die mit der Überwachung des freien Speicherplatzes in der Datenbank und der manuellen Zuordnung von zusätzlichem Speicherplatz verbunden ist.  
+ Weitere Informationen zu Seiten und Seitentypen finden Sie im [Handbuch zur Architektur von Seiten und Blöcken](../..//relational-databases/pages-and-extents-architecture-guide.md).
 
-Wenn die [schnelle Dateiinitialisierung (Instant File Initialization, IFI)](../../relational-databases/databases/database-instant-file-initialization.md) für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert ist, entsteht bei der Belegung von neuem Speicherplatz für Datendateien ein minimaler Overhead.
+
+Für jede Datei kann zudem eine Maximalgröße angegeben werden. Wenn keine Maximalgröße angegeben wird, kann die Datei so lange vergrößert werden, bis der gesamte verfügbare Speicherplatz auf dem Datenträger belegt ist. Diese Funktion ist insbesondere dann hilfreich, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Datenbank verwendet wird, die in eine Anwendung eingebettet ist, und der Benutzer sich nicht ohne weiteres mit einem Systemadministrator in Verbindung setzen kann. Der Benutzer kann festlegen, dass die Dateien nach Bedarf automatisch vergrößert werden, sodass die administrative Arbeit reduziert werden kann, die mit der Überwachung des freien Speicherplatzes in der Datenbank und der manuellen Zuordnung von zusätzlichem Speicherplatz verbunden ist.  
 
 Weitere Informationen zur Verwaltung von Transaktionsprotokolldateien finden Sie unter [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   
 
@@ -95,18 +98,19 @@ Das von einer Datenbankmomentaufnahme zum Speichern der Kopie-bei-Schreibvorgang
 * Datenbankmomentaufnahmen werden intern von bestimmten DBCC-Befehlen verwendet. Zu diesen Befehlen zählen DBCC CHECKDB, DBCC CHECKTABLE, DBCC CHECKALLOC und DBCC CHECKFILEGROUP. Eine interne Datenbankaufnahme verwendet alternative Datenströme mit geringer Dichte der ursprünglichen Datenbankdateien. So wie Sparsedateien stellen auch alternative Datenströme eine Funktion des NTFS-Dateisystems dar. Die Verwendung alternativer Datenströme mit geringer Dichte ermöglicht das Zuordnen mehrerer Datenzuweisungen zu einer einzelnen Datei bzw. zu einem einzelnen Ordner, ohne Auswirkung auf die Dateigröße oder -umfangstatistiken. 
   
 ## <a name="filegroups"></a>Dateigruppen  
- Jede Datenbank besitzt eine primäre Dateigruppe. Diese Dateigruppe enthält die primäre Datendatei sowie ggf. alle sekundären Dateien, die nicht in anderen Dateigruppen gespeichert werden. Benutzerdefinierte Dateigruppen können erstellt werden, um Datendateien zum Zweck der Verwaltung, Datenzuordnung und -verteilung zu Gruppen zusammenzufassen.  
+* Die Dateigruppe enthält die primäre Datendatei sowie ggf. alle sekundären Dateien, die nicht in anderen Dateigruppen gespeichert werden. 
+* Benutzerdefinierte Dateigruppen können erstellt werden, um Datendateien zum Zweck der Verwaltung, Datenzuordnung und -verteilung zu Gruppen zusammenzufassen.  
   
- Drei Dateien, `Data1.ndf`, `Data2.ndf` und`Data3.ndf`, können beispielsweise auf drei unterschiedlichen Datenträgern erstellt und der Dateigruppe `fgroup1` zugewiesen werden. Anschließend kann eine Tabelle speziell für die Dateigruppe `fgroup1` erstellt werden. Abfragen nach Daten in der Tabelle werden über alle drei Datenträger verteilt, wodurch die Leistung gesteigert wird. Dieselbe Leistungssteigerung kann auch durch die Verwendung einer einzigen Datei erzielt werden, wenn diese auf einem RAID-Stripeset (Redundant Array of Independent Disks; redundantes Datenträgerarray) erstellt wird. Dateien und Dateigruppen ermöglichen Ihnen jedoch das problemlose Hinzufügen neuer Dateien zu neuen Datenträgern.  
+ Beispielsweise können `Data1.ndf`, `Data2.ndf` und `Data3.ndf` entsprechend auf drei unterschiedlichen Datenträgern erstellt und der Dateigruppe `fgroup1` zugewiesen werden. Anschließend kann eine Tabelle speziell für die Dateigruppe `fgroup1` erstellt werden. Abfragen für Daten in der Tabelle werden auf alle drei Datenträger verteilt, wodurch die Leistung gesteigert wird. Dieselbe Leistungssteigerung kann auch durch die Verwendung einer einzigen Datei erzielt werden, wenn diese auf einem RAID-Stripeset (Redundant Array of Independent Disks; redundantes Datenträgerarray) erstellt wird. Dateien und Dateigruppen ermöglichen Ihnen jedoch das problemlose Hinzufügen neuer Dateien zu neuen Datenträgern.  
   
  Alle Datendateien werden in den Dateigruppen gespeichert, die in der folgenden Tabelle aufgeführt werden.  
   
 |Dateigruppe|BESCHREIBUNG|  
 |---------------|-----------------|  
-|Primär|Die Dateigruppe, die die primäre Datei enthält. Alle Systemtabellen werden der primären Dateigruppe zugewiesen.|  
+|Primär|Die Dateigruppe, die die primäre Datei enthält. Alle Systemtabellen sind Teil der primären Dateigruppe.|  
 |Speicheroptimierte Tabelle|Die speicheroptimierte Dateigruppe basiert auf Filestream-Dateigruppen.|  
 |Filestream||    
-|Benutzerdefiniert|Jede Dateigruppe, die eigens durch den Benutzer erstellt wird, wenn dieser die Datenbank erstmals erstellt oder zu einem späteren Zeitpunkt ändert.|  
+|Benutzerdefiniert|Dies bezeichnet jede Dateigruppe, die durch den Benutzer erstellt wird, wenn dieser die Datenbank erstmals erstellt oder zu einem späteren Zeitpunkt ändert.|  
   
 ### <a name="default-primary-filegroup"></a>Standarddateigruppe (Primär)  
  Wenn Objekte in der Datenbank ohne Angabe einer Dateigruppe erstellt werden, werden sie der Standarddateigruppe zugewiesen. Zu jedem Zeitpunkt wird genau eine Dateigruppe zur Standarddateigruppe erklärt. Die Dateien in der Standarddateigruppe müssen groß genug sein, um alle neuen Objekte aufnehmen zu können, die nicht anderen Dateigruppen zugeordnet werden.  
@@ -128,7 +132,7 @@ Weitere Informationen zu Filestream-Dateigruppen finden Sie unter [FILESTREAM](.
 USE master;
 GO
 -- Create the database with the default data
--- filegroup, filstream filegroup and a log file. Specify the
+-- filegroup, filestream filegroup and a log file. Specify the
 -- growth increment and the max size for the
 -- primary data file.
 CREATE DATABASE MyDB
@@ -189,24 +193,24 @@ In der folgenden Abbildung werden die Ergebnisse des vorherigen Beispiels (ohne 
 ![Beispiel einer Dateigruppe](../../relational-databases/databases/media/filegroup-example.gif)
 
 ## <a name="file-and-filegroup-fill-strategy"></a>Füllstrategie für Dateien und Dateigruppen
-Dateigruppen verwenden eine proportionale Füllstrategie über alle Dateien innerhalb einer Dateigruppe hinweg. Wenn Daten in die Dateigruppe geschrieben werden, verteilt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die zu schreibenden Daten auf alle Dateien innerhalb der Dateigruppe. Der Umfang der Daten, die in jede einzelne Datei geschrieben werden, ist dabei proportional zu dem freien Speicherplatz innerhalb jeder Datei. Die Daten werden also nicht so lange in die erste Datei geschrieben, bis diese gefüllt ist. Dann werden Daten in die nächste Datei geschrieben. Wenn z.B. Datei „f1“ über 100 MB und Datei „f2“ über 200 MB freien Speicherplatz verfügt, werden ein Block aus Datei „f1“, zwei Blöcke aus Datei „f2“ usw. zugeordnet. Auf diese Weise werden beide Dateien zum ungefähr gleichen Zeitpunkt vollständig gefüllt, und es wird eine einfache Aufteilung der Daten erzielt.
+Dateigruppen verwenden eine proportionale Füllstrategie über alle Dateien innerhalb einer Dateigruppe hinweg. Wenn Daten in die Dateigruppe geschrieben werden, verteilt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die zu schreibenden Daten auf alle Dateien innerhalb der Dateigruppe. Der Umfang der Daten, die in jede einzelne Datei geschrieben werden, ist dabei proportional zu dem freien Speicherplatz innerhalb jeder Datei. Die Daten werden also nicht so lange in die erste Datei geschrieben, bis diese gefüllt ist. Dann werden Daten in die nächste Datei geschrieben. Wenn z. B. Datei „f1“ über 100 MB und Datei „f2“ über 200 MB freien Speicherplatz verfügt, stammt ein Block aus Datei „f1“, zwei Blöcke aus Datei „f2“ usw. Auf diese Weise werden beide Dateien zum ungefähr gleichen Zeitpunkt vollständig gefüllt, und es wird eine einfache Aufteilung der Daten erzielt.
 
-Sobald alle Dateien in einer Dateigruppe vollständig gefüllt sind, erweitert [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] eine Datei nach der anderen im Round-Robin-Verfahren, um weitere Daten aufnehmen zu können (vorausgesetzt, für die Datenbank wurde die automatische Vergrößerung aktiviert). Nehmen Sie z. B. an, eine Dateigruppe enthält drei Dateien, und für jede Datei wurde die automatische Vergrößerung festgelegt. Wenn der Speicherplatz in allen Dateien der Dateigruppe vollständig verbraucht ist, wird nur die erste Datei erweitert. Wenn die erste Datei gefüllt ist und keine Daten mehr in die Dateigruppe geschrieben werden können, wird die zweite Datei vergrößert. Wenn die zweite Datei gefüllt ist und keine Daten mehr in die Dateigruppe geschrieben werden können, wird die dritte Datei vergrößert. Wenn die dritte Datei gefüllt ist und keine Daten mehr in die Dateigruppe geschrieben werden können, wird erneut die erste Datei vergrößert usw.
+Nehmen Sie z. B. an, eine Dateigruppe enthält drei Dateien, und für jede Datei wurde die automatische Vergrößerung festgelegt. Wenn der Speicherplatz in allen Dateien der Dateigruppe vollständig verbraucht ist, wird nur die erste Datei erweitert. Wenn die erste Datei gefüllt ist und keine Daten mehr in die Dateigruppe geschrieben werden können, wird die zweite Datei vergrößert. Wenn die zweite Datei gefüllt ist und keine Daten mehr in die Dateigruppe geschrieben werden können, wird die dritte Datei vergrößert. Wenn die dritte Datei gefüllt ist und keine Daten mehr in die Dateigruppe geschrieben werden können, wird erneut die erste Datei vergrößert usw.
 
 ## <a name="rules-for-designing-files-and-filegroups"></a>Regeln für das Entwerfen von Dateien und Dateigruppen
 Für Dateien und Dateigruppen gelten die folgenden Regeln:
-- Eine Datei oder Dateigruppe kann nicht von mehreren Datenbanken verwendet werden. So können z.B. die Dateien „sales.mdf“ und „sales.ndf“, die Daten und Objekte der sales-Datenbank enthalten, von keiner anderen Datenbank verwendet werden.
+- Eine Datei oder Dateigruppe kann nicht von mehreren Datenbanken verwendet werden. So können z. B. die Dateien „sales.mdf“ und „sales.ndf“, die Daten und Objekte der Datenbank „sales“ enthalten, von keiner anderen Datenbank verwendet werden.
 - Eine Datei kann nur Mitglied einer einzigen Dateigruppe sein.
 - Transaktionsprotokolldateien können niemals Teil einer Dateigruppe sein.
 
 ## <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen
-Es folgen einige allgemeine Empfehlungen für die Arbeit mit Dateien und Dateigruppen: 
+Empfehlungen für die Arbeit mit Dateien und Dateigruppen: 
 - Die meisten Datenbanken funktionieren problemlos mit nur einer einzigen Datendatei und einer einzigen Transaktionsprotokolldatei.
 - Wenn Sie mehrere Datendateien verwenden, erstellen Sie eine zweite Dateigruppe für die zusätzlichen Datei und legen diese Dateigruppe als Standarddateigruppe fest. Auf diese Weise enthält die primäre Datei nur die Systemtabellen und -objekte.
 - Um eine optimale Leistung zu erzielen, sollten Sie Dateien oder Dateigruppen so weit wie möglich auf unterschiedlichen verfügbaren Datenträgern erstellen. Verteilen Sie Objekte, die viel Speicherplatz beanspruchen, auf unterschiedliche Dateigruppen.
 - Verwenden Sie Dateigruppen, um Objekte auf bestimmte physische Datenträger verteilen zu können.
-- Verteilen Sie unterschiedliche Tabellen, die in denselben Joinabfragen verwendet werden, auf unterschiedliche Dateigruppen. Auf diese Weise wird die Leistung verbessert, da die verknüpften Daten in parallelen Datenträger-E/A-Operationen gesucht werden können.
-- Verteilen Sie Tabellen, auf die häufig zugegriffen wird, und die nicht gruppierten Indizes, die zu diesen Tabellen gehören, auf unterschiedliche Dateigruppen. Hierdurch wird die Leistung verbessert, da auf Dateien, die sich auf unterschiedlichen physischen Datenträgern befinden, parallele E/A-Operationen ausgeführt werden können.
+- Verteilen Sie unterschiedliche Tabellen, die in denselben Joinabfragen verwendet werden, auf unterschiedliche Dateigruppen. Auf diese Weise wird die Leistung verbessert, da die verknüpften Daten in parallelen Datenträger-E/A-Vorgängen gesucht werden.
+- Verteilen Sie Tabellen, auf die häufig zugegriffen wird, und die nicht gruppierten Indizes, die zu diesen Tabellen gehören, auf unterschiedliche Dateigruppen. Durch die Verwendung verschiedener Dateigruppen wird die Leistung verbessert, da auf Dateien, die sich auf unterschiedlichen physischen Datenträgern befinden, parallele E/A-Vorgänge ausgeführt werden können.
 - Platzieren Sie die Transaktionsprotokolldatei(en) nicht auf demselben physischen Datenträger wie die anderen Dateien und Dateigruppen.
 
 Weitere Informationen und Empfehlungen zur Verwaltung von Transaktionsprotokolldateien finden Sie unter [Verwalten der Größe der Transaktionsprotokolldatei](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations).   

@@ -1,5 +1,6 @@
 ---
 title: Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher) | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über Situationen mit unzureichendem Arbeitsspeicher in SQL Server In-Memory OLTP, über das Wiederherstellen und Auflösen von Auswirkungen, über das Beheben von Seitenzuweisungsfehlern und über bewährte Methoden.
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0db5cb560b4e50d903ceca431556f2bdc18365ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722389"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] verwendet mehr Arbeitsspeicher und nutzt diesen auf andere Weise als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es kann vorkommen, dass der installierte, [!INCLUDE[hek_2](../../includes/hek-2-md.md)] zugeordnete Arbeitsspeicher Ihren wachsenden Anforderungen nicht mehr gerecht wird, sodass kein ausreichender Arbeitsspeicher zur Verfügung steht. In diesem Thema erfahren Sie, wie Sie OOM-Situationen (Out of Memory, nicht genügend Arbeitsspeicher) beheben. Weitere Hinweise zur Vermeidung von Situationen mit unzureichendem Arbeitsspeicher finden Sie auch unter dem Thema [Überwachung und Problembehebung bei der Arbeitsspeichernutzung](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) .  
   
@@ -26,13 +27,13 @@ ms.locfileid: "72908450"
   
 |Thema|Übersicht|  
 |-----------|--------------|  
-|[Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung](#bkmk_resolveRecoveryFailures)|Erläutert, wie Sie bei der Fehlermeldung „Fehler beim Wiederherstellungsvorgang für Datenbank „ *\<Datenbankname>* “ aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool „ *\<Ressourcenpoolname>* “ vorgehen.|  
+|[Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung](#bkmk_resolveRecoveryFailures)|Erläutert, wie Sie bei der Fehlermeldung „Fehler beim Wiederherstellungsvorgang für Datenbank ' *\<databaseName>* ' aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool ' *\<resourcePoolName>* '“ vorgehen.|  
 |[Beheben von Beeinträchtigungen der Arbeitsauslastung durch wenig oder unzureichenden Arbeitsspeicher](#bkmk_recoverFromOOM)|Erläutert, wie Sie vorgehen, wenn die Leistung durch unzureichenden Arbeitsspeicher beeinträchtigt wird.|  
-|[Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist](#bkmk_PageAllocFailure)|Erläutert, wie Sie bei der Fehlermeldung „Seitenbelegungen für die Datenbank „ *\<Datenbankname>* “ sind aufgrund unzureichenden Arbeitsspeichers im Ressourcenpool „ *\<Ressourcenpoolname>* “ nicht zulässig“ vorgehen. … nicht zugelassen“ vorgehen, wenn ausreichend Arbeitsspeicher für den Vorgang verfügbar ist.|
+|[Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist](#bkmk_PageAllocFailure)|Erläutert, wie Sie bei der Fehlermeldung „Seitenzuordnungen für die Datenbank ' *\<databaseName>* ' wird aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool ' *\<resourcePoolName>* '“ vorgehen. … nicht zugelassen“ vorgehen, wenn ausreichend Arbeitsspeicher für den Vorgang verfügbar ist.|
 |[Bewährte Methoden zum Verwenden von In-Memory OLTP in einer Umgebung mit virtuellen Computern](#bkmk_VMs)|Zu berücksichtigende Punkte beim Verwenden von In-Memory-OLTP in einer virtualisierten Umgebung.|
   
 ##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> Beheben von Fehlern aufgrund von OOM-Bedingungen bei der Datenbankwiederherstellung  
- Beim Versuch der Wiederherstellung einer Datenbank erhalten Sie möglicherweise die folgende Fehlermeldung: „Fehler beim Wiederherstellen der Datenbank *\<Datenbankname* aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool *Ressourcenpoolname\<* .“ Dies gibt an, dass der Server nicht genügend verfügbaren Arbeitsspeicher zum Wiederherstellen der Datenbank hat. 
+ Beim Versuch der Wiederherstellung einer Datenbank erhalten Sie möglicherweise die folgende Fehlermeldung: „Fehler beim Wiederherstellen der Datenbank ' *\<databaseName>* ' aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool ' *\<resourcePoolName>* '.“ Dies gibt an, dass der Server nicht genügend verfügbaren Arbeitsspeicher zum Wiederherstellen der Datenbank hat. 
    
 Der Server, auf dem Sie eine Datenbank wiederherstellen, muss genügend verfügbaren Arbeitsspeicher für die speicheroptimierten Tabellen in der Datenbanksicherung besitzen. Andernfalls wird die Datenbank nicht online geschaltet und als fehlerverdächtig markiert.  
   

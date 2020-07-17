@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaac8c264caf9009006853e0f02e258ad5d7408f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6a000df12b44b2da1913f45febfaa93e39f7af1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165740"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881224"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Verwendungsszenarios für temporale Tabellen
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Temporale Tabellen sind im Allgemeinen in Szenarien nützlich, in denen der Verlauf von Datenänderungen nachverfolgt werden muss. Für maßgebliche Produktivitätsvorteile wird empfohlen, temporale Tabellen in den folgenden Fällen zu verwenden.
 
@@ -141,8 +141,8 @@ AT TIME ZONE ist in allen anderen Szenarien hilfreich, in denen Tabellen mit Sys
 
 > [!TIP]
 > Filterbedingungen, die in temporalen Klauseln mit FOR SYSTEM_TIME angegeben werden, sind SARG-fähig (SQL Server kann den zugrunde liegenden gruppierten Index verwenden, um einen Suchvorgang statt eines Scanvorgangs auszuführen.
-> Wenn Sie die Verlaufstabelle direkt abfragen, stellen Sie sicher, dass die Filterbedingung ebenfalls SARG-fähig ist, indem Sie Filter in Form von \<Zeitraumspalte> {< | > | =, ...} date_condition AT TIME ZONE 'UTC' angeben.
-> Wenn Sie AT TIME ZONE auf Zeitraumspalten anwenden, führt SQL Server einen Tabellen-/Indexscanvorgang durch, der sehr teuer sein kann. Vermeiden Sie einen Bedingungstyp wie den folgenden in Ihren Abfragen: \<Zeitraumspalte> AT TIME ZONE '\<Ihre Zeitzone>' > {< | > | =, ...} date_condition.
+> Wenn Sie die Verlaufstabelle direkt abfragen, stellen Sie sicher, dass die Filterbedingung ebenfalls SARG-fähig ist, indem Sie Filter im Format \<period column> {< | > | =, ...} date_condition AT TIME ZONE 'UTC' angeben.
+> Wenn Sie AT TIME ZONE auf Zeitraumspalten anwenden, führt SQL Server einen Tabellen-/Indexscanvorgang durch, der sehr teuer sein kann. Vermeiden Sie folgenden Bedingungstyp in Ihren Abfragen: \<period column> AT TIME ZONE '\<your time zone>' > {< | > | =, ...} date_condition.
 
 Weitere Informationen: [Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 

@@ -1,5 +1,6 @@
 ---
 title: Datenbankspiegelungs-Monitor (Seite Status) | Microsoft-Dokumentation
+description: Verwenden Sie diese schreibgeschützte Datenbankspiegelungs-Monitor-Seite, um den Spiegelungsstatus für den Prinzipal und die Spiegelungsserverinstanzen einer ausgewählten Datenbank anzuzeigen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 293b58adde0ccbfe6394cd3917d2671f23f3b290
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81cf4f45b3c3a1cd647f007179655c08995d1a1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70212360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789674"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Datenbankspiegelungs-Monitor (Seite Status)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Diese schreibgeschützte Seite zeigt den neuesten Spiegelungsstatus für die Prinzipal- und die Spiegelserverinstanz der Datenbank an, die zum jetzigen Zeitpunkt in der Navigationsstruktur ausgewählt ist. Wenn Informationen zu einer Instanz zurzeit nicht verfügbar sind, sind einige der Zellen im Raster **Status** , das dieser Instanz entspricht, ausgegraut und zeigen die Option **Unbekannt**an.  
   
  **So verwenden Sie SQL Server Management Studio zum Überwachen der Datenbankspiegelung**  
@@ -45,8 +46,8 @@ ms.locfileid: "70212360"
 |**Zeugenverbindung**|Der Verbindungsstatus des Zeugen, dem ein Statussymbol vorangestellt ist: **Unbekannt**, **Verbunden**oder **Getrennt**.|  
 |**History**|Klicken Sie auf diese Schaltfläche, um den Verlauf der Spiegelung auf der Serverinstanz anzuzeigen. Dadurch wird das Dialogfeld **Datenbankspiegelungsverlauf** geöffnet, das den Verlauf des Spiegelungsstatus und Statistiken für eine gespiegelte Datenbank auf einer bestimmten Serverinstanz anzeigt.<br /><br /> Die Schaltfläche **Verlauf** ist abgeblendet, wenn der Monitor nicht mit der Serverinstanz verbunden ist.|  
   
- **Prinzipalprotokoll (** *\<Zeit>* **)**  
- Status des Protokolls auf der Prinzipalserverinstanz zur lokalen Zeit auf der Serverinstanz, angegeben durch *\<Zeit>* . Folgende Parameter werden angezeigt:  
+ **Prinzipalprotokoll (** *\<time>* **)**  
+ Status des Protokolls auf der Prinzipalserverinstanz zur Ortszeit auf der Serverinstanz, angegeben durch *\<time>* . Folgende Parameter werden angezeigt:  
   
  **Nicht gesendetes Protokoll**  
  Die Menge der Protokolldaten (in Kilobyte), die sich in der Sendewarteschlange befinden.  
@@ -63,8 +64,8 @@ ms.locfileid: "70212360"
  **Aktuelle Rate neuer Transaktionen**  
  Rate, mit der eingehende Transaktionen in das Protokoll des Prinzipals eingetragen werden (in KB pro Sekunde). Sie können feststellen, ob die Spiegelung zurück liegt, gleich schnell ist oder aufholt, indem Sie diesen Wert mit dem Wert von **Zeit zum Senden des Protokolls (geschätzt)** vergleichen.  
   
- **Spiegelungsprotokoll (** *\<Zeit>* **)**  
- Protokollstatus auf der Spiegelserverinstanz zur lokalen Zeit auf der Serverinstanz, angegeben durch *\<Zeit>* . Folgende Parameter werden angezeigt:  
+ **Spiegelungsprotokoll (** *\<time>* **)**  
+ Protokollstatus auf der Spiegelserverinstanz zur Ortszeit auf der Serverinstanz, angegeben durch *\<time>* . Folgende Parameter werden angezeigt:  
   
  **Nicht wiederhergestelltes Protokoll**  
  Die Menge der Protokolldaten in KB, die sich in der Wiederholungswarteschlange befinden.  
@@ -94,7 +95,7 @@ ms.locfileid: "70212360"
 -   **Hohe Sicherheit mit automatischem Failover (synchron)**  
   
 ## <a name="remarks"></a>Bemerkungen  
- Mitglieder der festen Datenbankrolle **dbm_monitor** können den vorhandenen Spiegelungsstatus entweder mithilfe des Datenbankspiegelungs-Monitors oder der gespeicherten Prozedur **sp_dbmmonitorresults** anzeigen. Diese Benutzer können jedoch nicht die Statustabelle aktualisieren. Sie sind abhängig davon, dass der **Auftrag für den Datenbankspiegelungs-Monitor**die Statustabelle regelmäßig aktualisiert. Das Alter des angezeigten Status kann ein Benutzer über die Zeitangaben in den Bezeichnungen **Prinzipalprotokoll (** _\<Zeit>_ **)** und **Spiegelungsprotokoll (** _\<Zeit>_ **)** erfahren.  
+ Mitglieder der festen Datenbankrolle **dbm_monitor** können den vorhandenen Spiegelungsstatus entweder mithilfe des Datenbankspiegelungs-Monitors oder der gespeicherten Prozedur **sp_dbmmonitorresults** anzeigen. Diese Benutzer können jedoch nicht die Statustabelle aktualisieren. Sie sind abhängig davon, dass der **Auftrag für den Datenbankspiegelungs-Monitor**die Statustabelle regelmäßig aktualisiert. Das Alter des angezeigten Status kann ein Benutzer über die Zeitangaben in den Bezeichnungen **Prinzipalprotokoll (** _\<time>_ **)** und **Spiegelungsprotokoll (** _\<time>_ **)** erfahren.  
   
  Wenn dieser Auftrag nicht vorhanden ist oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beendet wurde, veraltet der Status zunehmend und gibt die Konfiguration der Spiegelungssitzung möglicherweise nicht mehr wieder. So kann z. B. nach einem Failover fälschlicherweise angezeigt werden, dass die Partner dieselbe Rolle haben (Prinzipal oder Spiegel), oder der aktuelle Prinzipalserver wird als Spiegel angezeigt, während der aktuelle Spiegelserver als Prinzipal angezeigt wird.  
   

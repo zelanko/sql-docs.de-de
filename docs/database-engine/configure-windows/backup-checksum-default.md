@@ -1,5 +1,6 @@
 ---
 title: Standardeinstellung der Sicherungsprüfsumme | Microsoft-Dokumentation
+description: Informationen zur Option „backup checksum default“ Hier erfahren Sie, wie Sie Option für Sicherungsprüfsummen während Sicherungs- und Wiederherstellungsvorgängen in SQL Server aktivieren oder deaktivieren.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: eb631212791a80fbcf32bd461a2ef476eebe8703
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8dc3e92c294b2afd1374af45c51b349443b76828
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725254"
 ---
 # <a name="backup-checksum-default"></a>Standardeinstellung der Sicherungsprüfsumme
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Nehmen Sie Änderungen an der Standardeinstellung der Sicherungsprüfsumme vor, um diese während der Sicherung und der Wiederherstellung zu aktivieren oder zu deaktivieren.  
   
@@ -28,7 +29,7 @@ ms.locfileid: "68013127"
 |-|-|  
 |**Wert**|**Bedeutung**|  
 |0|Deaktiviert. Dies ist die Standardeinstellung.|  
-|1|Enabled|  
+|1|Aktiviert|  
   
  Diese Einstellung wird sofort wirksam.  
   

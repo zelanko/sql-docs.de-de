@@ -1,7 +1,8 @@
 ---
 title: Features für nativ kompilierte T-SQL-Module
+description: Hier erfahren Sie mehr über die T-SQL-Oberfläche und die unterstützten Features von nativ kompilierten T-SQL-Modulen, z. B. gespeicherte Prozeduren und benutzerdefinierte Skalarfunktionen.
 ms.custom: seo-dt-2019
-ms.date: 10/23/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,36 +12,20 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 172e3a271086564c0ae4da7fd01a3084d65a85e5
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286664"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834721"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Unterstützte Funktionen für nativ kompilierte T-SQL-Module
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   Dieses Thema listet die T-SQL-Oberflächenbereiche und unterstützten Funktionen im Hauptteil nativ kompilierter T-SQL-Module auf, wie gespeicherte Prozeduren ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), benutzerdefinierte Skalarfunktionen, Inline-Tabellenwertfunktionen und Trigger.  
 
  Unterstützte Funktionen in der Definition der nativen Module finden Sie unter [Unterstützte Konstrukte für systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md).  
-
--   [Abfrageoberfläche in nativen Modulen](#qsancsp)  
-
--   [Datenänderung](#dml)  
-
--   [Sprachkonstrukte zur Ablaufsteuerung](#cof)  
-
--   [Unterstützte Operatoren](#so)  
-
--   [Integrierte Funktionen in nativ kompilierten Modulen](#bfncsp)  
-
--   [Überwachung](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#auditing)  
-
--   [Tabellen- und Abfragehinweise](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#tqh)  
-
--   [Einschränkungen bei der Sortierung](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#los)  
 
  Vollständige Informationen zu nicht unterstützten Konstrukten sowie Informationen zu Umgehungslösungen zu einigen der nicht unterstützten Funktionen in nativ kompilierten Modulen finden Sie unter [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)(Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren). Weitere Informationen zu nicht unterstützten Funktionen finden Sie unter [Von In-Memory-OLTP nicht unterstützte Transact-SQL-Konstrukte](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
@@ -66,7 +51,7 @@ SELECT-Klausel:
     - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]
       Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] CTP 1.1 wird der DISTINCT-Operator in nativ kompilierten Modulen unterstützt.
 
-              DISTINCT aggregates are not supported.  
+        - DISTINCT-Aggregate werden nicht unterstützt.  
 
 -   UNION und UNION ALL
     - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]
@@ -76,9 +61,9 @@ SELECT-Klausel:
 
 FROM-Klausel:  
 
--   FROM \<speicheroptimierte Tabelle oder Tabellenvariable  
+-   FROM \<memory optimized table or table variable>  
 
--   FROM \<nativ kompilierte Inline-TVF  
+-   FROM \<natively compiled inline TVF>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN und INNER JOIN.
     - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]
@@ -169,7 +154,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 
 -   [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
 
-               To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
+    - Sie können einen einzelnen TRY/CATCH-Block für ein ganzes nativ kompiliertes T-SQL-Modul verwenden, um die optimale Leistung zu erzielen.  
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
@@ -178,13 +163,13 @@ Die folgenden DML-Anweisungen werden unterstützt.
 ##  <a name="supported-operators"></a><a name="so"></a> Unterstützte Operatoren  
  Die folgenden Operatoren werden unterstützt.  
 
--   [Vergleichsoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (z.B. >, \<, >=, und <=)  
+-   [Vergleichsoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (z. B. >, \<, >=, und <=)  
 
 -   Unäre Operatoren (+, -)  
 
 -   Binäre Operatoren (*, /, +, -, % (Modulo)).  
 
-               The plus operator (+) is supported on both numbers and strings.  
+    - Der Plusoperator (+) wird in Zahlen und Zeichenfolgen unterstützt.  
 
 -   Logische Operatoren (AND, OR, NOT).  
 
@@ -244,7 +229,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 ##  <a name="limitations-on-sorting"></a><a name="los"></a> Einschränkungen bei der Sortierung  
  Sie können mehr als 8.000 Zeilen in einer Abfrage sortieren, die [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) verwendet. Ohne die [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) kann [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) eine Sortierung von bis zu 8.000 Zeilen durchführen (weniger Zeilen, falls es Verknüpfungen gibt).  
 
- Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, wird die folgende Fehlermeldung angezeigt: **Meldung 41398, Ebene 16, Status 1, Prozedur *\<Prozedurname>* , Zeile *\<Zeilennummer>* Der Operator TOP kann maximal 8192 Zeilen zurückgeben; *\<Zahl>* wurden angefordert.**  
+ Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, wird die folgende Fehlermeldung angezeigt: **Nachricht 41398, Ebene 16, Zustand 1, Prozedur *\<procedureName>* , Zeile *\<lineNumber>* der TOP-Operator kann maximal 8192 Zeilen zurückgeben; *\<number>* wurde angefordert.**  
 
  Wenn keine TOP-Klausel vorhanden ist, kann eine beliebige Anzahl von Zeilen mit ORDER BY sortiert werden.  
 

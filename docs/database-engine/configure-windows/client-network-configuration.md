@@ -1,5 +1,6 @@
 ---
 title: Clientnetzwerkkonfiguration | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Clientcomputer eine Verbindung mit einer Instanz von SQL Server in einem Netzwerk herstellen. Hier erfahren Sie mehr über die Tools, die Sie zum Verwalten von Clients verwenden können.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - client connections [SQL Server]
 - network connections [SQL Server], client configuration
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 65e9cff3efd309e25104e0f283a1902d8a0392e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759177"
 ---
 # <a name="client-network-configuration"></a>Client-Netzwerkkonfiguration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Clientsoftware ermöglicht Clientcomputern das Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem Netzwerk. Ein "Client" ist eine Front-End-Anwendung, die die von einem Server bereitgestellten Dienste verwendet, wie z. B. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Der Computer, auf dem sich diese Anwendung befindet, wird als *Clientcomputer*bezeichnet.  
   
  Auf der einfachsten Ebene kann sich ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Client auf demselben Computer wie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]befinden. In der Regel stellt jedoch ein Client eine Verbindung mit mindestens einem Remoteserver über ein Netzwerk her. Die Client/Server-Architektur von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht die problemlose Verwaltung mehrerer Clients und Server in einem Netzwerk. Die Standardclientkonfigurationen sind in den meisten Situationen ausreichend.  

@@ -29,15 +29,15 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c4e7add7cdc8d4dd804c91730db3bb7c121b9df
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981727"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007594"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO-Klausel (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Mit SELECT…INTO wird eine neue Tabelle in der Standarddateigruppe erstellt, und die Ergebniszeilen aus der Abfrage werden darin eingefügt. Die vollständige SELECT-Syntax finden Sie unter [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
@@ -99,7 +99,9 @@ Die `SELECT...INTO`-Anweisung wird in zwei Schritten ausgeführt: Zunächst wird
  Wenn eine berechnete Spalte in die Auswahlliste eingeschlossen ist, ist die entsprechende Spalte in der neuen Tabelle keine berechnete Spalte. Die Werte in der neuen Spalte entsprechen den Werten, die zum Zeitpunkt der Ausführung der `SELECT...INTO`-Anweisung berechnet wurden.  
   
 ## <a name="logging-behavior"></a>Protokollierungsverhalten  
- Der Grad der Protokollierung für `SELECT...INTO` hängt von dem Wiederherstellungsmodell ab, das für die Datenbank aktiv ist. Unter dem einfachen Wiederherstellungsmodell und dem massenprotokollierten Wiederherstellungsmodell werden Massenvorgänge minimal protokolliert. Bei minimaler Protokollierung kann es effizienter sein, die `SELECT...INTO`-Anweisung zu verwenden, anstatt eine Tabelle zu erstellen und diese dann mithilfe einer INSERT-Anweisung aufzufüllen. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Der Grad der Protokollierung für `SELECT...INTO` hängt von dem Wiederherstellungsmodell ab, das für die Datenbank aktiv ist. Unter dem einfachen Wiederherstellungsmodell und dem massenprotokollierten Wiederherstellungsmodell werden Massenvorgänge minimal protokolliert. Bei minimaler Protokollierung kann es effizienter sein, die `SELECT...INTO`-Anweisung zu verwenden, anstatt eine Tabelle zu erstellen und diese dann mithilfe einer INSERT-Anweisung aufzufüllen. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).
+ 
+`SELECT...INTO`-Anweisungen, die benutzerdefinierte Funktionen (UDFs) enthalten, sind vollständig protokollierte Vorgänge. Wenn die benutzerdefinierten Funktionen, die in der `SELECT...INTO`-Anweisung verwendet werden, keine Datenzugriffsvorgänge ausführen, können Sie die SCHEMABINDING-Klausel für die benutzerdefinierten Funktionen angeben. Dadurch wird die abgeleitete UserDataAccess-Eigenschaft für diese benutzerdefinierten Funktionen auf 0 (Null) festgelegt. Nach dieser Änderung werden `SELECT...INTO`-Anweisungen minimal protokolliert. Wenn die `SELECT...INTO`-Anweisung weiterhin auf mindestens eine benutzerdefinierte Funktion verweist, bei der diese Eigenschaft auf 1 festgelegt ist, wird der Vorgang vollständig protokolliert.
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CREATE TABLE-Berechtigung in der Zieldatenbank.  

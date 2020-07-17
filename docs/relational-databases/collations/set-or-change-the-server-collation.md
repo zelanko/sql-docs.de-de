@@ -1,7 +1,7 @@
 ---
 title: Festlegen oder Ändern der Serversortierung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/05/2019
+ms.date: 05/10/2020
 ms.prod: sql
 ms.technology: ''
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
-ms.openlocfilehash: 578735009c72da997159484d308a25784ac64be0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6517111f63f2e28bf27e88003fa0c7b2e9b25fad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733947"
 ---
 # <a name="set-or-change-the-server-collation"></a>Festlegen oder Ändern der Serversortierung
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Die Serversortierung fungiert als Standardsortierung für alle Systemdatenbanken, die zusammen mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert werden, sowie für alle neu erstellten Benutzerdatenbanken. Sie sollten die Sortierung auf Serverebene sorgfältig auswählen, da sie sich auf Folgendes auswirkt:
  - Sortier- und Vergleichsregeln in `=`, `JOIN`, `ORDER BY` und anderen Operatoren, die Textdaten vergleichen.
  - Sortierung der Spalten `CHAR`, `VARCHAR`, `NCHAR` und `NVARCHAR` in Systemansichten, Systemfunktionen und den Objekten in TempDB (z. B. temporäre Tabellen).
@@ -29,8 +29,11 @@ ms.locfileid: "82762891"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>Festlegen der Serversortierung in SQL Server
 
-  Die Serversortierung wird bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angegeben. Die Standardsortierung auf Serverebene ist **SQL_Latin1_General_CP1_CI_AS**. Nur-Unicode-Sortierungen können nicht als Sortierung auf Serverebene festgelegt werden. Weitere Informationen finden Sie unter [Collation and Unicode Support](collation-and-unicode-support.md).
-  
+  Die Serversortierung wird bei der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angegeben. Die Standardsortierung auf Serverebene basiert auf dem Gebietsschema des Betriebssystems. Beispielsweise ist die Standardsortierung für Systeme, die US-Englisch (en-US) verwenden, **SQL_Latin1_General_CP1_CI_AS**. Nur-Unicode-Sortierungen können nicht als Sortierung auf Serverebene festgelegt werden. Weitere Informationen, einschließlich der Liste der Gebietsschemas des Betriebssystems für die Standardsortierungszuordnungen, finden Sie im Abschnitt „Sortierungen auf Serverebene“ im Artikel [Unterstützung von Sortierungen und Unicode](collation-and-unicode-support.md#Server-level-collations).
+
+> [!NOTE]  
+> Die Sortierung auf Serverebene für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express LocalDB ist **SQL_Latin1_General_CP1_CI_AS** und kann jeweils während oder nach der Installation nicht geändert werden.  
+
 ## <a name="changing-the-server-collation-in-sql-server"></a>Ändern der Serversortierung in SQL Server
 
  Das Ändern der Standardsortierung für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein komplexer Vorgang sein, der die folgenden Schritte umfasst:  
@@ -56,7 +59,7 @@ ms.locfileid: "82762891"
 - Importieren aller Daten.  
   
 > [!NOTE]  
-> Anstatt die Standardsortierung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu ändern, können Sie eine Standardsortierung für alle neu zu erstellenden Datenbanken angeben.  
+> Anstatt die Standardsortierung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu ändern, können Sie eine Standardsortierung für alle neuen Datenbanken angeben, die Sie über die `COLLATE`-Klausel der Anweisungen `CREATE DATABASE` oder `ALTER DATABASE` erstellen. Weitere Informationen finden Sie unter [Festlegen oder Ändern der Datenbanksortierung](set-or-change-the-database-collation.md).  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Festlegen der Serversortierung in der verwalteten Instanz
 Die Sortierung auf Serverebene in der verwalteten Azure SQL-Instanz kann beim Erstellen der Instanz festgelegt werden. Sie kann später nicht mehr geändert werden. Sie können die Sortierung auf Serverebene über das [Azure-Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) oder über [PowerShell und eine Resource Manager-Vorlage](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) beim Erstellen der Instanz festlegen. Die Standardsortierung auf Serverebene ist **SQL_Latin1_General_CP1_CI_AS**. Nur-Unicode- und die neuen UTF-8-Sortierungen können nicht als Serversortierungen festgelegt werden.

@@ -1,23 +1,22 @@
 ---
 title: Verwenden von Erkenntniswidgets zum Überwachen von Servern und Datenbanken
-titleSuffix: Azure Data Studio
 description: Weitere Informationen zu Erkenntniswidgets in Azure Data Studio
 ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1568251dba79998c07e05b78b2d156cebbb0e7fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774607"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-name-sos"></a>Verwalten von Servern und Datenbanken mit Erkenntniswidgets in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>Verwalten von Servern und Datenbanken mit Erkenntniswidgets in Azure Data Studio
 
 Erkenntniswidgets führen die Transact-SQL-Abfragen (T-SQL) aus, die Sie zum Überwachen von Servern und Datenbanken verwenden, und wandeln sie in aufschlussreiche Visualisierungen um.
 
@@ -36,7 +35,7 @@ In den folgenden Tutorials erfahren Sie, wie Sie damit beginnen, verschiedene Ar
 
 ## <a name="sql-queries"></a>SQL-Abfragen
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] versucht, die Einführung noch einer anderen Sprache oder großen Benutzeroberfläche zu vermeiden, also wird versucht, T-SQL so weit wie möglich mit minimaler JSON-Konfiguration zu verwenden. Das Konfigurieren von Erkenntniswidgets mit T-SQL nutzt die zahlreichen vorhandenen Quellen nützlicher T-SQL-Abfragen, die in aufschlussreiche Widgets umgewandelt werden können.
+Azure Data Studio versucht, die Einführung einer weiteren Sprache oder eine große Benutzeroberfläche zu vermeiden. Deshalb wird versucht, so viel wie möglich T-SQL mit minimaler JSON-Konfiguration zu verwenden. Das Konfigurieren von Erkenntniswidgets mit T-SQL nutzt die zahlreichen vorhandenen Quellen nützlicher T-SQL-Abfragen, die in aufschlussreiche Widgets umgewandelt werden können.
 
 Erkenntniswidgets bestehen aus einer oder zwei T-SQL-Abfragen:
 * Die *Erkenntniswidgetabfrage* ist obligatorisch und gibt die Daten zurück, die im Widget angezeigt werden.
@@ -44,7 +43,7 @@ Erkenntniswidgets bestehen aus einer oder zwei T-SQL-Abfragen:
 
 Eine Erkenntniswidgetabfrage definiert ein Dataset, das eine Anzahl, ein Diagramm oder einen Graphen rendert. Die Erkenntnisdetailsabfrage wird verwendet, um relevante Erkenntnisdetailinformationen im Erkenntnisdetailsbereich in einem Tabellenformat aufzulisten. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] führt Erkenntniswidgetabfragen aus, ordnet das Abfrageresultset dem Dataset eines Diagramms zu und rendert es. Wenn Benutzer Details einer Erkenntnis öffnen, wird die Erkenntnisdetailsabfrage ausgeführt und das Ergebnis in einer Rasteransicht innerhalb des Dialogfelds ausgegeben.
+Azure Data Studio führt Erkenntniswidgetabfragen aus, ordnet das Abfrageresultset dem Dataset eines Diagramms zu und rendert es. Wenn Benutzer Details einer Erkenntnis öffnen, wird die Erkenntnisdetailsabfrage ausgeführt und das Ergebnis in einer Rasteransicht innerhalb des Dialogfelds ausgegeben.
 
 Die grundlegende Idee ist, eine T-SQL-Abfrage so zu schreiben, dass sie als Dataset eines Anzahl-, Diagramm- und Graphwidgets verwendet werden kann. 
 

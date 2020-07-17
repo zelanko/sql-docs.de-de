@@ -17,16 +17,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759129"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2017
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
   In diesem Thema werden die als veraltet markierten Funktionen von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] beschrieben, die in [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]noch verfügbar sind. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  
   
@@ -325,7 +325,7 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 
 | Als veraltet markierte Funktion | Ersatz | Feature name |
 |--------------------|-------------|--------------|
-| :: Funktionsaufrufsequenz | Ersetzt durch SELECT *Spaltenliste* FROM sys.\<*Funktionsname*>().<br /><br />Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. | Funktionsaufrufsyntax '::' |
+| :: Funktionsaufrufsequenz | Ersetzt durch SELECT *Spaltenliste* FROM sys.\<*function_name*>().<br /><br />Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. | Funktionsaufrufsyntax '::' |
 | Spaltenverweise mit 3 Teilen und 4 Teilen. | Zweiteilige Namen sind das standardkonforme Verhalten.|Mehr als zweiteiliger Spaltenname |
 | Eine in Anführungszeichen eingeschlossene Zeichenfolge, die als Spaltenalias für einen Ausdruck in einer SELECT-Liste verwendet wird:<br /><br />'*Zeichenfolgenalias*' = *Ausdruck* | *Ausdruck* [AS] *Spaltenalias*<br /><br />*Ausdruck* [AS] [*Spaltenalias*]<br /><br />*Ausdruck* [AS] "*Spaltenalias*"<br /><br />*Ausdruck* [AS] '*Spaltenalias*'<br /><br />*Spaltenalias* = *Ausdruck* | Zeichenfolgenliterale als Spaltenaliase |
 | Nummerierte Prozeduren | Keine. Darf nicht verwendet werden. | ProcNums |

@@ -1,7 +1,8 @@
 ---
-title: Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren gesperrt sind | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
+title: Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren den Zugriff verloren haben | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie als Systemadministrator den Zugriff auf SQL Server zurückgewinnen, wenn Sie versehentlich ausgesperrt wurden.
+ms.custom: contperfq4
+ms.date: 05/20/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -12,18 +13,19 @@ helpviewer_keywords:
 - connecting when locked out [SQL Server]
 - locked out [SQL Server]
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ebaa078fc3be919a6114ad275b0ef5ece6f0d0d7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eec9e95ccbc326d3d2f64d224cf11f3d059bb8f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74761196"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717082"
 ---
-# <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren gesperrt sind
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In diesem Thema wird beschrieben, wie Sie als Systemadministrator den Zugriff auf [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wiedererlangen können. Ein Systemadministrator kann aufgrund einer der folgenden Ursachen Zugriff auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verlieren:  
+# <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren den Zugriff verloren haben 
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  
+In diesem Artikel wird beschrieben, wie Sie als Systemadministrator den verlorenen Zugriff auf [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wiedererlangen können.  Ein Systemadministrator kann aufgrund einer der folgenden Ursachen den Zugriff auf eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verlieren:  
   
 -   Alle Anmeldedaten, die Mitglieder der festen Serverrolle sysadmin sind, wurden versehentlich entfernt.  
   
@@ -33,49 +35,66 @@ ms.locfileid: "74761196"
   
 -   Das sa-Konto wurde deaktiviert, oder das Kennwort ist unbekannt.  
   
- Eine Methode zum Wiedererlangen des Zugriffs ist die Neuinstallation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Anfügen aller Datenbanken an die neue Instanz. Diese Lösung ist zeitaufwändig. Außerdem kann es zum Wiederherstellen der Anmeldedaten erforderlich sein, die Masterdatenbank aus einer Sicherung wiederherzustellen. Je nach Datum der Sicherung der Masterdatenbank sind möglicherweise nicht alle Informationen enthalten. Wenn die Sicherung der Masterdatenbank aktuell ist, sind möglicherweise die gleichen Anmeldedaten wie in der vorherigen Instanz enthalten und die Administratoren sind immer noch gesperrt.  
-  
-## <a name="resolution"></a>Lösung  
- Starten Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus mithilfe der Option **-m** oder der Option **-f** . Ein beliebiges Mitglied der lokalen Administratorengruppe des Computers kann dann eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Mitglied der festen Serverrolle sysadmin herstellen.  
-  
-> [!NOTE]  
->  Wenn Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus starten, müssen Sie zunächst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst beenden. Andernfalls stellt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent möglicherweise zuerst eine Verbindung her und verhindert, dass Sie als zweiter Benutzer eine Verbindung herstellen können.  
-  
- Wenn Sie die Option **-m** mit **sqlcmd** oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwenden, können Sie die Verbindungen auf eine angegebene Clientanwendung beschränken. **-m"sqlcmd"** beschränkt Verbindungen z.B. auf eine einzelne Verbindung, und diese Verbindung muss sich als **sqlcmd** -Clientprogramm identifizieren. Verwenden Sie diese Option, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus starten und eine unbekannte Clientanwendung die einzige verfügbare Verbindung belegt. Um die Verbindung über den Abfrage-Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]herzustellen, verwenden Sie **-m"Microsoft SQL Server Management Studio - Query"** .  
-  
+## <a name="resolution"></a>Lösung
+
+Es wird empfohlen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz im Einzelbenutzermodus zu starten, um Ihr Zugriffsproblem zu lösen. Dieser Modus verhindert, dass andere Verbindungen hergestellt werden, während Sie versuchen, den Zugriff zurückzugewinnen. Anschließend können Sie eine Verbindung zu Ihrer SQL Server-Instanz herstellen und Ihre Anmeldung zur Serverrolle **sysadmin** hinzufügen. Eine ausführliche Anleitung für diese Lösung finden Sie im Abschnitt [Schrittweise Anleitung](#step-by-step-instructions).
+
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen können mithilfe der Option `-m` oder `-f` über die Befehlszeile im Einzelbenutzermodus gestartet werden. Jedes Mitglied der lokalen Administratorengruppe des Computers kann als Mitglied der festen Serverrolle **sysadmin** eine Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen.  
+
+Wenn Sie die Instanz im Einzelbenutzermodus starten, müssen Sie zunächst den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst beenden. Andernfalls stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent möglicherweise zuerst eine Verbindung her und belegt die einzige verfügbare Verbindung zum Server. Dadurch wird Ihre Anmeldung blockiert.
+
+Die einzige verfügbare Verbindung kann auch von einer unbekannten Clientanwendung besetzt werden, bevor Sie sich anmelden können. Damit dies nicht geschieht, können Sie die `-m`-Option gefolgt von einem Anwendungsnamen verwenden, um die Verbindungen der angegebenen Anwendung auf eine einzelne Verbindung zu beschränken. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit `-m"sqlcmd"` starten, werden Verbindungen z. B. auf eine einzelne Verbindung beschränkt, die sich selbst als **sqlcmd**-Clientprogramm identifiziert. Für eine Verbindungsherstellung über den Abfrage-Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] müssen Sie `-m"Microsoft SQL Server Management Studio - Query"` verwenden.  
+
+
 > [!IMPORTANT]  
->  Verwenden Sie diese Option nicht als Sicherheitsfunktion. Die Clientanwendung gibt den Clientanwendungsnamen an und kann als Teil der Verbindungszeichenfolge einen falschen Namen angeben.  
+> Verwenden Sie `-m` unter keinen Umständen als Sicherheitsfeature mit einem Anwendungsnamen. Clientanwendungen geben den Anwendungsnamen über die Einstellungen der Verbindungszeichenfolgen an, sodass er problemlos mit einem falschen Namen gespooft werden kann.
+
+In der folgenden Tabelle werden die verschiedenen Methoden zusammengefasst, mit denen die Instanz über die Befehlszeile im Einzelbenutzermodus gestartet werden kann.
+
+| Option | BESCHREIBUNG | Verwendung |
+|:---|:---|:---|
+|`-m` | Beschränkt die Verbindungen auf eine einzelne Verbindung | Wenn keine anderen Benutzer versuchen, eine Verbindung mit der Instanz herzustellen, oder Sie den Namen der Anwendung nicht kennen, mit der die Verbindung zur Instanz hergestellt wird |
+|`-m"sqlcmd"`| Beschränkt die Verbindungen auf eine einzelne Verbindung, die sich als **sqlcmd**-Clientprogramm identifizieren muss| Wenn Sie mit **sqlcmd** eine Verbindung zur Instanz herstellen und verhindern möchten, dass andere Anwendungen die einzige verfügbare Verbindung belegen |
+|`-m"Microsoft SQL Server Management Studio - Query"`| Beschränkt die Verbindungen auf eine einzelne Verbindung, die sich selbst als die Anwendung **Microsoft SQL Server Management Studio - Query** identifizieren muss.| Wenn Sie über den Abfrage-Editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] eine Verbindung zur Instanz herstellen und verhindern möchten, dass andere Anwendungen die einzige verfügbare Verbindung belegen |
+|`-f`| Beschränkt die Verbindungen auf eine einzelne Verbindung und startet die Instanz mit einer minimalen Konfiguration | Wenn eine andere Konfiguration den Start verhindert |
+| &nbsp; | &nbsp; | &nbsp; |
   
- Schrittanleitungen zum Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus finden Sie unter [Konfigurieren von Serverstartoptionen &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
+Eine detaillierte Anleitung zum Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus finden Sie unter [Starten von SQL Server im Einzelbenutzermodus](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md).
+
+## <a name="step-by-step-instructions"></a>Schrittweise Anleitung
+
+In der folgenden ausführlichen Anleitung wird beschrieben, wie Sie einer SQL Server-Anmeldung, die versehentlich den Zugriff verloren hat, die Berechtigungen der Rolle „Systemadministrator“ erteilen.
+
+In dieser Anleitung wird Folgendes vorausgesetzt:
+
+* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird unter Windows 8 oder höher ausgeführt. Auf geringfügige Abweichungen bei früheren Versionen von SQL Server oder Windows wird ggf. hingewiesen.
+
+* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist auf dem Computer installiert.  
+
+Führen Sie diese Schritte aus, während Sie in Windows als Mitglied der lokalen Administratorgruppe angemeldet sind.
+
+1.  Klicken Sie im Windows-Startmenü mit der rechten Maustaste auf das Symbol für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager, und wählen Sie **Als Administrator ausführen** aus, um Ihre Administratoranmeldeinformationen an den Konfigurations-Manager zu übergeben.  
   
-## <a name="step-by-step-instructions"></a>Schritt-für-Schritt-Anweisungen  
- Im Folgenden wird beschrieben, wie eine Verbindung mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unter Windows 8 (oder höher) hergestellt wird. Auf geringfügige Abweichungen bei früheren Versionen von SQL Server oder Windows wird ggf. hingewiesen. Diese Anweisungen müssen ausgeführt werden, während Sie als Mitglied der lokalen Administratorgruppe bei Windows angemeldet sind. Außerdem wird davon ausgegangen, dass [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auf dem Computer installiert ist.  
+2.  Wählen Sie im linken Bereich des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers die Option **SQL Server-Dienste**aus. Suchen Sie im rechten Bereich Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. (Bei der Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist **(MSSQLSERVER)** nach dem Computernamen angegeben. Benannte Instanzen werden in Großbuchstaben mit demselben Namen wie unter Registrierte Server angezeigt.) Klicken Sie mit der rechten Maustaste auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, und klicken Sie dann auf **Eigenschaften**.  
   
-1.  Starten Sie auf der Startseite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wählen Sie im Menü **Ansicht** die Option **Registrierte Server**aus. (Wenn Ihr Server noch nicht registriert ist, klicken Sie mit der rechten Maustaste auf **Lokale Servergruppen**, zeigen auf **Tasks**und klicken dann auf **Lokale Server**registrieren.)  
-  
-2.  Klicken Sie im Bereich „Registrierte Server“ mit der rechten Maustaste auf den Server, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**. Eine Berechtigung zum Ausführen als Administrator sollte angefordert und der Konfigurations-Manager geöffnet werden.  
-  
-3.  Schließen Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
-  
-4.  Wählen Sie im linken Bereich des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers die Option **SQL Server-Dienste**aus. Suchen Sie im rechten Bereich Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. (Bei der Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist **(MSSQLSERVER)** nach dem Computernamen angegeben. Benannte Instanzen werden in Großbuchstaben mit demselben Namen wie unter Registrierte Server angezeigt.) Klicken Sie mit der rechten Maustaste auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, und klicken Sie dann auf **Eigenschaften**.  
-  
-5.  Geben Sie auf der Registerkarte **Startparameter** im Feld **Startparameter angeben** die Zeichenfolge `-m` ein, und klicken Sie dann auf **Hinzufügen**. (Der Parameter entspricht einem Bindestrich und dem Kleinbuchstaben m.)  
+3.  Geben Sie auf der Registerkarte **Startparameter** im Feld **Startparameter angeben** die Zeichenfolge `-m` ein, und klicken Sie dann auf **Hinzufügen**. (Der Parameter entspricht einem Bindestrich und dem Kleinbuchstaben m.)  
   
     > [!NOTE]  
     >  Bei einigen früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen gibt es keine Registerkarte **Startparameter** . Doppelklicken Sie in diesem Fall auf der Registerkarte **Erweitert** auf **Startparameter**. Die Parameter werden in einem sehr kleinen Fenster geöffnet. Achten Sie darauf, die vorhandenen Parameter nicht zu ändern. Fügen Sie ganz unten den neuen Parameter `;-m` hinzu, und klicken Sie auf **OK**. (Der Parameter entspricht einem Semikolon, einem Bindestrich und dem Kleinbuchstaben m.)  
   
-6.  Klicken Sie auf **OK**, klicken Sie nach Ausgabe der Neustartmeldung mit der rechten Maustaste auf den Servernamen, und klicken Sie dann auf **Neu starten**.  
+4.  Klicken Sie auf **OK**, klicken Sie nach Ausgabe der Neustartmeldung mit der rechten Maustaste auf den Servernamen, und klicken Sie dann auf **Neu starten**.  
   
-7.  Nachdem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde, befindet sich Ihr Server im Einzelbenutzermodus. Stellen Sie sicher, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent nicht ausgeführt wird. da er andernfalls Ihre einzige Verbindung belegt.  
+5.  Nachdem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde, befindet sich Ihr Server im Einzelbenutzermodus. Stellen Sie sicher, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent nicht ausgeführt wird. da er andernfalls Ihre einzige Verbindung belegt.  
   
-8.  Klicken Sie im Startbildschirm von Windows 8 mit der rechten Maustaste auf das Symbol für [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Wählen Sie am unteren Bildschirmrand **Als Administrator ausführen**aus. (Dadurch werden Ihre Administratoranmeldeinformationen an SSMS übergeben.)  
+6.  Klicken Sie im Windows-Startmenü mit der rechten Maustaste auf das Symbol für [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], und wählen Sie **Als Administrator ausführen** aus. Dadurch werden Ihre Administratoranmeldeinformationen an SQL Server Management Studio übergeben.
   
     > [!NOTE]  
     >  In früheren Windows-Versionen wird die Option **Als Administrator ausführen** als Untermenü angezeigt.  
   
-     In einigen Konfigurationen versucht SSMS, mehrere Verbindungen herzustellen. Mehrere Verbindungen verursachen einen Fehler, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus ausgeführt wird. Sie können zwischen folgenden Aktionen wählen. Führen Sie einen der folgenden Schritte aus:  
+     In einigen Konfigurationen versucht SSMS, mehrere Verbindungen herzustellen. Mehrere Verbindungen verursachen einen Fehler, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus ausgeführt wird. Führen Sie Ihrem Szenario entsprechend die passende Aktion aus:  
   
-    1.  Stellen Sie über den Objekt-Explorer unter Verwendung der Windows-Authentifizierung (die Ihre Administratoranmeldeinformationen enthält) eine Verbindung her. Erweitern Sie **Sicherheit**sowie **Anmeldungen**, und doppelklicken Sie auf Ihre eigene Anmeldung. Wählen Sie auf der Seite **Serverrollen** die Option **sysadmin**aus, und klicken Sie dann auf **OK**.  
+    1.  Stellen Sie mithilfe der Windows-Authentifizierung, die Ihre Administratoranmeldeinformationen enthält, eine Verbindung zum Objekt-Explorer her. Erweitern Sie **Sicherheit**sowie **Anmeldungen**, und doppelklicken Sie auf Ihre eigene Anmeldung. Wählen Sie auf der Seite **Serverrollen** die Option **sysadmin**aus, und klicken Sie dann auf **OK**.  
   
     2.  Anstatt über den Objekt-Explorer stellen Sie in einem Abfragefenster unter Verwendung der Windows-Authentifizierung (die Ihre Administratoranmeldeinformationen enthält) eine Verbindung her. (Diese Art der Verbindung wird nur unterstützt, wenn sie nicht über den Objekt-Explorer hergestellt wurde.) Führen Sie Code (wie im folgenden Beispiel) aus, um eine neue Anmeldung mit Windows-Authentifizierung hinzuzufügen, die Mitglied der festen Serverrolle **sysadmin** ist. Im folgenden Beispiel wird ein Domänenbenutzer mit dem Namen `CONTOSO\PatK` hinzugefügt.  
   
@@ -84,7 +103,7 @@ ms.locfileid: "74761196"
         ALTER SERVER ROLE sysadmin ADD MEMBER [CONTOSO\PatK];  
         ```  
   
-    3.  Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im gemischten Authentifizierungsmodus ausgeführt wird, stellen Sie eine Verbindung in einem Abfragefenster unter Verwendung der Windows-Authentifizierung her (die Ihre Administratoranmeldeinformationen enthält). Führen Sie Code (wie im folgenden Beispiel) aus, um eine neue Anmeldung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung zu erstellen, die Mitglied der festen Serverrolle **sysadmin** ist.  
+    3.  Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im gemischten Authentifizierungsmodus ausgeführt wird, stellen Sie eine Verbindung in einem Abfragefenster unter Verwendung der Windows-Authentifizierung her (die Ihre Administratoranmeldeinformationen enthält). Führen Sie Code wie den folgenden aus, um eine neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung, die Mitglied der festen Serverrolle **sysadmin** ist, mit Authentifizierung zu erstellen.  
   
         ```  
         CREATE LOGIN TempLogin WITH PASSWORD = '************';  
@@ -102,22 +121,23 @@ ms.locfileid: "74761196"
   
         > [!WARNING]  
         >  Ersetzen Sie ************ durch ein sicheres Kennwort.  
+
+7. Schließen Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-9. Mit den folgenden Schritten wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jetzt wieder in den Mehrbenutzermodus zurückversetzt. Schließen Sie SSMS.  
+8. In den folgenden Schritten wird SQL Server in den Mehrbenutzermodus zurückversetzt. Wählen Sie im linken Bereich des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers die Option **SQL Server-Dienste**aus.
+
+9. Klicken Sie im rechten Bereich mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und klicken Sie dann auf **Eigenschaften**.  
   
-10. Wählen Sie im linken Bereich des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers die Option **SQL Server-Dienste**aus. Klicken Sie im rechten Bereich mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und klicken Sie dann auf **Eigenschaften**.  
-  
-11. Wählen Sie auf der Registerkarte **Startparameter** im Feld **Vorhandene Parameter** den Parameter `-m` aus, und klicken Sie auf **Entfernen**.  
+10. Wählen Sie auf der Registerkarte **Startparameter** im Feld **Vorhandene Parameter** den Parameter `-m` aus, und klicken Sie auf **Entfernen**.  
   
     > [!NOTE]  
     >  Bei einigen früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen gibt es keine Registerkarte **Startparameter** . Doppelklicken Sie in diesem Fall auf der Registerkarte **Erweitert** auf **Startparameter**. Die Parameter werden in einem sehr kleinen Fenster geöffnet. Entfernen Sie den zuvor hinzugefügten Parameter `;-m` , und klicken Sie dann auf **OK**.  
   
-12. Klicken Sie mit der rechten Maustaste auf den Servernamen, und klicken Sie dann auf **Neu starten**. Starten Sie den SQL Server-Agent noch mal.
+11. Klicken Sie mit der rechten Maustaste auf den Servernamen, und klicken Sie dann auf **Neu starten**. Stellen Sie sicher, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent neu gestartet wird, wenn Sie ihn vor dem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Einzelbenutzermodus beendet haben.
   
- Nun sollten Sie in der Lage sein, mit einem der Konten, das jetzt Mitglied der festen Serverrolle **sysadmin** ist, auf normale Weise eine Verbindung herzustellen.  
+Nun sollten Sie in der Lage sein, mit einem der Konten, das jetzt Mitglied der festen Serverrolle **sysadmin** ist, auf normale Weise eine Verbindung herzustellen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Starten von SQL Server im Einzelbenutzermodus](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)   
- [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
-  
-  
+
+* [SCM-Dienste: Konfigurieren der Serverstartoptionen](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
+* [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md)  

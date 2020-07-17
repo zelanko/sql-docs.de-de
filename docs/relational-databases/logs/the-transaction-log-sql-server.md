@@ -1,5 +1,6 @@
 ---
 title: Das Transaktionsprotokoll (SQL Server) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über das Transaktionsprotokoll. Jede SQL Server-Datenbank zeichnet alle Transaktionen und Datenbankänderungen auf, die Sie benötigen, wenn ein Systemfehler auftritt.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287804"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834761"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank verfügt über ein Transaktionsprotokoll, in dem alle Transaktionen sowie die Datenbankänderungen erfasst werden, die von den einzelnen Transaktionen vorgenommen werden.
   
 Das Transaktionsprotokoll ist eine wichtige Komponente der Datenbank. Wenn ein Systemfehler auftritt, benötigen Sie dieses Protokoll, um Ihre Datenbank wieder in einen konsistenten Zustand zu versetzen. 
@@ -133,7 +134,7 @@ Bei der*minimalen Protokollierung* werden nur die Informationen protokolliert, d
   
  Die folgenden Vorgänge, die unter dem vollständigen Wiederherstellungsmodell vollständig protokolliert werden, werden unter dem einfachen und massenprotokollierten Wiederherstellungsmodell minimal protokolliert:  
   
--   Massenimportvorgänge ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)und [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Weitere Informationen zur minimalen Protokollierung eines Massenimports in eine Tabelle finden Sie unter [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Massenimportvorgänge ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Weitere Informationen zur minimalen Protokollierung eines Massenimports in eine Tabelle finden Sie unter [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Wenn die Transaktionsreplikation aktiviert ist, werden `BULK INSERT`-Vorgänge auch unter dem massenprotokollierten Wiederherstellungsmodell vollständig protokolliert.  
   
@@ -157,8 +158,11 @@ Wenn die Transaktionsreplikation aktiviert ist, werden `SELECT INTO`-Vorgänge a
         > [!WARNING]
         > Die `DBCC DBREINDEX`-Anweisung ist **veraltet** und sollte daher in neuen Anwendungen nicht verwendet werden.  
   
+        > [!NOTE]
+        > Bei Indexerstellungsvorgängen ist die Protokollierung minimiert, aber möglicherweise verzögert sie sich, wenn eine gleichzeitig ausgeführte Sicherung vorhanden ist. Diese Verzögerung wird durch die Synchronisierungsanforderungen minimal protokollierter Pufferpoolseiten verursacht, wenn das einfache Modell oder das massenprotokollierte Wiederherstellungsmodell verwendet wird. 
+      
     -   Neuerstellungen neuer Heaps mit [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (falls zutreffend). Aufhebungen von Indexseitenzuordnungen während eines `DROP INDEX`-Vorgangs werden **immer** vollständig protokolliert.
-  
+
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **Verwalten des Transaktionsprotokolls**  
   

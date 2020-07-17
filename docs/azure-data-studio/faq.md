@@ -1,30 +1,28 @@
 ---
-title: Häufig gestellte Fragen
-titleSuffix: Azure Data Studio
+title: FAQ zu Azure Data Studio
 description: Häufig gestellte Fragen (Frequently Asked Questions, FAQ) zu Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dfcab918073fedd80def91d3556e15f632a62edc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959546"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774617"
 ---
-# <a name="azure-data-studio-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
+# <a name="azure-data-studio-faq"></a>FAQ zu Azure Data Studio
 
 ## <a name="what-is-azure-data-studio"></a>Was ist Azure Data Studio?
 
 Azure Data Studio ist eine neue plattformübergreifende Open-Source-Desktopumgebung für Datenexperten, die zu den Azure Data-Produkten lokaler und cloudbasierter Datenplattformen unter Windows, macOS und Linux gehören. Azure Data Studio wurde zuvor in einer Vorschauversion unter dem Namen SQL Operations Studio veröffentlicht und bietet eine moderne Editor-Funktion mit einem integrierten Terminal sowie einer schnellen Integration von IntelliSense, Codeausschnitten und der Quellcodeverwaltung. Das Tool wurde speziell für die Bedürfnisse der Benutzer von Datenplattformen konzipiert und bietet eine integrierte Diagrammdarstellung von Abfrageresultsets sowie anpassbare Dashboards.
 
 Studien haben ergeben, dass die Benutzer von SQL Server Management Studio (SSMS) viel mehr Zeit mit der Bearbeitung von Abfragen verbringen als mit jeder anderen Aufgabe. Aus diesem Grund standen bei der Entwicklung von Azure Data Studio die Funktionen im Mittelpunkt, die am meisten verwendet werden. Zusätzliche Funktionen stehen als optionale Erweiterungen für das Produkt zur Verfügung. Dadurch kann jeder Benutzer seine Umgebung an die Workflows anpassen, die er am häufigsten verwendet.
-
 
 ## <a name="how-much-does-azure-data-studio-cost"></a>Wie viel kostet Azure Data Studio?
 
@@ -60,7 +58,7 @@ Nein. Wir werden zusätzlich zur nächsten Generation der CLI für mehrere Betri
 
 - Sie verbringen einen Großteil Ihrer Zeit mit der Bearbeitung oder Ausführung von Abfragen.
 - Sie benötigen eine Funktion, mit der Sie Resultsets schnell visualisieren und in Diagrammen darstellen können.
-- Sie können die meisten administrativen Aufgaben mithilfe von sqlcmd oder PowerShell über das integrierte Terminal ausführen.
+- Sie können die meisten administrativen Aufgaben mit sqlcmd oder PowerShell über das integrierte Terminal ausführen.
 - Sie benötigen nur wenige Assistentenfunktionen.
 - Sie müssen keine detaillierten administrativen oder plattformbezogenen Konfiguration durchführen.
 - Sie verwenden macOS oder Linux.

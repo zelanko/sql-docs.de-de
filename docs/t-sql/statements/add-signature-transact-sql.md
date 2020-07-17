@@ -1,14 +1,11 @@
 ---
-title: ADD SIGNATURE (Transact-SQL) | Microsoft-Dokumentation
-ms.date: 05/15/2017
+title: ADD SIGNATURE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
 - ADD SIGNATURE
 - ADD_SIGNATURE_TSQL
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - ADD SIGNATURE statement
 - adding digital signatures
@@ -17,39 +14,45 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 284f5fb33d8842747805a27c68522929ddfbc59d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/10/2020
+ms.openlocfilehash: 4b5781ba73a340c72befdcde81559ac22d45a6a7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634923"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813164"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Fügt einer gespeicherten Prozedur, einer Funktion, einer Assembly oder einem Trigger eine digitale Signatur hinzu. Fügt einer gespeicherten Prozedur, einer Funktion, einer Assembly oder einem Trigger außerdem eine Gegensignatur hinzu.  
-  
-  
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>Syntax  
-  
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+Fügt einer gespeicherten Prozedur, einer Funktion, einer Assembly oder einem Trigger eine digitale Signatur hinzu. Fügt einer gespeicherten Prozedur, einer Funktion, einer Assembly oder einem Trigger außerdem eine Gegensignatur hinzu.
+
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>Syntax
+
 ```syntaxsql
-ADD [ COUNTER ] SIGNATURE TO module_class::module_name   
-    BY <crypto_list> [ ,...n ]  
+ADD [ COUNTER ] SIGNATURE TO module_class::module_name
+    BY <crypto_list> [ ,...n ]
   
 <crypto_list> ::=  
     CERTIFICATE cert_name  
-    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]  
-    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob   
+    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]
+    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob
     | ASYMMETRIC KEY Asym_Key_Name  
-    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]  
-    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob  
-```  
-  
-## <a name="arguments"></a>Argumente  
- *module_class*  
- Die Klasse des Moduls, dem die Signatur hinzugefügt wird. Der Standard für Module, die Schemas als Bereiche besitzen, ist OBJECT.  
+    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]
+    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
+
+*module_class*  
+Die Klasse des Moduls, dem die Signatur hinzugefügt wird. Der Standard für Module, die Schemas als Bereiche besitzen, ist OBJECT.  
   
  *module_name*  
  Der Name einer gespeicherten Prozedur, einer Funktion, einer Assembly oder eines Triggers, die bzw. der signiert oder gegensigniert werden soll.  
@@ -66,8 +69,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  Der Name eines asymmetrischen Schlüssels, mit dem die gespeicherte Prozedur, die Funktion, die Assembly oder der Trigger signiert oder gegensigniert werden soll.  
   
-## <a name="remarks"></a>Bemerkungen  
- Das Modul, das signiert oder gegensigniert wird, und das Zertifikat oder der asymmetrische Schlüssel, das bzw. der zum Signieren verwendet wird, müssen bereits vorhanden sein. Jedes Zeichen im Modul ist in der Signaturberechnung enthalten. Hierzu gehören auch führende Wagenrückläufe und Zeilenvorschübe.  
+## <a name="remarks"></a>Bemerkungen
+
+Das Modul, das signiert oder gegensigniert wird, und das Zertifikat oder der asymmetrische Schlüssel, das bzw. der zum Signieren verwendet wird, müssen bereits vorhanden sein. Jedes Zeichen im Modul ist in der Signaturberechnung enthalten. Hierzu gehören auch führende Wagenrückläufe und Zeilenvorschübe.  
   
  Ein Modul kann mit einer beliebigen Anzahl von Zertifikaten und asymmetrischen Schlüsseln signiert oder gegensigniert werden.  
   
@@ -75,14 +79,14 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
  Wenn ein Modul eine EXECUTE AS-Klausel enthält, ist auch die Sicherheits-ID (SID) des Prinzipals im Signierungsvorgang enthalten.  
   
-> [!CAUTION]  
->  Module dürfen nur beim Erteilen von Berechtigungen signiert werden, nie beim Verweigern oder Aufheben von Berechtigungen.  
+> [!CAUTION]
+> Module dürfen nur beim Erteilen von Berechtigungen signiert werden, nie beim Verweigern oder Aufheben von Berechtigungen.  
   
  Inline-Tabellenwertfunktionen können nicht signiert werden.  
   
  Informationen zu Signaturen werden in der sys.crypt_properties-Katalogsicht angezeigt.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Wenn Sie eine Prozedur zur Signatur neu erstellen, müssen alle Anweisungen im ursprünglichen Batch mit dem Neuerstellungsbatch übereinstimmen. Wenn ein Teil des Batches anders ist, selbst wenn es sich nur um die Leerzeichen oder Kommentare handelt, unterscheidet sich auch die daraus resultierende Signatur.  
   
 ## <a name="countersignatures"></a>Gegensignaturen  
@@ -92,18 +96,20 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   Wenn procSelectT1 signiert wird, sodass procSelectT1 auf T1 zugreifen kann, ist Alice in der Lage, procSelectT1 direkt aufzurufen, ohne ProcSelectT1ForAlice aufzurufen.  
   
--   Die EXECUTE-Berechtigung für procSelectT1 könnte Alice verweigert werden, allerdings wäre sie dann auch nicht in der Lage, procSelectT1 über ProcSelectT1ForAlice aufzurufen.  
+-   Die EXECUTE-Berechtigung für procSelectT1 könnte Alice verweigert werden, allerdings wäre sie dann auch nicht in der Lage, procSelectT1 über ProcSelectT1ForAlice aufzurufen.
   
 -   Das Signieren von ProcSelectT1ForAlice funktioniert alleine nicht, weil die Signatur im Aufruf von procSelectT1 verloren gehen würde.  
   
 Wenn procSelectT1 jedoch anhand desselben Zertifikats, mit dem ProcSelectT1ForAlice signiert wurde, gegensigniert wird, behält [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Signatur während der gesamten Aufrufkette bei und ermöglicht den Zugriff auf T1. Wenn Alice versucht, procSelectT1 direkt aufzurufen, ist kein Zugriff auf T1 möglich, weil durch die Gegensignatur keine Rechte gewährt werden. In Beispiel C unten wird [!INCLUDE[tsql](../../includes/tsql-md.md)] für dieses Beispiel veranschaulicht.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die ALTER-Berechtigung für das Objekt und die CONTROL-Berechtigung für das Zertifikat oder den asymmetrischen Schlüssel. Falls ein zugeordneter privater Schlüssel mit einem Kennwort geschützt ist, muss der Benutzer zudem das Kennwort kennen.  
+
+Erfordert die ALTER-Berechtigung für das Objekt und die CONTROL-Berechtigung für das Zertifikat oder den asymmetrischen Schlüssel. Falls ein zugeordneter privater Schlüssel mit einem Kennwort geschützt ist, muss der Benutzer zudem das Kennwort kennen.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. Signieren einer gespeicherten Prozedur mithilfe eines Zertifikats  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. Signieren einer gespeicherten Prozedur mithilfe eines Zertifikats
+
  Im folgenden Beispiel wird die gespeicherte Prozedur `HumanResources.uspUpdateEmployeeLogin` mit dem Zertifikat `HumanResourcesDP` signiert.  
   
 ```  
@@ -113,8 +119,9 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. Signieren einer gespeicherten Prozedur mithilfe eines signierten BLOB-Elements  
- Im folgenden Beispiel werden eine neue Datenbank und ein Zertifikat erstellt, die im Beispiel verwendet werden sollen. Im Beispiel wird eine einfache gespeicherte Prozedur erstellt und signiert sowie die Signatur-BLOB aus `sys.crypt_properties` abgerufen. Die Signatur wird dann gelöscht und erneut hinzugefügt. Im Beispiel wird die Prozedur mithilfe der WITH SIGNATURE-Syntax signiert.  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. Signieren einer gespeicherten Prozedur mithilfe eines signierten BLOB-Elements
+
+Im folgenden Beispiel werden eine neue Datenbank und ein Zertifikat erstellt, die im Beispiel verwendet werden sollen. Im Beispiel wird eine einfache gespeicherte Prozedur erstellt und signiert sowie die Signatur-BLOB aus `sys.crypt_properties` abgerufen. Die Signatur wird dann gelöscht und erneut hinzugefügt. Im Beispiel wird die Prozedur mithilfe der WITH SIGNATURE-Syntax signiert.  
   
 ```  
 CREATE DATABASE TestSignature ;  
@@ -159,8 +166,9 @@ ADD SIGNATURE TO [sp_signature_demo]
 GO  
 ```  
   
-### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. Zugreifen auf eine Prozedur mithilfe einer Gegensignatur  
- Im folgenden Beispiel wird gezeigt, wie durch das Gegensignieren der Zugriff auf ein Objekt gesteuert wird.  
+### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. Zugreifen auf eine Prozedur mithilfe einer Gegensignatur
+
+Im folgenden Beispiel wird gezeigt, wie durch das Gegensignieren der Zugriff auf ein Objekt gesteuert wird.  
   
 ```  
 -- Create tesT1 database  
@@ -245,8 +253,7 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>Weitere Informationen
+
+- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)
+- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)

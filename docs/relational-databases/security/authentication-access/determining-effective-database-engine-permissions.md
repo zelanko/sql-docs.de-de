@@ -1,5 +1,6 @@
 ---
 title: Ermitteln effektiver Datenbank-Engine-Berechtigungen | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie feststellen können, wer Berechtigungen für verschiedene Objekte in der SQL Server-Datenbank-Engine besitzt, einschließlich der aktuellen und früheren Berechtigungssysteme.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7c27c18cb862a753bc1a71c38d732c72a040a48
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488029"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005623"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Ermitteln effektiver Datenbank-Engine-Berechtigungen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 In diesem Artikel wird beschrieben, wie Sie feststellen können, wer über Berechtigungen für verschiedene Objekte in der SQL Server-Datenbank-Engine verfügt. SQL Server implementiert zwei Berechtigungssysteme für die Datenbank-Engine. Ein älteres System fester Datenbankrollen hat vorkonfigurierte Berechtigungen. Ab SQL Server 2005 ist ein flexibleres und präziseres System verfügbar. (Die Informationen in diesem Artikel gelten für SQL Server ab Version 2005. Einige Arten von Berechtigungen sind in einigen Versionen von SQL Server nicht verfügbar.)
 

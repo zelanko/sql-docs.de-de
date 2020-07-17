@@ -1,38 +1,38 @@
 ---
 title: 'Schnellstart: Herstellen einer Verbindung mit PostgreSQL und Abfragen von Daten mit PostgreSQL'
-titleSuffix: Azure Data Studio
 description: In dieser Schnellstartanleitung erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit PostgreSQL herstellen und eine Abfrage ausführen.
 ms.custom: seodec18
 ms.date: 09/18/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f429848636de075e64ebaf6f74bc69f7faef5359
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71127252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717160"
 ---
-# <a name="quickstart-connect-and-query-postgresql-using-name-sos"></a>Schnellstart: Herstellen einer Verbindung mit PostgreSQL und Abfragen von Daten mit PostgreSQL mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-In dieser Schnellstartanleitung erfahren Sie, wie Sie mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung mit Postgres herstellen und anschließend SQL-Anweisungen verwenden, um die Datenbank *tutorialdb* zu erstellen und abzufragen.
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>Schnellstart: Verwenden von Azure Data Studio zum Verbinden mit und Abfragen von PostgreSQL
+
+In dieser Schnellstartanleitung erfahren Sie, wie Sie mithilfe von Azure Data Studio eine Verbindung mit Postgres herstellen und anschließend SQL-Anweisungen verwenden, um die Datenbank *tutorialdb* zu erstellen und abzufragen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Um diesen Schnellstart abzuschließen, benötigen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], die PostgreSQL-Erweiterung für [!INCLUDE[name-sos](../includes/name-sos-short.md)] und Zugriff auf eine PostgreSQL-Serverinstanz.
+Für diesen Schnellstart benötigen Sie Azure Data Studio, die PostgreSQL-Erweiterung für Azure Data Studio und Zugriff auf eine PostgreSQL-Serverinstanz.
 
-- [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+- [Installieren Sie Azure Data Studio](download.md).
 - [Installieren Sie die PostgreSQL-Erweiterung für Azure Data Studio](postgres-extension.md).
 - [Installieren Sie PostgreSQL](https://www.postgresql.org/download/). (Alternativ können Sie mithilfe von [az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli) eine Postgres-Datenbank in der Cloud erstellen.) 
 
 ## <a name="connect-to-postgresql"></a>Herstellen einer Verbindung mit PostgreSQL
 
-1. Starten Sie **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
+1. Starten Sie **Azure Data Studio**.
 
-2. Wenn Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum ersten Mal starten, wird das Dialogfeld **Connection** geöffnet. Wenn das Dialogfeld **Verbindung** nicht geöffnet wird, klicken Sie auf der Seite **SERVER** auf das Symbol **Neue Verbindung**:
+2. Wenn Sie Azure Data Studio zum ersten Mal starten, wird das Dialogfeld **Verbindung** geöffnet. Wenn das Dialogfeld **Verbindung** nicht geöffnet wird, klicken Sie auf der Seite **SERVER** auf das Symbol **Neue Verbindung**:
 
    ![Symbol „Neue Verbindung“](media/quickstart-postgresql/new-connection-icon.png)
 
@@ -49,8 +49,8 @@ Um diesen Schnellstart abzuschließen, benötigen Sie [!INCLUDE[name-sos](../inc
    | **Benutzername** | postgres | Der Benutzername, mit dem Sie sich anmelden möchten. |
    | **Kennwort (SQL-Anmeldung)** | *password* | Das Kennwort für das Konto, mit dem Sie sich anmelden. |
    | **Kennwort** | *Überprüfung* | Aktivieren Sie dieses Kontrollkästchen, wenn Sie nicht immer dann, wenn Sie eine Verbindung herstellen, Ihr Kennwort eingeben möchten. |
-   | **Datenbankname** | \<Standard\> | Füllen Sie dies aus, wenn die Verbindung eine Datenbank angeben soll. |
-   | **Servergruppe** | \<Standard\> | Mit dieser Option können Sie diese Verbindung einer bestimmten Servergruppe zuweisen, die Sie erstellen. | 
+   | **Datenbankname** | \<Default\> | Füllen Sie dies aus, wenn die Verbindung eine Datenbank angeben soll. |
+   | **Servergruppe** | \<Default\> | Mit dieser Option können Sie diese Verbindung einer bestimmten Servergruppe zuweisen, die Sie erstellen. | 
    | **Name (optional)** | *Leer lassen* | Mit dieser Option können Sie einen Anzeigenamen für den Server angeben. | 
 
 5. Wählen Sie **Verbinden**. 

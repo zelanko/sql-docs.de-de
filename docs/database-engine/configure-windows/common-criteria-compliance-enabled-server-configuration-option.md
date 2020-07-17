@@ -1,5 +1,6 @@
 ---
 title: Common Criteria-Konformität aktiviert (Konfigurationsoption) | Microsoft-Dokumentation
+description: Hier erfahren Sie, welche Kriterien die Option „Common Criteria-Kompatibilität“ in SQL Server ermöglicht und wie die Common Criteria-Auswertungssicherheitsstufe 4 und höher eingehalten werden.
 ms.custom: ''
 ms.date: 08/21/2018
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - Risidual Information Protection [Database Engine]
 - RIP (Residual Information Protection)
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
-author: craigg-msft
-ms.author: craigg
-ms.openlocfilehash: f072ed3e73b7dacd10254c04aaa34e5466b582b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2a33ce838ce32c6a7d2b883c5b256f668c213745
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68262222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659818"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>Common Criteria-Kompatibilität aktiviert (Serverkonfigurationsoption)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Mit der Option „“Common Criteria-Kompatibilität aktiviert“ werden die folgenden Elemente aktiviert, die für die [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org/) erforderlich sind.  
   

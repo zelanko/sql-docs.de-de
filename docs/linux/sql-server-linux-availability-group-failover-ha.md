@@ -1,24 +1,24 @@
 ---
 title: 'Verwalten des Failovers einer Verfügbarkeitsgruppe: SQL Server für Linux'
 description: 'In diesem Artikel werden Failoverarten erläutert: automatisches, geplantes manuelles und erzwungenes manuelles Failover. Beim automatischen und beim geplanten manuellen Failover bleiben alle Daten erhalten.'
-author: MikeRayMSFT
-ms.author: mikeray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60dbfed32581a7646da590004c839fc7cf3d316f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216849"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892302"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover der Always On-Verfügbarkeitsgruppe unter Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Im Kontext einer Verfügbarkeitsgruppe können die primäre und die sekundäre Rolle von Verfügbarkeitsreplikaten normalerweise im Rahmen des sogenannten Failovers ausgetauscht werden. Failover können in drei Formen auftreten: automatisches Failover (ohne Datenverlust), geplantes manuelles Failover (ohne Datenverlust) und erzwungenes manuelles Failover (mit möglichem Datenverlust), welches in der Regel *erzwungenes Failover*genannt wird. Bei automatischen und geplanten manuellen Failover bleiben alle Daten erhalten. Eine Verfügbarkeitsgruppe führt ein Failover auf der Ebene des Verfügbarkeitsreplikats aus. Das heißt, eine Verfügbarkeitsgruppe führt ein Failover auf eines ihrer sekundären Replikate (das aktuelle Failoverziel) aus. 
 
@@ -81,14 +81,29 @@ Während eines manuellen Failovers fügt der `pcs`-Befehl `move` oder der `crm`-
 Ein Beispiel für die Einschränkung, die aufgrund eines manuellen Failovers erstellt wird. 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
+   > [!NOTE]
+   > Der Ressourcenname der Verfügbarkeitsgruppe in Pacemaker-Clustern in Red Hat Enterprise Linux 8.x und Ubuntu 18.04 ähnelt *ag_cluster-clone*, da sich die Benennung in Bezug auf Ressourcen weiterentwickelt hat, um einen *heraufstufbaren Klon* zu verwenden. 
+
 - **RHEL-/Ubuntu-Beispiel**
 
    Im folgenden Befehl ist `cli-prefer-ag_cluster-master` die ID der Einschränkung, die entfernt werden muss. `sudo pcs constraint list --full` gibt diese ID zurück. 
    
    ```bash
+   sudo pcs resource clear ag_cluster-master  
+   ```
+   oder
+   
+   ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
-   
+  
+   Alternativ können Sie die automatische Generierung von Einschränkungen in einer einzelnen Zeile wie folgt verschieben und löschen. Im folgenden Beispiel wird die Terminologie *Klon* gemäß Red Hat Enterprise Linux 8.x verwendet. 
+  
+   ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
 - **SLES-Beispiel**
 
    Im folgenden Befehl ist `cli-prefer-ms-ag_cluster` die ID der Einschränkung. `crm config show` gibt diese ID zurück. 

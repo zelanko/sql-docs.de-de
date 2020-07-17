@@ -1,5 +1,6 @@
 ---
 title: Datenbankeigenschaften (Seite Dateien) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie die Eigenschaften einer Datenbank anzeigen oder ändern und in SQL Server Management Studio eine neue Datenbank erstellen.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f3c0493192381bc3dedbf23ab1e01c0142e88be4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ddd5b76d37f170ed195c6b08f6debcb0f032e77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099612"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756188"
 ---
 # <a name="database-properties-files-page"></a>Datenbankeigenschaften (Seite Dateien)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Auf dieser Seite können Sie eine neue Datenbank erstellen bzw. die Eigenschaften einer ausgewählten Datenbank anzeigen oder ändern. Dieses Thema bezieht sich auf die Option **Datenbankeigenschaften (Seite 'Dateien')** für vorhandene Datenbanken und auf die Option **Neue Datenbank (Seite 'Allgemein')** .  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
  **Datenbankname**  
  Fügen Sie den Namen der Datenbank hinzu, oder zeigen Sie ihn an.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68099612"
  Um Dateien (Container) einer Filestream-Datendateigruppe hinzuzufügen, muss FILESTREAM aktiviert sein. Sie können FILESTREAM aktivieren, indem Sie das Dialogfeld [Servereigenschaften (Seite „Erweitert“)](../../database-engine/configure-windows/server-properties-advanced-page.md) verwenden.  
   
  **Dateigruppe**  
- Wählen Sie die Dateigruppe für die Datei aus der Liste aus. Standardmäßig lautet die Dateigruppe PRIMARY. Sie können eine neue Dateigruppe erstellen, indem Sie **\<neue Dateigruppe>** auswählen und im Dialogfeld **Neue Dateigruppe** Informationen zu der Dateigruppe eingeben. Eine neue Dateigruppe kann auch auf der Seite **Dateigruppe** erstellt werden. Die Dateigruppe einer vorhandenen Datei können Sie nicht ändern.  
+ Wählen Sie die Dateigruppe für die Datei aus der Liste aus. Standardmäßig lautet die Dateigruppe PRIMARY. Sie können eine neue Dateigruppe erstellen, indem Sie auf **\<new filegroup>** klicken und Informationen zur Dateigruppe im Dialogfeld **Neue Dateigruppe** eingeben. Eine neue Dateigruppe kann auch auf der Seite **Dateigruppe** erstellt werden. Die Dateigruppe einer vorhandenen Datei können Sie nicht ändern.  
   
  Wenn Sie Dateien (Container) einer speicheroptimierten Dateigruppe hinzufügen, wird in das Feld **Dateigruppe** der Name der speicheroptimierten Dateigruppe der Datenbank eingefügt.  
   
@@ -65,7 +66,7 @@ ms.locfileid: "68099612"
   
  Bei Dateien in speicheroptimierten Dateigruppen sollte dieses Feld **Unbegrenzt**lauten.  
   
- **Path**  
+ **Pfad**  
  Zeigt den Pfad der ausgewählten Datei an. Um einen Pfad für eine neue Datei anzugeben, klicken Sie auf die Bearbeitungsschaltfläche neben dem Pfad für die Datei, und navigieren Sie dann zum Zielordner. Den Pfad einer vorhandenen Datei können Sie nicht ändern.  
   
  Für FILESTREAM-Dateien ist der Pfad ein Ordner. Das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] erstellt die zugrunde liegenden Dateien in diesem Ordner.  

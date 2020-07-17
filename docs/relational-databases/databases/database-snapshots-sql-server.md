@@ -1,5 +1,6 @@
 ---
 title: Datenbank-Momentaufnahmen (SQL Server) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Datenbankmomentaufnahmen zum Erstellen schreibgeschützter statischer Ansichten einer Datenbank in SQL Server verwenden. Außerdem erfahren Sie mehr über die dazugehörigen Vorteile, Voraussetzungen und Einschränkungen.
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68300436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630819"
 ---
 # <a name="database-snapshots-sql-server"></a>Datenbank-Momentaufnahmen (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Eine Datenbankmomentaufnahme ist eine schreibgeschützte statische Sicht einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank (die *Quelldatenbank*). Die Datenbankmomentaufnahme ist hinsichtlich der Transaktionen mit der Quelldatenbank zum Zeitpunkt der Momentaufnahmeerstellung konsistent. Eine Datenbankmomentaufnahme befindet sich immer auf derselben Serverinstanz wie ihre Quelldatenbank. Während Datenbankmomentaufnahmen eine schreibgeschützte Ansicht der Daten im selben Zustand bereitstellen, in dem die Momentaufnahme erstellt wurde, wächst die Größe der Momentaufnahmendatei, wenn Änderungen an der Quelldatenbank vorgenommen werden. Weitere Informationen finden Sie weiter unten im Abschnitt mit der [Funktionsübersicht](#FeatureOverview).
   

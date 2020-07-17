@@ -17,15 +17,15 @@ ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6aee1619c5abaab84f4b201507c179f3ce7e8d1
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: e186d1da5ab42b25c120303a545c9164d949ad45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786479"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Heaps (Tabellen ohne gruppierte Indizes)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Ein Heap ist eine Tabelle ohne gruppierten Index. Ein oder mehrere nicht gruppierte Indizes können für Tabellen erstellt werden, die als Heap gespeichert sind. Daten werden ohne bestimmte Reihenfolge im Heap gespeichert. Normalerweise werden Daten anfänglich in der Reihenfolge gespeichert, in der die Zeilen in die Tabelle eingefügt werden. [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann die Daten jedoch im Heap verschieben, um die Zeilen effizienter zu speichern; daher kann die Reihenfolge der Daten nicht vorhergesagt werden. Um die von einem Heap zurückgegebene Zeilenreihenfolge zu garantieren, müssen Sie die `ORDER BY`-Klausel verwenden. Erstellen Sie einen gruppierten Index für die Tabelle, damit die Tabelle kein Heap ist, um eine permanente logische Reihenfolge für die Speicherung von Zeilen festzulegen.  
   
@@ -33,8 +33,15 @@ ms.locfileid: "82220705"
 > In bestimmten Fällen gibt es gute Gründe, eine Tabelle als einen Heap zu belassen, statt einen gruppierten Index zu erstellen. Die effektive Verwendung von Heaps ist jedoch Benutzern mit fortgeschrittenen Kenntnissen vorbehalten. Die meisten Tabellen sollten über einen sorgfältig ausgewählten gruppierten Index verfügen, es sei denn, es gibt gute Gründe, die Tabelle als Heap beizubehalten.  
   
 ## <a name="when-to-use-a-heap"></a>Verwendungsbereiche für Heaps  
-Wenn eine Tabelle als Heap gespeichert wird, werden einzelne Zeilen durch einen 8-Byte-Zeilenbezeichner (RID, Row Identifier) gekennzeichnet, der aus der Dateinummer, der Datenseitennummer und einem Slot auf der Seite (FileID:PageID:SlotID) besteht. Die Zeilen-ID ist eine kleine und effiziente Struktur. In einigen Fällen verwenden Datenexperten Heaps, wenn immer über nicht gruppierte Indizes auf Daten zugegriffen wird und die RID kleiner als ein Schlüssel des gruppierten Indexes ist. Heaps werden auch in folgenden Fällen verwendet:   
- 
+Wenn eine Tabelle als Heap gespeichert wird, werden einzelne Zeilen durch einen 8-Byte-Zeilenbezeichner (RID, Row Identifier) gekennzeichnet, der aus der Dateinummer, der Datenseitennummer und einem Slot auf der Seite (FileID:PageID:SlotID) besteht. Die Zeilen-ID ist eine kleine und effiziente Struktur. 
+
+Heaps können als Stagingtabellen für große, unsortierte Einfügevorgänge verwendet werden. Da beim Einfügen von Daten keine strikte Reihenfolge erzwungen wird, ist der Einfügevorgang hier in der Regel schneller als beim Einfügen in einen gruppierten Index. Wenn die Heapdaten gelesen und im endgültigen Ziel verarbeitet werden, kann es hilfreich sein, einen schmalen, nicht gruppierten Index mit dem Suchprädikat der Leseabfrage zu erstellen. 
+
+> [!NOTE]  
+> Die Daten werden aus einem Heap in der Reihenfolge der Datenseiten abgerufen. Diese muss jedoch nicht notwendigerweise mit der Reihenfolge übereinstimmen, in der die Daten eingefügt wurden. 
+
+In einigen Fällen verwenden Datenexperten Heaps, wenn immer über nicht gruppierte Indizes auf Daten zugegriffen wird und die RID kleiner als der Schlüssel eines gruppierten Indexes ist. 
+
 Wenn eine Tabelle ein Heap ist und nicht über nicht gruppierte Indizes verfügt, muss die gesamte Tabelle gelesen werden (mit einem Tabellenscan), um eine Zeile zu finden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die RID nicht direkt auf dem Heap suchen. Dies kann akzeptabel sein, wenn die Tabelle klein ist.  
   
 ## <a name="when-not-to-use-a-heap"></a>Keine Verwendungsbereiche für Heaps  

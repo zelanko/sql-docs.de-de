@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c63162f11794299e0708c71219a639de9566456e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 902cebc510572b8900acf6f12666398ef9d147b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766903"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (selektive XML-Indizes)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Erstellt einen neuen sekundären selektiven XML-Index für einen einzelnen Pfad, der bereits von einem vorhandenen selektiven XML-Index indiziert wird. Sie können auch primäre selektive XML-Indizes erstellen. Informationen hierzu finden Sie unter [Erstellen, Ändern und Löschen selektiver XML-Indizes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
   
@@ -69,7 +69,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  *index_name*  
  Der Name des neuen zu erstellenden Indexes. Indexnamen müssen innerhalb einer Tabelle eindeutig sein, können aber innerhalb einer Datenbank mehrfach vorkommen. Indexnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
- ON *\<table_object>* ist die Tabelle mit der zu indizierenden XML-Spalte. Sie können die folgenden Formate verwenden:  
+ ON *\<table_object>* Die Tabelle, die die zu indizierende XML-Spalte enthält Sie können die folgenden Formate verwenden:  
   
 -   `database_name.schema_name.table_name`  
   
@@ -83,7 +83,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  USING XML INDEX *sxi_index_name*  
  Der Name des vorhandenen selektiven XML-Indexes.  
   
- FOR **(** \<xquery_or_sql_values_path> **)** ist der Name des indizierten Pfads, für den der sekundäre selektive XML-Index erstellt werden soll. Der zu indizierende Pfad entspricht dem zugewiesenen Namen aus der CREATE SELECTIVE XML INDEX-Anweisung. Weitere Informationen finden Sie unter [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
+ FOR **(** \<xquery_or_sql_values_path> **)** Der Name des indizierten Pfads, für den der sekundäre selektive XML-Index erstellt werden soll Der zu indizierende Pfad entspricht dem zugewiesenen Namen aus der CREATE SELECTIVE XML INDEX-Anweisung. Weitere Informationen finden Sie unter [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
  WITH \<index_options> Informationen zu den Indexoptionen finden Sie unter [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   

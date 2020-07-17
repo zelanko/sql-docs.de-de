@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff383fface773da790fd52c498e861ee402dc862
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557935"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882062"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>SQL Server-Connector – Verwaltung und Problembehandlung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Dieses Thema enthält ergänzende Informationen zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector. Weitere Informationen zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Connector finden Sie unter [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault.](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) und [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75557935"
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **Mithilfe von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] oder „sqlcmd.exe“:** Verwenden Sie die folgenden Anweisungen, wie in Schritt 3, Abschnitt 3 dargestellt.  
+-   **Mit [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] oder „sqlcmd.exe“:** Verwenden Sie die folgenden Anweisungen, wie in Schritt 3, Abschnitt 3 dargestellt.  
   
      Importieren Sie den neuen asymmetrischen Schlüssel.  
   
@@ -153,7 +153,7 @@ Zusammengefasst ergeben sich folgende Schritte:
 * Erteilen Sie dem SQL Server-Dienstprinzipal Berechtigungen zum Verwenden dieses neuen Tresors.  
 * Ändern Sie die von der Datenbank-Engine verwendeten SQL Server-Anmeldeinformationen so, dass sie den neuen Tresornamen widerspiegeln (falls erforderlich).  
   
-Schlüsselsicherungen können übergreifend über Azure-Regionen wiederhergestellt werden, sofern sie in der gleichen geografischen Region oder nationalen Cloud bleiben: USA, Kanada, Japan, Australien, Indien, APAC, Europa, Brasilien, China, US-Regierung oder Deutschland.  
+Schlüsselsicherungen können in Azure-Regionen wiederhergestellt werden, solange sie in derselben geografischen Region oder nationalen Cloud verbleiben: USA, Kanada, Japan, Australien, Indien, APAC, Europa, Brasilien, China, US-Regierung oder Deutschland.  
   
   
 ##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> B. Häufig gestellte Fragen  
@@ -167,7 +167,7 @@ Schlüsselsicherungen können übergreifend über Azure-Regionen wiederhergestel
   
 ### <a name="on-configuring-ssnoversion"></a>Zur Konfiguration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**Auf welche Endpunkte benötigt der SQL Server-Connector Zugriff?** Der Connector kommuniziert mit zwei Endpunkten, die der Positivliste hinzugefügt werden müssen. Der einzige Port, der für die ausgehende Kommunikation mit diesen anderen Diensten erforderlich ist, lautet 443 für Https:
+**Auf welche Endpunkte benötigt der SQL Server-Connector Zugriff?** Der Connector kommuniziert mit zwei Endpunkten, die zugelassen werden müssen. Der einzige Port, der für die ausgehende Kommunikation mit diesen anderen Diensten erforderlich ist, lautet 443 für Https:
 -  Login.microsoftonline.com/*:443
 -  *.Vault.Azure.NET/* :443
 
@@ -216,7 +216,7 @@ Fehlercode  |Symbol  |BESCHREIBUNG
 5 | scp_err_AuthFailure | Authentifizierungsfehler beim EKM-Anbieter.    
 6 | scp_err_InvalidArgument | Das angegebene Argument ist ungültig.    
 7 | scp_err_ProviderError | Im EKM-Anbieter ist ein nicht angegebener Fehler aufgetreten, der von der SQL-Engine abgefangen wurde.   
-401 | acquireToken | Der Server hat auf die Anforderung 401 zurückgegeben. Achten Sie darauf, dass die Client-ID und das Geheimnis korrekt sind und die Anmeldeinformations-Zeichenfolge eine Verkettung von AAD-Client-ID und-Geheimnis ohne Bindestriche ist.
+401 | acquireToken | Der Server hat auf die Anforderung 401 zurückgegeben. Achten Sie darauf, dass die Client-ID und das Geheimnis korrekt sind und die Zeichenfolge mit Anmeldeinformationen eine Verkettung von AAD-Client-ID und -Geheimnis ohne Bindestriche ist.
 404 | getKeyByName | Der Server hat mit 404 geantwortet, da der Schlüsselname nicht gefunden wurde. Überprüfen Sie, ob der Schlüsselname in Ihrem Tresor vorhanden ist.
 2049 | scp_err_KeyNameDoesNotFitThumbprint | Der Schlüsselname ist zu lang, um in den Fingerabdruck der SQL-Engine zu passen. Der Schlüsselname darf 26 Zeichen nicht überschreiten.    
 2050 | scp_err_PasswordTooShort | Die geheime Zeichenfolge, bei der es sich um die Verkettung von AAD-Client-ID und geheimem Schlüssel handelt, ist kürzer als 32 Zeichen.    
@@ -256,7 +256,7 @@ Wenn Sie Ihren Fehlercode in dieser Tabelle nicht finden, beachten Sie, dass ein
   
 -   Wenn Sie den Fehler „Die Bibliothek kann nicht geladen werden“ erhalten, überprüfen Sie, ob die für die ausgeführte SQL Server-Version geeignete Version der weitervertreibbaren Visual Studio C++-Komponente installiert ist. In der folgenden Tabelle wird angegeben, welche Version aus dem Microsoft Download Center installiert werden muss.   
 
-Das Windows-Ereignisprotokoll protokolliert auch Fehler im Zusammenhang mit dem SQL Server Connector. Dadurch kann zusätzlicher Kontext zu den eigentlichen Fehlerursachen bereitstehen. Die Quelle im Windows-Anwendungsereignisprotokoll ist „SQL Server-Connector für Microsoft Azure Key Vault“.
+Das Windows-Ereignisprotokoll protokolliert auch Fehler im Zusammenhang mit dem SQL Server-Connector. Dadurch kann zusätzlicher Kontext zu den eigentlichen Fehlerursachen bereitstehen. Die Quelle im Windows-Anwendungsereignisprotokoll ist „SQL Server-Connector für Microsoft Azure Key Vault“.
   
 SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente    
 ---------|--------- 

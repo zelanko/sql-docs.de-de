@@ -20,15 +20,15 @@ ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9668bea1b876b650f835b00ed2df2c22ae7213ac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: db82218c76a9459c992b3cb8a5177cd06e319053
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823699"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003730"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Wiederholt einen Zeichenfolgenwert mit einer angegebenen Anzahl.  
   
@@ -37,15 +37,18 @@ ms.locfileid: "82823699"
 ## <a name="syntax"></a>Syntax  
   
 ```syntaxsql
-REPLICATE ( string_expression ,integer_expression )   
+REPLICATE ( string_expression , integer_expression )   
 ```  
   
 ## <a name="arguments"></a>Argumente  
  *string_expression*  
- Der Ausdruck einer Zeichenfolge oder eines Binärdatentyps. *string_expression* kann von einem Zeichen- oder Binärdatentyp sein.  
+ Der Ausdruck einer Zeichenfolge oder eines Binärdatentyps.  
   
 > [!NOTE]  
->  Wenn *string_expression* nicht vom Typ **varchar(max)** oder **nvarchar(max)** ist, schneidet REPLICATE den Rückgabewert bei 8.000 Byte ab. Für die Rückgabe von Werten über 8.000 Byte muss *string_expression* explizit in den entsprechenden Datentyp mit umfangreichen Werten umgewandelt werden.  
+> Wenn *string_expression* den Typ **binary** aufweist, führt REPLICATE eine implizite Konvertierung in **varchar** aus und behält daher die binäre Eingabe nicht bei.  
+
+> [!NOTE]  
+> Wenn die *string_expression*-Eingabe nicht vom Typ **varchar(max)** oder **nvarchar(max)** ist, schneidet REPLICATE den Rückgabewert bei 8.000 Byte ab. Für die Rückgabe von Werten über 8.000 Byte muss *string_expression* explizit in den entsprechenden Datentyp mit umfangreichen Werten umgewandelt werden.  
   
  *integer_expression*  
  Ein Ausdruck eines beliebigen Integertyps, einschließlich **bigint**. Wenn *integer_expression* negativ ist, wird NULL zurückgegeben.  

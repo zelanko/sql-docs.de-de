@@ -22,20 +22,20 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 371657ed68c4b52cbf2cac75569fd8b1ab764e05
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: aa73be808ed074ffcdb412119a676a1a4ce7f8f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767130"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Erstellt eine Sitzung für erweiterte Ereignisse, die die Quelle der Ereignisse, die Ereignissitzungsziele und die Ereignissitzungsoptionen bestimmt.
 
-![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -117,7 +117,7 @@ ADD EVENT [ *event_module_guid* ].*event_package_name*.*event_name* ist das Erei
 
 Ereignisse werden in der sys.dm_xe_objects-Sicht als object_type 'event' angezeigt.
 
-SET { *event_customizable_attribute*= \<value> [ ,...*n*] } ermöglicht, dass anpassbare Attribute für das Ereignis festgelegt werden. Anpassbare Attribute werden in der sys.dm_xe_object_columns-Sicht mit column_type 'customizable' und object_name = *event_name* angezeigt.
+SET { *event_customizable_attribute*= \<value> [ ,...*n*] } ermöglicht das Festlegen anpassbarer Attribute für das Ereignis. Anpassbare Attribute werden in der sys.dm_xe_object_columns-Sicht mit column_type 'customizable' und object_name = *event_name* angezeigt.
 
 ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*n*] }) ist die Aktion, die der Ereignissitzung zugeordnet werden soll. Dabei gilt:
 
@@ -127,7 +127,7 @@ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*
 
 Aktionen werden in der sys.dm_xe_objects-Sicht als object_type 'action' angezeigt.
 
-WHERE \<predicate_expression> gibt den Prädikatausdruck an, mit dessen Hilfe bestimmt wird, ob ein Ereignis verarbeitet werden muss. Wenn \<predicate_expression> den Wert TRUE hat, wird das Ereignis von den Aktionen und Zielen für die Sitzung weiter verarbeitet. Wenn \<predicate_expression> den Wert FALSE hat, wird das Ereignis von der Sitzung gelöscht, bevor es von den Aktionen und Zielen für die Sitzung verarbeitet wird. Die Länge von Prädikatausdrücken ist auf 3000 Zeichen beschränkt, wodurch die Länge von Zeichenfolgenargumenten eingeschränkt wird.
+WHERE \<predicate_expression> gibt den Prädikatausdruck an, mit dessen Hilfe bestimmt wird, ob ein Ereignis verarbeitet werden muss. Wenn \<predicate_expression> den Wert TRUE aufweist, wird das Ereignis von den Aktionen und Zielen für die Sitzung weiter verarbeitet. Wenn \<predicate_expression> den Wert FALSE aufweist, wird das Ereignis von der Sitzung gelöscht, bevor es von den Aktionen und Zielen für die Sitzung verarbeitet wird. Die Länge von Prädikatausdrücken ist auf 3000 Zeichen beschränkt, wodurch die Länge von Zeichenfolgenargumenten eingeschränkt wird.
 
 *event_field_name* ist der Name des Ereignisfelds, das die Prädikatquelle identifiziert.
 
@@ -158,7 +158,7 @@ SET { *target_parameter_name*= \<value> [, ...*n*] } legt einen Zielparameter fe
 > [!IMPORTANT]
 > Wenn Sie ein Ringpufferziel verwenden, sollten Sie den max_memory-Zielparameter auf 2048 Kilobytes (KB) festlegen, um ein mögliches Abschneiden der Daten in der XML-Ausgabe zu vermeiden. Informationen zur Verwendung von unterschiedlichen Zieltypen finden Sie unter [Ziele für erweiterte Ereignisse von SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).
 
-WITH ( \<event_session_options> [ ,...*n*] ) gibt Optionen an, die für die Ereignissitzung verwendet werden.
+WITH ( \<event_session_options> [ ,...*n*] ) gibt Optionen an, die für die Ereignissitzung verwendet werden sollen.
 
 MAX_MEMORY =*size* [ KB | **MB** ] gibt an, wie viel Arbeitsspeicher der Sitzung für die Ereignispufferung maximal zugeordnet werden soll. Die Standardeinstellung ist 4 MB. *size* ist eine ganze Zahl und kann in Kilobyte (KB) oder Megabyte (MB) angegeben werden. Die maximale Größe darf 2 GB (weniger als 2048 MB) nicht überschreiten. Die Verwendung von Speichergrößen im GB-Bereich wird nicht empfohlen.
 

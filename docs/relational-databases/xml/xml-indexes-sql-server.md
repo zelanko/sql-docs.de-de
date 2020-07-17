@@ -1,5 +1,6 @@
 ---
 title: XML-Indizes (SQL Server) | Microsoft-Dokumentation
+description: Erfahren Sie, wie das Erstellen von XML-Indizes für XML-Datentypspalten die Abfrageleistung für Ihre Anwendung verbessern kann.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6aeeb9e0fdadda5635888fe2a88e0ea84b6ede12
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8f5ab347d15e0363411640431f4d833f38e13234
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729778"
 ---
 # <a name="xml-indexes-sql-server"></a>XML-Indizes (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML-Indizes können für **xml** -Datentypspalten erstellt werden. Sie indizieren alle Tags, Werte und Pfade für die XML-Instanzen in der Spalte. Die Indizierung verbessert zudem die Abfrageleistung. Ihre Anwendung kann in folgenden Situationen von einem XML-Index profitieren:  
   
 -   In Ihren Arbeitsauslastungen sind Abfragen von XML-Spalten üblich. Die Wartungskosten für den XML-Index während der Datenänderung müssen berücksichtigt werden.  
@@ -54,7 +55,7 @@ ms.locfileid: "80664896"
   
 -   Sekundärer XML-Index  
   
- Der erste Index für die Spalte des Datentyps **xml** muss der primäre XML-Index sein. Mithilfe des primären XML-Indexes werden drei Arten sekundärer Indizes unterstützt: PATH, VALUE und PROPERTY. Abhängig vom Typ der Abfragen können diese sekundären Indizes die Abfrageleistung steigern.  
+ Der erste Index für die Spalte des Datentyps **xml** muss der primäre XML-Index sein. Mithilfe des primären XML-Index werden drei Arten sekundärer Indizes unterstützt: PATH, VALUE und PROPERTY. Abhängig vom Typ der Abfragen können diese sekundären Indizes die Abfrageleistung steigern.  
   
 > [!NOTE]  
 >  Sie können einen XML-Index nur dann erstellen oder bearbeiten, wenn die Datenbankoptionen korrekt für die Arbeit mit dem **xml** -Datentyp festgelegt sind. Weitere Informationen finden Sie unter [Verwenden der Volltextsuche mit XML-Spalten](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
@@ -133,7 +134,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   Wenn bei Ihrer Arbeitsauslastung mehrere Werte aus einzelnen XML-Instanzen mithilfe von Pfadausdrucken abgerufen werden, kann das Gruppieren der Pfade innerhalb jeder XML-Instanz im PROPERTY-Index nützlich sein. Diese Situation tritt üblicherweise in einem Eigenschaftsbehälterszenario auf, wenn die Eigenschaften eines Objekts abgerufen werden und dessen Primärschlüsselwert bekannt ist.  
   
--   Wenn bei Ihrer Arbeitsauslastung das Abfragen von Werten innerhalb von XML-Instanzen vorkommt, ohne dass dabei die Element- oder Attributnamen bekannt sind, die diese Werte enthalten, können Sie den VALUE-Index erstellen. Diese Situation kommt üblicherweise beim Durchsuchen von descendant-Achsen vor, z.B. bei //author[last-name="Howard"], wo die \<author-Elemente in jeder beliebigen Ebene der Hierarchie auftreten können. Sie kommt auch bei Abfragen mit Platzhaltern vor, z.B. bei /book [@* = "novel"], wobei die Abfrage nach \<book-Elementen sucht, die über ein beliebiges Attribut verfügen, das den Wert „novel“ aufweist.  
+-   Wenn bei Ihrer Arbeitsauslastung das Abfragen von Werten innerhalb von XML-Instanzen vorkommt, ohne dass dabei die Element- oder Attributnamen bekannt sind, die diese Werte enthalten, können Sie den VALUE-Index erstellen. Diese Situation kommt üblicherweise beim Durchsuchen von descendant-Achsen vor, z. B. bei //author[last-name="Howard"], wo die \<author>-Elemente in jeder beliebigen Ebene der Hierarchie auftreten können. Sie kommt auch bei Abfragen mit Platzhaltern vor, z. B. bei /book [@* = "novel"], wobei die Abfrage nach \<book>-Elementen sucht, die über ein beliebiges Attribut verfügen, das den Wert „novel“ aufweist.  
   
 ### <a name="path-secondary-xml-index"></a>Sekundärer XML PATH-Index  
  Wenn Ihre Abfragen im Allgemeinen path-Ausdrücke für Spalten des Typs **xml** angeben, beschleunigt ein sekundärer PATH-Index möglicherweise die Suche. Wie bereits zuvor in diesem Thema beschrieben, ist der primäre Index hilfreich, wenn Sie Abfragen verwenden, die die **exist()** -Methode in der WHERE-Klausel angeben. Wenn Sie einen sekundären PATH-Index hinzufügen, können Sie die Suchleistung in solchen Abfragen möglicherweise verbessern.  

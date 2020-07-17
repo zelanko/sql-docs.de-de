@@ -1,5 +1,6 @@
 ---
 title: Indizes für speicheroptimierte Tabellen | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie sich ein Index einer speicheroptimierten Tabelle von einem herkömmlichen Index einer datenträgerbasierten Tabelle in SQL Server und Azure SQL-Datenbank unterscheidet.
 ms.custom: ''
 ms.date: 09/16/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca93055e20dc550e4c9d4ee4122828529a3b3a9b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723111"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Alle speicheroptimierten Tabellen müssen mindestens einen Index enthalten, da die Zeilen durch die Indizes miteinander verbunden werden. Für eine speicheroptimierte Tabelle wird jeder Index auch speicheroptimiert. Ein Index für eine speicheroptimierte Tabelle unterscheidet sich auf vielfältige Weise von einem herkömmlichen Index für eine datenträgerbasierte Tabelle:  
 

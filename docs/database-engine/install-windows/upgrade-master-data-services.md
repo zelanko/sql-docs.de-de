@@ -1,5 +1,6 @@
 ---
 title: Aktualisieren von Master Data Services | Microsoft-Dokumentation
+description: In diesem Artikel werden vier Szenarios zum Durchführen von Upgrades für Microsoft SQL Server Master Data Services vorgestellt. Außerdem erfahren Sie mehr über Dateispeicherorte und die Problembehandlung für Upgrades.
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e58b0ea07dc97ac7573934112dd3969cadb53c26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934825"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900271"
 ---
 # <a name="upgrade-master-data-services"></a>Aktualisieren von Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Im Folgenden sind die Szenarien zum Aktualisieren von Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Master Data Services.  
   
@@ -149,9 +150,9 @@ ms.locfileid: "67934825"
 3.  Upgraden Sie das MDS-Datenbankschema, erstellen Sie eine Webanwendung, und ordnen Sie die neue Webanwendung der upgegradeten MDS-Datenbank zu. Anweisungen finden Sie in den Schritten 2 – 4 im Abschnitt [Upgrade ohne Datenbank-Engine-Upgrade](#noengine).  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
- **Problem** : Wenn Sie die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] -Webanwendung öffnen, wird die Fehlermeldung „Die Clientversion ist nicht mit der Datenbankversion kompatibel“ angezeigt.  
+ **Problem:** Wenn Sie die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]- oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Webanwendung öffnen, wird die Fehlermeldung „Die Clientversion ist nicht mit der Datenbankversion kompatibel“ angezeigt.  
   
- **Lösung**: Dieses Problem tritt auf, wenn eine [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]- oder[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Master Data Manager-Webanwendung versucht, auf eine Datenbank zuzugreifen, die auf [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]-Master Data Services aktualisiert wurde. Sie müssen stattdessen eine [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]-Webanwendung verwenden.  
+ **Lösung:** Dieses Problem tritt auf, wenn eine [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]- oder [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]-Master Data Manager-Webanwendung versucht, auf eine Datenbank zuzugreifen, die auf [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]-Master Data Services aktualisiert wurde. Sie müssen stattdessen eine [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]-Webanwendung verwenden.  
   
  Dieses Problem tritt möglicherweise auch auf, wenn Sie beim Upgrade des MDS-Datenbankschemas den **MDS-Anwendungspool** in IIS nicht angehalten und neu gestartet haben. Starten Sie den **MDS-Anwendungspool** neu, um das Problem zu beheben.  
   

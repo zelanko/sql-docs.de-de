@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 98fc6b89cfe05b7c03d4d4211bea9387c5ef4e80
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635851"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736319"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   Sucht nach genauen oder ungenauen (Fuzzy-)Übereinstimmungen mit einzelnen Wörtern und Satzteilen, für innerhalb einer bestimmten Entfernung angrenzende Wörter sowie für gewichtete Übereinstimmungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS ist ein Prädikat, das in der [WHERE](../../t-sql/queries/where-transact-sql.md)-Klausel einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-SELECT-Anweisung verwendet wird, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuchvorgänge für volltextindizierte Spalten mit zeichenbasierten Datentypen durchzuführen.  
@@ -174,7 +174,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  Gibt den Suchtext in *column_name* und die Bedingungen für eine Übereinstimmung an.  
   
-*\<contains_search_condition>* ist vom Datentyp **nvarchar**. Wird ein anderer Zeichendatentyp als Eingabe verwendet, findet eine implizite Konvertierung statt. Die großen Zeichenfolgendatentypen nvarchar(max) und varchar(max) können nicht verwendet werden. Im folgenden Beispiel verursacht die `@SearchWord`-Variable, die als `varchar(30)` definiert ist, eine implizite Konvertierung im `CONTAINS`-Prädikat.
+*\<contains_search_condition>* ist **nvarchar**. Wird ein anderer Zeichendatentyp als Eingabe verwendet, findet eine implizite Konvertierung statt. Die großen Zeichenfolgendatentypen nvarchar(max) und varchar(max) können nicht verwendet werden. Im folgenden Beispiel verursacht die `@SearchWord`-Variable, die als `varchar(30)` definiert ist, eine implizite Konvertierung im `CONTAINS`-Prädikat.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -210,14 +210,14 @@ WHERE CONTAINS(Description, @SearchWord);
 >  Einige Sprachen, wie z. B. die in einigen Teilen von Asien verwendeten Sprachen, können Ausdrücke besitzen, die aus mehreren Wörtern ohne Leerzeichen bestehen.  
   
 \<simple_term>  
-Gibt eine Übereinstimmung für ein genaues Wort oder einen genauen Ausdruck an. Beispiele für gültige einfache Begriffe sind "blue berry", blueberry und "Microsoft SQL Server". Ausdrücke müssen in doppelte Anführungszeichen ("") gesetzt werden. Die Wörter eines Ausdrucks werden nur dann in der Datenbank gefunden, wenn sie unter *\<contains_search_condition>* in der gleichen Reihenfolge angegeben werden. Bei der Suche nach Zeichen in einem Wort oder einem Ausdruck wird nicht zwischen Groß- und Kleinschreibung unterschieden. Füllwörter (oder [Stoppwörter](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)), z.B. „ein“, „und“ oder „die“, aus volltextindizierten Spalten werden nicht im Volltextindex gespeichert. Wenn das einzige gesuchte Wort ein Füllwort ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Fehlermeldung zurück, die angibt, dass lediglich Füllwörter als Suchbegriffe übergeben wurden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine Standardliste der Füllwörter im Verzeichnis \Mssql\Binn\FTERef für jede Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Gibt eine Übereinstimmung für ein genaues Wort oder einen genauen Ausdruck an. Beispiele für gültige einfache Begriffe sind "blue berry", blueberry und "Microsoft SQL Server". Ausdrücke müssen in doppelte Anführungszeichen ("") gesetzt werden. Die Wörter eines Ausdrucks müssen in *\<contains_search_condition>* in der Reihenfolge angegeben werden wie in der Datenbankspalte. Bei der Suche nach Zeichen in einem Wort oder einem Ausdruck wird nicht zwischen Groß- und Kleinschreibung unterschieden. Füllwörter (oder [Stoppwörter](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)), z.B. „ein“, „und“ oder „die“, aus volltextindizierten Spalten werden nicht im Volltextindex gespeichert. Wenn das einzige gesuchte Wort ein Füllwort ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Fehlermeldung zurück, die angibt, dass lediglich Füllwörter als Suchbegriffe übergeben wurden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine Standardliste der Füllwörter im Verzeichnis \Mssql\Binn\FTERef für jede Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Satzzeichen werden nicht beachtet. Mit `CONTAINS(testing, "computer failure")` wird daher auch eine Zeile mit dem Wert "Where is my computer? Failure to find it would be expensive." gefunden. Weitere Informationen zum Worttrennungsverhalten finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
  \<prefix_term>  
  Gibt eine Suche nach Wörtern oder Ausdrücken an, die mit dem angegebenen Text beginnen. Setzen Sie einen Präfixausdruck (prefix_term) in doppelte Anführungszeichen (""), und setzen Sie ein Sternchen (\*) vor das schließende Anführungszeichen, sodass jeglicher Text gefunden wird, der mit dem einfachen Ausdruck beginnt, der vor dem Sternchen steht. Die Klausel sollte wie folgt angegeben werden: `CONTAINS (column, '"text*"')` Das Sternchen entspricht keinem, einem oder mehreren Zeichen (des Hauptworts bzw. der Hauptwörter im Ausdruck). Wenn der Text und das Sternchen nicht in doppelten Anführungszeichen stehen, sodass das Prädikat als `CONTAINS (column, 'text*')` gelesen wird, wird das Sternchen bei der Volltextsuche als Zeichen behandelt, und es wird nach exakten Übereinstimmungen mit `text*` gesucht. Von der Volltext-Engine werden keine Wörter mit Sternchen (\*) gefunden, da dieses Zeichen in der Regel von der Wörtertrennung ignoriert wird.  
   
- Ist *\<prefix_term>* ein Ausdruck, wird jedes Wort, das in dem Ausdruck vorhanden ist, als separates Präfix behandelt. Daher werden bei einer Abfrage des Präfixbegriffs "local wine*" als Übereinstimmung alle Zeilen mit dem Text "local winery", "locally wined and dined" usw. ausgegeben.  
+ Wenn es sich bei *\<prefix_term>* um einen Ausdruck handelt, wird jedes im Ausdruck vorhandene Wort als separates Präfix behandelt. Daher werden bei einer Abfrage des Präfixbegriffs "local wine*" als Übereinstimmung alle Zeilen mit dem Text "local winery", "locally wined and dined" usw. ausgegeben.  
   
  \<generation_term>  
  Gibt eine Suche nach Wörtern an, wenn die enthaltenen einfachen Begriffe Varianten des ursprünglichen Worts enthalten, nach dem gesucht werden soll.  
@@ -225,16 +225,16 @@ Gibt eine Übereinstimmung für ein genaues Wort oder einen genauen Ausdruck an.
  INFLECTIONAL  
  Gibt an, dass die sprachenabhängige Wortstammerkennung für den angegebenen einfachen Ausdruck verwendet werden soll. Das Verhalten der Wortstammerkennung wird auf der Grundlage von Wortstammerkennungsregeln für jede Sprache einzeln definiert. Der neutralen Sprache ist keine Wortstammerkennung zugeordnet. Auf die gewünschte Wortstammerkennung wird anhand der Spaltensprache der abgefragten Spalten verwiesen. Falls *language_term* angegeben ist, wird die dieser Sprache entsprechende Wortstammerkennung verwendet.  
   
- Ein angegebener *\<simple_term>* -Wert innerhalb von *\<generation_term>* kann nicht sowohl mit Substantiven als auch mit Verben übereinstimmen.  
+ Ein angegebener *\<simple_term>* innerhalb eines *\<generation_term>* kann nicht mit Substantiven und mit Verben gleichzeitig übereinstimmen.  
   
  THESAURUS  
- Gibt an, dass der Thesaurus verwendet wird, der der Volltext-Spaltensprache oder der in der Abfrage angegebenen Sprache entspricht. Die längsten Muster aus *\<simple_term>* werden mit dem Thesaurus verglichen, und weitere Ausdrücke werden generiert, um das ursprüngliche Muster zu erweitern oder zu ersetzen. Wird für den ganzen Ausdruck oder für Teile von *\<simple_term>* keine Übereinstimmung gefunden, wird der nicht übereinstimmende Teil als *simple_term* behandelt. Weitere Informationen zum Thesaurus der Volltextsuche finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+ Gibt an, dass der Thesaurus verwendet wird, der der Volltext-Spaltensprache oder der in der Abfrage angegebenen Sprache entspricht. Die längsten Muster aus *\<simple_term>* werden mit dem Thesaurus verglichen, und weitere Ausdrücke werden generiert, um das ursprüngliche Muster zu erweitern oder zu ersetzen. Wird für den ganzen Ausdruck oder für Teile von *\<simple_term>* keine Übereinstimmung gefunden, wird der nicht übereinstimmende Teil als *simple_term*behandelt. Weitere Informationen zum Thesaurus der Volltextsuche finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
  \<generic_proximity_term>  
  Legt eine Übereinstimmung für Wörter oder Ausdrücke fest, die im durchsuchten Dokument vorhanden sein müssen.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Es wird empfohlen, \<custom_proximity_term> zu verwenden.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Sie sollten \<custom_proximity_term> verwenden.  
   
  NEAR | ~  
  Gibt an, dass das Wort oder der Ausdruck auf beiden Seiten des NEAR-Operators bzw. ~-Operators in einem Dokument vorhanden sein muss, damit eine Übereinstimmung zurückgegeben wird. Sie müssen zwei Suchbegriffe angeben. Ein Suchbegriff kann ein einzelnes Wort oder ein Ausdruck sein, der in doppelte Anführungszeichen ("*Ausdruck*") eingeschlossen wird.  
@@ -288,9 +288,9 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  Gibt alle Zeilen zurück, die die angegebenen Begriffe enthalten, unabhängig von der Entfernung dazwischen. Dies ist die Standardoption.  
   
  \<match_order>  
- Gibt an, ob die Begriffe in der angegebenen Reihenfolge auftreten müssen, um von einer Suchabfrage zurückgegeben zu werden. Wenn Sie \<match_order> verwenden möchten, müssen Sie auch \<maximum_distance> angeben.  
+ Gibt an, ob die Begriffe in der angegebenen Reihenfolge auftreten müssen, um von einer Suchabfrage zurückgegeben zu werden. Bei Angabe von \<match_order> müssen Sie auch \<maximum_distance> angeben.  
   
- \<match_order> akzeptiert einen der folgenden Werte:  
+ \<match_order> verwendet einen der folgenden Werte:  
   
  **TRUE**  
  Erzwingt die angegebene Reihenfolge in Begriffen. Beispielsweise würde `NEAR(A,B)` nur `A ... B` entsprechen.  
@@ -312,7 +312,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Gibt an, dass die übereinstimmenden Zeilen (die von der Abfrage zurückgegeben werden) mit einer Liste von Wörtern und Ausdrücken übereinstimmen müssen, die optional jeweils mit einem Gewichtungswert versehen sind.  
   
  ISABOUT  
- Gibt das Schlüsselwort *\<weighted_term>* an.  
+ Gibt das *\<weighted_term>* -Schlüsselwort an.  
   
  WEIGHT(*weight_value*)  
  Gibt einen Gewichtungswert von 0,0 bis 1,0 an. Jede Komponente in *\<weighted_term>* kann auch einen *weight_value* enthalten. *weight_value* kann die Art und Weise beeinflussen, wie sich verschiedene Teilabfragen auf den Rangwert auswirken, der jeder mit der Abfrage übereinstimmenden Zeile zugewiesen ist. WEIGHT hat keine Auswirkung auf die Ergebnisse von CONTAINS-Abfragen, beeinflusst jedoch den Rang in [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)-Abfragen.  
@@ -332,7 +332,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  { OR | | }  
  Gibt an, dass eine der beiden CONTAINS-Suchbedingungen für eine Übereinstimmung erfüllt sein muss. Der senkrechte Strich (|) kann an Stelle des OR-Schlüsselsorts zur Darstellung des OR-Operators verwendet werden.  
   
- Wenn in *\<contains_search_condition>* in Klammern gesetzte Gruppen enthalten sind, werden diese zuerst ausgewertet. Nach der Auswertung der in Klammern gesetzten Gruppen gelten folgende Regeln bei der Verwendung der logischen Operatoren mit den CONTAINS-Suchbedingungen:  
+ Wenn *\<contains_search_condition>* in Klammern eingeschlossene Gruppen enthält, werden diese zuerst ausgewertet. Nach der Auswertung der in Klammern gesetzten Gruppen gelten folgende Regeln bei der Verwendung der logischen Operatoren mit den CONTAINS-Suchbedingungen:  
   
 -   NOT wird vor AND angewendet.  
   

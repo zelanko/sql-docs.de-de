@@ -1,5 +1,6 @@
 ---
 title: Übersicht über die Schlüsselverwaltung für Always Encrypted | Microsoft-Dokumentation
+description: 'Hier erfahren Sie, wie Sie die beiden Arten von Kryptografieschlüsseln verwalten, die Always Encrypted verwendet, um Ihre Daten in SQL Server zu schützen: Spaltenverschlüsselungsschlüssel und Spaltenhauptschlüssel.'
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bfeb8126553a1a5990ed7ccfd8a836117f3328b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784011"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Übersicht über die Schlüsselverwaltung für Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 
 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) verwendet zwei Typen von kryptografischen Schlüsseln zum Schützen Ihrer Daten – einen Schlüssel zum Verschlüsseln Ihrer Daten und einen anderen Schlüssel zum Verschlüsseln des Schlüssels, der Ihre Daten verschlüsselt. Der Spaltenverschlüsselungsschlüssel verschlüsselt Ihre Daten, der Spaltenhauptschlüssel verschlüsselt den Spaltenverschlüsselungsschlüssel. Dieser Artikel enthält eine ausführliche Übersicht über die Verwaltung dieser Verschlüsselungsschlüssel.  

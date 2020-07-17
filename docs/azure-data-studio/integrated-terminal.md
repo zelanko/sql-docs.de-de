@@ -1,25 +1,24 @@
 ---
 title: Integriertes Terminal
-titleSuffix: Azure Data Studio
 description: Hier erfahren Sie mehr über das integrierte Terminal in Azure Data Studio.
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ecd96299a29619bdf52894b36782f6d71e3a0c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774596"
 ---
 # <a name="integrated-terminal"></a>Integriertes Terminal
 
-In [!INCLUDE[name-sos](../includes/name-sos-short.md)] können Sie ein integriertes Terminal öffnen und am Stamm Ihres Arbeitsbereichs beginnen. Das ist möglicherweise ganz praktisch, da Sie weder zwischen Fenstern wechseln noch den Status eines vorhandenen Terminals ändern müssen, um eine einfache Befehlszeilenaufgabe auszuführen.
+In Azure Data Studio können Sie ein integriertes Terminal öffnen und am Stamm Ihres Arbeitsbereichs beginnen. Das ist möglicherweise ganz praktisch, da Sie weder zwischen Fenstern wechseln noch den Status eines vorhandenen Terminals ändern müssen, um eine einfache Befehlszeilenaufgabe auszuführen.
 
 So öffnen Sie das Terminal:
 
@@ -30,7 +29,7 @@ So öffnen Sie das Terminal:
 ![Terminal](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> Sie können weiterhin eine externe Shell mit dem Explorer-Befehl **In Eingabeaufforderung öffnen** (**In Terminal öffnen** unter Mac oder Linux) öffnen, wenn Sie lieber außerhalb von [!INCLUDE[name-sos](../includes/name-sos-short.md)] arbeiten möchten.
+> Sie können weiterhin eine externe Shell mit dem Explorer-Befehl **In Eingabeaufforderung öffnen** (**In Terminal öffnen** unter Mac oder Linux) öffnen, wenn Sie lieber außerhalb von Azure Data Studio arbeiten möchten.
 
 ## <a name="managing-multiple-terminals"></a>Verwalten mehrerer Terminals
 
@@ -66,7 +65,7 @@ Bei der ordnungsgemäßen Konfiguration der Shell unter Windows kommt es darauf 
 > Damit die Verwendung als integriertes Terminal möglich ist, muss es sich bei der ausführbaren Shelldatei um eine Konsolenanwendung handeln, sodass `stdin/stdout/stderr` umgeleitet werden kann.
 
 > [!TIP]
-> Die integrierte Terminalshell wird mit den Berechtigungen von [!INCLUDE[name-sos](../includes/name-sos-short.md)] ausgeführt. Wenn Sie einen Shellbefehl mit erhöhten Rechten (Administratorrechten) oder anderen Berechtigungen ausführen müssen, können Sie Plattformdienstprogramme wie `runas.exe` in einem Terminal verwenden.
+> Die integrierte Terminalshell wird mit den Berechtigungen von Azure Data Studio ausgeführt. Wenn Sie einen Shellbefehl mit erhöhten Rechten (Administratorrechten) oder anderen Berechtigungen ausführen müssen, können Sie Plattformdienstprogramme wie `runas.exe` in einem Terminal verwenden.
 
 ### <a name="shell-arguments"></a>Shellargumente
 
@@ -149,5 +148,5 @@ Sitzungen mit dem integrierten Terminal können nun mit dem Befehl **Terminal: (
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Erzwingen, dass Tastenzuordnungen an das Terminal weitergeleitet werden
 
-Während der Fokus auf dem integrierten Terminal liegt, funktionieren viele Tastenzuordnungen nicht, da die Tastatureingaben an das Terminal selbst weitergeleitet und von diesem verwendet werden. Mit der Einstellung `terminal.integrated.commandsToSkipShell` kann dies umgangen werden. Sie enthält eine Reihe von Befehlsnamen, deren Tastenzuordnungen die Verarbeitung durch die Shell überspringen und stattdessen vom Tastenzuordnungssystem [!INCLUDE[name-sos](../includes/name-sos-short.md)] verarbeitet werden. Standardmäßig betrifft dies alle Tastenzuordnungen des Terminals sowie bestimmte weniger häufig verwendete Tastenzuordnungen.
+Während der Fokus auf dem integrierten Terminal liegt, funktionieren viele Tastenzuordnungen nicht, da die Tastatureingaben an das Terminal selbst weitergeleitet und von diesem verwendet werden. Mit der Einstellung `terminal.integrated.commandsToSkipShell` kann dies umgangen werden. Sie enthält eine Reihe von Befehlsnamen, deren Tastenzuordnungen die Verarbeitung durch die Shell überspringen und stattdessen vom Tastenzuordnungssystem Azure Data Studio verarbeitet werden. Standardmäßig betrifft dies alle Tastenzuordnungen des Terminals sowie bestimmte weniger häufig verwendete Tastenzuordnungen.
 

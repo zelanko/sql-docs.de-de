@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fe9d407b446177004715ae5d3403e856028985d3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a9f62a8a6aa679624e78def2dd5bea1ddeb7f5db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980582"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715402"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>Importieren von Daten nach SQL Server mithilfe von BULK INSERT oder OPENROWSET(BULK...)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 In diesem Artikel erhalten Sie einen Überblick über die Verwendung der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung BULK INSERT und der Anweisung INSERT...SELECT * FROM OPENROWSET(BULK...), mit denen ein Massenimport von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle oder eine Tabelle in Azure SQL-Datenbank ermöglicht wird. In diesem Artikel werden zudem Sicherheitsaspekte beim Verwenden von BULK INSERT und OPENROWSET(BULK…) sowie das Verwenden dieser Methoden für den Massenimport aus einer Remotedatenquelle beschrieben.
 
@@ -109,6 +108,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ## <a name="bulk-importing-from-azure-blob-storage"></a>Massenimport aus Azure Blob Storage
 
 Wenn Sie Daten aus Azure Blob Storage importieren, die nicht öffentlich sind (anonymer Zugriff), erstellen Sie eine [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)-Anweisung, die auf einem SAS-Schlüssel basiert, der mit einer [MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md)-Anweisung verschlüsselt ist. Erstellen Sie anschließend eine [externe Datenbankquelle](../../t-sql/statements/create-external-data-source-transact-sql.md) für die Verwendung in Ihrem BULK INSERT-Befehl.
+
+> [!NOTE]
+> Verwenden Sie keine explizite Transaktion, diese führt zu einem 4861-Fehler.
 
 ### <a name="using-bulk-insert"></a>Verwenden von BULK INSERT
 

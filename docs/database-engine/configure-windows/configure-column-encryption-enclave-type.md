@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren des Enclave-Typs für die Always Encrypted-Serverkonfigurationsoption | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Secure Enclaves für Always Encrypted aktivieren oder deaktivieren. Außerdem erfahren Sie, wie Sie überprüfen, ob eine Enclave ordnungsgemäß initialisiert wurde.
 ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e16bbd33d9353c02cf72e3c931a5d8749197f5d
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73593823"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818360"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Konfigurieren des Enclave-Typs für die Always Encrypted-Serverkonfigurationsoption
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -24,7 +25,7 @@ In diesem Artikel wird beschrieben, wie Sie eine Secure Enclave für Always Encr
 
 Die Serverkonfigurationsoption **column encryption enclave type** steuert den Typ einer für Always Encrypted verwendeten Secure Enclave. Die Option kann auf einen der folgenden Werte festgelegt werden:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-------------------|-----------------| 
 |0|**Keine Secure Enclave**. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann die Secure Enclave für Always Encrypted nicht initialisieren. Aus diesem Grund ist die Funktionalität von Always Encrypted mit Secure Enclaves nicht verfügbar.|  
 |1|**Virtualisierungsbasierte Sicherheit (VBS)** . Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] versucht, eine Enclave mit virtualisierungsbasierter Sicherheit (VBS) zu initialisieren.

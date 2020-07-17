@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
-ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
+ms.openlocfilehash: 006a18f65350cd94e0070834e21b1ee846883770
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82784640"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883005"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Auslagern von schreibgeschützten Arbeitsauslastungen auf ein sekundäres Replikat einer Always On-Verfügbarkeitsgruppe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Die Funktionen für aktive sekundäre Replikate in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] umfassen Unterstützung für den schreibgeschützten Zugriff auf ein oder mehrere sekundäre Replikate (*lesbare sekundäre Replikate*). Ein lesbares sekundäres Replikat kann sich entweder im Verfügbarkeitsmodus mit synchronem oder asynchronem Commit befinden. Lesbare sekundäre Replikate lassen den schreibgeschützten Zugriff auf alle eigenen sekundären Datenbanken zu. Bei lesbaren sekundären Datenbanken ist jedoch kein Schreibschutz festgelegt. Sie sind dynamisch. Eine sekundäre Datenbank wird geändert, wenn Änderungen an der zugehörigen primären Datenbank auf die sekundäre Datenbank angewendet werden. Bei einem typischen sekundären Replikat liegen die Daten in den sekundären Datenbanken nahezu in Echtzeit vor. Dies gilt auch für dauerhafte speicheroptimierte Tabellen. Weiterhin werden Volltextindizes mit den sekundären Datenbanken synchronisiert. In vielen Fällen beträgt die Datenlatenz zwischen einer primären Datenbank und der zugehörigen sekundären Datenbank nur wenige Sekunden.  
   
@@ -60,9 +60,13 @@ ms.locfileid: "82784640"
      Der Datenbankadministrator muss mindestens ein Replikat so konfigurieren, dass es bei Ausführung in der sekundären Rolle alle Verbindungen (nur für den schreibgeschützten Zugriff) oder aber nur Verbindungen für beabsichtigte Lesevorgänge zulässt.  
   
     > [!NOTE]  
-    >  Optional kann der Datenbankadministrator eines der Verfügbarkeitsreplikate so konfigurieren, dass schreibgeschützte Verbindungen bei Ausführung in der primären Rolle ausgeschlossen werden.  
+    >  Optional kann der Datenbankadministrator eines der Verfügbarkeitsreplikate so konfigurieren, dass schreibgeschützte Verbindungen bei Ausführung in der primären Rolle ausgeschlossen werden.
   
      Weitere Informationen finden Sie unter [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
+  
+    >[!WARNING]
+    >  Nur Replikate desselben Hauptbuilds von SQL Server sind lesbar. Weitere Informationen finden Sie unter [Grundlagen zu parallelen Upgrades](upgrading-always-on-availability-group-replica-instances.md#rolling-upgrade-basics-for-always-on-ags).
+  
   
 -   **Verfügbarkeitsgruppenlistener**  
   

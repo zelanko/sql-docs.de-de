@@ -1,31 +1,30 @@
 ---
 title: 'Schnellstart: Herstellen einer Verbindung mit und Abfragen von SQL Server'
-titleSuffix: Azure Data Studio
 description: In dieser Schnellstartanleitung erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit SQL Server herstellen und eine Abfrage ausführen.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5fc104e5c4a848c24c6bc45ab09419dc10d1818
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75884054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764103"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-name-sos"></a>Schnellstart: Herstellen einer Verbindung mit und Abfragen von SQL Server mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>Schnellstart: Verwenden von Azure Data Studio zum Verbinden mit und Abfragen von SQL Server
 
-In dieser Schnellstartanleitung erfahren Sie, wie Sie mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung mit SQL Server herstellen und anschließend Transact-SQL-Anweisungen (T- SQL) verwenden, um die in [!INCLUDE[name-sos](../includes/name-sos-short.md)]-Tutorials verwendete *TutorialDB* zu erstellen.
+In dieser Schnellstartanleitung erfahren Sie, wie Sie Azure Data Studio zum Herstellen einer Verbindung mit SQL Server verwenden und dann mit T-SQL-Anweisungen (Transact-SQL) die in Tutorials für Azure Data Studio verwendete *TutorialDB*-Komponente erstellen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Um diesen Schnellstart abzuschließen, benötigen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] und Zugriff auf SQL Server.
+Um diesen Schnellstart abzuschließen, benötigen Sie Azure Data Studio und Zugriff auf SQL Server.
 
-- [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+- [Installieren Sie Azure Data Studio](download.md).
 
 Wenn Sie nicht auf eine SQL Server-Instanz zugreifen können, wählen Sie Ihre Plattform über einen der folgenden Links aus (hierzu benötigen Sie Ihren SQL-Anmeldenamen und das zugehörige Kennwort):
 
@@ -35,20 +34,20 @@ Wenn Sie nicht auf eine SQL Server-Instanz zugreifen können, wählen Sie Ihre P
 
 ## <a name="connect-to-a-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 
-1. Starten Sie **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
+1. Starten Sie **Azure Data Studio**.
 
-2. Wenn Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum ersten Mal ausführen, sollte die **Homepage** geöffnet werden. Wenn die **Homepage** nicht angezeigt wird, wählen Sie **Hilfe** > **Willkommen** aus. Wählen Sie **Neue Verbindung** aus, um den Bereich **Verbindung** zu öffnen:
+2. Wenn Sie Azure Data Studio zum ersten Mal ausführen, sollte die **Homepage** geöffnet werden. Wenn die **Homepage** nicht angezeigt wird, wählen Sie **Hilfe** > **Willkommen** aus. Wählen Sie **Neue Verbindung** aus, um den Bereich **Verbindung** zu öffnen:
 
    ![Symbol „Neue Verbindung“](media/quickstart-sql-server/new-connection-icon.png)
 
 3. In diesem Artikel wird die *SQL-Anmeldung* verwendet, aber auch die *Windows-Authentifizierung* unterstützt. Füllen Sie die Felder wie folgt aus:
 
-- **Servername:** Geben Sie hier den Servernamen ein. Beispiel: localhost.
-- **Authentifizierungstyp:** SQL-Anmeldung
-- **Benutzername:** Benutzername für die SQL Server-Instanz
-- **Kennwort:** Kennwort für die SQL Server-Instanz
-- **Datenbankname:** \<Standard\>
-- **Servergruppe:** \<Standard\>
+   - **Servername:** Geben Sie hier den Servernamen ein. Beispiel: localhost.
+   - **Authentifizierungstyp:** SQL-Anmeldung
+   - **Benutzername:** Benutzername für die SQL Server-Instanz
+   - **Kennwort:** Kennwort für die SQL Server-Instanz
+   - **Datenbankname:** \<Default\>
+   - **Servergruppe:** \<Default\>
 
    ![Bildschirm „Neue Verbindung“](media/quickstart-sql-server/new-connection-screen.png)
 
@@ -60,22 +59,22 @@ Mit den folgenden Schritten wird eine Datenbank mit dem Namen **TutorialDB** ers
 
 2. Fügen Sie den folgenden Codeausschnitt in das Abfragefenster ein, und klicken Sie auf **Ausführen**.
 
- ```sql
- USE master
- GO
- IF NOT EXISTS (
-  SELECT name
-  FROM sys.databases
-  WHERE name = N'TutorialDB'
- )
-  CREATE DATABASE [TutorialDB];
- GO
- IF SERVERPROPERTY('ProductVersion') > '12'
-  ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
- GO
- ```
+    ```sql
+    USE master
+    GO
+    IF NOT EXISTS (
+     SELECT name
+     FROM sys.databases
+     WHERE name = N'TutorialDB'
+    )
+     CREATE DATABASE [TutorialDB];
+    GO
+    IF SERVERPROPERTY('ProductVersion') > '12'
+     ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
+    GO
+    ```
 
-Nachdem die Abfrage abgeschlossen ist, wird die neue Datenbank **TutorialDB** in der Datenbankliste angezeigt. Wenn die Datenbank nicht angezeigt wird, klicken Sie zuerst mit der rechten Maustaste auf den Knoten **Datenbanken**, und wählen Sie **Aktualisieren** aus.
+   Nachdem die Abfrage abgeschlossen ist, wird die neue Datenbank **TutorialDB** in der Datenbankliste angezeigt. Wenn die Datenbank nicht angezeigt wird, klicken Sie zuerst mit der rechten Maustaste auf den Knoten **Datenbanken**, und wählen Sie **Aktualisieren** aus.
 
    ![Erstellen einer Datenbank](media/quickstart-sql-server/create-database.png)
 
@@ -92,22 +91,22 @@ Der Abfrage-Editor ist immer noch mit der Datenbank *master* verbunden, aber wir
    > [!NOTE]
    > Sie können diesen Codeausschnitt im Editor anfügen oder die vorherige Abfrage überschreiben. Beachten Sie, dass beim Klicken auf **Ausführen** nur die ausgewählte Abfrage ausgeführt wird. Wenn nichts ausgewählt ist, werden beim Klicken auf **Ausführen** alle Abfragen im Editor ausgeführt.
 
- ```sql
- -- Create a new table called 'Customers' in schema 'dbo'
- -- Drop the table if it already exists
- IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
-  DROP TABLE dbo.Customers;
- GO
- -- Create the table in the specified schema
- CREATE TABLE dbo.Customers
- (
-  CustomerId int NOT NULL PRIMARY KEY, -- primary key column
-  Name nvarchar(50) NOT NULL,
-  Location nvarchar(50) NOT NULL,
-  Email nvarchar(50) NOT NULL
- );
- GO
- ```
+    ```sql
+    -- Create a new table called 'Customers' in schema 'dbo'
+    -- Drop the table if it already exists
+    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL
+     DROP TABLE dbo.Customers;
+    GO
+    -- Create the table in the specified schema
+    CREATE TABLE dbo.Customers
+    (
+     CustomerId int NOT NULL PRIMARY KEY, -- primary key column
+     Name nvarchar(50) NOT NULL,
+     Location nvarchar(50) NOT NULL,
+     Email nvarchar(50) NOT NULL
+    );
+    GO
+    ```
 
 Nachdem die Abfrage abgeschlossen ist, wird die neue Tabelle **Customers** in der Tabellenliste angezeigt. Möglicherweise müssen Sie mit der rechten Maustaste auf den Knoten **TutorialDB > Tables** klicken und **Aktualisieren** auswählen.
 
@@ -115,26 +114,26 @@ Nachdem die Abfrage abgeschlossen ist, wird die neue Tabelle **Customers** in de
 
 - Fügen Sie den folgenden Codeausschnitt in das Abfragefenster ein, und klicken Sie auf **Ausführen**:
 
- ```sql
- -- Insert rows into table 'Customers'
- INSERT INTO dbo.Customers
-  ([CustomerId], [Name], [Location], [Email])
- VALUES
-  ( 1, N'Orlando', N'Australia', N''),
-  ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),
-  ( 3, N'Donna', N'Germany', N'donna0@adventure-works.com'),
-  ( 4, N'Janet', N'United States', N'janet1@adventure-works.com')
- GO
- ```
+    ```sql
+    -- Insert rows into table 'Customers'
+    INSERT INTO dbo.Customers
+     ([CustomerId], [Name], [Location], [Email])
+    VALUES
+     ( 1, N'Orlando', N'Australia', N''),
+     ( 2, N'Keith', N'India', N'keith0@adventure-works.com'),
+     ( 3, N'Donna', N'Germany', N'donna0@adventure-works.com'),
+     ( 4, N'Janet', N'United States', N'janet1@adventure-works.com')
+    GO
+    ```
 
 ## <a name="view-the-data-returned-by-a-query"></a>Anzeigen der von einer Abfrage zurückgegebenen Daten
 
-1. Fügen Sie den folgenden Codeausschnitt in das Abfragefenster ein, und klicken Sie auf **Ausführen**:
+ - Fügen Sie den folgenden Codeausschnitt in das Abfragefenster ein, und klicken Sie auf **Ausführen**:
 
- ```sql
- -- Select rows from table 'Customers'
- SELECT * FROM dbo.Customers;
- ```
+   ```sql
+   -- Select rows from table 'Customers'
+   SELECT * FROM dbo.Customers;
+   ```
 
    ![Select-Ergebnis](media/quickstart-sql-server/select-results.png)
 

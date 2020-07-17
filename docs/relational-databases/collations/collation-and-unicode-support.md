@@ -32,15 +32,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63084232460e60aedb0b0a1abe267caa7687e9dd
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831817"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091915"
 ---
 # <a name="collation-and-unicode-support"></a>Unterstützung von Sortierungen und Unicode
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Sortierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten Sortierregeln und die Berücksichtigung von Groß-/Kleinschreibung und Akzenten für die Daten. Sortierungen, die mit Zeichendatentypen wie **char** und **varchar** verwendet werden, geben die Codeseite und die entsprechenden Zeichen vor, die für den jeweiligen Datentyp dargestellt werden können. 
 
 Bei der Installation einer neuen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bei der Wiederherstellung einer Datenbanksicherung oder bei der Verbindung von Servern mit Clientdatenbanken ist es wichtig, dass Sie die Gebietsschemaanforderungen, die Sortierreihenfolge und das Verhalten in Bezug auf die Groß-/Kleinschreibung und Akzente der Daten kennen, mit denen Sie arbeiten. Informationen zum Auflisten der Sortierungen, die in Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verfügbar sind, finden Sie unter [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
@@ -235,7 +235,7 @@ In der folgenden Tabelle werden die standardmäßig verwendeten Sortierbezeichnu
 |Französisch (Monaco)|0x180c|0x040c|French_CI_AS|
 |Französisch (Schweiz)|0x100c|0x040c|French_CI_AS|
 |Friesisch (Niederlande)|0x0462|0x0462|Latin1_General_CI_AI|
-|Galicisch (Spanien)|0x0456|0x0409|Latin1_General_CI_AS|
+|Galizisch|0x0456|0x0409|Latin1_General_CI_AS|
 |Georgisch (Georgien)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
 |Georgisch (Georgien)|0x0437|0x0419|Latin1_General_CI_AS|
 |Deutsch (Telefonbuchsortierung DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
@@ -303,6 +303,7 @@ In der folgenden Tabelle werden die standardmäßig verwendeten Sortierbezeichnu
 |Rumänisch (Rumänien)|0x0418|0x0418|Romanian_CI_AS|
 |Rätoromanisch (Schweiz)|0x0417|0x0417|Latin1_General_CI_AI|
 |Russisch (Russische Föderation)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|Sacha (Russische Föderation)|0x0485|0x0485|Latin1_General_CI_AI|
 |Inari-Sami (Finnland)|0x243b|0x083b|Latin1_General_CI_AI|
 |Lule-Sami (Norwegen)|0x103b|0x043b|Latin1_General_CI_AI|
 |Lule-Sami (Schweden)|0x143b|0x083b|Latin1_General_CI_AI|
@@ -366,7 +367,6 @@ In der folgenden Tabelle werden die standardmäßig verwendeten Sortierbezeichnu
 |Walisisch (Großbritannien)|0x0452|0x0452|Latin1_General_CI_AI|
 |Wolof (Senegal)|0x0488|0x040c|French_CI_AS|
 |Xhosa/isiXhosa (Südafrika)|0x0434|0x0409|Latin1_General_CI_AS|
-|Jakutisch (Russische Föderation)|0x0485|0x0485|Latin1_General_CI_AI|
 |Yi (VRC)|0x0478|0x0409|Latin1_General_CI_AS|
 |Yoruba (Nigeria)|0x046a|0x0409|Latin1_General_CI_AS|
 |Zulu/isiZulu (Südafrika)|0x0435|0x0409|Latin1_General_CI_AS|
@@ -656,4 +656,3 @@ Weitere Informationen finden Sie in folgenden verwandten Inhalten:
 [Auswählen einer Sprache beim Erstellen eines Volltextindex](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
 [Einzelbyte- und Mehrbyte-Zeichensätze](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
- 

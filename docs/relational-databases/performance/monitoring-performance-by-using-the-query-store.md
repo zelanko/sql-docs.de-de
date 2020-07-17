@@ -14,16 +14,16 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 8142cb9868a1daa8f7c73c6b30da1b29c12bf3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 010d18fff933ee1bd362d1ebd59ef86905d493ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816426"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006215"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abfragespeicher bietet Ihnen Einblick in die Auswahl und die Leistung eines Abfrageplans. Er vereinfacht das Beheben von Leistungsproblemen, indem er das schnelle Auffinden von Leistungsabweichungen durch Änderungen an Abfrageplänen ermöglicht. Der Abfragespeicher erfasst automatisch einen Verlauf der Abfragen, Pläne und Laufzeitstatistiken und bewahrt diese zur Überprüfung auf. Es unterteilt die Daten nach Zeitfenstern, sodass Sie Verwendungsmuster für Datenbanken erkennen können und verstehen, wann Abfrageplanänderungen auf dem Server aufgetreten sind. Sie können den Abfragespeicher mit der Option [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) konfigurieren.
 
@@ -153,29 +153,11 @@ Im folgenden finden Sie einige Beispiele, wie Sie ausführlicheren Einblick in I
 
 ## <a name="configuration-options"></a><a name="Options"></a> Konfigurationsoptionen
 
-Die folgenden Optionen sind zur Konfiguration von Abfragespeicherparametern verfügbar.
-
-*OPERATION_MODE:* **READ_WRITE** (Standardeinstellung) oder READ_ONLY lauten.
-
-*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS):* Konfigurieren Sie das `STALE_QUERY_THRESHOLD_DAYS`-Argument, um die Anzahl der Tage festzulegen, die Daten im Abfragespeicher beibehalten werden sollen. Der Standardwert ist 30. Für die Basic Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ist der Standardwert **7** Tage.
-
-*DATA_FLUSH_INTERVAL_SECONDS:* Diese Option bestimmt die Häufigkeit, mit der in den Abfragespeicher geschriebene Daten auf Datenträger gespeichert werden. Um die Leistung zu optimieren, werden durch den Abfragespeicher gesammelte Daten asynchron auf den Datenträger geschrieben. Die Häufigkeit, mit der diese asynchrone Übertragung auftritt, wird mit `DATA_FLUSH_INTERVAL_SECONDS` konfiguriert. Der Standardwert ist **900** (15 Minuten).
-
-*MAX_STORAGE_SIZE_MB:* Diese Option konfiguriert die maximale Größe des Abfragespeichers. Wenn die Daten im Abfragespeicher die `MAX_STORAGE_SIZE_MB`-Grenze erreichen, ändert sich der Status des Abfragespeichers automatisch von Lese-/Schreibzugriff in den schreibgeschützten Modus, und es werden keine neuen Daten mehr erfasst. Der Standardwert ist **100 MB** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] durch [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] beträgt der Standardwert **1 GB**. Der Standardwert für die Premium Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] liegt bei **1 GB**, für die Basic Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] bei **10 MB**.
-
-*INTERVAL_LENGTH_MINUTES:* Diese Option bestimmt das Zeitintervall, mit dem statistische Daten zur Laufzeitausführung im Abfragespeicher aggregiert werden. Um die Speicherverwendung zu optimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitintervall aggregiert. Dieses feste Zeitintervall wird mit `INTERVAL_LENGTH_MINUTES` konfiguriert. Der Standardwert lautet **60**.
-
-*SIZE_BASED_CLEANUP_MODE:* Mit dieser Option steuern Sie, ob der Bereinigungsprozess automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert. **AUTO** (Standardeinstellung) oder OFF sind möglich.
-
-*QUERY_CAPTURE_MODE:* Diese Option gibt an, ob der Abfragespeicher alle oder, ausgehend von der Anzahl der Ausführungen und dem Ressourcenverbrauch, nur relevante Abfragen erfasst, oder ob der Abfragespeicher das Hinzufügen neuer Abfragen beendet und nur aktuelle Abfragen nachverfolgt. **ALL** (alle Abfragen erfassen), AUTO (seltene Abfragen und Abfragen mit minimaler Kompilierungs- und Ausführungsdauer ignorieren), CUSTOM (benutzerdefinierte Erfassungsrichtlinie) oder NONE (neue Abfragen nicht mehr erfassen) ist möglich. Der Standardwert lautet **ALL** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] durch [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] lautet der Standardwert **AUTO**. Der Standardwert für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ist **AUTO**.
-
-*MAX_PLANS_PER_QUERY:* Eine ganze Zahl, die die maximale Anzahl von Plänen darstellt, die für jede Abfrage beibehalten werden. Der Standardwert ist **200**.
-
-*WAIT_STATS_CAPTURE_MODE:* Diese Option steuert, ob der Abfragespeicher Wartestatistikinformationen erfasst. **ON** (Standardeinstellung) oder OFF sind möglich.
+Weitere Informationen zu den verfügbaren Konfigurationsoptionen für Abfragespeicherparameter finden Sie unter [ALTER DATABASE SET-Optionen (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
 Fragen Sie die Sicht **sys.database_query_store_options** ab, um die aktuellen Optionen des Abfragespeichers zu ermitteln. Weitere Informationen zu den Werten finden Sie unter [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
-Weitere Informationen zum Festlegen der Optionen mit [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen finden Sie unter [Optionsverwaltung](#OptionMgmt).
+Beispiele für das Festlegen der Konfigurationsoptionen mit [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen finden Sie unter [Optionsverwaltung](#OptionMgmt).
 
 ## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> Zugehörige Sichten, Funktionen und Prozeduren
 

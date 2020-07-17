@@ -1,7 +1,7 @@
 ---
 title: 'Schnellstart: Sichern und Wiederherstellen einer Datenbank'
 titleSuffix: SQL Server
-description: In dieser Schnellstartanleitung erfahren Sie, wie Sie eine SQL Server-Datenbank lokal sichern und wiederherstellen.
+description: In diesem Artikel erfahren Sie, wie Sie eine neue Datenbank sowie eine Sicherung der Datenbank erstellen und die Sicherung in SQL Server wiederherstellen.
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
@@ -11,15 +11,15 @@ ms.prod: sql
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e261914baec4774d0e7ae1f343874e4a3154d42
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258646"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669961"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Schnellstart: Lokales Sichern und Wiederherstellen einer SQL Server-Datenbank
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Schnellstart erstellen Sie eine neue Datenbank, legen eine einfache Sicherung dieser Datenbank an und stellen sie dann wieder her. 
 

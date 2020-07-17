@@ -1,23 +1,22 @@
 ---
 title: Aktivieren des Erkenntniswidgets zur Nutzung des Tabellenspeicherplatzes
-titleSuffix: Azure Data Studio
 description: Dieses Tutorial veranschaulicht, wie Sie das Beispielwidget für Erkenntnisse zur Nutzung des Tabellenspeicherplatzes auf dem Dashboard für Azure Data Studio-Datenbanken aktivieren.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d2be24a72c098c5a6a0b5e3ecefbde9bbe39cd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957014"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726703"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>Tutorial: Aktivieren des Erkenntniswidgets zur Nutzung des Tabellenspeicherplatzes mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>Tutorial: Aktivieren des Erkenntniswidgets zur Nutzung des Tabellenspeicherplatzes mithilfe von Azure Data Studio
 
 Dieses Tutorial veranschaulicht, wie Sie ein Erkenntniswidget auf dem Datenbankdashboard aktivieren, um die Speicherplatznutzung für alle Tabellen in einer Datenbank auf einen Blick anzuzeigen. In diesem Tutorial lernen Sie Folgendes:
 
@@ -33,9 +32,9 @@ Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* e
 * [Herstellen einer Verbindung mit und Abfragen von SQL Server mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 * [Herstellen einer Verbindung mit und Abfragen von Azure SQL-Datenbank mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>Aktivieren von Verwaltungserkenntnissen auf dem Datenbankendashboard von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="turn-on-a-management-insight-on-azure-data-studios-database-dashboard"></a>Aktivieren von Verwaltungserkenntnissen auf dem Datenbankendashboard von Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] verfügt über ein integriertes Beispielwidget zum Überwachen des Speicherplatzes, der von Tabellen in einer Datenbank genutzt wird.
+Azure Data Studio verfügt über ein integriertes Beispielwidget zum Überwachen des Speicherplatzes, der von Tabellen in einer Datenbank genutzt wird.
 
 1. Öffnen Sie die *Benutzereinstellungen*, indem Sie **STRG+UMSCHALT+P** drücken, um die *Befehlspalette* zu öffnen.
 
@@ -78,11 +77,11 @@ Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* e
 
 ## <a name="working-with-the-insight-chart"></a>Arbeiten im Erkenntnisdiagramm
 
-Im Erkenntnisdiagramm von [!INCLUDE[name-sos](../includes/name-sos-short.md)] können Sie Daten filtern und Details anzeigen, in dem Sie mit dem Mauszeiger darauf zeigen. Zum Ausprobieren führen Sie die folgenden Schritte aus:
+Im Erkenntnisdiagramm von Azure Data Studio können Sie Daten filtern und Details anzeigen, in dem Sie mit dem Mauszeiger darauf zeigen. Zum Ausprobieren führen Sie die folgenden Schritte aus:
 
-1. Klicken Sie auf die Legende *row_count* im Diagramm, und schalten Sie die Anzeige um. [!INCLUDE[name-sos](../includes/name-sos-short.md)] blendet Datenreihen ein und aus, wenn Sie eine Legende ein- und ausschalten.
+1. Klicken Sie auf die Legende *row_count* im Diagramm, und schalten Sie die Anzeige um. Azure Data Studio blendet Datenreihen ein und aus, wenn Sie eine Legende ein- und ausschalten.
 
-2. Halten Sie den Mauszeiger über das Diagramm. [!INCLUDE[name-sos](../includes/name-sos-short.md)] zeigt weitere Informationen zur Datenreihenbezeichnung und der zugehörigen Bezeichnung, wie im folgenden Screenshot gezeigt.
+2. Halten Sie den Mauszeiger über das Diagramm. Azure Data Studio zeigt weitere Informationen zur Datenreihenbezeichnung und der zugehörigen Bezeichnung, wie im folgenden Screenshot gezeigt.
 
    ![Umschalten von Diagramm und Legende](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 

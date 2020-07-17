@@ -1,5 +1,6 @@
 ---
 title: Schätzen der Größe eines nicht gruppierten Index | Microsoft-Dokumentation
+description: Führen Sie dieses Verfahren durch, um einzuschätzen, wie viel Speicherplatz zum Speichern eines nicht gruppierten Index in SQL Server erforderlich ist.
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -20,16 +21,16 @@ ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f63cb12399efd7417f9b00695d54b1356f681fb8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00132b65b2dc5e21fbc57c376ac005d968871f62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85743330"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Schätzen der Größe eines nicht gruppierten Index
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Befolgen Sie diese Schritte, um abzuschätzen, wie viel Speicherplatz zum Speichern eines nicht gruppierten Index erforderlich ist.  
   

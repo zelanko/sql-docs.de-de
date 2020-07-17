@@ -1,5 +1,6 @@
 ---
 title: Optimieren der Komprimierung für die Verfügbarkeitsgruppe | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie SQL Server Datenströme für Verfügbarkeitsgruppen komprimiert, wodurch der Netzwerkdatenverkehr reduziert, die CPU-Auslastung erhöht und möglicherweise Wartezeiten ausgelöst werden.
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8af4702abe127dc0bf5b53be7618515c21cd13c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013673"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888014"
 ---
 # <a name="tune-compression-for-availability-group"></a>Optimieren der Komprimierung für die Verfügbarkeitsgruppe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Standardmäßig werden Datenströme für Verfügbarkeitsgruppen gegebenenfalls von SQL Server komprimiert. Die Komprimierung reduziert den Netzwerkverkehr, steigert die CPU-Auslastung und kann die Latenz erhöhen. Sie müssen Mitglied der festen Serverrolle „sysadmin“ sein, um die Komprimierung zu aktivieren. Die folgende Tabelle zeigt, wann SQL Server Protokolldatenströme von Verfügbarkeitsgruppen komprimiert:
 
 | Szenario | Komprimierungseinstellung
@@ -24,6 +25,7 @@ Standardmäßig werden Datenströme für Verfügbarkeitsgruppen gegebenenfalls v
 | Replikat für synchrone Commits | Nicht komprimiert
 | Replikat für asynchrone Commits | Compressed
 | Während des automatischen Seedings | Nicht komprimiert
+| Datenbank mit TDE aktiviert  | Nicht komprimiert
 
 ## <a name="trace-flags-for-availability-group-compression"></a>Ablaufverfolgungsflags für Verfügbarkeitsgruppenkomprimierung 
 

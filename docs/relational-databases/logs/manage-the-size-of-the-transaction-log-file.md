@@ -1,5 +1,6 @@
 ---
 title: Verwalten der Größe der Transaktionsprotokolldatei | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie die Größe des SQL Server-Transaktionsprotokolls überwachen, das Protokoll komprimieren oder vergrößern, die Wachstumsrate des tempdb-Protokolls optimieren und das Wachstum des Transaktionsprotokolls steuern.
 ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a722331a28cf741adb5b17ac8a398c106e7cd1c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68084022"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668008"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Verwalten der Größe der Transaktionsprotokolldatei
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Dieses Thema enthält Informationen zum Überwachen der Größe eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Transaktionsprotokolls, Verkleinern des Transaktionsprotokolls, Hinzufügen zu oder Vergrößern einer Transaktionsprotokolldatei, Optimieren der Wachstumsrate des **tempdb**-Transaktionsprotokolls und Steuern der Vergrößerung einer Transaktionsprotokolldatei.  
 
 ##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>Überwachen der Belegung des Protokollspeicherplatzes  

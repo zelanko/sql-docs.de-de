@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 77c45273b5381a158d8a5cf317f292fd46dec55d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c707c97df5b6c639a2c9df5847ff4f14fc400db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79190558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729442"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
 In diesem Thema werden die als veraltet markierten Funktionen von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] beschrieben, die in [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]noch verfügbar sind. Als veraltet markierte Funktionen sollten in neuen Anwendungen nicht verwendet werden.  
   
@@ -146,7 +146,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Tabellenhinweise|INSERT_HINTS||INSERT_HINTS|34|  
 |TextPointer|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|Keine|UPDATETEXT oder WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
 |TextPointer|TEXTPTR()<br /><br /> TEXTVALID()|Keine|TEXTPTR<br /><br /> TEXTVALID|5<br /><br /> 6|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: Funktionsaufrufsequenz|Ersetzt durch SELECT *Spaltenliste* FROM sys.\<*Funktionsname*>().<br /><br /> Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`.|Funktionsaufrufsyntax '::'|166|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: Funktionsaufrufsequenz|Ersetzt durch SELECT *Spaltenliste* FROM sys.\<*function_name*>().<br /><br /> Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`.|Funktionsaufrufsyntax '::'|166|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Spaltenverweise mit 3 Teilen und 4 Teilen.|Namen mit 2 Teilen sind mit dem Standard kompatibel.|Mehr als zweiteiliger Spaltenname|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Eine in Anführungszeichen eingeschlossene Zeichenfolge, die als Spaltenalias für einen Ausdruck in einer SELECT-Liste verwendet wird:<br /><br /> '*Zeichenfolgenalias*' = *Ausdruck*|*Ausdruck* [AS] *Spaltenalias*<br /><br /> *Ausdruck* [AS] [*Spaltenalias*]<br /><br /> *Ausdruck* [AS] "*Spaltenalias*"<br /><br /> *Ausdruck* [AS] '*Spaltenalias*'<br /><br /> *Spaltenalias* = *Ausdruck*|Zeichenfolgenliterale als Spaltenaliase|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Nummerierte Prozeduren|Keine. Darf nicht verwendet werden.|ProcNums|160|  

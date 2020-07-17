@@ -1,5 +1,6 @@
 ---
 title: Schätzen der Größe eines gruppierten Indexes | Microsoft-Dokumentation
+description: Verwenden Sie dieses Verfahren, um einzuschätzen, wie viel Speicherplatz zum Speichern von Daten in einem gruppierten Index in SQL Server erforderlich ist.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -23,16 +24,16 @@ ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8c785e98a06e31448c22422f85f3be34efcffa6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 986996ff2ec54ce6a7e43924fb94ede81593c212
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756149"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Schätzen der Größe eines gruppierten Indexes
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Mit den folgenden Schritten können Sie den Umfang des Speicherplatzes schätzen, der zum Speichern eines gruppierten Indexes erforderlich ist:  
   

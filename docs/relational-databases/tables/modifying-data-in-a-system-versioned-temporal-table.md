@@ -11,16 +11,16 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cd858693ed429fd7b776a20f9300657337fa0f8
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 9eec9c506d6026bef09a3cd6415a786a8a4f01af
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107971"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002488"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Ändern von Daten in einer temporalen Tabelle mit Systemversionsverwaltung
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Daten in temporalen Tabellen mit Systemversionsverwaltung werden mithilfe von regulären DML-Anweisungen geändert, mit einem wichtigen Unterschied: Zeitraumspaltendaten können nicht direkt geändert werden. Wenn die Daten aktualisiert werden, werden sie mit einer Versionsangabe versehen, die vorherige Version jeder aktualisierten Zeile wird in die Verlaufstabelle eingefügt. Wenn Daten gelöscht werden, ist der Löschvorgang logisch, die Zeile wird aus der aktuellen Tabelle in die Verlaufstabelle verschoben und nicht endgültig gelöscht.
 
@@ -150,7 +150,7 @@ Wenn Sie versuchen, PARTITION SWITCH über eine Tabelle ohne Zeitraumdefinitione
 
 ## <a name="updating-data"></a>Aktualisieren von Daten
 
-Sie aktualisieren Daten in der aktuellen Tabelle mit einer regulären **UPDATE** -Anweisung. Im Notfall können Sie die Daten in der aktuellen Tabelle auch mithilfe der Verlaufstabelle aktualisieren. Sie können jedoch **PERIOD** -Spalten nicht aktualisieren, und Sie können die Daten in der Verlaufstabelle nicht direkt aktualisieren während **SYSTEM_VERSIONING = ON**gilt.
+Sie aktualisieren Daten in der aktuellen Tabelle mit einer regulären **UPDATE** -Anweisung. Im Notfall können Sie die Daten in der aktuellen Tabelle auch mithilfe der Verlaufstabelle aktualisieren. Sie können jedoch **PERIOD**-Spalten nicht aktualisieren, und Sie können die Daten in der Verlaufstabelle nicht direkt aktualisieren, während **SYSTEM_VERSIONING = ON** gilt.
 
 Legen Sie **SYSTEM_VERSIONING = OFF** fest, und aktualisieren Sie Zeilen aus der aktuellen Tabelle und der Verlaufstabelle, aber beachten Sie dabei, dass das System bei dieser Vorgehensweise keinen Änderungsverlauf beibehält.
 

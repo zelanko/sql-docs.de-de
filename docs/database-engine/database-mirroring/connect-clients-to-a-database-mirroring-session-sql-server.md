@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8da63d8ff15d03b55586a72a578d6074fa2a5473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258879"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789769"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Zum Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung kann ein Client entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oder .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Wenn sie für eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank konfiguriert sind, unterstützen beide Datenzugriffsanbieter die Datenbankspiegelung. Informationen zu Programmierüberlegungen in Bezug auf das Verwenden einer gespiegelten Datenbank finden Sie unter [Verwenden der Datenbankspiegelung](../../relational-databases/native-client/features/using-database-mirroring.md). Zusätzlich muss die aktuelle Prinzipalserverinstanz verfügbar sein, und der Anmeldename des Clients muss auf der Serverinstanz erstellt worden sein. Weitere Informationen finden Sie unter [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)aus. Sofern eine Zeugenserverinstanz vorhanden ist, werden Clientverbindungen mit einer Datenbank-Spiegelungssitzung ohne Beteiligung dieser Instanz hergestellt.  
   
   
@@ -101,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Eine SQL Server-Browser-Abfrage ist erforderlich, wenn in der Verbindungszeichenfolge der benannte Instanzname und nicht der Port angegeben ist.  
   
- Zum Angeben der IP-Adresse und des Ports nimmt das **Server**-Attribut die Form `Server=` *<ip_address>* `,` *\<Port>* an, wie z.B. in:  
+ Zum Angeben der IP-Adresse und des Ports nimmt das **Server**-Attribut die Form `Server=` *<ip_address>* `,` *\<port>* an, wie z. B. in:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -121,7 +121,7 @@ Server=123.34.45.56,4724;
 >  Die Authentifizierungsinformationen fehlen in dieser Zeichenfolge.  
   
 > [!IMPORTANT]  
->  Die Bündelung des Protokollpräfix mit dem **Server**-Attribut (`Server=tcp:` *\<Servername>* ) ist inkompatibel mit dem **Network**-Attribut; die Angabe des Protokolls an beiden Stellen führt wahrscheinlich zu einem Fehler. Deshalb wird empfohlen, dass eine Verbindungszeichenfolge das Protokoll mithilfe des **Network**-Attributs angibt und nur der Servername im **Server**-Attribut (`"Network=dbmssocn; Server=` *\<Servername>* `"`) angegeben wird.  
+>  Die Bündelung des Protokollpräfix mit dem **Server**-Attribut (`Server=tcp:` *\<servername>* ) ist inkompatibel mit dem **Network**-Attribut. Die Angabe des Protokolls an beiden Stellen führt wahrscheinlich zu einem Fehler. Deshalb wird empfohlen, dass eine Verbindungszeichenfolge das Protokoll mithilfe des **Network**-Attributs angibt und nur der Servername im **Server**-Attribut (`"Network=dbmssocn; Server=` *\<servername>* `"`) angegeben wird.  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner-Attribut  
  Neben dem Namen des ersten Partners kann der Client auch den Namen des Failoverpartners angeben, der die aktuelle Spiegelserverinstanz identifizieren sollte. Der Failoverpartner wird durch eines der Schlüsselwörter des Failover Partner-Attributs angegeben. Das Schlüsselwort für dieses Attribut hängt von der verwendeten API ab. In der folgenden Tabelle werden diese Schlüsselwörter aufgeführt:  

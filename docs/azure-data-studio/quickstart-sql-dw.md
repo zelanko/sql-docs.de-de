@@ -1,30 +1,29 @@
 ---
 title: Herstellen einer Verbindung mit und Abfragen einer Azure SQL Data Warehouse-Datenbank
-titleSuffix: Azure Data Studio
 description: In diesem Schnellstart erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit einer Azure SQL Data Warehouse-Datenbank herstellen und eine Abfrage ausführen.
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f9a8213dacb3a7f221d3a3c3e51f0ed94bb6990a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957107"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728013"
 ---
-# <a name="quickstart-use-name-sos-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Schnellstart: Verwenden von [!INCLUDE[name-sos](../includes/name-sos-short.md)], um eine Verbindung mit Daten in Azure SQL Data Warehouse herzustellen und sie abzufragen
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Schnellstart: Verwenden von Azure Data Studio, um eine Verbindung mit Daten in Azure SQL Data Warehouse herzustellen und sie abzufragen
 
-In diesem Schnellstart erfahren Sie, wie Sie mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung mit Azure SQL Data Warehouse herstellen und anschließend Transact-SQL-Anweisungen verwenden, um Daten zu erstellen, einzufügen und auszuwählen. 
+In diesem Schnellstart erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit Azure SQL Data Warehouse herstellen und anschließend Transact-SQL-Anweisungen verwenden, um Daten zu erstellen, einzufügen und auszuwählen. 
 
 ## <a name="prerequisites"></a>Voraussetzungen
-Um diesen Schnellstart ausführen zu können, benötigen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] und eine Azure SQL Data Warehouse-Datenbank.
+Um diesen Schnellstart ausführen zu können, benötigen Sie Azure Data Studio und eine Azure SQL Data Warehouse-Datenbank.
 
-- [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+- [Installieren Sie Azure Data Studio](download.md).
 
 Wenn Sie noch keine SQL Data Warehouse-Datenbank haben, lesen Sie [Erstellen einer Azure SQL Data Warehouse-Instanz](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
@@ -33,9 +32,9 @@ Merken Sie sich den Servernamen und die Anmeldeinformationen!
 
 ## <a name="connect-to-your-data-warehouse"></a>Herstellen einer Verbindung mit Ihrer Data Warehouse-Datenbank
 
-Verwenden Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], um eine Verbindung mit Ihrem Azure SQL Data Warehouse-Server herzustellen.
+Verwenden Sie Azure Data Studio, um eine Verbindung mit Ihrem Azure SQL Data Warehouse-Server herzustellen.
 
-1. Wenn Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum ersten Mal ausführen, sollte die Seite **Verbindung** geöffnet werden. Wird die Seite **Verbindung** nicht angezeigt, klicken Sie auf **Verbindung hinzufügen**, oder klicken Sie in der Randleiste **SERVER** auf das Symbol **Neue Verbindung**:
+1. Wenn Sie Azure Data Studio zum ersten Mal ausführen, sollte die **Verbindungsseite** geöffnet werden. Wird die Seite **Verbindung** nicht angezeigt, klicken Sie auf **Verbindung hinzufügen**, oder klicken Sie in der Randleiste **SERVER** auf das Symbol **Neue Verbindung**:
    
    ![Symbol „Neue Verbindung“](media/quickstart-sql-dw/new-connection-icon.png)
 

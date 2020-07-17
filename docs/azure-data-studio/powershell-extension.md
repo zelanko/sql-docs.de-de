@@ -1,22 +1,21 @@
 ---
 title: PowerShell-Erweiterung
-titleSuffix: Azure Data Studio
 description: Installieren und Verwenden von PowerShell für Azure Data Studio
 ms.custom: seodec18
 ms.date: 04/19/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: fd5fabd1627968287c60fc8636964f4ac4831004
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637738"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>PowerShell-Editor-Unterstützung für Azure Data Studio
 
@@ -24,7 +23,6 @@ Diese Erweiterung bietet umfassende Unterstützung für den PowerShell-Editor in
 Jetzt können Sie PowerShell-Skripts mit der ausgezeichneten IDE-ähnlichen Schnittstelle schreiben und debuggen, die Azure Data Studio bereitstellt.
 
 ![PowerShell-Erweiterung](media/powershell-extension/powershell-extension.png)
-
 
 ## <a name="features"></a>Features
 
@@ -38,7 +36,6 @@ Jetzt können Sie PowerShell-Skripts mit der ausgezeichneten IDE-ähnlichen Schn
 - Auswahl von „Ausgewählte ausführen“ in PowerShell-Code mithilfe von <kbd>F8</kbd>
 - Starten der Onlinehilfe für das Symbol unter dem Cursor mithilfe von <kbd>STRG</kbd>+<kbd>F1</kbd>
 - Grundlegende interaktive Konsolenunterstützung!
-
 
 ## <a name="installing-the-extension"></a>Installieren der Erweiterung
 
@@ -259,7 +256,7 @@ Informationen dazu, wie Sie an dieser Erweiterung mitwirken können, finden Sie 
 
 Diese Erweiterung ist [unter der MIT-Lizenz lizenziert](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Informationen zu den Binärdateien von Drittanbietern, die in Releases dieses Projekts enthalten sind, finden Sie in der Datei mit [Hinweisen zu Drittanbietern](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt).
 
-## <a name="code-of-conductconduct-md"></a>[Verhaltensregeln][conduct-md]
+## <a name="code-of-conduct"></a>Verhaltenskodex
 
 Für dieses Projekt gelten die Microsoft-Verhaltensregeln für Open Source ([Microsoft Open Source Code of Conduct][conduct-code]).
 Um weitere Informationen zu erhalten, lesen Sie die häufig gestellten Fragen zu den Verhaltensregeln ([Code of Conduct FAQ][conduct-FAQ]), oder wenden Sie sich mit weiteren Fragen und Kommentaren an [opencode@microsoft.com][conduct-email].

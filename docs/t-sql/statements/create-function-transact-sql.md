@@ -40,16 +40,16 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a011f82fc465be79f18a45e71e1dc7e62710d31e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f92ce95ce8427773c57b34511e3ab458e67d8358
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767092"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Erstellt eine benutzerdefinierte Funktion in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Eine benutzerdefinierte Funktion, die eine [!INCLUDE[tsql](../../includes/tsql-md.md)]- oder CLR-Routine (Common Language Runtime) darstellt, die Parameter annehmen, eine Aktion ausführen (z. B. eine komplexe Berechnung) und das Ergebnis dieser Aktion als Wert zurückgeben kann. Der Rückgabewert kann ein Skalarwert (Einzelwert) oder eine Tabelle sein. Verwenden Sie diese Anweisung zum Erstellen einer wiederverwendbaren Routine, die auf folgende Weise verwendet werden kann:
 
@@ -329,7 +329,7 @@ In Inline-Tabellenwertfunktionen wird der TABLE-Rückgabewert durch eine einzige
 ORDER (\<order_clause>) gibt die Reihenfolge an, in der Ergebnisse von der Tabellenwertfunktion zurückgegeben werden. Weitere Informationen finden Sie im Abschnitt [Verwenden der Sortierreihenfolge in CLR-Tabellenwertfunktionen](#using-sort-order-in-clr-table-valued-functions) weiter unten in diesem Thema.
 
 EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 und höher).
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 und höher).
 
 Gibt die Assembly und die Methode an, auf die der erstellte Funktionsname verweisen soll.
 
@@ -352,9 +352,9 @@ In einem typischen Beispiel für MyFood.DLL, bei dem sich alle Typen im MyFood-N
 > - Standardmäßig kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen CLR-Code ausführen. Sie können Datenbankobjekte, die auf CLR-Module (Common Language Runtime) verweisen, erstellen, ändern und löschen. Bevor Sie diese Verweise in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen können, müssen Sie jedoch die Option [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) aktivieren. Verwenden Sie dazu [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).
 > - Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.
 
-*\<* table_type_definition *>* ( { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) Definiert den Tabellendatentyp für eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion. Die Tabellendeklaration schließt Spaltendefinitionen und Spalten- oder Tabelleneinschränkungen ein. Die Tabelle wird immer in der primären Dateigruppe abgelegt.
+*\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,...*n* ] ) definiert den Tabellendatentyp für eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion. Die Tabellendeklaration schließt Spaltendefinitionen und Spalten- oder Tabelleneinschränkungen ein. Die Tabelle wird immer in der primären Dateigruppe abgelegt.
 
-*\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] ) **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Vorschauversion in einigen Regionen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).
+*\< clr_table_type_definition >* ( { *column_name**data_type* } [ ,...*n* ] ) **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([Vorschauversion in einigen Regionen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).
 
 Definiert die Tabellendatentypen für eine CLR-Funktion. Die Tabellendeklaration schließt nur Spaltennamen und Datentypen ein. Die Tabelle wird immer in der primären Dateigruppe abgelegt.
 
@@ -368,7 +368,7 @@ Das Argument SCHEMABINDING ist für nativ kompilierte, benutzerdefinierte Skalar
 
 EXECUTE AS ist für nativ kompilierte, benutzerdefinierte Skalarfunktionen erforderlich.
 
-**\<function_option>::= and \<clr_function_option>::=**
+**\<function_option>::= und \<clr_function_option>::=**
 
 Gibt an, dass die Funktion mindestens über eine der folgenden Optionen verfügen wird.
 
@@ -437,7 +437,7 @@ IDENTITY kann nicht für CLR-Tabellenwertfunktionen angegeben werden.
 
 *increment* ist der ganzzahlige Wert, der zum *seed*-Wert für nachfolgende Zeilen in der Tabelle hinzugefügt werden soll.
 
- **\< column_constraint >::= and \< table_constraint>::=**
+ **\< column_constraint >::= und \< table_constraint>::=**
 
 Definiert die Einschränkung für eine bestimmte Spalte oder Tabelle. Für CLR-Funktionen ist der einzige zulässige Einschränkungstyp NULL. Benannte Einschränkungen sind nicht zulässig.
 
@@ -501,7 +501,7 @@ Damit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Überladen 
 - Alle Parameter nach Wert erhalten, nicht nach Verweis.
 - Parametertypen verwenden, die mit den in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktion angegebenen kompatibel sind.
 
-Wenn der Rückgabedatentyp der CLR-Funktion einen Tabellentyp (RETURNS TABLE) angibt, sollte der Rückgabedatentyp der Methode in \<method_specifier> dem **IEnumerator**-Typ oder **IEnumerable**-Typ entsprechen. Es wird zudem angenommen, dass die Schnittstelle vom Ersteller der Funktion implementiert wird. Im Gegensatz zu [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen können CLR-Funktionen keine PRIMARY KEY-, UNIQUE- oder CHECK-Einschränkungen in \<table_type_definition> einschließen. Die Datentypen der Spalten, die in \<table_type_definition> angegeben werden, müssen mit den Typen der entsprechenden Spalten des Resultsets übereinstimmen, das von der in \<method_specifier> angegebenen Methode zur Ausführungszeit zurückgegeben wird. Diese Typprüfung wird zum Zeitpunkt der Funktionserstellung nicht durchgeführt.
+Wenn der Rückgabedatentyp der CLR-Funktion einen Tabellentyp (RETURNS TABLE) angibt, sollte der Rückgabedatentyp der Methode in \<method_specifier> dem Typ **IEnumerator** oder **IEnumerable** entsprechen. Es wird zudem angenommen, dass die Schnittstelle vom Ersteller der Funktion implementiert wird. Im Gegensatz zu [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen können CLR-Funktionen keine PRIMARY KEY-, UNIQUE- oder CHECK-Einschränkungen in \<table_type_definition> einschließen. Die Datentypen der Spalten, die in \<table_type_definition> angegeben werden, müssen mit den Typen der entsprechenden Spalten des Resultsets übereinstimmen, das von der in \<method_specifier> angegebenen Methode zur Ausführungszeit zurückgegeben wird. Diese Typprüfung wird zum Zeitpunkt der Funktionserstellung nicht durchgeführt.
 
 Weitere Informationen zum Programmieren von CLR-Funktionen finden Sie unter [CLR-benutzerdefinierte Funktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).
 

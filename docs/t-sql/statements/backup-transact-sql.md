@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/13/2019
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 61d9071b5afa65e65bd05320409ffd0839a07201
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 52672baf04075f13e4bb88578689a82405145282
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922234"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215830"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -204,7 +204,7 @@ Eine Protokollsicherung können Sie auf eine bestimmte Zeit oder Transaktion in 
 > [!NOTE]
 > Eine Sicherung der Spiegeldatenbank in einer Datenbank-Spiegelungspartnerschaft ist nicht möglich.
 
-\<file_or_filegroup> [ **,** ...*n* ] Wird nur mit BACKUP DATABASE verwendet. Gibt eine Datenbankdatei oder eine Dateigruppe in einer Datenbank an, die in einer Dateisicherung enthalten sein soll, oder gibt eine schreibgeschützte Datei oder Dateigruppe an, die in einer Teilsicherung enthalten sein soll.
+\<file_or_filegroup> [ **,** ...*n* ] wird nur mit BACKUP DATABASE verwendet, gibt eine Datenbankdatei oder eine Dateigruppe in einer Datenbank an, die in einer Dateisicherung enthalten sein soll, oder gibt eine schreibgeschützte Datei oder Dateigruppe an, die in einer Teilsicherung enthalten sein soll.
 
 FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ } Der logische Name einer Datei oder einer Variablen, deren Wert dem logischen Namen einer Datei entspricht, die in der Sicherung enthalten sein soll.
 
@@ -224,15 +224,15 @@ READ_WRITE_FILEGROUPS Gibt an, dass alle Dateigruppen mit Lese-/Schreibzugriff i
 > [!IMPORTANT]
 > Durch das explizite Auflisten der Dateigruppen mit Lese-/Schreibzugriff mithilfe von FILEGROUP anstelle von READ_WRITE_FILEGROUPS wird eine Dateisicherung erstellt.
 
-FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } Der logische Name einer schreibgeschützten Dateigruppe oder einer Variablen, deren Wert dem logischen Namen einer schreibgeschützten Dateigruppe entspricht, die in der Teilsicherung enthalten sein soll. Weitere Informationen finden Sie unter "\<file_or_filegroup>" weiter oben in diesem Thema.
+FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } Der logische Name einer schreibgeschützten Dateigruppe oder einer Variablen, deren Wert dem logischen Namen einer schreibgeschützten Dateigruppe entspricht, die in der Teilsicherung enthalten sein soll. Weitere Informationen finden Sie weiter oben in diesem Artikel unter „\<file_or_filegroup>“.
 
 *n* Ein Platzhalter, der anzeigt, dass mehrere schreibgeschützte Dateigruppen in einer durch Trennzeichen getrennten Liste angegeben werden können.
 
 Weitere Informationen zu Sicherungen des Protokollfragments finden Sie unter [Teilsicherungen](../../relational-databases/backup-restore/partial-backups-sql-server.md).
 
-TO \<backup_device> [ **,** ...*n* ]Gibt an, dass es sich bei dem zugehörigen Satz von [Sicherungsmedien](../../relational-databases/backup-restore/backup-devices-sql-server.md) entweder um einen nicht gespiegelten Mediensatz handelt oder um den ersten Spiegel innerhalb eines gespiegelten Mediensatzes (für den eine oder mehrere MIRROR TO-Klauseln deklariert sind).
+TO \<backup_device> [ **,** ...*n* ] gibt an, dass es sich bei den zugehörigen [Sicherungsmedien](../../relational-databases/backup-restore/backup-devices-sql-server.md) entweder um einen nicht gespiegelten Mediensatz oder um den ersten Spiegel innerhalb eines gespiegelten Mediensatzes handelt (für den eine oder mehrere MIRROR TO-Klauseln deklariert sind).
 
-\<sicherungsmedium>
+\<backup_device>
 
 Gibt ein logisches oder physisches Sicherungsmedium an, das für den Sicherungsvorgang verwendet werden soll.
 
@@ -260,14 +260,14 @@ Weitere Informationen finden Sie unter [Sicherungsmedien](../../relational-datab
 
 *n* Ein Platzhalter, der anzeigt, dass in einer durch Trennzeichen getrennten Liste möglicherweise bis zu 64 Sicherungsmedien angegeben werden.
 
-MIRROR TO \<backup_device> [ **,** ...*n* ] Gibt einen Satz von bis zu drei sekundären Sicherungsmedien an, die die in der TO-Klausel angegebenen Sicherungsmedien spiegeln. Die MIRROR TO-Klausel muss denselben Typ und dieselbe Anzahl von Sicherungsdateien angeben wie die TO-Klausel. Die maximale Anzahl von MIRROR TO-Klauseln lautet drei.
+MIRROR TO \<backup_device> [ **,** ...*n* ] gibt bis zu drei sekundäre Sicherungsmedien an, die die in der TO-Klausel angegebenen Sicherungsmedien spiegeln. Die MIRROR TO-Klausel muss denselben Typ und dieselbe Anzahl von Sicherungsdateien angeben wie die TO-Klausel. Die maximale Anzahl von MIRROR TO-Klauseln lautet drei.
 
 Diese Option ist nur in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar.
 
 > [!NOTE]
 > Für MIRROR TO = DISK legt BACKUP automatisch die geeignete Blockgröße für Datenträgermedien auf Basis der Sektorgröße des Datenträgers fest. Wenn der MIRROR TO-Datenträger mit einer anderen Sektorgröße als der als primäres Sicherungsmedium angegebener Datenträger formatiert ist, schlägt der backup-Befehl fehl. Um Sicherungen auf Geräten zu spiegeln, die verschiedene Sektorgrößen aufweisen, muss der BLOCKSIZE-Parameter angegeben werden und sollte auf der höchsten Sektorgröße für die Zielgeräte festgelegt werden. Weitere Informationen zur Blockgröße finden Sie weiter unten in diesem Thema unter „BLOCKSIZE“.
 
-\<backup_device> Informationen finden Sie unter "\<backup_device>" weiter oben in diesem Abschnitt.
+\<backup_device> Weiter Informationen finden Sie oben in diesem Abschnitt unter „\<backup_device>“.
 
 *n* Ein Platzhalter, der anzeigt, dass in einer durch Trennzeichen getrennten Liste möglicherweise bis zu 64 Sicherungsmedien angegeben werden. Die Anzahl von Medien in der MIRROR TO-Klausel muss der Anzahl von Medien in der TO-Klausel entsprechen.
 
@@ -436,7 +436,7 @@ Der gesamte von den Puffern belegte Speicherplatz wird durch `BUFFERCOUNT * MAXT
 > [!NOTE]
 > Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
 
 > [!NOTE]
 > Wenn beim Erstellen von Sicherungen mithilfe des SQL Writer-Diensts für die Datenbank [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) konfiguriert ist oder [speicheroptimierte Dateigruppen](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) enthält, dann sollte `MAXTRANSFERSIZE` zum Zeitpunkt der Wiederherstellung größer als oder gleich der `MAXTRANSFERSIZE` sein, die beim Erstellen der Sicherung verwendet wurde.
@@ -690,8 +690,9 @@ Die BACKUP-Anweisung ist nicht in einer expliziten oder implizierten Transaktion
 
 Sicherungsvorgänge über Plattformen hinweg, sogar zwischen unterschiedlichen Prozessortypen, können ausgeführt werden, solange die Sortierung der Datenbank vom Betriebssystem unterstützt wird.
 
-Bei Verwendung der Sicherungskomprimierung mit [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)-fähigen Datenbanken mit einer einzelnen Datendatei wird empfohlen, eine `MAXTRANSFERSIZE` Einstellung  **zu verwenden, die 65536 (64 KB) überschreitet**.
-Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ermöglicht dies einen optimierten Komprimierungsalgorithmus für TDE-verschlüsselte Datenbanken, der eine Seite zuerst entschlüsselt, komprimiert und dann erneut verschlüsselt. Bei Verwendung von `MAXTRANSFERSIZE = 65536` (64 KB), komprimiert die Sicherungskomprimierung mit TDE-verschlüsselten Datenbanken die verschlüsselten Seiten direkt und gibt möglicherweise keine guten Komprimierungsraten aus. Weitere Informationen finden Sie unter [Backup Compression for TDE-enabled Databases (Sicherungskomprimierung für TDE-fähige Datenbanken)](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ermöglicht die Einstellung `MAXTRANSFERSIZE` **größer als 65.536 (64 KB)** einen optimierten Komprimierungsalgorithmus für TDE-verschlüsselte Datenbanken ([Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)), der eine Seite zuerst entschlüsselt, komprimiert und dann wieder verschlüsselt. Wenn `MAXTRANSFERSIZE` nicht angegeben ist, oder wenn `MAXTRANSFERSIZE = 65536` (64 KB) verwendet wird, komprimiert die Sicherungskomprimierung mit TDE-verschlüsselten Datenbanken die verschlüsselten Seiten direkt und gibt möglicherweise keine guten Komprimierungsraten aus. Weitere Informationen finden Sie unter [Backup Compression for TDE-enabled Databases (Sicherungskomprimierung für TDE-fähige Datenbanken)](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+
+Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 muss `MAXTRANSFERSIZE` nicht mehr festgelegt werden, um diesen optimierten Komprimierungsalgorithmus mit TDE zu aktivieren. Wenn der Sicherungsbefehl `WITH COMPRESSION` angegeben ist, oder wenn die Serverkonfiguration *backup compression default* auf 1 festgelegt ist, wird `MAXTRANSFERSIZE` automatisch auf 128.000 erhöht, um den optimierten Algorithmus zu aktivieren. Wenn `MAXTRANSFERSIZE` für den Sicherungsbefehl mit einem Wert > 64.000 angegeben wird, wird der angegebene Wert berücksichtigt. Anders ausgedrückt: SQL Server verringert den Wert nie automatisch, sondern erhöht ihn nur. Wenn Sie eine TDE-verschlüsselte Datenbank mit `MAXTRANSFERSIZE = 65536` sichern müssen, müssen Sie `WITH NO_COMPRESSION` angeben oder sicherstellen, dass die Serverkonfiguration *backup compression default* auf 0 festgelegt ist.
 
 > [!NOTE]
 > In einigen Fällen ist die Standardeinstellung von `MAXTRANSFERSIZE` größer als 64 KB:
@@ -699,7 +700,7 @@ Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ermöglicht dies einen opti
 > - Wenn die Datenbank mehrere Datendateien erstellt hat, wird `MAXTRANSFERSIZE` > 64 KB verwendet.
 > - Beim Ausführen der Sicherung über URLs beträgt die Standardeinstellung `MAXTRANSFERSIZE = 1048576` (1 MB).
 >
-> Selbst wenn eine der folgenden Bedingungen gilt, müssen Sie explizit festlegen, dass `MAXTRANSFERSIZE` im Sicherungsbefehl größer als 64 KB ist, damit der neue Algorithmus für die Sicherungskomprimierung zurückgegeben wird.
+> Selbst wenn eine der folgenden Bedingungen gilt, müssen Sie explizit festlegen, dass `MAXTRANSFERSIZE` im Sicherungsbefehl größer als 64 KB ist, damit der optimierte Algorithmus für die Sicherungskomprimierung zurückgegeben wird, wenn Sie nicht [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 oder höher verwenden.
 
 Standardmäßig wird bei jedem erfolgreichen Sicherungsvorgang dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und dem Systemereignisprotokoll ein Eintrag hinzugefügt. Wenn Sie das Protokoll regelmäßig sichern, kann die Anzahl dieser Erfolgsmeldungen schnell ansteigen, d. h., es entstehen sehr große Fehlerprotokolle, die das Suchen nach anderen Meldungen erschweren können. In solchen Fällen können Sie diese Protokolleinträge mithilfe des Ablaufverfolgungsflags 3226 unterdrücken, wenn keines der Skripts von diesen Einträgen abhängig ist. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -1044,7 +1045,7 @@ Der gesamte von den Puffern belegte Speicherplatz wird durch `BUFFERCOUNT * MAXT
 > [!NOTE]
 > Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
 
 > [!NOTE]
 > Für [Transparente Datenverschlüsselung (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)-fähige Datenbanken mit einer einzelnen Datendatei ist der standardmäßige `MAXTRANSFERSIZE`-Wert 65536 (64 KB). Für nicht mit TDE verschlüsselte Datenbanken ist der `MAXTRANSFERSIZE`-Standardwert 1048576 (1 MB) bei Verwendung der Sicherung auf DISK und 65536 (64 KB) bei Verwendung von VDI oder TAPE.

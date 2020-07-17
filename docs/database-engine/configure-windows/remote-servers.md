@@ -1,5 +1,6 @@
 ---
 title: Remoteserver | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über Remoteserver, die in SQL Server durch verknüpfte Server ersetzt wurden. Außerdem finden Sie hier Informationen zu Funktionen, Konfiguration und Sicherheit.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 393688d3ecb5d0e29a1b05aa6f00d7eec7ca7e22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67938186"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651573"
 ---
 # <a name="remote-servers"></a>Remoteserver
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Remoteserver werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur aus Gründen der Abwärtskompatibilität unterstützt. Neue Anwendungen sollten stattdessen Verbindungsserver verwenden. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbank-Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Durch die Konfiguration eines Remoteservers kann ein Client, der eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt hat, eine gespeicherte Prozedur in einer anderen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen, ohne eine separate Verbindung einrichten zu müssen. Der mit dem Client verbundene Server nimmt in diesem Fall die Clientanforderung an und sendet die Anforderung im Auftrag des Clients an den Remoteserver. Der Remoteserver verarbeitet die Anforderung und gibt die Ergebnisse an den ursprünglichen Server zurück. Dieser Server übergibt seinerseits die Ergebnisse an den Client. Wenn Sie eine Remoteserverkonfiguration einrichten, sollten Sie auch Sicherheitsaspekte berücksichtigen.  
@@ -36,7 +37,7 @@ ms.locfileid: "67938186"
   
  In den meisten Fällen ist es nicht erforderlich, Konfigurationsoptionen für Remoteserver festzulegen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt die Standardeinstellungen auf den lokalen und Remotecomputern für Remoteserververbindungen fest.  
   
- Damit der Zugriff auf Remoteserver funktioniert, muss die Konfigurationsoption **Remotezugriff** auf den lokalen und den Remotecomputern auf 1 festgelegt werden. (Dies ist die Standardeinstellung.)  **Remotezugriff** steuert Anmeldungen von Remoteservern. Diese Konfigurationsoption können Sie entweder mit der gespeicherten Prozedur [!INCLUDE[tsql](../../includes/tsql-md.md)]sp_configure**von** oder mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zurücksetzen. Wenn Sie die Option in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]festlegen möchten, verwenden Sie auf der Seite **Verbindungen** die Option **Remoteverbindungen mit diesem Server zulassen**. Um auf die Seite **Verbindungen** zu gelangen, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Servernamen, und klicken Sie auf **Eigenschaften**. Klicken Sie auf der Seite **Servereigenschaften** auf die Seite **Verbindungen** .  
+ Damit der Zugriff auf Remoteserver funktioniert, muss die Konfigurationsoption **Remotezugriff** auf den lokalen und den Remotecomputern auf 1 festgelegt werden. (Dies ist die Standardeinstellung.)  **Remotezugriff** steuert Anmeldungen von Remoteservern. Diese Konfigurationsoption können Sie entweder mit der gespeicherten Prozedur **sp_configure** von [!INCLUDE[tsql](../../includes/tsql-md.md)] oder mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zurücksetzen. Wenn Sie die Option in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]festlegen möchten, verwenden Sie auf der Seite **Verbindungen** die Option **Remoteverbindungen mit diesem Server zulassen**. Um auf die Seite **Verbindungen** zu gelangen, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Servernamen, und klicken Sie auf **Eigenschaften**. Klicken Sie auf der Seite **Servereigenschaften** auf die Seite **Verbindungen** .  
   
  Sie können eine Remoteserverkonfiguration von einem lokalen Server aus deaktivieren, um den Zugriff auf diesen lokalen Server durch Benutzer des diesem zugeordneten Remoteservers zu verhindern.  
   

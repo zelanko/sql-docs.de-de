@@ -1,23 +1,22 @@
 ---
 title: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten
-titleSuffix: Azure Data Studio
 description: Dieses Tutorial veranschaulicht die wichtigsten Features in Azure Data Studio, die die Arbeit mit T-SQL vereinfachen.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8e5bd6cb986601baf97a02a3f167432e0c29b95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957034"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726742"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---name-sos"></a>Tutorial: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten – [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>Tutorial: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten – Azure Data Studio
 
 Das Erstellen und Ausführen von Abfragen, gespeicherten Prozeduren, Skripts usw. sind die Hauptaufgaben von Datenbankexperten. Dieses Tutorial veranschaulicht die wichtigsten Funktionen im T-SQL-Editor zum Erstellen von Datenbankobjekten.
 
@@ -60,7 +59,7 @@ Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* e
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Verwenden von T-SQL-Codeausschnitten zum Erstellen von gespeicherten Prozeduren
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] bietet viele integrierte T-SQL-Codeausschnitte zum schnellen Erstellen von Anweisungen.
+Azure Data Studio bietet viele integrierte T-SQL-Codeausschnitte zum schnellen Erstellen von Anweisungen.
 
 
 1. Öffnen Sie einen neuen Abfrage-Editor, indem Sie **STRG+N** drücken.
@@ -114,7 +113,7 @@ Die gespeicherte Prozedur ist jetzt erstellt, und der Bereich **ERGEBNISSE** zei
 
 ## <a name="use-peek-definition"></a>Verwenden von „Definition einsehen“ 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] bietet die Möglichkeit, mithilfe des Features „Definition einsehen“ eine Objektdefinition anzuzeigen. In diesem Abschnitt wird eine zweite gespeicherte Prozedur erstellt und „Definition einsehen“ verwendet, um anzuzeigen, welche Spalten in einer Tabelle vorliegen, und schnell den Text der gespeicherten Prozedur zu erstellen.
+Azure Data Studio bietet die Möglichkeit, mithilfe des Features „Definition einsehen“ eine Objektdefinition anzuzeigen. In diesem Abschnitt wird eine zweite gespeicherte Prozedur erstellt und „Definition einsehen“ verwendet, um anzuzeigen, welche Spalten in einer Tabelle vorliegen, und schnell den Text der gespeicherten Prozedur zu erstellen.
 
 1. Öffnen Sie einen neuen Editor, indem Sie **STRG+N** drücken. 
 

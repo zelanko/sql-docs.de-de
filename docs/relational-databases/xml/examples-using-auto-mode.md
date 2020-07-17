@@ -1,5 +1,6 @@
 ---
 title: 'Beispiele: Verwenden des AUTO-Modus | Microsoft-Dokumentation'
+description: In diesem Artikel finden Sie Beispiele für Abfragen, die den FOR XML AUTO-Modus nutzen.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 782da9544dd1cf6e084793754fb31f81109d1810
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 68dfbbf0d1e2a2cf160b728b5f0acd9553be7922
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775571"
 ---
 # <a name="examples-using-auto-mode"></a>Beispiele: Verwenden des AUTO-Modus
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Die folgenden Beispiele veranschaulichen die Verwendung des AUTO-Modus. Viele dieser Abfragen beziehen sich auf die XML-Dokumente mit den Fahrradproduktionsanweisungen, die in der Instructions-Spalte der ProductModel-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Beispieldatenbank gespeichert sind.  
   
 ## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Beispiel: Abrufen von Kunden-, Bestell- und Bestelldetailinformationen  
@@ -266,7 +267,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Im Abfrageergebnis werden die in den Element- und Attributnamen zurückgegebenen XML- und URL-Sonderzeichen codiert, indem der hexadezimale Wert des entsprechenden Unicode-Zeichens verwendet wird. Im vorherigen Beispiel wird der Elementname <`Special Chars`> als <`Special_x0020_Chars`> zurückgegeben. Der Attributname <`Col#&2`> wird als <`Col_x0023__x0026_2`> zurückgegeben. Sowohl XML- als auch URL-Sonderzeichen werden codiert.  
   
--   Falls die Werte der Elemente oder Attribute einen der fünf standardmäßigen XML-Zeichenentitäten (', "", \<, > und &) enthalten, werden diese XML-Sonderzeichen immer mithilfe der XML-Zeichencodierung codiert. Im vorherigen Resultset wird der Wert `&` im Wert des Attributs <`Col1`> als `&` codiert. Das #-Zeichen bleibt jedoch unverändert, da es sich hierbei um ein gültiges XML-Zeichen und kein XML-Sonderzeichen handelt.  
+-   Falls die Werte der Elemente oder Attribute eine der fünf standardmäßigen XML-Zeichenentitäten (', "", \<, > und &) enthalten, werden diese XML-Sonderzeichen immer mithilfe der XML-Zeichencodierung codiert. Im vorherigen Resultset wird der Wert `&` im Wert des Attributs <`Col1`> als `&` codiert. Das #-Zeichen bleibt jedoch unverändert, da es sich hierbei um ein gültiges XML-Zeichen und kein XML-Sonderzeichen handelt.  
   
 -   Falls die Werte der Elemente oder Attribute ein URL-Sonderzeichen enthalten, das in der URL eine besondere Bedeutung hat, werden sie nur im DBOBJECT URL-Wert codiert. Dies geschieht nur, wenn das Sonderzeichen Teil eines Tabellen- oder Spaltennamens ist. Im Resultset wird das `#` -Zeichen, das Teil des Tabellennamens `Col#&2` ist, als `_x0023_ in the DBOJBECT URL`codiert.  
   

@@ -1,5 +1,6 @@
 ---
 title: Missing Join Predicate-Ereignisklasse | Microsoft-Dokumentation
+description: Die Ereignisklasse „Missing Join Predicate“ gibt an, dass eine Abfrage ohne JOIN-Prädikat in SQL Server ausgeführt wird.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c59a45533e68eb1af5d3e62ee059aa022c5cc503
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f0571750b7c8a9ba39c79bf640872c88241fe81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115947"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756032"
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate-Ereignisklasse
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Die Missing Join Predicate-Ereignisklasse zeigt an, dass eine Abfrage ohne JOIN-Prädikat ausgeführt wird. Dies kann zu einer langen Ausführungszeit für die Abfrage führen. Weitere Informationen zu JOIN-Prädikaten finden Sie unter [Prädikate &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md).  
   
 ## <a name="missing-join-predicate-event-class-data-columns"></a>Missing Join Predicate-Ereignisklasse (Datenspalten)  

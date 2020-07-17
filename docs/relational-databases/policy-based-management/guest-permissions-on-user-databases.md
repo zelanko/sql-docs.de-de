@@ -1,5 +1,6 @@
 ---
 title: Gastberechtigungen für Benutzerdatenbanken | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie bestimmen, ob ein Gastbenutzer über die Berechtigungen für den Zugriff auf Benutzerdatenbanken in SQL Server verfügt. Außerdem erfahren Sie, wie Sie die Gastbenutzerberechtigung widerrufen, wenn sie nicht erforderlich ist.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbe3efe2337b8e967ea7b5ced9fc6b3890d989e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6a911c84574c0b064c1c71bf9ff68aa725fc9c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749376"
 ---
 # <a name="guest-permissions-on-user-databases"></a>Gastberechtigungen für Benutzerdatenbanken
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Diese Regel bestimmt, ob der Gastbenutzer die Berechtigung besitzt, auf die Datenbank zuzugreifen. Diese Regel gilt nur für Benutzerdatenbanken.  
   
 ## <a name="best-practices-recommendations"></a>Empfehlungen zu Best Practices  

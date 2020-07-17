@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768021"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Erstellen, Ändern und Löschen von FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Beschreibt, wie eine neue FileTable erstellt bzw. eine vorhandene FileTable geändert oder gelöscht wird.  
   
 ##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> Erstellen einer FileTable  
@@ -176,7 +176,7 @@ GO
 |Check-Einschränkungen|Die systemdefinierten CHECK-Einschränkungen erzwingen die folgenden Anforderungen:<br /><br /> Gültige Dateinamen<br /><br /> Gültige Dateiattribute<br /><br /> Übergeordnetes Objekt muss ein Verzeichnis sein.<br /><br /> Namespacehierarchie ist während der Dateibearbeitung gesperrt.|  
   
  **Benennungskonvention für die systemdefinierten Einschränkungen**  
- Die Namen der oben beschriebenen systemdefinierten Einschränkungen werden nach dem Schema **\<Einschränkungstyp>_\<Tabellenname>[\_\<Spaltenname>]\_\<Uniquifier>** benannt, wobei gilt:  
+ Die Namen der oben beschriebenen systemdefinierten Einschränkungen weisen das Format **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** auf, wobei gilt:  
   
 -   *<constraint_type>* ist CK (CHECK-Einschränkung), DF (Standardeinschränkung), FK (Fremdschlüssel), PK (Primärschlüssel) oder UQ (UNIQUE-Einschränkung).  
   

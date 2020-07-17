@@ -1,5 +1,6 @@
 ---
 title: Speicheroptimierte Tabellen mit interpretiertem T-SQL
+description: Erfahren Sie, wie Sie mithilfe von interpretiertem Transact-SQL (Transact-SQL-Batches oder gespeicherte Prozeduren in SQL Server) auf speicheroptimierte Tabellen zugreifen.
 ms.custom: seo-dt-2019
 ms.date: 05/31/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 402b945c68e68f73ba482c20b158f14aba2c818f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50e15e99ce68b47b1cd87262ff12fda3e9836bcf
+ms.sourcegitcommit: 7a47aaffbd82bab2707cd69f44571a9037d2273b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412810"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85377801"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Zugreifen auf speicheroptimierte Tabellen mit interpretiertem Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

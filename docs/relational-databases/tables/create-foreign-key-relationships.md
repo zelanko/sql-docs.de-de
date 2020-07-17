@@ -1,10 +1,10 @@
 ---
 title: Erstellen von Fremdschlüssel-Beziehungen | Microsoft Dokumentation
 ms.custom: ''
-ms.date: 07/25/2017
+ms.date: 06/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,42 +13,42 @@ ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d38aba87edf5737e93d9477abfadddcc969c55f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123746"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002169"
 ---
 # <a name="create-foreign-key-relationships"></a>Erstellen von Fremdschlüssel-Beziehungen
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 In diesem Artikel wird beschrieben, wie Fremdschlüsselbeziehungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt werden. Sie erstellen eine Beziehung zwischen zwei Tabellen, wenn Sie die Zeilen der einen Tabelle mit den Zeilen der anderen Tabelle verknüpfen möchten.
 
-## <a name="before-you-begin-limits-and-restrictions"></a><a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen Einschränkungen
+## <a name="permissions"></a>Berechtigungen
 
-- Eine FOREIGN KEY-Einschränkung muss nicht notwendigerweise mit einer PRIMARY KEY-Einschränkung in einer anderen Tabelle verknüpft sein; sie kann auch so definiert werden, dass sie auf die Spalten einer UNIQUE-Einschränkung in einer anderen Tabelle verweist.
-- Wenn ein anderer Wert als NULL in die Spalte einer FOREIGN KEY-Einschränkung eingegeben wird, muss der Wert in der Spalte vorhanden sein, auf die verwiesen wird; andernfalls wird eine Fremdschlüsselverletzungs-Fehlermeldung zurückgegeben. Um sicherzustellen, dass alle Werte einer zusammengesetzten FOREIGN KEY-Einschränkung überprüft werden, legen Sie NOT NULL für alle betroffenen Spalten fest.
+Zum Erstellen einer neuen Tabelle mit einem Fremdschlüssel sind die [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)-Berechtigung für die Datenbank und die [ALTER](../../t-sql/statements/alter-schema-transact-sql.md)-Berechtigung für das Schema erforderlich, in dem die Tabelle erstellt wird.
+
+Zum Erstellen eines Fremdschlüssels für eine vorhandene Tabelle ist die [ALTER](../../t-sql/statements/alter-table-transact-sql.md)-Berechtigung für die Tabelle erforderlich.
+
+## <a name="limits-and-restrictions"></a><a name="BeforeYouBegin"></a> Einschränkungen
+
+- Eine FOREIGN KEY-Einschränkung muss nicht nur mit einer PRIMARY KEY-Einschränkung einer anderen Tabelle verknüpft sein. Fremdschlüssel können auch so definiert werden, dass sie auf die Spalten einer UNIQUE-Einschränkung in einer anderen Tabelle verweisen.
+- Wenn ein anderer Wert als NULL in die Spalte einer FOREIGN KEY-Einschränkung eingegeben wird, muss der Wert in der Spalte vorhanden sein, auf die verwiesen wird. Andernfalls wird eine Fehlermeldung zu einem Fremdschlüsselverstoß zurückgegeben. Um sicherzustellen, dass alle Werte einer zusammengesetzten FOREIGN KEY-Einschränkung überprüft werden, legen Sie NOT NULL für alle betroffenen Spalten fest.
 - FOREIGN KEY-Einschränkungen können nur auf Tabellen verweisen, die sich innerhalb derselben Datenbank auf demselben Server befinden. Datenbankübergreifende referenzielle Integrität muss durch Trigger implementiert werden. Weitere Informationen finden Sie unter [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md).
-- FOREIGN KEY-Einschränkungen können auf eine andere Spalte in derselben Tabelle verweisen. Ein solcher Verweis wird als Eigenverweis bezeichnet.
+- FOREIGN KEY-Einschränkungen können auf eine andere Spalte in derselben Tabelle verweisen. Dies wird als Eigenverweis bezeichnet.
 - Eine auf Spaltenebene angegebene FOREIGN KEY-Einschränkung kann nur eine Verweisspalte auflisten. Diese Spalte muss denselben Datentyp aufweisen wie die Spalte, für die die Einschränkung definiert wurde.
 - Eine auf Tabellenebene angegebene FOREIGN KEY-Einschränkung muss ebenso viele Verweisspalten haben, wie sich Spalten in der Einschränkungsspaltenliste befinden. Der Datentyp jeder Verweisspalte muss ebenfalls mit dem der entsprechenden Spalte in der Spaltenliste übereinstimmen.
-- Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] verfügt über keine vordefinierte Grenze hinsichtlich der Anzahl von FOREIGN KEY-Einschränkungen, die eine Tabelle, die auf andere Tabellen verweist, enthalten kann, oder hinsichtlich der Anzahl von FOREIGN KEY-Einschränkungen im Besitz anderer Tabellen, die auf eine bestimmte Tabelle verweisen. Nichtsdestotrotz ist die tatsächliche Anzahl von FOREIGN KEY-Einschränkungen , die verwendet werden können, durch die Hardwarekonfiguration und den Entwurf der Datenbank und der Anwendung begrenzt. Eine Tabelle kann auf maximal 253 andere Tabellen und Spalten als Fremdschlüssel (ausgehende Referenzen) verweisen. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] erhöht den Grenzwert für die Anzahl der anderen Tabellen und Spalten, die auf Spalten in einer einzelnen Tabelle (eingehende Referenzen) verweisen können, von 253 auf 10.000. (Kompatibilitätsgrad 130 oder höher erforderlich.) Für die Erhöhung gelten folgende Einschränkungen:
+- Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] weist keine vordefinierte Begrenzung für die Anzahl von FOREIGN KEY-Einschränkungen auf, die eine Tabelle enthalten kann, die auf andere Tabellen verweist. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] begrenzt außerdem auch nicht die Anzahl von FOREIGN KEY-Einschränkungen im Besitz anderer Tabellen, die auf eine bestimmte Tabelle verweisen. Die tatsächlich verwendete Anzahl von FOREIGN KEY-Einschränkungen wird jedoch durch die Hardwarekonfiguration und den Entwurf der Datenbank und der Anwendung begrenzt. Eine Tabelle kann auf maximal 253 andere Tabellen und Spalten als Fremdschlüssel (ausgehende Referenzen) verweisen. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher wird der Grenzwert für die Anzahl der anderen Tabellen und Spalten, die auf Spalten in einer einzelnen Tabelle verweisen können (eingehende Verweise), von 253 auf 10.000 erhöht. (Kompatibilitätsgrad 130 oder höher erforderlich.) Für die Erhöhung gelten folgende Einschränkungen:
 
   - Mehr als 253 Fremdschlüsselverweise werden nur für DELETE- und UPDATE- DML-Vorgänge unterstützt. MERGE-Vorgänge werden nicht unterstützt.
   - Auch eine Tabelle mit einem Fremdschlüsselverweis auf sich selbst ist auf 253 Fremdschlüsselverweise beschränkt.
   - Für Columnstore-Indizes, speicheroptimierte Tabellen oder Stretch Database sind derzeit nicht mehr als 253 Fremdschlüsselverweise möglich.
 
-- FOREIGN KEY-Einschränkungen werden nicht auf temporäre Tabellen angewendet.
+- FOREIGN KEY-Einschränkungen werden nicht für temporäre Tabellen erzwungen.
 - Wenn ein Fremdschlüssel für eine Spalte eines CLR-benutzerdefinierten Typs definiert wird, muss die Implementierung des Typs eine binäre Sortierreihenfolge unterstützen. Weitere Informationen finden Sie unter [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).
 - Eine Spalte vom Typ **varchar(max)** kann nur dann in eine FOREIGN KEY-Einschränkung einbezogen werden, wenn der Primärschlüssel, auf den sie verweist, ebenfalls als Typ **varchar(max)** definiert ist.
-
-## <a name="permissions"></a>Berechtigungen
-
-Zum Erstellen einer neuen Tabelle mit einem Fremdschlüssel sind die CREATE TABLE-Berechtigung für die Datenbank und die ALTER-Berechtigung für das Schema erforderlich, in dem die Tabelle erstellt wird.
-
-Zum Erstellen eines Fremdschlüssels für eine vorhandene Tabelle ist die ALTER-Berechtigung für die Tabelle erforderlich.
 
 ## <a name="create-a-foreign-key-relationship-in-table-designer"></a>Erstellen einer Fremdschlüsselbeziehung im Tabellen-Designer
 
@@ -56,18 +56,19 @@ Zum Erstellen eines Fremdschlüssels für eine vorhandene Tabelle ist die ALTER-
 
 1. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle, die sich auf der Fremdschlüsselseite der Beziehung befinden soll, und klicken Sie auf **Entwerfen**.
 
-   Die Tabelle wird im **Tabellen-Designer**geöffnet.
+   Die Tabelle wird im [**Tabellen-Designer**](../../ssms/visual-db-tools/design-tables-visual-database-tools.md) geöffnet.
 2. Klicken Sie im Menü **Tabellen-Designer** auf **Beziehungen**.
 3. Klicken Sie im Dialogfeld **Fremdschlüsselbeziehungen** auf **Hinzufügen**.
 
-   Die Beziehung wird in der Liste **Beziehung (ausgewählt)** mit einem vom System bereitgestellten Namen im Format FK_\<*Tabellenname*>_\<*Tabellenname*> angezeigt, wobei *Tabellenname* der Name der Fremdschlüsseltabelle ist.
+   Die Beziehung wird in der Liste **Selected Relationship** (Ausgewählte Beziehung) mit einem vom System bereitgestellten Namen im Format FK_\<*tablename*>_\<*tablename*> angezeigt, wobei *tablename* dem Namen der Fremdschlüsseltabelle entspricht.
 4. Klicken Sie in der Liste **Ausgewählte Beziehung** auf die Beziehung.
 5. Klicken Sie im Datenblatt rechts auf **Tabellen- und Spaltenspezifikation**, und klicken Sie anschließend auf die rechts neben der Eigenschaft angezeigten Auslassungspunkte ( **...** ).
 6. Wählen Sie im Dialogfeld **Tabellen und Spalten** in der Dropdownliste **Primärschlüssel** die Tabelle aus, die sich auf der Primärschlüsselseite der Beziehung befinden soll.
-7. Wählen Sie im darunter angezeigten Datenblatt die Spalten aus, die für den Primärschlüssel der Tabelle verwendet werden sollen. Geben Sie in die jeweils links neben den einzelnen Spalten angrenzende Datenblattzelle die entsprechende Fremdschlüsselspalte aus der Fremdschlüsseltabelle ein.
+7. Wählen Sie im darunter angezeigten Datenblatt die Spalten aus, die für den Primärschlüssel der Tabelle verwendet werden sollen. Geben Sie in die jeweils rechts neben den einzelnen Spalten angrenzende Rasterzelle die entsprechende Fremdschlüsselspalte aus der Fremdschlüsseltabelle ein.
 
    Der**Tabellen-Designer** schlägt einen Namen für die Beziehung vor. Wenn Sie diesen Namen ändern möchten, bearbeiten Sie den Inhalt des Textfelds **Beziehungsname** .
 8. Klicken Sie auf **OK** , um die Beziehung zu erstellen.
+9. Schließen Sie das Fenster mit dem Tabellen-Designer, und **speichern Sie** Ihre Änderungen, damit die Änderung der Fremdschlüsselbeziehung wirksam wird.
 
 ## <a name="create-a-foreign-key-in-a-new-table"></a>Erstellen eines Fremdschlüssels in einer neuen Tabelle
 
@@ -101,8 +102,13 @@ ALTER TABLE Sales.TempSalesReason
       ON UPDATE CASCADE
 ;
 ```
+
+## <a name="next-steps"></a>Nächste Schritte
+
 Weitere Informationen finden Sie unter
 
+- [Primärschlüssel- und Fremdschlüsseleinschränkungen](primary-and-foreign-key-constraints.md)
+- [GRANT – Datenbankberechtigungen](../../t-sql/statements/grant-database-permissions-transact-sql.md)
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).
+- [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).

@@ -1,31 +1,30 @@
 ---
 title: Herstellen einer Verbindung mit einer Azure SQL-Datenbank-Instanz und deren Abfrage
-titleSuffix: Azure Data Studio
 description: In dieser Schnellstartanleitung erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit einer SQL-Datenbank-Instanz herstellen und eine Abfrage ausführen.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73e910b6d199a4918eafca067a95136e31ac079c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957074"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771958"
 ---
-# <a name="quickstart-use-name-sos-to-connect-and-query-azure-sql-database"></a>Schnellstart: Verwenden von [!INCLUDE[name-sos](../includes/name-sos-short.md)], um eine Verbindung mit einer Azure SQL-Datenbank-Instanz herzustellen und sie abzufragen
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>Schnellstart: Verwenden von Azure Data Studio, um eine Verbindung mit einer Azure SQL-Datenbank-Instanz herzustellen und sie abzufragen
 
-In dieser Schnellstartanleitung stellen Sie mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung mit einer Azure SQL-Datenbank-Serverinstanz her. Anschließend führen Sie Transact-SQL-Anweisungen (T-SQL) aus, um die TutorialDB-Datenbank zu erstellen und abzufragen, die in anderen [!INCLUDE[name-sos](../includes/name-sos-short.md)]-Tutorials verwendet wird.
+In dieser Schnellstartanleitung stellen Sie mit Azure Data Studio eine Verbindung mit einer Azure SQL-Datenbank-Serverinstanz her. Anschließend führen Sie Transact-SQL-Anweisungen (T-SQL) aus, um die TutorialDB-Datenbank zu erstellen und abzufragen, die in anderen Azure Data Studio-Tutorials verwendet wird.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Um diesen Schnellstart abzuschließen, benötigen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] und eine Azure SQL-Datenbank-Serverinstanz.
+Um diesen Schnellstart abzuschließen, benötigen Sie Azure Data Studio und eine Azure SQL-Datenbank-Serverinstanz.
 
-- [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+- [Azure Data Studio installieren](download.md)
 
 Wenn Sie noch nicht über eine Azure SQL-Serverinstanz verfügen, führen Sie einen der folgenden Schnellstarts für Azure SQL-Datenbank aus. Merken Sie sich den voll qualifizierten Servernamen und die Anmeldeinformationen für die späteren Schritte:
 
@@ -36,9 +35,9 @@ Wenn Sie noch nicht über eine Azure SQL-Serverinstanz verfügen, führen Sie ei
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Herstellen einer Verbindung mit Ihrer Azure SQL-Datenbank-Serverinstanz
 
-Stellen Sie mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung mit Ihrer Azure SQL-Datenbank-Serverinstanz her.
+Verwenden Sie Azure Data Studio, um eine Verbindung mit Ihrem Azure SQL-Datenbank-Server herzustellen.
 
-1. Wenn Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum ersten Mal ausführen, sollte die **Homepage** geöffnet werden. Wenn die **Homepage** nicht angezeigt wird, wählen Sie **Hilfe** > **Willkommen** aus. Wählen Sie **Neue Verbindung** aus, um den Bereich **Verbindung** zu öffnen:
+1. Wenn Sie Azure Data Studio zum ersten Mal ausführen, sollte die **Homepage** geöffnet werden. Wenn die **Homepage** nicht angezeigt wird, wählen Sie **Hilfe** > **Willkommen** aus. Wählen Sie **Neue Verbindung** aus, um den Bereich **Verbindung** zu öffnen:
    
    ![Symbol „Neue Verbindung“](media/quickstart-sql-database/new-connection-icon.png)
 
@@ -66,7 +65,7 @@ Nachdem die Verbindung erfolgreich hergestellt wurde, wird Ihr Server in der Ran
 
 ## <a name="create-the-tutorial-database"></a>Erstellen der Tutorialdatenbank
 
-In den nächsten Abschnitten wird die TutorialDB-Datenbank erstellt, die in anderen [!INCLUDE[name-sos](../includes/name-sos-short.md)]-Tutorials verwendet wird.
+In den nächsten Abschnitten wird die TutorialDB-Datenbank erstellt, die in anderen Azure Data Studio-Tutorials verwendet wird.
 
 1. Klicken Sie in Ihrer Azure SQL-Serverinstanz mit der rechten Maustaste auf die Randleiste **SERVER**, und wählen Sie **Neue Abfrage** aus.
 

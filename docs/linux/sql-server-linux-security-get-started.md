@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d26cdde25f3431c72e1f5327db591db60b31938e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68019497"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883012"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Exemplarische Vorgehensweise für die Sicherheitsfeatures von SQL Server für Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Wenn Sie ein Linux-Benutzer sind, der noch nicht mit SQL Server vertraut ist, lernen Sie mit den folgenden Aufgaben einige der Sicherheitsaufgaben kennen. Diese Features gelten nicht ausschließlich und speziell nur für Linux, aber mit diesem Artikel können Sie sich einen Überblick über die Bereiche verschaffen, die Sie näher untersuchen sollten. In jedem Beispiel wird ein Link zu der ausführlichen Dokumentation für diesen Bereich bereitgestellt.
 
@@ -88,18 +88,18 @@ GRANT SELECT ON Object::Sales TO Orders;  
 GRANT UPDATE ON Object::Sales TO Orders;   
 GRANT DELETE ON Object::Sales TO Orders;   
 ALTER ROLE Sales ADD MEMBER Jerry;   
-```   
+```
 
-For more information about the permission system, see [Getting Started with Database Engine Permissions](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
+Weitere Informationen zum Berechtigungssystem finden Sie unter [Erste Schritte mit Berechtigungen für die Datenbank-Engine](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
 
-## Configure row-level security  
+## <a name="configure-row-level-security"></a>Konfigurieren der Sicherheit auf Zeilenebene  
 
-[Row-Level Security](../relational-databases/security/row-level-security.md) enables you to restrict access to rows in a database based on the user executing a query. This feature is useful for scenarios like ensuring that customers can only access their own data or that workers can only access data that is pertinent to their department.   
+Mit der [Sicherheit auf Zeilenebene](../relational-databases/security/row-level-security.md) können Sie in einer Datenbank den Zugriff auf Zeilen für den Benutzer einschränken, der eine Abfrage ausführt. Dieses Feature ist sehr nützlich, wenn Sie beispielsweise sicherstellen möchten, dass Kunden nur auf ihre eigenen Daten oder Mitarbeiter nur auf Daten zugreifen können, die für ihre eigene Abteilung relevant sind.   
 
-The following steps walk through setting up two Users with different row-level access to the `Sales.SalesOrderHeader` table. 
+In den folgenden Schritten erfahren Sie, wie Sie zwei Benutzer mit unterschiedlichen Zugriffsrechten auf Zeilenebene für die Tabelle `Sales.SalesOrderHeader` einrichten. 
 
-Create two user accounts to test the row level security:    
+Erstellen Sie zwei Benutzerkonten, um die Sicherheit auf Zeilenebene zu testen:    
    
 ```   
 USE AdventureWorks2014;   
@@ -108,16 +108,16 @@ GO  
 CREATE USER Manager WITHOUT LOGIN;     
    
 CREATE USER SalesPerson280 WITHOUT LOGIN;    
-```   
+```
 
-Grant read access on the `Sales.SalesOrderHeader` table to both users:    
+Erteilen Sie den Benutzern Lesezugriff auf die Tabelle `Sales.SalesOrderHeader`:    
    
 ```   
 GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
-GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;    
-```   
+GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;
+```
    
-Create a new schema and inline table-valued function. The function returns 1 when a row in the `SalesPersonID` column matches the ID of a `SalesPerson` login or if the user executing the query is the Manager user.   
+Erstellen Sie ein neues Schema und eine Inline-Tabellenwertfunktion. Die Funktion gibt 1 zurück, wenn eine Zeile in der Spalte `SalesPersonID` der ID einer `SalesPerson`-Anmeldung entspricht oder wenn der Benutzer, der die Abfrage ausführt, der Managerbenutzer ist.   
    
 ```     
 CREATE SCHEMA Security;   
@@ -130,9 +130,9 @@ AS
    RETURN SELECT 1 AS fn_securitypredicate_result    
 WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())     
     OR (USER_NAME() = 'Manager');    
-```   
+```
 
-Create a security policy adding the function as both a filter and a block predicate on the table:  
+Erstellen Sie eine Sicherheitsrichtlinie, und fügen Sie der Tabelle diese Funktion als FILTER- und BLOCK-Prädikat hinzu:  
 
 ```
 CREATE SECURITY POLICY SalesFilter   
@@ -143,7 +143,7 @@ ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)
 WITH (STATE = ON);   
 ```
 
-Execute the following to query the `SalesOrderHeader` table as each user. Verify that `SalesPerson280` only sees the 95 rows from their own sales and that the `Manager` can see all the rows in the table.  
+Führen Sie den folgenden Code aus, um die Tabelle `SalesOrderHeader` mit jedem Benutzer abzufragen. Überprüfen Sie dann, ob `SalesPerson280` nur die 95 Zeilen aus den Vertriebsdaten des Benutzers angezeigt werden, während `Manager` alle Tabellenzeilen sehen kann.  
 
 ```    
 EXECUTE AS USER = 'SalesPerson280';   
@@ -155,7 +155,7 @@ SELECT * FROM Sales.SalesOrderHeader;
 REVERT;   
 ```
  
-Alter the security policy to disable the policy.  Now both users can access all rows. 
+Ändern Sie die Sicherheitsrichtlinie, um die Richtlinie zu deaktivieren.  Nun können beide Benutzer alle Zeilen anzeigen. 
 
 ```
 ALTER SECURITY POLICY SalesFilter   
@@ -163,18 +163,21 @@ WITH (STATE = OFF);
 ``` 
 
 
-## Enable dynamic data masking
+## <a name="enable-dynamic-data-masking"></a>Aktivieren der dynamischen Datenmaskierung
 
-[Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md) enables you to limit the exposure of sensitive data to users of an application by fully or partially masking certain columns. 
+Mithilfe der [dynamischen Datenmaskierung](../relational-databases/security/dynamic-data-masking.md) kann der Zugriff auf vertrauliche Daten auf die Benutzer einer Anwendung beschränkt werden, indem bestimmte Spalten vollständig oder teilweise maskiert werden. 
 
-Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
+Führen Sie eine `ALTER TABLE`-Anweisung aus, um der Spalte `EmailAddress` in der Tabelle `Person.EmailAddress` eine Maskierungsfunktion hinzuzufügen: 
  
 ```
-USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
+USE AdventureWorks2014;
+GO
+ALTER TABLE Person.EmailAddress    
+ALTER COLUMN EmailAddress    
 ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
-Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
+Erstellen Sie den neuen Benutzer `TestUser` mit der `SELECT`-Berechtigung für die Tabelle, und führen Sie dann eine Abfrage als `TestUser` aus, um die maskierten Daten anzuzeigen:   
 
 ```  
 CREATE USER TestUser WITHOUT LOGIN;   
@@ -185,7 +188,7 @@ SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;
 REVERT;    
 ```
  
-Verify that the masking function changes the email address in the first record from:
+Überprüfen Sie, ob die Maskierungsfunktion die E-Mail-Adresse im ersten Datensatz wie folgt ändert. Von:
   
 |EmailAddressID |EmailAddress |  
 |----|---- |   
@@ -198,24 +201,24 @@ into
 |1 |kXXX@XXXX.com |   
 
 
-## Enable Transparent Data Encryption
+## <a name="enable-transparent-data-encryption"></a>Transparent Data Encryption aktivieren
 
-One threat to your database is the risk that someone will steal the database files off of your hard-drive. This could happen with an intrusion that gets elevated access to your system, through the actions of a problem employee, or by theft of the computer containing the files (such as a laptop).
+Ein Risiko von Datenbanken ist, dass die Datenbankdateien von Ihrem Festplattenlaufwerk gestohlen werden. Dies kann passieren, wenn ein Angreifer aufgrund der Handlungen eines unvorsichtigen Mitarbeiters oder durch Diebstahl des Computers (z. B. eines Laptops), auf dem die Dateien gespeichert sind, erhöhten Zugriff auf Ihr System erhält.
 
-Transparent Data Encryption (TDE) encrypts the data files as they are stored on the hard drive. The master database of the SQL Server database engine has the encryption key, so that the database engine can manipulate the data. The database files cannot be read without access to the key. High-level administrators can manage, backup, and recreate the key, so the database can be moved, but only by selected people. When TDE is configured, the `tempdb` database is also automatically encrypted. 
+Mit Transparent Data Encryption (TDE) werden die Datendateien verschlüsselt, wenn sie auf dem Festplattenlaufwerk gespeichert werden. Die Masterdatenbank der SQL Server-Datenbank-Engine verfügt über den Verschlüsselungsschlüssel, sodass die Datenbank-Engine die Daten bearbeiten kann. Ohne den Schlüssel können die Datenbankdateien nicht gelesen werden. Höherrangige Administratoren können den Schlüssel verwalten, sichern und neu erstellen. Dies bedeutet, dass die Datenbank verschoben werden kann, jedoch nur von ausgewählten Personen. Wenn TDE konfiguriert ist, wird die Datenbank `tempdb` ebenfalls automatisch verschlüsselt. 
 
-Since the Database Engine can read the data, Transparent Data Encryption does not protect against unauthorized access by administrators of the computer who can directly read memory, or access SQL Server through an administrator account.
+Da die Datenbank-Engine die Daten lesen kann, schützt TDE weder vor unbefugtem Zugriff durch Administratoren des Computers, der Arbeitsspeicher direkt auslesen kann, noch vor unbefugtem Zugriff auf SQL Server über ein Administratorkonto.
 
-### Configure TDE
+### <a name="configure-tde"></a>Konfigurieren von TDE
 
-- Create a master key
-- Create or obtain a certificate protected by the master key
-- Create a database encryption key and protect it by the certificate
-- Set the database to use encryption
+- Erstellen Sie einen Hauptschlüssel
+- Erstellen oder beziehen Sie ein vom Hauptschlüssel geschütztes Zertifikat
+- Erstellen Sie einen Verschlüsselungsschlüssel für die Datenbank, und schützen Sie ihn durch das Zertifikat
+- Legen Sie fest, dass für die Datenbank Verschlüsselung verwendet wird
 
-Configuring TDE requires `CONTROL` permission on the master database and `CONTROL` permission on the user database. Typically an administrator configures TDE. 
+Zum Konfigurieren von TDE ist die `CONTROL`-Berechtigung für die Masterdatenbank und die `CONTROL`-Berechtigung für die Benutzerdatenbank erforderlich. TDE wird in der Regel von einem Administrator konfiguriert. 
 
-The following example illustrates encrypting and decrypting the `AdventureWorks2014` database using a certificate installed on the server named `MyServerCert`.
+Im folgenden Beispiel wird die Verschlüsselung und Entschlüsselung der `AdventureWorks2014` -Datenbank gezeigt, wobei ein auf dem Server `MyServerCert`installiertes Zertifikat verwendet wird.
 
 
 ```
@@ -228,7 +231,8 @@ GO
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-USE AdventureWorks2014;   GO
+USE AdventureWorks2014;  
+GO
   
 CREATE DATABASE ENCRYPTION KEY  
 WITH ALGORITHM = AES_256  
@@ -239,26 +243,33 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+Wenn Sie TDE entfernen möchten, führen Sie `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;` aus.   
 
-The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.   
+Die Verschlüsselungs- und Entschlüsselungsvorgänge werden von SQL Server in geplanten Hintergrundthreads ausgeführt. Sie können den Status dieser Vorgänge mithilfe der in der Liste weiter unten in diesem Thema genannten Katalogsichten und dynamischen Verwaltungssichten anzeigen.   
 
 > [!WARNING]
->  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+>  Sicherungsdateien von Datenbanken, für die TDE aktiviert wurde, werden ebenfalls mithilfe des Verschlüsselungsschlüssels für die Datenbank verschlüsselt. Darum muss bei der Wiederherstellung dieser Sicherungen das Zertifikat, das zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet wurde, verfügbar sein. Dies bedeutet, dass Sie zusätzlich zur Sicherung der Datenbank auch Sicherungskopien der Serverzertifikate aufbewahren müssen, um einem Datenverlust vorzubeugen. Ist das Zertifikat nicht mehr verfügbar, kann es zu einem Datenverlust kommen. Weitere Informationen finden Sie unter [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
-For more information about TDE, see [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
+Weitere Informationen zu TDE finden Sie unter [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
 
 
-## Configure backup encryption
-SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a certificate or asymmetric key) when creating a backup, you can create an encrypted backup file.    
+## <a name="configure-backup-encryption"></a>Konfigurieren der Sicherungsverschlüsselung
+In SQL Server können die Daten während der Erstellung einer Sicherung verschlüsselt werden. Indem der Verschlüsselungsalgorithmus und der Verschlüsseler (ein Zertifikat oder ein asymmetrischer Schlüssel) beim Erstellen einer Sicherung angegeben werden, können Sie eine verschlüsselte Sicherungsdatei erstellen.    
   
-> [!WARNING]  
->  It is very important to back up the certificate or asymmetric key, and preferably to a different location than the backup file it was used to encrypt. Without the certificate or asymmetric key, you cannot restore the backup, rendering the backup file unusable. 
+> [!WARNING]
+> Es ist sehr wichtig, das Zertifikat oder den asymmetrischen Schlüssel zu sichern – vorzugsweise an einem anderen Speicherort als die Sicherungsdatei, die zum Verschlüsseln verwendet wurde. Ohne das Zertifikat oder den asymmetrischen Schlüssel können Sie keine Sicherung wiederherstellen, sodass die Sicherungsdatei unbrauchbar ist. 
  
  
-The following example creates a certificate, and then creates a backup protected by the certificate.
+Im folgenden Beispiel werden ein Zertifikat und anschließend eine durch das Zertifikat geschützte Sicherung erstellt.
+
 ```
-USE master;   GO   CREATE CERTIFICATE BackupEncryptCert   WITH SUBJECT = 'Database backups';   GO BACKUP DATABASE [AdventureWorks2014]   TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
+USE master;  
+GO  
+CREATE CERTIFICATE BackupEncryptCert   
+   WITH SUBJECT = 'Database backups';  
+GO 
+BACKUP DATABASE [AdventureWorks2014]  
+TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
 WITH  
   COMPRESSION,  
   ENCRYPTION   
@@ -270,9 +281,9 @@ WITH
 GO  
 ```
 
-For more information, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).
+Weitere Informationen finden Sie unter [Sicherungsverschlüsselung](../relational-databases/backup-restore/backup-encryption.md).
 
 
-## Next steps
+## <a name="next-steps"></a>Nächste Schritte
 
-For more information about the security features of SQL Server, see [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
+Weitere Informationen zu den Sicherheitsfeatures in SQL Server finden Sie unter [Sicherheitscenter für die SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).

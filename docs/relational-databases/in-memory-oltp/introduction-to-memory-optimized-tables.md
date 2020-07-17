@@ -1,5 +1,6 @@
 ---
 title: Einführung in speicheroptimierte Tabellen | Microsoft-Dokumentation
+description: Informieren Sie sich über speicheroptimierte Tabellen, die dauerhaft sind und atomische, konsistente, isolierte und dauerhafte Transaktionen unterstützen.
 ms.custom: ''
 ms.date: 12/02/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723116"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Einführung in speicheroptimierte Tabellen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Speicheroptimierte Tabellen werden mit [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) erstellt.  
   
@@ -69,11 +70,11 @@ Auf speicheroptimierte Tabellen kann am effizientesten mit systemintern kompilie
 
 Die folgenden Faktoren beeinflussen die Leistungsvorteile, die mit In-Memory OLTP erreicht werden können:  
   
-*Kommunikation:* Eine Anwendung mit vielen Aufrufen kurzer gespeicherter Prozeduren erzielt möglicherweise einen kleineren Leistungszuwachs als eine Anwendung, bei der weniger Aufrufe und zusätzliche Funktionen in jeder gespeicherten Prozedur implementiert sind.  
+*Kommunikation:* Eine Anwendung mit vielen Aufrufen kurzer gespeicherter Prozeduren erzielt möglicherweise einen kleineren Leistungszuwachs als eine Anwendung, bei der weniger Aufrufe und zusätzliche Funktionen in jede gespeicherte Prozedur implementiert sind.  
   
-*[!INCLUDE[tsql](../../includes/tsql-md.md)] -Ausführung:* In-Memory OLTP gewährleistet die beste Leistung bei systemintern kompilierten gespeicherten Prozeduren im Gegensatz zu interpretierten gespeicherten Prozeduren oder Abfrageausführungen. Dies kann einen Vorteil gegenüber dem Zugriff auf speicheroptimierte Tabellen aus solchen gespeicherten Prozeduren bieten.  
+*[!INCLUDE[tsql](../../includes/tsql-md.md)] Ausführung:* In-Memory OLTP gewährleistet die beste Leistung bei systemintern kompilierten gespeicherten Prozeduren im Gegensatz zu interpretierten gespeicherten Prozeduren oder Abfrageausführungen. Dies kann einen Vorteil gegenüber dem Zugriff auf speicheroptimierte Tabellen aus solchen gespeicherten Prozeduren bieten.  
   
-*Bereichsscan im Vergleich zu Punktsuche:* Speicheroptimierte, nicht gruppierte Indizes unterstützen Bereichsscans und sortierte Scans. Bei Punktsuchen erzielen Sie mit speicheroptimierten Hashindizes eine bessere Leistung als mit speicheroptimierten, nicht gruppierten Indizes. Speicheroptimierte, nicht gruppierte Indizes weisen eine bessere Leistung auf als datenträgerbasierte Indizes.
+*Bereichsscan im Vergleich zur Punktsuche* Speicheroptimierte, nicht gruppierte Indizes unterstützen Bereichsscans und sortierte Scans. Bei Punktsuchen erzielen Sie mit speicheroptimierten Hashindizes eine bessere Leistung als mit speicheroptimierten, nicht gruppierten Indizes. Speicheroptimierte, nicht gruppierte Indizes weisen eine bessere Leistung auf als datenträgerbasierte Indizes.
 
 - Ab SQL Server 2016 kann der Abfrageplan für eine speicheroptimierte Tabelle die Tabelle parallel scannen. Dies verbessert die Leistung von Analyseabfragen.
   - Hashindizes können seit SQL Server 2016 auch parallel gescannt werden.
@@ -82,7 +83,7 @@ Die folgenden Faktoren beeinflussen die Leistungsvorteile, die mit In-Memory OLT
   
 *Indexvorgänge:* Indexvorgänge werden nicht protokolliert und sind nur im Arbeitsspeicher vorhanden.  
   
-*Parallelität:* Anwendungen, deren Leistung durch Parallelität auf Engine-Ebene wie Latchkonflikte oder Blockierungen beeinträchtigt wird, verzeichnen eine erhebliche Leistungssteigerung, wenn die Anwendung auf In-Memory-OLTP umgestellt wird.  
+*Parallelität:* Anwendungen, deren Leistung durch Parallelität auf Engine-Ebene wie Latchkonflikte oder Blockierungen beeinträchtigt wird, verzeichnen eine erhebliche Leistungssteigerung, wenn die Anwendung auf In-Memory OLTP umgestellt wird.  
   
 In der folgenden Tabelle werden die Leistungs- und Skalierbarkeitsprobleme, die häufig in relationalen Datenbanken auftreten, zusammen mit einer möglichen Leistungssteigerung durch In-Memory OLTP aufgeführt.  
   

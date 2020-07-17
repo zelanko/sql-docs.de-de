@@ -1,5 +1,6 @@
 ---
 title: Sichere Kennwörter | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über Kennwörter in SQL Server und die Bestandteile eines sicheren Kennworts, um die Sicherheit Ihrer Bereitstellung zu verbessern.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 297dc4127fbfd040ba0d9cc970f3a044395b5e21
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ac636ae2b994b359921e164fe884de80a7d3486a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448221"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001042"
 ---
 # <a name="strong-passwords"></a>Sichere Kennwörter
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Kennwörter sind möglicherweise das schwächste Glied bei der Bereitstellung von Serversicherheit. Gehen Sie bei der Auswahl eines Kennworts mit Vorsicht vor. Ein sicheres Kennwort weist die folgenden Merkmale auf:  
   
 -   Es ist mindestens acht Zeichen lang.  

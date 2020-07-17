@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 908c5d532386f83078c0dbb7976462f2d282533e
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 2f0cc59a51573931c742e4a6303b72e103e747d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774012"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Konfigurieren von IIS 7 für die Websynchronisierung
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Die Vorgehensweisen in diesem Thema führen Sie durch den Prozess zum manuellen Konfigurieren von [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Internetinformationsdiensten (IIS) Version 7 oder höher zur Verwendung mit der Websynchronisierung für die Mergereplikation. 
   
@@ -50,7 +50,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 1.  Installieren Sie die SQL Server-Replikation auf dem IIS-Computer.
 
-2. Erstellen Sie ein neues Dateiverzeichnis für die Datei replisapi.dll auf dem Computer mit IIS. Dieses Verzeichnis kann an einem beliebigen Ort erstellt werden, es wird jedoch das Erstellen im Verzeichnis \<*Laufwerk*>:\Inetpub empfohlen. Erstellen Sie beispielsweise das Verzeichnis \<*Laufwerk*>:\Inetpub\SQLReplication\\.  
+2. Erstellen Sie ein neues Dateiverzeichnis für die Datei replisapi.dll auf dem Computer mit IIS. Dieses Verzeichnis kann an einem beliebigen Ort erstellt werden, es wird jedoch die Erstellung im Verzeichnis \<*drive*>:\Inetpub empfohlen. Erstellen Sie z. B. das Verzeichnis \<*drive*>:\Inetpub\SQLReplication\\.  
   
 3.  Kopieren Sie die Datei replisapi.dll aus dem Verzeichnis [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]\com\ in das Dateiverzeichnis, das Sie in Schritt&#160;1 erstellt haben.  
   
@@ -70,7 +70,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     2.  Für **Alias**geben Sie **SQLReplication**ein.  
   
-    3.  Geben Sie **\<Laufwerk>:\Inetpub\SQLReplication\\** für **Physischer Pfad** ein, und klicken Sie dann auf **OK**.  
+    3.  Geben Sie **\<drive>:\Inetpub\SQLReplication\\** für **Physischer Pfad** ein, und klicken Sie dann auf **OK**.  
   
 7.  Konfigurieren Sie IIS für die Ausführung von replisapi.dll.  
   
@@ -84,7 +84,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     5.  Wählen Sie in der Dropdownliste **Modul** die Option **IsapiModule**aus.  
   
-    6.  Geben Sie **\<Laufwerk>:\Inetpub\SQLReplication\replisapi.dll** für **Ausführbare Datei** ein.  
+    6.  Geben Sie **\<drive>:\Inetpub\SQLReplication\replisapi.dll** für **Ausführbare Datei** ein.  
   
     7.  Geben Sie **Replisapi**für **Name**ein.  
   
@@ -218,7 +218,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     2.  Klicken Sie auf der Registerkarte **Sicherheit** auf **Bearbeiten**.  
   
-    3.  Klicken Sie im Dialogfeld **Berechtigungen für \<Ordnername>** auf **Hinzufügen**, um das in Schritt 1 erstellte Konto hinzuzufügen.  
+    3.  Klicken Sie im Dialogfeld **Berechtigungen für \<foldername>** auf **Hinzufügen**, um das in Schritt 1 erstellte Konto hinzuzufügen.  
   
     4.  Stellen Sie sicher, dass unter **Suchpfad** der Name des lokalen Computers und nicht eine Domäne angezeigt wird. Wenn der Name des lokalen Computers in diesem Feld nicht anzeigt wird, klicken Sie auf **Speicherorte**. Wählen Sie im Dialogfeld **Speicherorte** den lokalen Computer aus, und klicken Sie dann auf **OK**.  
   

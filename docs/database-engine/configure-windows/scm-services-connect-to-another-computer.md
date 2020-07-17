@@ -1,5 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit einem anderen Computer (SQL Server-Konfigurations-Manager) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie die Dienste auf einem Remotecomputer verwalten. Hier erfahren Sie, wie Sie den SQL Server-Konfigurations-Manager oder SQL Server Management Studio für diese Aufgabe einsetzen können.
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 03f409e11e037fcc406940d5a97e9934a77b96b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4a2ca1eea0ec4b42bba65b62525bb6d86e52c88
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74249758"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651346"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM-Dienste: Verbinden mit einem anderen Computer
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Artikel wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] eine Verbindung mit einem anderen Computer herstellen können. Befolgen Sie die erste Prozedur, um die Computerverwaltung von Windows, MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) zu öffnen, stellen Sie eine Verbindung zu dem Computer her, und erweitern die Struktur "Dienste und Anwendungen". Führen Sie das zweite Verfahren zum Erstellen einer Datei mit einem Link zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager auf einem Remotecomputer aus.
 
@@ -38,7 +39,7 @@ Zum Starten, Stoppen, Anhalten oder Fortsetzen von Diensten auf einem anderen Co
 2. Klicken Sie im Menü **Aktion** auf **Mit einem anderen Computer verbinden**.
 3. Geben Sie im Dialogfeld **Computer auswählen** in das Textfeld **Anderen Computer** den Namen des Computers ein, den Sie verwalten möchten, und klicken Sie dann auf **OK**.
 
-   Die Computerverwaltung zeigt die Dienste an, die auf dem Remotecomputer ausgeführt werden. Der Knoten der obersten Ebene wird in **Computerverwaltung** \<*Remotecomputer*> geändert.
+   Die Computerverwaltung zeigt die Dienste an, die auf dem Remotecomputer ausgeführt werden. Der Knoten der obersten Ebene wird in **Computerverwaltung** \<*remotecomputer*> geändert.
 
 4. Erweitern Sie in der Konsolenstruktur **Dienste und Anwendungen**, und erweitern Sie dann **SQL Server-Konfigurations-Manager** , um die Dienste des Remotecomputers zu verwalten.
 
@@ -53,7 +54,7 @@ Zum Starten, Stoppen, Anhalten oder Fortsetzen von Diensten auf einem anderen Co
 6. Klicken Sie im Dialogfeld **Computerverwaltung** auf **Anderen Computer**, geben Sie den Namen des zu verwaltenden Remotecomputers ein, und klicken Sie dann auf **Fertig stellen**.
 7. Klicken Sie im Dialogfeld **Eigenständiges Snap-In hinzufügen** auf **Schließen**.
 8. Klicken Sie im Fenster **Snap-In hinzufügen/entfernen** auf **OK**.
-9. Erweitern Sie **Computerverwaltung (** _\<Computername>_ **)** und **Dienste und Anwendungen**.
+9. Erweitern Sie **Computerverwaltung (** _\<computer name>_ **)** und **Dienste und Anwendungen**.
 10. Klicken Sie mit der rechten Maustaste auf **SQL Server-Konfigurations-Manager**, und klicken Sie dann auf **Neues Fenster**.
 11. Klicken Sie im Menü **Fenster** auf **Konsolenstamm**, um zum ersten Fenster zurückzuwechseln, und löschen Sie das Fenster.
 12. Klicken Sie im Menü **Datei** auf **Speichern unter**, und speichern Sie die Datei im gewünschten Ordner. Geben Sie der Datei dabei einen passenden Namen mit der Erweiterung **.msc** . Schließen Sie das Fenster [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.

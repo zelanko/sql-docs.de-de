@@ -1,5 +1,6 @@
 ---
 title: Verschieben einer FILESTREAM-aktivierten Datenbank | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie eine Datenbank mit aktiviertem FILESTREAM verschieben können. Außerdem erfahren Sie, welche Transact-SQL-Skripts Sie im Abfrage-Editor von SQL Server Management Studio verwenden können.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 33d2f34f9f2ea63f23c570c0b4ada95906649215
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 706581c6fa44170d1bf8b9901a2dec0b47574be8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091528"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631138"
 ---
 # <a name="move-a-filestream-enabled-database"></a>Verschieben einer FILESTREAM-aktivierten Datenbank
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird das Verschieben einer FILESTREAM-aktivierten Datenbank veranschaulicht.  
   
 > [!NOTE]  

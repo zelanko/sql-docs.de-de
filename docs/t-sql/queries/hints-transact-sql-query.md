@@ -55,15 +55,15 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 260de27d8a092ceabbf066d1546f471b90aa2c33
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731299"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Abfragehinweise geben an, dass die angezeigten Hinweise in der gesamten Abfrage verwendet werden sollen. Sie wirken sich auf alle Operatoren in der Anweisung aus. Falls UNION in der Hauptabfrage vorkommt, kann nur die letzte Abfrage, die eine UNION-Operation enthält, die OPTION-Klausel aufweisen. Abfragehinweise werden als Teil der [OPTION-Klausel](../../t-sql/queries/option-clause-transact-sql.md) angegeben. Fehler 8622 tritt auf, wenn mindestens ein Abfragehinweis dazu führt, dass der Abfrageoptimierer keinen gültigen Plan generiert.  
   
@@ -238,7 +238,7 @@ Ein Literalkonstantenwert, dem _\@variable\_name_ für die Verwendung mit dem Ab
 OPTIMIZE FOR kann dem Erkennungsverhalten der Standardparameter des Optimierers entgegenwirken. Verwenden Sie OPTIMIZE FOR auch, wenn Sie Planhinweislisten erstellen. Weitere Informationen finden Sie unter [Erneutes Kompilieren einer gespeicherten Prozedur](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
 OPTIMIZE FOR UNKNOWN  
-Weist den Abfrageoptimierer an, beim Kompilieren und Optimieren der Abfrage für alle lokalen Variablen, statistische Daten statt der Anfangswerte zu verwenden. Diese Optimierung umfasst auch Parameter, die mit erzwungener Parametrisierung erstellt werden.  
+Weist den Abfrageoptimierer an, für alle Spaltenwerte die durchschnittliche Selektivität des Prädikats anstelle des Werts für den Runtime-Parameter zu verwenden, wenn die Abfrage kompiliert und optimiert wird.  
   
 Wenn OPTIMIZE FOR @variable_name = _literal\_constant_ und OPTIMIZE FOR UNKNOWN in dem gleichen Abfragehinweis verwendet werden, verwendet der Abfrageoptimierer die _literal\_constant_, die für einen bestimmten Wert angegeben wurde. Der Abfrageoptimierer verwendet UNKNOWN für die übrigen Variablenwerte. Diese Werte werden nur während der Abfrageoptimierung verwendet, nicht während der Abfrageausführung.  
 
@@ -404,17 +404,17 @@ GO
 ```  
   
 ### <a name="b-using-optimize-for"></a>B. Verwenden von OPTIMIZE FOR  
- Im folgenden Beispiel wird der Abfrageoptimierer angewiesen, den Wert `'Seattle'` für die lokale Variable `@city_name` zu verwenden, und statistische Daten zu verwenden, um während der Abfrageoptimierung den Wert der lokalen Variablen `@postal_code` zu bestimmen. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
+ Im folgenden Beispiel wird der Abfrageoptimierer angewiesen, für `@city_name` den Wert `'Seattle'` und für `@postal_code` die durchschnittliche Selektivität des Prädikats für alle Spaltenwerte zu verwenden, wenn die Abfrage optimiert wird. Im Beispiel wird die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank verwendet.  
   
 ```sql  
-DECLARE @city_name nvarchar(30);  
-DECLARE @postal_code nvarchar(15);  
-SET @city_name = 'Ascheim';  
-SET @postal_code = 86171;  
+CREATE PROCEDURE dbo.RetrievePersonAddress
+@city_name nvarchar(30),  
+ @postal_code nvarchar(15)
+AS
 SELECT * FROM Person.Address  
 WHERE City = @city_name AND PostalCode = @postal_code  
 OPTION ( OPTIMIZE FOR (@city_name = 'Seattle', @postal_code UNKNOWN) );  
-GO  
+GO
 ```  
   
 ### <a name="c-using-maxrecursion"></a>C. Verwenden von MAXRECURSION  

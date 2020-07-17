@@ -1,5 +1,6 @@
 ---
 title: Spalten mit Namen | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über Spalten mit einem Namen in SQL-Abfragen und die spezifischen Bedingungen, unter denen Rowsetspalten mit einem Namen der resultierenden XML-Datei zugeordnet werden.
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 855f7c079d592c095ce3754cd5c6fc799139324e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14bc7706a7e3f562b2a3f4f01d8ab08a3684d313
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775562"
 ---
 # <a name="columns-with-a-name"></a>Spalten mit Namen
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Im Folgenden werden die spezifischen Bedingungen aufgeführt, unter denen dem XML-Ergebnis mit Unterscheidung nach Groß-/Kleinschreibung Rowsetspalten mit Namen zugeordnet werden:  
   

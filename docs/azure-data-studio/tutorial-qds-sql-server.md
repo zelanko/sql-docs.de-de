@@ -1,25 +1,24 @@
 ---
 title: Aktivieren des Beispielwidgets für die fünf langsamsten Abfragen
-titleSuffix: Azure Data Studio
 description: In diesem Tutorial wird veranschaulicht, wie das Beispielwidget für die fünf langsamsten Abfragen auf dem Datenbankdashboard aktiviert wird.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
-ms.date: 08/02/2019
-ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.date: 06/01/2020
+ms.openlocfilehash: f4e8e76583a90ce64a9f99ef3c94875b2c1fc6dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957044"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774545"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Hinzufügen des Beispielwidgets für die *fünf langsamsten Abfragen* zum Datenbankdashboard
 
-Dieses Tutorial veranschaulicht, wie Sie eins der integrierten Beispielwidgets von [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum *Datenbankdashboard* hinzufügen, um die fünf langsamsten Abfragen einer Datenbank auf einen Blick erkennen zu können. Sie erfahren auch, wie Sie mithilfe der Features von [!INCLUDE[name-sos](../includes/name-sos-short.md)] Details zu langsamen Abfragen und Abfrageplänen anzeigen. In diesem Tutorial lernen Sie Folgendes:
+In diesem Tutorial wird das Hinzufügen eines integrierten Azure Data Studio-Beispielwidgets zum *Datenbankdashboard* veranschaulicht, um die fünf langsamsten Abfragen schnell anzuzeigen. Außerdem erfahren Sie, wie Sie mithilfe der Azure Data Studio-Features Details zu den langsamen Abfragen und Abfrageplänen anzeigen. In diesem Tutorial lernen Sie Folgendes:
 
 > [!div class="checklist"]
 > * Aktivieren des Abfragespeichers in einer Datenbank
@@ -27,7 +26,7 @@ Dieses Tutorial veranschaulicht, wie Sie eins der integrierten Beispielwidgets v
 > * Anzeigen von Details zu den langsamsten Abfragen einer Datenbank
 > * Anzeigen der Abfrageausführungspläne für langsame Abfragen
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] enthält mehrere integrierte Erkenntniswidgets. Dieses Tutorial zeigt, wie Sie das Widget *query-data-store-db-insight* hinzufügen, grundsätzlich sind die Schritte aber für alle Widgets gleich.
+Azure Data Studio enthält mehrere integrierte Erkenntniswidgets. Dieses Tutorial zeigt, wie Sie das Widget *query-data-store-db-insight* hinzufügen, grundsätzlich sind die Schritte aber für alle Widgets gleich.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -117,9 +116,7 @@ Um das *Widget für langsame Abfragen* zu Ihrem Dashboard hinzuzufügen, bearbei
 
    ![Dialogfeld für Details zu Erkenntnissen](./media/tutorial-qds-sql-server/insight-details-dialog.png)
 
-3. Klicken Sie in **Elementdetails** mit der rechten Maustaste rechts neben **query_sql_txt**, und klicken Sie auf **Zelle kopieren**.
-
-4. Schließen Sie den Bereich **Erkenntnisse**.
+3. Schließen Sie den Bereich **Erkenntnisse**.
 
 ## <a name="view-the-query-plan"></a>Anzeigen des Abfrageplans
 

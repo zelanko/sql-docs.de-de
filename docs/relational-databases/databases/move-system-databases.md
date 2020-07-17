@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44fc9e7e1c15ae2bd5eb4471d1ee5e396274faa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763214"
 ---
 # <a name="move-system-databases"></a>Verschieben von Systemdatenbanken
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   In diesem Thema wird beschrieben, wie Systemdatenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verschoben werden. Das Verschieben von Systemdatenbanken kann in den folgenden Situationen nützlich sein:  
   
@@ -189,9 +189,9 @@ ms.locfileid: "68100462"
 
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Verschieben der Ressourcendatenbank  
- Der Speicherort der Ressourcendatenbank lautet \<*Laufwerk*>:\Programme\Microsoft SQL Server\MSSQL\<Version>.\<*instance_name*>\MSSQL\Binn\\. Die Datenbank kann nicht verschoben werden.  
+ Der Speicherort der Ressourcendatenbank lautet \<*drive*>:\Programme\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\. Die Datenbank kann nicht verschoben werden.  
   
-##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Nachverfolgung: Nach dem Verschieben aller Systemdatenbanken  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Nächster Schritt: Nach dem Verschieben aller Systemdatenbanken  
  Wenn Sie alle Systemdatenbanken auf ein neues Laufwerk oder Volume bzw. auf einen anderen Server mit einem anderen Laufwerkbuchstaben verschoben haben, führen Sie die folgenden Updates aus.  
   
 -   Ändern Sie den Pfad des SQL Server-Agent-Protokolls. Wenn Sie diesen Pfad nicht aktualisieren, kann SQL Server-Agent nicht gestartet werden.  
@@ -204,7 +204,7 @@ ms.locfileid: "68100462"
   
 2.  Klicken Sie mit der rechten Maustaste auf **Fehlerprotokolle** , und klicken Sie auf **Konfigurieren**.  
   
-3.  Geben Sie im Dialogfeld **Fehlerprotokolle des SQL Server-Agents konfigurieren** den neuen Speicherort der Datei SQLAGENT.OUT an. Der Standardspeicherort ist C:\Programme\Microsoft SQL Server\MSSQL\<version>.<instance_name>\MSSQL\Log\\.  
+3.  Geben Sie im Dialogfeld **Fehlerprotokolle des SQL Server-Agents konfigurieren** den neuen Speicherort der Datei SQLAGENT.OUT an. Der Standardspeicherort lautet C:\Programme\Microsoft SQL Server\MSSQL\<version>.<Instanzname>\MSSQL\Log\\.  
   
 #### <a name="change-the-database-default-location"></a>Ändern des Standardspeicherorts der Datenbank  
   

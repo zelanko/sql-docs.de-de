@@ -1,5 +1,6 @@
 ---
 title: 'Leistungsverbesserungen: In-Memory-OLTP'
+description: Dieses Codebeispiel veranschaulicht die hohe Leistung speicheroptimierter Tabellen mit interpretiertem Transact-SQL und einer nativ kompilierten gespeicherten Prozedur.
 ms.custom: seo-dt-2019
 ms.date: 08/19/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d9d5cccaa99ae0343c3f6c99cd7f7bcfb249df0e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412728"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723259"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demo: Leistungsverbesserungen von In-Memory OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Das Codebeispiel in diesem Thema veranschaulicht die hohe Leistung von speicheroptimierten Tabellen. Die Leistungsverbesserung wird ersichtlich, wenn über herkömmliches, interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)]auf Daten in einer speicheroptimierten Tabelle zugegriffen wird. Diese Leistungsverbesserung wird noch größer, wenn von einer nativ kompilierten gespeicherten Prozedur (NCSProc) aus auf Daten in einer speicheroptimierten Tabelle zugegriffen werden.  
  

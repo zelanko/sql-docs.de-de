@@ -1,5 +1,6 @@
 ---
 title: FOR XML-Unterstützung für verschiedene SQL Server-Datentypen | Microsoft-Dokumentation
+description: In diesem Artikel finden Sie Informationen über die verschiedenen SQL Server-Datentypen, die von der FOR XML-Klausel in SQL-Abfragen unterstützt werden.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e050c3f6817bc6c975f8bf28f561fb91af109dd8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7b4e3d1ecc08c94e516b532cc8f0d68ef370e1e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729899"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>FOR XML-Unterstützung für verschiedene SQL Server-Datentypen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In den Themen in diesem Abschnitt wird die Unterstützung von FOR XML für Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beschrieben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  

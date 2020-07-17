@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren der Serverkonfigurationsoption„Remote Data Archive“ | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie mit der Option „Remotedatenarchiv“ in SQL Server angeben, ob Datenbanken und Tabellen auf dem Server für Stretch aktiviert werden können.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -10,21 +11,21 @@ ms.topic: conceptual
 ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fda2594b2dc61a78eb5900ef6d1b735dac5b44e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc53b5392d6bd493b634e9e2c8a4a92613eb8c32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785750"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption "Remote Data Archive"
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Geben Sie mit der Option **Remotedatenarchiv** an, ob Datenbanken und Tabellen auf dem Server für Stretch aktiviert werden können. Weitere Informationen finden Sie unter [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
   
  Die Option **Remotedatenarchiv** kann die folgenden Werte enthalten.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0|Datenbanken und Tabellen auf dem Server können nicht für Stretch aktiviert werden.|  
 |1|Datenbanken und Tabellen auf dem Server können für Stretch aktiviert werden.|  

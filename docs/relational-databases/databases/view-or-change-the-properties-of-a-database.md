@@ -1,5 +1,6 @@
 ---
 title: Anzeigen oder Ändern der Eigenschaften einer Datenbank | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie mithilfe von SQL Server Management Studio oder Transact-SQL die Eigenschaften einer Datenbank in SQL Server anzeigen oder ändern.
 ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc1e6d1021e1e7cf30a683d8c81c625a56b9766c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 65eed15f9270c2a64ee5588f71b1fed37650905b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642619"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Anzeigen oder Ändern der Eigenschaften einer Datenbank
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In diesem Thema wird die Vorgehensweise zum Anzeigen oder Ändern der Eigenschaften einer Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]beschrieben. Nachdem Sie eine Datenbankeigenschaft geändert haben, tritt die Änderung sofort in Kraft.  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68127057"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So zeigen Sie die Eigenschaften einer Datenbank an oder ändern diese mit:**  
   
@@ -64,7 +65,7 @@ ms.locfileid: "68127057"
 3.  Wählen Sie im Dialogfeld **Datenbankeigenschaften** eine anzuzeigende Seite aus, um die entsprechenden Informationen anzuzeigen. Wählen Sie z. B. die Seite **Dateien** aus, um Daten- und Protokolldateiinformationen anzuzeigen.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
- Transact-SQL bietet eine Reihe von verschiedenen Methoden zum Anzeigen der Eigenschaften einer Datenbank und zum Ändern der Eigenschaften einer Datenbank. Zum Anzeigen der Eigenschaften einer Datenbank können Sie die Funktion [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) und die Katalogsicht [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) verwenden. Zum Ändern der Eigenschaften einer Datenbank können Sie die Version der ALTER DATABASE-Anweisung für Ihre Umgebung verwenden:[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) oder [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md). Zum Anzeigen der datenbankweiten Eigenschaften verwenden Sie die Katalogsicht [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) , und zum Ändern der datenbankweiten Eigenschaften verwenden Sie die Anweisung [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) .  
+ Transact-SQL bietet eine Reihe von verschiedenen Methoden zum Anzeigen der Eigenschaften einer Datenbank und zum Ändern der Eigenschaften einer Datenbank. Zum Anzeigen der Eigenschaften einer Datenbank können Sie die Funktion [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) und die Katalogsicht [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) verwenden. Zum Ändern der Eigenschaften einer Datenbank können Sie die Version der ALTER DATABASE-Anweisung für Ihre Umgebung verwenden:  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) oder [ALTER DATABASE (Azure SQL-Datenbank)](../../t-sql/statements/alter-database-azure-sql-database.md). Zum Anzeigen der datenbankweiten Eigenschaften verwenden Sie die Katalogsicht [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) , und zum Ändern der datenbankweiten Eigenschaften verwenden Sie die Anweisung [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) .  
   
 #### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>So zeigen Sie eine Eigenschaft einer Datenbank mit der Funktion DATABASEPROPERTYEX an  
   

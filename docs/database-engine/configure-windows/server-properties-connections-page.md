@@ -1,5 +1,6 @@
 ---
 title: Servereigenschaften (Seite „Verbindungen“) | Microsoft-Dokumentation
+description: In diesem Artikel lernen Sie die Verbindungseinstellungen von SQL Server kennen. Außerdem erhalten Sie Informationen über die Optionen, die die verzögerte Einschränkungsüberprüfung, die Behandlung von NULL und andere Verhaltensweisen bestimmen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 15ab408465890a13fc6e87efd2f2e15e8f8a7fad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4c92cc173544c1cd7985b3bf58d7ebd22ea100b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759148"
 ---
 # <a name="server-properties---connections-page"></a>Servereigenschaften (Seite „Verbindungen“)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Mithilfe dieser Seite können Sie die Verbindungsoptionen anzeigen und ändern.  
   
 ## <a name="connections"></a>Verbindungen  

@@ -11,16 +11,16 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7afb01d003e6221b30ea194ff711555b7e982f41
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 6f8ea5d4b1e91a3f1c3bf66dab4565ab457933c5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873176"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999853"
 ---
 # <a name="temporal-tables"></a>Temporale Tabellen
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 In SQL Server 2016 wurde die Unterstützung von temporalen Tabellen (auch als temporale Tabellen mit Systemversionsverwaltung bezeichnet) als Datenbankfeature eingeführt, das integrierte Unterstützung für das Bereitstellen von Informationen zu den zu jedem Zeitpunkt in der Tabelle gespeicherten Daten zur Verfügung stellt, anstatt nur die aktuell in einer Tabelle gespeicherten Daten zu unterstützen. Temporal ist ein Datenbankfeature, das zusammen mit ANSI SQL 2011 eingeführt wurde.
 
@@ -106,7 +106,7 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));
 
 ## <a name="how-do-i-query-temporal-data"></a>Wie lassen sich temporale Daten abfragen?
 
-Die **FROM** _\<Tabelle\>_ -Klausel der **SELECT**-Anweisung enthält die neue Klausel **FOR SYSTEM_TIME** mit fünf zeitspezifischen Unterklauseln zum Abfragen von Daten in der aktuellen und in den Verlaufstabellen. Die Syntax dieser neuen **SELECT** -Anweisung wird für Einzeltabellen direkt unterstützt, durch mehrfache JOINS weitergegeben und für zusammenfassende Sichten mehrerer temporaler Tabellen unterstützt.
+Die **FROM** _\<table\>_ -Klausel der **SELECT**-Anweisung weist eine neue Klausel **FOR SYSTEM_TIME** mit fünf Unterklauseln auf. Diese sind für temporale Tabellen vorgesehen und dienen zum übergreifenden Abfragen von Daten in aktuellen Tabellen und Verlaufstabellen. Die Syntax dieser neuen **SELECT** -Anweisung wird für Einzeltabellen direkt unterstützt, durch mehrfache JOINS weitergegeben und für zusammenfassende Sichten mehrerer temporaler Tabellen unterstützt.
 
 ![Abfragen temporaler Daten](../../relational-databases/tables/media/temporal-querying.PNG "Abfragen temporaler Daten")
 
@@ -136,7 +136,7 @@ In der Tabelle unten steht SysStartTime in der Spalte „Qualifizierte Zeilen“
 |**ALL**|Alle Zeilen|Gibt die Vereinigungsmenge der Zeilen zurück, die der aktuellen und der Verlaufstabelle angehören.|
 
 > [!NOTE]
-> Optional können Sie diese Zeitraumspalten ausblenden, sodass sie von Abfragen, die nicht explizit auf diese Zeitraumspalten verweisen, nicht zurückgegeben werden (Szenario **SELECT \* FROM** _\<Tabelle\>_ ). Um eine ausgeblendete Spalte zurückzugeben, verweisen Sie einfach in der Abfrage explizit auf die ausgeblendete Spalte. Analog dazu verhalten sich **INSERT** und **BULK INSERT** -Anweisungen, als ob diese neuen Zeitraumspalten nicht vorhanden wären (und die Spaltenwerte werden automatisch aufgefüllt). Weitere Informationen zur Verwendung der **HIDDEN** -Klausel finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) und [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)unterstützt wird.
+> Optional können Sie diese Zeitraumspalten ausblenden, sodass Abfragen, die nicht explizit auf diese Zeitraumspalten verweisen, diese Spalten nicht zurückgeben (das **SELECT \* FROM** _\<table\>_ -Szenario). Um eine ausgeblendete Spalte zurückzugeben, verweisen Sie einfach in der Abfrage explizit auf die ausgeblendete Spalte. Analog dazu verhalten sich **INSERT** und **BULK INSERT** -Anweisungen, als ob diese neuen Zeitraumspalten nicht vorhanden wären (und die Spaltenwerte werden automatisch aufgefüllt). Weitere Informationen zur Verwendung der **HIDDEN** -Klausel finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) und [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)unterstützt wird.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

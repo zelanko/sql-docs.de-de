@@ -1,5 +1,6 @@
 ---
 title: Verwenden des EXPLICIT-Modus mit FOR XML | Microsoft-Dokumentation
+description: Hier erfahren Sie, warum die Verwendung von FOR XML EXPLICIT-Modus die größtmögliche Flexibilität beim Erzeugen von XML-Daten aus einem Abfrageergebnis bietet.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 193eae657a73f6801546c7234b141dae8f422e67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736555"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Verwenden des EXPLICIT-Modus mit FOR XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Wie im Thema [Erstellen von XML mithilfe von FOR XML](../../relational-databases/xml/for-xml-sql-server.md)beschrieben wird, bieten die Modi RAW und AUTO kaum Steuerungsmöglichkeiten für die Form des aus einem Abfrageergebnis generierten XML-Codes. Der EXPLICIT-Modus hingegen ermöglicht größte Flexibilität beim Generieren der gewünschten XML-Ausgabe aus einem Abfrageergebnis.  
   
  Die Abfrage im EXPLICIT-Modus muss so geschrieben werden, dass die zusätzlichen Informationen zu der erforderlichen XML-Ausgabe, wie z. B. die erwartete Schachtelung, explizit als Teil der Abfrage angegeben werden. Das Schreiben von Abfragen im EXPLICIT-Modus kann jedoch aufwendig sein, je nachdem, welche XML-Daten erforderlich sind. Möglicherweise ist das [Verwenden des PATH-Modus](../../relational-databases/xml/use-path-mode-with-for-xml.md) mit Schachtelung dem Schreiben von Abfragen im EXPLICIT-Modus als einfachere Alternative vorzuziehen.  
@@ -150,23 +151,23 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Beispiel: Abrufen von Informationen zu Mitarbeitern](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
--   [Beispiel: Angeben der ELEMENT-Direktive](../../relational-databases/xml/example-specifying-the-element-directive.md)  
+-   [Beispiel: Angeben der ELEMENT-Anweisung](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
--   [Beispiel: Angeben der ELEMENTXSINIL-Direktive](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Beispiel: Angeben der ELEMENTXSINIL-Anweisung](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
   
 -   [Beispiel: Erstellen von gleichgeordneten Elementen im EXPLICIT-Modus](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Beispiel: Angeben der ID- und der IDREF-Direktive](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Beispiel: Angeben der ID- und IDREF-Anweisungen](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Beispiel: Angeben der ID- und der IDREFS-Direktive](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Beispiel: Angeben der ID- und IDREFS-Anweisungen](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Beispiel: Angeben der HIDE-Direktive](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
+-   [Beispiel: Angeben der HIDE-Anweisung](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [Beispiel: Angeben der ELEMENT-Direktive und Entitätscodierung](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Beispiel: Angeben der ELEMENT-Anweisung und Entitätscodierung](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Beispiel: Angeben der CDATA-Direktive](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
+-   [Beispiel: Angeben der CDATA-Anweisung](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   
--   [Beispiel: Angeben der XMLTEXT-Direktive](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
+-   [Beispiel: Angeben der XMLTEXT-Anweisung](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des RAW-Modus mit FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   

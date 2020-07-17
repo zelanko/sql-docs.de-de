@@ -1,5 +1,6 @@
 ---
 title: Datenbankobjekt (Seite Erweiterte Eigenschaften) | Microsoft-Dokumentation
+description: Informationen zur Seite „Erweiterte Eigenschaften“ Hier erfahren Sie, wie Sie diese Seite verwenden, um benutzerdefinierte Eigenschaften von Datenbankobjekten hinzuzufügen, anzuzeigen oder zu bearbeiten.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de6a4504e0b84efd8fa8fb5b60a8bd01ef85b474
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5bff24a63829f1820048bf371f4be497a95f6c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756243"
 ---
 # <a name="database-object-extended-properties-page"></a>Datenbankobjekt (Seite Erweiterte Eigenschaften)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Mithilfe der erweiterten Eigenschaften können Sie Datenbankobjekten benutzerdefinierte Eigenschaften hinzufügen. Mithilfe dieser Seite können Sie die erweiterten Eigenschaften für das ausgewählte Objekt anzeigen und ändern. Die Seite **Erweiterte Eigenschaften** ist für alle Datenbankobjekttypen gleich.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
  **Datenbank**  
  Zeigt den Namen der ausgewählten Datenbank an. Dieses Feld ist schreibgeschützt.  
   

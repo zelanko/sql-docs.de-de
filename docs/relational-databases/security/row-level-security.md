@@ -1,5 +1,6 @@
 ---
 title: Sicherheit auf Zeilenebene | Microsoft-Dokumentation
+description: Mithilfe der Sicherheit auf Zeilenebene können Sie den Zugriff auf Zeilen in einer Datenbanktabelle in SQL Server anhand der Gruppenmitgliedschaft oder des Ausführungskontext steuern.
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78288974"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000538"
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ![Grafik zur Sicherheit auf Zeilenebene](../../relational-databases/security/media/row-level-security-graphic.png "Grafik zur Sicherheit auf Zeilenebene")  
   
@@ -41,7 +42,7 @@ Implementieren Sie RLS, indem Sie die [CREATE SECURITY POLICY](../../t-sql/state
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([hier herunterladen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
-> Azure SQL Data Warehouse unterstützt nur Filterprädikate. Blockprädikate werden in Azure SQL Data Warehouse derzeit nicht unterstützt.
+> Azure Synapse unterstützt nur Filterprädikate. Blockprädikate werden in Azure Synapse derzeit nicht unterstützt.
 
 ## <a name="description"></a><a name="Description"></a> Beschreibung
 
@@ -159,7 +160,7 @@ Es ist möglich, die Offenlegung von Informationen durch die Verwendung von sorg
   
 - **Filestream:** RLS ist nicht mit Filestream kompatibel.  
   
-- **PolyBase:** RLS wird nur bei externen Polybase-Tabellen für Azure SQL Data Warehouse unterstützt.
+- **PolyBase:** RLS wird nur bei externen Polybase-Tabellen für Azure Synapse unterstützt.
 
 - **Speicheroptimierte Tabellen:** Die Inline-Tabellenwertfunktion, die als Sicherheitsprädikat für eine speicheroptimierte Tabelle verwendet wird, muss mit der Option `WITH NATIVE_COMPILATION` definiert werden. Bei dieser Option werden von speicheroptimierten Tabellen nicht unterstützte Sprachfeatures gesperrt, und zur Erstellungszeit wird der entsprechende Fehler ausgelöst. Weitere Informationen finden Sie im Abschnitt **Sicherheit auf Zeilenebene** in [Einführung in speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -185,8 +186,6 @@ Es ist möglich, die Offenlegung von Informationen durch die Verwendung von sorg
   
  Erstellen Sie drei Benutzerkonten, anhand derer unterschiedliche Zugriffsmöglichkeiten vorgeführt werden.  
 
-> [!NOTE]
-> Azure SQL Data Warehouse unterstützt keine EXECUTE AS USER-Anweisungen. Das bedeutet, Sie müssen für jeden Benutzer zuerst eine CREATE LOGIN-Anweisung durchführen. Sie werden später als der entsprechende Benutzer dieses Verhalten testen.
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
@@ -273,10 +272,6 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
-
-> [!NOTE]
-> Azure SQL Data Warehouse unterstützt EXECUTE AS USER nicht, melden Sie sich also als der entsprechende Benutzer an, um so das oben beschriebene Verhalten zu testen.
-
 Dem Manager sollten alle sechs Zeilen angezeigt werden. Den Benutzern Sales1 und Sales2 sollten nur ihre eigenen Verkäufe angezeigt werden.
 
 Ändern Sie die Sicherheitsrichtlinie, um die Richtlinie zu deaktivieren.
@@ -301,7 +296,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> B. Szenarien für die Verwendung von Sicherheit auf Zeilenebene in einer externen Azure SQL Data Warehouse-Tabelle
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. Szenarios für die Verwendung von Sicherheit auf Zeilenebene in einer externen Azure Synapse-Tabelle
 
 In diesem kurzen Beispiel werden drei Benutzer und eine externe Tabelle mit sechs Zeilen erstellt. Anschließend werden eine Inline-Tabellenwertfunktion und eine Sicherheitsrichtlinie für die externe Tabelle erstellt. Im Beispiel wird gezeigt, wie ausgewählte Anweisungen für verschiedene Benutzer gefiltert werden.
 
@@ -345,7 +340,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-Erstellen Sie aus der zuvor erstellten Sales-Tabelle eine externe Azure SQL Data Warehouse-Tabelle.
+Erstellen Sie aus der zuvor erstellten Sales-Tabelle eine externe Azure Synapse-Tabelle.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
@@ -394,7 +389,7 @@ WITH (STATE = OFF);
 
 Jetzt werden den Sales1- und Sales2-Benutzern alle sechs Zeilen angezeigt.
 
-Stellen Sie eine Verbinden mit der SQL Data Warehouse-Datenbank her, um Ressourcen zu bereinigen.
+Stellen Sie eine Verbindung mit der Azure Synapse-Datenbank her, um Ressourcen zu bereinigen.
 
 ```sql
 DROP USER Sales1;
@@ -421,7 +416,7 @@ DROP LOGIN Manager;
 ### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> C. Szenario für Benutzer, die sich über eine Middle-Tier Application mit der Datenbank verbinden
 
 > [!NOTE]
-> In diesem Beispiel wird die Funktionalität zum Blockieren von Prädikaten für Azure SQL Data Warehouse momentan nicht unterstützt, sodass das Einfügen von Zeilen für die falsche Benutzer-ID bei Azure SQL Data Warehouse nicht blockiert wird.
+> In diesem Beispiel wird die Funktionalität zum Blockieren von Prädikaten für Azure Synapse momentan nicht unterstützt, sodass das Einfügen von Zeilen für die falsche Benutzer-ID bei Azure Synapse nicht blockiert wird.
 
 Dieses Beispiel zeigt, wie eine Anwendung der mittleren Schicht eine Verbindungsfilterung implementieren kann, bei der Anwendungsbenutzer (oder Mandanten) den gleichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benutzer (die Anwendung) gemeinsam verwenden. Die Anwendung legt nach dem Verbinden mit der Datenbank die aktuelle Anwendungsbenutzer-ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) fest. Dann sorgen Sicherheitsrichtlinien dafür, dass Zeilen transparent herausgefiltert werden, die für diese ID nicht sichtbar sein sollen. Außerdem wird der Benutzer am Einfügen von Zeilen für die falsche Benutzer-ID gehindert. Es sind keine weiteren App-Änderungen erforderlich.  
   

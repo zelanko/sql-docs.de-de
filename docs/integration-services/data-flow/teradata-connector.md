@@ -9,14 +9,15 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ca25b7425ce74cea820e295a6a99bc3a3c1e2817
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 521cc4edfb5033b545822b6ac145549fa802e707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75755852"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001158"
 ---
-# <a name="microsoft-connector-for-teradata-preview"></a>Microsoft Connector für Teradata (Vorschau)
+# <a name="microsoft-connector-for-teradata"></a>Microsoft Connector für Teradata
+
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 Microsoft Connector für Teradata ermöglicht das Exportieren von Daten aus und das Laden von Daten in Teradata-Datenbanken in einem SSIS-Paket.
@@ -28,7 +29,8 @@ Dieser neue Connector unterstützt Datenbanken mit Tabellen mit 1 MB-Unterstüt
 Die folgenden Microsoft SQL Server-Produkte werden von Microsoft Connector für Teradata unterstützt:
 
 - Microsoft SQL Server 2019
-- Microsoft SQL Server Data Tools (SSDT)
+- Microsoft SQL Server Data Tools (SSDT) 15.8.1 oder höher für Visual Studio 2017
+- Microsoft SQL Server Data Tools (SSDT) für Visual Studio 2019
 
 Der Microsoft Connector für Teradata verwendet die Teradata Parallel Transporter-Anwendungsprogrammiersprach-Schnittstelle zum Laden von Daten in und zum Exportieren von Daten aus der Teradata-Datenbank. Die folgenden Versionen werden unterstützt:
 
@@ -46,8 +48,6 @@ In der [Teradata-Dokumentation](https://docs.teradata.com/) finden Sie Details i
 
 ## <a name="installation"></a>Installation
 
-### <a name="prerequisite"></a>Voraussetzung
-
 Installieren Sie auf 32-Bit-Computern die folgenden Treiber aus dem [Teradata Tools und Hilfsprogramme – Windows-Installationspaket](https://downloads.teradata.com/download/tools/teradata-tools-and-utilities-windows-installation-package):
 
 - Teradata ODBC-Treiber (32-Bit)
@@ -62,12 +62,38 @@ Laden Sie das Installationsprogramm [der neuesten Version von Microsoft Connecto
 
 Nachdem Sie den Connector installiert haben, müssen Sie den SQL Server Integration Services-Dienst neu starten, um sicherzustellen, dass die Teradata-Quelle und das Ziel ordnungsgemäß funktionieren.
 
-Zum Ausführen des SSIS-Pakets für SQL Server 2017 und früher müssen Sie den **Microsoft Connector für Teradata von Attunity** in entsprechender Version über den unten angegebenen Link installieren:
+## <a name="design-and-execute-ssis-packages"></a>Entwerfen und Ausführen von SSIS-Paketen
+
+Microsoft Connector für Teradata bietet ähnliche Funktionen wie Attunity Teradata Connector. Benutzer können wie mit der vorherigen Benutzeroberfläche mithilfe von SSDT für Visual Studio 2017 oder Visual Studio 2019 *für SQL Server 2019* neue Pakete entwerfen.
+
+Die Teradata-Quelle und das Teradata-Ziel befinden sich in der Kategorie „Allgemein“.
+
+![Teradata-Komponente](media/teradata-component.png)
+
+Der Teradata-Verbindungs-Manager wird als „TERADATA“ angezeigt.
+
+![Manager-Typ „Teradata-Verbindungs-Manager“](media/teradata-connection-manager-type.png)
+
+Vorhandene SSIS-Pakete, die mit Attunity Teradata Connector entworfen wurden, werden automatisch auf die Verwendung von Microsoft Connector für Teradata aktualisiert. Auch die Symbole werden entsprechend geändert.
+
+Zum Ausführen des SSIS-Pakets *für SQL Server 2017 und früher* müssen Sie die entsprechende Version von **Microsoft Connector für Teradata von Attunity** über den unten angegebenen Link installieren:
 
 - [SQL Server 2017: Microsoft Connector Version 5.0 für Teradata von Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016: Microsoft Connector Version 4.0 für Teradata von Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014: Microsoft Connector Version 3.0 für Teradata von Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: Microsoft Connector Version 2.0 für Teradata von Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
+
+Zum Entwerfen des SSIS-Pakets *für SQL Server 2017 und früher* in SSDT müssen Sie **Microsoft Connector für Teradata** bereits installiert haben und die entsprechende Version von **Microsoft Connector für Teradata von Attunity** installieren.
+
+## <a name="limitationsandknownissues"></a>Einschränkungen und bekannte Probleme
+
+- Im Teradata-Quellen-/Ziel-Editor funktioniert die Eigenschaft  **Standarddatenbank**  nicht ordnungsgemäß. Geben Sie im Dropdownfeld den Namen der Datenbank zum Anzeigen oder Filtern der Tabelle ein, um das Problem zu umgehen.
+
+- Im Teradata-Quellen-/Ziel-Editor funktioniert der Zuordnungsschritt bei Eingabe von  \<database>.<table/view> nicht. Geben Sie stattdessen  \<database>.<table/view> ein, und klicken Sie auf die Dropdownschaltfläche.
+
+- Im Teradata-Quellen-Editor kann die Ansicht nicht angezeigt werden, wenn der Datenzugriffsmodus auf „Tabellenname – TPT-Export“ festgelegt ist. Verwenden Sie den erweiterten Teradata-Quellen-Editor, um das Problem zu umgehen.
+
+- Für das Teradata-Ziel kann das Attribut „PackMaximum“ nicht auf TRUE festgelegt werden. Andernfalls tritt ein Fehler auf.
 
 ## <a name="uninstallation"></a>Deinstallation
 

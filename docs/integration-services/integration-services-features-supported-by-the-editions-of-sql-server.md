@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4149e9a9a956aaf5a212d8a6ba2a7b65b1523ee3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284359"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84817792"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Von den SQL Server-Editionen unterstützte Integration Services-Funktionen
 
@@ -44,6 +44,7 @@ Die SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zu
 |Scale Out-Master|Ja|||||
 |Scale Out-Worker|Ja|Ja<sup>1</sup>|TBD|TBD|TBD|
 |Unterstützung für Microsoft Dynamics AX und Microsoft Dynamics CRM in OData-Komponenten <sup>2</sup>|Ja|Ja||||
+|Linux-Unterstützung|Ja|Ja|||Ja|
 
 <sup>1</sup> Wenn Sie Pakete ausführen, für die nur Enterprise-Funktionen in Scale Out erforderlich ist, müssen die Scale Out-Worker ebenfalls auf Instanzen von SQL Server Enterprise ausgeführt werden.
 
@@ -53,7 +54,10 @@ Die SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zu
 
 |Funktion|Enterprise|Standard|Web|Express mit Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server-Import/Export-Assistent|Ja|Ja|Ja|Ja|Ja|  
+|SQL Server-Import/Export-Assistent|Ja|Ja|Ja|Ja<sup>1</sup>|Ja<sup>1</sup>|
+
+<sup>1</sup> Die ausführbare Datei „DTSWizard.exe“ wird nicht mit SQL unter Linux bereitgestellt. Allerdings kann unter Linux „dtexec“ verwendet werden, um ein von DTSWizard unter Windows erstelltes Paket auszuführen.
+
 
 ## <a name="integration-services"></a><a name="IS"></a> Integration Services  
   

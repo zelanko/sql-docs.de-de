@@ -1,9 +1,10 @@
 ---
 title: Rollen auf Datenbankebene | Microsoft-Dokumentation
+description: Zur Verwaltung der Berechtigungen für Ihre Datenbanken stellt SQL Server mehrere Rollen zur Verfügung. Dabei handelt es sich um Sicherheitsprinzipale, die andere Prinzipale gruppieren.
 ms.custom: ''
-ms.date: 07/11/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, azure-synapse, pdw
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -38,20 +39,20 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edc3b7277646122dfec73f7b79445a8ca066e24c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f49b1139faade46df4d1b853c4bc0e9f25c4e111
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664461"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005669"
 ---
 # <a name="database-level-roles"></a>Rollen auf Datenbankebene
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Zur einfachen Verwaltung der Berechtigungen für Ihre Datenbanken stellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mehrere *Rollen* zur Verfügung. Dies sind Sicherheitsprinzipale, die andere Prinzipale gruppieren. Sie entsprechen den ***Gruppen*** im [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Betriebssystem. Der Geltungsbereich der Berechtigungen von Rollen auf Datenbankebene erstreckt sich auf die gesamte Datenbank.  
 
-Zum Hinzufügen und Entfernen von Benutzern zu oder aus einer Datenbankrolle verwenden Sie die Optionen `ADD MEMBER` und `DROP MEMBER` der [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) -Anweisung. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] unterstützt diese Verwendung von `ALTER ROLE`nicht. Verwenden Sie stattdessen die älteren Prozeduren [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) und [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) .
+Zum Hinzufügen und Entfernen von Benutzern zu oder aus einer Datenbankrolle verwenden Sie die Optionen `ADD MEMBER` und `DROP MEMBER` der [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) -Anweisung. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] und Azure Synapse unterstützt diese Verwendung von `ALTER ROLE` nicht. Verwenden Sie stattdessen die älteren Prozeduren [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) und [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) .
   
  Es gibt zwei Typen von Rollen auf Datenbankebene: *feste Datenbankrollen* , die in der Datenbank vordefiniert sind, und *benutzerdefinierte Datenbankrollen* , die Sie erstellen können.  
   
@@ -64,7 +65,7 @@ Zum Hinzufügen und Entfernen von Benutzern zu oder aus einer Datenbankrolle ver
 
 Die Berechtigungen von benutzerdefinierten Datenbankrollen können mithilfe der Anweisungen GRANT, DENY und REVOKE angepasst werden. Weitere Informationen finden Sie unter [Berechtigungen (Datenbank-Engine)](../../../relational-databases/security/permissions-database-engine.md).
 
-Eine Liste aller Berechtigungen finden Sie auf dem Poster [Database Engine Permissions (Berechtigungen im Datenbankmodul)](https://aka.ms/sql-permissions-poster) . (Datenbankrollen können keine Berechtigungen auf Serverebene erteilt werden. Anmeldungen und andere Prinzipale auf Serverebene (wie etwa Serverrollen) können Datenbankrollen nicht hinzugefügt werden. Verwenden Sie für Sicherheit auf Serverebene in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]stattdessen [Serverrollen](../../../relational-databases/security/authentication-access/server-level-roles.md) . Berechtigungen auf Serverebene können nicht mithilfe von Rollen in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]erteilt werden.)
+Eine Liste aller Berechtigungen finden Sie auf dem Poster [Database Engine Permissions (Berechtigungen im Datenbankmodul)](https://aka.ms/sql-permissions-poster) . Datenbankrollen können keine Berechtigungen auf Serverebene erteilt werden. Anmeldungen und andere Prinzipale auf Serverebene (wie etwa Serverrollen) können Datenbankrollen nicht hinzugefügt werden. Verwenden Sie für Sicherheit auf Serverebene in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]stattdessen [Serverrollen](../../../relational-databases/security/authentication-access/server-level-roles.md) . Berechtigungen auf Serverebene können nicht mithilfe von Rollen in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und Azure Synapse erteilt werden.
 
 ## <a name="fixed-database-roles"></a>feste Datenbankrollen
   
@@ -72,7 +73,7 @@ Eine Liste aller Berechtigungen finden Sie auf dem Poster [Database Engine Permi
   
 |Name der festen Datenbankrolle|BESCHREIBUNG|  
 |-------------------------------|-----------------|  
-|**db_owner**|Mitglieder der festen Datenbankrolle **db_owner** können alle Aktivitäten zur Konfiguration und Wartung an der Datenbank ausführen und die Datenbank in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]auch löschen. (In [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]sind für einige Wartungsaktivitäten Berechtigungen auf Serverebene erforderlich; sie können von **db_owners**nicht ausgeführt werden.)|  
+|**db_owner**|Mitglieder der festen Datenbankrolle **db_owner** können alle Aktivitäten zur Konfiguration und Wartung an der Datenbank ausführen und die Datenbank in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]auch löschen. (In [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und Azure Synapse sind für einige Wartungsaktivitäten Berechtigungen auf Serverebene erforderlich, und sie können von **db_owners** nicht ausgeführt werden.)|  
 |**db_securityadmin**|Mitglieder der festen Datenbankrolle **db_securityadmin** können die Rollenmitgliedschaft nur für benutzerdefinierte Rollen ändern und Berechtigungen verwalten. Mitglieder dieser Rolle können Ihre Berechtigungen möglicherweise erhöhen, und ihre Aktionen sollten überwacht werden.|  
 |**db_accessadmin**|Mitglieder der festen Datenbankrolle **db_accessadmin** können den Zugriff auf die Datenbank für Windows-Anmeldungen, Windows-Gruppen und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen hinzufügen oder entfernen.|  
 |**db_backupoperator**|Mitglieder der festen Datenbankrolle **db_backupoperator** können eine Sicherung der Datenbank durchführen.|  
@@ -86,7 +87,7 @@ Die den festen Datenbankrollen zugewiesenen Berechtigungen können nicht geände
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-sssds_md-and-sssdw_md"></a>Besondere Rollen für [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-sssds_md-and-azure-synapse"></a>Besondere Rollen für [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und Azure Synapse
 
 Diese Datenbankrollen sind nur in der virtuellen Masterdatenbank vorhanden. Ihre Berechtigungen sind auf Aktionen beschränkt, die auf dem Master ausgeführt werden. Nur Datenbankbenutzer im Master können diesen Rollen hinzugefügt werden. Diesen Rollen können keine Anmeldungen hinzugefügt werden, jedoch können Benutzer auf der Grundlage von Anmeldungen erstellt werden, und diese Benutzer können den Rollen dann hinzugefügt werden. Auch eigenständige Datenbankbenutzer im Master können diesen Rollen hinzugefügt werden. Enthaltene Datenbankbenutzer, die der Rolle **dbmanager** im Master hinzugefügt wurden, können jedoch nicht zum Erstellen neuer Datenbanken verwendet werden.
 
@@ -96,7 +97,7 @@ Diese Datenbankrollen sind nur in der virtuellen Masterdatenbank vorhanden. Ihre
 |**loginmanager** | Kann Anmeldungen in der virtuellen Masterdatenbank erstellen und löschen.|
 
 > [!NOTE]
-> Der Prinzipal auf Serverebene und der Azure Active Directory-Administrator (falls konfiguriert) besitzen alle Berechtigungen in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] , ohne dazu Mitglieder irgendwelcher Rollen sein zu müssen. Weitere Informationen finden Sie unter [SQL-Datenbank-Authentifizierung und -Autorisierung: Gewähren von Zugriff](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> Der Prinzipal auf Serverebene und der Azure Active Directory-Administrator (falls konfiguriert) besitzen alle Berechtigungen in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und Azure Synapse, ohne dazu Mitglieder irgendwelcher Rollen sein zu müssen. Weitere Informationen finden Sie unter [SQL-Datenbank-Authentifizierung und -Autorisierung: Gewähren von Zugriff](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
   
 ## <a name="msdb-roles"></a>msdb-Rollen  
  Die msdb-Datenbank enthält die in der folgenden Tabelle aufgeführten Rollen für spezielle Zwecke.  
@@ -128,8 +129,8 @@ Diese Datenbankrollen sind nur in der virtuellen Masterdatenbank vorhanden. Ihre
 |[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Get-Help|Entfernt eine Rolle aus der Datenbank.|  
 |[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Get-Help|Erstellt eine neue Datenbankrolle in der aktuellen Datenbank.|  
 |[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Get-Help|Entfernt eine Datenbankrolle aus der aktuellen Datenbank.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Get-Help|Fügt einer Datenbankrolle in der aktuellen Datenbank einen Datenbankbenutzer, eine Datenbankrolle, einen Windows-Anmeldenamen oder eine Windows-Gruppe hinzu. Alle Plattformen außer [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] sollten stattdessen `ALTER ROLE` verwenden.|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Get-Help|Entfernt ein Sicherheitskonto aus einer SQL Serverrolle in der aktuellen Datenbank. Alle Plattformen außer [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] sollten stattdessen `ALTER ROLE` verwenden.|
+|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Get-Help|Fügt einer Datenbankrolle in der aktuellen Datenbank einen Datenbankbenutzer, eine Datenbankrolle, einen Windows-Anmeldenamen oder eine Windows-Gruppe hinzu. Alle Plattformen außer [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] und Azure Synapse sollten stattdessen `ALTER ROLE` verwenden.|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Get-Help|Entfernt ein Sicherheitskonto aus einer SQL Serverrolle in der aktuellen Datenbank. Alle Plattformen außer [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] und Azure Synapse sollten stattdessen `ALTER ROLE` verwenden.|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Berechtigungen | Fügt einer Rolle eine Berechtigung hinzu.
 |[DENY](../../../t-sql/statements/deny-transact-sql.md)| Berechtigungen | Verweigert einer Rolle eine Berechtigung.
 |[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Berechtigungen | Entfernt eine zuvor erteilte oder verweigerte Berechtigung.

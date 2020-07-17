@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6df265a27d050dd554af2f57be15d398f635aa3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749771"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fügt auf der Ausgabe einer Komponente in einem Paketdatenfluss für eine Instanz der Ausführung eine Datenabzweigung hinzu.  
   
@@ -56,7 +56,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  [ @data_filename = ] *data_filename*  
  Der Name der Datei, in der die abgezweigten Daten gespeichert werden. Wenn der Datenflusstask in einer Foreach-Schleife oder einem For-Schleifencontainer ausgeführt wird, werden die abgezweigten Daten für jede Iteration der Schleife in separaten Dateien gespeichert. Jeder Datei wird eine Zahl für die jeweilige Iteration als Präfix vorangestellt.  
   
- Die Datei wird standardmäßig im Ordner „\<*Laufwerk*>:\Programme\Microsoft SQL Server\130\DTS\DataDumps“ gespeichert.  
+ Die Datei wird standardmäßig im Ordner \<*drive*>:\Programme\Microsoft SQL Server\130\DTS\DataDumps gespeichert.  
   
  Das Argument *data_filename* ist vom Typ **nvarchar(4000)** .  
   
@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  Gibt die ID der Datenabzweigung zurück. Das Argument *data_tap_id* ist vom Typ **bigint**.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine Datenabzweigung für den Datenflusspfad `'Paths[OLE DB Source.OLE DB Source Output]` im Datenflusstask `\Package\Data Flow Task` erstellt. Die abgezweigten Daten werden in der Datei `output0.txt` im Ordner „\<*Laufwerk*>:\Programme\Microsoft SQL Server\130\DTS\DataDumps“ gespeichert.  
+ Im folgenden Beispiel wird eine Datenabzweigung für den Datenflusspfad `'Paths[OLE DB Source.OLE DB Source Output]` im Datenflusstask `\Package\Data Flow Task` erstellt. Die abgezweigten Daten werden in der Datei `output0.txt` im Ordner \<*drive*>:\Programme\Microsoft SQL Server\130\DTS\DataDumps gespeichert.  
   
 ```sql
 Declare @execution_id bigint  
@@ -126,7 +126,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>Requirements (Anforderungen)  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Blogeintrag [SSIS 2012: A Peek to Data Taps](https://go.microsoft.com/fwlink/?LinkId=239983) (SSIS 2012: Ein kurzer Blick auf Datenabzweigungen) auf rafael-salas.com.  
+ Blogeintrag, [SSIS 2012: A Peek to Data Taps](https://go.microsoft.com/fwlink/?LinkId=239983) (SSIS 2012: Ein kurzer Blick auf Datenabzweigungen) auf rafael-salas.com.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  

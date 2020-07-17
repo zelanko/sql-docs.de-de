@@ -1,8 +1,8 @@
 ---
-title: Anfügen und Trennen von Datenbanken (SQL Server) | Microsoft-Dokumentation
+title: Anfügen und Trennen von Datenbanken (SQL Server)
 description: Sie können die Daten- und Transaktionsprotokolldateien einer SQL Server-Datenbank trennen und wieder anfügen, um die Datenbank auf eine andere Instanz umzustellen oder sie zu verschieben.
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 06/30/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a43fcc0dade0c030546e76bf36f242973f918d2e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: e9922e70d8ee4327bfb01c9c8657e8fabfe6a28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138159"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756279"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anfügen und Trennen von Datenbanken (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Die Daten- und Transaktionsprotokolldateien einer Datenbank können getrennt und anschließend an dieselbe oder eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt werden. Das Trennen und Anfügen einer Datenbank ist hilfreich, wenn Sie die Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer ändern oder wenn Sie die Datenbank verschieben möchten.  
   
   
@@ -63,7 +63,13 @@ Eine Datenbank kann in folgenden Fällen nicht getrennt werden:
   
     > [!NOTE]  
     > Eine Datenbankmomentaufnahme kann nicht getrennt oder angefügt werden.  
+
+-   Diese Datenbank ist Bestandteil einer Always On-Verfügbarkeitsgruppe.  
   
+    Die Datenbank kann erst getrennt werden, wenn sie aus der Verfügbarkeitsgruppe entfernt wurde. Weitere Informationen finden Sie unter [Entfernen einer primären Datenbank aus einer Always On-Verfügbarkeitsgruppe](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).
+  
+
+
 -   Die Datenbank wird in einer Datenbank-Spiegelungssitzung gespiegelt.  
   
     Die Datenbank kann nur getrennt werden, wenn die Sitzung beendet wird. Weitere Informationen finden Sie unter [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  

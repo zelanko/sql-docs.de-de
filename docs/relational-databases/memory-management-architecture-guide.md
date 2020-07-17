@@ -1,5 +1,6 @@
 ---
 title: Handbuch zur Architektur der Speicherverwaltung | Microsoft-Dokumentation
+description: Informieren Sie sich über die Architektur der Speicherverwaltung in SQL Server sowie über Änderungen an der Speicherverwaltung im Vergleich zu vorherigen Versionen.
 ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12dc8a03cbf65a0c07e9a5985f1ffade813a3e5f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287944"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012142"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 ## <a name="windows-virtual-memory-manager"></a>Windows-Manager für virtuellen Arbeitsspeicher  
 Die zugesicherten Bereiche des Adressraums werden vom Windows-Manager für virtuellen Arbeitsspeicher (VMM, Virtual Memory Manager) dem verfügbaren physischen Arbeitsspeicher zugeordnet.  

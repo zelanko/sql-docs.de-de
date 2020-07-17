@@ -1,5 +1,6 @@
 ---
 title: Verwenden des RAW-Modus mit FOR XML | Microsoft-Dokumentation
+description: Erfahren Sie, wie die Verwendung des RAW-Modus mit der FOR-XML-Klausel in einer SQL-Abfrage die resultierenden XML-Daten transformiert.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +19,16 @@ ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1c82fc52acaf8d3bbd351463803ae682ccfebc1b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: eaaa138461a2e3c96acf1b475de860ac0deeb1c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784668"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Verwenden des RAW-Modus mit FOR XML
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Der RAW-Modus wandelt jede Zeile im Resultset der Abfrage in ein XML-Element um, das den allgemeinen Bezeichner \<row> besitzt, oder in den optional bereitgestellten Elementnamen. Standardmäßig wird jeder Spaltenwert im Rowset, der nicht NULL ist, einem Attribut des \<row>-Elements zugeordnet. Wenn der FOR XML-Klausel die ELEMENTS-Direktive hinzugefügt wird, wird jeder Spaltenwert einem Unterelement des \<row>-Elements zugeordnet. Zusammen mit der ELEMENTS-Direktive können Sie optional die Option XSINIL angeben, um NULL-Spaltenwerte im Resultset einem Element zuzuordnen, das das Attribut `xsi:nil="true"` besitzt.
   
@@ -40,7 +41,7 @@ Der RAW-Modus wandelt jede Zeile im Resultset der Abfrage in ein XML-Element um,
   
 -   [Beispiel: Abrufen von Produktmodellinformationen als XML](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
--   [Beispiel: Angeben von XSINIL mit der ELEMENTS-Direktive](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Beispiel: Angeben von XSINIL mit der ELEMENTS-Anweisung](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [Beispiel: Anfordern von Schemas als Ergebnisse mithilfe der Optionen XMLDATA und XMLSCHEMA](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
@@ -48,7 +49,7 @@ Der RAW-Modus wandelt jede Zeile im Resultset der Abfrage in ein XML-Element um,
   
 -   [Beispiel: Umbenennen des &#60;row&#62;-Elements](../../relational-databases/xml/example-renaming-the-row-element.md)  
   
--   [Beispiel: Angeben eines Stammelements für das durch FOR XML generierte XML](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Beispiel: Angeben eines Stammelements für den mit FOR XML generierten XML-Code](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
 -   [Beispiel: Abfragen von Spalten des Typs XML](../../relational-databases/xml/example-querying-xmltype-columns.md)  
   

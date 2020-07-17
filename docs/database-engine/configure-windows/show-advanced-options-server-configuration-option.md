@@ -1,5 +1,6 @@
 ---
 title: Erweiterte Optionen anzeigen (Serverkonfigurationsoption) | Microsoft-Dokumentation
+description: Informationen zur Option „show advanced options“ Hier erfahren Sie, wie Sie diese Option zum Auflisten weiterer Optionen verwenden können, wenn Sie die gespeicherte SQL Server-Systemprozedur „sp_configure“ ausführen.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - sp_configure
 - show advanced options option
 ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0c7755484582f407fb288dd25af1ec74e520b0ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 77fb685deedf582f16c804ed2d8591383f6e9503
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026114"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751174"
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>Erweiterte Optionen anzeigen (Serverkonfigurationsoption)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sie können mit der Option **Erweiterte Optionen anzeigen** die erweiterten Optionen der gespeicherten Systemprozedur **sp_configure** anzeigen. Wenn Sie **Erweiterte Optionen anzeigen** auf 1 festlegen, können Sie die erweiterten Optionen mithilfe von **sp_configure**in einer Liste aufführen. Die Standardeinstellung ist 0.  
   

@@ -1,6 +1,6 @@
 ---
 title: Failover zu einer sekundären Datenbank für den Protokollversand
-description: Hier finden Sie Anweisungen zum Ausführen eines Failovers auf eine sekundäre Datenbank für den SQL Server-Protokollversand.
+description: Hier erfahren Sie, wie Sie mithilfe von SQL Server Management Studio oder Transact-SQL ein Failover auf einen sekundären Protokollversand von SQL Server ausführen.
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29b2fcad38e2971f39f63b400d307a2f64459eea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba01642d09e9352b976978df1cfc78756ad79029
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696182"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Failover zu einer sekundären Datenbank für den Protokollversand (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Wenn die primäre Serverinstanz ausfällt oder gewartet werden muss, kann ein Failover zu einer sekundären Datenbank für den Protokollversand ausgeführt werden.  
   
 ## <a name="preparing-for-a-controlled-failover"></a>Vorbereitungen für ein kontrolliertes Failover  

@@ -1,5 +1,6 @@
 ---
 title: Database Mail XPs (Serverkonfigurationsoption) | Microsoft-Dokumentation
+description: In diesem Artikel wird die Option „DatabaseMail XPs“ vorgestellt. Außerdem lernen Sie verschiedene Möglichkeiten zum Aktivieren dieser Option kennen, damit Sie das Datenbank-E-Mail-Feature in SQL Server verwenden können.
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - Database Mail XPs option
 - Database Mail [SQL Server], enabling
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e16286e558d860a346ba8fff366009f064e65f91
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0d495017b9bf2a5f58a5a880f1ce9696976ebd50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772570"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs (Serverkonfigurationsoption)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Verwenden Sie die Option **DatabaseMail XPs** , um Datenbank-E-Mail auf diesem Server zu aktivieren. Mögliche Werte:  
   

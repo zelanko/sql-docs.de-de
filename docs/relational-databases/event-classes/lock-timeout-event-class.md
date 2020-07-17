@@ -1,5 +1,6 @@
 ---
 title: Lock:Timeout (Ereignisklasse) | Microsoft-Dokumentation
+description: Die Lock:Timeout-Ereignisklasse gibt an, dass für die Anforderung einer Sperre auf einer Ressource ein Timeout eingetreten ist, da eine blockierende Sperre in der SQL Server-Ressource vorhanden ist.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc89f8df5d34a2a2c1f20756c743c74a5a5851f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d0f1a43ab06c931fd9fda6498790ccc7dce3476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737199"
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout (Ereignisklasse)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Die Lock:Timeout-Ereignisklasse gibt an, dass für die Anforderung einer Sperre auf einer Ressource, wie beispielsweise eine Seite, ein Timeout eingetreten ist, da eine andere Transaktion eine blockierende Sperre für die angeforderte Ressource aufrechterhält. Das Timeout wird durch die @@LOCK_TIMEOUT-Systemfunktion ermittelt und kann durch die SET LOCK_TIMEOUT-Anweisung festgelegt werden.  
   
  Die Lock:Timeout-Ereignisklasse kann dazu verwendet werden, Bedingungen zu überwachen, die zu Timeouts führen. Diese Informationen sind nützlich, wenn ermittelt werden soll, ob Timeouts eine Auswirkung auf die Leistung der Anwendung haben und welche Objekte daran beteiligt sind. Sie können den Anwendungscode überprüfen, von dem diese Objekte geändert werden, um festzustellen, ob Änderungen vorgenommen werden können, die Timeouts minimieren.  

@@ -1,5 +1,6 @@
 ---
 title: Anforderungen und Einschränkungen (XML-Schemasammlungen) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die Anforderungen und Einschränkungen zum Ändern der XML-Schemaauflistungen in SQL Server.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -24,23 +25,23 @@ ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: eb576af5eb2a6f88d05d8a2b3bd1527e1c90ff67
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b0d0e90f30e05cabed7082f87a6b7474c756a145
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752558"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Die Überprüfung mit der XML-Schemadefinitionssprache (XSD) weist einige Einschränkungen für SQL-Spalten auf, die den **xml** -Datentyp verwenden. Die folgende Tabelle liefert Einzelheiten zu diesen Einschränkungen und stellt außerdem Richtlinien zum Ändern des XSD-Schemas für die Verwendung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit. Die Themen in diesem Abschnitt enthalten zusätzliche Informationen über bestimmte Einschränkungen sowie eine Anleitung zur Arbeit mit ihnen.  
   
 |Element|Einschränkung|  
 |----------|----------------|  
 |**minOccurs** und **maxOccurs**|Die Werte für **minOccurs** - und **maxOccurs** -Attribute müssen in ganze 4-Byte-Zahlen passen. Schemas, die diese Bedingung nicht erfüllen, werden vom Server zurückgewiesen.|  
-|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist Schemas zurück, die einen **\<xsd:choice>** -Partikel ohne untergeordnete Elemente besitzen, es sei denn, der Partikel ist mit einem **minOccurs**-Attributwert von Null definiert.|  
+|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist Schemas zurück, die einen **\<xsd:choice>** -Partikel ohne untergeordnete Elemente besitzen, es sei denn, der Partikel ist mit einem **minOccurs**-Attributwert von 0 (Null) definiert.|  
 |**\<xsd:include>**|Zurzeit unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. XML-Schemas, die dieses Element enthalten, werden vom Server zurückgewiesen.<br /><br /> Als Lösung können XML-Schemas, die die **\<xsd:include>** -Direktive enthalten, so vorverarbeitet werden, dass die Inhalte aller enthaltenen Schemas kopiert und in einem einzigen Schema für den Upload auf den Server zusammengeführt werden. Weitere Informationen finden Sie unter [Vorverarbeiten eines Schemas zum Zusammenführen eingeschlossener Schemas](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md).|  
-|**\<xsd:key>** , **\<xsd: keyref>** und **\<xsd: unique>**|Zurzeit unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese XSD-basierten Einschränkungen zum Erzwingen der Eindeutigkeit oder zum Einrichten von Schlüsseln oder Schlüsselverweisen nicht. XML-Schemas, die diese Elemente enthalten, können nicht registriert werden.|  
+|**\<xsd:key>** , **\<xsd:keyref>** und **\<xsd:unique>**|Zurzeit unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese XSD-basierten Einschränkungen zum Erzwingen der Eindeutigkeit oder zum Einrichten von Schlüsseln oder Schlüsselverweisen nicht. XML-Schemas, die diese Elemente enthalten, können nicht registriert werden.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. Informationen über eine andere Möglichkeit, Schemas zu aktualisieren, finden Sie unter [Das &#60;xsd:redefine&#62;-Element](../../relational-databases/xml/the-xsd-redefine-element.md)bereit.|  
 |**\<xsd:simpleType>** -Werte|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur Millisekundengenauigkeit für simple-Datentypen, die Sekundenkomponenten besitzen – mit Ausnahme von **xs:time** und **xs:dateTime**–, sowie eine Genauigkeit von 100 Nanosekunden für **xs:time** und **xs:dateTime**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt Einschränkungen für alle erkannten XSD-Enumerationen des einfachen Typs fest.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nicht den „NaN“-Wert in **\<xsd:simpleType>** -Deklarationen.<br /><br /> Weitere Informationen finden Sie unter[Werte für &#60;xsd:simpleType&#62;-Deklarationen](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)bereit.|  
 |**xsi:schemaLocation** und **xsi:noNamespaceSchemaLocation**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignoriert diese Attribute, wenn sie in den XML-Instanzdaten vorhanden sind, die in eine Spalte oder Variable des **xml** -Datentyps eingefügt werden.|  
@@ -49,7 +50,7 @@ ms.locfileid: "80664832"
 |Kanonische Formen und Musterbeschränkungen|Die kanonische Darstellung eines Werts darf die Musterbeschränkung für seinen Typ nicht verletzen. Weitere Informationen finden Sie unter [Kanonische Formen und Musterbeschränkungen](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md).|  
 |Enumerationsfacets|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine XML-Schemas mit Typen, die Musterfacets besitzen, oder Enumerationen, die diese Facets verletzen.|  
 |Facetlänge|Die Facets **length**, **minLength**und **maxLength** werden als **long** -Datentyp gespeichert. Dieser Datentyp ist ein 32-Bit-Typ. Der Bereich der zulässigen Werte ist daher 2^31.|  
-|ID-Attribut|Jede XML-Schemakomponente kann über ein ID-Attribut verfügen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erzwingt die Eindeutigkeit für **\<xsd:attribute>** -Deklarationen des **ID**-Typs, speichert die Werte aber nicht. Der Bereich für das Erzwingen der Eindeutigkeit wird durch die {CREATE &#124; ALTER} XML SCHEMA COLLECTION-Anweisung festgelegt.|  
+|ID-Attribut|Jede XML-Schemakomponente kann über ein ID-Attribut verfügen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird die Eindeutigkeit für **\<xsd:attribute>** -Deklarationen des **ID**-Typs erzwungen. Diese Werte werden jedoch nicht gespeichert. Der Bereich für das Erzwingen der Eindeutigkeit wird durch die {CREATE &#124; ALTER} XML SCHEMA COLLECTION-Anweisung festgelegt.|  
 |ID-Datentyp|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine Elemente vom Typ **xs:ID**, **xs:IDREF**oder **xs:IDREFS**. Ein Schema darf keine Elemente dieses Typs oder durch Beschränkung oder Erweiterung von diesem Typ abgeleitete Elemente deklarieren.|  
 |Lokaler Namespace|Der lokale Namespace muss für das **\<xsd:any>** -Element explizit angegeben werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwirft Schemas, die eine leere Zeichenfolge ("") als Wert für das Namespace-Attribut verwenden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verlangt die ausdrückliche Verwendung von "##local" für die Angabe, dass ein nicht qualifiziertes Element oder Attribut als Instanz des Platzhalterzeichens verwendet wird.|  
 |Mixed-Datentyp und simple-Inhalt|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt das Beschränken eines mixed-Datentyps auf simple-Inhalt nicht. Weitere Informationen finden Sie unter [Mixed-Datentyp und simple-Inhalt](../../relational-databases/xml/mixed-type-and-simple-content.md).|  

@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48dabb9e01a3b5dbddaa07cbe7534321207f1d0f
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181094"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834671"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Führt Einfüge-, Aktualisierungs- oder Löschvorgänge in einer Zieltabelle anhand der Ergebnisse eines Joins mit einer Quelltabelle aus. Synchronisieren Sie z.B. zwei Tabellen, indem Sie Zeilen in einer Tabelle anhand von Unterschieden, die in der anderen Tabelle gefunden wurden, einfügen, aktualisieren oder löschen.  
   
@@ -78,41 +78,12 @@ MERGE
     { [ <table_hint_limited> [ ,...n ] ]  
     [ [ , ] INDEX ( index_val [ ,...n ] ) ] }  
 }  
-  
-<table_source> ::=
-{  
-    table_or_view_name [ [ AS ] table_alias ] [ <tablesample_clause> ]
-        [ WITH ( table_hint [ [ , ]...n ] ) ]
-  | rowset_function [ [ AS ] table_alias ]
-        [ ( bulk_column_alias [ ,...n ] ) ]
-  | user_defined_function [ [ AS ] table_alias ]  
-  | OPENXML <openxml_clause>
-  | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]
-  | <joined_table>
-  | <pivoted_table>
-  | <unpivoted_table>
-}  
-  
+
 <merge_search_condition> ::=  
     <search_condition>  
   
 <merge_matched>::=  
     { UPDATE SET <set_clause> | DELETE }  
-  
-<set_clause>::=  
-SET  
-  { column_name = { expression | DEFAULT | NULL }  
-  | { udt_column_name.{ { property_name = expression  
-                        | field_name = expression }  
-                        | method_name ( argument [ ,...n ] ) }  
-    }  
-  | column_name { .WRITE ( expression , @Offset , @Length ) }  
-  | @variable = expression  
-  | @variable = column = expression  
-  | column_name { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable = column { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  } [ ,...n ]
   
 <merge_not_matched>::=  
 {  
@@ -122,58 +93,7 @@ SET
 }  
   
 <clause_search_condition> ::=  
-    <search_condition>  
-  
-<search condition> ::=  
-    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
-
-<search_condition_without_match> ::=
-    { [ NOT ] <predicate> | ( <search_condition_without_match> )
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]
-[ ,...n ]  
-
-<predicate> ::=
-    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression
-    | string_expression [ NOT ] LIKE string_expression
-  [ ESCAPE 'escape_character' ]
-    | expression [ NOT ] BETWEEN expression AND expression
-    | expression IS [ NOT ] NULL
-    | CONTAINS
-  ( { column | * } , '< contains_search_condition >' )
-    | FREETEXT ( { column | * } , 'freetext_string' )
-    | expression [ NOT ] IN ( subquery | expression [ ,...n ] )
-    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
-  { ALL | SOME | ANY} ( subquery )
-    | EXISTS ( subquery ) }
-
-<graph_search_pattern> ::=
-    { <node_alias> {
-                      { <-( <edge_alias> )- }
-                    | { -( <edge_alias> )-> }
-                    <node_alias>
-                   }
-    }
-  
-<node_alias> ::=
-    node_table_name | node_table_alias
-
-<edge_alias> ::=
-    edge_table_name | edge_table_alias
-
-<output_clause>::=  
-{  
-    [ OUTPUT <dml_select_list> INTO { @table_variable | output_table }  
-        [ (column_list) ] ]  
-    [ OUTPUT <dml_select_list> ]  
-}  
-  
-<dml_select_list>::=  
-    { <column_name> | scalar_expression }
-        [ [AS] column_alias_identifier ] [ ,...n ]  
-  
-<column_name> ::=  
-    { DELETED | INSERTED | from_table_name } . { * | column_name }  
-    | $action  
+    <search_condition> 
 ```  
   
 ## <a name="arguments"></a>Argumente
@@ -195,7 +115,7 @@ Der Name der Datenbank, in der sich *target_table* befindet.
 Der Namen des Schemas, zu dem die Tabelle *target_table* gehört.  
   
 *target_table*  
-Die Tabelle oder Sicht, mit der die Datenzeilen aus \<table_source> basierend auf \<clause_search_condition> abgeglichen werden. *target_table* ist das Ziel aller Einfüge-, Update- oder Löschvorgänge, die durch die WHEN-Klauseln der MERGE-Anweisung angegeben werden.  
+Hiermit wird die Tabelle oder die Ansicht angegeben, mit der die Datenzeilen aus \<table_source> basierend auf \<clause_search_condition> abgeglichen werden. *target_table* ist das Ziel aller Einfüge-, Update- oder Löschvorgänge, die durch die WHEN-Klauseln der MERGE-Anweisung angegeben werden.  
   
 Wenn *target_table* eine Sicht ist, müssen alle Aktionen für die Tabelle die Bedingungen zum Aktualisieren von Sichten erfüllen. Weitere Informationen finden Sie unter [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md) (Ändern von Daten über eine Sicht).  
   
@@ -205,28 +125,28 @@ Wenn *target_table* eine Sicht ist, müssen alle Aktionen für die Tabelle die B
 Ein alternativer Name, über den auf eine Tabelle verwiesen wird.  
   
 USING \<table_source>  
-Gibt die Datenquelle an, die basierend auf \<merge_search condition> mit den Datenzeilen in *target_table* abgeglichen wird. Das Ergebnis dieser Zuordnung legt die Aktionen fest, die von den WHEN-Klauseln der MERGE-Anweisung ausgeführt werden. \<table_source> kann eine Remotetabelle oder eine abgeleitete Tabelle sein, die auf Remotetabellen zugreift.
+Hiermit wird die Datenquelle angegeben, die basierend auf \<merge_search condition> mit den Datenzeilen in *target_table* abgeglichen wird. Das Ergebnis dieser Zuordnung legt die Aktionen fest, die von den WHEN-Klauseln der MERGE-Anweisung ausgeführt werden. \<table_source> kann eine Remotetabelle oder eine abgeleitete Tabelle sein, die auf Remotetabellen zugreift.
   
-\<Quelltabelle> kann eine abgeleitete Tabelle sein, die mit dem [Tabellenwertkonstruktor](../../t-sql/queries/table-value-constructor-transact-sql.md) von [!INCLUDE[tsql](../../includes/tsql-md.md)] eine Tabelle durch Angeben mehrerer Zeilen erstellt.  
+\<table_source> kann eine abgeleitete Tabelle sein, die mit dem [Tabellenwertkonstruktor](../../t-sql/queries/table-value-constructor-transact-sql.md) von [!INCLUDE[tsql](../../includes/tsql-md.md)] eine Tabelle durch Angeben mehrerer Zeilen erstellt.  
   
 Weitere Informationen zur Syntax und zu den Argumenten dieser Klausel finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
 ON \<merge_search_condition>  
-Gibt die Bedingungen an, unter denen \<table_source> mit *target_table* verknüpft wird, um Übereinstimmungen zu ermitteln.
+Hiermit werden die Bedingungen angegeben, unter denen \<table_source> mit *target_table* verknüpft wird, um Übereinstimmungen zu ermitteln.
   
 > [!CAUTION]  
 > Es ist wichtig, dass nur die Spalten aus der Zieltabelle angegeben werden, die für Abgleichszwecke verwendet werden. Geben Sie also Spalten aus der Zieltabelle an, die mit der entsprechenden Spalte der Quelltabelle abgeglichen werden. Versuchen Sie nicht, die Abfrageleistung zu optimieren, indem Sie Zeilen in der Zieltabelle in der ON-Klausel herausfiltern, beispielsweise durch Angabe von `AND NOT target_table.column_x = value`. Dadurch kann es zu unerwarteten und falschen Ergebnissen kommen.  
   
 WHEN MATCHED THEN \<merge_matched>  
-Gibt an, dass alle Zeilen von *target_table, die mit den von \<table_source> ON \<merge_search_condition> zurückgegebenen Zeilen übereinstimmen und alle zusätzlichen Suchbedingungen erfüllen, gemäß der \<merge_matched>-Klausel aktualisiert oder gelöscht werden.  
+Hiermit wird angegeben, dass alle Zeilen von *target_table, die mit den von \<table_source> ON \<merge_search_condition> zurückgegebenen Zeilen übereinstimmen und alle zusätzlichen Suchbedingungen erfüllen, gemäß der \<merge_matched>-Klausel aktualisiert oder gelöscht werden.  
   
 Die MERGE-Anweisung kann höchstens über zwei WHEN MATCHED-Klauseln verfügen. Wenn zwei Klauseln angegeben werden, muss die erste Klausel von einer AND \<search_condition>-Klausel begleitet werden. Für jede gegebene Zeile wird die zweite WHEN MATCHED-Klausel nur angewendet, wenn die erste nicht angewendet wurde. Wenn zwei WHEN MATCHED-Klauseln vorhanden sind, muss die eine eine UPDATE-Aktion und die andere eine DELETE-Aktion angeben. Wenn UPDATE in der \<merge_matched>-Klausel angegeben wird und mehr als eine Zeile aus \<table_source> basierend auf \<merge_search_condition> mit einer Zeile in *target_table* übereinstimmt, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück. Die MERGE-Anweisung kann dieselbe Zeile nicht mehrmals aktualisieren oder dieselbe Zeile aktualisieren und löschen.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-Gibt an, dass für jede Zeile, die von \<table_source> ON \<merge_search_condition> zurückgegeben wird und nicht mit einer Zeile in *target_table* übereinstimmt, aber eine zusätzliche Suchbedingung erfüllt (falls vorhanden), eine Zeile in *target_table* eingefügt wird. Die einzufügenden Werte werden durch die \<merge_not_matched>-Klausel angegeben. Die MERGE-Anweisung kann nur über eine WHEN NOT MATCHED [ BY TARGET ]-Klausel verfügen.
+Hiermit wird angegeben, dass für jede Zeile, die von \<table_source> ON \<merge_search_condition> zurückgegeben wird und nicht mit einer Zeile in *target_table* übereinstimmt, aber eine zusätzliche Suchbedingung erfüllt (falls vorhanden), eine Zeile in *target_table* eingefügt wird. Die einzufügenden Werte werden durch die \<merge_not_matched>-Klausel angegeben. Die MERGE-Anweisung kann nur über eine WHEN NOT MATCHED [ BY TARGET ]-Klausel verfügen.
 
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
-Gibt an, dass alle Zeilen von *target_table, die nicht mit den von \<table_source> ON \<merge_search_condition> zurückgegebenen Zeilen übereinstimmen und alle zusätzlichen Suchbedingungen erfüllen, gemäß der \<merge_matched>-Klausel aktualisiert oder gelöscht werden.  
+Hiermit wird angegeben, dass alle Zeilen von *target_table, die nicht mit den von \<table_source> ON \<merge_search_condition> zurückgegebenen Zeilen übereinstimmen und alle zusätzlichen Suchbedingungen erfüllen, gemäß der \<merge_matched>-Klausel aktualisiert oder gelöscht werden.  
   
 Die MERGE-Anweisung kann höchstens über zwei WHEN NOT MATCHED BY SOURCE-Klauseln verfügen. Wenn zwei Klauseln angegeben werden, muss die erste Klausel von einer AND \<clause_search_condition>-Klausel begleitet werden. Für jede gegebene Zeile wird die zweite WHEN NOT MATCHED BY SOURCE-Klausel nur angewendet, wenn die erste nicht angewendet wurde. Wenn zwei WHEN NOT MATCHED BY SOURCE-Klauseln vorhanden sind, muss die eine eine UPDATE-Aktion und die andere eine DELETE-Aktion angeben. In \<clause_search_condition> kann nur auf Spalten aus der Zieltabelle verwiesen werden.  
   
@@ -248,14 +168,14 @@ Das Angeben eines TABLOCK-Hinweises für eine Tabelle, die das Ziel einer INSERT
 INDEX ( index_val [ ,...n ] )  
 Gibt den Namen oder die ID eines oder mehrerer Indizes in der Zieltabelle zum Ausführen eines impliziten Joins mit der Quelltabelle an. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
-\<OUTPUT_Clause>  
+\<output_clause>  
 Gibt ohne bestimmte Reihenfolge eine Zeile für jede Zeile in *target_table* zurück, die aktualisiert, eingefügt oder gelöscht wird. **$action** kann in der OUTPUT-Klausel angegeben werden. **$action** ist eine Spalte vom Typ **nvarchar(10)** , die für jede Zeile einen von drei Werten zurückgibt: „INSERT“, „UPDATE“ oder „DELETE“, je nach der für diese Zeile ausgeführten Aktion. Weitere Informationen zu den Argumenten und dem Verhalten dieser Klausel finden Sie unter [OUTPUT-Klausel (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 Gibt an, dass zum Anpassen der Art und Weise, wie die Anweisung durch die Datenbank-Engine verarbeitet wird, Hinweise des Abfrageoptimierers verwendet werden. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 \<merge_matched>  
-Gibt die Update- oder Löschaktion an, die auf alle Zeilen von *target_table* angewendet wird, die nicht mit den von \<table_source> ON \<merge_search_condition> zurückgegebenen Zeilen übereinstimmen, und die alle zusätzlichen Suchbedingungen erfüllen.  
+Hiermit wird die Update- oder Löschaktion angegeben, die auf alle Zeilen von *target_table* angewendet wird, die nicht mit den von \<table_source> ON \<merge_search_condition> zurückgegebenen Zeilen übereinstimmen, und die alle zusätzlichen Suchbedingungen erfüllen.  
   
 UPDATE SET \<set_clause>  
 Gibt die Liste der Spalten- oder Variablennamen an, die in der Zieltabelle aktualisiert werden sollen, sowie die Werte, mit denen das Update vorgenommen werden soll.  
@@ -279,10 +199,10 @@ Erzwingt, dass die eingefügte Zeile den für jede Spalte definierten Standardwe
   
 Weitere Informationen zu dieser Klausel finden Sie unter [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
-\<search condition>  
-Gibt die Suchbedingungen an, die zum Angeben von \<merge_search_condition> oder \<clause_search_condition> verwendet werden. Weitere Informationen zu den Argumenten für diese Klausel finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+\<search_condition>  
+Hiermit werden die Suchbedingungen zum Angeben von \<merge_search_condition> oder \<clause_search_condition> angegeben. Weitere Informationen zu den Argumenten für diese Klausel finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
 
-\<Graph-Suchmuster >  
+\<graph search pattern>  
 Gibt das Graph-Vergleichsmuster an. Weitere Informationen zu den Argumenten für diese Klausel finden Sie unter [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md).
   
 ## <a name="remarks"></a>Bemerkungen

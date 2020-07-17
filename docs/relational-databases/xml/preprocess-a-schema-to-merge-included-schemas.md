@@ -1,5 +1,6 @@
 ---
 title: Vorverarbeiten eines Schemas zum Zusammenführen eingeschlossener Schemas | Microsoft-Dokumentation
+description: Erfahren Sie, wie XML-Schemas mit der Anweisung „xsd:include“ vorverarbeitet werden können, um die Inhalte beliebiger enthaltener Schemas zu kopieren und in einem einzelnem Schema zusammenzuführen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28dbb25bb3952c586b2dfc4e2b05556c41ee7602
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 48afad6a8cb4c5e3dcc65118a73fa7b3079d02f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664913"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757517"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Vorverarbeiten eines Schemas zum Zusammenführen eingeschlossener Schemas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Das W3C XSD **include** -Element stellt Unterstützung für Schemamodularität zur Verfügung, in dem ein XML-Schema in mehrere physische Dateien partitioniert werden kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt dieses Element zurzeit nicht. XML-Schemas, die dieses Element enthalten, werden vom Server zurückgewiesen.  
   
- Als Lösung können XML-Schemas, die die \<xsd:include>-Direktive enthalten, so vorverarbeitet werden, dass die Inhalte aller enthaltenen Schemas kopiert und in einem einzigen Schema für den Upload auf den Server zusammengeführt werden. Der folgende C#-Code kann für die Vorverarbeitung verwendet werden: Die Kommentare in den einzelnen Codeteilen stellen Informationen zur Verwendung bereit.  
+ Als Lösung können XML-Schemas, die die \<xsd:include>-Anweisung enthalten, so vorverarbeitet werden, dass die Inhalte aller enthaltenen Schemas kopiert und in einem einzigen Schema für den Upload auf den Server zusammengeführt werden. Der folgende C#-Code kann für die Vorverarbeitung verwendet werden: Die Kommentare in den einzelnen Codeteilen stellen Informationen zur Verwendung bereit.  
   
 ```  
 // XSD Schema Include Normalizer  

@@ -1,6 +1,6 @@
 ---
 title: SQL Server-Fehlerprotokoll (Verfügbarkeitsgruppen)
-description: Hier finden Sie eine Beschreibung der Fehlerprotokollereignisse, die von einer Always On-Verfügbarkeitsgruppe gemeldet werden.
+description: Hier erfahren Sie mehr über die Ereignisse im SQL Server-Fehlerprotokoll, die sich auf Always On-Verfügbarkeitsgruppen auswirken, sowie darüber, bei welchen Anzeichen Sie Fehlerprotokolle untersuchen sollten.
 ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81d31225838ec029a020af2df25753b26acd2fb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c44f65761fcb54d8ad9b8eac0fc5e02bce82181
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251249"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898075"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>SQL Server-Fehlerprotokoll (Always On-Verfügbarkeitsgruppen)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Folgende Ereignisse von SQL Server-Fehlerprotokollberichten wirken sich auf Always On-Verfügbarkeitsgruppen aus:  
   
 -   Kommunikation mit dem WSFC-Cluster (Windows Server Failover Clustering)    
@@ -27,7 +27,7 @@ ms.locfileid: "75251249"
 -   Konnektivitätsstatus von Verfügbarkeitsdatenbanken zwischen primären und sekundären Replikaten    
 -   Status der Verfügbarkeitsgruppenendpunkte    
 -   Status der Verfügbarkeitsgruppenlistener    
--   Status der Leasedauer zwischen der SQL Server-Ressourcen-DLL (die im WSFC-Cluster ausgeführt wird) und der SQL Server-Instanz (weitere Informationen finden Sie unter [How It Works: SQL Server Always On lease timeout (Funktionsweise: Ablauf der Leasedauer der SQL Server-Option „Always On“)](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx))    
+-   Status der Leasedauer zwischen der SQL Server-Ressourcen-DLL (die im WSFC-Cluster ausgeführt wird) und der SQL Server-Instanz (weitere Informationen finden Sie unter [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx) (Funktionsweise: SQL Server Always On-Leasetimeout))    
 -   Fehlerereignisse in der Verfügbarkeitsgruppe  
 
 Wenn die folgenden Aussagen zutreffen, sollten Sie sich das SQL Server-Fehlerprotokoll ansehen:  

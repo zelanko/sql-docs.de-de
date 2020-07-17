@@ -1,5 +1,6 @@
 ---
 title: 'Beispiele: Verwenden von OPENXML | Microsoft-Dokumentation'
+description: Hier sehen Sie Beispiele für die Verwendung von OPENXML zum Erstellen einer Rowsetansicht eines XML-Dokuments.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -26,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729966"
 ---
 # <a name="examples-using-openxml"></a>Beispiele: Verwenden von OPENXML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In den Beispielen dieses Themas wird die Verwendung von OPENXML zum Erstellen einer Rowsetansicht eines XML-Dokuments veranschaulicht. Informationen zur Syntax von OPENXML finden Sie unter [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Die Beispiele geben alle Aspekte von OPENXML wieder, ausgenommen der Angabe von Metaeigenschaften in OPENXML. Weitere Informationen zum Angeben von Metaeigenschaften in OPENXML finden Sie unter [Angeben von Metaeigenschaften in OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Beispiele  
@@ -621,9 +622,9 @@ id  lname   xmlname                   OverFlow
   
  Angenommen, Sie möchten dieses Dokument aufteilen und in der Datenbank wie folgt speichern:  
   
--   Speichern der \<Student>-Daten in der Students-Tabelle.  
+-   Speichern Sie die \<Student>-Daten in der Students-Tabelle.  
   
--   Speichern der \<Class>-Daten in der Courses-Tabelle.  
+-   Speichern Sie die \<Class>-Daten in der Courses-Tabelle.  
   
 -   Speichern der **m:n** -Beziehung der Daten (zwischen Student und Class) in der CourseAttendence-Tabelle. Zum Extrahieren der Werte ist zusätzliche Arbeit erforderlich. Verwenden Sie zum Abrufen dieser Informationen und Speichern in der Tabelle die folgenden gespeicherten Prozeduren:  
   

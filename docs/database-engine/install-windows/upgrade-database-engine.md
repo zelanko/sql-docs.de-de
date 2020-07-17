@@ -1,5 +1,6 @@
 ---
 title: Upgrade einer Datenbank-Engine | Microsoft-Dokumentation
+description: Der Artikel enthält Links zu Ressourcen, die Ihnen beim Upgrade der SQL Server-Datenbank-Engine von einem früheren Release von SQL Server auf SQL Server 2019 helfen.
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 492f663e09f8883d1994d1ee5af2c0ed9acbb111
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73531563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748574"
 ---
 # <a name="upgrade-database-engine"></a>Aktualisieren der Datenbank-Engine
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
   Die Artikel in diesem Abschnitt unterstützen Sie dabei, ein Upgrade der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] durchzuführen.  
   

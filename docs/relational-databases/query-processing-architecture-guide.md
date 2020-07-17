@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82108001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726146"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verarbeitet Abfragen für verschiedene Datenspeicherungsarchitekturen, z.B. lokale Tabellen, partitionierte Tabellen und serverübergreifend verteilte Tabellen. In den folgenden Themen wird erläutert, wie mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Abfragen verarbeitet werden und die Wiederverwendung von Abfragen mithilfe des Zwischenspeicherns von Ausführungsplänen optimiert wird.
 
@@ -834,7 +834,7 @@ Die Parametrisierung wird auf der Ebene der einzelnen [!INCLUDE[tsql](../include
 #### <a name="data-types-of-parameters"></a>Parameterdatentypen
 Beim Parametrisieren von Literalwerten konvertiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Parameter in folgende Datentypen:
 
-* Integer-Literale, die von der Größe her in den int-Datentyp passen, werden beim Parametrisieren in int-Werte konvertiert. Größere Integer-Literale, die Teil von Prädikaten mit Vergleichsoperatoren sind (unter anderem <, \<=, =, !=, >, >=, , !\<, !>, <>, `ALL`, `ANY`, `SOME`, `BETWEEN`, and `IN`) werden beim Parametrisieren in numeric(38,0)-Werte konvertiert. Größere Literale, die nicht Teil von Prädikaten mit Vergleichsoperatoren sind, werden bei der Parametrisierung in numerische Werte mit ausreichenden Ziffern (precision) für ihre Größe und einem Dezimalstellenwert (scale) von 0 konvertiert.
+* Integer-Literale, die von der Größe her in den int-Datentyp passen, werden beim Parametrisieren in int-Werte konvertiert. Größere Integerliterale, die Teil von Prädikaten mit Vergleichsoperatoren sind (unter anderem <, \<=, =, !=, >, >=, , !\<, !>, <>, `ALL`, `ANY`, `SOME`, `BETWEEN` und `IN`) werden beim Parametrisieren in numeric(38,0)-Werte konvertiert. Größere Literale, die nicht Teil von Prädikaten mit Vergleichsoperatoren sind, werden bei der Parametrisierung in numerische Werte mit ausreichenden Ziffern (precision) für ihre Größe und einem Dezimalstellenwert (scale) von 0 konvertiert.
 * Numerische Festkommaliterale, die Teil von Prädikaten mit Vergleichsoperatoren sind, werden bei der Parametrisierung in numerische Werte mit 38 Ziffern (precision) und einem für ihre Größe ausreichenden Dezimalstellenwert (scale) konvertiert. Numerische Festkommaliterale, die nicht Teil von Prädikaten mit Vergleichsoperatoren sind, werden bei der Parametrisierung in numerische Werte mit ausreichenden Ziffern (precision) und einem ausreichenden Dezimalstellenwert (scale) für ihre Größe konvertiert.
 * Numerische Fließkommaliterale werden bei der Parametrisierung in float(53)-Werte konvertiert.
 * Nicht-Unicode-Zeichenfolgenliterale werden bei der Parametrisierung in varchar(8000)-Werte konvertiert, wenn das Literal 8.000 Zeichen nicht überschreitet, und in varchar(max)-Werte, wenn es 8.000 Zeichen überschreitet.

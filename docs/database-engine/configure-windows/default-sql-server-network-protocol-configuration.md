@@ -1,5 +1,6 @@
 ---
 title: Standard-Netzwerkkonfiguration von SQL Server | Microsoft-Dokumentation
+description: Machen Sie sich mit den Faktoren vertraut, von denen abhängt, ob Netzwerkprotokolle während der Installation von SQL Server aktiviert oder deaktiviert werden. Hier erfahren Sie, wie Sie Protokolle nach der Installation konfigurieren.
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - protocols [SQL Server], default settings
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9197a6838b62c970f9c8b9fad624a7229766628c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772581"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Standard-Netzwerkkonfiguration von SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Um eine erhöhte Sicherheit zu gewährleisten, wird bei bestimmten Neuinstallationen von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] die Netzwerkkonnektivität deaktiviert. Die Netzwerkkonnektivität über TCP/IP wird nicht deaktiviert, wenn Sie Enterprise Edition, Standard Edition, Evaluation Edition oder Workgroup Edition verwenden oder wenn eine vorherige Installation von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] vorhanden ist. Für alle Installationen wird das Shared Memory-Protokoll aktiviert, um lokale Verbindungen mit dem Server zu ermöglichen. Der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -Browser-Dienst wird möglicherweise beendet, je nach Installationsbedingungen und -optionen.
 
 Verwenden Sie den Knoten [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Netzwerkkonfiguration des Konfigurations-Managers von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , um nach der Installation die Netzwerkprotokolle zu konfigurieren. Verwenden Sie den Knoten [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -Dienste des Konfigurations-Managers von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , um den [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] -Browserdienst so zu konfigurieren, dass er automatisch gestartet wird. Weitere Informationen finden Sie unter [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
@@ -33,14 +34,14 @@ In der folgenden Tabelle wird die Konfiguration nach der Installation beschriebe
 
 |Edition | Neuinstallation/vorherige Installation vorhanden | Shared Memory | TCP/IP | Named Pipes|
 | -------- | -- | -- | -- | --  |  
-|Enterprise | Neue Installation | Enabled | Enabled | Deaktiviert für Netzwerkverbindungen|
-|Standard | Neue Installation | Enabled | Enabled | Deaktiviert für Netzwerkverbindungen|
-|Web | Neue Installation | Enabled | Enabled | Deaktiviert für Netzwerkverbindungen|
-|Entwickler | Neue Installation | Enabled | Disabled | Deaktiviert für Netzwerkverbindungen|
-|Auswertung | Neue Installation | Enabled | Enabled | Deaktiviert für Netzwerkverbindungen|
-|SQL Server Express | Neue Installation | Enabled | Disabled | Deaktiviert für Netzwerkverbindungen|
+|Enterprise | Neue Installation | Aktiviert | Aktiviert | Deaktiviert für Netzwerkverbindungen|
+|Standard | Neue Installation | Aktiviert | Aktiviert | Deaktiviert für Netzwerkverbindungen|
+|Web | Neue Installation | Aktiviert | Aktiviert | Deaktiviert für Netzwerkverbindungen|
+|Entwickler | Neue Installation | Aktiviert | Disabled | Deaktiviert für Netzwerkverbindungen|
+|Auswertung | Neue Installation | Aktiviert | Aktiviert | Deaktiviert für Netzwerkverbindungen|
+|SQL Server Express | Neue Installation | Aktiviert | Disabled | Deaktiviert für Netzwerkverbindungen|
 |Alle Editionen | Vorherige Installation ist vorhanden, wird aber nicht aktualisiert. | Wie für Neuinstallation | Wie für Neuinstallation | Wie für Neuinstallation|
-|Alle Editionen | Aktualisieren | Enabled | Einstellungen aus früherer Installation werden beibehalten. | Einstellungen aus früherer Installation werden beibehalten.|
+|Alle Editionen | Aktualisieren | Aktiviert | Einstellungen aus früherer Installation werden beibehalten. | Einstellungen aus früherer Installation werden beibehalten.|
 
 
 >[!NOTE]

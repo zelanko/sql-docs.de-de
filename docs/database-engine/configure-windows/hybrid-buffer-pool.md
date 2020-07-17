@@ -1,5 +1,6 @@
 ---
 title: Hybrider Pufferpool | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie der hybride Pufferpool den Zugriff auf Geräte mit persistentem Arbeitsspeicher über den Arbeitsspeicherbus ermöglicht. Aktivieren oder deaktivieren Sie dieses SQL Server 2019-Feature, und machen Sie sich mit den bewährten Methoden vertraut.
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: e2aafb77145fbe22a980ef158cfa7c78db6288d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216259"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772423"
 ---
 # <a name="hybrid-buffer-pool"></a>Hybrider Pufferpool
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In einem hybriden Pufferpool können Pufferpoolobjekte auf Datenseiten in Datenbankdateien verweisen, die sich auf persistenten Speichergeräten (persistent memory, PMEM) befinden, anstatt nur auf Kopien der Datenseiten, die im flüchtigen DRAM zwischengespeichert sind. Dieses Feature wird in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] eingeführt.
 
@@ -94,12 +95,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>Bewährte Methoden für den hybriden Pufferpool
 
-Verwenden Sie beim Formatieren Ihres PMEM-Geräts unter Windows die größte verfügbare Zuordnungseinheit für NTFS (2 MB in Windows Server 2019), und stellen Sie sicher, dass das Gerät für DAX (DirectAccess) formatiert wurde.
+ - Verwenden Sie beim Formatieren Ihres PMEM-Geräts unter Windows die größte verfügbare Zuordnungseinheit für NTFS (2 MB in Windows Server 2019), und stellen Sie sicher, dass das Gerät für DAX (DirectAccess) formatiert wurde.
 
-Verwenden Sie [gesperrte Seiten im Arbeitsspeicher](./enable-the-lock-pages-in-memory-option-windows.md) unter Windows.
+ - Verwenden Sie [gesperrte Seiten im Arbeitsspeicher](./enable-the-lock-pages-in-memory-option-windows.md) unter Windows.
 
-Dateigrößen müssen ein Vielfaches von 2 MB sein (Modulo 2 MB muss 0 (Null) sein).
+ - Dateigrößen müssen ein Vielfaches von 2 MB sein (Modulo 2 MB muss 0 (Null) sein).
 
-Wenn die für den Server gültige Einstellung für den hybriden Pufferpool deaktiviert ist, wird das Feature von keiner Benutzerdatenbank verwendet.
+ - Wenn die für den Server gültige Einstellung für den hybriden Pufferpool deaktiviert ist, wird das Feature von keiner Benutzerdatenbank verwendet.
 
-Wenn die für den Server gültige Einstellung für den hybriden Pufferpool aktiviert ist, können Sie mit der für die Datenbank gültigen Einstellung das Feature für einzelne Benutzerdatenbanken deaktivieren.
+ - Wenn die für den Server gültige Einstellung für den hybriden Pufferpool aktiviert ist, können Sie mit der für die Datenbank gültigen Einstellung das Feature für einzelne Benutzerdatenbanken deaktivieren.

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a2bbbbc6bb18e3239091e0d2902bf65b85deec2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907953"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883219"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Problembehandlung bei Oracle-Verlegern
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird eine Reihe von Problemen aufgeführt, die bei der Konfiguration und Verwendung von Oracle-Verlegern auftreten können.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Fehler bezüglich Oracle-Client- und Netzwerksoftware  
@@ -67,9 +67,9 @@ ms.locfileid: "72907953"
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Oracle-Verleger ist mit anderem Verteiler verknüpft  
  Jeder Oracle-Verleger kann immer nur mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler verknüpft sein. Wenn der Oracle-Verleger bereits mit einem anderen Verteiler verknüpft ist, muss diese Zuordnung gelöscht werden, bevor ein anderer Verteiler verwendet werden kann. Wird die Zuordnung des Verteilers nicht gelöscht, wird eine der folgenden Fehlermeldungen angezeigt:  
   
--   „Die Oracle-Serverinstanz '\<*OracleVerlegerName*>' wurde zum Verwenden von '\<*SQLServerDistributorName*>' als Verteiler konfiguriert. Um mit dem Verwenden von '\<*NewSQLServerDistributorName*>' als Verteiler zu beginnen, müssen Sie die aktuelle Replikationskonfiguration auf der Oracle-Serverinstanz entfernen. Hierbei werden alle Veröffentlichungen auf dieser Serverinstanz gelöscht.“  
+-   Die Oracle-Serverinstanz "\<*OraclePublisherName*>" wurde zum Verwenden von "\<*SQLServerDistributorName*>" als Verteiler konfiguriert. Um mit dem Verwenden von "\<*NewSQLServerDistributorName*>" als Verteiler zu beginnen, müssen Sie die aktuelle Replikationskonfiguration auf der Oracle-Serverinstanz entfernen. Hierbei werden alle Veröffentlichungen auf dieser Serverinstanz gelöscht."  
   
--   „Der Oracle-Server '\<*OracleServerName*>' ist bereits als Verleger '\<*OracleVerlegerName*>' auf dem Verteiler '\<*SQLServerDistributorName*>. *\<VerteilungsdatenbankName>* ' definiert. Löschen Sie die Zuordnung des Verlegers, oder löschen Sie das öffentliche Synonym ' *\<SynonymName>* ' zur erneuten Erstellung.“  
+-   "Der Oracle-Server "\<*OracleServerName*>" ist bereits als Verleger "\<*OraclePublisherName*>" auf dem Verteiler "\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* " definiert. Löschen Sie den Verleger, oder löschen Sie das öffentliche Synonym " *\<SynonymName>* " zur erneuten Erstellung."  
   
  Wenn die Zuordnung eines Oracle-Verlegers gelöscht wird, werden die Replikationsobjekte in der Oracle-Datenbank automatisch bereinigt. In einigen Fällen ist jedoch auch eine manuelle Bereinigung der Oracle-Replikationsobjekte erforderlich. So bereinigen Sie die durch die Replikation erstellten Oracle-Replikationsobjekte manuell:  
   
@@ -82,14 +82,14 @@ ms.locfileid: "72907953"
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>SQL Server-Fehler 21663 (Fehlen des Primärschlüssels) wurde ausgelöst  
  Artikel in Transaktionsveröffentlichungen müssen über einen gültigen Primärschlüssel verfügen. Fehlt dieser Primärschlüssel, finden Sie beim Versuch, den Artikel hinzuzufügen, die folgende Fehlermeldung:  
   
- „Für die [\<*TableOwner*>].[\<*TableName*>]-Quelltabelle wurde kein gültiger Primärschlüssel gefunden.“  
+ "Für die [\<*TableOwner*>].[\<*TableName*>]-Quelltabelle wurde kein gültiger Primärschlüssel gefunden."  
   
  Informationen zu den Anforderungen für Primärschlüssel finden Sie im Abschnitt zu eindeutigen Indizes und Einschränkungen im Thema [Design Considerations and Limitations for Oracle Publishers](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>SQL Server-Fehler 21642 (Verbindungsserver bereits vorhanden) wurde ausgelöst  
  Wenn ein Oracle-Verleger zum ersten Mal konfiguriert wird, wird für die Verbindung zwischen dem Verleger und dem Verteiler ein Verbindungsservereintrag erstellt. Der Verbindungsserver hat denselben Namen wie der Oracle-TNS-Dienst. Wenn Sie versuchen, einen Verbindungsserver mit demselben Namen zu erstellen, wird die folgende Fehlermeldung angezeigt:  
   
- "Für heterogene Verleger ist ein Verbindungsserver erforderlich. Ein Verbindungsserver mit dem Namen ' *\<LinkedServerName>* ' ist bereits vorhanden. Entfernen Sie den Verbindungsserver, oder wählen Sie einen anderen Verlegernamen aus."  
+ "Für heterogene Verleger ist ein Verbindungsserver erforderlich. Ein Verbindungsserver mit dem Namen " *\<LinkedServerName>* " ist bereits vorhanden. Entfernen Sie den Verbindungsserver, oder wählen Sie einen anderen Verlegernamen aus."  
   
  Dieser Fehler kann auftreten, wenn Sie versuchen, den Verbindungsserver direkt zu erstellen, oder die Beziehung zwischen dem Oracle-Verleger und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler zuvor gelöscht haben und jetzt versuchen, diese Beziehung neu zu konfigurieren. Wenn Sie beim Neukonfigurieren des Verlegers diese Fehlermeldung erhalten, löschen Sie den Verbindungsserver mit [sp_dropserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md).  
   
@@ -206,7 +206,7 @@ ms.locfileid: "72907953"
 ## <a name="oracle-error-ora-01555"></a>Oracle-Fehler ORA-01555  
  Die folgende Oracle-Datenbankfehlermeldung bezieht sich nicht auf die Snapshotreplikation, sondern darauf, wie Oracle lesekonsistente Datensichten konstruiert:  
   
- "ORA-01555: Snapshot too old"  
+ „ORA-01555: Snapshot too old“  
   
  Oracle verwendet so genannte Rollbacksegmente, um lesekonsistente Datensichten zu erstellen, die den Stand zum Zeitpunkt der Ausführung einer SQL-Anweisung wiedergeben. Die Fehlermeldung "snapshot too old" (Snapshot zu alt) kann angezeigt werden, wenn die Rollbackinformationen von anderen gleichzeitigen Sitzungen überschrieben werden. Vor Oracle 9i wurde empfohlen, die Häufigkeit dieser Fehlermeldung durch Erhöhen der Größe und/oder Anzahl der Rollbacksegmente und Zuweisen großer Transaktionen zu einem bestimmten Rollbacksegment zu reduzieren.  
   

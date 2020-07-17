@@ -1,22 +1,21 @@
 ---
 title: JSON_MODIFY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 3aed59e8c90b301cd3fbf7caca9a0e466746dd2d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5e981958444fcb760d0baff036852d58aee0b1a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635112"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752284"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
@@ -28,7 +27,7 @@ ms.locfileid: "81635112"
   
 ## <a name="syntax"></a>Syntax  
   
-```sql  
+```syntaxsql
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
@@ -47,10 +46,10 @@ JSON_MODIFY ( expression , path , newValue )
  `[append] [ lax | strict ] $.<json path>`  
   
 - *append*  
-    Optionaler Modifizierer, der angibt, dass der neue Wert an das Array angefügt werden sollte, auf das der *\<json path>* verweist.  
+    Optionaler Modifizierer, der angibt, dass der neue Wert an das Array angefügt werden sollte, auf das *\<json path>* verweist.  
   
 - *lax*  
-    Gibt an, dass die Eigenschaft, auf die der *\<json path>* verweist, nicht existieren muss. Wenn die Eigenschaft nicht vorhanden ist, versucht JSON_MODIFY, den neuen Wert für den angegebenen Pfad einzufügen. Dies kann fehlschlagen, wenn die Eigenschaft nicht in den Pfad eingefügt werden kann. Wenn Sie weder *lax* noch *strict* angeben, ist der Standardmodus *lax*.  
+    Gibt an, dass die Eigenschaft, auf die *\<json path>* verweist, nicht vorhanden sein muss. Wenn die Eigenschaft nicht vorhanden ist, versucht JSON_MODIFY, den neuen Wert für den angegebenen Pfad einzufügen. Dies kann fehlschlagen, wenn die Eigenschaft nicht in den Pfad eingefügt werden kann. Wenn Sie weder *lax* noch *strict* angeben, ist der Standardmodus *lax*.  
   
 - *strict*  
     Gibt an, dass die Eigenschaft, auf die *\<json path>* verweist, im JSON-Ausdruck enthalten sein muss. Wenn die Eigenschaft nicht vorhanden ist, gibt JSON_MODIFY einen Fehler zurück.  
@@ -97,7 +96,7 @@ JSON_MODIFY versieht alle Sonderzeichen im neuen Wert mit Escapezeichen, wenn de
   
  **Abfrage**
   
-```syntaxsql
+```sql
 
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
@@ -156,7 +155,7 @@ PRINT @info
   
  **Abfrage**
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -250,7 +249,7 @@ PRINT @stats
   
  **Abfrage**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -278,7 +277,7 @@ PRINT @info
   
  **Abfrage**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -308,13 +307,12 @@ PRINT @info
   
 ```sql  
 UPDATE Employee
-SET jsonCol=JSON_MODIFY(jsonCol,"$.info.address.town",'London')
+SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
 WHERE EmployeeID=17
- 
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen
 
- [JSON-Pfadausdrücke &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON Path Expressions &#40;SQL Server&#41; (JSON-Pfadausdrücke [SQL Server])](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

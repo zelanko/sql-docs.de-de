@@ -1,5 +1,6 @@
 ---
 title: Erstellen einer Serverrolle | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie mithilfe von SQL Server Management Studio oder Transact-SQL eine Serverrolle in SQL Server erstellen. Außerdem überprüfen Sie die Einschränkungen und die erforderlichen Berechtigungen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 869ee9f88d8cb52f10fbb9120b6815868f7de5fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f90781fd5e293c4de5821fc89588b9b1e38ac0b
+ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68094952"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334267"
 ---
 # <a name="create-a-server-role"></a>Erstellen einer Serverrolle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]

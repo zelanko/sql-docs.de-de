@@ -1,37 +1,34 @@
 ---
 title: Erstellen und Anpassen von Tastenkombinationen
-titleSuffix: Azure Data Studio
 description: Erfahren Sie, wie Tastenkombinationen in Azure Data Studio erstellt und angepasst werden.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8e577f50152eb5f86b81caa23cc493b92bbab270
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da7ca6132a8727d4ea77b3549f1e4d6199741b3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959474"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774573"
 ---
-# <a name="keyboard-shortcuts-in-name-sos"></a>Tastenkombinationen in [!INCLUDE[name-sos](../includes/name-sos.md)]
+# <a name="keyboard-shortcuts-in-azure-data-studio"></a>Tastenkombinationen im Azure Data Studio
 
-Dieser Artikel enthält die Schritte zum schnellen Anzeigen, Bearbeiten und Erstellen von Tastenkombinationen in [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+Dieser Artikel enthält die Schritte zum schnellen Anzeigen, Bearbeiten und Erstellen von Tastenkombinationen in Azure Data Studio.
 
-Weil [!INCLUDE[name-sos](../includes/name-sos-short.md)] seine Tastenzuordnungsfunktionalität von Visual Studio Code erbt, finden Sie ausführliche Informationen über erweiterte Anpassungen, über das Verwenden unterschiedlicher Tastaturlayouts usw. im Artikel [Key Bindings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings) (Tastenzuordnungen für Visual Studio Code). Einige Tastenzuordnungsfunktionen sind möglicherweise nicht verfügbar (z. B. werden Tastenzuordnungserweiterungen in [!INCLUDE[name-sos](../includes/name-sos-short.md)] nicht unterstützt).
-
+Weil Azure Data Studio seine Tastenzuordnungsfunktionalität von Visual Studio Code erbt, finden Sie ausführliche Informationen über erweiterte Anpassungen, über das Verwenden unterschiedlicher Tastaturlayouts usw. im Artikel [Tastenzuordnungen für Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings). Einige Tastenzuordnungsfunktionen sind möglicherweise nicht verfügbar (z. B. werden Tastenzuordnungserweiterungen in Azure Data Studio nicht unterstützt).
 
 ## <a name="open-the-keyboard-shortcuts-editor"></a>Öffnen des Tastenkombinationen-Editors
 
 So zeigen Sie alle aktuell definierten Tastenkombinationen an:
 
-Öffnen Sie den **Tastenkombinationen**-Editor über das Menü **Datei**: **Datei** > **Einstellungen** > **Tastenkombinationen** ( **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  > **Einstellungen** > **Tastenkombinationen** auf einem Mac).
+Öffnen Sie den **Tastenkombinationen**-Editor über das Menü **Datei**: **Datei** > **Einstellungen** > **Tastenkombinationen** (**Azure Data Studio** > **Einstellungen** > **Tastenkombinationen** auf einem Mac).
 
 Zusätzlich zur Anzeige der aktuellen Tastenzuordnungen listet der **Tastenkombinationen**-Editor die verfügbaren Befehle auf, für die keine Tastenkombinationen definiert sind. Mit dem **Tastenkombinationen**-Editor können Sie ganz einfach Tastenzuordnungen ändern, entfernen und zurücksetzen sowie neue Tastenzuordnungen definieren.  
-
 
 ## <a name="edit-existing-keyboard-shortcuts"></a>Bearbeiten von vorhandenen Tastenkombinationen
 
@@ -41,11 +38,11 @@ So ändern Sie die Tastenzuordnung für eine vorhandene Tastenkombination:
    > [!TIP]
    > Suchen Sie nach Taste, nach Befehl, nach Quelle usw., um alle relevanten Tastenkombinationen zurückzugeben.
 
-1. Klicken Sie mit der rechten Maustaste auf den gewünschten Eintrag, und wählen Sie **Tastenzuordnung ändern** aus.
+2. Klicken Sie mit der rechten Maustaste auf den gewünschten Eintrag, und wählen Sie **Tastenzuordnung ändern** aus.
 
    ![Tastenkombination bearbeiten](media/keyboard-shortcuts/change-keybinding.png)
 
-1. Drücken Sie die gewünschte Tastenkombination, und drücken Sie dann die **EINGABETASTE**, um die Kombination zu speichern. 
+3. Drücken Sie die gewünschte Tastenkombination, und drücken Sie dann die **EINGABETASTE**, um die Kombination zu speichern. 
 
    ![Tastenkombination speichern](media/keyboard-shortcuts/save-keybinding.png)
 
@@ -57,6 +54,4 @@ So erstellen Sie neue Tastenkombinationen:
 
    ![Tastenkombination erstellen](media/keyboard-shortcuts/add-keybinding.png)
 
-1. Drücken Sie die gewünschte Tastenkombination, und drücken Sie dann die **EINGABETASTE**, um die Kombination zu speichern.
-
-
+2. Drücken Sie die gewünschte Tastenkombination, und drücken Sie dann die **EINGABETASTE**, um die Kombination zu speichern.

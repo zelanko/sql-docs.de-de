@@ -1,5 +1,6 @@
 ---
 title: Datenbanksicherung mit speicheroptimierten Tabellen
+description: Erfahren Sie, wie speicheroptimierte Tabellen im Rahmen regelmäßiger Datenbanksicherungen gesichert werden. Informieren Sie sich über vollständige Datenbanksicherungen und differenzielle Sicherungen.
 ms.custom: seo-dt-2019
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c08f3c1ba1c31b0f6a1d34faeb5c6e2f77e404f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e1b2bf585b1b44f0f8e3b01eca46faaeda2a053
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723399"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sichern einer Datenbank mit speicheroptimierten Tabellen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Speicheroptimierte Tabellen werden im Rahmen regelmäßiger Datenbanksicherungen gesichert. Wie bei datenträgerbasierten Tabellen wird die CHECKSUM von Daten-/Änderungsdateipaaren als Teil der Datenbanksicherung überprüft, um Speicherbeschädigungen zu erkennen.  
   
