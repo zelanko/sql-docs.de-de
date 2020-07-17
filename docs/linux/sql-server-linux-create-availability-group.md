@@ -8,16 +8,16 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d2bc4c05c711645b0cff669acbf847da4998f5d2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077442"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196738"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Erstellen und Konfigurieren einer Verfügbarkeitsgruppe für SQL Server für Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 In diesem Tutorial wird gezeigt, wie eine Verfügbarkeitsgruppe (AG) für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] für Linux erstellt und konfiguriert wird. Im Gegensatz zu [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] und früheren Versionen unter Windows ist es zum Aktivieren von Verfügbarkeitsgruppen nun egal, ob Sie zuerst den zugrunde liegenden Cluster erstellen oder nicht. Die Integration in den Cluster erfolgt bei Bedarf erst später.
 
@@ -326,7 +326,7 @@ In diesem Abschnitt wird gezeigt, wie mithilfe von SSMS mit dem neuen Verfügbar
 
 3.  Geben Sie im Dialogfeld „Optionen der Verfügbarkeitsgruppe angeben“ einen Namen für die Verfügbarkeitsgruppe ein, und wählen Sie in der Dropdownliste den Clustertyp „EXTERN“ oder „KEINE“ aus. „Extern“ sollte verwendet werden, wenn Pacemaker bereitgestellt wird. „Keine“ ist für spezialisierte Szenarios wie Leseaufskalierung. Die Auswahl der Option für die Integritätserkennung auf Datenbankebene ist optional. Weitere Informationen zu dieser Option finden Sie unter [Availability group database level health detection failover option (Failoveroption für die Integritätserkennung auf Datenbankebene in einer Verfügbarkeitsgruppe)](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Klicken Sie auf **Weiter**.
 
-    ![](./media/sql-server-linux-create-availability-group/image3.png)
+    ![Erstellen der Verfügbarkeitsgruppe 03](./media/sql-server-linux-create-availability-group/image3.png)
 
 4.  Klicken Sie im Dialogfeld „Datenbanken auswählen“ auf die Datenbank(en), die in die Verfügbarkeitsgruppe vorhanden sein sollen. Jede Datenbank muss über eine vollständige Sicherung verfügen, bevor sie zur Verfügbarkeitsgruppe hinzugefügt werden kann. Klicken Sie auf **Weiter**.
 
@@ -340,17 +340,17 @@ In diesem Abschnitt wird gezeigt, wie mithilfe von SSMS mit dem neuen Verfügbar
 
     Das folgende Beispiel zeigt eine Verfügbarkeitsgruppe mit zwei Replikaten, den Clustertyp „Extern“ und ein Replikat im Modus „Nur Konfiguration“.
 
-    ![](./media/sql-server-linux-create-availability-group/image4.png)
+    ![Erstellen der Verfügbarkeitsgruppe 04](./media/sql-server-linux-create-availability-group/image4.png)
 
     Das folgende Beispiel zeigt eine Verfügbarkeitsgruppe mit zwei Replikaten, den Clustertyp „Keine“ und ein Replikat im Modus „Nur Konfiguration“.
 
-    ![](./media/sql-server-linux-create-availability-group/image5.png)
+    ![Erstellen der Verfügbarkeitsgruppe 05](./media/sql-server-linux-create-availability-group/image5.png)
 
 9.  Klicken Sie auf die Registerkarte „Sicherungseinstellungen“, wenn Sie die Sicherungseinstellungen ändern möchten. Weitere Informationen zu Sicherungseinstellungen für Verfügbarkeitsgruppen finden Sie unter [Konfigurieren der Sicherung von Verfügbarkeitsreplikaten](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
 10. Wenn Sie lesbare sekundäre Replikate verwenden oder eine Verfügbarkeitsgruppe mit dem Clustertyp „Keine“ für die Leseskalierung erstellen, können Sie durch Auswählen der Registerkarte „Listener“ einen Listener erstellen. Ein Listener kann auch zu einem späteren Zeitpunkt hinzugefügt werden. Klicken Sie zum Erstellen eines Listeners auf die Option **Verfügbarkeitsgruppenlistener erstellen**. Geben Sie dann einen Namen und einen TCP/IP-Port ein, und legen Sie fest, ob eine statisch oder automatisch zugewiesene DHCP-IP-Adresse verwendet werden soll. Beachten Sie, dass die IP-Adresse für eine Verfügbarkeitsgruppe mit dem Clustertyp „Keine“ statisch sein sollte und auf die IP-Adresse des primären Replikats festgelegt ist.
 
-    ![](./media/sql-server-linux-create-availability-group/image6.png)
+    ![Erstellen der Verfügbarkeitsgruppe 06](./media/sql-server-linux-create-availability-group/image6.png)
 
 11. Wenn für lesbare Szenarios ein Listener erstellt wird, ermöglicht SSMS 17.3 oder höher die Erstellung des schreibgeschützten Routings im Assistenten. Er kann auch später über SSMS oder Transact-SQL hinzugefügt werden. So fügen Sie das schreibgeschützte Routing jetzt hinzu:
 
@@ -582,7 +582,9 @@ Ein unter Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] zugrun
 
 Nachdem eine Verfügbarkeitsgruppe in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] erstellt wurde, müssen die entsprechenden Ressourcen in Pacemaker erstellt werden, wenn der Clustertyp „Extern“ angegeben wird. Einer Verfügbarkeitsgruppe sind zwei Ressourcen zugeordnet: die Verfügbarkeitsgruppe selbst und eine IP-Adresse. Das Konfigurieren der IP-Adressressource ist zwar optional, wird allerdings empfohlen, wenn Sie die Listenerfunktion nicht verwenden.
 
-Die erstellte Verfügbarkeitsgruppenressource ist eine spezielle Art von Ressource, die als Klon bezeichnet wird. Die Verfügbarkeitsgruppe verfügt im Wesentlichen über Kopien der einzelnen Knoten, und es gibt eine Steuerungsressource, die als „Master“ bezeichnet wird. Diese Ressource wird dem Server zugeordnet, der das primäre Replikat hostet. Die sekundären Replikate („Regulär“ oder „Nur Konfiguration“) werden als untergeordnet betrachtet und können in einem Failover zum Master heraufgestuft werden.
+Die erstellte Verfügbarkeitsgruppenressource ist eine spezielle Art von Ressource, die als Klon bezeichnet wird. Die Verfügbarkeitsgruppe verfügt im Wesentlichen über Kopien der einzelnen Knoten, und es gibt eine Steuerungsressource, die als „Master“ bezeichnet wird. Diese Ressource wird dem Server zugeordnet, der das primäre Replikat hostet. Die anderen Ressourcen hosten sekundäre Replikate („Regulär“ oder „Nur Konfiguration“) und können in einem Failover zum Master heraufgestuft werden.
+
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 1.  Erstellen Sie die Verfügbarkeitsgruppenressource mit der folgenden Syntax:
 

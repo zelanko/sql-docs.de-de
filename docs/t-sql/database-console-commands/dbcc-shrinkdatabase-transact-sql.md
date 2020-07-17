@@ -28,15 +28,15 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 38d542d84121b41311cd8aa64d4ec9747bfc2bf8
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68073163"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279531"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 Reduziert die Größe der Daten- und Protokolldateien in der angegebenen Datenbank.
   
@@ -44,7 +44,7 @@ Reduziert die Größe der Daten- und Protokolldateien in der angegebenen Datenba
   
 ## <a name="syntax"></a>Syntax  
   
-```sql
+```syntaxsql
 DBCC SHRINKDATABASE   
 ( database_name | database_id | 0   
      [ , target_percent ]   
@@ -52,7 +52,18 @@ DBCC SHRINKDATABASE
 )  
 [ WITH NO_INFOMSGS ]  
 ```  
-  
+
+```syntaxsql
+-- Azure Synapse Analytics (formerly SQL DW)
+
+DBCC SHRINKDATABASE   
+( database_name   
+     [ , target_percent ]   
+)  
+[ WITH NO_INFOMSGS ]
+
+```  
+
 ## <a name="arguments"></a>Argumente  
 _database\_name_ | _database\_id_ | 0  
 Dies ist der Name oder die ID der Datenbank, die verkleinert werden soll. Mit „0“ (null) wird angegeben, dass die aktuelle Datenbank verwendet wird.  
@@ -93,7 +104,7 @@ In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:
 ## <a name="remarks"></a>Bemerkungen  
 
 >[!NOTE]
-> Aktuell wird DBCC SHRINKDATABASE von Azure SQL Data Warehouse nicht unterstützt. Das Ausführen dieses Befehls wird nicht empfohlen, da der Vorgang sehr E/A-intensiv ist und Ihr Datawarehouse offline schalten kann. Darüber hinaus ändern sich die Kosten Ihrer Datawarehouse-Momentaufnahmen nach dem Ausführen dieses Befehls. 
+> Das Ausführen dieses Befehls wird nicht empfohlen, da der Vorgang sehr E/A-intensiv ist und Ihr Datawarehouse offline schalten kann. Darüber hinaus ändern sich die Kosten Ihrer Datawarehouse-Momentaufnahmen nach dem Ausführen dieses Befehls. 
 
 Zum Verkleinern aller Daten- und Protokolldateien einer bestimmten Datenbank führen Sie den DBCC SHRINKDATABASE-Befehl aus. Führen Sie zum Verkleinern einer einzelnen Daten- oder Protokolldatei einer bestimmten Datenbank den Befehl [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) aus.
   
@@ -120,7 +131,7 @@ Wenn Sie für die Verkleinerung von **mydb** beispielsweise den Wert 25 für _ta
   
 Angenommen, die Datendatei von **mydb** enthält 7 MB Daten. Durch die Angabe eines _target\_percent_-Werts von 30 kann diese Datendatei auf einen freien Prozentsatz von 30 % verkleinert werden. Durch die Angabe eines _target\_percent_-Werts von 40 wird die Datendatei jedoch nicht verkleinert, da die [!INCLUDE[ssDE](../../includes/ssde-md.md)] Dateien nicht auf eine Größe verkleinert, die unter dem von den Daten belegten Speicherplatz liegt. 
 
-Sie können dieses Problem auch anders betrachten: 40 Prozent erwünschter freier Speicherplatz plus eine zu 70 Prozent volle Datendatei (7 MB von 10 MB) ergeben mehr als 100 Prozent. Bei jedem _target\_size_-Wert, der über 30 liegt, wird die Datendatei nicht verkleinert. Sie wird nicht verkleinert, weil der gewünschte freie Prozentsatz plus dem aktuell von der Datendatei belegten Prozentsatz einen Wert über 100 % ergibt.
+Sie können sich das Problem auch wie folgt vorstellen: 40 % erwünschter freier Speicherplatz plus eine zu 70 % volle Datendatei (7 MB von 10 MB) ergeben mehr als 100 %. Bei jedem _target\_size_-Wert, der über 30 liegt, wird die Datendatei nicht verkleinert. Sie wird nicht verkleinert, weil der gewünschte freie Prozentsatz plus dem aktuell von der Datendatei belegten Prozentsatz einen Wert über 100 % ergibt.
   
 Für Protokolldateien verwendet die [!INCLUDE[ssDE](../../includes/ssde-md.md)]_target\_percent_, um die Zielgröße für das gesamte Protokoll zu berechnen. Deshalb entspricht _target\_percent_ nach dem Verkleinerungsvorgang dem freien Speicherplatz im Protokoll. Die Zielgröße für das gesamte Protokoll wird dann in eine Zielgröße für jede Protokolldatei umgewandelt.
   
@@ -130,7 +141,7 @@ Protokolldateien können nur auf den Grenzwert für virtuelle Protokolldateien v
   
 ## <a name="best-practices"></a>Bewährte Methoden  
 Berücksichtigen Sie die folgenden Informationen, wenn Sie eine Datenbank verkleinern möchten:
--   Verkleinerungsvorgänge sind nach anderen Vorgängen am effektivsten. Mit diesen Vorgängen (z.B. TRUNCATE TABLE oder DROP TABLE) wird ungenutzter Speicherplatz geschaffen.  
+-   Ein Verkleinerungsvorgang ist am effektivsten nach einem Vorgang, durch den nicht verwendeter Speicherplatz bereitgestellt wird, z. B. das Abschneiden oder Löschen einer Tabelle.
 -   Die meisten Datenbanken erfordern verfügbaren freien Speicherplatz für die normalen alltäglichen Vorgänge. Möglicherweise wird Ihnen auffallen, dass die Größe der Datenbank wieder steigt, wenn Sie sie wiederholt verkleinern. Dieses Wachstum gibt an, dass der verkleinerte Speicherplatz für normale Vorgänge erforderlich ist. In diesem Fall ist das Verkleinern der Datenbank vergeblich.  
 -   Bei einem Verkleinerungsvorgang bleibt der Fragmentierungszustand der Indizes in der Datenbank nicht erhalten. Im Allgemeinen wird die Fragmentierung zu einem gewissen Grad verstärkt. Dies ist ein weiterer Grund, die Datenbank nicht wiederholt zu verkleinern.  
 -   Legen Sie die Datenbankoption AUTO_SHRINK nicht auf ON fest, es sei denn, besondere Anforderungen erfordern dies.  
@@ -170,7 +181,14 @@ Im folgenden Beispiel werden die Daten- und Protokolldateien in der `AdventureWo
 ```sql  
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
-  
+### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>C. Verkleinern einer Anmeldung für eine Azure Synapse Analytics-Datenbank
+
+```
+DBCC SHRINKDATABASE (database_A);
+DBCC SHRINKDATABASE (database_B, 10); 
+
+```
+
 ## <a name="see-also"></a>Weitere Informationen  
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

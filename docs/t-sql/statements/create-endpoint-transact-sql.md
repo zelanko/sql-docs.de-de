@@ -1,5 +1,5 @@
 ---
-title: CREATE ENDPOINT (Transact-SQL) | Microsoft-Dokumentation
+title: CREATE ENDPOINT (Transact-SQL)
 ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
@@ -31,15 +31,16 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4352a1b050bc27be18d490c8790f793f57e1839
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c095857b42255551d8686d3809b5e13e4b1d7889
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632184"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392738"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Erstellt Endpunkte und definiert deren Eigenschaften, einschließlich der für Clientanwendungen verfügbaren Methoden. Weitere Informationen zu entsprechenden Berechtigungen finden Sie unter [GRANT (Endpunktberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
@@ -53,7 +54,7 @@ ms.locfileid: "81632184"
   
      Hier definieren Sie die Nutzlast, die auf dem Endpunkt unterstützt wird. Für die Nutzlast sind folgende unterstützte Typen möglich: [!INCLUDE[tsql](../../includes/tsql-md.md)], Service Broker und Datenbankspiegelung. Außerdem geben Sie hier sprachspezifische Informationen ein.  
   
-> **HINWEIS:** Native XML-Webdienste (SOAP-/HTTP-Endpunkte) wurden in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] entfernt.  
+> **HINWEIS:** Systemeigene XML-Webdienste (SOAP-/HTTP-Endpunkte) wurden in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] entfernt.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -107,7 +108,9 @@ FOR DATABASE_MIRRORING (
 )  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *endPointName*  
  Der zugewiesene Name für den Endpunkt, den Sie erstellen. Verwenden Sie diesen Namen zum Aktualisieren oder Löschen des Endpunktes.  
   
@@ -159,7 +162,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Optionen, die für SERVICE_BROKER spezifisch sind, finden Sie im Abschnitt zu den Optionen für SERVICE_BROKER weiter unten. Optionen, die für DATABASE_MIRRORING spezifisch sind, finden Sie im Abschnitt zu den Optionen für DATABASE_MIRRORING weiter unten.  
   
- AUTHENTICATION **=** \<authentication_options> gibt die TCP/IP-Authentifizierungsanforderungen für Verbindungen für diesen Endpunkt an. Der Standardwert ist WINDOWS.  
+ AUTHENTICATION **=** \<authentication_options> Gibt die TCP/IP-Authentifizierungsanforderungen für Verbindungen für diesen Endpunkt an. Der Standardwert ist WINDOWS.  
   
  Zu den unterstützten Authentifizierungsmethoden zählen NTLM und/oder Kerberos.  
   
@@ -168,7 +171,7 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ **WINDOWS** [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Gibt an, dass der Endpunkt mithilfe des Windows-Authentifizierungsprotokolls die Endpunkte authentifizieren soll. Dies ist die Standardoption.  
   
  Wenn Sie eine Autorisierungsmethode angeben (NTLM oder KERBEROS), wird immer diese Methode als Authentifizierungsprotokoll verwendet. Mit dem Standardwert NEGOTIATE verwendet der Endpunkt das Windows-Aushandlungsprotokoll, um NTLM oder Kerberos auszuwählen.  
@@ -176,13 +179,13 @@ FOR DATABASE_MIRRORING (
  CERTIFICATE *certificate_name*  
  Gibt an, dass der Endpunkt die Verbindung mithilfe des von *certificate_name* angegebenen Zertifikats authentifizieren soll, um die Identität für die Autorisierung einzurichten. Der entfernte Endpunkt benötigt ein Zertifikat, dessen öffentlicher Schlüssel mit dem privaten Schlüssel des angegebenen Zertifikats übereinstimmt.  
   
- WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
+ WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  Gibt an, dass der Endpunkt mithilfe der Windows-Authentifizierung eine Verbindung herstellen soll. Falls dies nicht möglich ist, soll das angegebene Zertifikat verwendet werden.  
   
- CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Gibt an, dass der Endpunkt mithilfe des angegebenen Zertifikats eine Verbindung herstellen soll. Falls dies nicht möglich ist, soll die Windows-Authentifizierung verwendet werden.  
   
- ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
+ ENCRYPTION = { DISABLED \| SUPPORTED \| **REQUIRED** } [ALGORITHM { **AES** \| RC4 \| AES RC4 \| RC4 AES } ]  
  Gibt an, ob die Verschlüsselung für den Prozess verwendet wird. Der Standardwert ist REQUIRED.  
   
  DISABLED  
@@ -203,7 +206,7 @@ FOR DATABASE_MIRRORING (
  Gibt an, dass der Endpunkt den RC4-Algorithmus verwenden muss. Dies ist bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] die Standardeinstellung.  
   
 > [!NOTE]  
->  Der RC4-Algorithmus wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höheren Versionen kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.  
+>  Der RC4-Algorithmus wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höheren Versionen kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.  
   
  AES RC4  
  Gibt an, dass die beiden Endpunkte einen Verschlüsselungsalgorithmus aushandeln, wobei dieser Endpunkt dem AES-Algorithmus den Vorzug gibt.  

@@ -1,5 +1,6 @@
 ---
 title: Anzeigen und Ändern von Replikationssicherheitseinstellungen | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie die Einstellungen für die Replikationssicherheit in SQL Server mithilfe von SQL Server Management Studio, Transact-SQL oder Replikationsverwaltungsobjekten anzeigen und ändern können.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f74883ab152ca1552d1193f204fc0af3a72cdb8f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 11d2020fff776707da786babb18c07a0a7ab20b1
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287232"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159468"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Anzeigen und Ändern von Replikationssicherheitseinstellungen
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   In diesem Thema wird beschrieben, wie die Replikationssicherheitseinstellungen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden. Die Verbindung des Protokolllese-Agents mit dem Verleger ist beispielsweise als SQL Server-Authentifizierung festgelegt, und Sie möchten Sie zu Integrierte Windows-Authentifizierung ändern, oder Sie müssen die zum Ausführen eines Agentauftrags verwendeten Anmeldeinformationen ändern, weil sich das Kennwort eines Windows-Kontos geändert hat. Informationen zu den für die jeweiligen Agents erforderlichen Berechtigungen finden Sie unter [Sicherheitsmodell des Replikations-Agents](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  **In diesem Thema**  
@@ -64,13 +65,13 @@ ms.locfileid: "76287232"
   
 1.  Im Dialogfeld **Replikationskennwörter aktualisieren** , das über den Ordner **Replikation** von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verfügbar ist. Wenn Sie das Kennwort eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - oder Windows-Kontos auf einem Server der Replikationstopologie ändern, verwenden Sie am besten dieses Dialogfeld, anstatt die Kennwörter jedes Agents, der dieses Konto verwendet, einzeln zu aktualisieren. Wenn jedoch Agents dasselbe Konto auf mehreren Servern verwenden, müssen Sie mit jedem Server eine Verbindung herstellen und das Kennwort ändern. Das Kennwort wird überall aktualisiert, wo es die Replikation verwendet. Das Kennwort wird nicht an anderen Orten, wie z. B. auf Verbindungsservern, aktualisiert.  
   
-2.  Auf der Seite **Agentsicherheit** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** . Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+2.  Auf der Seite **Agentsicherheit** des Dialogfelds **Veröffentlichungseigenschaften - \<Publication>** . Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 3.  Im Dialogfeld **Abonnementeigenschaften - \<Subscription>** . Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) und [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
 4.  In den Dialogfeldern **Verteilereigenschaften - \<Distributor>** und **Eigenschaften der Verteilungsdatenbank - \<Database>** . Weitere Informationen zum Zugreifen auf diese Dialogfelder finden Sie unter [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
-5.  Im Dialogfeld **Verlegereigenschaften - \<Verleger>** . Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
+5.  Im Dialogfeld **Verlegereigenschaften - \<Publisher>** . Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
 
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>So ändern Sie das Kennwort für ein Konto, das von einem oder mehreren Agent(s) verwendet wird  
   
@@ -89,7 +90,7 @@ ms.locfileid: "76287232"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>So ändern Sie die Sicherheitseinstellungen für den Momentaufnahme-Agent  
   
-1.  Klicken Sie auf der Seite **Agentsicherheit** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf die Schaltfläche **Sicherheitseinstellungen** neben dem Textfeld **Momentaufnahme-Agent**.  
+1.  Klicken Sie auf der Seite **Agentsicherheit** des Dialogfelds **Veröffentlichungseigenschaften - \<Publication>** auf die Schaltfläche **Sicherheitseinstellungen** neben dem Textfeld **Momentaufnahme-Agent**.  
   
 2.  Geben Sie im Dialogfeld **Sicherheit für den Momentaufnahme-Agent** das Konto an, unter dem der Agent ausgeführt werden soll.  
   
@@ -110,7 +111,7 @@ ms.locfileid: "76287232"
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>So ändern Sie die Sicherheitseinstellungen für den Protokolllese-Agent  
   
-1.  Klicken Sie auf der Seite **Agentsicherheit** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf die Schaltfläche **Sicherheitseinstellungen** neben dem Textfeld **Protokolllese-Agent**.  
+1.  Klicken Sie auf der Seite **Agentsicherheit** des Dialogfelds **Veröffentlichungseigenschaften - \<Publication>** auf die Schaltfläche **Sicherheitseinstellungen** neben dem Textfeld **Protokolllese-Agent**.  
   
 2.  Geben Sie im Dialogfeld **Sicherheit für den Protokolllese-Agent** das Konto an, unter dem der Agent ausgeführt werden soll.  
   
@@ -186,7 +187,7 @@ ms.locfileid: "76287232"
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>So ändern Sie das Konto, unter dem der Warteschlangenlese-Agent ausgeführt wird  
   
-1.  Klicken Sie auf der Seite **Allgemein** des Dialogfelds **Verteilereigenschaften - \<Distributor>** auf die Schaltfläche mit den drei Punkten ( **...** ) neben der Verteilungsdatenbank.  
+1.  Klicken Sie auf der Seite **Allgemein** des Dialogfelds **Verteilereigenschaften – \<Distributor>** auf die Eigenschaftenschaltfläche ( **...** ) neben der Verteilungsdatenbank.  
   
 2.  Klicken Sie im Dialogfeld **Eigenschaften der Verteilungsdatenbank - \<Database>** auf die Schaltfläche **Sicherheitseinstellungen** neben dem Textfeld **Agentprozesskonto**.  
   
@@ -203,7 +204,7 @@ ms.locfileid: "76287232"
   
 #### <a name="to-change-the-context-under-which-the-queue-reader-agent-makes-connections-to-the-publisher"></a>So ändern Sie den Kontext, in dem der Warteschlangenlese-Agent Verbindungen zum Verleger herstellt  
   
-1.  Klicken Sie auf der Seite **Verleger** des Dialogfelds **Verteilereigenschaften - \<Distributor>** auf die Schaltfläche mit den drei Punkten ( **…** ) neben dem Verleger.  
+1.  Klicken Sie auf der Seite **Verleger** des Dialogfelds **Verteilereigenschaften - \<Distributor>** auf die Schaltfläche mit den drei Punkten ( **…** ) neben einem Verleger.  
   
 2.  Geben Sie im Abschnitt **Agentverbindung mit dem Verleger** den Wert **Identität des Agentprozesskontos annehmen** oder **SQL Server-Authentifizierung** für die Option **Agentverbindungsmodus** an. Wenn Sie **SQL Server-Authentifizierung**angeben, müssen Sie auch Werte für **Anmeldung** und **Kennwort**eingeben.  
   
@@ -218,7 +219,7 @@ ms.locfileid: "76287232"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>So ändern Sie die Sicherheitseinstellungen für ein Pullabonnement mit sofortigem Update  
   
-1.  Klicken Sie im Dialogfeld **Abonnementeigenschaften – \<Abonnement>** auf dem Abonnenten auf die Zeile **Verlegerverbindung**, und klicken Sie dann in der Zeile auf die Eigenschaftenschaltfläche ( **&#x2026;** ).  
+1.  Klicken Sie im Dialogfeld **Abonnementeigenschaften - \<Subscription>** auf dem Abonnenten auf die Zeile **Verlegerverbindung**, und klicken Sie dann in der Zeile auf die Schaltfläche mit den drei Punkten ( **&#x2026;** ).  
   
 2.  Wählen Sie im Dialogfeld **Verbindungsinformationen eingeben** eine der folgenden Optionen aus:  
   
@@ -239,7 +240,7 @@ ms.locfileid: "76287232"
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-3.  Geben Sie auf der Seite **Allgemein** des Dialogfelds **Verlegereigenschaften - \<Verleger>** in die Textfelder **Kennwort** und **Kennwort bestätigen** ein sicheres Kennwort ein.  
+3.  Geben Sie auf der Seite **Allgemein** des Dialogfelds **Verlegereigenschaften - \<Publisher>** in die Textfelder **Kennwort** und **Kennwort bestätigen** ein sicheres Kennwort ein.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

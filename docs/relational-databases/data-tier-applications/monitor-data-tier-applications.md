@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ee30e1ce318276d9cf5bd7af3d13e291bfa2ea06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a07244e6f34dc8b6ec645bb31517e739b32265d
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781666"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406123"
 ---
 # <a name="monitor-data-tier-applications"></a>Überwachen von Datenebenenanwendungen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Eine Datenebenenanwendung (DAC) kann vom **Hilfsprogramm-Explorer** und **Objekt-Explorer** zusammen mit Systemsichten und -tabellen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) überwacht werden. Zusätzlich können alle Objekte der in der DAC enthaltenen Datenbank mithilfe standardmäßiger Datenbank- und [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Überwachungsverfahren überwacht werden.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
- Beim Bereitstellen einer DAC in einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] werden Informationen über die bereitgestellte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Sie können dann grundlegende Integritätsinformationen zur DAC mit dem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Hilfsprogramm-Explorer**in** anzeigen.  
+ Beim Bereitstellen einer DAC in einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] werden Informationen über die bereitgestellte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Sie können dann grundlegende Integritätsinformationen zur DAC mit dem **Hilfsprogramm-Explorer** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] anzeigen.  
   
  Der SSMS- **Objekt-Explorer** zeigt grundlegende Konfigurationsinformationen zu den einzelnen DACs an, die auf einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]bereitgestellt werden, unabhängig von, ob die Instanz im SQL Server-Hilfsprogramm verwaltet wird. Darüber hinaus kann die Datenbank, die mit einer bereitgestellten DAC verknüpft ist, mit den gleichen Prozeduren zum Überwachen aller Datenbanken überwacht werden.  
   
 ## <a name="using-the-sql-server-utility"></a>Verwenden des SQL Server-Hilfsprogramms  
- Auf der Detailseite **Bereitgestellte Datenschichtanwendungen** im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Hilfsprogramm-Explorer**von** wird ein Dashboard angezeigt, das über die Ressourcenverwendung aller DACs berichtet, die in den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanzen bereitgestellt wurden. Im oberen Bereich der Detailseite wird jede bereitgestellte DAC mit visuellen Indikatoren aufgeführt, die aufzeigen, ob die Nutzungswerte der CPU und der Dateiressourcen außerhalb der für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm definierten Richtlinien liegen. Wenn Sie eine DAC in der Listenansicht auswählen, werden weitere Details auf Registerkarten im unteren Bereich der Seite angezeigt. Weitere Informationen zu den auf der Detailseite angezeigten Informationen finden Sie unter [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ Auf der Detailseite **Bereitgestellte Datenschichtanwendungen** im **Hilfsprogramm-Explorer** von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] wird ein Dashboard angezeigt, das über die Ressourcenverwendung aller DACs berichtet, die in den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanzen bereitgestellt wurden. Im oberen Bereich der Detailseite wird jede bereitgestellte DAC mit visuellen Indikatoren aufgeführt, die aufzeigen, ob die Nutzungswerte der CPU und der Dateiressourcen außerhalb der für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm definierten Richtlinien liegen. Wenn Sie eine DAC in der Listenansicht auswählen, werden weitere Details auf Registerkarten im unteren Bereich der Seite angezeigt. Weitere Informationen zu den auf der Detailseite angezeigten Informationen finden Sie unter [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
  Nachdem Sie mithilfe der Detailseite **Bereitgestellte Datenebenenanwendungen** schnell die DACs ermittelt haben, bei denen eine Unter- oder Überauslastung der Hardwareressource vorliegt, können Sie Pläne zur Lösung eines bestimmten Problems erarbeiten. Mehrere DACs, die ihre aktuellen Hardwareressourcen nicht vollständig ausnutzen, könnten auf einem einzelnen Server konsolidiert werden, sodass einige der Server für andere Zwecke freigegeben werden. Wenn eine DAC die Ressourcen auf ihrem aktuellen Server überbeansprucht, kann sie auf einen größeren Server umgelagert werden, oder Sie können dem aktuellen Server weitere Ressourcen hinzufügen.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "85781666"
   
 1.  Wählen Sie das Menü **Ansicht/Objekt-Explorer** aus.  
   
-2.  Stellen Sie im Bereich "Objekt-Explorer" eine Verbindung mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+2.  Stellen Sie im Bereich „Objekt-Explorer“ eine Verbindung mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 3.  Wählen Sie das Menü **Ansicht/Details zum Objekt-Explorer** aus.  
   
