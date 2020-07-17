@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 5c43d6da25aa93b146346ff45057edba9445ebab
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3812f2f7e2f41259416147e969ceb90e395b5bbb
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629097"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279496"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "81629097"
 
 Dieser Befehl aktiviert mehrere Einstellungen für die Datenbankkonfiguration auf der Ebene **einzelner Datenbanken**. 
 
-Die folgenden Einstellungen werden in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] sowie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] unterstützt: 
+Die folgenden Einstellungen werden, wie durch die Zeile **GILT FÜR** für jede Einstellung im Abschnitt [Argumente](#arguments) angegeben, in [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt: 
 
 - Löschen des Prozedurcaches.
 - Festlegen des MAXDOP-Parameters auf einen beliebigen Wert (1,2, ...) für die primäre Datenbank, basierend auf dem, was am besten für diese bestimmte Datenbank ist, und Festlegen eines anderen Werts (z. B. 0) für alle verwendeten sekundären Datenbanken (z. B. für Berichtsabfragen).
@@ -56,6 +56,7 @@ Die folgenden Einstellungen werden in [!INCLUDE[sssdsfull](../../includes/sssdsf
 - Aktivieren oder Deaktivieren der neuen `String or binary data would be truncated`-Fehlermeldung
 - Aktivieren oder Deaktivieren des letzten tatsächlichen Ausführungsplans in [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)
 - Geben Sie die Anzahl der Minuten an, in denen ein angehaltener fortsetzbarer Indexvorgang angehalten wird, bevor er von der SQL Server-Engine automatisch abgebrochen wird.
+- Aktivieren oder Deaktivieren des Wartens auf Sperren mit niedriger Priorität für asynchrone Statistikupdates
 
 Diese Einstellung ist nur in Azure Synapse Analytics (ehemals SQL DW) verfügbar.
 - Festlegen des Kompatibilitätsgrads von Benutzerdatenbanken
@@ -101,6 +102,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
     | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
+    | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
 }
 ```
 
@@ -110,8 +112,8 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` wurde in `BATCH_MODE_MEMORY_GRANT_FEEDBACK` geändert
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` wurde in `BATCH_MODE_ADAPTIVE_JOINS` geändert
 
-```syntaxsql
--- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+```SQL
+-- Syntax for Azure Synapse Analytics (Formerly SQL DW)
 
 ALTER DATABASE SCOPED CONFIGURATION
 {
@@ -121,7 +123,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } -- Preview 
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } 
 }
 ```
 
@@ -189,6 +191,8 @@ Dieser Wert ist nur für sekundäre Datenbanken gültig, während die betreffend
 <a name="qo_hotfixes"></a> QUERY_OPTIMIZER_HOTFIXES **=** { ON | **OFF** | PRIMARY }
 
 Aktiviert oder deaktiviert Hotfixes für die Abfrageoptimierung unabhängig vom Kompatibilitätsgrad der Datenbank. Die Standardeinstellung ist **OFF**. Sie deaktiviert Hotfixes für Abfrageoptimierer, die nach der Einführung des höchsten verfügbaren Kompatibilitätsgrads für eine bestimmte Version (post-RTM) veröffentlicht wurden. Ein Festlegen dieser Einstellung auf **ON** entspricht der Aktivierung des [Ablaufverfolgungsflags 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+
+**GILT FÜR**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 > [!TIP]
 > Fügen Sie den [Abfragehinweis](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON** hinzu, um dies auf Abfrageebene zu erreichen.
@@ -397,7 +401,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 Ermöglicht es Ihnen, zu steuern, ob ein Prädikat für die [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) (Row-Level Security, RLS) die Kardinalität des Ausführungsplans für die gesamte Benutzerabfrage beeinflusst. Wenn für ISOLATE_SECURITY_POLICY_CARDINALITY ON festgelegt ist, beeinflussen RLS-Prädikate die Kardinalität von Ausführungsplänen nicht. Angenommen, es gibt eine Tabelle mit 1 Million Zeilen und ein RLS-Prädikat, das das Ergebnis für einen bestimmten Benutzer, der die Abfrage durchführt, auf 10 Zeilen beschränkt. Wenn für diese datenbankweite Konfiguration OFF festgelegt ist, schätzt dieses Prädikat die Kardinalität auf 10. Wenn für diese datenbankweite Konfiguration ON festgelegt ist, schätzt die Abfrageoptimierung die Anzahl der Zeilen auf 1 Million. Für die meisten Arbeitsauslastungen wird empfohlen, den Standardwert zu verwenden.
 
-DW_COMPATIBILITY_LEVEL (Vorschau) **=** {**AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
 
 **GILT FÜR**: nur Azure Synapse Analytics (ehemals SQL DW)
 
@@ -405,13 +409,19 @@ Dieses Argument legt fest, dass das Transact-SQL- und Abfrageverarbeitungsverhal
 
 |Kompatibilitätsgrad    |   Kommentare|  
 |-----------------------|--------------|
-|**AUTO**| Standard.  Der Wert entspricht dem zuletzt unterstützten Kompatibilitätsgrad.|
+|**AUTO**| Standard.  Der Wert wird automatisch von der Synapse Analytics-Engine aktualisiert.  Der aktuelle Wert ist 20.|
 |**10**| Bei diesem Wert wird das Transact-SQL- und Abfrageverarbeitungsverhalten ausgeführt, bevor Kompatibilitätsgradunterstützung eingeführt wird.|
 |**20**| Hierbei handelt es sich um den ersten Kompatibilitätsgrad mit geschlossenem Transact-SQL- und Abfrageverarbeitungsverhalten. |
 
+ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
+
+**GILT FÜR**: Azure SQL-Datenbank (das Feature ist in der öffentlichen Vorschauversion verfügbar)
+
+Wenn das asynchrone Statistikupdate aktiviert ist, bewirkt das Aktivieren dieser Konfiguration, dass der Hintergrundprozess zum Aktualisieren von Statistiken in einer Warteschlange mit niedriger Priorität auf eine Sch-M-Sperre wartet, um zu verhindern, dass andere Sitzungen in Szenarios mit hoher Parallelität blockiert werden. Weitere Informationen finden Sie unter [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async).
+
 ## <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
 
-`ALTER ANY DATABASE SCOPE CONFIGURATION` ist auf der Datenbank erforderlich. Diese Berechtigung kann von einem Benutzer mit CONTROL-Berechtigung für eine Datenbank erteilt werden.
+`ALTER ANY DATABASE SCOPED CONFIGURATION` ist auf der Datenbank erforderlich. Diese Berechtigung kann von einem Benutzer mit CONTROL-Berechtigung für eine Datenbank erteilt werden.
 
 ## <a name="general-remarks"></a>Allgemeine Hinweise
 
@@ -419,7 +429,7 @@ Während Sie sekundäre Datenbanken so konfigurieren können, dass sie verschied
 
 Durch die Ausführung dieser Anweisung wird der Prozedurcache in der aktuellen Datenbank geleert. Dies bedeutet, dass alle Abfragen erneut kompiliert werden müssen.
 
-Bei Abfragen für dreiteilige Namen werden die Einstellungen für die aktuelle Datenbankverbindung berücksichtigt. Eine Ausnahme stellen SQL-Module dar (z.B. Prozeduren, Funktionen und Trigger), die im aktuellen Datenbankkontext kompiliert werden, weshalb die Optionen der Datenbank verwendet werden, in der sie sich befinden.
+Bei Abfragen für dreiteilige Namen werden die Einstellungen für die aktuelle Datenbankverbindung berücksichtigt. Eine Ausnahme stellen SQL-Module dar (z. B. Prozeduren, Funktionen und Trigger), die in einem anderen Datenbankkontext kompiliert werden, weshalb die Optionen der Datenbank verwendet werden, in der sie sich befinden. Gleichermaßen wird beim asynchronen Aktualisieren von Statistiken die Einstellung „ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY“ für die Datenbank berücksichtigt, in der sich die Statistiken befinden.
 
 Das Ereignis `ALTER_DATABASE_SCOPED_CONFIGURATION` wird als DLL-Ereignis hinzugefügt, mit dem ein DDL-Trigger ausgelöst werden kann, und ist ein untergeordnetes Ereignis der Triggergruppe `ALTER_DATABASE_EVENTS`.
 

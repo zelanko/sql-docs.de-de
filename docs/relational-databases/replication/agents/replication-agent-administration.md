@@ -1,5 +1,6 @@
 ---
 title: Replikations-Agent-Verwaltung | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Replikations-Agents verwalten, die Tasks für die Replikation durchführen, z. B. das Erstellen von Schema- und Datenkopien sowie die Weitergabe von Änderungen zwischen Servern.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -23,15 +24,15 @@ ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 43b3c6759f4ea213acf8bed789d67ff4952b4ae8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0a59dff4420aa4cab9a7ce62a99315196007691
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288155"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159688"
 ---
 # <a name="replication-agent-administration"></a>Replikations-Agent-Verwaltung
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Die Replikations-Agents führen viele der der Replikation zugeordneten Aufgaben aus. Zu diesen Aufgaben gehören das Erstellen von Kopien des Schemas und der Daten, das Ermitteln von Aktualisierungen auf dem Verleger oder dem Abonnenten und das Weitergeben von Änderungen zwischen Servern. Standardmäßig werden die Replikations-Agents unter [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agentauftragsschritten ausgeführt. Bei den Agents handelt es sich einfach nur um ausführbare Dateien, d. h., sie können auch direkt von der Befehlszeile und von Batchskripts aus aufgerufen werden. Jeder Replikations-Agent unterstützt einen Satz von Laufzeitparametern, mit denen gesteuert wird, wie der Agent ausgeführt wird. Diese Parameter werden in einem Agentprofil oder auf der Befehlszeile angegeben.  
   
 > [!IMPORTANT]  

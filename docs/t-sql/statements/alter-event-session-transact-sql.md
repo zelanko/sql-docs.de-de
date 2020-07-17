@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 08454c76591d7cfb12eff07d3a05d706bd7bfe44
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1227c893dbbb3999182140e6b63a9f74206c4ec4
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628393"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301865"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Startet oder beendet eine Ereignissitzung oder ändert die Konfiguration einer Ereignissitzung.  
   
@@ -114,7 +114,9 @@ ON SERVER
 }  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
   
 |||  
 |-|-|  
@@ -133,7 +135,7 @@ ON SERVER
 |ADD TARGET \<event_target_specifier>|Ordnet das mit \<event_target_specifier> bestimmte Ziel der Ereignissitzung zu.|
 |[*event_module_guid*].*event_package_name*.*target_name*|Der Name eines Ziels in der Ereignissitzung, wobei Folgendes gilt:<br /><br /> -   *event_module_guid* ist die GUID für das Modul, das das Ereignis enthält.<br />-   *event_package_name* ist das Paket, das das Aktionsobjekt enthält.<br />-   *target_name* ist die Aktion. Aktionen werden in der sys.dm_xe_objects-Sicht als object_type 'target' angezeigt.|  
 |SET { *target_parameter_name*= \<value> [, ...*n*] }|Legt einen Zielparameter fest. Zielparameter werden in der sys.dm_xe_object_columns-Sicht mit column_type 'customizable' und object_name = *target_name* angezeigt.<br /><br /> **HINWEIS!** Wenn Sie ein Ringpufferziel verwenden, sollten Sie den max_memory-Zielparameter auf 2048 Kilobytes (KB) festlegen, um ein mögliches Abschneiden der Daten in der XML-Ausgabe zu vermeiden. Informationen zur Verwendung von unterschiedlichen Zieltypen finden Sie unter [Ziele für erweiterte Ereignisse von SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
-|DROP TARGET \<event_target_specifier>|Löscht das durch \<event_target_specifier> angegebene Ziel. \<event_target_specifier> muss in der Ereignissitzung gültig sein.|  
+|DROP TARGET \<event_target_specifier>|Löscht das mit \<event_target_specifier> bestimmte Ziel. \<event_target_specifier> muss in der Ereignissitzung gültig sein.|  
 |EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** &#124; ALLOW_MULTIPLE_EVENT_LOSS &#124; NO_EVENT_LOSS }|Gibt den Ereignisbeibehaltungsmodus an, der zum Behandeln von Ereignisverlusten verwendet werden soll.<br /><br /> **ALLOW_SINGLE_EVENT_LOSS**<br /> Ein Ereignis der Sitzung darf verloren gehen. Ein einzelnes Ereignis wird nur gelöscht, wenn alle Ereignispuffer gefüllt sind. Wenn bei gefüllten Ereignispuffern nur ein Ereignis verloren geht, sind akzeptable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsmerkmale möglich, während Datenverluste im verarbeiteten Ereignisdatenstrom minimiert werden.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS<br /> Volle Ereignispuffer, die mehrere Ereignisse enthalten, dürfen in der Sitzung verloren gehen. Die Anzahl verloren gegangener Ereignisse hängt von der Größe des Speichers, der der Sitzung zugeordnet ist, der Partitionierung des Speichers und der Größe der Ereignisse im Puffer ab. Die Option minimiert die Leistungseinbußen auf dem Server, wenn Ereignispuffer schnell gefüllt werden, jedoch große Mengen von Ereignissen in der Sitzung verloren gehen können.<br /><br /> NO_EVENT_LOSS<br /> Verluste von Ereignissen sind nicht zulässig. Diese Option stellt sicher, dass alle ausgelösten Ereignisse beibehalten werden. Wenn diese Option verwendet wird, müssen alle Tasks, die Ereignisse auslösen, warten, bis in einem Ereignispuffer Platz verfügbar wird. Dies kann spürbare Leistungsprobleme verursachen, während die Ereignissitzung aktiv ist. Möglicherweise werden Benutzerverbindungen blockiert, während auf das Leeren von Ereignissen aus dem Puffer gewartet wird.|  
 |MAX_DISPATCH_LATENCY = { *seconds* SECONDS &#124; **INFINITE** }|Gibt an, wie lange Ereignisse zwischengespeichert werden, bevor sie an Ereignissitzungsziele gesendet werden. Der Latenzzeitwert muss mindestens 1 Sekunde betragen. Mit dem Wert 0 kann jedoch eine INFINITE-Latenzzeit angegeben werden. Standardmäßig ist dieser Wert auf 30 Sekunden festgelegt.<br /><br /> *seconds* SECONDS<br /> Die Wartezeit in Sekunden, bevor die Puffer geleert werden und ihr Inhalt an die Ziele gesendet wird. *seconds* ist eine ganze Zahl.<br /><br /> **INFINITE**<br /> Die Puffer werden nur dann geleert und ihr Inhalt an die Ziele gesendet, wenn die Puffer voll sind oder wenn die Ereignissitzung geschlossen wird.<br /><br /> **HINWEIS!** MAX_DISPATCH_LATENCY = 0 SECONDS entspricht MAX_DISPATCH_LATENCY = INFINITE.|  
 |MAX_EVENT_SIZE =*size* [ KB &#124; **MB** ]|Gibt die maximal zulässige Größe für Ereignisse an. MAX_EVENT_SIZE sollte so festgelegt werden, dass nur einzelne Ereignisse zugelassen werden, deren Wert den von MAX_MEMORY überschreitet. Ist der festgelegte Wert kleiner als der von MAX_MEMORY, wird ein Fehler ausgelöst. *size* ist eine ganze Zahl und kann in Kilobyte (KB) oder Megabyte (MB) angegeben werden. Wenn *size* in Kilobyte angegeben wird, ist die geringste zulässige Größe 64 KB. Wenn MAX_EVENT_SIZE festgelegt wird, werden zusätzlich zu MAX_MEMORY zwei Puffer von *size* erstellt. Dies bedeutet, dass der gesamte für die Ereignispufferung verwendete Arbeitsspeicher dem Wert von MAX_MEMORY + 2 * MAX_EVENT_SIZE entspricht.|  

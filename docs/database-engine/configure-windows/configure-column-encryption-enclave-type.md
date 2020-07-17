@@ -11,15 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e16bbd33d9353c02cf72e3c931a5d8749197f5d
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 39ad6bdc8911a0596d619f6d6a68de07d733dd6f
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818360"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279416"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Konfigurieren des Enclave-Typs für die Always Encrypted-Serverkonfigurationsoption
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 In diesem Artikel wird beschrieben, wie Sie eine Secure Enclave für Always Encrypted mit Secure Enclaves aktivieren oder deaktivieren. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 

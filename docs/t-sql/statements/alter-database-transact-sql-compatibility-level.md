@@ -24,16 +24,16 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba279273a8e0a477f24cc204abee7f29e2420e1e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7c690545847979fcd50f2de23aca201eed067d5a
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629178"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302049"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Legt für [!INCLUDE[tsql](../../includes/tsql-md.md)] und Verhalten bei der Abfrageverarbeitung fest, dass sie mit der angegebenen Version der SQL-Engine kompatibel sein müssen. Informationen zu anderen ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
 
@@ -45,6 +45,8 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
 ALTER DATABASE database_name
 SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumente
 

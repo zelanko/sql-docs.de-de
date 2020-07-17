@@ -1,5 +1,6 @@
 ---
 title: Sichern und Wiederherstellen von replizierten Datenbanken | Microsoft-Dokumentation
+description: In diesem Artikel finden Sie eine Übersicht über Informationen und Links zu weiteren Informationen über die Strategien für die Sicherung und Wiederherstellung für alle Replikationstypen in SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,15 +27,15 @@ ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0be4de8a2496bfc1c6f08c0207a64d486c9ed9c5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 92b64522b9a93f4f58d269c5cfb429478ae660d6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286857"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160038"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Sichern und Wiederherstellen von replizierten Datenbanken
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   Bei replizierten Datenbanken gibt es besondere Aspekte im Hinblick auf das Sichern und Wiederherstellen von Daten. In diesem Thema finden Sie einleitende Informationen sowie Verweise auf weitere Informationen in Bezug auf Sicherungs- und Wiederherstellungsstrategien für die einzelnen Replikationstypen.  
   

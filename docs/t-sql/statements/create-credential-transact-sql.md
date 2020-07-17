@@ -24,16 +24,16 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 94b2e39d9767a8f75660b533231e5fe4ac16d8de
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4690f82c1ae731a25edce6dbe0b36d7b31d448f2
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633258"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392828"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Erstellt Anmeldeinformationen auf Serverebene. Anmeldeinformationen sind in einem Datensatz gespeichert, in dem die Authentifizierungsinformationen enthalten sind, die zum Herstellen einer Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. Die meisten Anmeldeinformationen schließen einen Windows-Benutzer und ein Kennwort ein. Wenn Sie z.B. eine Datensicherung an einem beliebigen Speicherort speichern, erfordert SQL Server möglicherweise die Eingabe von besonderen Anmeldeinformationen, damit auf diesen Speicherort zugegriffen werden kann. Weitere Informationen finden Sie unter [Anmeldeinformationen (Datenbank-Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
@@ -51,6 +51,8 @@ WITH IDENTITY = 'identity_name'
         [ FOR CRYPTOGRAPHIC PROVIDER cryptographic_provider_name ]
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumente
 
 *credential_name* Gibt den Namen für die zu erstellenden Anmeldeinformationen an. *credential_name* darf nicht mit dem Nummernzeichen (#) beginnen. Systemanmeldeinformationen beginnen mit zwei Nummernzeichen (##). 
@@ -65,7 +67,7 @@ IDENTITY **='** _identity\_name_ **'** Gibt den Namen des Kontos an, das beim He
 
 SECRET **='** _secret_ **'** Gibt den geheimen Schlüssel an, der für die ausgehende Authentifizierung erforderlich ist.
 
-Wenn die Anmeldeinformationen zum Zugreifen auf Azure Key Vault verwendet werden, müssen an das **SECRET**-Argument von **CREATE CREDENTIAL** die *\<Client-ID>* (ohne Bindestriche) und der *\<geheime Schlüssel>* eines **Dienstprinzipals** in Azure Active Directory zusammen, ohne Leerzeichen dazwischen, übergeben werden. Weitere Informationen finden Sie unten im Beispiel C. Wenn die Anmeldeinformationen eine Shared Access Signature (SAS) verwenden, ist **SECRET** das freigegebene SAS-Token. Siehe Beispiel D. Informationen über das Erstellen einer gespeicherten Zugriffsrichtlinie und einer Shared Access Signature (SAS) in einem Azure-Container finden Sie unter [Lektion 1: Erstellen einer gespeicherten Zugriffsrichtlinie und von Speicher mit freigegebenem Zugriff](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage).
+Wenn die Anmeldeinformationen zum Zugreifen auf Azure Key Vault verwendet werden, müssen an das **SECRET**-Argument von **CREATE CREDENTIAL** die *\<Client ID>* (ohne Bindestriche) und der *\<Secret>* eines **Dienstprinzipals** in Azure Active Directory zusammen, ohne Leerzeichen dazwischen, übergeben werden. Weitere Informationen finden Sie unten im Beispiel C. Wenn die Anmeldeinformationen eine Shared Access Signature (SAS) verwenden, ist **SECRET** das freigegebene SAS-Token. Siehe Beispiel D. Informationen über das Erstellen einer gespeicherten Zugriffsrichtlinie und einer Shared Access Signature (SAS) in einem Azure-Container finden Sie unter [Lektion 1: Erstellen einer gespeicherten Zugriffsrichtlinie und von Speicher mit freigegebenem Zugriff](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage).
 
 OR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name* Gibt den Namen eines *EKM-Anbieters (Enterprise Key Management)* an. Weitere Informationen zum Verwalten von Schlüsseln finden Sie unter [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).
 
@@ -117,7 +119,7 @@ ADD CREDENTIAL CredentialForEKM;
 Im folgenden Beispiel werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldeinformationen erstellt, die das [!INCLUDE[ssDE](../../includes/ssde-md.md)] beim Zugreifen auf Azure Key Vault mit dem **SQL Server-Connector für Microsoft Azure Key Vault** verwenden soll. Ein vollständiges Beispiel zur Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Connectors finden Sie unter [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).
 
 > [!IMPORTANT]
-> Das **IDENTITY** -Argument von **CREATE CREDENTIAL** erfordert den Schlüsseltresornamen. An das **SECRET**-Argument von **CREATE CREDENTIAL** müssen die *\<Client-ID>* (ohne Bindestriche) und der *\<geheime Schlüssel>* zusammen, ohne Leerzeichen dazwischen, übergeben werden.
+> Das **IDENTITY** -Argument von **CREATE CREDENTIAL** erfordert den Schlüsseltresornamen. An das **SECRET**-Argument von **CREATE CREDENTIAL** müssen die *\<Client ID>* (ohne Bindestriche) und der *\<Secret>* zusammen, ohne Leerzeichen dazwischen, übergeben werden.
 
  Im folgenden Beispiel wird die **Client-ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) von den Bindestrichen bereinigt und als Zeichenfolge `EF5C8E094D2A4A769998D93440D8115D` eingegeben. Der **geheime Schlüssel** wird durch die Zeichenfolge *SECRET_DBEngine*dargestellt.
 

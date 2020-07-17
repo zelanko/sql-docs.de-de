@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa73be808ed074ffcdb412119a676a1a4ce7f8f3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 359f2bdba7722c5ff30490d2648f68bf4b2c3db5
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767130"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392728"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
@@ -105,6 +105,8 @@ ON { SERVER | DATABASE }
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumente
 
 *event_session_name* ist der benutzerdefinierte Name für die Ereignissitzung. *event_session_name* ist alphanumerisch, kann bis zu 128 Zeichen enthalten, muss innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eindeutig sein und muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.
@@ -127,7 +129,7 @@ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*
 
 Aktionen werden in der sys.dm_xe_objects-Sicht als object_type 'action' angezeigt.
 
-WHERE \<predicate_expression> gibt den Prädikatausdruck an, mit dessen Hilfe bestimmt wird, ob ein Ereignis verarbeitet werden muss. Wenn \<predicate_expression> den Wert TRUE aufweist, wird das Ereignis von den Aktionen und Zielen für die Sitzung weiter verarbeitet. Wenn \<predicate_expression> den Wert FALSE aufweist, wird das Ereignis von der Sitzung gelöscht, bevor es von den Aktionen und Zielen für die Sitzung verarbeitet wird. Die Länge von Prädikatausdrücken ist auf 3000 Zeichen beschränkt, wodurch die Länge von Zeichenfolgenargumenten eingeschränkt wird.
+WHERE \<predicate_expression> gibt den Prädikatausdruck an, mit dessen Hilfe bestimmt wird, ob ein Ereignis verarbeitet werden muss. Wenn \<predicate_expression> den Wert TRUE aufweist, wird das Ereignis von den Aktionen und Zielen für die Sitzung weiter verarbeitet. Wenn \<predicate_expression> den Wert FALSE hat, wird das Ereignis von der Sitzung gelöscht, bevor es von den Aktionen und Zielen für die Sitzung verarbeitet wird. Die Länge von Prädikatausdrücken ist auf 3000 Zeichen beschränkt, wodurch die Länge von Zeichenfolgenargumenten eingeschränkt wird.
 
 *event_field_name* ist der Name des Ereignisfelds, das die Prädikatquelle identifiziert.
 

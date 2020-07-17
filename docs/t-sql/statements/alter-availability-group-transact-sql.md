@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13f5c8c892729abe0ba0e0a79185b360f0098d07
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: d9a3f6e52547b40adefd2b94ab320ae4784837aa
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150594"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301999"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert eine vorhandene Always On-Verfügbarkeitsgruppe in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die meisten ALTER AVAILABILITY GROUP-Argumente werden nur von dem aktuellen primäre Replikat unterstützt. Die JOIN-, FAILOVER- und FORCE_FAILOVER_ALLOW_DATA_LOSS-Argumente werden hingegen nur auf sekundären Replikaten unterstützt.  
   
@@ -156,7 +156,10 @@ ALTER AVAILABILITY GROUP group_name
   
 ```  
   
-## <a name="arguments"></a>Argumente  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *group_name*  
  Gibt den Namen der neuen Verfügbarkeitsgruppe an. *group_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner und in allen Verfügbarkeitsgruppen im WSFC-Cluster eindeutig sein.  
   
@@ -407,7 +410,7 @@ Legt fest, ob verteilte Transaktionen für diese Verfügbarkeitsgruppe aktiviert
  Keine  
  Gibt an, dass, wenn dieses Verfügbarkeitsreplikat das primäre Replikat ist, schreibgeschütztes Routing nicht unterstützt wird. Dies ist das Standardverhalten. Wenn dieser Wert zusammen mit MODIFY REPLICA ON verwendet wird, aktiviert er ggf. die vorhandene Liste.  
 
- READ_WRITE_ROUTING_URL **=** { **('** \<server_instanz> **')** }  
+ READ_WRITE_ROUTING_URL **=** { **('** \<server_instance> **')** }  
  Gilt für: SQL Server (ab SQL Server 2019 (15.x)) 
 
  Gibt bei Ausführung unter der primären Rolle Serverinstanzen an, die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, die die folgenden Anforderungen erfüllen:

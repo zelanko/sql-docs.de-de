@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d2c0278199684db2355d76c624ed6349e8aefda
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eacfc8eee49f959f0164c9d802cc3f789aed4401
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633958"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392848"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Erstellt einen Ressourcenpool für die Ressourcenkontrolle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ein Ressourcenpool stellt eine Teilmenge der physischen Ressourcen (Arbeitsspeicher, CPUs und E/A) einer Instanz der Datenbank-Engine dar. Mit der Ressourcenkontrolle kann ein Datenbankadministrator Serverressourcen auf Ressourcenpools verteilen, bis zu maximal 64 Pools. Die Ressourcenkontrolle ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -61,7 +61,9 @@ CREATE RESOURCE POOL pool_name
 { NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID }[,...n]  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 *pool_name*  
 Der benutzerdefinierte Name für den Ressourcenpool. *pool_name* ist alphanumerisch, kann bis zu 128 Zeichen enthalten, muss innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eindeutig sein und muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
@@ -81,7 +83,7 @@ AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_no
   
 Fügt den Ressourcenpool an bestimmte Zeitplanungsmodule an. Der Standardwert ist AUTO.  
   
-AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** ordnet den Ressourcenpool den von den angegebenen IDs identifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zeitplänen zu. Den Werten in der scheduler_id-Spalte in [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md) werden diese IDs zugeordnet. 
+AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** ordnet den Ressourcenpool den durch die entsprechenden IDs identifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zeitplänen zu. Den Werten in der scheduler_id-Spalte in [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md) werden diese IDs zugeordnet. 
   
 Wenn Sie AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** verwenden, wird der Ressourcenpool den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zeitplanungsmodulen zugeordnet, die wiederum den physischen CPUs zugeordnet werden, die dem angegebenen NUMA-Knoten oder dem Bereich von Knoten entsprechen. Sie können die Zuordnung zwischen der physischen NUMA-Konfiguration und den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Zeitplanungsmodul-IDs mithilfe der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrage ermitteln. 
   

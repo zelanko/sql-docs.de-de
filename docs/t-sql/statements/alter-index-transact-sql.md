@@ -46,15 +46,16 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: 6c16150f2023a863bbdcbecb138cc7ff6053b26a
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588231"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381214"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Ändert einen vorhandenen Tabellen- oder Sichtindex (Rowstore, Columnstore oder XML), indem der Index deaktiviert, neu erstellt oder neu organisiert wird oder indem Optionen für den Index festgelegt werden.  
   
@@ -173,6 +174,9 @@ ALTER INDEX { index_name | ALL }
 }  
   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumente
 
  *index_name*  
@@ -329,7 +333,7 @@ FILLFACTOR = *fillfactor*
  
  **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
- Gibt einen Prozentwert an, der dem Füllfaktor entspricht. Dieser Faktor legt fest, wie weit die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung auffüllen soll.  *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.  
+ Gibt einen Prozentwert an, der dem Füllfaktor entspricht. Dieser Faktor legt fest, wie weit die [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -änderung auffüllen soll. *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Die Standardeinstellung ist 0. Die Füllfaktorwerte 0 und 100 sind in jeder Hinsicht identisch.  
   
  Eine explizite FILLFACTOR-Einstellung gilt nur bei der erstmaligen Erstellung oder bei der Neuerstellung des Indexes. [!INCLUDE[ssDE](../../includes/ssde-md.md)] hält den angegebenen Prozentsatz des Speicherplatzes nicht dynamisch auf den Seiten frei. Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
@@ -399,7 +403,7 @@ Bei **ON** wird die Statistik pro Partition erstellt. Bei **OFF** wird die Stati
 -   Statistiken, die für interne Tabellen erstellt wurden  
 -   Statistiken, die mit räumlichen Indizes oder XML-Indizes erstellt wurden  
   
- ONLINE **=** { ON | **OFF** } \<wie für rebuild_index_option>  
+ ONLINE **=** { ON | **OFF** } \<as applies to rebuild_index_option>  
  Gibt an, ob die zugrunde liegenden Tabellen und zugeordneten Indizes für Abfragen und Datenänderungen während des Indexvorgangs verfügbar sind. Der Standardwert ist OFF.  
   
  Bei XML-Indizes oder räumlichen Indizes wird nur `ONLINE = OFF` unterstützt, und wenn ONLINE auf ON festgelegt wird, wird ein Fehler ausgelöst.  
@@ -547,13 +551,13 @@ COMPRESSION_DELAY **=** { **0** |*Dauer [Minuten]* }
   
  Gibt die Partitionen an, für die die DATA_COMPRESSION-Einstellung gilt. Wenn der Index nicht partitioniert ist, erzeugt das ON PARTITIONS-Argument einen Fehler. Wenn die ON PARTITIONS-Klausel nicht angegeben wird, gilt die DATA_COMPRESSION-Option für alle Partitionen eines partitionierten Indexes.  
   
- \<partition_number_expression> kann auf die folgenden Weisen angegeben werden:  
+ \<partition_number_expression> kann wie folgt angegeben werden:  
   
 -   Geben Sie die Nummer für eine Partition an, beispielsweise: `ON PARTITIONS (2)`.  
 -   Geben Sie die Partitionsnummern für mehrere einzelne Partitionen durch Kommas getrennt an, beispielsweise: `ON PARTITIONS (1, 5)`.  
 -   Geben Sie sowohl Bereiche als auch einzelne Partitionen an: `ON PARTITIONS (2, 4, 6 TO 8)`.  
   
- Für \<range> können durch das Wort TO getrennte Partitionsnummern angegeben werden, beispielsweise `ON PARTITIONS (6 TO 8)`.  
+ Für \<range> können durch das Wort „TO“ getrennte Partitionsnummern angegeben werden, z. B. `ON PARTITIONS (6 TO 8)`.  
   
  Wenn Sie für verschiedene Partitionen unterschiedliche Datenkomprimierungstypen festlegen möchten, geben Sie die Option DATA_COMPRESSION mehrmals an, beispielsweise:  
   
@@ -566,7 +570,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- ONLINE **=** { ON  | **OFF** } \<wie für single_partition_rebuild_index_option>  
+ ONLINE **=** { ON  | **OFF** } \<as applies to single_partition_rebuild_index_option>  
  Gibt an, ob ein Index oder eine Indexpartition einer zugrunde liegenden Tabelle online oder offline neu erstellt werden kann. Wenn **REBUILD** online ausgeführt wird (**ON**), sind die Daten in dieser Tabelle für Abfragen und Datenänderungen während des Indexvorgangs verfügbar.  Der Standardwert ist **OFF**.  
   
  EIN  
@@ -677,8 +681,8 @@ Wenn `ALLOW_ROW_LOCKS = OFF` und `ALLOW_PAGE_LOCK = OFF` angegeben sind, ist nur
   
 Wenn beim Festlegen der Optionen für Zeilen- oder Seitensperren ALL angegeben ist, werden die Einstellungen auf alle Indizes angewendet. Wenn es sich bei der zugrunde liegenden Tabelle um einen Heap handelt, werden die Einstellungen folgendermaßen angewendet:  
   
-|||  
-|-|-|  
+|Option|Details|
+|------|-------|
 |ALLOW_ROW_LOCKS = ON oder OFF|Für den Heap und alle zugeordneten nicht gruppierten Indizes.|  
 |ALLOW_PAGE_LOCKS = ON|Für den Heap und alle zugeordneten nicht gruppierten Indizes.|  
 |ALLOW_PAGE_LOCKS = OFF|Vollständig für die nicht gruppierten Indizes. Dies bedeutet, dass für die nicht gruppierten Indizes keine Seitensperren zulässig sind. Beim Heap sind nur gemeinsame Sperren (S, Shared), Updatesperren (U, Update) und exklusive Sperren (X, Exclusive) für die Seite unzulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann weiterhin eine beabsichtigte Seitensperre (IS, IU oder IX) für interne Zwecke abrufen.|  
@@ -704,7 +708,7 @@ Die Neuerstellung von Onlineindizes wird als fortsetzbar angegeben, wenn die Opt
 -  Die RESUMABLE-Option wird in den Metadaten nicht für einen bestimmten Index beibehalten und gilt nur für die Dauer der aktuellen DDL-Anweisung. Zum Aktivieren der Fortsetzungsmöglichkeit muss die Klausel RESUMABLE = ON daher explizit angegeben werden.
 -  Die MAX_DURATION-Option wird für die Option RESUMABLE = ON oder die Argumentoption **low_priority_lock_wait** unterstützt. 
    -  MAX_DURATION gibt bei der RESUMABLE-Option das Zeitintervall an, in dem ein Index neu erstellt wird. Sobald dieses Zeitintervall beendet ist, wird die Indexneuerstellung entweder angehalten oder in ihrer Ausführung beendet. Der Benutzer entscheidet, wann die Neuerstellung eines angehaltenen Index fortgesetzt werden kann. Die **Zeitspanne** für MAX_DURATION in Minuten muss größer als 0 Minuten und kleiner oder gleich einer Woche (7 \* 24 \* 60 = 10.080 Minuten) sein. Das lange Anhalten eines Indexvorgangs kann Auswirkungen auf die DML-Leistung für eine bestimmte Tabelle sowie die Datenträgerkapazität der Datenbank haben, da sowohl der ursprüngliche Index als auch der neu erstellte Index Speicherplatz benötigen und während der DML-Vorgänge aktualisiert werden müssen. Wird die MAX_DURATION-Option ausgelassen, dann wird der Indexvorgang bis zum vollständigen Abschluss oder bis ein Fehler auftritt fortgeführt. 
-   -  Mit der Argumentoption \<low_priority_lock_wait> können Sie entscheiden, wie der Indexvorgang fortgesetzt werden kann, wenn er für die Sch-M-Sperre blockiert wird.
+   -  Mit der Argumentoption \<low_priority_lock_wait> können Sie entscheiden, wie der Indexvorgang fortgesetzt werden kann, wenn er für die SCH-M-Sperre blockiert wird.
  
 -  Durch das erneute Ausführen der ursprünglichen ALTER INDEX REBUILD-Anweisung mit denselben Parametern wird ein angehaltener Indexneuerstellungsvorgang fortgesetzt. Auch durch Ausführen der ALTER INDEX RESUME-Anweisung kann ein angehaltener Indexneuerstellungsvorgang fortgesetzt werden.
 -  Die Option SORT_IN_TEMPDB=ON wird für den fortsetzbaren Index nicht unterstützt. 
@@ -751,8 +755,8 @@ Die folgenden Funktionen sind für Indexneuerstellungsvorgänge deaktiviert:
 Für partitionierte Indizes gelten die folgenden Einschränkungen:  
   
 -   Bei Verwendung von ALTER INDEX ALL ... können Sie die Komprimierungseinstellung einer einzelnen Partition nicht ändern, wenn die Tabelle nicht ausgerichtete Indizes aufweist.  
--   Mit der ALTER INDEX \<index> ... REBUILD PARTITION ...-Syntax wird die angegebene Partition des Indexes neu erstellt.  
--   Mit der ALTER INDEX \<index> ... REBUILD WITH ...-Syntax werden alle Partitionen des Indexes neu erstellt.  
+-   Mit der ALTER INDEX \<index> … REBUILD PARTITION ...-Syntax wird die angegebene Partition des Indexes neu erstellt.  
+-   Mit der ALTER INDEX \<index> … REBUILD WITH ...-Syntax werden alle Partitionen des Indexes neu erstellt.  
   
 ## <a name="statistics"></a>Statistik  
  Wenn Sie **ALTER INDEX ALL ...** in einer Tabelle ausführen, werden nur die Statistiken mit zugeordneten Indizes aktualisiert. Automatische oder manuelle Statistiken, die statt eines Indexes in der Tabelle erstellt wurden, werden nicht aktualisiert.  

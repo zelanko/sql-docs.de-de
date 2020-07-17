@@ -1,5 +1,6 @@
 ---
 title: SQL Server Audit (Datenbank-Engine) | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über Serverüberwachungen für die SQL Server-Datenbank-Engine oder eine einzelne Datenbank. Serverüberwachungen enthalten Spezifikationen für Server- und Datenbanküberwachungen.
 ms.custom: ''
 ms.date: 01/01/2020
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f13076ab831dbf3321a60aef8752d88c6193265a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff084ae8b2a34a2f8bcfb7dd8312106a003efa69
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80243410"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159868"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbank-Engine)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   Die *Überwachung* einer Instanz von [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] oder einer einzelnen Datenbank umfasst die Nachverfolgung und Protokollierung von Ereignissen, die in [!INCLUDE[ssDE](../../../includes/ssde-md.md)] auftreten. Mithilfe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit können Serverüberwachungen erstellt werden, die Serverüberwachungsspezifikationen für Ereignisse auf Serverebene sowie Datenbank-Überwachungsspezifikationen für Ereignisse auf Datenbankebene beinhalten können. Überwachte Ereignisse können in die Ereignisprotokolle oder Überwachungsdateien geschrieben werden.  
   
@@ -127,7 +128,7 @@ ms.locfileid: "80243410"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Datenbankspiegelung und SQL Server Audit  
  Eine Datenbank, für die eine Datenbank-Überwachungsspezifikation definiert wurde und für die Datenbankspiegelung verwendet wird, enthält die Datenbank-Überwachungsspezifikation. Die folgenden Elemente müssen konfiguriert werden, damit sie auf der gespiegelten SQL-Instanz ordnungsgemäß arbeitet:  
   
--   Der Spiegelserver muss über eine Überwachung mit der gleichen GUID verfügen, damit die Datenbank-Überwachungsspezifikation Überwachungsdatensätze schreiben kann. Diese Einstellung können Sie mit dem Befehl CREATE AUDIT WITH GUID **=** _\<GUID der Quellserverüberwachung_> konfigurieren.  
+-   Der Spiegelserver muss über eine Überwachung mit der gleichen GUID verfügen, damit die Datenbank-Überwachungsspezifikation Überwachungsdatensätze schreiben kann. Diese Einstellung können Sie mit dem Befehl CREATE AUDIT WITH GUID **=** _\<GUID from source Server Audit_> konfigurieren.  
   
 -   Bei Binärdateizielen muss das Dienstkonto des Spiegelservers über die erforderlichen Berechtigungen für den Speicherort verfügen, an den der Überwachungspfad geschrieben wird.  
   
@@ -214,7 +215,7 @@ ms.locfileid: "80243410"
  [DDL-Trigger](../../../relational-databases/triggers/ddl-triggers.md)  
  Erklärt, wie Sie DDL-Trigger (Data Definition Language) zum Nachverfolgen von Änderungen an den Datenbanken verwenden können.  
   
- [Microsoft TechNet: SQL Server-TechCenter: SQL Server 2005 – Sicherheit und Schutz](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005, Sicherheit und Schutz](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Stellt aktuelle Informationen zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sicherheit bereit.  
   
 ## <a name="see-also"></a>Weitere Informationen  

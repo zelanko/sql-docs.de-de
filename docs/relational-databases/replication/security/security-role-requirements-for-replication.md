@@ -1,5 +1,6 @@
 ---
 title: Sicherheitsrollenanforderungen für die Replikation | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die erforderliche Authentifizierungsebene für gängige Aufgaben zur Replikationseinrichtung und gängige Aufgaben zur Wartung von Replikationen in SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: dea5f4a6c7333452c7c5a74c67445ac3cfb4c60b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb98851eb2dc285c6eab404f862992e2c044c9df
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287299"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159458"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Die Replikation schränkt auf der Basis der Rollen, die dem Benutzernamen des jeweiligen Benutzers zugeordnet sind, die Aktionen ein, die dieser Benutzer ausführen kann. Die Replikation hat der festen Serverrolle **sysadmin** , der festen Datenbankrolle **db_owner** und den Benutzernamen in der Veröffentlichungszugriffsliste bestimmte Berechtigungen erteilt.  
   
 ## <a name="security-role-requirements-for-replication-setup"></a>Sicherheitsrollenanforderungen für die Einrichtung der Replikation  

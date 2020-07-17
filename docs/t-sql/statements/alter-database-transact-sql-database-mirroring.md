@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b19fa67007f68373d2d24fb1bfdfe1a6709adfd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eb2c9c381bc02c043e253aa66f43001f48ebd9e4
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628880"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301809"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE- (Transact-SQL)-Datenbankspiegelung
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!NOTE]
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].
 
-Steuert die Datenbankspiegelung für eine Datenbank. Werte, die mit den Optionen für die Datenbankspiegelung angegeben werden, gelten für Kopien der Datenbank sowie für die gesamte Sitzung zur Datenbankspiegelung. Pro ALTER DATABASE-Anweisung ist nur eine \<database_mirroring_option> erlaubt.
+Steuert die Datenbankspiegelung für eine Datenbank. Werte, die mit den Optionen für die Datenbankspiegelung angegeben werden, gelten für Kopien der Datenbank sowie für die gesamte Sitzung zur Datenbankspiegelung. Pro ALTER DATABASE-Anweisung ist nur eine \<database_mirroring_option>-Option erlaubt.
 
 > [!NOTE]
 > Es empfiehlt sich, die Konfiguration der Datenbankspiegelung außerhalb der Spitzenbetriebszeiten durchzuführen, da sich die Konfiguration auf die Leistung auswirken kann.
@@ -63,6 +63,8 @@ SET { <partner_option> | <witness_option> }
   
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumente
 
 > [!IMPORTANT]
@@ -72,7 +74,7 @@ SET { <partner_option> | <witness_option> }
 
 *database_name* Der Name der Datenbank, die geändert werden soll.
 
-PARTNER \<partner_option> Steuert die Datenbankeigenschaften, die die Failoverpartner einer Datenbank-Spiegelungssitzung und deren Verhalten definieren. Einige Optionen von SET PARTNER können auf einem beliebigen der Partner festgelegt werden, andere sind auf den Prinzipal- oder den Spiegelserver beschränkt. Weitere Informationen finden Sie unter den jeweiligen Optionen von PARTNER weiter unten. Eine SET PARTNER-Klausel wirkt sich auf beide Kopien der Datenbank aus, unabhängig davon, für welchen Partner sie angegeben ist.
+PARTNER \<partner_option> steuert die Datenbankeigenschaften, die die Failoverpartner einer Datenbankspiegelungssitzung und deren Verhalten definieren. Einige Optionen von SET PARTNER können auf einem beliebigen der Partner festgelegt werden, andere sind auf den Prinzipal- oder den Spiegelserver beschränkt. Weitere Informationen finden Sie unter den jeweiligen Optionen von PARTNER weiter unten. Eine SET PARTNER-Klausel wirkt sich auf beide Kopien der Datenbank aus, unabhängig davon, für welchen Partner sie angegeben ist.
 
 Zum Ausführen der SET PARTNER-Anweisung muss die Option STATE der Endpunkte beider Partner auf STARTED festgelegt sein. Außerdem muss ROLE für den Datenbank-Spiegelungsendpunkt jeder Partnerserverinstanz auf PARTNER oder ALL festgelegt sein. Weitere Informationen zum Angeben eines Endpunkts finden Sie unter [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md). Verwenden Sie folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, um die Rolle und den Status des Datenbank-Spiegelungsendpunkts einer Serverinstanz zu erfahren:
 
@@ -83,7 +85,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 **\<partner_option> ::=**
 
 > [!NOTE]
-> Pro SET PARTNER-Klausel ist nur eine \<partner_option> zugelassen.
+> Pro SET PARTNER-Klausel wird nur eine \<partner_option>-Option zugelassen.
 
 **'** _partner_server_ **'** Gibt die Netzwerkadresse des Servers einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz an, die als Failoverpartner in einer neuen Datenbankspiegelungs-Sitzung fungiert. Jede Sitzung erfordert zwei Partner, von denen einer als Prinzipalserver, der andere als Spiegelserver beginnt. Die beiden Partner sollten sich auf unterschiedlichen Computern befinden.
 
@@ -91,11 +93,11 @@ Diese Option wird einmal pro Sitzung für jeden Partner angegeben. Für das Star
 
 Der Wert von *partner_server* ist eine Server-Netzwerkadresse. Diese hat folgende Syntax:
 
-TCP **://** _\<Systemadresse>_ **:** _\<Port>_
+TCP **://** _\<system-address>_ **:** _\<port>_
 
 Hierbei gilt:
 
-- *\<system-address>* ist eine Zeichenfolge, z.B. ein Systemname, ein vollqualifizierter Domänenname oder eine IP-Adresse, die das Zielcomputersystem eindeutig identifiziert.
+- *\<system-address>* ist eine Zeichenfolge, beispielsweise ein Systemname, ein vollqualifizierter Domänenname oder eine IP-Adresse, die das Zielcomputersystem eindeutig identifiziert.
 - *\<port>* ist eine Portnummer, die dem Spiegelungsendpunkt der Partnerserverinstanz zugeordnet ist.
 
 Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse – Datenbankspiegelung](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).
@@ -159,7 +161,7 @@ Sie können die Option TIMEOUT nur auf dem Prinzipalserver angeben. Wenn Sie die
 
 Weitere Informationen finden Sie unter [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).
 
-WITNESS \<witness_option> Steuert die Datenbankeigenschaften, die einen Datenbank-Spiegelungszeugen definieren. Eine SET WITNESS-Klausel wirkt sich auf beide Kopien der Datenbank aus, Sie können SET WITNESS jedoch nur auf dem Prinzipalserver angeben. Wenn ein Zeuge für eine Sitzung festgelegt wird, ist unabhängig von der SAFETY-Einstellung ein Quorum zum Anbieten der Datenbank erforderlich; weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit – Datenbankspiegelung](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).
+WITNESS \<witness_option> steuert die Datenbankeigenschaften, die einen Datenbankspiegelungszeugen definieren. Eine SET WITNESS-Klausel wirkt sich auf beide Kopien der Datenbank aus, Sie können SET WITNESS jedoch nur auf dem Prinzipalserver angeben. Wenn ein Zeuge für eine Sitzung festgelegt wird, ist unabhängig von der SAFETY-Einstellung ein Quorum zum Anbieten der Datenbank erforderlich; weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit – Datenbankspiegelung](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).
 
 Zeuge und Failoverpartner sollten sich auf separaten Computern befinden. Informationen zum Hinzufügen oder Entfernen eines Zeugen finden Sie unter [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md).
 
@@ -177,7 +179,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
  **\<witness_option> ::=**
 
 > [!NOTE]
-> Pro SET WITNESS-Klausel ist nur eine \<witness_option> zugelassen.
+> Pro SET WITNESS-Klausel wird nur eine \<witness_option>-Option zugelassen.
 
  **'** _witness_server_ **'** Gibt eine [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz an, die als Zeugenserver für die Datenbankspiegelungs-Sitzung agiert. Sie können SET WITNESS-Anweisungen nur auf dem Prinzipalserver angeben.
 

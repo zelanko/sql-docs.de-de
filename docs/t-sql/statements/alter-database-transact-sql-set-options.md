@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET-Optionen (Transact-SQL) | Microsoft-Dokumentation
 description: Informationen zum Festlegen von Datenbankoptionen wie automatische Optimierung, Verschlüsselung und Abfragespeicher in SQL Server und Azure SQL-Datenbank
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 482451fbe9a94696f434bd005b95b49e5dd5dd5e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 822cd1efc21dbdeae7a5194bc659f73c00eddb7d
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138280"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159738"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -297,7 +297,7 @@ SET
 Der Name der Datenbank, die geändert werden soll.
 
 CURRENT     
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Führt die Aktion in der aktuellen Datenbank aus. `CURRENT` wird nicht in allen Kontexten für alle Optionen unterstützt. Wenn `CURRENT` einen Fehler verursacht, geben Sie den Datenbanknamen an.
 
@@ -328,7 +328,7 @@ Die Option AUTO_CLOSE ist sehr nützlich für Desktopdatenbanken, da mit ihrer H
 >
 > Für die Datenbankspiegelung muss AUTO_CLOSE deaktiviert sein (OFF).
 
-Wenn die Datenbank auf AUTOCLOSE = ON festgelegt ist, wird mit einem Vorgang, bei dem das automatische Beenden der Datenbank initiiert wird, der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 oder höher enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll für jeden geleerten Cachespeicher im Plancache die folgende Meldung: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
+Wenn die Datenbank auf AUTOCLOSE = ON festgelegt ist, wird mit einem Vorgang, bei dem das automatische Beenden der Datenbank initiiert wird, der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 enthält das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll für jeden geleerten Cachespeicher im Plancache die folgende Meldung: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 EIN     
@@ -344,7 +344,7 @@ Sie können den Status dieser Option ermitteln, indem Sie die Spalte `is_auto_cr
 Weitere Informationen finden Sie im Abschnitt „Verwenden der datenbankweiten Statistikoptionen“ unter [Statistiken](../../relational-databases/statistics/statistics.md).
 
 INCREMENTAL = ON | **OFF**     
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Legen Sie AUTO_CREATE_STATISTICS auf ON und INCREMENTAL auf ON fest. Dadurch werden automatisch erstellte Statistiken als inkrementell festgelegt, wenn inkrementelle Statistiken unterstützt werden. Der Standardwert ist OFF. Weitere Informationen finden Sie unter [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md).
 
@@ -446,7 +446,7 @@ OFF
 Deaktiviert die Änderungsnachverfolgung für die Datenbank. Deaktivieren Sie erst die Änderungsnachverfolgung für alle Tabellen, bevor Sie sie für die Datenbank deaktivieren.
 
 **\<containment_option> ::=**      
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Steuert die Einschlussoptionen für Datenbanken.
 
@@ -489,7 +489,7 @@ Die Zuordnung des Cursors wird implizit nur aufgehoben, wenn die Verbindung getr
 
 Sie können den Status dieser Option ermitteln, indem Sie die Spalte `is_local_cursor_default` in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht untersuchen. Sie können den Status auch durch Untersuchen der `IsLocalCursorsDefault`-Eigenschaft der [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)-Funktion bestimmen.
 
-**\<database_mirroring>**      
+**\<database_mirroring>**     
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Die Argumentbeschreibungen finden Sie unter [ALTER DATABASE-Datenbankspiegelung](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).
@@ -572,7 +572,7 @@ Die Datenbank ist für Lese- und Schreibvorgänge verfügbar.
 Sie müssen über exklusiven Zugriff auf die Datenbank verfügen, um diesen Status zu ändern. Weitere Informationen finden Sie unter der SINGLE_USER-Klausel.
 
 > [!NOTE]
-> Bei Verbunddatenbanken mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ist SET { READ_ONLY | READ_WRITE } deaktiviert.
+> Bei Verbunddatenbanken in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] ist `SET { READ_ONLY | READ_WRITE }` deaktiviert.
 
 **\<db_user_access_option> ::=**      
 Steuert den Benutzerzugriff auf die Datenbank.
@@ -580,7 +580,7 @@ Steuert den Benutzerzugriff auf die Datenbank.
 SINGLE_USER     
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-Gibt an, dass jeweils nur ein Benutzer auf die Datenbank zugreifen kann. Wenn Sie SINGLE_USER angeben und sich andere Benutzer mit der Datenbank verbinden, wird die ALTER DATABASE-Anweisung blockiert, bis alle Benutzer die Verbindung mit der angegebenen Datenbank trennen. Informationen zum Überschreiben dieses Verhaltens finden Sie unter der WITH \<termination>-Klausel.
+Gibt an, dass jeweils nur ein Benutzer auf die Datenbank zugreifen kann. Wenn Sie SINGLE_USER angeben und sich andere Benutzer mit der Datenbank verbinden, wird die ALTER DATABASE-Anweisung blockiert, bis alle Benutzer die Verbindung mit der angegebenen Datenbank trennen. Informationen zur Außerkraftsetzung dieses Verhaltens finden Sie im Abschnitt zur WITH \<termination>-Klausel.
 
 Die Datenbank verbleibt im SINGLE_USER-Modus, selbst wenn sich der Benutzer abmeldet, der die Option festgelegt hat. Dadurch kann ein anderer Benutzer (aber nur einer) eine Verbindung mit der Datenbank herstellen.
 
@@ -601,18 +601,18 @@ Alle Benutzer, die über die entsprechenden Berechtigungen für die Verbindung m
 Sie können den Status dieser Option ermitteln, indem Sie die Spalte `user_access` in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht untersuchen. Sie können den Status auch durch Untersuchen der `UserAccess`-Eigenschaft der [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)-Funktion bestimmen.
 
 **\<delayed_durability_option> ::=**      
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])
 
 Steuert, ob für Transaktionen ein Commit mit vollständiger oder verzögerter Dauerhaftigkeit ausgeführt wird.
 
 DISABLED     
-Alle Transaktionen, die auf SET DISABLED folgen, sind vollständig dauerhaft. Alle Dauerhaftigkeitsoptionen, die in einem Atomic-Block oder einer Commitanweisung festgelegt sind, werden ignoriert.
+Alle Transaktionen nach `SET DISABLED` sind vollständig dauerhaft. Alle Dauerhaftigkeitsoptionen, die in einem Atomic-Block oder einer Commitanweisung festgelegt sind, werden ignoriert.
 
 ALLOWED     
-Alle Transaktionen, die auf SET ALLOWED folgen, sind abhängig von der im Atomic-Block oder der Commitanweisung festgelegten Dauerhaftigkeitsoption entweder vollständig dauerhaft oder verzögert dauerhaft.
+Alle Transaktionen nach `SET ALLOWED` sind abhängig von der im atomischen Block oder der Commitanweisung festgelegten Dauerhaftigkeitsoption entweder vollständig dauerhaft oder verzögert dauerhaft.
 
 FORCED     
-Alle Transaktionen, die auf SET FORCED folgen, sind verzögert dauerhaft. Alle Dauerhaftigkeitsoptionen, die in einem Atomic-Block oder einer Commitanweisung festgelegt sind, werden ignoriert.
+Alle Transaktionen nach `SET FORCED` sind verzögert dauerhaft. Alle Dauerhaftigkeitsoptionen, die in einem Atomic-Block oder einer Commitanweisung festgelegt sind, werden ignoriert.
 
 **\<external_access_option> ::=**      
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -651,7 +651,7 @@ Für das Festlegen dieser Option ist die `CONTROL SERVER`-Berechtigung für die 
 Sie können den Status dieser Option ermitteln, indem Sie die Spalte `is_trustworthy_on` in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht untersuchen.
 
 DEFAULT_FULLTEXT_LANGUAGE     
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Gibt den Standardsprachenwert für volltextindizierte Spalten an.
 
@@ -659,27 +659,27 @@ Gibt den Standardsprachenwert für volltextindizierte Spalten an.
 > Diese Option ist nur zulässig, wenn CONTAINMENT auf PARTIAL festgelegt wurde. Wenn CONTAINMENT auf NONE festgelegt wird, treten Fehler auf.
 
 DEFAULT_LANGUAGE     
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Gibt die Standardsprache für alle neu erstellten Benutzernamen an. Die Sprache kann durch Bereitstellung der lokalen ID (lcid), des Sprachennamens oder des Sprachenalias angegeben werden. Eine Liste mit zulässigen Sprachennamen und -aliasen finden Sie unter [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Diese Option ist nur zulässig, wenn CONTAINMENT auf PARTIAL festgelegt wurde. Wenn CONTAINMENT auf NONE festgelegt wird, treten Fehler auf.
 
 NESTED_TRIGGERS     
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Gibt an, ob ein AFTER-Trigger kaskadiert werden kann, d. h., ob er eine Aktion ausführen kann, durch die ein anderer Trigger initiiert wird, der einen weiteren Trigger initiiert usw. Diese Option ist nur zulässig, wenn CONTAINMENT auf PARTIAL festgelegt wurde. Wenn CONTAINMENT auf NONE festgelegt wird, treten Fehler auf.
 
 TRANSFORM_NOISE_WORDS     
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Wird zum Unterdrücken einer Fehlermeldung verwendet, wenn Füllwörter oder Stoppwörter bewirken, dass eine boolesche Operation für eine Volltextabfrage einen Fehler erzeugt. Diese Option ist nur zulässig, wenn CONTAINMENT auf PARTIAL festgelegt wurde. Wenn CONTAINMENT auf NONE festgelegt wird, treten Fehler auf.
 
 TWO_DIGIT_YEAR_CUTOFF     
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Gibt eine ganze Zahl zwischen 1753 und 9999 an, die das Umstellungsjahr für das Interpretieren zweistelliger Jahre als vierstellige Jahre darstellt. Diese Option ist nur zulässig, wenn CONTAINMENT auf PARTIAL festgelegt wurde. Wenn CONTAINMENT auf NONE festgelegt wird, treten Fehler auf.
 
 **\<FILESTREAM_option> ::=**      
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Steuert die Einstellungen für FileTables.
 
@@ -702,7 +702,7 @@ Ein Windows-kompatibler Verzeichnisname. Dieser Name sollte für alle Verzeichni
 Siehe [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).
 
 **\<mixed_page_allocation_option> ::=**      
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 Steuert, ob die Datenbank die ersten Seiten mit einem gemischten Block für die ersten acht Seiten einer Tabelle oder eines Index erstellen kann.
 
@@ -728,7 +728,7 @@ FORCED
 Die aktuelle Einstellung dieser Option kann mithilfe der Spalte `is_parameterization_forced column` in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht ermittelt werden.
 
 <a name="query-store"></a> **\<query_store_options> ::=**      
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 ON | **OFF** | CLEAR [ ALL ]     
 Überprüft, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers. Weitere Informationen finden Sie unter [Verwendungsszenarios für den Abfragespeicher](../../relational-databases/performance/query-store-usage-scenarios.md).
@@ -736,8 +736,11 @@ ON | **OFF** | CLEAR [ ALL ]
 EIN     
 Aktiviert den Abfragespeicher.
 
-OFF     
-Deaktiviert den Abfragespeicher. OFF ist der Standardwert.
+OFF      
+Deaktiviert den Abfragespeicher. OFF ist der Standardwert. 
+
+> [!NOTE]  
+> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mit einer Einzeldatenbank oder einem Pool für elastische Datenbanken kann der Abfragespeicher nicht deaktiviert werden. Beim Ausführen von `ALTER DATABASE [database] SET QUERY_STORE = OFF` wird die Warnung `'QUERY_STORE=OFF' is not supported in this version of SQL Server.` zurückgegeben. 
 
 CLEAR     
 Entfernt den Inhalt des Abfragespeichers.
@@ -752,21 +755,25 @@ READ_ONLY
 Im diesem Modus können Informationen aus dem Abfragespeicher gelesen werden, es werden jedoch keine neuen Informationen hinzugefügt. Wenn der maximal ausgegebene Speicherplatz des Abfragespeichers ausgelastet ist, wird der Betriebsmodus in READ_ONLY geändert.
 
 CLEANUP_POLICY     
-Beschreibt die Datenaufbewahrungsrichtlinie des Abfragespeichers. STALE_QUERY_THRESHOLD_DAYS bestimmt die Anzahl an Tagen, für die die Informationen für eine Abfrage im Abfragespeicher aufbewahrt werden. STALE_QUERY_THRESHOLD_DAYS weist den Typ **bigint** auf.
+Beschreibt die Datenaufbewahrungsrichtlinie des Abfragespeichers. STALE_QUERY_THRESHOLD_DAYS bestimmt die Anzahl an Tagen, für die die Informationen für eine Abfrage im Abfragespeicher aufbewahrt werden. STALE_QUERY_THRESHOLD_DAYS weist den Typ **bigint** auf. Der Standardwert ist 30.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Bestimmt die Häufigkeit, mit der in den Abfragespeicher geschriebene Daten auf Datenträger gespeichert werden. Um die Leistung zu optimieren, werden durch den Abfragespeicher gesammelte Daten asynchron auf den Datenträger geschrieben. Die Häufigkeit, mit der diese asynchrone Übertragung stattfindet, wird mit dem Argument DATA_FLUSH_INTERVAL_SECONDS konfiguriert. DATA_FLUSH_INTERVAL_SECONDS weist den Typ **bigint** auf.
+Bestimmt die Häufigkeit, mit der in den Abfragespeicher geschriebene Daten auf Datenträger gespeichert werden. Um die Leistung zu optimieren, werden durch den Abfragespeicher gesammelte Daten asynchron auf den Datenträger geschrieben. Die Häufigkeit, mit der diese asynchrone Übertragung stattfindet, wird mit dem Argument DATA_FLUSH_INTERVAL_SECONDS konfiguriert. DATA_FLUSH_INTERVAL_SECONDS weist den Typ **bigint** auf. Der Standardwert ist **900** (15 Minuten).
 
 MAX_STORAGE_SIZE_MB     
-Bestimmt den Speicherplatz, der vom Abfragespeicher belegt wird. MAX_SIZE_MB weist den Typ **bigint** auf.
+Bestimmt den Speicherplatz, der vom Abfragespeicher belegt wird. MAX_SIZE_MB weist den Typ **bigint** auf. Der Standardwert ist **100 MB** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] durch [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] beträgt der Standardwert **1 GB**.
 
 > [!NOTE]
-> Die Begrenzung MAX_STORAGE_SIZE_MB wird nicht erzwungen. Die Speichergröße wird nur überprüft, wenn der Abfragespeicher Daten auf einen Datenträger schreibt. Dieses Intervall wird durch die Option DATA_FLUSH_INTERVAL_SECONDS oder die Option **Datenleerungsintervall** im Dialogfeld des [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]-Abfragespeichers festgelegt. Der Standardwert des Intervalls liegt bei 900 Sekunden (oder 15 Minuten).
-> Wenn der Abfragespeicher die Begrenzung MAX_STORAGE_SIZE_MB zwischen Speichergrößenüberprüfungen überschritten hat, geht er in den schreibgeschützten Modus über. Bei Aktivierung von SIZE_BASED_CLEANUP_MODE wird auch der Bereinigungsmechanismus zum Erzwingen der Begrenzung MAX_STORAGE_SIZE_MB ausgelöst.
+> Die Begrenzung `MAX_STORAGE_SIZE_MB` wird nicht streng erzwungen. Die Speichergröße wird nur überprüft, wenn der Abfragespeicher Daten auf einen Datenträger schreibt. Dieses Intervall wird durch die Option `DATA_FLUSH_INTERVAL_SECONDS` oder die Option **Datenleerungsintervall** im Dialogfeld des [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]-Abfragespeichers festgelegt. Der Standardwert des Intervalls liegt bei 900 Sekunden (oder 15 Minuten).
+> Wenn der Abfragespeicher die Begrenzung `MAX_STORAGE_SIZE_MB` zwischen Speichergrößenüberprüfungen überschritten hat, wechselt er in den schreibgeschützten Modus. Bei Aktivierung von `SIZE_BASED_CLEANUP_MODE` wird auch der Bereinigungsmechanismus zum Erzwingen der Begrenzung `MAX_STORAGE_SIZE_MB` ausgelöst.
 > Sobald ausreichend Speicherplatz befreit wurde, wird der Abfragespeichermodus automatisch in den Lese-/Schreibmodus gewechselt.
 
+> [!IMPORTANT]
+> Wenn Sie glauben, dass für Ihre Arbeitsauslastungserfassung mehr als 10 GB Speicherplatz benötigt werden, sollten Sie vermutlich die Arbeitsauslastung überdenken und optimieren, um Abfragepläne wiederzuverwenden (z. B. mithilfe von [erzwungener Parametrisierung](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)), oder die Abfragespeicherkonfigurationen anpassen.    
+> Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] können Sie für zusätzliche Kontrolle über die Abfrageerfassungsrichtlinie `QUERY_CAPTURE_MODE` auf CUSTOM festlegen.
+
 INTERVAL_LENGTH_MINUTES     
-Bestimmt das Zeitintervall, mit dem statistische Daten zur Laufzeitausführung im Abfragespeicher aggregiert werden. Um die Speicherverwendung zu optimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitfenster aggregiert. Dieses feste Zeitfenster wird mit dem Argument INTERVAL_LENGTH_MINUTES konfiguriert. INTERVAL_LENGTH_MINUTES weist den Typ **bigint** auf.
+Bestimmt das Zeitintervall, mit dem statistische Daten zur Laufzeitausführung im Abfragespeicher aggregiert werden. Um die Speicherverwendung zu optimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitfenster aggregiert. Dieses feste Zeitfenster wird mit dem Argument INTERVAL_LENGTH_MINUTES konfiguriert. INTERVAL_LENGTH_MINUTES weist den Typ **bigint** auf. Der Standardwert lautet **60**.
 
 SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }     
 Steuert, ob die Bereinigung automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert.
@@ -779,7 +786,7 @@ Eine auf der Größe basierte Bereinigung wird nicht automatisch aktiviert.
 
 SIZE_BASED_CLEANUP_MODE ist vom Typ **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 Bestimmt den zum aktuellen Zeitpunkt aktiven Abfrageerfassungsmodus. Für jeden Modus sind bestimmte Abfrageerfassungsrichtlinien definiert.
 
 > [!NOTE]
@@ -795,17 +802,28 @@ Keine
 Es werden keine weiteren neuen Abfragen erfasst. Der Abfragespeicher sammelt weiterhin Statistiken zur Kompilierung und Runtime für Abfragen, die bereits erfasst wurden. Verwenden Sie diese Konfiguration mit Bedacht, da dadurch möglicherweise wichtige Abfragen verloren gehen.
 
 CUSTOM     
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Ermöglicht die Kontrolle über die QUERY_CAPTURE_POLICY-Optionen.
 
-QUERY_CAPTURE_MODE ist vom Typ **nvarchar**.
+QUERY_CAPTURE_MODE ist vom Typ **nvarchar**. 
 
 max_plans_per_query     
-Definiert die maximale Anzahl von Plänen, die für jede Abfrage beibehalten werden. Standardwert: 200. MAX_PLANS_PER_QUERY ist vom Typ **int**.
+Definiert die maximale Anzahl von Plänen, die für jede Abfrage beibehalten werden. MAX_PLANS_PER_QUERY ist vom Typ **int**. Der Standardwert ist **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]))
+
+Steuert, ob Wartestatistiken pro Abfrage erfasst werden
+
+EIN    
+Wartestatistikinformationen pro Abfrage werden erfasst. Dies ist der Standardkonfigurationswert.
+
+OFF    
+Wartestatistikinformationen pro Abfrage werden nicht erfasst.
 
 **\<query_capture_policy_option_list> :: =**      
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Steuert die Optionen für die Erfassungsrichtlinie des Abfragespeichers. Mit Ausnahme von STALE_CAPTURE_POLICY_THRESHOLD definieren diese Optionen die OR-Bedingungen, die auftreten müssen, damit Abfragen im definierten STALE_CAPTURE_POLICY_THRESHOLD-Wert erfasst werden.
 
@@ -872,7 +890,7 @@ Beachten Sie beim Verwenden der PAGE_VERIFY-Option die folgenden wichtigen Punkt
 - Wenn eine Benutzer- oder Systemdatenbank auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder eine höhere Version aktualisiert wird, bleibt der PAGE_VERIFY-Wert (NONE oder TORN_PAGE_DETECTION) unverändert. Sie sollten den Wert in CHECKSUM ändern.
 
     > [!NOTE]
-    > In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist die Datenbankoption PAGE_VERIFY für die TempDB-Datenbank auf NONE festgelegt und kann nicht geändert werden. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher ist der Standardwert für die TempDB-Datenbank CHECKSUM für neue Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Bei dem Upgrade einer Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bleibt der Standardwert NONE. Die Option kann geändert werden. Sie sollten CHECKSUM für die tempdb-Datenbank verwenden.
+    > In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist die Datenbankoption PAGE_VERIFY für die TempDB-Datenbank auf NONE festgelegt und kann nicht geändert werden. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ist der Standardwert für die Datenbank tempdb für neue Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CHECKSUM. Bei dem Upgrade einer Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bleibt der Standardwert NONE. Die Option kann geändert werden. Sie sollten CHECKSUM für die tempdb-Datenbank verwenden.
 
 - TORN_PAGE_DETECTION verwendet zwar weniger Ressourcen, bietet jedoch einen minimalen Teil des Schutzes von CHECKSUM.
 - PAGE_VERIFY kann festgelegt werden, ohne die Datenbank offline zu schalten, zu sperren oder die Parallelität der Datenbank anderweitig zu beeinträchtigen.
@@ -891,7 +909,7 @@ Weitere Informationen zu den Fehlermeldungen 823, 824 und 825 finden Sie unter:
 Die aktuelle Einstellung dieser Option kann mithilfe der `page_verify_option`-Spalte in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht oder der `IsTornPageDetectionEnabled`-Eigenschaft der [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)-Funktion ermittelt werden.
 
 **\<remote_data_archive_option> ::=**      
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 Aktiviert bzw. Deaktiviert Stretch Database für die Datenbank. Weitere Informationen finden Sie unter [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
@@ -996,7 +1014,7 @@ Die aktuelle Einstellung dieser Option kann mithilfe der Spalte `is_read_committ
 > Wenn eine Tabelle mit **DURABILITY = SCHEMA_ONLY** erstellt wird und **READ_COMMITTED_SNAPSHOT** anschließend mithilfe von **ALTER DATABASE** geändert wird, gehen Daten in der Tabelle verloren.
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }     
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])
 
 EIN     
 Wenn die Isolationsstufe für Transaktionen auf eine niedrigere Isolationsstufe als SNAPSHOT festgelegt wird, werden alle interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Vorgänge für speicheroptimierte Tabelle unter der Isolationsstufe SNAPSHOT ausgeführt. Beispiele für Isolationsstufen, die niedriger als SNAPSHOT sind, sind READ COMMITTED oder READ UNCOMMITTED. Diese Vorgänge erfolgen ungeachtet des Umstands, ob die Transaktionsisolationsstufe explizit auf der Sitzungsebene festgelegt ist, oder ob implizit die Standardeinstellung verwendet wird.
@@ -1150,7 +1168,7 @@ Sie können den Status dieser Option ermitteln, indem Sie die Spalte `is_recursi
 Sie können den Status dieser Option mithilfe der Spalte `is_recursive_triggers_on` in der Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) oder der `IsRecursiveTriggersEnabled`-Eigenschaft der [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)-Funktion ermitteln.
 
 **\<target_recovery_time_option> ::=**      
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Gibt die Frequenz indirekter Prüfpunkte auf Basis einzelner Datenbanken an. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] beträgt der Standardwert für neue Datenbanken, der darauf hindeutet, dass Datenbanken indirekte Prüfpunkte verwendet werden, **eine Minute**. Der Standard für ältere Versionen ist 0 (null) und gibt an, dass die Datenbank automatische Prüfpunkte verwendet, deren Frequenz von der Einstellung für das Wiederherstellungsintervall der Serverinstanz abhängt. Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist für die meisten Systeme eine Minute empfohlen.
 
@@ -1187,27 +1205,27 @@ Sie können die Standardwerte einer Datenbankoption für alle neu erstellten Dat
 
 Nicht alle Datenbankoptionen verwenden die WITH \<termination>-Klausel oder können zusammen mit anderen Optionen festgelegt werden. In der folgenden Tabelle sind die Optionen und ihr Options- und Beendigungsstatus aufgeführt.
 
-|Optionskategorie|Kann mit anderen Optionen angegeben werden|Kann die WITH \<termination>-Klausel verwenden|
+|Optionskategorie|Kann mit anderen Optionen angegeben werden|Kann WITH \<termination>-Klausel verwenden|
 |----------------------|-----------------------------------------|---------------------------------------------|
 |\<db_state_option>|Ja|Ja|
 |\<db_user_access_option>|Ja|Ja|
 |\<db_update_option>|Ja|Ja|
 |\<delayed_durability_option>|Ja|Ja|
-|\<external_access_option>|Ja|Nein |
-|\<cursor_option>|Ja|Nein |
-|\<auto_option>|Ja|Nein |
-|\<sql_option>|Ja|Nein |
-|\<recovery_option>|Ja|Nein |
-|\<target_recovery_time_option>|Nein |Ja|
-|\<database_mirroring_option>|Nein |Nein |
-|ALLOW_SNAPSHOT_ISOLATION|Nein |Nein |
-|READ_COMMITTED_SNAPSHOT|Nein |Ja|
+|\<external_access_option>|Ja|Nein|
+|\<cursor_option>|Ja|Nein|
+|\<auto_option>|Ja|Nein|
+|\<sql_option>|Ja|Nein|
+|\<recovery_option>|Ja|Nein|
+|\<target_recovery_time_option>|Nein|Ja|
+|\<database_mirroring_option>|Nein|Nein|
+|ALLOW_SNAPSHOT_ISOLATION|Nein|Nein|
+|READ_COMMITTED_SNAPSHOT|Nein|Ja|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Ja|Ja|
-|\<service_broker_option>|Ja|Nein |
+|\<service_broker_option>|Ja|Nein|
 |DATE_CORRELATION_OPTIMIZATION|Ja|Ja|
 |\<parameterization_option>|Ja|Ja|
 |\<change_tracking_option>|Ja|Ja|
-|\<db_encryption_option>|Ja|Nein |
+|\<db_encryption_option>|Ja|Nein|
 
 Der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird gelöscht, indem eine der folgenden Optionen festgelegt wird:
 
@@ -1320,7 +1338,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>E. Aktivieren des Abfragespeichers
 
-**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher)
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 Im folgenden Beispiel werden der Abfragespeicher aktiviert und dessen Parameter konfiguriert.
 
@@ -1517,9 +1535,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -1749,7 +1777,7 @@ Die Datenbank ist für Lese- und Schreibvorgänge verfügbar.
 Sie müssen über exklusiven Zugriff auf die Datenbank verfügen, um diesen Status zu ändern. Weitere Informationen finden Sie unter der SINGLE_USER-Klausel.
 
 > [!NOTE]
-> Bei Verbunddatenbanken mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ist SET { READ_ONLY | READ_WRITE } deaktiviert.
+> Bei Verbunddatenbanken in [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] ist `SET { READ_ONLY | READ_WRITE }` deaktiviert.
 
 **\<db_user_access_option> ::=**      
 Steuert den Benutzerzugriff auf die Datenbank.
@@ -1766,13 +1794,13 @@ Sie können den Status dieser Option mithilfe der Spalte `user_access` in der Ka
 Steuert, ob für Transaktionen ein Commit mit vollständiger oder verzögerter Dauerhaftigkeit ausgeführt wird.
 
 DISABLED     
-Alle Transaktionen, die auf SET DISABLED folgen, sind vollständig dauerhaft. Alle Dauerhaftigkeitsoptionen, die in einem Atomic-Block oder einer Commitanweisung festgelegt sind, werden ignoriert.
+Alle Transaktionen nach `SET DISABLED` sind vollständig dauerhaft. Alle Dauerhaftigkeitsoptionen, die in einem Atomic-Block oder einer Commitanweisung festgelegt sind, werden ignoriert.
 
 ALLOWED     
-Alle Transaktionen, die auf SET ALLOWED folgen, sind abhängig von der im Atomic-Block oder der Commitanweisung festgelegten Dauerhaftigkeitsoption entweder vollständig dauerhaft oder verzögert dauerhaft.
+Alle Transaktionen nach `SET ALLOWED` sind abhängig von der im atomischen Block oder der Commitanweisung festgelegten Dauerhaftigkeitsoption entweder vollständig dauerhaft oder verzögert dauerhaft.
 
 FORCED     
-Alle Transaktionen, die auf SET FORCED folgen, sind verzögert dauerhaft. Alle Dauerhaftigkeitsoptionen, die in einem Atomic-Block oder einer Commitanweisung festgelegt sind, werden ignoriert.
+Alle Transaktionen nach `SET FORCED` sind verzögert dauerhaft. Alle Dauerhaftigkeitsoptionen, die in einem Atomic-Block oder einer Commitanweisung festgelegt sind, werden ignoriert.
 
 **\<PARAMETERIZATION_option> ::=**      
 Steuert die Parametrisierungsoption.
@@ -1786,7 +1814,7 @@ FORCED
 
 Die aktuelle Einstellung dieser Option kann mithilfe der Spalte `is_parameterization_forced` in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht ermittelt werden.
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Überprüft, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers.
@@ -1804,21 +1832,28 @@ OPERATION_MODE
 Beschreibt den Betriebsmodus des Abfragespeichers. Gültige Werte sind READ_ONLY und READ_WRITE. Im Modus READ_WRITE sammelt und speichert der Abfragespeicher Angaben zum Abfrageplan und statistische Informationen zur Laufzeitausführung. Im Modus READ_ONLY können Informationen aus dem Abfragespeicher gelesen werden, es werden jedoch keine neuen Informationen hinzugefügt. Wenn die maximale Speicherplatzbelegung des Abfragespeichers ausgelastet ist, wird der Betriebsmodus in READ_ONLY geändert.
 
 CLEANUP_POLICY     
-Beschreibt die Datenaufbewahrungsrichtlinie des Abfragespeichers. STALE_QUERY_THRESHOLD_DAYS bestimmt die Anzahl an Tagen, für die die Informationen für eine Abfrage im Abfragespeicher aufbewahrt werden. STALE_QUERY_THRESHOLD_DAYS weist den Typ **bigint** auf.
+Beschreibt die Datenaufbewahrungsrichtlinie des Abfragespeichers. STALE_QUERY_THRESHOLD_DAYS bestimmt die Anzahl an Tagen, für die die Informationen für eine Abfrage im Abfragespeicher aufbewahrt werden. STALE_QUERY_THRESHOLD_DAYS weist den Typ **bigint** auf. Der Standardwert ist 30. Für die Basic Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ist der Standardwert **7** Tage.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Bestimmt die Häufigkeit, mit der in den Abfragespeicher geschriebene Daten auf Datenträger gespeichert werden. Um die Leistung zu optimieren, werden durch den Abfragespeicher gesammelte Daten asynchron auf den Datenträger geschrieben. Die Häufigkeit, mit der diese asynchrone Übertragung stattfindet, wird mit dem Argument DATA_FLUSH_INTERVAL_SECONDS konfiguriert. DATA_FLUSH_INTERVAL_SECONDS weist den Typ **bigint** auf.
+Bestimmt die Häufigkeit, mit der in den Abfragespeicher geschriebene Daten auf Datenträger gespeichert werden. Um die Leistung zu optimieren, werden durch den Abfragespeicher gesammelte Daten asynchron auf den Datenträger geschrieben. Die Häufigkeit, mit der diese asynchrone Übertragung stattfindet, wird mit dem Argument DATA_FLUSH_INTERVAL_SECONDS konfiguriert. DATA_FLUSH_INTERVAL_SECONDS weist den Typ **bigint** auf. Der Standardwert ist **900** (15 Minuten).
 
 MAX_STORAGE_SIZE_MB     
-Bestimmt den Speicherplatz, der vom Abfragespeicher belegt wird. MAX_SIZE_MB weist den Typ **bigint** auf.
+Bestimmt den Speicherplatz, der vom Abfragespeicher belegt wird. MAX_SIZE_MB weist den Typ **bigint** auf. Der Standardwert für die Premium Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] liegt bei **1 GB**, für die Basic Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] bei **10 MB**.
 
 > [!NOTE]
-> Die Begrenzung MAX_STORAGE_SIZE_MB wird nicht erzwungen. Die Speichergröße wird nur überprüft, wenn der Abfragespeicher Daten auf einen Datenträger schreibt. Dieses Intervall wird durch die Option DATA_FLUSH_INTERVAL_SECONDS oder die Option **Datenleerungsintervall** im Dialogfeld des [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]-Abfragespeichers festgelegt. Der Standardwert des Intervalls liegt bei 900 Sekunden (oder 15 Minuten).
-> Wenn der Abfragespeicher die Begrenzung MAX_STORAGE_SIZE_MB zwischen Speichergrößenüberprüfungen überschritten hat, geht er in den schreibgeschützten Modus über. Bei Aktivierung von SIZE_BASED_CLEANUP_MODE wird auch der Bereinigungsmechanismus zum Erzwingen der Begrenzung MAX_STORAGE_SIZE_MB ausgelöst.
+> Die Grenze für die Einstellung `MAX_STORAGE_SIZE_MB` ist bei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 10.240 MB. 
+
+> [!NOTE]
+> Die Begrenzung `MAX_STORAGE_SIZE_MB` wird nicht streng erzwungen. Die Speichergröße wird nur überprüft, wenn der Abfragespeicher Daten auf einen Datenträger schreibt. Dieses Intervall wird durch die Option `DATA_FLUSH_INTERVAL_SECONDS` oder die Option **Datenleerungsintervall** im Dialogfeld des [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]-Abfragespeichers festgelegt. Der Standardwert des Intervalls liegt bei 900 Sekunden (oder 15 Minuten).
+> Wenn der Abfragespeicher die Begrenzung `MAX_STORAGE_SIZE_MB` zwischen Speichergrößenüberprüfungen überschritten hat, wechselt er in den schreibgeschützten Modus. Bei Aktivierung von `SIZE_BASED_CLEANUP_MODE` wird auch der Bereinigungsmechanismus zum Erzwingen der Begrenzung `MAX_STORAGE_SIZE_MB` ausgelöst.
 > Sobald ausreichend Speicherplatz befreit wurde, wird der Abfragespeichermodus automatisch in den Lese-/Schreibmodus gewechselt.
 
+> [!IMPORTANT]
+> Wenn Sie glauben, dass für Ihre Arbeitsauslastungserfassung mehr als 10 GB Speicherplatz benötigt werden, sollten Sie vermutlich die Arbeitsauslastung überdenken und optimieren, um Abfragepläne wiederzuverwenden (z. B. mithilfe von [erzwungener Parametrisierung](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)), oder die Abfragespeicherkonfigurationen anpassen.    
+> Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] können Sie für zusätzliche Kontrolle über die Abfrageerfassungsrichtlinie `QUERY_CAPTURE_MODE` auf CUSTOM festlegen.
+
 INTERVAL_LENGTH_MINUTES     
-Bestimmt das Zeitintervall, mit dem statistische Daten zur Laufzeitausführung im Abfragespeicher aggregiert werden. Um die Speicherverwendung zu optimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitfenster aggregiert. Dieses feste Zeitfenster wird mit dem Argument INTERVAL_LENGTH_MINUTES konfiguriert. INTERVAL_LENGTH_MINUTES weist den Typ **bigint** auf.
+Bestimmt das Zeitintervall, mit dem statistische Daten zur Laufzeitausführung im Abfragespeicher aggregiert werden. Um die Speicherverwendung zu optimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitfenster aggregiert. Dieses feste Zeitfenster wird mit dem Argument INTERVAL_LENGTH_MINUTES konfiguriert. INTERVAL_LENGTH_MINUTES weist den Typ **bigint** auf. Der Standardwert lautet **60**.
 
 SIZE_BASED_CLEANUP_MODE     
 Steuert, ob die Bereinigung automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert.
@@ -1831,11 +1866,14 @@ Eine auf der Größe basierende Bereinigung wird automatisch aktiviert, wenn die
 
 SIZE_BASED_CLEANUP_MODE ist vom Typ **nvarchar**.
 
-QUERY_CAPTURE_MODE     
-Bestimmt den zum aktuellen Zeitpunkt aktiven Abfrageerfassungsmodus:
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+Bestimmt den zum aktuellen Zeitpunkt aktiven Abfrageerfassungsmodus. Für jeden Modus sind bestimmte Abfrageerfassungsrichtlinien definiert.   
+
+> [!NOTE]
+> Cursor, Abfragen in gespeicherten Prozeduren und nativ kompilierte Abfragen werden immer erfasst, wenn der Abfrageerfassungsmodus auf ALL, AUTO oder CUSTOM festgelegt ist.
 
 ALL     
-Alle Abfragen werden erfasst.
+Erfasst alle Abfragen.
 
 AUTO     
 Relevante Abfragen werden anhand der Ausführungsanzahl und des Ressourcenverbrauchs erfasst. Dies ist der Standardkonfigurationswert für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1843,10 +1881,37 @@ Relevante Abfragen werden anhand der Ausführungsanzahl und des Ressourcenverbra
 Keine     
 Es werden keine weiteren neuen Abfragen erfasst. Der Abfragespeicher sammelt weiterhin Statistiken zur Kompilierung und Runtime für Abfragen, die bereits erfasst wurden. Verwenden Sie diese Konfiguration mit Bedacht, da dadurch möglicherweise wichtige Abfragen verloren gehen.
 
+CUSTOM     
+Ermöglicht die Kontrolle über die QUERY_CAPTURE_POLICY-Optionen.
+
 QUERY_CAPTURE_MODE ist vom Typ **nvarchar**.
 
 max_plans_per_query     
-Eine ganze Zahl, die die maximale Anzahl von Plänen darstellt, die für jede Abfrage beibehalten werden. Der Standardwert ist 200.
+Definiert die maximale Anzahl von Plänen, die für jede Abfrage beibehalten werden. MAX_PLANS_PER_QUERY ist vom Typ **int**. Der Standardwert ist **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+Steuert, ob Wartestatistiken pro Abfrage erfasst werden
+
+EIN    
+Wartestatistikinformationen pro Abfrage werden erfasst. Dies ist der Standardkonfigurationswert.
+
+OFF    
+Wartestatistikinformationen pro Abfrage werden nicht erfasst.
+
+**\<query_capture_policy_option_list> :: =**      
+Steuert die Optionen für die Erfassungsrichtlinie des Abfragespeichers. Mit Ausnahme von STALE_CAPTURE_POLICY_THRESHOLD definieren diese Optionen die OR-Bedingungen, die auftreten müssen, damit Abfragen im definierten STALE_CAPTURE_POLICY_THRESHOLD-Wert erfasst werden.
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+Definiert den Zeitraum des Auswertungsintervalls um zu bestimmen, ob eine Abfrage erfasst werden sollte. Der Standardwert ist 1 Tag. Sie können Werte zwischen 1 Stunde und sieben Tagen festlegen. *number* ist vom Datentyp **int**.
+
+EXECUTION_COUNT     
+Definiert die Häufigkeit, mit der eine Abfrage im Auswertungszeitraum ausgeführt wird. Der Standardwert ist 30, was bedeutet, dass für den Stale Capture Policy Threshold-Standardwert eine Abfrage mindestens 30 Mal an einem Tag ausgeführt werden muss, um im Abfragespeicher persistent gespeichert zu werden. EXECUTION_COUNT ist vom Typ **int**.
+
+TOTAL_COMPILE_CPU_TIME_MS     
+Definiert die gesamte verstrichene Kompilierungs-CPU-Zeit, die eine Abfrage über den Auswertungszeitraum in Anspruch nimmt. Der Standardwert ist 1000, was bedeutet, dass für den Stale Capture Policy Threshold-Standardwert eine Abfrage insgesamt mindestens eine Sekunde CPU-Zeit während der Abfragekompilierung an einem Tag verbraucht haben muss, um im Abfragespeicher persistent gespeichert zu werden. TOTAL_COMPILE_CPU_TIME_MS ist vom Typ **int**.
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+Definiert die gesamte verstrichene Ausführungs-CPU-Zeit, die eine Abfrage über den Auswertungszeitraum in Anspruch nimmt. Der Standardwert ist 100, was bedeutet, dass für den Stale Capture Policy Threshold-Standardwert eine Abfrage insgesamt mindestens 100 ms CPU-Zeit während der Ausführung an einem Tag verbraucht haben muss, um im Abfragespeicher persistent gespeichert zu werden. TOTAL_EXECUTION_CPU_TIME_MS ist vom Typ **int**.
 
 **\<snapshot_option> ::=**      
 Bestimmt die Isolationsstufe für Transaktionen.
@@ -2077,27 +2142,26 @@ Sie können die Standardwerte einer Datenbankoption für alle neu erstellten Dat
 
 Nicht alle Datenbankoptionen verwenden die WITH \<termination>-Klausel oder können zusammen mit anderen Optionen festgelegt werden. In der folgenden Tabelle sind die Optionen und ihr Options- und Beendigungsstatus aufgeführt.
 
-|Optionskategorie|Kann mit anderen Optionen angegeben werden|Kann die WITH \<termination>-Klausel verwenden|
+|Optionskategorie|Kann mit anderen Optionen angegeben werden|Kann WITH \<termination>-Klausel verwenden|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<auto_option>|Ja|Nein |
+|\<auto_option>|Ja|Nein|
 |\<change_tracking_option>|Ja|Ja|
-|\<cursor_option>|Ja|Nein |
-|\<db_encryption_option>|Ja|Nein |
+|\<cursor_option>|Ja|Nein|
+|\<db_encryption_option>|Ja|Nein|
 |\<db_update_option>|Ja|Ja|
 |\<db_user_access_option>|Ja|Ja|
 |\<delayed_durability_option>|Ja|Ja|
 |\<parameterization_option>|Ja|Ja|
-|ALLOW_SNAPSHOT_ISOLATION|Nein |Nein |
-|READ_COMMITTED_SNAPSHOT|Nein |Ja|
+|ALLOW_SNAPSHOT_ISOLATION|Nein|Nein|
+|READ_COMMITTED_SNAPSHOT|Nein|Ja|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Ja|Ja|
 |DATE_CORRELATION_OPTIMIZATION|Ja|Ja|
-|\<sql_option>|Ja|Nein |
-|\<target_recovery_time_option>|Nein |Ja|
+|\<sql_option>|Ja|Nein|
+|\<target_recovery_time_option>|Nein|Ja|
 
 ## <a name="examples"></a>Beispiele
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. Festlegen der Datenbank auf READ_ONLY
-
 Für die Änderung des Status einer Datenbank oder Dateigruppe in READ_ONLY oder READ_WRITE wird der exklusive Zugriff auf die Datenbank benötigt. Im folgenden Beispiel wird die Datenbank in den `RESTRICTED_USER`-Modus gesetzt, um eingeschränkten Zugriff zu erhalten. Anschließend wird in dem Beispiel der Status der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf `READ_ONLY` festgelegt und der Zugriff auf die Datenbank an alle Benutzer zurückgegeben.
 
 ```sql
@@ -2116,7 +2180,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Aktivieren der Momentaufnahmeisolation für eine Datenbank
-
 Im folgenden Beispiel wird die Option für das Momentaufnahmeisolations-Framework für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank aktiviert.
 
 ```sql
@@ -2142,7 +2205,6 @@ Das Resultset zeigt, dass das Framework für die Momentaufnahmeisolation aktivie
 |[database_name] |1| EIN |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. Aktivieren, Ändern und Deaktivieren der Änderungsnachverfolgung
-
 Im folgenden Beispiel wird die Änderungsnachverfolgung für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank aktiviert und die Aufbewahrungsdauer auf `2` Tage festgelegt.
 
 ```sql
@@ -2166,18 +2228,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D: Aktivieren des Abfragespeichers
-
 Im folgenden Beispiel werden der Abfragespeicher aktiviert und Parameter des Abfragespeichers konfiguriert.
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-(
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>E. Aktivieren des Abfragespeichers mit Wartestatistiken
+Im folgenden Beispiel werden der Abfragespeicher aktiviert und dessen Parameter konfiguriert.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>F. Aktivieren des Abfragespeichers mit benutzerdefinierten Erfassungsrichtlinienoptionen
+Im folgenden Beispiel werden der Abfragespeicher aktiviert und dessen Parameter konfiguriert.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 
@@ -2298,9 +2403,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -2497,13 +2612,13 @@ Sie können den Status dieser Option mithilfe der Spalte „user_access“ in de
 Steuert, ob für Transaktionen ein Commit mit vollständiger oder verzögerter Dauerhaftigkeit ausgeführt wird.
 
 DISABLED     
-Alle Transaktionen, die auf SET DISABLED folgen, sind vollständig dauerhaft. Alle Dauerhaftigkeitsoptionen, die in einem Atomic-Block oder einer Commitanweisung festgelegt sind, werden ignoriert.
+Alle Transaktionen nach `SET DISABLED` sind vollständig dauerhaft. Alle Dauerhaftigkeitsoptionen, die in einem Atomic-Block oder einer Commitanweisung festgelegt sind, werden ignoriert.
 
 ALLOWED     
-Alle Transaktionen, die auf SET ALLOWED folgen, sind abhängig von der im Atomic-Block oder der Commitanweisung festgelegten Dauerhaftigkeitsoption entweder vollständig dauerhaft oder verzögert dauerhaft.
+Alle Transaktionen nach `SET ALLOWED` sind abhängig von der im atomischen Block oder der Commitanweisung festgelegten Dauerhaftigkeitsoption entweder vollständig dauerhaft oder verzögert dauerhaft.
 
 FORCED     
-Alle Transaktionen, die auf SET FORCED folgen, sind verzögert dauerhaft. Alle Dauerhaftigkeitsoptionen, die in einem Atomic-Block oder einer Commitanweisung festgelegt sind, werden ignoriert.
+Alle Transaktionen nach `SET FORCED` sind verzögert dauerhaft. Alle Dauerhaftigkeitsoptionen, die in einem Atomic-Block oder einer Commitanweisung festgelegt sind, werden ignoriert.
 
 **\<PARAMETERIZATION_option> ::=**      
 Steuert die Parametrisierungsoption.
@@ -2517,7 +2632,7 @@ FORCED
 
 Die aktuelle Einstellung dieser Option kann mithilfe der Spalte `is_parameterization_forced` in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht ermittelt werden.
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Überprüft, ob der Abfragespeicher in dieser Datenbank aktiviert ist, und steuert außerdem das Entfernen des Inhalts des Abfragespeichers.
@@ -2535,16 +2650,25 @@ OPERATION_MODE
 Beschreibt den Betriebsmodus des Abfragespeichers. Gültige Werte sind READ_ONLY und READ_WRITE. Im Modus READ_WRITE sammelt und speichert der Abfragespeicher Angaben zum Abfrageplan und statistische Informationen zur Laufzeitausführung. Im Modus READ_ONLY können Informationen aus dem Abfragespeicher gelesen werden, es werden jedoch keine neuen Informationen hinzugefügt. Wenn die maximale Speicherplatzbelegung des Abfragespeichers ausgelastet ist, wird der Betriebsmodus in READ_ONLY geändert.
 
 CLEANUP_POLICY     
-Beschreibt die Datenaufbewahrungsrichtlinie des Abfragespeichers. STALE_QUERY_THRESHOLD_DAYS bestimmt die Anzahl an Tagen, für die die Informationen für eine Abfrage im Abfragespeicher aufbewahrt werden. STALE_QUERY_THRESHOLD_DAYS weist den Typ **bigint** auf.
+Beschreibt die Datenaufbewahrungsrichtlinie des Abfragespeichers. STALE_QUERY_THRESHOLD_DAYS bestimmt die Anzahl an Tagen, für die die Informationen für eine Abfrage im Abfragespeicher aufbewahrt werden. STALE_QUERY_THRESHOLD_DAYS weist den Typ **bigint** auf. Der Standardwert ist 30. Für die Basic Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ist der Standardwert **7** Tage.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Bestimmt die Häufigkeit, mit der in den Abfragespeicher geschriebene Daten auf Datenträger gespeichert werden. Um die Leistung zu optimieren, werden durch den Abfragespeicher gesammelte Daten asynchron auf den Datenträger geschrieben. Die Häufigkeit, mit der diese asynchrone Übertragung stattfindet, wird mit dem Argument DATA_FLUSH_INTERVAL_SECONDS konfiguriert. DATA_FLUSH_INTERVAL_SECONDS weist den Typ **bigint** auf.
+Bestimmt die Häufigkeit, mit der in den Abfragespeicher geschriebene Daten auf Datenträger gespeichert werden. Um die Leistung zu optimieren, werden durch den Abfragespeicher gesammelte Daten asynchron auf den Datenträger geschrieben. Die Häufigkeit, mit der diese asynchrone Übertragung stattfindet, wird mit dem Argument DATA_FLUSH_INTERVAL_SECONDS konfiguriert. DATA_FLUSH_INTERVAL_SECONDS weist den Typ **bigint** auf. Der Standardwert ist **900** (15 Minuten).
 
 MAX_STORAGE_SIZE_MB     
-Bestimmt den Speicherplatz, der vom Abfragespeicher belegt wird. MAX_SIZE_MB weist den Typ **bigint** auf.
+Bestimmt den Speicherplatz, der vom Abfragespeicher belegt wird. MAX_SIZE_MB weist den Typ **bigint** auf. Der Standardwert ist **100 MB**.
+
+> [!NOTE]
+> Die Begrenzung `MAX_STORAGE_SIZE_MB` wird nicht streng erzwungen. Die Speichergröße wird nur überprüft, wenn der Abfragespeicher Daten auf einen Datenträger schreibt. Dieses Intervall wird durch die Option `DATA_FLUSH_INTERVAL_SECONDS` oder die Option **Datenleerungsintervall** im Dialogfeld des [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]-Abfragespeichers festgelegt. Der Standardwert des Intervalls liegt bei 900 Sekunden (oder 15 Minuten).
+> Wenn der Abfragespeicher die Begrenzung `MAX_STORAGE_SIZE_MB` zwischen Speichergrößenüberprüfungen überschritten hat, wechselt er in den schreibgeschützten Modus. Bei Aktivierung von `SIZE_BASED_CLEANUP_MODE` wird auch der Bereinigungsmechanismus zum Erzwingen der Begrenzung `MAX_STORAGE_SIZE_MB` ausgelöst.
+> Sobald ausreichend Speicherplatz befreit wurde, wird der Abfragespeichermodus automatisch in den Lese-/Schreibmodus gewechselt.
+
+> [!IMPORTANT]
+> Wenn Sie glauben, dass für Ihre Arbeitsauslastungserfassung mehr als 10 GB Speicherplatz benötigt werden, sollten Sie vermutlich die Arbeitsauslastung überdenken und optimieren, um Abfragepläne wiederzuverwenden (z. B. mithilfe von [erzwungener Parametrisierung](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)), oder die Abfragespeicherkonfigurationen anpassen.    
+> Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] können Sie für zusätzliche Kontrolle über die Abfrageerfassungsrichtlinie `QUERY_CAPTURE_MODE` auf CUSTOM festlegen.
 
 INTERVAL_LENGTH_MINUTES     
-Bestimmt das Zeitintervall, mit dem statistische Daten zur Laufzeitausführung im Abfragespeicher aggregiert werden. Um die Speicherverwendung zu optimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitfenster aggregiert. Dieses feste Zeitfenster wird mit dem Argument INTERVAL_LENGTH_MINUTES konfiguriert. INTERVAL_LENGTH_MINUTES weist den Typ **bigint** auf.
+Bestimmt das Zeitintervall, mit dem statistische Daten zur Laufzeitausführung im Abfragespeicher aggregiert werden. Um die Speicherverwendung zu optimieren, werden die statistischen Daten zur Laufzeitausführung im Speicher für Laufzeitstatistiken über ein festes Zeitfenster aggregiert. Dieses feste Zeitfenster wird mit dem Argument INTERVAL_LENGTH_MINUTES konfiguriert. INTERVAL_LENGTH_MINUTES weist den Typ **bigint** auf. Der Standardwert lautet **60**.
 
 SIZE_BASED_CLEANUP_MODE     
 Steuert, ob die Bereinigung automatisch aktiviert wird, wenn sich die Gesamtmenge der Daten der maximalen Größe nähert.
@@ -2557,7 +2681,7 @@ Eine auf der Größe basierende Bereinigung wird automatisch aktiviert, wenn die
 
 SIZE_BASED_CLEANUP_MODE ist vom Typ **nvarchar**.
 
-QUERY_CAPTURE_MODE     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 Bestimmt den zum aktuellen Zeitpunkt aktiven Abfrageerfassungsmodus.
 
 ALL     
@@ -2572,7 +2696,31 @@ Es werden keine weiteren neuen Abfragen erfasst. Der Abfragespeicher sammelt wei
 QUERY_CAPTURE_MODE ist vom Typ **nvarchar**.
 
 max_plans_per_query     
-Eine ganze Zahl, die die maximale Anzahl von Plänen darstellt, die für jede Abfrage beibehalten werden. Der Standardwert ist 200.
+Eine ganze Zahl, die die maximale Anzahl von Plänen darstellt, die für jede Abfrage beibehalten werden. MAX_PLANS_PER_QUERY ist vom Typ **int**. Der Standardwert ist **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+Steuert, ob Wartestatistiken pro Abfrage erfasst werden
+
+EIN    
+Wartestatistikinformationen pro Abfrage werden erfasst. Dies ist der Standardkonfigurationswert.
+
+OFF    
+Wartestatistikinformationen pro Abfrage werden nicht erfasst.
+
+**\<query_capture_policy_option_list> :: =**      
+Steuert die Optionen für die Erfassungsrichtlinie des Abfragespeichers. Mit Ausnahme von STALE_CAPTURE_POLICY_THRESHOLD definieren diese Optionen die OR-Bedingungen, die auftreten müssen, damit Abfragen im definierten STALE_CAPTURE_POLICY_THRESHOLD-Wert erfasst werden.
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+Definiert den Zeitraum des Auswertungsintervalls um zu bestimmen, ob eine Abfrage erfasst werden sollte. Der Standardwert ist 1 Tag. Sie können Werte zwischen 1 Stunde und sieben Tagen festlegen. *number* ist vom Datentyp **int**.
+
+EXECUTION_COUNT     
+Definiert die Häufigkeit, mit der eine Abfrage im Auswertungszeitraum ausgeführt wird. Der Standardwert ist 30, was bedeutet, dass für den Stale Capture Policy Threshold-Standardwert eine Abfrage mindestens 30 Mal an einem Tag ausgeführt werden muss, um im Abfragespeicher persistent gespeichert zu werden. EXECUTION_COUNT ist vom Typ **int**.
+
+TOTAL_COMPILE_CPU_TIME_MS     
+Definiert die gesamte verstrichene Kompilierungs-CPU-Zeit, die eine Abfrage über den Auswertungszeitraum in Anspruch nimmt. Der Standardwert ist 1000, was bedeutet, dass für den Stale Capture Policy Threshold-Standardwert eine Abfrage insgesamt mindestens eine Sekunde CPU-Zeit während der Abfragekompilierung an einem Tag verbraucht haben muss, um im Abfragespeicher persistent gespeichert zu werden. TOTAL_COMPILE_CPU_TIME_MS ist vom Typ **int**.
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+Definiert die gesamte verstrichene Ausführungs-CPU-Zeit, die eine Abfrage über den Auswertungszeitraum in Anspruch nimmt. Der Standardwert ist 100, was bedeutet, dass für den Stale Capture Policy Threshold-Standardwert eine Abfrage insgesamt mindestens 100 ms CPU-Zeit während der Ausführung an einem Tag verbraucht haben muss, um im Abfragespeicher persistent gespeichert zu werden. TOTAL_EXECUTION_CPU_TIME_MS ist vom Typ **int**.
 
 **\<snapshot_option> ::=**
 
@@ -2798,7 +2946,6 @@ Sie können die Standardwerte einer Datenbankoption für alle neu erstellten Dat
 ## <a name="examples"></a>Beispiele
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. Festlegen der Datenbank auf READ_ONLY
-
 Für die Änderung des Status einer Datenbank oder Dateigruppe in READ_ONLY oder READ_WRITE wird der exklusive Zugriff auf die Datenbank benötigt. Im folgenden Beispiel wird die Datenbank in den `RESTRICTED_USER`-Modus gesetzt, um eingeschränkten Zugriff zu erhalten. Anschließend wird in dem Beispiel der Status der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf `READ_ONLY` festgelegt und der Zugriff auf die Datenbank an alle Benutzer zurückgegeben.
 
 ```sql
@@ -2816,7 +2963,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Aktivieren der Momentaufnahmeisolation für eine Datenbank
-
 Im folgenden Beispiel wird die Option für das Momentaufnahmeisolations-Framework für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank aktiviert.
 
 ```sql
@@ -2842,7 +2988,6 @@ Das Resultset zeigt, dass das Framework für die Momentaufnahmeisolation aktivie
 |[database_name] |1| EIN |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. Aktivieren, Ändern und Deaktivieren der Änderungsnachverfolgung
-
 Im folgenden Beispiel wird die Änderungsnachverfolgung für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank aktiviert und die Aufbewahrungsdauer auf `2` Tage festgelegt.
 
 ```sql
@@ -2866,18 +3011,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D: Aktivieren des Abfragespeichers
-
 Im folgenden Beispiel werden der Abfragespeicher aktiviert und Parameter des Abfragespeichers konfiguriert.
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-  (  
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>E. Aktivieren des Abfragespeichers mit Wartestatistiken
+Im folgenden Beispiel werden der Abfragespeicher aktiviert und dessen Parameter konfiguriert.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>F. Aktivieren des Abfragespeichers mit benutzerdefinierten Erfassungsrichtlinienoptionen
+Im folgenden Beispiel werden der Abfragespeicher aktiviert und dessen Parameter konfiguriert.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 

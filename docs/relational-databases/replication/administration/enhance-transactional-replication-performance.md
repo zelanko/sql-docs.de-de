@@ -1,5 +1,6 @@
 ---
 title: Verbessern der Leistung der Transaktionsreplikation | Microsoft-Dokumentation
+description: Neben allgemeinen Tipps zur Verbesserung der Replikationsleistung in SQL Server erfahren Sie hier mehr über weitere Verfahren für die Transaktionsreplikation.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -22,15 +23,15 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40b83d154c5cef0526e5e4550910fb2e3e7dd115
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288177"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160018"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Verbessern der Leistung der Transaktionsreplikation
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Ziehen Sie nach der Erwägung der allgemeinen Leistungstipps, die unter [Enhancing General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)aufgeführt sind, auch die nachfolgenden Aspekte, die sich speziell auf die Transaktionsreplikation beziehen, in Betracht.  
   
 ## <a name="database-design"></a>Datenbankentwurf  
@@ -142,11 +143,11 @@ Dieses Beispielszenario führt zu einem Zustand, in dem keine Sitzung ihre Befeh
 
 Während des Timeoutzeitraums der Abfrage werden Sie Folgendes bei den Leistungsindikatoren des Verteilungs-Agents bemerken: 
 
-- Der Wert des Leistungsindikators **Verteiler:Übermittelte Befehle/Sekunde** ist immer 0.
-- Der Wert des Leistungsindikators **Verteiler: Übermittelte Transaktionen/Sekunde** ist immer 0.
-- Der Leistungsindikator **Verteiler:Übermittlungslatenz** meldet einen Anstieg des Werts, bis der Deadlock des Threads behoben ist.
+- Der Wert des Leistungsindikators **Verteiler: Übermittelte Befehle/Sekunde** beträgt immer 0.
+- Der Wert des Leistungsindikators **Verteiler: Übermittelte Transaktionen/Sekunde** beträgt immer 0.
+- Der Leistungsindikator **Verteiler: Übermittlungslatenz** meldet einen Anstieg des Werts, bis der Deadlock des Threads behoben ist.
 
-Der Artikel „Replikationsverteilungs-Agent“ in der Microsoft SQL Server-Onlinedokumentation enthält folgende Beschreibung für den Parameter *SubscriptionStreams*: „Wenn eine der Verbindungen oder ein Commit hierfür nicht ausgeführt werden kann, wird der aktuelle Batch von allen Verbindungen verworfen, und der Agent versucht mithilfe eines einzigen Datenstroms, die fehlgeschlagenen Batches zu wiederholen.“
+Das Thema „Replication Distribution Agent (Replikationsverteilungs-Agent)“ in der SQL Server-Onlinedokumentation enthält die folgende Beschreibung für den Parameter *SubscriptionStreams*: „Wenn eine der Verbindungen oder ein Commit hierfür nicht ausgeführt werden kann, wird der aktuelle Batch von allen Verbindungen verworfen, und der Agent versucht mithilfe eines einzelnen Datenstroms, die fehlgeschlagenen Batches zu wiederholen.“
 
 Der Verteilungs-Agent verwendet eine Sitzung, um den Batch zu wiederholen, der nicht angewendet werden konnte. Nachdem der Verteilungs-Agent den Batch erfolgreich angewendet hat, verwendet er wieder mehrere Sitzungen, ohne einen Neustart durchzuführen.
 

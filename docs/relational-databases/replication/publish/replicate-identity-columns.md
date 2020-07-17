@@ -1,5 +1,6 @@
 ---
 title: Replizieren von Identitätsspalten | Microsoft-Dokumentation
+description: In SQL Server verarbeitet die Replikation Identitätsspalten für alle Veröffentlichungs- und Abonnementtypen. Sie können die Spalten manuell verwalten oder von der Replikation verwalten lassen.
 ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a7feb252e98be7cc820b074bcb3c3b2c6ff4ff5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a750eb05a8f4cb024e1837d46f028c72c76f4a29
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287584"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160098"
 ---
 # <a name="replicate-identity-columns"></a>Replizieren von Identitätsspalten
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Wenn Sie einer Spalte eine IDENTITY-Eigenschaft zuweisen, generiert [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für neue Zeilen, die in die Tabelle, die die Identitätsspalte enthält, eingefügt werden, automatisch sequenzielle Zahlwerte. Weitere Informationen finden Sie unter [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Da Identitätsspalten als Teil des Primärschlüssels aufgenommen werden können, ist es wichtig, dass die Identitätsspalten keine doppelten Werte enthalten. Wenn Identitätsspalten in einer Replikationstopologie verwendet werden sollen, die an mehreren Knoten Updates besitzt, muss jeder Knoten in der Replikationstopologie einen anderen Bereich von Identitätswerten verwenden, damit es nicht zu Dopplungen kommt.  
   
  Beispielsweise kann dem Verleger der Bereich 1-100 zugewiesen werden, dem Abonnent A der Bereich 101-200 und dem Abonnent B der Bereich 201-300. Wenn beim Verleger eine Zeile eingefügt wird und der Identitätswert beispielsweise 65 beträgt, wird der Wert für jeden Abonnenten repliziert. Beim Einfügen der Daten auf den einzelnen Abonnenten erhöht die Replikation jedoch nicht den Identitätsspaltenwert in der Abonnententabelle um 1, sondern es wird der Literalwert 65 eingefügt. Eine inkrementelle Erhöhung des Identitätsspaltenwerts erfolgt nur bei Benutzereinfügungen, nicht jedoch bei Einfügungen durch einen Replikations-Agent.  

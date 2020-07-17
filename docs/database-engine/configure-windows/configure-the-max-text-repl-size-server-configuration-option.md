@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85a47542c9681cd2dc004dae788d77010e2e0efd
-ms.sourcegitcommit: da836a2e23bd2ed56d2a72983f7b5b18c6f13342
+ms.openlocfilehash: 372bf3cfbe8aa3138bad7e03cc6c666c09ad68d5
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85090561"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159708"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption max text repl size
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdbmi.md)]
 
   In diesem Thema wird beschrieben, wie die Serverkonfigurationsoption **Max. Textgröße für Replikation** in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]konfiguriert wird. Mit der Option **max text repl size** können Sie die maximale Größe (in Byte) von Daten des Typs **text**, **ntext**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**und **image** angeben, die einer replizierten oder aufgezeichneten Spalte in einer einzelnen INSERT-, UPDATE-, WRITETEXT- oder UPDATETEXT-Anweisung hinzugefügt werden können. Der Standardwert ist 65536 Byte. Der Wert -1 gibt an, dass mit Ausnahme der durch den Datentyp auferlegten Größenbegrenzung keine Begrenzung der Größe gilt.  
   

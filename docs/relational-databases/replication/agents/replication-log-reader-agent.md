@@ -1,5 +1,6 @@
 ---
 title: Replikationsprotokolllese-Agents | Microsoft-Dokumentation
+description: Der Replikationsprotokolllese-Agent überwacht SQL Server-Datenbanken, die für die Transaktionsreplikation konfiguriert sind, und kopiert Transaktionen in die Verteilungsdatenbank.
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9f459e71ebeb95de2b1d80f1281881df1c0474a0
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 318b9e7a78612c6f89d9ccb75fc3d68a09c443c2
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151865"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159648"
 ---
 # <a name="replication-log-reader-agent"></a>Replikationsprotokolllese-Agent
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Der Replikationsprotokolllese-Agent ist eine ausführbare Datei, die das Transaktionsprotokoll jeder für die Transaktionsreplikation konfigurierten Datenbank überwacht und die für die Replikation markierten Transaktionen aus dem Transaktionsprotokoll in die Verteilungsdatenbank kopiert.  
   
 > [!NOTE]  

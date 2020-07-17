@@ -1,5 +1,6 @@
 ---
 title: Überwachen (Replikation) | Microsoft-Dokumentation
+description: Lernen Sie die Überwachungstools kennen, mit denen Sie die Aktivität und den Status der Replikation in der SQL Server-Replikationstopologie nachverfolgen.
 ms.custom: ''
 ms.date: 11/20/2018
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d884bfe3517fa8b45c19f1d4d286992c2e5453c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad64ec8bd3c9558f374e8963b1cc3093f42be4e6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288046"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159798"
 ---
 # <a name="monitoring-replication"></a>Überwachen (Replikation)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Die Überwachung einer Replikationstopologie ist ein wichtiger Aspekt bei der Bereitstellung der Replikation. Da die Replikationsaktivität verteilt ist, ist es außerordentlich wichtig, die Aktivität und den Status auf allen an der Replikation beteiligten Computern nachzuverfolgen. Sie können verschiedene Überwachungstools verwenden, um häufig gestellte Fragen wie die folgenden zu beantworten: 
 
 -   Arbeitet das System fehlerfrei?
@@ -41,7 +42,7 @@ ms.locfileid: "76288046"
 Zum Überwachen der Replikation stehen die folgenden Tools zur Verfügung:  
   
 -   **SQL Server-Replikationsmonitor:** das wichtigste Tool für die Überwachung der Replikation. Es bietet eine verlegerfokussierte Sicht auf die gesamte Replikationsaktivität. Weitere Informationen finden Sie unter [Monitoring Replication](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md). 
--   **SQL Server Management Studio:** bietet Zugriff auf den Replikationsmonitor. Darüber hinaus können Sie sich hier den aktuellen Status und die letzte Meldung anzeigen lassen, die vom Protokolllese-Agent, Momentaufnahme-Agent, Merge-Agent bzw. Verteilungs-Agent protokolliert wurde. Außerdem können Sie hier auch alle diese Agents starten und beenden. Weitere Informationen finden Sie unter [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md).  
+-   **SQL Server Management Studio:** bietet Zugriff auf den Replikationsmonitor. Darüber hinaus können Sie über dieses Tool den aktuellen Status und die letzte Meldung anzeigen lassen, die von den folgenden Agents protokolliert wurde, sowie die Agents starten und beenden: Protokolllese-Agent, Momentaufnahmen-Agent, Merge-Agent bzw. Verteilungs-Agent. Weitere Informationen finden Sie unter [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md).  
   
 -   **Transact-SQL (T-SQL) und Replikationsverwaltungsobjekte (Replication Management Objects, RMO):** Über beide Schnittstellen können Sie alle Replikationstypen des Verteilers überwachen. Bei Mergereplikationen haben Sie außerdem die Möglichkeit, die Replikation vom Abonnenten aus zu überwachen.  
   

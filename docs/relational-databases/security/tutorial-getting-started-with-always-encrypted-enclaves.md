@@ -2,7 +2,7 @@
 title: 'Tutorial: Always Encrypted mit Secure Enclaves mithilfe von SSMS'
 description: In diesem Tutorial erfahren Sie, wie Sie eine grundlegende Always Encrypted-Umgebung mit einer Secure Enclaves-Umgebung erstellen, wie Sie Daten direkt verschlüsseln und umfassende Abfragen für verschlüsselte Spalten mithilfe von SQL Server Management Studio (SSMS) ausgeben.
 ms.custom: seo-lt-2019
-ms.date: 10/15/2019
+ms.date: 04/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,15 +13,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35a7f19d04edc8cdcacbd9d41ec27ce3c91f6fd1
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288694"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279366"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Always Encrypted mit Secure Enclaves mithilfe von SSMS
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 In diesem Tutorial werden Ihnen die erste Schritte mit [Always Encrypted mit Secure Enclaves](encryption/always-encrypted-enclaves.md) vermittelt. Es wird Folgendes gezeigt:
 - Erstellen einer einfachen Umgebung zum Testen und Auswerten von Always Encrypted mit Secure Enclaves
@@ -115,14 +115,14 @@ In diesem Schritt konfigurieren Sie den SQL Server-Computer als überwachten Hos
 
 3. Starten Sie den SQL Server-Computer bei Aufforderung erneut, um die Installation von Hyper-V abzuschließen.
 
-4. Wenn Ihr SQL Server-Computers ein virtueller Computer ist, oder wenn es sich um einen älteren physischen Computer handelt, der keinen sicheren UEFI-Start unterstützt oder nicht mit IOMMU ausgestattet ist, müssen Sie die VBS-Anforderung für die Plattformsicherheitsfunktionen entfernen.
-    1. Entfernen Sie die Anforderung in der Windows-Registrierung.
+4. Wenn Ihr SQL Server-Computers ein virtueller Computer oder ein physischer Computer ist, der keinen sicheren UEFI-Start unterstützt oder nicht mit IOMMU ausgestattet ist, müssen Sie die VBS-Anforderung für die Plattformsicherheitsfunktionen entfernen.
+    1. Entfernen Sie die Anforderung für den sicheren Start und IOMMU, indem Sie den folgenden Befehl auf Ihrem SQL Server-Computer in einer PowerShell-Konsolenanwendung mit erhöhten Rechten ausführen:
 
         ```powershell
        Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
        ```
 
-    1. Starten Sie den Computer neu, damit VBS mit den niedrigeren Anforderungen online geht.
+    1. Starten Sie den SQL Server-Computer neu, damit VBS mit den niedrigeren Anforderungen online geht.
 
         ```powershell
        Restart-Computer
