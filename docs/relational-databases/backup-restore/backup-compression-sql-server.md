@@ -2,7 +2,7 @@
 title: Sicherungskomprimierung (SQL Server) | Microsoft-Dokumentation
 description: In diesem Artikel erhalten Sie Informationen zur Komprimierung von SQL Server-Sicherungen, einschließlich der Einschränkungen, Leistungskompromisse, der Konfiguration der Sicherungskomprimierung und dem Komprimierungsverhältnis.
 ms.custom: ''
-ms.date: 08/08/2016
+ms.date: 07/08/2020
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2111c5c96c808202369d0516755263283a4d08b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3351a709eef1550ab172e90b61d2cb67673ba27
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728541"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196944"
 ---
 # <a name="backup-compression-sql-server"></a>Sicherungskomprimierung (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,15 +82,24 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
      In der Regel enthält eine Seite mehrere Zeilen, in denen ein Feld den gleichen Wert aufweist. Dieser Wert kann möglicherweise sehr stark komprimiert werden. Dagegen ist bei Datenbanken mit Zufallsdaten oder nur einer großen Zeile pro Seite die komprimierte Sicherung beinahe so groß wie eine nicht komprimierte Sicherung.  
   
--   Verschlüsselungsstatus der Daten.  
+-   Verschlüsselungsstatus der Daten  
   
-     Verschlüsselte Daten lassen sich deutlich weniger komprimieren als entsprechende unverschlüsselte Daten. Wird die transparente Datenverschlüsselung zum Verschlüsseln einer gesamten Datenbank verwendet, ändert sich ihre Größe bei einer komprimierten Sicherung unter Umständen kaum oder gar nicht.  
-  
+     Verschlüsselte Daten lassen sich deutlich weniger komprimieren als entsprechende unverschlüsselte Daten. Wenn die Daten beispielsweise auf Spaltenebene mit Always Encrypted oder einer anderen Verschlüsselung auf Anwendungsebene verschlüsselt wurden, wird die Größe von Sicherungen durch die Komprimierung möglicherweise nicht erheblich reduziert.
+
+     Weitere Informationen zum Komprimieren von mit TDE (Transparent Data Encryption) verschlüsselten Datenbanken finden Sie unter [ mit TDE](#backup-compression-with-tde).
+
 -   Komprimierungsstatus der Datenbank.  
   
      Falls die Datenbank bereits komprimiert ist, ändert sich ihre Größe bei einer komprimierten Sicherung unter Umständen kaum oder gar nicht.  
-  
-  
+
+## <a name="backup-compression-with-tde"></a>Sicherungskomprimierung mit TDE
+
+Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ermöglicht die Einstellung `MAXTRANSFERSIZE` **größer als 65.536 (64 KB)** einen optimierten Komprimierungsalgorithmus für TDE-verschlüsselte Datenbanken ([Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)), der eine Seite zuerst entschlüsselt, komprimiert und dann wieder verschlüsselt. Wenn `MAXTRANSFERSIZE` nicht angegeben ist, oder wenn `MAXTRANSFERSIZE = 65536` (64 KB) verwendet wird, komprimiert die Sicherungskomprimierung mit TDE-verschlüsselten Datenbanken die verschlüsselten Seiten direkt und gibt möglicherweise keine guten Komprimierungsraten aus. Weitere Informationen finden Sie unter [Backup Compression for TDE-enabled Databases (Sicherungskomprimierung für TDE-fähige Datenbanken)](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
+
+Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 muss `MAXTRANSFERSIZE` nicht mehr festgelegt werden, um diesen optimierten Komprimierungsalgorithmus mit TDE zu aktivieren. Wenn der Sicherungsbefehl `WITH COMPRESSION` angegeben ist, oder wenn die Serverkonfiguration *backup compression default* auf 1 festgelegt ist, wird `MAXTRANSFERSIZE` automatisch auf 128.000 erhöht, um den optimierten Algorithmus zu aktivieren. Wenn `MAXTRANSFERSIZE` für den Sicherungsbefehl mit einem Wert > 64.000 angegeben wird, wird der angegebene Wert berücksichtigt. Anders ausgedrückt: SQL Server verringert den Wert nie automatisch, sondern erhöht ihn nur. Wenn Sie eine TDE-verschlüsselte Datenbank mit `MAXTRANSFERSIZE = 65536` sichern müssen, müssen Sie `WITH NO_COMPRESSION` angeben oder sicherstellen, dass die Serverkonfiguration *backup compression default* auf 0 festgelegt ist.
+
+Weitere Informationen finden Sie unter [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).
+
 ##  <a name="allocation-of-space-for-the-backup-file"></a><a name="Allocation"></a> Speicherplatzzuordnung für die Sicherungsdatei  
  Bei komprimierten Sicherungen ist die Größe der finalen Sicherungsdatei davon abhängig, wie stark die Daten komprimiert werden können, und dies ist erst bekannt, wenn der Sicherungsvorgang abgeschlossen ist.  Wenn eine Datenbank daher mithilfe einer Komprimierung gesichert wird, verwendet die Datenbank-Engine standardmäßig einen Vorabzuordnungsalgorithmus für die Sicherungsdatei. Dieser Algorithmus ordnet der Sicherungsdatei vorab einen vordefinierten Prozentsatz der Größe der Datenbank zu. Wenn während des Sicherungsvorgangs mehr Platz benötigt wird, lässt die Datenbank-Engine die Datei wachsen. Wenn die finale Größe kleiner als der reservierte Platz ist, verkleinert die Datenbank-Engine die Datei am Ende des Sicherungsvorgangs auf die tatsächliche finale Größe der Sicherung.  
   

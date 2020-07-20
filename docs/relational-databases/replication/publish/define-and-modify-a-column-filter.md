@@ -16,15 +16,15 @@ ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: efda97d51b3cbbe5137c89405c3534f48027a633
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c711285e4b51876548934c41030e154a81fcf4a6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286368"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159608"
 ---
 # <a name="define-and-modify-a-column-filter"></a>Definieren und Ändern eines Spaltenfilters
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   In diesem Thema wird beschrieben, wie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]Spaltenfilter definiert und geändert werden.  
   
  **In diesem Thema**  
@@ -48,7 +48,7 @@ ms.locfileid: "76286368"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Spaltenfilter werden auf der Seite **Artikel** des Assistenten für neue Veröffentlichung definiert. Weitere Informationen zum Verwenden des Assistenten für neue Veröffentlichung finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md).  
   
- Zum Definieren und Ändern der Spaltenfilter steht die Seite **Artikel** des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** zur Verfügung. Weitere Informationen zu Veröffentlichungs- und Artikeleigenschaften finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Zum Definieren und Ändern der Spaltenfilter steht die Seite **Artikel** des Dialogfelds **Veröffentlichungseigenschaften - \<Publication>** zur Verfügung. Weitere Informationen zu Veröffentlichungs- und Artikeleigenschaften finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-column-filter"></a>So definieren Sie einen Spaltenfilter  
   
@@ -58,7 +58,7 @@ ms.locfileid: "76286368"
   
 #### <a name="to-modify-column-filtering"></a>So ändern Sie die Spaltenfilterung  
   
-1.  Erweitern Sie im Bereich **Zu veröffentlichende Objekte** auf der Seite **Artikel** des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** die zu filternde Tabelle.  
+1.  Erweitern Sie im Bereich **Zu veröffentlichende Objekte** auf der Seite **Artikel** des Dialogfelds **Veröffentlichungseigenschaften - \<Publication>** die zu filternde Tabelle.  
   
 2.  Klicken Sie auf die Kontrollkästchen für alle Spalten, die herausgefiltert werden sollen, um deren Markierung aufzuheben, und stellen Sie sicher, dass die Kontrollkästchen für die Spalten, die im Artikel enthalten sein sollen, markiert sind.  
   

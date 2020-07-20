@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 39d990e334c790840eab7c47634dde6c6f9ff065
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1dbfa9c39167d6bef9ae14afc4245225cfb4cb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774048"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159828"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Einrichten der Verteilungsdatenbank für die Replikation in einer Always On-Verfügbarkeitsgruppe
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ Nachdem eine Verteilungsdatenbank gemäß der nachfolgenden Anleitung in der Ver
    >[!NOTE]
    >Vor dem Ausführen von gespeicherten Replikationsprozeduren für das sekundäre Replikat (z.B. `sp_dropdistpublisher`, `sp_dropdistributiondb`, `sp_dropdistributor`, `sp_adddistributiondb`, `sp_adddistpublisher`) sollten Sie sicherstellen, dass das Replikat vollständig synchronisiert wurde.
 
-- Alle sekundären Replikate in der Verfügbarkeitsgruppe einer Verteilungsdatenbank müssen lesbar sein.
+- Alle sekundären Replikate in der Verfügbarkeitsgruppe einer Verteilungsdatenbank sollten lesbar sein. Wenn ein sekundäres Replikat nicht lesbar ist, ist der Zugriff auf die Verteilereigenschaften für das bestimmte sekundäre Replikat in SQL Server Management Studio nicht möglich. Die Replikation funktioniert jedoch weiterhin ordnungsgemäß. 
 - Alle Knoten in der Verfügbarkeitsgruppe einer Verteilungsdatenbank müssen für den SQL Server-Agent dasselbe Domänenkonto verwenden, und das Domänenkonto muss auf jedem Knoten über dieselben Berechtigungen verfügen.
 - Wenn einer der Replikations-Agents unter einem Proxykonto ausgeführt wird, muss das Proxykonto auf jedem Knoten in der Verfügbarkeitsgruppe der Verteilungsdatenbank vorhanden sein und muss auf jedem Knoten dieselben Berechtigung haben.
 - Nehmen Sie in allen Replikaten, die Teil der Verfügbarkeitsgruppe der Verteilungsdatenbank sind, Änderungen an den Eigenschaften des Verteilers oder der Verteilungsdatenbank vor.
@@ -117,12 +117,18 @@ In diesem Beispiel werden ein neuer Verteiler und Verleger konfiguriert, und die
 
    Der Wert von `@working_directory` sollte ein Netzwerkpfad sein, der nicht von DIST1, DIST2 und DIST3 abhängt.
 
-1. Führen Sie auf DIST2 und DIST3 Folgendes aus:  
+1. Führen Sie auf DIST2 und DIST3 den folgenden Befehl aus, wenn das Replikat als sekundäres Replikat lesbar ist:  
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   Wenn ein Replikat nicht als sekundäres Replikat lesbar ist, führen Sie ein Failover durch, damit es zum primären Replikat wird. Führen Sie dann den folgenden Befehl aus: 
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    Der Wert von `@working_directory` sollte mit dem im vorherigen Schritt identisch sein.
 
 ### <a name="publisher-workflow"></a>Workflow des Verlegers
@@ -196,12 +202,18 @@ In diesem Beispiel wird ein neuer Verteiler zu einer vorhandenen Replikationskon
    sp_adddistributiondb 'distribution'
    ```
 
-4. Führen Sie auf DIST3 Folgendes aus: 
+4. Führen Sie auf DIST3 den folgenden Befehl aus, wenn das Replikat als sekundäres Replikat lesbar ist: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   Wenn das Replikat nicht als sekundäres Replikat lesbar ist, führen Sie ein Failover durch, damit es zum primären Replikat wird. Führen Sie dann den folgenden Befehl aus:
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    Der Wert von `@working_directory` sollte mit dem übereinstimmen, was für DIST1 und DIST2 angegeben wurde.
 
 4. Auf DIST3 müssen Sie Verbindungsserver zu den Abonnenten neu erstellen.

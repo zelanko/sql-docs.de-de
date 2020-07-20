@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81f446164fd12867c19273e6cf15018b749061a4
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 14a0cfa2227179d74d67d6e3ed16198da3323855
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925168"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279406"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
 
@@ -87,7 +87,7 @@ ms.locfileid: "82925168"
 ###  <a name="folder-project-environment"></a><a name="Folder"></a> Ordner, Projekt, Umgebung  
  Beachten Sie die folgenden Regeln, wenn Sie einen Ordner, ein Projekt oder eine Umgebung umbenennen.  
   
--   Zu ungültige Zeichen zählen die ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), größer als (>), senkrechter Strich (|), Rücktaste (\b), NULL (\0) und Tab (\t).  
+-   Zu ungültige Zeichen zählen die ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), greater than (>), senkrechter Strich (|), Rücktaste (\b), null (\0) und Tab (\t).  
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "82925168"
 ###  <a name="environment-variable"></a><a name="EnvironmentVariable"></a> Umgebungsvariable  
  Beachten Sie die folgenden Regeln, wenn Sie eine Umgebungsvariable benennen.  
   
--   Zu ungültige Zeichen zählen die ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), größer als (>), senkrechter Strich (|), Rücktaste (\b), NULL (\0) und Tab (\t).  
+-   Zu ungültige Zeichen zählen die ASCII/Unicode-Zeichen 1 bis 31, Anführungszeichen ("), kleiner als (\<), greater than (>), senkrechter Strich (|), Rücktaste (\b), null (\0) und Tab (\t).  
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
@@ -661,6 +661,18 @@ Wenn im Kontextmenü angezeigt wird, dass die Option **Always On-Unterstützung 
 4.  Führen Sie die Anweisungen unter [Schritt 2: Hinzufügen von SSISDB zu einer Always On-Verfügbarkeitsgruppe](#Step2) aus, um die SSISDB wieder zu einer Verfügbarkeitsgruppe hinzuzufügen.  
   
 5.  Führen Sie die Anweisungen unter [Schritt 3: Aktivieren der SSIS-Unterstützung für Always On](#Step3) aus.  
+
+
+## <a name="ssisdb-catalog-and-delegation-in-double-hop-scenarios"></a>SSISDB-Katalog und Delegierung in Doppel-Hop-Szenarios
+
+Der Remoteaufruf von SSIS-Paketen, die im SSISDB-Katalog gespeichert werden, unterstützt die Delegierung von Anmeldeinformationen standardmäßig nicht. Dies wird manchmal als Doppel-Hop bezeichnet. 
+
+Stellen Sie sich ein Szenario vor, in dem ein Benutzer sich beim Clientcomputer „A“ anmeldet und SQL Server Management Studio (SSMS) startet. Der Benutzer stellt über SSMS eine Verbindung mit einer SQL Server-Instanz her, die auf Computer „B“ gehostet wird, der über den SSISDB-Katalog verfügt. Das SSIS-Paket wird in diesem SSISDB-Katalog gespeichert. Daraufhin stellt das Paket eine Verbindung mit einem SQL Server-Dienst her, der auf dem Computer „C“ ausgeführt wird (das Paket könnte auch auf andere Dienste zugreifen). Wenn der Benutzer die Ausführung des SSIS-Pakets über Computer „A“ aufruft, übergibt SSMS zunächst die Benutzeranmeldeinformationen von Computer „A“ an Computer „B“ (auf dem der SSIS-Laufzeitprozess das Paket ausführt). Der Laufzeitprozess der SSIS-Ausführung („ISServerExec.exe“) ist nun erforderlich, um die Benutzeranmeldeinformationen von Computer „B“ an Computer „C“ zu delegieren, damit die Ausführung erfolgreich abgeschlossen werden kann. Die Delegierung von Anmeldeinformationen ist jedoch nicht standardmäßig aktiviert.
+
+Ein Benutzer kann die Delegierung von Anmeldeinformationen aktivieren, indem er dem SQL Server-Dienstkonto (auf Computer „B“) die Berechtigung *Benutzer bei Delegierungen aller Dienste vertrauen (nur Kerberos)* gewährt, wodurch „ISServerExec.exe“ als untergeordneter Prozess gestartet wird. Dieser Vorgang wird als Einrichtung der uneingeschränkten Delegierung oder der offenen Delegierung für ein SQL Server-Dienstkonto bezeichnet. Beachten Sie, dass diese Berechtigung die Sicherheitsanforderungen Ihrer Organisation erfüllt, bevor Sie sie erteilen.
+
+SSISDB unterstützt die eingeschränkte Delegierung nicht. Wenn das Dienstkonto der SQL Server-Instanz, die den SSISDB-Katalog hostet (Computer „B“ in diesem Beispiel), für die eingeschränkte Delegierung eingerichtet wird, ist „ISServerExec.exe“ in einer Doppel-Hop-Umgebung nicht dazu in der Lage, die Anmeldeinformationen an den dritten Computer (Computer „C“) zu delegieren. Dies gilt für Szenarios, in denen Windows Defender Credential Guard aktiviert ist. In diesen Szenarios ist die eingeschränkte Delegierung erforderlich.
+
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   

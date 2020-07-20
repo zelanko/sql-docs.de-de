@@ -16,15 +16,15 @@ ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1ce8df82856f7a6a495fdd026dec0d46eaba4c89
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a035d525492c1a99e7df28a13fcbd26a2fbbbdd2
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287525"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159528"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>Angeben von Schemaoptionen für die SQL Server-Replikation
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   In diesem Thema wird beschrieben, wie Schemaoptionen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]festgelegt werden. Beim Veröffentlichen einer Tabelle oder einer Sicht können Sie die Objekterstellungsoptionen steuern, die für das veröffentlichte Objekt repliziert werden. Sie können diesen Option festlegen, wenn der Artikel erstellt wird, und auch zu einem späteren Zeitpunkt ändern. Wenn Sie diese Optionen für einen Artikel nicht explizit festlegen, wird eine Standardgruppe von Optionen definiert.  
   
 > [!NOTE]  
@@ -55,26 +55,26 @@ ms.locfileid: "76287525"
 -   Die vollständige Liste der Schemaoptionen finden Sie im Parameter `@schema_option` von [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) und [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Auf der Registerkarte **Eigenschaften** im Dialogfeld **Artikeleigenschaften - \<Artikel>** können Sie Schemaoptionen angeben, beispielsweise, ob Einschränkungen und Trigger auf Abonnenten kopiert werden sollen. Diese Registerkarte ist im Assistenten für neue Veröffentlichung sowie über das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Auf der Registerkarte **Eigenschaften** im Dialogfeld **Artikeleigenschaften - \<Article>** können Sie Schemaoptionen angeben, beispielsweise, ob Einschränkungen und Trigger auf Abonnenten kopiert werden sollen. Diese Registerkarte ist im Assistenten für neue Veröffentlichungen sowie über das Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-schema-options"></a>So geben Sie Schemaoptionen an  
   
-1.  Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Artikel** bzw. im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** einen Artikel aus, und klicken anschließend auf **Artikeleigenschaften**.  
+1.  Wählen Sie im Assistenten für neue Veröffentlichungen auf der Seite **Artikel** bzw. im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** einen Artikel aus, und klicken anschließend auf **Artikeleigenschaften**.  
   
 2.  Wählen Sie aus, auf welche Artikel die Änderungen der Schemaoptionen angewendet werden sollen:  
   
-    -   Klicken Sie auf **Eigenschaften des hervorgehobenen \<ObjectType>-Artikels festlegen**, um das Dialogfeld **Artikeleigenschaften - \<ObjectName>** zu starten. Die in diesem Dialogfeld vorgenommenen Änderungen werden nur auf das Objekt angewendet, das im Objektbereich auf der Seite **Artikel** markiert ist.  
+    -   Klicken Sie auf **Eigenschaften des hervorgehobenen \<ObjectType>-Artikels festlegen**, um das Dialogfeld **Artikeleigenschaften - \<ObjectName>** zu öffnen. Die in diesem Dialogfeld vorgenommenen Änderungen werden nur auf das Objekt angewendet, das auf der Seite **Artikel** im Objektbereich markiert ist.  
   
-    -   Klicken Sie auf **Eigenschaften aller \<ObjectType>-Artikel** festlegen, um das Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel** zu starten. Die in diesem Dialogfeld vorgenommenen Änderungen werden auf alle Objekte dieses Typs angewendet, die im Objektbereich auf der Seite **Artikel** vorhanden sind, einschließlich jener Objekte, die noch nicht für die Veröffentlichung ausgewählt wurden.  
+    -   Klicken Sie auf **Eigenschaften aller \<ObjectType>-Artikel festlegen**, um das Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel** zu öffnen. Die in diesem Dialogfeld vorgenommenen Änderungen werden auf alle Objekte dieses Typs angewendet, die auf der Seite **Artikel** im Objektbereich vorhanden sind, einschließlich Objekte, die noch nicht für die Veröffentlichung ausgewählt wurden.  
   
         > [!NOTE]  
-        >  Durch die Änderungen im Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel**, werden alle zuvor im Dialogfeld **Artikeleigenschaften - \<ObjectName>** vorgenommenen Änderungen überschrieben. Wenn Sie beispielsweise sowohl mehrere Standardwerte für alle Artikel eines Objekttyps als auch bestimmte Eigenschaften für einzelne Objekte festlegen möchten, legen Sie zuerst die Standardwerte für alle Artikel fest. Legen Sie anschließend die Eigenschaften für die einzelnen Objekte fest.  
+        >  Eigenschaftenänderungen im Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel** überschreiben alle zuvor im Dialogfeld **Artikeleigenschaften - \<ObjectName>** vorgenommenen Änderungen. Wenn Sie beispielsweise sowohl mehrere Standardwerte für alle Artikel eines Objekttyps als auch bestimmte Eigenschaften für einzelne Objekte festlegen möchten, legen Sie zuerst die Standardwerte für alle Artikel fest. Legen Sie anschließend die Eigenschaften für die einzelnen Objekte fest.  
   
-3.  In den Abschnitten **Objekte und Einstellungen auf den Abonnenten kopieren** und **Zielobjekt** der Registerkarte **Eigenschaften** im Dialogfeld **Artikeleigenschaften - \<Artikel>** können Sie Werte für die Optionen angeben.  
+3.  In den Abschnitten **Objekte und Einstellungen auf den Abonnenten kopieren** und **Zielobjekt** der Registerkarte **Eigenschaften** im Dialogfeld **Artikeleigenschaften - \<Article>** können Sie Werte für die Optionen angeben.  
   
 4.  Ändern Sie die Eigenschaften nach Bedarf, und klicken Sie dann auf **OK**.  
   
-5.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften.-.\<Veröffentlichung>** befinden, klicken Sie auf **OK**, um zu speichern und das Dialogfeld zu schließen.  
+5.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** befinden, klicken Sie auf **OK**, um die Einstellungen zu speichern und das Dialogfeld zu schließen.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Schemaoptionen werden als hexadezimaler Wert angegeben, der das [| (Bitweise OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) -Ergebnis einer oder mehrerer Optionen ist. Weitere Informationen finden Sie unter [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) und [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  

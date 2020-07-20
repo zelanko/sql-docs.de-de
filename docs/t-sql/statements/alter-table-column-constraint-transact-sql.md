@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a54784e777f85fea73036df3f0c6ec0b23be878e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a6e943dd07c7687d6ab56cc74ebde1cc2ed77214
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760985"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381234"
 ---
 # <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,9 @@ ms.locfileid: "85760985"
 }  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  CONSTRAINT  
  Gibt den Beginn der Definition für eine PRIMARY KEY-, UNIQUE-, FOREIGN KEY- oder CHECK-Einschränkung an.  
   
@@ -109,7 +111,7 @@ ms.locfileid: "85760985"
  *ref_column*  
  Eine Spalte in Klammern, auf die die neue FOREIGN KEY-Einschränkung verweist.  
   
- ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON DELETE {**NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT}  
  Gibt an, welche Aktion für eine Zeile der geänderten Tabelle ausgeführt werden soll, wenn diese Zeile eine referenzielle Beziehung hat, und die Zeile, auf die verwiesen wird, aus der übergeordneten Tabelle gelöscht wird. Der Standardwert ist NO ACTION.  
   
  NO ACTION  
@@ -134,7 +136,7 @@ ms.locfileid: "85760985"
   
  Ist hingegen NO ACTION angegeben, löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus und führt ein Rollback für die Löschaktion der **Vendor**-Zeile aus, wenn in der **ProductVendor**-Tabelle mindestens eine Zeile vorhanden ist, die auf diese Zeile verweist.  
   
- ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON UPDATE {**NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT}  
  Gibt an, welche Aktion für eine Zeile der geänderten Tabelle ausgeführt werden soll, wenn diese Zeile eine referenzielle Beziehung hat und die Zeile, auf die verwiesen wird, in der übergeordneten Tabelle aktualisiert wird. Der Standardwert ist NO ACTION.  
   
  NO ACTION  
@@ -160,7 +162,7 @@ ms.locfileid: "85760985"
  Ist hingegen NO ACTION angegeben, löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus und führt für die Updateaktion der **Vendor**-Zeile einen Rollback aus, wenn in der **ProductVendor**-Tabelle mindestens eine Zeile vorhanden ist, die auf diese Zeile verweist.  
   
  NOT FOR REPLICATION  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Kann für FOREIGN KEY- und CHECK-Einschränkungen festgelegt werden. Wenn diese Klausel für eine Einschränkung angegeben wird, wird die Einschränkung nicht erzwungen, wenn Replikations-Agents Einfüge-, Update- oder Löschvorgänge ausführen.  
   

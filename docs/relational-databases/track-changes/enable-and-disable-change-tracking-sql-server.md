@@ -18,12 +18,12 @@ ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3820ea3e450e00f2cdf812e52170ada80495c74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 775feb5c2393c8b482deb2deb919fc93576e3ce6
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85638893"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279074"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>Aktivieren und Deaktivieren der Änderungsnachverfolgung (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- Sie können die Änderungsnachverfolgung auch in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aktivieren. Verwenden Sie hierzu das Dialogfeld [Datenbankeigenschaften &#40;Seite Änderungsnachverfolgung&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) .  
+ Sie können die Änderungsnachverfolgung auch in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aktivieren. Verwenden Sie hierzu das Dialogfeld [Datenbankeigenschaften &#40;Seite Änderungsnachverfolgung&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) . Wenn eine Datenbank speicheroptimierte Tabellen enthält, können Sie die Änderungsnachverfolgung nicht mit SQL Server Management Studio aktivieren. Verwenden Sie zum Aktivieren T-SQL.
   
  Bei der Aktivierung der Änderungsnachverfolgung können Sie die CHANGE_RETENTION-Option und die AUTO_CLEANUP-Option angeben. Die Werte können Sie nach der Aktivierung der Änderungsnachverfolgung jederzeit ändern.  
   

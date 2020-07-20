@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62c4954663f7553fd6df7461f5b5c967f7386721
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595485"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279356"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>Tutorial: Entwickeln einer .NET Framework-Anwendung mithilfe von Always Encrypted mit Secure Enclaves
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 In diesem Tutorial erfahren Sie, wie Sie eine einfache Anwendung entwickeln, die Datenbankabfragen ausgibt, die eine serverseitige Secure Enclave für [Always Encrypted mit Secure Enclaves](encryption/always-encrypted-enclaves.md) verwendet. 
 
@@ -54,16 +54,16 @@ Damit Sie Always Encrypted mit Secure Enclaves in einer.NET Framework-Anwendung 
 
 7. Öffnen Sie die Datei „App.config“ für Ihr Projekt.
 
-8. Suchen Sie den Abschnitt \<configuration\>, und fügen Sie die \<configSections\>-Abschnitte hinzu, oder passen Sie sie an.
+8. Suchen Sie nach dem Abschnitt \<configuration\>, und führen Sie die \<configSections\>-Abschnitte hinzu oder aktualisieren Sie diese.
 
-   a. Wenn der Abschnitt \<configSections\>**nicht** im Abschnitt \<configuration\> enthalten ist, fügen Sie den folgenden Inhalt unmittelbar unter \<configuration\> ein.
+   a. Wenn der Abschnitt \<configuration\> **nicht** den Abschnitt \<configSections\> enthält, fügen Sie den folgenden Inhalt direkt unter \<configuration\> hinzu.
    
       ```xml
       <configSections>
          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
-   b. Wenn der Abschnitt \<configSections\> bereits im Abschnitt \<configuration\> enthalten ist, fügen Sie die folgende Zeile in \<configSections\> ein:
+   b. Wenn der Abschnitt \<configruation\> den Abschnitt \<configSections\> bereits enthält, fügen Sie die folgende Zeile in \<configSections\> hinzu:
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>

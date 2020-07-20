@@ -15,15 +15,15 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 2f7874ecabe33f507ca471d13e00d2f48f6f8976
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 283b775163452fd6e09b46a213174ef8fbd45d94
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287664"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159568"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definieren oder Ändern eines statischen Zeilenfilters
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   In diesem Thema wird beschrieben, wie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]statische Zeilenfilter definiert und geändert werden.  
   
  **In diesem Thema**  
@@ -53,11 +53,11 @@ ms.locfileid: "76287664"
 -   Da diese Filter statisch sind, erhalten alle Abonnenten die gleiche Teilmenge der Daten. Informationen darüber, wie Sie Zeilen in einem Tabellenartikel, der zu einer Mergeveröffentlichung gehört, dynamisch filtern können, damit jeder Abonnent eine andere Partition der Daten erhält, finden Sie unter [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). Mergereplikation ermöglicht es Ihnen zudem, verknüpfte Zeilen auf Grundlage eines vorhandenen Zeilenfilters zu filtern. Weitere Informationen finden Sie unter [Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Definieren, ändern und löschen Sie statische Zeilenfilter auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder der Seite **Filterzeilen** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** . Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Definieren, ändern und löschen Sie statische Zeilenfilter auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichungen oder auf der Seite **Filterzeilen** im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** . Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-static-row-filter"></a>So definieren Sie einen statischen Zeilenfilter  
   
-1.  Die Aktion, die Sie im Assistenten für neue Veröffentlichung auf der Seite **Tabellenzeilen filtern** oder im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf der Seite **Zeilen filtern** ausführen, hängt vom Typ der Veröffentlichung ab:  
+1.  Die Aktion, die Sie im Assistenten für neue Veröffentlichungen auf der Seite **Tabellenzeilen filtern** oder im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** auf der Seite **Zeilen filtern** ausführen, hängt vom Typ der Veröffentlichung ab:  
   
     -   Klicken Sie bei der Momentaufnahme- oder Transaktionsveröffentlichung auf **Hinzufügen**.  
   
@@ -90,11 +90,11 @@ ms.locfileid: "76287664"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften.-.\<Veröffentlichung>** befinden, klicken Sie auf **OK**, um zu speichern und das Dialogfeld zu schließen.  
+5.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** befinden, klicken Sie auf **OK**, um die Einstellungen zu speichern und das Dialogfeld zu schließen.  
 
 #### <a name="to-modify-a-static-row-filter"></a>So ändern Sie einen statischen Zeilenfilter  
   
-1.  Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Tabellenzeilen filtern** oder im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf der Seite **Zeilen filtern** im Bereich **Gefilterte Tabellen** einen Filter aus, und klicken Sie dann auf **Bearbeiten**.  
+1.  Wählen Sie auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichungen oder auf der Seite **Filterzeilen** des Dialogfelds **Veröffentlichungseigenschaften - \<Publication>** einen Filter im Bereich **gefilterte Tabellen**, und klicken Sie dann auf **Bearbeiten**.  
   
 2.  Ändern Sie den Filter im Dialogfeld **Filter bearbeiten** .  
   
@@ -102,7 +102,7 @@ ms.locfileid: "76287664"
   
 #### <a name="to-delete-a-static-row-filter"></a>So löschen Sie einen statischen Zeilenfilter  
   
-1.  Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Tabellenzeilen filtern** oder im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung<** auf der Seite **Zeilen filtern** im Bereich **Gefilterte Tabellen** einen Filter aus, und klicken Sie dann auf **Löschen**.  
+1.  Wählen Sie auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichungen oder auf der Seite **Filterzeilen** des Dialogfelds **Veröffentlichungseigenschaften - \<Publication>** einen Filter im Bereich **gefilterte Tabellen**, und klicken Sie dann auf **Löschen**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Wenn Sie Tabellenartikel erstellen, können Sie eine WHERE-Klausel definieren, um Zeilen aus einem Artikel zu filtern. Zudem können Sie einen Zeilenfilter ändern, nachdem er definiert wurde. Statische Zeilenfilter können mithilfe gespeicherter Replikationsprozeduren programmgesteuert erstellt und geändert werden.  

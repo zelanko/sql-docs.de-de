@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5d2e90088d844bbd897f2a0efae9379e9a1a585
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9c0a353c91b952571932ae6d2abe318f70decc4a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007487"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279243"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore-Indizes - Neuigkeiten
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,6 +49,9 @@ ms.locfileid: "86007487"
 |Der Columnstore-Index kann über eine nicht permanent berechnete Spalte verfügen.||||ja|||   
   
  <sup>1</sup> Speichern Sie den Index in einer schreibgeschützten Dateigruppe, um einen schreibgeschützten nicht gruppierten Columnstore-Index zu erstellen.  
+ 
+> [!NOTE]
+> Der Grad an Parallelität (DOP) für Vorgänge im [Batchmodus](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) sind für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition auf „2“ und für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web und Express Edition auf „1“ beschränkt. Dies gilt für Columnstore-Indizes, die über datenträgerbasierte Tabellen und speicheroptimierte Tabellen erstellt wurden.
 
 ## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] fügt diese neuen Funktionen hinzu.
@@ -85,22 +88,26 @@ ms.locfileid: "86007487"
   
 -   Columnstore unterstützt Indexdefragmentierung durch Entfernen von gelöschten Zeilen, ohne dass der Index explizit neu erstellt werden muss. Mit der `ALTER INDEX ... REORGANIZE`-Anweisung werden gelöschte Zeilen basierend auf einer intern definierten Richtlinie in Form eines Onlinevorgangs aus dem Columnstore entfernt.  
   
--   Columnstore-Indizes können Zugriff auf ein lesbares sekundäres AlwaysOn-Replikat haben. Sie können die Leistung von Betriebsanalysen verbessern, indem Sie die Analyseabfragen in ein sekundäres AlwaysOn-Replikat auslagern.  
+-   Columnstore-Indizes können über Zugriff auf ein lesbares sekundäres Always On-Replikat verfügen. Sie können die Leistung von Betriebsanalysen verbessern, indem Sie die Analyseabfragen in ein sekundäres Always On-Replikat auslagern.  
   
--   Zur Verbesserung der Leistung berechnet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Aggregatfunktionen `MIN`, `MAX`, `SUM`, `COUNT` und `AVG` bei Tabellenscans, wenn der Datentyp nicht mehr als 8 Byte verwendet und keine Zeichenfolgen ist. Die Aggregatweitergabe mit oder ohne Group By-Klausel wird für gruppierte und nicht gruppierte Columnstore-Indizes unterstützt.  
+-   Die Aggregatweitergabe berechnet die Aggregatfunktionen `MIN`, `MAX`, `SUM`, `COUNT` und `AVG` während Tabellenscans, wenn der Datentyp 8 Byte oder weniger nutzt und es sich nicht um einen String-Datentyp handelt. Die Aggregatweitergabe wird mit oder ohne `GROUP BY`-Klausel für gruppierte und nicht gruppierte Columnstore-Indizes unterstützt. Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist diese Erweiterung für die Enterprise Edition vorbehalten.
   
--   Die Prädikatweitergabe beschleunigt Abfragen, die Zeichenfolgen vom Typ „[v]archar“ oder „n[v]archar“ vergleichen. Dies gilt für die allgemeinen Vergleichsoperatoren und schließt Operatoren wie LIKE ein, die Bitmapfilter verwenden. Dies funktioniert bei allen Sortierungen, die von SQL Server unterstützt werden.  
+-   Die Zeichenfolgenprädikatweitergabe beschleunigt Abfragen, bei denen Zeichenfolgen der Typen VARCHAR/CHAR oder NVARCHAR/NCHAR verglichen werden. Dies gilt für die allgemeinen Vergleichsoperatoren und schließt Operatoren wie `LIKE` ein, die Bitmapfilter verwenden. Dies funktioniert mit allen unterstützten Sortierungen. Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist diese Erweiterung für die Enterprise Edition vorbehalten. 
+
+-   Erweiterungen für Batchmodusvorgänge können mithilfe vektorbasierter Hardwarefunktionen genutzt werden. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] erkennt die CPU-Unterstützung für AVX 2- (Erweiterte Vektorerweiterungen) und SSE 4-Hardwareerweiterungen (Streaming SIMD Extensions 4) und nutzt diese, wenn sie unterstützt werden. Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist diese Erweiterung für die Enterprise Edition vorbehalten.
   
 ### <a name="performance-for-database-compatibility-level-130"></a>Leistung für Datenbankkompatibilitätsgrad 130  
   
 -   Unterstützung der neuen Batchmodusausführung für Abfragen, die diese Vorgänge verwenden:  
-    -   SORT  
-    -   Aggregate mit mehrere verschiedenen Funktionen. Einige Beispiele: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG`, `STDEV/STDEVP`.  
-    -   Fensteraggregatfunktionen: `COUNT`, `COUNT_BIG`, `SUM`, `AVG`, `MIN`, `MAX`, und `CLR`.  
-    -   Benutzerdefinierte Fensteraggregate: `CHECKSUM_AGG`, `STDEV`, `STDEVP`, `VAR`, `VARP`, and `GROUPING`.  
-    -   Analysefunktionen für Fensteraggregate: `LAG`, `LEAD`, `FIRST_VALUE`, `LAST_VALUE`, `PERCENTILE_CONT`, `PERCENTILE_DISC`, `CUME_DIST`, und `PERCENT_RANK`.  
+    -   `SORT`  
+    -   Aggregate mit mehrere verschiedenen Funktionen. Beispiele: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG` und `STDEV/STDEVP`  
+    -   Fensteraggregatfunktionen: `COUNT`, `COUNT_BIG`, `SUM`, `AVG`, `MIN`, `MAX` und `CLR`  
+    -   Benutzerdefinierte Fensteraggregate: `CHECKSUM_AGG`, `STDEV`, `STDEVP`, `VAR`, `VARP` und `GROUPING`  
+    -   Analysefunktionen für Fensteraggregate: `LAG`, `LEAD`, `FIRST_VALUE`, `LAST_VALUE`, `PERCENTILE_CONT`, `PERCENTILE_DISC`, `CUME_DIST` und `PERCENT_RANK`  
+
 -   Singlethread-Abfragen unter `MAXDOP 1` oder mit der seriellen Abfrageplanausführung im Batchmodus. Früher konnten nur Multithread-Abfragen im Batchmodus ausgeführt werden.  
--   Speicheroptimierte Tabellenabfragen können sowohl beim Zugriff auf Daten im Rowstore- als auch beim Zugriff auf Daten im Columnstore-Index parallele Pläne im SQL InterOp-Modus verwenden.  
+
+-   Speicheroptimierte Tabellenabfragen können sowohl beim Zugriff auf Daten im Rowstore- als auch beim Zugriff auf Daten im Columnstore-Index parallele Pläne im SQL InterOp-Modus verwenden.
   
 ### <a name="supportability"></a>Unterstützbarkeit  
 Diese Systemsichten sind für Columnstore neu:  

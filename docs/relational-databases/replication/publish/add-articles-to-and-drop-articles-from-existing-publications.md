@@ -21,15 +21,15 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1bd5e9d25a2f45718e7ac03de1edced942702198
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4bfaa32b87c5e7cffa60f3eef9d5b20ae85a747e
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286529"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159918"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Nachdem eine Veröffentlichung erstellt wurde, können ihr Artikel hinzugefügt oder Artikel aus der Veröffentlichung gelöscht werden. Während das Hinzufügen von Artikeln jederzeit erfolgen kann, hängen die Schritte zum Löschen von Artikeln vom jeweiligen Replikationstyp und dem Zeitpunkt ab, zu dem der Artikel gelöscht wird.  
   
 ## <a name="adding-articles"></a>Hinzufügen von Artikeln  
@@ -59,7 +59,7 @@ ms.locfileid: "76286529"
 ## <a name="dropping-articles"></a>Löschung von Artikeln  
  Artikel können jederzeit aus einer Veröffentlichung gelöscht werden, wobei jedoch Folgendes zu beachten ist:  
   
--   Durch das Löschen eines Artikels aus einer Veröffentlichung wird weder das Objekt aus der Veröffentlichungsdatenbank noch das zugehörige Objekt aus der Abonnementdatenbank entfernt. Verwenden Sie DROP \<Objekt>, um diese Objekte ggf. zu entfernen. Wenn Sie einen Artikel löschen möchten, der über Fremdschlüsseleinschränkungen mit anderen veröffentlichten Artikeln verknüpft ist, sollten Sie die Tabelle auf dem Abonnenten manuell oder mithilfe einer bedarfsgesteuerten Skriptausführung löschen. Geben Sie ein Skript an, dass die entsprechenden DROP \<Objekt>-Anweisungen enthält. Weitere Informationen finden Sie unter [Ausführen von Skripts während der Synchronisierung &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
+-   Durch das Löschen eines Artikels aus einer Veröffentlichung wird weder das Objekt aus der Veröffentlichungsdatenbank noch das zugehörige Objekt aus der Abonnementdatenbank entfernt. Verwenden Sie DROP \<Object>, um diese Objekte ggf. zu entfernen. Wenn Sie einen Artikel löschen möchten, der über Fremdschlüsseleinschränkungen mit anderen veröffentlichten Artikeln verknüpft ist, sollten Sie die Tabelle auf dem Abonnenten manuell oder mithilfe einer bedarfsgesteuerten Skriptausführung löschen. Geben Sie ein Skript an, das die entsprechenden DROP \<Object>-Anweisungen enthält. Weitere Informationen finden Sie unter [Ausführen von Skripts während der Synchronisierung &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
 -   Bei Mergeveröffentlichungen mit einem Kompatibilitätsgrad von 90RTM oder höher können Artikel jederzeit gelöscht werden. Es ist jedoch eine neue Momentaufnahme erforderlich. Außerdem zu beachten:  
   

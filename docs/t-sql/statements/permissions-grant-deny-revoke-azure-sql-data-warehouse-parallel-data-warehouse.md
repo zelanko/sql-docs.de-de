@@ -14,15 +14,15 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2aa15e60680419fc2f6c74034ce7063ecabdbf77
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c8d19d21b7bcd1e9ab72732dab439355da1794e0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626043"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197424"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Berechtigungen: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Verwenden Sie die Anweisungen **GRANT** und **DENY** von [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], um einem Sicherheitsprinzipal (ein Anmeldename, ein Datenbankbenutzer oder eine Datenbankrolle) eine Berechtigung (z.B. **UPDATE**) eines sicherungsfähigen Elements (z.B. Datenbank, Tabelle, Sicht, usw.) zu erteilen oder zu verweigern. Verwenden Sie **REVOKE** um die Erteilung oder Verweigerung einer Berechtigung zu widerrufen.  
   
@@ -78,12 +78,12 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Argumente  
- \<permission>[ **,** ...*n*]  
+ \<permission>[ **,** ...*n* ]  
  Mindestens eine Berechtigung, die zu erteilen, verweigern oder widerrufen ist.  
   
  ON [ \<class_type> :: ] *securable* Die **ON**-Klausel beschreibt den sicherungsfähigen Parameter, für den Berechtigungen erteilt, verweigert oder widerrufen werden sollen.  
   
- \<class_type> Der Klassentyp des sicherungsfähigen Elements. Dies kann eins der folgenden Elemente sein: **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE** oder **USER**. Berechtigungen können auch für **SERVER**_class\_type_ erteilt werden, jedoch wird **SERVER** für diese Berechtigungen nicht angegeben. **DATABASE** wird nicht angegeben, wenn die Berechtigung das Wort **DATABASE** enthält (z.B. **ALTER ANY DATABASE**). Wenn *class_type* nicht angegeben ist und der Berechtigungstyp nicht auf die Server- oder Datenbankklassen beschränkt ist, wird von der Klasse **OBJECT** ausgegangen.  
+ \<class_type> ist der Klassentyp des sicherungsfähigen Elements. Dies kann eins der folgenden Elemente sein: **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE** oder **USER**. Berechtigungen können auch für **SERVER**_class\_type_ erteilt werden, jedoch wird **SERVER** für diese Berechtigungen nicht angegeben. **DATABASE** wird nicht angegeben, wenn die Berechtigung das Wort **DATABASE** enthält (z.B. **ALTER ANY DATABASE**). Wenn *class_type* nicht angegeben ist und der Berechtigungstyp nicht auf die Server- oder Datenbankklassen beschränkt ist, wird von der Klasse **OBJECT** ausgegangen.  
   
  *securable*  
  Der Name für die Anmeldung, die Datenbank, die Tabelle, die Sicht, das Schema, die Prozedur, die Rolle oder den Benutzer, dem Berechtigungen erteilt, verweigert oder widerrufen werden sollen. Der Objektname kann mit den dreiteiligen Benennungsregeln angegeben werden, die unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) beschrieben sind.  

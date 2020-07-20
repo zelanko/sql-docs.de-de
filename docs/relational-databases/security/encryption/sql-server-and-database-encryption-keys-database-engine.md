@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: bd4a4e98f464c56e5c46c669b7ca26e5db5c814e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883076"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279336"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Verschlüsselungsschlüssel für SQL Server und Datenbank (Datenbank-Engine)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85883076"
 
 ### <a name="service-master-key"></a>Diensthauptschlüssel
   
- Der Diensthauptschlüssel ist der Stamm der SQL Server -Verschlüsselungshierarchie. Der Diensthauptschlüssel wird automatisch generiert, wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz zum ersten Mal gestartet wird. Er wird verwendet, um ein Kennwort für einen Verbindungsserver, Anmeldeinformationen und den Datenbank-Hauptschlüssel zu verschlüsseln. Der Diensthauptschlüssel wird mithilfe des auf dem lokalen Computer verwendeten Computerschlüssels unter Verwendung der Windows-Datenschutz-API (DPAPI) verschlüsselt. Die DPAPI verwendet einen Schlüssel, der von den Windows-Anmeldeinformationen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkontos und den Anmeldeinformationen des Computers abgeleitet ist. Der Diensthauptschlüssel kann nur von dem Dienstkonto entschlüsselt werden, unter dem er erstellt wurde, oder von einem Prinzipal, der auf die Anmeldeinformationen des Computers zugreifen kann.
+ Der Diensthauptschlüssel ist der Stamm der SQL Server -Verschlüsselungshierarchie. Der Diensthauptschlüssel wird automatisch generiert, wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz zum ersten Mal gestartet wird. Er wird in jeder Datenbank verwendet, um ein Kennwort für einen Verbindungsserver, Anmeldeinformationen und den Datenbank-Hauptschlüssel zu verschlüsseln. Der Diensthauptschlüssel wird mithilfe des auf dem lokalen Computer verwendeten Computerschlüssels unter Verwendung der Windows-Datenschutz-API (DPAPI) verschlüsselt. Die DPAPI verwendet einen Schlüssel, der von den Windows-Anmeldeinformationen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkontos und den Anmeldeinformationen des Computers abgeleitet ist. Der Diensthauptschlüssel kann nur von dem Dienstkonto entschlüsselt werden, unter dem er erstellt wurde, oder von einem Prinzipal, der auf die Anmeldeinformationen des Computers zugreifen kann.
 
 Der Diensthauptschlüssel kann nur durch das Windows-Dienstkonto geöffnet werden, unter dem er erstellt wurde, oder durch einen Prinzipal mit Zugriff auf den Namen des Dienstkontos und sein Kennwort.
 

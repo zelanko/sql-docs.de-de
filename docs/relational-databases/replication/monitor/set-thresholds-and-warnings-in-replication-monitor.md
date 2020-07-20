@@ -19,15 +19,15 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 883f554c214809260f69392ad072b1971a34f2da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 824e5c768ab36b7af5d228e5879eae4f05916051
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287821"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159758"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Festlegen von Schwellenwerten und Warnungen im Replikationsmonitor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Im Replikationsmonitor von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statusinformationen für Veröffentlichungen und Abonnements angezeigt. Standardmäßig zeigt der Replikationsmonitor Warnungen nur für nicht initialisierte Abonnements an. Sie können Warnungen jedoch auch für andere Bedingungen aktivieren. Sie sollten Warnungen für Ihre Topologie aktivieren, damit Sie rechtzeitig über Status und Leistung informiert werden.  
   
  Beim Aktivieren einer Warnung geben Sie einen Schwellenwert an. Wenn dieser Schwellenwert erreicht oder überschritten wird, wird eine Warnung angezeigt (außer es muss ein Problem mit höherer Priorität angezeigt werden). Neben der Warnung im Replikationsmonitor kann bei Erreichen eines Schwellenwerts auch ein Warnhinweis ausgelöst werden. Sie können Warnungen für folgende Bedingungen aktivieren:  
@@ -78,7 +78,7 @@ ms.locfileid: "76287821"
   
      In diesem Dialogfeld werden Warnungen für alle Veröffentlichungstypen angezeigt – auch für Warnungen, die nichts mit den Überwachungsschwellenwerten zu tun haben. Weitere Informationen finden Sie unter [Verwenden von Warnungen für Replikations-Agentereignisse](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Legen Sie im Dialogfeld **\<Eigenschaften von Warnung AlertName>** die gewünschten Optionen fest:  
+3.  Legen Sie im Dialogfeld **Eigenschaften von Warnung "\<AlertName>"** die gewünschten Optionen fest:  
   
     -   Klicken Sie auf der Seite **Allgemein** auf **Aktivieren**, und geben Sie an, für welche Datenbank die Warnung gelten soll.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "76287821"
   
      In diesem Dialogfeld werden Warnungen für alle Veröffentlichungstypen angezeigt – auch für Warnungen, die nichts mit den Überwachungsschwellenwerten zu tun haben.  
   
-3.  Legen Sie im Dialogfeld **\<Eigenschaften von Warnung AlertName>** die gewünschten Optionen fest:  
+3.  Legen Sie im Dialogfeld **Eigenschaften von Warnung "\<AlertName>"** die gewünschten Optionen fest:  
   
     -   Klicken Sie auf der Seite **Allgemein** auf **Aktivieren**, und geben Sie an, für welche Datenbank die Warnung gelten soll.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "76287821"
   
      In diesem Dialogfeld werden Warnungen für alle Veröffentlichungstypen angezeigt – auch für Warnungen, die nichts mit den Überwachungsschwellenwerten zu tun haben. Weitere Informationen finden Sie unter [Verwenden von Warnungen für Replikations-Agentereignisse](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Legen Sie im Dialogfeld **\<Eigenschaften von Warnung AlertName>** die gewünschten Optionen fest:  
+3.  Legen Sie im Dialogfeld **Eigenschaften von Warnung "\<AlertName>"** die gewünschten Optionen fest:  
   
     -   Klicken Sie auf der Seite **Allgemein** auf **Aktivieren**, und geben Sie an, für welche Datenbank die Warnung gelten soll.  
   

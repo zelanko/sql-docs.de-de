@@ -22,15 +22,15 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 63fa5ab8c3eea6db950fb2c74a26b7087c5927c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f84fc174f63ebf6e58e93a3ba19b39897fbf7e9
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287518"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159518"
 ---
 # <a name="view-and-modify-article-properties"></a>Anzeigen und Ändern von Artikeleigenschaften
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   In diesem Thema wird beschrieben, wie die Artikeleigenschaften in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden.  
   
  **In diesem Thema**  
@@ -60,7 +60,7 @@ ms.locfileid: "76287518"
 -   Nachdem eine Veröffentlichung erstellt wurde, ist für bestimmte Eigenschaftsänderungen eine neue Momentaufnahme erforderlich. Wenn für eine Veröffentlichung Abonnements erstellt wurden, müssen bei bestimmten Änderungen alle Abonnements erneut initialisiert werden. Weitere Informationen finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) und [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Sie können die Eigenschaften von Artikeln im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** anzeigen und ändern. Dieses Dialogfeld ist in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und im Replikationsmonitor verfügbar. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+ Sie können die Eigenschaften von Artikeln im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** anzeigen und ändern. Dieses Dialogfeld ist in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und im Replikationsmonitor verfügbar. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 -   Die Seite **Allgemein** enthält den Namen und die Beschreibung der Veröffentlichung, den Datenbanknamen, den Typ der Veröffentlichung und die Einstellungen für den Abonnementablauf.  
   
@@ -84,20 +84,20 @@ ms.locfileid: "76287518"
   
 #### <a name="to-view-and-modify-article-properties"></a>So zeigen Sie Artikeleigenschaften an oder ändern sie  
   
-1.  Wählen Sie auf der Seite **Artikel** bzw. im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** einen Artikel aus, und klicken Sie dann auf **Artikeleigenschaften**.  
+1.  Wählen Sie auf der Seite **Artikel** bzw. im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** einen Artikel aus, und klicken Sie dann auf **Artikeleigenschaften**.  
   
 2.  Wählen Sie aus, auf welche Artikel die Eigenschaftsänderungen angewendet werden sollen:  
   
-    -   Klicken Sie auf **Eigenschaften des hervorgehobenen \<ObjectType>-Artikels festlegen**, um das Dialogfeld **Artikeleigenschaften - \<ObjectName>** zu starten. Die in diesem Dialogfeld vorgenommenen Änderungen werden nur auf das Objekt angewendet, das im Objektbereich auf der Seite **Artikel** markiert ist.  
+    -   Klicken Sie auf **Eigenschaften des hervorgehobenen \<ObjectType>-Artikels festlegen**, um das Dialogfeld **Artikeleigenschaften - \<ObjectName>** zu öffnen. Die in diesem Dialogfeld vorgenommenen Änderungen werden nur auf das Objekt angewendet, das auf der Seite **Artikel** im Objektbereich markiert ist.  
   
-    -   Klicken Sie auf **Eigenschaften aller \<ObjectType>-Artikel** festlegen, um das Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel** zu starten. Die in diesem Dialogfeld vorgenommenen Änderungen werden auf alle Objekte dieses Typs angewendet, die im Objektbereich auf der Seite **Artikel** vorhanden sind, einschließlich jener Objekte, die noch nicht für die Veröffentlichung ausgewählt wurden.  
+    -   Klicken Sie auf **Eigenschaften aller \<ObjectType>-Artikel festlegen**, um das Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel** zu starten. Die in diesem Dialogfeld vorgenommenen Änderungen werden auf alle Objekte dieses Typs angewendet, die auf der Seite **Artikel** im Objektbereich vorhanden sind, einschließlich Objekte, die noch nicht für die Veröffentlichung ausgewählt wurden.  
   
         > [!NOTE]  
-        >  Durch die Änderungen im Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel**, werden alle zuvor im Dialogfeld **Artikeleigenschaften - \<ObjectName>** vorgenommenen Änderungen überschrieben. Wenn Sie beispielsweise sowohl mehrere Standardwerte für alle Artikel eines Objekttyps als auch bestimmte Eigenschaften für einzelne Objekte festlegen möchten, legen Sie zuerst die Standardwerte für alle Artikel fest. Legen Sie anschließend die Eigenschaften für die einzelnen Objekte fest.  
+        >  Eigenschaftenänderungen im Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel** überschreiben alle zuvor im Dialogfeld **Artikeleigenschaften - \<ObjectName>** vorgenommenen Änderungen. Wenn Sie beispielsweise sowohl mehrere Standardwerte für alle Artikel eines Objekttyps als auch bestimmte Eigenschaften für einzelne Objekte festlegen möchten, legen Sie zuerst die Standardwerte für alle Artikel fest. Legen Sie anschließend die Eigenschaften für die einzelnen Objekte fest.  
   
 3.  Ändern Sie die Eigenschaften nach Bedarf, und klicken Sie dann auf **OK**.  
   
-4.  Klicken Sie im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf **OK**.  
+4.  Klicken Sie im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** auf **OK**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Artikel können mithilfe gespeicherter Replikationsprozeduren programmgesteuert geändert und ihre Eigenschaften zurückgegeben werden. Die verwendeten gespeicherten Prozeduren hängen vom Typ der Veröffentlichung ab, zu der der Artikel gehört.  

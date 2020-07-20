@@ -16,15 +16,15 @@ ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 6dc18d925e014ccd17303e4e3d2698ad72b3758d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b043256a60aa5d057139e1eab1127fff8debeecf
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287544"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159948"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Festlegen des Ablaufdatums für Abonnements
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   In diesem Thema wird beschrieben, wie der Ablaufzeitraum für Abonnements in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]festgelegt wird. Der Ablaufzeitraum für Abonnements bestimmt den Zeitraum, bevor ein Abonnement abläuft und entfernt wird. Weitere Informationen finden Sie unter [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
  **In diesem Thema**  
@@ -52,11 +52,11 @@ ms.locfileid: "76287544"
     -   Es ist möglich, anzugeben, dass Abonnements nie ablaufen. Es wird jedoch nachdrücklich empfohlen, diesen Wert nicht zu verwenden, da sonst kein Cleanup der Metadaten ausgeführt werden kann.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Geben Sie das Ablaufdatum von Abonnements im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf der Seite **Allgemein** an. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Geben Sie auf der Seite **Allgemein** das Ablaufdatum von Abonnements im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** an. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>So legen Sie das Ablaufdatum für Abonnements fest  
   
-1.  Geben Sie im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf der Seite **Allgemein** im Bereich **Ablaufdatum für das Abonnement** an, ob Abonnements ablaufen sollen.  
+1.  Geben Sie im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** auf der Seite **Allgemein** im Bereich **Ablaufdatum für das Abonnement** an, ob Abonnements ablaufen sollen.  
   
 2.  Falls dies der Fall ist, geben Sie die Dauer an, nach der Abonnements ablaufen sollen.  
   

@@ -1,5 +1,5 @@
 ---
-title: CREATE SERVER AUDIT (Transact-SQL) | Microsoft-Dokumentation
+title: CREATE SERVER AUDIT (Transact-SQL)
 ms.custom: ''
 ms.date: 01/07/2019
 ms.prod: sql
@@ -22,14 +22,15 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6a1ca0be2ca87754dc753b7ceb8721ad7da29691
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d16fcf886e074fb71a148a7f36741c1c7f0a3f74
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767018"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392938"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Erstellt mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Überwachung ein Serverüberwachungsobjekt. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
@@ -73,8 +74,10 @@ CREATE SERVER AUDIT audit_name
     event_field_name { = | < > | ! = | > | > = | < | < = | LIKE } { number | ' string ' }  
 ```  
   
-## <a name="arguments"></a>Argumente  
- TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } Legt den Speicherort des Überwachungsziels fest. Die Optionen sind eine Binärdatei, das Windows-Anwendungsprotokoll oder das Windows-Sicherheitsprotokoll. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann nicht in das Windows-Sicherheitsprotokoll schreiben, ohne zusätzliche Einstellungen in Windows zu konfigurieren. Weitere Informationen finden Sie unter [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
+ TO {FILE \| APPLICATION_LOG \| SECURITY_LOG \| URL \| EXTERNAL_MONITOR} legt den Speicherort des Überwachungsziels fest. Die Optionen sind eine Binärdatei, das Windows-Anwendungsprotokoll oder das Windows-Sicherheitsprotokoll. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann nicht in das Windows-Sicherheitsprotokoll schreiben, ohne zusätzliche Einstellungen in Windows zu konfigurieren. Weitere Informationen finden Sie unter [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
 
 > [!IMPORTANT]
 > In einer verwalteten Azure SQL-Datenbank-Instanz funktioniert die SQL-Überwachung auf der Serverebene. Als Speicherorte ist nur `URL` oder `EXTERNAL_MONITOR` möglich.

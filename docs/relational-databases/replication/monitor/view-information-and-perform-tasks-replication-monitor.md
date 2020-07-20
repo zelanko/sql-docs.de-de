@@ -16,15 +16,15 @@ ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1e78db0d3844ee7581bd57da1e57f14ee80e29cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: be851d2ff0919125699a4e33c4b4d1d6445c0fc6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286387"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159628"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 Im Replikationsmonitor finden Sie mehrere Registerkarten und Optionen, mit denen Sie Informationen anzeigen und verschiedene Aufgaben ausführen können. In diesem Artikel werden unterschiedliche Informationen und Aufgaben beschrieben, die Sie mithilfe des Replikationsmonitor aufrufen bzw. ausführen können. 
 
 

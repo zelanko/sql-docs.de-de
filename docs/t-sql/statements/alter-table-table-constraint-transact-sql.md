@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9baaecd792c2dae1d23a47fa6ab7a72933412a55
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0346aa532756905d04cdd1f7938962ac6be39cc
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760945"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381104"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +59,9 @@ ms.locfileid: "85760945"
 }  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  CONSTRAINT  
  Gibt den Anfang einer PRIMARY KEY-, UNIQUE-, FOREIGN KEY- oder CHECK-Einschränkung oder einer DEFAULT-Definition an.  
   
@@ -92,7 +94,7 @@ ms.locfileid: "85760945"
 >  Das Verwenden von WITH FILLFACTOR = *fillfactor* als einzige Indexoption, die für die PRIMARY KEY- oder UNIQUE-Einschränkungen gilt, wird hier aus Gründen der Abwärtskompatibilität weiterhin dokumentiert. In zukünftigen Releases wird dies jedoch nicht mehr der Fall sein. Andere Indexoptionen können in der [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md)-Klausel der ALTER TABLE-Anweisung angegeben werden.  
   
  ON { _partition\_scheme\_name_ **(** _partition\_column\_name_ **)**  | _filegroup_|  **"** default **"** }  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt den Speicherort des Indexes an, der für die Einschränkung erstellt wurde. Wenn *partition_scheme_name* angegeben wird, wird der Index partitioniert, und die Partitionen werden den Dateigruppen zugeordnet, die durch *partition_scheme_name* angegeben sind. Wenn *filegroup* angegeben ist, wird der Index in der genannten Dateigruppe erstellt. Wenn **"** default **"** angegeben ist, oder wenn ON nicht für alle festgelegt ist, wird der Index in derselben Dateigruppe erstellt wie die Tabelle. Wenn ON beim Hinzufügen eines gruppierten Index für eine PRIMARY KEY- oder UNIQUE-Einschränkung angegeben ist, wird die gesamte Tabelle beim Erstellen des gruppierten Index in die angegebene Dateigruppe verschoben.  
   
@@ -107,7 +109,7 @@ ms.locfileid: "85760945"
  *ref_column*  
  Eine Spalte oder Liste von Spalten in Klammern, auf die die neue FOREIGN KEY-Einschränkung verweist  
   
- ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON DELETE {**NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT}  
  Gibt an, welche Aktion für eine Zeile der geänderten Tabelle ausgeführt werden soll, wenn diese Zeile eine referenzielle Beziehung hat, und die Zeile, auf die verwiesen wird, aus der übergeordneten Tabelle gelöscht wird. Der Standardwert ist NO ACTION.  
   
  NO ACTION  
@@ -132,7 +134,7 @@ ms.locfileid: "85760945"
   
  Ist hingegen NO ACTION angegeben, löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus und führt ein Rollback für die Löschaktion der **Vendor**-Zeile aus, wenn in der **ProductVendor**-Tabelle mindestens eine Zeile vorhanden ist, die auf diese Zeile verweist.  
   
- ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON UPDATE {**NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT}  
  Gibt an, welche Aktion für eine Zeile der geänderten Tabelle ausgeführt werden soll, wenn diese Zeile eine referenzielle Beziehung hat und die Zeile, auf die verwiesen wird, in der übergeordneten Tabelle aktualisiert wird. Der Standardwert ist NO ACTION.  
   
  NO ACTION  
@@ -158,7 +160,7 @@ ms.locfileid: "85760945"
  Ist hingegen NO ACTION angegeben, löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus und führt für die Updateaktion der **Vendor**-Zeile einen Rollback aus, wenn in der **ProductVendor**-Tabelle mindestens eine Zeile vorhanden ist, die auf diese Zeile verweist.  
   
  NOT FOR REPLICATION  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Kann für FOREIGN KEY- und CHECK-Einschränkungen festgelegt werden. Wenn diese Klausel für eine Einschränkung angegeben wird, wird die Einschränkung nicht erzwungen, wenn Replikations-Agents Einfüge-, Update- oder Löschvorgänge ausführen.  
 

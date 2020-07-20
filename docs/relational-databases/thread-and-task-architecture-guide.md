@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6e8ee2bd3910f3b7ae4bbdba37b973c095fef00
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091918"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158918"
 ---
 # <a name="thread-and-task-architecture-guide"></a>Handbuch zur Thread- und Taskarchitektur
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,16 @@ Ein **Task** stellt die Arbeitseinheit dar, die abgeschlossen werden muss, um di
 -  Serielle Anforderungen verfügen während der Ausführung immer nur über einen einzigen aktiven Task.     
 Tasks existieren während ihrer gesamten Lebensdauer in verschiedenen Zuständen. Weitere Informationen zu Zuständen von Tasks finden Sie unter [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Tasks im Zustand SUSPENDED warten darauf, dass Ressourcen, die für ihre Ausführung benötigt werden, verfügbar werden. Weitere Informationen zu wartenden Tasks finden Sie unter [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
 
-Ein **Arbeitsthread** in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], auch bekannt als Worker oder Thread, ist eine logische Darstellung eines Betriebssystemthreads. Bei der Ausführung **serieller Anforderungen** erzeugt die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Worker, um den aktiven Task (1:1) auszuführen. Bei der Ausführung **paralleler Anforderungen** im [Zeilenmodus](../relational-databases/query-processing-architecture-guide.md#execution-modes) weist die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Worker zu, der die untergeordneten Worker koordiniert, die für die Ausführung (ebenfalls 1:1) der ihnen zugewiesenen Tasks zuständig sind. Dies wird als **übergeordneter Thread** bezeichnet. Dem übergeordneten Thread ist ein übergeordneter Task zugeordnet. Die Anzahl der Arbeitsthreads, die für jeden Task erzeugt werden, hängt von folgenden Faktoren ab:
+Ein **Arbeitsthread** in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], auch bekannt als Worker oder Thread, ist eine logische Darstellung eines Betriebssystemthreads. Bei der Ausführung **serieller Anforderungen** erzeugt die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Worker, um den aktiven Task (1:1) auszuführen. Bei der Ausführung **paralleler Anforderungen** im [Zeilenmodus](../relational-databases/query-processing-architecture-guide.md#execution-modes) weist die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] einen Worker zu, der die untergeordneten Worker koordiniert, die für die Ausführung (ebenfalls 1:1) der ihnen zugewiesenen Tasks zuständig sind. Dies wird als **übergeordneter Thread** (oder koordinierender Thread) bezeichnet. Dem übergeordneten Thread ist ein übergeordneter Task zugeordnet. Der übergeordnete Thread ist der Einstiegspunkt der Anforderung und ist auch vorhanden, bevor die Engine eine Abfrage analysiert. Die Hauptaufgaben des übergeordneten Threads lauten: 
+-  Koordinieren eines parallelen Scans
+-  Starten untergeordneter paralleler Worker
+-  Erfassen von Zeilen von parallelen Threads und Senden dieser an den Client
+-  Durchführen lokaler und globaler Aggregationen    
+
+> [!NOTE]
+> Wenn ein Abfrageplan serielle und parallele Branches aufweist, ist einer der parallelen Tasks für die Ausführung des seriellen Branches verantwortlich. 
+
+Die Anzahl der Arbeitsthreads, die für jeden Task erzeugt werden, hängt von folgenden Faktoren ab:
 -   Ob die Anforderung entsprechend der Bestimmung durch den Abfrageoptimierer für Parallelität geeignet war.
 -   Wie hoch der tatsächlich verfügbare [Grad an Parallelität (Degree Of Parallelism, DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) im System basierend auf der aktuellen Last ist. Dies kann vom geschätzten DOP abweichen, der auf der Serverkonfiguration des maximalen Grads an Parallelität (MAXDOP) basiert. So kann beispielsweise die Serverkonfiguration für MAXDOP 8 sein, aber der zur Laufzeit verfügbare DOP kann nur 2 sein, was die Abfrageleistung beeinträchtigt. 
 
@@ -72,19 +81,18 @@ Der Ausführungsplan zeigt einen [Hashjoin](../relational-databases/performance/
 > Wenn Sie sich einen Ausführungsplan als Struktur vorstellen, ist ein **Branch** ein Bereich des Plans, der einen oder mehrere Operatoren zwischen Parallelitätsoperatoren gruppiert. Hierfür wird auch die Bezeichnung Exchange-Iteratoren verwendet. Weitere Informationen zu Planoperatoren finden Sie unter [Referenz zu logischen und physischen Showplanoperatoren](../relational-databases/showplan-logical-and-physical-operators-reference.md). 
 
 Zwar enthält der Ausführungsplan drei Branches, während der Ausführung können jedoch immer nur zwei Branches gleichzeitig in diesem Ausführungsplan ausgeführt werden:
-1.  Der Branch, in dem ein *gruppierter Indexscan* im `Sales.SalesOrderHeaderBulk` (Buildeingabe des Joins) verwendet wird, wird gleichzeitig mit dem Branch ausgeführt, in dem ein *gruppierter Indexscan* für den `Sales.SalesOrderDetailBulk` (Testeingabe des Joins) verwendet wurde.
-2. Der Branch, in dem ein *gruppierter Indexscan* im `Sales.SalesOrderDetailBulk` (Testeingabe des Joins) verwendet wird, wird gleichzeitig mit dem Branch ausgeführt, in dem die *Bitmap* erstellt wurde und in dem zur selben Zeit der *Hashvergleich* ausgeführt wird.
+1.  Der Branch, in dem ein *Clustered Index Scan* für `Sales.SalesOrderHeaderBulk` (Buildeingabe des Joins) verwendet wird, wird allein ausgeführt.
+2.  Der Branch, in dem ein *gruppierter Indexscan* im `Sales.SalesOrderDetailBulk` (Testeingabe des Joins) verwendet wird, wird dann gleichzeitig mit dem Branch ausgeführt, in dem die *Bitmap* erstellt wurde und in dem zur selben Zeit der *Hashvergleich* ausgeführt wird.
 
-Die Showplan-XML-Datei zeigt, dass 16 Arbeitsthreads reserviert und auf den NUMA-Knoten 0 und 1 verwendet wurden:
+Die Showplan XML-Ereignisklasse zeigt an, dass 16 Workerthreads reserviert und auf den NUMA-Knoten 0 verwendet wurden:
 
 ```xml
 <ThreadStat Branches="2" UsedThreads="16">
-  <ThreadReservation NodeId="0" ReservedThreads="8" />
-  <ThreadReservation NodeId="1" ReservedThreads="8" />
+  <ThreadReservation NodeId="0" ReservedThreads="16" />
 </ThreadStat>
 ```
 
-Die Threadreservierung stellt sicher, dass die [!INCLUDE[ssde_md](../includes/ssde_md.md)] über genügend Arbeitsthreads verfügt, um alle Tasks auszuführen, die für die Anforderung benötigt werden. Threads können für alle NUMA-Knoten oder nur in einem NUMA-Knoten reserviert werden. Die Threadreservierung erfolgt zur Laufzeit vor Beginn der Ausführung und hängt von der Auslastung des Schedulers ab. Die Anzahl der reservierten Arbeitsthreads wird generisch mithilfe der Formel ***gleichzeitige Branches* * *Laufzeit-DOP*** ermittelt und schließt den übergeordneten Arbeitsthread aus. Jeder Branch ist auf eine Anzahl von Arbeitsthreads beschränkt, die MAXDOP entspricht. In diesem Beispiel gibt es zwei gleichzeitige Branches, und MAXDOP ist auf 8 festgelegt, daher gilt **2 * 8 = 16**.
+Die Threadreservierung stellt sicher, dass die [!INCLUDE[ssde_md](../includes/ssde_md.md)] über genügend Arbeitsthreads verfügt, um alle Tasks auszuführen, die für die Anforderung benötigt werden. Threads können für mehrere NUMA-Knoten oder nur in einem NUMA-Knoten reserviert werden. Die Threadreservierung erfolgt zur Laufzeit vor Beginn der Ausführung und hängt von der Auslastung des Schedulers ab. Die Anzahl der reservierten Arbeitsthreads wird generisch mithilfe der Formel ***gleichzeitige Branches* * *Laufzeit-DOP*** ermittelt und schließt den übergeordneten Arbeitsthread aus. Jeder Branch ist auf eine Anzahl von Arbeitsthreads beschränkt, die MAXDOP entspricht. In diesem Beispiel gibt es zwei gleichzeitige Branches, und MAXDOP ist auf 8 festgelegt, daher gilt **2 * 8 = 16**.
 
 Beachten Sie als Referenz den Live-Ausführungsplan im Artikel [Live-Abfragestatistik](../relational-databases/performance/live-query-statistics.md), bei dem ein Branch abgeschlossen ist und zwei Branches gleichzeitig ausgeführt werden.
 
@@ -131,8 +139,8 @@ ORDER BY parent_task_address, scheduler_id;
 Beachten Sie, dass jedem der 16 untergeordneten Tasks ein anderer Arbeitsthread zugewiesen ist (siehe Spalte `worker_address`), aber alle Worker demselben Pool von acht Schedulern (0, 5, 6, 7, 8, 9, 10, 11) zugewiesen sind, und dass der übergeordnete Tasks einem Scheduler außerhalb dieses Pools (3) zugewiesen ist.
 
 > [!IMPORTANT]
-> Sobald die ersten parallelen Tasks für einen bestimmten Branch eingeplant wurden, verwendet die [!INCLUDE[ssde_md](../includes/ssde_md.md)] denselben Pool von Schedulern für alle zusätzlichen Tasks in anderen Branches. Dies bedeutet, dass dieselben Scheduler für alle parallelen Tasks im gesamten Ausführungsplan verwendet werden, nur begrenzt durch MAXDOP.      
-> Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versucht stets, Scheduler aus demselben NUMA-Knoten für die Taskausführung zuzuweisen. Der dem übergeordneten Task zugewiesene Arbeitsthread kann jedoch von anderen Tasks in einem anderen NUMA-Knoten platziert werden.
+> Sobald die ersten parallelen Tasks für einen bestimmten Branch eingeplant wurden, verwendet die [!INCLUDE[ssde_md](../includes/ssde_md.md)] denselben Pool von Schedulern für alle zusätzlichen Tasks in anderen Branches. Dies bedeutet, dass dieselben Scheduler für alle parallelen Tasks im gesamten Ausführungsplan verwendet werden, nur begrenzt durch MAXDOP.  
+> Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] versucht immer, Planer aus demselben NUMA-Knoten für die Taskausführung zuzuweisen. Diese werden sequenziell (im Roundrobin-Verfahren) zugewiesen, wenn Planer verfügbar sind. Der dem übergeordneten Task zugewiesene Arbeitsthread kann jedoch von anderen Tasks in einem anderen NUMA-Knoten platziert werden.
 
 Ein Arbeitsthread kann im Scheduler nur für die Dauer seines Quantums (4 ms) aktiv bleiben und muss seinen Scheduler nach Ablauf dieses Quantums anhalten, sodass möglicherweise ein Arbeitsthread aktiv wird, der einem anderen Task zugewiesen ist. Wenn das Quantum eines Workers abläuft und nicht mehr aktiv ist, wird der betreffende Task im Status RUNNABLE in einer FIFO-Warteschlange abgelegt, bis er nochmals in den Status RUNNING wechselt. Dabei wird vorausgesetzt, dass der Task keinen Zugriff auf Ressourcen benötigt, die momentan nicht verfügbar sind, z. B. ein Latch oder eine Sperre. Andernfalls würde der Task nicht in den Status RUNNABLE, sondern in den Status SUSPENDED versetzt, bis die Ressourcen verfügbar sind.  
 
@@ -142,7 +150,7 @@ Ein Arbeitsthread kann im Scheduler nur für die Dauer seines Quantums (4 ms) a
 Zusammenfassend lässt sich sagen, dass eine parallele Anforderung mehrere Tasks erzeugt, wobei jeder Task einem einzelnen Arbeitsthread und jeder Arbeitsthread wiederum einem einzelnen Scheduler zugewiesen werden muss. Daher kann die Anzahl der in Verwendung befindlichen Scheduler nicht die Anzahl der parallelen Tasks pro Branch überschreiten, die durch MAXDOP festgelegt ist. 
 
 ### <a name="allocating-threads-to-a-cpu"></a>Zuteilen von Threads zu einer CPU
-Standardmäßig startet jede Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] jeden Thread, und das Betriebssystem verteilt Threads von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzen je nach Last auf die Prozessoren (CPUs) eines Computers. Wenn Prozessaffinität auf Betriebssystemebene aktiviert wurde, weist das Betriebssystem jeden Thread einer bestimmten CPU zu. Im Gegensatz dazu weist [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-**Arbeitsthreads** zu **Planern** zu, die die Threads gleichmäßig auf die CPUs verteilen.
+Standardmäßig startet jede Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] jeden Thread, und das Betriebssystem verteilt Threads von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzen je nach Last auf die Prozessoren (CPUs) eines Computers. Wenn Prozessaffinität auf Betriebssystemebene aktiviert wurde, weist das Betriebssystem jeden Thread einer bestimmten CPU zu. Im Gegensatz dazu weist [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-**Arbeitsthreads** zu **Planern** zu, die die Threads gleichmäßig auf die CPUs verteilen (im Roundrobin-Verfahren).
     
 Um Multitasking zu ermöglichen, z. B. wenn mehrere Anwendungen auf dieselbe CPU-Gruppe zugreifen, verschiebt das Betriebssystem mitunter Arbeitsthreads zwischen verschiedenen CPUs. Obwohl dies aus der Sicht des Betriebssystems effizient ist, kann diese Aktivität die Leistung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bei starker Systemauslastung reduzieren, da jeder Prozessorcache wiederholt mit Daten geladen wird. Durch das Zuweisen von CPUs für bestimmte Threads kann unter diesen Bedingungen die Leistung verbessert werden, weil das erneute Laden von Daten in den Prozessor entfällt und die Threadmigration zwischen CPUs reduziert wird (wodurch der Kontextwechsel reduziert wird). Diese Zuordnung zwischen einem Thread und einem Prozessor wird als Prozessoraffinität bezeichnet. Wenn Affinität aktiviert wurde, weist das Betriebssystem jeden Thread einer bestimmten CPU zu. 
 

@@ -14,15 +14,15 @@ ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 19ad038e69144b4f9f570ef9d647a5f528945542
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c53fe453c141af32e1b31aad4ec15dc29351d96
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288342"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158908"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>Ausführen von Aufträgen zur Replikationswartung (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Bei der Replikation werden folgende Wartungsaufträge verwendet:  
   
 -   **Abonnements mit Datenüberprüfungsfehlern neu initialisieren**  
@@ -37,7 +37,7 @@ ms.locfileid: "76288342"
   
 -   **Cleanup abgelaufener Abonnements**  
   
- Diese Aufträge können über den Ordner **Aufträge** in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sowie über die Registerkarte **Agents** im Replikationsmonitor gestartet und beendet werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../../relational-databases/replication/monitor/start-the-replication-monitor.md). Die Eigenschaften der einzelnen Aufträge können im Dialogfeld **Auftragseigenschaften - \<Auftrag>** angezeigt und überprüft werden. Der Zugriff hierauf ist über denselben Ordner/dieselbe Registerkarte verfügbar.  
+ Diese Aufträge können über den Ordner **Aufträge** in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sowie über die Registerkarte **Agents** im Replikationsmonitor gestartet und beendet werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../../../relational-databases/replication/monitor/start-the-replication-monitor.md). Die Eigenschaften der einzelnen Aufträge können im Dialogfeld **Auftragseigenschaften - \<Job>** angezeigt und überprüft werden. Der Zugriff hierauf ist über denselben Ordner/dieselbe Registerkarte verfügbar.  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>So starten Sie einen Auftrag zur Replikationswartung in Management Studio  
   
@@ -63,7 +63,7 @@ ms.locfileid: "76288342"
   
 3.  Klicken Sie mit der rechten Maustaste auf einen Auftrag, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Ändern Sie im Dialogfeld **Auftragseigenschaften - \<Auftrag>** im Bedarfsfall die Eigenschaften, und klicken Sie dann auf **OK**.  
+4.  Ändern Sie im Dialogfeld **Auftragseigenschaften - \<Job>** bei Bedarf Eigenschaften, und klicken Sie dann auf **OK**.  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>So zeigen Sie Eigenschaften für einen Auftrag zur Replikationswartung im Replikationsmonitor an oder ändern sie  
   
@@ -73,7 +73,7 @@ ms.locfileid: "76288342"
   
 3.  Klicken Sie mit der rechten Maustaste auf einen Auftrag im Raster, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Ändern Sie im Dialogfeld **Auftragseigenschaften - \<Auftrag>** im Bedarfsfall die Eigenschaften, und klicken Sie dann auf **OK**.  
+4.  Ändern Sie im Dialogfeld **Auftragseigenschaften - \<Job>** bei Bedarf Eigenschaften, und klicken Sie dann auf **OK**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   

@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4efecdda3375430a380e10ddb1845f08050ce4a3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 0610ec89a4475b9eb60922b1d52c7005d5692bb0
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81627651"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217798"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -147,7 +147,7 @@ Falls MUST_CHANGE angegeben wird, müssen CHECK_EXPIRATION und CHECK_POLICY auf 
 
 Falls CHECK_POLICY auf OFF festgelegt ist, kann CHECK_EXPIRATION nicht auf ON festgelegt werden. Eine ALTER LOGIN-Anweisung mit dieser Kombination von Optionen erzeugt einen Fehler.
 
-Sie können ALTER_LOGIN mit dem DISABLE-Argument nicht dazu verwenden, den Zugriff auf eine Windows-Gruppe zu verweigern. ALTER_LOGIN [*domain\group*] DISABLE gibt zum Beispiel die folgende Fehlermeldung zurück:
+Sie können ALTER LOGIN mit dem DISABLE-Argument nicht dazu verwenden, den Zugriff auf eine Windows-Gruppe zu verweigern. ALTER LOGIN [*domain\group*] DISABLE gibt zum Beispiel die folgende Fehlermeldung zurück:
 
     `"Msg 15151, Level 16, State 1, Line 1
     "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`

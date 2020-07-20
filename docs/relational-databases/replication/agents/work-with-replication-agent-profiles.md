@@ -16,15 +16,15 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7b0a47ff73186642e0b0b48aec06e5320fc44d15
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c3ee49fac628bc733ac5394d47e5a9187081a1a
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76288237"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159968"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Arbeiten mit Replikations-Agent-Profilen
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   In diesem Thema wird beschrieben, wie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) mit Replikations-Agentprofilen gearbeitet wird. Das Verhalten der einzelnen Replikations-Agents wird durch eine Reihe von Parametern gesteuert, die über Agentprofile festgelegt werden können. Jeder Agent weist ein Standardprofil auf, und einige Agents besitzen weitere vordefinierte Profile, wobei für einen Agent jeweils immer nur ein Profil aktiv ist.  
   
  **In diesem Thema**  
@@ -95,7 +95,7 @@ ms.locfileid: "76288237"
   
 2.  Klicken Sie auf die Eigenschaftenschaltfläche ( **…** ) neben einem Profil.  
   
-3.  Im Dialogfeld **\<Profilname> Profileigenschaften** werden die Parameter und Werte angezeigt.  
+3.  Im Dialogfeld **\<ProfileName>-Profileigenschaften** werden die Parameter und Werte angezeigt.  
   
     -   Parameter in benutzerdefinierten Profilen können bearbeitet werden; Parameter in vordefinierten Systemprofilen können nicht bearbeitet werden.  
   

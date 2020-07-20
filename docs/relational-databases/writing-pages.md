@@ -13,12 +13,12 @@ ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5ffdb81cd5c1242a6a97dcb978683488c5a755b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f9bf3a75323a18b500c5bec35e0a01cb48fa754e
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998304"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302009"
 ---
 # <a name="writing-pages"></a>Schreiben von Seiten
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ Für das Schreiben einer modifizierten („dirty“) Seite auf den Datenträger 
  Das verzögerte Schreiben (lazy writing) ist ein Systemprozess, bei dem freie Puffer verfügbar gehalten werden, indem selten verwendete Seiten aus dem Puffercache entfernt werden. Modifizierte Seiten werden zuerst auf den Datenträger geschrieben. 
 
 * Eager-Writing   
- Bei Eager-Writing handelt es sich um einen Prozess, mit dem modifizierte Datenseiten mit nicht protokollierten Vorgängen wie BULK INSERT oder SELECT INTO geschrieben werden. Dieser Prozess ermöglicht das parallele Erstellen und Schreiben neuer Seiten. Dies bedeutet, dass die aufrufende Operation nicht warten muss, bis der gesamte Vorgang abgeschlossen ist, um die Seiten auf den Datenträger zu schreiben.
+ Bei Eager-Writing handelt es sich um einen Prozess, mit dem modifizierte Datenseiten mit minimal protokollierten Vorgängen wie BULK INSERT oder SELECT INTO geschrieben werden. Dieser Prozess ermöglicht das parallele Erstellen und Schreiben neuer Seiten. Dies bedeutet, dass die aufrufende Operation nicht warten muss, bis der gesamte Vorgang abgeschlossen ist, um die Seiten auf den Datenträger zu schreiben.
 
 * Prüfpunkt   
  Mit dem Prüfpunktprozess (checkpoint) wird der Puffercache regelmäßig auf Puffer mit Seiten aus einer angegebenen Datenbank überprüft, und alle modifizierten Seiten werden auf den Datenträger geschrieben. Durch Prüfpunkte kann bei einer späteren Wiederherstellung Zeit eingespart werden, da ein Punkt erstellt wird, an dem auf jeden Fall alle modifizierten Seiten auf den Datenträger geschrieben worden sind. Der Benutzer kann mithilfe des CHECKPOINT-Befehls eine Prüfpunktoperation anfordern. Prüfpunkte können jedoch auch automatisch durch das [!INCLUDE[ssDE](../includes/ssde-md.md)] generiert werden – auf der Grundlage des bereits verbrauchten Protokollspeicherplatzes und der seit dem letzten Prüfpunkt verstrichenen Zeit. Zusätzlich werden Prüfpunkte generiert, wenn bestimmte Aktivitäten durchgeführt werden, Beispiel: Wenn einer Datenbank eine Datendatei oder eine Protokolldatei hinzugefügt wird bzw. daraus entfernt wird oder wenn die SQL Server-Instanz beendet wird. Weitere Informationen finden Sie unter [Prüfpunkte und der aktive Teil des Protokolls](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).

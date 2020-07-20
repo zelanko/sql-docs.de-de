@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 909bca7ee100b89362a877fcea2df54a0718b2a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ebdcdb325ba39d163ef63c04008d86a46cb6bec4
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767249"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380863"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -79,6 +79,8 @@ BULK INSERT
     )]
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumente
 
 *database_name:* der Name der Datenbank, in der sich die angegebene Tabelle oder Ansicht befindet. Fehlt die Angabe, ist dies die aktuelle Datenbank.
@@ -120,7 +122,7 @@ Die Deaktivierung von Einschränkungen (das Standardverhalten) kann z. B. erwün
 > [!NOTE]
 > Die Option MAXERRORS kann zur Einschränkungsüberprüfung nicht verwendet werden.
 
-CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'** _code_page_ **'** }: gibt die Codepage für die in der Datendatei enthaltenen Daten an. CODEPAGE ist nur dann von Bedeutung, wenn die Daten **char**-, **varchar**- oder **text**-Spalten mit Zeichenwerten enthalten, die größer als **127** oder kleiner als **32** sind. Ein Beispiel finden Sie unter [Angeben einer Codepage](#d-specifying-a-code-page).
+CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } gibt die Codepage für die in der Datendatei enthaltenen Daten an. CODEPAGE ist nur dann von Bedeutung, wenn die Daten **char**-, **varchar**- oder **text**-Spalten mit Zeichenwerten enthalten, die größer als **127** oder kleiner als **32** sind. Ein Beispiel finden Sie unter [Angeben einer Codepage](#d-specifying-a-code-page).
 
 > [!IMPORTANT]
 > Die Option CODEPAGE wird unter Linux für [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] nicht unterstützt. Für [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] ist nur die Option **'RAW'** für CODEPAGE zulässig.
@@ -136,7 +138,7 @@ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'
 |*Codepage*|Bestimmte Codepagenummer, z. B. 850.<br /><br /> **&#42;&#42; Wichtig &#42;&#42;** In Versionen vor [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wird die Codepage 65001 (UTF-8-Codierung) nicht unterstützt.|
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widenative'** }: gibt an, dass BULK INSERT den Importvorgang mithilfe des angegebenen DATAFILETYPE-Werts ausführt.
+DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenative'** } gibt an, dass BULK INSERT den Importvorgang mithilfe des angegebenen DATAFILETYPE-Werts ausführt.
 
 &nbsp;
 

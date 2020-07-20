@@ -33,14 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: be4e5d401bd9269c3cedc0264648423259b7d948
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003432"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197440"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS zeigt die aktuelle Abfrageoptimierungsstatistik für eine Tabelle oder eine indizierte Sicht an. Der Abfrageoptimierer verwendet Statistiken, um die Kardinalität oder Anzahl der Zeilen im Abfrageergebnis zu schätzen. Hierdurch wird es dem Abfrageoptimierer ermöglicht, einen hochwertigen Abfrageplan zu erstellen. Beispielsweise kann der Abfrageoptimierer Kardinalitätsschätzungen verwenden, um im Abfrageplan statt des Index Scan-Operators den Index Seek-Operator auszuwählen und so die Abfrageleistung zu verbessern, indem ein ressourcenintensiver Indexscan vermieden wird.
@@ -53,8 +54,8 @@ Weitere Informationen finden Sie unter [Verwalten von Statistiken für Tabellen 
   
 ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>Syntax  
-  
+## <a name="syntax"></a>Syntax
+
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
@@ -69,10 +70,13 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 
 DBCC SHOW_STATISTICS ( table_name , target )   
     [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
-[;]  
-```  
-  
-## <a name="arguments"></a>Argumente  
+[;]
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
+
  *table_or_indexed_view_name*  
  Name der Tabelle oder der indizierten Sicht, für die statistische Informationen angezeigt werden sollen.  
   
@@ -86,12 +90,12 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
- Wenn mindestens eine dieser Optionen angegeben wird, schränkt dies die Resultsets ein, die von der Anweisung an die angegebene Option oder die angegebenen Optionen zurückgegeben werden. Wenn keine Optionen angegeben sind, werden alle Statistikinformationen zurückgegeben.  
-  
+ STAT_HEADER \| DENSITY_VECTOR \| HISTOGRAM \| STATS_STREAM [ **,** _n_]: Wenn mindestens eine dieser Optionen angegeben wird, schränkt dies die Resultsets ein, die von der Anweisung an die angegebene Option oder die angegebenen Optionen zurückgegeben werden. Wenn keine Optionen angegeben sind, werden alle Statistikinformationen zurückgegeben.  
+
  STATS_STREAM entspricht [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].  
   
-## <a name="result-sets"></a>Resultsets  
+## <a name="result-sets"></a>Resultsets
+
 In der folgenden Tabelle werden die Spalten beschrieben, die im Resultset zurückgegeben werden, wenn STAT_HEADER angegeben wird.
   
 |Spaltenname|BESCHREIBUNG|  
@@ -130,14 +134,15 @@ Die folgende Tabelle beschreibt die Spalten, die im Resultset zurückgegeben wer
 
 Das Aktualisierungsdatum für die Statistiken befindet sich gemeinsam mit dem [Histogramm](#histogram) und [Dichtevektor](#density) nicht in den Metadaten, sondern im [Statistik-Blobobjekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics). Wenn für das Generieren von Statistikdaten keine Daten gelesen werden, wird das Statistik-Blob nicht erstellt, das Datum nicht verfügbar und die Spalte *aktualisiert* ist NULL. Dies ist der Fall bei gefilterten Statistiken oder neuen und leeren Tabellen, für die das Prädikat keine Zeilen zurückgibt.
   
-## <a name="histogram"></a><a name="histogram"></a> Histogramm  
+## <a name="histogram"></a><a name="histogram"></a> Histogramm
+
 Ein Histogramm misst die Häufigkeit des Vorkommens für jeden unterschiedlichen Wert in einem Dataset. Der Abfrageoptimierer berechnet ein Histogramm für die Spaltenwerte in der ersten Schlüsselspalte des Statistikobjekts und wählt die Spaltenwerte aus, indem statistische Zeilenstichproben entnommen werden oder indem ein vollständiger Scan aller Zeilen in der Tabelle oder Sicht ausgeführt wird. Wenn das Histogramm anhand einer Gruppe von Zeilenstichproben erstellt wird, handelt es sich bei der gespeicherten Gesamtzahl von Zeilen und unterschiedlichen Werten um Schätzungen, die keine ganzen Zahlen sein müssen.
   
 Zum Erstellen des Histogramms sortiert der Abfrageoptimierer die Spaltenwerte, berechnet die Anzahl der Werte, die den einzelnen unterschiedlichen Spaltenwerten entsprechen, und aggregiert die Spaltenwerte dann in maximal 200 zusammenhängenden Histogrammschritten. Jeder Schritt enthält einen Bereich von Spaltenwerten gefolgt von einem oberen Spaltengrenzwert. Der Bereich enthält alle möglichen Spaltenwerte zwischen den Begrenzungswerten, ohne die Begrenzungswerte selbst. Der niedrigste der sortierten Spaltenwerte ist der obere Grenzwert für den ersten Histogrammschritt.
   
 Das folgende Diagramm zeigt ein Histogramm mit sechs Schritten. Der Bereich links vom ersten oberen Grenzwert ist der erste Schritt.
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![Histogramm](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
   
 Für jeden Histogrammschritt gilt:
 -   Eine fett formatierte Zeile stellt den oberen Grenzwert (RANGE_HI_KEY) und die Häufigkeit des Vorkommens dar (EQ_ROWS).  

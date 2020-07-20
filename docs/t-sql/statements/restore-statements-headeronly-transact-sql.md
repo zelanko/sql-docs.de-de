@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2facc71bae52bf1e8706abdc6ac874ae16f11575
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: d44a81dbe1b010ff4f42363062aafeb7e5571021
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262101"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279506"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE-Anweisungen – HEADERYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -99,7 +99,7 @@ FROM <backup_device>
 |**ExpirationDate**|**datetime**|Ablaufdatum für den Sicherungssatz.|  
 |**Compressed**|**BIT(1)**|Ob der Sicherungssatz mit der softwarebasierten Kompression komprimiert wird.<br /><br /> **0** = Nein<br /><br /> **1** = Ja|  
 |**Position**|**smallint**|Position des Sicherungssatzes auf dem Volume (Verwendung mit der Option FILE =).|  
-|**DeviceType**|**tinyint**|Zahl, die dem für den Sicherungsvorgang verwendeten Medientyp entspricht.<br /><br /> Datenträger:<br /><br /> **2** = Logisch<br /><br /> **102** = Physisch<br /><br /> Band:<br /><br /> **5** = Logisch<br /><br /> **105** = Physisch<br /><br /> Virtuelles Medium:<br /><br /> **7** = Logisch<br /><br /> **107** = Physisch<br /><br /> Namen und Nummern von logischen Medien sind in **sys.backup_devices** gespeichert. Weitere Informationen finden Sie unter [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**DeviceType**|**tinyint**|Zahl, die dem für den Sicherungsvorgang verwendeten Medientyp entspricht.<br /><br /> Datenträger:<br /><br /> **2** = Logisch<br /><br /> **102** = Physisch<br /><br /> Band:<br /><br /> **5** = Logisch<br /><br /> **105** = Physisch<br /><br /> Virtuelles Medium:<br /><br /> **7** = Logisch<br /><br /> **107** = Physisch<br /><br /> URL<br /><br /> **9** = Logisch<br /><br /> **109** = Physisch<br /><br />  Namen und Nummern von logischen Medien sind in **sys.backup_devices** gespeichert. Weitere Informationen finden Sie unter [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|Name des Benutzers, der den Sicherungsvorgang ausgeführt hat.|  
 |**ServerName**|**nvarchar(128)**|Name des Servers, der den Sicherungssatz geschrieben hat.|  
 |**DatabaseName**|**nvarchar(128)**|Name der Datenbank, die gesichert wurde.|  
@@ -151,7 +151,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1)) bis zur aktuellen Version.<br /><br /> Verwendeter Verschlüsselungstyp: Zertifikat oder asymmetrischer Schlüssel. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
   
 > [!NOTE]  
->  Wenn für die Sicherungssätze Kennwörter definiert sind, gibt RESTORE HEADERONLY vollständige Informationen nur für den Sicherungssatz zurück, dessen Kennwort mit dem Kennwort übereinstimmt, das mit der Befehlsoption PASSWORD angegeben wird. Außerdem gibt RESTORE HEADERONLY die vollständigen Informationen zu ungeschützten Sicherungssätzen zurück. Für die anderen auf dem Medium befindlichen kennwortgeschützten Sicherungssätze wird die **BackupName**-Spalte auf ' **_Password Protected_** ' festgelegt; alle anderen Spalten weisen den Wert NULL auf.  
+>  Wenn für die Sicherungssätze Kennwörter definiert sind, gibt RESTORE HEADERONLY vollständige Informationen nur für den Sicherungssatz zurück, dessen Kennwort mit dem Kennwort übereinstimmt, das mit der Befehlsoption PASSWORD angegeben wird. Außerdem gibt RESTORE HEADERONLY die vollständigen Informationen zu ungeschützten Sicherungssätzen zurück. Für die anderen auf dem Medium befindlichen kennwortgeschützten Sicherungssätze wird die **BackupName**-Spalte auf '**_Password Protected_**' festgelegt; alle anderen Spalten weisen den Wert NULL auf.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Ein Client kann RESTORE HEADERONLY zum Abrufen aller Headerinformationen für alle Sicherungen auf einem bestimmten Sicherungsmedium verwenden. Für jede Sicherung auf dem Sicherungsmedium sendet der Server die Headerinformationen als Zeile zurück.  

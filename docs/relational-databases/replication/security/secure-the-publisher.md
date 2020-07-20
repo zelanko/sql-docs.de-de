@@ -18,15 +18,15 @@ ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 346e0686062b130a76b6d95781665d1a8223e3b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6f3b56ec2a45420e56add4d3e746bcca5fb6eba
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287270"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159498"
 ---
 # <a name="secure-the-publisher"></a>Sichern des Verlegers
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   
 Die folgenden Replikations-Agents stellen eine Verbindung zum Verleger her:  
   
@@ -43,7 +43,7 @@ Die folgenden Replikations-Agents stellen eine Verbindung zum Verleger her:
  Die PAL ist der primäre Mechanismus für die Sicherung von Veröffentlichungen beim Verleger. Die PAL funktioniert ähnlich wie eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Zugriffssteuerungsliste. Wenn Sie eine Veröffentlichung erstellen, wird von der Replikation eine PAL für diese Veröffentlichung erstellt. Die PAL kann so konfiguriert werden, dass Sie eine Liste mit Anmeldungen und Gruppen enthält, denen Zugriff auf die Veröffentlichung gewährt wird. Wenn ein Agent eine Verbindung mit dem Verleger oder Verteiler herstellt und den Zugriff auf eine Veröffentlichung anfordert, werden die Authentifizierungsinformationen in der PAL mit der vom Agent bereitgestellten Verlegeranmeldung verglichen. Dieser Vorgang bietet zusätzliche Sicherheit für den Verleger, da die Anmeldung bei Verleger und Verteiler vor einer Verwendung durch ein Clienttool geschützt ist, das direkt beim Verleger Änderungen ausführen könnte.  
   
 > [!NOTE]  
->  Die Replikation erstellt auf dem Verleger eine Rolle für jede Veröffentlichung, um die PAL-Mitgliedschaft durchzusetzen. Für die Mergereplikation weist die Rolle einen Namen im Format **Msmerge_** _\<PublicationID>_ auf, für die Transaktionsreplikation und die Momentaufnahmenreplikation im Format **MSReplPAL_** _\<PublicationDatabaseID>_ **_** _\<PublicationID>_ .  
+>  Die Replikation erstellt auf dem Verleger eine Rolle für jede Veröffentlichung, um die PAL-Mitgliedschaft durchzusetzen. Die Rolle weist einen Namen im Format **Msmerge_** _\<PublicationID>_ für die Mergereplikation und einen Namen im Format **MSReplPAL_** _\<PublicationDatabaseID>_ **_** _\<PublicationID>_ für die Transaktions- und Momentaufnahmereplikation auf.  
   
  Folgende Anmeldungen sind in der PAL standardmäßig enthalten: die Mitglieder der festen **sysadmin** -Serverrolle zum Zeitpunkt der Veröffentlichungserstellung sowie die Anmeldung, die zur Veröffentlichungserstellung verwendet wurde. Standardmäßig können sämtliche Anmeldungen, die Mitglied der festen **sysadmin** -Serverrolle oder der festen **db_owner** -Datenbankrolle in der Veröffentlichungsdatenbank sind, eine Veröffentlichung abonnieren, ohne der PAL explizit hinzugefügt worden zu sein.  
   

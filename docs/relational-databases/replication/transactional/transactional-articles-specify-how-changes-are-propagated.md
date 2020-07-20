@@ -14,15 +14,15 @@ ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c86cfa1337323ed03cdb8b22cae9c951c110a139
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f50946b1540300bafbae9cac9b59b21dbb7eddf5
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286964"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159398"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Transaktionsartikel – Angeben der Weitergabemethode für Änderungen
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Bei der Transaktionsreplikation können Sie angeben, wie Datenänderungen vom Verleger an den Abonnenten weitergegeben werden. Für jede veröffentlichte Tabelle können Sie eine von vier Methoden angeben, mit der jeder Vorgang (INSERT, UPDATE oder DELETE) an den Abonnenten weitergegeben werden soll:  
   
 -   Angeben, dass die Transaktionsreplikation eine gespeicherte Prozedur zur Weitergabe von Änderungen an die Abonnenten ausgibt und anschließend aufruft (Standardeinstellung).  
@@ -40,13 +40,13 @@ ms.locfileid: "76286964"
 ## <a name="default-and-custom-stored-procedures"></a>Standardmäßige und benutzerdefinierte gespeicherte Prozeduren  
  Die folgenden drei Prozeduren werden von der Replikation standardmäßig für jeden Tabellenartikel erstellt:  
   
--   **sp_MSins_\<** *Tabellenname* **>** behandelt Einfügevorgänge.  
+-   **sp_MSins_\<** *tablename* **>** behandelt Einfügungen.  
   
--   **sp_MSupd_\<** *Tabellenname* **>** behandelt Updatevorgänge.  
+-   **sp_MSupd_\<** *tablename* **>** behandelt Updates.  
   
--   **sp_MSdel_\<** *Tabellenname* **>** behandelt Löschvorgänge.  
+-   **sp_MSdel_\<** *tablename* **>** behandelt Löschvorgänge.  
   
- Der in der Prozedur verwendete **\<** _Tabellenname_ **>** hängt davon ab, wie der Artikel der Veröffentlichung hinzugefügt wurde und ob die Abonnementdatenbank eine Tabelle mit demselben Namen und einem anderen Besitzer enthält.  
+ Der in der Prozedur verwendete **\<**_tablename_**>** hängt davon ab, wie der Artikel der Veröffentlichung hinzugefügt wurde und ob die Abonnementdatenbank eine Tabelle mit demselben Namen und einem anderen Besitzer enthält.  
   
  Jede dieser Prozeduren kann durch eine benutzerdefinierte Prozedur ersetzt werden, die Sie beim Hinzufügen eines Artikels zur Veröffentlichung angeben. In einer Anwendung verwendete benutzerdefinierte Prozeduren erfordern eine benutzerdefinierte Logik: z. B. das Einfügen von Daten in eine Überwachungstabelle, wenn eine Zeile auf einem Abonnenten aktualisiert wird. Weitere Informationen zum Angeben von benutzerdefinierten gespeicherten Prozeduren finden Sie in den oben aufgeführten Themen.  
   

@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a82afb6ef63963c414997e43fdd1d4ed6a42765
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719555"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279636"
 ---
 # <a name="query-profiling-infrastructure"></a>Profilerstellungsinfrastruktur für Abfragen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,6 +195,9 @@ Weitere Informationen zum Leistungsmehraufwand bei der Abfrageprofilerstellung f
 
 > [!NOTE]
 > Erweiterte Ereignisse, die die einfache Profilerstellung nutzen, verwenden die Informationen der Standardprofilerstellung, wenn die Standardprofilerstellungsinfrastruktur bereits aktiviert ist. Dies tritt beispielsweise auf, wenn eine Sitzung mit dem erweiterten Ereignis `query_post_execution_showplan` ausgeführt und eine weitere Sitzung mit `query_post_execution_plan_profile` gestartet wird. Die zweite Sitzung verwendet weiterhin die Informationen der Standardprofilerstellung.
+
+> [!NOTE]
+> In [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ist die Lightweight-Profilerstellung standardmäßig deaktiviert, sie wird jedoch aktiviert, wenn eine XEvent-Ablaufverfolgung mit `query_post_execution_plan_profile` gestartet wird. Sie wird wieder deaktiviert, wenn die Ablaufverfolgung beendet wird. Daher wird dringend empfohlen, die Lightweight-Profilerstellung mit dem Ablaufverfolgungsflag 7412 global zu aktivieren, wenn auf `query_post_execution_plan_profile` basierende XEvent-Ablaufverfolgungen häufig für eine [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]-Instanz gestartet und beendet werden, um den Mehraufwand durch die wiederholte Aktivierung/Deaktivierung zu vermeiden. 
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

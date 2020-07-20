@@ -20,12 +20,12 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ac2182dd3878f5b61ed4ae1fea6b2f2851f8c129
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8f61833c4c532056d7af9980360e04e9d124854d
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735993"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381294"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,9 +73,11 @@ ALTER SERVER AUDIT audit_name
 <predicate_factor>::=   
     event_field_name { = | < > | ! = | > | > = | < | < = } { number | ' string ' }  
 ```  
-  
-## <a name="arguments"></a>Argumente  
- TO { DATEI | ANWENDUNGSPROTOKOLL | SICHERHEIT | URL}  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
+ TO {FILE \| APPLICATION_LOG \| SECURITY \|URL}  
  Legt den Speicherort des Überwachungsziels fest. Die Optionen sind eine Binärdatei, das Windows-Anwendungsprotokoll oder das Windows-Sicherheitsprotokoll.  
 
 > [!IMPORTANT]
@@ -92,7 +94,7 @@ ALTER SERVER AUDIT audit_name
   
  MAX_FILES =*integer*  
  Gibt die maximale Anzahl von Überwachungsdateien an, die erstellt werden können. Führt keinen Rollover zur ersten Datei aus, wenn die Grenze erreicht wird. Wenn die MAX_FILES-Grenze erreicht wird, schlägt jede Aktion, die zusätzliche Überwachungsereignisse nach sich zieht, fehl.  
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  Diese Option ordnet der Datei auf dem Datenträger den MAXSIZE-Wert zu. Dieser Wert wird nur dann übernommen, wenn MAXSIZE nicht gleich UNLIMITED ist. Der Standardwert ist OFF.  
@@ -111,7 +113,7 @@ Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
  FAIL_OPERATION  
  Datenbankaktionen schlagen fehl, wenn sie überwachte Ereignisse verursachen. Aktionen, die keine überwachten Ereignisse verursachen, können fortgesetzt werden, es können jedoch keine überwachten Ereignisse auftreten. Bei der Überwachung wird weiterhin versucht, Ereignisse zu protokollieren. Sie wird fortgesetzt, wenn die Fehlerbedingung aufgelöst wurde. Verwenden Sie diese Option, wenn die Beibehaltung einer vollständigen Überwachung wichtiger als der Vollzugriff auf [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist.  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.   
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.   
   
  STATE **=** { ON | OFF }  
  Aktiviert oder deaktiviert das Sammeln von Datensätzen durch die Überwachung. Wird der Status einer laufenden Überwachung geändert (von ON zu OFF), wird ein Eintrag erstellt, der angibt, dass die Überwachung angehalten wurde, welcher Prinzipal die Überwachung angehalten hat und zu welchem Zeitpunkt sie angehalten wurde.  
@@ -121,19 +123,19 @@ Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
  predicate_expression  
  Gibt den Prädikatausdruck an, mit dessen Hilfe bestimmt wird, ob ein Ereignis verarbeitet werden muss. Die Länge von Prädikatausdrücken ist auf 3000 Zeichen beschränkt, wodurch die Länge von Zeichenfolgenargumenten eingeschränkt wird.  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  event_field_name  
  Ist der Name des Ereignisfelds, das die Prädikatquelle identifiziert. Überwachungsfelder werden in [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md) beschrieben. Mit Ausnahme von `file_name` und `audit_file_offset` können alle Felder überwacht werden.  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  number  
  Ein numerischer Typ einschließlich **decimal**. Einschränkungen stellen der verfügbare physische Speicher oder eine Zahl dar, die zu groß ist, um als 64-Bit-Ganzzahl dargestellt werden zu können.  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  ' string '  
  Entweder eine ANSI- oder Unicode-Zeichenfolge, die vom Prädikatvergleich verlangt wird. Für die Prädikatvergleichsfunktionen wird keine implizite Zeichenfolgentypkonvertierung ausgeführt. Die Übergabe des falschen Typs führt zu einem Fehler.  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Sie müssen mindestens eine der Klauseln TO, WITH oder MODIFY NAME angeben, wann Sie ALTER AUDIT aufrufen.  

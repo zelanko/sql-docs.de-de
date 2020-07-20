@@ -17,15 +17,15 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 137a7d29806baf4eee6a4380338f1bb383119f40
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287627"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159888"
 ---
 # <a name="manage-identity-columns"></a>Verwalten von Identitätsspalten
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   In diesem Thema wird beschrieben, wie Identitätsspalten in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]verwaltet werden. Wenn Einfügungen von Abonnenten zurück auf den Verleger repliziert werden, müssen Identitätsspalten verwaltet werden, um zu verhindern, dass der gleiche Identitätswert sowohl dem Abonnenten als auch dem Verleger zugewiesen wird. Die Replikation kann Identitätsbereiche automatisch verwalten, oder Sie können sich dafür entscheiden, Identitätsbereiche manuell zu verwalten.  Informationen über die von der Replikation zur Verfügung gestellten Verwaltungsoptionen für Identitätsbereiche finden Sie unter [Replizieren von Identitätsspalten](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
  **In diesem Thema**  
@@ -49,13 +49,13 @@ ms.locfileid: "76287627"
 -   Weitere Informationen zu einer automatisch inkrementierten Zahl, die in mehreren Tabellen verwendet oder aus Anwendungen aufgerufen werden kann, ohne dass auf eine Tabelle verwiesen wird, finden Sie unter [Sequenznummern](../../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Geben Sie im Assistenten für neue Veröffentlichung im Dialogfeld **Artikeleigenschaften – \<Artikel>** auf der Registerkarte **Properties** eine Verwaltungsoption für Identitätsspalten an. Weitere Informationen zum Zugreifen auf diesen Assistenten finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md). Führen Sie im Assistenten für neue Veröffentlichung folgende Aktionen aus:  
+ Geben Sie im Assistenten für neue Veröffentlichungen im Dialogfeld **Artikeleigenschaften - \<Article>** auf der Registerkarte **Eigenschaften** eine Verwaltungsoption für Identitätsspalten an. Weitere Informationen zum Zugreifen auf diesen Assistenten finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md). Führen Sie im Assistenten für neue Veröffentlichung folgende Aktionen aus:  
   
 -   Wenn Sie auf der Seite **Veröffentlichungstyp** die Option **Mergeveröffentlichung** oder **Transaktionsveröffentlichung mit aktualisierbaren Abonnements** auswählen, wählen Sie die automatische oder manuelle Identitätsbereichsverwaltung aus (automatisch, die Standardeinstellung, wird empfohlen). Nach dem Veröffentlichen der Tabelle kann die Eigenschaft nicht geändert werden. Es können jedoch andere, verbundene Eigenschaften geändert werden.  
   
 -   Wenn Sie andere Veröffentlichungstypen auswählen, legen Sie die manuelle Identitätsbereichsverwaltung fest.  
   
- Ändern Sie die Identitätsbereiche und Schwellenwerte im Dialogfeld **Artikeleigenschaften - \<Artikel>** auf der Registerkarte **Eigenschaften**. Dieses Dialogfeld ist über das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** verfügbar. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Ändern Sie die Identitätsbereiche und Schwellenwerte im Dialogfeld **Artikeleigenschaften - \<Article>** auf der Registerkarte **Eigenschaften**. Dieses Dialogfeld ist über das Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** verfügbar. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>So geben Sie eine Verwaltungsoption für Identitätsspalten an  
   
@@ -65,7 +65,7 @@ ms.locfileid: "76287627"
   
 3.  Klicken Sie auf **Artikeleigenschaften**und anschließend auf **Eigenschaften des hervorgehobenen Artikels festlegen**.  
   
-4.  Legen Sie im Dialogfeld **Artikeleigenschaften - \<Artikel>** auf der Registerkarte **Eigenschaften** im Abschnitt **Identitätsbereichsverwaltung** die Eigenschaft **Identitätsbereiche automatisch verwalten** auf **Automatisch** oder **Manuell** (bei Verlegern, auf denen [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher ausgeführt wird) oder auf **TRUE** oder **FALSE** (bei Verlegern, auf denen eine Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird, die älter als [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ist) fest.  
+4.  Legen Sie im Dialogfeld **Artikeleigenschaften - \<Article>** auf der Registerkarte **Eigenschaften** im Abschnitt **Identitätsbereichsverwaltung** die Eigenschaft **Identitätsbereiche automatisch verwalten** auf **Automatisch** oder **Manuell** (bei Verlegern, auf denen [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher ausgeführt wird) bzw. auf **TRUE** oder **FALSE** (bei Verlegern, auf denen eine Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird, die älter als [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ist) fest.  
   
 5.  Wenn Sie in Schritt 4 **Automatisch** oder **Wahr** ausgewählt haben, geben Sie Werte für die Optionen der folgenden Tabelle ein. Weitere Informationen zum Verwenden dieser Einstellungen finden Sie im Abschnitt „Zuweisen von Identitätsbereichen“ unter [Replizieren von Identitätsspalten](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
@@ -82,15 +82,15 @@ ms.locfileid: "76287627"
   
 #### <a name="to-modify-identity-ranges-and-thresholds-after-a-table-is-published"></a>So ändern Sie Identitätsbereiche und Schwellenwerte nach dem Veröffentlichen einer Tabelle  
   
-1.  Wählen Sie auf der Seite **Artikel** im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** eine Tabelle mit einer Identitätsspalte aus.  
+1.  Wählen Sie auf der Seite **Artikel** im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** eine Tabelle mit einer Identitätsspalte aus.  
   
 2.  Klicken Sie auf **Artikeleigenschaften**und anschließend auf **Eigenschaften des hervorgehobenen Artikels festlegen**.  
   
-3.  Geben Sie im Dialogfeld **Artikeleigenschaften - \<Artikel>** auf der Registerkarte **Eigenschaften** im Abschnitt **Identitätsbereichsverwaltung** Werte für eine oder mehrere der folgenden Eigenschaften ein: **Bereichsgröße auf dem Verleger**, **Bereichsgröße auf dem Abonnenten** und **Prozentsatz für Bereichsschwellenwert**.  
+3.  Geben Sie im Dialogfeld **Artikeleigenschaften - \<Article>** auf der Registerkarte **Eigenschaften** im Abschnitt **Identitätsbereichsverwaltung** Werte für eine oder mehrere der folgenden Eigenschaften ein: **Bereichsgröße auf dem Verleger**, **Bereichsgröße auf dem Abonnenten** und **Prozentsatz für Bereichsschwellenwert**.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Klicken Sie im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf **OK**.  
+5.  Klicken Sie im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** auf **OK**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Wenn ein Artikel erstellt wird, können Sie mithilfe gespeicherter Replikationsprozeduren Verwaltungsoptionen für Identitätsbereiche angeben.  
