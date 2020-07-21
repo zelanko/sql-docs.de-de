@@ -10,11 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 316c3c95e0928fc4b1ed0c0d4235220c527e68f6
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 9c60bea64ad528a953101da7625347ca659b1c6d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052750"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485096"
 ---
 # <a name="adventureworks-sample-databases"></a>AdventureWorks-Beispieldatenbanken
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ Weitere Informationen zu Beispielen finden Sie im [GitHub-Repository "Beispiele]
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) oder [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 
 
-## <a name="download-bak-files"></a>Herunterladen von BAK-Dateien 
+## <a name="download-backup-files"></a>Sicherungsdateien herunterladen 
 
 Verwenden Sie diese Links, um die entsprechende Beispieldatenbank für Ihr Szenario herunterzuladen. 
 
@@ -37,15 +38,17 @@ Verwenden Sie diese Links, um die entsprechende Beispieldatenbank für Ihr Szena
 - **Data Warehouse (DW)** -Daten sind für Data Warehousing-Arbeits Auslastungen vorgesehen. 
 - Bei **Lightweight (lt)** -Daten handelt es sich um eine vereinfachte und abgefragte Version des **OLTP** -Beispiels. 
 
-|**OLTP** |**Data Warehouse** |**Einfach**|
+Wenn Sie nicht sicher sind, was Sie benötigen, beginnen Sie mit der OLTP-Version, die mit Ihrer SQL Server Version übereinstimmt. 
+
+|**OLTP** |**Data Warehouse** |**Einfache**|
 |---------|---------|---------|
 |[AdventureWorks2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)|[AdventureWorksDW2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak)|[AdventureWorksLT2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak)|
 |[AdventureWorks2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)|[AdventureWorksDW2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)|[AdventureWorksLT2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2017.bak)|
 |[AdventureWorks2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016.bak)|[AdventureWorksDW2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016.bak)|[AdventureWorksLT2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2016.bak)|
-|[AdventureWorks2016_EXT. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)|[AdventureWorksDW2016_EXT. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016_EXT.bak)| N/V |
+|[AdventureWorks2016_EXT. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)|[AdventureWorksDW2016_EXT. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016_EXT.bak)| Nicht zutreffend |
 |[AdventureWorks2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2014.bak)|[AdventureWorksDW2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2014.bak)|[AdventureWorksLT2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2014.bak)|
 |[AdventureWorks2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2012.bak)|[AdventureWorksDW2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2012.bak)|[AdventureWorksLT2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2012.bak)|
-|[AdventureWorks2008R2. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)| [AdventureWorksDW2008R2. bak](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak) | N/V |
+|[AdventureWorks2008R2. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)| [AdventureWorksDW2008R2. bak](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak) | Nicht zutreffend |
 
 Weitere Dateien finden Sie direkt auf GitHub: 
 
@@ -64,7 +67,7 @@ Wenn Sie mit der Verwendung von SQL Server Management Studio (SSMS) nicht vertra
 
 Führen Sie die folgenden Schritte aus, um die Datenbank in SQL Server Management Studio wiederherzustellen:
 
-1. Laden Sie die entsprechende `.bak` Datei von einem der Links im Abschnitt [Download. bak-Dateien](#download-bak-files) herunter.
+1. Laden Sie die entsprechende `.bak` Datei von einem der Links im Abschnitt [Herunterladen von Sicherungsdateien](#download-backup-files) herunter.
 2. Verschieben Sie die `.bak` Datei an den SQL Server Sicherungs Speicherort. Dies variiert abhängig vom Installationsort, dem Instanznamen und der Version von SQL Server. Der Standard Speicherort für eine Standard Instanz von SQL Server 2019 lautet wie folgt:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
@@ -106,7 +109,7 @@ Wenn Sie mit [Azure Data Studio Studio](../azure-data-studio/download-azure-data
 
 Führen Sie die folgenden Schritte aus, um die Datenbank in Azure Data Studio wiederherzustellen:
 
-1. Laden Sie die entsprechende `.bak` Datei von einem der Links im Abschnitt [Download. bak-Dateien](#download-bak-files) herunter.
+1. Laden Sie die entsprechende `.bak` Datei von einem der Links im Abschnitt [Herunterladen von Sicherungsdateien](#download-backup-files) herunter.
 1. Verschieben Sie die `.bak` Datei an den SQL Server Sicherungs Speicherort. Dies variiert abhängig vom Installationsort, dem Instanznamen und der Version von SQL Server. Der Standard Speicherort für eine Standard Instanz von SQL Server 2019 lautet wie folgt:
 
     `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`.
@@ -150,7 +153,7 @@ Führen Sie die folgenden Schritte aus, um eine-Beispieldatenbank zum Erstellen 
 
 1. Stellen Sie eine Verbindung mit Ihrem Azure-Portal her
 1. Wählen Sie oben links im Navigationsbereich **Ressource erstellen** aus. 
-1. Wählen Sie **Datenbanken** und dann **SQL-Datenbank** aus. 
+1. Wählen Sie **Datenbanken** und dann **SQL-Datenbank**aus. 
 1. Geben Sie die angeforderten Informationen ein, um die Datenbank zu erstellen. 
 1. Wählen Sie auf der Registerkarte **zusätzliche Einstellungen** die Option **Sample** als vorhandene Daten unter **Datenquelle**aus: 
 
