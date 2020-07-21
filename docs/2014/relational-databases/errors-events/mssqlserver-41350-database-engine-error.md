@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 45e47831-9cbc-406d-9e23-5f1f8569b304
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fec0661d5508acdd268ba5d153066399c43e8e0c
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: f67b02113f79e1097693c1785ce10e8497a96d4c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053971"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551385"
 ---
 # <a name="mssqlserver_41350"></a>MSSQLSERVER_41350
     
 ## <a name="details"></a>Details  
   
-|||  
+|attribute|Wert|  
 |-|-|  
 |Produktname|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Ereignis-ID|41350|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|HK_CREATE_TABLE_WITH_ENCRYPTION|  
-|Meldungstext|Warnung: Eine speicheroptimierte Tabelle mit SCHEMA_AND_DATA-Dauerhaftigkeit wurde in einer Datenbank mit aktivierter Verschlüsselung erstellt. Die Daten in der speicheroptimierten Tabelle werden nicht verschlüsselt.|  
+|Meldungstext|Warnung: In einer Datenbank, für die die Verschlüsselung aktiviert ist, wurde eine speicheroptimierte Tabelle mit SCHEMA_AND_DATA-Dauerhaftigkeit erstellt. Die Daten in der speicheroptimierten Tabelle werden nicht verschlüsselt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

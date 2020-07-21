@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: efba507a-b5ad-4f1d-b0c8-f73b663a0562
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f164c8ce321272f7d92a8d3b1ff02400c881a108
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 88e3d0edb06c88fbdd443add2e2ceac0b987b362
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054080"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551975"
 ---
 # <a name="mssqlserver_2574"></a>MSSQLSERVER_2574
     
 ## <a name="details"></a>Details  
   
-|||  
+|attribute|Wert|  
 |-|-|  
 |Produktname|SQL Server|  
 |Ereignis-ID|2574|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|Meldungstext|Tabellenfehler: Die Seite P_ID ist in der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ) leer. Dies ist auf der LEVEL-Ebene der B-Struktur unzulässig.|  
+|Meldungstext|Tabellenfehler: Die Seite „P_ID“ ist in der Objekt-ID „O_ID“, Index-ID „I_ID“, Partitions-ID „PN_ID“ und Zuordnungseinheits-ID „A_ID“ (TYPE-Typ) leer. Dies ist auf der LEVEL-Ebene der B-Struktur unzulässig.|  
   
 ## <a name="explanation"></a>Erklärung  
  Eine Seite der B-Struktur über der Blattebene des angegebenen Indexes ist leer, hat also keine Zeilen. Dieses Verhalten ist möglich für Seiten auf der Blattebene in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], war jedoch niemals möglich in Strukturebenen.  

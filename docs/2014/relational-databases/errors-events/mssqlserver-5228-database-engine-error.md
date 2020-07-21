@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 5e83c617-4aa2-4755-bcc5-a798c46b97e4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eef59e62f00a44aad7bfefb1719a6d8d2b3d0290
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 76c972d1d789a78424329d8e9b465f3988f7298f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032925"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551308"
 ---
 # <a name="mssqlserver_5228"></a>MSSQLSERVER_5228
     
 ## <a name="details"></a>Details  
   
-|||  
+|attribute|Wert|  
 |-|-|  
 |Produktname|SQL Server|  
 |Ereignis-ID|5228|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|Meldungstext|Tabellenfehler: Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ), Seite PG_ID, Zeile R_ID. DBCC hat einen unvollständigen Cleanup bei einem Vorgang zur Onlineindexerstellung erkannt. (Der Spaltenwert für die Cleanupmarkierung lautet VALUE.)|  
+|Meldungstext|Tabellenfehler: Objekt-ID „O_ID“, Index-ID „I_ID“, Partitions-ID „PN_ID“, Zuordnungseinheits-ID „A_ID“ (TYPE-Typ), Seite „P_ID“, Zeile „R_ID“. DBCC hat einen unvollständigen Cleanup bei einem Vorgang zur Onlineindexerstellung erkannt. (Der Spaltenwert für die Cleanupmarkierung lautet VALUE.)|  
   
 ## <a name="explanation"></a>Erklärung  
  Für Objekt *O_ID*, Index *I_ID* und Partition *PN_ID* wurde eine nicht abgeschlossene Onlineindexerstellung erkannt. Dies äußert sich durch das Vorhandensein einer Spalte für die Cleanupmarkierung für die Zeile *R_ID*. Eine Spalte für die Cleanupmarkierung wird verwendet, wenn Datensätze aus mehreren Quellen während einer Onlineindexerstellung abgeglichen werden. In der Fehlermeldung wird zudem der Wert der Spalte für die Cleanupmarkierung angegeben.  

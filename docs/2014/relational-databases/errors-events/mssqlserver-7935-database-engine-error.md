@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 45ab21a3-024a-4523-9bd9-1175d01f9c8a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1183b787e38821592e9fb3da81e07ba3c6ecd551
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: dca357f63065940963bad899086f9ac88dfdbaf6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032198"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550994"
 ---
 # <a name="mssqlserver_7935"></a>MSSQLSERVER_7935
     
 ## <a name="details"></a>Details  
   
-|||  
+|attribute|Wert|  
 |-|-|  
 |Produktname|SQL Server|  
 |Ereignis-ID|7935|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_MISSING_COLUMN|  
-|Meldungstext|Tabellenfehler: Eine FileStream-Verzeichnis-ID F_ID ist für eine Spalte von Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID vorhanden, diese Spalte ist jedoch nicht in der Partition enthalten.|  
+|Meldungstext|Tabellenfehler: Eine Filestream-Verzeichnis-ID „F_ID“ ist für die Spalte der Objekt-ID „O_ID“, Index-ID „I_ID“ und Partitions-ID „PN_ID“ vorhanden. Diese Spalte ist allerdings nicht in der Partition enthalten.|  
   
 ## <a name="explanation"></a>Erklärung  
  Während DBCC CHECKDB wurde ein FILESTREAM-Verzeichnis für eine Spalte im angegebenen Objekt gefunden, die Spalte wurde jedoch nicht in den entsprechenden Metadaten der Partition gefunden.  

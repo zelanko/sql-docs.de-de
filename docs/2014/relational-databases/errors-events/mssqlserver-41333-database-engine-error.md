@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: c3c3ae9a-1e4c-4de6-ba72-2f393375b053
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0fdc950e523fe1851aaf5664e2d40ff311a24ab7
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 467d17c3346f48ed10f1737e66dd18ba0746b61e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032993"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551415"
 ---
 # <a name="mssqlserver_41333"></a>MSSQLSERVER_41333
     
 ## <a name="details"></a>Details  
   
-|||  
+|attribute|Wert|  
 |-|-|  
 |Produktname|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Ereignis-ID|41333|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|CROSS_CONTAINER_ISOLATION_FAILURE|  
-|Meldungstext|Die folgenden Transaktionen müssen auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren unter Momentaufnahmeisolation zugreifen: RepeatableRead-Transaktionen, serialisierbare Transaktionen und Transaktionen, die auf Tabellen zugreifen, die nicht in der RepeatableRead- oder serialisierbaren Isolationsstufe speicheroptimiert sind.|  
+|Meldungstext|Die folgenden Transaktionen müssen unter Verwendung der Momentaufnahmeisolation auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren zugreifen: RepeatableRead-Transaktionen, Serializable-Transaktionen und Transaktionen, die auf Tabellen zugreifen, die in der RepeatableRead-Isolation oder der Serializable-Isolation nicht speicheroptimiert sind.|  
   
 ## <a name="explanation"></a>Erklärung  
  Es gibt Einschränkungen für den Benutzer der höheren Isolationsstufen zwischen datenträgerbasierten Transaktionen und XTP-Transaktionen.  

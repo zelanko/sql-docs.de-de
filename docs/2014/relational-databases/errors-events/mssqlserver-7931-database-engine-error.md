@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 18e7a3dc-7d8a-41b9-8724-d2a8587b6903
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a6ae45133cd8e41479a243b0c1181851f262ca6
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 8d147f5373c1284f25ee9ffbe6b71f2c7b237ec6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053694"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551027"
 ---
 # <a name="mssqlserver_7931"></a>MSSQLSERVER_7931
     
 ## <a name="details"></a>Details  
   
-|||  
+|attribute|Wert|  
 |-|-|  
 |Produktname|SQL Server|  
 |Ereignis-ID|7931|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|Meldungstext|Datenbankfehler: Die FILESTREAM-Verzeichnis-ID F_ID für eine Partition wurde zweimal erkannt.|  
+|Meldungstext|Datenbankfehler: The FileStream directory ID F_ID for a partition was seen twice. (Die FileStream-Verzeichnis-ID „F_ID“ für eine Partition wurde zweimal erkannt.)|  
   
 ## <a name="explanation"></a>Erklärung  
  Dieselbe Partitions-ID für ein Filestream-Verzeichnis wurde in den Metadaten gefunden.  

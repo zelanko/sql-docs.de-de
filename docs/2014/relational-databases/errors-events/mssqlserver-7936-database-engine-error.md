@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: d78fc8a9-d173-4801-bb32-ed6a29257f08
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4f26231b6740db533e36afcd239115b606e7175f
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 0777e25a68193527a6d4265a436ddb96752ef6cc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032074"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550965"
 ---
 # <a name="mssqlserver_7936"></a>MSSQLSERVER_7936
     
 ## <a name="details"></a>Details  
   
-|||  
+|attribute|Wert|  
 |-|-|  
 |Produktname|SQL Server|  
 |Ereignis-ID|7936|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Meldungstext|Tabellenfehler: Das FileStream-Verzeichnis ist für die Spalten-ID C_ID der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID vorhanden, aber diese Spalte ist keine FileStream-Spalte.|  
+|Meldungstext|Tabellenfehler: Das Filestream-Verzeichnis ist für die Spalten-ID „C_ID“ der Objekt-ID „O_ID“, Index-ID „I_ID“ und Partitions-ID „PN_ID“ vorhanden. Hierbei handelt es sich allerdings um keine Filestream-Spalte.|  
   
 ## <a name="explanation"></a>Erklärung  
  Während DBCC CHECKDB wurde ein FILESTREAM-Verzeichnis für die angegebene Spalte gefunden; bei der Spalte handelt es sich jedoch nicht um eine Spalte vom Typ `FILESTREAM`.  
