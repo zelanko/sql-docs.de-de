@@ -1,5 +1,6 @@
 ---
-title: Hilfsprogramm-Explorer „F1-Hilfe“ | Microsoft-Dokumentation
+title: Hilfsprogramm-Explorer (F1-Hilfe)
+description: In diesem Artikel lernen Sie die Funktionen kennen, die in verschiedenen Bereichen des SQL Server-Hilfsprogramms bereitgestellt werden. Außerdem erfahren Sie mehr über Ansichten, das Dashboard und die Verwaltungsregisterkarten des Hilfsprogramms.
 ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
@@ -19,15 +20,16 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024480"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197263"
 ---
 # <a name="utility-explorer-f1-help"></a>Hilfsprogramm-Explorer (F1-Hilfe)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In den folgenden Abschnitten werden die Funktionalität und die zugehörigen Vorgänge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Hilfsprogramms dokumentiert.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>Dashboard des Hilfsprogramms (SQL Server-Hilfsprogramm)
@@ -36,7 +38,7 @@ ms.locfileid: "68024480"
  Weitere Informationen zum Erstellen eines Steuerungspunkts für das Hilfsprogramm finden Sie unter [Erstellen eines Steuerungspunkts für das SQL Server-Hilfsprogramm &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)aus. Weitere Informationen zum Hinzufügen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm finden Sie unter [Registrieren einer Instanz von SQL Server &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)aus.  
  
   
-### <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+### <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
  Zustand der verwalteten Instanz  
  Der Zustand verwalteter Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird links im Inhaltsbereich des Hilfsprogramm-Explorers angezeigt.  
   
@@ -119,15 +121,15 @@ ms.locfileid: "68024480"
  ## <a name="deployed-data-tier-application-details-sql-server-utility"></a>Details zu bereitgestellten Datenebenenanwendungen (SQL Server-Hilfsprogramm)
   Die Informationen in der Listenansicht Bereitgestellte Datenebenenanwendungen des Hilfsprogramm-Explorers enthalten Auslastungsdaten für einzelne Datenebenenanwendungen, Verlaufsdaten zur CPU-Auslastung und Details zur Speicherplatzauslastung auf Dateiebene sowie die Möglichkeit, Richtlinienschwellenwerte anzuzeigen und zu aktualisieren. Richtlinienschwellenwerte können auf der Ebene der Datenebenenanwendung für die CPU-Auslastung sowie Datenbankdateien und Protokolldateien gesteuert werden. Sie können auch Eigenschaftendetails für einzelne Datenebenenanwendungen anzeigen.  
   
-### <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+### <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
  Listenansicht  
  In der Listenansicht im oberen Bereich werden Daten zu einzelnen Datenebenenanwendungen angezeigt. Zustandssymbole zeigen den Zusammenfassungsstatus für die einzelnen Datenebenenanwendungen nach Auslastungskategorie an:  
   
--   Grünes Häkchen ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): Die Anzahl der Datenschichtanwendungen, die nicht gegen die Richtlinien zur Ressourcenauslastung verstoßen. Die Ressourcen sind normal ausgelastet.  
+-   Grünes Häkchen – :::image type="icon" source="media/well-utilized.png" border="false"::: : Anzahl der Datenebenenanwendungen, die nicht gegen Richtlinien zur Ressourcennutzung verstoßen. Die Ressourcen sind normal ausgelastet.  
   
--   Grüner Pfeil nach unten ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): Die Ressourcen sind unterausgelastet.  
+-   Grüner Pfeil nach unten – ![Abwärtspfeil](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): Die Ressourcen sind unterausgelastet.  
   
--   Roter Pfeil nach oben ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): Die Ressourcen sind überausgelastet.  
+-   Roter Pfeil nach oben – ![Aufwärtspfeil](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): Die Ressourcen sind überausgelastet.  
   
  Die Abfolge der Spalten in der Listenansicht kann geändert werden, indem Sie sie nach links oder nach rechts ziehen. Sie können Spalten in der Listenansicht hinzufügen oder löschen, indem Sie mit der rechten Maustaste auf die Spaltenüberschriften klicken und die Spalten auswählen bzw. deren Auswahl aufheben. Darüber hinaus enthält das Kontextmenü Sortieroptionen. Die Sortierung kann auch aktiviert werden, indem Sie oben auf den Spaltennamen klicken.  
   
@@ -167,17 +169,17 @@ ms.locfileid: "68024480"
   
 -   Bereitstellungsdatum  
   
--   Vertrauenswürdig: (True oder False)  
+-   Trustworthy (Vertrauenswürdig): (True oder False)  
   
 -   Sortierung  
   
 -   Kompatibilitätsgrad: (z. B. Version100)  
   
--   Verschlüsselung aktiviert: (True oder False)  
+-   Encryption Enabled (Verschlüsselung aktiviert): (True oder False)  
   
--   Wiederherstellungsmodell: (SIMPLE, FULL oder BULK_LOGGED)  
+-   Recovery Model (Wiederherstellungsmodus): (Simple (Einfach), Full (Vollständig) oder Bulk-Logged (Massenprotokolliert))  
   
--   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Registerkarte CPU-Auslastung  
  Die Registerkarte CPU-Auslastung enthält Vergleichsdiagramme mit Verlaufsdaten für die Datenebenenanwendung und die CPU-Auslastung des Computers.  
@@ -244,32 +246,32 @@ ms.locfileid: "68024480"
   
 -   Bereitstellungsdatum  
   
--   Vertrauenswürdig: (True oder False)  
+-   Trustworthy (Vertrauenswürdig): (True oder False)  
   
 -   Sortierung  
   
 -   Kompatibilitätsgrad: (z. B. Version100)  
   
--   Verschlüsselung aktiviert: (True oder False)  
+-   Encryption Enabled (Verschlüsselung aktiviert): (True oder False)  
   
--   Wiederherstellungsmodell: (SIMPLE, FULL oder BULK_LOGGED)  
+-   Recovery Model (Wiederherstellungsmodus): (Simple (Einfach), Full (Vollständig) oder Bulk-Logged (Massenprotokolliert))  
   
--   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Details zu verwalteten Instanzen (SQL Server-Hilfsprogramm)
  Die Informationen in der Listenansicht Verwaltete Instanzen des Hilfsprogramm-Explorers enthalten Auslastungsdaten für einzelne Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Verlaufsdaten zur CPU-Auslastung sowie Details zur Speicherplatzauslastung auf Dateiebene. Zudem können Sie hier Richtlinienschwellenwerte anzeigen und aktualisieren. Richtlinienschwellenwerte können auf der Ebene von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen, per Computer, für Datenbank- und Protokolldateien sowie auf der Ebene von Speichervolumes gesteuert werden. Darüber hinaus können Sie Eigenschaftendetails für einzelne verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anzeigen.  
   
-### <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+### <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
  Listenansicht  
  Die Listenansicht im oberen Bereich enthält Daten zu einzelnen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die zeilenweise nach ComputerName\InstanceName aufgeführt sind.  
   
  Zustandssymbole zeigen den Zusammenfassungsstatus für die einzelnen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Auslastungskategorie an:  
   
--   Grünes Häkchen ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): Die Anzahl der verwalteten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die nicht gegen Richtlinien zur Ressourcenauslastung verstoßen. Die Ressourcen sind normal ausgelastet.  
+-   Grünes Häkchen – ![grünes Häkchen](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): Die Anzahl der verwalteten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die nicht gegen Richtlinien zur Ressourcenauslastung verstoßen. Die Ressourcen sind normal ausgelastet.  
   
--   Grüner Pfeil nach unten ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): Die Ressourcen sind unterausgelastet.  
+-   Grüner Pfeil nach unten – ![Abwärtspfeil](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): Die Ressourcen sind unterausgelastet.  
   
--   Roter Pfeil nach oben ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): Die Ressourcen sind überausgelastet.  
+-   Roter Pfeil nach oben – ![Aufwärtspfeil](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): Die Ressourcen sind überausgelastet.  
   
  Die Abfolge der Spalten in der Listenansicht kann geändert werden, indem Sie sie nach links oder nach rechts ziehen. Sie können Spalten in der Listenansicht hinzufügen oder löschen, indem Sie mit der rechten Maustaste auf die Spaltenüberschriften klicken und die Spalten auswählen bzw. deren Auswahl aufheben. Darüber hinaus enthält das Kontextmenü Sortieroptionen. Die Sortierung kann auch aktiviert werden, indem Sie oben auf den Spaltennamen klicken.  
   
@@ -307,17 +309,17 @@ ms.locfileid: "68024480"
   
 -   SQL Server-Edition:  
   
--   Gruppiert: (True oder False)  
+-   Clustered (Gruppiert): (True oder False)  
   
 -   Sicherungsverzeichnis:  
   
 -   Sortierung:  
   
--   Unterscheidung nach Groß-/Kleinschreibung (True oder False)  
+-   Case Sensitive (Beachtet Groß-/Kleinschreibung): (True oder False)  
   
 -   Sprache:  
   
--   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Registerkarte CPU-Auslastung  
  Die Registerkarte CPU-Auslastung enthält Vergleichsdiagramme mit Verlaufsdaten für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und die CPU-Auslastung des Computers.  
@@ -404,20 +406,20 @@ ms.locfileid: "68024480"
   
 -   SQL Server-Edition:  
   
--   Gruppiert: (True oder False)  
+-   Clustered (Gruppiert): (True oder False)  
   
 -   Sicherungsverzeichnis:  
   
 -   Sortierung:  
   
--   Unterscheidung nach Groß-/Kleinschreibung (True oder False)  
+-   Case Sensitive (Beachtet Groß-/Kleinschreibung): (True oder False)  
   
 -   Sprache:  
 
 ## <a name="utility-administration-sql-server-utility"></a>Hilfsprogrammverwaltung (SQL Server-Hilfsprogramm)
 Verwenden Sie die Registerkarten der Hilfsprogrammverwaltung zum Verwalten von Richtlinien-, Sicherheits- und Data Warehouse-Einstellungen für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogrammkonzepten finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-### <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente
+### <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente
  **Registerkarte Richtlinie** Verwenden Sie die Registerkarte Richtlinie, um globale Überwachungsrichtlinien anzuzeigen oder anzugeben.  
   
  Legen Sie globale Überwachungsrichtlinien für Datenebenenanwendungen fest. Um die Werteliste für diese Option zu erweitern, klicken Sie neben dem Richtliniennamen auf den Pfeil, oder klicken Sie auf den Richtlinientitel.  
@@ -486,11 +488,11 @@ Verwenden Sie die Registerkarten der Hilfsprogrammverwaltung zum Verwalten von R
  Konfigurationsinformationen für das Hilfsprogramm-Data Warehouse  
  Die folgenden Konfigurationseinstellungen sind in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht konfigurierbar:  
   
--   UMDW-Name: Sysutility_mdw_\<GUID>_DATA.  
+-   UMDW name (UMDW-Name): Sysutility_mdw_\<GUID>_DATA.  
   
--   Uploadfrequenz für den Sammlungssatz: Alle 15 Minuten  
+-   Collection set upload frequency (Uploadhäufigkeit des Sammlungssatzes): Every 15 minutes (Alle 15 Minuten).  
   
- Das UMDW-Verzeichnis ist konfigurierbar: \<Systemlaufwerk>:\Programme\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, wobei \<Systemlaufwerk> normalerweise Laufwerk C:\ entspricht. Die Protokolldatei UMDW_\<GUID>_LOG befindet sich im selben Verzeichnis.  
+ Das UMDW-Verzeichnis ist konfigurierbar: \<System drive>:\Programme\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, wobei \<System drive> normalerweise dem Laufwerk „C:\“ entspricht. Die Protokolldatei UMDW_\<GUID>_LOG befindet sich im selben Verzeichnis.  
   
 > **HINWEIS:** Der Speicherort der UMDW-Datei (sysutility_mdw) kann mithilfe von Detach/Attach oder ALTER DATABASE geändert werden. Es wird empfohlen, ALTER DATABASE zu verwenden. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   

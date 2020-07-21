@@ -9,16 +9,16 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c999228cdcd78ca2996ee134266a36543e97d913
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216680"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196848"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Grundlagen zur SQL Server-Verfügbarkeit für Linux-Bereitstellungen
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Ab [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] wird [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sowohl unter Linux als auch Windows unterstützt. Ebenso wie bei Windows-basierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Bereitstellungen müssen auch [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Datenbanken und -Instanzen unter Linux hochverfügbar sein. In diesem Artikel werden die technischen Aspekte der Planung und Bereitstellung von hochverfügbaren Linux-basierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Datenbanken und -Instanzen sowie einige Unterschiede zu Windows-basierten Installationen beschrieben. Da Linux-Experten möglicherweise noch nicht mit [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] vertraut sind und sich [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Experten unter Umständen noch nie mit Linux befasst haben, werden in diesem Artikel an einigen Stellen Konzepte vorgestellt, die für die ein oder andere Zielgruppe neu sind.
 
@@ -146,7 +146,7 @@ Alle derzeit unterstützten Distributionen verfügen über ein Hochverfügbarkei
 
 Diese Lösung ähnelt zwar in gewisser Weise der Bereitstellung von Clusterkonfigurationen mit Windows, weist aber gleichzeitig zahlreiche Unterschiede auf. Unter Windows wird für das Clustering der Windows Server-Failovercluster (WSFC) verwendet, der in das Betriebssystem integriert ist. Das Feature zur Erstellung eines WSFC (Failoverclustering) ist standardmäßig deaktiviert. Verfügbarkeitsgruppen und Failoverclusterinstanzen basieren in Windows auf einem WSFC. In diesen sind sie aufgrund der spezifischen Ressourcen-DLL, die von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] bereitgestellt wird, fest integriert. Eine Lösung mit einer solch engen Kopplung ist vor allem deshalb möglich, weil sie von nur einem Anbieter bereitgestellt wird.
 
-![](./media/sql-server-linux-ha-basics/image1.png)
+![Grundlagen zur Hochverfügbarkeit](./media/sql-server-linux-ha-basics/image1.png)
 
 Pacemaker ist für jede unterstützte Linux-Distribution verfügbar. Die Clusteringkomponente kann allerdings an verschiedene Distributionen angepasst sein und unterschiedliche Implementierungen und Versionen aufweisen. Auf einige Unterschiede wird in den Anweisungen in diesem Artikel eingegangen. Die Clusteringebene ist eine Open-Source-Komponente. Sie ist zwar Bestandteil der Distributionen, allerdings nicht so nahtlos integriert wie WSFC unter Windows. Aus diesem Grund stellt Microsoft *mssql-server-ha* zur Verfügung. Dadurch können [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] und der Pacemaker-Stapel fast die gleichen Funktionen für Verfügbarkeitsgruppen und Failoverclusterinstanzen wie unter Windows bereitstellen.
 
@@ -169,10 +169,13 @@ Sowohl bei WSFCs als auch bei Pacemaker-Clustern gibt es das Konzept einer Resso
 
 In Pacemaker gibt es Standard- und Klonressourcen. Klonressourcen werden auf allen Knoten gleichzeitig ausgeführt. Ein Beispiel ist eine IP-Adresse, die für den Lastenausgleich auf mehreren Knoten verwendet wird. Für Failoverclusterinstanzen wird eine Standardressource erstellt, da jeweils nur ein Knoten eine Failoverclusterinstanz hosten kann.
 
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
+
 Wenn eine Verfügbarkeitsgruppe erstellt wird, ist eine besondere Art der Klonressource erforderlich, die als Ressource mit mehreren Zuständen bezeichnet wird. Eine Verfügbarkeitsgruppe enthält zwar nur ein primäres Replikat, wird aber auf allen Knoten ausgeführt, für die sie konfiguriert wurde. Außerdem kann sie möglicherweise Vorgänge wie schreibgeschützte Zugriffe zulassen. Da hierbei Knoten in Echtzeit verwendet werden, gibt es für Ressourcen die beiden Zustände Master und Slave. Weitere Informationen finden Sie unter [Multi-state resources: Resources that have multiple modes (Ressourcen mit mehreren Zuständen: Ressourcen, die über mehrere Modi verfügen)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/s1-multistateresource-HAAR.html).
 
 #### <a name="resource-groupssets"></a>Ressourcengruppen und -sets
-In Pacemaker gibt es das Konzept einer Ressourcengruppe, das mit Rollen auf einem WSFC vergleichbar ist. Eine Ressourcengruppe (unter SLES auch als „Set“ bezeichnet) ist eine Sammlung von Ressourcen, die zusammenarbeiten und als eine einzelne Einheit ein Failover von einem Knoten zu einem anderen ausführen können. Ressourcengruppen dürfen keine Ressourcen enthalten, die als Master oder Slave konfiguriert sind. Daher können sie nicht für Verfügbarkeitsgruppen verwendet werden. Eine Ressourcengruppe kann prinzipiell für Failoverclusterinstanzen verwendet werden. Diese Konfiguration wird jedoch nicht empfohlen.
+
+In Pacemaker gibt es das Konzept einer Ressourcengruppe, das mit Rollen auf einem WSFC vergleichbar ist. Eine Ressourcengruppe (unter SLES auch als _Set_ bezeichnet) ist eine Sammlung von Ressourcen, die zusammenarbeiten und als Einheit ein Failover von einem Knoten auf einen anderen ausführen können. Ressourcengruppen dürfen keine Ressourcen enthalten, die als Master oder Slave konfiguriert sind. Daher können sie nicht für Verfügbarkeitsgruppen verwendet werden. Eine Ressourcengruppe kann prinzipiell für Failoverclusterinstanzen verwendet werden. Diese Konfiguration wird jedoch nicht empfohlen.
 
 #### <a name="constraints"></a>Einschränkungen
 Auf einem WSFC gibt es verschiedene Ressourcenparameter und Abhängigkeiten. Mit Letzteren wird für den WSFC die Beziehung zwischen einer unter- und einer übergeordneten Ressource definiert. Eine Abhängigkeit ist eine Regel, die dem WSFC mitteilt, welche Ressource zuerst online sein muss.

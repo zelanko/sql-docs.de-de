@@ -1,24 +1,84 @@
 ---
 title: Versionshinweise
 description: Azure Data Studio-Versionshinweise
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.reviewer: maghan, sstein
+ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 04/30/2020
-ms.openlocfilehash: d7c54fbbb959085206cb993d4b9e9087ac8c3a50
-ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
+ms.date: 07/15/2020
+ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619673"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406253"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](download.md)**
+
+## <a name="july-2020"></a>Juli 2020
+
+15. Juli 2020 &nbsp; / &nbsp; Version: 1.20.0
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Neue Featuretour hinzugefügt | Über die Homepage und die Befehlspalette können Benutzer jetzt eine Featuretour starten, um eine exemplarische Vorgehensweise für häufig verwendete Features wie die Viewlets „Verbindungen“ und „Notebooks“ oder den Marketplace für Erweiterungen zu erhalten. |
+| Neue Notebookfeatures | &bull; &nbsp; Headerunterstützung in der Markdown-Symbolleiste<br/> &bull; &nbsp; Parallele Markdownvorschau in Textzellen
+| Ziehen und Ablegen von Spalten und Tabellen im Abfrage-Editor | Benutzer können jetzt Spalten und Tabellen per Drag & Drop direkt aus dem Viewlet „Verbindungen“ in den Abfrage-Editor ziehen. |
+| Symbol „Azure-Konto“ jetzt in der Aktivitätsleiste | Bei der Anmeldung bei Azure leichter zu finden |
+| Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
+
+
+## <a name="june-2020"></a>Juni 2020
+
+15. Juni 2020 &nbsp; / &nbsp; Version: 1.19.0
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Hinzufügen von Azure Data Studio zur Azure-Portal-Integration | Benutzer können jetzt das Azure-Portal direkt über eine Azure SQL-Datenbank-Verbindung, Azure Postgres und mehr starten. |
+| Neue Notebookfeatures | &bull; &nbsp; Neue Notebook-Symbolleiste <br/> &bull; &nbsp; Neue Symbolleiste „Edit Cell“ (Zelle bearbeiten) <br/> &bull; &nbsp; Updates für die Benutzeroberfläche des Assistenten für Python-Abhängigkeiten <br/> &bull; &nbsp; Notebookübergreifende Verbesserung der Abstände |
+| Ankündigung API-Erweiterung für die SQL-Bewertung | Diese Erweiterung fügt SQL Server-Bewertungen im Einklang mit Best Practices zu ADS hinzu. Sie stellt die zuvor nur für die Verwendung im PowerShell-Modul SqlServer und in SMO verfügbare API für die SQL-Bewertung bereit, damit Sie Ihre SQL Server-Instanzen bewerten und vom SQL Server-Team Empfehlungen für sie erhalten können. Mehr über die API für die SQL-Bewertung und deren Funktionen erfahren Sie [in diesem Artikel](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15). |
+| [Verbesserungen an der Machine-Learning-Erweiterung](https://go.microsoft.com/fwlink/?linkid=2129918) | Unterstützt jetzt Azure SQL Managed Instance |
+| Verbesserungen an der Datenvirtualisierungserweiterung | Unterstützt jetzt MongoDB und Teradata |
+| Fehlerbehebungen für die Postgres-Erweiterung | Behebung von Problemen mit Azure MFA |
+| Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
+
+## <a name="may-2020-hotfix"></a>Mai 2020 (Hotfix)
+
+27. Mai 2020 &nbsp; / &nbsp; Version: 1.18.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Behebung des Fehlers 10538: „Run Current Query“ keybind no longer behaving as expected (Verhalten bei Tastenzuordnung für „Aktuelle Abfrage ausführen“ nicht mehr wie erwartet) | [10538](https://github.com/microsoft/azuredatastudio/issues/10538)  |
+| Behebung des Fehlers 10537: Unable to open new or existing sql files on v1.18 (Öffnen von neuen oder vorhandenen SQL-Dateien in Version 1.18 nicht möglich) | [10537](https://github.com/microsoft/azuredatastudio/issues/10537)  |
+| &nbsp; | &nbsp; |
+
+## <a name="may-2020"></a>Mai 2020
+
+20. Mai 2020 &nbsp; / &nbsp; Version: 1.18.0
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Ankündigung der Redgate SQL Prompt-Erweiterung | Mit dieser Erweiterung können Sie Formatierungsstile direkt in Azure Data Studio verwalten. So können Sie Ihre Stile erstellen und bearbeiten, ohne die IDE zu verlassen. |
+| Ankündigung der Machine-Learning-Erweiterung | Diese Erweiterung ermöglicht Ihnen Folgendes: <br/> &bull; &nbsp; Verwalten von Python- und R-Paketen mit SQL Server Machine Learning Services in Azure Data Studio<br/> &bull; &nbsp; Verwenden eines ONNX-Modells für Vorhersagen in Azure SQL Edge<br/> &bull; &nbsp; Anzeigen von ONNX-Modellen in einer Azure SQL Edge-Datenbank <br/> &bull; &nbsp; Importieren von ONNX-Modellen aus einer Datei oder Azure Machine Learning in eine Azure SQL Edge-Datenbank <br/> &bull; &nbsp; Erstellen eines Notebooks zum Ausführen von Experimenten |
+| Neue Notebookfeatures | &bull; &nbsp; Hinzufügung eines neuen Assistenten für Python-Abhängigkeiten, um die Installation von Python-Abhängigkeiten zu vereinfachen <br/> &bull; &nbsp; Hinzufügung von Unterstreichungsunterstützung für die Markdown-Symbolleiste |
+| Parametrisierung für Always Encrypted | Ermöglicht das Ausführen von Abfragen, die verschlüsselte Datenbankspalten einfügen, aktualisieren oder danach filtern|
+| Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22May+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## <a name="april-2020-hotfix"></a>April 2020 (Hotfix)
 
@@ -191,7 +251,7 @@ ms.locfileid: "82619673"
 ### <a name="known-issues"></a>Bekannte Probleme
 
 - Notebooks
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) In seltenen Fällen, in denen das Notebook falsch serialisiert wurde
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) In seltenen Fällen, in denen das Notebook falsch serialisiert wurde
 
 ## <a name="september-2019"></a>September 2019
 
@@ -202,7 +262,7 @@ ms.locfileid: "82619673"
 | Change | Details |
 | :----- | :------ |
 | Aktivieren des SQLCMD-Modus | Der Abfrage-Editor unterstützt jetzt das Umschalten des SQLCMD-Modus zum Schreiben und Bearbeiten von Abfragen als SQLCMD-Skripts. |
-| Communityerweiterung: Query Editor Boost | Query Editor Boost ist eine Open-Source-Erweiterung für den Abfrage-Editor von Azure Data Studio und erleichtert Benutzer das häufige Schreiben von Abfragen. &bull; &nbsp; Speichern der aktuellen Abfrage als Ausschnitt <br/>&bull; &nbsp; Wechseln zwischen Datenbanken mithilfe von STRG+U <br/> &bull; &nbsp; Neue Abfrage aus Vorlage <br/> &bull; &nbsp; Weitere Informationen finden Sie in der [vollständigen Liste der Verbesserungen](https://github.com/dzsquared/query-editor-boost). |
+| Communityerweiterung: Query Editor Boost | Query Editor Boost ist eine Open-Source-Erweiterung zur Verbesserung des Abfrage-Editors von Azure Data Studio für Benutzer, die häufig Abfragen erstellen. &bull; &nbsp; Speichern der aktuellen Abfrage als Ausschnitt <br/>&bull; &nbsp; Wechseln zwischen Datenbanken mithilfe von STRG+U <br/> &bull; &nbsp; Neue Abfrage aus Vorlage <br/> &bull; &nbsp; Weitere Informationen finden Sie in der [vollständigen Liste der Verbesserungen](https://github.com/dzsquared/query-editor-boost). |
 | Verbesserungen an Notebooks wurden vorgenommen. | &bull; &nbsp; Leistungsverbesserungen bei der Unterstützung größerer Notebookdateien <br/> &bull; &nbsp; Weitere Informationen finden Sie in der [vollständigen Liste der Verbesserungen](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed). |
 | Das August-Release von Visual Studio Code (Merge 1.38) ist verfügbar. | Weitere Informationen finden Sie im [Artikel mit den aktuellen Verbesserungen](https://code.visualstudio.com/updates/v1_38). |
 | Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
@@ -211,8 +271,7 @@ ms.locfileid: "82619673"
 ### <a name="known-issues"></a>Bekannte Probleme
 
 - Notebooks
-    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) In seltenen Fällen, in denen das Notebook falsch serialisiert wurde
-
+  - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) In seltenen Fällen, in denen das Notebook falsch serialisiert wurde
 
 ## <a name="august-2019"></a>August 2019
 
@@ -303,7 +362,7 @@ ms.locfileid: "82619673"
 | :----- | :------ |
 | Die Registerkarte **Server** wurde in **Verbindungen** umbenannt. | |
 | Der Azure-Ressourcen-Explorer wurde als Azure-Viewlet nach „Verbindungen“ verschoben. | Benutzer können sich nun Azure SQL-Instanzen über das Azure-Viewlet in der Ansicht „Verbindungen“ anzeigen lassen. Außerdem können sie diese erweitern, sodass Ansichtsobjekte unter jedem Server oder jeder Datenbank angezeigt werden.|
-| Verbesserungen an SQL-Notebooks wurden vorgenommen. | &bull; &nbsp; Der Symbolleiste wurde eine Schaltfläche hinzugefügt, mit der sich die Ausgabe für alle Zellen löschen lässt. <br/>&bull; &nbsp; Der Symbolleiste wurde eine Schaltfläche hinzugefügt, mit der sich alle Zellen ausführen lassen. <br/>&bull; &nbsp; Ein Problem wurde behoben, durch das der Servername (sofern festgelegt) anstelle des Verbindungsnamens im Dropdownmenü „Anfügen an“ angezeigt wurde. <br/>&bull; &nbsp; Ein Problem wurde behoben, durch das Bilder in Markdown nicht gerendert wurden, wenn für diese relative Pfade angegeben wurden. <br/>&bull; &nbsp; Notebookraster verfügen nun über zusätzliche Funktionen. Durch einen Doppelklick auf eine Spalte wird ihre Größe automatisch geändert. Außerdem wird das Mausrad besser unterstützt. <br/>&bull; &nbsp; Die Fehlerbehandlung für die Installation von Python mithilfe von Notebooks wurde verbessert. Außerdem wurde die Installationsresilienz erhöht. <br/>&bull; &nbsp; Das Feature „Alle auswählen“ funktioniert nun besser bei der Auswahl von Notebookzellen. <br/>&bull; &nbsp; Notebookverbindungen wurden so angepasst, dass Notebooks nicht geschlossen werden und dadurch nicht die Verbindung mit dem Objekt-Explorer beeinträchtigen. <br/>&bull; &nbsp; In Notebooks wird dem Benutzer nun eine Meldung angezeigt, wenn eine Notebookverbindung getrennt wird, diese jedoch erforderlich ist, um Zellen auszuführen.<br/>&bull; &nbsp; Die wiederholte Aktivierung nicht gespeicherter Notebooks in ADS nach einem Neustart von ADS wird nun besser unterstützt. |
+| Verbesserungen an SQL-Notebooks wurden vorgenommen. | &bull; &nbsp; Der Symbolleiste wurde eine Schaltfläche hinzugefügt, mit der sich die Ausgabe für alle Zellen löschen lässt. <br/>&bull; &nbsp; Der Symbolleiste wurde eine Schaltfläche hinzugefügt, mit der sich alle Zellen ausführen lassen. <br/>&bull; &nbsp; Ein Problem wurde behoben, durch das der Servername (sofern festgelegt) anstelle des Verbindungsnamens im Dropdownmenü „Anfügen an“ angezeigt wurde. <br/>&bull; &nbsp; Ein Problem wurde behoben, durch das Bilder in Markdown nicht gerendert wurden, wenn für diese relative Pfade angegeben wurden. <br/>&bull; &nbsp; Die Funktionen für Notebookraster wurden verbessert. Durch einen Doppelklick auf eine Spalte wird nun deren Größe automatisch geändert. Außerdem wird das Mausrad besser unterstützt. <br/>&bull; &nbsp; Die Fehlerbehandlung für die Installation von Python mithilfe von Notebooks wurde verbessert. Außerdem wurde die Installationsresilienz erhöht. <br/>&bull; &nbsp; Das Feature „Alle auswählen“ funktioniert nun besser bei der Auswahl von Notebookzellen. <br/>&bull; &nbsp; Notebookverbindungen wurden so angepasst, dass Notebooks nicht geschlossen werden und dadurch nicht die Verbindung mit dem Objekt-Explorer beeinträchtigen. <br/>&bull; &nbsp; In Notebooks wird dem Benutzer nun eine Meldung angezeigt, wenn eine Notebookverbindung getrennt wird, diese jedoch erforderlich ist, um Zellen auszuführen.<br/>&bull; &nbsp; Die wiederholte Aktivierung nicht gespeicherter Notebooks in ADS nach einem Neustart von ADS wird nun besser unterstützt. |
 | Fehler und Issues wurden behoben. | Weitere Informationen finden Sie in der [Liste der Fehler und Issues auf GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -374,7 +433,7 @@ ms.locfileid: "82619673"
 
 | Change | Details |
 | :----- | :------ |
-| Mehrere in Version 1.3.8 entdeckte Probleme wurden behoben. | Weitere Informationen finden Sie im [Januar-Hotfixrelease auf GitHub](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).<br/><br/>Ausführliche Informationen finden Sie unter:<br/>&bull; &nbsp; [Änderungsprotokoll auf GitHub](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md).<br/>&bull; &nbsp; [Releases auf GitHub](https://github.com/Microsoft/azuredatastudio/releases). |
+| Mehrere in Version 1.3.8 entdeckte Probleme wurden behoben. | Weitere Informationen finden Sie im [Januar-Hotfixrelease auf GitHub](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).<br/><br/>Ausführliche Informationen finden Sie unter:<br/>&bull; &nbsp; [Änderungsprotokoll auf GitHub](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md).<br/>&bull; &nbsp; [Releases auf GitHub](https://github.com/Microsoft/azuredatastudio/releases). |
 | &nbsp; | &nbsp; |
 
 ## <a name="january-2019"></a>Januar 2019
@@ -445,7 +504,7 @@ ms.locfileid: "82619673"
 - Behebung von [Issue #2851](https://github.com/Microsoft/azuredatastudio/issues/2851): Das TimeSeries-Diagramm wird nicht korrekt gerendert.
 - Behebung von [Issue #2996](https://github.com/Microsoft/azuredatastudio/issues/2996): Temporäre Tabellen werden bei einer plötzlichen Sitzungsänderung gelöscht.
 
-Ausführliche Informationen finden Sie im [Änderungsprotokoll](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)und [in den Releases](https://github.com/Microsoft/azuredatastudio/releases).
+Ausführliche Informationen finden Sie im [Änderungsprotokoll](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md)und [in den Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="september-2018-ga-release"></a>September 2018 (allgemein verfügbares Release)
 
@@ -470,17 +529,17 @@ Allgemein verfügbares Release von Azure Data Studio (früher SQL Operations Stu
 | Change | Details |
 | :----- | :------ |
 | Für SQL Server 2019 werden Previewfunktionen wie [Big-Data-Cluster](../big-data-cluster/big-data-cluster-overview.md) unterstützt. | Sie können nun eine Verbindung mit dem HDFS/Spark-Gateway herstellen, das in der Vorschauversion von SQL Server 2019 enthalten ist.<br/><br/>Sie können nun HDFS durchsuchen, Dateien hochladen und speichern sowie nützliche Aktionen wie „Analyze in Notebook“ (In Notebook analysieren) für CSV-Dateien ausführen.<br/><br/>Sie können nun Spark-Aufträge über das Dashboard übermitteln oder mit der rechten Maustaste auf eine HDFS/Spark-Verbindung im Objekt-Explorer klicken. |
-| Azure Data Studio-Notebooks. | Sie können nun Notebooks mithilfe eines integrierten Notebook-Viewers erstellen oder öffnen. In diesem Release unterstützt der Notebook-Viewer ausschließlich das Herstellen von Verbindungen mit lokalen Kernels und dem Big-Data-Cluster von SQL Server 2019.<br/><br/>Sie können nun die Bibliotheken von PROSE Code Accelerator in Ihrem Notebook verwenden, um Dateiformate und die Datentypen für die schnelle Datenaufbereitung zu ermitteln. |
-| Azure-Ressourcen-Explorer. | Mithilfe der Azure-Ressourcen-Explorer-Ansicht können Sie nach datenbezogenen Endpunkten für Ihre Azure-Konten suchen und im Objekt-Explorer Verbindungen mit diesen Endpunkten herstellen. In diesem Release werden Azure SQL-Datenbanken und-Server unterstützt. |
+| Azure Data Studio-Notebooks. | Sie können nun Notebooks mithilfe eines integrierten Notebook-Viewers erstellen oder öffnen. In diesem Release unterstützt der Notebook-Viewer ausschließlich das Herstellen von Verbindungen mit lokalen Kernels und dem Big Data-Cluster von SQL Server 2019.<br/><br/>Sie können nun die Bibliotheken von PROSE Code Accelerator in Ihrem Notebook verwenden, um Dateiformate und die Datentypen für die schnelle Datenaufbereitung zu ermitteln. |
+| Azure-Ressourcen-Explorer. | Mithilfe der Azure-Ressourcen-Explorer-Ansicht können Sie nach datenbezogenen Endpunkten für Ihre Azure-Konten suchen und im Objekt-Explorer Verbindungen mit diesen Endpunkten herstellen. In diesem Release werden Azure SQL-Datenbanken und -Server unterstützt. |
 | Assistent zum Erstellen externer Tabellen für PolyBase in SQL Server. | Sie können nun mit einem benutzerfreundlichen Assistenten eine externe Tabelle und zugehörige Metadatenstrukturen erstellen. In diesem Release werden Remoteserver unter SQL Server und Oracle unterstützt. |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-september-2018"></a>Fehlerbehebungen im September 2018
 
-- Behebung von [Issue #2647](https://github.com/Microsoft/azuredatastudio/issues/143): Rückschritte bei Diagrammen.
+- Behebung von [Issue #2647](https://github.com/Microsoft/azuredatastudio/issues/143): Erhebliche Rückschritte bei Diagrammen
 - Behebung von [Issue #2648](https://github.com/Microsoft/azuredatastudio/issues/143): SELECT gibt JSON-Hyperlinks für die gesamte Spalte zurück.
 
-Ausführliche Informationen finden Sie im [Änderungsprotokoll](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)und [in den Releases](https://github.com/Microsoft/azuredatastudio/releases).
+Ausführliche Informationen finden Sie im [Änderungsprotokoll](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md)und [in den Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="august-2018"></a>August 2018
 
@@ -523,7 +582,7 @@ _Version 0.32.8 enthält Fehlerbehebungen für einige Regressionen, die in Vers
 - Behebung von [Issue #1782](https://github.com/Microsoft/azuredatastudio/issues/1782): „Daten bearbeiten“: Beim Drücken der ESC-TASTE wird der ursprüngliche Wert der Zelle nicht wiederhergestellt.
 - Behebung von [Issue #1836](https://github.com/Microsoft/azuredatastudio/issues/1836): SQL-Dateien werden nicht SQL Operations Studio zugeordnet.
 - Behebung von [Issue #1850](https://github.com/Microsoft/azuredatastudio/issues/1850): Wenn „N''“ eingegeben wird, wird durch die Autovervollständigung „N'''“ angezeigt.
-- Behebung von [Issue #1985](https://github.com/Microsoft/azuredatastudio/issues/1985): Wenn ein Wert aus dem Ergebnisraster einer Abfrage kopiert wird, wird der falsche Wert aus der darauffolgenden Spalte kopiert.
+- Behebung von [Issue #1985](https://github.com/Microsoft/azuredatastudio/issues/1985): Copy from query results grid is off by one column. (Beim Kopieren eines Werts aus dem Ergebnisraster einer Abfrage wird der Wert aus der darauffolgenden Spalte kopiert.)
 - Behebung von [Issue #1998](https://github.com/Microsoft/azuredatastudio/pull/1998): Ergänzung der VS Code-Version im Dialogfeld „Info“.
 - Behebung von [Issue #2042](https://github.com/Microsoft/azuredatastudio/pull/2042): Mitarbeiter: Die Schaltfläche zum Importieren von Abfragen aus SQL-Dateien wurde aktiviert.
 - Behebung von [Issue #2091](https://github.com/Microsoft/azuredatastudio/issues/2091): Die Tastenkombination STRG+C kann nicht zum Kopieren von Werten aus dem Ergebnisbereich verwendet werden.
@@ -690,7 +749,7 @@ Besonders an der im April veröffentlichten Public Preview hervorzuheben ist die
 
 Zusätzliche Details finden Sie in den [Versionshinweisen vom Februar](https://code.visualstudio.com/updates/v1_21) sowie in den [Versionshinweisen zu Visual Studio Code vom Januar](https://code.visualstudio.com/updates/v1_20).
 
-Weitere Informationen sind im [Änderungsprotokoll](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md) verfügbar.
+Weitere Informationen sind im [Änderungsprotokoll](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md) verfügbar.
 
 ## <a name="march-2018"></a>März 2018
 
@@ -730,7 +789,7 @@ Die im *Februar veröffentlichte Public Preview* enthält mehrere Featurevorschl
 - Behebung von [Issue #22](https://github.com/Microsoft/azuredatastudio/issues/22): Können die Textfelder „Servername“ und „Datenbankname“ in Dropdownfelder umgewandelt werden?
 - Behebung von [Issue #549](https://github.com/Microsoft/azuredatastudio/issues/549): Wenn die Installation mit den Optionen SILENT/VERYSILENT durchgeführt wird, öffnet sich die Anwendung nach der Installation automatisch.
 - Behebung von [Issue #481](https://github.com/Microsoft/azuredatastudio/issues/481): Eine Option mit der Bezeichnung „Nach Updates suchen“ sollte hinzugefügt werden.
-- Fehlerbehebungen für farbliche Hervorhebungen und für die Autovervollständigung im SQL-Editor:
+- Fehlerbehebungen für farbliche Hervorhebungen und Autovervollständigung im SQL-Editor:
   - Behebung von [Issue #584](https://github.com/Microsoft/azuredatastudio/issues/584): Das Schlüsselwort FULL wird von IntelliSense nicht hervorgehoben.
   - Behebung von [Issue #345](https://github.com/Microsoft/azuredatastudio/issues/345): SQL-Funktionen im Editor sollten farblich hervorgehoben werden.
   - Behebung von [Issue #300](https://github.com/Microsoft/azuredatastudio/issues/300): [#tempData] – letzte eckige Klammer „]“ wird grün angezeigt.
@@ -748,8 +807,8 @@ Die im *Januar veröffentlichte Public Preview* enthält mehrere Featurevorschl�
 | Change | Details |
 | :----- | :------ |
 | Gespeicherte Serververbindungen sind im Dialogfeld „Verbindung“ verfügbar. | &nbsp; |
-| Aktivierung von Hot Exit. Hot Exit ist standardmäßig deaktiviert. Informationen zur Aktivierung finden Sie unter [Einstellungen für Hot Exit](settings.md#hot-exit). | &nbsp; |
-| Anpassung der Registerkartenfarben je nach Servergruppe. Die Anpassung der Registerkartenfarben ist standardmäßig deaktiviert. Informationen zur Aktivierung finden Sie unter [Einstellungen für Registerkartenfarben](settings.md#tab-color). | &nbsp; |
+| Aktivierung von Hot Exit. Hot Exit ist standardmäßig deaktiviert. Informationen zur Aktivierung finden Sie unter [Hot Exit](settings.md#hot-exit). | &nbsp; |
+| Anpassung der Registerkartenfarben je nach Servergruppe. Die Anpassung der Registerkartenfarben ist standardmäßig deaktiviert. Informationen zur Aktivierung finden Sie unter [Registerkartenfarbe](settings.md#tab-color). | &nbsp; |
 | *Servername* wurde im Dialogfeld „Verbindung“ in *Server* geändert. | &nbsp; |
 | Fehlerbehebung für Befehl *Run Current Query* (Aktuelle Abfrage ausführen). | &nbsp; |
 | Behebung von Skriptfehler, der zur Deaktivierung von Drag & Drop führte. | &nbsp; |
@@ -781,7 +840,7 @@ Die im *Dezember veröffentlichte Public Preview* enthält mehrere Fehlerbehebun
 
 15. November 2017 &nbsp; / &nbsp; Version: 0.23.6
 
-- Erstrelease von [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+- Erstes Release von Azure Data Studio
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -791,6 +850,6 @@ In den folgenden Schnellstarts finden Sie Hinweise zu den ersten Schritten:
 - [Herstellen einer Verbindung mit und Abfragen von Azure SQL-Datenbank](quickstart-sql-database.md)
 - [Herstellen einer Verbindung mit und Abfragen von Azure SQL Data Warehouse](quickstart-sql-dw.md)
 
-Mitwirken an [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
+Wirken Sie an Azure Data Studio mit:
 
 - [https://github.com/Microsoft/azuredatastudio](https://github.com/Microsoft/azuredatastudio)

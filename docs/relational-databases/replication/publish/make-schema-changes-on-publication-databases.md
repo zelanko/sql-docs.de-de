@@ -1,5 +1,6 @@
 ---
 title: Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken | Microsoft-Dokumentation
+description: Die Replikation unterstützt eine breite Palette von Schemaänderungen an veröffentlichten Objekten. Erfahren Sie mehr über Schemaänderungen, die standardmäßig an alle SQL Server-Abonnenten weitergegeben werden.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 79f0e12422f299a78e28c5ca21c370d7a973771a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f7bc2b9d94b53ab1d0418d05ae9e9c8ee93ee301
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287684"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160128"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Die Replikation unterstützt eine breite Palette von Schemaänderungen an veröffentlichten Objekten. Wenn Sie eine der folgenden Schemaänderungen am entsprechenden veröffentlichten Objekt auf einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verleger vornehmen, wird diese Änderung standardmäßig an alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten weitergegeben:  
   
 -   ALTER TABLE  
@@ -91,9 +92,9 @@ ms.locfileid: "76287684"
   
 -   Wenn Sie einer Tabelle eine neue Spalte hinzufügen und die Spalte in eine vorhandene Veröffentlichung einschließen möchten, führen Sie ALTER TABLE \<Table> ADD \<Column> aus. Die Spalte wird dann standardmäßig auf alle Abonnenten repliziert. Die Spalte muss NULL-Werte zulassen oder eine Standardeinschränkung einschließen. Weitere Informationen über das Hinzufügen von Spalten finden Sie im Abschnitt "Mergereplikation" in diesem Thema.  
   
--   Wenn Sie einer Tabelle eine neue Spalte hinzufügen und diese Spalte nicht in eine vorhandene Veröffentlichung einschließen möchten, führen Sie ALTER TABLE \<Table> ADD \<Column> aus.  
+-   Wenn Sie einer Tabelle eine neue Spalte hinzufügen und diese Spalte nicht in eine vorhandene Veröffentlichung einschließen möchten, deaktivieren Sie die Replikation von Schemaänderungen, und führen Sie dann ALTER TABLE \<Table> ADD \<Column> aus.  
   
--   Verwenden Sie [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) oder das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** , um eine vorhandene Spalte in eine vorhandene Veröffentlichung einzuschließen.  
+-   Verwenden Sie [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) oder das Dialogfeld **Veröffentlichungseigenschaften – \<Publication>** , um eine vorhandene Spalte in eine vorhandene Veröffentlichung einzuschließen.  
   
      Weitere Informationen finden Sie unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Dies erfordert, dass Sie Abonnements erneut initialisieren.  
   
@@ -103,7 +104,7 @@ ms.locfileid: "76287684"
   
 -   Wenn Sie eine Spalte aus einer vorhandenen Veröffentlichung löschen und die Spalte aus der Tabelle auf dem Verleger löschen möchten, führen Sie ALTER TABLE \<Table> DROP \<Column> aus. Standardmäßig wird die Spalte dann aus der Tabelle auf allen Abonnenten gelöscht.  
   
--   Verwenden Sie [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) oder das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** , um eine Spalte aus einer vorhandenen Veröffentlichung zu löschen, die Spalte jedoch in der Tabelle auf dem Verleger beizubehalten.  
+-   Verwenden Sie [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) oder das Dialogfeld **Veröffentlichungseigenschaften – \<Publication>** , um eine Spalte aus einer vorhandenen Veröffentlichung zu löschen, die Spalte jedoch in der Tabelle auf dem Verleger beizubehalten.  
   
      Weitere Informationen finden Sie unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Dies erfordert, dass Sie eine neue Momentaufnahme generieren.  
   

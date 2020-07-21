@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11e29a27597b7710ab38497a0b862aed9b65b404
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: 9ee026ab80e7afcd801b96411575f5ef4a61afd9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868440"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196092"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector für Oracle
 
@@ -36,6 +36,7 @@ Die folgenden Oracle-Datenbankversionen der Datenquelle werden unterstützt:
 - Oracle 11.x
 - Oracle 12c
 - Oracle 18C (ohne Unterstützung der Windows-Authentifizierung)
+- Oracle 19c (ohne Unterstützung der Windows-Authentifizierung)
 
 Die Oracle-Datenbank wird auf allen Betriebssystemen und Plattformen unterstützt.
 > [!NOTE]

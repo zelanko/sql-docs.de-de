@@ -24,17 +24,18 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5260ccc53fbdba1e0773dc43c021f0ec4f21e255
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 1f287a864113bdd5cc1d8829ad080277c1a1d91d
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151559"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393178"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Erstellt eine neue Verfügbarkeitsgruppe, wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Funktion aktiviert wird.  
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+Erstellt eine neue Verfügbarkeitsgruppe, wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Funktion aktiviert wird.  
   
 > [!IMPORTANT]  
 >  Führen Sie CREATE AVAILABILITY GROUP auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus, die als ursprüngliches primäres Replikat der neuen Verfügbarkeitsgruppe verwendet werden soll. Diese Serverinstanz muss sich in einem WSFC-Knoten (Windows Server Failover Clustering) befinden.  
@@ -113,11 +114,14 @@ CREATE AVAILABILITY GROUP group_name
   
 ```  
   
-## <a name="arguments"></a>Argumente  
- *group_name*  
- Gibt den Namen der neuen Verfügbarkeitsgruppe an. *group_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][-Bezeichner](../../relational-databases/databases/database-identifiers.md) und in allen Verfügbarkeitsgruppen im WSFC-Cluster eindeutig sein. Die maximale Länge eines Verfügbarkeitsgruppennamens beträgt 128 Zeichen.  
-  
- AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
+
+*group_name*  
+Gibt den Namen der neuen Verfügbarkeitsgruppe an. *group_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][-Bezeichner](../../relational-databases/databases/database-identifiers.md) und in allen Verfügbarkeitsgruppen im WSFC-Cluster eindeutig sein. Die maximale Länge eines Verfügbarkeitsgruppennamens beträgt 128 Zeichen.  
+
+AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }  
  Legt fest, wie ein Sicherungsauftrag das primäre Replikat auswerten soll, wenn ausgewählt wird, wo Sicherungen ausgeführt werden müssen. Sie können einen gegebenen Sicherungsauftrag erstellen, um die automatisierte Sicherungseinstellung zu berücksichtigen. Die Einstellung wird nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erzwungen und weist deshalb keine Auswirkungen auf Ad-hoc-Sicherungen auf.  
   
  Die folgenden Werte werden unterstützt:  
@@ -143,7 +147,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Um die automatisierte Sicherungseinstellung einer vorhandenen Verfügbarkeitsgruppe anzuzeigen, wählen Sie die Spalten **automated_backup_preference** oder **automated_backup_preference_desc** der Katalogsicht [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) aus. Darüber hinaus kann [sys.fn_hadr_backup_is_preferred_replica &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) verwendet werden, um das bevorzugte Sicherungsreplikat zu bestimmen.  Diese Funktion gibt für mindestens eines der Replikate 1 zurück, sogar wenn `AUTOMATED_BACKUP_PREFERENCE = NONE` ist.  
   
- FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
+ FAILURE_CONDITION_LEVEL **=** { 1 \| 2 \| **3** \| 4 \| 5 }  
  Gibt an, welche Fehlerbedingungen ein automatisches Failover für diese Verfügbarkeitsgruppe auslösen. FAILURE_CONDITION_LEVEL wird auf Gruppenebene festgelegt, ist aber nur auf Verfügbarkeitsreplikaten relevant, die für den Verfügbarkeitsmodus mit synchronen Commits (AVAILIBILITY_MODE **=** SYNCHRONOUS_COMMIT) konfiguriert sind. Weiterhin können Fehlerbedingungen nur ein automatisches Failover auslösen, wenn das primäre und das sekundäre Replikat für den automatischen Failovermodus konfiguriert sind (FAILOVER_MODE **=** AUTOMATIC) und das sekundäre Replikat gerade mit dem primären Replikat synchronisiert wird.  
   
  Die Fehlerbedingungsebenen (1–5) reichen von der Ebene 1 mit den wenigsten Einschränkungen bis zur Ebene 5 mit den meisten Einschränkungen. Jede Bedingungsebene umfasst stets auch sämtliche weniger restriktiven Ebenen. Daher schließt die strengste Bedingungsebene 5 die vier Bedingungsebenen mit weniger Einschränkungen (1-4) ein, Ebene 4 schließt die Ebenen 1-3 ein usw. In der folgenden Tabelle wird die Fehlerbedingung beschrieben, die der jeweiligen Ebene entspricht.  
@@ -162,7 +166,7 @@ CREATE AVAILABILITY GROUP group_name
  Der FAILURE_CONDITION_LEVEL- und der HEALTH_CHECK_TIMEOUT-Wert definieren eine *flexible Failoverrichtlinie* für eine angegebene Gruppe. Diese flexible Failoverrichtlinie bietet eine präzise Kontrolle der Bedingungen, die ein automatisches Failover verursachen müssen. Weitere Informationen finden Sie unter [Flexible Failoverrichtlinie für automatisches Failover einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- Gibt die Wartezeit (in Millisekunden) für die gespeicherte [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)-Systemprozedur an, um Informationen über den Serverzustand zurückzugeben, ehe der WSFC-Cluster annimmt, dass die Serverinstanz langsam oder blockiert ist. HEALTH_CHECK_TIMEOUT wird auf Gruppenebene festgelegt, ist aber nur für Verfügbarkeitsreplikate relevant, die für den Verfügbarkeitsmodus für synchrone Commits mit automatischem Failover (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) konfiguriert sind.  Weiterhin kann ein Integritätsprüfungstimeout nur ein automatisches Failover auslösen, wenn das primäre und das sekundäre Replikat für den automatischen Failovermodus konfiguriert sind (FAILOVER_MODE **=** AUTOMATIC) und das sekundäre Replikat gerade mit dem primären Replikat synchronisiert wird.  
+ Gibt die Wartezeit (in Millisekunden) für die gespeicherte Systemprozedur [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) an, um Informationen über den Serverzustand zurückzugeben, ehe das WSFC-Cluster annimmt, dass die Serverinstanz langsam ist oder nicht reagiert. HEALTH_CHECK_TIMEOUT wird auf Gruppenebene festgelegt, ist aber nur für Verfügbarkeitsreplikate relevant, die für den Verfügbarkeitsmodus für synchrone Commits mit automatischem Failover (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT) konfiguriert sind.  Weiterhin kann ein Integritätsprüfungstimeout nur ein automatisches Failover auslösen, wenn das primäre und das sekundäre Replikat für den automatischen Failovermodus konfiguriert sind (FAILOVER_MODE **=** AUTOMATIC) und das sekundäre Replikat gerade mit dem primären Replikat synchronisiert wird.  
   
  Der standardmäßige HEALTH_CHECK_TIMEOUT-Wert beträgt 30.000 Millisekunden (30 Sekunden). Der minimale Wert beträgt 15.000 Millisekunden (15 Sekunden) und der maximale Wert 4.294.967.295 Millisekunden.  
   
@@ -207,7 +211,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Wenn Sie weniger als vier sekundäre Replikate beim Erstellen einer Verfügbarkeitsgruppe angeben, können Sie jederzeit mit der [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ein zusätzliches sekundäres Replikat hinzufügen. Außerdem können Sie mit dieser Anweisung alle sekundären Replikate aus einer vorhandenen Verfügbarkeitsgruppe entfernen.  
   
- \<server_instance> gibt die Adresse der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die als Host für ein Replikat fungiert. Das Adressformat hängt davon ab, ob die Instanz die Standardinstanz oder eine benannte Instanz ist und ob es eine eigenständige Instanz oder eine Failoverclusterinstanz (FCI) ist, wie dies im Folgenden beschrieben ist:  
+ \<server_instance> gibt die Adresse der Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die als Host für ein Replikat fungiert. Das Adressformat hängt davon ab, ob die Instanz die Standardinstanz oder eine benannte Instanz ist und ob es eine eigenständige Instanz oder eine Failoverclusterinstanz (FCI) ist, wie dies im Folgenden beschrieben ist:  
   
  { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
   
@@ -339,7 +343,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Für die Datenbanken im primären Replikat sind alle Verbindungen zugelassen. Dies ist das Standardverhalten.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘** \<server_instance> **’** [ **,** ...*n* ] **)** | NONE } gibt eine durch Trennzeichen getrennte Liste von Serverinstanzen an, die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, die beim Ausführen unter der sekundären Rolle die folgenden Anforderungen erfüllen:  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE } gibt eine durch Trennzeichen getrennte Liste von Serverinstanzen an, die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, die beim Ausführen unter der sekundären Rolle die folgenden Anforderungen erfüllen:  
   
 -   Wird konfiguriert, um alle Verbindungen oder schreibgeschützte Verbindungen (siehe das obige ALLOW_CONNECTIONS-Argument der SECONDARY_ROLE-Option) zuzulassen.  
   
@@ -356,7 +360,7 @@ CREATE AVAILABILITY GROUP group_name
  Keine  
  Gibt an, dass schreibgeschütztes Routing nicht unterstützt wird, wenn dieses Verfügbarkeitsreplikat das primäre Replikat ist. Dies ist das Standardverhalten.  
 
- READ_WRITE_ROUTING_URL **=** { **('** \<server_instanz> **')** }  
+ READ_WRITE_ROUTING_URL **=** { **('** \<server_instance> **')** }  
  Gilt für: SQL Server (ab SQL Server 2019 (15.x)) 
 
  Gibt bei Ausführung unter der primären Rolle Serverinstanzen an, die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, die die folgenden Anforderungen erfüllen:
@@ -496,7 +500,7 @@ Weitere Informationen finden Sie unter [Umleitung von Lese-/Schreibverbindungen 
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|Diese automatisierte Sicherungseinstellung gibt an, dass Sicherungen auf einem sekundären Replikat erfolgen sollen, außer wenn das primäre Replikat das einzige Replikat online ist (dies ist das Standardverhalten). Damit die AUTOMATED_BACKUP_PREFERENCE-Einstellung in Kraft tritt, müssen Sicherungsaufträge in Verfügbarkeitsdatenbanken so verfasst werden, dass die automatische Sicherungseinstellung berücksichtigt wird.|  
 |FAILURE_CONDITION_LEVEL|3|Diese Einstellung für die Fehlerbedingungsebene gibt an, dass ein automatisches Failover bei kritischen internen SQL Server-Fehlern initiiert werden soll, z. B. verwaisten Spinlocks, ernsten Schreibzugriffsverletzungen oder zu vielen Sicherungen.|  
-|HEALTH_CHECK_TIMEOUT|600000|Ein Timeoutwert für die Integritätsprüfung von 60 Sekunden besagt, dass der WSFC-Cluster 60000 Millisekunden wartet, bis die gespeicherte Systemprozedur [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) Informationen über den Serverzustand über eine Serverinstanz zurückgibt, die ein Replikat mit synchronem Commit automatisch hostet, bevor der Cluster annimmt, dass die Hostserverinstanz langsam oder blockiert ist. (Der Standardwert beträgt 30.000 Millisekunden.)|  
+|HEALTH_CHECK_TIMEOUT|600000|Ein Timeoutwert für die Integritätsprüfung von 60 Sekunden besagt, dass der WSFC-Cluster 60.000 Millisekunden wartet, bis die gespeicherte Systemprozedur [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) Informationen über den Serverzustand über eine Serverinstanz zurückgibt, die ein Replikat mit synchronem Commit automatisch hostet, bevor der Cluster annimmt, dass die Hostserverinstanz langsam ist oder nicht reagiert. (Der Standardwert beträgt 30.000 Millisekunden.)|  
   
  Drei Verfügbarkeitsreplikate müssen von den Standardserverinstanzen auf Computern mit der Bezeichnung `COMPUTER01`, `COMPUTER02` und `COMPUTER03` gehostet werden. In der folgenden Tabelle werden die für die Replikatoptionen jedes Replikats angegebenen Werte zusammengefasst.  
   
@@ -584,6 +588,3 @@ GO
  [Problembehandlung für die Always On-Verfügbarkeitsgruppenkonfiguration &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  
-

@@ -1,5 +1,6 @@
 ---
 title: Serverkonfigurationsoptionen für den Zugriffsüberprüfungscache | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über den Cachespeicher für Zugriffsüberprüfungsergebnisse und die Optionen, die das Verhalten des Caches steuern. Außerdem erfahren Sie, wann diese Optionen in SQL Server geändert werden sollten.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -9,22 +10,35 @@ ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - access check cache option
+- access check cache bucket count
+- access check cache quota
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 74b4e43ba9b973f83263ad36aabc859211926ef6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5790d5eb416f789bbe67f10d28f18a375b4c572
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013324"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158928"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>Serverkonfigurationsoptionen für den Zugriffsüberprüfungscache
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Beim Zugriff auf Datenbankobjekte durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird die Zugriffsprüfung in einer internen Struktur zwischengespeichert, die als **access check result cache**bezeichnet wird. Die Optionen **access check cache quota** und **access check cache bucket count** steuern die Anzahl der Einträge und Anzahl der Hashbuckets, die für den **Zugriffsprüfungscache**verwendet werden. In seltenen Fällen kann die Leistung durch das Ändern dieser Optionen verbessert werden.  
+Beim Zugriff auf Datenbankobjekte durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird die Zugriffsprüfung in einer internen Struktur zwischengespeichert, die als **access check result cache**bezeichnet wird. 
   
- Die Standardwerte 0 geben an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese Optionen verwaltet. Microsoft empfiehlt, diese Optionen nur auf Anweisung des Microsoft-Kundendiensts zu ändern.  
+Die Option **access check cache bucket count** steuert die Anzahl der Hashbuckets, die für den Ergebniscache der Zugriffsüberprüfung verwendet werden. 
+
+Die Option **access check cache quota** steuert die Anzahl der Einträge, die im Ergebniscache der Zugriffsüberprüfung gespeichert werden. Wenn die maximale Anzahl von Einträgen erreicht ist, werden die ältesten Einträge aus dem Ergebniscache der Zugriffsüberprüfung entfernt.
+  
+Die Standardwerte 0 geben an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese Optionen verwaltet. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] werden die Standardwerte in die folgenden internen Konfigurationen übersetzt:
+-   Bei der Bucketanzahl für den Cache der Zugriffsüberprüfung wird durch den Wert 0 ein Standardwert von 256 Buckets festgelegt.
+-   Beim Cachekontingent der Zugriffsüberprüfung wird durch den Wert 0 ein Standardwert von 1.024 Einträgen festgelegt.
+
+In seltenen Fällen kann die Leistung durch das Ändern dieser Optionen verbessert werden. Beispielsweise können Sie den Ergebniscache für die Zugriffsüberprüfung verkleinern, wenn zu viel Arbeitsspeicher verwendet wird. Sie können den Ergebniscache für die Zugriffsüberprüfung auch vergrößern, wenn Sie bei der Neuberechnung von Berechtigungen eine hohe CPU-Auslastung feststellen.
+ 
+> [!IMPORTANT]
+> Microsoft empfiehlt, diese Optionen nur auf Anweisung des Microsoft-Kundendiensts zu ändern. Wenn Sie die Werte „access check cache bucket count“ und „access check cache quota“ ändern müssen, verwenden Sie ein Verhältnis von 1:4. Beispiel: Wenn Sie den Wert „access check cache bucket count“ in 512 ändern, sollten Sie den Wert für „access check cache quota“ in 2.048 ändern. 
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

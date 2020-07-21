@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152170"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196072"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>DevOps-Tools für SQL Server Integration Services (SSIS)
 
@@ -313,9 +313,9 @@ Das Schema einer JSON-Konfiguration hat drei Ebenen:
 
 |Eigenschaft  |BESCHREIBUNG  |Notizen  |
 |---------|---------|---------|
-|name|Der Name des Parameters.|Der Parameter kann ein *Projektparameter* oder ein *Paketparameter* sein. <br> Der Parameter wird übersprungen, wenn er nicht im übergeordneten Projekt vorhanden ist.|
-|Container|Der Container des Parameters.|<li>Wenn der Parameter ein Projektparameter ist, muss *container* dem Projektnamen entsprechen. <li>Wenn es sich um einen Paketparameter handelt, muss *container* dem Namen des Pakets mit der Erweiterung **.dtsx** entsprechen. <li> Wenn es sich bei dem Parameter um eine Eigenschaft des Verbindungs-Managers handelt, sollte der Name folgendes Format aufweisen: **CM.\<Name des Verbindungs-Managers>.\<Name der Eigenschaft>** .|
-|value|Wert des Parameters|<li>Wenn *valueType* auf *referenced* festgelegt ist: Der Wert ist ein Verweis auf eine Umgebungsvariable des Typs *String*. <li> Wenn *valueType* auf *literal* festgelegt ist: Dieses Attribut unterstützt alle gültigen JSON-Werte des Typs *Boolean*, *Zahl* und *String*. <br> Der Wert wird in den Typ des Zielparameters konvertiert. Wenn die Konvertierung nicht möglich ist, tritt ein Fehler auf.<li> Der Wert *NULL* ist ungültig. Der Task überspringt dieses Parameterobjekt und gibt eine Warnung aus.|
+|name|Der Name des Parameters.|<li>Der Parameter kann ein Projektparameter oder ein Paketparameter sein. <li>Wenn er nicht vorhanden ist, wird der Parameter übersprungen. <li>Wenn es sich bei dem Parameter um eine Eigenschaft des Verbindungs-Managers handelt, muss der Name das Format **CM.\<Connection Manager Name>.\<Property Name>** aufweisen. |
+|Container|Der Container des Parameters.|<li>Wenn der Parameter ein Projektparameter ist, muss *container* dem Projektnamen entsprechen. <li>Wenn es sich um einen Paketparameter handelt, muss *container* dem Namen des Pakets mit der Erweiterung **.dtsx** entsprechen.|
+|value|Wert des Parameters|<li>Wenn *valueType* auf *referenced* festgelegt ist: Der Wert ist ein Verweis auf eine Umgebungsvariable des Typs *String*. <li> Wenn *valueType* auf *literal* festgelegt ist: Dieses Attribut unterstützt alle gültigen JSON-Werte des Typs *Boolean*, *Zahl* und *String*. <li> Der Wert wird in den Typ des Zielparameters konvertiert. Wenn die Konvertierung nicht möglich ist, tritt ein Fehler auf.<li> Der Wert *NULL* ist ungültig. Der Task überspringt dieses Parameterobjekt und gibt eine Warnung aus.|
 |valueType|Der Typ des Parameterwerts.|Gültige Typen sind: <br> *literal:* Das Attribut *value* stellt einen Literalwert dar. <br> *referenced:* Das Attribut *value* stellt einen Verweis auf eine Umgebungsvariable dar.|
 
 ##### <a name="reference-attributes"></a>Verweisattribute
@@ -344,6 +344,12 @@ Das Schema einer JSON-Konfiguration hat drei Ebenen:
 |sensitive|Gibt an, ob der Wert der Umgebungsvariablen vertraulich ist.|Gültige Eingaben sind: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>Versionshinweise
+
+### <a name="version-102"></a>Version 1.0.2
+
+Veröffentlichungsdatum: 26. Mai 2020
+
+- Ein Problem wurde behoben, durch das der Konfigurationstask für SSIS-Kataloge in einigen Fällen nicht erfolgreich durchgeführt wurde, nachdem die Konfiguration abgeschlossen wurde.
 
 ### <a name="version-101"></a>Version 1.0.1
 
