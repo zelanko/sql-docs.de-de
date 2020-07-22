@@ -21,19 +21,21 @@ ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8013a0a8cefc9623500a65df5560333a63632af
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f267da97eeb409be81bfcca71af602ebce1ffe1c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002540"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86548740"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary und varbinary (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Binäre Datentypen mit fester Länge bzw. mit variabler Länge.
   
-## <a name="arguments"></a>Argumente  
+## <a name="arguments"></a>Argumente
+
 **binary** [ ( _n_ ) ] Binärdaten mit einer festen Länge von _n_ Bytes, wobei _n_ einen Wert von 1 bis 8000 aufweisen kann. Die Speichergröße beträgt _n_ Byte.
   
 **varbinary** [ ( _n_ | **max**) ] Binärdaten variabler Länge. _n_ kann einen Wert von 1 bis 8000 aufweisen. **max** gibt an, dass die maximale Speichergröße 2^31-1 Byte beträgt. Die Speicherplatzgröße ist die tatsächliche Länge der eingegebenen Daten + 2 Byte. Die eingegebenen Daten können 0 Byte lang sein. Das ANSI SQL-Synonym für **varbinary** ist **binary varying**.

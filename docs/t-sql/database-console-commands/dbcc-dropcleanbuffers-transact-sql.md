@@ -1,5 +1,5 @@
 ---
-title: DBCC DROPCLEANBUFFERS (Transact-SQL) | Microsoft-Dokumentation
+title: DBCC DROPCLEANBUFFERS (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -25,14 +25,15 @@ ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3b2d2ff81fddaae0b0ae68da9d4477819a61073
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57c29581a8a2c7d5be9978dce6b4b8b3f9b6aae9
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101933"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485544"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
 Entfernt alle leeren Puffer aus dem Pufferpool und alle Columnstore-Objekte aus dem Columnstore-Objektpool.
@@ -40,7 +41,7 @@ Entfernt alle leeren Puffer aus dem Pufferpool und alle Columnstore-Objekte aus 
 ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax
-Syntax für SQL Server: 
+Syntax für SQL Server:
 
 ```sql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
@@ -49,8 +50,8 @@ Syntax für Azure SQL Warehouse und Parallel Data Warehouse:
 
 ```sql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
-```  
-  
+```
+
 ## <a name="arguments"></a>Argumente  
  WITH NO_INFOMSGS  
  Alle Informationsmeldungen werden unterdrückt. Informationsmeldungen werden bei [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] immer unterdrückt.  

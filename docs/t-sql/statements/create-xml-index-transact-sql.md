@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a0f885f15371460e79df287738fce96ac9ce2d7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8aa04b27ec929809e55896421f9f0656fbf9b44
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766885"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485011"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,9 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  [PRIMARY] XML  
  Erstellt einen XML-Index für die angegebene **xml**-Spalte. Wenn PRIMARY angegeben ist, wird ein gruppierter Index mit dem gruppierten Schlüssel erstellt, der aus dem Gruppierungsschlüssel der Benutzertabelle und dem Bezeichner für einen XML-Knoten besteht. Jede Tabelle kann bis zu 249 XML-Indizes enthalten. Beachten Sie beim Erstellen eines XML-Indexes Folgendes:  
   

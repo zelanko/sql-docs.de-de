@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: ad67fa7e1cda5208fa5468e233c60a27edb10837
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b194f23779914961899cdf8b07c82a4d0986aa79
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754835"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485283"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,9 @@ DBCC CHECKFILEGROUP
 ]  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *filegroup_name*  
  Der Name der Dateigruppe in der aktuellen Datenbank, für die die Tabellenzuordnung und strukturelle Integrität überprüft werden sollen. Wenn dieses Argument fehlt oder mit 0 angegeben ist, wird standardmäßig die primäre Dateigruppe verwendet. Dateigruppennamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
  *filegroup_name* kann keine FILESTREAM-Dateigruppe sein.  

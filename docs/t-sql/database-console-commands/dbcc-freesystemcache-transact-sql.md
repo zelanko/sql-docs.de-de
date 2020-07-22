@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 31b5731dc0507ebab3dd27fb6e12d3a501428898
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c7ea9924a133194b089f4b0926731582f12c4fa
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85685535"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483526"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,9 @@ DBCC FREESYSTEMCACHE
     ]  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 ( 'ALL' [,_pool\_name_ ] )  
 ALL gibt alle unterstützten Caches an.  
 _pool\_name_ gibt einen Cache für den Resource Governor-Poolcache an. Nur diesem Pool zugeordnete Einträge werden freigegeben.  

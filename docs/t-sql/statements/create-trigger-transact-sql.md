@@ -1,5 +1,5 @@
 ---
-title: CREATE TRIGGER (Transact-SQL) | Microsoft-Dokumentation
+title: CREATE TRIGGER (Transact-SQL)
 description: Transact-SQL-Referenz für die CREATE TRIGGER-Anweisung, die zum Erstellen eines DML-, DDL- oder LOGON-Triggers verwendet wird.
 ms.date: 10/30/2019
 ms.prod: sql
@@ -28,16 +28,16 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2434250e8ea3fe4abd7c17ed5fc4041c63880321
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766949"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86481839"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Erstellt einen DML-, DDL- oder LOGON-Trigger. Ein Trigger ist eine spezielle Art von gespeicherter Prozedur, die automatisch ausgeführt wird, wenn ein Ereignis auf dem Datenbankserver auftritt. DML-Trigger werden ausgeführt, wenn ein Benutzer versucht, Daten mithilfe eines DML-Ereignisses (Data Manipulation Language, Datenbearbeitungssprache) zu ändern. DML-Ereignisse sind INSERT-, UPDATE- oder DELETE-Anweisungen für eine Tabelle oder Sicht. Diese Trigger werden ausgelöst, sobald ein beliebiges gültiges Ereignis ausgelöst wird, unabhängig davon, ob Tabellenzeilen betroffen sind oder nicht. Weitere Informationen finden Sie unter [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
@@ -160,6 +160,8 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
     [ EXECUTE AS Clause ]  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumente
 OR ALTER  
 **Gilt für**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1). 
@@ -310,20 +312,27 @@ Obwohl eine TRUNCATE TABLE-Anweisung mit einer DELETE-Anweisung vergleichbar ist
 Die WRITETEXT-Anweisung, ob protokolliert oder nicht protokolliert, aktiviert keinen Trigger.  
   
 Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen sind in einem DML-Trigger nicht zulässig:  
-  
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP DATABASE|  
-|RESTORE DATABASE|RESTORE LOG|RECONFIGURE|  
-  
+
+- ALTER DATABASE
+- CREATE DATABASE
+- DROP DATABASE
+- RESTORE DATABASE
+- RESTORE LOG
+- RECONFIGURE
+
 Darüber hinaus sind die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen im Text des DML-Triggers nicht zulässig, wenn dieser für eine Tabelle oder Sicht verwendet wird, die das Ziel der den Trigger auslösenden Aktion ist.  
   
-||||  
-|-|-|-|  
-|CREATE INDEX (einschließlich CREATE SPATIAL INDEX und CREATE XML INDEX)|ALTER INDEX|DROP INDEX|  
-|DBCC DBREINDEX|ALTER PARTITION FUNCTION|DROP TABLE|  
-|ALTER TABLE bei Verwendung für die folgenden Aufgaben:<br /><br /> Hinzufügen, Ändern oder Löschen von Spalten<br /><br /> Wechseln zwischen Partitionen<br /><br /> Hinzufügen oder Löschen von PRIMARY KEY- oder UNIQUE-Einschränkungen|||  
-  
+- CREATE INDEX (einschließlich CREATE SPATIAL INDEX und CREATE XML INDEX)
+- ALTER INDEX
+- DROP INDEX
+- DROP TABLE
+- DBCC DBREINDEX
+- ALTER PARTITION FUNCTION
+- ALTER TABLE bei Verwendung für die folgenden Aufgaben:
+    - Hinzufügen, Ändern oder Löschen von Spalten
+    - Wechseln zwischen Partitionen
+    - Hinzufügen oder Löschen von PRIMARY KEY- oder UNIQUE-Einschränkungen
+
 > [!NOTE]  
 >  Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] benutzerdefinierte Trigger für Systemtabellen nicht unterstützt, sollten Sie für Systemtabellen keine benutzerdefinierten Trigger erstellen. 
 

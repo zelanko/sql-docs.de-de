@@ -1,5 +1,5 @@
 ---
-title: DENY (Transact-SQL) | Microsoft-Dokumentation
+title: DENY (Transact-SQL)
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -27,14 +27,15 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0b77901f1a4c625f241c057f22af6b5fd437f10
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e146021bf3bd601e01f6220ffcf42de970e63657
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012565"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484829"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Verweigert einem Prinzipal eine Berechtigung. Verhindert, dass der Prinzipal die Berechtigung über seine Gruppen- oder Rollenmitgliedschaften erbt. DENY hat vor allen Berechtigungen Vorrang, gilt jedoch nicht für Objektbesitzer oder Mitglieder der festen Serverrolle „sysadmin“.
@@ -86,7 +87,9 @@ DENY
 }  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  ALL  
  Mit dieser Option werden nicht alle möglichen Berechtigungen verweigert. Das Verweigern mit der ALL-Option ist gleichbedeutend mit dem Verweigern der folgenden Berechtigungen.  
   
@@ -153,11 +156,12 @@ In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die I
   
  Berechtigte der CONTROL SERVER-Berechtigung, wie z. B. Mitglieder der festen Serverrolle sysadmin, können jede beliebige Berechtigung für jedes beliebige sicherungsfähige Element auf dem Server verweigern. Berechtigte der CONTROL-Berechtigung für die Datenbank, wie z. B. Mitglieder der festen Datenbankrolle db_owner, können jede beliebige Berechtigung für jedes beliebige sicherungsfähige Element in der Datenbank verweigern. Berechtigte der CONTROL-Berechtigung für ein Schema können jede beliebige Berechtigung für jedes Objekt innerhalb des Schemas verweigern. Falls die AS-Klausel verwendet wird, muss der angegebene Prinzipal der Besitzer des sicherbaren Elements sein, für das Berechtigungen verweigert werden.  
   
-## <a name="examples"></a>Beispiele  
+## <a name="examples"></a>Beispiele
+
  In der folgenden Tabelle sind die sicherungsfähigen Elemente und Themen aufgeführt, in denen die für ein sicherungsfähiges Element spezifische Syntax beschrieben wird.  
   
-|||  
-|-|-|  
+|Sicherungsfähige Elemente|Syntax|
+|----------|------|
 |Anwendungsrolle|[DENY (Berechtigungen für Datenbankprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |Assembly|[DENY (Assemblyberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
 |Asymmetrischer Schlüssel|[DENY (Berechtigungen für asymmetrische Schlüssel) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  

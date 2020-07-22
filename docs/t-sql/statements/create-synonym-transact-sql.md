@@ -1,5 +1,5 @@
 ---
-title: CREATE SYNONYM (Transact-SQL) | Microsoft-Dokumentation
+title: CREATE SYNONYM (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f4fd357cb833832beb03e23e3b7ba6e1f26fb03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d4131868fbaf40c59be2b55aad5fe078490c824
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766969"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484561"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Erstellt ein neues Synonym.  
@@ -61,7 +62,9 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 }  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *schema_name_1*  
  Gibt das Schema an, in dem das Synonym erstellt wird. Wird *schema* nicht angegeben ist, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Standardschema des aktuellen Benutzers.  
   
@@ -89,15 +92,19 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  Synonyme können für die folgenden Objekttypen erstellt werden:  
   
-|||  
-|-|-|  
-|Assembly (CLR)-gespeicherte Prozeduren|Assembly (CLR)-Tabellenwertfunktionen|  
-|Assembly (CLR)-Skalarfunktionen|Assembly (CLR)-Aggregatfunktionen|  
-|Replikationsfilterprozedur|Erweiterte gespeicherte Prozeduren|  
-|SQL-Skalarfunktionen|SQL-Tabellenwertfunktion|  
-|SQL-Inline-Tabellenwertfunktion|Gespeicherte SQL-Prozeduren|  
-|Sicht|Tabelle<sup>1</sup> (Benutzerdefiniert)|  
-  
+- Assembly (CLR)-gespeicherte Prozeduren
+- Assembly (CLR)-Tabellenwertfunktionen
+- Assembly (CLR)-Skalarfunktionen
+- Assembly (CLR)-Aggregatfunktionen
+- Replikationsfilterprozedur
+- Erweiterte gespeicherte Prozeduren
+- SQL-Skalarfunktionen
+- SQL-Tabellenwertfunktion
+- SQL-Inline-Tabellenwertfunktion
+- Gespeicherte SQL-Prozeduren
+- Tabelle<sup>1</sup> (Benutzerdefiniert)
+- Sicht
+
  <sup>1 Enthält lokale und globale temporäre Tabellen</sup>  
   
  Vierteilige Namen für Funktionsbasisobjekte werden nicht unterstützt.  
