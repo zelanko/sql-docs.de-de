@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7c834f32ff09946e50622203b61460f43e0c7b71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f205c91f7375e52a944dbcc18c026edb9712d944
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738212"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554473"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (Datenbank-Engine)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Gibt einen Integer zurück, der die Tiefe des Knotens *this* in der Struktur darstellt.
@@ -40,7 +41,9 @@ node.GetLevel ( )
 -- CLR syntax  
 SqlInt16 GetLevel ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>Rückgabetypen  
 **SQL Server-Rückgabetyp: smallint**
   

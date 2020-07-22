@@ -11,16 +11,16 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f58db948bbe7b6fe03f895dacc5fca0b74cc1c54
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 01ca3494bce1f392757206a5ae68ae736d0f9a95
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977807"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552702"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Durch temporale Tabellen mit Systemversionsverwaltung kann die Verlaufstabelle die Datenbank stärker vergrößern als reguläre Tabellen, insbesondere in den folgenden Situationen:
 
@@ -42,11 +42,13 @@ Nachdem Sie die Beibehaltungsdauer bestimmt haben, ist der nächste Schritt, ein
 
  Bei jedem dieser Ansätze basiert die Logik für die Migration oder Bereinigung von Verlaufsdaten auf der Spalte, die dem Ende der Dauer in der aktuellen Tabelle entspricht. Der Wert für das Ende der Dauer für jede Zeile bestimmt den Moment, an dem die Zeilenversion „geschlossen“ wird, an dem sie also in die Verlaufstabelle aufgenommen wird. Beispielsweise gibt die Bedingung `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` an, dass Verlaufsdaten, die älter als einen Monat sind, aus der Verlaufstabelle entfernt oder verschoben werden müssen.
 
-> **HINWEIS:** In den Beispielen in diesem Thema wird dieses [Beispiel für eine temporale Tabelle](creating-a-system-versioned-temporal-table.md) verwendet.
+> [!NOTE]
+> In den Beispielen in diesem Thema wird dieses [Beispiel für eine temporale Tabelle](creating-a-system-versioned-temporal-table.md) verwendet.
 
 ## <a name="using-stretch-database-approach"></a>Verwenden des Stretch Database-Ansatzes
 
-> **HINWEIS:** Der Ansatz mit Stretch Database kann nur für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet werden, aber nicht für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+> [!NOTE]
+> Der Ansatz mit Stretch Database kann nur für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet werden, aber nicht für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 [Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migriert die Verlaufsdaten transparent zu Azure. Zur Erhöhung der Sicherheit können Sie Daten während der Übertragung mit der SQL Server-Funktion [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx) verschlüsseln. Darüber hinaus können Sie zum Schutz Ihrer Daten [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) und andere erweiterte SQL Server-Sicherheitsfeatures für eine temporale Datenbank und Stretch Database verwenden.
 
@@ -58,7 +60,8 @@ Mit Stretch Database können Sie für einige oder alle Ihrer temporalen Verlaufs
 
   Wenn Sie eine deterministische Prädikatfunktion verwenden, können Sie einen Teil des Verlaufs in derselben Datenbank zusammen mit den aktuellen Daten behalten, während der Rest zu Azure migriert wird. Beispiele und Informationen zu Einschränkungen finden Sie unter [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch-Datenbank)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md) Da nicht deterministische Funktionen nicht gültig sind, wenn Sie Verlaufsdaten in der Form eines gleitendes Fensters übertragen möchten, müssten Sie die Definition der Inlineprädikatfunktion regelmäßig ändern, damit das Fenster von Zeilen, das Sie lokal speichern, im Hinblick auf das Alter konstant ist. Mit einem gleitenden Fenster können Sie Verlaufsdaten, die älter als ein Monat sind, kontinuierlich nach Azure verschieben. Ein Beispiel dieses Ansatzes ist weiter unten dargestellt.
 
-> **HINWEIS:** Stretch Database migriert Daten zu Azure. Daher benötigen Sie ein Azure-Konto und ein Abonnement für die Abrechnung. Melden Sie sich für eine [einmonatige kostenlose Testversion](https://azure.microsoft.com/pricing/free-trial/) an, um ein kostenloses Azure-Testkonto zu erhalten.
+> [!NOTE]
+> Stretch Database migriert Daten zu Azure. Daher benötigen Sie ein Azure-Konto und ein Abonnement für die Abrechnung. Melden Sie sich für eine [einmonatige kostenlose Testversion](https://azure.microsoft.com/pricing/free-trial/) an, um ein kostenloses Azure-Testkonto zu erhalten.
 
 Sie können eine temporale Verlaufstabelle für Stretch mit dem Stretch-Assistenten oder Transact-SQL konfigurieren, und Sie können eine temporale Verlaufstabelle für Stretch aktivieren, wenn die Systemversionsverwaltung auf **ON**festgelegt ist. Ein Stretching der aktuellen Tabelle ist nicht zulässig, da es nicht sinnvoll ist, für die aktuelle Tabelle ein Stretching durchzuführen.
 
@@ -81,7 +84,8 @@ Die einfachste Methode für Anfänger ist, den Stretch-Assistenten zu verwenden,
     ![Seite „IP-Adresse auswählen“ des Stretch Database-Assistenten](../../relational-databases/tables/media/stretch-wizard-7.png "Seite „IP-Adresse auswählen“ des Stretch Database-Assistenten")
 6. Überprüfen Sie nach Abschluss des Assistenten, ob die Datenbank erfolgreich für Stretch aktiviert wurde. Beachten Sie die Symbole im Objekt-Explorer, die angeben, dass für die Datenbank ein Stretching durchgeführt wurde.
 
-> **HINWEIS:** Wenn das Aktivieren der Datenbank für Stretch fehlschlägt, überprüfen Sie das Fehlerprotokoll. Ein häufiger Fehler ist eine fehlerhafte Konfiguration der Firewallregel.
+> [!NOTE]
+> Wenn das Aktivieren der Datenbank für Stretch fehlschlägt, überprüfen Sie das Fehlerprotokoll. Ein häufiger Fehler ist eine fehlerhafte Konfiguration der Firewallregel.
 
 Weitere Informationen:
 
@@ -159,7 +163,8 @@ Die[Tabellenpartitionierung](../partitions/create-partitioned-tables-and-indexes
 
 Mit der Tabellenpartitionierung können Sie den Ansatz mit einem gleitenden Fenster implementieren, um den ältesten Teil der Verlaufsdaten aus der Verlaufstabelle zu verschieben und die Größe des beibehaltenen Teils im Hinblick auf das Alter konstant zu halten. So verwalten Sie die Daten in der Verlaufstabelle entsprechend der erforderlichen Beibehaltungsdauer. Der Vorgang des Austauschens von Daten aus der Verlaufstabelle wird unterstützt, wenn SYSTEM_VERSIONING auf ON festgelegt ist. Dies bedeutet, dass ein Teil der Verlaufsdaten bereinigt werden kann, ohne ein Wartungsfenster einzurichten oder normale Arbeitsauslastungen zu blockieren.
 
-> **HINWEIS:** Für einen Partitionswechsel muss der gruppierte Index für die Verlaufstabelle am Partitionierungsschema ausgerichtet werden („SysEndTime“ muss enthalten sein). Die vom System erstellte Standardverlaufstabelle enthält einen gruppierten Index, der die Spalten „SysEndTime“ und „SysStartTime“ aufweist. Dies ist optimal für die Partitionierung, das Einfügen neuer Daten und normale temporale Abfragen. Weitere Informationen finden Sie unter [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
+> [!NOTE]
+> Für einen Partitionswechsel muss der gruppierte Index für die Verlaufstabelle am Partitionierungsschema ausgerichtet werden („SysEndTime“ muss enthalten sein). Die vom System erstellte Standardverlaufstabelle enthält einen gruppierten Index, der die Spalten „SysEndTime“ und „SysStartTime“ aufweist. Dies ist optimal für die Partitionierung, das Einfügen neuer Daten und normale temporale Abfragen. Weitere Informationen finden Sie unter [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 Für den Ansatz mit einem gleitenden Fenster müssen Sie zwei Sätze von Aufgaben ausführen:
 
@@ -174,7 +179,8 @@ Die folgende Abbildung zeigt die erste Partitionierungskonfiguration, mit der Da
 
 ![Partitionierung](../../relational-databases/tables/media/partitioning.png "Partitionierung")
 
-> **HINWEIS:** Unter „Überlegungen zur Leistung bei der Tabellenpartitionierung“ weiter unten finden Sie Informationen zu Leistungseinbußen bei der Verwendung von RANGE LEFT oder RANGE RIGHT beim Konfigurieren der Partitionierung.
+> [!NOTE]
+> Unter „Überlegungen zur Leistung bei der Tabellenpartitionierung“ weiter unten finden Sie Informationen zu Leistungseinbußen bei der Verwendung von RANGE LEFT oder RANGE RIGHT beim Konfigurieren der Partitionierung.
 
 Beachten Sie, dass die untere bzw. die obere Grenze bei der ersten bzw. der letzten Partition „offen“ ist, um sicherzustellen, dass für jede neue Zeile eine Zielpartition vorhanden ist, unabhängig vom Wert in der Partitionierungsspalte. Im Laufe der Zeit werden neue Zeilen in der Verlaufstabelle in höhere Partitionen aufgenommen. Wenn die 6. Partition gefüllt wird, haben wir die vorgesehene Beibehaltungsdauer erreicht. Dies ist der Zeitpunkt, an dem die Aufgabe für die wiederholte Partitionswartung zum ersten Mal gestartet wird (sie muss in regelmäßigen Abständen ausgeführt werden, in diesem Beispiel einmal pro Monat).
 
@@ -410,7 +416,8 @@ COMMIT;
 
 ## <a name="using-temporal-history-retention-policy-approach"></a>Verwenden eines Ansatzes für die Richtlinie zur Beibehaltung temporaler Verlaufsdaten
 
-> **HINWEIS:** Der Ansatz mit der Richtlinie zur Beibehaltung temporaler Verlaufsdaten kann bei [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und SQL Server 2017 ab Version CTP 1.3 verwendet werden.
+> [!NOTE]
+> Der Ansatz mit der Richtlinie zur Beibehaltung temporaler Verlaufsdaten kann bei [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] und SQL Server 2017 ab Version CTP 1.3 verwendet werden.
 
 Die Beibehaltung temporaler Verlaufsdaten kann auf den einzelnen Tabellenebenen konfiguriert werden, sodass Benutzer flexible Ablaufrichtlinien erstellen können. Das Anwenden der temporalen Beibehaltung ist einfach: Sie erfordert nur einen Parameter, der bei der Tabellenerstellung oder einer Schemaänderung festgelegt werden muss.
 

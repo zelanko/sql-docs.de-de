@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 530e207035ea2442b9413d92ec4215f3d72d5086
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a8db85a2dc347cbfda62713dab61946e6f57cc0e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011368"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554429"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,7 +135,9 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 [;]  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  WITH \<common_table_expression>  
  Gibt den temporären Resultset- oder Sichtnamen an, der auch als allgemeiner Tabellenausdruck (CTE, Common Table Expression) bezeichnet wird und innerhalb der UPDATE-Anweisung definiert ist. Das CTE-Resultset wird aus einer einfachen Abfrage abgeleitet. Die UPDATE-Anweisung verweist auf dieses Resultset.  
   
@@ -187,7 +189,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  DEFAULT  
  Gibt an, dass der vorhandene Wert in der Spalte durch den für die Spalte definierten Standardwert ersetzt werden soll. Damit kann auch die Spalte auf NULL geändert werden, wenn diese keinen Standard aufweist und NULL-Werte zulässt.  
   
- { **+=**  |  **-=**  |  **\*=**  |  **/=**  |  **%=**  |  **&=**  |  **^=**  |  **|=** }  
+ { **+=** \| **-=** \| **\*=** \| **/=** \| **%=** \| **&=** \| **^=** \| **|=** }  
  Verbundzuweisungsoperator:  
  +=                    Addition und Zuweisung  
  -=                     Subtraktion und Zuweisung  

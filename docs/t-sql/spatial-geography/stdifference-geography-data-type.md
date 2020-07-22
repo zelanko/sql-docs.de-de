@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 39465a009ac7b7d8cc19470e3e735779337c276f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8165c78e7eced334e31ed7b0ccb0d2bfbab74af4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85704071"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552886"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference (geography-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85704071"
 .STDifference ( other_geography )  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *other_geography*  
  Eine andere **geography**-Instanz, die angibt, welche Punkte aus der Instanz zu entfernen sind, in der STDifference() aufgerufen wird.  
   

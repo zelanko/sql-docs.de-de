@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 65d23be37a4b43845b352750c1924b641f008318
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f538896347f5ca9148b422d992450314a6cde50f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762334"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552795"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB (geometry-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Gibt eine **geometryMultiPoint**-Instanz von einer OGC-WKB-Darstellung (Open Geo
 STMPointFromWKB ( 'WKB_multipoint' , SRID )  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *WKB_multipoint*  
  Die WKB-Darstellung der **geometryMultiPoint**-Instanz, die zurückgegeben werden soll. *WKB_multipoint* ist ein **varbinary(max)** -Ausdruck.  
   
