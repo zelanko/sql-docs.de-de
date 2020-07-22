@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f842ad81c61b521c5e98348062fb546212c21dc3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 716f26e14e5d97701965cc57e8d304eb25b89b6f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748757"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555073"
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (geometry-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Gibt das geometrische Zentrum einer **geometry**-Instanz zurück, die aus einem 
 .STCentroid ( )  
 ```  
   
-## <a name="return-types"></a>Rückgabetypen  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Rückgabetypen
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  

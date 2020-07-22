@@ -22,14 +22,15 @@ ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2eaec4d3e43f0a24b0b7ed297589a2699e41bc2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ac0442c2dfe609d112c12ada4f2dedb3be20b8ee
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007989"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556185"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Definiert ein Datum, das mit einer Uhrzeit kombiniert wird. Die Uhrzeit basiert auf dem 24-Stunden-Format, wobei die Sekunden immer 0 sind (:00) und es keine Sekundenbruchteile gibt.
@@ -39,8 +40,8 @@ Definiert ein Datum, das mit einer Uhrzeit kombiniert wird. Die Uhrzeit basiert 
   
 ## <a name="smalldatetime-description"></a>Beschreibung von „smalldatetime“
   
-|||  
-|-|-|  
+|Eigenschaft|Wert|
+|--------|-----|
 |Syntax|**smalldatetime**|  
 |Verwendung|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
 |Standardmäßige Formate der Zeichenfolgenliterale<br /><br /> (wird zum Zweck der Clientkompatibilität verwendet)|Nicht verfügbar|  

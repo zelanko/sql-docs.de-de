@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25574476947c3232c8491923d1e5c69b87c43960
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 561235acc489c60742a393e444621c9dd7504d04
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902252"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555295"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -34,9 +34,7 @@ Dieser Artikel stellt die Syntax, Argumente, Anweisungen, Berechtigungen und Bei
 
 Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Wählen Sie ein Produkt.
-
-Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meisten interessiert. Mit nur einem Klick erhalten Sie auf dieser Webseite unterschiedliche Inhalte, die zu dem Produkt passen, das Sie ausgewählt haben.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -682,7 +680,7 @@ Speicherortpfad:
 Zusätzliche Hinweise und Anweisungen für das Festlegen des Speicherorts:
 
 - Bei der Bereitstellung von Azure Data Lake Storage Gen2 ist die Standardoption `enable secure SSL connections`. Wenn diese Option aktiviert ist, müssen Sie `abfss` verwenden, wenn eine sichere TLS/SSL-Verbindung ausgewählt ist. Beachten Sie, dass `abfss` auch für unsichere TLS-Verbindungen funktioniert.
-- Azure Synapse überprüft die Existenz der externen Datenquelle nicht, wenn das Objekt erstellt wird. erforderlich. Erstellen Sie zum Überprüfen mithilfe der externe Datenquelle eine externe Tabelle.
+- Azure Synapse überprüft die Existenz der externen Datenquelle nicht, wenn das Objekt erstellt wird. . Erstellen Sie zum Überprüfen mithilfe der externe Datenquelle eine externe Tabelle.
 - Verwenden Sie beim Abfragen von Hadoop für alle Tabellen die gleiche externe Datenquelle, um eine konsistente Abfragesemantik zu ermöglichen.
 - `wasbs` wird empfohlen, da Daten mithilfe einer sicheren TLS-Verbindung gesendet werden.
 - Hierarchische Namespaces werden für Azure Storage-Konten (V2) nicht unterstützt, wenn der Datenzugriff über PolyBase mithilfe der Schnittstelle „wasb://“ erfolgt.

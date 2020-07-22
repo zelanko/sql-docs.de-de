@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7e0cf58bd672560b30704d44822fa244f86e5ed1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cdb2269e38b482d51a8320c6dd91403bdf7cc289
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736185"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555485"
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (geography-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ Erstellt eine **GeometryCollection** -Instanz aus einem Satz von **geography** -
 ConvexHullAggregate ( geography_operand )  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *geography_operand*  
  Eine Tabellenspalte vom Typ **geography** , die einen Satz von **geography** -Objekten darstellt, die in der **GeometryCollection** -Instanz aufgelistet werden sollen.  
   

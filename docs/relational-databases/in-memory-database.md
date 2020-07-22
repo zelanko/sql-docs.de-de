@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 0c71bda5a459c7993de824cdb6665978ba57166f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1ac71b9cf171e66486c40310bfd8be0e7bc6ae91
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892459"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86911466"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>In-Memory-Datenbanksysteme und -Technologien
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Diese Seite ist als Referenzseite für In-Memory-Features und -Technologien in SQL Server gedacht. Ein In-Memory-Datenbanksystem ist ein Datenbanksystem, das so konzipiert ist, dass es die in modernen Datenbanksystemen verfügbaren größeren Arbeitsspeicherkapazitäten nutzt. In-Memory-Datenbanken können relational oder nicht relational sein.
 
@@ -36,19 +36,19 @@ Bei Arbeitsauslastungen von relationalen Datenbanken ist ein schneller flüchtig
 
 ## <a name="hybrid-buffer-pool"></a>Hybrider Pufferpool
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Bei einem [hybriden Pufferpool](../database-engine/configure-windows/hybrid-buffer-pool.md) wird der Pufferpool für Datenbankdateien, die auf byteadressierbaren Speichergeräten mit persistentem Speicher liegen, für Windows- und Linuxplattformen mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] erweitert.
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Speicheroptimierte `tempdb`-Metadaten
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird eine neue Funktion für [speicheroptimierte tempdb-Metadaten](./databases/tempdb-database.md#memory-optimized-tempdb-metadata) eingeführt, durch die einige Engpässe aufgrund von Konflikten effektiv behoben werden und sich eine neue Ebene der Skalierbarkeit für tempdb-intensive Workloads ergibt.
 
 ## <a name="in-memory-oltp"></a>In-Memory-OLTP
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [In-Memory-OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) ist eine in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../includes/sssds-md.md)] verfügbare Datenbanktechnologie für die Optimierung der Transaktionsverarbeitung, des Erfassens und Ladens von Daten sowie vorübergehender Datenszenarios.
 

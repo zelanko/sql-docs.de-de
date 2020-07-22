@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: dc97cf967c645db6f647266190000252fd2d9022
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c4ed01d89bbb56fd48d0c29a54cf8c248fba439c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85700952"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555722"
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (geometry-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ Gibt die Open Geospatial Consortium (OGC) WKB-Darstellung (Well-Known Binary) ei
 .AsBinaryZM()  
 ```  
   
-## <a name="return-types"></a>Rückgabetypen  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Rückgabetypen
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **varbinary(max)**  
   
  CLR-Rückgabetyp: **SqlBytes**  

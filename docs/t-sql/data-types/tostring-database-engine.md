@@ -1,5 +1,5 @@
 ---
-title: ToString (Datenbank-Engine) | Microsoft-Dokumentation
+title: ToString (Datenbank-Engine)
 ms.custom: ''
 ms.date: 07/23/2017
 ms.prod: sql
@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9b08bb0737507f6d4fbeb8ec62b932fa6e674b08
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c1bf4c72881482ed1b4d99224554576f6a7a3cc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729647"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555925"
 ---
 # <a name="tostring-database-engine"></a>ToString (Datenbank-Engine)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Gibt eine Zeichenfolge mit der logischen Darstellung von *this* zurück. ToString wird implizit aufgerufen, wenn eine Konvertierung von einem **hierarchyid**-Typ in einen Zeichenfolgentyp stattfindet. Fungiert als Gegenstück zu [Parse &#40;Datenbank-Engine&#41;](../../t-sql/data-types/parse-database-engine.md).
@@ -43,8 +44,11 @@ CAST(node AS nvarchar(4000))
 -- CLR syntax  
 string ToString  ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>Rückgabetypen
+
 **SQL Server-Rückgabetyp: nvarchar(4000)**
   
 **CLR-Rückgabetyp: String**

@@ -16,19 +16,19 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5661008bcb550461466deddea947f205639ae98
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 63673258e2fa368544c6cc43158025770861a8f9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008002"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555605"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar und nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Dieser Artikel beschreibt Zeichendatentypen, die entweder über eine feste Größe – **nchar** – oder über eine variable Größe – **nvarchar** – verfügen. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] gilt Folgendes: Wenn eine Sortierung mit aktivierten [zusätzlichen Zeichen](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) verwendet wird, speichern diese Datentypen den gesamten Bereich der [Unicodezeichendaten](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) und verwenden die Zeichencodierung [UTF-16](https://www.wikipedia.org/wiki/UTF-16). Wenn eine Sortierung ohne aktivierte zusätzliche Zeichen angegeben ist, speichern diese Datentypen nur die Teilmenge der Zeichendaten, die von der [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms)-Zeichencodierung unterstützt werden.
-  
-## <a name="arguments"></a>Argumente  
+
+## <a name="arguments"></a>Argumente
 **nchar** [ ( n ) ]  
 Zeichenfolgendaten mit fester Größe. *n* definiert die Zeichenfolgengröße in Bytepaaren und muss ein Wert zwischen 1 und 4.000 sein. Die Speichergröße beträgt zweimal *n* Byte. Für die [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF)-Codierung beträgt die Speichergröße zweimal *n* Byte, und die Anzahl von Zeichen, die gespeichert werden können, ist ebenfalls *n*. Für die UTF-16-Codierung ist die Speichergröße noch zweimal *n* Byte, aber die Anzahl von Zeichen, die gespeichert werden können, ist ggf. kleiner als *n*, da zusätzliche Zeichen zwei Bytepaare verwenden (auch [Ersatzzeichenpaar](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF) genannt). Die ISO-Synonyme für **nchar** lauten **national char** und **national character**.
   

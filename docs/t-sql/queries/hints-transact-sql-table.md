@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c73969d5bd4b02373d9a16d292504530a626650b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731329"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555861"
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL): Tabelle
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -120,7 +120,9 @@ WITH  ( <table_hint> [ [, ]...n ] )
 }   
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 Bis auf einige Ausnahmen werden Tabellenhinweise nur dann in der FROM-Klausel unterstützt, wenn die Hinweise mit dem WITH-Schlüsselwort angegeben werden. Tabellenhinweise müssen zudem mit Klammern angegeben werden.  
   
@@ -393,18 +395,20 @@ Der Abfrageoptimierer berücksichtigt einen Indexhinweis nicht, wenn die SET-Opt
 NOEXPAND gilt nur für *indizierte Sichten*. Eine indizierte Sicht ist eine Sicht, auf der ein eindeutiger gruppierter Index erstellt wurde. Wenn eine Abfrage Verweise auf Spalten enthält, die in einer indizierten Sicht und in Basistabellen vorhanden sind, und der Abfrageoptimierer festlegt, dass die Verwendung der indizierten Sicht die beste Methode zum Ausführen der Abfrage darstellt, verwendet der Optimierer den Index der Sicht. Diese Funktionalität wird als *Abgleich der indizierten Sicht* bezeichnet. Vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 wurde die automatische Verwendung einer indizierten Sicht durch den Abfrageoptimierer nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 Damit der Optimierer indizierte Sichten für den Abgleich oder die Verwendung einer indizierten Sicht berücksichtigt, auf die mit dem NOEXPAND-Hinweis verwiesen wird, müssen die folgenden SET-Optionen auf ON festgelegt werden.  
- 
-> [!NOTE]  
+
+> [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt die automatische Verwendung indizierter Sichten ohne Angabe des NOEXPAND-Hinweises.
-  
-||||  
-|-|-|-|  
-|ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
-|ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
-  
- <sup>1</sup> ARITHABORT wird implizit auf ON festgelegt, wenn ANSI_WARNINGS auf ON festgelegt wurde. Es ist daher nicht erforderlich, diese Einstellung manuell anzupassen.  
-  
- Auch muss die Option NUMERIC_ROUNDABORT auf OFF festgelegt sein.  
+
+- ANSI_NULLS
+- ANSI_PADDING
+- ANSI_WARNINGS
+- ARITHABORT<sup>1</sup>
+- CONCAT_NULL_YIELDS_NULL
+- QUOTED_IDENTIFIER
+
+<sup>1</sup> ARITHABORT wird implizit auf ON festgelegt, wenn ANSI_WARNINGS auf ON festgelegt wurde. Es ist daher nicht erforderlich, diese Einstellung manuell anzupassen.  
+
+Auch muss die Option NUMERIC_ROUNDABORT auf OFF festgelegt sein.  
   
  Damit der Optimierer einen Index für eine indizierte Sicht verwendet, geben Sie die Option NOEXPAND an. Dieser Hinweis kann nur dann verwendet werden, wenn die Sicht ebenfalls in der Abfrage angegeben wurde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt keinen Hinweis zur Verfügung, um die Verwendung einer bestimmten indizierten Sicht in einer Abfrage, die die Sicht nicht direkt in der FROM-Klausel benennt, zu erzwingen. Der Abfrageoptimierer zieht jedoch die Verwendung indizierter Sichten in Erwägung, selbst wenn in der Abfrage nicht direkt auf sie verwiesen wird. SQL Server erstellt Statistiken in einer indizierten Sicht nur automatisch, wenn ein NOEXPAND-Tabellenhinweis verwendet wird. Wenn Sie diesen Hinweis auslassen, können beim Ausführungsplan Warnungen zu fehlenden Statistiken auftreten, die nicht durch manuelles Erstellen von Statistiken aufgelöst werden können. Während der Abfrageoptimierung nutzt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ansichtsstatistiken, die automatisch oder manuell erstellt werden, wenn die Abfrage direkt auf die Ansicht verweist und der NOEXPAND-Hinweis verwendet wird.    
   
