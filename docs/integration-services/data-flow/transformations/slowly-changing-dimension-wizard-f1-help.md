@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 85f97f8e7fe754a4c52b34f52ecb45d142a43c4b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4147da3260a2b8620d880e2d20c3ed4fd610d05
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297779"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919461"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Assistent für langsam veränderliche Dimensionen (F1-Hilfe)
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Konfigurieren Sie mithilfe des **Assistenten für langsam veränderliche Dimensionen** das Laden von Daten in verschiedene Typen langsam veränderlicher Dimensionen. Dieser Abschnitt enthält die F1-Hilfe für Seiten des **Assistenten für langsam veränderliche Dimensionen**. In der folgenden Tabelle werden die Themen in diesem Abschnitt beschrieben.  

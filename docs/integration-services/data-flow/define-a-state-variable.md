@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cee61de08afac103f0280b905100683011460972
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292941"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916733"
 ---
 # <a name="define-a-state-variable"></a>Definieren einer Statusvariablen
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In diesem Verfahren wird beschrieben, wie Sie eine Paketvariable definieren, in der der CDC-Status gespeichert wird.  
@@ -32,24 +32,24 @@ ms.locfileid: "71292941"
   
 |Komponente|BESCHREIBUNG|  
 |---------------|-----------------|  
-|**\<Statusname>**|Der Name des aktuellen CDC-Status.|  
+|**\<state-name>**|Der Name des aktuellen CDC-Status.|  
 |**CS**|Kennzeichnet den aktuellen Startpunkt für den Verarbeitungsbereich (aktueller Start).|  
-|**\<CS-LSN>**|Die letzte in der vorangehenden CDC-Ausführung verarbeitete Protokollfolgenummer (LSN).|  
+|**\<cs-lsn>**|Die letzte in der vorangehenden CDC-Ausführung verarbeitete Protokollfolgenummer (LSN).|  
 |**CE**|Kennzeichnet den aktuellen Endpunkt für den Verarbeitungsbereich (aktuelles Ende). Das Vorhandensein der CE-Komponente im CDC-Status zeigt an, dass entweder gerade ein CDC-Paket verarbeitet wird oder dass ein CDC-Paketfehler aufgetreten ist, bevor der zugehörige CDC-Verarbeitungsbereich vollständig verarbeitet wurde.|  
-|**\<CE-LSN>**|Die letzte in der aktuellen CDC-Ausführung zu verarbeitende Protokollfolgenummer (LSN). Es wird immer vorausgesetzt, dass die letzte zu verarbeitende Protokollfolgenummer der höchsten Nummer (0xFFF…) entspricht.|  
+|**\<ce-lsn>**|Die letzte in der aktuellen CDC-Ausführung zu verarbeitende Protokollfolgenummer (LSN). Es wird immer vorausgesetzt, dass die letzte zu verarbeitende Protokollfolgenummer der höchsten Nummer (0xFFF…) entspricht.|  
 |**IR**|Kennzeichnet den anfänglichen Verarbeitungsbereich.|  
-|**\<IR-Start>**|Eine Protokollfolgenummer einer Änderung unmittelbar vor Beginn des erstmaligen Ladevorgangs.|  
-|**\<IR-Ende>**|Eine Protokollfolgenummer einer Änderung unmittelbar nach Ende des erstmaligen Ladevorgangs.|  
+|**\<ir-start>**|Eine Protokollfolgenummer einer Änderung unmittelbar vor Beginn des erstmaligen Ladevorgangs.|  
+|**\<ir-end>**|Eine Protokollfolgenummer einer Änderung unmittelbar nach Ende des erstmaligen Ladevorgangs.|  
 |**TS**|Kennzeichnet den Zeitstempel des letzten CDC-Statusupdates.|  
-|**\<Zeitstempel>**|Dezimale 64-Bit-Darstellung der System.DateTime.UtcNow-Eigenschaft.|  
+|**\<timestamp>**|Dezimale 64-Bit-Darstellung der System.DateTime.UtcNow-Eigenschaft.|  
 |**ER**|Wird angezeigt, wenn der letzte Vorgang fehlerhaft war, und enthält eine kurze Beschreibung der Fehlerursache. Wenn diese Komponente vorhanden ist, wird sie immer zuletzt angezeigt.|  
-|**\<kurze Fehlerbeschreibung>**|Eine kurze Fehlerbeschreibung.|  
+|**\<short-error-text>**|Eine kurze Fehlerbeschreibung.|  
   
  Die LSNs und Folgenummern sind jeweils als hexadezimale Zeichenfolge von bis zu 20 Ziffern codiert, die den LSN-Wert "Binary(10)" darstellen.  
   
  In der folgenden Tabelle werden die möglichen CDC-Statuswerte beschrieben.  
   
-|State|BESCHREIBUNG|  
+|Zustand|BESCHREIBUNG|  
 |-----------|-----------------|  
 |(INITIAL)|Der ursprüngliche Status, bevor ein Paket für die aktuelle CDC-Gruppe ausgeführt wurde. Dieser Status liegt auch vor, wenn der CDC-Status leer ist.|  
 |ILSTART (Initial Load Started)|Der Status beim Start des anfänglich geladenen Pakets, nachdem der CDC-Steuerungstask durch den **MarkInitialLoadStart** -Vorgang aufgerufen wurde.|  

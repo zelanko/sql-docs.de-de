@@ -29,12 +29,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 450914318f3bc7a17e16599fd715992356ed6e91
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 053097efe59628629e6b2d1edf45c852ad02de56
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630870"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917996"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,9 @@ RAISERROR ( { msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *msg_id*  
  Ist die Nummer einer in der Katalogsicht „sys.message“ mithilfe von „sp_addmessage“ gespeicherten benutzerdefinierten Fehlermeldung. Fehlernummern für benutzerdefinierte Fehlermeldungen müssen größer als 50000 sein. Wenn *msg_id* nicht angegeben ist, löst RAISERROR eine Fehlermeldung mit der Fehlernummer 50000 aus.  
   

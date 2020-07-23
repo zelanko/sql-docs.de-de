@@ -10,16 +10,16 @@ ms.topic: reference
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f765d232ed9b913cc502525bed4632088be1dc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 92a393f944729270239e1470f3cb9972bca21c55
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298877"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918649"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Change Data Capture Service für Oracle von Attunity – F1-Hilfe
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Sie verwenden die CDC Service Configuration Console, um einen lokalen Oracle CDC Service zu definieren, zu aktualisieren und zu löschen.  
