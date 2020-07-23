@@ -20,7 +20,7 @@ ms.locfileid: "86969831"
 
   In der folgenden Tabelle sind die Anweisungen aufgeführt, die zur Data Mining-Datenbearbeitungssprache in Data Mining-Erweiterungen (DMX) gehören.  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Löschen Sie &#40;DMX-&#41;](../dmx/delete-dmx.md)|Löscht den trainierten Inhalt aus einem Miningmodell.|  
 |[Einfügen in &#40;DMX-&#41;](../dmx/insert-into-dmx.md)|Trainiert ein Miningmodell.|  

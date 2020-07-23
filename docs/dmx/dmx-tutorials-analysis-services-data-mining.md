@@ -29,7 +29,7 @@ ms.locfileid: "86969813"
   
  Sie erfahren, wie ein Miningmodell erstellt wird, das vorhersagt, welche Produkte voraussichtlich gemeinsam gekauft werden. Außerdem wird erläutert, wie geschachtelte Tabellen für das Data Mining verwendet werden.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  [Data Mining-Erweiterungen &#40;DMX-&#41; Syntax Elemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)  

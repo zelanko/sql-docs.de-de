@@ -22,7 +22,7 @@ ms.locfileid: "86968640"
   
  In der folgenden Tabelle sind die Vergleichsoperatoren aufgeführt, die DMX unterstützt.  
   
-|Operator|BESCHREIBUNG|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |[&#60; &#40;kleiner als&#41; &#40;DMX-&#41;](../dmx/less-than-dmx.md)|Gibt für Argumente, die ausgewertet ungleich NULL sind, TRUE zurück, wenn der Wert des Arguments auf der linken Seite kleiner ist als der Wert des Arguments auf der rechten Seite; gibt anderenfalls FALSE zurück. Wenn eines der Argumente oder beide Argumente ausgewertet gleich NULL sind, gibt der Operator einen NULL-Wert zurück.|  
 |[&#62; &#40;größer als&#41; &#40;DMX-&#41;](../dmx/greater-than-dmx.md)|Gibt für Argumente, die einen Wert ungleich NULL ergeben, true zurück, wenn der Wert des Arguments auf der linken Seite größer ist als der Wert des Arguments auf der rechten Seite. gibt andernfalls false zurück. Wenn eines der Argumente oder beide Argumente ausgewertet gleich NULL sind, gibt der Operator einen NULL-Wert zurück.|  

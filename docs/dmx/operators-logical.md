@@ -22,7 +22,7 @@ ms.locfileid: "86968462"
   
  In der folgenden Tabelle sind die logischen Operatoren aufgeführt, die DMX unterstützt.  
   
-|Operator|BESCHREIBUNG|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |[Und &#40;DMX-&#41;](../dmx/and-dmx.md)|Führt eine logische Konjunktion zweier numerischer Ausdrücke aus.|  
 |[DMX-&#41;nicht &#40;](../dmx/not-dmx.md)|Führt eine logische Negation für einen numerischen Ausdruck aus.|  

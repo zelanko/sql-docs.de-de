@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 9f96d953dbd427bfb6cf94470c0ee80ade3aed48
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49ed0f26f20d081f4f9b307e6be90a3f5bd8c372
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401447"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942202"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Geräteinstallation und-Konfiguration für Analytics Platform System
 Führt die ersten Schritte für die Einrichtung und den Einstieg in die Verwendung ihrer neuen Appliance durch.  
@@ -35,25 +35,21 @@ Ihr neues Gerät wird in Ihrem Rechenzentrum auf Paletten an das Dock übermitte
   
 Wenn Ihre IHV die Hardware Installation nicht ausführt, führen Sie die folgenden Schritte aus, um die Hardware zu installieren.  
   
-|||  
+|Aufgabe|Beschreibung|  
 |-|-|  
-|**Aufgabe**|**Beschreibung**|  
 |Dokumentation bestätigen|Vergewissern Sie sich, dass Sie alle erforderlichen Dokumente und Informationen von Ihrem unabhängigen Hardwarehersteller (IHV) erhalten haben. Weitere Informationen finden Sie unter [Informationen zum Abrufen von ihrer IHV &#40;Analytics-Platt Form System&#41;](information-to-obtain-from-your-ihv.md).|  
 |Installieren von Hardware|Vergewissern Sie sich, dass das Rechenzentrum die Appliance aufnehmen kann. Verschieben Sie die Gerätekomponenten in das Rechenzentrum. Gestell der Netzwerk Switches, PDUs und Verkabelung. Weitere Informationen finden Sie unter [Hardware Installation &#40;Analytics Platform System&#41;](hardware-installation.md).|  
   
 ## <a name="2-power-on-the-appliance"></a><a name="PowerOnAppliance"></a>2. Einschalten des Geräts  
   
-|||  
+|Aufgabe|Beschreibung|  
 |-|-|  
-|**Aufgabe**|**Beschreibung**|  
 |Einschalten des Geräts|Schalten Sie die einzelnen applivenkomponentenknoten in der erforderlichen Reihenfolge ein, und warten Sie, bis Sie sicher sind, dass keine Fehler auftreten.|  
   
 ## <a name="3-configure-the-appliance"></a><a name="ConfigureAppliance"></a>3. Konfigurieren der Appliance  
   
-|||  
+|Aufgabe|Beschreibung|  
 |-|-|  
-|**Aufgabe**|**Beschreibung**|  
-|||  
 |Konfigurieren Sie die Appliance mithilfe der SQL Server PDW**Configuration Manager**|Verwenden Sie die Configuration Manager, um Geräte Kennwörter, Zeitzonen, Netzwerk-und Firewalleinstellungen, Sicherheitszertifikate sowie die Leistung und andere Einstellungen auf Ihrem Gerät festzulegen. Weitere Informationen finden Sie unter [Appliance Configuration &#40;Analytics Platform System&#41;](appliance-configuration.md).|  
   
 > [!WARNING]  
@@ -61,18 +57,16 @@ Wenn Ihre IHV die Hardware Installation nicht ausführt, führen Sie die folgend
   
 ## <a name="4-set-up-software-servicing"></a><a name="SoftwareServicing"></a>4. Einrichten der Software Wartung  
   
-|||  
+|Aufgabe|Beschreibung|  
 |-|-|  
-|**Aufgabe**|**Beschreibung**|  
 |Anwenden von SQL Server PDW Updates|Optionale Möglicherweise müssen Sie eine oder mehrere SQL Server PDW Updates anwenden, um Ihre SQL Server PDW Software auf die neueste Version zu aktualisieren. Weitere Informationen finden Sie unter [Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md).|  
 |Konfigurieren von Windows Server Update Services|Konfigurieren Sie das Gerät für den Empfang von Updates von Windows Server Update Services zur Unterstützung von Software. Weitere [Informationen finden Sie unter herunterladen und Anwenden von Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md).|  
   
 ## <a name="next-steps"></a><a name="NextSteps"></a>Nächste Schritte  
 Nachdem Sie alle vorherigen Schritte abgeschlossen haben, ist Ihr Gerät einsatzbereit. Sie oder andere Mitarbeiter an Ihrem Standort können mit den folgenden Aufgaben fortfahren.  
   
-|||  
+|Aufgabe|Beschreibung|  
 |-|-|  
-|**Aufgabe**|**Beschreibung**|  
 |Installieren von SQL Server PDW Treibern und Konfigurieren der Konnektivität|Konfigurieren Sie lokale Computer für die Verbindung mit SQL Server PDW mithilfe von SQL Server Data Tools, sqlcmd, Business Intelligence Software oder anderen Tools. <!-- MISSING LINKS See [Client Tools (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808).-->|  
 |Erstellen von Anmeldungen und Server Rollen und Zuweisen von Berechtigungen|Planen und erstellen Sie Anmeldungen und Server Rollen, die es Benutzern ermöglichen, sich mit den entsprechenden Berechtigungen bei SQL Server PDW anzumelden. <!-- MISSING LINKS See [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md).-->|  
 |Konfigurieren des Azure Datenverwaltung-Gateways|Das Gateway ermöglicht Azure-Benutzern den Zugriff auf lokale APS-Daten, indem APS-Daten als sichere odata-Feeds verfügbar gemacht werden. Das Gateway ist bereits auf dem Steuer Knoten installiert. Bitten Sie Microsoft um Unterstützung bei der Konfiguration.|  

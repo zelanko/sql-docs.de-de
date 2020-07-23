@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 83a381e36a31542d6ad39ed9d26864350004af5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97b9f5fd13a6cfb017f128564f0f0cf93c22ad58
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891150"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967371"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX-Datenbearbeitung – SELECT
 
@@ -116,7 +116,7 @@ FROM
   
  Mit der NON VISUAL-Option in der untergeordneten SELECT-Anweisung können Sie Member durch Filtern ausschließen und gleichzeitig die tatsächlichen Gesamtwerte anstelle der gefilterten Gesamtwerte beibehalten. So können Sie die besten zehn Verkaufswerte (Personen/Produkte/Regionen) abfragen und die tatsächliche Summe aller Verkaufswerte für alle abgefragten Member beibehalten und nicht den Gesamtwert der Verkäufe für die zurückgegebenen besten zehn. Weitere Informationen finden Sie unten in den Beispielen.  
   
- Berechnete Elemente können in \<der SELECT Query Axis-Klausel> eingeschlossen werden, wenn die Verbindung mithilfe des Verbindungs Zeichenfolgen-Parameters *subqueries = 1*; geöffnet wurde. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> zur Parameter Verwendung. Es wird ein Beispiel für berechnete Elemente in untergeordneten SELECT-Anweisungen bereitgestellt.  
+ Berechnete Elemente können in eingefügt werden \<SELECT query axis clause> , wenn die Verbindung mithilfe des Verbindungs Zeichenfolgen-Parameters *subqueries = 1*geöffnet wurde. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> zur Parameter Verwendung. Es wird ein Beispiel für berechnete Elemente in untergeordneten SELECT-Anweisungen bereitgestellt.  
   
 ## <a name="autoexists"></a>Autoexists  
  Wenn mindestens zwei Attribute der Dimension in einer SELECT-Anweisung verwendet werden, wertet Analysis Services die Ausdrücke der Attribute aus, damit die Elemente dieser Attribute ordnungsgemäß so beschränkt werden, dass sie die Kriterien aller anderen Attribute erfüllen. Angenommen, Sie arbeiten mit Attributen der Geography-Dimension. Wenn Sie über einen Ausdruck verfügen, der alle Elemente des City-Attributs zurückgibt, und einen weiteren Ausdruck, der Member des Country-Attributs auf alle Länder in Europa einschränkt, führt dies dazu, dass die City-Member nur auf die Städte beschränkt werden, die zu den Ländern in Europa gehören. Diese Eigenschaft von Analysis Services wird als Autoexists bezeichnet und gilt nur für Attribute in der gleichen Dimension. Autoexists gilt nur für Attribute der gleichen Dimension, denn es versucht zu verhindern, dass die in einem Attributausdruck ausgeschlossenen Dimensionsdatensätze von den anderen Attributausdrücken eingeschlossen werden. Autoexists kann auch als resultierende Schnittmenge der unterschiedlichen Attributausdrücke in den Dimensionsdatensätzen bezeichnet werden. Weitere Informationen finden Sie in den folgenden Beispielen:  
@@ -168,7 +168,7 @@ FROM
 |**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
 |**Touring-1000**|**6.723.794,29 €**|**166.144,17 €**|**2,47%**|  
 |**Road-550-W**|**3.668.383,88 €**|**1.901,97 €**|**0,05%**|  
-|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57 %**|  
+|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
 |**Road-150**|**2.363.805,16 €**|**$0,00**|**0,00%**|  
 |**Touring-3000**|**2.046.508,26 €**|**79.582,15 €**|**3,89%**|  
@@ -220,7 +220,7 @@ FROM
 |**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
 |**Touring-1000**|**6.723.794,29 €**|**166.144,17 €**|**2,47%**|  
 |**Road-550-W**|**3.668.383,88 €**|**1.901,97 €**|**0,05%**|  
-|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57 %**|  
+|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
 |**Road-150**|**2.363.805,16 €**|**$0,00**|**0,00%**|  
 |**Touring-3000**|**2.046.508,26 €**|**79.582,15 €**|**3,89%**|  
@@ -339,10 +339,10 @@ FROM
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
   
- Das autoes-Verhalten kann mithilfe des Parameters autoist = [1 | 2 | 3] in der Verbindungs Zeichenfolge geändert werden. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> zur Parameter Verwendung.  
+ Das autoes-Verhalten kann mithilfe des Parameters autoist = [1 | 2 | 3] in der Verbindungs Zeichenfolge geändert werden. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> zur Parameter Verwendung.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die Summe des `Measures.[Order Quantity]` -Elements, aggregiert über die ersten acht Monate des Kalender Jahrs 2003, das in der `Date` Dimension enthalten ist, aus dem **Adventure Works** -Cube zurückgegeben.  
+ Im folgenden Beispiel wird die Summe des-Elements `Measures.[Order Quantity]` , aggregiert über die ersten acht Monate des Kalender Jahrs 2003, das in der `Date` Dimension enthalten ist, aus dem **Adventure Works** -Cube zurückgegeben.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -377,7 +377,7 @@ WHERE
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|**Clothing**|**Komponenten**|  
+||**Alle Produkte**|**Accessories**|**Fahrräder**|**Kleidung**|**Komponenten**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -401,7 +401,7 @@ WHERE
   
 |||||  
 |-|-|-|-|  
-||**All Products**|**Accessories**|**Clothing**|  
+||**Alle Produkte**|**Accessories**|**Kleidung**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
 |**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
@@ -428,7 +428,7 @@ WHERE
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
+||All Products|Accessories|Kleidung|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  

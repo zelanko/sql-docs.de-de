@@ -32,7 +32,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  Optional. der Typ des zu exportierenden Objekts (entweder Mining Modell oder Mining Struktur).  
   
  *Objektname*  
- Optional. Der Name des zu exportierenden Objekts.  
+ Dies ist optional. Der Name des zu exportierenden Objekts.  
   
  *filename*  
  Die Zeichenfolge, die den Namen und den Speicherort der Datei angibt, in die exportiert werden soll.  

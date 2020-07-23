@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 610d304f2634a4de8f8578fff3258f4b1f2dbc67
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 735df047307f78c238fbf29669f0e0b1e0933e37
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669294"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971561"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt die angepasste Wahrscheinlichkeit für einen bestimmten Status zurück.  
   
@@ -34,9 +34,9 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
  Ein Skalarwert.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Ist der vorhergesagte Status (predicted state) nicht angegeben, wird der Status verwendet, der die höchste vorhersagbare Wahrscheinlichkeit hat, wobei der Bucket der fehlenden Status ausgeschlossen wird. Wenn Sie den Bucket für fehlende Zustände einschließen möchten, legen \< Sie den vorhergesagten Status> auf **INCLUDE_NULL**fest.  
+ Ist der vorhergesagte Status (predicted state) nicht angegeben, wird der Status verwendet, der die höchste vorhersagbare Wahrscheinlichkeit hat, wobei der Bucket der fehlenden Status ausgeschlossen wird. Um den Bucket Missing States einzuschließen, legen \<predicted state> Sie den auf **INCLUDE_NULL**fest.  
   
- Um die angepasste Wahrscheinlichkeit für die fehlenden Zustände zurückzugeben, legen \< Sie den vorhergesagten Status> auf NULL fest.  
+ Legen Sie den auf NULL fest, um die angepasste Wahrscheinlichkeit für die fehlenden Zustände zurückzugeben \<predicted state> .  
   
  Die " **prätadjustedwahrscheinlichkeits** "-Funktion ist eine [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Erweiterung des [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB für die Data Mining-Spezifikation.  
   

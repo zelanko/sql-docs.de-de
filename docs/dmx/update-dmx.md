@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9c4f8c1b48ccc6b3f2c2363671f5e3c072f77042
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: f77d71eab284b695171e923cfe53b53575d45d94
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669173"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971538"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Ändert die **NODE_CAPTION** Spalte im Modell Data Mining.  
   
@@ -37,7 +37,7 @@ SET NODE_CAPTION='new caption'
  Eine Zeichenfolge, die den neuen Namen für die **NODE_CAPTION** Spalte enthält.  
   
  *Bedingungs Ausdruck*  
- Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
+ Dies ist optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel ändert die **Update** -Anweisung den Standardnamen `Cluster 1` für Cluster `001` in den aussagekräftigeren Namen `Likely Customers` .  

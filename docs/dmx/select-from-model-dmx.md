@@ -34,16 +34,16 @@ SELECT <expression list> [TOP <n>] FROM <model>
  Eine durch Trennzeichen getrennte Liste mit Ausdrücken oder mit PREDICT- bzw. PREDICT ONLY-Spalten.  
   
  *n*  
- Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Dies ist optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *model*  
  Ein Modellbezeichner.  
   
  *Bedingungs Liste*  
- Optional. Bedingungen, die die Werte einschränken, die für die Spaltenliste zurückgegeben werden.  
+ Dies ist optional. Bedingungen, die die Werte einschränken, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Dies ist optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Spalten in der *Ausdrucks Liste* müssen als Vorhersagen oder Vorhersagen definiert oder mit einer vorhersagbaren Spalte verknüpft werden.  

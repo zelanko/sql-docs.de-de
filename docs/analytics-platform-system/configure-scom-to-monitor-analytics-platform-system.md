@@ -1,5 +1,5 @@
 ---
-title: Überwachen mit SCOM
+title: Konfigurieren von System Center Operations Manager zum Überwachen von APS
 description: Führen Sie die folgenden Schritte aus, um die System Center Operations Manager Management Packs (SCOM) für Analytics Platform System zu konfigurieren. Die Management Packs sind erforderlich, um das Analytics-Platt Form System von SCOM zu überwachen.
 author: mzaman1
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0786cbc8230ecf29dd377a35fefc6969072512b3
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401303"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942212"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Konfigurieren von System Center Operations Manager (SCOM) zum Überwachen des Analytics-plattformsystems
 Führen Sie die folgenden Schritte aus, um die System Center Operations Manager Management Packs (SCOM) für Analytics Platform System zu konfigurieren. Die Management Packs sind erforderlich, um das Analytics-Platt Form System von SCOM zu überwachen.  
@@ -37,7 +37,7 @@ Im folgenden finden Sie ausführliche Anweisungen zum Ausführen der Aufgaben:
   
 1.  Erstellen Sie das runas-Konto " **APS Watcher** " mit dem **Windows** -Kontotyp für den Benutzer " **APS Watcher** ".  
   
-    1.  Navigieren Sie zum Bereich **Verwaltung** , klicken Sie mit der rechten Maustaste auf **als Konfigurations** -> **Konten** ausführen, und wählen Sie dann **Ausführen als Konto erstellen aus.**  
+    1.  Navigieren Sie zum Bereich **Verwaltung** , klicken Sie mit der rechten Maustaste auf **als Konfigurations**  ->  **Konten** ausführen, und wählen Sie dann **Ausführen als Konto erstellen aus.**  
   
         ![Konfigurieren von "konfigurierbar"](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "Konfigurieren von "konfigurierbar"")  
   
@@ -61,7 +61,7 @@ Im folgenden finden Sie ausführliche Anweisungen zum Ausführen der Aufgaben:
   
 2.  Legen Sie für das **Microsoft APS Watcher-Konto** Profil die Verwendung des Kontos " **APS Watcher** -Konto" fest.  
   
-    1.  Navigieren Sie zu **Verwaltung** -> **Ausführen als Konfigurations** -> **profile**.  
+    1.  Navigieren Sie zu **Verwaltung**  ->  **Ausführen als Konfigurations**  ->  **profile**.  
   
         ![Administrationrunasconfigurationprofiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "Administrationrunasconfigurationprofiles")  
   
@@ -81,7 +81,7 @@ Im folgenden finden Sie ausführliche Anweisungen zum Ausführen der Aufgaben:
   
 3.  Warten Sie, bis die APS-Geräte Ermittlung abgeschlossen ist.  
   
-    1.  Navigieren Sie zum Bereich **Überwachung** , und öffnen Sie die Statusansicht **SQL Server Appliance** -> **Microsoft Analytics Platform System** -> **Appliances** .  
+    1.  Navigieren Sie zum Bereich **Überwachung** , und öffnen Sie die Statusansicht **SQL Server Appliance**  ->  **Microsoft Analytics Platform System**  ->  **Appliances** .  
   
         ![Sqlserverappliancemikrosoftapsappliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "Sqlserverappliancemikrosoftapsappliances")  
   

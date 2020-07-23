@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 23aaa06f7da6c29cf1f082c27071d68fa0c6958a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 98c40dba282c82f124d4e4ac009a046a44a283cb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669197"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971631"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Ein logischer Operator, der eine logische Negation für einen numerischen Ausdruck ausführt.  
   

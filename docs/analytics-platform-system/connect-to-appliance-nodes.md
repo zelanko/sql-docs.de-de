@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e1182d174e3281fda944c0b6490b114d4b6f2244
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8a4936aeb696f8cca36cad419d7c64198d4b290
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401243"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942539"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Herstellen einer Verbindung mit Geräteknoten in Analytics Platform System
 In diesem Artikel werden die verschiedenen Möglichkeiten zum Herstellen einer Verbindung mit den einzelnen Knoten des Analytics Platform System Appliance erläutert.  
@@ -30,10 +30,9 @@ Der Zugriff auf jeden applicenknoten erfolgt direkt in bestimmten Verwendungs Sz
 > [!WARNING]  
 > Das Ändern von Datenbank-oder Tabelleneinstellungen auf Steuerungs-oder Computeknoten ohne explizite Zustimmung des Produktteams oder APS-Kundensupport Teams kann ihre APS-Appliance nicht mehr unterstützen.
   
-|||  
-|-|-|  
-|**Node**|**Zugriffs Szenarien**|  
-|Steuerknoten|Verwenden Sie einen Webbrowser, um auf die Verwaltungskonsole zuzugreifen, die auf dem Steuer Knoten ausgeführt wird. Weitere Informationen finden Sie unter [Überwachen der Appliance mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Alle Client Anwendungen und Tools stellen eine Verbindung mit dem Steuer Knoten her, unabhängig davon, ob die Verbindung Ethernet oder InfiniBand verwendet.<br /><br />Um eine Ethernet-Verbindung mit dem Steuerungs Knoten zu konfigurieren, verwenden Sie die IP-Adresse und den Port **17001**des Kontroll Knoten Clusters. Beispiel: "192.168.0.1, 17001".<br /><br />Zum Konfigurieren einer InfiniBand-Verbindung mit dem Steuer Knoten verwenden Sie <strong> *appliance_domain*-SQLCTL01</strong> und Port **17001**. Wenn Sie <strong> *appliance_domain*-SQLCTL01</strong>verwenden, verbindet der DNS-Server der Appliance Ihren Server mit dem aktiven InfiniBand-Netzwerk. Informationen zum Konfigurieren des nicht-Appliance-Servers für die Verwendung finden Sie unter [Konfigurieren von InfiniBand-Netzwerkadaptern](configure-infiniband-network-adapters.md).<br /><br />Der Geräte Administrator stellt eine Verbindung mit dem Steuerungs Knoten her, um Verwaltungsvorgänge auszuführen. Der applianceadministrator führt z. b. die folgenden Vorgänge über den Steuer Knoten aus:<br /><br />Konfigurieren Sie das Analytics Platform System mit dem Konfigurationstool " **dwconfig. exe** ".|  
+|Node|Zugriffs Szenarien|
+|-|-|
+|Steuerknoten|Verwenden Sie einen Webbrowser, um auf die Verwaltungskonsole zuzugreifen, die auf dem Steuer Knoten ausgeführt wird. Weitere Informationen finden Sie unter [Überwachen der Appliance mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Alle Client Anwendungen und Tools stellen eine Verbindung mit dem Steuer Knoten her, unabhängig davon, ob die Verbindung Ethernet oder InfiniBand verwendet.<br /><br />Um eine Ethernet-Verbindung mit dem Steuerungs Knoten zu konfigurieren, verwenden Sie die IP-Adresse und den Port **17001**des Kontroll Knoten Clusters. Beispiel: "192.168.0.1, 17001".<br /><br />Zum Konfigurieren einer InfiniBand-Verbindung mit dem Steuer Knoten verwenden Sie <strong> *appliance_domain*-SQLCTL01</strong> und Port **17001**. Wenn Sie <strong> *appliance_domain*-SQLCTL01</strong>verwenden, verbindet der DNS-Server der Appliance Ihren Server mit dem aktiven InfiniBand-Netzwerk. Informationen zum Konfigurieren des nicht-Appliance-Servers für die Verwendung finden Sie unter [Konfigurieren von InfiniBand-Netzwerkadaptern](configure-infiniband-network-adapters.md).<br /><br />Der Geräte Administrator stellt eine Verbindung mit dem Steuerungs Knoten her, um Verwaltungsvorgänge auszuführen. Der applianceadministrator führt z. b. die folgenden Vorgänge über den Steuer Knoten aus:<br /><br />Konfigurieren Sie das Analytics Platform System mit dem **dwconfig.exe** -Konfigurationstool.|  
 |Computeknoten|Computeknotenverbindungen werden vom Steuer Knoten gesteuert. Die IP-Adressen von Computeknoten werden nie als Parameter in Anwendungs Befehle eingegeben.<br /><br />Beim Laden, bei der Sicherung, bei der Remote Tabellen Kopie und bei Hadoop werden von SQL Server PDW Daten direkt zwischen den Computeknoten und den nicht Appliance-Knoten oder-Servern gesendet oder empfangen. Diese Anwendungen stellen eine Verbindung mit SQL Server PDW her, indem Sie eine Verbindung mit dem Steuerungs Knoten herstellen, und der Steuerungs Knoten leitet SQL Server PDW an, um die Kommunikation zwischen den Computeknoten und dem nicht-Appliance-Server herzustellen.<br /><br />Diese Datenübertragungs Vorgänge erfolgen beispielsweise parallel mit direkten Verbindungen zu den Computeknoten:<br /><br />Laden vom Lade Server in SQL Server PDW.<br /><br />Sichern einer Datenbank vom SQL Server PDW auf dem Sicherungs Server.<br /><br />Wiederherstellen einer Datenbank vom Sicherungs Server in SQL Server PDW.<br /><br />Abfragen von Hadoop-Daten aus SQL Server PDW.<br /><br />Exportieren von Daten aus SQL Server PDW in eine externe Hadoop-Tabelle.<br /><br />Kopieren einer SQL Server PDW Tabelle in eine Remote-SMP-SQL Server Datenbank.|  
   
 ## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>Herstellen einer Verbindung mit dem Ethernet-und InfiniBand-Netzwerk  

@@ -21,19 +21,19 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce2cbf99a62ca8515e596bf4b392315c6b5945b2
-ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+ms.openlocfilehash: 6673b9d0c235f7a38e04d534bf4358585a5b0bd2
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84112315"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942573"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys. database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Gibt die Abfragespeicher Optionen für diese Datenbank zurück.  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]und höher), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -45,8 +45,8 @@ ms.locfileid: "84112315"
 |**current_storage_size_mb**|**bigint**|Größe des Abfragespeicher auf dem Datenträger in Megabyte.|  
 |**flush_interval_seconds**|**bigint**|Der Zeitraum für die reguläre Leerung von Abfragespeicher Daten auf den Datenträger (in Sekunden). Der Standardwert ist **900** (15 min.).<br /><br /> Ändern Sie mithilfe der- `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` Anweisung.|  
 |**interval_length_minutes**|**bigint**|Das Statistik-Aggregations Intervall in Minuten. Beliebige Werte sind nicht zulässig. Verwenden Sie eine der folgenden Aktionen: 1, 5, 10, 15, 30, 60 und 1440 Minuten. Der Standardwert ist **60** Minuten.|  
-|**max_storage_size_mb**|**bigint**|Maximale Datenträger Größe für die Abfragespeicher in Megabyte (MB). Der Standardwert ist **100** MB.<br />Der Standardwert für die [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition ist 1 GB, und bei [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition beträgt der Standardwert 10 MB.<br /><br /> Ändern Sie mithilfe der- `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` Anweisung.|  
-|**stale_query_threshold_days**|**bigint**|Anzahl von Tagen, in denen Abfragen ohne Richtlinien Einstellungen in Abfragespeicher aufbewahrt werden. Standardwert: **30**. Legen Sie auf 0 fest, um die Aufbewahrungs Richtlinie zu deaktivieren.<br />Für die Basic-Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ist der Standardwert 7 Tage.<br /><br /> Ändern Sie mithilfe der- `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` Anweisung.|  
+|**max_storage_size_mb**|**bigint**|Maximale Datenträger Größe für die Abfragespeicher in Megabyte (MB). Der Standardwert ist **100** MB bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und **1 GB** beginnend mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br />Der Standardwert für die [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition ist 1 GB, und bei [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition beträgt der Standardwert 10 MB.<br /><br /> Ändern Sie mithilfe der- `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` Anweisung.|  
+|**stale_query_threshold_days**|**bigint**|Anzahl der Tage, die die Informationen für eine Abfrage im Abfragespeicher aufbewahrt werden. Standardwert: **30**. Legen Sie auf 0 fest, um die Aufbewahrungs Richtlinie zu deaktivieren.<br />Für die Basic-Edition von [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ist der Standardwert 7 Tage.<br /><br /> Ändern Sie mithilfe der- `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` Anweisung.|  
 |**max_plans_per_query**|**bigint**|Begrenzt die maximale Anzahl gespeicherter Pläne. Der Standardwert ist **200**. Wenn der Höchstwert erreicht ist, beendet Abfragespeicher die Erfassung neuer Pläne für diese Abfrage. Wenn Sie auf 0 festlegen, wird die Einschränkung in Bezug auf die Anzahl der aufgezeichneten Pläne entfernt.<br /><br /> Ändern Sie mithilfe der- `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` Anweisung.|  
 |**query_capture_mode**|**smallint**|Der derzeit aktive Abfrage Erfassungs Modus:<br /><br /> **1** = alle-alle Abfragen werden erfasst. Dies ist der Standard Konfigurations Wert für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher).<br /><br /> 2 = Automatische Erfassung relevanter Abfragen basierend auf der Ausführungs Anzahl und dem Ressourcenverbrauch. Dies ist der Standardkonfigurationswert für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = keine-beendet die Erfassung neuer Abfragen. Der Abfragedatenspeicher sammelt weiterhin Statistiken zur Kompilierung und Runtime für Abfragen, die bereits erfasst wurden. Verwenden Sie diese Konfiguration vorsichtig, da Sie möglicherweise die Erfassung wichtiger Abfragen übersehen.|  
 |**query_capture_mode_desc**|**nvarchar(60)**|Textbeschreibung des tatsächlichen Aufzeichnungsmodus Abfragespeicher:<br /><br /> Alle (Standardeinstellung für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **Auto** (Standardeinstellung für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> Keine|  
@@ -67,7 +67,7 @@ ms.locfileid: "84112315"
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   

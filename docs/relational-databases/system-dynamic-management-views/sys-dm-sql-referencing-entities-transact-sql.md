@@ -20,12 +20,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717442"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943060"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,17 +60,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *schema_name. referenzierte*_*entity_name*  
- Der Name der Entität, auf die verwiesen wird.  
+ `schema_name.referenced_entity_name`Der Name der Entität, auf die verwiesen wird.  
   
- *schema_name* ist erforderlich, außer wenn die referenzierte Klasse PARTITION_FUNCTION ist.  
+ `schema_name` ist erforderlich, es sei denn, es handelt sich bei der Klasse, auf die verwiesen wird, um PARTITION_FUNCTION.  
   
- *schema_name. referenced_entity_name* ist vom Datentyp **nvarchar (517)**.  
+ `schema_name.referenced_entity_name`ist vom Datentyp **nvarchar (517)**.  
   
- *<referenced_class>* :: = {Object | Typ | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
- Die Klasse der Entität, auf die verwiesen wird. Pro Anweisung kann nur eine Klasse angegeben werden.  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`Ist die Klasse der Entität, auf die verwiesen wird. Pro Anweisung kann nur eine Klasse angegeben werden.  
   
- *<referenced_class>* ist vom Datentyp **nvarchar**(60).  
+ `<referenced_class>`ist vom Datentyp **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -96,13 +94,13 @@ sys.dm_sql_referencing_entities (
   
  Gibt einen Fehler zurück, wenn die angegebene Entität, auf die verwiesen wird, eine nummerierte gespeicherte Prozedur ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In der folgenden Tabelle werden die Typen von Entitäten aufgelistet, für die Abhängigkeitsinformationen erstellt und verwaltet werden. Für Regeln, Standardwerte, temporäre Tabellen, temporär gespeicherte Prozeduren oder Systemobjekte werden keine Abhängigkeitsinformationen erstellt oder verwaltet.  
   
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
 |Tabelle|Ja*|Ja|  
-|Ansicht|Ja|Ja|  
+|Sicht|Ja|Ja|  
 |In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|Ja|Ja|  
 |Gespeicherte CLR-Prozedur|Nein |Ja|  
 |Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Ja|  

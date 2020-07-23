@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666693"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970688"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt vorhergesagte Zukunftswerte für Zeitreihendaten zurück. Zeitreihendaten sind kontinuierlich und können in einer geschachtelten Tabelle oder in einer Falltabelle gespeichert werden. Die Funktion " **prättimeseries** " gibt immer eine Tabelle mit einer Tabelle zurück.  
   
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Argumente  
- * \< Tabellen Spalten Verweis>*, * \< referenc für skalare Spalte>*  
+ *\<table column reference>*, *\<scalar column referenc>*  
  Gibt den Namen der vorherzusagenden Spalte an. Die Spalte kann entweder Skalar- oder Tabellendaten enthalten.  
   
  *n*  
@@ -52,7 +52,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n-End* muss eine ganze Zahl sein, die größer als *n-Start*ist.  
   
- *\<Quell Abfrage>*  
+ *\<source query>*  
  Definiert die externen Daten, die für Vorhersagen verwendet werden.  
   
  REPLACE_MODEL_CASES | EXTEND_MODEL_CASES  
@@ -65,7 +65,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  Diese Argumente können nur verwendet werden, wenn neue Daten mit einer PREDICTION JOIN-Anweisung hinzugefügt werden. Wenn Sie eine PREDICTION JOIN-Abfrage verwenden und kein Argument angeben, lautet der Standardwert EXTEND_MODEL_CASES.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- Ein \< *Tabellen Ausdrucks*>.  
+ einen \<*table expression*>  
   
 ## <a name="remarks"></a>Bemerkungen  
  Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Algorithmus unterstützt keine Vergangenheitsvorhersage, wenn Sie die PREDICTION JOIN-Anweisung zum Hinzufügen neuer Daten verwenden.  

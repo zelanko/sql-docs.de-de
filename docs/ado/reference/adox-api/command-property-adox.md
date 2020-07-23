@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9b46a0385505f8673cb456adab4ee7905f499af
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6be0b6193c925ae7fc25ca400181d9f9077f3dfa
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759286"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943172"
 ---
 # <a name="command-property-adox"></a>Command-Eigenschaft (ADOX)
 Gibt ein ADO- [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt an, das verwendet werden kann, um die Prozedur zu erstellen oder auszuführen.  
@@ -33,11 +33,16 @@ Gibt ein ADO- [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Ob
  Beim erhalten und Festlegen dieser Eigenschaft tritt ein Fehler auf, wenn der Anbieter das Beibehalten von Befehlen nicht unterstützt.  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[Procedure Object (ADOX) (Procedure-Objekt (ADOX))](../../../ado/reference/adox-api/procedure-object-adox.md)|[View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Procedure Object (ADOX) (Procedure-Objekt (ADOX))](../../../ado/reference/adox-api/procedure-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für Befehls-und CommandText-Eigenschaften (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Parameter Auflistung, Beispiel für Befehls Eigenschaft (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
