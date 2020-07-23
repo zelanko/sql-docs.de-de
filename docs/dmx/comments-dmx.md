@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 834e31fcc9d8e0887929dae356c7b2068aeeff2d
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 37e646df007684ee8e68f9d39119e42014415715
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669343"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969901"
 ---
 # <a name="comments-dmx"></a>Kommentare (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Kommentare in Data Mining-Erweiterungen (DMX) sind Text Zeichenfolgen im Programmcode, der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nicht ausgeführt wird. Kommentare werden auch als Anmerkungen bezeichnet. Mit Kommentaren können Sie Code dokumentieren oder Teile einer DMX-Anweisung oder eines DMX-Skripts deaktivieren, wenn Sie den Code untersuchen.  
   

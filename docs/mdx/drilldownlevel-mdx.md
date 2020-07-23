@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b9c623a1e99053e796609dc82f27519f27c07a9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fdbc6ef265d51484160ab57a87e5672362326cc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049289"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970071"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -35,7 +35,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Level_Expression*  
  (Optional). Ein MDX-Ausdruck, der explizit die Ebene für den Drilldown identifiziert. Wenn Sie einen Ebenenausdruck angegeben, überspringen Sie das Indexargument unten.  
   
- *Sin*  
+ *Index*  
  (Optional). Ein gültiger numerischer Ausdruck, der die Nummer der Hierarchie angibt, in die innerhalb der Menge ein Drilldown durchgeführt werden soll. Sie können die Indexebene statt Level_Expression verwenden, um explizit die Ebene festzulegen, auf die ein Drilldown ausgeführt werden soll.  
   
  *include_calc_members*  
@@ -52,7 +52,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  Wenn weder ein Ebenenausdruck noch ein Indexwert angegeben wird, erstellt die Funktion eine Menge in einer hierarchischen Reihenfolge, indem die untergeordneten Elemente von nur den Elementen abgerufen werden, die sich auf der untersten Ebene der ersten Dimension befinden, auf die in der angegebenen Menge verwiesen wird.  
   
- Durch Abfragen der XMLA-Eigenschaft "mdpropmdxdrillfunctions" können Sie den Grad der Unterstützung überprüfen, den der Server für die Bohr Funktionen bereitstellt. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ Durch Abfragen der XMLA-Eigenschaft "mdpropmdxdrillfunctions" können Sie den Grad der Unterstützung überprüfen, den der Server für die Bohr Funktionen bereitstellt. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="examples"></a>Beispiele  
  Sie können die folgenden Beispiele im MDX-Abfragefenster in SSMS ausprobieren. Verwenden Sie dafür den Adventure Works-Cube.  

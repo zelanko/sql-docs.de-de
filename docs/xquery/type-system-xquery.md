@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f093a8105c21ab6c96d0d1b84c7a48e3a48c9fe0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb0b853b83fc65d8faddc341f9f0249debc2d2c1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643401"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915266"
 ---
 # <a name="type-system-xquery"></a>Typensystem (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery ist eine stark typisierte Sprache für Schema Typen und eine schwach typisierte Sprache für nicht typisierte Daten. Zu den vordefinierten Typen von XQuery zählen folgende Typen:  
   

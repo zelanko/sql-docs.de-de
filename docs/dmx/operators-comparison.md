@@ -8,21 +8,21 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 05bb9bc1ad4dfeed1cf2747a8d5bb854fec8d9af
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 885285439721f017d1d6eaa5bb9eebd0a26c08a3
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669703"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968640"
 ---
 # <a name="operators---comparison"></a>Operatoren – vergleichend
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Sie können Vergleichs Operatoren mit skalaren Daten in jedem DMX-Ausdruck (Data Mining Extensions) in verwenden [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vergleichsoperatoren ergeben einen Wert vom booleschen Datentyp. Sie geben abhängig vom Ergebnis der getesteten Bedingung TRUE oder FALSE zurück.  
   
  In der folgenden Tabelle sind die Vergleichsoperatoren aufgeführt, die DMX unterstützt.  
   
-|Operator|Beschreibung|  
+|Operator|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[&#60; &#40;kleiner als&#41; &#40;DMX-&#41;](../dmx/less-than-dmx.md)|Gibt für Argumente, die ausgewertet ungleich NULL sind, TRUE zurück, wenn der Wert des Arguments auf der linken Seite kleiner ist als der Wert des Arguments auf der rechten Seite; gibt anderenfalls FALSE zurück. Wenn eines der Argumente oder beide Argumente ausgewertet gleich NULL sind, gibt der Operator einen NULL-Wert zurück.|  
 |[&#62; &#40;größer als&#41; &#40;DMX-&#41;](../dmx/greater-than-dmx.md)|Gibt für Argumente, die einen Wert ungleich NULL ergeben, true zurück, wenn der Wert des Arguments auf der linken Seite größer ist als der Wert des Arguments auf der rechten Seite. gibt andernfalls false zurück. Wenn eines der Argumente oder beide Argumente ausgewertet gleich NULL sind, gibt der Operator einen NULL-Wert zurück.|  

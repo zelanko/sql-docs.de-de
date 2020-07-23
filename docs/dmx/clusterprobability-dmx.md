@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e06563d9b6a69bc8903a55ee1e67cda962f246ba
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 60c95521ba42dc5877c0e10a3f34453a497ad438
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669350"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969941"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt die Wahrscheinlichkeit zurück, mit der der Eingabefall zum angegebenen Cluster gehört.  
   
@@ -40,9 +40,9 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- Weitere Informationen zur Verwendung dieser Syntax finden Sie unter [Select from &#60;Model&#62;. Inhalt &#40;DMX-&#41;](../dmx/select-from-model-content-dmx.md). Weitere Informationen zum Schemarowset des Mining Modell Inhalts finden Sie unter [DMSCHEMA_MINING_MODEL_CONTENT-Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
+ Weitere Informationen zur Verwendung dieser Syntax finden Sie unter [Select from &#60;Model&#62;. Inhalt &#40;DMX-&#41;](../dmx/select-from-model-content-dmx.md). Weitere Informationen zum Schemarowset des Mining Modell Inhalts finden Sie unter [DMSCHEMA_MINING_MODEL_CONTENT-Rowsets](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
   
- Wenn eine \< Knoten Beschriftung> nicht angegeben ist, gibt die Funktion die Wahrscheinlichkeit zurück, mit der die Eingabe Fälle zum wahrscheinlichsten Cluster gehören. Verwenden Sie die **Cluster** Funktion, um den wahrscheinlichsten Cluster zurückzugeben.  
+ Wenn \<node caption> nicht angegeben wird, gibt die Funktion die Wahrscheinlichkeit zurück, mit der die Eingabe Fälle zum wahrscheinlichsten Cluster gehören. Verwenden Sie die **Cluster** Funktion, um den wahrscheinlichsten Cluster zurückzugeben.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Wahrscheinlichkeit dafür zurückgegeben, dass der angegebene Fall im Cluster mit der Bezeichnung Cluster 2 enthalten ist.  

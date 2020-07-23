@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c14bc8189bdea705ab37c66863d74bcef66e23c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 0cd7b2e0a78f2d47349de2701572b2f9dc4b0095
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669821"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969921"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt den Cluster zurück, der mit der höchsten Wahrscheinlichkeit den Eingabefall enthält.  
   
@@ -33,7 +33,7 @@ Cluster()
 ## <a name="return-type"></a>Rückgabetyp  
  Für die **Cluster** Funktion sind keine Parameter erforderlich.  
   
- Die **Cluster** Funktion gibt einen skalaren Wert eines Cluster namens zurück. Wenn Sie diese Funktion jedoch als Argument einer anderen Funktion verwenden, müssen Sie Sie als \< Cluster Spalten Verweis> berücksichtigen.  
+ Die **Cluster** Funktion gibt einen skalaren Wert eines Cluster namens zurück. Wenn Sie diese Funktion jedoch als Argument einer anderen Funktion verwenden, müssen Sie Sie als ein-Wert betrachten \<cluster column reference> .  
   
 ## <a name="remarks"></a>Bemerkungen  
  **Cluster** kann auch als `<` Clusterspaltenverweis `>` für eine **präthistogram** -Funktion verwendet werden.  

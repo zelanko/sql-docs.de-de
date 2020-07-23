@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0d34ea224efd5b218cafee58dec09ff4590b8511
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a834c87c3febf0554ad07334000d62f1f9a93fee
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668760"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968225"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Sagt eine assoziative Mitgliedschaft voraus.  
   
@@ -33,7 +33,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
  Algorithmen, die vorhersagbare Tabellen enthalten, einschließlich der Zuordnung und einiger Klassifizierungs Algorithmen. Zu den Klassifizierungs Algorithmen, die die Unterstützung von Netzwerk Tabellen unterstützen, gehören die [!INCLUDE[msCoName](../includes/msconame-md.md)] Algorithmen Decision Trees, [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes und [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- \<Tabellen Ausdrucks>  
+ \<table expression>  
   
 ## <a name="remarks"></a>Bemerkungen  
  Zu den Optionen für die **prätassociation** -Funktion zählen EXCLUDE_NULL, INCLUDE_NULL, inklusiv, exklusiv (Standard), INPUT_ONLY, INCLUDE_STATISTICS und INCLUDE_NODE_ID.  

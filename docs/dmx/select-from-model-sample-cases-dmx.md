@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9e88ec6673a00e3776032f33390451207c2f399f
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7eda9b0e13ee5cbf918d80f41b9a517906a56a57
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670111"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970505"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>Wählen Sie aus dem &lt; Modell aus &gt; . SAMPLE_CASES (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt Beispielfälle zurück, die repräsentativ für die Fälle sind, die zum Trainieren des Data Mining-Modells verwendet werden.  
   
@@ -49,7 +49,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
 ## <a name="remarks"></a>Bemerkungen  
  Beispielfälle können generiert werden und sind in den Trainingsdaten möglicherweise nicht tatsächlich vorhanden. Der zurückgegebene Fall ist repräsentativ für den angegebenen Inhaltsknoten.  
   
- Obwohl der [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus der einzige [!INCLUDE[msCoName](../includes/msconame-md.md)] Algorithmus ist, der die Verwendung von SELECT FROM \< Model> unterstützt. SAMPLE_CASES können von Drittanbieter Algorithmen auch unterstützt werden.  
+ Obwohl der [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus der einzige [!INCLUDE[msCoName](../includes/msconame-md.md)] Algorithmus ist, der die Verwendung von SELECT from unterstützt \<model> . SAMPLE_CASES können von Drittanbieter Algorithmen auch unterstützt werden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Beispielfälle zurückgegeben, mit denen das Target Mail-Miningmodell trainiert wird. Mithilfe der [IsInNode-Funktion &#40;DMX-&#41;](../dmx/isinnode-dmx.md) in der **Where** -Klausel werden nur Fälle zurückgegeben, die dem Knoten "000000003 überlappen" zugeordnet sind. Die Knotenzeichenfolge ist in der NODE_UNIQUE_NAME-Spalte des Schemarowsets zu finden.  

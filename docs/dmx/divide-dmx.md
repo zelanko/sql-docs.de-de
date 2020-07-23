@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2d75bd4a1d4b75d9acb153c3a3aec9efcf58d876
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 01d9c838e8b7a40d19a59997ae670eee19e6309b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669740"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969851"
 ---
 # <a name="divide-dmx"></a>Dividieren (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Führt eine arithmetische Operation aus, die eine Zahl durch eine andere dividiert.  
   

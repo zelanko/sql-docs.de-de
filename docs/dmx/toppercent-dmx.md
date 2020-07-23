@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3f2f97ef9c7a1cdfa2bb1ba1b86dbe4cf60c8404
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a91941241b61f74190b9ab1ef0c29dffded5dc79
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669927"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970236"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Die **topprozent** -Funktion gibt die obersten Zeilen einer Tabelle zurück, deren kumulativer Gesamtwert mindestens einem angegebenen Prozentsatz entspricht.  
   
@@ -28,13 +28,13 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Ein Ausdruck, der eine Tabelle zurückgibt, wie z. b. ein \< Tabellen Spalten Verweis> oder eine Funktion, die eine Tabelle zurückgibt.  
+ Ein Ausdruck, der eine Tabelle zurückgibt, wie z \<table column reference> . b., oder eine Funktion, die eine Tabelle zurückgibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- \<Tabellen Ausdrucks>  
+ \<table expression>  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die **topprozent** -Funktion gibt die obersten Zeilen in absteigender Rangfolge zurück, basierend auf dem ausgewerteten Wert des \< Rang Ausdrucks> Argument für jede Zeile, sodass die Summe des \< Rang Ausdrucks> Werte mindestens dem angegebenen Prozentsatz entspricht, der durch das \< %>-Argument angegeben wird. **Topprozent** gibt die kleinste mögliche Anzahl von Elementen zurück, während gleichzeitig der angegebene Prozentwert erreicht wird.  
+ Die **topprozent** -Funktion gibt die obersten Zeilen in absteigender Rangfolge zurück, basierend auf dem ausgewerteten Wert des \<rank expression> Arguments für jede Zeile, sodass die Summe der \<rank expression> Werte mindestens dem angegebenen Prozentsatz entspricht, der durch das- \<percent> Argument angegeben wird. **Topprozent** gibt die kleinste mögliche Anzahl von Elementen zurück, während gleichzeitig der angegebene Prozentwert erreicht wird.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Vorhersage Abfrage für das Association-Modell erstellt, das Sie mit dem Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellen.  

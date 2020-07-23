@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e22aadcb6da106c28ff38fc5b9d455f04152d0ec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58522408e025b45c2424272942055bb7e0d374d4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753594"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920054"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funktionen für Knoten – namespace-uri
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Gibt den Namespace-URI des in *$arg* angegebenen QName als xs: String zurück.  
   
@@ -39,7 +39,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  Knotenname, dessen Namespace-URI-Teil abgerufen wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 -   Wird das Argument nicht angegeben, wird standardmäßig der Kontextknoten verwendet.  
   

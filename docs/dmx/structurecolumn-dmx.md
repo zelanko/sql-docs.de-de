@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669979"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970304"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt den Wert der Strukturspalte zurück, der dem angegebenen Fall entspricht, oder den Tabellenwert für eine geschachtelte Tabelle im angegebenen Fall.  
   
@@ -32,7 +32,7 @@ StructureColumn('structure column name')
  Der Name einer Fallspalte oder der Spalte einer geschachtelten Miningstrukturtabelle.  
   
 ## <a name="result-type"></a>Ergebnistyp  
- Der Typ, der zurückgegeben wird, hängt vom Typ der Spalte ab, auf die in der \< Struktur Spaltenname>-Parameters verwiesen wird. Wenn beispielsweise auf eine Miningstrukturspalte verwiesen wird, die einen Skalarwert enthält, gibt die Funktion ebenfalls einen Skalarwert zurück.  
+ Der Typ, der zurückgegeben wird, hängt vom Typ der Spalte ab, auf die im-Parameter verwiesen wird \<structure column name> . Wenn beispielsweise auf eine Miningstrukturspalte verwiesen wird, die einen Skalarwert enthält, gibt die Funktion ebenfalls einen Skalarwert zurück.  
   
  Wenn die referenzierte Miningstrukturspalte eine geschachtelte Tabelle ist, gibt auch die Funktion einen Tabellenwert zurück. Der zurückgegebene Tabellenwert kann in der FROM-Klausel einer untergeordneten SELECT-Anweisung verwendet werden.  
   

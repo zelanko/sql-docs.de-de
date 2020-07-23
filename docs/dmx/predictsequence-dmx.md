@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 09911d0d0d8553ab26d0fc141bcc07ed2f479728
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: acb1982e61e622b150ee79af08e36ddcf24048ba
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666969"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970748"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Sagt zukünftige Sequenzwerte für eine angegebene Gruppe von Sequenzdaten voraus.  
   
@@ -30,7 +30,7 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ```  
   
 ## <a name="return-type"></a>Rückgabetyp  
- Ein \< Tabellen Ausdrucks>.  
+ einen \<table expression>  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn der *n* -Parameter angegeben wird, werden die folgenden Werte zurückgegeben:  

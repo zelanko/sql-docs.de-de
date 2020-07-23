@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea538271bf84d7d5b4e0fbea0a860f68bb1f62b6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669618"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970628"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT-FROM- &lt; Modell &gt; (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt alle möglichen Status für die ausgewählte Spalte im Modell zurück. Die zurückgegebenen Werte variieren, je nachdem, ob die angegebene Spalte diskrete Werte, diskretisierte numerische Werte oder fortlaufende numerische Werte enthält.  
   
@@ -47,13 +47,13 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>Bemerkungen  
  Die SELECT-Anweisung unter **schiedlicher from** -Anweisung kann nur mit einer einzelnen Spalte oder mit einem Satz verwandter Spalten verwendet werden. Für eine Gruppe nicht verbundener Spalten kann diese Klausel nicht verwendet werden.  
   
- Mit der **SELECT SELECT** -Anweisung können Sie direkt auf eine Spalte in einer geschachtelten Tabelle verweisen. Zum Beispiel:  
+ Mit der **SELECT SELECT** -Anweisung können Sie direkt auf eine Spalte in einer geschachtelten Tabelle verweisen. Beispiel:  
   
 ```  
 <model>.<table column reference>.<column reference>  
 ```  
   
- Die Ergebnisse der SELECT-Anweisung vom Typ " **Select verschieden from \< Model>** " variieren je nach Spaltentyp. In der folgenden Tabelle sind die unterstützten Spaltentypen sowie die Ausgabe beschrieben, die von der Anweisung erstellt wird.  
+ Die Ergebnisse der SELECT-Anweisung " **Select \<model> ** " unterscheiden sich je nach Spaltentyp. In der folgenden Tabelle sind die unterstützten Spaltentypen sowie die Ausgabe beschrieben, die von der Anweisung erstellt wird.  
   
 |Spaltentyp|Output|  
 |-----------------|------------|  

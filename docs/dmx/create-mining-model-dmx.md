@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c0355c8f0286fe894b7c723177c4146b1e460758
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 440256a7349d7c77581c4369e901ce0da9c3212f
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669473"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971814"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Erstellt sowohl ein neues Miningmodell als auch eine Miningstruktur in der Datenbank. Sie können ein Modell erstellen, indem Sie entweder das neue Modell in der Anweisung definieren oder PMML (Predictive Model Markup Language) verwenden. Diese zweite Möglichkeit empfiehlt sich nur für fortgeschrittene Benutzer.  
   
@@ -47,7 +47,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Der Name eines Data Mining-Algorithmus, der vom aktuellen Anbieter definiert wurde.  
   
 > [!NOTE]  
->  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe [DMSCHEMA_MINING_SERVICES Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von unterstützten Algorithmen finden Sie unter [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [Data Mining-Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe [DMSCHEMA_MINING_SERVICES Rowsets](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von unterstützten Algorithmen finden Sie unter [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [Data Mining-Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *Parameterliste*  
  Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
@@ -68,7 +68,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   Datentyp (obligatorisch)  
   
--   Verteilung  
+-   Distribution  
   
 -   Liste der Modellierungsflags  
   
@@ -102,16 +102,16 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [Modellierungsflags &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- Sie können der Anweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt die Verwendung der folgenden \< Spalten Beziehung>-Klausel.  
+ Sie können der Anweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt die Verwendung der folgenden- \<Column relationship> Klausel.  
   
  **verknüpft mit**  
  Diese Form kennzeichnet eine Wertehierarchie. Das Ziel einer RELATED TO-Spalte kann eine Schlüsselspalte einer geschachtelten Tabelle, eine Spalte mit diskreten Werten in der Fallzeile oder eine andere Spalte mit einer RELATED TO-Klausel sein, wodurch eine tiefere Hierarchie gekennzeichnet ist.  
   
  Mit einer Vorhersageklausel können Sie beschreiben, wie die Vorhersagespalte verwendet wird. In der folgenden Tabelle sind die beiden möglichen Klauseln beschrieben.  
   
-|\<Vorhersage>-Klausel|Beschreibung|  
+|\<prediction>-Klausel|BESCHREIBUNG|  
 |---------------------------|-----------------|  
-|**PREDICT**|Diese Spalte kann vom Modell vorhergesagt werden, und sie kann in Eingabefällen bereitgestellt werden, um den Wert anderer vorhersagbarer Spalten vorherzusagen.|  
+|**Voraus**|Diese Spalte kann vom Modell vorhergesagt werden, und sie kann in Eingabefällen bereitgestellt werden, um den Wert anderer vorhersagbarer Spalten vorherzusagen.|  
 |**PREDICT_ONLY**|Diese Spalte kann vom Modell vorhergesagt werden, aber ihre Werte können in Eingabefällen nicht dazu verwendet werden, den Wert anderer vorhersagbarer Spalten vorherzusagen.|  
   
 ### <a name="parameter-definition-list"></a>Parameterdefinitionsliste (Parameter Definition List)  
@@ -174,7 +174,7 @@ USING Microsoft_Sequence_Clustering
  Im folgenden Beispiel wird der [!INCLUDE[msCoName](../includes/msconame-md.md)]-Zeitreihenalgorithmus verwendet, um mit dem ARTxp-Algorithmus ein neues Miningmodell zu erstellen. ReportingDate ist die Schlüssel Spalte für die Zeitreihen und ModelRegion ist die Schlüssel Spalte für die Datenreihe. In diesem Beispiel wird davon ausgegangen, dass die Periodizität der Daten alle 12 Monate ist. Daher wird der *PERIODICITY_HINT* -Parameter auf 12 festgelegt.  
   
 > [!NOTE]  
->  Sie müssen den *PERIODICITY_HINT* -Parameter angeben, indem Sie Klammer Zeichen verwenden. Da der Wert eine Zeichenfolge ist, muss er außerdem in einfache Anführungszeichen eingeschlossen werden: "{ \< numeric Value>}".  
+>  Sie müssen den *PERIODICITY_HINT* -Parameter angeben, indem Sie Klammer Zeichen verwenden. Da der Wert eine Zeichenfolge ist, muss er außerdem in einfache Anführungszeichen eingeschlossen werden: "{ \<numeric value> }".  
   
 ```  
 CREATE MINING MODEL SalesForecast (  

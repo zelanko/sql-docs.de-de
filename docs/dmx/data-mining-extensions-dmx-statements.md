@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 54489088aa6edc540dd2da0fb0d9121fc0c6d4b9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1b8fe4c8a83eaf56aea70abc810e7dc45f35eebb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670415"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971772"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Data Mining-Erweiterungen (DMX) – Anweisungen
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Das Arbeiten mit Data Mining Modellen in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] umfasst die folgenden Hauptaufgaben:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "83670415"
  Verwenden Sie die Anweisung [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md) , um die Struktur eines vorhandenen Mining Modells in ein neues Mining Modell zu kopieren und das neue Modell mit denselben Daten zu trainieren.  
   
  Durchsuchen von Miningmodellen  
- Verwenden Sie die Anweisung [Select &#40;DMX&#41;](../dmx/select-dmx.md) , um die Informationen zu durchsuchen, die vom Data Mining Algorithmus beim Modell Training berechnet und im Data Mining Modell gespeichert werden. Ähnlich wie bei [!INCLUDE[tsql](../includes/tsql-md.md)] können Sie mit der SELECT-Anweisung mehrere-Klauseln verwenden, um die Leistung zu erweitern. Diese Klauseln unter [scheiden sich von Modell \<>](../dmx/select-distinct-from-model-dmx.md)und [ \< Modell>. Fälle](../dmx/select-from-model-cases-dmx.md), [von \< Modell>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md) [aus \< Modell>. Inhalt](../dmx/select-from-model-content-dmx.md) und [aus \< Modell>. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
+ Verwenden Sie die Anweisung [Select &#40;DMX&#41;](../dmx/select-dmx.md) , um die Informationen zu durchsuchen, die vom Data Mining Algorithmus beim Modell Training berechnet und im Data Mining Modell gespeichert werden. Ähnlich wie bei [!INCLUDE[tsql](../includes/tsql-md.md)] können Sie mit der SELECT-Anweisung mehrere-Klauseln verwenden, um die Leistung zu erweitern. Diese Klauseln enthalten unter [schiedliche \<model> von ](../dmx/select-distinct-from-model-dmx.md), [aus \<model> . Fälle](../dmx/select-from-model-cases-dmx.md), [von \<model> . SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md), [von \<model> . Inhalt](../dmx/select-from-model-content-dmx.md) und [von \<model> . DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
   
  Vorhersagen anhand von Miningmodellen  
  Verwenden Sie die [Vorhersage Join](../dmx/select-from-model-prediction-join-dmx.md) -Klausel der SELECT-Anweisung, um Vorhersagen zu erstellen, die auf einem vorhandenen Mining Modell basieren.  
@@ -58,7 +58,7 @@ ms.locfileid: "83670415"
   
  Diese Aufgaben gehören zu den beiden Kategorien Datendefinitionsanweisungen und Datenbearbeitungsanweisungen, die in der folgenden Tabelle beschrieben sind.  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Data Mining-Erweiterungen &#40;DMX&#41; – Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)|Gehören zur Datendefinitionssprache (Data Definition Language, DDL). Werden dazu verwendet, ein neues Miningmodell (samt Training) zu definieren oder ein vorhandenes Miningmodell aus einer Datenbank zu löschen.|  
 |[Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)|Gehören zur Datenbearbeitungssprache (Data Manipulation Language, DML). Werden zum Arbeiten mit vorhandenen Miningmodellen verwendet, wozu auch das Durchsuchen eines Modells und das Erstellen von Vorhersagen gehören.|  

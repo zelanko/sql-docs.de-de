@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d8e3b85f3d18b25f9dda1ef4f442ec0822257fae
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a075f314af0eb8ea2eb0bc941ada0bc38e22fec3
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670032"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970404"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;Quelldaten Abfrage &gt; -OPENQUERY
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Ersetzt die Quelldatenabfrage durch eine Abfrage an eine vorhandene Datenquelle. Die Anweisungen INSERT, SELECT FROM PREDICTION JOIN und SELECT FROM NATURAL PREDICTION JOIN unterstützen **OPENQUERY**.  
   
@@ -37,7 +37,7 @@ OPENQUERY(<named datasource>, <query syntax>)
 ## <a name="remarks"></a>Bemerkungen  
  **OPENQUERY** bietet eine sicherere Möglichkeit für das Zugreifen auf externe Daten, weil es Datenquellenberechtigungen unterstützt. Da die Verbindungszeichenfolge direkt in der Datenquelle gespeichert wird, können Administratoren die Eigenschaften der Datenquelle dazu verwenden, den Zugriff auf die Daten zu verwalten. Weitere Informationen zu Datenquellen finden Sie [unter Unterstützte Datenquellen &#40;SSAS-Multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional).  
   
- Durch Abfragen des **MDSCHEMA_INPUT_DATASOURCES** -Schemarowsets können Sie eine Liste der Datenquellen abrufen, die auf einem Server verfügbar sind. Weitere Informationen zum Verwenden von **MDSCHEMA_INPUT_DATASOURCES**finden Sie unter [MDSCHEMA_INPUT_DATASOURCES Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset).  
+ Durch Abfragen des **MDSCHEMA_INPUT_DATASOURCES** -Schemarowsets können Sie eine Liste der Datenquellen abrufen, die auf einem Server verfügbar sind. Weitere Informationen zum Verwenden von **MDSCHEMA_INPUT_DATASOURCES**finden Sie unter [MDSCHEMA_INPUT_DATASOURCES Rowsets](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126243(v=sql.110)).  
   
  Sie können auch eine Liste mit Datenquellen in der aktuellen Analysis Services-Datenbank zurückgeben, indem Sie folgende DMX-Abfrage verwenden:  
   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cceeac44646b904a7d7e1b45bd3c92d4ad07a0d5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669845"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969934"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt in aufsteigender Rangreihenfolge die untersten Zeilen einer Tabelle zurück, deren kumulativer Gesamtwert mindestens so groß wie ein angegebener Wert ist.  
   
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Ein Ausdruck, der eine Tabelle zurückgibt, wie z. b. ein \< Tabellen Spalten Verweis> oder eine Funktion, die eine Tabelle zurückgibt.  
+ Ein Ausdruck, der eine Tabelle zurückgibt, wie z \<table column reference> . b., oder eine Funktion, die eine Tabelle zurückgibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- \<Tabellen Ausdrucks>  
+ \<table expression>  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die **BottomSum** -Funktion gibt die untersten Zeilen in steigender Rangfolge zurück. Der Rang basiert auf dem ausgewerteten Wert des \< Rang Ausdrucks> Argument für jede Zeile, sodass die Summe des \< Rang Ausdrucks> Werte mindestens dem angegebenen Gesamtwert entspricht, der durch das \< Sum>-Argument angegeben wird. **BottomSum** gibt die kleinste mögliche Anzahl von Elementen zurück, während gleichzeitig der angegebene Summenwert erreicht wird.  
+ Die **BottomSum** -Funktion gibt die untersten Zeilen in steigender Rangfolge zurück. Der Rang basiert auf dem ausgewerteten Wert des- \<rank expression> Arguments für jede Zeile, sodass die Summe der \<rank expression> Werte mindestens dem angegebenen Gesamtwert entspricht, der durch das-Argument angegeben wird \<sum> . **BottomSum** gibt die kleinste mögliche Anzahl von Elementen zurück, während gleichzeitig der angegebene Summenwert erreicht wird.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Vorhersage Abfrage für das Association-Modell erstellt, das Sie mit dem Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellen.  

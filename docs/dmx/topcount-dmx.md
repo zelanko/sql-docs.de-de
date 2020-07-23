@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f93df1c1388f6a85272ced6bf419140c74105ddc
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 0d4c83626c11def14f1ed9f745fca54e94995c97
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669952"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970256"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt die durch einen Ausdruck angegebene Anzahl von obersten Zeilen in absteigender Rangreihenfolge zurück.  
   
@@ -28,13 +28,13 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Ein Ausdruck, der eine Tabelle zurückgibt, wie z. b. ein \< Tabellen Spalten Verweis> oder eine Funktion, die eine Tabelle zurückgibt.  
+ Ein Ausdruck, der eine Tabelle zurückgibt, wie z \<table column reference> . b., oder eine Funktion, die eine Tabelle zurückgibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- \<Tabellen Ausdrucks>  
+ \<table expression>  
   
 ## <a name="remarks"></a>Bemerkungen  
- Der Wert, der vom \< Rang Ausdrucks>-Arguments angegeben wird, bestimmt die absteigende Rangfolge für die Zeilen, die im \< Tabellen Ausdruck> Argument bereitgestellt werden, und die Anzahl der obersten Zeilen, die im \< count>-Argument angegeben sind, wird zurückgegeben.  
+ Der Wert, der vom-Argument bereitgestellt wird \<rank expression> , bestimmt die absteigende Rangfolge für die Zeilen, die im- \<table expression> Argument angegeben sind, und die Anzahl der obersten Zeilen, die im-Argument angegeben werden, \<count> wird zurückgegeben.  
   
  Die TopCount-Funktion wurde ursprünglich eingeführt, um assoziative Vorhersagen zu ermöglichen, und im Allgemeinen werden dieselben Ergebnisse wie eine Anweisung erzeugt, die **Select Top** -und **Order by** -Klauseln enthält. Sie erhalten eine bessere Leistung für assoziative Vorhersagen, wenn Sie die **Vorhersagefunktion (DMX)** verwenden, die die Angabe einer Reihe von Vorhersagen unterstützt.  
   

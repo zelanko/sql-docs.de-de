@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 94ec67fe103901f19af36b8be01ea21ceaa9ac85
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666790"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967847"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt eine Tabelle zurück, die einem Histogramm für die Vorhersage einer bestimmten Spalte entspricht.  
   
@@ -37,7 +37,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  Ein Histogramm generiert Statistikspalten. Die Spalten Struktur des zurückgegebenen Histogramms hängt vom Typ des Spalten Verweises ab, der mit der Funktion " **vorherd** ..." verwendet wird.  
   
 ## <a name="scalar-columns"></a>Skalare Spalten  
- Bei einem \< Verweis> für eine skalare Spalte besteht das Histogramm, das die Funktion " **präthistogram** " zurückgibt, aus den folgenden Spalten:  
+ Bei einem \<scalar column reference> besteht das Histogramm, das die **präthistogram** -Funktion zurückgibt, aus den folgenden Spalten:  
   
 -   Der Wert, der vorhergesagt wird.  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      Die **$AdjustedProbability** Spalte ist eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Erweiterung der [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB für Data Mining-Spezifikation.  
   
 ## <a name="cluster-columns"></a>Clusterspalten  
- Das Histogramm, das die Funktion " **präthistogram** " für einen \< Cluster Spalten Verweis zurückgibt> besteht aus den folgenden Spalten:  
+ Das Histogramm, das die Funktion " **präthistogram** " für einen zurückgibt, \<cluster column reference> besteht aus den folgenden Spalten:  
   
 -   **$Cluster** (stellt den Cluster Namen dar)  
   

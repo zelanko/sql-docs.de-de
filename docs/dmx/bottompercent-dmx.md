@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6fdb1563f644b544fd9c0bd2ee0857bf4b403329
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 647f0cdaaef28f1da7ca51157388288cfdd729dc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669829"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969951"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt in aufsteigender Rangreihenfolge die untersten Zeilen einer Tabelle zurück, deren kumulativer Gesamtwert mindestens so groß wie ein angegebener Prozentsatz ist.  
   
@@ -28,20 +28,20 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *\<Tabellen Ausdrucks>*  
+ *\<Table expression>*  
  Der Name der geschachtelten Tabelle oder des Tabellenwertausdrucks.  
   
- *\<Rang Ausdrucks>*  
+ *\<rank expression>*  
  Eine Spalte in der geschachtelten Tabelle oder ein Ausdruck, der eine Spalte auswertet.  
   
- *\<Prozent>*  
+ *\<percent>*  
  Ein doppelter Wert, der den gesamten Zielprozentsatz angibt.  
   
 ## <a name="result-type"></a>Ergebnistyp  
  Tabelle  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die **bottomprozent** -Funktion gibt die untersten Zeilen in steigender Rangfolge zurück. Der Rang basiert auf dem ausgewerteten Wert des \< Rang Ausdrucks> Argument für jede Zeile, sodass die Summe des \< Rang Ausdrucks> Werte mindestens dem angegebenen Prozentsatz entspricht, der durch das \< %>-Argument angegeben wird. **Bottomprozent** gibt die kleinste mögliche Anzahl von Elementen zurück, während gleichzeitig der angegebene Prozentwert erreicht wird.  
+ Die **bottomprozent** -Funktion gibt die untersten Zeilen in steigender Rangfolge zurück. Der Rang basiert auf dem ausgewerteten Wert des- \<rank expression> Arguments für jede Zeile, sodass die Summe der \<rank expression> Werte mindestens dem angegebenen Prozentsatz entspricht, der durch das-Argument angegeben wird \<percent> . **Bottomprozent** gibt die kleinste mögliche Anzahl von Elementen zurück, während gleichzeitig der angegebene Prozentwert erreicht wird.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Vorhersage Abfrage für das Association-Modell erstellt, das Sie im Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellt haben.  

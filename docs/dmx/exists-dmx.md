@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: df52a83c2e60395e72b6f81903d0372d1dc05614
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: fdf58a943986dc43f82ef7023b68a2c6168a5518
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670243"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971713"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt **true** zurück, wenn die angegebene Unterabfrage mindestens eine Zeile zurückgibt.  
   
@@ -28,8 +28,8 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Unterabfrage*  
- Eine SELECT-Anweisung im Formular SELECT * FROM \< Column Name> [WHERE \< Prädikat List>].  
+ *subquery*  
+ Eine SELECT-Anweisung des Formulars SELECT * FROM \<column name> [WHERE \<predicate list> ].  
   
 ## <a name="result-type"></a>Ergebnistyp  
  Gibt " **true** " zurück, wenn das von der Unterabfrage zurückgegebene Resultset mindestens eine Zeile enthält. Andernfalls wird **false**zurückgegeben.  

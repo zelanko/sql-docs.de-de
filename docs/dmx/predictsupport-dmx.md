@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a6509980065c2293a0b2697beacae1ba2d4b0d1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: da8673d58a6d1889017b0f79ea7cb4bf41c64466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83667196"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970698"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt den Unterstützungswert für einen bestimmten Status zurück.  
   
@@ -31,12 +31,12 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Ein skalare Spalte.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- Ein Skalarwert des Typs, der durch einen *\<* skalaren Spalten Verweis angegeben wird *>* .  
+ Ein Skalarwert des Typs, der durch angegeben wird *\<*scalar column reference*>* .  
   
 ## <a name="remarks"></a>Bemerkungen  
- Ist der vorhergesagte Status (predicted state) nicht angegeben, wird der Status verwendet, der die höchste vorhersagbare Wahrscheinlichkeit hat, wobei der Bucket der fehlenden Status ausgeschlossen wird. Wenn Sie den Bucket für fehlende Zustände einschließen möchten, legen \< Sie den vorhergesagten Status> auf **INCLUDE_NULL**fest.  
+ Ist der vorhergesagte Status (predicted state) nicht angegeben, wird der Status verwendet, der die höchste vorhersagbare Wahrscheinlichkeit hat, wobei der Bucket der fehlenden Status ausgeschlossen wird. Um den Bucket Missing States einzuschließen, legen \<predicted state> Sie den auf **INCLUDE_NULL**fest.  
   
- Um die Unterstützung für die fehlenden Zustände zurückzugeben, legen \< Sie den vorhergesagten Status> auf NULL fest.  
+ Wenn Sie die Unterstützung für die fehlenden Zustände zurückgeben möchten, legen \<predicted state> Sie auf NULL fest.  
   
 > [!NOTE]  
 >  Die Unterstützungswerte werden abweichend berechnet oder können in Abhängigkeit von dem abgefragten Modelltyp eine abweichende Interpretation aufweisen. Weitere Informationen zur Berechnung der Unterstützung für einen bestimmten Modelltyp finden Sie unter der Typ des einzelnen Algorithmus in [Mining Modell Inhalt &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  

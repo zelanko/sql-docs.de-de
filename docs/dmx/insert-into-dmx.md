@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a66897fe02d33c3f614ad5a24e5b2f9a78e1e4c9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: eedff3b14960fae68ad4e3a9ac54a0034c1a9300
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670085"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969775"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Verarbeitet das angegebene Data Mining-Objekt. Weitere Informationen zum Verarbeiten von Mining Modellen und Mining Strukturen finden Sie unter [Verarbeiten von Anforderungen und Überlegungen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
   
@@ -34,7 +34,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  Ein Modellbezeichner.  
   
- *structure*  
+ *Werks*  
  Ein Strukturbezeichner.  
   
  *zugeordnete Modell Spalten*  
@@ -46,9 +46,9 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ## <a name="remarks"></a>Bemerkungen  
  Wenn Sie kein **Mining Modell** oder keine **Mining Struktur**angeben, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sucht nach dem Objekttyp, der auf dem Namen basiert, und verarbeitet das richtige Objekt. Wenn der Server eine Miningstruktur und ein Miningmodell enthält, die denselben Namen haben, wird ein Fehler zurückgegeben.  
   
- Wenn Sie das zweite Syntax Formular verwenden, fügen Sie in* \< Objekt>* ein. COLUMN_VALUES können Sie Daten direkt in die Modell Spalten einfügen, ohne das Modell zu trainieren. Bei dieser Methode werden dem Modell Spaltendaten in einer übersichtlichen, geordneten Weise bereitgestellt, die sich anbietet, wenn Sie mit Datasets arbeiten, die Hierarchien oder geordnete Spalten enthalten.  
+ Verwenden Sie das zweite Syntax Formular, und fügen Sie in ein *\<object>* . COLUMN_VALUES können Sie Daten direkt in die Modell Spalten einfügen, ohne das Modell zu trainieren. Bei dieser Methode werden dem Modell Spaltendaten in einer übersichtlichen, geordneten Weise bereitgestellt, die sich anbietet, wenn Sie mit Datasets arbeiten, die Hierarchien oder geordnete Spalten enthalten.  
   
- Wenn Sie **INSERT INTO** mit einem Mining Modell oder einer Mining Struktur verwenden und die zugeordneten \< Modell Spalten> und \<> Argumente der Quelldaten Abfrage weglassen, verhält sich die Anweisung wie **ProcessDefault**, wobei bereits vorhandene Bindungen verwendet werden. Wenn keine Bindungen vorhanden sind, gibt die Anweisung einen Fehler zurück. Weitere Informationen zu **ProcessDefault**finden Sie unter [Verarbeitungsoptionen und-Einstellungen &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). Das folgende Beispiel zeigt die Syntax:  
+ Wenn Sie **INSERT INTO** mit einem Mining Modell oder einer Mining Struktur verwenden und das \<mapped model columns> -Argument und das-Argument weglassen \<source data query> , verhält sich die-Anweisung wie **ProcessDefault**, wobei bereits vorhandene Bindungen verwendet werden. Wenn keine Bindungen vorhanden sind, gibt die Anweisung einen Fehler zurück. Weitere Informationen zu **ProcessDefault**finden Sie unter [Verarbeitungsoptionen und-Einstellungen &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). Das folgende Beispiel zeigt die Syntax:  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -60,14 +60,14 @@ INSERT INTO [MINING MODEL] <model>
   
 |-Anweisung.|Status der Objekte|Ergebnis|  
 |---------------|----------------------|------------|  
-|>in Mining Modell* \< Modell* einfügen|Miningstruktur wird verarbeitet.|Miningmodell wird verarbeitet.|  
+|in Mining Modell einfügen*\<model>*|Miningstruktur wird verarbeitet.|Miningmodell wird verarbeitet.|  
 ||Miningstruktur wird nicht verarbeitet.|Miningmodell und Miningstruktur werden verarbeitet.|  
 ||Miningstruktur enthält weitere Miningmodelle.|Fehler bei der Verarbeitung. Sie müssen die Struktur und die zugeordneten Miningmodelle erneut verarbeiten.|  
-|In Mining Struktur* \< Struktur einfügen>*|Miningstruktur wird verarbeitet oder nicht verarbeitet.|Miningstruktur und zugeordnete Miningmodelle werden verarbeitet.|  
-|Einfügen in Mining Modell* \< Modell->* , das eine Quell Abfrage enthält<br /><br /> oder<br /><br /> >in Mining Struktur* \< Struktur* einfügen, die eine Quell Abfrage enthält|Entweder die Struktur oder das Modell enthält bereits Inhalt.|Fehler bei der Verarbeitung. Sie müssen die Objekte löschen, bevor Sie diesen Vorgang ausführen, indem Sie [&#40;DMX-&#41;löschen ](../dmx/delete-dmx.md)verwenden.|  
+|in Mining Struktur einfügen*\<structure>*|Miningstruktur wird verarbeitet oder nicht verarbeitet.|Miningstruktur und zugeordnete Miningmodelle werden verarbeitet.|  
+|In Mining Modell einfügen *\<model>* , das eine Quell Abfrage enthält<br /><br /> oder<br /><br /> Einfügen in die Mining Struktur *\<structure>* , die eine Quell Abfrage enthält|Entweder die Struktur oder das Modell enthält bereits Inhalt.|Fehler bei der Verarbeitung. Sie müssen die Objekte löschen, bevor Sie diesen Vorgang ausführen, indem Sie [&#40;DMX-&#41;löschen ](../dmx/delete-dmx.md)verwenden.|  
   
 ## <a name="mapped-model-columns"></a>Zugeordnete Modellspalten (Mapped Model Columns)  
- Mithilfe der \<> Elemente zugeordneten Modell Spalten können Sie die Spalten aus der Datenquelle den Spalten im Mining Modell zuordnen. Die zugeordneten \< Modell Spalten> Elements hat folgendes Format:  
+ Mithilfe des- \<mapped model columns> Elements können Sie die Spalten aus der Datenquelle den Spalten im Mining Modell zuordnen. Das- \<mapped model columns> Element weist die folgende Form auf:  
   
 ```  
 <column identifier> | SKIP | <table identifier> (<column identifier> | SKIP), ...  
@@ -80,7 +80,7 @@ INSERT INTO [MINING MODEL] <model>
  Die Syntax für SKIP erfordert, dass Sie SKIP an der Position der einzelnen Spalte im Eingaberowset einfügen, das über keine entsprechende Miningstrukturspalte verfügt. Beispielsweise muss in der Beispiel Tabelle der Tabelle "Tabelle" in der APPEND-Klausel "OrderNumber" ausgewählt werden, damit Sie in der Beziehung-Klausel zum Angeben des Joins verwendet werden kann. Sie möchten jedoch nicht die OrderNumber-Daten in die-Tabelle in der Mining Struktur einfügen. Daher wird im Beispiel im INSERT INTO-Argument das Skip-Schlüsselwort anstelle von OrderNumber verwendet.  
   
 ## <a name="source-data-query"></a>Quelldatenabfrage (Source Data Query)  
- Die \< Quelldaten Abfrage>-Element kann die folgenden Datenquellen Typen enthalten:  
+ Das- \<source data query> Element kann die folgenden Datenquellen Typen enthalten:  
   
 -   **OPENQUERY**  
   

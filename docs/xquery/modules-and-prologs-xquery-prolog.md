@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ece175be7fa0791bf1355ed6020121999d62660b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8098ddebb61a33c017f22598bec16041f112097a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775484"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918471"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Module und Prologe – XQuery-Prolog
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Eine XQuery-Abfrage besteht aus einem Prolog und einem Hauptteil (Body). Der XQuery-Prolog besteht aus einer Reihe von Deklarationen und Definitionen, die gemeinsam die für die Verarbeitung der Abfrage erforderliche Umgebung erstellen. In SQL Server kann der XQuery-Prolog Namespacedeklarationen enthalten. Der XQuery-Hauptteil besteht aus einer Sequenz von Ausdrücken, die das beabsichtigte Abfrageergebnis angeben.  
   

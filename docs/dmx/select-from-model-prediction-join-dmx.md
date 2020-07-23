@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e3e4e9a4d929d9533b10d87654f685e45dafd238
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670129"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970504"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt; Model &gt; Vorhersage Join (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Verwendet ein Miningmodell dazu, die Status von Spalten vorherzusagen, die zu einer externen Datenquelle gehören. Die **Vorhersage Join** -Anweisung gleicht jeden Fall von der Quell Abfrage zum Modell ab.  
   
@@ -57,7 +57,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die ON-Klausel definiert die Zuordnung zwischen den Spalten aus der Quellabfrage und den Spalten aus dem Miningmodell. Diese Zuordnung wird zum Weiterleiten von Spalten aus der Quell Abfrage an Spalten im Mining Modell verwendet, sodass die Spalten als Eingaben verwendet werden können, um die Vorhersagen zu erstellen. Spalten in der \< *Liste der joinzuordnung*> werden mit einem Gleichheitszeichen (=) verknüpft, wie im folgenden Beispiel gezeigt:  
+ Die ON-Klausel definiert die Zuordnung zwischen den Spalten aus der Quellabfrage und den Spalten aus dem Miningmodell. Diese Zuordnung wird zum Weiterleiten von Spalten aus der Quell Abfrage an Spalten im Mining Modell verwendet, sodass die Spalten als Eingaben verwendet werden können, um die Vorhersagen zu erstellen. Spalten in \<*join mapping list*> werden mit einem Gleichheitszeichen (=) verknüpft, wie im folgenden Beispiel gezeigt:  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  Die Quellabfrage für den PREDICTION JOIN kann eine Tabellen- oder eine SINGLETON-Abfrage sein.  
   
- Sie können Vorhersagefunktionen angeben, die keinen Tabellen Ausdruck in der \< *SELECT-Ausdrucks Liste* zurückgeben> und den Bedingungs \< *Ausdruck*>.  
+ Sie können Vorhersagefunktionen angeben, die keinen Tabellen Ausdruck in und zurückgeben \<*select expression list*> \<*condition expression*> .  
   
  Der **natürliche Vorhersage Join** ordnet automatisch Spaltennamen aus der Quell Abfrage zu, die den Spaltennamen im Modell entsprechen. Wenn Sie die **natürliche Vorhersage**verwenden, können Sie die ON-Klausel weglassen.  
   

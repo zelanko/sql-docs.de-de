@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: be257e4da206c1c30d54341fbfda4c0aed894ab2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: db7e660b5b92d49f5a5151d5d71e9ac31f9e9013
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669851"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969962"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Gibt die angegebene Anzahl von untersten Zeilen in der durch einen Ausdruck angegebenen aufsteigenden Rangreihenfolge zurück.  
   
@@ -28,13 +28,13 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Ein Ausdruck, der eine Tabelle zurückgibt, wie z. b. ein \< Tabellen Spalten Verweis> oder eine Funktion, die eine Tabelle zurückgibt.  
+ Ein Ausdruck, der eine Tabelle zurückgibt, wie z \<table column reference> . b., oder eine Funktion, die eine Tabelle zurückgibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- \<Tabellen Ausdrucks>  
+ \<table expression>  
   
 ## <a name="remarks"></a>Bemerkungen  
- Der Wert, der vom \< Rang Ausdrucks>-Argument angegeben wird, bestimmt die steigende Rangfolge für die Zeilen, die im \< Tabellen Ausdruck> Argument bereitgestellt werden, und die Anzahl der untersten Zeilen, die im count>-Argument angegeben sind, \< wird zurückgegeben.  
+ Der Wert, der vom-Argument bereitgestellt wird \<rank expression> , bestimmt die steigende Rangfolge für die Zeilen, die im- \<table expression> Argument angegeben sind, und die Anzahl der untersten Zeilen, die im-Argument angegeben werden, \<count> wird zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Vorhersage Abfrage für das Association-Modell erstellt, das Sie mit dem Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellen.  

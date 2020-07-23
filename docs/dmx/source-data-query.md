@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670016"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970280"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;Quelldaten Abfrage&gt;
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Wenn Sie ein Data Mining Modell trainieren und Vorhersagen aus einem Mining Modell erstellen möchten, müssen Sie auf Daten zugreifen, die sich außerhalb der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank befinden. Sie verwenden die \< Quelldaten Abfrage>-Klausel in Data Mining-Erweiterungen (DMX), um diese externen Daten zu definieren. Die [INSERT INTO &#40;DMX-&#41;](../dmx/insert-into-dmx.md), [Wählen Sie aus &#60;Modell&#62; Vorhersage Verknüpfung &#40;DMX-&#41;aus ](../dmx/select-from-model-prediction-join-dmx.md), und [Wählen Sie from Natural Vorhersage Join](../dmx/select-from-model-prediction-join-dmx.md) -Anweisungen aus, die alle ** \< Quelldaten Abfrage>** verwenden.  
+  Wenn Sie ein Data Mining Modell trainieren und Vorhersagen aus einem Mining Modell erstellen möchten, müssen Sie auf Daten zugreifen, die sich außerhalb der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank befinden. Verwenden Sie die- \<source data query> Klausel in Data Mining-Erweiterungen (DMX), um diese externen Daten zu definieren. Wenn Sie [in &#40;DMX-&#41;einfügen ](../dmx/insert-into-dmx.md), [Wählen Sie aus &#60;Modell&#62; Vorhersage Verknüpfung &#40;DMX-&#41;aus ](../dmx/select-from-model-prediction-join-dmx.md), und [Wählen Sie aus natürlichen Vorhersage Join](../dmx/select-from-model-prediction-join-dmx.md) -Anweisungen, die **\<source data query>** alle verwenden  
   
 ## <a name="query-types"></a>Abfragetypen  
  Die drei häufigsten Arten zum Angeben von Quelldaten sind:  
