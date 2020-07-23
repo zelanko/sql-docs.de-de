@@ -16,15 +16,15 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 466e63894ac6f735032dad2af99679bdcf28d5d3
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: ee448df6c962596b146c3c933406a23063873d96
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159408"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919946"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Veröffentlichen der Ausführung von gespeicherten Prozeduren in der Transaktionsreplikation
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Wenn Sie gespeicherte Prozeduren verwenden, die auf dem Verleger ausgeführt werden und sich auf die veröffentlichten Tabellen auswirken, sollten Sie darüber nachdenken, diese gespeicherten Prozeduren als Artikel für die Ausführung einer gespeicherten Prozedur in Ihre Veröffentlichung aufzunehmen. Die Definition der Prozedur (die CREATE PROCEDURE-Anweisung) wird beim Initialisieren des Abonnements auf den Abonnenten repliziert. Wenn die Prozedur dann auf dem Verleger ausgeführt wird, führt die Replikation auch die entsprechende Prozedur auf dem Abonnenten aus. Dies kann in den Fällen, in denen umfangreiche Batchvorgänge ausgeführt werden, zu einer deutlichen Leistungssteigerung führen, da nur die Ausführung der Prozedur repliziert wird und sich das Replizieren der einzelnen Änderungen für jede Zeile erübrigt. Nehmen wir z. B. an, Sie erstellen in der Veröffentlichungsdatenbank die folgende gespeicherte Prozedur:  
   
 ```  

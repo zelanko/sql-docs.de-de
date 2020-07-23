@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 24c7f4c128998484be5d75d5db554de605feead7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 71c488398aa18a62e8def8ac94168d03d6d50063
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284414"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919976"
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>Installieren von Microsoft Connector für SAP BW
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector für SAP BW für SQL Server 2016 ist eine Komponente des SQL Server 2016 Feature Pack. Zum Installieren des Connector für SAP BW und der zugehörigen Dokumentation laden Sie das Installationsprogramm von der [SQL Server 2016 Feature Pack-Webseite](https://go.microsoft.com/fwlink/?LinkId=746297)herunter, und führen Sie es aus.  
