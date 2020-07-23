@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e6a0d89b4976076f14fe567b7a95e7cbb47c9f9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401124"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942332"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Hardware Installation für das Analytics Platform System (APS)-Gerät
 In diesem Artikel wird beschrieben, wie Sie die Hardware für Ihre SQL Server PDW Appliance verschieben, entpacken und installieren. Dieser Artikel dient nur zu Informationszwecken und soll Ihnen helfen, den Prozess zu verstehen. Ihre Appliance sollte entpackt, installiert und überprüft werden, bevor Sie auf Sie über geschaltet wird. Kundenbeteiligung ist für Elemente wie den Zugriff auf Rechenzentren, Stromversorgung und Ethernet-Verbindungen erforderlich.  
@@ -54,12 +54,12 @@ Verwenden Sie die folgende Prüfliste, um jedes Appliance Gestell von der Palett
 ## <a name="install-additional-components"></a><a name="AfterMoving"></a>Installieren zusätzlicher Komponenten  
 Verwenden Sie die folgende Checkliste, um die zusätzlichen Komponenten zu installieren.  
   
-|Aufgabe|BESCHREIBUNG||  
-|--------|---------------|-|  
-|Entpacken und Gestell von Netzwerk Switches und PDUs|Verwenden Sie die Regal Diagramme, um die Netzwerk Switches und PDUs an der richtigen Stelle im Gestell zu platzieren.||  
-|Verbinden der InfiniBand-und Ethernet-Kabel gemäß den Kabel Bezeichnungen|Siehe das Verkabelung-Diagramm. Jedes Kabel hat eine Bezeichnung an jedem Ende, das angibt, an welcher Stelle eine Verbindung hergestellt werden muss.||  
-|Verbinden aller Netzkabel|Siehe das Verkabelung-Diagramm.||  
-|Schalten Sie die Stromversorgung für die Racks und die PDUs ein.|Verbinden Sie die Stromversorgung mit den Racks und aus den Racks mit dem PDUs. **Schalten Sie zurzeit keine der anderen Appliance-Komponenten ein.**||  
+|Aufgabe|BESCHREIBUNG|
+|--------|---------------|
+|Entpacken und Gestell von Netzwerk Switches und PDUs|Verwenden Sie die Regal Diagramme, um die Netzwerk Switches und PDUs an der richtigen Stelle im Gestell zu platzieren.|
+|Verbinden der InfiniBand-und Ethernet-Kabel gemäß den Kabel Bezeichnungen|Siehe das Verkabelung-Diagramm. Jedes Kabel hat eine Bezeichnung an jedem Ende, das angibt, an welcher Stelle eine Verbindung hergestellt werden muss.|
+|Verbinden aller Netzkabel|Siehe das Verkabelung-Diagramm.|
+|Schalten Sie die Stromversorgung für die Racks und die PDUs ein.|Verbinden Sie die Stromversorgung mit den Racks und aus den Racks mit dem PDUs. **Schalten Sie zurzeit keine der anderen Appliance-Komponenten ein.**|
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

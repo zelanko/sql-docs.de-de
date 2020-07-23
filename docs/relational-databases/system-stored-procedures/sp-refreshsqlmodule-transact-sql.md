@@ -26,12 +26,12 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2de8653c0a18cc6fabaf2570a10c73184e5c9706
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0f99e3497a8b1c2061ed54348943f1d087ed29bb
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825983"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977690"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,13 +58,12 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>Argumente  
 `[ @name = ] 'module\_name'`Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *module_name* kann keine gespeicherte Prozedur Common Language Runtime (CLR) oder eine CLR-Funktion sein. *module_name* kann nicht Schema gebunden werden. *module_name* ist vom Datentyp **nvarchar**und hat keinen Standardwert. *module_name* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Objekte in der aktuellen Datenbank verweisen.  
   
-`[ , @namespace = ] ' \<class> '`Die Klasse des angegebenen Moduls. Wenn *module_name* ein DDL-Wert ist, \< ist Class> erforderlich. * \< Class>* ist vom Datentyp **nvarchar**(20). Gültige Eingaben sind:  
-  
-|||  
-|-|-|  
-|DATABASE_DDL_TRIGGER||  
-|SERVER_DDL_TRIGGER|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.|  
-  
+`[ , @namespace = ] ' \<class> '`Die Klasse des angegebenen Moduls. Wenn *module_name* ein DDL-auslöst ist, \<class> ist erforderlich. *\<class>* ist vom Datentyp **nvarchar**(20). Gültige Eingaben sind:  
+
+* DATABASE_DDL_TRIGGER
+
+* SERVER_DDL_TRIGGER: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
+
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  
   
@@ -169,7 +168,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_refreshview &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

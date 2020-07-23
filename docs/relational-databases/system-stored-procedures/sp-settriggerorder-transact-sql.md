@@ -18,12 +18,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b90b91773ab0497452e0c12c5f485a36f81b6e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f222261c21ecb96f3599b20917a441898e3325e
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719183"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977714"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |-----------|-----------------|  
 |**First**|Trigger wird zuerst ausgelöst|  
 |**Letzten**|Trigger wird zuletzt ausgelöst|  
-|**None**|Trigger wird in nicht definierter Reihenfolge ausgelöst|  
+|**Keine**|Trigger wird in nicht definierter Reihenfolge ausgelöst|  
   
 `[ @stmttype = ] 'statement_type'`Gibt die SQL-Anweisung an, die den-Triggern auslöst. *statement_type* ist vom Datentyp **varchar (50)** und kann Einfüge-, Aktualisierungs-, Lösch-, Anmelde-oder beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)] in [DDL-Ereignissen](../../relational-databases/triggers/ddl-events.md)aufgeführte Anweisungs Ereignisse sein Ereignisgruppen können nicht angegeben werden.  
   
@@ -63,14 +63,12 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
  ** \@ Namespace =** { **' Database '**  |  **' Server '** | Normal  
  Wenn *Triggername* ein DDL-Trigger ist, gibt der ** \@ Namespace** an, ob *Triggername* mit dem Daten Bankbereich oder dem Serverbereich erstellt wurde. Wenn *Triggername* ein LOGON-Trigger ist, muss der Server angegeben werden. Weitere Informationen zum DDL-Triggerbereich finden Sie unter [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md). Wenn nicht angegeben, oder wenn NULL angegeben wird, ist *Triggername* ein DML-Trigger.  
   
-||  
-|-|  
-|Server gilt für: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.|  
+* Server gilt für: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="dml-triggers"></a>DML-Trigger  
  Für jede Anweisung in einer einzelnen Tabelle können nur ein **erster** und ein **Letzter** Auslösung vorhanden sein.  
