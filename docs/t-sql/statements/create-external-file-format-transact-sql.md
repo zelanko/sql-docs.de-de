@@ -20,29 +20,29 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c32db4bdc26e90faa74800076dade200c1348f6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 129ac690a0615062bb620c8b81dfbdb16a41659e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518640"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942672"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Erstellt ein Objekt im externen Dateiformat und definiert dabei externe Daten, die in Hadoop, Azure Blob Storage, Azure Data Lake Store oder für die Eingabe- und Ausgabestreams gespeichert sind. Das Erstellen eines externen Dateiformats ist eine Voraussetzung für die Erstellung einer externen Tabelle. Durch das Erstellen eines externen Dateiformats geben Sie das tatsächliche Layout der Daten an, auf die von einer externen Tabelle verwiesen wird.  
+Erstellt ein Objekt im externen Dateiformat und definiert dabei externe Daten, die in Hadoop, Azure Blob Storage, Azure Data Lake Store oder für die Eingabe- und Ausgabestreams gespeichert sind. Das Erstellen eines externen Dateiformats ist eine Voraussetzung für die Erstellung einer externen Tabelle. Durch das Erstellen eines externen Dateiformats geben Sie das tatsächliche Layout der Daten an, auf die von einer externen Tabelle verwiesen wird.  
   
 Die folgenden Dateiformate werden unterstützt:
   
--   Durch Trennzeichen getrennter Text  
+- Durch Trennzeichen getrennter Text  
   
--   Hive RCFile  
+- Hive RCFile  
   
--   Hive ORC
+- Hive ORC
   
--   Parquet
+- Parquet
 
--   JSON: gilt nur für Azure SQL Edge
+- JSON: gilt nur für Azure SQL Edge
 
 
 Informationen zur Erstellung einer externen Tabelle finden Sie unter [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
@@ -113,33 +113,33 @@ WITH (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *file_format_name*  
- Gibt einen Namen für das externe Dateiformat an.
+*file_format_name*  
+Gibt einen Namen für das externe Dateiformat an.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] Gibt das Format der externen Daten an.
+FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] Gibt das Format der externen Daten an.
   
-   -   PARQUET Gibt ein Parquet-Format an.
+- PARQUET Gibt ein Parquet-Format an.
   
-   -   ORC  
-   Gibt ein ORC-Format (ORC = Optimized Row Columnar) an. Für diese Option ist auf dem externen Hadoop-Cluster Hive Version 0.11 oder höher erforderlich. In Hadoop bietet das ORC-Dateiformat eine bessere Komprimierung und Leistung als das RCFILE-Dateiformat.
+- ORC  
+  Gibt ein ORC-Format (ORC = Optimized Row Columnar) an. Für diese Option ist auf dem externen Hadoop-Cluster Hive Version 0.11 oder höher erforderlich. In Hadoop bietet das ORC-Dateiformat eine bessere Komprimierung und Leistung als das RCFILE-Dateiformat.
 
-   -   RCFILE (in Kombination mit SERDE_METHOD = *SERDE_method*) Gibt ein RcFile-Format (RcFile = Record Columnar file) an. Für diese Option müssen Sie eine Hive Serializer- und Hive Deserializer-Methode (SerDe) angeben. Diese Anforderung ist auch gegeben, wenn Sie in Hadoop Hive/HiveQL zum Abfragen von RC-Dateien verwenden. Beachten Sie, dass bei der SerDe-Methode die Groß-/Kleinschreibung beachtet werden muss.
+- RCFILE (in Kombination mit SERDE_METHOD = *SERDE_method*) Gibt ein RcFile-Format (RcFile = Record Columnar file) an. Für diese Option müssen Sie eine Hive Serializer- und Hive Deserializer-Methode (SerDe) angeben. Diese Anforderung ist auch gegeben, wenn Sie in Hadoop Hive/HiveQL zum Abfragen von RC-Dateien verwenden. Beachten Sie, dass bei der SerDe-Methode die Groß-/Kleinschreibung beachtet werden muss.
 
-   Beispiele für die Angabe von RCFile mit den zwei von PolyBase unterstützten SerDe-Methoden.
+  Beispiele für die Angabe von RCFile mit den zwei von PolyBase unterstützten SerDe-Methoden.
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
-   -   DELIMITEDTEXT Gibt ein Textformat mit Spaltentrennzeichen (auch als Feldabschlusszeichen bekannt) an.
+- DELIMITEDTEXT Gibt ein Textformat mit Spaltentrennzeichen (auch als Feldabschlusszeichen bekannt) an.
    
-   -  JSON gibt ein JSON-Format an. Es gilt nur für Azure SQL Edge. 
+- JSON gibt ein JSON-Format an. Es gilt nur für Azure SQL Edge. 
   
- FIELD_TERMINATOR = *field_terminator*  
+FIELD_TERMINATOR = *field_terminator*  
 Gilt nur für durch Trennzeichen getrennte Textdateien. Das Feldabschlusszeichen gibt mindestens ein Zeichen an, welches das Ende der einzelnen Felder (Spalten) in der durch Trennzeichen getrennten Textdatei markiert. Als Standardzeichen wird der senkrechte Strich „|“ verwendet. Für eine garantierte Unterstützung wird empfohlen, mehrere ASCII-Zeichen zu verwenden.
   
   
- Beispiele:  
+Beispiele:  
   
 -   FIELD_TERMINATOR = '|'  
   
@@ -149,7 +149,7 @@ Gilt nur für durch Trennzeichen getrennte Textdateien. Das Feldabschlusszeichen
   
 -   FIELD_TERMINATOR = '~|~'  
   
- STRING_DELIMITER = *string_delimiter*  
+STRING_DELIMITER = *string_delimiter*  
 Gibt das Feldabschlusszeichen für Daten der Typzeichenfolge in der durch Trennzeichen getrennten Textdatei an. Das Zeichenfolgen-Trennzeichen umfasst mindestens ein Zeichen und ist in einfache Anführungszeichen gesetzt. Der Standardwert ist die leere Zeichenfolge „“. Für eine garantierte Unterstützung wird empfohlen, mehrere ASCII-Zeichen zu verwenden.
  
   

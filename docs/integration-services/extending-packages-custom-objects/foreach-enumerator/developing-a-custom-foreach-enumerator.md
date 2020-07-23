@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3aedd7aef35555fe11bf67a11254833c52083f9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ec0861b846f3f741bbdada7d8b07d94fae1d64a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297180"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923956"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>Entwickeln eines benutzerdefinierten ForEach-Enumerators
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] verwendet Foreach-Enumeratoren, um die Elementen in einer Auflistung zu durchlaufen und die gleichen Tasks für jedes Element auszuführen. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält eine Vielzahl von Foreach-Enumeratoren, die die am häufigsten verwendeten Auflistungen unterstützen. Dazu gehören alle Dateien in einem Ordner, alle Tabellen in einer Datenbank oder alle Elemente einer in einer Paketvariablen gespeicherten Liste. Sollten die verfügbaren Foreach-Enumeratoren und Auflistungen Ihre Anforderungen nicht vollständig erfüllen, können Sie einen benutzerdefinierten Foreach-Enumerator erstellen.  

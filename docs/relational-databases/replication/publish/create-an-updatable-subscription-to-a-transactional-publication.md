@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68f87213d310c909d266a20c235f1686f66e6902
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0d28fec80479a8eec877452763e78d4fadfa3d2c
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896809"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942836"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Erstellen von aktualisierbaren Abonnements für eine Transaktionsveröffentlichung
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisi
     * `sync tran` – Ermöglicht sofortige Updates des Abonnements.
     * `failover` – Ermöglicht das sofortige Aktualisieren für das Abonnement, wobei als Failoveroption das verzögerte Aktualisieren über eine Warteschlange verwendet wird.
     > [!NOTE]  
->  `failover` erfordert, dass die Veröffentlichung auch Abonnements mit verzögertem Aktualisieren über eine Warteschlange zulässt. 
+    >  `failover` erfordert, dass die Veröffentlichung auch Abonnements mit verzögertem Aktualisieren über eine Warteschlange zulässt. 
  
 4. Führen Sie auf dem Abonnenten [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)aus. Geben Sie Folgendes an:
 
@@ -150,7 +150,7 @@ Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisi
     * Die Windows-Anmeldeinformationen, unter denen der Verteilungs-Agent beim Verteiler für `@job_login` und `@job_password`ausgeführt wird. 
 
     > [!NOTE]  
->  Für Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die mit `@job_login` und `@job_password`angegebenen Windows-Anmeldeinformationen verwendet. Der Verteilungs-Agent stellt die lokale Verbindung mit dem Verteiler immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Abonnenten her. 
+    >  Für Verbindungen, die mit der integrierten Windows-Authentifizierung hergestellt werden, werden immer die mit `@job_login` und `@job_password`angegebenen Windows-Anmeldeinformationen verwendet. Der Verteilungs-Agent stellt die lokale Verbindung mit dem Verteiler immer mithilfe der Windows-Authentifizierung her. Standardmäßig stellt der Agent mithilfe der integrierten Windows-Authentifizierung eine Verbindung mit dem Abonnenten her. 
 
     * (Optional) Ein Wert von `0` für `@subscriber_security_mode` und die SQL Server-Anmeldeinformationen für `@subscriber_login` und `@subscriber_password`, wenn Sie beim Herstellen einer Verbindung zum Abonnenten die SQL Server-Authentifizierung verwenden müssen. 
     * Einen Zeitplan für den Verteilungs-Agentauftrag für dieses Abonnement.
@@ -180,7 +180,7 @@ Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisi
     * `queued failover` – Aktiviert die Unterstützung für verzögerte Updates über eine Warteschlange, wobei sofortige Updates als Failoveroption verwendet werden.
 
     > [!NOTE]  
->  `queued failover` erfordert, dass die Veröffentlichung auch Abonnements mit sofortigem Update zulässt. Damit im Fehlerfall sofortige Updates durchgeführt werden können, müssen Sie unter Verwendung von [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) die Anmeldeinformationen definieren, unter denen Änderungen am Abonnenten auf dem Verleger repliziert werden sollen.
+    >  `queued failover` erfordert, dass die Veröffentlichung auch Abonnements mit sofortigem Update zulässt. Damit im Fehlerfall sofortige Updates durchgeführt werden können, müssen Sie unter Verwendung von [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) die Anmeldeinformationen definieren, unter denen Änderungen am Abonnenten auf dem Verleger repliziert werden sollen.
  
 4. Führen Sie auf dem Abonnenten [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)aus. Geben Sie die folgenden Parameter an:
 

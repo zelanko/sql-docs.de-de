@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e745a2277a01cac3dd120af241e0ae1d7575b562
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9be5e4b3652dec337583123e0232ce9b1442af73
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294746"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923993"
 ---
 # <a name="connect-to-oracle"></a>Herstellen einer Verbindung mit Oracle
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Wenn Sie die in der CDC-Instanz verwendeten Tabellen zum ersten Mal hinzufügen oder bearbeiten, werden Sie möglicherweise aufgefordert, eine Verbindung mit der Oracle-Datenbank herzustellen. Geben Sie die Anmeldeinformationen eines Oracle-Benutzers ein, der auf das Schema der aufzuzeichnenden Tabellen zugreifen kann. Geben Sie in diesem Dialogfeld Folgendes ein:  

@@ -15,15 +15,15 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8f7970284d3960b9c9ea91067a9adef553655b09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 91dfeb8d8086b9d19ab56a419c8ffa556c0708a6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716660"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923742"
 ---
 # <a name="transactional-replication"></a>Transaktionsreplikation
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
   Eine Transaktionsreplikation beginnt in der Regel mit einer Momentaufnahme des Veröffentlichungsdatenbankobjekts und der entsprechenden Daten. Nach der Erstellung der Anfangsmomentaufnahme werden spätere auf dem Verleger vorgenommene Daten- und Schemaänderungen an den Abonnenten übermittelt, wenn sie auftreten (fast in Echtzeit). Die Datenänderungen werden auf dem Abonnenten in derselben Reihenfolge und mit denselben Transaktionsgrenzen angewendet, in der sie auf dem Verleger stattgefunden haben. Auf diese Weise wird die Transaktionskonsistenz innerhalb einer Veröffentlichung sichergestellt.  
   
  Die Transaktionsreplikation wird typischerweise in reinen Serverumgebungen verwendet und ist für die folgenden Fälle geeignet:  

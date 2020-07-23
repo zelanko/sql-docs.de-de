@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 55c02331a87c078b3f510f36dab6c7260d12ad4b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 980300f1deee55be9d8c7977bf813108bcfd1e80
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297059"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923846"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Erstellen einer asynchronen Transformation mit der Skriptkomponente
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Transformationskomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, Daten auf dem Weg von der Quelle zum Ziel zu ändern und zu analysieren. Eine Transformation mit synchronen Ausgaben verarbeitet jede eingegebene Zeile, während sie die Komponente durchläuft. Eine Transformation mit asynchronen Ausgaben kann die Fertigstellung ihrer Verarbeitung abwarten, bis die Transformation alle Eingabezeilen empfangen hat. Die Transformation kann bestimmte Zeilen auch ausgeben, bevor sie alle Eingabezeilen empfangen hat. In diesem Thema wird eine asynchrone Transformation erläutert. Wenn die Verarbeitung eine synchrone Transformation erfordert, finden Sie weitere Informationen unter [Creating a Synchronous Transformation with the Script Component (Erstellen einer synchronen Transformation mit der Skriptkomponente)](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md). Weitere Informationen zu den Unterschieden zwischen synchronen und asynchronen Komponenten finden Sie unter [Understanding Synchronous and Asynchronous Transformations (Grundlegendes zu synchronen und asynchronen Transformationen)](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  

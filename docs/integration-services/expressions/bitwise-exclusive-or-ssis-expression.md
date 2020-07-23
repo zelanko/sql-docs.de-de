@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4afd716b1241371525d2a9def89edc61ba8cc1ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 64e9e58118ab2922f73b5c4dbb1047f12ab02c7e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297702"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923506"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (Bitweises exklusives OR) (SSIS-Ausdruck)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Führt eine bitweise exklusive OR-Operation mit zwei ganzzahligen Werten aus. Jedes Bit des ersten Operanden wird mit dem entsprechenden Bit des zweiten Operanden verglichen. Wenn ein Bit 0 und das andere 1 ist, wird das entsprechende Ergebnisbit auf 1 festgelegt. Wenn beide Bits 0 oder 1 sind, wird das entsprechende Ergebnisbit auf 0 festgelegt.  

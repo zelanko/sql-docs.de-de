@@ -24,12 +24,12 @@ ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0610ec89a4475b9eb60922b1d52c7005d5692bb0
-ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
+ms.openlocfilehash: 136706c3d7074b282eccb8ff910c7a57f8f41874
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86217798"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942262"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -37,9 +37,7 @@ ms.locfileid: "86217798"
 
 ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-## <a name="click-a-product"></a>Wählen Sie ein Produkt.
-
-Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meisten interessiert. Mit nur einem Klick erhalten Sie auf dieser Webseite unterschiedliche Inhalte, die zu dem Produkt passen, das Sie ausgewählt haben.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -149,10 +147,10 @@ Falls CHECK_POLICY auf OFF festgelegt ist, kann CHECK_EXPIRATION nicht auf ON fe
 
 Sie können ALTER LOGIN mit dem DISABLE-Argument nicht dazu verwenden, den Zugriff auf eine Windows-Gruppe zu verweigern. ALTER LOGIN [*domain\group*] DISABLE gibt zum Beispiel die folgende Fehlermeldung zurück:
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
-    This is by design.
+Dies ist beabsichtigt.
   
 In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] werden Anmeldedaten, die für die Authentifizierung einer Verbindung und Firewallregeln auf Serverebene erforderlich sind, über einen gewissen Zeitraum in jeder Datenbank gespeichert. Dieser Cache wird regelmäßig aktualisiert. Führen Sie [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) aus, um eine Aktualisierung des Authentifizierungscache zu erzwingen und sicherzustellen, dass eine Datenbank über die aktuelle Version der Tabelle mit Anmeldenamen verfügt.
 
@@ -552,8 +550,8 @@ Falls CHECK_POLICY auf OFF festgelegt ist, kann CHECK_EXPIRATION nicht auf ON fe
 
 Sie können ALTER_LOGIN mit dem DISABLE-Argument nicht dazu verwenden, den Zugriff auf eine Windows-Gruppe zu verweigern. Dies ist beabsichtigt. ALTER_LOGIN [*domain\group*] DISABLE gibt zum Beispiel die folgende Fehlermeldung zurück:
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
 In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] werden Anmeldedaten, die für die Authentifizierung einer Verbindung und Firewallregeln auf Serverebene erforderlich sind, über einen gewissen Zeitraum in jeder Datenbank gespeichert. Dieser Cache wird regelmäßig aktualisiert. Führen Sie [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) aus, um eine Aktualisierung des Authentifizierungscache zu erzwingen und sicherzustellen, dass eine Datenbank über die aktuelle Version der Tabelle mit Anmeldenamen verfügt.
 
@@ -906,8 +904,8 @@ Falls CHECK_POLICY auf OFF festgelegt ist, kann CHECK_EXPIRATION nicht auf ON fe
 
 Sie können ALTER_LOGIN mit dem DISABLE-Argument nicht dazu verwenden, den Zugriff auf eine Windows-Gruppe zu verweigern. Dies ist beabsichtigt. ALTER_LOGIN [*domain\group*] DISABLE gibt zum Beispiel die folgende Fehlermeldung zurück:
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
 In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] werden Anmeldedaten, die für die Authentifizierung einer Verbindung und Firewallregeln auf Serverebene erforderlich sind, über einen gewissen Zeitraum in jeder Datenbank gespeichert. Dieser Cache wird regelmäßig aktualisiert. Führen Sie [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) aus, um eine Aktualisierung des Authentifizierungscache zu erzwingen und sicherzustellen, dass eine Datenbank über die aktuelle Version der Tabelle mit Anmeldenamen verfügt.
 
