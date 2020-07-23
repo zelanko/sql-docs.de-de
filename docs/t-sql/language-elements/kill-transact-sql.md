@@ -34,12 +34,12 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 055599b3aba3fb84c3b3e2c5e3d710ac32a434f4
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 3cff1d920326f3ca9c0ecbdb04cd81fe98180747
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159748"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915663"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +65,9 @@ KILL 'session_id'
 [;]   
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 _Sitzungs-ID_  
 Die Sitzungs-ID des Prozesses, der beendet werden soll. Die _Sitzungs-ID_ ist eine eindeutige ganze Zahl (**int**), die jeder Benutzerverbindung beim Herstellen der Verbindung zugewiesen wird. Der Sitzungs-ID-Wert ist für die Dauer der Verbindung an die Verbindung gebunden. Beim Beenden der Verbindung wird der ganzzahlige Wert freigegeben und kann einer neuen Verbindung zugewiesen werden.  
 Bei der Suche nach der `session_id`, die Sie beenden möchten, kann folgende Abfrage hilfreich sein:  

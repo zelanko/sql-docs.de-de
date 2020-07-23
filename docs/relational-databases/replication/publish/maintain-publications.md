@@ -15,13 +15,13 @@ ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 92e24c3ac193c3229cd61b098ff7c3287c7de998
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: bde5ff877ff6ddbcb9e4e5b69953e20853a8d3e0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159898"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915376"
 ---
 # <a name="maintain-publications"></a>Verwalten von Veröffentlichungen
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Nachdem Sie eine Veröffentlichung erstellt haben, ist es möglicherweise notwendig, Artikel hinzuzufügen oder zu löschen bzw. die Veröffentlichungs- oder Artikeleigenschaften zu ändern. Die meisten Änderungen sind auch nach der Erstellung der Veröffentlichung möglich. In einigen Fällen muss jedoch eine neue Momentaufnahme für die Veröffentlichung generiert werden, und/oder die Abonnements für die Veröffentlichung müssen erneut initialisiert werden.

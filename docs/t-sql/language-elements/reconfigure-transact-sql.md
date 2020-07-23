@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 240bc2359a3c0c66fc6f95c2392ae78740865a1d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 44ccb855d3a9a4d545d2c882b1d3ff7b788419d2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880409"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915612"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "85880409"
 RECONFIGURE [ WITH OVERRIDE ]    
 ```    
     
-## <a name="arguments"></a>Argumente    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  RECONFIGURE    
  Gibt an, dass der derzeit wirksame Wert aktualisiert werden soll, wenn die Konfigurationseinstellung keinen Serverstopp und Neustart erfordert. RECONFIGURE überprüft darüber hinaus die neuen Konfigurationswerte entweder auf ungültige Werte (z.B. einen Sortierreihenfolgenwert, der nicht in **syscharsets** vorhanden ist) oder auf nicht empfohlene Werte. Bei den Konfigurationsoptionen, die keinen Serverstopp und -neustart erfordern, sollten der derzeit wirksame Wert und der derzeit konfigurierte Wert der Konfigurationsoption nach Angabe von RECONFIGURE identisch sein.    
     

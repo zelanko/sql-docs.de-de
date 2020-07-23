@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 499b62d172ebcf2fef29c9f32a038921d2e2d30c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5b19832b7bf14cf872e6d90db53b72ea3ac703a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706189"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916182"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,9 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *savepoint_name*  
  Dies ist der Name, der dem Sicherungspunkt zugewiesen ist. Sicherungspunktnamen müssen den Regeln für Bezeichner entsprechen, sind jedoch auf 32 Zeichen begrenzt. *savepoint_name* berücksichtigt immer die Groß-/Kleinschreibung, auch wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht zwischen Groß- und Kleinschreibung unterscheidet.  
   

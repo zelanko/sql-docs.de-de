@@ -20,12 +20,12 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cec953dc8bbb6f0baf51f996306f7a960ebc2fdd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b3bbb0c09f819e686185f65dab28123b95f6e2f6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007636"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915456"
 ---
 # <a name="set-operators---union-transact-sql"></a>Mengenoperatoren - UNION (Transact-SQL)
 
@@ -58,7 +58,9 @@ Für die Kombination der Resultsets von zwei Abfragen mit **UNION** gelten die f
   [ ...n ] }
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 \<query_specification> | ( \<query_expression> ) Ist eine Abfragespezifikation oder ein Abfrageausdruck, deren bzw. dessen Rückgabedaten mit den Daten aus anderen Abfragespezifikationen oder Abfrageausdrücken kombiniert werden sollen. Die Definitionen der Spalten, die Bestandteil eines UNION-Vorgangs sind, müssen nicht identisch, jedoch durch implizite Konvertierung kompatibel sein. Wenn sich die Datentypen unterscheiden, wird der Datentyp anhand der Regeln für die [Rangfolge der Datentypen](../../t-sql/data-types/data-type-precedence-transact-sql.md) bestimmt. Wenn die Typen identisch sind, sich aber in Genauigkeit, Dezimalstellen oder Länge unterscheiden, basiert das Ergebnis auf denselben Regeln wie für das Kombinieren von Ausdrücken. Weitere Informationen finden Sie unter [Genauigkeit, Dezimalstellen und Länge (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 Spalten, die dem **xml**-Datentyp angehören, müssen gleich sein. Alle Spalten müssen entweder einen XML-Schematyp aufweisen oder nicht typisiert sein. Wenn sie typisiert sein, müssen sie derselben XML-Schemaauflistung zugeordnet werden.  
