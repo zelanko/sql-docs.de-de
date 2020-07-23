@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 710a9796ae2eb68da9d95c7d9a075bba8b7a7482
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf1f0f443bbc89e38291b9ecb6927cace18334e8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726129"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921786"
 ---
 # <a name="reading-pages"></a>Lesen von Seiten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Die E/A-Aktivitäten einer Instanz von SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] schließen logische und physische Lesevorgänge ein. Ein logischer Lesevorgang erfolgt immer dann, wenn das [!INCLUDE[ssDE](../includes/ssde-md.md)] eine Seite aus dem [Puffercache](../relational-databases/memory-management-architecture-guide.md)anfordert. Wenn sich die Seite derzeit nicht im Puffercache befindet, wird ein physischer Lesevorgang durchgeführt, um die Seite vom Datenträger in den Puffercache zu kopieren.
 

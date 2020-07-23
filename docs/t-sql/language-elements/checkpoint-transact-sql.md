@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-ms.openlocfilehash: edb989e798274860359a89d4a7a184ba19fd04b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec484e698234dc71282a11b07555be73cd2c694d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706651"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923371"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "85706651"
 CHECKPOINT [ checkpoint_duration ]  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *checkpoint_duration*  
  Gibt den Zeitraum in Sekunden an, in dem der manuelle Prüfpunkt abgeschlossen werden muss. Wenn *checkpoint_duration* angegeben ist, versucht [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], den Prüfpunkt innerhalb des angeforderten Zeitraums auszuführen. *checkpoint_duration* muss ein Ausdruck vom Typ **int** sein, der größer ist als 0 (null). Wird dieser Parameter nicht angegeben, wird die Prüfpunktdauer von [!INCLUDE[ssDE](../../includes/ssde-md.md)] angepasst, sodass die Leistung von Datenbankanwendungen nur minimal beeinträchtigt wird. Bei *checkpoint_duration* handelt es sich um eine erweiterte Option.  
   

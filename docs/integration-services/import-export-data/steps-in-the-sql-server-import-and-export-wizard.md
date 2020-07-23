@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6651bbbe15f994250804753a063bb8e61bb15c09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee20fb7253e42a0bc6bf28f7beb790342ea6c581
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731813"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922868"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Schritte im SQL Server-Import/Export-Assistenten
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Dieses Thema beschreibt die Abfolge der Schritte zum Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten. Es enthält auch Links zu den einzelnen Seiten der Dokumentation, die die Seiten bzw. Dialogfelder des Assistenten im Einzelnen beschreiben.
