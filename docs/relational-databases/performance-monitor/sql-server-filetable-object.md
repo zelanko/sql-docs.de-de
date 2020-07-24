@@ -1,5 +1,6 @@
 ---
 title: SQL Server, FileTable Objekt | Microsoft-Dokumentation
+description: Hier lernen Sie das Leistungsobjekt „SQLServer:FileTable“ kennen, das Leistungsindikatoren für Statistiken bereitstellt, die der Dateitabelle und dem nicht transaktionsgebundenen Zugriff zugeordnet sind.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0411ae3768195fd1fb3f5e7f8776a7b71362817
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6abfd3c7bdb7ba03a7ab91a7e242d645590796e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775878"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458824"
 ---
 # <a name="sql-server-filetable-object"></a>SQLServer, FileTable (Objekt)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

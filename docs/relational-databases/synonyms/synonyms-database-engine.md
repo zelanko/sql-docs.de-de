@@ -15,15 +15,15 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e863a04214a27f61581f10c4a2610671bde43635
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e992a6629f3dbff2e8ed5e3b2b9cc568a7b8811
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787257"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918066"
 ---
 # <a name="synonyms-database-engine"></a>Synonyme (Datenbank-Engine)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Ein Synonym ist ein Datenbankobjekt, das zu folgenden Zwecken dient:  
   
 -   Ein Synonym stellt einen alternativen Namen für ein anderes Datenbankobjekt bereit, das als Basisobjekt bezeichnet wird und auf einem lokalen Server oder Remoteserver gespeichert sein kann.  
@@ -35,17 +35,37 @@ Nehmen Sie z. B. die **Employee** -Tabelle von [!INCLUDE[ssSampleDBCoShort](../.
 Um diese beiden Probleme zu vermeiden, können Sie das Synonym **EmpTable**auf **Server2** für die **Employee** -Tabelle auf **Server1**erstellen. Nun muss die Clientanwendung nur den einteiligen Namen **EmpTable**verwenden, um auf die **Employee** -Tabelle zu verweisen. Wenn sich außerdem der Speicherort der **Employee** -Tabelle ändert, müssen Sie das Synonym **EmpTable**ändern, um auf den neuen Speicherort der **Employee** -Tabelle zu verweisen. Da es keine ALTER SYNONYM-Anweisung gibt, müssen Sie zuerst das Synonym **EmpTable**löschen und anschließend mit dem gleichen Namen neu erstellen, aber das Synonym auf den neuen Speicherort der **Employee**-Tabelle verweisen lassen.  
   
 Ein Synonym gehört zu einem Schema, und der Name eines Schemas muss wie andere Objekte in einem Schema eindeutig sein. Sie können Synonyme für die folgenden Datenbankobjekte erstellen:  
-  
-|||  
-|-|-|  
-|Gespeicherte Assemblyprozedur (CLR)|Assembly-Tabellenwertfunktion (CLR)|  
-|Assemblyskalarfunktion (CLR)|Assemblyaggregatfunktion (CLR)|  
-|Replikationsfilterprozedur|Erweiterte gespeicherte Prozedur|  
-|SQL-Skalarfunktion|SQL-Tabellenwertfunktion|  
-|SQL-Inline-Tabellenwertfunktion|Gespeicherte SQL-Prozedur|  
-|Sicht|Tabelle* (benutzerdefiniert)|  
-  
- *Enthält lokale und globale temporäre Tabellen  
+
+:::row:::
+    :::column:::
+        Gespeicherte Assemblyprozedur (CLR)
+
+        Assemblyskalarfunktion (CLR)
+
+        Replikationsfilterprozedur
+
+        SQL-Skalarfunktion
+
+        SQL-Inline-Tabellenwertfunktion
+
+        Sicht
+    :::column-end:::
+    :::column:::
+        Assembly-Tabellenwertfunktion (CLR)
+
+        Assemblyaggregatfunktion (CLR)
+
+        Assemblyaggregatfunktion (CLR)
+
+        SQL-Tabellenwertfunktion
+
+        Gespeicherte SQL-Prozedur
+
+        Tabelle* (benutzerdefiniert)
+    :::column-end:::
+:::row-end:::
+
+*Enthält lokale und globale temporäre Tabellen  
   
 > [!NOTE]  
 > Vierteilige Namen für Funktionsbasisobjekte werden nicht unterstützt.  
@@ -63,23 +83,48 @@ Wenn Sie über ein Standardschema verfügen, das nicht Ihnen gehört, und Sie ei
 Nur Besitzer eines Synonyms, Mitglieder der Rollen **db_owner**oder **db_ddladmin** können Berechtigungen für ein Synonym erteilen.  
   
 Sie können eine `GRANT`-, `DENY`-, `REVOKE`-Anweisung für alle oder eine beliebige Anzahl der folgenden Berechtigungen für ein Synonym ausführen:  
-  
-|||  
-|-|-|  
-|CONTROL|Delete|  
-|Führen Sie|INSERT|  
-|SELECT|TAKE OWNERSHIP|  
-|UPDATE|VIEW DEFINITION|  
-  
+
+:::row:::
+    :::column:::
+      CONTROL
+
+      Führen Sie
+
+      SELECT
+
+      UPDATE
+    :::column-end:::
+    :::column:::
+      Delete
+
+      INSERT
+
+      TAKE OWNERSHIP
+
+      VIEW DEFINITION
+    :::column-end:::
+:::row-end:::
+
 ## <a name="using-synonyms"></a>Verwenden von Synonymen  
- Synonyme können anstelle des Basisobjekts, auf das verwiesen wird, in mehreren SQL-Anweisungen und Ausdruckskontexten verwendet werden. Die folgende Tabelle enthält eine Liste dieser Anweisungen und Ausdruckskontexte:  
-  
-|||  
-|-|-|  
-|SELECT|INSERT|  
-|UPDATE|Delete|  
-|Führen Sie|Untergeordnete SELECT-Anweisungen|  
-  
+ Synonyme können anstelle des Basisobjekts, auf das verwiesen wird, in mehreren SQL-Anweisungen und Ausdruckskontexten verwendet werden. Die folgenden Spalten enthalten eine Liste dieser Anweisungen und Ausdruckskontexte:  
+
+:::row:::
+    :::column:::
+        SELECT
+
+        UPDATE
+
+        Führen Sie
+    :::column-end:::
+    :::column:::
+        INSERT
+
+        Delete
+
+        Untergeordnete SELECT-Anweisungen
+    :::column-end:::
+:::row-end:::
+ 
  Wenn Sie Synonyme in den vorher beschriebenen Kontexten verwenden, ist das Basisobjekt davon betroffen. Angenommen, ein Synonym verweist auf ein Basisobjekt, das eine Tabelle darstellt, und Sie fügen eine Zeile in das Synonym ein. In Wirklichkeit fügen Sie dann eine Zeile in die Tabelle ein, auf die verwiesen wird.  
   
 > [!NOTE]  
@@ -97,19 +142,36 @@ EXEC ('ALTER TABLE dbo.MyProduct
 ```  
   
 Die folgenden Berechtigungsanweisungen beziehen sich nur auf das Synonym, nicht auf das Basisobjekt.  
-  
-|||  
-|-|-|  
-|GRANT|VERWEIGERN|  
-|REVOKE||  
-  
+
+:::row:::
+    :::column:::
+        GRANT
+
+        REVOKE
+    :::column-end:::
+    :::column:::
+        VERWEIGERN
+    :::column-end:::
+:::row-end:::
+
 Synonyme sind nicht schemagebunden. Deshalb kann von den folgenden schemagebundenen Ausdruckskontexten nicht auf Synonyme verwiesen werden:  
-  
-|||  
-|-|-|  
-|CHECK-Einschränkungen|Berechnete Spalten|  
-|Standardausdrücke|Regelausdrücke|  
-|Schemagebundene Sichten|Schemagebundene Funktionen|  
+
+:::row:::
+    :::column:::
+        CHECK-Einschränkungen
+
+        Standardausdrücke
+
+        Schemagebundene Sichten
+    :::column-end:::
+    :::column:::
+        Berechnete Spalten
+
+        Regelausdrücke
+
+        Schemagebundene Funktionen
+    :::column-end:::
+:::row-end:::
   
 Weitere Informationen zu schemagebundenen Funktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &#40;Datenbank-Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   

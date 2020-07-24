@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e26918f5b545068ad5e121452dc704f7d72abe35
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297879"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919510"
 ---
 # <a name="script-component"></a>Skriptkomponente
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Die Skriptkomponente hostet Skripts und ermöglicht einem Paket benutzerdefinierten Skriptcode einzuschließen und benutzerdefinierten Skriptcode auszuführen. Die Skriptkomponente kann in Paketen für folgende Zwecke verwendet werden:  
@@ -133,7 +133,7 @@ ms.locfileid: "71297879"
  Geben Sie einen eindeutigen aussagekräftigen Namen für die Verbindung ein.  
   
  **Verbindungs-Manager**  
- Wählen Sie einen Verbindungs-Manager aus der Liste aus, oder wählen Sie **\<Neue Verbindung>** aus, um das Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** zu öffnen.  
+ Nehmen Sie eine Auswahl in der Liste verfügbarer Verbindungs-Manager vor, oder wählen Sie **\<New connection>** aus, um das Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** zu öffnen.  
   
  **Beschreibung**  
  Geben Sie eine Beschreibung für die Verbindung ein.  

@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 410fb5cc9ebfe04b62b6d196e7757f2455234014
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216896"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920333"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Diese exemplarische Vorgehensweise enthält detaillierte Schritte zum Veröffentlichen eines SSIS-Pakets als SQL-Ansicht in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank.  
@@ -164,9 +164,9 @@ ms.locfileid: "80216896"
   
 1.  Starten Sie SQL Server Management Studio.  
   
-2.  Erweitern Sie \<**Computername**>, **Datenbanken**, \<**Im Assistenten ausgewählte Datenbank**> und **Sichten**.  
+2.  Erweitern Sie \<**machine name**>, **Datenbanken**, \<**database you selected in the wizard**> und **Sichten**.  
   
-3.  Klicken Sie mit der rechten Maustaste auf die \<**vom Assistenten erstellte Sicht**>, und klicken Sie dann auf **Die ersten 1000 Zeilen auswählen**.  
+3.  Klicken Sie mit der rechten Maustaste auf die vom Assistenten erstellte Sicht \<**view created by the wizard**>, und klicken Sie dann auf **Die ersten 1000 Zeilen auswählen**.  
   
 4.  Vergewissern Sie sich, dass die Ergebnisse aus dem SSIS-Paket angezeigt werden.  
   

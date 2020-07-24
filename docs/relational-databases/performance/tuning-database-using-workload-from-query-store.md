@@ -1,5 +1,6 @@
 ---
 title: Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher | Microsoft-Dokumentation
+description: Der Datenbankoptimierungsratgeber (Database Engine Tuning Advisor) unterstützt die Option, bei der man den Abfragespeicher verwenden kann, um automatisch eine entsprechende Arbeitsauslastung für die Optimierung auszuwählen.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a308c4d7236c7822398cd9c8bf9aee94e0ffc61e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7e279c7fe8cb6dd1ea2a716cd2a7a15d73c68e2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737133"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457580"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,9 +36,9 @@ Wählen Sie über die DTA GUI das Optionsfeld **Abfragespeicher** im Bereich **A
 Wählen Sie aus der Befehlszeile („dta.exe“) die Option **-iq** aus, um die Arbeitsauslastung aus dem Abfragespeicher auszuwählen. 
 
 Es stehen zwei zusätzliche Optionen über die Befehlszeile zur Verfügung, über die Sie das Verhalten von DTA bei der Auswahl der Arbeitsauslastung aus dem Abfragespeicher optimieren können. Folgende Optionen sind nicht über die GUI verfügbar:
-  1. **Anzahl der zu optimierenden Workloadereignisse**: Diese Option, die mithilfe des Befehlszeilenarguments **-n** angegeben wird, ermöglicht Benutzern die Kontrolle darüber, wie viele Ereignisse aus dem Abfragespeicher optimiert werden. Standardmäßig verwendet DTA einen Wert von 1000 für diese Option. DTA wählt immer die ressourcenintensivsten Ereignisse nach Gesamtdauer aus. 
+  1. **Anzahl der zu optimierenden Workloadereignisse:** Diese Option, die mithilfe des Befehlszeilenarguments **-n** angegeben wird, ermöglicht Benutzern die Kontrolle darüber, wie viele Ereignisse aus dem Abfragespeicher optimiert werden. Standardmäßig verwendet DTA einen Wert von 1000 für diese Option. DTA wählt immer die ressourcenintensivsten Ereignisse nach Gesamtdauer aus. 
   
-  2. **Zeitfenster der zu optimierenden Ereignisse**: Nachdem der Abfragespeicher möglicherweise viele Abfragen enthält, die vor langer Zeit ausgeführt wurden, ermöglicht diese Option dem Benutzer das Angeben eines vergangenen Zeitfensters (in Stunden), wann eine Abfrage ausgeführt worden sein muss, damit sie von DTA für die Optimierung berücksichtigt wird. Diese Option wird mithilfe des Befehlszeilenarguments **-I** angegeben. 
+  2. **Zeitfenster der zu optimierenden Ereignisse:** Da der Abfragespeicher möglicherweise Abfragen enthält, die vor langer Zeit ausgeführt wurden, ermöglicht diese Option dem Benutzer das Angeben eines vergangenen Zeitfensters (in Stunden), in dem eine Abfrage ausgeführt worden sein muss, damit sie von DTA für die Optimierung berücksichtigt wird. Diese Option wird mithilfe des Befehlszeilenarguments **-I** angegeben. 
 
 Weitere Informationen finden Sie unter [dta Utility](../../tools/dta/dta-utility.md).
 
@@ -46,6 +47,6 @@ Der Unterschied zwischen den Optionen „Abfragespeicher“ und „Plancache“ 
 
 ## <a name="see-also"></a>Weitere Informationen  
 [Datenbankoptimierungsratgeber](../../relational-databases/performance/database-engine-tuning-advisor.md)     
-[Tutorial: Datenbankoptimierungsratgeber](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
+[Tutorial: Database Engine Tuning Advisor (Tutorial: Datenbankoptimierungsratgeber)](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
 [So werden Daten im Abfragespeicher gesammelt](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Abfragespeicher, bewährte Methoden](../../relational-databases/performance/best-practice-with-the-query-store.md)

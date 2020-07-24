@@ -1,6 +1,6 @@
 ---
 title: SQL Server Management Objects-Unterstützung für In-Memory-OLTP
-description: Beschreibt die Elemente in SQL Server Management Objects (SMO), die In-Memory-OLTP unterstützen.
+description: Erfahren Sie, welche Elemente in SQL Server Management Objects (SMO) In-Memory-OLTP unterstützen. Prüfen Sie die Typen und Member im Microsoft.SqlServer.Microsoft.SqlServer.Management.Smo-Namespace.
 ms.custom: seo-dt-2019
 ms.date: 08/18/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 429077aaa011b0de85af351d748baa5484c6e5e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dc1693c1e0d2290fe097a8879240f4b0c6074dd8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734988"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922116"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>SQL Server Management Objects-Unterstützung für In-Memory OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

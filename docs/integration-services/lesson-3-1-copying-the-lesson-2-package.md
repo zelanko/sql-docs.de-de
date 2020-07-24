@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f30cba22276d467c218da4d09749fccb464ac5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9448dada6a93e4cda928f75e06862ad42ee2eee5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295999"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922236"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>Lektion 3.1: Kopieren des Pakets aus Lektion 2
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -45,7 +45,7 @@ Gehen Sie wie folgt vor, wenn Sie das fertige Paket aus Lektion 2 kopieren möch
 
 7.  Ändern Sie im Fenster **Eigenschaften** die Eigenschaft **Name** in **Lesson 3** (Lektion 3).
 
-8.  Aktivieren Sie zunächst das Kontrollkästchen für die Eigenschaft **ID**, klicken Sie dann auf den Dropdownpfeil und anschließend auf **\<Neue ID generieren>** .
+8.  Aktivieren Sie zunächst das Kontrollkästchen für die Eigenschaft **ID**, klicken Sie dann auf den Dropdownpfeil und anschließend auf **\<Generate New ID>** .
 
 ## <a name="add-the-completed-lesson-2-package"></a>Hinzufügen des fertigen Pakets aus Lektion 2
 

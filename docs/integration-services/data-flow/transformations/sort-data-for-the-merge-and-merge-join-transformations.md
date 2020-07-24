@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8dbc3df45f628c55e0d9e1cbf7f3b05b1a746091
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297787"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914296"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]erfordern die Transformationen für Zusammenführen und Zusammenführungsjoin sortierte Daten für ihre Eingaben. Die Eingabedaten müssen physisch sortiert werden, und die Sortierungsoptionen müssen für die Ausgaben und die Ausgabespalten in der Quelle oder Upstreamtransformation festgelegt werden. Wenn die Sortierungsoptionen anzeigen, dass die Daten sortiert sind, dies jedoch in Wirklichkeit nicht der Fall ist, sind die Ergebnisse des Vorgangs der Zusammenführung oder des Zusammenführungsjoins nicht vorhersagbar.  
@@ -75,7 +75,7 @@ ms.locfileid: "71297787"
   
 5.  Klicken Sie auf die Registerkarte **Eingabe- und Ausgabeeigenschaften** .  
   
-6.  Klicken Sie auf **\<Komponentenname> Ausgabe**, und legen Sie die **IsSorted**-Eigenschaft auf **TRUE** fest.  
+6.  Klicken Sie auf **\<component name>-Ausgabe**, und legen Sie die **IsSorted**-Eigenschaft auf **TRUE** fest.  
   
     > [!NOTE]  
     >  Wenn Sie die **IsSorted** -Eigenschaft der Ausgabe manuell auf **True** festlegen und die Daten nicht sortiert sind, kann es beim Ausführen des Pakets in der Downstreamtransformation für Zusammenführung oder des Zusammenführungsjoins zu Vergleichsvorgängen mit fehlenden oder beschädigten Daten kommen.  

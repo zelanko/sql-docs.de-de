@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Speicher-Manager-Objekt | Microsoft-Dokumentation
+description: Hier lernen Sie das „Speicher-Manager“-Objekt kennen, das Leistungsindikatoren bereitstellt, mit denen Sie die gesamte Speicherauslastung des Servers in SQL Server überwachen können.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bab9dfb83a918fe072cc4a97f974f77b0243d06e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1317d52ca3075a5726e528216f569bd91c2a15
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775801"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458796"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, Speicher-Manager-Objekt
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,10 +40,10 @@ ms.locfileid: "85775801"
 |**Freier Arbeitsspeicher (KB)**|Gibt den Umfang des zugesicherten Arbeitsspeichers an, der derzeit nicht vom Server verwendet wird.|  
 |**Zugewiesener Arbeitsbereichsspeicher (KB)**|Gibt den Gesamtumfang des Arbeitsspeichers an, der derzeit dem Ausführen von Prozessen, z. B. Hash-, Sortier-, Massenkopier- und Indexerstellungsvorgängen, zugewiesen ist.|  
 |**Sperrblöcke**|Gibt die aktuelle Anzahl der Sperrblöcke an, die auf dem Server verwendet werden. Wird regelmäßig aktualisiert. Ein Sperrblock stellt eine einzelne gesperrte Ressource, wie z. B. eine Tabelle, Seite oder Zeile, dar.|  
-|**Zugeordnete Sperrblöcke**|Gibt die aktuelle Anzahl der zugeordneten Sperrblöcke an. Beim Starten des Servers hängen die Anzahl der zugeordneten Sperrblöcke und die Anzahl der zugeordneten Sperrenbesitzerblöcke von der Konfigurationsoption [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sperren**in** ab. Wenn mehr Sperrblöcke benötigt werden, steigt der Wert.|  
+|**Zugeordnete Sperrblöcke**|Gibt die aktuelle Anzahl der zugeordneten Sperrblöcke an. Beim Starten des Servers hängen die Anzahl der zugeordneten Sperrblöcke und die Anzahl der zugeordneten Sperrenbesitzerblöcke von der Konfigurationsoption **Sperren** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab. Wenn mehr Sperrblöcke benötigt werden, steigt der Wert.|  
 |**Sperrspeicher (KB)**|Gibt den Gesamtumfang des dynamischen Arbeitsspeichers an, den der Server für Sperren verwendet.|  
 |**Sperrenbesitzerblöcke**|Gibt die Anzahl der Sperrenbesitzerblöcke an, die zurzeit auf dem Server verwendet werden. Wird regelmäßig aktualisiert. Ein Sperrenbesitzerblock stellt den Besitz einer Sperre für ein Objekt durch einen einzelnen Thread dar. Wenn also drei Threads jeweils über eine freigegebene Sperre (S) für eine Seite verfügen, liegen drei Sperrenbesitzerblöcke vor.|  
-|**Zugeordnete Sperrenbesitzerblöcke**|Gibt die aktuelle Anzahl der zugeordneten Sperrenbesitzerblöcke an. Beim Starten des Servers hängen die Anzahl der zugeordneten Sperrenbesitzerblöcke und die Anzahl der zugeordneten Sperrblöcke von der Konfigurationsoption [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sperren**in** ab. Wenn mehr Sperrenbesitzerblöcke benötigt werden, steigt der Wert dynamisch an.|  
+|**Zugeordnete Sperrenbesitzerblöcke**|Gibt die aktuelle Anzahl der zugeordneten Sperrenbesitzerblöcke an. Beim Starten des Servers hängen die Anzahl der zugeordneten Sperrenbesitzerblöcke und die Anzahl der zugeordneten Sperrblöcke von der Konfigurationsoption **Sperren** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab. Wenn mehr Sperrenbesitzerblöcke benötigt werden, steigt der Wert dynamisch an.|  
 |**Protokollpoolspeicher (KB)**|Die Gesamtkapazität des dynamischen Speichers, den der Server für den Protokollpool verwendet.| 
 |**Maximaler Arbeitsbereichsspeicher (KB)**|Gibt den maximalen Umfang des Arbeitsspeichers an, der für das Ausführen von Prozessen, z. B. Hash-, Sortier,- Massenkopier- und Indexerstellungsvorgängen, zur Verfügung steht.|  
 |**Ausstehende Speicherzuweisungen**|Gibt die Gesamtanzahl der Prozesse an, die erfolgreich eine Zuweisung für Arbeitsbereichsspeicher erhalten haben.|  

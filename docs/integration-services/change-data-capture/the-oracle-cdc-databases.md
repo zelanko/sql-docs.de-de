@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c58323e0684b7b3e0397854cf6abec148f616248
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287704"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914016"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC-Datenbanken
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Eine Oracle CDC-Instanz wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank mit dem gleichen Namen auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz zugeordnet. Diese Datenbank wird als Oracle CDC-Datenbank (oder kurz CDC-Datenbank) bezeichnet.  
@@ -49,7 +49,7 @@ ms.locfileid: "79287704"
  Wenn eine CDC-Datenbank erstellt wird und Oracle CDC-Quelltabellen eingerichtet werden, kann der CDC-Datenbankbesitzer die SELECT-Berechtigung für Spiegeltabellen gewähren und SQL Server CDC-Gatingrollen definieren, um zu steuern, welche Benutzer auf die Änderungsdaten zugreifen können.  
   
 ## <a name="mirror-tables"></a>Spiegeltabellen  
- Für jede aufgezeichnete Tabelle der Form \<Schemaname>.\<Tabellenname> in der Oracle-Quelldatenbank wird in der CDC-Datenbank eine ähnliche leere Tabelle erstellt, die das gleiche Schema und den gleichen Tabellennamen aufweist. Oracle-Quelltabellen mit dem Schemanamen `cdc` (Groß-/Kleinschreibung nicht berücksichtigt) können nicht aufgezeichnet werden, da das Schema `cdc` unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die SQL Server CDC reserviert ist.  
+ Für jede aufgezeichnete Tabelle der Form \<schema-name>.\<table-name> in der Oracle-Quelldatenbank wird in der CDC-Datenbank eine ähnliche leere Tabelle erstellt, die das gleiche Schema und den gleichen Tabellennamen aufweist. Oracle-Quelltabellen mit dem Schemanamen `cdc` (Groß-/Kleinschreibung nicht berücksichtigt) können nicht aufgezeichnet werden, da das Schema `cdc` unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die SQL Server CDC reserviert ist.  
   
  Die Spiegeltabellen sind leer. Darin werden keine Daten gespeichert. Sie werden verwendet, um die standardmäßige SQL Server CDC-Infrastruktur zu aktivieren, die von der Oracle CDC-Instanz verwendet wird. Um zu verhindern, dass Daten in die Spiegeltabellen eingefügt oder darin aktualisiert werden, werden alle UPDATE-, DELETE- und INSERT-Vorgänge für PUBLIC verweigert. Dadurch wird sichergestellt, dass die Daten nicht geändert werden können.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "79287704"
 ###  <a name="change-tables-_ct"></a><a name="BKMK_Change_Tables_CT"></a> Änderungstabellen (_CT)  
  Die Änderungstabellen werden aus den Spiegeltabellen erstellt. Sie enthalten die Änderungsdaten, die in der Oracle-Datenbank aufgezeichnet werden. Die Tabellen werden nach der folgenden Konvention benannt:  
   
- **[cdc].[\<Aufzeichnungsinstanz>_CT]**  
+ **[cdc].[\<capture-instance>_CT]**  
   
  Wenn die Aufzeichnung anfänglich für die Tabelle `<schema-name>.<table-name>`aktiviert ist, ist der Standardname der Aufzeichnungsinstanz `<schema-name>_<table-name>`. Der Standardname der Aufzeichnungsinstanz für die Oracle-Tabelle HR.EMPLOYEES ist z. B. HR_EMPLOYEES, und die zugeordnete Änderungstabelle ist [cdc]. [HR_EMPLOYEES_CT].  
   

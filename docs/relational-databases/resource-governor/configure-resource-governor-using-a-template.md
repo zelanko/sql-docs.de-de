@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren der Ressourcenkontrolle mit einer Vorlage | Microsoft Dokumentation
+description: Erfahren Sie, wie Sie Resource Governor mithilfe einer Vorlage konfigurieren, die von SQL Server Management Studio bereitgestellt wird. Sie müssen die Berechtigung „CONTROL SERVER“ besitzen.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bb17a0d2b42528d886430e92b82908a3e08b5694
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b815330ad5088ca449ab3b73f540b3ec2e521629
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720526"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458216"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Konfigurieren der Ressourcenkontrolle mit einer Vorlage
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

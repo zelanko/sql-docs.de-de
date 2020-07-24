@@ -1,5 +1,6 @@
 ---
 title: SQL Server, 'Statistiken für Arbeitsauslastungsgruppen'-Objekt | Microsoft-Dokumentation
+description: Hier lernen Sie das „SQLServer:Statistiken für Arbeitsauslastungsgruppen“-Objekt kennen, das Leistungsindikatoren enthält, die Meldungen zur Resource Governor-Arbeitsauslastungsgruppen-Statistik zurückgeben.
 ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1413ab35860b20a80e1fcae07a0aa5534c1e3965
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6a189c02caaef100b2531b20a986befc5a069ba6
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758880"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458115"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, 'Statistiken für Arbeitsauslastungsgruppen'-Objekt
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

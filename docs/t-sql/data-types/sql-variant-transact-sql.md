@@ -1,5 +1,5 @@
 ---
-title: sql_variant (Transact-SQL) | Microsoft-Dokumentation
+title: sql_variant (Transact-SQL)
 ms.custom: ''
 ms.date: 09/12/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81914007c22cf850693d2a38b0da83cd64cde6c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a16ac1b62c5a0aad216db06dc4e11c8c7263da65
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754806"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556203"
 ---
 # <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Ein Datentyp, der Werte verschiedener von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützter Datentypen speichert.
@@ -36,10 +37,12 @@ Ein Datentyp, der Werte verschiedener von [!INCLUDE[ssNoVersion](../../includes/
   
 ## <a name="syntax"></a>Syntax  
   
-```sql
+```syntaxsql
 sql_variant  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>Bemerkungen  
 **sql_variant** kann in Spalten, Parametern, Variablen und Rückgabewerten von benutzerdefinierten Funktionen verwendet werden. **sql_variant** ermöglicht, dass diese Datenbankobjekte auch Werte mit anderen Datentypen unterstützen.
   
@@ -97,18 +100,24 @@ Für **sql_variant**-Vergleiche gelten die folgenden Regeln:
 ## <a name="converting-sql_variant-data"></a>Konvertieren von sql_variant-Daten  
 Bei der Verarbeitung von **sql_variant**-Datentypen unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die impliziten Konvertierungen von Objekten mit anderen Datentypen in den Typ **sql_variant**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt jedoch keine impliziten Konvertierungen von **sql_variant**-Daten in ein Objekt mit einem anderen Datentyp.
   
-## <a name="restrictions"></a>Beschränkungen  
-In der folgenden Tabelle werden die Typen von Werten aufgelistet, die nicht mithilfe von **sql_variant** gespeichert werden können:
-  
-|||  
-|-|-|  
-|**varchar(max)**|**varbinary(max)**|  
-|**nvarchar(max)**|**xml**|  
-|**text**|**ntext**|  
-|**image**|**rowversion** (**timestamp**)|  
-|**sql_variant**|**geography**|  
-|**hierarchyid**|**geometry**|  
-|Benutzerdefinierte Typen|**datetimeoffset**<sup>1</sup>| 
+## <a name="restrictions"></a>Beschränkungen
+
+Im Folgenden werden die Typen von Werten aufgelistet, die nicht mithilfe von **sql_variant** gespeichert werden können:
+
+- **datetimeoffset**<sup>1</sup>
+- **geography**
+- **geometry**
+- **hierarchyid**
+- **image**
+- **ntext**
+- **nvarchar(max)**
+- **rowversion** (**timestamp**)
+- **text**
+- **varchar(max)**
+- **varbinary(max)**
+- **sql_variant**
+- Benutzerdefinierte Typen
+- **xml**
 
 <sup>1</sup> Bei SQL Server 2012 und höher ist **datetimeoffset** nicht eingeschränkt.
 

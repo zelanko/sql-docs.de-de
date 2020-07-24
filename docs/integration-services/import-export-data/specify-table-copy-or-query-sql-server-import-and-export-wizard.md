@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da112bf3a58d33fd7fae154d5a437c309ab7d2a6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296243"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914341"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Tabelle kopieren oder Datenbank abfragen (SQL Server-Import/Export-Assistent)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Nachdem Sie Informationen zum Ziel Ihrer Daten bereitgestellt haben und darüber, wie Sie eine Verbindung mit ihnen herstellen, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Tabelle kopieren oder Datenbank abfragen**an. Wählen Sie auf dieser Seite eine der folgenden Optionen aus.
@@ -56,7 +56,7 @@ Nachdem Sie auf **Weiter**geklickt haben, geben Sie eine SQL-Anweisung an, um im
 Auch wenn Sie normalerweise keine SQL-Abfragen schreiben, können Sie nach wie vor die Option **Abfrage schreiben** verwenden, sofern Sie den Namen der zu exportierenden Tabelle kennen. Geben Sie im Dialogfeld **Quellabfrage angeben**, das nach Klicken auf **Weiter** angezeigt wird, für die Abfrage `SELECT * FROM <name of table>` ein. Wenn der Name der Tabelle Leerräume oder andere Sonderzeichen enthält, setzen Sie den Namen in eckige Klammern: `SELECT * FROM [<name of table>]`.
 
 ### <a name="more-info"></a>Weitere Informationen
- Die Option **Daten aus mindestens einer Tabelle oder Sicht kopieren** ist nur für Anbieter verfügbar, die über einen ProviderDescription-Abschnitt in der Datei „ProviderDescriptors.xml“ verfügen. (Standardmäßig befindet sich diese Datei unter „\<*Laufwerk*>:\Programme\Microsoft SQL Server\130\DTS\ProviderDescriptors“.) Jeder ProviderDescription-Abschnitt in dieser Datei enthält die Informationen, die erforderlich sind, um Metadaten von dem entsprechenden Anbieter abzurufen.    
+ Die Option **Daten aus mindestens einer Tabelle oder Sicht kopieren** ist nur für Anbieter verfügbar, die über einen ProviderDescription-Abschnitt in der Datei „ProviderDescriptors.xml“ verfügen. (Standardmäßig ist diese Datei unter „\<*drive*>:\Programme\Microsoft SQL Server\130\DTS\ProviderDescriptors“ gespeichert.) Jeder ProviderDescription-Abschnitt in dieser Datei enthält die Informationen, die erforderlich sind, um Metadaten von dem entsprechenden Anbieter abzurufen.    
     
  Standardmäßig enthält die Datei „ProviderDescriptors.xml“ nur für die Anbieter in der folgenden Liste einen ProviderDescription-Abschnitt.    
     

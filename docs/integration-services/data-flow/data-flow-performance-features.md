@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ec9af02a6c7259741e75eae826bc9e15afe3aa80
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73637955"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906776"
 ---
 # <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Dieses Thema bietet Vorschläge, wie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete entworfen werden müssen, damit allgemeine Leistungsprobleme vermieden werden. Dieses Thema enthält zudem Informationen zu Funktionen und Tools, die Sie verwenden können, um Leistungsprobleme von Paketen zu beheben.  
@@ -102,7 +102,7 @@ ms.locfileid: "73637955"
  Es gibt zwei allgemeine Richtlinien, die von der Datenflusskomponente unabhängig sind, die Sie befolgen sollten, um die Leistung zu erhöhen: Optimieren Sie Abfragen, und vermeiden Sie unnötige Zeichenfolgen.  
   
 #### <a name="optimize-queries"></a>Optimieren von Abfragen  
- Zahlreiche Datenflusskomponenten verwenden Abfragen beim Extrahieren von Daten aus Quellen oder bei Suchvorgängen zum Erstellen von Verweistabellen. Die Standardabfrage verwendet die Syntax SELECT * FROM \<Tabellenname>. Bei diesem Abfragetyp werden alle Spalten in der Quelltabelle zurückgegeben. Wenn alle Spalten zur Entwurfszeit zur Verfügung stehen, ist es möglich, eine beliebige Spalte als Such-, Pass-Through- oder Quellspalte auszuwählen. Nachdem Sie die zu verwendenden Spalten ausgewählt haben, sollten Sie die Abfrage so ändern, dass sie nur diese ausgewählten Spalten enthält. Das Entfernen überflüssiger Spalten macht den Datenfluss in einem Paket effizienter, da durch weniger Spalten eine kleinere Zeile erstellt wird. Je kleiner eine Zeile ist, desto mehr Zeilen passen in einen Puffer und desto geringer ist der Aufwand für die Verarbeitung aller Zeilen im Dataset.  
+ Zahlreiche Datenflusskomponenten verwenden Abfragen beim Extrahieren von Daten aus Quellen oder bei Suchvorgängen zum Erstellen von Verweistabellen. Die Standardabfrage verwendet die Syntax SELECT * FROM \<tableName>. Bei diesem Abfragetyp werden alle Spalten in der Quelltabelle zurückgegeben. Wenn alle Spalten zur Entwurfszeit zur Verfügung stehen, ist es möglich, eine beliebige Spalte als Such-, Pass-Through- oder Quellspalte auszuwählen. Nachdem Sie die zu verwendenden Spalten ausgewählt haben, sollten Sie die Abfrage so ändern, dass sie nur diese ausgewählten Spalten enthält. Das Entfernen überflüssiger Spalten macht den Datenfluss in einem Paket effizienter, da durch weniger Spalten eine kleinere Zeile erstellt wird. Je kleiner eine Zeile ist, desto mehr Zeilen passen in einen Puffer und desto geringer ist der Aufwand für die Verarbeitung aller Zeilen im Dataset.  
   
  Wenn Sie eine Abfrage erstellen möchten, können Sie die Abfrage eingeben oder den Abfrage-Generator verwenden.  
   

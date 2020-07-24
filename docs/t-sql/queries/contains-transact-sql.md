@@ -34,16 +34,16 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30942bd7f9c5ff8180eb9adfddedff72d1d97f05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736319"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552575"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Sucht nach genauen oder ungenauen (Fuzzy-)Übereinstimmungen mit einzelnen Wörtern und Satzteilen, für innerhalb einer bestimmten Entfernung angrenzende Wörter sowie für gewichtete Übereinstimmungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS ist ein Prädikat, das in der [WHERE](../../t-sql/queries/where-transact-sql.md)-Klausel einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-SELECT-Anweisung verwendet wird, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextsuchvorgänge für volltextindizierte Spalten mit zeichenbasierten Datentypen durchzuführen.  
   
@@ -140,7 +140,9 @@ CONTAINS (
   
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *column_name*  
  Der Name einer volltextindizierten Spalte der in der FROM-Klausel angegebenen Tabelle. Die Spalten können vom Typ **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** oder **varbinary(max)** sein.  
   
@@ -318,18 +320,18 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Gibt einen Gewichtungswert von 0,0 bis 1,0 an. Jede Komponente in *\<weighted_term>* kann auch einen *weight_value* enthalten. *weight_value* kann die Art und Weise beeinflussen, wie sich verschiedene Teilabfragen auf den Rangwert auswirken, der jeder mit der Abfrage übereinstimmenden Zeile zugewiesen ist. WEIGHT hat keine Auswirkung auf die Ergebnisse von CONTAINS-Abfragen, beeinflusst jedoch den Rang in [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)-Abfragen.  
   
 > [!NOTE]  
->  Das Dezimaltrennzeichen ist immer ein Punkt, unabhängig vom Betriebssystemgebietsschema.  
+> Das Dezimaltrennzeichen ist immer ein Punkt, unabhängig vom Betriebssystemgebietsschema.  
   
- { AND | & } | { AND NOT | &! } | { OR | | }  
+ { AND \| & } \| { AND NOT \| &! } \| { OR \| \| }  
  Gibt einen logischen Vorgang zwischen zwei CONTAINS-Suchbedingungen an.  
   
- { AND | & }  
+ { AND \| & }  
  Gibt an, dass die beiden CONTAINS-Suchbedingungen für eine Übereinstimmung erfüllt sein müssen. Das kaufmännische Und-Zeichen (&) kann anstelle des AND-Schlüsselworts zur Darstellung des AND-Operators verwendet werden.  
   
- { AND NOT | &! }  
+ { AND NOT \| &! }  
  Gibt an, dass die zweite CONTAINS-Suchbedingung für eine Übereinstimmung nicht erfüllt sein darf. Das kaufmännische Und-Zeichen gefolgt von einem Ausrufezeichen (&!) kann anstelle des AND NOT-Schlüsselworts zur Darstellung des AND NOT-Operators verwendet werden.  
   
- { OR | | }  
+ { OR \| \| }  
  Gibt an, dass eine der beiden CONTAINS-Suchbedingungen für eine Übereinstimmung erfüllt sein muss. Der senkrechte Strich (|) kann an Stelle des OR-Schlüsselsorts zur Darstellung des OR-Operators verwendet werden.  
   
  Wenn *\<contains_search_condition>* in Klammern eingeschlossene Gruppen enthält, werden diese zuerst ausgewertet. Nach der Auswertung der in Klammern gesetzten Gruppen gelten folgende Regeln bei der Verwendung der logischen Operatoren mit den CONTAINS-Suchbedingungen:  

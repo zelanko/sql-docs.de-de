@@ -1,5 +1,6 @@
 ---
 title: SQL Server-Agent, Jobs-Objekt | Microsoft-Dokumentation
+description: Hier lernen Sie das Leistungsobjekt „SQL Server-Agent-Aufträge“ kennen, das Leistungsindikatoren enthält, die Informationen über den SQL Server-Aufträgen melden.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 50bc6f07cce0dd1ab52c29ec075dd514808bc49b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d791edff7b4f9aa5dd8693bfec5b146fb44bb0c9
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787427"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458444"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server-Agent, Aufträge-Objekt
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

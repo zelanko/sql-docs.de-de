@@ -3,18 +3,18 @@ title: 'Ubuntu: Installieren von SQL Server für Linux'
 description: In dieser Schnellstartanleitung erfahren Sie, wie Sie SQL Server 2017 oder SQL Server 2019 unter Ubuntu installieren und anschließend mit sqlcmd eine Datenbank erstellen und abfragen.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 07/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 98485bbe09cb7996aec6dacb93751ab1d69b17fe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cce5af380f3706ef6fd6f22578c2b693aff1ad7c
+ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894146"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86438112"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Schnellstart: Installieren von SQL Server und Erstellen einer Datenbank unter Ubuntu
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "85894146"
 
 In dieser Schnellstartanleitung installieren Sie SQL Server 2017 unter Ubuntu 18.04. Danach stellen Sie eine Verbindung mit **sqlcmd** her, um Ihre erste Datenbank zu erstellen und Abfragen auszuführen.
 
+> [!TIP]
+> Für dieses Tutorial sind Benutzereingaben und eine Internetverbindung erforderlich. Wenn Sie am unbeaufsichtigten oder am Offline-Installationsverfahren interessiert sind, finden Sie weitere Informationen im [Leitfaden für die Installation von SQL Server für Linux](sql-server-linux-setup.md). Eine Liste mit unterstützten Plattformen finden Sie in unseren [Versionshinweisen](sql-server-linux-release-notes.md).
+
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
@@ -32,10 +35,10 @@ In dieser Schnellstartanleitung installieren Sie SQL Server 2017 unter Ubuntu 
 
 In diesem Schnellstart installieren Sie SQL Server 2019 unter Ubuntu 18.04. Danach stellen Sie eine Verbindung mit **sqlcmd** her, um Ihre erste Datenbank zu erstellen und Abfragen auszuführen.
 
-::: moniker-end
-
 > [!TIP]
-> Für dieses Tutorial sind Benutzereingaben und eine Internetverbindung erforderlich. Wenn Sie am unbeaufsichtigten oder am Offline-Installationsverfahren interessiert sind, finden Sie weitere Informationen im [Leitfaden für die Installation von SQL Server für Linux](sql-server-linux-setup.md).
+> Für dieses Tutorial sind Benutzereingaben und eine Internetverbindung erforderlich. Wenn Sie am unbeaufsichtigten oder am Offline-Installationsverfahren interessiert sind, finden Sie weitere Informationen im [Leitfaden für die Installation von SQL Server für Linux](sql-server-linux-setup.md). Eine Liste mit unterstützten Plattformen finden Sie in unseren [Versionshinweisen](sql-server-linux-release-notes-2019.md).
+
+::: moniker-end
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

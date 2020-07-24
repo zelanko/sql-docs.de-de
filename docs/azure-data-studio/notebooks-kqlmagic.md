@@ -9,12 +9,12 @@ ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: 2ee07ea6d3999d7ab3f0c32f7d5d47e1429f844d
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: ef59ecb200b30af6c30a5ea602cd89bc2c951e24
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091870"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920468"
 ---
 # <a name="kqlmagic-extension-in-azure-data-studio"></a>Kqlmagic-Erweiterung in Azure Data Studio
 
@@ -255,5 +255,4 @@ Erfahren Sie mehr über Notebooks und Kqlmagic:
 - [Magic-Erweiterung für Jupyter Notebook und Jupyter Lab zum Ermöglichen der Notebook-Funktion mit Daten von Kusto, Application Insights und der Protokollanalyse](https://github.com/Microsoft/jupyter-Kqlmagic)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
-- [Verwenden von Notebooks](notebooks-guidance.md)
-- [How to manage notebooks in Azure Data Studio (Vorgehensweise: Verwalten von Notebooks in Azure Data Studio)](notebooks-manage-sql-server.md)
+- [Verwenden von Notebooks in Azure Data Studio](notebooks-guidance.md)

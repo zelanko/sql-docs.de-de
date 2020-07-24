@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b6f3217854bf72f3c7300c87aefceab24220401a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd679e14920099a6383a414772bc162cdf470645
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281939"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921978"
 ---
 # <a name="set-package-properties"></a>Festlegen von Paketeigenschaften
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mithilfe der grafischen Benutzeroberfläche von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] erstellen, legen Sie die Eigenschaften des Paketobjekts im Eigenschaftenfenster fest.  
@@ -112,7 +112,7 @@ ms.locfileid: "71281939"
 |**CreatorComputerName**|Der Name des Computers, auf dem das Paket erstellt wurde.|  
 |**CreatorName**|Der Name der Person, die das Paket erstellt hat.|  
 |**Beschreibung**|Eine Beschreibung der Paketfunktionalität.|  
-|**ID**|Der Paket-GUID, der dem Paket beim Erstellen zugewiesen wird. Diese Eigenschaft ist schreibgeschützt. Um einen neuen Zufallswert für die **ID**-Eigenschaft zu generieren, wählen Sie in der Dropdownliste **\<Neue ID generieren\>** aus.|  
+|**ID**|Der Paket-GUID, der dem Paket beim Erstellen zugewiesen wird. Diese Eigenschaft ist schreibgeschützt. Um einen neuen Zufallswert für die **ID**-Eigenschaft zu generieren, wählen Sie in der Dropdownliste **\<Generate New ID\>** aus.|  
 |**Name**|Der Name des Pakets.|  
 |**PackageType**|Der Pakettyp. Mögliche Werte sind **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**und **SQLReplication**. Der Standardwert dieser Eigenschaft ist **Default**. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   

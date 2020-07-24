@@ -1,5 +1,6 @@
 ---
 title: Vergleichen von Ausführungsplänen | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie Ähnlichkeiten und Unterschiede zwischen tatsächlichen grafischen Ausführungsplänen mithilfe der Planvergleichsfunktion von SQL Server Management Studio vergleichen können.
 ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: a7e1b2c3b56086e6b08e0f14c49505796921faeb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 855d893ddde9c3eba9f9197c510ed0d03bc658ce
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655740"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457374"
 ---
 # <a name="compare-execution-plans"></a>Vergleichen von Ausführungsplänen
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

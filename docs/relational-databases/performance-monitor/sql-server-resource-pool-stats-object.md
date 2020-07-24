@@ -1,5 +1,6 @@
 ---
 title: SQL Server, 'Statistiken für Ressourcenpools'-Objekt | Microsoft-Dokumentation
+description: Hier lernen Sie das „SQLServer:Statistiken für Ressourcenpools“-Objekt kennen, das Leistungsindikatoren enthält, die Meldungen zur Resource Governor-Poolstatistik zurückgeben.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 35053d98db9b87b06512064e75adf06b4bcd6c51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4629cc0e109946c6dcd2f146e7e18568eca082f0
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758919"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458765"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, 'Statistiken für Ressourcenpools'-Objekt
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

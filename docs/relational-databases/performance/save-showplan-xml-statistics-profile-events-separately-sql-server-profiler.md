@@ -1,5 +1,6 @@
 ---
 title: Separates Speichern der „Showplan XML Statistics“-Ereignisse
+description: Erfahren Sie, wie Sie Showplan XML Statistics Profile-Ereignisses, die in Ablaufverfolgungen erfasst wurden, mit SQL Server Profiler in Dateien speichern. Öffnen Sie die Dateien in SQL Server Management Studio.
 titleSuffix: SQL Server Profiler
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8b4200f709700a3836c47b89aa6c4cee03639c94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aabc4657847b9f4a4cbd9e32268dcf1fccf134ba
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753038"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458712"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Separates Speichern eines Showplan XML Statistics Profile-Ereignisses (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

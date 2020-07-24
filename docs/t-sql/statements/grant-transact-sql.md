@@ -1,5 +1,5 @@
 ---
-title: GRANT (Transact-SQL) | Microsoft-Dokumentation
+title: GRANT (Transact-SQL)
 ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql
@@ -25,14 +25,15 @@ ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4618de753675ef1b3d7ccd2f7a187f22aab9c683
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b89b170d50e23c14cf08da78597e83c674050de0
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010734"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483805"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Erteilt einem Prinzipal Berechtigungen für ein sicherungsfähiges Element.  Das allgemeine Konzept besteht darin, \<some user, login, or group> \<some permission> für \<some object> zu erteilen. Eine allgemeine Diskussion zu Berechtigungen finden Sie unter [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md).  
@@ -54,9 +55,9 @@ GRANT { ALL [ PRIVILEGES ] }
 ```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-GRANT   
+GRANT
     <permission> [ ,...n ]  
-    [ ON [ <class_type> :: ] securable ]   
+    [ ON [ <class_type> :: ] securable ]
     TO principal [ ,...n ]  
     [ WITH GRANT OPTION ]  
 [;]  
@@ -75,68 +76,73 @@ GRANT
 }  
 ```  
   
-## <a name="arguments"></a>Argumente  
- ALL  
- Diese Option ist als veraltet markiert und wird nur aus Gründen der Abwärtskompatibilität beibehalten. Damit werden nicht alle möglichen Berechtigungen erteilt. Das Erteilen mit ALL entspricht dem Erteilen der folgenden Berechtigungen: 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
+
+ALL  
+Diese Option ist als veraltet markiert und wird nur aus Gründen der Abwärtskompatibilität beibehalten. Damit werden nicht alle möglichen Berechtigungen erteilt. Das Erteilen mit ALL entspricht dem Erteilen der folgenden Berechtigungen:
+
+  - Falls es sich beim sicherungsfähigen Element um eine Datenbank handelt, schließt ALL die Berechtigungen BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE und CREATE VIEW ein.  
   
--   Falls es sich beim sicherungsfähigen Element um eine Datenbank handelt, schließt ALL die Berechtigungen BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE und CREATE VIEW ein.  
+  - Falls es sich beim sicherungsfähigen Element um eine skalare Funktion handelt, schließt ALL die Berechtigungen EXECUTE und REFERENCES ein.  
   
--   Falls es sich beim sicherungsfähigen Element um eine skalare Funktion handelt, schließt ALL die Berechtigungen EXECUTE und REFERENCES ein.  
+  - Falls es sich beim sicherungsfähigen Element um eine Tabellenwertfunktion handelt, schließt ALL die Berechtigungen DELETE, INSERT, REFERENCES, SELECT und UPDATE ein.  
   
--   Falls es sich beim sicherungsfähigen Element um eine Tabellenwertfunktion handelt, schließt ALL die Berechtigungen DELETE, INSERT, REFERENCES, SELECT und UPDATE ein.  
+  - Falls es sich beim sicherungsfähigen Element um eine gespeicherte Prozedur handelt, steht ALL für EXECUTE.  
   
--   Falls es sich beim sicherungsfähigen Element um eine gespeicherte Prozedur handelt, steht ALL für EXECUTE.  
+  - Falls es sich beim sicherungsfähigen Element um eine Tabelle handelt, schließt ALL die Berechtigungen DELETE, INSERT, REFERENCES, SELECT und UPDATE ein.  
   
--   Falls es sich beim sicherungsfähigen Element um eine Tabelle handelt, schließt ALL die Berechtigungen DELETE, INSERT, REFERENCES, SELECT und UPDATE ein.  
-  
--   Falls es sich beim sicherungsfähigen Element um eine Sicht handelt, schließt ALL die Berechtigungen DELETE, INSERT, REFERENCES, SELECT und UPDATE ein.  
-  
+  - Falls es sich beim sicherungsfähigen Element um eine Sicht handelt, schließt ALL die Berechtigungen DELETE, INSERT, REFERENCES, SELECT und UPDATE ein.  
+
 PRIVILEGES  
- Aus Gründen der Kompatibilität mit ISO eingeschlossen. Ändert das Verhalten von ALL nicht.  
+Aus Gründen der Kompatibilität mit ISO eingeschlossen. Ändert das Verhalten von ALL nicht.  
   
 *permission*  
- Der Name einer Berechtigung. Die gültigen Zuordnungen von Berechtigungen zu sicherungsfähigen Elementen sind in den im Folgenden aufgeführten untergeordneten Themen beschrieben.  
+Der Name einer Berechtigung. Die gültigen Zuordnungen von Berechtigungen zu sicherungsfähigen Elementen sind in den im Folgenden aufgeführten untergeordneten Themen beschrieben.  
   
 *column*  
- Gibt den Namen einer Spalte in einer Tabelle an, für die Berechtigungen erteilt werden. Die Klammern () sind erforderlich.  
+Gibt den Namen einer Spalte in einer Tabelle an, für die Berechtigungen erteilt werden. Die Klammern () sind erforderlich.  
   
 *class*  
- Gibt die Klasse des sicherungsfähigen Elements an, für das die Berechtigung erteilt wird. Der Bereichsqualifizierer **::** ist erforderlich.  
+Gibt die Klasse des sicherungsfähigen Elements an, für das die Berechtigung erteilt wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
 *securable*  
- Gibt das sicherungsfähige Element an, für das die Berechtigung erteilt wird.  
+Gibt das sicherungsfähige Element an, für das die Berechtigung erteilt wird.  
   
 TO *principal*  
- Der Name eines Prinzipals. Die Prinzipale, für die Berechtigungen für ein sicherungsfähiges Element erteilt werden können, sind abhängig vom jeweiligen sicherungsfähigen Element unterschiedlich. Gültige Kombinationen finden Sie in den folgenden Unterthemen.  
+Der Name eines Prinzipals. Die Prinzipale, für die Berechtigungen für ein sicherungsfähiges Element erteilt werden können, sind abhängig vom jeweiligen sicherungsfähigen Element unterschiedlich. Gültige Kombinationen finden Sie in den folgenden Unterthemen.  
   
 GRANT OPTION  
- Gibt an, dass der Empfänger die angegebene Berechtigung auch anderen Prinzipalen erteilen kann.  
+Gibt an, dass der Empfänger die angegebene Berechtigung auch anderen Prinzipalen erteilen kann.  
   
 AS *principal*  
- Verwenden Sie die AS-Prinzipalklausel, um anzugeben, dass der Prinzipal, der die Berechtigung erteilt hat, ein anderer Prinzipal als die Person sein muss, die die Anweisung ausführt. Nehmen Sie beispielsweise an, dass die Benutzerin Mary der principal_id 12 und der Benutzer Raul der principal_id 15 entspricht. Mary führt `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` aus. Daraufhin gibt die Tabelle „sys.database_permissions“ an, dass die „grantor_prinicpal_id“ „15“ (Raul) entspricht, obwohl die Anweisung tatsächlich von Benutzer 12 (Mary) ausgeführt wurde.
+Verwenden Sie die AS-Prinzipalklausel, um anzugeben, dass der Prinzipal, der die Berechtigung erteilt hat, ein anderer Prinzipal als die Person sein muss, die die Anweisung ausführt. Nehmen Sie beispielsweise an, dass die Benutzerin Mary der principal_id 12 und der Benutzer Raul der principal_id 15 entspricht. Mary führt `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` aus. Daraufhin gibt die Tabelle „sys.database_permissions“ an, dass die „grantor_prinicpal_id“ „15“ (Raul) entspricht, obwohl die Anweisung tatsächlich von Benutzer 12 (Mary) ausgeführt wurde.  
 
 Das Verwenden der AS-Klausel wird üblicherweise nicht empfohlen, sofern Sie nicht explizit die Berechtigungskette definieren müssen. Weitere Informationen finden Sie im Abschnitt **Zusammenfassung des Algorithmus zur Berechtigungsprüfung** unter [Berechtigungen (Datenbank-Engine)](../../relational-databases/security/permissions-database-engine.md).
 
-In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die Identität eines anderen Benutzers anzunehmen. 
-  
-## <a name="remarks"></a>Bemerkungen  
- Die vollständige Syntax der GRANT-Anweisung ist sehr komplex. Das Syntaxdiagramm oben wurde vereinfacht, um die Struktur hervorzuheben. Die vollständige Syntax für das Erteilen von Berechtigungen für spezifische sicherungsfähige Elemente wird in den unten aufgeführten Artikeln beschrieben.  
-  
- Die REVOKE-Anweisung kann zum Entfernen von erteilten Berechtigungen verwendet werden, und mit der DENY-Anweisung kann verhindert werden, dass einem Prinzipal eine spezifische Berechtigung durch eine GRANT-Anweisung erteilt wird.  
-  
- Durch das Erteilen einer Berechtigung wird DENY oder REVOKE für diese Berechtigung aus dem angegebenen sicherungsfähigen Element entfernt. Falls dieselbe Berechtigung aus einem höheren Bereich als dem des sicherungsfähigen Elements verweigert wird, hat DENY Vorrang. Das Aufheben der erteilten Berechtigung in einem höheren Bereich hat jedoch keinen Vorrang.  
-  
- Berechtigungen auf Datenbankebene werden innerhalb des Bereichs der angegebenen Datenbank erteilt. Wenn ein Benutzer Berechtigungen für Objekte in einer anderen Datenbank benötigt, erstellen Sie das Benutzerkonto in der anderen Datenbank oder erteilen dem Benutzerkonto Zugriff auf die aktuelle Datenbank und auf die andere Datenbank.  
-  
+In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die Identität eines anderen Benutzers anzunehmen.
+
+## <a name="remarks"></a>Bemerkungen
+
+Die vollständige Syntax der GRANT-Anweisung ist sehr komplex. Das Syntaxdiagramm oben wurde vereinfacht, um die Struktur hervorzuheben. Die vollständige Syntax für das Erteilen von Berechtigungen für spezifische sicherungsfähige Elemente wird in den unten aufgeführten Artikeln beschrieben.  
+
+Die REVOKE-Anweisung kann zum Entfernen von erteilten Berechtigungen verwendet werden, und mit der DENY-Anweisung kann verhindert werden, dass einem Prinzipal eine spezifische Berechtigung durch eine GRANT-Anweisung erteilt wird.  
+
+Durch das Erteilen einer Berechtigung wird DENY oder REVOKE für diese Berechtigung aus dem angegebenen sicherungsfähigen Element entfernt. Falls dieselbe Berechtigung aus einem höheren Bereich als dem des sicherungsfähigen Elements verweigert wird, hat DENY Vorrang. Das Aufheben der erteilten Berechtigung in einem höheren Bereich hat jedoch keinen Vorrang.  
+
+Berechtigungen auf Datenbankebene werden innerhalb des Bereichs der angegebenen Datenbank erteilt. Wenn ein Benutzer Berechtigungen für Objekte in einer anderen Datenbank benötigt, erstellen Sie das Benutzerkonto in der anderen Datenbank oder erteilen dem Benutzerkonto Zugriff auf die aktuelle Datenbank und auf die andere Datenbank.  
+
 > [!CAUTION]  
->  Eine DENY-Anweisung auf Tabellenebene hat keinen Vorrang vor einer GRANT-Anweisung auf Spaltenebene. Diese Inkonsistenz in der Berechtigungshierarchie wurde aus Gründen der Abwärtskompatibilität beibehalten. Dieses Element wird in einer späteren Version entfernt.  
+> Eine DENY-Anweisung auf Tabellenebene hat keinen Vorrang vor einer GRANT-Anweisung auf Spaltenebene. Diese Inkonsistenz in der Berechtigungshierarchie wurde aus Gründen der Abwärtskompatibilität beibehalten. Dieses Element wird in einer späteren Version entfernt.  
+
+Die gespeicherte Systemprozedur sp_helprotect gibt Informationen zu Berechtigungen für sicherungsfähige Elemente auf Datenbankebene zurück.  
+
+## <a name="with-grant-option"></a>WITH GRANT OPTION
+
+**GRANT** ... **WITH GRANT OPTION** gibt an, dass der Sicherheitsprinzipal, der die Berechtigung erhält, die Fähigkeit erhält, anderen Sicherheitskonten die angegebene Berechtigung zu erteilen. Wenn es sich bei dem Prinzipal, der die Berechtigung erhält, um eine Rolle oder eine Windows-Gruppe handelt, muss die **AS**-Klausel verwendet werden, wenn die Objektberechtigung Benutzern gewährt werden muss, die keine Elemente der Gruppe oder der Rolle sind. Da nur ein Benutzer anstelle einer Gruppe oder Rolle eine **GRANT**-Anweisung ausführen kann, muss ein spezifisches Element der Gruppe oder Rolle die **AS**-Klausel verwenden, um die Rollen- oder Gruppenmitgliedschaft beim Gewähren der Berechtigung explizit aufzurufen. Das folgende Beispiel zeigt, wie die Option **WITH GRANT OPTION** verwendet wird, wenn sie einer Rolle oder einer Windows-Gruppe gewährt wird.  
   
- Die gespeicherte Systemprozedur sp_helprotect gibt Informationen zu Berechtigungen für sicherungsfähige Elemente auf Datenbankebene zurück.  
-  
-## <a name="with-grant-option"></a>WITH GRANT OPTION  
- **GRANT** ... **WITH GRANT OPTION** gibt an, dass der Sicherheitsprinzipal, der die Berechtigung erhält, die Fähigkeit erhält, anderen Sicherheitskonten die angegebene Berechtigung zu erteilen. Wenn es sich bei dem Prinzipal, der die Berechtigung erhält, um eine Rolle oder eine Windows-Gruppe handelt, muss die **AS**-Klausel verwendet werden, wenn die Objektberechtigung Benutzern gewährt werden muss, die keine Elemente der Gruppe oder der Rolle sind. Da nur ein Benutzer anstelle einer Gruppe oder Rolle eine **GRANT**-Anweisung ausführen kann, muss ein spezifisches Element der Gruppe oder Rolle die **AS**-Klausel verwenden, um die Rollen- oder Gruppenmitgliedschaft beim Gewähren der Berechtigung explizit aufzurufen. Das folgende Beispiel zeigt, wie die Option **WITH GRANT OPTION** verwendet wird, wenn sie einer Rolle oder einer Windows-Gruppe gewährt wird.  
-  
-```  
+```sql
 -- Execute the following as a database owner  
 GRANT EXECUTE ON TestProc TO TesterRole WITH GRANT OPTION;  
 EXEC sp_addrolemember TesterRole, User1;  
@@ -145,23 +151,26 @@ EXEC sp_addrolemember TesterRole, User1;
 GRANT EXECUTE ON TestMe TO User2;  
 -- The following succeeds because User1 invokes the TesterRole membership  
 GRANT EXECUTE ON TestMe TO User2 AS TesterRole;  
-```  
-  
-## <a name="chart-of-sql-server-permissions"></a>Diagramm der SQL Server-Berechtigungen  
- Navigieren Sie zu [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster), um ein Diagramm aller [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Berechtigungen im PDF-Format abzurufen.  
-  
-## <a name="permissions"></a>Berechtigungen  
- Der Berechtigende (oder der mit der AS-Option angegebene Prinzipal) benötigt entweder die Berechtigung selbst mit GRANT OPTION oder eine höhere Berechtigung, die die erteilte Berechtigung impliziert. Falls die AS-Option verwendet wird, gelten zusätzliche Anforderungen. Weitere Informationen hierzu finden Sie im Artikel zu sicherungsfähigen Elementen.  
-  
- Objektbesitzer können Berechtigungen für die Objekte erteilen, die sie besitzen. Prinzipale mit CONTROL-Berechtigung für ein sicherungsfähiges Element können die Berechtigung für dieses sicherungsfähige Element erteilen.  
-  
- Empfänger der CONTROL SERVER-Berechtigung, wie z. B. Mitglieder der festen Serverrolle sysadmin, können jede beliebige Berechtigung für jedes beliebige sicherungsfähige Element auf dem Server erteilen. Empfänger der CONTROL-Berechtigung in einer Datenbank, z. B. Mitglieder der festen Datenbankrolle db_owner, können jede Berechtigung für ein beliebiges sicherungsfähiges Element in der Datenbank erteilen. Empfänger der CONTROL-Berechtigung für ein Schema können jede beliebige Berechtigung für jedes Objekt innerhalb des Schemas erteilen.  
-  
-## <a name="examples"></a>Beispiele  
- In der folgenden Tabelle sind die sicherungsfähigen Elemente und Artikel aufgeführt, in denen die für sicherungsfähige Elemente spezifische Syntax beschrieben wird.  
-  
-|||  
-|-|-|  
+```
+
+## <a name="chart-of-sql-server-permissions"></a>Diagramm der SQL Server-Berechtigungen
+
+Navigieren Sie zu [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster), um ein Diagramm aller [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Berechtigungen im PDF-Format abzurufen.  
+
+## <a name="permissions"></a>Berechtigungen
+
+Der Berechtigende (oder der mit der AS-Option angegebene Prinzipal) benötigt entweder die Berechtigung selbst mit GRANT OPTION oder eine höhere Berechtigung, die die erteilte Berechtigung impliziert. Falls die AS-Option verwendet wird, gelten zusätzliche Anforderungen. Weitere Informationen hierzu finden Sie im Artikel zu sicherungsfähigen Elementen.
+
+Objektbesitzer können Berechtigungen für die Objekte erteilen, die sie besitzen. Prinzipale mit CONTROL-Berechtigung für ein sicherungsfähiges Element können die Berechtigung für dieses sicherungsfähige Element erteilen.
+
+Empfänger der CONTROL SERVER-Berechtigung, wie z. B. Mitglieder der festen Serverrolle sysadmin, können jede beliebige Berechtigung für jedes beliebige sicherungsfähige Element auf dem Server erteilen. Empfänger der CONTROL-Berechtigung in einer Datenbank, z. B. Mitglieder der festen Datenbankrolle db_owner, können jede Berechtigung für ein beliebiges sicherungsfähiges Element in der Datenbank erteilen. Empfänger der CONTROL-Berechtigung für ein Schema können jede beliebige Berechtigung für jedes Objekt innerhalb des Schemas erteilen.
+
+## <a name="examples"></a>Beispiele
+
+In der folgenden Tabelle sind die sicherungsfähigen Elemente und Artikel aufgeführt, in denen die für sicherungsfähige Elemente spezifische Syntax beschrieben wird.  
+
+| Sicherungsfähiges Element | GRANT-Syntax|
+| ---------| ------ |
 |Anwendungsrolle|[GRANT (Berechtigungen für Datenbankprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
 |Assembly|[GRANT (Assemblyberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-assembly-permissions-transact-sql.md)|  
 |Asymmetrischer Schlüssel|[GRANT (Berechtigungen für asymmetrische Schlüssel) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-asymmetric-key-permissions-transact-sql.md)|  
@@ -194,15 +203,14 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |Benutzer|[GRANT (Berechtigungen für Datenbankprinzipal) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
 |Sicht|[GRANT (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |XML-Schemasammlung|[GRANT (Berechtigungen für XML-Schemaauflistungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)|  
-  
-## <a name="see-also"></a>Weitere Informationen  
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
- [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
- [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)  
-  
-  
+
+## <a name="see-also"></a>Weitere Informationen
+
+- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)
+- [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)
+- [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)
+- [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)
+- [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)
+- [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)
+- [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)
+- [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)

@@ -1,5 +1,6 @@
 ---
 title: Verwendungsszenarios für den Abfragespeicher | Microsoft-Dokumentation
+description: Erfahren Sie, wie Abfragespeicher verwendet werden kann, um eine vorhersagbare Workloadleistung nachzuverfolgen und sicherzustellen. Sehen Sie sich mehrere Beispiele in SQL Server an.
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a694e18dd4ade720283beea6fc57d5dd4e919d7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0d1da7312c338a866b4fb22df94175a7500d8f7c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85989790"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457642"
 ---
 # <a name="query-store-usage-scenarios"></a>Verwendungsszenarien für den Abfragespeicher
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85989790"
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>Ermitteln und Optimieren von Abfragen mit dem höchsten Ressourcenverbrauch  
  Zwar können im Rahmen Ihrer Arbeitsauslastung Tausende Abfragen generiert werden, normalerweise verwendet jedoch nur eine Handvoll den größten Teil der Systemressourcen und erfordert daher Ihre Aufmerksamkeit. Unter den Abfragen mit dem größten Ressourcenverbrauch finden sich üblicherweise zurückgestellte Abfragen oder solche, die mit weiterer Optimierung verbessert werden können.  
   
- Die Untersuchung lässt sich am einfachsten durch Öffnen von **Abfragen mit dem höchsten Ressourcenverbrauch** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]beginnen. Die Benutzeroberfläche ist in drei Bereiche unterteilt: Ein Histogramm, das die Abfragen mit dem höchsten Ressourcenverbrauch darstellt (links), eine Planzusammenfassung für die ausgewählte Abfrage (rechts) und einen visuellen Abfrageplan für den ausgewählten Plan (unten). Klicken Sie auf die Schaltfläche **Konfigurieren** , um die Anzahl der zu analysierenden Abfragen und das untersuchte Zeitintervall zu steuern. Darüber hinaus können Sie unter verschiedenen Dimensionen des Ressourcenverbrauchs (Dauer, CPU, Arbeitsspeicher, E/A, Anzahl der Ausführungen) und der Baseline (Mittel, Min, Max, Summe, Standardabweichung) wählen.  
+ Die Untersuchung lässt sich am einfachsten durch Öffnen von **Abfragen mit dem höchsten Ressourcenverbrauch** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]beginnen. Die Benutzeroberfläche ist in drei Bereiche unterteilt: Ein Histogramm, das die Abfragen mit dem höchsten Ressourcenverbrauch darstellt (links), eine Planzusammenfassung für die ausgewählte Abfrage (rechts) und eine visuellen Abfrageplan für den ausgewählten Plan (unten). Klicken Sie auf die Schaltfläche **Konfigurieren** , um die Anzahl der zu analysierenden Abfragen und das untersuchte Zeitintervall zu steuern. Darüber hinaus können Sie unter verschiedenen Dimensionen des Ressourcenverbrauchs (Dauer, CPU, Arbeitsspeicher, E/A, Anzahl der Ausführungen) und der Baseline (Mittel, Min, Max, Summe, Standardabweichung) wählen.  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   

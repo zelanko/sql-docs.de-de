@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a5a0b804cb1e5bf130179c7a91ec04fa0d064f12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ada4d9c133bbcb96e1a5c19fa505c4d51eb8b343
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296048"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917266"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>Lektion 2-2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -70,7 +70,7 @@ Nachdem Sie diese Änderungen am Paket vorgenommen haben, iteriert der Foreach-S
   
 1.  Wählen Sie **Variablenzuordnungen** aus.  
   
-2.  Wählen Sie auf der Seite **Variablenzuordnungen** in der Spalte **Variable** die leere Zelle aus, und wählen Sie **\<Neue Variable…>** aus.  
+2.  Wählen Sie auf der Seite **Variablenzuordnungen** in der Spalte **Variable** die leere Zelle aus, und wählen Sie **\<New Variable...>** aus.  
   
 3.  Geben Sie im Dialogfeld **Variable hinzufügen** für **Name** den Namen **varFileName** ein.  
   

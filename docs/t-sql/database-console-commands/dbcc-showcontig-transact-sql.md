@@ -1,5 +1,5 @@
 ---
-title: DBCC SHOWCONTIG (Transact-SQL) | Microsoft-Dokumentation
+title: DBCC SHOWCONTIG (Transact-SQL)
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 3e177015f1d17ff28fe702a4c5998f97999b66ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd596c6915c7df811ff06e7aa5a75472ee106a68
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882035"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485238"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Zeigt Fragmentierungsinformationen für die Daten und Indizes der angegebenen Tabelle oder Sicht an.
@@ -61,11 +62,13 @@ DBCC SHOWCONTIG
     ]  
 ```  
   
-## <a name="arguments"></a>Argumente  
- *table_name* | *table_id* | *view_name* | *view_id*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
+ *table_name* \| *table_id* \| *view_name* \| *view_id*  
  Die Tabelle oder Sicht, für die die Fragmentierungsinformationen überprüft werden sollen. Falls nicht angegeben, werden alle Tabellen und indizierten Sichten der aktuellen Datenbank überprüft. Verwenden Sie die [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)-Funktion, um die ID der Tabelle oder Sicht zu ermitteln.  
   
- *index_name* | *index_id*  
+ *index_name* \| *index_id*  
  Der Index, für den die Fragmentierungsinformationen überprüft werden sollen. Falls nicht angegeben, wird der Basisindex der angegebenen Tabelle oder Sicht von der Anweisung verarbeitet. Verwenden Sie die [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)-Katalogsicht, um die Index-ID abzurufen.  
   
  WITH  

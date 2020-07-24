@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d17145c0fc275d9023446436e4c052c441e8c94
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283014"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922356"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lektion 6.4: Bereitstellen des Pakets aus Lektion 6
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -38,7 +38,7 @@ Diese Aufgabe umfasst folgende Schritte:
   
 1.  Wählen Sie **Start** > **Programme** > **Microsoft SQL Server 2017** und dann **SQL Management Studio** aus.  
   
-2.  Überprüfen Sie im Dialogfeld **Mit Server verbinden** die Standardeinstellungen, und wählen Sie dann **Verbinden** aus. Damit die Verbindung hergestellt werden kann, muss der Name des **Servers** den Namen des Computers enthalten, auf dem SQL Server installiert ist. Wenn es sich bei der **Datenbank-Engine** um eine benannte Instanz handelt, muss im Namen des **Servers** der Instanzname im Format *\<Computername>\\\<Instanzname>* enthalten sein. 
+2.  Überprüfen Sie im Dialogfeld **Mit Server verbinden** die Standardeinstellungen, und wählen Sie dann **Verbinden** aus. Damit die Verbindung hergestellt werden kann, muss der Name des **Servers** den Namen des Computers enthalten, auf dem SQL Server installiert ist. Wenn es sich bei der **Datenbank-Engine** um eine benannte Instanz handelt, muss im Namen des **Servers** der Instanzname im Format *\<computer_name>\\\<instance_name>* enthalten sein. 
   
 3.  Erweitern Sie im **Objekt-Explorer** **Integration Services-Kataloge**.  
   

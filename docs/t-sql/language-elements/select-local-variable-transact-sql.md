@@ -1,5 +1,5 @@
 ---
-title: SELECT @local_variable (Transact-SQL) | Microsoft-Dokumentation
+title: SELECT @local_variable (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -25,14 +25,15 @@ ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 415c2ff263a4a501de441cc04c0f845a1e3592bb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2f1d8bad77c52fcabb3190e28767c945718e1d72
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630239"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910554"
 ---
 # <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Legt eine lokale Variable auf den Wert eines Ausdrucks fest.  
@@ -48,38 +49,43 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
     [ ,...n ] [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
+
 @*local_variable*  
  Dies ist eine deklarierte Variable, der ein Wert zugewiesen wird.  
   
-{= | += | -= | \*= | /= | %= | &= | ^= | |= }   
+{= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }  
 Den Wert auf der rechten Seite der Variablen auf der linken Seite zuweisen.  
   
 Verbundzuweisungsoperator:  
-  |Operator |action |   
-  |-----|-----|  
-  | = | Weist der Variable den darauf folgenden Ausdruck zu. |  
-  | += | Addition und Zuweisung |   
-  | -= | Subtraktion und Zuweisung |  
-  | \*= | Multiplikation und Zuweisung |  
-  | /= | Division und Zuweisung |  
-  | %= | Modulo und Zuweisung |  
-  | &= | Bitweises UND und Zuweisung |  
-  | ^= | Bitweises XOR und Zuweisung |  
-  | \|= | Bitweises OR und Zuweisung |  
-  
- *expression*  
- Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md). Er enthält eine skalare Unterabfrage.  
-  
-## <a name="remarks"></a>Bemerkungen  
- SELECT @*local_variable* dient in der Regel dazu, einen einzelnen Wert in die Variable zurückzugeben. Wenn es sich bei *expression* jedoch um den Namen einer Spalte handelt, können auch mehrere Werte zurückgegeben werden. Falls die SELECT-Anweisung mehr als einen Wert zurückgibt, wird der Variablen der zuletzt zurückgegebene Wert zugewiesen.  
-  
- Wenn die SELECT-Anweisung keine Zeilen zurückgibt, behält die Variable ihren derzeitigen Wert bei. Ist *expression* eine skalare Unterabfrage, die keinen Wert zurückgibt, wird die Variable auf NULL festgelegt.  
-  
- Eine SELECT-Anweisung kann mehrere lokale Variablen initialisieren.  
-  
-> [!NOTE]  
->  Eine SELECT-Anweisung, die eine Variablenzuweisung enthält, kann nicht zugleich zur Durchführung der normalen Abrufvorgänge für Resultsets verwendet werden.  
+
+| Operator | action |  
+| -------- | ------ |  
+| = | Weist der Variable den darauf folgenden Ausdruck zu. |  
+| += | Addition und Zuweisung |  
+| -= | Subtraktion und Zuweisung |  
+| \*= | Multiplikation und Zuweisung |  
+| /= | Division und Zuweisung |  
+| %= | Modulo und Zuweisung |  
+| &= | Bitweises UND und Zuweisung |  
+| ^= | Bitweises XOR und Zuweisung |  
+| \|= | Bitweises OR und Zuweisung |  
+
+*expression*  
+Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md). Er enthält eine skalare Unterabfrage.  
+
+## <a name="remarks"></a>Bemerkungen
+
+SELECT @*local_variable* dient in der Regel dazu, einen einzelnen Wert in die Variable zurückzugeben. Wenn es sich bei *expression* jedoch um den Namen einer Spalte handelt, können auch mehrere Werte zurückgegeben werden. Falls die SELECT-Anweisung mehr als einen Wert zurückgibt, wird der Variablen der zuletzt zurückgegebene Wert zugewiesen.  
+
+Wenn die SELECT-Anweisung keine Zeilen zurückgibt, behält die Variable ihren derzeitigen Wert bei. Ist *expression* eine skalare Unterabfrage, die keinen Wert zurückgibt, wird die Variable auf NULL festgelegt.  
+
+Eine SELECT-Anweisung kann mehrere lokale Variablen initialisieren.  
+
+> [!NOTE]
+> Eine SELECT-Anweisung, die eine Variablenzuweisung enthält, kann nicht zugleich zur Durchführung der normalen Abrufvorgänge für Resultsets verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -99,7 +105,7 @@ SELECT @var1 AS 'Company Name';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```  
+ ```
  Company Name  
  ------------------------------  
  Generic Name  
@@ -121,7 +127,7 @@ SELECT @var1 AS 'Company Name' ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 Company Name  
 ----------------------------  
 NULL  
@@ -132,5 +138,3 @@ NULL
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Verbundoperatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
-  

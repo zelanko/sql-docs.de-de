@@ -1,5 +1,6 @@
 ---
 title: Anzeigen der Eigenschaften der Ressourcenkontrolle | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie Resource Governor-Entitäten erstellen oder konfigurieren, indem Sie die Seite „Eigenschaften“ von Resource Governor in SQL Server Management Studio verwenden.
 ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c19adf7c918fa4a2bd2f48227a8109cef26c64f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ff1c4429b14e359ae249f7a9e9baf2f5da46224
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729264"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457818"
 ---
 # <a name="view-resource-governor-properties"></a>Anzeigen der Eigenschaften der Ressourcenkontrolle
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

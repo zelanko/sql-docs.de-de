@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4941e8bfbb47a5d4d4e7139a6c761483dec7ad8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295667"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921956"
 ---
 # <a name="ssis-designer"></a>SSIS-Designer
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist ein grafisches Tool, mit dem Sie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete erstellen und verwalten können. [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer ist in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] im Rahmen eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts verfügbar.  
@@ -158,7 +158,7 @@ Verwenden Sie die Registerkarte **Datenfluss** des [!INCLUDE[ssIS](../includes/s
  **Löschen**  
  Wählen Sie einen Ereignishandler aus, und entfernen Sie ihn anschließend aus dem Paket, indem Sie auf **Löschen** klicken.  
   
- **Klicken Sie hier, um einen \<Ereignishandlername\> für die ausführbare Datei \<Name der ausführbaren Datei\> zu erstellen.**  
+ **Klicken Sie hier, um einen \<event handler name\> für die ausführbare Datei \<executable name\>** zu erstellen.  
  Klicken Sie, um den Ereignishandler zu erstellen.  
   
  Erstellen Sie den Steuerungsfluss, indem Sie grafische Objekte, die [!INCLUDE[ssIS](../includes/ssis-md.md)] -Tasks und -Container darstellen, aus der **Toolbox** auf die Entwurfsoberfläche der Registerkarte **Ereignishandler** ziehen und diese Objekte dann verbinden, indem Sie Rangfolgeneinschränkungen zum Definieren der Ausführungssequenz verwenden.  

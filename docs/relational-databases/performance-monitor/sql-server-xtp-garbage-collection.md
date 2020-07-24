@@ -1,5 +1,6 @@
 ---
 title: SQL Server-XTP Garbage Collection | Microsoft-Dokumentation
+description: Hier lernen Sie das SQL Server-XTP-Leistungsobjekt für die Garbage Collection kennen, das Leistungsindikatoren für die Garbage Collection der In-Memory-OLTP-Engine enthält.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0edeb2fef45d23faec92846b65626bdc3c00d049
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8575295948b5560f25dc0e967fa419699587af7b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774222"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457962"
 ---
 # <a name="sql-server-xtp-garbage-collection"></a>SQL Server-XTP Garbage Collection
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

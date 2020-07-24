@@ -1,5 +1,6 @@
 ---
 title: Leistungsdashboard | Microsoft-Dokumentation
+description: Erfahren Sie mehr über das Leistungsdashboard von SQL Server Management Studio, das schnelle Erkenntnisse zu SQL Server und der verwalteten Azure SQL-Datenbank-Instanz bietet.
 ms.custom: ''
 ms.date: 12/14/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0372e215646640f1f587964cddd8a302894e633d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 78fa35daa043d698cd8205a4d698c3855e853fcb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754495"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458378"
 ---
 # <a name="performance-dashboard"></a>Leistungsdashboard
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

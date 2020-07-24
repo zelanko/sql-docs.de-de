@@ -1,5 +1,6 @@
 ---
 title: SQL Server, SQL-Statistik-Objekt | Microsoft-Dokumentation
+description: Hier lernen Sie das „SQLServer:SQL-Statistik“-Objekt kennen, das Indikatoren bereitstellt, mit denen Sie die Kompilierung und die Art der Anforderungen, die an eine Instanz von SQL Server gesendet werden, überwachen können.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42dd497f32dc322a7b7808beca0779292198e5e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddb47208f37344a1c7a7985f877486d3254a68f4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758948"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458128"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, SQL-Statistik-Objekt
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

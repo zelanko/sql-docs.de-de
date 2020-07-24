@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 348ec6768d7a1eb47c77759c039d0a465aabed65
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283269"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922226"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Lektion 3.2: Hinzufügen und Konfigurieren der Protokollierung
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -39,7 +39,7 @@ In dieser Aufgabe aktivieren Sie die Protokollierung für den Datenfluss im Pake
   
 5.  Ändern Sie optional **Beschreibung**.  
   
-6.  Klicken Sie in der Spalte **Konfiguration** auf **\<Neue Verbindung>** , um anzugeben, wohin [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] die Protokollinformationen schreibt.  
+6.  Klicken Sie in der Spalte **Konfiguration** auf **\<New Connection>** , um anzugeben, wohin [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] die Protokollinformationen schreibt.  
   
     Wählen Sie im Dialogfeld **Dateiverbindungs-Manager-Editor** für **Verwendungstyp** die Option **Datei erstellen** aus, und klicken Sie anschließend auf **Durchsuchen**. Standardmäßig wird vom Dialogfeld **Datei auswählen** der Projektordner geöffnet, aber Sie können Protokollinformationen an beliebigen Speicherorten speichern.  
   

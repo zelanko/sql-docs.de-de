@@ -1,5 +1,6 @@
 ---
 title: Erstellen von Diagrammen, Warnungen, Protokollen und Berichten | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie Diagramme, Warnunge, Protokolle und Berichte für die Überwachung einer Instanz von SQL Server mithilfe des Systemmonitors erstellen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 006e3d0d5e92dea8146897d57da394b974782813
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d4469138ebcc6e9d2440ec09a9b8241ef0dd035f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787502"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457768"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>Erstellen von Diagrammen, Warnungen, Protokollen und Berichten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

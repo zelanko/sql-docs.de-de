@@ -27,16 +27,16 @@ helpviewer_keywords:
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7121efa290a8cea45804467243e11dbfd98f275
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296878"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921996"
 ---
 # <a name="package-management-ssis-service"></a>Paketverwaltung (SSIS-Dienst)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Die Paketverwaltung umfasst das Überwachen, Verwalten, Importieren und Exportieren von Paketen.  
@@ -130,7 +130,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen...>** , um nach dem zu verwendenden Server zu suchen.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Browse for more...>** , um nach dem zu verwendenden Server zu suchen.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
@@ -166,7 +166,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen...>** , um nach dem zu verwendenden Server zu suchen.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Browse for more...>** , um nach dem zu verwendenden Server zu suchen.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
