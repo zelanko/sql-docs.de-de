@@ -1,1 +1,0 @@
-Synchronisierungsdienste für ADO.NET

@@ -1,1 +1,0 @@
-Satz automatischer Failover

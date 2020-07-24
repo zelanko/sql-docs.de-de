@@ -1,1 +1,0 @@
-Assistent für neue Verfügbarkeitsgruppen

@@ -1,1 +1,0 @@
-Komponente zur DQS-Bereinigung

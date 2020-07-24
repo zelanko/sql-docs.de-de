@@ -1,1 +1,0 @@
-Hier ist das Resultset.
