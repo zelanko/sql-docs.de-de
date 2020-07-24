@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6d37575864666c5aa2b8c47484b5bcac798b3e9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d49a56c7d545a69729f222daad1e9504802e7bcc
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718664"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942374"
 ---
 # <a name="installation-and-configuration"></a>Installation und Konfiguration
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ Anweisungen zur Installation und Konfiguration der OLTP-Datenbank für Wide Worl
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (oder höher) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Verwenden Sie für die vollständige Version des Beispiels SQL Server Evaluation/Developer/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Um die besten Ergebnisse zu erzielen, verwenden Sie die Version vom Juni 2016 oder höher.
 
-## <a name="download"></a>Herunterladen
+## <a name="download"></a>Download
 
 Die neueste Version des Beispiels:
 
@@ -80,7 +80,9 @@ Gilt für: SQL Server
 
 Zum Aktivieren der Überwachung in SQL Server ist die Server Konfiguration erforderlich. Führen Sie die folgende Anweisung in der Datenbank aus, um SQL Server Überwachung für das wideworldimporters-Beispiel zu aktivieren:
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+```sql
+EXECUTE [Application].[Configuration_ApplyAuditing]
+```
 
 In Azure SQL-Datenbank wird Audit über den [Azure-Portal](https://portal.azure.com/)konfiguriert.
 
@@ -90,5 +92,7 @@ Gilt für: Azure SQL-Datenbank
 
 Die Sicherheit auf Zeilenebene ist im BacPac-Download von wideworldimporters standardmäßig nicht aktiviert. Führen Sie die folgende gespeicherte Prozedur aus, um die Sicherheit auf Zeilenebene in der Datenbank zu aktivieren:
 
-    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```sql
+EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```
 

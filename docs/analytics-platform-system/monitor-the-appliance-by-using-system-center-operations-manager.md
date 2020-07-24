@@ -1,5 +1,5 @@
 ---
-title: Überwachen mit SCOM
+title: Verwenden von System Center Operations Manager zum Überwachen von APS
 description: Verwenden Sie System Center Operations Manager (SCOM), um das Analytics Platform System (APS)-Gerät zu überwachen.
 author: mzaman1
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 539c18efe43afcf5436c6913c20cab081974b7f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400970"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941122"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Überwachen mit System Center Operations Manager Analytics Platform System
 Verwenden Sie System Center Operations Manager (SCOM), um das Analytics Platform System (APS)-Gerät zu überwachen.
@@ -56,10 +56,10 @@ Auf der Seite Appliances-Diagramm können Sie sich die Integrität Ihrer Applian
   
 ![Anwendungsdiagramm](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
-### <a name="nodes"></a>Knoten  
+### <a name="nodes"></a>Nodes  
 Zum Schluss können Sie in der Ansicht "Knoten" die Integrität Ihrer Appliance über jeden Knoten anzeigen:  
   
-![Knoten](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
+![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>Weitere Informationen  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

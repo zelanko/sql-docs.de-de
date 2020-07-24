@@ -84,7 +84,7 @@ Die Verwaltungskonsole bietet die Möglichkeit, Folgendes zu überwachen:
 |Informationstyp|Zugreifen auf die Verwaltungskonsole|
 |-|-|
 |Gesamtstatus des Geräts|Klicken Sie im Menü oben auf **Appliance State** ( **Startseite**).|  
-|Alerts|Klicken Sie auf **Warnungen**. Weitere Informationen finden Sie Untergrund Legendes zu Warnungen in der [Administrator Konsole &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
+|Warnungen|Klicken Sie auf **Warnungen**. Weitere Informationen finden Sie Untergrund Legendes zu Warnungen in der [Administrator Konsole &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
 |Gerätekomponenten und deren Status|Klicken Sie im Menü oben auf **Appliance State** ( **Startseite**).|  
 |Überwachen von Anforderungen (einschließlich Abfragen, Ladungen, Sicherungen und Wiederherstellungen)|Klicken Sie auf **Sitzungen** , um die derzeit aktiven oder letzten Sitzungen anzuzeigen.<br /><br />Klicken Sie auf **Abfragen** , um die derzeit aktiven oder aktuellen Abfragen anzuzeigen. Die für Abfragen angezeigten Informationen umfassen Ladungen, Sicherungen und Wiederherstellungen.<br /><br />Klicken Sie auf **Sperren** , um aktive Sperren anzuzeigen.|  
 |Überwachen zusätzlicher Informationen zu Lasten, Sicherungen und Wiederherstellungen.|Klicken **Sie** auf Ladevorgänge oder **Sicherungen/** Wiederherstellungen.|  

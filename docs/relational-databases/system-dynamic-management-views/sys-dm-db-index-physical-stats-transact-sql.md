@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dcde5de27764979cf2258d3d1895574a4ca4e54
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677915"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112759"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -110,11 +110,17 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Durchschnittliche Datensatzgröße in Bytes.<br /><br /> Bei einem Index bezieht sich die durchschnittliche Datensatzgröße auf die aktuelle B-Strukturebene in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei einem Heap auf die durchschnittliche Datensatzgröße in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Bei LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheiten auf die durchschnittliche Datensatzgröße in der gesamten Zuordnungseinheit.<br /><br /> NULL, wenn *Mode* = Limited ist.|  
 |forwarded_record_count|**bigint**|Anzahl der Datensätze in einem Heap, die Weiterleitungszeiger auf einen anderen Datenspeicherort besitzen. (Dieser Status tritt während eines Updates auf, wenn nicht genügend Speicherplatz vorhanden ist, um die neue Zeile am ursprünglichen Speicherort zu speichern.)<br /><br /> NULL für eine beliebige Zuordnungseinheit außer IN_ROW_DATA-Zuordnungseinheiten für einen Heap.<br /><br /> NULL für Heaps, wenn *Mode* = Limited.|  
 |compressed_page_count|**bigint**|Die Anzahl der komprimierten Seiten.<br /><br /> Bei Heaps sind neu zugeordnete Seiten nicht mit PAGE seitenkomprimiert. Ein Heap wird nur unter zwei besonderen Bedingungen PAGE-komprimiert: wenn Massendaten importiert werden oder wenn ein Heap neu erstellt wird. Typische DML-Vorgänge, die Seitenzuordnungen hervorrufen, werden nicht PAGE-komprimiert. Erstellen Sie einen Heap neu, wenn der compressed_page_count-Wert den gewünschten Schwellenwert überschreitet.<br /><br /> Für Tabellen mit gruppiertem Index gibt der compressed_page_count-Wert die Wirksamkeit der PAGE-Komprimierung an.|  
-|hobt_id|BIGINT|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Nur für columnstore--Indizes ist dies die ID für ein Rowset, das interne columnstore--Daten für eine Partition nachverfolgt. Die Rowsets werden als Daten Heaps oder Binär Strukturen gespeichert. Sie verfügen über dieselbe Index-ID wie der übergeordnete columnstore--Index. Weitere Informationen finden Sie unter [sys. internal_partitions &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL, wenn|  
-|column_store_delete_buffer_state|TINYINT|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = ableiten<br /><br /> 3 = leeren<br /><br /> 4 = wird abgekoppelt<br /><br /> 5 = bereit|  
-|column_store_delete_buff_state_desc||**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Ungültig-der übergeordnete Index ist kein columnstore--Index.<br /><br /> Open-deleters und Scanner verwenden diesen.<br /><br /> Löschvorgänge werden entsperrt, aber von den Scannern weiterhin verwendet.<br /><br /> Der leeren Puffer ist geschlossen, und die Zeilen im Puffer werden in die Delete-Bitmap geschrieben.<br /><br /> Das Zurückziehen von Zeilen im geschlossenen Lösch Puffer wurde in die Delete-Bitmap geschrieben, aber der Puffer wurde nicht abgeschnitten, da er von den Scannern noch verwendet wird. Neue Scanner müssen nicht den abkoppeln Puffer verwenden, da der geöffnete Puffer ausreichend ist.<br /><br /> Bereit: dieser Lösch Puffer ist einsatzbereit.|  
-  
-## <a name="remarks"></a>Hinweise  
+|hobt_id|BIGINT|Nur für columnstore--Indizes ist dies die ID für ein Rowset, das interne columnstore--Daten für eine Partition nachverfolgt. Die Rowsets werden als Daten Heaps oder Binär Strukturen gespeichert. Sie verfügen über dieselbe Index-ID wie der übergeordnete columnstore--Index. Weitere Informationen finden Sie unter [sys. internal_partitions &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL, wenn <br /><br /> **Gilt für**: SQL Server 2016 und höher, Azure SQL-Datenbank, Azure SQL-verwaltete Instanz|  
+|column_store_delete_buffer_state|TINYINT| 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = ableiten<br /><br /> 3 = leeren<br /><br /> 4 = wird abgekoppelt<br /><br /> 5 = bereit<br /><br />**Gilt für**: SQL Server 2016 und höher, Azure SQL-Datenbank, Azure SQL-verwaltete Instanz|  
+|column_store_delete_buff_state_desc|| Ungültig-der übergeordnete Index ist kein columnstore--Index.<br /><br /> Open-deleters und Scanner verwenden diesen.<br /><br /> Löschvorgänge werden entsperrt, aber von den Scannern weiterhin verwendet.<br /><br /> Der leeren Puffer ist geschlossen, und die Zeilen im Puffer werden in die Delete-Bitmap geschrieben.<br /><br /> Das Zurückziehen von Zeilen im geschlossenen Lösch Puffer wurde in die Delete-Bitmap geschrieben, aber der Puffer wurde nicht abgeschnitten, da er von den Scannern noch verwendet wird. Neue Scanner müssen nicht den abkoppeln Puffer verwenden, da der geöffnete Puffer ausreichend ist.<br /><br /> Bereit: dieser Lösch Puffer ist einsatzbereit. <br /><br /> **Gilt für**: SQL Server 2016 und höher, Azure SQL-Datenbank, Azure SQL-verwaltete Instanz|  
+|version_record_count|**bigint**|Dies ist die Anzahl der Zeilen Versionsdaten Sätze, die in diesem Index verwaltet werden.  Diese Zeilen Versionen werden von der [beschleunigten Daten Bank Wiederherstellungs](../../relational-databases/accelerated-database-recovery-concepts.md) Funktion verwaltet. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+|inrow_version_record_count|**bigint**|Anzahl der AdR-Versionsdaten Sätze, die in der Daten Zeile für den schnellen Abruf aufbewahrt werden. <br /><br />  [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e|  
+|inrow_diff_version_record_count|**bigint**| Die Anzahl der AdR-Versionsdaten Sätze, die in Form von Unterschieden von der Basisversion aufbewahrt werden. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|total_inrow_version_payload_size_in_bytes|**bigint**|Gesamtgröße (in Bytes) der Einträge in der Zeilen interner-Version für diesen Index. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_regular_version_record_count|**bigint**|Anzahl der Versionsdaten Sätze, die außerhalb der ursprünglichen Daten Zeile aufbewahrt werden. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_long_term_version_record_count|**bigint**|Anzahl von Versionsdaten Sätzen, die als langfristig angesehen werden. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+
+## <a name="remarks"></a>Bemerkungen  
  Die dynamische Verwaltungsfunktion sys.dm_db_index_physical_stats ersetzt die DBCC SHOWCONTIG-Anweisung.  
   
 ## <a name="scanning-modes"></a>Scanmodi  
@@ -424,12 +430,12 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Index Related Dynamic Management Views and Functions (Transact-SQL) (Indexbezogene dynamische Verwaltungssichten und -funktionen (Transact-SQL))](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys. dm_db_index_usage_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys. dm_db_partition_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys. allocation_units &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [System Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

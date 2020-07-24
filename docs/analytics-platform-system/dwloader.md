@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401177"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942342"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>"dwloader-Befehlszeilen Lade Modul für parallele Data Warehouse
 **"dwloader** ist ein Befehlszeilen Tool für parallele Data Warehouse (PDW), das Tabellenzeilen in einem Massen Vorgang in eine vorhandene Tabelle lädt. Beim Laden von Zeilen können Sie alle Zeilen am Ende der Tabelle (*Anfügen* -oder *vom fastappend Lademodus-Modus*) hinzufügen, neue Zeilen anfügen und vorhandene Zeilen aktualisieren (*Upsert-Modus*) oder alle vorhandenen Zeilen vor dem Laden löschen und dann alle Zeilen in eine leere Tabelle (erneuten*laden Modus*) einfügen.  
@@ -43,7 +43,7 @@ ms.locfileid: "74401177"
   
 5.  Führen Sie **"dwloader**aus.  
   
-    Melden Sie sich beim Lade Server an, und führen Sie die ausführbare Datei " **dwloader. exe** " mit den entsprechenden Befehlszeilenoptionen aus.  
+    Melden Sie sich beim Lade Server an, und führen Sie die ausführbare **dwloader.exe** mit den entsprechenden Befehlszeilenoptionen aus.  
   
 6.  Überprüfen Sie die Ergebnisse.  
   
@@ -195,21 +195,21 @@ So laden Sie mehrere Dateien mit einem Befehl:
   
 Beispiele:  
   
--   -i \\\loadserver\loads\daily\\*. gz  
+-   -i \\ \loadserver\loads\daily \\ *. gz  
   
--   -i \\\loadserver\loads\daily\\*. txt  
+-   -i \\ \loadserver\loads\daily \\ *. txt  
   
--   -i \\\loadserver\loads\daily\monday. *  
+-   -i \\ \loadserver\loads\daily\monday. *  
   
 -   -i \\\loadserver\loads\daily\monday.txt  
   
--   -i \\\loadserver\loads\daily\\*  
+-   -i \\ \loadserver\loads\daily\\*  
   
 **-R** *load_failure_file_name*  
 Wenn Ladefehler auftreten, speichert **"dwloader** die Zeile, die nicht geladen werden konnte, und die Fehlerbeschreibung in einer Datei mit dem Namen *load_failure_file_name*. Wenn diese Datei bereits vorhanden ist, wird die vorhandene Datei von "dwloader überschrieben. *load_failure_file_name* wird erstellt, wenn der erste Fehler auftritt. Wenn alle Zeilen erfolgreich geladen wurden, wird *load_failure_file_name* nicht erstellt.  
   
 **-FH** *number_header_rows*  
-Die Anzahl der Zeilen (Zeilen), die am Anfang *source_data_file_name*ignoriert werden sollen. Der Standardwert ist 0.  
+Die Anzahl der Zeilen (Zeilen), die am Anfang *source_data_file_name*ignoriert werden sollen. Die Standardeinstellung ist 0.  
   
 <variable_length_column_options>  
 Die Optionen für eine *source_data_file_name* , die über Zeichen getrennte Spalten mit variabler Länge verfügt. Standardmäßig enthält *source_data_file_name* ASCII-Zeichen in Spalten variabler Länge.  
@@ -290,9 +290,9 @@ Der Pfad und der Name der Konfigurationsdatei, die die Anzahl der Zeichen in jed
   
 Diese Datei muss sich auf dem Lade Server befinden. Der Pfad kann ein UNC-, relativer oder absoluter Pfad sein. Jede Zeile in *fixed_width_config_file* enthält den Namen einer Spalte und die Anzahl der Zeichen für diese Spalte. Es gibt eine Zeile pro Spalte, wie im folgenden dargestellt, und die Reihenfolge in der Datei muss mit der Reihenfolge in der Ziel Tabelle übereinstimmen:  
   
-*column_name*=*num_chars*  
+*column_name* = *num_chars*  
   
-*column_name*=*num_chars*  
+*column_name* = *num_chars*  
   
 Beispiel für eine Konfigurationsdatei mit fester Breite:  
   
@@ -340,17 +340,17 @@ Beispiele für LF:
   
 Für UNIX ist ein LF erforderlich. Für Windows ist eine CR erforderlich.  
   
-**-D** { **YMD** | ydm | MDY | MYD |  DMY | dym | *custom_date_format* }  
+**-D** { **YMD** \| ydm \| MDY \| MYD \| DMY \| dym \| *custom_date_format* }  
 Gibt die Reihenfolge von Monat (m), Tag (d) und Jahr (y) für alle DateTime-Felder in der Eingabedatei an. Die Standard Reihenfolge ist YMD. Verwenden Sie die Option-dt, um mehrere Bestell Formate für dieselbe Quelldatei anzugeben.  
   
-YMD | DMY  
+YMD- \| DMY  
 ydm und DMY lassen dieselben Eingabeformate zu. Beide ermöglichen es, dass das Jahr am Anfang oder am Ende des Datums liegt. Beispielsweise können sowohl für **ydm** -als auch für **DMY** -Datumsformate in der Eingabedatei 2013-02-03 oder 02-03-2013 vorhanden sein.  
   
 ydm  
 Sie können nur als ydm formatierte Eingaben in Spalten vom Datentyp DateTime und smalldatetime laden. Ydm-Werte können nicht in eine Spalte des Datentyps datetime2, Date oder DateTimeOffset geladen werden.  
   
 dmy  
-MDY ermöglicht <month> <space> <day> <comma>. <year>  
+MDY ermöglicht \<month> \<space> \<day> \<comma> \<year> .  
   
 Beispiele für MDY-Eingabedaten für den 1. Januar 1975:  
   
@@ -490,7 +490,7 @@ Verfügbar mit Cu 7.4 Update, gibt die maximale Zeilenlänge (in Byte) an, die g
 ## <a name="return-code-values"></a>Rückgabecodewerte  
 0 (Erfolg) oder andere ganzzahlige Werte (Fehler)  
   
-Verwenden `errorlevel` Sie in einem Befehlsfenster oder in einer Batchdatei, um den Rückgabecode anzuzeigen. Beispiel:  
+Verwenden Sie in einem Befehlsfenster oder in einer Batchdatei, `errorlevel` um den Rückgabecode anzuzeigen. Beispiel:  
   
 ```  
 dwloader  
@@ -499,7 +499,7 @@ if not %errorlevel%==0 echo Fail
 if %errorlevel%==0 echo Success  
 ```  
   
-Wenn Sie PowerShell verwenden, `$LastExitCode`verwenden Sie.  
+Wenn Sie PowerShell verwenden, verwenden Sie `$LastExitCode` .  
   
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert die Load-Berechtigung und die anwendbaren Berechtigungen (INSERT, Update, DELETE) in der Ziel Tabelle. Erfordert die CREATE-Berechtigung (zum Erstellen einer temporären Tabelle) für die Stagingdatenbank. Wenn keine Stagingdatenbank verwendet wird, ist die CREATE-Berechtigung für die Zieldatenbank erforderlich. 
@@ -555,11 +555,11 @@ Der Anfügen-Modus lädt Daten in zwei Phasen. In Phase 1 werden Daten gleichzei
 |Tabellentyp|Mehrere Transaktionen<br />Modus (-m)|Die Tabelle ist leer.|Unterstützte Parallelität|Protokollierung|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Heap|Ja|Ja|Ja|Wenig|  
-|Heap|Ja|Nein |Ja|Wenig|  
+|Heap|Ja|Nein|Ja|Wenig|  
 |Heap|Nein |Ja|Nein|Wenig|  
 |Heap|Nein|Nein|Nein|Wenig|  
 |Schl|Ja|Ja|Nein|Wenig|  
-|Schl|Ja|Nein |Ja|Vollständig|  
+|Schl|Ja|Nein|Ja|Vollständig|  
 |Schl|Nein |Ja|Nein|Wenig|  
 |Schl|Nein|Nein |Ja|Vollständig|  
   
@@ -568,7 +568,7 @@ In der obigen Tabelle wird **"dwloader** mit dem Anfüge Modus in einen Heap ode
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-simple-dwloader-example"></a>A. Einfaches Beispiel für "dwloader  
-Im folgenden Beispiel wird die Initiierung des **Lade** Moduls mit nur den erforderlichen Optionen gezeigt. Andere Optionen werden von der globalen Konfigurationsdatei " *loadparamfile. txt*" übernommen.  
+Im folgenden Beispiel wird die Initiierung des **Lade** Moduls mit nur den erforderlichen Optionen gezeigt. Andere Optionen werden von der globalen Konfigurationsdatei, *loadparamfile.txt*, übernommen.  
   
 Beispiel für die Verwendung SQL Server-Authentifizierung.  
   
@@ -598,13 +598,13 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. Laden von Daten in eine AdventureWorks-Tabelle  
-Das folgende Beispiel ist Teil eines Batch Skripts, mit dem Daten in **AdventureWorksPDW2012**geladen werden.  Um das vollständige Skript anzuzeigen, öffnen Sie die Datei aw_create. bat, die im Lieferumfang des **AdventureWorksPDW2012** -Installationspakets enthalten ist. 
+Das folgende Beispiel ist Teil eines Batch Skripts, mit dem Daten in **AdventureWorksPDW2012**geladen werden.  Um das vollständige Skript anzuzeigen, öffnen Sie die Datei aw_create.bat, die im Lieferumfang des **AdventureWorksPDW2012** -Installationspakets enthalten ist. 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-Im folgenden Skript Ausschnitt wird "dwloader verwendet, um Daten in die DimAccount-und DimCurrency-Tabellen zu laden. Dieses Skript verwendet eine Ethernet-Adresse. Wenn InfiniBand verwendet wurde, wäre der Server *<appliance_name>* `-SQLCTL01`.  
+Im folgenden Skript Ausschnitt wird "dwloader verwendet, um Daten in die DimAccount-und DimCurrency-Tabellen zu laden. Dieses Skript verwendet eine Ethernet-Adresse. Wenn InfiniBand verwendet wurde, wäre der Server *<appliance_name>* `-SQLCTL01` .  
   
 ```  
 set server=10.193.63.134  
@@ -646,7 +646,7 @@ with (CLUSTERED INDEX(AccountKey),
 DISTRIBUTION = REPLICATE);  
 ```  
   
-Im folgenden finden Sie ein Beispiel für die Datendatei "DimAccount. txt", die Daten enthält, die in die Tabelle "DimAccount" geladen werden sollen.  
+Im folgenden finden Sie ein Beispiel für die Datendatei, DimAccount.txt, die Daten enthält, die in die Tabelle "DimAccount" geladen werden sollen.  
   
 ```  
 --Sample of data in the DimAccount.txt load file.  
@@ -675,7 +675,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 Beschreibung der Befehlszeilenparameter:  
   
--   *C:\Programme\Microsoft SQL Server parallel Data Warehouse-\100\dwloader.exe* ist der installierte Speicherort von "dwloader. exe".  
+-   *C:\Programme\Microsoft SQL Server parallel Data Warehouse\100\dwloader.exe* ist der installierte Speicherort dwloader.exe.  
   
 -   Auf *-S* folgt die IP-Adresse des Steuerelement Knotens.  
   
@@ -685,17 +685,17 @@ Beschreibung der Befehlszeilenparameter:
   
 -   *-e UTF16* gibt an, dass für die Quelldatei der kleine Endian-Zeichen Codierungstyp verwendet wird.  
   
--   *-i .\dimaccount.txt* gibt an, dass sich die Daten in einer Datei mit dem Namen "DimAccount. txt" befinden, die im aktuellen Verzeichnis vorhanden ist.  
+-   *-i .\DimAccount.txt* gibt an, dass sich die Daten in einer Datei mit dem Namen DimAccount.txt befinden, die im aktuellen Verzeichnis vorhanden ist.  
   
 -   *-T AdventureWorksPDW2012. dbo. DimAccount* gibt den dreiteiligen Namen der Tabelle an, die die Daten empfangen soll.  
   
 -   *-R DimAccount. Bad* gibt an, dass die Zeilen, die nicht geladen werden können, in eine Datei mit dem Namen "DimAccount. Bad" geschrieben werden.  
   
--   *-t "|"* Gibt an, dass die Felder in der Eingabedatei "DimAccount. txt" durch das Senk Zeichen Zeichen getrennt sind.  
+-   *-t "|"* Gibt an, dass die Felder in der Eingabedatei (DimAccount.txt) durch das senkrechter Strich getrennt sind.  
   
--   *-r \r\n* gibt an, dass jede Zeile in DimAccount. txt mit einem Wagen Rücklauf und einem Zeilenvorschub Zeichen endet.  
+-   *-r \r\n* gibt an, dass jede Zeile in DimAccount.txt mit einem Wagen Rücklauf und einem Zeilenvorschub Zeichen endet.  
   
--   *-U <login_name>-P <password> * gibt den Anmelde Namen und das Kennwort für den Anmelde Namen an, der über Berechtigungen zum Ausführen der Last verfügt.  
+-   *-U <login_name>-P <password> * Gibt den Anmelde Namen und das Kennwort für den Anmelde Namen an, der über Berechtigungen zum Ausführen der Last verfügt.  
   
 
 <!-- MISSING LINK
