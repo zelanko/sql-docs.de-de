@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f137b52e04d73cb99b30319cac8f1f34137f681
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d8c45d25dd63149145fc732642b873bc4e7a6193
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871270"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122428"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,51 +34,49 @@ ms.locfileid: "85871270"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```syntaxsql  
 sp_clean_db_file_free_space   
-[ @dbname ] = 'database_name'   
-, @fileid = 'file_number'   
- [ , [ @cleaning_delay = ] 'delay_in_seconds' ] [;]  
+  [ @dbname = ] 'database_name'   
+  , [ @fileid = ] 'file_number'   
+  [ , [ @cleaning_delay = ] 'delay_in_seconds' ] [;]  
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @dbname =] '*database_name*'  
+ @dbname= '*database_name*'  
  Der Name der zu bereinigenden Datenbank. *dbname* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein.  
   
- [ @fileid =] '*file_number*'  
+ @fileid= '*file_number*'  
  Die ID der zu bereinigenden Datendatei. *file_number* ist vom Datentyp **int** und kann nicht NULL sein.  
   
- [ @cleaning_delay =] '*delay_in_seconds*'  
+ @cleaning_delay= '*delay_in_seconds*'  
  Gibt das Intervall zwischen dem Bereinigen von Seiten an. Hierdurch werden die Auswirkungen auf das E/A-System verringert. *delay_in_seconds* ist vom Datentyp **int** und hat den Standardwert 0.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Durch Löschvorgänge für eine Tabelle oder Updatevorgänge, die zum Verschieben einer Zeile führen, kann sofort Speicherplatz für eine Seite freigegeben werden, indem Verweise auf die Zeile entfernt werden. Unter bestimmten Umständen kann die Zeile jedoch als inaktiver Datensatz (ghost record) weiter physisch auf der Datenseite vorhanden sein. Inaktive Datensätze werden regelmäßig durch einen im Hintergrund ausgeführten Prozess entfernt. Diese verbleibenden Daten werden von nicht [!INCLUDE[ssDE](../../includes/ssde-md.md)] als Antwort auf Abfragen zurückgegeben. In Umgebungen, in denen die physische Sicherheit der Daten- oder Sicherungsdateien gefährdet ist, können Sie jedoch die inaktiven Datensätze mithilfe von sp_clean_db_file_free_space löschen.  
+ Durch Löschvorgänge für eine Tabelle oder Updatevorgänge, die zum Verschieben einer Zeile führen, kann sofort Speicherplatz für eine Seite freigegeben werden, indem Verweise auf die Zeile entfernt werden. Unter bestimmten Umständen kann die Zeile jedoch als inaktiver Datensatz (ghost record) weiter physisch auf der Datenseite vorhanden sein. Inaktive Datensätze werden regelmäßig durch einen im Hintergrund ausgeführten Prozess entfernt. Diese verbleibenden Daten werden von nicht [!INCLUDE[ssDE](../../includes/ssde-md.md)] als Antwort auf Abfragen zurückgegeben. In Umgebungen, in denen die physische Sicherheit der Daten-oder Sicherungsdateien gefährdet ist, können Sie jedoch verwenden, `sp_clean_db_file_free_space` um diese inaktiven Datensätze zu bereinigen. Verwenden Sie [sp_clean_db_free_space (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md), um diesen Vorgang für alle Datenbankdateien gleichzeitig auszuführen. 
   
- Die zum Ausführen von sp_clean_db_file_free_space erforderliche Dauer hängt von der Größe der Datei, dem freien Speicherplatz und der Kapazität des Datenträgers ab. Weil sich das Ausführen von sp_clean_db_file_free_space erheblich auf die E/A-Aktivität auswirken kann, sollten Sie diese Prozedur außerhalb der normalen Betriebszeit ausführen.  
+ Die zum Ausführen von sp_clean_db_file_free_space erforderliche Dauer hängt von der Größe der Datei, dem freien Speicherplatz und der Kapazität des Datenträgers ab. Da das Ausführen von die e `sp_clean_db_file_free_space` /a-Aktivität erheblich beeinträchtigen kann, empfiehlt es sich, dieses Verfahren außerhalb der normalen Betriebsstunden auszuführen.  
   
- Vor dem Ausführen von sp_clean_db_file_free_space sollten Sie eine vollständige Datenbanksicherung durchführen.  
+ Bevor Sie Ausführen `sp_clean_db_file_free_space` , wird empfohlen, eine vollständige Datenbanksicherung zu erstellen.  
   
  Mit der zugehörigen [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) gespeicherten Prozedur werden alle Dateien in der Datenbank bereinigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der Datenbankrolle db_owner.  
+ Erfordert die Mitgliedschaft in der `db_owner` Daten Bank Rolle.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden alle Restinformationen aus der primären Datendatei der `AdventureWorks2012`-Datenbank gelöscht.  
   
-```  
+```sql  
 USE master;  
 GO  
-EXEC sp_clean_db_file_free_space   
-@dbname = N'AdventureWorks2012', @fileid = 1 ;  
+EXEC sp_clean_db_file_free_space @dbname = N'AdventureWorks2012', @fileid = 1;  
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
- <br>[Prozess Leit Faden für inaktive Cleanup](../ghost-record-cleanup-process-guide.md) 
-  
-  
+ [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Prozess Leit Faden für inaktive Cleanup](../ghost-record-cleanup-process-guide.md)    
+ [sp_clean_db_free_space (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)
+   

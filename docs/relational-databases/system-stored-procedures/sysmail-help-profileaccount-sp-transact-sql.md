@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8fae7b7f9ec0fbd5a8310bcbdacc6a436dd232c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be5cfcdd06dfeea2215f3c65a2b672b68e28035f
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890870"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122695"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,16 +57,15 @@ sysmail_help_profileaccount_sp
 ## <a name="result-sets"></a>Resultsets  
  Gibt ein Resultset mit den folgenden Spalten zurück.  
   
-||||  
-|-|-|-|  
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+| Spaltenname | Datentyp | BESCHREIBUNG |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|Die Profil-ID des Profils.|  
 |**profile_name**|**sysname**|Der Name des Profils.|  
 |**account_id**|**int**|Die Konto-ID des Kontos.|  
 |**account_name**|**sysname**|Der Name des Kontos.|  
 |**sequence_number**|**int**|Die Sequenznummer des Kontos innerhalb des Profils.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wird weder *profile_id* noch *profile_name* angegeben, gibt diese gespeicherte Prozedur Informationen für jedes Profil in der Instanz zurück.  
   
  Die gespeicherte Prozedur **sysmail_help_profileaccount_sp** wird in der **msdb** -Datenbank gespeichert und befindet sich im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  

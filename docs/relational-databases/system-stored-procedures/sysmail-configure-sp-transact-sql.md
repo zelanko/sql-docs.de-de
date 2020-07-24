@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3156ac4443bd116767ece63c37cbe0ff51198984
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: df5b364408b012a186ca090b6d3a6d7de77119cf
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890989"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122341"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,9 +59,8 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>Bemerkungen  
  Datenbank-E-Mail verwendet die folgenden Parameter:  
   
-||||  
-|-|-|-|  
-|Parametername|BESCHREIBUNG|Standardwert|  
+| Parametername | BESCHREIBUNG | Standardwert |
+| -------------- | ----------- | ------------- |
 |*AccountRetryAttempts*|Gibt an, wie oft der externe E-Mail-Prozess versucht, die E-Mail-Nachricht zu senden, wobei jedes Konto im angegebenen Profil verwendet wird.|**1**|  
 |*AccountRetryDelay*|Gibt an, wie lange (in Sekunden) der externe E-Mail-Prozess zwischen zwei Versuchen, eine Nachricht zu senden, warten soll.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime konfigurierten*|Gibt an, wie lange (in Sekunden) der externe E-Mail-Prozess mindestens aktiv bleibt. Wenn Datenbank-E-Mail viele Nachrichten sendet, sollten Sie diesen Wert erhöhen, damit Datenbank-E-Mail aktiv bleibt und unnötiger Aufwand durch häufiges Starten und Beenden vermieden wird.|**600**|  

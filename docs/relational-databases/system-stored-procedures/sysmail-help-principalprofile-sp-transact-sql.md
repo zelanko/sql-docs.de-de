@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 024eec5c9e74eb48ac57dcf16a40a7783d79f5b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f4d5af37675811b978e444e40e730ad59fd823b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890894"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122735"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,22 +55,21 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ## <a name="result-sets"></a>Resultsets  
  Gibt ein Resultset zurück, das die in der folgenden Tabelle aufgelisteten Spalten enthält.  
   
-||||  
-|-|-|-|  
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+| Spaltenname | Datentyp | BESCHREIBUNG |
+| ----------- | --------- | ----------- |
 |**principal_id**|**int**|Die ID des Datenbankbenutzers.|  
 |**principal_name**|**sysname**|Der Name des Datenbankbenutzers.|  
 |**profile_id**|**int**|Die ID des Datenbank-E-Mail-Profils.|  
 |**profile_name**|**sysname**|Der Name des Datenbank-E-Mail-Profils.|  
 |**is_default**|**bit**|Das Flag, das besagt, ob es sich bei dem Profil um das Standardprofil des Benutzers handelt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn **sysmail_help_principalprofile_sp** ohne Parameter aufgerufen wird, listet das zurückgegebene Resultset alle Zuordnungen in der Instanz von auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Andernfalls enthält das Resultset Informationen zu Zuordnungen, die mit den bereitgestellten Parametern übereinstimmen. So listet beispielsweise die Prozedur alle Zuordnungen für ein Profil auf, wenn der Profilname bereitgestellt wird.  
   
  **sysmail_help_principalprofile_sp** befindet sich in der **msdb** -Datenbank und befindet sich im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
   

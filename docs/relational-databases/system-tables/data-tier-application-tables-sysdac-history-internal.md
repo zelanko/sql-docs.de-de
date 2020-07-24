@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08b90446625fb2d2f8375c44d2854f3f679cea32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890571"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123021"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tabellen von Datenschichtanwendung: sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85890571"
 |**dac_object_type**|**tinyint**|Bezeichner des Typs des von der Aktion betroffenen Objekts:<br /><br /> **0** = dacpac<br /><br /> **1** = Anmeldung<br /><br /> **2** = Datenbank|  
 |**dac_object_type_name**|**varchar (8)**|Name des Typs des von der Aktion betroffenen Objekts:<br /><br /> **dacpac** = DAC-Instanz<br /><br /> **Anmel**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Code, der den aktuellen Status der Aktion identifiziert:<br /><br /> **0** = ausstehend<br /><br /> **1** = Erfolg<br /><br /> **2** = Fehler|  
-|**action_status_name**|**varchar (11)**|Aktueller Status der Aktion:<br /><br /> **pending**<br /><br /> **erfolglos**<br /><br /> **UN**|  
+|**action_status_name**|**varchar (11)**|Aktueller Status der Aktion:<br /><br /> **ausstehende**<br /><br /> **erfolglos**<br /><br /> **UN**|  
 |**Erforderlich**|**bit**|Wird von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet, wenn das Rollback eines DAC-Vorgangs ausgeführt wird.|  
 |**dac_object_name_pretran**|**sysname**|Name des Objekts, bevor ein Commit für die Transaktion ausgeführt wird, in der die Aktion enthalten ist. Wird nur für Datenbanken und Anmeldenamen verwendet.|  
 |**dac_object_name_posttran**|**sysname**|Name des Objekts, nachdem ein Commit für die Transaktion ausgeführt wurde, in der die Aktion enthalten ist. Wird nur für Datenbanken und Anmeldenamen verwendet.|  
@@ -51,12 +51,11 @@ ms.locfileid: "85890571"
 |**date_created**|**datetime**|Datum und Uhrzeit, zu denen dieser Eintrag erstellt wurde.|  
 |**date_modified**|**datetime**|Datum und Uhrzeit, zu denen der Eintrag zuletzt geändert wurde.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Durch DAC-Verwaltungsaktionen, z. B. das Bereitstellen oder Löschen einer DAC, werden mehrere Schritte generiert. Jeder Aktion wird ein Aktionsbezeichner zugewiesen. Jedem Schritt werden eine Sequenznummer und eine Zeile in **sysdac_history_internal**zugewiesen, in der der Status des Schritts aufgezeichnet wird. Die einzelnen Zeilen werden mit Beginn des Aktionsschritts erstellt und bei Bedarf aktualisiert, um dem Status des Vorgangs zu entsprechen. Beispielsweise könnte eine DAC-Bereitstellungs Aktion **action_id** 12 zugewiesen werden, und es können vier Zeilen in **sysdac_history_internal**erhalten werden:  
   
-|||||  
-|-|-|-|-|  
-|**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
+| action_id | sequence_id | action_type_name | dac_object_type_name |
+| --------- | ----------- | ---------------- | -------------------- |
 |12|0|create|dacpac|  
 |12|1|create|login|  
 |12|2|create|database|  

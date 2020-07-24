@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8374beba2eda97df3817dc27c337e46f9ba57780
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11242eae3f17e24c428aac3a6f344d937f15dd33
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890920"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122694"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,9 +49,8 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ## <a name="result-sets"></a>Resultsets  
  Gibt ein Resultset mit den nachfolgend aufgelisteten Spalten zurück.  
   
-||||  
-|-|-|-|  
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+| Spaltenname | Datentyp | BESCHREIBUNG |
+| ----------- | --------- | ----------- |
 |**account_id**|**int**|ID des Kontos|  
 |**name**|**sysname**|Der Name des Kontos.|  
 |**description**|**nvarchar(256)**|Beschreibung des Kontos|  
@@ -65,7 +64,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**use_default_credentials**|**bit**|Gibt an, ob E-Mail mithilfe der Anmeldeinformationen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]an den SMTP-Server gesendet wird. **use_default_credentials** ist vom Datentyp bit und hat keinen Standardwert. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail keine Anmeldeinformationen des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Dienstes. Wenn dieser Parameter 0 ist, verwendet Datenbank-E-Mail den ** \@ Benutzernamen** und das ** \@ Kennwort** für die Authentifizierung auf dem SMTP-Server. Wenn ** \@ username** und ** \@ Password** NULL sind, verwendet Datenbank-E-Mail die anonyme Authentifizierung. Wenden Sie sich an Ihren SMTP-Administrator, bevor Sie diesen Parameter angeben.|  
 |**enable_ssl**|**bit**|Gibt an, ob Datenbank-E-Mail die Kommunikation mit Transport Layer Security (TLS) verschlüsselt, das zuvor als Secure Sockets Layer (SSL) bezeichnet wurde. Verwenden Sie diese Option, wenn TLS auf dem SMTP-Server erforderlich ist. **enable_ssl** ist vom Datentyp bit und hat keinen Standardwert. 1 gibt an Datenbank-E-Mail die Kommunikation mit TLS verschlüsselt. der Wert 0 gibt an, Datenbank-E-Mail die e-Mail ohne TLS-Verschlüsselung sendet.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn keine *account_id* - oder *account_name* -Parameter bereitgestellt werden, listet **sysmail_help_account** Informationen für alle Datenbank-E-Mail-Konten in der Microsoft SQL Server-Instanz auf.  
   
  Die gespeicherte Prozedur **sysmail_help_account_sp** wird in der **msdb** -Datenbank gespeichert und befindet sich im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  

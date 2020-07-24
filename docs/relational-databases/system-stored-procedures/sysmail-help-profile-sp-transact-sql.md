@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 061016b3a9f1283f82263a4f89fdb81acfc86889
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 947038e26a4367425576261594befff032f6eeea
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890911"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122733"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,14 +49,13 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="result-sets"></a>Resultsets  
  Gibt ein Resultset mit den folgenden Spalten zurück.  
   
-||||  
-|-|-|-|  
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+| Spaltenname | Datentyp | BESCHREIBUNG |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|Die Profil-ID des Profils.|  
 |**name**|**sysname**|Der Profilname des Profils.|  
 |**description**|**nvarchar(256)**|Die Beschreibung des Profils.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn ein Profilname oder eine Profil-ID angegeben ist, gibt **sysmail_help_profile_sp** Informationen zu diesem Profil zurück. Andernfalls gibt **sysmail_help_profile_sp** Informationen zu jedem Profil in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zurück.  
   
  Die gespeicherte Prozedur **sysmail_help_profile_sp** befindet sich in der **msdb** -Datenbank und im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
