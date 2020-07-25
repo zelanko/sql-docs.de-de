@@ -1,5 +1,6 @@
 ---
 title: Aktualisieren von Datenbanken mithilfe des Abfrageoptimierungs-Assistenten
+description: Erfahren Sie, wie der Abfrageoptimierungs-Assistent Sie durch den empfohlenen Workflow führt, um die Leistungsstabilität während Upgrades auf neuere SQL Server-Versionen aufrechtzuerhalten.
 ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 3113caec4026547fcf2dca940a3908f64b6efa44
-ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
+ms.openlocfilehash: 25083a6254d05abb44a4df3e96d5b070c3d0ba37
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82598746"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457568"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -185,7 +186,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
     -  **Abfrage-ID** 
     -  **Abfragetext**: Eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, die durch Klicken auf die Schaltfläche **...** erweitert werden kann.
     -  **Status:** Zeigt den aktuellen Experimentierstatus für die Abfrage an.
-    -  **Baselinemetrik:** Die ausgewählte Metrik (Dauer oder CpuTime) für die Abfrage in Millisekunden, die in **Schritt 2.3** ausgeführt wurde. Diese Metrik stellt die zurückgestellte Abfrage nach dem Upgrade des Datenbank-Kompatibilitätsgrads dar.
+    -  **Baselinemetrik**: Die ausgewählte Metrik (Dauer oder CpuTime) in Millisekunden für die Abfrage, die in **Schritt 2, Teilschritt 3** ausgeführt wurde. Diese Metrik stellt die zurückgestellte Abfrage nach dem Upgrade des Datenbank-Kompatibilitätsgrads dar.
     -  **Beobachtete Metrik:** Die ausgewählte Metrik (Dauer oder CpuTime) für die Abfrage nach dem Experimentieren in Millisekunden, für die eine ausreichend gute Optimierung vorgeschlagen wurde.
     -  **Änderung in %:** Prozentuale Änderung für die ausgewählte Metrik zwischen dem Zustand vor und nach dem Experimentieren. Sie stellt die Menge der gemessenen Optimierung für die Abfrage mit der vorgeschlagenen Optimierung dar.
     -  **Abfrageoption:** Link zum vorgeschlagenen Hinweis, der die Abfrageausführungsmetrik verbessert.

@@ -1,5 +1,6 @@
 ---
 title: Überprüfen von Planhinweislisten nach einem Upgrade | Microsoft-Dokumentation
+description: Wenn Sie ein Upgrade Ihrer Anwendung auf ein neues Release von SQL Server ausführen, empfiehlt es sich, die Definitionen der Planhinweislisten nach neu zu bewerten und zu testen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a55ebd88-6f58-454d-b1c4-991b88add522
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ac4198289fc7c57bfbeaaf4ac1119bdf3e41e8b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb7b3981c76e5bf8059d13afc74f3181d4b60cea
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737115"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456916"
 ---
 # <a name="validate-plan-guides-after-upgrade"></a>Überprüfen von Planhinweislisten nach einem Upgrade
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

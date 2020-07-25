@@ -1,5 +1,5 @@
 ---
-title: CREATE TABLE (Transact-SQL) | Microsoft-Dokumentation
+title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
 ms.date: 02/24/2020
 ms.prod: sql
@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 384b474180e17eaed9827da2d2e2b2f9157c6f4b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be5b8f28ec06b48f0f35d8d246ad12ccbc3c8292
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766955"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86482081"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -343,6 +343,8 @@ column_name <data_type>
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumente
 
 *database_name* Der Name der Datenbank, in der die Tabelle erstellt wird. *database_name* muss dem Namen einer vorhandenen Datenbank entsprechen. Wird *database_name* nicht angegeben, wird standardmäßig die aktuelle Datenbank verwendet. Der Anmeldename für die aktuelle Verbindung muss einer vorhandenen Benutzer-ID in der durch *database_name* angegebenen Datenbank zugeordnet sein. Diese Benutzer-ID muss über CREATE TABLE-Berechtigungen verfügen.
@@ -578,7 +580,7 @@ FOREIGN KEY REFERENCES Eine Einschränkung, die referenzielle Integrität für d
 
 **(** *ref_column* [ **,** ... *n* ] **)** Eine Spalte oder Liste von Spalten aus der Tabelle, auf die die FOREIGN KEY-Einschränkung verweist
 
-ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } Gibt an, welche Aktion für Zeilen in der erstellten Tabelle ausgeführt werden soll, wenn diese Zeilen eine referenzielle Beziehung aufweisen und die Zeile, auf die verwiesen wird, aus der übergeordneten Tabelle gelöscht wird. Der Standardwert ist NO ACTION.
+ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT } Gibt an, welche Aktion für Zeilen in der erstellten Tabelle ausgeführt werden soll, wenn diese Zeilen eine referenzielle Beziehung aufweisen und die Zeile, auf die verwiesen wird, aus der übergeordneten Tabelle gelöscht wird. Der Standardwert ist NO ACTION.
 
 NO ACTION Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] löst einen Fehler aus, und für die Aktion zum Löschen der Zeile in der übergeordneten Tabelle wird ein Rollback ausgeführt.
 
@@ -598,7 +600,7 @@ Wenn eine `DELETE`-Anweisung für eine Zeile in der **Vendor**-Tabelle ausgefüh
 
 Ist hingegen `NO ACTION` angegeben, löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus und führt ein Rollback für die Löschaktion der **Vendor**-Zeile aus, wenn in der **ProductVendor**-Tabelle mindestens eine Zeile vorhanden ist, die auf diese Zeile verweist.
 
-ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } Gibt an, welche Aktion für eine Zeile der geänderten Tabelle ausgeführt werden soll, wenn diese Zeile eine referenzielle Beziehung hat und die Zeile, auf die verwiesen wird, in der übergeordneten Tabelle aktualisiert wird. Der Standardwert ist NO ACTION.
+ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT } Gibt an, welche Aktion für eine Zeile der geänderten Tabelle ausgeführt werden soll, wenn diese Zeile eine referenzielle Beziehung hat und die Zeile, auf die verwiesen wird, in der übergeordneten Tabelle aktualisiert wird. Der Standardwert ist NO ACTION.
 
 NO ACTION Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] löst einen Fehler aus, und für die Updateaktion der Zeile in der übergeordneten Tabelle wird ein Rollback ausgeführt.
 

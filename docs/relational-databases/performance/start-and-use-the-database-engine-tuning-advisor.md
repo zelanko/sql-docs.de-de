@@ -1,5 +1,6 @@
 ---
 title: Starten und Verwenden des Datenbankoptimierungsratgebers | Microsoft Docs
+description: Erfahren Sie, wie Sie den Datenbankoptimierungsratgeber in SQL Server starten und verwenden, um Workloads zu erstellen, Datenbanken zu optimieren und XML-Eingabedateien zu erstellen.
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 00441600bb5d2059686f6fe2bc388146e880d4ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f0986c7af4ed3f6f8284db2e9faf99cad149b216
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737153"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457616"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -268,7 +269,7 @@ Weitere Informationen finden Sie unter [Tuning Database Using Workload from Quer
     dta -E -D DatabaseName -if WorkloadFile -s SessionName  
     ```  
   
-     Dabei gibt `-E` an, dass die Optimierungssitzung eine vertrauenswürdige Verbindung (anstelle von Benutzernamen und Kennwort) verwendet. Und `-D` gibt den Namen der zu optimierenden Datenbank an. Standardmäßig stellt das Hilfsprogramm eine Verbindung zur Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem lokalen Computer her. (Verwenden Sie die Option `-S`, um eine Remotedatenbank laut dem folgenden Verfahren oder eine benannte Instanz anzugeben.) Die Option `-if` gibt den Namen und Pfad zu einer Arbeitsauslastungsdatei an (wobei es sich um ein [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript oder um eine Ablaufverfolgungsdatei handeln kann), während `-s` einen Namen für die Optimierungssitzung angibt.  
+     Dabei gibt `-E` an, dass die Optimierungssitzung eine vertrauenswürdige Verbindung (anstelle von Benutzernamen und Kennwort) verwendet. Und `-D` gibt den Namen der zu optimierenden Datenbank an. Standardmäßig stellt das Hilfsprogramm eine Verbindung zur Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem lokalen Computer her. (Verwenden Sie die Option `-S` , um eine Remotedatenbank laut dem folgenden Verfahren oder eine benannte Instanz anzugeben.) Die Option `-if` gibt den Namen und Pfad zu einer Arbeitsauslastungsdatei an (wobei es sich um ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript oder um eine Ablaufverfolgungsdatei handeln kann), während `-s` einen Namen für die Optimierungssitzung angibt.  
   
      Die vier hier gezeigten Optionen (Datenbankname, Arbeitsauslastung, Verbindungstyp und Sitzungsname) müssen angegeben werden.  
   

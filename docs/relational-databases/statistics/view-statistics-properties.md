@@ -1,5 +1,6 @@
 ---
 title: Anzeigen der Statistikeigenschaften | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie aktuelle Abfrageoptimierungsstatistiken einer Tabelle oder einer indizierten Sicht in SQL Server mithilfe von SQL Server Management Studio oder Transact-SQL anzeigen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fc876283635f3a3015efa957b90cf0d9d938386
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ab4cc68a4fbc9e737498d68433de2effd9fe805
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001052"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457120"
 ---
 # <a name="view-statistics-properties"></a>Anzeigen von Statistikeigenschaften
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "86001052"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So zeigen Sie Statistikeigenschaften an mit:**  
   
@@ -70,7 +71,7 @@ ms.locfileid: "86001052"
      Zeigt den Namen des Datenbankobjekts an, in dem die Statistiken gespeichert sind.  
   
      **Statistik für INDEXstatistics_name**  
-     Dieses Textfeld zeigt die Eigenschaften an, die vom Statistikobjekt zurückgegeben werden. Diese Eigenschaften sind in drei Abschnitte unterteilt: STAT_HEADER, DENSITY_VECTOR und HISTOGRAM.  
+     Dieses Textfeld zeigt die Eigenschaften an, die vom Statistikobjekt zurückgegeben werden. Diese Eigenschaften gehören zu drei unterschiedlichen Bereichen: STAT_HEADER. DENSITY_VECTOR und HISTOGRAM.  
   
      Die folgenden Informationen beschreiben die Spalten, die im Resultset für STAT_HEADER zurückgegeben werden.  
   
@@ -107,7 +108,7 @@ ms.locfileid: "86001052"
      Die folgenden Informationen beschreiben die Spalten, die im Resultset für DENSITY_VECTOR zurückgegeben werden.  
   
      **All Density**  
-     Die Dichte ist 1 / *verschiedene Werte*. Die Ergebnisse zeigen die Dichte für jedes Präfix von Spalten im Statistikobjekt mit einer Zeile pro Dichte an. Bei einem unterschiedlichen Wert handelt es sich um eine unterschiedliche Liste der Spaltenwerte pro Zeile und pro Spaltenpräfix. Wenn das Statistikobjekt beispielsweise Schlüsselspalten (A, B, C) enthält, geben die Ergebnisse die Dichte der unterschiedlichen Wertelisten jedes dieser Spaltenpräfixe an: (A), (A, B) und (A, B, C). Mit dem Präfix (A, B, C) ist jede dieser Listen eine Liste unterschiedlicher Werte: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Mit dem Präfix (A, B) weisen dieselben Spaltenwerte diese Listen unterschiedlicher Werte auf: (3, 5), (4, 4) und (4, 5).  
+     Die Dichte ist 1 / *verschiedene Werte*. Die Ergebnisse zeigen die Dichte für jedes Präfix von Spalten im Statistikobjekt mit einer Zeile pro Dichte an. Bei einem unterschiedlichen Wert handelt es sich um eine unterschiedliche Liste der Spaltenwerte pro Zeile und pro Spaltenpräfix. Wenn das Statistikobjekt beispielsweise Schlüsselspalten (A, B, C) enthält, geben die Ergebnisse die Dichte der unterschiedlichen Wertelisten jedes dieser Spaltenpräfixe an: (A), (A,B) und (A, B, C). Mit dem Präfix (A, B, C) ist jede dieser Listen eine Liste unterschiedlicher Werte: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Mit dem Präfix (A, B) weisen dieselben Spaltenwerte diese unterschiedlichen Wertelisten auf: (3, 5), (4, 4) und (4, 5).  
   
      **Average Length**  
      Durchschnittliche Länge in Bytes zum Speichern einer Liste der Spaltenwerte für das Spaltenpräfix. Wenn die Werte in der Liste (3, 5, 6) beispielsweise jeweils 4 Bytes erfordern, beträgt die Länge 12 Bytes.  

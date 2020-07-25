@@ -1,5 +1,6 @@
 ---
 title: Gesichtspunkte bei der Verwendung von Testservern | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die Verwendung eines Testservers zur Optimierung einer Datenbank auf einem Produktionsserver. Dies ist ein entscheidender Vorteil des Datenbankoptimierungsratgebers.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ef09bd17effe13d415a30a1175e9279744813eca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f0013940f887991a622cf3cbc6f6e3f72ad78d8b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655630"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457328"
 ---
 # <a name="considerations-for-using-test-servers"></a>Gesichtspunkte bei der Verwendung von Testservern
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

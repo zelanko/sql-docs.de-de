@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Zugriffsmethoden-Objekt | Microsoft-Dokumentation
+description: Hier lernen Sie die „Zugriffsmethoden“-Leistungsindikatoren kennen, die auch zum Überwachen des Umfangs der Daten, Indizes und des freien Speicherplatzes in einer Datenbank in SQL Server verwendet werden können.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 296cdb3433ff0e40ea73987ef5a53b985a550f1f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 485e7e4d762b415ad4a0d140a631e99b4c79983b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787409"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458452"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Zugriffsmethoden-Objekt
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85787409"
   
 -   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- Diese Tabelle enthält eine Beschreibung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access Methods **-Zähler in** .  
+ Diese Tabelle enthält eine Beschreibung der **Access Methods**-Zähler in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Zugriffsmethoden-Leistungsindikatoren von SQL Server|BESCHREIBUNG|  
 |----------------------------------------|-----------------|  

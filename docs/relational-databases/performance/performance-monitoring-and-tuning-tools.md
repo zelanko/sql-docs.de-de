@@ -1,5 +1,6 @@
 ---
 title: Tools für die Leistungsüberwachung und -optimierung | Microsoft-Dokumentation
+description: Erfahren Sie mehr über SQL Server-Tools für die Überwachung und Optimierung, und wie Sie die richtige Auswahl treffen, je nach Art der Überwachung und der zu überwachenden Ereignisse.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 30cc668487299677bb2874300d660d09d1dedd22
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 13b974b37202a41f333e7d94104eccbee4c72d5c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635447"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457660"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Tools für die Leistungsüberwachung und -optimierung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

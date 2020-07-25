@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Transaktionen-Objekt | Microsoft-Dokumentation
+description: Erfahren Sie mehr über das Transaktionen-Objekt, das Leistungsindikatoren bereitstellt, um aktive Transaktionen in der Datenbank-Engine und die Auswirkungen von Transaktionen in SQL Server zu überwachen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 635bb13a1d6e44f5fc8f694cb2618a19c08831f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a7d51ee275f234de0be33a5bfa618684ee2e07e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758953"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458762"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transaktionen-Objekt
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85758953"
 |**Freier Speicherplatz in tempdb (KB)**|Der verfügbare Speicherplatz (in Kilobytes) in **tempdb**. Es muss ausreichend Speicherplatz zur Aufnahme des Momentaufnahmeisolationsstufen-Versionsspeichers und aller neuer temporärer Objekte vorhanden sein, die in der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erstellt worden sind.|  
 |**Längste Transaktionsausführungszeit**|Die verstrichene Zeit (in Sekunden) seit dem Start der Transaktion, die länger aktiv war als alle anderen aktuellen Transaktionen. Dieser Leistungsindikator zeigt nur Aktivität an, wenn die Datenbank unter der READ_COMMITTED_SNAPSHOT-Isolationsstufe ausgeführt wird. Es werden keine Aktivitäten protokolliert, wenn die Datenbank eine andere Isolationsstufe aufweist.|  
 |**NonSnapshot-Versionstransaktionen**|Die Anzahl der aktuell aktiven Transaktionen, die keine Momentaufnahmeisolationsstufe verwenden und von denen keine Änderungen ausgeführt worden sind, die Zeilenversionen im **tempdb** -Versionsspeicher generiert haben.|  
-|**Momentaufnahmetransaktionen**|Die Anzahl aktuell aktiver Transaktionen, die die Momentaufnahmeisolationsstufe verwenden.<br /><br /> Hinweis: Der **Momentaufnahmetransaktionen** -Objektleistungsindikator reagiert, wenn der erste Datenzugriff auftritt, nicht wenn die `BEGIN TRANSACTION` -Anweisung ausgegeben wird.|  
+|**Momentaufnahmetransaktionen**|Die Anzahl aktuell aktiver Transaktionen, die die Momentaufnahmeisolationsstufe verwenden.<br /><br /> Hinweis: Der Objektindikator für **Momentaufnahmetransaktionen** reagiert, wenn der erste Datenzugriff auftritt, nicht wenn die `BEGIN TRANSACTION`-Anweisung ausgegeben wird.|  
 |**Transaktionen**|Die Anzahl aktuell aktiver Transaktionen aller Typen.|  
 |**Updatekonfliktquote**|Der Prozentsatz derjenigen Transaktionen, die die Momentaufnahmeisolationsstufe verwenden und bei denen innerhalb der letzten Sekunde Updatekonflikte aufgetreten sind. Ein Updatekonflikt tritt auf, wenn von einer Momentaufnahmeisolationsstufen-Transaktion der Versuch unternommen wird, eine Zeile zu ändern, die zuletzt von einer anderen Transaktion geändert wurde, für die kein Commit ausgeführt worden ist, als die Momentaufnahmeisolationsstufen-Transaktion gestartet wurde.|  
 |**Basis der Updatekonfliktquote**|Nur zur internen Verwendung.|

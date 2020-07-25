@@ -1,5 +1,6 @@
 ---
 title: Ressourcenkontrolle | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die Resource Governor-Funktion von SQL Server, die die Menge von CPU, physischer E/A und Arbeitsspeicher einschränkt, die für eingehende Anwendungsanforderungen zur Verfügung steht.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cc24afebe163f3fbab8c7f1a2317b62d8c818223
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8654f25318bfc947394b0acaf0df19a8f7eb2bc3
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729294"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457823"
 ---
 # <a name="resource-governor"></a>Resource Governor
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

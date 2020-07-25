@@ -1,5 +1,6 @@
 ---
 title: Überwachen von SQL Server-Komponenten | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie mittels Überwachung Leistungstrends identifizieren können. SQL Server stellt einen Dienst in einer dynamischen Umgebung bereit, sodass im Laufe der Zeit möglicherweise Änderungen erforderlich werden.
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4635d22ed3349302344bfb6ea7e94c63790c324b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70fe75b97181815246d03de588bdd6d45af3ce9f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790786"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458384"
 ---
 # <a name="monitor-sql-server-components"></a>Überwachen von SQL Server-Komponenten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

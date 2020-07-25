@@ -1,5 +1,6 @@
 ---
 title: 'Schnellstart: Sichern und Wiederherstellen im Azure Blob Storage-Dienst'
+description: 'Schnellstart: Erfahren Sie, wie Sie Sicherungen in den Azure Blob Storage-Dienst schreiben und daraus wiederherstellen. Erstellen Sie einen Azure-Blobcontainer, schreiben Sie eine Sicherung, und stellen Sie diese dann wieder her.'
 ms.custom: seo-dt-2019
 ms.date: 04/09/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59968cad65f3a80c2d511dad3dc804d151d33095
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165523"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458042"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Schnellstart: Sicherung und Wiederherstellung von SQL Server mit dem Azure Blob Storage-Dienst
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

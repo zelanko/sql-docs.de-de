@@ -1,5 +1,6 @@
 ---
 title: Empfohlene DTA-Leistungsverbesserungen
+description: Erfahren Sie wie der Datenbankoptimierungsratgeber (Database Engine Tuning Advisor) durch die Analyse der Arbeitsauslastung einer Datenbank in SQL Server eine Kombination von Rowstore- und Columnstore-Indizes empfehlen kann.
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3dcd1405bb41243bf2bd618d3fe8ed89393ed5d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abad80759ccfbc2d5315c5f89cf1dcce3172c9f4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762841"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458282"
 ---
 # <a name="performance-improvements-using-database-engine-tuning-advisor-dta-recommendations"></a>Leistungsverbesserungen mithilfe von Empfehlungen des Datenbankoptimierungsratgebers (DTA)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,9 +30,9 @@ Der Datenbankoptimierungsratgeber (Database Engine Tuning Advisor, DTA) kann ab 
 
 Zur Veranschaulichung, welche Vorteile die DTA-Empfehlungen für die Arbeitsauslastungsleistung mit sich bringen, haben wir mit verschiedenen echten Kundenarbeitsauslastungen experimentiert. Für jede Kundenarbeitsauslastung haben wir DTA einzelne Abfragen sowie die gesamte Arbeitsauslastung mit Abfragen analysieren lassen. Dabei haben wir drei Alternativen betrachtet:
   
-  1. **Nur Columnstore**: Für alle Tabellen wurden nur Columnstore-Indizes ohne Verwendung des DTA erstellt. 
-  2. **DTA (nur Rowstore)** : Der DTA wurde mit der Option ausgeführt, dass nur Rowstore-Indizes empfohlen werden.
-  3. **DTA (Rowstore + Columnstore)** : Der DTA wurde mit der Option ausgeführt, dass sowohl Rowstore- als auch Columnstore-Indizes empfohlen werden.  
+  1. **Nur Columnstore:** Für alle Tabellen wurden nur Columnstore-Indizes ohne Verwendung des DTA erstellt. 
+  2. **DTA (nur Rowstore):** Der DTA wurde mit der Option ausgeführt, dass nur Rowstore-Indizes empfohlen werden.
+  3. **DTA (Rowstore und Columnstore):** Der DTA wurde mit der Option ausgeführt, dass sowohl Rowstore- als auch Columnstore-Indizes empfohlen werden.  
    
 Anschließend haben wir die jeweils empfohlenen Indizes implementiert. Dabei wurde die durchschnittliche CPU-Zeit (in Millisekunden) über mehrere Abfrageausführungen oder über die Arbeitsauslastung hinweg protokolliert. In der folgenden Abbildung ist die CPU-Zeit in Millisekunden für Arbeitsauslastungen über zwei verschiedene Kundendatenbanken hinweg dargestellt. Beachten Sie, dass für die y-Achse (CPU-Zeit) eine logarithmische Skalierung verwendet wird.   
 
@@ -40,7 +41,7 @@ Anschließend haben wir die jeweils empfohlenen Indizes implementiert. Dabei wur
 
 
 
-**Bedarf an gemischten physischen Entwürfen**: Die erste Säulengruppe entspricht Kunde 1, Abfrage 1. DTA (Rowstore und Columnstore) empfiehlt eine Gruppe von vier Columnstore- und sechs Rowstore-Indizes, was zu einer im Vergleich zu einem reinen Columnstore-Index und DTA (nur Rowstore) eine zweieinhalb bis vier Mal geringere CPU-Zeit zur Folge hat. Dies zeigt die Vorteile von gemischten physischen Entwürfen, die aus Rowstore- und Columnstore-Indizes bestehen, *auch bei einer einzelnen Abfrage*. 
+**Bedarf an gemischten physischen Designs:** Die erste Säulengruppe entspricht Kunde 1, Abfrage 1. DTA (Rowstore und Columnstore) empfiehlt eine Gruppe von vier Columnstore- und sechs Rowstore-Indizes, was zu einer im Vergleich zu einem reinen Columnstore-Index und DTA (nur Rowstore) eine zweieinhalb bis vier Mal geringere CPU-Zeit zur Folge hat. Dies zeigt die Vorteile von gemischten physischen Entwürfen, die aus Rowstore- und Columnstore-Indizes bestehen, *auch bei einer einzelnen Abfrage*. 
 
 **Effizienz von Rowstore-Indexempfehlungen**: Die zweite und die dritte Säulengruppe (die Kunde 1, Abfrage 2 und Kunde 2, Abfrage 1 entsprechen) stellen Fälle dar, bei denen die Abfragen über Auswahlfilterprädikate verfügen, die von geeigneten Rowstore-Indizes profitieren. Für beide Abfragen empfiehlt DTA (nur Rowstore) und DTA (Rowstore + Columnstore) nur Rowstore-Indizes. Diese Beispiele zeigen auch, dass selbst dann, wenn DTA mit der Option ausgeführt wird, Columnstore-Indizes zu empfehlen, das kostenbasierte Konzept sicherstellt, dass ein Columnstore-Index nur dann empfohlen wird, wenn die Arbeitsauslastung tatsächlich davon profitiert.
 

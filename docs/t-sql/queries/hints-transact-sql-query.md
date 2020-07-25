@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 260babc5be248cc07b90001c2bb63fa7a6439a05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731299"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552949"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -138,7 +138,9 @@ Abfragehinweise geben an, dass die angezeigten Hinweise in der gesamten Abfrage 
 }  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 { HASH | ORDER } GROUP  
 Gibt an, dass die in der GROUP BY- oder DISTINCT-Klausel der Abfrage beschriebenen Aggregationen Hash- oder Sortiervorgänge verwenden sollen.  
   
@@ -359,11 +361,11 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
  Wenn Sie _exposed\_object\_name_ angeben, ohne auch einen Tabellenhinweis anzugeben, werden alle Indizes, die Sie in der Abfrage als Teil eines Tabellenhinweises für das Objekt angeben, nicht berücksichtigt. Die Abfrageoptimierer bestimmt dann, wie der Index zu verwenden ist. Sie können diese Vorgehensweise verwenden, um die Auswirkung eines INDEX-Tabellenhinweises zu eliminieren, wenn Sie die ursprüngliche Abfrage nicht ändern können. Siehe Beispiel J.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } ist der Tabellenhinweis, der auf die Tabelle oder die Ansicht angewendet wird, die *exposed_object_name* als Abfragehinweis entspricht. Eine Beschreibung dieser Hinweise finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) \| INDEX = ( _index\_value_ ) \| FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK } Ist der Tabellenhinweis, der auf die Tabelle oder Sicht angewendet werden soll, die *exposed_object_name* als Abfragehinweis entspricht. Eine Beschreibung dieser Hinweise finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Andere Tabellenhinweise als INDEX, FORCESCAN und FORCESEEK sind als Abfragehinweise nicht zulässig, es sei denn, die Abfrage enthält bereits eine WITH-Klausel, die einen Tabellenhinweis angibt. Weitere Informationen finden Sie in den Hinweisen.  
   
-> [!CAUTION] 
+> [!CAUTION]
 > Bei Angabe von FORCESEEK mit Parametern wird die Anzahl von Plänen, die vom Optimierer berücksichtigt werden können, stärker eingeschränkt als bei Angabe von FORCESEEK ohne Parameter. Dies kann in mehreren Fällen zu dem Fehler führen, dass der Plan nicht generiert werden kann. In zukünftigen Versionen können durch interne Änderungen des Optimierers möglicherweise mehr Pläne berücksichtigt werden.  
   
 ## <a name="remarks"></a>Bemerkungen  

@@ -1,5 +1,6 @@
 ---
 title: Überwachen der Serverleistung und -aktivität | Microsoft-Dokumentation
+description: Verwenden Sie diese Ressourcen, um zu erfahren, wie Sie die Leistungs- und Aktivitätsüberwachungstools von SQL Server und Windows verwenden, um die Leistung eines Servers zu bewerten.
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1690e0022ae45444f8f25f9a7704622e55c0a06c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8da66c6aeaa1466e570839e4721e1545a46124b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716892"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457870"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Überwachen der Serverleistung und -aktivität
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85716892"
  
  -   [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)
  
- -   [Schnellstart: Erweiterte Ereignisse in Microsoft SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ -   [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
  
  -   [Verwalten von Ereignissitzungen im Objekt-Explorer](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
  

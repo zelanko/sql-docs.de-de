@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0312349652ad1854efdeacdbfc25726e1766862f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a445bafcb6182f4af0d6089085c5a579b9109d7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298039"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917796"
 ---
 # <a name="source-assistant"></a>Quellen-Assistent
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Mithilfe der Quellen-Assistenten-Komponente können Sie eine Quellkomponente und einen Verbindungs-Manager erstellen. Die Komponente befindet sich im Abschnitt **Favoriten** der SSIS-Toolbox.  
@@ -39,11 +39,11 @@ In diesem Abschnitt werden Schritte vorgestellt, um eine neue Quelle mithilfe de
   
 3.  Wählen Sie den Zieltyp in der Liste **Typ** aus.  
   
-4.  Wählen Sie in der Liste **Verbindungs-Manager** einen vorhandenen Verbindungs-Manager aus. Wählen Sie alternativ **\<Neu>** aus, um einen neuen Verbindungs-Manager zu erstellen.  
+4.  Wählen Sie in der Liste **Verbindungs-Manager** einen vorhandenen Verbindungs-Manager aus. Wählen Sie alternativ **\<New>** aus, um einen neuen Verbindungs-Manager zu erstellen.  
   
 5.  Wenn Sie einen vorhandenen Verbindungs-Manager auswählen, klicken Sie auf **OK** , um das Dialogfeld **Neues Ziel hinzufügen** zu schließen. Sie sollten nun das Ziel und die Verbindungs-Manager sehen, die dem Datenfluss hinzugefügt wurden.  
   
-6.  Wenn Sie auf **\<Neu>** klicken, um einen neuen Verbindungs-Manager zu erstellen, sollten Sie ein **Verbindungs-Manager**-Dialogfeld sehen, in dem Sie Parameter für die Verbindung angeben können. Nachdem Sie einen neuen Verbindungs-Managers erstellt haben, werden das Ziel und der Verbindungs-Manager in SSIS-Designer angezeigt.  
+6.  Wenn Sie auf **\<New>** klicken, um einen neuen Verbindungs-Manager zu erstellen, sollten Sie ein **Verbindungs-Manager**-Dialogfeld sehen, in dem Sie Parameter für die Verbindung angeben können. Nachdem Sie einen neuen Verbindungs-Managers erstellt haben, werden das Ziel und der Verbindungs-Manager in SSIS-Designer angezeigt.  
 
 ## <a name="add-new-source-dialog-box"></a>Neue Quelle hinzufügen (Dialogfeld)
 In der folgenden Tabelle sind die Optionen im Dialogfeld **Neue Quelle hinzufügen** aufgeführt.  
@@ -51,7 +51,7 @@ In der folgenden Tabelle sind die Optionen im Dialogfeld **Neue Quelle hinzufüg
 |Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |Typen|Wählen Sie den Quelltyp aus, mit dem Sie eine Verbindung herstellen möchten.|  
-|Verbindungs-Manager|Wählen Sie einen vorhandenen Verbindungs-Manager aus, oder klicken Sie auf **\<Neu>** , um einen neuen Verbindungs-Manager zu erstellen.|  
+|Verbindungs-Manager|Wählen Sie einen vorhandenen Verbindungs-Manager aus, oder klicken Sie auf **\<New>** , um einen neuen Verbindungs-Manager zu erstellen.|  
 |Nur installierte anzeigen|Geben Sie an, ob nur installierte Quellen angezeigt werden sollen.|  
 |OK|Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern, und öffnen Sie die entsprechenden nachfolgenden Dialogfelder, um zusätzliche Optionen zu konfigurieren.| 
   

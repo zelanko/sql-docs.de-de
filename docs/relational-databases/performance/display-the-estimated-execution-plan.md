@@ -1,5 +1,6 @@
 ---
 title: Anzeigen des geschätzten Ausführungsplans | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie geschätzte grafische Ausführungspläne mithilfe von SQL Server Management Studio generieren. Ein geschätzter Ausführungsplan enthält keine Laufzeitinformationen.
 ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63eada30892325c60d438e3bca11343c76e1c9da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 90b7074b12a3c3a49588a9c791cde1386212192b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730269"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457282"
 ---
 # <a name="display-the-estimated-execution-plan"></a>Anzeigen des geschätzten Ausführungsplans
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85730269"
 
     Um weitere Informationen anzuzeigen, lassen Sie den Mauszeiger über den logischen und physischen Operatorsymbolen ruhen. Die Beschreibung und die Eigenschaften des Operators werden nun in der QuickInfo angezeigt. Sie können die Operatoreigenschaften auch im Eigenschaftenfenster anzeigen. Klicken Sie mit der rechten Maustaste auf einen Operator, und klicken Sie auf **Eigenschaften**, wenn die Eigenschaften nicht sichtbar sind. Wählen Sie einen Operator aus, um seine Eigenschaften anzuzeigen.  
 
-    ![Rechtsklick, „Eigenschaften“ im Planoperator](../../relational-databases/performance/media/planproperties.png "Rechtsklick, „Eigenschaften“ im Planoperator")    
+    ![Rechtsklick auf „Eigenschaften“ im Planoperator](../../relational-databases/performance/media/planproperties.png "Rechtsklick auf „Eigenschaften“ im Planoperator")    
   
 4.  Um die Anzeige des Ausführungsplans zu ändern, klicken Sie mit der rechten Maustaste auf den Ausführungsplan, und wählen Sie **Vergrößern**, **Verkleinern**, **Vergrößern/Verkleinern**oder **Zoom anpassen**aus. Mit**Vergrößern** und **Verkleinern** können Sie den Ausführungsplan in festgelegten Schritten vergrößern oder verkleinern. **Vergrößern/Verkleinern** ermöglicht Ihnen, die Anzeigevergrößerung nach Wunsch festzulegen, etwa auf 80 Prozent. Mit**Zoom anpassen** können Sie den Ausführungsplan an die Größe des Ergebnisbereichs anpassen. Verwenden Sie alternativ eine Kombination aus der STRG-Taste und Ihrem Mausrad, um den **dynamischen Zoom** zu aktivieren.  
 

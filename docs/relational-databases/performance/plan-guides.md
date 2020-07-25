@@ -1,5 +1,6 @@
 ---
 title: Planhinweislisten | Microsoft-Dokumentation
+description: Erfahren Sie mehr über Planhinweislisten, mit denen Sie die Leistung von Abfragen optimieren können, ohne den Text der Abfrage direkt in SQL Server ändern zu müssen.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8012115ff5f5a7fbd85de36b6263ea4380b44ccc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ce87be759659c79815165d827b06f6f6322df46
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722236"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457688"
 ---
 # <a name="plan-guides"></a>Planhinweislisten
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

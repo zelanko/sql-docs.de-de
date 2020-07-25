@@ -1,5 +1,6 @@
 ---
 title: Verschieben einer Arbeitsauslastungsgruppe | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie eine Resource Governor-Arbeitsauslastungsgruppe in SQL Server Management Studio oder mit Transact-SQL in einen anderen Ressourcenpool verschieben können.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d7db094db50938b08125b6605040eba935b77273
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3ff2eff8f72499506aa129b064690693f1b14ff
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720467"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86456662"
 ---
 # <a name="move-a-workload-group"></a>Verschieben von Arbeitsauslastungsgruppen
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

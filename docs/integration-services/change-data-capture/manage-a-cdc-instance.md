@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f145b536072314594af473488bc0b933c443230e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a275dbc088774355c3546b7234174e5b7b585e43
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294691"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922526"
 ---
 # <a name="manage-a-cdc-instance"></a>Verwalten einer CDC-Instanz
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Sie können die CDC Designer Console zum Anzeigen von Informationen zu den erstellten Instanzen und zum Verwalten des Betriebs der Instanzen verwenden.  
@@ -107,17 +107,17 @@ ms.locfileid: "71294691"
     -   **Written changes**: Die Anzahl der Änderungen, die in die SQL Server-Änderungstabellen geschrieben werden.  
   
  **Oracle**  
- Zeigt Informationen zur CDC-Instanz und zu ihrer Verbindung mit der Oracle-Datenbank an. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften**, um das Dialogfeld mit den „Eigenschaften von \<Instanz>“ zu öffnen.  
+ Zeigt Informationen zur CDC-Instanz und zu ihrer Verbindung mit der Oracle-Datenbank an. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften**, um das Dialogfeld mit den „Eigenschaften von \<instance>“ zu öffnen.  
   
  Informationen zu diesen Eigenschaften und zu deren Bearbeitung finden Sie unter [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
  **Tabellen**  
- Zeigt Informationen zu den in der CDC-Instanz enthaltenen Tabellen an. Spalteninformationen sind ebenfalls verfügbar. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften**, um das Dialogfeld mit den „Eigenschaften von \<Instanz>“ zu öffnen.  
+ Zeigt Informationen zu den in der CDC-Instanz enthaltenen Tabellen an. Spalteninformationen sind ebenfalls verfügbar. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften**, um das Dialogfeld mit den „Eigenschaften von \<instance>“ zu öffnen.  
   
  Informationen zu diesen Eigenschaften und zu deren Bearbeitung finden Sie unter [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
  **Erweitert**  
- Zeigt die erweiterten Eigenschaften für die CDC-Instanz und die Eigenschaftswerte an. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften**, um das Dialogfeld mit den „Eigenschaften von \<Instanz>“ zu öffnen.  
+ Zeigt die erweiterten Eigenschaften für die CDC-Instanz und die Eigenschaftswerte an. Diese Registerkarte ist schreibgeschützt. Klicken Sie zum Bearbeiten dieser Eigenschaften im linken Bereich mit der rechten Maustaste auf die Instanz, und wählen Sie **Eigenschaften** aus, oder klicken Sie im rechten Bereich auf **Eigenschaften**, um das Dialogfeld mit den „Eigenschaften von \<instance>“ zu öffnen.  
   
  Informationen zu diesen Eigenschaften und zu deren Bearbeitung finden Sie unter [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   

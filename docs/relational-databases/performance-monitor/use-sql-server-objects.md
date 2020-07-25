@@ -1,5 +1,6 @@
 ---
 title: Verwenden von SQL Server-Objekten | Microsoft-Dokumentation
+description: Erfahren Sie mehr über SQL Server-Objekte und -Leistungsindikatoren, die der Systemmonitor zur Überwachung der Aktivität von Computern nutzt, die eine Instanz von SQL Server ausführen.
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: fc69b2a0615745966971ad83da2b0acadf3b2488
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b5f120e82f44966d42a9c511f8c240e9d74c493
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773157"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458612"
 ---
 # <a name="use-sql-server-objects"></a>Verwenden von SQL Server-Objekten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

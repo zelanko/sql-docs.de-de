@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81ac32f8fff04a1a81d4397cc196c506eab164d2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294328"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923306"
 ---
 # <a name="bulk-insert-task"></a>Masseneinfügungstask
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Der Masseneinfügungstask stellt eine effektive Möglichkeit zum Kopieren großer Datenmengen in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder -Sicht bereit. Angenommen, Ihr Unternehmen verwaltet eine Produktliste mit einer Million Zeilen auf einem Großrechner. Das E-Commerce-System des Unternehmens verwendet jedoch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Auffüllen von Webseiten. Sie müssen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produkttabelle jede Nacht mit der Hauptproduktliste vom Großrechner aktualisieren. Dazu speichern Sie die Produktliste in einem Format mit Tabstopp-Trennzeichen und kopieren mit dem Masseneinfügungstask die Daten direkt in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle.  
@@ -125,7 +125,7 @@ ms.locfileid: "71294328"
   
 ### <a name="options"></a>Tastatur  
  **Connection**  
- Wählen Sie einen OLE DB-Verbindungs-Manager in der Liste aus, oder klicken Sie auf \<**Neue Verbindung...** >, um eine neue Verbindung zu erstellen.  
+ Wählen Sie einen OLE DB-Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**New connection...**>, um eine neue Verbindung zu erstellen.  
   
  **Verwandte Themen:** [OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71294328"
 |**Specify**|Geben Sie das Format an. Nach Auswahl dieser Option werden die dynamischen Optionen **RowDelimiter** und **ColumnDelimiter**angezeigt.|  
   
  **File**  
- Wählen Sie einen Datei- oder Flatfileverbindungs-Manager in der Liste aus, oder klicken Sie auf \<**Neue Verbindung...** >, um eine neue Verbindung zu erstellen.  
+ Wählen Sie einen Dateiverbindungs-Manager oder Verbindungs-Manager für Flatfiles in der Liste aus, oder klicken Sie auf \<**New connection...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
  Der Speicherort ist relativ zur SQL Server-Datenbank-Engine, die im Verbindungs-Manager für diesen Task angegeben wurde. Die SQL Server-Datenbank-Engine muss auf die Textdatei zugreifen können, und zwar entweder auf einer lokalen Festplatte des Servers oder über eine Freigabe oder einem SQL Server zugeordneten Laufwerk. Auf die Datei wird nicht von der SSIS-Laufzeit zugegriffen.  
   

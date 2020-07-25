@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3595c9aac3b0b8a0419780cdeaf9b5547bfa97d1
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774648"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483858"
 ---
 # <a name="azure-data-studio-extensibility"></a>Erweiterbarkeit für Azure Data Studio
 
@@ -48,9 +48,9 @@ In diesem Abschnitt werden die verschiedenen Beitragspunkte behandelt, die im pa
 
 IntelliSense wird in azuredatastudio unterstützt.
 
-## <a name="contributes-dashboard"></a>Beiträge zum Dashboard
+### <a name="dashboard-contribution-points"></a>Dashboardbeitragspunkte
 
-Tragen Sie Registerkarte, Container und Erkenntniswidget zum Dashboard bei.
+Tragen Sie eine Registerkarte, einen Container und/oder ein Erkenntnis-Widget zum Dashboard bei.
 
 ![Dashboard](media/extensibility/dashboard-page.png)
 

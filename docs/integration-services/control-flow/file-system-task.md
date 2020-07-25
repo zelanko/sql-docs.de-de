@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 77a347078f86299118f80c9cae55d9dd04795a9d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294125"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917896"
 ---
 # <a name="file-system-task"></a>Task Dateisystem
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Der Task Dateisystem führt Operationen für Dateien und Verzeichnisse im Dateisystem aus. Beispielsweise kann ein Paket mit dem Task Dateisystem Verzeichnisse und Dateien erstellen, verschieben oder löschen. Darüber hinaus können Sie mit dem Task Dateisystem Attribute für Dateien und Verzeichnisse festlegen. Beispielsweise können mit dem Task Dateisystem Dateien als ausgeblendet oder schreibgeschützt festgelegt werden.  
@@ -144,13 +144,13 @@ ms.locfileid: "71294125"
   
 #### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- Wählen Sie den Variablennamen aus der Liste aus, oder klicken Sie auf \<**Neue Variable…** >, um eine neue Variable zu erstellen.  
+ Wählen Sie den Variablennamen in der Liste aus, oder klicken Sie auf \<**New variable...**>, um eine neue Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
- Wählen Sie in der Liste einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen Dateiverbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**New connection...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -158,13 +158,13 @@ ms.locfileid: "71294125"
   
 #### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- Wählen Sie den Variablennamen aus der Liste aus, oder klicken Sie auf \<**Neue Variable…** >, um eine neue Variable zu erstellen.  
+ Wählen Sie den Variablennamen in der Liste aus, oder klicken Sie auf \<**New variable...**>, um eine neue Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  
- Wählen Sie in der Liste einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen Dateiverbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**New connection...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
