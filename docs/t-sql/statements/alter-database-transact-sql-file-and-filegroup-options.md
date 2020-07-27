@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cdeab9ba00b4c498970ebac378c4abe53f4fbd2c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e16612058617d324d0b3c0e4534716b39a09527f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628610"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552420"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE-Optionen für Dateien und Dateigruppen (Transact-SQL)
 
@@ -57,9 +57,7 @@ ms.locfileid: "81628610"
 
 Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Auswählen eines Produkts
-
-Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meisten interessiert. Mit nur einem Klick erhalten Sie auf dieser Webseite unterschiedliche Inhalte, die zu dem Produkt passen, das Sie ausgewählt haben.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -279,7 +277,7 @@ REMOVE FILEGROUP *filegroup_name* Entfernt eine Dateigruppe aus der Datenbank. D
 
 MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Ändert die Dateigruppe durch Festlegen des Status auf READ_ONLY oder READ_WRITE, Festlegen der Dateigruppe als Standarddateigruppe für die Datenbank oder Ändern des Dateigruppennamens.
 
-\<filegroup_updatability_option> Legt die read-only- oder read/write-Eigenschaft für die Dateigruppe fest.
+\<filegroup_updatability_option> Legt die „read-only“- oder „read/write“-Eigenschaft für die Dateigruppe fest.
 
 DEFAULT Ändert die Standarddatenbank-Dateigruppe in *filegroup_name*. Es können nicht mehrere Dateigruppen in der Datenbank gleichzeitig als Standarddateigruppe verwendet werden. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md).
 
@@ -812,7 +810,7 @@ REMOVE FILEGROUP *filegroup_name* Entfernt eine Dateigruppe aus der Datenbank. D
 
 MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Ändert die Dateigruppe durch Festlegen des Status auf READ_ONLY oder READ_WRITE, Festlegen der Dateigruppe als Standarddateigruppe für die Datenbank oder Ändern des Dateigruppennamens.
 
-\<filegroup_updatability_option> Legt die read-only- oder read/write-Eigenschaft für die Dateigruppe fest.
+\<filegroup_updatability_option> Legt die „read-only“- oder „read/write“-Eigenschaft für die Dateigruppe fest.
 
 DEFAULT Ändert die Standarddatenbank-Dateigruppe in *filegroup_name*. Es können nicht mehrere Dateigruppen in der Datenbank gleichzeitig als Standarddateigruppe verwendet werden. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md).
 

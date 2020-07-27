@@ -1,6 +1,6 @@
 ---
 title: Virtualisieren externer Daten
-description: Auf dieser Seite wird die Verwendung des Assistenten zum Erstellen externer Tabellen für relationale Datenquellen detailliert beschrieben.
+description: Auf dieser Seite wird die Verwendung des Assistenten zum Erstellen externer Tabellen für ODBC-Datenquellen detailliert beschrieben.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
@@ -10,14 +10,14 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588090"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943006"
 ---
-# <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Verwenden des Assistenten für externe Tabellen mit relationalen Datenquellen
+# <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>Verwenden des Assistenten für externe Tabellen mit ODBC-Datenquellen
 
 Eine der wichtigsten Funktionen in SQL Server 2019 ist die Datenvirtualisierung. Dabei können die Daten ihren ursprünglichen Speicherort beibehalten. Diese Daten können Sie in einer SQL Server-Instanz *virtualisieren*, sodass sie wie in jeder anderen Tabelle in SQL Server abgefragt werden können. Dadurch werden weniger ETL-Vorgänge benötigt. Dieser Prozess wird durch die Verwendung von PolyBase-Connectors ermöglicht. Weitere Informationen finden Sie unter [Erste Schritte mit PolyBase](polybase-guide.md).
 
@@ -33,7 +33,7 @@ Stellen Sie eine Verbindung mit der Masterinstanz her, indem Sie die IP-Adresse/
 ![Assistent zum Virtualisieren von Daten](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Auswählen einer Datenquelle
 
-Wenn Sie den Assistenten über eine der Datenbanken gestartet haben, wird das Dropdownfeld unter „Ziel“ automatisch aufgefüllt. Auf dieser Seite haben Sie auch die Möglichkeit, die Zieldatenbank anzugeben oder zu ändern. SQL Server und Oracle werden als Typen der externen Datenquelle vom Assistenten unterstützt.
+Wenn Sie den Assistenten über eine der Datenbanken gestartet haben, wird das Dropdownfeld unter „Ziel“ automatisch aufgefüllt. Auf dieser Seite haben Sie auch die Möglichkeit, die Zieldatenbank anzugeben oder zu ändern. SQL Server, Oracle, MongoDB und Teradata werden als Typen der externen Datenquelle vom Assistenten unterstützt.
 
 > [!NOTE]
 >SQL Server wird standardmäßig hervorgehoben.
@@ -56,7 +56,7 @@ In diesem Schritt sollten Sie einen Datenbankhauptschlüssel erstellen. Sie müs
 
 In diesem Schritt erfahren Sie, wie Sie Ihre externe Datenquelle und die entsprechenden Anmeldeinformationen eingeben, um ein externes Datenquellenobjekt zu erstellen. Die Anmeldeinformationen werden verwendet, damit das Datenbankobjekt eine Verbindung mit der Datenquelle herstellen kann. Geben Sie einen Namen für die externe Datenquelle ein. Beispielsweise „Test“. Geben Sie die Details der Verbindung zwischen der externen Datenquelle und SQL Server an. Geben Sie den **Servernamen** und den **Datenbanknamen** an, für den die externe Datenquelle erstellt werden soll.
 
-Konfigurieren Sie anschließend Anmeldeinformationen. Geben Sie einen Namen für die Anmeldeinformationen ein. Es handelt sich dabei um die für die gesamte Datenbank gültigen Anmeldeinformationen, die verwendet werden, um die Anmeldeinformationen für die externe Datenquelle zu speichern, die Sie erstellen. Beispielsweise „TestCred“. Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit der Datenquelle herzustellen.
+Konfigurieren Sie anschließend Anmeldeinformationen. Geben Sie einen Namen für die Anmeldeinformationen ein. Es handelt sich dabei um die für die gesamte Datenbank gültigen Anmeldeinformationen, die verwendet werden, um die Anmeldeinformationen für die externe Datenquelle zu speichern, die Sie erstellen. z. B. `TestCred`. Geben Sie einen Benutzernamen und ein Kennwort an, um eine Verbindung mit der Datenquelle herzustellen.
 
 ![Anmeldeinformationen für die externe Datenquelle](media/data-virtualization/data-source-credentials.png)
 

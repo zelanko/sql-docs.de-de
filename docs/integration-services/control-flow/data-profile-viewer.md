@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4197d1acc7a7faaa8414b6ff73e7d6876610cece
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294216"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919811"
 ---
 # <a name="data-profile-viewer"></a>Datenprofil-Viewer
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Das Anzeigen und Analysieren der Datenprofile ist der nächste Schritt bei der Datenprofilerstellung. Sie können diese Profile anzeigen, nachdem Sie den Datenprofilerstellungs-Task innerhalb eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets ausgeführt und die Datenprofile berechnet haben. Weitere Informationen zum Verwenden und Einrichten und Ausführen der Datenprofilerstellungs-Tasks finden Sie unter [Einrichten von Datenprofilerstellungs-Tasks](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "71294216"
   
 -   Klicken Sie mit der rechten Maustaste im **-Designer auf den Task** Datenprofilerstellung [!INCLUDE[ssIS](../../includes/ssis-md.md)] , und klicken Sie dann auf **Bearbeiten**. Klicken Sie auf der Seite **Allgemein** des **Editors für den Datenprofilerstellungs-Task** auf **Profil-Viewer öffnen**.  
   
--   Führen Sie im Ordner „ *\<Laufwerk>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn“ die Datei „DataProfileViewer.exe“ aus.  
+-   Führen Sie im Ordner „ *\<drive>* :\Programme (x86) | Programme\Microsoft SQL Server\110\DTS\Binn“ die Datei „DataProfileViewer.exe“ aus.  
   
  Der Viewer verwendet mehrere Bereiche, um die von Ihnen angeforderten Profile und berechneten Ergebnisse mit optionaler Detail- und Drilldownfunktion anzuzeigen.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "71294216"
   
 #### <a name="profile-type--column-length-distribution-profile"></a>Profiltyp = Verteilungsprofil für Spaltenlänge  
   
-##### <a name="column-length-distribution-profile---column-pane"></a>Verteilungsprofil für Spaltenlänge – Bereich \<Spalte>  
+##### <a name="column-length-distribution-profile---column-pane"></a>Verteilungsprofil für Spaltenlänge – \<column>-Bereich  
  **Mindestlänge**  
  Zeigt die Mindestlänge der Werte in dieser Spalte an.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "71294216"
   
 #### <a name="profile-type--column-null-ratio-profile"></a>Profiltyp = Profil für Spalten-NULL-Verhältnis  
   
-##### <a name="column-null-ratio-profile---column-pane"></a>Profil für NULL-Verhältnis der Spalte – Bereich \<Spalte>  
+##### <a name="column-null-ratio-profile---column-pane"></a>Profil für Spalten-NULL-Verhältnis – \<column>-Bereich  
  **NULL-Anzahl**  
  Zeigt die Anzahl der Zeilen an, in denen die Spalte, für die ein Profil erstellt wurde, einen NULL-Wert aufweist.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71294216"
   
 #### <a name="profile-type--column-pattern-profile"></a>Profiltyp = Spaltenmusterprofil  
   
-##### <a name="column-pattern-profile---column-pane"></a>Spaltenmusterprofil – Bereich \<Spalte>  
+##### <a name="column-pattern-profile---column-pane"></a>Spaltenmusterprofil – \<column>-Bereich  
  **Zeilenanzahl**  
  Zeigt die Anzahl der Zeilen in der Tabelle oder Sicht an.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "71294216"
   
 #### <a name="profile-type--column-statistics-profile"></a>Profiltyp = Spaltenstatistikprofil  
   
-##### <a name="column-statistics-profile---column-pane"></a>Spaltenstatistikprofil – Bereich \<Spalte>  
+##### <a name="column-statistics-profile---column-pane"></a>Spaltenstatistikprofil – \<column>-Bereich  
  **Mindestanforderungen**  
  Zeigt den in der Spalte, für die ein Profil erstellt wurde, gefundenen Mindestwert an.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "71294216"
   
 #### <a name="profile-type--column-value-distribution-profile"></a>Profiltyp = Verteilungsprofil für Spaltenwert  
   
-##### <a name="column-value-distribution-profile---column-pane"></a>Verteilungsprofil für Spaltenwert – Bereich \<Spalte>  
+##### <a name="column-value-distribution-profile---column-pane"></a>Verteilungsprofil für Spaltenwerte – \<column>-Bereich  
  **Anzahl unterschiedlicher Werte**  
  Zeigt die Anzahl unterschiedlicher Werte an, die in der Spalte, für die ein Profil erstellt wurde, gefunden wurden.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "71294216"
   
 #### <a name="profile-type--candidate-key-profile"></a>Profiltyp = Kandidatenschlüsselprofil  
   
-##### <a name="candidate-key-profile---table-pane"></a>Kandidatenschlüsselprofil – Bereich \<Tabelle>  
+##### <a name="candidate-key-profile---table-pane"></a>Kandidatenschlüsselprofil – \<table>-Bereich  
  **Schlüsselspalten**  
  Zeigt die Spalten an, die als Kandidatenschlüssel für die Profilerstellung ausgewählt wurden.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "71294216"
  Zeigt die Stärke (als Prozentsatz) der Kandidatenschlüsselspalte oder Kombination von Spalten an. Eine Schlüsselstärke von weniger als 100 % gibt an, dass doppelte Werte vorhanden sind.  
   
 ##### <a name="key-violations-pane"></a>Bereich 'Schlüsselverletzungen'  
- **\<Spalte1>, \<Spalte2> usw.**  
+ **\<column1>, \<column2> usw.**  
  Zeigt die doppelten Werte an, die in der Spalte, für die ein Profil erstellt wurde, gefunden wurden.  
   
  **Count**  
@@ -212,17 +212,17 @@ ms.locfileid: "71294216"
 > [!NOTE]  
 >  Ein hoher Prozentsatz an fehlerhaften Werten in den Daten könnte zu unerwarteten Werten aus einem funktionalen Abhängigkeitsprofil führen. Beispiel: 90 % der Zeilen haben den Bundesstaatenwert "WI" für den PLZ-Wert "98052". Das Profil meldet Zeilen, die den korrekten Bundesstaatenwert "WA" aufweisen, als Verletzungen.  
   
- **\<Name der determinanten Spalte>**  
+ **\<determinant column name>**  
  Zeigt den Wert der determinanten Spalte oder einer Kombination aus Spalten in dieser Instanz einer funktionalen Abhängigkeitsverletzung an.  
   
- **\<Name der abhängigen Spalte>**  
+ **\<dependent column name>**  
  Zeigt den Wert der abhängigen Spalte in dieser Instanz einer funktionalen Abhängigkeitsverletzung an.  
   
  **Unterstützte Anzahl**  
  Zeigt die Anzahl der Zeilen an, in denen der Wert der determinanten Spalte die abhängige Spalte festlegt.  
   
  **Verletzungsanzahl**  
- Zeigt die Anzahl der Zeilen an, in denen der Wert der determinanten Spalte die abhängige Spalte nicht festlegt. (Dabei handelt es sich um die Zeilen, in denen der abhängige Wert der in der Spalte **\<dependent column name>** angezeigte Wert ist.)  
+ Zeigt die Anzahl der Zeilen an, in denen der Wert der determinanten Spalte die abhängige Spalte nicht festlegt. (In diesen Zeilen ist der abhängige Wert der Wert, der in der Spalte **\<dependent column name>** angezeigt wird.)  
   
  **Unterstützter Prozentsatz**  
  Zeigt den Prozentsatz der Zeilen an, in denen die determinante Spalte die abhängige Spalte festlegt.  
@@ -240,7 +240,7 @@ ms.locfileid: "71294216"
  Zeigt die Stärke (als Prozentsatz) der Überlappung zwischen Spalten an. Eine Schlüsselstärke von weniger als 100 % gibt an, dass es Fälle gibt, in denen der untergeordnete Wert nicht in den übergeordneten Werten enthalten ist.  
   
 ##### <a name="inclusion-violations-pane"></a>Bereich 'Inklusionsverletzungen'  
- **\<Spalte1>, \<Spalte2> usw.**  
+ **\<column1>, \<column2> usw.**  
  Zeigt die Werte aus der bzw. den untergeordneten Spalte(n) an, die nicht in der bzw. den übergeordneten Spalte(n) gefunden wurden.  
   
  **Count**  

@@ -1,5 +1,6 @@
 ---
 title: Anwenden eines festen Abfrageplans auf eine Planhinweisliste | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie einen festen Abfrageplan auf eine Planhinweisliste des Typs OBJECT oder SQL in SQL Server anwenden können. In diesem Beispiel wird eine Planhinweisliste für eine einfache Ad-hoc-SQL-Anweisung erstellt.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bbf401f9-af7c-48e7-8a43-bf25e8af2fd7
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 49ca6572768c0f52688fdacecdc8a0fcf2ee01fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b39441ba86d8337fd4a59d9ffbc1f27a68c569ca
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773134"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458615"
 ---
 # <a name="apply-a-fixed-query-plan-to-a-plan-guide"></a>Anwenden eines festen Abfrageplans auf eine Planhinweisliste
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158918"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485576"
 ---
 # <a name="thread-and-task-architecture-guide"></a>Handbuch zur Thread- und Taskarchitektur
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -111,6 +111,9 @@ ORDER BY parent_task_address, scheduler_id;
 > [!TIP]
 > Die Spalte `parent_task_address` ist für den übergeordneten Task stets NULL. 
 
+> [!TIP]
+> Bei einer stark ausgelasteten [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] überschreitet die Anzahl der aktiven Tasks möglicherweise den von reservierten Threads festgelegten Grenzwert. Diese Tasks können zu einem Branch gehören, der nicht mehr verwendet wird und sich in einem Übergangszustand befindet, während er auf seine Bereinigung wartet. 
+
 [!INCLUDE[ssResult](../includes/ssresult-md.md)] Beachten Sie, dass es 17 aktive Tasks für die gleichzeitig ausgeführten Branches gibt: 16 untergeordnete Tasks, die den reservierten Threads entsprechen, sowie der übergeordnete bzw. koordinierende Task.
 
 |parent_task_address|task_address|task_state|scheduler_id|worker_address|
@@ -133,9 +136,6 @@ ORDER BY parent_task_address, scheduler_id;
 |0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
 |0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
 
-> [!TIP]
-> Bei einer stark ausgelasteten [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] überschreitet die Anzahl der aktiven Tasks möglicherweise den von reservierten Threads festgelegten Grenzwert. Diese Tasks können zu einem Branch gehören, der nicht mehr verwendet wird und sich in einem Übergangszustand befindet, während er auf seine Bereinigung wartet. 
-
 Beachten Sie, dass jedem der 16 untergeordneten Tasks ein anderer Arbeitsthread zugewiesen ist (siehe Spalte `worker_address`), aber alle Worker demselben Pool von acht Schedulern (0, 5, 6, 7, 8, 9, 10, 11) zugewiesen sind, und dass der übergeordnete Tasks einem Scheduler außerhalb dieses Pools (3) zugewiesen ist.
 
 > [!IMPORTANT]
@@ -147,7 +147,7 @@ Ein Arbeitsthread kann im Scheduler nur für die Dauer seines Quantums (4 ms) a
 > [!TIP] 
 > Für die Ausgabe der oben gezeigten DMV befinden sich alle aktiven Tasks im Status SUSPENDED. Ausführlichere Informationen zu wartenden Tasks erhalten Sie durch Abfragen der DMV [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md). 
 
-Zusammenfassend lässt sich sagen, dass eine parallele Anforderung mehrere Tasks erzeugt, wobei jeder Task einem einzelnen Arbeitsthread und jeder Arbeitsthread wiederum einem einzelnen Scheduler zugewiesen werden muss. Daher kann die Anzahl der in Verwendung befindlichen Scheduler nicht die Anzahl der parallelen Tasks pro Branch überschreiten, die durch MAXDOP festgelegt ist. 
+Zusammenfassend erzeugt eine parallele Anforderung mehrere Aufgaben. Jeder Task muss einem einzelnen Arbeitsthread zugewiesen werden. Jeder Arbeitsthread muss einem einzelnen Scheduler zugewiesen werden. Daher kann die Anzahl der verwendeten Scheduler nicht die Anzahl der parallelen Tasks pro Branch überschreiten, die durch die MaxDOP-Konfiguration oder einen Abfragehinweis festgelegt ist. Der koordinierende Thread trägt nicht zum MaxDOP-Limit bei. 
 
 ### <a name="allocating-threads-to-a-cpu"></a>Zuteilen von Threads zu einer CPU
 Standardmäßig startet jede Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] jeden Thread, und das Betriebssystem verteilt Threads von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzen je nach Last auf die Prozessoren (CPUs) eines Computers. Wenn Prozessaffinität auf Betriebssystemebene aktiviert wurde, weist das Betriebssystem jeden Thread einer bestimmten CPU zu. Im Gegensatz dazu weist [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-**Arbeitsthreads** zu **Planern** zu, die die Threads gleichmäßig auf die CPUs verteilen (im Roundrobin-Verfahren).

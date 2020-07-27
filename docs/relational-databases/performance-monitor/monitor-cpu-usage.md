@@ -1,5 +1,6 @@
 ---
 title: Überwachen der CPU-Auslastung | Microsoft-Dokumentation
+description: Überwachen einer SQL Server-Instanz, um zu bestimmen, ob die CPU-Auslastungsraten in einem normalen Bereich liegen. Verwenden Sie den Systemmonitor, um festzustellen, wie lange die CPU für das Ausführen eines Threads benötigt.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0ba69baf585aca6d6dd30c6a0ab0016a76ef6047
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e81db69a70a54365ffe7da6fbe9933bb98848db
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787468"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458557"
 ---
 # <a name="monitor-cpu-usage"></a>Überwachen der CPU-Auslastung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

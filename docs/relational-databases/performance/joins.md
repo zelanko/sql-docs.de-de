@@ -1,5 +1,6 @@
 ---
 title: Joins (SQL Server) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über die Typen von Join-Vorgängen (Verknüpfungen), die SQL Server verwendet. Beim Verwenden von Join-Vorgängen unterstützt SQL Server die vertikale Tabellenpartitionierung, auch spaltenweise Speicherung genannt.
 ms.custom: ''
 ms.date: 07/19/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009680"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915846"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -245,7 +246,7 @@ Ein logischer Join ist dann für adaptive Joins im Batchmodus zulässig, wenn er
 - Der Datenbank-Kompatibilitätsgrad ist 140 oder höher.
 - Die Abfrage ist eine `SELECT`-Anweisung (Anweisungen zur Datenänderung sind aktuell nicht verfügbar).
 - Der Join kann sowohl vom physischen Algorithmus eines indizierten Joins geschachtelter Schleifen als auch eines Hashjoins ausgeführt werden.
-- Der Hashjoin verwendet den [Batchmodus](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) entweder über einen vorhandenen Columnstore-Index in der Abfrage oder eine mit Columnstore indizierte Tabelle, auf die direkt vom Join verwiesen wird.
+- Der Hashjoin verwendet den Batchmodus, der über einen vorhandenen Columnstore-Index in der Abfrage, durch eine mit Columnstore indizierte Tabelle oder durch die Verwendung der [„Batchmodus für Rowstore“-Funktion](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) aktiviert wird.
 - Die generierten alternativen Lösungen des Joins geschachtelter Schleifen und Hashjoins sollten dasselbe erste untergeordnete Element haben (äußerer Verweis).
 
 ### <a name="adaptive-threshold-rows"></a>Adaptive Schwellenwertzeilen

@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76257fd464a7107297d609bfb6a4ef150d6f58bc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74687196"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913648"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage-Verbindungs-Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Der Azure Storage-Verbindungs-Manager ermöglicht einem SQL Server Integration Services (SSIS)-Paket, die Verbindung mit einem Azure Storage-Konto herzustellen. Der Verbindungs-Manager ist eine Komponente des [SQL Server Integration Services-Feature Packs (SSIS) für Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
@@ -33,11 +33,15 @@ Die folgenden Eigenschaften sind verfügbar:
 
 - **Dienst:** Gibt den Speicherdienst an, mit dem eine Verbindung hergestellt werden soll.
 - **Kontoname:** Gibt den Speicherkontonamen an.
-- **Authentifizierung:** Gibt die zu verwendende Authentifizierungsmethode an. „AccessKey“- und „ServicePrincipal“-Authentifizierung werden unterstützt.
+- **Authentifizierung:** Gibt die zu verwendende Authentifizierungsmethode an. „AccessKey“-, „ServicePrincipal“- und „SharedAccessSignature“-Authentifizierung werden unterstützt.
     - **AccessKey:** Geben Sie für diese Authentifizierungsmethode den **Kontoschlüssel** an.
     - **ServicePrincipal:** Geben Sie für diese Authentifizierungsmethode die **Anwendungs-ID**, den **Anwendungsschlüssel** und die **Mandanten-ID** des Dienstprinzipals an.
       Damit die **Testverbindung** funktioniert, müssen Sie dem Dienstprinzipal für das Speicherkonto mindestens die Rolle **Storage-Blobdatenleser** zuweisen.
       Weitere Informationen finden Sie unter [Gewähren von Zugriff auf Azure-Blob- und -Warteschlangendaten mit RBAC über das Azure-Portal](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+    - **SharedAccessSignature:** Geben Sie für diese Authentifizierungsmethode mindestens das **Token** der Shared Access Signature an.
+      Zum Testen der Verbindung geben Sie zusätzlich den Ressourcenbereich an, der getestet werden soll. Möglicherweise handelt es sich um **Dienst**, **Container** oder **Blob**.
+      Geben Sie für **Container** und **Blob** den Containernamen bzw. den Blobpfad an.
+      Weitere Informationen finden Sie unter [Azure Storage SAS (Shared Access Signature) – Übersicht](https://docs.microsoft.com/azure/storage/common/storage-sas-overview).
 - **Umgebung:** Gibt die Cloudumgebung an, die das Speicherkonto hostet.
 
 ## <a name="managed-identities-for-azure-resources-authentication"></a>Verwaltete Identitäten für die Authentifizierung von Azure-Ressourcen

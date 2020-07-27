@@ -21,12 +21,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83f9b8cf8fd74f980c6ea85a335058779cd5736b
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 48b8dbac5a4ad484103dcceedb243a52cc7e621d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834731"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943092"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Eigenschaft)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -49,7 +49,10 @@ IDENTITY [ (seed , increment) ]
  Der Wert, der für die erste in die Tabelle geladene Zeile verwendet wird.  
   
  *increment*  
- Der inkrementelle Wert, der zum Identitätswert der zuvor geladenen Zeile addiert wird.  
+ Der inkrementelle Wert, der zum Identitätswert der zuvor geladenen Zeile addiert wird.
+
+ > [!NOTE]
+ > In Azure Synapse Analytics sind Werte für die Identität aufgrund der verteilten Architektur des Data Warehouse nicht inkrementell. Weitere Informationen finden Sie unter [Erstellen von Ersatzschlüsseln im Synapse SQL-Pool mit IDENTITY](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values).
   
  Sie müssen entweder sowohl den Ausgangswert als auch den inkrementellen Wert oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
   
@@ -62,8 +65,11 @@ IDENTITY [ (seed , increment) ]
   
  Die Identitätseigenschaft für eine Spalte garantiert nicht Folgendes:  
   
--   **Eindeutigkeit des Werts**: Die Eindeutigkeit muss mit einer **PRIMARY KEY**- oder **UNIQUE**-Einschränkung bzw. einem **UNIQUE**-Index erzwungen werden.  
-  
+-   **Eindeutigkeit des Werts**: Die Eindeutigkeit muss mit einer **PRIMARY KEY**- oder **UNIQUE**-Einschränkung bzw. einem **UNIQUE**-Index erzwungen werden. - 
+ 
+> [!NOTE]
+> Azure Synapse Analytics unterstützt weder **PRIMARY KEY**- oder **UNIQUE**-Einschränkungen noch einen **UNIQUE**-Index. Weitere Informationen finden Sie unter [Erstellen von Ersatzschlüsseln im Synapse SQL-Pool mit IDENTITY](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key).
+
 -   **Aufeinanderfolgende Werte innerhalb einer Transaktion**: Bei einer Transaktion, durch die mehrere Zeilen eingefügt werden, ist nicht sichergestellt, dass Sie aufeinanderfolgende Werte für die Zeilen erhalten, da für die Tabelle möglicherweise andere gleichzeitige Einfügungsvorgänge stattfinden. Wenn Werte fortlaufend sein müssen, sollte die Transaktion eine exklusive Sperre für die Tabelle oder die Isolationsstufe **SERIALIZABLE** verwenden.  
   
 -   **Aufeinanderfolgende Werte nach Serverneustart oder anderen Fehlern** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Identitätswerte aus Leistungsgründen zwischenspeichern. Einige der zugewiesenen Werte können während eines Datenbankausfalls oder Serverneustarts verloren gehen. Dies kann zu Lücken im Identitätswert beim Einfügen führen. Wenn Lücken nicht zulässig sind, sollte die Anwendung ihren eigenen Mechanismus verwenden, um Schlüsselwerte zu generieren. Die Verwendung eines Sequenzgenerators mit der **NOCACHE**-Option kann die Lücken auf Transaktionen beschränken, für die nie ein Commit ausgeführt wird.  

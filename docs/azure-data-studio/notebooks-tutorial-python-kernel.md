@@ -8,13 +8,13 @@ ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: ''
-ms.date: 04/27/2020
-ms.openlocfilehash: e4c431cba395b8e0c732fa7ac4ab96942cac7144
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/01/2020
+ms.openlocfilehash: 7eb7af0577cb74f180991bf455c36c9122972643
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728862"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920458"
 ---
 # <a name="create-and-run-a-python-notebook"></a>Erstellen und Ausführen eines Python-Notebooks
 
@@ -26,7 +26,7 @@ In diesem Tutorial wird veranschaulicht, wie Sie mithilfe des Python-Kernels ein
 
 - [Installierte Azure Data Studio-Instanz](download-azure-data-studio.md)
 
-## <a name="new-notebook"></a>Neues Notebook
+## <a name="create-a-notebook"></a>Erstellen eines Notebooks
 
 Führen Sie die folgenden Schritte aus, um eine Notebook-Datei in Azure Data Studio zu erstellen:
 
@@ -34,57 +34,64 @@ Führen Sie die folgenden Schritte aus, um eine Notebook-Datei in Azure Data Stu
 
 1. Klicken Sie im Menü **Datei** auf **Neues Notebook**.
 
-1. Wählen Sie **Python 3** als **Kernel** aus.
+1. Wählen Sie **Python 3** als **Kernel** aus. **Anfügen an** ist auf „localhost“ festgelegt.
 
    :::image type="content" source="media/notebook-tutorial-python/set-kernel-and-attach-to-python.png" alt-text="Festlegen des Kernels":::
 
-1. Wenn Sie dazu aufgefordert werden, Python zu konfigurieren, wählen Sie unter **Python für Notebooks konfigurieren** eine der folgenden Optionen aus:
+Sie können das Notebook mit dem Befehl **Speichern** oder **Speichern unter...** im Menü **Datei** speichern. 
 
-   - **Neue Python-Installation**, um eine neue Kopie von Python für Azure Data Studio zu installieren, oder
-   - **Vorhandene Python-Installation verwenden**, um den Pfad zu einer vorhandenen Python-Installation anzugeben
+Zum Öffnen eines Notebooks können Sie den Befehl **Datei öffnen...** im Menü **Datei** verwenden. Wählen Sie auf der **Begrüßungs**-Seite den Befehl **Öffnen** aus, oder verwenden Sie den Befehl **Datei: Öffnen** aus der Befehlspalette.
 
-## <a name="run-a-notebook-cell"></a>Ausführen einer Notebookzelle
+## <a name="change-the-python-kernel"></a>Ändern des Python-Kernels
 
-Sie können Zellen erstellen, die Code oder Text enthalten. Sie können eine Codezelle direkt ausführen. Die Ergebnisse werden im Notebook angezeigt, sobald die Ausführung der Zelle abgeschlossen ist. Mit Textzellen können Sie Ihren Code mit formatierter Dokumentation versehen.
+Wenn Sie zum ersten Mal eine Verbindung mit dem Python-Kernel in einem Notebook herstellen, wird die Seite **Python für Notebooks konfigurieren** angezeigt. Sie können eine der folgenden Optionen auswählen:
 
-### <a name="code"></a>Code
+- **Neue Python-Installation**, um eine neue Kopie von Python für Azure Data Studio zu installieren, oder
+- **Vorhandene Python-Installation verwenden**, um den Pfad zu einer vorhandenen Python-Installation anzugeben, die Azure Data Studio verwenden soll
 
-Fügen Sie eine neue Python-Codezelle hinzu, indem Sie in der Symbolleiste auf den Befehl **+ Code** klicken.
-
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="Notebook-Symbolleiste":::
-
-In diesem Beispiel wird eine einfache Berechnung durchgeführt.
+Erstellen Sie eine Codezelle, und führen Sie die folgenden Python-Befehle aus, um den Speicherort und die Version des aktiven Python-Kernels anzuzeigen:
 
 ```python
-a = 1
-b = 2
-c = a/b
-print(c)
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
 ```
-Führen Sie die Zelle aus, indem Sie links neben der Zelle auf die Wiedergabeschaltfläche klicken. Die Ergebnisse werden unten angezeigt.
 
-:::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="Ausführen der Notebook-Zelle":::
+So stellen Sie mit einer anderen Python-Installation eine Verbindung her
 
-### <a name="text"></a>Text
+1. Klicken Sie im Menü **Datei** auf **Einstellungen** und anschließend auf **Einstellungen**.
+1. Scrollen Sie unter **Erweiterungen** zu **Notebook-Konfiguration**.
+1. Deaktivieren Sie unter **Verwenden vorhandener Python-Installation** die Option „Lokaler Pfad zu einer bereits vorhandenen Python-Installation, die von Notebooks verwendet wird“.
+1. Starten Sie Azure Data Studio neu.
 
-Klicken Sie auf der Symbolleiste auf den Befehl **+ Text**, um eine neue Textzelle hinzuzufügen.
+Wenn Azure Data Studio startet, und Sie eine Verbindung mit dem Python-Kernel herstellen,m wird die Seite **Python für Notebooks konfigurieren** angezeigt, und Sie können auswählen, ob Sie eine neue Python-Installation erstellen oder einen Pfad zu einer vorhandenen Installation angeben möchten.
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python-text.png" alt-text="Notebook-Symbolleiste":::
+## <a name="run-a-code-cell"></a>Ausführen einer Codezelle
 
-Die Zelle wechselt in den Bearbeitungsmodus. Geben Sie nun Markdown-Text ein, und Ihnen wird gleichzeitig die Vorschauversion angezeigt.
+Sie können Zellen erstellen, die SQL-Code enthalten, den Sie direkt ausführen können, indem Sie auf die Schaltfläche **Zelle ausführen** (der runde schwarze Pfeil) links neben der Zelle klicken. Die Ergebnisse werden im Notebook angezeigt, nachdem das Ausführen der Zelle abgeschlossen ist.
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-cell-python.png" alt-text="Markdown-Zelle":::
+Beispiel:
 
-Wenn Sie außerhalb der Textzelle klicken, wird nur der Markdown-Text angezeigt.
+1. Fügen Sie eine neue Python-Codezelle hinzu, indem Sie in der Symbolleiste auf den Befehl **+ Code** klicken.
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-preview-python.png" alt-text="Markdown-Text":::
+   :::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="Notebook-Symbolleiste":::
+
+1. Kopieren Sie das folgende Beispiel, fügen Sie es in die Zelle ein, und klicken Sie auf **Zelle ausführen**. In diesem Beispiel wird eine einfache Berechnung durchgeführt und das Ergebnis unten angezeigt.
+
+   ```python
+   a = 1
+   b = 2
+   c = a/b
+   print(c)
+   ```
+
+   :::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="Ausführen der Notebook-Zelle":::
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Erfahren Sie mehr über Notebooks:
 
-- [Verwenden von Notebooks in SQL Server](notebooks-guidance.md)
-
+- [Erweitern von Python mit Kqlmagic](notebooks-kqlmagic.md)
+- [Verwenden von Notebooks in Azure Data Studio](notebooks-guidance.md)
 - [Erstellen und Ausführen eines SQL Server-Notebooks](notebooks-tutorial-sql-kernel.md)
-
-- [How to manage notebooks in Azure Data Studio (Vorgehensweise: Verwalten von Notebooks in Azure Data Studio)](notebooks-manage-sql-server.md)

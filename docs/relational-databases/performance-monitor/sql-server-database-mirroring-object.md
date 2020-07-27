@@ -1,5 +1,6 @@
 ---
 title: SQL Server, Datenbankspiegelung (Objekt) | Microsoft-Dokumentation
+description: Lernen Sie das „SQLServer:Datenbankspiegelung“-Leistungsobjekt kennen, das Leistungsindikatoren enthält, die Informationen zur SQL Server-Datenbankspiegelung melden.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b2239718cae70fc5df05e65e7d310e86efe65efc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c2d3dd59f6e2736938bfc9880e7258cf81dfafb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760553"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458014"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, Datenbankspiegelung (Objekt)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

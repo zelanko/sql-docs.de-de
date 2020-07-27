@@ -17,13 +17,13 @@ helpviewer_keywords:
 - PREDICT clause
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions'
-ms.openlocfilehash: e570c7cbc06c6d2e384d34571e0af7ca93003ceb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+monikerRange: '>=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||>=azure-sqldw-latest||=sqlallproducts-allversions'
+ms.openlocfilehash: 039441b0029a5c2d92e16f7bc35bc496c6cd440c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012572"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918603"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)
 
@@ -32,6 +32,8 @@ ms.locfileid: "86012572"
 Generiert einen vorhergesagten Wert oder Bewertungen auf Grundlage eines gespeicherten Modells. Weitere Informationen finden Sie unter [Native Bewertung mithilfe der PREDICT T-SQL-Funktion](../../machine-learning/predictions/native-scoring-predict-transact-sql.md).
 
 ## <a name="syntax"></a>Syntax
+
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 ```syntaxsql
 PREDICT  
@@ -55,21 +57,58 @@ WITH ( <result_set_definition> )
 MODEL = @model | model_literal  
 ```
 
+::: moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```syntaxsql
+PREDICT  
+(  
+  MODEL = <model_object>,
+  DATA = object AS <table_alias>
+  [, RUNTIME = ONNX ]
+)  
+WITH ( <result_set_definition> )  
+
+<result_set_definition> ::=  
+  {  
+    { column_name  
+      data_type  
+      [ COLLATE collation_name ]  
+      [ NULL | NOT NULL ]  
+    }  
+      [,...n ]  
+  }  
+
+<model_object> ::=
+  {
+    model_literal
+    | model_variable
+    | ( scalar_subquery )
+  }
+```
+
+::: moniker-end
+
 ### <a name="arguments"></a>Argumente
 
 **MODEL**
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 Der Parameter `MODEL` wird verwendet, um das Modell anzugeben, das für die Bewertung oder Vorhersage verwendet wird. Das Modell wird als Variable, Literal oder Skalarausdruck angegeben.
 
-::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=sqlallproducts-allversions"
 `PREDICT` unterstützt Modelle, die mit den Paketen [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) und [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) trainiert wurden.
 ::: moniker-end
 
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Der Parameter `MODEL` wird verwendet, um das Modell anzugeben, das für die Bewertung oder Vorhersage verwendet wird. Das Modell wird als Variable, Literal oder Skalarausdruck angegeben.
+
 In Azure SQL Managed Instance unterstützt `PREDICT` Modelle im [ONNX-Format (Open Neural Network Exchange)](https://onnx.ai/get-started.html) oder Modelle, die mit den Paketen [RevoScaleR](../../machine-learning/r/ref-r-revoscaler.md) und [revoscalepy](../../machine-learning/python/ref-py-revoscalepy.md) trainiert wurden.
 ::: moniker-end
 
 ::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+Der Parameter `MODEL` wird verwendet, um das Modell anzugeben, das für die Bewertung oder Vorhersage verwendet wird. Das Modell wird als Variable, Literal, Skalarausdruck oder skalare Unterabfrage angegeben.
+
 In Azure Synapse Analytics unterstützt `PREDICT` Modelle im [ONNX-Format (Open Neural Network Exchange)](https://onnx.ai/get-started.html).
 ::: moniker-end
 
@@ -129,11 +168,27 @@ Die folgenden Beispiele veranschaulichen die Syntax zum Aufrufen von `PREDICT`.
 
 In diesem Beispiel wird auf die `PREDICT`-Funktion in der `FROM`-Klausel einer `SELECT`-Anweisung verwiesen:
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```sql
 SELECT d.*, p.Score
 FROM PREDICT(MODEL = @model,
     DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
+
+:::moniker-end
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+```sql
+DECLARE @model varbinary(max) = (SELECT test_model FROM scoring_model WHERE model_id = 1);
+
+SELECT d.*, p.Score
+FROM PREDICT(MODEL = @model,
+    DATA = dbo.mytable AS d) WITH (Score float) AS p;
+```
+
+::: moniker-end
 
 Der Alias **d**, der für die Tabellenquelle im Parameter `DATA` angegeben ist, wird verwendet, um auf die Spalten zu verweisen, die zu `dbo.mytable` gehören. Der Alias **p**, der für die `PREDICT`-Funktion angegeben ist, wird verwendet, um auf die Spalten zu verweisen, die von der `PREDICT`-Funktion zurückgegeben werden.
 
@@ -141,6 +196,20 @@ Der Alias **d**, der für die Tabellenquelle im Parameter `DATA` angegeben ist, 
 - Der Alias **d**, der für die Tabellenquelle im Parameter `DATA` angegeben ist, wird verwendet, um auf die Spalten zu verweisen, die zu `dbo.mytable` gehören. Die Namen der Eingabedatenspalten sollten mit den Namen der Eingaben für das Modell übereinstimmen.
 - Der Alias **p**, der für die `PREDICT`-Funktion angegeben ist, wird verwendet, um auf die vorhergesagte Spalte zu verweisen, die von der `PREDICT`-Funktion zurückgegeben wird. Der Spaltenname sollte mit dem Namen der Ausgabe für das Modell übereinstimmen.
 - Alle Eingabedatenspalten und die vorhergesagten Spalten können über die SELECT-Anweisung angezeigt werden.
+
+::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
+
+Die vorherige Beispielabfrage kann umgeschrieben werden, um eine Sicht zu erstellen, indem `MODEL` als skalare Unterabfrage angegeben wird:
+
+```sql
+CREATE VIEW predictions
+AS
+SELECT d.*, p.Score
+FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
+             DATA = dbo.mytable AS d) WITH (Score float) AS p;
+```
+
+:::moniker-end
 
 ### <a name="combining-predict-with-an-insert-statement"></a>Kombinieren von PREDICT mit einer INSERT-Anweisung
 
