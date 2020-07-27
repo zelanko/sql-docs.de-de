@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 53a05fea022a2ea0232bc44646509ee3a84028af
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761854"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919212"
 ---
 # <a name="dtexec-utility"></a>dtexec (Hilfsprogramm)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Das Befehlszeilen-Hilfsprogramm **dtexec** dient zum Konfigurieren und Ausführen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen. Das Hilfsprogramm **dtexec** ermöglicht den Zugriff auf alle Features zur Paketkonfiguration und -ausführung, z.B. Parameter, Verbindungen, Eigenschaften, Variablen und Statusanzeigen. Das Hilfsprogramm **dtexec** ermöglicht das Laden von Paketen aus diesen Quellen: dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server, einer ISPAC-Projektdatei, einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, dem [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketspeicher und dem Dateisystem.  
@@ -68,22 +68,22 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> Überlegungen zur Installation auf 64-Bit-Computern  
  Auf einem 64-Bit-Computer installiert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eine 64-Bit-Version des Hilfsprogramms **dtexec** (dtexec.exe). Wenn Sie bestimmte Pakete im 32-Bit-Modus ausführen möchten, müssen Sie die 32-Bit-Version des Hilfsprogramms **dtexec** installieren. Wählen Sie zum Installieren der 32-Bit-Version des Hilfsprogramms **dtexec** während des Setups entweder Clienttools oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
- Standardmäßig wird auf einem 64-Bit-Computer, auf dem sowohl die 64-Bit-Version als auch die 32-Bit-Version eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Befehlszeilen-Hilfsprogramms installiert ist, die 32-Bit-Version an der Eingabeaufforderung ausgeführt. Die 32-Bit-Version wird ausgeführt, da der Verzeichnispfad für die 32-Bit-Version in der PATH-Umgebungsvariablen vor dem Verzeichnispfad für die 64-Bit-Version aufgeführt wird. (Typischerweise ist der 32-Bit-Verzeichnispfad „ *\<Laufwerk>* :\Programme (x86)\Microsoft SQL Server\110\DTS\Binn“, während der 64-Bit-Verzeichnispfad „ *\<Laufwerk>* :\Programme\Microsoft SQL Server\110\DTS\Binn“ lautet.)  
+ Standardmäßig wird auf einem 64-Bit-Computer, auf dem sowohl die 64-Bit-Version als auch die 32-Bit-Version eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Befehlszeilen-Hilfsprogramms installiert ist, die 32-Bit-Version an der Eingabeaufforderung ausgeführt. Die 32-Bit-Version wird ausgeführt, da der Verzeichnispfad für die 32-Bit-Version in der PATH-Umgebungsvariablen vor dem Verzeichnispfad für die 64-Bit-Version aufgeführt wird. (Typischerweise ist der 32-Bit-Verzeichnispfad „ *\<drive>* :\Programme(x86)\Microsoft SQL Server\110\DTS\Binn“, während der 64-Bit-Verzeichnispfad „ *\<drive>* :\Programme\Microsoft SQL Server\110\DTS\Binn“ lautet.)  
   
 > **HINWEIS:** Wenn Sie das Hilfsprogramm mithilfe des SQL Server-Agents ausführen, verwendet dieser automatisch die 64-Bit-Version des Hilfsprogramms. Der SQL Server-Agent sucht die richtige ausführbare Datei für das Hilfsprogramm in der Registrierung und nicht in der PATH-Umgebungsvariablen.  
   
  Wenn Sie sicherstellen möchten, dass die 64-Bit-Version des Hilfsprogramms an der Eingabeaufforderung ausgeführt wird, können Sie einen der folgenden Schritte ausführen:  
   
--   Öffnen Sie ein Eingabeaufforderungsfenster, wechseln Sie in das Verzeichnis mit der 64-Bit-Version des Hilfsprogramms („ *\<Laufwerk>* :\Programme\Microsoft SQL Server\110\DTS\Binn“), und führen Sie dann das Hilfsprogramm aus diesem Verzeichnis aus.  
+-   Öffnen Sie eine Eingabeaufforderung, wechseln Sie in das Verzeichnis mit der 64-Bit-Version des Hilfsprogramms ( *\<drive>* :\Programme\Microsoft SQL Server\110\DTS\Binn), und führen Sie dann das Hilfsprogramm aus diesem Verzeichnis aus.  
   
--   Führen Sie an der Eingabeaufforderung das Hilfsprogramm aus, indem Sie den vollständigen Pfad („ *\<Laufwerk>* :\Programme\Microsoft SQL Server\110\DTS\Binn“) der 64-Bit-Version des Hilfsprogramms eingeben.  
+-   Führen Sie an der Eingabeaufforderung das Hilfsprogramm aus, indem Sie den vollständigen Pfad ( *\<drive>* :\Programme\Microsoft SQL Server\110\DTS\Binn) der 64-Bit-Version des Hilfsprogramms eingeben.  
   
--   Ändern Sie die Reihenfolge der Pfade in der PATH-Umgebungsvariablen dauerhaft, indem Sie den 64-Bit-Pfad („ *\<Laufwerk>* :\Programme\Microsoft SQL Server\110\DTS\Binn“) in der Variable vor den 32-Bit-Pfad („ *\<Laufwerk>* :\ Programme (x86)\Microsoft SQL Server\110\DTS\Binn“) platzieren.  
+-   Ändern Sie die Reihenfolge der Pfade in der PATH-Umgebungsvariablen dauerhaft, indem Sie den 64-Bit-Pfad ( *\<drive>* :\Programme\Microsoft SQL Server\110\DTS\Binn) in der Variablen vor dem 32-Bit-Pfad ( *\<drive>* :\ Programme(x86)\Microsoft SQL Server\110\DTS\Binn) platzieren.  
   
 ##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> Überlegungen zu Computern mit parallelen Installationen  
  Wenn [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] auf einem Computer installiert wird, auf dem [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] oder [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] installiert ist, sind mehrere Versionen des Hilfsprogramms **dtexec** installiert.  
   
- Führen Sie das Hilfsprogramm an der Eingabeaufforderung aus, indem Sie den vollständigen Pfad („ *\<Laufwerk>* :\Programme\Microsoft SQL Server\\<Version\>\DTS\Binn“) eingeben, um sicherzustellen, dass Sie die korrekte Version des Hilfsprogramms ausführen.  
+ Um sicherzustellen, dass Sie die korrekte Version des Hilfsprogramms ausführen, führen Sie das Hilfsprogramm an der Eingabeaufforderung aus, indem Sie den vollständigen Pfad ( *\<drive>* :\Programme\Microsoft SQL Server\\<Version\>\DTS\Binn) eingeben.  
   
 ##  <a name="phases-of-execution"></a><a name="phases"></a> Ausführungsphasen  
  Bei der Ausführung des Hilfsprogramms werden vier Phasen durchlaufen. Es handelt sich um die folgenden Phasen:  
@@ -243,7 +243,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** _error code_: Standardmäßig speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Debugdumpdateien im Ordner „ *\<Laufwerk*>:\Programme\Microsoft SQL Server\110\Shared\ErrorDumps“.  
+     **/Dump** _error code_: In der Standardeinstellung speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Debugdumpdateien im Ordner „ *\<drive>* :\Programme\Microsoft SQL Server\110\Shared\ErrorDumps“.  
   
     > **HINWEIS:** Debugdumpdateien können vertrauliche Informationen enthalten. Verwenden Sie eine Zugriffssteuerungsliste, um den Zugriff auf die Dateien einzuschränken oder die Dateien in einen Ordner mit eingeschränktem Zugriff zu kopieren. Bevor Sie Ihre Debugdateien beispielsweise an Microsoft Support Services senden, wird empfohlen, vertrauliche Informationen zu entfernen.  
   
@@ -255,7 +255,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (Optional) Erstellt die Debugdumpdateien MDMP und TMP, wenn bei der Ausführung des Pakets ein beliebiger Fehler auftritt.  
   
-     In der Standardeinstellung speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Debugsicherungsdateien im Ordner „ *\<Laufwerk>* :\Programme\Microsoft SQL Server\110\Shared\ErrorDumps“.  
+     In der Standardeinstellung speichert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Debugdumpdateien im Ordner „ *\<drive>* :\Programme\Microsoft SQL Server\110\Shared\ErrorDumps“.  
   
     > **HINWEIS:** Debugdumpdateien können vertrauliche Informationen enthalten. Verwenden Sie eine Zugriffssteuerungsliste, um den Zugriff auf die Dateien einzuschränken oder die Dateien in einen Ordner mit eingeschränktem Zugriff zu kopieren. Bevor Sie Ihre Debugdateien beispielsweise an Microsoft Support Services senden, wird empfohlen, vertrauliche Informationen zu entfernen.  
   

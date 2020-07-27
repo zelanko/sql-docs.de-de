@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/15/2020
-ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.date: 07/17/2020
+ms.openlocfilehash: 5acbadb8d019b6d7d468f756bd25b70d890251c8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406253"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458885"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](download.md)**
+
+## <a name="july-2020-hotfix"></a>Juli 2020 (Hotfix)
+
+17. Juli 2020 &nbsp; / &nbsp; Version: 1.20.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Korrektur von Fehler #11372 Objekt-Explorer Drag & Drop-Tabelle führt fälschlicherweise Umbrüche von Tabellennamen durch. | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
+| Korrektur von Fehler #11356 Dunkles Design ist nun das Standarddesign. | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>Bekanntes Problem
+
+- Einige Benutzer haben Verbindungsfehler von dem neuen Microsoft.DataData.SqlClient v2.0.0 gemeldet, der in diesem Release enthalten ist. Benutzer haben festgestellt, dass [die Befolgung dieser Anweisungen](https://github.com/microsoft/azuredatastudio/issues/11367#issuecomment-659614111) zu einer erfolgreichen Verbindung führt.
 
 ## <a name="july-2020"></a>Juli 2020
 
