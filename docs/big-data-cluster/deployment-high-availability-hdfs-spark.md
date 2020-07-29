@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25a6b733eed0611b43fb1f17ad0fe8a0cc1d690a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 688031d9301710ada0ba5952ab45dba02bf46de0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75720826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774537"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>Bereitstellen des HDFS-Namenknotens und gemeinsamer Spark-Dienste in einer Hochverfügbarkeitskonfiguration
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Zusätzlich zur Bereitstellung der SQL Server-Masterinstanz in einer Hochverfügbarkeitskonfiguration mithilfe von Verfügbarkeitsgruppen können Sie auch andere erfolgskritische Dienste im Big Data-Cluster bereitstellen, um eine höhere Zuverlässigkeit sicherzustellen. Sie können `HDFS name node` und die gemeinsamen Spark-Dienste konfigurieren, die unter `sparkhead` mit einem zusätzlichen Replikat gruppiert sind. In diesem Fall wird `Zookeeper` ebenfalls im Big Data-Cluster bereitgestellt, um als Clusterkoordinator und als Metadatenspeicher für folgende Dienste zu dienen: 
 

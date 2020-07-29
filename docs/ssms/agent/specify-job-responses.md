@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3208c2543292fd67ec36ad25dd5a065e08988ca6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 643c58adfed622b6a5d57e6056dcea316b6cf5ec
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245787"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243739"
 ---
 # <a name="specify-job-responses"></a>Angeben von Auftragsantworten
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -46,9 +45,8 @@ Auftragsantworten geben Aktionen an, die der [!INCLUDE[ssNoVersion](../../includ
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
+|BESCHREIBUNG|Thema|  
 |-|-|  
-|**Beschreibung**|**Thema**|  
 |Beschreibt, wie ein Operator über den Auftragsstatus benachrichtigt wird.|[Benachrichtigen eines Operators über den Auftragsstatus](../../ssms/agent/notify-an-operator-of-job-status.md)|  
 |Beschreibt, wie der Auftragsstatus in das Windows-Anwendungsprotokoll ausgegeben wird.|[Schreiben des Auftragsstatus in das Windows-Anwendungsprotokoll](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   

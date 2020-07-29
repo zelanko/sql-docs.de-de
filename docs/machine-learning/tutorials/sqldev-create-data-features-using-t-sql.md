@@ -2,22 +2,22 @@
 title: 'Tutorial zu R und Transact-SQL: Datenfeatures'
 description: In diesem Tutorial erfahren Sie, wie man Berechnungen zu gespeicherten Prozeduren für die Verwendung in R-Machine Learning-Modellen hinzufügt.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6970fd92fc1b655e0df66cdb548a044e3bdc746e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: c5b588f9cb94d39753040e3251d9a4b2e1f12d49
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116063"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670955"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Lektion 2: Erstellen von Datenfeatures mit R und T-SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
 

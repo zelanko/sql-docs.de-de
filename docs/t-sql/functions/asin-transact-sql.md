@@ -20,12 +20,12 @@ ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 572936a187f4331744ead22ec7790c57bcd0e32d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 79988d91775fb7ae1bda2734148e434e5c161723
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002275"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113145"
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,9 @@ Eine Funktion, die den Winkel im Bogenmaß zurück gibt, dessen Sinus dem angege
 ASIN ( float_expression )  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 *float_expression*  
 Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Typ **float** oder von einem Typ, der implizit in float konvertiert werden kann. Nur ein Wert von -1,00 bis 1,00 ist gültig. Bei Werten außerhalb dieses Bereichs wird NULL zurückgegeben und ASIN meldet einen Domänenfehler.
   

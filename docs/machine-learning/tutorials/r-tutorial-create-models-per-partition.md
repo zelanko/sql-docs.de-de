@@ -2,22 +2,22 @@
 title: Erstellen von partitionsbasierten Modellen in R
 description: Erfahren Sie, wie Sie partitionierte Daten modellieren, trainieren und verwenden, die beim Verwenden der partitionsbasierten Modellierungsfunktionen von SQL Server-Machine Learning dynamisch erstellt werden.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/30/2020
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c45fa9db06980f05bdaf059aae857a36b326c24
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: bf294501b1cb613bf97b581a30a193469c78b9f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606682"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756392"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Erstellen von partitionsbasierten Modellen in SQL Server mit R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Die partitionsbasierte Modellierung in SQL Server 2019 beschreibt die Möglichkeit, Modelle über partitionierte Daten zu erstellen und zu trainieren. Bei geschichteten Daten, die auf natürliche Weise in ein jeweiliges Klassifizierungsschema segmentiert werden, z. B. geografische Regionen, Datum und Uhrzeit, Alter oder Geschlecht, können Sie ein Skript für das gesamte Dataset ausführen, das Partitionen, die nach all diesen Vorgängen intakt bleiben, modellieren, trainieren und bewerten kann. 
 

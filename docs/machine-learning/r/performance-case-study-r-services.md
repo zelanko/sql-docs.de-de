@@ -2,22 +2,22 @@
 title: Leistungsoptimierung für Ergebnisse
 description: In diesem Artikel werden die Methoden, Ergebnisse und Schlussfolgerungen zweier Fallstudien zusammengefasst, in denen verschiedene Optimierungsmethoden getestet wurden.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1313cc2074058b104ea0939d02cdac30ddf28595
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1af68324f613c0e47cd8cc5eaca73dca5881db04
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486769"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242327"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Leistungsoptimierung für R Services: Ergebnisse und Ressourcen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Dieser Artikel ist der vierte und letzte in einer Reihe, in der die Leistungsoptimierung für R Services beschrieben wird. In diesem Artikel werden die Methoden, Ergebnisse und Schlussfolgerungen zweier Fallstudien zusammengefasst, in denen verschiedene Optimierungsmethoden getestet wurden.
 
@@ -337,7 +337,7 @@ Ausführliche Informationen hierzu finden Sie im folgenden Blogartikel und dem z
 
 Vielen Benutzern ist beim ersten Laden der R-Laufzeit (oder der Python-Laufzeit) eine kleine Pause aufgefallen. Aus diesem Grund wird die Zeit für die erste Ausführung wie in den Tests beschrieben zwar häufig gemessen, aber später verworfen. Durch die nachfolgende Zwischenspeicherung kann es zu erheblichen Leistungsunterschieden zwischen der ersten und der zweiten Ausführung kommen. Beim Verschieben von Daten zwischen SQL Server und der externen Laufzeit kommt es auch zu einem gewissen Mehraufwand, insbesondere dann, wenn Daten über das Netzwerk übergeben und nicht direkt aus SQL Server geladen werden.
 
-Aus diesen Gründen gibt es zur Verringerung der anfänglichen Ladezeit nicht die eine Lösung, da sich die Leistungseinbußen je nach Aufgabe erheblich unterscheiden. Die Zwischenspeicherung wird für die Bewertung einer einzelnen Zeile beispielsweise in Batches ausgeführt. Folglich sind nachfolgende Bewertungsvorgänge wesentlich schneller, da weder das Modell noch die R-Laufzeit erneut geladen werden. Auch mit der [nativen Bewertung](../sql-native-scoring.md) können Sie vermeiden, dass die R-Laufzeit vollständig geladen wird.
+Aus diesen Gründen gibt es zur Verringerung der anfänglichen Ladezeit nicht die eine Lösung, da sich die Leistungseinbußen je nach Aufgabe erheblich unterscheiden. Die Zwischenspeicherung wird für die Bewertung einer einzelnen Zeile beispielsweise in Batches ausgeführt. Folglich sind nachfolgende Bewertungsvorgänge wesentlich schneller, da weder das Modell noch die R-Laufzeit erneut geladen werden. Auch mit der [nativen Bewertung](../predictions/native-scoring-predict-transact-sql.md) können Sie vermeiden, dass die R-Laufzeit vollständig geladen wird.
 
 Beim Trainieren von großen Modellen oder bei der Bewertung von großen Batches fällt der Mehraufwand verglichen mit den Vorteilen durch das Vermeiden von Datenverschiebung oder durch Streaming und eine parallele Verarbeitung möglicherweise geringer aus. Weitere Informationen zur Leistungssteigerung finden Sie in diesem Blogbeitrag:
 

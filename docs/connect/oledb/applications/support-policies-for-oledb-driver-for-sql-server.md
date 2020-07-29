@@ -1,7 +1,7 @@
 ---
 title: Unterstützungsrichtlinien des OLE DB-Treibers für SQL Server | Microsoft-Dokumentation
 description: Unterstützungsrichtlinien des OLE DB-Treibers für SQL Server
-ms.date: 03/18/2020
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3f48aa8c68b364db98d1cd3111c11c6635ee5335
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7e4b77a700d494f1ed8f11a0004c60b37c5cc361
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79526825"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007042"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Unterstützungsrichtlinien des OLE DB-Treibers für SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -30,6 +30,7 @@ Der OLE DB-Treiber für SQL Server wird mitgetestet und unterstützt Verbindung
 
 | Treiberversion | Azure SQL-Datenbank | Azure SQL DW | Verwaltete Azure SQL-Instanz | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|-|-|-|-|-|-|-|-|
+|18.4|J|J|J|J|J|J|J|J|
 |18.3|J|J|J|J|J|J|J|J|
 |18.2|J|J|J|J|J|J|J|J|
 |18.1|J|J|J| |J|J|J|J|
@@ -42,6 +43,7 @@ In der folgenden Tabelle werden die Betriebssysteme aufgeführt, die vom OLE DB-
 
 | Treiberversion | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|-|-|-|-|-|-|
+|18.4|J|J|J|J|J|J|
 |18.3|J|J|J|J|J|J|
 |18.2|J|J|J|J|J|J|
 |18.1| |J|J|J|J|J|
@@ -51,9 +53,6 @@ In der folgenden Tabelle werden die Betriebssysteme aufgeführt, die vom OLE DB-
 <sup>1</sup> unterstützt unter Windows Server 2012 mit [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)  
 <sup>2</sup> unterstützt unter Windows Server 2012 R2 mit dem [Update vom April 2014](https://go.microsoft.com/fwlink/?linkid=2073785) und [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)  
 <sup>3</sup> unterstützt unter Windows 8.1 mit dem [Update vom April 2014](https://go.microsoft.com/fwlink/?linkid=2073785) und [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)  
-
-> [!NOTE]  
-> Die Verwendung der UTF-8-Codepage (Option „Use Unicode UTF-8 for worldwide language support“ [Unicode-UTF-8 für weltweite Sprachunterstützung verwenden]) wird unter Windows nicht unterstützt.
 
 ## <a name="ado-support-policies"></a>Richtlinien zur ADO-Unterstützung  
 

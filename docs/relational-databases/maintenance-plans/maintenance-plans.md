@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e97723d6ea047aa86641c9074ff235c682519e7a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789463"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245197"
 ---
 # <a name="maintenance-plans"></a>Wartungspläne
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,9 +63,8 @@ ms.locfileid: "85789463"
 ## <a name="related-tasks"></a>Related Tasks  
  Erste Schritte mit Wartungsplänen mithilfe der folgenden Themen:  
   
-|||  
+|BESCHREIBUNG|Thema|  
 |-|-|  
-|**Beschreibung**|**Thema**|  
 |Konfigurieren der **Agent XPs**-Serverkonfigurationsoption, um erweiterte gespeicherte Prozeduren für SQL Server Agent zu aktivieren.|[Agent XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |Beschreibt, wie ein Wartungsplan mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] erstellt wird.|[Erstellen eines Wartungsplans](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |Beschreibt, wie ein Wartungsplan mithilfe der Wartungsplan-Entwurfsbenutzeroberfläche erstellt wird.|[Erstellen eines Wartungsplans &#40;Entwurfsoberfläche für Wartungspläne&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

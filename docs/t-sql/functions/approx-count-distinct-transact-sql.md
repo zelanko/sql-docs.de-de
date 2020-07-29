@@ -14,12 +14,12 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8a506597e3f702f36996da687fe0cf4058fc2ca
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 08beac97cd70045f073be53cfeb93e9d1e4ad67f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007943"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113155"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 
@@ -37,7 +37,9 @@ Diese Funktion gibt die ungefähre Anzahl von eindeutigen Ungleich-Null-Werten i
 APPROX_COUNT_DISTINCT ( expression )   
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 *expression*  
 Eine [expression](../../t-sql/language-elements/expressions-transact-sql.md) beliebigen Typs mit Ausnahme von **image**, **sql_variant**, **ntext**oder **text**. 
 

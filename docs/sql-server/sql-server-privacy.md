@@ -2,6 +2,7 @@
 title: Ergänzende Datenschutzbestimmungen zu SQL Server | Microsoft-Dokumentation
 ms.date: 01/19/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: mikeray
 ms.custom: ''
 ms.topic: conceptual
@@ -9,16 +10,16 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9362402d6c02fe7ff140f4105c6f011441c457ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76761804"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916906"
 ---
 # <a name="sql-server-privacy-supplement"></a>Ergänzende Datenschutzbestimmungen zu SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Dieser Artikel beschreibt internetfähige Features, die anonyme Featurenutzungs- und Diagnosedaten sammeln und an Microsoft senden können. SQL Server sammelt möglicherweise Standardinformationen zu Ihrem Computer, und Daten zur Nutzung und Leistung werden möglicherweise an Microsoft übermittelt und analysiert, um die Qualität, Sicherheit und Zuverlässigkeit des Produkts zu optimieren. Wenn Sie SQL Server auf einem virtuellen Computer in Microsoft Azure installieren, werden möglicherweise Umgebungsinformationen an Microsoft gesendet, damit Microsoft Ihre SQL Server-VM-Ressource beim Ressourcenanbieter in Ihrem Azure-Abonnement registrieren kann. Weitere Informationen dazu finden Sie [hier](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). Im Rahmen der Registrierung der SQL Server VM-Ressource wird die SQL Server-IaaS-Agent-Erweiterung auf dem virtuellen Computer installiert, wie [hier](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension)beschrieben. Dieser Artikel ist ein Nachtrag zu den [Microsoft-Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkId=521839). Die Datenklassifizierung in diesem Artikel gilt nur für lokale Versionen von SQL Server. Sie gilt nicht für folgende Produkte:
 

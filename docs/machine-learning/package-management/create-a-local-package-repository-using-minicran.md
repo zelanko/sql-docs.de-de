@@ -4,21 +4,21 @@ description: Erfahren Sie, wie Sie R-Pakete offline installieren, indem Sie das 
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8ddfcf997cd4cc62f1c65efd7ecfc4cf3aff730
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a980e356496e3e2e1cdbc5010e8f1c6f7ec7d8c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783505"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Erstellen eines lokalen R-Paketrepositorys mithilfe von miniCRAN
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 In diesem Artikel erfahren Sie, wie Sie R-Pakete offline installieren, indem Sie [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) verwenden, um ein lokales Repository aus Paketen und Abhängigkeiten zu erstellen. **miniCRAN** identifiziert Pakete und Abhängigkeiten und lädt diese in einen einzelnen Ordner herunter, den Sie für die Offlineinstallation von R-Paketen auf andere Computer kopieren.
 
@@ -112,7 +112,7 @@ pdb[, c("Package", "Version", "License")]
 
 Nachdem Sie über ein lokales Repository mit den für Sie erforderlichen Paketen verfügen, verschieben Sie das Paketrepository auf den SQL Server-Computer. Im folgenden Verfahren wird beschrieben, wie Sie die Pakete mithilfe von R-Tools installieren.
 
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 > [!NOTE]
 > Die empfohlene Methode zum Installieren von Paketen ist die Verwendung von **sqlmlutils**. Weitere Informationen finden Sie unter [Installieren von neuen R-Paketen mit sqlmlutils](install-additional-r-packages-on-sql-server.md).
 ::: moniker-end

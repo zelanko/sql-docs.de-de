@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 2634805d9940ce43ff2ccdd3d08b49022bf3df16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 51b2f7092e09043487e867aea70ef4e00438f989
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242789"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007621"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Anpassen des Umfangs der in Diagrammen angezeigten Informationen (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Wenn Sie eine Tabelle zu einem Datenbankdiagramm hinzufügen, wird eine festgelegte Anzahl von Eigenschaften angezeigt. Sie können in einem Menü den Umfang der angezeigten Informationen auswählen, oder Sie können einen benutzerdefinierten Satz von Eigenschaften erstellen.  
   
 Dabei stehen folgende Möglichkeiten zur Verfügung:  

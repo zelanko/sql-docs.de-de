@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 9dde13a71dac042d8bf5c351cb4f9655f322acd8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b6bd4471f14d662b6167c00d599eccf61b7dcced
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255116"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010644"
 ---
 # <a name="save-not-permitted-dialog-box"></a>Dialogfeld 'Speichern (nicht zulässig)'
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Das Dialogfeld **Speichern (nicht zulässig)** warnt Sie, dass das Speichern von Änderungen nicht zulässig ist, da die von Ihnen vorgenommenen Änderungen erfordern, dass die aufgelisteten Tabellen gelöscht und neu erstellt werden.  
   
 Die folgenden Aktionen können die erneute Erstellung einer Tabelle erfordern:  
