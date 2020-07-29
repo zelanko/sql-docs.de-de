@@ -2,22 +2,22 @@
 title: Installieren von Paketen mit Python-Tools
 description: Erfahren Sie, wie Sie mit Python-Standardtools neue Python-Pakete in einer Instanz von SQL Server Machine Learning Services installieren.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 4e55f9ba41036a5bd0ee806b8b45ee1fde8dc49f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2ed46c4c4fc79d47bf2ca60b16f7d5563fd15d05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723976"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>Installieren von Paketen mit Python-Tools in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Artikel erfahren Sie, wie Sie mit Python-Standardtools neue Python-Pakete in einer Instanz von SQL Server Machine Learning Services installieren. Im Allgemeinen ähnelt der Prozess zum Installieren neuer Pakete dem in einer Python-Standardumgebung. Einige zusätzliche Schritte sind jedoch erforderlich, wenn der Server keine Internetverbindung hat.
 

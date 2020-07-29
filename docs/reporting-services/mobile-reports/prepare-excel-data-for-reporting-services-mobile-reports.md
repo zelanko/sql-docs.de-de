@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ef25e90b8a9deb641a72006faf0a0c903a554ba5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3a760b0ae100259b8102f303f0747e0da81223e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448376"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942322"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Vorbereiten von Excel-Daten für mobile Berichte von Reporting Services
   
@@ -70,11 +70,11 @@ Es gibt keine Einschränkungen, wo Sie Excel-Dateien speichern können, die Sie 
   
 Datumsfelder sind für viele mobile Berichte unerlässlich, weswegen Sie sicherstellen sollten, dass die Excel-Zellen ordnungsgemäß als Datumsangaben formatiert sind. In einigen Fällen macht dies eine Konvertierung notwendig. Es folgen einige Beispiele für Formeln, mit denen Excel-Zellen von Text in Datumsangaben konvertiert werden können.  
   
-    Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7  
-  
-    2013/03/21=DATEVALUE(A1)  
-  
-    2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
+`Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7`  
+
+`2013/03/21=DATEVALUE(A1)`  
+
+`2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))`  
   
 Nachdem Sie die Zellen konvertiert haben, müssen Sie sie als Datumsangaben formatieren, indem Sie sie oder die gesamte Spalte auswählen > **Kontext**-Menü > **Zellen formatieren** > **Datum** aus der Liste **Kategorie**. Sie können ebenfalls den Textkonvertierungs-Assistenten von Excel verwenden, um Textzellen in ordnungsgemäß formatierte Datumsangaben zu konvertieren.  
   

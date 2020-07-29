@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016'
 ms.custom: seo-dt-2019
-ms.date: 01/10/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd01280d2777fdab926c2e733224dc94b5fef834
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4e8d09fd7af7501427490178ef7cc9624b7e98a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906046"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247269"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016
 
@@ -37,7 +37,7 @@ Um dieses Tutorial abzuschließen, müssen Sie mit den Sicherungs- und Wiederher
 - Erstellen Sie ein kostenloses [Azure-Konto](https://azure.microsoft.com/offers/ms-azr-0044p/).
 - Erstellen Sie ein [Azure-Speicherkonto](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Bereitstellen einer [Azure-VM, die SQL Server ausführt](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/)
+- Bereitstellen einer [Azure-VM, die SQL Server ausführt](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 - Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Laden Sie die [AdventureWorks 2016-Beispieldatenbank](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) herunter.
 - Weisen Sie das Benutzerkonto der Rolle des [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) zu und gewähren Sie die Berechtigung zum [Ändern beliebiger Anmeldeinformationen](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
@@ -180,7 +180,7 @@ Führen Sie die folgenden Schritte aus, um SQL Server-Anmeldeinformationen zu er
 In diesem Abschnitt werden Sie die AdventureWorks2016-Datenbank in Ihrer lokalen SQL Server 2016-Instanz in dem Azure-Container sichern, den Sie in [Abschnitt 1](#1---create-stored-access-policy-and-shared-access-storage) erstellt haben.
   
 > [!NOTE]  
-> Wenn Sie eine SQL Server 2012 SP1 CU2 oder höher Datenbank oder eine SQL Server 2014-Datenbank in diesem Azure-Container sichern möchten, können Sie die [hier](https://docs.microsoft.com/sql/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) dokumentierte veraltete Syntax verwenden, um die URL mit der WITH CREDENTIAL-Syntax zu sichern.  
+> Wenn Sie eine SQL Server 2012 SP1 CU2 oder höher Datenbank oder eine SQL Server 2014-Datenbank in diesem Azure-Container sichern möchten, können Sie die [hier](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) dokumentierte veraltete Syntax verwenden, um die URL mit der WITH CREDENTIAL-Syntax zu sichern.  
   
 So sichern Sie eine Datenbank in Blob Storage:  
   

@@ -11,19 +11,19 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc526ec022d139288fd057ac1cd7889653cecba5
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290774"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859763"
 ---
 # <a name="set-default-options-for-report-builder"></a>Set default options for Report Builder
   Im Berichts-Generator können Sie zahlreiche nützliche Standardeinstellungen zum Vereinfachen und Beschleunigen der Berichtserstellung festlegen.  Wenn Sie beispielsweise den Standardberichtsserver festlegen oder ändern, speichert der Berichts-Generator Ihre Berichte automatisch auf dem gleichen Berichtsserver, sofern nicht anders angegeben.  
   
 -   Klicken Sie im Berichts-Generator auf **Datei** > **Optionen**.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
  **Standardmäßig diesen Berichtsserver oder diese SharePoint-Website verwenden**  
  Möglicherweise hat der Administrator diese Option konfiguriert. Der Wert kann eine wohlgeformte URL sein, die mit http:// oder https:// beginnt. Diese Einstellung bestimmt, welche Datenquellenverbindungen standardmäßig im Tabellen-/Matrixassistenten und Diagrammassistenten angezeigt werden. Außerdem werden die Berichte auf diesem Server verarbeitet. Sie können Ressourcen von diesem Server referenzieren.  
   

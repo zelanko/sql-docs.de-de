@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f835927ba9927b5614ac0660ce3cad2ae96ae483
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 14bc7634ab3b8b3ad54f8544dc694bb955bd55ce
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261719"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001611"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Tastenkombinationen für SQL Server Management Studio
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] bietet Benutzern zwei Tastaturschemas. Standardmäßig wird das Schema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] mit auf [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 basierenden Tastenkombinationen verwendet. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet auch ein dem Standardschema von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ähnliches Tastaturschema. Um das Tastaturschema zu ändern oder weitere Tastenkombinationen hinzuzufügen, klicken Sie im Menü **Extras** auf **Optionen**. Wählen Sie das gewünschte Tastaturschema unter **Umgebung**auf der Seite **Tastatur** aus.  
   

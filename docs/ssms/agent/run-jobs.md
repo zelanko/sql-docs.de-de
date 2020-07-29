@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f89cd4c1d292ee75e094743ed3d2ab75706a2ae7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2927502310511e55cba942184d019d2151ee2069
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247579"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246459"
 ---
 # <a name="run-jobs"></a>Ausführen von Aufträgen
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -34,9 +33,8 @@ Zum Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agen
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
+|BESCHREIBUNG|Thema|  
 |-|-|  
-|**Beschreibung**|**Thema**|  
 |Beschreibt, wie ein [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag gestartet wird.|[Start a Job](../../ssms/agent/start-a-job.md)|  
 |Beschreibt, wie ein [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag beendet wird.|[Beenden eines Auftrags](../../ssms/agent/stop-a-job.md)|  
 |Beschreibt, wie ein [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag deaktiviert oder aktiviert wird.|[Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)|  

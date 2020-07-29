@@ -11,12 +11,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50e15e99ce68b47b1cd87262ff12fda3e9836bcf
-ms.sourcegitcommit: 7a47aaffbd82bab2707cd69f44571a9037d2273b
+ms.openlocfilehash: 2d61c6e1ebb1d417ebe3f95f588a1e2b12b6b5f3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85377801"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246269"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Zugreifen auf speicheroptimierte Tabellen mit interpretiertem Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -52,14 +52,42 @@ Weitere Informationen zu Tabellenhinweisen finden Sie unter [Tabellenhinweise &#
   
 Die folgenden Tabellenhinweise werden nicht unterstützt, wenn mit interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)]auf eine speicheroptimierte Tabelle zugegriffen wird.  
 
-  
-|||||  
-|-|-|-|-|  
-|HOLDLOCK|IGNORE_CONSTRAINTS|IGNORE_TRIGGERS|NOWAIT|  
-|PAGLOCK|READCOMMITTED|READCOMMITTEDLOCK|READPAST|  
-|READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
-|TABLOCKXX|UPDLOCK|XLOCK||  
-  
+:::row:::
+    :::column:::
+        HOLDLOCK
+
+        PAGLOCK
+
+        READUNCOMMITTED
+
+        TABLOCKXX
+    :::column-end:::
+    :::column:::
+        IGNORE_CONSTRAINTS
+
+        READCOMMITTED
+
+        ROWLOCK
+
+        UPDLOCK
+    :::column-end:::
+    :::column:::
+        IGNORE_TRIGGERS
+
+        READCOMMITTEDLOCK
+
+        SPATIAL_WINDOW_MAX_CELLS = *integer*
+
+        XLOCK
+    :::column-end:::
+    :::column:::
+        NOWAIT
+
+        READPAST
+
+        TABLOCK
+    :::column-end:::
+:::row-end:::
 
 Wenn der Zugriff auf eine speicheroptimierte Tabelle von einer expliziten oder impliziten Transaktion mittels interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)]erfolgt, müssen Sie mindestens einen der folgenden Schritte ausführen:  
   

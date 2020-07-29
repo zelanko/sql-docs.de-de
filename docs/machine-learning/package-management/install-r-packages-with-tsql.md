@@ -2,22 +2,22 @@
 title: Verwenden von T-SQL (CREATE EXTERNAL LIBRARY) zum Installieren von R-Paketen
 description: Informationen zum Hinzufügen neuer R-Pakete zu SQL Server 2016 R Services oder SQL Server Machine Learning Services (datenbankintern).
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 4e9aa1b7b2b21883e3034d32959a8267d67d56c0
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: cc65081551da08f74730b728869db0847928f4ac
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606904"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242351"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Verwenden von T-SQL (CREATE EXTERNAL LIBRARY) zum Installieren von R-Paketen in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Artikel wird erläutert, wie neue R-Pakete in einer Instanz von SQL Server installiert werden können, in der maschinelles Lernen aktiviert ist. Es stehen mehrere Ansätze zur Wahl. T-SQL eignet sich am besten für Serveradministratoren, die mit R nicht vertraut sind.
 
@@ -48,7 +48,7 @@ Führen Sie die T-SQL-Anweisung `CREATE EXTERNAL LIBRARY` aus, um die gezippte P
 Die folgende Anweisung benennt beispielsweise als Paketquelle ein miniCRAN-Repository, welches das Paket **randomForest** und seine Abhängigkeiten enthält. 
 
 ```sql
-CREATE EXTERNAL LIBRARY randomForest
+CREATE EXTERNAL LIBRARY [randomForest]
 FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
 ```

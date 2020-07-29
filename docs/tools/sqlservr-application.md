@@ -2,7 +2,7 @@
 title: sqlservr (Anwendung)
 description: Mithilfe der Anwendung „sqlservr“ können Sie die Ausführung einer Instanz von SQL Server über die Eingabeaufforderung starten, beenden, anhalten und fortsetzen.
 ms.custom: seo-lt-2019
-ms.date: 08/01/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56498901eb6f7eed8fa58f73bae58daddb36f874
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 1302360b6ab5175bed5a9776d7de5389c3d40c00
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150565"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112575"
 ---
 # <a name="sqlservr-application"></a>sqlservr (Anwendung)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Mithilfe der Anwendung **sqlservr** können Sie die Ausführung einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz über die Eingabeaufforderung starten, beenden, anhalten und fortsetzen.
 
@@ -86,7 +86,7 @@ Die folgenden Parameter sind veraltet und werden in [!INCLUDE[ssCurrent](../incl
 |Parameter | Weitere Informationen|
 |:-----|:-----|
 |**-h** | Wurde in früheren Versionen der 32-Bit-Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet, um virtuellen Adressraum für Hot-Add-Arbeitsspeichermetadaten zu reservieren, wenn AWE aktiviert ist. Dies wird durch [!INCLUDE[sssql14](../includes/sssql14-md.md)] unterstützt. Weitere Informationen finden Sie unter [Nicht mehr unterstützte SQL Server-Funktionen in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
-|**-g** | *memory_to_reserve*<br/><br>Dies gilt für frühere Versionen der 32-Bit-Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Dies wird durch [!INCLUDE[sssql14](../includes/sssql14-md.md)] unterstützt. Gibt in Form einer ganzen Zahl an, wie viele Megabytes (MB) des Arbeitsspeichers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Speicherbelegungen innerhalb des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Prozesses, jedoch außerhalb des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Speicherpools übrig lässt. Weitere Informationen finden Sie in der [SQL Server 2014-Dokumentation zu Konfigurationsoptionen für den Serverarbeitsspeicher](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
+|**-g** | *memory_to_reserve*<br/><br>Dies gilt für frühere Versionen der 32-Bit-Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Dies wird durch [!INCLUDE[sssql14](../includes/sssql14-md.md)] unterstützt. Gibt in Form einer ganzen Zahl an, wie viele Megabytes (MB) des Arbeitsspeichers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Speicherbelegungen innerhalb des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Prozesses, jedoch außerhalb des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Speicherpools übrig lässt. Weitere Informationen finden Sie in der [SQL Server 2014-Dokumentation zu Konfigurationsoptionen für den Serverarbeitsspeicher](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Weitere Informationen

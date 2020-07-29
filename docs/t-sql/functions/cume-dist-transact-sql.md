@@ -19,12 +19,12 @@ ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21ee42a6901d24a0dcdd01c5c096a73cca4d95e4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 26527260cfcb3f557239f6ca83b60e3f269be9ac
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732465"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112516"
 ---
 # <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -39,9 +39,11 @@ Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berechnet diese F
 CUME_DIST( )  
     OVER ( [ partition_by_clause ] order_by_clause )  
   
-```  
-  
-## <a name="arguments"></a>Argumente  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
 Das Argument _partition\_by\_clause_ unterteilt das Resultset der FROM-Klausel in Partitionen, auf die die Funktion angewendet wird. Wenn das Argument _partition\_by\_clause_ nicht angegeben wird, behandelt `CUME_DIST` alle Zeilen von Resultsets von Abfragen als eine einzelne Gruppe. _order\_by\_clause_ bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. Für `CUME_DIST` ist _order\_by\_clause_ erforderlich. `CUME_DIST` akzeptiert nicht die \<rows or range clause> der OVER-Syntax. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).

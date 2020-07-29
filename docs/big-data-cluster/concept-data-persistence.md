@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661081"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Datenpersistenz mit SQL Server-Big Data-Clustern in Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [Persistente Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) stellen ein Plug-In-Modell für Speicher in Kubernetes bereit. Dabei wird die Bereitstellung des Speichers von seiner Nutzung abstrahiert. Daher können Sie Ihren eigenen hochverfügbaren Speicher verwenden und in den SQL Server-Big-Data-Cluster einbinden. Dadurch erhalten Sie die vollständige Kontrolle über die Art des Speichers sowie über die erforderliche Verfügbarkeit und Leistung. Kubernetes unterstützt [verschiedene Arten von Speicherlösungen](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner), einschließlich Azure-Datenträger und -Dateien, Network File System (NFS) und lokalen Speicher.
 
