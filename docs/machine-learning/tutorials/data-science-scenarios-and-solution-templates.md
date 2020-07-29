@@ -2,22 +2,22 @@
 title: Data-Science-Lösungsvorlagen
 description: In diesem Artikel werden branchenspezifischen Vorlagen beschrieben, die bewährte Methoden veranschaulichen und Bausteine für die Implementierung einer Machine Learning-Lösung bereitstellen.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d323178152e07726c818971c8c7e8ee297c20af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b039af528200782d788394f49e0bd74ed2b54dd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728636"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Szenarios für Data Science und Lösungsvorlagen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Artikel werden verschiedene Vorlagen für Machine Learning-Lösungen in SQL Server beschrieben. Diese Vorlagen veranschaulichen die bewährten Methoden und stellen Bausteine für die schnelle Implementierung einer Machine Learning-Lösung bereit. Jede Vorlage ist für die Lösung eines bestimmten Data-Science-Problems in einer bestimmten Branche oder einem bestimmten Nischenmarkt konzipiert.
 Die Tasks in jeder Vorlage reichen von der Datenvorbereitung und Featureentwicklung bis hin zum Modelltraining und zur Bewertung. 

@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 2660ccb2deeaf4b76090b2add2614452dd91cb60
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 084471f17aac4d9f731facaad71c2e265a2c275d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151697"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726912"
 ---
 # <a name="save-traces-and-trace-templates"></a>Speichern von Ablaufverfolgungen und Ablaufverfolgungsvorlagen
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Es ist wichtig, zwischen dem Speichern von Ablaufverfolgungsdateien und dem Speichern von Ablaufverfolgungsvorlagen zu unterscheiden. Beim Speichern einer Ablaufverfolgungsdatei werden die aufgezeichneten Ereignisdaten an einem angegebenen Speicherort gespeichert. Beim Speichern einer Ablaufverfolgungsvorlage wird die Ablaufverfolgungsdefinition gespeichert, wie z. B. angegebene Datenspalten, Ereignisklassen oder Filter.  
   

@@ -23,16 +23,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de184b30270ff301e343b1598327a449907fb508
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d48e64edfaaa1c3f5506f8c2c674101616254000
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75558261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718423"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Konfigurieren von Firewallregeln vor dem Ausführen des TSQL-Debuggers
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Sie müssen Windows-Firewall-Regeln so konfigurieren, dass das Debuggen von [!INCLUDE[tsql](../../includes/tsql-md.md)] aktiviert ist, wenn eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] hergestellt wird, die auf einem anderen Computer als der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor ausgeführt wird.
 

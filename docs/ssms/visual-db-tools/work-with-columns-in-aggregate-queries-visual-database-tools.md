@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 427f367eac38f2c5899f06c022e614bde80f37fb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 397e41a6ad34203fd16bf19e56f6284f7bb8c94f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246244"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002601"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Verwenden von Spalten in Aggregatabfragen (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Wenn Sie Aggregatabfragen erstellen, geht der [Abfrage- und Sicht-Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) von bestimmten Annahmen aus, sodass eine gültige Abfrage konstruiert werden kann. Wenn Sie z. B. eine Aggregatabfrage erstellen und eine Datenspalte für die Ausgabe kennzeichnen, nimmt der Abfrage- und Sicht-Designer die Spalte automatisch in die GROUP BY-Klausel auf und verhindert so, dass der Inhalt einer einzelnen Zeile in einer Zusammenfassung angezeigt werden kann.  
   
 ## <a name="using-group-by"></a>Verwenden von Gruppieren nach  

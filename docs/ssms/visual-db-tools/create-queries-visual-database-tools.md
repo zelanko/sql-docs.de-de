@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: f3b3719ae80dca63f8755e3c2a57179e219e1414
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1936f889e349f4ecf325c224e2afb76d18f6e451
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254292"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000046"
 ---
 # <a name="create-queries-visual-database-tools"></a>Erstellen von Abfragen (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Mit Abfragen können Daten aus den Tabellen und Sichten in der Datenbank abgerufen werden. Sie erstellen und verwenden Abfragen im **Abfrage- und Sicht-Designer**, der vier Bereiche umfasst: den [Diagrammbereich](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), den [SQL-Bereich](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), den [Kriterienbereich](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)und den [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
 ### <a name="to-create-a-new-query"></a>So erstellen Sie eine neue Abfrage  

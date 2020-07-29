@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6926c31163108da988338920ce77389e9300a0aa
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: af98af52bfe6416c489be821fa2d8b27092fac27
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151599"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918363"
 ---
 # <a name="sqllogship-application"></a>Anwendung sqllogship
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   Von der Anwendung **sqllogship** werden ein Sicherungs-, Kopier- oder Wiederherstellungsvorgang und zugeordnete Cleanuptasks für eine Protokollversandkonfiguration ausgeführt. Der Vorgang wird in einer bestimmten Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für eine bestimmte Datenbank ausgeführt.  
   
  ![Symbol für Themenlink](../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") Informationen zu den Syntaxkonventionen finden Sie unter [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../tools/command-prompt-utility-reference-database-engine.md).  

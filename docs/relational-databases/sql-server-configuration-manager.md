@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9a66712c7547a5fce852c23cdccd57465d794f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 429c56bed55931e4e30be6b2730638eb93113bd8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918814"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245597"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server-Konfigurations-Manager
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "86918814"
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein Tool zum Verwalten der Dienste, die mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verknüpft sind, zum Konfigurieren der Netzwerkprotokolle, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verwendet werden, und zum Verwalten der Konfiguration der Netzwerkkonnektivität von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Clientcomputern. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Konfigurations-Manager wird zusammen mit SQL Server installiert. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console-Snap-In, auf das Sie über das Startmenü zugreifen können. Er lässt sich auch einer beliebigen anderen [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console-Anzeige hinzufügen. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (**mmc.exe**) verwendet die Datei **SQLServerManager\<version>.msc** (z. B. **SQLServerManager13.msc** für [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]), um den Konfigurations-Manager zu öffnen. Sie benötigen die entsprechende [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Konfigurations-Manager-Version, um diese spezielle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Version zu verwalten. Nachfolgend sind die Pfade der letzten fünf Versionen aufgeführt (unter der Annahme, dass Windows auf Laufwerk C installiert wurde).  
   
-|||  
+|Version|`Path`|  
 |-|-|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019|C:\Windows\SysWOW64\SQLServerManager15.msc| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  

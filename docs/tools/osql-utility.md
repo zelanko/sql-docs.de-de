@@ -26,16 +26,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a6b04e904088ce78d46f692b9f29207d54f14c99
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 2c3767addadd34aebac1b29ee1b7fbdba189ae43
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151354"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002979"
 ---
 # <a name="osql-utility"></a>osql (Hilfsprogramm)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Das Hilfsprogramm **osql** ermöglicht es Ihnen, [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, Systemprozeduren und Skriptdateien einzugeben. Dieses Hilfsprogramm verwendet ODBC, um Daten mit dem Server auszutauschen.  
   

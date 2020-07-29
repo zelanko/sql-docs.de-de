@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a0e2081eef43cdc892e3b48457c10f9e935c5d0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 35fed704434a533f3c2aeddc8b2bcabcf9e6981f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732476"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110489"
 ---
 # <a name="crypt_gen_random-transact-sql"></a>CRYPT_GEN_RANDOM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,9 @@ Diese Funktion gibt eine von der Crypto API (CAPI) generierte Kryptografie-Zufal
 CRYPT_GEN_RANDOM ( length [ , seed ] )   
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 *length*  
 Die Länge der Zahl in Bytes, die von `CRYPT_GEN_RANDOM` erstellt wird. Das *length*-Argument weist einen **int**Datentyp und einen Wertebereich zwischen 1 und 8000 auf. `CRYPT_GEN_RANDOM` gibt NULL für einen **int**-Wert außerhalb dieses Bereichs zurück. 
   

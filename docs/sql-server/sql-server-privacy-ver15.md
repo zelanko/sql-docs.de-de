@@ -2,6 +2,7 @@
 title: Ergänzende Datenschutzbestimmungen zu SQL Server 2019 | Microsoft-Dokumentation
 ms.date: 09/20/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: mikeray
 ms.custom: ''
 ms.topic: conceptual
@@ -10,16 +11,16 @@ helpviewer_keywords: ''
 author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bbb8a21ee63e0a14778ee57874ba0ef385ac6cba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 393656057ae547c770f37e1e7db4c5b5373ac1bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71150293"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914676"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>Ergänzende Datenschutzbestimmungen zu SQL Server 2019
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Dieser Artikel beschreibt internetfähige Features, die anonyme Featurenutzungs- und Diagnosedaten sammeln und an Microsoft senden können. SQL Server sammelt möglicherweise Standardinformationen zu Ihrem Computer, und Daten zur Nutzung und Leistung werden möglicherweise an Microsoft übermittelt und analysiert, um die Qualität, Sicherheit und Zuverlässigkeit des Produkts zu optimieren. Dieser Artikel ist ein Nachtrag zu den [Microsoft-Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkId=521839). Die Datenklassifizierung in diesem Artikel gilt nur für lokale Versionen von SQL Server. Sie gilt nicht für folgende Produkte:
 

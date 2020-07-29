@@ -27,12 +27,12 @@ ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0a56a5c8cc76ab2358d2a89d2b5290905092bf6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: af2e71a4b4851e61176235b5615f0b7adbd553e2
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002208"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112151"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,9 @@ Diese Funktion wandelt einen **int**-ASCII-Code in einen Zeichenwert um.
 CHAR ( integer_expression )  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 *integer_expression*  
 Eine ganze Zahl zwischen 0 und 255. `CHAR` gibt einen `NULL`-Wert für Ganzzahlausdrücke zurück, wenn sich diese außerhalb dieses Bereichs befinden oder wenn die Ganzzahl nur das erste Byte eines Doppelbytezeichens ausdrückt.
 

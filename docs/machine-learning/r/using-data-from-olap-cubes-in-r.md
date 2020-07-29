@@ -2,22 +2,22 @@
 title: Verwenden von Daten aus OLAP-Cubes in R
 description: Dieser Artikel enthält eine Beschreibung der olapR-API sowie eine Übersicht über OLAP und MDX für R-Benutzer, denen mehrdimensionale Cube-Datenbanken möglicherweise noch nicht vertraut sind.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 99f67fb0fb52717eaa42e229a1b60c82f6223fad
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f27866a242cb03839a67a8f68478bc786222aa64
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117233"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967961"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Verwenden von Daten aus OLAP-Cubes in R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Das **olapR**-Paket ist ein R-Paket, das von Microsoft zur Verwendung mit Machine Learning Server und SQL Server bereitgestellt wird und mit dem Sie MDX-Abfragen zum Abrufen von Daten aus OLAP-Cubes ausführen können. Mit diesem Paket brauchen Sie keine Verbindungsserver zu erstellen oder vereinfachte Rowsets zu bereinigen, sondern können OLAP-Daten direkt aus R abrufen.
 
@@ -99,7 +99,7 @@ Allgemeine Informationen zu den beiden Modelltypen finden Sie im folgenden Artik
 
 Informationen zum Abfragen von Servereigenschaften finden Sie im folgenden Artikel:
 
-+ [OLE DB für OLAP-Schemarowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
++ [OLE DB für OLAP-Schemarowsets](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>Rückschreiben wird nicht unterstützt
 

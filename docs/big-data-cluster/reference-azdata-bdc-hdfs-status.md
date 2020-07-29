@@ -5,25 +5,25 @@ description: Referenzartikel zu azdata bdc hdfs status-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6b72e6043626715994c59273bd3eb679396975f7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ed624d4d5fcc3f64ce11e3c882a3bd661b9089b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822371"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243022"
 ---
 # <a name="azdata-bdc-hdfs-status"></a>azdata bdc hdfs status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Der folgende Artikel enthält Referenzinformationen zu den `bdc hdfs status`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
-|     |     |
+| Get-Help | BESCHREIBUNG |
 | --- | --- |
 [azdata bdc hdfs status show](#azdata-bdc-hdfs-status-show) | HDFS-Dienststatus
 ## <a name="azdata-bdc-hdfs-status-show"></a>azdata bdc hdfs status show
@@ -58,7 +58,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 

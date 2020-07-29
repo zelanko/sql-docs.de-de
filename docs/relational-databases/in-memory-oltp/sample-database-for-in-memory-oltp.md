@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4859a35269e0664b07f08db795e3e57a4c8feb70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735040"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245202"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Beispieldatenbank für In-Memory OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -465,14 +465,12 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
  Momentaufnahme direkt nach der Erstellung der Datenbank:  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Standard|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|Standard|0|  
 |MEMORYCLERK_XTP|Standard|0|  
-||||
   
  Die standardmäßigen Arbeitsspeicherclerks basieren auf systemweiten Strukturen und sind relativ klein. Der Arbeitsspeicherclerk für die Benutzerdatenbank, d. h. die Datenbank mit der ID 5, umfasst etwa 900 MB.  
   
@@ -490,9 +488,8 @@ WHERE t.type='U'
   
  Die folgende Tabelle zeigt die Ergebnisse, die diese Abfrage bei einer Neuinstallation des Beispiels zurückgibt:  
   
-||||  
-|-|-|-|  
-|**Tabellenname**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| Tabellenname | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SpecialOfferProduct_inmem|64|3840|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
 |SalesOrderDetail_inmem|15316|663552|  
@@ -500,7 +497,6 @@ WHERE t.type='U'
 |SpecialOffer_inmem|3|8192|  
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
-||||
 
  Sie sehen, dass die Tabellen relativ klein sind: „SalesOrderHeader_inmem“ umfasst ca. 7 MB und „SalesOrderDetail_inmem“ ca. 15 MB.  
   
@@ -516,14 +512,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Standard|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|Standard|0|  
 |MEMORYCLERK_XTP|Standard|0|  
-||||
 
  Wie Sie sehen, belegt SQL Server etwas weniger als 8 GB für die speicheroptimierten Tabellen und Indizes in der Beispieldatenbank.  
   
@@ -538,9 +532,8 @@ ON dms.object_id=t.object_id
 WHERE t.type='U'  
 ```  
   
-||||  
-|-|-|-|  
-|**Tabellenname**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| Tabellenname | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SalesOrderDetail_inmem|5113761|663552|  
 |DemoSalesOrderDetailSeed|64|10368|  
 |SpecialOffer_inmem|2|8192|  
@@ -548,7 +541,6 @@ WHERE t.type='U'
 |Product_inmem|111|12032|  
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
-||||
 
  Die Gesamtmenge an Daten beträgt etwa 6,5 GB. Beachten Sie, dass die Größe der Indizes für die Tabellen SalesOrderHeader_inmem und SalesOrderDetail_inmem der Größe der Indizes vor dem Einfügen der Verkaufsaufträge entspricht. Die Indexgröße hat sich nicht geändert, weil beide Tabellen Hashindizes verwenden, die wiederum statisch sind.  
   
@@ -564,14 +556,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Standard|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|Standard|0|  
 |MEMORYCLERK_XTP|Standard|0|  
-||||
 
  Erwartetes Verhalten: Der Arbeitsspeicher wird beim Ausführen der Transaktionsarbeitsauslastung freigegeben.  
   
@@ -584,14 +574,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Standard|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|Standard|0|  
 |MEMORYCLERK_XTP|Standard|0|  
-||||
 
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Datenträgernutzung für speicheroptimierte Tabellen  
  Mithilfe der folgenden Abfrage können Sie ermitteln, wie viel Gesamtspeicherplatz die Prüfpunktdateien einer Datenbank zu einem bestimmten Zeitpunkt auf dem Datenträger belegen:  
@@ -616,11 +604,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**Größe auf dem Datenträger (MB)**|  
+| Größe auf dem Datenträger (MB) |
+| ------------------ |
 |2312|  
-||
 
  Wie Sie sehen, besteht eine große Diskrepanz zwischen der Größe der Prüfpunktdateien auf dem Datenträger, die 2,3 GB beträgt, und der tatsächlichen Datengröße, die eher bei 30 MB liegt.  
   
@@ -643,14 +629,12 @@ ORDER BY state, file_type
   
  Im Anfangszustand erzielt das Beispiel Ergebnisse, die in etwa denen eines Servers mit 16 logischen Prozessoren entsprechen:  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**Größe auf dem Datenträger (MB)**|  
+| state_desc | file_type_desc | count | Größe auf dem Datenträger (MB) |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  Wie Sie sehen, wird der meiste Speicherplatz durch vorab erstellte Daten- und Änderungsdateien belegt. SQL Server hat vorab ein Dateipaar (bestehend aus Daten- und Änderungsdatei) pro logischem Prozessor erstellt. Darüber hinaus wird für Datendateien vorab eine Größe von 128 MB und für Änderungsdateien eine Größe von 8 MB festgelegt. So können Daten effizienter in diese Dateien eingefügt werden.  
   
@@ -666,11 +650,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**Größe auf dem Datenträger (MB)**|  
+| Größe auf dem Datenträger (MB) |
+| ------------------ |
 |8828|
-||
   
  Die Größe auf dem Datenträger liegt bei etwa 9 GB. Dies entspricht weitestgehend der Größe der Daten im Arbeitsspeicher.  
   
@@ -691,14 +673,12 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**Größe auf dem Datenträger (MB)**|  
+| state_desc | file_type_desc | count | Größe auf dem Datenträger (MB) |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  Es sind weiterhin 16 vorab erstellte Dateipaare verfügbar, die nach dem Schließen der Prüfpunkte sofort einsatzbereit sind.  
   
@@ -716,11 +696,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**Größe auf dem Datenträger (MB)**|  
+| Größe auf dem Datenträger (MB) |
+| ------------------ |
 |11839|
-||
   
  Mit fast 12 GB liegen die Ergebnisse deutlich über den 9 GB vor dem Zurücksetzen der exemplarischen Arbeitsauslastung. Dies ist darauf zurückzuführen, dass die Zusammenführung einiger Prüfpunktdateien zwar bereits gestartet, einige der Zusammenführungsziele jedoch noch nicht installiert wurden. Darüber hinaus wurden einige der zusammengeführten Quelldateien noch nicht bereinigt, wie im Folgenden ersichtlich:  
   
@@ -739,9 +717,8 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**Größe auf dem Datenträger (MB)**|  
+| state_desc | file_type_desc | count | Größe auf dem Datenträger (MB) |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
@@ -750,7 +727,6 @@ ORDER BY state, file_type
 |MERGE TARGET|DELTA|7|56|  
 |MERGED SOURCE|DATA|13|1772|  
 |MERGED SOURCE|DELTA|13|455|  
-|||||
 
  Sobald Transaktionsaktivitäten im System auftreten, werden Zusammenführungsziele installiert und zusammengeführte Quelldateien bereinigt.  
   
@@ -773,16 +749,14 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**Größe auf dem Datenträger (MB)**|  
+| state_desc | file_type_desc | count | Größe auf dem Datenträger (MB) |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  
 |UNDER CONSTRUCTION|DELTA|2|16|  
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
-|||||
 
  In diesem Fall gibt es zwei Prüfpunktdateipaare mit dem Status „under construction“. Das legt die Vermutung nahe, dass aufgrund des hohen Parallelitätsgrads der Arbeitsauslastung mehrere Dateipaare in den Status „under construction“ versetzt wurden. Mehrere gleichzeitige Threads erforderten also zur selben Zeit ein neues Dateipaar, wodurch sich der Status eines Paares von „precreated“ in „under construction“ geändert hat.  
   

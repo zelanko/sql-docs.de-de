@@ -2,22 +2,22 @@
 title: 'Tutorial zu R und Transact-SQL: Trainieren des Modells'
 description: In diesem Tutorial wird gezeigt, wie ein R-Modell mithilfe von gespeicherten Prozeduren in SQL Server und T-SQL-Funktionen trainiert, serialisiert und gespeichert wird.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 406f8e1c60c5820f9edaaf7760b7aeed321d2611
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ada26cbf8091b7e7b29e22378be5aa5f2b880314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115783"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725233"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>Lektion 3: Trainieren und Speichern eines Modells mit T-SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
 

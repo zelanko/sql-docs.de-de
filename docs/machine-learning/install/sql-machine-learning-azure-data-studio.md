@@ -2,21 +2,21 @@
 title: Azure Data Studio-Notebooks (Python, R)
 description: Erfahren Sie, wie Sie mit SQL Server Machine Learning Services Python- und R-Skripts in einem Notebook in Azure Data Studio ausführen.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b6bb16013b75765ee5fdf6b1b52ab0bd65de37f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1c5e16667f311c3afff9b2ada9e17c8ffe3751c2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487566"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916626"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>Ausführen von Python- und R-Skripts in Azure Data Studio-Notebooks mit SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Artikel erhalten Sie Informationen zum Ausführen von Python- und R-Skripts in [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)-Notebooks mit [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Azure Data Studio ist ein plattformübergreifendes Datenbanktool.
 
@@ -26,11 +26,9 @@ In diesem Artikel erhalten Sie Informationen zum Ausführen von Python- und R-Sk
 
 - Ein Server, auf dem SQL Server Machine Learning Services installiert und aktiviert ist Sie können Machine Learning Services unter Windows oder Linux oder auf Big Data-Clustern verwenden:
 
-    - [Installieren von SQL Server Machine Learning Services (Python und R) unter Windows](sql-machine-learning-services-windows-install.md)
-
-    - [Installieren von SQL Server Machine Learning Services (Python und R) unter Linux](../../linux/sql-server-linux-setup-machine-learning.md)
-
-    - [Ausführen von Python- und R-Skripts mit Machine Learning Services auf SQL Server-Big Data-Clustern](../../big-data-cluster/machine-learning-services.md)
+  - [Installieren von SQL Server Machine Learning Services (Python und R) unter Windows](sql-machine-learning-services-windows-install.md)
+  - [Installieren von SQL Server Machine Learning Services (Python und R) unter Linux](../../linux/sql-server-linux-setup-machine-learning.md)
+  - [Ausführen von Python- und R-Skripts mit Machine Learning Services auf SQL Server-Big Data-Clustern](../../big-data-cluster/machine-learning-services.md)
 
 ## <a name="create-a-sql-notebook"></a>Erstellen eines SQL-Notebooks
 
@@ -125,5 +123,7 @@ Gehen Sie folgendermaßen vor, um ein R-Skript auszuführen:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
+- [Verwenden von Notebooks in Azure Data Studio](../../azure-data-studio/notebooks-guidance.md)
+- [Erstellen und Ausführen eines SQL Server-Notebooks](../../azure-data-studio/notebooks-tutorial-sql-kernel.md)
 - [Schnellstart: Ausführen einfacher Python-Skripts mit SQL Server Machine Learning Services](../tutorials/quickstart-python-create-script.md)
 - [Schnellstart: Ausführen einfacher R-Skripts mit SQL Server Machine Learning Services](../tutorials/quickstart-r-create-script.md)

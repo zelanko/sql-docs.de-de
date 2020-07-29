@@ -19,12 +19,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b39ab62ed76269869ae8c9327f5aaa0996672fba
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: d1323c8736934a46fdb4ef8c4d8752364f8ae38d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053746"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87239376"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Handbuch zu Transaktionssperren und Zeilenversionsverwaltung
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,14 +71,62 @@ In jeder Datenbank führt die fehlerhafte Verwaltung von Transaktionen bei Syste
   
  Sie können alle [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisungen in einer expliziten Transaktion verwenden; ausgenommen davon sind die folgenden Anweisungen:  
   
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP FULLTEXT INDEX|  
-|ALTER FULLTEXT CATALOG|CREATE FULLTEXT CATALOG|RECONFIGURE|  
-|ALTER FULLTEXT INDEX|CREATE FULLTEXT INDEX|RESTORE|  
-|BACKUP|DROP DATABASE|Gespeicherte Volltext-Systemprozeduren|  
-|CREATE DATABASE|DROP FULLTEXT CATALOG|sp_dboption zum Festlegen von Datenbankoptionen oder einer beliebigen Systemprozedur, durch die die Masterdatenbank in expliziten bzw. impliziten Transaktionen geändert wird.|  
-  
+:::row:::
+    :::column:::
+        ALTER DATABASE
+    :::column-end:::
+    :::column:::
+        CREATE DATABASE
+    :::column-end:::
+    :::column:::
+        DROP FULLTEXT INDEX
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        CREATE FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        RECONFIGURE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER FULLTEXT INDEX
+    :::column-end:::
+    :::column:::
+        CREATE FULLTEXT INDEX
+    :::column-end:::
+    :::column:::
+        RESTORE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BACKUP
+    :::column-end:::
+    :::column:::
+        DROP DATABASE
+    :::column-end:::
+    :::column:::
+        Gespeicherte Volltext-Systemprozeduren
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE DATABASE
+    :::column-end:::
+    :::column:::
+        DROP FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        sp_dboption zum Festlegen von Datenbankoptionen oder einer beliebigen Systemprozedur, durch die die Masterdatenbank in expliziten bzw. impliziten Transaktionen geändert wird.
+    :::column-end:::
+:::row-end:::
+
 > [!NOTE]  
 > UPDATE STATISTICS kann in einer expliziten Transaktion verwendet werden. UPDATE STATISTICS führt jedoch unabhängig von der einschließenden Transaktion einen Commit aus, und es kann kein Rollback ausgeführt werden.  
   
@@ -90,13 +138,51 @@ In jeder Datenbank führt die fehlerhafte Verwaltung von Transaktionen bei Syste
   
  Nachdem der implizite Transaktionsmodus für eine Verbindung aktiviert wurde, startet [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] automatisch eine Transaktion, wenn eine dieser Anweisungen zum ersten Mal ausgeführt wird:  
   
-||||  
-|-|-|-|  
-|ALTER TABLE|FETCH|REVOKE|  
-|CREATE|GRANT|SELECT|  
-|Delete|INSERT|TRUNCATE TABLE|  
-|DROP|OPEN|UPDATE|  
-  
+:::row:::
+    :::column:::
+        ALTER TABLE
+    :::column-end:::
+    :::column:::
+        FETCH
+    :::column-end:::
+    :::column:::
+        REVOKE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE
+    :::column-end:::
+    :::column:::
+        GRANT
+    :::column-end:::
+    :::column:::
+        SELECT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Delete
+    :::column-end:::
+    :::column:::
+        INSERT
+    :::column-end:::
+    :::column:::
+        TRUNCATE TABLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DROP
+    :::column-end:::
+    :::column:::
+        OPEN
+    :::column-end:::
+    :::column:::
+        UPDATE
+    :::column-end:::
+:::row-end:::
+
 -  **Transaktionen mit Batchbereich**  
    Trifft nur auf MARS (Multiple Active Result Sets) zu; eine explizite oder implizite [!INCLUDE[tsql](../includes/tsql-md.md)]-Transaktion, die unter einer MARS-Sitzung gestartet wird, wird zu einer Transaktion im Batchbereich. Für eine Transaktionen mit Batchbereich, für die nach Abschluss des Batches kein Commit oder Rollback ausgeführt wird, wird das Rollback automatisch durch [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vorgenommen.  
   

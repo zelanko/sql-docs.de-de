@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6d8bd652a821b6c5dad42238a1eae6ad97c90a1c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3550bd04341d9975870aa18483f2901e845795e0
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509661"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627520"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>Die Rolle von SOAP in Reporting Services
   Der Berichtsserver-Webdienst verwendet SOAP-Messaging (Simple Object Access Protocol), um textbasierte Befehle über ein Netzwerk zu senden. Bei diesen Befehlen handelt es sich um XML-Text, der mit HTTP über das World Wide Web gesendet wird. Wenn SOAP als Kommunikationsprotokoll verwendet wird, erlaubt der Report Server-Webdienst Anwendungen und Komponenten den Datenaustausch mit dem Berichtsserver über eine offene und weit verbreitete Infrastruktur. Der SOAP-Standard wird unter www.w3.org/TR/SOAP definiert.  

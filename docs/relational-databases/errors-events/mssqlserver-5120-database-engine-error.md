@@ -1,7 +1,7 @@
 ---
-title: MSSQLSERVER_5228 | Microsoft-Dokumentation
+title: MSSQLSERVER_5120
 ms.custom: ''
-ms.date: 07/10/2020
+ms.date: 07/25/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 42741b99b89a25b50cd19d647d9f17f2ffe085d3
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: eab5970a6dd7e8fa136621a28d1f697461b33712
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279095"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246574"
 ---
 # <a name="mssqlserver_5120"></a>MSSQLSERVER_5120
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "86279095"
   
 ### <a name="access-is-denied"></a>Zugriff verweigert 
 Wenn Sie den `Access is Denied`-Betriebssystemfehler „5“ empfangen, ziehen Sie diese Methoden in Erwägung:
-   -  Überprüfen Sie die für die Datei festgelegten Berechtigungen, indem Sie die Eigenschaften der Datei im Windows-Explorer untersuchen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet Windows-Gruppen, um Zugriffssteuerung für die verschiedenen Dateiressourcen bereitzustellen. Vergewissern Sie sich, dass die entsprechende Gruppe [mit Namen wie SQLServerMSSQLUser$ComputerName$MSSQLSERVER oder SQLServerMSSQLUser$ComputerName$InstanceName] über die erforderlichen Berechtigungen für die Datenbankdatei verfügt, die in der Fehlermeldung genannt wird. Weitere Informationen finden Sie unter [Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md). Achten Sie darauf, dass die Windows-Gruppe das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienststartkonto oder die Dienst-SID tatsächlich enthält.
+   -  Überprüfen Sie die für die Datei festgelegten Berechtigungen, indem Sie die Eigenschaften der Datei im Windows-Explorer untersuchen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet Windows-Gruppen, um Zugriffssteuerung für die verschiedenen Dateiressourcen bereitzustellen. Vergewissern Sie sich, dass die entsprechende Gruppe [mit Namen wie SQLServerMSSQLUser$ComputerName$MSSQLSERVER oder SQLServerMSSQLUser$ComputerName$InstanceName] über die erforderlichen Berechtigungen für die Datenbankdatei verfügt, die in der Fehlermeldung genannt wird. Weitere Informationen finden Sie unter [Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014). Achten Sie darauf, dass die Windows-Gruppe das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienststartkonto oder die Dienst-SID tatsächlich enthält.
    -  Überprüfen Sie das Benutzerkonto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst aktuell ausgeführt wird. Sie können diese Informationen mithilfe des Windows Task-Managers abrufen. Suchen Sie nach dem Wert für „Benutzername“ der „sqlservr.exe“-Programmdatei. Wenn Sie vor Kurzem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto geändert haben, berücksichtigen Sie außerdem, dass bei der unterstützten Durchführung dieses Vorgangs das [SQL Server-Konfigurations-Manager](../sql-server-configuration-manager.md)-Hilfsprogramm verwendet wird. 
    -  Das Konto, das für den Identitätswechsel und den Zugriff auf die Datenbankdatei verwendet wird, kann je nach Typ des Vorgangs (Öffnen von Datenbanken während des Serverstarts, Anfügen einer Datenbank, Datenbankwiederherstellung usw.) variieren. Arbeiten Sie das Thema [Sichern von Daten- und Protokolldateien](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) durch, um zu verstehen, welcher Vorgang welche Berechtigungen für welche Konten festlegt. Verwenden Sie ein Tool wie den [Prozessmonitor](https://docs.microsoft.com/sysinternals/downloads/procmon) von Windows SysInternals, um zu verstehen, ob der Dateizugriff unter dem Sicherheitskontext des Dienststartkontos der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz [oder Dienst-SID] oder einem Konto mit Identitätswechsel erfolgt.
 

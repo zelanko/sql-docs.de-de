@@ -5,7 +5,7 @@ ms.custom: sqlfreshmay19
 ms.date: 02/19/2020
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
 - Setup [SQL Server], software
@@ -43,17 +43,17 @@ helpviewer_keywords:
 - disk space [SQL Server]
 - localized SQL Server versions
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 4dce96a698b9d4c84adbfdafdfbb7ac9056aac05
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: mikeray
+author: MikeRayMSFT
+ms.openlocfilehash: 0a8b1dc044dba9fc7ee8fef3623b82405bd9e109
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79428171"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245637"
 ---
 # <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019: Hardware- und Softwareanforderungen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 In diesem Artikel sind die Mindestanforderungen an die Hardware und Software aufgeführt, um SQL Server 2019 auf dem Windows-Betriebssystem zu installieren und auszuführen.
 
@@ -123,11 +123,20 @@ Die folgende Tabelle zeigt, welche Editionen von SQL Server 2019 mit welchen Win
 
 Installationen von SQL Server 2019 werden im Server Core-Modus folgender Windows Server-Editionen unterstützt:
 
-|                              |
-| :------------------------  |
-| Windows Server 2019 Core | 
-| Windows Server 2016 Core |
-| &nbsp; | 
+:::row:::
+    :::column:::
+        Windows Server 2019 Core
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2016 Core
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 Weitere Informationen zum Installieren von SQL Server unter Server Core finden Sie unter [Installieren von SQL Server unter Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md). 
 

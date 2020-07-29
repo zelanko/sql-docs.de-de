@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a31e9e898101c15c032db1be5f348bf28267d52c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15d6c1e0cf13da4b8dd0fe38ffcf57e555bdd650
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253289"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85983329"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Suchordner auswählen (Dialogfeld in Visual Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Ermöglicht es Ihnen, eigene benannte Sätze mit Suchordnern zusammenzustellen, zu speichern und zu überarbeiten sowie den Ordner anzugeben, in dem sie durchsucht werden. Zum Anzeigen dieses Dialogfelds klicken Sie im Fenster In Dateien suchen, In Dateien ersetzen oder Suchen und Ersetzen neben der Dropdownliste **Suchen in** auf die Schaltfläche **Durchsuchen (...)** .  
   
 Fügen Sie der Liste **Ausgewählte Ordner** Ordner hinzu, geben Sie im Feld **Ordnersatz** einen Namen für diesen Ordner ein, und klicken Sie auf **Übernehmen** , um ihn zu speichern. Dieser benutzerdefinierte Suchbereich kann danach anhand des Namens aus den Dropdownlisten **Suchen in** in den Fenstern **Suchen in Dateien** und **Ersetzen in Dateien**ausgewählt werden. Wenn Sie einen benutzerdefinierten Ordnersatz aus den Listen **Suchen in** entfernen möchten, wählen Sie seinen Namen im Feld **Ordnersatz** aus, und klicken Sie auf **Löschen**.  

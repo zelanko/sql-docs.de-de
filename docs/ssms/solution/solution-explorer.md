@@ -17,16 +17,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: d95b590d4ec0bd9daef6b81822317cfdda0bdad3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ac4584f715da631c13a56fa531334e9da20f6c55
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242842"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243581"
 ---
 # <a name="solution-explorer"></a>Projektmappen-Explorer
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Der Bereich des Projektmappen-Explorers in [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] enthält als Projekte bezeichnete Container, mit denen sich Elementen wie Datenbankskripts, Abfragen, Datenverbindungen und Dateien verwalten lassen. Miteinander verknüpfte Projekte können in einem Projektmappe genannten Container zusammengefasst werden.  
   
 Eine Projektmappe enthält ein oder mehrere Projekte sowie Dateien und Metadaten, die zur Definition der Projektmappe als Ganzes dienen. Ein Projekt ist eine Gruppe von Dateien und zugehörigen Metadaten, wie Verbindungsinformationen. Projektmappen und Projekte enthalten Elemente, die die Skripts, Abfragen, Verbindungsinformationen und Dateien repräsentieren, die Sie zum Erstellen der Datenbankprojektmappe benötigen.  
@@ -52,9 +52,8 @@ Die Elemente in Projekten hängen vom Projekttyp ab und davon, ob Sie [!INCLUDE[
 ## <a name="related-tasks"></a>Related Tasks  
 Erste Schritte mit den SQL Server-Lösungen mithilfe der folgenden Themen:  
   
-|||  
-|-|-|  
-|**Beschreibung**|**Thema**|  
+|BESCHREIBUNG|Thema|  
+|-|-|    
 |Beschreibt, wie ein Projekt oder mehrere Projekte in einer Projektmappe gesammelt werden.|[Projektmappen &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |Beschreibt, wie ein Projekt erstellt und Elemente wie Skripts und Verbindungen hinzugefügt werden.|[Projekte &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |Enthält Informationen zu den Dateien, mit denen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Projektmappen und Dateien verwaltet.|[Dateien zum Verwalten von Projektmappen und Projekten](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51e9e14fc53c4b9904e64180307f7da8939408ab
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ff264c620123dcbb73c58373871f568ff1d249e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924638"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243401"
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>JDBC 4.2-Kompatibilität für den JDBC-Treiber
 
@@ -59,14 +59,12 @@ ms.locfileid: "80924638"
   
 ## <a name="sqlserverresultset-class"></a>SQLServerResultSet-Klasse
   
-||||  
-|-|-|-|  
 |Neue Methoden|BESCHREIBUNG|Bemerkenswerte Implementierungsdetails|  
+|-|-|-|  
 ||Aktualisiert die bezeichnete Spalte mit einem Object-Wert. Es sind 4 neue (überladene) Methoden zum Unterstützen der neuen SQLType-Schnittstelle vorhanden.|Wird wie unter der java.sql.ResultSet-Schnittstelle beschrieben implementiert. Weitere Details finden Sie unter [java.sql.ResultSet](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html).|  
   
  Die Java Database Connectivity API 4.2-Spezifikation wird vom Microsoft JDBC-Treiber 4.2 für SQL Server mit den folgenden Datentypzuordnungen unterstützt.  
   
-|||  
-|-|-|  
 |Neue Datentypzuordnungen|BESCHREIBUNG|  
+|-|-|  
 |**Neue Java-Klassen in Java 8:** <br /> <br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **Neue JDBC-Typen:**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|REF_CURSOR wird in SQL Server nicht unterstützt. Der Treiber gibt eine SQLFeatureNotSupportedException-Ausnahme aus, wenn dieser Typ verwendet wird. Der Treiber unterstützt alle anderen neuen Java- und JDBC-Typzuordnungen, die in der JDBC 4.2-Spezifikation festgelegt sind.|  

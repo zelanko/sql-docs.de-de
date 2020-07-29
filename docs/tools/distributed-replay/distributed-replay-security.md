@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 25bc62c6ea0785cf9abb05909fdc2f2563932b07
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 944fc1a9b5769c797ed9fa372e45c17931814983
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681547"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay-Sicherheit
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Bevor Sie das Distributed Replay-Feature von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren und verwenden, sollten Sie die wichtigen Sicherheitsinformationen in diesem Artikel lesen. In diesem Thema werden die nach der Installation auszuführenden Sicherheitskonfigurationsschritte beschrieben, die erforderlich sind, bevor Sie Distributed Replay verwenden können. Zudem werden in diesem Thema wichtige Überlegungen im Hinblick auf Datenschutz und wichtige Schritte zum Entfernen von Elementen beschrieben.  
   

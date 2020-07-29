@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726146"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247616"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -481,13 +481,61 @@ GO
 
 Wenn eine der folgenden SET-Optionen für eine jeweilige Ausführung geändert wird, wirkt sich das auf die Wiederverwendungsfähigkeit der Pläne aus, da [!INCLUDE[ssde_md](../includes/ssde_md.md)] [konstantes Folding](#ConstantFolding) durchführt und diese Optionen sich auf die Ergebnisse solcher Ausdrücke auswirken:
 
-|||   
-|-----------|------------|------------|    
-|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
-|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
-|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
-|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
-|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_OFF
+    :::column-end:::
+    :::column:::
+        FORCEPLAN
+    :::column-end:::
+    :::column:::
+        ARITHABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFIRST
+    :::column-end:::
+    :::column:::
+        ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        NUMERIC_ROUNDABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        LANGUAGE
+    :::column-end:::
+    :::column:::
+        CONCAT_NULL_YIELDS_NULL
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFORMAT
+    :::column-end:::
+    :::column:::
+        ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+        QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        NO_BROWSETABLE
+    :::column-end:::
+    :::column:::
+        ANSI_DEFAULTS
+    :::column-end:::
+:::row-end:::
 
 ### <a name="caching-multiple-plans-for-the-same-query"></a>Zwischenspeichern mehrerer Pläne für dieselbe Abfrage 
 Abfragen und Ausführungspläne sind in [!INCLUDE[ssde_md](../includes/ssde_md.md)] eindeutig identifizierbar, ähnlich wie bei einem Fingerabdruck:
@@ -671,16 +719,70 @@ Die Neukompilierung auf Anweisungsebene wirkt sich positiv auf die Leistung aus,
 Das erweiterte `sql_statement_recompile`-Ereignis (xEvent) meldet Neukompilierungen auf Anweisungsebene. Dieses xEvent erscheint, wenn ein beliebiger Batch eine Neukompilierung auf Anweisungsebene erfordert. Dazu gehören gespeicherte Prozeduren, Trigger, Ad-hoc-Batches und Abfragen. Batches können möglicherweise über mehrere Schnittstellen, einschließlich sp_executesql, dynamische SQL-Anweisungen, Prepare-Methoden oder Execute-Methoden gesendet werden.
 Die `recompile_cause`-Spalte von `sql_statement_recompile` xEvent enthält einen ganzzahligen Code, der den Grund für die Neukompilierung angibt. Die folgende Tabelle enthält die möglichen Gründe:
 
-|||
-|----|----|  
-|Schema geändert|Statistiken geändert|  
-|Verzögerte Kompilierung|SET-Option geändert|  
-|Temporäre Tabelle geändert|Remote-Rowset geändert|  
-|`FOR BROWSE`-Berechtigung geändert|Abfragebenachrichtigungsumgebung geändert|  
-|Partitionierte Sicht geändert|Cursoroptionen geändert|  
-|`OPTION (RECOMPILE)` angefordert.|Parametrisierter Plan geleert|  
-|Plan geändert, der die Datenbankversion betrifft|Erzwingende Richtlinie des Abfragespeicherplans geändert|  
-|Erzwingende Richtlinie des Abfragespeicherplans fehlgeschlagen|Plan des Abfragespeichers fehlt|
+:::row:::
+    :::column:::
+        Schema geändert
+    :::column-end:::
+    :::column:::
+        Statistiken geändert
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Verzögerte Kompilierung
+    :::column-end:::
+    :::column:::
+        SET-Option geändert
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Temporäre Tabelle geändert
+    :::column-end:::
+    :::column:::
+        Remote-Rowset geändert
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `FOR BROWSE`-Berechtigung geändert
+    :::column-end:::
+    :::column:::
+        Abfragebenachrichtigungsumgebung geändert
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Partitionierte Sicht geändert
+    :::column-end:::
+    :::column:::
+        Cursoroptionen geändert
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `OPTION (RECOMPILE)` angefordert.
+    :::column-end:::
+    :::column:::
+        Parametrisierter Plan geleert
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Plan geändert, der die Datenbankversion betrifft
+    :::column-end:::
+    :::column:::
+        Erzwingende Richtlinie des Abfragespeicherplans geändert
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Erzwingende Richtlinie des Abfragespeicherplans fehlgeschlagen
+    :::column-end:::
+    :::column:::
+        Plan des Abfragespeichers fehlt
+    :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Versionen, in denen xEvents nicht verfügbar sind, kann die [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md)-Ablaufverfolgung des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Profiler auch zur Berichterstellung von Neukompilierungen auf Anweisungsebene verwendet werden.

@@ -2,7 +2,7 @@
 title: Nicht mehr unterstützte Datenbank-Engine-Funktionen
 description: In diesem Artikel erfahren Sie, welche Funktionen und Features der Datenbank-Engine seit SQL Server 2019 (15.x), SQL Server 2016 (13.x) und älteren Versionen nicht mehr zur Verfügung stehen.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -36,12 +36,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2137021617ecf15375be480021ca54b50627464d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0aada5da9da6b0eadb1c190690f98c4a3d3cb3b8
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920275"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110239"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -69,13 +69,13 @@ Aktuelle Konfigurationsoptionen finden Sie unter [ALTER DATABASE SCOPED CONFIGUR
 
 - Das ActiveX-Subsystem wird nicht mehr unterstützt. Verwenden Sie stattdessen die Befehlszeile oder PowerShell-Skripts.
 
-- Startparameter **-h** und **-g**. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
+- Startparameter **-h** und **-g**. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
 
 - Die SSL-Verschlüsselung (Secure Sockets Layer) wird nicht mehr unterstützt. Verwenden Sie stattdessen Transport Layer Security (TLS). Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
 ## <a name="previous-versions"></a>Vorherige Versionen
 
-- [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+- [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
 ### <a name="see-also"></a>Weitere Informationen
 
