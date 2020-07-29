@@ -1,10 +1,7 @@
 ---
 title: Verbinden mit SQL Server-Datenbank-Engine (Eigenschaftenseite Verbindung)
-ms.custom: seo-lt-2019
-ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,15 +10,19 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb62bd419c08b1562a6b636685e360501f574ae3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 08/14/2017
+ms.openlocfilehash: d1136d29ee8ee62648922f008042266a59632475
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245009"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123071"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Verbinden mit SQL Server-Datenbank-Engine (Eigenschaftenseite Verbindung)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Auf dieser Registerkarte können Optionen für Verbindungen mit einer [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]-Instanz angezeigt oder angegeben werden, oder Sie können [!INCLUDE[ssDE](../../includes/ssde_md.md)] unter **Registrierte Server** registrieren. Die Felder**Verbinden** und **Optionen** werden nur beim Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde_md.md)]in diesem Dialogfeld angezeigt. Die Felder**Testen** und **Speichern** werden nur beim Registrieren von [!INCLUDE[ssDE](../../includes/ssde_md.md)]in diesem Dialogfeld angezeigt.  
   
 **Verbindung mit Datenbank herstellen**  

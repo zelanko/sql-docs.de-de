@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 60e5156a92e51df58f8bcf6af05510d11d4ee3d0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cb064b4810cc7023e6c616bcccd2b13ac0ff97da
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255409"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003223"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Partitionsspaltenliste (Dialogfeld) (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Wenn einer Tabelle ein Partitionsschema zugeordnet ist, können Sie in diesem Dialogfeld auswählen, auf welche Spalte(n) die Partitionsfunktion angewendet wird. Damit die Funktion ordnungsgemäß ausgeführt wird, muss der Datentyp der ausgewählten Spalte dem Datentyp der Spalte entsprechen, die in der Partitionsfunktion definiert ist.  
   
 Weitere Informationen über Partitionsschemas und Funktionen finden Sie in der SQL Server-Onlinedokumentation.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
 Datentyp  
 Zeigt die Datentypen der Spalten an, die im Partitionsschema definiert sind.  
   

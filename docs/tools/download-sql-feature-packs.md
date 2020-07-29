@@ -11,16 +11,16 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-ms.openlocfilehash: 3a9c24e046c9fa6dfeba338a28b0aa4ff3a86782
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 37ec04307616bb0916c5fc42e6ab5af8ce874852
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251347"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009614"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>Download erweiterter SQL Server-Features und -Tools
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Dieser Artikel enthält eine kurze Erläuterung der verschiedenen Downloads und eigenständigen Pakete, die Microsoft bereitstellt, um SQL Server zu erweitern.
 
