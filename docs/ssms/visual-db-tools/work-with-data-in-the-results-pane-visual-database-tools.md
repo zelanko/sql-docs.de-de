@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 4161966534f65936bbddc8753cdb116ea5f47e33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 759aaed19c2ef313712725edaa03b91eb37afcbe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246221"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002594"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Verwenden von Daten im Ergebnisbereich (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Nach der Ausführung einer Abfrage oder Sicht werden die Ergebnisse im Ergebnisbereich angezeigt. Sie können anschließend mit diesen Ergebnissen arbeiten. Sie können z. B. Zeilen hinzufügen und löschen, Daten eingeben oder ändern und bequem durch umfangreiche Resultsets navigieren.  
   
 Die folgenden Informationen können Ihnen helfen, Probleme zu vermeiden und mit den Resultsets effektiv zu arbeiten.  

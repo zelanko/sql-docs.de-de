@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c48779de7f7edccd4401e1d60740b7cff6a046cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2378ecd42d821a818a539350f872ed0d12099a8d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755689"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242962"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Funktionen und Tasks im SQL Server-Hilfsprogramm
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,8 @@ ms.locfileid: "85755689"
 ## <a name="related-tasks"></a>Related Tasks  
  Erste Schritte mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm mithilfe der folgenden Themen:  
   
-|||  
+|BESCHREIBUNG|Thema|  
 |-|-|  
-|**Beschreibung**|**Thema**|  
 |Beschreibt Überlegungen zum Konfigurieren eines Servers, um Sammlungssätze, die zum Hilfsprogramm und die nicht zum Hilfsprogramm gehören, auf der gleichen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]auszuführen.|[Überlegungen zum Ausführen von Hilfsprogramm- und Nicht-Hilfsprogramm-Sammlungssätzen auf derselben Instanz von SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |Beschreibt, wie ein SQL Server-Steuerungspunkt für das Hilfsprogramm erstellt wird.|[Erstellen eines Steuerungspunkts für das SQL Server-Hilfsprogramm &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Beschreibt, wie eine Verbindung mit einem SQL Server-Hilfsprogramm hergestellt wird.|[Verbinden mit einem SQL Server-Hilfsprogramm](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  

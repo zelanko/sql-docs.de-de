@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a457fbc0f87f9ba83170f8235e7ae144f4e86648
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922800"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893170"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,6 @@ Ruft die nächste Datenzeile als PHP-Objekt ab.
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, row[, ]offset]]])  
 ```  
   
@@ -81,17 +80,21 @@ Die folgenden Regeln gelten, wenn eine Klasse mit einem *$className* -Parameter 
   
 Falls ein Feld ohne Name zurückgegeben wird, wird **sqlsrv_fetch_object** den Wert des Feldes verwerfen und eine Warnung ausgeben. Betrachten Sie beispielsweise diese Transact-SQL-Anweisung, die einen Wert in eine Datenbanktabelle einfügt und den vom Server generierten Primärschlüssel abruft:  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 Falls die Ergebnisse dieser Abfrage mit **sqlsrv_fetch_object**abgerufen werden, wird der von `SELECT SCOPE_IDENTITY()` zurückgegebene Wert verworfen und eine Warnung ausgegeben. Um dies zu vermeiden, können Sie einen Namen für das zurückgegebene Feld in der Transact-SQL-Anweisung spezifizieren. Im Folgenden finden Sie eine Möglichkeit, einen Spaltennamen in Transact-SQL anzugeben:  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="example"></a>Beispiel  
 Im folgenden Beispiel wird jede Zeile eines Resultsets als PHP-Objekt abgerufen. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)-Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
-```  
+``` 
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -234,12 +237,16 @@ Die **sqlsrv_fetch_object** -Funktion gibt immer die Daten gemäß der [Default 
   
 Falls ein Feld ohne Name zurückgegeben wird, wird **sqlsrv_fetch_object** den Wert des Feldes verwerfen und eine Warnung ausgeben. Betrachten Sie beispielsweise diese Transact-SQL-Anweisung, die einen Wert in eine Datenbanktabelle einfügt und den vom Server generierten Primärschlüssel abruft:  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 Falls die Ergebnisse dieser Abfrage mit **sqlsrv_fetch_object**abgerufen werden, wird der von `SELECT SCOPE_IDENTITY()` zurückgegebene Wert verworfen und eine Warnung ausgegeben. Um dies zu vermeiden, können Sie einen Namen für das zurückgegebene Feld in der Transact-SQL-Anweisung spezifizieren. Im Folgenden finden Sie eine Möglichkeit, einen Spaltennamen in Transact-SQL anzugeben:  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Abrufen von Daten](../../connect/php/retrieving-data.md)  

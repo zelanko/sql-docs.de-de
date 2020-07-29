@@ -2,22 +2,22 @@
 title: 'Tutorial zu R und Transact-SQL: Entwickeln eines Modells'
 description: Hier erfahren Sie, wie Sie Code der Programmiersprache R in gespeicherte SQL Server-Prozeduren und T-SQL-Funktionen einbetten.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a27bd044dbdca7a05663080be08ebaff1acb86d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785603"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: R-Datenanalysen für SQL-Entwickler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Tutorial für SQL-Programmierer erfahren Sie, wie Sie R durch Erstellen und Bereitstellen einer R-basierten Machine Learning-Lösung mithilfe der Datenbank [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) in SQL Server integrieren. Sie verwenden T-SQL, SQL Server Management Studio und eine Datenbank-Engine-Instanz mit [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) und Unterstützung der R-Programmiersprache.
 

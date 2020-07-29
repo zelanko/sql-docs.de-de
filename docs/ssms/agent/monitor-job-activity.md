@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0fdb46ddca31f870363385bef70adde37a7a36ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b4bfe163fb1f3ffe4eb5b5203bfced15f43069de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252360"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237410"
 ---
 # <a name="monitor-job-activity"></a>Überwachen der Auftragsaktivität
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -62,9 +61,8 @@ Sie können Auftragsaktivitäten für die aktuelle Sitzung auch mithilfe der ges
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
-|-|-|  
-|**Beschreibung**|**Thema**|  
+|BESCHREIBUNG|Thema|  
+|-|-|   
 |Beschreibt, wie der Laufzeitstatus von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen angezeigt wird.|[Auftragsaktivitäten anzeigen](../../ssms/agent/view-job-activity.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -5,16 +5,16 @@ description: In diesem Artikel wird beschrieben, wie Sie HDFS-Tiering konfigurie
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/05/2019
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606522"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730652"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Einbinden von ADLS Gen2 für HDFS-Tiering in einen Big Data-Cluster
 
@@ -48,7 +48,7 @@ Um OAuth-Anmeldeinformationen zum Einbinden zu verwenden, müssen Sie die folgen
 1. Klicken Sie in der rechten Navigationsleiste auf „App-Registrierungen“, und erstellen Sie eine neue Registrierung.
 1. Erstellen Sie eine Web-App, und befolgen Sie die Anweisungen des Assistenten. **Merken Sie sich den Namen der App, die Sie hier erstellen**. Sie müssen diesen Namen Ihrem ADLS-Konto als autorisierter Benutzer hinzufügen. Notieren Sie sich auch die Anwendungsclient-ID, die in der Übersicht angezeigt wird, wenn Sie die App auswählen.
 1. Navigieren Sie zu „Certificates&secrets“ (Zertifikate und Geheimnisse), sobald die neue Webanwendung erstellt wurde, erstellen Sie einen **neuen geheimen Clientschlüssel**, und wählen Sie eine Schlüsseldauer aus. **Fügen Sie das Geheimnis hinzu**.
-1.     Navigieren Sie zurück zur Seite App-Registrierungen, und klicken Sie oben auf „Endpunkte“. **Notieren Sie sich die URL des „OAuth-Tokenendpunkts (v2)“** .
+1. Navigieren Sie zurück zur Seite App-Registrierungen, und klicken Sie oben auf „Endpunkte“. **Notieren Sie sich die URL des „OAuth-Tokenendpunkts (v2)“** .
 1. Für OAuth sollten Sie nun folgende Punkte notiert haben:
 
     - Die „Anwendungsclient-ID“ der Webanwendung
@@ -71,13 +71,13 @@ Warten Sie 5-10 Minuten, bevor Sie die Anmeldeinformationen für die Einbindung 
 
 **Hinweis:** Sie müssen alle Zeilenumbrüche oder Leerzeichen zwischen den Kommas („,“) entfernen, wenn Sie die Anmeldeinformationen eingeben. Die folgende Formatierung dient lediglich der Lesbarkeit.
 
-   ```text
-    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint],
-    fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret]
-   ```
+```console
+   set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+   fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+   fs.azure.account.oauth2.client.endpoint=[token endpoint],
+   fs.azure.account.oauth2.client.id=[Application client ID],
+   fs.azure.account.oauth2.client.secret=[client secret]
+```
 
 ## <a name="use-access-keys-to-mount"></a>Verwenden von Zugriffsschlüsseln zum Einbinden
 
@@ -94,10 +94,10 @@ Sie können die Einbindung auch mithilfe von Zugriffsschlüsseln durchführen, d
 
 **Hinweis:** Sie müssen alle Zeilenumbrüche oder Leerzeichen zwischen den Kommas („,“) entfernen, wenn Sie die Anmeldeinformationen eingeben. Die folgende Formatierung dient lediglich der Lesbarkeit.
 
-   ```text
-   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
-   ```
+```console
+set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
+fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+```
 
 ## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Einbinden des HDFS-Remotespeichers
 

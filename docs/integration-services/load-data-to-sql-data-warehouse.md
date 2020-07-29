@@ -10,16 +10,16 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 3609de02157637ec30f7e21ad4426c5001f31a6e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 317a17d667c9c09009c3fcbd9bab6565108110ad
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282657"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943202"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Laden von Daten in Azure SQL Data Warehouse mit SQL Server Integration Services
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -68,7 +68,7 @@ Visual Studio wird geöffnet und erstellt ein neues Integration Services-Projekt
 * In der Mitte befindet sich die Entwurfsoberfläche mit mehreren Registerkarten. In der Regel verwenden Sie mindestens die Registerkarten **Ablaufsteuerung** und **Datenfluss**.
 * Auf der rechten Seite befinden sich die Bereiche **Projektmappen-Explorer** und **Eigenschaften**.
   
-    ![][01]
+    ![Screenshot von Visual Studio mit dem Toolboxbereich, dem Entwurfsbereich, dem Projektmappen-Explorer-Bereich und dem Eigenschaftenbereich.][01]
 
 ## <a name="option-1---use-the-sql-dw-upload-task"></a>Option 1: Verwenden des SQL DW Upload-Tasks
 
@@ -121,23 +121,23 @@ Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
 ### <a name="create-the-basic-data-flow"></a>Erstellen des grundlegenden Datenflusses
 1. Ziehen Sie einen Datenflusstask aus der Toolbox in die Mitte der Entwurfsoberfläche (auf der Registerkarte **Ablaufsteuerung**).
    
-    ![][02]
+    ![Screenshot von Visual Studio mit einem Datenflusstask, der auf die Registerkarte „Ablaufsteuerung“ des Entwurfsbereichs gezogen wird.][02]
 2. Doppelklicken Sie auf den Datenflusstask, um zur Registerkarte „Datenfluss“ zu wechseln.
 3. Ziehen Sie aus der Liste „Andere Quellen“ in der Toolbox eine ADO.NET-Quelle auf die Entwurfsoberfläche. Ändern Sie mit noch ausgewähltem Quelladapter den Namen im Bereich **Eigenschaften** in **SQL Server-Quelle**.
 4. Ziehen Sie aus der Liste „Andere Ziele“ in der Toolbox ein ADO.NET-Ziel auf die Entwurfsoberfläche unter der ADO NET-Quelle. Ändern Sie mit noch ausgewähltem Zieladapter den Namen im Bereich **Eigenschaften** in **SQL DW-Ziel**.
    
-    ![][09]
+    ![Screenshot eines Zieladapters, der an eine Stelle direkt unterhalb des Quelladapters gezogen wird.][09]
 
 ### <a name="configure-the-source-adapter"></a>Konfigurieren des Quelladapters
 1. Doppelklicken Sie auf den Quelladapter, um den **ADO.NET-Quellen-Editor** zu öffnen.
    
-    ![][03]
+    ![Screenshot des ADO.NET-Quellen-Editors. Die Registerkarte „Verbindungs-Manager“ ist sichtbar, und Steuerelemente zum Konfigurieren von Datenflusseigenschaften sind verfügbar.][03]
 2. Klicken Sie im **ADO.NET-Quellen-Editor** auf der Registerkarte **Verbindungs-Manager** auf die Schaltfläche **Neu** neben der Liste **ADO.NET-Verbindungs-Manager**, um das Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** zu öffnen. Nehmen Sie dann Verbindungseinstellungen für die SQL Server-Datenbank vor, von der in diesem Tutorial Daten geladen werden.
    
-    ![][04]
+    ![Screenshot des Dialogfelds „ADO.NET-Verbindungs-Manager konfigurieren“. Steuerelemente für das Einrichten und Konfigurieren von Verbindungs-Managern sind verfügbar.][04]
 3. Klicken Sie im Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** auf die Schaltfläche **Neu**, um das Dialogfeld **Verbindungs-Manager** zu öffnen, und erstellen Sie eine neue Datenverbindung.
    
-    ![][05]
+    ![Screenshot des Dialogfelds „Verbindungs-Manager“. Steuerelemente für das Konfigurieren einer Datenverbindung sind verfügbar.][05]
 4. Führen Sie im Dialogfeld **Verbindungs-Manager** folgende Schritte durch:
    
    1. Wählen Sie als **Anbieter** den SqlClient-Datenanbieter aus.
@@ -146,16 +146,16 @@ Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
    4. Wählen Sie im Abschnitt **Mit Datenbank verbinden** die AdventureWorks-Beispieldatenbank aus.
    5. Klicken Sie auf **Verbindung testen**.
       
-       ![][06]
+       ![Screenshot eines Dialogfelds, in dem eine Schaltfläche „OK“ und ein Text angezeigt werden, der angibt, dass die Testverbindung erfolgreich war.][06]
    6. Klicken Sie im Dialogfeld, in dem die Ergebnisse des Verbindungstests gemeldet werden, auf **OK**, um zum Dialogfeld **Verbindungs-Manager** zurückzukehren.
    7. Klicken Sie im Dialogfeld **Verbindungs-Manager** auf **OK**, um zum Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** zurückzukehren.
 5. Klicken Sie im Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** auf **OK**, um zum **ADO.NET-Quellen-Editor** zurückzukehren.
 6. Wählen Sie im **ADO.NET-Quellen-Editor** in der Liste **Name der Tabelle oder Sicht** die Tabelle **Sales.SalesOrderDetail** aus.
    
-    ![][07]
+    ![Screenshot des ADO.NET-Quellen-Editors. Im Namen der Tabelle oder der Sichtenliste ist die Tabelle „Sales.SalesOrderDetail“ ausgewählt.][07]
 7. Klicken Sie auf **Vorschau**, um die ersten 200 Datenzeilen in der Quelltabelle im Dialogfeld **Vorschau der Abfrageergebnisse anzeigen** anzuzeigen.
    
-    ![][08]
+    ![Screenshot des Dialogfelds „Vorschau der Abfrageergebnisse anzeigen“. Mehrere Zeilen mit Umsatzdaten aus der Quelltabelle sind sichtbar.][08]
 8. Klicken Sie im Dialogfeld **Vorschau der Abfrageergebnisse anzeigen** auf **Schließen**, um zum **ADO.NET-Quellen-Editor** zurückzukehren.
 9. Klicken Sie im **ADO.NET-Quellen-Editor** auf **OK**, um die Konfiguration der Datenquelle abzuschließen.
 
@@ -163,14 +163,14 @@ Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
 1. Wählen Sie den Quelladapter auf der Entwurfsoberfläche aus.
 2. Wählen Sie den blauen Pfeil aus, der vom Quelladapter ausgeht, und ziehen Sie ihn zum Ziel-Editor, bis dieser fest positioniert ist.
    
-    ![][10]
+    ![Screenshot der Quell- und Zieladapter. Ein blauer Pfeil zeigt vom Quelladapter zum Zieladapter.][10]
    
     Bei einem typischen SSIS-Paket verwenden Sie eine Reihe von anderen Komponenten von der SSIS-Toolbox zwischen Quelle und Ziel, um Ihre Daten beim Durchlaufen durch den SSIS-Datenfluss umzustrukturieren, zu transformieren und zu bereinigen. Um dieses Beispiel so einfach wie möglich zu halten, stellen wir eine direkte Verbindung zwischen Quelle und Ziel her.
 
 ### <a name="configure-the-destination-adapter"></a>Konfigurieren des Zieladapters
 1. Doppelklicken Sie auf den Zieladapter, um den **ADO.NET-Ziel-Editor** zu öffnen.
    
-    ![][11]
+    ![Screenshot des ADO.NET-Ziel-Editors. Die Registerkarte „Verbindungs-Manager“ ist sichtbar und enthält Steuerelemente zum Konfigurieren von Datenflusseigenschaften.][11]
 2. Klicken Sie im **ADO.NET-Ziel-Editor** auf der Registerkarte **Verbindungs-Manager** auf die Schaltfläche **Neu** neben der Liste **Verbindungs-Manager**, um das Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** zu öffnen. Nehmen Sie dann Verbindungseinstellungen für die Azure SQL Data Warehouse-Datenbank vor, in die in diesem Tutorial Daten geladen werden.
 3. Klicken Sie im Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** auf die Schaltfläche **Neu**, um das Dialogfeld **Verbindungs-Manager** zu öffnen, und erstellen Sie eine neue Datenverbindung.
 4. Führen Sie im Dialogfeld **Verbindungs-Manager** folgende Schritte durch:
@@ -184,18 +184,18 @@ Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
 5. Klicken Sie im Dialogfeld **ADO.NET-Verbindungs-Manager konfigurieren** auf **OK**, um zum **ADO.NET-Ziel-Editor** zurückzukehren.
 6. Klicken Sie im **ADO.NET-Ziel-Editor** neben der Liste **Tabelle oder Sicht verwenden** auf **Neu**, um das Dialogfeld **Tabelle erstellen** zu öffnen, um eine neue Zieltabelle mit einer Spaltenliste zu erstellen, die der Quelltabelle entspricht.
    
-    ![][12a]
+    ![Screenshot des Dialogfelds „Tabelle erstellen“. S Q L-Code zum Erstellen einer Zieltabelle ist sichtbar.][12a]
 7. Führen Sie im Dialogfeld **Tabelle erstellen** die folgenden Schritte aus:
    
    1. Ändern Sie den Namen der Zieltabelle in **SalesOrderDetail**.
    2. Entfernen Sie die Spalte **rowguid**. Der Datentyp **uniqueidentifier** wird nicht in SQL Data Warehouse unterstützt.
    3. Ändern Sie den Datentyp der Spalte **LineTotal** in **money**. Der Datentyp **decimal** wird nicht in SQL Data Warehouse unterstützt. Informationen zu unterstützten Datentypen finden Sie unter [CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)][CREATE TABLE (Azure SQL Data Warehouse, Parallel Data Warehouse)].
       
-       ![][12b]
+       ![Screenshot des Dialogfelds „Tabelle erstellen“ mit Code zum Erstellen einer Tabelle namens SalesOrderDetail mit LineTotal als money-Spalte und ohne ROWGUID-Spalte][12b]
    4. Klicken Sie auf **OK**, um die Tabelle zu erstellen und zum **ADO.NET-Ziel-Editor** zurückzukehren.
 8. Wählen Sie im **ADO.NET-Ziel-Editor** die Registerkarte **Zuordnungen** aus, um festzustellen, wie Spalten in der Quelle denen im Ziel zugeordnet werden.
    
-    ![][13]
+    ![Screenshot der Registerkarte „Zuordnungen“ des ADO.NET-Ziel-Editors. Linien verbinden Spalten mit identischen Namen in den Quell- und Zieltabellen.][13]
 9. Klicken Sie auf **OK**, um die Konfiguration des Ziels abzuschließen.
 
 ## <a name="run-the-package-to-load-the-data"></a>Ausführen des Pakets zum Laden der Daten
@@ -205,19 +205,19 @@ In den folgenden Abschnitten wird beschrieben, was Sie sehen, wenn Sie das Paket
 
 Wenn die Paketausführung beginnt, sehen Sie gelbe sich drehende Räder, die auf laufende Aktivität hinweisen, sowie die Anzahl der bisher verarbeiteten Zeilen.
 
-![][14]
+![Screenshot mit den Quell-und Zieladaptern mit gelben, drehenden Rädern auf den einzelnen Adaptern und dem Text „29.916 Zeilen“][14]
 
 Wenn die Ausführung des Pakets abgeschlossen ist, sehen Sie grüne Häkchen, die auf ihre erfolgreiche Ausführung hinweisen, sowie die Gesamtanzahl der Datenzeilen, die von der Quelle in das Ziel geladen wurden.
 
-![][15]
+![Screenshot der Quell- und Zieladapter. Über jedem Adapter befinden sich grüne Häkchen, und der Text „121317 Zeilen“ steht dazwischen.][15]
 
 Glückwunsch! Sie haben mit SQL Server Integration Services erfolgreich Daten in Azure SQL Data Warehouse geladen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Erfahren Sie mehr über das Debuggen und Behandeln von Problemen mit Ihren Paketen direkt in der Entwurfsumgebung. Beginnen Sie hier: [Tools zur Problembehandlung für die Paketentwicklung][Troubleshooting Tools for Package Development].
+- Erfahren Sie mehr über das Debuggen und Behandeln von Problemen mit Ihren Paketen direkt in der Entwurfsumgebung. Beginnen Sie mit dem folgenden Artikel: [Tools zur Problembehandlung für die Paketentwicklung][Troubleshooting Tools for Package Development].
 
-- Erfahren Sie, wie Sie Ihre SSIS-Projekte und -Pakete in Integration Services Server oder an einem anderen Speicherort bereitstellen. Beginnen Sie hier: [Bereitstellung von Projekten und Paketen][Deployment of Projects and Packages].
+- Erfahren Sie, wie Sie Ihre SSIS-Projekte und -Pakete in Integration Services Server oder an einem anderen Speicherort bereitstellen. Beginnen Sie mit dem folgenden Artikel: [Bereitstellung von Projekten und Paketen][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png

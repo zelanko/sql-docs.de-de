@@ -11,12 +11,12 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eb809ddbd1acfdd3a01f5601b30e9cf6e9259e0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6f9392a6ef282d1a3201e5edb2a4fa026adc5752
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555255"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122774"
 ---
 # <a name="temporal-table-security"></a>Sicherheit bei temporale Tabellen
 
@@ -58,15 +58,15 @@ Wenn SYSTEM_VERSIONING auf ON festgelegt ist, werden Schemaänderungsvorgänge b
 
 ## <a name="security-of-the-create-temporal-table-statement"></a>Sicherheit der Anweisung CREATE Temporal TABLE
 
-||Erstellen einer neuen Verlaufstabelle|Wiederverwenden einer vorhandenen Verlaufstabelle|
-|-|------------------------------|----------------------------------|
+| Funktion | Erstellen einer neuen Verlaufstabelle | Wiederverwenden einer vorhandenen Verlaufstabelle |
+| ------- | ------------------------ | ---------------------------- |
 |Berechtigung erforderlich|**CREATE TABLE** -Berechtigung in der Datenbank<br /><br /> **ALTER** -Berechtigung für die Schemas, in denen die aktuellen Tabellen und Verlaufstabellen erstellt werden|**CREATE TABLE** -Berechtigung in der Datenbank<br /><br /> **ALTER** -Berechtigung für das Schema, in dem die aktuelle Tabelle erstellt wird<br /><br /> **CONTROL** -Berechtigung für die Verlaufstabelle, die als Teil der **CREATE TABLE** -Anweisung zum Erstellen der temporalen Tabelle angegeben wurde|
 |Audit|Die Überwachung zeigt, dass Benutzer versucht haben, zwei Objekte zu erstellen. Der Vorgang kann fehlschlagen, entweder aufgrund fehlender Berechtigungen zum Erstellen einer Tabelle in der Datenbank, oder aufgrund fehlender Berechtigungen für das Ändern von Schemas in einer der Tabellen.|Die Überwachung zeigt, dass eine temporale Tabelle erstellt wurde. Der Vorgang kann fehlschlagen, entweder aufgrund fehlender Berechtigungen zum Erstellen einer Tabelle in der Datenbank, aufgrund der fehlenden Berechtigungen zum Ändern des Schemas für die temporale Tabelle, oder aufgrund der fehlenden Berechtigungen für die Verlaufstabelle.|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>Sicherheit der Anweisung ALTER Temporal TABLE SET (SYSTEM_VERSIONING ON/OFF)
 
-||Erstellen einer neuen Verlaufstabelle|Wiederverwenden einer vorhandenen Verlaufstabelle|
-|-|------------------------------|----------------------------------|
+| Funktion | Erstellen einer neuen Verlaufstabelle | Wiederverwenden einer vorhandenen Verlaufstabelle |
+| ------- | ------------------------ | ---------------------------- |
 |Berechtigung erforderlich|**CONTROL** -Berechtigung in der Datenbank<br /><br /> **CREATE TABLE** -Berechtigung in der Datenbank<br /><br /> **ALTER** -Berechtigung für die Schemas, in dem die Verlaufstabelle erstellt wird|**CONTROL** -Berechtigung für die ursprüngliche Tabelle, die geändert wird<br /><br /> **CONTROL** -Berechtigung für die Verlaufstabelle, die als Teil der **ALTER TABLE** -Anweisung angegeben wurde|
 |Audit|Die Überwachung zeigt, dass die temporale Tabelle geändert und die Verlaufstabelle zur gleichen Zeit erstellt wurde. Der Vorgang kann fehlschlagen, entweder aufgrund fehlender Berechtigungen zum Erstellen einer Tabelle in der Datenbank, aufgrund der fehlenden Berechtigungen zum Ändern des Schemas für die Verlaufstabelle, oder aufgrund der fehlenden Berechtigungen zum Ändern der temporalen Tabelle.|Die Überprüfung zeigt, dass die temporale Tabelle geändert wurde, aber der Vorgang erforderte Zugriff auf die Verlaufstabelle. Der Vorgang kann möglicherweise nicht ausgeführt werden, da Berechtigungen für die Verlaufstabelle oder für die aktuelle Tabelle fehlen.|
 

@@ -1,36 +1,37 @@
 ---
 title: 'azdata app template: Referenz'
+titleSuffix: SQL Server big data clusters
 description: Referenzartikel zu azdata app template-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da1b98649eeb48d5ae2d6ca05e61da53f519e944
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 89b5436536d221364f967548bf4a5c4dd70a1ebd
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251056"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942962"
 ---
 # <a name="azdata-app-template"></a>azdata app template
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Der folgende Artikel enthält Referenzinformationen zu den `app template`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
-|     |     |
+| Get-Help | BESCHREIBUNG |
 | --- | --- |
-[`azdata app template list`](#azdata-app-template-list) | Abrufen von unterstützten Vorlagen.
-[`azdata app template pull`](#azdata-app-template-pull) | Herunterladen von unterstützten Vorlagen.
+[azdata app template list](#azdata-app-template-list) | Abrufen von unterstützten Vorlagen.
+[azdata app template pull](#azdata-app-template-pull) | Herunterladen von unterstützten Vorlagen.
 ## <a name="azdata-app-template-list"></a>azdata app template list
 Abrufen von unterstützten Vorlagen aus dem GitHub-Repository unter der angegebenen [URL].
 ```bash
-azdata app template list [--url -u]
+azdata app template list [--url -u] 
+                         
 ```
 ### <a name="examples"></a>Beispiele
 Rufen Sie alle Vorlagen ab, die sich im Standardspeicherort des Vorlagenrepositorys befinden.
@@ -52,7 +53,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-app-template-pull"></a>azdata app template pull
@@ -60,7 +61,8 @@ Herunterladen von unterstützten Vorlagen, die sich im GitHub-Repository unter d
 ```bash
 azdata app template pull [--name -n] 
                          [--url -u]  
-                         [--destination -d]
+                         
+[--destination -d]
 ```
 ### <a name="examples"></a>Beispiele
 Laden Sie alle Vorlagen herunter, die sich im Standardspeicherort des Vorlagenrepositorys befinden.
@@ -91,7 +93,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 

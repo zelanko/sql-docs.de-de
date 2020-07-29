@@ -4,21 +4,21 @@ description: Erhalten Sie hilfreiche Tipps zur Verwendung von R-Paketen in SQL S
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a8402432904e724c0eee769f0f899ff12498ac8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ad2650317958ffd43b0f4b910585d429249115b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730540"
 ---
 # <a name="tips-for-using-r-packages"></a>Tipps für die Verwendung von R-Paketen
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Dieser Artikel bietet hilfreiche Tipps zur Verwendung von R-Paketen in SQL Server. Diese Tipps richten sich an DBAs, die mit R nicht vertraut sind, und erfahrene R-Entwickler, die sich noch nicht mit dem Paketzugriff in einer SQL Server-Instanz auskennen.
 
@@ -93,6 +93,6 @@ Mithilfe der folgenden Richtlinien können Sie Fehler vom Typ „Paket nicht gef
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [Installieren von Paketen mit R-Tools](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [Installieren von neuen R-Paketen mit sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

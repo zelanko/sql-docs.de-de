@@ -2,22 +2,22 @@
 title: Erstellen eines Python-Modells – revoscalepy
 description: Schreiben Sie ein Python-Skript mithilfe von revoscalepy-Funktionen, um Data Science-Modelle zu erstellen, die remote in SQL Server ausgeführt werden.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/25/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5faa8688f3036f80b947ccc5d99c09c4612f26fb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 268b8626fc3a121adfded58c1184b332da04139c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730445"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Verwenden von Python mit revoscalepy, um ein Modell zu erstellen, das remote auf SQL Server ausgeführt wird.
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Die [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)-Python-Bibliothek von Microsoft stellt Data Science-Algorithmen für das Durchsuchen von Daten, Visualisierung, Transformationen und Analysen bereit. Diese Bibliothek hat in Python-Integrationsszenarien in SQL Server strategische Bedeutung. Auf einem Multi-Core-Server können **revoscalepy**-Funktionen parallel ausgeführt werden. In einer verteilten Architektur mit einem zentralen Server und Clientarbeitsstationen (separate physische Computer, die alle über dieselbe **revoscalepy**-Bibliothek verfügen), können Sie Python-Code schreiben, der lokal startet, aber dann die Ausführung auf eine Remote-SQL Server-Instanz verlagert, auf der sich die Daten befinden.
 

@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97979dbef582835c5fcb8a8e3ec04fdf99b5d205
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ba9181d1b34bf39711dac702a11687b3ca38f604
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003665"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113353"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -47,7 +47,9 @@ SERVERPROPERTY ( 'propertyname' )
 > [!IMPORTANT]
 > Die Versionsnummern der Datenbank-Engine für SQL Server und Azure SQL-Datenbank sind nicht miteinander vergleichbar, sondern sind interne Buildnummern für diese separaten Produkte. Die Datenbank-Engine für Azure SQL-Datenbank basiert auf der gleichen Codebasis wie die SQL Server-Datenbank-Engine. Entscheidend ist dabei, dass die Datenbank-Engine in Azure SQL-Datenbank immer über die neuesten SQL-Datenbank-Engine-Bits verfügt. Die Version 12 von Azure SQL-Datenbank ist neuer als die Version 15 von SQL Server.
 
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 
 *propertyname*  
 Ein Ausdruck, der die Eigenschafteninformationen enthält, die für Server zurückgegeben werden sollen. Für*propertyname* sind die folgenden Werte möglich.  

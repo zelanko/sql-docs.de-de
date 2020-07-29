@@ -2,22 +2,22 @@
 title: 'R-Tutorial: Erstellen und Speichern des Modells'
 description: In diesem Tutorial wird das Erstellen eines R-Sprachmodells für die Verwendung für datenbankinterne SQL Server-Analysen veranschaulicht.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4cb806c0a6286ec8a6608b346d12e666a8e9a09f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8ae0de4af29dd68e71300de52875044a8c2d64b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730432"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Erstellen eines R-Modells und Speichern in SQL Server (exemplarische Vorgehensweise)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Im folgenden Schritt wird demonstriert, wie Sie ein Machine Learning-Modell erstellen und das Modell in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichern. Nachdem Sie ein Modell gespeichert haben, können Sie es direkt aus dem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code mithilfe der gespeicherten Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) oder der [Funktion PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) aufrufen.
 

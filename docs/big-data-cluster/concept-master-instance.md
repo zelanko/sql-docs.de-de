@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0cb2f253f56fc58e215d1c800788294e2df7b0aa
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: f7199663209c2d9a0dc51baa0e6986f16722ef94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606637"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773654"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Was ist die Masterinstanz in einem SQL Server-Big Data Cluster?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In diesem Artikel wird die Rolle der *SQL Server-Masterinstanz* in einem Big Data-Cluster für SQL Server 2019 beschrieben. Die Masterinstanz ist eine SQL Server-Instanz, die in einem Big Data-Cluster ausgeführt wird, um Konnektivität, Scale-Out-Abfragen, Metadaten- und Benutzerdatenbanken sowie Machine Learning-Dienste zu verwalten.
 

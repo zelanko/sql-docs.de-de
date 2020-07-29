@@ -2,22 +2,22 @@
 title: Launchpad-Kontokonfiguration
 description: Ändern des SQL Server-Launchpad-Dienstkontos, das für die externe Skriptausführung in SQL Server verwendet wird.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/17/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aa249c59a5b97e2b2e71e5d2fa17eccbafd8944f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 5ce304db442ab9e4c1fd283cb43eed83829710b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117103"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772390"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Dienstkonfiguration von SQL Server-Launchpad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] ist ein Dienst, der die Ausführung externer Skripts verwaltet und unterstützt, ganz ähnlich wie die Volltextindizierung und der Abfragedienst einen separaten Host für die Verarbeitung von Volltextabfragen starten.
 
