@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5800bd00faac0c34052a5930cfdb1ccaf86afbcb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6980c7914a10498d2f1d5cc08d60d63d9dd1f0ac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257878"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895198"
 ---
 # <a name="use-tokens-in-job-steps"></a>Verwenden von Token in Auftragsschritten
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -124,18 +123,22 @@ Betrachten Sie z. B. den folgenden Auftragsschritt, der das Token `A-MSG` verwen
   
 Nach dem Ausführen des Updateskripts wird mit dem Token ein `ESCAPE_NONE` -Makro eingefügt. In diesem Fall müssten Sie das Skript jedoch ohne Verwenden von Schachtelungen folgendermaßen neu schreiben und das `ESCAPE_SQUOTE` -Makro einfügen, damit die in der Token-Ersetzungszeichenfolge möglicherweise übergebenen Begrenzungszeichen richtig umgangen werden:  
   
-<pre>DECLARE @msgString nvarchar(max)  
-SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))'  
-SET @msgString = QUOTENAME(@msgString,'''')  
-PRINT N'Print ' + @msgString ;</pre>  
+```sql
+DECLARE @msgString nvarchar(max);
+SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))';
+SET @msgString = QUOTENAME(@msgString,'''');
+PRINT N'Print ' + @msgString;
+```
   
 Beachten Sie auch, dass in diesem Beispiel mit der Funktion QUOTENAME das Anführungszeichen festgelegt wird.  
   
 ### <a name="c-using-tokens-with-the-escape_none-macro"></a>C. Verwenden von Token mit dem ESCAPE_NONE-Makro  
 Das folgende Beispiel ist Teil eines Skripts, mit dem die Auftrags-ID ( `job_id` ) aus der `sysjobs` -Tabelle abgerufen wird und mithilfe des `JOBID` -Tokens die zuvor im Skript als binärer Datentyp deklarierte `@JobID` -Variable aufgefüllt wird. Beachten Sie, dass mit dem `ESCAPE_NONE` -Token das `JOBID` -Makro verwendet wird, da für binäre Datentypen keine Begrenzungszeichen erforderlich sind. In diesem Fall muss der Auftragsschritt nach Ausführen des Updateskripts nicht aktualisiert werden.  
   
-<pre>SELECT * FROM msdb.dbo.sysjobs  
-WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID))) ;</pre>  
+```sql
+SELECT * FROM msdb.dbo.sysjobs  
+WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID)));
+```
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md)  

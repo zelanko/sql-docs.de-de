@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: cd6f71f5c42418ab9357a9aaeec9788ae3ea0d65
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920954"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243424"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express-Sicherheit
 
@@ -40,7 +40,7 @@ Jede Benutzerinstanz ist von ihrer übergeordneten Instanz sowie von anderen Ben
 ## <a name="external-resources"></a>Externe Ressourcen  
 Weitere Informationen zu SQL Server Express finden Sie in den folgenden Ressourcen.  
   
-|||  
+|Resource|BESCHREIBUNG|
 |-|-|  
 |[Microsoft SQL Server 2005 Express Edition-Onlinedokumentation](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Vollständige Dokumentation für SQL Server 2005 Express Edition.|  
 |[Benutzerinstanzen für Nichtadministratoren](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) in der SQL Server-Onlinedokumentation|Beschreibt die Erstellung und Bereitstellung von Benutzerinstanzen.|  

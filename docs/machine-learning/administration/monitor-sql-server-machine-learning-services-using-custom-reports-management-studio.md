@@ -2,22 +2,22 @@
 title: Überwachen von Skripts mit benutzerdefinierten Berichten
 description: Verwenden Sie benutzerdefinierte Berichte in SQL Server Management Studio (SSMS), um die externe Skriptausführung (Python und R) und Ressourcennutzung zu überwachen, Probleme zu diagnostizieren und die Leistung in SQL Server Machine Learning Services zu optimieren.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 09/17/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dad4cebf8259241b85497a0ff894228d125e839b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 708d805ff810876ba5871b2e1e887dd97aceba3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659628"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Überwachen der Python- und R-Skriptausführung mithilfe von benutzerdefinierten Berichten in SQL Server Management Studio
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Verwenden Sie benutzerdefinierte Berichte in SQL Server Management Studio (SSMS), um die externe Skriptausführung (Python und R) und Ressourcennutzung zu überwachen, Probleme zu diagnostizieren und die Leistung in SQL Server Machine Learning Services zu optimieren.
 

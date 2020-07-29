@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c60f25406cb10e6ca6a12abe10a65a8a91fd1f59
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b35f277da1b91e4c47b57eb1ee2f5c8e6ff529a7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243532"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001849"
 ---
 # <a name="select-objects-object-explorer"></a>Objekte auswählen (Objekt-Explorer)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Verwenden Sie das Dialogfeld **Objekte auswählen** , um der Liste in einem anderen Dialogfeld ein Objekt hinzuzufügen. Der Titel des Dialogfelds und die darin verfügbaren Optionen hängen davon ab, wie es geöffnet wurde. Es werden nur verfügbare Optionen angezeigt. Wenn Sie z. B. einen Besitzer für ein neues Objekt auswählen, sind nur Benutzernamen verfügbar.  
   
 ## <a name="options"></a>Tastatur  

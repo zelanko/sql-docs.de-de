@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a2ce1a07-b4e2-471c-87d2-b8de5e6c6864
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 558396e4429037f59abe63e205e1dca6e7785548
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 88cda0f8a0ead013e09bdc656cc4a129870a5125
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257518"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001820"
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>Das Ausgabefenster in SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Das Ausgabefenster kann über das Menü „Ansicht“ oder mithilfe der Tastenkombination STRG + ALT + O geöffnet werden. Es stehen mehrere Ausgabekanäle zur Verfügung.
 
 In der folgenden Tabelle finden Sie eine Übersicht über die Nachrichtentypen, die den einzelnen Ausgabekanälen zugeordnet sind.

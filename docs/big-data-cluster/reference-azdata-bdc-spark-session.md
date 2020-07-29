@@ -1,29 +1,29 @@
 ---
 title: 'azdata bdc spark session: Referenz'
+titleSuffix: SQL Server big data clusters
 description: Referenzartikel zu azdata bdc spark session-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6829ce474b2f2f0b000a8ded5cfae2e293e1c2da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c6b4001a18cbc609a6eaccd634e029b22d90f02a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258620"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243511"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Der folgende Artikel enthält Referenzinformationen zu den `bdc spark session`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
-|     |     |
+| Get-Help | BESCHREIBUNG |
 | --- | --- |
 [azdata bdc spark session create](#azdata-bdc-spark-session-create) | Erstellen einer neuen Spark-Sitzung.
 [azdata bdc spark session list](#azdata-bdc-spark-session-list) | Auflisten aller aktiven Sitzungen in Spark.
@@ -36,18 +36,30 @@ Hiermit wird eine neue interaktive Spark-Sitzung erstellt. Die aufrufende Funkti
 ```bash
 azdata bdc spark session create [--session-kind -k] 
                                 [--jar-files -j]  
-                                [--py-files -p]  
-                                [--files -f]  
-                                [--driver-memory]  
-                                [--driver-cores]  
-                                [--executor-memory]  
-                                [--executor-cores]  
-                                [--executor-count]  
-                                [--archives -a]  
-                                [--queue -q]  
-                                [--name -n]  
-                                [--config -c]  
-                                [--timeout-seconds -t]
+                                
+[--py-files -p]  
+                                
+[--files -f]  
+                                
+[--driver-memory]  
+                                
+[--driver-cores]  
+                                
+[--executor-memory]  
+                                
+[--executor-cores]  
+                                
+[--executor-count]  
+                                
+[--archives -a]  
+                                
+[--queue -q]  
+                                
+[--name -n]  
+                                
+[--config -c]  
+                                
+[--timeout-seconds -t]
 ```
 ### <a name="examples"></a>Beispiele
 Erstellen Sie eine Sitzung.
@@ -91,7 +103,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-spark-session-list"></a>azdata bdc spark session list
@@ -112,16 +124,17 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-spark-session-info"></a>azdata bdc spark session info
 Hiermit werden die Sitzungsinformationen für eine aktive Spark-Sitzung abgerufen, die die angegebene ID hat.  Die Sitzungs-ID wird von „spark session create“ zurückgegeben.
 ```bash
 azdata bdc spark session info --session-id -i 
-            ```
-### Examples
-Get session info for session with ID of 0.
+                              
+```
+### <a name="examples"></a>Beispiele
+Rufen Sie die Sitzungsinformationen für die Sitzung mit der ID 0 ab.
 ```bash
 azdata spark session info --session-id 0
 ```
@@ -136,16 +149,17 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-spark-session-log"></a>azdata bdc spark session log
 Hiermit werden die Sitzungsprotokolleinträge für eine aktive Spark-Sitzung abgerufen, die die angegebene ID hat.  Die Sitzungs-ID wird von „spark session create“ zurückgegeben.
 ```bash
 azdata bdc spark session log --session-id -i 
-           ```
-### Examples
-Get session log for session with ID of 0.
+                             
+```
+### <a name="examples"></a>Beispiele
+Rufen Sie das Sitzungsprotokoll für die Sitzung mit der ID 0 ab.
 ```bash
 azdata spark session log --session-id 0
 ```
@@ -160,16 +174,17 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-spark-session-state"></a>azdata bdc spark session state
 Hiermit wird der Sitzungsstatus für eine aktive Spark-Sitzung abgerufen, die die angegebene ID hat.  Die Sitzungs-ID wird von „spark session create“ zurückgegeben.
 ```bash
 azdata bdc spark session state --session-id -i 
-             ```
-### Examples
-Get session state for session with ID of 0.
+                               
+```
+### <a name="examples"></a>Beispiele
+Rufen Sie den Sitzungsstatus für die Sitzung mit der ID 0 ab.
 ```bash
 azdata spark session state --session-id 0
 ```
@@ -184,16 +199,17 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-spark-session-delete"></a>azdata bdc spark session delete
 Hiermit wird eine interaktive Spark-Sitzung gelöscht. Die Sitzungs-ID wird von „spark session create“ zurückgegeben.
 ```bash
 azdata bdc spark session delete --session-id -i 
-              ```
-### Examples
-Delete a session.
+                                
+```
+### <a name="examples"></a>Beispiele
+Löschen Sie eine Sitzung.
 ```bash
 azdata spark session delete --session-id 0
 ```
@@ -208,7 +224,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 

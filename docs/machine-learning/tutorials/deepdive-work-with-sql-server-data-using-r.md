@@ -2,22 +2,22 @@
 title: Datenbank für RevoScaleR-Tutorials
 description: 'Tutorial 1 zu RevoScaleR: In diesem Artikel erfahren Sie, wie Sie eine SQL Server-Datenbank für R-Tutorials erstellen.'
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d37603f77aab747fc637bfbeac6335fa32c9c48b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 5cd0d5e6706dc946ba5be34487edb72e4cbf996b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757125"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Erstellen einer Datenbank und von Berechtigungen (Tutorial zu SQL Server und RevoScaleR)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Bei diesem Tutorial handelt es sich um das erste Tutorial von [Lernprogramm: Verwenden von RevoScaleR-Funktionen für R mit SQL Server-Daten](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md). In diesem Lernprogramm erfahren Sie, wie Sie [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server verwenden.
 

@@ -1,10 +1,7 @@
 ---
 title: Eigenschaftenfenster (F1-Hilfe, Management Studio)
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -23,20 +20,26 @@ helpviewer_keywords:
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6301ce8d1500cb4c71bbcf725e5abe81fa2130b8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: d6cbc1291e5370053f0cf1ebf70265f02187e449
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243862"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246429"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Eigenschaftenfenster (F1-Hilfe, Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 Mithilfe des Fensters **Eigenschaften** können Sie die Eigenschaften ausgewählter Elemente anzeigen. Zudem können Sie mithilfe des Fensters **Eigenschaften** Datei-, Projekt- und Projektmappeneigenschaften anzeigen. Das Fenster **Eigenschaften** ist verfügbar, wenn Sie im Menü **Ansicht** auf **Eigenschaftenfenster** klicken.  
   
 Im Fenster **Eigenschaften** werden unterschiedliche Arten der Bearbeitung von Feldern angezeigt, je nachdem, welche Bearbeitung für die bestimmte Eigenschaft erforderlich ist. Die in Grau angezeigten Eigenschaften sind schreibgeschützt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Tastatur
+
 **Objektname**  
 Führt das aktuell ausgewählte Objekt bzw. die aktuell ausgewählten Objekte auf. Es werden nur die Objekte aus dem aktiven Editor oder Designer angezeigt.  
   
@@ -52,6 +55,6 @@ Zeigt die Eigenschaften für ein Objekt an.
 **Beschreibungsbereich**  
 Der Beschreibungsbereich befindet sich unten im Fenster **Eigenschaften** und zeigt den Eigenschaftentyp und eine kurze Beschreibung der Eigenschaft an. Sie können die Beschreibung der Eigenschaft ein- und ausschalten, indem Sie den Befehl **Beschreibung** im Kontextmenü verwenden.  
   
-## <a name="see-also"></a>Weitere Informationen  
-[Eigenschaftenfenster in SQL Server Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
-  
+## <a name="see-also"></a>Weitere Informationen
+
+- [Eigenschaftenfenster in SQL Server Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)

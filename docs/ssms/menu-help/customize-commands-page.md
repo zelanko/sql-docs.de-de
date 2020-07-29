@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c4e138eb6b530377b76fcb6e6fb21a2694bce63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df3c48dcab1ee71f8cfee1932099b034729451e3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255699"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000409"
 ---
 # <a name="customize-commands-page"></a>Anpassen (Seite Befehle)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Mithilfe dieses Dialogfelds können Sie Befehle zu Symbolleisten und Menüs hinzufügen und die Bilder für auf Symbolleisten verwendeten Schaltflächen sowie für Menübefehle ändern. Sie können auf die Seite **Befehle** zugreifen, indem Sie im Menü **Extras** auf **Anpassen** klicken und anschließend auf **Befehle**klicken.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
 **Kategorien**  
 Gibt die Gruppe an Befehlen an, die im Listenfeld **Befehle** angezeigt werden. Die Befehlskategorien basieren auf Menütiteln, die durch die aktuell von der Umgebung unterstützten Tools und Designer zur Verfügung gestellt werden. Die Titelliste ist dynamisch, und die Reihenfolge der Kategorien und der Menütitel ändert sich. Dies hängt von den Tools sowie vom Designer sowie von ggf. daran vorgenommenen Änderungen ab. Deshalb können zwei Menüs in unterschiedlichen Designern denselben Namen besitzen. Ein Name kann also zweimal vorkommen und verschiedene Befehlsgruppen verfügbar machen.  
   

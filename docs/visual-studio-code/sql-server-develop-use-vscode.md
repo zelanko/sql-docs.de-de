@@ -8,16 +8,16 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
-ms.openlocfilehash: 615e205566ced2c1d0a66ab69b3e9eb80c7f82f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 657dab5c2d80bc4ae4c404872386eb993e242235
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75558455"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896528"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Verwenden von Visual Studio Code zum Erstellen und Ausführen von Transact-SQL-Skripts
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 In diesem Artikel erfahren Sie, wie Sie die **mssql**-Erweiterung für Visual Studio Code verwenden, um SQL Server-Datenbanken zu entwickeln. Da Visual Studio Code plattformübergreifend ist, können Sie **mssql**-Erweiterung unter Linux, macOS und Windows verwenden.
 

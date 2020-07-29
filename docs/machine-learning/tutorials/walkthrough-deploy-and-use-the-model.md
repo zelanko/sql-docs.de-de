@@ -2,22 +2,22 @@
 title: 'R-Tutorial: Bereitstellen eines Modells'
 description: In diesem Tutorial erfahren Sie, wie Sie ein R-Modell in SQL Server für die datenbankinterne Analyse bereitstellen können.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0117ff1ccbd90a18c1198c9a46fa60c27d28107d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781786"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Bereitstellen des R-Modells und Verwendung in SQL Server (exemplarische Vorgehensweise)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In dieser Lektion erfahren Sie, wie Sie R-Modelle in einer Produktionsumgebung bereitstellen können, indem Sie ein trainiertes Modell aus einer gespeicherten Prozedur abrufen. Sie können die gespeicherte Prozedur aus R oder jeder beliebigen Anwendungsprogrammiersprache aufrufen, die [!INCLUDE[tsql](../../includes/tsql-md.md)] (z. B. C#, Java und Python) unterstützt, um das Modell zum Treffen von Vorhersagen für neue Beobachtungen zu verwenden.
 

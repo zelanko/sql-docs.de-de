@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 61a0a699c7d754d3b21b671da5cd29ea0ec0f240
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 214942feecf0161f373ca588c15510bcd5c0615f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251457"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999502"
 ---
 # <a name="open-file-dialog-box"></a>Datei öffnen (Dialogfeld)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Verwenden Sie das Dialogfeld **Datei öffnen** , um eine vorhandene Datei von einem Datenträger zu öffnen. Außerdem können Sie dieses Dialogfeld dazu verwenden, eine bereits geöffnete Datei mit unterschiedlichen Sprachcodierungsoptionen zu öffnen.  
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **Öffnen** und dann **Datei**aus. Dieses Dialogfeld wird auch angezeigt, wenn Sie Dateien von anderen Elementen aus öffnen, z. B. dem Dialogfeld **Externe Tools** . Um das ähnliche Dialogfeld **Projekt öffnen** zu öffnen, wählen Sie im Menü **Datei**den Befehl **Öffnen** und dann **Projekt/Projektmappe** aus.  

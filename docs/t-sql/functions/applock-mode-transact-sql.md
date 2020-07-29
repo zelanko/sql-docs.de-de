@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba622c928d2ec1300dbe9eec29ea3a249b7ca89a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3d171d77cf3462eb68893f4ac5f6230d73b8b11
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85684966"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113183"
 ---
 # <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ Diese Funktion gibt den Sperrmodus zurück, der vom Besitzer der Sperre für ein
 APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
 '*database_principal*'  
 Der Benutzer, die Rolle oder die Anwendungsrolle, dem bzw. der Berechtigungen für Objekte in einer Datenbank erteilt werden können. Um eine Funktion erfolgreich aufzurufen, muss der Aufrufer der Funktion Mitglied einer der folgenden festen Datenbankrollen sein: *database_principal*, „dbo“ oder „db_owner“.
   

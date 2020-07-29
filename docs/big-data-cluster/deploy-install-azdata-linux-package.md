@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ac50d0c20f76e78aaa5016f62cefb8c7cc7f075a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 304515dcd288978c0d85ab992312eb2444430bfc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75728581"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773647"
 ---
 # <a name="install-azdata-with-apt"></a>Installieren von `azdata` mit apt
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In diesem Artikel wird beschrieben, wie Sie `azdata` für Big Data-Cluster in SQL Server 2019 unter Linux installieren. Bevor diese Paket-Manager verfügbar waren, was `pip` für die Installation von `azdata` erforderlich.
 

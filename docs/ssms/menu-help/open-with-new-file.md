@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9238bced3c9e0afe81a6eaaf7c9747c27ab4b3a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1ac269ba2768195448927375b4cbde5713f15f2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245781"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001655"
 ---
 # <a name="open-with-new-file"></a>Öffnen mit (neue Datei)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Sie können ein Dokument in einem oder mehreren Editoren öffnen, indem Sie im Menü **Datei** auf **Öffnen** und danach auf **Datei**klicken. Wählen Sie im Dialogfeld **Datei öffnen** die Datei aus, klicken Sie auf den Pfeil bei **Öffnen** , und klicken Sie dann auf **Öffnen mit**. Klicken Sie im Dialogfeld **Öffnen mit** in der Liste **Wählen Sie das zu öffnende Programm aus** auf das bevorzugte Programm, und klicken Sie dann auf **Öffnen**.  
   
 ## <a name="options"></a>Tastatur  

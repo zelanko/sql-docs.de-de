@@ -2,18 +2,19 @@
 title: Mitwirken an der SQL Server-Dokumentation | Microsoft-Dokumentation
 ms.date: 08/13/2018
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ''
 ms.custom: ''
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d947ae25f6f01740e7c5826a7edf332ff422a9de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286324"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247382"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Mitwirken an der SQL Server-Dokumentation
 
@@ -23,7 +24,7 @@ An der SQL Server-Dokumentation kann jeder mitwirken. Beispielsweise können Rec
 
 Wenn Sie zur Dokumentation beitragen möchten, stehen Ihnen zwei Hauptworkflows zur Verfügung:
 
-|||
+|Workflow|BESCHREIBUNG|
 |---|---|
 | [Bearbeiten von Inhalten im Browser](#githubui) | Geeignet für kleinere Bearbeitungen eines Artikels |
 | [Lokales Bearbeiten von Inhalten mit Tools](#tools) | Geeignet für komplexere Bearbeitungen in mehreren Artikeln und bei häufigen Beiträgen für docs.microsoft.com |
@@ -93,7 +94,7 @@ In jedem SQL Server-Artikel befindet sich nach dem Titel ein Verweis auf die **a
 Im folgenden Markdown-Beispiel wird die Includedatei **appliesto-ss-asdb-asdw-pdw-md.md** abgerufen.
 
 ```Markdown
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 ```
 
 Dadurch wird der folgende Text am Anfang des Artikels angezeigt:

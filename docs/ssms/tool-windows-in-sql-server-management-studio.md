@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2965cbdec8ad5a0db80ab52c75c14b0e1e32dc75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243891"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236848"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Toolfenster in SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] bietet eine Vielzahl an leistungsstarken Toolfenstern für alle Entwicklungs- und Verwaltungsphasen. Einige Tools lassen sich für jede [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Komponente verwenden, während andere nur für bestimmte Komponenten gelten. In der folgenden Tabelle sind die Tools aufgeführt, die für alle Komponenten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verwendet werden können.  
   
-|||  
-|-|-|  
-|**Tool**|**Zweck**|  
+|Tool|Zweck|  
+|-|-|   
 |[Objekt-Explorers](../ssms/object/object-explorer.md)|Durchsucht Server, erstellt und sucht Objekte, verwaltet Datenquellen, und zeigt Protokolle an. Auf dieses Tool kann über das Menü **Ansicht** zugegriffen werden.|  
 |[Projektmappen-Explorer](../ssms/solution/solution-explorer.md)|Speichert und organisiert Skripts und zugehörige Verbindungsinformationen in Projekten, die als [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Skripts bezeichnet werden. Sie können mehrere [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Skripts als Projektmappen speichern und mit der Quellcodeverwaltung Skripts verwalten, die sich im Laufe der Zeit ändern. Auf dieses Tool kann über das Menü **Ansicht** zugegriffen werden.|  
 |[Template Explorer](../ssms/template/template-explorer.md)|Erstellt Abfragen auf Grundlage von vorhandenen Vorlagen. Sie können auch eigene benutzerdefinierte Abfragen erstellen oder die vorhandenen Vorlagen so ändern, dass sie für Ihre Szenarien geeignet sind. Auf dieses Tool kann über das Menü **Ansicht** zugegriffen werden.|  

@@ -2,22 +2,22 @@
 title: Verwaltung mit dem Resource Governor
 description: In diesem Artikel erfahren Sie, wie Sie den Resource Governor zum Verwalten der Ressourcenzuordnung der CPU, physischen E/A und des Arbeitsspeichers für Python- und R-Arbeitsauslastungen in SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/02/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 85556d545bd0ae9760f2adc92ef5a63c9a502a76
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f5a567ee0d4937341bb6d9f62a75955635118d1c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118813"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881973"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>Verwalten von Python- und R-Arbeitsauslastungen mit dem Resource Governor in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 In diesem Artikel erfahren Sie, wie Sie den [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) zum Verwalten der Ressourcenzuordnung der CPU, physischen E/A und des Arbeitsspeichers für Python- und R-Arbeitsauslastungen in SQL Server Machine Learning Services.
 

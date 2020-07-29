@@ -1,22 +1,22 @@
 ---
 title: 'SQL Server: Überwachungspartner | Microsoft-Dokumentation'
 description: Liste mit Partnerunternehmen, die Lösungen zur Überwachung von SQL Server anbieten.
-services: sql-server
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 11/02/2017
 ms.prod: sql
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: acecd9a5ef362f591d71eee15550ee7daa96dfc4
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 5b2ea5e22800d2fc8f65282f62fa52ce19e87722
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002813"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921769"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server-Überwachungspartner
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 Es gibt eine große Auswahl an branchenführenden Tools zur Überwachung Ihrer SQL Server-Dienste. Im Folgenden werden Partnerunternehmen von Microsoft aufgelistet, die Überwachungslösungen für Microsoft SQL Server anbieten.
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft-Überwachungspartner

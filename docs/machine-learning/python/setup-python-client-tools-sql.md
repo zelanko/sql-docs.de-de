@@ -2,22 +2,22 @@
 title: Einrichten eines Python-Data-Science-Clients
 description: Richten Sie eine lokale Python-Umgebung (Jupyter Notebook oder PyCharm) für Remoteverbindungen mit SQL Server-Machine Learning Services mithilfe von Python ein.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1857ba03808c4309f2573a7d8e58801d5f80199d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117773"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897211"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Einrichten eines Data Science-Clients für die Python-Entwicklung mit SQL Server-Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Die Integration von Python ist ab SQL Server 2017 verfügbar, wenn Sie bei der [Installation von SQL Server-Machine Learning Services (datenbankintern)](../install/sql-machine-learning-services-windows-install.md) das Kontrollkästchen für Python aktiviert haben. 
 
@@ -51,9 +51,9 @@ Mit einem Installationsskript werden dem Python-Client drei Microsoft-spezifisch
 
 1. Laden Sie ein Installationsskript herunter.
 
-  + Unter [https://aka.ms/mls-py](https://aka.ms/mls-py) wird Version 9.2.1 der Microsoft Python-Pakete installiert. Diese Version entspricht einer Standardinstanz von SQL Server. 
+   + Unter [https://aka.ms/mls-py](https://aka.ms/mls-py) wird Version 9.2.1 der Microsoft Python-Pakete installiert. Diese Version entspricht einer Standardinstanz von SQL Server. 
 
-  + Unter [https://aka.ms/mls93-py](https://aka.ms/mls93-py) wird Version 9.3 der Microsoft Python-Pakete installiert. Wenn Ihre Remoteinstanz von SQL Server [an Machine Learning Server 9.3 gebunden](../install/upgrade-r-and-python.md) ist, ist diese Version besser geeignet.
+   + Unter [https://aka.ms/mls93-py](https://aka.ms/mls93-py) wird Version 9.3 der Microsoft Python-Pakete installiert. Wenn Ihre Remoteinstanz von SQL Server [an Machine Learning Server 9.3 gebunden](../install/upgrade-r-and-python.md) ist, ist diese Version besser geeignet.
 
 2. Öffnen Sie ein PowerShell-Fenster mit erweiterten Administratorberechtigungen (indem Sie mit der rechten Maustaste auf **Als Administrator ausführen** klicken).
 
@@ -79,7 +79,7 @@ Listen Sie in PowerShell den Inhalt des Installationsordners auf, um sicherzugeh
 
 2. Geben Sie `dir *.exe` ein, um die ausführbaren Dateien aufzulisten. Es sollten die Dateien **python.exe**, **pythonw.exe** und **uninstall-anaconda.exe** angezeigt werden.
 
-  ![Liste der ausführbaren Python-Dateien](media/powershell-python-exe.png)
+   ![Liste der ausführbaren Python-Dateien](media/powershell-python-exe.png)
    
 Achten Sie bei Systemen mit mehreren Python-Versionen darauf, diese spezielle Python.exe-Datei zu verwenden, wenn Sie **revoscalepy** und andere Microsoft-Pakete laden möchten.
 
@@ -94,17 +94,17 @@ Anaconda enthält Jupyter Notebook. Erstellen Sie als Nächstes ein Notebook, un
 
 1. Öffnen Sie in der PowerShell-Eingabeaufforderung im Verzeichnis „C:\Programme\Microsoft\PyForMLS“ im Ordner „Skripts“ die Anwendung „Jupyter Notebook“:
 
-  ```powershell
-  .\Scripts\jupyter-notebook
-  ```
+   ```powershell
+   .\Scripts\jupyter-notebook
+   ```
 
-  Ein Notebook sollte in Ihrem Standardbrowser unter `https://localhost:8889/tree` geöffnet werden.
+   Ein Notebook sollte in Ihrem Standardbrowser unter `https://localhost:8889/tree` geöffnet werden.
 
-  Alternativ dazu können Sie Jupyter Notebook auch starten, indem Sie auf die Datei **jupyter-notebook.exe** doppelklicken. 
+   Alternativ dazu können Sie Jupyter Notebook auch starten, indem Sie auf die Datei **jupyter-notebook.exe** doppelklicken. 
 
 2. Klicken Sie auf **Neu** und anschließend auf **Python 3**.
 
-  ![Jupyter Notebook mit den ausgewählten Optionen „Neu“ und „Python 3“](media/jupyter-notebook-new-p3.png)
+   ![Jupyter Notebook mit den ausgewählten Optionen „Neu“ und „Python 3“](media/jupyter-notebook-new-p3.png)
 
 3. Geben Sie `import revoscalepy` ein, und führen Sie den Befehl aus, um eine der Microsoft-spezifischen Bibliotheken zu laden.
 
@@ -112,17 +112,17 @@ Anaconda enthält Jupyter Notebook. Erstellen Sie als Nächstes ein Notebook, un
 
 4. Geben Sie eine komplexere Reihe von Anweisungen ein. In diesem Beispiel werden Zusammenfassungsstatistiken mithilfe von [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) über ein lokales Dataset generiert. Andere Funktionen rufen den Speicherort der Beispieldaten ab und erstellen ein Datenquellenobjekt für eine lokale XDF-Datei.
 
-  ```python
-  import os
-  from revoscalepy import rx_summary
-  from revoscalepy import RxXdfData
-  from revoscalepy import RxOptions
-  sample_data_path = RxOptions.get_option("sampleDataDir")
-  print(sample_data_path)
-  ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
-  summary = rx_summary("ArrDelay+DayOfWeek", ds)
-  print(summary)
-  ```
+   ```python
+   import os
+   from revoscalepy import rx_summary
+   from revoscalepy import RxXdfData
+   from revoscalepy import RxOptions
+   sample_data_path = RxOptions.get_option("sampleDataDir")
+   print(sample_data_path)
+   ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+   summary = rx_summary("ArrDelay+DayOfWeek", ds)
+   print(summary)
+   ```
 
 Im folgenden Screenshot wird in gekürzter Form die Eingabe und ein Teil der Ausgabe angezeigt.
 

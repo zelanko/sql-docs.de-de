@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a7a287cad9b674c55f032a04490a0518f723a797
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e6b5323efc2d0ef9a32e68997ae53e7056dc9fb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251366"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002035"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Hinzufügen eines benutzerdefinierten Berichts zu Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In diesem Thema wird beschrieben, wie ein einfacher, als RDL-Datei gespeicherter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht erstellt und anschließend [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] diese RDL-Datei als benutzerdefinierter Bericht hinzugefügt wird. [!INCLUDE[ssRS](../../includes/ssrs.md)] kann eine Vielzahl komplexer Berichte erstellen. Zum Erstellen eines Berichts mithilfe dieses Themas muss auf dem Computer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] installiert sein. Sie müssen [!INCLUDE[ssRS](../../includes/ssrs.md)] nicht auf einem Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren, um einen benutzerdefinierten Bericht mithilfe von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]auszuführen.  
   
  

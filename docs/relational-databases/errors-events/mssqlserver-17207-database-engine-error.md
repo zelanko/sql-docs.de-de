@@ -1,7 +1,7 @@
 ---
-title: MSSQLSERVER_17204 | Microsoft-Dokumentation
+title: MSSQLSERVER_17207
 ms.custom: ''
-ms.date: 07/10/2020
+ms.date: 07/25/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 1c0c799af360e10780c35ba6848031fb5a4d6737
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 48bcd9ada3da7a1e95001487045105337b298d13
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279626"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236276"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ Die Betriebssystem-Fehlerinformationen die in diesen Fehlermeldungen angegeben w
 1. Voraussetzung zum Beheben von Fehler 17207 sind das Verständnis des zugehörigen Betriebssystem-Fehlercodes und die Diagnose des Fehlers. Nach dem Beheben der Betriebssystem-Fehlerbedingung können Sie versuchen, die Datenbank neu zu starten (beispielsweise mithilfe von ALTER DATABASE SET ONLINE) oder die betroffene Datenbank mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz online zu schalten. In einigen Fällen lässt sich der Betriebssystemfehler unter Umständen nicht beheben, sodass Sie bestimmte Korrekturmaßnahmen ergreifen müssen. Wir behandeln diese Aktionen in diesem Abschnitt.
 1. Wenn die 17207-Fehlermeldung nur einen Fehlercode und keine Fehlerbeschreibung enthält, können Sie versuchen, den Fehlercode mithilfe des folgenden Befehls an einer Betriebssystemshell aufzulösen: net helpmsg <error code> . Wenn Sie einen 8stelligen Statuscode als Fehlercode erhalten, können Sie auf Informationsquellen wie [How do I convert an HRESULT to a Win32 error code?](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133) (Gewusst wie: Konvertieren eines HRESULT-Werts in einen Win32-Fehlercode) zurückgreifen, um diese Statuscodes in Betriebssystemfehler zu decodieren.
 1. Wenn Sie den ```Access is Denied```-Betriebssystemfehler „5“ empfangen, ziehen Sie diese Methoden in Erwägung:
-   -  Überprüfen Sie die für die Datei festgelegten Berechtigungen, indem Sie die Dateieigenschaften im Windows-Explorer aufrufen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die Zugriffssteuerung für die verschiedenen Dateiressourcen mithilfe von Windows-Gruppen bereit. Vergewissern Sie sich, dass die richtige Gruppe (mit einem Namen wie SQLServerMSSQLUser$ComputerName$MSSQLSERVER oder SQLServerMSSQLUser$ComputerName$InstanceName) über die erforderlichen Berechtigungen für die Datenbankdatei verfügt, die in der Fehlermeldung genannt wird. Weitere Details finden Sie unter [Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md). Achten Sie darauf, dass die Windows-Gruppe das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienststartkonto oder die Dienst-SID tatsächlich enthält.
+   -  Überprüfen Sie die für die Datei festgelegten Berechtigungen, indem Sie die Dateieigenschaften im Windows-Explorer aufrufen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die Zugriffssteuerung für die verschiedenen Dateiressourcen mithilfe von Windows-Gruppen bereit. Vergewissern Sie sich, dass die richtige Gruppe (mit einem Namen wie SQLServerMSSQLUser$ComputerName$MSSQLSERVER oder SQLServerMSSQLUser$ComputerName$InstanceName) über die erforderlichen Berechtigungen für die Datenbankdatei verfügt, die in der Fehlermeldung genannt wird. Weitere Details finden Sie unter [Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014). Achten Sie darauf, dass die Windows-Gruppe das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienststartkonto oder die Dienst-SID tatsächlich enthält.
    -  Überprüfen Sie das Benutzerkonto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienst aktuell ausgeführt wird. Sie können diese Informationen mithilfe des Windows Task-Managers abrufen. Suchen Sie nach dem Wert für „Benutzername“ der „sqlservr.exe“-Programmdatei. Wenn Sie vor Kurzem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkonto geändert haben, berücksichtigen Sie außerdem, dass bei der unterstützten Durchführung dieses Vorgangs das SQL Server-Konfigurations-Manager-Hilfsprogramm verwendet wird. Weitere Informationen dazu finden Sie unter [SQL Server-Konfigurations-Manager](../sql-server-configuration-manager.md). 
    -  Das Konto, das für den Identitätswechsel und den Zugriff auf die Datenbankdatei verwendet wird, kann je nach Typ des Vorgangs (Öffnen von Datenbanken während des Serverstarts, Anfügen einer Datenbank, Datenbankwiederherstellung usw.) variieren. Arbeiten Sie das Thema [Sichern von Daten- und Protokolldateien](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) durch, um zu verstehen, welcher Vorgang welche Berechtigungen für welche Konten festlegt. Mit Tools wie dem [Prozessmonitor](https://docs.microsoft.com/sysinternals/downloads/procmon) von Windows SysInternals können Sie nachvollziehen, ob der Dateizugriff im Sicherheitskontext des Dienststartkontos der SQL Server-Instanz (oder Dienst-SID) oder eines Identitätswechselkontos erfolgt.
 

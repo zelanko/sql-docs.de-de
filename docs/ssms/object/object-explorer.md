@@ -26,16 +26,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 575c8d2ec6e6397f7a3444bcc718988b070e783d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4eae86044d8e0ec03268e23abc81df4945b46990
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257140"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245564"
 ---
 # <a name="object-explorer"></a>Objekt-Explorer
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] bietet Funktionen zum Verwalten von Objekten in Instanzen von [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="benefits-of-object-explorer"></a>Vorteile des Objekt-Explorers  
@@ -49,5 +49,4 @@ Der Objekt-Explorer stellt eine hierarchische Benutzeroberfläche zum Anzeigen u
 |Beschreibt, wie der Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]herstellt.|[Verbinden mit einer Instanz mit dem Objekt-Explorer](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |Beschreibt, wie Objekte, die als Knoten in der Objekt-Explorer-Hierarchie dargestellt sind, verwaltet werden.|[Verwalten von Objekten mittels Objekt-Explorer](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
 |Beschreibt den Bereich "Details zum Objekt-Explorer", eine tabellarische Ansicht aller Objekte im Server mit einer Benutzeroberfläche zu deren Verwaltung.|[Bereich mit Details zum Objekt-Explorer](../../ssms/object/object-explorer-details-pane.md)|  
-|Beschreibt Möglichkeiten zum Ausführen benutzerdefinierter Berichte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|  
-  
+|Beschreibt Möglichkeiten zum Ausführen benutzerdefinierter Berichte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|

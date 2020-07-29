@@ -20,12 +20,12 @@ ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71a3d8f8ce28fcc8918f2058d08f99df2982be5c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 05ada0fde26bdd1e22ceea152539daae8967c1d4
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086711"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113423"
 ---
 # <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -36,12 +36,14 @@ ms.locfileid: "68086711"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
   
 IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  **'** *Rolle* **'**  
  Der Name der Datenbankrolle, die überprüft wird. *role* weist den Typ **sysname** auf.  
   
@@ -60,7 +62,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="remarks"></a>Bemerkungen  
  Mit IS_ROLEMEMBER legen Sie fest, ob der aktuelle Benutzer eine Aktion ausführen kann, für die die Berechtigungen der Datenbankrolle erforderlich sind.  
   
- Wenn *database_principal* auf einer Windows-Anmeldung basiert, z.B. Contoso\Mary5, gibt IS_ROLEMEMBER den Wert NULL zurück, falls der direkte Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für *database_principal* nicht erteilt oder verweigert wurde.  
+ Wenn *database_principal* auf einer Windows-Anmeldung basiert, z.B. Contoso\Mary5, gibt IS_ROLEMEMBER den Wert NULL zurück, falls der direkte Zugriff auf *für*database_principal[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht erteilt oder verweigert wurde.  
   
  Wenn der optionale *database_principal*-Parameter nicht bereitgestellt wird und der *database_principal* auf einer Windows-Domänenanmeldung basiert, kann er aufgrund der Mitgliedschaft in einer Windows-Gruppe Mitglied einer Datenbankrolle sein. Um derartige indirekte Mitgliedschaften aufzulösen, fordert IS_ROLEMEMBER Informationen zu Windows-Gruppenmitgliedschaften vom Domänencontroller an. Wenn nicht auf den Domänencontroller zugegriffen werden kann oder der Domänencontroller nicht reagiert, berücksichtigt IS_ROLEMEMBER beim Zurückgeben der Informationen zur Rollenmitgliedschaft nur den Benutzer und die lokalen Gruppen. Wenn der angegebene Benutzer nicht der aktuelle Benutzer ist, kann sich der durch IS_ROLEMEMBER zurückgegebene Wert vom letzten Datenupdate des Authentifikators (z. B. Active Directory) für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterscheiden.  
   
@@ -77,7 +79,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
  Diese Funktion wertet die Rollenmitgliedschaft aus, nicht die zugrunde liegende Berechtigung. Die feste Datenbankrolle **db_owner** besitzt z.B. die Berechtigung **CONTROL DATABASE**. Wenn der Benutzer die **CONTROL DATABASE**-Berechtigung besitzt, aber nicht Mitglied der Rolle ist, meldet diese Funktion ordnungsgemäß, dass der Benutzer nicht Mitglied der **db_owner**-Rolle ist, obwohl er die gleichen Berechtigungen besitzt.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
- Verwenden Sie [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md), um zu ermitteln, ob der aktuelle Benutzer ein Mitglied der angegebenen Windows-Gruppe oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankrolle ist. Zum Bestimmen, ob ein anderer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename ein Mitglied einer Datenbankrolle ist, verwenden Sie [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]IS_MEMBER &#40;Transact-SQL&#41;[, um zu ermitteln, ob der aktuelle Benutzer ein Mitglied der angegebenen Windows-Gruppe oder der ](../../t-sql/functions/is-member-transact-sql.md)-Datenbankrolle ist. Zum Bestimmen, ob ein anderer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename ein Mitglied einer Datenbankrolle ist, verwenden Sie [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DEFINITION-Berechtigung für die Datenbankrolle.  

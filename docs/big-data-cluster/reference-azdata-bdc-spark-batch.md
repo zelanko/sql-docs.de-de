@@ -1,29 +1,29 @@
 ---
 title: „azdata bdc spark batch“-Referenz
+titleSuffix: SQL Server big data clusters
 description: Referenzartikel für „azdata bdc spark batch“-Befehle.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d141669313a90bd04cda2e54d5a9e9d5a3c68f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2921a1855ed02779bc30602c5b87ed4914d11f3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258635"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243043"
 ---
 # <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Der folgende Artikel enthält Referenzinformationen zu den `bdc spark batch`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
-|     |     |
+| Get-Help | BESCHREIBUNG |
 | --- | --- |
 [azdata bdc spark batch create](#azdata-bdc-spark-batch-create) | Erstellen eines neuen Spark-Batchs.
 [azdata bdc spark batch list](#azdata-bdc-spark-batch-list) | Auflisten aller Batches in Spark.
@@ -36,19 +36,32 @@ Hiermit wird ein neuer Spark-Batchauftrag erstellt, der den bereitgestellten Cod
 ```bash
 azdata bdc spark batch create --file -f 
                               [--class-name -c]  
-                              [--arguments -a]  
-                              [--jar-files -j]  
-                              [--py-files -p]  
-                              [--files]  
-                              [--driver-memory]  
-                              [--driver-cores]  
-                              [--executor-memory]  
-                              [--executor-cores]  
-                              [--executor-count]  
-                              [--archives]  
-                              [--queue -q]  
-                              [--name -n]  
-                              [--config]
+                              
+[--arguments -a]  
+                              
+[--jar-files -j]  
+                              
+[--py-files -p]  
+                              
+[--files]  
+                              
+[--driver-memory]  
+                              
+[--driver-cores]  
+                              
+[--executor-memory]  
+                              
+[--executor-cores]  
+                              
+[--executor-count]  
+                              
+[--archives]  
+                              
+[--queue -q]  
+                              
+[--name -n]  
+                              
+[--config]
 ```
 ### <a name="examples"></a>Beispiele
 Erstellen eines neuen Spark-Batchs.
@@ -95,7 +108,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-spark-batch-list"></a>azdata bdc spark batch list
@@ -116,16 +129,17 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-spark-batch-info"></a>azdata bdc spark batch info
 Hiermit werden die Informationen für einen Spark-Batch mit der angegebenen ID abgerufen.  Die Batch-ID wird von „spark batch create“ zurückgegeben.
 ```bash
 azdata bdc spark batch info --batch-id -i 
-          ```
-### Examples
-Get batch info for batch with ID of 0.
+                            
+```
+### <a name="examples"></a>Beispiele
+Abrufen von Batch-Informationen für den Batch mit der ID „0“.
 ```bash
 azdata spark batch info --batch-id 0
 ```
@@ -140,16 +154,17 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-spark-batch-log"></a>azdata bdc spark batch log
 Hiermit werden die Batchprotokolleinträge für einen Spark-Batch mit der angegebenen ID abgerufen.  Die Batch-ID wird von „spark batch create“ zurückgegeben.
 ```bash
 azdata bdc spark batch log --batch-id -i 
-         ```
-### Examples
-Get batch log for batch with ID of 0.
+                           
+```
+### <a name="examples"></a>Beispiele
+Abrufen des Batchprotokolls für den Batch mit der ID „0“.
 ```bash
 azdata spark batch log --batch-id 0
 ```
@@ -164,16 +179,17 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-spark-batch-state"></a>azdata bdc spark batch state
 Hiermit wird der Batchstatus für einen Spark-Batch mit der angegebenen ID abgerufen.  Die Batch-ID wird von „spark batch create“ zurückgegeben.
 ```bash
 azdata bdc spark batch state --batch-id -i 
-           ```
-### Examples
-Get batch state for batch with ID of 0.
+                             
+```
+### <a name="examples"></a>Beispiele
+Abrufen des Batchstatus für den Batch mit der ID „0“.
 ```bash
 azdata spark batch state --batch-id 0
 ```
@@ -188,16 +204,17 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-spark-batch-delete"></a>azdata bdc spark batch delete
 Hiermit wird ein Spark-Batch gelöscht. Die Batch-ID wird von „spark batch create“ zurückgegeben.
 ```bash
 azdata bdc spark batch delete --batch-id -i 
-            ```
-### Examples
-Delete a batch.
+                              
+```
+### <a name="examples"></a>Beispiele
+Löschen eines Batchs.
 ```bash
 azdata spark batch delete --batch-id 0
 ```
@@ -212,7 +229,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 

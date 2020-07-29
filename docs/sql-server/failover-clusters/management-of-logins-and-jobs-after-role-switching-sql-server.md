@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bf355678b3219fb0bf32ecd1620c00b0e58f346f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 68b46562968cd53b0fb12f13cc82fd0b83f6e192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729022"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Bei der Bereitstellung einer Lösung für hohe Verfügbarkeit oder Notfallwiederherstellung für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank ist es wichtig, relevante Informationen, die in der **master** - oder **msdb** -Datenbank für die Datenbank gespeichert sind, zu reproduzieren. Zu relevanten Informationen gehören normalerweise die Aufträge der primären/Prinzipaldatenbank sowie die Anmeldenamen der Benutzer oder Prozesse, die eine Verbindung mit der Datenbank herstellen müssen. Diese Informationen sollten auf jeder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz dupliziert werden, die eine sekundäre/Spiegeldatenbank hostet. Nach dem Rollenwechsel sollten die Informationen möglichst in der neuen primären/Prinzipaldatenbank programmgesteuert reproduziert werden.  
   
 ## <a name="logins"></a>Anmeldungen  

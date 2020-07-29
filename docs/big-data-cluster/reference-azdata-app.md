@@ -5,25 +5,25 @@ description: Referenzartikel zu azdata app-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7cb67f55af03fc8c948df6f17ee2924dea12825f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 10885da7ad9033f8060192820e653e688e8e2e93
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820972"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942950"
 ---
 # <a name="azdata-app"></a>azdata app
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Der folgende Artikel enthält Referenzinformationen zu den `app`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
-|     |     |
+| Get-Help | BESCHREIBUNG |
 | --- | --- |
 [azdata app template](reference-azdata-app-template.md) | Vorlagen.
 [azdata app init](#azdata-app-init) | Starten eines neuen Anwendungsgerüsts.
@@ -38,10 +38,14 @@ Unterstützt Sie beim Starten eines neuen Anwendungsgerüsts und/oder einer neue
 ```bash
 azdata app init [--spec -s] 
                 [--name -n]  
-                [--version -v]  
-                [--template -t]  
-                [--destination -d]  
-                [--url -u]
+                
+[--version -v]  
+                
+[--template -t]  
+                
+[--destination -d]  
+                
+[--url -u]
 ```
 ### <a name="examples"></a>Beispiele
 Gerüst nur für eine neue Anwendung `spec.yaml`.
@@ -81,13 +85,14 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-app-create"></a>azdata app create
 Erstellen einer Anwendung.
 ```bash
 azdata app create --spec -s 
+                  
 ```
 ### <a name="examples"></a>Beispiele
 Erstellen Sie eine neue Anwendung aus einem Verzeichnis, das eine gültige „spec.yaml“-Bereitstellungsspezifikation enthält.
@@ -105,7 +110,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-app-update"></a>azdata app update
@@ -132,7 +137,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-app-list"></a>azdata app list
@@ -167,7 +172,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-app-delete"></a>azdata app delete
@@ -194,7 +199,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-app-run"></a>azdata app run
@@ -202,7 +207,8 @@ Ausführen einer Anwendung.
 ```bash
 azdata app run --name -n 
                --version -v  
-               [--inputs]
+               
+[--inputs]
 ```
 ### <a name="examples"></a>Beispiele
 Führen Sie eine Anwendung ohne Eingabeparameter aus.
@@ -233,7 +239,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-app-describe"></a>azdata app describe
@@ -241,7 +247,8 @@ Beschreiben einer Anwendung.
 ```bash
 azdata app describe [--spec -s] 
                     [--name -n]  
-                    [--version -v]
+                    
+[--version -v]
 ```
 ### <a name="examples"></a>Beispiele
 Beschreiben Sie die Anwendung.
@@ -263,7 +270,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 

@@ -2,21 +2,21 @@
 title: Erstellen von SSIS- und SSRS-Workflows mit R
 description: Integrationsszenarios, in denen SQL Server Machine Learning Services und R Services, Reporting Services (SSRS) und SQL Server Integration Services (SSIS) kombiniert werden.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/17/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 45443daacecb5423a8c5969b619391fea774bcd6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85680361"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Erstellen von SSIS- und SSRS-Workflows mit R unter SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Artikel wird erläutert, wie Sie eingebettete R- und Python-Skripts mithilfe der Sprach-und Data Science Funktionen von SQL Server Machine Learning Services mit zwei wichtigen SQL Server-Features verwenden: SQL Server Integration Services (SSIS) und SQL Server Reporting Services (SSRS). R- und Python-Bibliotheken in SQL Server stellen statistische Funktionen und Vorhersagefunktionen bereit. SSIS und SSRS bieten koordinierte ETL-Transformationen bzw. ETL-Visualisierungen. In diesem Artikel wird erläutert, wie in diesem Workflowmuster alle diese Features zusammen verwendet werden:
 

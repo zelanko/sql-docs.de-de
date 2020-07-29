@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: f56ea55b90613ea657994af6acff7eef271843b4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 5b3a9151d07599661445eb3dfa20c9ef432e0719
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458429"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243431"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Leistungsüberwachung mit dem Abfragespeicher
 
@@ -144,9 +144,8 @@ Verwenden Sie die Dropdownfelder im oberen Bereich, um Abfragen nach verschieden
 
 Im folgenden finden Sie einige Beispiele, wie Sie ausführlicheren Einblick in Ihre Workload erhalten, bevor oder nachdem Wartekategorien im Abfragespeicher eingefügt wurden:
 
-||||
-|-|-|-|
 |Frühere Erfahrung|Neue Erfahrung|Aktion|
+|-|-|-|
 |Lange Wartezustände von RESOURCE_SEMAPHORE pro Datenbank|Lange Speicherwartezustände im Abfragespeicher für bestimmte Abfragen|Suchen Sie die im Abfragespeicher die speicherintensivsten Abfragen. Diese Abfragen verzögern wahrscheinlich zusätzlich den Fortschritt der betroffen Abfragen. Ziehen Sie in Betracht, den Abfragehinweis „MAX_GRANT_PERCENT“ für diese Abfragen oder für die betroffene Abfrage zu verwenden.|
 |Lange Wartezustände von LCK_M_X pro Datenbank|Lange Sperrwartezustände im Abfragespeicher für bestimmte Abfragen|Überprüfen Sie die Abfragetexte der betroffenen Abfragen, und identifizieren Sie die Zielentitäten. Suchen Sie im Abfragespeicher nach anderen Abfragen, die die gleiche Entität modifizieren und die häufig ausgeführt werden bzw. oder eine lange Dauer haben. Nachdem Sie diese Abfragen ermittelt haben, ändern Sie ggf. die Anwendungslogik, um die Parallelität zu verbessern, oder verwenden Sie eine weniger restriktive Isolationsstufe.|
 |Lange Wartezustände von PAGEIOLATCH_SH pro Datenbank|Lange Wartezustände der Puffer-E/A im Abfragespeicher für bestimmte Abfragen|Suchen Sie die Abfragen mit einer hohen Anzahl an physischen Lesevorgängen im Abfragespeicher. Wenn Sie mit den Abfragen mit langen E/A-Wartezuständen übereinstimmen, denken Sie darüber nach, einen Index auf der zugrunde liegenden Entität einzufügen, damit Suchvorgänge statt Scanvorgängen durchgeführt werden und damit der E/A-Aufwand der Abfragen gesenkt wird.|
@@ -168,31 +167,85 @@ Beispiele für das Festlegen der Konfigurationsoptionen mit [!INCLUDE[tsql](../.
 
 Funktionen unterstützen Sie bei den Vorgängen des Abfragespeichers.
 
-|||
-|-|-|
-|[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)||
+:::row:::
+    :::column:::
+        [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="query-store-catalog-views"></a>Katalogsichten des Abfragespeichers
 
 Katalogsichten stellen Informationen über den Abfragespeicher bereit.
 
-|||
-|-|-|
-|[sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|
-|[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|
-|[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|
-|[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|
+:::row:::
+    :::column:::
+        [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
 
 ### <a name="query-store-stored-procedures"></a>Gespeicherte Prozeduren für den Abfragespeicher
 
 Gespeicherte Prozeduren ermöglichen das Konfigurieren des Abfragespeichers.
 
-|||
-|-|-|
-|[sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)|[sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)|
-|[sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)|[sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)|
-|[sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)|[sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)|
-|sp_query_store_consistency_check &#40;Transct-SQL&#41;||
+:::row:::
+    :::column:::
+        [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
+    :::column-end:::
+    :::column:::
+        [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        sp_query_store_consistency_check &#40;Transct-SQL&#41;
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ## <a name="key-usage-scenarios"></a><a name="Scenarios"></a> Wichtige Verwendungsszenarien
 
