@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 0c0dd2abf12f0b003e71bdc59c285622f75e0b23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7d2f69bb24c573c41a84c49968145fd0a126f398
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246300"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002637"
 ---
 # <a name="visual-database-tools-f1-help"></a>Visual Database Tools - F1-Hilfe
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In diesen Themen werden die Befehle und Optionen in den Dialogfeldern und Eigenschaftenfenstern für Visual Database Tools-Elemente, wie beispielsweise das Fenster Tabelleneigenschaften und die Registerkarte Spalteneigenschaften behandelt.  
   
 Drücken Sie zum Zugreifen auf Dialogfeldthemen F1, wenn ein Dialogfeld geöffnet ist und es fokussiert ist. Klicken Sie zum Zugreifen auf Eigenschaftenfensterthemen auf das Eigenschaftenfenster, und drücken Sie F1.  

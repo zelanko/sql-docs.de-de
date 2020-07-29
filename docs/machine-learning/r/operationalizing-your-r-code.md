@@ -2,22 +2,22 @@
 title: Bereitstellen von R-Code in gespeicherten Prozeduren
 description: Betten Sie R-Sprachcode in eine gespeicherte Prozedur von SQL Server ein, um ihn für alle Clientanwendungen mit Zugriff auf eine SQL Server-Datenbank verfügbar zu machen.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 324cf4446a593175fd5a8cd11b2abc24bff7d2d7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9790f5a5d82584bb0d09fda92c1a7048d384e119
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486809"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242321"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Operationalisieren von R-Code mithilfe von gespeicherten Prozeduren in SQL Server-Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Bei der Verwendung von R- und Python-Funktionen in SQL Server-Machine Learning Services ist die häufigste Methode zum Verschieben von Lösungen in eine Produktionsumgebung das Einbetten von Code in gespeicherten Prozeduren. In diesem Artikel werden die wichtigsten Punkte zusammengefasst, die SQL-Entwickler beim Operationalisieren von R-Code mithilfe von SQL Server beachten müssen.
 
@@ -46,7 +46,7 @@ Die Bewertung ist eine wichtige Aufgabe, die auf einfache Weise automatisiert od
 
 + Echtzeitbewertung (für kleine Batches optimiert)
 + Bewertung einer einzelnen Zeile (für Aufrufe aus einer Anwendung)
-+ [Native Bewertung](../sql-native-scoring.md) (für eine schnelle Batchvorhersage in SQL Server ohne Aufruf von R)
++ [Native Bewertung](../predictions/native-scoring-predict-transact-sql.md) (für eine schnelle Batchvorhersage in SQL Server ohne Aufruf von R)
 
 Die folgende exemplarische Vorgehensweise enthält Beispiele für die Bewertung mithilfe einer gespeicherten Prozedur sowohl im Batchmodus als auch für eine einzelne Zeile:
 

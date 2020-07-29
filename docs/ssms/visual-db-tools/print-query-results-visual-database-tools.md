@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 322572041340f1ed61b003cb424df48f32bb2a0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7cabed9e928dce14f324e7f7b482d2ebed36d8ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255383"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002672"
 ---
 # <a name="print-query-results-visual-database-tools"></a>Drucken von Abfrageergebnissen (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Wenn Sie die Ergebnisse der Abfrage ausdrucken möchten, können Sie den Inhalt aus dem [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) in ein anderes Windows-Programm, z. B. ein Textverarbeitungsprogramm, kopieren, dort formatieren und drucken.  
   
 Der Abfrage- und Sicht-Designer legt die Abfrageergebnisse in die Zwischenablage, wobei Tabstopps als Trennzeichen zwischen Spalten sowie Wagenrücklauf- und Zeilenvorschubzeichen als Trennzeichen zwischen Zeilen verwendet werden.  

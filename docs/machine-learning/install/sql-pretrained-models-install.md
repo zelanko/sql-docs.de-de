@@ -2,22 +2,22 @@
 title: Installieren von vortrainierten Modellen
 description: Fügen Sie vortrainierte Modelle für Standpunktanalysen und Bildfeaturebereitstellungen zu SQL Server Machine Learning Services (R oder Python) oder SQL Server R Services hinzu.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 07/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: aa50fd62b3f1d3c1d40f3603b6a0b3fc4182497f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771765"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installieren von vortrainierten Machine Learning-Modellen unter SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Artikel wird erläutert, wie einer SQL Server-Instanz mit R- oder Python-Integration mithilfe von PowerShell kostenlose vorinstallierte Machine Learning-Modelle für *Standpunktanalysen* und *Bildfeaturebereitstellungen* hinzugefügt werden. Die vortrainierten Modelle werden von Microsoft erstellt und können einer Instanz im Rahmen einer Aufgabe nach der Installation hinzugefügt werden. Weitere Informationen zu diesen Modellen finden Sie im Abschnitt [Ressourcen](#bkmk_resources) in diesem Artikel.
 

@@ -9,15 +9,15 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: b459877be731da11b33d13772bbf186ecf72198c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9c3586c8b51495ed3c49dd88f9f85a2b60d09aa0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285804"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007254"
 ---
 # <a name="using-azure-active-directory"></a>Verwenden von Azure Active Directory
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -47,7 +47,7 @@ Zur Unterstützung der Azure Active Directory-Authentifizierung wurden die folge
 |Verbindungszeichenfolgen-Schlüsselwort|Verbindungseigenschaft|BESCHREIBUNG|
 |---               |---                |---        |
 |Access Token|SSPROP_AUTH_ACCESS_TOKEN|Gibt ein Zugriffstoken für die Authentifizierung gegenüber Azure Active Directory an. |
-|Authentication|SSPROP_AUTH_MODE|Gibt die zu verwendende Authentifizierungsmethode an.|
+|Authentifizierung|SSPROP_AUTH_MODE|Gibt die zu verwendende Authentifizierungsmethode an.|
 
 Weitere Informationen zu den neuen Schlüsselwörtern/Eigenschaften finden Sie auf den folgenden Seiten:
 - [Verwenden von Verbindungszeichenfolgen-Schlüsselwörtern mit dem OLE DB-Treiber für SQL Server](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)

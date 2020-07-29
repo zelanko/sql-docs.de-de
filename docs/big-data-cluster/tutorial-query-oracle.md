@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0955875255acc695133700fd0b5a0b30cdf9045e
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7695cf6d88fd05fdbffba28663c910889797ace9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606116"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772842"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: Abfragen von Oracle in einem Big-Data-Cluster für SQL Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Dieses Tutorial veranschaulicht, wie Sie Oracle-Daten aus einem Big Data-Cluster für SQL Server 2019 abfragen. Zum Ausführen dieses Tutorials benötigen Sie Zugriff auf einen Oracle-Server. Auch wenn Sie keinen Zugriff haben, bietet Ihnen dieses Tutorial einen Einblick darin, wie die Datenvirtualisierung für externe Datenquellen in einem SQL Server-Big Data-Cluster funktioniert.
 

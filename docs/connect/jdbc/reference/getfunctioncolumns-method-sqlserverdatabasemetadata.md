@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d6400652dfaac6074f19a343b9a4cf2c0ffbab8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 39b0c100c4ba80a24d0acd7ab2fdebaa32f1b1f7
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920337"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203237"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -79,7 +79,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |ANMERKUNGEN|**String**|Die Kommentare zu einer Spalte oder einem Parameter.|  
 |COLUMN_DEF|**String**|Der Standardwert der Spalte.<br /><br /> **Hinweis:** Diese Information steht in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar und ist gilt spezifisch für den JDBC-Treiber.|  
 |SQL_DATA_TYPE|**smallint**|Diese Spalte entspricht der **DATA_TYPE**-Spalte mit Ausnahme der **datetime**- und ISO-**interval**-Datentypen.<br /><br /> **Hinweis:** Diese Information steht in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar und ist gilt spezifisch für den JDBC-Treiber.|  
-|SQL_DATETIME_SUB|**smallint**|Wenn **SQL_DATA_TYPE** den Wert **SQL_DATETIME** oder **SQL_INTERVAL** aufweist, enthält diese Spalte den Subcode für **datetime** ISO **interval**. Bei anderen Datentypen als **datetime** und ISO **interval** ist diese Spalte NULL.<br /><br /> **Hinweis:** Diese Angabe ist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar und gilt nur für den JDBC-Treiber.|  
+|SQL_DATETIME_SUB|**smallint**|Wenn **SQL_DATA_TYPE** den Wert **SQL_DATETIME** oder **SQL_INTERVAL** aufweist, enthält diese Spalte den Subcode für **datetime** ISO **interval**. Bei anderen Datentypen als **datetime** und ISO **interval** ist diese Spalte NULL.<br /><br /> **Hinweis:** Diese Information steht in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar und ist gilt spezifisch für den JDBC-Treiber.|  
 |CHAR_OCTET_LENGTH|**int**|Die maximale Länge von binären oder zeichenbasierten Parametern oder Spalten. Für andere Datentypen ist der Wert NULL.|  
 |ORDINAL_POSITION|**int**|Stellt für Eingabe- und Ausgabeparameter die Position (beginnend mit "1") dar.<br /><br /> Für Resultsetspalten handelt es sich hierbei um die Position der Spalte im Resultset. Beginn ist der Wert "1".<br /><br /> Für den Rückgabewert ist der Wert "0".|  
 |IS_NULLABLE|**String**|Bestimmt die NULL-Zulässigkeit eines Parameters oder einer Spalte.<br /><br /> Es kann sich um einen der folgenden Werte handeln:<br /><br /> **JA:** Der Parameter bzw. die Spalte kann NULL-Werte aufweisen.<br /><br /> **NEIN:** Der Parameter bzw. die Spalte darf keine NULL-Werte aufweisen.<br /><br /> Leere Zeichenfolge (""): Unbekannt|  

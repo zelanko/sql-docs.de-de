@@ -4,18 +4,18 @@ description: In diesem Thema werden die allgemeinen Einsatzbereiche von Reportin
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
-ms.custom: ''
+ms.custom: seodec18
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d0a533d7bd15eb8901c0aba29894e61bbf840ad
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68941142"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627526"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Berichtsparameter (Berichts-Generator und Berichts-Designer)
 
