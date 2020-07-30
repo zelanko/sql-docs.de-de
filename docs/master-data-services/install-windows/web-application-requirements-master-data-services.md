@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 741a967b3fde6c5e3b5e3de87ac54a1142c93bfe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 513e376199c6f53953d49b70eae17f8da916f6bf
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896984"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362966"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Anforderungen für die Webanwendung (Master Data Services)
 
@@ -50,16 +50,45 @@ ms.locfileid: "85896984"
 > [!IMPORTANT]  
 >Die**Komprimierung dynamischer Inhalte** ist standardmäßig aktiviert. Dadurch wird die Größe der XML-Antwort erheblich verringert und die Netzwerk-E/A reduziert, obwohl die CPU-Auslastung erhöht wird.  Weitere Klicken Sie informationen finden Sie unter **[CTP 2.0] Verbesserte Leistung** in [What's New in Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
   
-||  
-|-|  
-|Internetinformationsdienste<br /><br /> Webverwaltungstools<br /><br /> IIS-Verwaltungskonsole<br /><br /> WWW (World Wide Web)-Dienste<br /><br /> Anwendungsentwicklung<br /><br /> .NET-Erweiterbarkeit 3.5<br /><br /> .NET-Erweiterbarkeit 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI-Erweiterungen<br /><br /> ISAPI-Filter<br /><br /> Allgemeine HTTP-Funktionen<br /><br /> Standarddokument<br /><br /> Verzeichnissuche<br /><br /> HTTP-Fehler<br /><br /> Statischer Inhalt<br /><br /> [Hinweis: Installieren Sie nicht die WebDAV-Veröffentlichung]<br /><br /> Integrität und Diagnose<br /><br /> HTTP-Protokollierung<br /><br /> Anforderungsüberwachung<br /><br /> Leistung<br /><br /> Komprimierung statischer Inhalte<br /><br /> Sicherheit<br /><br /> Anforderungsfilterung<br /><br /> Windows-Authentifizierung|  
+- Internetinformationsdienste
+- Webverwaltungstools
+- IIS-Verwaltungskonsole
+- WWW (World Wide Web)-Dienste
+- Anwendungsentwicklung
+- .NET-Erweiterbarkeit 3.5
+- .NET-Erweiterbarkeit 4.5
+- ASP.NET 3.5
+- ASP.NET 4.5
+- ISAPI-Erweiterungen
+- ISAPI-Filter
+- Allgemeine HTTP-Funktionen
+- Standarddokument
+- Verzeichnissuche
+- HTTP-Fehler
+- Statischer Inhalt [Hinweis: Installieren Sie die WebDAV-Veröffentlichung nicht.]
+- Integrität und Diagnose
+- HTTP-Protokollierung
+- Anforderungsüberwachung
+- Leistung
+- Komprimierung statischer Inhalte
+- Sicherheit
+- Anforderungsfilterung
+- Windows-Authentifizierung
   
-### <a name="features"></a>Funktionen 
+### <a name="features"></a>Features 
  Unter Windows Server 2012 und Windows Server 2012 R2 können Sie den **Server-Manager** verwenden, um die folgenden erforderlichen Funktionen zu installieren.  
   
-||  
-|-|  
-|.NET Framework 3.5 (einschließlich .NET 2.0 und 3.0)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP-Aktivierung [Hinweis: Dies ist erforderlich.]<br /><br /> TCP-Portfreigabe<br /><br /> Windows-Prozessaktivierungsdienst<br /><br /> Prozessmodell<br /><br /> .NET-Umgebung<br /><br /> Konfiguration-APIs<br/><br/>Komprimierung dynamischer Inhalte|  
+- .NET Framework 3.5 (einschließlich .NET 2.0 und 3.0)
+- .NET Framework 4.5 Advanced Services
+- ASP.NET 4.5
+- WCF Services
+- HTTP-Aktivierung [Hinweis: Dies ist erforderlich.]
+- TCP-Portfreigabe
+- Windows-Prozessaktivierungsdienst
+- Prozessmodell
+- .NET-Umgebung
+- Konfiguration-APIs
+- Komprimierung dynamischer Inhalte
   
  Nachfolgend finden Sie ein PowerShell-Beispielskript zum Hinzufügen von erforderlichen Serverrollen und -funktionen. Die erforderlichen Serverrollen und -funktionen variieren je nach Umgebung.  
   
@@ -73,7 +102,7 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
   
 ### <a name="accounts-and-permissions"></a>Konten und Berechtigungen  
   
-|Typ|Beschreibung|  
+|type|BESCHREIBUNG|  
 |----------|-----------------|  
 |Windows-Konto|Sie müssen sich am Webservercomputer mit einem Windows-Konto anmelden, das über die Berechtigung zum Konfigurieren von Windows-Rollen, Rollendiensten und Funktionen sowie zum Erstellen und Verwalten von Anwendungspools, Websites und Webanwendungen in IIS auf dem lokalen Computer verfügt.|  
 |Dienstkonto|Wenn Sie die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]erstellen, müssen Sie eine Identität für den Anwendungspool angeben, in dem die Anwendung ausgeführt wird. Dieses Konto kann sich von dem Konto unterscheiden, das beim Erstellen der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank als Dienstkonto angegeben wurde.<br /><br /> Die ID muss einem Domänenbenutzerkonto entsprechen und wird für den Datenbankzugriff zur Datenbankrolle mds_exec in der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank hinzugefügt. Weitere Informationen finden Sie unter [Datenbankanmeldenamen, -benutzer und -rollen](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Darüber hinaus wird dieses Konto einer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Windows-Gruppe hinzugefügt, z.B. **MDS_ServiceAccounts**, der Berechtigungen für das temporäre Kompilierungsverzeichnis **MDSTempDir**im Dateisystem erteilt wurden. Weitere Informationen finden Sie unter [Ordner- und Dateiberechtigungen &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
@@ -83,5 +112,3 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
       
  [Erstellen Sie eine Master Data Manager-Webanwendung &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
  [Webkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Sevices&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
-  
-  

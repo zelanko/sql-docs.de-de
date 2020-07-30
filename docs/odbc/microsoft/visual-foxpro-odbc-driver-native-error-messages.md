@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4f97356a810f5aa0d911e09df016c62b03ee726b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56d65221ba90b217521fa6a7563d70b7fc44f940
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304788"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363330"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Native Fehlermeldungen des Visual FoxPro-ODBC-Treibers
 In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxPro-ODBC-Treiber enthalten sind.  
   
 ## <a name="001"></a>001  
   
-|||  
+|Fehlercode|Fehlermeldung|  
 |-|-|  
 |1|Die Funktion ist nicht verfügbar.|  
 |2|Fehler beim Eingabe-/Ausgabevorgang.|  
@@ -36,7 +36,7 @@ In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxP
   
 ## <a name="100"></a>100  
   
-|||  
+|Fehlercode|Fehlermeldung|  
 |-|-|  
 |100|Es sind zu viele Dateien geöffnet.|  
 |101|Die Datei kann nicht geöffnet werden.|  
@@ -92,7 +92,7 @@ In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxP
   
 ## <a name="200"></a>200  
   
-|||  
+|Fehlercode|Fehlermeldung|  
 |-|-|  
 |200|Syntaxfehler.|  
 |201|Zu viele Namen werden verwendet.|  
@@ -132,7 +132,7 @@ In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxP
   
 ## <a name="300"></a>300  
   
-|||  
+|Fehlercode|Fehlermeldung|  
 |-|-|  
 |301|Der Operator/Operand-Typ stimmt nicht überein.|  
 |302|Der Datentyp stimmt nicht überein.|  
@@ -143,7 +143,7 @@ In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxP
   
 ## <a name="400"></a>400  
   
-|||  
+|Fehlercode|Fehlermeldung|  
 |-|-|  
 |406|Der Drucker ist nicht bereit.|  
 |407|Mit der Set-Funktion wurde ein ungültiges Argument verwendet.|  
@@ -160,10 +160,10 @@ In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxP
 |471|Falsches Spalten Format.|  
 |473|Die Eigenschaft auf Umgebungs Ebene ist ungültig.|  
 |474|Beim Ausführen einer SQLEXEC ()-Sequenz wurde ein ungültiger-Befehl ausgegeben.|  
-|479|Ungültiger \\ *Wert*\\für Update Spaltenname.|  
+|479|Ungültiger Wert für Update Spaltenname \\ *value* \\ .|  
 |489|Allgemeine Felder können nicht in der WHERE-Bedingung einer Update-Anweisung verwendet werden. Ändern Sie die Eigenschaft WhereType der Sicht.|  
 |491|Es wurden keine Update Tabellen angegeben. Verwenden Sie die Tables-Eigenschaft des Cursors.|  
-|492|Für den Update Tabellen \\ *Wert*\\werden keine Schlüssel Spalten angegeben. Verwenden Sie die KeyFieldList-Eigenschaft des Cursors.|  
+|492|Für den Update Tabellenwert werden keine Schlüssel Spalten angegeben \\ *value* \\ . Verwenden Sie die KeyFieldList-Eigenschaft des Cursors.|  
 |493|Der SQL-Parameter fehlt.|  
 |494|Die Sicht Definition wurde geändert.|  
 |495|Warnung: der von der keyfield-Eigenschaft für den Tabellen *Wert* definierte Schlüssel ist nicht eindeutig.|  
@@ -172,7 +172,7 @@ In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxP
   
 ## <a name="500"></a>500  
   
-|||  
+|Fehlercode|Fehlermeldung|  
 |-|-|  
 |502|In den Datensatz kann nicht geschrieben werden, da er verwendet wird.|  
 |503|Die Datei kann nicht gesperrt werden.|  
@@ -182,7 +182,7 @@ In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxP
 |523|Die Ausführung wurde vom Benutzer abgebrochen.|  
 |525|Die Funktion wird für Remote Tabellen nicht unterstützt.|  
 |526|Konnektivitätsfehler: *Wert.*|  
-|527|Die ODBC-Bibliothek kann nicht geladen werden, odbc32. DLL.|  
+|527|Die ODBC-Bibliothek kann nicht geladen werden, ODBC32.DLL.|  
 |528|Der ODBC-Einstiegspunkt fehlt, *Wert*.|  
 |530|Das Abrufen wurde abgebrochen. Remote Tabelle ist geschlossen.|  
 |532|Typkonvertierung wird nicht unterstützt.|  
@@ -233,7 +233,7 @@ In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxP
   
 ## <a name="600"></a>600  
   
-|||  
+|Fehlercode|Fehlermeldung|  
 |-|-|  
 |601|Der Alias Name wird bereits verwendet.|  
 |602|Der Vorgang ist für ein Memo-, Allgemeines oder Bild Feld ungültig.|  
@@ -251,7 +251,7 @@ In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxP
   
 ## <a name="700"></a>700  
   
-|||  
+|Fehlercode|Fehlermeldung|  
 |-|-|  
 |700|Der Datensatz wird von einem anderen Benutzer verwendet.|  
 |701|Die Datei muss exklusiv geöffnet werden.|  
@@ -277,7 +277,7 @@ In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxP
   
 ## <a name="800"></a>800  
   
-|||  
+|Fehlercode|Fehlermeldung|  
 |-|-|  
 |802|SQL: die Tabelle kann nicht gefunden werden.|  
 |872|Zu viele Spalten.|  
@@ -290,7 +290,7 @@ In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxP
   
 ## <a name="900"></a>900  
   
-|||  
+|Fehlercode|Fehlermeldung|  
 |-|-|  
 |901|Der Funktions Argument Wert, der Typ oder die Anzahl ist ungültig.|  
 |902|Fehler bei der Ausdrucks Auswertung.|  
@@ -322,7 +322,7 @@ In den folgenden Tabellen werden Fehlermeldungen aufgelistet, die im Visual FoxP
 |945|Das aktuelle-Objekt wurde freigegeben.|  
 |947|Der Ausdruck ist zu komplex.|  
 |951|Das verwendete Objekt kann nicht gelöscht werden.|  
-|955|Erringen. INI/Registrierung ist beschädigt.|  
+|955|WIN.INI/Registry ist beschädigt.|  
 |957|Fehler beim Zugriff auf den Druckerspooler.|  
 |959|Ungültige Koordinaten.|  
 |960|Ungültige Neudefinition des Variablen *Werts*.|  

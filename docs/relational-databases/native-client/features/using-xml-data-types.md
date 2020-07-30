@@ -30,13 +30,14 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc526febaed2fd049fb8fa95fd0b0585933fff9b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6606da2bec127b6eb70eea0f5e676dd23a974e0d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009829"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248798"
 ---
-# <a name="using-xml-data-types"></a>Verwenden von XML-Datentypen
+# <a name="using-xml-data-types-in-sql-server-native-clients"></a>Verwenden von XML-Datentypen in SQL Server Native Clients
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein **XML**-Datentyp eingeführt, der das Speichern von XML-Dokumenten und -Fragmenten in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank unterstützt. Der **XML**-Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und ähnelt in einigen Punkten anderen integrierten Typen wie **int** und **varchar**. Wie andere integrierte Typen können Sie den **XML**-Datentyp beim Erstellen von Tabellen als Variablen-, Parameter- oder Funktionsrückgabespaltentyp oder in CAST- und CONVERT-Funktionen verwenden.  
@@ -83,13 +84,13 @@ ms.locfileid: "86009829"
 |Datentyp|Zu Server<br /><br /> **XML**|Zu Server<br /><br /> **Nicht-XML**|Von Server<br /><br /> **XML**|Von Server<br /><br /> **Nicht-XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|Pass-Through<sup>6,7</sup>|Fehler<sup>1</sup>|OK<sup>11, 6</sup>|Error<sup>8</sup>|  
-|DBTYPE_BYTES|Pass-Through<sup>6,7</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>11, 6</sup>|Nicht zutreffend<sup>2</sup>|  
-|DBTYPE_WSTR|Pass-Through<sup>6,10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>4, 6, 12</sup>|Nicht zutreffend<sup>2</sup>|  
-|DBTYPE_BSTR|Pass-Through<sup>6,10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>3</sup>|Nicht zutreffend<sup>2</sup>|  
-|DBTYPE_STR|OK<sup>6, 9, 10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>5, 6, 12</sup>|Nicht zutreffend<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Bytedatenstrom über **ISequentialStream**<sup>7</sup>|Nicht zutreffend<sup>2</sup>|Bytedatenstrom über **ISequentialStream**<sup>11</sup>|Nicht zutreffend<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pass-Through<sup>6,7</sup>|Nicht zutreffend<sup>2</sup>|–|Nicht zutreffend<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Pass-Through<sup>6,10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>3</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_BYTES|Pass-Through<sup>6,7</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>11, 6</sup>|N/v <sup>2</sup>|  
+|DBTYPE_WSTR|Pass-Through<sup>6,10</sup>|N/v <sup>2</sup>|OK<sup>4, 6, 12</sup>|N/v <sup>2</sup>|  
+|DBTYPE_BSTR|Pass-Through<sup>6,10</sup>|N/v <sup>2</sup>|OK<sup>3</sup>|N/v <sup>2</sup>|  
+|DBTYPE_STR|OK<sup>6, 9, 10</sup>|N/v <sup>2</sup>|OK<sup>5, 6, 12</sup>|N/v <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Bytedatenstrom über **ISequentialStream**<sup>7</sup>|N/v <sup>2</sup>|Bytedatenstrom über **ISequentialStream**<sup>11</sup>|N/v <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pass-Through<sup>6,7</sup>|N/v <sup>2</sup>|–|N/v <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Pass-Through<sup>6,10</sup>|N/v <sup>2</sup>|OK<sup>3</sup>|N/v <sup>2</sup>|  
   
  <sup>1</sup> Wenn ein anderer Servertyp als DBTYPE_XML mit **ICommandWithParameters:: SetParameterInfo** angegeben wird und der Accessortyp DBTYPE_XML ist, tritt ein Fehler auf, wenn die Anweisung ausgeführt wird (DB_E_ERRORSOCCURRED der Parameter Status DBSTATUS_E_BADACCESSOR); Andernfalls werden die Daten an den Server gesendet, der Server gibt jedoch eine Fehlermeldung zurück, die darauf hinweist, dass keine implizite Konvertierung von XML in den Datentyp des Parameters vorliegt.  
   

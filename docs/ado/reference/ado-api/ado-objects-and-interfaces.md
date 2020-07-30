@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe57e31792755aca1dc51b0af50805e853a5bab4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6deb8166c775fcdcfe8fb0975662dda0be3b3581
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747240"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242850"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO-Objekte und -Schnittstellen
 Die Beziehungen zwischen diesen Objekten werden im ADO- [Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)dargestellt.  
   
  Jedes-Objekt kann in der entsprechenden-Auflistung enthalten sein. Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt kann z. b. in einer [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung enthalten sein. Weitere Informationen finden Sie unter [ADO Collections](../../../ado/reference/ado-api/ado-collections.md) or a specific Collection Topic.  
   
-|||  
+|Objekt oder Schnittstelle|BESCHREIBUNG|  
 |-|-|  
 |[Iadocommandconstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|Wird verwendet, um den zugrunde liegenden OLEDB-Befehl aus einem ADOCommand-Objekt abzurufen.|  
 |[Adorecordconstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|Erstellt ein ADO- **Daten Satz** Objekt aus einem OLE DB **Row** -Objekt in einer C/C++-Anwendung.|  
@@ -37,10 +37,10 @@ Die Beziehungen zwischen diesen Objekten werden im ADO- [Objektmodell](../../../
 |[Fehler](../../../ado/reference/ado-api/error-object.md)|Enthält Details zu Datenzugriffs Fehlern, die sich auf einen einzelnen Vorgang beziehen, der den Anbieter einbezieht.<br /><br /> Das **Fehler** Objekt ist für die Skripterstellung nicht sicher.|  
 |[Feld](../../../ado/reference/ado-api/field-object.md)|Stellt eine Datenspalte mit einem gemeinsamen Datentyp dar.|  
 |[Parameter](../../../ado/reference/ado-api/parameter-object.md)|Stellt einen Parameter oder ein Argument dar, der einem **Befehls** Objekt auf Grundlage einer parametrisierten Abfrage oder gespeicherten Prozedur zugeordnet ist.<br /><br /> Das **Parameter** Objekt ist für die Skripterstellung nicht sicher.|  
-|[Property](../../../ado/reference/ado-api/property-object-ado.md)|Stellt eine dynamische Eigenschaft eines ADO-Objekts dar, das vom Anbieter definiert wird.|  
-|[Aufnahme](../../../ado/reference/ado-api/record-object-ado.md)|Stellt eine Zeile eines **Recordsets**oder ein Verzeichnis oder eine Datei in einem Dateisystem dar. Das **Daten Satz** Objekt ist für die Skripterstellung sicher.|  
+|[Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md)|Stellt eine dynamische Eigenschaft eines ADO-Objekts dar, das vom Anbieter definiert wird.|  
+|[Datensatz](../../../ado/reference/ado-api/record-object-ado.md)|Stellt eine Zeile eines **Recordsets**oder ein Verzeichnis oder eine Datei in einem Dateisystem dar. Das **Daten Satz** Objekt ist für die Skripterstellung sicher.|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Stellt den Satz von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Das **Recordset** -Objekt bezieht sich jederzeit auf einen einzelnen Datensatz innerhalb des Satzes als aktuellen Datensatz.<br /><br /> Das **Recordset** -Objekt ist für die Skripterstellung sicher.|  
-|[STREAM](../../../ado/reference/ado-api/stream-object-ado.md)|Stellt einen binären Datenstrom dar.<br /><br /> Das **Stream** -Objekt ist für die Skripterstellung sicher.|  
+|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Stellt einen binären Datenstrom dar.<br /><br /> Das **Stream** -Objekt ist für die Skripterstellung sicher.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md)   

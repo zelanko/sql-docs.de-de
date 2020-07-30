@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8022ee6fd8cb9bf9de79a7a83d3ee0d6166606b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971836"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362220"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -58,7 +58,7 @@ USING <algorithm> [(<parameter list>)]
 >  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe [DMSCHEMA_MINING_SERVICES Rowsets](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110))abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von unterstützten Algorithmen finden Sie unter [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [Data Mining-Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *Parameterliste*  
- Dies ist optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
+ Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
   
  *Filterkriterien*  
  Ein Filterausdruck, der für die Spalten in der Falltabelle übernommen wird.  
@@ -108,9 +108,8 @@ USING <algorithm> [(<parameter list>)]
 > [!NOTE]  
 >  Das NOT NULL-Modellierungsflag gilt für die Miningstrukturspalte. Weitere Informationen finden Sie unter [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
-|||  
-|-|-|  
 |Begriff|Definition|  
+|-|-|  
 |**Regressor**|Zeigt an, dass der Algorithmus die angegebene Spalte in der Regressionsformel von Regressionsalgorithmen verwenden kann.|  
 |**MODEL_EXISTENCE_ONLY**|Gibt an, dass die Werte für die Attributspalte weniger wichtig sind als das Vorhandensein der Attribute.|  
   
@@ -119,7 +118,7 @@ USING <algorithm> [(<parameter list>)]
 ### <a name="prediction-clause"></a>Vorhersageklausel  
  Die Vorhersageklausel beschreibt, wie die Vorhersagespalte verwendet wird. In der folgenden Tabelle sind die möglichen Klauseln aufgelistet.  
   
-|||  
+|Klausel|BESCHREIBUNG|  
 |-|-|  
 |**Voraus**|Diese Spalte kann vom Modell vorhergesagt werden, und ihre Werte können als Eingabe verwendet werden, um den Wert anderer vorhersagbarer Spalten vorherzusagen.|  
 |**PREDICT_ONLY**|Diese Spalte kann vom Modell vorhergesagt werden, aber ihre Werte können in Eingabefällen nicht dazu verwendet werden, den Wert anderer vorhersagbarer Spalten vorherzusagen.|  

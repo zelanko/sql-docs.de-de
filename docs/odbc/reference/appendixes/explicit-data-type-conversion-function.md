@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2de8a8cb6177e9210e8d48c0ce097d13c9a276fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed0a1e9155eeb3e2147bed3dd31e78176bdc38d2
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306991"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363320"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Explizite Datentyp-Konvertierungsfunktion
 Eine explizite Datentyp Konvertierung wird in Bezug auf SQL-Datentyp Definitionen angegeben.  
@@ -31,32 +31,55 @@ Eine explizite Datentyp Konvertierung wird in Bezug auf SQL-Datentyp Definitione
  **Konvertieren (** _value_exp_ _data_type_**)**  
   
  Die-Funktion gibt den von *value_exp* angegebenen Wert zurück, der in den angegebenen *data_type*konvertiert wurde, wobei *data_type* eines der folgenden Schlüsselwörter ist:  
-  
-|||  
-|-|-|  
-|SQL_BIGINT|SQL_INTERVAL_HOUR_TO_MINUTE|  
-|SQL_BINARY|SQL_INTERVAL_HOUR_TO_SECOND|  
-|SQL_BIT|SQL_INTERVAL_MINUTE_TO_SECOND|  
-|SQL_CHAR|SQL_LONGVARBINARY|  
-|SQL_DECIMAL|SQL_LONGVARCHAR|  
-|SQL_DOUBLE|SQL_NUMERIC|  
-|SQL_FLOAT|SQL_REAL|  
-|SQL_GUID|SQL_SMALLINT|  
-|SQL_INTEGER|SQL_DATE|  
-|SQL_INTERVAL_MONTH|SQL_TIME|  
-|SQL_INTERVAL_YEAR|SQL_TIMESTAMP|  
-|SQL_INTERVAL_YEAR_TO_MONTH|SQL_TINYINT|  
-|SQL_INTERVAL_DAY|SQL_VARBINARY|  
-|SQL_INTERVAL_HOUR|SQL_VARCHAR|  
-|SQL_INTERVAL_MINUTE|SQL_WCHAR|  
-|SQL_INTERVAL_SECOND|SQL_WLONGVARCHAR|  
-|SQL_INTERVAL_DAY_TO_HOUR|SQL_WVARCHAR|  
-|SQL_INTERVAL_DAY_TO_MINUTE||  
-|SQL_INTERVAL_DAY_TO_SECOND||  
-  
+
+:::row:::
+    :::column:::
+        SQL_BIGINT  
+        SQL_BINARY  
+        SQL_BIT  
+        SQL_CHAR  
+        SQL_DATE  
+        SQL_DECIMAL  
+        SQL_DOUBLE  
+        SQL_FLOAT  
+        SQL_GUID  
+        SQL_INTEGER  
+        SQL_INTERVAL_DAY  
+        SQL_INTERVAL_DAY_TO_HOUR  
+    :::column-end:::
+    :::column:::
+        SQL_INTERVAL_DAY_TO_MINUTE  
+        SQL_INTERVAL_DAY_TO_SECOND  
+        SQL_INTERVAL_HOUR  
+        SQL_INTERVAL_HOUR_TO_MINUTE  
+        SQL_INTERVAL_HOUR_TO_SECOND  
+        SQL_INTERVAL_MINUTE  
+        SQL_INTERVAL_MINUTE_TO_SECOND  
+        SQL_INTERVAL_MONTH  
+        SQL_INTERVAL_SECOND  
+        SQL_INTERVAL_YEAR  
+        SQL_INTERVAL_YEAR_TO_MONTH  
+        SQL_LONGVARBINARY  
+    :::column-end:::
+    :::column:::
+        SQL_LONGVARCHAR  
+        SQL_NUMERIC  
+        SQL_REAL  
+        SQL_SMALLINT  
+        SQL_TIME  
+        SQL_TIMESTAMP  
+        SQL_TINYINT  
+        SQL_VARBINARY  
+        SQL_VARCHAR  
+        SQL_WCHAR  
+        SQL_WLONGVARCHAR  
+        SQL_WVARCHAR  
+    :::column-end:::
+:::row-end:::
+
  Die ODBC-Syntax für die explizite Datentyp-Konvertierungs Funktion unterstützt keine Angabe des Konvertierungs Formats. Wenn die Spezifikation expliziter Formate von der zugrunde liegenden Datenquelle unterstützt wird, muss ein Treiber einen Standardwert angeben oder die Format Spezifikation implementieren.  
   
- Das Argument *value_exp* kann ein Spaltenname, das Ergebnis einer anderen Skalarfunktion oder ein numerisches oder ein Zeichenfolgenliteralwert sein. Beispiel:  
+ Das Argument *value_exp* kann ein Spaltenname, das Ergebnis einer anderen Skalarfunktion oder ein numerisches oder ein Zeichenfolgenliteralwert sein. Zum Beispiel:  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  

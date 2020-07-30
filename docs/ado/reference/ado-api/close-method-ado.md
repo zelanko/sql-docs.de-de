@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44fb6e03fba467b9b7123111d1845d18e4144739
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 939bf1d65c73b2aa83c54c7a5b936e3228719ba5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748917"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242790"
 ---
 # <a name="close-method-ado"></a>Close-Methode (ADO)
 Schließt ein offenes Objekt und alle abhängigen Objekte.  
@@ -54,12 +54,18 @@ object.Close
  Wenn Sie die [Clone](../../../ado/reference/ado-api/clone-method-ado.md) -Methode verwenden, um Kopien eines geöffneten **Recordset** -Objekts zu erstellen, wirkt sich das Schließen des ursprünglichen oder eines Klons nicht auf andere Kopien aus.  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
-|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Open-und Close-Methoden Beispiel (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open-und Close-Methoden Beispiel (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   

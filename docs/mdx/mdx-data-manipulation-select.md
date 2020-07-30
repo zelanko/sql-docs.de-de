@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 97b9f5fd13a6cfb017f128564f0f0cf93c22ad58
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: f56d5cbbc8e6653b4844e1b5e48b08911307395a
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967371"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362790"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX-Datenbearbeitung – SELECT
 
@@ -159,9 +159,8 @@ FROM
   
  Das Resultset lautet:  
   
-|||||  
+|Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
 |**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04%**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
@@ -211,9 +210,8 @@ FROM
   
  Laut den folgenden Ergebnissen sind beide Gruppen (Top10SellingProducts, Preferred10Products) identisch.  
   
-|||||  
+|Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
 |**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04%**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
@@ -245,9 +243,8 @@ FROM
   
  Dadurch ergibt sich folgendes Resultset:  
   
-|||||  
+|Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
@@ -303,9 +300,8 @@ FROM
   
  Dadurch ergibt sich folgendes Resultset:  
   
-|||||  
+|Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
@@ -332,9 +328,8 @@ FROM
   
  Das folgende Resultset zeigt jetzt das flache Verhalten von Autoexists.  
   
-|||||  
+|Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
 |**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
@@ -375,9 +370,8 @@ WHERE
   
  Hierdurch werden folgende Ergebnisse erzielt:  
   
-|||||||  
+|Geschäftstyp + Kategorie|All Products|Accessories|Fahrräder|Kleidung|Komponenten|  
 |-|-|-|-|-|-|  
-||**Alle Produkte**|**Accessories**|**Fahrräder**|**Kleidung**|**Komponenten**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -399,9 +393,8 @@ WHERE
   
  Hierdurch werden folgende Ergebnisse erzielt:  
   
-|||||  
+|Geschäftstyp + Kategorie|All Products|Accessories|Kleidung|  
 |-|-|-|-|  
-||**Alle Produkte**|**Accessories**|**Kleidung**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
 |**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
@@ -426,9 +419,8 @@ WHERE
   
  Die oben dargestellte Abfrage führt zu den folgenden Ergebnissen:  
   
-|||||  
+|Geschäftstyp + Kategorie|All Products|Accessories|Kleidung|  
 |-|-|-|-|  
-||All Products|Accessories|Kleidung|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
@@ -457,9 +449,8 @@ WHERE
   
  Die oben dargestellte Abfrage führt zu den folgenden Ergebnissen:  
   
-|||||  
-|-|-|-|-|  
 |Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|Reseller Gross Profit Margin|  
+|-|-|-|-|  
 |$80,450,596.98|$79.980.114,38|$470.482,60|0,58%|  
   
 ## <a name="see-also"></a>Weitere Informationen  

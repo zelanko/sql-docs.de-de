@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0f6c31e8e1cb40c5fbb00eaaf42c8734a8392f74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2d463b65247dc5606605f1760ef6a259b5f534e9
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898080"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363056"
 ---
 # <a name="managing-a-composite-domain"></a>Verwalten einer Verbunddomäne
 
@@ -29,7 +29,7 @@ ms.locfileid: "85898080"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Durch das Verwenden einer Verbunddomäne erhalten Sie folgende Möglichkeiten:  
   
-|||  
+|Vorgangs Beschreibung|Thema|  
 |-|-|  
 |Sie können eine semantische Darstellung für ein Datenfeld erstellen, das aus mehreren verwandten Begriffen besteht, die nicht analysiert werden.|[Erstellen einer Verbunddomäne](../data-quality-services/create-a-composite-domain.md)|  
 |Wenn Sie einer Verbunddomäne komplexe Daten zuordnen, können Sie die Daten basierend auf Trennzeichen und zusätzlich auf Grundlage des Wissens analysieren. DQS versucht zunächst, mithilfe des Wissens zu den einzelnen Domänen zu bestimmen, wie Teile der komplexen Zeichenfolge in die einzelnen Domänen gehören.|[Erstellen einer Verbunddomäne](../data-quality-services/create-a-composite-domain.md)|  

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105301"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363410"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -95,9 +95,8 @@ from [Adventure Works]
   
  In der folgenden Tabelle werden die erhaltenen Ergebnisse angezeigt:  
   
-|||  
+|Feld in Measures|Ergebnisse|  
 |-|-|  
-||Ergebnisse|  
 |Kleinbuchstaben in Zeichenfolge mit Kleinbuchstaben gefunden|16|  
 |Großbuchstaben in Zeichenfolge mit Kleinbuchstaben gefunden|16|  
 |Gesuchte Zeichenfolge ist leer|0|  

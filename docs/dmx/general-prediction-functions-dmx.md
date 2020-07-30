@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cde2fe9da61ca9d877f0c905609d8baf832ea509
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6db4adccfa0786e2acb1ce45725758d6b302b51f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971671"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363020"
 ---
 # <a name="general-prediction-functions-dmx"></a>Allgemeine Vorhersagefunktionen (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -22,15 +22,23 @@ ms.locfileid: "86971671"
   
 ## <a name="common-functions"></a>Allgemeine Funktionen  
  Mit Funktionen können Sie die Ergebnisse erweitern, die von einem Miningmodell zurückgegeben werden. Die folgenden Funktionen können für jede **Select** -Anweisung verwendet werden, die einen Tabellen Ausdruck zurückgibt:  
-  
-|||  
-|-|-|  
-|[BottomCount &#40;DMX-&#41;](../dmx/bottomcount-dmx.md)|[RangeMin &#40;DMX-&#41;](../dmx/rangemin-dmx.md)|  
-|[&#40;DMX-&#41;im unteren Prozentsatz](../dmx/bottompercent-dmx.md)|[TopCount &#40;DMX-&#41;](../dmx/topcount-dmx.md)|  
-|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|[Topprozent &#40;DMX-&#41;](../dmx/toppercent-dmx.md)|  
-|[Rangemax &#40;DMX-&#41;](../dmx/rangemax-dmx.md)|[TopSum &#40;DMX-&#41;](../dmx/topsum-dmx.md)|  
-|[RangeMid &#40;DMX-&#41;](../dmx/rangemid-dmx.md)||  
-  
+
+:::row:::
+    :::column:::
+        [BottomCount &#40;DMX-&#41;](../dmx/bottomcount-dmx.md)  
+        [&#40;DMX-&#41;im unteren Prozentsatz](../dmx/bottompercent-dmx.md)  
+        [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
+        [Rangemax &#40;DMX-&#41;](../dmx/rangemax-dmx.md)  
+        [RangeMid &#40;DMX-&#41;](../dmx/rangemid-dmx.md)  
+    :::column-end:::
+    :::column:::
+        [RangeMin &#40;DMX-&#41;](../dmx/rangemin-dmx.md)  
+        [TopCount &#40;DMX-&#41;](../dmx/topcount-dmx.md)  
+        [Topprozent &#40;DMX-&#41;](../dmx/toppercent-dmx.md)  
+        [TopSum &#40;DMX-&#41;](../dmx/topsum-dmx.md)  
+    :::column-end:::
+:::row-end:::
+
  Außerdem werden die folgenden Funktionen für fast alle Modelltypen unterstützt:  
   
 -   [Vorhanden &#40;DMX-&#41;](../dmx/exists-dmx.md)  
@@ -61,7 +69,7 @@ ms.locfileid: "86971671"
 |Abfragetyp|Unterstützte Funktionen|Bemerkungen|  
 |----------------|-------------------------|-------------|  
 |[SELECT DISTINCT FROM \<model>](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40;DMX-&#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40;DMX-&#41;](../dmx/rangemid-dmx.md)<br /><br /> [Rangemax &#40;DMX-&#41;](../dmx/rangemax-dmx.md)|Mit diesen Funktionen können maximale Werte, minimale Werte und Durchschnittswerte für jede Spalte angegeben werden, die einen numerischen Datentyp enthält. Dies ist unabhängig davon, ob die Spalte kontinuierliche oder diskrete Werte enthält.|  
-|[SELECT FROM \<model>.CONTENT](../dmx/select-from-model-content-dmx.md)<br /><br /> oder<br /><br /> [SELECT FROM \<model>.DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Mit dieser Funktion werden untergeordnete Knoten für den angegebenen Knoten im Modell abgerufen. Die Funktion kann beispielsweise zum Durchlaufen der Knoten im Miningmodellinhalt verwendet werden. Die Anordnung der Knoten im Miningmodellinhalt hängt vom Modeltyp ab. Weitere Informationen zur Struktur für jeden Mining Modelltyp finden Sie unter [Mining Model Content &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Wenn Sie den Miningmodellinhalt als Dimension gespeichert haben, können Sie auch andere Multidimensional Expressions-Funktionen (MDX) verwenden, die für die Abfrage in einer Attributhierarchie verfügbar sind.|  
+|[SELECT FROM \<model>.CONTENT](../dmx/select-from-model-content-dmx.md)<br /><br /> oder<br /><br /> [SELECT FROM \<model>.DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Mit dieser Funktion werden untergeordnete Knoten für den angegebenen Knoten im Modell abgerufen. Die Funktion kann beispielsweise zum Durchlaufen der Knoten im Miningmodellinhalt verwendet werden. Die Anordnung der Knoten im Miningmodellinhalt hängt vom Modeltyp ab. Weitere Informationen zur Struktur für jeden Mining Modelltyp finden Sie unter [Mining Model Content &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Wenn Sie den Mining Modell Inhalt als Dimension gespeichert haben, können Sie auch andere MDX-Funktionen (Multidimensional Expressions) verwenden, die zum Abfragen einer Attribut Hierarchie verfügbar sind.|  
 |[SELECT FROM \<model>.CASES](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [ClientSettingsGeneralFlag-Klasse](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40;DMX-&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40;DMX-&#41;](../dmx/istestcase-dmx.md)|Die lag-Funktion wird nur für Zeitreihen Modelle unterstützt.<br /><br /> Die IsTestCase-Funktion wird in Modellen unterstützt, die auf einer Struktur basieren, die mithilfe der Option "zurück gehaltene Daten" erstellt wurde, um ein Test Dataset zu erstellen. Wenn das Modell nicht auf einer Struktur mit einem Zurückhaltungstestdataset basiert, werden alle Fälle als Trainingsfälle interpretiert.|  
 |[SELECT FROM \<model>.SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|In diesem Kontext gibt die IsInNode-Funktion einen Fall zurück, der zu einem Satz idealisierter Beispiel Fälle gehört.|  
 |Wählen Sie aus \<model> . PMML|Nicht zutreffend Verwenden Sie stattdessen XML-Abfragefunktionen.|PMML-Darstellungen werden nur für die folgenden Modelltypen unterstützt:<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  

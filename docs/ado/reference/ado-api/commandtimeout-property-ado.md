@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b771c5b8dc54bb312893885aea9c9c151feef3e3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0b708b2b79c22240468811732d2ffae0955ea204
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760386"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242780"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout-Eigenschaft (ADO)
 Gibt an, wie lange beim Ausführen eines Befehls gewartet werden soll, bevor der Versuch beendet und ein Fehler erzeugt wird.  
@@ -36,11 +36,16 @@ Gibt an, wie lange beim Ausführen eines Befehls gewartet werden soll, bevor der
  Bei einem **Verbindungs** Objekt bleibt die **CommandTimeout** -Eigenschaft nach dem Öffnen der **Verbindung** Lese-/Schreibzugriff.  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   

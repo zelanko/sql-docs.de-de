@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06d3234317e38177defeacdf6f258bc2301dde9e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8c75c83fea1e6c8f4916180889635ddebd9cd915
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747048"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242800"
 ---
 # <a name="affectenum"></a>AffectEnum
 Gibt an, welche Datensätze von einem Vorgang betroffen sind.  
@@ -43,8 +43,14 @@ Gibt an, welche Datensätze von einem Vorgang betroffen sind.
 |AdoEnums. Auswirkung. Group|  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[CancelBatch-Methode (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|[Delete-Methode (ADO-Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|  
-|[Resync-Methode](../../../ado/reference/ado-api/resync-method.md)|[UpdateBatch-Methode](../../../ado/reference/ado-api/updatebatch-method.md)|
+
+:::row:::
+    :::column:::
+        [CancelBatch-Methode (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
+        [Delete-Methode (ADO-Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+    :::column-end:::
+    :::column:::
+        [Resync-Methode](../../../ado/reference/ado-api/resync-method.md)  
+        [UpdateBatch-Methode](../../../ado/reference/ado-api/updatebatch-method.md)  
+    :::column-end:::
+:::row-end:::

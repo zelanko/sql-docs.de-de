@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 93bbed557f18c847d62dec3e700023f87324e594
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: db2688a46fa785d76a0f1a98483c03eb6e604d33
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813703"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362457"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Beispiele für Geschäftsregeln (Master Data Services)
 
@@ -28,9 +28,11 @@ Anweisungen dazu, wie Sie die Beispielmodelle bereitstellen, finden Sie unter [M
   
   
 ## <a name="business-rule-examples"></a>Beispiele für Geschäftsregeln  
-Beispielmodell |Entität  |Geschäftsregelname| BESCHREIBUNG  
----------|---------|---------|-----------|  
-Kunde    | Kunde   | Person pmt-Begriffe| Gibt Standardzahlungsbedingungen für Kunden an.          
+
+| Beispielmodell |Entität | Geschäftsregelname | BESCHREIBUNG |
+|-|-|-|-|
+| Kunde | Kunde | Person pmt-Begriffe | Gibt Standardzahlungsbedingungen für Kunden an. |
+
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-conditions-master-data-services.md) is applied to the PaymentTerms attribute. Andernfalls wird keine Aktion ausgeführt.  
 ```  
 If  
@@ -42,10 +44,11 @@ Else
 ```  
   
 **--------------------------------------------------**  
-  
-Beispielmodell  |Entität  |Geschäftsregelname|BESCHREIBUNG    
----------|---------|---------|---------------  
-Kunde     | Kunde    | Org pmt-Begriffe | Gibt die Standardzahlungsbedingungen für Organisationen an.         
+
+| Beispielmodell |Entität | Geschäftsregelname | BESCHREIBUNG |
+|-|-|-|-|
+| Kunde | Kunde | Org pmt-Begriffe | Gibt die Standardzahlungsbedingungen für Organisationen an. |
+
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the PaymentTerms attribute. Andernfalls wird keine Aktion ausgeführt.  
 ```  
 If  
@@ -58,10 +61,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Beispielmodell  |Entität  |Geschäftsregelname| BESCHREIBUNG    
----------|---------|---------|-----------  
-Produkt     |  Produkt       | DaysToManufacture |Gibt den Bereich der Tage bis zur Herstellung für die Herstellung vor Ort an.          
+
+| Beispielmodell |Entität | Geschäftsregelname | BESCHREIBUNG |
+|-|-|-|-|
+| Produkt | Produkt | DaysToManufacture | Gibt den Bereich der Tage bis zur Herstellung für die Herstellung vor Ort an. |
+
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. Andernfalls wird keine Aktion ausgeführt.  
 ```  
 If  
@@ -74,10 +78,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Beispielmodell  |Entität  |Geschäftsregelname|BESCHREIBUNG    
----------|---------|---------|-------------  
-Produkt     |Produkt         |Pflichtfelder| Gibt die erforderlichen Attribute für die Elemente der Entität „Product“ an.           
+
+| Beispielmodell |Entität | Geschäftsregelname | BESCHREIBUNG |
+|-|-|-|-|
+| Produkt | Produkt | Pflichtfelder | Gibt die erforderlichen Attribute für die Elemente der Entität „Product“ an. |
+
 In der folgenden Geschäftsregel wird unter allen Umständen die `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Die Attributwerte dürfen nicht Null oder leer sein.  
 ```  
 If  
@@ -99,10 +104,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Beispielmodell  |Entität  |Geschäftsregelname|BESCHREIBUNG    
----------|---------|---------|-----------  
-Produkt     | Produkt        |  Standardkosten| Erfordert, dass die Standardkosten größer als 0 sind.        
+
+| Beispielmodell |Entität | Geschäftsregelname | BESCHREIBUNG |
+|-|-|-|-|
+| Produkt | Produkt | Standardkosten | Erfordert, dass die Standardkosten größer als 0 sind. |
+
 In der folgenden Geschäftsregel wird unter allen Umständen die `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
 ```  
 If  
@@ -115,10 +121,10 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Beispielmodell  |Entität  |Geschäftsregelname|BESCHREIBUNG    
----------|---------|---------|------------  
-Produkt     | Produkt        | FG MSRP-Kosten|Gibt an, dass der vom Hersteller empfohlene Preis (MSRP) und die Händlerkosten größer als 0 sein müssen, wenn das Produkt ein Endprodukt ist.           
+
+| Beispielmodell |Entität | Geschäftsregelname | BESCHREIBUNG |
+|-|-|-|-|
+| Produkt | Produkt | FG MSRP-Kosten | Gibt an, dass der vom Hersteller empfohlene Preis (MSRP) und die Händlerkosten größer als 0 sein müssen, wenn das Produkt ein Endprodukt ist. |
   
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), the `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the MSRP and DealerCost attributes.  
 ```  
@@ -133,10 +139,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Beispielmodell  |Entität  |Geschäftsregelname|BESCHREIBUNG    
----------|---------|---------|------------  
-Produkt     | Produkt        |  Standardname| Gibt den Standardnamen des Produkts basierend auf den Werten der Farb- und Klassenattribute an. Wenn der Farbattributwert nicht YLO ist, und das Klassenattribut nicht NA, dann ist der Standardname „Gelb NA“         
+
+| Beispielmodell |Entität | Geschäftsregelname | BESCHREIBUNG |
+|-|-|-|-|
+| Produkt | Produkt | Standardname | Gibt den Standardnamen des Produkts basierend auf den Werten der Farb- und Klassenattribute an. Wenn der Farbattributwert nicht YLO ist, und das Klassenattribut nicht NA, dann ist der Standardname „Gelb NA“ |
+
 In der folgenden Geschäftsregel wird die `is equal``defaults to` [auf das Namensattribut angewendet, wenn die Farb- und Klassenattribute die](../master-data-services/business-rule-actions-master-data-services.md) -Regelbedingung nicht erfüllen.  
 ```  
 If  

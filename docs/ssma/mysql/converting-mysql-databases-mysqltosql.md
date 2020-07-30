@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 51604ba389e103798ab067245f210bd565a719e7
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: ce84ae70a1b09cd744528b132dcc7052cdde8816
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293667"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394275"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Konvertieren von MySQL-Datenbanken (MySqlToSql)
 Nachdem Sie eine Verbindung mit MySQL hergestellt, eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure hergestellt und die Optionen für die Projekt-und Datenzuordnung festgelegt haben, können Sie MySQL-Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Datenbankobjekte konvertieren.  
@@ -31,12 +31,11 @@ Während der Konvertierung druckt SSMA Ausgabemeldungen im Ausgabebereich und Fe
 ## <a name="conversion-results"></a>Konvertierungs Ergebnisse  
 In der folgenden Tabelle werden die konvertierten MySQL-Objekte und die resultierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte angezeigt:  
   
-|||  
+|MySQL-Objekte|Resultierende SQL Server Objekte|  
 |-|-|  
-|**MySQL-Objekte**|**Resultierende SQL Server Objekte**|  
 |Tabellen mit abhängigen Objekten, z. b. Indizes|SSMA erstellt Tabellen mit abhängigen Objekten. Die Tabelle wird mit allen Indizes und Einschränkungen konvertiert. Indizes werden in separate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte konvertiert.<br /><br />Die **Zuordnung räumlicher Datentypen** kann nur auf Tabellen Knotenebene ausgeführt werden.<br /><br />Weitere Informationen zu den Einstellungen für die Tabellen Konvertierung finden Sie unter [Konvertierungs Einstellungen](conversion-settings-mysqltosql.md) .|  
 |Functions|Wenn die Funktion direkt in Transact-SQL konvertiert werden kann, erstellt SSMA eine Funktion. In einigen Fällen muss die Funktion in eine gespeicherte Prozedur konvertiert werden. Dies kann mithilfe der **Funktions Konvertierung** in den Projekteinstellungen erfolgen. In diesem Fall erstellt SSMA eine gespeicherte Prozedur und eine Funktion, die die gespeicherte Prozedur aufruft.<br /><br />**Angegebene Optionen:**<br /><br />Gemäß Projekteinstellungen konvertieren<br /><br />In Funktion konvertieren<br /><br />In gespeicherte Prozedur konvertieren<br /><br />Weitere Informationen zu den Einstellungen für die Funktions Konvertierung finden Sie unter [Konvertierungs Einstellungen](conversion-settings-mysqltosql.md) .|  
-|Prozeduren|Wenn die Prozedur direkt in Transact-SQL konvertiert werden kann, erstellt SSMA eine gespeicherte Prozedur. In einigen Fällen muss eine gespeicherte Prozedur in einer autonomen Transaktion aufgerufen werden. In diesem Fall erstellt SSMA zwei gespeicherte Prozeduren: einen, der die Prozedur implementiert, und einen weiteren, der zum Aufrufen der implementierenden gespeicherten Prozedur verwendet wird.|  
+|Prozeduren|Wenn die Prozedur direkt in Transact-SQL konvertiert werden kann, erstellt SSMA eine gespeicherte Prozedur. In einigen Fällen muss eine gespeicherte Prozedur in einer autonomen Transaktion aufgerufen werden. In diesem Fall erstellt SSMA zwei gespeicherte Prozeduren: eine, die die Prozedur implementiert, und eine weitere, die zum Aufrufen der implementierenden gespeicherten Prozedur verwendet wird.|  
 |Datenbankkonvertierung|Datenbanken als MySQL-Objekte werden nicht direkt von SSMA für MySQL konvertiert. MySQL-Datenbanken werden eher wie Schema Namen behandelt, und alle physischen Parameter gehen bei der Konvertierung verloren. SSMA für MySQL verwendet [die Zuordnung von MySQL-Datenbanken zu SQL Server Schemas &#40;mysqltosql&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) , um Objekte aus einer MySQL-Datenbank einem geeigneten SQL Server Database/Schema-Paar zuzuordnen.|  
 |Umwandlungs Konvertierung|**SSMA erstellt Trigger auf der Grundlage der folgenden Regeln:**<br /><br />Vor dem Konvertieren von Triggern in anstelle von T-SQL-Triggern<br /><br />AFTER-Trigger werden in nach T-SQL-Triggern mit oder ohne Iterationen pro Zeilen konvertiert.|  
 |Konvertierung anzeigen|SSMA erstellt Sichten mit abhängigen Objekten.|  

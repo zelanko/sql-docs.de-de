@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a4eff5b70e83b92e1c99e1d7c4b1c351dec35b7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895380"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362493"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS-Wissensdatenbanken und -Domänen
 
@@ -146,7 +146,7 @@ ms.locfileid: "85895380"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Sie können die folgenden Vorgänge auf einer Wissensdatenbank und deren Domänen ausführen:  
   
-|||  
+|Vorgangs Beschreibung|Thema|  
 |-|-|  
 |Eine Wissensdatenbank erstellen, öffnen, ihr Informationen hinzufügen und auf ihr die Wissensermittlung ausführen|[Aufbau einer Wissensdatenbank](../data-quality-services/building-a-knowledge-base.md)|  
 |Import- und Exportvorgänge auf Domänen und Wissensdatenbanken ausführen|[Importieren und Exportieren von Wissen](../data-quality-services/importing-and-exporting-knowledge.md)|  
