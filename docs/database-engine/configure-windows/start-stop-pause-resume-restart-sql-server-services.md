@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: ca8891058091bca9862fbdbf81bfa51cc17d250a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 385e0a0d6873f8480c3d99efe9700ef938fc3abf
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763992"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363030"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten
 
@@ -114,7 +114,7 @@ Zeigen Sie im Menü **Start** auf **Alle Programme**, **Microsoft SQL Server**, 
 
 Da der SQL Server-Konfigurations-Manager ein Snap-In für das Microsoft Management Console-Programm und kein eigenständiges Programm ist, wird der SQL Server-Konfigurations-Manager in neueren Versionen von Windows nicht als Anwendung angezeigt. Nachfolgend sind die Pfade der letzten vier Versionen aufgeführt (unter der Annahme, dass Windows auf Laufwerk C installiert ist).  
 
-|||
+|Version|`Path`|
 |-|-|
 |SQL Server 2019|C:\Windows\SysWOW64\SQLServerManager15.msc|
 |SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|
