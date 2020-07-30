@@ -1,5 +1,5 @@
 ---
-title: Eigenschaften und Verhaltensweisen von Rowsets | Microsoft-Dokumentation
+title: Eigenschaften und Verhaltensweisen von Rowsets (Native Client OLE DB-Anbieter)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d66aa7280bb2ce7f92211054713469626b4f6a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15f9884944eb5d0298e5536fa5b2f43f3aa46c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013132"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246849"
 ---
-# <a name="rowset-properties-and-behaviors"></a>Eigenschaften und Verhaltensweisen von Rowsets
+# <a name="rowset-properties-and-behaviors-native-client-ole-db-provider"></a>Eigenschaften und Verhaltensweisen von Rowsets (Native Client OLE DB-Anbieter)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Dabei handelt es sich um die Eigenschaften des systemeigenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB-Anbieters.  
@@ -78,7 +79,7 @@ ms.locfileid: "86013132"
 |DBPROP_REPORTMULTIPLECHANGES|Diese Rowseteigenschaft wird nicht vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter implementiert. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_RETURNPENDINGINSERTS|R/W: Schreibgeschützt<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Wenn eine Methode aufgerufen wird, die Zeilen abruft, gibt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter keine ausstehenden Einfügezeilen zurück.|  
 |DBPROP_ROWRESTRICT|R/W: Schreibgeschützt<br /><br /> Standard: VARIANT_TRUE<br /><br /> Beschreibung: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Rowsets des Native Client OLE DB-Anbieters unterstützen keine Zugriffsrechte auf der Grundlage der Zeile. Wenn die **IRowsetChange**-Schnittstelle für ein Rowset verfügbar gemacht wird, kann die **SetData**-Methode vom Consumer aufgerufen werden.|  
-|DBPROP_ROWSET_ASYNCH|R/W: Lesen/Schreiben<br /><br /> Standard: 0<br /><br /> Beschreibung: Sorgt für eine asynchrone Rowsetverarbeitung. Diese Eigenschaft befindet sich in der Gruppe der Rowseteigenschaften und im DBPROPSET_ROWSET-Eigenschaftensatz. Der Typ ist VT_14.<br /><br /> Der einzige Wert in der Bitmaske, der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client unterstützt wird, ist **DBPROPVAL_ASYNCH_INITIALIZE**.|  
+|DBPROP_ROWSET_ASYNCH|R/W: Lesen/Schreiben<br /><br /> Standard: 0<br /><br /> Beschreibung: stellt die asynchrone Rowsetverarbeitung bereit. Diese Eigenschaft befindet sich in der Gruppe der Rowseteigenschaften und im DBPROPSET_ROWSET-Eigenschaftensatz. Der Typ ist VT_14.<br /><br /> Der einzige Wert in der Bitmaske, der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client unterstützt wird, ist **DBPROPVAL_ASYNCH_INITIALIZE**.|  
 |DBPROP_ROWTHREADMODEL|R/W: Schreibgeschützt<br /><br /> Standard: DBPROPVAL_RT_FREETHREAD<br /><br /> Beschreibung: der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt den Zugriff auf seine Objekte aus mehreren Ausführungsthreads eines einzelnen Consumers.|  
 |DBPROP_SERVERCURSOR|R/W: Lesen/Schreiben<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Wenn festgelegt, wird ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Cursor verwendet, um das Rowset zu unterstützen. Weitere Informationen finden Sie unter [Rowsets und SQL Server-Cursor](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_SERVERDATAONINSERT|R/W: Lesen/Schreiben<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Serverdaten bei Einfügevorgang.<br /><br /> VARIANT_TRUE: Wenn ein Einfügevorgang an den Server übertragen wird, ruft der Anbieter Daten vom Server ab, um den Cache für die lokale Zeile zu aktualisieren.<br /><br /> VARIANT_FALSE: Der Anbieter ruft keine Serverwerte für neu eingefügte Zeilen ab.|  
@@ -98,7 +99,7 @@ ms.locfileid: "86013132"
 |SSPROP_MAXBLOBLENGTH|Spalte: Nein<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_I4<br /><br /> Standard: Der Anbieter schränkt die Größe des vom Server zurückgegebenen Texts nicht ein, und der Eigenschaftswert wird auf das Maximum festgelegt. Beispiel: 2147483647.<br /><br /> Beschreibung: der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter führt eine SET TEXTSIZE-Anweisung aus, um die Länge der in einer SELECT-Anweisung zurückgegebenen Binary Large Object (BLOB)-Daten einzuschränken.|  
 |SSPROP_NOCOUNT_STATUS|Spalte: NoCount<br /><br /> R/W: Schreibgeschützt<br /><br /> Typ: VT_BOOL<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Ein boolescher Wert, der den Status von SET NOCOUNT ON/OFF in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] darstellt:<br /><br /> VARIANT_TRUE: wenn SET NOCOUNT ON<br /><br /> VARIANT_FALSE: wenn SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Spalte: Nein<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_BSTR (1-2000 Zeichen zulässig)<br /><br /> Standard: leere Zeichenfolge<br /><br /> Beschreibung: Der Nachrichtentext der Abfragebenachrichtigung. Dieser ist benutzerdefiniert und weist kein bestimmtes Format auf.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|Spalte: Nein<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_BSTR<br /><br /> Standard: leere Zeichenfolge<br /><br /> Beschreibung: Die Abfragebenachrichtigungsoptionen. Diese werden in einer Zeichenfolge mit `name=value` angegeben. Der Benutzer ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich. Die Syntax der Zeichenfolge für die Abfragebenachrichtigungsoptionen lautet:<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Beispiel:<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|Spalte: Nein<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_BSTR<br /><br /> Standard: leere Zeichenfolge<br /><br /> Beschreibung: Die Abfragebenachrichtigungsoptionen. Diese werden in einer Zeichenfolge mit `name=value` angegeben. Der Benutzer ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich. Die Syntax der Zeichenfolge für die Abfragebenachrichtigungsoptionen lautet:<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Zum Beispiel:<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Spalte: Nein<br /><br /> R/W: Lesen/Schreiben<br /><br /> Typ: VT_UI4<br /><br /> Standard: 432000 Sekunden (5 Tage).<br /><br /> Minimum: 1 Sekunde<br /><br /> Maximum: 2^31-1 Sekunden<br /><br /> Beschreibung: Die Anzahl der Sekunden, während der die Abfragebenachrichtigung aktiv bleiben soll.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

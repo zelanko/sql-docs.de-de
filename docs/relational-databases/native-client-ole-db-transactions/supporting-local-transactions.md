@@ -1,5 +1,5 @@
 ---
-title: Unterstützen von lokalen Transaktionen | Microsoft-Dokumentation
+title: Unterstützen lokaler Transaktionen (Native Client OLE DB-Anbieter)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,14 @@ ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd6640c497226bbe2c97cbafaa9931582e9b5d6c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 39de80135212acb962953c1054187e4d04e61af8
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005783"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332276"
 ---
-# <a name="supporting-local-transactions"></a>Unterstützen lokaler Transaktionen
+# <a name="supporting-local-transactions-in-sql-server-native-client"></a>Unterstützen lokaler Transaktionen in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Eine Sitzung begrenzt den Transaktions Bereich für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lokale Transaktion eines Native Client OLE DB Anbieters. Wenn der Native Client OLE DB-Anbieter in Richtung eines Consumers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Anforderung an eine verbundene Instanz von sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , stellt die Anforderung eine Arbeitseinheit für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter dar. Lokale Transaktionen wrappen immer eine oder mehrere Arbeitseinheiten in einer einzelnen systemeigenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB-Anbieter Sitzung.  
@@ -128,7 +129,7 @@ if (FAILED(hr))
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Handel](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
- [Arbeiten mit Momentaufnahmeisolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
+ [Transaktionen](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
+ [Arbeiten mit der Momentaufnahme Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
   
   

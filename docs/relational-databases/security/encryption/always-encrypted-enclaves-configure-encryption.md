@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d887e428773e6901544422edcb6960e6e9ae0580
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4f794e66e881ddeb36c724fc583d95a42bce33d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595515"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411444"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>Konfigurieren einer direkten Spaltenverschlüsselung mithilfe von Always Encrypted mit Secure Enclaves 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md) unterstützt direkte kryptografische Vorgänge für Datenbankspalten. Dies geschieht innerhalb einer Secure Enclave in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Durch die direkte Verschlüsselung ist es nicht mehr erforderlich, die Daten für solche Vorgänge aus der Datenbank zu verschieben, wodurch die Kryptografievorgänge schneller und zuverlässiger werden. 
 

@@ -1,5 +1,5 @@
 ---
-title: Tabellenwertparameter für die Rowseterstellung | Microsoft-Dokumentation
+title: Erstellung eines Tabellenwert Parameter-Rowsets (Native Client OLE DB-Anbieter)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b26fa52fcb817dc7505dffb47d15421841f9c8ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c7847c9119e1f67963414a0e22dd9241466b1e1c
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013001"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331949"
 ---
-# <a name="table-valued-parameter-rowset-creation"></a>Tabellenwertparameter-Rowseterstellung
+# <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>Erstellung eines Tabellenwert Parameter-Rowsets in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Consumer können zwar ein beliebiges Rowsetobjekt für Tabellenwertparameter bereitstellen, typische Rowsetobjekte werden jedoch mit Back-End-Datenspeichern implementiert und bieten somit nur eine eingeschränkte Leistung. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ermöglicht es somit Consumern, ein spezielles Rowsetobjekt auf speicherinternen Daten zu erstellen. Dieses spezielle, in-Memory-Rowsetobjekt ist ein neues COM-Objekt, das als Tabellenwert Parameter-Rowset bezeichnet wird. Es bietet ähnliche Funktionen wie Parametersätze.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6648fcabe8890ef653558636738735a4f5e4012f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c84ab6806924649bdad9bb712f730c24011cdb38
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759446"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243161"
 ---
 # <a name="value-property-ado"></a>Value-Eigenschaft (ADO)
 
@@ -43,11 +43,19 @@ ADO ermöglicht das Festlegen und Zurückgeben von langen Binärdaten mit der **
 > Bei neuen **Feld** Objekten, die an die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekts angehängt wurden, muss die **value** -Eigenschaft festgelegt werden, bevor andere **Feld** Eigenschaften angegeben werden können. Zuerst muss ein bestimmter Wert für die **value** -Eigenschaft zugewiesen und in der **Fields** -Auflistung mit dem Namen [aktualisiert](../../../ado/reference/ado-api/update-method.md) werden. Anschließend können Sie auf andere Eigenschaften, z. b. den [Typ](../../../ado/reference/ado-api/type-property-ado.md) oder die [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) , zugreifen.
   
 ## <a name="applies-to"></a>Gilt für
-  
-||||  
-|-|-|-|  
-|[Field-Objekt](../../../ado/reference/ado-api/field-object.md)|[Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)|[Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
-  
+
+:::row:::
+    :::column:::
+        [Field-Objekt](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Weitere Informationen
 
 [Beispiel für Wert Eigenschaft (VB)](../../../ado/reference/ado-api/value-property-example-vb.md) 

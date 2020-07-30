@@ -21,14 +21,14 @@ ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c6b6cf14925b7baace60a7de6c7aeaf3057de46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ff6c333b587433eafabc73cb3b63559e26c7f4f7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303230"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243838"
 ---
-# <a name="using-user-defined-types"></a>Verwenden von benutzerdefinierten Typen
+# <a name="using-user-defined-types-in-sql-server-native-client"></a>Verwenden benutzerdefinierter Typen in SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurden benutzerdefinierte Typen (User-Defined Types, UDTs) eingeführt. UDTs erweitern das SQL-Typsystem, indem sie es ermöglichen, Objekte und benutzerdefinierte Datenstrukturen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank zu speichern. UDTs können mehrere Datentypen enthalten und Verhalten zeigen, das sie von den herkömmlichen Aliasdatentypen aus einem einzelnen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Systemdatentyp unterscheidet. UDTs werden in einer beliebigen, von .NET CLR (Common Language Runtime) unterstützten Sprache definiert, die überprüfbaren Code generiert. Dies schließt Microsoft Visual c#<sup>®</sup> und Visual Basic<sup>®</sup> .net ein. Die Daten werden in Feldern und Eigenschaften einer .NET-Klasse oder -Struktur verfügbar gemacht. Das Verhalten wird durch die Methoden der Klasse oder Struktur definiert.  
@@ -148,7 +148,7 @@ ms.locfileid: "81303230"
  SSPROP_PARAM_UDT_NAME ist erforderlich. SSPROP_PARAM_UDT_CATALOGNAME und SSPROP_PARAM_UDT_SCHEMANAME sind optional. Wenn Eigenschaften falsch angegeben werden, wird DB_E_ERRORSINCOMMAND zurückgegeben. Werden weder SSPROP_PARAM_UDT_CATALOGNAME noch SSPROP_PARAM_UDT_SCHEMANAME angegeben, muss der UDT in derselben Datenbank und im selben Schema definiert werden wie die Tabelle. Befindet sich der UDT nicht im selben Schema wie die Tabelle (aber in derselben Datenbank), muss SSPROP_PARAM_UDT_SCHEMANAME angegeben werden. Befindet sich die UDT-Definition in einer anderen Datenbank, müssen SSPROP_PARAM_UDT_CATALOGNAME und SSPROP_PARAM_UDT_SCHEMANAME angegeben werden.  
   
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Die DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe  
- Um die Erstellung von Tabellen in der **ITableDefinition** -Schnittstelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu unterstützen, fügt Native Client die folgenden drei neuen Spalten dem DBPROPSET_SQLSERVERCOLUMN-Eigenschaften Satz hinzu.  
+ Um die Erstellung von Tabellen in der **ITableDefinition** -Schnittstelle zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt Native Client die folgenden drei neuen Spalten dem DBPROPSET_SQLSERVERCOLUMN-Eigenschaften Satz hinzu.  
   
 |Name|BESCHREIBUNG|type|BESCHREIBUNG|  
 |----------|-----------------|----------|-----------------|  
@@ -173,13 +173,13 @@ ms.locfileid: "81303230"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt neue Werte oder Änderungen an vielen der Kern OLE DB-Schnittstellen hinzu.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Die ISSCommandWithParameters-Schnittstelle  
- Um UDTs durch OLE DB zu unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stützen, implementiert Native Client eine Reihe von Änderungen, einschließlich des Hinzufügens der **ISSCommandWithParameters** -Schnittstelle. Diese neue Schnittstelle erbt von der OLE DB-Kernschnittstelle **ICommandWithParameters**. Zusätzlich zu den drei von **ICommandWithParameters**geerbten Methoden **GetParameterInfo**, **MapParameterNames**und **SetParameterInfo**; **ISSCommandWithParameters** stellt die **GetParameterProperties** -Methode und die **SetParameterProperties** -Methode bereit, die zur Behandlung von serverspezifischen Datentypen verwendet werden.  
+ Um UDTs durch OLE DB zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert Native Client eine Reihe von Änderungen, einschließlich des Hinzufügens der **ISSCommandWithParameters** -Schnittstelle. Diese neue Schnittstelle erbt von der OLE DB-Kernschnittstelle **ICommandWithParameters**. Zusätzlich zu den drei von **ICommandWithParameters**geerbten Methoden **GetParameterInfo**, **MapParameterNames**und **SetParameterInfo**; **ISSCommandWithParameters** stellt die **GetParameterProperties** -Methode und die **SetParameterProperties** -Methode bereit, die zur Behandlung von serverspezifischen Datentypen verwendet werden.  
   
 > [!NOTE]  
 >  Die **ISSCommandWithParameters**-Schnittstelle nutzt auch die neue SSPARAMPROPS-Struktur.  
   
 #### <a name="the-icolumnsrowset-interface"></a>Die IDBColumnsRowset-Schnittstelle  
- Zusätzlich zur **ISSCommandWithParameters** -Schnittstelle fügt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dem Rowset, das durch Aufrufen der **IColumnsRowset:: GetColumnRowset** -Methode zurückgegeben wird, auch neue Werte hinzu, einschließlich der folgenden.  
+ Zusätzlich zur **ISSCommandWithParameters** -Schnittstelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt Native Client dem Rowset, das durch Aufrufen der **IColumnsRowset:: GetColumnRowset** -Methode zurückgegeben wird, auch neue Werte hinzu, einschließlich der folgenden.  
   
 |Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
@@ -191,7 +191,7 @@ ms.locfileid: "81303230"
  Ist DBCOLUMN_TYPE auf DBTYPE_UDT festgelegt, können Sie eine Server-UDT-Spalte von anderen Binärtypen unterscheiden, indem Sie die oben genannten neuen UDT-Metadaten betrachten. Sind diese Daten teilweise vollständig, handelt es sich bei dem Servertyp um einen UDT. Für Nicht-UDT-Servertypen werden diese Spalten immer als NULL zurückgegeben.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>ODBC-Treiber für SQL Server Native Client  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber hat eine Reihe von Änderungen vorgenommen, um UDTs zu unterstützen. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ordnet den UDT SQL_SS_UDT treiberspezifischen SQL-Datentyp Bezeichner zu. UDT-Spalten werden als SQL_SS_UDT angegeben. Wenn Sie eine UDT-Spalte explizit einem anderen Typ in einer SQL-Anweisung zuordnen, indem Sie die Methoden " **atstring** " oder " **ToXmlString** " des UDT oder über die **Cast/Convert-** Funktion verwenden, spiegelt der Typ der Spalte im Resultset den tatsächlichen Typ wider, in den die Spalte konvertiert wurde.  
+ Der Native Client-ODBC-Treiber hat eine Reihe von Änderungen vorgenommen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , um UDTs zu unterstützen. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber ordnet den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT SQL_SS_UDT treiberspezifischen SQL-Datentyp Bezeichner zu. UDT-Spalten werden als SQL_SS_UDT angegeben. Wenn Sie eine UDT-Spalte explizit einem anderen Typ in einer SQL-Anweisung zuordnen, indem Sie die Methoden " **atstring** " oder " **ToXmlString** " des UDT oder über die **Cast/Convert-** Funktion verwenden, spiegelt der Typ der Spalte im Resultset den tatsächlichen Typ wider, in den die Spalte konvertiert wurde.  
   
 ### <a name="sqlcolattribute-sqldescribeparam-sqlgetdescfield"></a>SQLColAttribute, SQLDescribeParam, SQLGetDescField  
  Es wurden vier neue Treiber spezifische Deskriptorfelder hinzugefügt, um zusätzliche Informationen für eine UDT-Spalte eines Resultsets oder einen UDT-Parameter der gespeicherten Prozedur/parametrisierten Abfrage bereitzustellen, die über die Funktionen [SQLColAttribute](../../../relational-databases/native-client-odbc-api/sqlcolattribute.md), [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)und [SQLGetDescField](../../../relational-databases/native-client-odbc-api/sqlgetdescfield.md) abgerufen werden sollen.  
@@ -207,7 +207,7 @@ ms.locfileid: "81303230"
  Bei der Umwandlung von C- in SQL-Datentypen können SQL_C_WCHAR, SQL_C_BINARY und SQL_C_CHAR in SQL_SS_UDT umgewandelt werden. Beachten Sie jedoch, dass Binärdaten in eine hexadezimale Zeichenfolge konvertiert werden, wenn Sie die SQL-Datentypen SQL_C_WCHAR und SQL_C_CHAR konvertieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

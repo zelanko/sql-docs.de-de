@@ -1,5 +1,6 @@
 ---
 title: srv_setcollen (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation
+description: Erfahren Sie, wie srv_setcollen die aktuelle Daten Länge in Byte einer Spalte variabler Länge oder eine Spalte angibt, die NULL-Werte zulässt.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b1947a1fe9f08b8eb14a2285ee114b002f94260
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e87c0728bf68fb7cae076d25cbda0ac43a7ed3ef
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760866"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332459"
 ---
 # <a name="srv_setcollen-extended-stored-procedure-api"></a>srv_setcollen (API für erweiterte gespeicherte Prozeduren)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,10 +61,10 @@ len
  *Nest*  
  Gibt die Länge der Spaltendaten in Byte an. Eine Länge von 0 bedeutet, dass der Spaltendatenwert NULL ist.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Jede Spalte der Zeile muss zuerst mit **srv_describe** definiert werden. Die Spaltendatenlänge wird vom letzten Aufruf von **srv_describe** oder **srv_setcollen** festgelegt. Wenn Daten mit variabler Länge (NULL-terminierte Daten) für eine Zeile geändert werden, muss diese mit **srv_setcollen** auf die neue Länge festgelegt werden, bevor **srv_sendrow** aufgerufen wird. Für eine Spalte, die NULL-Werte zulässt, muss **srv_describe** mit einem auf einen Datentyp festgelegten *desttype*-Wert aufgerufen worden sein, der NULL-Werte zulässt (wie SRVINTN), und NULL-Daten werden durch Aufrufen von **srv_setcollen** angegeben, wobei *len* auf 0 festgelegt ist. Daten der Länge 0 (NULL) können nicht mit der API für erweiterte gespeicherte Prozeduren angegeben werden.  
   
  Wenn der Datentyp der Spalte von variabler Länge ist, ist *len* nicht aktiviert. Diese Funktion gibt FAIL zurück, wenn sie für eine Spalte mit fester Länge aufgerufen wird.  

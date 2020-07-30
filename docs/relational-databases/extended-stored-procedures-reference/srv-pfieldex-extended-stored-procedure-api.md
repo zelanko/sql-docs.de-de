@@ -1,5 +1,6 @@
 ---
 title: srv_pfieldex (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation
+description: Erfahren Sie, wie srv_pfieldex in der API für erweiterte gespeicherte Prozeduren einen Zeiger auf Daten zurückgibt, die das angeforderte SRV_PROC Feld enthalten
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2294e12af7e22a70ab064a2c3d1163007631eef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee0bf315964d5710d657abf2288a2b9a79b3c00b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755910"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248292"
 ---
 # <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex (API für erweiterte gespeicherte Prozeduren)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,13 +63,13 @@ len
  *Nest*  
  Ein Zeiger auf eine **int**-Variable, die die Länge des zurückgegebenen *field*-Werts in Byte enthält. Wenn *len* NULL ist, wird die Länge nicht zurückgegeben. Wenn NULL zurückgegeben wird, wird **len* auf 0 (null) festgelegt.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  Ein Zeiger auf Daten, deren Typ von *field* abhängt. NULL wird zurückgegeben, wenn *len* oder *srvproc* NULL ist. Ist *field* unbekannt, wird NULL zurückgegeben. Wenn NULL zurückgegeben wird, wird **len* auf 0 (null) festgelegt.  
   
 > [!IMPORTANT]  
 >  Der vom Server zurückgegebene Puffer sollte schreibgeschützt sein. Andernfalls ist der Serverstatus möglicherweise beschädigt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **Sicherheitshinweis** Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren gründlich überprüfen. Außerdem sollten Sie die kompilierten DLLs vor der Installation auf einem Produktionsserver testen. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB) | Microsoft-Dokumentation
+title: 'Abrufen von Spalten mithilfe von IRow:: GetColumns (Native Client OLE DB Provider) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db4a869049b0092f314e2cb89035d4a5549c0760
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 645c627f70b3135792b882a1ae62504948f2839a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004553"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247866"
 ---
-# <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
+# <a name="fetch-columns-in-sql-server-native-client-using-irowgetcolumns-ole-db"></a>Abrufen von Spalten in SQL Server Native Client mit IRow:: GetColumns (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Die **IRow** -Schnittstelle ermöglicht den direkten Zugriff auf Spalten einer einzelnen Zeile im Resultset. Daher ist **IRow** eine effiziente Möglichkeit, Spalten aus einem Resultset mit einer Zeile abzurufen.  
@@ -56,7 +57,7 @@ ms.locfileid: "86004553"
   
  Mit dem ersten Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) wird eine im Beispiel verwendete Tabelle erstellt.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungs Zeichenfolge von L "(local)" in l "(local) \\ \Name", wobei Name die benannte Instanz ist. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Das dritte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) löscht die im Beispiel verwendete Tabelle.  
   

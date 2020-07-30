@@ -1,5 +1,6 @@
 ---
 title: sys. dm_db_rda_schema_update_status (Transact-SQL) | Microsoft-Dokumentation
+description: Erfahren Sie, wie sys. dm_db_rda_schema_update_status eine Zeile für jeden Schema Aktualisierungs Task für das Remote Datenarchiv der einzelnen Stretch-aktivierten Tabellen in der Datenbank enthält.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b74f408bdb2be61076d5034478dc6743259fed6a
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 313eb868a49507b96e31bcd1966165175bf96f0a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053646"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243788"
 ---
 # <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

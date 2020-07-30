@@ -1,5 +1,6 @@
 ---
 title: srv_rpcoptions (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation
+description: Erfahren Sie, wie srv_rpcoptions in der API für erweiterte gespeicherte Prozeduren Laufzeitoptionen für die aktuelle remote gespeicherte Prozedur zurückgibt.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a4bc6bf4a8fe1b600ec7bd7b3ba1877023751db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3d4bd331b54b4bb555fcc6cdbe59155a553332eb
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755884"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332469"
 ---
 # <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API für erweiterte gespeicherte Prozeduren)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,10 +48,10 @@ srvproc
  *srvproc*  
  Ist ein Zeiger auf die SRV_PROC-Struktur, die das Handle für eine bestimmte Clientverbindung ist (in diesem Fall das Handle, das die remote gespeicherte Prozedur erhalten hat). Die Struktur enthält Informationen, mit der die API-Bibliothek für erweiterte gespeicherte Prozeduren die Kommunikation und Daten zwischen der Anwendung und dem Client verwaltet.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  Eine Bitmap mit den in einer logischen Darstellung ODER für die derzeit remote gespeicherte Prozedur verbundenen Laufzeitflags. Wenn keine aktuelle remote gespeicherte Prozedur vorhanden ist, wird 0 zurückgegeben und eine Meldung generiert.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In der folgenden Tabelle werden die einzelnen Laufzeitflags beschrieben.  
   
 |Laufzeitflag|BESCHREIBUNG|  

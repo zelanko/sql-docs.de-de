@@ -1,5 +1,6 @@
 ---
 title: srv_rpcname (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation
+description: Erfahren Sie, wie srv_rpcname in der API für erweiterte gespeicherte Prozeduren die Prozedur namens Komponente für die aktuelle remote gespeicherte Prozedur zurückgibt.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 999f949466efe5ed39fe20534f99138d5013f588
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 99e901a9ae1a14644d522b23747f1d242f8c95d3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755922"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248285"
 ---
 # <a name="srv_rpcname-extended-stored-procedure-api"></a>srv_rpcname (API für erweiterte gespeicherte Prozeduren)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,10 +55,10 @@ len
  *Nest*  
  Ist ein Zeiger auf eine ganzzahlige Variable, die die Länge des Datenbanknamens empfängt. Wenn *len* NULL ist, wird die Länge des Namens der remote gespeicherten Prozedur nicht zurückgegeben.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  Ein DBCHAR-Zeiger auf die NULL-terminierte Zeichenfolge für die Prozedurnamenskomponente der aktuellen remote gespeicherten Prozedur. Wenn keine aktuelle remote gespeicherte Prozedur vorhanden ist, wird NULL zurückgegeben, und *len* wird auf -1 festgelegt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Funktion gibt nur den Namen der remote gespeicherten Prozedur zurück. Sie schließt die optionalen Spezifizierer für Besitzer, Datenbanknamen und Name der remote gespeicherten Prozedur nicht ein.  
   
  Weil ein Aufruf von **srv_rpcname** auch zulässig ist, wenn keine remote gespeicherte Prozedur vorhanden ist (es tritt kein Informationsfehler auf), stellt diese Funktion eine Methode zur Verfügung, mit der ermittelt werden kann, ob eine remote gespeicherte Prozedur vorhanden ist.  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747258"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242860"
 ---
 # <a name="ado-methods"></a>ADO-Methoden
 
-|||  
+|Methode|BESCHREIBUNG|  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Erstellt einen neuen Datensatz für ein Aktualisier bares **Recordset** -Objekt.|  
 |[Append](../../../ado/reference/ado-api/append-method-ado.md)|Fügt ein Objekt an eine Auflistung an. Wenn es sich bei der Auflistung um **Felder**handelt, kann ein neues **Feld** Objekt erstellt werden, bevor es an die Auflistung angefügt wird.|  
@@ -31,8 +31,8 @@ ms.locfileid: "82747258"
 |[Abbrechen](../../../ado/reference/ado-api/cancel-method-ado.md)|Bricht die Ausführung eines ausstehenden asynchronen Methoden Aufrufes ab.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Bricht ein ausstehendes Batch Update ab.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Bricht vor dem Aufrufen der **Update** -Methode alle Änderungen ab, die an der aktuellen oder neuen Zeile eines **Recordset** -Objekts oder der **Fields** -Auflistung eines **Datensatz** -Objekts vorgenommen wurden.|  
-|[Löschen](../../../ado/reference/ado-api/clear-method-ado.md)|Entfernt alle **Fehler** Objekte aus der **Fehler** Auflistung.|  
-|[Klon](../../../ado/reference/ado-api/clone-method-ado.md)|Erstellt ein doppeltes **Recordset** -Objekt aus einem vorhandenen **Recordset** -Objekt. Gibt optional an, dass der Klon schreibgeschützt ist.|  
+|[Clear](../../../ado/reference/ado-api/clear-method-ado.md) (Deaktiviert)|Entfernt alle **Fehler** Objekte aus der **Fehler** Auflistung.|  
+|[Klonen](../../../ado/reference/ado-api/clone-method-ado.md)|Erstellt ein doppeltes **Recordset** -Objekt aus einem vorhandenen **Recordset** -Objekt. Gibt optional an, dass der Klon schreibgeschützt ist.|  
 |[Close](../../../ado/reference/ado-api/close-method-ado.md)|Schließt ein offenes Objekt und alle abhängigen Objekte.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Vergleicht zwei Lesezeichen und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|Kopiert eine Datei oder ein Verzeichnis und seinen Inhalt an einen anderen Speicherort.|  
@@ -45,7 +45,7 @@ ms.locfileid: "82747258"
 |[Execute (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Führt die Abfrage, die SQL-Anweisung oder die gespeicherte Prozedur aus, die in der **CommandText** -Eigenschaft angegeben ist.|  
 |[Ausführen (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Führt die angegebene Abfrage, die SQL-Anweisung, die gespeicherte Prozedur oder den anbieterspezifischen Text aus.|  
 |[Suchen](../../../ado/reference/ado-api/find-method-ado.md)|Durchsucht ein **Recordset** nach der Zeile, die die angegebenen Kriterien erfüllt.|  
-|[Flächen](../../../ado/reference/ado-api/flush-method-ado.md)|Erzwingt den Inhalt des verbleibenden **Streams** im ADO-Puffer für das zugrunde liegende Objekt, dem der **Stream** zugeordnet ist.|  
+|[Leerung](../../../ado/reference/ado-api/flush-method-ado.md)|Erzwingt den Inhalt des verbleibenden **Streams** im ADO-Puffer für das zugrunde liegende Objekt, dem der **Stream** zugeordnet ist.|  
 |[get_OLEDBCommand-Methode](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Gibt den zugrunde liegenden OLEDB-Befehl zurück, wobei zuerst alle Parameterinformationen weitergegeben werden, die für den ADO-Befehl an den OLEDB-Befehl festgelegt|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Gibt ein **Recordset** zurück, dessen Zeilen die Dateien und Unterverzeichnisse in dem von diesem **Datensatz**dargestellten Verzeichnis darstellen.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Gibt alle oder einen Teil von, den Inhalt eines großen **Textfelds** oder eines Binärdaten Feld Objekts zurück.|  

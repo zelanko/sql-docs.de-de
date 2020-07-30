@@ -1,5 +1,5 @@
 ---
-title: OLE DB-Typunterstützung für Tabellenwertparameter | Microsoft-Dokumentation
+title: Unterstützung für Tabellenwert Parameter-Typen (Native Client OLE DB-Anbieter)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df6f0f8b0b550d1dc128073707eb78d6de8fdd01
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fd9c434ea94c2861f0031aadc2ead229b31d743f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013027"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246770"
 ---
-# <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB-Typunterstützung für Tabellenwertparameter
+# <a name="ole-db-table-valued-parameter-type-support-native-client-ole-db-provider"></a>OLE DB Typunterstützung für Tabellenwert Parameter (Native Client OLE DB Provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In diesem Thema wird die OLE DB-Typunterstützung für Tabellenwertparameter beschrieben.  

@@ -1,5 +1,5 @@
 ---
-title: Tabellenwertparameter (OLE DB) | Microsoft-Dokumentation
+title: Tabellenwert Parameter (Native Client OLE DB-Anbieter)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,18 +14,19 @@ ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 674c52724484890dd385e76f1eb73d0c901a7b88
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 40fe9932ca65af3087b8bcccc569adc2e0451952
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012984"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331872"
 ---
-# <a name="table-valued-parameters-ole-db"></a>Tabellenwertparameter (OLE DB)
+# <a name="table-valued-parameters--in-sql-server-native-client-ole-db"></a>Tabellenwert Parameter in SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In diesem Abschnitt wird die Unterstützung für Tabellenwertparameter in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter beschrieben. Weitere Übersichts Informationen finden Sie unter [Tabellenwert Parameter &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md). Ein Beispiel finden Sie unter [Verwenden von Tabellenwertparametern (OLE DB)](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Derzeit können Sie mehrzeilige Daten an den Server als Parameter an eine Prozedur mit Parametersätzen senden (der DBPARAMS-Parameter in **ICommand::Execute**). Bei Parametersätzen muss jedes Element des Satzes in einer separaten Remoteprozeduranforderung (Remote Procedure Call, RPC) an den Server gesendet werden. Tabellenwertparameter stellen eine ähnliche Funktionalität bereit, bieten jedoch eine bessere Integration mit dem Server. Dadurch werden die Anzahl von RPC-Anforderungen reduziert und setbasierte Vorgänge auf dem Server aktiviert.  
   
  Tabellenwert Parameter werden im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter als OLE DB- **Rowset** Rowsetobjekte unterstützt. Ein **Rowset** beliebiges Rowsetobjekt kann vom Consumer (d. h. die Client Anwendung, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider verwendet) als Platzhalter für Tabellenwert Parameter-Parameter bereitgestellt werden. Tabellenwertparameter werden wie andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Parametertypen behandelt. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt Erstellungs-, Ermittlungs-, Spezifizierungs-, Bindungs- und Schemaschnittstellen zur Verfügung.  

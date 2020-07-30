@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00b33a9fa92dd6ec86cbac5a939fe593725bc091
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 74d3cc347d14a1d02ae5953b7762513b252493e6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749217"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242880"
 ---
 # <a name="ado-enumerated-constants"></a>ADO – Enumerationskonstanten
 Um das Debuggen zu unterstützen, listet die ADO-Enumerationen einen Wert für jede Konstante auf. Dieser Wert ist jedoch rein beratend und kann sich von einem Release von ADO zu einem anderen ändern. Der Code sollte nur vom Namen und nicht vom tatsächlichen Wert der einzelnen Enumerationskonstanten abhängen.  
   
-|||  
+|Konstante|Beschreibung|  
 |-|-|  
 |[ADCPROP_ASYNCTHREADPRIORITY_ENUM](../../../ado/reference/ado-api/adcprop-asyncthreadpriority-enum.md)|Gibt für ein **Recordset** RDS-Recordsetobjekt die Ausführungs Priorität des asynchronen Threads an, der Daten abruft.|  
 |[ADCPROP_AUTORECALC_ENUM](../../../ado/reference/ado-api/adcprop-autorecalc-enum.md)|Gibt an, wann der **MSDataShape** -Anbieter aggregierte und berechnete Spalten in einem hierarchischen **Recordset**neu berechnet.|  

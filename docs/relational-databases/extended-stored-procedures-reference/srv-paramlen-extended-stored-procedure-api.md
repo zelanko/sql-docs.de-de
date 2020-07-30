@@ -1,5 +1,6 @@
 ---
 title: srv_paramlen (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation
+description: Erfahren Sie, wie srv_paramlen in der API für erweiterte gespeicherte Prozeduren die Daten Länge eines Aufrufparameters für eine remote gespeicherte Prozedur zurückgibt.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55d9c6bf2e64509872faf02fa653499a28efb300
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e76d1f4a68d0c15d1f0a0b33627d18ade97669cf
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756719"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248418"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen (API für erweiterte gespeicherte Prozeduren)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ n
  *n*  
  Gibt die Anzahl der Parameter an. Der erste Parameter ist 1.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  Die tatsächliche Länge der Parameterdaten in Byte. Wenn es keinen *n*-ten Parameter gibt, oder wenn es keine remote gespeicherte Prozedur gibt, wird –1 zurückgegeben. Wenn der *n*-te Parameter NULL ist, wird 0 zurückgegeben.  
   
  Diese Funktion gibt die folgenden Werte zurück, wenn der-Parameter einem der folgenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] System Datentypen entspricht.  
@@ -72,7 +73,7 @@ n
   
  \* tatsächlicher *len*-Wert = Länge von Mehrbyte-Zeichenfolgen (cch)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Parameter einer remote gespeicherten Prozedur haben eine tatsächliche und eine maximale Datenlänge. Bei Standarddatentypen fester Länge, die keine Nullwerte zulassen, ist die tatsächliche Länge mit der maximalen Länge identisch. Bei Datentypen variabler Länge können die Längen unterschiedlich sein. Ein als **varchar(30)** deklarierter Parameter kann beispielsweise über Daten verfügen, die nur 10 Byte lang sind. Die tatsächliche Länge des Parameters ist 10, die maximale Länge jedoch 30. Die **srv_paramlen**-Funktion ruft die tatsächliche Datenlänge einer remote gespeicherten Prozedur in Byte ab. Zum Abrufen der maximalen Datenlänge eines Parameters verwenden Sie **srv_parammaxlen**.  
   
  Wenn eine remote gespeicherte Prozedur mit Parametern aufgerufen wird, werden die Parameter entweder mit ihrem Namen oder mit ihrer Position übergeben (unbenannt). Werden beim Aufruf einer remote gespeicherten Prozedur einige Parameter über ihren Namen und andere über ihre Position übergeben, so tritt ein Fehler auf. Der SRV_RPC Handler wird immer noch aufgerufen, wird jedoch so angezeigt, als ob keine Parameter vorhanden wären und **srv_rpcparams** 0 zurückgibt.  

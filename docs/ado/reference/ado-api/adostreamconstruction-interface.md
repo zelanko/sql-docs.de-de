@@ -15,26 +15,26 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c120667a0ce279ea03922adf487f58c1fdc92de
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 75af8d899c4fb0b97f4ee09795888ef773999b60
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747059"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242810"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction-Schnittstelle
 Die **adostreamconstruction** -Schnittstelle wird verwendet, um **ein ADO-Streamobjekt** aus einem OLE DB **IStream** -Objekt in einer C/C++-Anwendung zu erstellen.  
   
 ## <a name="properties"></a>Eigenschaften  
   
-|||  
+|Eigenschaft|BESCHREIBUNG|  
 |-|-|  
-|[Stream-Eigenschaft](../../../ado/reference/ado-api/stream-property.md)|Lesen/Schreiben Ruft ein OLE DB **Stream** -Objekt ab oder legt es fest.|  
+|[Stream](../../../ado/reference/ado-api/stream-property.md)|Lesen/Schreiben Ruft ein OLE DB **Stream** -Objekt ab oder legt es fest.|  
   
 ## <a name="methods"></a>Methoden  
  Keine.  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -68,7 +68,7 @@ adoStrConstruct->put_Stream(pUnk);
 ## <a name="requirements"></a>Anforderungen  
  **Version:** ADO 2,0 oder eine höhere Version  
   
- **Bibliothek:** "MSADO15. dll  
+ **Bibliothek:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   

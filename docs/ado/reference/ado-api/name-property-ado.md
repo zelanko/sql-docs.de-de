@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38846bcb832df7cc535d35d8f07fb636f2db37f7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 368def89951e7d0eacca9b999b647abd949c3b10
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762421"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243231"
 ---
 # <a name="name-property-ado"></a>Name-Eigenschaft (ADO)
 Gibt den Namen eines Objekts an.  
@@ -41,12 +41,18 @@ Gibt den Namen eines Objekts an.
  Sie können die **Name** -Eigenschaft eines Objekts durch einen Ordinalverweis abrufen, nach dem Sie direkt auf das Objekt über den Namen verweisen können. Wenn z. b `rstMain.Properties(20).Name` `Updatability` . ergibt, können Sie anschließend auf diese Eigenschaft als verweisen `rstMain.Properties("Updatability")` .  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Field-Objekt](../../../ado/reference/ado-api/field-object.md)|  
-|[Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)|[Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+        [Field-Objekt](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)  
+        [Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für Attribute und namens Eigenschaften (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Beispiel für Attribute und namens Eigenschaften (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

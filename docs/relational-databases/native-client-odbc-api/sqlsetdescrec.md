@@ -13,11 +13,12 @@ ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 785c5f308745f93070dae4ca5a5e7355e8359764
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b51fce31e0fb94348eb20bab4d507cf842fd1fe9
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012408"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332189"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "86012408"
 |*Untertyp*|Ignoriert|Für Datensätze des Typs SQL_DATETIME oder SQL_INTERVAL wird es auf SQL_DESC_DATETIME_INTERVAL_CODE festgelegt.|  
 |*Länge*|SQL_DESC_OCTET_LENGTH|Die Länge des Typnamens des Tabellenwertparameters. Kann SQL_NTS sein, wenn der Typname NULL-termininiert ist, oder Null (0), wenn der Typname des Tabellenwertparameters nicht erforderlich ist.|  
 |*Genauigkeit*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
-|*Skalierung*|SQL_DESC_SCALE|Nicht verwendet. Dieser Parameter sollte 0 (null) sein.|  
+|*Skalieren*|SQL_DESC_SCALE|Nicht verwendet. Dieser Parameter sollte 0 (null) sein.|  
 |*DataPtr*|SQL_DESC_DATA_PTR in APD|SQL_CA_SS_TYPE_NAME<br /><br /> Dies ist ein optionaler Parameter für gespeicherte Prozeduren, und NULL kann angegeben werden, wenn er nicht erforderlich ist. Dieser Parameter muss für SQL-Anweisungen angegeben werden, die keine Prozeduraufrufe sind.<br /><br /> *DataPtr* dient auch als eindeutiger Wert, der von der Anwendung verwendet werden kann, um diesen Tabellenwert Parameter zu identifizieren, wenn die Variable Zeilen Bindung verwendet wird.|  
 |*Stringlengthptr*|SQL_DESC_OCTET_LENGTH_PTR|SQL_DESC_OCTET_LENGTH_PTR<br /><br /> Bei einem Tabellenwertparameter ist dies die Anzahl der zu übertragenden Zeilen oder SQL_DATA_AT_EXEC. Dies ist ein Zeiger auf einen Wert, der die Anzahl der Zeilen enthält, die mit SQLExecDirect übertragen werden sollen.|  
 |*"Indikatorptr"*|SQL_DESC_INDICATOR_PTR|SQL_DESC_INDICATOR_PTR|  
@@ -45,8 +46,8 @@ ms.locfileid: "86012408"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>SQLSetDescRec-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Die für Datums-/Uhrzeittypen zulässigen Werte lauten wie folgt:  
   
-||*Typ*|*Untertyp*|*Länge*|*Genauigkeit*|*Skalierung*|  
-|-|------------|---------------|--------------|-----------------|-------------|  
+| attribute | *Typ* | *Untertyp* | *Länge* | *Genauigkeit* | *Skalieren* |
+| --------- | ------ | --------- | -------- | ----------- | ------- |
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
 |date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  

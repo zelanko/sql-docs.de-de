@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68572a642333e4e9c2c334cd7680b96b0cacced3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cc5d48ab323dd3e75ba40f406ec88505957153c7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760376"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242770"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Gibt an, wie ein Befehls Argument interpretiert werden soll.  
@@ -51,9 +51,17 @@ Gibt an, wie ein Befehls Argument interpretiert werden soll.
 |Adoerums. CommandType. TableDirect|  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[CommandType-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Requery-Methode](../../../ado/reference/ado-api/requery-method.md)||
+
+:::row:::
+    :::column:::
+        [CommandType-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)  
+        [Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+    :::column-end:::
+    :::column:::
+        [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+        [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+    :::column-end:::
+    :::column:::
+        [Requery-Methode](../../../ado/reference/ado-api/requery-method.md)  
+    :::column-end:::
+:::row-end:::

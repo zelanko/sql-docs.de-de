@@ -1,5 +1,6 @@
 ---
 title: srv_rpcdb (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation
+description: Erfahren Sie, wie srv_rpcdb in der API für erweiterte gespeicherte Prozeduren die Daten Bank namens Komponente für die aktuelle remote gespeicherte Prozedur zurückgibt.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d52bfd22-7a7c-4ab0-af65-df96ff359e6f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38c989a2108a8a877159e9dd5b5c6cffd52ce885
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0dbc2b25db5eedb4e48db2e4053952f5c52517c9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755904"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248286"
 ---
 # <a name="srv_rpcdb-extended-stored-procedure-api"></a>srv_rpcdb (API für erweiterte gespeicherte Prozeduren)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,10 +50,10 @@ SRV_PROC * srvproc,int *len );
  *Nest*  
  Ist ein Zeiger auf eine **int**-Variable, die die Länge des Datenbanknamens empfängt. Wenn *len* NULL ist, wird die Länge des Datenbanknamens nicht zurückgegeben.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  Ein DBCHAR-Zeiger auf die NULL-terminierte Zeichenfolge für den Datenbanknamensteil der aktuellen remote gespeicherten Prozedur. Wenn keine aktuelle remote gespeicherte Prozedur vorhanden ist, wird NULL zurückgegeben, und der *len*-Parameter wird auf –1 gesetzt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Funktion gibt nur die Datenbankkomponente des Objektnamens der remote gespeicherten Prozedur zurück. Sie schließt die optionalen Spezifizierer für Besitzer, den remote gespeicherten Prozedurnamen und die Nummer der remote gespeicherten Prozedur nicht ein.  
   
 > [!IMPORTANT]  

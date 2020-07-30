@@ -20,15 +20,15 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32858f6e508ef0a7de2b981dc17379d7be7fa4c7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 1940c42143eb2a1b4112eb2dea789196938e18ed
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84941028"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397127"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Gibt Statistiken zu Arbeitsauslastungsgruppen sowie die aktuelle Konfiguration der Arbeitsauslastungsgruppen im Arbeitsspeicher zurück. Diese Sicht kann mit sys.dm_resource_governor_resource_pools verknüpft werden, um den Ressourcenpoolnamen abzurufen.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "84941028"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|ID der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|  
-|Name|**sysname**|Name der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|  
+|name|**sysname**|Name der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|  
 |pool_id|**int**|ID des Ressourcenpools. Lässt keine NULL-Werte zu.|  
 |external_pool_id|**int**|**Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br /> ID des externen Ressourcenpools. Lässt keine NULL-Werte zu.|  
 |statistics_start_time|**datetime**|Uhrzeit, zu der die Statistikauflistung für die Arbeitsauslastungsgruppe zurückgesetzt wurde. Lässt keine NULL-Werte zu.|  
@@ -77,7 +77,7 @@ ms.locfileid: "84941028"
  Erfordert die `VIEW SERVER STATE`-Berechtigung.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys. dm_resource_governor_resource_pools &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
  [sys. resource_governor_workload_groups &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  

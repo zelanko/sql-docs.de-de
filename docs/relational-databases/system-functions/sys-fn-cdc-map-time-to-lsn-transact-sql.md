@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a3cd283f09263d4f36f0f4e2cfd4a18767dd614e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bba5095587b8ddbb4c06d3334ad60e16cb2f5e35
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898367"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395739"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **"**<relational_operator>**"** {größte kleiner als | größte kleiner als oder gleich | kleinste größer als | kleinste größer als oder gleich}  
+ **"**<relational_operator>**"** {größte kleiner als das größte kleiner als oder gleich kleinste größer als das \| \| \| kleinste größer als oder gleich.  
  Wird verwendet, um einen eindeutigen LSN-Wert in der **cdc.lsn_time_mapping** -Tabelle mit zugeordnetem **tran_end_time** -Wert zu identifizieren, der der Beziehung entspricht, wenn er mit dem Wert *tracking_time* verglichen wird.  
   
  *relational_operator* ist **nvarchar(30)**  
@@ -60,7 +60,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ## <a name="return-type"></a>Rückgabetyp  
  **binary(10)**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Das folgende Szenario veranschaulicht, wie **sys.fn_cdc_map_time_lsn** verwendet werden kann, um datetime-Bereiche LSN-Bereichen zuzuordnen. Angenommen, ein Consumer möchte täglich Änderungsdaten extrahieren. In diesem Fall interessiert sich der Consumer nur für die Änderungen an einem bestimmten Tag bis einschließlich Mitternacht. Die Untergrenze des Zeitbereichs wäre bis Mitternacht des vorangehenden Tags (nicht einschließlich Mitternacht). Die Obergrenze wäre bis einschließlich Mitternacht des bestimmten Tags. Im folgenden Beispiel wird gezeigt, wie Sie die Funktion **sys.fn_cdc_map_time_to_lsn** verwenden können, um diesen zeitbasierten Bereich dem LSN-basierten Bereich zuzuordnen, der von den Change Data Capture-Enumerationsfunktionen benötigt wird, um alle Änderungen innerhalb dieses Bereichs zurückzugeben.  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  
