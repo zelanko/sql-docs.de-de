@@ -12,15 +12,15 @@ ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a5f3e4f421fbe169d5acb049e5a91ce5ffa3612
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 013a6bcbba5e7647db1bec04204f8e8fec710c16
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627548"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396090"
 ---
 # <a name="syspdw_database_mappings-transact-sql"></a>sys. pdw_database_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Ordnet die **database_id**s der Datenbanken dem physischen Namen zu, der auf Computeknoten verwendet wird, und stellt die **Prinzipal-ID** des Daten Bank Besitzers im System bereit. Verknüpfen Sie **sys. pdw_database_mappings** mit **sys.-Datenbanken** und **sys. pdw_nodes_pdw_physical_databases**.  
   

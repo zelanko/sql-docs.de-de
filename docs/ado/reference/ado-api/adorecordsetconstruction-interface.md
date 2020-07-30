@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 23ee532329e8104d3a0e02c9547d9ca7813b42a2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747088"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242820"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction-Schnittstelle
 Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Recordset** -Objekt aus einem OLE DB Rowsetobjekt in einer C/C++-Anwendung zu erstellen. **Rowset**  
@@ -29,7 +29,7 @@ Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Re
   
 ## <a name="properties"></a>Eigenschaften  
   
-|||  
+|Eigenschaft|BESCHREIBUNG|  
 |-|-|  
 |[Kapitel](../../../ado/reference/ado-api/chapter-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB **Kapitel** Objekt aus/für dieses ADO- **Recordset** -Objekt ab oder legt es fest.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB **RowPosition** -Objekt von/für dieses ADO- **Recordset** -Objekt ab oder legt es fest.|  
@@ -38,7 +38,7 @@ Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Re
 ## <a name="methods"></a>Methoden  
  Keine.  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -71,10 +71,10 @@ Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Re
   
  Sie können auch ein ADO- **Recordset** -Objekt aus einem OLE DB **Kapitel** oder einem **RowPosition** -Objekt erstellen.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Version:** ADO 2,0 und höher  
   
- **Bibliothek:** "MSADO15. dll  
+ **Bibliothek:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
