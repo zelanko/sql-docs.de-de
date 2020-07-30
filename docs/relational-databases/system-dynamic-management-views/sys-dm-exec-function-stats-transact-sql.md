@@ -18,15 +18,15 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02cff18af9c0824d7f28e5685f5fc63a0bf45128
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25ec8e19343d707fefdda9049428280b1dfddb80
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821218"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396779"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Gibt aggregierte Leistungsstatistiken für zwischengespeicherte Funktionen zurück. Die Sicht gibt eine Zeile für jeden zwischengespeicherten Funktionsplan zurück, und die Lebensdauer der Zeile ist so lange, wie die Funktion zwischengespeichert bleibt. Wenn eine Funktion aus dem Cache entfernt wird, wird die entsprechende Zeile aus dieser Sicht gelöscht. Zu diesem Zeitpunkt wird ein Leistungsstatistik-SQL-Ablaufverfolgungsereignis ausgelöst, das **sys.dm_exec_query_stats** entspricht. Gibt Informationen zu skalaren Funktionen zurück, einschließlich in-Memory-Funktionen und CLR-Skalarfunktionen. Gibt keine Informationen zu Tabellenwert Funktionen zurück.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82821218"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Datenbank-ID, in der sich die Funktion befindet.|  
 |**object_id**|**int**|Objekt-ID der Funktion.|  
-|**type**|**char (2)**|Objekttyp: FN = skalare Wert Funktionen|  
+|**type**|**char(2)**|Objekttyp: FN = skalare Wert Funktionen|  
 |**type_desc**|**nvarchar(60)**|Beschreibung des Objekt Typs: SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|Dies kann verwendet werden, um mit Abfragen in **sys. dm_exec_query_stats** zu korrelieren, die in dieser Funktion ausgeführt wurden.|  
 |**plan_handle**|**varbinary(64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit der dynamischen Verwaltungssicht **sys.dm_exec_cached_plans** verwendet werden.<br /><br /> Ist immer 0x000, wenn eine nativ kompilierte Funktion eine Speicher optimierte Tabelle abfragt.|  

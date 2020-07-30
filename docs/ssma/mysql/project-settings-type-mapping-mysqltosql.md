@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138326"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396560"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Projekteinstellungen (Typzuordnung) (MySqlToSql)
 Mit den Projekteinstellungen für die Typzuordnung können Sie Standardtypmappings für das SSMA-Projekt festlegen.  
@@ -33,7 +33,7 @@ Dabei handelt es sich um den MySQL-Datentyp, der dem Datentyp der Zieldatenbank 
 ##### <a name="target-type"></a>Zieltyp  
 Der Datentyp der Zieldatenbank für den angegebenen MySQL-Datentyp.  
   
-##### <a name="add"></a>Add  
+##### <a name="add"></a>Hinzufügen  
 Klicken Sie hier, um der Zuordnungsliste einen Datentyp hinzuzufügen.  
   
 ##### <a name="edit"></a>Bearbeiten  
@@ -48,9 +48,8 @@ Klicken Sie hier, um die Liste Typzuordnung auf die SSMA-Standardwerte zurückzu
 ## <a name="type-mappings"></a>Typzuordnungen  
 Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datentypen.  
   
-|||  
+|MySQL-Datentyp|SQL Server-Datentyp|  
 |-|-|  
-|**MySQL-Datentyp**|**SQL Server-Datentyp**|  
 |BIGINT|BIGINT|  
 |bigint [*.. 255]|BIGINT|  
 |BINARY|Binär [1]|  
@@ -86,18 +85,18 @@ Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datent
 |datetime|datetime2 [0]|  
 |dec|Decimal|  
 |Dez [*... 65]|Dezimalzahl [*] [0]|  
-|Dez [*... 65] [\*.. 4.30|Dezimalzahl [*]\*[]|  
+|Dez [*... 65] [ \* .. 4.30|Dezimalzahl [*] [ \* ]|  
 |Decimal|Decimal|  
 |Dezimalzahl [*.. 65]|Dezimalzahl [*] [0]|  
-|Dezimalzahl [*.. 65] [\*.. 4.30|Dezimalzahl [*]\*[]|  
+|Dezimalzahl [*.. 65] [ \* .. 4.30|Dezimalzahl [*] [ \* ]|  
 |double|float [53]|  
 |double precision|float [53]|  
-|doppelte Genauigkeit [*. 255] [\*.. 4.30|numerisch [*]\*[]|  
-|Double [*. 255] [\*.. 4.30|numerisch [*]\*[]|  
+|doppelte Genauigkeit [*. 255] [ \* .. 4.30|numerisch [*] [ \* ]|  
+|Double [*. 255] [ \* .. 4.30|numerisch [*] [ \* ]|  
 |fixed|NUMERIC|  
-|korrigiert [*.. 65] [\*.. 4.30|numerisch [*]\*[]|  
+|korrigiert [*.. 65] [ \* .. 4.30|numerisch [*] [ \* ]|  
 |float|float [24]|  
-|float [*. 255] [\*.. 4.30|numerisch [*]\*[]|  
+|float [*. 255] [ \* .. 4.30|numerisch [*] [ \* ]|  
 |float [*. 53]|float [53]|  
 |INT|INT|  
 |int [*.. 255]|INT|  
@@ -132,13 +131,13 @@ Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datent
 |NCHAR [2.. 255]|NCHAR [*]|  
 |NUMERIC|NUMERIC|  
 |numerisch [*.. 65]|numerisch [*] [0]|  
-|numerisch [*.. 65] [\*.. 4.30|numerisch [*]\*[]|  
+|numerisch [*.. 65] [ \* .. 4.30|numerisch [*] [ \* ]|  
 |NVARCHAR|nvarchar [1]|  
 |nvarchar [0.. 1]|nvarchar [1]|  
 |nvarchar [2.. 4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
 |real|float [53]|  
-|Real [*. 255] [\*.. 4.30|numerisch [*]\*[]|  
+|Real [*. 255] [ \* .. 4.30|numerisch [*] [ \* ]|  
 |serial|BIGINT|  
 |SMALLINT|SMALLINT|  
 |smallint [*.. 255]|SMALLINT|  
@@ -156,18 +155,18 @@ Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datent
 |nicht signiertes bigint [*. 255]|BIGINT|  
 |nicht signierte Dec|Decimal|  
 |nicht signierte Dec [*.. 65]|Dezimalzahl [*] [0]|  
-|nicht signierte Dec [*.. 65] [\*.. 4.30|Dezimalzahl [*]\*[]|  
+|nicht signierte Dec [*.. 65] [ \* .. 4.30|Dezimalzahl [*] [ \* ]|  
 |Dezimaltrennzeichen ohne Vorzeichen|Decimal|  
 |unsigniertes Dezimaltrennzeichen [*. 65]|Dezimalzahl [*] [0]|  
-|unsigniertes Dezimaltrennzeichen [*. 65] [\*.. 4.30|Dezimalzahl [*]\*[]|  
+|unsigniertes Dezimaltrennzeichen [*. 65] [ \* .. 4.30|Dezimalzahl [*] [ \* ]|  
 |Double ohne Vorzeichen|float [53]|  
 |doppelte Genauigkeit ohne Vorzeichen|float [53]|  
-|doppelte Genauigkeit ohne Vorzeichen [*.. 255] [\*.. 4.30|numerisch [*]\*[]|  
-|Ganzzahl ohne Vorzeichen Double [*.. 255] [\*.. 4.30|numerisch [*]\*[]|  
+|doppelte Genauigkeit ohne Vorzeichen [*.. 255] [ \* .. 4.30|numerisch [*] [ \* ]|  
+|Ganzzahl ohne Vorzeichen Double [*.. 255] [ \* .. 4.30|numerisch [*] [ \* ]|  
 |nicht signiertes Fixed|NUMERIC|  
-|nicht signiertes festes [*.. 65] [\*.. 4.30|numerisch [*]\*[]|  
+|nicht signiertes festes [*.. 65] [ \* .. 4.30|numerisch [*] [ \* ]|  
 |Ganzzahl ohne Vorzeichen float|float [24]|  
-|Ganzzahl ohne Vorzeichen float [*.. 255] [\*.. 4.30|numerisch [*]\*[]|  
+|Ganzzahl ohne Vorzeichen float [*.. 255] [ \* .. 4.30|numerisch [*] [ \* ]|  
 |Ganzzahl ohne Vorzeichen float [*.. 53]|float [53]|  
 |unsigned int|BIGINT|  
 |Ganzzahl ohne Vorzeichen int [*.. 255]|BIGINT|  
@@ -177,9 +176,9 @@ Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datent
 |nicht signiertes mediumschlag [*. 255]|INT|  
 |nicht signierte numerische Werte|NUMERIC|  
 |unsignierter numerischer Wert [*.. 65]|numerisch [*] [0]|  
-|unsignierter numerischer Wert [*.. 65] [\*.. 4.30|numerisch [*]\*[]|  
+|unsignierter numerischer Wert [*.. 65] [ \* .. 4.30|numerisch [*] [ \* ]|  
 |Ganzzahl ohne Vorzeichen Real|float [53]|  
-|Ganzzahl ohne Vorzeichen Real [*. 255 [[\*... 4.30|numerisch [*]\*[]|  
+|Ganzzahl ohne Vorzeichen Real [*. 255 [[ \* ... 4.30|numerisch [*] [ \* ]|  
 |smallint ohne Vorzeichen|INT|  
 |smallint ohne Vorzeichen [*. 255]|INT|  
 |nicht signiertes tinyint|TINYINT|  
@@ -194,7 +193,7 @@ Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datent
 |Jahr [2.. 2]|SMALLINT|  
 |Jahr [4.. 4]|SMALLINT|  
   
-##### <a name="add"></a>Add  
+##### <a name="add"></a>Hinzufügen  
 Klicken Sie hier, um der Zuordnungsliste einen Datentyp hinzuzufügen.  
   
 ##### <a name="edit"></a>Bearbeiten  

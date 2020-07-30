@@ -22,15 +22,15 @@ ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e7754da5821f3531ac8db359ae95668681f94b0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3d0f955bbb373c48f55b9769485354050c2c86a3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636064"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396749"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Entfernt eine oder mehrere benutzerdefinierte Funktionen aus der aktuellen Datenbank. Benutzerdefinierte Funktionen werden mithilfe von [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) erstellt und mithilfe von [ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md) geändert.  
   
