@@ -19,15 +19,15 @@ ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7208cc1ce83ce639cc6d832468bcd85a60cf6ac8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f0a331ba23c92f84615284dab9440d85a1c1f577
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110941"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394103"
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Greift im selben Resultset auf Daten in einer vorherigen Zeile zu, ohne dass ein Selbstjoin ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] verwendet wird. LAG ermöglicht den Zugriff auf eine Zeile mit einem bestimmten physischen Offset vor der aktuellen Zeile. Verwenden Sie diese analytische Funktion in einer SELECT-Anweisung, um Werte in der aktuellen Zeile mit Werten in einer vorherigen Zeile zu vergleichen.  
   

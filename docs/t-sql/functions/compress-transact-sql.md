@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e42349b93666071e389e080e200591f70a2517e9
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6edda04e2520ec915a6c4767751130f091668e85
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111064"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394295"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Diese Funktion komprimiert den Eingabeausdruck mit dem GZIP-Algorithmus. Die Funktion gibt ein Bytearray vom Typ **varbinary(max)** zurück.
   

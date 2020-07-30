@@ -21,15 +21,15 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e90e93d0c56d96cc88b5be0eeed8680bf29c83cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 484ae60390202e09625166a266c3972d927086f9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834113"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395145"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Enthält Informationen zu den Lauf Zeit Ausführungs Statistik-Informationen für die Abfrage.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "82834113"
 |**min_log_bytes_used**|**bigint**|Die Mindestanzahl von Bytes im Daten Bank Protokoll, die vom Abfrageplan innerhalb des Aggregations Intervalls verwendet werden.<br/>**Hinweis:** Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
 |**max_log_bytes_used**|**bigint**|Maximale Anzahl von Bytes im Daten Bank Protokoll, die vom Abfrageplan innerhalb des Aggregations Intervalls verwendet werden.<br/>**Hinweis:** Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
 |**stdev_log_bytes_used**|**float**|Standard Abweichung der Anzahl von Bytes im Daten Bank Protokoll, das von einem Abfrageplan verwendet wird, innerhalb des Aggregations Intervalls.<br/>**Hinweis:** Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
-|**avg_tempdb_space_used**|**float**|Durchschnittliche Anzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
-|**last_tempdb_space_used**|**bigint**|Die letzte Anzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
-|**min_tempdb_space_used**|**bigint**|Die Mindestanzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
-|**max_tempdb_space_used**|**bigint**|Maximale Anzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
-|**stdev_tempdb_space_used**|**float**|Anzahl der Seiten, die Standardabweichung für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
+|**avg_tempdb_space_used**|**float**|Durchschnittliche Anzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**last_tempdb_space_used**|**bigint**|Die letzte Anzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**min_tempdb_space_used**|**bigint**|Die Mindestanzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**max_tempdb_space_used**|**bigint**|Maximale Anzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**stdev_tempdb_space_used**|**float**|Anzahl der Seiten, die Standardabweichung für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**avg_page_server_io_reads**|**float**|Die durchschnittliche Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis:** Azure SQL Data Warehouse gibt Azure SQL-Datenbank, Mi (nicht Hyperscale), immer NULL (0) zurück.|
 |**last_page_server_io_reads**|**bigint**|Die letzte Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis:** Azure SQL Data Warehouse gibt Azure SQL-Datenbank, Mi (nicht Hyperscale), immer NULL (0) zurück.|
 |**min_page_server_io_reads**|**bigint**|Minimale Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis:** Azure SQL Data Warehouse gibt Azure SQL-Datenbank, Mi (nicht Hyperscale), immer NULL (0) zurück.|
@@ -116,7 +116,7 @@ Erfordert die `VIEW DATABASE STATE`-Berechtigung.
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Abfragespeicher gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
  [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)   
   

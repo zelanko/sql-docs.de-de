@@ -12,23 +12,23 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: b103ff109c946262367467673da0bf9c8ef8f5eb
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 491b4d2dcbd84bd1f53d44716f457686d277d25f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85011434"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393930"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys. workload_management_workload_groups (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
  Gibt Details zu Arbeits Auslastungs Gruppen zurück.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|
 |group_id|**int**|Eindeutige ID der Arbeitsauslastungsgruppe Lässt keine NULL-Werte zu.||
-|Name|**sysname**|Name der Arbeitsauslastungsgruppe. Muss für die-Instanz eindeutig sein.  Lässt keine NULL-Werte zu.||
+|name|**sysname**|Name der Arbeitsauslastungsgruppe. Muss für die-Instanz eindeutig sein.  Lässt keine NULL-Werte zu.||
 |importance|**nvarchar(128)**|Die relative Wichtigkeit einer Anforderung in dieser Arbeits Auslastungs Gruppe und zwischen Arbeits Auslastungs Gruppen für freigegebene Ressourcen. Lässt keine NULL-Werte zu.|niedrig, below_normal, normal (Standard), above_normal, hoch||
 |min_percentage_resource|**tinyint**|Garantierte Menge an Ressourcen für Anforderungen in der Arbeits Auslastungs Gruppe. Ressourcen werden nicht für andere Arbeits Auslastungs Gruppen freigegeben. Lässt keine NULL-Werte zu.||
 |cap_percentage_resource|**tinyint**|Feste Obergrenze für die Ressourcen Belegung in Prozent für Anforderungen in der Arbeits Auslastungs Gruppe. Begrenzt die maximale Anzahl von Ressourcen, die der angegebenen Ebene zugeordnet sind. Der zulässige Bereich für den Wert ist 1 bis 100.||

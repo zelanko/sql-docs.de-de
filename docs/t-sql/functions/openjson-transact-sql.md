@@ -17,16 +17,16 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 28a61eb05b015be7eee85a7376a3c0ce84cac27f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 27f83649fc0549854fa131bf1a859f0c20ebf65c
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112860"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394789"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 **OPENJSON** ist eine Tabellenwertfunktion, die JSON-Text analysiert und Objekte und Eigenschaften aus der JSON-Eingabe als Zeilen und Spalten zurückgibt. Das heißt, dass **OPENJSON** eine Rowsetansicht eines JSON-Dokuments bereitstellt. Sie können die Spalten im Rowset und die JSON-Eigenschaftspfade zum Auffüllen der Spalten angeben. Da **OPENJSON** einen Satz von Zeilen zurückgibt, können Sie **OPENJSON** in der `FROM`-Klausel einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung nutzen, genauso wie Sie jede Tabelle, Ansicht oder Tabellenwertfunktion verwenden können.  
   

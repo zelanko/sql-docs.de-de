@@ -18,15 +18,15 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f015625f168693da0c3c204ca85cbee1beb5d897
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 65b65c0ff721742c1bccbd6998d358797bd6d10b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152133"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393949"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Gibt die Anzahl der Zeilen sowie den zugeordneten und verwendeten Speicherplatz für eine bestimmte Tabelle, eine indizierte Sicht oder eine [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Warteschlange in der aktuellen Datenbank bzw. den zugeordneten und verwendeten Speicherplatz für die gesamte Datenbank an.  
   
@@ -97,7 +97,7 @@ Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Date
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**bleiben**|**varchar (18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
-|**Daten**|**varchar (18)**|Gesamter für Daten verwendeter Speicherplatz.|  
+|**data**|**varchar (18)**|Gesamter für Daten verwendeter Speicherplatz.|  
 |**index_size**|**varchar (18)**|Gesamter für Indizes verwendeter Speicherplatz.|  
 |**genutzt**|**varchar (18)**|Gesamter für Objekte in der Datenbank zugeordneter, aber noch nicht verwendeter Speicherplatz.|  
   
@@ -109,7 +109,7 @@ Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Date
 |**database_size**|**varchar (18)**|Die Größe der aktuellen Datenbank in Megabyte. **database_size** enthält sowohl Daten-als auch Protokolldateien.|  
 |**nicht zugewiesener Speicherplatz**|**varchar (18)**|Speicherplatz in der Datenbank, der nicht für Datenbankobjekte zugeordnet wurde.|  
 |**bleiben**|**varchar (18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
-|**Daten**|**varchar (18)**|Gesamter für Daten verwendeter Speicherplatz.|  
+|**data**|**varchar (18)**|Gesamter für Daten verwendeter Speicherplatz.|  
 |**index_size**|**varchar (18)**|Gesamter für Indizes verwendeter Speicherplatz.|  
 |**genutzt**|**varchar (18)**|Gesamter für Objekte in der Datenbank zugeordneter, aber noch nicht verwendeter Speicherplatz.|  
   
@@ -120,7 +120,7 @@ Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Date
 |**name**|**nvarchar(128)**|Name des Objekts, für das Informationen zur Speicherverwendung angefordert wurden.<br /><br /> Der Schemaname des Objekts wird nicht zurückgegeben. Wenn der Schema Name erforderlich ist, verwenden Sie die dynamischen Verwaltungs Sichten [sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) oder [sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) , um entsprechende Größen Informationen zu erhalten.|  
 |**Streitigkeiten**|**char (20)**|Anzahl der Zeilen in der Tabelle. Wenn es sich bei dem angegebenen Objekt um eine [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Warteschlange handelt, wird in dieser Spalte die Anzahl der in der Warteschlange vorhandenen Nachrichten angegeben.|  
 |**bleiben**|**varchar (18)**|Gesamtmenge des reservierten Speicherplatzes für *objname*.|  
-|**Daten**|**varchar (18)**|Gesamtmenge des Speicherplatzes, der von Daten in *objname*verwendet wird.|  
+|**data**|**varchar (18)**|Gesamtmenge des Speicherplatzes, der von Daten in *objname*verwendet wird.|  
 |**index_size**|**varchar (18)**|Gesamtmenge des Speicherplatzes, der von Indizes in *objname*verwendet wird.|  
 |**genutzt**|**varchar (18)**|Gesamtmenge des für *objname* reservierten Speicherplatzes, aber noch nicht verwendet.|  
  
@@ -137,7 +137,7 @@ Speicherplatz, der von Tabellen in der Datenbank verwendet wird: (dieses Results
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**bleiben**|**varchar (18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
-|**Daten**|**varchar (18)**|Gesamter für Daten verwendeter Speicherplatz.|  
+|**data**|**varchar (18)**|Gesamter für Daten verwendeter Speicherplatz.|  
 |**index_size**|**varchar (18)**|Gesamter für Indizes verwendeter Speicherplatz.|  
 |**genutzt**|**varchar (18)**|Gesamter für Objekte in der Datenbank zugeordneter, aber noch nicht verwendeter Speicherplatz.|
 
@@ -157,7 +157,7 @@ Wenn *objname* weggelassen wird, ist der Wert von oneresultset 1 und *include_to
 |**database_size**|**varchar (18)**|Die Größe der aktuellen Datenbank in Megabyte. **database_size** enthält sowohl Daten-als auch Protokolldateien. Wenn die Datenbank über eine MEMORY_OPTIMIZED_DATA Dateigruppe verfügt, schließt dies die Gesamtgröße aller Prüf Punkt Dateien in der Datei Gruppe auf dem Datenträger ein.|
 |**nicht zugewiesener Speicherplatz**|**varchar (18)**|Speicherplatz in der Datenbank, der nicht für Datenbankobjekte zugeordnet wurde. Wenn die Datenbank über eine MEMORY_OPTIMIZED_DATA Dateigruppe verfügt, schließt dies die Gesamtgröße der Prüf Punkt Dateien auf dem Datenträger ein, deren Status in der Datei Gruppe vorab erstellt wurde.|  
 |**bleiben**|**varchar (18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
-|**Daten**|**varchar (18)**|Gesamter für Daten verwendeter Speicherplatz.|  
+|**data**|**varchar (18)**|Gesamter für Daten verwendeter Speicherplatz.|  
 |**index_size**|**varchar (18)**|Gesamter für Indizes verwendeter Speicherplatz.|  
 |**genutzt**|**varchar (18)**|Gesamter für Objekte in der Datenbank zugeordneter, aber noch nicht verwendeter Speicherplatz.|
 |**xtp_precreated**|**varchar (18)**|Gesamtgröße der Prüf Punkt Dateien, für die der Status vorab erstellt wurde, in KB. Dies zählt in Bezug auf den nicht zugeordneten Speicherplatz in der Datenbank als Ganzes. Gibt NULL zurück, wenn die Datenbank nicht über eine memory_optimized_data-Datei Gruppe mit mindestens einem Container verfügt. *Diese Spalte ist nur enthalten, wenn @include_total_xtp_storage = 1*.| 
@@ -249,9 +249,9 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;Transact-SQL-&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [sys. allocation_units &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [sys. Indexes &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys. index_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. Partitions &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -13,15 +13,15 @@ ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48614fa846903b2104ee27f00dc57cc154adef92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ef24d6eeb1739d40fb88eccd2fb18220ef6fea9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68131985"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395709"
 ---
 # <a name="views"></a>Sichten
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Eine Sicht ist eine virtuelle Tabelle, deren Inhalt durch eine Abfrage definiert wird. Wie bei einer Tabelle besteht auch eine Sicht aus einem Satz benannter Spalten und Zeilen mit Daten. Wenn sie nicht indiziert ist, liegt eine Sicht jedoch nicht als gespeicherter Satz von Datenwerten in einer Datenbank vor. Die Zeilen und Spalten mit Daten stammen aus Tabellen, auf die in der die Sicht definierenden Abfrage verwiesen wird. Diese Datenzeilen und -spalten werden dynamisch erstellt, wenn auf die Sicht verwiesen wird.  
   
  Eine Sicht dient als Filter für die zugrunde liegenden Tabellen, auf die in der Sicht verwiesen wird. Die Abfrage, die die Sicht definiert, kann Daten aus einer oder mehreren Tabellen oder aus anderen Sichten in der aktuellen Datenbank oder anderen Datenbanken verwenden. Sie können darüber hinaus verteilte Abfragen verwenden, um Sichten zu definieren, die Daten aus mehreren heterogenen Quellen verwenden. Dies kann z. B. dann hilfreich sein, wenn Sie Daten mit gleicher Struktur kombinieren möchten, die sich jedoch auf unterschiedlichen Servern befinden, wobei auf jedem Server die Daten für einen anderen Bereich Ihrer Organisation gespeichert sind.  

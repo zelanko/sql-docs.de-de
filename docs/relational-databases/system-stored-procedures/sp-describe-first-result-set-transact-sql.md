@@ -18,15 +18,15 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e3696f537cc538e011d3d037e82e54ed892da35
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831181"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394375"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Gibt die Metadaten für das erste mögliche Resultset des [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches zurück. Gibt ein leeres Resultset zurück, wenn vom Batch keine Ergebnisse zurückgegeben werden. Löst einen Fehler [!INCLUDE[ssDE](../../includes/ssde-md.md)] aus, wenn der die Metadaten für die erste Abfrage, die durch Ausführen einer statischen Analyse ausgeführt wird, nicht ermitteln kann. Die dynamische Verwaltungs Sicht [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) gibt die gleichen Informationen zurück.  
   
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Ergebnis: \< unbekannter Spalten Name> **varchar (20) NULL**  
+ Ergebnis: \<Unknown Column Name> **varchar (20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Spaltenname mit durch Aliasing erzwungenem identischem Spaltennamen  
  Analog zum vorherigen, die Namen der Spalten sind jedoch aufgrund von Spaltenaliasing identisch.  

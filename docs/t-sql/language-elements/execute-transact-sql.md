@@ -31,15 +31,15 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4e9130ac3a22da474b7ce576969e26bd9205ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2d53fe144263d9e3a3b91d6f0e929076a7043b3f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917936"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395307"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Führt eine Befehlszeichenfolge oder eine Zeichenfolge in einem [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batch oder einem der folgenden Module aus: gespeicherte Systemprozedur, benutzerdefinierte gespeicherte Prozedur, gespeicherte CLR-Prozedur, benutzerdefinierte Skalarwertfunktion oder erweiterte gespeicherte Prozedur. Die EXECUTE-Anweisung kann zum Senden von Pass-Through-Befehlen an Verbindungsserver verwendet werden. Darüber hinaus kann der Kontext, in dem eine Zeichenfolge oder ein Befehl ausgeführt wird, explizit festgelegt werden. Metadaten für das Resultset können mit den WITH RESULT SETS-Optionen definiert werden.
   

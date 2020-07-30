@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d70d9599dda2f71edff911ad42821fdf101b524c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637816"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363171"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat (Always On-Verfügbarkeitsgruppen)
 
@@ -62,7 +62,7 @@ In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] wurde `READ_WRITE_R
 
 Standardmäßig ist die Umleitung von Lese-/Schreibverbindungen für ein Replikat nicht festgelegt. Wie ein sekundäres Replikat Verbindungsanforderungen behandelt, richtet sich danach, ob das Zulassen von Verbindungen für das sekundäre Replikat festgelegt ist, und nach den `ApplicationIntent`-Einstellung in der Verbindungszeichenfolge. Die folgende Tabelle zeigt, wie ein sekundäres Replikat basierend auf `SECONDARY_ROLE (ALLOW CONNECTIONS = )` und `ApplicationIntent` Verbindungen behandelt.
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|Wert vom Typ `ApplicationIntent`|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/> Standard|Verbindungen werden nicht hergestellt|Verbindungen werden nicht hergestellt|Verbindungen werden erfolgreich hergestellt<br/>Lesevorgänge werden erfolgreich durchgeführt<br/>Schreibvorgänge werden nicht durchgeführt|
 |`ApplicationIntent=ReadOnly`|Verbindungen werden nicht hergestellt|Verbindungen werden erfolgreich hergestellt|Verbindungen werden erfolgreich hergestellt
@@ -73,7 +73,7 @@ Die oben gezeigte Tabelle veranschaulicht das Standardverhalten – dies ist das
 
 Nachdem Sie die Umleitung von Lese-/Schreibverbindungen festgelegt haben, behandelt das Replikat Verbindungsanforderungen anders. Das Verbindungsverhalten richtet sich weiterhin nach den Einstellungen für `SECONDARY_ROLE (ALLOW CONNECTIONS = )` und `ApplicationIntent`. Die folgende Tabelle zeigt, wie ein sekundäres Replikat mit festgelegtem `READ_WRITE_ROUTING` basierend auf `SECONDARY_ROLE (ALLOW CONNECTIONS = )` und `ApplicationIntent` Verbindungen behandelt.
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|Wert vom Typ `ApplicationIntent`|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/>Standard|Verbindungen werden nicht hergestellt|Verbindungen werden nicht hergestellt|Verbindungen werden an das primäre Replikat geleitet|
 |`ApplicationIntent=ReadOnly`|Verbindungen werden nicht hergestellt|Verbindungen werden erfolgreich hergestellt|Verbindungen werden erfolgreich hergestellt
