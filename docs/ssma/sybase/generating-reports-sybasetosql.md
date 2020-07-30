@@ -13,31 +13,30 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: a63ad1dad1a1dcab28e2a8ffb5c96d9564210475
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 564385c15d9877454d30892f9cce54fbca6cf802
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029136"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396389"
 ---
 # <a name="generating-reports-sybasetosql"></a>Generieren von Berichten (SybaseToSQL)
 Die Berichte bestimmter Aktivitäten, die mithilfe von Befehlen ausgeführt werden, werden in der SSMA-Konsole auf Objektstruktur Ebene generiert.  
   
 Verwenden Sie das folgende Verfahren, um Berichte zu generieren:  
   
-1.  Geben Sie den Parameter " **Write-Summary-Report-to" an** . Der zugehörige Bericht wird als Dateiname (sofern angegeben) oder in dem von Ihnen angegebenen Ordner gespeichert. Der Dateiname ist vom System vordefiniert, wie in der folgenden Tabelle ** &lt;erwähnt&gt; ** , wobei n die eindeutige Dateinummer ist, die bei jeder Ausführung desselben Befehls mit einer Ziffer schrittweise erhöht wird.  
+1.  Geben Sie den Parameter " **Write-Summary-Report-to" an** . Der zugehörige Bericht wird als Dateiname (sofern angegeben) oder in dem von Ihnen angegebenen Ordner gespeichert. Der Dateiname ist vom System vordefiniert, wie in der folgenden Tabelle erwähnt, wobei ** &lt; n &gt; ** die eindeutige Dateinummer ist, die bei jeder Ausführung desselben Befehls mit einer Ziffer schrittweise erhöht wird.  
   
     Die Berichte vis-a-vis-Befehle lauten:  
   
-    ||||  
+    |SL. Nein.|Get-Help|Berichtstitel|  
     |-|-|-|  
-    |**SL. Nein.**|**Befehl**|**Berichtstitel**|  
-    |1|generieren-Assessment-Bericht|Gutamentreport&lt;n&gt;. Basi|  
-    |2|Convert-Schema|Schemaconversionreport&lt;n&gt;. Basi|  
-    |3|Migrieren von Daten|Datamigrationreport&lt;n&gt;. Basi|  
-    |4|Convert-SQL-Anweisung|Conversqlreport&lt;n&gt;. Basi|  
-    |5|Synchronisieren-Ziel|Targetsynchronizationreport&lt;n&gt;. Basi|  
-    |6|Refresh-from-Database|Sourcedbrefreshreport&lt;n&gt;. Basi|  
+    |1|generieren-Assessment-Bericht|Gutamentreport &lt; n &gt; . Basi|  
+    |2|Convert-Schema|Schemaconversionreport &lt; n &gt; . Basi|  
+    |3|Migrieren von Daten|Datamigrationreport &lt; n &gt; . Basi|  
+    |4|Convert-SQL-Anweisung|Conversqlreport &lt; n &gt; . Basi|  
+    |5|Synchronisieren-Ziel|Targetsynchronizationreport &lt; n &gt; . Basi|  
+    |6|Refresh-from-Database|Sourcedbrefreshreport &lt; n &gt; . Basi|  
   
     > [!IMPORTANT]  
     > Ein Ausgabebericht unterscheidet sich vom Bewertungsbericht. Bei der ersten handelt es sich um einen Bericht zur Leistung eines ausgeführten Befehls, bei dem es sich um einen XML-Bericht für die programmgesteuerte Nutzung handelt.  
@@ -46,9 +45,8 @@ Verwenden Sie das folgende Verfahren, um Berichte zu generieren:
   
 2.  Geben Sie den Umfang der im Ausgabebericht gewünschten Details mithilfe der berichtsausführlichkeits-Einstellungen an:  
   
-    ||||  
+    |SL. Nein.|Befehl und Parameter|Ausgabe Beschreibung|  
     |-|-|-|  
-    |**SL. Nein.**|**Befehl und Parameter**|**Ausgabe Beschreibung**|  
     |1|Verbose = "false"|Generiert einen zusammengefassten Bericht der Aktivität.|  
     |2|Verbose = "true"|Generiert einen zusammengefassten und detaillierten Statusbericht für jede Aktivität.|  
   
@@ -57,9 +55,8 @@ Verwenden Sie das folgende Verfahren, um Berichte zu generieren:
   
 3.  Geben Sie den Umfang der von Ihnen gewünschten Details in den Fehlerberichten mithilfe der Einstellungen für die Fehlerberichterstattung an:  
   
-    ||||  
+    |SL. Nein.|Befehl und Parameter|Ausgabe Beschreibung|  
     |-|-|-|  
-    |**SL. Nein.**|**Befehl und Parameter**|**Ausgabe Beschreibung**|  
     |1|Report-Errors = "false"|Keine Details zu Fehler-/Warnungs-/Information-Meldungen.|  
     |2|Report-Errors = "true"|Ausführliche Fehler-/Warnungs-/Information-Meldungen.|  
   
@@ -87,7 +84,7 @@ Verwenden Sie das folgende Verfahren, um Berichte zu generieren:
 ```  
   
 ### <a name="synchronize-target"></a>Synchronisieren-Ziel:  
-Der Befehl " **Synchronisieren-Target** " weist einen **Report-Errors-to-Parameter auf** , der den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang angibt. Anschließend wird eine Datei namens **targetsynchronizationreport&lt;&gt;n angezeigt. XML** wird an der angegebenen Position erstellt, wobei ** &lt;n&gt; ** die eindeutige Dateinummer ist, die mit jeder Ausführung desselben Befehls mit einer Ziffer Inkrementen erhöht.  
+Der Befehl " **Synchronisieren-Target** " weist einen **Report-Errors-to-Parameter auf** , der den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang angibt. Anschließend wird eine Datei namens **targetsynchronizationreport &lt; n angezeigt &gt; . XML** wird an der angegebenen Position erstellt, wobei ** &lt; n &gt; ** die eindeutige Dateinummer ist, die mit jeder Ausführung desselben Befehls mit einer Ziffer Inkrementen erhöht.  
   
 **Hinweis:** Wenn der Ordner Pfad angegeben ist, wird der Parameter "Report-Errors-to" ein optionales Attribut für den Befehl "Synchronisieren-Ziel".  
   
@@ -115,7 +112,7 @@ Der Befehl " **Synchronisieren-Target** " weist einen **Report-Errors-to-Paramet
 -   Fehler-Skript  
   
 ### <a name="refresh-from-database"></a>Refresh-from-Database:  
-Der Befehl **Refresh-from-Database** weist einen **Report-Errors-to-Parameter auf** , der den Speicherort des Fehlerberichts für den Aktualisierungs Vorgang angibt. Anschließend wird eine Datei namens **&lt;sourcedbrefreshreport&gt;n angezeigt. XML** wird an der angegebenen Position erstellt, wobei ** &lt;n&gt; ** die eindeutige Dateinummer ist, die mit jeder Ausführung desselben Befehls mit einer Ziffer Inkrementen erhöht.  
+Der Befehl **Refresh-from-Database** weist einen **Report-Errors-to-Parameter auf** , der den Speicherort des Fehlerberichts für den Aktualisierungs Vorgang angibt. Anschließend wird eine Datei namens **sourcedbrefreshreport &lt; n angezeigt &gt; . XML** wird an der angegebenen Position erstellt, wobei ** &lt; n &gt; ** die eindeutige Dateinummer ist, die mit jeder Ausführung desselben Befehls mit einer Ziffer Inkrementen erhöht.  
   
 **Hinweis:** Wenn der Ordner Pfad angegeben ist, wird der Parameter "Report-Errors-to" ein optionales Attribut für den Befehl "Synchronisieren-Ziel".  
   

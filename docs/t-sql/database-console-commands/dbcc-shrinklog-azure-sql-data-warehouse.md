@@ -11,16 +11,16 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ddba1a36bfc1006d4e7c93d843431832fecf397
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 70b6d2237042a5d69be8e1076d72b7b0b5c87958
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484796"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396237"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
 Reduziert die Größe des Transaktionsprotokolls *anwendungsübergreifend* für die aktuelle [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Datenbank. Die Daten werden defragmentiert, um das Transaktionsprotokoll zu verkleinern. Mit der Zeit kann es sein, dass das Datenbanktransaktionsprotokoll zu viele Bestandteile hat und dadurch nicht effizient verwendet werden kann. Verwenden Sie DBCC SHRINKLOG, um diese Fragmentierung und damit auch die Protokollgröße zu verringern.
   

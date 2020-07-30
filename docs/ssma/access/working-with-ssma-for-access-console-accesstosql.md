@@ -10,12 +10,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c470cf8ea61851b80f04bce716bc7c83c54929b0
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259787"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396899"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Arbeiten mit SSMA für die Zugriffs Konsole (Access Token)
 Für den Zugriff auf Microsoft SQL Server Migration Assistant (SSMA) ist jetzt über eine Konsolenanwendung in der Befehlszeile verfügbar. Die Skriptdateien bilden die Eingabe für die Anwendung zum Ausführen der Befehle. Als Konsolenanwendung ermöglicht SSMA die Interaktion auf Skript Ebene, reduziert den Migrations Zyklen und skaliert den Migrations Aufwand.  
@@ -24,9 +24,8 @@ In diesem Abschnitt wird die Vorgehensweise zum Migrieren einer Access-Datenbank
   
 Zu den in diesem Abschnitt behandelten Themen gehören:  
   
-|||  
+|Thema|BESCHREIBUNG|  
 |-|-|  
-|**Sonder**|**Beschreibung**|  
 |[Informationen zu den ersten Schritten mit SSMA für die Zugriffs Konsole &#40;Access Token&#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|Erläutert das Verfahren zum Ausführen der Konsolenanwendung.|  
 |[Befehlszeilenoptionen in der SSMA-Konsole &#40;Access Token&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|Beschreibt die Befehlszeilenoptionen und Parameter für den Betrieb der SSMA-Konsolenanwendung.|  
 |[Erstellen von Skriptdateien &#40;Access Token&#41;](../../ssma/access/creating-script-files-accesstosql.md)|Erläutert das Erstellen einer Skriptdatei.|  
@@ -38,6 +37,6 @@ Zu den in diesem Abschnitt behandelten Themen gehören:
 |[Erstellen von Berichten &#40;Access Token&#41;](../../ssma/access/generating-reports-accesstosql.md)|Listet die Befehle zum Generieren von Berichten auf.|  
 |[Problembehandlung &#40;Access Token&#41;](../../ssma/access/troubleshooting-accesstosql.md)|Bietet kurze Informationen zum Beheben von Migrationsproblemen.|  
   
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen  
 [Ersten Schritte mit SSMA für die Zugriffs Konsole](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

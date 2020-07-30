@@ -20,15 +20,15 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f358296320ebeeefcc6004a59754ba8e8052e789
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833955"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396669"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Enthält eine Zeile für jede Namensabhängigkeit in einer benutzerdefinierten Entität in der aktuellen Datenbank. Dies umfasst Abhängigkeiten zwischen nativ kompilierten benutzerdefinierten Skalarfunktionen und anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Modulen. Eine Abhängigkeit zwischen zwei Entitäten wird erstellt, wenn eine Entität, die als *Referenzierte Entität*bezeichnet wird, in einem permanenten SQL-Ausdruck einer anderen Entität, die als *verweisende Entität*bezeichnet wird, nach Namen Wird beispielsweise in der Definition einer Sicht auf eine Tabelle verwiesen, hängt die Sicht als verweisende Entität von der Tabelle ab, der Entität, auf die verwiesen wird. Wenn die Tabelle gelöscht wird, ist die Sicht unbrauchbar.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "82833955"
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
 |Tabelle|Ja*|Ja|  
-|Ansicht|Ja|Ja|  
+|Sicht|Ja|Ja|  
 |Gefilterter Index|Ja**|Nein|  
 |Gefilterte Statistik|Ja**|Nein|  
 |Gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur***|Ja|Ja|  

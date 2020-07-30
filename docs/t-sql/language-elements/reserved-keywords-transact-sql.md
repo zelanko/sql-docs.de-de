@@ -18,15 +18,15 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 523a39498ebeae9652ded5834a5ebb73a8e90b70
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f963294781eea57c7957000d0daa1d149be3cd89
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248723"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396351"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Reservierte Schlüsselwörter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet reservierte Schlüsselwörter zum Definieren, Bearbeiten und Zugreifen auf Datenbanken. Reservierte Schlüsselwörter sind ein Bestandteil der Grammatik der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Sprache, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird, um [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Batches zu analysieren und zu verstehen. Obwohl es syntaktisch möglich ist, reservierte Schlüsselwörter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Bezeichner und Objektnamen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts zu verwenden, ist hierzu die Verwendung von Begrenzungsbezeichnern erforderlich.  
   

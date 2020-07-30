@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0022e0e740e9c4268ddf08340029c2e74a101437
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 77b0617fbaa8ea90388f40e16ed2b61cfd3bb2b8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922864"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396499"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lektion 2: Herstellen einer Verbindung von einem anderen Computer
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ Wenn Sie planen, die Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] von
     > [!NOTE]  
     > Da der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager ein Snap-In für das [!INCLUDE[msCoName](../includes/msconame-md.md)] -Verwaltungskonsolenprogramm und kein eigenständiges Programm ist, wird der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager in neueren Versionen von Windows nicht als Anwendung angezeigt. Der Dateiname enthält eine Zahl, die die Versionsnummer von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]darstellt. Mit dem Befehl „Ausführen“ können Sie den Konfigurations-Manager öffnen. Nachfolgend finden Sie die Pfade zu den letzten vier Versionen, wenn Windows auf dem Laufwerk C: installiert ist.  
   
-    |||  
+    |Version|`Path`|  
     |-|-|
     |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
     |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  

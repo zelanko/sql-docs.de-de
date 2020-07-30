@@ -19,15 +19,15 @@ ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 066020f0e7de04585bf805dfcf054b865ac7d11c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b4660d84e45ae092f97c08bd472052d8ed6a35f3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110416"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397048"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Greift im selben Resultset auf Daten in einer nachfolgenden Zeile zu, ohne dass ein Selbstjoin ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] verwendet wird. LEAD ermöglicht den Zugriff auf eine Zeile mit einem bestimmten physischen Offset nach der aktuellen Zeile. Verwenden Sie diese analytische Funktion in einer SELECT-Anweisung, um Werte in der aktuellen Zeile mit Werten in einer nachfolgenden Zeile zu vergleichen.  
   

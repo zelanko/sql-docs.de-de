@@ -18,15 +18,15 @@ ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e44526578978f336f951611ecaa316dd45b11193
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b0a383d6a9405d0aa80b8f0c1e4f3c2bc98c9667
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113039"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396929"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Gibt einen **datetimeoffset**-Wert für die angegebenen Argumente für Datum und Zeit zurück. Die Genauigkeit des Rückgabewerts wird vom precision-Argument angegeben, und Offsets werden von den Offsetargumenten bestimmt.  
   
