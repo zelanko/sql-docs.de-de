@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ebf6f52e4c2ac9cc4875db26e633457915c0a5e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9e3d58ae93285accc9cf7a71e43579be4f54b21d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762939"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242460"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk-Methode (ADO)
 Fügt Daten an ein großes Textfeld oder ein binäres [Datenfeld](../../../ado/reference/ado-api/field-object.md)oder an ein [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt an.  
@@ -59,11 +59,16 @@ object.AppendChunk Data
  Der erste **AppendChunk** -Befehl für ein **Parameter** Objekt schreibt Daten in den-Parameter, wobei alle vorhandenen Daten überschrieben werden. Nachfolgende **AppendChunk** -Aufrufe für ein **Parameter** Objekt fügen vorhandenen Parameter Daten hinzu. Bei einem **AppendChunk** -Befehl, der einen NULL-Wert übergibt, werden alle Parameterdaten verworfen.  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[Field-Objekt](../../../ado/reference/ado-api/field-object.md)|[Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Field-Objekt](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für AppendChunk und GetChunk-Methoden (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [Beispiel für AppendChunk und GetChunk-Methoden (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   

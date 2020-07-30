@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca6449308f9683bccf55e58d9cec6d5d5a97a59e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105334"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247134"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -28,7 +28,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Die IIf-Funktion nimmt drei Argumente an: IIf (\<Condition \<>, then Branch \<>, Else Branch>).  
+ Die IIf-Funktion nimmt drei Argumente an: IIf ( \<condition> , \<then branch> , \<else branch> ).  
   
  *Logical_Expression*  
  Eine Bedingung, die zu **true** (1) oder **false** (0) ausgewertet wird. Es muss sich um einen gültigen logischen Multidimensional Expressions (MDX)-Ausdruck handeln.  
@@ -63,7 +63,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER und STRICT schließen sich im Tipp gegenseitig aus. Sie können in IIF(,,) für verschiedene Ausdrücke verwendet werden.  
   
- Weitere Informationen finden Sie unter [Abfrage Hinweise der IIf-Funktion in SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540) und [Ausführungspläne und Plan Hinweise für die MDX IIf-Funktion und Case-Anweisung](https://go.microsoft.com/fwlink/?LinkId=269565).  
+ Weitere Informationen finden Sie unter [Abfrage Hinweise der IIf-Funktion in SQL Server Analysis Services 2008](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008) und [Ausführungspläne und Plan Hinweise für die MDX IIf-Funktion und Case-Anweisung](https://go.microsoft.com/fwlink/?LinkId=269565).  
   
 ## <a name="examples"></a>Beispiele  
  Die folgende Abfrage zeigt eine einfache Verwendung von **IIf** in einem berechneten Measure, um einen von zwei unterschiedlichen Zeichen folgen Werten zurückzugeben, wenn das Measure Internet Sales Amount größer oder kleiner als $10000 ist:  

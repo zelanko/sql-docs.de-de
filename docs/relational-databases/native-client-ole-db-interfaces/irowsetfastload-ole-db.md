@@ -1,5 +1,5 @@
 ---
-title: IRowsetFastLoad (OLE DB) | Microsoft-Dokumentation
+title: IRowsetFastLoad (Native Client OLE DB-Anbieter) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,14 @@ ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66af5f470d5b2d32fbdae29d08b92bccb6e1b101
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c38cd2ea900da079ffe6e9aac75ce967abc4ffee
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011166"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243921"
 ---
-# <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
+# <a name="irowsetfastload-native-client-ole-db-provider"></a>IRowsetFastLoad (Native Client OLE DB-Anbieter)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Die **IRowsetFastLoad**-Schnittstelle unterstützt speicherbasierte Massenkopiervorgänge in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB-Anbieter Consumer verwenden die-Schnittstelle, um schnell Daten zu einer vorhandenen Tabelle hinzuzufügen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

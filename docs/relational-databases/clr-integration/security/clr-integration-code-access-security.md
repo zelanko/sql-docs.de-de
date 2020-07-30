@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e155e9c6f0e8a85eaf7ec905f9c9b471160a9ec
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2706faaf181e609df6209758e60b2a46c87aa46
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885900"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248634"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR-Integration und Codezugriffssicherheit
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -104,14 +104,13 @@ ms.locfileid: "85885900"
 ## <a name="permission-set-summary"></a>Zusammenfassung des Berechtigungssatzes  
  Im folgenden Diagramm werden die Einschränkungen und Berechtigungen zusammengefasst, die den Berechtigungs Sätzen **Safe**, **EXTERNAL_ACCESS**und **unsichere** erteilt wurden.  
   
-|||||  
+|Funktionalität|**SAFE**|**EXTERNAL_ACCESS**|**Unsicher**|   
 |-|-|-|-|  
-||**SAFE**|**EXTERNAL_ACCESS**|**Unsicher**|  
-|**Berechtigungen für die Code Zugriffssicherheit**|Nur ausführen|Ausführen + Zugriff auf externe Ressourcen|Uneingeschränkt (einschließlich P/Invoke)|  
-|**Beschränkungen des Programmiermodells**|Ja|Ja|Keine Einschränkungen|  
-|**Überprüfbarkeit erforderlich**|Ja|Ja|Nein|  
-|**Lokaler Datenzugriff**|Ja|Ja|Ja|  
-|**Aufrufbarkeit von systemeigenem Code**|Nein|Nein |Ja|  
+|Berechtigungen für die Code Zugriffssicherheit|Nur ausführen|Ausführen + Zugriff auf externe Ressourcen|Uneingeschränkt (einschließlich P/Invoke)|  
+|Beschränkungen des Programmiermodells|Ja|Ja|Keine Einschränkungen|  
+|Überprüfbarkeit erforderlich|Ja|Ja|Nein|  
+|Lokaler Datenzugriff|Ja|Ja|Ja|  
+|Aufrufbarkeit von systemeigenem Code|Nein|Nein |Ja|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sicherheit der CLR-Integration](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

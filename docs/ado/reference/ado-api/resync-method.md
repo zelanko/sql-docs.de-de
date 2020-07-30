@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54c92fad618ffaad9b22a8ed73b287c0a5716959
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6907bfa9b83370074db9d9e2e522ed49d2c96e7e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756309"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243211"
 ---
 # <a name="resync-method"></a>Resync-Methode
 Aktualisiert die Daten im aktuellen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt oder der [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekts aus der zugrunde liegenden Datenbank.  
@@ -37,10 +37,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Parameter  
  *AffectRecords*  
- Dies ist optional. Ein [affectenum](../../../ado/reference/ado-api/affectenum.md) -Wert, der bestimmt, wie viele Datensätze von der **Resync** -Methode betroffen sind. Der Standardwert ist " **adaffectall**". Dieser Wert ist mit der **Resync** -Methode der **Fields** -Auflistung eines **Datensatz** -Objekts nicht verfügbar.  
+ Optional. Ein [affectenum](../../../ado/reference/ado-api/affectenum.md) -Wert, der bestimmt, wie viele Datensätze von der **Resync** -Methode betroffen sind. Der Standardwert ist " **adaffectall**". Dieser Wert ist mit der **Resync** -Methode der **Fields** -Auflistung eines **Datensatz** -Objekts nicht verfügbar.  
   
  *ResyncValues*  
- Dies ist optional. Ein [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) -Wert, der angibt, ob zugrunde liegende Werte überschrieben werden. Der Standardwert ist **adResyncAllValues**.  
+ Optional. Ein [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) -Wert, der angibt, ob zugrunde liegende Werte überschrieben werden. Der Standardwert ist **adResyncAllValues**.  
   
 ## <a name="remarks"></a>Bemerkungen  
   
@@ -65,11 +65,16 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  Bei der **erneuten Synchronisierung** werden die **Status** Werte von **Feld** Objekten nur dann geändert, wenn beim Aufruf der **erneuten Synchronisierung** ein Fehler auftritt. Wenn das Feld z. b. nicht mehr vorhanden ist, gibt der Anbieter einen entsprechenden **Status** Wert für das **Feld** Objekt zurück, z. b. **adfielddoesnotexist**. Zurückgegebene **Status** Werte können logisch in dem Wert der **Status** -Eigenschaft kombiniert werden.  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für eine Resync-Methode (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Beispiel für eine Resync-Methode (VC + +)](../../../ado/reference/ado-api/resync-method-example-vc.md)   

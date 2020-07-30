@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c0d75e8f9fb6d11315e327edd6f7d064c13e063
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aeeb7bcbb79231a2d6ed842459355a09e2889e4f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759496"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243171"
 ---
 # <a name="update-method"></a>Update-Methode
 Speichert alle Änderungen, die Sie an der aktuellen Zeile eines [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts vornehmen, oder die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekts.  
@@ -35,10 +35,10 @@ record.Fields.Update
   
 #### <a name="parameters"></a>Parameter  
  *Fields*  
- Dies ist optional. Eine **Variante** , die einen einzelnen Namen darstellt, oder ein **Variant** -Array, das Namen oder Ordinalpositionen der Felder darstellt, die Sie ändern möchten.  
+ Optional. Eine **Variante** , die einen einzelnen Namen darstellt, oder ein **Variant** -Array, das Namen oder Ordinalpositionen der Felder darstellt, die Sie ändern möchten.  
   
  *Werte*  
- Dies ist optional. Eine **Variante** , die einen einzelnen Wert darstellt, oder ein **Variant** -Array, das Werte für das Feld bzw. die Felder im neuen Datensatz darstellt.  
+ Optional. Eine **Variante** , die einen einzelnen Wert darstellt, oder ein **Variant** -Array, das Werte für das Feld bzw. die Felder im neuen Datensatz darstellt.  
   
 ## <a name="remarks"></a>Bemerkungen  
   
@@ -67,11 +67,16 @@ record.Fields.Update
  Beispielsweise werden mit der **Delete** -Methode gelöschte Felder sofort zum Löschen markiert, bleiben jedoch in der Auflistung. Die **Update** -Methode muss aufgerufen werden, um diese Felder tatsächlich aus der Auflistung des Anbieters zu löschen.  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für Update-und CancelUpdate-Methoden (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Beispiel für Update-und CancelUpdate-Methoden (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

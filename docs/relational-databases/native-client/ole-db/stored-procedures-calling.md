@@ -19,13 +19,14 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56831c5cde9a446cb5ecef49d925eea39db5e354
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4a08e03bf4fed86d7da0f341e6bf2b74d0ef84a9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010434"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243868"
 ---
-# <a name="stored-procedures---calling"></a>Aufrufen von gespeicherte Prozeduren
+# <a name="stored-procedures---calling-in-sql-server-native-client"></a>Gespeicherte Prozeduren-Aufrufen von in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Eine gespeicherte Prozedur kann 0 oder mehr Parameter haben. Sie kann auch einen Wert zurückgeben: Wenn Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter verwenden, können die Parameter für eine gespeicherte Prozedur wie folgt übermittelt werden:  
@@ -95,7 +96,7 @@ ms.locfileid: "86010434"
   
  {[**? =**]**aufrufen**_procedure_name_[**(**[*Parameter*] [**,**[*Parameter*]]... **)**]}  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  

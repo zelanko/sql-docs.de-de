@@ -1,5 +1,5 @@
 ---
-title: Isolationsstufen (OLE DB) | Microsoft-Dokumentation
+title: Isolations Stufen (Native Client OLE DB-Anbieter) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d1e68f237641d3418542f8e565258be6c398887
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d828877a5b1f685eb5e00c5649acd50fd925aabc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005795"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87240123"
 ---
-# <a name="isolation-levels-ole-db"></a>Isolationsstufen (OLE DB)
+# <a name="isolation-levels-native-client-ole-db-provider"></a>Isolations Stufen (Native Client OLE DB-Anbieter)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clients können Transaktionsisolationsstufen für eine Verbindung steuern. Zum Steuern der Transaktions Isolationsstufe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet der Consumer des Native Client OLE DB Anbieters Folgendes:  

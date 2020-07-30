@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_get_rpo_duration (Transact-SQL) | Microsoft-Dokumentation
+description: Verwenden Sie sys. sp_rda_get_rpo_duration, um die Anzahl der Stunden der migrierten Daten zu erhalten, die SQL Server in einer Stagingtabelle speichert, um die Azure-Remote Datenbank vollständig wiederherzustellen.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e903c3b41a8a191122fdf8499ee6b4c82dbe308
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 3e50e313e49b955b40497f28b2cb9265cf7717e3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053008"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243352"
 ---
 # <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sys. sp_rda_get_rpo_duration (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,7 +48,7 @@ sp_rda_get_rpo_duration @durationinhours output
 ## <a name="permissions"></a>Berechtigungen    
  Erfordert db_owner Berechtigungen.    
     
-## <a name="remarks"></a>Hinweise    
+## <a name="remarks"></a>Bemerkungen    
  Ändern Sie den Wert, indem Sie [sys. sp_rda_set_rpo_duration &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)ausführen.    
     
 ## <a name="see-also"></a>Weitere Informationen    

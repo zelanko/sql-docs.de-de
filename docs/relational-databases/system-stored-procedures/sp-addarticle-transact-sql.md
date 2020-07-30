@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 35aa02236cf3e8a11d03539042ccdaf9049dd8f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9201e8f74a62315132743c36669892b7bd3cc90f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731707"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394755"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -114,7 +114,7 @@ sp_addarticle [ @publication = ] 'publication'
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**NONE**|Es wird keine Aktion ausgeführt.|  
-|**CALL sp_MSins_**<br /> **_Tabelle_** (Standard)<br /><br /> - oder -<br /><br /> **CALL custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>sp_Msins_*Tabelle* </strong> enthält den Namen der Ziel Tabelle anstelle des *_table* Teils des Parameters. Wenn *destination_owner* angegeben wird, wird es dem Ziel Tabellennamen vorangestellt. Beispielsweise wäre der-Parameter für die **ProductCategory** -Tabelle, deren Besitzer das **Produktions** Schema auf dem Abonnenten ist, `CALL sp_MSins_ProductionProductCategory` . Bei einem Artikel in einer Peer-zu-Peer-Replikations Topologie wird *_table* mit einem GUID-Wert angefügt. Das Angeben von *custom_stored_procedure* wird für Update Abonnenten nicht unterstützt.|  
+|**CALL sp_MSins_**<br /> **_Tabelle_** (Standard)<br /><br /> Oder<br /><br /> **CALL custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>sp_Msins_*Tabelle* </strong> enthält den Namen der Ziel Tabelle anstelle des *_table* Teils des Parameters. Wenn *destination_owner* angegeben wird, wird es dem Ziel Tabellennamen vorangestellt. Beispielsweise wäre der-Parameter für die **ProductCategory** -Tabelle, deren Besitzer das **Produktions** Schema auf dem Abonnenten ist, `CALL sp_MSins_ProductionProductCategory` . Bei einem Artikel in einer Peer-zu-Peer-Replikations Topologie wird *_table* mit einem GUID-Wert angefügt. Das Angeben von *custom_stored_procedure* wird für Update Abonnenten nicht unterstützt.|  
 |**SQL** oder NULL|Repliziert eine INSERT-Anweisung. Für die INSERT-Anweisung werden Werte für alle in dem Artikel veröffentlichten Spalten bereitgestellt. Der folgende Befehl wird bei Einfügungen repliziert:<br /><br /> `INSERT INTO <table name> VALUES (c1value, c2value, c3value, ..., cnvalue)`|  
   
  Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
@@ -124,8 +124,8 @@ sp_addarticle [ @publication = ] 'publication'
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**NONE**|Es wird keine Aktion ausgeführt.|  
-|**CALLsp_MSdel_**<br /> **_Tabelle_** (Standard)<br /><br /> - oder -<br /><br /> **CALL custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>sp_MSdel_*Tabelle* </strong> enthält den Namen der Ziel Tabelle anstelle des *_table* Teils des Parameters. Wenn *destination_owner* angegeben wird, wird es dem Ziel Tabellennamen vorangestellt. Beispielsweise wäre der-Parameter für die **ProductCategory** -Tabelle, deren Besitzer das **Produktions** Schema auf dem Abonnenten ist, `CALL sp_MSdel_ProductionProductCategory` . Bei einem Artikel in einer Peer-zu-Peer-Replikations Topologie wird *_table* mit einem GUID-Wert angefügt. Das Angeben von *custom_stored_procedure* wird für Update Abonnenten nicht unterstützt.|  
-|**XCALL sp_MSdel_**<br /> **_glaub_**<br /><br /> - oder -<br /><br /> **XCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die XCALL-Parameter akzeptiert. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
+|**CALLsp_MSdel_**<br /> **_Tabelle_** (Standard)<br /><br /> Oder<br /><br /> **CALL custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>sp_MSdel_*Tabelle* </strong> enthält den Namen der Ziel Tabelle anstelle des *_table* Teils des Parameters. Wenn *destination_owner* angegeben wird, wird es dem Ziel Tabellennamen vorangestellt. Beispielsweise wäre der-Parameter für die **ProductCategory** -Tabelle, deren Besitzer das **Produktions** Schema auf dem Abonnenten ist, `CALL sp_MSdel_ProductionProductCategory` . Bei einem Artikel in einer Peer-zu-Peer-Replikations Topologie wird *_table* mit einem GUID-Wert angefügt. Das Angeben von *custom_stored_procedure* wird für Update Abonnenten nicht unterstützt.|  
+|**XCALL sp_MSdel_**<br /> **_Tabelle_**<br /><br /> Oder<br /><br /> **XCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die XCALL-Parameter akzeptiert. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
 |**SQL** oder NULL|Repliziert eine DELETE-Anweisung. Für die DELETE-Anweisung werden alle Spaltenwerte der Primärschlüssel bereitgestellt. Der folgende Befehl wird bei Löschungen repliziert:<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
  Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
@@ -135,10 +135,10 @@ sp_addarticle [ @publication = ] 'publication'
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**NONE**|Es wird keine Aktion ausgeführt.|  
-|**CALL sp_MSupd_**<br /> **_glaub_**<br /><br /> - oder -<br /><br /> **CALL custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels.|  
-|**MCALL sp_MSupd_**<br /> **_glaub_**<br /><br /> - oder -<br /><br /> **MCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die MCALL-Parameter akzeptiert. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>sp_Msupd_*Tabelle* </strong> enthält den Namen der Ziel Tabelle anstelle des *_table* Teils des Parameters. Wenn *destination_owner* angegeben wird, wird es dem Ziel Tabellennamen vorangestellt. Beispielsweise wäre der-Parameter für die **ProductCategory** -Tabelle, deren Besitzer das **Produktions** Schema auf dem Abonnenten ist, `MCALL sp_MSupd_ProductionProductCategory` . Bei einem Artikel in einer Peer-zu-Peer-Replikations Topologie wird *_table* mit einem GUID-Wert angefügt. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
-|**SCALL sp_MSupd_**<br /> **_Tabelle_** (Standard)<br /><br /> - oder -<br /><br /> **SCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die SCALL-Parameter akzeptiert. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>sp_Msupd_*Tabelle* </strong> enthält den Namen der Ziel Tabelle anstelle des *_table* Teils des Parameters. Wenn *destination_owner* angegeben wird, wird es dem Ziel Tabellennamen vorangestellt. Beispielsweise wäre der-Parameter für die **ProductCategory** -Tabelle, deren Besitzer das **Produktions** Schema auf dem Abonnenten ist, `SCALL sp_MSupd_ProductionProductCategory` . Bei einem Artikel in einer Peer-zu-Peer-Replikations Topologie wird *_table* mit einem GUID-Wert angefügt. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
-|**XCALL sp_MSupd_**<br /> **_glaub_**<br /><br /> - oder -<br /><br /> **XCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die XCALL-Parameter akzeptiert. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
+|**CALL sp_MSupd_**<br /> **_Tabelle_**<br /><br /> Oder<br /><br /> **CALL custom_stored_procedure_name**|Eine gespeicherte Prozedur wird aufgerufen, die auf dem Abonnenten ausgeführt werden soll. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels.|  
+|**MCALL sp_MSupd_**<br /> **_Tabelle_**<br /><br /> Oder<br /><br /> **MCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die MCALL-Parameter akzeptiert. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>sp_Msupd_*Tabelle* </strong> enthält den Namen der Ziel Tabelle anstelle des *_table* Teils des Parameters. Wenn *destination_owner* angegeben wird, wird es dem Ziel Tabellennamen vorangestellt. Beispielsweise wäre der-Parameter für die **ProductCategory** -Tabelle, deren Besitzer das **Produktions** Schema auf dem Abonnenten ist, `MCALL sp_MSupd_ProductionProductCategory` . Bei einem Artikel in einer Peer-zu-Peer-Replikations Topologie wird *_table* mit einem GUID-Wert angefügt. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
+|**SCALL sp_MSupd_**<br /> **_Tabelle_** (Standard)<br /><br /> Oder<br /><br /> **SCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die SCALL-Parameter akzeptiert. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. *custom_stored_procedure* ist der Name einer vom Benutzer erstellten gespeicherten Prozedur. <strong>sp_Msupd_*Tabelle* </strong> enthält den Namen der Ziel Tabelle anstelle des *_table* Teils des Parameters. Wenn *destination_owner* angegeben wird, wird es dem Ziel Tabellennamen vorangestellt. Beispielsweise wäre der-Parameter für die **ProductCategory** -Tabelle, deren Besitzer das **Produktions** Schema auf dem Abonnenten ist, `SCALL sp_MSupd_ProductionProductCategory` . Bei einem Artikel in einer Peer-zu-Peer-Replikations Topologie wird *_table* mit einem GUID-Wert angefügt. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
+|**XCALL sp_MSupd_**<br /> **_Tabelle_**<br /><br /> Oder<br /><br /> **XCALL custom_stored_procedure_name**|Ruft eine gespeicherte Prozedur auf, die XCALL-Parameter akzeptiert. Wenn Sie diese Methode der Replikation verwenden möchten, verwenden Sie *schema_option* , um die automatische Erstellung der gespeicherten Prozedur anzugeben, oder erstellen Sie die angegebene gespeicherte Prozedur in der Zieldatenbank jedes Abonnenten des Artikels. Die Angabe einer benutzerdefinierten gespeicherten Prozedur ist für Updateabonnenten nicht zulässig.|  
 |**SQL** oder NULL|Repliziert eine UPDATE-Anweisung. Die UPDATE-Anweisung wird für alle Spaltenwerte und für die Spaltenwerte der Primärschlüssel bereitgestellt. Der folgende Befehl wird bei Updates repliziert:<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
 > [!NOTE]  
@@ -155,7 +155,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**keine**|Verwendet keinen Befehl.|  
 |**delete**|Löscht Daten aus der Zieltabelle vor dem Anwenden der Momentaufnahme. Wird der Artikel horizontal gefiltert, werden nur Daten in Spalten gelöscht, die von der Filterklausel angegeben werden. Wird von Oracle-Verlegern nicht unterstützt, wenn ein horizontaler Filter definiert wurde.|  
 |**Drop** (Standard)|Entfernt die Zieltabelle.|  
-|**TRUNCATE**|Schneidet die Zieltabelle ab. Gilt nicht für ODBC- oder OLE DB-Abonnenten.|  
+|**truncate**|Schneidet die Zieltabelle ab. Gilt nicht für ODBC- oder OLE DB-Abonnenten.|  
   
 `[ @filter_clause = ] 'filter_clause'`Eine Einschränkungs Klausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungs Klausel eingeben, lassen Sie das Schlüsselwort aus. *filter_clause* ist vom Typ **ntext**und hat den Standardwert NULL. Weitere Informationen finden Sie unter [Filtern von veröffentlichten Daten](../../relational-databases/replication/publish/filter-published-data.md).  
   
@@ -306,7 +306,7 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addarticle** wird bei der Momentaufnahme-oder Transaktions Replikation verwendet.  
   
  Standardmäßig werden bei der Replikation keine Spalten in der Quelltabelle veröffentlicht, wenn der Spaltendatentyp nicht von der Replikation unterstützt wird. Wenn Sie eine solche Spalte veröffentlichen müssen, müssen Sie [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) ausführen, um die Spalte hinzuzufügen.  
@@ -342,9 +342,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="default-schema-options"></a>Default Schema Options  
  In dieser Tabelle wird der Standardwert beschrieben, der von der Replikation festgelegt wird, wenn *schema_options* nicht vom Benutzer angegeben wird, wobei dieser Wert vom Replikationstyp (oben angezeigt) und vom Artikeltyp abhängig ist (in der ersten Spalte angezeigt).  
   
-|Artikeltyp|Replikationstyp||  
+|Artikeltyp|Transaktionsreplikation|Momentaufnahmereplikation|  
 |------------------|----------------------|------|  
-||Transaktionsreplikation|Snapshot|  
 |**aggregate schema only**|**0x01**|**0x01**|  
 |**func schema only**|**0x01**|**0x01**|  
 |**indexed view schema only**|**0x01**|**0x01**|  
@@ -366,9 +365,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="valid-schema-options"></a>Valid Schema Options  
  In dieser Tabelle werden die zulässigen Werte *schema_option* basierend auf dem Replikationstyp (oben dargestellt) und dem Artikeltyp beschrieben (in der ersten Spalte angezeigt).  
   
-|Artikeltyp|Replikationstyp||  
+|Artikeltyp|Transaktionsreplikation|Momentaufnahmereplikation|  
 |------------------|----------------------|------|  
-||Transaktionsreplikation|Snapshot|  
 |**logbased**|Alle Optionen|Alle Optionen, aber **0x02**|  
 |**logbased manualfilter**|Alle Optionen|Alle Optionen, aber **0x02**|  
 |**logbased manualview**|Alle Optionen|Alle Optionen, aber **0x02**|  
@@ -393,13 +391,13 @@ sp_addarticle [ @publication = ] 'publication'
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addarticle**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [sp_articlecolumn &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_articlefilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [sp_articleview &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [Gespeicherte Replikations Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

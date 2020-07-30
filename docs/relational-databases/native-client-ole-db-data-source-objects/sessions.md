@@ -1,5 +1,5 @@
 ---
-title: Sitzungen | Microsoft-Dokumentation
+title: Sitzungen (Native Client OLE DB-Anbieter)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,14 @@ ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecdc438e8acc180a2b9d4ff37e30432b1c1bd560
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9f75c9fec32105561ce3c07ba29aeec9b4779324
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998248"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245954"
 ---
-# <a name="sessions"></a>Sitzungen
+# <a name="sessions-native-client-ole-db-provider"></a>Sitzungen (Native Client OLE DB-Anbieter)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Sitzung stellt eine einzelne Verbindung zu einer Instanz von dar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

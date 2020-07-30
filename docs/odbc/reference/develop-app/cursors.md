@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a7484de48edaecea56fc135ca3b803875f9557c
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 2457667e374587e5e91a4c758dfbe641a0b02f78
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977777"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247120"
 ---
-# <a name="cursors"></a>Cursor
+# <a name="odbc-cursors"></a>ODBC-Cursor
 Eine Anwendung ruft Daten mit einem *Cursor*ab. Ein Cursor unterscheidet sich von einem Resultset: ein Resultset ist der Satz von Zeilen, der bestimmte Suchkriterien erfüllt, wohingegen es sich bei einem Cursor um die Software handelt, die diese Zeilen an die Anwendung zurückgibt. Der namens *Cursor,* wie er auf Datenbanken angewendet wird, stammt wahrscheinlich vom blinkende Cursor auf einem Computerterminal. Ebenso wie dieser Cursor die aktuelle Position auf dem Bildschirm anzeigt und wo die typisierten Wörter als nächstes angezeigt werden, gibt ein Cursor in einem Resultset die aktuelle Position im Resultset an und welche Zeile als nächstes zurückgegeben wird.  
   
  Das Cursor Modell in ODBC basiert auf dem Cursor Modell in eingebettetem SQL. Ein wichtiger Unterschied zwischen diesen Modellen ist die Art und Weise, wie Cursor geöffnet werden. In eingebettetem SQL muss ein Cursor explizit deklariert und geöffnet werden, bevor er verwendet werden kann. In ODBC wird ein Cursor implizit geöffnet, wenn eine Anweisung ausgeführt wird, die ein Resultset erstellt. Wenn der Cursor geöffnet wird, wird er vor der ersten Zeile des Resultsets positioniert. In eingebetteten SQL und ODBC muss ein Cursor geschlossen werden, nachdem er von der Anwendung verwendet wurde.  

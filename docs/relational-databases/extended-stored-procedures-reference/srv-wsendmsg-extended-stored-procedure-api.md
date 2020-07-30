@@ -1,5 +1,6 @@
 ---
 title: „srv_wsendmsg“ (API für die erweiterte gespeicherte Prozedur) | Microsoft-Dokumentation
+description: Erfahren Sie, wie srv_wsendmsg in der API für erweiterte gespeicherte Prozeduren eine Unicode-Nachricht an den Client senden kann.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a74e343c67f83800c21d2c9227f064aa90f29d4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0256a21d4d64df710a4720797297293cbf8a9c0e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755788"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248200"
 ---
 # <a name="srv_wsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg (API für erweiterte gespeicherte Prozeduren)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ msglen
  *Msgnum*  
  Eine 4-Byte-Meldungsnummer.  
   
- *Schweregrad*  
+ *Severity*  
  Gibt den Schweregrad des Fehlers an. Ein Schweregrad kleiner oder gleich 10 wird als Informationsmeldung betrachtet, bei einem höheren Wert handelt es sich um einen Fehler.  
   
  *Nachricht*  
@@ -67,10 +68,10 @@ msglen
  *msglen*  
  Gibt die Länge von *message*in Zeichen an.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie diese Funktion, um Meldungen in Unicode zu senden. Sie ähnelt **srv_sendmsg**, jedoch handelt es sich bei der gesendeten Meldung um eine WCHAR-Zeichenfolge und nicht um eine Zeichenfolge des Typs DBCHAR. Beachten Sie, dass die Länge der Meldung in Zeichen und nicht in Byte angegeben wird und dass *msglen* niemals SRV_NULLTERM entspricht.  
   
  In folgenden Fällen gibt die Funktion FAIL zurück:  

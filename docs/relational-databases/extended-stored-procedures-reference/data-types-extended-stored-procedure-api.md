@@ -1,5 +1,6 @@
 ---
 title: Datentypen (API für die erweiterte gespeicherte Prozedur) \| Microsoft-Dokumentation
+description: Erfahren Sie, wie die API-Datentypen für erweiterte gespeicherte Prozeduren erweitert werden können, indem Sie die SRV. h-Header Datei in das Programm einschließen.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b510e74d507cb540fa617b6c0da48c3090429192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5ff9f72c7ddec8301940cd14bbfe6086cadbd54
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679049"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244019"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Datentypen (API für erweiterte gespeicherte Prozeduren)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85679049"
 |SRVFLT4|**real**|**real**-Datentyp mit einer Länge von 4 Byte|  
 |SRVFLT8|**float**|**float**-Datentyp mit einer Länge von 8 Byte|  
 |SRVFLTN|**real** \| **float null**|**real**- oder **float**-Datentyp, NULL-Werte sind zulässig.|  
-|SRVIMAGE|**Bild**|**image**-Datentyp|  
+|SRVIMAGE|**image**|**image**-Datentyp|  
 |SRVINT1|**tinyint**|**tinyint**-Datentyp mit einer Länge von einem Byte|  
 |SRVINT2|**smallint**|**smallint**-Datentyp mit einer Länge von 2 Byte|  
 |SRVINT4|**int**|**int**-Datentyp mit einer Länge von 4 Byte|  

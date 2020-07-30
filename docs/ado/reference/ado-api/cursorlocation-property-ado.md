@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b38b11917bf5d8a3248a6c9c0a64518109d7c83
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9aa95b7633d5dfa3a484dd97289c15c5737af986
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760186"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242740"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation-Eigenschaft (ADO)
 Gibt den Speicherort des Cursor Dienstanbieter an.  
@@ -42,10 +42,15 @@ Gibt den Speicherort des Cursor Dienstanbieter an.
 >  **Verwendung von Remote Datendiensten** Bei Verwendung in einem Client seitigen **Recordset** oder **Verbindungs** Objekt kann die **Cursor Location** -Eigenschaft nur auf **adUseClient**festgelegt werden.  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

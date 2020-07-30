@@ -18,13 +18,14 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b46af0e58d433f51fe4417bfe9245a35fbe1b629
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 40196c8ec895bbf6bfc8e092e82ca8704d4f803e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009876"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243901"
 ---
-# <a name="using-large-value-types"></a>Verwenden von Datentypen mit umfangreichen Werten
+# <a name="using-large-value-types-in-sql-server-native-client"></a>Verwenden von Typen mit umfangreichen Werten in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] war für Datentypen mit umfangreichen Werten eine besondere Behandlung erforderlich. Datentypen mit hohen Werten überschreiten eine maximale Zeilengröße von 8 KB. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]in wurde ein **Max** -Spezifizierer für die Datentypen **varchar**, **nvarchar** und **varbinary** eingeführt, um das Speichern von Werten bis zu 2 ^ 31-1 Bytes zuzulassen. Tabellen Spalten und- [!INCLUDE[tsql](../../../includes/tsql-md.md)] Variablen können die Datentypen " **varchar (max)**", " **nvarchar (max)** " oder " **varbinary (max)** " angeben.  

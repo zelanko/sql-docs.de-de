@@ -9,14 +9,14 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f275c77556e8abe8932e241075b9e24e2ae5db77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289678"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243496"
 ---
-# <a name="polybase-configuration-and-security-for-hadoop"></a>PolyBase-Konfiguration und -Sicherheit für Hadoop
+# <a name="configure-polybase-hadoop-security"></a>Konfigurieren der polybase-Hadoop-Sicherheit
 
 Dieser Artikel enthält eine Referenz für verschiedene Konfigurationseinstellungen, die sich auf die APS-polybase-Konnektivität mit Hadoop auswirken. Eine exemplarische Vorgehensweise für polybase finden Sie unter [Was ist polybase](configure-polybase-connectivity-to-external-data.md)?.
 
@@ -115,7 +115,7 @@ Zum Herstellen einer Verbindung mit einem Kerberos-gesicherten Hadoop-Cluster mi
 4. Erstellen Sie ein datenbankweites Anmeldeinformationsobjekt, um die Authentifizierungsinformationen für jeden Hadoop-Benutzer anzugeben. Weitere Informationen finden Sie unter [PolyBase T-SQL-Objekte](../relational-databases/polybase/polybase-t-sql-objects.md).
 
 ## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Einrichten der Hadoop-Verschlüsselungs Zone
-Wenn Sie die Hadoop-Verschlüsselungs Zone verwenden, ändern Sie Core-Site. XML und "HDFS-Site. XML wie folgt. Geben Sie die IP-Adresse an, unter der der KMS-Dienst mit der entsprechenden Portnummer ausgeführt wird. Der Standardport für KMS in CDH ist 16000.
+Wenn Sie die Hadoop-Verschlüsselungs Zone verwenden, ändern Sie core-site.xml und hdfs-site.xml wie folgt. Geben Sie die IP-Adresse an, unter der der KMS-Dienst mit der entsprechenden Portnummer ausgeführt wird. Der Standardport für KMS in CDH ist 16000.
 
 **core-site.xml**
 ```xml

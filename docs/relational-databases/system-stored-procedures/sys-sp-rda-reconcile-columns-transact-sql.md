@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_reconcile_columns (Transact-SQL) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über sys. sp_rda_reconcile_columns. Verwenden Sie diese gespeicherte Prozedur, um Spalten in Azure-Remote Tabellen und Stretch-aktivierten SQL Server Tabellen abzustimmen.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a528609b8ab33f913a45e9bd61a1409bc3927930
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 939bc5cbe299ce144b8617391fd33d740011b08a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053047"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245747"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -52,7 +54,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert db_owner Berechtigungen.  
    
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die Azure-Remotetabelle Spalten enthält, die in der Stretch-fähigen SQL Server-Tabelle nicht mehr vorhanden sind, verhindern diese zusätzlichen Spalten nicht die normale Funktionsweise von Stretch Database. Sie können die zusätzlichen Spalten optional manuell entfernen.  
   
 ## <a name="example"></a>Beispiel  

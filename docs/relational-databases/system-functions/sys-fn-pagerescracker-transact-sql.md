@@ -1,6 +1,6 @@
 ---
 title: sys. fn_PageResCracker (Transact-SQL) | Microsoft-Dokumentation
-description: Dokumentation für die Systemfunktion sys. fn_PageResCracker.
+description: Erfahren Sie mehr über die Systemfunktion sys. fn_PageResCracker. Weitere Informationen finden Sie unter Beispiele und Anzeigen zusätzlicher Ressourcen.
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 460f1990a7020d7a57ea7ad543f3253576756d05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a48b5ba06223130a83980bf6cf8ec410bd58e5a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790429"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247579"
 ---
 # <a name="sysfn_pagerescracker-transact-sql"></a>sys. fn_PageResCracker (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
@@ -56,7 +56,7 @@ Das 8-Byte-Hexadezimal Format einer Datenbankseiten Ressource.
 |file_id|**int**|Datei-ID|  
 |page_id|**int**|Seiten-ID|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 `sys.fn_PageResCracker`wird verwendet, um die hexadezimale 8-Byte-Darstellung einer Datenbankseite in ein Rowset zu konvertieren, das die Datenbank-ID, die Datei-ID und die Seiten-ID der Seite enthält.   
 
 Sie können eine gültige Seiten Ressource aus der `page_resource` Spalte der dynamischen Verwaltungs Sicht [sys. dm_exec_requests &#40;Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) oder der [sys.sysProzesse &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) Systemansicht abrufen. Wenn eine ungültige Seiten Ressource verwendet wird, ist die Rückgabe NULL.  
