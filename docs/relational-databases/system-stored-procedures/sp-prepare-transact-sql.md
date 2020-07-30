@@ -18,15 +18,15 @@ ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e5875d4160ca3bb3e06670d02426e7b3cfe097c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 695e879b4f6eb5ab54a0d83636bcbef5f9f3c65f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832581"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396019"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
 Bereitet eine parametrisierte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung vor und gibt ein Anweisungs *handle* zur Ausführung zurück.  `sp_prepare`wird aufgerufen, indem ID = 11 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
@@ -51,7 +51,7 @@ sp_prepare handle OUTPUT, params, stmt, options
  *options*  
  Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. die *Optionen* erfordern den folgenden int-Eingabe Wert:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

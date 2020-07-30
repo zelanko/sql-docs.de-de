@@ -20,15 +20,15 @@ ms.assetid: 96515727-728b-4bea-804a-36ce915b8b75
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49a2f838010c0c1fab93e245849249f28059d405
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 07d7b449a338b953d61a4ec960bb810a73c1257f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824990"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395011"
 ---
 # <a name="syspartition_functions-transact-sql"></a>sys.partition_functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Enthält eine Zeile für jede Partitionsfunktion in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82824990"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name der Partitionsfunktion. Ist in der Datenbank eindeutig.|  
 |**function_id**|**int**|Die Partitionsfunktions.ID. Ist in der Datenbank eindeutig.|  
-|**type**|**char (2)**|Funktionstyp<br /><br /> R = Bereich|  
+|**type**|**char(2)**|Funktionstyp<br /><br /> R = Bereich|  
 |**type_desc**|**nvarchar(60)**|Funktionstyp<br /><br /> RANGE|  
 |**fanout**|**int**|Anzahl der von der Funktion erstellten Partitionen|  
 |**boundary_value_on_right**|**bit**|Für die Bereichspartitionierung.<br /><br /> 1 = Der Begrenzungswert ist im RIGHT-Bereich der Begrenzung enthalten.<br /><br /> 0 = LEFT.|  
@@ -45,11 +45,11 @@ ms.locfileid: "82824990"
 |**modify_date**|**datetime**|Datum, an dem die Funktion zuletzt mithilfe einer ALTER-Anweisung geändert wurde|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **public** -Rolle.  Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Erfordert die Mitgliedschaft in der **public** -Rolle. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Katalog Sichten für Partitions Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)   
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. partition_range_values &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
  [sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)  
   

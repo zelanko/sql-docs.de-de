@@ -10,12 +10,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: f6a2bb7e10e487d65c0fa8dfd406a30f9acd557a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b78f6ccae739b6fe70fc813959daa44adca7c22
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265526"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394875"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Befehlszeilenoptionen in der SSMA-Konsole (accesstosql)
 Microsoft bietet Ihnen einen robusten Satz von Befehlszeilenoptionen zum Ausführen und Steuern von SSMA-Aktivitäten. In den folgenden Abschnitten finden Sie weitere Details.  
@@ -25,7 +25,7 @@ Hier werden die Konsolen Befehlsoptionen beschrieben.
   
 Für den Zweck dieses Abschnitts wird der Begriff "Option" auch als "Switch" bezeichnet.  
   
-Bei den Optionen wird die Groß-/Kleinschreibung nicht beachtet,**-** und Sie kann**/** entweder mit dem Zeichen ' ' oder ' ' beginnen.  
+Bei den Optionen wird die Groß-/Kleinschreibung nicht beachtet, und Sie kann entweder mit dem **-** Zeichen ' ' oder ' ' beginnen **/** .  
   
 Wenn Optionen angegeben werden, ist es obligatorisch, die entsprechenden Optionsparameter anzugeben.  
   
@@ -117,16 +117,12 @@ Dieser optionale Schalter gibt den Ordner für die Projekt Umgebungseinstellunge
   
 `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
-||  
-|-|  
-||  
-  
 ### <a name="secure-password-option--psecurepassword"></a>Sichere Kenn Wort Option:-p/SecurePassword  
 Diese Option gibt das verschlüsselte Kennwort für Serververbindungen an. Dies unterscheidet sich von allen anderen Optionen dahin, dass kein Skript oder Hilfe in migrationsbezogenen Aktivitäten ausgeführt wird, sondern die Kenn Wort Verschlüsselung für die Serververbindungen, die im Migrationsprojekt verwendet werden, unterstützt wird.  
   
 Sie können keine andere Option oder kein anderes Kennwort für den Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie im Abschnitt [Verwalten](managing-passwords-accesstosql.md) von Kenn Wörtern.  
   
-Die folgenden unter Optionen werden für `-p/securepassword`unterstützt:  
+Die folgenden unter Optionen werden für unterstützt `-p/securepassword` :  
   
 -   Zum Hinzufügen eines Kennworts oder zum Aktualisieren eines vorhandenen Kennworts auf geschützten Speicher für eine angegebene Server-ID oder für alle Server-IDs, die in der Server Verbindungs Datei definiert sind:  
   

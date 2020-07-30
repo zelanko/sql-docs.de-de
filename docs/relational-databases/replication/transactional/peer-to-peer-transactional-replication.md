@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d85b1f3460dc55f7d6cd24420f2d86bb0f9623c2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 656b05414327e35b5aff1a982a0313835ded20a4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901242"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394652"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Peer-zu-Peer - Transaktionsreplikation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "85901242"
 ### <a name="maintenance-considerations"></a>Überlegungen in Bezug auf die Wartung  
  Für einige Aktionen muss das System in den inaktiven Status versetzt werden. Dazu müssen alle Aktivitäten an veröffentlichten Tabellen in allen Knoten beendet werden, und es muss sichergestellt werden, dass jeder Knoten alle Änderungen von allen anderen Knoten erhalten hat.  
   
-||Nur SQL Server 2005-Peers oder eine Kombination aus SQL Server 2005- und SQL Server 2008-Peers und höher|Nur SQL Server 2005-Peers oder eine Kombination aus SQL Server 2005- und SQL Server 2008-Peers und höher|SQL Server 2008-Peers und höher|SQL Server 2008-Peers und höher|  
+|Aktion|Nur SQL Server 2005-Peers oder eine Kombination aus SQL Server 2005- und SQL Server 2008-Peers und höher|Nur SQL Server 2005-Peers oder eine Kombination aus SQL Server 2005- und SQL Server 2008-Peers und höher|SQL Server 2008-Peers und höher|SQL Server 2008-Peers und höher|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
 |Hinzufügen eines Knotens zur Topologie|Zwei Knoten in vollständiger Topologie: Stilllegung nicht erforderlich. Verwenden Sie `sync_type = 'initialize with backup'`.|Mehr als zwei Knoten: Stilllegung erforderlich.|`sync_type = 'replication support only'`: Stilllegung erforderlich.|`sync_type = 'initialize with backup'` und `'initialize from lsn'`: Stilllegung nicht erforderlich.|  
   

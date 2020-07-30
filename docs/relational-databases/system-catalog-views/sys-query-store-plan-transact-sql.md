@@ -21,15 +21,15 @@ ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc78decc0c911376b61cc429ba538be11cbaded6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25272b586e84b498cfaa9da17a772692dad6f48a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831436"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393989"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Enthält Informationen zu jedem Ausführungsplan, der einer Abfrage zugeordnet ist.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82831436"
 |**is_forced_plan**|**bit**|Der Plan wird als erzwungen gekennzeichnet, wenn der Benutzer die gespeicherte Prozedur " **sys. sp_query_store_force_plan**" ausführt. Das Erzwingen von Mechanismen *garantiert nicht* , dass genau dieser Plan für die Abfrage verwendet wird, auf die von **query_id**verwiesen wird. Die Plan Erzwingung bewirkt, dass die Abfrage erneut kompiliert wird, und erzeugt in der Regel genau denselben oder einen ähnlichen Plan für den Plan, auf den **plan_id**verweist Wenn die Plan Erzwingung nicht erfolgreich ist, wird **force_failure_count** inkrementiert und **last_force_failure_reason** mit der Fehlerursache aufgefüllt. <br/>**Hinweis:** Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
 |**is_natively_compiled**|**bit**|Der Plan umfasst nativ kompilierte Speicher optimierte Prozeduren. (0 = false, 1 = true). <br/>**Hinweis:** Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
 |**force_failure_count**|**bigint**|Gibt an, wie oft das Erzwingen dieses Plans fehlgeschlagen ist. Sie kann nur inkrementiert werden, wenn die Abfrage neu kompiliert wird (*nicht bei jeder Ausführung*). Der Wert wird jedes Mal auf 0 zurückgesetzt, wenn **is_plan_forced** von **false** in **true**geändert wird. <br/>**Hinweis:** Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
-|**last_force_failure_reason**|**int**|Ursache für Fehler beim Erzwingen des Plans.<br /><br /> 0: kein Fehler, andernfalls Fehlernummer des Fehlers, der die Erzwingung fehlgeschlagen ist<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<anderer Wert>: GENERAL_FAILURE <br/>**Hinweis:** Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
+|**last_force_failure_reason**|**int**|Ursache für Fehler beim Erzwingen des Plans.<br /><br /> 0: kein Fehler, andernfalls Fehlernummer des Fehlers, der die Erzwingung fehlgeschlagen ist<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<other value>: GENERAL_FAILURE <br/>**Hinweis:** Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
 |**last_force_failure_reason_desc**|**nvarchar(128)**|Die Textbeschreibung der last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: die Abfrage versucht, Daten zu ändern, während die Ziel Tabelle über einen Index verfügt, der Online erstellt wird.<br /><br /> INVALID_STARJOIN: der Plan enthält eine ungültige starjoinspezifikation.<br /><br /> TIME_OUT: der Optimierer hat die Anzahl zulässiger Vorgänge beim Suchen nach dem durch den erzwungenen Plan angegebenen Plan überschritten.<br /><br /> NO_DB: eine im Plan angegebene Datenbank ist nicht vorhanden.<br /><br /> HINT_CONFLICT: die Abfrage kann nicht kompiliert werden, weil der Plan Konflikte mit einem Abfrage Hinweis verursacht.<br /><br /> DQ_NO_FORCING_SUPPORTED: die Abfrage kann nicht ausgeführt werden, da der Plan Konflikte mit der Verwendung von verteilten Abfragen oder voll Text Vorgängen verursacht.<br /><br /> NO_PLAN: der Abfrage Prozessor konnte keinen Abfrage Plan erzeugt werden, da der erzwungene Plan nicht überprüft werden konnte, damit er für die Abfrage gültig ist.<br /><br /> NO_INDEX: der im Plan angegebene Index ist nicht mehr vorhanden.<br /><br /> VIEW_COMPILE_FAILED: der Abfrageplan konnte aufgrund eines Problems in einer indizierten Sicht, auf die im Plan verwiesen wird, nicht erzwungen werden.<br /><br /> GENERAL_FAILURE: allgemeiner Erzwingungs Fehler (wird mit den oben genannten Gründen nicht abgedeckt) <br/>**Hinweis:** Azure SQL Data Warehouse wird immer *None*zurückgegeben.|  
 |**count_compiles**|**bigint**|Planen der Kompilierungs Statistik.|  
 |**initial_compile_start_time**|**datetimeoffset**|Planen der Kompilierungs Statistik.|  
@@ -94,7 +94,7 @@ Und drittens, bei Problemen mit dem Plan selbst:
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

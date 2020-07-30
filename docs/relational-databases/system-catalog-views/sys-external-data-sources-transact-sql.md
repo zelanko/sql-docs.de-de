@@ -13,34 +13,35 @@ ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbec44831d7025fd53cafe0248eb1f69b79bf14d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 85b64de0b575738061757254c9698e47982fd942
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828164"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394475"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   Enthält eine Zeile für jede externe Datenquelle in der aktuellen Datenbank für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
  Enthält eine Zeile für jede externe Datenquelle auf dem Server für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |data_source_id|**int**|Objekt-ID für die externe Datenquelle.||  
 |name|**sysname**|Der Name der externen Datenquelle.||  
 |location|**nvarchar(4000)**|Die Verbindungs Zeichenfolge, die das Protokoll, die IP-Adresse und den Port für die externe Datenquelle enthält.||  
 |type_desc|**nvarchar(255)**|Der als Zeichenfolge angezeigte Daten Quellentyp.|Hadoop, RDBMS, SHARD_MAP_MANAGER, remotedataarchivetypeer-DataSource|  
-|Typ|**tinyint**|Der als Zahl angezeigte Daten Quellentyp.|0-Hadoop<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-remotedataarchivetypeer-DataSource|  
+|type|**tinyint**|Der als Zahl angezeigte Daten Quellentyp.|0-Hadoop<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-remotedataarchivetypeer-DataSource|  
 |resource_manager_location|**nvarchar(4000)**|Für den Typ Hadoop, den IP-und Port Speicherort des Hadoop-Ressourcen-Managers. Diese wird zum Übermitteln eines Auftrags in einer Hadoop-Datenquelle verwendet.<br /><br /> NULL für andere Typen externer Datenquellen.||  
 |credential_id|**int**|Die Objekt-ID der Daten Bank weit gültigen Anmelde Informationen, die zum Herstellen einer Verbindung mit der externen Datenquelle verwendet werden.||  
 |database_name|**sysname**|Für den Typ RDBMS der Name der Remote Datenbank. Für Type, SHARD_MAP_MANAGER, der Name der shardzuordnungs-Manager-Datenbank. NULL für andere Typen externer Datenquellen.||  
 |shard_map_name|**sysname**|Für Type SHARD_MAP_MANAGER der Name der shardzuordnung. NULL für andere Typen externer Datenquellen.||  
   
 ## <a name="permissions"></a>Berechtigungen  
- Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde.  Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. external_file_formats &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   

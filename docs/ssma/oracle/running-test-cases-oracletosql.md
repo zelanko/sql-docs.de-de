@@ -10,15 +10,15 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7905c76803bf637e581af934f473b070d44a6b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266547"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394862"
 ---
 # <a name="running-test-cases-oracletosql"></a>Ausführen von Testfällen (OracleToSQL)
-Wenn der SSMA-Tester einen Testfall ausführt, führt er die für das Testen ausgewählten Objekte aus und erstellt einen Bericht über Überprüfungs Ergebnisse. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und wird anhand der Schema-Mapping-Einstellungen für das aktuelle SSMA-Projekt festgelegt.  
+Wenn der SSMA-Tester einen Testfall ausführt, führt er die für das Testen ausgewählten Objekte aus und erstellt einen Bericht über Überprüfungs Ergebnisse. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Oracle und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird anhand der Schema-Mapping-Einstellungen für das aktuelle SSMA-Projekt festgelegt.  
   
 Eine erforderliche Anforderung für einen erfolgreichen Test besteht darin, dass alle Oracle-Objekte konvertiert und in die Zieldatenbank geladen werden. Außerdem sollten die Tabellendaten migriert werden, damit die Inhalte der Tabellen auf beiden Plattformen synchronisiert werden.  
   
@@ -41,9 +41,8 @@ In diesem Schritt erstellt SSMA Tester Hilfsobjekte (Tabellen, Trigger und Sicht
   
 Angenommen, die überprüfte Tabelle hat den Namen USER_TABLE. Für eine solche Tabelle werden die folgenden Hilfsobjekte in Oracle erstellt.  
   
-||||  
-|-|-|-|  
 |Name|type|BESCHREIBUNG|  
+|-|-|-|  
 |USER_TABLE $ trg|Trigger (trigger)|Löst die Überprüfung der Änderungen in der verifizierten Tabelle aus.|  
 |USER_TABLE $ AUD|table|Tabelle, in der gelöschte und über schriebene Zeilen gespeichert werden.|  
 |USER_TABLE $ audid|table|Tabelle, in der neue und geänderte Zeilen gespeichert werden.|  
@@ -52,18 +51,16 @@ Angenommen, die überprüfte Tabelle hat den Namen USER_TABLE. Für eine solche 
 |USER_TABLE $ NEW_ID|Ansicht|Identifizierung eingefügter und geänderter Zeilen.|  
 |USER_TABLE $ Old|Ansicht|Vereinfachte Darstellung gelöschter und überschriebener Zeilen.|  
   
-Das folgende Objekt wird im Schema der verifizierten Tabelle unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt.  
+Das folgende Objekt wird im Schema der verifizierten Tabelle unter erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-||||  
-|-|-|-|  
 |Name|type|BESCHREIBUNG|  
+|-|-|-|  
 |USER_TABLE $ trg|Trigger (trigger)|Löst die Überprüfung der Änderungen in der verifizierten Tabelle aus.|  
   
-Und die folgenden Objekte werden unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in der ssmatesterdb-Datenbank erstellt.  
+Und die folgenden Objekte werden unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der ssmatesterdb-Datenbank erstellt.  
   
-||||  
-|-|-|-|  
 |Name|type|BESCHREIBUNG|  
+|-|-|-|  
 |USER_TABLE $ AUD|table|Tabelle, in der gelöschte und über schriebene Zeilen gespeichert werden.|  
 |USER_TABLE $ audid|table|Tabelle, in der neue und geänderte Zeilen gespeichert werden.|  
 |USER_TABLE|Ansicht|Vereinfachte Darstellung der Tabellen Änderungen.|  
