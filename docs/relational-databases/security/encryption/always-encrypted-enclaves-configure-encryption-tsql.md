@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b7e8118dc6404bf0f23422e030737403857367d8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1dba061f6b8bc30e8f9f0e64e45f16493f62db1
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595565"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411428"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Direkte Konfiguration der Spaltenverschlüsselung mit Transact-SQL
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 In diesem Artikel wird beschrieben, wie kryptografische Vorgänge direkt in Spalten durchgeführt werden, die Always Encrypted mit Secure Enclaves mit der [ALTER TABLE-Anweisung](../../../odbc/microsoft/alter-table-statement.md)/`ALTER COLUMN`-Anweisung verwenden. Grundlegende Informationen zur direkten Verschlüsselung und zu den allgemeinen Voraussetzungen finden Sie unter [Konfigurieren einer direkten Spaltenverschlüsselung mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-configure-encryption.md).
 

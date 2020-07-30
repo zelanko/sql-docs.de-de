@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287144"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411378"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planen des Nachweises des Host-Überwachungsdiensts
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Wenn Sie [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md) verwenden, stellen Sie sicher, dass die Clientanwendung innerhalb des [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-Prozesses mit einer vertrauenswürdigen Enclave-Instanz kommuniziert. Für eine virtualisierungsbasierte Sicherheits-Enclave (Virtualization-Based Security, VBS) beinhaltet diese Anforderung die Überprüfung, ob der Code innerhalb der Enclave gültig ist und ob der Computer, der [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] hostet, vertrauenswürdig ist. Der Remotenachweis erreicht dieses Ziel durch die Einführung einer dritten Instanz, die die Identität (und optional die Konfiguration) des [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-Computers überprüfen kann. Bevor [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] eine Enclave für eine Abfrage nutzen kann, müssen dem Nachweisdienst Informationen über deren Betriebsumgebung zur Verfügung gestellt werden, um ein Integritätszertifikat zu erhalten. Dieses Integritätszertifikat wird dann an den Client gesendet, der unabhängig davon dessen Authentizität mit dem Nachweisdienst überprüfen kann. Sobald das Integritätszertifikat vom Client als vertrauenswürdig eingestuft wurde, wird auch die VBS-Enclave als vertrauenswürdig erkannt und eine Abfrage ausgegeben, die diese Enclave verwendet.
 

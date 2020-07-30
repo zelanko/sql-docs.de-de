@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 162cf9d1f062d69daf671ed0bf8962b9ddb7ddf9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb2cfc1df70f22f3e0fb90cd3d9cf552e6e01d60
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680978"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362237"
 ---
 # <a name="manage-the-database-engine-services"></a>Verwalten der Datenbank-Engine-Dienste
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,20 +56,53 @@ ms.locfileid: "85680978"
  Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager ein Snap-In für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Verwaltungskonsolenprogramm und kein eigenständiges Programm ist, wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager beim Ausführen von Windows 8.0 nicht als Anwendung angezeigt. Um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager zu öffnen, geben Sie im Charm **Suchen** unter **Apps**Folgendes ein: **SQLServerManager12.msc** (für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), **SQLServerManager11.msc** (für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) oder **SQLServerManager10.msc** (für[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) ein. Drücken Sie dann die **EINGABETASTE**.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
-  
-|||  
-|-|-|  
-|[Sicherheitsanforderungen für das Verwalten von Diensten](../../database-engine/configure-windows/security-requirements-for-managing-services.md)|[Verhindern des automatischen Starts einer Instanz von SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)|  
-|[Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|[Ändern des Dienststartkontos für SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)|  
-|[Ausführen von SQL Server mit oder ohne Netzwerk](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)|[Konfigurieren von Serverstartoptionen &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)|  
-|[SQL Server-Browserdienst &#40;Datenbank-Engine und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)|[Ändern des Kennworts der von SQL Server verwendeten Konten &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md)|  
-|[Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md)|[Konfigurieren von SQL Server-Fehlerprotokollen](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)|  
-|[Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|[Ändern des Serverauthentifizierungsmodus](../../database-engine/configure-windows/change-server-authentication-mode.md)|  
-|[Starten von SQL Server im Einzelbenutzermodus](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)|[SQL Writer-Dienst](../../database-engine/configure-windows/sql-writer-service.md)|  
-|[Starten Sie von SQL Server mit Minimalkonfiguration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)|[Senden einer Nachricht über das Herunterfahren &#40;Eingabeaufforderung&#41;](../../database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md)|  
-|[Herstellen einer Verbindung mit einem anderen Computer &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)|[Anmelden an einer Instanz von SQL Server &#40;Befehlszeile&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)|  
-|[Festlegen des automatischen Starts einer Instanz von SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)|[Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Sicherheitsanforderungen für das Verwalten von Diensten](../../database-engine/configure-windows/security-requirements-for-managing-services.md)
+
+        [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
+
+        [Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)
+
+        [Ausführen von SQL Server mit oder ohne Netzwerk](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)
+
+        [SQL Server-Browserdienst &#40;Datenbank-Engine und SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)
+
+        [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md)
+
+        [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
+
+        [Starten von SQL Server im Einzelbenutzermodus](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)
+
+        [Starten Sie von SQL Server mit Minimalkonfiguration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)
+    :::column-end:::
+    :::column:::
+        [Herstellen einer Verbindung mit einem anderen Computer &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)
+
+        [Festlegen des automatischen Starts einer Instanz von SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)
+
+        [Verhindern des automatischen Starts einer Instanz von SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)
+
+        [Ändern des Dienststartkontos für SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)
+
+        [Konfigurieren von Serverstartoptionen &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
+
+        [Ändern des Kennworts der von SQL Server verwendeten Konten &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md)
+
+        [Konfigurieren von SQL Server-Fehlerprotokollen](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)
+    :::column-end:::
+    :::column:::
+        [Ändern des Serverauthentifizierungsmodus](../../database-engine/configure-windows/change-server-authentication-mode.md)
+
+        [SQL Writer-Dienst](../../database-engine/configure-windows/sql-writer-service.md)
+
+        [Senden einer Nachricht über das Herunterfahren &#40;Eingabeaufforderung&#41;](../../database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md)
+
+        [Anmelden an einer Instanz von SQL Server &#40;Befehlszeile&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)
+    :::column-end:::
+:::row-end:::
+
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Konfigurieren des SQL Server-Agents](../../ssms/agent/configure-sql-server-agent.md)  
   

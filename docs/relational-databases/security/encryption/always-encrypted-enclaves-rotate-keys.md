@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39d90da404fd6bc230a3308c76b48fdc26da2b8f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5420d49b6e5d165168610d002424e3a3b9499748
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595815"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411056"
 ---
 # <a name="rotate-enclave-enabled-keys"></a>Rotation von Enclave-fähigen Schlüsseln
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Bei Always Encrypted ist eine Schlüsselrotation ein Vorgang, bei dem ein vorhandener Spaltenhauptschlüssel oder ein Spaltenverschlüsselungsschlüssel durch einen neuen Schlüssel ersetzt wird. In diesem Artikel werden Anwendungsfälle und Überlegungen zur Schlüsselrotation bei [Always Encrypted mit Secure Enclaves](always-encrypted-enclaves.md) beschrieben, wenn der ursprüngliche Schlüssel und/oder der (neue) Zielschlüssel Enclave-fähig ist. Allgemeine Richtlinien und Verfahren zum Verwalten von Always Encrypted-Schlüsseln finden Sie unter [Übersicht über die Schlüsselverwaltung für Always Encrypted](overview-of-key-management-for-always-encrypted.md). 
 
