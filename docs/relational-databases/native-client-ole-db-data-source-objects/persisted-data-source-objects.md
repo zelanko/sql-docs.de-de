@@ -1,5 +1,5 @@
 ---
-title: Persistente Datenquellenobjekte | Microsoft-Dokumentation
+title: Persistente Datenquellen Objekte (Native Client OLE DB-Anbieter)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a0af87b23685fb0249b5abf6dbb212715e166c6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a28fd6b4f3c7fc46223a75fdf96881a73739b8d7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998263"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242110"
 ---
-# <a name="persisted-data-source-objects"></a>Persistente Datenquellenobjekte
+# <a name="persisted-data-source-objects-in-sql-server-native-client"></a>Persistente Datenquellen Objekte in SQL Server Native Client 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt persistente Datenquellen Objekte mit der **IPersistFile** -Schnittstelle.  

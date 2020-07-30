@@ -11,22 +11,22 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 01d735e07a7c44c84c0087865e4f488318d65a75
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 38ed2b42a24dbaec27e3014bc0b1d783722fa91f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85066172"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394529"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys. dm_workload_management_workload_groups_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Gibt Statistiken zu Arbeits Auslastungs Gruppen und die effektiven Werte der Arbeits Auslastungs [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Gruppe in zurück  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |group_id|**int**|Eindeutige ID der Arbeitsauslastungsgruppe||
-|Name|**sysname**|Name der Arbeitsauslastungsgruppe.||
+|name|**sysname**|Name der Arbeitsauslastungsgruppe.||
 |statistics_start_time|**datetime**|Zeitpunkt, zu dem die Statistik Sammlung für die Arbeits Auslastungs Gruppe begann  Der Wert ist entweder beim Erstellen der Arbeits Auslastungs Gruppe oder beim Anhalten oder Skalieren der Instanz.||
 |total_request_count|**bigint**|Kumulierte Anzahl vervollständigter Anforderungen in der Arbeitsauslastungsgruppe.||
 |total_shared_resource_reqeusts|**bigint**|Kumulierte Anzahl der abgeschlossenen Anforderungen in der Arbeits Auslastungs Gruppe, die Ressourcen aus dem freigegebenen Pool verwendet haben.||
@@ -38,6 +38,6 @@ Gibt Statistiken zu Arbeits Auslastungs Gruppen und die effektiven Werte der Arb
 |effective_request_max_resource_grant_percent|**Dezimalzahl (5, 2)**|Der effektive Lauf Zeitwert für request_max_resource_grant_percent der Arbeits Auslastungs Gruppe, der die Konfiguration aller Arbeits Auslastungs Gruppen berücksichtigt.||
 |||||
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
  [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 507ac2a61043260435a18c90fb473130988e7f35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0785c3ecc6335494ed4c34f8919e3ad766236631
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67948515"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394512"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Umstellen von SAP ASE-Datenbankobjekten (sybaseto SQL)
-Nachdem Sie eine Verbindung mit SAP Adaptive Server Enterprise (ASE) hergestellt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Verbindung mit oder Azure SQL hergestellt und Projekt-und Daten Zustellungs Optionen festgelegt haben, können Sie SAP Adaptive Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise-Datenbankobjekte (ASE) in-oder Azure SQL-Datenbankobjekte konvertieren  
+Nachdem Sie eine Verbindung mit SAP Adaptive Server Enterprise (ASE) hergestellt, eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL hergestellt und Projekt-und Daten Zustellungs Optionen festgelegt haben, können Sie SAP Adaptive Server Enterprise-Datenbankobjekte (ASE) in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbankobjekte konvertieren  
   
 ## <a name="the-conversion-process"></a>Der Konvertierungsprozess  
-Beim Konvertieren von Datenbankobjekten werden die Objekt Definitionen aus ASE konvertiert, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in ähnliche oder SQL Azure Objekte konvertiert und diese Informationen dann in die SSMA-Metadaten geladen. Die Informationen werden nicht in die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL geladen. Anschließend können Sie die Objekte und deren Eigenschaften mithilfe von oder dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL-metadatenexplorer anzeigen.
+Beim Konvertieren von Datenbankobjekten werden die Objekt Definitionen aus ASE konvertiert, in ähnliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Objekte konvertiert und diese Informationen dann in die SSMA-Metadaten geladen. Die Informationen werden nicht in die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL geladen. Anschließend können Sie die Objekte und deren Eigenschaften mithilfe von oder dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL-metadatenexplorer anzeigen.
   
 Während der Konvertierung druckt SSMA Ausgabemeldungen im Ausgabebereich und Fehlermeldungen in den **Fehlerliste** Bereich. Bestimmen Sie anhand der Ausgabe-und Fehlerinformationen, ob Sie Ihre ASE-Datenbanken oder den Konvertierungsprozess ändern müssen, um die gewünschten Konvertierungs Ergebnisse zu erhalten.  
   
@@ -54,27 +54,57 @@ Zum Konvertieren von ASE-Datenbankobjekten wählen Sie zunächst die Objekte aus
   
 > [!NOTE]  
 > Einige der SAP ASE-Systemfunktionen entsprechen nicht exakt den entsprechenden SQL Server Systemfunktionen im Verhalten. Um das SAP ASE-Verhalten zu emulieren, generiert SSMA benutzerdefinierte Funktionen in der konvertierten SQL Server Datenbank unter einem Schema, das als 2SS "bezeichnet wird. Abhängig von den Projekteinstellungen werden einige der SQL Server Systemfunktionen durch diese emulierten Funktionen ersetzt. SSMA erstellt die folgenden benutzerdefinierten Funktionen:  
-  
-||||  
-|-|-|-|  
-|**char_length_nvarchar**|**index_colorder**|**ssma_datepart**|  
-|**char_length_varchar**|**intum Hex**|**substring_nvarchar**|  
-|**charindex_nvarchar**|**ssma_datediff**|**substring_varbinary**|  
-|**charindex_varchar**|**hexentyp**|**substring_varchar**|  
-|**ulowsurr**|**to_unichar**|**ssma_current_time**|  
-|**uhighsurr**|||  
-  
+
+:::row:::
+    :::column:::
+        **char_length_nvarchar**  
+        **char_length_varchar**  
+        **charindex_nvarchar**  
+        **charindex_varchar**  
+        **hexentyp**  
+        **index_colorder**  
+    :::column-end:::
+    :::column:::
+        **intum Hex**  
+        **ssma_current_time**  
+        **ssma_datediff**  
+        **ssma_datepart**  
+        **substring_nvarchar**  
+        **substring_varbinary**  
+    :::column-end:::
+    :::column:::
+        **substring_varchar**  
+        **to_unichar**  
+        **uhighsurr**  
+        **ulowsurr**  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="objects-not-supported-in-azure-sql"></a>Nicht unterstützte Objekte in Azure SQL  
 Die folgenden t-SQL-Schlüsselwörter werden von SSMA für SAP ASE während der Konvertierung in SQL Server lokal verwendet. diese Schlüsselwörter werden jedoch von SQL Azure T-SQL-Syntax nicht unterstützt:  
-  
-||||  
-|-|-|-|  
-|CHECKPOINT|CREATE/ALTER/DROP DEFAULT|CREATE/DROP RULE|  
-|DBCC TRACEOFF|DBCC TRACEON|GRANT/REVOKE/DENY ALL|  
-|KILL|READTEXT|SELECT INTO|  
-|SET OFFSETS|SETUSER|SHUTDOWN|  
-|WRITETEXT|||  
-  
+
+:::row:::
+    :::column:::
+        CHECKPOINT  
+        CREATE/ALTER/DROP DEFAULT  
+        CREATE/DROP RULE  
+        DBCC TRACEOFF  
+        DBCC TRACEON  
+    :::column-end:::
+    :::column:::
+        GRANT/REVOKE/DENY ALL  
+        KILL  
+        READTEXT  
+        SELECT INTO  
+        SET OFFSETS  
+    :::column-end:::
+    :::column:::
+        SETUSER  
+        SHUTDOWN  
+        WRITETEXT  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="viewing-conversion-problems"></a>Anzeigen von Konvertierungs Problemen  
 Einige SAP ASE-Objekte werden möglicherweise nicht konvertiert. Sie können die Erfolgsraten der Konvertierung ermitteln, indem Sie den Zusammenfassungs Bericht für die Zusammenfassung anzeigen  
   
@@ -120,11 +150,11 @@ Sie müssen für jedes Element, das nicht konvertiert werden konnte, bestimmen, 
   
 -   Sie können das SAP ASE-Objekt ändern, um problematischen Code zu entfernen oder zu überarbeiten. Um den aktualisierten Code in SSMA zu laden, müssen Sie die Metadaten aktualisieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SAP ASE &#40;sybaseto SQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
--   Sie können das Objekt von der Migration ausschließen. Deaktivieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie in oder im Azure SQL-metadatenexplorer und im Sybase-metadatenexplorer das Kontrollkästchen neben dem Element [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , bevor Sie die Objekte in oder Azure SQL laden und Daten aus SAP ASE migrieren.  
+-   Sie können das Objekt von der Migration ausschließen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Deaktivieren Sie in oder im Azure SQL-metadatenexplorer und im Sybase-metadatenexplorer das Kontrollkästchen neben dem Element, bevor Sie die Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL laden und Daten aus SAP ASE migrieren.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
 Der nächste Schritt des Migrations Vorgangs besteht darin, [konvertierte Datenbankobjekte in SQL Server/SQL Azure (sybasedesql) zu laden](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen  
 [Migrieren von SAP ASE-Datenbanken zu SQL Server Azure SQL-Datenbank &#40;sybaseto SQL-&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

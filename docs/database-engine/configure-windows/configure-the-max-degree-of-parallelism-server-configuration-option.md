@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: f1b4b8db6d5af2ff76b85933ab4fcdc3f67e4987
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 375d0b39fe0f898961d1386445b3b8e3f2945ee4
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159728"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363300"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] werden beim Starten des Die
 
 Verwenden Sie ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] die folgenden Richtlinien beim Konfigurieren des Serverkonfigurationswerts **Max. Grad an Parallelität**:
 
-||||
+|Serverkonfiguration|Anzahl der Prozessoren|Anleitungen|
 |----------------|-----------------|-----------------|
 |Server mit einzelnem NUMA-Knoten|Weniger als oder gleich 8 logische Prozessoren|Belassen Sie MAXDOP bei # oder weniger logischen Prozessoren|
 |Server mit einzelnem NUMA-Knoten|Mehr als 8 logische Prozessoren|Belassen Sie MAXDOP bei 8|
@@ -75,7 +75,7 @@ Verwenden Sie ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] die folgenden
   
 Verwenden Sie von **bis** die folgenden Richtlinien beim Konfigurieren des Serverkonfigurationswerts [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]Max. Grad an Parallelität[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]:
 
-||||
+|Serverkonfiguration|Anzahl der Prozessoren|Anleitungen|
 |----------------|-----------------|-----------------|
 |Server mit einzelnem NUMA-Knoten|Weniger als oder gleich 8 logische Prozessoren|Belassen Sie MAXDOP bei # oder weniger logischen Prozessoren|
 |Server mit einzelnem NUMA-Knoten|Mehr als 8 logische Prozessoren|Belassen Sie MAXDOP bei 8|

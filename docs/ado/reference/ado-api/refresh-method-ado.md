@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48fc3a1adf8dbeae010e4035ac4f2e390c015e54
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0688fc8b45f444ca8c711f3229623484fa2139a8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756532"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242580"
 ---
 # <a name="refresh-method-ado"></a>Refresh-Methode (ADO)
 Aktualisiert die Objekte in einer Auflistung, um die Objekte widerzuspiegeln, die von und für den Anbieter verfügbar sind.  
@@ -54,17 +54,35 @@ collection.Refresh
  Die Verwendung der **Refresh** -Methode für eine **Properties** -Auflistung einiger Objekte füllt die Auflistung mit den dynamischen Eigenschaften auf, die der Anbieter verfügbar macht. Diese Eigenschaften enthalten Informationen über die für den anbieterspezifischen Funktionen, die über die von ADO unterstützten integrierten Eigenschaften hinausgehen.  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-||||  
-|-|-|-|  
-|[Achsen Sammlung](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Columns-Sammlung](../../../ado/reference/adox-api/columns-collection-adox.md)|[CubeDefs-Sammlung](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[Dimensions Auflistung](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Fehlersammlung](../../../ado/reference/ado-api/errors-collection-ado.md)|[Fields-Auflistung](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[Groups-Sammlung](../../../ado/reference/adox-api/groups-collection-adox.md)|[Hierarchien-Auflistung](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Index Sammlung](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Schlüssel Sammlung](../../../ado/reference/adox-api/keys-collection-adox.md)|[Levels-Auflistung](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Members-Auflistung](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Parameters-Auflistung](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Positions Auflistung](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tabellen Sammlung](../../../ado/reference/adox-api/tables-collection-adox.md)|[Benutzer Sammlung](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[Views-Auflistung](../../../ado/reference/adox-api/views-collection-adox.md)|||  
-  
+
+:::row:::
+    :::column:::
+        [Achsen Sammlung](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
+        [Columns-Sammlung](../../../ado/reference/adox-api/columns-collection-adox.md)  
+        [CubeDefs-Sammlung](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
+        [Dimensions Auflistung](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
+        [Fehlersammlung](../../../ado/reference/ado-api/errors-collection-ado.md)  
+        [Fields-Auflistung](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [Groups-Sammlung](../../../ado/reference/adox-api/groups-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Hierarchien-Auflistung](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
+        [Index Sammlung](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [Schlüssel Sammlung](../../../ado/reference/adox-api/keys-collection-adox.md)  
+        [Levels-Auflistung](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+        [Members-Auflistung](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+        [Parameters-Auflistung](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Positions Auflistung](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+        [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+        ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+        [Tabellen Sammlung](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [Benutzer Sammlung](../../../ado/reference/adox-api/users-collection-adox.md)  
+        [Views-Auflistung](../../../ado/reference/adox-api/views-collection-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für Aktualisierungs Methode (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Beispiel für eine Aktualisierungs Methode (VC + +)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   

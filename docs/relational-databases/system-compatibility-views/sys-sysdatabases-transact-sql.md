@@ -1,5 +1,5 @@
 ---
-title: sys. sysdatenbanken (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sysDatenbanken (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b0dab1ca5f21ced6a54192a4b0173ead68fd6f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c32503ffe44cf45dbff9608e0baa9127e39b1a4d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089171"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393360"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  Enthält eine Zeile für jede Datenbank in einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstmalig installiert wird, enthält **sysdatabases** Einträge für die Datenbanken **master**, **model**, **msdb**und **tempdb** .  
+  Enthält eine Zeile für jede Datenbank in einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstmalig installiert wird, enthält **sysdatabases** Einträge für die Datenbanken **master**, **model**, **msdb**und **tempdb** .  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -48,7 +48,7 @@ ms.locfileid: "68089171"
 |**bleiben**|**datetime**|Für die zukünftige Verwendung reserviert.|  
 |**category**|**int**|Enthält ein Bitmuster mit Informationen, die für die Replikation verwendet werden.<br /><br /> 1 = Veröffentlicht für die Momentaufnahme- oder Transaktionsreplikation.<br /><br /> 2 = Abonniert für eine Momentaufnahme- oder Transaktionsveröffentlichung.<br /><br /> 4 = Veröffentlicht für die Mergereplikation.<br /><br /> 8 = Abonniert für eine Mergeveröffentlichung.<br /><br /> 16 = Verteilungsdatenbank.|  
 |**cmptlevel**|**tinyint**|Kompatibilitätsgrad für die Datenbank. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
-|**Einfügen**|**nvarchar(260)**|Der Betriebssystempfad und -name für die primäre Datei der Datenbank.<br /><br /> **filename** ist sichtbar für **dbcreator**, **sysadmin**, den Datenbankbesitzer mit CREATE ANY DATABASE-Berechtigungen oder Berechtigte mit einer der folgenden Berechtigungen: ALTER ANY DATABASE, CREATE ANY DATABASE, VIEW ANY DEFINITION. Führen Sie eine Abfrage der [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) -Kompatibilitätssicht oder der [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) -Sicht aus, um den Pfad und den Dateinamen zurückzugeben.|  
+|**filename**|**nvarchar(260)**|Der Betriebssystempfad und -name für die primäre Datei der Datenbank.<br /><br /> **filename** ist sichtbar für **dbcreator**, **sysadmin**, den Datenbankbesitzer mit CREATE ANY DATABASE-Berechtigungen oder Berechtigte mit einer der folgenden Berechtigungen: ALTER ANY DATABASE, CREATE ANY DATABASE, VIEW ANY DEFINITION. Führen Sie eine Abfrage der [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) -Kompatibilitätssicht oder der [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) -Sicht aus, um den Pfad und den Dateinamen zurückzugeben.|  
 |**version**|**smallint**|Die interne Versionsnummer des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Codes, mit dem die Datenbank erstellt wurde. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43fc33ea851f86bc159b98a6d10991bda42dbbad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1e71fd3a753da8d05e99f1cc8c9837323db61f03
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758926"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242440"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 Gibt ein Lesezeichen an, das angibt, wo der Vorgang beginnen soll.  
@@ -41,7 +41,12 @@ Gibt ein Lesezeichen an, das angibt, wo der Vorgang beginnen soll.
 |AdoEnums. Bookmark. Last|  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[GetRows-Methode (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)|[Move-Methode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)|
+
+:::row:::
+    :::column:::
+        [GetRows-Methode (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Move-Methode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)  
+    :::column-end:::
+:::row-end:::

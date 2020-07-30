@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcc1b02671d73e9056babb417ba2fa22a4d6cf0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b69826fbbc45751247ce2eba6fe74ad251189dea
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762541"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242690"
 ---
 # <a name="filter-property"></a>Filter-Eigenschaft
 Gibt einen Filter für Daten in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)an.  
@@ -43,7 +43,7 @@ Die Kriterienzeichenfolge besteht aus Klauseln in der Form *FieldName-Operator-V
 
 -   Der *Feldname* muss ein gültiger Feldname aus dem **Recordset**sein. Wenn der Feldname Leerzeichen enthält, müssen Sie den Namen in eckigen Klammern einschließen.  
   
--   Der Operator muss eine der folgenden sein: \< , >, \< =, >=,  <>, = oder **like**.  
+-   Der Operator muss eine der folgenden sein: \<, > , \<=, > =,  <>, = oder **like**.  
   
 -   Value ist der Wert, mit dem Sie die Feldwerte vergleichen (z. b. "Smith", #8/24/95 #, 12,345 oder $50,00). Verwenden Sie einfache Anführungszeichen mit Zeichen folgen und Nummern Zeichen (#) mit Datumsangaben. Für Zahlen können Sie Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise verwenden. Wenn der Operator **like**ist, kann der Wert Platzhalter verwenden. Nur das Sternchen (*) und das Prozentzeichen (%) Platzhalter sind zulässig, und Sie müssen das letzte Zeichen in der Zeichenfolge sein. Wert darf nicht NULL sein.  
   
@@ -90,7 +90,7 @@ Nur Filter in Form von Kriterienzeichenfolgen beeinflussen den Inhalt eines perm
   
 In der folgenden Tabelle werden die Auswirkungen von **adfilterpdingrecords** in verschiedenen Kombinationen aus Filtern und Änderungen zusammengefasst. In der linken Spalte werden die möglichen Änderungen angezeigt. Es können Änderungen an jedem der nicht-Schlüsselfelder, im Schlüsselfeld in einer eingebundenen Tabelle oder in einem der Schlüsselfelder in einer mehrfach Schlüssel Tabelle vorgenommen werden. Die obere Zeile zeigt das Filter Kriterium an. Das Filtern kann auf einem der nicht-Schlüsselfelder, dem Schlüsselfeld in einer eingebundenen Tabelle oder einem der Schlüsselfelder in einer mehrfach Schlüssel Tabelle basieren. Die sich überschneidenden Zellen zeigen die Ergebnisse an. Ein **+** Pluszeichen bedeutet, dass das Anwenden von **adfilterpdingrecords** ein nicht leeres **Recordset**ergibt. Ein **-** Minuszeichen bedeutet ein leeres **Recordset**.  
   
-||Nicht Schlüssel|Einzelner Schlüssel|Mehrere Schlüssel|
+|Nation|Nicht Schlüssel|Einzelner Schlüssel|Mehrere Schlüssel|
 |-|--------------|----------------|-------------------|
 |**Nicht Schlüssel**|+|+|+|
 |**Einzelner Schlüssel**|+|-|–|

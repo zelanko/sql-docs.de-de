@@ -12,17 +12,17 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64d74d28c4b99e75c114effdf651a58d01a614d6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399909"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394045"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  Enthält eine Zeile für jede physische Datenbank auf einem Computeknoten. Aggregieren physischer Datenbankinformationen, um ausführliche Informationen zu Datenbanken zu erhalten. Um Informationen zu kombinieren, `sys.pdw_nodes_pdw_physical_databases` verknüpfen Sie `sys.pdw_database_mappings` den `sys.databases` mit den Tabellen und.  
+  Enthält eine Zeile für jede physische Datenbank auf einem Computeknoten. Aggregieren physischer Datenbankinformationen, um ausführliche Informationen zu Datenbanken zu erhalten. Um Informationen zu kombinieren, verknüpfen Sie den `sys.pdw_nodes_pdw_physical_databases` mit den `sys.pdw_database_mappings` `sys.databases` Tabellen und.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  

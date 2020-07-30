@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3a72234a6d5e5cbb8e0dc9f5d625b93f15f437f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a7a9b9a0a8416cb47adf8d959990ba1e39c60595
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763331"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242594"
 ---
 # <a name="precision-property-ado"></a>Precision-Eigenschaft (ADO)
 Gibt den Genauigkeits Grad für numerische Werte in einem [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt oder numerischen [Feld](../../../ado/reference/ado-api/field-object.md) Objekten an.  
@@ -37,11 +37,16 @@ Gibt den Genauigkeits Grad für numerische Werte in einem [Parameter](../../../a
  Bei einem **Feld**Objekt ist die **Genauigkeit** normalerweise schreibgeschützt. Bei neuen **Feld** Objekten, die an die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines [Datensatzes](../../../ado/reference/ado-api/record-object-ado.md)angefügt wurden, ist die **Genauigkeit** jedoch nur mit Lese-/Schreibzugriff, nachdem die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft für das **Feld** angegeben wurde und der Datenanbieter das neue **Feld** durch Aufrufen der [Update](../../../ado/reference/ado-api/update-method.md) -Methode der **Fields** -Auflistung erfolgreich hinzugefügt hat.  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[Field-Objekt](../../../ado/reference/ado-api/field-object.md)|[Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Field-Objekt](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für NumericScale und Precision Properties (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [Beispiel für NumericScale und Precision Properties (VC + +)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
