@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b653bd79c6e6e27dee30a4f11385f457717364a2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 70153e52186ac4f15629b32cca0c303fc81209a9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765231"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242530"
 ---
 # <a name="ado-md-properties"></a>ADO MD-Eigenschaften
 
-|||  
+|Eigenschaft|BESCHREIBUNG|  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Gibt an, zu welchem ADO- **Verbindungs** Objekt das aktuelle Cellset oder der aktuelle Katalog gehört.|  
 |[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Gibt den Beschriftungs Text an, der beim Anzeigen einer **Ebene** **oder eines** Element Objekts verwendet werden soll.|  
@@ -45,7 +45,7 @@ ms.locfileid: "82765231"
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|Gibt das Element an, das dem aktuellen Element in einer Hierarchie übergeordnet ist.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|Gibt an, ob das übergeordnete Element dieses Positions Elements dem übergeordneten Element des unmittelbar vorangehenden Elements entspricht.|  
 |[Quelle](../../../ado/reference/ado-md-api/source-property-ado-md.md)|Gibt die Quelle für die Daten im Cellset an.|  
-|[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Gibt den aktuellen Status des Cellsets an.|  
+|[Zustand](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Gibt den aktuellen Status des Cellsets an.|  
 |[Typ](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Gibt den Typ des aktuellen Elements an.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Gibt einen eindeutigen Namen für das aktuelle-Objekt an.|  
 |[Wert](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Gibt den Wert der aktuellen Zelle an.|  

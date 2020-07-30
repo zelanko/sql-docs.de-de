@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b3f6ee7c1f0b1dc1ccbcd4db260621dc5bda3168
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 13d5355bd1798af1514d16965059916e42e1ade0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750462"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243758"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ Generiert einen vorhergesagten Wert für eine angegebene Eingabe, bestehend aus 
 
 Bietet eine Bewertung für R-und python Machine Learning-Modelle nahezu in Echtzeit. `sp_rxPredict`ist eine gespeicherte Prozedur `rxPredict` , die in [revoscaler](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) und [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)als Wrapper für die R-Funktion bereitgestellt wird, und die [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) python-Funktion in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) und [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Sie wird in C++ geschrieben und ist speziell für Bewertungs Vorgänge optimiert.
 
-Obwohl das Modell mit R oder python erstellt werden muss, kann es nach der Serialisierung und Speicherung in einem binären Format auf einer Instanz der Datenbank-Engine auch dann von dieser Datenbank-Engine-Instanz genutzt werden, wenn die R-oder python-Integration nicht installiert ist. Weitere Informationen finden Sie unter [Echtzeitbewertung mit sp_rxPredict](https://docs.microsoft.com/sql/machine-learning/real-time-scoring).
+Obwohl das Modell mit R oder python erstellt werden muss, kann es nach der Serialisierung und Speicherung in einem binären Format auf einer Instanz der Datenbank-Engine auch dann von dieser Datenbank-Engine-Instanz genutzt werden, wenn die R-oder python-Integration nicht installiert ist. Weitere Informationen finden Sie unter [Echtzeitbewertung mit sp_rxPredict](https://docs.microsoft.com/sql/machine-learning/predictions/real-time-scoring).
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,7 +53,7 @@ Eine gültige SQL-Abfrage
 Es wird eine Score-Spalte sowie alle Pass-Through-Spalten aus der Eingabedaten Quelle zurückgegeben.
 Weitere Bewertungs Spalten (z. b. das Konfidenzintervall) können zurückgegeben werden, wenn der Algorithmus die Generierung solcher Werte unterstützt.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Um die Verwendung der gespeicherten Prozedur zu aktivieren, muss SQLCLR für die-Instanz aktiviert werden.
 

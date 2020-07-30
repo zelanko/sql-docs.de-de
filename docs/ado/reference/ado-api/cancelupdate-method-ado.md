@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d62837bd06798fd8ce7b51b0345cf5e5a6463e4b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ecc08dde974826846058d4d8927df202367d28d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763161"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242407"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate-Methode (ADO)
 Bricht vor dem Aufrufen der [Update](../../../ado/reference/ado-api/update-method.md) -Methode alle Änderungen ab, die an der aktuellen oder neuen Zeile eines [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts oder der [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekts vorgenommen wurden.  
@@ -45,11 +45,16 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
  Mit der **CancelUpdate** -Methode werden alle ausstehenden Einfügungen oder Löschungen von [Feld](../../../ado/reference/ado-api/field-object.md) Objekten abgebrochen und ausstehende Updates vorhandener Felder abgebrochen und auf die ursprünglichen Werte wieder hergestellt. Die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) -Eigenschaft aller Felder in der **Fields** -Auflistung ist auf **adFieldOK**festgelegt.  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für Update-und CancelUpdate-Methoden (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Beispiel für Update-und CancelUpdate-Methoden (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

@@ -1,5 +1,6 @@
 ---
 title: srv_paramstatus (API für erweiterte gespeicherte Prozeduren) | Microsoft-Dokumentation
+description: Erfahren Sie, wie srv_paramstatus den Status eines bestimmten Aufrufparameters für eine remote gespeicherte Prozedur zurückgibt.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcf1c5ea6db06072aff5075b42a1dde18ad00640
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e55986b0d781b311b050eb5695ca350f7331e25c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755966"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248371"
 ---
 # <a name="srv_paramstatus-extended-stored-procedure-api"></a>'srv_paramstatus' (API für erweiterte gespeicherte Prozeduren)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ n
 ## <a name="returns"></a>Gibt zurück  
  **int** mit Statusflags für den Parameter. Aktuell gibt es nur einen Flag: Wenn das Bit 0 auf 1 festgelegt ist, ist der Parameter ein Rückgabeparameter. Wenn es keinen *n*-ten Parameter oder keine remote gespeicherte Prozedur gibt, wird -1 zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Routine gibt die Statusflags für einen Aufrufparameter einer remote gespeicherten Prozedur zurück.  
   
  Parameter enthalten die zwischen Clients und der Anwendung mit remote gespeicherten Prozeduren übergebenen Daten. Der Client kann bestimmte Parameter als Rückgabeparameter angeben. Diese Rückgabeparameter können Werte enthalten, die von der Anwendung wieder an den Client übergeben werden.  

@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: fdf2b601-4d5d-4789-9bf8-93d884a16350
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ec0d01bac3107086a55bf09096d243b5a319b648
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12edbd6ccbb50757fddc5bf56160a7a8c05f3545
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756886"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246077"
 ---
 # <a name="localdb_error_instance_configuration_corrupt"></a>LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Details  
   
-|||  
-|-|-|  
+| attribute | Wert |
+| --------- | ----- |
 |Produktname|SQL Server|  
 |Ereignis-ID|267|  
 |Ereignisquelle|Lokale SQL Server-Datenbanklaufzeit 12.0|  

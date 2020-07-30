@@ -1,5 +1,6 @@
 ---
 title: srv_describe (API für die erweiterte gespeicherte Prozedur) | Microsoft-Dokumentation
+description: Erfahren Sie, wie srv_describe in der API für erweiterte gespeicherte Prozeduren den Spaltennamen sowie Quell-und Ziel Datentypen für eine bestimmte Spalte in einer Zeile definiert.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6c181ad19d3027c5262b988a8c32fdcff52e901
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2dc77e2ff3314664b28647980b62dabdde450fc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678589"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248468"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API für erweiterte gespeicherte Prozeduren)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +102,7 @@ srcdata
 ## <a name="returns"></a>Gibt zurück  
  Die Nummer der beschriebenen Spalte. Die erste Spalte ist die Spalte 1. Tritt ein Fehler auf, wird 0 zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die **srv_describe**-Funktion muss einmal für jede Spalte in der Zeile aufgerufen werden, bevor der erste Aufruf von **srv_sendrow** erfolgt. Die Spalten einer Zeile können in jeder Reihenfolge beschrieben werden.  
   
  Verwenden Sie **srv_setcoldata** bzw. **srv_setcollen**, um den Speicherort und die Länge der Quelldaten in Spaltenzeilen zu ändern, bevor das gesamte Resultset gesendet wurde.  

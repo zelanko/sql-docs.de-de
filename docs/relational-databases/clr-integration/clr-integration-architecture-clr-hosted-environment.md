@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727641"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246395"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR-Integrationsarchitektur: Von CLR gehostete Umgebung
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -154,9 +154,8 @@ Thread.EndThreadAffinity();
 ###### <a name="security-permission-sets"></a>Sicherheit: Berechtigungssätze  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzer können die Zuverlässigkeits- und Sicherheitsanforderungen für Code angeben, der in der Datenbank bereitgestellt wird. Wenn Assemblys in die Datenbank hochgeladen werden, kann der Autor der Assembly einen von drei Berechtigungs Sätzen für diese Assembly angeben: sicher, EXTERNAL_ACCESS und unsicher.  
   
-|||||  
+|Funktionalität|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
-|Berechtigungssatz|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Codezugriffssicherheit|Nur ausführen|Ausführen + Zugriff auf externe Ressourcen|Nicht eingeschränkt|  
 |Beschränkungen des Programmiermodells|Ja|Ja|Keine Einschränkungen|  
 |Überprüfbarkeit erforderlich|Ja|Ja|Nein|  

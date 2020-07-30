@@ -1,5 +1,5 @@
 ---
-title: Vorgehensweisen zum Verarbeiten von Ergebnissen (OLE DB) | Microsoft-Dokumentation
+title: Themen zur Vorgehensweise bei der Verarbeitung von Ergebnissen (Native Client OLE DB-Anbieter)
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72707085af2cdc39b2e2ef24804613af7a68f171
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 558ff0ae2d1ad83392a1b7b94a779c1a2b099636
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006411"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246986"
 ---
-# <a name="processing-results-how-to-topics-ole-db"></a>Vorgehensweisen zum Verarbeiten von Ergebnissen (OLE DB)
+# <a name="processing-results-how-to-topics-native-client-ole-db-provider"></a>Themen zur Vorgehensweise bei der Verarbeitung von Ergebnissen (Native Client OLE DB-Anbieter)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Der erste Schritt zur Verarbeitung der Ergebnisse in einer OLE DB-Anwendung besteht darin, die Merkmale des Resultsets zu bestimmen. Anschließend werden die Daten in Programmvariablen abgerufen. Wenn der Befehl eine gespeicherte Prozedur ausführt, müssen Sie außerdem wissen, wie die Rückgabecodes und Ausgabeparameter der gespeicherten Prozeduren verarbeitet werden.  

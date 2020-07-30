@@ -13,13 +13,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5621df514df7ae00f28371336cac8a8727487eef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5fe44586362595f4d1c86a88ccfce0f0f0ec3de6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998194"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245857"
 ---
-# <a name="conversions-performed-from-client-to-server"></a>Client-/Server-Konvertierungen
+# <a name="sql-server-native-client-conversions-performed-from-client-to-server"></a>SQL Server Native Client vom Client zum Server durchgeführte Konvertierungen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Dieses Thema beschreibt die Datums-/Uhrzeit-Konvertierungen zwischen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE&nbsp;DB und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) entwickelten Clientanwendungen.  

@@ -9,14 +9,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 352f51e0d53c9dc145b1faf1832faf59587fef6f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401274"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243091"
 ---
-# <a name="what-is-polybase"></a>Was ist PolyBase?
+# <a name="configure-polybase-connectivity"></a>Konfigurieren der polybase-Konnektivität
 Polybase ermöglicht Ihrem Analytics Platform System (APS) die Verarbeitung von Transact-SQL-Abfragen, die Daten aus externen Datenquellen lesen und in diese schreiben können. Die gleichen Abfragen, die auf externe Daten zugreifen, können auch Beziehungs Tabellen in ihren APS enthalten. Auf diese Weise können Sie Daten aus externen Quellen mit wichtigen relationalen Daten in ihren APS-Datenbanken kombinieren.
 
 ![PolyBase-Logik](media/polybase/polybase-logical.png)

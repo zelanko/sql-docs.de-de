@@ -1,5 +1,5 @@
 ---
-title: Neuigkeiten
+title: Neues
 description: Sehen Sie sich die Neuerungen in Microsoft Analytics Platform System an, eine lokale Appliance für horizontales Skalieren, die MPP SQL Server parallel Data Warehouse hostet.
 author: mzaman1
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 684979981878590c0fbd8d56c648525b25e7c8b6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85039833"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243078"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neues in Analytics Platform System, ein Data Warehouse für horizontales Skalieren
 Weitere Informationen finden Sie unter What es New in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS ist eine lokale Appliance für horizontales Skalieren, die MPP SQL Server parallele Data Warehouse hostet. 
@@ -65,6 +65,8 @@ APS Cu 7.3 verbessert die Abfrageleistung mit allgemeiner Teil Ausdrucks Löschu
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>APS Informatica-Connector für Informatica 10.2.0 veröffentlicht
 Wir haben eine neue Version von Informatica-Connectors für APS veröffentlicht, die mit Informatica Version 10.2.0 und 10.2.0 Hotfix 1 zusammenarbeitet. Die neuen Connectors können von der [Download Website](https://www.microsoft.com/download/details.aspx?id=57472)heruntergeladen werden.
+> [!NOTE]
+> Der APS Informatica-Connector für Informatica 10.2.0 oder 10.2.0 Hotfix 1 funktioniert nicht bei Strict TLS 1.2 und erfordert, dass TLS 1.0 und 1,1 voll funktionsfähig sind.
 
 #### <a name="supported-versions"></a>Unterstützte Versionen
 

@@ -9,14 +9,14 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245393"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243474"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop
+# <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>Paralleles Konfigurieren von polybase Data Warehouse für den Zugriff auf externe Daten in Hadoop
 
 Der Artikel erläutert die Verwendung von polybase auf einem APS-Gerät zum Abfragen externer Daten in Hadoop.
 
@@ -55,7 +55,7 @@ Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung f�
   
 1. Öffnen Sie eine Remote Desktop Verbindung mit dem PDW-Steuerungs Knoten.
 
-2. Suchen Sie die Datei **Yarn-Site. XML** auf dem Steuerelement Knoten. In der Regel lautet der Pfad:  
+2. Suchen Sie die Datei **yarn-site.xml** auf dem Steuer Knoten. In der Regel lautet der Pfad:  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -63,7 +63,7 @@ Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung f�
 
 3. Suchen Sie auf dem Hadoop-Computer die analoge Datei im Hadoop-Konfigurationsverzeichnis. Suchen Sie in der Datei den Wert des Konfigurationsschlüssels „yarn.application.classpath.“, und kopieren Sie diesen.  
   
-4. Suchen Sie auf dem Knoten "Steuerelement" in der **Datei "Yarn. Site. XML** " die Eigenschaft **Yarn. Application. classpath** . Fügen Sie den Wert vom Hadoop-Computer in das Element „Value“ ein.  
+4. Suchen Sie auf dem Knoten Steuerelement in der **Dateiyarn.site.xml** die Eigenschaft **Yarn. Application. classpath** . Fügen Sie den Wert vom Hadoop-Computer in das Element „Value“ ein.  
   
 5. Für alle CDH 5.X-Versionen müssen Sie die Konfigurationsparameter „mapreduce.application.classpath“ entweder ans Ende der Datei „yarn.site.xml“ oder in die Datei „mapred-site.xml“ einfügen. HortonWorks enthält diese Konfigurationen in den yarn.application.classpath-Konfigurationen. Weitere Beispiele finden Sie unter [PolyBase-Konfiguration](../relational-databases/polybase/polybase-configuration.md).
 
@@ -102,7 +102,7 @@ Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung f�
 </configuration>
 ```
 
-Wenn Sie die beiden Konfigurationseinstellungen in "" mapred-Site. xml "und" Yarn-Site. xml "unterbrechen, lauten die Dateien wie folgt:
+Wenn Sie die beiden Konfigurationseinstellungen in die mapred-site.xml und die yarn-site.xml unterbrechen möchten, lauten die Dateien wie folgt:
 
 **yarn-site.xml**
 
@@ -227,7 +227,7 @@ Um die Daten in Ihrer Hadoop-Datenquelle abzufragen, müssen Sie eine externe Ta
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. Erstellen Sie eine externe Datenquelle mit der [externen Datenquelle erstellen](../t-sql/statements/create-external-data-source-transact-sql.md).
+3. Erstellen Sie mit [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) eine externe Datenquelle.
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  

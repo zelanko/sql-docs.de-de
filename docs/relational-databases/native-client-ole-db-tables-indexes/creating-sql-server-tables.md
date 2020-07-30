@@ -18,14 +18,14 @@ ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9740c208db10484ee1e3c5ef807c5223fe6adfd6
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 9943b2c5e05d9cdc90efa8752aedf933ec624db9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977730"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87241560"
 ---
-# <a name="creating-sql-server-tables"></a>Erstellen von SQL Server-Tabellen
+# <a name="creating-sql-server-native-client-tables"></a>Erstellen von SQL Server Native Client Tabellen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht die **ITableDefinition:: aufzurufbare Funktion verfügbar** und ermöglicht es Consumern, Tabellen zu erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Consumer verwenden "Erstellungs **fähig** " zum Erstellen von permanenten Tabellen mit Kundennamen und permanente oder temporäre Tabellen mit eindeutigen Namen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieter generiert werden.  

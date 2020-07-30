@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e413913d3064b4302d4673098b82d220acc23aa1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764561"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242840"
 ---
 # <a name="ado-properties"></a>ADO-Eigenschaften
 
-|||  
+|Eigenschaft|BESCHREIBUNG|  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Gibt an, auf welcher Seite sich der aktuelle Datensatz befindet.|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Gibt die Ordnungsposition des aktuellen Datensatzes eines **Recordset** -Objekts an.|  
@@ -55,7 +55,7 @@ ms.locfileid: "82764561"
 |[Stereo](../../../ado/reference/ado-api/eos-property.md)|Gibt an, ob sich die aktuelle Position am Ende des Streams befindet.|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Gibt einen Filter für Daten in einem **Recordset**an.|  
 |[HelpContext und HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Gibt die Hilfedatei und das Thema an, die einem **Fehler** Objekt zugeordnet sind.<br /><br /> **HelpContextID** gibt eine Kontext-ID als **Long** -Wert für ein Thema in einer Hilfedatei zurück.<br /><br /> **HelpFile** gibt einen **Zeichen** folgen Wert zurück, der zu einem vollständig aufgelösten Pfad einer Hilfedatei ausgewertet wird.|  
-|[Sin](../../../ado/reference/ado-api/index-property.md)|Gibt den Namen des Indexes an, der aktuell für ein **Recordset** -Objekt wirksam ist.|  
+|[Index](../../../ado/reference/ado-api/index-property.md)|Gibt den Namen des Indexes an, der aktuell für ein **Recordset** -Objekt wirksam ist.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Gibt die Isolationsstufe für ein **Verbindungs** Objekt an.|  
 |[Element](../../../ado/reference/ado-api/item-property-ado.md)|Gibt einen bestimmten Member einer Auflistung anhand des Namens oder der Ordinalzahl an.|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|Gibt das binäre Zeichen an, das als Zeilen Trennzeichen in **textstreamobjekten** verwendet werden soll.|  
@@ -85,7 +85,7 @@ ms.locfileid: "82764561"
 |[Quelle (ADO-Datensatz)](../../../ado/reference/ado-api/source-property-ado-record.md)|Gibt die durch das **Daten Satz** Objekt dargestellte Entität an.|  
 |[Quelle (ADO-Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Gibt die Quelle für die Daten in einem **Recordset** -Objekt an.|  
 |[SQLSTATE](../../../ado/reference/ado-api/sqlstate-property.md)|Gibt den SQL-Status für ein bestimmtes **Fehler** Objekt an.|  
-|[State](../../../ado/reference/ado-api/state-property-ado.md)|Gibt für alle anwendbaren Objekte an, ob der Status des Objekts geöffnet oder geschlossen ist. Gibt für alle anwendbaren Objekte an, die eine asynchrone Methode ausführen, und zwar unabhängig davon, ob der aktuelle Zustand des Objekts eine Verbindung herstellt, ausführt oder abgerufen wird.|  
+|[Zustand](../../../ado/reference/ado-api/state-property-ado.md)|Gibt für alle anwendbaren Objekte an, ob der Status des Objekts geöffnet oder geschlossen ist. Gibt für alle anwendbaren Objekte an, die eine asynchrone Methode ausführen, und zwar unabhängig davon, ob der aktuelle Zustand des Objekts eine Verbindung herstellt, ausführt oder abgerufen wird.|  
 |[Status (ADO-Feld)](../../../ado/reference/ado-api/status-property-ado-field.md)|Gibt den Status eines **Feld** Objekts an.|  
 |[Status (ADO-Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Gibt den Status des aktuellen Datensatzes zu Batch Aktualisierungen oder anderen Massen Vorgängen an.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Gibt in einem hierarchischen **Recordsetobjekt** an, ob sich der Verweis auf die zugrunde liegenden untergeordneten Datensätze (d. h. das *Kapitel*) ändert, wenn sich die Position der übergeordneten Zeile ändert.|  

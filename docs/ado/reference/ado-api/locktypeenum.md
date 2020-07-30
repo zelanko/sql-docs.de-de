@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3fd3c1ffea99abf859a4a328e21da288bc9378a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e609a51d6b9f42cb6101ff485633302193757fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762531"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242650"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Gibt den Typ der Sperre an, die w채hrend der Bearbeitung in Datens채tzen eingef체gt wird  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**adlockbatchoptimistische**|4|Gibt Updates f체r optimistische Batches an. Erforderlich f체r den Batch Aktualisierungs Modus.|  
 |**adlockoptimistisch**|3|Zeigt die optimistische Sperre, Datensatz nach Datensatz. Der Anbieter verwendet die optimistische Sperre und sperrt nur Datens채tze, wenn Sie die [Update](../../../ado/reference/ado-api/update-method.md) -Methode aufruft.|  
@@ -38,15 +38,21 @@ Gibt den Typ der Sperre an, die w채hrend der Bearbeitung in Datens채tzen eingef�
   
 |Konstante|  
 |--------------|  
-|Adoerums. LockType. batchoptimistischer|  
+|AdoEnums.LockType.BATchoptimistische|  
 |Adoerums. LockType. optimistisch|  
 |Adoerums. LockType. pessimistisch|  
 |Adoerums. LockType. Read Only|  
 |Adoerums. LockType. nicht angegeben|  
   
 ## <a name="applies-to"></a>Gilt f체r  
-  
-|||  
-|-|-|  
-|[Clone-Methode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)|[LockType-Eigenschaft (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)|  
-|[Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[WillExecute-Ereignis (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)|
+
+:::row:::
+    :::column:::
+        [Clone-Methode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)  
+        [LockType-Eigenschaft (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [WillExecute-Ereignis (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+    :::column-end:::
+:::row-end:::

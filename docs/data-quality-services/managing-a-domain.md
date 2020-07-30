@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 77e1dc6a2e0039c8ff9a2f66c6b3ed45a2176a17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ecd829cbd3de8845f38a367e1e23d5af39ec48
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898103"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363010"
 ---
 # <a name="managing-a-domain"></a>Verwalten einer Domäne
 
@@ -44,7 +44,7 @@ ms.locfileid: "85898103"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Durch das Verwenden einer Domäne erhalten Sie folgende Möglichkeiten:  
   
-|||  
+|Vorgangs Beschreibung|Thema|  
 |-|-|  
 |Erstellen einer semantischen Darstellung für ein Datenfeld mit einem bestimmten Datentyp, Angeben, wie die Domäne aufgefüllt wird, und Formatieren der Ausgabe der Domäne|[Erstellen einer Domäne](../data-quality-services/create-a-domain.md)|  
 |Verknüpfen einer Domäne mit einer anderen Domäne und Aktivieren des gemeinsamen Nutzens der gleichen Einstellungen und die Werte|[Erstellen einer verknüpften Domäne](../data-quality-services/create-a-linked-domain.md)|  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33cb0b24806b0b4568a1d7eabc5a55aab4a9872b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 92c599665548c36b8349290b02d197393f707fbf
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759606"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243191"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 Gibt an, ob der gesamte Stream oder die nächste Zeile aus einem [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) gelesen werden soll.  
@@ -34,7 +34,12 @@ Gibt an, ob der gesamte Stream oder die nächste Zeile aus einem [Streamobjekt](
  Diese Konstanten haben keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  
-  
-|||  
-|-|-|  
-|[Read-Methode](../../../ado/reference/ado-api/read-method.md)|[ReadText-Methode](../../../ado/reference/ado-api/readtext-method.md)|
+
+:::row:::
+    :::column:::
+        [Read-Methode](../../../ado/reference/ado-api/read-method.md)  
+    :::column-end:::
+    :::column:::
+        [ReadText-Methode](../../../ado/reference/ado-api/readtext-method.md)  
+    :::column-end:::
+:::row-end:::

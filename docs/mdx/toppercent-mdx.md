@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036594"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362650"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -31,7 +31,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Prozentwert*  
+ *Percentage*  
  Ein gültiger numerischer Ausdruck, der den Prozentsatz der zurückzugebenden Tupel angibt.  
   
 > [!IMPORTANT]  
@@ -67,7 +67,7 @@ WHERE([Product].[Product Categories].[Bikes])
   
  Der vorangehende Ausdruck generiert die folgenden Ergebnisse:  
   
-||Reseller Sales Amount|  
+|City|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3.508.904,84|  
 |London|$1.521.530,09|  
@@ -102,7 +102,7 @@ FROM [Adventure Works]
   
  Die oben aufgeführte Abfrage gibt die folgenden Ergebnisse zurück. Zeilen im mittleren Abschnitt wurden entfernt, um die Lesbarkeit zu verbessern.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Tourenräder|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157.444,56|$163.112,57|($5.668,01)|  
 |Touring-2000 Blue, 46|$321.027,03|$333.021,50|($11.994,47)|  
@@ -122,7 +122,7 @@ FROM [Adventure Works]
   
  Beachten Sie, dass in der Abfrage einhundert Prozent (100 %) angefordert werden. Dies bedeutet, dass alle Zeilen zurückgegeben werden sollten. Da im *numeric_expression* jedoch negative Werte vorhanden sind, wird nur eine Zeile zurückgegeben.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Tourenräder|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157.444,56|$163.112,57|($5.668,01)|  
   

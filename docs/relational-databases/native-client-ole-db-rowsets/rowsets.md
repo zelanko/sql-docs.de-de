@@ -1,5 +1,5 @@
 ---
-title: Rowsets | Microsoft-Dokumentation
+title: Rowsets (Native Client OLE DB-Anbieter)
 description: Aktivieren Sie alle Datenanbieter, um Resultsetdaten in tabellarischer Form verfügbar zu machen. Verwenden Sie in OLE DB die Rowsetfunktion, eine Gruppe von Zeilen, die Datenspalten enthält.
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,13 +18,14 @@ ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0006be5acbff458e278d1719fcc5e6fe7d34ec6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2254c566e30cec9e0869e1a09c850e7013e0482a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013115"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246833"
 ---
-# <a name="rowsets"></a>Rowsets
+# <a name="rowsets-native-client-ole-db-provider"></a>Rowsets (Native Client OLE DB-Anbieter)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Ein Rowset ist ein Satz von Zeilen, die Spalten mit Daten enthalten. Rowsets sind die zentralen Objekte, die es allen OLE DB-Datenanbietern ermöglichen, Resultsetdaten in tabellarischer Form verfügbar zu machen.  
@@ -61,7 +62,7 @@ ms.locfileid: "86013115"
   
 -   [Abrufen einer einzelnen Zeile mit IRow](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
--   [Lesezeichen](../../relational-databases/native-client-ole-db-rowsets/bookmarks.md)  
+-   [Bookmarks](../../relational-databases/native-client-ole-db-rowsets/bookmarks.md)  
   
 -   [Aktualisieren von Daten in Rowsets](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  
   
