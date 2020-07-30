@@ -14,12 +14,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0da744d41c2135038e14a8aef71e088df7ba851d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001028"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332649"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server-Zertifikate und asymmetrische Schlüssel
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,9 +68,8 @@ ms.locfileid: "86001028"
 ## <a name="tools"></a>Tools  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] stellt Tools und Hilfsprogramme bereit, die Zertifikate und Schlüsseldateien mit starkem Namen generieren. Mithilfe dieser Tools können Schlüssel wesentlich flexibler generiert werden, als dies mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Syntax möglich ist. Sie können mit diesen Tools RSA-Schlüssel mit komplexerer Schlüssellänge erstellen und diese dann in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]importieren. Die folgende Tabelle zeigt, wo diese Tools zu finden sind.  
   
-|||  
-|-|-|  
-|Tool|Zweck|  
+| Tool | Zweck |
+| ---- | ------- |
 |[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|Erstellt selbstsignierte Zertifikate.|  
 |[makecert](/windows/desktop/SecCrypto/makecert)|Erstellt Zertifikate. Als veraltet markiert, zum Vorteil von **New-SelfSignedCertificate**.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|Erstellt starke Namen für symmetrische Schlüssel.|  
