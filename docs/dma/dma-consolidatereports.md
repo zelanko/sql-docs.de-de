@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868379"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435158"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Bewerten eines Unternehmens und Konsolidieren der Bewertungsberichte mit DMA
 
@@ -36,8 +36,8 @@ Die folgenden Schritt-für-Schritt-Anweisungen helfen Ihnen bei der Verwendung d
   - [Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop).
   - [Azure PowerShell-Module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Herunterladen und extrahieren:
-  - Der [DMA-Bericht Power BI Vorlage](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
-  - Das [loadwarehouse-Skript](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
+  - Der [DMA-Bericht Power BI Vorlage](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip).
+  - Das [loadwarehouse-Skript](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Laden der PowerShell-Module
 
@@ -46,7 +46,7 @@ Wenn Sie die PowerShell-Module im PowerShell-Modul Verzeichnis speichern, könne
 Führen Sie die folgenden Schritte aus, um die Module zu laden:
 
 1. Navigieren Sie zu c:\programme\windowspowershell\modules, und erstellen Sie dann einen Ordner mit dem Namen **datamigrationassistant**.
-2. Öffnen Sie die [PowerShell-Module](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/4/PowerShell-Modules2.zip), und speichern Sie Sie in dem Ordner, den Sie erstellt haben.
+2. Öffnen Sie die [PowerShell-Module](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/1/PowerShell-Modules2.zip), und speichern Sie Sie in dem Ordner, den Sie erstellt haben.
 
       ![PowerShell-Module](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -80,7 +80,6 @@ Diese Inventur kann in einer von zwei Formen vorliegen:
 >
 > Legen Sie für Standard Instanzen den Instanznamen auf MSSQLSERVER fest.
 
-
 Wenn Sie eine CSV-Datei verwenden, um die Daten zu importieren, stellen Sie sicher, dass nur zwei Spalten mit dem **dateninstanznamen** und dem Daten **Banknamen**vorhanden sind und dass die Spalten keine Header Zeilen enthalten.
 
  ![Inhalt der CSV-Datei](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -97,7 +96,7 @@ Erstellen Sie eine Datenbank mit dem Namen **estatueingeventory** und eine Tabel
 - DatabaseName
 - Bewermentflag
 
-![Inhalt der SQL Server Tabelle](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
+![Inhalt der SQL Server Tabelle](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 Wenn sich diese Datenbank nicht auf dem Tools-Computer befindet, stellen Sie sicher, dass der Computer Computer über eine Netzwerkverbindung zu dieser SQL Server Instanz verfügt.
 
@@ -105,38 +104,50 @@ Der Vorteil der Verwendung einer SQL Server Tabelle für eine CSV-Datei besteht 
 
 Beachten Sie, dass eine Bewertung in Abhängigkeit von der Anzahl der Objekte und ihrer Komplexität sehr viel Zeit in Anspruch nehmen kann (Stunden +). Daher ist es ratsam, die Bewertung in verwaltbare Blöcke aufzuteilen.
 
+### <a name="if-using-an-instance-inventory"></a>Bei Verwendung einer instanzinventur
+
+Erstellen Sie eine Datenbank mit dem Namen **estatueingeventory** und eine Tabelle mit dem Namen **instanceingeventory**. Die Tabelle, in der diese Inventur Daten enthalten sind, kann beliebig viele Spalten enthalten, solange die folgenden vier Spalten vorhanden sind:
+
+- ServerName
+- InstanceName
+- Port
+- Bewermentflag
+
+![Inhalt der SQL Server Tabelle](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+
 ## <a name="running-a-scaled-assessment"></a>Ausführen einer skalierten Bewertung
 
 Nachdem Sie die PowerShell-Module in das Verzeichnis "modules" geladen und eine Inventur erstellt haben, müssen Sie eine skalierte Bewertung durchführen, indem Sie PowerShell öffnen und die dmadatacollector-Funktion ausführen.
- 
+
   ![dmadatacollector-Funktions Auflistungen](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
 
 Die der dmadatacollector-Funktion zugeordneten Parameter werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |Beschreibung |
+|Parameter  |BESCHREIBUNG |
 |---------|---------|
 |**getserverlistfrom** | Ihre Inventur. Mögliche Werte sind **SQLServer** und **CSV**.<br/>Weitere Informationen finden Sie unter [Erstellen eines Inventars von SQL-Servern](#create-inventory). |
 |**csvpath** | Der Pfad zu Ihrer CSV-Inventur Datei.  Wird nur verwendet, wenn **getserverlistfrom** auf **CSV**festgelegt ist. |
 |**Servername** | Der SQL Server Instanzname des Inventars, wenn **SQLServer** im **getserverlistfrom** -Parameter verwendet wird. |
 |**databaseName** | Die Datenbank, in der die Inventur Tabelle gehostet wird. |
+|**nur ""** | Bitflag zum angeben, ob eine Liste von Instanzen zur Bewertung verwendet werden soll.  Wenn der Wert auf 0 festgelegt ist, wird die Tabelle databaseinventory verwendet, um die Liste der Bewertungs Ziele zu erstellen. |
 |**AssessmentName** | Der Name der DMA-Bewertung. |
-|**TargetPlatform** | Der Zieltyp der Bewertung, den Sie ausführen möchten.  Mögliche Werte sind **azuresqldatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**und **managedsqlserver**. |
+|**TargetPlatform** | Der Zieltyp der Bewertung, den Sie ausführen möchten.  Mögliche Werte sind **azuresqldatabase**, **managedsqlserver**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**, **SqlServerWindows2019**und **SqlServerLinux2019**.  |
 |**AuthenticationMethod** | Die Authentifizierungsmethode für das Herstellen einer Verbindung mit den SQL Server Zielen, die Sie bewerten möchten. Mögliche Werte sind **SQLAuth** und **windowsauth**. |
 |**OutputLocation** | Das Verzeichnis, in dem die JSON-Bewertungs Ausgabedatei gespeichert werden soll. Abhängig von der Anzahl der Datenbanken, die bewertet werden, und der Anzahl der Objekte in den Datenbanken kann die Bewertung sehr lange dauern. Nachdem alle Bewertungen abgeschlossen sind, wird die Datei geschrieben. |
 
 Wenn ein unerwarteter Fehler auftritt, wird das Befehlsfenster beendet, das von diesem Prozess initiiert wird.  Überprüfen Sie das Fehlerprotokoll, um zu ermitteln, warum es fehlschlug
- 
+
   ![Speicherort des Fehlerprotokolls](../dma/media//dma-consolidatereports/dma-error-log-file-location.png)
 
 ## <a name="consuming-the-assessment-json-file"></a>Verwenden der JSON-Bewertungs Datei
 
 Nachdem Ihre Bewertung abgeschlossen ist, können Sie die Daten für die Analyse in SQL Server importieren. Um die JSON-Bewertungs Datei zu nutzen, öffnen Sie PowerShell, und führen Sie die dmaprocessor-Funktion aus.
- 
+
   ![dmaprocessor-Funktions Auflistung](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
 Die der dmaprocessor-Funktion zugeordneten Parameter werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |Beschreibung |
+|Parameter  |BESCHREIBUNG |
 |---------|---------|
 |**processto** | Der Speicherort, an dem die JSON-Datei verarbeitet wird. Mögliche Werte sind **SQLServer** und **azuresqldatabase**. |
 |**Servername** | Die SQL Server Instanz, in die die Daten verarbeitet werden.  Wenn Sie für den **processto** -Parameter **azuresqldatabase** angeben, schließen Sie nur den SQL Server Namen ein (nicht include. Database.Windows.net). Sie werden zur Eingabe von zwei Anmeldungen aufgefordert, wenn Sie die Azure SQL-Datenbank als Ziel haben. die erste ist Ihre Azure-Mandanten-Anmelde Informationen, während die zweite die Administrator Anmeldung für den Azure-SQL Server ist. |
@@ -157,8 +168,8 @@ Nachdem der dmaprocessor die Bearbeitung der Bewertungs Dateien abgeschlossen ha
     Das Skript nimmt die Daten aus der Tabelle Report Data in der dmareporting-Datenbank und lädt Sie in das Warehouse.  Wenn während dieses Ladevorgangs Fehler auftreten, ist dies wahrscheinlich auf fehlende Einträge in den Dimensions Tabellen zurückzuführen.
 
 2. Laden Sie die Data Warehouse.
- 
-      ![Loadwarehouse-Inhalte geladen](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
+
+  ![Loadwarehouse-Inhalte geladen](../dma/media//dma-consolidatereports/dma-load-warehouse-loaded.png)
 
 ## <a name="set-your-database-owners"></a>Festlegen der Datenbankbesitzer
 
@@ -166,7 +177,7 @@ Obwohl es nicht obligatorisch ist, den größten Nutzen aus den Berichten zu erz
 
 Sie können auch das loadwarehouse-Skript verwenden, um die grundlegenden TSQL-Anweisungen zum Festlegen der Datenbankbesitzer bereitzustellen.
 
-  ![Loadwarehouse-Einstellungs Besitzer](../dma/media//dma-consolidatereports/dma-LoadWarehouse-set-owners.png)
+  ![Loadwarehouse-Einstellungs Besitzer](../dma/media//dma-consolidatereports/dma-load-warehouse-set-owners.png)
 
 ## <a name="dma-reports"></a>DMA-Berichte
 
@@ -250,7 +261,7 @@ Diese Visualisierung zeigt eine Aufschlüsselung der Datenbanken durch die folge
 - nicht bereit
 
 ### <a name="issues-word-cloud"></a>Ausgibt Word-Cloud
- 
+
   ![DMA-Probleme wordcloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
 Dieses visuelle Element zeigt die Probleme, die derzeit im Auswahl Kontext auftreten (alles, Instanz, Database [Vielfache von]). Je größer das Wort auf dem Bildschirm angezeigt wird, desto größer ist die Anzahl der Probleme in dieser Kategorie. Wenn Sie mit dem Mauszeiger auf ein Wort zeigen, wird die Anzahl der in dieser Kategorie auftretenden Probleme angezeigt.
@@ -280,7 +291,7 @@ Mit diesem Task wird der Bericht des Wiederherstellungs Plans basierend auf dem 
   ![Bericht zu DMA-Wiederherstellungs Plänen](../dma/media//dma-consolidatereports/dma-remediation-plan-report.png)
 
 Sie können den Bericht zum Wartungsplan auch eigenständig verwenden, um einen benutzerdefinierten Wiederherstellungs Plan mithilfe der Filter auf dem Blatt **Visualisierungen Filter** zu erstellen.
- 
+
   ![Bericht Filteroptionen für den DMA-Wiederherstellungs Plan](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
 ### <a name="script-disclaimer"></a>Skript Ausschluss
