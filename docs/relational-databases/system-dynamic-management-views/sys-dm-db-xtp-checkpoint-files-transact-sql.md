@@ -21,15 +21,15 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddf365b81a6e973da8348ad011dea9e23aabba50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4c4579fa8c2b891644e462ffd896e67862be8ca
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677528"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442591"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Zeigt Informationen zu Prüfpunktdateien, einschließlich Dateigröße, physischem Speicherort und der Transaktions-ID an.  
   
@@ -41,10 +41,10 @@ ms.locfileid: "85677528"
   
  Weitere Informationen finden Sie unter [Erstellen und Verwalten von Speicher für Speicher optimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
-##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]und höher  
+##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher   
  In der folgenden Tabelle werden die Spalten für `sys.dm_db_xtp_checkpoint_files` , beginnend mit, beschrieben **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Spaltenname|Typ|BESCHREIBUNG|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Die ID des Containers (in sys.database_files als Datei vom Typ FILESTREAM dargestellt), dem die Daten- oder Änderungsdatei angehört. Joins mit file_id in [sys. database_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID des Containers, zu dem die Stamm-, Daten-oder Änderungsdatei gehört. Joins mit file_guid in der sys. database_files-Tabelle.|  
@@ -70,7 +70,7 @@ ms.locfileid: "85677528"
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  In der folgenden Tabelle werden die Spalten für `sys.dm_db_xtp_checkpoint_files` , für beschrieben **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Spaltenname|Typ|BESCHREIBUNG|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Die ID des Containers (in sys.database_files als Datei vom Typ FILESTREAM dargestellt), dem die Daten- oder Änderungsdatei angehört. Joins mit file_id in [sys. database_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|Die GUID des Containers, dem die Daten- oder Änderungsdatei angehört.|  

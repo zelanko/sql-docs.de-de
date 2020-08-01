@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d439edc04b13092c2dc95bbf3e45c62739f43a4c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 60f180eabadcbd4605b958ed3b631a5b4f38b838
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829935"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442645"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   **sys. sp_xtp_merge_checkpoint_files** führt alle Daten-und Änderungs Dateien im angegebenen Transaktions Bereich zusammen.  
   
@@ -64,7 +64,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die feste Serverrolle sysadmin und die feste Datenbankrolle db_owner.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Führt alle Daten und Änderungsdateien innerhalb des gültigen Bereichs zusammen, um eine einzelne Daten- und Änderungsdatei zu erstellen. Die Mergerichtlinie wird von dieser Prozedur nicht berücksichtigt.  
   
 ## <a name="see-also"></a>Weitere Informationen  

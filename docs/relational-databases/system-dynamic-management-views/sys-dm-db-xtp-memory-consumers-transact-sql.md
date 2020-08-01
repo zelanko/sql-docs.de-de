@@ -20,15 +20,15 @@ ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2efcff0a713c4f7f59206b484c26c4c797cd343
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fbe9d8a69a9bbe788c082cf2d684e0dd6763b1e2
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830772"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442678"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Meldet die Arbeitsspeicherconsumer auf Datenbankebene in der [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Datenbank-Engine. Diese Sicht gibt eine Zeile für jeden Arbeitsspeicherconsumer zurück, den die Datenbank-Engine verwendet. Verwenden Sie diese DMV, um zu sehen, wie der Arbeitsspeicher auf verschiedene interne Objekte verteilt wird.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "82830772"
 |memory_consumer_address|**varbinary**|Interne Adresse des Consumers. Nur zur internen Verwendung.|  
 |xtp_object_id|**bigint**|Die in-Memory-OLTP-Objekt-ID, die der Speicher optimierten Tabelle entspricht.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In der Ausgabe verweisen die Zuordnungen auf Datenbankebene auf Benutzertabellen, Indizes und Systemtabellen. VARHEAP mit object_id = NULL verweist auf Arbeitsspeicher, der Tabellen mit Spalten variabler Länge zugeordnet ist.  
   
 ## <a name="permissions"></a>Berechtigungen  

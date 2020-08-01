@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a030bbcd292ade6e52f71f523d60dfccbdf6c79
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 1ed8bf04b624746d6a84efc6b515d0efa6c9d598
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262116"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442856"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Dient zum Ermitteln, ob das aktuelle Replikat das primäre Replikat ist.  
   
@@ -45,10 +45,10 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  "*dbname*"  
  Der Name der Datenbank. *dbname* ist vom Typ sysname.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  Gibt den Datentyp **bool**: 1 zurück, wenn die Datenbank auf der aktuellen Instanz das primäre Replikat ist; andernfalls 0.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um leicht zu bestimmen, ob die lokale Instanz das primäre Replikat der angegebenen Verfügbarkeitsdatenbank hostet. Beispielcode kann sich wie folgt zusammensetzen.  
   
 ```  
@@ -78,7 +78,7 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [AlwaysOn-Verfügbarkeitsgruppen Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [sys. dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../..//relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) [AlwaysOn-Verfügbarkeitsgruppen &#40;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) SQL Server&#41;   
- [Erstellen einer Verfügbarkeits Gruppe &#40;Transact-SQL-&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [AlwaysOn-Verfügbarkeitsgruppen Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)     
   

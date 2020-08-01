@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1f958e122277e28665b10ff27be4c0224574690d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 20e4f7f015cc5d1ced1802e192c36f6c86471f0b
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820908"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442916"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt inkrementelle Statistikeigenschaften für das angegebene Datenbankobjekt (Tabelle) in der aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank zurück. Die Verwendung von `sys.dm_db_incremental_stats_properties` (enthält eine Partitionsnummer) ähnelt der von `sys.dm_db_stats_properties` , das für nicht inkrementelle Statistiken verwendet wird. 
   
@@ -59,7 +59,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |unfiltered_rows|**bigint**|Gesamtanzahl der Zeilen in der Tabelle vor dem Anwenden des Filterausdrucks (für gefilterte Statistiken). Wenn die Statistik nicht gefiltert ist, entspricht „unfiltered_rows“ dem in der rows-Spalte zurückgegebenen Wert.|  
 |modification_counter|**bigint**|Gesamtanzahl der Änderungen für die führende Statistikspalte (auf der das Histogramm basiert) seit der letzten Aktualisierung der Statistik.<br /><br /> Diese Spalte enthält keine Informationen für speicheroptimierte Tabellen.|  
   
-## <a name="remarks"></a>Hinweise zu <a name="Remarks"></a>  
+## <a name="remarks"></a><a name="Remarks"></a> Hinweise  
  `sys.dm_db_incremental_stats_properties` gibt unter den folgenden Bedingungen ein leeres Rowset zurück:  
   
 -   `object_id` oder `stats_id` ist NULL.   
@@ -86,8 +86,8 @@ SELECT * FROM sys.dm_db_incremental_stats_properties (object_id('PartitionTable'
 Vorschläge zur zusätzlichen Nutzung finden Sie unter  [dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md).
   
 ## <a name="see-also"></a>Weitere Informationen  
- [DBCC SHOW_STATISTICS &#40;Transact-SQL-&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys. stats &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Objektbezogene dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys. dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   

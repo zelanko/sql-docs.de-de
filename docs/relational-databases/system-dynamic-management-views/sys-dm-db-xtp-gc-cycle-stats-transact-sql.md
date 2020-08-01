@@ -20,15 +20,15 @@ ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed687f9a0f29359e60c05439e36853504e1ab6b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e0edb4d46ae47b4c45dc01f7d2e33f856424352
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830812"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442566"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Gibt den aktuellen Status von Transaktionen aus, durch die mindestens eine Zeile gelöscht und für die ein Commit ausgeführt wurde. Der Garbage Collection-Leerlaufthread wird einmal pro Minute ausgeführt oder wenn die Anzahl der DML-Transaktionen, für die ein Commit ausgeführt wurde, seit dem letzten Zyklus der Garbage Collection einen internen Schwellenwert überschreitet. Im Zyklus der Garbage Collection werden die Transaktionen, für die ein Commit ausgeführt wurde, in eine oder mehrere Warteschlangen verschoben, die unterschiedlichen Generierungen zugeordnet sind. Transaktionen, durch die veraltete Versionen generiert wurden, werden in einer Einheit von 16 Transaktionen gruppiert, die sich wie folgt über 16 Generierungen verteilen:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82830812"
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Spaltenname|type|Beschreibung|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Ein eindeutiger Bezeichner für den Zyklus der Garbage Collection.|  
 |ticks_at_cycle_start|**bigint**|Takte, bei denen der Zyklus gestartet wurde.|  

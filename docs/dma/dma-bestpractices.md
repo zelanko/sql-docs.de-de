@@ -1,6 +1,6 @@
 ---
 title: Bewährte Methoden für den Datenmigrations-Assistenten
-description: Informieren Sie sich über bewährte Methoden zum Migrieren von SQL Server-Daten Datenmigrations-Assistent Banken
+description: Informieren Sie sich über bewährte Methoden zum Migrieren von SQL Server-Datenbanken mit Datenmigrations-Assistent, einschließlich Informationen zur Installation, Bewertung und Migration.
 ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fbfc995b3271c9618cd773d42d3e8154958d6af5
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1d9dc4c4030330e7065d6f8531af967dcf88baa3
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886047"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472366"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>Bewährte Methoden für die Ausführung des Datenmigrations-Assistenten
+# <a name="best-practices-for-running-data-migration-assistant"></a>Best Practices für die Ausführung des Datenmigrations-Assistenten
 Dieser Artikel enthält Informationen zu bewährten Methoden für die Installation, Bewertung und Migration.
 
 ## <a name="installation"></a>Installation

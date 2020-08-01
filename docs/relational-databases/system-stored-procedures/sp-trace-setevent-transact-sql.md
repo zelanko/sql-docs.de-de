@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7d1f047fed74a212358ef7c1af61034d021661ef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f96efdec6878691c4c3b3a3efbeb1cd2d6324f3d
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892595"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472666"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -240,7 +240,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  In der folgenden Tabelle sind die Spalten aufgeführt, die für ein Ereignis hinzugefügt werden können.  
   
-|Spaltennummer|Spaltenname|Beschreibung|  
+|Spaltennummer|Spaltenname|BESCHREIBUNG|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|Ein Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
 |2|**BinaryData**|Binärer Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
@@ -257,14 +257,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|**Dauer**|Die vom Ereignis benötigte Zeitspanne (in Millisekunden). Diese Datenspalte wird nicht durch das Hash Warning-Ereignis aufgefüllt.|  
 |14|**StartTime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar).|  
 |15|**EndTime**|Der Zeitpunkt, zu dem das Ereignis beendet wurde. Diese Spalte wird für Startereignisklassen, wie z. B. **SQL:BatchStarting** oder **SP:Starting**, nicht aufgefüllt. Sie wird auch nicht durch das **Hash Warning** -Ereignis aufgefüllt.|  
-|16|**Lesevorgänge**|Die Anzahl der logischen Lesevorgänge auf dem Datenträger, die vom Server aufgrund dieses Ereignisses ausgeführt werden. Diese Spalte wird nicht durch das **Lock: Released** -Ereignis aufgefüllt.|  
-|17|**Schreibvorgänge**|Die Anzahl physischer Schreibvorgänge auf dem Datenträger, die vom Server aufgrund des Ereignisses ausgeführt werden.|  
+|16|**Reads**|Die Anzahl der logischen Lesevorgänge auf dem Datenträger, die vom Server aufgrund dieses Ereignisses ausgeführt werden. Diese Spalte wird nicht durch das **Lock: Released** -Ereignis aufgefüllt.|  
+|17|**Writes**|Die Anzahl physischer Schreibvorgänge auf dem Datenträger, die vom Server aufgrund des Ereignisses ausgeführt werden.|  
 |18|**CPU**|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |19|**Berechtigungen**|Stellt die Bitmap der Berechtigungen dar; wird von Security Auditing verwendet.|  
-|20|**Schweregrad**|Schweregrad einer Ausnahme.|  
+|20|**Severity**|Schweregrad einer Ausnahme.|  
 |21|**EventSubClass**|Der Typ der Ereignisunterklasse. Diese Datenspalte wird nicht für alle Ereignisklassen aufgefüllt.|  
 |22|**ObjectID**|Vom System zugewiesene ID des Objekts.|  
-|23|**Success**|Erfolg der Berechtigungsverwendung; wird für die Überwachung verwendet.<br /><br /> **1** = Erfolg**0** = Fehler|  
+|23|**Erfolgreich**|Erfolg der Berechtigungsverwendung; wird für die Überwachung verwendet.<br /><br /> **1** = Erfolg**0** = Fehler|  
 |24|**IndexID**|ID für den Index des Objekts, das von dem Ereignis betroffen ist. Sie können die Index-ID für ein Objekt mithilfe der **indid** -Spalte der **sysindexes** -Systemtabelle ermitteln.|  
 |25|**IntegerData**|Wert für eine ganze Zahl, der von der in der Ablaufverfolgung erfassten Ereignisklasse abhängt.|  
 |26|**ServerName**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , entweder *Server* Name oder *Servername\Instanzname*, für die eine Ablauf Verfolgung ausgeführt wird.|  
@@ -290,7 +290,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |46|**ProviderName**|Name des OLE DB-Anbieters.|  
 |47|**MethodName**|Der Name der OLE DB-Methode.|  
 |48|**RowCounts**|Die Anzahl von Zeilen im Batch.|  
-|49|**RequestId**|Die ID der Anforderung, die die Anweisung enthält.|  
+|49|**RequestID**|Die ID der Anforderung, die die Anweisung enthält.|  
 |50|**XactSequence**|Ein Token zur Beschreibung der aktuellen Transaktion.|  
 |51|**EventSequence**|Die Sequenznummer für dieses Ereignis.|  
 |52|**BigintData1**|der **bigint** -Wert, der von der Ereignisklasse abhängt, die in der Ablauf Verfolgung aufgezeichnet wurde.|  
@@ -298,7 +298,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|Der GUID-Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wurde.|  
 |55|**IntegerData2**|Der ganzzahlige Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wurde.|  
 |56|**ObjectID2**|Die ID des verbundenen Objekts oder der verbundenen Entität (falls verfügbar).|  
-|57|**Type**|Der ganzzahlige Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wurde.|  
+|57|**Typ**|Der ganzzahlige Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wurde.|  
 |58|**OwnerID**|Der Typ des Objekts, das die Sperre besitzt. Nur für Sperrereignisse.|  
 |59|**ParentName**|Der Name des Schemas, in dem sich das Objekt befindet.|  
 |60|**IsSystem**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> **1** = System<br /><br /> **0** = Benutzer.|  
@@ -316,7 +316,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  In dieser Tabelle wird die Interaktion zwischen ** \@ on** und ** \@ ColumnID**veranschaulicht.  
   
-|@on|@columnid|Ergebnis|  
+|\@auf|\@columnid|Ergebnis|  
 |---------|---------------|------------|  
 |ON (**1**)|NULL|Das Ereignis ist aktiviert (ON).<br /><br /> Alle Spalten werden gelöscht.|  
 ||NOT NULL|Die Spalte ist für das angegebene Ereignis aktiviert (ON).|  

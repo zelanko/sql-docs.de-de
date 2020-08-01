@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 37e03d7552f1297fe4410d68e69bdc15ddeb47ed
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834215"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442424"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Zeilenanzahl- oder Prüfsummeninformationen für eine Tabelle oder indizierte Sicht zurück oder vergleicht die angegebenen Zeilenanzahl- oder Prüfsummeninformationen mit der angegebenen Tabelle oder indizierten Sicht. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank und auf dem Abonnenten für die Abonnementdatenbank ausgeführt. *Wird für Oracle-Verleger nicht unterstützt*.  
   
@@ -80,7 +80,7 @@ sp_table_validation [ @table = ] 'table'
   
  Wenn die Überprüfung der Zeilen Anzahl und die erwartete Anzahl von Zeilen der Anzahl in der Tabelle entsprechen, gibt **sp_table_validation** eine Meldung zurück, dass die Tabelle die Überprüfung der Zeilen Anzahl bestanden hat. Andernfalls wird eine Meldung zurückgegeben, die besagt, dass die Tabelle möglicherweise nicht mehr synchronisiert ist, und der Unterschied zwischen der erwarteten und der tatsächlichen Zeilenanzahl wird angezeigt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_table_validation** wird bei allen Replikations Typen verwendet. **sp_table_validation** wird für Oracle-Verleger nicht unterstützt.  
   
  Der Prüfsummenalgorithmus berechnet eine zyklische 32-Bit-Redundanzprüfung (CRC, Redundancy Check) des gesamten Zeilenbilds auf der Seite. Er überprüft Spalten nicht selektiv und kann nicht für eine Sicht oder eine vertikale Partition der Tabelle ausgeführt werden. Außerdem überspringt die Prüfsumme den Inhalt von **Text** -und **Image** -Spalten (Entwurfs bedingt).  

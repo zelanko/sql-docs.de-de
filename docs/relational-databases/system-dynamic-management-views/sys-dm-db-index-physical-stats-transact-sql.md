@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7bceaef8321248bc29be2faad3886319a9267391
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112759"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472202"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,33 +55,33 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *database_id* | NULL | 0 | Vorgegebene  
+ *database_id* \| NULL \| 0 \| Standard  
  Die ID der Datenbank. *database_id* ist vom Datentyp **smallint**. Gültige Eingaben sind die ID einer Datenbank, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.  
   
  Geben Sie NULL an, wenn Informationen zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen. Wenn Sie für *database_id*NULL angeben, müssen Sie für *object_id*, *index_id*und *partition_number*ebenfalls NULL angeben.  
   
  Die integrierte [DB_ID](../../t-sql/functions/db-id-transact-sql.md)-Funktion kann angegeben werden. Wenn DB_ID verwendet wird, ohne dass ein Datenbankname angegeben wird, muss der Kompatibilitätsgrad der aktuellen Datenbank 90 oder höher sein.  
   
- *object_id* | NULL | 0 | Vorgegebene  
+ *object_id* \| NULL \| 0 \| Standard  
  Die Objekt-ID der Tabelle oder Sicht, in der sich der Index befindet. *object_id* ist **int**.  
   
  Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] enthalten gültige Eingaben auch den Service Broker-Warteschlangen Namen oder den internen Warteschlangen Tabellennamen. Wenn Standardparameter angewendet werden (d. h. alle Objekte, alle Indizes usw.), werden die Fragmentierungs Informationen für alle Warteschlangen in das Resultset eingeschlossen.  
   
  Geben Sie NULL an, wenn Informationen zu allen Tabellen und Sichten in der angegebenen Datenbank zurückgegeben werden sollen. Wenn Sie für *object_id*NULL angeben, müssen Sie auch für *index_id* und *partition_number*NULL angeben.  
   
- *index_id* | 0 | NULL | -1 | Vorgegebene  
+ *index_id* \| 0 \| NULL \| -1 \| Standardwert  
  Die ID des Indexes. *index_id* ist vom Datentyp **int**. Gültige Eingaben sind die ID eines Indexes, 0, wenn *object_id* ein Heap ist, NULL,-1 oder default. Der Standard ist -1. NULL,-1 und Default sind in diesem Kontext äquivalente Werte.  
   
  Geben Sie NULL an, wenn Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben werden sollen. Wenn Sie für *index_id*NULL angeben, müssen Sie auch für *partition_number*NULL angeben.  
   
- *partition_number* | NULL | 0 | Vorgegebene  
+ *partition_number* \| NULL \| 0 \| Standard  
  Die Partitionsnummer im Objekt. *partition_number* ist vom Datentyp **int**. Gültige Eingaben sind die *partion_number* eines Indexes oder Heaps, NULL, 0 oder default. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.  
   
  Geben Sie NULL an, wenn Informationen zu allen Partitionen des besitzenden Objekts zurückgegeben werden sollen.  
   
  *partition_number* ist 1-basiert. Ein nicht partitionierter Index oder Heap hat *partition_number* auf 1 festgelegt.  
   
- *Modus* | NULL | Vorgegebene  
+ *Modus* \| NULL- \| Standardwert  
  Der Name des Modus. *Mode* gibt die Scanebene an, mit der Statistiken abgerufen werden. *Mode* ist vom **Datentyp vom Datentyp sysname**. Gültige Eingaben sind DEFAULT, NULL, LIMITED, SAMPLED oder DETAILED. Der Standardwert (NULL) ist LIMITED.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
@@ -120,7 +120,7 @@ sys.dm_db_index_physical_stats (
 |offrow_regular_version_record_count|**bigint**|Anzahl der Versionsdaten Sätze, die außerhalb der ursprünglichen Daten Zeile aufbewahrt werden. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |offrow_long_term_version_record_count|**bigint**|Anzahl von Versionsdaten Sätzen, die als langfristig angesehen werden. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die dynamische Verwaltungsfunktion sys.dm_db_index_physical_stats ersetzt die DBCC SHOWCONTIG-Anweisung.  
   
 ## <a name="scanning-modes"></a>Scanmodi  
@@ -183,7 +183,7 @@ GO
   
  **Logische Fragmentierung**  
   
- Dies ist der Prozentsatz der Seiten, die auf den Blattseiten eines Indexes nicht ordnungsgemäß sortiert sind. Eine nicht ordnungsgemäß einsortierte Seite ist eine Seite, für die die nächste dem Index zugeordnete physische Seite nicht die Seite ist, auf die der *Zeiger für die nächste Seite* auf der aktuellen Blattseite zeigt.  
+ Dies ist der Prozentsatz der Seiten, die auf den Blattseiten eines Indexes nicht ordnungsgemäß sortiert sind. Eine nicht ordnungsgemäß einsortierte Seite ist eine Seite, für die die nächste physische Seite, die dem Index zugeordnet ist, nicht die Seite ist, auf die der Zeiger für die nächste Seit*e* auf der aktuellen Blattseite zeigt.  
   
  **Blockfragmentierung**  
   

@@ -21,15 +21,15 @@ ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6ea40fa0a40e90b0ab31912bcda185cc21258b0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0fcac0218e78887aecb4d2ce7e6bbba4ebe24d0a
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830754"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442893"
 ---
 # <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Gibt Speicherauslastungsstatistiken für jede [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Tabelle (Benutzer und System) in der aktuellen Datenbank zurück. Die Systemtabellen haben negative Objekt-IDs und werden verwendet, um Laufzeitinformationen für die [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Engine zu speichern. Im Gegensatz zu Benutzerobjekten sind Systemtabellen intern und nur im Arbeitsspeicher vorhanden. Daher werden sie in Katalogsichten nicht aufgeführt. Systemtabellen werden verwendet, um Informationen wie Metadaten für alle Daten/Änderungsdateien im Speicher, Zusammenführungsanforderungen, Wasserzeichen für Änderungsdateien und Zeilenfilterung, gelöschte Tabellen und relevante Informationen für Wiederherstellungen und Sicherungen zu speichern. Die [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Engine unterstützt bis zu 8.192 Daten- und Änderungsdateipaare. Bei großen Datenbanken im Arbeitsspeicher ergibt sich damit eine Arbeitsspeicherauslastung durch Systemtabellen von einigen Megabyte.  
   
