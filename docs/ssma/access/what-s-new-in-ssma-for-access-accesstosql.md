@@ -4,21 +4,31 @@ description: Informieren Sie sich über Änderungen an SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 7e898fa94dda37342765001ba87283b986ac9eb1
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 06fd04921d217bf81861c76a5b09769039be5ee7
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091764"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477372"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Neues in SSMA für Access (Access Token SQL)
 
 In diesem Artikel wird SQL Server Migration Assistant (SSMA) für Zugriffs Änderungen in jeder Version aufgeführt.
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+Die Version Version von SSMA für Access enthält die folgenden Änderungen:
+
+* Unterstützung für `BigInt` ( `Large Number` )-Datentyp
+* Verbesserte Spaltentypen Auflösung
+* Verbesserte Konvertierung von Spalten Validierungsregeln
+* Verwenden des neuesten verfügbaren ACE OLE DB-Anbieters für die Datenmigration
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 

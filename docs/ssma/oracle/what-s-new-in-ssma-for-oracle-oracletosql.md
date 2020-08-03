@@ -4,21 +4,31 @@ description: Informieren Sie sich über Änderungen an SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: c0465466a00eb9e7c1eb3b75035d136687672fef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1601ae2430ced8a30a04d8ab52d97dbb9bbb095a
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011292"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477452"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Neues in SSMA für Oracle (oracleto SQL)
 
 In diesem Artikel wird SQL Server Migration Assistant (SSMA) für Oracle-Änderungen in jeder Version aufgeführt.
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+Die Version Version Version von SSMA für Oracle enthält die folgenden Änderungen:
+
+* Unterstützung für Unterabfrage-Factoring-Klauseln in- `INSERT` / `UPDATE` / `MERGE` / `DELETE` Anweisungen
+* Konvertierungs Nachricht für `ON DELETE SET NULL` Klausel in Fällen von Multipfad-oder Zirkel verweisen
+* Verbesserte Konvertierung von durch dynamische SQL-Zeichenfolge erstellten Cursorn
+* ODP.net auf v 19,8 aktualisieren
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 
@@ -286,7 +296,7 @@ Die Version vom Mai 2016 von SSMA für Oracle enthält die folgenden Änderungen
   > SQL Server 2016 bietet keine Unterstützung für mehrere Oracle-Flash Features, einschließlich:
   >
   >   * Abfrage der Oracle-flashbacktransaktion
-  >   * `DBMS_FLASHBACK`Paketen
+  >   * `DBMS_FLASHBACK` Paket
   >   * Rückblenden der Transaktion
   >   * Rückblenden von Daten Archive
   >   * Tabelle "Flashback"
