@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03cff187ee251278274af6f7c97e4598235fde38
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727074"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363435"
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
 
@@ -107,10 +107,14 @@ Zusätzlich zu den Anforderungen bzgl. SET-Optionen und deterministischen Funkti
 
 - Die Sicht muss mithilfe der Option `WITH SCHEMABINDING` erstellt werden.
 - Die Sicht darf nur auf Basistabellen in derselben Datenbank wie die Sicht verweisen. Die Sicht kann nicht auf andere Sichten verweisen.
+
+- Wenn `GROUP BY` vorhanden ist, muss die VIEW-Definition `COUNT_BIG(*)` enthalten, während `HAVING` nicht enthalten sein darf. Diese `GROUP BY`-Einschränkungen gelten nur für die indizierte Sichtdefinition. Im Ausführungsplan einer Abfrage kann eine indizierte Sicht auch dann verwendet werden, wenn sie diese `GROUP BY`-Einschränkungen nicht erfüllt.
+- Wenn die Sichtdefinition eine `GROUP BY`-Klausel enthält, kann der Schlüssel des eindeutigen gruppierten Indexes nur auf die Spalten verweisen, die in der `GROUP BY`-Klausel angegeben werden.
+
 - Die SELECT-Anweisung in der Sichtdefinition darf die folgenden Transact-SQL-Elemente nicht enthalten:
 
-   ||||
-   |-|-|-|
+   | Transact-SQL-Elemente | (Fortsetzung) | (Fortsetzung) |
+   | --------------------- | ----------- | ----------- |
    |`COUNT`|ROWSET-Funktionen (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET` und `OPENXML`)|`OUTER`-Joins (`LEFT`, `RIGHT` oder `FULL`)|
    |Abgeleitete Tabelle (durch Angabe einer `SELECT`-Anweisung in der `FROM`-Klausel definiert)|Selbstjoins|Angeben von Spalten mithilfe von `SELECT *` oder `SELECT <table_name>.*`|
    |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP` oder `AVG`|Allgemeine Tabellenausdrücke (CTE, Common Table Expression)|
@@ -121,15 +125,11 @@ Zusätzlich zu den Anforderungen bzgl. SET-Optionen und deterministischen Funkti
    |Tabellenvariablen|`OUTER APPLY` oder `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |Spaltensätze mit geringer Dichte|Inline-Tabellenwertfunktionen (TVF) oder Tabellenwertfunktionen mit mehreren Anweisungen (MSTVF)|`OFFSET`|
    |`CHECKSUM_AGG`|||
-   |&nbsp;|&nbsp;|&nbsp;|
-  
-    <sup>1</sup> Die indizierte Sicht kann Spalten mit dem Datentyp **float** enthalten. Allerdings dürfen solche Spalten nicht im Schlüssel des gruppierten Indexes enthalten sein.
 
-- Wenn `GROUP BY` vorhanden ist, muss die VIEW-Definition `COUNT_BIG(*)` enthalten, während `HAVING` nicht enthalten sein darf. Diese `GROUP BY`-Einschränkungen gelten nur für die indizierte Sichtdefinition. Im Ausführungsplan einer Abfrage kann eine indizierte Sicht auch dann verwendet werden, wenn sie diese `GROUP BY`-Einschränkungen nicht erfüllt.
-- Wenn die Sichtdefinition eine `GROUP BY`-Klausel enthält, kann der Schlüssel des eindeutigen gruppierten Indexes nur auf die Spalten verweisen, die in der `GROUP BY`-Klausel angegeben werden.
+   <sup>1</sup> Die indizierte Sicht kann Spalten mit dem Datentyp **float** enthalten. Allerdings dürfen solche Spalten nicht im Schlüssel des gruppierten Indexes enthalten sein.
 
-> [!IMPORTANT]
-> Indizierte Sichten, die temporale Abfragen (Abfragen, die die `FOR SYSTEM_TIME`-Klausel verwenden) überlagern, werden nicht unterstützt.
+   > [!IMPORTANT]
+   > Indizierte Sichten, die temporale Abfragen (Abfragen, die die `FOR SYSTEM_TIME`-Klausel verwenden) überlagern, werden nicht unterstützt.
 
 ### <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen
 

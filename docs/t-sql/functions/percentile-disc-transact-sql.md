@@ -19,15 +19,15 @@ ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00ed86cdfd3002bc44c7a20c49c96663f6206417
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f1718a85927fa4b443576ab7835298db9f59178d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803891"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394237"
 ---
 # <a name="percentile_disc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Berechnet für sortierte Werte in einem gesamten Rowset oder innerhalb bestimmter Partitionen eines Rowsets in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein bestimmtes Quantil. Für den angegebenen Quantilwert sortiert *P*, PERCENTILE_DISC die Ausdruckswerte in der ORDER BY-Klausel. Es wird dann der Wert mit dem kleinsten angegebenen CUME_DIST-Wert (in Bezug auf die gleiche Sortierspezifikation) zurückgegeben, der größer oder gleich *P* ist. Beispiel: PERCENTILE_DISC (0.5) berechnet das 50. Quantil (d.h. den Mittelwert) eines Ausdrucks. PERCENTILE_DISC berechnet das Quantil auf Grundlage einer diskreten Verteilung der Spaltenwerte. Das Ergebnis entspricht einem bestimmten Wert in der Spalte.  
   
@@ -40,7 +40,9 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
     OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## <a name="arguments"></a>Argumente  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumente
  *literal*  
  Das zu berechnende Quantil. Der Wert muss zwischen 0,0 und 1,0 liegen.  
   
@@ -48,7 +50,7 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  Gibt eine Liste von numerischen Werten für die Sortierung und Berechnung des Quantils an. Es ist nur ein *order_by_expression*-Element zulässig. Standardmäßig wird die Sortierung in aufsteigender Reihenfolge vorgenommen. Die Liste der Werte kann von einem beliebigen Datentyp sein, der für den Sortierungsvorgang gültig sein kann.  
   
  OVER **(** \<partition_by_clause>)**  
- Teilt die Ergebnisse der FROM-Klausel in Partitionen. Die Quantilfunktion wird auf diese Partitionen angewendet. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). Die \<ORDER BY-Klausel> und die \<Zeilen- oder Bereichsklausel> können nicht in einer PERCENTILE_DISC-Funktion angegeben werden.  
+ Teilt die Ergebnisse der FROM-Klausel in Partitionen. Die Quantilfunktion wird auf diese Partitionen angewendet. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). \<ORDER BY clause> und \<rows or range clause> können nicht in PERCENTILE_DISC-Funktionen angegeben werden.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  Der Rückgabetyp wird durch den *order_by_expression*-Typ bestimmt.  

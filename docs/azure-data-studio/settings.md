@@ -1,6 +1,6 @@
 ---
 title: Benutzer- und Arbeitsbereichseinstellungen
-description: Vorgehensweise beim Anpassen von Azure Data Studio durch Ändern von Benutzer -und Arbeitsbereichseinstellungen.
+description: Erfahren Sie, wie Sie die Einstellungen zum Anpassen des Editors, der Benutzeroberfläche und des funktionalen Verhaltens von Azure Data Studio entsprechend Ihrer Vorlieben verwenden.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: azure-data-studio
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 00c7248050d3bf7e0d5d31df6a1e628dbcc03605
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 71f1f27bc58f64d3a1bcf8bcc3f8e96594e2e771
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758387"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411206"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Ändern von Benutzer- und Arbeitsbereichseinstellungen
 

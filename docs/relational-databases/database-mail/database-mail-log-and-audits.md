@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8e8b0ce1e5924a2186529fb7f7b301b85d0d547c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4354def42884887539693073bf3108d7227170de
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726493"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363570"
 ---
 # <a name="database-mail-log-and-audits"></a>Datenbank-E-Mail-Protokoll und -Überwachung
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,9 +34,8 @@ ms.locfileid: "85726493"
   
 ## <a name="database-mail-auditing-tasks"></a>Überwachungstasks von Datenbank-E-Mail  
   
-|||  
+|Überprüfen und Verwalten von Protokollen zu Datenbank-E-Mail|Link zum Artikel|  
 |-|-|  
-|**Überprüfen und Verwalten von Protokollen zu Datenbank-E-Mail**|**Link zum Thema**|  
 |Überprüfen des Übermittlungsstatus einer einzelnen Nachricht|[Überprüfen des Status von mit Datenbank-E-Mail gesendeten E-Mail-Nachrichten](../../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md)|  
 |Bereinigen von Nachrichten, Anlagen und Protokolleinträgen in Datenbank-E-Mail|[sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)<br /><br /> [sysmail_delete_log_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|  
 |Archivieren der Nachrichten und Protokolle in Datenbank-E-Mail|[Erstellen eines Auftrags des SQL Server-Agents zum Archivieren von Datenbank-E-Mail-Nachrichten und Ereignisprotokollen](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  

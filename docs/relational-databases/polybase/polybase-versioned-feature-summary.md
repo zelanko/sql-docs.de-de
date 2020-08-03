@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9da1c78f9f312574a0a914f0956357412a35d4e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1847c47622dc36bbdb92db675a90765ff6f197f6
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216029"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332149"
 ---
 # <a name="polybase-features-and-limitations"></a>Features und Einschränkungen von PolyBase
 
@@ -26,28 +26,26 @@ In diesem Artikel werden die PolyBase-Features zusammengefasst, die für SQL Ser
 ## <a name="feature-summary-for-product-releases"></a>Zusammenfassung der Features einzelner Produktreleases
 
 In dieser Tabelle werden die wichtigsten Features für PolyBase sowie die Produkte aufgeführt, in denen diese verfügbar sind.  
-  
-||||||
-|-|-|-|-|-|   
-|**Feature**|**SQL Server 2016**|**Azure SQL-Datenbank**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
+
+|**Feature** |**SQL Server 2016** |**Azure SQL-Datenbank** |**Azure Synapse Analytics** |**Parallel Data Warehouse** |
+|---------|---------|---------|---------|---------|
 |Hadoop-Daten abfragen mit [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|Nein|Ja|
 |Daten aus Hadoop importieren|Ja|Nein|Nein|Ja|
 |Daten für Hadoop exportieren  |Ja|Nein|Nein| Ja|
 |Abfragen von, Importieren aus und Exportieren in Microsoft Azure HDInsights |Nein|Nein|Nein|Nein
 |Abfrageberechnungen auf Hadoop verlagern|Ja|Nein|Nein|Ja|  
-|Daten aus Azure Blob Storage importieren|Ja|Nein|Ja|Ja| 
+|Daten aus Azure Blob Storage importieren|Ja|Nein|Ja|Ja|
 |Daten aus Azure Blob Storage exportieren|Ja|Nein|Ja|Ja|  
-|Daten aus Azure Data Lake Store importieren|Nein|Nein|Ja|Nein|    
+|Daten aus Azure Data Lake Store importieren|Nein|Nein|Ja|Nein|
 |Daten aus Azure Data Lake Store exportieren|Nein|Nein|Ja|Nein|
-|PolyBase-Abfragen über Microsoft BI-Tools ausführen|Ja|Nein|Ja|Ja|   
+|PolyBase-Abfragen über Microsoft BI-Tools ausführen|Ja|Nein|Ja|Ja|
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>Von der Weitergabeberechnung unterstützte T-SQL-Operatoren
 
-In SQL Server und APS können nicht alle T-SQL-Operatoren an den Hadoop-Cluster weitergegeben werden. In der folgenden Tabelle werden alle unterstützten und eine Teilmenge der nicht unterstützten Operatoren aufgelistet. 
+In SQL Server und APS können nicht alle T-SQL-Operatoren an den Hadoop-Cluster weitergegeben werden. In der folgenden Tabelle werden alle unterstützten und eine Teilmenge der nicht unterstützten Operatoren aufgelistet.
 
-||||
-|-|-|-| 
-|**Operatortyp**|**Weitergabe an Hadoop möglich**|**Weitergabe an Blob Storage möglich**|
+|**Operatortyp** |**Weitergabe an Hadoop möglich** |**Weitergabe an Blob Storage möglich** |
+|---------|---------|---------|
 |Spaltenprojektionen|Ja|Nein|
 |Prädikate|Ja|Nein|
 |Aggregate|Teilweise|Nein|
@@ -63,9 +61,9 @@ PolyBase weist folgende Einschränkungen auf:
 
 - Damit Sie PolyBase verwenden können, müssen Sie über Berechtigungen auf Systemadministrator- oder CONTROL SERVER-Ebene für die Datenbank verfügen.
 
-- Die maximale Zeilengröße, einschließlich der vollständigen Länge der Spalten mit variabler Länge, darf in SQL Server nicht mehr als 32 KB und in Azure SQL Data Warehouse nicht mehr als 1 MB betragen.
+- Die maximale Zeilengröße, einschließlich der vollständigen Länge der Spalten mit variabler Länge, darf in SQL Server nicht mehr als 32 KB und in Azure Synapse Analytics nicht mehr als 1 MB betragen.
 
-- Wenn Daten aus SQL Server oder SQL Data Warehouse in ein ORC-Dateiformat exportiert werden, wird die Anzahl an Spalten mit viel Text möglicherweise eingeschränkt. Es dürfen aufgrund von Java-Fehlermeldungen zu nicht genügend Arbeitsspeicher ggf. nur 50 Spalten vorhanden sein. Exportieren Sie nur eine Teilmenge der Spalten, um dieses Problem zu umgehen.
+- Wenn Daten aus SQL Server oder Azure Synapse Analytics in ein ORC-Dateiformat exportiert werden, wird die Anzahl an Spalten mit viel Text möglicherweise eingeschränkt. Es dürfen aufgrund von Java-Fehlermeldungen zu nicht genügend Arbeitsspeicher ggf. nur 50 Spalten vorhanden sein. Exportieren Sie nur eine Teilmenge der Spalten, um dieses Problem zu umgehen.
 
 - PolyBase kann keine Verbindung mit einer Hortonworks-Instanz herstellen, wenn Knox aktiviert ist.
 

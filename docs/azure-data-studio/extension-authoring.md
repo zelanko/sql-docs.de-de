@@ -1,6 +1,6 @@
 ---
 title: Erstellen von Erweiterungen
-description: Weitere Informationen zum Erstellen und Veröffentlichen von Erweiterungen in Azure Data Studio
+description: Sie können Funktionen mithilfe einer Erweiterung zu Azure Data Studio hinzufügen. Hier erfahren Sie, wie Sie eine Erweiterung erstellen und im Erweiterungskatalog veröffentlichen.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 63a4c95f12aefafec97a58a186d33a5095b90dc2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0473ac567f26748999e5718fe5f81660b0bfb7ba
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483844"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411126"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Erweitern der Funktionalität durch Erstellen von Erweiterungen zu Azure Data Studio
 

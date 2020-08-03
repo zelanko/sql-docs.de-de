@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2be2bcf872af3be6caf8bb2b13af70347fcf1106
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630992"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361351"
 ---
 # <a name="database-properties-mirroring-page"></a>Datenbankeigenschaften (Seite Wird gespiegelt)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85630992"
   
  Wenn der Assistent erfolgreich beendet wird, hängt die durchzuführende Aktion auf folgende Weise davon ab, ob die Spiegelung bereits begonnen wurde:  
   
-|||  
+|Spiegelungsstatus|Ausgeführte Aktion|  
 |-|-|  
 |Wenn die Spiegelung nicht begonnen wurde.|Diese Verbindungsinformationen werden in der Eigenschaftenseite zwischengespeichert sowie zusätzlich ein Wert, der anzeigt, ob die Spiegeldatenbank über den entsprechenden Satz von Eigenschaften verfügt.<br /><br /> Bei Abschluss des Assistenten werden Sie aufgefordert, die Datenbankspiegelung mit den standardmäßigen Server-Netzwerkadressen und dem standardmäßigen Betriebsmodus zu starten. Wenn Sie die Adressen oder den Betriebsmodus ändern müssen, klicken Sie auf **Spiegelung nicht starten**.|  
 |Wenn die Spiegelung begonnen wurde.|Wenn der Zeugenserver im Assistenten geändert wurde, wird diese Einstellung entsprechend festgelegt.|  

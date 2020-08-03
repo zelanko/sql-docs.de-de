@@ -17,12 +17,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 51a34db68f77193c42662476656d46e5fa2f6092
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87109408"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395023"
 ---
 # <a name="replication-distribution-agent"></a>Replikationsverteilungs-Agent
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -133,10 +133,10 @@ distrib [-?]
  **-DistributorPassword** _distributor_password_  
  Das Verteilerkennwort.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [**0**\| **1**]  
  Gibt den Sicherheitsmodus des Verteilers an. Der Wert 0 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] steht für den -Authentifizierungsmodus, der Wert 1 für den Windows-Authentifizierungsmodus (Standard).  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [**0** \| **1** \| **2**]  
  Die Ebene der Transport Layer Security (TLS), früher als Secure Sockets Layer (SSL) bezeichnet, die vom Verteilungs-Agent beim Herstellen von Verbindungen verwendete Verschlüsselung.  
   
 |Wert von EncryptionLevel|BESCHREIBUNG|  
@@ -171,7 +171,7 @@ distrib [-?]
  **-FtpUserName** _ftp_user_name_  
  Der Benutzername, mit dem eine Verbindung zum FTP-Dienst hergestellt wird. Wenn kein Benutzername angegeben wird, wird **anonymous** verwendet.  
   
- **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
+ **-HistoryVerboseLevel** [**0** \| **1** \| **2** \| **3**]  
  Gibt den Umfang des Verlaufs an, der während eines Verteilungsvorgangs protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
   
 |Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|BESCHREIBUNG|  
@@ -261,7 +261,7 @@ distrib [-?]
 |**1**|ODBC-Datenquelle (ODBC data source)|  
 |**3**|OLE DB-Datenquelle|  
   
- **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
+ **-SubscriptionStreams** [**0**\|**1**\|**2**\|...**64**]  
  Die Anzahl zulässiger Verbindungen pro Verteilungs-Agent, um Änderungsbatches parallel auf einen Abonnenten anzuwenden, während viele Transaktionsmerkmale beibehalten werden, die bei Verwendung eines einzigen Threads vorhanden sind. Für einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verleger wird ein Wertebereich von 1 bis 64 unterstützt. Dieser Parameter wird nur unterstützt, wenn auf dem Verleger und dem Verteiler [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höhere Versionen ausgeführt werden. Dieser Parameter wird für Nicht-Abonnenten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder Peer-zu-Peer-Abonnements nicht unterstützt, oder er muss auf 0 festgelegt werden.  
   
 > [!NOTE]  

@@ -1,6 +1,6 @@
 ---
 title: Schemavergleich-Erweiterung
-description: Installieren und Verwenden der Schemavergleicherweiterung für Azure Data Studio
+description: Erfahren Sie, wie Sie die Schemavergleich-Erweiterung für Azure Data Studio installieren, um zwei Datenbanken mühelos zu vergleichen und eine selektiv zu ändern, damit diese mit der anderen Datenbank übereinstimmt.
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 09602241d0fd30153ca462225b617fd1612a0045
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 80aa0be8ae70773fe0e1a0087e623f679504a983
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758405"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411226"
 ---
 # <a name="schema-compare-extension"></a>Schemavergleich-Erweiterung
 Die Schemavergleicherweiterung bietet eine benutzerfreundliche Umgebung, in der zwei Datenbankdefinitionen verglichen und die Unterschiede aus der Quelle auf das Ziel angewendet werden können.

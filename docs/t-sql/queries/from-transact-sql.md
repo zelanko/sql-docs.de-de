@@ -34,16 +34,16 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 246cf0c526e04c5f4df33067286b0cefaf9913cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e958aaf757ecc9e28c090d50a13ead57b2de90bb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636205"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397077"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM-Klausel mit JOIN, APPLY, PIVOT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 In Transact-SQL steht die FROM-Klausel in den folgenden Anweisungen zur Verfügung:
 
@@ -177,7 +177,7 @@ FROM { <table_source> [ ,...n ] }
  Gibt eine Tabelle, Sicht, Tabellenvariable oder abgeleitete Tabelle als Quelle mit oder ohne Alias zum Verwenden in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung an. In einer Anweisung können bis zu 256 Tabellenquellen verwendet werden. Allerdings variiert das Limit in Abhängigkeit vom verfügbaren Arbeitsspeicher und der Komplexität anderer Ausdrücke in der Abfrage. Einzelne Abfragen unterstützen möglicherweise nicht bis zu 256 Tabellenquellen.  
   
 > [!NOTE]  
->  Durch eine hohe Anzahl an Tabellen, auf die in einer Abfrage verwiesen wird, kann möglicherweise die Abfrageleistung beeinträchtigt werden. Zusätzliche Faktoren haben außerdem Auswirkungen auf die Kompilierungs- und Optimierungszeit. Dazu zählt das Vorhandensein von Indizes und indizierten Sichten für das \<table_source>-Argument und die Größe des \<select_list>-Arguments in der SELECT-Anweisung.  
+>  Durch eine hohe Anzahl an Tabellen, auf die in einer Abfrage verwiesen wird, kann möglicherweise die Abfrageleistung beeinträchtigt werden. Zusätzliche Faktoren haben außerdem Auswirkungen auf die Kompilierungs- und Optimierungszeit. Dazu gehört das Vorhandensein von Indizes und indizierten Sichten für jede \<table_source>-Instanz und die Größe von \<select_list> in der SELECT-Anweisung.  
   
  Die Reihenfolge der Tabellenquellen nach dem FROM-Schlüsselwort hat keinen Einfluss auf das Resultset. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt Fehler zurück, wenn doppelte Namen in der FROM-Klausel angezeigt werden.  
   
@@ -193,7 +193,7 @@ FROM { <table_source> [ ,...n ] }
   
  Wenn eine abgeleitete Tabelle, Rowsetwertfunktion, Tabellenwertfunktion oder Operatorklausel (z.B. PIVOT oder UNPIVOT) verwendet wird, ist der erforderliche *table_alias*-Ausdruck am Ende der Klausel der zurückgegebene verknüpfte Tabellenname für alle Spalten, einschließlich gruppierter Spalten.  
   
- WITH (\<table_hint> )  
+ WITH (\<table_hint>)  
  Gibt an, dass der Abfrageoptimierer eine Optimierungs- oder Sperrstrategie bei dieser Tabelle und für diese Anweisung verwendet. Weitere Informationen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  *rowset_function*  
@@ -390,15 +390,15 @@ ON (p.ProductID = v.ProductID);
 **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
   
- Gibt eine Tabelle mit den Werten für alle Zeilenversionen zurück, die innerhalb des angegebenen Zeitbereichs aktiv waren, unabhängig davon, ob ihre Aktivität vor dem *\<start_date_time>* -Parameterwert für das FROM-Argument begonnen hat oder ihre Aktivität nach dem *\<end_date_time>* -Parameterwert für das TO-Argument geendet hat. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte für alle Zeilenversionen zurückgegeben werden, die zu irgendeinem Zeitpunkt innerhalb des angegebenen Zeitbereichs aktiv waren. Zeilen, die genau an dem durch den FROM-Endpunkt definierten unteren Grenzwert aktiv wurden, sind enthalten, und Datensätze, die genau an dem durch den TO-Endpunkt definierten oberen Grenzwert aktiv wurden, sind nicht enthalten.  
+ Dieses Argument gibt eine Tabelle mit den Werten für alle Datensatzversionen zurück, die innerhalb des angegebenen Zeitbereichs aktiv waren, unabhängig davon, ob ihre Aktivität vor dem Parameterwert *\<start_date_time>* für das FROM-Argument begonnen hat oder ihre Aktivität nach dem Parameterwert *\<end_date_time>* für das TO-Argument geendet hat. Intern wird eine Union zwischen der temporalen Tabelle und ihrer Verlaufstabelle ausgeführt, und die Ergebnisse werden so gefiltert, dass die Werte für alle Zeilenversionen zurückgegeben werden, die zu irgendeinem Zeitpunkt innerhalb des angegebenen Zeitbereichs aktiv waren. Zeilen, die genau an dem durch den FROM-Endpunkt definierten unteren Grenzwert aktiv wurden, sind enthalten, und Datensätze, die genau an dem durch den TO-Endpunkt definierten oberen Grenzwert aktiv wurden, sind nicht enthalten.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
 **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Gleich wie oben in der Beschreibung zu **FROM \<start_date_time> TO \<end_date_time>** , mit dem Unterschied, dass sie Zeilen enthält, die an dem durch den \<end_date_time>-Endpunkt definierten oberen Grenzwert aktiv wurden.  
+ Dieses Argument ist identisch mit dem oben beschriebenen Argument **FROM \<start_date_time> TO \<end_date_time>** , mit dem Unterschied, dass es Zeilen enthält, die an dem durch den \<end_date_time>-Endpunkt definierten oberen Grenzwert aktiv wurden.  
   
- CONTAINED IN (\<start_date_time> , \<end_date_time>)  
+ CONTAINED IN (\<start_date_time>, \<end_date_time>)  
 
 **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 

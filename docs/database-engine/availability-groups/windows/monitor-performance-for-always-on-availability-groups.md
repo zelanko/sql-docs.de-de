@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897339"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362679"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Überwachen der Leistung von Always On-Verfügbarkeitsgruppen
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,14 +26,13 @@ ms.locfileid: "85897339"
   
  ![Datensynchronisierung für Verfügbarkeitsgruppen](media/always-onag-datasynchronization.gif "Datensynchronisierung für Verfügbarkeitsgruppen")  
   
-|||||  
+|Sequenz|Beschreibung des Schritts|Kommentare|Nützliche Metriken|  
 |-|-|-|-|  
-|**Sequenz**|**Beschreibung des Schritts**|**Kommentare**|**Nützliche Metriken**|  
 |1|Protokollgenerierung|Protokolldaten werden auf den Datenträger geleert. Dieses Protokoll muss in die sekundären Replikate repliziert werden. Die Protokolldatensätze werden in die Sendewarteschlange eingereiht.|[SQL Server: Datenbank > Geleerte Protokollbytes/Sekunde](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Erfassung|Für jede Datenbank werden Protokolle erfasst und an die entsprechende Partnerwarteschlange gesendet (eine pro Datenbankreplikatspaar). Dieser Erfassungsprozess wird fortlaufend ausgeführt, solange das Verfügbarkeitsreplikat verbunden ist und die Datenverschiebung nicht aus irgendeinem Grund angehalten wird. Der Status des Datenbankreplikatspaar lautet entweder „Wird synchronisiert“ oder „Synchronisiert“. Wenn die Nachrichten beim Erfassungsprozess nicht schnell genug überprüft und in die Warteschlange eingereiht werden können, führt dies zum Anwachsen der Protokollsendewarteschlange.|[SQL Server: Verfügbarkeitsreplikat > An Replikat gesendete Bytes/Sekunde](~/relational-databases/performance-monitor/sql-server-availability-replica.md): Eine Aggregation der Summe aller Datenbanknachrichten in der Warteschlange für dieses Verfügbarkeitsreplikat.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) und [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/s) für das primäre Replikat|  
 |3|Send|Die Nachrichten in jeder Datenbankreplikatswarteschlange werden aus der Warteschlange entfernt und über das Netzwerk an das entsprechende sekundäre Replikat gesendet.|[SQL Server: Verfügbarkeitsreplikat > An den Transport gesendete Bytes/Sekunde](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|Empfang und Zwischenspeicherung|Jedes sekundäre Replikat empfängt und speichert die Nachricht zwischen.|Leistungsindikator [SQL Server: Verfügbarkeitsreplikat > Empfangene Protokollbytes/Sekunde](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
-|5|Festschreibung|Ein Protokoll wird zur Festschreibung für das sekundäre Replikat geleert. Nach der Protokollleerung wird eine Bestätigung an das primäre Replikat zurückgesendet.<br /><br /> Ist das Protokoll festgeschrieben, wurde ein Datenverlust abgewendet.|Leistungsindikator [SQL Server: Datenbank > Geleerte Protokollbytes/Sekunde](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Wartetyp [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
+|5|Festschreibung|Ein Protokoll wird zur Festschreibung für das sekundäre Replikat geleert. Nachdem das Protokoll geleert wurde, wird eine Bestätigung an das primäre Replikat zurückgesendet.<br /><br /> Ist das Protokoll festgeschrieben, wurde ein Datenverlust abgewendet.|Leistungsindikator [SQL Server: Datenbank > Geleerte Protokollbytes/Sekunde](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Wartetyp [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Wiederholen|Wiederholen Sie die geleerten Seiten auf dem sekundären Replikat. Seiten werden in der Wiederholungswarteschlange beibehalten, während sie darauf warten, wiederholt zu werden.|[SQL Server: Datenbankreplikat > Wiederholte Bytes/Sekunde](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) und [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Wartetyp [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
 ##  <a name="flow-control-gates"></a>Flusssteuerungsgates  
@@ -41,9 +40,8 @@ ms.locfileid: "85897339"
   
  Nachdem die Protokolle für das primäre Replikat erfasst wurden, unterliegen sie zwei Ebenen der Flusssteuerungen, wie in der folgenden Tabelle gezeigt.  
   
-|||||  
+|Ebene|Anzahl der Gates|Anzahl der Nachrichten|Nützliche Metriken|  
 |-|-|-|-|  
-|**Level**|**Anzahl der Gates**|**Anzahl der Nachrichten**|**Nützliche Metriken**|  
 |Transport|1 pro Verfügbarkeitsreplikat|8192|Erweiterte Ereignisse **database_transport_flow_control_action**|  
 |Datenbank|1 pro Verfügbarkeitsdatenbank|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Erweitertes Ereignis **hadron_database_flow_control_action**|  
   

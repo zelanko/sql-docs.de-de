@@ -1,6 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit SQL Server über die Windows-Authentifizierung (Kerberos)
-description: Erfahren Sie, wie Sie Kerberos zur Verwendung für die Active Directory-Authentifizierung für Azure Data Studio aktivieren.
+description: Erfahren Sie, wie Sie mithilfe der integrierten Microsoft Kerberos-Authentifizierung eine Verbindung zwischen Azure Data Studio und SQL Server herstellen.
 ms.prod: azure-data-studio
 ms.technology: ''
 author: markingmyname
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c2e6b303217d420d439d510fc3fc24886657684b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 325d066ec88045380c45dc2784e6766a4f549757
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774658"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411156"
 ---
 # <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>Herstellen einer Verbindung zwischen Azure Data Studio und SQL Server über die Windows-Authentifizierung – Kerberos
 

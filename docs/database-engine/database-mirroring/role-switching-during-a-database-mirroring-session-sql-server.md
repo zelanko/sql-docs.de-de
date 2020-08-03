@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 624b42ae39cddd56c2401db346c497e6914fe7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3aefc181c1dc42e939579dcdce274a27086dd1ed
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735165"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362232"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Rollenwechsel während einer Datenbank-Spiegelungssitzung (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "85735165"
   
  In der folgenden Tabelle ist zusammengefasst, welche Arten des Failovers von den verschiedenen Betriebsmodi unterstützt werden.  
   
-||Hohe Leistung|Modus für hohe Sicherheit ohne einen Zeugen|Modus für hohe Sicherheit mit einem Zeugen|  
+|Art des Failovers|Hohe Leistung|Modus für hohe Sicherheit ohne einen Zeugen|Modus für hohe Sicherheit mit einem Zeugen|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
 |Automatisches Failover|Nein|Nein|Ja|  
 |Manuelles Failover|Nein|Ja|Ja|  

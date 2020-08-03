@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c690545847979fcd50f2de23aca201eed067d5a
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: b17da534ff8b1f5864589882ca924ebd0379bc71
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86302049"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332012"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 
@@ -52,7 +52,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 *database_name* Der Name der Datenbank, die geändert werden soll.
 
-COMPATIBILITY_LEVEL {150 | 140 | 130 | 120 | 110 | 100 | 90 | 80} Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der die Datenbank kompatibel gemacht werden soll. Die folgenden Kompatibilitätsgradwerte können konfiguriert werden (nicht alle Versionen unterstützen alle oben genannten Kompatibilitätsgrade):
+COMPATIBILITY_LEVEL {150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80} entspricht der Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der die Datenbank kompatibel gemacht werden soll. Die folgenden Kompatibilitätsgradwerte können konfiguriert werden (nicht alle Versionen unterstützen alle oben genannten Kompatibilitätsgrade):
 
 <a name="supported-dbcompats"></a>
 
@@ -136,7 +136,7 @@ Ausführlichere Informationen einschließlich des empfohlenen Workflows für ein
 > **Nicht mehr unterstützte** Funktionen, die in einer bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version eingeführt wurden, werden durch den Kompatibilitätsgrad **nicht** geschützt. Dies bezieht sich auf Funktionalität, die aus der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] entfernt wurde.
 > Der `FASTFIRSTROW`-Hinweis wurde beispielweise in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] nicht mehr unterstützt und durch den `OPTION (FAST n )`-Hinweis ersetzt. Wenn der Datenbank-Kompatibilitätsgrad auf 110 festgelegt wird, wird der nicht mehr unterstützte Hinweis nicht wiederhergestellt.  
 >  
-> Weitere Informationen zu nicht mehr unterstützten Funktionen finden Sie unter [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) und [Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).    
+> Weitere Informationen zu nicht mehr unterstützten Funktionen finden Sie unter [Nicht mehr unterstützte Datenbank-Engine-Funktionen in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md) und [Nicht mehr unterstützte Datenbank-Engine-Funktionen in SQL Server 2014](/sql/database-engine/discontinued-database-engine-functionality-in-sql-server).
 
 > [!IMPORTANT]
 > **Breaking Changes**, die in einer bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version eingeführt wurden, werden **möglicherweise nicht** durch den Kompatibilitätsgrad geschützt. Dies bezieht sich auf Verhaltensänderungen zwischen Versionen der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Das Verhalten von [!INCLUDE[tsql](../../includes/tsql-md.md)] wird normalerweise durch den Kompatibilitätsgrad geschützt. Geänderte oder entfernte Systemobjekte werden jedoch **nicht** durch den Kompatibilitätsgrad geschützt.
@@ -148,7 +148,7 @@ Ausführlichere Informationen einschließlich des empfohlenen Workflows für ein
 > - Geänderte Spaltennamen in Systemobjekten. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde die Spalte *single_pages_kb* in sys.dm_os_sys_info in *pages_kb* umbenannt. Unabhängig vom Kompatibilitätsgrad erzeugt die Abfrage `SELECT single_pages_kb FROM sys.dm_os_sys_info` den Fehler 207 (ungültiger Spaltenname).
 > - Entfernte Systemobjekte. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde `sp_dboption` entfernt. Unabhängig vom Kompatibilitätsgrad erzeugt die Anweisung `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` den Fehler 2812 (gespeicherte Prozedur „sp_dboption“ konnte nicht gefunden werden).
 >
-> Weitere Informationen zu wichtigen Änderungen finden Sie unter [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) und [Wichtige Änderungen für Datenbank-Engine-Features in SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).
+> Weitere Informationen zu Breaking Changes finden Sie unter [Breaking Changes für Datenbank-Engine-Features in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Breaking Changes für Datenbank-Engine-Features in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md) und [Breaking Changes für Datenbank-Engine-Features in SQL Server 2014](/sql/database-engine/discontinued-database-engine-functionality-in-sql-server).
 
 ## <a name="differences-between-compatibility-levels"></a>Unterschiede zwischen Kompatibilitätsgraden
 Bei allen Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der Standardkompatibilitätsgrad von der Version von [!INCLUDE[ssDE](../../includes/ssde-md.md)] abgeleitet. Dies wird in [dieser Tabelle](#supported-dbcompats) veranschaulicht. Planen Sie für neue Entwicklungsprojekte immer die Zertifizierung der Anwendungen auf den aktuellsten Datenbank-Kompatibilitätsgrad.

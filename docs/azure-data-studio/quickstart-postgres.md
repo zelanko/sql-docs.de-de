@@ -1,6 +1,6 @@
 ---
 title: 'Schnellstart: Herstellen einer Verbindung mit PostgreSQL und Abfragen von Daten mit PostgreSQL'
-description: In dieser Schnellstartanleitung erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit PostgreSQL herstellen und eine Abfrage ausführen.
+description: In diesem Schnellstart verwenden Sie Azure Data Studio zum Herstellen einer Verbindung mit PostgreSQL, und dann verwenden Sie SQL-Anweisungen, um eine Datenbank zu erstellen und abzufragen.
 ms.custom: seodec18
 ms.date: 09/18/2019
 ms.prod: azure-data-studio
@@ -9,16 +9,16 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: f429848636de075e64ebaf6f74bc69f7faef5359
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2ba0f0123faeacd0f431a72ef35add40ee48e19
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717160"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411306"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>Schnellstart: Verwenden von Azure Data Studio zum Verbinden mit und Abfragen von PostgreSQL
 
-In dieser Schnellstartanleitung erfahren Sie, wie Sie mithilfe von Azure Data Studio eine Verbindung mit Postgres herstellen und anschließend SQL-Anweisungen verwenden, um die Datenbank *tutorialdb* zu erstellen und abzufragen.
+In diesem Schnellstart erfahren Sie, wie Sie mithilfe von Azure Data Studio eine Verbindung mit PostgreSQL herstellen und anschließend SQL-Anweisungen verwenden, um die Datenbank *tutorialdb* zu erstellen und abzufragen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

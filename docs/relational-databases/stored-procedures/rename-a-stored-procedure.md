@@ -1,5 +1,6 @@
 ---
 title: Umbenennen einer gespeicherten Prozedur | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie eine gespeicherte Prozedur in SQL Server 2019 (15.x) mithilfe von SQL Server Management Studio oder Transact-SQL umbenennen.
 ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71d0fefec2a0b0ba867b7c96a0d8b852884e08d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddf1685f89d24c5b1b6dec4956c3e0c7542ac236
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767496"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332529"
 ---
 # <a name="rename-a-stored-procedure"></a>Umbenennen einer gespeicherten Prozedur
 
@@ -32,7 +33,7 @@ In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUD
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Umbenennen einer gespeicherten Prozedur mit:**  
   
@@ -56,7 +57,7 @@ In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUD
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  CREATE PROCEDURE  
- Erfordert die CREATE PROCEDURE-Berechtigung für die Datenbank und die ALTER-Berechtigung für das Schema, in dem die Prozedur erstellt wird, oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin** .  
+ Erfordert die CREATE PROCEDURE-Berechtigung für die Datenbank und die ALTER-Berechtigung für das Schema, in dem die Prozedur erstellt wird, oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin**.  
   
  ALTER PROCEDURE  
  Erfordert die ALTER-Berechtigung für die Prozedur oder die Mitgliedschaft in der festen Datenbankrolle **db_ddladmin** .  

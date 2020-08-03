@@ -28,15 +28,15 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cee1bcbb781319c4cabc2265962350d2480d9d97
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981904"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392705"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL-Syntaxkonventionen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 In der folgenden Tabelle werden die Konventionen aufgeführt und beschrieben, die in den Syntaxdiagrammen in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Referenz verwendet werden.  
   
@@ -52,7 +52,7 @@ In der folgenden Tabelle werden die Konventionen aufgeführt und beschrieben, di
 |[ **,** ..._n_]|Zeigt an, dass das vorherige Element _n_ -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Kommas getrennt.|  
 |[..._n_]|Zeigt an, dass das vorherige Element _n_ -mal wiederholt werden kann. Die einzelnen Vorkommen werden durch Leerzeichen voneinander getrennt.|  
 |;|Abschlusszeichen für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. Dieses Abschlusszeichen ist für die meisten Anweisungen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht erforderlich, jedoch in einer zukünftigen Version.|  
-|\<label> ::=|Der Name eines Syntaxblockes. Verwenden Sie diese Konvention zur Gruppierung und Bezeichnung von Abschnitten einer langen Syntax oder einer Syntaxeinheit, die Sie an mehreren Stellen innerhalb einer Anweisung verwenden können. Jede Stelle, an der der Syntaxblock verwendet werden könnte, wird durch die in spitze Klammern eingeschlossene Bezeichnung angezeigt: \<label>.<br /><br /> Ein Set ist eine Collection von Ausdrücken, z.B. \<Gruppierungssatz>. Eine Liste ist eine Collection von Sets, z.B. \<Liste zusammengesetzter Elemente>.|  
+|\<label> ::=|Der Name eines Syntaxblockes. Verwenden Sie diese Konvention zur Gruppierung und Bezeichnung von Abschnitten einer langen Syntax oder einer Syntaxeinheit, die Sie an mehreren Stellen innerhalb einer Anweisung verwenden können. Jede Stelle, an der der Syntaxblock verwendet werden könnte, wird durch die in spitze Klammern eingeschlossene Bezeichnung gekennzeichnet: \<label>.<br /><br /> Ein Set ist eine Sammlung von Ausdrücken, z. B. \<grouping set>. Eine Liste ist eine Sammlung von Sets, z. B. \<composite element list>.|  
   
 ## <a name="multipart-names"></a>Mehrteilige Namen  
 Wenn keine anderen Angaben vorliegen, können alle [!INCLUDE[tsql](../../includes/tsql-md.md)]-Referenzen auf den Namen eines Datenbankobjekts aus vier Teilen bestehende Namen im folgenden Format sein:  

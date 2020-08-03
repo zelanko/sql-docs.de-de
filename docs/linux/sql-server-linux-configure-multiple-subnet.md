@@ -2,19 +2,19 @@
 title: Konfigurieren von Verfügbarkeitsgruppen und Failoverclusterinstanzen für mehrere Subnetze (Linux)
 description: In diesem Artikel erfahren Sie, wie Sie Always On-Verfügbarkeitsgruppen und Failoverclusterinstanzen für mehrere Subnetze für SQL Server für Linux konfigurieren.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.date: 12/01/2017
+author: liweiSecurity
+ms.author: liweiyin
+ms.reviewer: VanMSFT
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3a18e668d1a62a74396530e37243d75a5a86aee2
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 5abe1d99f753e0f41ca74a0864079293800dc1df
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196968"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362971"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Konfigurieren von Always On-Verfügbarkeitsgruppen für und Failoverclusterinstanzen für Multisubnetze
 
@@ -57,28 +57,42 @@ In der Windows-Welt unterstützt ein Windows Server-Failovercluster (WSFC) nativ
 2. Bearbeiten Sie die generierte Datei. Suchen Sie nach dem `<resources>`-Abschnitt. Die verschiedenen Ressourcen, die für die Verfügbarkeitsgruppe oder FCI erstellt wurden, werden angezeigt. Suchen Sie diejenige, die der IP-Adresse zugeordnet ist. Fügen Sie einen `<instance attributes>`-Abschnitt mit den Informationen für die zweite IP-Adresse hinzu, entweder oberhalb oder unterhalb der vorhandenen IP-Adresse, jedoch vor `<operations>`. Dies ähnelt der folgenden Syntax:
 
     ```xml
-    <instance attributes id="<NameForAttribute>" score="<Score>">
-        <rule id="<RuleName>" score="INFINITY">
-            <expression id="<ExpressionName>" attribute="\#uname" operation="eq" value="<NodeNameInSubnet2>" />
-        </rule>
-        <nvpair id="<NameForSecondIP>" name="ip" value="<IPAddress>"/>
-        <nvpair id="<NameForSecondIPNetmask>" name="cidr\_netmask" value="<Netmask>"/>
+    <instance attributes id="<NameForAttribute>">
+        <nvpair id="<NameForIP>" name="ip" value="<IPAddress>"/>
     </instance attributes>
     ```
     
-    wobei *NameForAttribute* der eindeutige Name für dieses Attribut ist, *Score* ist die Nummer, die dem Attribut zugewiesen ist, die höher sein muss als die des primären Subnetzes, *RuleName* ist der Name der Regel, *ExpressionName* ist der Name des Ausdrucks, *NodeNameInSubnet2* ist der Name des Knotens im anderen Subnetz, *NameForSecondIP* ist der Name, der der zweiten IP-Adresse zugeordnet ist, *IPAddress* ist die IP-Adresse für das zweite Subnetz, *NameForSecondIPNetmask* ist der Name, der der Netzmaske zugeordnet ist, und *Netmask* ist die Netzmaske für das zweite Subnetz.
+    Hier entspricht *NameForAttribute* dem eindeutigen Namen dieses Attributs, *NameForIP* entspricht dem Namen, der der IP-Adresse zugeordnet ist, und *IPAddress* entspricht der IP-Adresse für das zweite Subnetz.
     
     Die Folgenden wird ein Beispiel gezeigt.
     
     ```xml
-    <instance attributes id="Node3-2nd-IP" score="2">
-        <rule id="Subnet2-IP" score="INFINITY">
-            <expression id="Subnet2-Node" attribute="\#uname" operation="eq" value="Node3" />
-        </rule>
-        <nvpair id="IP-In-Subnet-2" name="ip" value="192.168.2.102"/>
-        <nvpair id="Netmask-For-IP2" name="cidr\_netmask" value="24" />
+    <instance attributes id="virtualip-instance_attributes">
+        <nvpair id="virtualip-instance_attributes-ip" name="ip" value="192.168.1.102"/>
     </instance attributes>
     ```
+    
+    Standardmäßig enthält die exportierte CIB XML-Datei nur eine Instanz (<instance/>). Angenommen, es gibt zwei Subnetze, die zwei <instance/>-Einträge enthalten sollen.
+    Hier sehen Sie ein Beispiel für die Einträge für zwei Subnetze:
+    
+    ```xml
+    <instance attributes id="virtualip-instance_attributes1">
+        <rule id="Subnet1-IP" score="INFINITY" boolean-op="or">
+            <expression id="Subnet1-Node1" attribute="#uname" operation="eq" value="Node1" />
+            <expression id="Subnet1-Node2" attribute="#uname" operation="eq" value="Node2" />
+        </rule>
+        <nvpair id="IP-In-Subnet1" name="ip" value="192.168.1.102"/>
+    </instance attributes>
+    <instance attributes id="virtualip-instance_attributes2">
+        <rule id="Subnet2-IP" score="INFINITY">
+            <expression id="Subnet2-Node1" attribute="#uname" operation="eq" value="Node3" />
+        </rule>
+        <nvpair id="IP-In-Subnet2" name="ip" value="192.168.2.102"/>
+    </instance attributes>
+    ```
+   
+   In diesem Beispiel wird „boolean-op="or"“ verwendet, wenn das Subnetz über mehr als einen Server verfügt.
+
 
 3. Importieren Sie die geänderte CIB, und konfigurieren Sie Pacemaker neu.
 
@@ -99,6 +113,11 @@ In der Windows-Welt unterstützt ein Windows Server-Failovercluster (WSFC) nativ
 ### <a name="check-and-verify-failover"></a>Überprüfen des Failovers
 
 1. Nachdem die CIB mit der aktualisierten Konfiguration erfolgreich angewendet wurde, pingen Sie den DNS-Namen, der mit der IP-Adressressource in Pacemaker verknüpft ist. Dies sollte die IP-Adresse des Subnetzes widerspiegeln, das zurzeit die Verfügbarkeitsgruppe oder FCI hostet.
+
 2. Führen Sie ein Failover der Verfügbarkeitsgruppe oder FCI zum anderen Subnetz aus.
+
 3. Nachdem die Verfügbarkeitsgruppe oder FCI vollständig online ist, pingen Sie den DNS-Namen, der der IP-Adresse zugeordnet ist. Er sollte die IP-Adresse im zweiten Subnetz widerspiegeln.
+
 4. Falls gewünscht, führen Sie ein Failback der Verfügbarkeitsgruppe oder FCI zum ursprünglichen Subnetz aus.
+
+Im folgenden CSS-Beitrag wird ausführlich veranschaulicht, wie die CIB für drei Subnetze erstellt wird: [Konfigurieren der AlwaysOn-Verfügbarkeitsgruppe für mehrere Subnetze durch Bearbeiten der CIB](https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838).

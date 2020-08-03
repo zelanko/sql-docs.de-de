@@ -106,8 +106,8 @@ Nachdem Sie SQL Server für Linux installiert haben, sehen Sie sich die bewährt
 
 Zusätzlich zu **sqlcmd** können Sie die folgenden plattformübergreifenden Tools verwenden, um SQL Server zu verwalten:
 
-|||
-|---|---|
+| Tool | BESCHREIBUNG |
+| ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | Eine plattformübergreifende Anwendung mit grafischer Benutzeroberfläche zur Datenbankverwaltung. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Ein plattformübergreifender Code-Editor mit grafischer Benutzeroberfläche, in dem Transact-SQL-Anweisungen mit der mssql-Erweiterung ausgeführt werden. |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Ein plattformübergreifendes Automatisierungs- und Konfigurationstool, das auf-Cmdlets basiert. |
@@ -129,12 +129,10 @@ Andere Tools, die unter Windows ausgeführt werden, die sich aber mit SQL Server
 
 Weitere Installationsszenarios finden Sie in den folgenden Ressourcen:
 
-|||
-|---|---|
-| [Upgrade](../linux/sql-server-linux-setup.md#upgrade) | Erfahren Sie, wie Sie eine vorhandene Installation von SQL unter Linux aktualisieren können. |
-| [Deinstallieren](../linux/sql-server-linux-setup.md#uninstall) | Deinstallieren von SQL Server unter Linux |
-| [Unbeaufsichtigtes Installieren](../linux/sql-server-linux-setup.md#unattended) | Erfahren Sie, wie Sie die Installation ohne Aufforderungen skripten können. |
-| [Offlineinstallation](../linux/sql-server-linux-setup.md#offline) | Erfahren Sie, wie Sie die Pakete für die Offlineinstallation manuell herunterladen können. |
+* [Upgrade](../linux/sql-server-linux-setup.md#upgrade): Erfahren Sie, wie Sie eine vorhandene Installation von SQL unter Linux aktualisieren können.
+* [Uninstall](../linux/sql-server-linux-setup.md#uninstall): Deinstallieren von SQL Server unter Linux
+* [Unbeaufsichtigte Installation:](../linux/sql-server-linux-setup.md#unattended) Erfahren Sie, wie Sie die Installation ohne Aufforderungen skripten können.
+* [Offlineinstallation:](../linux/sql-server-linux-setup.md#offline) Erfahren Sie, wie Sie die Pakete für die Offlineinstallation manuell herunterladen können.
 
 > [!TIP]
 > Antworten auf häufig gestellte Fragen finden Sie unter [Häufig gestellte Fragen zu SQL Server für Linux](../linux/sql-server-linux-faq.md).

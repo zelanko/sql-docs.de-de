@@ -1,5 +1,6 @@
 ---
 title: Ausführen einer gespeicherten Prozedur | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie eine gespeicherte Prozedur mithilfe von SQL Server Management Studio oder Transact-SQL in SQL Server 2019 (15.x) ausführen.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34ee89bdbd6e87aef9691795099cb61b17413a6a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0dc360ab3faf724830f61b4572cff93425203ec4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000997"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332613"
 ---
 # <a name="execute-a-stored-procedure"></a>Ausführen einer gespeicherten Prozedur
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +42,7 @@ In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUD
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Ausführen einer gespeicherten Prozedur mit:**  
   

@@ -29,15 +29,15 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fa18ece825ba55479eac3d5c421c6d5acba363c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7125460527a0ca6aa231d771cff8714db7891b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633268"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396261"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Konvertiert eine Rowstore-Tabelle in einen gruppierten Columnstore-Index oder erstellt einen nicht gruppierten Columnstore-Index. Verwendet einen Columnstore-Index, um eine operative Echtzeitanalyse für eine OLTP-Arbeitslast effizient auszuführen oder um die Datenkomprimierung und Abfrageleistung für Data Warehouse-Arbeitslasten zu verbessern.  
   
@@ -261,7 +261,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
  Weitere Informationen zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
-##### <a name="where-filter_expression--and-filter_expression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
+##### <a name="where-filter_expression--and-filter_expression-"></a>WHERE \<filter_expression> [AND \<filter_expression>]
   
    Gibt nach dem Aufruf eines Filterprädikats an, welche Zeilen in den Index aufgenommen werden sollen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt gefilterte Statistikdaten für die Datenzeilen im gefilterten Index.  
   
@@ -516,7 +516,7 @@ GO
     -   Führen Sie diesen Schritt nur aus, wenn Sie beim Konvertieren in einen gruppierten Columnstore-Index einen neuen Namen für den Index angeben möchten. Wenn Sie den gruppierten Index nicht löschen, weist der neue gruppierte Columnstore-Index den gleichen Namen auf.  
   
         > [!NOTE]  
-        > Der Indexname ist möglicherweise einprägsamer, wenn Sie einen eigenen Namen angeben. Alle gruppierten Rowstore-Indizes weisen den Standardnamen auf, der ''ClusteredIndex_\<GUID>'' lautet.  
+        > Der Indexname ist möglicherweise einprägsamer, wenn Sie einen eigenen Namen angeben. Alle gruppierten Rowstore-Indizes weisen den Standardnamen auf, der „ClusteredIndex_\<GUID>“ lautet.  
   
     ```sql  
     --Process for dropping a clustered index.  

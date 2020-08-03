@@ -11,12 +11,12 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b16af8c06f6ce1a5ab221f267b5b16dde27b587e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 51c42730e083990b3df7987645239dea9830090c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244388"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362612"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Gruppieren des DTC-Diensts für eine Always On-Verfügbarkeitsgruppe
 
@@ -26,30 +26,30 @@ In diesem Thema werden die Anforderungen und Schritte zum Gruppieren des Microso
 
  ## <a name="checklist-preliminary-requirements"></a>Prüfliste: Vorbereitende Anforderungen
 
-||Aufgabe|Verweis|  
-|------|-----------------|----------|  
-|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Stellen Sie sicher, dass alle Knoten, Dienste und die Verfügbarkeitsgruppe ordnungsgemäß konfiguriert wurden.|[Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
-|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Stellen Sie sicher, dass die Anforderungen des Verfügbarkeitsgruppen-DTCs erfüllt wurden.|[Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
+|Aufgabe|Verweis|  
+|-----------------|----------|  
+|Stellen Sie sicher, dass alle Knoten, Dienste und die Verfügbarkeitsgruppe ordnungsgemäß konfiguriert wurden.|[Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
+|Stellen Sie sicher, dass die Anforderungen des Verfügbarkeitsgruppen-DTCs erfüllt wurden.|[Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
-## <a name="checklist-clustered-dtc-resource-dependencies"></a>Prüfliste: Ressourcenabhängigkeiten für gruppierte DTCs
+## <a name="checklist-clustered-dtc-resource-dependencies"></a>Prüfliste: Abhängigkeiten von gruppierten DTC-Ressourcen
 
-||Aufgabe|Verweis|  
-|------|-----------------|----------|  
-|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Ein Laufwerk mit freigegebenem Speicher.|[Konfigurieren Sie das Laufwerk mit freigegebenem Speicher](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). Erwägen Sie die Verwendung des Laufwerkbuchstabens **M**.|
-|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Eine eindeutige DTC-Netzwerknamenressource.  Der Name wird als Clustercomputerobjekt in Active Directory registriert.<br /><br />Stellen Sie sicher, dass eine der folgenden Aussagen zutrifft:<br /><br />• Der Benutzer, der die DTC-Netzwerknamenressource erstellt, verfügt über die Berechtigung zum Erstellen von Computerobjekten für die Organisationseinheit oder den Container, in dem die DTC-Netzwerknamenressource gespeichert wird.<br /><br />• Verfügt der Benutzer nicht über die Berechtigung zum Erstellen von Computerobjekten, bitten Sie einen Domänenadministrator, vorab ein Clustercomputerobjekt für die DTC-Netzwerknamenressource bereitzustellen.|[Vorabbereitstellung von Clustercomputerobjekten in Active Directory Domain Services](https://technet.microsoft.com/library/dn466519(v=ws.11).aspx)|
-|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Eine gültige verfügbare, statische IP-Adresse und die entsprechende Subnetzmaske für die IP-Adresse.||
+|Aufgabe|Verweis|  
+|-----------------|----------|  
+|Ein Laufwerk mit freigegebenem Speicher.|[Konfigurieren Sie das Laufwerk mit freigegebenem Speicher](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). Erwägen Sie die Verwendung des Laufwerkbuchstabens **M**.|
+|Eine eindeutige DTC-Netzwerknamenressource.  Der Name wird als Clustercomputerobjekt in Active Directory registriert.<br /><br />Stellen Sie sicher, dass eine der folgenden Aussagen zutrifft:<br /><br />• Der Benutzer, der die DTC-Netzwerknamenressource erstellt, verfügt über die Berechtigung zum Erstellen von Computerobjekten für die Organisationseinheit oder den Container, in dem die DTC-Netzwerknamenressource gespeichert wird.<br /><br />• Verfügt der Benutzer nicht über die Berechtigung zum Erstellen von Computerobjekten, bitten Sie einen Domänenadministrator, vorab ein Clustercomputerobjekt für die DTC-Netzwerknamenressource bereitzustellen.|[Vorabbereitstellung von Clustercomputerobjekten in Active Directory Domain Services](https://technet.microsoft.com/library/dn466519(v=ws.11).aspx)|
+|Eine gültige verfügbare, statische IP-Adresse und die entsprechende Subnetzmaske für die IP-Adresse.||
 
 ## <a name="cluster-the-dtc-resource"></a>Gruppieren der DTC-Ressource
 Nachdem Sie Ihre Verfügbarkeitsgruppenressource erstellt haben, erstellen Sie eine gruppierte DTC-Ressource, und fügen Sie sie der Verfügbarkeitsgruppe hinzu.  Ein Beispielskript finden Sie unter [Erstellen eines gruppierten DTCs für eine Always On-Verfügbarkeitsgruppe](../../../database-engine/availability-groups/windows/create-clustered-dtc-for-an-always-on-availability-group.md).
 
 
-## <a name="checklist-post-clustered-dtc-resource-configurations"></a>Prüfliste: Bereitstellen von gruppierten DTC-Ressourcenkonfigurationen
+## <a name="checklist-post-clustered-dtc-resource-configurations"></a>Prüfliste: Konfigurationen nach dem Gruppierten der DTC-Ressourcen
 
-||Aufgabe|Verweis|  
-|------|-----------------|----------|  
-|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Aktivieren Sie den sicheren Netzwerkzugriff für die gruppierte DTC-Ressource.|[Sicheres Aktivieren des Netzwerkzugriffs für MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|
-|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Beenden und deaktivieren Sie den lokalen DTC-Dienst.|[Konfigurieren des Startvorgangs für einen Dienst](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
-|![Kontrollkästchen](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Durchlaufen Sie den SQL Server-Dienst für jede Instanz in der Verfügbarkeitsgruppe.  Führen Sie bei Bedarf einen Failover für die Verfügbarkeitsgruppe aus.|[Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
+|Aufgabe|Verweis|  
+|-----------------|----------|  
+|Aktivieren Sie den sicheren Netzwerkzugriff für die gruppierte DTC-Ressource.|[Sicheres Aktivieren des Netzwerkzugriffs für MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|
+|Beenden und deaktivieren Sie den lokalen DTC-Dienst.|[Konfigurieren des Startvorgangs für einen Dienst](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
+|Durchlaufen Sie den SQL Server-Dienst für jede Instanz in der Verfügbarkeitsgruppe.  Führen Sie bei Bedarf einen Failover für die Verfügbarkeitsgruppe aus.|[Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, SQL Server-Agent oder des SQL Server-Browsers](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
 - Wenn es sich bei dem Betriebssystem um Windows Server 2012 R2 handelt, benötigen Sie unbedingt [KB 3030373](https://support.microsoft.com/kb/3090973) .
 
@@ -69,4 +69,4 @@ Nachdem Sie Ihre Verfügbarkeitsgruppenressource erstellt haben, erstellen Sie e
 
 [SQL Server 2016 DTC-Unterstützung in Verfügbarkeitsgruppen](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
 
-[Externer Link: Konfigurieren von DTC für eine Clusterinstanz von SQL Server mit Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[Externer Link: Configure DTC for a clustered instance of SQL Server with Windows Server 2008 R2 (Konfigurieren von DTC für eine Clusterinstanz von SQL Server mit Windows Server 2008 R2)](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

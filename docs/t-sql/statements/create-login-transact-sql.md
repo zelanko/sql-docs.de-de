@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 07/29/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08056878aabb707433dc22ca891798feb96ef329
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245229"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411042"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -51,10 +51,10 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL-Datenbank<br />Einzeldatenbank/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -284,10 +284,10 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken\*_**
+        **_\*Azure SQL-Datenbank<br />Einzeldatenbank/Pool für elastische Datenbanken\*_**
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -402,10 +402,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL-Datenbank<br />Einzeldatenbank/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />verwaltete Instanz \*_**
+        **_\*Azure SQL<br />Managed Instance\*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -495,7 +495,7 @@ Nach dem Erstellen eines Anmeldenamens kann dieser zum Herstellen einer Verbindu
 - Nur SQL-Serverebenenprinzipale (Anmeldungen), die Teil der `sysadmin`-Rolle sind, können die folgenden Vorgänge für Azure AD-Prinzipale ausführen:
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
-- Aus einem anderen Azure AD-Verzeichnis importierte externe Benutzer (Gastbenutzer) können nicht direkt als Azure AD-Administratoren für eine verwaltete Instanz konfiguriert werden. Binden Sie die externen Benutzer stattdessen in eine Gruppe mit Azure AD-Sicherheit ein, und konfigurieren Sie die Gruppe als Instanzadministrator.
+- Aus einem anderen Azure AD-Verzeichnis importierte externe Benutzer (Gastbenutzer) können nicht direkt als Azure AD-Administratoren für Azure SQL Managed Instance mithilfe des Azure-Portals konfiguriert werden. Binden Sie die externen Benutzer stattdessen in eine Gruppe mit Azure AD-Sicherheit ein, und konfigurieren Sie die Gruppe als Instanzadministrator. Sie können PowerShell oder die Azure CLI verwenden, um Einzelgastbenutzer als Instanzadministrator festzulegen.
 - Anmeldenamen werden nicht auf die sekundäre Instanz in einer Failovergruppe repliziert. Sie werden in der Masterdatenbank gespeichert, bei der es sich um eine Systemdatenbank handelt. Sie wird daher nicht georepliziert. Der Benutzer muss einen Anmeldenamen mit derselben SID auf der sekundären Instanz erstellen, um dieses Problem zu beheben.
 
 ```SQL
@@ -601,10 +601,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL-Datenbank<br />Einzeldatenbank/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -729,10 +729,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL-Datenbank<br />Einzeldatenbank/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)

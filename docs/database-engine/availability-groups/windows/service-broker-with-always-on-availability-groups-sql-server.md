@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13dd1cb62f139a672e53b0945e94fc3ba25abc63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 10eb6fdf211b15cdc5b9f11d7f85cb45c050019a
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883136"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332250"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker mit AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85883136"
      Weitere Informationen finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
 
     > [!NOTE]  
-    Der SQL Server Service Broker ist nicht mit Multisubnetzen kompatibel. Verwenden Sie in jedem Fall „registerallprovidersip“ mit der Einstellung 0 (null), und vergewissern Sie sich, dass Sie keine statischen IP-Adressen im DNS verwenden und dadurch die erforderlich Berechtigung zum Erstellen von Clustern im DNS gewähren (siehe Definition unter https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server ). Der Broker verzögert Meldungen möglicherweise mit dem Status „CONVERSING“, weil er versucht, eine deaktivierte IP zu verwenden.
+    Der SQL Server Service Broker ist nicht mit Multisubnetzen kompatibel. Legen Sie `RegisterAllProvidersIP` auf „0“ (null) fest, und stellen Sie sicher, dass der Cluster über die erforderlichen Berechtigungen in DNS verfügt, um statische IP-Adressen zu verwenden. Weitere Informationen finden Sie unter [Konfigurieren des Verfügbarkeitsgruppenlisteners](create-or-configure-an-availability-group-listener-sql-server.md). Der Service Broker verzögert Meldungen möglicherweise mit dem Status „CONVERSING“, weil er versucht, eine deaktivierte IP-Adresse zu verwenden.
 
 3.  **Erteilen Sie die CONNECT-Berechtigung für den Endpunkt.**  
   
