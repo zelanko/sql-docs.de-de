@@ -18,15 +18,15 @@ ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3185634a4370ccb86fdb2f0199dc3af452d77558
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d7987b23c1f941684b7ab8b169c397d51e53eab
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68042079"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523212"
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects (geography-Datentyp)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Gibt 1 zurück, wenn eine **geography** -Instanz eine andere **geography** -Instanz überschneidet. Andernfalls wird 0 zurückgegeben.  
   

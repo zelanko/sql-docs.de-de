@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4baea69adce173ee5421605825008f7721b92bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fb2e93d5266b28ad7be189cd14034aca49abc3a1
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916680"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472511"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
 
@@ -60,19 +60,42 @@ ms.locfileid: "86916680"
  Einige Eigenschaften von Transformationen können mit Eigenschaftsausdrücken festgelegt werden. Weitere Informationen finden Sie unter [Data Flow-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
   
 ## <a name="transformations-with-custom-properties"></a>Transformationen mit benutzerdefinierten Eigenschaften  
-  
-||||  
-|-|-|-|  
-|[Aggregat](#aggregate)|[Exportieren von Spalten](#extract)|[Zeilenanzahl](#rowcount)|  
-|[Überwachung](#audit)|[Fuzzygruppierung](#fgroup)|[Zeilenstichprobe](#rowsamp)|  
-|[Cachetransformation](#cachetransform)|[Fuzzysuche](#flookup)|[Skriptkomponente](#script)|  
-|[Zeichenzuordnung](#charmap)|[Importieren von Spalten](#insert)|[Langsam veränderliche Dimensionen](#scd)|  
-|[Bedingtes Teilen](#condsplit)|[Suche](#lookup)|[Sort](#sort)|  
-|[Kopieren von Spalten](#copymap)|[Merge Join](#mjoin)|[Ausdrucksextrahierung](#textract)|  
-|[Datenkonvertierung](#dataconv)|[OLE DB-Befehl](#oledbcmd)|[Ausdruckssuche](#tlookup)|  
-|[Data Mining-Abfrage](#dmquery)|[Prozentwert-Stichprobe](#percent)|[Entpivotieren](#unpivot)|  
-|[Abgeleitete Spalte](#derived)|[Pivotieren](#pivot)||  
-  
+
+:::row:::
+    :::column:::
+        [Aggregat](#aggregate)  
+        [Überwachung](#audit)  
+        [Cachetransformation](#cachetransform)  
+        [Zeichenzuordnung](#charmap)  
+        [Bedingtes Teilen](#condsplit)  
+        [Kopieren von Spalten](#copymap)  
+        [Datenkonvertierung](#dataconv)  
+        [Data Mining-Abfrage](#dmquery)  
+        [Abgeleitete Spalte](#derived)  
+    :::column-end:::
+    :::column:::
+        [Exportieren von Spalten](#extract)  
+        [Fuzzygruppierung](#fgroup)  
+        [Fuzzysuche](#flookup)  
+        [Importieren von Spalten](#insert)  
+        [Suche](#lookup)  
+        [Merge Join](#mjoin)  
+        [OLE DB-Befehl](#oledbcmd)  
+        [Prozentwert-Stichprobe](#percent)  
+        [Pivotieren](#pivot)  
+    :::column-end:::
+    :::column:::
+        [Zeilenanzahl](#rowcount)  
+        [Zeilenstichprobe](#rowsamp)  
+        [Skriptkomponente](#script)  
+        [Langsam veränderliche Dimensionen](#scd)  
+        [Sort](#sort)  
+        [Ausdrucksextrahierung](#textract)  
+        [Ausdruckssuche](#tlookup)  
+        [Entpivotieren](#unpivot)  
+    :::column-end:::
+:::row-end:::
+
 ### <a name="transformations-without-custom-properties"></a>Transformationen ohne benutzerdefinierte Eigenschaften  
  Die folgenden Transformationen verfügen nicht über benutzerdefinierte Eigenschaften auf Komponenten-, Eingabe- oder Ausgabeebene: [Merge Transformation](../../../integration-services/data-flow/transformations/merge-transformation.md), [Multicast Transformation](../../../integration-services/data-flow/transformations/multicast-transformation.md) und [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md). Sie verwenden nur die Eigenschaften, die allen Datenflusskomponenten gemeinsam sind.  
   

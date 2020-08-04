@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 19d5c9abe85d308f93f0aa085ff813ab7a3ca8f7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 806a687037d2b23a2800552a6f4467ce02b7ccc0
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111180"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472626"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -142,7 +142,7 @@ Sehen Sie sich die Werte an, die für die Ressourcenklassen als Richtlinie für 
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>         
 Diese Zeile legt die Maximalmenge der Ressourcen fest, die pro Anforderung zugeordnet werden. Dabei ist *value* ein optionaler Dezimalparameter mit einem Standardwert, der „request_min_resource_grant_percent“ entspricht. Der Wert von *value* muss größer oder gleich „request_min_resource_grant_percent“ sein. Wenn der Wert von request_max_resource_grant_percent größer als request_min_resource_grant_percent ist und Systemressourcen verfügbar sind, werden einer Anforderung zusätzliche Ressourcen zugeordnet.
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>        
+*IMPORTANCE* = {LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH}</br>        
 Diese Zeile gibt die Standardwichtigkeit einer Anforderung für die Arbeitsauslastungsgruppe an. Für die Wichtigkeit sind folgende Einstellungen möglich, wobei NORMAL die Standardeinstellung ist:
 
 - LOW

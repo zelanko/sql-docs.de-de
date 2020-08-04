@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52147ff689b88876512afd6cb428e78c6c00d621
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 87bbb8455169ae0c50475781b3b9e25e9967fd93
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913865"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472545"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight-Delete Cluster-Task
 
@@ -36,9 +36,8 @@ Um einen **Azure HDInsight-Delete Cluster-Task**hinzuzufügen, legen Sie ihn mit
   
 Die folgende Tabelle enthält Beschreibungen für die Felder in diesem Dialogfeld.  
   
-|||  
+|Feld|Beschreibung|  
 |-|-|  
-|**Feld**|**Beschreibung**|  
 |AzureResourceManagerConnection|Wählen Sie einen vorhandenen Azure Resource Manager-Verbindungs-Manager aus, oder erstellen Sie einen neuen, mit dem der HDInsight-Cluster gelöscht wird.|
 |SubscriptionId|Geben Sie die ID des Abonnements an, in dem sich der HDInsight-Cluster befindet.|
 |ResourceGroup|Geben Sie die Azure-Ressourcengruppe an, in der sich der HDInsight-Cluster befindet.|

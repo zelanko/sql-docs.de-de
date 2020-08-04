@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 5d3ee42f28fed73a4dd513b10d01948552fdd6d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901544"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472186"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Konfigurieren von SQL Server für Linux mit dem mssql-conf-Tool
 
@@ -24,7 +24,7 @@ ms.locfileid: "85901544"
 
 **mssql-conf** ist ein Konfigurationsskript, das mit SQL Server 2017 für Red Hat Enterprise Linux, SUSE Linux Enterprise Server und Ubuntu installiert wird. Es ändert die [**mssql.conf-Datei**](#mssql-conf-format), in der Konfigurationswerte gespeichert sind. Sie können das **mssql-conf**-Hilfsprogramm zum Festlegen der folgenden Parameter verwenden:
 
-|||
+|Parameter|Beschreibung|
 |---|---|
 | [Agent](#agent) | Aktivieren des SQL Server-Agents. |
 | [Sortierung](#collation) | Festlegen einer neuen Sortierung für SQL Server für Linux. |
@@ -52,7 +52,7 @@ ms.locfileid: "85901544"
 
 **mssql-conf** ist ein Konfigurationsskript, das mit [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] für Red Hat Enterprise Linux, SUSE Linux Enterprise Server und Ubuntu installiert wird. Mit diesem Hilfsprogramm können Sie die folgenden Parameter festlegen:
 
-|||
+|Parameter|Beschreibung|
 |---|---|
 | [Agent](#agent) | Aktivieren des SQL Server-Agents. |
 | [Sortierung](#collation) | Festlegen einer neuen Sortierung für SQL Server für Linux. |

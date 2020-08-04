@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 78bc5fe4d059a644c3490c94b02b5880c5d488d0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922736"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435429"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)
 
@@ -149,7 +149,7 @@ Führen Sie im Import/Export-Assistenten einen der folgenden Schritte aus:
 
 -   Wenn Sie aus Excel **Importieren**, dann führen Sie einen der folgenden Schritte aus:
 
-    -   Wählen Sie auf der Seite **Tabellenkopie oder Abfrage angeben****Daten aus mindestens einer Tabelle oder Ansicht kopieren** aus, um ein **Arbeitsblatt** oder einen **Benannten Bereich** zu verwenden. Wählen Sie dann auf der Seite **Quelltabellen und -ansichten auswählen** in der Spalte **Quelle** die Arbeitsblätter und benannten Bereiche der Quelle aus.
+    -   Wählen Sie auf der Seite **Tabellenkopie oder Abfrage angeben** **Daten aus mindestens einer Tabelle oder Ansicht kopieren** aus, um ein **Arbeitsblatt** oder einen **Benannten Bereich** zu verwenden. Wählen Sie dann auf der Seite **Quelltabellen und -ansichten auswählen** in der Spalte **Quelle** die Arbeitsblätter und benannten Bereiche der Quelle aus.
 
     -   Zur Verwendung eines **Unbenannten Bereichs**, den Sie mit der Adresse angeben, wählen Sie auf der Seite **Tabellenkopie oder Abfrage angeben** **Abfrage zum Angeben der zu übertragenden Daten schreiben** aus. Geben Sie dann auf der Seite **Quellabfrage angeben** eine Abfrage wie im folgenden Beispiel an:
 
@@ -253,8 +253,6 @@ Wenn Sie einen Bereich als Ziel angeben, wird ein Fehler zurückgegeben, sofern 
 Zum erfolgreichen Speichern von Zeichenfolgen mit mehr als 255 Zeichen in einer Excel-Spalte muss der Treiber den Datentyp der Zielspalte als **memo** und nicht als **string**erkennen.
 
 -   Wenn die vorhandene Zieltabelle bereits Datenzeilen enthält, müssen die ersten Zeilen, die vom Treiber als Stichprobe genommen werden, mindestens eine Instanz eines Werts mit mehr als 255 Zeichen in der Memospalte enthalten.
-
--   Wenn die neue Zieltabelle während des Paketentwurfs oder zur Laufzeit oder vom Import/Exportassistenten erstellt wird, muss die `CREATE TABLE`-Anweisung als Datentyp für die Zielmemospalte LONGTEXT (oder eines der Synonyme) verwenden. Überprüfen Sie im Assistent die `CREATE TABLE`-Anweisung, und bearbeiten Sie diese bei Bedarf, indem Sie auf der Seite **Spaltenzuordnungen** neben der Option **Zieltabelle erstellen** auf **SQL bearbeiten** klicken.
 
 ## <a name="related-content"></a>Verwandte Inhalte
 

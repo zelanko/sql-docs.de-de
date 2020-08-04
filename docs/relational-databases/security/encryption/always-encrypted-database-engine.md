@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b62d43302c4727f52f674a0e6769a70d36fbcd34
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cec29c3c9c9486c08ee8c95625b026f7b51ef5e0
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627624"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472676"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -213,7 +213,7 @@ Anforderungen an Tools
   
  In der folgenden Tabelle werden die erforderlichen Berechtigungen für häufig verwendete Aktionen zusammengefasst.  
   
-|Szenario|`ALTER ANY COLUMN MASTER KEY`|`ALTER ANY COLUMN ENCRYPTION KEY`|`VIEW ANY COLUMN MASTER KEY DEFINITION`|`VIEW ANY COLUMN ENCRYPTION KEY DEFINITION`|  
+|Szenario|<code>ALTER ANY COLUMN MASTER KEY</code>|<code>ALTER ANY COLUMN ENCRYPTION KEY</code>|<code>VIEW ANY COLUMN MASTER KEY DEFINITION</code>|<code>VIEW ANY COLUMN ENCRYPTION KEY DEFINITION</code>|  
 |--------------|-----------------------------------|---------------------------------------|---------------------------------------------|-------------------------------------------------|  
 |Schlüsselverwaltung (Erstellen/Ändern/Überprüfen von Schlüsselmetadaten in der Datenbank)|X|X|X|X|  
 |Abfragen von verschlüsselten Spalten|||X|X|  

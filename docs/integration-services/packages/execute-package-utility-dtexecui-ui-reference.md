@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e41b5ffc1ff1cbd524298a17e32f5f677954f24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 26e976ee2a62d29f8f14584159888de428431101
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919211"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472500"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Paketausführungsprogramm (dtexecui)
 
@@ -68,9 +68,8 @@ ms.locfileid: "86919211"
  **Paketquelle**  
  Geben Sie mithilfe der folgenden Optionen den Speicherort des Pakets an:  
   
-|||  
-|-|-|  
 |value|BESCHREIBUNG|  
+|-|-|  
 |**SQL Server**|Wählen Sie diese Option, wenn das Paket auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert ist. Geben Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einen Benutzernamen und das Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung an. Für jeden Benutzernamen und jedes Kennwort werden an der Eingabeaufforderungen die Optionen **/USER** _Benutzername_ und **/PASSWORD** _Kennwort_ hinzugefügt.|  
 |**Dateisystem**|Wählen Sie diese Option, wenn das Paket im Dateisystem gespeichert ist.|  
 |**SSIS-Paketspeicher**|Wählen Sie diese Option aus, wenn das Paket im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher gespeichert ist.|  
