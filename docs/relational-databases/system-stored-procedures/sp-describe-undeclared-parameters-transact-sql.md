@@ -18,15 +18,15 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a3745f00e8e2e6d7ed0386a128ee6bcec2adebea
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831172"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522544"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
   Gibt ein Resultset zurück, das Metadaten zu nicht deklarierten Parametern in einem [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch enthält. Berücksichtigt jeden Parameter, der im ** \@ spql** -Batch verwendet wird, aber nicht in ** \@ para**Metern deklariert ist. Ein Resultset wird zurückgegeben, das für jeden dieser Parameter eine Zeile mit den abgeleiteten Typinformationen für diesen Parameter enthält. Die Prozedur gibt ein leeres Resultset zurück, wenn der ** \@ TQL** -Eingabe Batch über keine Parameter verfügt, ausgenommen der in ** \@ para**Metern deklarierten Parameter.  
   
@@ -169,7 +169,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Einfache Ableitung  
   
-     Wenn E ( \@ p) = \@ p und TT ( \@ p) vorhanden ist, d. h., wenn \@ p direkt ein Argument für einen der am Anfang von Schritt 2 aufgeführten Ausdrücke ist, leitet der typableitungs Algorithmus den Datentyp von \@ p in TT ( \@ p) ab. Beispiel:  
+     Wenn E ( \@ p) = \@ p und TT ( \@ p) vorhanden ist, d. h., wenn \@ p direkt ein Argument für einen der am Anfang von Schritt 2 aufgeführten Ausdrücke ist, leitet der typableitungs Algorithmus den Datentyp von \@ p in TT ( \@ p) ab. Zum Beispiel:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -177,7 +177,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      Der Datentyp für \@ P1, \@ P2 und \@ P3 ist der Datentyp von C1, der Rückgabe Datentyp von dbo. tbl und der Parameter Datentyp für dbo. tbl.  
   
-     Wenn \@ p ein Argument für einen- \< , >-, =-oder >=-Operator ist, gelten als Sonderfall \< keine einfachen ABLEITUNGS Regeln. Der Typableitungsalgorithmus verwendet die allgemeinen, im nächsten Abschnitt erklärten Ableitungsregeln. Betrachten Sie beispielsweise die folgenden beiden Abfragen für Fälle, in denen c1 eine Spalte vom Datentyp char(30) ist:  
+     Wenn \@ p ein Argument für den \<, > Operator, = ist, gelten als Sonderfall \<=, or > keine einfachen ABLEITUNGS Regeln. Der Typableitungsalgorithmus verwendet die allgemeinen, im nächsten Abschnitt erklärten Ableitungsregeln. Betrachten Sie beispielsweise die folgenden beiden Abfragen für Fälle, in denen c1 eine Spalte vom Datentyp char(30) ist:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
@@ -217,7 +217,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  Der Datentyp, der die kleinste Anzahl impliziter Konvertierungen in E ( \@ p) erzeugt, wird ausgewählt. Wenn ein bestimmter Datentyp einen Datentyp für E ( \@ p) erzeugt, der nicht mit TT ( \@ p) identisch ist, betrachtet der typableitungs Algorithmus dies als zusätzliche implizite Konvertierung des Datentyps e ( \@ p) in TT ( \@ p).  
   
-     Beispiel:  
+     Zum Beispiel:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  

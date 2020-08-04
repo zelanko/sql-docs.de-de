@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f17290773a3becf0b33b28eb5e95bf914d53af06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901728"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522004"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Hochverfügbarkeit und Notfallwiederherstellung für Master Data Services
 
@@ -309,7 +309,7 @@ Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Kn
 
 8. Klicken Sie auf der Seite **Replikate angeben** auf die Registerkarte **Listener** und tun Sie Folgendes: Weitere Informationen in Abbildung 18.
 
-   a. Klicken Sie auf **Verfügbarkeitsgruppenlistener erstellen**, um einen Verfügbarkeitsgruppenlistener für die MDS-Datenbankverbindung einzurichten.
+   ein. Klicken Sie auf **Verfügbarkeitsgruppenlistener erstellen**, um einen Verfügbarkeitsgruppenlistener für die MDS-Datenbankverbindung einzurichten.
 
    b. Geben Sie einen **DNS-Namen des Listeners** ein, z.B. MDSSQLServer.
 
@@ -324,7 +324,7 @@ Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Kn
 
    Abbildung 18
 
-9. Klicken Sie auf der Seite **Datensynchronisierung auswählen** auf **Vollständig**, und geben Sie eine Netzwerkfreigabe an, auf die jeder Knoten zugreifen kann. Klicken Sie zum Fortfahren auf **Weiter** . Weitere Informationen in Abbildung 19.
+9. Klicken Sie auf der Seite **Datensynchronisierung auswählen** auf **Vollständig**, und geben Sie eine Netzwerkfreigabe an, auf die jeder Knoten zugreifen kann. Klicken Sie auf zum Fortfahren auf **Weiter**. Weitere Informationen in Abbildung 19.
 
    Diese Netzwerkfreigabe dient zum Speichern der Datenbanksicherung zum Erstellen von sekundären Replikaten. Wenn diese nicht für Ihre Organisation verfügbar ist, wählen Sie eine andere Einstellung für die Datensynchronisierung aus. Informationen zur Verwendung anderer Optionen zum Erstellen sekundärer Replikate finden Sie unter [SQL Server 2016 Always on Availability Group](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) . In der Abbildung 17 sind auch andere Optionen aufgeführt.
 
@@ -332,7 +332,7 @@ Sie müssen normalerweise das synchrone Commit nur aktivieren, wenn sich zwei Kn
 
    Abbildung 19 
 
-10. Stellen Sie auf der Seite **Überprüfung** sicher, dass Überprüfungen erfolgreich übergeben werden, und beheben Sie aufgetretene Fehler. Klicken Sie zum Fortfahren auf **Weiter** .
+10. Stellen Sie auf der Seite **Überprüfung** sicher, dass Überprüfungen erfolgreich übergeben werden, und beheben Sie aufgetretene Fehler. Klicken Sie auf zum Fortfahren auf **Weiter**.
 
 11. Überprüfen Sie auf der Seite **Zusammenfassung** alle Konfigurationseinstellungen, und klicken Sie dann auf **Beenden**. Dadurch wird die Verfügbarkeitsgruppe erstellt und konfiguriert.
 
@@ -390,7 +390,7 @@ Die in diesem Artikel vorgestellte Lösung erfordert nur, dass die Datenbank des
 
 In diesem Whitepaper haben wir gesehen, wie Sie die Master Data Services-Back-End-Datenbank als Teil einer Verfügbarkeits Gruppe einrichten und konfigurieren. Diese Konfiguration bietet hohe Verfügbarkeit und Notfallwiederherstellung für die Master Data Services-Back-End-Datenbank. Zum Implementieren dieser Konfiguration müssen Sie Windows Server-Failovercluster, AG und Master Data Services installieren und konfigurieren.
 
-## <a name="feedback"></a>Feedback
+## <a name="feedback-comments"></a>Feedback Kommentare
 
 War dieses Dokument hilfreich? Senden Sie uns Ihr Feedback, indem Sie auf oben im Artikel auf **Kommentare** klicken. 
 
