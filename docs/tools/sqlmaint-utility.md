@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff9734eea7e81d9c5e2ad8acbecf1fc9a60f09de
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: aaa935a955610ce5acb75a4b70141f8252cb3092
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151583"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918355"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint (Hilfsprogramm)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   Das**sqlmaint** -Hilfsprogramm führt eine Reihe angegebener Wartungsvorgänge für eine oder mehrere Datenbanken aus. Verwenden Sie **sqlmaint** , um DBCC-Überprüfungen auszuführen, eine Datenbank und das zugehörige Transaktionsprotokoll zu sichern, Statistiken zu aktualisieren und Indizes neu zu erstellen. Bei allen Datenbankwartungsaktivitäten wird ein Bericht generiert, der an eine festgelegte Textdatei, HTML-Datei oder ein festgelegtes E-Mail-Konto gesendet werden kann. **sqlmaint** führt Datenbankwartungspläne aus, die in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]erstellt wurden. Verwenden Sie das Hilfsprogramm [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dtexec [, um Wartungspläne von](../integration-services/packages/dtexec-utility.md)über die Eingabeaufforderung auszuführen.  
   
 > [!IMPORTANT]  
@@ -131,7 +131,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  Für *HTML-Datei* ist der vollständige UNC-Dateiname erforderlich, wenn **sqlmaint** auf einen Remoteserver zugreift.  
   
  **-DelHtmlRpt** \<*time_period*>  
- Gibt an, dass jeder HTML-Bericht im Berichtsverzeichnis gelöscht werden soll, wenn das Zeitintervall nach Erstellen der Berichtsdatei den Wert \<*Zeitraum*> überschreitet. **-DelHtmlRpt** sucht nach Dateien, deren Namen dem Muster entsprechen, das aus dem *HTML-Datei*-Parameter generiert wurde. Wenn für *html_file* der Wert C:\Programme\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm angegeben wird, bewirkt **-DelHtmlRpt**, dass **sqlmaint** alle Dateien löscht, deren Namen dem Muster C:\Programme\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm entsprechen und die älter als der angegebene Wert für \<*time_period*> sind.  
+ Gibt an, dass alle HTML-Berichte im Berichtsverzeichnis gelöscht werden sollen, wenn das Zeitintervall nach dem Erstellen der Berichtsdatei den Wert für \<*time_period*> überschreitet. **-DelHtmlRpt** sucht nach Dateien, deren Namen dem Muster entsprechen, das aus dem *HTML-Datei*-Parameter generiert wurde. Wenn für *html_file* der Wert „C:\Programme\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm“ angegeben wird, bewirkt **-DelHtmlRpt**, dass **sqlmaint** alle Dateien löscht, deren Namen dem Muster „C:\Programme\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm“ entsprechen und die älter als der angegebene Wert für \<*time_period*> sind.  
   
  **-RmUnusedSpace** _threshold_percent free_percent_  
  Gibt an, dass nicht verwendeter Speicherplatz aus der mit **-D**angegebenen Datenbank entfernt wird. Diese Option ist nur für Datenbanken nützlich, die für das automatische Wachstum definiert wurden. *Schwellenwert_Prozent* gibt die Größe in Megabytes an, die die Datenbank erreichen muss, bevor **sqlmaint** versucht, nicht verwendeten Datenspeicherplatz zu entfernen. Wenn die Datenbank kleiner als *Schwellenwert_Prozent*ist, wird keine Aktion ausgeführt. *Prozent_frei* gibt an, wie viel nicht verwendeter Speicherplatz in der Datenbank verbleiben muss. Die Angabe erfolgt als Prozentsatz der endgültigen Größe der Datenbank. Wenn eine 200 MB große Datenbank z.B. 100 MB an Daten enthält, bewirkt die Angabe des Werts 10 für *Prozent_frei* , dass die endgültige Größe der Datenbank 110 MB beträgt. Beachten Sie, dass eine Datenbank nicht erweitert wird, wenn sie kleiner als der Wert ist, der sich aus *Prozent_frei* zuzüglich der Menge der Daten in der Datenbank ergibt. Wenn eine 108 MB große Datenbank z.B. 100 MB an Daten enthält, bewirkt die Angabe des Werts 10 für *Prozent_frei* nicht, dass die Datenbank auf 110 MB erweitert wird; die Datenbank bleibt 108 MB groß.  
@@ -201,7 +201,7 @@ dbname_log_yyyymmddhhmm.BAK
  Gibt an, dass das Sicherungsmedium ein Datenträger ist.  
   
  **-DelBkUps**< *Zeitraum* >  
- Gibt bei Datenträgersicherungen an, dass jede Sicherungsdatei im Sicherungsverzeichnis gelöscht werden soll, wenn das Zeitintervall nach Erstellen der Sicherungsdatei den Wert für \<*time_period*> überschreitet.  
+ Gibt bei Datenträgersicherungen an, dass alle Sicherungsdateien im Sicherungsverzeichnis gelöscht werden sollen, wenn das Zeitintervall nach dem Erstellen der Sicherungsdatei den Wert für \<*time_period*> überschreitet.  
   
  **-CrBkSubDir**  
  Gibt bei Datenträgersicherungen an, dass ein Unterverzeichnis im Verzeichnis [*Sicherungspfad*] oder im Standardsicherungsverzeichnis erstellt werden soll, wenn **-UseDefDir** ebenfalls angegeben ist. Der Name des Unterverzeichnisses wird anhand des Datenbanknamens generiert, der mit **-D**angegeben wurde. **-CrBkSubDir** bietet ein einfaches Verfahren, um alle Sicherungen für verschiedene Datenbanken in unterschiedlichen Unterverzeichnissen abzulegen, ohne den *Sicherungspfad* -Parameter ändern zu müssen.  

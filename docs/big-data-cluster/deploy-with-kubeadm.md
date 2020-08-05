@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 83f66841c4894d3c61ff8196eb52f3ac84fe42f9
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 5161bfcdd6c6fbdfe004a45bb7bc53983a1c77b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606546"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85660436"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Kubernetes auf mehreren Computern für SQL Server-Big Data-Cluster-Bereitstellungen
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Dieser Artikel enthält ein Beispiel für die Verwendung von **kubeadm** zum Konfigurieren von Kubernetes auf mehreren Computern für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]-Bereitstellungen. In diesem Beispiel sind mehrere Ubuntu 16.04- oder 18.04 LTS-Computer (physisch oder virtuell) das Ziel. Für Bereitstellungen auf einer anderen Linux-Plattform müssen Sie einige der Befehle so ändern, dass Sie Ihrem System entsprechen.  
 

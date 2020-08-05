@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b171f587e54948b2a8d70c804d47362e97b61bb9
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c0fdaa59f094a44b90affc3fa256275fffdfc69a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151605"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920596"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB-Hilfsprogramm
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   Verwenden Sie das Hilfsprogramm **SqlLocalDB**, um eine Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB** zu erstellen. Das Hilfsprogramm **SqlLocalDB** (SqlLocalDB.exe) ist ein einfaches Befehlszeilentool, mit dem Benutzer und Entwickler eine Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** erstellen und verwalten können. Informationen zum Verwenden von **LocalDB**finden Sie unter [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
   
 ## <a name="syntax"></a>Syntax  
@@ -45,7 +45,7 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **create** | **c** ] *\<Instanzname>* *\<Instanzversion>* [ **-s** ]  
+ [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
  Erstellt eine neue Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. **SqlLocalDB** verwendet die Version der mit dem *\<instance-version>* -Argument angegebenen [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]-Binärdateien. Die Versionsnummer wird im numerischen Format mit mindestens einer Dezimalzahl angegeben. Die Nebenversionsnummern (Service Packs) sind optional. Beispielsweise werden die folgenden zwei Versionsnummern akzeptiert: 11.0 oder 11.0.1186. Die angegebene Version muss auf dem Computer installiert sein. Wenn die Versionsnummer nicht angegeben ist, wird standardmäßig die Version des Hilfsprogramms **SqlLocalDB** verwendet. Durch Hinzufügen von **-s** wird die neue Instanz von **LocalDB**gestartet.  
   
  [ **share** | **h** ]  
@@ -66,7 +66,7 @@ SqlLocalDB.exe
  [ **info** | **i** ] [ *\<instance-name>* ]  
  Listet alle Instanzen von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** auf, die im Besitz des aktuellen Benutzers sind.  
   
- *\<Instanzname>* gibt Name, Version, Status („Wird ausgeführt“ oder „Beendet“), die letzte Startzeit für die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** und den Namen der lokalen Pipe von **LocalDB** zurück.  
+ *\<instance-name>* gibt den Namen, die Version, den Zustand („Wird ausgeführt“ oder „Beendet“) und die letzte Startzeit für die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** und den lokalen Pipenamen von **LocalDB** zurück.  
   
  [ **trace** | **t** ] **on** | **off**  
  **trace on** aktiviert die Ablaufverfolgung für die **SqlLocalDB** -API-Aufrufe für den aktuellen Benutzer. **trace off** deaktiviert die Ablaufverfolgung.  
