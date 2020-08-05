@@ -1,6 +1,6 @@
 ---
 title: Ausführen von Assistent für Datenbankexperimente an einer Eingabeaufforderung
-description: Ausführen von Assistent für Datenbankexperimente an einer Eingabeaufforderung
+description: Erfahren Sie, wie Sie eine Ablauf Verfolgung in Assistent für Datenbankexperimente (DEA) erfassen und dann die Ergebnisse über eine Eingabeaufforderung analysieren.
 ms.custom: seo-lt-2019
 ms.date: 02/25/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 161258d8359ce46b9ff2afb2a878c008059772db
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215487"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565529"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Ausführen von Assistent für Datenbankexperimente an einer Eingabeaufforderung
 
@@ -44,7 +44,7 @@ Führen Sie an einer Eingabeaufforderung den folgenden Befehl aus, um eine neue 
 
 Beim Starten einer neuen Arbeits Auslastungs Erfassung mit dem `Deacmd.exe` Befehl können Sie die folgenden zusätzlichen Optionen verwenden:
 
-| Option| Beschreibung |  
+| Option| BESCHREIBUNG |  
 | --- | --- |
 | -n, --name | Benötigten Name der Ablauf Verfolgungs Datei |
 | -x,--Format | Benötigten Format der Ablauf Verfolgung (Trace = 0, xevents = 1) |
@@ -115,7 +115,7 @@ Zum Anzeigen der Analyseberichte dieser Ablauf Verfolgungs Dateien müssen Sie d
 
 Beim Analysieren von Ablauf Verfolgungen mit dem Befehl "DEA" können Sie die folgenden zusätzlichen Optionen verwenden:
 
-| Option| Beschreibung |  
+| Option| BESCHREIBUNG |  
 | --- | --- |
 | -a,--tracea | Benötigten Dateipfad zur Ereignis Datei für eine-Instanz. Beispiel: c:\traces\sql2008trace.trc.  Wenn es einen Batch von Dateien gibt, wählen Sie die erste Datei aus, und die DEA überprüft automatisch, ob Rolloverdateien vorhanden sind. Wenn sich Dateien im BLOB befinden, geben Sie den Ordner Pfad an, in dem die Ereignis Dateien lokal gespeichert werden sollen.  Beispiel: c:\traces\ |
 | -b,--traceb | Benötigten Dateipfad zur Ereignis Datei für die B-Instanz. Beispiel: c:\traces\sql2014trace.trc. Wenn es einen Batch von Dateien gibt, wählen Sie die erste Datei aus, und die DEA überprüft automatisch, ob Rolloverdateien vorhanden sind. Wenn sich Dateien im BLOB befinden, geben Sie den Ordner Pfad an, in dem die Ereignis Dateien lokal gespeichert werden sollen.  Beispiel: c:\traces\ |
@@ -132,6 +132,6 @@ Beim Analysieren von Ablauf Verfolgungen mit dem Befehl "DEA" können Sie die fo
 | --Abu | BLOB-URL für eine-Instanz mit einem SAS-Schlüssel |
 | --BBU | BLOB-URL für B-Instanz mit SAS-Schlüssel |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - Weitere Informationen zur Verwendung von DEA finden Sie unter [Übersicht über Assistent für Datenbankexperimente](database-experimentation-assistant-overview.md).

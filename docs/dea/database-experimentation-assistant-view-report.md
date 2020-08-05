@@ -1,6 +1,6 @@
 ---
 title: Anzeigen von Analyseberichten für SQL Server Upgrades
-description: Anzeigen von Analyseberichten in Assistent für Datenbankexperimente
+description: Erfahren Sie, wie Sie Analyseberichte für Leistungs Einblicke in Assistent für Datenbankexperimente (DEA) anzeigen und verstehen.
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5850f3f78590b5ceccea49033b401055180d715e
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76977583"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565489"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Anzeigen von Analyseberichten in Assistent für Datenbankexperimente
 
@@ -83,6 +83,6 @@ Sie können Abfrage Vorlagen Links für ausführlichere Informationen zu bestimm
    > [!NOTE]
    > Wenn Sie das erweiterte Ereignis () analysieren. XEL-Dateien, Abfrageplan Informationen werden nicht erfasst, um die Arbeitsspeicher Auslastung auf dem Computer des Benutzers einzuschränken.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - Informationen zum Generieren eines Analyse Berichts an einer Eingabeaufforderung finden Sie unter [Ausführen an der Eingabeaufforderung](database-experimentation-assistant-run-command-prompt.md).

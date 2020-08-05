@@ -16,15 +16,15 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7a6de1ad7652e7b948d741acdeebdd186f590b44
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: e6ee5d0f6a2b26dc10c901297097b99338ba9091
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627581"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544373"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL-Datenbank)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
 Gibt ggf. die Edition (Dienst Ebene), das Dienst Ziel (Tarif) und den Namen des elastischen Pools für eine Azure SQL-Datenbank oder eine Azure SQL Data Warehouse zurück. Wenn eine Anmeldung an der Masterdatenbank in einem Azure SQL-Datenbank-Server besteht, werden Informationen zu allen Datenbanken zurückgegeben. Für Azure SQL Data Warehouse müssen Sie über eine Verbindung mit der Masterdatenbank verfügen.  
   
@@ -40,7 +40,7 @@ Gibt ggf. die Edition (Dienst Ebene), das Dienst Ziel (Tarif) und den Namen des 
 |database_id|INT|Die ID der Datenbank, die innerhalb einer Instanz von Azure SQL-Datenbankserver eindeutig ist. Joinfähig mit [sys.-Datenbanken &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |Edition|sysname|Die Dienst Ebene für die Datenbank oder Data Warehouse: **Basic**, **Standard**, **Premium** oder **Data Warehouse**.|  
 |service_objective|sysname|Der Tarif der Datenbank. Wenn sich die Datenbank in einem Pool für elastische Datenbanken befindet, wird **elasticpool**zurückgegeben.<br /><br /> Auf dem **Basic** -Level gibt **Basic**zurück.<br /><br /> Eine **einzelne Datenbank in einer Standard Dienst Ebene** gibt eine der folgenden zurück: S0, S1, S2, S3, S4, S6, S7, S9 oder S12.<br /><br /> **Eine Einzel Datenbank in einem Premium** -Tarif gibt Folgendes zurück: P1, P2, P4, P6, P11 oder P15.<br /><br /> **SQL Data Warehouse** gibt DW100 bis DW30000c zurück.<br /><br /> Weitere Informationen finden Sie unter [Einzel Datenbanken](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [Pools für elastische](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)Datenbanken, [Data](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/) Warehouse|  
-|elastic_pool_name|sysname|Der Name des [Pools für elastische](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) Datenbanken, zu dem die Datenbank gehört. Gibt **null** zurück, wenn die Datenbank eine einzelne Datenbank oder ein Datenlager ist.|  
+|elastic_pool_name|sysname|Der Name des [Pools für elastische](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) Datenbanken, zu dem die Datenbank gehört. Gibt **null** zurück, wenn die Datenbank eine einzelne Datenbank oder eine Data Warehouse ist.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die **DBManager** -Berechtigung für die Master-Datenbank.  Auf Datenbankebene muss der Benutzer der Ersteller oder Besitzer sein.  

@@ -1,6 +1,6 @@
 ---
 title: Erstellen von Analyseberichten
-description: Erstellen von Analyseberichten in Assistent für Datenbankexperimente
+description: Generieren Sie einen Analysebericht in Assistent für Datenbankexperimente (DEA). Analyseberichte bieten Einblicke in die Auswirkungen von vorgeschlagenen Änderungen auf die Leistung.
 ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
@@ -12,12 +12,12 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 09f8ab0b3f4950e06c96b67c74f9cdcbc09269d5
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289838"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565567"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Erstellen von Analyseberichten in Assistent für Datenbankexperimente (SQL Server)
 
@@ -67,7 +67,7 @@ Der Benutzer, der bei DEA angemeldet ist, muss über sysadmin-Rechte auf dem Ana
 |Mögliche Fehler|Lösung|  
 |---|---|  
 |Es kann keine Verbindung mit der Datenbank hergestellt werden. Stellen Sie sicher, dass Sie über Systemadministrator Rechte zum Analysieren und Anzeigen der Berichte verfügen.|Sie verfügen möglicherweise nicht über Zugriffs-oder sysadmin-Rechte für den Server oder die Datenbank. Bestätigen Sie Ihre Anmelde Rechte, und versuchen Sie es erneut.|  
-|Der **Berichts Name** kann nicht auf dem Server **Servernamen**generiert werden. Weitere Informationen finden Sie im Bericht Berichts **Name** .|Möglicherweise verfügen Sie nicht über die sysadmin-Rechte, die zum Generieren eines neuen Berichts erforderlich sind. Wenn Sie ausführliche Fehler anzeigen möchten, wählen Sie den Bericht mit dem Fehlerbericht aus, und überprüfen\\Sie die Protokolle in% Temp% Dea.|  
+|Der **Berichts Name** kann nicht auf dem Server **Servernamen**generiert werden. Weitere Informationen finden Sie im Bericht Berichts **Name** .|Möglicherweise verfügen Sie nicht über die sysadmin-Rechte, die zum Generieren eines neuen Berichts erforderlich sind. Wenn Sie ausführliche Fehler anzeigen möchten, wählen Sie den Bericht mit dem Fehlerbericht aus, und überprüfen Sie die Protokolle in% Temp% \\ Dea.|  
 |Der aktuelle Benutzer verfügt nicht über die erforderlichen Berechtigungen zum Ausführen des Vorgangs. Stellen Sie sicher, dass Sie über Systemadministrator Rechte zum Durchführen der Ablauf Verfolgung und zum Analysieren der Berichte verfügen.|Sie verfügen nicht über die sysadmin-Rechte, die erforderlich sind, um einen neuen Bericht zu generieren.|  
 
 **F: Ich kann keine Verbindung mit dem Computer herstellen, auf dem SQL Server**
@@ -76,28 +76,28 @@ Der Benutzer, der bei DEA angemeldet ist, muss über sysadmin-Rechte auf dem Ana
 - Vergewissern Sie sich, dass Ihre Firewallkonfiguration keine Verbindungen mit dem Computer blockiert, der SQL Server ausgeführt wird
 - Vergewissern Sie sich, dass der Benutzer über die erforderlichen Benutzerrechte verfügt.
 
-Weitere Details finden Sie in den Protokollen unter% Temp%\\Dea. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.
+Weitere Details finden Sie in den Protokollen unter% Temp% \\ Dea. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.
 
 **F: Ich sehe einen Fehler beim Generieren eines Analyse Berichts.**
 
 Der Internet Zugriff ist erforderlich, wenn Sie zum ersten Mal nach der Installation von DEA einen Analysebericht generieren. Zum Herunterladen von Paketen, die für statistische Analysen erforderlich sind, ist ein Internet Zugriff erforderlich.
 
-Wenn beim Erstellen des Berichts ein Fehler auftritt, wird auf der Seite Status der jeweilige Schritt angezeigt, bei dem die Analyse nicht erfolgreich war. Weitere Details finden Sie in den Protokollen unter% Temp%\\Dea. Stellen Sie sicher, dass Sie über eine gültige Verbindung mit dem Server mit den erforderlichen Benutzerrechten verfügen, und versuchen Sie es erneut. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.
+Wenn beim Erstellen des Berichts ein Fehler auftritt, wird auf der Seite Status der jeweilige Schritt angezeigt, bei dem die Analyse nicht erfolgreich war. Weitere Details finden Sie in den Protokollen unter% Temp% \\ Dea. Stellen Sie sicher, dass Sie über eine gültige Verbindung mit dem Server mit den erforderlichen Benutzerrechten verfügen, und versuchen Sie es erneut. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.
 
 |Mögliche Fehler|Lösung|  
 |---|---|  
-|Fehler beim Starten von rinterop. Überprüfen Sie rinterop-Protokolle, und versuchen Sie es erneut|Die DEA benötigt Internet Zugriff, um abhängige R-Pakete herunterzuladen. Überprüfen Sie die rinterop-Protokolle\\in% Temp% rinterop-und DEA\\-Protokollen in% Temp% Dea. Wenn rinterop nicht ordnungsgemäß initialisiert wurde oder ohne die richtigen R-Pakete initialisiert wurde, wird möglicherweise nach dem initializerinterop-Schritt in den DEA-Protokollen die Ausnahme "Fehler beim Generieren eines neuen Analyse Berichts" angezeigt.<br><br>Die rinterop-Protokolle enthalten möglicherweise einen Fehler ähnlich dem "Es ist kein jsonlite-Paket verfügbar". Wenn Ihr Computer nicht über Internetzugang verfügt, können Sie das erforderliche jsonlite R-Paket manuell herunterladen:<br><br><li>Wechseln Sie im Dateisystem des Computers\\zum Ordner "% User Profile% dearpackages". Dieser Ordner besteht aus den Paketen, die von R für die DEA verwendet werden.</li><br><li>Wenn der Ordner "jsonlite" in der Liste der installierten Pakete fehlt, benötigen Sie einen Computer mit Internet Zugriff, um die Releaseversion von jsonlite\_1.4. [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html)zip aus herunterzuladen.</li><br><li>Kopieren Sie die ZIP-Datei auf den Computer, auf dem Sie die Datei "DEA" ausführen.  Extrahieren Sie den Ordner "jsonlite", und kopieren Sie ihn\\in "% User Profile% dearpackages". In diesem Schritt wird das jsonlite-Paket automatisch in R installiert. Der Ordner sollte mit dem Namen " **jsonlite** " benannt werden, und der Inhalt sollte sich direkt innerhalb des Ordners befinden, nicht eine Ebene unten.</li><br><li>Schließen Sie die Analyse, öffnen Sie Sie erneut, und versuchen Sie erneut,</li><br>Sie können auch die rgui verwenden. Wechseln Sie zu **Pakete** > **Installieren von ZIP**. Wechseln Sie zu dem zuvor heruntergeladenen Paket, und installieren Sie.<br><br>Wenn rinterop initialisiert und ordnungsgemäß eingerichtet wurde, sollte in den rinterop-Protokollen "jsonlite der abhängigen R-Pakete installieren" angezeigt werden.|  
+|Fehler beim Starten von rinterop. Überprüfen Sie rinterop-Protokolle, und versuchen Sie es erneut|Die DEA benötigt Internet Zugriff, um abhängige R-Pakete herunterzuladen. Überprüfen Sie die rinterop-Protokolle in% Temp% \\ rinterop-und DEA-Protokollen in% Temp% \\ Dea. Wenn rinterop nicht ordnungsgemäß initialisiert wurde oder ohne die richtigen R-Pakete initialisiert wurde, wird möglicherweise nach dem initializerinterop-Schritt in den DEA-Protokollen die Ausnahme "Fehler beim Generieren eines neuen Analyse Berichts" angezeigt.<br><br>Die rinterop-Protokolle enthalten möglicherweise einen Fehler ähnlich dem "Es ist kein jsonlite-Paket verfügbar". Wenn Ihr Computer nicht über Internetzugang verfügt, können Sie das erforderliche jsonlite R-Paket manuell herunterladen:<br><br><li>Wechseln Sie im Dateisystem des Computers zum Ordner "% User Profile% \\ dearpackages". Dieser Ordner besteht aus den Paketen, die von R für die DEA verwendet werden.</li><br><li>Wenn der Ordner "jsonlite" in der Liste der installierten Pakete fehlt, benötigen Sie einen Computer mit Internet Zugriff, um die Releaseversion von jsonlite \_1.4.zip von herunterzuladen [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html) .</li><br><li>Kopieren Sie die ZIP-Datei auf den Computer, auf dem Sie die Datei "DEA" ausführen.  Extrahieren Sie den Ordner "jsonlite", und kopieren Sie ihn in "% User Profile% \\ dearpackages". In diesem Schritt wird das jsonlite-Paket automatisch in R installiert. Der Ordner sollte mit dem Namen " **jsonlite** " benannt werden, und der Inhalt sollte sich direkt innerhalb des Ordners befinden, nicht eine Ebene unten.</li><br><li>Schließen Sie die Analyse, öffnen Sie Sie erneut, und versuchen Sie erneut,</li><br>Sie können auch die rgui verwenden. Wechseln Sie zu **Pakete**  >  **Installieren von ZIP**. Wechseln Sie zu dem zuvor heruntergeladenen Paket, und installieren Sie.<br><br>Wenn rinterop initialisiert und ordnungsgemäß eingerichtet wurde, sollte in den rinterop-Protokollen "jsonlite der abhängigen R-Pakete installieren" angezeigt werden.|  
 |Es kann keine Verbindung mit der SQL Server Instanz hergestellt werden. Stellen Sie sicher, dass der Server Name richtig ist, und überprüfen Sie den erforderlichen Zugriff für den angemeldeten Benutzer.|Möglicherweise verfügen Sie nicht über Zugriffs-oder Benutzerrechte auf dem Server, oder der Servername ist falsch.|
-|Timeout bei rinterop-Prozess. Überprüfen Sie die Protokolle "DEA" und "rinterop", und führen Sie den rinterop-Prozess im Task-Manager aus.<br><br>oder<br><br>Rinterop weist einen fehlerhaften Status auf. Unterbinden Sie den rinterop-Prozess im Task-Manager, und wiederholen Sie dann den Vorgang.|Überprüfen Sie die Protokolle in\\% Temp% rinterop, um den Fehler zu bestätigen. Entfernen Sie den rinterop-Prozess vom Task-Manager, bevor Sie es erneut versuchen. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.|
+|Timeout bei rinterop-Prozess. Überprüfen Sie die Protokolle "DEA" und "rinterop", und führen Sie den rinterop-Prozess im Task-Manager aus.<br><br>oder<br><br>Rinterop weist einen fehlerhaften Status auf. Unterbinden Sie den rinterop-Prozess im Task-Manager, und wiederholen Sie dann den Vorgang.|Überprüfen Sie die Protokolle in% Temp% \\ rinterop, um den Fehler zu bestätigen. Entfernen Sie den rinterop-Prozess vom Task-Manager, bevor Sie es erneut versuchen. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.|
 
 **F: der Bericht wird generiert, aber die Daten fehlen.**
 
 Überprüfen Sie die Datenbank auf dem Analysis-Computer, auf dem SQL Server ausgeführt wird, um zu bestätigen, dass Daten vorhanden sind Überprüfen Sie, ob die Analysis-Datenbank vorhanden ist, und überprüfen Sie Überprüfen Sie beispielsweise die folgenden Tabellen: tblbatchesa, tblbatchesb und tblsummarystats.
 
-Wenn keine Daten vorhanden sind, wurden die Daten möglicherweise nicht ordnungsgemäß kopiert, oder die Datenbank ist möglicherweise beschädigt. Wenn nur einige Daten fehlen, haben die in der Erfassung oder Wiedergabe erstellten Ablauf Verfolgungs Dateien möglicherweise die Arbeitsauslastung nicht exakt aufgezeichnet. Wenn die Daten vorhanden sind, überprüfen Sie die Protokolldateien in%\\Temp% DEA, um festzustellen, ob Fehler protokolliert wurden. Versuchen Sie dann erneut, den Analysebericht zu generieren.
+Wenn keine Daten vorhanden sind, wurden die Daten möglicherweise nicht ordnungsgemäß kopiert, oder die Datenbank ist möglicherweise beschädigt. Wenn nur einige Daten fehlen, haben die in der Erfassung oder Wiedergabe erstellten Ablauf Verfolgungs Dateien möglicherweise die Arbeitsauslastung nicht exakt aufgezeichnet. Wenn die Daten vorhanden sind, überprüfen Sie die Protokolldateien in% Temp% \\ DEA, um festzustellen, ob Fehler protokolliert wurden. Versuchen Sie dann erneut, den Analysebericht zu generieren.
 
 Weitere Fragen oder Feedback? Übermitteln Sie Ihr Feedback über das Tool "DEA", indem Sie in der unteren linken Ecke das Smiley-Symbol auswählen.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - Weitere Informationen zum Anzeigen des Analyse Berichts finden Sie unter [Anzeigen von Berichten](database-experimentation-assistant-view-report.md).

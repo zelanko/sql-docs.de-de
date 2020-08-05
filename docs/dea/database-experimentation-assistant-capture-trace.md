@@ -1,6 +1,6 @@
 ---
 title: Aufzeichnen einer Ablauf Verfolgung für SQL Server Upgrades
-description: Aufzeichnen einer Ablauf Verfolgung in Assistent für Datenbankexperimente für SQL Server Upgrades
+description: Verwenden Sie Assistent für Datenbankexperimente (DEA) zum Erstellen einer Ablauf Verfolgungs Datei mit einem Protokoll erfasster Server Ereignisse.
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c560aa2c5ba4b5113ce711601a4e85aab2788240
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289828"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565592"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Aufzeichnen einer Ablauf Verfolgung in Assistent für Datenbankexperimente
 
@@ -80,7 +80,7 @@ Im folgenden finden Sie einige häufig gestellte Fragen zur Erfassung von Ablauf
 
 In der folgenden Tabelle werden die Ereignisse und die entsprechenden Spaltendaten aufgelistet, die von DEA für Ablauf Verfolgungen erfasst werden:
   
-|Ereignisname|Textdaten (1)|Binärdaten (2)|Datenbank-ID (3)|Hostname (8)|Anwendungs Name (10)|Anmelde Name (11)|SPID (12)|Startzeit (14)|Endzeit (15)|Datenbankname (35)|Ereignis Sequenz (51)|IsSystem (60)|  
+|Veranstaltungsname|Textdaten (1)|Binärdaten (2)|Datenbank-ID (3)|Hostname (8)|Anwendungs Name (10)|Anmelde Name (11)|SPID (12)|Startzeit (14)|Endzeit (15)|Datenbankname (35)|Ereignis Sequenz (51)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
 |**RPC: abgeschlossen (10)**||*|*|*|*|*|*|*|*|*|*|*|  
 |**RPC: wird gestartet (11)**||*|*|*|*|*|*|*||*|*|*|  
@@ -134,7 +134,7 @@ Wenn beim Ausführen einer Ablauf Verfolgungs Erfassung ein Fehler angezeigt wir
 - Der Name des Computers, auf dem SQL Server ausgeführt wird, ist gültig. Versuchen Sie, eine Verbindung mit dem Computer herzustellen, auf dem SQL Server ausgeführt wird, indem Sie SQL Server Management Studio (SSMS) verwenden.
 - Die Firewallkonfiguration blockiert keine Verbindungen mit dem Computer, auf dem SQL Server ausgeführt wird.
 - Der Benutzer verfügt über die Berechtigungen, die in den häufig gestellten Fragen zur wieder [Gabe](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)aufgeführt sind.
-- Der Ablauf Verfolgungs Name folgt nicht der standardrolloverkonvention (Erfassung\_1). Versuchen Sie stattdessen, Namen von Ablauf\_Verfolgungen wie z. b. Capture 1A oder Capture1
+- Der Ablauf Verfolgungs Name folgt nicht der standardrolloverkonvention (Erfassung \_ 1). Versuchen Sie stattdessen, Namen von Ablauf Verfolgungen wie z \_ . b. Capture 1A oder Capture1
 
 Im folgenden finden Sie einige mögliche Fehler, die möglicherweise angezeigt werden, und Lösungen für deren Behebung:
 
@@ -147,6 +147,6 @@ Im folgenden finden Sie einige mögliche Fehler, die möglicherweise angezeigt w
 
 Wenn Sie andere Fehler mit der Bezeichnung *SQL-Fehler Code*sehen, finden Sie unter [Datenbank-Engine Fehler](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) ausführliche Beschreibungen.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - Informationen zum Konfigurieren der Distributed Replay Tools in SQL Server vor der Wiedergabe einer aufgezeichneten Ablauf Verfolgung finden Sie unter [configure Distributed Replay for Assistent für Datenbankexperimente](database-experimentation-assistant-configure-replay.md).

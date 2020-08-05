@@ -1,5 +1,5 @@
 ---
-title: sys. dm_operation_status (Azure SQL-Datenbank) | Microsoft-Dokumentation
+title: sys. dm_operation_status | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -19,16 +19,16 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: 080d12cdcf945fe34a2c8f1ab9ea7414e714da8c
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440707"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544383"
 ---
-# <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL-Datenbank)
+# <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
   Gibt Informationen zu den Vorgängen zurück, die für Datenbanken auf einem [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Server ausgeführt werden.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85440707"
 |resource_type|**int**|Bezeichnet den Typ der Ressource, für die der Vorgang ausgeführt wird. Nicht NULL. In der aktuellen Version verfolgt diese Sicht nur die Vorgänge nach, die für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausgeführt werden. Der entsprechende ganzzahlige Wert ist 0.|  
 |resource_type_desc|**nvarchar (2048)**|Beschreibung des Ressourcentyps, für den der Vorgang ausgeführt wird. In der aktuellen Version verfolgt diese Sicht nur die Vorgänge nach, die für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausgeführt werden.|  
 |major_resource_id|**sql_variant**|Name von [!INCLUDE[ssSDS](../../includes/sssds-md.md)], für die der Vorgang ausgeführt wird. Nicht NULL.|  
-|minor_resource_id|**sql_variant**|Nur zur internen Verwendung. Nicht NULL.|  
+|minor_resource_id|**sql_variant**|Nur für interne Verwendung. Nicht NULL.|  
 |operation|**nvarchar(60)**|Für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausgeführter Vorgang, z. B. CREATE oder ALTER.|  
 |state|**tinyint**|Der Zustand des Vorgangs.<br /><br /> 0 = Ausstehend<br />1 = Vorgang wird ausgeführt<br />2 = Abgeschlossen<br />3 = fehlgeschlagen<br />4 = Abgebrochen|  
 |state_desc|**nvarchar(120)**|PENDING = Vorgang wartet auf verfügbare Ressource oder verfügbares Kontingent.<br /><br /> IN_PROGRESS = Vorgang wurde gestartet und wird ausgeführt.<br /><br /> COMPLETED = Vorgang wurde erfolgreich abgeschlossen.<br /><br /> FAILED = Vorgang ist fehlgeschlagen. Weitere Informationen finden Sie in der Spalte **error_desc** .<br /><br /> CANCELLED = Vorgang wurde auf Anforderung des Benutzers beendet.|  
@@ -46,14 +46,14 @@ ms.locfileid: "85440707"
 |error_code|**int**|Code, der den Fehler angibt, der während eines fehlgeschlagenen Vorgangs aufgetreten ist. Wenn der Wert 0 ist, bedeutet dies, dass der Vorgang erfolgreich abgeschlossen wurde.|  
 |error_desc|**nvarchar (2048)**|Beschreibung des Fehlers, der während eines fehlgeschlagenen Vorgangs aufgetreten ist.|  
 |error_severity|**int**|Schweregrad des Fehlers, der während eines fehlgeschlagenen Vorgangs aufgetreten ist. Weitere Informationen zu Schweregraden von Fehlern finden Sie unter [Datenbank-Engine schwere](https://go.microsoft.com/fwlink/?LinkId=251052)Grade von Fehlern.|  
-|error_state|**int**|Für die zukünftige Verwendung reserviert. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|error_state|**int**|Für zukünftige Verwendung reserviert. Zukünftige Kompatibilität wird nicht sichergestellt.|  
 |start_time|**datetime**|Zeitstempel, an dem der Vorgang begonnen wurde.|  
 |last_modify_time|**datetime**|Zeitstempel, an dem der Datensatz zuletzt für einen länger ausgeführten Vorgang geändert wurde. Im Fall von erfolgreich abgeschlossenen Vorgängen wird in diesem Feld der Zeitstempel angezeigt, an dem der Vorgang abgeschlossen wurde.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese Ansicht ist nur in der **Master** -Datenbank für den Prinzipal Anmelde Namen auf Serverebene verfügbar.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Um diese Ansicht verwenden zu können, müssen Sie mit der **Master** -Datenbank verbunden sein. Verwenden Sie die- `sys.dm_operation_status` Sicht in der **Master** -Datenbank des- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Servers, um den Status der folgenden Vorgänge zu verfolgen, die auf einem ausgeführt werden [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Erstellen einer Datenbank  

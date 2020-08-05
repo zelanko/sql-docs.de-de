@@ -1,6 +1,6 @@
 ---
 title: Wiedergabe für SQL Server Upgrades konfigurieren
-description: Konfigurieren von Distributed Replay für Assistent für Datenbankexperimente
+description: Verwenden Sie Assistent für Datenbankexperimente (DEA), um auf die Distributed Replay Tools zuzugreifen. Verwenden Sie die-Tools, um eine aufgezeichnete Ablauf Verfolgung in einer aktualisierten Testumgebung wiederzugeben.
 ms.custom: seo-lt-2019
 ms.date: 01/24/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2715667fc474335ffec54259ebb821fe2e5904a
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761534"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565518"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Konfigurieren von Distributed Replay für Assistent für Datenbankexperimente
 
@@ -43,8 +43,8 @@ Distributed Replay erfordert, dass Sie gemeinsame Konten zwischen Computern verw
 
 So richten Sie den Controller Dienst ein:
 
-1. Installieren Sie den Distributed Replay Controller, indem Sie den SQL Server Installer verwenden. Wenn Sie den Schritt SQL Server Installer-Assistent übersprungen haben, mit dem der Distributed Replay Controller konfiguriert wird, können Sie den Controller über die Konfigurationsdatei konfigurieren. Bei einer typischen Installation befindet sich die Konfigurationsdatei unter "c:\Programme (x86) \Microsoft SQL Server\<Version\>\tools\dreplaycontroller\dreplaycontroller.config".
-2. Distributed Replay Controller Protokolle befinden sich unter c:\Programme (x86) \Microsoft SQL Server\<Version\>\tools\dreplaycontroller\log.
+1. Installieren Sie den Distributed Replay Controller, indem Sie den SQL Server Installer verwenden. Wenn Sie den Schritt SQL Server Installer-Assistent übersprungen haben, mit dem der Distributed Replay Controller konfiguriert wird, können Sie den Controller über die Konfigurationsdatei konfigurieren. Bei einer typischen Installation befindet sich die Konfigurationsdatei unter "c:\Programme (x86) \Microsoft SQL Server \<version\>\Tools\DReplayController\DReplayController.config.
+2. Distributed Replay Controller Protokolle befinden sich unter c:\Programme (x86) \Microsoft SQL Server \<version\> \tools\dreplaycontroller\log.
 3. Öffnen Sie "Services. msc", und wechseln Sie zum **SQL Server Distributed Replay Controller** -Dienst.
 4. Klicken Sie mit der rechten Maustaste auf den Dienst, und wählen Sie dann **Eigenschaften**aus. Legen Sie das Dienst Konto auf ein Konto fest, das dem Controller und den Client Computern im Netzwerk gemeinsam ist.
 5. Wählen Sie **OK** aus, um das **Eigenschaften** Fenster zu schließen.
@@ -59,10 +59,10 @@ Weitere Konfigurationsoptionen finden Sie unter [Konfigurieren von Distributed R
 
 Diese Konfiguration ist nur auf dem Controller Computer erforderlich.
 
-1. Öffnen Sie DCOMCNFG. exe.
-2. Erweitern Sie **Komponenten Dienste** > **Computer** > **Arbeitsplatz** > **DCOM-Konfiguration**.
+1. Öffnen Sie dcomcnfg.exe.
+2. Erweitern Sie **Komponenten Dienste**  >  **Computer**  >  **Arbeitsplatz**  >  **DCOM-Konfiguration**.
 3. Klicken Sie unter **DCOM-Konfiguration**mit der rechten Maustaste auf **dreplaycontroller**, und wählen Sie dann **Eigenschaften**aus.
-4. Wählen Sie die Registerkarte **Sicherheit** aus.
+4. Wählen Sie die Registerkarte **Sicherheit** .
 5. Wählen Sie unter **Start-und Aktivierungs Berechtigungen**die Option **Anpassen**aus, und klicken Sie dann auf **Bearbeiten**.
 6. Fügen Sie den Benutzer hinzu, der die Wiedergabe startet. Hiermit werden dem Benutzer lokale Start-und lokale Aktivierungs Berechtigungen erteilt. Wenn der Benutzer plant, Remote zu starten oder zu aktivieren, müssen Sie den Benutzern die Berechtigungen Remote Start und Remote Aktivierung erteilt haben.
 7. Wählen Sie **OK** aus, um die Änderungen zu übertragen und zur Registerkarte **Sicherheit** zurückzukehren.
@@ -82,16 +82,16 @@ Verwenden Sie vor dem Einrichten des-Client Dienstanbieter Netzwerk Tools wie Pi
 1. Installieren Sie den Distributed Replay Client, indem Sie den SQL Server Installer verwenden.
 2. Öffnen Sie "Services. msc", und wechseln Sie zum SQL Server Distributed Replay-Client Dienst.
 3. Klicken Sie mit der rechten Maustaste auf den Dienst, und wählen Sie dann **Eigenschaften**aus. Legen Sie das Dienst Konto auf ein Konto fest, das sowohl dem Controller als auch den Client Computern im Netzwerk gemeinsam ist.
-4. Wählen Sie **OK** aus, um das **Eigenschaften** Fenster zu schließen. Wenn Sie den Schritt SQL Server Installer-Assistent übersprungen haben, um den Distributed Replay-Client zu konfigurieren, können Sie ihn über die Konfigurationsdatei konfigurieren. Bei einer typischen Installation befindet sich die Konfigurationsdatei unter "c:\Programme (x86) \Microsoft SQL Server\<Version\>\tools\dreplayclient\dreplayclient.config".
-5. Stellen Sie sicher, dass die Datei dreplayclient. config den Namen des Controller Computers als Controller für die Registrierung enthält.
+4. Wählen Sie **OK** aus, um das **Eigenschaften** Fenster zu schließen. Wenn Sie den Schritt SQL Server Installer-Assistent übersprungen haben, um den Distributed Replay-Client zu konfigurieren, können Sie ihn über die Konfigurationsdatei konfigurieren. Bei einer typischen Installation befindet sich die Konfigurationsdatei unter "c:\Programme (x86) \Microsoft SQL Server \<version\>\Tools\DReplayClient\DReplayClient.config.
+5. Stellen Sie sicher, dass die DReplayClient.config Datei den Namen des Controller Computers als Controller für die Registrierung enthält.
 6. Starten Sie den SQL Server Distributed Replay-Client Dienst über "Services. msc" neu. Sie können auch die folgenden Befehle in der Befehlszeile ausführen, um den Dienst neu zu starten:
 
     `NET STOP "SQL Server Distributed Replay Client"`</br>
     `NET START "SQL Server Distributed Replay Client"`
 
-    Distributed Replay Controller Protokolle befinden sich unter "c:\Programme (x86) \Microsoft SQL Server\<Version\>\tools\dreplayclient\log". Die Protokolle geben an, ob sich der Client selbst beim Controller registrieren kann.
+    Distributed Replay Controller Protokolle befinden sich unter "c:\Programme (x86) \Microsoft SQL Server \<version\> \tools\dreplayclient\log". Die Protokolle geben an, ob sich der Client selbst beim Controller registrieren kann.
 
-    Wenn die Konfiguration erfolgreich ist, wird im Protokoll die **mit Controller <Controller\>Name registrierte**Nachricht angezeigt.
+    Wenn die Konfiguration erfolgreich ist, wird im Protokoll die **mit Controller <Controller \> Name registrierte**Nachricht angezeigt.
 
 Weitere Konfigurationsoptionen finden Sie unter [Konfigurieren von Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
@@ -99,10 +99,10 @@ Weitere Konfigurationsoptionen finden Sie unter [Konfigurieren von Distributed R
 
 Mit Distributed Replay-Verwaltungs Tools können Sie schnell überprüfen, ob Distributed Replay in der Umgebung ordnungsgemäß funktioniert. Das Testen der Konfiguration kann insbesondere in einer Umgebung hilfreich sein, in der mehrere Client Computer bei einem Controller registriert sind. Möglicherweise müssen Sie SQL Server Management Studio (SSMS) installieren, um die Verwaltungs Tools zu erhalten.
 
-1. Wechseln Sie zum Speicherort der SSMS-Installation, und suchen Sie nach dem Distributed Replay Verwaltungs Tool dreplay. exe und seinen abhängigen Komponenten.
-2. Führen `dreplay.exe status -f 1`Sie an einer Eingabeaufforderung aus.
+1. Wechseln Sie zum Speicherort der SSMS-Installation, und suchen Sie nach dem Distributed Replay Verwaltungs Tool dreplay.exe und seinen abhängigen Komponenten.
+2. Führen Sie an einer Eingabeaufforderung aus `dreplay.exe status -f 1` .
 
-Wenn die vorangehenden Schritte erfolgreich ausgeführt wurden, gibt die Konsolenausgabe an, dass der Controller seine Clients `READY` in einem Zustand sehen kann.
+Wenn die vorangehenden Schritte erfolgreich ausgeführt wurden, gibt die Konsolenausgabe an, dass der Controller seine Clients in einem Zustand sehen kann `READY` .
 
 ## <a name="configure-the-firewall-for-remote-distributed-replay-access"></a>Konfigurieren der Firewall für den Remote Distributed Replay Zugriff
 
@@ -110,8 +110,8 @@ Für den Remote Zugriff auf Distributed Replay müssen Ports geöffnet werden, d
 
 1. Öffnen Sie **Windows-Firewall** mit erweiterter **Sicherheit**.
 2. Wechseln Sie zu **Eingehende Regeln**.
-3. Erstellen Sie eine neue eingehende Firewallregel für das Programm c:\Programme (x86)\<\Microsoft SQL Server Version\>\tools\dreplaycontroller\dreplaycontroller.exe.
-4. Hiermit wird der Zugriff auf Domänen Ebene auf alle Ports für dreplaycontroller. exe zugelassen, damit die Kommunikation mit dem Controller Dienst Remote möglich ist.
+3. Erstellen Sie eine neue eingehende Firewallregel für das Programm c:\Programme (x86) \Microsoft SQL Server \<version\>\Tools\DReplayController\DReplayController.exe.
+4. Erlauben Sie den Zugriff auf Domänen Ebene auf alle Ports, damit DReplayController.exe Remote mit dem Controller Dienst kommunizieren kann.
 5. Speichern Sie die Regel.
 
 ## <a name="set-up-target-computers"></a>Einrichten von Ziel Computern
@@ -126,6 +126,6 @@ Die folgenden Schritte müssen für jede Wiedergabe ausgeführt werden:
 2. Erteilen von Berechtigungen für den Benutzer des Client Dienst Kontos für den Zugriff auf die Datenbanken unter der SQL Server Instanz. Berechtigungen sind erforderlich, damit die Abfragen für die SQL Server Instanz ausgeführt werden.
 3. Starten Sie die Wiedergabe.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 - Informationen dazu, wie Sie eine aufgezeichnete Ablauf Verfolgung in einer aktualisierten Testumgebung wiedergeben, finden Sie unter Wiedergeben [einer Ablauf Verfolgung in Assistent für Datenbankexperimente](database-experimentation-assistant-replay-trace.md).

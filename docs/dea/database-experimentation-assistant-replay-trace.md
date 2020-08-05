@@ -1,6 +1,6 @@
 ---
 title: Wiedergeben einer Ablauf Verfolgung für SQL Server Upgrades
-description: Wiedergeben einer Ablauf Verfolgung mit Assistent für Datenbankexperimente für SQL Server Upgrades
+description: Erfahren Sie, wie Sie eine aufgezeichnete Ablauf Verfolgung mit Assistent für Datenbankexperimente für SQL Server Upgrades wiedergeben.
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 50f082edef5d9a6d4e95b7e37ef6d75f22eb6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289148"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565499"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Wiedergeben einer Ablauf Verfolgung in Assistent für Datenbankexperimente
 
@@ -118,7 +118,7 @@ SQL Server ist ein Zustands behaftetes relationales Datenbankverwaltungssystem. 
 
 **F: Wie kann ich die Ablauf Verfolgungs Ereignisse untersuchen, die während der Wiedergabe erfasst wurden?**
 
-Öffnen Sie eine Ziel Ablauf Verfolgungs Datei, und zeigen Sie Sie in SQL Profiler an. Wenn Sie Änderungen an der Wiedergabe Erfassung vornehmen möchten, finden Sie alle SQL Server Skripts\\unter C: Programme (x86)\\Microsoft Corporation\\Assistent für Datenbankexperimente\\Scripts\\startreplaycapture. SQL.
+Öffnen Sie eine Ziel Ablauf Verfolgungs Datei, und zeigen Sie Sie in SQL Profiler an. Wenn Sie Änderungen an der Wiedergabe Erfassung vornehmen möchten, finden Sie alle SQL Server Skripts unter C: \\ Programme (x86) \\ Microsoft Corporation \\ Assistent für Datenbankexperimente \\ Scripts \\ startreplaycapture. SQL.
 
 **F: welche Ablauf Verfolgungs Ereignisse werden von DEA während der Wiedergabe gesammelt?**
 
@@ -133,11 +133,11 @@ Mit der DEA werden Ablauf Verfolgungs Ereignisse erfasst, die leistungsbezogene 
 - Vergewissern Sie sich, dass der Benutzer über die erforderlichen Benutzerrechte verfügt.
 - Vergewissern Sie sich, dass das Dienst Konto des Distributed Replay Clients Zugriff auf den Computer hat, auf dem SQL Server ausgeführt wird.
 
-Weitere Details finden Sie in den Protokollen unter% Temp%\\Dea. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.
+Weitere Details finden Sie in den Protokollen unter% Temp% \\ Dea. Wenn das Problem weiterhin besteht, wenden Sie sich an das Produktteam.
 
 **F: Warum kann ich keine Verbindung mit dem Distributed Replay Controller herstellen?**
 
-- Überprüfen Sie, ob der Distributed Replay Controller-Dienst auf dem Controller Computer ausgeführt wird. Um dies zu überprüfen, verwenden Sie die Distributed Replay Verwaltungs Tools `dreplay.exe status -f 1`(führen Sie den Befehl aus).
+- Überprüfen Sie, ob der Distributed Replay Controller-Dienst auf dem Controller Computer ausgeführt wird. Um dies zu überprüfen, verwenden Sie die Distributed Replay Verwaltungs Tools (führen Sie den Befehl aus `dreplay.exe status -f 1` ).
 - Wenn die Wiedergabe Remote gestartet wird:
   - Vergewissern Sie sich, dass der Computer, auf dem "DEA" ausgeführt wird, ein Ping Vergewissern Sie sich, dass die Firewalleinstellungen Verbindungen gemäß den Anweisungen auf der Seite " **Wiedergabe Umgebung konfigurieren** " zulassen. Weitere Informationen finden Sie im Artikel [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017).
   - Stellen Sie sicher, dass DCOM-Remote Start und Remote Aktivierung für den Benutzer des Distributed Replay Controllers zulässig sind.
@@ -163,6 +163,6 @@ Dieses Problem ist in der RTM-Version von SQL Server 2017 bekannt. Weitere Infor
   
 Das Problem wurde im aktuellen kumulativen Update 1 für SQL Server 2017 behoben. Laden Sie die neueste Version von [kumulativem Update 1 für SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017)herunter.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - Informationen zum Erstellen eines Analyse Berichts, mit dem Sie Einblicke in vorgeschlagene Änderungen erhalten, finden Sie unter [Erstellen von Berichten](database-experimentation-assistant-create-report.md).

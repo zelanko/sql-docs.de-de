@@ -1,6 +1,6 @@
 ---
 title: Übersicht über den Assistent für Datenbankexperimente
-description: Übersicht über den Assistenten für Datenbankexperimente
+description: Erfahren Sie mehr über Assistent für Datenbankexperimente (DEA), z. b. wie Sie eine Zielversion von SQL Server für eine bestimmte Arbeitsauslastung auswerten.
 ms.date: 12/12/2019
 ms.prod: sql
 ms.suite: sql
@@ -11,14 +11,14 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94bfd77da2658a4cb6b0e5e07868605f1c12140c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759156"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565550"
 ---
-# <a name="overview-of-database-experimentation-assistant"></a>Übersicht über den Assistenten für Datenbankexperimente
+# <a name="overview-of-database-experimentation-assistant"></a>Übersicht über Assistent für Datenbankexperimente
 
 Assistent für Datenbankexperimente (DEA) ist eine Experimentier Lösung für SQL Server Upgrades. Mithilfe von DEA können Sie eine Zielversion von SQL Server für eine bestimmte Arbeitsauslastung auswerten. Kunden, die ein Upgrade von früheren Versionen von SQL Server (beginnend mit 2005) auf neuere Versionen von SQL Server durchführen können, können die vom Tool bereitgestellten analysemetriken verwenden.
 
@@ -32,7 +32,7 @@ Vergleichsdaten können zu einem höheren Vertrauen führen und eine erfolgreich
 
 ## <a name="get-dea"></a>Erhalten von DEA
 
-Zum Installieren von DEA [Laden Sie](https://www.microsoft.com/download/details.aspx?id=54090) die neueste Version des Tools herunter. Führen Sie dann die Datei **databaseexperimentationassistant. exe** aus.
+Zum Installieren von DEA [Laden Sie](https://www.microsoft.com/download/details.aspx?id=54090) die neueste Version des Tools herunter. Führen Sie dann die **DatabaseExperimentationAssistant.exe** Datei aus.
 
 ## <a name="solution-architecture-for-comparing-workloads"></a>Lösungsarchitektur zum Vergleichen von Arbeits Auslastungen
 
@@ -105,7 +105,7 @@ Telemetriedaten können für vier Arten von Ereignissen erfasst werden:
 Das erfassen und Senden von Telemetriedaten ist optional. Führen Sie die folgenden Schritte aus, um anzugeben, welche Ereignisse gesammelt werden und ob gesammelte Ereignisse an Microsoft gesendet werden:
 
 1. Wechseln Sie zu dem Speicherort, an dem die DEA installiert ist (z. b. C: \\ Program Files (x86) \\ Microsoft Corporation \\ Assistent für Datenbankexperimente).
-2. Öffnen und ändern Sie die config-Dateien " **Dea. exe. config** " (für die Anwendung) und " **deacmd. exe. config** " (für die CLI), um Ihr Szenario entsprechend zu beheben:
+2. Öffnen und ändern Sie die. config-Dateien **DEA.exe.config** (für die Anwendung) und **DEACmd.exe.config** (für die CLI), um Ihr Szenario entsprechend zu beheben:
     - Legen Sie den Wert des *Ereignisses* (z. b. **TraceEvent**) auf **false**fest, um die Erfassung eines Ereignis Typs zu verhindern. Legen Sie den Wert auf " **true**" fest, um die erneute Erfassung des Ereignisses zu beginnen.
     - Legen Sie den Wert von **traceloggerfähig** auf **false**fest, um das Speichern von lokalen Kopien von Ereignissen zu verhindern. Legen Sie den Wert auf **true**fest, damit die lokalen Kopien erneut gespeichert werden.
     - Um das Senden von Ereignissen an Microsoft zu verhindern, legen Sie den Wert von **appinsightloggeraktiviauf** **false**fest. Legen Sie den Wert auf " **true**" fest, um erneut Ereignisse an Microsoft zu senden.
