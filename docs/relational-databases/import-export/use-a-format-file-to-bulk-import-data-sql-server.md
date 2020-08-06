@@ -15,23 +15,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 61a611bfde0e9d3a96f6ca3ef4c037e8cf4829b8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83a024997910e16b67e66244edcd9cc34c6751a7
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003137"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442529"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Massenimport von Daten mithilfe einer Formatdatei (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 In diesem Thema wird die Verwendung einer Formatdatei bei Massenimportvorgängen beschrieben.  Eine Formatdatei ordnet die Felder der Datendatei den Spalten einer Tabelle zu.  Weitere Informationen finden Sie unter [Erstellen einer Formatdatei (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) .
-
-|Outline|
-|---|
-|[Vorbereitungen](#begin)<br />[Beispieltestbedingungen](#etc)<br />&emsp;&#9679;&emsp;[Beispieltabelle](#sample_table)<br />&emsp;&#9679;&emsp;[Beispieldatendatei](#sample_data_file)<br />[Erstellen der Formatdateien](#create_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer Nicht-XML-Formatdatei](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[Erstellen einer XML-Formatdatei](#xml_format_file)<br />[Verwenden einer Formatdatei für einen Massenimport von Daten](#import_data)<br />&emsp;&#9679;&emsp;[Verwenden von BCP- und der Nicht-XML-Formatdatei](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BCP und der XML-Formatdatei](#bcp_xml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der Nicht-XML-Formatdatei](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von BULK INSERT und der XML-Formatdatei](#bulk_xml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der Nicht-XML-Formatdatei](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[Verwenden von OPENROWSET(BULK...) und der XML-Formatdatei](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
   
-## <a name="before-you-begin"></a>Vorbereitungen<a name="begin"></a>
+## <a name="before-you-begin"></a>Voraussetzungen
 * Damit eine Formatdatei mit einer Datendatei mit Unicode-Zeichen verwendet werden kann, müssen alle Eingabefelder Unicode-Textzeichenfolgen enthalten (d.h., entweder Unicode-Zeichenfolgen einer festen Länge oder Unicode-Zeichenfolgen mit Abschlusszeichen).
 * Verwenden Sie in der Formatdatei einen der folgenden Datentypen für den Massenexport oder -import von [SQLXML](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md) -Daten:
   * SQLCHAR or SQLVARYCHAR (die Daten werden in der Clientcodepage gesendet bzw. in der durch die Sortierung implizierten Codeseite)
@@ -42,10 +38,10 @@ In diesem Thema wird die Verwendung einer Formatdatei bei Massenimportvorgängen
   * [Laden von Daten aus SQL Server in Azure SQL Data Warehouse (Flatfiles)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
   * [Migrieren von Daten](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
 
-## <a name="example-test-conditions"></a>Beispieltestbedingungen<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Beispieltestbedingungen
 Die in diesem Thema enthaltenen Beispiele für Formatdateien basieren auf der Tabelle und der Datendatei, die nachstehend definiert sind.
 
-### <a name="sample-table"></a>**Beispieltabelle**<a name="sample_table"></a>
+### <a name="sample-table"></a>Beispieltabelle
 Das folgende Skript erstellt eine Testdatenbank und eine Tabelle namens `myFirstImport`.  Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```sql
 CREATE DATABASE TestDatabase;
@@ -60,7 +56,7 @@ CREATE TABLE dbo.MyFirstImport (
    );
 ```
 
-### <a name="sample-data-file"></a>**Beispieldatendatei**<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>Beispieldatendatei
 Erstellen Sie mit Editor die leere Datei `D:\BCP\myFirstImport.bcp` , und fügen Sie die folgenden Daten ein:
 ```
 1,Anthony,Grosse,1980-02-23
@@ -96,10 +92,10 @@ Get-Content -Path $bcpFile;
 Notepad.exe $bcpfile;
 ```
 
-## <a name="creating-the-format-files"></a>Erstellen der Formatdateien<a name="create_format_file"></a>
+## <a name="creating-the-format-files"></a>Erstellen der Formatdateien
 SQL Server unterstützt zwei Typen von Formatdateien: Nicht-XML- und XML-Format.  Nicht-XML ist das ursprüngliche Format, das von früheren Versionen von SQL Server unterstützt wird.
 
-### <a name="creating-a-non-xml-format-file"></a>**Erstellen einer Nicht-XML-Formatdatei**<a name="nonxml_format_file"></a>
+### <a name="creating-a-non-xml-format-file"></a>Erstellen einer Nicht-XML-Formatdatei
 Ausführliche Informationen finden Sie unter [Nicht-XML-Formatdateien (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) .  Im folgenden Befehl wird das [bcp-Hilfsprogramm](../../tools/bcp-utility.md) verwendet, um die Nicht-XML-Formatdatei `myFirstImport.fmt`zu erstellen, die auf dem Schema von `myFirstImport`basiert.  Geben Sie das **format** -Argument an, um einen bcp-Befehl zum Erstellen einer Formatdatei zu verwenden, und verwenden Sie **nul** anstatt eines Datendateipfads.  Die Option „format“ erfordert außerdem die Option **-f** .  Zusätzlich werden folgende Qualifizierer verwendet: **c** , um Zeichendaten anzugeben, **t** , um ein Komma als [Feldabschlusszeichen](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)anzugeben, und **T** , um eine vertrauenswürdige Verbindung anzugeben, für die integrierte Sicherheit verwendet wird.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 
 ```cmd
@@ -125,7 +121,7 @@ Ihre Nicht-XML-Formatdatei `D:\BCP\myFirstImport.fmt` sollte wie folgt aussehen:
 > `SQLState = S1000, NativeError = 0`  
 > `Error = [Microsoft][ODBC Driver 13 for SQL Server]I/O error while reading BCP format file`
 
-### <a name="creating-an-xml-format-file"></a>**Erstellen einer XML-Formatdatei**<a name="xml_format_file"></a>  
+### <a name="creating-an-xml-format-file"></a>Erstellen einer XML-Formatdatei
 Ausführliche Informationen finden Sie unter [XML-Formatdateien (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) .  Im folgenden Befehl wird das [bcp-Hilfsprogramm](../../tools/bcp-utility.md) verwendet, um die XML-Formatdatei `myFirstImport.xml`zu erstellen, die auf dem Schema von `myFirstImport`basiert. Geben Sie das **format** -Argument an, um einen bcp-Befehl zum Erstellen einer Formatdatei zu verwenden, und verwenden Sie **nul** anstatt eines Datendateipfads.  Für die Formatoption ist immer auch die Option **-f** erforderlich. Zum Erstellen einer XML-Formatdatei muss zudem die Option **-x** angegeben werden.  Zusätzlich werden folgende Qualifizierer verwendet: **c** , um Zeichendaten anzugeben, **t** , um ein Komma als [Feldabschlusszeichen](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)anzugeben, und **T** , um eine vertrauenswürdige Verbindung anzugeben, für die integrierte Sicherheit verwendet wird.  Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 ```cmd
 bcp TestDatabase.dbo.myFirstImport format nul -c -x -f D:\BCP\myFirstImport.xml -t, -T
@@ -137,7 +133,7 @@ Notepad D:\BCP\myFirstImport.xml
 Ihre XML-Formatdatei `D:\BCP\myFirstImport.xml` sollte wie folgt aussehen:
 ```xml
 <?xml version="1.0"?>
-<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
@@ -153,10 +149,10 @@ Ihre XML-Formatdatei `D:\BCP\myFirstImport.xml` sollte wie folgt aussehen:
 </BCPFORMAT>
 ```
 
-## <a name="using-a-format-file-to-bulk-import-data"></a>Verwenden einer Formatdatei für einen Massenimport von Daten<a name="import_data"></a>
+## <a name="using-a-format-file-to-bulk-import-data"></a>Verwenden einer Formatdatei für einen Massenimport von Daten
 Die nachstehenden Beispiele verwenden die oben erstellte Datenbank, Datendatei und Formatdatei.
 
-### <a name="using-bcp-and-non-xml-format-file"></a>**Verwenden von [bcp](../../tools/bcp-utility.md) und der [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_nonxml"></a>
+### <a name="using-bcp-and-non-xml-format-file"></a>Verwenden von [bcp](../../tools/bcp-utility.md) und der [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 ```cmd
 REM Truncate table (for testing)
@@ -170,7 +166,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport"
 ```
 
 
-### <a name="using-bcp-and-xml-format-file"></a>**Verwenden von [bcp](../../tools/bcp-utility.md) und der [XML-Formatdatei](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bcp_xml"></a>
+### <a name="using-bcp-and-xml-format-file"></a>Verwenden von [bcp](../../tools/bcp-utility.md) und der [XML-Formatdatei](../../relational-databases/import-export/xml-format-files-sql-server.md)
 Geben Sie folgenden Befehl an der Eingabeaufforderung ein:
 ```cmd
 REM Truncate table (for testing)
@@ -184,7 +180,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport;"
 ```
 
 
-### <a name="using-bulk-insert-and-non-xml-format-file"></a>**Verwenden von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und der [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_nonxml"></a>
+### <a name="using-bulk-insert-and-non-xml-format-file"></a>Verwenden von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und der [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)
 Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```sql
 USE TestDatabase;  
@@ -200,7 +196,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### <a name="using-bulk-insert-and-xml-format-file"></a>**Verwenden von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und der [XML-Formatdatei](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bulk_xml"></a>
+### <a name="using-bulk-insert-and-xml-format-file"></a>Verwenden von [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) und der [XML-Formatdatei](../../relational-databases/import-export/xml-format-files-sql-server.md)
 Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```sql
 USE TestDatabase;  
@@ -216,7 +212,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### <a name="using-openrowsetbulk-and-non-xml-format-file"></a>**Verwenden von [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) und der [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_nonxml"></a>    
+### <a name="using-openrowsetbulk-and-non-xml-format-file"></a>Verwenden von [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) und der [Nicht-XML-Formatdatei](../../relational-databases/import-export/non-xml-format-files-sql-server.md)    
 Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```sql
 USE TestDatabase;
@@ -235,7 +231,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### <a name="using-openrowsetbulk-and-xml-format-file"></a>**Verwenden von [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) und der [XML-Formatdatei](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="openrowset_xml"></a>
+### <a name="using-openrowsetbulk-and-xml-format-file"></a>Verwenden von [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) und der [XML-Formatdatei](../../relational-databases/import-export/xml-format-files-sql-server.md)
 Führen Sie den folgenden Transact-SQL-Befehl in Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) aus:
 ```sql
 USE TestDatabase;  
@@ -254,7 +250,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
   
-## <a name="more-examples"></a>Weitere Beispiele.  
+## <a name="more-examples"></a>Weitere Beispiele
  [Erstellen einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
  [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
  [Auslassen eines Datenfelds mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  

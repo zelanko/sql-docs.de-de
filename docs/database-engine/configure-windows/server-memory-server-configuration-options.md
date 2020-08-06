@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 27e39532a3b6198fd6d54c7b58407e76c487325a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620da6349efe012e9e0d75d6ddf5efada437832
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751902"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442810"
 ---
 # <a name="server-memory-configuration-options"></a>Konfigurationsoptionen für den Serverarbeitsspeicher
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,9 +77,14 @@ So legen Sie eine feste Arbeitsspeichergröße fest:
   
 2.  Klicken Sie auf den **Speicher** -Knoten.  
   
-3.  Geben Sie unter **Arbeitsspeicheroptionen für den Server**den gewünschten Wert für **Minimaler Serverarbeitsspeicher** und **Maximaler Serverarbeitsspeicher** ein.  
+3.  Geben Sie unter **Arbeitsspeicheroptionen für den Server**den gewünschten Wert für **Minimaler Serverarbeitsspeicher** und **Maximaler Serverarbeitsspeicher**ein.  
   
      Verwenden Sie die Standardeinstellungen, damit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Arbeitsspeicheranforderungen auf der Grundlage der verfügbaren Systemressourcen dynamisch ändert. Es wird empfohlen, einen Wert für **Max. Serverarbeitsspeicher** festzulegen, wie [oben ausführlich beschrieben](#max_server_memory). 
+
+Der folgende Screenshot zeigt alle drei Schritte: 
+
+:::image type="content" source="media/server-memory-server-configuration-options/configure-memory-in-ssms.png" alt-text="Konfigurieren des Arbeitsspeichers in SSMS":::
+
   
 ## <a name="lock-pages-in-memory-lpim"></a>Sperren von Seiten im Speicher (LPIM) 
 Mit dieser Windows-Richtlinie werden die Konten bestimmt, die einen Prozess zum Speichern von Daten im physischen Speicher verwenden können, um das systemgesteuerte Auslagern der Daten in den virtuellen Arbeitsspeicher zu vermeiden. Durch Sperren von Seiten im Arbeitsspeicher können Sie die Reaktionsfähigkeit des Servers möglicherweise auch nach Auslagerung von Arbeitsspeicherdaten auf die Festplatte aufrechterhalten. Die Option **Sperren von Seiten im Speicher** wird für Instanzen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition und höher auf ON gesetzt, wenn dem Konto mit den Privilegien zum Ausführen von "sqlserver.exe" das Windows-Benutzerrecht *Sperren von Seiten im Speicher* (Lock Pages in Memory, LPIM) erteilt wurde.  

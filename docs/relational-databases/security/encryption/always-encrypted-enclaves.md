@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ad3743b35570ddb0f4644b909ca06339444143e
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 27ccecb8293adff8fe5f2aaa3062a871d745c587
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410936"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435444"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -27,7 +27,7 @@ Always Encrypted wurde in SQL Server 2016 eingeführt und schützt vertrauliche 
 
 Ohne die in diesem Artikel erläuterten Erweiterungen schützt Always Encrypted die Daten, indem das Feature die Daten auf Clientseite verschlüsselt und niemals zulässt, dass die Daten oder die zugehörigen kryptografischen Schlüssel als Klartext in der SQL Server-Engine angezeigt werden. Daher ist die Funktionalität von verschlüsselten Spalten innerhalb der Daten stark eingeschränkt. Die einzigen Vorgänge, die SQL Server für verschlüsselte Daten ausführen kann, sind Gleichheitsvergleiche (und diese waren nur bei deterministischer Verschlüsselung verfügbar). Alle anderen Vorgänge, beispielweise kryptografische Vorgänge (anfängliche Datenverschlüsselung oder Schlüsselrotation), sowie umfangreiche Berechnungen (z. B. Musterabgleich) werden innerhalb der Datenbank nicht unterstützt. Benutzer müssen ihre Daten aus der Datenbank verschieben, um diese Vorgänge auf Clientseite auszuführen.
 
-Always Encrypted *mit Secure Enclaves* beseitigt diese Einschränkungen, indem Berechnungen für Klartextdaten innerhalb einer Secure Enclave auf Serverseite zugelassen werden. Eine Secure Enclave ist eine geschützte Arbeitsspeicherregion im SQL Server-Prozess und fungiert als vertrauenswürdige Ausführungsumgebung für die Verarbeitung vertraulicher Daten in der SQL Server-Engine. Eine Secure Enclave wird dem Rest von SQL Server und anderen Prozessen auf dem Hostcomputer als Blackbox angezeigt. Es gibt keine Möglichkeit, Daten oder Code innerhalb der Enclave von außen anzuzeigen, auch nicht mit einem Debugger.  
+Always Encrypted *mit Secure Enclaves* beseitigt diese Einschränkungen, indem Berechnungen für Klartextdaten innerhalb einer Secure Enclave auf Serverseite zugelassen werden. Eine Secure Enclave ist eine geschützte Arbeitsspeicherregion im SQL Server-Prozess und fungiert als vertrauenswürdige Ausführungsumgebung für die Verarbeitung vertraulicher Daten in der SQL Server-Engine. Eine Secure Enclave wird dem Rest von SQL Server und anderen Prozessen auf dem Hostcomputer als undurchsichtiger Behälter angezeigt. Es gibt keine Möglichkeit, Daten oder Code innerhalb der Enclave von außen anzuzeigen, auch nicht mit einem Debugger.  
 
 
 Always Encrypted verwendet Secure Enclaves wie im folgenden Diagramm veranschaulicht:

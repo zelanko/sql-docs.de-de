@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a275dbc088774355c3546b7234174e5b7b585e43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 929e6730ade53eeff07552652ff2905665fc4a49
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922526"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472552"
 ---
 # <a name="manage-a-cdc-instance"></a>Verwalten einer CDC-Instanz
 
@@ -71,7 +71,7 @@ ms.locfileid: "86922526"
   
 -   **Status**: Ein Symbol, das den aktuellen Status für die CDC-Instanz angibt. Die Status sind unten beschrieben.  
   
-    |||  
+    |Symbol|Status und Beschreibungen|  
     |-|-|  
     |![Fehler](../../integration-services/change-data-capture/media/error.gif "Fehler")|**Error**. Die Oracle CDC-Instanz wird nicht ausgeführt, da ein nicht wiederholbarer Fehler aufgetreten ist. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Misconfigured**: Es ist ein Konfigurationsfehler aufgetreten, der einen manuellen Eingriff erfordert.<br /><br /> **Kennwort erforderlich**: Für die Oracle CDC-Instanz wurde kein Kennwort festgelegt, oder das Kennwort ist nicht gültig.<br /><br /> **Unerwartet**: Alle anderen nicht behebbaren Fehler.|  
     |![Okay](../../integration-services/change-data-capture/media/okay.gif "Okay")|**Wird ausgeführt:** Die CDC-Instanz wird ausgeführt und verarbeitet Änderungsdatensätze. Die folgenden Unterstatus sind verfügbar:<br /><br /> **Im Leerlauf**: Alle Änderungsdatensätze wurden verarbeitet und in den Zieländerungstabellen gespeichert. Es sind keine aktiven Transaktionen mehr vorhanden.<br /><br /> **Processing**: Es werden Änderungsdatensätze verarbeitet, die noch nicht in die Änderungstabellen geschrieben wurden.|  

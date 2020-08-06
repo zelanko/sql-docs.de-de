@@ -1,6 +1,6 @@
 ---
 title: Sichern und Wiederherstellen einer Datenbank
-description: Erfahren Sie, wie Sie eine Datenbank mit Azure Data Studio sichern und wiederherstellen.
+description: In diesem Tutorial erfahren Sie, wie Sie Datenbanken mithilfe von Azure Data Studio sichern und wiederherstellen.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: tutorial
@@ -9,18 +9,18 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 7ddb8cf9f3c0f73fde9f2fbbc30a7c6f6464d6cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e276a830f5fa6abc9b1fcf70c540d4cb955d5af
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758295"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522424"
 ---
 # <a name="backup-and-restore-databases-using-azure-data-studio"></a>Sichern und Wiederherstellen von Datenbanken mithilfe von Azure Data Studio
 
 In diesem Tutorial lernen Sie, wie Sie Azure Data Studio für folgende Zwecke verwenden:
 > [!div class="checklist"]
-> * Sichern einer Datenbank 
+> * So sichern Sie eine Datenbank 
 > * Anzeigen des Sicherungsstatus
 > * Generieren des Skripts, mit dem die Sicherung ausgeführt wird
 > * Wiederherstellen einer Datenbank

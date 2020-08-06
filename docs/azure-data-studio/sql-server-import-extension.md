@@ -1,6 +1,6 @@
 ---
 title: Erweiterung „SQL Server Import“
-description: Installieren und Verwenden der Erweiterung „SQL Server Import“ (Vorschau) für Azure Data Studio
+description: Erfahren Sie, wie Sie die SQL Server Import-Erweiterung (Vorschau) für Azure Data Studio installieren und verwenden, einen Assistenten, der TXT-und CSV-Dateien in eine SQL-Tabelle konvertiert.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a2795282c7a43c5ae582a059ae8b56d1f592e6e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cac73bebca185f40deb1b1bac4a77c6ceb20264e
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758346"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522454"
 ---
 # <a name="sql-server-import-extension-preview"></a>Erweiterung „SQL Server Import“ (Vorschau)
 

@@ -2,7 +2,7 @@
 title: Spalten ohne Namen | Microsoft-Dokumentation
 description: Erfahren Sie, wie SQL Server beim Generieren von XML Spalten ohne Name behandelt.
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 08/01/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,38 +11,39 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns without
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 42c900b7039d058243256296fafb6d56106fd91d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 878f1a89240f8df02eaafb34cef09540b884b614
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752579"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523442"
 ---
 # <a name="columns-without-a-name"></a>Spalten ohne Namen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Spalten ohne Namen werden als Inlinespalten betrachtet. Beispielsweise werden namenlose Spalten für berechnete Spalten oder geschachtelte skalare Abfragen, die keinen Spaltenalias angeben, generiert. Wenn die Spalte vom Typ **xml** ist, wird der Inhalt dieser Datentypinstanz eingefügt. Anderenfalls wird der Inhalt der Spalte als Textknoten eingefügt.  
   
-```  
+```sql
 SELECT 2+2  
 FOR XML PATH  
 ```  
   
- Erstellen Sie diesen XML-Code. Standardmäßig wird im XML-Ergebnis für jede Zeile des Rowsets ein <`row`>-Element generiert. Dies entspricht dem RAW-Modus.  
+ Erstellen Sie diesen XML-Code. Standardmäßig wird im XML-Ergebnis für jede Zeile des Rowsets ein `<row>`-Element generiert. Dies entspricht dem RAW-Modus.  
   
  `<row>4</row>`  
   
  Die folgende Abfrage gibt ein Rowset mit drei Spalten zurück. Die dritte, namenlose Spalte enthält XML-Daten. Der PATH-Modus fügt eine Instanz des XML-Typs ein.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
-                /MI:root/MI:Location   
-              ')   
+       Instructions.query(
+           'declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+            /MI:root/MI:Location   
+           ')   
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
 FOR XML PATH ;  

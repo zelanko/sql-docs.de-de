@@ -14,23 +14,23 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 881385dbd03af3a2425a4b853ce4b194d474bb4d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 04bdf5678284b07ecf74799e4e6caaf55af1086b
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196891"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522952"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Konfigurieren der Replikation mit Always On-Verfügbarkeitsgruppen
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   Die Konfiguration der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation und von Always On-Verfügbarkeitsgruppen umfasst sieben Schritte. Jeder dieser Schritte wird in den folgenden Abschnitten detailliert beschrieben.  
   
 ##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1. Konfigurieren der Datenbankveröffentlichungen und Abonnements  
  **Konfigurieren des Verteilers**  
   
- Die Verteilungsdatenbank kann nicht in eine Verfügbarkeitsgruppe mit SQL Server 2012 und SQL Server 2014 eingefügt werden. Das Einfügen der Verteilungsdatenbank in eine Verfügbarkeitsgruppe wird erst ab SQL 2016 unterstützt. Weitere Informationen finden Sie unter [Konfigurieren einer Verteilungsdatenbank in einer Verfügbarkeitsgruppe](../../../relational-databases/replication/configure-distribution-availability-group.md).
+ Die Verteilungsdatenbank kann nicht in eine Verfügbarkeitsgruppe mit SQL Server 2012 und SQL Server 2014 eingefügt werden. Die Platzierung der Verteilungsdatenbank in einer Verfügbarkeitsgruppe wird mit SQL 2016 und höher unterstützt, mit Ausnahme von Verteilungsdatenbanken, die in Mergetopologien, bidirektionalen Topologien oder Peer-zu-Peer-Replikationstopologien verwendet werden. Weitere Informationen finden Sie unter [Konfigurieren einer Verteilungsdatenbank in einer Verfügbarkeitsgruppe](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
 1.  Konfigurieren Sie Verteilung beim Verteiler. Wenn gespeicherte Prozeduren zur Konfiguration verwendet werden, führen Sie **sp_adddistributor**aus. Verwenden Sie den *\@password* -Parameter, um das Kennwort zu identifizieren, das verwendet wird, wenn ein Remoteverleger eine Verbindung mit dem Verteiler herstellt. Das Kennwort wird auch bei jedem Remoteverleger benötigt, wenn der Remoteverteiler eingerichtet wird.  
   

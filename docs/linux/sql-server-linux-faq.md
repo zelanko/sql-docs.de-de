@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: bd1c4ad80abb5e6df26ea09fc19e83b457fee87c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a41223036980a77a45094f2a64c22b898902548c
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895343"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477352"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Häufig gestellte Fragen zu SQL Server für Linux
 
@@ -163,5 +163,9 @@ In den folgenden Abschnitten werden häufig gestellte Fragen zu SQL Server für 
 1. **Kann ich den Besitz der SQL Server-Dateien und -Verzeichnisse des installierten mssql-Kontos und der -Gruppe ändern?**
 
    Das Ändern des Besitzes des SQL Server-Verzeichnisses und der -Dateien der Standardinstallation wird nicht unterstützt. Das mssql-Konto und die -Gruppe werden spezifisch für SQL Server verwendet und verfügen über keinen interaktiven Anmeldezugriff.
-
+   
+ 1. **Werden symbolische Links für Daten- und Protokollverzeichnisse von SQL Server unterstützt?** 
+    
+    Nein, symbolische Links für Daten- und Protokollverzeichnisse von SQL Server werden nicht unterstützt. Informationen zum Ändern der Daten- und Protokollverzeichnisse finden Sie unter [Ändern des Standardspeicherorts für das Verzeichnis der Datenbank- oder Protokolldateien](sql-server-linux-configure-mssql-conf.md#datadir).
+    
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

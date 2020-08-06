@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: d32a8c6a2096cab67917db7a464b70eaf16ff6f5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484421"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435586"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
@@ -131,7 +131,7 @@ Wie zuvor erwähnt enthält der Abfrageplan keinen UDF-Operator mehr. Seine Ausw
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat außerdem die implizite `GROUP BY O_CUSTKEY on ORDERS`-Anweisung abgeleitet und „IndexSpool + StreamAggregate“ verwendet, um diese zu implementieren.
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet nun einen Parallelismus für alle Operatoren.
 
-Je nach Komplexität der Logik in der benutzerdefinierten Funktion kann der resultierende Abfrageplan größer und komplexer werden. Wie Sie sehen können, handelt es sich bei den Vorgängen innerhalb der benutzerdefinierten Funktion nicht mehr um eine Blackbox. Deshalb kann der Abfrageoptimierer diese Vorgänge optimieren und deren Kosten berücksichtigen. Da die benutzerdefinierte Funktion sich nicht mehr im Plan befindet, wird der iterative Aufruf derselben durch einen Plan ersetzt, der den Aufwand, der durch Funktionsaufrufe entsteht, vollständig vermeidet.
+Je nach Komplexität der Logik in der benutzerdefinierten Funktion kann der resultierende Abfrageplan größer und komplexer werden. Wie Sie sehen können, handelt es sich bei den Vorgängen in der benutzerdefinierten Funktion nicht mehr um einen undurchsichtigen Behälter. Deshalb kann der Abfrageoptimierer diese Vorgänge optimieren und deren Kosten berücksichtigen. Da die benutzerdefinierte Funktion sich nicht mehr im Plan befindet, wird der iterative Aufruf derselben durch einen Plan ersetzt, der den Aufwand, der durch Funktionsaufrufe entsteht, vollständig vermeidet.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Anforderungen für inlinefähige benutzerdefinierte Skalarfunktionen
 <a name="requirements"></a> Für eine benutzerdefinierte T-SQL-Skalarfunktion kann ein Inlining durchgeführt werden, wenn alle der folgenden Bedingungen erfüllt sind:
