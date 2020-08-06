@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196072"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472476"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>DevOps-Tools für SQL Server Integration Services (SSIS)
 
@@ -117,7 +117,7 @@ Authentifizierungstyp für den Zugriff auf den angegebenen Zielserver. Diese Eig
 
 Ob der jeweilige Authentifizierungstyp wirklich unterstützt wird, hängt jedoch vom Typ des Zielservers und des Agents ab. Die folgende Tabelle enthält eine detaillierte Unterstützungsmatrix:
 
-| |Von Microsoft gehosteter Agent|Selbstgehosteter Agent|
+|Typ des Zielservers|Von Microsoft gehosteter Agent|Selbstgehosteter Agent|
 |---------|---------|---------|
 |Lokale SQL Server-Instanz oder virtueller Computer |–|Windows-Authentifizierung|
 |Azure SQL|SQL Server-Authentifizierung <br> Active Directory-Kennwortauthentifizierung|SQL Server-Authentifizierung <br> Active Directory-Kennwortauthentifizierung <br> Integrierte Active Directory-Authentifizierung|
@@ -197,7 +197,7 @@ Der Authentifizierungstyp für den Zugriff auf den angegebenen Zielserver. In de
 
 Ob der jeweilige Authentifizierungstyp wirklich unterstützt wird, hängt jedoch vom Typ des Zielservers und des Agents ab. Die folgende Tabelle enthält eine detaillierte Unterstützungsmatrix:
 
-| |Von Microsoft gehosteter Agent|Selbstgehosteter Agent|
+|Typ des Zielservers|Von Microsoft gehosteter Agent|Selbstgehosteter Agent|
 |---------|---------|---------|
 |Lokale SQL Server-Instanz oder virtueller Computer |–|Windows-Authentifizierung|
 |Azure SQL|SQL Server-Authentifizierung <br> Active Directory-Kennwortauthentifizierung|SQL Server-Authentifizierung <br> Active Directory-Kennwortauthentifizierung <br> Integrierte Active Directory-Authentifizierung|
@@ -288,13 +288,13 @@ Das Schema einer JSON-Konfiguration hat drei Ebenen:
 
 ##### <a name="catalog-attributes"></a>Katalogattribute
 
-|Eigenschaft  |BESCHREIBUNG  |Notizen  |
+|Eigenschaft  |Beschreibung  |Notizen  |
 |---------|---------|---------|
 |Ordner  |Ein Array von Ordnerobjekten. Jedes Objekt enthält Konfigurationsinformationen für einen Katalogordner.|Weitere Informationen zum Schema von Ordnerobjekten finden Sie unter *Ordnerattribute*.|
 
 ##### <a name="folder-attributes"></a>Ordnerattribute
 
-|Eigenschaft  |BESCHREIBUNG  |Notizen  |
+|Eigenschaft  |Beschreibung  |Hinweise  |
 |---------|---------|---------|
 |name  |Der Name des Katalogordners.|Sofern der Ordner noch nicht vorhanden ist, wird er erstellt.|
 |description|Eine Beschreibung des Katalogordners.|Der Wert *NULL* wird übersprungen.|
@@ -303,7 +303,7 @@ Das Schema einer JSON-Konfiguration hat drei Ebenen:
 
 ##### <a name="project-attributes"></a>Projektattribute
 
-|Eigenschaft  |BESCHREIBUNG  |Notizen  |
+|Eigenschaft  |Beschreibung  |Hinweise  |
 |---------|---------|---------|
 |name|Der Name des Projekts. |Das Projektobjekt wird übersprungen, wenn das Projekt nicht im übergeordneten Ordner vorhanden ist.|
 |parameters|Ein Array von Parameterobjekten. Jedes Objekt enthält Konfigurationsinformationen für einen Parameter.|Weitere Informationen zum Schema von Parameterobjekten finden Sie unter *Parameterattribute*.|
@@ -311,7 +311,7 @@ Das Schema einer JSON-Konfiguration hat drei Ebenen:
 
 ##### <a name="parameter-attributes"></a>Parameterattribute
 
-|Eigenschaft  |BESCHREIBUNG  |Notizen  |
+|Eigenschaft  |Beschreibung  |Hinweise  |
 |---------|---------|---------|
 |name|Der Name des Parameters.|<li>Der Parameter kann ein Projektparameter oder ein Paketparameter sein. <li>Wenn er nicht vorhanden ist, wird der Parameter übersprungen. <li>Wenn es sich bei dem Parameter um eine Eigenschaft des Verbindungs-Managers handelt, muss der Name das Format **CM.\<Connection Manager Name>.\<Property Name>** aufweisen. |
 |Container|Der Container des Parameters.|<li>Wenn der Parameter ein Projektparameter ist, muss *container* dem Projektnamen entsprechen. <li>Wenn es sich um einen Paketparameter handelt, muss *container* dem Namen des Pakets mit der Erweiterung **.dtsx** entsprechen.|
@@ -320,14 +320,14 @@ Das Schema einer JSON-Konfiguration hat drei Ebenen:
 
 ##### <a name="reference-attributes"></a>Verweisattribute
 
-|Eigenschaft  |BESCHREIBUNG  |Notizen  |
+|Eigenschaft  |Beschreibung  |Notizen  |
 |---------|---------|---------|
 |environmentFolder|Der Ordnername der Umgebung.|Sofern der Ordner noch nicht vorhanden ist, wird er erstellt. <br> Der Wert kann „ . “ entsprechen. Dies steht für den übergeordneten Ordner des Projekts, der auf die Umgebung verweist.|
 |environmentName|Der Name der Umgebung, auf die verwiesen wird.|Sofern sie noch nicht vorhanden ist, wird die Umgebung erstellt.|
 
 ##### <a name="environment-attributes"></a>Umgebungsattribute
 
-|Eigenschaft  |BESCHREIBUNG  |Notizen  |
+|Eigenschaft  |Beschreibung  |Hinweise  |
 |---------|---------|---------|
 |name|Der Name der Umgebung.|Sofern sie noch nicht vorhanden ist, wird die Umgebung erstellt.|
 |description|Die Beschreibung der Umgebung.|Der Wert *NULL* wird übersprungen.|
@@ -335,7 +335,7 @@ Das Schema einer JSON-Konfiguration hat drei Ebenen:
 
 ##### <a name="variable-attributes"></a>Variablenattribute
 
-|Eigenschaft  |BESCHREIBUNG  |Notizen  |
+|Eigenschaft  |Beschreibung  |Hinweise  |
 |---------|---------|---------|
 |name|Der Name der Umgebungsvariablen.|Sofern sie noch nicht vorhanden ist, wird die Umgebungsvariable erstellt.|
 |type|Der Datentyp der Umgebungsvariablen.|Gültige Typen sind: <br> *boolean* <br> *Byte* <br> *datetime* <br> Decimal <br> *double* <br> *int16* <br> *int32* <br> *int64* <br> *sbyte* <br> *single* <br> *string* <br> *uint32* <br> *uint64*|

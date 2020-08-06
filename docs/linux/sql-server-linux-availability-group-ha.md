@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 28a9541c1369202b8bd322cc23201e8d531f913e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a7a6ce8832db85d54ad9513d8258af2863dab2e5
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892252"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472413"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Hochverfügbarkeit und Schutz von Daten für Verfügbarkeitsgruppenkonfigurationen
 
@@ -59,7 +59,7 @@ Diese Konfiguration umfasst drei synchrone Replikate. Die Hochverfügbarkeit und
 
 Eine Verfügbarkeitsgruppe mit drei synchronen Replikaten ermöglicht die Leseskalierung, Hochverfügbarkeit und den Schutz von Daten. In der folgenden Tabelle wird das Verfügbarkeitsverhalten beschrieben. 
 
-| |Leseskalierung|Hochverfügbarkeit und </br> Datenschutz | Schutz von Daten|
+|Verfügbarkeitsverhalten |Leseskalierung|Hochverfügbarkeit und </br> Datenschutz | Schutz von Daten|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
 |Ausfall des primären Replikats |Automatisches Failover. Das neue primäre Replikat besitzt Lese-/Schreibberechtigungen. |Automatisches Failover. Das neue primäre Replikat besitzt Lese-/Schreibberechtigungen. |Automatisches Failover. Das neue primäre Replikat steht erst dann für Benutzertransaktionen zur Verfügung, wenn das vorherige Replikat wiederhergestellt wurde und der Verfügbarkeitsgruppe als sekundäres Replikat beigetreten ist. |
@@ -77,7 +77,7 @@ Diese Konfiguration ermöglicht den Schutz von Daten. Ebenso wie bei anderen Kon
 
 Eine Verfügbarkeitsgruppe mit zwei synchronen Replikaten gewährleistet die Leseskalierung und den Schutz von Daten. In der folgenden Tabelle wird das Verfügbarkeitsverhalten beschrieben. 
 
-| |Leseskalierung |Schutz von Daten|
+|Verfügbarkeitsverhalten |Leseskalierung |Schutz von Daten|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Ausfall des primären Replikats | Manuelles Failover. Möglicherweise kommt es zu Datenverlusten. Das neue primäre Replikat besitzt Lese-/Schreibberechtigungen.| Automatisches Failover. Das neue primäre Replikat steht erst dann für Benutzertransaktionen zur Verfügung, wenn das vorherige Replikat wiederhergestellt wurde und der Verfügbarkeitsgruppe als sekundäres Replikat beigetreten ist.|
@@ -103,7 +103,7 @@ Im obigen Diagramm überträgt ein primäres Replikat die Konfigurationsdaten pe
 
 Der Standardwert für `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` ist 0. In der folgenden Tabelle wird das Verfügbarkeitsverhalten beschrieben. 
 
-| |Hochverfügbarkeit und </br> Datenschutz | Schutz von Daten|
+|Verfügbarkeitsverhalten |Hochverfügbarkeit und </br> Datenschutz | Schutz von Daten|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Ausfall des primären Replikats | Automatisches Failover. Das neue primäre Replikat besitzt Lese-/Schreibberechtigungen. | Automatisches Failover. Das neue primäre Replikat steht nicht für Benutzertransaktionen zur Verfügung. |

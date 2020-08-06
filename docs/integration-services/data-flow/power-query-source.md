@@ -1,6 +1,6 @@
 ---
 title: Power Query-Quelle | Microsoft-Dokumentation
-description: Erfahren Sie, wie Sie die Power Query-Quelle im SQL Server Integration Services-Datenfluss konfigurieren.
+description: Erfahren Sie, wie Sie die Power Query-Quelle im SQL Server Integration Services-Datenfluss (SSIS) konfigurieren.
 ms.date: 12/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 1adc541d08e5ce74e6130d6994bd583ae58030d1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 966371e30811f82f9be25711f9bf600bbddbcc8d
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916072"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522902"
 ---
 # <a name="power-query-source-preview"></a>Power Query-Quelle (Preview)
 

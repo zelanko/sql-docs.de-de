@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1d71b87d3927e2b79d2147099c50581a3687e32
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3f58165bd38e281b6c0223ae11c20a76f1bcdd5b
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767823"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435533"
 ---
 # <a name="mssqlserver_833"></a>MSSQLSERVER_833
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "85767823"
 |Meldungstext|Bei %d E/A-Anforderungen von SQL Server wurden mehr als %d Sekunden zum Abschließen des Vorgangs für die Datei [%ls] in der Datenbank `[%ls] (%d)` benötigt .  Das Dateihandle des Betriebssystems lautet 0x%p.  Der Offset des letzten langen E/A-Vorgangs lautet: %#016I64x.|  
   
 ## <a name="explanation"></a>Erklärung  
-Mit dieser Meldung wird angegeben, dass von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Lese- oder Schreibanforderung vom Datenträger ausgegeben wurde und dass die Rückgabe der Anforderung länger als 15 Sekunden gedauert hat. Dieser Fehler wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gemeldet und deutet auf ein Problem mit dem E/A-Subsystem hin.  
+Mit dieser Meldung wird angegeben, dass von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Lese- oder Schreibanforderung vom Datenträger ausgegeben wurde und dass die Rückgabe der Anforderung länger als 15 Sekunden gedauert hat. Dieser Fehler wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gemeldet und deutet auf ein Problem mit dem E/A-Subsystem hin. Möglicherweise bemerken Sie auch weitere Symptome im Zusammenhang mit dieser Meldung: lange Wartezeiten für PAGEIOLATCH-Wartevorgänge, Warnungen oder Fehler im Systemereignisprotokoll, Hinweise auf Probleme mit der Datenträgerlatenz in Systemmonitorzählern. 
   
 ### <a name="possible-causes"></a>Mögliche Ursachen  
-Dieses Problem kann durch eine beeinträchtigte Systemleistung, Hardware- oder Firmwarefehler, Gerätetreiberprobleme oder das Eingreifen von Filtertreibern im E/A-Vorgang verursacht werden.  
+Dieses Problem kann durch Leistungsprobleme im Betriebssystem, Hardware- oder Firmwarefehler, Gerätetreiberprobleme oder das Eingreifen von Filtertreibern in den E/A-Vorgang oder Speicherpfad von Datenbankdateien verursacht werden. SQL Server zeichnet die Uhrzeit der Initiierung einer E/A-Anforderung sowie die Uhrzeit des Abschlusses des E/A-Vorgangs auf. Wenn der Unterschied zwischen diesen beiden Zeitpunkten 15 Sekunden oder mehr beträgt, wird diese Bedingung erkannt. Das bedeutet auch, dass SQL Server nicht die Ursache einer verzögerten E/A-Bedingung ist, die in dieser Meldung berichtet und beschrieben wird. Diese Bedingung wird allgemein als „verzögerte E/A“ bezeichnet. Die meisten Datenträgeranforderungen erfolgen mit der typischen Geschwindigkeit des Datenträgers. Diese typische Datenträgergeschwindigkeit wird häufig als „Datenträgersuchzeit“ bezeichnet. Die Datenträgersuchzeit bei den meisten Standarddatenträgern beträgt 10 Millisekunden oder weniger. Daher sind 15 Sekunden eine sehr lange Zeit für die Rückkehr des E/A-Pfads des Systems zu SQL Server. 
   
 ## <a name="user-action"></a>Benutzeraktion  
-Sie können diesen Fehler durch Überprüfung des Systemereignisprotokolls auf hardwarebedingte Fehlermeldungen beheben. Sie können zudem hardwarespezifische Protokolle überprüfen, sofern diese verfügbar sind.  
+Sie können diesen Fehler durch Überprüfung des Systemereignisprotokolls auf hardwarebedingte Fehlermeldungen beheben. Sie können zudem hardwarespezifische Protokolle überprüfen, sofern diese verfügbar sind. Sie sollten die erforderlichen Methoden und Techniken verwenden, um die Ursache der Verzögerung im Betriebssystem, bei den Treibern oder bei der E/A-Hardware zu ermitteln. Die Lösung dieses Problems umfasst möglicherweise eine Aktualisierung aller Gerätetreiber und Firmware oder die Ausführung weiterer Diagnosemaßnahmen im Zusammenhang mit Ihrem Datenträgersystem. 
   
 Prüfen Sie mit dem Systemmonitor die folgenden Leistungsindikatoren:  
   
@@ -49,10 +49,12 @@ Prüfen Sie mit dem Systemmonitor die folgenden Leistungsindikatoren:
   
 -   **Current Disk Queue Length**  
   
-Beispielsweise beträgt die Zeit von **Average Disk Sec/Transfer** für einen Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalerweise unter 15 Millisekunden. Wenn sich der Wert **Average Disk Sec/Transfer** erhöht, ist dies ein Hinweis darauf, dass das E/A-Subsystem den E/A-Bedarf nicht optimal erfüllt.  
+Beispielsweise beträgt die Zeit von **Average Disk Sec/Transfer** für einen Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalerweise unter 15 Millisekunden. Wenn sich der Wert **Average Disk Sec/Transfer** erhöht, ist dies ein Hinweis darauf, dass das E/A-Subsystem den E/A-Bedarf nicht optimal erfüllt.
+
+Sie können auch Features wie die [Storport-ETW-Protokollierung](https://docs.microsoft.com/archive/blogs/ntdebugging/storport-etw-logging-to-measure-requests-made-to-a-disk-unit) verwenden, um die Latenz von Anforderungen zu messen, die an eine Datenträgereinheit gesendet werden. Ein weiteres ähnliches Kit für die Problembehandlung bei E/A-Vorgängen ist als integriertes Profil [Windows Performance Recorder](https://docs.microsoft.com/windows-hardware/test/wpt/introduction-to-wpr) verfügbar.
   
 > [!NOTE]  
-> Der Datenträgerzugriff wird möglicherweise durch ein Antivirenprogramm verzögert. Schließen Sie die in der Fehlermeldung angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datendateien von aktiven Virenüberprüfungen aus, um die Zugriffsgeschwindigkeit zu erhöhen.  
+> Der Datenträgerzugriff wird möglicherweise durch ein Antivirenprogramm verzögert. Schließen Sie die in der Fehlermeldung angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datendateien von aktiven Virenüberprüfungen aus, um die Zugriffsgeschwindigkeit zu erhöhen. Sie können das [Befehlszeilen-Hilfsprogramm „fltmc.exe“](https://docs.microsoft.com/windows-hardware/drivers/ifs/development-and-testing-tools#fltmcexe-control-program) verwenden, um alle im System installierten Filtertreiber abzufragen und sich über die Funktionen zu informieren, die das Programm im Speicherpfad zu den Datenbankdateien ausführt. 
   
 Weitere Informationen zu E/A-Fehlern finden Sie unter [Microsoft SQL Server I/O Basics, Chapter 2 (E/A-Grundlagen von Microsoft SQL Server, Kapitel 2)](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)) und im Knowledge Base-Artikel unter [https://support.microsoft.com/kb/897284/en-us](https://support.microsoft.com/kb/897284/en-us).  
   

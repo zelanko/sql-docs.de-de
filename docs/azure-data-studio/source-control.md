@@ -1,6 +1,6 @@
 ---
 title: Quellcodeverwaltung
-description: Erfahren Sie, wie Sie Quellcodeverwaltung in Azure Data Studio konfigurieren.
+description: Azure Data Studio unterstützt Git für die Quellcodeverwaltung (Source Control Management, SCM). Erfahren Sie, wie Sie ein vorhandenes Git-Repository öffnen und ein neues initialisieren.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c4f586e355ad31422c75a5abb10a4c7e42f5eda6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8b3ad59ac518eebefa9fbb073544fdb7791a419
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758375"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522504"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Quellcodeverwaltung in Azure Data Studio
 

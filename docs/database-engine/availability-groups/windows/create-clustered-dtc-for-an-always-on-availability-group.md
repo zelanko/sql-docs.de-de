@@ -11,16 +11,16 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 956cedfe3fd637b170f560863bf12eb79a9973b8
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72586766"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522922"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Erstellen einer gruppierten DTC-Ressource für eine Always On-Verfügbarkeitsgruppe
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
 In diesem Thema werden Sie durch eine vollständige Konfiguration einer gruppierten DTC-Ressource für eine SQL Server AlwaysOn-Verfügbarkeitsgruppe geführt. Für die vollständige Konfiguration kann bis zu einer Stunde erforderlich sein. 
 
@@ -323,7 +323,7 @@ GO
 > Sie können DTC nicht auf einem vorhandenen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktivieren.  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird für eine bestehende Verfügbarkeitsgruppe folgende Syntax akzeptiert:  
 > 
 > USE master;    
-> ALTER AVAILABILITY GROUP \<Verfügbarkeitsgruppe\>  
+> ALTER AVAILABILITY GROUP \<availability_group\>  
 > SET (DTC_Support = Per_DB)  
 > 
 > Es wird aber keine tatsächliche Konfigurationsänderung vorgenommen.  Sie können die **dtc_support** -Konfiguration mit der folgenden T-SQL-Abfrage bestätigen:  
