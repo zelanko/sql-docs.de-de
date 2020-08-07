@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Sybase Console,Output Conventions
 - Sybase Console,Procedure for Using Console
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: bad08c06028a64a0423135b15641ebf6fa4e895e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a577a2b187112dd0b80cedf50d42d13112208970
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029107"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931553"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Ersten Schritte mit SSMA für die Sybase-Konsole (sybasedesql)
 In diesem Abschnitt wird das Verfahren zum Starten von und ersten Schritten mit SSMA für die Sybase-Konsolenanwendung beschrieben. Auch hier sind die Konventionen aufgeführt, die in einem typischen Ausgabefenster der SSMA-Konsole verwendet werden.  
@@ -30,7 +30,7 @@ Verwenden Sie die folgenden Schritte, um die SSMA-Konsolenanwendung zu starten:
   
 2.  Klicken Sie auf den **SQL Server Migration Assistant für die Sybase-Eingabe** Aufforderungs Verknüpfung.  
   
-    Er zeigt das Menü Verwendung der SSMA- `(/? Help)`Konsole und an, um Ihnen den Einstieg in die Konsolenanwendung zu erleichtern.  
+    Er zeigt das Menü Verwendung der SSMA-Konsole und `(/? Help)` an, um Ihnen den Einstieg in die Konsolenanwendung zu erleichtern.  
   
 ## <a name="using-the-ssma-console"></a>Verwenden der SSMA-Konsole  
 Nachdem die Konsole erfolgreich auf Ihrem Windows-System gestartet wurde, können Sie die folgenden Schritte ausführen, um Sie zu bearbeiten:  
@@ -65,5 +65,5 @@ In der folgenden Tabelle wird die Farb Interpretation der Konsolenausgabe angeze
 |Grün|Eingabeaufforderung für Benutzereingabe|  
 |Cyan|Starten, beenden und Ergebnis eines Vorgangs|  
   
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen  
 [Installieren von SSMA für SAP ASE &#40;sybasedesql&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

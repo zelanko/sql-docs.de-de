@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Mapping Sybase ASE Schemas to SQL Server Schemas
 - Type Mapping Settings
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 11d17d35dd8118c2afb9310ffcc45dcbea021f6c
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 174f16b2b5a901b06f292f5bf53391fb7685eef1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865358"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931121"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Zuordnen von Sybase ASE- und SQL Server-Datentypen (SybaseToSQL)
-Die Datenbanktypen von Sybase Adaptive Server Enterprise (ASE) unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanktypen oder SQL Azure. Beim Konvertieren von ASE-Datenbankobjekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Objekte müssen Sie angeben, wie Datentypen von ASE zu oder SQL Azure zugeordnet werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Abschnitten dargestellt.  
+Die Datenbanktypen von Sybase Adaptive Server Enterprise (ASE) unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL-Datenbanktypen. Beim Konvertieren von ASE-Datenbankobjekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Objekte müssen Sie angeben, wie Datentypen von ASE zu oder SQL Azure zugeordnet werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Abschnitten dargestellt.  
   
 ## <a name="default-mappings"></a>Standardzuordnungen  
 SSMA verfügt über einen Standardsatz von Datentyp Zuordnungen. Die Liste der Standard Zuordnungen finden Sie unter [Project Settings &#40;Type Mapping&#41; &#40;sybasedesql&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  

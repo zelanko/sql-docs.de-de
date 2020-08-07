@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Script File Commands, Script Generation Commands,Manageability Commands
 - Script File Commands,Project Commands
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 60843fc3c41d089c28847e724585e62992089be1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 6b6d7576bc20786c49893a5cf5ab4835d1d7fb57
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909532"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934858"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Ausführen der SSMA-Konsole (OracleToSQL)
 Microsoft bietet Ihnen einen robusten Satz von Skriptdatei Befehlen zum Ausführen und Steuern von SSMA-Aktivitäten. Die Konsolenanwendung verwendet bestimmte Standard Befehle für Skriptdateien, wie in diesem Abschnitt aufgelistet.  
@@ -244,7 +244,7 @@ generieren-Assessment-Bericht
   
 -   `write-summary-report-to:`Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird.  
   
-    Wenn nur der Ordner Pfad erwähnt wird, dann file **by Name&lt;&gt; XML** wird erstellt. (optionales Attribut)  
+    Wenn nur der Ordner Pfad erwähnt wird, dann file **by Name &lt; &gt; XML** wird erstellt. (optionales Attribut)  
   
     Die Berichterstellung hat zwei weitere Unterkategorien:  
   
@@ -318,7 +318,7 @@ Convert-Schema
   
 -   `write-summary-report-to:`Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird.  
   
-    Wenn nur der Ordner Pfad erwähnt wird, dann file by Name **schemaconversionreport&lt;n&gt;. XML** wird erstellt. (optionales Attribut)  
+    Wenn nur der Ordner Pfad erwähnt wird, dann file by Name **schemaconversionreport &lt; n &gt; . XML** wird erstellt. (optionales Attribut)  
   
     Die Berichterstellung hat zwei weitere Unterkategorien:  
   
@@ -382,7 +382,7 @@ Migriert die Quelldaten zum Ziel.
   
 -   `write-summary-report-to:`Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird.  
   
-    Wenn nur der Ordner Pfad erwähnt wird, dann file by Name **datamigrationreport&lt;n&gt;. XML** wird erstellt. (optionales Attribut)  
+    Wenn nur der Ordner Pfad erwähnt wird, dann file by Name **datamigrationreport &lt; n &gt; . XML** wird erstellt. (optionales Attribut)  
   
     Die Berichterstellung hat zwei weitere Unterkategorien:  
   
@@ -485,7 +485,7 @@ Synchronisieren-Ziel
   
     -   Fehler-Skript  
   
--   `report-errors-to:`Gibt den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang an (optionales Attribut), wenn nur der Ordner Pfad angegeben ist, dann wird die Datei mit dem Namen " **targetsynchronizationreport. XML** " erstellt.  
+-   `report-errors-to:`Gibt den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang an (optionales Attribut), wenn nur der Ordner Pfad angegeben ist, dann wird file by Name **TargetSynchronizationReport.XML** erstellt.  
   
 **Syntax Beispiel:**  
   
@@ -550,7 +550,7 @@ Erfordert einen oder mehrere Metabasisknoten als Befehlszeilenparameter.
   
     -   Fehler-Skript  
   
--   `report-errors-to:`Gibt den Speicherort des Fehlerberichts für den Aktualisierungs Vorgang an (optionales Attribut), wenn nur der Ordner Pfad angegeben wird. Anschließend wird die Datei mit dem Namen **sourcedbrefreshreport. XML** erstellt.  
+-   `report-errors-to:`Gibt den Speicherort des Fehlerberichts für den Aktualisierungs Vorgang an (optionales Attribut), wenn nur der Ordner Pfad angegeben ist, dann wird file by Name **SourceDBRefreshReport.XML** erstellt.  
   
 **Syntax Beispiel:**  
   
@@ -659,13 +659,13 @@ Convert-SQL-Anweisung
   
     **Standardwert:** false. (optionales Attribut)  
   
--   `write-converted-sql-to`Gibt den Datei Ordner Pfad (oder) an, in dem die konvertierte T-SQL-Datei gespeichert werden soll. Wenn ein Ordner Pfad zusammen mit dem `sql-files` -Attribut angegeben wird, verfügt jede Quelldatei über eine entsprechende Ziel-T-SQL-Datei, die im angegebenen Ordner erstellt wurde. Wenn ein Ordner Pfad zusammen mit dem `sql` -Attribut angegeben wird, wird die konvertierte T-SQL-Datei in eine Datei mit dem Namen " **result. out** " unter dem angegebenen Ordner geschrieben.  
+-   `write-converted-sql-to`Gibt den Datei Ordner Pfad (oder) an, in dem die konvertierte T-SQL-Datei gespeichert werden soll. Wenn ein Ordner Pfad zusammen mit dem-Attribut angegeben wird `sql-files` , verfügt jede Quelldatei über eine entsprechende Ziel-T-SQL-Datei, die im angegebenen Ordner erstellt wurde. Wenn ein Ordner Pfad zusammen mit dem-Attribut angegeben wird `sql` , wird die konvertierte T-SQL-Datei in eine Datei mit dem Namen " **result. out** " unter dem angegebenen Ordner geschrieben.  
   
 -   `sql`Gibt die zu konvertierenden Oracle SQL-Anweisungen an. eine oder mehrere Anweisungen können mithilfe von ";" getrennt werden.  
   
 -   `sql-files`Gibt den Pfad der SQL-Dateien an, die in T-SQL-Code konvertiert werden müssen.  
   
--   `write-summary-report-to`Gibt den Pfad an, in dem der Bericht generiert wird. Wenn nur der Ordner Pfad erwähnt wird, wird die Datei mit dem Namen **converzqlreport. XML** erstellt. (optionales Attribut)  
+-   `write-summary-report-to`Gibt den Pfad an, in dem der Bericht generiert wird. Wenn nur der Ordner Pfad erwähnt wird, wird die Datei mit dem Namen **ConvertSQLReport.XML** erstellt. (optionales Attribut)  
   
     Die Berichterstellung hat zwei weitere Unterkategorien, nämlich:  
   

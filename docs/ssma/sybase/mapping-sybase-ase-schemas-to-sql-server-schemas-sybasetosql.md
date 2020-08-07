@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema Mapping
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 212b5719c1ef8bac3e44ec33b786a032acef1d9f
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acd4b7c13b2f8674f120c7f5b49f503a7f8fb5bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865328"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931225"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Zuordnen von Sybase ASE-Schemas zu SQL Server-Schemas (SybaseToSQL)
-In Sybase Adaptive Server Enterprise (ASE) verfügt jede Datenbank über ein oder mehrere Schemas. Standardmäßig migriert SSMA alle Objekte innerhalb einer Datenbank und eines Schemas in die gleiche Datenbank und das gleiche Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können jedoch die Zuordnung zwischen ASE und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Datenbanken und Schemas anpassen.  
+In Sybase Adaptive Server Enterprise (ASE) verfügt jede Datenbank über ein oder mehrere Schemas. Standardmäßig migriert SSMA alle Objekte innerhalb einer Datenbank und eines Schemas in die gleiche Datenbank und das gleiche Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können jedoch die Zuordnung zwischen ASE und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank anpassen.  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>ASE-und SQL Server-oder SQL Azure Schemas  
 ASE und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure geben Datenbanken und Ihre Schemas mit zwei teiligen Schreibweise als " *Database. Schema*" an. Beispielsweise kann in einer ASE- **Demo** Datenbank ein **dbo** -Schema vorhanden sein. Diese Datenbank und das Schema paar werden als **Demo. dbo**angegeben. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure dieselbe Datenbank und dasselbe Schema hat, wird das Paar auch als **Demo. dbo**angegeben.  
@@ -51,7 +51,7 @@ Sie können Quell Datenbanken einer beliebigen Zieldatenbank zuordnen. Standardm
   
 -   Zuordnung zu SQL Azure  
   
-Sie können die Quelldatenbank dem verbundenen Ziel SQL Azure Datenbank oder einem beliebigen Schema in der verbundenen Ziel SQL Azure Datenbank zuordnen. Wenn Sie das Quell Schema einem nicht vorhandenen Schema unter der verbundenen Zieldatenbank zuordnen, wird die Meldung angezeigt, dass **das Schema in den Ziel Metadaten nicht vorhanden ist. Es würde während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen? "** Klicken Sie auf Ja.  
+Sie können die Quelldatenbank der verbundenen Azure SQL-Zieldatenbank oder einem beliebigen Schema in der verbundenen Azure SQL-Zieldatenbank zuordnen. Wenn Sie das Quell Schema einem nicht vorhandenen Schema unter der verbundenen Zieldatenbank zuordnen, wird die Meldung angezeigt, dass **das Schema in den Ziel Metadaten nicht vorhanden ist. Es würde während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen? "** Klicken Sie auf Ja.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Wiederherstellen der Standarddatenbank und des Standard Schemas  
 Wenn Sie die Zuordnung zwischen einem ASE-Schema und einem- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder-SQL Azure Schema anpassen, können Sie die Zuordnung auf die Standardwerte zurücksetzen.  

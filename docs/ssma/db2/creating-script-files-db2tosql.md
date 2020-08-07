@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 324aff21d677c213148922f7e06f267e08740c13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: F
+ms.author: alexiva
+ms.openlocfilehash: ac87b3459a5a2ae5c8477ce0674facaf361f03b0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989836"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933831"
 ---
 # <a name="creating-script-files-db2tosql"></a>Erstellen von Skriptdateien (DB2ToSQL)
 Der erste Schritt vor dem Starten der SSMA-Konsolenanwendung besteht darin, die Skriptdatei zu erstellen und bei Bedarf die Variablen Wert Datei und die Server Verbindungs Datei zu erstellen.  
@@ -319,9 +319,9 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     Es treten zwei Fälle auf:  
   
-    1.  Wenn die Außerkraftsetzungs Option auf **false**gesetzt ist, wird die Such Reihenfolge durch&gt;den Benutzer geschützt&gt; &gt;.  
+    1.  Wenn die Außerkraftsetzungs Option auf **false**gesetzt ist, wird die Such Reihenfolge durch den &gt; Benutzer geschützt &gt; &gt; .  
   
-    2.  Wenn die Überschreibungs Option **true**ist, ist die Reihenfolge der Suche ein&gt;Skript für die Datei&gt;-Server-Verbindungs Datei.  
+    2.  Wenn die Überschreibungs Option **true**ist, ist die Reihenfolge der Suche ein Skript für die Datei- &gt; Server-Verbindungs Datei &gt; .  
   
     **Beispiel:**  
   
@@ -343,7 +343,7 @@ Server Verbindungsparameter können in der Skriptdatei oder in der Server Verbin
 ## <a name="script-commands"></a>Skriptbefehle  
 Die Skriptdatei enthält eine Sequenz von Migrations Workflow Befehlen im XML-Format. Die SSMA-Konsolenanwendung verarbeitet die Migration in der Reihenfolge der Befehle, die in der Skriptdatei angezeigt werden.  
   
-Beispielsweise folgt eine typische Datenmigration einer bestimmten Tabelle in einer DB2-Datenbank der Hierarchie von: Schema-&gt; Table.  
+Beispielsweise folgt eine typische Datenmigration einer bestimmten Tabelle in einer DB2-Datenbank der Hierarchie von: Schema- &gt; Table.  
   
 Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SSMA-Konsolenanwendung beendet, und das Steuerelement wird an den Benutzer zurückgegeben. Der Inhalt einer Skriptdatei ist mehr oder weniger statisch und enthält Variablen Informationen, die entweder in einer [Datei zum Erstellen von Variablen Werten &#40;oracletosql&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) oder in einem separaten Abschnitt in der Skriptdatei für Variablen Werte enthalten sind.  
   
@@ -374,15 +374,15 @@ Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SS
 ```  
 Vorlagen, die aus 3 Skriptdateien (zum Ausführen verschiedener Szenarios), einer Variablen Wert Datei und einer Server Verbindungs Datei bestehen, werden im Beispiel Ordner der Konsolen Skripts des Produkt Verzeichnisses bereitgestellt:  
   
--   "Bewermentreportgenerationsample. xml"  
+-   AssessmentReportGenerationSample.xml  
   
--   "Systemversionanddatamigrationsample. xml"  
+-   ConversionAndDataMigrationSample.xml  
   
--   Sqlstatuementinversionsample. XML  
+-   SqlStatementConversionSample.xml  
   
--   Variablevaluefilesample. XML  
+-   VariableValueFileSample.xml  
   
--   Serversconnectionfilesample. XML  
+-   ServersConnectionFileSample.xml  
   
 Sie können die Vorlagen (Dateien) ausführen, nachdem Sie die darin angezeigten Parameter für Relevanz geändert haben.  
   

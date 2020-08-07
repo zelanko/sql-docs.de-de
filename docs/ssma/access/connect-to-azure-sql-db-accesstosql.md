@@ -8,17 +8,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Connect to SQL Azure dialog box
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 34e25824ee95745bd5069a6ed601318d47a96e81
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f67bb072ce30117ebab93c3165545b13b6513df9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865248"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938869"
 ---
 # <a name="connect-to-azure-sql-database-accesstosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (accesstosql)
-Verwenden Sie das Dialogfeld mit SQL Azure verbinden, um eine Verbindung mit der SQL Azure Datenbank herzustellen, die Sie migrieren möchten.  
+Verwenden Sie das Dialogfeld mit SQL Azure verbinden, um eine Verbindung mit der Datenbank in Azure SQL-Datenbank herzustellen, die Sie migrieren möchten.  
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit SQL Azure verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl **erneut eine Verbindung mit SQL Azure her.**  
   
@@ -36,7 +36,7 @@ Wählen **Sie den Daten** Banknamen aus, oder geben Sie ihn ein.
   
 **Benutzername**  
   
-Geben Sie den Benutzernamen ein, den SSMA zum Herstellen einer Verbindung mit der SQL Azure Datenbank verwendet.  
+Geben Sie den Benutzernamen ein, den SSMA zum Herstellen einer Verbindung mit der Azure SQL-Datenbank verwendet.  
   
 **Kennwort**  
   

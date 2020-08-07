@@ -7,19 +7,19 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ceb77a97-d6d5-4a92-90a6-342e97d12b54
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 006a90ca082861aea4fecbe6934947afa2020335
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e35c73855e88c05a5c98743371ba5de88a1f86ee
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006668"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939143"
 ---
 # <a name="connect-to-sql-server-accesstosql"></a>Herstellen einer Verbindung mit SQL Server (accesstosql)
-Verwenden Sie das Dialogfeld **mit SQL Server verbinden** , um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Instanz von herzustellen, zu der Sie migrieren möchten. Um auf das Dialogfeld **Verbindung mit SQL Server herstellen** zuzugreifen, klicken Sie im Menü **Datei** auf **Verbinden mit SQL Server**.  
+Verwenden Sie das Dialogfeld **mit SQL Server verbinden** , um eine Verbindung mit der Instanz von herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , zu der Sie migrieren möchten. Um auf das Dialogfeld **Verbindung mit SQL Server herstellen** zuzugreifen, klicken Sie im Menü **Datei** auf **Verbinden mit SQL Server**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Servername**  
 Geben Sie die SQL Server-Instanz ein, mit der eine Verbindung hergestellt werden soll. Standardmäßig wird die Instanz angezeigt, mit der Sie zuletzt eine Verbindung hergestellt haben.  
   
@@ -27,27 +27,27 @@ Geben Sie die SQL Server-Instanz ein, mit der eine Verbindung hergestellt werden
   
 -   Wenn Sie eine Verbindung mit der Standard Instanz auf einem anderen Computer herstellen, geben Sie den Namen des Computers ein.  
   
--   Wenn Sie eine Verbindung mit einer benannten Instanz auf einem anderen Computer herstellen, geben Sie den Computernamen, einen umgekehrten Schrägstrich und den Instanznamen ein, z. b. *myserver*\\*MyInstance*.  
+-   Wenn Sie eine Verbindung mit einer benannten Instanz auf einem anderen Computer herstellen, geben Sie den Computernamen, einen umgekehrten Schrägstrich und den Instanznamen ein, z. b. *myserver* \\ *MyInstance*.  
   
 **Serverport**  
 Wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht für die Annahme von Verbindungen am Standardport (1433) konfiguriert ist, geben Sie die Portnummer ein. Andernfalls lassen Sie diesen Wert leer.  
   
 **Datenbank**  
-Gibt die Datenbank an, zu der Objekte und Daten migriert werden sollen. Diese Option ist nicht verfügbar, wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erneute Verbindung mit herstellen.  
+Gibt die Datenbank an, zu der Objekte und Daten migriert werden sollen. Diese Option ist nicht verfügbar, wenn Sie eine erneute Verbindung mit herstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Authentifizierung**  
-Wählen Sie die Authentifizierungsmethode aus, die zum Herstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]einer Verbindung mit verwendet wird. Um Ihr aktuelles Windows-Konto zu verwenden, wählen Sie Windows-Authentifizierung aus. Wählen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus, um einen Anmelde Namen und ein Kennwort anzugeben.  
+Wählen Sie die Authentifizierungsmethode aus, die zum Herstellen einer Verbindung mit verwendet wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Um Ihr aktuelles Windows-Konto zu verwenden, wählen Sie Windows-Authentifizierung aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Wählen Sie Authentifizierung aus, um einen Anmelde Namen und ein Kennwort anzugeben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Benutzername**  
-Wenn Sie die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung verwenden, geben Sie den-Anmelde Namen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für diese Instanz von ein. Wenn Sie die Windows-Authentifizierung verwenden, ist diese Option nicht verfügbar.  
+Wenn Sie die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung verwenden, geben Sie den-Anmelde Namen für diese Instanz von ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn Sie die Windows-Authentifizierung verwenden, ist diese Option nicht verfügbar.  
   
 **Kennwort**  
-Wenn Sie die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung verwenden, geben Sie das Kennwort für die Anmeldung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dieser Instanz von ein. Wenn Sie die Windows-Authentifizierung verwenden, ist diese Option nicht verfügbar.  
+Wenn Sie die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung verwenden, geben Sie das Kennwort für die Anmeldung in dieser Instanz von ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn Sie die Windows-Authentifizierung verwenden, ist diese Option nicht verfügbar.  
   
 **Verbindung verschlüsseln**  
 Wenn Sie eine sichere Verbindung mit SQL Server herstellen möchten, verwenden Sie die Option Verbindung verschlüsseln, indem Sie das Kontrollkästchen **Verbindung verschlüsseln** aktivieren.  
   
-**Server Zertifikat vertrauen**  
+**TrustServerCertificate**  
 Wenn Sie diese Option verwenden möchten, aktivieren Sie das Kontrollkästchen **Server Zertifikat vertrauen** .  
   
 > [!NOTE]  

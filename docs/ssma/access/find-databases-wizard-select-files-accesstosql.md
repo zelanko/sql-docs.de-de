@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3cd166f0e85a4a9a58a43feca8e1f3ba4fc211b7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006545"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938715"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Assistent zum Suchen von Datenbanken (Dateien auswählen) (accesstosql)
 Auf der Seite Dateien auswählen des Assistenten zum Suchen von Datenbanken werden die Dateien aufgelistet, die während der Suche gefunden wurden. Wählen Sie die Zeile aus, die den Dateinamen enthält, um eine Datei auszuwählen, die Sie SSMA hinzufügen möchten. Wenn Sie mit der Auswahl von Dateien fertig sind, klicken Sie auf **weiter** , um die Seite Auswahl überprüfen anzuzeigen.  
@@ -44,10 +44,10 @@ Zeigt den Pfad der Access-Datenbankdatei an.
 **Größe**  
 Die Größe der Datenbank (in Bytes).  
   
-**Schaff**  
+**Erstellt**  
 Das Datum und die Uhrzeit der Erstellung der Datenbank.  
   
-**Geändert**  
+**Änderungen**  
 Das Datum und die Uhrzeit, zu der die Datenbank zuletzt aktualisiert wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  

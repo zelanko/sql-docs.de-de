@@ -10,18 +10,18 @@ helpviewer_keywords:
 - reference, user interface
 - user interface
 ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 0366c4549c557d2e5f90733f5dadba61cecdc22c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266962"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937765"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Referenz zur Benutzeroberfläche (accesstosql)
-Dieser Abschnitt enthält Hilfe Themen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Migration Assistant (SSMA) für den Zugriff.  
+Dieser Abschnitt enthält Hilfe Themen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für den Zugriff.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -29,7 +29,7 @@ Dieser Abschnitt enthält Hilfe Themen für [!INCLUDE[ssNoVersion](../../include
 |---------|---------------|  
 |[Erweiterte Objektauswahl &#40;Access Token&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|Verwenden Sie das Dialogfeld **Erweiterte Objektauswahl** , um mithilfe von Filterkriterien Datenbankobjekte zu suchen, und wählen Sie diese Objekte aus, oder löschen Sie Sie.|  
 |[Bewertungsbericht &#40;Access Token&#41;](../../ssma/access/assessment-report-accesstosql.md)|Verwenden Sie das Dialogfeld **Bewertungsbericht** , um die Konvertierung von Access-Datenbankobjekten zu analysieren und zu schätzen, wie lange die Migration dauern wird.|  
-|[Verbindung mit SQL Server herstellen](https://msdn.microsoft.com/ceb77a97-d6d5-4a92-90a6-342e97d12b54)|Verwenden Sie das Dialogfeld **mit SQL Server verbinden** , um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Instanz von herzustellen, zu der Sie migrieren möchten.|  
+|[Verbindung mit SQL Server herstellen](https://msdn.microsoft.com/ceb77a97-d6d5-4a92-90a6-342e97d12b54)|Verwenden Sie das Dialogfeld **mit SQL Server verbinden** , um eine Verbindung mit der Instanz von herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , zu der Sie migrieren möchten.|  
 |[Verbindung mit SQL Azure herstellen](connect-to-azure-sql-db-accesstosql.md)|Verwenden Sie das Dialogfeld **mit SQL Azure verbinden** , um eine Verbindung mit der Instanz von SQL Azure herzustellen, zu der Sie migrieren möchten.|  
 |[Konvertieren, Laden und Migrieren](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)|Das Dialogfeld **konvertieren, laden und Migrieren** ist Teil des Migrations-Assistenten und wird auch angezeigt, wenn Sie den Befehl **konvertieren, laden und Migrieren** verwenden.|  
 |[Daten Migrationsbericht &#40;Access Token&#41;](../../ssma/access/data-migration-report-accesstosql.md)|Wird nach der Datenmigration angezeigt und meldet die erfolgreichen und fehlerhaften Migration für jede Tabelle.|  
@@ -45,12 +45,12 @@ Dieser Abschnitt enthält Hilfe Themen für [!INCLUDE[ssNoVersion](../../include
 |[Neues Projekt (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)|Verwenden Sie das Dialogfeld **Neues Projekt** , um ein neues SSMA-Projekt zu erstellen.|  
 |[Project Settings (Conversion) (Projekteinstellungen (Konvertierung)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)|Mithilfe der Seite **Konvertierung** des Dialog Felds **Projekteinstellungen** können Sie angeben, wie SSMA indizierte Memo Spalten, Primärschlüssel, Fremdschlüssel Einschränkungen, Zeitstempel und Tabellen ohne Indizes konvertiert.|  
 |[Projekteinstellungen &#40;GUI&#41; &#40;accesstosql&#41;](../../ssma/access/project-settings-gui-accesstosql.md)|Mithilfe der Seite GUI des Dialog Felds **Projekteinstellungen** können Sie angeben, wie viele Daten auf der Registerkarte **Daten** angezeigt werden.|  
-|[Projekteinstellungen (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Mithilfe der Seite Migration des Dialog Felds **Projekteinstellungen** können Sie die Batch Größe für die Migration, das Sperren von Tabellen, die Einschränkungs Überprüfung, das Auslösen von Triggern, die Identitäts-und NULL-Wert Behandlung sowie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Behandlung von Datumsangaben, die außerhalb des Bereichs liegen, angeben.|  
+|[Projekteinstellungen (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Mithilfe der Seite Migration des Dialog Felds **Projekteinstellungen** können Sie die Batch Größe für die Migration, das Sperren von Tabellen, die Einschränkungs Überprüfung, das Auslösen von Triggern, die Identitäts-und NULL-Wert Behandlung sowie die Behandlung von Datumsangaben, die außerhalb des Bereichs liegen, angeben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Projekteinstellungen (Typzuordnung)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|Verwenden Sie die Seite Typzuordnung des Dialog Felds **Projekteinstellungen** , um die standardtypzuordnungen für alle Datenbanken und Datenbankobjekte im SSMA-Projekt anzugeben.|  
 |[Projekteinstellungen (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Auf der Seite SQL Azure des Dialog Felds **Projekteinstellungen** können Sie das Daten Bank Suffix und auch das Takt Timeout Intervall angeben.|  
 |[Metadaten &#40;Access Token Speichern&#41;](../../ssma/access/save-metadata-accesstosql.md)|Das Dialogfeld **Metadaten speichern** wird angezeigt, wenn Sie ein Projekt speichern, das Metadaten fehlt.|  
   
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen  
 [Die ersten Schritte mit SQL Server Migration Assistant für Access &#40;accesstosql-&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Vorbereiten der Zugriffs Datenbanken für die Migration](preparing-access-databases-for-migration-accesstosql.md)  
 [Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

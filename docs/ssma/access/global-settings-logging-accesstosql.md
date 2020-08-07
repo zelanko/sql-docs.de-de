@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 72efa0f050a3b930ebaa99ff425b48e1fe9b6ba5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: dbb89fe23d8ca357bcac02b16100905e27c54d8e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67986651"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938539"
 ---
 # <a name="global-settings-logging-accesstosql"></a>Globale Einstellungen (Protokollierung) (accesstosql)
 Verwenden Sie das Dialogfeld **globale Einstellungen** , um die Protokollierungs Einstellungen für SSMA anzugeben. In der Regel ändern Sie diese Einstellungen nur, wenn Sie mit dem Produktsupport arbeiten.  
@@ -30,13 +30,13 @@ Die folgenden Optionen sind unter **Nachrichten Ebene**verfügbar:
 |**[alle Kategorien]**|Wird verwendet, um den Protokolliergrad für alle folgenden Optionen festzulegen.|  
 |**Collector**|Sammelt Metadaten über das Quell Schema und speichert Sie im Projekt.|  
 |**Converter**|Konvertiert Strukturen von Quelldaten Bank Objekten, z. b. Tabellen und gespeicherte Prozeduren, in entsprechende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Strukturen.|  
-|**Datenmigrierer**|Migriert Daten von der Quelldatenbank zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Datenmigrierer**|Migriert Daten von der Quelldatenbank zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Formatierungsprogramm**|Unterkomponente des Konverters, der Skripts für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Schema generiert.|  
 |**Grafische Benutzeroberfläche**|Meldungen, die angezeigt werden, wenn Sie das SSMA-Tool verwenden.|  
 |**Linker**|Löst SQL-Bezeichner auf und stellt Informationen für andere Komponenten bereit.|  
 |**Andere**|Alle Nachrichten, die nicht in einer anderen Kategorie vorhanden sind.|  
 |**Parser**|Analysiert das Quell Schema.|  
-|**Synchronisierung**|Lädt Quelldaten Bank Objekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in.|  
+|**Synchronisierung**|Lädt Quelldaten Bank Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Treeconverter**|Konvertiert Objekte in den Quell Metadaten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten.|  
   
 Konfigurieren Sie für jede Option unter **Nachrichten Ebene**einen der folgenden Protokolliergrade für SSMA:  
@@ -45,7 +45,7 @@ Konfigurieren Sie für jede Option unter **Nachrichten Ebene**einen der folgende
 |-|-|  
 |**Schwerwiegender Fehler**|Schreiben Sie nur schwerwiegende Fehlermeldungen in das Protokoll.|  
 |**Fehler**|Schreiben Sie Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
-|**Warning**|Schreiben Sie Warnungs-, Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
+|**Warnung**|Schreiben Sie Warnungs-, Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
 |**Info**|Schreiben Sie Informations-, Warnungs-, Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
 |**Debuggen**|Schreiben Sie alle Meldungen, einschließlich des Debuggens von Nachrichten, in das Protokoll.|  
   

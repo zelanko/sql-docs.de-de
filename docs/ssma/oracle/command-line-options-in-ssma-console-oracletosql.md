@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 96d76d301e3f937cb0e3c21a43f1939d0149ec9b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 6bddaddeda73133b83d6a7669c98fd89af96cd2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264510"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934989"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Befehlszeilenoptionen in der SSMA-Konsole (OracleToSQL)
 Microsoft stellt Ihnen eine robuste Befehlszeilenoption zur Verfügung, mit der Sie SSMA-Aktivitäten ausführen und steuern können. Die nachfolgenden Abschnitte beschreiben die gleichen.  
@@ -30,7 +30,7 @@ Hier werden die Konsolen Befehlsoptionen beschrieben.
   
 Für den Zweck dieses Abschnitts wird der Begriff "Option" auch als "Switch" bezeichnet.  
   
--   Bei den Optionen wird die Groß-/Kleinschreibung nicht beachtet**-**, und es kann**/** entweder mit dem Zeichen ' ' oder ' ' beginnen.  
+-   Bei den Optionen wird die Groß-/Kleinschreibung nicht beachtet, und es kann entweder mit dem **-** Zeichen ' ' oder ' **/** ' beginnen.  
   
 -   Wenn Optionen angegeben werden, ist es obligatorisch, die entsprechenden Optionsparameter anzugeben.  
   
@@ -127,7 +127,7 @@ Diese Option gibt das verschlüsselte Kennwort für Serververbindungen an. Dies 
   
 Sie können keine andere Option oder kein anderes Kennwort als Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie im Abschnitt Verwalten von Kenn [Wörtern](managing-passwords-oracletosql.md) .  
   
-Die folgenden unter Optionen werden für `-p/securepassword`unterstützt:  
+Die folgenden unter Optionen werden für unterstützt `-p/securepassword` :  
   
 -   Zum Hinzufügen eines Kennworts zum geschützten Speicher für eine angegebene Server-ID oder für alle Server-IDs, die in der Server Verbindungs Datei definiert sind. Mit der Option-überschreiben (unten) wird das Kennwort aktualisiert, wenn es bereits vorhanden ist:  
   

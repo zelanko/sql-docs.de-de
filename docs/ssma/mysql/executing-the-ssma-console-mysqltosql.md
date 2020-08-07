@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Script file commands, Report commands
 - Script file commands, Script generation commands
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 239ba5021363be583572d5d24887233261e359cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8cf2ded8823c03c5f002087277604ac65985aabc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909690"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935596"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Ausführen der SSMA-Konsole (MySqlToSql)
 Microsoft bietet Ihnen einen robusten Satz von Skriptdatei Befehlen zum Ausführen und Steuern von SSMA-Aktivitäten.  
@@ -145,7 +145,7 @@ Mithilfe der Daten bankverbindungs Befehle können Sie eine Verbindung mit der D
   
 Connect-Source-Datenbank  
   
--   Führt eine Verbindung mit der Quelldatenbank aus und lädt auf hoher Ebene Metadaten der Quelldatenbank, aber nicht alle Metadaten.  
+-   Führt eine Verbindung mit der Quelldatenbank durch und lädt allgemeine Metadaten der Quelldatenbank, jedoch nicht alle Metadaten.  
   
 -   Wenn die Verbindung mit der Quelle nicht hergestellt werden kann, wird ein Fehler generiert, und die Konsolenanwendung beendet die weitere Ausführung.  
   
@@ -200,7 +200,7 @@ reconnect-Quelldatenbank
   
 Connect-Target-Database  
   
-1.  Stellt eine Verbindung mit dem Ziel SQL Server oder SQL Azure Datenbank her und lädt auf hoher Ebene Metadaten der Zieldatenbank, jedoch nicht vollständig auf die Metadaten.  
+1.  Stellt eine Verbindung mit dem Ziel SQL Server oder der Azure SQL-Datenbank her und lädt allgemeine Metadaten der Zieldatenbank, jedoch nicht vollständig die Metadaten.  
   
 2.  Wenn die Verbindung mit dem Ziel nicht hergestellt werden kann, wird ein Fehler generiert, und die Konsolenanwendung beendet die weitere Ausführung.  
   
@@ -244,7 +244,7 @@ generieren-Assessment-Bericht
   
 **Skript**  
   
-1.  `assessment-report-folder:`Gibt den Ordner an, in dem der Bewertungsbericht gespeichert werden kann. (optionales Attribut)  
+1.  `assessment-report-folder:`Gibt den Ordner an, in dem der Bewertungsbericht gespeichert wird. (optionales Attribut)  
   
 2.  `object-name:`Gibt die Objekte an, die für die Bewertungsbericht Generierung berücksichtigt werden (Sie kann einzelne Objektnamen oder einen Gruppen Objektnamen aufweisen).  
   
@@ -256,7 +256,7 @@ generieren-Assessment-Bericht
   
 5.  `write-summary-report-to:`Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird.  
   
-    Wenn nur der Ordner Pfad erwähnt wird, dann file **by Name&lt;&gt; XML** wird erstellt. (optionales Attribut)  
+    Wenn nur der Ordner Pfad erwähnt wird, dann file **by Name &lt; &gt; XML** wird erstellt. (optionales Attribut)  
   
     Die Berichterstellung hat zwei weitere Unterkategorien:  
   
@@ -318,9 +318,9 @@ Convert-Schema
   
 **Skript**  
   
-1.  `conversion-report-folder:`Gibt den Ordner an, in dem der Bewertungsbericht gespeichert werden kann. (optionales Attribut)  
+1.  `conversion-report-folder:`Gibt den Ordner an, in dem der Bewertungsbericht gespeichert wird. (optionales Attribut)  
   
-2.  `object-name:`Gibt die Objekte an, die für das Umrechnen des Schemas berücksichtigt werden (es kann sich um indivduale Objektnamen oder einen Gruppen Objektnamen).  
+2.  `object-name:`Gibt die Objekte an, die für das Umrechnen des Schemas berücksichtigt werden (es kann einzelne Objektnamen oder ein Gruppen Objektname sein).  
   
 3.  `object-type:`Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
   
@@ -330,7 +330,7 @@ Convert-Schema
   
 5.  `write-summary-report-to:`Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird.  
   
-    Wenn nur der Ordner Pfad erwähnt wird, dann file by Name **schemaconversionreport&lt;n&gt;. XML** wird erstellt. (optionales Attribut)  
+    Wenn nur der Ordner Pfad erwähnt wird, dann file by Name **schemaconversionreport &lt; n &gt; . XML** wird erstellt. (optionales Attribut)  
   
     Die Erstellung eines Zusammenfassungs Berichts umfasst zwei weitere Unterkategorien:  
   
@@ -382,13 +382,13 @@ Migrieren von Daten
   
 **Skript**  
   
-1.  `object-name:`Gibt die zum Migrieren von Daten berücksichtigten Quell Objekte an (es kann sich um indivduale Objektnamen oder einen Gruppen Objektnamen).  
+1.  `object-name:`Gibt die zum Migrieren von Daten berücksichtigten Quell Objekte an (Sie können einzelne Objektnamen oder einen Gruppen Objektnamen aufweisen).  
   
 2.  `object-type:`Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
   
 3.  `write-summary-report-to:`Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird.  
   
-    Wenn nur der Ordner Pfad erwähnt wird, dann file by Name **datamigrationreport&lt;n&gt;. XML** wird erstellt. (optionales Attribut)  
+    Wenn nur der Ordner Pfad erwähnt wird, dann file by Name **datamigrationreport &lt; n &gt; . XML** wird erstellt. (optionales Attribut)  
   
     Die Berichterstellung hat zwei weitere Unterkategorien:  
   
@@ -476,7 +476,7 @@ Synchronisieren-Ziel
   
 **Skript**  
   
-1.  `object-name:`Gibt die Objekte an, die für die Synchronisierung mit der Zieldatenbank berücksichtigt werden (Sie kann über indivduale Objektnamen oder einen Gruppen Objektnamen verfügen).  
+1.  `object-name:`Gibt die Objekte an, die für die Synchronisierung mit der Zieldatenbank berücksichtigt werden (es können einzelne Objektnamen oder ein Gruppen Objektname vorhanden sein).  
   
 2.  `object-type:`Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
   
@@ -488,7 +488,7 @@ Synchronisieren-Ziel
   
     -   Fehler-Skript  
   
-4.  `report-errors-to:`Gibt den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang an (optionales Attribut), wenn nur der Ordner Pfad angegeben ist, dann wird die Datei mit dem Namen " **targetsynchronizationreport. XML** " erstellt.  
+4.  `report-errors-to:`Gibt den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang an (optionales Attribut), wenn nur der Ordner Pfad angegeben ist, dann wird file by Name **TargetSynchronizationReport.XML** erstellt.  
   
 **Syntax Beispiel:**  
   
@@ -539,7 +539,7 @@ Refresh-from-Database
   
 **Skript**  
   
-1.  `object-name:`Gibt die Quell Objekte an, die für die Aktualisierung aus der Quelldatenbank berücksichtigt werden (Sie können über indivduale Objektnamen oder einen Gruppen Objektnamen verfügen).  
+1.  `object-name:`Gibt die Quell Objekte an, die für die Aktualisierung aus der Quelldatenbank berücksichtigt werden (Sie können einzelne Objektnamen oder ein Gruppen Objektname aufweisen).  
   
 2.  `object-type:`Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
   
@@ -551,7 +551,7 @@ Refresh-from-Database
   
     -   Fehler-Skript  
   
-4.  `report-errors-to:`Gibt den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang an (optionales Attribut), wenn nur der Ordner Pfad angegeben wird. Anschließend wird die Datei mit dem Namen " **sourcedbrefreshreport. XML** " erstellt.  
+4.  `report-errors-to:`Gibt den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang an (optionales Attribut), wenn nur der Ordner Pfad angegeben ist, dann wird file by Name **SourceDBRefreshReport.XML** erstellt.  
   
 Erfordert einen oder mehrere Metabasisknoten als Befehlszeilenparameter.  
   
@@ -604,7 +604,7 @@ Wird verwendet, um die Skripts der Objekte in einer Datei zu speichern, die bei 
   
 Erfordert einen oder mehrere Metabasisknoten als Befehlszeilenparameter.  
   
-1.  `object-name:`Gibt die Objekte an, deren Skripts gespeichert werden sollen. (Er kann über indivduale Objektnamen oder einen Gruppen Objektnamen verfügen)  
+1.  `object-name:`Gibt die Objekte an, deren Skripts gespeichert werden sollen. (Es kann einzelne Objektnamen oder ein Gruppen Objektname aufweisen.)  
   
 2.  `object-type:`Gibt den Typ des Objekts an, das im Object-Name-Attribut angegeben ist (wenn die Objekt Kategorie angegeben wird, wird der Objekttyp "Category" genannt).  
   
@@ -656,19 +656,19 @@ Convert-SQL-Anweisung
   
     Wenn dieses Attribut nicht angegeben wird, wird die konvertierte T-SQL-Anweisung in der Konsole angezeigt. (optionales Attribut)  
   
-3.  `conversion-report-folder`Gibt den Ordner an, in dem der Bewertungsbericht gespeichert werden kann. (optionales Attribut)  
+3.  `conversion-report-folder`Gibt den Ordner an, in dem der Bewertungsbericht gespeichert wird. (optionales Attribut)  
   
 4.  `conversion-report-overwrite`Gibt an, ob der Bewertungsberichts Ordner überschrieben werden soll, wenn er bereits vorhanden ist.  
   
     **Standardwert:** false. (optionales Attribut)  
   
-5.  `write-converted-sql-to`Gibt den Datei Ordner Pfad (oder) an, in dem die konvertierte T-SQL-Datei gespeichert werden soll. Wenn ein Ordner Pfad zusammen mit dem `sql-files` -Attribut angegeben wird, verfügt jede Quelldatei über eine entsprechende Ziel-T-SQL-Datei, die im angegebenen Ordner erstellt wurde. Wenn ein Ordner Pfad zusammen mit dem `sql` -Attribut angegeben wird, wird die konvertierte T-SQL-Datei in eine Datei mit dem Namen "result. out" unter dem angegebenen Ordner geschrieben.  
+5.  `write-converted-sql-to`Gibt den Datei Ordner Pfad (oder) an, in dem die konvertierte T-SQL-Datei gespeichert werden soll. Wenn ein Ordner Pfad zusammen mit dem-Attribut angegeben wird `sql-files` , verfügt jede Quelldatei über eine entsprechende Ziel-T-SQL-Datei, die im angegebenen Ordner erstellt wurde. Wenn ein Ordner Pfad zusammen mit dem-Attribut angegeben wird `sql` , wird die konvertierte T-SQL-Datei in eine Datei mit dem Namen "result. out" unter dem angegebenen Ordner geschrieben.  
   
 6.  `sql`Gibt die zu konvertierenden MySQL-SQL-Anweisungen an. eine oder mehrere Anweisungen können mithilfe von ";" getrennt werden.  
   
 7.  `sql-files`Gibt den Pfad der SQL-Dateien an, die in T-SQL-Code konvertiert werden müssen.  
   
-8.  `write-summary-report-to`Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird. Wenn nur der Ordner Pfad erwähnt wird, wird die Datei mit dem Namen **converzqlreport. XML** erstellt. (optionales Attribut)  
+8.  `write-summary-report-to`Gibt den Pfad an, in dem der Zusammenfassungs Bericht generiert wird. Wenn nur der Ordner Pfad erwähnt wird, wird die Datei mit dem Namen **ConvertSQLReport.XML** erstellt. (optionales Attribut)  
   
     Die Berichtserstellung hat zwei weitere Unterkategorien, nämlich:  
   

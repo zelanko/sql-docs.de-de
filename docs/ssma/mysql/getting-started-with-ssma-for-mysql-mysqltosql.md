@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Getting started, SQL Server or SQL Azure metadata explorer
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c1cc8f5ddbe1efc1a1038bf2e9d6595e31ff3102
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 1dee948ce6b0cd36191fc13421fcfdfaa07138ac
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823650"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935496"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Erste Schritte mit SSMA für MySQL (MySqlToSql)
 Mit SQL Server Migration Assistant (SSMA) für MySQL können Sie schnell MySQL-Datenbankschemas in SQL Server-oder Azure SQL-Datenbankschemas konvertieren, die resultierenden Schemas in SQL Server oder Azure SQL-Datenbank hochladen und Daten aus MySQL in SQL Server oder Azure SQL-Datenbank migrieren.  
@@ -109,7 +109,7 @@ In der folgenden Tabelle sind die SSMA-Menüs aufgeführt.
 |||  
 |-|-|  
 |**Menü**|**Beschreibung**|  
-|**File**|Enthält Befehle für das Arbeiten mit Projekten, das Herstellen einer Verbindung mit MySQL und das Herstellen einer Verbindung mit SQL Server oder Azure SQL-Datenbank.|  
+|**Datei**|Enthält Befehle für das Arbeiten mit Projekten, das Herstellen einer Verbindung mit MySQL und das Herstellen einer Verbindung mit SQL Server oder Azure SQL-Datenbank.|  
 |**Bearbeiten**|Enthält Befehle zum Suchen und arbeiten mit Text auf den Detailseiten. Um das Dialogfeld **Lesezeichen verwalten** zu öffnen, klicken Sie im Menü Bearbeiten auf Lesezeichen verwalten. Im Dialogfeld wird eine Liste vorhandener Lesezeichen angezeigt. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.|  
 |**Anzeigen**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . Damit werden die Objekte zwischen dem MySQL-metadatenexplorer und SQL Server oder dem Metadaten-Explorer von Azure SQL-Datenbank synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** , das mit den Layouts verwaltet werden soll.|  
 |**Extras**|Enthält Befehle zum Erstellen von Berichten, zum Konvertieren von Schemas, zum Aktualisieren von Datenbanken, zum Migrieren von Objekten und Daten und zum Speichern als Skript. Bietet auch Zugriff auf die Dialogfelder " **globale Einstellungen", "Standard Projekteinstellungen** " und " **Projekteinstellungen** ".|  

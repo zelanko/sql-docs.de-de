@@ -10,14 +10,14 @@ helpviewer_keywords:
 - MySQL Console, launching console
 - MySQL Console, output conventions
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a5ade295e64415f50e4887fa971f20d8fe5b7f6a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075417"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935519"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Erste Schritte mit der SSMA-Konsole für MySQL (MySqlToSql)
 In diesem Abschnitt wird das Verfahren zum Starten von und ersten Schritten mit der MySQL-Konsolenanwendung beschrieben. Hier sind auch die Konventionen aufgeführt, die in einem typischen Ausgabefenster der SSMA-Konsole verwendet werden.  
@@ -29,7 +29,7 @@ Verwenden Sie die folgenden Schritte, um die SSMA-Konsolenanwendung zu starten:
   
 2.  Klicken Sie auf die Verknüpfung **SQL Server Migration Assistant für MySQL-Eingabeaufforderung** .  
   
-    Er zeigt das Menü Verwendung der SSMA- `(/? Help)`Konsole und an, um Ihnen den Einstieg in die Konsolenanwendung zu erleichtern.  
+    Er zeigt das Menü Verwendung der SSMA-Konsole und `(/? Help)` an, um Ihnen den Einstieg in die Konsolenanwendung zu erleichtern.  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>Verfahren für die Verwendung der SSMA-Konsole  
 Nachdem die Konsole erfolgreich auf Ihrem Windows-System gestartet wurde, können Sie die folgenden Schritte ausführen, um Sie zu bearbeiten:  

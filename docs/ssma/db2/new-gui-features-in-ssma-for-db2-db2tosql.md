@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5d3fb45d6220d10e9a6d5cc786fc09f33ce5ee59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 872eb991483bb1615f3260d64ed5e5438fd1c2ce
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909710"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933541"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>Neue GUI-Features in SSMA für DB2 (DB2ToSQL)
 In diesem Kapitel werden die neuen Funktionen der SSMA-Benutzeroberfläche beschrieben.  
@@ -54,14 +54,14 @@ Sie können ein Lesezeichen wie folgt festlegen/entfernen:
   
 -   Klicken Sie auf den grauen Bereich auf der linken Seite des SQL-Fensters.  
   
--   Verwenden Sie STRG + UMSCHALT&lt;+ 0..&gt; 9 zum Festlegen des nummerierten Lesezeichens.  
+-   Verwenden Sie STRG + UMSCHALT + &lt; 0.. 9 &gt; zum Festlegen des nummerierten Lesezeichens.  
   
 ### <a name="bookmark-navigation"></a>Lesezeichen Navigation  
 Die Lesezeichen können wie folgt durchlaufen werden:  
   
 -   Schaltflächen "Nächstes Lesezeichen", Vorheriges Lesezeichen oben im SQL-Fenster verwenden  
   
--   Verwenden von STRG&lt;+ 0..&gt; 9 zum Suchen des nummerierten Lesezeichens  
+-   Verwenden von STRG + &lt; 0.. 9 &gt; zum Suchen des nummerierten Lesezeichens  
   
 -   Verwenden von Schaltflächen gehe zu oder Quelle anzeigen im Dialogfeld Lesezeichen verwalten  
   

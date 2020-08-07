@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c9569675fa94b04602b10d0c781fb213fcb307c8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3701cac59619634b314e138e11eae5af79b8a462
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394822"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938533"
 ---
 # <a name="generating-reports-accesstosql"></a>Erstellen von Berichten (accesstosql)
 Die Berichte bestimmter Aktivitäten, die mithilfe von Befehlen ausgeführt werden, werden in der SSMA-Konsole auf Objektstruktur Ebene generiert.  
@@ -25,7 +25,7 @@ Verwenden Sie das folgende Verfahren, um Berichte zu generieren:
   
     Die Berichte vis-a-vis-Befehle lauten:  
   
-    |SL. Nein.|Get-Help|Berichtstitel|  
+    |SL. Nein|Befehl|Berichtstitel|  
     |-|-|-|  
     |1|generieren-Assessment-Bericht|Gutamentreport &lt; n &gt; . Basi|  
     |2|Convert-Schema|Schemaconversionreport &lt; n &gt; . Basi|  
@@ -36,11 +36,11 @@ Verwenden Sie das folgende Verfahren, um Berichte zu generieren:
     > [!IMPORTANT]  
     > Ein Ausgabebericht unterscheidet sich vom Bewertungsbericht. Bei der ersten handelt es sich um einen Bericht zur Leistung eines ausgeführten Befehls, bei dem es sich um einen XML-Bericht für die programmgesteuerte Nutzung handelt.  
   
-    Für die Befehlsoptionen für Ausgabe Berichte (von SL. Nein. 2-4 oben) lesen Sie den Abschnitt [Ausführen der SSMA-Konsole &#40;Access Token&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md) .  
+    Für die Befehlsoptionen für Ausgabe Berichte (von SL. Nein 2-4 oben) lesen Sie den Abschnitt [Ausführen der SSMA-Konsole &#40;Access Token&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md) .  
   
 2.  Geben Sie den Umfang der im Ausgabebericht gewünschten Details mithilfe der berichtsausführlichkeits-Einstellungen an:  
   
-    |SL. Nein.|Befehl und Parameter|Ausgabe Beschreibung|  
+    |SL. Nein|Befehl und Parameter|Ausgabe Beschreibung|  
     |-|-|-|  
     |1|Verbose = "false"|Generiert einen zusammengefassten Bericht der Aktivität.|  
     |2|Verbose = "true"|Generiert einen zusammengefassten und detaillierten Statusbericht für jede Aktivität.|  
@@ -50,7 +50,7 @@ Verwenden Sie das folgende Verfahren, um Berichte zu generieren:
   
 3.  Geben Sie den Umfang der von Ihnen gewünschten Details in den Fehlerberichten mithilfe der Einstellungen für die Fehlerberichterstattung an:  
   
-    |SL. Nein.|Befehl und Parameter|Ausgabe Beschreibung|  
+    |SL. Nein|Befehl und Parameter|Ausgabe Beschreibung|  
     |-|-|-|  
     |1|Report-Errors = "false"|Keine Details zu Fehler-/Warnungs-/Information-Meldungen.|  
     |2|Report-Errors = "true"|Ausführliche Fehler-/Warnungs-/Information-Meldungen.|  

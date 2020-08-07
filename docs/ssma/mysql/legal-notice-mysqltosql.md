@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3927e0a312c077f1d39405ca5526d7f3c0099342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: aaf9660b77e943e2350c2dc32c73f013ae68dde8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67909035"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935308"
 ---
 # <a name="legal-notice-mysqltosql"></a>Rechtliche Hinweise (MySqlToSql)
 Diese Dokumentation, einschließlich der darin enthaltenen Beispielanwendungen, wird nur zu Informationszwecken zur Verfügung gestellt. Es werden keine Gewährleistungen übernommen, weder ausdrücklich noch konkludent. Die in dieser Dokumentation enthaltenen Angaben und Daten, einschließlich URLs und anderen Verweisen auf Internetwebsites, können ohne vorherige Ankündigung geändert werden. Das vollständige Risiko der Nutzung oder der Ergebnisse der Nutzung dieser Dokumentation liegt bei dem Benutzer.  

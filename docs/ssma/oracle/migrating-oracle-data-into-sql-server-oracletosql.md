@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Oracle Data Migration, Client-Side Migration
 - Oracle Data Migration,Server-Side Migration
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: f617b850482383400d599d7608644f27da58f17e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 16f2223c49fc6fac5b096263c90aadc4a0a2ab61
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293817"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933481"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Migrieren von Oracle-Daten zu SQL Server (OracleToSQL)
 Nachdem Sie die konvertierten Objekte mit erfolgreich synchronisiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie Daten von Oracle zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

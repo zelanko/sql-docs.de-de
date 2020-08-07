@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 160d4784-d108-4705-932d-763558912804
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 664a1f861603c9ff52355660b4601a482d55ffbb
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: f0fa992181878a185fc6ba12719f3b2edc5fa9ae
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87390675"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932941"
 ---
 # <a name="user-interface-reference-oracletosql"></a>Referenz zur Benutzeroberfläche (OracleToSQL)
 Dieser Abschnitt enthält Hilfe Themen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für Oracle.  

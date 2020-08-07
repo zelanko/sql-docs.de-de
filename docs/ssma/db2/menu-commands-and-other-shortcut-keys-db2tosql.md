@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3622c9928946e8708097f535b311a70b2a996bf3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074152"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933721"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Menübefehle und andere Tastenkombinationen (DB2ToSQL)
 In den folgenden Abschnitten werden die Tastenkombinationen für den Zugriff auf Menübefehle und andere Tastenkombinationen beschrieben, die in den verschiedenen Dialogfeldern von SSMA für DB2-Anwendungen verwendet werden.  
@@ -79,7 +79,7 @@ Um auf das Menü Extras zuzugreifen, wird die Tastenkombination ALT + T verwende
 |Erstellen Sie einen Bericht.|Alt + T + C|  
 |Schema konvertieren.|Alt + T + N oder STRG + R|  
 |Aktualisieren Sie aus der DB2-Datenbank.|ALT+T + R|  
-|Synchronisieren Sie mit SQL Server oder SQL Azure Datenbank.|Alt + T + S|  
+|Synchronisieren Sie mit SQL Server oder Azure SQL-Datenbank.|Alt + T + S|  
 |Als Skript speichern.|Alt + T + A|  
 |Migrieren von Daten|ALT+T + M|  
 |Beendet den aktuellen Vorgang.|Alt + T + O|  

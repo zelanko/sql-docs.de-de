@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: bb652a1d3a0d9c5ee08a936e24e521948d264fa8
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d3835e8988a04082d0f4666e0564029de3f767a9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823302"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933511"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Arbeiten mit SSMA-Projekten (DB2ToSQL)
 Wenn Sie DB2-Datenbanken zu migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , erstellen Sie zunächst ein SSMA-Projekt. Das Projekt ist eine Datei, die die folgenden Informationen enthält:  
@@ -75,7 +75,7 @@ Wenn Sie Daten aus DB2-Datenbanken zu migrieren möchten [!INCLUDE[ssNoVersion](
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL-Datenbank  
+    -   Azure SQL-Datenbank  
   
 ## <a name="customizing-project-settings"></a>Anpassen von Projekteinstellungen  
 Zusätzlich zum Definieren von Standard Projekteinstellungen, die für alle neuen SSMA-Projekte gelten, können Sie die Einstellungen für jedes Projekt anpassen. Weitere Informationen finden Sie unter [Festlegen von Projektoptionen &#40;oracleto SQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md) und verwandten Abschnitten.  

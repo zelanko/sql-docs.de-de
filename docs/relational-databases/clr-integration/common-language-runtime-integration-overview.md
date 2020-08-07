@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2982f3c078e23529eff2c8cb050ea66628d49da
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 57f889fdbf7e52b470c1ceb8b4015cad78e4cad9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864521"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934359"
 ---
 # <a name="common-language-runtime-integration"></a>Common Language Runtime-Integration
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +41,13 @@ Sie können sich auch dieses 6-minütige Video ansehen, das Ihnen zeigt, wie Sie
 
 ## <a name="when-to-use-clr-modules"></a>Wann sollten CLR-Module verwendet werden?
 
-Mithilfe der CLR-Integration können Sie komplexe Funktionen implementieren, die in .NET Framework verfügbar sind, z. b. reguläre Ausdrücke, Code für den Zugriff auf externe Ressourcen (Server, Webdienste, Datenbanken), benutzerdefinierte Verschlüsselung usw. Zu den Vorteilen der serverseitigen CLR-Integration gehören:
+Mithilfe der CLR-Integration können Sie komplexe Funktionen implementieren, die in .NET Framework verfügbar sind, wie z. b. reguläre Ausdrücke, Code für den Zugriff auf externe Ressourcen (Server, Webdienste, Datenbanken), benutzerdefinierte Verschlüsselung usw. Zu den Vorteilen der serverseitigen CLR-Integration gehören:
   
 -   **Ein besseres Programmiermodell.** Die .NET Framework-Sprachen sind in vielerlei Hinsicht umfassender als Transact-SQL. Sie bieten Konstrukte und Fähigkeiten, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Entwicklern zuvor nicht zur Verfügung standen. Entwickler können zudem die leistungsfähigen Funktionen der .NET Framework-Bibliothek nutzen, die einen umfassenden Satz Klassen bereitstellt. Diese ermöglichen es, Programmierungsprobleme schnell und effizient zu lösen.  
   
 -   **Verbesserte Sicherheit und Zuverlässigkeit.** Verwalteter Code wird in einer von der Datenbank-Engine gehosteten Common Language Runtime-Umgebung ausgeführt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nutzt dies, um eine sicherere Alternative zu den erweiterten gespeicherten Prozeduren zu bieten, die in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wurden.  
   
--   **Fähigkeit, Datentypen und Aggregatsfunktionen zu definieren.** Benutzerdefinierte Typen und benutzerdefinierte Aggregate sind zwei neue verwaltete Datenbankobjekte, die die Speicher- und Abfragefunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erweitern.  
+-   **Fähigkeit, Datentypen und Aggregatsfunktionen zu definieren.** Benutzerdefinierte Typen und benutzerdefinierte Aggregate sind zwei neue verwaltete Datenbankobjekte, die die Speicher-und Abfragefunktionen von erweitern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Rationalisierte Entwicklung durch eine standardisierte Umgebung.** Die Datenbankentwicklung ist in zukünftige Versionen der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET-Entwicklungsumgebung integriert. Entwickler verwenden für das Entwickeln und Debuggen von Datenbankobjekten und Skripts dieselben Tools wie für das Schreiben von .NET Framework-Komponenten und -Diensten auf mittlerer Ebene oder Clientebene.  
   

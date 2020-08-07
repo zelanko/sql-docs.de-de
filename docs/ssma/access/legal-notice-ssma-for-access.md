@@ -11,14 +11,14 @@ helpviewer_keywords:
 - disclaimer
 - legal notice
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d22a41b67d4b33d573a1c3ecc5f2235560cceea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5c15aa77726228d4bb7e55cd450affdfe5e4da42
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947513"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938223"
 ---
 # <a name="legal-notice-ssma-for-access"></a>Rechtliche Hinweise (SSMA für Access)
 Diese Dokumentation, einschließlich der darin enthaltenen Beispielanwendungen, wird nur zu Informationszwecken zur Verfügung gestellt. Es werden keine Gewährleistungen übernommen, weder ausdrücklich noch konkludent. Die in dieser Dokumentation enthaltenen Angaben und Daten, einschließlich URLs und anderen Verweisen auf Internetwebsites, können ohne vorherige Ankündigung geändert werden. Das vollständige Risiko der Nutzung oder der Ergebnisse der Nutzung dieser Dokumentation liegt bei dem Benutzer.  

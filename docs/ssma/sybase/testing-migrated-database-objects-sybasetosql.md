@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6fb469dfcaaec33a03681bfb64f411851df0400e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 360325063258b2bc208115f91357f341c68b7150
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020916"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934599"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>Testen von migrierten Datenbankobjekten (SybaseToSQL)
 Microsoft SQL Server Migration Assistant für Sybase Tester (SSMA Tester) testet automatisch die Datenbankobjekt Konvertierung und die von SSMA vorgenommene Daten Migration. Nachdem alle SSMA-Migrations Schritte abgeschlossen sind, überprüfen Sie mithilfe von SSMA Tester, ob konvertierte Objekte auf dieselbe Weise funktionieren und dass alle Daten ordnungsgemäß übertragen wurden.  
@@ -43,14 +43,14 @@ SSMA Tester führt Objekte aus, die für das Testen auf Sybase und deren Entspre
 -   Sind die Resultsets identisch?  
   
 > [!NOTE]  
-> Hingewiesen! Verwenden Sie SSMA Tester niemals auf Produktionssystemen. Während der Tester-Ausführung werden das Quell Schema und die Daten geändert. In der Zwischenzeit ist die Wiederherstellung des ursprünglichen Zustands für einige Typen von getestetem Code möglicherweise nicht möglich.  
+> Achtung! Verwenden Sie SSMA Tester niemals auf Produktionssystemen. Während der Tester-Ausführung werden das Quell Schema und die Daten geändert. In der Zwischenzeit ist die Wiederherstellung des ursprünglichen Zustands für einige Typen von getestetem Code möglicherweise nicht möglich.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
 Wenn Sie SSMA Tester verwenden möchten, installieren Sie SSMA Sybase Extension Pack mit aktivierter Option **Tester-Datenbank installieren** .  
   
 Überprüfen Sie außerdem Folgendes:  
   
--   Sybase-OLE DB Anbieter wird auf dem Computer installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf dem ausgeführt wird.  
+-   Sybase-OLE DB Anbieter wird auf dem Computer installiert, auf dem ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Die CLR-Integration (Common Language Runtime) wurde auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Engine aktiviert.  
   

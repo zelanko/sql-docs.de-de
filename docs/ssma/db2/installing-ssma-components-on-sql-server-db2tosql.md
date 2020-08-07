@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3801526bfec64fa8efeb992ec7552a232d2e13c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 18d0ff301ae0c15a4d8fc8bb81d33553c3f87e12
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989508"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937187"
 ---
 # <a name="installing-ssma-components-on-sql-server-db2tosql"></a>Installieren von SSMA-Komponenten auf SQL Server (DB2ToSQL)
-In dieser Version von SSMA ist keine separate Installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für das SSMA-Erweiterungspaket erforderlich, das die Datenmigration unterstützt, und DB2-Anbieter, um die Server-zu-Server-Konnektivität zu ermöglichen.  
+In dieser Version von SSMA ist keine separate Installation für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das SSMA-Erweiterungspaket erforderlich, das die Datenmigration unterstützt, und DB2-Anbieter, um die Server-zu-Server-Konnektivität zu ermöglichen.  
   
 ## <a name="ssma-for-db2-extension-pack"></a>SSMA für DB2-Erweiterungspaket  
-Das SSMA-Erweiterungspaket fügt der Datenbank in der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ein Schema hinzu. Das **sysdb** -Schema enthält die Tabellen und gespeicherten Prozeduren, die zum Migrieren von Daten erforderlich sind, sowie die benutzerdefinierten Funktionen, die DB2-Systemfunktionen emulieren.  
+Das SSMA-Erweiterungspaket fügt der Datenbank in der angegebenen Instanz von ein Schema hinzu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Das **sysdb** -Schema enthält die Tabellen und gespeicherten Prozeduren, die zum Migrieren von Daten erforderlich sind, sowie die benutzerdefinierten Funktionen, die DB2-Systemfunktionen emulieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Installieren von SSMA für DB2-Client &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  

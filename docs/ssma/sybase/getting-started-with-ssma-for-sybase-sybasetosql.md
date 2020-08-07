@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 57a7a4d3f8bee507c11700f383d5bb02adb4172c
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: cd6e32470673a87a410530298972b251d2807e4b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293937"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931810"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Ersten Schritte mit SSMA für SAP ASE (sybasedesql)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Mit Migration Assistant (SSMA) für SAP ASE können Sie Datenbankschemas für SAP Adaptive Server Enterprise (ASE) schnell in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbankschemas konvertieren, die resultierenden Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank hochladen und Daten aus SAP ASE zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank migrieren.  
@@ -97,7 +97,7 @@ SSMA enthält die folgenden Menüs:
 |--------|---------------|  
 |**File**|Enthält Befehle für das Arbeiten mit Projekten, das Herstellen einer Verbindung mit SAP ASE und das Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank.|  
 |**Bearbeiten**|Enthält Befehle zum Suchen und arbeiten mit Text auf den Detailseiten, z. b [!INCLUDE[tsql](../../includes/tsql-md.md)] . zum Kopieren aus dem SQL-Detailbereich. Enthält auch die Option **Lesezeichen verwalten** , in der eine Liste vorhandener Lesezeichen angezeigt wird. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.|  
-|**Ansicht**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . Dadurch werden die Objekte zwischen Sybase-metadatenexplorer und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure metadatenexplorer synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** zum Verwalten der Layouts.|  
+|**Anzeigen**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . Dadurch werden die Objekte zwischen Sybase-metadatenexplorer und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure metadatenexplorer synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** zum Verwalten der Layouts.|  
 |**Extras**|Enthält Befehle zum Erstellen von Berichten, Exportieren von Daten und Migrieren von Objekten und Daten. Bietet auch Zugriff auf die Dialogfelder **globale Einstellungen** und **Projekteinstellungen** .|  
 |**Tester**|Enthält Befehle zum Erstellen von Testfällen, Anzeigen von Testergebnissen und Befehlen für die Verwaltung der Datenbanksicherung.|  
 |**Hilfe**|Bietet Zugriff **auf die** SSMA-Hilfe und das Dialogfeld Info.|  

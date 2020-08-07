@@ -8,16 +8,16 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: rajsell
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 36e36060e16ff85ba2b1fa58d9d900231cf6581f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5a508a31d510d4004ece8d82c01615352739dce
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258525"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951215"
 ---
 # <a name="overview-of-the-workload-comparison-process"></a>Übersicht über den Arbeits Auslastungs Vergleichsprozess
 
@@ -63,6 +63,6 @@ Die letzte Phase des Prozesses besteht darin, einen Analysebericht mithilfe der 
 - Wenn eine oder mehrere Komponenten fehlen, wird eine Seite mit Links zu Downloads angezeigt, die angezeigt wird, wenn Sie versuchen, einen neuen Analysebericht zu generieren (Internet Verbindung erforderlich).
 - Um einen Bericht anzuzeigen, der in einer früheren Version des Tools generiert wurde, müssen Sie zuerst das Schema aktualisieren.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - Informationen zum Erstellen einer Ablauf Verfolgungs Datei mit einem Protokoll von Ereignissen, die auf einem Server auftreten, finden Sie im Artikel aufzeichnen [einer Ablauf Verfolgung in Assistent für Datenbankexperimente](database-experimentation-assistant-capture-trace.md).
