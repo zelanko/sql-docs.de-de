@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d9bec916103214169f549a0b555a46fd0d65fdb
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67904904"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862451"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Arbeiten mit SSMA-Projekten (MySqlToSql)
 Um MySQL-Datenbanken zu SQL Server oder SQL Azure zu migrieren, müssen Sie zunächst ein SSMA-Projekt erstellen. Das Projekt ist eine Datei, die die folgenden Informationen enthält:  
@@ -57,7 +57,7 @@ SSMA enthält mehrere Einstellungen zum umrechnen und Laden von Datenbanken, zum
   
 -   Informationen zu den Einstellungen für die Datentyp Zuordnung finden Sie unter [Project Settings &#40;Type Mapping&#41; &#40;mysqlto SQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   
--   Weitere Informationen zu SQL Azure Einstellungen finden Sie unter [Project Settings &#40;Azure SQL DB&#41; &#40;mysqldesql&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
+-   Informationen zu SQL Azure Einstellungen finden Sie unter [Projekteinstellungen &#40;Azure SQL-Datenbank&#41; &#40;mysqldesql&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
   
 > [!NOTE]  
 > Die SQL Azure Einstellungen werden nur angezeigt, wenn Sie beim Erstellen eines Projekts **Migration zum SQL Azure** auswählen.  
@@ -73,7 +73,7 @@ Wenn Sie Daten aus MySQL-Datenbanken zu SQL Server oder SQL Azure migrieren möc
   
 3.  Geben Sie im Feld **Speicherort** einen Ordner für das Projekt ein, oder wählen Sie einen Ordner aus.  
   
-4.  Wählen Sie in der Dropdown Liste **Migration zu** die Version des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziels aus, die für die Migration verwendet wird. Die verfügbaren Optionen sind:  
+4.  Wählen Sie in der Dropdown Liste **Migration zu** die Version des Ziels aus, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Migration verwendet wird. Die verfügbaren Optionen sind:  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -83,7 +83,7 @@ Wenn Sie Daten aus MySQL-Datenbanken zu SQL Server oder SQL Azure migrieren möc
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
-    -   Azure SQL-Datenbank  
+    -   Azure SQL-Datenbank  
   
 Und klicken Sie dann auf **OK** .  
   
@@ -133,7 +133,7 @@ Der nächste Schritt des Migrations Vorgangs ist das [Herstellen einer Verbindun
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Herstellen einer Verbindung mit MySQL &#40;mysqlto SQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
-[Migrieren von MySQL-Datenbanken zu SQL Server-Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrieren von MySQL-Datenbanken zu SQL Server Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [Herstellen einer Verbindung mit SQL Server &#40;mysqlto SQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
 [Herstellen einer Verbindung mit Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   

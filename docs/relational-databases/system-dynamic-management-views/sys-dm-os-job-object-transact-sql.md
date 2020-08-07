@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dfed6ad282fe702b0f7f3fa484476524118805ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e421efbd15f15d56b6446fc39f73bcba04478800
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754154"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865278"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,9 +52,9 @@ Ein Auftrags Objekt ist ein Windows-Konstrukt, das CPU-, Arbeitsspeicher-und e/A
 |process_physical_affinity|**nvarchar (3072)**|Bitmasken, die beschreiben, welche logischen Prozessoren der SQL Server Prozess in den einzelnen Prozessor Gruppen verwenden kann. Der Wert in dieser Spalte wird durch ein oder mehrere Wertpaare gebildet, die jeweils in geschweiften Klammern eingeschlossen sind. In jedem Paar ist der erste Wert die Prozessor Gruppennummer, und der zweite Wert ist die Affinitäts Bitmaske für diese Prozessor Gruppe. Der-Wert bedeutet beispielsweise `{{0,a}{1,2}}` , dass die Affinitäts Maske für die Prozessor Gruppe `0` `a` ( `1010` in Binär Weise, die angibt, dass die Prozessoren 2 und 4 verwendet werden) und die Affinitäts Maske für die Prozessor Gruppe `1` (in Binär Weise, die `2` `10` angibt, dass Prozessor 2 verwendet wird) ist.|
   
 ## <a name="permissions"></a>Berechtigungen  
-Auf verwaltete SQL-Datenbank-Instanz ist die- `VIEW SERVER STATE` Berechtigung erforderlich. In der SQL-Datenbank ist die `VIEW DATABASE STATE`-Berechtigung für die Datenbank erforderlich.  
+In SQL verwaltete Instanz ist die- `VIEW SERVER STATE` Berechtigung erforderlich. In der SQL-Datenbank ist die `VIEW DATABASE STATE`-Berechtigung für die Datenbank erforderlich.  
  
 ## <a name="see-also"></a>Weitere Informationen  
 
-Informationen zu verwalteten Instanzen finden Sie unter [verwaltete SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+Informationen zu verwalteten Instanzen finden Sie unter [SQL verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   

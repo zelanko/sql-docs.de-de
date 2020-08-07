@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 68fbac69959d423477750a69bb6e5b06ab62af2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02db151ff7adbc2d2595ed0eeda385c5a0367126
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083475"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864777"
 ---
-# <a name="connect-to-azure-sql-db--sybasetosql"></a>Herstellen einer Verbindung mit Azure SQL-DB (SybaseToSQL)
-Verwenden Sie das Dialogfeld Verbindung mit Azure SQL-Datenbank herstellen, um eine Verbindung mit der Azure SQL DB-Datenbank herzustellen, die Sie migrieren möchten.  
+# <a name="connect-to-azure-sql-database--sybasetosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (sybaseto SQL)
+Verwenden Sie das Dialogfeld Verbindung mit Azure SQL-Datenbank herstellen, um eine Verbindung mit der Azure SQL-DatenbankDatenbank herzustellen, die Sie migrieren möchten.  
   
-Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü Datei die Option **mit Azure SQL**- **Datenbank** verbinden aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl **erneut eine Verbindung mit der Azure SQL** -Datenbank her.  
+Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit Azure SQL-Datenbank verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl **erneut eine Verbindung mit der Azure SQL-Datenbank her.**  
   
 ## <a name="options"></a>Optionen  
-**Server Name**  
+**Servername**  
   
-Wählen Sie den Server Namen für die Verbindung mit Azure SQL-Datenbank aus, oder geben Sie diesen  
+Geben Sie den Server Namen für die Verbindung mit der Azure SQL-Datenbank ein  
   
 **Datenbank**  
   
@@ -35,7 +35,7 @@ Wählen **Sie den Daten** Banknamen aus, oder geben Sie ihn ein.
   
 **Benutzername**  
   
-Geben Sie den Benutzernamen ein, den SSMA zum Herstellen einer Verbindung mit der Azure SQL-Datenbank verwendet.  
+Geben Sie den Benutzernamen ein, den SSMA zum Herstellen einer Verbindung mit der Azure SQL-DatenbankDatenbank verwendet.  
   
 **Kennwort**  
   
@@ -46,7 +46,7 @@ Geben Sie das Kennwort für den Benutzernamen ein.
 SSMA empfiehlt eine verschlüsselte Verbindung mit Azure SQL-Datenbank.  
   
 ## <a name="create-azure-database"></a>Azure-Datenbank erstellen  
-Wenn sich keine Datenbanken im Azure SQL-DB-Konto befinden, können Sie die erste Datenbank erstellen.  
+Wenn sich keine Datenbanken im Azure SQL-Daten Bankkonto befinden, können Sie die erste Datenbank erstellen.  
   
 Führen Sie die folgenden Schritte aus, um eine neue Datenbank zum ersten Mal zu erstellen:  
   
@@ -56,11 +56,11 @@ Führen Sie die folgenden Schritte aus, um eine neue Datenbank zum ersten Mal zu
   
     1.  **(keine Datenbanken gefunden)** , die deaktiviert und ständig ausgegraut sind  
   
-    2.  **Erstellen Sie eine neue Datenbank** , die nur aktiviert ist, wenn keine Datenbanken im Azure SQL-DB-Konto vorhanden sind. Wenn Sie auf dieses Menü Element klicken, ist das Dialogfeld Azure-Datenbank erstellen mit Datenbankname und-Größe vorhanden.  
+    2.  **Erstellen Sie eine neue Datenbank** , die nur aktiviert ist, wenn keine Datenbanken für das Azure SQL-Daten Bankkonto vorhanden sind. Wenn Sie auf dieses Menü Element klicken, ist das Dialogfeld Azure-Datenbank erstellen mit Datenbankname und-Größe vorhanden.  
   
 3.  Zum Zeitpunkt der Erstellung der Datenbank werden die folgenden beiden Parameter als Eingabe angegeben:  
   
     1.  **Datenbankname:** Geben Sie den Datenbanknamen ein.  
   
-    2.  **Datenbankgröße:** Wählen Sie die Datenbankgröße aus, die Sie im Azure SQL-DB-Konto erstellen müssen.  
+    2.  **Datenbankgröße:** Wählen Sie die Datenbankgröße aus, die Sie im Azure SQL-Daten Bankkonto erstellen müssen.  
   

@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 1601ae2430ced8a30a04d8ab52d97dbb9bbb095a
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: c456c383625f43a5fef7f675edcd86ede6ca2515
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477452"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862401"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Neues in SSMA für Oracle (oracleto SQL)
 
@@ -159,16 +159,16 @@ Die Version 8.1 von SSMA für Oracle wurde durch gezielte Korrekturen ergänzt, 
 
 Das v 8.0-Release von SSMA für Oracle wurde durch gezielte Korrekturen verbessert, die zur Verbesserung der Qualität und der konvertierungsmetriken entworfen wurden. Diese Version bietet auch die folgenden neuen Features:
 
-* Unterstützung für **verwaltete Azure SQL-Datenbank-Instanz** als Ziel. Sie können jetzt neue Projekte erstellen, die auf verwaltete Azure SQL-Datenbank-Instanz abzielen:
+* Unterstützung für **Azure SQL-verwaltete Instanz** als Ziel. Sie können jetzt neue Projekte erstellen, die auf Azure SQL-verwaltete Instanz abzielen:
 
-  ![SQL-DB-Mi-Projekt](../media/ssma-newproject-sqldbmi.png)
+  ![SQL-Mi-Projekt](../media/ssma-newproject-sqldbmi.png)
 
   > [!NOTE]
-  > Das SSMA für Oracle-Erweiterungspaket wurde ebenfalls aktualisiert, um Remote Installationen auf verwaltete Azure SQL-Datenbank-Instanz zuzulassen:
+  > Das SSMA für Oracle Extension Pack wurde ebenfalls aktualisiert und ermöglicht Remote Installationen auf Azure SQL-verwaltete Instanz:
   >
   > ![SSMA für Oracle-Erweiterungspaket](../media/ssma-oracle-ext-pack.png)
 
-  Einige Features, einschließlich Tester und Server seitiger Datenmigration, werden nicht unterstützt, wenn Sie auf verwaltete Azure SQL-Datenbank-Instanz abzielen. Weitere Informationen hierzu finden Sie [hier](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
+  Einige Features, einschließlich Tester und Server seitiger Datenmigration, werden nicht unterstützt, wenn Sie auf Azure SQL-verwaltete Instanz abzielen. Weitere Informationen hierzu finden Sie [hier](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
 
 * **Korrektur Ratgeber**nach der Konvertierung. Weitere Informationen hierzu [finden Sie hier](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 

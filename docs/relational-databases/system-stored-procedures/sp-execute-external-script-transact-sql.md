@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/28/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790397"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877963"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`Eine Liste von Werten für die Eingabeparameter, die vom externen Skript verwendet werden.  
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 > [!IMPORTANT]
 > Die Abfrage Struktur wird von SQL Machine Learning gesteuert, und Benutzer können keine beliebigen Vorgänge für die Abfrage ausführen.
@@ -177,7 +177,7 @@ Die beiden Parameter sind **input_data_1_partition_by_columns** und **input_data
 Sie können das Skript parallel ausführen, indem Sie angeben `@parallel=1` . Wenn die Eingabe Abfrage parallelisiert werden kann, sollten Sie `@parallel=1` als Teil ihrer Argumente auf festlegen `sp_execute_external_script` . Standardmäßig arbeitet der Abfrageoptimierer unter `@parallel=1` Tabellen mit mehr als 256 Zeilen, aber wenn Sie diesen explizit behandeln möchten, enthält dieses Skript den Parameter als Demonstration.
 
 > [!Tip]
-> Für Trainingsworkloads können Sie `@parallel` mit einem beliebigen arbiträren Trainingsskript verwenden, sogar solche, die nicht von Microsoft stammende RX-Algorithmen verwenden In der Regel bieten nur RevoScaleR-Algorithmen (mit dem RX-Präfix) Parallelität in Trainingsszenarios in SQL Server. Mit den neuen Parametern in SQL Server vNext können Sie jedoch ein Skript parallelisieren, das Funktionen aufruft, die nicht speziell mit dieser Funktion entwickelt wurden.
+> Für Trainingsworkloads können Sie `@parallel` mit einem beliebigen arbiträren Trainingsskript verwenden, sogar solche, die nicht von Microsoft stammende RX-Algorithmen verwenden In der Regel bieten nur RevoScaleR-Algorithmen (mit dem RX-Präfix) Parallelität in Trainingsszenarios in SQL Server. Mit den neuen Parametern in SQL Server 2019 und höher können Sie jedoch ein Skript parallelisieren, das Funktionen aufruft, die nicht speziell mit dieser Funktion entwickelt wurden.
 ::: moniker-end
 
 ### <a name="streaming-execution-for-python-and-r-scripts"></a>Streaming-Ausführung für python-und R-Skripts  
@@ -189,7 +189,7 @@ Sowohl der `@r_rowsPerRead` Parameter für das Streaming als auch das- `@paralle
 > [!NOTE]  
 > Streaming und parallele Verarbeitung werden nur in der Enterprise Edition unterstützt. Sie können die Parameter in den Abfragen in der Standard Edition einschließen, ohne einen Fehler zu erhalten, aber die Parameter haben keine Auswirkung, und R-Skripts werden in einem einzelnen Prozess ausgeführt.  
   
-## <a name="restrictions"></a>Einschränkungen  
+## <a name="restrictions"></a>Beschränkungen  
 
 ### <a name="data-types"></a>Datentypen
 

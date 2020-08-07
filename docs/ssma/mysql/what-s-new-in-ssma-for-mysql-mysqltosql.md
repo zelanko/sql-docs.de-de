@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 0511e67a355f960dcc3af90324142d5662b38627
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 7c9b0a65da5038f2b8871ae9ae680d3a8bd9bf33
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477362"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863466"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Neuerungen in SSMA für MySQL (MySqlToSql)
 
@@ -114,9 +114,9 @@ Die Version 8.1 von SSMA für MySQL wurde durch gezielte Korrekturen ergänzt, d
 
 Das v 8.0-Release von SSMA für MySQL wurde durch gezielte Korrekturen verbessert, die zur Verbesserung der Qualität und der konvertierungsmetriken entworfen wurden. Diese Version bietet auch die folgenden neuen Features:
 
-* Unterstützung für **verwaltete Azure SQL-Datenbank-Instanz** als Ziel. Sie können jetzt neue Projekte erstellen, die auf verwaltete Azure SQL-Datenbank-Instanz abzielen:
+* Unterstützung für **Azure SQL-verwaltete Instanz** als Ziel. Sie können jetzt neue Projekte erstellen, die auf Azure SQL-verwaltete Instanz abzielen:
 
-  ![SQL-DB-Mi-Projekt](../media/ssma-newproject-sqldbmi.png)
+  ![SQL-Mi-Projekt](../media/ssma-newproject-sqldbmi.png)
 
 * **Korrektur Ratgeber**nach der Konvertierung. Weitere Informationen hierzu [finden Sie hier](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -238,7 +238,7 @@ Die Wartungsversion von SSMA für MySQL vom Januar 2016 enthält die folgenden �
 
 Die Version vom Juli 2014 von SSMA für MySQL enthält die folgenden Änderungen:
   
-* Verbesserte Azure SQL-DB-Code Konvertierung.
+* Verbesserte Code Konvertierung in Azure SQL-Datenbank.
 * Die Erweiterungspaket Funktionalität wurde zur Unterstützung von Azure SQL-Datenbank in das Schema verschoben.
 * Leistungsverbesserungen, die für Datenbanken mit mehr als 10.000 Objekten getestet wurden.
 * UI-Verbesserungen für den Umgang mit einer großen Anzahl von Objekten.

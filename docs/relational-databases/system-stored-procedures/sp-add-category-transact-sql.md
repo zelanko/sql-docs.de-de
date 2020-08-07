@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 251c9992285084123df7afb3c27678c2886b531c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 323a86b4efbaa63d8858341c68908e30258d4889
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880005"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865288"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85880005"
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+ > In [Azure SQL verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)werden die meisten, aber nicht alle SQL Server-Agent Features derzeit unterstützt. Ausführliche Informationen finden Sie [unter Unterschiede von Azure SQL verwaltete Instanz T-SQL-SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ sp_add_category
 ## <a name="arguments"></a>Argumente  
 `[ @class = ] 'class'`Die Klasse der Kategorie, die hinzugefügt werden soll. die *Klasse* ist vom Datentyp **varchar (8)** und hat den Standardwert Job. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |JOB|Fügt eine Auftragskategorie hinzu|  
 |ALERT|Fügt eine Warnungskategorie hinzu|  
@@ -55,11 +55,11 @@ sp_add_category
   
 `[ @type = ] 'type'`Der Typ der Kategorie, die hinzugefügt werden soll. *Type ist vom Datentyp* **varchar (12)** und hat den Standardwert **local**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |LOCAL|Lokale Auftragskategorie|  
 |MultiServer|Eine Multiserver-Auftrags Kategorie.|  
-|NONE|Eine Kategorie für eine andere Klasse als Job **.**|  
+|Keine|Eine Kategorie für eine andere Klasse als Job **.**|  
   
 `[ @name = ] 'name'`Der Name der Kategorie, die hinzugefügt werden soll. Der Name muss innerhalb der angegebenen Klasse eindeutig sein. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
   

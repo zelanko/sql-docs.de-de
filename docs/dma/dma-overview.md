@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: d74cb91c6e0cb9bc9a1c8dce53f8e93d355df5d2
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885797"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823602"
 ---
-# <a name="overview-of-data-migration-assistant"></a>Übersicht über Datenmigrations-Assistent
+# <a name="overview-of-data-migration-assistant"></a>Übersicht über den Datenmigrations-Assistenten
 
 Mit dem Datenmigrations-Assistent (DMA) können Sie ein Upgrade auf eine moderne Datenplattform durchführen, indem Sie Kompatibilitätsprobleme erkennen, die sich auf die Datenbankfunktionalität in ihrer neuen SQL Server oder Azure SQL-Datenbank auswirken können. DMA empfiehlt Leistungs- und Zuverlässigkeitsverbesserungen für Ihre Zielumgebung und ermöglicht es Ihnen, Ihr Schema, Ihre Daten und abhängige Objekte vom Quellserver auf Ihren Zielserver zu verschieben.
 
@@ -30,7 +30,7 @@ Mit dem Datenmigrations-Assistent (DMA) können Sie ein Upgrade auf eine moderne
   
 ## <a name="get-data-migration-assistant"></a>Abrufen von Data Migration Assistant
 
-Um DMA zu installieren, laden Sie die neueste Version des Tools aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595)herunter, und führen Sie dann die Datei **datamigrationassistant. msi** aus.
+Um DMA zu installieren, laden Sie die neueste Version des Tools aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595)herunter, und führen Sie dann die **DataMigrationAssistant.msi** Datei aus.
 
 ## <a name="capabilities"></a>Funktionen
 
@@ -61,7 +61,7 @@ Um DMA zu installieren, laden Sie die neueste Version des Tools aus dem [Microso
 
 - Nach einer erfolgreichen Migration können Anwendungen nahtlos eine Verbindung mit dem Ziel SQL Server Datenbanken herstellen.
 
-- Bewerten Sie lokale SQL Server Integration Services (SSIS)-Pakete, die zu Azure SQL-Datenbank oder einer verwalteten Azure SQL-Datenbank-Instanz migriert werden. Mithilfe der Bewertung können Sie Probleme ermitteln, die sich auf die Migration auswirken können. Diese werden als Kompatibilitätsprobleme beschrieben und in den folgenden Kategorien organisiert:
+- Bewerten Sie lokale SQL Server Integration Services (SSIS)-Pakete, die zu Azure SQL-Datenbank oder Azure SQL verwaltete Instanz migriert werden. Mithilfe der Bewertung können Sie Probleme ermitteln, die sich auf die Migration auswirken können. Diese werden als Kompatibilitätsprobleme beschrieben und in den folgenden Kategorien organisiert:
 
   - Migrations Blockierer: ermittelt die Kompatibilitätsprobleme, die die Migration von Quellpaketen zu Azure blockieren. DMA bietet Empfehlungen, die Ihnen helfen, diese Probleme zu beheben.
 
@@ -71,19 +71,19 @@ Um DMA zu installieren, laden Sie die neueste Version des Tools aus dem [Microso
 
 Zum Ausführen einer Bewertung müssen Sie ein Mitglied der Rolle SQL Server **sysadmin** sein.
 
-## <a name="supported-source-and-target-versions"></a>Unterstützte Quell-und Zielversionen
+## <a name="supported-source-and-target-versions"></a>Unterstützte Quell- und Zielversionen
 
 DMA ersetzt alle vorherigen Versionen von SQL Server Upgrade Advisor und sollte für die meisten SQL Server Versionen verwendet werden. Die folgenden Quell-und Ziel Versionen werden unterstützt:
 
-**Quellen**
+**Sources**
 
-- SQL Server 2005
+- SQL Server 2005
 - SQL Server 2008
 - SQL Server 2008 R2
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
--  SQL Server 2017 unter Windows
+- SQL Server 2017 unter Windows
 
 **Ziele**
 
@@ -93,7 +93,7 @@ DMA ersetzt alle vorherigen Versionen von SQL Server Upgrade Advisor und sollte 
 - SQL Server 2017 unter Windows und Linux
 - SQL Server 2019
 - Azure SQL-Datenbank – Singleton
-- Azure SQL-Datenbank – Verwaltete Instanz
+- Verwaltete Azure SQL-Instanz
 - SQL Server auf einem virtuellen Azure-Computer
 
 ## <a name="see-also"></a>Weitere Informationen

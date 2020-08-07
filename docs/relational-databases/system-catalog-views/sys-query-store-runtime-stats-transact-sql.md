@@ -21,12 +21,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 484ae60390202e09625166a266c3972d927086f9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8956eda2e25ecd96df58f863743ae39d0bb88d8f
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395145"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823725"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -98,11 +98,11 @@ ms.locfileid: "87395145"
 |**min_tempdb_space_used**|**bigint**|Die Mindestanzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**max_tempdb_space_used**|**bigint**|Maximale Anzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**stdev_tempdb_space_used**|**float**|Anzahl der Seiten, die Standardabweichung für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**avg_page_server_io_reads**|**float**|Die durchschnittliche Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis:** Azure SQL Data Warehouse gibt Azure SQL-Datenbank, Mi (nicht Hyperscale), immer NULL (0) zurück.|
-|**last_page_server_io_reads**|**bigint**|Die letzte Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis:** Azure SQL Data Warehouse gibt Azure SQL-Datenbank, Mi (nicht Hyperscale), immer NULL (0) zurück.|
-|**min_page_server_io_reads**|**bigint**|Minimale Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis:** Azure SQL Data Warehouse gibt Azure SQL-Datenbank, Mi (nicht Hyperscale), immer NULL (0) zurück.|
-|**max_page_server_io_reads**|**bigint**|Maximale Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis:** Azure SQL Data Warehouse gibt Azure SQL-Datenbank, Mi (nicht Hyperscale), immer NULL (0) zurück.|
-|**stdev_page_server_io_reads**|**float**|Die Anzahl der Seiten Server-e/a-Vorgänge für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis:** Azure SQL Data Warehouse gibt Azure SQL-Datenbank, Mi (nicht Hyperscale), immer NULL (0) zurück.|
+|**avg_page_server_io_reads**|**float**|Die durchschnittliche Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis:** Azure SQL Data Warehouse, Azure SQL-Datenbank, Azure SQL-verwaltete Instanz (nicht hyperskalierung) gibt immer 0 (null) zurück.|
+|**last_page_server_io_reads**|**bigint**|Die letzte Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis:** Azure SQL Data Warehouse, Azure SQL-Datenbank, Azure SQL-verwaltete Instanz (nicht hyperskalierung) gibt immer 0 (null) zurück.|
+|**min_page_server_io_reads**|**bigint**|Minimale Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis:** Azure SQL Data Warehouse, Azure SQL-Datenbank, Azure SQL-verwaltete Instanz (nicht hyperskalierung) gibt immer 0 (null) zurück.|
+|**max_page_server_io_reads**|**bigint**|Maximale Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis:** Azure SQL Data Warehouse, Azure SQL-Datenbank, Azure SQL-verwaltete Instanz (nicht hyperskalierung) gibt immer 0 (null) zurück.|
+|**stdev_page_server_io_reads**|**float**|Die Anzahl der Seiten Server-e/a-Vorgänge für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis:** Azure SQL Data Warehouse, Azure SQL-Datenbank, Azure SQL-verwaltete Instanz (nicht hyperskalierung) gibt immer 0 (null) zurück.|
   
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert die `VIEW DATABASE STATE`-Berechtigung.  

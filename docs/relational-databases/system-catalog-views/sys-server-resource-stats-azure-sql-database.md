@@ -19,19 +19,19 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: e85a74b203d270223d215ace08a58a0eea980fa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 716d9703ca684adc653d1f43e674b7d99ae91765
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772987"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864491"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Gibt CPU-Auslastung, e/a und Speicherdaten für eine Azure SQL-verwaltete Instanz zurück. Die Daten werden in Intervallen von fünf Minuten gesammelt und aggregiert. Für jede 15-Sekunden-Berichterstattung ist eine Zeile vorhanden. Die zurückgegebenen Daten enthalten Informationen zu CPU-Nutzung, Speichergröße, E/A-Auslastung und SKU der verwalteten Instanz. Verlaufsdaten werden ungefähr 14 Tage lang beibehalten.
+Gibt CPU-Auslastung, e/a und Speicherdaten für Azure SQL-verwaltete Instanz zurück. Die Daten werden in Intervallen von fünf Minuten gesammelt und aggregiert. Für jede 15-Sekunden-Berichterstattung ist eine Zeile vorhanden. Die zurückgegebenen Daten umfassen CPU-Auslastung, Speichergröße, e/a-Auslastung und SKU. Verlaufsdaten werden ungefähr 14 Tage lang beibehalten.
 
-Die **sys. server_resource_stats** -Sicht hat abhängig von der Version der verwalteten Azure SQL-Instanz, der die Datenbank zugeordnet ist, unterschiedliche Definitionen. Berücksichtigen Sie diese Unterschiede und alle Änderungen, die Ihre Anwendung erfordert, beim Upgrade auf eine neue Serverversion.
+Die **sys. server_resource_stats** -Sicht hat abhängig von der Version der Azure SQL-verwaltete Instanz, der die Datenbank zugeordnet ist, unterschiedliche Definitionen. Berücksichtigen Sie diese Unterschiede und alle Änderungen, die Ihre Anwendung erfordert, beim Upgrade auf eine neue Serverversion.
  
   
  Die folgende Tabelle beschreibt die verfügbaren Spalten bei einem Server mit der Version 12:  
@@ -47,7 +47,7 @@ Die **sys. server_resource_stats** -Sicht hat abhängig von der Version der verw
 |virtual_core_count|INT|Stellt die Anzahl virtueller Kerne pro Instanz (8, 16 oder 24 in Public Preview) dar.|
 |avg_cpu_percent|Dezimalzahl (5, 2)|Durchschnittliche Compute-Auslastung als Prozentsatz des Limits der verwaltete Instanz Dienst Ebene, die von der Instanz verwendet wird. Sie wird als Summe der CPU-Zeit aller Ressourcenpools für alle Datenbanken in der Instanz und dividiert durch die verfügbare CPU-Zeit für diese Ebene im angegebenen Intervall berechnet.|
 |reserved_storage_mb|BIGINT|Reservierter Speicher pro Instanz (Menge an Speicherplatz, den der Kunde für die verwaltete Instanz gekauft hat)|
-|storage_space_used_mb|Decimal (18, 2)|Speicher, der von allen Dateien der verwalteten Instanzdatenbanken verwendet wird (einschließlich Benutzer-und System Datenbanken)|
+|storage_space_used_mb|Decimal (18, 2)|Speicher, der von allen Datenbankdateien in einer verwalteten Instanz verwendet wird (einschließlich Benutzer-und System Datenbanken)|
 |io_request|BIGINT|Gesamtanzahl der physischen e/a-Vorgänge innerhalb des Intervalls|
 |io_bytes_read|BIGINT|Anzahl der innerhalb des Intervalls gelesenen physischen bytes|
 |io_bytes_written|BIGINT|Anzahl physischer bytes, die innerhalb des Intervalls geschrieben wurden|
@@ -59,7 +59,7 @@ Die **sys. server_resource_stats** -Sicht hat abhängig von der Version der verw
 ## <a name="permissions"></a>Berechtigungen  
  Diese Ansicht ist für alle Benutzer Rollen verfügbar, die über Berechtigungen zum Herstellen einer Verbindung mit der **Master** -Datenbank verfügen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Daten, die von **sys. server_resource_stats** zurückgegeben werden, werden als der Gesamtwert ausgedrückt, der in Byte oder Megabyte (angegeben in Spaltennamen) verwendet wird, und nicht als avg_cpu, der als Prozentsatz der maximal zulässigen Grenzwerte für die Dienst Ebene/Leistungsstufe ausgedrückt wird, die Sie ausführen.  
  
 ## <a name="examples"></a>Beispiele  

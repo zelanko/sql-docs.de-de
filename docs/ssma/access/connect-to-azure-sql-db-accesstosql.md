@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0b26ddaef1373544e0df2fd9186cdf56fdafd801
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34e25824ee95745bd5069a6ed601318d47a96e81
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68040629"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865248"
 ---
-# <a name="connect-to-azure-sql-db-accesstosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (accesstosql)
+# <a name="connect-to-azure-sql-database-accesstosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (accesstosql)
 Verwenden Sie das Dialogfeld mit SQL Azure verbinden, um eine Verbindung mit der SQL Azure Datenbank herzustellen, die Sie migrieren möchten.  
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit SQL Azure verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl **erneut eine Verbindung mit SQL Azure her.**  
   
 ## <a name="options"></a>Optionen  
-**Server Name**  
+**Servername**  
   
 Geben Sie den Server Namen für die Verbindung mit SQL Azure ein  
   
@@ -46,8 +46,8 @@ Geben Sie das Kennwort für den Benutzernamen ein.
   
 SSMA empfiehlt eine verschlüsselte Verbindung mit SQL Azure.  
   
-## <a name="create-azure-database"></a>Azure-Datenbank erstellen  
-Führen Sie die folgenden Schritte aus, um eine neue Azure-Datenbank zu erstellen.  
+## <a name="create-database"></a>Erstellen einer Datenbank  
+Führen Sie die folgenden Schritte aus, um eine neue Datenbank zu erstellen.  
   
 1.  Klicken Sie auf die Schaltfläche Durchsuchen, die im Dialogfeld Verbindung mit SQL Azure herstellen vorhanden ist.  
   
@@ -55,7 +55,7 @@ Führen Sie die folgenden Schritte aus, um eine neue Azure-Datenbank zu erstelle
   
     1.  **(keine Datenbanken gefunden)** , die deaktiviert und ständig ausgegraut sind  
   
-    2.  **Erstellen Sie eine neue Datenbank** , die immer aktiviert ist und es dem Benutzer ermöglicht, auf SQL Azure Konto eine neue Azure-Datenbank zu erstellen. Wenn Sie auf dieses Menü Element klicken, ist das Dialogfeld Azure-Datenbank erstellen mit Datenbankname und-Größe vorhanden.  
+    2.  **Erstellen Sie eine neue Datenbank** , die immer aktiviert ist und es dem Benutzer ermöglicht, eine neue Datenbank zu erstellen. Wenn Sie auf dieses Menü Element klicken, ist das Dialogfeld Datenbank erstellen mit dem Datenbanknamen und der Größe vorhanden.  
   
 3.  Zum Zeitpunkt der Erstellung der Datenbank werden diese beiden Parameter als Eingabe angegeben.  
   

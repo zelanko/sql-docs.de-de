@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 60140559f94cdeebea935b423fbbeef24bce7a08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67d80ae6457a4b02e4520d634acfb5f06aa747ec
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929469"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823929"
 ---
-# <a name="project-settings-azure-sql-db-accesstosql"></a>Projekteinstellungen (Azure SQL-Datenbank) (accesstosql)
+# <a name="project-settings-azure-sql-database-accesstosql"></a>Projekteinstellungen (Azure SQL-Datenbank) (accesstosql)
 Mit den SQL Azure-Projekteinstellungen können Sie das SQL Azure Daten Bank Suffix konfigurieren, das im Verbindungs Dialogfeld hinzugefügt werden soll, und außerdem die Implementierung des Takt Mechanismus in SQL Azure Verbindung ermöglichen.  
   
 Der SQL Azure Bereich ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar.  
@@ -30,7 +30,7 @@ Der SQL Azure Bereich ist in den Dialogfeldern **Projekteinstellungen** und **St
   
 ## <a name="options"></a>Optionen  
   
-## <a name="connectivity"></a>Verbindung  
+## <a name="connectivity"></a>Konnektivität  
 **Taktintervall**  
   
 Gibt ein Zeitintervall an, das für den Takt Mechanismus verwendet wird, um die SQL Azure Verbindung im Format "Minutes: seconds" beizubehalten.  

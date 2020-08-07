@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: ae88f4473414e83a2ffbddee5c47fa40c552115a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565499"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823365"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Wiedergeben einer Ablauf Verfolgung in Assistent für Datenbankexperimente
 
@@ -48,7 +48,7 @@ Zunächst müssen Sie eine Ablauf Verfolgungs Wiedergabe für Ziel 1 ausführen,
     - **Speicherort der Wiedergabe Ablauf Verfolgung**: Geben Sie den Pfad zum Speichern der Ablauf Verfolgungs Dateien/der der Ablauf Verfolgungs Wiedergabe zugeordneten xevents an
 
         > [!NOTE]
-        > Für eine Azure SQL-Datenbank oder eine verwaltete Azure SQL-Datenbank-Instanz müssen Sie den SAS-URI des Azure BLOB Storage-Kontos bereitstellen.
+        > Für eine Azure SQL-Datenbank oder eine Azure SQL-verwaltete Instanz müssen Sie den SAS-URI des Azure BLOB Storage-Kontos bereitstellen.
 
 3. Vergewissern Sie sich, dass Sie die Datenbank (en) wieder hergestellt haben, indem Sie das Kontrollkästchen **Ja, ich habe die Datenbank (en) manuell wieder hergestellt** .
 

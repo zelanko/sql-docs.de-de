@@ -1,6 +1,6 @@
 ---
 title: Hosten einer Datenbank auf einer verwalteten Instanz
-description: In diesem Artikel wird beschrieben, wie Sie eine Master Data Service-Datenbank (MDS) für eine verwaltete-Instanz konfigurieren.
+description: Erfahren Sie, wie Sie eine MDS-Datenbank (Master Data Services) erstellen und konfigurieren und in einem Azure SQL-verwaltete Instanz hosten.
 ms.custom: ''
 ms.date: 07/01/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812916"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878945"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hosten einer MDS-Datenbank auf einer verwalteten Instanz
 
@@ -27,19 +27,19 @@ ms.locfileid: "85812916"
   
 ## <a name="preparation"></a>Vorbereitung
 
-Zum Vorbereiten von müssen Sie eine verwaltete Azure SQL-Datenbank-Instanz erstellen und konfigurieren und den Webanwendungs Computer konfigurieren.
+Zum Vorbereiten von müssen Sie eine Azure SQL-verwaltete Instanz erstellen und konfigurieren und den Webanwendungs Computer konfigurieren.
 
 ### <a name="create-and-configure-the-database"></a>Erstellen und Konfigurieren der Datenbank
 
-1. Erstellen Sie eine verwaltete Azure SQL-Datenbank-Instanz mit einem virtuellen Netzwerk. Weitere Informationen finden Sie unter [Schnellstart: Erstellen einer verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) .
+1. Erstellen Sie eine verwaltete Instanz mit einem virtuellen Netzwerk. Weitere Informationen finden Sie unter [Schnellstart: Erstellen eines SQL-verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) .
 
 1. Konfigurieren Sie eine Point-to-Site-Verbindung. Weitere Informationen finden Sie [unter Konfigurieren einer Point-to-Site-Verbindung mit einem vnet unter Verwendung der nativen Azure-Zertifikat Authentifizierung: Azure-Portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
-1. Konfigurieren Sie Azure Active Directory Authentifizierung mit einer verwalteten SQL-Datenbank-Instanz. Ausführliche Informationen finden Sie [unter Konfigurieren und Verwalten der Azure Active Directory Authentifizierung mit SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) .
+1. Konfigurieren Sie Azure Active Directory Authentifizierung mit SQL verwaltete Instanz. Ausführliche Informationen finden Sie [unter Konfigurieren und Verwalten der Azure Active Directory Authentifizierung mit SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) .
 
 ### <a name="configure-web-application-machine"></a>Webanwendungs Computer konfigurieren
 
-1. Installieren Sie ein Point-to-Site-Verbindungs Zertifikat und ein VPN, um sicherzustellen, dass der Computer auf die verwaltete SQL-Datenbank-Instanz zugreifen kann. Anweisungen hierzu finden Sie unter [Konfigurieren einer Point-to-Site-Verbindung mit einem vnet unter Verwendung der nativen Azure-Zertifikat Authentifizierung: Azure-Portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
+1. Installieren Sie ein Point-to-Site-Verbindungs Zertifikat und ein VPN, um sicherzustellen, dass der Computer auf die verwaltete Instanz zugreifen kann. Anweisungen hierzu finden Sie unter [Konfigurieren einer Point-to-Site-Verbindung mit einem vnet unter Verwendung der nativen Azure-Zertifikat Authentifizierung: Azure-Portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
 1. Installieren Sie die folgenden Rollen und Features:
    - Rollen:
@@ -203,7 +203,7 @@ MDS unterstützt auch Active Directory Kenn Wort Authentifizierung und SQL Serve
 
 Installieren Sie das **kumulative Update SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]wird automatisch aktualisiert.
 
-### <a name="upgrade-sql-server"></a>Upgrade von SQL Server
+### <a name="upgrade-sql-server"></a>Aktualisieren von SQL Server
 
 Möglicherweise wird der folgende Fehler angezeigt: `The client version is incompatible with the database version` nach der Installation des **kumulativen Updates SQL Server 2019**.
 ![MDS-SQLServer2019-config-Mi-upgradebug page](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "MDS-SQLServer2019-config-MI_UpgradeDBPage")

@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: c9a6d0b5eee611de7009247484dbb9b7591982d5
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 9706f1f2313594ded00cc0fa7e1335bb194b8313
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477252"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862477"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Neues in SSMA für DB2 (DB2ToSQL)
 
@@ -152,9 +152,9 @@ Die Version 8.1 von SSMA für DB2 wurde verbessert, um gezielte Korrekturen bere
 
 Das v 8.0-Release von SSMA für DB2 wurde verbessert, um gezielte Korrekturen zur Verbesserung der Qualität und Konvertierungs Metriken bereitzustellen. Diese Version bietet auch die folgenden neuen Features:
 
-* Unterstützung für **verwaltete Azure SQL-Datenbank-Instanz** als Ziel. Sie können jetzt neue Projekte erstellen, die auf verwaltete Azure SQL-Datenbank-Instanz abzielen:
+* Unterstützung für **Azure SQL-verwaltete Instanz** als Ziel. Sie können jetzt neue Projekte erstellen, die auf Azure SQL-verwaltete Instanz abzielen:
 
-  ![SQL-DB-Mi-Projekt](../media/ssma-newproject-sqldbmi.png)
+  ![SQL-Mi-Projekt](../media/ssma-newproject-sqldbmi.png)
 
 * **Korrektur Ratgeber**nach der Konvertierung. Weitere Informationen hierzu [finden Sie hier](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 

@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 04f0346e15043c105030b94eb96633e1f31b64d9
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 30c024fb1d1298e0ba2f2e4e49b2acf04d9b7619
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627308"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823895"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
@@ -94,7 +94,7 @@ Gibt die Momentaufnahme für die letzten 32 Minuten (insgesamt 128 RECS) der Res
 |**avg_data_io_percent**|Dezimalzahl (5, 2)|Durchschnittliche E/A-Auslastung als Prozentwert der maximalen Kapazität des Pools.|
 |**avg_log_write_percent**|Dezimalzahl (5, 2)|Durchschnittliche Auslastung der Schreibressourcen als Prozentwert der maximalen Kapazität des Pools.|
 |**avg_storage_percent**|Dezimalzahl (5, 2)|Durchschnittliche Speicherauslastung als Prozentwert der Speicherbeschränkung des Pools.|
-|**avg_allocated_storage_percent**|Dezimalzahl (5, 2)|Der Prozentsatz des Daten Speicherplatzes, der von allen Datenbanken im elastischen Pool zugewiesen wird. Dies ist das Verhältnis des Daten Speicherplatzes, der der maximalen Datengröße für den Pool für elastische Datenbanken zugeordnet ist. Weitere Informationen finden Sie unter: Dateispeicher Platz Verwaltung in SQL-DB.|
+|**avg_allocated_storage_percent**|Dezimalzahl (5, 2)|Der Prozentsatz des Daten Speicherplatzes, der von allen Datenbanken im elastischen Pool zugewiesen wird. Dies ist das Verhältnis des Daten Speicherplatzes, der der maximalen Datengröße für den Pool für elastische Datenbanken zugeordnet ist. Weitere Informationen finden Sie unter: Dateispeicher Platz Verwaltung in SQL-Datenbank|
 |**max_worker_percent**|Dezimalzahl (5, 2)|Maximale Anzahl der gleichzeitigen Worker (Anforderungen) als Prozentwert basierend auf der maximalen Kapazität des Pools.|
 |**max_session_percent**|Dezimalzahl (5, 2)|Maximale Anzahl der gleichzeitigen Sitzungen als Prozentwert basierend auf der maximalen Kapazität des Pools.|
 |||

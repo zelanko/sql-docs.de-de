@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: abbe0746193df3fe341b4f66086291dc1055e11b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 034d15572b214a6afbd34be78528c57241a21caa
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006618"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823853"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Erstellen und Verwalten von Projekten (accesstosql)
-Wenn Sie Access-Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Banken zu oder SQL Azure migrieren möchten, müssen Sie zunächst ein SSMA-Projekt erstellen. Das Projekt ist eine Datei mit Metadaten zu den Access-Datenbanken, die Sie zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrieren oder SQL Azure, Metadaten zur Ziel Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, die die migrierten Objekte und Daten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindungsinformationen und Projekteinstellungen empfängt.  
+Wenn Sie Access-Datenbanken zu oder SQL Azure migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , müssen Sie zunächst ein SSMA-Projekt erstellen. Das Projekt ist eine Datei mit Metadaten zu den Access-Datenbanken, die Sie zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, Metadaten zur Ziel Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, die die migrierten Objekte und Daten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindungsinformationen und Projekteinstellungen empfängt.  
   
 ## <a name="reviewing-default-project-settings"></a>Überprüfen der Standard Projekteinstellungen  
 SSMA enthält mehrere Optionen zum umrechnen und Synchronisieren von Datenbankobjekten und zum Datenkonvertierung. Die Standardeinstellung für diese Optionen eignet sich für viele Benutzer. Bevor Sie jedoch ein neues SSMA-Projekt erstellen, sollten Sie die Optionen überprüfen und ggf. die Standardeinstellungen ändern, die für alle neuen Projekte verwendet werden.  
@@ -55,7 +55,7 @@ SSMA enthält mehrere Optionen zum umrechnen und Synchronisieren von Datenbankob
 **Hinweis** SQL Azure Einstellungen stehen nur zur Verfügung, wenn beim Erstellen eines Projekts Migration zum SQL Azure ausgewählt wird.  
   
 ## <a name="creating-new-projects"></a>Erstellen neuer Projekte  
-SSMA startet, ohne ein Standard Projekt zu laden. Wenn Sie Daten aus Access-Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Banken zu oder SQL Azure migrieren möchten, müssen Sie ein Projekt erstellen.  
+SSMA startet, ohne ein Standard Projekt zu laden. Wenn Sie Daten aus Access-Datenbanken zu oder SQL Azure migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , müssen Sie ein Projekt erstellen.  
   
 **So erstellen Sie ein neues Projekt**  
   
@@ -94,7 +94,7 @@ Wenn Sie ein Projekt speichern, speichert SSMA die Projekteinstellungen und opti
         SSMA analysiert die Zugriffs Schemas und speichert die Metadaten in der Projektdatei.  
   
 ## <a name="opening-projects"></a>Öffnen von Projekten  
-Wenn Sie ein Projekt öffnen, wird es getrennt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Auf diese Weise können Sie offline arbeiten. Zum Aktualisieren von Metadaten laden Sie Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bank Objekte in oder SQL Azure. Zum Migrieren von Daten müssen Sie erneut eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindung mit herstellen oder SQL Azure.  
+Wenn Sie ein Projekt öffnen, wird es getrennt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Auf diese Weise können Sie offline arbeiten. Zum Aktualisieren von Metadaten laden Sie Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Zum Migrieren von Daten müssen Sie erneut eine Verbindung mit herstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure.  
   
 **So öffnen Sie ein Projekt**  
   
@@ -104,7 +104,7 @@ Wenn Sie ein Projekt öffnen, wird es getrennt von [!INCLUDE[ssNoVersion](../../
   
     -   Wählen Sie im Menü **Datei** die Option **Projekt öffnen**aus, suchen Sie die Projektdatei. a2ssproj, wählen Sie die Datei aus, und klicken Sie dann auf **Öffnen**.  
   
-2.  Um erneut eine Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mit herzustellen, wählen Sie im Menü **Datei** die Option **Verbindung wiederherstellen mit SQL Server**.  
+2.  Um erneut eine Verbindung mit herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wählen Sie im Menü **Datei** die Option **Verbindung wiederherstellen mit SQL Server**.  
   
 3.  Um die Verbindung mit SQL Azure wiederherzustellen, wählen Sie im Menü **Datei** die Option **Verbindung wiederherstellen mit SQL Azure.**  
   

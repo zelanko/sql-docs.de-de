@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293127"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822517"
 ---
-# <a name="connecting-to-azure-sql-db-accesstosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (accesstosql)
+# <a name="connecting-to-azure-sql-database-accesstosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (accesstosql)
 Wenn Sie Access-Datenbanken zu SQL Azure migrieren möchten, müssen Sie eine Verbindung mit der Ziel Instanz von SQL Azure herstellen. Wenn Sie eine Verbindung herstellen, erhält SSMA Metadaten zu allen Datenbanken in der Instanz von SQL Azure und zeigt Daten Bank Metadaten im SQL Azure Metadaten-Explorer an. SSMA speichert Informationen darüber, mit welcher Instanz von SQL Azure Sie verbunden sind, speichert aber keine Kenn Wörter.  
   
 Die Verbindung mit SQL Azure bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut eine Verbindung mit SQL Azure herstellen, wenn Sie eine aktive Verbindung mit dem Server herstellen möchten. Sie können offline arbeiten, bis Sie Datenbankobjekte in SQL Azure laden und Daten migrieren.  
@@ -56,7 +56,7 @@ Wenn Sie die Verbindungs Eigenschaften definieren, geben Sie auch die Datenbank 
   
 2.  Geben Sie im Dialogfeld Verbindung den Servernamen SQL Azure ein, oder wählen Sie ihn aus.  
   
-3.  Geben Sie den Datenbanknamen ein, oder **Suchen** Sie ihn.  
+3.  Geben **Sie den Daten** Banknamen ein, oder wählen Sie ihn aus.  
   
 4.  Geben Sie **username**ein, oder wählen Sie  
   
@@ -69,7 +69,7 @@ Wenn Sie die Verbindungs Eigenschaften definieren, geben Sie auch die Datenbank 
 > [!IMPORTANT]  
 > SSMA für Access unterstützt keine Verbindung mit der **Master** -Datenbank in SQL Azure.  
   
-Wenn das SQL Azure Konto keine Datenbanken enthält, können Sie die erste Datenbank mithilfe der Option **Create Azure Database** erstellen, die auf der Schaltfläche **Durchsuchen** klicken angezeigt wird.  
+Wenn das SQL Azure Konto keine Datenbanken enthält, können Sie die erste Datenbank mithilfe der Option **Create Azure Database** erstellen, die auf der Schaltfläche zum **Durchsuchen** klicken angezeigt wird.  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>Synchronisieren von SQL Azure-Metadaten  
 Metadaten zu SQL Azure-Datenbanken werden nicht automatisch aktualisiert. Bei den Metadaten in SQL Azure Metadaten-Explorer handelt es sich um eine Momentaufnahme der Metadaten, wenn Sie zum ersten Mal eine Verbindung mit SQL Azure hergestellt haben oder wenn Sie die Metadaten zuletzt manuell aktualisiert haben. Sie können Metadaten für alle Datenbanken oder für eine einzelne Datenbank oder ein Datenbankobjekt manuell aktualisieren.  
@@ -89,7 +89,7 @@ Wenn sich SQL Azure Schemas ändern, nachdem Sie eine Verbindung hergestellt hab
   
 **So aktualisieren Sie SQL Azure Metadaten**  
   
--   Klicken Sie in SQL Azure Metadaten-Explorer mit der rechten Maustaste auf **Datenbanken**, und wählen Sie dann **aus Datenbank aktualisieren aus**  
+-   Klicken Sie in SQL Azure metadatenexplorer mit der rechten Maustaste auf **Datenbanken**, und wählen Sie dann **aus Datenbank aktualisieren aus**.  
   
 ## <a name="reconnecting-to-sql-azure"></a>Erneutes Herstellen einer Verbindung mit SQL Azure  
 Die Verbindung mit SQL Azure bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut eine Verbindung mit SQL Azure herstellen, wenn Sie eine aktive Verbindung mit dem Server herstellen möchten. Sie können offline arbeiten, bis Sie Datenbankobjekte in SQL Azure laden und Daten migrieren.  

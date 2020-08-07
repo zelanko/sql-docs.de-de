@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c7f644b94c405fa4072ecd7d7c448f6ea865404
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f69b827981a53024dbf22d4b3e3d2f64fd4b720f
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879968"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865119"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85879968"
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+  > In [Azure SQL verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)werden die meisten, aber nicht alle SQL Server-Agent Features derzeit unterstützt. Ausführliche Informationen finden Sie [unter Unterschiede von Azure SQL verwaltete Instanz T-SQL-SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
 
 ## <a name="syntax"></a>Syntax  
   
@@ -107,10 +107,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|Second|  
-|**4**|Dritter|  
+|**2**|Sekunde|  
+|**4**|Third|  
 |**8**|Vierter|  
-|**16**|Last (Letzter)|  
+|**16**|Letzter|  
   
  *frequency_relative_interval* gibt das Vorkommen des Intervalls an. Wenn *frequency_relative_interval* beispielsweise auf **2**festgelegt ist, *frequency_type* auf **32**und *frequency_interval* auf **3**festgelegt ist, erfolgt der geplante Auftrag am zweiten Dienstag jedes Monats.  
   

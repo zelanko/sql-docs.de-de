@@ -24,14 +24,14 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 382a1d94b46eeef39ca90103691afe45389002e3
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293767"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823846"
 ---
-# <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Verknüpfen von Zugriffs Anwendungen mit SQL Server-Azure SQL-Datenbank (Access Token-SQL)
+# <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>Verknüpfen von Zugriffs Anwendungen mit SQL Server Azure SQL-Datenbank (Access Token)
 Wenn Sie die vorhandenen Access-Anwendungen mit verwenden möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie die ursprünglichen Zugriffs Tabellen mit den migrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen oder den SQL Azure Tabellen verknüpfen. Durch die Verknüpfung wird die Access-Datenbank geändert, sodass Ihre Abfragen, Formulare, Berichte und Datenzugriffsseiten die Daten in der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder-SQL Azure Datenbank anstelle der Daten in der Access-Datenbank verwenden.  
   
 > [!NOTE]  

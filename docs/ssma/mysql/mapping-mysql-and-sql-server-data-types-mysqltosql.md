@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908991"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823465"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Zuordnen von MySQL- und SQL Server-Datentypen (MySqlToSql)
-MySQL-Datenbanktypen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterscheiden sich von Datenbanktypen oder SQL Azure. Beim Konvertieren von MySQL-Daten Bank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekten in-oder-SQL Azure-Objekte müssen Sie angeben, wie Datentypen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von MySQL zu oder SQL Azure zugeordnet werden sollen. Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Prozeduren gezeigt.  
+MySQL-Datenbanktypen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanktypen oder SQL Azure. Beim Konvertieren von MySQL-Datenbankobjekten in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder-SQL Azure-Objekte müssen Sie angeben, wie Datentypen von MySQL zu oder SQL Azure zugeordnet werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Prozeduren gezeigt.  
   
 ## <a name="default-mappings"></a>Standardzuordnungen  
 SSMA verfügt über einen Standardsatz von Datentyp Zuordnungen. Die Liste der Standard Zuordnungen finden Sie unter [Project Settings &#40;Type Mapping&#41; &#40;mysqlto SQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
@@ -82,5 +82,5 @@ Wenn Sie die Registerkarte **Typzuordnung** in SSMA anzeigen, ist der Hintergrun
 Der nächste Schritt des Migrations Vorgangs besteht darin, entweder [einen Bewertungsbericht zu erstellen](assessing-mysql-databases-for-conversion-mysqltosql.md) oder [MySQL-Datenbankobjekte in SQL Server oder SQL Azure-Syntax zu konvertieren](converting-mysql-databases-mysqltosql.md). Wenn Sie einen Bericht erstellen, werden MySQL-Objekte während der Bewertung automatisch konvertiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Migrieren von MySQL-Datenbanken zu SQL Server-Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrieren von MySQL-Datenbanken zu SQL Server Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

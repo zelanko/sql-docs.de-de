@@ -20,12 +20,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2df86c9850dddb7532602476d2ce9ffcaebad62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f73452beb45c9f5df4b806d937043f22c5c0dbe1
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734701"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865318"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -116,10 +116,10 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
 |**min_spills**|**bigint**|Die Mindestanzahl von Seiten, die diese Abfrage während einer einzelnen Ausführung jemals übergegangen ist.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Die maximale Anzahl von Seiten, die diese Abfrage während einer einzelnen Ausführung jemals übergegangen ist.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.<br /><br /> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-|**total_page_server_reads**|**bigint**|Die Gesamtanzahl der Remote-Seiten Server Lesevorgänge, die von Ausführungen dieses Plans seit der Kompilierung durchgeführt wurden.<br /><br /> **Gilt für:** Azure SQL-Daten Bank hyperskalierung |  
-|**last_page_server_reads**|**bigint**|Anzahl von Lesevorgängen für Remote Seiten Server, die bei der letzten Ausführung des Plans ausgeführt wurden.<br /><br /> **Gilt für:** Azure SQL-Daten Bank hyperskalierung |  
-|**min_page_server_reads**|**bigint**|Die Mindestanzahl von Lesevorgängen für Remote Seiten Server, die dieser Plan jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für:** Azure SQL-Daten Bank hyperskalierung |  
-|**max_page_server_reads**|**bigint**|Maximale Anzahl von Lesevorgängen für Remote Seiten Server, die dieser Plan jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für:** Azure SQL-Daten Bank hyperskalierung |  
+|**total_page_server_reads**|**bigint**|Die Gesamtanzahl der Remote-Seiten Server Lesevorgänge, die von Ausführungen dieses Plans seit der Kompilierung durchgeführt wurden.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank |  
+|**last_page_server_reads**|**bigint**|Anzahl von Lesevorgängen für Remote Seiten Server, die bei der letzten Ausführung des Plans ausgeführt wurden.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank |  
+|**min_page_server_reads**|**bigint**|Die Mindestanzahl von Lesevorgängen für Remote Seiten Server, die dieser Plan jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank |  
+|**max_page_server_reads**|**bigint**|Maximale Anzahl von Lesevorgängen für Remote Seiten Server, die dieser Plan jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank |  
 > [!NOTE]
 > <sup>1</sup> wenn die Statistik Sammlung für System intern kompilierte gespeicherte Prozeduren aktiviert ist, wird die workerzeit in Millisekunden erfasst. Wenn die Abfrage in weniger als einer Millisekunde ausgeführt wird, ist der Wert 0.  
   
@@ -128,7 +128,7 @@ Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte Abfragepl
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
 Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
    
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Statistiken in der Sicht werden nach Abschluss einer Abfrage aktualisiert.  
   
 ## <a name="examples"></a>Beispiele  

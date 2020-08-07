@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 777d0b497bae5e52c49fb95e1e7ff3e7387ea676
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834771"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823752"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
 
@@ -90,7 +90,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
    
 9. Bestätigen Sie auf der Seite **Funktionen**, dass die folgenden Funktionen ausgewählt sind, und klicken Sie dann auf **Weiter**. Diese Funktionen werden für [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] unter [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] benötigt.
   
-    |Funktionen|Funktionen|  
+    |Features|Features|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -130,16 +130,16 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
 3.  Geben Sie auf der Seite **Daten Bank Server** die SQL Server Instanz an. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Fügt Unterstützung für SQL Server verwaltete Instanz hinzu. Legen Sie den Wert **SQL Server Instanz** auf den Host einer verwalteten Azure SQL-Datenbank-Instanz fest. Beispielsweise `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Fügt Unterstützung für SQL Server verwaltete Instanz hinzu. Legen Sie den Wert **SQL Server Instanz** auf den Host der verwalteten Instanz fest. Beispielsweise `xxxxxx.xxxxxx.database.windows.net`.
 
 4. Wählen Sie den **Authentifizierungstyp** aus, und klicken Sie dann auf **Verbindung testen** , um zu bestätigen, dass Sie mithilfe der Anmelde Informationen für den von Ihnen ausgewählten Authentifizierungstyp eine Verbindung Klicken Sie auf **Weiter**.
 
-    >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Verwenden Sie zum Herstellen einer Verbindung mit einer verwalteten Azure SQL-Datenbank-Instanz einen der folgenden Authentifizierungs Typen:
+    >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Verwenden Sie für das Herstellen einer Verbindung mit der verwalteten Instanz einen der folgenden Authentifizierungs Typen:
     >
     >- Azure Active Directory integrierte Authentifizierung: **Aktueller Benutzer – Active Directory integriert**
     >- SQL Server Authentifizierung: **SQL Server Konto**.
     >
-    >In einer verwalteten Azure SQL-Datenbank-Instanz muss der Benutzer Mitglied der `sysadmin` Server Rolle "fester Server" sein.
+    >In SQL verwaltete Instanz muss der Benutzer Mitglied der `sysadmin` Server Rolle "fester Server" sein.
 
     > [!NOTE]  
     >  Wenn Sie als Authentifizierungstyp die Option **aktuelle Benutzer integrierte Sicherheit** auswählen, ist das Feld **Benutzername** schreibgeschützt und zeigt den Namen des Windows-Benutzerkontos an, das auf dem Computer angemeldet ist. Wenn Sie [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem virtuellen Azure-Computer (VM) ausführen, zeigt das Feld **Benutzername** den VM-Namen sowie den Benutzernamen für das lokale Administratorkonto auf der VM an. 
@@ -204,7 +204,7 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. Klicken Sie auf **Übernehmen**. Das Meldungsfeld **Konfiguration abgeschlossen** wird angezeigt. Klicken Sie im Meldungsfeld auf **OK**, um die Webanwendung zu starten. Die Website Adresse lautet https://*Servername* / *Webanwendung*/. 
+15. Klicken Sie auf **Anwenden**. Das Meldungsfeld **Konfiguration abgeschlossen** wird angezeigt. Klicken Sie im Meldungsfeld auf **OK**, um die Webanwendung zu starten. Die Website Adresse lautet https://*Servername* / *Webanwendung*/. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 

@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 62626e8a9f3cfe5bf9272378b26e3bb0ab2f6b1a
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925354"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864917"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ausführen von Datenmigrations-Assistent von der Befehlszeile aus
 
-Mit Version 2,1 und höher wird bei der Installation von Datenmigrations-Assistent auch dmacmd. exe in *% Program Files% \\ Microsoft-Datenmigrations-Assistent \\ *installiert. Verwenden Sie dmacmd. exe, um die Datenbanken im unbeaufsichtigten Modus zu bewerten und das Ergebnis in der JSON-oder CSV-Datei auszugeben. Diese Methode ist besonders nützlich, wenn Sie mehrere Datenbanken oder große Datenbanken bewerten. 
+Mit Version 2,1 und höher wird bei der Installation von Datenmigrations-Assistent auch dmacmd.exe in *% Program Files% \\ Microsoft-Datenmigrations-Assistent \\ *installiert. Verwenden Sie dmacmd.exe, um die Datenbanken im unbeaufsichtigten Modus zu bewerten und das Ergebnis in der JSON-oder CSV-Datei auszugeben. Diese Methode ist besonders nützlich, wenn Sie mehrere Datenbanken oder große Datenbanken bewerten. 
 
 > [!NOTE]
-> Dmacmd. exe unterstützt nur das Ausführen von Bewertungen. Migrationen werden zurzeit nicht unterstützt.
+> Dmacmd.exe unterstützt nur das Ausführen von Bewertungen. Migrationen werden zurzeit nicht unterstützt.
 
 ## <a name="assessments-using-the-command-line-interface-cli"></a>Bewertungen mithilfe der Befehlszeilenschnittstelle (CLI)
 
@@ -40,9 +40,9 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|Argument  |Beschreibung  | Erforderlich (j/N)
+|Argument  |BESCHREIBUNG  | Erforderlich (j/N)
 |---------|---------|---------------|
-| `/help or /?`     | Verwenden von "dmacmd. exe"-Hilfe Text        | N
+| `/help or /?`     | Verwenden von dmacmd.exe Hilfetext        | N
 |`/AssessmentName`     |   Name des Bewertungs Projekts   | J
 |`/AssessmentDatabases`     | Durch Leerzeichen getrennte Liste mit Verbindungs Zeichenfolgen. Beim Datenbanknamen (anfangs Katalog) wird Groß-/Kleinschreibung beachtet. | J
 |`/AssessmentSourcePlatform`     | Quell Plattform für die Bewertung: <br>Unterstützte Werte für die Bewertung: sqlonprem, rdssqlserver (Standard) <br>Unterstützte Werte für die Ziel Bereitschafts Bewertung: sqlonprem, rdssqlserver (Standard), Cassandra (Vorschau)   | N
@@ -61,7 +61,7 @@ DmaCmd.exe /AssessmentName="string"
 |`/ImportFeatureDiscoveryReportJson`    | Der Pfad zum zuvor erstellten JSON-Bericht für die Funktions Ermittlung. Anstelle von Quell Verbindungen wird diese Datei verwendet.   | N
 |`/EnableAssessmentUploadToAzureMigrate`    | Ermöglicht das Hochladen und Veröffentlichen von Bewertungsergebnissen in Azure migrate   | N
 |`/AzureCloudEnvironment`    |Wählt die Azure-cloudumgebung aus, mit der eine Verbindung hergestellt werden soll. Standard ist Azure Public Cloud Unterstützte Werte: Azure (Standard), azurechina, azuregermany, Azureus Government.   | N 
-|`/SubscriptionId`    |Azure-Abonnement-ID.   | J <br> (Erforderlich, wenn das enableassessment mentuploadumazuremigration-Argument angegeben ist.)
+|`/SubscriptionId`    |Die Azure-Abonnement-ID.   | J <br> (Erforderlich, wenn das enableassessment mentuploadumazuremigration-Argument angegeben ist.)
 |`/AzureMigrateProjectName`    |Der Azure migrate Projektname, in den Bewertungsergebnisse hochgeladen werden sollen.   | J <br> (Erforderlich, wenn das enableassessment mentuploadumazuremigration-Argument angegeben ist.)
 |`/ResourceGroupName`    |Azure migrate Ressourcengruppen Name.   | J <br> (Erforderlich, wenn das enableassessment mentuploadumazuremigration-Argument angegeben ist.)
 |`/AssessmentResultInputFolder`    |Der Pfad des Eingabe Ordners, der enthält. DMA-Bewertungs Dateien, die in Azure migrate hochgeladen werden.   | J <br> (Erforderlich, wenn Aktion AzureMigrateUpload ist)
@@ -70,7 +70,7 @@ DmaCmd.exe /AssessmentName="string"
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Beispiele für Bewertungen mithilfe der CLI
 
-**Dmacmd. exe**
+**Dmacmd.exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
@@ -269,7 +269,7 @@ DmaCmd.exe
 DmaCmd.exe 
 /Action="AzureMigrateUpload" 
 /AssessmentResultInputFolder="C:\assessments\results" 
-/SubscriptionId="subscription Id" 
+/SubscriptionId="Subscription Id" 
 /AzureMigrateProjectName="Azure Migrate project name" 
 /ResourceGroupName="Resource Group name" 
 /AzureAuthenticationInteractiveAuthentication
@@ -277,9 +277,9 @@ DmaCmd.exe
 /EnableAssessmentUploadToAzureMigrate
 
 ```
-## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>Azure SQL-Datenbank/SKU-Empfehlungen für verwaltete Instanzen mithilfe der CLI
+## <a name="azure-sql-database--azure-sql-managed-instance-sku-recommendations-using-the-cli"></a>Azure SQL-Datenbank/Azure SQL verwaltete Instanz SKU-Empfehlungen mithilfe der CLI
 
-Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine einzelne Datenbank und eine verwaltete Instanz von Azure SQL-Datenbank.
+Diese Befehle unterstützen Empfehlungen sowohl für Azure SQL-Datenbank-als auch für Azure SQL-verwaltete Instanz Bereitstellungs Optionen.
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -290,7 +290,7 @@ Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|Argument  |Beschreibung  | Erforderlich (j/N)
+|Argument  |BESCHREIBUNG  | Erforderlich (j/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | Ausführen der SKU-Bewertung mithilfe der DMA-Befehlszeile | J
 |`/SkuRecommendationInputDataFilePath` | Vollständiger Pfad zur Leistungsdaten Bank Datei, die von dem Computer erfasst wird, der Ihre Datenbanken | J
@@ -312,11 +312,11 @@ Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>Beispiele für SKU-Bewertungen mithilfe der CLI
 
-**Dmacmd. exe**
+**Dmacmd.exe**
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Azure SQL-DB/Mi-SKU-Empfehlung mit Preis Aktualisierung (aktuelle Preise erhalten)-interaktive Authentifizierung** 
+**Azure SQL-Datenbank/Azure SQL verwaltete Instanz SKU-Empfehlung mit Preis Aktualisierung (aktuellste Preise)-interaktive Authentifizierung** 
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -333,7 +333,7 @@ Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine
 /AzureAuthenticationInteractiveAuthentication=true 
 ```
 
-**Azure SQL-DB/Mi-SKU-Empfehlung mit Preis Aktualisierung (aktuelle Preise erhalten): Zertifikat Authentifizierung**
+**Azure SQL-Datenbank/Azure SQL verwaltete Instanz SKU-Empfehlung mit Preis Aktualisierung (aktuelle Preise erhalten): Zertifikat Authentifizierung**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -351,7 +351,7 @@ Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine
 /AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
 ```
 
-**Azure SQL DB-SKU/Mi-Empfehlung mit Preis Aktualisierung (aktuellste Preise): Tokenauthentifizierung und angeben der zu empfohlenen Datenbanken**
+**Azure SQL-Datenbank/Azure SQL verwaltete Instanz-Empfehlung mit Preis Aktualisierung (aktuellste Preise): Tokenauthentifizierung und Angeben von Datenbanken, die empfohlen werden sollen**
   
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -369,7 +369,7 @@ Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine
 /AzureAuthenticationToken=<Your Authentication Token> 
 ```
 
-**Azure SQL-DB/Mi-SKU-Empfehlung ohne Preis Aktualisierung (statische Preise verwenden)** 
+**Azure SQL-Datenbank/Azure SQL verwaltete Instanz SKU-Empfehlung ohne Preis Aktualisierung (statische Preise verwenden)** 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"

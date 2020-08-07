@@ -14,36 +14,36 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: f2df572e7e4be92eb91662ffc47448b7becf3a7e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885828"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864907"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Ermitteln der richtigen Azure SQL-Datenbank/verwaltete Instanz-SKU für Ihre lokale Datenbank
 
 Das Migrieren von Datenbanken in die Cloud kann kompliziert sein, insbesondere beim Versuch, das beste Azure-Daten Bank Ziel und die SKU für Ihre Datenbank auszuwählen. Das Ziel des Daten Bank Migration Assistant (DMA) ist es, diese Fragen zu beantworten und die Daten Bank Migration zu vereinfachen, indem Sie diese SKU-Empfehlungen in einer benutzerfreundlichen Ausgabe bereitstellen.
 
-Dieser Artikel konzentriert sich auf das Azure SQL-Datenbank-Empfehlungs Feature von DMA. Azure SQL-Datenbank verfügt über mehrere Bereitstellungs Optionen, einschließlich:
+Dieser Artikel konzentriert sich auf das Azure SQL-Datenbank-Empfehlungs Feature von DMA. Azure SQL-Datenbank und Azure SQL verwaltete Instanz verfügen über mehrere Bereitstellungs Optionen, einschließlich:
 
 - Einzeldatenbank
 - Pools für elastische Datenbanken
 - Verwaltete Instanz
 
-Mit dem Feature "SKU-Empfehlungen" können Sie sowohl die empfohlene Azure SQL-Datenbank-SKU für einzelne Datenbanken als auch eine verwaltete Instanz ermitteln, die auf Leistungsindikatoren basiert, die von den Computern gesammelt werden Die-Funktion bietet Empfehlungen im Zusammenhang mit Tarif, computeebene und maximaler Datengröße sowie geschätzten Kosten pro Monat. Außerdem bietet es die Möglichkeit, eine Massen Bereitstellung einzelner Datenbanken und verwalteter Instanzen in Azure für alle empfohlenen Datenbanken bereitzustellen.
+Mit der SKU-Empfehlungs Funktion können Sie sowohl die empfohlene Mindestanzahl von Azure SQL-Datenbank-als auch Azure SQL verwaltete Instanz-SKU basierend auf Leistungsindikatoren identifizieren, die von den Computern gesammelt werden, auf denen Ihre Datenbanken gehostet werden. Die-Funktion bietet Empfehlungen im Zusammenhang mit Tarif, computeebene und maximaler Datengröße sowie geschätzten Kosten pro Monat. Außerdem bietet es die Möglichkeit, für alle empfohlenen Datenbanken eine Massen Bereitstellung einzelner Datenbanken und verwalteter Instanzen durchzusetzen.
 
 > [!NOTE]
 > Diese Funktion ist zurzeit nur über die Befehlszeilenschnittstelle (CLI) verfügbar.
 
-Im folgenden finden Sie Anweisungen zum Ermitteln der Azure SQL-Datenbank-SKU-Empfehlungen und zum Bereitstellen der entsprechenden Einzel Datenbanken oder verwalteten Instanzen in Azure mithilfe von DMA.
+Im folgenden finden Sie Anweisungen zum Bestimmen der SKU-Empfehlungen und zum Bereitstellen der entsprechenden Einzel Datenbanken oder verwalteten Instanzen in Azure mithilfe von DMA.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - Laden Sie die neueste Version von [DMA](https://aka.ms/get-dma)herunter, und installieren Sie Sie. Wenn Sie bereits über eine frühere Version des Tools verfügen, öffnen Sie Sie, und Sie werden aufgefordert, DMA zu aktualisieren.
 - Stellen Sie sicher, dass auf Ihrem Computer [PowerShell Version 5,1](https://www.microsoft.com/download/details.aspx?id=54616) oder höher angegeben ist, die zum Ausführen aller Skripts erforderlich ist. Informationen dazu, wie Sie herausfinden, welche Version von PowerShell auf Ihrem Computer installiert ist, finden Sie im Artikel [herunterladen und Installieren von Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Stellen Sie sicher, dass auf Ihrem Computer das Azure PowerShell-Modul installiert ist. Weitere Informationen finden Sie im Artikel [Installieren des Azure PowerShell Moduls](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
-- Vergewissern Sie sich, dass die PowerShell-Datei **SkuRecommendationDataCollectionScript. ps1**, die zum Erfassen der Leistungsindikatoren erforderlich ist, im DMA-Ordner installiert ist.
+- Vergewissern Sie sich, dass die PowerShell-Datei **SkuRecommendationDataCollectionScript.ps1**, die für die Erfassung der Leistungsindikatoren erforderlich ist, im DMA-Ordner installiert ist.
 - Stellen Sie sicher, dass der Computer, auf dem Sie diesen Prozess ausführen, über Administrator Berechtigungen für den Computer verfügt, auf dem die Datenbanken gehostet werden.
 
 ## <a name="collect-performance-counters"></a>Leistungsindikatoren erfassen
@@ -52,7 +52,7 @@ Der erste Schritt im Prozess besteht darin, Leistungsindikatoren für Ihre Daten
 
 Diese Aufgabe muss nicht für jede Datenbank einzeln durchgeführt werden. Die von einem Computer gesammelten Leistungsindikatoren können verwendet werden, um die SKU für alle auf dem Computer gehosteten Datenbanken zu empfehlen.
 
-1. Suchen Sie im DMA-Ordner die PowerShell-Datei SkuRecommendationDataCollectionScript. ps1. Diese Datei ist erforderlich, um die Leistungsindikatoren zu erfassen.
+1. Suchen Sie im DMA-Ordner die PowerShell-Datei SkuRecommendationDataCollectionScript.ps1. Diese Datei ist erforderlich, um die Leistungsindikatoren zu erfassen.
 
     ![Im DMA-Ordner angezeigte PowerShell-Datei](../dma/media/dma-sku-recommend-data-collection-file.png)
 
@@ -80,9 +80,9 @@ Verwenden Sie die Leistungsindikator-Ausgabedatei, die Sie als Eingabe für dies
 
 Für die Einzeldaten Bankoption bietet DMA Empfehlungen für den Tarif der einzelnen Datenbanken der Azure SQL-Datenbank, die computeebene und die maximale Datengröße für jede Datenbank auf dem Computer. Wenn Sie über mehrere Datenbanken auf dem Computer verfügen, können Sie auch die Datenbanken angeben, für die Sie Empfehlungen erhalten möchten. DMA bietet Ihnen außerdem die geschätzten monatlichen Kosten für die einzelnen Datenbanken.
 
-Für verwaltete Instanzen unterstützen die Empfehlungen ein Lift-and-Shift-Szenario. DMA bietet Ihnen daher Empfehlungen für den Tarif der verwalteten Azure SQL-Datenbank-Instanz, die computeebene und die maximale Datengröße für die Gruppe der Datenbanken auf dem Computer. Wenn Sie auf Ihrem Computer über mehrere Datenbanken verfügen, können Sie auch die Datenbanken angeben, für die Sie Empfehlungen erhalten möchten. DMA bietet Ihnen außerdem die geschätzten monatlichen Kosten für die verwaltete Instanz.
+Für verwaltete Instanzen unterstützen die Empfehlungen ein Lift-and-Shift-Szenario. DMA bietet Ihnen daher Empfehlungen für den Azure SQL-verwaltete Instanz Tarif, die computeebene und die maximale Datengröße für die Daten Bank Gruppe auf dem Computer. Wenn Sie auf Ihrem Computer über mehrere Datenbanken verfügen, können Sie auch die Datenbanken angeben, für die Sie Empfehlungen erhalten möchten. DMA bietet Ihnen außerdem die geschätzten monatlichen Kosten für die verwaltete Instanz.
 
-Wenn Sie die DMA-CLI verwenden möchten, um SKU-Empfehlungen zu erhalten, führen Sie an der Eingabeaufforderung dmacmd. exe mit den folgenden Argumenten aus:
+Wenn Sie die DMA-CLI verwenden möchten, um SKU-Empfehlungen zu erhalten, führen Sie an der Eingabeaufforderung dmacmd.exe mit den folgenden Argumenten aus:
 
 - **/Action = skuempfehlungs**: Geben Sie dieses Argument ein, um SKU-Bewertungen auszuführen.
 - **/SkuRecommendationInputDataFilePath**: der Pfad zu der im vorherigen Abschnitt gesammelten Datei mit der gegen Datei.
@@ -176,15 +176,15 @@ Bei Empfehlungen für verwaltete Instanzen sieht die TSV-Ausgabedatei wie folgt 
 Eine Beschreibung der einzelnen Spalten in der Ausgabedatei folgt.
 
 - **DatabaseName** : der Name Ihrer Datenbank.
-- **Metrictype** : Empfohlene Azure SQL-Datenbank-Ebene einer Einzel Datenbank/verwalteten Instanz.
-- **Metricvalue** -Empfohlene Azure SQL-Datenbank-SKU für einzelne Datenbank/verwaltete Instanzen.
+- **Metrictype** : Empfohlene Leistungsstufe.
+- **Metricvalue** -Empfohlene SKU.
 - Preisgestaltung – der geschätzte Preis **pro Monat für** die entsprechende SKU.
 - **RegionName** – der Name der Region für die entsprechende SKU. 
 - **Istierrecommended** : Wir legen eine minimale SKU-Empfehlung für jede Ebene an. Anschließend wenden wir Heuristik an, um die richtige Ebene für Ihre Datenbank zu ermitteln. Dies gibt an, welche Ebene für die Datenbank empfohlen wird. 
 - **Exclusionreasons** : dieser Wert ist leer, wenn eine Ebene empfohlen wird. Für jede Ebene, die nicht empfohlen wird, geben wir die Gründe dafür an, warum Sie nicht ausgewählt wurden.
 - **Appliedrules** : eine kurze Schreibweise der angewendeten Regeln.
 
-Der letzte Empfohlene Tarif (d. h. **metrictype**) und der Wert (d. h. **metricvalue**), in dem die Spalte " **istierrecommended** " den Wert "true" aufweist, entsprechen der minimalen SKU, die für die Ausführung Ihrer Abfragen in Azure erforderlich ist, und mit einer Erfolgsrate vergleichbar mit Ihren lokalen Datenbanken. Für eine verwaltete Instanz unterstützt DMA derzeit Empfehlungen für die am häufigsten verwendeten SKUs von 8vcore zu 40vcore. Wenn z. b. die empfohlene minimale SKU S4 für den Standard--Wert ist, führt die Auswahl von S3 oder unten dazu, dass für Abfragen ein Timeout auftritt oder die Ausführung fehlschlägt.
+Der letzte Empfohlene Tarif (d. h. **metrictype**) und der Wert (d. h. **metricvalue**), in dem die Spalte " **istierrecommended** " den Wert "true" aufweist, entsprechen der minimalen SKU, die für die Ausführung Ihrer Abfragen in Azure erforderlich ist, und mit einer Erfolgsrate vergleichbar mit Ihren lokalen Datenbanken. Für Azure SQL-verwaltete Instanz unterstützt DMA derzeit Empfehlungen für die am häufigsten verwendeten SKUs von 8vcore zu 40vcore. Wenn z. b. die empfohlene minimale SKU S4 für den Standard--Wert ist, führt die Auswahl von S3 oder unten dazu, dass für Abfragen ein Timeout auftritt oder die Ausführung fehlschlägt.
 
 Diese Informationen sind in der HTML-Datei in einem grafischen Format enthalten. Es bietet eine benutzerfreundliche Möglichkeit, die abschließende Empfehlung anzuzeigen und den nächsten Teil des Prozesses bereitzustellen. Weitere Informationen zur HTML-Ausgabe finden Sie im folgenden Abschnitt.
 
@@ -198,7 +198,7 @@ Um Bereitstellungs Informationen einzugeben und Änderungen an den Empfehlungen 
 
 **Für Einzeldaten Bank Empfehlungen**
 
-![Azure SQL DB-SKU-Empfehlungen (Bildschirm)](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
+![Azure SQL-Datenbank-SKU-Empfehlungs Bildschirm](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
 
 1. Öffnen Sie die HTML-Datei, und geben Sie die folgenden Informationen ein:
     - **Abonnement-ID** : die Abonnement-ID des Azure-Abonnements, für das Sie die Datenbanken bereitstellen möchten.
@@ -214,7 +214,7 @@ Um Bereitstellungs Informationen einzugeben und Änderungen an den Empfehlungen 
 
     Dieser Prozess sollte alle Datenbanken erstellen, die Sie auf der HTML-Seite ausgewählt haben.
 
-**Empfehlungen für verwaltete Instanzen**
+**Empfehlungen für Azure SQL-verwaltete Instanz**
 
 ![Azure SQL-SKU-Empfehlungen (Bildschirm)](../dma/media/dma-sku-recommend-mi-recommendations1.png)
 

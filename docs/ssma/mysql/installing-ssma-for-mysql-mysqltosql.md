@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: db29fe499889ce67af5979821d07f2eef2a91f75
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 236edb86bf1b66393ba441daf06993baea7012a6
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394930"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824015"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>Installieren von SSMA für MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) für MySQL besteht aus einer Client Anwendung, mit der Sie eine Migration von MySQL zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure ausführen. Sie enthält auch ein Erweiterungspaket, das die Datenmigration und die Verwendung von MySQL-Systemfunktionen in den migrierten Datenbanken unterstützt.  
@@ -36,5 +36,5 @@ Wenn Sie ein Upgrade auf eine höhere Version von SSMA für MySQL durchführen m
 |[Entfernen der SSMA für MySQL-Komponenten &#40;mysqldesql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Enthält Anweisungen zum Deinstallieren des Client Programms.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Migrieren von MySQL-Datenbanken zu SQL Server-Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrieren von MySQL-Datenbanken zu SQL Server Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

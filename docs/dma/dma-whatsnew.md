@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924624"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864897"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Neuerungen im Datenmigrations-Assistenten
 
@@ -43,7 +43,7 @@ Außerdem bietet diese Version von Datenmigrations-Assistent zusätzliche Verbes
 
 ## <a name="data-migration-assistant-v45"></a>Datenmigrations-Assistent v 4.5
 
-Die Version 4.5 von Datenmigrations-Assistent bietet Unterstützung für die Bewertung der Migration von SQL Server Integration Services (SSIS)-Paketen, die im Dateisystem gehostet werden, zu Azure SQL-Datenbank oder einer verwalteten Azure SQL-Datenbank-Instanz.
+Die Version 4.5 von Datenmigrations-Assistent bietet Unterstützung für die Bewertung der Migration von SQL Server Integration Services SSIS-Paketen (SSIS), die im Dateisystem gehostet werden, zu Azure SQL-Datenbank oder SQL verwaltete Instanz.
 
 ## <a name="data-migration-assistant-v44"></a>Datenmigrations-Assistent v 4.4
 
@@ -53,9 +53,9 @@ Die Version 4.4 von Datenmigrations-Assistent bietet Unterstützung für das Hoc
 
 Die Version 4.3 von Datenmigrations-Assistent bietet Unterstützung für:
 
-- SKU-Empfehlungen für verwaltete Azure SQL-Datenbank-Instanzen basierend auf der workloadbewertung.
+- SKU-Empfehlungen für Azure SQL-verwaltete Instanz basierend auf der workloadbewertung.
 - RDS-SQL Server als Quelle für Bewertungen.
-- Agentauftragsbewertungen für verwaltete Azure SQL-Datenbank-Instanzen als Ziel.
+- Agentauftragsbewertungen für Azure SQL-verwaltete Instanz als Ziel.
 - Die Möglichkeit, bestimmte Bewertungsregeln zu ignorieren. die Liste der Fehlercodes, die in der in DMA konfigurierten Eigenschaft "ignoreerrorcodes" angegeben sind, wird in den DMA-Bewertungsergebnissen nicht angezeigt.
 - Bewertung von T-SQL-Abfragen in Auftrags Aktivitäts Schritten und Bereitstellen entsprechender Empfehlungen
 - Bewertungen für erweiterte Ereignisse (Public Preview).
@@ -67,15 +67,15 @@ Außerdem bietet diese Version von DMA eine verbesserte Leistung für die Verarb
 
 ## <a name="data-migration-assistant-v42"></a>Datenmigrations-Assistent v 4.2
 
-Das v 4.2-Release von Datenmigrations-Assistent bietet Befehlszeilen Unterstützung für die Ziel Bereitschafts Bewertung für eine oder mehrere Server Instanzen bei der Migration von lokalen SQL Server zu einer verwalteten Azure SQL-Datenbank-Instanz. Kunden können nun mithilfe der Datenmigrations-Assistent Befehlszeile Metadaten zu Ihrem Datenbankschema sammeln, die Blockierer erkennen und sich über teilweise unterstützte oder nicht unterstützte Features informieren, die sich auf die Migration zu einer verwalteten Azure SQL-Datenbank-Instanz auswirken. Die Ergebnisse können dann mithilfe der bereitgestellten Power BI Vorlage gerendert werden.
+Das v 4.2-Release von Datenmigrations-Assistent bietet Befehlszeilen Unterstützung für die Ziel Bereitschafts Bewertung für eine oder mehrere Server Instanzen bei der Migration von lokalen SQL Server zu einem SQL-verwaltete Instanz. Kunden können nun mithilfe der Datenmigrations-Assistent Befehlszeile Metadaten zu Ihrem Datenbankschema sammeln, die Blockierer erkennen und sich über teilweise unterstützte oder nicht unterstützte Features informieren, die sich auf die Migration zu einer SQL-verwaltete Instanz auswirken. Die Ergebnisse können dann mithilfe der bereitgestellten Power BI Vorlage gerendert werden.
 
 ## <a name="data-migration-assistant-v41"></a>Datenmigrations-Assistent v 4.1
 
-In der Version 4.1 von Datenmigrations-Assistent wird die Unterstützung für die umfassende Bewertung lokaler SQL Server Datenbanken eingeführt, die zur verwalteten Azure SQL-Datenbank-Instanz migriert werden.
+In der Version 4.1 von Datenmigrations-Assistent wird die Unterstützung für die umfassende Bewertung lokaler SQL Server Datenbanken eingeführt, die zu SQL verwaltete Instanz migriert werden.
 
-Mit dem Bewertungs Workflow können Sie folgende Probleme erkennen, die sich auf die Migration zur verwalteten Azure SQL-Datenbank-Instanz auswirken können:
+Mit dem Bewertungs Workflow können Sie folgende Probleme erkennen, die sich auf die Migration zu SQL verwaltete Instanz auswirken können:
 
-- **Nicht unterstützte oder teilweise unterstützte Funktionen**. Datenmigrations-Assistent bewertet Ihre Quell SQL Server Datenbank für verwendete Features, die auf dem Ziel verwaltete Azure SQL-Datenbank-Instanz teilweise unterstützt oder nicht unterstützt werden. Das Tool bietet dann eine umfassende Reihe von Empfehlungen, alternative Ansätze in Azure und Entschärfung von Schritten, damit Kunden diese Informationen berücksichtigen können, wenn Sie Ihre Migrationsprojekte planen.
+- **Nicht unterstützte oder teilweise unterstützte Funktionen**. Datenmigrations-Assistent bewertet Ihre Quelle SQL Server Datenbank für verwendete Features, die auf dem SQL-Ziel verwaltete Instanz teilweise unterstützt oder nicht unterstützt werden. Das Tool bietet dann eine umfassende Reihe von Empfehlungen, alternative Ansätze in Azure und Entschärfung von Schritten, damit Kunden diese Informationen berücksichtigen können, wenn Sie Ihre Migrationsprojekte planen.
 
 - **Kompatibilitätsprobleme**. Datenmigrations-Assistent identifiziert auch Kompatibilitätsprobleme im Zusammenhang mit den folgenden Bereichen:
 
@@ -83,7 +83,7 @@ Mit dem Bewertungs Workflow können Sie folgende Probleme erkennen, die sich auf
   - Verhaltensänderungen: die gemeldeten Schema Objekte funktionieren möglicherweise weiterhin, Sie weisen jedoch möglicherweise ein anderes Verhalten auf, z. b. Leistungseinbußen.
   - Informationsprobleme: diese Objekte haben keine Auswirkungen auf die Migration, sind aber möglicherweise nicht mehr im Funktions SQL Server Releases veraltet.
 
-Verwenden Sie nach Abschluss der Bewertung unsere [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS), um die Migration Ihrer SQL Server-Datenbanken zu verwaltete Azure SQL-Datenbank-Instanz durchzuführen.  DMS unterstützt die Datenbankmigrationen [Offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (einmalig) und [Online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (Minimale Ausfallzeit) in verwaltete Azure SQL-Datenbank-Instanz.
+Verwenden Sie nach Abschluss der Bewertung unsere [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS), um die Migration Ihrer SQL Server-Datenbanken zu SQL verwaltete Instanz durchzuführen.  DMS unterstützt die Datenbankmigrationen [Offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (einmalig) und [Online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (Minimale Ausfallzeit) in SQL verwaltete Instanz.
 
 ## <a name="data-migration-assistant-v40"></a>Datenmigrations-Assistent v 4.0
 
@@ -124,7 +124,7 @@ Die Version 3.4 von Datenmigrations-Assistent umfasst die folgenden Ergänzungen
 - Unterstützung für SQL Server 2017 als Quelle für Migrationen zu Azure SQL-Datenbank.
 - Verbesserungen an Stabilität, Leistung und Bewertungsregel Richtigkeit.
 
-## <a name="ddata-migration-assistant-v33"></a>Ddata Migration Assistant v 3.3
+## <a name="data-migration-assistant-v33"></a>Datenmigrations-Assistent v 3.3
 
 Die Version 3.3 von Datenmigrations-Assistent ermöglicht die Migration einer lokalen SQL Server Instanz zu der neuen Version von SQL Server 2017 unter Windows und Linux. Während der gesamte Migrations Workflow für Windows und Linux identisch ist, erfordert der Umstieg auf SQL Server 2017 für Linux einige zusätzliche Überlegungen.
 
@@ -192,4 +192,4 @@ Die Version 1.0 von Datenmigrations-Assistent ist die erste Version und bietet F
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Übersicht über Datenmigrations-Assistent](../dma/dma-overview.md)
+[Übersicht über den Datenmigrations-Assistenten](../dma/dma-overview.md)

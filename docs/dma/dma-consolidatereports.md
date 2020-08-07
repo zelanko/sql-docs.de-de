@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435158"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823242"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Bewerten eines Unternehmens und Konsolidieren der Bewertungsberichte mit DMA
 
@@ -197,7 +197,7 @@ Sie können auch das loadwarehouse-Skript verwenden, um die grundlegenden TSQL-A
 
 Verwenden Sie zum Arbeiten mit DMA-Berichten Lesezeichen und Slicer, um nach folgenden Filtern zu filtern:
 
-- Bewertungs Typen (Azure SQL-Datenbank, Azure SQL-Mi, SQL lokal) 
+- Bewertungs Typen (Azure SQL-Datenbank, Azure SQL verwaltete Instanz SQL Server) 
 - Instanzname
 - Datenbankname
 - Teamname
@@ -212,8 +212,8 @@ Wenn Sie das Lesezeichen Filter auswählen, wird das folgende Blatt aktiviert:
 
 Sie können Lesezeichen verwenden, um den Berichts Kontext zwischen folgenden zu wechseln:
 
-- Azure SQL-DB-cloudbewertungen
-- Azure SQL-Mi-Cloud-Bewertungen
+- Azure SQL-Datenbank-cloudbewertungen
+- Azure SQL verwaltete Instanz Cloud-Bewertungen
 - Lokale Bewertungen
 
 ![Lesezeichen für DMA-Berichts Ansichten](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)

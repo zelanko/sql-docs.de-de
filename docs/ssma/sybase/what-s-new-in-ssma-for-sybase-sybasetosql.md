@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 53ae61f78bed3ee262844f5242f3499d8981501b
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 8391c9642bb7ee0849ea4627b42ac580c4d44d20
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477322"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864707"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Neues in SSMA für SAP ASE (sybasedesql)
 
@@ -114,9 +114,9 @@ Die Version 8.1 von SSMA für SAP ASE wurde durch gezielte Korrekturen ergänzt,
 
 Das v 8.0-Release von SSMA für SAP ASE wurde durch gezielte Korrekturen verbessert, die zur Verbesserung der Qualität und der konvertierungsmetriken entworfen wurden. Außerdem bietet diese Version die folgenden neuen Features:
 
-* Unterstützung für **verwaltete Azure SQL-Datenbank-Instanz** als Ziel. Sie können jetzt neue Projekte erstellen, die auf verwaltete Azure SQL-Datenbank-Instanz abzielen:
+* Unterstützung für **Azure SQL-verwaltete Instanz** als Ziel. Sie können jetzt neue Projekte erstellen, die auf Azure SQL-verwaltete Instanz abzielen:
 
-  ![SQL-DB-Mi-Projekt](../media/ssma-newproject-sqldbmi.png)
+  ![SQL-Datenbank-Mi-Projekt](../media/ssma-newproject-sqldbmi.png)
 
 * **Korrektur Ratgeber**nach der Konvertierung. Weitere Informationen hierzu [finden Sie hier](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -236,7 +236,7 @@ Die Wartungsversion von SSMA für Sybase vom Januar 2016 enthält die folgenden 
 
 Die SSMA-Version vom Juli 2014 für Sybase enthält die folgenden Änderungen:
 
-* Verbesserte Azure SQL-DB-Code Konvertierung.
+* Verbesserte Code Konvertierung in Azure SQL-Datenbank.
 * Die Erweiterungspaket Funktionalität wurde in das Schema verschoben, um Azure SQL-Datenbank zu unterstützen
 * Hinzugefügte Leistungsverbesserungen für Datenbanken mit mehr als 10.000 Objekten.
 * Verbesserungen der Benutzeroberfläche für den Umgang mit einer großen Anzahl von Objekten.
@@ -340,6 +340,6 @@ Die SSMA-Version vom November 2006 für Sybase enthält die folgenden Änderunge
 
 Die Version von Juli 2006 von SSMA für Sybase war die erste Version.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Informationen zu den ersten Schritten mit SSMA für Sybase &#40;sybasedesql&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

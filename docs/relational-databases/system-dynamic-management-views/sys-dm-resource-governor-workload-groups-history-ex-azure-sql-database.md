@@ -18,17 +18,17 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 41378ba13c6c85059313595161aeeb4226c6731e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b112762df3ca05411594b1e1c03a04817c094d9
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718734"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823315"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Gibt die Momentaufnahme für die letzten 32 Minuten (insgesamt 128 RECS) der Ressourcenpool Statistik für eine Azure SQL-Datenbank zurück.
+Gibt eine Momentaufnahme für die letzten 32 Minuten (insgesamt 128 Sekunden) der Ressourcenpool Statistik für eine Azure SQL-Datenbank zurück.
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -68,8 +68,8 @@ Gibt die Momentaufnahme für die letzten 32 Minuten (insgesamt 128 RECS) der Res
 |**max_request_cpu_msec**| BIGINT |Maximale CPU-Nutzung für eine einzelne Anforderung in Millisekunden. Lässt keine NULL-Werte zu.|
 |**max_concurrent_request**| INT |Aktuelle Einstellung für die maximale Anzahl gleichzeitiger Anforderungen. Lässt keine NULL-Werte zu.|
 |**max_io**| INT |Maximale e/a-Beschränkung für die Gruppe.|
-|**max_global_io**| INT |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.
-|**max_queued_io**| INT |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|
+|**max_global_io**| INT |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.
+|**max_queued_io**| INT |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|
 |**max_log_rate_kb**| BIGINT |Maximale Protokoll Rate (Kilobytes pro Sekunde) auf Ressourcengruppen Ebene.|
 |**max_session**| INT |Sitzungs Limit für die Gruppe.|
 |**max_worker**| INT |Workerlimit für die Gruppe.|
@@ -79,7 +79,7 @@ Gibt die Momentaufnahme für die letzten 32 Minuten (insgesamt 128 RECS) der Res
 
 Diese Sicht erfordert die View Server State-Berechtigung.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Benutzer können auf diese dynamische Verwaltungs Sicht zugreifen, um den Ressourcenverbrauch nahezu in Echtzeit für den benutzerworkloadpool sowie systeminterne Pools der Azure SQL-Daten Bank Instanz zu überwachen.
 

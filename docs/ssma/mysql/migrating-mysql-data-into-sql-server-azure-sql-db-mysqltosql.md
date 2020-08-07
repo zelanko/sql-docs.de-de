@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 83a4a2d1bea5074cc268590d4074bde631f28694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9679651e80e036fce923daac76130be01cb5a07a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908835"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862688"
 ---
-# <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>Migrieren von MySQL-Daten in SQL Server Azure SQL-Datenbank (mysqlto SQL)
+# <a name="migrating-mysql-data-into-sql-server---azure-sql-database-mysqltosql"></a>Migrieren von MySQL-Daten in SQL Server Azure SQL-Datenbank (mysqlto SQL)
 Nachdem Sie die konvertierten Objekte erfolgreich mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure synchronisiert haben, können Sie Daten von MySQL zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure migrieren.  
   
 > [!IMPORTANT]  
-> Wenn es sich bei der verwendeten Engine um ein Server seitiges Daten Migrations Modul handelt, müssen Sie vor dem Migrieren von Daten das SSMA für MySQL-Erweiterungspaket und die MySQL-Anbieter auf dem Computer installieren, auf dem SSMA ausgeführt wird. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst muss ebenfalls ausgeführt werden. Weitere Informationen zum Installieren des Erweiterungspakets finden Sie unter Installieren von [SSMA-Komponenten auf SQL Server (MySQL zu SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1) .  
+> Wenn es sich bei der verwendeten Engine um ein Server seitiges Daten Migrations Modul handelt, müssen Sie vor dem Migrieren von Daten das SSMA für MySQL-Erweiterungspaket und die MySQL-Anbieter auf dem Computer installieren, auf dem SSMA ausgeführt wird. Der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienst muss ebenfalls ausgeführt werden. Weitere Informationen zum Installieren des Erweiterungspakets finden Sie unter Installieren von [SSMA-Komponenten auf SQL Server (MySQL zu SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1) .  
   
 ## <a name="setting-migration-options"></a>Festlegen von Migrations Optionen  
-Überprüfen Sie vor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Migrieren von Daten zu oder SQL Azure die Projekt Migrations Optionen im Dialogfeld **Projekteinstellungen** .  
+Überprüfen Sie vor dem Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure die Projekt Migrations Optionen im Dialogfeld **Projekteinstellungen** .  
   
 -   Mithilfe dieses Dialog Felds können Sie Optionen wie die Batch Größe für die Migration, das Sperren von Tabellen, die Einschränkungs Überprüfung, die Behandlung von NULL-Werten und die Verarbeitung von Identitäts Werten festlegen. Weitere Informationen zu den Projekt Migrations Einstellungen finden Sie unter [Projekteinstellungen (Migration)](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9).  
   
@@ -57,7 +57,7 @@ Nachdem Sie die konvertierten Objekte erfolgreich mit [!INCLUDE[ssNoVersion](../
 > Die **Client seitige Daten Migrations** Option ist nur für SQL Azure verfügbar.  
   
 ## <a name="migrating-data-to-sql-server-or-sql-azure"></a>Migrieren von Daten zu SQL Server oder SQL Azure  
-Beim Migrieren von Daten handelt es sich um einen Massen Ladevorgang, der Daten Zeilen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus MySQL-Tabellen in Transaktionen verschiebt oder in diese SQL Azure. Die Anzahl der Zeilen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in in jeder Transaktion geladen werden, wird in den Projekteinstellungen konfiguriert.  
+Beim Migrieren von Daten handelt es sich um einen Massen Ladevorgang, der Daten Zeilen aus MySQL-Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Transaktionen verschiebt oder in diese SQL Azure. Die Anzahl der Zeilen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in jeder Transaktion geladen werden, wird in den Projekteinstellungen konfiguriert.  
   
 Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldungen anzuzeigen. Wählen Sie andernfalls im Menü **Ansicht** die Option **Ausgabe**aus.  
   
@@ -87,7 +87,7 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldun
   
         1.  Das SSMA für MySQL-Erweiterungspaket wird auf der Instanz von SQL Server installiert.  
   
-        2.  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst wird auf der-Instanz ausgeführt SQL Server  
+        2.  Der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienst wird auf der-Instanz ausgeführt SQL Server  
   
     -   Wählen Sie zum Durchführen der **serverseitigen Datenmigration**im Dialogfeld **Projekteinstellungen** die Option **serverseitiges Datenmigrations-Engine** aus.  
   
@@ -108,5 +108,5 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldun
 > Wenn die SQL Express-Edition als Zieldatenbank verwendet wird, ist nur die Client seitige Datenmigration zulässig, und die serverseitige Datenmigration wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Migrieren von MySQL-Datenbanken zu SQL Server-Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrieren von MySQL-Datenbanken zu SQL Server Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

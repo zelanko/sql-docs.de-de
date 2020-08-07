@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 88dafeff6621a181b3720917235705d4e0b12e2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d4ee3f039613865aab68860f93ab74279068a7da
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878290"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865308"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,7 +68,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|Monatlich|  
 |**32**|Monatlich, relativ zu *freq_interval*|  
 |**64**|Beim Starten des SQL Agent-Dienstanbieter ausführen|  
-|**128**|Ausführen, wenn sich der Computer im Leerlauf befindet (wird in [verwaltete Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)nicht unterstützt) |  
+|**128**|Ausführen, wenn sich der Computer im Leerlauf befindet (wird in [Azure SQL-verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)nicht unterstützt) |  
   
 `[ @freq_interval = ] freq_interval`Die Tage, an denen ein Auftrag ausgeführt wird. *freq_interval* ist vom Datentyp **int**und hat den Standardwert **1**und hängt vom Wert *freq_type*ab.  
   
@@ -98,10 +98,10 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|Second|  
-|**4**|Dritter|  
+|**2**|Sekunde|  
+|**4**|Third|  
 |**8**|Vierter|  
-|**16**|Last (Letzter)|  
+|**16**|Letzter|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *freq_recurrence_factor* wird nur verwendet, *freq_type* wenn freq_type **8**, **16**oder **32**ist. *freq_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
