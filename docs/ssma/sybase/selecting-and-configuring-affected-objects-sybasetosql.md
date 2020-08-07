@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020990"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930441"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Auswählen und Konfigurieren von betroffenen Objekten (SybaseToSQL)
 Auf dieser Seite können Sie Tabellen und Fremdschlüssel auswählen, Änderungen, die verglichen werden sollen, wenn SSMA die Ausführungs Ergebnisse für die im vorherigen Schritt ausgewählten Objekte überprüft. Außerdem können Sie die Überprüfungs Parameter anpassen.  
@@ -33,13 +33,13 @@ Die Registerkarte Tabelle enthält die Rasteransicht der ausgewählten Tabelle. 
   
 -   Datentyp  
   
--   Precision  
+-   Genauigkeit  
   
 -   Skalieren  
   
 -   Regel  
   
--   Standard  
+-   Standardwert  
   
 -   Identity  
   
@@ -110,9 +110,9 @@ Steuert die Groß-/Kleinschreibung des Vergleichs.
 -   Wenn Sie **false**auswählen, wird beim Vergleich der Buchstabe Groß-/Kleinschreibung berücksichtigt.  
   
 ## <a name="comparing-sql"></a>Vergleichen von SQL  
-Sie können die von SSMA Tester generierten SELECT-Anweisungen auf der Seite **SQL vergleichen** anzeigen. Der Tester vergleicht die Resultsets dieser Anweisungen zeilenweise. Jede nächste Zeile eines Sybase-Resultsets sollte gleich der nächsten Zeile des Resultsets sein, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in erstellt wurde.  
+Sie können die von SSMA Tester generierten SELECT-Anweisungen auf der Seite **SQL vergleichen** anzeigen. Der Tester vergleicht die Resultsets dieser Anweisungen zeilenweise. Jede nächste Zeile eines Sybase-Resultsets sollte gleich der nächsten Zeile des Resultsets sein, das in erstellt wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-Sie können diese SELECT-Anweisungen bearbeiten, um eine benutzerdefinierte Überprüfung bereitzustellen Um die Änderungen in Sybase-und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anweisungen zu speichern, verwenden Sie die **Apply** -Schaltflächen unter dem Quell-und Ziel-SQL entsprechend.  
+Sie können diese SELECT-Anweisungen bearbeiten, um eine benutzerdefinierte Überprüfung bereitzustellen Um die Änderungen in Sybase-und in-Anweisungen zu speichern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , verwenden Sie die **Apply** -Schaltflächen unter dem Quell-und Ziel-SQL entsprechend.  
   
 ## <a name="next-step"></a>Nächster Schritt  
 [Anpassen von Aufruf Reihenfolge &#40;sybasedesql&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  

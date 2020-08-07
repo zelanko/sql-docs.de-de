@@ -20,14 +20,14 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 757c0e040a047f96a6dcf364638f76593904adf1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 612921c1640b97135c96a5f81c3099722bf5bb4c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395860"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939144"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Herstellen einer Verbindung mit SQL Server (accesstosql)
 Wenn Sie Access-Datenbanken zu migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , müssen Sie eine Verbindung mit der-Ziel Instanz herstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn Sie eine Verbindung herstellen, werden von SSMA Metadaten zu den Datenbanken in der Instanz von abgerufen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Daten Bank Metadaten im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatenexplorer angezeigt. SSMA speichert Informationen zu der Instanz von, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der Sie verbunden sind, speichert aber keine Kenn Wörter.  

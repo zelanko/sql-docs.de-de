@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 51c0253dce8e95a5a25110b47b348397c967af94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 32167639a12d86a7bf3cf84b3895537af551d8d5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938261"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937040"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Befehlszeilenoptionen in der SSMA-Konsole (DB2ToSQL)
 Microsoft stellt Ihnen eine robuste Befehlszeilenoption zur Verfügung, mit der Sie SSMA-Aktivitäten ausführen und steuern können. Die nachfolgenden Abschnitte beschreiben die gleichen.  
@@ -24,7 +24,7 @@ Hier werden die Konsolen Befehlsoptionen beschrieben.
   
 Für den Zweck dieses Abschnitts wird der Begriff "Option" auch als "Switch" bezeichnet.  
   
-Bei den Optionen wird die Groß-/Kleinschreibung nicht beachtet**-**, und es kann**/** entweder mit dem Zeichen ' ' oder ' ' beginnen.  
+Bei den Optionen wird die Groß-/Kleinschreibung nicht beachtet, und es kann entweder mit dem **-** Zeichen ' ' oder ' **/** ' beginnen.  
   
 Wenn Optionen angegeben werden, ist es obligatorisch, die entsprechenden Optionsparameter anzugeben.  
   
@@ -121,7 +121,7 @@ Diese Option gibt das verschlüsselte Kennwort für Serververbindungen an. Dies 
   
 Sie können keine andere Option oder kein anderes Kennwort als Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie im Abschnitt Verwalten von Kenn [Wörtern](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) .  
   
-Die folgenden unter Optionen werden für `-p/securepassword`unterstützt:  
+Die folgenden unter Optionen werden für unterstützt `-p/securepassword` :  
   
 -   Zum Hinzufügen eines Kennworts zum geschützten Speicher für eine angegebene Server-ID oder für alle Server-IDs, die in der Server Verbindungs Datei definiert sind. Mit der Option-überschreiben (unten) wird das Kennwort aktualisiert, wenn es bereits vorhanden ist:  
   

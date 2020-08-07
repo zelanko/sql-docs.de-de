@@ -14,18 +14,18 @@ helpviewer_keywords:
 - procedure, migration
 - recommended migration process
 ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: d35f359186fca7d862ee8da8f4c4932d849c421b
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: c8c0fbd289aea92c78d97a4d41a93255c9e196bf
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823549"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938039"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-database-accesstosql"></a>Migrieren von Access-Datenbanken zu SQL Server Azure SQL-Datenbank (Access Token)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) ist ein Tool, das eine umfassende Umgebung bereitstellt, die Sie bei der schnellen Migration von Access-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure unterstützt. Mithilfe von SSMA können Sie den Zugriff und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die SQL Azure Datenbankobjekte überprüfen, die Access-Datenbank für die Migration bewerten, Access-Datenbankobjekte konvertieren, Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure laden und dann Daten migrieren.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) ist ein Tool, das eine umfassende Umgebung bereitstellt, die Sie bei der schnellen Migration von Access-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure unterstützt. Mithilfe von SSMA können Sie Access-und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL-Datenbankobjekte überprüfen, die Access-Datenbank für die Migration bewerten, Access-Datenbankobjekte konvertieren, Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure laden und dann Daten migrieren.  
   
 ## <a name="recommended-migration-process"></a>Empfohlener Migrationsprozess  
 Verwenden Sie den folgenden Prozess, um Objekte und Daten erfolgreich vom Zugriff auf oder SQL Azure zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  

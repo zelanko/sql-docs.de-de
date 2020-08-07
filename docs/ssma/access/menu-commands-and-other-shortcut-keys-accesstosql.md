@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f7e5aa6a3b6d663c21ff57abda09ee9308a0a2af
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907132"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937785"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Menübefehle und andere Tastenkombinationen (accesstosql)
 In den folgenden Abschnitten werden die Tastenkombinationen für den Zugriff auf Menübefehle und andere Tastenkombinationen beschrieben, die in den verschiedenen Dialogfeldern von SSMA für Access Application verwendet werden.  
@@ -82,7 +82,7 @@ Um auf das Menü Extras zuzugreifen, wird die Tastenkombination ALT + T verwende
 |Erstellen Sie einen Bericht.|Alt + T + C|  
 |Schema konvertieren.|Alt + T + N oder STRG + R|  
 |Aktualisieren Sie aus Access Database.|ALT+T + R|  
-|Synchronisieren Sie mit SQL Server oder SQL Azure Datenbank.|Alt + T + S|  
+|Synchronisieren Sie mit SQL Server oder Azure SQL-Datenbank.|Alt + T + S|  
 |Als Skript speichern.|Alt + T + A|  
 |Migrieren von Daten|ALT+T + M|  
 |Beendet den aktuellen Vorgang.|Alt + T + O|  

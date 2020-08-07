@@ -13,17 +13,17 @@ helpviewer_keywords:
 - source data types
 - target data types
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e0600778b938a7736ab1112f31bbe4828605cdaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c67cb826d5a5dce7c142cba3ded468b851cef337
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907159"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938250"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Zuordnung von Quell-und Ziel Datentypen (accesstosql)
-Zugriffsdaten Bank Typen unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scheiden sich von Datenbanktypen. Wenn Sie Access-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in-Objekte konvertieren, müssen Sie angeben, wie Datentypen aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dem Zugriff zugeordnet werden sollen. Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Prozeduren gezeigt.  
+Zugriffsdaten Bank Typen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanktypen. Wenn Sie Access-Datenbankobjekte in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte konvertieren, müssen Sie angeben, wie Datentypen aus dem Zugriff zugeordnet werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Prozeduren gezeigt.  
   
 ## <a name="default-mappings"></a>Standardzuordnungen  
 SSMA verfügt über einen Standardsatz von Datentyp Zuordnungen. Die Liste der Standard Zuordnungen finden Sie unter [Projekteinstellungen (Typzuordnung)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  

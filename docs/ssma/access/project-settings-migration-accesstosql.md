@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 973a957f3c2c758aaf83116d9cba1cc8f50a3adc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929393"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937752"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Projekteinstellungen (Migration) (accesstosql)
 Mit den Migrationsprojekt Einstellungen können Sie konfigurieren, wie Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure migriert werden.  
@@ -39,7 +39,7 @@ Gibt an, ob SSMA Einschränkungen beim Hinzufügen von Daten zu Tabellen überpr
 -   **Vollständiger Modus**: false  
   
 **Trigger auslösen**  
-Gibt an, ob SSMA Einfügetrigger auslösen soll, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wenn Daten zu Tabellen hinzugefügt werden.  
+Gibt an, ob SSMA Einfügetrigger auslösen soll, wenn Daten zu Tabellen hinzugefügt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Standardmodus**: false  
   
@@ -48,7 +48,7 @@ Gibt an, ob SSMA Einfügetrigger auslösen soll, [!INCLUDE[ssNoVersion](../../in
 -   **Vollständiger Modus**: false  
   
 **Identität beibehalten**  
-Gibt an, ob SSMA beim Hinzufügen von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Zugriffs Identitäts Werte beibehält. Wenn dieser Wert false ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Identitäts Werte zugewiesen.  
+Gibt an, ob SSMA beim Hinzufügen von Daten zu Zugriffs Identitäts Werte beibehält [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn dieser Wert false ist, werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Identitäts Werte zugewiesen.  
   
 -   **Standardmodus**: true  
   
@@ -57,7 +57,7 @@ Gibt an, ob SSMA beim Hinzufügen von Daten zu [!INCLUDE[ssNoVersion](../../incl
 -   **Vollständiger Modus**: false  
   
 **NULL-Werte beibehalten**  
-Gibt an, ob SSMA beim Hinzufügen von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]NULL-Werte in den Quelldaten beibehält, unabhängig von den in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angegebenen Standardwerten.  
+Gibt an, ob SSMA beim Hinzufügen von Daten zu NULL-Werte in den Quelldaten beibehält [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , unabhängig von den in angegebenen Standardwerten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Standardmodus**: true  
   
@@ -75,7 +75,7 @@ Gibt an, ob SSMA Tabellen sperrt, wenn während der Datenmigration Daten zu Tabe
 -   **Vollständiger Modus**: true  
   
 **Nicht unterstützte Datumsangaben ersetzen**  
-Gibt an, ob SSMA Zugriffsdaten korrigieren soll, die vor dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] frühestmöglichen Datum (01. Januar 1753) liegen.  
+Gibt an, ob SSMA Zugriffsdaten korrigieren soll, die vor dem frühestmöglichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datum (01. Januar 1753) liegen.  
   
 -   Um die aktuellen Datumswerte beizubehalten, wählen Sie keine Aktion durch **führen**aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]akzeptiert keine Datumsangaben vor 01. Januar 1753 in einer datetime-Spalte. Wenn Sie ältere Datumsangaben verwenden, müssen Sie die DateTime-Werte in Zeichen Werte konvertieren.  
   

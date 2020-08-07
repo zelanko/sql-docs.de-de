@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Project Settings dialog box, SQL Azure
 - SQL Azure settings
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 67d80ae6457a4b02e4520d634acfb5f06aa747ec
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3dd47039f6bbfaa15eb16776487191a66a17db59
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823929"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937579"
 ---
 # <a name="project-settings-azure-sql-database-accesstosql"></a>Projekteinstellungen (Azure SQL-Datenbank) (accesstosql)
-Mit den SQL Azure-Projekteinstellungen können Sie das SQL Azure Daten Bank Suffix konfigurieren, das im Verbindungs Dialogfeld hinzugefügt werden soll, und außerdem die Implementierung des Takt Mechanismus in SQL Azure Verbindung ermöglichen.  
+Mit den SQL Azure Project-Einstellungen können Sie das Suffix der Azure SQL-Datenbank konfigurieren, das im Verbindungs Dialogfeld hinzugefügt werden soll, und die Implementierung des Takt Mechanismus in SQL Azure Verbindung ermöglichen.  
   
 Der SQL Azure Bereich ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar.  
   

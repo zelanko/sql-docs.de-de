@@ -22,12 +22,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b384190b6ffeee077f6658d0701f036c3f7746a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4ce8584d48a20f35b090b957b1455c444e5b4b83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396822"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928695"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "87396822"
 |**scheduler_total_count**|**int**|Stellt die Gesamtanzahl der Zeitplanungsmodule in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar. Lässt keine NULL-Werte zu.|  
 |**deadlock_monitor_serial_number**|**int**|Gibt die ID der aktuellen Deadlocküberwachungssequenz an. Lässt keine NULL-Werte zu.|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|Stellt die **ms_tick** Nummer beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] letzten Start dar. Vergleicht diesen Wert mit dem aktuellen Wert in der ms_ticks-Spalte. Lässt keine NULL-Werte zu.|  
-|**sqlserver_start_time**|**datetime**|Gibt das Datum und die Uhrzeit an, wann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum letzten Mal gestartet wurde. Lässt keine NULL-Werte zu.|  
+|**sqlserver_start_time**|**datetime**|Gibt das lokale Systemdatum und die Uhrzeit des letzten Starts an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lässt keine NULL-Werte zu.|  
 |**affinity_type**|**int**|**Gilt für:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und höher.<br /><br /> Gibt den Typ der Server-CPU-Prozessaffinität an, die derzeit verwendet wird. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [Alter Server Configuration &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUELL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**Gilt für:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und höher.<br /><br /> Beschreibt die **affinity_type** Spalte. Lässt keine NULL-Werte zu.<br /><br /> MANUELL = Die Affinität wurde für mindestens eine CPU festgelegt.<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Threads zwischen CPUs frei verschieben.|  
 |**process_kernel_time_ms**|**bigint**|**Gilt für:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und höher.<br /><br /> Benötigte Gesamtzeit in Millisekunden für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Threads im Kernelmodus. Dieser Wert kann größer als eine einzelne Prozessoruhr sein, da er die Zeit für alle Prozessoren auf dem Server enthält. Lässt keine NULL-Werte zu.|  

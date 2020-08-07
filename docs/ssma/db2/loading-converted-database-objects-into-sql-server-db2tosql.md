@@ -7,32 +7,32 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7af5566094c9cc4c40ba2aa33f27e79bae1c7445
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c44f55d80669863bf0a968d3a6c415b863a311e9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141027"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937101"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Laden von konvertierten Datenbankobjekten in SQL Server (DB2ToSQL)
-Nachdem Sie DB2-Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]konvertiert haben, können Sie die resultierenden Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in laden. Sie können entweder das SSMA-Objekt erstellen, oder Sie können Skripts für die Objekte erstellen und die Skripts selbst ausführen. Außerdem können Sie mit SSMA Ziel Metadaten mit dem tatsächlichen Inhalt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank aktualisieren.  
+Nachdem Sie DB2-Schemas in konvertiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie die resultierenden Datenbankobjekte in Laden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können entweder das SSMA-Objekt erstellen, oder Sie können Skripts für die Objekte erstellen und die Skripts selbst ausführen. Außerdem können Sie mit SSMA Ziel Metadaten mit dem tatsächlichen Inhalt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank aktualisieren.  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>Zwischen Synchronisierung und Skripts auswählen  
-Wenn Sie die konvertierten Datenbankobjekte ohne Änderungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in laden möchten, können Sie die Datenbankobjekte von SSMA direkt erstellen oder neu erstellen. Diese Methode ist schnell und einfach, lässt jedoch nicht zu, dass der [!INCLUDE[tsql](../../includes/tsql-md.md)] Code, der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte definiert, außer gespeicherten Prozeduren angepasst wird.  
+Wenn Sie die konvertierten Datenbankobjekte ohne Änderungen in laden möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie die Datenbankobjekte von SSMA direkt erstellen oder neu erstellen. Diese Methode ist schnell und einfach, lässt jedoch nicht zu, dass der Code, der [!INCLUDE[tsql](../../includes/tsql-md.md)] die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte definiert, außer gespeicherten Prozeduren angepasst wird.  
   
-Wenn Sie das ändern möchten, [!INCLUDE[tsql](../../includes/tsql-md.md)] das zum Erstellen von-Objekten verwendet wird, oder wenn Sie mehr Kontrolle über die Objekt Erstellung haben möchten, verwenden Sie SSMA zum Erstellen von-Skripts. Anschließend können Sie diese Skripts ändern, jedes Objekt einzeln erstellen und sogar den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die Erstellung dieser Objekte zu planen.  
+Wenn Sie das ändern möchten, [!INCLUDE[tsql](../../includes/tsql-md.md)] das zum Erstellen von-Objekten verwendet wird, oder wenn Sie mehr Kontrolle über die Objekt Erstellung haben möchten, verwenden Sie SSMA zum Erstellen von-Skripts. Anschließend können Sie diese Skripts ändern, jedes Objekt einzeln erstellen und sogar den-Agent verwenden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um die Erstellung dieser Objekte zu planen.  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Verwenden von SSMA zum Synchronisieren von Objekten mit SQL Server  
-Wenn Sie SSMA zum Erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Datenbankobjekten verwenden möchten, wählen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie die Objekte im metadatenexplorer aus, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und synchronisieren Sie dann die Objekte mit, wie im folgenden Verfahren gezeigt. Wenn die Objekte bereits in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorhanden sind und die SSMA-Metadaten neuer als das Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sind, ändert SSMA standardmäßig die Objekt Definitionen in. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie können das Standardverhalten ändern, indem Sie die **Projekteinstellungen**bearbeiten.  
+Wenn Sie SSMA zum Erstellen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbankobjekten verwenden möchten, wählen Sie die Objekte im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatenexplorer aus, und synchronisieren Sie dann die Objekte mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wie im folgenden Verfahren gezeigt. Wenn die Objekte bereits in vorhanden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind und die SSMA-Metadaten neuer als das Objekt in sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ändert SSMA standardmäßig die Objekt Definitionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können das Standardverhalten ändern, indem Sie die **Projekteinstellungen**bearbeiten.  
   
 > [!NOTE]  
 > Sie können vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbankobjekte auswählen, die nicht aus DB2-Datenbanken konvertiert wurden. Diese Objekte werden jedoch nicht von SSMA neu erstellt oder geändert.  
   
 **So synchronisieren Sie Objekte mit SQL Server**  
   
-1.  Erweitern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie im metadatenexplorer den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] obersten Knoten, und erweitern Sie dann **Datenbanken**.  
+1.  Erweitern Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatenexplorer den obersten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Knoten, und erweitern Sie dann **Datenbanken**.  
   
 2.  Wählen Sie die zu verarbeitenden Objekte aus:  
   
@@ -57,7 +57,7 @@ Wenn Sie SSMA zum Erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 Klicken Sie auf das Aktions Zeichen, um den Status zu ändern. Die eigentliche Synchronisierung wird durchgeführt, wenn Sie im Dialogfeld **mit Datenbank synchronisieren** auf die Schaltfläche **OK** klicken.  
   
 ## <a name="scripting-objects"></a>Skripterstellung für Objekte  
-Zum Speichern [!INCLUDE[tsql](../../includes/tsql-md.md)] der Definitionen der konvertierten Datenbankobjekte oder zum Ändern der Objekt Definitionen und zum Ausführen von Skripts können Sie die konvertierten Daten Bank [!INCLUDE[tsql](../../includes/tsql-md.md)] Objekt Definitionen in Skripts speichern.  
+Zum Speichern der [!INCLUDE[tsql](../../includes/tsql-md.md)] Definitionen der konvertierten Datenbankobjekte oder zum Ändern der Objekt Definitionen und zum Ausführen von Skripts können Sie die konvertierten Datenbankobjekt Definitionen in [!INCLUDE[tsql](../../includes/tsql-md.md)] Skripts speichern.  
   
 **So speichern Sie Objekte als Skripts**  
   
@@ -65,10 +65,10 @@ Zum Speichern [!INCLUDE[tsql](../../includes/tsql-md.md)] der Definitionen der k
   
     Sie können auch Skripts für einzelne Objekte oder Kategorien von Objekten erstellen, indem Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner klicken und dann auf **als Skript speichern**klicken.  
   
-2.  Suchen Sie im Dialogfeld **Speichern** unter den Ordner, in dem Sie das Skript speichern möchten, geben Sie im Feld **Dateiname** einen Dateinamen ein, [!INCLUDE[clickOK](../../includes/clickok-md.md)]und klicken Sie dann auf. SSMA fügt die Dateinamenerweiterung ". SQL" an.  
+2.  Suchen Sie im Dialogfeld **Speichern** unter den Ordner, in dem Sie das Skript speichern möchten, geben Sie im Feld **Dateiname** einen Dateinamen ein, und klicken Sie dann auf [!INCLUDE[clickOK](../../includes/clickok-md.md)] . SSMA fügt die Dateinamenerweiterung ". SQL" an.  
   
 ### <a name="modifying-scripts"></a>Ändern von Skripts  
-Nachdem Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekt Definitionen als ein oder mehrere Skripts gespeichert haben, können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um die Skripts anzuzeigen und zu ändern.  
+Nachdem Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekt Definitionen als ein oder mehrere Skripts gespeichert haben, können Sie verwenden, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] um die Skripts anzuzeigen und zu ändern.  
   
 **So ändern Sie ein Skript**  
   
@@ -78,12 +78,12 @@ Nachdem Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekt
   
 3.  Bearbeiten Sie die Skriptdatei mit dem Abfrage-Editor.  
   
-    Weitere Informationen zum Abfrage-Editor finden Sie in der-Online Dokumentation unter "praktische Befehle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Features im Editor".  
+    Weitere Informationen zum Abfrage-Editor finden Sie in der-Online Dokumentation unter "praktische Befehle und Features im Editor" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 4.  Um das Skript zu speichern, klicken Sie im Menü Datei auf **Speichern**.  
   
 ### <a name="running-scripts"></a>Ausführen von Skripts  
-Sie können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ein Skript oder einzelne Anweisungen ausführen.  
+Sie können in ein Skript oder einzelne Anweisungen ausführen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 **So führen Sie ein Skript aus**  
   
@@ -95,12 +95,12 @@ Sie können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
   
 4.  Um einen Satz von-Anweisungen auszuführen, wählen Sie die Anweisungen im Abfrage-Editor-Fenster aus, und drücken Sie dann die Taste **F5** .  
   
-Weitere Informationen zur Verwendung des Abfrage-Editors zum Ausführen von Skripts finden Sie unter [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] "Abfrage" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der-Online Dokumentation.  
+Weitere Informationen zur Verwendung des Abfrage-Editors zum Ausführen von Skripts finden Sie unter " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Online Dokumentation.  
   
-Sie können Skripts auch über die Befehlszeile ausführen, indem Sie das Hilfsprogramm **sqlcmd** und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Agent verwenden. Weitere Informationen zu **sqlcmd**finden Sie unter "sqlcmd Utility" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Online Dokumentation. Weitere Informationen zum- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent finden Sie unter "Automatisieren administrativer Aufgaben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Agent)" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der-Online Dokumentation.  
+Sie können Skripts auch über die Befehlszeile ausführen, indem Sie das Hilfsprogramm **sqlcmd** und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent verwenden. Weitere Informationen zu **sqlcmd**finden Sie unter "sqlcmd Utility" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Online Dokumentation. Weitere Informationen zum- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent finden Sie unter "Automatisieren administrativer Aufgaben ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent)" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Online Dokumentation.  
   
 ## <a name="securing-objects-in-sql-server"></a>Sichern von Objekten in SQL Server  
-Nachdem Sie die konvertierten Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geladen haben, können Sie Berechtigungen für diese Objekte erteilen und verweigern. Es empfiehlt sich, dies zu tun, bevor Sie Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migrieren. Informationen zum Sichern von Objekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]finden Sie unter "Sicherheitsüberlegungen für Datenbanken und Datenbankanwendungen" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der-Online Dokumentation.  
+Nachdem Sie die konvertierten Datenbankobjekte in geladen haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie Berechtigungen für diese Objekte erteilen und verweigern. Es empfiehlt sich, dies zu tun, bevor Sie Daten zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Informationen zum Sichern von Objekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter "Sicherheitsüberlegungen für Datenbanken und Datenbankanwendungen" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Online Dokumentation.  
   
 ## <a name="next-step"></a>Nächster Schritt  
 Der nächste Schritt des Migrations Vorgangs besteht darin, [DB2-Daten in SQL Server zu migrieren](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b).  

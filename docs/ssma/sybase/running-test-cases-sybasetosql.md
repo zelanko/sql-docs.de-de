@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d828142d83f21cf38663241d593fe197b9715592
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021018"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930501"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ausführen von Testfällen (SybaseToSQL)
-Wenn der SSMA-Tester einen Testfall ausführt, führt er die für das Testen ausgewählten Objekte aus und erstellt einen Bericht über Überprüfungs Ergebnisse. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Sybase [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und wird anhand der Schema-Mapping-Einstellungen für das aktuelle SSMA-Projekt festgelegt.  
+Wenn der SSMA-Tester einen Testfall ausführt, führt er die für das Testen ausgewählten Objekte aus und erstellt einen Bericht über Überprüfungs Ergebnisse. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Sybase und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird anhand der Schema-Mapping-Einstellungen für das aktuelle SSMA-Projekt festgelegt.  
   
 Eine erforderliche Anforderung für einen erfolgreichen Test besteht darin, dass alle Sybase-Objekte konvertiert und in die Zieldatenbank geladen werden. Außerdem sollten die Tabellendaten migriert werden, damit die Inhalte der Tabellen auf beiden Plattformen synchronisiert werden.  
   
@@ -38,25 +38,25 @@ Wenn der Test fertig ist, wird der Test Fallbericht erstellt. Klicken Sie auf di
 Der SSMA-Tester prüft, ob alle Voraussetzungen für die Testausführung vor dem Start des Tests erfüllt sind. Wenn einige Bedingungen nicht erfüllt sind, wird eine Fehlermeldung angezeigt.  
   
 ### <a name="initialization"></a>Initialisierung  
-In diesem Schritt erstellt SSMA Tester Hilfsobjekte (Tabellen, Trigger und Sichten) sowohl bei Sybase als auch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bei. Sie ermöglichen das verfolgen **von Änderungen,** die in den betroffenen Tabellen vorgenommen werden, die für die Überprüfung ausgewählt wurden, wenn der Tabellen Vergleichs Modus  
+In diesem Schritt erstellt SSMA Tester Hilfsobjekte (Tabellen, Trigger und Sichten) sowohl bei Sybase als auch bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie ermöglichen das verfolgen **von Änderungen,** die in den betroffenen Tabellen vorgenommen werden, die für die Überprüfung ausgewählt wurden, wenn der Tabellen Vergleichs Modus  
   
 Angenommen, die überprüfte Tabelle hat den Namen USER_TABLE. Für eine solche Tabelle werden die folgenden Hilfsobjekte in Sybase erstellt.  
   
-Die folgenden Objekte werden bei Sybase in der SSMATESTER2005db-oder SSMATESTER2008db-Datenbank und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der ssmatesterdb_syb-Datenbank erstellt.  
+Die folgenden Objekte werden bei Sybase in der SSMATESTER2005db-oder SSMATESTER2008db-Datenbank und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der ssmatesterdb_syb-Datenbank erstellt.  
   
-|Name|type|Beschreibung|  
+|Name|Typ|BESCHREIBUNG|  
 |--------|--------|---------------|  
 |USER_TABLE $ trg|Trigger|Löst die Überprüfung der Änderungen in der verifizierten Tabelle aus.|  
 |USER_TABLE $ AUD|Tabelle|Tabelle, in der gelöschte und über schriebene Zeilen gespeichert werden.|  
 |USER_TABLE $ audid|Tabelle|Tabelle, in der neue und geänderte Zeilen gespeichert werden.|  
-|USER_TABLE|Anzeigen|Vereinfachte Darstellung der Tabellen Änderungen.|  
-|USER_TABLE $ New|Anzeigen|Vereinfachte Darstellung von eingefügten und über schriebenen Zeilen.|  
-|USER_TABLE $ new_id|Anzeigen|Identifizierung eingefügter und geänderter Zeilen.|  
-|USER_TABLE $ Old|Anzeigen|Vereinfachte Darstellung gelöschter und überschriebener Zeilen.|  
+|USER_TABLE|Ansicht|Vereinfachte Darstellung der Tabellen Änderungen.|  
+|USER_TABLE $ New|Ansicht|Vereinfachte Darstellung von eingefügten und über schriebenen Zeilen.|  
+|USER_TABLE $ new_id|Ansicht|Identifizierung eingefügter und geänderter Zeilen.|  
+|USER_TABLE $ Old|Ansicht|Vereinfachte Darstellung gelöschter und überschriebener Zeilen.|  
   
-Das folgende Objekt wird in der Datenbank der verifizierten Tabelle unter Sybase und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt.  
+Das folgende Objekt wird in der Datenbank der verifizierten Tabelle unter Sybase und erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Name|type|Beschreibung|  
+|Name|Typ|BESCHREIBUNG|  
 |--------|--------|---------------|  
 |USER_TABLE $ trg|Trigger|Löst die Überprüfung der Änderungen in der verifizierten Tabelle aus.|  
   

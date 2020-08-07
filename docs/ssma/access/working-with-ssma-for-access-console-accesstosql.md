@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: c470cf8ea61851b80f04bce716bc7c83c54929b0
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d46435bcf975036fc92926f50651dd5eff7c8080
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396899"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937302"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Arbeiten mit SSMA für die Zugriffs Konsole (Access Token)
 Für den Zugriff auf Microsoft SQL Server Migration Assistant (SSMA) ist jetzt über eine Konsolenanwendung in der Befehlszeile verfügbar. Die Skriptdateien bilden die Eingabe für die Anwendung zum Ausführen der Befehle. Als Konsolenanwendung ermöglicht SSMA die Interaktion auf Skript Ebene, reduziert den Migrations Zyklen und skaliert den Migrations Aufwand.  

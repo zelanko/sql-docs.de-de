@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SQL Azure, reconnecting
 - SQL Azure, synchronizing metadata
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3bb372b329ce516cae2ab26ece02721d7934b228
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822517"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938910"
 ---
 # <a name="connecting-to-azure-sql-database-accesstosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (accesstosql)
 Wenn Sie Access-Datenbanken zu SQL Azure migrieren möchten, müssen Sie eine Verbindung mit der Ziel Instanz von SQL Azure herstellen. Wenn Sie eine Verbindung herstellen, erhält SSMA Metadaten zu allen Datenbanken in der Instanz von SQL Azure und zeigt Daten Bank Metadaten im SQL Azure Metadaten-Explorer an. SSMA speichert Informationen darüber, mit welcher Instanz von SQL Azure Sie verbunden sind, speichert aber keine Kenn Wörter.  
@@ -72,7 +72,7 @@ Wenn Sie die Verbindungs Eigenschaften definieren, geben Sie auch die Datenbank 
 Wenn das SQL Azure Konto keine Datenbanken enthält, können Sie die erste Datenbank mithilfe der Option **Create Azure Database** erstellen, die auf der Schaltfläche zum **Durchsuchen** klicken angezeigt wird.  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>Synchronisieren von SQL Azure-Metadaten  
-Metadaten zu SQL Azure-Datenbanken werden nicht automatisch aktualisiert. Bei den Metadaten in SQL Azure Metadaten-Explorer handelt es sich um eine Momentaufnahme der Metadaten, wenn Sie zum ersten Mal eine Verbindung mit SQL Azure hergestellt haben oder wenn Sie die Metadaten zuletzt manuell aktualisiert haben. Sie können Metadaten für alle Datenbanken oder für eine einzelne Datenbank oder ein Datenbankobjekt manuell aktualisieren.  
+Metadaten zu Datenbanken in Azure SQL-Datenbank werden nicht automatisch aktualisiert. Bei den Metadaten in SQL Azure Metadaten-Explorer handelt es sich um eine Momentaufnahme der Metadaten, wenn Sie zum ersten Mal eine Verbindung mit SQL Azure hergestellt haben oder wenn Sie die Metadaten zuletzt manuell aktualisiert haben. Sie können Metadaten für alle Datenbanken oder für eine einzelne Datenbank oder ein Datenbankobjekt manuell aktualisieren.  
   
 **So synchronisieren Sie Metadaten**  
   
@@ -96,10 +96,10 @@ Die Verbindung mit SQL Azure bleibt aktiv, bis Sie das Projekt schließen. Wenn 
   
 Die Vorgehensweise für das erneute Herstellen einer Verbindung mit SQL Azure entspricht der Vorgehensweise zum Herstellen einer Verbindung.  
   
-## <a name="next-step"></a>Nächster Schritt  
+## <a name="next-steps"></a>Nächste Schritte  
 Der nächste Schritt der Migration hängt von Ihren Projektanforderungen ab:  
   
--   Informationen zum Anpassen der Zuordnung zwischen Zugriffs Schemas und SQL Azure Datenbanken und Schemas finden Sie unter [Mapping Access-Datenbanken zu SQL Server Schemas](mapping-source-and-target-databases-accesstosql.md).  
+-   Informationen zum Anpassen der Zuordnung zwischen Zugriffs Schemas und Azure SQL-Datenbank finden Sie unter [Mapping Access Database to SQL Server Schemas](mapping-source-and-target-databases-accesstosql.md).  
   
 -   Informationen zum Anpassen der Konfigurationsoptionen für die Projekte finden Sie unter [Setting Project Options](setting-conversion-and-migration-options-accesstosql.md).  
   

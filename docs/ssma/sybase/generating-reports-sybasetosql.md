@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Sybase Console,refresh-from-database report
 - Sybase Console,synchronize-target report
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 564385c15d9877454d30892f9cce54fbca6cf802
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: df30186091344addef429bfb125e90b898d21467
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396389"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931543"
 ---
 # <a name="generating-reports-sybasetosql"></a>Generieren von Berichten (SybaseToSQL)
 Die Berichte bestimmter Aktivitäten, die mithilfe von Befehlen ausgeführt werden, werden in der SSMA-Konsole auf Objektstruktur Ebene generiert.  
@@ -29,7 +29,7 @@ Verwenden Sie das folgende Verfahren, um Berichte zu generieren:
   
     Die Berichte vis-a-vis-Befehle lauten:  
   
-    |SL. Nein.|Get-Help|Berichtstitel|  
+    |SL. Nein|Befehl|Berichtstitel|  
     |-|-|-|  
     |1|generieren-Assessment-Bericht|Gutamentreport &lt; n &gt; . Basi|  
     |2|Convert-Schema|Schemaconversionreport &lt; n &gt; . Basi|  
@@ -41,11 +41,11 @@ Verwenden Sie das folgende Verfahren, um Berichte zu generieren:
     > [!IMPORTANT]  
     > Ein Ausgabebericht unterscheidet sich vom Bewertungsbericht. Bei der ersten handelt es sich um einen Bericht zur Leistung eines ausgeführten Befehls, bei dem es sich um einen XML-Bericht für die programmgesteuerte Nutzung handelt.  
   
-    Für die Befehlsoptionen für Ausgabe Berichte (von SL. Nein. 2-4 oben) lesen Sie den Abschnitt [Ausführen der SSMA-Konsole &#40;sybasedesql&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md) .  
+    Für die Befehlsoptionen für Ausgabe Berichte (von SL. Nein 2-4 oben) lesen Sie den Abschnitt [Ausführen der SSMA-Konsole &#40;sybasedesql&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md) .  
   
 2.  Geben Sie den Umfang der im Ausgabebericht gewünschten Details mithilfe der berichtsausführlichkeits-Einstellungen an:  
   
-    |SL. Nein.|Befehl und Parameter|Ausgabe Beschreibung|  
+    |SL. Nein|Befehl und Parameter|Ausgabe Beschreibung|  
     |-|-|-|  
     |1|Verbose = "false"|Generiert einen zusammengefassten Bericht der Aktivität.|  
     |2|Verbose = "true"|Generiert einen zusammengefassten und detaillierten Statusbericht für jede Aktivität.|  
@@ -55,7 +55,7 @@ Verwenden Sie das folgende Verfahren, um Berichte zu generieren:
   
 3.  Geben Sie den Umfang der von Ihnen gewünschten Details in den Fehlerberichten mithilfe der Einstellungen für die Fehlerberichterstattung an:  
   
-    |SL. Nein.|Befehl und Parameter|Ausgabe Beschreibung|  
+    |SL. Nein|Befehl und Parameter|Ausgabe Beschreibung|  
     |-|-|-|  
     |1|Report-Errors = "false"|Keine Details zu Fehler-/Warnungs-/Information-Meldungen.|  
     |2|Report-Errors = "true"|Ausführliche Fehler-/Warnungs-/Information-Meldungen.|  

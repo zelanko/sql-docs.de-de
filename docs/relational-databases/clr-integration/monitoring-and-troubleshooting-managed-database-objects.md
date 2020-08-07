@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9b05b11fcf3110b9f51d1f9cb44fdabb4a3ba36
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 760fcc2212991f0841f4ded3dd2932e551c26060
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728446"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87948092"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Überwachung und Problembehandlung von verwalteten Datenbankobjekten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "85728446"
 ## <a name="profiler-trace-events"></a>Profiler-Ablaufverfolgungsereignisse  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt die SQL-Ablaufverfolgung und Ereignisbenachrichtigungen bereit, um Ereignisse zu überwachen, die in der Datenbank-Engine auftreten. Durch Aufzeichnen angegebener Ereignisse können Sie mit der SQL-Ablaufverfolgung Leistungsprobleme behandeln, die Datenbankaktivität überwachen, Stichprobendaten für eine Testumgebung sammeln, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und gespeicherte Prozeduren debuggen sowie Daten für Leistungsanalysetools sammeln. Weitere Informationen finden Sie unter [SQL](../../relational-databases/sql-trace/sql-trace.md) -Ablauf Verfolgung und [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md).  
   
-|event|BESCHREIBUNG|  
+|Ereignis|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Assembly Load-Ereignisklasse](/sql/database-engine/assembly-load-event-class)|Wird verwendet, um Assembly-Ladeanforderungen (Erfolg und Fehler) zu überwachen.|  
+|[Assembly Load-Ereignisklasse](https://docs.microsoft.com/sql/relational-databases/event-classes/sql-server-event-class-reference)|Wird verwendet, um Assembly-Ladeanforderungen (Erfolg und Fehler) zu überwachen.|  
 |[SQL: BatchStarting-Ereignisklasse](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [SQL: batchabgeschlossene-Ereignisklasse](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Stellt Informationen über [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches bereit, die gestartet oder beendet wurden.|  
 |[SP: Starting-Ereignisklasse](../../relational-databases/event-classes/sp-starting-event-class.md), [SP: Abgeschlossene Ereignisklasse](../../relational-databases/event-classes/sp-completed-event-class.md)|Wird verwendet, um die Ausführung von gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren zu überwachen.|  
 |[SQL: StmtStarting-Ereignisklasse](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [SQL: stmtabgeschlossene-Ereignisklasse](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Wird verwendet, um die Ausführung von CLR- und [!INCLUDE[tsql](../../includes/tsql-md.md)]-Routinen zu überwachen.|  

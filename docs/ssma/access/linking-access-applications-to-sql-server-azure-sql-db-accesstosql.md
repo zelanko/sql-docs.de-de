@@ -21,18 +21,18 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823846"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938413"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>Verknüpfen von Zugriffs Anwendungen mit SQL Server Azure SQL-Datenbank (Access Token)
-Wenn Sie die vorhandenen Access-Anwendungen mit verwenden möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie die ursprünglichen Zugriffs Tabellen mit den migrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen oder den SQL Azure Tabellen verknüpfen. Durch die Verknüpfung wird die Access-Datenbank geändert, sodass Ihre Abfragen, Formulare, Berichte und Datenzugriffsseiten die Daten in der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder-SQL Azure Datenbank anstelle der Daten in der Access-Datenbank verwenden.  
+Wenn Sie die vorhandenen Access-Anwendungen mit verwenden möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie die ursprünglichen Zugriffs Tabellen mit den migrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen oder den SQL Azure Tabellen verknüpfen. Durch die Verknüpfung wird die Access-Datenbank geändert, sodass Ihre Abfragen, Formulare, Berichte und Datenzugriffsseiten die Daten in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank anstelle der Daten in der Access-Datenbank verwenden.  
   
 > [!NOTE]  
 > Die Zugriffs Tabellen bleiben im Zugriff, werden jedoch nicht mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Updates aktualisiert. Nachdem Sie die Tabellen verknüpft und die Funktionalität überprüft haben, möchten Sie möglicherweise die Zugriffs Tabellen löschen.  

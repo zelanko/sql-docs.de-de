@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 35e6c735fe0d9411d310298d4f32dbaab97b93c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f59e442a70b8c9b621f453ab9837412238ec6102
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927789"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937259"
 ---
 # <a name="advanced-object-selection-db2tosql"></a>Erweiterte Objektauswahl (DB2ToSQL)
 Im Dialogfeld Erweiterter **Objekt Abschnitt** können Sie Datenbankobjekte filtern, indem Sie Zeichen folgen und Teil Zeichenfolgen im Objektnamen verwenden. Wählen Sie anschließend diese Objekte aus, oder deaktivieren Sie diese. SSMA führt Konvertierungs-und Migrations Vorgänge für ausgewählte Objekte aus.  
@@ -25,7 +25,7 @@ Wenn Sie das Dialogfeld zum ersten Mal öffnen, klicken Sie auf **Unterkategorie
   
 Bevor Sie dieses Dialogfeld verwenden, möchten Sie möglicherweise erzwingen, dass SSMA alle Metadaten lädt, indem Sie entweder Schemas oder das Projekt speichern.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Optionen
 **Alle Elemente überprüfen**  
 Fügt ein Häkchen neben allen Elementen hinzu. Diese Elemente werden sofort im metadatenexplorer ausgewählt.  
   

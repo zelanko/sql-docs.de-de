@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 29669535f3544dafea58e7064e6d2c5281f6102f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5dc6cd8939dbc7d5d42417b06c938c9ae8d3f7e8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989697"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937202"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>Typzuordnung bearbeiten (DB2ToSQL)
 Im Dialogfeld **Typzuordnung bearbeiten** können Sie angeben, wie Typen zwischen den Quell-und Ziel Datenbankobjekten zugeordnet werden sollen.  
@@ -29,7 +29,7 @@ Tabellen spezifische Typzuordnungen überschreiben Datenbank-und Projekttyp Zuor
   
 ## <a name="options"></a>Optionen  
 **Quellentyp**  
-Wählen Sie den Quell Datentyp aus, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem Datentyp zugeordnet werden soll.  
+Wählen Sie den Quell Datentyp aus, der einem Datentyp zugeordnet werden soll [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Wenn der Datentyp eine Variable Länge hat, werden die folgenden Felder unter **Quelltyp**angezeigt:  
   
@@ -40,7 +40,7 @@ Geben Sie die Mindestlänge für diese Zuordnung an. Beispielsweise können Sie 
 Geben Sie die maximale Länge für diese Zuordnung an. Beispielsweise können Sie für den **NCHAR** -Datentyp 20 eingeben, um anzugeben, dass diese Zuordnung für einen Bereich gilt, der bei **NCHAR (20)** endet.  
   
 **Zieltyp**  
-Wählen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Datentyp aus, dem der Quell Datentyp zugeordnet ist. Wenn SSMA die Tabelle oder die gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt, ändert sich der Quell Datentyp in diesen Datentyp.  
+Wählen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp aus, dem der Quell Datentyp zugeordnet ist. Wenn SSMA die Tabelle oder die gespeicherte Prozedur in erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ändert sich der Quell Datentyp in diesen Datentyp.  
   
 Wenn der Datentyp eine Variable Länge hat, wird das folgende Feld unter **Zieltyp**angezeigt:  
   

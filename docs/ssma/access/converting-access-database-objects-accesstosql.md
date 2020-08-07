@@ -28,17 +28,17 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f15fc6cee7f66128af7646b9605234e60830b8db
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6109f523cce37e64bd13ccf9bf783b07a26fe94e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84302805"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939112"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Datenbankobjekte werden umgerechnet (accesstosql)
-Nachdem Sie Access-Datenbanken hinzugefügt und eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure hergestellt haben, zeigt SSMA Metadaten für den Zugriff und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Datenbankobjekten an. Sie können jetzt auf Datenbankobjekte zugreifen auswählen und dann die Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Schemas konvertieren.  
+Nachdem Sie Access-Datenbanken hinzugefügt und eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure hergestellt haben, zeigt SSMA Metadaten für Access-und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL-Datenbankobjekte an. Sie können jetzt auf Datenbankobjekte zugreifen auswählen und dann die Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Schemas konvertieren.  
   
 ## <a name="the-conversion-process"></a>Der Konvertierungsprozess  
 Beim Konvertieren von Datenbankobjekten werden die Objekt Definitionen aus den Zugriffs Metadaten konvertiert, in eine entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)] Syntax konvertiert und dann in das Projekt geladen. Anschließend können Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -oder-SQL Azure Objekte und deren Eigenschaften mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Metadaten-Explorer anzeigen.  
@@ -57,12 +57,12 @@ In der folgenden Tabelle wird gezeigt, welche Zugriffs Objekte konvertiert werde
 |Access-Objekt|Resultierende SQL Server Objekt|  
 |-----------------|-------------------------------|  
 |table|table|  
-|Säulendiagramm|Säulendiagramm|  
+|column|column|  
 |Index|Index|  
 |Fremdschlüssel|Fremdschlüssel|  
 |Abfrage|Sicht<br /><br />Die meisten SELECT-Abfragen werden in Sichten konvertiert. Andere Abfragen, z. b. Update Abfragen, werden nicht migriert.<br /><br />SELECT-Abfragen, die Parameter akzeptieren, werden nicht konvertiert, und es handelt sich nicht um Kreuz Registerkarten Abfragen.|  
 |report|nicht konvertiert|  
-|Formular|nicht konvertiert|  
+|form|nicht konvertiert|  
 |Makro|nicht konvertiert|  
 |module|nicht konvertiert|  
 |Standardwert|Standardwert|  
@@ -88,7 +88,7 @@ Zum Konvertieren von Access-Datenbankobjekten müssen Sie zuerst die Objekte aus
   
     -   Zum Konvertieren oder weglassen einzelner Tabellen erweitern Sie die Datenbank, erweitern Sie **Tabellen**, und aktivieren bzw. deaktivieren Sie das Kontrollkästchen neben der Tabelle.  
   
-3.  Führen Sie einen der folgenden Schritte aus:  
+3.  Führen Sie eines der folgenden Verfahren aus:  
   
     -   Zum Konvertieren von Schemas klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Schema konvertieren**  
   
@@ -115,7 +115,7 @@ Nachdem Sie die Zugriffs Metadaten in [!INCLUDE[ssNoVersion](../../includes/ssno
   
 Nun können Sie die Änderungen im Code auf der Registerkarte " **SQL** " anzeigen.  
   
-## <a name="next-step"></a>Nächster Schritt  
+## <a name="next-steps"></a>Nächste Schritte  
 Der nächste Schritt des Migrations Vorgangs ist das [Laden von konvertierten Datenbankobjekten in SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Migration Wizard, New Project
 - Migration Wizard, Selecting objects to migrate
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 658487186924fe5547edee70425524b2b4e3be6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8413487d4b367426c22795f7e82e58ec029706c3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083593"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938009"
 ---
 # <a name="migration-wizard-accesstosql"></a>Migrations-Assistent (accesstosql)
-Der-Migrations-Assistent führt Sie durch die Migration von einer oder mehreren Datenbanken [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Access zu oder SQL Azure. Mit dem Assistenten erstellen Sie ein Projekt, fügen dem Projektdaten Banken hinzu, wählen zu migrierende Objekte aus und stellen eine Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit oder SQL Azure her. Außerdem werden Zugriffs Schemas und Daten konvertiert, geladen und migriert. Optional können Sie Zugriffs Tabellen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Tabellen verknüpfen.  
+Der-Migrations-Assistent führt Sie durch die Migration von einer oder mehreren Datenbanken von Access zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Mit dem Assistenten erstellen Sie ein Projekt, fügen dem Projektdaten Banken hinzu, wählen zu migrierende Objekte aus und stellen eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure her. Außerdem werden Zugriffs Schemas und Daten konvertiert, geladen und migriert. Optional können Sie Zugriffs Tabellen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Tabellen verknüpfen.  
   
 Die meisten Migrations-Assistenten Seiten enthalten dieselben Optionen wie vorhandene SSMA-Dialogfelder. Daher werden die Seiten des Assistenten hier beschrieben, und es werden Links bereitgestellt, damit Sie mehr über einzelne Optionen erfahren können. Wenn eine Seite eindeutige Optionen enthält, werden Sie hier dokumentiert.  
   
@@ -75,7 +75,7 @@ Wenn Sie über viele Objekte verfügen, können Sie die Optionen für **Erweiter
 Weitere Informationen zum Filtern finden Sie im Abschnitt "Optionen" unter [Erweiterte Objektauswahl (SSMA Common)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
   
 ## <a name="connect-to-sql-server-page"></a>Verbindung mit SQL Server Seite herstellen  
-Legen Sie auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Seite verbinden mit die Verbindungs Eigenschaften fest, und stellen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dann eine Verbindung mit her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL Server](connect-to-sql-server-accesstosql.md).
+Legen Sie auf der Seite verbinden mit die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindungs Eigenschaften fest, und stellen Sie dann eine Verbindung mit her [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQL Server](connect-to-sql-server-accesstosql.md).
   
 > [!IMPORTANT]  
 > Sobald die Verbindung erfolgreich hergestellt wurde, wird die Seite **Link Tabellen** angezeigt, auf der Sie die Möglichkeit haben, die Tabellen zu verknüpfen. Klicken Sie auf **weiter** , um die Migration zu starten.  
@@ -87,13 +87,13 @@ Legen Sie auf der Seite mit SQL Azure verbinden die Verbindungs Eigenschaften fe
 > Sobald die Verbindung erfolgreich hergestellt wurde, wird die Seite **Link Tabellen** angezeigt, auf der Sie die Möglichkeit haben, die Tabellen zu verknüpfen. Klicken Sie auf der Seite Verknüpfungen auf **weiter** , um die Migration zu starten.  
   
 ## <a name="link-tables-page"></a>Link Tabellen (Seite)  
-Auf der Seite Link Tabellen können Sie die ursprünglichen Zugriffs Tabellen mit den migrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen oder SQL Azure Tabellen verknüpfen. Durch das Verknüpfen von Tabellen wird die Access-Datenbank geändert, sodass Ihre Abfragen, Formulare, Berichte und Datenzugriffsseiten die Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der-oder-SQL Azure Datenbank anstelle der Daten in der Access-Datenbank verwenden.  
+Auf der Seite Link Tabellen können Sie die ursprünglichen Zugriffs Tabellen mit den migrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen oder SQL Azure Tabellen verknüpfen. Durch das Verknüpfen von Tabellen wird die Access-Datenbank geändert, sodass Ihre Abfragen, Formulare, Berichte und Datenzugriffsseiten die Daten in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank anstelle der Daten in der Access-Datenbank verwenden.  
   
 **Tabellen verknüpfen**  
-Aktivieren Sie das Kontrollkästchen **Tabellen verknüpfen** , um Zugriffs Tabellen mit den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrierten Tabellen oder SQL Azure Tabellen zu verknüpfen. Um die Migration zu starten, klicken Sie auf die Schaltfläche **weiter** .  
+Aktivieren Sie das Kontrollkästchen **Tabellen verknüpfen** , um Zugriffs Tabellen mit den migrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen oder SQL Azure Tabellen zu verknüpfen. Um die Migration zu starten, klicken Sie auf die Schaltfläche **weiter** .  
   
 ## <a name="migration-status-page"></a>Seite "Migrations Status"  
-Die Seite Migrations Status zeigt den Fortschritt der Konvertierung der Zugriffs Schemas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in oder SQL Azure Schemas, das Laden der konvertierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Schemas in oder SQL Azure und das anschließende Migrieren von Daten.  
+Die Seite Migrations Status zeigt den Fortschritt der Konvertierung der Zugriffs Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Schemas, das Laden der konvertierten Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure und das anschließende Migrieren von Daten.  
   
 Weitere Informationen zu dieser Seite finden Sie unter [konvertieren, laden und Migrieren](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b) .  
   

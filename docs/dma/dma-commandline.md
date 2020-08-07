@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a4fdc0343d1346833fd58c4e2fa0240e1a2af668
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864917"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87950975"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ausführen von Datenmigrations-Assistent von der Befehlszeile aus
 
@@ -106,7 +106,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**Einzeldaten Bank Bewertung für die Zielplattform SQL Azure Datenbank, Ergebnisse in JSON-und CSV-Datei speichern**
+**Einzeldaten Bank Bewertung für die Azure SQL-Datenbank der Zielplattform, Ergebnisse in JSON-und CSV-Datei speichern**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -155,7 +155,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**Einzeldaten Bank Bewertung für die Zielplattform SQL Azure Datenbank, Ergebnisse in JSON-und CSV-Datei speichern**
+**Einzeldaten Bank Bewertung für die Azure SQL-Datenbank der Zielplattform, Ergebnisse in JSON-und CSV-Datei speichern**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -304,7 +304,7 @@ Diese Befehle unterstützen Empfehlungen sowohl für Azure SQL-Datenbank-als auc
 |`/SkuRecommendationSubscriptionId` | Die Abonnement-ID. | J <br> (Für die neuesten Preise)
 |`/SkuRecommendationDatabasesToRecommend` | Durch Leerzeichen getrennte Liste mit Datenbanken, die empfohlen werden sollen (z. b. "Database1" "Database2" "Database3"). Bei Namen wird die Groß-/Kleinschreibung beachtet und muss in doppelte Anführungszeichen eingeschlossen werden. Wenn die Angabe ausgelassen wird, werden für alle Datenbanken Empfehlungen bereitgestellt. | N
 |`/AzureAuthenticationTenantId` | Der Authentifizierungs Mandant. | J <br> (Für die neuesten Preise)
-|`/AzureAuthenticationClientId` | Die Client-ID der Aad-APP, die für die Authentifizierung verwendet wird. | J <br> (Für die neuesten Preise)
+|`/AzureAuthenticationClientId` | Die Client-ID der Azure AD-App, die für die Authentifizierung verwendet wird. | J <br> (Für die neuesten Preise)
 |`/AzureAuthenticationInteractiveAuthentication` | Legen Sie diese Einstellung auf true fest, um das Fenster aufklappen. | J <br> (Für die neuesten Preise) <br>(Wählen Sie eine der drei Authentifizierungs Optionen aus: Option 1)
 |`/AzureAuthenticationCertificateStoreLocation` | Legen Sie den Speicherort des Zertifikats fest (z. b. "CurrentUser"). | J <br>(Für die neuesten Preise) <br> (Wählen Sie eine der drei Authentifizierungs Optionen aus: Option 2)
 |`/AzureAuthenticationCertificateThumbprint` | Legen Sie auf den Zertifikat Fingerabdruck fest. | J <br> (Für die neuesten Preise) <br>(Wählen Sie eine der drei Authentifizierungs Optionen aus: Option 2)

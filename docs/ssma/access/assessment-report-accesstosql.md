@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Assessment Report dialog box
 - Conversion Report dialog box
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c28fb4cf5d110e01b156fc6ce985b2cb2fb7bfe1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: de675e479217170a465126d8fe242d01c778abf0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910683"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939078"
 ---
 # <a name="assessment-report-accesstosql"></a>Bewertungsbericht (accesstosql)
-Im Fenster Bewertungsbericht werden die Ergebnisse der Konvertierung von Datenbankobjekten in [!INCLUDE[tsql](../../includes/tsql-md.md)] die-Syntax angezeigt. Außerdem können Sie die Komplexität und die Kosten ihrer Migrationsprojekte schätzen.  
+Im Fenster Bewertungsbericht werden die Ergebnisse der Konvertierung von Datenbankobjekten in die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax angezeigt. Außerdem können Sie die Komplexität und die Kosten ihrer Migrationsprojekte schätzen.  
   
 Zum Erstellen eines Bewertungsberichts wählen Sie zu konvertierende Objekte im quellmetadatenexplorer aus, klicken Sie mit der rechten Maustaste auf **Datenbanken**, und wählen Sie dann **Bericht erstellen**aus. Sie können diesen Bericht auch nach dem Konvertieren von Schemas automatisch anzeigen. Der Berichts Name wird jedoch als Konvertierungs Bericht verwendet. Weitere Informationen finden Sie unter [Projekteinstellungen (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   

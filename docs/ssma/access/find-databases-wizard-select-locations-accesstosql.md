@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 06a6135425a8baf19d28d99b74e761f229f977fd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68024753"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938661"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Assistent zum Suchen von Datenbanken (Speicherorte auswählen) (accesstosql)
 Geben Sie auf der Seite Speicherorte auswählen des Assistenten zum Suchen von Datenbanken die Suchparameter für die Suche nach Access-Datenbanken ein.  
@@ -36,7 +36,7 @@ Listet die Standorte auf, die von SSMA überprüft werden. Wenn Sie auf die Scha
 **Add (Hinzufügen)**  
 Fügt die Position im Textfeld Pfad der Liste der Speicherorte hinzu.  
   
-**Stelle**  
+**Replace**  
 Wenn ein Element in der Liste der Speicherorte ausgewählt ist, ersetzt das Element im Textfeld Pfad das ausgewählte Element.  
   
 **Remove**  
@@ -45,7 +45,7 @@ Entfernt das ausgewählte Element aus der Liste der zu durchsuchenden Speicheror
 **Ganz oder teilweise der Dateiname**  
 Wenn Sie Datenbanken suchen möchten, die eine bestimmte Zeichenfolge enthalten, geben Sie die Zeichenfolge ein. Verwenden Sie keine Platzhalter Zeichen.  
   
-**Das Erstellungsdatum.**  
+**Erstellungsdatum**  
 Um Datenbanken zu suchen, die in einem bestimmten Datumsbereich erstellt wurden, geben Sie das Startdatum im Feld **von** und das Enddatum im Feld **an** ein.  
   
 **Datum der letzten Aktualisierung**  
@@ -55,7 +55,7 @@ Um Datenbanken zu suchen, die in einem bestimmten Datumsbereich zuletzt aktualis
 Wenn Sie Datenbanken suchen möchten, die mit einem Größen Kriterium übereinstimmen, wählen Sie im ersten Feld ein Vergleichs Zeichen aus, geben Sie eine Zahl für die Größe ein, und wählen Sie dann bytes, Kilobytes oder Megabyte aus dem dritten Feld aus.  
   
 **Besitzer**  
-Geben Sie den vollständigen Windows-Benutzernamen des Besitzers ein. Dies kann als *Domänen*\\*Benutzer*formatiert sein.  
+Geben Sie den vollständigen Windows-Benutzernamen des Besitzers ein. Dies kann als *Domänen* \\ *Benutzer*formatiert sein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md)  

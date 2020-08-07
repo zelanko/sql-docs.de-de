@@ -10,17 +10,17 @@ helpviewer_keywords:
 - conversion, options described
 - Project Settings dialog box, Conversion
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ff44d34e6c701c8d43260982d3117def4cb9530d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8889e0d869960f8300194afe31fe87b7f0cf2346
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929459"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937805"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Projekteinstellungen (Konvertierung) (accesstosql)
-Mithilfe der Konvertierungs Projekteinstellungen können Sie konfigurieren, wie Objekte aus Access-Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Bank Objekten in oder SQL Azure-Datenbankobjekte konvertiert werden.  
+Mithilfe der Konvertierungs Projekteinstellungen können Sie konfigurieren, wie Objekte aus Access-Datenbankobjekten in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbankobjekte konvertiert werden.  
   
 Der Bereich Konvertierung ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar.  
   
@@ -30,7 +30,7 @@ Der Bereich Konvertierung ist in den Dialogfeldern **Projekteinstellungen** und 
   
 ## <a name="options"></a>Optionen  
 **Primärschlüssel hinzufügen**  
-Erstellt einen neuen Primärschlüssel in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -oder-SQL Azure Tabelle, wenn eine Zugriffs Tabelle keinen Primärschlüssel oder eindeutigen Index aufweist.  
+Erstellt einen neuen Primärschlüssel in der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder-SQL Azure Tabelle, wenn eine Zugriffs Tabelle keinen Primärschlüssel oder eindeutigen Index aufweist.  
   
 -   **Standardmodus**: false  
   
@@ -83,7 +83,7 @@ Gibt den Typ der Meldung (Warnung, Fehler oder nichts) an, die SSMA im Ausgabebe
   
 -   **Vollmodus**: Fehler  
   
-**Warnen, wenn eine komplexe Abfrage einen Platzhalter\&verwendet (#42;)**  
+**Warnen, wenn eine komplexe Abfrage einen Platzhalter verwendet ( \& #42;)**  
 Zeigt eine Warnung im Ausgabebereich an und Fehlerliste, wenn ein Spaltenname in einer SELECT-Anweisung ein Platzhalter (*) ist.  
   
 -   **Standardmodus**: true  
