@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Type Mapping Inheritance
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 8a9cb39213ed2809b7074a474edf5e4e20bd9122
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 656132dafce39e6007601b75956fd73714638716
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293835"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934785"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Zuordnen von Oracle- und SQL Server-Datentypen (OracleToSQL)
 Oracle-Datenbanktypen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanktypen Beim Konvertieren von Oracle-Datenbankobjekten in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte müssen Sie angeben, wie Datentypen aus Oracle zugeordnet werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Abschnitten dargestellt.  

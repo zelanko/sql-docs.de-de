@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: f2df572e7e4be92eb91662ffc47448b7becf3a7e
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 3a061ede945ed8eda5264c2ef210bca5ac1d70e9
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864907"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988487"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Ermitteln der richtigen Azure SQL-Datenbank/verwaltete Instanz-SKU für Ihre lokale Datenbank
 
@@ -29,7 +29,7 @@ Dieser Artikel konzentriert sich auf das Azure SQL-Datenbank-Empfehlungs Feature
 
 - Einzeldatenbank
 - Pools für elastische Datenbanken
-- Verwaltete Instanz
+- SQL-Datenbank-Instanz
 
 Mit der SKU-Empfehlungs Funktion können Sie sowohl die empfohlene Mindestanzahl von Azure SQL-Datenbank-als auch Azure SQL verwaltete Instanz-SKU basierend auf Leistungsindikatoren identifizieren, die von den Computern gesammelt werden, auf denen Ihre Datenbanken gehostet werden. Die-Funktion bietet Empfehlungen im Zusammenhang mit Tarif, computeebene und maximaler Datengröße sowie geschätzten Kosten pro Monat. Außerdem bietet es die Möglichkeit, für alle empfohlenen Datenbanken eine Massen Bereitstellung einzelner Datenbanken und verwalteter Instanzen durchzusetzen.
 

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Test Case Wizard
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 697f7049a60aa7ae2b8c89d1fb6c5ce8e3d29312
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 270d904c11df5ab28062cd83672071319ca6f17f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266134"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934953"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Erstellen von Testfällen (OracleToSQL)
 Verwenden Sie den Testfall-Assistenten, um einen Test zu erstellen. Mit diesem Assistenten können Sie Testfälle erstellen, indem Sie getestete und überprüfte Objekte auswählen und die Testparameter angeben.  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2b25cb2dbe5b92e0ece7ef28a842a2585ea9961d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066660"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933994"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Projekteinstellungen (Typzuordnung) (accesstosql)
 Mit den Projekteinstellungen für die Typzuordnung können Sie Standardtypmappings für das SSMA-Projekt festlegen. Sie können auch Typzuordnungen für einzelne Datenbankobjekte angeben. Weitere Informationen finden Sie unter [Zuordnung von Quell-und Ziel Datentypen](mapping-source-and-target-data-types-accesstosql.md).  
@@ -37,15 +37,15 @@ Die Typzuordnung ist in den Dialogfeldern **Projekteinstellungen** und **Standar
 Der zuzuordnende Zugriffs Datentyp.  
   
 **Zieltyp**  
-Der Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -oder SQL Azure Datentyp für den angegebenen Zugriffs Datentyp.  
+Der Ziel- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Datentyp für den angegebenen Zugriffs Datentyp.  
   
 Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datentypen.  
   
 |Access-Datentyp|SQL Server-Datentyp|  
 |--------------------|------------------------|  
-|**binärer\*Wert [.. \*]**|**varbinary [\*]**|  
+|**Binär [ \* .. \* ]**|**varbinary [ \* ]**|  
 |**boolean**|**bit**|  
-|**byte**|**tinyint**|  
+|**Byte**|**tinyint**|  
 |**Währungs**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
@@ -57,8 +57,8 @@ Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datent
 |**Memo**|**nvarchar(max)**|  
 |**Memo** für Zugriff 97|**varchar(max)**|  
 |**single**|**real**|  
-|**Text [\*.. \*]**|**nvarchar [\*]**|  
-|**Text [\*.. ] \*** -für Access 97|**varchar [\*]**|  
+|**Text [ \* .. \* ]**|**nvarchar [ \* ]**|  
+|**Text [ \* .. \* ]** : für Access 97|**varchar [ \* ]**|  
   
 **Add (Hinzufügen)**  
 Klicken Sie hier, um der Zuordnungsliste einen Datentyp hinzuzufügen.  

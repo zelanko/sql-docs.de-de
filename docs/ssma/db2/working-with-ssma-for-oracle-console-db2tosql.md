@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 62136073116141c206c36d5fcca8dd5b417de0e4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acf7affd211dc95d05f8fe6ce8b29f05292ad46c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396419"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933551"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Arbeiten mit SSMA für die Oracle-Konsole (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA)-Release für DB2 ist nun über eine Konsolenanwendung in der Befehlszeile verfügbar. Die Skriptdateien bilden die Eingabe für die Anwendung zum Ausführen der Befehle. Als Konsolenanwendung ermöglicht SSMA die Interaktion auf Skript Ebene, reduziert den Migrations Zyklen und skaliert den Migrations Aufwand.  

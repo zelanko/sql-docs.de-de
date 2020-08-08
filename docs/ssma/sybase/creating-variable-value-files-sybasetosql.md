@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Sybase Console,Creating Variable Value Files
 - Sybase Console,Variable Value File Validation
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2c0c76a36502d9d590b6db478efcab6feb50ba01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d995562f1b62e04629861d1d562b9ed50e8c5db3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029388"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931872"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>Erstellen von Variablenwertdateien (SybaseToSQL)
 Die Variable Wert Datei ist eine XML-Datei, die die Parameterwerte von Befehlen wie, dem Quell-oder Zielserver Namen, der sich häufig von einer Servermigration in eine andere ändert, umfasst. Wenn eine große Anzahl von Datenbankmigrationen auftritt, werden mehrere Variablen Dateien zum Speichern des Werts jedes Quell Servers erstellt und in einer Master Skriptdatei mit dem Schalter **-v** in der Befehlszeile referenziert. Dies trägt dazu bei, statische Werte in einigen Skriptdateien mit den Variablen Werten in mehreren Variablen Dateien beizubehalten.  
   
 > [!NOTE]  
 > 1.  Variablennamen wird ein Präfix mit einem Suffix von $ (Dollar) vorangestellt. Wenn den Variablen kein Wert in der Variablen Wert Datei zugewiesen wird, tritt bei der Verarbeitung der Skriptdatei ein Fehler auf, der dazu führt, dass der Konsolen Ausführungsprozess beendet wird.  
-> 2.  Das Escapezeichen **$** für **$$** ist. Wenn der Wert einer Variablen oder eines statischen Werts eines Parameters das **$** Symbol (Dollar) enthält, **$$** muss angegeben werden, um ihn als Zeichen anstelle einer Variablen zu behandeln.  
-> 3.  Aus Gründen der Wartbarkeit können Variablen in `'variable-group'` -Elementen für die logische Trennung von benutzerdefinierten Variablen deklariert werden.  Die Verwendung dieses Elements ist nicht obligatorisch.  
+> 2.  Das Escapezeichen für **$** ist **$$** . Wenn der Wert einer Variablen oder eines statischen Werts eines Parameters das **$** Symbol (Dollar) enthält, **$$** muss angegeben werden, um ihn als Zeichen anstelle einer Variablen zu behandeln.  
+> 3.  Aus Gründen der Wartbarkeit können Variablen in- `'variable-group'` Elementen für die logische Trennung von benutzerdefinierten Variablen deklariert werden.  Die Verwendung dieses Elements ist nicht obligatorisch.  
   
 **Beispiele:**  
   

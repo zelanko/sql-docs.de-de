@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f987e03ad8dda27e436f22ef54fc3c2646579f4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7f0f9b22d571e4ac89fcd0db464a1e79ae91a28b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051549"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933914"
 ---
 # <a name="save-metadata-accesstosql"></a>Metadaten speichern (accesstosql)
 Im Dialogfeld **Metadaten speichern** werden Sie aufgefordert, Metadaten vor dem Speichern in das SSMA-Projekt zu laden. Auf diese Weise können Sie eine komplette Projektdatei verwenden, die Sie offline verwenden und an andere Personen wie z. b. technische Supportmitarbeiter senden können.  
@@ -30,10 +30,10 @@ Gibt an, ob Metadaten in das SSMA-Projekt geladen werden oder ob Metadaten fehle
   
 SSMA lädt bei Bedarf Metadaten in das Projekt. Metadaten werden automatisch geladen, wenn Sie Metadaten durchsuchen und Schemas konvertieren.  
   
-**Alle auswählen**  
+**Alles markieren**  
 Wählt alle aufgelisteten Datenbanken aus.  
   
-**Klartext**  
+**Clear** (Deaktiviert)  
 Löscht das Kontrollkästchen für alle Datenbanken mit fehlenden Metadaten. Sie können das Kontrollkästchen nicht deaktivieren, wenn eine Metadaten geladen wurde.  
   
 **Speichern**  

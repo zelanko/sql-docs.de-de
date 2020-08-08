@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6d208be8fb7ebf8d1c33b0df5d7c49dd28a412a7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006594"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933969"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Erstellen von Variablen Wert Dateien (accesstosql)
 Eine Variablen Wert Datei ist eine XML-Datei, die die Parameterwerte von Befehlen (z. b. der Quell-oder Zielserver Name) umfasst, die sich häufig über Server Migrationen hinweg ändern. Wenn eine große Anzahl von Datenbankmigrationen auftritt, werden mehrere Variablen Dateien zum Speichern des Werts jedes Quell Servers erstellt und in einer Master Skriptdatei mit dem Schalter **-v** in der Befehlszeile referenziert. Dieses Verhalten trägt dazu bei, statische Werte in einigen Skriptdateien mit den Variablen Werten in mehreren Variablen Dateien beizubehalten.  
   
 > [!NOTE]  
 > -  Variablennamen wird ein Präfix mit einem Suffix von $ (Dollar) vorangestellt. Wenn einer Variablen in der Variablen Wert Datei kein Wert zugewiesen wird, tritt ein Fehler während der Verarbeitung der Skriptdatei auf, was dazu führt, dass der Konsolen Ausführungsprozess beendet wird.  
-> -  Das Escapezeichen **$** für **$$** ist. Wenn der Wert einer Variablen oder eines statischen Werts eines Parameters ein **$** (Dollar-) Symbol enthält, **$$** muss angegeben werden, um ihn als Zeichen anstelle einer Variablen zu behandeln.  
-> -  Aus Gründen der Wartbarkeit können Variablen in `'variable-group'` -Elementen für die logische Trennung von benutzerdefinierten Variablen deklariert werden.  Die Verwendung dieses Elements ist nicht obligatorisch.  
+> -  Das Escapezeichen für **$** ist **$$** . Wenn der Wert einer Variablen oder eines statischen Werts eines Parameters ein **$** (Dollar-) Symbol enthält, **$$** muss angegeben werden, um ihn als Zeichen anstelle einer Variablen zu behandeln.  
+> -  Aus Gründen der Wartbarkeit können Variablen in- `'variable-group'` Elementen für die logische Trennung von benutzerdefinierten Variablen deklariert werden.  Die Verwendung dieses Elements ist nicht obligatorisch.  
   
 **Beispiele:**  
   
@@ -93,6 +93,6 @@ Der Benutzer kann die Datei mit den Variablen Werten auf einfache Weise anhand d
 ## <a name="next-step"></a>Nächster Schritt  
 Der nächste Schritt bei der Betriebs Konsole besteht darin, [die Server Verbindungs Dateien &#40;Access Token zu erstellen&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen der Server Verbindungs Dateien (Access)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

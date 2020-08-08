@@ -16,17 +16,17 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7d7a87d45807c749477da7a7158f3a63fc56ec4b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006555"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934019"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportieren einer Zugriffs Inventur (accesstosql)
-Wenn Sie über mehrere Access-Datenbanken verfügen und nicht sicher sind, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]welche migriert werden sollen, können Sie ein Inventar aller Access-Datenbanken in einem Projekt exportieren. Sie können dann die Inventar Metadaten überprüfen und Abfragen, um zu bestimmen, welche Datenbanken und Objekte innerhalb dieser Datenbanken migriert werden sollen. Diese Inventur ermöglicht Ihnen das schnelle Auffinden von Antworten auf Fragen wie die folgenden:  
+Wenn Sie über mehrere Access-Datenbanken verfügen und nicht sicher sind, in welche migriert werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie ein Inventar aller Access-Datenbanken in einem Projekt exportieren. Sie können dann die Inventar Metadaten überprüfen und Abfragen, um zu bestimmen, welche Datenbanken und Objekte innerhalb dieser Datenbanken migriert werden sollen. Diese Inventur ermöglicht Ihnen das schnelle Auffinden von Antworten auf Fragen wie die folgenden:  
   
 -   Was sind die größten Datenbanken?  
   
@@ -44,12 +44,12 @@ Abfrage Beispiele, die zum Beantworten dieser Fragen verwendet werden, werden am
 SSMA exportiert Metadaten zu Zugriffs Datenbanken, Tabellen, Spalten, Indizes, Fremdschlüsseln, Abfragen, Berichten, Formularen, Makros und Modulen. Metadaten zu den einzelnen Kategorien von Elementen werden in eine separate Tabelle exportiert. Informationen zu Schemas für diese Tabellen finden Sie unter [zugreifen auf Inventar Schemas](access-inventory-schemas-accesstosql.md).  
   
 ## <a name="exporting-inventory-data"></a>Exportieren von Inventur Daten  
-Zum Exportieren einer Zugriffs Inventur müssen Sie zunächst ein SSMA-Projekt öffnen oder erstellen und dann die Zugriffs Datenbank hinzufügen, die Sie analysieren möchten. Nachdem Sie einem SSMA-Projektdaten Banken hinzugefügt haben, exportieren Sie Metadaten zu diesen Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Banken in eine angegebene Datenbank und ein bestimmtes Schema. Ggf. erstellt SSMA Tabellen zum Speichern der Metadaten. SSMA fügt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank dann die Metadaten zu den Access-Datenbanken hinzu.  
+Zum Exportieren einer Zugriffs Inventur müssen Sie zunächst ein SSMA-Projekt öffnen oder erstellen und dann die Zugriffs Datenbank hinzufügen, die Sie analysieren möchten. Nachdem Sie einem SSMA-Projektdaten Banken hinzugefügt haben, exportieren Sie Metadaten zu diesen Datenbanken in eine angegebene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank und ein bestimmtes Schema. Ggf. erstellt SSMA Tabellen zum Speichern der Metadaten. SSMA fügt der Datenbank dann die Metadaten zu den Access-Datenbanken hinzu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
-> Eine Access-Datenbank kann in mehrere Dateien aufgeteilt werden: eine Back-End-Datenbank, die Tabellen und Front-End-Datenbanken enthält, die Abfragen, Formulare, Berichte, Makros, Module und Verknüpfungen enthalten. Wenn Sie eine Split-Datenbank zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migrieren möchten, fügen Sie SSMA die Front-End-Datenbank hinzu.  
+> Eine Access-Datenbank kann in mehrere Dateien aufgeteilt werden: eine Back-End-Datenbank, die Tabellen und Front-End-Datenbanken enthält, die Abfragen, Formulare, Berichte, Makros, Module und Verknüpfungen enthalten. Wenn Sie eine Split-Datenbank zu migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , fügen Sie SSMA die Front-End-Datenbank hinzu.  
   
-In den folgenden Anweisungen wird beschrieben, wie Sie ein Projekt erstellen, dem Projektdaten Banken hinzu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fügen, eine Verbindung mit dem Projekt herstellen und anschließend Inventur Daten exportieren.  
+In den folgenden Anweisungen wird beschrieben, wie Sie ein Projekt erstellen, dem Projektdaten Banken hinzufügen, eine Verbindung mit dem Projekt herstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anschließend Inventur Daten exportieren.  
   
 **So erstellen Sie ein Projekt**  
   
@@ -100,7 +100,7 @@ Weitere Informationen zum Hinzufügen von Datenbanken zu Projekten finden Sie un
   
 1.  Wählen Sie im Menü **Datei** die Option **mit SQL Server verbinden**aus.  
   
-2.  Geben Sie im Dialogfeld Verbindung den Namen der Instanz von ein, oder wählen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sie ihn aus.  
+2.  Geben Sie im Dialogfeld Verbindung den Namen der Instanz von ein, oder wählen Sie ihn aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     -   Wenn Sie eine Verbindung mit der Standard Instanz auf dem lokalen Computer herstellen, können Sie **localhost** oder einen Punkt (**.**) eingeben.  
   
@@ -110,11 +110,11 @@ Weitere Informationen zum Hinzufügen von Datenbanken zu Projekten finden Sie un
   
 3.  Geben Sie im Feld **Datenbank** den Namen der Zieldatenbank für exportierte Metadaten ein.  
   
-4.  Wenn die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Annahme von Verbindungen an einem nicht standardmäßigen Port konfiguriert ist, geben Sie die Portnummer ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die im Feld **Serverport** für Verbindungen verwendet wird. Die Standard Portnummer für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die Standard Instanz von ist 1433. Bei benannten Instanzen wird von SSMA versucht, die Portnummer vom- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Dienst abzurufen.  
+4.  Wenn die Instanz von für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Annahme von Verbindungen an einem nicht standardmäßigen Port konfiguriert ist, geben Sie die Portnummer ein, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Feld **Serverport** für Verbindungen verwendet wird. Die Standard Portnummer für die Standard Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist 1433. Bei benannten Instanzen wird von SSMA versucht, die Portnummer vom- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Dienst abzurufen.  
   
-5.  Wählen Sie im Dropdown Menü **Authentifizierung** den Authentifizierungstyp aus, der für die Verbindung verwendet werden soll. Um das aktuelle Windows-Konto zu verwenden, wählen Sie **Windows-Authentifizierung**aus. Wählen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Server Authentifizierung**aus, und geben Sie einen Benutzernamen und ein Kennwort ein, um einen Anmelde Namen zu verwenden.  
+5.  Wählen Sie im Dropdown Menü **Authentifizierung** den Authentifizierungstyp aus, der für die Verbindung verwendet werden soll. Um das aktuelle Windows-Konto zu verwenden, wählen Sie **Windows-Authentifizierung**aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Wählen Sie **SQL Server Authentifizierung**aus, und geben Sie einen Benutzernamen und ein Kennwort ein, um einen Anmelde Namen zu verwenden.  
   
-Weitere Informationen zum Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mit finden Sie unter [Herstellen einer Verbindung mit SQL Server &#40;accesstosql&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
+Weitere Informationen zum Herstellen einer Verbindung mit finden Sie unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Herstellen einer Verbindung mit SQL Server &#40;accesstosql&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
   
 **So exportieren Sie Inventur Informationen**  
   
@@ -131,7 +131,7 @@ Weitere Informationen zum Herstellen einer Verbindung [!INCLUDE[ssNoVersion](../
 Jedes Mal, wenn Sie Metadaten exportieren, fügt SSMA die Daten an den Bestand an. Vorhandene Daten im Inventar werden nicht aktualisiert oder gelöscht.  
   
 ## <a name="querying-the-exported-metadata"></a>Abfragen der exportierten Metadaten  
-Nachdem Sie Metadaten zu Access-Datenbanken exportiert haben, können Sie die Metadaten Abfragen. In den folgenden Anweisungen wird beschrieben, wie das Abfrage- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor-Fenster in verwendet wird, um Abfragen auszuführen.  
+Nachdem Sie Metadaten zu Access-Datenbanken exportiert haben, können Sie die Metadaten Abfragen. In den folgenden Anweisungen wird beschrieben, wie das Abfrage-Editor-Fenster in verwendet wird [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , um Abfragen auszuführen.  
   
 **So Fragen Sie Metadaten ab**  
   
@@ -146,7 +146,7 @@ Nachdem Sie Metadaten zu Access-Datenbanken exportiert haben, können Sie die Me
 5.  Drücken Sie die Taste F5, um die Abfrage auszuführen.  
   
 ## <a name="query-examples"></a>Abfragebeispiele  
-Bevor Sie eine der folgenden Abfragen ausführen, sollten Sie eine use *database_name* -Abfrage ausführen, um sicherzustellen, dass die Abfragen für die Datenbank ausgeführt werden, die die exportierten Metadaten enthält. Wenn Sie z. b. Metadaten in eine Datenbank mit dem Namen myaccessmetadata exportiert haben, würden Sie am Anfang des [!INCLUDE[tsql](../../includes/tsql-md.md)] Codes Folgendes hinzufügen:  
+Bevor Sie eine der folgenden Abfragen ausführen, sollten Sie eine use *database_name* -Abfrage ausführen, um sicherzustellen, dass die Abfragen für die Datenbank ausgeführt werden, die die exportierten Metadaten enthält. Wenn Sie z. b. Metadaten in eine Datenbank mit dem Namen myaccessmetadata exportiert haben, würden Sie am Anfang des Codes Folgendes hinzufügen [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
 ```  
 USE MyAccessMetadata;  
@@ -213,7 +213,7 @@ ORDER BY DateModified;
 ```  
   
 ### <a name="which-databases-contain-private-information"></a>Welche Datenbanken enthalten private Informationen?  
-Ihre Access-Datenbanken können vertrauliche oder persönliche Informationen enthalten. Möglicherweise möchten Sie diese Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verschieben, um von den Sicherheitsfeatures zu profitieren. Wenn Sie wissen, dass Spalten, die sensible Daten enthalten, einen bestimmten Namen aufweisen oder bestimmte Zeichen enthalten, können Sie eine Abfrage verwenden, um alle Spalten zu suchen, die diese Informationen enthalten. Beispielsweise können Sie alle Spalten suchen, die die Zeichenfolge "Gehalt" enthalten.  Die Abfrage gibt dann den Datenbanknamen, den Tabellennamen und den Spaltennamen zurück.  
+Ihre Access-Datenbanken können vertrauliche oder persönliche Informationen enthalten. Möglicherweise möchten Sie diese Datenbanken zu verschieben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um von den Sicherheitsfeatures zu profitieren. Wenn Sie wissen, dass Spalten, die sensible Daten enthalten, einen bestimmten Namen aufweisen oder bestimmte Zeichen enthalten, können Sie eine Abfrage verwenden, um alle Spalten zu suchen, die diese Informationen enthalten. Beispielsweise können Sie alle Spalten suchen, die die Zeichenfolge "Gehalt" enthalten.  Die Abfrage gibt dann den Datenbanknamen, den Tabellennamen und den Spaltennamen zurück.  
   
 ```  
 SELECT DatabaseName, TableName, ColumnName   

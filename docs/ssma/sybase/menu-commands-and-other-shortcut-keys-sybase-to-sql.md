@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8f6ea6e9b9e0971967b58b005e4fe554b397edb0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028884"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934671"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Menübefehle und andere Tastenkombinationen (SybaseToSQL)
 In den folgenden Abschnitten werden die Tastenkombinationen für den Zugriff auf Menübefehle und andere Tastenkombinationen beschrieben, die in den verschiedenen Dialogfeldern von SSMA für die Sybase-Anwendung verwendet werden.  
@@ -79,7 +79,7 @@ Um auf das Menü Extras zuzugreifen, wird die Tastenkombination ALT + T verwende
 |Erstellen Sie einen Bericht.|Alt + T + C|  
 |Schema konvertieren.|Alt + T + N oder STRG + R|  
 |Aktualisieren Sie aus der Sybase-Datenbank.|ALT+T + R|  
-|Synchronisieren Sie mit SQL Server oder SQL Azure Datenbank.|Alt + T + S|  
+|Synchronisieren Sie mit SQL Server oder Azure SQL-Datenbank.|Alt + T + S|  
 |Als Skript speichern.|Alt + T + A|  
 |Migrieren von Daten|ALT+T + M|  
 |Beendet den aktuellen Vorgang.|Alt + T + O|  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 985d6e58d00dee705a684b7ef2f6516a5459f0df
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 7ee753bd032cb8ad69f472888a99cc53cc5760d9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293867"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934901"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Erste Schritte mit SSMA für Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Mit Migration Assistant (SSMA) für Oracle können Sie schnell Oracle-Datenbankschemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Schemas konvertieren, die resultierenden Schemas in hochladen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Daten von Oracle zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -99,7 +99,7 @@ In der folgenden Tabelle sind die SSMA-Menüs aufgeführt.
 |----|-----------|  
 |**File**|Enthält Befehle für das Arbeiten mit-Projekten, das Herstellen einer Verbindung mit Oracle und das Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Bearbeiten**|Enthält Befehle zum Suchen und arbeiten mit Text auf den Detailseiten, z. b [!INCLUDE[tsql](../../includes/tsql-md.md)] . zum Kopieren aus dem SQL-Detailbereich. Enthält auch die Option **Lesezeichen verwalten** , in der eine Liste vorhandener Lesezeichen angezeigt werden kann. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.|  
-|**Ansicht**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . , Die die Objekte zwischen dem Oracle-metadatenexplorer und dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatenexplorer synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** zum Verwalten der Layouts.|  
+|**Anzeigen**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . , Die die Objekte zwischen dem Oracle-metadatenexplorer und dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatenexplorer synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** zum Verwalten der Layouts.|  
 |**Extras**|Enthält Befehle zum Erstellen von Berichten und zum Migrieren von Objekten und Daten. Bietet auch Zugriff auf die Dialogfelder **globale Einstellungen** und **Projekteinstellungen** .|  
 |**Tester**|Enthält Befehle zum Erstellen und arbeiten mit Testfällen, Repository und Sicherungs Verwaltungssystem.|  
 |**Hilfe**|Bietet Zugriff **auf die** SSMA-Hilfe und das Dialogfeld Info.|  

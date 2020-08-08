@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b74cf86e6a68653a2047aebefc7ca86ab6868475
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006608"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933981"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Erstellen der Server Verbindungs Dateien (accesstosql)
-Server Informationen können entweder im Abschnitt Server der Skriptdatei angegeben werden. Server Informationen können auch in einer separaten Server Verbindungs Datei angegeben werden. Der Befehlszeilenparameter für die Server Verbindungs Datei ist `-c <serverconnectionfile>`. Wenn in den Skript-und Server Verbindungs Dateien dieselbe Server-ID vorhanden ist, wird die Server Definition in der Skriptdatei berücksichtigt.  
+Server Informationen können entweder im Abschnitt Server der Skriptdatei angegeben werden. Server Informationen können auch in einer separaten Server Verbindungs Datei angegeben werden. Der Befehlszeilenparameter für die Server Verbindungs Datei ist `-c <serverconnectionfile>` . Wenn in den Skript-und Server Verbindungs Dateien dieselbe Server-ID vorhanden ist, wird die Server Definition in der Skriptdatei berücksichtigt.  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -66,6 +66,6 @@ Der Benutzer kann seine Server Verbindungs Datei mit der Schema Definitionsdatei
 ## <a name="next-step"></a>Nächster Schritt  
 Der nächste Schritt beim Betrieb der Konsole ist [die Ausführung der SSMA-Konsole &#40;Access Token&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen  
 [Ausführen der SSMA-Konsole (Zugriff)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

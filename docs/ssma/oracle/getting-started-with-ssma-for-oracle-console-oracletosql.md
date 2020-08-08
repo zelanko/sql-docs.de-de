@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Oracle Console, Console Output Conventions
 - Oracle Console, Launching Console
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 25cd6eb9c811548e6300c944c65c5530185d46e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 57170c17538ccd997c5bc4d2e12ab53914b3727c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264502"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934890"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Erste Schritte mit der SSMA-Konsole für Oracle (OracleToSQL)
 In diesem Abschnitt wird das Verfahren zum Starten und Starten der Oracle-Konsolenanwendung beschrieben. Hier sind auch die Konventionen aufgeführt, die in einem typischen Ausgabefenster der SSMA-Konsole verwendet werden.  
@@ -28,9 +28,9 @@ Verwenden Sie die folgenden Schritte, um die SSMA-Konsolenanwendung zu starten:
   
 1.  Wechseln Sie zu **Start** , und zeigen Sie auf **Alle Programme**.  
   
-2.  Klicken Sie auf die ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verknüpfung Migration Assistant für Oracle-Eingabeaufforderung** .  
+2.  Klicken Sie auf die Verknüpfung ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für Oracle-Eingabeaufforderung** .  
   
-    Er zeigt das Menü Verwendung der SSMA- `(/? Help)`Konsole und an, um Ihnen den Einstieg in die Konsolenanwendung zu erleichtern.  
+    Er zeigt das Menü Verwendung der SSMA-Konsole und `(/? Help)` an, um Ihnen den Einstieg in die Konsolenanwendung zu erleichtern.  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>Verfahren für die Verwendung der SSMA-Konsole  
 Nachdem die Konsole erfolgreich auf Ihrem Windows-System gestartet wurde, können Sie die folgenden Schritte ausführen, um Sie zu bearbeiten:  

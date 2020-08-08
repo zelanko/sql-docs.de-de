@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 38b3da74ce30799a01f28f3961a4fa0461d7543f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c66b7e9ad09c61b1ecfaddb21a9253ae6a6237c9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060173"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933601"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Projekteinstellungen (Synchronisierung) (DB2ToSQL)
-Die Seite Synchronisierung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, mit denen Sie anpassen können, wie SSMA Datenbankobjekte (z. b. Tabellen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeicherte Prozeduren) in lädt und aktualisiert.  
+Die Seite Synchronisierung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, mit denen Sie anpassen können, wie SSMA Datenbankobjekte (z. b. Tabellen und gespeicherte Prozeduren) in lädt und aktualisiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Mit den Standard Aktions Optionen werden die Standardeinstellungen für die Aktualisierung von Objekten aus der DB2-Datenbank und für die Synchronisierung von Objekten mit der SQL Server Datenbank angegeben. Weitere Informationen finden Sie unter [Aktualisieren von Datenbanken &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md).  
   
@@ -29,7 +29,7 @@ Sie können auf zwei verschiedene Synchronisierungs Seiten zugreifen, die die gl
   
 ## <a name="miscellaneous-options"></a>Sonstige Optionen  
 **Unternommen**  
-Gibt die Anzahl der Versuche an, die SSMA beim Laden von Objekten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in durchführen soll. Objekte, die im aktuellen Versuch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht in geladen werden, werden wiederholt, bis SSMA die maximale Anzahl von versuchen im aktuellen Synchronisierungs Vorgang erreicht. Der Standardwert ist " **2** ".  
+Gibt die Anzahl der Versuche an, die SSMA beim Laden von Objekten in durchführen soll [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Objekte, die im aktuellen Versuch nicht in geladen werden, werden wiederholt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis SSMA die maximale Anzahl von versuchen im aktuellen Synchronisierungs Vorgang erreicht. Der Standardwert ist " **2** ".  
   
 ## <a name="synchronization-for-db2-options"></a>Synchronisierung für DB2-Optionen  
 **Aktion bei lokaler und Remote Objekt Änderung**  

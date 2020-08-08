@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: b9534020525ace1df2976ee732d9016c02d5ed2e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 76f088100ecdf0172cfb7403bffa4a1546113b6b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293927"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933271"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Menübefehle und andere Tastenkombinationen (OracleToSQL)
 In den folgenden Abschnitten werden die Tastenkombinationen für den Zugriff auf Menübefehle und andere Tastenkombinationen beschrieben, die in verschiedenen Dialogfeldern von SSMA für die Oracle-Anwendung verwendet werden.  
@@ -81,7 +81,7 @@ Um auf das Menü Extras zuzugreifen, wird die Tastenkombination ALT + T verwende
 |Erstellen Sie einen Bericht.|Alt + T + C|  
 |Schema konvertieren.|Alt + T + N oder STRG + R|  
 |Aktualisieren Sie aus der Oracle-Datenbank.|ALT+T + R|  
-|Synchronisieren Sie mit SQL Server oder SQL Azure Datenbank.|Alt + T + S|  
+|Synchronisieren Sie mit SQL Server oder Azure SQL-Datenbank.|Alt + T + S|  
 |Als Skript speichern.|Alt + T + A|  
 |Migrieren von Daten|ALT+T + M|  
 |Beendet den aktuellen Vorgang.|Alt + T + O|  

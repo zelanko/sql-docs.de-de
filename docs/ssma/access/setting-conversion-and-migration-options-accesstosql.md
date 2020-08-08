@@ -14,17 +14,17 @@ helpviewer_keywords:
 - project settings
 - schemas
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3e89cfd6768aeedd970889cbaea46bb3e1ceae4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e074f603586afa0322d62872c49abb52fe47f047
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051497"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933961"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Festlegen von Konvertierungs-und Migrations Optionen (accesstosql)
-Für jedes SSMA-Projekt können Sie Optionen auf Projektebene festlegen. Diese Optionen geben an, wie Objekte konvertiert werden, wie Daten migriert werden und wie Quell Datentypen den Ziel Datentypen zugeordnet werden. Vergewissern Sie sich, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Konfigurationsoptionen für das Projekt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geeignet sind, bevor Sie Objekte in oder SQL Azure oder Daten in oder SQL Azure migrieren.  
+Für jedes SSMA-Projekt können Sie Optionen auf Projektebene festlegen. Diese Optionen geben an, wie Objekte konvertiert werden, wie Daten migriert werden und wie Quell Datentypen den Ziel Datentypen zugeordnet werden. Vergewissern Sie sich, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dass die Konfigurationsoptionen für das Projekt geeignet sind, bevor Sie Objekte in oder SQL Azure oder Daten in oder SQL Azure migrieren.  
   
 ## <a name="configuration-options-and-modes"></a>Konfigurationsoptionen und-Modi  
 SSMA verfügt über vier Sätze von Konfigurationseinstellungen und vier Modi zum Konfigurieren dieser Einstellungen: Standard, vollständig, vollständig und Benutzer definiert. Der Standardmodus wird für die meisten Benutzer empfohlen. Verwenden Sie den optimistischen Modus für einfache Konvertierungen. Verwenden Sie den vollständigen Modus, wenn alle Meldungen angezeigt werden sollen. Im benutzerdefinierten Modus legen Sie die Optionen fest.  

@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 743ed010107c9557c84b1683f7a81b369ca7cf3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 697bf746f438d45731e78c0c39d28677c3be6ddd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266589"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933204"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Projekteinstellungen (Synchronisierung) (OracleToSQL)
-Die Seite Synchronisierung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, mit denen Sie anpassen können, wie SSMA Datenbankobjekte (z. b. Tabellen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeicherte Prozeduren) in lädt und aktualisiert.  
+Die Seite Synchronisierung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, mit denen Sie anpassen können, wie SSMA Datenbankobjekte (z. b. Tabellen und gespeicherte Prozeduren) in lädt und aktualisiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Mit den Standard Aktions Optionen werden die Standardeinstellungen zum Aktualisieren von Objekten aus der Oracle-Datenbank und zum Synchronisieren von Objekten mit der SQL Server Datenbank angegeben. Weitere Informationen finden Sie unter [Aktualisieren von Database-Oracle](../../ssma/oracle/refresh-from-database-oracletosql.md).  
   
@@ -30,7 +30,7 @@ Sie können auf zwei verschiedene Synchronisierungs Seiten zugreifen, die die gl
   
 ## <a name="miscellaneous-options"></a>Sonstige Optionen  
 **Unternommen**  
-Gibt die Anzahl der Versuche an, die SSMA beim Laden von Objekten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in durchführen soll. Objekte, die im aktuellen Versuch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht in geladen werden, werden wiederholt, bis SSMA die maximale Anzahl von versuchen im aktuellen Synchronisierungs Vorgang erreicht. Der Standardwert ist " **2** ".  
+Gibt die Anzahl der Versuche an, die SSMA beim Laden von Objekten in durchführen soll [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Objekte, die im aktuellen Versuch nicht in geladen werden, werden wiederholt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis SSMA die maximale Anzahl von versuchen im aktuellen Synchronisierungs Vorgang erreicht. Der Standardwert ist " **2** ".  
   
 ## <a name="synchronization-for-oracle-options"></a>Synchronisierung für Oracle-Optionen  
 **Aktion bei lokaler und Remote Objekt Änderung**  

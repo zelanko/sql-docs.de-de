@@ -1,20 +1,20 @@
 ---
 title: Migrieren des Oracle HR-Schemas zu SQL Server für Linux | Microsoft-Dokumentation
 description: Konvertieren eines Oracle-Beispiel Schemas in SQL Server für Linux
-author: shamikg
-ms.author: shamikg
-manager: shamikg
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1d28458896d4ae4806db1b0f705c5e33badddfb7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266516"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932751"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Migrieren eines Oracle-Schemas zu SQL Server 2017 unter Linux mit dem SQL Server Migration Assistant
 
@@ -128,7 +128,7 @@ Der letzte Schritt besteht darin, Ihre Daten zu migrieren.
 
 Bei einem komplexeren Orcale-Schema umfasst der Konvertierungsprozess mehr Zeit, Tests und mögliche Änderungen an Client Anwendungen. In diesem Tutorial wird gezeigt, wie Sie SSMA für Oracle als Teil des gesamten Migrationsprozesses verwenden können.
 
-In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial haben Sie Folgendes gelernt:
 > [!div class="checklist"]
 > * Installieren von SSMA unter Windows
 > * Erstellen eines neuen SSMA-Projekts

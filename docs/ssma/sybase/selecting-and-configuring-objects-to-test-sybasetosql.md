@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Tester Component,Parameter Comparision Setting
 - Tester Component,Selecting Objects
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2951d4c3bf1eae73ffd066d796b0e3dda4d28cf6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 31cc868cfe2d6fa7cc87e3fc6f89c868c43d17c3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020963"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934639"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Auswählen und Konfigurieren von zu testenden Objekten (SybaseToSQL)
 In diesem Schritt wählen Sie die zu testenden Objekte aus und konfigurieren die Einstellungen für den Vergleich der Ausgabeparameter der Prozeduren und Funktionen sowie die Rückgabewerte von Funktionen.  

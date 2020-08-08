@@ -7,14 +7,14 @@ ms.prod: sql
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3745a7599f986073d1b759b46fe33dd741d62b09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 13c76ce76b5096d136df0b38b5526e80093f76cd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083554"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932371"
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>Erweiterte Objektauswahl (SybaseToSQL)
 Im Dialogfeld Erweiterter **Objekt Abschnitt** können Sie Datenbankobjekte filtern, indem Sie Zeichen folgen und Teil Zeichenfolgen im Objektnamen verwenden. Wählen Sie anschließend diese Objekte aus, oder deaktivieren Sie diese. SSMA führt Konvertierungs-und Migrations Vorgänge für ausgewählte Objekte aus.  

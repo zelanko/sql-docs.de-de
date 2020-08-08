@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b81892edd4605960a50c63aa61ed65d1522d42ec
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259829"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934000"
 ---
 # <a name="creating-script-files-accesstosql"></a>Erstellen von Skriptdateien (accesstosql)
 Der erste Schritt vor dem Starten der SSMA-Konsolenanwendung besteht darin, die Skriptdatei zu erstellen und bei Bedarf die Variablen Wert Datei und die Server Verbindungs Datei zu erstellen.  
@@ -320,9 +320,9 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     Es treten zwei Fälle auf:  
   
-    1.  Wenn die Außerkraftsetzungs Option auf **false**gesetzt ist, wird die Such Reihenfolge durch&gt;den Benutzer geschützt&gt; &gt;.  
+    1.  Wenn die Außerkraftsetzungs Option auf **false**gesetzt ist, wird die Such Reihenfolge durch den &gt; Benutzer geschützt &gt; &gt; .  
   
-    2.  Wenn die Überschreibungs Option **true**ist, ist die Reihenfolge der Suche ein&gt;Skript für die Datei&gt;-Server-Verbindungs Datei.  
+    2.  Wenn die Überschreibungs Option **true**ist, ist die Reihenfolge der Suche ein Skript für die Datei- &gt; Server-Verbindungs Datei &gt; .  
   
     **Beispiel:**  
   
@@ -344,7 +344,7 @@ Server Verbindungsparameter können in der Skriptdatei oder in der Server Verbin
 ## <a name="script-commands"></a>Skriptbefehle  
 Die Skriptdatei enthält eine Sequenz von Migrations Workflow Befehlen im XML-Format. Die SSMA-Konsolenanwendung verarbeitet die Migration in der Reihenfolge der Befehle, die in der Skriptdatei angezeigt werden.  
   
-Beispielsweise folgt eine typische Datenmigration einer bestimmten Tabelle in einer Access-Datenbank der Hierarchie von: Database-&gt; Table.  
+Beispielsweise folgt eine typische Datenmigration einer bestimmten Tabelle in einer Access-Datenbank der Hierarchie von: Database- &gt; Table.  
   
 Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SSMA-Konsolenanwendung beendet, und das Steuerelement wird an den Benutzer zurückgegeben. Der Inhalt einer Skriptdatei ist mehr oder weniger statisch und enthält Variablen Informationen, die entweder in einem [Variablen Wert Dateien](creating-variable-value-files-accesstosql.md) oder in einem separaten Abschnitt in der Skriptdatei für Variablen Werte enthalten sind.  
   
@@ -375,13 +375,13 @@ Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SS
 ```  
 Vorlagen, die aus 3 Skriptdateien (zum Ausführen verschiedener Szenarios), einer Variablen Wert Datei und einer Server Verbindungs Datei bestehen, werden im Beispiel Ordner der Konsolen Skripts des Produkt Verzeichnisses bereitgestellt:  
   
--   "Bewermentreportgenerationsample. xml"  
+-   AssessmentReportGenerationSample.xml  
   
--   "Systemversionanddatamigrationsample. xml"  
+-   ConversionAndDataMigrationSample.xml  
   
--   Variablevaluefilesample. XML  
+-   VariableValueFileSample.xml  
   
--   Serversconnectionfilesample. XML  
+-   ServersConnectionFileSample.xml  
   
 Sie können die Vorlagen (Dateien) ausführen, nachdem Sie die darin angezeigten Parameter für Relevanz geändert haben.  
   
@@ -393,6 +393,6 @@ Der Benutzer kann seine Skriptdatei problemlos anhand der Schema Definitionsdate
 ## <a name="next-step"></a>Nächster Schritt
 Der nächste Schritt beim Betrieb der Konsole ist das [Erstellen von Variablen Wert Dateien &#40;Access Token&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen von Variablen Wert Dateien &#40;Access Token&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

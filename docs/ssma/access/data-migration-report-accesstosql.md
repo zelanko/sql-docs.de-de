@@ -7,19 +7,19 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4d552114800b2d5d0148e3681f1fd165a914f654
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 0544ba7d4c0a1d2b896cc7667c4386effc070824
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006585"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934045"
 ---
 # <a name="data-migration-report-accesstosql"></a>Daten Migrationsbericht (accesstosql)
-Das Dialogfeld **Daten Migrationsbericht** wird angezeigt, nachdem Sie Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu migriert haben.  
+Das Dialogfeld **Daten Migrationsbericht** wird angezeigt, nachdem Sie Daten zu migriert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Status**  
 Zeigt den Status der Datenmigration von der Quell-zur Zieldatenbank an.  
   
@@ -35,7 +35,7 @@ Die Anzahl der Daten Zeilen in der Quell Tabelle.
 **Anzahl der erfolgreich migrierten Zeilen**  
 Die Anzahl der Daten Zeilen, die erfolgreich in die Ziel Tabelle migriert wurden.  
   
-**Verhältnis**  
+**Seitenverhältnis**  
 Der Prozentsatz der erfolgreich migrierten Zeilen.  
   
 **Details**  

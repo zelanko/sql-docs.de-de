@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: a822aa1e9c30e245b61bd43c0af60b94fae33fe1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: a98b7ec46bfb432ccb52f082376fcbaead963337
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394911"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933391"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>Projekteinstellungen (Konvertierung) (OracleToSQL)
 Die Seite Konvertierung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, die anpassen, wie SSMA die Oracle-Syntax in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Syntax konvertiert.  

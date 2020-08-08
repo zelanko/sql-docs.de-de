@@ -7,19 +7,19 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ca084ec1849ab22940bb1617476637c105e90609
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: debeb7ee176cd2127a74ba896de839b1f30ca4cc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68115031"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934038"
 ---
 # <a name="appendix---1-accesstosql"></a>Anhang-1 (accesstosql)
 Schnellansicht der Befehlszeilenoptionen der SSMA-Konsole:  
   
-|SL. Nein.|Schalter|Erforderlich?|Switch-Argument|Zulässige Werte|  
+|SL. Nein|Schalter|Erforderlich?|Switch-Argument|Zulässige Werte|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/Skript|Ja|scriptfile|Gültiger XML-Dateiname.<br /><br />Konsolen Skript-Definitionsdatei.|  
 |2|-v/Variable|Nein|variablevaluefile|Gültiger XML-Dateiname. Wenn Variablen in der Skriptdatei verwendet werden, muss diese Datei angegeben werden.|  

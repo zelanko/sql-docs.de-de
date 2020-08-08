@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: ab1b453fb85d7b9c6ee0cf9a271c1af55a337b4a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266581"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933181"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Projekteinstellungen (Typzuordnung) (OracleToSQL)
-Die Seite Typzuordnung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, die anpassen, wie SSMA Oracle-Datentypen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in-Datentypen konvertiert.  
+Die Seite Typzuordnung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, die anpassen, wie SSMA Oracle-Datentypen in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen konvertiert.  
   
 Die Seite Typzuordnung ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar.  
   
@@ -79,8 +79,8 @@ Die folgende Tabelle enthält die standardmäßige Datentyp Zuordnung für Argum
 |integer|INT|  
 |long|varchar(max)|  
 |lange Rohdaten|varbinary(max)|  
-|lange Rohdaten\*[.. 8000]<sup>*</sup>|varbinary [*]|  
-|Long RAW [8001.\*]<sup>*</sup>|varbinary(max)|  
+|lange Rohdaten [ \* .. 8000]<sup>*</sup>|varbinary [*]|  
+|Long RAW [8001. \* ]<sup>*</sup>|varbinary(max)|  
 |National Char|nvarchar(max)|  
 |nationale char-Variation|nvarchar(max)|  
 |Länder Zeichen|nvarchar(max)|  
@@ -120,19 +120,19 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung für-Spalten.
 |binary_float|float [53]|  
 |Blob|varbinary(max)|  
 |char|char|  
-|char-Variation [*. \*]|varchar [*]|  
-|Char [*.. \*]|Char [*]|  
+|char-Variation [*.. \* ]|varchar [*]|  
+|Char [*.. \* ]|Char [*]|  
 |character|char|  
-|variierendes Zeichen [*. \*]|varchar [*]|  
-|Zeichen [*.. \*]|Char [*]|  
+|variierendes Zeichen [*.. \* ]|varchar [*]|  
+|Zeichen [*.. \* ]|Char [*]|  
 |CLOB|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|Dez [38] [0]|  
-|Dez [*... \*]|Dez [*] [0]|  
-|Dez [*... \*][\*.. \*]|Dez [*] [\*]|  
+|Dez [*.. \* ]|Dez [*] [0]|  
+|Dez [*.. \* ] [\*..\*]|Dez [*] [ \* ]|  
 |Decimal|Dezimalzahl [38] [0]|  
-|Dezimalzahl [*.. \*]|Dezimalzahl [*] [0]|  
-|Dezimalzahl [*.. \*][\*.. \*]|Dezimalzahl [*]\*[]|  
+|Dezimal [*.. \* ]|Dezimalzahl [*] [0]|  
+|Dezimal [*.. \* ] [\*..\*]|Dezimalzahl [*] [ \* ]|  
 |double precision|float [53]|  
 |float|float [53]|  
 |float [*. 53]|float [*]|  
@@ -147,35 +147,35 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung für-Spalten.
 |Long [*. 8000]|varchar [*]|  
 |Long [8001.. *]|varchar(max)|  
 |National Char|NCHAR|  
-|National char Variation [*.. \*]|nvarchar [*]|  
-|National Char [*.. \*]|NCHAR [*]|  
+|National char Variation [*.. \* ]|nvarchar [*]|  
+|National Char [*.. \* ]|NCHAR [*]|  
 |Länder Zeichen|NCHAR|  
-|unterschiedlicher nationaler Zeichen [*. \*]|nvarchar [*]|  
-|Länder Zeichen [*. \*]|NCHAR [*]|  
+|unterschiedliches Zeichen [*.. \* ]|nvarchar [*]|  
+|Länder Zeichen [*.. \* ]|NCHAR [*]|  
 |NCHAR|NCHAR|  
 |NCHAR [*]|NCHAR [*]|  
 |NCLOB|nvarchar(max)|  
 |number|float [53]|  
-|Zahl [*.. \*]|numerisch [*]|  
-|Zahl [*.. \*][\*.. \*]|numerisch [*]\*[]|  
+|Zahl [*.. \* ]|numerisch [*]|  
+|Zahl [*.. \* ] [\*..\*]|numerisch [*] [ \* ]|  
 |NUMERIC|NUMERIC|  
-|numerisch [*.. \*]|numerisch [*]|  
-|numerisch [*.. \*][\*.. \*]|numerisch [*]\*[]|  
-|nvarchar2[*.. \*]|nvarchar [*]|  
-|RAW [*... \*]|varbinary [*]|  
+|numerisch [*.. \* ]|numerisch [*]|  
+|numerisch [*.. \* ] [\*..\*]|numerisch [*] [ \* ]|  
+|NVARCHAR2 [*.. \* ]|nvarchar [*]|  
+|RAW [*.. \* ]|varbinary [*]|  
 |real|float [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
 |timestamp|datetime2|  
 |Zeitstempel mit lokaler Zeitzone|datetimeoffset|  
-|Zeitstempel mit lokaler Zeitzone [*. \*]|DateTimeOffset [*]|  
+|Zeitstempel mit lokaler Zeitzone [*. \* ]|DateTimeOffset [*]|  
 |Zeitstempel mit Zeitzone|datetimeoffset|  
-|Zeitstempel mit Zeitzone [*. \*]|DateTimeOffset [*]|  
-|Zeitstempel [*. \*]|datetime2 [*]|  
+|Zeitstempel mit Zeitzone [*. \* ]|DateTimeOffset [*]|  
+|Zeitstempel [*.. \* ]|datetime2 [*]|  
 |UROWID|UNIQUEIDENTIFIER|  
-|UROWID [*.. \*]|UNIQUEIDENTIFIER|  
-|varchar [*.. \*]|varchar [*]|  
-|VARCHAR2 [*.. \*]|varchar [*]|  
+|UROWID [*.. \* ]|UNIQUEIDENTIFIER|  
+|varchar [*.. \* ]|varchar [*]|  
+|VARCHAR2 [*.. \* ]|varchar [*]|  
 |XmlType|Xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Standardmäßige Zuordnung von lokalen Variablen Typen  
@@ -188,7 +188,7 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung für lokale Variablen.
 |binary_float|float [53]|  
 |binary_interger|INT|  
 |Blob|varbinary(max)|  
-|Boolesch|bit|  
+|Boolean|bit|  
 |Char|char|  
 |char-Variation [*. 8000]|varchar [*]|  
 |char-Variation [8001.. *]|varchar(max)|  
@@ -202,18 +202,18 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung für lokale Variablen.
 |CLOB|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|Dez [38] [0]|  
-|Dez [*... \*]|Dez [*] [0]|  
-|Dez [*... \*][\*.. \*]|Dez [*] [\*]|  
+|Dez [*.. \* ]|Dez [*] [0]|  
+|Dez [*.. \* ] [\*..\*]|Dez [*] [ \* ]|  
 |Decimal|Dezimalzahl [38] [0]|  
-|Dezimalzahl [*.. \*]|Dezimalzahl [*] [0]|  
-|Dezimalzahl [*.. \*][\*.. \*]|Dezimalzahl [*]\*[]|  
+|Dezimal [*.. \* ]|Dezimalzahl [*] [0]|  
+|Dezimal [*.. \* ] [\*..\*]|Dezimalzahl [*] [ \* ]|  
 |double precision|float [53]|  
 |Float|float [53]|  
 |float [*. 53]|float [*]|  
 |float [54.. *]|float [53]|  
 |Int|INT|  
 |Integer|INT|  
-|Ganzzahl [*. \*]|numerisch [*] [0]|  
+|Ganzzahl [*.. \* ]|numerisch [*] [0]|  
 |Long|varchar(max)|  
 |lange Rohdaten|varbinary(max)|  
 |lange Rohdaten [*. 8000]|varbinary [*]|  
@@ -234,12 +234,12 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung für lokale Variablen.
 |NCHAR variiert [*. 4000]|nvarchar [*]|  
 |NCHAR-Variation [4001.. *]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Anzahl|float [53]|  
-|Zahl [*.. \*]|numerisch [*]|  
-|Zahl [*.. \*][\*.. \*]|numerisch [*]\*[]|  
-|Numeric|numerisch [38] [0]|  
-|numerisch [*.. \*]|numerisch [*]|  
-|numerisch [*.. \*][\*.. \*]|numerisch [*]\*[]|  
+|Number|float [53]|  
+|Zahl [*.. \* ]|numerisch [*]|  
+|Zahl [*.. \* ] [\*..\*]|numerisch [*] [ \* ]|  
+|Numerisch|numerisch [38] [0]|  
+|numerisch [*.. \* ]|numerisch [*]|  
+|numerisch [*.. \* ] [\*..\*]|numerisch [*] [ \* ]|  
 |nvarchar2[*.. 4000]|nvarchar [*]|  
 |NVARCHAR2 [4001.. *]|nvarchar(max)|  
 |pls_integer|INT|  
@@ -254,11 +254,11 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung für lokale Variablen.
 |timestamp|datetime2|  
 |Zeitstempel mit lokaler Zeitzone|datetimeoffset|  
 |Zeitstempel mit Zeitzone|datetimeoffset|  
-|Zeitstempel mit lokaler Zeitzone [*. \*]|DateTimeOffset [*]|  
-|Zeitstempel mit Zeitzone [*. \*]|DateTimeOffset [*]|  
-|Zeitstempel [*. \*]|datetime2 [*]|  
+|Zeitstempel mit lokaler Zeitzone [*. \* ]|DateTimeOffset [*]|  
+|Zeitstempel mit Zeitzone [*. \* ]|DateTimeOffset [*]|  
+|Zeitstempel [*.. \* ]|datetime2 [*]|  
 |UROWID|UNIQUEIDENTIFIER|  
-|UROWID [*.. \*]|UNIQUEIDENTIFIER|  
+|UROWID [*.. \* ]|UNIQUEIDENTIFIER|  
 |varchar [*.. 8000]|varchar [*]|  
 |varchar [8001.. *]|varchar(max)|  
 |VARCHAR2 [*.. 8000]|varchar [*]|  

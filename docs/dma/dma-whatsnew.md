@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864897"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988506"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Neuerungen im Datenmigrations-Assistenten
 
@@ -154,8 +154,8 @@ Die v 3.2-Version von Datenmigrations-Assistent umfasst die folgenden Ergänzung
 
 Die Version 3.1 von Datenmigrations-Assistent umfasst die folgenden Ergänzungen:
 
-- Verbesserte Bewertungs Empfehlungen für Azure SQL-Datenbanken im Hinblick auf Daten Bank Sortierungen, die Verwendung nicht unterstützter gespeicherter System Prozeduren und CLR-Objekte.
-- Bewertungs Leit Faden für die Kompatibilitäts Grade 130, 120, 110 und 100 beim Migrieren zu Azure SQL-Datenbanken.
+- Verbesserte Bewertungs Empfehlungen für Azure SQL-Datenbank im Hinblick auf Daten Bank Sortierungen, die Verwendung nicht unterstützter gespeicherter System Prozeduren und CLR-Objekte.
+- Bewertungs Leit Faden für die Kompatibilitäts Grade 130, 120, 110 und 100 beim Migrieren zu Azure SQL-Datenbank.
 
 ## <a name="data-migration-assistant-v30"></a>Datenmigrations-Assistent v 3.0
 
@@ -181,7 +181,7 @@ Die v 2.0-Version von Datenmigrations-Assistent umfasst verbesserte Features fü
 Die Version 1.0 von Datenmigrations-Assistent ist die erste Version und bietet Folgendes:
 
 - Ermittlung von Problemen, die ein Upgrade auf eine lokale Version von SQL Server beeinflussen können. Alle Ergebnisse werden als Kompatibilitätsprobleme beschrieben und in den folgenden Bereichen kategorisiert:
-  - Breaking Changes
+  - Aktuelle Änderungen
   - Verhaltensänderungen
   - Veraltete Features
 - Ermittlung neuer Features auf der Ziel SQL Server Plattform, von der die Datenbank nach einem Upgrade profitieren kann. Alle Ergebnisse werden als Funktions Empfehlungen beschrieben und in den folgenden Bereichen kategorisiert:

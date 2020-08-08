@@ -16,20 +16,20 @@ helpviewer_keywords:
 - SQL, assessing
 - syntax, assessing
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d45df17f82bf52d6d059b2efbf69a39cedb949f0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910689"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934091"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Bewerten von Access-Datenbankobjekten für die Konvertierung (accesstosql)
-Bevor Sie Objekte laden und Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure migrieren, sollten Sie bestimmen, wie viel der Migration erfolgreich verlaufen soll und wie lange die Konvertierung dauern kann. SSMA kann einen Bewertungsbericht erstellen, in dem der Prozentsatz der Objekte angezeigt wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die erfolgreich in konvertiert wurden, oder SQL Azure Syntax-und Zeit Schätzwerte zum Durchführen der Migration. Mit SSMA können Sie auch die spezifischen Probleme anzeigen, die Konvertierungs Fehler verursacht haben.  
+Bevor Sie Objekte laden und Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure migrieren, sollten Sie bestimmen, wie viel der Migration erfolgreich verlaufen soll und wie lange die Konvertierung dauern kann. SSMA kann einen Bewertungsbericht erstellen, in dem der Prozentsatz der Objekte angezeigt wird, die erfolgreich in konvertiert wurden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Syntax-und Zeit Schätzwerte zum Durchführen der Migration. Mit SSMA können Sie auch die spezifischen Probleme anzeigen, die Konvertierungs Fehler verursacht haben.  
   
 ## <a name="creating-assessment-reports"></a>Erstellen von Bewertungsberichten  
-Wenn ein Bewertungsbericht erstellt wird, konvertiert SSMA die ausgewählten Access-Daten Bank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte in oder SQL Azure Syntax und zeigt dann die Ergebnisse an.  
+Wenn ein Bewertungsbericht erstellt wird, konvertiert SSMA die ausgewählten Access-Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Syntax und zeigt dann die Ergebnisse an.  
   
 **So erstellen Sie einen Bewertungsbericht**  
   
@@ -43,7 +43,7 @@ Wenn ein Bewertungsbericht erstellt wird, konvertiert SSMA die ausgewählten Acc
   
     SSMA zeigt den Fortschritt in der Statusleiste am unteren Rand des Fensters an. Wenn der Ausgabebereich sichtbar ist, werden im Ausgabebereich auch Meldungen angezeigt.  
   
-Wenn die Bewertung fertiggestellt ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird das Fenster Migration Assistant für Zugriff: Bewertungsbericht angezeigt.  
+Wenn die Bewertung fertiggestellt ist, wird das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fenster Migration Assistant für Zugriff: Bewertungsbericht angezeigt.  
   
 ## <a name="using-assessment-reports"></a>Verwenden von Bewertungsberichten  
 Das Fenster Bewertungsbericht enthält drei Bereiche: einen Explorer, einen Detailbereich und einen Meldungs Bereich.  

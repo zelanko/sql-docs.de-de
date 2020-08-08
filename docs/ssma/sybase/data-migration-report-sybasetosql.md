@@ -7,19 +7,19 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b55228d51099c8c48c181a85d2615039f764b8a4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029399"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932171"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Bericht zur Datenmigration (SybaseToSQL)
-Das Dialogfeld **Daten Migrationsbericht** wird angezeigt, nachdem Sie Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu migriert haben.  
+Das Dialogfeld **Daten Migrationsbericht** wird angezeigt, nachdem Sie Daten zu migriert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Status**  
 Zeigt den Status der Datenmigration von der Quell-zur Zieldatenbank an.  
   
@@ -35,7 +35,7 @@ Die Anzahl der Daten Zeilen in der Quell Tabelle.
 **Anzahl der erfolgreich migrierten Zeilen**  
 Die Anzahl der Daten Zeilen, die erfolgreich in die Ziel Tabelle migriert wurden.  
   
-**Verhältnis**  
+**Seitenverhältnis**  
 Der Prozentsatz der erfolgreich migrierten Zeilen.  
   
 **Details**  

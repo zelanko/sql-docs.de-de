@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Uninstalling the Extension Pack
 ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0434f88c46d14672c84f5f7939488a827b229e27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 4fbac66cfd7cf549a6321534901ca8a33900f986
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266564"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933151"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Entfernen von SSMA-Komponenten für Oracle (OracleToSQL)
-Wenn Sie die Migration von Datenbanken von Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu abgeschlossen haben, können Sie die SSMA-Komponenten deinstallieren. Sie können die Client Komponenten jederzeit deinstallieren. Sie sollten das Erweiterungspaket jedoch nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deinstallieren, es sei denn, die migrierten Datenbanken verwenden keine Funktionen mehr im **ssma_oracle** Schema der **sysdb** -Datenbank.  
+Wenn Sie die Migration von Datenbanken von Oracle zu abgeschlossen haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie die SSMA-Komponenten deinstallieren. Sie können die Client Komponenten jederzeit deinstallieren. Sie sollten das Erweiterungspaket jedoch nicht von deinstallieren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es sei denn, die migrierten Datenbanken verwenden keine Funktionen mehr im **ssma_oracle** Schema der **sysdb** -Datenbank.  
   
 ## <a name="uninstalling-the-ssma-for-oracle-client"></a>Deinstallieren von SSMA für Oracle Client  
 Sie können SSMA **mithilfe der**Option Software deinstallieren.  
@@ -48,13 +48,13 @@ Wenn Sie sicher sind, dass die migrierten Datenbanken keine Objekte im **sysdb. 
   
 5.  Wählen Sie auf der Seite Verbindungsparameter die Authentifizierungsmethode aus, und klicken Sie dann auf **weiter**.  
   
-    Die Windows-Authentifizierung verwendet Ihre Windows-Anmelde Informationen, um sich bei der Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von anzumelden. Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung auswählen, müssen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Anmelde Namen und ein Kennwort eingeben.  
+    Die Windows-Authentifizierung verwendet Ihre Windows-Anmelde Informationen, um sich bei der Instanz von anzumelden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung auswählen, müssen Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Namen und ein Kennwort eingeben.  
   
 6.  Klicken Sie auf der Seite Vorgang abgeschlossen auf **OK**.  
   
 7.  Klicken Sie auf der Seite Fertigstellen **auf beenden.**  
   
-Nach der Deinstallation können Sie überprüfen, ob Objekte im **sysdb. ssma_oracle** -Schema und möglicherweise die gesamte **sysdb** -Datenbank mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]von entfernt wurden. Wenn Sie jedoch andere SSMA-Produkte verwenden, verwenden Sie auch die **sysdb** -Datenbank. Wenn die Datenbank vorhanden ist und Sie sicher sind, dass keine anderen Datenbanken auf Objekte in dieser Datenbank verweisen, können Sie die Datenbank trennen.  
+Nach der Deinstallation können Sie überprüfen, ob Objekte im **sysdb. ssma_oracle** -Schema und möglicherweise die gesamte **sysdb** -Datenbank mithilfe von entfernt wurden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Wenn Sie jedoch andere SSMA-Produkte verwenden, verwenden Sie auch die **sysdb** -Datenbank. Wenn die Datenbank vorhanden ist und Sie sicher sind, dass keine anderen Datenbanken auf Objekte in dieser Datenbank verweisen, können Sie die Datenbank trennen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Installieren von SSMA für Oracle Client &#40;oracleto SQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
