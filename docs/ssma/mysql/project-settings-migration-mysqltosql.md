@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fe0c1ac52a72a627cf6b266fdb9636878be85c1a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908867"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935199"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Projekteinstellungen (Migration) (MySqlToSql)
 Die Seite Migration des Dialog Felds **Projekteinstellungen** enthält Einstellungen, mit denen Sie anpassen können, wie SSMA Daten von MySQL zu SQL Server migriert.  
@@ -79,6 +79,6 @@ Der Bereich Migration ist in den Dialogfeldern **Projekteinstellungen** und **St
   
 |Begriff|Definition|  
 |--------|--------------|  
-|**Behandeln von Fehlern**|Gibt an, wie Fehler bei der Migration von Werten räumlicher Datentypen behandelt werden. Wenn ' Replace with NULL ' angegeben ist, werden alle räumlichen Werte, die Fehler verursachen, durch Null ersetzt. Andernfalls wird kein Ersatz ausgeführt.<br /><br />**Standardmodus**: Fehler generieren<br /><br />**Optimistischer Modus**: Fehler generieren<br /><br />**Vollständiger Modus**: Fehler generieren|  
+|**Behandlung von Fehlern**|Gibt an, wie Fehler bei der Migration von Werten räumlicher Datentypen behandelt werden. Wenn ' Replace with NULL ' angegeben ist, werden alle räumlichen Werte, die Fehler verursachen, durch Null ersetzt. Andernfalls wird kein Ersatz ausgeführt.<br /><br />**Standardmodus**: Fehler generieren<br /><br />**Optimistischer Modus**: Fehler generieren<br /><br />**Vollständiger Modus**: Fehler generieren|  
 |**Wert Validierung**|Gibt an, wie ungültige räumliche Werte behandelt werden. Wenn "try Make valid" angegeben ist, wird versucht, ungültige Werte zu ändern, damit Sie gültig sind.<br /><br />**Standardmodus**: als gültig festlegen<br /><br />**Optimistischer Modus**: nicht ändern<br /><br />**Vollständiger Modus**: als gültig festlegen|  
   

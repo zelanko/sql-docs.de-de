@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Creating script files, script file validation
 - Creating script files, server connection parameters
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 15c4ff470c78814745be6f3f4c8f898bf4b809ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 54b8dd8d58158997793f6c32da51a10136d02fce
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103063"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935749"
 ---
 # <a name="creating-script-files-mysqltosql"></a>Erstellen von Skriptdateien (MySqlToSql)
 Der erste Schritt vor dem Starten der SSMA-Konsolenanwendung besteht darin, die Skriptdatei zu erstellen und bei Bedarf die Variablen Wert Datei und die Server Verbindungs Datei zu erstellen.  
@@ -324,9 +324,9 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     Es treten zwei Fälle auf:  
   
-    1.  Wenn die Außerkraftsetzungs Option auf **false**gesetzt ist, wird die Such Reihenfolge durch&gt;den Benutzer geschützt&gt; &gt;.  
+    1.  Wenn die Außerkraftsetzungs Option auf **false**gesetzt ist, wird die Such Reihenfolge durch den &gt; Benutzer geschützt &gt; &gt; .  
   
-    2.  Wenn die Überschreibungs Option **true**ist, ist die Reihenfolge der Suche ein&gt;Skript für die Datei&gt;-Server-Verbindungs Datei.  
+    2.  Wenn die Überschreibungs Option **true**ist, ist die Reihenfolge der Suche ein Skript für die Datei- &gt; Server-Verbindungs Datei &gt; .  
   
     **Beispiel:**  
   
@@ -348,7 +348,7 @@ Server Verbindungsparameter können in der Skriptdatei oder in der Server Verbin
 ## <a name="script-commands"></a>Skriptbefehle  
 Die Skriptdatei enthält eine Sequenz von Migrations Workflow Befehlen im XML-Format. Die SSMA-Konsolenanwendung verarbeitet die Migration in der Reihenfolge der Befehle, die in der Skriptdatei angezeigt werden.  
   
-Beispielsweise folgt eine typische Datenmigration einer bestimmten Tabelle in einer MySQL-Datenbank der Hierarchie von: Database-&gt; Table.  
+Beispielsweise folgt eine typische Datenmigration einer bestimmten Tabelle in einer MySQL-Datenbank der Hierarchie von: Database- &gt; Table.  
   
 Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SSMA-Konsolenanwendung beendet, und das Steuerelement wird an den Benutzer zurückgegeben. Der Inhalt einer Skriptdatei ist mehr oder weniger statisch und enthält Variablen Informationen, die entweder in einem [Variablen Wert Dateien](creating-variable-value-files-mysqltosql.md) oder in einem separaten Abschnitt in der Skriptdatei für Variablen Werte enthalten sind.  
   
@@ -379,15 +379,15 @@ Wenn alle Befehle in der Skriptdatei erfolgreich ausgeführt werden, wird die SS
 ```  
 Vorlagen, die aus 3 Skriptdateien (zum Ausführen verschiedener Szenarios), einer Variablen Wert Datei und einer Server Verbindungs Datei bestehen, werden im Beispiel Ordner der Konsolen Skripts des Produkt Verzeichnisses bereitgestellt:  
   
--   "Bewermentreportgenerationsample. xml"  
+-   AssessmentReportGenerationSample.xml  
   
--   "Systemversionanddatamigrationsample. xml"  
+-   ConversionAndDataMigrationSample.xml  
   
--   Sqlstatuementinversionsample. XML  
+-   SqlStatementConversionSample.xml  
   
--   Variablevaluefilesample. XML  
+-   VariableValueFileSample.xml  
   
--   Serversconnectionfilesample. XML  
+-   ServersConnectionFileSample.xml  
   
 Sie können die Vorlagen (Dateien) ausführen, nachdem Sie die darin angezeigten Parameter für Relevanz geändert haben.  
   

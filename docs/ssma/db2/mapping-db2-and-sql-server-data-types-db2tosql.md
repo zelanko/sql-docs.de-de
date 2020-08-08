@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 1e9baab08f4295b2c51fd942f6153cc9425dd958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141010"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936889"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Zuordnung von DB2-und SQL Server-Datentypen (DB2ToSQL)
-DB2-Datenbanktypen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterscheiden sich von Datenbanktypen Beim Konvertieren von DB2-Daten Bank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekten in-Objekte müssen Sie angeben, wie Datentypen aus DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugeordnet werden sollen. Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Abschnitten dargestellt.  
+DB2-Datenbanktypen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanktypen Beim Konvertieren von DB2-Datenbankobjekten in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte müssen Sie angeben, wie Datentypen aus DB2 zugeordnet werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Abschnitten dargestellt.  
   
 ## <a name="default-mappings"></a>Standardzuordnungen  
 SSMA verfügt über einen Standardsatz von Datentyp Zuordnungen. Die Liste der Standard Zuordnungen finden Sie unter [Project Settings &#40;Type Mapping&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  

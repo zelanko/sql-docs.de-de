@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ff8525e9742009e5a5ada680160f20d5e8063d86
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: bf63bb1002e1e4ae467838b84314e1cbaaf93275
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363520"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943122"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -67,7 +67,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>Rückgabetyp  
  Ein \<*table expression*>.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Algorithmus unterstützt keine Vergangenheitsvorhersage, wenn Sie die PREDICTION JOIN-Anweisung zum Hinzufügen neuer Daten verwenden.  
   
  In einer PREDICTION JOIN-Anweisung beginnt die Vorhersage stets mit dem Zeitschritt unmittelbar nach dem Ende der ursprünglichen Trainingsreihe. Dies gilt auch dann, wenn Sie neue Daten hinzufügen. Daher müssen die Parameter " *n* " und " *n-Start* " einen ganzzahligen Wert größer als 0 (null) aufweisen.  
@@ -193,7 +193,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Es werden neue Vorhersagen für die verbleibenden drei Zeitscheiben auf Grundlage des neu erweiterten Modells zurückgegeben.  
   
- Die folgende Tabelle führt die Abfrageergebnisse von Beispiel 2 auf. Beachten Sie, dass die ersten zwei für M200 Europe zurückgegebenen Werte exakt mit den neuen Werten übereinstimmen, die Sie angegeben haben. Dieses Verhalten ist entwurfsbedingt. Wenn Sie die Vorsagen erst nach dem Ende der neuen Daten starten möchten, müssen Sie einen Anfangs- und Endzeitschritt angeben. Ein Beispiel hierfür finden Sie unter [Lektion 5: Erweitern des Zeitreihen Modells](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ Die folgende Tabelle führt die Abfrageergebnisse von Beispiel 2 auf. Beachten Sie, dass die ersten zwei für M200 Europe zurückgegebenen Werte exakt mit den neuen Werten übereinstimmen, die Sie angegeben haben. Dieses Verhalten ist entwurfsbedingt. Wenn Sie die Vorsagen erst nach dem Ende der neuen Daten starten möchten, müssen Sie einen Anfangs- und Endzeitschritt angeben.  
   
  Beachten Sie außerdem, dass für die Region Pazifik keine neuen Daten angegeben wurden. Deshalb gibt [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] neue Vorhersagen für alle fünf Zeitscheiben zurück.  
   

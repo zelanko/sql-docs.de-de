@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Command line options, variable value file option
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 017136669bd6478bb4e08ed0ff5c2adc01786d20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c941cca65bd5ccd3a234da7da0aa3b710ecb4ae3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103250"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935999"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>Befehlszeilenoptionen in der SSMA-Konsole (MySqlToSql)
 Microsoft stellt Ihnen eine robuste Befehlszeilenoption zur Verfügung, mit der Sie SSMA-Aktivitäten ausführen und steuern können. Die nachfolgenden Abschnitte beschreiben die gleichen.  
@@ -34,7 +34,7 @@ Hier werden die Konsolen Befehlsoptionen beschrieben.
   
 Für den Zweck dieses Abschnitts wird der Begriff "Option" auch als "Switch" bezeichnet.  
   
-Bei den Optionen wird die Groß-/Kleinschreibung nicht beachtet**-**, und es kann**/** entweder mit dem Zeichen ' ' oder ' ' beginnen.  
+Bei den Optionen wird die Groß-/Kleinschreibung nicht beachtet, und es kann entweder mit dem **-** Zeichen ' ' oder ' **/** ' beginnen.  
   
 Wenn Optionen angegeben werden, ist es obligatorisch, die entsprechenden Optionsparameter anzugeben.  
   
@@ -131,7 +131,7 @@ Diese Option gibt das verschlüsselte Kennwort für Serververbindungen an. Dies 
   
 Sie können keine andere Option oder kein anderes Kennwort als Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie im Abschnitt Verwalten von Kenn [Wörtern](managing-passwords-mysqltosql.md) .  
   
-Die folgenden unter Optionen werden für `-p/securepassword`unterstützt:  
+Die folgenden unter Optionen werden für unterstützt `-p/securepassword` :  
   
 -   Zum Hinzufügen eines Kennworts zum geschützten Speicher für eine angegebene Server-ID oder für alle Server-IDs, die in der Server Verbindungs Datei definiert sind. Mit der Option-überschreiben (unten) wird das Kennwort aktualisiert, wenn es bereits vorhanden ist:  
   

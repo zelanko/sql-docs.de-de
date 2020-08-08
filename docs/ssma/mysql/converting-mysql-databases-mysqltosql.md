@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c6f8e53a13d5950138f71ed9b4858419eb70f07f
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: cd6dcfc6613b1290fb0798a29a5302b7ede34b43
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823285"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936119"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Konvertieren von MySQL-Datenbanken (MySqlToSql)
-Nachdem Sie eine Verbindung mit MySQL hergestellt, eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure hergestellt und die Optionen für die Projekt-und Datenzuordnung festgelegt haben, können Sie MySQL-Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Datenbankobjekte konvertieren.  
+Nachdem Sie eine Verbindung mit MySQL hergestellt, eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure hergestellt und Projekt-und Daten Zustellungs Optionen festgelegt haben, können Sie MySQL-Datenbankobjekte in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbankobjekte konvertieren.  
   
 ## <a name="the-conversion-process"></a>Der Konvertierungsprozess  
 Das Konvertieren von Datenbankobjekten übernimmt die Objekt Definitionen aus MySQL, konvertiert sie in ähnliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Objekte und lädt diese Informationen dann in die SSMA-Metadaten. Die Informationen werden nicht in die Instanz von geladen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Anschließend können Sie die Objekte und deren Eigenschaften mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-metadatenexplorer anzeigen.  

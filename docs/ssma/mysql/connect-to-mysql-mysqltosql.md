@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 66ec484ca6bd442f936eb852db48f34c89099d11
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103233"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935979"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Herstellen einer Verbindung mit MySQL (MySqlToSql)
 Verwenden Sie das Dialogfeld **mit MySQL verbinden** , um eine Verbindung mit der MySQL-Datenbank herzustellen, die Sie migrieren möchten.  

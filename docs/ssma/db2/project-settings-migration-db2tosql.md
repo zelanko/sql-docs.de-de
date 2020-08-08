@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 40c6c1063ff738428072f3198cae8827e78e2390
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2b9c16aaee3b75c12f4f46c7fc8c6b1a29710e07
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060148"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936800"
 ---
 # <a name="project-settings-migration-db2tosql"></a>Projekteinstellungen (Migration) (DB2ToSQL)
-Die Seite Migration des Dialog Felds **Projekteinstellungen** enthält Einstellungen, mit denen Sie anpassen können, wie SSMA Daten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB2 zu migriert.  
+Die Seite Migration des Dialog Felds **Projekteinstellungen** enthält Einstellungen, mit denen Sie anpassen können, wie SSMA Daten von DB2 zu migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Der Bereich Migration ist sowohl in den Dialogfeldern **Projekteinstellungen** als auch **Standard Projekteinstellungen** verfügbar.  
   

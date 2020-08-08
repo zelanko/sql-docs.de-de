@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 25c8222009c2ea9358c0bab2ad5ae077588fb3cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6e5d1cd88027dfa3fb4216c93ab4e660ddcc0dc9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060094"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936673"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>Entfernen von SSMA für DB2-Komponenten (DB2ToSQL)
-Wenn Sie die Migration von Datenbanken von DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu abgeschlossen haben, können Sie SSMA-Komponenten deinstallieren. Sie können die Client Komponenten jederzeit deinstallieren. Sie sollten das Erweiterungspaket jedoch nicht von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deinstallieren, es sei denn, die migrierten Datenbanken verwenden keine Funktionen mehr im **ssma_DB2** Schema der **sysdb** -Datenbank.  
+Wenn Sie die Migration von Datenbanken von DB2 zu abgeschlossen haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie SSMA-Komponenten deinstallieren. Sie können die Client Komponenten jederzeit deinstallieren. Sie sollten das Erweiterungspaket jedoch nicht von deinstallieren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es sei denn, die migrierten Datenbanken verwenden keine Funktionen mehr im **ssma_DB2** Schema der **sysdb** -Datenbank.  
   
 ## <a name="uninstalling-the-ssma-for-db2-client"></a>Deinstallieren von SSMA für DB2-Client  
 Sie können SSMA **mithilfe der**Option Software deinstallieren.  

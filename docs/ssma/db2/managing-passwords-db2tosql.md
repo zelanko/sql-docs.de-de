@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d872066a2143c0fbe3a6b8a710023d91558422a0
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: af41c1a9eed355d75d5bd3e48886845b9a3069d1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943152"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936678"
 ---
 # <a name="managing-passwords-db2tosql"></a>Verwalten von Kenn Wörtern (DB2ToSQL)
 In diesem Abschnitt geht es um das Sichern von Daten Bank Kennwörtern und das Verfahren zum Importieren oder Exportieren von Datenbankservern:  

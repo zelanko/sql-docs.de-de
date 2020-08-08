@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4125f73ec34418261d0308221c448cae1fb06298
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 9deb8a87399f1934f1d105ad31a2c51540acddd9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862311"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935231"
 ---
 # <a name="project-settings-azure-sql-database-mysqltosql"></a>Projekteinstellungen (Azure SQL-Datenbank) (mysqlto SQL)
-Mit den SQL Azure-Projekteinstellungen können Sie das SQL Azure Daten Bank Suffix konfigurieren, das im Verbindungs Dialogfeld hinzugefügt werden soll, und außerdem die Implementierung des Takt Mechanismus in SQL Azure Verbindung ermöglichen.  
+Mit den SQL Azure Project-Einstellungen können Sie das Suffix der Azure SQL-Datenbank konfigurieren, das im Verbindungs Dialogfeld hinzugefügt werden soll, und die Implementierung des Takt Mechanismus in SQL Azure Verbindung ermöglichen.  
   
 Der SQL Azure Bereich ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar.  
   

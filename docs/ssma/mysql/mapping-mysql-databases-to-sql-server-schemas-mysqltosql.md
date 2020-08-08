@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Mapping, Modifying target database and schema
 - Mapping, reverting to default database and schema
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5fa0585a82a7c96fac8992b82f631364c27d3b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ded91465a2a9c7b5a0e8ddcdc219b2af5a84395e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823633"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935351"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Zuordnen von MySQL-Datenbanken zu SQL Server-Schemas (MySqlToSql)
-Standardmäßig migriert SSMA für MySQL alle Objekte in einem MySQL-Schema zu einer- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder-SQL Azure Datenbank mit dem Namen für das Schema. Sie können jedoch die Zuordnung zwischen MySQL-Schemas und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbanken anpassen.  
+Standardmäßig werden alle Objekte in einem MySQL-Schema von SSMA für MySQL zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL-Datenbank mit dem Namen für das Schema migriert. Sie können jedoch die Zuordnung zwischen MySQL-Schemas und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank anpassen.  
   
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL-und SQL Server-oder SQL Azure Schemas  
 Das MySQL-Konzept eines Schemas wird dem SQL Server Konzept einer Datenbank und einem ihrer Schemas zugeordnet. SSMA bezieht sich auf die SQL Server Kombination von Datenbank und Schema als Schema.  

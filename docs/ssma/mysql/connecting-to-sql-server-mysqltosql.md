@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f79784b6498f080b15f1ef370e8a3f31be81a871
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 548433b02590ccacf164e9479690f1adadbbc3c4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823295"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936225"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Herstellen einer Verbindung mit SQL Server (MySqlToSql)
 Um MySQL-Datenbanken zu SQL Server zu migrieren, müssen Sie eine Verbindung mit der Ziel Instanz von SQL Server herstellen. Wenn Sie eine Verbindung herstellen, erhält SSMA Metadaten zu allen Datenbanken in der Instanz von SQL Server und zeigt Daten Bank Metadaten im SQL Server Metadaten-Explorer an. SSMA speichert Informationen über die Instanz von SQL Server mit denen Sie verbunden sind, speichert aber keine Kenn Wörter.  

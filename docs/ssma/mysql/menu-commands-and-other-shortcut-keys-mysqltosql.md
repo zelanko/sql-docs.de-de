@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 04450495d85eed7ab198090afcc2a4ac9cffb4c0
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fc847eecec3f84cda54e2820a444036a016ec9a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293601"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935269"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Menübefehle und andere Tastenkombinationen (MySqlToSql)
 In den folgenden Abschnitten werden die Tastenkombinationen für den Zugriff auf Menübefehle und andere Tastenkombinationen beschrieben, die in den verschiedenen Dialogfeldern der SSMA für MySQL-Anwendung verwendet werden.  
@@ -80,7 +80,7 @@ Um auf das Menü Extras zuzugreifen, wird die Tastenkombination ALT + T verwende
 |Erstellen Sie einen Bericht.|Alt + T + C|  
 |Schema konvertieren.|Alt + T + N oder STRG + R|  
 |Aktualisieren Sie die MySQL-Datenbank.|ALT+T + R|  
-|Synchronisieren Sie mit SQL Server oder SQL Azure Datenbank.|Alt + T + S|  
+|Synchronisieren Sie mit SQL Server oder Azure SQL-Datenbank.|Alt + T + S|  
 |Als Skript speichern.|Alt + T + A|  
 |Migrieren von Daten|ALT+T + M|  
 |Beendet den aktuellen Vorgang.|Alt + T + O|  

@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: be1cc5ca7d48d72ee9c87ceb2c421a0c411548dc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060035"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936629"
 ---
 # <a name="setting-project-options-db2tosql"></a>Festlegen von Projektoptionen (DB2ToSQL)
-Für jedes SSMA-Projekt können Sie Optionen auf Projektebene festlegen. Diese Optionen geben die Objekt Konvertierung, das Laden von Objekten, die Benutzeroberfläche und die Daten Migrations Einstellungen an. Bevor Sie-Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertieren oder Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migrieren, müssen Sie überprüfen, ob die Konfigurationsoptionen für das Projekt geeignet sind.  
+Für jedes SSMA-Projekt können Sie Optionen auf Projektebene festlegen. Diese Optionen geben die Objekt Konvertierung, das Laden von Objekten, die Benutzeroberfläche und die Daten Migrations Einstellungen an. Bevor Sie-Objekte in konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Daten in migrieren, müssen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüfen, ob die Konfigurationsoptionen für das Projekt geeignet sind.  
   
 SSMA ermöglicht Ihnen das Konfigurieren von Standardoptionen für alle Projekte. Diese Optionen werden auf jedes neue Projekt angewendet, das Sie erstellen. Anschließend können Sie die Optionen für jedes Projekt anpassen.  
   
@@ -36,7 +36,7 @@ SSMA verfügt über fünf Sätze von Projekteinstellungen:
   
 Außerdem stehen vier Modi zum Konfigurieren dieser Einstellungen zur Anwendung:  
   
--   Standard  
+-   Standardwert  
   
 -   Optimistisch  
   
@@ -44,7 +44,7 @@ Außerdem stehen vier Modi zum Konfigurieren dieser Einstellungen zur Anwendung:
   
 -   Benutzerdefiniert  
   
-Der Standardmodus wird für die meisten Benutzer empfohlen. Der optimistische Modus behält mehr die aktuelle DB2-Syntax bei und ist leichter lesbar. Das Beibehalten der aktuellen Syntax ist jedoch möglicherweise nicht korrekt. Wenn die DB2-Syntax in eine äquivalente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Syntax konvertiert werden muss, führt der vollständige Modus die vollständigste Konvertierung durch, aber der resultierende Code kann schwieriger zu lesen sein. Im benutzerdefinierten Modus legen Sie die Optionen fest.  
+Der Standardmodus wird für die meisten Benutzer empfohlen. Der optimistische Modus behält mehr die aktuelle DB2-Syntax bei und ist leichter lesbar. Das Beibehalten der aktuellen Syntax ist jedoch möglicherweise nicht korrekt. Wenn die DB2-Syntax in eine äquivalente Syntax konvertiert werden muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , führt der vollständige Modus die vollständigste Konvertierung durch, aber der resultierende Code kann schwieriger zu lesen sein. Im benutzerdefinierten Modus legen Sie die Optionen fest.  
   
 Weitere Informationen zu den Einstellungen und zum Anwenden der Einstellungen in den einzelnen Modi finden Sie in den folgenden Themen:  
   

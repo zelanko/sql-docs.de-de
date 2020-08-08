@@ -7,19 +7,19 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: de3a1619a1ff5f7e6b44b40e07d73892d2742949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 251f340a8999ecec1247d30314af64c3acdca6d3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139334"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936151"
 ---
 # <a name="appendix---1-mysqltosql"></a>Anhang – 1 (MySqlToSql)
 Schnellansicht der Befehlszeilenoptionen der SSMA-Konsole:  
   
-|SL. Nein.|Schalter|Erforderlich?|Switch-Argument|Zulässige Werte|  
+|SL. Nein|Schalter|Erforderlich?|Switch-Argument|Zulässige Werte|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/Skript|Ja|scriptfile|Gültiger XML-Dateiname.<br /><br />Konsolen Skript-Definitionsdatei.|  
 |2|-v/Variable|Nein|variablevaluefile|Gültiger XML-Dateiname.<br /><br />Wenn Variablen in der Skriptdatei verwendet werden, muss diese Datei angegeben werden.|  
