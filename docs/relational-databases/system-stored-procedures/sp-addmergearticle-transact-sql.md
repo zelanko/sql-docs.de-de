@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebb47597b5d08e0f14d37490304001811d0b33e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee3ac3901c09ab4a0f73803d00a2e4651af51df7
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786275"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051119"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -106,7 +106,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**keine**|Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.|  
 |**delete**|Ein Löschvorgang wird auf der Grundlage der WHERE-Klausel im Teilmengenfilter ausgegeben.|  
 |**Drop** (Standard)|Die Tabelle wird vor dem erneuten Erstellen gelöscht. Erforderlich zur Unterstützung von- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten.|  
-|**TRUNCATE**|Schneidet die Zieltabelle ab.|  
+|**truncate**|Schneidet die Zieltabelle ab.|  
   
 `[ @creation_script = ] 'creation_script'`Der Pfad und der Name eines optionalen Artikel Schema Skripts, mit dem der Artikel in der Abonnement Datenbank erstellt wird. *creation_script* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
   
@@ -201,7 +201,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  der Wert **1** gibt an, dass die Signatur überprüft wird, um festzustellen, ob Sie aus einer vertrauenswürdigen Quelle ist.  
   
-`[ @destination_object = ] 'destination_object'`Der Name des Objekts in der Abonnement Datenbank. *destination_object* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert was in ** \@ source_object**. Dieser Parameter kann nur angegeben werden, wenn der Artikel vom Typ schema only ist, wie z. B. ein Artikel für gespeicherte Prozeduren, Sichten und UDFs. Wenn es sich bei dem angegebenen Artikel um einen Tabellen Artikel handelt, überschreibt der Wert in *@source_object* den Wert in *destination_object*.  
+`[ @destination_object = ] 'destination_object'`Der Name des Objekts in der Abonnement Datenbank. *destination_object* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert was in ** \@ source_object**. Dieser Parameter kann nur angegeben werden, wenn der Artikel vom Typ schema only ist, wie z. B. ein Artikel für gespeicherte Prozeduren, Sichten und UDFs. Wenn es sich bei dem angegebenen Artikel um einen Tabellen Artikel handelt, überschreibt der Wert in * \@ source_object* den Wert in *destination_object*.  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`Aktiviert oder deaktiviert die Verwendung des interaktiven Konflikt Lösers für einen Artikel. *allow_interactive_resolver* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **true** aktiviert die Verwendung des interaktiven Konflikt Lösers für den Artikel. **false** deaktiviert es.  
   
@@ -355,15 +355,15 @@ sp_addmergearticle [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-addmergearticle-trans_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** .  
+ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** oder der festen Datenbankrolle **db_owner** .  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [sp_changemergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_dropmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
