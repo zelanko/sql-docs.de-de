@@ -1,1 +1,1 @@
-Verwaltete Azure SQL-Datenbank-Instanz.
+Verwaltete Azure SQL-Instanz

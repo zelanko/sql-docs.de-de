@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b6964ee33ecbd52f538a60446c72d66bcde9927d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247616"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934377"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -147,7 +147,7 @@ Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfrageoptimierer ist
 - Arithmetische Ausdrücke wie 1+1, 5/3*2, die nur Konstanten enthalten.
 - Logische Ausdrücke wie 1=1 und 1>2 AND 3>4, die nur Konstanten enthalten.
 - Integrierte Funktionen, die von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zur Kompilierzeit reduziert werden können, einschließlich `CAST` und `CONVERT`. Im Allgemeinen gilt eine systeminterne Funktion als zur Kompilierzeit reduzierbar, wenn sie ausschließlich aus Eingaben besteht – ohne weitere kontextbezogene Informationen wie SET-Optionen, Spracheinstellungen, Datenbankoptionen oder Verschlüsselungsschlüssel. Nicht deterministische Funktionen sind nicht zur Kompilierzeit reduzierbar. Deterministische integrierte Funktionen sind bis auf einige Ausnahmen zur Kompilierzeit reduzierbar.
-- Deterministische Methoden von CLR-benutzerdefinierten Typen sowie deterministische CLR-benutzerdefinierte Skalarwertfunktionen (beginnend mit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Weitere Informationen finden Sie unter [Reduktion konstanter Ausdrücke für benutzerdefinierte CLR-Funktionen und -Methoden](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
+- Deterministische Methoden von CLR-benutzerdefinierten Typen sowie deterministische CLR-benutzerdefinierte Skalarwertfunktionen (beginnend mit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Weitere Informationen finden Sie unter [Reduktion konstanter Ausdrücke für benutzerdefinierte CLR-Funktionen und -Methoden](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15).
 
 > [!NOTE] 
 > Eine Ausnahme sind große Objekte. Wenn der Ausgabetyp des Reduktionsprozesses ein großes Objekt (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) oder XML) ist, reduziert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] den Ausdruck nicht zur Kompilierzeit.

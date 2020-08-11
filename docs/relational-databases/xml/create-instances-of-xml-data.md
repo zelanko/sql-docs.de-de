@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ac342c20eb38411c4b0d1d689c34a70cda04b873
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1ee7e4446b67c60a8bb0b7a3d43453a5e7498d6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752573"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87940401"
 ---
 # <a name="create-instances-of-xml-data"></a>Erstellen von Instanzen der XML-Daten
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt XML intern in einer effizienten Binärdarstellung dar, die UTF-16-Codierung verwendet. Vom Benutzer bereitgestellte Codierung wird nicht beibehalten, während des Analysevorgangs jedoch berücksichtigt.  
   
 ### <a name="type-casting-clr-user-defined-types"></a>Typumwandlung benutzerdefinierter CLR-Typen  
- Wenn ein benutzerdefinierter CLR-Typ eine XML-Serialisierung besitzt, können Instanzen dieses Typs explizit in einen XML-Datentyp umgewandelt werden. Weitere Einzelheiten zur XML-Serialisierung von benutzerdefinierten CLR-Typen finden Sie unter [XML-Serialisierung auf Grundlage von CLR-Datenbankobjekten](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344).  
+ Wenn ein benutzerdefinierter CLR-Typ eine XML-Serialisierung besitzt, können Instanzen dieses Typs explizit in einen XML-Datentyp umgewandelt werden. Weitere Einzelheiten zur XML-Serialisierung von benutzerdefinierten CLR-Typen finden Sie unter [XML-Serialisierung auf Grundlage von CLR-Datenbankobjekten](https://docs.microsoft.com/dotnet/standard/serialization/introducing-xml-serialization).  
   
 ### <a name="white-space-handling-in-typed-xml"></a>Leerzeichenbehandlung in typisiertem XML  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden Leerzeichen in Elementinhalten als unbedeutend betrachtet, wenn diese in einer Sequenz von Nur-Leerzeichen-Zeichendaten auftreten, die durch ein Markup wie z. B. Begin- oder End-Tags getrennt und nicht in Entitäten geändert werden. (CDATA-Abschnitte werden ignoriert). Diese Behandlung von Leerzeichen unterscheidet sich von der Beschreibung von Leerzeichen in der XML 1.0-Spezifikation, die vom W3C (World Wide Web Consortium) veröffentlicht wird. Die Ursache ist darin zu suchen, dass der XML-Parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur eine beschränkte Anzahl der in XML 1.0 definierten DTD-Teilmengen erkennt. Weitere Informationen zu den beschränkten DTD-Teilmengen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  

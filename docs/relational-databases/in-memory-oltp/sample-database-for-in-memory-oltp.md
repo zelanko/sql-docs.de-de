@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2cc94e5f36b6c36ed44185c47356f67efb8729fe
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245202"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947325"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Beispieldatenbank für In-Memory OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "87245202"
  In diesem Beispiel wird das In-Memory OLTP-Feature vorgestellt. Es zeigt speicheroptimierte Tabellen sowie nativ kompilierte gespeicherte Prozeduren und kann verwendet werden, um die Leistungsvorteile von In-Memory OLTP zu veranschaulichen.  
   
 > [!NOTE]  
->  Informationen zum Anzeigen dieses Themas für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]finden Sie unter [Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx).  
+>  Informationen zum Anzeigen dieses Themas für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]finden Sie unter [Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-ver15#in-memory-oltp-overview).  
   
  Im Beispiel werden fünf Tabellen aus der AdventureWorks-Datenbank zu speicheroptimierten Tabellen migriert. Zusätzlich enthält es eine exemplarische Arbeitsauslastung zur Abwicklung von Verkaufsaufträgen. Die exemplarische Arbeitsauslastung veranschaulicht die Leistungsvorteile von In-Memory OLTP auf dem Server.  
   
@@ -183,12 +183,11 @@ Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 werden in spei
   
  Mit HASH-Indizes kann die Arbeitsauslastung weiter optimiert werden, da sie speziell für Punktsuchen und Zeileneinfügungen optimiert sind. Allerdings unterstützen sie keine Bereichsscans, sortierte Scans oder Suchen in führenden Indexschlüsselspalten. Daher sollten diese Indizes mit Vorsicht verwendet werden. Außerdem muss während der Erstellung der bucket_count-Wert angegeben werden. Die Bucketanzahl sollte normalerweise auf einen Wert zwischen der einfachen und doppelten Anzahl von Indexschlüsselwerten festgelegt werden. Ein zu hoher Wert stellt in der Regel aber auch kein Problem dar.  
   
-Weitere Informationen zu [Indexrichtlinien](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) und Richtlinien zum [Auswählen des geeigneten bucket_count-Werts](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx) finden Sie in der Onlinedokumentation.  
+Weitere Informationen zu [Indexrichtlinien](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations) und Richtlinien zum [Auswählen des geeigneten bucket_count-Werts](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx) finden Sie in der Onlinedokumentation.  
 
 
 Die Onlinedokumentation bietet weitere Informationen zu folgenden Themen:
-- [Indexrichtlinien](https://docs.microsoft.com/sql/database-engine/guidelines-for-using-indexes-on-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
-- [Auswählen des geeigneten bucket_count-Werts](https://docs.microsoft.com/sql/database-engine/determining-the-correct-bucket-count-for-hash-indexes) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn494956 -->
+- [Indexrichtlinien](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  Die Indizes der migrierten Tabellen wurden für die exemplarische Arbeitsauslastung, die zur Abwicklung von Verkaufsaufträgen eingesetzt wird, optimiert. Die Arbeitsauslastung basiert auf Einfügungen und Punktsuchen in den Tabellen Sales.SalesOrderHeader_inmem und Sales.SalesOrderDetail_inmem sowie auf Punktsuchen in den Primärschlüsselspalten der Tabellen Production.Product_inmem und Sales.SpecialOffer_inmem.  
   
@@ -276,7 +275,7 @@ Die Onlinedokumentation bietet weitere Informationen zu folgenden Themen:
   
     -   Aktualisiert die Versandinformationen für einen bestimmten Verkaufsauftrag. Gleichzeitig werden auch die Versandinformationen für alle Einzelposten des Verkaufsauftrags aktualisiert.  
   
-    -   Dies ist eine Wrapperprozedur für die systemintern kompilierte gespeicherte Prozedur Sales.usp_UpdateSalesOrderShipInfo_native. Sie verfügt über eine Wiederholungslogik zur Behandlung (unerwarteter) potenzieller Konflikte mit Transaktionen, die gleichzeitig ausgeführt werden und denselben Auftrag aktualisieren. Weitere Informationen zur Wiederholungslogik finden Sie in [diesem Thema](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)in der Onlinedokumentation.  
+    -   Dies ist eine Wrapperprozedur für die systemintern kompilierte gespeicherte Prozedur Sales.usp_UpdateSalesOrderShipInfo_native. Sie verfügt über eine Wiederholungslogik zur Behandlung (unerwarteter) potenzieller Konflikte mit Transaktionen, die gleichzeitig ausgeführt werden und denselben Auftrag aktualisieren. Weitere Informationen zur Wiederholungslogik finden Sie in [diesem Thema](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables)in der Onlinedokumentation.  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
