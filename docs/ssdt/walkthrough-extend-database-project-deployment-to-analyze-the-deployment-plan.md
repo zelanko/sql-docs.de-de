@@ -1,23 +1,23 @@
 ---
 title: Erweitern der Bereitstellung eines Datenbankprojekts für die Analyse des Bereitstellungsplans
+description: Erstellen Sie einen DeploymentPlanExecutor-Contributor für die Bereitstellung. Richten Sie einen Contributor ein, der die Ereignisse einer Bereitstellung eines Datenbankprojekts protokolliert.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242682"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897477"
 ---
-# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Exemplarische Vorgehensweise: Bereitstellung des Datenbankprojekts erweitern, um den Bereitstellungsplan zu analysieren
+# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts für die Analyse des Bereitstellungsplans
 
 Sie können Bereitstellungs-Contributors erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein SQL-Projekt bereitstellen. Sie können DeploymentPlanModifier oder DeploymentPlanExecutor erstellen. Verwenden Sie DeploymentPlanModifier, um den Plan zu ändern, bevor er ausgeführt wird, und DeploymentPlanExecutor, um Vorgänge durchzuführen, während der Plan ausgeführt wird. In dieser exemplarischen Vorgehensweise erstellen Sie einen DeploymentPlanExecutor mit der Bezeichnung DeploymentUpdateReportContributor, der einen Bericht über die Aktionen erstellt, die beim Bereitstellen eines Datenbankprojekts ausgeführt werden. Da dieser Erstellungs-Contributor einen Parameter akzeptiert, mit dem gesteuert wird, ob der Bericht erstellt wird, müssen Sie einen weiteren erforderlichen Schritt durchführen.  
   
@@ -601,7 +601,7 @@ Die zweite Methode ist das Erstellen einer Zieledatei, die die erforderlichen Co
     </Project>  
     ```  
   
-4.  Importieren Sie in die SQLPROJ-Datei für jedes Projekt, in dem Sie Contributors ausführen möchten, die Zieldatei durch Hinzufügen folgender Anweisung zur SQLPROJ-Datei nach dem Knoten \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> in der Datei:  
+4.  Importieren Sie die Zieldatei in der SQLPROJ-Datei eines Projekts, in der Sie die Contributors ausführen möchten, indem Sie in der SQLPROJ-Datei nach dem \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/>-Knoten die folgende Anweisung hinzufügen:  
   
     ```  
     <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -741,7 +741,7 @@ Ihr Projekt kann in Visual Studio normal veröffentlicht oder bereitgestellt wer
 Sie können weitere Tools erstellen, um die Verarbeitung der Ausgabe-XML-Dateien durchzuführen. Dies ist nur ein Beispiel für einen [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Sie können auch einen [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) erstellen, um einen Bereitstellungsplan zu ändern, bevor er ausgeführt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Exemplarische Vorgehensweise: Erweitern eines Datenbankprojektbuilds zum Generieren von Modellstatistiken](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Exemplarische Vorgehensweise: Erweitern einer Datenbankprojektbereitstellung zum Bearbeiten des Bereitstellungsplans](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
+[Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
+[Exemplarische Vorgehensweise: Erweitern der Bereitstellung von Datenbankprojekten zum Ändern des Bereitstellungsplans](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
 [Anpassen der Datenbankerstellung und -bereitstellung durch Erstellungs- und Bereitstellungs-Contributors](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

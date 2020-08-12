@@ -1,5 +1,6 @@
 ---
 title: SQL-Server-Eigenschaften (Registerkarte Dienst)
+description: In diesem Artikel erhalten Sie Informationen zu den Optionen auf der Registerkarte „Dienst“ des Dialogfelds zu den MSSQLSERVER-Eigenschaften, z. B. der Binärpfad, der Hostname und der Startmodus.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b87f54bcfc50249cef1810a728eaa796e7ee3b38
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7fb389b6fd903393539bdffffc3bf0bad3cd27d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306793"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898959"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL-Server-Eigenschaften (Registerkarte Dienst)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Verwenden Sie im Dialogfeld **MSSQLSERVER-Eigenschaften**die Registerkarte **Dienst** , um die folgenden Optionen anzuzeigen oder anzugeben.  
   
 ## <a name="options"></a>Tastatur  
@@ -51,7 +52,7 @@ ms.locfileid: "75306793"
   
 -   Automatisch: Dieser Dienst wird zusammen mit dem Computer gestartet.  
   
--   Deaktiviert: Dieser Dienst kann nicht gestartet werden.  
+-   Deaktiviert: Der Dienst kann nicht gestartet werden.  
   
  **State**  
  Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist. „ **…** “ gibt einen ausstehenden Statuswechsel an.  

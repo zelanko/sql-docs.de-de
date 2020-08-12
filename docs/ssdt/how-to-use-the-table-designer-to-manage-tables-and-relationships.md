@@ -1,5 +1,6 @@
 ---
 title: Verwalten von Tabellen und Beziehungen mithilfe des Tabellen-Designers
+description: In diesem Artikel erhalten Sie einen Überblick über den Tabellen-Designer. Sie erfahren, wie Sie dieses Tool verwenden, um Datenbanktabellenstrukturen zu erstellen und zu bearbeiten und Beziehungen zwischen Datenbankobjekten anzuzeigen.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +11,17 @@ f1_keywords:
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4262242a0ac9822bed793e1bd78a4ce51294d485
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226825"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895801"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Vorgehensweise: Verwalten von Tabellen und Beziehungen mithilfe des Tabellen-Designers
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Gewusst wie: Verwalten von Tabellen und Beziehungen mithilfe des Tabellen-Designers
 
 Der Tabellen-Designer bietet gemeinsam mit dem Transact\-SQL-Editor eine visuelle Oberfläche zum Erstellen und Bearbeiten von Tabellenstrukturen, einschließlich tabellenspezifischer Programmierobjekte, für SQL Server-Datenbanken.  Er wird gestartet, wenn Sie eine neue Tabelle für eine verbundene Datenbank oder ein Projekt erstellen oder wenn Sie im SQL Server-Objekt-Explorer oder Projektmappen-Explorer auf eine Tabelle doppelklicken, um sie zu bearbeiten.  
   
@@ -57,5 +57,5 @@ Der Designer besteht aus dem Spaltenraster, dem Skriptbereich und dem Kontextber
     Beachten Sie, dass das Erstellen und Bearbeiten von Datenbankentitäten für ein Offlineprojekt auf die gleiche Weise wie für eine verbundene Datenbank erfolgt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Gewusst wie: Erstellen von Datenbankobjekten mit dem Tabellen-Designer](../ssdt/how-to-create-database-objects-using-table-designer.md)  
+[Vorgehensweise: Erstellen von Datenbankobjekten mit dem Tabellen-Designer](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

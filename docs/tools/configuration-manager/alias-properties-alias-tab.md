@@ -1,5 +1,6 @@
 ---
 title: Aliaseigenschaften (Registerkarte „Alias“)
+description: Mithilfe der Registerkarte „Alias“ des Dialogfelds für Eigenschaften können Sie einen Alias konfigurieren, sodass Sie einen alternativen Namen verwenden können, wenn Sie eine Verbindung zu einer Instanz von SQL Server herstellen.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,18 +12,18 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 53bb19934209ee501c76317e102e5b1fcae28c4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 098da595a57c82e4d0ff68713880f38fe6acb6d2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306606"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902189"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt;-Eigenschaften (Registerkarte „Alias“)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-Bei einem Alias handelt es sich um einen alternativen Namen, der zum Herstellen einer Verbindung verwendet werden kann. In dem Alias eingeschlossen werden erforderliche Elemente einer Verbindungszeichenfolge. Diese Elemente werden mit einem vom Benutzer ausgewählten Namen offen gelegt. Verwenden Sie die Seite **Alias** im Dialogfeld **\<** Aliasname **> Eigenschaften** zum Anzeigen oder Angeben der Elemente einer Verbindungszeichenfolge eines Alias.
+Bei einem Alias handelt es sich um einen alternativen Namen, der zum Herstellen einer Verbindung verwendet werden kann. In dem Alias eingeschlossen werden erforderliche Elemente einer Verbindungszeichenfolge. Diese Elemente werden mit einem vom Benutzer ausgewählten Namen offen gelegt. Verwenden Sie die Seite **Alias** im Dialogfeld **\<**Alias name**> Eigenschaften** zum Anzeigen oder Angeben der Elemente einer Verbindungszeichenfolge eines Alias.
 
 ## <a name="options"></a>Tastatur
 
@@ -40,7 +41,7 @@ Das für die Verbindung verwendete Protokoll.
 
 **Server**
 
-Der Name der Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der eine Verbindung hergestellt wird  
+Dies ist der Name der Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der eine Verbindung hergestellt wird.  
 
 ## <a name="see-also"></a>Weitere Informationen
 

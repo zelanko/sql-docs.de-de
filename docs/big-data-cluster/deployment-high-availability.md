@@ -9,16 +9,16 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286044"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279460"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Bereitstellen von Big Data-Clustern in SQL Server mit Hochverfügbarkeit
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Da SQL Server-Big Data-Cluster bei Kubernetes als containerisierte Anwendungen eingesetzt werden und Funktionen wie zustandsbehaftete Mengen und persistente Speicherung verwenden, verfügt diese Infrastruktur über integrierte Integritätsüberwachungs-, Fehlererkennungs- und Failovermechanismen, die Clusterkomponenten nutzen, um die Dienstintegrität zu erhalten. Für eine höhere Zuverlässigkeit können Sie auch die SQL Server-Masterinstanz oder HDFS-Namensknoten und gemeinsame Spark-Dienste konfigurieren, um sie mit zusätzlichen Replikaten in einer hochverfügbaren Konfiguration bereitzustellen. Überwachung, Fehlererkennung und automatisches Failover werden von einem Verwaltungsdienst für Big Data-Cluster verwaltet, der auch als Steuerungsdienst bezeichnet wird. Dieser Dienst wird ohne Benutzereingriff bereitgestellt – vom Einrichten der Verfügbarkeitsgruppe, Konfigurieren von Endpunkten für die Datenbankspiegelung, Hinzufügen von Datenbanken zur Verfügbarkeitsgruppe bis hin zur Failover- und Upgradekoordination. 
 

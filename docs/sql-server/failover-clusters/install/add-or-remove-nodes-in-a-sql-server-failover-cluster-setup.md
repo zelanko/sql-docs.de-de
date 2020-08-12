@@ -1,10 +1,11 @@
 ---
 title: Hinzufügen oder Entfernen von Knoten in einem Failovercluster
+description: In diesem Artikel wird gezeigt, wie Sie Knoten in einer vorhandenen SQL Server-Failoverclusterinstanz hinzufügen oder daraus entfernen.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cba52dccb916e7dc1400d36b17eb3fd884c9faee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ae9ae1f58bf615362e16ebffef8926437c99a9f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230891"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900499"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Verwenden Sie diese Prozedur, um Knoten in einer vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz zu verwalten.  
   
  Um einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster zu aktualisieren oder zu entfernen, müssen Sie lokaler Administrator mit der Berechtigung sein, sich als Dienst auf allen Knoten des Failoverclusters anzumelden. Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.  

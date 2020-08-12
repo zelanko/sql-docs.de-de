@@ -1,5 +1,6 @@
 ---
 title: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs
+description: Hier erfahren Sie, wie Sie Datenbankdefinitionen mithilfe des Schemavergleichs miteinander vergleichen. Sie erhalten Informationen dazu, wie Sie bestimmte Unterschiede ausblenden und das Ziel entweder aktualisieren oder ein Updateskript erstellen.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -12,16 +13,15 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f31d543906e4bfedb16e412be703ebc8cd797a04
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2347297adfbc9d4df88c7df32fffefa4990010d8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226854"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895821"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs
 
@@ -41,7 +41,7 @@ In der folgenden Prozedur wird das Schema eines Datenbankprojekts mit einer verb
   
 ### <a name="to-compare-database-definitions"></a>So vergleichen Sie Datenbankdefinitionen  
   
-1.  Klicken Sie im Menü **SQL** auf **Schemavergleich**, und klicken Sie dann auf **Neuer Schemavergleich**.  
+1.  Klicken Sie im Menü **Extras** erst auf **SQL Server** und dann auf **Neuer Schemavergleich**.  
   
     Sie können auch im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt **TradeDev** klicken und **Schemavergleich** auswählen.  
   

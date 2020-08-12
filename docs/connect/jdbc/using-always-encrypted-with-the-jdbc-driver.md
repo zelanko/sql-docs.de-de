@@ -2,7 +2,7 @@
 title: Verwenden von Always Encrypted mit dem JDBC-Treiber
 description: Erfahren Sie, wie Sie Always Encrypted in Ihrer Java-Anwendung mit dem JDBC-Treiber für SQL Server verwenden, um sensible Daten auf dem Server zu verschlüsseln.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 07/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c63c15ad0a435235f246945d25c732798fb758df
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: b2005416234f517a8414f3d9405968659f7e553a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886353"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279617"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Verwenden von Always Encrypted mit dem JDBC-Treiber
 
@@ -44,11 +44,11 @@ Der Microsoft JDBC-Treiber für SQL Server kommuniziert mit einem Keystore, wobe
 ### <a name="using-built-in-column-master-key-store-providers"></a>Verwenden integrierter Spaltenhauptschlüssel-Speicheranbieter
 Der Microsoft JDBC-Treiber für SQL Server verfügt über die folgenden integrierten Spaltenhauptschlüssel-Speicheranbieter. Einige dieser Anbieter sind bereits mit den spezifischen (für die Suche nach dem Anbieter verwendeten) Anbieternamen registriert, und einige erfordern entweder zusätzliche Anmeldeinformationen oder eine explizite Registrierung.
 
-| Klasse                                                 | BESCHREIBUNG                                        | Anbietername (Suche)  | Bereits registriert? |
-| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Ein Anbieter für einen Keystore für die Azure Key Vault-Instanz. | AZURE_KEY_VAULT         | Vor der JDBC-Treiberversion 7.4.1 _nicht_, aber _ab_ Version 7.4.1 des JDBC-Treibers. |
-| **SQLServerColumnEncryptionCertificateStoreProvider** | Ein Anbieter für den Windows-Zertifikatspeicher.      | MSSQL_CERTIFICATE_STORE | _Ja_                |
-| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Ein Anbieter für den Java-Keystore.                  | MSSQL_JAVA_KEYSTORE     | _Ja_                |
+| Klasse                                                 | BESCHREIBUNG                                        | Anbietername (Suche)  | Bereits registriert? | Plattform |
+| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- | :------- |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Ein Anbieter für einen Keystore für die Azure Key Vault-Instanz. | AZURE_KEY_VAULT         | Vor der JDBC-Treiberversion 7.4.1 _nicht_, aber _ab_ Version 7.4.1 des JDBC-Treibers. | Windows, Linux, macOS |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | Ein Anbieter für den Windows-Zertifikatspeicher.      | MSSQL_CERTIFICATE_STORE | _Ja_                | Windows |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Ein Anbieter für den Java-Keystore.                  | MSSQL_JAVA_KEYSTORE     | _Ja_                | Windows, Linux, macOS |
 |||||
 
 Um bereits registrierte Keystore-Anbieter zu verwenden, müssen Sie keine Änderungen am Anwendungscode vornehmen, aber beachten Sie folgende Punkte:
@@ -152,7 +152,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> Während die anderen Keystore-Anbieter in diesem Artikel auf allen Plattformen verfügbar sind, die vom Treiber unterstützt werden, ist die SQLServerColumnEncryptionCertificateStoreProvider-Implementierung des JDBC-Treibers nur auf Windows-Betriebssystemen verfügbar. Es besteht eine Abhängigkeit von der Datei mssql-jdbc_auth-\<version>-\<arch>.dll, die im Treiberpaket verfügbar ist. Wenn Sie diesen Anbieter verwenden möchten, müssen Sie die Datei mssql-jdbc_auth-\<version>-\<arch>.dll in ein Verzeichnis im Windows-Systempfad des Computers kopieren, auf dem der JDBC-Treiber installiert ist. Alternativ können Sie mit der java.libary.path-Systemeigenschaft das Verzeichnis von mssql-jdbc_auth-\<version>-\<arch>.dll angeben. Wenn Sie eine 32-Bit-JVM (Java Virtual Machine) ausführen, verwenden Sie die Datei mssql-jdbc_auth-\<version>-x86.dll im Ordner x86, auch wenn es sich bei dem Betriebssystem um die x64-Version handelt. Wenn Sie eine 64-Bit-JVM mit einem x64-Prozessor ausführen, verwenden Sie die Datei mssql-jdbc_auth-\<version>-x64.dll im Ordner x64. Wenn Sie beispielsweise die 32-Bit-JVM verwenden und der JDBC-Treiber im Standardverzeichnis installiert ist, können Sie den Speicherort der DLL beim Start der Java-Anwendung mit dem folgenden VM-Argument (Virtual Machine) angeben: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> Während die anderen Keystore-Anbieter in diesem Artikel auf allen Plattformen verfügbar sind, die vom Treiber unterstützt werden, ist die SQLServerColumnEncryptionCertificateStoreProvider-Implementierung des JDBC-Treibers nur auf Windows-Betriebssystemen verfügbar. Es besteht eine Abhängigkeit von der „mssql-jdbc_auth-\<version>-\<arch>.dll“, die im Treiberpaket verfügbar ist. Wenn Sie diesen Anbieter verwenden möchten, müssen Sie die Datei „mssql-jdbc_auth-\<version>-\<arch>.dll“ in ein Verzeichnis im Windows-Systempfad des Computers kopieren, auf dem der JDBC-Treiber installiert ist. Alternativ können Sie mit der java.libary.path-Systemeigenschaft das Verzeichnis von „mssql-jdbc_auth-\<version>-\<arch>.dll“ angeben. Wenn Sie eine 32-Bit-JVM (Java Virtual Machine) ausführen, verwenden Sie die Datei „mssql-jdbc_auth-\<version>-x86.dll“ im Ordner x86, auch wenn es sich bei dem Betriebssystem um die x64-Version handelt. Wenn Sie eine 64-Bit-JVM mit einem x64-Prozessor ausführen, verwenden Sie die Datei „mssql-jdbc_auth-\<version>-x64.dll“ im Ordner x64. Wenn Sie beispielsweise die 32-Bit-JVM verwenden und der JDBC-Treiber im Standardverzeichnis installiert ist, können Sie den Speicherort der DLL beim Start der Java-Anwendung mit dem folgenden VM-Argument (Virtual Machine) angeben: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Verwenden des Java Key Store-Anbieters
 Der JDBC-Treiber ist mit einer integrierten Schlüsselspeicheranbieter-Implementierung für den Java Key Store ausgestattet. Wenn die Eigenschaft **keyStoreAuthentication** der Verbindungszeichenfolge vorhanden und auf „JavaKeyStorePassword“ festgelegt ist, instanziiert und registriert der Treiber automatisch den Anbieter für Java Key Store. Der Name des Java Key Store-Anbieters ist MSSQL_JAVA_KEYSTORE. Dieser Name kann auch mit der SQLServerColumnEncryptionJavaKeyStoreProvider.getName()-API abgefragt werden. 

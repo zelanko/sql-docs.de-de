@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_fetch_array | Microsoft-Dokumentation
+title: sqlsrv_fetch_array
+description: API-Referenz für die Funktion sqlsrv_fetch_array im PHP-Treiber für SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0055ed89d217a664d201d93d2c13c8e078d2a38
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927802"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391805"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,17 +38,17 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 ```  
   
 #### <a name="parameters"></a>Parameter  
-*$stmt*: Eine Anweisungsressource, die einer ausgeführten Anweisung entspricht.  
+*$stmt:* Hierbei handelt es sich um eine Anweisungsressource, die einer ausgeführten Anweisung entspricht.  
   
-*$fetchType* (optional): eine vordefinierte Konstante Dieser Parameter kann einen der in der folgenden Tabelle aufgeführten Werte annehmen:  
+*$fetchType* [OPTIONAL]: Hierbei handelt es sich um eine vordefinierte Konstante. Dieser Parameter kann einen der in der folgenden Tabelle aufgeführten Werte annehmen:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|Die nächste Datenzeile wird als numerisches Array zurückgegeben.|  
 |SQLSRV_FETCH_ASSOC|Die nächste Datenzeile wird als assoziatives Array zurückgegeben. Die Array-Schlüssel sind die Spaltennamen im Resultset.|  
 |SQLSRV_FETCH_BOTH|Die nächste Datenzeile wird als numerisches und assoziatives Array zurückgegeben. Dies ist der Standardwert.|  
   
-*row* (optional): in Version 1.1 hinzugefügt Einer der folgenden Werte, der spezifiziert, auf welche Zeile in einem Resultset zuzugreifen ist, welches einen bildlauffähigen Cursor verwendet: (Wenn *row* angegeben wird, muss *fetchtype* explizit angegeben werden, auch wenn Sie den Standardwert angeben.)  
+*row* [OPTIONAL]: Dieser Wert wurde in Version 1.1 hinzugefügt. Einer der folgenden Werte, der spezifiziert, auf welche Zeile in einem Resultset zuzugreifen ist, welches einen bildlauffähigen Cursor verwendet: (Wenn *row* angegeben wird, muss *fetchtype* explizit angegeben werden, auch wenn Sie den Standardwert angeben.)  
   
 -   SQLSRV_SCROLL_NEXT  
 -   SQLSRV_SCROLL_PRIOR  
@@ -58,7 +59,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 Weitere Informationen zu diesen Werten finden Sie unter [Festlegen eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md). Unterstützung für einen bildlauffähigen Cursor wurde in Version 1.1 der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
-*offset* (optional): Wird mit SQLSRV_SCROLL_ABSOLUTE und SQLSRV_SCROLL_RELATIVE verwendet, um die Zeile anzugeben, die abgerufen werden soll. Der erste Datensatz im Resultset ist „0“.  
+*offset* [OPTIONAL]: Dieser Wert wird zusammen mit „SQLSRV_SCROLL_ABSOLUTE“ und „SQLSRV_SCROLL_RELATIVE“ verwendet, um die abzurufende Zeile anzugeben. Der erste Datensatz im Resultset ist „0“.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Wenn eine Datenzeile abgerufen wird, wird ein **Array** zurückgegeben. Wenn keine weiteren Zeilen mehr abgerufen werden können, wird **NULL** zurückgegeben. Wenn ein Fehler auftritt, wird **false** zurückgegeben.  
@@ -73,7 +74,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-Wenn das Resultset, das vom `SELECT SCOPE_IDENTITY()`-Teil dieser Anweisung zurückgegeben wird, als assoziatives Array abgerufen wird, ist der Schlüssel des zurückgegebenen Werts eine leere Zeichenfolge (""), da die zurückgegebene Spalte keinen Namen hat. Um dies zu vermeiden, können Sie das Ergebnis als numerisches Array abrufen oder Sie können einen Namen für die zurückgegebene Spalte in der Transact-SQL-Anweisung angeben. Im Folgenden finden Sie eine Möglichkeit, einen Spaltennamen in Transact-SQL anzugeben:  
+Wenn das Resultset, das vom `SELECT SCOPE_IDENTITY()`-Teil dieser Anweisung zurückgegeben wird, als assoziatives Array abgerufen wird, ist der Schlüssel des zurückgegebenen Werts eine leere Zeichenfolge (""), da die zurückgegebene Spalte keinen Namen hat. Um dies zu vermeiden, können Sie das Ergebnis als numerisches Array abrufen oder Sie können einen Namen für die zurückgegebene Spalte in der Transact-SQL-Anweisung angeben. Die folgende Anweisung stellt eine Möglichkeit dar, einen Spaltennamen in Transact-SQL anzugeben:  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -176,7 +177,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Die **sqlsrv_fetch_array** Funktion gibt immer die Daten gemäß der [Default PHP Data Types](../../connect/php/default-php-data-types.md). Weitere Informationen zur Angabe des PHP-Datentyps finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+Die **sqlsrv_fetch_array** Funktion gibt immer die Daten gemäß der [Default PHP Data Types](../../connect/php/default-php-data-types.md). Weitere Informationen zur Angabe des PHP-Datentyps finden Sie unter [Vorgehensweise: Angeben von PHP-Datentypen](../../connect/php/how-to-specify-php-data-types.md).  
   
 Wenn ein Feld ohne Namen abgerufen wird, ist der assoziative Schlüssel für das Arrayelement eine leere Zeichenfolge (""). Weitere Informationen finden Sie unter [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   

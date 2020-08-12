@@ -1,23 +1,24 @@
 ---
 title: 'Installieren von Clienttools: Failovercluster'
+description: Hier erfahren Sie, wie Sie Clienttools wie das SQL Server Management Studio auf einer SQL Server-Failoverinstanz installieren.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c4918cdbb99a49bf577f9efad19ed0360c9a4911
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b9f992c50b19d8618f1eacbdbb4a441501de4a61
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230503"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897683"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installieren von Clienttools auf einem SQL Server-Failovercluster
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Clienttools wie [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sind Funktionen, die von allen Instanzen auf einem Computer genutzt werden. Sie sind rückwärtskompatibel. Unterstützte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Versionen können parallel installiert werden. Nur eine Version des Clienttools ist jeweils auf einem Knoten vorhanden.  
   
  Wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clienttools während des Setups auf dem ersten Knoten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clusters installiert werden, werden sie automatisch allen Knoten hinzugefügt, die unter Umständen später mit Knoten hinzufügen der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hinzugefügt werden.  
@@ -45,7 +46,7 @@ ms.locfileid: "75230503"
   
 1.  Führen Sie die folgenden Befehl aus, um die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Clienttools und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation zu installieren: Setup.exe/q/Action=Install /Features=Tools  
   
-2.  Führen Sie den folgenden Befehl aus, um nur die grundlegenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verwaltungstools zu installieren: Setup.exe/q/Action=Install Features=SSMS. Damit wird die [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] -Unterstützung für [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], das sqlcmd-Dienstprogramm und den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Anbieter installiert.  
+2.  Führen Sie den folgenden Befehl aus, um nur die grundlegenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verwaltungstools zu installieren: Setup.exe/q/Action=Install Features=SSMS. Damit wird die [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]-Unterstützung für [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], das Hilfsprogramm sqlcmd und den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Anbieter installiert.  
   
 3.  Führen Sie den folgenden Befehl aus, um alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verwaltungstools zu installieren: Setup.exe/q/Action=Install /Features=ADV_SSMS. Weitere Informationen zu den Parameterwerten für die Funktionen finden Sie unter [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   

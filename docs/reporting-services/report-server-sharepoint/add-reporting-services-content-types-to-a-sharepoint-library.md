@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie einen Bericht im Berichts-Generator, ein Berichtsmodell und den Berichtsdatenquelleninhaltstyp einer Bibliothek hinzufügen, wodurch der Befehl „New“ aktiviert wird, um neue Dokumente desselben Typs zu erstellen.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8964906be1f9d055e45c7eacb6699f7ccc87da86
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68887749"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197197"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek
 
@@ -72,7 +73,7 @@ ms.locfileid: "68887749"
   
 5.  Aktualisieren Sie den Browser, und klicken Sie unter **Berichtsserver-Integrationsfunktion** auf **Aktivieren**.  
   
-     ![](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
+     ![rs-reportserver-integration-deactivate](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
 ##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2013"></a><a name="bkmk_enable_content_management"></a> So aktivieren Sie die Inhaltstypverwaltung für eine einzelne Dokumentbibliothek (SharePoint 2013)  
   
@@ -113,7 +114,7 @@ ms.locfileid: "68887749"
 8.  Nachdem Sie alle gewünschten Inhaltstypen hinzugefügt haben, klicken Sie auf **OK**.  
   
     > [!NOTE]  
-    >  Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Inhaltstypgruppe **SQL Server Reporting Services-Inhaltstypen** wird unter folgenden Bedingungen auf der Seite **Inhaltstypen hinzufügen** nicht angezeigt:  
+    >   Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Inhaltstypgruppe **SQL Server Reporting Services-Inhaltstypen** wird unter folgenden Bedingungen auf der Seite **Inhaltstypen hinzufügen** nicht angezeigt:  
   
     -   Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte wurde nicht installiert. Weitere Informationen finden Sie unter [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Das Thema enthält Informationen zum Installieren des Add-Ins und es wird Schritt für Schritt erläutert, wie Sie eine Nur-Datei-Installation des Add-Ins ausführen können, um Probleme zu umgehen.  
   

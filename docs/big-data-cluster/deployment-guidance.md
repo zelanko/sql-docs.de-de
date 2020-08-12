@@ -5,53 +5,51 @@ description: Erfahren Sie, wie Sie Big Data-Cluster für SQL Server in Kubernete
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 828ad42bd6ecdc31d6e1c99a489fb4cbe8548d0e
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 4bca65dbae188c02ddc85bc385f6ada912111efb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531088"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159368"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Ein Big Data-Cluster für SQL Server wird als Docker-Container auf einem Kubernetes-Cluster bereitgestellt. Im Folgenden finden Sie eine Übersicht über die Einrichtungs-und Konfigurationsschritte:
 
-- Einrichten eines Kubernetes-Clusters auf einer einzelnen VM, auf einem VM-Cluster oder in Azure Kubernetes Service (AKS)
+- Einrichten eines Kubernetes-Clusters auf einer einzelnen VM, auf einem VM-Cluster oder in Azure Kubernetes Service (AKS), Red Hat OpenShift oder Azure Red Hat OpenShift (ARO)
 - Installieren des Clusterkonfigurationstools `azdata` auf dem Clientcomputer
 - Bereitstellen eines Big-Data-Clusters für SQL Server auf einem Kubernetes-Cluster
 
-## <a name="install-sql-server-2019-big-data-tools"></a>Installieren von Big Data-Tools für SQL Server 2019
+## <a name="supported-platforms"></a>Unterstützte Plattformen
 
-Bevor Sie einen Big-Data-Cluster für SQL Server 2019 bereitstellen können, müssen Sie zuerst die folgenden [Big-Data-Tools installieren](deploy-big-data-tools.md):
+Eine vollständige Liste der verschiedenen Kubernetes-Plattformen, auf denen SQL Server Big Data-Cluster bereitgestellt werden kann, finden Sie unter [Unterstützte Plattformen](release-notes-big-data-cluster.md#supported-platforms).
 
-- `azdata`
-- `kubectl`
-- Azure Data Studio
-- [Datenvirtualisierungserweiterung](../azure-data-studio/data-virtualization-extension.md) für Azure Data Studio
+### <a name="sql-server-editions"></a>SQL Server-Editionen
 
-## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Anforderungen an Kubernetes
+|Edition|Notizen|
+|---------|---------|
+|Enterprise<br/>Standard<br/>Entwickler| Die Edition von Big Data-Clustern wird von der Edition der SQL Server-Masterinstanz bestimmt. Zum Zeitpunkt der Bereitstellung wird standardmäßig die Developer Edition bereitgestellt. Sie können die Edition nach der Bereitstellung ändern. Informationen dazu finden Sie unter [Konfigurieren der SQL Server-Masterinstanz](../big-data-cluster/configure-sql-server-master-instance.md). |
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] benötigen für den Server und Client mindestens die Kubernetes-Version v1.13 (kubectl).
-
-> [!NOTE]
-> Die Kubernetes-Nebenversionen von Server und Client dürfen nach oben oder unten höchstens um die Zahl 1 abweichen. Weitere Informationen finden Sie unter [Kubernetes-Versionshinweise und SKU-Richtlinien für Versionsabweichungen](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+## <a name="kubernetes"></a><a id="prereqs"></a> Kubernetes
 
 ### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Einrichten des Kubernetes-Clusters
 
 Wenn Sie bereits über einen Kubernetes-Cluster verfügen, der die oben genannten Anforderungen erfüllt, können Sie direkt mit dem [Bereitstellungsschritt](#deploy) fortfahren. In diesem Abschnitt werden grundlegende Kubernetes-Kenntnisse vorausgesetzt.  Ausführliche Informationen finden Sie in der [Kubernetes-Dokumentation](https://kubernetes.io/docs/home).
 
-Sie können Kubernetes auf drei Arten bereitstellen:
+Sie können Kubernetes auf eine der folgenden Arten bereitstellen:
 
 | Bereitstellung von Kubernetes auf bzw. in: | BESCHREIBUNG | Link |
 |---|---|---|
 | **Azure Kubernetes Service (AKS)** | Ein Managed Kubernetes-Containerdienst in Azure. | [Anweisungen](deploy-on-aks.md) |
 | **Einzelne oder mehrere Computer (`kubeadm`)** | Ein Kubernetes-Cluster, der auf physischen oder virtuellen Computern mithilfe von `kubeadm` bereitgestellt wird. | [Anweisungen](deploy-with-kubeadm.md) |
+|**Azure Red Hat OpenShift** | Ein verwaltetes Angebot von OpenShift, das in Azure ausgeführt wird | [Anweisungen](deploy-openshift.md)|
+|**Red Hat OpenShift**|Eine Kubernetes-Anwendungsplattform auf Unternehmensniveau mit Hybrid Cloud| [Anweisungen](deploy-openshift.md)|
 
 > [!TIP]
 > Sie können auch ein Skript erstellen, mit dem die Bereitstellung von AKS und eines Big-Data-Clusters in einem Schritt ausgeführt wird. Weitere Informationen finden Sie im Artikel zur Verwendung eines [Python-Skripts](quickstart-big-data-cluster-deploy.md) oder im Artikel zur Nutzung eines [Notebooks in Azure Data Studio](notebooks-deploy.md).
@@ -75,6 +73,16 @@ Für die meisten Big Data-Cluster-Bereitstellungen ist persistenter Speicher erf
 
 Bei einer Bereitstellung in AKS müssen Sie keinen Speicher einrichten. AKS bietet integrierte Speicherklassen mit dynamischer Bereitstellung. Sie können die Speicherklasse (`default` oder `managed-premium`) in der Bereitstellungskonfigurationsdatei anpassen. Für die integrierten Profile wird eine `default`-Speicherklasse verwendet. Wenn Sie eine Bereitstellung auf einem Kubernetes-Cluster durchführen, der mit `kubeadm` bereitgestellt wurde, müssen Sie sicherstellen, dass ausreichend Speicher für einen Cluster des gewünschten Umfangs verfügbar und konfiguriert ist. Wenn Sie die Nutzung Ihres Speichers konfigurieren möchten, sollten Sie das tun, bevor Sie fortfahren. Weitere Informationen finden Sie unter [Datenpersistenz mit SQL Server-Big Data-Clustern in Kubernetes](concept-data-persistence.md).
 
+## <a name="install-sql-server-2019-big-data-tools"></a>Installieren von Big Data-Tools für SQL Server 2019
+
+Bevor Sie einen Big-Data-Cluster für SQL Server 2019 bereitstellen können, müssen Sie zuerst die folgenden [Big-Data-Tools installieren](deploy-big-data-tools.md):
+
+- `azdata`
+- `kubectl`
+- Azure Data Studio
+- [Datenvirtualisierungserweiterung](../azure-data-studio/data-virtualization-extension.md) für Azure Data Studio
+
+
 ## <a name="deployment-overview"></a><a id="deploy"></a> Übersicht über die Bereitstellung
 
 Die meisten Einstellungen für Big-Data-Cluster werden in einer JSON-Konfigurationsdatei für Bereitstellungen definiert. Sie können ein Standardbereitstellungsprofil für AKS und Kubernetes-Cluster, die mit `kubeadm` erstellt wurden, verwenden. Alternativ können Sie auch eine eigene Konfigurationsdatei für Bereitstellungen während der Einrichtung anpassen. Aus Sicherheitsgründen werden Authentifizierungseinstellungen mithilfe von Umgebungsvariablen übermittelt.
@@ -94,23 +102,18 @@ Führen Sie diesen Befehl aus, um herauszufinden, welche Vorlagen verfügbar sin
 azdata bdc config list -o table 
 ```
 
-Beispielsweise gibt der vorherige Befehl für das Release des Wartungsupdates für SQL Server 2019 RTM (GDR1) Folgendes zurück:
-
-```
-Result
-----------------
-aks-dev-test
-aks-dev-test-ha
-kubeadm-dev-test
-kubeadm-prod
-```
+Die folgenden Vorlagen sind ab SQL Server 2019 CU5 verfügbar: 
 
 | Bereitstellungsprofil | Kubernetes-Umgebung |
 |---|---|
 | `aks-dev-test` | Wird für die Bereitstellung von Big Data-Clustern für SQL Server unter Azure Kubernetes Service (AKS) verwendet.|
 | `aks-dev-test-ha` | Wird für die Bereitstellung von Big Data-Clustern für SQL Server unter Azure Kubernetes Service (AKS) verwendet. Unternehmenskritische Dienste wie SQL Server Master und HDFS-Namenknoten sind für Hochverfügbarkeit konfiguriert.|
+| `aro-dev-test`|Dieses Profil wird für die Bereitstellung von SQL Server-Big Data-Clustern in Azure Red Hat OpenShift für Entwicklungs- und Testzwecke verwendet. <br/><br/>Es wurde in SQL Server 2019 CU 5 eingeführt.|
+| `aro-dev-test-ha`|Dieses Profil wird für die Bereitstellung von SQL Server-Big Data-Clustern mit Hochverfügbarkeit in einem Red Hat OpenShift-Cluster für Entwicklungs- und Testzwecke verwendet. <br/><br/>Es wurde in SQL Server 2019 CU 5 eingeführt.|
 | `kubeadm-dev-test` | Wird für die Bereitstellung von Big Data-Clustern für SQL Server auf einem mit kubeadm erstellten Kubernetes-Cluster verwendet, unter Verwendung von einem oder mehreren physischen oder virtuellen Computern.|
 | `kubeadm-prod`| Wird für die Bereitstellung von Big Data-Clustern für SQL Server auf einem mit kubeadm erstellten Kubernetes-Cluster verwendet, unter Verwendung von einem oder mehreren physischen oder virtuellen Computern. Diese Vorlage kann für die Integration von Big Data-Clusterdiensten mit Active Directory verwendet werden. Unternehmenskritische Dienste wie die SQL Server-Masterinstanz und HDFS-Namenknoten werden in einer Hochverfügbarkeitskonfiguration bereitgestellt.  |
+| `openshift-dev-test`|Dieses Profil wird für die Bereitstellung von SQL Server-Big Data-Clustern in einem Red Hat OpenShift-Cluster für Entwicklungs- und Testzwecke verwendet. <br/><br/>Es wurde in SQL Server 2019 CU 5 eingeführt.|
+| `openshift-prod`|Dieses Profil wird für die Bereitstellung von SQL Server-Big Data-Clustern mit Hochverfügbarkeit in einem Red Hat OpenShift-Cluster verwendet. <br/><br/>Es wurde in SQL Server 2019 CU 5 eingeführt.|
 
 Sie können einen Big Data-Cluster bereitstellen, indem Sie `azdata bdc create` ausführen. Dadurch werden Sie aufgefordert, eine der Standardkonfigurationen auszuwählen. Anschließend werden Sie durch die Bereitstellungsschritte geführt.
 
@@ -127,7 +130,7 @@ In diesem Szenario werden Sie aufgefordert, Informationen wie Kennwörter anzuge
 
 ## <a name="custom-configurations"></a><a id="customconfig"></a> Benutzerdefinierte Konfigurationen
 
-Es ist auch möglich, die Bereitstellung an die Workloads anzupassen, die Sie ausführen möchten. Beachten Sie, dass Sie die Skalierung (Anzahl der Replikate) oder Speichereinstellungen für Big Data-Cluster-Dienste nach den Bereitstellungen nicht ändern können. Daher müssen Sie die Bereitstellungskonfiguration sorgfältig planen, um Kapazitätsprobleme zu vermeiden. Führen Sie die folgenden Schritte aus, um die Bereitstellung anzupassen:
+Es ist auch möglich, die Bereitstellung an die Workloads anzupassen, die Sie ausführen möchten. Die Größe (Anzahl von Replikaten) und Speichereinstellungen für Big Data-Cluster-Dienste können nach der Bereitstellung nicht mehr geändert werden. Daher müssen Sie die Bereitstellungskonfiguration sorgfältig planen, um Kapazitätsprobleme zu vermeiden. Führen Sie die folgenden Schritte aus, um die Bereitstellung anzupassen:
 
 1. Beginnen Sie mit einem Standardbereitstellungsprofil, das für Ihre Kubernetes-Umgebung geeignet ist. Sie können sich alle Profile mit dem Befehl `azdata bdc config list` anzeigen lassen:
 
@@ -171,8 +174,8 @@ Die folgenden Umgebungsvariablen werden für Sicherheitseinstellungen verwendet,
 
 | Umgebungsvariable | Anforderung |BESCHREIBUNG |
 |---|---|---|
-| `AZDATA_USERNAME` | Erforderlich |Der Benutzername für den Big Data-Clusteradministrator für SQL Server. In der SQL Server-Masterinstanz wird eine SysAdmin-Anmeldung mit dem gleichen Namen erstellt. Als bewährte Sicherheitsmaßnahme wird das `sa`-Konto deaktiviert. |
-| `AZDATA_PASSWORD` | Erforderlich |Das Kennwort für die oben erstellten Benutzerkonten. Das gleiche Kennwort wird für den `root`-Benutzer verwendet, der zum Sichern vom Knox-Gateway und von HDFS verwendet wird. |
+| `AZDATA_USERNAME` | Erforderlich |Der Benutzername für den Big Data-Clusteradministrator für SQL Server. In der SQL Server-Masterinstanz wird eine SysAdmin-Anmeldung mit dem gleichen Namen erstellt. Als bewährte Sicherheitsmaßnahme wird das `sa`-Konto deaktiviert. <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
+| `AZDATA_PASSWORD` | Erforderlich |Das Kennwort für die oben erstellten Benutzerkonten. Bei Clustern, die vor SQL Server 2019 CU5 bereitgestellt wurden, wird dasselbe Kennwort für den Benutzer `root` verwendet, um das Knox Gateway und HDFS zu sichern. |
 | `ACCEPT_EULA`| Erforderlich für die erste Verwendung von `azdata`| Legen Sie diese Einstellung auf „Ja“ fest. Wenn dieser Wert als Umgebungsvariable festgelegt ist, werden die Lizenzbedingungen für SQL Server und `azdata` akzeptiert. Wenn er nicht als Umgebungsvariable festgelegt ist, können Sie `--accept-eula=yes` angeben, wenn Sie den Befehl `azdata` zum ersten Mal verwenden.|
 | `DOCKER_USERNAME` | Optional | Der Benutzername, mit dem auf Containerimages zugegriffen wird, wenn diese in einem privaten Repository gespeichert sind. Weitere Informationen darüber, wie Sie ein privates Docker-Repository zur Bereitstellung von Big-Data-Clustern nutzen, finden Sie im Artikel [Offlinebereitstellungen](deploy-offline.md).|
 | `DOCKER_PASSWORD` | Optional |Das Kennwort, mit dem auf das oben erwähnte private Repository zugegriffen wird. |
@@ -193,9 +196,9 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> Sie müssen den `root`-Benutzer für das Knox-Gateway mit dem oben angegebenen Kennwort verwenden. `root` ist der einzige Benutzer, der in dieser Standardauthentifizierung (Benutzername/Kennwort) unterstützt wird.
+> Bei Clustern, die vor SQL Server 2019 CU5 bereitgestellt wurden, müssen Sie den Benutzer `root` für das Knox Gateway mit dem obigen Kennwort verwenden. `root` ist der einzige Benutzer, der in dieser Standardauthentifizierung (Benutzername/Kennwort) unterstützt wird.
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 > Verwenden Sie dieselben Werte wie die [Umgebungsvariablen](#env) AZDATA_USERNAME und AZDATA_PASSWORD, um über die Standardauthentifizierung eine Verbindung mit SQL Server herzustellen. 
-
 
 Nachdem Sie die Umgebungsvariablen festgelegt haben, müssen Sie `azdata bdc create` ausführen, um die Bereitstellung auszulösen. Im folgenden Beispiel wird das oben erstellte Clusterkonfigurationsprofil verwendet:
 

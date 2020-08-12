@@ -1,6 +1,6 @@
 ---
 title: Anzeigen und Lesen des Diagnoseprotokolls der Failoverclusterinstanz
-description: Erfahren Sie, wie Sie das von der SQL Server-Failoverclusterinstanz erzeugte Diagnoseprotokoll anzeigen und lesen können.
+description: Hier erfahren Sie, wie Sie das von einer SQL Server-Failoverclusterinstanz erzeugte laufende Diagnoseprotokoll anzeigen und lesen können.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e2f84b38751b57e1fe9ebba525e636da45a59954
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242881"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896669"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Anzeigen und Lesen des Failoverclusterinstanz-Diagnoseprotokolls
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Alle kritischen Fehler und Warnungsereignisse für die Ressourcen-DLL von SQL Server werden in das Windows-Ereignisprotokoll geschrieben. Ein Ausführungsprotokoll mit für SQL Server spezifischen Diagnoseinformationen wird von der gespeicherten Systemprozedur [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) erfasst und in die Protokolldateien der SQL Server-Failoverclusterdiagnose (auch als *SQLDIAG*-Protokolle bezeichnet) geschrieben.  
   
 -   **Vorbereitungen:**  [Empfehlungen](#Recommendations), [Sicherheit](#Security)  
@@ -30,7 +30,7 @@ ms.locfileid: "75242881"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
- Die SQLDIAG-Protokolle werden standardmäßig in einem lokalen LOG-Ordner des Verzeichnisses der SQL Server-Instanz gespeichert, z.B. in „C\Programme\Microsoft SQL Server\MSSQL13.\<Instanzname>\MSSQL\LOG“ für den besitzenden Knoten der Always On-Failoverclusterinstanz (FCI). Die Größe jeder SQLDIAG-Protokolldatei wird auf 100 MB begrenzt. Zehn dieser Protokolldateien werden auf dem Computer gespeichert, bevor sie für neue Protokolle wiederverwendet werden.  
+ Die SQLDIAG-Protokolle werden standardmäßig in einem lokalen LOG-Ordner des Verzeichnisses der SQL Server-Instanz gespeichert, z. B. unter „C\Programme\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG“ für den besitzenden Knoten der Always On-Failoverclusterinstanz (FCI). Die Größe jeder SQLDIAG-Protokolldatei wird auf 100 MB begrenzt. Zehn dieser Protokolldateien werden auf dem Computer gespeichert, bevor sie für neue Protokolle wiederverwendet werden.  
   
  Die Protokolle verwenden das Dateiformat für erweiterte Ereignisse. Mit der Systemfunktion **sys.fn_xe_file_target_read_file** können Sie die Dateien lesen, die durch erweiterte Ereignisse erstellt wurden. Pro Zeile wird ein Ereignis im XML-Format zurückgegeben. Fragen Sie die Systemsicht ab, um die XML-Daten als Resultset zu analysieren. Weitere Informationen finden Sie unter [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   

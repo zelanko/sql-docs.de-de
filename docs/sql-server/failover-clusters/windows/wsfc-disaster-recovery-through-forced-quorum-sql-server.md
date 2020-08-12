@@ -1,6 +1,6 @@
 ---
 title: Notfallwiederherstellung durch erzwungenes Quorum
-description: Zur Beseitigung eines Quorumfehlers ist ein manueller Eingriff erforderlich. In diesem Artikel wird erläutert, wie Sie ein Quorum in einem Notfall bei einer SQL Server-Failoverclusterinstanz erzwingen.
+description: Zur Beseitigung eines Quorumfehlers ist ein manueller Eingriff erforderlich. In diesem Artikel wird erläutert, wie Sie im Falle einer ausgefallenen SQL Server-Failoverclusterinstanz ein Quorum erzwingen.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 20beee1d78975cdb4da4338ca85eff14a32b8153
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821980"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896697"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Quorumfehler werden normalerweise durch eine systemische Katastrophe, einen persistenten Kommunikationsfehler oder eine fehlerhafte Konfiguration, die mehrere Knoten im WSFC-Cluster betreffen, verursacht.  Zur Beseitigung eines Quorumfehlers ist ein manueller Eingriff erforderlich.  
   
 -   **Vorbereitung:**  [Voraussetzungen](#Prerequisites), [Sicherheit](#Security)  

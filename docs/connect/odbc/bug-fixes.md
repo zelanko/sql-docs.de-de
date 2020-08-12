@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: d839caa5bd89e2ae4db4ab797ab4d5ca1967c13a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153221"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091804"
 ---
 # <a name="list-of-bugs-fixed"></a>Liste der behobenen Fehler
 
@@ -51,8 +51,8 @@ Auf dieser Seite werden alle Fehler aufgeführt, die beginnend mit [!INCLUDE[msC
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-174-for-ssnoversion"></a>Fehlerbehebungen in [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Behebung von zeitweiligen Reaktionsverlusten, wenn Multiple Active Results Sets (MARS) aktiviert ist
-- Behebung von Problemen mit der Verbindungsresilienz, wenn die asynchrone Benachrichtigung aktiviert ist
+- Ein zeitweiliger Fehler wurde behoben, bei dem der Treiber nicht mehr reagierte, wenn das MARS-Feature (mehrere aktive Resultsets) aktiviert war.
+- Ein Problem bei der Verbindungsresilienz wurde behoben, bei dem der Treiber nicht mehr reagierte, wenn asynchrone Benachrichtigungen aktiviert waren.
 - Absturz beim Abruf von Diagnosedatensätzen für Verbindungsversuche mit Multithreading behoben
 - Behebung des Fehlers „Verschlüsselung nicht unterstützt“ bei der erneuten Verbindungsherstellung nach dem Aufruf von SQLGetInfo() mit SQL_USER_NAME und SQL_DATA_SOURCE_READ_ONLY
 - Korrektur eines COM-Initialisierungsfehlers während der interaktiven Azure Active Directory-Authentifizierung
@@ -94,7 +94,7 @@ Auf dieser Seite werden alle Fehler aufgeführt, die beginnend mit [!INCLUDE[msC
 
 - Behebung eines Fehlers, durch den ein Masseneinfügevorgang bei aktivierter Kerberos-Authentifizierung zu einem Fehler „Zugriff verweigert“ führen konnte
 - Umgehung für einen unixODBC-Fehler in Versionen vor 2.3.1 entfernt (Treiber verdoppelte die Größe bestimmter Puffer, die an unixODBC übergeben wurden)
-- Reaktionsverlust bei Verbindungsresilienz (erneute Verbindung) bei Verwendung von ColumnEncryption=enabled behoben
+- Ein Problem mit der Verbindungsresilienz (erneute Verbindung) wurde behoben, bei dem es bei Verwendung von ColumnEncryption=enabled zu einem Reaktionsverlust kam.
 - Behebung eines Fehlers bei der DSN-Erstellung, durch den bei Verwendung der Option „Interaktive Active Directory-Authentifizierung“ das Fenster „Azure-Authentifizierung“ möglicherweise nicht mehr reagierte (Windows)
 - Behebung eines seltenen Absturzes während des Herunterfahrens von ODBC bei aktivierter asynchroner Ausführung (Fehler trat beim Löschen des Verbindungshandles auf)
 - Behebung eines Problems, bei dem der SQL-Treiber während der Ausführung gespeicherter Prozeduren mit langer Laufzeit eine hohe CPU-Auslastung verursachte

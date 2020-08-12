@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Always Encrypted mit SqlClient
 description: Erfahren Sie, wie Sie Anwendung mit Microsoft.Data.SqlClient und Always Encrypted entwickeln, um Ihre Daten zu schützen.
-ms.date: 05/06/2020
+ms.date: 07/09/2020
 ms.assetid: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5b4634d1d9bed66aed6d7871d1e2c14813e5ec34
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1bdb50bccf859bdd640e1da1650dc160d1d79c1e
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886467"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217768"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Verwenden von Always Encrypted mit dem Microsoft .NET-Datenanbieter für SQL Server
 
@@ -74,6 +74,9 @@ Konfigurieren der Anwendung:
 3. Geben Sie das zu verwendende Nachweisprotokoll an, indem Sie in der Verbindungszeichenfolge das Schlüsselwort `Attestation Protocol` festlegen. Der Wert dieses Schlüsselworts muss auf „HGS“ festgelegt werden.
 
 Ein Schritt-für-Schritt-Tutorial finden Sie unter [Tutorial: Entwickeln einer .NET-Anwendung mithilfe von Always Encrypted mit Secure Enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md).
+
+> [!NOTE]
+> Always Encrypted mit Secure Enclaves wird nur unter Windows unterstützt.
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Abrufen und Ändern von Daten in verschlüsselten Spalten
 
@@ -288,13 +291,13 @@ Vorgang zum Abrufen eines Spaltenverschlüsselungsschlüssels:
 
 ### <a name="using-built-in-column-master-key-store-providers"></a>Verwenden integrierter Spaltenhauptschlüssel-Speicheranbieter
 
-Der **Microsoft .NET-Datenanbieter für SQL Server** enthält die folgenden integrierten Spaltenhauptschlüssel-Speicheranbieter, die mit den bestimmten Anbieternamen vorab registriert wurden (um den Anbieter zu suchen).
+Der **Microsoft .NET-Datenanbieter für SQL Server** enthält die folgenden integrierten Spaltenhauptschlüssel-Speicheranbieter, die mit den bestimmten Anbieternamen vorab registriert wurden (um den Anbieter zu suchen). Diese integrierten Schlüsselspeicheranbieter werden nur unter Windows unterstützt.
 
-| Klasse | BESCHREIBUNG | Anbietername (Suche) |
-|:---|:---|:---|
-|[SqlColumnEncryptionCertificateStoreProvider-Klasse](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Ein Anbieter für den Windows-Zertifikatspeicher. | MSSQL_CERTIFICATE_STORE |
-|[SqlColumnEncryptionCngProvider-Klasse](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | Ein Anbieter für einen Schlüsselspeicher, der die [Microsoft Cryptography API unterstützt: Next Generation (CNG) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal). Üblicherweise handelt es sich bei einem solchen Speicher um ein Hardwaresicherheitsmodul – ein physisches Gerät, das digitale Schlüssel schützt und verwaltet und die kryptografische Verarbeitung bereitstellt. | MSSQL_CNG_STORE |
-| [SqlColumnEncryptionCspProvider-Klasse](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | Ein Anbieter für einen Schlüsselspeicher, der die [Microsoft Cryptography API (CAPI)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers)unterstützt. Üblicherweise handelt es sich bei einem solchen Speicher um ein Hardwaresicherheitsmodul – ein physisches Gerät, das digitale Schlüssel schützt und verwaltet und die kryptografische Verarbeitung bereitstellt. | MSSQL_CSP_PROVIDER |
+| Klasse | BESCHREIBUNG | Anbietername (Suche) | Plattform |
+|:---|:---|:---|:---|
+|[SqlColumnEncryptionCertificateStoreProvider-Klasse](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Ein Anbieter für den Windows-Zertifikatspeicher. | MSSQL_CERTIFICATE_STORE | Windows |
+|[SqlColumnEncryptionCngProvider-Klasse](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | Ein Anbieter für einen Schlüsselspeicher, der die [Microsoft Cryptography API unterstützt: Next Generation (CNG) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal). Üblicherweise handelt es sich bei einem solchen Speicher um ein Hardwaresicherheitsmodul – ein physisches Gerät, das digitale Schlüssel schützt und verwaltet und die kryptografische Verarbeitung bereitstellt. | MSSQL_CNG_STORE | Windows |
+| [SqlColumnEncryptionCspProvider-Klasse](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | Ein Anbieter für einen Schlüsselspeicher, der die [Microsoft Cryptography API (CAPI)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers)unterstützt. Üblicherweise handelt es sich bei einem solchen Speicher um ein Hardwaresicherheitsmodul – ein physisches Gerät, das digitale Schlüssel schützt und verwaltet und die kryptografische Verarbeitung bereitstellt. | MSSQL_CSP_PROVIDER | Windows |
 
 Sie müssen keine Änderungen am Anwendungscode vornehmen, um diese Anbieter zu verwenden, aber beachten Sie Folgendes:
 
@@ -303,7 +306,11 @@ Sie müssen keine Änderungen am Anwendungscode vornehmen, um diese Anbieter zu 
 
 ### <a name="using-the-azure-key-vault-provider"></a>Verwenden des Azure Key Vault-Anbieters
 
-Azure Key Vault ist eine praktische Möglichkeit zum Speichern von Spaltenhauptschlüsseln für Always Encrypted (insbesondere, wenn Ihre Anwendungen in Azure gehostet werden). Der **Microsoft .NET-Datenanbieter für SQL Server** umfasst keinen integrierten Spaltenhauptschlüssel-Speicheranbieter für Azure Key Vault, aber er steht als NuGet-Paket bereit, das Sie problemlos in Ihre Anwendung integrieren können. Weitere Informationen finden Sie unter [Always Encrypted – Schützen vertraulicher Daten in SQL-Datenbank mit Datenverschlüsselung und Speichern von Verschlüsselungsschlüsseln in Azure Key Vault](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/).
+Azure Key Vault ist eine praktische Möglichkeit zum Speichern von Spaltenhauptschlüsseln für Always Encrypted (insbesondere, wenn Ihre Anwendungen in Azure gehostet werden). Der **Microsoft .NET Framework-Datenprovider für SQL Server** umfasst keinen integrierten Spaltenhauptschlüssel-Speicheranbieter für Azure Key Vault, aber er steht als NuGet-Paket ([Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider)) bereit, das Sie problemlos mit Ihrer Anwendung integrieren können. Weitere Informationen finden Sie unter [Always Encrypted – Schützen vertraulicher Daten in SQL-Datenbank mit Datenverschlüsselung und Speichern von Verschlüsselungsschlüsseln in Azure Key Vault](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/).
+
+| Klasse | BESCHREIBUNG | Anbietername (Suche) | Plattform |
+|:---|:---|:---|:---|
+|[SqlColumnEncryptionAzureKeyVaultProvider Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Anbieter für Azure Key Vault. | AZURE_KEY_VAULT | Windows, Linux, macOS |
 
 Beispiele zur Demonstration der Ver- und Entschlüsselung mit Azure Key Vault finden Sie unter [Azure Key Vault mit Always Encrypted](azure-key-vault-example.md) und [Azure Key Vault mit Always Encrypted und Secure Enclaves](azure-key-vault-enclave-example.md).
 
@@ -508,7 +515,8 @@ Mit „SqlBulkCopy“ können Sie Daten, die bereits verschlüsselt sind und in 
 - Konfigurieren Sie beide Datenbankverbindungen, für die Quelltabelle und für die Zieltabelle, ohne Always Encrypted zu aktivieren.
 - Legen Sie die Option `AllowEncryptedValueModifications` fest (siehe [SqlBulkCopyOptions](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlbulkcopyoptions)).
 
-Hinweis: Gehen Sie bei der Angabe von `AllowEncryptedValueModifications` mit Bedacht vor, da dies möglicherweise zu einer Beschädigung der Datenbank führen kann, da der **Microsoft .NET-Datenanbieter für SQL Server** nicht überprüft, ob die Daten tatsächlich verschlüsselt oder mit demselben Verschlüsselungstyp, Algorithmus und Schlüssel wie die Zielspalte ordnungsgemäß verschlüsselt wurden.
+> [!NOTE]
+> Gehen Sie bei der Angabe von `AllowEncryptedValueModifications` mit Bedacht vor, da dies möglicherweise zu einer Beschädigung der Datenbank führen kann, da der **Microsoft .NET-Datenanbieter für SQL Server** nicht überprüft, ob die Daten tatsächlich verschlüsselt oder mit demselben Verschlüsselungstyp, Algorithmus und Schlüssel wie die Zielspalte ordnungsgemäß verschlüsselt wurden.
 
 Hier folgt ein Beispiel, in dem Daten aus einer Tabelle in eine andere kopiert werden. Es wird angenommen, dass die Spalten „SSN“ und „BirthDate“ verschlüsselt sind.
 

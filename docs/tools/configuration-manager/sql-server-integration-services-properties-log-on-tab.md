@@ -1,5 +1,6 @@
 ---
 title: Eigenschaften von SQL Server Integration Services (Registerkarte Anmelden)
+description: In diesem Artikel erhalten Sie Informationen zur Registerkarte „Anmelden“ des Dialogfelds „SQL Server Integration Services Properties“ (Eigenschaften der SQL Server Integration Services). Sie erfahren, wie Sie ein Konto angeben und den Dienst starten oder anhalten.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59fd7444eecfd0beb6310ecfec3380eaf1b8b3f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2d601e389f75661becbc5756fd5fdd6525b0a623
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306849"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896203"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>Eigenschaften von SQL Server Integration Services (Registerkarte Anmelden)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Verwenden Sie im Dialogfeld **Eigenschaften** in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Registerkarte **Anmelden**, um das vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst verwendete Konto anzugeben und den Dienst zu starten und zu beenden.  
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+  Verwenden Sie im Dialogfeld [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Eigenschaften** in  die Registerkarte **Anmelden**, um das vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst verwendete Konto anzugeben und den Dienst zu starten und zu beenden.  
   
 ## <a name="options"></a>Tastatur  
  **Lokales System**  

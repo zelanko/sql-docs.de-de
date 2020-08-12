@@ -1,5 +1,6 @@
 ---
 title: Planen einer SQL Server-Installation | Microsoft-Dokumentation
+description: Dieser Artikel unterstützt Sie bei der Planung der Installation von SQL Server. Er enthält Links zu Ressourcen, die für die SQL Server-Installation erforderlich sind.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -9,17 +10,17 @@ ms.topic: quickstart
 helpviewer_keywords:
 - installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 56adbb10af74ef8e0e71012378b4aa13a2d818d2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ce94f99ac38a6d87dfc39a9ba01ad672f1cd70a0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79428181"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902297"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planen einer SQL Server-Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu installieren, führen Sie folgende Schritte aus:  
   
@@ -40,7 +41,7 @@ ms.locfileid: "79428181"
  [Neuigkeiten in der SQL Server-Installation](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
  Dieser Artikel beschreibt die Details zu den neuen oder verbesserten Installationsfunktionen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Hardware- und Softwareanforderungen für die Installation von [SQL Server 2016 und 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) oder [SQL Server für Linux](../../linux/sql-server-linux-setup.md). In diesem Artikel finden Sie die Mindestanforderungen an Hardware und Software, die erforderlich sind, um eine SQL Server-Instanz zu installieren und auszuführen. erforderlich.  
+ Hardware- und Softwareanforderungen für die Installation von [SQL Server 2016 und 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) oder [SQL Server für Linux](../../linux/sql-server-linux-setup.md). In diesem Artikel finden Sie die Mindestanforderungen an Hardware und Software, die erforderlich sind, um eine SQL Server-Instanz zu installieren und auszuführen. .  
   
  [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  Dieser Artikel beschreibt einige bewährte Sicherheitsmethoden, die Sie vor dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und nach dem Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigen sollten.  

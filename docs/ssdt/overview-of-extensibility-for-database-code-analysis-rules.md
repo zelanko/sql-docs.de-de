@@ -1,21 +1,21 @@
 ---
 title: Erweiterbarkeit der Regeln zur Datenbankcodeanalyse
+description: In diesem Artikel erhalten Sie einen Überblick über die verschiedenen Komponenten von Regeln für die Datenbankcodeanalyse und wie diese in SQL Server Data Tools interagieren. Hier erfahren Sie mehr über das Erstellen benutzerdefinierter Regeln.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ef4ab84a123252dd35da85213110b8b4abb616ad
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e67b6dabc0d8db2b3644a6183b4a6855738e54ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251967"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897618"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>Übersicht der Erweiterbarkeit um Regeln für die Datenbank-Codeanalyse
 
@@ -30,7 +30,7 @@ Das folgende Diagramm veranschaulicht die Interaktion der Regeln zur Datenbankco
   
 ![Komponenten von Regeln zur Datenbankcodeanalyse](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "Komponenten von Regeln zur Datenbankcodeanalyse")  
   
-Wenn Sie die Funktion für Regeln zur Datenbankcodeanalyse verwenden, entweder durch direktes Ausführen der statischen Codeanalyse (weitere Informationen finden Sie unter [Gewusst wie: Analysieren von Transact-SQL-Code auf Codefehler](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)) oder durch Erstellen eines Builds, werden alle Regeln geladen und entsprechend ihrer Konfiguration in Ihrem Projekt verwendet. Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren und Deaktivieren bestimmter Regeln für die statische Analyse von Datenbankcode](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx). Der Erweiterungs-Manager lädt außerdem alle benutzerdefinierten Regelassemblys, die von Ihnen erstellt und registriert wurden. Weitere Informationen finden Sie unter [Gewusst wie: Installieren und Verwalten von Funktionserweiterungen](../ssdt/how-to-install-and-manage-feature-extensions.md).  
+Wenn Sie die Funktion für Regeln zur Datenbankcodeanalyse verwenden, entweder durch direktes Ausführen der statischen Codeanalyse (weitere Informationen finden Sie unter [Gewusst wie: Analysieren von Transact-SQL-Code auf Codefehler](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)) oder durch Erstellen eines Builds, werden alle Regeln geladen und entsprechend ihrer Konfiguration in Ihrem Projekt verwendet. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren und Deaktivieren bestimmter Regeln für die statische Analyse von Datenbankcode](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx). Der Erweiterungs-Manager lädt außerdem alle benutzerdefinierten Regelassemblys, die von Ihnen erstellt und registriert wurden. Weitere Informationen finden Sie unter [Vorgehensweise: Installieren und Verwalten von Funktionserweiterungen](../ssdt/how-to-install-and-manage-feature-extensions.md).  
   
 Eine benutzerdefinierte Klasse von Codeanalyseregeln erbt von [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx). Die benutzerdefinierte Regelklasse kann über ihren Regelausführungskontext auf eine Reihe von nützlichen Objekten zugreifen. Dazu gehören:  
   

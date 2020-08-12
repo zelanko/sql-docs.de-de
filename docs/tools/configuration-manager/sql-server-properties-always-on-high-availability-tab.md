@@ -1,5 +1,6 @@
 ---
 title: SQL Server-Eigenschaften (Registerkarte „Always On High Availability Tab“ (Hohe Verfügbarkeit bei Always On))
+description: Aktivieren Sie in SQL Server das Feature „Always On-Verfügbarkeitsgruppen“, um die Verfügbarkeitsgruppen als Hochverfügbarkeits- und Notfallwiederherstellungslösung zu verwenden.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d57f7e3f98c9db33569414e3c6876e54503f25bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5ecf784f4a15bc8b5ff705d46bc64076436c3f8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306822"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902031"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server-Eigenschaften (Registerkarte „Always On High Availability Tab“ (Hohe Verfügbarkeit bei Always On))
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Verwenden Sie die Registerkarte **Always On High Availability Tab** (Hohe Verfügbarkeit bei Always On) im Dialogfeld **SQL Server-Eigenschaften** im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, um die Funktion für Always On-Verfügbarkeitsgruppen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu aktivieren oder zu deaktivieren. Die Aktivierung von Always On-Verfügbarkeitsgruppen ist eine Voraussetzung dafür, dass eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz Verfügbarkeitsgruppen als Lösung für Hochverfügbarkeit und Notfallwiederherstellung verwenden kann.  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
@@ -50,7 +51,7 @@ ms.locfileid: "75306822"
     > [!TIP]  
     >  Nach der Deaktivierung von Always On-Verfügbarkeitsgruppen sollten Sie alle lokalen Verfügbarkeitsreplikate aus der Serverinstanz entfernen. Nachdem Sie das letzte Replikat einer bestimmten Verfügbarkeitsgruppe entfernt haben, sollten Sie auch die Gruppe entfernen.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
   
 > [!NOTE]  
 >  Weitere Informationen zu den Schritten, die im Anschluss an die Deaktivierung von Always On-Verfügbarkeitsgruppen erforderlich sind, sowie Informationen zum Erstellen und Konfigurieren von Verfügbarkeitsgruppen finden Sie in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Onlinedokumentation.  

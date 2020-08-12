@@ -1,6 +1,6 @@
 ---
 title: Erzwingen des Starts eines Clusters ohne Quorum
-description: In diesem Artikel wird beschrieben, wie der Start eines Windows Server-Failoverclusters ohne Quorum erzwungen wird.
+description: In diesem Artikel erfahren Sie, wie Sie erzwingen, dass ein Clusterknoten für ein Windows-Server-Failoverclustering ohne Quorum gestartet wird. Dies ist möglicherweise erforderlich, um Daten wiederherzustellen und Hochverfügbarkeit wiederherzustellen.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4f7838537d93ce6ef60afc0ac971bbc47d358f79
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258141"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899002"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Erzwingen des Starts eines Clusters ohne Quorum
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie der Start eines Windows Server-Failoverclustering-Clusterknotens ohne Quorum erzwungen wird.  Dies ist möglicherweise für die Notfallwiederherstellung sowie in Multisubnetzszenarien erforderlich, um Daten wiederherzustellen die hohe Verfügbarkeit für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen wieder vollständig einrichten zu können.  
   
 -   **Vorbereitung:**  [Empfehlungen](#Recommendations), [Sicherheit](#Security)  

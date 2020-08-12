@@ -1,5 +1,6 @@
 ---
 title: Problembehandlung bei Failoverclustern | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die Problembehandlung für Failovercluster, einschließlich der Wiederherstellung nach einem Fehler, der Behebung häufig auftretender Probleme und der Verwendung von erweiterten gespeicherten Prozeduren/COM-Objekten.
 ms.custom: ''
 ms.date: 10/21/2015
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f387fc8778a600305696d0c2f4ea45293b8d5c59
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68044787"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895867"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Problembehandlung bei Failoverclustern
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema finden Sie Informationen zu den folgenden Punkten:  
   
 -   Grundlegende Schritte bei der Problembehandlung.  
@@ -33,7 +34,7 @@ ms.locfileid: "68044787"
 -   Verwenden von erweiterten gespeicherten Prozeduren und COM-Objekten.  
   
 ## <a name="basic-troubleshooting-steps"></a>Grundlegende Schritte bei der Problembehandlung  
- Als erster Schritt für die Diagnose sollte eine neue Überprüfung der Clustervalidierung ausgeführt werden. Weitere Informationen zur Validierung finden Sie unter [Schrittweise Anleitung für Failovercluster: Prüfen der Hardware auf einen Failovercluster](https://technet.microsoft.com/library/cc732035.aspx).  Diese kann ohne Unterbrechung des Diensts abgeschlossen werden, da sie keine Auswirkungen auf irgendwelche Onlineclusterressourcen hat. Die Validierung kann jederzeit ausgeführt werden, sobald die Failoverclustering-Funktion installiert wurde, auch vor der Clusterbereitstellung, während der Clustererstellung oder -ausführung. Tatsächlich werden, sobald der Cluster verwendet wird, zusätzliche Tests ausgeführt, die prüfen, ob die bewährten Methoden für hoch verfügbare Workloads befolgt wurden. Von diesen Dutzenden Tests wirken sich nur wenige auf ausgeführte Clusterworkloads aus. Diese Tests gehören alle zur Speicherkategorie, das Überspringen dieser gesamten Kategorie stellt somit eine einfache Methode dar, störende Tests zu vermeiden.  
+ Als erster Schritt für die Diagnose sollte eine neue Überprüfung der Clustervalidierung ausgeführt werden. Details zur Validierung finden Sie unter [Failover Cluster Step-by-Step Guide: Validating Hardware for a Failover Cluster](https://technet.microsoft.com/library/cc732035.aspx) (Schrittweise Anleitung für Failovercluster: Prüfen der Hardware auf einen Failovercluster).  Diese kann ohne Unterbrechung des Diensts abgeschlossen werden, da sie keine Auswirkungen auf irgendwelche Onlineclusterressourcen hat. Die Validierung kann jederzeit ausgeführt werden, sobald die Failoverclustering-Funktion installiert wurde, auch vor der Clusterbereitstellung, während der Clustererstellung oder -ausführung. Tatsächlich werden, sobald der Cluster verwendet wird, zusätzliche Tests ausgeführt, die prüfen, ob die bewährten Methoden für hoch verfügbare Workloads befolgt wurden. Von diesen Dutzenden Tests wirken sich nur wenige auf ausgeführte Clusterworkloads aus. Diese Tests gehören alle zur Speicherkategorie, das Überspringen dieser gesamten Kategorie stellt somit eine einfache Methode dar, störende Tests zu vermeiden.  
 Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um beim Ausführen der Speichertests während der Validierung unbeabsichtigte Downtime zu verhindern. Falls der Cluster bei der Initiierung der Validierung über Onlinegruppen verfügt und die Speichertests ausgewählt bleiben, wird der Benutzer dazu aufgefordert, zu entscheiden, ob alle Tests durchgeführt werden sollen (und Downtime verursacht wird) oder ob die Tests der Datenträger aller Onlinegruppen zur Vermeidung von Downtime übersprungen werden sollen. Falls die gesamte Speicherkategorie von den Tests ausgeschlossen wird, wird diese Aufforderung nicht angezeigt. Dadurch wird die Clustervalidierung ohne Downtime aktiviert.  
   
 #### <a name="how-to-revalidate-your-cluster"></a>So validieren Sie Ihren Cluster erneut  
@@ -85,7 +86,7 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
 ### <a name="problem-incorrect-use-of-command-prompt-syntax-to-install-sql-server"></a>Problem: Falsche Verwendung der Eingabeaufforderungssyntax für die Installation von SQL Server  
  **Problem 1:** Setupprobleme sind schwer zu diagnostizieren, wenn der **/qn** -Schalter an der Eingabeaufforderung verwendet wird, da **/qn** alle Dialogfelder und Fehlermeldungen für das Setup unterdrückt. Wenn der **/qn** -Schalter angegeben ist, werden alle Setupmeldungen, einschließlich aller Fehlermeldungen, in Setupprotokolldateien geschrieben. Weitere Informationen finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
- **Lösung 1:** Verwenden Sie anstelle des **/qn** -Schalters den **/qb** -Schalter. Wenn Sie den **/qb** -Schalter verwenden, wird bei jedem Schritt die Standardbenutzeroberfläche mit allen Fehlermeldungen angezeigt.  
+ **Lösung 1:** Verwenden Sie anstelle des **/qn**-Schalters den **/qb**-Schalter. Wenn Sie den **/qb** -Schalter verwenden, wird bei jedem Schritt die Standardbenutzeroberfläche mit allen Fehlermeldungen angezeigt.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problem: SQL Server kann sich nach der Migration auf einen anderen Knoten nicht am Netzwerk anmelden  
  **Problem 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkonten können keinen Kontakt mit einem Domänencontroller herstellen.  
@@ -94,10 +95,10 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
   
  **Problem 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkontokennwörter stimmen nicht auf allen Clusterknoten überein, oder vom Knoten wird ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienst, der von einem fehlerhaften Knoten migriert wurde, nicht neu gestartet.  
   
- **Lösung 2:** Ändern Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkontokennwörter mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Konfigurations-Managers. Andernfalls müssen Sie nach dem Ändern der Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten auf einem Knoten auch die Kennwörter auf allen anderen Knoten ändern. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Der Konfigurations-Manager führt dies automatisch aus.  
+ **Lösung 2:** Ändern Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkontokennwörter mithilfe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Configuration Manager. Andernfalls müssen Sie nach dem Ändern der Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten auf einem Knoten auch die Kennwörter auf allen anderen Knoten ändern. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Der Konfigurations-Manager führt dies automatisch aus.  
   
 ### <a name="problem-sql-server-cannot-access-the-cluster-disks"></a>Problem: SQL Server kann nicht auf die Clusterdatenträger zugreifen  
- **Problem 1:** Die Firmware oder Treiber sind nicht auf allen Knoten aktualisiert.  
+ **Problem 1:** Die Firmware oder Treiber sind nicht auf allen Knoten aktualisiert.  
   
  **Lösung 1:** Überprüfen Sie, ob alle Knoten die richtigen Firmwareversionen und die gleichen Treiberversionen verwenden.  
   
@@ -114,23 +115,23 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
  **Lösung:** Verwenden Sie die Clusterverwaltung unter MSCS, um automatisch einen Failovercluster zu starten. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst sollte auf manuelles Starten festgelegt werden, und die Clusterverwaltung sollte in MSCS zum Starten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Diensts konfiguriert werden. Weitere Informationen finden Sie unter [Verwalten von Diensten](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx).  
   
 ### <a name="problem-the-network-name-is-offline-and-you-cannot-connect-to-sql-server-using-tcpip"></a>Problem: Die Netzwerknamenressource ist offline, und Sie können keine Verbindung zu SQL Server mithilfe von TCP/IP herstellen  
- **Problem 1:** DNS erzeugt einen Fehler aufgrund einer Clusterressource, die DNS erfordert.  
+ **Problem 1:** DNS erzeugt einen Fehler aufgrund einer Clusterressource, die DNS erfordert.  
   
  **Lösung 1:** Beheben Sie die DNS-Probleme.  
   
  **Problem 2:** Im Netzwerk ist ein Name doppelt vorhanden.  
   
- **Lösung 2:** Verwenden Sie NBTSTAT, um den doppelten Namen zu finden, und beheben Sie dann das Problem.  
+ **Lösung 2:** Verwenden Sie „NBTSTAT“, um den doppelten Namen zu finden, und beheben Sie dann das Problem.  
   
  **Problem 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt keine Verbindung mithilfe von Named Pipes her.  
   
- **Lösung 3:** Um eine Verbindung mithilfe von Named Pipes herzustellen, erstellen Sie mit dem SQL Server-Konfigurations-Manager einen Alias, der eine Verbindung mit dem entsprechenden Computer herstellt. Wenn Sie beispielsweise über einen Cluster mit zwei Knoten (**Knoten A** und **Knoten B**) und eine Failoverclusterinstanz (**Virtsql**) mit einer Standardinstanz verfügen, können Sie die Verbindung mit dem Server, dessen Netzwerknamenressource offline ist, wie folgt herstellen:  
+ **Lösung 3:** Erstellen Sie mit dem SQL Server-Konfigurations-Manager einen Alias, der eine Verbindung mit dem entsprechenden Computer herstellt, um eine Verbindung mithilfe von Named Pipes herzustellen. Wenn Sie beispielsweise über einen Cluster mit zwei Knoten (**Knoten A** und **Knoten B**) und eine Failoverclusterinstanz (**Virtsql**) mit einer Standardinstanz verfügen, können Sie die Verbindung mit dem Server, dessen Netzwerknamenressource offline ist, wie folgt herstellen:  
   
 1.  Ermitteln Sie mithilfe der Clusterverwaltung den Knoten, auf dem die Gruppe mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird. In diesem Beispiel ist es **Knoten A**.  
   
 2.  Starten Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst auf diesem Computer mithilfe von **net start**. Weitere Informationen zum Verwenden von **net start**finden Sie unter [Manuelles Starten von SQL Server](https://msdn.microsoft.com/library/ms191193\(v=sql.105\).aspx).  
   
-3.  Starten Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server-Konfigurations-Manager auf **Knoten A**. Zeigen Sie den Pipenamen an, der vom Server überwacht wird. Dieser sollte in etwa so aussehen: \\\\.\\$$\VIRTSQL\pipe\sql\query.  
+3.  Starten Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQL Server-Konfigurations-Manager auf **Knoten A**. Zeigen Sie den Pipenamen an, der vom Server überwacht wird. Dieser sollte in etwa so aussehen: \\\\.\\$$\VIRTSQL\pipe\sql\query.  
   
 4.  Starten Sie den SQL Server-Konfigurations-Manager auf dem Clientcomputer.  
   
@@ -141,9 +142,9 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
 ### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>Problem: SQL Server-Setup führt auf einem Cluster zum Fehler 11001  
  **Problem:** Ein verwaister Registrierungsschlüssel in [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster]  
   
- **Lösung:** Stellen Sie sicher, dass die MSSQL.X-Registrierungsstruktur zurzeit nicht verwendet wird, und löschen Sie dann den Clusterschlüssel.  
+ **Lösung:** Stellen Sie sicher, dass die „MSSQL.X“-Registrierungsstruktur zurzeit nicht verwendet wird, und löschen Sie dann den Clusterschlüssel.  
   
-### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>Problem: Fehler beim Clustersetup: „Der Installer besitzt keine ausreichenden Berechtigungen, um auf dieses Verzeichnis zuzugreifen: \<Laufwerk>\Microsoft SQL Server. Die Installation kann nicht fortgesetzt werden. Melden Sie sich als Administrator an, oder wenden Sie sich an Ihren Systemadministrator"  
+### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>Problem: Fehler beim Clustersetup: „Die Rechte des Installationsprogramms reichen nicht aus, um auf dieses Verzeichnis zuzugreifen: \<drive>\Microsoft SQL Server. Die Installation kann nicht fortgesetzt werden. Melden Sie sich als Administrator an, oder wenden Sie sich an Ihren Systemadministrator"  
  **Problem:** Dieser Fehler wird durch ein freigegebenes SCSI-Laufwerk verursacht, das nicht ordnungsgemäß partitioniert ist.  
   
  **Lösung:** Erstellen Sie eine neue, einzelne Partition auf dem freigegebenen Datenträger, indem Sie die folgenden Schritte ausführen:  
@@ -160,10 +161,10 @@ Failoverclustering wird mit einer integrierten Schutzvorrichtung geliefert, um b
   
 6.  Führen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup aus.  
   
-### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>Problem: SQL Server-Ressourcen werden von den Anwendungen nicht in eine verteilte Transaktion eingetragen.  
+### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>Problem: SQL Server-Ressourcen werden von den Anwendungen nicht in eine verteilte Transaktion eingetragen  
  **Problem:** Weil [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) in Windows nicht vollständig konfiguriert ist, tragen Anwendungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressourcen in einer verteilten Transaktion möglicherweise nicht ein. Dieses Problem kann sich auf verknüpfte Server, verteilte Abfragen und remote gespeicherte Prozeduren auswirken, die verteilte Transaktionen verwenden. Weitere Informationen zum Konfigurieren von MS DTC finden Sie unter [Vor dem Installieren des Failoverclusterings](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
- **Lösung:** Um solchen Problemen vorzubeugen, müssen die MS DTC-Dienste auf den Servern vollständig aktiviert werden, auf denen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert und MS DTC konfiguriert ist.  
+ **Lösung:** Die MS DTC-Dienste müssen auf den Servern vollständig aktiviert werden, auf denen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert und MS DTC konfiguriert ist, um solchen Problemen vorzubeugen.  
   
  Führen Sie die folgenden Schritte aus, um MS DTC vollständig zu aktivieren:  
   

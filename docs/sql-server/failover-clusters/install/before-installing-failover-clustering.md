@@ -1,10 +1,11 @@
 ---
 title: Vor dem Installieren des Failoverclusterings | Microsoft-Dokumentation
+description: In diesem Artikel werden Planungsüberlegungen für die Vorbereitung der Installation eines SQL Server-Failoverclusters beschrieben, z. B. in Bezug auf die Hardware, das Betriebssystem und die Konfiguration.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f13de472628de7f0bfea12cdac2c001682678a66
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72517940"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900514"
 ---
 # <a name="before-installing-failover-clustering"></a>Vor dem Installieren des Failoverclusterings
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Bevor Sie einen SQL Server-Failovercluster installieren, müssen Sie die Hardware und das Betriebssystem auswählen, unter dem SQL Server ausgeführt werden soll. Außerdem müssen Sie das Windows Server Failover Clustering (WSFC) konfigurieren und Überlegungen zu Netzwerk, Sicherheit und anderer Software überprüfen, die auf dem Failovercluster ausgeführt werden soll.  
   
  Wenn ein Windows-Cluster über ein lokales Laufwerk verfügt und der zugehörige Laufwerkbuchstabe auch für mindestens einen Clusterknoten als freigegebenes Laufwerk verwendet wird, kann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Laufwerk nicht installiert werden. Diese Einschränkung gilt sowohl für SQL Server-Failoverclusterinstanzen als auch für eigenständige Instanzen auf einem Server, der Teil einer Windows-Failoverclusterinstanz ist.
@@ -39,7 +40,7 @@ ms.locfileid: "72517940"
   
 ##  <a name="best-practices"></a><a name="BestPractices"></a> Bewährte Methoden  
   
--   Lesen Sie die [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Versionshinweise[ für ](https://go.microsoft.com/fwlink/?LinkId=296445).  
+-   Lesen Sie die [Versionshinweise](https://go.microsoft.com/fwlink/?LinkId=296445) für [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   Installieren Sie erforderliche Software. Installieren Sie vor dem Ausführen des Setups zum Installieren von oder Aktualisieren auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]die folgenden erforderlichen Komponenten, um die Installationsdauer zu verkürzen. Sie können die erforderliche Software auf jedem Failoverclusterknoten installieren und die Knoten anschließend einmal neu starten, bevor Sie Setup ausführen.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "72517940"
   
     -   .NET Framework 3.5 SP1 wird vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup nicht mehr installiert; diese Version kann jedoch für die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter älteren Windows-Betriebssystemen erforderlich sein. Weitere Informationen finden Sie in den [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Versionshinweise](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update-Paket:** Damit während des Setups aufgrund der .NET Framework 4-Installation kein Neustart durchgeführt wird, ist für das [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Setup die Installation eines [!INCLUDE[msCoName](../../../includes/msconame-md.md)] -Updates auf dem Computer erforderlich.  Wird [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] unter Windows 7 SP1 oder [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 installiert, ist dieses Update bereits enthalten. Wenn Sie die Installation unter einem älteren Windows-Betriebssystem ausführen, laden Sie es von [Microsoft Update für .NET Framework 4.0 unter Windows Vista und Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093)herunter.  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Updatepaket:** Damit während des Setups aufgrund der .NET Framework 4-Installation kein Neustart erfolgt, ist für das Setup von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ein einzige Replikat die Installation eines [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-Updates auf dem Computer erforderlich.  Wird [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] unter Windows 7 SP1 oder [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 installiert, ist dieses Update bereits enthalten. Wenn Sie die Installation unter einem älteren Windows-Betriebssystem ausführen, laden Sie es von [Microsoft Update für .NET Framework 4.0 unter Windows Vista und Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093)herunter.  
   
     -   .NET Framework 4: In einem Clusterbetriebssystem wird .NET Framework 4 von Setup installiert. Um die Installationsdauer zu reduzieren, können Sie .NET Framework 4 installieren, bevor Sie das Setup ausführen.  
   
@@ -216,7 +217,7 @@ ms.locfileid: "72517940"
   
 1.  Die Abhängigkeit von IP-Adressressourcen wird in einer Multisubnetz-Konfiguration auf OR festgelegt. Weitere Informationen finden Sie unter [Erstellen eines neuen SQL Server-Failoverclusters &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md).  
   
-2.  Die gleichzeitige Verwendung von AND- und OR-IP-Adressabhängigkeiten wird nicht unterstützt. Beispielsweise wird \<IP1> AND \<IP2> OR \<IP3> nicht unterstützt.  
+2.  Die gleichzeitige Verwendung von AND- und OR-IP-Adressabhängigkeiten wird nicht unterstützt. „\<IP1> AND \<IP2> OR \<IP3>“ wird beispielsweise nicht unterstützt.  
   
 3.  Mehr als eine IP-Adresse pro Subnetz wird nicht unterstützt.  
   

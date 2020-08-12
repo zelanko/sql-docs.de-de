@@ -1,21 +1,21 @@
 ---
 title: Verwenden von Transact-SQL-Assertionen in SQL Server-Komponententests
+description: In diesem Artikel erhalten Sie Informationen zu Transact-SQL-Assertionen. Sie erfahren außerdem, wann Assertionen in SQL Server-Komponententests verwendet werden und wann Testbedingungen verwendet werden. Zusätzlich können Sie sich Beispiele der Verwendung von Assertionen ansehen.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: b8feb69dc25d55b279d65904126afd2733160d6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ef278073056bbe6958ed61ce415aa2130156edb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243514"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898982"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Verwenden von Transact-SQL-Assertionen in SQL Server-Komponententests
 
@@ -85,5 +85,5 @@ Weitere Informationen finden Sie unter [RAISERROR (Transact-SQL)](https://msdn.m
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Verwenden von Testbedingungen in SQL Server-Komponententests](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Überprüfen des Datenbankcodes mithilfe von SQL Server-Komponententests](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[Gewusst wie: Öffnen eines SQL Server-Komponententests zur Bearbeitung](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
+[Vorgehensweise: Öffnen eines SQL Server-Komponententests zur Bearbeitung](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

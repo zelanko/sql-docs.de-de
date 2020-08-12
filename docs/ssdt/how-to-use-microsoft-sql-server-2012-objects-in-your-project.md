@@ -1,23 +1,23 @@
 ---
 title: Objekte von SQL Server 2012 im Projekt
+description: Machen Sie sich mit SQL Server 2012-Sequenzen vertraut. Hier erfahren Sie, wie Sie diese Objekte zu Datenbankprojekten hinzufügen und in Abfragen verwenden.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 69c68812e169d2831ffde71d2b21f9af8f418600
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 42c9c1cdc852aed9a1ff8bf469cd0534bc992ba2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486791"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895846"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Vorgehensweise: Verwenden von Microsoft SQL Server 2012-Objekten im Projekt
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Gewusst wie: Verwenden von Microsoft SQL Server 2012-Objekten im Projekt
 
 In diesem Beispiel fügen Sie einem Datenbankprojekt, das auf Microsoft SQL Server 2012 zeigt, ein Sequenzobjekt hinzu.  
   
@@ -44,7 +44,7 @@ In Microsoft SQL Server 2012 werden Sequenzen eingeführt. Als Sequenz wird ein 
     CACHE 10  
     ```  
   
-4.  Wenn die Zielplattform des Projekts nicht auf Microsoft SQL Server 2012 festgelegt ist, wird in der **Fehlerliste** ein Syntaxfehler für die `CREATE SEQUENCE`-Anweisung angezeigt. Um dies zu korrigieren, befolgen Sie die Anweisungen zum Ändern der Zielplattform im Thema [Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md).  
+4.  Wenn die Zielplattform des Projekts nicht auf Microsoft SQL Server 2012 festgelegt ist, wird in der **Fehlerliste** ein Syntaxfehler für die `CREATE SEQUENCE`-Anweisung angezeigt. Wenn Sie diesen Fehler beheben möchten, führen Sie die unter [Vorgehensweise: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) beschriebenen Schritte aus, um die Zielplattform entsprechend zu ändern.  
   
 5.  Befolgen Sie die Anweisungen im Thema [Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md), um das Projekt in einer Datenbank in Ihrem verbundenen Microsoft SQL Server 2012-Server zu veröffentlichen.  
   

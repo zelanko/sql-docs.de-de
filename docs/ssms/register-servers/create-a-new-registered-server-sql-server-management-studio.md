@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a62555b9cb6f94b4fd51e304537551d857d2c525
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 836775e914023e4f68c7a4a1225c843c639825d1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246572"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001756"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Erstellen eines neu registrierten Servers (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 In diesem Thema wird beschrieben, wie Sie die Verbindungsinformationen für Server speichern, auf die Sie häufig zugreifen, indem Sie den Server in der Komponente Registrierte Server von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]registrieren. Ein Server kann vor dem Herstellen einer Verbindung oder bei der Verbindungsherstellung über den Objekt-Explorer registriert werden. Es gibt eine spezielle Menüoption zum Registrieren der Serverinstanzen auf dem lokalen Computer.  
   
@@ -56,7 +55,7 @@ In diesem Thema wird beschrieben, wie Sie die Verbindungsinformationen für Serv
      Wenn Sie einen Server über Registrierte Server registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich Registrierte Server angezeigten Servertyp übereinstimmt. Wenn Sie einen anderen Servertyp registrieren möchten, klicken Sie, bevor Sie mit dem Registrieren eines neuen Servers beginnen, auf der Symbolleiste **Registrierte Server**auf **Datenbank-Engine**, **Analysis-Server**, **Reporting Services** oder **Integration Services** .  
   
      **Servername**  
-     Wählen Sie die zu registrierende Serverinstanz in folgendem Format aus: *\<servername>* [\\ *\<instanzname>* ].  
+     Wählen Sie die zu registrierende Serverinstanz in folgendem Format aus: *\<servername>* [\\ *\<instancename>* ].  
   
      **Authentifizierung**  
      Beim Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sind zwei Authentifizierungsmodi verfügbar:  

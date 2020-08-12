@@ -1,21 +1,21 @@
 ---
 title: Erstellen einer Assembly für eine benutzerdefinierte statische Codeanalyseregel für SQL Server
+description: Hier erfahren Sie, wie Sie SQL Server-Codeanalyseregeln erstellen. Richten Sie eine Regel ein, um die WAITFOR DELAY-Anweisung in gespeicherten Prozeduren, Triggern und Funktionen zu vermeiden.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 31d183a212ea18f681724d06834041b0a50f752c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257031"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896243"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Exemplarische Vorgehensweise – Erstellen einer Assembly für eine benutzerdefinierte statische Codeanalyseregel für SQL Server
 
@@ -252,7 +252,7 @@ Im nächsten Schritt fügen Sie eine Ressourcendatei hinzu, die den Regelnamen, 
   
 6. Definieren Sie wie folgt vier Ressourcenzeichenfolgen:  
   
-    |Name|value|  
+    |Name|Wert|  
     |--------|---------|  
     |AvoidWaitForDelay_ProblemDescription|Die WAITFOR DELAY-Anweisung wurde in {0} gefunden.|  
     |AvoidWaitForDelay_RuleName|Vermeiden von „WaitFor Delay“-Anweisungen in gespeicherten Prozeduren, Funktionen und Triggern.|  
@@ -544,7 +544,7 @@ Die neue Regel wird schließlich im SQL Server-Projekt angezeigt. So zeigen Sie 
   
 3. Klicken Sie auf **Codeanalyse**. Jetzt sollte eine neue Kategorie mit dem Namen „RuleSamples.CategorySamples“ angezeigt werden.  
   
-4. Erweitern Sie „RuleSamples.CategorySamples“. Jetzt sollten Sie diese Zeichenfolge sehen „SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions“.  
+4. Erweitern Sie „RuleSamples.CategorySamples“. Folgendes sollte angezeigt werden: „SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions“ (Vermeiden Sie die WAITFOR DELAY-Anweisung in gespeicherten Prozeduren, Triggern und Funktionen).  
   
 ## <a name="see-also"></a>Weitere Informationen
 

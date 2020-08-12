@@ -1,29 +1,29 @@
 ---
-title: Problembehandlung bei Abstürzen von SSMS
+title: Problembehandlung bei einem nicht reagierenden System oder Absturz mit SSMS
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: dnethi
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
+ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: f994a44d6fe0f458ae8f8d8be0351421322e7967
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 98ed3868008808ff18a9847a009108ee41205d12
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243879"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091274"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>Abrufen von Diagnosedaten nach einem SQL Server Management Studio-Absturz (SSMS)
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## <a name="get-full-memory-dump-after-a-hang-or-crash"></a>Abrufen eines vollständigen Speicherabbilds nach Hängen oder Absturz
+## <a name="get-full-memory-dump-after-an-unresponsive-system-or-crash"></a>Abrufen einer vollständigen Speichersicherung bei einem nicht reagierenden System oder Absturz
 
-Abrufen eines vollständigen Speicherabbilds von SQL Server Management Studio (SSMS) nach Hängen oder Absturz.
+Abrufen einer vollständigen Speichersicherung von SQL Server Management Studio (SSMS), wenn der Dienst nicht reagiert oder abstürzt.
 
 Führen Sie die folgenden Schritte aus, um Diagnoseinformationen für die Problembehandlung zu erfassen, nachdem SSMS abgestürzt ist oder nicht mehr reagiert.
 

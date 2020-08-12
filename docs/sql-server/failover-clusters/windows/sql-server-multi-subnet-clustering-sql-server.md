@@ -1,6 +1,6 @@
 ---
 title: SQL Server-Multisubnetzclustering
-description: In diesem Artikel erhalten Sie Informationen zur Konfiguration einer SQL Server-Failoverclusterinstanz in einer Multisubnetzumgebung.
+description: Hier erfahren Sie mehr über das Konfigurieren einer SQL Server-Failoverclusterinstanz in einer Umgebung mit mehreren Subnetzen, die zusätzlich zur Hochverfügbarkeit eine Notfallwiederherstellung bereitstellt.
 ms.custom: seo-lt-2019
 ms.date: 09/01/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e257ead5f858e80095c077643b283645917271be
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 50562836f848834744ceb24365461bc43e8fe949
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258155"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901155"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server-Multisubnetzclustering (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Multisubnetz-Failovercluster ist eine Konfiguration, in der jeder Failoverclusterknoten mit einem anderen Subnetz oder einer anderen Gruppe von Subnetzen verbunden ist. Diese Subnetze können am gleichen Standort oder an geografisch verteilten Standorten sein. Das Clustering von weit verstreuten Standorten wird mitunter auch als Stretched Cluster bezeichnet. Da kein freigegebener Speicher vorhanden ist, auf den alle Knoten zugreifen können, sollten die Daten zwischen den Datenspeichern in den verschiedenen Subnetzen repliziert werden. Infolge der Datenreplikation ist mehr als eine Kopie der Daten verfügbar. Multisubnetz-Failovercluster bieten somit neben Hochverfügbarkeit auch eine Lösung zur Wiederherstellung im Notfall.  
   
    

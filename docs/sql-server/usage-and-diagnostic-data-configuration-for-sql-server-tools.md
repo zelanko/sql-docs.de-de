@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren der Nutzungs- und Diagnosedatensammlung für SQL Server-Tools (CEIP) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, welche Informationen CEIP von Benutzern sammelt, um Produkte zu verbessern. Außerdem erfahren Sie, wie Sie sich für das Programm in SQL Server Data Tools (SSDT) registrieren bzw. davon abmelden.
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 556d60a4c7f2cc8003f6b9a29fa20dad8c5b72ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c93a4023ebcdb9716d7e7790ea97c8df186081f9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68091814"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000424"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Konfigurieren der Nutzungs- und Diagnosedatensammlung für SQL Server-Tools (CEIP)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Erfahren Sie, wie das Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program; CEIP) uns dabei hilft, unsere Software zu verbessern.  Sie können Tools konfigurieren, um Ihr Einverständnis jederzeit zu widerrufen bzw. neu zu erteilen.  
   
@@ -71,7 +72,7 @@ Wert = (DWORD)
 
   
 > [!CAUTION]  
->  Ein fehlerhaftes Bearbeiten der Registrierung kann möglicherweise eine schwerwiegende Beschädigung des Systems zur Folge haben. Bevor Sie Änderungen an der Registrierung vornehmen, sollten Sie wichtige Daten auf dem Computer sichern. Sie können auch die Startoption Letzte als funktionierend bekannte Konfiguration verwenden, wenn nach dem Übernehmen manueller Änderungen Probleme auftreten.  
+>  Durch eine fehlerhafte Bearbeitung der Registrierung können schwerwiegende Schäden am System verursacht werden. Bevor Sie Änderungen an der Registrierung vornehmen, sollten Sie alle wichtigen Computerdaten sichern. Sie können auch die Startoption Letzte als funktionierend bekannte Konfiguration verwenden, wenn nach dem Übernehmen manueller Änderungen Probleme auftreten.  
   
  Weitere Informationen zu den vom CEIP gesammelten, verarbeiteten oder übertragenen Informationen finden Sie in den [Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkID=868444).  
  
@@ -113,7 +114,7 @@ Wert = (DWORD)
 -   1 bedeutet einschalten  
   
 > [!CAUTION]  
->  Ein fehlerhaftes Bearbeiten der Registrierung kann möglicherweise eine schwerwiegende Beschädigung des Systems zur Folge haben. Bevor Sie Änderungen an der Registrierung vornehmen, sollten Sie wichtige Daten auf dem Computer sichern. Sie können auch die Startoption Letzte als funktionierend bekannte Konfiguration verwenden, wenn nach dem Übernehmen manueller Änderungen Probleme auftreten.  
+>  Durch eine fehlerhafte Bearbeitung der Registrierung können schwerwiegende Schäden am System verursacht werden. Bevor Sie Änderungen an der Registrierung vornehmen, sollten Sie alle wichtigen Computerdaten sichern. Sie können auch die Startoption Letzte als funktionierend bekannte Konfiguration verwenden, wenn nach dem Übernehmen manueller Änderungen Probleme auftreten.  
   
  Weitere Informationen zu den vom CEIP gesammelten, verarbeiteten oder übertragenen Informationen finden Sie in den [Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkID=868444).  
   

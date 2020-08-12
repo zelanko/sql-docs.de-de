@@ -1,5 +1,6 @@
 ---
-title: API-Referenz für den SQLSRV-Treiber | Microsoft-Dokumentation
+title: API-Referenz für den SQLSRV-Treiber
+description: Im API-Referenzartikel für den SQLSRV-Treiber für PHP werden verfügbare Funktionen, die dazugehörigen Parameter und die Rückgabewerte beschrieben.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a05b7a39bce6fb263b63bdbfa4644c78175a584c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01dfb59cd433a545efbe7376fd369c897ee4f693
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928237"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381074"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>API-Referenz für den SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

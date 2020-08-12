@@ -1,10 +1,11 @@
 ---
 title: Erstellen von neuen Failoverclustern
+description: In diesem Artikel wird beschrieben, wie Sie mit dem Setupprogramm einen SQL Server-Failovercluster installieren oder aktualisieren oder einem vorhandenen Cluster einen Knoten hinzufügen.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7d66a12e545374196a2fa6a8833bcbf159c1c9c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8425df35905f08b49750a2d265a260438bbbf2ef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230475"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897722"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Erstellen eines neuen SQL Server-Failoverclusters (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Zum Installieren oder Aktualisieren eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusters müssen Sie das Setupprogramm für jeden einzelnen Knoten des Failoverclusters ausführen. Zum Hinzufügen eines Knotens zu einem vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup für den Knoten ausführen, der der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz hinzugefügt werden soll. Führen Sie zum Verwalten der anderen Knoten Setup nicht für den aktiven Knoten aus.  
   
  Je nachdem, wie die Knoten gruppiert werden, wird der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster wie folgt konfiguriert:  

@@ -2,21 +2,21 @@
 title: Aktualisieren von Python- und R-Komponenten
 description: Führen Sie mit sqlbindr.exe ein Upgrade von Python- und R-Komponenten in SQL Server Machine Learning Services oder SQL Server R Services aus, um diese an Machine Learning Server zu binden.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 4aebb9e64c73762166aa81aebd1bfbab22191bfc
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 918ab8c2b1e643196e99cd11ff92c07c3978e078
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487367"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900071"
 ---
 # <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>Upgrade von Machine Learning-Komponenten (Python und R) in SQL Server-Instanzen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Die Integration von Python und R in SQL Server umfasst Open-Source- und proprietäre Microsoft-Pakete.
                                                                                
@@ -263,9 +263,9 @@ Möglicherweise haben Sie der Paketbibliothek andere Open-Source- oder Drittanbi
 
 |Name|BESCHREIBUNG|
 |------|------|
-|*list*| Zeigt eine Liste aller SQL-Datenbankinstanz-IDs auf dem aktuellen Computer an|
-|*bind*| Aktualisiert die angegebene SQL-Datenbankinstanz auf die neueste Version von R Server und stellt sicher, dass die Instanz automatisch künftige Upgrades von R Server erhält|
-|*unbind*|Die neueste Version von R Server wird auf der angegebenen SQL-Datenbankinstanz deinstalliert, und es wird verhindert, dass künftige R Server-Upgrades auf die Instanz angewendet werden|
+|*list*| Zeigt eine Liste aller IDs von SQL Server-Instanzen auf dem aktuellen Computer an|
+|*bind*| Aktualisiert die angegebene SQL Server-Instanz auf die neueste Version von R Server und stellt sicher, dass die Instanz automatisch künftige Upgrades von R Server erhält|
+|*unbind*|Deinstalliert die neueste Version von R Server auf der angegebenen SQL Server-Instanz und verhindert, dass sich künftige R Server-Upgrades auf die Instanz auswirken|
 
 <a name="sqlbindr-error-codes"><a/>
 

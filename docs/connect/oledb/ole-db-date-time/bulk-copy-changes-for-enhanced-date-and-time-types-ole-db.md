@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 417bf44993ffc850da03d090e36c29cae472c104
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 89a19fa639c7ae20aad776bdcd196dea0f0c8700
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015833"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004536"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "68015833"
 ## <a name="format-files"></a>Formatdateien  
  Beim interaktiven Erstellen von Formatdateien beschreibt die folgende Tabelle die Eingaben, die zum Angeben von Datum-/Uhrzeittypen verwendet werden, sowie die entsprechenden Datentypnamen der Hostdatei.  
   
-|Dateispeichertyp|Datentyp in der Hostdatei|Antwort auf die Eingabeaufforderung: „Geben Sie den Dateispeichertyp des Felds <Feldname> ein [\<Standard>]:“|  
+|Dateispeichertyp|Datentyp in der Hostdatei|Antwort auf die Eingabeaufforderung: „Geben Sie den Dateispeichertyp des Felds <Feldname> ein [\<default>]:“|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  

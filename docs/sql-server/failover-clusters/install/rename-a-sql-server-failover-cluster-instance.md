@@ -1,10 +1,11 @@
 ---
 title: Umbenennen einer Failoverclusterinstanz
+description: In diesem Artikel wird beschrieben, wie Sie eine SQL Server-Instanz umbenennen, die Teil eines Failoverclusters ist. Dieser Vorgang weicht vom Umbenennen einer eigenständigen Instanz ab.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca8faa59c304f145eb2ac1dc46bab46d368d163b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230718"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897655"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Umbenennen einer SQL Server-Failoverclusterinstanz
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz Teil eines Failoverclusters ist, unterscheidet sich der Vorgang des Umbenennens des virtuellen Servers vom Umbenennen einer eigenständigen Instanz. Weitere Informationen finden Sie unter [Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
   
  Der Name des virtuellen Servers ist immer mit dem SQL-Netzwerknamen (dem Netzwerknamen des virtuellen Servers mit SQL Server) identisch. Sie können zwar den Namen des virtuellen Servers ändern, nicht jedoch den Instanznamen. Sie können z. B. einen virtuellen Server namens VS1\instance1 in einen anderen Namen ändern, z. B. in SQL35\instance1, der Instanzanteil des Namens, instance1, bleibt jedoch unverändert.  
@@ -63,7 +64,7 @@ ms.locfileid: "75230718"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Weitere Überlegungen nach dem Umbenennungsvorgang  
  Nachdem der Netzwerkname des Failoverclusters geändert wurde, müssen die folgenden Anweisungen überprüft und ausgeführt werden, damit alle Szenarien in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]funktionieren.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Service:** Überprüfen Sie die unten genannten zusätzlichen Aktionen für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Service, und führen Sie sie aus:  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Dienst:** Überprüfen Sie die unten genannten zusätzlichen Aktionen für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Dienst, und führen Sie diese aus:  
   
 -   Korrigieren Sie die Registrierungseinstellungen, wenn SQL Agent für die Ereignisweiterleitung konfiguriert ist. Weitere Informationen finden Sie unter [Bestimmen eines Ereignisweiterleitungsservers &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   

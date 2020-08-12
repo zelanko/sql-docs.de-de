@@ -1,24 +1,24 @@
 ---
 title: Herunterladen von SQL Server Data Tools (SSDT)
+description: Informationen zu SQL Server Data Tools (SSDT) Hier erfahren Sie, wie Sie diese Tools zur Datenbankbereitstellung mit Visual Studio 2019 und Visual Studio 2017 installieren.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
 ms.topic: conceptual
 keywords: SSDT installieren, SSDT herunterladen, aktuelle SSDT-Version
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
-author: markingmyname
-ms.author: maghan
-manager: jroth
-ms.reviewer: ''
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: ca30249097fa9ad4eec386ca0fc0698976e5362a
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: dbaaa71b61129d0bb1917644c017122e6ed88bf4
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809586"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279000"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Herunterladen von SQL Server Data Tools (SSDT) für Visual Studio 2015
 
@@ -39,19 +39,19 @@ In Visual Studio 2019 wurde die erforderliche Funktionalität zur Unterstützung
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Installieren von SSDT mit Visual Studio 2019
 
-Wenn Visual Studio 2019 bereits installiert ist, können Sie [die Liste der Workloads bearbeiten](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019), um SSDT einzuschließen.
+Wenn Visual Studio 2019 bereits installiert ist, können Sie [die Liste der Workloads bearbeiten](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019), um SSDT einzuschließen. Falls Sie Visual Studio 2019 nicht installiert haben, können Sie [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/) herunterladen und installieren.
 
-* Klicken Sie für SQL-Datenbank-Projekte unter **Datenspeicherung und -verarbeitung** auf **SQL Server Data Tools**.
+* Klicken Sie für SQL-Datenbank-Projekte in der Workloadliste unter **Datenspeicherung und -verarbeitung** auf **SQL Server Data Tools**.
 
    ![Workload „Datenspeicherung und -verarbeitung“](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
 
 * Für Analysis Services-, Integration Services- oder Reporting Services-Projekte können Sie die entsprechenden [Erweiterungen](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) über *Extras > Erweiterungen und Updates* oder über den [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance) installieren.
 
-Falls Sie Visual Studio 2019 nicht installiert haben, können Sie [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/) herunterladen und installieren. 
+* [Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)
 
-* Klicken Sie für SQL-Datenbank-Projekte während der Installation in der Workloadliste unter **Datenspeicherung und -verarbeitung** auf **SQL Server Data Tools**.
+* [Integrationsdienste](https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects)
 
-* Für Analysis Services-, Integration Services- oder Reporting Services-Projekte können Sie die entsprechenden [Erweiterungen](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) über *Extras > Erweiterungen und Updates* oder über den [Marketplace](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance) installieren.
+* [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 ## <a name="ssdt-for-visual-studio-2017"></a>SSDT für Visual Studio 2017
 
@@ -79,10 +79,10 @@ Der Installer listet verfügbare Visual Studio-Instanzen auf, denen die SSDT-Too
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT für VS 2017 (eigenständiger Installer)
 
-[![Download](../ssdt/media/download.png) SSDT für Visual Studio 2017 (15.9.4) herunterladen](https://go.microsoft.com/fwlink/?linkid=2124518 )
+:::image type="icon" source="media/download.png" border="false"::: **[SSDT für Visual Studio 2017 (15.9.5) herunterladen](https://go.microsoft.com/fwlink/?linkid=2131035)**
 
 > [!IMPORTANT]
-> * Deinstallieren Sie vor der Installation von SSDT für Visual Studio 2017 (15.9.4) die Erweiterungen für *Analysis Services-Projekte* und *Reporting Services-Projekte*, wenn diese bereits installiert wurden, und schließen Sie alle VS-Instanzen.
+> * Deinstallieren Sie vor der Installation von SSDT für Visual Studio 2017 (15.9.5) die Erweiterungen für *Analysis Services-* und *Reporting Services-Projekte*, wenn diese bereits installiert wurden, und schließen Sie alle VS-Instanzen. 
 > * Die Power Query-Quelle für SQL Server 2017 wurde in ihrer bisherigen Form als bereits enthaltene Komponente entfernt. Wir haben die Power Query-Quelle für SQL Server 2017 und 2019 nun als separate Komponente angekündigt, die [hier](https://www.microsoft.com/download/details.aspx?id=100619) heruntergeladen werden kann.
 > * Um Pakete mit Oracle- und Teradata-Connectors zu entwerfen, die auf eine frühere Version von SQL Server vor SQL Server 2019 abzielen, müssen Sie zusätzlich zum [Microsoft Oracle-Connector für SQL Server 2019](https://www.microsoft.com/download/details.aspx?id=58228) und [Microsoft Teradata-Connector für SQL Server 2019](https://www.microsoft.com/download/details.aspx?id=100599) auch die entsprechende Version des Microsoft-Connectors für Oracle und Teradata von Attunity installieren.
 >    * [Microsoft Connector-Version 5.0 für Oracle von Attunity für SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -102,17 +102,17 @@ SSDT für Visual Studio 2017 hat die gleichen [Systemanforderungen](https://docs
 
 Diese Version von **SSDT für Visual Studio 2017** kann in folgenden Sprachen installiert werden:
 
-* [Chinesisch (vereinfacht)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x804)
-* [Chinesisch (traditionell)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x404)
-* [Englisch (USA)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x409)
-* [Französisch]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40c)
-* [Deutsch]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x407)
-* [Italienisch]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x410)
-* [Japanisch]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x411)
-* [Koreanisch]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x412)
-* [Portugiesisch (Brasilien)]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x416)
-* [Russisch]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x419)
-* [Spanisch]( https://go.microsoft.com/fwlink/?linkid=2124518&clcid=0x40a)
+* [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
+* [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
+* [Englisch (USA)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
+* [Französisch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
+* [Deutsch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
+* [Italienisch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
+* [Japanisch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
+* [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
+* [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
+* [Russisch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
+* [Spanisch](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>Überlegungen und Einschränkungen
 
@@ -139,7 +139,7 @@ Nach Abschluss der vorherigen Schritte sind folgende Schritte **offline** mögli
 1. Führen Sie `vs_setup.exe --NoWeb` aus, um die Visual Studio 2017-Shell sowie das SQL Server-Datenprojekt zu installieren.
 
 2. Führen Sie `SSDT-Setup-ENU.exe /install` über dem Layoutordner aus, und wählen Sie SSIS/SSRS/SSAS aus.
-   * Führen Sie alternativ für eine unbeaufsichtigte Installation `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive` aus.
+   a. Führen Sie alternativ für eine unbeaufsichtigte Installation `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive` aus.
 
 Führen Sie für verfügbare Optionen `SSDT-Setup-ENU.exe /help` aus.
 
@@ -162,6 +162,16 @@ SSDT für Visual Studio 2015 und Visual Studio 2017 verwendet DacFx 17.4.1: [Do
 
 In den [vorherigen Releases von SQL Server Data Tools (SSDT und SSDT-BI)](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md) können Sie SSDT für Visual Studio 2015 oder eine frühere Version von SSDT herunterladen und installieren.
 
+## <a name="see-also"></a>Weitere Informationen
+
+* [SSDT MSDN-Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
+
+* [SSDT-Team-Blog](https://blogs.msdn.com/b/ssdt/)
+
+* [DACFx-API-Referenz](https://msdn.microsoft.com/library/dn645454.aspx)
+
+* [Herunterladen von SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+
 ## <a name="next-steps"></a>Nächste Schritte
 
 Gehen Sie nach der Installation von SSDT die folgenden Tutorials durch, um zu erfahren, wie Sie mithilfe von SSDT Datenbanken, Pakete, Datenmodelle und Berichte erstellen.
@@ -175,13 +185,3 @@ Gehen Sie nach der Installation von SSDT die folgenden Tutorials durch, um zu er
 * [Erstellen eines einfachen Tabellenberichts (SSRS-Lernprogramm)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
-## <a name="see-also"></a>Weitere Informationen
-
-* [SSDT MSDN-Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
-
-* [SSDT-Team-Blog](https://blogs.msdn.com/b/ssdt/)
-
-* [DACFx-API-Referenz](https://msdn.microsoft.com/library/dn645454.aspx)
-
-* [Herunterladen von SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

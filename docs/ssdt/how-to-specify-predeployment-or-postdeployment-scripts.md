@@ -1,21 +1,21 @@
 ---
 title: Angeben von Skripts vor oder nach der Bereitstellung
+description: Hier erfahren Sie, wie Sie Skripts vor und nach der Bereitstellung verwenden, um Transact-SQL-Anweisungen vor und nach der Ausführung des Hauptbereitstellungsskripts auszuführen.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 56b69a6b84aa3c529c02690f7e6554e76e46b079
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbf8067047edf1c3b9b6a837ed12d49cb5d95df1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244266"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901119"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Gewusst wie: Festlegen von Skripts vor und nach der Bereitstellung
 

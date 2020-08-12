@@ -1,5 +1,6 @@
 ---
 title: Anzeigen von Datenunterschieden
+description: In diesem Artikel erfahren Sie, wie Sie zwei Datenbanken vergleichen und sich dann ansehen, inwiefern sich die Datenbankobjekte unterscheiden. Außerdem erfahren Sie, wie Sie Datensätze innerhalb von Objekten anzeigen und wie Sie die Ansicht filtern.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5c9e80f6289ff3313a3eeb7cec0601fb2c651aa2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 750909ea5344d5972ffdc8a2db418d8c482231f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226752"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895765"
 ---
 # <a name="how-to-view-data-differences"></a>Gewusst wie: Anzeigen von Datenunterschieden
 
@@ -36,5 +36,5 @@ Nachdem Sie sich die Unterschiede angesehen haben, können Sie einige oder alle 
     -   Wenn Sie Ergebnisse für Datensätze innerhalb eines bestimmten Objekts anzeigen möchten, klicken Sie im Hauptergebnisbereich auf das gewünschte Objekt, und klicken Sie anschließend im Bereich mit der Datensatzansicht auf eine Registerkarte. Jede Registerkarte zeigt sämtliche Datensätze innerhalb des Objekts, die einen bestimmten Status besitzen: Unterschiedliche Datensätze, Nur in der Quelle, Nur im Ziel oder Identische Datensätze. Die Daten sind nach Datensatz und Spalte sortiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

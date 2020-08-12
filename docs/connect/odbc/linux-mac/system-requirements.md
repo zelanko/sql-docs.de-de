@@ -1,5 +1,6 @@
 ---
-title: Systemanforderungen (ODBC-Treiber für SQL Server) | Microsoft-Dokumentation
+title: Systemanforderungen (ODBC-Treiber für SQL Server)
+description: In diesem Artikel werden die Systemanforderungen für den ODBC-Treiber für SQL Server für Linux und macOS-Betriebssysteme aufgeführt.
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2459a9f57f3591db1107994d0b18770690f22724
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01a5dd44d111fd72d76db244c8135d3bdde00ec8
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921180"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391755"
 ---
-# <a name="system-requirements"></a>Systemanforderungen
+# <a name="system-requirements-linux-and-macos"></a>Systemanforderungen (Linux und macOS)
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -33,7 +34,7 @@ Die Kompatibilität der Treiber unter Linux und macOS mit der SQL-Version ist id
 
 ## <a name="operating-system-support"></a>Betriebssystemunterstützung
 
-Die Versionen 17, 13.1 und 13 der Linux- und macOS-Treiber werden nur für die 64 Bit-Versionen der folgenden Betriebssysteme unterstützt:
+Die Versionen 17, 13.1 und 13 der Linux- und macOS-Treiber werden für die x64-Architektur der folgenden Betriebssysteme unterstützt:
 
 |Unterstützte Betriebssysteme     |17,5|17.4|17.3|17.2|17.1|17.0|Version 13.1|13|
 |-------------------------------|----|----|----|----|----|----|----|--|
@@ -66,7 +67,7 @@ Die Installationspakete für die [!INCLUDE[msCoName](../../../includes/msconame_
   
 * 64-Bit UnixODBC 2.3.0 Treiber-Manager, der für 64-Bit SQLLEN/SQLULEN erstellt wurde. Höhere Versionen des 64-Bit UnixODBC-Treiber-Managers werden nicht vom ODBC-Treiber unter Linux unterstützt. Weitere Informationen finden Sie unter [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) .  
   
-* Der ODBC-Treiber für **Red Hat Enterprise Linux 5 (64 Bit)** erfordert die folgenden Pakete und kann hier heruntergeladen werden: [Microsoft ODBC Driver 11 for SQL Server unter Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
+* Der ODBC-Treiber für **Red Hat Enterprise Linux 5 (64-Bit)** erfordert die folgenden Pakete und kann hier heruntergeladen werden: [Microsoft ODBC Driver 11 for SQL Server – Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321).  
   * `glibc`  
   * `libgcc`  
   * `libstdc++`  
@@ -74,7 +75,7 @@ Die Installationspakete für die [!INCLUDE[msCoName](../../../includes/msconame_
   * `krb5-libs`  
   * `openssl`  
   
-* Der ODBC-Treiber für **Red Hat Enterprise Linux 6 (64 Bit)** erfordert die folgenden Pakete und kann hier heruntergeladen werden: [Microsoft ODBC Driver 11 for SQL Server unter Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
+* Der ODBC-Treiber für **Red Hat Enterprise Linux 6 (64-Bit)** erfordert die folgenden Pakete und kann hier heruntergeladen werden: [Microsoft ODBC Driver 11 for SQL Server – Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321).  
   * `glibc`  
   * `libgcc`  
   * `libstdc++`  
@@ -82,7 +83,7 @@ Die Installationspakete für die [!INCLUDE[msCoName](../../../includes/msconame_
   * `krb5-libs`  
   * `openssl`  
   
-* Der ODBC-Treiber für **SUSE Linux Enterprise 11 Service Pack 2 (64 Bit)** erfordert die folgenden Pakete und kann hier heruntergeladen werden: [Microsoft ODBC Driver 11 Preview for SQL Server unter SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
+* Der ODBC-Treiber für **SUSE Linux Enterprise 11 Service Pack 2 (64-Bit)** erfordert die folgenden Pakete und kann hier heruntergeladen werden: [Microsoft ODBC Driver 11 Preview for SQL Server – SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916).  
   * `glibc`  
   * `libstdc++46`  
   * `libgcc46`  

@@ -1,23 +1,24 @@
 ---
 title: Installieren einer Failoverclusterinstanz
+description: In diesem Artikel erfahren Sie, wie Sie ein Failovercluster in SQL Server installieren. Außerdem erstellen und konfigurieren Sie eine Failoverclusterinstanz, indem das SQL Server-Setup ausgeführt wird.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 574f8f557eab10fa43be721f9b73bfc446b04687
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230620"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897663"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server-Failoverclusterinstallation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Zum Installieren eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusters müssen Sie eine Failoverclusterinstanz erstellen und konfigurieren, indem Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup ausführen.  
   
 ## <a name="installing-a-failover-cluster"></a>Installieren eines Failoverclusters  
@@ -39,7 +40,7 @@ ms.locfileid: "75230620"
   
     -   Alle Knoten in einem Failovercluster müssen auf der gleichen Plattform, entweder 32-Bit oder 64-Bit, und unter der gleichen Betriebssystemversion ausgeführt werden. Darüber hinaus müssen 64-Bit-Editionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf 64-Bit-Hardware installiert sein, auf der die 64-Bit-Versionen der Windows-Betriebssysteme ausgeführt werden. Es gibt keine WOW64-Unterstützung für das Failoverclustering in dieser Version.  
   
-3.  Geben Sie für jede Failoverclusterinstanz mehrere IP-Adressen an. Sie können mehrere IP-Adressen für jedes Subnetz angeben. Wenn sich die IP-Adressen im gleichen Subnetz befinden, wird die Abhängigkeit vom Setup für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf AND festgelegt. Wenn Sie Knoten für mehrere Subnetze gruppieren, wird die Abhängigkeit vom Setup für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf OR festgelegt.  
+3.  Geben Sie für jede Failoverclusterinstanz mehrere IP-Adressen an. Sie können mehrere IP-Adressen für jedes Subnetz angeben. Wenn sich die IP-Adressen im gleichen Subnetz befinden, wird die Abhängigkeit vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Setup auf AND festgelegt. Wenn Sie Knoten für mehrere Subnetze gruppieren, wird die Abhängigkeit vom Setup für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf OR festgelegt.  
 
 4.  Die SQL Server-Failoverclusterinstanz (FCI) erfordert, dass die Clusterknoten einer Domäne beigetreten sind. Die folgenden Konfigurationen werden **nicht unterstützt**:
     - SQL-FCI in Arbeitsgruppenclustern. 

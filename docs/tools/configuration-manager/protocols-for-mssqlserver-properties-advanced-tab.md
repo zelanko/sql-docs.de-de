@@ -1,5 +1,6 @@
 ---
 title: Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte "Erweitert")
+description: Hier erfahren Sie mehr über die Vorteile und Anforderungen des Features „Erweiterter Schutz für die Authentifizierung“ für die SQL Server-Datenbank-Engine. Dabei wird gezeigt, wie Sie dieses aktivieren und konfigurieren.
 ms.custom: seo-lt-2019
 ms.date: 01/24/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b8f767a5ae8bfe691ec5cb8e4128679a6e02ec8b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ccf8f2a6c80dbaf13c6e47ca835c7dc3c3e0d4d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306385"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897061"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte "Erweitert")
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Mit der Registerkarte **Erweitert** im Dialogfeld **Protokolle für MSSQLSERVER-Eigenschaften** können Sie das Feature **Erweiterter Schutz für die Authentifizierung** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] konfigurieren. **Erweiterter Schutz** ist eine Funktion der vom Betriebssystem implementierten Netzwerkkomponenten. **Erweiterter Schutz** ist in Windows 7 und Windows Server 2008 R2 verfügbar und in Service Packs für ältere Betriebssysteme enthalten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist sicherer, wenn Verbindungen möglichst mithilfe des **erweiterten Schutzes**hergestellt werden. Einige Funktionen von **Erweiterter Schutz** setzen die Auswahl von **Verschlüsselung erzwingen** auf der Registerkarte **Flags** voraus.
 
