@@ -1,5 +1,6 @@
 ---
 title: Vergleichen und Synchronisieren von Daten aus zwei Datenbanken
+description: In diesem Artikel wird erläutert, wie Sie die Daten aus zwei verschiedenen Datenbanken vergleichen und synchronisieren. Zudem erfahren Sie, wie Sie den Vergleich einrichten, die Unterschiede anzeigen und das Ziel aktualisieren.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +11,17 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 19a1854a939f776f8eb75d9adf9d6d43856f920b
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241584"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519040"
 ---
-# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Vorgehensweise: Vergleichen und Synchronisieren der Daten von zwei Datenbanken
+# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Gewusst wie: Vergleichen und Synchronisieren von Daten aus zwei Datenbanken
 
 Sie können die Daten aus zwei Datenbanken vergleichen. Die zu vergleichenden Datenbanken werden als *Quelle* und *Ziel* bezeichnet.  
   
@@ -39,7 +39,7 @@ Nach Abschluss des Vergleichs haben Sie folgende Möglichkeiten:
 Weitere Informationen finden Sie unter [Vergleichen und Synchronisieren von Daten in einer oder mehreren Tabellen anhand von Daten aus einer Verweisdatenbank](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 > [!NOTE]  
-> Sie können auch das *Schema* von zwei Datenbanken oder von zwei Versionen der gleichen Datenbank vergleichen. Weitere Informationen finden Sie unter [Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
+> Sie können auch das *Schema* von zwei Datenbanken oder von zwei Versionen der gleichen Datenbank vergleichen. Weitere Informationen finden Sie unter [Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
 ## <a name="comparing-database-data"></a><a name="CompareDatabaseData"></a>Vergleichen von Datenbankdaten  
   

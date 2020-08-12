@@ -1,5 +1,6 @@
 ---
 title: Erstellen einer Momentaufnahme eines Projekts
+description: In diesem Artikel erhalten Sie Informationen zu Datenebenenanwendungsdateien oder Momentaufnahmen sowie zu ihrer Verwendung. Sie erfahren außerdem, wie Sie Momentaufnahmen erstellen oder importieren und wie Sie sie vergleichen.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 40111c8807c0a0aa6162e8ad6a03d796406d5c1d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c381b920a527ab2320f6e83d6dbc057b675a4754
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241529"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518840"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>Gewusst wie: Erstellen einer Momentaufnahme eines Projekts
 
@@ -65,5 +65,5 @@ Bei einem Benutzerfehler in einem Quellendatenbankprojekt können Sie das Quellp
     Sie können die Unterschiede zu anderen Momentaufnahmen auf einfache Weise mit dem Schemavergleich auffinden. So können Sie den Fortschritt des Projekts während des Entwicklungsprozesses bestimmen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

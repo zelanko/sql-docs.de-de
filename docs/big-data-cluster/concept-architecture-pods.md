@@ -9,16 +9,16 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0cf0d79e08025d52b248175485ba2e3272e18dcb
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ad3cc263ea81b9e3bda5cb34ea27cfabba1ae716
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730709"
 ---
 # <a name="resources-deployed-with-big-data-cluster"></a>Mit dem Big Data-Cluster bereitgestellte Ressourcen
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In diesem Artikel werden die Ressourcen beschrieben, die von einem Big Data-Cluster für SQL Server bereitgestellt werden.
 
@@ -30,7 +30,7 @@ In diesem Artikel werden die Pods beschrieben, die mit dem Profil `aks-dev-test-
 kubectl get pods -n <namespace>
 ```
 
-Ersetzen Sie `<namespace>` durch den Kubernetes-Namespace Ihres Big Data-Clusters. 
+Ersetzen Sie `<namespace>` durch den Namen des Big Data-Clusters. 
 
 Weitere Informationen finden Sie unter [Vorgehensweise: Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] auf Kubernetes](deployment-guidance.md#configfile).
 

@@ -5,20 +5,20 @@ description: Erfahren Sie, wie Sie eine Big-Data-Clusterbereitstellung mit Konfi
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd9624ed1b3d6b164168d162ee68f1773b7a55ac
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: ad43f370db096450a88bf1ffe3dd742c86be3206
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550197"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728022"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Konfigurieren von Bereitstellungseinstellungen für Clusterressourcen und -dienste
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Ausgehend von einer Gruppe von vordefinierten und im Verwaltungstool `azdata` integrierten Konfigurationsprofilen können Sie die Standardeinstellungen ganz einfach an die Anforderungen Ihrer BDC-Workload anpassen. Die Struktur der Konfigurationsdateien ermöglicht es Ihnen, die Einstellungen für die jeweiligen Dienstressourcen einzeln zu aktualisieren.
 
@@ -665,6 +665,16 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 > [!IMPORTANT]
 > Es wird empfohlen, die Einstellung `max_map_count` auf allen Hosts im Kubernetes-Cluster gemäß den Anweisungen in [diesem Artikel ](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html) manuell zu aktualisieren.
+
+## <a name="turn-pods-and-nodes-metrics-colelction-onoff"></a>Aktivieren/Deaktivieren von Pod- und Knotenmetriken
+
+SQL Server 2019 CU5 hat zwei Funktionsparameter eingeführt, um die Sammlung von Pod- und Knotenmetriken zu steuern. Wenn Sie Ihre Kubernetes-Infrastruktur mithilfe anderer Lösungen überwachen, können Sie die integrierte Metriksammlung für Pods und Hostknoten deaktivieren, indem Sie *allowNodeMetricsCollection* und *allowPodMetricsCollection* in der Bereitstellungskonfigurationsdatei *control.json* auf *False* festlegen. Bei OpenShift-Umgebungen werden diese Einstellungen in den integrierten Bereitstellungsprofilen standardmäßig auf *False* festgelegt, da für das Sammeln von Pod- und Knotenmetriken von Berechtigungen abhängige Funktionen erforderlich sind.
+Führen Sie diesen Befehl aus, um die Werte dieser Einstellungen in Ihrer benutzerdefinierten Konfigurationsdatei mithilfe der *azdata*-CLI zu aktualisieren:
+
+```bash
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"
+ azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowPodMetricsCollection=false"
+ ```
 
 ## <a name="next-steps"></a>Nächste Schritte
 

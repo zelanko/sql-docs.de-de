@@ -1,5 +1,6 @@
 ---
 title: Formatieren von Linien, Farben und Bildern (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie Linien, Farben, Datenbereiche und Bilder im Berichts-Generator verwenden. Zudem lernen Sie, wie Sie Elemente visuell verknüpfen, um die Lesbarkeit im Berichts-Generator zu erhöhen.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8567c1f331c17cd0875c2d4f1b94423b3c3ce347
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc3cacd9321b65dc652fa7323553b445949501fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079858"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048255"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Formatieren von Linien, Farben und Bildern (Berichts-Generator und SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können Sie Linien, Farben, Datenbereiche, Bilder und andere Berichtselemente formatieren.  

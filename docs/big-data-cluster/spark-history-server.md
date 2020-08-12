@@ -6,20 +6,20 @@ author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728031"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Debuggen und Diagnostizieren von Spark-Anwendungen in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Spark History Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Dieser Artikel enthält Anleitungen zur Verwendung der erweiterten Version von Spark History Server zum Debuggen und Diagnostizieren von Spark-Anwendungen in Big-Data-Clustern für SQL Server. Diese Debug- und Diagnosefunktionen sind in den Spark History Server integriert und werden von Microsoft unterstützt. Die Erweiterung umfasst die Registerkarten „Data“ (Daten), „Graph“ (Diagramm) und „Diagnosis“ (Diagnose). Auf der Registerkarte „Data“ (Daten) können Benutzer die Eingabe- und Ausgabedaten des Spark-Auftrags überprüfen. Auf der Registerkarte „Graph“ (Diagramm) können Benutzer den Datenfluss überprüfen und das Auftragsdiagramm wiedergeben. Auf der Registerkarte „Diagnosis“ (Diagnose) findet der Benutzer Informationen zur Datenschiefe, Zeitabweichung und eine Analyse zur Executorauslastung.
 
@@ -28,7 +28,7 @@ Dieser Artikel enthält Anleitungen zur Verwendung der erweiterten Version von S
 Die Benutzeroberfläche der Open-Source-Version von Spark History Server wird mit Informationen wie auftragsspezifischen Daten und einer interaktiven Visualisierung des Auftragsdiagramms und von Datenflüssen für Big-Data-Cluster erweitert. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Öffnen der Webbenutzeroberfläche von Spark History Server über eine URL
-Öffnen Sie Spark History Server, indem Sie die folgende URL aufrufen. Ersetzen Sie dabei `<Ipaddress>` und `<Port>` durch genaue Informationen zu den Big-Data-Clustern. Beachten Sie, dass Sie bei der Einrichtung eines Big Data-Clusters in einer Standardauthentifizierung (Benutzername/Kennwort) bestätigen müssen, dass Sie **Root-Benutzer** sind, wenn Sie bei der Anmeldung bei Gatewayendpunkten (Knox) dazu aufgefordert werden. Weitere Informationen finden Sie im folgenden Artikel: [Bereitstellen von Big-Data-Clustern für SQL Server](quickstart-big-data-cluster-deploy.md)
+Öffnen Sie Spark History Server, indem Sie die folgende URL aufrufen. Ersetzen Sie dabei `<Ipaddress>` und `<Port>` durch genaue Informationen zu den Big-Data-Clustern. Bei Clustern, die vor SQL Server 2019 CU 5 mit Einrichtung eines Big Data-Clusters in einer Standardauthentifizierung (Benutzername/Kennwort) bereitgestellt wurden, müssen Sie **root**-Benutzerangaben machen, wenn Sie bei der Anmeldung bei Gatewayendpunkten (Knox) dazu aufgefordert werden. Weitere Informationen finden Sie unter [Verwenden eines Python-Skripts zum Bereitstellen eines Big-Data-Clusters für SQL Server in Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md) [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -193,7 +193,13 @@ Im Diagramm zur Executorauslastung wird die tatsächliche Executorzuweisung und 
 + Klicken Sie auf das Farbsymbol, um den entsprechenden Inhalt in allen Entwürfen auszuwählen oder zu deaktivieren.
 
     ![Diagramm auswählen](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    
+## <a name="spark--yarn-logs"></a>Spark-/Yarn-Protokolle
+Die Protokolle für Spark und Yarn finden Sie neben dem Spark History Server auch hier:
+* Spark-Ereignisprotokolle: hdfs:///system/spark-events
+* Yarn-Protokolle: hdfs:///tmp/logs/root/logs-tfile
 
+Hinweis: Für beide Protokolle gilt ein Standardaufbewahrungszeitraum von 7 Tagen. Informationen zum Ändern des Aufbewahrungszeitraums finden Sie auf der Seite [Konfigurieren von Apache Spark und Apache Hadoop in Big Data-Clustern](configure-spark-hdfs.md). Der Speicherort **kann nicht** geändert werden.
 
 ## <a name="known-issues"></a>Bekannte Probleme
 Folgende Probleme sind für Spark History Server bekannt:

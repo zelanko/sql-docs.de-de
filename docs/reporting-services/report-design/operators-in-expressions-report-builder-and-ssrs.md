@@ -1,5 +1,6 @@
 ---
 title: Operatoren in Ausdrücken (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, welche Operatorkategorien in einem Ausdruck unterstützt werden, um Aktionen darzustellen, die auf Benennungen in einem Ausdruck im Berichts-Generator angewendet werden.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0cf32f32a375f998522ff689663ec0296a0b5be4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 276e6e9f1ad326b0b3930d729fe233f2e4cbb7c6
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082587"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255624"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operatoren in Ausdrücken (Berichts-Generator und SSRS)
   Ein Operator ist ein Symbol, das Aktionen darstellt, die auf einen oder mehrere Begriffe in einem Ausdruck angewendet werden. Die folgenden Operatorkategorien werden in einem Ausdruck unterstützt: Arithmetik, Vergleich, Verkettung, logisch oder bitweise und Bitverschiebung  

@@ -1,6 +1,6 @@
 ---
 title: Paginierung in Berichten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-description: „Paginierung“ bezieht sich auf die Anzahl der Seiten in einem paginierten Bericht und auf die Anordnung von Berichtselementen auf diesen Seiten. Die Paginierung in Reporting Services ändert sich abhängig von der Renderingerweiterung, die Sie zum Anzeigen und Übermitteln des Berichts verwenden.
+description: In diesem Artikel erhalten Sie Informationen zur Anzahl der Seiten in einem paginierten Bericht und dazu, wie Berichtselemente auf diesen Seiten im Berichts-Generator angeordnet sind.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2c3ce298553ebe5103cc8639a3a86e14977725ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b308503f2aafb1fcbfd88b3e7509906cafad8a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006157"
 ---
 # <a name="pagination-in-reports-report-builder--and-ssrs"></a>Paginierung in Berichten (Berichts-Generator und SSRS)
   „Paginierung“ bezieht sich auf die Anzahl der Seiten in einem paginierten Bericht und auf die Anordnung von Berichtselementen auf diesen Seiten. Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ändert sich abhängig von der Renderingerweiterung, die Sie zum Anzeigen und Übermitteln des Berichts verwenden. Wenn Sie einen Bericht auf dem Berichtsserver erstellen, verwendet der Bericht den HTML-Renderer. Für HTML gilt ein bestimmter Satz von Paginierungsregeln. Wenn Sie den gleichen Bericht nach PDF exportieren, wird beispielsweise der PDF-Renderer verwendet, und es findet ein anderer Satz von Regeln Anwendung. Daher wird der Bericht unterschiedlich paginiert. Um einen übersichtlichen Bericht für Ihre Benutzer zu entwerfen, der für den Renderer, mit dem Sie den Bericht übermitteln möchten, optimiert ist, müssen Sie die Regeln zur Steuerung der Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kennen.  

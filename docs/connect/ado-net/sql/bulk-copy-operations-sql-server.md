@@ -1,7 +1,7 @@
 ---
 title: Massenkopiervorgänge in SQL Server
 description: Beschreibt die Massenkopierfunktionen für den .NET-Datenanbieter für SQL Server.
-ms.date: 09/30/2019
+ms.date: 06/15/2020
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 6ab832627f04825b5cdddc2939108fb427801bc7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4896bfdb419cfbd8e2cf6302a0a818407d6a596c
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928911"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107013"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Massenkopiervorgänge in SQL Server
 
@@ -46,6 +46,9 @@ Beschreibt das Ausführen mehrerer Massenkopiervorgänge von Daten in eine SQL S
   
 [Transaktionen und Massenkopiervorgänge](transaction-bulk-copy-operations.md)  
 Beschreibt das Ausführen eines Massenkopiervorgangs innerhalb einer Transaktion, einschließlich des Commits oder Rollbacks einer Transaktion  
+
+[Hinweise zur Reihenfolge bei Massenkopiervorgängen](bulk-copy-order-hints.md)  
+Beschreibt, wie Sie Hinweise zur Reihenfolge verwenden können, um die Leistung bei Massenkopiervorgängen zu verbessern
   
 ## <a name="next-steps"></a>Nächste Schritte
 - [SQL Server und ADO.NET](index.md)

@@ -1,5 +1,6 @@
 ---
 title: Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln im Berichts-Generator und SSRS | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Kartenlegenden ändern, um Benutzern zu helfen, die Datenvisualisierung auf den Karten im Berichts-Generator zu interpretieren.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -31,12 +32,12 @@ f1_keywords:
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: deb79a6a1216f584bdbda3a54b276326e5152f01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581733"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054238"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln (Berichts-Generator und SSRS)
   In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht kann eine Karte Legenden, eine Farbskala und eine Entfernungsskala enthalten. Diese Teile einer Karte erleichtern Benutzern die Interpretation der Datenvisualisierung auf der Karte.  
@@ -55,11 +56,11 @@ ms.locfileid: "65581733"
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>So ändern Sie die Position einer Legende in Bezug zum Viewport  
   
-1.  Klicken Sie in der Entwurfsansicht mit der rechten Maustaste auf die Legende, und öffnen Sie die Seite _\<<Berichtselement>_ **Eigenschaften**.  
+1.  Klicken Sie in der Entwurfsansicht mit der rechten Maustaste auf die Legende, und öffnen Sie die **Eigenschaftenseite** _\<report item>_ .  
   
 2.  Klicken Sie in **Position**auf den Ort, der angibt, wo die Legende relativ zum Viewport angezeigt wird.  
   
-3.  Um die Legende außerhalb des Viewports anzuzeigen, klicken Sie auf **\<Berichtselement> außerhalb von Viewport anzeigen**.  
+3.  Klicken Sie auf **\<report item> außerhalb von Viewport anzeigen**, um die Legende außerhalb von Viewport anzuzeigen.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -101,7 +102,7 @@ ms.locfileid: "65581733"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene mit den gewünschten Daten, und klicken Sie dann auf die **Farbregel** _\<map element type>_ .  
   
 3.  Klicken Sie auf **Legende**.  
   
@@ -115,7 +116,7 @@ ms.locfileid: "65581733"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene mit den gewünschten Daten, und klicken Sie dann auf die **Farbregel** _\<map element type>_ .  
   
 3.  Klicken Sie auf **Vorlagenstil anwenden**.  
   
@@ -129,7 +130,7 @@ ms.locfileid: "65581733"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene mit den gewünschten Daten, und klicken Sie dann auf die **Farbregel** _\<map element type>_ .  
   
 3.  Klicken Sie auf **Daten mithilfe der Farbpalette anzeigen**.  
   
@@ -147,7 +148,7 @@ ms.locfileid: "65581733"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene mit den gewünschten Daten, und klicken Sie dann auf die **Farbregel** _\<map element type>_ .  
   
 3.  Klicken Sie auf **Daten mithilfe von Farbbereichen anzeigen**.  
   
@@ -169,7 +170,7 @@ ms.locfileid: "65581733"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene mit den gewünschten Daten, und klicken Sie dann auf die **Farbregel** _\<map element type>_ .  
   
 3.  Klicken Sie auf **Daten mithilfe benutzerdefinierter Farben anzeigen**.  
   
@@ -187,9 +188,9 @@ ms.locfileid: "65581733"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene mit den gewünschten Daten, und klicken Sie dann auf die **Farbregel** _\<map element type>_ .  
   
-3.  Wählen Sie die Option **Daten mithilfe von** Regeltyp> anzeigen\< aus. Um Verteilungsoptionen zu verwenden, müssen Sie Bereiche auf der Seite **Verteilung** auf Grundlage analytischer Daten erstellen, die der Ebene zugeordnet sind.  
+3.  Klicken Sie auf **Daten mithilfe der \<rule type>-Option anzeigen**. Um Verteilungsoptionen zu verwenden, müssen Sie Bereiche auf der Seite **Verteilung** auf Grundlage analytischer Daten erstellen, die der Ebene zugeordnet sind.  
   
 4.  Klicken Sie auf **Verteilung**.  
   
@@ -219,9 +220,9 @@ ms.locfileid: "65581733"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Regel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene mit den gewünschten Daten, und klicken Sie dann auf die **Regel** _\<map element type>_ .  
   
-3.  Überprüfen Sie, ob die Option **Daten mithilfe von** \<Regeltyp *> anzeigen* aktiviert ist.  
+3.  Überprüfen Sie, ob die Option **Daten mithilfe von \<*rule type*> anzeigen** aktiviert ist.  
   
 4.  Überprüfen Sie in **Datenfeld**, ob die analytischen Daten, die Sie auf der Ebene visuell darstellen, ausgewählt sind.  
   
@@ -240,9 +241,9 @@ ms.locfileid: "65581733"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Farbregel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene mit den gewünschten Daten, und klicken Sie dann auf die **Farbregel** _\<map element type>_ .  
   
-3.  Aktivieren Sie die zu verwendende Farbregeloption. Wenn Sie Elemente in einer Kartenlegende oder einer Farbskala anzeigen möchten, müssen Sie eine der Optionen für **Daten mithilfe von** Regeltyp> anzeigen\< aktivieren.  
+3.  Aktivieren Sie die zu verwendende Farbregeloption. Wenn Sie Elemente in einer Kartenlegende oder einer Farbskala anzeigen möchten, müssen Sie eine der Optionen für **Daten mithilfe von \<rule type> anzeigen** aktivieren.  
   
 4.  Überprüfen Sie in **Datenfeld**, ob die analytischen Daten, die Sie auf der Ebene visuell darstellen, ausgewählt sind.  
   
@@ -261,7 +262,7 @@ ms.locfileid: "65581733"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Regel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene mit den gewünschten Daten, und klicken Sie dann auf die **Regel** _\<map element type>_ .  
   
 3.  Klicken Sie auf **Legende**.  
   
@@ -274,7 +275,7 @@ ms.locfileid: "65581733"
   
 1.  Klicken Sie in der Entwurfsansicht auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Ebene, die die gewünschten Daten aufweist, und klicken Sie dann auf _\<Kartenelementtyp>_ **Regel**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Ebene mit den gewünschten Daten, und klicken Sie dann auf die **Regel** _\<map element type>_ .  
   
 3.  Klicken Sie auf **Legende**.  
   

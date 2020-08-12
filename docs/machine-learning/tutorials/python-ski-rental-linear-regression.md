@@ -4,21 +4,21 @@ titleSuffix: SQL machine learning
 description: Im dieser vierteiligen Tutorialreihe erstellen Sie ein lineares Regressionsmodell in Python, um mit SQL Machine Learning vorherzusagen, wie viele Ski verliehen werden.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b34687440763f2c514016989542ae3f2d7c0e6ed
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 3495fb429754fdd38a203d1d9ce5e8afee60363e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606914"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730463"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-with-sql-machine-learning"></a>Python-Tutorial: Vorhersagen, wie viele Ski verliehen werden, mithilfe linearer Regression mit SQL Machine Learning
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In diesem vierteiligen Tutorial verwenden Sie Python und die lineare Regression in [SQL Server-Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) zur Vorhersage der Verleihzahlen für einen Skiverleih. In diesem Tutorial wird ein [Python-Notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md) verwendet.
@@ -26,15 +26,18 @@ In diesem vierteiligen Tutorial verwenden Sie Python und die lineare Regression 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In diesem vierteiligen Tutorial verwenden Sie Python und die lineare Regression in [SQL Server-Machine Learning Services](../sql-server-machine-learning-services.md) zur Vorhersage von Verleihzahlen für einen Skiverleih. In diesem Tutorial wird ein [Python-Notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md) verwendet.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In dieser vierteiligen Tutorialreihe verwenden Sie Python und lineare Regression in [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) zur Vorhersage von Verleihzahlen für einen Skiverleih. In diesem Tutorial wird ein [Python-Notebook in Azure Data Studio](../../azure-data-studio/sql-notebooks.md) verwendet.
+::: moniker-end
 
 Angenommen, Sie möchten für Ihren eigenen Skiverleih die Verleihzahlen für einen bestimmten Zeitpunkt in der Zukunft vorhersagen. Mit dieser Information können Sie den Bestand, die Mitarbeiter und die Räumlichkeiten besser vorausplanen.
 
-Im ersten Teil der Reihe bereiten Sie die Voraussetzungen vor. Im zweiten und dritten Teil entwickeln Sie Python-Skripts in einem Notebook zur Vorbereitung Ihrer Daten und zum Trainieren eines Machine Learning-Modells. Im vierten Teil führen Sie die Python-Skripts mithilfe von gespeicherten T-SQL-Prozeduren in SQL Server aus.
+Im ersten Teil der Reihe bereiten Sie die Voraussetzungen vor. Im zweiten und dritten Teil entwickeln Sie Python-Skripts in einem Notebook zur Vorbereitung Ihrer Daten und zum Trainieren eines Machine Learning-Modells. In Teil 3 führen Sie diese Python-Skripts dann in der Datenbank mithilfe von gespeicherten T-SQL-Prozeduren aus.
 
 In diesem Artikel lernen Sie Folgendes:
 
 > [!div class="checklist"]
-> * Importieren einer Beispieldatenbank in SQL Server 
+> * Importieren einer Beispieldatenbank
 
 In [Teil 2](python-ski-rental-linear-regression-prepare-data.md) lernen Sie, wie Sie die Daten aus einer Datenbank in einen Python-Datenrahmen laden und in Python vorbereiten.
 
@@ -50,6 +53,11 @@ In [Teil 4](python-ski-rental-linear-regression-deploy-model.md) haben Sie geler
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * SQL Server-Machine Learning Services: Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Machine Learning Services in Azure SQL Managed Instance. In der Übersicht [Machine Learning Services in Azure SQL Managed Instance (Vorschauversion)](/azure/azure-sql/managed-instance/machine-learning-services-overview) finden Sie Informationen zur Registrierung.
+
+* [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) zum Wiederherstellen der Beispieldatenbank in Azure SQL Managed Instance
+::: moniker-end
 
 * Python-IDE: In diesem Tutorial wird ein Python-Notebook in [Azure Data Studio](../../azure-data-studio/what-is.md) verwendet. Weitere Informationen finden Sie unter [Verwenden von Notebooks in Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 
@@ -62,7 +70,7 @@ In [Teil 4](python-ski-rental-linear-regression-deploy-model.md) haben Sie geler
   * sklearn
 
   Installieren Sie diese Pakete wie folgt:
-  1. Klicken Sie in Azure Data Studio auf **Manage Packages** (Pakete verwalten).
+  1. Klicken Sie in Ihrem Azure Data Studio-Notebook auf die Option **Pakete verwalten**.
   2. Klicken Sie dann im Bereich **Manage Packages** (Pakete verwalten) auf die Registerkarte **Add new** (Neue hinzufügen).
   3. Geben Sie für jedes der folgenden Pakete den jeweiligen Paketnamen ein, klicken Sie auf **Suchen** und dann auf **Installieren**.
 
@@ -77,6 +85,7 @@ Die in diesem Tutorial verwendete Beispieldatenbank wurde in einer **BAK**-Daten
 > Wenn Sie Machine Learning Services in Big Data-Clustern verwenden, finden Sie Informationen zum Wiederherstellen unter [Wiederherstellen einer Datenbank in der Masterinstanz eines Big Data-Clusters für SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
 ::: moniker-end
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. Laden Sie die Datei [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak) herunter.
 
 1. Befolgen Sie die Anweisungen unter [Wiederherstellen einer Datenbank aus einer Sicherungsdatei](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, und verwenden Sie hierzu die folgenden Details:
@@ -90,20 +99,33 @@ Die in diesem Tutorial verwendete Beispieldatenbank wurde in einer **BAK**-Daten
    USE TutorialDB;
    SELECT * FROM [dbo].[rental_data];
    ```
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+1. Laden Sie die Datei [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak) herunter.
 
-1. Aktivieren Sie externe Skripts, indem Sie die folgenden SQL-Befehle ausführen:
+1. Befolgen Sie die Anweisungen unter [Schnellstart: Wiederherstellen einer Datenbank in Azure SQL Managed Instance mit SSMS](/azure/sql-database/sql-database-managed-instance-get-started-restore) im SQL Server Management Studio, und verwenden Sie hierzu die folgenden Details:
 
-    ```sql
-    sp_configure 'external scripts enabled', 1;
-    RECONFIGURE WITH override;
-    ```
+   * Importieren Sie aus der heruntergeladenen Datei **TutorialDB.bak**.
+   * Geben Sie der Zieldatenbank den Namen „TutorialDB“.
+
+1. Sie können überprüfen, ob die wiederhergestellte Datenbank vorhanden ist, indem Sie die Tabelle **dbo.rental_data** abfragen:
+
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
+::: moniker-end
+
+## <a name="clean-up-resources"></a>Bereinigen von Ressourcen
+
+Wenn Sie nicht mit diesem Tutorial fortfahren möchten, löschen Sie die Datenbank „TutorialDB“.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Im ersten Teil dieser Tutorialreihe haben Sie die folgenden Schritte ausgeführt:
 
 * Installieren der Voraussetzungen
-* Importieren einer Beispieldatenbank in SQL Server
+* Importieren einer Beispieldatenbank
 
 Fahren Sie mit Teil 2 dieser Tutorialreihe fort, um die Daten aus der Datenbank „TutorialDB“ vorzubereiten:
 

@@ -1,6 +1,7 @@
 ---
 title: SQL Server Profiler-Dialogfelder
 titleSuffix: SQL Server Profiler
+description: In diesem Artikel erhalten Sie Informationen zu Befehlen und Einstellungen, die im SQL Server Profiler zur Verwendung in Ablaufverfolgungen, Vorlagen, Dateien, Tabellen, Leistungsindikatoren und Replays zur Verfügung stehen.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 24375bafa9123c5bba4adf83fce81427f39722e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72b9d67488e43a9d87ed52243b20fb49219887c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307851"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722636"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler-Dialogfelder
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist ein Tool, das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ereignisse von einem Server aufzeichnet. Die Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Versuch, ein Problem zu diagnostizieren, zur Wiedergabe einer bestimmten Reihe von Schritten verwendet werden kann. In der folgenden Tabelle finden Sie die Befehle und Einstellungen, die in den Dialogfeldern des [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] verfügbar sind.  
 ## <a name="trace-properties"></a>Ablaufverfolgungseigenschaften
@@ -59,7 +60,7 @@ Mithilfe der Registerkarte **Ereignisauswahl** im Dialogfeld **Ablaufverfolgungs
 
 ## <a name="trace-template-properties"></a>Eigenschaften der Ablaufverfolgungsvorlage 
 ### <a name="new-general-tab"></a>Neu (die Registerkarte „Allgemein“)
-Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie neue Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen erstellen. Zeigen Sie im Menü [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Datei**von** auf **Vorlagen**, und klicken Sie dann auf **Neu**, um dieses Dialogfeld zu öffnen.
+Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie neue Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen erstellen. Zeigen Sie im Menü **Datei** von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auf **Vorlagen**, und klicken Sie dann auf **Neu**, um dieses Dialogfeld zu öffnen.
 
 |Element|BESCHREIBUNG
 |---|---
@@ -69,7 +70,7 @@ Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Abl
 |**Als Standardvorlage für den ausgewählten Servertyp verwenden**|Verwenden Sie diese Vorlage standardmäßig für alle Ablaufverfolgungen, die für diesen Servertyp erstellt werden.  
 
 ### <a name="edit-general-tab"></a>Bearbeiten (die Registerkarte „Allgemein“)
- Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie vorhandene Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen anzeigen oder bearbeiten. Sie können dieses Dialogfeld aufrufen, indem Sie erst im Menü [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Datei**von** auf **Vorlagen** und dann auf **Vorlage bearbeiten** klicken.  
+ Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie vorhandene Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen anzeigen oder bearbeiten. Sie können dieses Dialogfeld aufrufen, indem Sie erst im Menü **Datei** von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auf **Vorlagen** und dann auf **Vorlage bearbeiten** klicken.  
 
 |Element|BESCHREIBUNG
 |---|---
@@ -239,7 +240,7 @@ Mithilfe des Dialogfelds **Suchen** können Sie eine Ablaufverfolgung nach besti
 |Element|BESCHREIBUNG
 |---|---
 |**Suchen nach**|Geben Sie den Text ein, nach dem gesucht werden soll. Die Suche entspricht jeder Zeichenfolge, die die angegebene Zeichenfolge enthält. Die Suche nach „Completed“ entspricht beispielsweise „SQL:BatchCompleted“. Platzhalterzeichen (*, ? usw.) werden nicht unterstützt.  
-|**Suchen in Spalte**|Klicken Sie auf eine zu durchsuchende Datenspalte oder auf **\<Alle Spalten>** , um alle Datenspalten in der Ablaufverfolgung zu durchsuchen.  
+|**Suchen in Spalte**|Klicken Sie auf eine zu durchsuchende Datenspalte, oder klicken Sie auf **\<All columns>** , um alle Datenspalten in der Ablaufverfolgung zu durchsuchen.  
 |**Groß-/Kleinschreibung beachten**|Sucht nach Text, der die gleiche Groß-/Kleinschreibung besitzt wie der Text im Feld **Suchen nach** . Deaktivieren Sie dieses Kontrollkästchen, um in der Ablaufverfolgung nach Beispielen zu suchen, die groß oder klein geschrieben werden.  
 |**Nur ganzes Wort suchen**|Schränkt die Suche auf ganze Wörter ein. Deaktivieren Sie das Kontrollkästchen **Nur ganzes Wort** suchen, um nach Zeichen innerhalb eines Worts zu suchen.  
 |**Weitersuchen**|Sucht nach dem nächsten Beispiel der im Feld **Suchen nach** angegebenen Zeichen.  
@@ -268,7 +269,7 @@ Mithilfe des Dialogfelds **Filter bearbeiten** können Sie Filter für Datenspal
  >Für Spalten mit Zeichenfolgendaten werden die Filterkriterien als Zeichenfolgenwert LIKE oder NOT LIKE angezeigt.  
 
 ## <a name="select-template-name"></a>Vorlagennamen auswählen
-Mit dem Dialogfeld **Vorlagenname auswählen** können Sie eine vorhandene [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsvorlage auswählen und in eine Datei auf dem Betriebssystem exportieren. Darüber hinaus können Sie dieses Dialogfeld dazu verwenden, beim Bearbeiten einer vorhandenen Ablaufverfolgungsvorlage einen anderen Namen auszuwählen oder einzugeben, unter dem die Ablaufverfolgungsvorlage gespeichert werden soll. Sie können beim Exportieren einer Vorlage auf dieses Dialogfeld zugreifen, indem Sie im Menü [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Datei**von** auf **Vorlagen** zeigen, und dann auf **Vorlage exportieren** klicken. Um beim Ändern des Namens einer Vorlage auf dieses Dialogfeld zuzugreifen, zeigen Sie im Menü **Datei** auf **Vorlagen**und auf **Vorlage bearbeiten**, und klicken Sie dann auf **Speichern unter**.  
+Mit dem Dialogfeld **Vorlagenname auswählen** können Sie eine vorhandene [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsvorlage auswählen und in eine Datei auf dem Betriebssystem exportieren. Darüber hinaus können Sie dieses Dialogfeld dazu verwenden, beim Bearbeiten einer vorhandenen Ablaufverfolgungsvorlage einen anderen Namen auszuwählen oder einzugeben, unter dem die Ablaufverfolgungsvorlage gespeichert werden soll. Sie können beim Exportieren einer Vorlage auf dieses Dialogfeld zugreifen, indem Sie im Menü **Datei** von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auf **Vorlagen** zeigen, und dann auf **Vorlage exportieren** klicken. Um beim Ändern des Namens einer Vorlage auf dieses Dialogfeld zuzugreifen, zeigen Sie im Menü **Datei** auf **Vorlagen**und auf **Vorlage bearbeiten**, und klicken Sie dann auf **Speichern unter**.  
 
 |Element|BESCHREIBUNG
 |---|---

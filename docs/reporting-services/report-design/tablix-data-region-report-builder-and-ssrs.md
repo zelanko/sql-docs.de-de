@@ -1,5 +1,6 @@
 ---
 title: Tablix-Datenbereich (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Daten in paginierten Berichten in Zellen anzeigen. Organisieren Sie im Berichts-Generator mit einem Tablix-Datenbereich Daten in Zeilen und Spalten.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a37105db6639b7d7db35c3beb1fc85020015d7e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 98c23ceae7ced6bdd31e55319db67aefa5a6e848
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081370"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067064"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Tablix-Datenbereich (Berichts-Generator und SSRS)
-  Der Tablix-Datenbereich ist in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]ein Berichtselement mit verallgemeinertem Layout, in dem paginierte Berichtsdaten in Zellen angezeigt werden, die in Zeilen und Spalten organisiert sind. Bei den Berichtsdaten kann es sich um aus der Datenquelle abgerufene Detaildaten oder in benutzerdefinierten Gruppen organisierte aggregierte Detaildaten handeln. Jede Tablix-Zelle kann ein beliebiges Berichtselement enthalten, z. B. ein Textfeld, ein Bild oder einen anderen Datenbereich (z. B. einen Tablix-Bereich, ein Diagramm oder ein Messgerät). Wenn Sie einer Zelle mehrere Berichtselemente hinzufügen möchten, erstellen Sie zuerst ein Rechteck, das als Container fungiert. Anschließend fügen Sie dem Rechteck Berichtselemente hinzu.  
+  Der Tablix-Datenbereich ist in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]ein Berichtselement mit verallgemeinertem Layout, in dem paginierte Berichtsdaten in Zellen angezeigt werden, die in Zeilen und Spalten organisiert sind. Bei den Berichtsdaten kann es sich um aus der Datenquelle abgerufene Detaildaten oder in benutzerdefinierten Gruppen organisierte aggregierte Detaildaten handeln. Jede Tablix-Zelle kann ein beliebiges Berichtselement enthalten, z. B. ein Textfeld, ein Bild oder einen anderen Datenbereich (z. B. einen Tablix-Bereich, ein Diagramm oder ein Messgerät). Wenn Sie einer Zelle mehrere Berichtselemente hinzufügen möchten, erstellen Sie zuerst ein Rechteck, das als Container fungiert. Anschließend fügen Sie dem Rechteck Berichtselemente hinzu. 
   
  Die Tabellen-, Matrix- und Listendatenbereiche werden auf dem Menüband durch Vorlagen für den zugrunde liegenden Tablix-Datenbereich dargestellt. Wenn Sie einem Bericht eine dieser Vorlagen hinzufügen, fügen Sie tatsächlich einen Tablix-Datenbereich hinzu, der für ein spezifisches Datenlayout optimiert ist. Standardmäßig werden von einer Tabellenvorlage Detaildaten in einem Gitternetzlayout angezeigt, während eine Matrix Gruppendaten in einem Gitternetzlayout und eine Liste Detaildaten in einem Freiformlayout anzeigt.  
   

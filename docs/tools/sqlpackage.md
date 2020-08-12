@@ -1,5 +1,6 @@
 ---
 title: SqlPackage.exe
+description: In diesem Artikel erfahren Sie, wie Sie Datenbankentwicklungsaufgaben mithilfe von SqlPackage.exe automatisieren können. Außerdem sehen Sie Beispiele und verfügbare Parameter, Eigenschaften und SQLCMD-Variablen.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -9,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 03/17/2020
-ms.openlocfilehash: 1ee42c97fe4e032835ccb2f8a07ea51fe70114ac
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 1209945c167f26dd7011cc4ce210e61ac24f7134
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303141"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441257"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -269,7 +270,7 @@ Durch eine SqlPackage.exe-Exportaktion wird eine Livedatenbank aus SQL Server bz
   
 ### <a name="help-for-export-action"></a>Hilfe zur Export-Aktion
 
-|Parameter|Kurzform|Wert|BESCHREIBUNG|
+|Parameter|Kurzform|Wert|Beschreibung|
 |---|---|---|---|
 |**/Action:**|**/a**|Exportieren|Gibt die auszuführende Aktion an. |
 |**/AccessToken:**|**/at**|{string}| Gibt das Zugriffstoken für die tokenbasierte Authentifizierung an, das beim Herstellen einer Verbindung mit der Zieldatenbank verwendet werden soll. |

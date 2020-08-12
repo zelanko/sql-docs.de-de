@@ -1,5 +1,6 @@
 ---
 title: Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie das Erstellen einer Karte, das Hinzufügen einer Kartenebene oder das Ändern von Kartenebenenoptionen mithilfe des Karten-Assistenten bzw. Kartenebenen-Assistenten im Berichts-Generator automatisieren.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02be70284a4a32c69618659f1271165677628845
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b139dc1b0aaa0b2d1477d182cf128d0f93795ca3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078567"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048331"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Karten-Assistent und Kartenebenen-Assistent (Berichts-Generator und SSRS)
  In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten automatisieren der Karten-Assistent und der Kartenebenen-Assistent das Erstellen einer Karte, Hinzufügen einer Kartenebene oder Ändern der Kartenebenen auf einer vorhandenen Ebene.  
   
  Bevor Sie einem Bericht eine Karte oder einer Karte eine Kartenebene hinzufügen, sammeln Sie die folgenden Informationen:  
   
--   **Räumliche Datenquelle.** Der Speicherort oder die Verbindung zu einer Quelle, die räumliche Daten bereitstellt, z.B. der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz und einer Datenbank, die räumliche Daten enthält, oder der Name einer Shape-Datei vom Environmental Systems Research Institute, Inc. ESRI-Shape-Datei (ESRI Shapefile)  
+-   **Räumliche Datenquelle.** Der Speicherort oder die Verbindung zu einer Quelle, die räumliche Daten bereitstellt, z.B. der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und einer Datenbank, die räumliche Daten enthält, oder der Name einer Shape-Datei vom Environmental Systems Research Institute, Inc. ESRI-Shape-Datei (ESRI Shapefile)  
   
 -   **Spatial data.** Ein Feld aus der räumlichen Datenquelle, das Sätze von Koordinaten enthält, die Standorte angeben.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "77078567"
   
  Klicken Sie auf den Titel der Assistentenseite, um den entsprechenden Hilfeinhalt anzuzeigen. Die angezeigten Seiten hängen von der Auswahl für den Kartentyp, der Quelle der räumlichen Daten und der Quelle der analytischen Daten ab.  
   
-1.  [Quelle räumlicher Daten auswählen](#SpatialDataSource). Räumliche Daten können aus dem Kartenkatalog, einer Datei des Environmental Systems Research Institute, Inc. (ESRI) oder aus räumlichen Daten in einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank stammen.  
+1.  [Quelle räumlicher Daten auswählen](#SpatialDataSource). Räumliche Daten können aus dem Kartenkatalog, aus einer Shape-Datei des Environmental Systems Research Institute, Inc. (ESRI) oder aus räumlichen Daten in einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank stammen.  
   
     -   [Was sind räumliche Daten?](#SpatialData)  
   
@@ -119,7 +120,7 @@ ms.locfileid: "77078567"
  Um den Kartenkatalog zu erweitern, können Sie Berichte im Kartenkatalogverzeichnis hinzufügen oder entfernen sowie Ordner hinzufügen, um die Karten zu verwalten. Weitere Informationen finden Sie unter [Karten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ###  <a name="what-is-an-esri-shapefile"></a><a name="Shapefile"></a> What is an ESRI shapefile?  
- Eine ESRI-Shape-Datei ist ein Satz von Dateien mit Daten, die dem Shape-Dateiformat des Environmental Systems Research Institute, Inc. (ESRI) für räumliche Daten entsprechen. Die Gruppe von Dateien enthält im Allgemeinen die Datei *\<Dateiname>* .shp, die die räumlichen Daten und eine Unterstützungsdatei enthält, in der Regel *\<Dateiname>* .dbf.  
+ Eine ESRI-Shape-Datei ist ein Satz von Dateien mit Daten, die dem Shape-Dateiformat des Environmental Systems Research Institute, Inc. (ESRI) für räumliche Daten entsprechen. Diese Gruppe von Dateien umfasst in der Regel die Datei *\<filename>* .shp, die die räumlichen Daten enthält, und die Unterstützungsdatei *\<filename>* .dbf.  
   
  Wenn Sie eine Shape-Datei als räumliche Datenquelle angeben und sie sich auf dem lokalen Computer befindet, werden die räumlichen Daten automatisch in den Bericht eingebettet. Um räumliche Daten aus einer ESRI-Datei dynamisch zu verwenden, gehen Sie wie folgt vor:  
   

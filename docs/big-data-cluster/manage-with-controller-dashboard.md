@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c051a634199bf6a8adc9a0b52a73196f68901893
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730604"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>Verwalten von Big Data-Clustern mit dem Controllerdashboard von SQL Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Neben der Verwendung von **azdata** und dem Notebook für den Clusterstatus können Sie den Status eines Big Data-Clusters für SQL Server noch auf eine andere Weise anzeigen. Sie können den Big Data-Clustercontroller für SQL Server über das Viewlet **Verbindungen** hinzufügen. Damit können Sie die Clusterintegrität in einem Dashboard anzeigen.
 
@@ -27,8 +27,8 @@ Neben der Verwendung von **azdata** und dem Notebook für den Clusterstatus kön
 
 Die folgenden Voraussetzungen müssen erfüllt sein, damit das Notebook gestartet werden kann:
 
-* Die neueste Version von [Azure Data Studio Insiders-Build](https://docs.microsoft.com/sql/big-data-cluster/deploy-big-data-tools?view=sqlallproducts-download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).
-* [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Erweiterung ist in Azure Data Studio installiert.
+* Die neueste Version von [Azure Data Studio](https://aka.ms/getazuredatastudio) ist installiert.
+* Die [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Erweiterung ist in Azure Data Studio installiert.](../azure-data-studio/data-virtualization-extension.md)
 
 Zusätzlich sind für Big Data-Cluster für SQL Server 2019 folgende Komponenten erforderlich:
 

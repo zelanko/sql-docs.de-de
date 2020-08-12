@@ -1,48 +1,50 @@
 ---
 title: 'Tutorial: Vorbereiten von Daten zum Ausführen von Clustering in R'
 titleSuffix: SQL machine learning
-description: Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie die Daten aus einer SQL-Datenbank für das Clustering in R mit SQL Machine Learning vor.
+description: Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie die Daten aus einer Datenbank für das Clustering in R mit SQL Machine Learning vor.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adeda8bf04333bb256daea8ebc3cab1288f9aebf
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a83268efebbe53a12806c3e52a38e3c5ea2d94e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728546"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>Tutorial: Vorbereiten von Daten für das Clustering in R mit SQL Machine Learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie die Daten aus einer SQL-Datenbank für das Clustering in R mit Machine Learning Services der SQL-Datenbank oder in Big Data-Clustern vor.
+Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie die Daten aus einer Datenbank für das Clustering in R mit SQL Server Machine Learning Services oder in Big Data-Clustern vor.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie die Daten aus einer SQL-Datenbank für das Clustering in R mit Machine Learning Services der SQL-Datenbank vor.
+Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie die Daten aus einer Datenbank für das Clustering in R mit SQL Server Machine Learning Services vor.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie die Daten aus einer SQL-Datenbank für das Clustering in R mit R Services der SQL-Datenbank vor.
+Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie die Daten aus einer Datenbank für das Clustering in R mit SQL Server 2016 R Services vor.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Im zweiten Teil dieser vierteiligen Tutorialreihe bereiten Sie die Daten aus einer Datenbank für das Clustering in R mit Machine Learning Services in Azure SQL Managed Instance vor.
 ::: moniker-end
 
 In diesem Artikel lernen Sie Folgendes:
 
 > [!div class="checklist"]
 > * Trennen von Kunden anhand verschiedener Dimensionen mithilfe von R
-> * Laden der Daten aus der SQL-Datenbank in einen R-Datenrahmen
+> * Laden der Daten aus der Datenbank in einen R-Datenrahmen
 
 In [Teil 1](r-clustering-model-introduction.md) haben Sie die Voraussetzungen installiert und die Beispieldatenbank wiederhergestellt.
 
 In [Teil 3](r-clustering-model-build.md) erfahren Sie, wie Sie ein K-Means-Clustermodell in R erstellen und trainieren.
 
-In [Teil 4](r-clustering-model-deploy.md) erfahren Sie, wie Sie eine gespeicherte Prozedur in einer SQL-Datenbank erstellen, die Clustering auf der Grundlage neuer Daten in R durchführen kann.
+In [Teil 4](r-clustering-model-deploy.md) erfahren Sie, wie Sie eine gespeicherte Prozedur in einer Datenbank erstellen, die Clustering auf der Grundlage neuer Daten in R durchführen kann.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -63,9 +65,9 @@ Ersetzen Sie in der **connStr**-Funktion ersetzen Sie **ServerName** durch Ihre 
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database
 
-connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;uid=Username;pwd=Password"
 
-#Define the query to select data from SQL Server
+#Define the query to select data
 input_query <- "
 SELECT ss_customer_sk AS customer
     ,round(CASE 
@@ -124,7 +126,7 @@ LEFT OUTER JOIN (
         SUM(sr_return_amt) AS returns_money
     FROM store_returns
     GROUP BY sr_customer_sk
-    ) returned ON ss_customer_sk = sr_customer_sk
+    ) returned ON ss_customer_sk = sr_customer_sk";
 ```
 
 ## <a name="load-the-data-into-a-data-frame"></a>Laden der Daten in einem neuen Datenrahmen
@@ -132,7 +134,7 @@ LEFT OUTER JOIN (
 Verwenden Sie nun das folgende Skript, um die Ergebnisse der Abfrage an einen R-Datenrahmen zurückzugeben.
 
 ```r
-# Query SQL Server using input_query and get the results back
+# Query using input_query and get the results back
 # to data frame customer_data
 
 library(RODBC)
@@ -141,7 +143,7 @@ ch <- odbcDriverConnect(connStr)
 
 customer_data <- sqlQuery(ch, input_query)
 
-# Take a look at the data just loaded from SQL Server
+# Take a look at the data just loaded
 head(customer_data, n = 5);
 ```
 
@@ -165,7 +167,7 @@ Wenn Sie nicht mit diesem Tutorial fortfahren möchten, löschen Sie die Datenba
 In Teil 2 dieser Tutorialreihe haben Sie Folgendes gelernt:
 
 * Trennen von Kunden anhand verschiedener Dimensionen mithilfe von R
-* Laden der Daten aus der SQL-Datenbank in einen R-Datenrahmen
+* Laden der Daten aus der Datenbank in einen R-Datenrahmen
 
 Befolgen Sie Teil 3 dieser Tutorialreihe, um ein Machine Learning-Modell zu erstellen, das diese Kundendaten verwendet:
 

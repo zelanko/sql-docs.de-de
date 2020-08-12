@@ -1,5 +1,6 @@
 ---
 title: Festlegen und Konfigurieren von Maßeinheiten (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie im Berichts-Generator Maßeinheiten in einem paginierten-Bericht mithilfe von Ausdrücken festlegen und konfigurieren.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7651373c21b2e22d88a11d196e3f5c0322b07fe0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0d8da0aff1c553feec2c77f90cc4b43a2a7ef54
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886562"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Festlegen und Konfigurieren von Maßeinheiten (Berichts-Generator und SSRS)
   In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht verwenden Indikatoren eine von zwei Maßeinheiten: Prozentsatz oder Maßeinheit.   

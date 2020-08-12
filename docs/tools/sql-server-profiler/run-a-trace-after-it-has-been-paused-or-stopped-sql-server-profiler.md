@@ -1,6 +1,7 @@
 ---
 title: Ausführen einer Ablaufverfolgung, nachdem sie angehalten oder beendet wurde
 titleSuffix: SQL Server Profiler
+description: In diesem Artikel wird erläutert, wie Sie die Sammlung von Ereignisdaten neu starten, nachdem eine Ablaufverfolgung im SQL Server Profiler pausiert oder beendet wurde.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 14a10f509d16bcd6d68a482e51d171ba2acb1423
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7596c622bd82bb109051439cbcde5ff72b9cb84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74957765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731919"
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>Ausführen einer Ablaufverfolgung, nachdem sie angehalten oder beendet wurde (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Thema wird beschrieben, wie Sie eine Ablaufverfolgung starten können, nachdem sie mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]angehalten oder beendet wurde.  
 

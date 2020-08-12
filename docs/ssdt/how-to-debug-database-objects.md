@@ -1,21 +1,21 @@
 ---
 title: Debuggen von Datenbankobjekten
+description: Hier erfahren Sie, wie Sie gespeicherte Prozeduren, Funktionen und Trigger debuggen. Es wird gezeigt, wie Sie das Debuggen aktivieren, Breakpoints festlegen und einen SQL Server-Komponententest im Debugmodus ausführen.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ba04eba5107968f1be11c62fbac0f57ca5733b3f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a9e1b3b6dd7e46872c6196ef3257805c1f5a72f
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241461"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518760"
 ---
 # <a name="how-to--debug-database-objects"></a>Gewusst wie:  Debuggen von Datenbankobjekten
 
@@ -23,7 +23,7 @@ Ein SQL Server-Komponententest umfasst folgende Komponenten:
   
 -   Den in Visual C\# oder Visual Basic geschriebenen Komponententestcode. Dieser Code, der vom SQL Server-Komponententest-Designer generiert wird, übermittelt das Transact\-SQL-Skript, das den Textkörper des Testes darstellt.  
   
--   Mindestens eine in Visual C\# oder Visual Basic geschriebene Testbedingung. Wenn Sie Testbedingungen debuggen möchten, befolgen Sie die in den folgenden Artikeln beschriebenen Anweisungen zum Debuggen von Komponententests: [How to: Debug while a Test Is Running (Visual Studio 2010) (Vorgehensweise: Debuggen, während ein Test ausgeführt wird (Visual Studio 2010))](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) oder [How to: Debug while a Test Is Running (Visual Studio 2012) (Vorgehensweise: Debuggen, während ein Test ausgeführt wird (Visual Studio 2012))](https://msdn.microsoft.com/library/ms182484.aspx).  
+-   Mindestens eine in Visual C\# oder Visual Basic geschriebene Testbedingung. Um Testbedingungen zu debuggen, befolgen Sie die Schritte zum Debuggen eines Komponententests wie unter [Gewusst wie: Debuggen während der Ausführung eines Tests (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) oder [Gewusst wie: Debuggen während der Ausführung eines Tests (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx) beschrieben.  
   
 -   Mindestens ein Transact\-SQL-Skript das für Objekte in der Datenbank ausgeführt wird, die Sie testen. Diese Transact\-SQL-Skripts können nicht gedebuggt werden.  
   

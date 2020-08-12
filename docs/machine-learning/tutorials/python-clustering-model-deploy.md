@@ -1,32 +1,35 @@
 ---
 title: 'Python-Tutorial: Bereitstellen eines Clustermodells'
+titleSuffix: SQL machine learning
 description: In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie ein Clustermodell in Python mit SQL Machine Learning bereit.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 93b01f213ccac6d6ede0965cc55f3e11a12623ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730525"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python-Tutorial: Bereitstellen eines Modells zum Kategorisieren von Kunden mithilfe von SQL Machine Learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von SQL Server Machine Learning Services oder in Big Data-Clustern ein in Python entwickeltes Clustermodell in einer SQL-Datenbank bereit.
+In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von SQL Server Machine Learning Services oder in Big Data-Cluster ein in Python entwickeltes Clustermodell in einer Datenbank bereit.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von SQL Server Machine Learning Services ein in Python entwickeltes Clustermodell in einer SQL-Datenbank bereit.
+In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von SQL Server Machine Learning Services ein in Python entwickeltes Clustermodell in einer Datenbank bereit.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von Machine Learning Services in Azure SQL Managed Instance ein in Python entwickeltes Clustermodell in einer Datenbank bereit.
 ::: moniker-end
 
 Da sich immer neue Kunden registrieren, müssen Sie das Python-Skript von jeder App aus aufrufen können, um das Clustering regelmäßig durchführen zu können. Hierzu können Sie das Python-Skript in einer Datenbank bereitstellen, indem Sie das Python-Skript in einer gespeicherten SQL-Prozedur platzieren. Da das Modell in der Datenbank ausgeführt wird, kann es problemlos mit Daten trainiert werden, die in der Datenbank gespeichert sind.
@@ -42,7 +45,7 @@ In diesem Artikel lernen Sie Folgendes:
 
 In [Teil 1](python-clustering-model.md) haben Sie die Voraussetzungen installiert und die Beispieldatenbank wiederhergestellt.
 
-In [Teil 2](python-clustering-model-prepare-data.md) haben Sie gelernt, wie Sie die Daten aus einer SQL-Datenbank für das Clustering vorbereiten.
+In [Teil 2](python-clustering-model-prepare-data.md) haben Sie gelernt, wie Sie die Daten aus einer Datenbank für das Clustering vorbereiten.
 
 In [Teil 3](python-clustering-model-build.md) haben Sie gelernt, wie Sie ein K-Means-Clustermodell in Python erstellen und trainieren.
 
@@ -130,7 +133,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>Durchführen von Clustering in SQL-Datenbank
+## <a name="perform-clustering"></a>Durchführen des Clustering
 
 Da Sie nun die gespeicherte Prozedur erstellt haben, führen Sie das folgende Skript aus, um mithilfe der Prozedur das Clustering auszuführen.
 

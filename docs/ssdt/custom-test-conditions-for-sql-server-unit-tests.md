@@ -1,21 +1,21 @@
 ---
 title: Benutzerdefinierte Testbedingungen für SQL Server-Komponententests
+description: Hier erfahren Sie, wie Sie benutzerdefinierte Testbedingungen für SQL Server-Komponententests installieren. Sehen Sie sich dabei die mit dem Installieren von nicht von Ihnen erstellten Testbedingungen verbundenen Risiken an.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2852d075b6d5b1f55b76fea6b32443ea14e74384
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 829132cdd70afb725720ba629ae556ea07f09a56
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245533"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518740"
 ---
 # <a name="custom-test-conditions-for-sql-server-unit-tests"></a>Benutzerdefinierte Testbedingungen für SQL Server-Komponententests
 
@@ -39,9 +39,9 @@ Zum Installieren einer benutzerdefinierten Testbedingung kopieren Sie die signie
   
 Weitere Informationen zu benutzerdefinierten Testbedingungen für SQL Server-Komponententests finden Sie unter:  
   
--   [Gewusst wie: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
+-   [Vorgehensweise: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
   
--   [Gewusst wie: Durchführen eines Upgrades für eine benutzerdefinierten Visual Studio 2010-Testbedingung von einem älteren Release auf SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
+-   [Vorgehensweise: Durchführen eines Upgrades für eine benutzerdefinierte Visual Studio 2010-Testbedingung von einer älteren Version auf SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
   
 -   [Exemplarische Vorgehensweise: Verwenden einer benutzerdefinierten Testbedingung zur Überprüfung der Ergebnisse einer gespeicherten Prozedur](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md)  
   

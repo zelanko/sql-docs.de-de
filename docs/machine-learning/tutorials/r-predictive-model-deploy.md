@@ -8,22 +8,21 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f13efaa9181521a40d6f3ba9a5cdeef7da3d2afc
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: af3826d5153e2be157a74c96037bff51c6039e7c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728558"
 ---
 # <a name="tutorial-deploy-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutorial: Bereitstellen eines Vorhersagemodells in R mit SQL Machine Learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von Machine Learning Services ein in R entwickeltes Machine Learning-Modell in SQL Server bereit.
+In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie ein in R entwickeltes Machine Learning-Modell in SQL Server Machine Learning Services oder Big Data-Cluster bereit.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von Machine Learning Services ein in R entwickeltes Machine Learning-Modell in SQL Server bereit.
@@ -31,11 +30,13 @@ In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von Machine Le
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von SQL Server R Services ein in R entwickeltes Machine Learning-Modell in SQL Server bereit.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von Machine Learning Services ein in R entwickeltes Machine Learning-Modell in Azure SQL Managed Instance bereit.
+::: moniker-end
 
 In diesem Artikel lernen Sie Folgendes:
 
 > [!div class="checklist"]
-
 > * Erstellen einer gespeicherten Prozedur zum Generieren des Machine Learning-Modells
 > * Speichern des Modells in einer Datenbanktabelle
 > * Erstellen einer gespeicherten Prozedur für Vorhersagen mithilfe des Modells
@@ -66,11 +67,14 @@ AS
 BEGIN
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
+rental_train_data$Month   <- factor(rental_train_data$Month);
+rental_train_data$Day     <- factor(rental_train_data$Day);
 rental_train_data$Holiday <- factor(rental_train_data$Holiday);
 rental_train_data$Snow    <- factor(rental_train_data$Snow);
 rental_train_data$WeekDay <- factor(rental_train_data$WeekDay);
 
 #Create a dtree model and train it using the training data set
+library(rpart);
 model_dtree <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = rental_train_data);
 #Serialize the model before saving it to the database table
 trained_model <- as.raw(serialize(model_dtree, connection=NULL));
@@ -157,6 +161,8 @@ BEGIN
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
 #Convert types to factors
+rentals$Month   <- factor(rentals$Month);
+rentals$Day     <- factor(rentals$Day);
 rentals$Holiday <- factor(rentals$Holiday);
 rentals$Snow    <- factor(rentals$Snow);
 rentals$WeekDay <- factor(rentals$WeekDay);
@@ -202,12 +208,12 @@ RentalCount_Predicted
 332.571428571429
 ```
 
-Sie haben erfolgreich ein Modell in einer SQL-Datenbank erstellt, trainiert und bereitgestellt. Anschließend haben Sie dieses Modell in einer gespeicherten Prozedur verwendet, um Werte basierend auf neuen Daten vorherzusagen.
+Sie haben erfolgreich ein Modell erstellt, trainiert und in einer Datenbank bereitgestellt. Anschließend haben Sie dieses Modell in einer gespeicherten Prozedur verwendet, um Werte basierend auf neuen Daten vorherzusagen.
 
 
 ## <a name="clean-up-resources"></a>Bereinigen von Ressourcen
 
-Wenn Sie die Verwendung der TutorialDB-Datenbank abgeschlossen haben, löschen Sie sie von Ihrem SQL Server.
+Wenn Sie die Verwendung der TutorialDB-Datenbank abgeschlossen haben, löschen Sie sie von Ihrem Server.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

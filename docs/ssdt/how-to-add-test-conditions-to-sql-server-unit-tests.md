@@ -1,23 +1,23 @@
 ---
 title: Hinzufügen von Testbedingungen zu SQL Server-Komponententests
+description: Hier erfahren Sie, wie Sie Testbedingungen zu einer SQL Server-Komponente hinzufügen. Dabei wird gezeigt, wie Sie hierfür den SQL Server-Komponententest-Designer verwenden.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4216358a4b8b541ed724b70fe68245a16235664b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e78a045c3dd7127df8c692120ff140892594fb0c
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241625"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518930"
 ---
-# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Vorgehensweise: Hinzufügen von Testbedingungen zu SQL Server-Komponententests
+# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Gewusst wie: Hinzufügen von Testbedingungen zu SQL Server-Komponententests
 
 Sie können den **SQL Server-Komponententest-Designer** verwenden, um einem SQL Server-Komponententest Testbedingungen hinzuzufügen. Wenn Sie die Testklasse speichern, werden die Testbedingungen automatisch in Ihrem Testprojekt als Visual C\#- oder Visual Basic-Code in der Quellcodedatei gespeichert, in der die Testklasse enthalten ist. Nachdem Sie eine Testbedingung gespeichert haben, können Sie diese im **SQL Server-Komponententest-Designer** oder in der zugehörigen Quellcodedatei bearbeiten.  
   
@@ -49,10 +49,10 @@ Sie können den **SQL Server-Komponententest-Designer** verwenden, um einem SQL 
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Gewusst wie: Erstellen eines leeren SQL Server-Komponententests](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
-[Gewusst wie: Erstellen von SQL Server-Komponententests für Funktionen, Trigger und gespeicherte Prozeduren](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
+[Vorgehensweise: Erstellen eines leeren SQL Server-Komponententests](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
+[Vorgehensweise: Erstellen von SQL Server-Komponententests für Funktionen, Trigger und gespeicherte Prozeduren](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
 [Verwenden von Testbedingungen in SQL Server-Komponententests](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Skripts in SQL Server-Komponententests](../ssdt/scripts-in-sql-server-unit-tests.md)  
 [Interpretieren der Ergebnisse von SQL Server-Komponententests](../ssdt/interpreting-sql-server-unit-test-results.md)  
-[Gewusst wie: Ausführen von SQL Server-Komponententests](../ssdt/how-to-run-sql-server-unit-tests.md)  
+[Vorgehensweise: Ausführen von SQL Server-Komponententests](../ssdt/how-to-run-sql-server-unit-tests.md)  
   

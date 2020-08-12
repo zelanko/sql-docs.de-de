@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262127"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353097"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Versionshinweise zu „SqlPackage.exe“
 
@@ -34,6 +34,21 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
+
+|Plattform|Download|Veröffentlichungsdatum|Version|Entwickeln
+|:---|:---|:---|:---|:---|
+|Windows|[MSI-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2134206)|24. Juni 2020|18.5.1|15.0.4826.1|
+|macOS .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2134312)|24. Juni 2020| 18.5.1|15.0.4826.1|
+|Linux .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2134311)|24. Juni 2020| 18.5.1|15.0.4826.1|
+|Windows .NET Core |[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2134310)|24. Juni 2020| 18.5.1|15.0.4826.1|
+
+### <a name="fixes"></a>Fehlerbehebungen
+| Funktion | Details |
+| :------ | :------ |
+| Bereitstellung | Es wurde eine Regression behoben, die in 18.5 erstmals aufgetreten ist und den Fehler "Incorrect syntax near 'type'" (Falsche Syntax bei „Typ“) ausgelöst hat, wenn eine DACPAC-Datei bereitgestellt oder eine BACPAC-Datei von einem Benutzer über eine externe Anmeldung auf lokaler Ebene importiert wurde. | 
+
 ## <a name="185-sqlpackage"></a>18.5 sqlpackage
 
 |Plattform|Download|Veröffentlichungsdatum|Version|Entwickeln
@@ -51,7 +66,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Bereitstellung | Unterstützung von sortiertem gruppiertem Columnstore-Index in Azure SQL Data Warehouse wurde hinzugefügt. |
 | Bereitstellung | Unterstützung von externen Datenquellen (für Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data-Cluster) und externen Tabellen für SQL Server 2019-Big Data-Cluster wurde hinzugefügt. |
 | Bereitstellung | SQL Database Edge-Instanz wurde als unterstützte Edition hinzugefügt. |
-| Bereitstellung | Unterstützung von Servernamen für verwaltete Instanzen im Format „\<Server>.\<DNS-Zone>.database.windows.net“ wurde hinzugefügt. |
+| Bereitstellung | Unterstützung von Servernamen für verwaltete Instanzen im Format „\<server>.\<dnszone>.database.windows.net“ wurde hinzugefügt. |
 | Bereitstellung | Unterstützung des Kopierbefehls in Azure SQL Data Warehouse wurde hinzufügt. |
 | Bereitstellung | Die Bereitstellungsoption „IgnoreTablePartitionOptions“ für während der Veröffentlichung wurde hinzugefügt, um die Neuerstellung von Tabellen zu vermeiden, wenn die Partitionsfunktion für eine Tabelle für Azure SQL Data Warehouse geändert wird. |
 | .NET Core | Unterstützung von Microsoft.Data.SqlClient in der .NET Core-Version von sqlpackage wurde hinzugefügt. |
@@ -60,7 +75,6 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>Fehlerbehebungen
 | Fix | Details |
 | :-- | :------ |
-| Bereitstellung | Korrektur für die Veröffentlichung des DACPACs einer Datenbank, die einen externen Benutzer enthält, wodurch bisher folgender Fehler ausgelöst wurde: „Der Objektverweis ist nicht auf eine Instanz eines Objekts festgelegt.“ |
 | Bereitstellung | Korrektur der Analyse eines JSON-Pfads als Ausdruck |
 | Bereitstellung | Korrektur der Erstellung von GRANT-Anweisungen für die Berechtigungen AlterAnyDatabaseScopedConfiguration und AlterAnySensitivityClassification |
 | Bereitstellung | Behebung eines Fehlers, aufgrund dessen die Berechtigung für externe Skripts nicht erkannt wurde |
@@ -71,6 +85,13 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom | Behebung eines ScriptDom-Fehlers, bei dem keine nach einem Inlineindex definierten Inlineeinschränkungen erkannt werden konnten |
 | ScriptDom | Ergänzung der fehlenden schließenden Klammer bei SYSTEM_TIME in ScriptDom in einer Batchanweisung |
 | Always Encrypted | Behebung eines Fehlers, bei dem eine #tmpErrors-Tabelle nicht gelöscht wird, wenn sqlpackage die Verbindung erneut herstellt und die temporäre Tabelle bereits entfernt wurde, da diese entfernt wird, wenn die Verbindung getrennt wird |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Bekannte Probleme
+| Funktion | Details |
+| :------ | :------ |
+| Bereitstellung |  In 18.5 wurde eine Regression eingeführt, die den Fehler "Incorrect syntax near 'type'" (Falsche Syntax bei „Typ“) ausgelöst hat, wenn eine DACPAC-Datei bereitgestellt oder eine BACPAC-Datei von einem Benutzer über eine externe Anmeldung auf lokaler Ebene importiert wurde. Die Problemumgehung besteht in der Verwendung von sqlpackage 18.4. Zudem wird das Problem in der nächsten Version von sqlpackage behoben. | 
+| .NET Core | Beim Importieren von BACPAC-Dateien, die als vertraulich eingestuft sind, wird aufgrund dieses [bekannten Problems](https://github.com/dotnet/SqlClient/issues/559) der Fehler "Schwerwiegender Fehler bei interner Verbindung" in Microsoft.Data.SqlClient angezeigt. Dies wird im nächsten sqlpackage-Release behoben. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1841-sqlpackage"></a>18.4.1 sqlpackage

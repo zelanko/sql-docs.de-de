@@ -1,25 +1,25 @@
 ---
-title: Was ist Anwendungsbereitstellung?
+title: Was ist eine Anwendungsbereitstellung?
 titleSuffix: SQL Server Big Data Clusters
 description: In diesem Artikel wird die Anwendungsbereitstellung auf einem Big Data-Cluster für SQL Server 2019 beschrieben.
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831572"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215449"
 ---
-# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>Was hat es mit der Anwendungsbereitstellung in einem Big Data-Cluster auf sich?
+# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>Was hat es mit der Anwendungsbereitstellung in Big Data-Cluster auf sich?
 
-Die Anwendungsbereitstellung ermöglicht die Bereitstellung von Anwendungen auf dem Big Data-Cluster durch die Bereitstellung von Schnittstellen zum Erstellen, Verwalten und Ausführen von Anwendungen. Anwendungen, die auf dem Big Data-Cluster bereitgestellt werden, profitieren von der Rechenleistung des Clusters und können auf die Daten zugreifen, die auf dem Cluster verfügbar sind. Dadurch wird die Skalierbarkeit und Leistung der Anwendungen erhöht, während die Anwendungen, in denen sich die Daten befinden, verwaltet werden. Die unterstützten Anwendungsruntimes für Big Data-Cluster in SQL Server sind R, Python, SSIS und MLeap.
+Es handelt sich hierbei um die Bereitstellung von Anwendungen in Big Data-Cluster durch die Bereitstellung von Schnittstellen zum Erstellen, Verwalten und Ausführen von Anwendungen. Anwendungen, die auf dem Big Data-Cluster bereitgestellt werden, profitieren von der Rechenleistung des Clusters und können auf die Daten zugreifen, die auf dem Cluster verfügbar sind. Dadurch wird die Skalierbarkeit und Leistung der Anwendungen erhöht, während die Anwendungen, in denen sich die Daten befinden, verwaltet werden. Die unterstützten Anwendungsruntimes für Big Data-Cluster in SQL Server sind R, Python, SSIS und MLeap.
 
 In den folgenden Abschnitten werden die Architektur und die Funktionalität der Anwendungsbereitstellung beschrieben.
 
@@ -52,6 +52,28 @@ Diese Einstellungen wirken sich auf die Anzahl der Anforderungen aus, die die Be
 Nachdem das ReplicaSet erstellt und die Pods gestartet wurden, wird ein Cron-Auftrag erstellt, wenn ein `schedule` in der `spec.yaml`-Datei festgelegt wurde. Zum Schluss wird ein Kubernetes-Dienst erstellt, der zum Verwalten und Ausführen der Anwendung verwendet werden kann (siehe unten).
 
 Wenn eine Anwendung ausgeführt wird, leitet der Kubernetes-Dienst für die Anwendung die Anforderungen an ein Replikat weiter und gibt die Ergebnisse zurück.
+
+## <a name="security-considerations-for-applications-deployments-on-openshift"></a><a id="app-deploy-security"></a> Hinweise für Anwendungsbereitstellungen in OpenShift
+
+SQL Server 2019 CU5 umfasst die Unterstützung für die Bereitstellung von Big Data-Cluster in Red Hat OpenShift sowie ein aktualisiertes Sicherheitsmodell für Big Data-Cluster, für das keine privilegierten Container mehr erforderlich sind. Zusätzlich zu nicht privilegierten Containern werden Container standardmäßig für alle neuen Bereitstellungen unter Verwendung von SQL Server 2019 CU5 nicht als Root-Benutzer ausgeführt.
+
+Zum Zeitpunkt der Veröffentlichung von CU5 wird der Setupschritt der Anwendungen, die mit [App Deploy](concept-application-deployment.md)-Schnittstellen bereitgestellt wurden, weiterhin als *Root*-Benutzer ausgeführt. Dies ist erforderlich, da während des Setups zusätzliche, von der Anwendung verwendete Pakete installiert werden. Anderer Benutzercode, der als Teil der Anwendung bereitgestellt wird, wird als Benutzer mit niedrigen Berechtigungen ausgeführt. 
+
+Außerdem steht die optionale Funktion **CAP_AUDIT_WRITE** zur Verfügung, die benötigt wird, um mithilfe von Cron-Aufträgen Zeitpläne für SSIS-Anwendungen zu erstellen. Wenn die YAML-Spezifikationsdatei der Anwendung einen Zeitplan vorgibt, wird die Anwendung über einen Cron-Auftrag ausgelöst. Dafür wird diese zusätzliche Funktion benötigt.  Alternativ kann die Anwendung nach Bedarf mit dem Befehl *azdata app run* über einen Webdienstaufruf ausgelöst werden. Hierfür wird die Funktion „CAP_AUDIT_WRITE“ nicht benötigt. 
+
+> [!NOTE]
+> Die benutzerdefinierte Sicherheitskontexteinschränkung (Security Context Constraint, SCC) im [Artikel zur OpenShift-Bereitstellung](deploy-openshift.md) umfasst diese Funktion nicht, da sie nicht für die Standardbereitstellung von Big Data-Cluster erforderlich ist. Sie können diese Funktion aktivieren, indem Sie zuerst die benutzerdefinierte SCC-YAML-Datei so aktualisieren, dass sie den Befehl „CAP_AUDIT_WRITE“ enthält. 
+
+```yml
+...
+allowedCapabilities:
+- SETUID
+- SETGID
+- CHOWN
+- SYS_PTRACE
+- AUDIT_WRITE
+...
+```
 
 ## <a name="how-to-work-with-application-deployment"></a>Vorgehensweise: Arbeiten mit der Anwendungsbereitstellung
 

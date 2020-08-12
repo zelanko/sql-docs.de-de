@@ -1,5 +1,6 @@
 ---
 title: Leere und NULL-Datenpunkte in Diagrammen (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die Verarbeitung von leeren Werten in Diagrammen, die Verwendung von Platzhaltern und wie leere Datenpunkte und NULL-Datenpunkte im Berichts-Generator angezeigt werden.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d675921a3fe5dd1a49c8e9f4f9c52721db63726e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0945637105fccb7558521f59f65ae28f9b29808d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082130"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048274"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Leere und NULL-Datenpunkte in Diagrammen (Berichts-Generator und SSRS)
 

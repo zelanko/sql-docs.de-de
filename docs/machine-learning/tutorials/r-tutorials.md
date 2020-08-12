@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 63c271c4e1d59c9446495607b42b0b5ad13ea246
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ac7bbbb10d736b68d3e9930fafd7ae6e50f739f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85671028"
 ---
 # <a name="r-tutorials-for-sql-machine-learning"></a>R-Turorials für SQL Machine Learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In diesem Artikel werden die R-Tutorials und -Schnellstarts für [Machine Learning Services in SQL Server](../sql-server-machine-learning-services.md) und in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) beschrieben.
@@ -31,17 +30,28 @@ In diesem Artikel werden die R-Tutorials und -Schnellstarts für [SQL Server Mac
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 In diesem Artikel werden die R-Tutorials und -Schnellstarts für [SQL Server 2016 R Services](../r/sql-server-r-services.md) beschrieben.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In diesem Artikel werden die Python-Tutorials und -Schnellstarts für [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) beschrieben.
+::: moniker-end
 
 <a name="bkmk_sqltutorials"></a>
 
 ## <a name="r-tutorials"></a>R-Tutorials
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 | Lernprogramm | BESCHREIBUNG |
 |------|-------------|
 | [Vorhersagen für einen Skiverleih mit Entscheidungsstruktur](r-predictive-model-introduction.md) | Verwenden Sie R und ein Entscheidungsstrukturmodell, um die Anzahl zukünftiger Skivermietungen vorherzusagen. Bereiten Sie mithilfe von Notebooks in Azure Data Studio Daten vor und trainieren Sie das Modell, und verwenden Sie T-SQL für die Modellimplementierung. |
 | [Kategorisierung von Kunden mit K-Means-Clustering](r-clustering-model-introduction.md) | Verwenden Sie R, um ein K-Means-Clusteringmodell zum Kategorisieren von Kunden zu entwickeln und bereitzustellen. Bereiten Sie mithilfe von Notebooks in Azure Data Studio Daten vor und trainieren Sie das Modell, und verwenden Sie T-SQL für die Modellimplementierung. |
-| [Datenbankinterne R-Analysen für Data Scientists](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | In diesem Tutorial wird R-Entwicklern, für die SQL Server noch Neuland ist, erklärt, wie allgemeine Data Science-Aufgaben in SQL Server ausgeführt werden. Laden und Visualisieren Sie Daten, trainieren und speichern Sie ein Modell in SQL Server, und verwenden Sie es für Vorhersageanalysen. |
-| [Datenbankinterne R-Analysen für SQL-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Erstellen Sie eine vollständige R-Lösung mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Tools. Konzentriert sich auf das Verschieben einer Lösung in die Produktionsumgebung. Sie erfahren, wie Sie R-Code in einer gespeicherten Prozedur umschließen können, ein R-Modell in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank speichern können und parametrisierte Aufrufe des R-Modells für die Vorhersage durchführen können. |
+| [Datenbankinterne R-Analysen für Data Scientists](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Dieses Tutorial richtet sich an R-Entwickler ohne Vorkenntnisse in SQL-Machine-Learning und erläutert, wie allgemeine Data-Science-Aufgaben in SQL ausgeführt werden. Zudem erfahren Sie, wie Sie Daten laden und visualisieren, ein Modell trainieren sowie in einer Datenbank speichern und das Modell für Predictive Analytics verwenden. |
+| [Datenbankinterne R-Analysen für SQL-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md) | In diesem Tutorial erfahren Sie, wie Sie nur mithilfe von SQL-Tools eine vollständige R-Lösung erstellen. Konzentriert sich auf das Verschieben einer Lösung in die Produktionsumgebung. Zudem wird erläutert, wie Sie R-Code in einer gespeicherten Prozedur umschließen, ein R-Modell in einer Datenbank speichern und zu Vorhersagezwecken parametrisierte Aufrufe des R-Modells durchführen. |
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current"
+| Lernprogramm | BESCHREIBUNG |
+|------|-------------|
+| [Vorhersagen für einen Skiverleih mit Entscheidungsstruktur](r-predictive-model-introduction.md) | Verwenden Sie R und ein Entscheidungsstrukturmodell, um die Anzahl zukünftiger Skivermietungen vorherzusagen. Bereiten Sie mithilfe von Notebooks in Azure Data Studio Daten vor und trainieren Sie das Modell, und verwenden Sie T-SQL für die Modellimplementierung. |
+| [Kategorisierung von Kunden mit K-Means-Clustering](r-clustering-model-introduction.md) | Verwenden Sie R, um ein K-Means-Clusteringmodell zum Kategorisieren von Kunden zu entwickeln und bereitzustellen. Bereiten Sie mithilfe von Notebooks in Azure Data Studio Daten vor und trainieren Sie das Modell, und verwenden Sie T-SQL für die Modellimplementierung. |
+::: moniker-end
 
 ## <a name="r-quickstarts"></a>R-Schnellstarts
 
@@ -55,4 +65,4 @@ Wenn SQL Machine Learning noch Neuland für Sie ist, können Sie auch die R-Schn
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere technische Details zu R in SQL Server finden Sie unter [R-Spracherweiterung in SQL Server](../concepts/extension-r.md).
++ [Python-Erweiterung in SQL Server](../concepts/extension-r.md)

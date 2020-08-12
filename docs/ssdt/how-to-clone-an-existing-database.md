@@ -1,23 +1,23 @@
 ---
 title: Klonen von vorhandenen Datenbanken
+description: In diesem Artikel erfahren Sie, wie Sie eine Datenbank klonen. Es werden die Schritte für das Erstellen einer neuen Datenbank, das Duplizieren des Datenbankschemas und das Replizieren der Daten beschrieben.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03dedf5c30c8370195243c11406552d12edd8394
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241590"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518900"
 ---
-# <a name="how-to-clone-an-existing-database"></a>Vorgehensweise: Klonen einer vorhandenen Datenbank
+# <a name="how-to-clone-an-existing-database"></a>Gewusst wie: Klonen von vorhandenen Datenbanken
 
 In dieser Aufgabe werden einige der in den vorherigen Prozeduren eingeführten Schritte verwendet, um eine neue Datenbank zu erstellen und vorhandene Daten in diese zu portieren. Darüber hinaus werden die Schritte durchgeführt, die unter [Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) beschrieben werden, um das Schema einer Quell- und das einer Projektdatenbank zu synchronisieren.  
   
@@ -55,5 +55,5 @@ Mit diesen Schritten können Sie auf einfache Weise eine Entwicklungs- oder Test
 7.  Überprüfen Sie mithilfe des Daten-Editors, ob alle Tabellen in der neuen Datenbank `TradeDev` aufgefüllt wurden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

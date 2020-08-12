@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie statischen Text, Bilder, Linien, Rechtecke und Rahmen zu Kopf- oder Fußzeilen von Seiten im Berichts-Generator hinzufügen.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adb2d9d24bc353c7d1c64c328b342b24022faef8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab6d1585b254e8c03d9e471b32d3429cc489f8a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081561"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056534"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile (Berichts-Generator und SSRS)
   Sie können statischen Text, Bilder, Linien, Rechtecke und Rahmen zu Seitenköpfen und -füßen hinzufügen. Wenn Sie variable oder berechnete Daten in einem Seitenkopf oder -fuß verwenden möchten, können Sie Ausdrücke und datengebundene Bilder in einem Textfeld platzieren.  

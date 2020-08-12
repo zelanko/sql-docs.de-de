@@ -1,7 +1,7 @@
 ---
 title: Suchen von zusätzlichen Informationen zum SqlClient-Treiber
 description: Seite mit nützlichen Informationen zum Treiber
-ms.date: 09/30/2019
+ms.date: 06/15/2019
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 185c8648af5a55f53a25839a40008a203239957f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 26ee3500511ca937e0712b9338ba9a796b3a8a45
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929015"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85106896"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>Suchen von zusätzlichen Informationen zum SqlClient-Treiber
 
@@ -30,7 +30,7 @@ Weitere Informationen zum SqlClient-Datenanbieter von Microsoft für die SQL Ser
   
 |Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[GitHub-Repository für .Net CoreFX](https://github.com/dotnet/corefx)|Dieses Repository enthält die Bibliothekimplementierung für .NET Core.|
+|[GitHub-Repository für die .NET-Runtime](https://github.com/dotnet/runtime)|Dieses Repository enthält die Bibliothekimplementierung für .NET Core.|
 |[GitHub-Repository des Microsoft SqlClient-Datenanbieters für SQL Server](https://github.com/dotnet/SqlClient)|Dieses Repository enthält den Quellcode für den SqlClient-Treiber.|  
 |[.NET-API-Browser](https://docs.microsoft.com/dotnet/api/)|Diese Website enthält .NET-API-Informationen für den Treiber.|  
   

@@ -5,20 +5,20 @@ description: Hier erfahren Sie, wie Sie mit einem Skript Big Data-Cluster für S
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eea087ed3a4859e179f7bb0d1e77140bb8229a17
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 052e3794fa058ec988160855123c5b0993f3fbd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77608385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85699833"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Verwenden eines Python-Skripts zum Bereitstellen eines Big-Data-Clusters für SQL Server in Azure Kubernetes Service (AKS)
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In diesem Tutorial verwenden Sie ein Python-Beispielskript, um [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] in Azure Kubernetes Service (AKS) bereitzustellen.
 
@@ -85,7 +85,8 @@ Führen Sie das Bereitstellungsskript anhand der folgenden Schritte in einer Bas
    > Die Standardgröße **Standard_L8s** für Computer ist möglicherweise nicht in allen Azure-Regionen verfügbar. Wenn Sie eine andere Größe auswählen, müssen Sie sicherstellen, dass die Gesamtzahl der Datenträger, die den Knoten im Cluster angefügt werden können, größer oder gleich 24 ist. Auf dem Cluster ist für jeden PersistentVolumeClaim ein angefügter Datenträger erforderlich. Aktuell sind für Big-Data-Cluster 24 PersistentVolumeClaims erforderlich. Für die Computergröße [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series) werden beispielsweise 32 angefügte Datenträger unterstützt, sodass Sie Big-Data-Cluster mit einem einzelnen Knoten dieser Größe auswerten können.
 
    > [!NOTE]
-   > Das SQL Server-Konto `sa` ist während der Bereitstellung eines Big Data-Clusters deaktiviert. In der SQL Server-Masterinstanz wird eine neue SysAdmin-Anmeldung bereitgestellt, die den gleichen Namen wie für die Eingabe **Benutzername** und das der Eingabe **Kennwort** entsprechende Kennwort verwendet. Die gleichen Werte für **Benutzername** und **Kennwort** werden zur Bereitstellung eines Controller-Administratorbenutzers verwendet. Der einzige für das Gateway (Knox) unterstützte Benutzer ist **root**, und das Kennwort ist das gleiche wie oben.
+   > Das SQL Server-Konto `sa` ist während der Bereitstellung eines Big Data-Clusters deaktiviert. In der SQL Server-Masterinstanz wird eine neue SysAdmin-Anmeldung bereitgestellt, die den gleichen Namen wie für die Eingabe **Benutzername** und das der Eingabe **Kennwort** entsprechende Kennwort verwendet. Die gleichen Werte für **Benutzername** und **Kennwort** werden zur Bereitstellung eines Controller-Administratorbenutzers verwendet. Bei vor SQL Server 2019 CU5 bereitgestellten Clustern ist der einzige für das Gateway (Knox) unterstützte Benutzer **root** und das Kennwort das gleiche wie oben.
+   >[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 1. Das Skript erstellt zunächst einen AKS-Cluster mithilfe der Parameter, die Sie angegeben haben. Dieser Schritt dauert einige Minuten.
 

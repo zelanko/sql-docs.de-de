@@ -1,5 +1,6 @@
 ---
 title: Erstellen eines neuen Datenbankprojekts
+description: In diesem Artikel erfahren Sie, wie Sie ein neues Datenbankprojekt erstellen. Außerdem erfahren Sie, wie Sie das Schema aus einer vorhandenen Datenbank in das neue Projekt importieren.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -13,22 +14,21 @@ f1_keywords:
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 3ce0ac6afc902803afe8aa6e20c71f38998f8286
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f4e89dcf95cc02f3eea7cf681e9cdfc48d906367
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241538"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518990"
 ---
 # <a name="how-to-create-a-new-database-project"></a>Gewusst wie: Erstellen eines neuen Datenbankprojekts
 
 Sie können ein neues Datenbankprojekt erstellen und das Datenbankschema aus einer vorhandenen Datenbank, einer SQL-Skriptdatei oder einer Datenebenenanwendung (".dacpac") importieren. Anschließend können Sie die gleichen Visual Designer-Tools (Transact\-SQL-Editor, Tabellen-Designer) aufrufen, die für die Entwicklung verbundener Datenbanken verfügbar sind, um Änderungen am Offlinedatenbankprojekt vorzunehmen, und die Änderungen dann wieder in der Produktionsdatenbank veröffentlichen. Die Änderungen können auch als Skript gespeichert werden, um sie später zu veröffentlichen. Mithilfe des Bereichs **Projekteigenschaften** können Sie die Zielplattform in andere Versionen von SQL Server (einschließlich SQL Azure) ändern.  
   
-In den folgenden beiden Prozeduren wird durch das Erstellen eines neuen Datenbankprojekts und das Importieren des Schemas aus einer vorhandenen Datenbank im Grunde das gleiche Ziel erreicht. Jedes Datenbankobjekt wird im **Projektmappen-Explorer** als SQL-Skriptdatei (SQL) dargestellt. Weitere Informationen zum Importieren eines Datenbankschemas aus einer Momentaufnahme finden Sie unter [Gewusst wie: Erstellen einer Momentaufnahme eines Projekts](../ssdt/how-to-create-a-snapshot-of-a-project.md).  
+In den folgenden beiden Prozeduren wird durch das Erstellen eines neuen Datenbankprojekts und das Importieren des Schemas aus einer vorhandenen Datenbank im Grunde das gleiche Ziel erreicht. Jedes Datenbankobjekt wird im **Projektmappen-Explorer** als SQL-Skriptdatei (SQL) dargestellt. Weitere Informationen zum Importieren eines Datenbankschemas aus einer Momentaufnahme finden Sie unter [Vorgehensweise: Erstellen einer Momentaufnahme eines Projekts](../ssdt/how-to-create-a-snapshot-of-a-project.md).  
   
 > [!WARNING]  
 > Bei den folgenden Vorgehensweisen werden die Entitäten verwendet, die in vorherigen Vorgehensweisen im Abschnitt [Entwicklung verbundener Datenbanken](../ssdt/connected-database-development.md) erstellt wurden.  
@@ -55,7 +55,7 @@ In den folgenden beiden Prozeduren wird durch das Erstellen eines neuen Datenban
   
 ### <a name="to-create-a-new-project-and-import-existing-database-schema"></a>So erstellen Sie ein neues Projekt und importieren ein vorhandenes Datenbankschema  
   
-1.  Klicken Sie auf **Datei**, **Neu** und dann auf **Projekt**. Wählen Sie im linken Bereich des Dialogfelds **Neues Projekt** die Option **SQL Server** aus. Beachten Sie, dass nur ein Typ von Datenbankprojekt vorhanden ist: das **SQL Server-Datenbankprojekt**. Es gibt kein plattformspezifisches Projekt wie in früheren Versionen von Visual Studio. Sie können im Dialogfeld **Projekteinstellungen** die Zielplattform festlegen, nachdem das Projekt erstellt wurde. Diese Aufgabe wird im Thema [Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) erläutert.  
+1.  Klicken Sie auf **Datei**, **Neu** und dann auf **Projekt**. Wählen Sie im linken Bereich des Dialogfelds **Neues Projekt** die Option **SQL Server** aus. Beachten Sie, dass nur ein Typ von Datenbankprojekt vorhanden ist: das **SQL Server-Datenbankprojekt**. Es gibt kein plattformspezifisches Projekt wie in früheren Versionen von Visual Studio. Sie können im Dialogfeld **Projekteinstellungen** die Zielplattform festlegen, nachdem das Projekt erstellt wurde. Diese Aufgabe wird im Thema [Vorgehensweise: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) behandelt.  
   
 2.  Ändern Sie den Namen des Projekts in **TradeDev**, und klicken Sie auf **OK**, um das neue Projekt zu erstellen.  
   
@@ -76,5 +76,5 @@ In den folgenden beiden Prozeduren wird durch das Erstellen eines neuen Datenban
 9. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt **TradeDev**, und wählen Sie **Erstellen** aus, um das Datenbankprojekt zu erstellen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+[Vorgehensweise: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   

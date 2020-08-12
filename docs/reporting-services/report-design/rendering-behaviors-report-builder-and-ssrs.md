@@ -1,5 +1,6 @@
 ---
 title: Renderingverhalten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+description: In diesem Artikel erhalten Sie Informationen zu den Regeln, die auf den Hauptteil des Berichts und die dazugehörigen Inhalte angewendet werden, wenn ein Bericht im Berichts-Generator gerendert wird.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24b196927e582d1b21bf9f11bd7ea824ecf8ba7b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0214df6c7299f0a3240b904bbd00e965988d95dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576458"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048247"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Renderingverhalten (Berichts-Generator und SSRS)
   Abhängig vom ausgewählten Renderer werden beim Rendern eines Berichts bestimmte Regeln auf den Hauptteil des Berichts und seinen Inhalt angewendet. Wie sich Berichtselemente auf einer Seite zusammenfügen, wird durch die Kombination folgender Faktoren bestimmt:  

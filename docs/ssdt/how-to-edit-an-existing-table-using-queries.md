@@ -1,23 +1,23 @@
 ---
 title: Bearbeiten einer vorhandenen Tabelle mithilfe von Abfragen
+description: Hier erfahren Sie, wie Sie eine Transact-SQL-Abfrage verwenden, um die Definition oder die Daten einer Tabelle zu bearbeiten. Dabei werden Beispiele für das Bearbeiten einer Tabellendefinition sowie für das Einfügen von Zeilen in eine Tabelle gezeigt.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 56411bfffbaebeb07adf23b456a20523342db21d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1ebdca633ff866d51fcc20aa05993bb5969e4b2
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241406"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518810"
 ---
-# <a name="how-to-edit-an-existing-table-using-queries"></a>Vorgehensweise: Bearbeiten einer vorhandenen Tabelle mit Abfragen
+# <a name="how-to-edit-an-existing-table-using-queries"></a>Gewusst wie: Bearbeiten einer vorhandenen Tabelle mithilfe von Abfragen
 
 Sie können die Definition einer Tabelle oder ihre Daten bearbeiten, indem Sie eine Transact\-SQL-Abfrage schreiben. Verwenden Sie zum Anzeigen oder visuellen Eingeben von Daten in einer Tabelle den Daten-Editor, wie unter [Entwicklung verbundener Datenbanken](../ssdt/connected-database-development.md) beschrieben wird.  
   
@@ -32,7 +32,7 @@ Sie können die Definition einer Tabelle oder ihre Daten bearbeiten, indem Sie e
   
 3.  Überprüfen Sie das Feld **NULL-Werte zulassen** für die Spalte **Address**. Beachten Sie, dass der entsprechende Code im Skriptbereich sofort in `NULL` geändert wird.  
   
-4.  Aktualisieren Sie die Datenbank gemäß den Schritten im Thema [Gewusst wie: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) an.  
+4.  Aktualisieren Sie die Datenbank, indem Sie die Schritte im Thema [Vorgehensweise: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) befolgen.  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>So füllen Sie mit einer Transact\-SQL-Abfrage neue Tabellen mit Daten auf  
   

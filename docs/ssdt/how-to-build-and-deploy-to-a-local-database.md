@@ -1,21 +1,21 @@
 ---
 title: Erstellen und Bereitstellen in einer lokalen Datenbank
+description: In diesem Artikel erhalten Sie Informationen zur lokalen Serverinstanz, die SQL Server 2012 bereitstellt. Außerdem erfahren Sie, wie Sie diese Instanz für das Erstellen, Testen und Debuggen von Entwicklungsprojekten verwenden.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c3c079ddc375c1fa252975c419aff587d324dd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7503049f0ea68b38206764eb3163a5a80a0b2d7
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241610"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518920"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>Gewusst wie: Erstellen und Bereitstellen in einer lokalen Datenbank
 

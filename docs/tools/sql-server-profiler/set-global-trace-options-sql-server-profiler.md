@@ -1,6 +1,7 @@
 ---
 title: Festlegen globaler Ablaufverfolgungsoptionen
 titleSuffix: SQL Server Profiler
+description: Hier erfahren Sie, wie Sie globale Ablaufverfolgungsoptionen festlegen, und erhalten Informationen zu den Optionen, die eine bestimmte SQL Server Profiler-Instanz auf alle Ablaufverfolgungen anwenden kann.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: c66bb6a8a2f894cb80fd17c9fce24a0d98d027f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 65f9f3c32da239c7ae6f41dfbe74b7ee8bb9ce41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726859"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Festlegen globaler Ablaufverfolgungsoptionen (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Thema wird beschrieben, wie Sie die Optionen festlegen können, die für alle Ablaufverfolgungen gelten, die mit einer bestimmten Instanz von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]erstellt werden.  
   
@@ -46,7 +47,7 @@ In diesem Thema wird beschrieben, wie Sie die Optionen festlegen können, die f�
   
     -   **Standardanzahl von Wiedergabethreads** wird die Anzahl von Prozessorthreads kontrolliert, die während der Wiedergabe verwendet werden sollen. Durch eine höhere Anzahl von Threads wird die Wiedergabe schneller abgeschlossen. Die Serverleistung wird während der Wiedergabe jedoch beeinträchtigt. Die empfohlene Einstellung lautet **4**. Die folgende Tabelle enthält die verfügbaren Optionen:  
   
-        |value|BESCHREIBUNG|  
+        |Wert|BESCHREIBUNG|  
         |-----------|-----------------|  
         |**2**|Minimalwert. Verwenden von zwei Threads für die Wiedergabe.|  
         |**4**|Standardwert.|  
@@ -54,7 +55,7 @@ In diesem Thema wird beschrieben, wie Sie die Optionen festlegen können, die f�
   
     -   Mit**Standardwartezeit für Systemüberwachung (Sek.)** wird die maximale Zeitspanne in Sekunden angegeben, über die ein Wiedergabethread einen anderen Prozess blockieren kann. In der folgenden Tabelle werden die einzelnen Werten näher erläutert.  
   
-        |value|BESCHREIBUNG|  
+        |Wert|BESCHREIBUNG|  
         |-----------|-----------------|  
         |**0**|Minimalwert. Die Einstellung **0** bedeutet, dass [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] einen blockierenden Prozess in keinem Fall beendet.|  
         |**3600**|Standardwert. Lässt blockierende Prozesse zu, die nicht länger als **3600** Sekunden oder eine Stunde dauern.|  
@@ -62,7 +63,7 @@ In diesem Thema wird beschrieben, wie Sie die Optionen festlegen können, die f�
   
     -   Mit**Standardabrufintervall für Systemüberwachung (Sek.)** wird die Frequenz festgelegt, mit der Wiedergabethreads für blockierende Prozesse abgerufen werden. In der folgenden Tabelle werden die einzelnen Werten näher erläutert.  
   
-        |value|BESCHREIBUNG|  
+        |Wert|BESCHREIBUNG|  
         |-----------|-----------------|  
         |**1**|Minimalwert. Eine Einstellung von **1** bedeutet, dass [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] blockierende Prozesse einmal pro Sekunde abruft.|  
         |**60**|Standardwert. Abrufen von blockierenden Prozessen einmal pro Minute.|  

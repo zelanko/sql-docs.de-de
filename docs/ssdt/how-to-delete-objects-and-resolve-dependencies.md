@@ -1,5 +1,6 @@
 ---
 title: Löschen von Objekten und Auflösen von Abhängigkeiten
+description: In diesem Artikel wird erläutert, wie Sie Datenbankobjekte umbenennen oder löschen. Zudem erfahren Sie, welche abhängigen Objekte automatisch von SSDT aktualisiert werden und welche Abhängigkeiten Sie selbst aktualisieren müssen.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,16 +11,15 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c9f2bd6ed462004d76750fb2328d1615a51c2c84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aecacc373ccd1392217d57d51875094a5f9d4d34
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241426"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519060"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>Gewusst wie: Löschen von Objekten und Auflösen von Abhängigkeiten
 
@@ -47,7 +47,7 @@ Wenn Sie ein Objekt im **SQL Server-Objekt-Explorer** umbenennen oder löschen, 
     > [!WARNING]  
     > Skriptbasierte Abhängigkeiten (z. B. Verweise aus einer Sicht auf eine Tabelle) und gespeicherte Prozeduren werden von SSDT nicht automatisch aktualisiert. Nach dem Umbenennen können Sie anhand des Bereichs **Fehlerliste** alle anderen Abhängigkeiten suchen und diese manuell korrigieren.  
   
-5.  Wenden Sie die Änderung gemäß den Schritten im vorherigen Verfahren [Gewusst wie: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) an.  
+5.  Übernehmen Sie die Änderungen, indem Sie die Schritte in der vorherigen Prozedur [Vorgehensweise: Aktualisieren einer verbundenen Datenbank mit Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) ausführen.  
   
 6.  Klicken Sie im **SQL Server-Objekt-Explorer** erneut mit der rechten Maustaste auf die Tabelle **Customers**, und wählen Sie die Option **Daten anzeigen** aus. Beachten Sie, dass Tabellendaten nach dem Umbenennungsvorgang unverändert beibehalten sind.  
   

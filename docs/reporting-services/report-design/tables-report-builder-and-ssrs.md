@@ -1,5 +1,6 @@
 ---
 title: Tabellen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+description: In diesem Artikel wird beschrieben, wie Sie Detaildaten oder gruppierte Daten anzeigen, indem Sie ein einzelnes Feld oder mehrere Felder verwenden oder in einem paginierten Bericht im Berichts-Generator Ihren eigenen Ausdruck schreiben.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cac6edf23b15cbb6dc100c84a7035b425798d9d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574738"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067105"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabellen (Berichts-Generator und SSRS)
  Sie können in [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]eine Tabelle zum Anzeigen von Detaildaten oder gruppierten Daten verwenden, oder eine Kombination von beiden Daten in einem paginierten Bericht.   
@@ -42,7 +43,7 @@ ms.locfileid: "65574738"
   
  ![Auf der Entwurfsoberfläche ausgewählte Tabellenvorlage](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Auf der Entwurfsoberfläche ausgewählte Tabellenvorlage")  
   
- Das Zeilenhandle für die Datenzeile enthält das Detailsymbol (![Zeilenhandle mit drei parallelen Linien für die Detailzeile](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Zeilenhandle mit 3 parallelen Linien für Detailzeile")). Ziehen Sie Felder aus dem Berichtsdatenbereich in die Zellen der Tabelle in der Kopf- oder Detailzeile, um Daten in diesen Zeilen anzuzeigen. Beide Zeilen werden gleichzeitig gefüllt. Ziehen Sie das Feld in die Tabelle, bis eine Einfügemarke angezeigt wird, um weitere Spalten hinzuzufügen. Nach dem Hinzufügen von Datasetfeldern zur Tabelle können Sie die Standardformate für Datum und Währung für die Anzeige im Bericht ändern. Das folgende Diagramm zeigt einen Tabellendatenbereich mit folgenden Feldern: Date, Order, Product, Qty und Line Total.  
+ Das Zeilenhandle für die Datenzeile enthält das Detailsymbol (![Zeilenhandle mit drei parallelen Linien für die Detailzeile](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Zeilenhandle mit 3 parallelen Linien für Detailzeile")). Ziehen Sie Felder aus dem Berichtsdatenbereich in die Zellen der Tabelle in der Kopf- oder Detailzeile, um Daten in diesen Zeilen anzuzeigen. Beide Zeilen werden gleichzeitig gefüllt. Ziehen Sie das Feld in die Tabelle, bis eine Einfügemarke angezeigt wird, um weitere Spalten hinzuzufügen. Nach dem Hinzufügen von Datasetfeldern zur Tabelle können Sie die Standardformate für Datum und Währung für die Anzeige im Bericht ändern. Das folgende Diagramm zeigt einen Datenbereich einer Tabelle mit folgenden Feldern: Date, Order, Product, Qty und Line Total.  
   
  ![Entwurf, Tabelle mit fett formatierten Spaltenüberschriften](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "Entwurf, Tabelle mit fett formatierten Spaltenüberschriften")  
   

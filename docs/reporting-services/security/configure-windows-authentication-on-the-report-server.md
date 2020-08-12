@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver | Microsoft-Dokumentation
-ms.date: 08/26/2016
+ms.date: 06/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c3320851b253b8ca509b564405db4b873e5dea0b
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499938"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263834"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   In der Standardeinstellung werden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Anforderungen übergeben, die die Negotiate- oder die NTLM-Authentifizierung angeben. Wenn eine Bereitstellung Clientanwendungen und Browser umfasst, die diese Sicherheitsanbieter nutzen, können Sie die Standardwerte ohne zusätzliche Konfiguration verwenden. Wenn Sie einen anderen Sicherheitsanbieter für die integrierte Sicherheit von Windows nutzen möchten (wenn Sie beispielsweise Kerberos direkt verwenden möchten) oder wenn Sie die Standardwerte verändert haben und die ursprünglichen Einstellungen wiederherstellen möchten, können Sie mithilfe der in diesem Thema enthaltenen Informationen die Authentifizierungseinstellungen auf dem Berichtsserver festlegen.  
@@ -30,7 +30,7 @@ ms.locfileid: "66499938"
     > [!IMPORTANT]  
     >  Die Verwendung von **RSWindowsNegotiate** hat einen Kerberos-Authentifizierungsfehler zur Folge, wenn der Berichtsserverdienst so konfiguriert wurde, dass er unter einem Domänenbenutzerkonto ausgeführt wird und für das Konto kein Dienstprinzipalname (Service Principal Name, SPN) registriert wurde. Weitere Informationen finden Sie unter [Beheben von Kerberos-Authentifizierungsfehlern beim Herstellen einer Verbindung mit einem Berichtsserver](#proxyfirewallRSWindowsNegotiate) in diesem Thema.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] muss für die Windows-Authentifizierung konfiguriert werden. Standardmäßig enthalten die „Web.config“-Dateien für den Berichtsserver-Webdienst die Einstellung \<authentication mode="Windows">. Wenn diese Einstellung in \<authentication mode="Forms"> geändert wird, tritt bei der Windows-Authentifizierung für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ein Fehler auf.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] muss für die Windows-Authentifizierung konfiguriert werden. Standardmäßig enthalten die „Web.config“-Dateien für den Berichtsserver-Webdienst die Einstellung \<authentication mode="Windows">. Wenn Sie diese Einstellung in \<authentication mode="Forms"> ändern, tritt bei der Windows-Authentifizierung für die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ein Fehler auf.  
   
 -   Die „Web.config“-Dateien für den Berichtsserver-Webdienst müssen die Einstellung \<identity impersonate= "true" /> enthalten.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66499938"
   
 1.  Öffnen Sie RSReportServer.config in einem Text-Editor.  
   
-2.  Suchen Sie nach \<**Authentifizierung**>.  
+2.  Suchen Sie \<**Authentication**>.  
   
 3.  Kopieren Sie die XML-Struktur, die Ihren Anforderungen am besten entspricht. Sie können **RSWindowsNegotiate**, **RSWindowsNTLM**und **RSWindowsKerberos** in beliebiger Reihenfolge angeben. Sie sollten die Authentifizierungspersistenz aktivieren, wenn die Verbindung und nicht jede einzelne Anforderung authentifiziert werden soll. Bei Verwendung der Authentifizierungspersistenz werden alle Anforderungen, für die eine Authentifizierung erforderlich ist, zugelassen, solange die Verbindung besteht.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66499938"
           </AuthenticationTypes>  
     ```  
   
-4.  Ersetzen Sie damit die vorhandenen Einträge für <\<**Authentifizierung**>.  
+4.  Ersetzen Sie damit die vorhandenen Einträge für \<**Authentication**>.  
   
      Beachten Sie, dass **Custom** nicht mit den **RSWindows** -Typen verwendet werden kann.  
   
@@ -160,15 +160,9 @@ ms.locfileid: "66499938"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   Starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst neu, und suchen Sie in der Ablaufverfolgungsprotokolldatei nach Einträgen wie:  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - \<HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   Die Werte unter \<Explicit> enthalten die in Active Directory für das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstkonto konfigurierten SPNs.  
-  
- Wenn Sie den erweiterten Schutz nicht weiterverwenden möchten, setzen Sie die Konfigurationswerte auf die Standardwerte zurück und starten das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstkonto neu.  
+-   Starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienst neu.
+
+ Wenn Sie den erweiterten Schutz nicht weiterverwenden möchten, setzen Sie die Konfigurationswerte auf die Standardwerte zurück, und starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstkonto neu.  
   
 ```  
 <RSWindowsExtendedProtectionLevel>Off</RSWindowsExtendedProtectionLevel>  

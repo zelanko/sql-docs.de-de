@@ -1,7 +1,5 @@
 ---
 title: Resize the Job History Log
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -16,58 +14,60 @@ helpviewer_keywords:
 ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 45f53291d70d08fa75ab158db3911c058fdba5c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 988035cab9bd8fa4035337068ec15032bb702802
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644784"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[applies-to-version/_ssnoversion.md](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 In diesem Thema wird beschrieben, wie Sie Größenbeschränkungen für Auftragsverlaufsprotokolle von [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] festlegen.
-  
--   **Vorbereitungen:**  
-  
+
+- **Vorbereitungen:**  
+
     [Sicherheit](#Security)  
-  
--   **So legen Sie Größenbeschränkungen für den Auftragsverlauf fest mit**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
+
+- **So legen Sie Größenbeschränkungen für den Auftragsverlauf fest mit**  
+
+    [SQL Server Management Studio](#SSMS)
+
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Vorbereitungen  
-  
-### <a name="security"></a><a name="Security"></a>Sicherheit  
+
+### <a name="security"></a><a name="Security"></a>Sicherheit
+
 Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md).  
-  
-## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Verwenden von SQL Server Management Studio  
-  
-*So ändern Sie die Größe des Auftragsverlaufsprotokolls basierend auf der Basisgröße:*
-  
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]her, und erweitern Sie dann diese Instanz.  
-  
-2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, und klicken Sie anschließend auf **Eigenschaften**.  
-  
-3.  Wählen Sie die Seite **Verlauf** aus, und bestätigen Sie dann, dass **Größe des Auftragsverlaufsprotokolls beschränken** aktiviert ist.  
-  
-4.  Geben Sie im Feld **Maximale Länge des Auftragsverlaufsprotokolls** die Anzahl von Zeilen ein, die maximal für das Auftragsverlaufsprotokoll zulässig sind.  
-  
-5.  Geben Sie im Feld **Maximale Zeilenanzahl pro Auftrag in Auftragsverlauf** die Anzahl von Zeilen ein, die maximal für das Auftragsverlaufsprotokoll eines Auftrags zulässig sind.  
-  
-**So ändern Sie die Größe des Auftragsverlaufsprotokolls basierend auf der Zeit:**
-  
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung zu einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]her, und erweitern Sie dann diese Instanz.  
-  
-2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, und klicken Sie anschließend auf **Eigenschaften**.  
-  
-3.  Wählen Sie die Seite **Verlauf** aus, und klicken Sie dann auf **Agentverlauf automatisch entfernen**.  
-  
-4.  Wählen Sie die entsprechende Anzahl der **Tage**, **Wochen** oder **Monate** aus.  
-  
+
+## <a name="using-sql-server-management-studio"></a><a name="SSMS"></a>Verwenden von SQL Server Management Studio
+
+*So ändern Sie die Größe des Auftragsverlaufsprotokolls nur auf der Größe basierend*
+
+1. Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]her, und erweitern Sie dann diese Instanz.
+
+2. Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, und klicken Sie dann auf **Eigenschaften**.
+
+3. Wählen Sie die Seite **Verlauf** aus, und bestätigen Sie dann, dass **Größe des Auftragsverlaufsprotokolls beschränken** aktiviert ist.
+
+4. Geben Sie im Feld **Maximale Länge des Auftragsverlaufsprotokolls** die Anzahl von Zeilen ein, die maximal für das Auftragsverlaufsprotokoll zulässig sind.
+
+5. Geben Sie im Feld **Maximale Zeilenanzahl pro Auftrag in Auftragsverlauf** die Anzahl von Zeilen ein, die maximal für das Auftragsverlaufsprotokoll eines Auftrags zulässig sind.
+
+**So ändern Sie die Größe des Auftragsverlaufsprotokolls basierend auf der Zeit**
+
+1. Stellen Sie im **Objekt-Explorer**eine Verbindung zu einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]her, und erweitern Sie dann diese Instanz.  
+
+2. Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, und klicken Sie dann auf **Eigenschaften**.
+
+3. Klicken Sie auf die Seite **Verlauf** und dort dann auf **Agent-Verlauf entfernen**.
+
+4. Wählen Sie die entsprechende Anzahl der **Tage**, **Wochen** oder **Monate** aus.

@@ -1,6 +1,7 @@
 ---
 title: Festlegen der Standardeinstellungen für Ablaufverfolgungsdefinitionen
 titleSuffix: SQL Server Profiler
+description: In diesem Artikel erfahren Sie, wie Sie SQL Server Profiler verwenden, um die Vorlage für die einzelnen Anbieter oder Server einzurichten, die SQL Server und Analysis Services standardmäßig verwenden.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 76144d1e3b115bca73683b198abb328ac72fae8a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 48728a7557edc0d2ddfa5d3e1dbf3e9acb868aa7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726852"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>Festlegen der Standardeinstellungen für Ablaufverfolgungsdefinitionen (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In der Standardeinstellung wird für Ablaufverfolgungsdefinitionen die Standardvorlage für die Ablaufverfolgung für jeden Anbieter oder Server verwendet. Sie können Standardvorlagen für die Ablaufverfolgung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]festlegen.  
   

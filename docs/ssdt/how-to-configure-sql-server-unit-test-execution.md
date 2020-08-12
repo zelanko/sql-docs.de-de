@@ -1,23 +1,23 @@
 ---
 title: Konfigurieren der Ausführung von SQL Server-Komponententests
+description: In diesem Artikel erfahren Sie, wie Sie Komponententests in SQL Server konfigurieren. Sie erfahren außerdem, wie Sie Verbindungszeichenfolgen angeben und ein Datenbankschema bereitstellen.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 51e2fc3b5e95fe022bd758d72fefb34611db0b79
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241566"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519030"
 ---
-# <a name="how-to-configure-sql-server-unit-test-execution"></a>Vorgehensweise: Konfigurieren der Ausführung von SQL Server-Komponententests
+# <a name="how-to-configure-sql-server-unit-test-execution"></a>Gewusst wie: Konfigurieren der Ausführung von SQL Server-Komponententests
 
 Indem Sie das Testprojekt konfigurieren, können Sie mehrere Einstellungen zur Steuerung der Ausführung von SQL Server-Komponententests angeben. Diese Konfigurationseinstellungen werden in der Datei app.config des Testprojekts gespeichert. Wenn Sie diese Datei direkt bearbeiten, werden die neuen Werte im Dialogfeld Testkonfiguration angezeigt.  
   

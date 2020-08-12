@@ -8,16 +8,16 @@ ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f9cca7e761b8f8ec3f5b87e9a195a0eb8b5da6d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 94719ef65023b1afd4edcf7770887323d0267127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259458"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730617"
 ---
 # <a name="manage-big-data-cluster-access-in-active-directory-mode"></a>Verwalten des Zugriffs auf Big Data-Cluster im Active Directory-Modus
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In diesem Artikel wird beschrieben, wie Sie die Active Directory-Gruppen aktualisieren können, die während der Bereitstellung für Clusteradministratoren (clusterAdmins) und -benutzer (clusterUsers) bereitgestellt werden.
 
@@ -81,7 +81,7 @@ Wenn Sie die Anweisungen in diesem Abschnitt befolgen, können Sie dem Administr
 
 1. Verwenden Sie die vorhergehende Verbindung, um eine Zeile in die Rollentabelle einzufügen. Geben Sie den Wert *REALM* in Großbuchstaben ein.
 
-   Wenn Sie Administratorberechtigungen gewähren, verwenden Sie die Rolle *bdcAdmin* in der Rolle *\<Rollenname>* . Verwenden Sie für Benutzer ohne Administratorrechte die Rolle *bdcUser*.
+   Wenn Sie Administratorberechtigungen gewähren, verwenden Sie die Rolle *bdcAdmin* in der Rolle *\<role name>* . Verwenden Sie für Benutzer ohne Administratorrechte die Rolle *bdcUser*.
 
    ```sql
    USE controller;

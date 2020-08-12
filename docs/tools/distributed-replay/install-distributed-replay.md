@@ -4,23 +4,23 @@ titleSuffix: SQL Server Distributed Replay
 description: 'In diesem Artikel werden die verschiedenen Möglichkeiten zum Installieren des Distributed Replays beschrieben: mit dem Installations-Assistenten, dem Eingabeaufforderungsfenster oder einer Konfigurationsdatei.'
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 08e69ce63d3bd3524614f014a2c193cad1634389
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8b05cbaf1978ec06da1f364d337509ca3652d030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999390"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681329"
 ---
 # <a name="install-distributed-replay"></a>Installieren von Distributed Replay
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Sie können Distributed Replay auf eine von drei Weisen installieren:  
   
@@ -67,7 +67,7 @@ Sie können Distributed Replay auf eine von drei Weisen installieren:
   
      \- ODER -  
   
-     \<Freigabefeatureverzeichnis>\Tools\\(alternatives freigegebenes Featureverzeichnis, das vom Benutzer angegeben wird)  
+     \<Share Feature Directory>\Tools\\(alternatives freigegebenes Featureverzeichnis, das vom Benutzer angegeben wird)  
   
 -   Auf einem 64-Bit-System:  
   
@@ -75,7 +75,7 @@ Sie können Distributed Replay auf eine von drei Weisen installieren:
   
      \- ODER -  
   
-     \<Freigabefeatureverzeichnis (x86)>\Tools\\(alternatives freigegebenes x86-Featureverzeichnis, das vom Benutzer angegeben wird)  
+     \<Share Feature Directory (x86)>\Tools\\(alternatives freigegebenes x86-Featureverzeichnis, das vom Benutzer angegeben wird)  
   
 #### <a name="to-install-distributed-replay-features"></a>So installieren Sie Distributed Replay-Funktionen  
   
