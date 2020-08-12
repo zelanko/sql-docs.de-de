@@ -1,5 +1,6 @@
 ---
 title: Datentypen in Ausdrücken (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Datentypen im Berichts-Generator verschiedene Arten von Daten darstellen, damit die Daten gespeichert und verarbeitet werden können.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fc38e22d7265384e8f16df56ffcab63018ecd4e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74a15489c057490ddf358860f8cd0f78eb79ba20
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080529"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255283"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Datentypen in Ausdrücken (Berichts-Generator und SSRS)
   Datentypen stellen verschiedene Arten von Daten dar, die auf diese Weise effizient gespeichert und verarbeitet werden können. Zu den gängigen Datentypen gehören Text (auch String oder Zeichenfolge genannt), Zahlen mit oder ohne Dezimalstellen, Datum und Uhrzeit sowie Bilder. Werte in einem Bericht müssen dem RDL-Datentyp (Report Definition Language) entsprechen. Sie können einen Wert beliebig formatieren, wenn Sie ihn in einem Bericht anzeigen. So kann ein Feld, das eine Währung darstellt, als Gleitkommazahl in der Berichtsdefinition gespeichert, jedoch je nach gewählter Formatierungseigenschaft in verschiedenen Formaten angezeigt werden.  
@@ -28,12 +29,12 @@ ms.locfileid: "77080529"
   
 |RDL-Typ|CLR-Typen|  
 |--------------|---------------|  
-|String|Standard: String<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Standard: Boolesch|  
-|Integer|Standard: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|Datetime|Standard: DateTime<br /><br /> DateTimeOffset|  
-|Float|Standard: Double<br /><br /> Single, Decimal|  
-|Binary|Standard: Byte[]|  
+|String|Standardwert: String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Standardwert: Boolean|  
+|Integer|Standardwert: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|Datetime|Standardwert: Datetime<br /><br /> DateTimeOffset|  
+|Float|Standardwert: Double<br /><br /> Single, Decimal|  
+|Binary|Standardwert: Byte[]|  
 |Variant|Beliebiger Wert von oben außer Byte []|  
 |VariantArray|Array von Variant|  
 |Serialisierbar|Variant oder Typen, die mit Serializable markiert sind oder ISerializable implementieren.|  
@@ -66,7 +67,7 @@ ms.locfileid: "77080529"
 -   Überprüfen Sie, ob die verwendete Datenverarbeitungserweiterung Metadaten zum Abrufen von vorformatierten Daten enthält. So enthält beispielsweise eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-MDX-Abfrage die erweiterte Eigenschaft FORMATTED_VALUE für Cube-Werte, die bereits während der Verarbeitung des Cubes formatiert wurden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Parameterdatentypen  
- Berichtsparameter müssen einen der folgenden Datentypen aufweisen: Boolesch (Boolean), Datum/Zeit (DateTime), Ganzzahl (Integer), Gleitkomma (Float) oder Text (String). Wenn eine Datasetabfrage Abfrageparameter enthält, werden automatisch Berichtsparameter erstellt und mit den Abfrageparametern verknüpft. Der Standarddatentyp für einen Berichtsparameter lautet String. Wenn Sie den Standarddatentyp eines Berichtsparameters ändern möchten, wählen Sie im Dialogfeld **Berichtsparametereigenschaften** auf der Seite **Allgemein** in der Dropdownliste **Datentyp** den gewünschten Wert aus.  
+ Berichtsparameter müssen einer von fünf Datentypen sein: Boolean, DateTime, Integer, Float oder Text (auch als String bezeichnet). Wenn eine Datasetabfrage Abfrageparameter enthält, werden automatisch Berichtsparameter erstellt und mit den Abfrageparametern verknüpft. Der Standarddatentyp für einen Berichtsparameter lautet String. Wenn Sie den Standarddatentyp eines Berichtsparameters ändern möchten, wählen Sie im Dialogfeld **Berichtsparametereigenschaften** auf der Seite **Allgemein** in der Dropdownliste **Datentyp** den gewünschten Wert aus.  
   
 > [!NOTE]  
 >  Berichtsparameter mit einem DateTime-Datentyp unterstützen keine Millisekunden. Sie können zwar einen Parameter erstellen, der auf Werten mit Millisekunden basiert, in der Dropdownliste mit den verfügbaren Werten kann jedoch kein Wert ausgewählt werden, der Datums- oder Zeitwerte mit Millisekunden enthält.  

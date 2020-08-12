@@ -1,5 +1,6 @@
 ---
 title: RSReportDesigner-Konfigurationsdatei | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die Konfigurationsdatei, die Einstellungen zu Rendering- und Datenverarbeitungserweiterungen speichert, die im Berichts-Designer verfügbar sind.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a24b1a2f008c23adc5445ec5ed36c51ade181486
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 831f59e2ded764215856ad04179691185ad9760e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581339"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535082"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner-Konfigurationsdatei
   In der Datei RSReportDesigner.config werden Einstellungen zu Rendering- und Datenverarbeitungserweiterungen gespeichert, die in Berichts-Designer verfügbar sind. Die Informationen zu Datenverarbeitungserweiterungen werden im **Data** -Element gespeichert. Die Informationen zu Renderingerweiterungen werden im **Render** -Element gespeichert. Das **Designer** -Element zählt die in Berichts-Designer verwendeten Abfrage-Generatoren auf.  

@@ -1,5 +1,6 @@
 ---
 title: Implementieren einer Connection-Klasse für Datenverarbeitungserweiterungen | Microsoft-Dokumentation
+description: Implementieren Sie in Reporting Services ein Verbindungsobjekt für eine Datenverarbeitungserweiterung. Sie erfahren, welche Schnittstellen Sie implementieren und was Sie von Ihren Clients verlangen müssen.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 32d38fd943628b25ab8fd9ce47b779b75c05e211
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42f53d1b31f2e5b8805c5173bd45fcbd27f2d4a4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193934"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529570"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementieren einer Connection-Klasse für Datenverarbeitungserweiterungen
   Das **Connection**-Objekt stellt eine Datenbankverbindung oder eine ähnliche Ressource dar und bildet den Ausgangspunkt für Benutzer einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Datenverarbeitungserweiterung. Es stellt Verbindungen zum Datenbankserver dar, obwohl auch jede Entität mit ähnlichem Verhalten als **Connection** zur Verfügung gestellt werden kann.  

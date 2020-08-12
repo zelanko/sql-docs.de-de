@@ -1,5 +1,6 @@
 ---
 title: Treemap- und Sunburst-Diagramme in SQL Server Reporting Services | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie hierarchische Daten mithilfe eines Treemap- oder Sunburst-Diagramms im Berichts-Generator visuell darstellen.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af294ac47e7523f0b0dba5a57bbf2318bbe8c149
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68259366"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255433"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Treemap- und Sunburst-Diagramme in Reporting Services 
 
@@ -45,7 +46,7 @@ In der folgenden Abbildung eines Beispiel-Treemap-Diagramms ist das Gebiet „So
     * **Kategoriegruppen** (in der folgenden Reihenfolge):
         1. CategoryName
         2. SubcategoryName
-    * **Reihengruppen**: TerritoryName  
+    * **Seriengruppen**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -91,7 +92,7 @@ In einem Sunburst-Diagramm wird die Hierarchie durch eine Reihe von Kreisen darg
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **Reihengruppen**: TerritoryName  
+    * **Seriengruppen**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -115,7 +116,7 @@ Die Abfrage gibt detaillierte AdventureWorks-Daten zu Verkaufsaufträgen mit Dat
   
 1. **Rufen Sie die Daten ab**.  
   
-     Die Abfrage in diesem Abschnitt basiert auf der AdventureWorks-Datenbank, die unter [AdventureWorks 2016 full database backup (Vollständige Datenbanksicherung von AdventureWorks 2016 )](https://github.com/Microsoft/sql-server-samples/releases) auf GitHub heruntergeladen werden kann.  
+     Die Abfrage in diesem Abschnitt basiert auf der AdventureWorks-Datenbank, die von GitHub heruntergeladen werden kann: [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases) (Vollständige Datenbanksicherung von AdventureWorks 2016).  
 
 2. **Erstellen Sie eine Datenquelle**.  
   
@@ -180,4 +181,4 @@ Die Abfrage gibt detaillierte AdventureWorks-Daten zu Verkaufsaufträgen mit Dat
 
 * [Tutorial: Treemaps in Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [Treemap: Visualisierungs-Apps von Microsoft Research Data für Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [Treemap: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)

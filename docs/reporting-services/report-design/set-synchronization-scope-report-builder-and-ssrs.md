@@ -1,5 +1,6 @@
 ---
 title: Festlegen des Synchronisierungsbereichs (Berichts-Generator) | Microsoft-Dokumentation
+description: Legen Sie den Synchronisierungsumfang in einem paginierten Bericht mit Indikatoren fest, um Datenwerte durch die Synchronisierung der Indikatorwerte im Berichts-Generator zu übermitteln.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f4a11e6-6151-47be-a43f-e3dbf6c0e737
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5c844bf2ad09ee29dbcda1773e20d93eeb069d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ff29909da8662d39cadb064bab66eb14df9d013
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081008"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012593"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>Festlegen des Synchronisierungsbereichs (Berichts-Generator und SSRS)
   In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht übermitteln Indikatoren Datenwerte, indem sie Indikatorwerte innerhalb eines angegebenen Bereichs synchronisieren.   

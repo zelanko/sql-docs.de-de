@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie mithilfe von Filtern steuern können, welche Daten in den Berichten im Berichts-Generator angezeigt und verarbeitet werden.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e512a330ba8d16a0dbbce878f8bfb6c60176a098
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582052"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255693"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern
   In einem Bericht ist ein Filter Teil eines Datasets, eines Datenbereichs oder einer Datenbereichsgruppe, den Sie erstellen, um die im Bericht verwendeten Daten zu beschränken. Mithilfe von Filtern können Berichtsdaten gesteuert werden, wenn es nicht möglich ist, die Datasetabfrage zu ändern, z. B. bei Verwendung eines freigegebenen Datasets.  
@@ -79,7 +80,7 @@ ms.locfileid: "65582052"
 ### <a name="operator"></a>Operator  
  Die folgende Tabelle enthält die Operatoren, die in Filtergleichungen verwendet werden können, und beschreibt, welche Elemente zur Auswertung der Filtergleichung vom Berichtsprozessor verwendet werden.  
   
-|Operator|Action|  
+|Operator|Aktion|  
 |--------------|------------|  
 |**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Vergleicht den Ausdruck mit einem Wert.|  
 |**TopN, BottomN**|Vergleicht den Ausdruck mit einem **Integer** -Wert.|  
@@ -87,7 +88,7 @@ ms.locfileid: "65582052"
 |**Zwischen**|Prüft, ob der Ausdruck zwischen zwei Werten (einschließlich) liegt.|  
 |**In**|Prüft, ob der Ausdruck in einem Satz von Werten enthalten ist.|  
   
-### <a name="value"></a>value  
+### <a name="value"></a>Wert  
  Der Value-Ausdruck legt den abschließenden Teil der Filtergleichung fest. Der Berichtsprozessor konvertiert den ausgewerteten Ausdruck in den festgelegten Datentyp und wertet dann die gesamte Filtergleichung aus, um zu ermitteln, ob die unter Ausdruck angegebenen Daten den Filter passieren dürfen.  
   
  Wenn der Ausdruck in einen Datentyp konvertiert werden soll, bei dem es sich nicht um einen Standard-CLR-Datentyp handelt, müssen Sie den Ausdruck so ändern, dass explizit in einen Datentyp konvertiert wird. Sie können hierfür die im Dialogfeld **Ausdruck** unter **Allgemeine Funktionen**, **Konvertierung**aufgelisteten Konvertierungsfunktionen verwenden. Beispiel: Das Feld `ListPrice` repräsentiert Daten, die mit einem **money** -Datentyp in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle gespeichert sind. Die Datenverarbeitungserweiterung gibt den Feldwert als <xref:System.Decimal> -Datentyp zurück. Wenn Sie einen Filter festlegen möchten, durch den nur Werte über **€ 50000,00** in der Berichtswährung verwendet werden, konvertieren Sie den Wert mit dem Ausdruck `=CDec(50000.00)`in einen Dezimalwert.  

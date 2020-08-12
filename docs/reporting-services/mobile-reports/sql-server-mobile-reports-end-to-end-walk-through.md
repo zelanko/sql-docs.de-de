@@ -1,6 +1,6 @@
 ---
 title: 'Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise'
-description: Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit dem SQL Server-Publisher für mobile Berichte im Reporting Services-Webportal und deren Anzeige in mobilen Power BI-Apps.
+description: Hier erfahren Sie, wie Sie mobile Berichte im Publisher für mobile Berichte von SQL Server erstellen, Berichte im Reporting Services-Webportal speichern und Berichte in mobilen Power BI-Apps anzeigen.
 ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fc718243db6a816fb2a0593131362007facce89
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028894"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462354"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise
 Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und ihrer Anzeige in mobilen Power BI-Apps.

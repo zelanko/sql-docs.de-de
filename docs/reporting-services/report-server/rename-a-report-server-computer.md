@@ -1,5 +1,6 @@
 ---
 title: Umbenennen eines Berichtsservercomputers | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie einen Berichtsserver nach der Änderung eines Computernamens neu konfigurieren. Nach der Änderung eines Computernamens ist der Zugriff auf SQL Server Reporting Services möglicherweise nicht möglich.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3fe381daf1b89d76d9282f2c1a54c3940a3ffbe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83de666e0f6aa3dc54c3e9b864ebabf957f4ac25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67314045"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544522"
 ---
 # <a name="rename-a-report-server-computer"></a>Umbenennen eines Berichtsservercomputers
   Durch das Umbenennen eines Computers wird eine entsprechende Namensänderung für den Webserver und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verursacht (falls sie auf demselben Computer installiert ist). In einigen Fällen kann nach einer Computernamensänderung möglicherweise nicht mehr auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zugegriffen werden. Führen Sie die Schritte in diesem Artikel aus, um einen Berichtsserver nach einer Änderung des Computernamens neu zu konfigurieren.  

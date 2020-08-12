@@ -1,5 +1,6 @@
 ---
 title: Berichtsserver-HTTP-Protokoll | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie das Berichtsserver-HTTP-Protokoll nach der Installation der Reporting Services aktivieren. Dieses Feature protokolliert alle HTTP-Anforderungen und -Antworten, die ein Berichtsserver verarbeitet.
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f640506f2f247c31c74d111d30b64f4fa0016dae
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140455"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548002"
 ---
 # <a name="report-server-http-log"></a>Berichtsserver-HTTP-Protokoll
   Die HTTP-Protokolldatei des Berichtsservers zeichnet alle HTTP-Anforderungen und -Antworten auf, die vom Berichtsserver verarbeitet werden. Da Anforderungsüberlauf- und Timeoutfehler den Berichtsserver nicht erreichen, werden sie nicht in der Protokolldatei aufgezeichnet.  
@@ -27,8 +28,8 @@ ms.locfileid: "67140455"
   
 |||  
 |-|-|  
-|Dateiname|Der Standarddateiname lautet „ReportServerService_HTTP_\<Zeitstempel>.log“. Sie können das Präfix des Dateinamens anpassen, indem Sie das HttpTraceFileName-Attribut in der Datei ReportingServicesService.exe.config ändern. Der Timestamp basiert auf der koordinierten Weltzeit (UTC).|  
-|Dateispeicherort|Die Datei befindet sich unter \Microsoft SQL Server\\ *\<SQL Server-Instanz>* \Reporting Services\LogFiles.|  
+|Dateiname|Der Standarddateiname lautet „ReportServerService_HTTP_\<timestamp>.log“. Sie können das Präfix des Dateinamens anpassen, indem Sie das HttpTraceFileName-Attribut in der Datei ReportingServicesService.exe.config ändern. Der Timestamp basiert auf der koordinierten Weltzeit (UTC).|  
+|Dateispeicherort|Die Datei befindet sich unter \Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles.|  
 |Dateiformat|Die Datei liegt im Format EN-US vor. Es handelt sich um eine ASCII-Textdatei.|  
 |Dateierstellung und -beibehaltung|Das HTTP-Protokoll wird erstellt, nachdem Sie es in der Konfigurationsdatei aktiviert und den Dienst neu gestartet haben und der Berichtsserver eine HTTP-Anforderung verarbeitet hat. Wenn Sie die Einstellungen konfiguriert haben, die Protokolldatei jedoch nicht sehen können, öffnen Sie einen Bericht, oder starten Sie eine Berichtsserveranwendung (wie das Webportal), um eine HTTP-Anforderung zum Erstellen der Datei zu generieren.<br /><br /> Es wird ein neues Exemplar der Protokolldatei nach jedem Neustart des Diensts und einer nachfolgenden HTTP-Anforderung an den Berichtsserver erstellt.<br /><br /> Standardmäßig sind Ablaufverfolgungsprotokolle auf 32 Megabyte begrenzt und werden nach 14 Tagen gelöscht.|  
   
@@ -58,7 +59,7 @@ ms.locfileid: "67140455"
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Dieser Wert ist optional. Der Standardwert ist ReportServerServiceHTTP_. Sie können einen anderen Wert angeben, wenn Sie eine andere Dateinamenkonvention verwenden möchten. (Sie können zum Beispiel den Servernamen einbeziehen, wenn Protokolldateien zentral gespeichert werden).|Ja|  
 |HTTPTraceSwitches|Dieser Wert ist optional. Wenn Sie diesen Wert angeben, können Sie die in der Protokolldatei verwendeten Felder im durch Trennzeichen getrennten Format konfigurieren.|Nein|  
-|Date|Das Datum des Auftretens der Aktivität.|Nein|  
+|Datum|Das Datum des Auftretens der Aktivität.|Nein|  
 |Time|Die Uhrzeit des Auftretens der Aktivität.|Nein|  
 |ClientIp|Die IP-Adresse des Clients, der auf den Berichtsserver zugreift.|Ja|  
 |UserName|Der Name des Benutzers, der auf den Berichtsserver zugreift.|Nein|  

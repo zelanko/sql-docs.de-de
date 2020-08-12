@@ -1,5 +1,6 @@
 ---
 title: Entfernen einer Übermittlungserweiterung | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie eine Übermittlungserweiterung aus Reporting Services entfernen, damit der Berichtsserver diese nicht als verfügbar auflistet und Abonnements deaktiviert, die diese verwenden.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 49b36598d643bd88496117655f23f642e663d04c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f4f23d58836dbadb9393be49dd34425c89a15c3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193721"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529486"
 ---
 # <a name="removing-a-delivery-extension"></a>Entfernen einer Übermittlungserweiterung
   Sie entfernen eine [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Übermittlungserweiterung, indem Sie einfach das **Erweiterungselement** für die Übermittlungserweiterung aus der Konfigurationsdatei entfernen. Nachdem Sie die Konfigurationsinformationen entfernt haben, steht die Übermittlungserweiterung nicht mehr auf dem Berichtsserver zur Verfügung.  

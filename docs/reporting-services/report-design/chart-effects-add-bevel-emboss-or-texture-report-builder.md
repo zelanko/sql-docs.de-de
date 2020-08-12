@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen einer Abschrägung, eines Reliefs und von Texturstilen zu einem Diagramm (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie einen Zeichnungseffekt wie abgeschrägte Kanten, Reliefs oder Texturen angeben, um die visuelle Wirkung Ihres Diagramms im Berichts-Generator zu erhöhen.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bbb097362d2569bcea8a16d451d33d931b82b35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc70f46d093336157fbc474abfa63460c42deb41
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078746"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462314"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Diagrammeffekte: Hinzufügen einer Abschrägung, eines Relief oder von Texturstilen (Berichts-Generator)
   Bei bestimmten Diagrammtypen können Sie einen Zeichnungseffekt angeben, um die visuelle Wirkung des Diagramms zu erhöhen. Diese Zeichnungseffekte werden nur für die Reihen des Diagramms übernommen. Sie haben keine Auswirkungen auf andere Diagrammelemente.  

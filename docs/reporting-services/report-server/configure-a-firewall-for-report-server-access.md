@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren einer Firewall für den Zugriff auf den Berichtsserver | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie die Windows-Firewall so konfigurieren, dass der Zugriff auf Berichtsserveranwendungen und auf veröffentlichte Berichte möglich ist, auf die über URLs zugegriffen wird.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbcd96e24d0819cc8403a669c7333bb92d396e05
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08a80c8307d551813a30becbed6d12507e6b2947
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593746"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545584"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Konfigurieren einer Firewall für den Zugriff auf den Berichtsserver
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserveranwendungen und veröffentlichte Berichte erfolgt über URLs, die eine IP-Adresse, einen Port und ein virtuelles Verzeichnis angeben. Wenn die Windows-Firewall aktiviert ist, ist der Port, für den der Berichtsserver konfiguriert ist, höchstwahrscheinlich geschlossen. Ein Anzeichen für einen geschlossenen Port ist die Anzeige einer leeren Seite, wenn Sie versuchen, das Webportal von einem Remoteclientcomputer aus zu öffnen, oder einer leeren Webseite nach dem Anfordern eines Berichts.  

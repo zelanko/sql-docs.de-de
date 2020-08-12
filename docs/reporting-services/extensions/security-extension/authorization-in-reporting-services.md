@@ -1,5 +1,6 @@
 ---
 title: Autorisierung in Reporting Services | Microsoft-Dokumentation
+description: Weitere Informationen über den Autorisierungsprozess in Reporting Services Hier erfahren Sie mehr über die Entwicklung von Sicherheitserweiterungen mithilfe der Schnittstelle IAuthorizationExtension2.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2210d5eb5997ec66e707a90cdc52dc24328e6f6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5895064b0e6191c3ecbdcbd5405b1fd1bd50237
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193359"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529056"
 ---
 # <a name="authorization-in-reporting-services"></a>Autorisierung in Reporting Services
   Unter Autorisierung versteht man den Prozess der Beurteilung, ob einer Identität die angeforderte Zugriffsart auf eine bestimmte Ressource in der Berichtsserver-Datenbank erteilt wird. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet eine Autorisierungarchitektur auf Rollenbasis, bei der ein Benutzer Zugriff auf eine bestimmte Rolle ausgehend von der Rollenzuweisung für die Anwendung erhält. Sicherheitserweiterungen für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten eine Implementierung einer Autorisierungskomponente, über die ein Benutzer Zugriff erhält, sobald er sich auf dem Berichtsserver authentifiziert hat. Die Autorisierung wird gestartet, wenn ein Benutzer versucht, einen Vorgang im System oder auf einem Berichtsserverelement über die SOAP-API und den URL-Zugriff auszuführen. Dies wird durch die Sicherheitserweiterungsschnittstelle **IAuthorizationExtension2** ermöglicht. Wie vorher angegeben, erben alle Erweiterungen von **IExtension** die Basisschnittstelle für jede Erweiterung, die Sie bereitstellen. **IExtension** und **IAuthorizationExtension2** sind Elemente des **Microsoft.ReportingServices.Interfaces**-Namespace.  

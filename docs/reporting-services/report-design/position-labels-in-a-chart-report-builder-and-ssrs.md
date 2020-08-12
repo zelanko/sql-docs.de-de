@@ -1,5 +1,6 @@
 ---
 title: Positionieren von Bezeichnungen in einem Diagramm (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie den Typ Ihres verwendeten Diagramms ermitteln, um herauszufinden, wie Sie die Position von Bezeichnungen in diesem Diagrammtyp und dieser Diagrammform ändern.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 66083dc0ff720f5b836db0e6f0689c916d2b2fdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 23969f84491a66d7aedfdb887128fa85aea34742
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082378"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688657"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Positionieren von Bezeichnungen in einem Diagramm (Berichts-Generator und SSRS)
-  Da jeder Diagrammtyp in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht über eine andere Form verfügt, werden Datenpunktbezeichnungen so platziert, dass sie sich im Diagramm nicht überlappen. Die Standardposition der Bezeichnungen ist vom Diagrammtyp abhängig:  
+  Da jeder Diagrammtyp in einem paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht über eine andere Form verfügt, werden Datenpunktbezeichnungen so platziert, dass sie sich im Diagramm nicht überlappen. Die Standardposition der Bezeichnungen variiert je nach Diagrammtyp:  
   
 -   Bei gestapelten Diagrammen können Bezeichnungen nur innerhalb der Reihe positioniert werden.  
   

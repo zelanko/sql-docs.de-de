@@ -1,5 +1,6 @@
 ---
 title: Verweise auf DataSources- und DataSets-Auflistungen (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erhalten Sie Informationen zu Sammlungen von Datenquellen und Datasets. Sie erfahren außerdem, wie sie verfügbar gemacht werden können, nachdem der Bericht auf einem Berichtsserver im Berichts-Generator veröffentlicht wurde.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f65020a094258e4d6ee4a3906d29d33438b0783
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8310d67c8305101b1729446d4d9e25bc463ea0fd
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081458"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681269"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>Integrierte Auflistungen: DataSources- und DataSets-Verweise (Berichts-Generator)
   Die **DataSources** -Auflistung enthält alle in einem Bericht verwendeten Datenquellen. Die **DataSets** -Auflistung enthält alle Datasets für alle Datenquellen in einem Bericht. Verwenden Sie den Bereich **Berichtsdaten** für eine hierarchische Sicht von Berichtsdatasets, die unter der Datenquelle organisiert werden, auf die sie verweisen. Wenn Sie Verweise auf diese Auflistungen einschließen, werden bei der Vorschau des Berichts keine Werte angezeigt. Die Auflistungen sind erst verfügbar, nachdem der Bericht auf einem Berichtsserver veröffentlicht wurde.  
@@ -24,15 +25,15 @@ ms.locfileid: "77081458"
 ## <a name="datasources"></a>DataSources  
  Die **DataSources** -Auflistung stellt die Auflistung der Datenquellen dar, auf die in einer veröffentlichten Berichtsdefinition verwiesen wird. Sie können diese Informationen in den Bericht einschließen, um die Quelle der Berichtsdaten zu dokumentieren. Diese Auflistung ist im **Vorschaumodus** nicht verfügbar. In der folgenden Tabelle sind die Variablen in der **DataSources** -Auflistung beschrieben.  
   
-|**Variable**|**Typ**|**Beschreibung**|  
+|**Variable**|**Type**|**Beschreibung**|  
 |------------------|--------------|---------------------|  
-|**DataSourceReference**|**String**|Der vollständige Pfad der Datenquellendefinition auf dem Berichtsserver. Sie können eine Liste der von einem Bericht verwendeten Datenquellen im Rahmen eines Berichtsverlaufs mit einbeziehen. Im folgenden Beispiel wird der vollständige Pfad für die Datenquelle mit dem Namen AdventureWorks2012 angezeigt:<br /><br /> [https://login.microsoftonline.com/consumers/](`/DataSources/AdventureWorks2012`).|  
+|**DataSourceReference**|**String**|Der vollständige Pfad der Datenquellendefinition auf dem Berichtsserver. Sie können eine Liste der von einem Bericht verwendeten Datenquellen im Rahmen eines Berichtsverlaufs mit einbeziehen. Im folgenden Beispiel wird der vollständige Pfad für die Datenquelle mit dem Namen AdventureWorks2012 angezeigt:<br /><br /> `/DataSources/AdventureWorks2012`.|  
 |**Typ**|**String**|Der Typ des Datenanbieters für die Datenquelle. Beispiel: `SQL`.|  
   
 ## <a name="datasets"></a>DataSets  
  Die **DataSets** -Auflistung stellt die Datasets dar, auf die in einer Berichtsdefinition verwiesen wird. Sie können die Abfrage in einem Textfeld in den Bericht einschließen, sodass ein Benutzer, der wissen möchte, welche Daten in dem Bericht enthalten sind, den ursprünglichen Befehlstext sehen kann. Diese Auflistung ist im **Vorschaumodus** nicht verfügbar. In der folgenden Tabelle sind die Elemente der **DataSets** -Auflistung beschrieben.  
   
-|**Member**|**Typ**|**Beschreibung**|  
+|**Member**|**Type**|**Beschreibung**|  
 |----------------|--------------|---------------------|  
 |**CommandText**|**String**|Mit dieser Abfrage werden für Datenbanken-Datenquellen die Daten aus der Datenquelle abgerufen. Besteht die Abfrage aus einem Ausdruck, ist dies der ausgewertete Ausdruck.|  
 |**RewrittenCommandText**|**String**|Der erweiterte CommandText-Wert für den Datenanbieter. Dieser wird in der Regel für Berichte mit Abfrageparametern verwendet, die Berichtsparametern zugeordnet werden. Die Eigenschaft wird vom Datenanbieter festgelegt, wenn die Parameterverweise des Befehlstexts auf die konstanten Werte erweitert werden, die für die zugeordneten Berichtsparameter ausgewählt wurden.|  

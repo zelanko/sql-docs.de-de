@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial: Suchen und Starten von Reporting Services-Tools | Microsoft-Dokumentation'
-description: In diesem Tutorial werden die Tools vorgestellt, mit denen Berichtsserver konfiguriert, Berichtsserverinhalte und -vorgänge verwaltet sowie paginierte und mobile Reporting Services-Berichte erstellt und veröffentlicht werden.
+description: In diesem Artikel lernen Sie die Tools kennen, die verwendet werden, um einen Berichtsserver zu konfigurieren, Berichtsserverinhalte und -vorgänge zu verwalten und paginierte und mobile Reporting Services-Berichte zu erstellen und zu veröffentlichen.
 ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ecbe6fba042f1802d8e1d592314828c0f844fd3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f90a0f31355b5225533728efb25dfb5f6c96de16
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79486544"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462165"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: So suchen und starten Sie Reporting Services-Tools (SSRS)
 

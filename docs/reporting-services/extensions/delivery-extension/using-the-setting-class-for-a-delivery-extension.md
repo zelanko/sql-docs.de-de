@@ -1,5 +1,6 @@
 ---
 title: Verwenden der Setting-Klasse für eine Übermittlungserweiterung | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Übermittlungserweiterungen die Setting-Klasse verwenden können, die Informationen speichert, die die Übermittlungserweiterung zum Übermitteln von Benachrichtigungen und Berichten benötigt.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 50746639-da7c-46a5-ac7b-e87dd6b91880
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 118f116de516e912b78b7467450b44116b432271
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d90728a83821575bd71c3fe93fb1a090beaf8bdb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193595"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529096"
 ---
 # <a name="using-the-setting-class-for-a-delivery-extension"></a>Verwenden der Setting-Klasse für eine Übermittlungserweiterung
   Die <xref:Microsoft.ReportingServices.Interfaces.Setting>-Klasse befindet sich im <xref:Microsoft.ReportingServices.Interfaces>-Namespace und stellt Informationen zu Erweiterungseinstellungen für eine Übermittlungserweiterung dar. Die <xref:Microsoft.ReportingServices.Interfaces.Setting>-Klasse liefert eine Infrastruktur zum Speichern von Informationen über Einstellungen, die für ein ordnungsgemäßes Funktionieren einer Übermittlungserweiterung nötig sind. Beispiel: In einer E-Mail-Übermittlung eines Berichtsserver muss der Benutzer Einstellungen angeben, die spezifisch für die E-Mail-Übermittlung sind, z. B. die Empfängeradresse, die Absenderadresse, die Betreffzeile der E-Mail usw. Zweifellos wird von den benutzerdefinierten Übermittlungsanbietern gefordert, dass ein Benutzer spezifische Einstellungen angibt, damit die Übermittlungserweiterung Benachrichtigungen und Berichte problemlos übermitteln kann.  

@@ -1,5 +1,6 @@
 ---
 title: Formatieren von Zahlen und Datumsangaben (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Zahlen und Datumsangaben in Datenbereichen im Berichts-Generator formatieren, indem Sie im Dialogfeld „Eigenschaften“ des Datenbereichs auf der Seite „Zahl“ ein Format auswählen.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db780abef8f2d0078ce398e2ab0d30f29ac82a6b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 81a6c4e397ffba96af45a59a3ab26edaafeb05f4
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079822"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255484"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formatieren von Zahlen und Datumsangaben (Berichts-Generator und SSRS)
   Sie können Zahlen und Datumsangaben in Datenbereichen formatieren, indem Sie im Dialogfeld **Eigenschaften** des betreffenden Datenbereichs auf der Seite **Zahl** ein Format auswählen.  

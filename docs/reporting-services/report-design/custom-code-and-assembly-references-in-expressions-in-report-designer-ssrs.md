@@ -1,5 +1,6 @@
 ---
 title: Benutzerdefinierter Code und Assemblyverweise in Ausdrücken im Berichts-Designer | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie Verweise auf benutzerdefinierten Code hinzufügen, der in einen Bericht eingebettet ist. Erstellen und speichern Sie den Code auf Ihrem Computer, und stellen Sie ihn im Berichts-Generator auf dem Berichtsserver bereit.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab5e36ce6e76cf0017e7306802544f1b2764af73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 603207390785ff684167b3b553b31c3b956842c6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880765"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)
   Sie können in einem Bericht eingebettetem, benutzerdefiniertem Code oder benutzerdefinierten Assemblys, die Sie erstellen und auf dem Computer speichern und auf dem Berichtsserver bereitstellen. Verwenden Sie eingebetteten Code für benutzerdefinierte Konstanten, komplexe Funktionen oder für Funktionen, die mehrfach in demselben Bericht verwendet werden. Verwenden Sie benutzerdefinierte Codeassemblys, um Code an einer einzelnen Stelle zu verwalten und ihn zur Verwendung in mehreren Berichten freizugeben. In benutzerdefiniertem Code können neue benutzerdefinierte Konstanten, Variablen, Funktionen oder Unterroutinen eingeschlossen werden. Sie können schreibgeschützte Verweise in integrierte Auflistungen, wie die Parameter-Auflistung, einbeziehen. An benutzerdefinierte Funktionen können jedoch keine Sätze von Berichtsdatenwerten übergeben werden, insbesondere werden keine benutzerdefinierten Aggregate unterstützt.  
@@ -48,7 +49,7 @@ ms.locfileid: "77080574"
 2.  Anzeigen eines Berichts in der Vorschau mit Verweisen auf benutzerdefinierte Assemblys im lokalen Modus.  
   
 ##  <a name="including-references-to-commonly-used-functions"></a><a name="Common"></a> Einschließen von Verweisen auf häufig verwendete Funktionen  
- Verwenden Sie das Dialogfeld **Ausdruck** , um eine kategorisierte Liste allgemeiner, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierter Funktionen anzuzeigen. Wenn Sie **Allgemeine Funktionen** erweitern und auf eine Kategorie klicken, wird im Bereich **Element** die Liste der Funktionen angezeigt, die Sie in einen Ausdruck einschließen. Die allgemeinen Funktionen umfassen Klassen aus den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Namespaces <xref:System.Math> und <xref:System.Convert> sowie Funktionen der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Laufzeitbibliothek. Der Einfachheit halber können Sie die am häufigsten verwendeten Funktionen im Dialogfeld **Ausdruck** anzeigen, wo diese nach Kategorie aufgelistet werden: Text, Datum und Uhrzeit, Mathematik, Überprüfung, Programmablauf, Aggregat, Finanzen, Konvertierung und Sonstiges. Weniger häufig verwendete Funktionen werden nicht in der Liste angezeigt, können jedoch auch in einem Ausdruck verwendet werden.  
+ Verwenden Sie das Dialogfeld **Ausdruck** , um eine kategorisierte Liste allgemeiner, in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]integrierter Funktionen anzuzeigen. Wenn Sie **Allgemeine Funktionen** erweitern und auf eine Kategorie klicken, wird im Bereich **Element** die Liste der Funktionen angezeigt, die Sie in einen Ausdruck einschließen. Die allgemeinen Funktionen umfassen Klassen aus den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Namespaces <xref:System.Math> und <xref:System.Convert> sowie Funktionen der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Laufzeitbibliothek. Die gängigsten Funktionen sind im Dialogfeld **Ausdruck** nach Kategorie sortiert aufgeführt: Text, Datum und Uhrzeit, Mathematische Funktionen, Qualitätskontrolle, Programmfluss, Aggregat, Finanzen, Konvertierung und Sonstiges. Weniger häufig verwendete Funktionen werden nicht in der Liste angezeigt, können jedoch auch in einem Ausdruck verwendet werden.  
   
  Um eine integrierte Funktion zu verwenden, doppelklicken Sie auf den Funktionsnamen im Bereich Element. Im Bereich Beschreibung wird eine Beschreibung der Funktion angezeigt, und ein Beispiel des Funktionsaufrufs finden Sie im Bereich Beispiel. Wenn Sie im Codebereich den Funktionsnamen und anschließend eine linke Klammer **(** eingeben, zeigt die IntelliSense-Hilfe jede gültige Syntax für diesen Funktionsaufruf an. Zur Berechnung des Höchstwerts für ein Feld mit dem Namen `Quantity` in einer Tabelle fügen Sie dem Codebereich beispielsweise den einfachen Ausdruck `=Max(` hinzu und zeigen mithilfe der Smarttags alle gültigen Syntaxmöglichkeiten für den Funktionsaufruf an. Um dieses Beispiel zu vervollständigen, geben Sie `=Max(Fields!Quantity.Value)`ein.  
   

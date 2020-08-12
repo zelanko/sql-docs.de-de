@@ -1,5 +1,6 @@
 ---
 title: Erstellen einer Bibliothek für Übermittlungserweiterungen | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie einem eindeutigen Namespace eine Übermittlungserweiterung zuweisen, die Sie in Reporting Services erstellt haben, und diese in eine Bibliothek oder Assemblydatei integrieren.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06b204e9cc3c13492b0ab6815c7d36abdc628d4b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 77bff5683f459317458f270eea663641ca5e2c33
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193872"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529136"
 ---
 # <a name="creating-a-delivery-extension-library"></a>Erstellen einer Bibliothek für Übermittlungserweiterungen
   Jede von Ihnen erstellte [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Übermittlungserweiterung sollte einen eindeutigen Namespace erhalten und in eine Bibliothek oder Assemblydatei integriert werden. Der exakte Name des Namespace ist unerheblich, er muss jedoch eindeutig sein und darf nicht zusammen mit einer anderen Erweiterung verwendet werden. Sie sollten eigene eindeutige Namespaces für die Übermittlungserweiterungen Ihres Unternehmens erstellen.  

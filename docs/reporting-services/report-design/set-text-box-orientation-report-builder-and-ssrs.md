@@ -1,5 +1,6 @@
 ---
 title: Festlegen der Textfeldausrichtung (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie ein Textfeld in Ihren paginierten Berichten im Berichts-Generator in verschiedene Richtungen drehen.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,18 @@ ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 322c393749f60b1fb505577bf3af57238eb093c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 058da26bfe4fc5bf8ae5d777a35d0356b463ca11
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080996"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681379"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Festlegen der Textfeldausrichtung (Berichts-Generator und SSRS)
 In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht können Sie ein Textfeld auf verschiedene Weise drehen:   
 * Horizontal   
-* Vertikal (um 90 Grad gedreht, die Leserichtung verläuft von oben nach unten)  
+* Vertikal (um 90 Grad gedreht, die Leserichtung verläuft von oben nach unten; Ausnahme: Textzeichen aus dem asiatisch-pazifischen Raum)
+
 * Um 270 Grad gedreht (die Leserichtung verläuft von unten nach oben)   
   
 Da die Drehung für das Textfeld und nicht den Text selbst festgelegt wird, wird sie auf den gesamten Text im Textfeld angewendet. Sie können für Textteile keine unterschiedlichen Ausrichtungen angeben. Passen Sie die Spaltenbreite und die Zeilenhöhe manuell an, damit der gedrehte Text vollständig angezeigt wird.  
@@ -42,6 +44,6 @@ Da die Drehung für das Textfeld und nicht den Text selbst festgelegt wird, wird
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Textfelder &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Tutorial: Formatieren von Text (Berichts-Generator)](../../reporting-services/tutorial-format-text-report-builder.md)  
+ [Tutorial: Formatieren von Text &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-format-text-report-builder.md)  
   
   

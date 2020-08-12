@@ -1,6 +1,6 @@
 ---
 title: Steuern von Zeilen- und Spaltenüberschriften (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-description: Eine Tabelle, eine Matrix oder ein Listendatenbereich in einem paginierten Bericht kann mehrere Seiten horizontal oder vertikal enthalten. Sie können angeben, ob die Zeilen- oder Spaltenüberschriften auf jeder Seite wiederholt werden sollen.
+description: In diesem Artikel erfahren Sie, wie Sie eine Tabelle, Matrix oder einen Listendatenbereich in einem paginierten Bericht verwenden. So können mehrere Seiten im Berichts-Generator horizontal oder vertikal abgedeckt werden.
 ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 654ec769905d17534a3896465909a14c41d60b54
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245359"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255343"
 ---
 # <a name="control-row--column-headings-report-builder--ssrs"></a>Steuern von Zeilen- und Spaltenüberschriften (Berichts-Generator und SSRS)
   Eine Tabelle, eine Matrix oder ein Listendatenbereich in einem paginierten Bericht kann mehrere Seiten horizontal oder vertikal enthalten. Sie können angeben, ob die Zeilen- oder Spaltenüberschriften auf jeder Seite wiederholt werden sollen. In einem interaktiven Renderer, z.B. dem Webportal oder der Berichtsvorschau, können Sie auch angeben, ob die Zeilen- bzw. Spaltenüberschriften fixiert werden sollen, sodass sie sichtbar bleiben, wenn Sie in einem Bericht scrollen. In einer Tabelle oder Matrix enthält die erste Zeile normalerweise Spaltenüberschriften mit Beschriftungen für jede Spalte. Die erste Spalte enthält normalerweise Zeilenüberschriften für jede Zeile. Bei geschachtelten Gruppen können Sie nach Bedarf den Anfangssatz mit Zeilen- und Spaltenüberschriften wiederholen, in dem die Gruppenbezeichnungen angegeben sind. In der Standardeinstellung beinhaltet ein Listendatenbereich keine Überschriften.  
@@ -111,7 +111,7 @@ ms.locfileid: "75245359"
   
  ![Zeilengruppen, Erweiterter Modus mit statischen Elementen](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "Zeilengruppen, Erweiterter Modus mit statischen Elementen")  
   
- Es werden vier Tablix-Elemente aufgelistet: **Statisch**, (**Statisch**), Kategorie und (**Details**). Ein Tablix-Element mit Klammern () zeigt an, dass keine zugehörige Gruppenkopfzeile vorhanden ist. Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste statische Tablix-Element aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
+ Es werden die folgenden Tablix-Elemente aufgelistet: **Statisch**, (**Statisch**), Kategorie und (**Details**). Ein Tablix-Element mit Klammern () zeigt an, dass keine zugehörige Gruppenkopfzeile vorhanden ist. Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste statische Tablix-Element aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
   
  [Zurück zum Anfang](#Top)  
   
@@ -138,7 +138,7 @@ ms.locfileid: "75245359"
   
  ![Zeilengruppen, erweitert, ohne Gruppenheader](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "Zeilengruppen, erweitert, ohne Gruppenheader")  
   
- Im Bereich Zeilengruppen werden die folgenden Tablix-Elemente aufgelistet: (**Statisch**), (Kategorie), (**Statisch**) und (**Details**). Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste Tablix-Element (**Statisch**) aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
+ Im Bereich „Zeilengruppen“ werden die folgenden Tablix-Elemente aufgeführt: (**Statisch**), (Kategorie), (**Statisch**) und (**Details**). Um Spaltenüberschriften zu wiederholen oder zu fixieren, wählen Sie das oberste Tablix-Element (**Statisch**) aus und legen im Eigenschaftenbereich die entsprechenden Eigenschaften fest.  
   
  [Zurück zum Anfang](#Top)  
   

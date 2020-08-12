@@ -1,6 +1,6 @@
 ---
 title: Anzeigen von Zeilen- und Spaltenüberschriften auf mehreren Seiten (Berichts-Generator) | Microsoft-Dokumentation
-description: Sie können festlegen, ob bei einem Tablix-Datenbereich (Tabelle, Matrix oder Liste), der mehrere Seiten umfasst, Zeilen- und Spaltenüberschriften auf jeder Seite eines paginierten Reporting Services-Berichts wiederholt werden sollen.
+description: In diesem Artikel erfahren Sie, wie Sie die Wiederholung von Zeilen und Spaltenüberschriften auf jeder Seite eines paginierten Berichts für einen Tablix-Datenbereich im Berichts-Generator steuern können, der sich über mehrere Seiten erstreckt.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 12/09/2019
-ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a0ece423e7396e2c3aab07cc1882cf1e7f5b09ad
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254592"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778642"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Anzeigen von Zeilen- und Spaltenüberschriften auf mehreren Seiten (Berichts-Generator und SSRS)
 

@@ -1,5 +1,6 @@
 ---
 title: Sortieren von Daten in einem Datenbereich (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie die Sortierreihenfolge der Daten in einem Datenbereich ändern, wenn ein Bericht zum ersten Mal im Berichts-Generator ausgeführt wird.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17c93f66924d6b948264efd9747f72b47bf765a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fecda4c838a5317bf87b50834152a3bb65f1d41b
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080970"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462204"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Sortieren von Daten in einem Datenbereich (Berichts-Generator und SSRS)
   Wenn Sie bei der erstmaligen Ausführung eines Berichts die Sortierreihenfolge für Daten in einem Datenbereich ändern möchten, müssen Sie den Sortierungsausdruck für den Datenbereich oder die Datengruppe festlegen. Die Sortierungsausdruck für eine Gruppe wird automatisch auf den gleichen Wert wie der Gruppierungsausdruck festgelegt.  

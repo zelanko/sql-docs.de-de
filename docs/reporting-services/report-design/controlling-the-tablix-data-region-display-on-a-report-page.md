@@ -1,5 +1,6 @@
 ---
 title: Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie mehr über die Eigenschaften, mit denen Sie die Darstellung eines paginierten Berichts anpassen können, wenn Sie einen Tabellen-, Matrix- oder Listendatenbereich im Berichts-Generator anzeigen.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e87bea9a9bd4807b1d91735cc5a620ac3242de73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95ee59f09fd839460c6635600ceb9c00905e6357
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581529"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255303"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite
 Erfahren Sie etwas über die Eigenschaften in einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht für einen Tabelle-, Matrix- oder Listendatenbereich, mit denen Sie seine Anzeige im Bericht ändern können.  

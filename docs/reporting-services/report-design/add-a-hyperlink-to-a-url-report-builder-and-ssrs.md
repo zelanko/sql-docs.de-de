@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen eines Links zu einer URL (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie in paginierten Berichten im Berichts-Generator Linkaktionen zu Textfeldern, Bildern, Diagrammen und Messgeräten hinzufügen.
 ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 85f3b3cabf180d85da9c348a7ec2cf9062b3a4c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ba42d27d3aaf798779b8cb9ce6b55b0a5a017d7
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080718"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255713"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Hinzufügen eines Links zu einer URL (Berichts-Generator und SSRS)
 Erfahren Sie, wie Sie Linkaktionen in paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  -Berichten zu Textfeldern, Bildern, Diagrammen und Messgeräten hinzufügen. Links können zu anderen Berichten, zu Lesezeichen in einem Bericht oder zu statischen oder dynamischen URLs führen. 

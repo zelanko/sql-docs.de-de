@@ -1,5 +1,6 @@
 ---
 title: Avg-Funktion (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie mehr über die Funktion „Avg“ in paginierten Berichten, die den Durchschnitt aller numerischen Werte ungleich null zurückgibt, die von einem Ausdruck im Berichts-Generator angegeben werden.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c29c03ea3942f9fd89fd7e148d65a3fe4c8b9f33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 983d0158582b7ead50ece81eb7f3d67bbe5777ad
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081309"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462394"
 ---
 # <a name="report-builder-functions---avg-function"></a>Funktionen des Berichts-Generators: Avg-Funktion
 Gibt in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten den Durchschnitt aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck im Kontext des festgelegten Bereichs ausgewertet zurück.  

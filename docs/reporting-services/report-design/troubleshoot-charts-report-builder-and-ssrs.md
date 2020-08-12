@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting bei Diagrammen (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie Felder mit numerischen Datentypen entlang der Wertachse anstelle von formatierten Zahlen verwenden, um einen numerischen Wert anzuzeigen.
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a327ffa-3b69-40d6-8015-cc01cfae9161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96579c7dadc33c9d8dd74e823cee9cc5ef8e3367
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45894eca20fa5762eb4f2e02496e79bd327c8fb3
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078454"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689466"
 ---
 # <a name="troubleshoot-charts-report-builder-and-ssrs"></a>Problembehandlung bei Diagrammen (Berichts-Generator und SSRS)
   Beim Arbeiten mit Diagrammen können diese Punkte hilfreich sein.  

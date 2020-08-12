@@ -1,5 +1,6 @@
 ---
 title: Ändern eines Diagrammtyps (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie den Diagrammtyp jederzeit beim Berichtsentwurf ändern können. Außerdem erfahren Sie, wie Sie die Interpretation mit für Ihre Daten geeigneten Merkmalen im Berichts-Generator optimieren.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de9785121ebd5703abda6c1a52dfb02e180a42cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 24c1c3d05650f3524697e6bfc7fca11afbe60c0b
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081878"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681259"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Ändern eines Diagrammtyps (Berichts-Generator und SSRS)
 Wenn Sie ein Diagramm in einen paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bericht einfügen, wird zuerst das Dialogfeld **Diagrammtyp auswählen** angezeigt. Wenn Sie dieses Dialogfeld abbrechen, wird standardmäßig der Säulendiagrammtyp hinzugefügt.  

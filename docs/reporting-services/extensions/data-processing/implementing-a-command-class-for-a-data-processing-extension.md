@@ -1,5 +1,6 @@
 ---
 title: Implementieren einer Command-Klasse für Datenverarbeitungserweiterungen | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie eine Command-Klasse für eine Datenverarbeitungserweiterung implementieren, sodass die Erweiterung Anforderungen formulieren und an die Datenquelle übergeben kann.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e415d9498c624aa3dcea443f2cdc3641dd7c8491
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7150b14354be738baa8a127cfe7025dc3245b03e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193943"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529519"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>Implementieren einer Command-Klasse für Datenverarbeitungserweiterungen
   Das **Command**-Objekt formuliert eine Anforderung und übergibt sie an die Datenquelle. Der Befehlstext kann viele verschiedene syntaktische Formate haben, einschließlich Text und XML. Wenn Ergebnisse zurückgegeben werden, gibt das **Command**-Objekt die Ergebnisse als **DataReader**-Objekt zurück.  

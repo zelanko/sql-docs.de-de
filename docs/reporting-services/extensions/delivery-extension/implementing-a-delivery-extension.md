@@ -1,5 +1,6 @@
 ---
 title: Implementieren von Übermittlungserweiterungen | Microsoft-Dokumentation
+description: Hier erhalten Sie eine Übersicht darüber, wie Sie die Übermittlungsfunktionen in Reporting Services erweitern, indem Sie eine benutzerdefinierte Übermittlungserweiterung implementieren.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c0004f844d6914cea330d3a0c7332de783116c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0ac797a8dd02a9d854c8bb2783435a087326f48
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193756"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529559"
 ---
 # <a name="implementing-a-delivery-extension"></a>Implementieren von Übermittlungserweiterungen
   Mithilfe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] können Benutzer Berichte erstellen und veröffentlichen, die anschließend an diverse Orte übermittelt werden. Außerdem enthält [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verschiedene Übermittlungserweiterungen und eine Übermittlungs-API, mit der Entwickler zusätzliche Übermittlungserweiterungen erstellen können, um die Übermittlungsfunktionen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] noch zu erweitern.  

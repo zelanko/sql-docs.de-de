@@ -1,5 +1,6 @@
 ---
 title: Tabellen, Matrizen und Listen (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über Tabellen, Matrizen und Listen, die Tablix-Datenbereiche, in denen Daten paginierter Berichte angezeigt werden, die im Berichts-Generator in Zeilen und Spalten angeordnet sind.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -33,12 +34,12 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3390f952eaa553c144d8dd50e906276d4f96649
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c28f2c267c49f2a31fd07eecdbb9e593237a1835
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080878"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778072"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)
  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]sind Tabellen, Matrizen und Listen *Datenbereiche* , in denen Daten paginierter Berichte in Zellen angezeigt werden, die in Zeilen und Spalten angeordnet sind. Die Zellen enthalten in der Regel Textdaten wie Text, Datumsangaben und Zahlen, können jedoch auch Messgeräte, Diagramme oder Berichtselemente wie Bilder enthalten. Als Ganzes gesehen werden Tabellen, Matrizen und Listen häufig als *Tablix* -Datenbereiche bezeichnet.  
@@ -74,7 +75,7 @@ ms.locfileid: "77080878"
   
  ![Neue Matrix aus Toolbox hinzugefügt, markiert](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Neue Matrix aus Toolbox hinzugefügt, markiert")  
   
- Sie können Daten nach mehreren Feldern oder Ausdrücken in Zeilen- und Spaltengruppen gruppieren. Wenn die Berichtsdaten und die Datenbereiche zur Laufzeit kombiniert werden, wächst eine Matrix horizontal und vertikal in dem Maß, in dem auf der Seite Spalten für Spaltengruppen und Zeilen für Zeilengruppen hinzugefügt werden. Die Matrixzellen zeigen aggregierte Werte für die Schnittmenge der Zeilen- und Spaltengruppen, zu denen die Zelle gehört. Wenn die Matrix beispielsweise eine Zeilengruppe (Kategorie) und zwei Spaltengruppen (Gebiet und Jahr) hat, aus denen die Summe der Verkäufe hervorgeht, zeigt der Bericht zwei Zellen mit den Summen der Verkäufe für jeden Wert in der Kategoriegruppe an. Der Bereich der Zellen der zwei Schnittmengen sind: Kategorie und Gebiet sowie Kategorie und Jahr. Die Matrix kann geschachtelte und angrenzende Gruppen enthalten. Geschachtelte Gruppen verfügen über eine Über-/Unterordnungsbeziehung, während angrenzende Gruppen gleichgestellt sind. Sie können Teilergebnisse für einzelne und alle Ebenen von geschachtelten Zeilen- und Spaltengruppen innerhalb der Matrix hinzufügen.  
+ Sie können Daten nach mehreren Feldern oder Ausdrücken in Zeilen- und Spaltengruppen gruppieren. Wenn die Berichtsdaten und die Datenbereiche zur Laufzeit kombiniert werden, wächst eine Matrix horizontal und vertikal in dem Maß, in dem auf der Seite Spalten für Spaltengruppen und Zeilen für Zeilengruppen hinzugefügt werden. Die Matrixzellen zeigen aggregierte Werte für die Schnittmenge der Zeilen- und Spaltengruppen, zu denen die Zelle gehört. Wenn die Matrix beispielsweise eine Zeilengruppe (Kategorie) und zwei Spaltengruppen (Gebiet und Jahr) hat, aus denen die Summe der Verkäufe hervorgeht, zeigt der Bericht zwei Zellen mit den Summen der Verkäufe für jeden Wert in der Kategoriegruppe an. Der Bereich der Zelle sind die beiden Schnittmengen: „Kategorie und Gebiet“ und „Gebiet und Jahr“. Die Matrix kann geschachtelte und angrenzende Gruppen enthalten. Geschachtelte Gruppen verfügen über eine Über-/Unterordnungsbeziehung, während angrenzende Gruppen gleichgestellt sind. Sie können Teilergebnisse für einzelne und alle Ebenen von geschachtelten Zeilen- und Spaltengruppen innerhalb der Matrix hinzufügen.  
   
  Um die Matrixdaten besser lesbar zu machen und die Daten hervorzuheben, die Sie herausstellen möchten, können Sie Zellen miteinander verbinden oder horizontal und vertikal teilen und Daten- und Gruppenüberschriften formatieren.  
   

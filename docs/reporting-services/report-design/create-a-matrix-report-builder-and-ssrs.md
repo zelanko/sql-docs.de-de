@@ -1,5 +1,6 @@
 ---
 title: Erstellen einer Matrix (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie gruppierte Daten und Zusammenfassungsinformationen in einer Matrix anzeigen, um so im Berichts-Generator Zugriff auf Kreuztabellen und Pivottabellen ähnliche Funktionen zu haben.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd0268916173f4e2b9d3f6c096fceb6787d18487
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3ff46e31fb6329a0ce204f0d432bbbb865e7a107
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078678"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255313"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Erstellen einer Matrix (Berichts-Generator und SSRS)
   Mithilfe einer Matrix können Sie gruppierte Daten und Zusammenfassungsinformationen anzeigen. Sie können Daten nach mehreren Feldern oder Ausdrücken in Zeilen- und Spaltengruppen gruppieren. Matrizen stellen ähnliche Funktionen wie Kreuztabellen und Pivottabellen bereit. Wenn zur Laufzeit die Berichtsdaten und Datenbereiche kombiniert werden, wächst die Matrix auf der Seite horizontal und vertikal. Werte in Matrixzellen zeigen aggregierte Werte für die Schnittmenge der Zeilen- und Spaltengruppen, zu denen die Zelle gehört. Sie können die Zeilen und Spalten formatieren, um die Daten zu markieren, die Sie hervorheben möchten. Sie können auch Drilldownschalter einfügen, mit denen die Detaildaten anfänglich ausgeblendet werden. Benutzer können dann auf die Schalter klicken, um nach Bedarf ausführlichere bzw. weniger Details anzuzeigen.  
   
  Nach dem anfänglichen Entwurf können Sie die Entwicklung einer Matrix fortsetzen, um die Anzeigefunktionen für Benutzer zu optimieren. Weitere Informationen finden Sie unter [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
- Um schnell mit Matrizen zu beginnen, gehen Sie unter [Tutorial: Erstellen eines Matrixberichts &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md).  
+ Eine schnelle Einführung in Matrizen finden Sie unter [Tutorial: Erstellen eines Matrixberichts &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)  
   
 > [!NOTE]  
 >  Sie können Listen in einem Bericht als Berichtsteile getrennt veröffentlichen. Erfahren Sie mehr über [Berichtsteile (Berichts-Generator und SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -45,7 +46,7 @@ ms.locfileid: "77078678"
   
  In Vorschau wird die Matrix erweitert, um die Zeilengruppen- und Spaltengruppenwerte anzuzeigen. In den Zellen werden Zusammenfassungswerte angezeigt, wie in der folgenden Abbildung dargestellt.  
   
- ![Vorschau für gerenderte Matrix mit erweiterten Gruppen](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Vorschau für gerenderte Matrix mit erweiterten Gruppen")  
+ ![Vorschau für gerenderte Matrix mit ausgeklappten Gruppen](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "Vorschau für gerenderte Matrix mit ausgeklappten Gruppen")  
   
  Die zu Beginn verwendete Matrix ist eine Vorlage auf Grundlage des Tablix-Datenbereichs. Sie können den Matrixentwurf auch weiterentwickeln, indem Sie geschachtelte oder angrenzende Zeilengruppen oder Spaltengruppen oder sogar Detailzeilen hinzufügen. Weitere Informationen finden Sie unter [Untersuchen der Flexibilität eines Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   

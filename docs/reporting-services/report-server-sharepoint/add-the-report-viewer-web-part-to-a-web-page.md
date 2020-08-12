@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite | Microsoft-Dokumentation
+description: Mithilfe des Berichts-Viewer-Webparts können Sie Berichte anzeigen, die in SQL Server Reporting Services im integrierten SharePoint-Modus ausgeführt werden.
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 562c762871db5c29476d10a81ac52dad46f65ad5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf8f744078ccad4e755cc6d635ba999e0f077574
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579399"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767111"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>Hinzufügen des Berichts-Viewer-Webparts zu einer Webseite
 

@@ -1,5 +1,6 @@
 ---
 title: Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen (Berichts-Generator) | Microsoft-Dokumentation
+description: Optimieren Sie im Berichts-Generator das Anzeigen und Drucken von Tabellen, Listen oder Bildern mit Auswahlmöglichkeiten für Seitenlängen, Spalten, Überschriften und Zeilen.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2199d84efbf16b2f9a21ca48b523215749ffc488
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3bcce26870ffea199d83f542a5d31bed1452cd1
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082298"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012638"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen (Berichts-Generator und SSRS)
   Ein Seitenumbruch unterteilt einen Bericht in getrennte Seiten, damit dieser einfacher angezeigt und gedruckt werden kann. Seitenumbrüche legen fest, wie der Inhalt für die optimale Anzeige bei der Vorschau eines Berichts oder beim Exportieren in ein anderes Dateiformat an eine Berichtsseite angepasst wird.  
   
- Das Hinzufügen von Seitenumbrüchen verbessert auch die Leistung großer Berichte bei der Verarbeitung. Eine gerenderte Seite wird angezeigt, während die restlichen Seiten im Hintergrund gerendert werden. Dadurch können Sie die ersten Seiten des Berichts bereits anzeigen, während weitere Seiten erst verfügbar gemacht werden.  
+ Das Hinzufügen von Seitenumbrüchen verbessert auch die Leistung bei der Verarbeitung großer Berichte. Eine gerenderte Seite wird angezeigt, während die restlichen Seiten im Hintergrund gerendert werden. Dadurch können Sie die ersten Seiten des Berichts bereits anzeigen, während weitere Seiten erst verfügbar gemacht werden.  
   
  Seitenumbrüche können Berichtselementen hinzugefügt werden, wie Tabellen, Matrizen, Listen, Diagrammen, Messgeräten oder Bildern. Sie können Seitenumbrüche auch Gruppen in einer Tabelle, Matrix oder Liste hinzufügen. Seitenumbrüche können vor, nach und zwischen Gruppen hinzugefügt werden. Standardmäßig werden keine Seitenumbrüche zwischen Gruppen hinzugefügt.  
   

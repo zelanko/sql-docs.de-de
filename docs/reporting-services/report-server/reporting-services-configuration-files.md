@@ -1,5 +1,6 @@
 ---
 title: Reporting Services-Konfigurationsdateien | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie mehr über Konfigurationsdateien, in denen Reporting Services Informationen zu Komponenten speichert. Unter Umständen müssen Sie die Dateien ändern, um erweiterte Einstellungen hinzufügen oder konfigurieren zu können.
 ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0bd7ad95fcda039c6fd5a9299f4339d35b8a619
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c9a56dd5cb8e26c57f25f458eff96b467df16cf6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67564130"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541462"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services-Konfigurationsdateien
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert Komponenteninformationen in der Registrierung und in Konfigurationsdateien, die bei der Installation in das Dateisystem kopiert werden. Konfigurationsdateien enthalten eine Kombination aus nur intern verwendeten und benutzerdefinierten Werten. Werte werden vom Benutzer durch die Konfigurationstools, die Befehlszeilen-Hilfsprogramme und manuelles Bearbeiten der Konfigurationsdateien definiert.  
@@ -45,16 +46,16 @@ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS
   depending on the SSRS version
 ```  
   
-|Gespeichert in:|BESCHREIBUNG|Position|  
+|Gespeichert in:|BESCHREIBUNG|Standort|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Speichert die Konfigurationseinstellungen für Funktionsbereiche des Berichtsserverdiensts: der Berichts-Manager oder das Webportal, der Report Server-Webdienst und Hintergrundverarbeitung. Weitere Informationen zu den einzelnen Einstellungen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  
-|RSSrvPolicy.config|Speichert die Codezugriffs-Sicherheitsrichtlinien für die Servererweiterungen. Weitere Informationen zu dieser Datei finden Sie unter [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  
-|RSMgrPolicy.config|Speichert die Codezugriffssicherheitsrichtlinien für das Webportal. Weitere Informationen zu dieser Datei finden Sie unter [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installationsverzeichnis>\Reporting Services\ReportManager|  
-|Web.config für den Report Server-Webdienst.|Enthält nur Einstellungen, die für ASP.NET erforderlich sind.|\<Installationsverzeichnis>\Reporting Services\ReportServer|  
-|Web.config für den Berichts-Manager.|Enthält nur Einstellungen, die für ASP.NET erforderlich und für die SSRS-Version verfügbar sind.|\<Installationsverzeichnis>\Reporting Services\ReportManager|  
-|ReportingServicesService.exe.config|Speichert Konfigurationseinstellungen, die die Ablaufverfolgungsebenen und Protokolloptionen für den Berichtsserverdienst angeben. Weitere Informationen zu den Elementen in dieser Datei finden Sie unter [ReportingServicesService Configuration File](../../reporting-services/report-server/reportingservicesservice-configuration-file.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer\Bin|  
+|RSReportServer.config|Speichert Konfigurationseinstellungen für Funktionsbereiche des Berichtsserverdiensts: Berichts-Manager oder Webportal, Report Server-Webdienst und Hintergrundverarbeitung. Weitere Informationen zu den einzelnen Einstellungen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Installation directory> \Reporting Services \ReportServer|  
+|RSSrvPolicy.config|Speichert die Codezugriffs-Sicherheitsrichtlinien für die Servererweiterungen. Weitere Informationen zu dieser Datei finden Sie unter [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installation directory> \Reporting Services \ReportServer|  
+|RSMgrPolicy.config|Speichert die Codezugriffssicherheitsrichtlinien für das Webportal. Weitere Informationen zu dieser Datei finden Sie unter [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installation directory> \Reporting Services \ReportManager|  
+|Web.config für den Report Server-Webdienst.|Enthält nur Einstellungen, die für ASP.NET erforderlich sind.|\<Installation directory> \Reporting Services \ReportServer|  
+|Web.config für den Berichts-Manager.|Enthält nur Einstellungen, die für ASP.NET erforderlich und für die SSRS-Version verfügbar sind.|\<Installation directory> \Reporting Services \ReportManager|  
+|ReportingServicesService.exe.config|Speichert Konfigurationseinstellungen, die die Ablaufverfolgungsebenen und Protokolloptionen für den Berichtsserverdienst angeben. Weitere Informationen zu den Elementen in dieser Datei finden Sie unter [ReportingServicesService Configuration File](../../reporting-services/report-server/reportingservicesservice-configuration-file.md).|\<Installation directory> \Reporting Services \ReportServer \Bin|  
 |Registrierungseinstellungen|Speichert den Konfigurationsstatus und andere Einstellungen für die Deinstallation von Reporting Services. Wenn Sie ein Installations- oder Konfigurationsproblem beheben möchten, liefern diese Einstellungen Informationen darüber, wie der Berichtsserver konfiguriert ist.<br /><br /> Ändern Sie diese Einstellungen nicht direkt, da dies die Installation ungültig machen kann.|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceID\>\Setup<br /><br /> **- und -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Services\ReportServer|  
-|RSReportDesigner.config|Speichert Konfigurationseinstellungen für den Berichts-Designer. Weitere Informationen finden Sie unter [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|\<Laufwerk>:\Programme\Microsoft Visual Studio 10\Common7\IDE\PrivateAssemblies.|  
+|RSReportDesigner.config|Speichert Konfigurationseinstellungen für den Berichts-Designer. Weitere Informationen finden Sie unter [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|\<drive>:\Programme \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
 |RSPreviewPolicy.config|Speichert die Codezugriffs-Sicherheitsrichtlinien für die Servererweiterungen, die während der Berichtsvorschau verwendet werden. Weitere Informationen zu dieser Datei finden Sie unter [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|C:\Programme\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssembliesr|  
   
 ##  <a name="summary-of-configuration-files-sharepoint-mode"></a><a name="bkmk_config_file_Summary_sharepoint_mode"></a> Überblick über Konfigurationsdateien (SharePoint-Modus)  
@@ -67,13 +68,13 @@ Install path
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
   
-|Gespeichert in:|BESCHREIBUNG|Position|  
+|Gespeichert in:|BESCHREIBUNG|Standort|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Speichert die Konfigurationseinstellungen für Funktionsbereiche des Berichtsserverdiensts: der Berichts-Manager oder das Webportal, der Report Server-Webdienst und Hintergrundverarbeitung. Weitere Informationen zu den einzelnen Einstellungen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  
-|RSSrvPolicy.config|Speichert die Codezugriffs-Sicherheitsrichtlinien für die Servererweiterungen. Weitere Informationen zu dieser Datei finden Sie unter [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installationsverzeichnis>\Reporting Services\ReportServer|  
-|Web.config für den Report Server-Webdienst.|Enthält nur Einstellungen, die für ASP.NET erforderlich und für die SSRS-Version verfügbar sind.|\<Installationsverzeichnis>\Reporting Services\ReportServer|  
+|RSReportServer.config|Speichert Konfigurationseinstellungen für Funktionsbereiche des Berichtsserverdiensts: Berichts-Manager oder Webportal, Report Server-Webdienst und Hintergrundverarbeitung. Weitere Informationen zu den einzelnen Einstellungen finden Sie unter [RSReportServer.config-Konfigurationsdatei](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Installation directory> \Reporting Services \ReportServer|  
+|RSSrvPolicy.config|Speichert die Codezugriffs-Sicherheitsrichtlinien für die Servererweiterungen. Weitere Informationen zu dieser Datei finden Sie unter [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Installation directory> \Reporting Services \ReportServer|  
+|Web.config für den Report Server-Webdienst.|Enthält nur Einstellungen, die für ASP.NET erforderlich und für die SSRS-Version verfügbar sind.|\<Installation directory> \Reporting Services \ReportServer|  
 |Registrierungseinstellungen|Speichert den Konfigurationsstatus und andere Einstellungen für die Deinstallation von Reporting Services. Speichert darüber hinaus auch Informationen zu jeder [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung.<br /><br /> Ändern Sie diese Einstellungen nicht direkt, da dies die Installation ungültig machen kann.|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceID\>\Setup<br /><br /> Beispielinstanz-ID: MSSQL13.MSSQLSERVER<br /><br /> **- und -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  
-|RSReportDesigner.config|Speichert Konfigurationseinstellungen für den Berichts-Designer. Weitere Informationen finden Sie unter [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|\<Laufwerk>:\Programme\Microsoft Visual Studio 10\Common7\IDE\PrivateAssemblies.|  
+|RSReportDesigner.config|Speichert Konfigurationseinstellungen für den Berichts-Designer. Weitere Informationen finden Sie unter [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md).|\<drive>:\Programme \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

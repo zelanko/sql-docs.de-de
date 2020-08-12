@@ -1,5 +1,6 @@
 ---
 title: Verweise auf Berichts- und Gruppenvariablenauflistungen (Berichts-Generator) | Microsoft-Dokumentation
+description: Erstellen Sie eine Variable mit einem eindeutigen Namen, wenn Sie über eine komplexe Berechnung verfügen, die Sie in einem Bericht mehrmals verwenden.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 77373c2a1a160c7621f54f3701564eebe1312618
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ec35aa6399929f90f8e816b8c2d2de50e5cc155
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081452"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688849"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Integrierte Auflistungen: Verweise auf Berichts- und Gruppenvariablen (Berichts-Generator)
   Bei komplexen Berechnungen, die in Ausdrücken eines Berichts mehrfach verwendet werden, empfiehlt sich das Erstellen einer Variable. Sie können eine Berichtsvariable oder eine Gruppenvariable erstellen. Variablennamen müssen im Bericht eindeutig sein.  

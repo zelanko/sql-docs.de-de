@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen von HTML in einem Bericht (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie im Berichts-Generator HTML-Code mithilfe eines Platzhalters aus einem Feld in Ihrem Dataset importieren, um diesen in Ihrem Bericht zu verwenden.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e18753c105eb63343bf57977f8ced3a0cf0fe9e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b07521bb6a3cf293761342af6d7bdcbec728959
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081632"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255648"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>Hinzufügen von HTML in einem Bericht (Berichts-Generator und SSRS)
   Mithilfe eines Platzhalters können Sie HTML aus einem Feld im Dataset in einen Bericht importieren. Standardmäßig steht ein Platzhalter für einfachen Text, daher müssen Sie den Markuptyp des Platzhalters zu HTML ändern. Weitere Informationen finden Sie unter [Importieren von HTML in einen Bericht (Berichts-Generator und SSRS)](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md).  

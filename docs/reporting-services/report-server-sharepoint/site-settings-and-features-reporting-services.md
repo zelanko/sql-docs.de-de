@@ -1,5 +1,6 @@
 ---
 title: Einstellungen und Funktionen für Reporting Services-Websites (SharePoint-Modus) | Microsoft-Dokumentation
+description: Es gibt benutzerdefinierte Features auf Websiteebene und Websitefeatures, die Sie auf der Seite zu Websiteeinstellungen für SharePoint im SharePoint-Modus in den Reporting Services verwalten können.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73d357b6a601265df5e579f1b6acaff6ce8d648d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 558a741feb0e55646b4c45901965a0fb434f665f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580457"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767368"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Einstellungen und Funktionen für Reporting Services-Websites (SharePoint-Modus)
 

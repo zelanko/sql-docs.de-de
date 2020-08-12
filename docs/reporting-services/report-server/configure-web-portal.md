@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren des Webportals | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie die Webportalanwendung konfigurieren, in der Sie Berichte anzeigen, Berichtsserverinhalt verwalten und den Benutzerzugriff auf einen Berichtsserver im einheitlichen Modus gewähren können.
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52a6055a3b3c79c08622d89b2931a48eedd14d76
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63308399"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548052"
 ---
 # <a name="configure-the-web-portal"></a>Konfigurieren des Webportals
 
@@ -60,7 +61,7 @@ Wenn Sie URLs im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-K
 
 #### <a name="to-configure-a-static-report-server-url"></a>So konfigurieren Sie eine statische Berichtsserver-URL
 
-1. Öffnen Sie die Datei **RSReportServer.config** in einem Text-Editor. Standardmäßig befindet sich diese Datei unter \Programme\Microsoft SQL Server\MSRS12.\<*instanzname*>\Reporting Services\ReportServer.  
+1. Öffnen Sie die Datei **RSReportServer.config** in einem Text-Editor. Standardmäßig befindet sich diese Datei unter „\Programme\Microsoft SQL Server\MSRS12.\<*instancename*>\Reporting Services\ReportServer“.  
 
 2. Suchen Sie **ReportServerURL**.
 
@@ -80,7 +81,7 @@ Sie können ein benutzerdefiniertes Markenpaket erstellen, um die für das Webpo
 
 2. Öffnen Sie Internet Explorer.
 
-3. Geben Sie die Webportal-URL ein. Standardmäßig lautet sie „https://\<**ihr-servername**>/reports“, aber wenn Sie Reporting Services als Instanz mit einem Namen installiert haben, ändert sie sich in: „https://\<**ihr-servername**>/reports\< **_Instanzname**>“.
+3. Geben Sie die Webportal-URL ein. Standardmäßig lautet sie „https://\<**your-server-name**>/reports“. Wenn Sie jedoch Reporting Services als Instanz mit einem Namen installiert haben, ändert sich die Standard-URL in „https://\<**your-server-name**>/reports\<**_instancename**>“.
 
 4. Wählen Sie **Siteeinstellungen**aus.
 

@@ -1,5 +1,6 @@
 ---
 title: PowerShell-Cmdlets für den SharePoint-Modus von Reporting Services | Microsoft-Dokumentation
+description: PowerShell-Cmdlets werden installiert, um den SharePoint-Modus von SQL Server Reporting Services zu unterstützen (einschließlich Installation, Feature und Anwendungsverwaltung).
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a92cb1a23c4c1d7062945bc24961a2c37d25950
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68892404"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764958"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>PowerShell-Cmdlets für den SharePoint-Modus von Reporting Services
 
@@ -38,7 +39,7 @@ Bei der Installation von SQL Server 2016 Reporting Services im SharePoint-Modus 
   
  Wenn Sie bei der Eingabe der PowerShell-Beispiele eine Fehlermeldung mit etwa folgendem Wortlaut sehen:  
   
--   Install-SPRSService: Die Benennung 'Install-SPRSService' wurde nicht als  
+-   Install-SPRSService: Die Benennung „Install-SPRSService“ wurde nicht als  
     Name eines Cmdlets, einer Funktion, einer Skriptdatei oder eines ausführbaren Programms erkannt. Prüfen Sie die Schreibweise des Namens bzw. stellen Sie sicher, dass der Pfad korrekt angegeben wurde, und versuchen Sie es erneut.  
   
  Eines der folgenden Probleme tritt auf:  
@@ -109,7 +110,7 @@ Bei der Installation von SQL Server 2016 Reporting Services im SharePoint-Modus 
 |New-SPRSExtension|Registriert eine neue Erweiterung bei einer Reporting Services-Dienstanwendung.|  
 |Set-SPRSExtension|Legt die Eigenschaften einer vorhandenen Reporting Services-Erweiterung fest.|  
 |Remove-SPRSExtension|Entfernt eine Erweiterung aus einer Reporting Services-Dienstanwendung.|  
-|Get-SPRSExtension|Ruft mindestens eine Reporting Services-Erweiterung für eine Reporting Services-Dienstanwendung ab.<br /><br /> Gültige Werte sind:<br /><br /> <br /><br /> Lieferung<br /><br /> DeliveryUI<br /><br /> Rendern<br /><br /> Data<br /><br /> Sicherheit<br /><br /> Authentication<br /><br /> EventProcessing<br /><br /> Berichtselemente<br /><br /> Designer<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Ruft mindestens eine Reporting Services-Erweiterung für eine Reporting Services-Dienstanwendung ab.<br /><br /> Gültige Werte sind:<br /><br /> <br /><br /> Lieferung<br /><br /> DeliveryUI<br /><br /> Rendern<br /><br /> Daten<br /><br /> Sicherheit<br /><br /> Authentifizierung<br /><br /> EventProcessing<br /><br /> Berichtselemente<br /><br /> Designer<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|Ruft die SharePoint-Websites abhängig davon ab, ob die Funktion "ReportingService" aktiviert ist. Standardmäßig werden Websites zurückgegeben, für die die Funktion "ReportingService" aktiviert ist.|  
   
 ## <a name="basic-samples"></a>Basisbeispiele
@@ -290,7 +291,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription (Verwenden von PowerShell zum Ändern und Auflisten von Reporting Services-Abonnementbesitzern und zum Ausführen eines Abonnements)](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[CheckList: Use PowerShell to verify Power Pivot for SharePoint (Prüfliste: Überprüfen von Power Pivot für SharePoint mithilfe von PowerShell)](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[Prüfliste: Überprüfen von Power Pivot für SharePoint mithilfe von PowerShell](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
 [Get Help SQL Server PowerShell (Hilfe für SQL Server PowerShell)](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

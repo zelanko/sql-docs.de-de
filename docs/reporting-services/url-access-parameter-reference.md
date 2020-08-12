@@ -1,7 +1,7 @@
 ---
 title: Referenz für URL-Zugriffsparameter | Microsoft-Dokumentation
 description: Verwenden Sie die Parameter in diesem Artikel in einer URL, um die Darstellung und das Verhalten Ihrer Reporting Services-Berichte zu konfigurieren.
-ms.date: 01/31/2020
+ms.date: 05/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c975f457238912c16e33a13f1f2ba598c82cac3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77147383"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859030"
 ---
 # <a name="url-access-parameter-reference"></a>Referenz für URL-Zugriffsparameter
 
@@ -79,18 +79,21 @@ ms.locfileid: "77147383"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   **FindString**: Durchsuchen eines Berichts nach einem bestimmten Textteil.
+-   **FindString**: Sucht in einem Bericht nach einer bestimmten Textstelle und hebt diese hervor.
+    
+    > [!IMPORTANT]  
+    >  *rc:FindString* funktioniert nur, wenn Sie *rc:Toolbar*=**false** in die URL-Zugriffszeichenfolge einschließen.
   
      Beispiel im einheitlichen Modus:
   
     ```  
-    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
      Beispiel im SharePoint-Modus:
   
     ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
 -   **StartFind**: Legt den letzten Abschnitt für die Suche fest. Der Standardwert dieses Parameters ist die letzte Seite des Berichts.  

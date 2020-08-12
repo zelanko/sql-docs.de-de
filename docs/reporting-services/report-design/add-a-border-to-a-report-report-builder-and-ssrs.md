@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen eines Rahmens zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie Bereiche eines paginierten Berichts definieren, indem Sie im Berichts-Generator Kopfzeilen, Fußzeilen und den Hauptteil von Berichten mit Rändern versehen.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7790d44cc4160d7f61562cf470da43bb49a82cf2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cfec5b85bce53a018bfab013494f2f0413a3803b
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080783"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681569"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Hinzufügen eines Rahmens zu einem Bericht (Berichts-Generator und SSRS)
   Sie können einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht ohne Verwendung von Linien oder Rechtecken einen Rahmen hinzufügen, indem Sie den Kopf- und Fußzeilen und dem Berichtshauptteil selbst Rahmen hinzufügen.    
     
- Wenn Sie einen Berichtsrahmen hinzufügen, der in der Seitenkopf- oder -fußzeile angezeigt wird, unterdrücken Sie nicht die Kopf- und Fußzeile auf der ersten und letzten Seite des Berichts. In diesem Fall kann der Rahmen u. U. oben oder unten auf der ersten und letzten Seite des Berichts abgeschnitten angezeigt werden. Weitere Informationen finden Sie unter [Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md).    
+ Wenn Sie einen Berichtsrahmen hinzufügen, der in der Seitenkopf- oder -fußzeile angezeigt wird, unterdrücken Sie nicht die Kopf- und Fußzeile auf der ersten und letzten Seite des Berichts. In diesem Fall kann der Rahmen möglicherweise oben oder unten auf der ersten und letzten Seite des Berichts abgeschnitten angezeigt werden. Weitere Informationen finden Sie unter [Seitenkopf- und Seitenfußzeilen (Berichts-Generator und SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md).    
     
 ## <a name="to-add-a-border-to-a-report"></a>So fügen Sie einem Bericht einen Rahmen hinzu    
     

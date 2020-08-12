@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen eines aus mehreren Werten bestehenden Parameters zu einem Bericht | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie einem Bericht einen Parameter hinzufügen, mit dem ein Benutzer mehr als einen Wert für den Parameter im Berichts-Generator auswählen kann.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ac257b63b3cd36cc789a842c87aff9d5186f1206
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc464c7ffeb6f166a8c4c39c70dc4001468f3568
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575417"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779426"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Hinzufügen eines aus mehreren Werten bestehenden Parameters zu einem Bericht
   Sie können einem Bericht einen Parameter hinzufügen, der dem Benutzer die Auswahl mehrerer Werte für den Parameter ermöglicht.  

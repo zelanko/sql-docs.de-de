@@ -1,5 +1,6 @@
 ---
 title: Implementieren von Datenverarbeitungserweiterungen | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie eine Brücke zwischen einer Datenquelle und einem Dataset in den Reporting Services erstellen, indem Sie eine Datenverarbeitungserweiterung implementieren.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96458c62500794d06633299da57b4eccea9810da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b127a0382b8913d9e8ed95dbfa61f9c4113d5ff0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193925"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529553"
 ---
 # <a name="implementing-a-data-processing-extension"></a>Implementieren von Datenverarbeitungserweiterungen
-  Mithilfe von Datenverarbeitungserweiterungen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] können Sie eine Verbindung zu einer Datenquelle herstellen und Daten abrufen. Sie dienen außerdem als Verbindung zwischen einer Datenquelle und einem Dataset. Datenverarbeitungserweiterungen für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sind einer Teilmenge der Datenanbieterschnittstellen für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] nachgebildet.  
+  Mithilfe von Datenverarbeitungserweiterungen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] können Sie eine Verbindung zu einer Datenquelle herstellen und Daten abrufen. Sie dienen außerdem als Verbindung zwischen einer Datenquelle und einem Dataset. Die Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sind einer Teilmenge der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Datenanbieterschnittstellen nachgebildet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Data Processing Extensions Overview (Übersicht über Datenverarbeitungserweiterungen)](../../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)  

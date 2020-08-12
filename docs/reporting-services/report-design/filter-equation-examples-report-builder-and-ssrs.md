@@ -1,5 +1,6 @@
 ---
 title: Beispiele für Filtergleichungen (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie einen Berichtsfilter erstellen. Beachten Sie diese Beispiele für oft verwendete Filter, um Ihren eigenen zu erstellen.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a76863222fdd58d769031020ac888966596146
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 074a7d7b300d9ae55776199479b229407b2ba3a1
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080130"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689742"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>Beispiele für Filtergleichungen (Berichts-Generator und SSRS)
   Zum Erstellen eines Filters müssen Sie mindestens eine Filtergleichung angeben. Eine Filtergleichung schließt einen Ausdruck, einen Datentyp, einen Operator und einen Wert ein. Dieses Thema enthält Beispiele für häufig verwendete Filter.  
@@ -26,7 +27,7 @@ ms.locfileid: "77080130"
 ## <a name="filter-examples"></a>Beispiele für Filter  
  In der folgenden Tabelle werden Beispiele für Filtergleichungen dargestellt, die andere Datentypen und andere Operatoren verwenden. Der Bereich für den Vergleich wird von dem Berichtselement bestimmt, für das ein Filter definiert wird. Beispiel: Bei einem für ein Dataset definierten Filter bezeichnet **Erste % 10** die ersten 10 Prozent der Werte im Dataset. Im Falle eines für eine Gruppe definierten Filters bedeutet **Erste % 10** die ersten 10 Prozent der Werte in der Gruppe.  
   
-|Einfacher Ausdruck|Datentyp|Operator|value|BESCHREIBUNG|  
+|Einfacher Ausdruck|Datentyp|Operator|Wert|BESCHREIBUNG|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**Integer**|**>**|`7`|Schließt Datenwerte ein, die größer als 7 sind.|  
 |`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|Schließt die ersten 10 Datenwerte ein.|  

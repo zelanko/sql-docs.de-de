@@ -1,5 +1,6 @@
 ---
 title: Formatieren eines Diagramms (Berichts-Generator) | Microsoft-Dokumentation
+description: Verwenden Sie die Formatierungsoptionen in den Eigenschaften der einzelnen Diagrammelemente im Berichts-Generator, um die Darstellung Ihres Diagramms zu verbessern und Datenpunkte hervorzuheben.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -49,12 +50,12 @@ f1_keywords:
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ffb31bd95cda34c064d4f49081c66228e25bbd5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 170691bbc29a69ef486776057a2da774bef90910
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079946"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255473"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Formatieren eines Diagramms (Berichts-Generator und SSRS)
   Nachdem Sie die Daten für das Diagramm definiert und die gewünschte Darstellung ausgewählt haben, können Sie das Diagramm formatieren. So können Sie die Gesamtdarstellung verbessern und wichtige Datenpunkte hervorheben. Die meisten allgemeinen Formatierungsoptionen können im Dialogfeld Eigenschaften geändert werden. Zum Auswählen dieses Dialogfelds klicken Sie mit der rechten Maustaste auf ein Diagrammelement, und zeigen Sie das Kontextmenü an. Jedes Diagrammelement hat ein eigenes Dialogfeld. Weitere Informationen zu Diagrammelementen finden Sie unter [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

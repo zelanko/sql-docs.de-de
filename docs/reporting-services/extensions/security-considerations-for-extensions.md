@@ -1,5 +1,6 @@
 ---
 title: Überlegungen zur Sicherheit von Erweiterungen | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie mehr über die Sicherheitsrichtlinien, -bedingungen und -anforderungen, die bestimmen, wie Berichtsserver Berechtigungen an Reporting Services-Erweiterungen übergeben.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73da0b40d845e8e2a692b969a119adb3cfce6ef1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fb6a43fba085319b8be4ff374fea7d089e8a529a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193364"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529934"
 ---
 # <a name="security-considerations-for-extensions"></a>Überlegungen zur Sicherheit von Erweiterungen
   Jede Anwendung für die Common Language Runtime (CLR) muss mit dem CLR-Sicherheitssystem interagieren. Bei der Ausführung einer solchen Anwendung wird diese automatisch ausgewertet, und sie erhält von der CLR einen Berechtigungssatz. Abhängig von den Berechtigungen, die die Anwendung erhält, wird sie entweder weiter ausgeführt, oder es wird eine Sicherheitsausnahme ausgelöst. Die lokalen Sicherheitseinstellungen und –richtlinien in den Dateien für die Sicherheitsrichtlinienkonfiguration eines bestimmten Berichtsservers definieren die Codeberechtigungen, die eine Assembly erhält.  

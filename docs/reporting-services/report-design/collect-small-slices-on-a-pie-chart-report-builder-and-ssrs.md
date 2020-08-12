@@ -1,5 +1,6 @@
 ---
 title: Zusammenfassen von kleinen Segmenten in einem Kreisdiagramm (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über das Zusammenfassen von vielen kleinen Slices in einem Kreisdiagramm in einem einzelnen Slice in paginierten Berichten im Berichts-Generator.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c318bebf807846aed85f49770498c57a27ef4d3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5a4dc5671d5a23448f3549e383b26097026cc021
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487979"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462064"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Zusammenfassen von kleinen Slices in einem Kreisdiagramm (Berichts-Generator und SSRS)
 Kreisdiagramme mit zu vielen Slices können unübersichtlich wirken. Erfahren Sie, wie Sie in einem paginierten Bericht von [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] viele kleine Slices zu einem einzigen Slice in einem Kreisdiagramm zusammenfassen.
@@ -79,7 +80,7 @@ Kreisdiagramme mit zu vielen Slices können unübersichtlich wirken. Erfahren Si
 >  Sie können das sekundäre Kreisdiagramm nicht formatieren. Aus diesem Grund wird dringend empfohlen, beim Zusammenfassen von Slices in einem Kreisdiagramm die erste Methode zu verwenden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-* [Tutorial: Add a Pie Chart to Your Report (Report Builder) (Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator))](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
+* [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
 *  [Kreisdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [Anzeigen von Datenpunktbezeichnungen außerhalb eines Kreisdiagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

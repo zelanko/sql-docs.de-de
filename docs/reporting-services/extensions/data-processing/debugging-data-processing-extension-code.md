@@ -1,5 +1,6 @@
 ---
 title: Debuggen von Code für Datenverarbeitungserweiterungen | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Debuggingtools für das Microsoft .NET Framework verwenden können, um den Code Ihrer Datenverarbeitungserweiterung zu analysieren und Fehler darin zu finden.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 031dade1cb1f5535a1b0ccacc0efe4ca8b241ccb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4514d1b0fb84da6a44e5d51a60add48aff971021
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194048"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529643"
 ---
 # <a name="debugging-data-processing-extension-code"></a>Debuggen von Code für Datenverarbeitungserweiterungen
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] umfasst mehrere Debugtools, mit denen Sie den Code für Ihr Datenverarbeitungserweiterung analysieren und enthaltene Fehler ermitteln können. Welches Tool dafür am besten geeignet ist, hängt von Ihrer Zielsetzung ab. In diesem Beispiel wird [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] verwendet.  

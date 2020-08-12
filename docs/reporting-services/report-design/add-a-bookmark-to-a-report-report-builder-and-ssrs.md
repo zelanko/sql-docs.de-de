@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen eines Lesezeichens zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie einem Bericht Lesezeichen hinzufügen, um ein benutzerdefiniertes Inhaltsverzeichnis oder benutzerdefinierte interne Navigationslinks im Berichts-Generator bereitzustellen.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e95f4fc90e35668270f9a126f284f0b9aef1f107
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e79359d8d9cdfb6af624f86fca5ca2a5648ecb10
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080809"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779502"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Hinzufügen eines Lesezeichens zu einem Bericht (Berichts-Generator und SSRS)
   Fügen Sie einem Bericht Lesezeichen und Lesezeichenlinks hinzu, wenn Sie ein benutzerdefiniertes Inhaltsverzeichnis oder benutzerdefinierte interne Navigationslinks bereitstellen möchten. In der Regel fügen Sie Lesezeichen an Positionen im Bericht hinzu, an die Benutzer verwiesen werden sollen, wie beispielsweise Tabellen, Diagramme oder eindeutige Gruppenwerte, die in einer Tabelle oder Matrix angezeigt werden. Sie können eigene Zeichenfolgen zur Verwendung als Lesezeichen erstellen. Bei Gruppen können Sie das Lesezeichen auf den Gruppierungsausdruck festlegen.  

@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren eines Berichtsservers in einem Netzwerklastenausgleichcluster | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie konfigurieren, dass die horizontale Skalierung eines Berichtsservers auf einem Netzwerklastenausgleich ausgeführt wird. Implementieren Sie eine NLB-Clusterlösung zur Unterstützung einer Reporting Services-Bereitstellung für horizontales Skalieren.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
-ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8bd6d8e99549cb6228a46f04b1532bbf872a066
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244401"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545572"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Konfigurieren eines Berichtsservers in einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich)
 
@@ -34,7 +35,7 @@ ms.locfileid: "75244401"
 |----------|-----------------|----------------------|  
 |1|Überprüfen Sie vor der Installation von Reporting Services auf Serverknoten in einem NLB-Cluster die Anforderungen für die Bereitstellung für horizontales Skalieren.|[Konfigurieren der Bereitstellung für horizontales Skalieren für Berichtsserver im einheitlichen Modus](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |2|Konfigurieren Sie den NLB-Cluster, und überprüfen Sie, ob er ordnungsgemäß arbeitet.<br /><br /> Ordnen Sie unbedingt der virtuellen Server-IP-Adresse des NLB-Clusters einen Hostheadernamen zu. Der Hostheadername wird in der Berichtsserver-URL verwendet, und er ist leichter zu behalten als eine IP-Adresse.|Weitere Informationen finden Sie in der Windows Server-Produktdokumentation für die Version des verwendeten Windows-Betriebssystems.|  
-|3|Fügen Sie den NetBIOS-Namen und den vollqualifizierten Domänennamen (Fully Qualified Domain Name oder FQDN) für den Hostheader der in der Windows-Registrierung gespeicherten Liste **BackConnectionHostNames** hinzu.<br /><br /> Wenn z.B. der Hostheadername \<MyServer> ein virtueller Name für den Windows-Computernamen „contoso“ ist, können Sie wahrscheinlich mit „contoso.domain.com“ auf das FQDN-Formular verweisen. Sie müssen sowohl den Hostheadernamen (MyServer ) als auch den FQDN-Namen (contoso.domain.com) zur Liste in **BackConnectionHostNames**hinzufügen.  <br /><br /> Starten Sie dann den Computer neu, damit die Änderungen wirksam werden.|Dieser Schritt ist erforderlich, wenn Ihre Serverumgebung die NTLM-Authentifizierung auf dem lokalen Computer verwendet und eine Loopbackverbindung erstellt.<br /><br /> In diesem Fall tritt bei Anforderungen zwischen dem Berichts-Manager und dem Berichtsserver der Fehler 401 (Nicht autorisiert) auf.|  
+|3|Fügen Sie den NetBIOS-Namen und den vollqualifizierten Domänennamen (Fully Qualified Domain Name oder FQDN) für den Hostheader der in der Windows-Registrierung gespeicherten Liste **BackConnectionHostNames** hinzu.<br /><br /> Wenn z. B. der Hostheadername \<MyServer> ein virtueller Name für den Windows-Computernamen „contoso“ ist, können Sie wahrscheinlich mit „contoso.domain.com“ auf das FQDN-Formular verweisen. Sie müssen sowohl den Hostheadernamen (MyServer ) als auch den FQDN-Namen (contoso.domain.com) zur Liste in **BackConnectionHostNames**hinzufügen.  <br /><br /> Starten Sie dann den Computer neu, damit die Änderungen wirksam werden.|Dieser Schritt ist erforderlich, wenn Ihre Serverumgebung die NTLM-Authentifizierung auf dem lokalen Computer verwendet und eine Loopbackverbindung erstellt.<br /><br /> In diesem Fall tritt bei Anforderungen zwischen dem Berichts-Manager und dem Berichtsserver der Fehler 401 (Nicht autorisiert) auf.|  
 |4|Installieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im reinen Dateimodus auf Knoten, die bereits zu einem NLB-Cluster gehören, oder konfigurieren Sie die Berichtsserverinstanzen für die Bereitstellung für horizontales Skalieren.<br /><br /> Die konfigurierte Bereitstellung für horizontales Skalieren antwortet möglicherweise nicht auf Anforderungen, die an die IP des virtuellen Servers gerichtet sind. Sie wird erst in einem späteren Schritt so konfiguriert, dass die IP des virtuellen Servers verwendet wird, und zwar nach dem Konfigurieren der Anzeigestatusüberprüfung.|[Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|Konfigurieren der Anzeigestatusüberprüfung<br /><br /> Optimale Ergebnisse erzielen Sie, wenn Sie diesen Schritt nach dem Konfigurieren der Bereitstellung für horizontales Skalieren und vor dem Konfigurieren der Berichtsserverinstanzen für die Verwendung der virtuellen Server-IP-Adresse ausführen. Indem Sie zuerst die Anzeigestatusüberprüfung konfigurieren, können Sie Ausnahmen für fehlgeschlagene Statusüberprüfungen vermeiden, wenn Benutzer versuchen, auf interaktive Berichte zuzugreifen.|[Vorgehensweise: Konfigurieren der Anzeigestatusüberprüfung](#ViewState) in diesem Thema|  
 |6|Konfigurieren Sie **Hostname** und **UrlRoot** so, dass die IP des virtuellen Servers des NLB-Clusters verwendet wird.|[So konfigurieren Sie HostName und UrlRoot](#SpecifyingVirtualServerName) in diesem Thema.|  
@@ -88,7 +89,7 @@ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Clu
 
 3. Wiederholen Sie den vorherigen Schritt für alle Berichtsserver in der Bereitstellung für horizontales Skalieren.  
 
-4. Überprüfen Sie, ob alle „RSReportServer.config“-Dateien in den \Reporting Services\Berichtsserver-Ordnern identische \<**MachineKey**>-Elemente enthalten.
+4. Stellen Sie sicher, dass alle „RSReportServer.config“-Dateien in den „\Reporting Services\Report Server“-Ordnern identische \<**MachineKey**>-Elemente enthalten.
 
 ::: moniker-end
 
@@ -108,13 +109,13 @@ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Clu
   
 1. Öffnen Sie RSReportServer.config in einem Text-Editor.  
   
-2. Suchen Sie nach dem **\<Service>** -Abschnitt, und fügen Sie der Konfigurationsdatei die folgenden Informationen hinzu, womit der **Hostname**-Wert durch den Namen des virtuellen Servers für den NLB-Server ersetzt wird:  
+2. Suchen Sie nach dem **\<Service>** -Abschnitt, und fügen Sie der Konfigurationsdatei die folgenden Informationen hinzu, wodurch der Wert für **Hostname** durch den Namen des virtuellen Servers für den NLB-Server ersetzt wird:  
   
     ```xml
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3. Suchen Sie **UrlRoot**. Das Element ist zwar nicht in der Konfigurationsdatei angegeben, aber als Standardwert wird eine URL in folgendem Format verwendet: „https://“ oder `https://<computername>/<reportserver>`, wobei \<*reportserver*> der Name des virtuellen Verzeichnisses des Berichtsserver-Webdiensts ist.  
+3. Suchen Sie **UrlRoot**. Das Element ist in der Konfigurationsdatei nicht angegeben, aber als Standardwert wird eine URL in folgendem Format verwendet: „https://“ oder `https://<computername>/<reportserver>`, wobei \<*reportserver*> der Name des virtuellen Verzeichnisses des Berichtsserver-Webdiensts ist.  
   
 4. Geben Sie für **UrlRoot** einen Wert ein, der den virtuellen Namen des Clusters im folgenden Format enthält: „https://“ oder `https://<virtual_server>/<reportserver>`.  
   
@@ -136,9 +137,9 @@ Zum Ausführen einer Bereitstellung für horizontales Skalieren in einem NLB-Clu
   
 1. Öffnen Sie die Datei RSReportServer.config in einem Text-Editor.  
   
-2. Suchen Sie \<**Hostname**>, \<**ReportServerUrl**> und \<**UrlRoot**>, und überprüfen Sie den Hostnamen für jede Einstellung. Wenn der Wert nicht dem erwarteten Hostnamen entspricht, ersetzen Sie ihn durch den richtigen Hostnamen.  
+2. Suchen Sie nach \<**Hostname**>, \<**ReportServerUrl**> und \<**UrlRoot**>, und überprüfen Sie den Hostnamen auf jede Einstellung. Wenn der Wert nicht dem erwarteten Hostnamen entspricht, ersetzen Sie ihn durch den richtigen Hostnamen.  
   
- Wenn Sie das Reporting Services-Konfigurationstool starten, nachdem Sie diese Änderungen vorgenommen haben, ändert das Tool möglicherweise die Einstellungen für \<**ReportServerUrl**> auf den Standardwert. Bewahren Sie immer eine Sicherungskopie der Konfigurationsdateien für den Fall auf, dass Sie diese durch die Version ersetzen müssen, die die gewünschten Einstellungen enthält.  
+ Wenn Sie das Reporting Services-Konfigurationstool starten, nachdem Sie diese Änderungen vorgenommen haben, ändert das Tool möglicherweise die Einstellungen für \<**ReportServerUrl**> in den Standardwert. Bewahren Sie immer eine Sicherungskopie der Konfigurationsdateien für den Fall auf, dass Sie diese durch die Version ersetzen müssen, die die gewünschten Einstellungen enthält.  
   
 ## <a name="see-also"></a>Weitere Informationen
 

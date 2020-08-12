@@ -1,5 +1,6 @@
 ---
 title: Aktivieren des Features zur Berichtsserver-Dateisynchronisierung in SharePoint | Microsoft-Dokumentation
+description: Das Dateisynchronisierungsfeature der Reporting Services für Berichtsserver verwendet SharePoint-Ereignishandler zum Synchronisieren des Berichtsserverkatalogs mit Elementen in Dokumentbibliotheken.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a84c906df921bf4702d47e57400b7ad7b9e127f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5a0b7b6e50e07573c57882339e5fc3c7dd3cb39
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579442"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767405"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint"></a>Aktivieren des Features zur Berichtsserver-Dateisynchronisierung in SharePoint
 

@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren des Berichts-Generatorzugriffs | Microsoft-Dokumentation
+description: Konfigurieren Sie den Berichts-Generator, ein Berichterstellungstool, das mit einem SQL Server Reporting Services-Berichtsserver installiert wird. Er verwendet entweder den einheitlichen Modus oder den integrierten SharePoint-Modus.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
-ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 168e8897743e113ae1a40df5ad8d35c66289fde0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68255171"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548082"
 ---
 # <a name="configure-report-builder-access"></a>Konfigurieren des Berichts-Generator-Zugriffs
 Der Berichts-Generator ist ein Tool für die Ad-hoc-Berichterstellung, das mit einem für den einheitlichen oder den integrierten SharePoint-Modus konfigurierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver zusammen installiert wird.  
@@ -101,7 +102,7 @@ Nachdem Sie die Rollenzuweisungen erstellt haben, sind die Benutzer zu Folgendem
 
     4. Geben Sie im Feld Beschreibung eine Rollenbeschreibung ein, damit die Benutzer im Webportal wissen, wozu ihre Rolle dient.  
 
-    5. Fügen Sie die folgenden Aufgaben hinzu: **Berichte lesen**, **Berichte anzeigen**, **Modelle anzeigen**, **Ressourcen anzeigen**, **Ordner anzeigen**und **Einzelne Abonnements verwalten**.  
+    5. Fügen Sie die folgenden Aufgaben hinzu: **Berichte lesen**, **Berichte anzeigen**, **Modelle anzeigen**, **Ressourcen anzeigen**, **Ordner anzeigen** und **Einzelne Abonnements verwalten**.  
 
     6. Klicken Sie auf **OK** , um die Rolle zu speichern.  
 
@@ -115,7 +116,7 @@ Nachdem Sie die Rollenzuweisungen erstellt haben, sind die Benutzer zu Folgendem
 3. Klicken Sie auf **Sicherheit**.  
 
 4. Wenn für den Benutzer oder die Gruppe, für den bzw. die Sie den Zugriff auf den Berichts-Generator konfigurieren möchten, klicken Sie auf **Bearbeiten**.  
-Andernfalls klicken Sie auf **Neue Rollenzuweisung**. Geben Sie unter Gruppe oder Benutzer ein Windows-Domänenbenutzer- oder -Gruppenkonto im folgenden Format ein: \<Domäne>\\<Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.  
+Andernfalls klicken Sie auf **Neue Rollenzuweisung**. Geben Sie unter „Gruppe oder Benutzer“ ein Windows-Domänenbenutzerkonto oder -Domänengruppenkonto im folgenden Format an: \<domain>\\<Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.  
 
 5. Wählen Sie **Systembenutzer**aus, und klicken Sie dann auf **OK**.  
 
@@ -127,7 +128,7 @@ Andernfalls klicken Sie auf **Neue Rollenzuweisung**. Geben Sie unter Gruppe ode
 
 9. Wenn für den Benutzer oder die Gruppe, für den bzw. die Sie den Zugriff auf den Berichts-Generator konfigurieren möchten, klicken Sie auf **Bearbeiten**.  
 
-    Andernfalls klicken Sie auf **Neue Rollenzuweisung**. Geben Sie unter Gruppe oder Benutzer ein Windows-Domänenbenutzer- oder -Gruppenkonto im folgenden Format ein: \<Domäne>\\<Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.  
+    Andernfalls klicken Sie auf **Neue Rollenzuweisung**. Geben Sie unter „Gruppe oder Benutzer“ ein Windows-Domänenbenutzerkonto oder -Domänengruppenkonto im folgenden Format an: \<domain>\\<Konto\>. Wenn Sie die Formularauthentifizierung oder die benutzerdefinierte Sicherheit verwenden, geben Sie das Benutzer- oder Gruppenkonto in dem für Ihre Bereitstellung richtigen Format an.  
 
 10. Wählen Sie **Berichts-Generator**aus, und klicken Sie dann auf **Anwenden**.  
 

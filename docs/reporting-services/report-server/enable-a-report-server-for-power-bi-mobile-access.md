@@ -1,5 +1,6 @@
 ---
 title: Aktivieren eines Berichtsservers für einen Zugriff auf Power BI Mobile | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie die Power BI Mobile-App mit Reporting Services verbinden, um mobile Berichte zu verwenden. Mobile Berichte sind eine Funktion des einheitlichen Modus.
 ms.date: 12/17/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dfeb99dc01a0ed2aaade9c0c21e4ce3ddd5da49
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 69e6f1b03b7ef6b1fb68d6c08cd1f526a6b481fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486744"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545554"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Aktivieren eines Berichtsservers für einen Zugang zu Power BI von Mobilgeräten
 Sie können die mobile Power BI-App verwenden, um Mobile Berichte zu nutzen. Sie müssen einige Dinge konfigurieren, damit die mobile Power BI-App eine Verbindung mit Reporting Services herstellen kann.  

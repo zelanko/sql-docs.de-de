@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen einer interaktiven Sortierung zu einer Tabelle oder Matrix (Berichts-Generator) | Microsoft-Dokumentation
+description: Geben Sie Benutzern die Möglichkeit, die Sortierreihenfolge von Zeilen und Spalten in Tabellen und Matrizen mithilfe interaktiver Sortierschaltflächen im Berichts-Generator zu ändern.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ddc1796b4b3638d91c94acafbce1377128dfe1cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d33cab9f1805652501f9d65cfeb06e47dc444733
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081617"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255513"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Hinzufügen einer interaktiven Sortierung zu einer Tabelle oder Matrix (Berichts-Generator und SSRS)
   Sie können interaktive Sortierschaltflächen hinzufügen, um es Benutzern zu ermöglichen, die Sortierreihenfolge von Zeilen und Spalten in Tabellen und Matrizen zu ändern. Diese Funktion wird nur in Renderingformaten unterstützt, die Benutzeraktionen unterstützen, z. B. HTML.  

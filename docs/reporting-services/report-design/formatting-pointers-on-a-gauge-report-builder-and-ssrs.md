@@ -1,5 +1,6 @@
 ---
 title: Formatieren von Zeigern auf einem Messgerät (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel finden Sie heraus, wie Sie den aktuellen Wert eines Messgeräts in einem paginierten Bericht im Berichts-Generator angeben, indem Sie Bestandteile des Messgeräts formatieren.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 541cc806804dc2095d7a33c33c449d6cf8768608
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 21f02918ca00e272292b0f88557677848dae0aab
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079767"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681489"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)
  In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht gibt ein Messgerätzeiger den aktuellen Wert des Messgeräts an.   

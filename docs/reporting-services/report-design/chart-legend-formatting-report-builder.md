@@ -1,5 +1,6 @@
 ---
 title: Formatieren der Legende in einem Diagramm (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie im Berichts-Generator eine Legende für ein Diagramm über das Dialogfeld „Legendeneigenschaften“ oder im Bereich „Eigenschaften“ formatieren.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b2babeb60f6208761be04e85889206f9ba407e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc2f10905bdf80c1853aecefd6783bdc60819a82
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080560"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255323"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Diagrammlegende: Formatierung (Berichts-Generator)
   Die Diagrammlegende enthält Beschreibungen für jede Kategorie in einem Diagramm. Eine Legende umfasst immer ein oder mehrere Legendenelemente. Jedes Legendenelement besteht aus einem farbigen Kästchen, das für die Reihe steht, und einer Textzeichenfolge, die die Reihe beschreibt. Dies ist in der folgenden Abbildung dargestellt.  

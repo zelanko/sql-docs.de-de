@@ -1,5 +1,6 @@
 ---
 title: Codezugriffssicherheit in Reporting Services | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über Codezugriffssicherheit in den Reporting Services. Dabei wird erläutert, welche Rolle Beweise, Codegruppen und benannte Berechtigungssätze bei einer Sicherheitsrichtlinie spielen.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d629f820dfa2efd87e6460c1c85566e7b33cde8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b17b8c6e3506d31e7576c2e0f5f155a9da597c7d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193828"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529397"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Codezugriffssicherheit in Reporting Services
   Die Codezugriffssicherheit dreht sich um diese Kernbegriffe: Beweise, Codegruppen und benannte Berechtigungssätze. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] haben die Komponenten Berichts-Manager, Berichts-Designer und Berichtsserver jeweils eine Richtliniendatei, die die Codezugriffssicherheit für benutzerdefinierte Assemblys sowie für die Daten-, Übermittlungs-, Rendering- und Sicherheitserweiterung konfiguriert. Die folgenden Abschnitte enthalten eine Übersicht über die Codezugriffssicherheit. Ausführliche Informationen zu den Themen dieses Abschnitts finden Sie unter „Sicherheitsrichtlinienmodell“ in der Dokumentation zum [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  

@@ -1,5 +1,6 @@
 ---
 title: Verknüpfen mehrerer Datenbereiche mit demselben Dataset (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie einem paginierten Bericht im Berichts-Generator mehrere Datenbereiche hinzufügen können, um verschiedene Datensichten für ein Berichtsdataset bereitzustellen.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d282c2c84060fb205dc0421d531a5fe23003b77e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 91a19a2d0e00fc33e7b9e9842c05f8781678a694
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081957"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885258"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>Verknüpfen mehrerer Datenbereiche mit einem Dataset (Berichts-Generator und SSRS)
 

@@ -1,5 +1,6 @@
 ---
 title: Festlegen von Parametern für einen veröffentlichten Bericht - Integrierter SharePoint-Modus | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie im Berichts-Generator entweder in der Berichtsdefinition oder nach Veröffentlichung des Berichts Parameter festlegen und einen parametrisierten Bericht ausführen.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51fcade75cff0f5cafa0e780a823ce505e43e297
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a04058cc679d7697f2526c85b8b6526e8ea4a8ce
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576668"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681219"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Festlegen von Parametern für einen veröffentlichten Bericht – Integrierter SharePoint-Modus
   Bei einem parametrisierten Bericht handelt es sich um einen Bericht, der bei seiner Ausführung Eingabewerte akzeptiert, mit denen die Daten gefiltert werden. Parameter werden beim Erstellen des Berichts definiert. Abhängig von der Definition eines Berichtsparameters in der Berichtsdefinition kann er einen einzelnen Wert, mehrere Werte oder dynamische Werte akzeptieren, die als Reaktion auf eine vorherige Auswahl geändert werden (wenn Sie z. B. eine Produktkategorie auswählen, könnte die nächste Auswahl ein bestimmtes Produkt aus dieser Kategorie sein). Ein Parameter kann einen Standardwert aufweisen, der zur automatischen Ausführung einer gefilterten Version des Berichts verwendet werden kann oder möglicherweise durch einen anderen Wert ersetzt werden kann.  
   
- Diese Eigenschaften können in der Berichtsdefinition oder nach dem Veröffentlichen des Berichts festgelegt werden. Zwar können Sie einige Parametereigenschaften in einem veröffentlichten Bericht ändern, um den Wert und die Anzeigeeigenschaften zu ändern, doch können Sie den Parameternamen oder den Datentyp nicht ändern. Der Parametername und der Datentyp können nur vom Berichtsautor in der Berichtsdefinition geändert werden.  
+ Diese Eigenschaften können in der Berichtsdefinition oder nach dem Veröffentlichen des Berichts festgelegt werden. Zwar können Sie einige Parametereigenschaften in einem veröffentlichten Bericht ändern, um den Wert und die Anzeigeeigenschaften zu ändern, doch Sie können den Parameternamen oder den Datentyp nicht ändern. Der Parametername und der Datentyp können nur vom Berichtsautor in der Berichtsdefinition geändert werden.  
   
  Wenn Sie einen parametrisierten Bericht ausführen möchten, müssen Ihnen die einzugebenden Werte normalerweise bekannt sein. Manche Berichte enthalten jedoch Dropdownlisten mit gültigen Werten, die Sie auswählen können.  
   

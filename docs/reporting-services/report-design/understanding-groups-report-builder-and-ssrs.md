@@ -1,5 +1,6 @@
 ---
 title: Grundlegendes zu Gruppen (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier wird Ihnen vermittelt, wie Ansichten eines Berichtsdatasets in einem paginierten Bericht im Berichts-Generator über Gruppen organisiert sind.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a24833de353f4a524dd12f3a37a343fdc1a9151
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 498604b377638981d767e353518b70fe3398c597
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080851"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880306"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Grundlegendes zu Gruppen (Berichts-Generator und SSRS)
   In einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht ist eine Gruppe ein benannter Satz von Daten aus dem Berichtsdataset, der an einen Datenbereich gebunden ist. Im Grunde wird mit einer Gruppe eine Sicht eines Berichtsdatasets organisiert. Alle Gruppen in einem Datenbereich geben unterschiedliche Sichten desselben Berichtsdatasets an.  
@@ -61,7 +62,7 @@ ms.locfileid: "77080851"
 > [!NOTE]  
 >  Zwar besitzen Gruppen in unterschiedlichen Datenbereichen unterschiedliche Namen, doch sind die Prinzipien der Erstellung und Verwendung von Gruppen gleich. Wenn Sie eine Gruppe für einen Datenbereich erstellen, geben Sie eine Möglichkeit an, die Detaildaten aus dem mit dem Datenbereich verknüpften Dataset zu organisieren. Jeder Datenbereich unterstützt eine Gruppenstruktur, in der gruppierte Daten angezeigt werden können.  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Gruppen in einem Tablix-Datenbereich: Detail-, Zeilen- und Spaltengruppen  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Gruppen in einem Tablix-Datenbereich: Details, Zeilen- und Spaltengruppen  
  Wie in diesem Thema bereits dargestellt, ermöglichen es Tablix-Datenbereiche, Daten nach Zeilen oder Spalten in Gruppen zu organisieren. Zeilen- und Spaltengruppen sind jedoch nicht die einzigen in einem Tablix-Datenbereich verfügbaren Gruppen. Dieser Datenbereich kann die folgenden Typen von Gruppen aufweisen:  
   
 -   **Gruppe "Details"** Die Detailgruppe besteht aus sämtlichen Daten, die in einem Berichtsdataset enthalten sind, nachdem Dataset- und Datenbereichsfilter von Berichts-Generator oder Berichts-Designer angewendet wurden. Die Gruppe Details ist daher die einzige Gruppe, die keinen Gruppierungsausdruck besitzt.  

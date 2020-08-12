@@ -1,5 +1,6 @@
 ---
 title: Implementieren von Sicherheitserweiterungen | Microsoft-Dokumentation
+description: Integrieren Sie die benutzerdefinierte Sicherheitsfunktion mithilfe der API-Bereitstellungsplattform für Reporting Services, um das Reporting Services-Sicherheitssystem zu erweitern.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6089e521e5b5fb5015816d2d18ce5a885a4c3327
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d39e517a507c37ac692f4d304c96a06ce834495
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193798"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529046"
 ---
 # <a name="implementing-a-security-extension"></a>Implementieren von Sicherheitserweiterungen
   Die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Authentifizierung ist das primäre System zum Sichern von Berichten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. In bestimmten Fällen kann es jedoch sein, dass Sie das [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Sicherheitssystem erweitern müssen, um benutzerdefinierte Sicherheitsfunktionen in Ihr Unternehmen zu integrieren. Hierzu verwenden Sie die Entwicklungsplattform, die von der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-API zur Verfügung gestellt wird. In diesem Abschnitt finden Sie eine Übersicht der Sicherheitserweiterungen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

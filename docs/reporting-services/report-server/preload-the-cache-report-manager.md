@@ -1,5 +1,6 @@
 ---
 title: Vorabladen des Caches (SSRS)| Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie den Zwischenspeicher für ein freigegebenes Dataset vorab laden, indem Sie einen Plan für die Aktualisierung des Zwischenspeichers für das freigegebene Dataset auf einem Berichtsserver der Reporting Services erstellen.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5401d324be7bb59d5be21afa72acebc0a7ab6487
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66175000"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548042"
 ---
 # <a name="preload-the-cache"></a>Vorabladen des Caches  
   Sie können den Cache für ein freigegebenes Dataset vorab laden, indem Sie einen Cacheaktualisierungsplan für das freigegebene Dataset erstellen.  

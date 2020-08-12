@@ -1,5 +1,6 @@
 ---
 title: Berichtsserversichten „ExecutionLog“ und „0ExecutionLog3“ | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über das Ausführungsprotokoll für den Berichtsserver in Reporting Services, das Informationen zu Berichten über Server im einheitlichen Modus oder eine SharePoint-Farm enthält.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15e8b648603952226af45d485d5678f5d0d3bbd6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65619690"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548012"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Berichtsserver-Sichten ExecutionLog und ExecutionLog3
   Das Berichtsserver-Ausführungsprotokoll von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthält Informationen zu den Berichten, die auf dem Server bzw. auf mehreren Servern in einer Bereitstellung für horizontales Skalieren im einheitlichen Modus oder in einer SharePoint-Farm ausgeführt werden. Anhand des Ausführungsprotokolls des Berichtsservers können Sie feststellen, wie oft ein Bericht angefordert wird, welche Ausgabeformate am meisten verwendet werden und wie viele Millisekunden Verarbeitungszeit für die einzelnen Verarbeitungsphasen aufgewendet werden. Das Protokoll enthält Informationen über die Zeit, die für die Ausführung der Datasetabfrage eines Berichts aufgewendet wurde, und die Zeit, die für die Verarbeitung der Daten aufgewendet wurde. Wenn Sie Berichtsserveradministrator sind, können Sie die Protokollinformationen überprüfen und Aufgaben mit langer Laufzeit identifizieren sowie den Berichtsautoren zu den Bereichen des Berichts (Dataset oder Verarbeitung) Vorschläge zur Verbesserung machen.  
@@ -121,7 +122,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Anzahl von Millisekunden, die zum Abrufen der Daten benötigt werden.|  
 |TimeProcessing|Anzahl von Millisekunden, die zum Verarbeiten des Berichts benötigt werden.|  
 |TimeRendering|Anzahl von Millisekunden, die zum Rendern des Berichts benötigt werden.|  
-|`Source`|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> Live<br /><br /> Cache: Gibt eine zwischengespeicherte Ausführung an, Datasetabfragen werden z. B. nicht live ausgeführt.<br /><br /> Momentaufnahme<br /><br /> Verlauf<br /><br /> Ad-hoc: Gibt entweder einen auf einem dynamisch erstellten Berichtsmodell basierenden Drillthroughbericht oder einen Berichts-Generator-Bericht an, von dem eine Vorschau auf einem Client mithilfe des Berichtsservers zum Verarbeiten und Rendern angezeigt wird.<br /><br /> Sitzung: Gibt eine Anschlussanforderung in einer bereits eingerichteten Sitzung an.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> RDCE: Gibt eine Berichtsdefinitionsanpassungs-Erweiterung (Report Definition Customization Extension, RDCE) an. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
+|`Source`|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> Live<br /><br /> Cache: Gibt eine zwischengespeicherte Ausführung an, Datasetabfragen werden z. B. nicht live ausgeführt.<br /><br /> Momentaufnahme<br /><br /> Verlauf<br /><br /> Ad-hoc: Gibt entweder einen auf einem dynamisch erstellten Berichtsmodell basierenden Drillthroughbericht oder einen Berichts-Generator-Bericht an, von dem eine Vorschau auf einem Client mithilfe des Berichtsservers zum Verarbeiten und Rendern angezeigt wird.<br /><br /> Session: gibt eine Anschlussanforderung in einer bereits eingerichteten Sitzung an.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> RDCE:  gibt eine Anpassungserweiterung für die Berichtsdefinition an. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
 |Status|Status (entweder rsSuccess oder ein Fehlercode; beim Auftreten mehrerer Fehler wird nur der erste Fehler aufgezeichnet).|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
@@ -326,7 +327,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RequestType|Anforderungstyp (Benutzer oder System).|  
 |Format|Renderingformat.|  
 |Parameter|Parameterwerte, die für die Berichtsausführung verwendet werden.|  
-|ReportAction|Mögliche Werte: Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
+|ReportAction|Mögliche Werte: SessionRender, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
 |TimeStart|Anfangs- und Beendigungszeit für die Verarbeitung eines Berichts.|  
 |TimeEnd||  
 |TimeDataRetrieval|Zeitaufwand (in Millisekunden) für das Abfragen der Daten, das Verarbeiten des Berichts und das Rendern des Berichts.|  

@@ -1,5 +1,6 @@
 ---
 title: Häufig verwendete Filter (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel finden Sie Beispiele für Filter zusammen mit Filtergleichungen, die Sie angeben können, um im Berichts-Generator Filter zu erstellen.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d0a096fd9dcb292f1a71b74aaf853abcbd7c02ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d091d4b8d49bd1f7a6d0cac04a874bccfba6c2fc
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082310"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779122"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Häufig verwendete Filter (Berichts-Generator und SSRS)
   Zum Erstellen eines Filters müssen Sie mindestens eine Filtergleichung angeben. Eine Filtergleichung schließt einen Ausdruck, einen Datentyp, einen Operator und einen Wert ein. Dieses Thema enthält Beispiele für häufig verwendete Filter.  
@@ -29,7 +30,7 @@ ms.locfileid: "77082310"
 ## <a name="filter-examples"></a>Beispiele für Filter  
  In der folgenden Tabelle werden Beispiele für Filtergleichungen dargestellt, die andere Datentypen und andere Operatoren verwenden. Der Bereich für den Vergleich wird von dem Berichtselement bestimmt, für das ein Filter definiert wird. Beispiel: Bei einem für ein Dataset definierten Filter bezeichnet **Erste % 10** die ersten 10 Prozent der Werte im Dataset. Im Falle eines für eine Gruppe definierten Filters bedeutet **Erste % 10** die ersten 10 Prozent der Werte in der Gruppe.  
   
-|Einfacher Ausdruck|Datentyp|Operator|value|BESCHREIBUNG|  
+|Einfacher Ausdruck|Datentyp|Operator|Wert|BESCHREIBUNG|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|**Integer**|**>**|`7`|Schließt Datenwerte ein, die größer als 7 sind.|  
 |`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|Schließt die ersten 10 Datenwerte ein.|  
@@ -44,7 +45,7 @@ ms.locfileid: "77082310"
 ## <a name="examples-with-report-parameters"></a>Beispiele für Berichtsparameter  
  In der folgenden Tabelle werden Beispiele für Filterausdrücke bereitgestellt, die einen einwertigen oder mehrwertigen Parameterverweis einschließen.  
   
-|Parametertyp|(Filter-)Ausdruck|Operator|value|Datentyp|  
+|Parametertyp|(Filter-)Ausdruck|Operator|Wert|Datentyp|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
 |Einzelwert|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
 |Mehrwertig|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  

@@ -1,5 +1,6 @@
 ---
 title: Verwalten einer Reporting Services-SharePoint-Dienstanwendung | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie SQL Server Reporting Services-Dienstanwendungen in der SharePoint-Zentraladministration verwalten.
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5de7b0a5b155c519a7a7d24331fb9ad2dc571e3e
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580088"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83765059"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Verwalten einer Reporting Services-SharePoint-Dienstanwendung
 
@@ -34,7 +35,7 @@ ms.locfileid: "65580088"
   
 2.  Klicken Sie neben dem Namen der Dienstanwendung oder auf die Spalte **Typ** . Dadurch wird die gesamte Zeile ausgewählt. Klicken Sie anschließend im SharePoint-Menüband auf **Eigenschaften** .  
   
- Weitere Informationen zu Dienstanwendungseigenschaften finden Sie unter [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+ Weitere Informationen zu Dienstanwendungseigenschaften finden Sie unter [Schritt 3: Erstellen einer Reporting Services-Dienstanwendung](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 ## <a name="open-service-application-management-pages"></a>Öffnen der Verwaltungsseiten von Dienstanwendungen
 
@@ -73,7 +74,7 @@ ms.locfileid: "65580088"
   
 |Einstellung|Kommentare|  
 |-------------|--------------|  
-|Protokollierung der Ausführung aktivieren|Der Standardwert ist TRUE.<br /><br /> Geben Sie an, ob der Berichtsserver Ablaufverfolgungsprotokolle generiert, und geben Sie die Anzahl von Tagen für die Beibehaltung der Protokolle an. erforderlich. Die Protokolle werden auf dem Berichtsservercomputer im Ordner \Microsoft SQL Server\MSSQL.n\ReportServer\Log gespeichert. Bei jedem Neustart des Diensts wird eine neue Protokolldatei begonnen. Weitere Informationen zu Protokolldateien finden Sie unter [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
+|Protokollierung der Ausführung aktivieren|Der Standardwert ist TRUE.<br /><br /> Geben Sie an, ob der Berichtsserver Ablaufverfolgungsprotokolle generiert, und geben Sie die Anzahl von Tagen für die Beibehaltung der Protokolle an. . Die Protokolle werden auf dem Berichtsservercomputer im Ordner \Microsoft SQL Server\MSSQL.n\ReportServer\Log gespeichert. Bei jedem Neustart des Diensts wird eine neue Protokolldatei begonnen. Weitere Informationen zu Protokolldateien finden Sie unter [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |Beibehaltungsdauer des Ausführungsprotokolls in Tagen|Der Standard ist 60 Tage.|  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt die SharePoint-ULS-Protokollierung.  Weitere Informationen finden Sie unter [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  

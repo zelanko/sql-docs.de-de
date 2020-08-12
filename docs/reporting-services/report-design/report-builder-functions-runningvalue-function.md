@@ -1,5 +1,6 @@
 ---
 title: RunningValue-Funktion (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erhalten Sie Informationen zur Funktion „RunningValue“, die ein aktuelles Aggregat aller numerischen Nicht-NULL-Werte zurückgibt, die vom Ausdruck im Berichts-Generator angegeben werden.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f90054a62168032ca29d99819061537e6a0b179a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 053efc8ddd1f9f00c528c626aa204d612cb82369
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081159"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681279"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>Funktionen des Berichts-Generators: RunningValue-Funktion
   Gibt ein laufendes Aggregat aller numerischen Werte ungleich NULL aus dem angegebenen Ausdruck für den Kontext des angegebenen Bereichs ausgewertet zurück.  

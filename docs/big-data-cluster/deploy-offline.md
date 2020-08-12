@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531981"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423159"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Durchführen einer Offlinebereitstellung von Big Data-Clustern für SQL Server
 
@@ -54,6 +54,10 @@ In den folgenden Schritten wird beschrieben, wie Sie die Containerimages des Big
    ```PowerShell
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
+ 
+> [!WARNING]
+> Ändern Sie Big Data-Cluster-Images nicht mehr, sobald sie in Ihr privates Repository gepusht wurden. Die Durchführung einer Bereitstellung mit bearbeiteten Images würde zu einem nicht unterstützten Big Data-Cluster-Setup führen.
+
 
 ### <a name="big-data-cluster-container-images"></a><a id="images"></a> Big Data-Cluster-Containerimages
 

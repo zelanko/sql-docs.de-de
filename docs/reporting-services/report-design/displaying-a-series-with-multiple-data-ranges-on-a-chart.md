@@ -1,5 +1,6 @@
 ---
 title: Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie die Lesbarkeit von Diagrammen mithilfe von Skalierungsunterbrechungslinien und Filtern sowie durch Trennen von Datenbereichen im Berichts-Generator erhöhen.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776c8ab4b133a8655ce42c5b5c3d996360c71322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 976319c02aa641873d2f92bd6c4b10c8e9427566
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578823"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681519"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm
 
@@ -37,7 +38,7 @@ ms.locfileid: "65578823"
 ## <a name="displaying-multiple-data-ranges-using-scale-breaks"></a>Anzeigen von mehreren Datenbereichen mit Skalierungsunterbrechungen  
  Wenn Sie eine Skalierungsunterbrechung aktivieren, berechnet das Diagramm, an welcher Stelle im Diagramm eine Linie gezeichnet werden soll. Zwischen den Bereichen muss eine ausreichende Trennung bestehen, damit eine Skalierungsunterbrechung gezeichnet werden kann. Standardmäßig kann eine Skalierungsunterbrechung nur hinzugefügt werden, wenn eine Trennung zwischen den Datenbereichen eines Diagramms mindestens 25 % ausmacht.  
   
- ![Diagramm mit Skalierungsunterbrechung](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "Diagramm mit Skalierungsunterbrechung")  
+ ![Diagramm mit Skalierungsunterbrechungslinie](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "Diagramm mit Skalierungsunterbrechungslinie")  
   
 > [!NOTE]  
 >  Sie können nicht angeben, an welcher Stelle im Diagramm eine Skalierungsunterbrechung platziert werden soll. Sie können jedoch ändern, wie die Skalierungsunterbrechung berechnet wird. Dies wird weiter unten in diesem Thema beschrieben.  

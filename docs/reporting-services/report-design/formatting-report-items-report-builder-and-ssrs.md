@@ -1,5 +1,6 @@
 ---
 title: Formatieren von Berichtselementen (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie die Formatierung die Lesbarkeit und das Aussehen Ihrer Berichte im Berichts-Generator verbessert.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d0433667ba85af242374933a028974d1960416c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 156745486165bd4348e70a81c910aa49fd55a0e1
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079639"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779432"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatieren von Berichtselementen (Berichts-Generator und SSRS)
   Durch Formatieren der Elemente in einem Bericht lässt sich das Aussehen und die Lesbarkeit des Berichts deutlich verbessern. Die Textfelder und individuellen Elemente in Textfeldern, Bilder, Ausdrücke und Daten können im Berichtsentwurfsmodus formatiert werden.  

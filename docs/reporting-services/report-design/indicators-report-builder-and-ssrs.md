@@ -1,5 +1,6 @@
 ---
 title: Indikatoren (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über Indikatoren im Berichts-Generator, die kleinen Messgeräte, die den Zustand eines einzelnen Datenwerts in paginierten Berichten wiedergeben.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,15 +16,15 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e62ec26c0019e82b3f0e37dbdd9c1539332212
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2b440f82dc7d758e7f6eb17bdf0f13e818348423
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082067"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779512"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indikatoren (Berichts-Generator und SSRS)
-  In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten sind Indikatoren kleine Messgeräte, die den Zustand eines einzelnen Datenwerts auf einen Blick wiedergeben. Die Symbole zur Darstellung der Indikatoren und ihres Zustands sind einfach und auch in kleineren Größen optisch wirkungsvoll.  
+  In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Berichten sind Indikatoren kleine Messgeräte, die den Zustand eines einzelnen Datenwerts auf einen Blick wiedergeben. Die Symbole zur Darstellung der Indikatoren und ihres Zustands sind einfach und auch in kleineren Größen optisch wirkungsvoll.  
   
  Statusindikatoren können in Berichten zur Darstellung folgender Zustände verwendet werden:  
   
@@ -41,7 +42,7 @@ ms.locfileid: "77082067"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält integrierte Indikatorsätze und Indikatorsymbole, die direkt verwendet werden können. Sie haben auch die Möglichkeit, einzelne Indikatorsymbole und Indikatorsätze an Ihre individuellen Anforderungen anzupassen.  
   
- Weitere Informationen zur Verwendung von Indikatoren als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Weitere Informationen zur Verwendung von Indikatoren als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Sie können Indikatoren in einem Bericht als Berichtsteile getrennt veröffentlichen. Erfahren Sie mehr über [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen oder Entfernen von Rändern aus einem Diagramm (Berichts-Generator) | Microsoft-Dokumentation
+description: Fügen Sie einem Säulen- oder Punktdiagramm im Berichts-Generator Ränder hinzu, oder entfernen Sie diese. So können Sie die Lesbarkeit oder Darstellung paginierter Berichte erhöhen.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1a5b9d749cbeab7164bd1ca06d0fc8192561931c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 90b6b1e10ded769785b038b03d3f9d4886c4ba96
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882026"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>Hinzufügen oder Entfernen von Rändern aus einem Diagramm (Berichts-Generator und SSRS)
 Bei Säulen- und Punktdiagrammen in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten fügt das Diagramm an den Enden der X-Achse automatisch Seitenränder hinzu. Bei Balkendiagrammen werden an den Enden der x-Achse automatisch Seitenränder hinzugefügt. Bei allen anderen Diagrammtypen fügt das Diagramm keine Seitenränder hinzu. Die Größe der Seitenränder kann nicht geändert werden.  

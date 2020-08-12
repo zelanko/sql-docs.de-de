@@ -1,5 +1,6 @@
 ---
 title: Messgeräte (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Key Performance Indicators (KPI) anzeigen, um mithilfe eines Radial- oder eines Linearmessgeräts im Berichts-Generator Werte darzustellen oder Daten zu vergleichen.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -156,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6fb9864d97975b15711ec9cc1264251e8aac8c76
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 24fb81c9714e9008308721906505aab8cc4247fc
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082124"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84011858"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Messgeräte (Berichts-Generator und SSRS)
   In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten zeigt ein Messgerätdatenbereich einen einzelnen Wert aus Ihrem Dataset an. Einzelne Messgeräte werden stets in einem Messgerätbereich positioniert, dem untergeordnete oder benachbarte Messgeräte hinzugefügt werden können. Innerhalb eines einzelnen Messgerätbereichs können Sie mehrere Messgeräte mit einheitlichen Funktionen wie Filtern, Gruppieren oder Sortieren erstellen.  
@@ -178,7 +179,7 @@ ms.locfileid: "77082124"
   
  ![Diagramm mit Messgerätelementen](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagramm mit Messgerätelementen")  
   
- Weitere Informationen zur Verwendung von Messgeräten als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Weitere Informationen zu Messgeräten als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Sie können Messgeräten in einem Bericht als Berichtsteile getrennt veröffentlichen. Erfahren Sie mehr über [Berichtsteile](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -204,7 +205,7 @@ ms.locfileid: "77082124"
   
  ![rs_Linearmessgerät](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_Linearmessgerät")  
   
- Optionen für lineare Messgeräte: "Horizontal", "Vertikal", "Mehrere Balkenzeiger", "Zwei Skalen", "Drei Farbbereiche", "Logarithmisch", "Thermometer", "Thermometer Fahrenheit/Celsius" und "Lineardiagramm".  
+ Optionen für lineare Messgeräte: „Horizontal“, „Vertikal“, „Mehrere Balkenzeiger“, „Zwei Skalen“, „Drei Farbbereiche“, „Logarithmisch“, „Thermometer“, „Thermometer Fahrenheit/Celsius“ und „Lineardiagramm“.  
   
 ##  <a name="adding-data-to-a-gauge"></a><a name="AddingData"></a> Hinzufügen von Daten zu einem Messgerät  
  Ziehen Sie nach dem Hinzufügen des Messgeräts zur Entwurfsoberfläche ein Datasetfeld in den Messgerätdatenbereich. Das Messgerät aggregiert standardmäßig Feldwerte in einen Wert, der auf dem Messgerät angezeigt wird. Dieser Wert wird mit der Value-Eigenschaft an den Zeiger angefügt. Abhängig vom Datentyp des Felds verwendet das Messgerät das SUM- oder COUNT-Aggregat. Wenn Sie numerische Daten verwenden, die zum Hinzufügen geeignet sind, verwendet das Messgerät die SUM-Funktion. Andernfalls verwendet es das COUNT-Aggregat. Der Wert des Zeigers kann ein anderes Aggregat oder kein Aggregat verwenden.  

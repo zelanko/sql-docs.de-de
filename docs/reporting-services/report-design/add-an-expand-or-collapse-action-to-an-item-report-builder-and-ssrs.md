@@ -1,6 +1,6 @@
 ---
 title: Hinzufügen einer Erweiterungs- oder Reduzieraktion (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-description: Sie können einem Benutzer das interaktive Erweitern oder Reduzieren von Elementen in einem paginierten Bericht, oder für eine Tabelle oder Matrix das Erweitern oder Reduzieren der zugehörigen Zeilen und Spalten einer Gruppe ermöglichen.
+description: Geben Sie Benutzern die Berechtigung, Elemente, Zeilen und Spalten auf- oder zuzuklappen, die einer Tabellen- oder Matrixgruppe in einem Bericht im Berichts-Generator zugeordnet sind.
 ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 78d67f7d34bd2e146f7f625c1fd8ddb538b3b3eb
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242547"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681299"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>Hinzufügen einer Erweiterungs- oder Reduzieraktion (Berichts-Generator und SSRS)
   Sie können einem Benutzer das interaktive Erweitern oder Reduzieren von Elementen in einem paginierten Bericht, oder für eine Tabelle oder Matrix das Erweitern oder Reduzieren der zugehörigen Zeilen und Spalten einer Gruppe ermöglichen. Zu diesem Zweck legen Sie die Sichtbarkeitseigenschaften eines Elements fest, das von Benutzern erweitert oder reduziert werden soll. Die Sichtbarkeit wird in einem HTML-Berichts-Viewer festgelegt. Eine solche Einstellung wird auch als *Drilldownaktion* bezeichnet.  
@@ -49,7 +49,7 @@ ms.locfileid: "75242547"
   
     -   Wählen Sie **True** aus, wenn das Berichtselement ausgeblendet werden soll.  
   
-    -   Klicken Sie auf **\<Ausdruck>** , um das Dialogfeld **Ausdruck** zu öffnen, in dem Sie einen Ausdruck erstellen können, der zur Laufzeit zum Bestimmen der Sichtbarkeit ausgewertet wird.  
+    -   Klicken Sie auf **\<Expression>** , um das Dialogfeld **Ausdruck** zu öffnen. Dort können Sie einen Ausdruck erstellen, der zur Laufzeit zum Bestimmen der Sichtbarkeit ausgewertet wird.  
   
 5.  Wählen Sie unter **ToggleItem**im Dropdownfeld den Namen eines Textfelds aus, dem das Umschaltbild hinzugefügt werden soll.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75242547"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>So fügen Sie einem Berichtselement eine Erweiterungs- und Reduzieraktion hinzu  
   
-1.  Klicken Sie in der Berichtsentwurfsansicht mit der rechten Maustaste auf das Berichtselement, das ein- bzw. ausgeblendet werden soll, und klicken Sie anschließend auf *\<Berichtselement>* **Eigenschaften**. Daraufhin wird das Dialogfeld *\<Berichtselement>* **Eigenschaften** für das Berichtselement geöffnet.  
+1.  Klicken Sie in der Berichtsentwurfsansicht mit der rechten Maustaste auf das Berichtselement, das ein- bzw. ausgeblendet werden soll, und klicken Sie dann auf **Eigenschaften** von *\<report item>* . Das Dialogfeld **Eigenschaften** von *\<report item>* wird für das betreffende Berichtselement geöffnet.  
   
 2.  Klicken Sie auf **Sichtbarkeit**.  
   

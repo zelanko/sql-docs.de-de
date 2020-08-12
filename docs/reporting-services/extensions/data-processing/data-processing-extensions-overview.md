@@ -1,5 +1,6 @@
 ---
 title: Übersicht über Datenverarbeitungserweiterungen | Microsoft-Dokumentation
+description: Sehen Sie sich an, welche Datenverarbeitungserweiterungen in Reporting Services enthalten sind, und informieren Sie sich, wie Sie dem Berichtsserver Funktionen zur benutzerdefinierten Datenverarbeitung hinzufügen.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e9c3407060e22a2be8f74214cd1ba6a44c1487c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194208"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529674"
 ---
 # <a name="data-processing-extensions-overview"></a>Übersicht über Datenverarbeitungserweiterungen
   Mithilfe von Datenverarbeitungserweiterungen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] können Sie eine Verbindung zu einer Datenquelle herstellen und Daten abrufen. Sie dienen außerdem als Verbindung zwischen einer Datenquelle und einem Dataset. Datenverarbeitungserweiterungen für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sind einer Teilmenge der Datenanbieterschnittstellen für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] nachgebildet.  

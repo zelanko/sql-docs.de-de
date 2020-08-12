@@ -1,5 +1,6 @@
 ---
 title: Berichtsserverdienst-Ablaufverfolgungsprotokoll
+description: In diesem Artikel erfahren Sie mehr über die Berichtsserver-Ablaufverfolgungsprotokolle in Reporting Services, die detaillierte Informationen zu den Vorgängen des Berichtsserverdiensts enthalten.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
-ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 294639b3fed68acf0bb8b07ea0430a890e97910e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68254866"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541502"
 ---
 # <a name="report-server-service-trace-log"></a>Berichtsserverdienst-Ablaufverfolgungsprotokoll
 
@@ -65,8 +66,8 @@ Das Verhalten der Ablaufverfolgungsprotokolle wird in der Konfigurationsdatei **
 |**Präfix**|Gibt einen generierten Wert an, der die Protokollinstanzen voneinander unterscheidet.|Standardmäßig werden Timestampwerte an die Dateinamen von Ablaufverfolgungsprotokollen angehängt. Dieser Wert wird auf „appdomain, tid, time“ festgelegt. Ändern Sie diese Einstellung nicht.|  
 |**TraceListeners**|Gibt die Zieladresse für die Ausgabe des Inhalts von Ablaufverfolgungsprotokollen an. Sie können mehrere durch Trennzeichen getrennte Ziele angeben.|Gültige Werte sind:<br /><br /> <br /><br /> DebugWindow<br /><br /> File (Standard)<br /><br /> StdOut|  
 |**TraceFileMode**|Gibt an, ob Ablaufverfolgungsprotokolle Daten für einen Zeitraum von 24 Stunden enthalten. Für jede Komponente sollte pro Tag ein eindeutiges Ablaufverfolgungsprotokoll erstellt werden.|Dieser Wert wird auf "Unique (Standard)" festgelegt. Ändern Sie diesen Wert nicht.|  
-|**Komponentenkategorie**|Gibt die Komponenten, für die Ablaufverfolgungsprotokoll-Informationen generiert werden, sowie die Ablaufverfolgungsebene in diesem Format an:<br /><br /> \<Komponentenkategorie>:\<Ablaufverfolgungsebene><br /><br /> Sie können alle oder einige der Komponenten (**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**) angeben. Wenn Informationen für eine bestimmte Komponente nicht generiert werden sollen, können Sie deren Ablaufverfolgung deaktivieren (z. B. "SemanticModelGenerator:0"). Deaktivieren Sie nicht die Ablaufverfolgung für **all**.<br /><br /> Sie können "SemanticQueryEngine:4" festlegen, wenn Sie die für jede Semantikabfrage generierten Transact-SQL-Anweisungen anzeigen möchten. Die Transact-SQL-Anweisungen werden im Ablaufverfolgungsprotokoll aufgezeichnet. Im folgenden Beispiel wird die Konfigurationseinstellung veranschaulicht, die dem Protokoll Transact-SQL-Anweisungen hinzufügt:<br /><br /> \<add name="Komponenten" value="all,SemanticQueryEngine:4" />|Für Komponentenkategorien kann Folgendes festgelegt werden:<br /><br /> <br /><br /> **All** wird zur Ablaufverfolgung der allgemeinen Berichtsserveraktivität für alle Vorgänge verwendet, die nicht in die einzelnen Kategorien unterteilt werden.<br /><br /> **RunningJobs** wird für die Ablaufverfolgung eines gegenwärtig ausgeführten Berichts oder eines Abonnementvorgangs verwendet.<br /><br /> **SemanticQueryEngine** wird für die Ablaufverfolgung einer Semantikabfrage verwendet, die verarbeitet wird, wenn ein Benutzer eine Ad-hoc-Durchsuchung von Daten in einem modellbasierten Bericht ausführt.<br /><br /> **SemanticModelGenerator** wird für die Ablaufverfolgung der Modellgenerierung verwendet.<br /><br /> **http** wird verwendet, um die Berichtsserver-HTTP-Protokolldatei zu aktivieren. Weitere Informationen finden Sie unter [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md).|  
-|**trace level**-Wert (Wert auf Ablaufverfolgungsebene) für Komponentenkategorien|\<Komponentenkategorie>:\<Ablaufverfolgungsebene><br /><br /> <br /><br /> Wenn Sie keine Ablaufverfolgungsebene an die Komponente anfügen, wird der für **DefaultTraceSwitch** angegebene Wert verwendet. Wenn Sie beispielsweise "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator" angeben, verwenden alle Komponenten die Standard-Ablaufverfolgungsebene.|Gültige Werte für die Ablaufverfolgungsebene sind Folgende:<br /><br /> <br /><br /> 0= Deaktiviert die Ablaufverfolgung<br /><br /> 1= Ausnahmen und Neustarts<br /><br /> 2= Ausnahmen, Neustarts, Warnungen<br /><br /> 3= Ausnahmen, Neustarts, Warnungen, Statusmeldungen (Standard)<br /><br /> 4= Ausführlicher Modus<br /><br /> Der Standardwert für Berichtsserver ist: "all:3".|  
+|**Komponentenkategorie**|Gibt die Komponenten, für die Ablaufverfolgungsprotokoll-Informationen generiert werden, sowie die Ablaufverfolgungsebene in diesem Format an:<br /><br /> \<component category>:\<tracelevel><br /><br /> Sie können alle oder einige der Komponenten (**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**) angeben. Wenn Informationen für eine bestimmte Komponente nicht generiert werden sollen, können Sie deren Ablaufverfolgung deaktivieren (z. B. "SemanticModelGenerator:0"). Deaktivieren Sie nicht die Ablaufverfolgung für **all**.<br /><br /> Sie können "SemanticQueryEngine:4" festlegen, wenn Sie die für jede Semantikabfrage generierten Transact-SQL-Anweisungen anzeigen möchten. Die Transact-SQL-Anweisungen werden im Ablaufverfolgungsprotokoll aufgezeichnet. Im folgenden Beispiel wird die Konfigurationseinstellung veranschaulicht, die dem Protokoll Transact-SQL-Anweisungen hinzufügt:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|Für Komponentenkategorien kann Folgendes festgelegt werden:<br /><br /> <br /><br /> **All** wird zur Ablaufverfolgung der allgemeinen Berichtsserveraktivität für alle Vorgänge verwendet, die nicht in die einzelnen Kategorien unterteilt werden.<br /><br /> **RunningJobs** wird für die Ablaufverfolgung eines gegenwärtig ausgeführten Berichts oder eines Abonnementvorgangs verwendet.<br /><br /> **SemanticQueryEngine** wird für die Ablaufverfolgung einer Semantikabfrage verwendet, die verarbeitet wird, wenn ein Benutzer eine Ad-hoc-Durchsuchung von Daten in einem modellbasierten Bericht ausführt.<br /><br /> **SemanticModelGenerator** wird für die Ablaufverfolgung der Modellgenerierung verwendet.<br /><br /> **http** wird verwendet, um die Berichtsserver-HTTP-Protokolldatei zu aktivieren. Weitere Informationen finden Sie unter [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md).|  
+|**trace level**-Wert (Wert auf Ablaufverfolgungsebene) für Komponentenkategorien|\<component category>:\<tracelevel><br /><br /> <br /><br /> Wenn Sie keine Ablaufverfolgungsebene an die Komponente anfügen, wird der für **DefaultTraceSwitch** angegebene Wert verwendet. Wenn Sie beispielsweise "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator" angeben, verwenden alle Komponenten die Standard-Ablaufverfolgungsebene.|Gültige Werte für die Ablaufverfolgungsebene sind Folgende:<br /><br /> <br /><br /> 0= Deaktiviert die Ablaufverfolgung<br /><br /> 1= Ausnahmen und Neustarts<br /><br /> 2= Ausnahmen, Neustarts, Warnungen<br /><br /> 3= Ausnahmen, Neustarts, Warnungen, Statusmeldungen (Standard)<br /><br /> 4= Ausführlicher Modus<br /><br /> Der Standardwert für Berichtsserver ist: "all:3".|  
   
 ## <a name="adding-custom-configuration-setting-to-specify-a-dump-file-location"></a><a name="bkmk_add_custom"></a> Hinzufügen einer benutzerdefinierten Konfigurationseinstellung zum Angeben eines Speicherortes für eine Sicherungsdatei  
 Sie können dem Speicherort, der vom Windows-Tool Dr. Watson zum Speichern von Sicherungsdateien verwendet wird, eine benutzerdefinierte Einstellung hinzufügen. Die benutzerdefinierte Einstellung ist **Directory**. Im folgenden Beispiel wird veranschaulicht, wie diese Konfigurationseinstellung im Abschnitt **RStrace** angegeben wird:  
@@ -100,9 +101,9 @@ Ein Ablaufverfolgungsprotokoll enthält folgende Felder:
 ## <a name="previous-versions"></a>Vorgängerversionen
 
 In vorherigen Releases von [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]waren mehrere Ablaufverfolgungs-Protokolldateien vorhanden, eine pro Anwendung. Die folgenden Dateien sind veraltet und werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen nicht mehr erstellt:
-+ ReportServerWebApp_ *\<Zeitstempel>* .log
-+ ReportServer_ *\<Zeitstempel>* .log
-+ ReportServerService_main_ *\<Zeitstempel>* .log
++ ReportServerWebApp_ *\<timestamp>* .log
++ ReportServer_ *\<timestamp>* .log
++ ReportServerService_main_ *\<timestamp>* .log
   
 ## <a name="see-also"></a>Weitere Informationen
 

@@ -1,5 +1,6 @@
 ---
 title: Ausdrucksverwendungen in Berichten (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie Werte im Berichts-Generator mit Ausdrücken für Parameter, Abfragen, Filter und Textfeldeigenschaften angeben oder berechnen.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b12b393e2b749c34abdd98c7f6363829800c5d06
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080276"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462214"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)
-In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten werden Ausdrücke innerhalb der gesamten Berichtsdefinition verwendet, um Werte für folgende Elemente anzugeben oder zu berechnen: Parameter, Abfragen, Filter, Berichtselementeigenschaften, Gruppierungs- und Sortierdefinitionen, Textfeldeigenschaften, Lesezeichen, Dokumentstrukturen, dynamischer Inhalt von Seitenkopf- und Seitenfußzeilen, Bilder und dynamische Datenquellendefinitionen. Dieses Hilfethema enthält Beispiele für die vielen Anwendungsmöglichkeiten, die Ausdrücke bieten, um den Inhalt oder die Darstellung eines Berichts zu variieren. Es handelt sich dabei aber nicht um eine vollständige Liste. Sie können für jede beliebige Eigenschaft einen Ausdruck in einem Dialogfeld festlegen, in dem die Ausdrucksschaltfläche (**fx**) angezeigt wird, oder in einer Dropdownliste, in der **\<Ausdruck...>** angezeigt wird.  
+In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichten werden Ausdrücke innerhalb der gesamten Berichtsdefinition verwendet, um Werte für folgende Elemente anzugeben oder zu berechnen: Parameter, Abfragen, Filter, Berichtselementeigenschaften, Gruppierungs- und Sortierdefinitionen, Textfeldeigenschaften, Lesezeichen, Dokumentstrukturen, dynamischer Inhalt von Seitenkopf- und Seitenfußzeilen, Bilder und dynamische Datenquellendefinitionen. Dieses Hilfethema enthält Beispiele für die vielen Anwendungsmöglichkeiten, die Ausdrücke bieten, um den Inhalt oder die Darstellung eines Berichts zu variieren. Es handelt sich dabei aber nicht um eine vollständige Liste. Sie können für jede beliebige Eigenschaft einen Ausdruck in einem Dialogfeld festlegen, in dem die Ausdrucksschaltfläche (**fx**) angezeigt wird, oder in einer Dropdownliste, in der **\<Expression...>** angezeigt wird.  
   
  Ausdrücke können einfach oder komplex sein. *Einfache Ausdrücke* enthalten einen Verweis auf ein einzelnes Datasetfeld, einen Parameter oder ein integriertes Feld. Komplexe Ausdrücke können mehrere integrierte Verweise, Operatoren und Funktionsaufrufe enthalten. Beispiel: Ein komplexer Ausdruck könnte die auf dem Feld Vertrieb angewendete Sum-Funktion einschließen.  
   
@@ -57,7 +58,7 @@ In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 
 |Formatieren von Daten in einem Textfeld in Abhängigkeit des Werts.|Farbe für einen Platzhalter in einem Textfeld in der Detailzeile eines Tablix-Elements. Dialogfeld **Textfeldeigenschaften, Schriftart**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Einmaliges Berechnen eines Werts, um überall im Bericht darauf verweisen zu können.|Wert für eine Berichtsvariable. Dialogfeld **Berichtseigenschaften, Variablen**.|`=Variables!MyCalculation.Value`|  
 |Einschließen bestimmter Werte für mehrere Felder aus einem Dataset.|Filtergleichung für eine Gruppe in einem Tablix-Element. Dialogfeld **Tablix-Eigenschaften, Filter**.|Wählen Sie als Datentyp die Option **Boolesch**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|Ausblenden eines Textfelds auf der Entwurfsoberfläche, das von Benutzern ein- oder ausgeblendet werden kann, indem diese einen booleschen Parameter mit dem Namen *Show*verwenden.|Ausgeblendete Eigenschaft in einem Textfeld. Dialogfeld **Textfeldeigenschaften, Sichtbarkeit**.|`=Not Parameters!` *\<boolescher Parameter> anzeigen* `.Value`|  
+|Ausblenden eines Textfelds auf der Entwurfsoberfläche, das von Benutzern ein- oder ausgeblendet werden kann, indem diese einen booleschen Parameter mit dem Namen *Show*verwenden.|Ausgeblendete Eigenschaft in einem Textfeld. Dialogfeld **Textfeldeigenschaften, Sichtbarkeit**.|`=Not Parameters!` *Show\<boolean parameter>* `.Value`|  
 |Angeben des dynamischen Inhalts von Seitenkopf- oder Seitenfußzeilen.|Wert für einen Platzhalter in einem Textfeld, das in die Seitenkopf- oder Seitenfußzeile eingefügt wird.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |Dynamisches Angeben einer Datenquelle mithilfe eines Parameters.|Verbindungszeichenfolge in der Datenquelle. Dialogfeld **Datenquelleneigenschaften, Allgemein**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |Identifizieren aller Werte für einen mehrwertigen Parameter, der vom Benutzer ausgewählt wurde.|Wert für einen Platzhalter in einem Textfeld. Dialogfeld **Tablix-Eigenschaften, Filter**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  

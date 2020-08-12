@@ -1,5 +1,6 @@
 ---
 title: Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie das Schreiben von Reporting Services-Ereignissen in das SharePoint ULS-Ablaufverfolgungsprotokoll für Reporting Services-Server im SharePoint-Modus aktivieren.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef8729d35598b59c33a827d77e5e7c5473ead049
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893242"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547862"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)
 
@@ -85,9 +86,9 @@ Get-SPDiagnosticConfig
   
 1.  **Produkt: SQL Server Reporting Services**  
   
-2.  **Kategorie** : Auf den Server bezogene Ereignisse weisen am Anfang des Namens die Zeichenfolge „Berichtsserver“ auf. Beispiel: „Laufzeit für Berichtsserverwarnungen“. Diese Ereignisse werden auch in den Protokolldateien des Berichtsservers protokolliert.  
+2.  **Kategorie:** Bei auf den Server bezogenen Ereignissen steht am Anfang des Namens die Zeichenfolge „Berichtsserver“. Beispiel: „Laufzeit für Berichtsserverwarnungen“. Diese Ereignisse werden auch in den Protokolldateien des Berichtsservers protokolliert.  
   
-3.  **Kategorie**: Auf eine Web-Front-End-Komponente bezogene oder von einer Web-Front-End-Komponente kommunizierte Ereignisse enthalten nicht die Zeichenfolge „Berichtsserver“. Beispiel: „Dienstanwendungsproxy – Laufzeit für Berichtsserverwarnungen“. Die WFE-Einträge enthalten CorrelationID, die Servereinträge jedoch nicht.  
+3.  **Kategorie:** Auf eine Web-Front-End-Komponente bezogene oder von einer Web-Front-End-Komponente kommunizierte Ereignisse enthalten nicht die Zeichenfolge „Berichtsserver“. Beispiel: „Dienstanwendungsproxy – Laufzeit für Berichtsserverwarnungen“. Die WFE-Einträge enthalten CorrelationID, die Servereinträge jedoch nicht.  
   
 ##  <a name="list-of-sql-server-reporting-services-events"></a><a name="bkmk_list"></a> Liste der SQL Server Reporting Services-Ereignisse  
  Die folgende Tabelle enthält eine Liste der Ereignisse in der SQL Server Reporting Services-Kategorie:  
@@ -124,7 +125,7 @@ Get-SPDiagnosticConfig
 |Berichtsserveranbieter||  
 |Berichtsserverrendering||  
 |Berichtsserver-Berichtsvorschau||  
-|Berichtsserver-Ressourcenhilfsprogramm|Beispieleinträge:<br /><br /> Start-SKU für MediumReporting-Dienste: Auswertung<br /><br /> MediumEvaluation-Kopie: noch 180 Tage|  
+|Berichtsserver-Ressourcenhilfsprogramm|Beispieleinträge:<br /><br /> Start-SKU für MediumReporting-Dienste: Auswertung<br /><br /> MediumEvaluation-Kopie: noch 180 Tage|  
 |Laufende Berichtsserveraufträge||  
 |Laufende Berichtsserveranforderungen||  
 |Berichtsserverplan||  

@@ -1,5 +1,6 @@
 ---
 title: Installieren von benutzerdefinierten Sicherheitserweiterungen | Microsoft-Dokumentation
+description: In diesem Artikel erhalten Sie Informationen zum neuen in Reporting Services 2016 eingeführten Webportal. Außerdem erfahren Sie, wie sich die damit einhergehenden Änderungen auf die Implementierung Ihrer benutzerdefinierten Sicherheitserweiterungen auswirken.
 ms.date: 07/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4dfc638f65c66f6ecf5957b80b883ab89337b03e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68223229"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529066"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Installieren von benutzerdefinierten Sicherheitserweiterungen
 
@@ -51,7 +52,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## <a name="deployment-and-configuration"></a>Bereitstellung und Konfiguration
 
-Es werden dieselben grundlegenden Konfigurationen für benutzerdefinierte Sicherheitserweiterungen benötigt wie für die Vorgängerreleases. Änderungen müssen hingegen an den Konfigurationsdateien „web.config“ und „rsreportserver.config“ vorgenommen werden: Weitere Informationen dazu finden Sie unter [Configure Custom or Forms Authentication on the Report Server (Konfigurieren der benutzerdefinierten Authentifizierung oder der Formularauthentifizierung auf dem Berichtsserver)](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
+Es werden dieselben grundlegenden Konfigurationen für benutzerdefinierte Sicherheitserweiterungen benötigt wie für die Vorgängerreleases. An den Dateien „web.config“ und „rsreportserver.config“ müssen Änderungen vorgenommen werden: Weitere Informationen finden Sie unter [Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
 
 Es gibt keine separate web.config-Konfigurationsdatei für den Berichts-Manager mehr. Das Portal übernimmt dieselben Einstellungen wie der Berichtsserverendpunkt.
 

@@ -1,5 +1,6 @@
 ---
 title: Angeben eines Achsenintervalls (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie die Anzahl der Beschriftungen und Teilstriche auf der X-Kategorieachse eines Diagramms abrufen, indem Sie das Achsenintervall im Berichts-Generator festlegen.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7467cc02ec7351edb879da18c20e0cf2af4bb099
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2b5b3ed27226eda1c2db837df0c16079aeef3262
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487706"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881154"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Angeben eines Achsenintervalls (Berichts-Generator und SSRS)
 Erfahren Sie, wie Sie die Anzahl der Bezeichnungen und Teilstriche auf der Kategorieachse (X) in einem Diagramm ändern, indem Sie das Achsenintervalls in einem [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -paginierten Bericht festlegen.

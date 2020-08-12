@@ -1,6 +1,6 @@
 ---
 title: 'Rollendefinitionen: vordefinierte Rollen | Microsoft-Dokumentation'
-ms.date: 05/24/2019
+ms.date: 06/10/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c792804d9e7daae9209bcbafb8bae95fffb3492
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67500187"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716737"
 ---
 # <a name="role-definitions---predefined-roles"></a>Rollendefinitionen: vordefinierte Rollen
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird mit vordefinierten Rollen installiert, mit denen Sie den Zugriff auf Berichtsservervorgänge gewähren können. Jede vordefinierte Rolle beschreibt eine Auflistung verwandter Aufgaben. Sie können Gruppen und Benutzerkonten vordefinierten Rollen zuweisen, um den unmittelbaren Zugriff auf Berichtsservervorgänge bereitzustellen.  
@@ -59,11 +59,11 @@ ms.locfileid: "67500187"
 |----------|-----------------|  
 |Berichte lesen|Lesen von Berichtsdefinitionen.|  
 |Verknüpfte Berichte erstellen|Verknüpfte Berichte erstellen, die auf einem nicht verknüpften Bericht basieren.|  
-|Alle Abonnements verwalten|Ein Abonnement für Berichte und verknüpfte Berichte anzeigen, ändern und löschen, unabhängig vom Besitzer des Abonnements. Diese Aufgabe ermöglicht auch das Erstellen von datengesteuerten Abonnements.|  
+|Alle Abonnements verwalten|Ein Abonnement für Berichte und verknüpfte Berichte anzeigen, ändern und löschen, unabhängig vom Besitzer des Abonnements. Diese Aufgabe ermöglicht das Erstellen von datengesteuerten Abonnements. Außerdem wird die Bearbeitung und Ausführung von [geplanten Aktualisierungen für Power BI-Dateien (.pbix) im Power BI-Berichtsserver](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh) unterstützt.|  
 |Datenquellen verwalten|Freigegebene Datenquellenelemente erstellen und löschen, Datenquelleneigenschaften und Inhalt anzeigen und ändern.|  
 |Ordner verwalten|Ordner erstellen, anzeigen und löschen sowie Ordnereigenschaften anzeigen und ändern.|  
 |Verwalten von Modellen|Ermöglicht das Erstellen, Anzeigen und Löschen von Modellen sowie das Anzeigen und Ändern von Modelleigenschaften.|  
-|Einzelne Abonnements verwalten|Abonnements für Berichte und verknüpfte Berichte, die dem Benutzer gehören, erstellen, anzeigen, ändern und löschen.|  
+|Einzelne Abonnements verwalten|Abonnements für Berichte und verknüpfte Berichte, die dem Benutzer gehören, erstellen, anzeigen, ändern und löschen. Dieser Task unterstützt darüber hinaus das Bearbeiten und Ausführen von [geplanten Aktualisierungen für Power BI-Dateien (.pbix) im Power BI-Berichtsserver](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
 |Berichtsverlauf verwalten|Erstellen, Anzeigen und Löschen des Berichtsverlaufs, Anzeigen von Berichtsverlaufeigenschaften sowie Anzeigen und Ändern von Einstellungen, die Grenzwerte für den Momentaufnahmeverlauf und die Funktionsweise der Zwischenspeicherung bestimmen.|  
 |Berichte verwalten|Berichte hinzufügen und löschen, Berichtsparameter ändern, Berichtseigenschaften anzeigen und ändern, Datenquellen, die Inhalt für den Bericht bereitstellen, anzeigen und ändern, Berichtsdefinitionen anzeigen und ändern sowie Sicherheitsrichtlinien auf Berichtsebene festlegen.|  
 |Ressourcen verwalten|Ressourcen erstellen, ändern und löschen sowie Ressourceneigenschaften anzeigen und ändern.|  

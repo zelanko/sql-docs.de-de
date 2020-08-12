@@ -1,5 +1,6 @@
 ---
 title: Verwenden von Reporting Services-Richtliniendateien | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die Konfigurationsdateien, die von Reporting Services zum Speichern von Informationen zu Sicherheitsrichtlinien für Codeassemblys verwendet werden. Hier erfahren Sie, wie Sie diese ändern können.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae971989342ca6d3fda121b0559bebb681f07fb0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1390e53ddbc864f634b581bd2a1b42902c6b6bb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193316"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529326"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Verwenden von Reporting Services-Sicherheitsrichtliniendateien
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] speichert Informationen zu Komponentensicherheitsrichtlinien in drei Konfigurationsdateien, die bei der Installation in das Dateisystem kopiert werden. Diese Konfigurationsdateien können eine Kombination aus nur intern verwendeten und benutzerdefinierten Sicherheitsrichtlinien für Codeassemblys in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten. Die drei Konfigurationsdateien entsprechen drei sicherungsfähigen Komponenten in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: Berichtsserver und Windows-Dienst, Berichts-Manager-Webanwendung und Vorschaufenster des Berichts-Designers.  

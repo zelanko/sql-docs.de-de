@@ -1,5 +1,6 @@
 ---
 title: Überprüfen einer Berichtsausführung | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Protokolldateien verwenden oder auf Statusinformationen verweisen, die mit einem Bericht angezeigt werden, um eine Berichtsausführung im Berichts-Manager zu überprüfen.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd48861b53b6b7f159d4421bd86bf024838fbaf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6384697eea05d39431ecd7ec77796101747a59ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580075"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547822"
 ---
 # <a name="verifying-a-report-run"></a>Überprüfen einer Berichtsausführung
   Mit Protokolldateien oder den Statusinformationen, die zusammen mit einem Bericht im Berichts-Manager angezeigt werden, können Sie Informationen zum Status der Berichtsverarbeitung anzeigen.  

@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen von 3D-Effekten zu einem Diagramm (Berichts-Generator) | Microsoft-Dokumentation
+description: Verwenden Sie dreidimensionale Effekte im Berichts-Generator, um den Diagrammen in Ihren paginierten Berichten Tiefe zu verleihen und deren optische Wirkung zu verbessern.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d8bf9b9951ac461f6aaa3a33602ecb4e2aa4c30
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1dfc09cadd1b98116f2145e95fc6e96759d53013
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078789"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012669"
 ---
 # <a name="chart-effects---add-3d-effects-report-builder"></a>Diagrammeffekte: Hinzufügen von 3D-Effekten (Berichts-Generator)
   Dreidimensionale (3D-)Effekte können verwendet werden, um Tiefe zu vermitteln und dem Diagramm in Ihren paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten eine optische Wirkung zu verleihen. Wenn Sie beispielsweise in einem explodierten Kreisdiagramm ein bestimmtes Segment des Kreises hervorheben möchten, können Sie die Perspektive des Diagramms so drehen und ändern, dass den Benutzern dieses Segment zuerst ins Auge fällt. Wenn 3D-Effekte auf das Diagramm angewendet werden, werden der Farbverlauf und alle Schraffurstile deaktiviert.  

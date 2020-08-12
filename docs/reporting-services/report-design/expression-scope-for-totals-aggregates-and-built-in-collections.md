@@ -1,5 +1,6 @@
 ---
 title: Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen | Microsoft-Dokumentation
+description: In diesem Artikel lernen Sie die verschiedenen Bedeutungen für „Bereich“ in Ausdrücken für Gesamtwerte, Aggregate und integrierte Sammlungen in Berichten im Berichts-Generator kennen.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 453d5d9e960ead988e4c7f57adc48e2de69b25a1
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579813"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681309"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen
-  Wenn Sie Ausdrücke schreiben, stellen Sie fest, dass der Begriff *Bereich* in mehreren Zusammenhängen verwendet wird. Ein Bereich kann die Daten angeben, die zum Auswerten eines Ausdrucks verwendet werden, oder den Satz von Textfeldern auf einer gerenderten Seite bzw. den Satz von Berichtselementen, die mithilfe einer Umschaltfläche ein- oder ausgeblendet werden können, bezeichnen. Sie finden den Begriff *Bereich* in Themen, die sich auf die Auswertung von Ausdrücken, Aggregatfunktionssyntax, und bedingte Sichtbarkeit beziehen, sowie in Fehlermeldungen im Zusammenhang mit diesen Bereichen. Mit den folgenden Beschreibungen können Sie feststellen, welche Bedeutung von *Bereich* zutrifft:  
+  Wenn Sie Ausdrücke erstellen, werden Sie feststellen, dass der Begriff *Bereich* in verschiedenen Zusammenhängen verwendet wird. Ein Bereich kann die Daten angeben, die zum Auswerten eines Ausdrucks verwendet werden, oder den Satz von Textfeldern auf einer gerenderten Seite bzw. den Satz von Berichtselementen, die mithilfe einer Umschaltfläche ein- oder ausgeblendet werden können, bezeichnen. Sie finden den Begriff *Bereich* in Themen, die sich auf die Auswertung von Ausdrücken, Aggregatfunktionssyntax, und bedingte Sichtbarkeit beziehen, sowie in Fehlermeldungen im Zusammenhang mit diesen Bereichen. Mit den folgenden Beschreibungen können Sie feststellen, welche Bedeutung von *Bereich* zutrifft:  
   
 -   **Datenbereich** Der Datenbereich ist eine Hierarchie von Bereichen, mit denen der Berichtsprozessor Berichtsdaten und Berichtslayout kombiniert und Datenbereiche wie Tabellen und Diagrammen zum Anzeigen von Daten erstellt. Die Kenntnis der grundlegenden Prinzipien von Datenbereichen ermöglicht es Ihnen, die gewünschten Ergebnisse bei folgenden Aktionen zu erhalten:  
   
@@ -148,7 +149,7 @@ ms.locfileid: "65579813"
   
   
 ##  <a name="specifying-a-sort-expression-to-synchronize-sort-order"></a><a name="Sort"></a> Angeben eines Sortierungsausdrucks zum Synchronisieren der Sortierreihenfolge  
- Wenn Sie einer Tabellenspalte eine interaktive Sortierschaltfläche hinzufügen, können Sie die Sortierung für mehrere Elemente mit einem gemeinsamen enthaltenden Bereich synchronisieren. Sie können z. B. einer Spaltenüberschrift in einer Matrix eine Sortierschaltfläche hinzufügen und den enthaltenden Bereich als Namen des Datasets angeben, das an die Matrix gebunden ist. Wenn ein Benutzer auf die Sortierschaltfläche klickt, werden außer den Matrixzeilen auch die Diagrammreihengruppen der Diagramme sortiert, die an das gleiche Datset gebunden sind. Auf diese Weise können alle Datenbereiche, die von diesem Dataset abhängig sind, mit der gleichen Sortierreihenfolge synchronisiert werden.  
+ Wenn Sie einer Tabellenspalte eine interaktive Sortierschaltfläche hinzufügen, können Sie die Sortierung für mehrere Elemente mit einem gemeinsamen enthaltenden Bereich synchronisieren. Sie können z. B. einer Spaltenüberschrift in einer Matrix eine Sortierschaltfläche hinzufügen und den enthaltenden Bereich als Namen des Datasets angeben, das an die Matrix gebunden ist. Wenn ein Benutzer auf die Sortierschaltfläche klickt, werden nicht nur die Matrixzeilen sortiert, sondern auch die Diagrammreihengruppen aus Diagrammen, die an dasselbe Dataset gebunden sind. Auf diese Weise können alle Datenbereiche, die von diesem Dataset abhängig sind, mit der gleichen Sortierreihenfolge synchronisiert werden.  
   
  Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   

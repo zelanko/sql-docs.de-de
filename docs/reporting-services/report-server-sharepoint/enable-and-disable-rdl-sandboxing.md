@@ -1,5 +1,6 @@
 ---
 title: Aktivieren und Deaktivieren von RDL-Sandkasten für Reporting Services im integrierten SharePoint-Modus | Microsoft-Dokumentation
+description: In diesem Artikel erhalten Sie Informationen zur RDL-Sandboxerstellung, die es Ihnen ermöglicht, die Verwendung von Ressourcentypen nach Mandanten zu ermitteln und einzuschränken. Dabei verwenden mehrere Mandanten eine einzelne Webfarm aus Berichtsservern.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d86cf9bbf284ad76c7423900c10a74f7ca26faa
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577770"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767019"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Aktivieren und Deaktivieren von RDL-Sandkasten für Reporting Services im integrierten SharePoint-Modus
 
@@ -67,14 +68,14 @@ Mithilfe der Sandkastenfunktion der RDL (Report Definition Language, Berichtsdef
   
 |Einstellung|BESCHREIBUNG|  
 |-------------|-----------------|  
-|**MaxExpressionLength**|Maximale Anzahl von Zeichen, die in RDL-Ausdrücken zugelassen sind.<br /><br /> Standard: 1000|  
-|**MaxResourceSize**|Maximale Anzahl von KB, die für eine externe Ressource zugelassen sind.<br /><br /> Standard: 100|  
-|**MaxStringResultLength**|Maximale Anzahl von Zeichen, die für einen Rückgabewert für einen RDL-Ausdruck zugelassen sind.<br /><br /> Standard: 1000|  
-|**MaxArrayResultLength**|Maximale Anzahl von Elementen, die für einen Rückgabewert vom Typ "Array" für einen RDL-Ausdruck zugelassen sind.<br /><br /> Standard: 100|  
+|**MaxExpressionLength**|Maximale Anzahl von Zeichen, die in RDL-Ausdrücken zugelassen sind.<br /><br /> Standardwert: 1000|  
+|**MaxResourceSize**|Maximale Anzahl von KB, die für eine externe Ressource zugelassen sind.<br /><br /> Standardwert: 100|  
+|**MaxStringResultLength**|Maximale Anzahl von Zeichen, die für einen Rückgabewert für einen RDL-Ausdruck zugelassen sind.<br /><br /> Standardwert: 1000|  
+|**MaxArrayResultLength**|Maximale Anzahl von Elementen, die für einen Rückgabewert vom Typ "Array" für einen RDL-Ausdruck zugelassen sind.<br /><br /> Standardwert: 100|  
 |**Typen**|Die Liste der Elemente, die innerhalb von RDL-Ausdrücken zugelassen sind.|  
 |**Zulassen**|Ein Typ oder ein Satz von Typen, die in RDL-Ausdrücken zugelassen sind.|  
 |**Namespace**|Attribut für **Erlauben** , das den Namespace darstellt, der mindestens einen gültigen Typ für Value enthält. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
-|**AllowNew**|Ein boolesches Attribut für **Allow**, mit dem gesteuert wird, ob neue Instanzen des Typs in RDL-Ausdrücken oder einem RDL- **\<Class>** -Element erstellt werden dürfen.<br /><br /> Wenn **RDLSandboxing** aktiviert ist, können in RDL-Ausdrücken keine neuen Arrays erstellt werden, unabhängig von der Einstellung von **AllowNew**.|  
+|**AllowNew**|Ein boolesches Attribut für **Allow**, mit dem gesteuert wird, ob neue Instanzen des Typs in RDL-Ausdrücken oder einem RDL-**\<Class>**-Element erstellt werden dürfen.<br /><br /> Wenn **RDLSandboxing** aktiviert ist, können in RDL-Ausdrücken keine neuen Arrays erstellt werden, unabhängig von der Einstellung von **AllowNew**.|  
 |**Wert**|Wert für **Allow** , der den Namen des in RDL-Ausdrücken zuzulassenden Typs angibt. Der Wert **\*** gibt an, dass alle Typen im Namespace zugelassen werden. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
 |**Mitglieder**|Für die Liste der Typen, die im **\<Types>** -Element enthalten sind, ist dies die Liste der Elementnamen, die nicht in RDL-Ausdrücken zugelassen sind.|  
 |**Deny**|Der Name eines Elements, das nicht in RDL-Ausdrücken zugelassen wird. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.<br /><br /> Wenn **Deny** für ein Element angegeben wird, werden alle Elemente mit diesem Namen für keinen Typ zugelassen.|  
@@ -128,7 +129,7 @@ Sie können die RDL-Sandboxingfunktion auf die folgenden Weisen ändern, um die 
   
  Um der Zulassungsliste [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen für .NET Framework hinzuzufügen, fügen Sie die entsprechenden Typen aus dem Namespace „Microsoft.VisualBasic“ zur Zulassungsliste hinzu.  
   
- Um der Zulassungsliste [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Typschlüsselwörter für .NET Framework hinzuzufügen, fügen Sie der Zulassungsliste den entsprechenden CLR-Typ hinzu. Fügen Sie dem **\<RDLSandboxing>**-Element das folgende XML-Fragment hinzu, um beispielsweise das [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Schlüsselwort **Integer** für .NET Framework zu verwenden:  
+ Um der Zulassungsliste [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Typschlüsselwörter für .NET Framework hinzuzufügen, fügen Sie der Zulassungsliste den entsprechenden CLR-Typ hinzu. Fügen Sie dem **\<RDLSandboxing>** -Element das folgende XML-Fragment hinzu, um beispielsweise das [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Schlüsselwort **Integer** für .NET Framework zu verwenden:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  

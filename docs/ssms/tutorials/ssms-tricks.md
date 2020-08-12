@@ -1,6 +1,6 @@
 ---
 title: Tipps und Tricks für SSMS
-description: Informationen zum Auskommentieren und Aufheben der Auskommentierung von Code, Einziehen von Text, Filtern von Objekten im Objekt-Explorer, Zugreifen auf das SQL Server-Fehlerprotokoll und Ermitteln des Namens Ihrer SQL Server-Instanz mit SQL Server Management Studio.
+description: Hier erfahren Sie, wie Sie mithilfe von SQL Server Management Studio Kommentare zu Ihrem Code hinzufügen und wieder aus diesem entfernen, Text einrücken, Objekte filtern, auf Fehlerprotokolle zugreifen und Namen von SQL Server-Instanzen finden können.
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245510"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462344"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Tipps und Tricks zur Verwendung von SQL Server Management Studio (SSMS)
 

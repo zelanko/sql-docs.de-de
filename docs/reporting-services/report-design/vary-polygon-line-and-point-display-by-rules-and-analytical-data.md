@@ -1,5 +1,6 @@
 ---
 title: Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten | Microsoft-Dokumentation
+description: Steuern Sie im Berichts-Generator die Anzeige für Polygone, Linien und Punkte durch Festlegen von Optionen und Regeln oder Außerkraftsetzung von Optionen für eingebettete Kartenelemente.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b251d3483d999ee2e4923502608bb9254e44776a
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578447"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012218"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten
   Die Anzeigeoptionen für Polygone, Linien und Punkte in einer Kartenebene werden gesteuert, indem Optionen für die Ebene sowie Regeln für die Kartenelemente in der Ebene festgelegt werden oder indem Optionen für bestimmte eingebettete Kartenelemente in einer Ebene überschrieben werden.  
@@ -100,13 +101,13 @@ ms.locfileid: "65578447"
   
  Nehmen Sie in der folgenden Liste an, dass Sie über drei Kartenelement und sechs verwandte analytische Werte verfügen, die zwischen 1 und 9999 liegen, und zwar: 1, 10, 200, 2000, 4777, 8999.  
   
--   **EqualInterval – Gleiches Intervall.** Erstellt Bereiche, die die Daten in gleiche Bereichsintervalle unterteilen. Im Beispiel sind die drei Bereiche 0-2999, 3000-5999, 6000-8999. Unterbereich 1: 1, 10, 200, 500. Unterbereich 2: 4777. Unterbereich 3: 8999. Diese Methode berücksichtigt nicht, wie die Daten verteilt sind. Sehr große Werte oder sehr kleine Werte können die Verteilungsergebnisse verzerren.  
+-   **EqualInterval – Gleiches Intervall.** Erstellt Bereiche, die die Daten in gleiche Bereichsintervalle unterteilen. Im Beispiel sind die drei Bereiche 0-2999, 3000-5999, 6000-8999. Teilbereich 1: 1, 10, 200, 500. Teilbereich 2: 4777. Teilbereich 3: 8999. Diese Methode berücksichtigt nicht, wie die Daten verteilt sind. Sehr große Werte oder sehr kleine Werte können die Verteilungsergebnisse verzerren.  
   
--   **EqualDistribution - Gleichmäßige Verteilung.** Erstellt Bereiche, die diese Daten so aufteilen, dass jeder Bereich eine gleiche Anzahl von Elementen enthält. In den Beispieldaten sind die drei Bereiche 0-10, 11-500, 501-8999. Unterbereich 1: 1. 10. Unterbereich 2: 200, 500. Unterbereich 3: 4777, 8999. Diese Methode kann die Verteilung verzerren, indem sie Unterteilungen erstellt, die sehr große oder sehr kleine Bereiche umfassen.  
+-   **EqualDistribution - Gleichmäßige Verteilung.** Erstellt Bereiche, die diese Daten so aufteilen, dass jeder Bereich eine gleiche Anzahl von Elementen enthält. In den Beispieldaten sind die drei Bereiche 0-10, 11-500, 501-8999. Teilbereich 1: 1, 10. Teilbereich 2: 200, 500. Teilbereich 3: 4777, 8999. Diese Methode kann die Verteilung verzerren, indem sie Unterteilungen erstellt, die sehr große oder sehr kleine Bereiche umfassen.  
   
 -   **Optimal** . Erstellt Bereiche, die automatisch die Verteilung so anpassen, dass ausgewogene Unterbereiche erstellt werden. Die Anzahl der Unterbereiche wird vom Algorithmus bestimmt.  
   
--   **Benutzerdefiniert.** Geben Sie Ihre eigene Anzahl von Bereichen an, um die Verteilung von Werten zu steuern. Für die Beispieldaten können Sie 3 Bereiche angeben: 1-2, 3-8, 9.  
+-   **Benutzerdefiniert.** Geben Sie Ihre eigene Anzahl von Bereichen an, um die Verteilung von Werten zu steuern. Für die Beispieldaten können Sie 3 Bereiche angeben: 1-2, 3-8, 9.  
   
  Die Verteilungswerte werden von den Regeln verwendet, um unterschiedliche Kartenelementanzeigewerte zu verwenden.  
   

@@ -1,5 +1,6 @@
 ---
 title: Bereitstellen von Renderingerweiterungen | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie durch Implementieren von Renderingerweiterungen Reporting Services-Berichtsdaten und -Layoutinformationen in gerätespezifische Formate umwandeln.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a72144df0f560feb6da0b954cbd7053832d46c87
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d61af9bd987256a2ad293f7f9566fd1a2bcd041e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193703"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529086"
 ---
 # <a name="implementing-a-rendering-extension"></a>Implementieren von Renderingerweiterungen
-  Eine Renderingerweiterung stellt eine Komponente oder ein Modul eines Berichtsservers dar, mit dem Daten- und Layoutinformationen in ein gerätespezifisches Format umgewandelt werden. SQL Server Reporting Services enthält sechs Renderingerweiterungen: HTML, Excel, Word, CSV oder Text, XML, Image und PDF. Sie können zusätzliche Renderingerweiterungen erstellen, um Berichte in anderen Formaten zu generieren.  
+  Eine Renderingerweiterung stellt eine Komponente oder ein Modul eines Berichtsservers dar, mit dem Daten- und Layoutinformationen in ein gerätespezifisches Format umgewandelt werden. Die SQL Server Reporting Services enthalten sechs Renderingerweiterungen: HTML, Excel, Word, CSV oder Text, XML, Image und PDF. Sie können zusätzliche Renderingerweiterungen erstellen, um Berichte in anderen Formaten zu generieren.  
   
 > [!NOTE]  
 >  Welche Renderingerweiterungen zur Verfügung stehen, sehen Sie auf der Liste der installierten Erweiterungen in der Datei RSReportServer.config.  

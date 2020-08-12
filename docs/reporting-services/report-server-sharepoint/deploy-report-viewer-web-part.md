@@ -1,5 +1,6 @@
 ---
 title: Bereitstellen des Webparts des Berichts-Viewers für SQL Server Reporting Services auf einer SharePoint-Website | Microsoft-Dokumentation
+description: Für die SQL Server Reporting Services können Sie das benutzerdefinierte Webpart des Berichts-Viewers manuell zu einem SharePoint-Produkt hinzufügen.
 ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,16 +8,16 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 232338818620069fc31bb57bc29cf07901d0f712
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 49ac20b46c5453c431cb856ad060512b48315262
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256684"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767029"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Bereitstellen des Webparts des Berichts-Viewers für SQL Server Reporting Services auf einer SharePoint-Website
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]  [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 Das Berichts-Viewer-Webpart ist ein benutzerdefiniertes Webpart, das verwendet werden kann, um SQL Server Reporting Services-Berichte (im einheitlichen Modus) auf Ihrer SharePoint-Website anzuzeigen. Sie können mit dem Webpart Berichte auf einem Berichtsserver anzeigen lassen, drucken und exportieren sowie in Berichten navigieren. Das Berichts-Viewer-Webpart ist mit den Berichtsdefinitionsdateien (RDL) verknüpft, die von einem SQL Server Reporting Services-Berichtsserver oder Power BI-Berichtsserver verarbeitet werden. Das Berichts-Viewer-Webpart kann nicht mit Power BI-Berichten verwendet werden, die in Power BI-Berichtsserver gehostet werden.
 

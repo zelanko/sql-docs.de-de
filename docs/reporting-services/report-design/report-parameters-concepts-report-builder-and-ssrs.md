@@ -1,5 +1,6 @@
 ---
 title: Berichtsparameterkonzepte (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie durch Hinzufügen von Parametern ähnliche Berichte verknüpfen, um die Darstellung von Berichten zu steuern, Berichtsdaten zu filtern oder den Bereich im Berichts-Generator einzugrenzen.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e5e7cafdce773969f9e6914a47534f88eb238a4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e6e6419e43991ff2dfe28ea0e3f6b2033693b9c3
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081068"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681599"
 ---
 # <a name="report-parameters-concepts-report-builder-and-ssrs"></a>Berichtsparameterkonzepte (Berichts-Generator und SSRS)
   Sie können einem Bericht Parameter hinzufügen, um verknüpfte Berichte zu verknüpfen, die Berichtsdarstellung zu steuern, Berichtsdaten zu filtern oder den Bereich eines Berichts auf bestimmte Benutzer oder Orte einzugrenzen.  
@@ -43,6 +44,6 @@ ms.locfileid: "77081068"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konzepte (SSRS)](../reporting-services-concepts-ssrs.md), [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41; (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
   
   

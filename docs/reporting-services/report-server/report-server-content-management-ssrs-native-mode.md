@@ -1,5 +1,6 @@
 ---
 title: Verwalten von Berichtsserverinhalten (einheitlicher Modus) | Microsoft-Dokumentation
+description: In diesem Artikel erhalten Sie Informationen zum Webportal und den Funktionen des neuen Webportals für die Verwaltung von Inhalten über die Reporting Services. Außerdem erfahren Sie, wie Sie Elemente über Eigenschaften und Sicherheitseinstellungen verwalten.
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 12832f724da36f6359f34fd2fd950ba804619c45
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286384"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547246"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Verwalten von Berichtsserverinhalten (einheitlicher SSRS-Modus)
 In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verweist die Inhaltsverwaltung auf die Verwaltung von Berichtsserverelementen. Alle Elemente lassen sich durch Eigenschaften und Sicherheitseinstellungen unabhängig verwalten. Alle Elemente können an einen anderen Speicherort im Ordnernamespace des Berichtsservers verschoben werden. Zur effektiven Verwaltung der Elemente muss Ihnen bekannt sein, welche Aufgaben von einem Inhalts-Manager ausgeführt werden. Ab SQL Server 2016 Reporting Services (SSRS) CTP 3.2 ist das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webportal verfügbar. In diesem Artikel werden das Webportal und das neue Webportal erläutert.  
@@ -42,7 +43,7 @@ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verweist die Inh
   
 -   Gleichen Sie Berichtsverarbeitungsanforderungen für den Server ab. Planen Sie dazu die Berichtsverarbeitung und geben Sie an, welche bei Bedarf auszuführen bzw. aus dem Cache zu laden sind.  
   
--   Gewähren Sie anhand von vordefinierten Rollen die Berechtigung zum Ausführen von Verwaltungsaufgaben: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind.  
+-   Gewähren Sie anhand von vordefinierten Rollen die Berechtigung zum Durchführen von Verwaltungsaufgaben: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind.  
   
 Tools zum Verwalten von Berichtsserverinhalt umfassen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und das Webportal. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ermöglicht es Ihnen, Standards festzulegen und Funktionen zu aktivieren. Das Webportal wird verwendet, um Benutzern Zugriff auf Berichtsserverelemente und -vorgänge zu gewähren und Berichte und andere Inhaltstypen sowie alle freigegebenen Elemente und Berichtsverteilungsfunktionen anzuzeigen und zu verwenden. Das Webportal ist eine aktualisierte Website, die einen Großteil der Funktionalität des veralteten Berichts-Managers bietet. Weitere Informationen finden Sie unter [Reporting Services-Tools](../../reporting-services/tools/reporting-services-tools.md).  
   

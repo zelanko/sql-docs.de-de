@@ -1,5 +1,6 @@
 ---
 title: Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über Möglichkeiten zum Steuern, Organisieren und Sortieren von Berichtsdaten mithilfe von Ausdrücken, die auf Datasetfeldern basieren, und Parametern im Berichtsdatenbereich im Berichts-Generator.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e08a4a43897c1497c81a9e01f010fa99a252130e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eca67966ff36c2100df7d46f07e150ed6aa32d1c
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080168"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681389"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS)
   In einem Bericht werden Ausdrücke zum Steuern, Organisieren und Sortieren von Berichtsdaten verwendet. Beim Erstellen von Datasets und Entwerfen des Berichtslayouts werden die Eigenschaften von Berichtselementen standardmäßig automatisch auf Ausdrücke festgelegt. Diese Einstellungen basieren auf den Datasetfeldern, Parametern und anderen Elementen, die im Berichtsdatenbereich angezeigt werden. Sie können einer Tabellen- oder Matrixzelle auch eine interaktive Sortierschaltfläche hinzufügen, um dem Benutzer das interaktive Ändern der Zeilensortierreihenfolge für Gruppen oder Zeilen innerhalb von Gruppen zu ermöglichen.  
@@ -107,7 +108,7 @@ ms.locfileid: "77080168"
   
  Alle drei Typen von Sortierungen können im gleichen Bericht kombiniert werden. Standardmäßig wird die Sortierreihenfolge durch die Reihenfolge bestimmt, in der Daten von der Datasetabfrage zurückgegeben werden. Sortierungsausdrücke werden im Datenbereich und in der Datenbereichsgruppe angewendet. Interaktive Sortierungen werden nach Sortierungsausdrücken angewendet.  
   
- Bei Ausdrücken, die Aggregatfunktionen enthalten, sind die meisten Ergebnisse nicht von der Sortierreihenfolge betroffen. Rückgabewerte für die folgenden Aggregatfunktionen sind von der Sortierreihenfolge betroffen: „First“, „Last“ und „Previous“. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Bei Ausdrücken, die Aggregatfunktionen enthalten, sind die meisten Ergebnisse nicht von der Sortierreihenfolge betroffen. Rückgabewerte für die folgenden Aggregatfunktionen sind von der Sortierreihenfolge betroffen: First, Last und Previous. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Sortieren von Daten in einer Datasetabfrage  
  Schließen Sie Sortierreihenfolge in der Datasetabfrage ein, um diese vorzusortieren, bevor sie für einen Bericht abgerufen werden. Beim Sortieren von Daten in der Abfrage wird die Sortierung selbst von der Datenquelle und nicht vom Berichtsprozessor ausgeführt.  

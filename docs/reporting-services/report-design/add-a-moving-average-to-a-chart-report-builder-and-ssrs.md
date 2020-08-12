@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen eines gleitenden Durchschnitts zu einem Diagramm (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie der Preisindikator „gleitender Durchschnitt“ (Formel) in einem Diagramm angezeigt werden kann, um Trends im Berichts-Generator zu identifizieren.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2cffa994cadf61b9d1d78c2cbe138c736e34b626
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: b2c72f3720b397e20df7daa794e08ef7ca241abf
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488322"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255699"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>Hinzufügen eines gleitenden Durchschnitts zu einem Diagramm (Berichts-Generator und SSRS)
 Ein gleitender Durchschnitt ist ein Mittelwert der Daten in der Reihe, die im Verlauf eines definierten Zeitraums berechnet wird. In paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten kann der gleitende Durchschnitt im Diagramm angezeigt werden, um bedeutende Trends zu identifizieren.  
@@ -43,7 +44,7 @@ Ein gleitender Durchschnitt ist ein Mittelwert der Daten in der Reihe, die im Ve
     >  Der Zeitraum entspricht der Anzahl von Tagen, die verwendet wird, um einen gleitenden Durchschnitt zu berechnen. Wenn auf der X-Achse keine Datum/Uhrzeit-Werte angegeben sind, wird der Zeitraum durch die Anzahl der Datenpunkte dargestellt, die zur Berechnung eines gleitenden Durchschnitts verwendet werden. Wenn es nur einen Datenpunkt gibt, wird die Formel für den gleitenden Durchschnitt nicht berechnet. Der gleitende Durchschnitt wird am zweiten Punkt beginnend berechnet. Wenn Sie die Option **Bei erstem Punkt beginnen** angeben, startet das Diagramm den gleitenden Durchschnitt am ersten Punkt. Wenn nur ein Datenpunkt vorhanden ist, entspricht der Punkt im berechneten gleitenden Durchschnitt dem ersten Punkt Ihrer ursprünglichen Reihe.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-* [Tutorial: Add a Column Chart to Your Report (Report Builder) (Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator))](../tutorial-add-a-column-chart-to-your-report-report-builder.md)
+* [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)
 *  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 *  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 *  [Hinzufügen von leeren Punkten zum Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)  

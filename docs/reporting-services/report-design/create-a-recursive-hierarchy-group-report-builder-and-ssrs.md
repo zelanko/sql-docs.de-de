@@ -1,5 +1,6 @@
 ---
 title: Erstellen einer rekursiven Hierarchiegruppe (Berichts-Generator) | Microsoft-Dokumentation
+description: In diesem Artikel erhalten Sie Informationen zum Organisieren von Daten in einem paginierten Bericht, die aus einem einzelnen Berichtsdataset stammen, das hierarchische Ebenen enthält, indem Sie eine rekursive Hierarchiegruppe verwenden.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d1a73f72cc267b8a58c70dd4ea958be3560a4fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d72c85df464893a4f7e7d6ba1f183a3702aee87
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080549"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681529"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Erstellen einer rekursiven Hierarchiegruppe (Berichts-Generator und SSRS)
 In paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten organisiert eine rekursive Hierarchiegruppe Daten aus einem einzelnen Berichtsdataset, das mehrere hierarchische Ebenen aufweist, z.B. eine Berichtsstruktur für die Beziehung zwischen Managern und Mitarbeitern in der Hierarchie einer Organisation.  
@@ -48,7 +49,7 @@ In paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Be
     > [!NOTE]  
     >  Wenn der Bereich Eigenschaften geschlossen ist, klicken Sie auf der Registerkarte **Ansicht** auf **Eigenschaften** .  
   
-2.  Erweitern Sie im Bereich „Eigenschaften“ den Knoten **Auffüllung**, klicken Sie auf **Links**, und wählen Sie in der Dropdownliste den Eintrag **\<Ausdruck…>** .  
+2.  Erweitern Sie im Bereich „Eigenschaften“ den Knoten **Auffüllung**, klicken Sie auf **Links**, und klicken Sie in der Dropdownliste auf die Option **\<Expression...>** .  
   
 3.  Geben Sie im Ausdruckfenster den folgenden Ausdruck ein:  
   

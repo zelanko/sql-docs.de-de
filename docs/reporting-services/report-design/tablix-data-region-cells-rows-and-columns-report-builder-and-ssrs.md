@@ -1,6 +1,6 @@
 ---
 title: Zellen, Zeilen und Spalten in einem Tablix-Datenbereich | Microsoft-Dokumentation
-description: Wenn Sie steuern möchten, wie Daten in den Zeilen und Spalten eines Tablix-Datenbereichs in einem paginierten SQL Server Reporting Services-Bericht angezeigt werden, müssen Sie wissen, wie Sie Zeilen und Spalten für Detaildaten, Gruppendaten, Bezeichnungen und Gesamtwerte angeben.
+description: In diesem Artikel erfahren Sie, wie Sie Zeilen und Spalten für Daten, Bezeichnungen und Gesamtwerte angeben, was es Ihnen ermöglicht, die Anzeige in einem SQL Server-Bericht zu steuern.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26567c364e734824964e19ee6a639f2500ee2b4b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252397"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689452"
 ---
 # <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Zellen, Zeilen und Spalten in einem Tablix-Datenbereich (Berichts-Generator und SSRS)
 

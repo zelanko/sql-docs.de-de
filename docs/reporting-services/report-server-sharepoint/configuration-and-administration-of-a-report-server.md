@@ -1,5 +1,6 @@
 ---
 title: Konfiguration und Verwaltung eines Berichtsservers | Microsoft-Dokumentation
+description: Mit den SQL Server Reporting Services können Sie die Berichtsumgebung mit einem SharePoint-Produkt integrieren, um die von SharePoint-Websites ermöglichte Zusammenarbeit zu nutzen.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 557eab9a01bd7be8b93de9015b2dd497b5264e3b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bd798a81558119eee4777893272531ce14f113c9
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077420"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767086"
 ---
 # <a name="configuration-and-administration-of-a-sql-server-reporting-services-ssrs-report-server"></a>Konfiguration und Verwaltung eines SQL Server Reporting Services-Berichtsservers (SSRS)
 
@@ -52,7 +53,7 @@ Die folgenden Abschnitte enthalten Informationen zu Konzepten, Bereitstellungssz
   
 -   [Hinzufügen von Reporting Services-Inhaltstypen zu einer SharePoint-Bibliothek](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
--   [Berichte im lokalen Modus im Vergleich mit Berichte im verbundenen Modus im Berichts-Viewer &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   [Berichte im lokalen Modus im Vergleich mit Berichten im verbundenen Modus im Berichts-Viewer (Reporting Services im SharePoint-Modus)](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
 -   [Hochladen von Dokumenten in eine SharePoint-Bibliothek &#40;Reporting Services im SharePoint-Modus&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: Vergleich zwischen nativen Berichtsservern und SharePoint-Berichtsservern in Reporting Services | Microsoft-Dokumentation
+description: In diesem Artikel erhalten Sie Informationen zum Kernstück einer SQL Server Reporting Services-Installation, das aus einer Verarbeitungsengine und Erweiterungen besteht, um zusätzliche Funktionen hinzuzufügen.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b884782c7ae1ad7898a2d2ef04de7de18b7c73df
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67038013"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764831"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Vergleich zwischen nativen Berichtsservern und SharePoint-Berichtsservern in Reporting Services
 
@@ -27,7 +28,7 @@ Erfahren Sie mehr über den Hauptteil der [!INCLUDE[ssNoVersion](../../includes/
 
 Ein Reporting Services-Berichtsserver wird in einem von zwei Bereitstellungsmodi ausgeführt: dem einheitlichen Modus oder dem SharePoint-Modus. Einen Vergleich der Features finden Sie im Abschnitt [Funktionsvergleich zwischen SharePoint und einheitlichem Modus](#feature-comparison-of-sharepoint-and-native-mode) .  
   
- **Installation:** Informationen zur Installation von Reporting Services finden Sie im Artikel zur [Reporting Services-Installation](../install-windows/install-reporting-services.md).
+ **Installation:** Informationen zur Installation von Reporting Services finden Sie im Artikel [Installieren von SQL Server Reporting Services](../install-windows/install-reporting-services.md).
 
 ## <a name="overview-of-report-server-modes"></a>Übersicht über Berichtsservermodi
 
@@ -122,7 +123,7 @@ Ein Reporting Services-Berichtsserver wird in einem von zwei Bereitstellungsmodi
   
 |type|Standard|  
 |----------|-------------|  
-|Authentication|Eine Standard-Berichtsserverinstanz unterstützt die Windows-Authentifizierung, einschließlich Identitätswechsel- und Delegationsfunktionen, falls diese in Ihrer Domäne aktiviert sind.|  
+|Authentifizierung|Eine Standard-Berichtsserverinstanz unterstützt die Windows-Authentifizierung, einschließlich Identitätswechsel- und Delegationsfunktionen, falls diese in Ihrer Domäne aktiviert sind.|  
 |Datenverarbeitung|Eine Standard-Berichtsserverinstanz bietet Datenverarbeitungserweiterungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-, Oracle-, Hyperion Essbase-, SAPBW-, OLE DB-, Parallel Data Warehouse- und ODBC-Datenquellen.|  
 |Darstellung|Eine Standard-Berichtsserverinstanz bietet Renderingerweiterungen für die Dateiformate HTML, Excel, CSV, XML, Word und PDF sowie für SharePoint-Listen und Bilddateien.|  
 |Lieferung|Eine Standard-Berichtsserverinstanz schließt eine E-Mail-Übermittlungserweiterung und eine Dateifreigabe-Übermittlungserweiterung ein. Falls der Berichtsserver für die SharePoint-Integration konfiguriert ist, können Sie eine Übermittlungserweiterung verwenden, die Berichte in eine SharePoint-Bibliothek speichert.|  

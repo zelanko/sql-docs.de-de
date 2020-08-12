@@ -1,5 +1,6 @@
 ---
 title: Anwendungsdomänen für Berichtsserveranwendungen | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über Ereignisse, die einen Neustart einer Anwendungsdomäne im Rahmen der Problembehandlung für Reporting Services-Anwendungen bewirken.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d39f1b9b081d50e5d64a6d5f948255f3a4d6e53b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9492a6617b459fad1afca9200ae9437f02a41d29
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574798"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535472"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Anwendungsdomänen für Berichtsserveranwendungen
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]wird der Berichtsserver als einzelner Dienst implementiert, der den Report Server-Webdienst, den Berichts-Manager und eine Hintergrundverarbeitungsanwendung umfasst. Jede Anwendung wird in einer eigenen Anwendungsdomäne innerhalb des einzelnen Berichtsserverprozesses ausgeführt. Größtenteils werden Anwendungsdomänen intern erstellt, konfiguriert und verwaltet. Es ist jedoch nützlich zu wissen, wie Wiederverwendungsvorgänge für Berichtsserver-Anwendungsdomänen auftreten, wenn Sie Leistungs- oder Speicherprobleme untersuchen oder Dienstausfälle beheben müssen.  

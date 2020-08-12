@@ -1,5 +1,6 @@
 ---
 title: 'Leistungsindikatoren: ReportServer-Dienst, Leistungsobjekte | Microsoft-Dokumentation'
+description: Hier erfahren Sie mehr über Leistungsindikatoren für die Leistungsobjekte ReportServer:Service und ReportServerSharePoint:Service, die Teil einer SQL Server 2012-Bereitstellung sind.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f86af60001deb0991983fe17c3cf1cf9ba3f2552
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7afe684cb88327fd7b8bb22ae2637ad4064cb25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893439"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545522"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Leistungsindikatoren: ReportServer-Dienst, Leistungsobjekte
   Unter diesem Thema werden Leistungsindikatoren für die Leistungsobjekte **ReportServer:Service** und **ReportServerSharePoint:Service** beschrieben, die Teil einer [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Bereitstellung sind.  
@@ -37,9 +38,9 @@ ms.locfileid: "68893439"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> ReportServer:Service-Leistungsindikatoren (Berichtsserver im einheitlichen Modus)  
- Das **ReportServer:Service** -Leistungsobjekt enthält eine Reihe von Leistungsindikatoren zum Nachverfolgen HTTP-bezogener und speicherbezogener Ereignisse für eine Berichtsserverinstanz. Dieses Leistungsobjekt erscheint einmalig pro [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz auf dem Computer, und Sie können für jede Instanz Indikatoren zum Leistungsobjekt hinzufügen oder aus dem Leistungsobjekt löschen. Leistungsindikatoren für die Standardinstanz werden im Format **ReportServer:Service**angezeigt. Indikatoren für benannte Instanzen werden im Format **ReportServer$\<***Instanzname***>:Service** angezeigt.  
+ Das **ReportServer:Service** -Leistungsobjekt enthält eine Reihe von Leistungsindikatoren zum Nachverfolgen HTTP-bezogener und speicherbezogener Ereignisse für eine Berichtsserverinstanz. Dieses Leistungsobjekt erscheint einmalig pro [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz auf dem Computer, und Sie können für jede Instanz Indikatoren zum Leistungsobjekt hinzufügen oder aus dem Leistungsobjekt löschen. Leistungsindikatoren für die Standardinstanz werden im Format **ReportServer:Service**angezeigt. Indikatoren für benannte Instanzen werden im Format **ReportServer$\<***instance_name***>:Service** angezeigt.  
   
- Das **ReportServer:Service** -Leistungsobjekt wurde in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] eingeführt. Es bietet eine Teilmenge an Indikatoren, die in IIS (Internetinformationsdienste; Internet Information Services) und [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] in früheren Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthalten waren. Diese neuen Leistungsindikatoren sind spezifisch für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], und sie verfolgen HTTP-bezogene Ereignisse für den Berichtsserver nach, wie Anforderungen, Verbindungen und Anmeldeversuche. Darüber hinaus schließt dieses Leistungsobjekt Leistungsindikatoren für die Nachverfolgung von Speicherverwaltungsereignissen ein.  
+ Das **ReportServer:Service** -Leistungsobjekt wurde in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] eingeführt. Es bietet eine Teilmenge an Indikatoren, die in IIS (Internetinformationsdienste; Internet Information Services) und [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] in früheren Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthalten waren. Diese neuen Leistungsindikatoren sind spezifisch für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], und sie verfolgen HTTP-bezogene Ereignisse für den Berichtsserver nach, wie Anforderungen, Verbindungen und Anmeldeversuche. Darüber hinaus schließt dieses Leistungsobjekt Leistungsindikatoren für die Nachverfolgung von Speicherverwaltungsereignissen ein.  
   
  In der folgenden Tabelle werden die im **ReportServer:Service** -Leistungsobjekt enthaltenen Leistungsindikatoren aufgelistet.  
   

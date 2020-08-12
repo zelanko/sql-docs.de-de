@@ -1,5 +1,6 @@
 ---
 title: Aktivieren und Deaktivieren von „Meine Berichte“ | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie das Feature „Meine Berichte“ in den Reporting Services aktivieren und deaktivieren. „Meine Berichte“ stellt Speicher in der Berichtsserver-Datenbank für Benutzer bereit.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6670d1da918ac1bdc6cb1947b265f9d543259814
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ffc2b26db7e6211f16496b06f8bbaebf30b9ed7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577777"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547982"
 ---
 # <a name="enable-and-disable-my-reports"></a>Aktivieren und Deaktivieren von "Meine Berichte"
   Die Funktion Meine Berichte ordnet persönlichen Speicherbereich in der Berichtsserver-Datenbank zu, damit Benutzer ihre eigenen Berichte in einem privaten Ordner speichern können. Als Berichtsserveradministrator können Sie diese Funktion aktivieren bzw. deaktivieren oder dessen Funktionsweise ändern, indem Sie die Sicherheitseinstellungen bearbeiten, die steuern, welche Funktionen die Benutzer mit diesem Arbeitsbereich ausführen können.  

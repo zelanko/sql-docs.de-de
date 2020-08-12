@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie den Berichtsserver für die lokale Verwaltung konfigurieren, wenn Sie einen Berichtsserver für Reporting Services in bestimmten Umgebungen installieren.
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 07a5040138bb19bd456a11ad9dcc15dc4cf06e4d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080892"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545612"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)
   Für die Bereitstellung eines [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsservers unter einem der folgenden Betriebssysteme sind weitere Konfigurationsschritte erforderlich, wenn die Berichtsserverinstanz lokal verwaltet werden soll. In diesem Thema wird beschrieben, wie der Berichtsserver für die lokale Verwaltung konfiguriert wird. Wenn Sie den Berichtsserver noch nicht installiert oder konfiguriert haben, lesen Sie [Installieren von SQL Server über den Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) und [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
@@ -113,9 +114,9 @@ ms.locfileid: "77080892"
   
 2.  Wählen Sie das Zahnradsymbol in der obersten Zeile der Startseite aus, und klicken Sie dann im Dropdownmenü auf **Siteeinstellungen**. 
   
-    ![Zahnradsymbol](../media/ssrsgearmenu.png)erforderlich.
+    ![Zahnradsymbol](../media/ssrsgearmenu.png).
     >[!TIP]  
-    >**Hinweis:** Wenn die Option **Siteeinstellungen** nicht angezeigt wird, schließen Sie den Browser, öffnen Sie ihn mit Administratorberechtigungen erneut, und navigieren Sie zum Webportal.  
+    >**Hinweis:** Wenn die Option **Siteeinstellungen** nicht angezeigt wird, schließen Sie den Browser, öffnen Sie ihn mit Administratorberechtigungen nochmals, und navigieren Sie zum Webportal.  
   
 3.  Wählen Sie auf der Seite „Siteeinstellungen“ die Option **Sicherheit** aus, und wählen Sie dann **Gruppe oder Benutzer hinzufügen** aus.  
   

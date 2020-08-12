@@ -1,5 +1,6 @@
 ---
 title: Referenz zu Aggregatfunktionen (Berichts-Generator) | Microsoft-Dokumentation
+description: Verwenden Sie in Ausdrücken im Berichts-Generator integrierte Aggregatfunktionen, um in Ihrem Bericht aggregierte Werte zu verwenden.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c767c4e4feced7f5979cf6b22e90cceef311ca5
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081320"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255733"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funktionen des Berichts-Generators: Referenz zu Aggregatfunktionen
   Um aggregierte Werte in den Bericht einzuschließen, können Sie integrierte Aggregatfunktionen in Ausdrücken verwenden. Die Standardaggregatfunktion für numerische Felder ist SUM. Sie können den Ausdruck bearbeiten und eine andere integrierte Aggregatfunktion verwenden oder einen anderen Bereich angeben. Mit dem Bereich wird angegeben, welcher Satz an Daten für die Berechnung verwendet werden soll.  
@@ -78,10 +79,10 @@ ms.locfileid: "77081320"
 |Abfrageparameter|Nein|Ja|Nein|Nein|Nein|Nein|Nein|  
 |Gruppierungsausdruck|Ja|Ja|Nein|Nein|Ja|Nein|Nein|  
 |Sortierungsausdruck|Ja|Ja|Nein|Nein|Ja|Ja<br /><br /> Hinweis 5|Nein|  
-|Filterausdruck|Ja|Ja|Nein|Nein|Ja|Ja<br /><br /> Hinweis 6|Nein|  
+|Filterausdruck|Ja|Ja|Nein|Nein |Ja|Ja<br /><br /> Hinweis 6|Nein|  
 |Code|Nein|Ja<br /><br /> Hinweis 7|Nein|Nein|Nein|Nein|Nein|  
 |Berichtssprache|Nein|Ja|Nein|Nein|Nein|Nein|Nein|  
-|Variables|Ja|Ja|Nein|Nein|Ja|Aktueller oder enthaltener Bereich|Nein|  
+|Variables|Ja|Ja|Nein|Nein |Ja|Aktueller oder enthaltener Bereich|Nein|  
 |Aggregate|Ja|Ja|Nur in Seitenkopf/Seitenfuß|Nur in Berichtselementaggregaten|Ja|Nein|Nein|  
 |Suchfunktionen|Ja|Ja|Ja|Nein|Ja|Nein|Nein|  
   
@@ -108,10 +109,10 @@ ms.locfileid: "77081320"
   
 |Kontext|RunningValue|RowNumber|First (Erster)<br /><br /> Last (Letzter)|Previous|Sum und andere Vorsortierungsfunktionen|ReportItem-Aggregate|Suchfunktionen|Aggregatfunktion|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Ausgeführter Wert|Nein|Nein|Nein|Nein|Ja|Nein|Ja|Nein|  
-|First (Erster)<br /><br /> Last (Letzter)|Nein|Nein|Nein|Nein|Ja|Nein|Nein|Nein|  
+|Ausgeführter Wert|Nein|Nein|Nein|Nein |Ja|Nein|Ja|Nein|  
+|First (Erster)<br /><br /> Last (Letzter)|Nein|Nein|Nein|Nein |Ja|Nein|Nein|Nein|  
 |Previous|Ja|Ja|Ja|Nein|Ja|Nein|Ja|Nein|  
-|Sum und andere Vorsortierungsfunktionen|Nein|Nein|Nein|Nein|Ja|Nein|Ja|Nein|  
+|Sum und andere Vorsortierungsfunktionen|Nein|Nein|Nein|Nein |Ja|Nein|Ja|Nein|  
 |ReportItem-Aggregate|Nein|Nein|Nein|Nein|Nein|Nein|Nein|Nein|  
 |Suchfunktionen|Ja|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Ja<br /><br /> Hinweis 1|Nein|Nein|  
 |Aggregatfunktion|Nein|Nein|Nein|Nein|Nein|Nein|Nein|Nein|  

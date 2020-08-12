@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen eines Unterberichts und Hinzufügen von Parametern (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie einen Unterbericht hinzufügen. Verwenden Sie Unterberichte, wenn Sie einen Hauptbericht im Berichts-Generator als Container für zugehörige Berichte erstellen möchten.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a74ef0a64fb7d1a77f3e336f98aeaa245c4458d8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9131d15b8374df4b3db22946583d3349f0386e91
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080668"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462304"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Hinzufügen eines Unterberichts und Hinzufügen von Parametern (Berichts-Generator und SSRS)
   Fügen Sie einem Bericht Unterberichte hinzu, wenn Sie einen Hauptbericht erstellen möchten, der mehrere verwandte Berichte enthält. Ein Unterbericht ist ein Verweis auf einen anderen Bericht. Um die Berichte über Datenwerte zu verbinden (z. B. damit mehrere Berichte Daten für denselben Kunden anzeigen), müssen Sie einen parametrisierten Bericht erstellen (z. B. einen Bericht, der die Details für einen bestimmten Kunden enthält). Wenn Sie dem Hauptbericht einen Unterbericht hinzufügen, können Sie Parameter angeben, die an den Unterbericht übergeben werden sollen.  
@@ -57,7 +58,7 @@ ms.locfileid: "77080668"
 5.  Geben Sie im Listenfeld **Wert** einen Wert ein, oder wählen Sie einen Wert aus. Dieser Wert wird an den Unterbericht übergeben. Bei dem Wert kann es sich um statischen Text oder einen Ausdruck handeln, der auf ein Feld oder ein anderes Objekt im Hauptbericht verweist.  
   
     > [!NOTE]  
-    >  In Berichts-Generator: Wenn ein Parameter in der Liste **Parameter** nicht vorhanden ist und für den Unterbericht ein Standardwert definiert ist, wird der Unterbericht korrekt verarbeitet.  
+    >   In Berichts-Generator: Wenn ein Parameter in der Liste **Parameter** nicht vorhanden ist und für den Unterbericht ein Standardwert definiert ist, wird der Unterbericht korrekt verarbeitet.  
     >   
     >  In Berichts-Designer müssen alle Parameter, die vom Unterbericht benötigt werden, in der Liste **Parameter** enthalten sein. Fehlt ein benötigter Parameter, wird der Unterbericht nicht richtig im Hauptbericht angezeigt.  
   

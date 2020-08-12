@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren und Verwalten eines Berichtsservers (einheitlicher Modus) | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr zu den Ansätzen, die Sie zum Konfigurieren von Reporting Services verwenden können. Außerdem sind einige Artikel zum Konfigurieren von Komponenten, Features oder Serverfunktionen verlinkt.
 ms.date: 05/15/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2e38e508d2c6a7447781dd2918b980bcc1ff6003
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 68a37cc93271fc913cc89d2b0e522a81adec443f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082526"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547462"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Konfigurieren und Verwalten eines Berichtsservers (einheitlicher SSRS-Modus)
   In diesem Artikel werden die Vorgehensweisen zum Konfigurieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zusammengefasst. Es enthält außerdem eine Liste der Themen, in denen das Konfigurieren bestimmter Komponenten, Funktionen und Serverfunktionen erläutert wird. Zum Konfigurieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie folgendermaßen vorgehen:  

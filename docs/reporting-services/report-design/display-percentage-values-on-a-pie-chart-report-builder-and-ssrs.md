@@ -1,6 +1,6 @@
 ---
 title: Anzeigen von Prozentwerten in einem Kreisdiagramm (Berichts-Generator) | Microsoft-Dokumentation
-description: In paginierten Reporting Services-Berichten zeigt die Legende standardmäßig Kategorien an. Bei Bedarf können Sie die Prozentsätze auch in der Legende oder den Kreissegmenten selbst anzeigen.
+description: In diesem Artikel erfahren Sie, wie Sie Prozentwerte in einem Kreisdiagramm, in der Legende oder in den Segmenten im Berichts-Generator anzeigen.
 ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b250f8bffdebeb0cb0f1e68a739bb808cb75abd
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: abacde42f813a00ecc2f48edd8fc71d2b3a83020
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487586"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681399"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>Anzeigen von Prozentwerten in einem Kreisdiagramm (Berichts-Generator und SSRS)
 In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-Berichten zeigt die Legende standardmäßig Kategorien an. Bei Bedarf können Sie die Prozentsätze auch in der Legende oder den Kreissegmenten selbst anzeigen.   
@@ -43,7 +43,7 @@ In paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]-
 2.  Geben Sie unter **Legende**den Wert **#PERCENT** für die Eigenschaft **Benutzerdefinierter Legendentext** ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-* [Tutorial: Add a Pie Chart to Your Report (Report Builder) (Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator))](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
+* [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
 *  [Kreisdiagramme &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
 *  [Anzeigen von Datenpunktbezeichnungen außerhalb eines Kreisdiagramms &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

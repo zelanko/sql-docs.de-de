@@ -1,5 +1,6 @@
 ---
 title: 'Vorgehensweise: Bereitstellen einer Datenverarbeitungserweiterung für einen Berichtsserver | Microsoft-Dokumentation'
+description: In diesem Artikel finden Sie heraus, wie Sie eine Datenverarbeitungserweiterung auf einem Berichtsserver bereitstellen, indem Sie lernen, welche Einträge welchen Konfigurationsdateien hinzugefügt werden müssen.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3f0b775b53244cd0a428bb4ce4023906d2f5119
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a43b94a4ef45b210ea2f54b0401962e79ca9a489
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194125"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529582"
 ---
 # <a name="deploying-a-data-processing-extension-to-a-report-server"></a>Bereitstellen einer Datenverarbeitungserweiterung für einen Berichtsserver
   Berichtsserver verwenden Datenverarbeitungserweiterungen zum Abrufen und Verarbeiten von Daten in gerenderten Berichten. Sie sollten Ihre Assembly für Datenverarbeitungserweiterungen auf dem Berichtsserver als private Assembly bereitstellen. Sie müssen auch einen Eintrag in der Konfigurationsdatei des Berichtsservers RSReportServer.config vornehmen.  
@@ -25,7 +26,7 @@ ms.locfileid: "63194125"
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>So stellen Sie eine Assembly für Datenverarbeitungserweiterungen bereit  
   
-1.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das BIN-Verzeichnis des Berichtsservers, auf dem Sie die Datenverarbeitungserweiterung verwenden möchten. Das Standardverzeichnis für das BIN-Verzeichnis des Berichtsservers lautet %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*Instanzname*>\Reporting Services\ReportServer\bin.  
+1.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das BIN-Verzeichnis des Berichtsservers, auf dem Sie die Datenverarbeitungserweiterung verwenden möchten. Standardmäßig befindet sich das „bin“-Verzeichnis des Berichtsservers unter dem Pfad „%Programme%\Microsoft SQL Server\MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer\bin“.  
   
     > [!NOTE]  
     >  Dieser Schritt verhindert ein Upgrade auf eine neuere Instanz von SQL Server. Weitere Informationen finden Sie unter [Upgrade and Migrate Reporting Services](../../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
@@ -50,7 +51,7 @@ ms.locfileid: "63194125"
   
      Der Wert für **Name** ist der eindeutige Name der Datenverarbeitungserweiterung. Der Wert für **Typ** ist eine durch Trennzeichen getrennte Liste, die einen Eintrag für den vollqualifizierten Namespace der Klasse enthält, welche die Schnittstellen <xref:Microsoft.ReportingServices.Interfaces.IExtension> und <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> implementiert, gefolgt vom Namen der Assembly (ohne die DLL-Dateierweiterung). Standardmäßig sind Datenverarbeitungserweiterungen sichtbar. Um eine Erweiterung auf Benutzeroberflächen wie dem Berichts-Manager auszublenden, fügen Sie dem **Extension** -Element das Attribut **Visible** hinzu und legen es auf **false**fest.  
   
-5.  Fügen Sie eine Codegruppe für die benutzerdefinierte Assembly hinzu, die die Berechtigung **FullTrust** für Ihre Erweiterung erteilt. Hierzu fügen Sie die Codegruppe zur Datei „rssrvpolicy.config“ hinzu, die sich standardmäßig in %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*Instanzname*>\Reporting Services\ReportServer befindet. Die Codegruppe kann folgendermaßen aussehen:  
+5.  Fügen Sie eine Codegruppe für die benutzerdefinierte Assembly hinzu, die die Berechtigung **FullTrust** für Ihre Erweiterung erteilt. Hierzu fügen Sie die Codegruppe zur Datei „rssrvpolicy.config“ hinzu, die sich standardmäßig in %Programme%\Microsoft SQL Server\\<MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer befindet. Die Codegruppe kann folgendermaßen aussehen:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

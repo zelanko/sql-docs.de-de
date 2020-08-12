@@ -1,5 +1,6 @@
 ---
 title: Bereitstellen von Übermittlungserweiterungen | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie eine Übermittlungserweiterung für einen Berichtsserver bereitstellen. Sie erfahren außerdem, welche Einträge welchen Konfigurationsdateien hinzugefügt werden, damit der Berichtsserver die Erweiterung findet.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f358ebb3cc58a9f10c117d24bce8c04d849fd2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193762"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529116"
 ---
 # <a name="deploying-a-delivery-extension"></a>Bereitstellen von Übermittlungserweiterungen
   Übermittlungserweiterungen geben ihre Konfigurationsinformationen in Form einer XML-Konfigurationsdatei an. Die XML-Datei entspricht dem für Übermittlungserweiterungen definierten XML-Schema. Übermittlungserweiterungen verfügen über eine Infrastruktur zum Einstellen und Ändern der Konfigurationsdatei.  
@@ -31,7 +32,7 @@ ms.locfileid: "63193762"
   
  In der folgenden Tabelle werden die Attribute für das **Extension**-Element für Übermittlungserweiterungen beschrieben.  
   
-|attribute|BESCHREIBUNG|  
+|Attribut|BESCHREIBUNG|  
 |---------------|-----------------|  
 |**Name**|Ein eindeutiger Name für die Erweiterung (z. B. "Berichtsserver-E-Mail" für eine E-Mail-Übermittlungserweiterung oder "Berichtsserver-Dateifreigabe" für eine Dateifreigabe-Übermittlungserweiterung). Die maximale Länge für das **Name** -Attribut beträgt 255 Zeichen. Der Name muss für sämtliche Einträge im **Extension** -Element einer Konfigurationsdatei eindeutig sein. Wenn ein Name doppelt vorhanden ist, gibt der Berichtsserver einen Fehler zurück.|  
 |**Typ**|Eine durch Trennzeichen getrennte Liste, die den vollqualifizierten Namespace und den Namen der Assembly enthält|  
@@ -44,12 +45,12 @@ ms.locfileid: "63193762"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>So stellen Sie eine Assembly für Übermittlungserweiterungen auf einem Berichtsserver bereit  
   
-1.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das BIN-Verzeichnis des Berichtsservers, auf dem Sie die Übermittlungserweiterung verwenden möchten. Das Standardverzeichnis für das BIN-Verzeichnis des Berichtsservers lautet %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin.  
+1.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das BIN-Verzeichnis des Berichtsservers, auf dem Sie die Übermittlungserweiterung verwenden möchten. Standardmäßig befindet sich das „bin“-Verzeichnis des Berichtsservers unter dem Pfad „%Programme%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer\bin“.  
   
     > [!IMPORTANT]  
     >  Wenn Sie versuchen, eine vorhandene Assembly für Übermittlungserweiterungen zu überschreiben, müssen Sie zuerst den Berichtsserverdienst anhalten, bevor Sie die aktualisierte Assembly kopieren können. Starten Sie den Dienst neu, nachdem die Assembly kopiert wurde.  
   
-2.  Nachdem die Assemblydatei kopiert wurde, öffnen Sie die Datei RSReportServer.config. Die Datei „RSReportServer.config“ befindet sich im Verzeichnis %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer directory. Sie müssen einen Eintrag in der Konfigurationsdatei für die Assemblydatei der Übermittlungserweiterung vornehmen. Sie können die Konfigurationsdatei mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder in einem einfachen Text-Editor wie Windows-Editor öffnen.  
+2.  Nachdem die Assemblydatei kopiert wurde, öffnen Sie die Datei RSReportServer.config. Die Datei „RSReportServer.config“ befindet sich im Verzeichnis „%Programme%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer“. Sie müssen einen Eintrag in der Konfigurationsdatei für die Assemblydatei der Übermittlungserweiterung vornehmen. Sie können die Konfigurationsdatei mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] oder in einem einfachen Text-Editor wie Windows-Editor öffnen.  
   
 3.  Suchen Sie das **Delivery**-Element in der Datei „RSReportServer.config“. In folgendem Verzeichnis muss ein Eintrag für die neu erstellte Übermittlungserweiterung erstellt werden:  
   
@@ -69,7 +70,7 @@ ms.locfileid: "63193762"
   
      Der Wert für **Name** ist der eindeutige Name der Übermittlungserweiterung. Der Wert für **Typ** ist eine durch Trennzeichen getrennte Liste, die einen Eintrag für den vollqualifizierten Namespace der Klasse enthält, die die Schnittstelle <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> implementiert, gefolgt vom Namen der Assembly (ohne die DLL-Dateierweiterung). Übermittlungserweiterungen sind standardmäßig sichtbar. Fügen Sie dem **Extension**-Element das Attribut **Visible** hinzu und legen es auf **FALSE** fest, um eine Erweiterung auf Benutzeroberflächen wie dem Webportal auszublenden.  
   
-5.  Zum Schluss müssen Sie eine Codegruppe für die benutzerdefinierte Assembly hinzufügen, die die Berechtigung **FullTrust** für Ihre Erweiterung erteilt. Hierzu fügen Sie die Codegruppe zur Datei „rssrvpolicy.config“ hinzu, die sich standardmäßig in %ProgramFiles%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer befindet. Die Codegruppe kann folgendermaßen aussehen:  
+5.  Zum Schluss müssen Sie eine Codegruppe für die benutzerdefinierte Assembly hinzufügen, die die Berechtigung **FullTrust** für Ihre Erweiterung erteilt. Hierzu fügen Sie die Codegruppe zur Datei „rssrvpolicy.config“ hinzu, die sich standardmäßig in %Programme%\Microsoft SQL Server\MSRS13.\<InstanceName>\Reporting Services\ReportServer befindet. Die Codegruppe kann folgendermaßen aussehen:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

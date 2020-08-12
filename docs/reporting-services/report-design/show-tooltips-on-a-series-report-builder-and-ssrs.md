@@ -1,5 +1,6 @@
 ---
 title: Anzeigen von QuickInfos für eine Reihe (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie jedem Datenpunkt in der Reihe eines Diagramms eine QuickInfo hinzufügen, um zugehörige Informationen im Berichts-Generator anzuzeigen.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69804b41ccfafe3edf7be7aba719088d7212c2ba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f89c94b8a9b457ff312acfd97d84632f037de82a
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080976"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681479"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Anzeigen von QuickInfos für eine Reihe (Berichts-Generator und SSRS)
   Sie können den einzelnen Datenpunkten in einem Diagramm QuickInfos hinzufügen, um Informationen zum Datenpunkt anzuzeigen, beispielsweise den Gruppennamen, den Wert des Datenpunkts oder den Prozentsatz des Datenpunkts in Bezug auf die Gesamtreihe. Diese Informationen werden angezeigt, wenn Benutzer mit dem Cursor auf den Datenpunkt in einem gerenderten paginierten Bericht zeigen.  

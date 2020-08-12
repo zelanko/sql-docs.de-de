@@ -1,5 +1,6 @@
 ---
 title: Datasetverweise auf die Fields-Auflistung (Berichts-Generator) | Microsoft-Dokumentation
+description: Erstellen Sie ein Dataset für die Anzeige einzelner oder zusammengefasster Werte im Berichtsdatenbereich des Berichts-Generators.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 83b041ebde43c0208c3606fff6b0dcc33d7680c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3b2466036918d6c66db980a7a66259cef63fe20d
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081900"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688853"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Integrierte Auflistungen: Verweise auf Datasetfeldauflistungen (Berichts-Generator)
   Jedes Dataset in einem Bericht enthält eine Fields-Sammlung. Bei der Fields-Sammlung handelt es sich um eine Gruppe von Feldern, die von der Datasetabfrage und zusätzlichen berechneten Feldern angegeben werden, die Sie erstellen. Nachdem Sie ein Dataset erstellt haben, wird die Feldauflistung im **Berichtsdatenbereich** angezeigt.  

@@ -1,5 +1,6 @@
 ---
 title: Multilookup-Funktion (Berichts-Generator) | Microsoft-Dokumentation
+description: Die Multilookup-Funktion gibt im Berichts-Generator mehrere der ersten übereinstimmenden Werte für bestimmte Namen aus einem Dataset zurück, das Name-Wert-Paare enthält.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94883e68a4543c7fe98794d8b89dc38f05d2b410
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fca4a966d661005f1c672011ac5712903644780b
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081186"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462384"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Funktionen des Berichts-Generators: Multilookup-Funktion
   Gibt den Satz der ersten übereinstimmenden Werte für den angegebenen Satz von Namen aus einem Dataset mit Name-Wert-Paaren zurück.  
