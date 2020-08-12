@@ -1,5 +1,6 @@
 ---
 title: SQL Server-Agent-Eigenschaften (Registerkarte Dienst)
+description: Hier erfahren Sie mehr über die Optionen auf der Registerkarte „Dienst“ des Dialogfelds „SQL Server Agent Properties“ (Eigenschaften des SQL Server-Agent), z. B. den Binärpfad, die Prozess-ID und den Startmodus.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ac42d55dea9c8e422a279516afa632810bc83c7c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c6a0ea4bdce650fd7cc1f1ff28c297c9035bf025
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307136"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880382"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>SQL Server-Agent-Eigenschaften (Registerkarte Dienst)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Hierbei handelt es sich um den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst. Die ausgegrauten Eigenschaftswerte können nicht mithilfe dieser Anwendung geändert werden.  
   
 ## <a name="options"></a>Tastatur  
@@ -51,7 +52,7 @@ ms.locfileid: "75307136"
   
 -   Automatisch: Dieser Dienst wird zusammen mit dem Computer gestartet.  
   
--   Deaktiviert: Dieser Dienst kann nicht gestartet werden.  
+-   Deaktiviert: Der Dienst kann nicht gestartet werden.  
   
  **State**  
  Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist. „ **…** “ gibt einen ausstehenden Statuswechsel an.  

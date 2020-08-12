@@ -2,22 +2,22 @@
 title: NYC Taxi-Demodaten für Tutorials
 description: Erstellen Sie eine Datenbank mit Beispieldaten zu Taxis in New York City. Dieses Dataset wird in R- und Python-Tutorials für SQL Server Machine Learning Services verwendet.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 46ad967b9ecd40b84cf7871e7b9ef113fe686953
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116663"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814060"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>NYC Taxi-Demodaten für Python- und R-Tutorials in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Artikel wird beschrieben, wie eine Beispieldatenbank mit öffentlichen Daten von der [New York City Taxi and Limousine Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) eingerichtet wird. Diese Daten werden in verschiedenen R- und Python-Tutorials für datenbankinterne Analysen unter SQL Server verwendet. Damit der Beispielcode schneller ausgeführt werden kann, haben wir ein repräsentatives 1 %-Sampling der Daten erstellt. In unserem System ist die Datenbanksicherungsdatei etwas größer als 90 MB, wobei sich in der primären Datentabelle 1,7 Millionen Datensätze befinden.
 
@@ -33,6 +33,11 @@ Dieses Dataset wird in folgenden Tutorials und Schnellstarts verwendet:
 Bei der Beispieldatenbank handelt es sich um eine von Microsoft gehostete SQL Server 2016-BAK-Datei. Sie kann unter SQL Server 2016 und höher wiederhergestellt werden. Der Download der Datei beginnt sofort, wenn Sie auf den Link klicken. 
 
 Die Dateigröße beträgt ungefähr 90 MB.
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+>[!NOTE]
+>Zur Wiederherstellung der Beispieldatenbank auf [Big Data-Cluster in SQL Server](../../big-data-cluster/big-data-cluster-overview.md) laden Sie [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) herunter, und Sie befolgen die Anweisungen unter [Wiederherstellen einer Datenbank in der Masterinstanz eines Big Data-Clusters für SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
+::: moniker-end
 
 1. Klicken Sie auf [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), um die Datenbanksicherungsdatei herunterzuladen.
 

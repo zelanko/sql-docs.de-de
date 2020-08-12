@@ -1,6 +1,7 @@
 ---
 title: Erstellen einer Ablaufverfolgungsvorlage
 titleSuffix: SQL Server Profiler
+description: Hier erfahren Sie, wie Sie eine neue Ablaufverfolgungsvorlage in SQL Server Profiler erstellen. Sie erfahren, wie Sie der Vorlage Filter hinzufügen und Ereignisse sowie Datenspalten hinzufügen oder entfernen.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 2944e21afee17f66eef51723f4e552c947f43db8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af272f50f281a8c3a564913cfb91be8abcab2898
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774872"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>Erstellen einer Ablaufverfolgungsvorlage (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]eine neue Ablaufverfolgungsvorlage erstellen.  
   
 ### <a name="to-create-a-trace-template"></a>So erstellen Sie eine Ablaufverfolgungsvorlage  

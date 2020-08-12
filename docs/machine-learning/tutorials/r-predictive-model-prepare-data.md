@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ae2931ca07cdcd6e3f1216ce7adb2551a6e23ae
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: e0c679ce4a146065223123e41cb2935e7d33ad71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784079"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutorial: Vorbereiten von Daten für das Training eines Vorhersagemodells in R mit SQL Machine Learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In Teil 2 dieser vierteiligen Tutorialreihe bereiten Sie Daten aus einer Datenbank mithilfe von R vor. Später in dieser Reihe verwenden Sie diese Daten zum Trainieren und Bereitstellen eines Vorhersagemodells in R mit SQL Server Machine Learning Services oder in Big Data-Clustern.
@@ -31,12 +30,15 @@ In Teil 2 dieser vierteiligen Tutorialreihe bereiten Sie Daten aus einer Datenb
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 In Teil 2 dieser vierteiligen Tutorialreihe bereiten Sie Daten aus einer Datenbank mithilfe von R vor. Später in dieser Reihe verwenden Sie diese Daten zum Trainieren und Bereitstellen eines Vorhersagemodells in R mit SQL Server R Services.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In Teil 2 dieser vierteiligen Tutorialreihe bereiten Sie Daten aus einer Datenbank mithilfe von R vor. Später in dieser Reihe verwenden Sie diese Daten zum Trainieren und Bereitstellen eines Vorhersagemodells in R mit Machine Learning Services für Azure SQL Managed Instance.
+::: moniker-end
 
 In diesem Artikel lernen Sie Folgendes:
 
 > [!div class="checklist"]
 > * Wiederherstellen einer Beispieldatenbank in einer Datenbank
-> * Laden der Daten aus der SQL-Datenbank in einen R-Datenrahmen
+> * Laden der Daten aus der Datenbank in einen R-Datenrahmen
 > * Vorbereiten der Daten in R durch Identifizieren einiger Spalten als Kategorien
 
 In [Teil 1](r-predictive-model-introduction.md) dieser Tutorialreihe haben Sie gelernt, wie Sie die Beispieldatenbank wiederherstellen.
@@ -51,22 +53,19 @@ In Teil zwei dieser Reihe von Tutorials wird angenommen, dass Sie [**Teil eins**
 
 ## <a name="load-the-data-into-a-data-frame"></a>Laden der Daten in einem neuen Datenrahmen
 
-Um die Daten in R zu verwenden, laden Sie die Daten aus der SQL-Datenbank in einen Datenrahmen (`rentaldata`).
+Zur Verwendung der Daten in R laden Sie sie aus der Datenbank in einen Datenrahmen (`rentaldata`).
 
 Erstellen Sie eine neue RScript-Datei in RStudio, und führen Sie das folgende Skript aus. Ersetzen Sie **ServerName** durch Ihre eigenen Verbindungsinformationen.
 
 ```r
 #Define the connection string to connect to the TutorialDB database
-connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;uid=Username;pwd=Password"
+
 
 #Get the data from the table
 library(RODBC)
 
 ch <- odbcDriverConnect(connStr)
-
-#Take a look at the structure of the data and the top rows
-head(rentaldata)
-str(rentaldata)
 
 #Import the data from the table
 rentaldata <- sqlFetch(ch, "dbo.rental_data")
@@ -138,7 +137,7 @@ Wenn Sie nicht mit diesem Tutorial fortfahren möchten, löschen Sie die Datenba
 
 In Teil 2 dieser Tutorialreihe haben Sie Folgendes gelernt:
 
-* Laden der Beispieldaten aus SQL Server in einen R-Datenrahmen
+* Laden der Beispieldaten in einen R-Datenframe
 * Vorbereiten der Daten in R durch Identifizieren einiger Spalten als Kategorien
 
 Fahren Sie mit Teil 3 dieser Tutorialreihe fort, um ein Machine Learning-Modell zu erstellen, das Daten aus der Datenbank „TutorialDB“ verwendet:

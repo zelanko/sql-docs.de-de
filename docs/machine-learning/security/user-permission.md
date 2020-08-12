@@ -1,25 +1,25 @@
 ---
-title: Erteilen von Berechtigungen für Skripts
-description: Hier erfahren Sie, wie Sie Datenbankbenutzerberechtigungen für die Ausführung von R- und Python-Skripts in SQL Server Machine Learning Services erteilen.
+title: Erteilen von Berechtigungen zum Ausführen von Python- und R-Skripts
+description: In diesem Artikel erfahren Sie, wie Sie Benutzern die Berechtigung zum Ausführen externer Python- und R-Skripts in SQL Server Machine Learning Services erteilen und wie Sie Datenbanken Lese-, Schreib-oder DDL-Berechtigungen (Data Definition Language, Datendefinitionssprache) erteilen.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 10/17/2018
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 06/03/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
-ms.custom: seo-lt-2019
+ms.custom: seo-lt-2019, contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55a76b070a5f54562957f138d55896b49dbb15f1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: da601b8c83e6e226da0329ec8d8c732d9877656a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117093"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775361"
 ---
-# <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Erteilen von Benutzerberechtigungen in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="grant-users-permission-to-execute-python-and-r-scripts-with-sql-server-machine-learning-services"></a>Erteilen Sie Benutzern die Berechtigung zum Ausführen von Python- und R-Skripts mit SQL Server Machine Learning Services.
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-In diesem Artikel wird beschrieben, wie Sie Benutzern die Berechtigung zum Ausführen externer Skripts in SQL Server Machine Learning Services und Datenbanken Lese-, Schreib-oder DDL-Berechtigungen (Data Definition Language, Datendefinitionssprache) erteilen können.
+In diesem Artikel erfahren Sie, wie Sie Benutzern die Berechtigung zum Ausführen externer Python- und R-Skripts in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) erteilen und wie Sie Datenbanken Lese-, Schreib-oder DDL-Berechtigungen (Data Definition Language, Datendefinitionssprache) erteilen.
 
 Weitere Informationen finden Sie im Abschnitt „Berechtigungen“ unter [Sicherheitsübersicht für das Erweiterbarkeitsframework](../../machine-learning/concepts/security.md#permissions).
 
@@ -27,9 +27,9 @@ Weitere Informationen finden Sie im Abschnitt „Berechtigungen“ unter [Sicher
 
 ## <a name="permission-to-run-scripts"></a>Berechtigung zum Ausführen von Skripts
 
-Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selbst installiert haben und R- oder Python-Skripts in einer eigenen Instanz ausführen, werden diese in der Regel als Administrator ausgeführt. Deshalb haben Sie die implizite Berechtigung für viele Vorgänge und alle Daten in der Datenbank.
+Jedem Benutzer, der Python- oder R-Skripts mit SQL Server Machine Learning Services ausführt und kein Administrator ist, müssen Sie die Berechtigung zum Ausführen externer Skripts in jeder Datenbank erteilen, in der die betreffende Sprache verwendet wird.
 
-Die meisten Benutzer verfügen jedoch nicht über diese erhöhten Berechtigungen. Beispielsweise haben Benutzer in einer Organisation, die SQL-Konten für den Zugriff auf Datenbanken benutzen, in der Regel keine erhöhten Berechtigungen. Deshalb müssen Sie jedem Benutzer, der R oder Python verwendet, in Machine Learning Services die Berechtigung zum Ausführen externer Skripts in jeder Datenbank erteilen, in der diese Sprachen verwendet werden. Gehen Sie dabei folgendermaßen vor:
+Führen Sie das folgende Skript aus, um die Berechtigung zum Ausführen externer Skripts zu erteilen:
 
 ```sql
 USE <database_name>
@@ -38,15 +38,19 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 ```
 
 > [!NOTE]
-> Berechtigungen sind nicht für die unterstützte Skriptsprache spezifisch. Es gibt also keine separaten Berechtigungsebenen für R-Skripts und Python-Skripts. Wenn Sie separate Berechtigungen für diese Sprachen anlegen müssen, sollten Sie R und Python auf separaten Instanzen installieren.
+> Berechtigungen sind nicht für die unterstützte Skriptsprache spezifisch. Es gibt also keine separaten Berechtigungsebenen für R-Skripts und Python-Skripts.
 
-<a name="permissions-db"></a> 
+<a name="permissions-db"></a>
 
 ## <a name="grant-databases-permissions"></a>Erteilen von Datenbankberechtigungen
 
 Wenn ein Benutzer Skripts ausführt, benötigt dieser möglicherweise Lesezugriff auf Daten in anderen Datenbanken. Möglicherweise muss der Benutzer auch neue Tabellen erstellen, um Ergebnisse zu speichern, und Daten in Tabellen schreiben.
 
-Stellen Sie für jedes Windows-Benutzerkonto oder SQL-Konto, über das R- oder Python-Skripts ausgeführt werden, fest, dass dieses über die entsprechenden Berechtigungen für die spezielle Datenbank verfügt: `db_datareader` für den Lesezugriff auf Daten, `db_datawriter` für das Speichern von Objekten in der Datenbank und `db_ddladmin` für das Erstellen von Objekten wie gespeicherte Prozeduren oder Tabellen, die trainierte oder serialisierte Daten enthalten.
+Stellen Sie für alle Windows-Benutzerkonten und SQL-Anmeldungen, die R- oder Python-Skripts ausführen, sicher, dass diese über die richtigen Berechtigungen für die jeweilige Datenbank verfügen: 
+
++ `db_datareader` zum Lesen von Daten
++ `db_datawriter` zum Speichern von Objekten in der Datenbank
++ `db_ddladmin` zum Erstellen von Objekten wie gespeicherten Prozeduren oder Tabellen, die trainierte und serialisierte Daten enthalten
 
 Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung erteilt beispielsweise dem SQL-Konto *MySQLLogin* die Rechte zum Ausführen von T-SQL-Abfragen in der Datenbank *ML_Samples*. Um diese Anweisung auszuführen, muss die SQL-Anmeldung bereits im Sicherheitskontext des Servers vorhanden sein.
 

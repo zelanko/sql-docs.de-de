@@ -1,6 +1,7 @@
 ---
 title: Ableiten einer Vorlage aus einer zurzeit ausgeführten Ablaufverfolgung
 titleSuffix: SQL Server Profiler
+description: In diesem Artikel erfahren Sie, wie Sie eine Vorlage aus einer vorhandenen Ablaufverfolgung im SQL Server Profiler erstellen, während die Ablaufverfolgung noch ausgeführt wird.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 426ad5f68121261067699705c282977fdb8a75ed
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02b4015803a214d1f04d1e28a8e7d1812d47a642
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307254"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774838"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>Ableiten einer Vorlage von einer zurzeit ausgeführten Ablaufverfolgung (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]eine Ablaufverfolgungsvorlage aus einer vorhandenen, zurzeit ausgeführten Ablaufverfolgung erstellen.  
   
 ### <a name="to-derive-a-template-from-a-running-trace"></a>So leiten Sie eine Vorlage von einer zurzeit ausgeführten Ablaufverfolgung ab  

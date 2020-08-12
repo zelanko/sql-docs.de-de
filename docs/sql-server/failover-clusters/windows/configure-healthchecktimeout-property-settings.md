@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren von HealthCheckTimeout für eine Verfügbarkeitsgruppe
-description: Konfigurieren Sie HealthCheckTimeout für eine Always On-Verfügbarkeitsgruppe, um anzugeben, wie lange die SQL Server-Ressourcen-DLL warten soll, bevor sie meldet, dass die Verfügbarkeitsgruppe nicht reagiert.
+description: In diesem Artikel erfahren Sie, wie Sie HealthCheckTimeout für eine Always-On-Verfügbarkeitsgruppe konfigurieren. So kann angegeben werden, wie lang das DLL-Feature einer SQL Server-Ressource wartet, bevor ein Reaktionsverlust gemeldet wird.
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e3baf48a747db8dfdc9fb18387ac92dd0c53b4c8
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 83c59052646a870b513ebe79835d4c5a9345a5d9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925117"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882952"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Konfigurieren der HealthCheckTimeout-Eigenschafteneinstellungen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Mit der HealthCheckTimeout-Einstellung wird die Zeitdauer in Millisekunden angegeben, die die Ressourcen-DLL für SQL Server auf Informationen warten soll, die von der gespeicherten Prozedur [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) zurückgegeben werden, bevor gemeldet wird, dass die Always On-Failoverclusterinstanz (FCI) nicht reagiert. Änderungen am Timeoutwert werden unmittelbar wirksam; ein Neustart der SQL Server-Ressource ist nicht erforderlich.  
   
 -   **Vorbereitungen:**  [Beschränkungen](#Limits), [Sicherheit](#Security)  

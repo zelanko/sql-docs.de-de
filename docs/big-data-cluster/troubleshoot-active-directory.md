@@ -5,20 +5,20 @@ description: In diesem Artikel erfahren Sie, wie Sie Probleme mit der Bereitstel
 author: rl-msft
 ms.author: rafidl
 ms.reviewer: mikeray
-ms.date: 03/12/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69762b5474f72256975af06e6c79d664de283809
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772886"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Behandeln von Problemen mit der Integration von Active Directory in SQL Server-Big Data-Clustern
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In diesem Artikel erfahren Sie, wie Sie Probleme mit der Bereitstellung eines SQL Server-Big Data-Clusters im Active Directory-Modus behandeln.
 
@@ -123,9 +123,9 @@ zookeeper-2       2/2     Running   0          32m
 
 ## <a name="cause"></a>Ursache
 
-Im obigen Beispiel schlägt das Erstellen eines Anmeldenamens für den Domänenbenutzer bei der Bereitstellung fehl, weil die Domänengruppe als domänenlokal eingestuft ist. Verwenden Sie Gruppen in den Bereichen „global“ oder „domain universal“. Informationen zu den Anforderungen von AD-Gruppenbereichen finden Sie unter [Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus](deploy-active-directory.md).
+Im obigen Beispiel schlägt das Erstellen eines Anmeldenamens für den Domänenbenutzer bei der Bereitstellung fehl, weil die Domänengruppe als domänenlokal eingestuft ist. Verwenden Sie globale oder universelle Gruppen. Informationen zu den Anforderungen von AD-Gruppenbereichen finden Sie unter [Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus](deploy-active-directory.md).
 
-## <a name="resolution"></a>Lösung
+## <a name="verify"></a>Überprüfen
 
 Überprüfen Sie den Bereich der Domänengruppe (<`domain-group`>). Verwenden Sie den Befehl [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
 

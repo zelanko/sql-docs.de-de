@@ -1,6 +1,7 @@
 ---
 title: Ableiten einer Vorlage aus einer Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle
 titleSuffix: SQL Server Profiler
+description: In diesem Artikel erfahren Sie, wie Sie den SQL Server Profiler verwenden, um eine Ablaufverfolgungsvorlage aus einer vorhandenen Ablaufverfolgungsdatei oder aus einer in einer Datenbank gespeicherten Ablaufverfolgungstabelle erstellen.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 88058eed970b7294f8bbc0c1cc50352753f511a2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 58e62ae757b0509c0cf9e7862e8bd6f0aa570183
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774824"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>Ableiten einer Vorlage von einer Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]eine Ablaufverfolgungsvorlage aus einer vorhandenen Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle erstellen.  
   
 ### <a name="to-derive-a-template-from-a-trace-file-or-trace-table"></a>So leiten Sie eine Vorlage von einer Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle ab  

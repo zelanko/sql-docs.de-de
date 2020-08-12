@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbcff4ee14db85a3a973496ce8a5cb24772a35b9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f07f4e5f6e833419b922dd6f8e6d7b58becf96b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634284"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793291"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Versionshinweise zum Microsoft JDBC-Treiber für SQL Server
 
@@ -51,7 +51,7 @@ Der Microsoft JDBC-Treiber 8.2 für SQL Server ist jetzt zusätzlich zu JDK 11
 | Änderungen an Always Encrypted | Details |
 | :--------- | :------ |
 | Der Microsoft JDBC-Treiber 8.2 für SQL Server unterstützt jetzt Always Encrypted mit Secure Enclaves. Weitere Informationen finden Sie hier: Always Encrypted mit Secure Enclaves |
-| Weitere Informationen und Beispielcode | Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](always-encrypted-with-secure-enclaves.md). |
+| Weitere Informationen und Beispielcode | Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server-sup1sup"></a>Leistungsverbesserung beim Abrufen temporaler Datentypen aus SQL Server<sup>1</sup>
@@ -64,7 +64,7 @@ Der Microsoft JDBC-Treiber 8.2 für SQL Server ist jetzt zusätzlich zu JDK 11
 
 <sup>1</sup> Da Zeitzonen in der java.util.Calendar- und java.time.LocalDateTime-API unterschiedlich verarbeitet werden, gilt diese Verbesserung nicht für temporale Datentypen mit einem vom Benutzer bereitgestellten und zugeordneten java.util.Calendar-Objekt und nicht für microsoft.sql.DateTimeOffset-Datentypen.
 
-### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>Bereitstellung von mssql-jdbc_auth-\<version>-\<arch>.dll (previously sqljdbc_auth.dll) im Maven-Repository
+### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>Bereitstellung von mssql-jdbc_auth-\<version>-\<arch>.dll (ehemals sqljdbc_auth.dll) im Maven-Repository
 
 | Änderungen an „sqljdbc_auth.dll“ | Details |
 | :------------------- | :------ |

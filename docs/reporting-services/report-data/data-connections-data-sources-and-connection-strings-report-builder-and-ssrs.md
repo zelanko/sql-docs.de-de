@@ -1,18 +1,19 @@
 ---
 title: Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.date: 11/18/2019
+description: In diesem Artikel erfahren Sie, wie Sie Datenverbindungs-Zeichenfolgen erstellen. Zudem erhalten Sie wichtige Informationen zu Anmeldeinformationen für Datenquellen.
+ms.date: 05/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73bf9e24ffb42ef93547097c53b5838a22292fda
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: accb94c4fbfe0c7e10b6fdfcaa749e8059b8e498
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190912"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812295"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>Erstellen von Datenverbindungszeichenfolgen (Berichts-Generator und SSRS)
 
@@ -41,12 +42,12 @@ ms.locfileid: "74190912"
 |SAP NetWeaver BI-Datenquelle|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Legen Sie den Datenquellentyp auf **SAP NetWeaver BI**fest. Weitere Informationen finden Sie unter [SAP NetWeaver BI-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
 |Hyperion Essbase-Datenquelle|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Legen Sie den Datenquellentyp auf **Hyperion Essbase**fest. Weitere Informationen finden Sie unter [Hyperion Essbase-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
 |Teradata-Datenquelle|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Legen Sie den Datenquellentyp auf **Teradata**fest. Die Verbindungszeichenfolge ist eine IP-Adresse (Internet Protocol) in Form von vier Feldern, wobei jedes Feld ein bis drei Ziffern aufweisen kann. Weitere Informationen finden Sie unter [Teradataverbindungstyp (SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
-|Teradata-Datenquelle|`Database=` *\<database name>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN *>* `;Use X Views=False;Restrict to Default Database=True`|Legen Sie den Datenquellentyp auf **Teradata**fest, ähnlich dem vorherigen Beispiel. Verwenden Sie nur die Standarddatenbank, die im Datenbank-Tag angegeben wird, und ermitteln Sie nicht automatisch Datenbeziehungen.|  
+|Teradata-Datenquelle|`Database=` *\<database name>* `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Legen Sie den Datenquellentyp auf **Teradata**fest, ähnlich dem vorherigen Beispiel. Verwenden Sie nur die Standarddatenbank, die im Datenbank-Tag angegeben wird, und ermitteln Sie nicht automatisch Datenbeziehungen.|  
 |XML-Datenquelle, Webdienst|`data source=https://adventure-works.com/results.aspx`|Legen Sie den Datenquellentyp auf **XML**fest. Die Verbindungszeichenfolge ist eine URL für einen Webdienst, der Webdienste-Definitionssprache (WSDL) unterstützt. Weitere Informationen finden Sie unter [XML-Verbindungstyp (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
 |XML-Datenquelle, XML-Dokument|`https://localhost/XML/Customers.xml`|Legen Sie den Datenquellentyp auf **XML**fest. Die Verbindungszeichenfolge besteht aus einer URL für das XML-Dokument. 
 |XML-Datenquelle, eingebettetes XML-Dokument|*Leer*|Legen Sie den Datenquellentyp auf **XML**fest. Die XML-Daten sind in der Berichtsdefinition eingebettet.|  
 |SharePoint-Liste|`data source=https://MySharePointWeb/MySharePointSite/`|Legen Sie den Datenquellentyp auf **SharePoint-Liste**fest.|  
-| Power BI Premium-Dataset (ab Reporting Services 2019) | Server=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;initial catalog = <YourDatasetName> | Legen Sie den Datenquellentyp auf **Microsoft SQL Server Analysis Services**fest. |
+| Power BI Premium-Dataset (ab Reporting Services 2019 und Power BI-Berichtsserver im Januar 2020) | `Data Source=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;Initial Catalog=<datasetname>` | Legen Sie den Datenquellentyp auf **Microsoft SQL Server Analysis Services**fest. |
 
   
  Wenn Sie mittels **localhost**keine Verbindung zu einem Berichtsserver herstellen können, überprüfen Sie, ob das Netzwerkprotokoll für TCP/IP aktiviert ist. Weitere Informationen finden Sie unter [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  

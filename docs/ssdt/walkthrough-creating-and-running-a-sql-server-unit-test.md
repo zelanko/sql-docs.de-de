@@ -1,21 +1,21 @@
 ---
 title: Erstellen und Ausführen eines SQL Server-Komponententests
+description: In diesem Artikel erfahren Sie, wie Sie einen SQL Server-Komponententest erstellen. Außerdem enthält der Artikel eine Anleitung für die Einrichtung eines Tests, der einen Fehler in einer gespeicherten Prozedur erkennt.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: cb284457b86d6dd1e2284d6815a1b175640fa0c2
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087507"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882921"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests
 
@@ -181,7 +181,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise müssen Sie in der Lage se
     AS  
     BEGIN  
     INSERT INTO [Sales].[Customer] (CustomerName) VALUES (@CustomerName);  
-    SELECT SCOPE_IDENTITY()  
+    RETURN SCOPE_IDENTITY()  
     END  
     GO  
     PRINT N'Creating Sales.uspPlaceNewOrder...';  
@@ -274,7 +274,7 @@ Wenn Sie F5 drücken, wird die Datenbank standardmäßig auf einer LocalDB-Daten
   
 2.  Klicken Sie mit der rechten Maustaste auf eine der gespeicherten Prozeduren und dann auf **Komponententests erstellen**, um das Dialogfeld **Komponententests erstellen** anzuzeigen.  
   
-3.  Aktivieren Sie die Kontrollkästchen für alle fünf gespeicherten Prozeduren: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** und **Sales.uspShowOrderDetails**.  
+3.  Aktivieren Sie die Kontrollkästchen für alle fünf gespeicherten Prozeduren: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**und **Sales.uspShowOrderDetails**.  
   
 4.  Wählen Sie in der Dropdownliste **Projekt** die Option **Neues Visual C#-Testprojekt erstellen** aus.  
   

@@ -1,30 +1,34 @@
 ---
 title: 'Schnellstart: Trainieren eines Modells in Python'
-description: In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Vorhersagemodell mithilfe von Python erstellen und trainieren. Sie lernen, wie Sie das Modell in Ihrer SQL Server-Instanz in einer Tabelle speichern und es anschließend verwenden, um Werte aus neuen Daten mithilfe von SQL Server Machine Learning Services vorherzusagen.
+titleSuffix: SQL machine learning
+description: In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Vorhersagemodell mithilfe von Python erstellen und trainieren. Außerdem lernen Sie, wie Sie das Modell in einer Tabelle in Ihrer Datenbank speichern und anschließend dazu verwenden, Werte aus neuen Daten mithilfe von SQL-Machine-Learning vorherzusagen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/28/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 929491de1eb99835133d04d396023b84680af9f4
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 7fe03849217dfe6e8ad7acedc39d891c5168f9c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606862"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772381"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in Python mit SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in Python mit SQL-Machine-Learning
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Vorhersagemodell mithilfe von Python erstellen und trainieren. Sie lernen, wie Sie das Modell in Ihrer SQL Server-Instanz in einer Tabelle speichern und es anschließend verwenden, um Werte aus neuen Daten mithilfe von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) vorherzusagen.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Vorhersagemodell mithilfe von Python erstellen und trainieren. Sie lernen, wie Sie das Modell in Ihrer SQL Server-Instanz in einer Tabelle speichern und es anschließend verwenden, um Werte aus neuen Daten mithilfe von [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) vorherzusagen.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Vorhersagemodell mithilfe von Python erstellen und trainieren. Außerdem lernen Sie, wie Sie das Modell in einer Tabelle in Ihrer Datenbank speichern und anschließend dazu verwenden, Werte aus neuen Daten mithilfe von [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) vorherzusagen.
 ::: moniker-end
 
 Hierzu erstellen Sie zwei gespeicherte Prozeduren, die in SQL ausgeführt werden. Die erste verwendet das klassische Irisblüten-Datenset und generiert ein Naïve Bayes-Modell, um eine Irisart anhand der Blumenmerkmale vorherzusagen. Die zweite Prozedur ist für die Bewertung vorgesehen: Sie ruft das in der ersten Prozedur generierte Modell auf, um mehrere Vorhersagen basierend auf neuen Daten auszugeben. Durch das Platzieren von Python-Code in einer gespeicherten SQL-Prozedur sind Vorgänge in SQL enthalten. Sie sind wiederverwendbar und können von anderen gespeicherten Prozeduren und Clientanwendungen aufgerufen werden.
@@ -38,15 +42,19 @@ In diesem Schnellstart lernen Sie Folgendes:
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
+Zum Durchführen dieser Schnellstartanleitung benötigen Sie folgende Voraussetzungen.
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 - SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md) oder im [Linux-Installationshandbuch](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Sie können auch [Machine Learning Services in Big Data-Clustern unter SQL Server aktivieren](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Machine Learning Services in Azure SQL Managed Instance. In der Übersicht [Machine Learning Services in Azure SQL Managed Instance (Vorschauversion)](/azure/azure-sql/managed-instance/machine-learning-services-overview) finden Sie Informationen zur Registrierung.
+::: moniker-end
 
-- Ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. In dieser Schnellstartanleitung wird [Azure Data Studio](../../azure-data-studio/what-is.md) verwendet.
-
+- Ein Tool zum Ausführen von SQL-Abfragen, die Python-Skripts enthalten. In dieser Schnellstartanleitung wird [Azure Data Studio](../../azure-data-studio/what-is.md) verwendet.
 
 - Für Beispiele in dieser Übung wird das Iris-Beispieldataset verwendet. Befolgen Sie die Anweisungen in den [Iris-Demodaten](demo-data-iris-in-sql.md), um die Beispieldatenbank **irissql** zu erstellen.
 
@@ -54,7 +62,7 @@ In diesem Schnellstart lernen Sie Folgendes:
 
 In diesem Schritt erstellen Sie eine gespeicherte Prozedur, die ein Modell zur Vorhersage von Ergebnissen generiert.
 
-1. Öffnen Sie Azure Data Studio, stellen Sie eine Verbindung mit Ihrer SQL Server-Instanz her, und öffnen Sie ein neues Abfragefenster.
+1. Öffnen Sie Azure Data Studio, stellen Sie eine Verbindung mit Ihrer SQL-Instanz her, und öffnen Sie ein neues Abfragefenster.
 
 1. Stellen Sie eine Verbindung mit der irissql-Datenbank her.
 
@@ -66,11 +74,11 @@ In diesem Schritt erstellen Sie eine gespeicherte Prozedur, die ein Modell zur V
 1. Kopieren Sie den folgenden Code, um eine neue gespeicherte Prozedur zu erstellen.
 
    Bei der Ausführung ruft diese Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) auf, um eine Python-Sitzung zu starten. 
-   
-   Eingaben, die vom Python-Code benötigt werden, werden als Eingabeparameter in dieser gespeicherten Prozedur übergeben. Als Ergebnis wird ein trainiertes Modell ausgegeben, das auf der Python-Bibliothek **scikit-learn** für den Machine Learning-Algorithmus basiert. 
+
+   Eingaben, die vom Python-Code benötigt werden, werden als Eingabeparameter in dieser gespeicherten Prozedur übergeben. Als Ergebnis wird ein trainiertes Modell ausgegeben, das auf der Python-Bibliothek **scikit-learn** für den Machine Learning-Algorithmus basiert.
 
    In diesem Code wird [**pickle**](https://docs.python.org/2/library/pickle.html) verwendet, um das Modell zu serialisieren. Das Modell wird mit den Daten aus den Spalten 0 bis 4 der Tabelle **iris_data** trainiert. 
-   
+
    Die Parameter, die Sie im zweiten Teil der Prozedur sehen, formulieren Dateneingaben und Modellausgaben. Sie möchten, dass der Python-Code weitestgehend in einer gespeicherten Prozedur ausgeführt wird, die klar definierte Ein- und Ausgaben hat, die den zur Laufzeit übergebenen Ein- und Ausgaben der gespeicherten Prozeduren zugeordnet sind.
 
     ```sql
@@ -100,7 +108,7 @@ In diesem Schritt erstellen Sie eine gespeicherte Prozedur, die ein Modell zur V
 
 In diesem Schritt führen Sie den eingebetteten Code mithilfe der Prozedur aus und erstellen ein trainiertes und serialisiertes Modell als Ausgabe. 
 
-Modelle, die zur Wiederverwendung in SQL Server gespeichert werden, werden als Bytedatenstrom serialisiert und in einer Spalte „VARBINARY(MAX)“ einer Datenbanktabelle gespeichert. Sobald das Modell erstellt, trainiert, serialisiert und in einer Datenbank gespeichert ist, kann es durch andere Prozeduren oder durch die [PREDICT-T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)-Funktion zur Bewertung von Workloads aufgerufen werden.
+Modelle, die zur Wiederverwendung in Ihrer Datenbank gespeichert werden, werden als Bytestream serialisiert und in einer „VARBINARY(MAX)“-Spalte einer Datenbanktabelle gespeichert. Sobald das Modell erstellt, trainiert, serialisiert und in einer Datenbank gespeichert ist, kann es durch andere Prozeduren oder durch die [PREDICT-T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)-Funktion zur Bewertung von Workloads aufgerufen werden.
 
 1. Führen Sie das folgende Skript aus, um die Prozedur auszuführen. Die spezifische Anweisung zum Ausführen einer gespeicherten Prozedur finden Sie in der vierten Zeile: `EXECUTE`.
 
@@ -183,13 +191,11 @@ Nachdem Sie nun ein Modell erstellt, trainiert und gespeichert haben, fahren Sie
 
 ## <a name="conclusion"></a>Zusammenfassung
 
-In dieser Übung haben Sie gelernt, wie Sie gespeicherte Prozeduren erstellen, die für verschiedene Tasks vorgesehen sind. Dabei wurde von jeder gespeicherten Prozedur die gespeicherte Systemprozedur `sp_execute_external_script` verwendet, um einen Python-Prozess zu starten. Eingaben für den Python-Prozess werden an `sp_execute_external` als Parameter übergeben. Sowohl das Python-Skript selbst als auch Datenvariablen in einer SQL Server-Datenbank werden als Eingaben übergeben.
+In dieser Übung haben Sie gelernt, wie Sie gespeicherte Prozeduren erstellen, die für verschiedene Tasks vorgesehen sind. Dabei wurde von jeder gespeicherten Prozedur die gespeicherte Systemprozedur `sp_execute_external_script` verwendet, um einen Python-Prozess zu starten. Eingaben für den Python-Prozess werden an `sp_execute_external` als Parameter übergeben. Sowohl das Python-Skript selbst als auch Datenvariablen in einer Datenbank werden als Eingaben übergeben.
 
 Grundsätzlich sollten Sie nur Azure Data Studio mit hoch entwickeltem Python-Code verwenden, oder aber einfachen Python-Code, der zeilenbasierte Ausgaben zurückgibt. Als Tool unterstützt Azure Data Studio Abfragesprachen wie T-SQL und gibt flache Rowsets zurück. Wenn Ihr Code eine visuelle Ausgabe wie ein Punktdiagramm oder Histogramm erzeugt, benötigen Sie ein eigenständiges Tool oder eine Endbenutzeranwendung, die das Bild außerhalb der gespeicherten Prozedur darstellen kann.
 
 Für einige Python-Entwickler, die es gewohnt sind, allumfassende Skripts zu schreiben, die eine Reihe von Vorgängen ausführen, mag die Organisation von Tasks in separate Prozeduren unnötig erscheinen. Training und Bewertung haben jedoch unterschiedliche Anwendungsfälle. Indem Sie diese trennen, können Sie jede Task in einem anderen Zeitplan und in Bereichsberechtigungen für jeden Vorgang platzieren.
-
-Ebenso können Sie auch Ressourcenfunktionen von SQL Server nutzen, z. B. parallele Verarbeitung, und Ressourcengovernance, oder Sie können ein Skript schreiben, um Algorithmen in [microsoftml](../python/ref-py-microsoftml.md) zu verwenden, die Streaming und parallele Ausführung unterstützen. Durch die Trennung von Training und Bewertung können Sie Optimierungen für bestimmte Workloads gezielt vornehmen.
 
 Letztendlich ist es von Vorteil, dass die Prozesse über Parameter geändert werden können. In dieser Übung wurde der Python-Code, mit dem das Modell erstellt wurde (in diesem Beispiel „Naïve Bayes“ genannt), als Eingabe für eine zweite gespeicherte Prozedur übergeben, die das Modell in einem Bewertungsprozess aufruft. Für diese Übung wird nur ein Modell verwendet, aber Sie können sich vorstellen, wie dieses Skript bei der Parametrisierung des Modells in einer Bewertungstask sinnvoller eingesetzt werden kann.
 

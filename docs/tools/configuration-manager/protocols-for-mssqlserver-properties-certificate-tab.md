@@ -1,5 +1,6 @@
 ---
 title: Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte Zertifikat)
+description: Wählen Sie über die Registerkarte „Zertifikat“ im Dialogfeld „Protocols for MSSQLSERVER Properties“ (Eigenschaften der Protokolle für MSSQLSERVER) ein Zertifikat für SQL Server aus, oder zeigen Sie die Zertifikateigenschaften an.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b19b12a55f1afee35ed351ab6033179c17be89a8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71740e97a0518e34ffa410a62efe14f96cfaccfc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306369"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881897"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte Zertifikat)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Im Dialogfeld **Protocols for MSSQLSERVER Properties** (Protokolle für MSSQLSERVER-Eigenschaften) auf der Registerkarte **Zertifikat** können Sie ein Zertifikat für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen oder sich die Eigenschaften eines Zertifikats ansehen. Alle Felder sind leer, bis ein Zertifikat ausgewählt wird.  
   
  Zertifikate werden lokal für diesen Benutzer auf dem Computer gespeichert. Um ein Zertifikat zum Verwenden durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu laden, müssen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager unter dem gleichen Benutzerkonto ausführen wie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst.  

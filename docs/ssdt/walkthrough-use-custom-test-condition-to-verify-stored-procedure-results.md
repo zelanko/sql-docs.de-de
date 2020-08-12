@@ -1,21 +1,21 @@
 ---
 title: Benutzerdefinierte Testbedingung zur Überprüfung der Ergebnisse einer gespeicherten Prozedur
+description: Führen Sie die Schritte zum Einrichten einer benutzerdefinierten Testbedingung aus, die überprüft, ob eine gespeicherte Prozedur die richtige Anzahl von Spalten zurückgibt.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 296e9220c4c8b0518bba5a7587cf3a69fcecae06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286594"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882891"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Exemplarische Vorgehensweise: Verwenden einer benutzerdefinierten Testbedingung zur Überprüfung der Ergebnisse einer gespeicherten Prozedur
 
@@ -54,7 +54,7 @@ Als Nächstes signieren Sie das Projekt.
   
 2.  Aktivieren Sie auf der Registerkarte **Signierung** das Kontrollkästchen **Assembly signieren**.  
   
-3.  Klicken Sie im Feld **Schlüsseldatei mit starkem Namen wählen** auf **\<Neu...>** .  
+3.  Klicken Sie im Feld **Wählen Sie eine Schlüsseldatei mit starkem Namen** auf **\<New...>** .  
   
     Das Dialogfeld **Schlüssel mit starkem Namen erstellen** wird geöffnet.  
   
@@ -121,7 +121,7 @@ Benennen Sie jetzt **Class1** in **ResultSetColumnCountCondition**, und leiten S
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  Fügen Sie [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) hinzu. Weitere Informationen zu UnitTesting.Conditions.ExportTestConditionAttribute finden Sie unter [Gewusst wie: Erstellen von Testbedingungen für den SQL Server Komponententest-Designer](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md).  
+5.  Fügen Sie [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) hinzu. Unter [Vorgehensweise: Erstellen von Testbedingungen für den SQL Server-Komponententest-Designer](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) erhalten Sie weitere Informationen über UnitTesting.Conditions.ExportTestConditionAttribute.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -381,7 +381,7 @@ Jetzt muss ein Komponententest erstellt werden. So erstellen Sie einen SQL Serve
   
 6.  Klicken Sie auf **Abbrechen**, um den Komponententest zu erstellen, ohne dass das Testprojekt für die Verwendung einer Datenbankverbindung konfiguriert wird. Der leere Test wird im SQL Server-Komponententest-Designer angezeigt. Dem Testprojekt wird eine Visual C\#-Quellcodedatei hinzugefügt.  
   
-    Weitere Informationen zum Erstellen und Konfigurieren von Datenbankkomponententests mit Datenbankverbindungen finden Sie unter [Gewusst wie: Erstellen eines leeren SQL Server-Komponententests](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
+    Weitere Informationen zum Erstellen und Konfigurieren von Datenbankkomponententests mit Datenbankverbindungen finden Sie unter [Vorgehensweise: Erstellen eines leeren SQL Server-Komponententests](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
   
 7.  Klicken Sie auf **Klicken Sie zum Erstellen hierauf**, um die Erstellung des Komponententests abzuschließen. Die neue Testbedingung wird im SQL Server-Projekt angezeigt.  
   
@@ -400,7 +400,7 @@ So zeigen Sie die neue Testbedingung an
   
 5.  Konfigurieren Sie im Fenster **Eigenschaften** die Eigenschaften „Count“, „Enabled“ und „ResultSet“.  
   
-    Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen von Testbedingungen zu SQL Server-Komponententests](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
+    Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Testbedingungen zu SQL Server-Komponententests](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Benutzerdefinierte Testbedingungen für SQL Server-Komponententests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  

@@ -1,23 +1,23 @@
 ---
 title: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken
+description: In diesem Artikel erfahren Sie, wie Sie einen Build Contributor erstellen, installieren und testen, der beim Erstellen eines Datenbankprojekts Statistiken von SQL-Datenbankmodellen ausgibt.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242691"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894027"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten, um Modellstatistiken zu generieren
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Exemplarische Vorgehensweise: Erweitern von Datenbankprojekten zum Generieren von Modellstatistiken
 
 Sie können einen Erstellungs-Contributor erstellen, um benutzerdefinierte Aktionen durchzuführen, wenn Sie ein Datenbankprojekt erstellen. In dieser exemplarischen Vorgehensweise erstellen Sie einen Erstellungs-Contributor mit der Bezeichnung ModelStatistics, von dem Statistiken über das SQL-Datenbankmodell ausgegeben werden, wenn Sie ein Datenbankprojekt erstellen. Da von diesem Erstellungs-Contributor beim Erstellen Parameter übernommen werden, sind einige zusätzliche Schritte erforderlich.  
   
@@ -508,7 +508,7 @@ Dazu haben Sie zwei Möglichkeiten:
         </Project>  
         ```  
   
-    4.  Importieren Sie in die SQLPROJ-Datei für jedes Projekt, in dem Sie Contributors ausführen möchten, die Zieledatei durch Hinzufügen folgender Anweisung zur SQLPROJ-Datei nach dem Knoten \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> in der Datei:  
+    4.  Importieren Sie die Zieldatei innerhalb der SQLPROJ-Datei eines Projekts, in der Sie Build Contributors ausführen möchten, indem Sie in der SQLPROJ-Datei nach dem \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/>-Knoten in der Datei die folgende Anweisung hinzufügen:  
   
         ```  
         <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -525,7 +525,7 @@ Nach dem Durchführen einer dieser Vorgehensweisen können Sie MSBuild verwenden
   
 1.  Klicken Sie in Visual Studio mit der rechten Maustaste auf Ihre Projekt, und wählen Sie „Neu erstellen”. Dadurch wird das Projekt neu erstellt. Sie sollten die generierten Modellstatistiken sehen, die die Ausgabe in der Erstellungsausgabe enthalten und in ModelStatistics.xml gespeichert werden. Beachten Sie, dass Sie möglicherweise im Projektmappen-Explorer „Alle Dateien anzeigen“ wählen müssen, um die XML-Datei zu sehen.  
   
-2.  Klicken Sie im **Startmenü** auf **Alle Programme**, klicken Sie auf **Microsoft Visual Studio<Visual Studio Version>** , auf **Visual Studio Tools** und dann auf **Visual Studio-Eingabeaufforderung (<Visual Studio Version>)** .  
+2.  Klicken Sie im **Startmenü** auf **Alle Programme**, klicken Sie auf **Microsoft Visual Studio<Visual Studio Version>**, auf **Visual Studio Tools** und dann auf **Visual Studio-Eingabeaufforderung (<Visual Studio Version>)**.  
   
 3.  Navigieren Sie in der Eingabeaufforderung zu dem Ordner, der Ihr SQL-Projekt enthält.  
   
@@ -593,5 +593,5 @@ Sie können weitere Tools erstellen, um die Verarbeitung der Ausgabe-XML-Datei d
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Anpassen der Datenbankerstellung und -bereitstellung durch Erstellungs- und Bereitstellungs-Contributors](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Exemplarische Vorgehensweise: Bereitstellung des Datenbankprojekts erweitern, um den Bereitstellungsplan zu analysieren](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Exemplarische Vorgehensweise: Erweitern der Bereitstellung eines Datenbankprojekts zum Analysieren des Bereitstellungsplans](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

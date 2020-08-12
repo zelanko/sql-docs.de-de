@@ -4,20 +4,20 @@ titleSuffix: SQL Server Language Extensions
 description: Hier erfahren Sie, wie Sie mithilfe von SQL Server-Spracherweiterungen Java-Klassen aus gespeicherten SQL Server-Prozeduren abrufen können.
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5aa8659b57349efb7378209006bbada148206bcb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658893"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735124"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Aufrufen der Java-Runtime in SQL Server-Spracherweiterungen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [SQL Server-Spracherweiterungen](../language-extensions-overview.md) verwenden die gespeicherte Systemprozedur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) als Schnittstelle zum Aufrufen der Java-Runtime. 
 
@@ -114,6 +114,20 @@ with result sets ((column1 int))
 ```
 
 Weitere Informationen finden Sie unter [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+
+## <a name="loopback-connection-to-sql-server"></a>Loopbackverbindung mit SQL Server
+
+Verwenden Sie eine Loopbackverbindung, um über JDBC eine Verbindung mit SQL Server herzustellen und Daten aus Java zu lesen oder zu schreiben, die über `sp_execute_external_script`ausgeführt werden. Sie können diese Methode verwenden, wenn nicht die Möglichkeit besteht, die Argumente **InputDataSet** und **OutputDataSet** von `sp_execute_external_script` zu verwenden.
+Verwenden Sie das folgende Beispiel, um unter Windows eine Loopbackverbindung herzustellen:
+
+```
+jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
+``` 
+
+Zum Erstellen einer Loopbackverbindung unter Linux benötigt der JDBC-Treiber drei Verbindungseigenschaften, die im folgenden Zertifikat definiert sind:
+
+[Client-Certificate-Authentication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
+
 
 ## <a name="next-steps"></a>Nächste Schritte
 

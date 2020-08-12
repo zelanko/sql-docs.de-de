@@ -1,5 +1,6 @@
 ---
 title: Eigenschaften von SQL Server Integration Services (Registerkarte Dienst)
+description: In diesem Artikel erhalten Sie Informationen zu den Optionen auf der Registerkarte „Dienst“ des Dialogfelds für Eigenschaften von Integration Services, z. B. der Binärpfad, der Hostname und der Startmodus.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e6b25e14ebc6f757239046987e338d941c3fbbd8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2c1e9452be81789ae6b65db764c6df2a8b565d7d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304943"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887784"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>Eigenschaften von SQL Server Integration Services (Registerkarte Dienst)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  Verwenden Sie die Registerkarte **Dienst** im Dialogfeld [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Eigenschaften**in**, um die folgenden Optionen anzuzeigen oder anzugeben.  
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+  Verwenden Sie die Registerkarte **Dienst** im Dialogfeld **Eigenschaften** in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], um die folgenden Optionen anzuzeigen oder anzugeben.  
   
 ## <a name="options"></a>Tastatur  
  **Binärpfad**  
@@ -51,7 +52,7 @@ ms.locfileid: "75304943"
   
 -   Automatisch: Dieser Dienst wird zusammen mit dem Computer gestartet.  
   
--   Deaktiviert: Dieser Dienst kann nicht gestartet werden.  
+-   Deaktiviert: Der Dienst kann nicht gestartet werden.  
   
  **State**  
  Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist. „ **…** “ gibt einen ausstehenden Statuswechsel an.  

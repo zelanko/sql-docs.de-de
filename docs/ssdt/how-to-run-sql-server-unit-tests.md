@@ -1,23 +1,23 @@
 ---
 title: Ausführen von SQL Server-Komponententests
+description: Hier erfahren Sie, wie Sie SQL Server-Komponententests ausführen. In den Schritten wird erläutert, wie Sie Tests über verschiedene Fenster und Tools in unterschiedlichen Versionen von Visual Studio ausführen.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 3ee95885dc1696fd7fba80342dc8c582a79056cc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed1a61d719063643d0fef3c1c0598e45cec54555
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244283"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893887"
 ---
-# <a name="how-to-run-sql-server-unit-tests"></a>Vorgehensweise: Ausführen von SQL Server-Komponententests
+# <a name="how-to-run-sql-server-unit-tests"></a>Gewusst wie: Ausführen von SQL Server-Komponententests
 
 Sie können einen SQL Server-Komponententest auf verschiedene Weisen ausführen, indem Sie z.B. das Eingabeaufforderungsfenster oder verschiedene andere Fenster verwenden.  
   
@@ -58,7 +58,7 @@ Durch diesen Schritt werden alle Tests im aktuellen Testlauf ausgeführt. Sobald
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Ausführen von SQL Server-Komponententests](../ssdt/running-sql-server-unit-tests.md)  
-[Gewusst wie: Ausführen von automatisierten Tests in Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[Vorgehensweise: Ausführen von automatisierten Tests in Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
 [Ausführen von automatisierten Tests in der Befehlszeile (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
 [Testen der Anwendung (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
   

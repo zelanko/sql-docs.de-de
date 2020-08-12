@@ -1,21 +1,21 @@
 ---
 title: Durchführen eines Upgrades für eine benutzerdefinierte Visual Studio 2010-Testbedingung von einer älteren Version
+description: In diesem Artikel wird erläutert, wie Sie eine benutzerdefinierte Visual Studio 2010-Testbedingung für SQL Server Data Tools aktualisieren. Außerdem erfahren Sie, welche Änderungen vorgenommen werden müssen und wie Sie die Bedingung installieren.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b2b211250acb2e2594601236a379023a8479243c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251071"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893358"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Gewusst wie: Durchführen eines Upgrades für eine benutzerdefinierten Visual Studio 2010-Testbedingung von einem älteren Release auf SQL Server Data Tools
 
@@ -50,7 +50,7 @@ So aktualisieren Sie die Projektverweise
   
 8.  Klicken Sie im Menü **Projekt** auf **Projekt entladen**.  
   
-9. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das **Projekt**, und wählen Sie `project_name`**.csproj****bearbeiten** aus.  
+9. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das **Projekt**, und wählen Sie `project_name` **.csproj** **bearbeiten** aus.  
   
 10. Fügen Sie nach dem Import von `Microsoft.CSharp.targets` folgende Import-Anweisung hinzu:  
   

@@ -1,5 +1,6 @@
 ---
 title: Entfernen von Data Quality Server-Objekten| Microsoft-Dokumente
+description: Wenn Sie Data Quality Server von einer SQL Server-Instanz deinstallieren, müssen einige Data Quality Server-Objekte, z. B. die DQS-Datenbanken, manuell gelöscht werden.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 531e7f600c1523a565890d1ba1ab781d3b8a9deb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f19dc1e34ea35509a8894400ca298909e3b1f96
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68019826"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883742"
 ---
 # <a name="remove-data-quality-server-objects"></a>Entfernen von Data Quality Server-Objekten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Durch Deinstallieren von [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oder durch das vollständige Entfernen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] aufweist, werden einige [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Objekte nicht gelöscht, einschließlich der DQS-Datenbanken. Dies bedeutet, dass Sie die DQS-Daten nicht verlieren, wenn Sie [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] mithilfe des SQL Server-Setups deinstallieren. Sie müssen diese [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] -Objekte manuell löschen, nachdem der Deinstallationsvorgang abgeschlossen wurde.  
   

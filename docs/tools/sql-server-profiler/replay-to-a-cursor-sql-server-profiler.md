@@ -1,6 +1,7 @@
 ---
 title: Wiedergabe bis zu einem Cursor
 titleSuffix: SQL Server Profiler
+description: In diesem Artikel wird erläutert, wie Sie die Wiedergabe einer Ablaufverfolgung mithilfe eines Cursors im SQL Server Profiler an einer bestimmten Stelle anhalten. Außerdem erfahren Sie, wie Sie das Debuggen vereinfachen, indem Sie die Wiedergabe bis zu einem Cursor konfigurieren.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9df4fe8bf442fae11aefeb2b3d4e3c95aa13037e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 075458bd919ebf5ba52d121276e5363b204c0e15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74957784"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789920"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>Wiedergeben bis zu einer Cursorposition (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Thema wird beschrieben, wie Ablaufverfolgungsdateien oder -tabellen mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]so wiedergegeben werden können, dass sie anhalten, wenn sie eine Cursorposition erreichen. Durch das Anhalten von Ablaufverfolgungen an Cursorpositionen wird das Debugging erleichtert, da lange Ablaufverfolgungsskripts in kürzere Segmente unterteilt und inkrementell analysiert werden können.  
   

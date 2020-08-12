@@ -1,6 +1,7 @@
 ---
 title: Exportieren einer Ablaufverfolgungsvorlage
 titleSuffix: SQL Server Profiler
+description: In diesem Artikel erfahren Sie, wie Sie SQL Server Profiler verwenden, um eine Ablaufverfolgungsvorlage als Vorlagendatei zu exportieren, damit Sie die Vorlage mit anderen SQL Server Profiler-Instanzen verwenden können.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 82e3bab1f7042029462e3d50b3c7e550fe9eba86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8348b393da3dde8b8f941a882cf227b9bd99953b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774835"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>Exportieren einer Ablaufverfolgungsvorlage (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Dieses Thema beschreibt, wie eine vorhandene Ablaufverfolgungsvorlage mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]exportiert wird, um sie als Vorlagedatei (TDF-Datei) zu speichern. Wenn Sie eine Vorlagedatei exportieren und als Datei speichern, können Sie die Vorlage für andere Instanzen von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwenden.  
   

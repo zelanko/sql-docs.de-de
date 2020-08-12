@@ -1,29 +1,29 @@
 ---
 title: Ausführen von SQL Server-Komponententests aus Team Foundation Build
+description: Hier erfahren Sie, wie Sie SQL Server-Komponententests über den Team Foundation-Build ausführen. Sie erfahren, wie Sie eine Builddefinition erstellen und Komponententests in einem automatisierten Testlauf ausführen.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f256431ad0b9df55d23672522db8533ebd26f311
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244293"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893924"
 ---
-# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Vorgehensweise: Ausführen von SQL Server-Komponententests aus Team Foundation Build
+# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Gewusst wie: Ausführen von SQL Server-Komponententests aus Team Foundation Build
 
 Sie können Team Foundation Build verwenden, um SQL Server-Komponententests im Rahmen eines Buildüberprüfungstests (Build Verification Test, BVT) auszuführen. Komponententests können so konfiguriert werden, dass sie die Datenbank bereitstellen, Testdaten generieren und ausgewählte Tests ausführen. Wenn Sie mit Team Foundation Build nicht vertraut sind, sollten Sie die folgenden Informationen lesen, bevor Sie die Schritte in diesem Thema ausführen:  
   
 -   [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [Gewusst wie: Konfigurieren und Ausführen von geplanten Tests nach dem Erstellen der Anwendung](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [Vorgehensweise: Konfigurieren und Ausführen von geplanten Tests nach dem Erstellen der Anwendung](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
 -   [Erstellen oder Bearbeiten einer Builddefinition](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
@@ -264,7 +264,7 @@ In dieser Prozedur checken Sie alle Dateien der Projektmappe ein. Diese Dateien 
   
 10. Geben Sie in der Gruppe **Standard** unter **Automatisierte Tests** die Tests an, die Sie ausführen möchten. Standardmäßig werden die Tests ausgeführt, die in der Projektmappe in Dateien mit dem Namen „\*test\*.dll“ enthalten sind.  
   
-11. Klicken Sie im Menü **Datei** auf **Projektname** *speichern*.  
+11. Klicken Sie im Menü **Datei** auf *Projektname* **speichern**.  
   
     Die Builddefinition ist jetzt erstellt. Als Nächstes ändern Sie das Testprojekt.  
   

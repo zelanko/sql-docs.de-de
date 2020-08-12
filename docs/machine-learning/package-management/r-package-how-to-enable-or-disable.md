@@ -2,22 +2,22 @@
 title: Aktivieren oder Deaktivieren der Remoteverwaltung von R-Paketen
 description: Aktivieren der Remoteverwaltung von R-Paketen in SQL Server 2016 R Services oder SQL Server-Machine Learning Services (datenbankintern)
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1a18d56d1dcf0733f080da7cf8247421c669a4aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757144"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Aktivieren oder Deaktivieren der Remoteverwaltung von R-Paketen für SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Artikel wird beschrieben, wie Sie die Remoteverwaltung von R-Paketen auf einer Clientarbeitsstation oder in einer anderen Machine Learning Server-Instanz aktivieren. Nachdem die Paketverwaltungsfunktion in SQL Server aktiviert wurde, können Sie auf einem Client mit RevoScaleR-Befehlen Pakete in SQL Server installieren.
 
@@ -41,7 +41,7 @@ Das [Deaktivieren](#bkmk_disable) der Paketverwaltungsfunktion erfordert ebenfal
 
     Durch diesen Befehl werden auf dem Computer mit SQL Server Objekte auf Instanzebene erstellt, die für die Paketverwaltung erforderlich sind. Außerdem wird das Launchpad für die Instanz neu gestartet.
 
-    Wenn Sie keine Instanz angeben, wird die Standardinstanz verwendet. Wenn Sie keinen Benutzer angeben, wird der aktuelle Sicherheitskontext verwendet. Der folgende Befehl ermöglicht beispielsweise die Paketverwaltung in der Instanz im Pfad von RegisterRExt.exe, wobei die Anmeldeinformationen des Benutzers verwendet werden, der die Eingabeaufforderung geöffnet hat:
+    Wenn Sie keine Instanz angeben, wird die Standardinstanz verwendet. Wenn Sie keinen Benutzer angeben, wird der aktuelle Sicherheitskontext verwendet. Der folgende Befehl ermöglicht beispielsweise die Paketverwaltung auf der Standardinstanz mithilfe der Anmeldeinformationen des Benutzers, der die Eingabeaufforderung geöffnet hat:
 
     `REgisterRExt.exe /install pkgmgmt`
 
@@ -51,7 +51,7 @@ Das [Deaktivieren](#bkmk_disable) der Paketverwaltungsfunktion erfordert ebenfal
    
     Dieser Befehl erstellt einige Datenbankartefakte, einschließlich der folgenden Datenbankrollen, die für das Steuern von Benutzerberechtigungen genutzt werden: `rpkgs-users`, `rpkgs-private` und `rpkgs-shared`.
 
-    Beispielsweise aktiviert der folgende Befehl die Paketverwaltung in der Datenbank in der Instanz, in der RegisterRExt ausgeführt wird. Wenn Sie keinen Benutzer angeben, wird der aktuelle Sicherheitskontext verwendet.
+    Beispielsweise aktiviert der folgende Befehl die Paketverwaltung in der Datenbank auf der Standardinstanz. Wenn Sie keinen Benutzer angeben, wird der aktuelle Sicherheitskontext verwendet.
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 

@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren eines mehrfach vernetzten Computers für den Zugriff
+description: In diesem Artikel erfahren Sie, wie Sie SQL Server und die Windows-Firewall konfigurieren, um Netzwerkverbindungen mit einer SQL Server-Instanz in einer mehrfach vernetzten Umgebung bereitzustellen.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244461"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894904"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In einem Szenario, in dem ein Server eine Verbindung zu mindestens zwei Netzwerken oder Netzwerksubnetzen bereitstellen muss, wird normalerweise ein mehrfach vernetzter Computer verwendet. Häufig befindet sich dieser Computer in einem Umkreisnetzwerk (auch als DMZ, Demilitarized Zone oder überwachtes Subnetz bezeichnet). Dieser Artikel beschreibt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die Windows-Firewall mit erweiterter Sicherheit konfiguriert werden, um Netzwerkverbindungen zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer mehrfach vernetzten Umgebung bereitzustellen.  
   
@@ -69,7 +70,7 @@ ms.locfileid: "75244461"
   
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], zeigen Sie dann auf **Konfigurationstools**, und klicken Sie dann auf **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager**.  
   
-2.  Erweitern Sie in der Konsolenstruktur des **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers** die Elemente **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfiguration** und **Protokolle für \<Instanzname>** . Doppelklicken Sie dann auf **TCP/IP**.  
+2.  Erweitern Sie im Konsolenbereich im **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager** den Abschnitt **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfiguration** und anschließend **Protokolle für \<instance name>** . Doppelklicken Sie dann auf **TCP/IP**.  
   
 3.  Im Dialogfeld **TCP/IP-Eigenschaften** auf der Registerkarte **IP-Adressen** werden mehrere IP-Adressen im Format **IP1**, **IP2**und bis zu **IPAll**angezeigt. Eine dieser Angaben ist die IP-Adresse des Loopbackadapters (127.0.0.1). Für alle IP-Adressen, die auf dem Computer konfiguriert wurden, werden zusätzliche IP-Adressen angezeigt.  
   

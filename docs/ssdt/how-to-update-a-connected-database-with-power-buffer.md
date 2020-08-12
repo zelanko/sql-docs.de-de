@@ -1,5 +1,6 @@
 ---
 title: Aktualisieren einer verbundenen Datenbank mithilfe von Power Buffer
+description: Hier erfahren Sie, wie Sie mithilfe von Power Buffer Datenbanken aktualisieren. Sie erhalten Informationen dazu, wie Sie Änderungen prüfen, bevor Sie sie übernehmen, und wie Sie Änderungen in einem Skript speichern, um sie später bereitzustellen.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,18 +9,17 @@ f1_keywords:
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d9feeb9bee84cede398bba5105912385fd5e8c2e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3954ae84a201209e49b65dc421ab41b93126fb65
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244260"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893875"
 ---
-# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Gewusst wie: Aktualisieren einer verbundenen Datenbank mit Power Buffer
+# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Gewusst wie: Aktualisieren einer verbundenen Datenbank mithilfe von Power Buffer
 
 Mit der Power Buffer-Technologie von SQL Server Data Tools können Sie einfach Änderungen auf die verbundene Datenbank anwenden, indem Sie sämtliche Bearbeitungen in der aktuellen Sitzung speichern. Alle durch die Bearbeitung im Power Buffer-Fenster (im Transact\-SQL-Editor oder Tabellen-Designer) verursachten Fehler werden sofort im Bereich **Fehlerliste** angezeigt, sodass Sie die identifizierten Fehler zur weiteren Problembehandlung verfolgen können. Sie können die ausstehenden Änderungen überprüfen, bevor Sie diese auf die Datenbank anwenden. Während des Updates erstellt SSDT automatisch ein ALTER-Skript auf Grundlage der Bearbeitungen und weist Sie auf alle potenziellen Probleme hin. Sie können dann sämtliche Änderungen, die bisher in allen geöffneten Power Buffer-Fenstern vorgenommen wurden, auf dieselbe Datenbank anwenden oder das ALTER-Skript speichern, um die Änderungen bereitzustellen.  
   
@@ -63,5 +63,5 @@ Bei den folgenden Vorgehensweisen werden die Entitäten verwendet, die in vorher
 5.  Klicken Sie mit der rechten Maustaste auf **Table_1**, und klicken Sie auf **Löschen**. Klicken Sie im Dialogfeld **Vorschau der Datenbankupdates** auf **Datenbank aktualisieren**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Gewusst wie: Beheben von Fehlern](../ssdt/how-to-fix-errors.md)  
+[Vorgehensweise: Beheben von Fehlern](../ssdt/how-to-fix-errors.md)  
   

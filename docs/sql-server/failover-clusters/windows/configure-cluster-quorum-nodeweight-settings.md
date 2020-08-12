@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren von NodeWeight-Einstellungen für das Clusterquorum
-descriptoin: Describes how to configure the NodeWeight settings for a member node in a Windows Server Failover Cluster.
+description: In diesem Thema wird beschrieben, wie die NodeWeight-Einstellungen für einen Elementknoten in einem Windows Server-Failovercluster (WSFC) konfiguriert werden.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5b7fcc8a38ab33ebb3330826313db70458518d0e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f7dc4623650f8843d4c1eefb03c7411676ccae14
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822038"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894337"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>Konfigurieren von Cluster-Quorum-NodeWeight-Einstellungen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie NodeWeight-Einstellungen für einen Elementknoten in einem Windows Server-Failoverclustering-Cluster konfiguriert werden. NodeWeight-Einstellungen werden während der Quorumabstimmung verwendet, um Notfallwiederherstellungs- und Multisubnetzszenarien für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen zu unterstützen.  
   
 -   **Vorbereitung:**  [Voraussetzungen](#Prerequisites), [Sicherheit](#Security)  

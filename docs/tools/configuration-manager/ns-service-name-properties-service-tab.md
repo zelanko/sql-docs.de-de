@@ -1,5 +1,6 @@
 ---
 title: NS$&lt;Dienstname&gt;-Eigenschaften (Registerkarte „Dienst“)
+description: In diesem Artikel erhalten Sie Informationen zu den Optionen auf der Registerkarte „Dienst“ des Dialogfelds „Notification Services Properties“ (Eigenschaften der Notification Services), z. B. dem Binärpfad, dem Hostnamen und dem Startmodus.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 80f6d926dbe1380bf0f44b8b841d79b2bd66afc7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00d3b6ffa3144384f04176af7ab4659649c7f338
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306396"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892494"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;Dienstname&gt;-Eigenschaften (Registerkarte „Dienst“)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Hierbei handelt es sich um den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)]-Dienst. Die ausgegrauten Eigenschaftswerte können nicht mithilfe dieser Anwendung geändert werden.  
   
 ## <a name="options"></a>Tastatur  
@@ -51,7 +52,7 @@ ms.locfileid: "75306396"
   
 -   Automatisch: Dieser Dienst wird zusammen mit dem Computer gestartet.  
   
--   Deaktiviert: Dieser Dienst kann nicht gestartet werden.  
+-   Deaktiviert: Der Dienst kann nicht gestartet werden.  
   
  **State**  
  Zeigt an, ob dieser Dienst ausgeführt wird, angehalten oder deaktiviert ist.  

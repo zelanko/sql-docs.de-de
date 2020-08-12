@@ -10,16 +10,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 532a08f29b3b623d531d03ff7bc0ac56605faa17
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 21b3f8f93d3375789de9da92ab4bb2b1e136964c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772332"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>Schnellstart: Erstellen und Bewerten eines Vorhersagemodells in R mit SQL Machine Learning
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In diesem Schnellstart erstellen und trainieren Sie ein Vorhersagemodell mit R, speichern das Modell in einer Tabelle in Ihrer SQL Server-Instanz und verwenden es dann zur Vorhersage von Werten aus neuen Daten mit [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md).
@@ -29,6 +29,9 @@ In diesem Schnellstart erstellen und trainieren Sie ein Vorhersagemodell mit R, 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 In diesem Schnellstart erstellen und trainieren Sie ein Vorhersagemodell mit R, speichern das Modell in einer Tabelle in Ihrer SQL Server-Instanz und verwenden es dann zur Vorhersage von Werten aus neuen Daten mit [SQL Server R Services](../r/sql-server-r-services.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In diesem Schnellstart erstellen und trainieren Sie ein Vorhersagemodell mit R, speichern das Modell in einer Tabelle in Ihrer SQL Server-Instanz und verwenden es dann zur Vorhersage von Werten aus neuen Daten mit [Machine Learning Services in Azure SQL Managed Instance ](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 Hierzu erstellen Sie zwei gespeicherte Prozeduren, die in SQL ausgeführt werden. Die erste Prozedur nutzt das in R enthaltene Dataset **mtcars** und generiert ein einfaches, verallgemeinertes lineares Modell, das die Wahrscheinlichkeit vorhersagt, mit der ein Fahrzeug mit einem Handschaltgetriebe ausgestattet wurde. Die zweite Prozedur ist für die Bewertung vorgesehen: Sie ruft das in der ersten Prozedur generierte Modell auf, um mehrere Vorhersagen basierend auf neuen Daten auszugeben. Durch das Platzieren von Python-Code in einer gespeicherten SQL-Prozedur werden Vorgänge in SQL eingefügt, die wiederverwendbar sind und von anderen gespeicherten Prozeduren und Clientanwendungen aufgerufen werden können.
@@ -55,6 +58,9 @@ Zum Durchführen dieser Schnellstartanleitung benötigen Sie folgende Voraussetz
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services. Informationen zur Installation der R Services finden Sie im [Windows-Installationshandbuch](../install/sql-r-services-windows-install.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Machine Learning Services in Azure SQL Managed Instance. In der Übersicht [Machine Learning Services in Azure SQL Managed Instance (Vorschauversion)](/azure/azure-sql/managed-instance/machine-learning-services-overview) finden Sie Informationen zur Registrierung.
 ::: moniker-end
 
 - Ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. In dieser Schnellstartanleitung wird [Azure Data Studio](../../azure-data-studio/what-is.md) verwendet.

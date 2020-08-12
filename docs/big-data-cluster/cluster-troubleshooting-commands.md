@@ -5,20 +5,20 @@ description: Dieser Artikel enthält nützliche Befehle zum Überwachen und Beha
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 4d384a1835d902e56030b62897d657c81c0ec3b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773668"
 ---
 # <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>Problembehandlung für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] auf Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In diesem Artikel werden verschiedene nützliche Kubernetes-Befehle beschrieben, die Sie zum Überwachen und Behandeln von Problemen in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] verwenden können. Sie erfahren zudem, wie Sie ausführliche Informationen zu einem Pod oder anderen Kubernetes-Artefakten erhalten, die sich im Big-Data-Cluster befinden. In diesem Artikel werden auch allgemeine Aufgaben behandelt, z. B. das Kopieren in oder aus einem Container, der einen der folgenden Big-Data-Clusterdienste für SQL Server ausführt.
 
@@ -118,8 +118,10 @@ Die folgenden Dienste unterstützen externe Verbindungen mit dem Big-Data-Cluste
 |---|---|
 | **master-svc-external** | Bietet Zugriff auf die Masterinstanz.<br/>(**EXTERNAL-IP,31433** und der **SA**-Benutzer) |
 | **controller-svc-external** | Unterstützt Tools und Clients, die den Cluster verwalten. |
-| **gateway-svc-external** | Bietet Zugriff auf das HDFS/Spark-Gateway.<br/>(**EXTERNAL-IP** und der **root**-Benutzer) |
+| **gateway-svc-external** | Bietet Zugriff auf das HDFS/Spark-Gateway.<br/>(**EXTERNAL-IP** und der Benutzer `<AZDATA_USERNAME>`)<sup>1</sup>|
 | **appproxy-svc-external** | Unterstützt Anwendungsbereitstellungsszenarios. |
+
+<sup>1</sup> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 > [!TIP]
 > Dies ist eine Möglichkeit zur Anzeige der Dienste mit **kubectl**, es ist jedoch auch möglich, den Befehl `azdata bdc endpoint list` zur Anzeige dieser Endpunkte zu verwenden. Weitere Informationen finden Sie unter [Get big data cluster endpoints (Abrufen der Endpunkte eines Big-Data-Clusters)](deployment-guidance.md#endpoints).

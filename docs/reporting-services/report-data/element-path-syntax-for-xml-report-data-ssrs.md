@@ -1,5 +1,6 @@
 ---
 title: Syntax für Elementpfade für XML-Berichtsdaten | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie mehr über die Elementpfadsyntax und -konventionen, die für die Definition des Pfads für XML-Berichtsdaten im Berichts-Designer gelten.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 967ffe24035094296d467e4a60225f31b1558cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a8404e6b993481202061644e68fa44a830fdca6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077660"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808460"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntax für Elementpfade für XML-Berichtsdaten (SSRS)
   Im Berichts-Designer geben Sie die Daten, die für einen Bericht aus einer XML-Datenquelle verwendet werden sollen, durch Definieren eines Elementpfades (mit Unterscheidung von Groß-/Kleinschreibung) an. Mit einem Elementpfad wird angegeben, wie die hierarchischen XML-Knoten und ihre Attribute in der XML-Datenquelle durchsucht werden können. Lassen Sie die Datasetabfrage oder den XML- **ElementPath** der XML- **Query** leer, um den Standardelementpfad zu verwenden. Wenn Daten aus der XML-Datenquelle abgerufen werden, werden Elementknoten mit Textwerten und Elementknotenattribute im Resultset zu Spalten. Die Werte der Knoten und Attribute werden beim Ausführen der Abfrage zu Zeilendaten. Die Spalten werden als Datasetfeldauflistung im Berichtsdatenbereich angezeigt. In diesem Thema wird die Syntax für Elementpfade beschrieben.  
@@ -73,13 +74,13 @@ XMLLocalName :: =
 |Begriff|Definition|  
 |----------|----------------|  
 |Elementpfad|Definiert die zu durchsuchende Sequenz von Knoten im XML-Dokument, um Felddaten für ein Dataset mit einer XML-Datenquelle abzurufen.|  
-|**ElementNode**|Der XML-Knoten im XML-Dokument. Knoten werden durch Tags gekennzeichnet und sind in einer hierarchischen Beziehung mit anderen Knoten vorhanden. Bei <Kunden\< handelt es sich beispielsweise um den Stammknoten des Elements. <Kunde\< ist ein untergeordnetes Element von <Kunden\<.|  
+|**ElementNode**|Der XML-Knoten im XML-Dokument. Knoten werden durch Tags gekennzeichnet und sind in einer hierarchischen Beziehung mit anderen Knoten vorhanden. \<Customers> ist beispielsweise der Stammelementknoten. \<Customer> ist ein untergeordnetes Element von \<Customers>.|  
 |**XMLName**|Der Name des Knotens. Der Name des Knotens Customers ist beispielsweise Customers. Für **XMLName** kann ein Namespacebezeichner als Präfix verwendet werden, um jeden Knoten eindeutig zu benennen.|  
 |**Codieren**|Gibt an, dass der **Value** für dieses Element codiertes XML darstellt und decodiert werden sowie als untergeordnetes Element dieses Elements aufgenommen muss.|  
 |**FieldList**|Definiert eine Gruppe von Elementen und Attributen, die zum Abrufen von Daten verwendet werden.<br /><br /> Wenn dieses Element nicht angegeben wird, werden alle Attribute und untergeordneten Elemente als Felder verwendet. Wenn die leere Feldliste angegeben wird ( **{}** ), werden keine Felder von diesem Knoten verwendet.<br /><br /> Eine **FieldList** kann nicht gleichzeitig einen **Value** und ein **Element** oder einen **ElementNode**enthalten.|  
 |**Feld**|Gibt die Daten an, die als Datasetfeld abgerufen werden.|  
-|**Attribut**|Ein Name/Wert-Paar innerhalb von **ElementNode**. Beispielsweise handelt es sich bei **ID** im Elementknoten \<Customer ID="1"> um ein Attribut, und **\@ID(Integer)** gibt 1 als Integer-Typ in der entsprechenden Datenfeld-**ID** zurück.|  
-|**Wert**|Der Wert des Elements. **Value** kann nur für den letzten **ElementNode** im Elementpfad verwendet werden. Da es sich beispielsweise bei \<Return> um einen Blattknoten handelt, ist der Wert von **Return {@}** **Chair**.|  
+|**Attribut**|Ein Name/Wert-Paar innerhalb von **ElementNode**. Beispielsweise handelt es sich bei **ID** im Elementknoten \<Customer ID="1"> um ein Attribut, und **\@ID(Integer)** gibt 1 als Integer-Typ im entsprechenden Datenfeld **ID** zurück.|  
+|**Wert**|Der Wert des Elements. **Value** kann nur für den letzten **ElementNode** im Elementpfad verwendet werden. Da es sich bei \<Return> beispielsweise um einen Blattknoten handelt, wenn das Element am Ende eines Elementpfads angefügt wird, verfügt **Return {@}** über den Wert **Chair**.|  
 |**Element**|Der Wert des benannten untergeordneten Elements. Beispielsweise werden mithilfe von Customers {}/Customer {}/LastName nur Werte für das LastName-Element abgerufen.|  
 |**Typ**|Der optionale Datentyp, der für das aus diesem Element erstellte Feld zu verwenden ist.|  
 |**NamespacePrefix**|**NamespacePrefix** wird im XML-Abfrageelement definiert. Wenn kein XML-Abfrageelement vorhanden ist, werden Namespaces im XML- **ElementPath** ignoriert. Wenn ein XML-Abfrageelement vorhanden ist, verfügt der XML- **ElementPath** über das optionale Attribut **IgnoreNamespaces**. Wenn IgnoreNamespaces **TRUE**ist, werden Namespaces in XML- **ElementPath** und im XML-Dokument ignoriert. Weitere Informationen finden Sie unter [XML-Abfragesyntax für XML-Berichtsdaten (SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  
@@ -90,7 +91,7 @@ XMLLocalName :: =
 > [!NOTE]  
 >  Wenn der Elementpfad leer ist, wird für die Abfrage der Standardelementpfad verwendet: der erste Pfad zur Blattknotenauflistung. Im ersten Beispiel entspricht das Leerlassen des Elementpfades dem Angeben des Elementpfades /Customers/Customer/Orders/Order. Alle Knotenwerte und -attribute entlang dieses Pfades werden im Resultset zurückgegeben, und die Knotennamen und -attribute werden als Datasetfelder angezeigt.  
   
- **Beispiel 1**: *Leer*  
+ **Beispiel 1**: *Leer*  
   
 |Order|Qty (Menge)|id|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  

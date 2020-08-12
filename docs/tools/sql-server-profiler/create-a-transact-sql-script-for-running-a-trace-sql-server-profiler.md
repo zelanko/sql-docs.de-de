@@ -1,6 +1,7 @@
 ---
 title: Erstellen eines Transact-SQL-Skripts zum Ausführen einer Ablaufverfolgung
 titleSuffix: SQL Server Profiler
+description: In diesem Artikel erfahren Sie, wie Sie ein Transact-SQL-Skript aus einer vorhandenen Ablaufverfolgungsdatei oder entsprechenden Tabelle im SQL Server Profiler erstellen.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 3324980dd331ed8211c2480415e430ee1fcd0821
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9f34472358f0d0cde586a25374c0de90ab708539
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774851"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>Erstellen eines Transact-SQL-Skripts zum Ausführen einer Ablaufverfolgung (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In diesem Thema wird beschrieben, wie mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ein Transact-SQL-Skript anhand einer vorhandenen Ablaufverfolgungsdatei oder -tabelle erstellt werden kann.  
   
 ### <a name="to-create-a-transact-sql-script-to-run-a-trace"></a>So erstellen Sie ein Transact-SQL-Skript für die Ausführung einer Ablaufverfolgung  

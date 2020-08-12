@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: In diesem Schnellstart wird beschrieben, wie Sie mathematische R-Funktionen und Hilfsfunktionen mit SQL Machine Learning verwenden.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c769862ab2ab1b06169ae5191217945cf8220c9b
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a056d73ae28d822c12752ac60f31df5022acf28b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772366"
 ---
 # <a name="quickstart-r-functions-with-sql-machine-learning"></a>Schnellstart: R-Funktionen mit SQL Machine Learning
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In diesem Schnellstart wird beschrieben, wie Sie mathematische Funktionen und Hilfsfunktionen in R mit [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) oder in [Big Data-Clustern](../../big-data-cluster/machine-learning-services.md) verwenden. Die Implementierung von statistischen Funktionen mit T-SQL ist oft kompliziert, kann aber in R mit nur wenigen Codezeilen durchgeführt werden.
@@ -29,6 +29,9 @@ In diesem Schnellstart wird beschrieben, wie Sie mathematische R-Funktionen und 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 In diesem Schnellstart wird beschrieben, wie Sie mathematische R-Funktionen und Hilfsfunktionen mit [SQL Server R Services](../r/sql-server-r-services.md) verwenden. Die Implementierung von statistischen Funktionen mit T-SQL ist oft kompliziert, kann aber in R mit nur wenigen Codezeilen durchgeführt werden.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In dieser Schnellstartanleitung erfahren Sie, wie Sie Datenstrukturen und -typen mit R in [Machine Learning Services in Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) verwenden können. Außerdem erhalten Sie Informationen zum Verschieben von Daten zwischen R und SQL Managed Instance und zu Fehlern, die in diesem Zusammenhang häufig auftreten.
 ::: moniker-end
 
 ## <a name="prerequisites"></a>Voraussetzungen
@@ -42,7 +45,10 @@ Zum Durchführen dieser Schnellstartanleitung benötigen Sie folgende Voraussetz
 - SQL Server Machine Learning Services. Informationen zur Installation von Machine Learning Services finden Sie im [Windows-Installationshandbuch](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-- SQL Server 2016 R Services. Informationen zur Installation der R Services finden Sie im [Windows-Installationshandbuch](../install/sql-r-services-windows-install.md).
+- SQL Server 2016 R Services. Informationen zur Installation der R Services finden Sie im [Windows-Installationshandbuch](../install/sql-r-services-windows-install.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Machine Learning Services in Azure SQL Managed Instance. In der Übersicht [Machine Learning Services in Azure SQL Managed Instance (Vorschauversion)](/azure/azure-sql/managed-instance/machine-learning-services-overview) finden Sie Informationen zur Registrierung.
 ::: moniker-end
 
 - Ein Tool zum Ausführen von SQL-Abfragen, die R-Skripts enthalten. In dieser Schnellstartanleitung wird [Azure Data Studio](../../azure-data-studio/what-is.md) verwendet.
@@ -106,21 +112,19 @@ EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 Das standardmäßig installierte Paket **utils** bietet eine Vielzahl von Hilfsfunktionen zum Untersuchen der aktuellen R-Umgebung. Diese Funktionen können sich als nützlich erweisen, wenn Sie Diskrepanzen bei der Leistung Ihres R-Codes in SQL Server und externen Umgebungen feststellen.
 
-Sie können z. B. die R-Funktion `memory.limit()` verwenden, um den Arbeitsspeicher für die aktuelle R-Umgebung abzurufen. Da das Paket `utils` installiert ist, aber nicht standardmäßig geladen wird, laden Sie es zunächst mit der `library()`-Funktion.
+Sie können z. B. die Systemzeitfunktionen in R wie `system.time` und `proc.time` verwenden, um die Dauer von R-Prozessen zu erfassen und Leistungsprobleme zu analysieren. Im Tutorial [Erstellen von Datenfeatures](../tutorials/walkthrough-create-data-features.md) finden Sie ein Beispiel, bei dem Zeitsteuerungsfunktionen von R in die Lösung eingebettet sind.
 
 ```sql
 EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
         library(utils);
-        mymemory <- memory.limit();
-        OutputDataSet <- as.data.frame(mymemory);'
-    , @input_data_1 = N' ;'
-WITH RESULT SETS (([Col1] int not null));
+        start.time <- proc.time();
+        
+        # Run R processes
+        
+        elapsed_time <- proc.time() - start.time;'
 ```
-
-> [!TIP]
-> Viele Benutzer verwenden die R-Funktionen für die Systemzeitsteuerung, z. B. `system.time` und `proc.time`, um den Zeitaufwand von R-Prozessen zu erfassen und Leistungsprobleme zu analysieren. Im Tutorial [Erstellen von Datenfeatures](../tutorials/walkthrough-create-data-features.md) finden Sie ein Beispiel, bei dem Zeitsteuerungsfunktionen von R in die Lösung eingebettet sind.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

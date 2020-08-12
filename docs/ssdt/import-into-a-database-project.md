@@ -1,5 +1,6 @@
 ---
 title: Importieren in ein Datenbankprojekt
+description: In diesem Artikel wird erläutert, wie Sie Objekte aus einer Livedatenbank, einer Datenschichtanwendung oder einem Skript in ein Datenbankprojekt importieren. Dabei erfahren Sie mehr über das Importieren von verschlüsselten Objekten.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,16 +11,15 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0cfdbb9cb094188e372424257656953b62635996
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9cbe1d734238728b87f6931fdee49654155e82e6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246452"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893858"
 ---
 # <a name="import-into-a-database-project"></a>Importieren in ein Datenbankprojekt
 

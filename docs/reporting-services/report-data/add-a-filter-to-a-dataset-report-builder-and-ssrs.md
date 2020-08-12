@@ -1,5 +1,6 @@
 ---
 title: Hinzufügen eines Filters zu einem Dataset (Berichts-Generator) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie einem Dataset einen Filter hinzufügen, um die Daten in einem Bericht einzuschränken, nachdem diese aus einer externen Datenquelle abgerufen wurden.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67fb8bd61f337c4de0476c8a3fdb8265202b0161
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 797d8911fbb1d8b9a99abbf70bff5dde60415f6d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811359"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>Hinzufügen eines Filters zu einem Dataset (Berichts-Generator und SSRS)
   Fügen Sie einem Dataset einen Filter hinzu, um die Daten in einem Bericht einzuschränken, nachdem die Daten aus einer externen Datenquelle abgerufen wurden. Wenn Sie einem Dataset einen Filter hinzufügen, verwenden alle Berichtsteile oder Datenbereiche nur Daten, die den Filterbedingungen entsprechen.  

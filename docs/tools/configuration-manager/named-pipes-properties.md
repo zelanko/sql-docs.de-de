@@ -1,5 +1,6 @@
 ---
 title: Named Pipes-Eigenschaften
+description: Verwenden Sie die Seite „Protokoll“ im Dialogfeld „Named Pipes Properties“ (Eigenschaften von Named Pipes), um die Named Pipe anzuzeigen oder zu ändern, auf die SQL Server beim Verwenden des Named-Pipes-Protokolls lauscht.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 923f84ccc98837892d144a07ce71238c877ca5b6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4fae15dcdd786b93caf189afb478e435d3fc986
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306446"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894855"
 ---
 # <a name="named-pipes-properties"></a>Named Pipes-Eigenschaften
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Verwenden Sie die Seite **Protokoll** im Dialogfeld **Named Pipes-Eigenschaften**, um die Named Pipe anzuzeigen oder zu ändern, an der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lauscht, wenn Sie das Named Pipes-Protokoll verwenden.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss neu gestartet werden, um das Protokoll zu aktivieren oder zu deaktivieren oder die Named Pipe zu ändern.  

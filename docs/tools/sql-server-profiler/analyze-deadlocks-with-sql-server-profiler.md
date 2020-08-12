@@ -1,6 +1,7 @@
 ---
 title: Analysieren von Deadlocks
 titleSuffix: SQL Server Profiler
+description: Identifizieren Sie die Ursache für einen Deadlock durch Wiedergabe und Anzeige von Deadlockereignissen für die Analyse im SQL Server Profiler sowie durch das Erstellen von Wartediagrammen.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
-ms.openlocfilehash: 15d41ae2517a3eadb8305a359f4576fb4407020b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8adc8e6839b6af9765139d0fe26b38cb1d1253c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307369"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774945"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analysieren von Deadlocks mit SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Verwenden Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um die Ursache für einen Deadlock zu identifizieren. Ein Deadlock tritt dann auf, wenn eine zyklische Abhängigkeit zwischen mindestens zwei Threads oder Prozessen für eine beliebige Gruppe von Ressourcen in SQL Server besteht. Mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]können Sie eine Ablaufverfolgung erstellen, die Deadlockereignisse zu Analysezwecken aufzeichnet, wiedergibt und anzeigt.  
   
@@ -41,7 +42,7 @@ Verwenden Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , um
  Ressourcenknoten  
  Ein Datenbankobjekt, beispielsweise eine Tabelle, ein Index oder eine Zeile  
   
- Microsoft Edge  
+ Edge  
  Die Beziehung zwischen einen Prozess und einer Ressource. Ein **request** -Rahmen tritt auf, wenn ein Prozess auf eine Ressource wartet. Ein **owner** -Rahmen tritt auf, wenn eine Ressource auf einen Prozess wartet. Die Rahmenbeschreibung enthält den Sperrmodus. Beispiel: **Modus: X**.  
   
 ## <a name="deadlock-process-node"></a>Deadlock-Prozessknoten  

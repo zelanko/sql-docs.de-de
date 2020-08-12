@@ -5,20 +5,20 @@ description: Erfahren Sie mehr über die Schritte und Ressourcen für die Bereit
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4caaacd2d71d00d874a793129eef2f4144f03190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82178131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784297"
 ---
 # <a name="get-started-with-big-data-clusters-2019-deployment"></a>Erste Schritte bei der Bereitstellung von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In diesem Artikel finden Sie eine Übersicht über die Bereitstellung von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. Er bietet eine Einführung in Konzepte und einen Rahmen für das Verständnis der Bereitstellungsszenarios. Die konkreten Schritte für die Bereitstellung hängen von der Plattform ab, die Sie für den Client und Server ausgewählt haben. Eine Einführung in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] finden Sie unter [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
 
@@ -41,16 +41,7 @@ Sehen Sie sich dieses 9-minütige Video an, um einen Überblick über die Bereit
 
 ## <a name="client-tools"></a><a id="tools"></a> Clienttools
 
-Für die Bereitstellung von Big-Data-Clustern benötigen Sie eine Reihe von bestimmten Clienttools. Installieren Sie die folgenden Tools, bevor Sie Big-Data-Cluster für Kubernetes bereitstellen:
-
-| Tool | BESCHREIBUNG |
-|---|---|
-| **azdata** | Zur Bereitstellung und Verwaltung von Big-Data-Clustern. |
-| **kubectl** | Zur Erstellung und Verwaltung des zugrunde liegenden Kubernetes-Clusters. |
-| **Azure Data Studio** | Grafische Benutzeroberfläche für die Verwendung des Big-Data-Clusters. |
-| **Erweiterung von SQL Server 2019** | Erweiterung von Azure Data Studio zur Aktivierung von Big-Data-Clusterfunktionen. |
-
-Für bestimmte Szenarios sind andere Tools erforderlich. Welche Tools für eine bestimmte Aufgabe erforderlich sind, erfahren Sie im jeweiligen Artikel. Eine vollständige Liste der Tools und Installationslinks finden Sie unter [Install SQL Server 2019 big data tools (Installieren von Big-Data-Tools für SQL Server 2019)](deploy-big-data-tools.md).
+Für die Bereitstellung von Big-Data-Clustern benötigen Sie eine Reihe von bestimmten Clienttools. Installieren Sie die folgenden, für die Bereitstellung erforderlichen Tools, bevor Sie Big Data-Cluster in Kubernetes bereitstellen. Für die unterschiedlichen Szenarios sind jeweils bestimmte Tools erforderlich. Welche Tools für eine bestimmte Aufgabe erforderlich sind, erfahren Sie im jeweiligen Artikel. Eine vollständige Liste der Tools und Installationslinks finden Sie unter [Install SQL Server 2019 big data tools (Installieren von Big-Data-Tools für SQL Server 2019)](deploy-big-data-tools.md).
 
 ## <a name="kubernetes"></a>Kubernetes
 
@@ -58,7 +49,11 @@ Big-Data-Cluster werden als eine Reihe von miteinander verbundenen Containern be
 
 - **Azure Kubernetes Service (AKS)** : Mit AKS können Sie einen verwalteten Kubernetes-Cluster in Azure bereitstellen. Sie verwalten und warten nur die Agent-Knoten. Sie müssen mit AKS keine eigene Hardware für den Cluster bereitstellen. Außerdem können Sie mithilfe eines [Python-Skripts](quickstart-big-data-cluster-deploy.md) oder eines [Notebooks für die Bereitstellung](notebooks-deploy.md) in einem einzigen Schritt den AKS-Cluster erstellen und den Big-Data-Cluster bereitstellen. Weitere Informationen zum Konfigurieren von AKS für die Bereitstellung eines Big Data-Clusters finden Sie unter [Konfigurieren von Azure Kubernetes Service für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]-Bereitstellungen](deploy-on-aks.md).
 
+- **Azure Red Hat OpenShift (ARO):** Mit ARO können Sie einen verwalteten Red Hat OpenShift-Cluster in Azure bereitstellen. Sie verwalten und warten nur die Agent-Knoten. Sie müssen mit ARO keine eigene Hardware für den Cluster bereitstellen. Außerdem können Sie mithilfe eines [Python-Skripts](quickstart-big-data-cluster-deploy-aro.md) in einem einzigen Schritt den ARO-Cluster erstellen und den Big Data-Cluster bereitstellen. Dieses Bereitstellungsmodell wurde in SQL Server 2019 CU5 eingeführt. 
+
 - **Mehrere Computer**: Sie können Kubernetes auch auf mehreren Linux-Computern bereitstellen. Dabei kann es sich um physische Server oder virtuelle Computer handeln. Den Kubernetes-Cluster können Sie mithilfe des Tools [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) erstellen. Diese Art der Bereitstellung können Sie mit einem [Bash-Skript](deployment-script-single-node-kubeadm.md) automatisieren. Diese Methode eignet sich hervorragend, wenn Sie bereits über eine vorhandene Infrastruktur verfügen, die Sie für den Big-Data-Cluster verwenden möchten. Weitere Informationen zur Verwendung von **kubeadm**-Bereitstellungen mit Big Data-Clustern finden Sie unter [Konfigurieren von Kubernetes auf mehreren Computern für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]-Bereitstellungen](deploy-with-kubeadm.md).
+
+- **Red Hat OpenShift:** Ermöglicht die Bereitstellung in Ihrem eigenen Red Hat OpenShift-Cluster. Weitere Informationen finden Sie unter [Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] lokal auf OpenShift und Azure Red Hat OpenShift](deploy-openshift.md). Dieses Bereitstellungsmodell wurde in SQL Server 2019 CU5 eingeführt.
 
 ## <a name="deploy-a-big-data-cluster"></a>Bereitstellen von Big Data-Clustern
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0fcc9c86bc71846fd43cd1c606b55116c2171ca4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: bcb252b120638449af30c7d9bd408c687a250c06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793302"
 ---
 # <a name="setting-the-connection-properties"></a>Festlegen von Verbindungseigenschaften
 
@@ -60,8 +60,8 @@ Die folgende Tabelle enthält eine Liste aller zurzeit verfügbaren Verbindungsz
 | domainName,<br/>Domäne<br/><br/>String<br/>NULL | Die Windows-Domäne, bei der die Authentifizierung mit NTLM erfolgen soll. |
 | disableStatementPooling<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | Ein Flag, das angibt, ob das Anweisungspooling verwendet werden soll. |
 | enablePrepareOnFirst...<br/>PreparedStatementCall<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | _enablePrepareOnFirstPreparedStatementCall_<br/><br/> Bei Festlegung auf „true“ kann das Handle für die vorbereitete Anweisung durch Aufrufen von <code>sp_prepexec</code> in der ersten Ausführung der vorbereiteten Anweisung erstellt werden. <br/><br/>Bei Festlegung auf „FALSE“ wird die erste Ausführung einer vorbereiteten Anweisung so geändert, dass <code>sp_executesql</code> aufgerufen und keine Anweisung vorbereitet wird. Bei der zweiten Ausführung wird <code>sp_prepexec</code> aufgerufen, um ein Handle für die vorbereitete Anweisung einzurichten. |
-| enclaveAttestationUrl<br/><br/>String<br/><br/>NULL | Ab Microsoft JDBC-Treiber 8.2 für SQL Server weist diese optionale Eigenschaft die URL für den Nachweisdienstendpunkt an, Always Encrypted mit Secure Enclaves zu verwenden.<br/><br/>Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../connect/jdbc/always-encrypted-with-secure-enclaves.md). |
-| enclaveAttestationProtocol<br/><br/>String<br/><br/>NULL | Ab Microsoft JDBC-Treiber 8.2 für SQL Server weist diese optionale Eigenschaft das Nachweisprotokoll an, Always Encrypted mit Secure Enclaves zu verwenden. Aktuell ist **HGS** der einzige Wert, der für dieses Feld unterstützt wird.<br/><br/>Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../connect/jdbc/always-encrypted-with-secure-enclaves.md). |
+| enclaveAttestationUrl<br/><br/>String<br/><br/>NULL | Ab Microsoft JDBC-Treiber 8.2 für SQL Server weist diese optionale Eigenschaft die URL für den Nachweisdienstendpunkt an, Always Encrypted mit Secure Enclaves zu verwenden.<br/><br/>Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
+| enclaveAttestationProtocol<br/><br/>String<br/><br/>NULL | Ab Microsoft JDBC-Treiber 8.2 für SQL Server weist diese optionale Eigenschaft das Nachweisprotokoll an, Always Encrypted mit Secure Enclaves zu verwenden. Aktuell ist **HGS** der einzige Wert, der für dieses Feld unterstützt wird.<br/><br/>Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
 | encrypt<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | Bei Festlegung auf „TRUE“ verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für alle zwischen Client und Server gesendeten Daten eine TLS-Verschlüsselung, sofern auf dem Server ein Zertifikat installiert ist. Der Standardwert ist FALSE.<br/><br/> Ab Version 6.0 des Microsoft JDBC-Treibers für SQL Server ist die neue Verbindungseinstellung „Authentifizierung“ verfügbar, die standardmäßig auf TLS-Verschlüsselung festgelegt ist. <br/><br/>Weitere Informationen finden Sie unter der Eigenschaft „Authentifizierung“. |
 | failoverPartner<br/><br/>String<br/><br/>NULL | Der Name des Failoverservers, der in einer Datenbankspiegelungskonfiguration verwendet wird. Diese Eigenschaft wird bei einem Ausfall der Anfangsverbindung mit dem Prinzipalserver verwendet. Nachdem die Anfangsverbindung hergestellt wurde, wird diese Eigenschaft ignoriert. Diese Eigenschaft muss zusammen mit der databaseName-Eigenschaft verwendet werden.<br/><br/> **Hinweis:** Der Treiber unterstützt keine Angabe der Serverinstanz-Portnummer für die Failoverpartnerinstanz innerhalb der failoverPartner-Eigenschaft in der Verbindungszeichenfolge. Die Eigenschaften serverName, instanceName und portNumber der Prinzipalserverinstanz und die failoverPartner-Eigenschaft der Failoverpartnerinstanz können nicht in der gleichen Verbindungszeichenfolge angegeben werden.<br/><br/> Wenn Sie in der **Server**-Verbindungseigenschaft den Namen eines virtuellen Netzwerks angeben, kann die Datenbankspiegelung nicht verwendet werden. Weitere Informationen finden Sie unter [JDBC-Treiber-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md). |
 | fips<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>„FALSE“ | In einer JVM-Umgebung mit aktiviertem FIPS sollte diese Eigenschaft **true** lauten. |

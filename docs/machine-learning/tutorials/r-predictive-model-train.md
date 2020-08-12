@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d168b32b85e4d0bbf42e166e175d9951de4dd31
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2b57a54c66259fe16c3143e0328476279a1aea01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607003"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748505"
 ---
 # <a name="tutorial-create-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutorial: Erstellen eines Vorhersagemodells in R mit SQL Machine Learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In Teil 3 dieser vierteiligen Tutorialreihe trainieren Sie ein Vorhersagemodell in R. Im nächsten Teil dieser Reihe stellen Sie dann dieses Modell in einer SQL Server-Datenbank mit Machine Learning Services oder in Big Data-Clustern bereit.
@@ -29,7 +28,10 @@ In Teil 3 dieser vierteiligen Tutorialreihe trainieren Sie ein Vorhersagemodell
 In Teil 3 dieser vierteiligen Tutorialreihe trainieren Sie ein Vorhersagemodell in R. Im nächsten Teil dieser Reihe stellen Sie dann dieses Modell in einer SQL Server-Datenbank mit Machine Learning Services bereit.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-In Teil 3 dieser vierteiligen Tutorialreihe trainieren Sie ein Vorhersagemodell in R. Im nächsten Teil dieser Reihe stellen Sie dann dieses Modell in einer SQL Server-Datenbank mit SQL Server R Services bereit.
+In Teil 3 dieser vierteiligen Tutorialreihe trainieren Sie ein Vorhersagemodell in R. Im nächsten Teil dieser Reihe stellen Sie dann dieses Modell in einer Datenbank mit SQL Server R Services bereit.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In Teil 3 dieser vierteiligen Tutorialreihe trainieren Sie ein Vorhersagemodell in R. Im nächsten Teil dieser Reihe stellen Sie dann dieses Modell in einer Azure SQL Managed Instance-Datenbank mit Machine Learning Services bereit.
 ::: moniker-end
 
 In diesem Artikel lernen Sie Folgendes:
@@ -41,7 +43,7 @@ In diesem Artikel lernen Sie Folgendes:
 
 In [Teil 1](r-predictive-model-introduction.md) dieser Tutorialreihe haben Sie gelernt, wie Sie die Beispieldatenbank wiederherstellen.
 
-In [Teil 2](r-predictive-model-prepare-data.md) haben Sie erfahren, wie Sie die Daten aus einer Datenbank in einen Python-Datenrahmen laden und in R vorbereiten.
+In [Teil 2](r-predictive-model-prepare-data.md) haben Sie erfahren, wie Sie die Daten aus einer Datenbank in einen Python-Datenframe laden und in R vorbereiten.
 
 In [Teil 4](r-predictive-model-deploy.md) haben Sie gelernt, wie Sie das Modell in einer Datenbank speichern und gespeicherte Prozeduren aus den Python-Skripts erstellen, die Sie in Teil 2 und 3 entwickelt haben. Die gespeicherten Prozeduren werden auf dem Server ausgeführt, um Vorhersagen basierend auf neuen Daten treffen zu können.
 
@@ -67,6 +69,7 @@ actual_counts <- test_data$RentalCount;
 model_lm <- lm(RentalCount ~  Month + Day + WeekDay + Snow + Holiday, data = train_data);
 
 #Model 2: Use rpart to create a decision tree model, trained with the training data set
+library(rpart);
 model_rpart  <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = train_data);
 ```
 

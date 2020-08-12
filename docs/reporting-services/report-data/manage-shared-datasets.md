@@ -1,5 +1,6 @@
 ---
 title: Verwalten von freigegebenen Datasets | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie freigegebene Datasets in den Reporting Services verwalten, damit Sie eine Abfrage freigeben können, die Sie beim Bereitstellen konsistenter Datasets für mehrere Berichte unterstützt.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df22dbab5cf450981f53976fb2a09e6ff08797c8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67220585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808440"
 ---
 # <a name="manage-shared-datasets"></a>Verwalten von freigegebenen Datasets
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]werden mit freigegebenen Datasets Daten aus freigegebenen Datenquellen abgerufen, die mit externen Datenquellen verbunden werden. Ein freigegebenes Dataset bietet die Möglichkeit, eine Abfrage freizugeben und so konsistente Daten für mehrere Berichte bereitzustellen. Die Datasetabfrage kann Datasetparameter enthalten. Sie können ein freigegebenes Dataset so konfigurieren, dass Abfrageergebnisse für bestimmte Parameterkombinationen bei der erstmaligen Verwendung oder nach einem angegebenen Zeitplan zwischengespeichert werden. Sie können das Zwischenspeichern freigegebener Datasets mit dem Zwischenspeichern von Berichten sowie mit Berichtsdatenfeeds kombinieren, um den Zugriff auf eine Datenquelle einfacher zu verwalten.  
@@ -41,8 +42,8 @@ ms.locfileid: "67220585"
 ### <a name="manage-shared-dataset-item-properties"></a>Verwalten der Eigenschaften freigegebener Datasetelemente  
  In der folgenden Tabelle sind die Elementeigenschaften aufgeführt, die Sie für ein freigegebenes Datasetelement ändern können.  
   
-|||  
-|-|-|  
+|Eigenschaft|BESCHREIBUNG|  
+|--------|-----------|  
 |Namen bearbeiten|Ändern Sie den Namen des freigegebenen Datasets. Alle Verweise von abhängigen Elementen sind weiterhin funktionsfähig.|  
 |Beschreibung bearbeiten|Ändern Sie die Beschreibung des freigegebenen Datasets.|  
 |Timeout für Abfrageausführung bearbeiten|Legen Sie das Timeout für die Abfrageausführung in Sekunden fest. 0 (null) Sekunden bedeutet kein Timeout. Bestimmt die Anzahl von Sekunden, nach denen ein Timeout bei der Datasetabfrage eintritt. Um keinen Timeoutwert anzugeben, verwenden Sie 0. Weitere Informationen finden Sie unter [Festlegen von Timeoutwerten für die Verarbeitung von Berichten und freigegebenen Datasets (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  

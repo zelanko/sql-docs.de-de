@@ -5,20 +5,20 @@ description: In diesem Artikel wird erläutert, wie Sie den Status eines Big-Dat
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e3c7f2f34f949f16821ad7c1dd6a3c3b0d4681e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772818"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Anzeigen des Status eines Big-Data-Clusters 
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In diesem Artikel wird beschrieben, wie Sie auf die Dienstendpunkte zugreifen und den Status von Big Data-Clusterkomponenten für SQL Server anzeigen. Sie können sowohl Azure Data Studio als auch **azdata** verwenden. Beide Verfahren werden in diesem Artikel erläutert.
 
@@ -53,7 +53,9 @@ In der Dienstendpunkttabelle werden auch mehrere Dashboards für die Überwachun
 - Spark-Auftragsüberwachung
 - Spark-Ressourcenverwaltung
 
-Sie können direkt auf diese Links klicken. Sie müssen sich beim Zugriff auf diese Dashboards authentifizieren. Geben Sie für die Dashboards „Metriken“ und „Protokolle“ die Controller-Administratoranmeldeinformationen an, die Sie zum Zeitpunkt der Bereitstellung mithilfe der Umgebungsvariablen **AZDATA_USERNAME** und **AZDATA_PASSWORD** festlegen. Spark-Dashboards verwenden Gateway-Anmeldeinformationen (Knox): entweder AD-Identität in einem Cluster, der in AD oder **Root**-Benutzer integriert ist, und **AZDATA_PASSWORD**, wenn die Standardauthentifizierung in Ihrem Cluster verwendet wird. 
+Sie können direkt auf diese Links klicken. Sie müssen sich beim Zugriff auf diese Dashboards authentifizieren. Geben Sie für die Dashboards „Metriken“ und „Protokolle“ die Controller-Administratoranmeldeinformationen an, die Sie zum Zeitpunkt der Bereitstellung mithilfe der Umgebungsvariablen **AZDATA_USERNAME** und **AZDATA_PASSWORD** festlegen. Spark-Dashboards verwenden Gateway-Anmeldeinformationen (Knox): entweder eine AD-Identität in einem Cluster, der mit AD integriert ist oder **AZDATA_USERNAME**, und **AZDATA_PASSWORD**, wenn die Standardauthentifizierung in Ihrem Cluster verwendet wird.
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ### <a name="cluster-status-notebook"></a><a id="notebook"></a> Notebook für den Clusterstatus
 

@@ -8,28 +8,30 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d9640ee6040e6906f888486f6b0a1f99bb1d071f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a949fc5f17d2e6875eeef7f62ecef065283e3a92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607113"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772316"
 ---
 # <a name="tutorial-deploy-a-clustering-model-in-r-with-sql-machine-learning"></a>Tutorial: Bereitstellen eines Clusteringmodells in R mit SQL Machine Learning
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von SQL Server Machine Learning Services oder in Big Data-Clustern ein in R entwickeltes Clustermodell in einer SQL-Datenbank bereit.
+In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von SQL Server Machine Learning Services oder in Big Data-Clustern ein in R entwickeltes Clustermodell in einer Datenbank bereit.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von SQL Server Machine Learning Services ein in R entwickeltes Clustermodell in einer SQL-Datenbank bereit.
+In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von SQL Server Machine Learning Services ein in R entwickeltes Clustermodell in einer Datenbank bereit.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von SQL Server R Services ein in R entwickeltes Clustermodell in einer SQL-Datenbank bereit.
+In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von SQL Server R Services ein in R entwickeltes Clustermodell in einer Datenbank bereit.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In Teil 4 dieser vierteiligen Tutorialreihe stellen Sie mithilfe von Machine Learning Services in Azure SQL Managed Instance ein in R entwickeltes Clustermodell in einer Datenbank bereit.
 ::: moniker-end
 
 Da sich immer neue Kunden registrieren, müssen Sie das R-Skript von jeder App aus aufrufen können, um das Clustering regelmäßig durchführen zu können. Hierzu können Sie das R-Skript in einer Datenbank bereitstellen, indem Sie das R-Skript in einer gespeicherten SQL-Prozedur platzieren. Da das Modell in der Datenbank ausgeführt wird, kann es problemlos mit Daten trainiert werden, die in der Datenbank gespeichert sind.
@@ -38,7 +40,7 @@ In diesem Artikel lernen Sie Folgendes:
 
 > [!div class="checklist"]
 > * Erstellen einer gespeicherten Prozedur zum Generieren des Modells
-> * Durchführen von Clustering in SQL-Datenbank
+> * Durchführen des Clustering
 > * Verwenden der Clusteringinformationen
 
 In [Teil 1](r-clustering-model-introduction.md) haben Sie die Voraussetzungen installiert und die Beispieldatenbank wiederhergestellt.
@@ -139,10 +141,11 @@ EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
 # Define the connection string
+
 connStr <- paste("Driver=SQL Server; Server=", instance_name,
-               "; Database=", database_name,
-               "; Trusted_Connection=true; ",
-                  sep="" );
+                 "; Database=", database_name,
+                 "; uid=Username;pwd=Password; ",
+                 sep="" )
 
 # Input customer data that needs to be classified.
 # This is the result we get from the query.
@@ -178,7 +181,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>Durchführen von Clustering in SQL-Datenbank
+## <a name="perform-clustering"></a>Durchführen des Clustering
 
 Nachdem Sie die gespeicherte Prozedur erstellt haben, führen Sie das folgende Skript aus, um Clustering durchzuführen.
 
@@ -237,7 +240,7 @@ Wenn Sie dieses Tutorial abgeschlossen haben, können Sie die Datenbank „tpcxb
 In Teil 4 dieser Tutorialreihe haben Sie Folgendes gelernt:
 
 * Erstellen einer gespeicherten Prozedur zum Generieren des Modells
-* Durchführen des Clustering in SQL Server
+* Durchführen des Clusterings mit SQL-Machine-Learning
 * Verwenden der Clusteringinformationen
 
 Weitere Informationen zur Verwendung von R in Machine Learning Services finden Sie unter:

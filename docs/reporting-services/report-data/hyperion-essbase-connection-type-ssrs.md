@@ -1,5 +1,6 @@
 ---
 title: Hyperion Essbase-Verbindungstyp | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie mehrdimensionale Tabellen aus einer externen Hyperion Essbase-Datenquelle abrufen, um sie in Ihren Bericht einzuschließen.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e65c3ca2bd6866ede2eb9924f8465e5b66d37c0b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6ee62393c6b9a74dee16acf532d474a7a344b54
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808432"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer externen [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]" basiert. Dieser integrierte Datenquellentyp basiert auf der Datenerweiterung für [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], die es Ihnen ermöglicht, mehrdimensionale Daten aus einer externen [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle abzurufen.  
@@ -75,11 +76,11 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>Vordefinierte Feldeigenschaften  
- Vordefinierte Feldeigenschaften sind Eigenschaften, die in der Regel von mehreren Datenanbietern unterstützt und in der zugrunde liegenden MDX-Abfrage für ein Berichtsdataset angezeigt werden. Beispielsweise ist die MDX-Dimensionseigenschaft MEMBER_UNIQUE_NAME der vordefinierten Berichtsdataset-Feldeigenschaft **UniqueName**zugeordnet. Verwenden Sie den Ausdruck `=Fields!` *\<Feldname>* `.UniqueName`, um den Wert des eindeutigen Namens in ein Textfeld einzuschließen.  
+ Vordefinierte Feldeigenschaften sind Eigenschaften, die in der Regel von mehreren Datenanbietern unterstützt und in der zugrunde liegenden MDX-Abfrage für ein Berichtsdataset angezeigt werden. Beispielsweise ist die MDX-Dimensionseigenschaft MEMBER_UNIQUE_NAME der vordefinierten Berichtsdataset-Feldeigenschaft **UniqueName**zugeordnet. Verwenden Sie den Ausdruck `=Fields!` *\<FieldName>* `.UniqueName`, um den Wert des eindeutigen Namens in ein Textfeld einzuschließen.  
   
  Die folgende Tabelle enthält eine Liste vordefinierter Feldeigenschaften, die Sie für eine [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle verwenden können.  
   
-|**Eigenschaft**|**Typ**|**Beschreibung oder erwarteter Wert**|  
+|**Property**|**Type**|**Beschreibung oder erwarteter Wert**|  
 |------------------|--------------|---------------------------------------|  
 |**Wert**|**Object**|Gibt den Datenwert des Felds an.<br /><br /> Bei einer Dimensionseigenschaft wird dies MEMBER_CAPTION zugeordnet. Bei einem Measure wird dies dem Datenwert zugeordnet.|  
 |**IsMissing**|**Boolescher Wert**|Gibt an, ob das Feld im resultierenden Dataset gefunden wurde.|  
@@ -100,7 +101,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  In der folgenden Tabelle werden die benutzerdefinierten Feldeigenschaften angezeigt, die Sie für eine [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] -Datenquelle verwenden können.  
   
-|**Eigenschaft**|**Typ**|**Beschreibung oder erwarteter Wert**|  
+|**Property**|**Type**|**Beschreibung oder erwarteter Wert**|  
 |------------------|--------------|---------------------------------------|  
 |**FORMAT_STRING**|**String**|Bei Definition für ein Measure ist dies der als String-Typ verfügbare **FormattedValue** .|  
   

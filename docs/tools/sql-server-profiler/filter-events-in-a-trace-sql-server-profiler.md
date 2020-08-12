@@ -1,6 +1,7 @@
 ---
 title: Filtern von Ereignissen in einer Ablaufverfolgung
 titleSuffix: SQL Server Profiler
+description: In diesem Artikel wird erläutert, wie Sie einen Filter festlegen, um die Ereignisse einzugrenzen, die der SQL Server Profiler während einer Ablaufverfolgung erfasst. Außerdem erfahren Sie mehr über die Formate, die für bestimmte Filter erforderlich sind.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 66780fe3a71f784679e80779985740a3d9069777
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fd8eae33f37b3e21716a0eabd894f77558ac34da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307232"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790006"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>Filtern von Ereignissen in einer Ablaufverfolgung (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Durch Filter werden die in einer Ablaufverfolgung aufgezeichneten Ereignisse eingeschränkt. Ist kein Filter eingerichtet, werden alle Ereignisse der ausgewählten Ereignisklassen in der Ablaufverfolgungsausgabe zurückgegeben. Es ist nicht obligatorisch, einen Filter für eine Ablaufverfolgung festzulegen. Jedoch wird durch Filter der bei der Ablaufverfolgung entstehende Verarbeitungsaufwand verringert.  
   
@@ -48,7 +49,7 @@ Durch Filter werden die in einer Ablaufverfolgung aufgezeichneten Ereignisse ein
   
          ODER  
   
-    -   Im Dialogfeld**Allgemeine Optionen** ist die Option **Einstellungen für Land/Region zum Anzeigen von Datums- und Uhrzeitwerten verwenden** aktiviert. Klicken Sie im **-Menü** Extras[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auf **Optionen**, um das Dialogfeld **Allgemeine Optionen** anzuzeigen.  
+    -   Im Dialogfeld**Allgemeine Optionen** ist die Option **Einstellungen für Land/Region zum Anzeigen von Datums- und Uhrzeitwerten verwenden** aktiviert. Klicken Sie im [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]-Menü **Extras** auf **Optionen**, um das Dialogfeld **Allgemeine Optionen** anzuzeigen.  
   
          -UND-  
   

@@ -1,6 +1,6 @@
 ---
 title: Aktualisieren einer Failoverclusterinstanz
-description: Schritte zum Aktualisieren einer Failoverclusterinstanz mithilfe eines Installationsmediums
+description: In diesem Artikel erfahren Sie, wie Sie mithilfe eines Installationsmediums ein Upgrade auf eine SQL Server-Failoverclusterinstanz durchführen. Außerdem erhalten Sie Informationen zu parallelen Upgrades und zum Upgraden eines Clusters mit mehreren Subnetzen.
 ms.custom: seo-lt-2019
 ms.date: 11/21/2019
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24607a6372ba733165aa12fd159baea10f80ebd4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 43447d1fbba7ceb9a1c3faa79443f6304e8e6015
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822026"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858574"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Aktualisieren einer SQL Server-Failoverclusterinstanz (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt das Upgraden eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Failoverclusters auf eine neue Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], auf ein neues [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Service Pack oder ein kumulatives Update, wobei die Downtime auf ein einzelnes manuelles Failover (oder bei einem Failback auf den ursprünglichen primären Cluster auf zwei manuelle Failovers) beschränkt ist. Das Gleiche gilt, wenn ein neues Windows Service Pack oder kumulatives Windows-Update einzeln auf allen Failoverclusterknoten installiert wird.  
   
  Das Upgraden des Windows-Betriebssystems eines Failoverclusters wird für Betriebssysteme, die älter als [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] sind, nicht unterstützt. Weitere Informationen zum Upgraden eines Clusterknotens, der unter [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] oder höher ausgeführt wird, finden Sie unter [Perform a rolling upgrade or update (Ausführen eines parallelen Upgrades oder Updates)](#perform-a-rolling-upgrade-or-update).  
@@ -46,7 +46,7 @@ ms.locfileid: "74822026"
 ## <a name="prerequisites"></a>Voraussetzungen  
  Lesen Sie die folgenden wichtigen Informationen, bevor Sie beginnen:  
   
--   [Supported Version and Edition Upgrades (Unterstützte Versions- und Editionsupgrades)](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Überprüfen Sie, ob Sie von Ihrer Version des Windows-Betriebssystems und Ihrer Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] upgraden können. Sie können beispielsweise kein direktes Upgrade von einer SQL Server 2005-Failoverclusterinstanz auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ausführen und keinen Failovercluster upgraden, der unter [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] ausgeführt wird.  
+-   [Unterstützte Versions- und Editionsupgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Überprüfen Sie, ob ein Upgrade von Ihrer Version des Windows-Betriebssystems und Ihrer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Version auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] möglich ist. Sie können beispielsweise kein direktes Upgrade von einer SQL Server 2005-Failoverclusterinstanz auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ausführen und keinen Failovercluster upgraden, der unter [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] ausgeführt wird.  
   
 -   [Auswählen einer Upgrademethode für die Datenbank-Engine](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Wählen Sie basierend auf Ihrer Prüfung der unterstützten Versions- und Editionsupgrades sowie basierend auf den anderen in Ihrer Umgebung installierten Komponenten die passende Upgrademethode und die passenden Upgradeschritte aus, um das Upgrade der Komponenten in der richtigen Reihenfolge durchzuführen.  
   

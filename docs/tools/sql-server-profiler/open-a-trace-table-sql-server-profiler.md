@@ -1,6 +1,7 @@
 ---
 title: Öffnen einer Ablaufverfolgungstabelle
 titleSuffix: SQL Server Profiler
+description: In diesem Artikel erfahren Sie, wie Sie den SQL Server Profiler verwenden, um eine Tabelle in einer SQL Server-Datenbank zu öffnen, die Ergebnisse einer Ablaufverfolgung enthält.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: b3779c75b0cc90bc10a208cf592a080ff067b5b6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e15fd637d0debe5916c2e548613bc8a6f3c1775b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774759"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>Öffnen einer Ablaufverfolgungstabelle (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In diesem Thema wird die Vorgehensweise zum Öffnen einer vorhandenen Ablaufverfolgungstabelle mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]beschrieben.  
   
