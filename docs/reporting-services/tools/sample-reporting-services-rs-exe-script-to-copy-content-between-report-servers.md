@@ -1,5 +1,6 @@
 ---
 title: Reporting Services-Beispielskript „rs.exe“ zum Kopieren von Inhalten zwischen Berichtsservern | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Inhaltselemente und Einstellungen mithilfe des RS-Hilfsprogramms von einem SQL Server Reporting Services-Berichtsserver in einen anderen kopieren, um ein Reporting Services-RSS-Skript auszuführen.
 ms.date: 05/23/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f56cd8793d75776335769b22195abb27b1818dc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70176288"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916914"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Reporting Services-Beispielskript für "rs.exe" zum Migrieren von Inhalten zwischen Berichtsservern
 
@@ -310,11 +311,11 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
 ##  <a name="troubleshooting"></a><a name="bkmk_troubleshoot"></a> Problembehandlung  
  Verwenden Sie das Ablaufverfolgungsflag **-t**, um weitere Informationen abzurufen. Beispiel: Sie führen das Skript aus, und es wird eine Meldung wie die folgende angezeigt:  
   
--   Could not connect to server: https://\<servername>/ReportServer/ReportService2010.asmx (Bei der Verbindung mit dem Server https://<Servername>/ReportServer/ReportService2010.asmx ist ein Fehler aufgetreten.)  
+-   Could not connect to server: https://\<servername>/ReportServer/ReportService2010.asmx. (Bei der Verbindung mit dem Server https://<Servername>/ReportServer/ReportService2010.asmx ist ein Fehler aufgetreten.)  
   
  Führen Sie das Skript mit dem Flag **-t** erneut aus. Es wird eine Meldung wie diese angezeigt:  
   
--   System.Exception: Die Verbindung mit dem Server konnte nicht hergestellt werden: https://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **HTTP-Status 401 bei der Anforderung: Nicht autorisiert**.   in System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage Message, WebResponse Response, Stream ResponseStream, Boolean AsyncCall) in System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String MethodName, Object [] Parameters) in Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() in Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String Url, String UserName, String Password String Domain, Int32 Timeout) in Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---Ende der inneren ausnahmestapelüberwachung---  
+-   System.Exception: Could not connect to server: https://\<servername>/ReportServer/ReportService2010.asmx (Bei der Verbindung mit dem Server https://<Servername>/ReportServer/ReportService2010.asmx ist ein Fehler aufgetreten.) ---> System.Net.WebException: **HTTP-Status 401 bei der Anforderung: Nicht autorisiert**.   in System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse (SoapClientMessage Message, WebResponse Response, Stream ResponseStream, Boolean AsyncCall) in System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke (String MethodName, Object [] Parameters) in Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() in Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService (String Url, String UserName, String Password String Domain, Int32 Timeout) in Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity()---Ende der inneren ausnahmestapelüberwachung---  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Hilfsprogramm RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   

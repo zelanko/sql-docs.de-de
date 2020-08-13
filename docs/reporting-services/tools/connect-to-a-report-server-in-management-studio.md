@@ -1,5 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio | Microsoft-Dokumentation
+description: In diesem Artikel wird erläutert, wie Sie eine Verbindung zu einem beliebigen Server in der SQL Server-Familie herstellen und die Inhalte grafisch mithilfe des Objekt-Explorers in SQL Server Management Studio durchsuchen.
 ms.date: 05/07/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 602c939c382bc5946e64340736f73bb88f17c655
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: adcbb82d80fae35889202fe8702a98b6315da100
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574110"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918416"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio
 
@@ -49,7 +50,7 @@ ms.locfileid: "65574110"
 
 2. Klicken Sie auf **Verbinden**, um die Liste der Servertypen anzuzeigen, und wählen Sie dann **Reporting Services** aus.
 
-3. Geben Sie im Dialogfeld **Verbindung mit Server herstellen** den Namen der Berichtsserverinstanz ein. Die Namen von Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Standardmäßig ist der Instanzname eines lokalen Berichtsservers der Computername. Wenn Sie den Berichtsserver als benannte Instanz installiert haben, müssen Sie den Server mit der folgenden Syntax angeben: *\<Servername>[\\<Instanzname\>]* .
+3. Geben Sie im Dialogfeld **Verbindung mit Server herstellen** den Namen der Berichtsserverinstanz ein. Die Namen von Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Standardmäßig ist der Instanzname eines lokalen Berichtsservers der Computername. Wenn Sie den Berichtsserver als benannte Instanz installiert haben, müssen Sie den Server mit der folgenden Syntax angeben: *\<servername>[\\<Instanzname\>]* .
 
 4. Wählen Sie den **Authentifizierungstyp** aus. Wenn Sie die Windows-Authentifizierung verwenden, stellen Sie die Verbindung mit Ihren Anmeldeinformationen her. Wenn Sie die Standardauthentifizierung oder die Formularauthentifizierung auswählen, geben Sie das Konto und das Kennwort ein.  
   
@@ -81,7 +82,7 @@ ms.locfileid: "65574110"
 
 4. Geben Sie für **Servername**einen Wert ein. Geben Sie den Wert je nach Servermodus an:
 
-    - Geben Sie für einen Berichtsserver im einheitlichen Modus den Namen der Berichtsserverinstanz ein. Die Namen von Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Standardmäßig ist der Instanzname eines lokalen Berichtsservers der Computername. Wenn Sie den Berichtsserver als benannte Instanz installiert haben, müssen Sie den Server mit der folgenden Syntax angeben: *\<Servername>[\\<Instanzname\>]* .
+    - Geben Sie für einen Berichtsserver im einheitlichen Modus den Namen der Berichtsserverinstanz ein. Die Namen von Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Standardmäßig ist der Instanzname eines lokalen Berichtsservers der Computername. Wenn Sie den Berichtsserver als benannte Instanz installiert haben, müssen Sie den Server mit der folgenden Syntax angeben: *\<servername>[\\<Instanzname\>]* .
 
     - Bei einem Server, der im integrierten SharePoint-Modus ausgeführt wird, müssen Sie eine Verbindung mit der SharePoint-Website herstellen, mit der der Berichtsserver verbunden ist. Stellen Sie eine Verbindung mit der SharePoint-Website her, damit Sie die Berechtigungsstufen überprüfen können. Über die Berechtigungen wird der Zugriff auf die Berichtsserverinhalte und -vorgänge gesteuert. Sie können eine beliebige Site in der Siteauflistung angeben. Das folgende Beispiel veranschaulicht die Syntax: `https://mysharepointsite`.
 
@@ -104,10 +105,10 @@ ms.locfileid: "65574110"
 
 |Verbinden mit|   Aufgaben   |   Berechtigungen   |
 |----------|-----------|-----------------|  
-|Berichtsserver im einheitlichen Modus, die als Standardinstanz oder benannte Instanz verbunden sind:<br /><br /> \<servername>\<_instanz><br /><br /> Die Verbindung zum Berichtsserver wird durch den Berichtsserver-WMI-Anbieter hergestellt.|Servereigenschaften und -standardeinstellungen anzeigen und festlegen.<br /><br /> Aufträge anzeigen und abbrechen.<br /><br /> Gemeinsame Zeitpläne erstellen und verwalten.<br /><br /> Rollendefinitionen erstellen, ändern oder löschen.|Der Systemadministratorrolle zugewiesen.|  
+|Berichtsserver im einheitlichen Modus, die als Standardinstanz oder benannte Instanz verbunden sind:<br /><br /> \<server name>\<_instance><br /><br /> Die Verbindung zum Berichtsserver wird durch den Berichtsserver-WMI-Anbieter hergestellt.|Servereigenschaften und -standardeinstellungen anzeigen und festlegen.<br /><br /> Aufträge anzeigen und abbrechen.<br /><br /> Gemeinsame Zeitpläne erstellen und verwalten.<br /><br /> Rollendefinitionen erstellen, ändern oder löschen.|Der Systemadministratorrolle zugewiesen.|  
 |Berichtsserver im einheitlichen Modus, die als Standardinstanz oder benannte Instanz über den Endpunkt zum Report Server-Webdienst verbunden sind:<br /><br /> `https://<servername>/reportserver`<br /><br /> Das Angeben einer URL zum Berichtsserver ist eine alternative Möglichkeit, eine Verbindung mit dem Berichtsserver herzustellen.|Servereigenschaften und -standardeinstellungen anzeigen und festlegen.<br /><br /> Aufträge anzeigen und abbrechen.<br /><br /> Gemeinsame Zeitpläne erstellen und verwalten.<br /><br /> Rollendefinitionen erstellen, ändern oder löschen.|Der Systemadministratorrolle zugewiesen.|  
 |Berichtsserver im integrierten SharePoint-Modus, konfiguriert über die SharePoint-Website:<br /><br /> `https://<webserver>/<SharePointSite>`|Servereigenschaften und -standardeinstellungen anzeigen und festlegen.<br /><br /> Aufträge anzeigen und abbrechen.<br /><br /> Erstellen und Verwalten gemeinsamer Zeitpläne, die für die verbundene Website definiert sind<br /><br /> Anzeigen der Berechtigungsstufen für die verbundene Website|Vollzugriffsebene der Berechtigung für die verbundene SharePoint-Website|
-|Berichtsserver im integrierten SharePoint-Modus, verbunden über den Namen der Berichtsserverinstanz:<br /><br /> \<servername>\<_instanz>|Servereigenschaften und -standardeinstellungen anzeigen und festlegen.<br /><br /> Aufträge anzeigen und abbrechen.|Berechtigungs-Vollzugriffsebene für die SharePoint-Website, die in den Berichtsserver integriert ist.<br /><br /> Beachten Sie, dass bei der Verbindung mit dem Berichtsserver statt mit der SharePoint-Website die Anzahl der durchführbaren Aufgaben reduziert ist. Dies ist darauf zurückzuführen, dass der Berichtsserver nur Anwendungsdaten zurückgeben kann, die in der Berichtsserver-Datenbank gespeichert oder verwaltet werden, jedoch nicht die Anwendungsdaten in den SharePoint-Konfigurations- und -Inhaltsdatenbanken.|
+|Berichtsserver im integrierten SharePoint-Modus, verbunden über den Namen der Berichtsserverinstanz:<br /><br /> \<server name>\<_instance>|Servereigenschaften und -standardeinstellungen anzeigen und festlegen.<br /><br /> Aufträge anzeigen und abbrechen.|Berechtigungs-Vollzugriffsebene für die SharePoint-Website, die in den Berichtsserver integriert ist.<br /><br /> Beachten Sie, dass bei der Verbindung mit dem Berichtsserver statt mit der SharePoint-Website die Anzahl der durchführbaren Aufgaben reduziert ist. Dies ist darauf zurückzuführen, dass der Berichtsserver nur Anwendungsdaten zurückgeben kann, die in der Berichtsserver-Datenbank gespeichert oder verwaltet werden, jedoch nicht die Anwendungsdaten in den SharePoint-Konfigurations- und -Inhaltsdatenbanken.|
 
 ## <a name="see-also"></a>Weitere Informationen
 

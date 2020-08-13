@@ -1,5 +1,6 @@
 ---
 title: Automatischer Vergleich von Syntaxpaaren
+description: In diesem Artikel erfahren Sie mehr über den automatischen Abgleich von Syntaxpaaren im Abfrage-Editor (Trennzeichenvergleich), im XMLA-Abfrage-Editor (zugehörige Klammer) sowie mit MDX und DMX (Klammernvergleich).
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -11,15 +12,15 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1251b6664266fdd1e4d91519186df95a52e52f35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d23610ed602133b7c9c218a1da1a678c84954a93
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74834240"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920946"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Automatischer Vergleich von Syntaxpaaren
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Durch den automatischen Vergleich von Syntaxpaaren erhalten Sie unmittelbar Aufschluss darüber, ob Syntaxelemente, die paarweise codiert werden müssen, ordnungsgemäß miteinander kombiniert sind. Im Abfrage-Editor von [!INCLUDE[ssDE](../../includes/ssde-md.md)] wird dieser Vorgang als Trennzeichenvergleich, im XMLA-Abfrage-Editor von Analysis Services als Klammernvergleich und im MDX- sowie im DMX-Editor als Klammernvergleich bezeichnet.  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>Trennzeichenvergleich im Datenbank-Engine-Abfrage-Editor  
@@ -55,17 +56,17 @@ ms.locfileid: "74834240"
   
 -   Übereinstimmende Start- und Endtags  
   
--   Ein beliebiges Paar von spitzen Klammern („\<“ und „>“).  
+-   Jedes beliebige Paar aus eckigen Klammern: \<" and ">  
   
--   Beginn und Ende von Kommentaren  
+-   Anfang und Ende von Kommentaren.  
   
--   Beginn und Ende von Verarbeitungsanweisungen  
+-   Anfang und Ende von Verarbeitungsanweisungen.  
   
--   Beginn und Ende von CDATA-Blöcken  
+-   Anfang und Ende von CDATA-Blöcken.  
   
--   Beginn und Ende von DTD-Deklarationen  
+-   Anfang und Ende von DTD-Deklarationen.  
   
--   Öffnende und schließende Anführungszeichen bei Attributen  
+-   Öffnende und schließende Anführungszeichen für Attribute.  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>Klammernvergleich im MDX- und im DMX-Editor  
  Der MDX-Editor (Multidimensional Expressions) und der DMX-Editor (Data Mining Expressions) gleichen automatisch Klammernpaare in Funktionen ab.

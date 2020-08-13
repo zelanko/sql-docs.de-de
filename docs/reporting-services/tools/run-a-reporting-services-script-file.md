@@ -1,5 +1,6 @@
 ---
 title: Ausführen einer Reporting Services-Skriptdatei | Microsoft-Dokumentation
+description: Sehen Sie sich Beispiele für das Ausführen einer Reporting Services-Skriptdatei über die Eingabeaufforderung mithilfe der Reporting Services-Skriptumgebung (RS.EXE) an.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ad3c0bb7ea7700f457cfaa9e7cb08684624dc73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79d96354c497977b780078ccbe94b25738b0f522
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571535"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914793"
 ---
 # <a name="run-a-reporting-services-script-file"></a>Ausführen einer Reporting Services-Skriptdatei
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Skriptdateien werden von der Eingabeaufforderung in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Skriptumgebung (RS.exe) ausgeführt. In RS.exe stehen Ihnen viele Befehlszeileargumente zur Verfügung. Weitere Informationen zu den Befehlszeilenoptionen finden Sie unter [Hilfsprogramm „RS.exe“ (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md). Weitere Skriptbeispiele finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  

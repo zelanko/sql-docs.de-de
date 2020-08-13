@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4494931e0ee189e785ed057471e5560f4737ecc0
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 8eaa889f12adb2470040cab4c0fba5df295a1cb2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922312"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916236"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Herstellen von Verbindungen mit SQL Server mit der integrierten Kerberos-Authentifizierung
 
@@ -43,7 +43,7 @@ Ab [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] können Anwendungen mit der
 
 - Wenn die integrierte Authentifizierung mit dem **Krb5LoginModule** ausgeführt werden soll, müssen Sie dennoch die Verbindungseigenschaft **integratedSecurity=true** angeben. Dann müssen Sie auch die Verbindungseigenschaft **authenticationScheme=JavaKerberos** angeben.
 
-- Um weiterhin die integrierte Authentifizierung mit **mssql-jdbc_auth-\<version>-\<arch>.dll** zu verwenden, geben Sie einfach die Verbindungseigenschaft **integratedSecurity=true** (und optional **authenticationScheme=NativeAuthentication**) an.
+- Wenn Sie die integrierte Authentifizierung mit **mssql-jdbc_auth-\<version>-\<arch>.dll** weiterhin verwenden möchten, geben Sie einfach die Verbindungseigenschaft **integratedSecurity=true** und optional **authenticationScheme=NativeAuthentication** an.
 
 - Wenn Sie **authenticationScheme=JavaKerberos** angeben, ohne gleichzeitig **integratedSecurity=true** anzugeben, ignoriert der Treiber die Verbindungseigenschaft **authenticationScheme** und erwartet, dass der Benutzername und das Kennwort für die Anmeldeinformationen in der Verbindungszeichenfolge enthalten sind.
 
@@ -71,7 +71,7 @@ Der SPN könnte beispielsweise so aussehen: "MSSQLSvc/some-server.zzz.corp.conto
 
 Weitere Informationen zu Dienstprinzipalnamen (SPNs) finden Sie in folgendem Thema:
 
-- [Verwenden der Kerberos-Authentifizierung in SQL Server](https://support.microsoft.com/kb/319723)
+- [Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
 - [Verwenden von Kerberos mit SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 

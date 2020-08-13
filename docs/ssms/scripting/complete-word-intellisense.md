@@ -1,5 +1,6 @@
 ---
 title: Wort vervollständigen (IntelliSense)
+description: Das Microsoft IntelliSense-Feature „Wort vervollständigen“ kann Ihre Eingaben vervollständigen, sobald diese lang genug sind, um sie eindeutig zu identifizieren, oder es kann Ihnen eine Liste mit Möglichkeiten bereitstellen, aus denen Sie auswählen können. Hier erfahren Sie mehr über die vier Möglichkeiten, dieses Feature aufzurufen.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b516e75ce312dbc2970ccb31975d892f7ab98cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fb33d179463383e41f73ddba30525ce908e2cb5
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253994"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122881"
 ---
 # <a name="complete-word-intellisense"></a>Wort vervollständigen (IntelliSense)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Die Option "Wort vervollständigen" von [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense gibt den Rest eines Namens für eine Variable, einen Befehl oder eine Funktion ein, sobald Sie genügend Zeichen zur eindeutigen Identifizierung des Ausdrucks eingegeben haben.  
   
  Die Funktion Wort vervollständigen lässt sich auf vier Arten aufrufen:  

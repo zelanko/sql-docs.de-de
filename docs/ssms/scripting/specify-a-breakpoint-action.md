@@ -1,5 +1,6 @@
 ---
 title: Angeben einer Breakpointaktion
+description: Hier erfahren Sie, wie Sie eine Aktion für „Bei Treffer“ angeben, eine benutzerdefinierte Aufgabe für den Transact-SQL-Debugger, die ausgeführt wird, wenn ein Breakpoint erreicht wird und bestimmte andere Bedingungen erfüllt sind.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbe5cd84c13c84f8902ac82bd8ef3ef54dc82bda
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253652"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122724"
 ---
 # <a name="specify-a-breakpoint-action"></a>Angeben einer Breakpointaktion
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Die Breakpointaktion **Bei Treffer** gibt einen benutzerdefinierten Task an, den der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger für einen Breakpoint ausführt. Wenn die angegebene Trefferanzahl erreicht ist und alle angegebenen Breakpointbedingungen erfüllt sind, führt der Debugger die für den Breakpoint angegebene Aktion aus.
 
@@ -41,7 +42,7 @@ Ausgabemeldungen werden mit der Option **Meldung drucken** festgelegt und als Te
   
     1.  $ADDRESS gibt den Namen der gespeicherten Prozedur oder benutzerdefinierten Funktion zurück, in der der Breakpoint festgelegt ist. Wenn der Breakpoint im Editorfenster festgelegt wird, gibt $ADDRESS den Namen der Skriptdatei zurück, die bearbeitet wird. $ADDRESS und $FUNCTION geben im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger die gleichen Informationen zurück.  
   
-    2.  $CALLER gibt den Namen der Einheit des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Codes zurück, in der eine gespeicherte Prozedur oder eine Funktion aufgerufen wurde. Befindet sich der Breakpoint im Editorfenster, gibt $CALLER \<No caller available> zurück. Wenn sich der Breakpoint in einer gespeicherten Prozedur oder benutzerdefinierten Funktion befindet, die vom Code im Editorfenster aufgerufen wird, gibt $CALLER den Namen der Datei zurück, die bearbeitet wird. Wenn sich der Breakpoint in einer gespeicherten Prozedur oder benutzerdefinierten Funktion befindet, die von einer anderen gespeicherten Prozedur oder Funktion aufgerufen wird, gibt $CALLER den Namen der aufrufenden Prozedur bzw. Funktion zurück.  
+    2.  $CALLER gibt den Namen der Einheit des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Codes zurück, in der eine gespeicherte Prozedur oder eine Funktion aufgerufen wurde. Befindet sich der Breakpoint im Editor-Fenster, gibt $CALLER \<No caller available> zurück. Wenn sich der Breakpoint in einer gespeicherten Prozedur oder benutzerdefinierten Funktion befindet, die vom Code im Editorfenster aufgerufen wird, gibt $CALLER den Namen der Datei zurück, die bearbeitet wird. Wenn sich der Breakpoint in einer gespeicherten Prozedur oder benutzerdefinierten Funktion befindet, die von einer anderen gespeicherten Prozedur oder Funktion aufgerufen wird, gibt $CALLER den Namen der aufrufenden Prozedur bzw. Funktion zurück.  
   
     3.  $CALLSTACK gibt die Aufrufliste von Funktionen in der Kette zurück, die die aktuelle gespeicherte Prozedur oder benutzerdefinierte Funktion aufgerufen haben. Wenn sich der Breakpoint im Editorfenster befindet, gibt $CALLSTACK den Namen der Skriptdatei zurück, die bearbeitet wird.  
   

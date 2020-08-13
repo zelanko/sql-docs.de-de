@@ -1,30 +1,30 @@
 ---
 title: Erweiterbarkeitsarchitektur
-description: In diesem Artikel wird die Architektur des Erweiterbarkeitsframeworks zum Ausführen eines externen Skripts wie R oder Python auf SQL Server beschrieben.
+description: In diesem Artikel wird die Architektur des Erweiterbarkeitsframeworks zum Ausführen eines externen Python- oder R-Skripts in Machine Learning Services für SQL Server beschrieben. Das Skript wird in einer Language Runtime-Umgebung als Erweiterung der Haupt-Datenbank-Engine ausgeführt.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 408125a3369d35a28893852a2f674e3e4562b063
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 14611369afe42da2e87aab87d675fd77e710c461
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118823"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406293"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Erweiterbarkeitsarchitektur in SQL Server-Machine Learning Services 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server verfügt über ein Erweiterungsframework zum Ausführen eines externes Skripts wie R oder Python auf dem Server. Das Skript wird in einer Language Runtime-Umgebung als Erweiterung der Haupt-Datenbank-Engine ausgeführt.
+In diesem Artikel wird die Architektur des Erweiterbarkeitsframeworks zum Ausführen eines externen Python- oder R-Skripts in Machine Learning Services für SQL Server beschrieben. Das Skript wird in einer Language Runtime-Umgebung als Erweiterung der Haupt-Datenbank-Engine ausgeführt.
 
 ## <a name="background"></a>Hintergrund
 
-Das Erweiterbarkeitsframework wurde in SQL Server 2016 zur Unterstützung der R-Runtime eingeführt. Python wird von SQL Server 2017 und höher unterstützt.
+Das Erweiterbarkeitsframework wurde in SQL Server 2016 zur Unterstützung der R-Laufzeit mit [R Services](../r/sql-server-r-services.md) eingeführt. In SQL Server 2017 und höher wird Python mit [Machine Learning Services](../sql-server-machine-learning-services.md) unterstützt.
 
 Der Zweck des Erweiterbarkeitsframeworks besteht darin, eine Schnittstelle zwischen SQL Server und Data Science-Sprachen wie R und Python bereitzustellen. Ziel dabei ist es, eine möglichst reibungslose Migration von Data-Science-Lösungen in die Produktion zu gewährleisten und die während des Entwicklungsprozesses verfügbar gemachten Daten zu schützen. Durch Ausführen einer vertrauenswürdigen Skriptsprache innerhalb eines von SQL Server verwalteten sicheren Frameworks können Datenbankadministratoren die Sicherheit aufrechterhalten und gleichzeitig Datenanalysten den Zugriff auf Unternehmensdaten ermöglichen.
 

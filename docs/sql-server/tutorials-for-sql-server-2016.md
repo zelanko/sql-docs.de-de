@@ -1,23 +1,22 @@
 ---
 title: Tutorials für SQL Server | Microsoft-Dokumentation
-ms.custom: ''
+description: Verwenden Sie diese SQL Server-Tutorials, um neue Technologien und Features kennenzulernen. Tutorials für frühere SQL Server-Versionen können üblicherweise auch für aktuellere Versionen verwendet werden.
 ms.date: 11/01/2017
 ms.prod: sql
-ms.reviewer: ''
-ms.technology: performance
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95cf7a3b2d7be413df8ddc0f84ff8d71cffffdd0
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d86c5a3662417c1af39f12fc3d32167a73912c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000650"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913947"
 ---
 # <a name="tutorials-for-sql-server"></a>Tutorials für SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stellt Tutorials bereit, die Ihnen beim Erlernen neuer Technologien und Funktionen helfen. Tutorials für frühere Versionen können üblicherweise auch für aktuellere Versionen verwendet werden. Wenn Tutorials eine neuere Funktion behandeln, wird die zur Bearbeitung mindestens erforderliche Version angezeigt.  
      
 -   Wenn ein Tutorial eine der [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Datenbanken verwendet, sollten Sie die neueste Version von CodePlex herunterladen und verwenden. Weitere Informationen finden Sie unter [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3 (AdventureWorks-Datenbanken und -Skripte für SQL Server 2016 CTP3)](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).    

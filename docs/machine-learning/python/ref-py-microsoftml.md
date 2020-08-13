@@ -1,30 +1,28 @@
 ---
 title: Python-Paket für microsoftml
-description: Einführung der Microsoft Machine Learning-Algorithmen und -Modelle für Python in Bezug auf Machine Learning-Workloads in SQL Server.
+description: microsoftml ist ein Python-Paket von Microsoft, das leistungsstarke Machine-Learning-Algorithmen bereitstellt. Sie enthält Funktionen für Training, Transformationen, Bewertung, Text- und Bildanalyse sowie Featureextraktion zum Ableiten von Werten aus vorhandenen Daten. Es ist in SQL Server Machine Learning Services enthalten.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 212f739d7786cd3bd080972ab4b61ebff8b32bd9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ae408162ada9b43a9601c4058b9850db5a4afec4
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117863"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406193"
 ---
-# <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (Python-Modul in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="microsoftml-python-package-in-sql-server-machine-learning-services"></a>microsoftml (Python-Paket in SQL Server Machine Learning Services)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**microsoftml** ist ein mit Python35 kompatibles Modul von Microsoft, das leistungsstarke Machine Learning-Algorithmen bereitstellt. Sie enthält Funktionen für Training, Transformationen, Bewertung, Text- und Bildanalyse sowie Featureextraktion zum Ableiten von Werten aus vorhandenen Daten.
-
-Die Machine Learning-APIs wurden von Microsoft für interne Machine Learning-Anwendungen entwickelt und im Laufe der Jahre so optimiert, dass sie bei Big Data eine hohe Leistung durch Verarbeitung auf Mehrkernprozessoren und schnelles Datenstreaming unterstützen. Dieses Paket basiert auf dem Python-Äquivalent der R-Version [MicrosoftML](../r/ref-r-microsoftml.md), die ähnliche Funktionen aufweist. 
+**microsoftml** ist ein Python-Paket von Microsoft, das leistungsstarke Machine-Learning-Algorithmen bereitstellt. Sie enthält Funktionen für Training, Transformationen, Bewertung, Text- und Bildanalyse sowie Featureextraktion zum Ableiten von Werten aus vorhandenen Daten. Das Paket ist in [Machine Learning Services in SQL Server](../sql-server-machine-learning-services.md) enthalten und unterstützt Hochleistung für Big Data. Dafür wird Verarbeitung mit mehreren Kernen und schnelles Datenstreaming verwendet.
 
 ## <a name="full-reference-documentation"></a>Vollständige Referenzdokumentation
 
-Die **microsoftml**-Bibliothek wird in mehreren Microsoft-Produkten bereitgestellt. Die Verwendung ist jedoch immer identisch, unabhängig davon, ob Sie die Bibliothek in SQL Server oder einem anderen Produkt abrufen. Aus diesem Grund wird die [Dokumentation für einzelne microsoftml-Funktionen](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) nur an einer Stelle in der [Python-Referenz](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) für Microsoft Machine Learning Server veröffentlicht. Abweichungen durch produktspezifisches Verhalten finden Sie ggf. auf der Hilfeseite der Funktion.
+Das **microsoftml**-Paket wird in mehreren Microsoft-Produkten bereitgestellt. Die Verwendung ist jedoch immer identisch, unabhängig davon, ob Sie das Paket in SQL Server oder einem anderen Produkt abrufen. Aus diesem Grund wird die [Dokumentation für einzelne microsoftml-Funktionen](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) nur an einer Stelle in der [Python-Referenz](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) für Microsoft Machine Learning Server veröffentlicht. Abweichungen durch produktspezifisches Verhalten finden Sie ggf. auf der Hilfeseite der Funktion.
 
 ## <a name="versions-and-platforms"></a>Versionen und Plattformen
 
@@ -42,7 +40,7 @@ Das **microsoftml**-Modul basiert auf Python 3.5 und ist nur verfügbar, wenn Si
 Die Algorithmen folgender Elemente hängen in **microsoftml** von [revoscalepy](ref-py-revoscalepy.md) ab:
 
 + Datenquellenobjekte: Die von **microsoftml**-Funktionen genutzten Daten werden mithilfe von **revoscalepy**-Funktionen erstellt.
-+ Remotecomputing (das Verschieben der Funktionsausführung in eine SQL Server-Remoteinstanz): Die **revoscalepy**-Bibliothek stellt Funktionen zum Erstellen und Aktivieren eines Remotecomputekontexts für SQL Server bereit.
++ Remotecomputing (das Verschieben der Funktionsausführung in eine SQL Server-Remoteinstanz): Das **revoscalepy**-Paket stellt Funktionen zum Erstellen und Aktivieren eines Remotecomputekontexts für SQL Server bereit.
 
 In den meisten Fällen werden die Pakete bei der Verwendung von **microsoftml** zusammen geladen.
 

@@ -1,5 +1,6 @@
 ---
 title: Bereitstellung und Versionsunterstützung in SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die unterstützten Versionen für das Erstellen und Veröffentlichen von Berichten in SQL Server Data Tools. Außerdem lernen Sie, wie Sie Projektkonfigurations- und Bereitstellungseigenschaften festlegen.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a33626c529d59d9ffa2b80e012dbb325c93b670a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571496"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917960"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Bereitstellung und Versionsunterstützung in SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] unterstützt die folgenden Szenarien:  
@@ -33,7 +34,7 @@ ms.locfileid: "65571496"
   
  Berichte werden erstellt, bevor sie als Vorschauberichte im Berichts-Designer gerendert oder auf dem Berichtsserver bereitgestellt werden.  
   
- Die Konfigurationseigenschaften legen Sie im Dialogfeld [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Projekteigenschaften**von** fest.  
+ Die Konfigurationseigenschaften legen Sie im Dialogfeld **Projekteigenschaften** von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fest.  
   
  Die Erstellungs- und Bereitstellungseigenschaften umfassen:  
   

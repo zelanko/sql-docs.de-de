@@ -1,5 +1,6 @@
 ---
 title: Benutzerrolleneigenschaften (Management Studio) | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr zur Eigenschaftenseite der Benutzerrolle in SQL Server Management Studio, auf der Sie Rollendefinitionsaufgaben auf Elementebene anzeigen, die Aufgabenliste bearbeiten oder eine Rollenbeschreibung ändern.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7c663f1a6d13b910492e21b1bd05145dc2a5833
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15e72e12f36753c86010a487e33ba4170c4d91c5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575774"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918926"
 ---
 # <a name="user-role-properties-management-studio"></a>Benutzerrolleneigenschaften (Management Studio)
   Mithilfe dieser Seite sehen Sie, welche Aufgaben in einer Rollendefinition auf Elementebene eingeschlossen sind. Mit dieser Seite können Sie außerdem die Aufgabenliste oder eine Rollenbeschreibung ändern.  

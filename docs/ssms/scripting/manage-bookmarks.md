@@ -1,5 +1,6 @@
 ---
 title: Verwalten von Lesezeichen
+description: Das Lesezeichenfenster in einem Code-Editor ermöglicht es Ihnen, Links zu Stellen im Code zu erstellen. In diesem Artikel erfahren Sie, wie Sie Lesezeichen erstellen, löschen, aktivieren und deaktivieren und wie Sie mit ihnen durch Ihren Code navigieren können.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7879c6c7d07e7e0caeb075652b87b42fdf3ab66c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b75287c722757e6bb6f12a7eb282b7f141a9483
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261833"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122601"
 ---
 # <a name="manage-bookmarks"></a>Verwalten von Lesezeichen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Während der Arbeit mit einem Code-Editor können Sie mithilfe des Fensters **Lesezeichen** Links zu bestimmten Codezeilen innerhalb des Dokuments erstellen. Sie können dieses Fenster über das Menü **Ansicht** anzeigen.  
   
  Zum Erstellen von Lesezeichen und für die Navigation innerhalb der Lesezeichen klicken Sie auf die auf der Symbolleiste **Text-Editor** und die oben im Fenster **Lesezeichen** vorhandenen Schaltflächen. Sie können Lesezeichen hinzufügen und entfernen, aktivieren oder deaktivieren und in Ordnern organisieren. Bestimmte Befehle stehen auch über das Kontextmenü im Fenster **Lesezeichen** zur Verfügung. Zum Hinzufügen oder Entfernen eines Lesezeichens platzieren Sie die Einfügemarke im Editor auf der gewünschten Zeile, und klicken Sie dann auf **Lesezeichen ein/aus**. Zum Aktivieren eines Lesezeichens aktivieren Sie im Fenster **Lesezeichen** das zugehörige Kontrollkästchen; Zum Deaktivieren (aber nicht zum Entfernen) eines Lesezeichens deaktivieren Sie das Kontrollkästchen.  

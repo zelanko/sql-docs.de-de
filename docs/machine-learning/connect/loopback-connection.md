@@ -1,8 +1,8 @@
 ---
 title: SQL-Loopbackverbindung
-description: Hier erfahren Sie, wie Sie mit einer Loopbackverbindung über ODBC eine Verbindung zurück zu SQL Server herstellen können, um Daten in einem über „sp_execute_external_script“ ausgeführten Python- oder R-Skript lesen oder schreiben können. Sie können diese Methode verwenden, wenn nicht die Möglichkeit besteht, die Argumente „InputDataSet“ und „OutputDataSet“ von „sp_execute_external_script“ zu verwenden.
+description: In diesem Artikel erfahren Sie, wie Sie mit einer Loopbackverbindung über ODBC eine Verbindung zurück zu SQL Server herstellen können, um Daten in einem über „sp_execute_external_script“ ausgeführten Python- oder R-Skript lesen oder schreiben zu können.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 08/21/2019
 ms.topic: conceptual
 author: Aniruddh25
@@ -10,15 +10,15 @@ ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c7fa36db48a7912951f0232136945798caf6f7f7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 00938d1fe628c4984a55cb5c0b76e6910293808a
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118643"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86482611"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Loopbackverbindung zu SQL Server über ein Python- oder R-Skript
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Hier erfahren Sie, wie Sie mit einer Loopbackverbindung über [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) eine Verbindung zurück zu SQL Server herstellen können, um Daten in einem über `sp_execute_external_script` ausgeführten Python- oder R-Skript lesen oder schreiben können. Sie können diese Methode verwenden, wenn nicht die Möglichkeit besteht, die Argumente **InputDataSet** und **OutputDataSet** von `sp_execute_external_script` zu verwenden.
 

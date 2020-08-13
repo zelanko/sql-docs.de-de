@@ -1,5 +1,6 @@
 ---
 title: Auf den WMI-Anbieter für Reporting Services zugreifen | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie auf den WMI-Anbieter der Reporting Services zugreifen, der zwei WMI-Klassen für die Verwaltung von Berichtsserverinstanzen im einheitlichen Modus über Skripterstellung verfügbar macht.
 ms.date: 11/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbce09bb5c76d29bf56defb3c5403665e5226558
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 887dc0895351eecf351e08efdfe6c40a8285a6ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576760"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918406"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Zugreifen auf den Reporting Services-WMI-Anbieter
   Der Reporting Services-WMI-Anbieter macht zwei WMI-Klassen für die Verwaltung von Berichtsserverinstanzen im einheitlichen Modus durch Skripterstellung verfügbar:  

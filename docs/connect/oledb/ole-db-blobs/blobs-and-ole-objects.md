@@ -1,8 +1,8 @@
 ---
-title: Blobs und OLE-Objekte | Microsoft-Dokumentation
+title: Blobs und OLE-Objekte (OLE DB-Treiber) | Microsoft-Dokumentation
 description: BLOBs und OLE-Objekte
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,20 +16,22 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54f8b4c38c22bcb32b039d9f0f0887c298051302
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67988667"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942785"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs und OLE-Objekte
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server macht die **ISequentialStream**-Schnittstelle verfügbar, um den Consumerzugriff auf die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und XML als Binary Large Objects (Blobs) zu unterstützen. Die Methode **Read** für **ISequentialStream** ermöglicht dem Consumer, große Datenmengen in überschaubaren Abschnitten abzurufen.  
-  
+  Der OLE DB-Treiber für SQL Server macht die Schnittstelle **ISequentialStream** verfügbar, um den Consumerzugriff auf die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen **ntext**, **text**<a href="#text_note"><sup>**1**</sup></a>, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und XML als Binary Large Objects (Blobs) zu unterstützen. Die Methode **Read** für **ISequentialStream** ermöglicht dem Consumer, große Datenmengen in überschaubaren Abschnitten abzurufen.
+
+ <b id="text_note">[1]:</b> Die Schnittstelle „ISequentialStream“ zum Einfügen von UTF-8-codierten Daten in eine Legacytextspalte kann nur auf Servern eingesetzt werden, die UTF-8 unterstützen. Der Versuch, dieses Szenario für einen Server auszuführen, der UTF-8 nicht unterstützt, führt zu folgender Fehlermeldung des Treibers: „*Streaming über den ausgewählten Spaltentyp ist nicht zugelassen*“.
+
  Ein Beispiel für diese Feature finden Sie unter [Festlegen von großen Daten &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  Der OLE DB-Treiber für SQL Server kann eine vom Consumer implementierte **IStorage**-Schnittstelle verwenden, wenn der Consumer den Schnittstellenzeiger in einem für Datenänderungen gebundenen Accessor bereitstellt.  

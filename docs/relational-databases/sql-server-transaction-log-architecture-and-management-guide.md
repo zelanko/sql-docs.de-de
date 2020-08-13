@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 976fae5e1f906e80248ac11d1f89e889bcbb5e0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b41b9a68776a41b9b7aaab480ea749187becf5b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000523"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122648"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,11 +95,11 @@ Weitere Informationen zu den Argumenten `FILEGROWTH` und `SIZE` von `ALTER DATAB
   
  Das Transaktionsprotokoll ist eine umbrechende Protokolldatei. Nehmen Sie beispielsweise an, eine Datenbank verfügt über eine physische Protokolldatei, die in vier VLFs unterteilt ist. Wenn die Datenbank erstellt wird, beginnt die logische Protokolldatei am Anfang der ersten physischen Protokolldatei. Neue Protokolldatensätze werden am Ende des logischen Protokolls hinzugefügt, das in Richtung des Endes des physischen Protokolls erweitert wird. Beim Abschneiden eines Protokolls werden alle virtuellen Protokolle freigegeben, deren Datensätze sich ohne Ausnahme vor der Mindestwiederherstellungs-Protokollfolgenummer (Minimum Recovery Log Sequence Number, MinLSN) befinden. *MinLSN* ist die Protokollfolgenummer des ältesten Protokolldatensatzes, der für einen erfolgreichen Rollback der gesamten Datenbank benötigt wird. Das Transaktionsprotokoll in der Beispieldatenbank würde in etwa so aussehen wie das Protokoll in der folgenden Abbildung.  
   
- ![tranlog3](../relational-databases/media/tranlog3.gif)  
+ ![Veranschaulichung der Aufteilung einer physischen Protokolldatei in virtuelle Protokolle](../relational-databases/media/tranlog3.png)  
   
  Wenn das Ende des logischen Protokolls das Ende der physischen Protokolldatei erreicht, erfolgt ein Umbruch, und neue Protokolldatensätze werden nun wieder am Anfang der physischen Protokolldatei eingefügt.  
   
-![tranlog4](../relational-databases/media/tranlog4.gif)   
+![Veranschaulichung der Umschließung im Zusammenhang mit einem logischen Transaktionsprotokoll in der physischen Protokolldatei](../relational-databases/media/tranlog4.png)   
   
  Solange das Ende des logischen Protokolls nicht den Anfang des logischen Protokolls erreicht, wird dieser Kreislauf endlos wiederholt. Wenn die alten Protokolldatensätze häufig genug abgeschnitten werden, um ausreichend Platz für alle neuen Protokolldatensätze freizugeben, die bis zum nächsten Prüfpunkt erstellt werden, wird das Protokoll nie vollständig aufgefüllt. Wenn das Ende des logischen Protokolls jedoch den Anfang des logischen Protokolls erreicht, wird eine der beiden folgenden Aktionen eingeleitet:  
   
@@ -117,11 +117,11 @@ Weitere Informationen zu den Argumenten `FILEGROWTH` und `SIZE` von `ALTER DATAB
   
  Die folgenden Abbildungen zeigen ein Transaktionsprotokoll vor und nach dem Abschneiden. In der ersten Abbildung wird ein Transaktionsprotokoll gezeigt, das noch nie abgeschnitten wurde. Aktuell verwendet das logische Protokoll vier virtuelle Protokolldateien. Das logische Protokoll beginnt am Anfang der ersten virtuellen Protokolldatei und endet beim virtuellen Protokoll 4. Der MinLSN-Datensatz befindet sich im virtuellen Protokoll 3. Das virtuelle Protokoll 1 und das virtuelle Protokoll 2 enthalten nur inaktive Protokolldatensätze. Diese Datensätze können abgeschnitten werden. Das virtuelle Protokoll 5 wurde noch nicht verwendet und ist nicht Teil des aktuellen logischen Protokolls.  
   
-![tranlog2](../relational-databases/media/tranlog2.gif)  
+![Veranschaulichung der Anzeige eines Transaktionsprotokolls vor dem Abschneiden](../relational-databases/media/tranlog2.png)  
   
  Die zweite Abbildung zeigt das Protokoll, nachdem es abgeschnitten wurde. Die virtuellen Protokolle 1 und 2 wurden für die Wiederverwendung freigegeben. Das logische Protokoll beginnt nun am Anfang des virtuellen Protokolls 3. Das virtuelle Protokoll 5 wurde noch nicht verwendet und ist nicht Teil des aktuellen logischen Protokolls.  
   
-![tranlog3](../relational-databases/media/tranlog3.gif)  
+![Veranschaulichung der Anzeige eines Transaktionsprotokolls nach dem Abschneiden](../relational-databases/media/tranlog3.png)  
   
  Die Protokollkürzung erfolgt automatisch wie folgt, außer es tritt aus irgendeinem Grund eine Verzögerung auf:  
   
@@ -228,7 +228,7 @@ Der Abschnitt der Protokolldatei von der MinLSN bis zu dem zuletzt geschriebenen
 
 Bei der folgenden Abbildung handelt es sich um die vereinfachte Version des Endes eines Transaktionsprotokolls mit zwei aktiven Transaktionen. Die Prüfpunkteinträge wurden zu einem einzigen Eintrag zusammengefasst.
 
-![active_log](../relational-databases/media/active-log.gif) 
+![Veranschaulichung des Endes eines Transaktionsprotokolls mit zwei aktiven Transaktionen und einem komprimierten Prüfpunktdatensatz](../relational-databases/media/active-log.png) 
 
 LSN 148 ist der letzte Eintrag im Transaktionsprotokoll. Zum Zeitpunkt der Verarbeitung des Prüfpunktes, der bei LSN 147 aufgezeichnet wurde, wurde für Tran 1 ein Commit ausgeführt, und Tran 2 war die einzige aktive Transaktion. Hierdurch wird der erste Protokolldatensatz für Tran 2 zum ältesten Protokolleintrag für eine Transaktion, die zum Zeitpunkt des letzten Prüfpunktes aktiviert war. LSN 142, der Eintrag für den Transaktionsbeginn von Tran 2, wird somit zur MinLSN.
 

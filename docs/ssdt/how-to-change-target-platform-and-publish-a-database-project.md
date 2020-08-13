@@ -1,5 +1,6 @@
 ---
 title: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts
+description: In diesem Artikel erfahren Sie, wie Sie die Plattform für ein Datenbankprojekt in SQL Server Data Tools in eine unterstützte SQL Server-Instanz ändern. Außerdem erfahren Sie, wie Sie ein Datenbankprojekt veröffentlichen.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: a2af594db8c4f92028a9a36b8cc54f5f3712c9b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241604"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942466"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts
 
@@ -41,7 +41,7 @@ SSDT vereinfacht auch diese Aufgabe durch Berücksichtigung der Zielplattform un
   
 2.  Fügen Sie an das Ende der `ON [PRIMARY]` -Anweisung `CREATE TABLE` an.  
   
-3.  Beachten Sie, dass der folgende Fehler im Bereich **Fehlerliste** angezeigt wird:  SQL70015: 'Filegroup reference and partitioning scheme' is not supported in SQL Azure. („Dateigruppenverweis und Partitionierungsschema“ wird in SQL Azure nicht unterstützt)  
+3.  Beachten Sie, dass im Bereich **Fehlerliste** der folgende Fehler angezeigt wird: „SQL70015: "Dateigruppenverweis und Partitionierungsschema" wird in SQL Azure nicht unterstützt.“  
   
     SSDT überprüft das Skript automatisch auf Grundlage der Zielplattform. Da Dateigruppen in SQL Azure nicht unterstützt werden, gibt SSDT in diesem Fall einen Fehler zurück. Eine Liste der in SQL Azure nicht unterstützten Transact\-SQL-Anweisungen finden Sie unter [Teilweise unterstützte Transact-SQL-Anweisungen (Microsoft Azure SQL-Datenbank)](https://msdn.microsoft.com/library/ee336267.aspx).  
   
@@ -67,5 +67,5 @@ SSDT vereinfacht auch diese Aufgabe durch Berücksichtigung der Zielplattform un
   
 **Bei einem Projekt, bei dem Microsoft SQL Server 2012 als Zielplattform angegeben ist, können möglicherweise Kompatibilitätsprobleme mit SQL Server 2008 auftreten.** Enthält ein solches Projekt Entitäten (z.B. ein Sequenzobjekt), die in Microsoft SQL Server 2012 eingeführt wurden, tritt beim Veröffentlichungsvorgang ein Fehler auf.  
   
-    The deployment will fail if object predicates use **CONTAINS** or **FREETEXT** over a newly created full-text index and transactional scripts are used. If the option to include transactional scripts is enabled during deployment, then procedures and views are defined inside a transaction while a full-text index is defined outside of a transaction at the end of the deploy script. Because of this ordering in the script, procedures or views using CONTAINS or FREETEXT will not be resolved against the full-text index, resulting in a deployment error.  
+Bei der Bereitstellung tritt ein Fehler auf, wenn Objektprädikate **CONTAINS** oder **FREETEXT** für einen neu erstellten Volltextindex verwenden und Transaktionsskripts eingesetzt werden. Wenn die Option zum Einschließen von Transaktionsskripts während der Bereitstellung aktiviert ist, werden Prozeduren und Sichten innerhalb einer Transaktion definiert, während ein Volltextindex außerhalb einer Transaktion am Ende des Bereitstellungsskripts definiert wird. Aufgrund dieser im Skript vorgegebenen Reihenfolge werden Prozeduren oder Sichten, die CONTAINS oder FREETEXT verwenden, nicht anhand des Volltextindexes aufgelöst, was zu einem Bereitstellungsfehler führt.  
   

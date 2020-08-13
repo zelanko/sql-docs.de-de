@@ -1,5 +1,6 @@
 ---
 title: Konfigurieren von Editoren (SQL Server Management Studio)
+description: In diesem Artikel erfahren Sie, wie Sie den Vorgang der SQL Server Management Studio-Editoren anpassen, indem Sie die Optionen im Dialogfeld „Optionen“ festlegen.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c70980653cd23241d0021d85a507e55573cf43b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2fe8cc40b18678e080e97285f5566a3a0de7a73b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253964"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122871"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Konfigurieren von Editoren (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Sie können die Operation der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Editoren anpassen, indem Sie die Optionen für jeden Editor konfigurieren.  
   
-## <a name="settng-editor-options"></a>Settng-Editor-Optionen  
+## <a name="setting-editor-options"></a>Festlegen der Editor-Optionen  
  Sie können die meisten Editoroptionen einrichten, indem Sie im Menü **Extras** den Eintrag **Optionen…** auswählen und so das Dialogfeld **Optionen** anzeigen. Öffnen Sie im Dialogfeld **Optionen** den Knoten **Text-Editor** im linken Bereich, um die Optionen für Code- und Textbearbeitung festzulegen. Die Knoten unter Text-Editor gelten für bestimmte Editoren:  
   
 1.  **Alle Sprachen**: Mit diesem Knoten festgelegte Optionen gelten für alle [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]-Editoren. Sie können diese Einstellungen mithilfe der anderen Knoten überschreiben, um für einen bestimmten Editor andere Optionen festzulegen.  

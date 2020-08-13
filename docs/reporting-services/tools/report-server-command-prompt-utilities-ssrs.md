@@ -1,5 +1,6 @@
 ---
 title: Eingabeaufforderungs-Hilfsprogramme für Berichtsserver | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die SQL Server Reporting Services-Befehlszeilen-Hilfsprogramme, die zum Verwalten eines Berichtsservers verwendet werden.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db8be061664d720ba3be1a4f66ed05062bb1af21
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 034d051548e3a4ae498128b37a5bbdc8ba75f422
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081916"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914176"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>Eingabeaufforderungs-Hilfsprogramme für Berichtsserver (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält mehrere Befehlszeilenhilfsprogramme, die Sie zum Verwalten eines Berichtsservers verwenden können. Diese Hilfsprogramme werden beim Installieren eines Berichtsservers automatisch installiert.  
@@ -32,7 +33,7 @@ ms.locfileid: "77081916"
 |Hilfsprogramm rskeymgmt|rskeymgmt.exe|Nur systemeigen|Das [rskeymgmt-Hilfsprogramm](../../reporting-services/tools/rskeymgmt-utility-ssrs.md) ist ein Verwaltungstool für Verschlüsselungsschlüssel. Mit diesem Programm können Sie symmetrische Schlüssel sichern, anwenden, neu erstellen und löschen. Außerdem können Sie mit diesem Tool eine Berichtsserverinstanz an eine freigegebene Berichtsserver-Datenbank anfügen. Rskeymgmt kann bei Wiederherstellungsvorgängen für Datenbanken verwendet werden. Sie können eine vorhandene Datenbank in einer neuen Installation erneut verwenden, indem Sie eine Sicherungskopie des symmetrischen Schlüssels anwenden. Wenn die Schlüssel nicht wiederhergestellt werden können, bietet das Tool eine Möglichkeit zum Löschen nicht mehr benötigter verschlüsselter Inhalte. Weitere Informationen über das Verwalten von Schlüsseln und das Speichern sensibler Daten finden Sie unter [Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md) und [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
   
 > [!NOTE]  
->  Wenn Sie ein Tool mit einer grafischen Benutzeroberfläche bevorzugen, können Sie anstelle von **rsconfig** und **rskeymgmt**den Reporting Services-Konfigurations-Manager verwenden.  
+>   Wenn Sie ein Tool mit einer grafischen Benutzeroberfläche bevorzugen, können Sie anstelle von **rsconfig** und **rskeymgmt**den Reporting Services-Konfigurations-Manager verwenden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

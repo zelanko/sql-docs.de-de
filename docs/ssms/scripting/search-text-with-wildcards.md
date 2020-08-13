@@ -1,5 +1,6 @@
 ---
 title: Suchen von Text mit Platzhaltern
+description: Hier erfahren Sie, wie Sie Platzhalter im Feld „Suchen nach“ des Dialogfelds „Suchen und ersetzen“ verwenden, um ein Muster anzugeben, das abgeglichen werden soll.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 766bb8d9a90fb3f1af5a7697e52ae42f6c8fc8d7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c8e2766939038879d92de0f8f73b5c2eab38f45d
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253623"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122791"
 ---
 # <a name="search-text-with-wildcards"></a>Suchen von Text mit Platzhaltern
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Mit den folgenden Ausdrücken lassen sich Zeichen oder Ziffern im Feld **Suchen nach** im Dialogfeld [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Suchen und Ersetzen**in** ersetzen.  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+  Mit den folgenden Ausdrücken lassen sich Zeichen oder Ziffern im Feld **Suchen nach** im Dialogfeld **Suchen und Ersetzen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ersetzen.  
   
 #### <a name="to-search-using-wildcards"></a>So suchen Sie mit Platzhaltern  
   

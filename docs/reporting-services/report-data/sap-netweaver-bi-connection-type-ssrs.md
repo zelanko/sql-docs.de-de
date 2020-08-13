@@ -1,5 +1,6 @@
 ---
 title: SAP NetWeaver BI-Verbindungstyp | Microsoft-Dokumentation
+description: Mithilfe der Informationen in diesem Artikel zum Verbindungstyp „SAP NetWeaver BI“ erfahren Sie, wie Sie eine Datenquelle erstellen.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c9edca5b50403f47b82cd2e69d51eb568c66f8a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 028ee19646716666314b0242e0ebe0e3c6551e95
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081778"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457750"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI-Verbindungstyp (SSRS)
   Wenn Sie Daten aus einer externen SAP NetWeaver® Business Intelligence-Datenquelle in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]" basiert. Dieser integrierte Datenquellentyp basiert auf der Datenerweiterung für den [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Datenanbieter 1.0 für [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -79,7 +80,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ### <a name="predefined-field-properties"></a>Vordefinierte Feldeigenschaften  
  Die folgende Tabelle enthält eine Liste der vordefinierten Feldeigenschaften, die Sie für eine [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] -Datenquelle verwenden können.  
   
-|**Eigenschaft**|**Typ**|**Beschreibung oder erwarteter Wert**|  
+|**Property**|**Type**|**Beschreibung oder erwarteter Wert**|  
 |------------------|--------------|---------------------------------------|  
 |**Wert**|**Object**|Gibt den Datenwert des Felds an.|  
 |**IsMissing**|**Boolescher Wert**|Gibt an, ob das Feld im resultierenden Dataset gefunden wurde.|  

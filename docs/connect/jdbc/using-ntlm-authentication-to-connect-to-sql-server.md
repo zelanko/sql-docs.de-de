@@ -1,5 +1,6 @@
 ---
-title: Herstellen von Verbindungen mit SQL Server mit NTLM-Authentifizierung | Microsoft-Dokumentation
+title: Herstellen von Verbindungen mit SQL Server mit einer NTLM-Authentifizierung
+description: Hier erfahren Sie, wie Sie mithilfe der NTLM-Authentifizierung eine SQL-Datenbank-Verbindung mit dem JDBC-Treiber herstellen.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69026101"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393148"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Herstellen von Verbindungen mit SQL Server mit NTLM-Authentifizierung
 
@@ -72,7 +73,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 Ein Dienstprinzipalname (SPN, Service Principal Name) ist der Name, über den ein Client eine Instanz eines Diensts eindeutig identifiziert.
 
-Sie können den SPN mithilfe der Verbindungseigenschaft **serverSpn** angeben oder ihn vom Treiber erstellen lassen (Standardeinstellung). Diese Eigenschaft weist folgende Form auf: „MSSQLSvc/fqdn:port\@REALM“. Dabei stellt „fqdn“ den vollqualifizierten Domänennamen, „port“ die Portnummer und „REALM“ den SQL Server-Bereich in Großbuchstaben dar. Der Abschnitt für den Bereich ist bei dieser Eigenschaft optional, da der Standardbereich dem Bereich des Servers entspricht.
+Sie können den SPN mithilfe der Verbindungseigenschaft **serverSpn** angeben oder ihn vom Treiber erstellen lassen (Standardeinstellung). Diese Eigenschaft kann in der Form „MSSQLSvc/fqdn:port\@REALM“ angegeben werden, wobei „fqdn“ den vollqualifizierten Domänennamen, „port“ die Portnummer und „REALM“ den Bereich des SQL Server-Computers in Großbuchstaben darstellen. Der Abschnitt für den Bereich ist bei dieser Eigenschaft optional, da der Standardbereich dem Bereich des Servers entspricht.
 
 Nachfolgend ist ein Beispiel Ihres Dienstprinzipalnamens gezeigt: MSSQLSvc/some-server.zzz.corp.contoso.com:1433
 

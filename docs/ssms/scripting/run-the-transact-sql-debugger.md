@@ -1,5 +1,6 @@
 ---
 title: Ausführen des Transact-SQL-Debuggers
+description: Hier erfahren Sie, wie Sie den Transact-SQL-Debugger anpassen und verwenden, um Ihren Transact-SQL-Code zu debuggen. Sie können den Debugger auf einer Instanz der Datenbank-Engine ausführen, die sich auf einem anderen Computer befindet.
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -22,16 +23,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 471a69f76a9cb663267e6d1b8c5e8c10614912bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 24fc9e6fd00aa0586630e611ef09568b7bf61cba
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253793"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122825"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ausführen des Transact-SQL-Debuggers
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Sie können den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger starten, nachdem Sie ein [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage-Editor-Fenster geöffnet haben. Anschließend können Sie den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code im Debugmodus ausführen, bis Sie den Debugger beenden. Sie können Optionen festlegen, um die Ausführung des Debuggers anzupassen.
 
@@ -83,7 +84,7 @@ Um den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger zu starten, müssen
   
  Die folgende Tabelle enthält die Menübefehle, Symbolleistenschaltflächen und Tastenkombinationen für den Debugger.  
   
-|Menübefehle für das Debuggen|Editor-Verknüpfungsbefehl|Symbolleistenschaltfläche|Tastenkombinationen|Action|  
+|Menübefehle für das Debuggen|Editor-Verknüpfungsbefehl|Symbolleistenschaltfläche|Tastenkombinationen|Aktion|  
 |------------------------|-----------------------------|--------------------|-----------------------|------------|  
 |**Fenster/Breakpoints**|Nicht verfügbar|**Breakpoints**|STRG+ALT+B|Zeigt das Fenster **Breakpoints** an, in dem Sie Breakpoints anzeigen und verwalten können.|  
 |**Fenster/Überwachung/Überwachen 1**|Nicht verfügbar|**Breakpoints/Überwachung/Überwachen 1**|STRG+ALT+W, 1|Zeigt das Fenster **Überwachen 1** an.|  

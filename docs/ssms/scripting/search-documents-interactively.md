@@ -1,5 +1,6 @@
 ---
 title: Interaktives Durchsuchen von Dokumenten
+description: Informieren Sie sich, wie Sie mithilfe des Dialogfelds „Suchen und ersetzen“ eine oder mehrere geöffnete Dateien oder Fenster durchsuchen können, indem Sie nach jeder Übereinstimmung überprüfen, was in diesem Kontext gefunden wurde. Sie können auch einen Massensuchvorgang ausführen und die Übereinstimmungen im Rahmen der Suche im Berichtsformat überprüfen.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bcdb8d269deb90d7c88c0f88a98e55289c89635
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c6bfdd07a0af13e5b0e8923a7549b3401db485b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253665"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122821"
 ---
 # <a name="search-documents-interactively"></a>Interaktives Durchsuchen von Dokumenten
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Mithilfe des Dialogfelds **Suchen und Ersetzen** können Sie einzelne oder mehrere geöffnete Dateien oder Fenster durchsuchen und sich einzeln durch die Suchübereinstimmungen bewegen. Bei dieser Technik können Sie einzelne Suchübereinstimmungen im Kontext der jeweiligen Textpassage überprüfen. Außerdem können Sie Massensuchvorgänge ausführen und Suchübereinstimmungen über das Dialogfeld **Suchen und Ersetzen** im Berichtsformat überprüfen.  
   
 ### <a name="to-search-all-open-documents"></a>So durchsuchen Sie alle geöffneten Dokumente  

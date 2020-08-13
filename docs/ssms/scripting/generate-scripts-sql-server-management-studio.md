@@ -1,5 +1,6 @@
 ---
 title: Generieren von Skripts
+description: Hier erfahren Sie, wie Sie den Assistenten zum Generieren und Veröffentlichen von Skripts verwenden, um Transact-SQL-Skripts für mehrere Objekte zu erstellen. Außerdem wird erläutert, wie Sie das Skript als Menü im Objekt-Explorer nutzen, um Skripts für einzelne oder mehrere Objekte zu generieren.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25249c04d322e2faa4c876b1afd2822896038b6
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151875"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123127"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Erstellen von Skripts (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt zwei Mechanismen zum Generieren von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts bereit. Verwenden Sie zum Erstellen von Skripts für mehrere Objekte den **Assistenten zum Generieren und Veröffentlichen von Skripts**. Sie können ein Skript für einzelne Objekte oder mehrere Objekte auch über das Menü **Skript für** im **Objekt-Explorer**generieren.
 
@@ -48,7 +49,7 @@ Sie können das Menü **Skripterstellung als** des Objekt-Explorers verwenden, u
 
 3. Erweitern Sie die Kategorie des Objekts. Beispiel: Erweitern Sie den Knoten **Tabellen** oder **Sichten** .
 
-4. Klicken Sie mit der rechten Maustaste auf das Objekt, zeigen Sie auf **Skript für \<Objekttyp> als**. Zeigen Sie z.B. auf **Skripttabelle als**.
+4. Klicken Sie mit der rechten Maustaste auf das Objekt, und zeigen Sie auf **Skript für \<object type> als** (z. B. **Skript für Tabelle als**).
 
 5. Zeigen Sie auf den Skripttyp, z. B. **CREATE in** oder **ALTER in**.
 
@@ -72,6 +73,6 @@ Sie können den Bereich **Details** des Objekt-Explorers verwenden, um ein Skrip
 
 6. Klicken Sie bei gedrückter STRG-TASTE mit der linken Maustaste auf das zweite Objekt, für das Sie ein Skript erstellen möchten.
 
-7. Klicken Sie mit der rechten Maustaste auf eines der ausgewählten Objekte, und wählen Sie **Skript für \<Objekttyp> als** aus.
+7. Klicken Sie mit der rechten Maustaste auf eines der ausgewählten Objekte und dann auf **Skript für \<object type> als**.
 
     ![Objekt-Explorer](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

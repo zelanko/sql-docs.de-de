@@ -1,39 +1,39 @@
 ---
-title: RevoScaleR-Funktionsbibliothek für R
-description: Einführung in die RevoScaleR-Funktionsbibliothek in SQL Server 2016 R Services und SQL Server Machine Learning Services mit R.
+title: R-Paket „RevoScaleR“
+description: „RevoScaleR“ ist ein R-Paket von Microsoft, das verteiltes Computing, Remotecomputekontexte und hochleistungsfähige Data Science-Algorithmen unterstützt. Außerdem werden Datenimport, Datentransformation, Zusammenfassung, Visualisierung und Analyse unterstützt. Das Paket ist in SQL Server Machine Learning Services und SQL Server 2016 R Services enthalten.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2288c1898d9299fb346a80e2cd0a53104e308724
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117433"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406153"
 ---
-# <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (R-Bibliothek in SQL Server)
+# <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR (R-Paket in SQL Server Machine Learning Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**RevoScaleR** ist eine Bibliothek mit hochleistungsfähigen Data Science-Funktionen von Microsoft. Die Funktionen unterstützen Datenimport, Datentransformation, Zusammenfassung, Visualisierung und Analyse.
+**RevoScaleR** ist ein R-Paket von Microsoft, das verteiltes Computing, Remotecomputekontexte und hochleistungsfähige Data Science-Algorithmen unterstützt. Außerdem werden Datenimport, Datentransformation, Zusammenfassung, Visualisierung und Analyse unterstützt. Das Paket ist in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) und [SQL Server 2016 R Services](sql-server-r-services.md) enthalten.
 
-Im Gegensatz zu den grundlegenden R-Funktionen können RevoScaleR-Vorgänge für sehr große Datasets parallel und für verteilte Dateisysteme ausgeführt werden. Die Funktionen können über Datasets, die nicht in den Arbeitsspeicher passen, durch Segmentierung und Neuzusammenstellung der Ergebnisse nach Beendigung der Vorgänge verwendet werden.
+Im Gegensatz zu den grundlegenden R-Funktionen können RevoScaleR-Vorgänge für große Datasets, parallel und für verteilte Dateisysteme ausgeführt werden. Die Funktionen können über Datasets, die nicht in den Arbeitsspeicher passen, durch Segmentierung und Neuzusammenstellung der Ergebnisse nach Beendigung der Vorgänge verwendet werden.
 
-RevoScaleR-Funktionen sind mit einem **rx**- oder **Rx**-Präfix gekennzeichnet, damit sie leichter zu identifizieren sind.
+RevoScaleR-Funktionen sind mit einem rx**- oder **Rx**-Präfix gekennzeichnet, damit sie leichter zu identifizieren sind.
 
 RevoScaleR fungiert als Plattform für verteilte Data Science-Prozesse. Sie können beispielsweise die RevoScaleR-Computekontexte und -Transformationen mit den modernen Algorithmen in [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package) verwenden. Sie können auch [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) verwenden, um grundlegende R-Funktionen parallel auszuführen.
 
 ## <a name="full-reference-documentation"></a>Vollständige Referenzdokumentation
 
-Die **RevoScaleR**-Bibliothek wird in mehreren Microsoft-Produkten bereitgestellt. Die Verwendung ist jedoch immer identisch, unabhängig davon, ob Sie die Bibliothek in SQL Server oder einem anderen Produkt abrufen. Aus diesem Grund wird die [Dokumentation für einzelne RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) nur an einer Stelle in der [R-Referenz](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) für Microsoft Machine Learning Server veröffentlicht. Abweichungen durch produktspezifisches Verhalten finden Sie ggf. auf der Hilfeseite der Funktion.
+Das **RevoScaleR**-Paket wird in mehreren Microsoft-Produkten bereitgestellt. Die Verwendung ist jedoch immer identisch, unabhängig davon, ob Sie das Paket in SQL Server oder einem anderen Produkt abrufen. Aus diesem Grund wird die [Dokumentation für einzelne RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) nur an einer Stelle in der [R-Referenz](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) für Microsoft Machine Learning Server veröffentlicht. Abweichungen durch produktspezifisches Verhalten finden Sie ggf. auf der Hilfeseite der Funktion.
 
 ## <a name="versions-and-platforms"></a>Versionen und Plattformen
 
-Die **RevoScaleR**-Bibliothek basiert auf R 3.4.3 und ist nur verfügbar, wenn Sie eines der folgenden Microsoft-Produkte oder Downloads installieren:
+Das **RevoScaleR**-Paket basiert auf R 3.4.3 und ist nur verfügbar, wenn Sie eines der folgenden Microsoft-Produkte oder Downloads installieren:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)

@@ -1,5 +1,6 @@
 ---
 title: RS.EXE-Hilfsprogramm | Microsoft-Dokumentation
+description: In diesem Artikel erhalten Sie Informationen zu den Befehlen und der Syntax für das rs.exe-Hilfsprogramm, das Skripts verarbeitet, die verwendet werden, um Berichtsserverbereitstellungen und Verwaltungsaufgaben zu automatisieren.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e92646e27dcabed21aa387a8cf22caf95770ff6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081689"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914978"
 ---
 # <a name="rsexe-utility-ssrs"></a>Hilfsprogramm 'RS.exe' (SSRS)
   Das Dienstprogramm rs.exe verarbeitet Skripts, die von Ihnen in einer Eingabedatei bereitgestellt werden. Verwenden Sie dieses Hilfsprogramm, um die Berichtsserverbereitstellung und Verwaltungsaufgaben zu automatisieren.  
@@ -90,7 +91,7 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Globale Variablen werden mit den vorliegenden Namen erstellt und auf die bereitgestellten Werte festgelegt. Durch Angeben von **-v a=** "**1**" **-v b=** "**2**" werden beispielsweise eine Variable namens **a** mit dem Wert**1**und eine Variable **b** mit dem Wert**2**erstellt.  
+ Globale Variablen werden mit den vorliegenden Namen erstellt und auf die bereitgestellten Werte festgelegt. Durch Angeben von **-v a=**"**1**" **-v b=**"**2**" werden beispielsweise eine Variable namens **a** mit dem Wert**1**und eine Variable **b** mit dem Wert**2**erstellt.  
   
  Globale Variablen stehen für alle Funktionen im Skript zur Verfügung. Eine Kombination von umgekehrtem Schrägstrich und einem Anführungszeichen ( **\\"** ) wird als Anführungszeichen interpretiert. Anführungszeichen sind nur erforderlich, wenn die Zeichenfolge ein Leerzeichen enthält. Namen von Variablen müssen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] gültig sein: sie müssen mit einem Buchstaben oder Unterstrich beginnen und Buchstaben, Zahlen oder Unterstriche enthalten. Reservierte Wörter können nicht als Variablennamen verwendet werden. Weitere Informationen zur Verwendung globaler Variablen finden Sie unter [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   

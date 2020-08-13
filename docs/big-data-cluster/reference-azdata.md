@@ -5,43 +5,47 @@ description: Referenzartikel zu azdata-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94adabb2ace2f5619abd700b2652aa7d88f3e1aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7a3862dca974efc0ef035a0b52edfff39d2f5bcf
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822341"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942972"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Dieser Referenzartikel beschreibt die `azdata`-Befehle.
+Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
-|     |     |
+| Get-Help | BESCHREIBUNG |
 | --- | --- |
-|[azdata bdc](reference-azdata-bdc.md) | Auswählen, Verwalten und Betreiben von SQL Server-Big Data-Clustern. |
 |[azdata app](reference-azdata-app.md) | Erstellen, Löschen, Ausführen und Verwalten von Anwendungen. |
+|[azdata bdc](reference-azdata-bdc.md) | Auswählen, Verwalten und Betreiben von SQL Server-Big Data-Clustern. |
+|[azdata sql](reference-azdata-sql.md) | Die SQL-Datenbank-CLI ermöglicht dem Benutzer, über T-SQL mit SQL Server zu interagieren. |
 [azdata login](#azdata-login) | Melden Sie sich beim Controllerendpunkt des Clusters an, und legen Sie seinen Namespace als aktiven Kontext fest. Sie müssen die Umgebungsvariable AZDATA_PASSWORD festlegen, um ein Kennwort für die Anmeldung zu verwenden.
 [azdata logout](#azdata-logout) | Abmelden beim Cluster.
 |[azdata-Kontext](reference-azdata-context.md) | Befehle für die Kontextverwaltung. |
-|[azdata-Steuerelement](reference-azdata-control.md) | Erstellen, Entfernen und Verwalten von Steuerungsebenen |
-|[azdata sql](reference-azdata-sql.md) | Die SQL-Datenbank-CLI ermöglicht dem Benutzer, über T-SQL mit SQL Server zu interagieren. |
+|[azdata-Erweiterung](reference-azdata-extension.md) | Verwalten und Aktualisieren von CLI-Erweiterungen |
 |[azdata notebook](reference-azdata-notebook.md) | Befehle zum Anzeigen, Ausführen und Verwalten von Notebooks über ein Terminal. |
 ## <a name="azdata-login"></a>azdata login
 Wenn Ihr Cluster bereitgestellt wird, wird der Controllerendpunkt während der Bereitstellung aufgelistet, den Sie für die Anmeldung verwenden sollten.  Wenn Sie den Controllerendpunkt nicht kennen, können Sie sich anmelden, wenn sich die Kube-Konfiguration Ihres Clusters auf Ihrem System am Standardspeicherort „<user home>/.kube/config“ befindet, oder Sie die KUBECONFIG-Umgebungsvariable verwenden, d.h. „KUBECONFIG=path/to/.kube/config“ exportieren.  Wenn Sie sich anmelden, wird der Namespace dieses Clusters als Ihr aktiver Kontext festgelegt.
 ```bash
 azdata login [--auth] 
              [--endpoint -e]  
-             [--accept-eula -a]  
-             [--namespace -n]  
-             [--username -u]  
-             [--principal -p]
+             
+[--accept-eula -a]  
+             
+[--namespace -n]  
+             
+[--username -u]  
+             
+[--principal -p]
 ```
 ### <a name="examples"></a>Beispiele
 Anmeldung mithilfe der Standardauthentifizierung
@@ -89,7 +93,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-logout"></a>azdata logout
@@ -110,7 +114,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 

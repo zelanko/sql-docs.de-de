@@ -1,5 +1,5 @@
 ---
-title: Erstellen von SQL Server-Tabellen | Microsoft-Dokumentation
+title: Erstellen von SQL Server-Tabellen (OLE DB-Treiber) | Microsoft-Dokumentation
 description: Erstellen von SQL Server-Tabellen mit dem OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - CreateTable function
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 57c561ed4086221a956c12804f4d90893dc6d2a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2fbc22968180eda12bee592a507178c97eaec74e
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994058"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977807"
 ---
 # <a name="creating-sql-server-tables"></a>Erstellen von SQL Server-Tabellen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

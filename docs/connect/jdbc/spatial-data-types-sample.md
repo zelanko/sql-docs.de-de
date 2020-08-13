@@ -1,5 +1,6 @@
 ---
-title: Beispiel für räumliche Datentypen für den MSSQL-JDBC-Treiber | Microsoft-Dokumentation
+title: Beispiel für räumliche Datentypen für den JDBC-Treiber
+description: In dieser Beispielanwendung für den JDBC-Treiber für SQL Server wird gezeigt, wie Sie die räumlichen Datentypen „Geometrie“ und „Geografie“ erstellen, einfügen und aus der Datenbank abrufen.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -9,32 +10,32 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07f05ee878f1f818e7bf500d053ef5a306477d27
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a04840e69f5fd8557d3c6f42f9a339710c9ebe3a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909396"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921016"
 ---
 # <a name="spatial-data-types-sample"></a>Beispiel für räumliche Datentypen
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Diese [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Beispielanwendung veranschaulicht, wie räumliche Datentypen („Geometry“ und „Geography“) erstellt, eingefügt und abgerufen werden.
-  
-Die Codedatei für dieses Beispiel heißt „SpatialDataTypes.java“ und befindet sich im folgenden Pfad:  
+
+Die Codedatei für dieses Beispiel heißt „SpatialDataTypes.java“ und befindet sich im folgenden Pfad:
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
+\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes
 ```
 
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „mssql-jdbc.jar“ in den Klassenpfad aufnehmen. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../connect/jdbc/using-the-jdbc-driver.md).  
+Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „mssql-jdbc.jar“ in den Klassenpfad aufnehmen. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](using-the-jdbc-driver.md).
 
-> [!NOTE]  
-> Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enthält die Klassenbibliotheksdateien „mssql-jdbc“ für die jeweilige Verwendung mit Ihren bevorzugten JRE-Einstellungen (Java Runtime Environment). Weitere Informationen zum Auswählen der richtigen JAR-Datei finden Sie unter [Systemanforderungen für den JDBC-Treiber](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
+> [!NOTE]
+> Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enthält die Klassenbibliotheksdateien „mssql-jdbc“ für die jeweilige Verwendung mit Ihren bevorzugten JRE-Einstellungen (Java Runtime Environment). Weitere Informationen zum Auswählen der richtigen JAR-Datei finden Sie unter [Systemanforderungen für den JDBC-Treiber](system-requirements-for-the-jdbc-driver.md).
+
 ## <a name="example"></a>Beispiel
 
 Im folgenden Beispiel erstellt der Beispielcode eine Tabelle mit dem Namen „SpatialDataTypesTable_JDBC_Sample“, die die Spalten „Geometry“ und „Geography“ enthält.
@@ -95,7 +96,6 @@ public class SpatialDataTypes {
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Weitere Informationen
 
-[Arbeiten mit Datentypen (JDBC)](../../connect/jdbc/working-with-data-types-jdbc.md)  
-  
+[Arbeiten mit Datentypen (JDBC)](working-with-data-types-jdbc.md)

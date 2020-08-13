@@ -1,5 +1,6 @@
 ---
 title: Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie verborgene Datasets für Parameterwerte abrufen, um alle Datasets in einem Bericht anzeigen zu können.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b7298d9d761342afbfee33c62f4eda3aa7f3b59
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 610ca1c3b7dbd5660a98dec4a91ce4f9988a5108
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499906"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455252"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten
   Der Bericht kann automatisch generierte Datasets enthalten (die auch als ausgeblendete Datasets bezeichnet werden), die nicht standardmäßig im Berichtsdatenbereich angezeigt werden. Diese Datasets werden folgendermaßen erstellt:  

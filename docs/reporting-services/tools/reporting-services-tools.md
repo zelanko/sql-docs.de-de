@@ -1,5 +1,6 @@
 ---
 title: Reporting Services-Tools | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die in den SQL Server Reporting Services enthaltenen Tools für Entwicklung, Konfiguration und Verwaltung sowie für das Anzeigen von Berichten.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e5a060e58019d79b44d42feeb396854807c19f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8adb6775be47b2d064e97c74e6888c64af75fe2e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826916"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915013"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services-Tools
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält mehrere grafische Tools und Skripterstellungstools, die die Entwicklung und Verwendung ausführlicher Berichte in einer verwalteten Umgebung unterstützen. Darin enthalten sind Entwicklungstools, Konfigurations- und Administrationstools sowie Tools zur Berichtsanzeige. Dieser Artikel enthält eine kurze Übersicht zu jedem Tool in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und wie darauf zugegriffen werden kann.  
   
- Um sofort ein Tool zu finden, sehen Sie sich [Tutorial: So suchen und starten Sie Reporting Services-Tools (SSRS)](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md) an.  
+ Im folgenden Artikel können Sie Tools umgehend finden: [Tutorial: Suchen und Starten von Reporting Services-Tools &#40;SSRS&#41;](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="tools-for-report-authoring"></a>Tools zur Berichtserstellung  
  In der folgenden Tabelle werden die verfügbaren Berichterstellungs-Tools in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aufgeführt.  
@@ -49,7 +50,7 @@ ms.locfileid: "66826916"
   
 |Tool|BESCHREIBUNG|So erfolgt der Zugriff|  
 |----------|-----------------|-------------------|  
-|Reporting Services-Konfigurations-Manager|Verwenden Sie dieses Tool, um eine Reporting Services-Installation zu konfigurieren. Zu den verfügbare Tasks gehören:<br /><br />  Konfigurieren des Berichtsserver-Dienstkontos<br /><br /> Erstellen und Konfigurieren von einer oder mehrerer Webdienst-URL<br /><br /> Konfigurieren der URL für das Webportal<br /><br /> Erstellen und Konfigurieren der Berichtsserver-Datenbank<br /><br /> Konfigurieren einer Bereitstellung für horizontales Skalieren<br /><br /> Sichern, Wiederherstellen oder Ersetzen des symmetrischen Schlüssels, der verwendet wird, um gespeicherte Verbindungszeichenfolgen und Anmeldeinformationen zu verschlüsseln.<br /><br /> Konfigurieren des Kontos für die unbeaufsichtigte Ausführung<br /><br /> Konfigurieren der Abonnementeinstellungen<br /><br /> Konfigurieren eines SMTP-Servers zur E-Mail-Übermittlung<br /><br /> Konfigurieren des Power BI-Diensts (Cloud)<br /><br /> Hinweis: Mit dem Reporting Services-Konfigurations-Manager können Sie keine Berichtsserverinhalte verwalten, zusätzliche Funktionen aktivieren oder Zugriff auf den Server gewähren.<br /><br /> Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).|Startmenü|  
+|Reporting Services-Konfigurations-Manager|Verwenden Sie dieses Tool, um eine Reporting Services-Installation zu konfigurieren. Zu den verfügbare Tasks gehören:<br /><br />  Konfigurieren des Berichtsserver-Dienstkontos<br /><br /> Erstellen und Konfigurieren von einer oder mehrerer Webdienst-URL<br /><br /> Konfigurieren der URL für das Webportal<br /><br /> Erstellen und Konfigurieren der Berichtsserver-Datenbank<br /><br /> Konfigurieren einer Bereitstellung für horizontales Skalieren<br /><br /> Sichern, Wiederherstellen oder Ersetzen des symmetrischen Schlüssels, der verwendet wird, um gespeicherte Verbindungszeichenfolgen und Anmeldeinformationen zu verschlüsseln.<br /><br /> Konfigurieren des Kontos für die unbeaufsichtigte Ausführung<br /><br /> Konfigurieren der Abonnementeinstellungen<br /><br /> Konfigurieren eines SMTP-Servers zur E-Mail-Übermittlung<br /><br /> Konfigurieren des Power BI-Diensts (Cloud)<br /><br /> Hinweis: Mit dem Konfigurations-Manager für Reporting Services können Sie keine Berichtsserverinhalte verwalten, zusätzliche Funktionen aktivieren oder Zugriff auf den Server gewähren.<br /><br /> Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).|Startmenü|  
 |SQL Server Management Studio|Verwenden Sie dieses Tool, um eine oder mehrere Berichtsserverinstanzen in einer einzigen Umgebung zu verwalten, einschließlich:<br /><br /> Verwalten von Berichtsserverinstanzen (lokal und remote)<br /><br /> Festlegen von Berichtsservereigenschaften<br /><br /> Ändern von Rollendefinitionen<br /><br /> Deaktivieren von nicht verwendeten Berichtsserverfunktionen<br /><br /> Verwalten von Aufträgen<br /><br /> Verwalten von freigegebenen Zeitplänen|Startmenü|   
 |Rsconfig-Hilfsprogramm|Verwenden Sie dieses Tool, um eine Berichtsserververbindung zur Berichtsserver-Datenbank zu konfigurieren und zu verwalten. Darüber hinaus können Sie damit ein Benutzerkonto für die unbeaufsichtigte Berichtsverarbeitung angeben.<br /><br /> Weitere Informationen finden Sie unter [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Eingabeaufforderung|  
 |Hilfsprogramm rskeymgmt|Verwenden Sie dieses Tool, um Folgendes zu tun:<br /><br /> Extrahieren, Wiederherstellen, Erstellen und Löschen des symmetrischen Schlüssels, der zur Verschlüsselung der Berichtsserverdaten verwendet wird<br /><br /> Verknüpfen von Berichtsserverinstanzen in einer Bereitstellung für horizontales Skalieren<br /><br /> <br /><br /> Weitere Informationen finden Sie unter [Eingabeaufforderungs-Hilfsprogramme für Berichtsserver (SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Eingabeaufforderung|  

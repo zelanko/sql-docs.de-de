@@ -1,5 +1,6 @@
 ---
-title: Ablaufverfolgung für Treibervorgänge | Microsoft-Dokumentation
+title: Ablaufverfolgung für Treibervorgänge
+description: Hier erfahren Sie, wie Sie mithilfe der Ablaufverfolgung Details protokollieren und Probleme lösen, wenn Sie den JDBC-Treiber für SQL Server verwenden.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219359"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393128"
 ---
 # <a name="tracing-driver-operation"></a>Ablaufverfolgung für Treibervorgänge
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

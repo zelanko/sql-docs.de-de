@@ -1,23 +1,23 @@
 ---
-title: Skalieren von gleichzeitig ausgeführten Skripts
+title: Konfigurieren paralleler oder gleichzeitiger R- und Python-Skriptausführung
 description: Konfigurieren Sie die parallele oder gleichzeitige R- und Python-Skriptausführung in einem Benutzerkontenpool, um SQL Server Machine Learning Services zu skalieren.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 09/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 430af4eb1127ab5b924b2429e166f68e2dffa334
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 525e9d0931b3ff25d4258004680ed158a9baf82d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118803"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484444"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>Skalieren der gleichzeitigen Ausführung externer Skripts in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Erfahren Sie mehr über Workerkonten für SQL Server Machine Learning Services und wie Sie die Standardkonfiguration ändern können, um die Anzahl der gleichzeitigen Ausführung externer Skripts zu skalieren.
 

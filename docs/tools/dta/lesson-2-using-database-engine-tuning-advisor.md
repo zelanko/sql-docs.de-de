@@ -1,5 +1,6 @@
 ---
 title: Verwenden des Datenbankoptimierungsratgebers
+description: Hier erfahren Sie, wie die GUI des SQL Server-Datenbankoptimierungsratgebers Datenbanken optimiert, Optimierungssitzungen verwaltet und Optimierungsempfehlungen anzeigt.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: performance
@@ -9,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 6352a5d32f7b173343729582cdb1bfb0c1de99b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 385171c8465a06595a65c02ff457d003ce723a7f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285744"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458692"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lektion 2: Verwenden des Datenbankoptimierungsratgebers
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Der Datenbankoptimierungsratgeber ermöglicht Ihnen das Optimieren von Datenbanken, Verwalten von Optimierungssitzungen und das Anzeigen von Empfehlungen zur Optimierung. Benutzer, die erweiterte Kenntnisse in physischen Entwurfsstrukturen haben, können mit diesem Tool eine Analyse der Datenbankoptimierung ausführen. Benutzer, die mit der Datenbankoptimierung noch nicht vertraut sind, können mithilfe dieses Tools die beste Konfiguration physischer Entwurfsstrukturen für die Arbeitsauslastung herausfinden, die sie optimieren. Diese Lektion umfasst grundlegende, praktische Hinweise für Datenbankadministratoren, die mit der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers noch nicht vertraut sind, sowie für Systemadministratoren, die möglicherweise keine umfassenden Kenntnisse physischer Entwurfsstrukturen haben.  
 
@@ -73,7 +73,7 @@ Der Datenbankoptimierungsratgeber dient dazu, den optimalen Entwurf für eine ph
 
    ![Suchen nach dem zuvor gespeicherten Skript](media/dta-tutorials/dta-script.png)
   
-5.  Wählen Sie in der Liste **Datenbank für Arbeitsauslastungsanalyse** den Eintrag „AdventureWorks2017“ aus, wählen Sie dann im Raster **Zu optimierende Datenbanken und Tabellen auswählen** den Eintrag „AdventureWorks2017“ aus, und belassen Sie **Optimierungsprotokoll speichern** aktiviert. **Datenbank für Arbeitsauslastungsanalyse** gibt die erste Datenbank an, mit der der Datenbankoptimierungsratgeber beim Optimieren einer Arbeitsauslastung eine Verbindung herstellt. Nach dem Beginn der Optimierung stellt der Datenbankoptimierungsratgeber Verbindungen mit den Datenbanken her, die über die `USE DATABASE` -Anweisungen in der Arbeitsauslastung angegeben sind.  
+5.  Wählen Sie in der Liste **Datenbank für Arbeitsauslastungsanalyse** den Eintrag „AdventureWorks2017“ aus, wählen Sie dann im Raster **Zu optimierende Datenbanken und Tabellen auswählen** den Eintrag „AdventureWorks2017“ aus, und belassen Sie** Optimierungsprotokoll speichern** aktiviert. **Datenbank für Arbeitsauslastungsanalyse** gibt die erste Datenbank an, mit der der Datenbankoptimierungsratgeber beim Optimieren einer Arbeitsauslastung eine Verbindung herstellt. Nach dem Beginn der Optimierung stellt der Datenbankoptimierungsratgeber Verbindungen mit den Datenbanken her, die über die `USE DATABASE` -Anweisungen in der Arbeitsauslastung angegeben sind.  
 
   ![Optionen des Datenbankoptimierungsratgebers für die Datenbank](media/dta-tutorials/dta-select-db.png)
   

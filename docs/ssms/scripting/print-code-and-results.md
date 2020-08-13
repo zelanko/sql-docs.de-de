@@ -1,5 +1,6 @@
 ---
 title: Drucken von Code und Ergebnissen
+description: Hier erfahren Sie, wie Sie die Textfarbe beim Drucken angeben. Die Farben können sich von den zum Anzeigen verwendeten Farben unterscheiden. Sie erhalten außerdem Informationen dazu, wie Sie steuern können, ob Zeilennummern in der Auflistung angezeigt werden.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af9e8ec48a47caf9f5512c282b86e81ef1bc1dbc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cf3abb5bbecbc93a9a2f86b373f6192b7fbb6169
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253725"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122554"
 ---
 # <a name="print-code-and-results"></a>Drucken von Code und Ergebnissen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Wenn Sie eine Abfrage oder Datei drucken, werden farbige Elemente in Farbe gedruckt, wenn Ihr Drucker Farbdruck unterstützt und die Farbdruckoption in der Druckerkonfiguration aktiviert ist.  
   
  Die Schriftart und Farbe des Texts im Editor kann jedoch von der Druckausgabe abweichen. Wählen Sie **Optionen** im Menü **Extras**aus. Klicken Sie unter **Umgebung**auf **Schriftarten und Farben**, und wählen Sie dann für Elemente die Schriftarten und Farben aus, die im Editor angezeigt werden sollen, sowie die Schriftarten und Farben, die beim Drucken verwendet werden sollen. Da diese Einstellungen unterschiedlich sein können, weicht die Druckausgabe möglicherweise von der Darstellung im Editor ab.  

@@ -5,40 +5,44 @@ description: Referenzartikel zu azdata bdc config-Befehlen
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8a2c87a374be247e4b31f2e34736de95d9edc319
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 66886cc2fc691e27e93d4f8a4d8a2c0a65bd82c9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822363"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942917"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Der folgende Artikel enthält Referenzinformationen zu den `bdc config`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `azdata`-Tool. Weitere Informationen zu anderen `azdata`-Befehlen finden Sie in der [Referenz zu azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
-|     |     |
+| Get-Help | BESCHREIBUNG |
 | --- | --- |
-[azdata bdc config init](#azdata-bdc-config-init) | Initialisiert ein Konfigurationsprofil für Big-Data-Cluster, das für die Erstellung des Clusters verwendet werden kann.
+[azdata bdc config init](#azdata-bdc-config-init) | Hiermit wird ein Konfigurationsprofil für Big Data-Cluster konfiguriert, das für deren Erstellung verwendet werden kann.
 [azdata bdc config list](#azdata-bdc-config-list) | Listet die verfügbaren Optionen für das Konfigurationsprofil auf.
 [azdata bdc config show](#azdata-bdc-config-show) | Zeigt die aktuelle Konfiguration des BDC oder die Konfiguration einer lokalen Datei an, die Sie angeben, z. B. custom/bdc.json.
 [azdata bdc config add](#azdata-bdc-config-add) | Fügt einen Wert in einem JSON-Pfad in einer Konfigurationsdatei hinzu.
 [azdata bdc config remove](#azdata-bdc-config-remove) | Entfernt einen Wert in einem JSON-Pfad in einer Konfigurationsdatei.
 [azdata bdc config replace](#azdata-bdc-config-replace) | Ersetzt einen Wert in einem JSON-Pfad in einer Konfigurationsdatei.
 [azdata bdc config patch](#azdata-bdc-config-patch) | Patcht eine Konfigurationsdatei auf der Grundlage einer JSON-Patchdatei.
+[azdata bdc config set](#azdata-bdc-config-set) | Hiermit wird die Konfiguration für Big Data-Cluster fortlaufend festgelegt.
+[azdata bdc config upgrade](#azdata-bdc-config-upgrade) | Hiermit wird die Konfiguration von Big Data-Clustern fortlaufend aktualisiert.
 ## <a name="azdata-bdc-config-init"></a>azdata bdc config init
-Initialisiert ein Konfigurationsprofil für Big-Data-Cluster, das für die Erstellung des Clusters verwendet werden kann. Die jeweilige Quelle des Konfigurationsprofils kann in den Argumenten von drei Optionen angegeben werden.
+Hiermit wird ein Konfigurationsprofil für Big Data-Cluster konfiguriert, das für deren Erstellung verwendet werden kann. Die jeweilige Quelle des Konfigurationsprofils kann in den Argumenten angegeben werden.
 ```bash
 azdata bdc config init [--target -t] 
                        [--source -s]  
-                       [--force -f]  
-                       [--accept-eula -a]
+                       
+[--force -f]  
+                       
+[--accept-eula -a]
 ```
 ### <a name="examples"></a>Beispiele
 Angeleitete Ausführung von „BDC config init“: Sie erhalten Aufforderungen für die Eingabe der erforderlichen Werte.
@@ -53,7 +57,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--target -t`
 Der Dateipfad, in dem das Konfigurationsprofil platziert werden soll, ist standardmäßig <cwd>/custom.
 #### `--source -s`
-Quelle des Konfigurationsprofils: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
+Konfigurationsprofilquelle: [„openshift-dev-test“, „aro-dev-test-ha“, „aks-dev-test“, „openshift-prod“, „aks-dev-test-ha“, „kubeadm-prod“, „aro-dev-test“, „kubeadm-dev-test“]
 #### `--force -f`
 Erzwingen der Überschreibung der Zieldatei
 #### `--accept-eula -a`
@@ -66,7 +70,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-config-list"></a>azdata bdc config list
@@ -74,7 +78,8 @@ Listet die verfügbaren Optionen für das Konfigurationsprofil zur Verwendung in
 ```bash
 azdata bdc config list [--config-profile -c] 
                        [--type -t]  
-                       [--accept-eula -a]
+                       
+[--accept-eula -a]
 ```
 ### <a name="examples"></a>Beispiele
 Listet alle verfügbaren Namen für das Konfigurationsprofil auf.
@@ -87,10 +92,9 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### <a name="optional-parameters"></a>Optionale Parameter
 #### `--config-profile -c`
-Standardkonfigurationsprofil: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
+Standardkonfigurationsprofil: [„openshift-dev-test“, „aro-dev-test-ha“, „aks-dev-test“, „openshift-prod“, „aks-dev-test-ha“, „kubeadm-prod“, „aro-dev-test“, „kubeadm-dev-test“]
 #### `--type -t`
 Welchen Konfigurationstyp Sie sehen möchten.
-`cluster`
 #### `--accept-eula -a`
 Stimmen Sie den Lizenzbedingungen zu? [yes/no]. Wenn Sie dieses Argument nicht verwenden möchten, können Sie die Umgebungsvariable ACCEPT_EULA auf „yes“ festlegen. Die Lizenzbedingungen für dieses Produkt finden Sie unter https://aka.ms/eula-azdata-en.
 ### <a name="global-arguments"></a>Globale Argumente
@@ -101,7 +105,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-config-show"></a>azdata bdc config show
@@ -109,8 +113,10 @@ Zeigt die aktuelle Konfiguration des BDC oder die Konfiguration einer lokalen Da
 ```bash
 azdata bdc config show [--config-file -c] 
                        [--target -t]  
-                       [--json-path -j]  
-                       [--force -f]
+                       
+[--json-path -j]  
+                       
+[--force -f]
 ```
 ### <a name="examples"></a>Beispiele
 Anzeigen der BDC-Konfiguration in der Konsole
@@ -119,11 +125,11 @@ azdata bdc config show
 ```
 In einer lokalen Konfigurationsdatei wird ein Wert am Ende eines einfachen JSON-Schlüsselpfads abgerufen.
 ```bash
-azdata bdc config show --config-file custom-config/bdc.json --json-path 'metadata.name' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path "metadata.name" --target section.json
 ```
 In einer lokalen Konfigurationsdatei werden die Ressourcen in einem Dienst abgerufen.
 ```bash
-azdata bdc config show --config-file custom-config/bdc.json --json-path '$.spec.services.sql.resources' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path "$.spec.services.sql.resources" --target section.json
 ```
 ### <a name="optional-parameters"></a>Optionale Parameter
 #### `--config-file -c`
@@ -142,7 +148,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-config-add"></a>azdata bdc config add
@@ -154,7 +160,7 @@ azdata bdc config add --config-file -c
 ### <a name="examples"></a>Beispiele
 Bsp. 1.: Hinzufügen von Speicher auf Steuerungsebene
 ```bash
-azdata bdc config add --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
+azdata bdc config add --config-file custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--config-file -c`
@@ -169,7 +175,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-config-remove"></a>azdata bdc config remove
@@ -181,7 +187,7 @@ azdata bdc config remove --config-file -c
 ### <a name="examples"></a>Beispiele
 Bsp. 1.: Entfernen von Speicher auf Steuerungsebene
 ```bash
-azdata bdc config remove --config-file custom/control.json --json-path '.spec.storage'
+azdata bdc config remove --config-file custom/control.json --json-path ".spec.storage"
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--config-file -c`
@@ -196,7 +202,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-config-replace"></a>azdata bdc config replace
@@ -208,15 +214,15 @@ azdata bdc config replace --config-file -c
 ### <a name="examples"></a>Beispiele
 Bsp. 1: Ersetzen des Ports eines einzelnen Endpunkts (Controller-Endpunkt)
 ```bash
-azdata bdc config replace --config-file custom/control.json --json-values '$.spec.endpoints[?(@.name=="Controller")].port=30080'
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.endpoints[?(@.name=="Controller")].port=30080"
 ```
 Bsp. 2: Ersetzen von Speicher auf Steuerungsebene
 ```bash
-azdata bdc config replace --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
+azdata bdc config replace --config-file custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
 ```
 Bsp. 3: Ersetzen der Ressourcenspezifikation storage-0 einschließlich der Replikate.
 ```bash
-azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
+azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}"
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--config-file -c`
@@ -231,7 +237,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-config-patch"></a>azdata bdc config patch
@@ -246,7 +252,7 @@ Bsp. 1: Ersetzen des Ports eines einzelnen Endpunkts (Controller-Endpunkt) mit P
 azdata bdc config patch --config-file custom/control.json --patch ./patch.json
 
     Patch File Example (patch.json):
-        {"patch":[{"op":"replace","path":"$.spec.endpoints[?(@.name=='Controller')].port","value":30080}]}
+        {"patch":[{"op":"replace","path":"$.spec.endpoints[?(@.name=="Controller")].port","value":30080}]}
 ```
 Bsp. 2: Ersetzen von Speicher auf Steuerungsebene mit Patchdatei
 ```bash
@@ -275,7 +281,57 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
+#### `--verbose`
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
+## <a name="azdata-bdc-config-set"></a>azdata bdc config set
+Hiermit wird die Konfiguration für Big Data-Cluster fortlaufend festgelegt.
+```bash
+azdata bdc config set --name -n 
+                      
+```
+### <a name="examples"></a>Beispiele
+Die Konfiguration ist für Tests im Zusammenhang mit Big Data-Clustern festgelegt.
+```bash
+azdata config set --name test
+```
+### <a name="required-parameters"></a>Erforderliche Parameter
+#### `--name -n`
+Der Big Data-Clustername, der für kubernetes-Namespaces verwendet wird.
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
+#### `--help -h`
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
+#### `--verbose`
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
+## <a name="azdata-bdc-config-upgrade"></a>azdata bdc config upgrade
+Hiermit wird die Konfiguration von Big Data-Clustern fortlaufend aktualisiert.
+```bash
+azdata bdc config upgrade --name -n 
+                          
+```
+### <a name="examples"></a>Beispiele
+Die Konfiguration aktualisiert Tests im Zusammenhang mit Big Data Clustern.
+```bash
+azdata config upgrade --name test
+```
+### <a name="required-parameters"></a>Erforderliche Parameter
+#### `--name -n`
+Der Big Data-Clustername, der für kubernetes-Namespaces verwendet wird.
+### <a name="global-arguments"></a>Globale Argumente
+#### `--debug`
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
+#### `--help -h`
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
+#### `--output -o`
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
+#### `--query -q`
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 

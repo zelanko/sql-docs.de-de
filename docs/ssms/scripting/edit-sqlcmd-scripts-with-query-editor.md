@@ -1,5 +1,6 @@
 ---
 title: Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor
+description: Sie verwenden SQLCMD-Skripts, wenn Sie Windows-Systembefehle und Transact-SQL -Anweisungen in demselben Skript verarbeiten müssen. In diesem Artikel erfahren Sie, wie Sie SQLCMD-Skripts mit dem Abfrage-Editor der Datenbank-Engine schreiben und bearbeiten.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed1171649c422ccb451fc7540cae8ca6629b65b1
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253912"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122961"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Abfragen als SQLCMD-Skripts schreiben und bearbeiten. Sie verwenden SQLCMD-Skripts, wenn Sie Windows-Systembefehle und [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem Skript verarbeiten müssen.  
   
 ## <a name="sqlcmd-mode"></a>SQLCMD-Modus  
@@ -78,7 +79,7 @@ ms.locfileid: "75253912"
   
     -   (6 Zeile(n) betroffen)  
   
-    -   \<Verzeichnisinformationen>  
+    -   \<The directory information>  
   
     -   (4 Zeile(n) betroffen)  
   
@@ -140,7 +141,7 @@ ms.locfileid: "75253912"
 > [!NOTE]  
 >  `:error` und `:out`senden sowohl für `stderr` als auch für `stdout` die Ausgabe an die Registerkarte Meldungen.  
   
- SQLCMD-Befehle, die oben nicht aufgeführt sind, werden im Abfrage-Editor nicht unterstützt. Wenn ein Skript ausgeführt wird, das nicht unterstützte SQLCMD-Schlüsselwörter enthält, sendet der Abfrage-Editor für jedes nicht unterstützte Schlüsselwort die Meldung „Ignoring command *\<ignorierter Befehl*>“ an das Ziel. Das Skript wird erfolgreich ausgeführt. Die nicht unterstützten Befehle werden allerdings ignoriert.  
+ SQLCMD-Befehle, die oben nicht aufgeführt sind, werden im Abfrage-Editor nicht unterstützt. Wenn ein Skript ausgeführt wird, das nicht unterstützte SQLCMD-Schlüsselwörter enthält, sendet der Abfrage-Editor für jedes nicht unterstützte Schlüsselwort die Meldung „Ignoring command \<ignored command*>“ (Befehl <ignorierter Befehl> wird ignoriert) an das Ziel. Das Skript wird erfolgreich ausgeführt. Die nicht unterstützten Befehle werden allerdings ignoriert.  
   
 > [!CAUTION]  
 >  Da Sie SQLCMD nicht über die Befehlszeile starten, bestehen beim Ausführen des Abfrage-Editors im SQLCMD-Modus einige Einschränkungen. So können Sie keine Befehlszeilenparameter wie Variablen übergeben. Außerdem müssen Sie darauf achten, keine interaktiven Anweisungen auszuführen, da der Abfrage-Editor nicht auf Eingabeaufforderungen des Betriebssystems antworten kann.  

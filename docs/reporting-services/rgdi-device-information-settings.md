@@ -1,5 +1,6 @@
 ---
 title: RGDI-Geräteinformationseinstellungen - Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie mehr über die RGDI-Geräteinformationseinstellungen, die für das Rendering im RGDI-Format verfügbar sind.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: b11fd9cc-3b84-4038-9611-a43feb2f6fdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8f72dd611e9d0838001091b450ea88e61213a0f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6aee7fed866f15d842ac653fcca420d28fb7d3f5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572323"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235527"
 ---
 # <a name="rgdi-device-information-settings"></a>RGDI-Geräteinformationseinstellungen
   In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern in das HTML-Format aufgeführt.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 |**Seite**|Gibt die Seite des zu rendernden Berichts an. Der Standardwert ist **1**.|  
 |**RGDIVersion**|Diese Einstellung hat keine Auswirkungen.|  

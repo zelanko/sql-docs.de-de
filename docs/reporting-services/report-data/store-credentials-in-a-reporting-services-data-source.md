@@ -1,5 +1,6 @@
 ---
 title: Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie gespeicherte Anmeldeinformationen für Berichtsserver sowohl im einheitlichen als auch im SharePoint-Modus konfigurieren.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
-ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0fd3f93cd38c562d5374ecfa65d52b082eef07b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68891858"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458197"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle
 
@@ -61,7 +62,7 @@ Sie können gespeicherte Anmeldeinformationen, mit denen ein [!INCLUDE[ssRSnover
   
 7.  Geben Sie einen Benutzernamen und ein Kennwort ein.  
   
-    -   Wenn das Konto ein Windows-Domänenbenutzerkonto ist, geben Sie es im Format \<Domäne>\\<Konto\> an, und klicken Sie anschließend auf **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden.**  
+    -   Wenn das Konto ein Windows-Domänenbenutzerkonto ist, geben Sie es im Format \<domain>\\<Konto\> an, und klicken Sie anschließend auf **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden**.  
   
     -   Wenn Benutzername und Kennwort Datenbank-Anmeldeinformationen sind, wählen Sie **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden**nicht aus. Wenn der Datenbankserver Identitätswechsel oder Delegierung unterstützt, können Sie die Option **Die Identität des authentifizierten Benutzers annehmen, nachdem eine Verbindung zur Datenquelle hergestellt wurde**auswählen.  
   
@@ -89,7 +90,7 @@ Sie können gespeicherte Anmeldeinformationen, mit denen ein [!INCLUDE[ssRSnover
   
 7.  Geben Sie einen **Benutzernamen** und ein **Kennwort**ein.  
   
-    -   Wenn das Konto ein Windows-Domänenbenutzerkonto ist, geben Sie es im Format \<Domäne>\\<Konto\> an, und klicken Sie anschließend auf **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden.**  
+    -   Wenn das Konto ein Windows-Domänenbenutzerkonto ist, geben Sie es im Format \<domain>\\<Konto\> an, und klicken Sie anschließend auf **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden**.  
   
     -   Wenn der Benutzername und das Kennwort Datenbankanmeldeinformationen sind, wählen Sie nicht **Als Windows-Anmeldeinformationen verwenden**aus. Wenn der Datenbankserver Identitätswechsel oder Delegierung unterstützt, wählen Sie ggf. die Option **Ausführungskontext für dieses Konto festlegen**aus.  
   
@@ -115,7 +116,7 @@ Sie können gespeicherte Anmeldeinformationen, mit denen ein [!INCLUDE[ssRSnover
   
 5.  Geben Sie einen Benutzernamen und ein Kennwort ein.  
   
-    -   Wenn das Konto ein Windows-Domänenbenutzerkonto ist, geben Sie es im Format \<Domäne>\\<Konto\> an, und klicken Sie anschließend auf **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden.**  
+    -   Wenn das Konto ein Windows-Domänenbenutzerkonto ist, geben Sie es im Format \<domain>\\<Konto\> an, und klicken Sie anschließend auf **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden**.  
   
     -   Wenn Benutzername und Kennwort Datenbank-Anmeldeinformationen sind, wählen Sie **Beim Herstellen einer Verbindung mit der Datenquelle als Windows-Anmeldeinformationen verwenden**nicht aus. Wenn der Datenbankserver Identitätswechsel oder Delegierung unterstützt, können Sie die Option **Die Identität des authentifizierten Benutzers annehmen, nachdem eine Verbindung zur Datenquelle hergestellt wurde**auswählen.  
   
@@ -143,7 +144,7 @@ Sie können gespeicherte Anmeldeinformationen, mit denen ein [!INCLUDE[ssRSnover
   
 6.  Geben Sie einen Benutzernamen und ein Kennwort ein.  
   
-    -   Wenn das Konto ein Windows-Domänenbenutzerkonto ist, geben Sie es im Format \<Domäne>\\<Konto\> an, und wählen Sie dann **Windows-Anmeldeinformationen verwenden** aus.  
+    -   Wenn das Konto ein Windows-Domänenbenutzerkonto ist, geben Sie es im Format \<domain>\\<Konto\> an, und klicken Sie dann auf **Windows-Anmeldeinformationen verwenden**.  
   
     -   Wenn der Benutzername und das Kennwort Datenbankanmeldeinformationen sind, wählen Sie nicht **Als Windows-Anmeldeinformationen verwenden**aus. Wenn der Datenbankserver Identitätswechsel oder Delegierung unterstützt, wählen Sie ggf. die Option **Ausführungskontext für dieses Konto festlegen**aus.  
   

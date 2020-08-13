@@ -2,7 +2,7 @@
 title: Herstellen einer Verbindung mit sqlcmd
 description: Erfahren Sie, wie Sie das sqlcmd-Hilfsprogramm mit dem Microsoft ODBC Driver for SQL Server unter Linux und macOS verwenden.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 628968b7d93b9278eb4aaf6ebca3d03fb3cde102
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e96d05b14cb9922572ee5f5c9e773f1c7bc35590
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632820"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465307"
 ---
 # <a name="connecting-with-sqlcmd"></a>Herstellen einer Verbindung mit sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ Das [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481)-Hilfsprogramm ist m
   
 Die folgenden Befehle zeigen die Verwendung der Windows-Authentifizierung (Kerberos) bzw. der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung:
   
-```  
+```console
 sqlcmd -E -Sxxx.xxx.xxx.xxx  
 sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
@@ -170,22 +170,30 @@ Im aktuellen Release sind die folgenden Optionen nicht verfügbar:
   
 Sie können die folgende alternative Methode verwenden: Fügen Sie die Parameter in eine einzige Datei ein, die Sie dann an eine andere Daten anhängen können. Dies hilft Ihnen dabei, eine Parameterdatei zu verwenden, um die Werte zu ersetzen. Erstellen Sie beispielsweise eine Datei namens `a.sql` (die Parameterdatei) mit dem folgenden Inhalt:
   
+```console
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
+```
   
 Erstellen Sie anschließend eine Datei namens `b.sql` mit den Parametern für den Ersatz:  
   
+```sql
     select $(ColumnName) from $(TableName)  
+```
 
 Kombinieren Sie in der Befehlszeile `a.sql` und `b.sql` mithilfe der folgenden Befehle zu `c.sql`:  
   
+```console
     cat a.sql > c.sql 
   
     cat b.sql >> c.sql  
+```
   
 Führen Sie `sqlcmd` aus, und verwenden Sie `c.sql` als Eingabedatei:  
   
-    slqcmd -S<...> -P<..> -U<..> -I c.sql  
+```console
+    sqlcmd -S<...> -P<..> -U<..> -I c.sql  
+```
 
 - -z *Kennwort* Ändert das Kennwort.  
   
@@ -203,24 +211,12 @@ Im aktuellen Release sind die folgenden Befehle nicht verfügbar:
   
 ## <a name="dsn-support-in-sqlcmd-and-bcp"></a>DSN-Unterstützung in sqlcmd und bcp
 
-Sie können bei der Option `-S` von **sqlcmd** oder **bcp** (oder im **sqlcmd** :Connect-Befehl) statt eines Servernamens einen Datenquellennamen (Data Source Name, DSN) angeben, wenn Sie -D angeben. -D sorgt dafür, dass **sqlcmd** oder **bcp** eine Verbindung mit dem Server herstellen kann, der in DSN durch die Option -S angegeben ist.  
+Sie können bei der Option `-S` von **sqlcmd** oder **bcp** (oder im **sqlcmd** :Connect-Befehl) statt eines Servernamens einen Datenquellennamen (Data Source Name, DSN) angeben, wenn Sie `-D` angeben. `-D` sorgt dafür, dass **sqlcmd** oder **bcp** eine Verbindung mit dem Server herstellen kann, der in DSN durch die Option `-S` angegeben ist.  
   
 System-DSNs werden in der Datei `odbc.ini` im ODBC-SysConfigDir-Verzeichnis (`/etc/odbc.ini` in Standardinstallationen) gespeichert. Benutzer-DSNs werden in `.odbc.ini` im Basisverzeichnis eines Benutzers (`~/.odbc.ini`) gespeichert.
-  
-Die folgenden Einträge werden in einem DSN unter Linux oder macOS unterstützt:
 
--   **ApplicationIntent=ReadOnly**  
+Eine Liste der Einträge, die vom Treiber unterstützt werden, finden Sie unter [Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md).
 
--   **Database=** _Datenbank\_Name_  
-  
--   **Driver=ODBC-Driver 11 for SQL Server** oder **Driver=ODBC Driver 13 for SQL Server**
-  
--   **MultiSubnetFailover=Yes**  
-  
--   **Server=** _servername\_oder\_IP\_adresse_  
-  
--   **Trusted_Connection=yes**|**no**  
-  
 In einem DSN ist nur der Eintrag DRIVER erforderlich. Für die Verbindung mit einem Server benötigt `sqlcmd` oder `bcp` allerdings den Wert im Eintrag SERVER.  
 
 Wenn diese Option sowohl im DSN als auch in der `sqlcmd`- oder `bcp`-Befehlszeile angegeben ist, überschreibt die Befehlszeilenoption den im DSN verwendeten Wert. Wenn der DSN z.B. einen DATABASE-Eintrag enthält und `sqlcmd`-Befehlszeile **-d** enthält, wird der an **-d** übergebene Wert verwendet. Wenn **Trusted_Connection=yes** im DSN angegeben ist, werden die Kerberos-Authentifizierung sowie der Benutzername ( **–U**) verwendet und das Kennwort ( **–P**), falls vorhanden, ignoriert.

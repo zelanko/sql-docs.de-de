@@ -1,22 +1,22 @@
 ---
 title: Erstellen von Anmeldeinformationen für SQLRUserGroup
-description: Erstellen Sie für Loopbackverbindungen mit implizierter Authentifizierung einen Anmeldeinformationen in SQL Server für SQLRUserGroup, damit sich ein Workerkonto zur Identitätskonvertierung zurück zum aufrufenden Benutzer beim Server anmelden kann.
+description: Erstellen Sie Anmeldeinformationen in SQL Server für SQLRUserGroup mit impliziter Authentifizierung für die Anmeldung beim Server für eine Identitätskonvertierung zurück zum aufrufenden Benutzer.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c57a62e954ae8cb0fc52c9a5ead22d418243c0b8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f3d7bd23c2a6b218e56f4de57d5b281b34d0687d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117123"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484632"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Erstellen von Anmeldeinformationen für SQLRUserGroup
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Erstellen Sie [Anmeldeinformationen in SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) für [SQLRUserGroup](../concepts/security.md#sqlrusergroup), wenn eine [Loopbackverbindung](../../machine-learning/concepts/security.md#implied-authentication) in Ihrem Skript eine *vertrauenswürdige Verbindung* angibt und die Identität, die zum Ausführen eines Objekts mit Ihrem Code verwendet wird, ein Windows-Benutzerkonto ist.
 

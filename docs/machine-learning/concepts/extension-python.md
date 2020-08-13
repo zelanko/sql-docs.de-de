@@ -1,27 +1,32 @@
 ---
 title: Python-Programmiersprachenerweiterung
-description: Erfahren Sie mehr über die Ausführung von Python-Code und integrierte Python-Bibliotheken in SQL Server Machine Learning Services.
+description: Hier erfahren Sie mehr über die Python-Erweiterung für die Ausführung externer Python-Skripts mit SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c81434a2ba9d20dd4d39b258534cd9c8bf32222
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9e9fedafebab6b5353ddb6f2f51bd0c8662377e1
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487579"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406283"
 ---
-# <a name="python-language-extension-in-sql-server"></a>Python-Spracherweiterung in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="python-language-extension-in-sql-server-machine-learning-services"></a>Python-Spracherweiterung in SQL Server Machine Learning Services
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Die Python-Erweiterung ist Teil des SQL Server Machine Learning Services-Add-Ons für die relationale Datenbank-Engine. Es werden eine Python-Ausführungsumgebung, eine Anaconda-Distribution mit Python-Runtime und Python-Interpreter Version 3.5, Standardbibliotheken und -tools sowie die Microsoft-Produktbibliotheken für Python hinzugefügt: [revoscalepy](../python/ref-py-revoscalepy.md) für skalierte Analysen und [microsoftml](../python/ref-py-microsoftml.md) für Algorithmen für maschinelles Lernen. 
+In diesem Artikel wird die Python-Erweiterung für die Ausführung externer Python-Skripts mit [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) beschrieben. Die Erweiterung fügt Folgendes hinzu:
 
-Die Python-Integration wird als [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) installiert.
+- Eine Python-Ausführungsumgebung
+- Distribution Anaconda mit der Runtime und dem Interpreter für Python 3.5
+- Standardbibliotheken und -tools
+- Microsoft Python-Pakete:
+  - [revoscalepy](../python/ref-py-revoscalepy.md) für vielseitige Analysen
+  - [microsoftml](../python/ref-py-microsoftml.md) für Machine-Learning-Algorithmen
 
 Die Installation von Python-Runtime und -Interpreter Version 3.5 gewährleistet eine nahezu vollständige Kompatibilität mit Python-Standardlösungen. Python wird in einem separaten Prozess von SQL Server ausgeführt, um sicherzustellen, dass die Datenbankvorgänge nicht beeinträchtigt werden.
 

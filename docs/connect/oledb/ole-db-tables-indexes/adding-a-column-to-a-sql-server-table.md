@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Spalte zu einer SQL Server-Tabelle | Microsoft-Dokumentation
+title: Hinzufügen einer Spalte zu einer SQL Server-Tabelle (OLE DB-Treiber) | Microsoft-Dokumentation
 description: Hinzufügen einer Spalte zu einer SQL Server-Tabelle mithilfe des OLE DB-Treibers für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - adding columns
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ce22cc49060451e7d47a1f9452f1c10a134ae610
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994105"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943136"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Hinzufügen einer Spalte zu einer SQL Server-Tabelle
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

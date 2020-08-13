@@ -1,5 +1,6 @@
 ---
 title: Suchen von Text mit regulären Ausdrücken
+description: Hier erfahren Sie, wie Sie einen regulären Ausdruck im Feld „Suchen nach“ des Dialogfelds „Suchen und ersetzen“ verwenden, um ein Muster anzugeben, das abgeglichen werden soll.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44c9350ef8134382a413018bcfde1d36351f808d
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253680"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122779"
 ---
 # <a name="search-text-with-regular-expressions"></a>Suchen von Text mit regulären Ausdrücken
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ersetzen von Textmustern. Im Feld **Suchen nach** des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Dialogfelds **Suchen und Ersetzen** kann eine Reihe von bestimmten regulären Ausdrücken verwendet werden.  
   
@@ -41,7 +42,7 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
   
 |Ausdruck|Syntax|BESCHREIBUNG|  
 |----------------|------------|-----------------|  
-|Beliebiges Zeichen|erforderlich.|Entspricht jedem beliebigen einzelnen Zeichen außer einem Zeilenumbruch.|  
+|Beliebiges Zeichen|.|Entspricht jedem beliebigen einzelnen Zeichen außer einem Zeilenumbruch.|  
 |0 oder mehr|*|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt alle möglichen Übereinstimmungen vor.|  
 |Ein oder mehr|+|Entspricht mindestens einem Vorkommen des vorherigen Ausdrucks.|  
 |Zeilenanfang|^|Verankert die übereinstimmende Zeichenfolgen am Anfang einer Zeile|  
@@ -108,7 +109,7 @@ Reguläre Ausdrücke sind eine präzise und flexible Notation zum Suchen und Ers
 |Zeichen ohne Zwischenraum|:Mn|Entspricht Zeichen ohne Zwischenraum.|  
 |Verbindungszeichen|:Mc|Entspricht Verbindungszeichen.|  
 |Einschließungszeichen|:Me|Entspricht Einschließungszeichen.|  
-|Mathematisches Zeichen|:Sm|Entspricht +, =, ~, &#124;, \< und >.|  
+|Mathematisches Zeichen|:Sm|Entspricht +, =, ~, &#124;, \<, and >.|  
 |Währungssymbol|:Sc|Entspricht $ und anderen Währungssymbolen.|  
 |Modifikationszeichen|:Sk|Entspricht Modifikationszeichen wie Zirkumflex-Akzent, Gravis-Akzent und Macron.|  
 |Anderes Symbol|:So|Entspricht anderen Symbolen, z. B. dem Copyright-Zeichen, dem Pilcrow-Zeichen und dem Gradzeichen.|  

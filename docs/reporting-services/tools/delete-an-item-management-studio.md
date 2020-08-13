@@ -1,5 +1,6 @@
 ---
 title: Löschen eines Elements (Management Studio) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Rollendefinitionen und freigegebene Zeitpläne im SQL Server Management Studio löschen.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8eaed89901b98cecb90e0c3a4ecae24714c7c180
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 840a61a34389c1013d26f2ef87791b376bfd19cf
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574330"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918391"
 ---
 # <a name="delete-an-item-management-studio"></a>Löschen eines Elements (Management Studio)
   Bei der Herstellung einer Verbindung mit einer Berichtsserverinstanz in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]können Sie Rollendefinitionen und freigegebene Zeitpläne löschen. Sie können keine Berichte, Modelle oder andere Elemente auf einem Berichtsserver löschen. Verwenden Sie zum Löschen von Berichtsserverinhalt stattdessen den Berichts-Manager. Verwenden Sie alternativ bei Konfiguration des Berichtsservers für den integrierten SharePoint-Modus die Elementverwaltungsfunktionen in der SharePoint-Bibliothek, die Ihren Inhalt enthält.  

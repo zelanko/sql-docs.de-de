@@ -9,16 +9,16 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665366"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923406"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] ist eine Erweiterung der SQL Server-Plattform basierend auf früheren Releases, die Ihnen eine große Auswahl an Entwicklungssprachen, Datentypen und Betriebssystemen sowie die Arbeit mit einer lokalen Umgebung oder einer Cloud-Umgebung bietet.
 
@@ -39,7 +39,7 @@ Die folgenden Abschnitte bieten eine Übersicht über diese Features.
 
 ## <a name="data-virtualization-and-big-data-clusters-2019"></a>Datenvirtualisierung und [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
-Unternehmen verfügen heutzutage oft über umfangreiche Datensammlungen bestehend aus Datasets, deren Umfang stetig wächst und die in Datenquellensilos über das gesamte Unternehmen hinweg gehostet werden. Mit SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] erhalten Sie Einblicke in nahezu Echtzeit in all Ihre Daten. Dies erfolgt über eine vollständige Umgebung für die Arbeit mit umfangreichen Datasets, einschließlich maschinellen Lernens und künstlicher Intelligenz.
+Unternehmen verfügen heutzutage oft über umfangreiche Datensammlungen bestehend aus Datasets, deren Umfang stetig wächst und die in Datenquellensilos über das gesamte Unternehmen hinweg gehostet werden. Mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] erhalten Sie nahezu in Echtzeit Erkenntnisse aus all Ihren Daten. Dies erfolgt über eine vollständige Umgebung für die Arbeit mit umfangreichen Datasets, einschließlich maschinellen Lernens und künstlicher Intelligenz.
 
 | Neue Funktion oder Update | Details |
 |:---|:---|
@@ -222,7 +222,7 @@ Die einfachste Möglichkeit, um die Arbeit mit [!INCLUDE[ssNoVersion](../include
 
 |Neue Funktion oder Update | Details |
 |:---|:---| 
-|Neue Optionen für die Arbeitsspeichereinrichtung | Legt die Serverkonfigurationseinstellungen *Min. Serverarbeitsspeicher (MB)* und *Max. Serverarbeitsspeicher (MB)* während der Installation fest. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „Arbeitsspeicher“](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) und unter den Parametern `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` und `SQLMAXMEMORY` im Artikel [Installieren von SQL Server von der Eingabeaufforderung](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Der vorgeschlagene Wert entspricht den Richtlinien für die Arbeitsspeicherkonfiguration in [Konfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
+|Neue Optionen für die Arbeitsspeichereinrichtung | Legt die Serverkonfigurationseinstellungen *Min. Serverarbeitsspeicher (MB)* und *Max. Serverarbeitsspeicher (MB)* während der Installation fest. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „Arbeitsspeicher“](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) und unter den Parametern `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` und `SQLMAXMEMORY` im Artikel [Installieren von SQL Server von der Eingabeaufforderung](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Der vorgeschlagene Wert entspricht den Richtlinien für die Arbeitsspeicherkonfiguration in [Konfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually).| 
 |Neue Optionen für die Nebenläufigkeitseinrichtung | Legt die Serverkonfigurationsoption *Max. Grad an Parallelität* während der Installation fest. Siehe [Konfiguration der Datenbank-Engine – Seite „MaxDOP“](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) und den Abschnitt zum `SQLMAXDOP`-Parameter in [Installieren von SQL Server von der Eingabeaufforderung](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Der Standardwert entspricht den Richtlinien für die maximale Nebenläufigkeit in [Konfigurieren der Serverkonfigurationsoption „Max. Grad an Parallelität“](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 |Setupwarnung bei Produktschlüssel für Sever-/CAL-Lizenz|Wenn ein Produktschlüssel für eine Server-/Cal-Lizenz eingegeben wird und die Maschine mehr als 20 physische (oder 40 logische Kerne bei aktiviertem Hyper-Threading) hat, wird während des Setupvorgangs eine Warnung angezeigt. Benutzer haben nun die Wahl. Sie können wie bisher die Beschränkung zur Kenntnis nehmen und mit dem Setupvorgang fortfahren, oder sie geben einen Lizenzschlüssel ein, der die maximal mögliche Prozessorzahl des Systems unterstützt.|
 | &nbsp; | &nbsp; |

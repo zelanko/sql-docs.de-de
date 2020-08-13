@@ -1,5 +1,6 @@
 ---
 title: Skripterstellung mit dem Hilfsprogramm „rs.exe“ und dem Webdienst | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über das Hilfsprogramm RS.EXE, das zum programmgesteuerten Verwalten eines Berichtsservers mithilfe von mit Microsoft Visual Basic geschriebenen Skripts verwendet werden kann.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f20551117454ca742c8c681cd43f2704695dd276
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 689f77476a6b1f9931dc9ed82e8e9cd63f2083a7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571419"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914409"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Skripterstellung mit dem Hilfsprogramm rs.exe und dem Webdienst
   Entwickler und Berichtsserveradministratoren können auf einem Berichtsserver mithilfe des Hilfsprogramms **rs** (RS.exe) Vorgänge ausführen. In diesem Hilfsprogramm können Sie mithilfe von mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] geschriebenen Skripts Berichtsserver programmgesteuert verwalten.  

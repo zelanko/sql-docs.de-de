@@ -1,46 +1,48 @@
 ---
-title: olapR-Funktionsbibliothek für R
-description: Einführung in die olapR-Funktionsbibliothek in SQL Server 2016 R Services und SQL Server Machine Learning Services mit R.
+title: R-Paket „olapR“
+description: „olapR“ ist ein R-Paket von Microsoft, das für MDX-Abfragen eines SQL Server Analysis Services-OLAP-Cube verwendet wird. Die Funktionen unterstützen nicht alle MDX-Vorgänge, aber Sie können Abfragen erstellen, die Slice, Dice, Drilldown, Rollup und Pivot in Dimensionen erstellen. Das Paket ist in SQL Server Machine Learning Services und SQL Server 2016 R Services enthalten.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 12/04/2018
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 507bd04140880a3c15f1e72eed49c29ade56769c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 844489b4c9f3e0e92848ebb1c9cb3b725ac5fedd
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117413"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406163"
 ---
-# <a name="olapr-r-library-in-sql-server"></a>olapR (R-Bibliothek in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="olapr-r-package-in-sql-server-machine-learning-services"></a>„olapR“ (R-Paket in SQL Server Machine Learning Services)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**olapR** ist eine Microsoft-Bibliothek mit R-Funktionen, die für MDX-Abfragen eines SQL Server Analysis Services-OLAP-Cube verwendet werden können. Die Funktionen unterstützen nicht alle MDX-Vorgänge, aber Sie können Abfragen erstellen, die Slice, Dice, Drilldown, Rollup und Pivot in Dimensionen erstellen. 
+**olapR** ist ein R-Paket von Microsoft, das für MDX-Abfragen eines SQL Server Analysis Services-OLAP-Cube verwendet wird. Die Funktionen unterstützen nicht alle MDX-Vorgänge, aber Sie können Abfragen erstellen, die Slice, Dice, Drilldown, Rollup und Pivot in Dimensionen erstellen. Das Paket ist in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) und [SQL Server 2016 R Services](sql-server-r-services.md) enthalten.
 
-Dieses Paket ist nicht vorab in eine R-Sitzung geladen. Führen Sie zum Laden der Bibliothek den folgenden Befehl aus.
+Sie können dieses Paket in allen unterstützten Versionen von SQL Server für Verbindungen mit einem Analysis Services-OLAP-Cube verwenden. Verbindungen mit einem tabellarischen Modell werden zurzeit nicht unterstützt.
+
+## <a name="load-package"></a>Laden des Pakets
+
+Das Paket **olapR** wird nicht vorab in eine R-Sitzung geladen. Führen Sie den folgenden Befehl aus, um das Paket zu laden.
 
 ```R
 library(olapR)
 ```
 
-Sie können diese Bibliothek für Verbindungen mit einem Analysis Services-OLAP-Cube auf allen unterstützten Versionen von SQL Server verwenden. Verbindungen mit einem tabellarischen Modell werden zurzeit nicht unterstützt.
-
 ## <a name="package-version"></a>Paketversion
 
-Die aktuelle Version ist 1.0.0 in allen ausschließlich Windows-basierten Produkten und -Downloads, die die Bibliothek bereitstellen.
+1\.0.0 ist die aktuelle Version, die in allen ausschließlich Windows-basierten Produkten und -Downloads enthalten ist, die das Paket bereitstellen.
 
 ## <a name="full-reference-documentation"></a>Vollständige Referenzdokumentation
 
-Die **olapR**-Bibliothek wird in mehreren Microsoft-Produkten bereitgestellt. Die Verwendung ist jedoch immer identisch, unabhängig davon, ob Sie die Bibliothek in SQL Server oder einem anderen Produkt abrufen. Aus diesem Grund wird die [Dokumentation für einzelne sqlrutils-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) nur an einer Stelle in der [R-Referenz](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) für Microsoft Machine Learning Server veröffentlicht. Abweichungen durch produktspezifisches Verhalten finden Sie ggf. auf der Hilfeseite der Funktion.
+Das Paket **olapR** ist im Lieferumfang von mehreren Microsoft-Produkten enthalten. Die Verwendung ist jedoch immer gleich, unabhängig davon, ob Sie das Paket in SQL Server oder einem anderen Produkt erworben haben. Aus diesem Grund wird die [Dokumentation für einzelne sqlrutils-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) nur an einer Stelle in der [R-Referenz](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) für Microsoft Machine Learning Server veröffentlicht. Abweichungen durch produktspezifisches Verhalten finden Sie ggf. auf der Hilfeseite der Funktion.
 
 ## <a name="availability-and-location"></a>Verfügbarkeit und Speicherort
 
 Dieses Paket wird in den folgenden Produkten sowie in mehreren VM-Images in Azure bereitgestellt. Der Speicherort des Pakets variiert entsprechend.
 
-Produkt | Location |
+Produkt | Standort |
 --------|----------|
 SQL Server Machine Learning Services (mit R-Integration) | C:\Programme\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
 SQL Server 2016 R Services | C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
@@ -49,7 +51,7 @@ Microsoft R Client | C:\Programme\Microsoft\R Client\R_SERVER\library |
 Data Science Virtual Machine (in Azure) | C:\Programme\Microsoft\R Client\R_SERVER\library |
 Data Science Virtual Machine (in Azure) <sup>1</sup> | C:\Programme\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
 
-<sup>1</sup> R-Integration ist in SQL Server optional. Die olapR-Bibliothek wird installiert, wenn Sie während der VM-Konfiguration die Machine Learning- oder R-Funktion hinzufügen.
+<sup>1</sup> R-Integration ist in SQL Server optional. Das Paket „olapR“ wird installiert, wenn Sie während der VM-Konfiguration das Machine Learning- oder das R-Feature hinzufügen.
 
 
 ## <a name="see-also"></a>Weitere Informationen

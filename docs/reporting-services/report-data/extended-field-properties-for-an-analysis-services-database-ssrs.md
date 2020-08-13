@@ -1,5 +1,6 @@
 ---
 title: Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die erweiterten Feldeigenschaften für eine Analysis Services-Datenbank und wie Sie erweiterte Feldeigenschaftswerte in Ihren Bericht einschließen.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa0f8b8d8b8ee4cbd3ebdaf70fcb63b9cb5005b9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: beae593bc4673a1fd31d27c5f807553a2b960872
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077677"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458355"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)
   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenverarbeitungserweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu den für die Datenquelle verfügbaren und von der Datenverarbeitungserweiterung unterstützten Feldeigenschaften **Value** und **IsMissing** vorhanden. Erweiterte Eigenschaften werden im Berichtsdatenbereich nicht als Teil der Feldauflistung für ein Berichtsdataset angezeigt. Sie können erweiterte Feldeigenschaftswerte in den Bericht einbeziehen, indem Sie Ausdrücke schreiben, die deren Namen in der integrierten **Fields** -Sammlung angeben.  
@@ -40,7 +41,7 @@ ms.locfileid: "77077677"
   
  In der folgenden Tabelle wird eine Liste der zur Verfügung stehenden vordefinierten Feldeigenschaften bereitgestellt.  
   
-|**Eigenschaft**|**Typ**|**Beschreibung oder erwarteter Wert**|  
+|**Property**|**Type**|**Beschreibung oder erwarteter Wert**|  
 |------------------|--------------|---------------------------------------|  
 |**Wert**|**Object**|Gibt den Datenwert des Felds an.|  
 |**IsMissing**|**Boolescher Wert**|Gibt an, ob das Feld im resultierenden Dataset gefunden wurde.|  
@@ -126,7 +127,7 @@ CELL PROPERTIES
   
  Obwohl die Eigenschaften Teil der MDX-Select-Anweisung sind, werden sie nicht in den Spalten des Resultsets angezeigt. Die Daten sind jedoch für einen Bericht verfügbar und können mit der Funktion für erweiterte Eigenschaften angezeigt werden. Doppelklicken Sie in einem MDX-Abfrageergebnisbereich in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] auf die Zelle, um die Zelleigenschaftswerte abzurufen (sofern diese Werte im Cube festgelegt sind). Wenn Sie auf die erste Zelle "Anzahl Bestellungen" mit dem Wert 1.379 klicken, wird ein Popupfenster mit den folgenden Zelleigenschaften angezeigt:  
   
-|Eigenschaft|value|  
+|Eigenschaft|Wert|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |VALUE|2481|  

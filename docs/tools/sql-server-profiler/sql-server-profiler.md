@@ -1,6 +1,7 @@
 ---
 title: SQL Server Profiler
 titleSuffix: SQL Server Profiler
+description: Testen Sie die SQL Server Profiler-Features. Dieses Tool hilft Ihnen beim Beheben von Problemen, sodass Sie Ablaufverfolgungen erstellen und Ablaufverfolgungsergebnisse analysieren und wiedergeben können.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 127c8dc055118612bff2382b2cf01a899be5f8fd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93fb645af08eaef372694e492cc211ed4f82b922
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719227"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914806"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+ [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist eine Benutzeroberfläche zum Erstellen und Verwalten von Ablaufverfolgungen sowie zum Analysieren und Wiedergeben ihrer Ergebnisse. Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Diagnostizieren eines Problems zur Wiedergabe einer bestimmten Schrittabfolge verwendet werden kann.
 

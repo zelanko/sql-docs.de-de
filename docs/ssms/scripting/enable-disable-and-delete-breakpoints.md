@@ -1,5 +1,6 @@
 ---
 title: Aktivieren, Deaktivieren und Löschen von Breakpoints
+description: Hier erfahren Sie, wie Sie das Fenster „Haltepunkte“ zum Anzeigen, Löschen, Deaktivieren und Aktivieren von Breakpoints verwenden.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,16 +13,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72acf04118e0b3b7f3f205a06d6e93e96bf13ecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ce9b445b5340680f53279a3c061f05c8999a5dd
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253921"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122921"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Aktivieren, Deaktivieren und Löschen von Breakpoints
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Zum Anzeigen und Verwalten aller offenen Breakpoints können Sie das Fenster **Breakpoints** verwenden. Mithilfe des Fensters können Sie Informationen zu Breakpoints anzeigen und Aktionen ausführen, z. B. Löschen, Deaktivieren und Aktivieren von Breakpoints.
 
@@ -95,7 +96,7 @@ Zum Anzeigen und Verwalten aller offenen Breakpoints können Sie das Fenster **B
   
  Sie können alle Breakpoints folgendermaßen löschen:  
   
--   Klicken Sie im Menü **Debuggen** auf **Alle Breakpoints löschen**.  
+-   Klicken Sie im Menü **Debuggen** auf **Alle Haltepunkte löschen**.  
   
 -   Klicken Sie auf der Symbolleiste des Fensters **Breakpoints** auf die Schaltfläche **Alle Breakpoints löschen** .  
   
