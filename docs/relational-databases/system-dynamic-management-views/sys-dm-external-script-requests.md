@@ -20,15 +20,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a6fa4a695dd8d15efa6ba2f3a6c7e1ef66d3dfa3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64a21295da9b399cc212848c83d93657199c3536
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734623"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180197"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript ausführt.
   
@@ -49,7 +49,7 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
 > [!NOTE]
 > Benutzer, die externe Skripts ausführen, müssen über die zusätzliche Berechtigung verfügen `EXECUTE ANY EXTERNAL SCRIPT` . Diese DMV kann jedoch von Administratoren ohne diese Berechtigung verwendet werden. 
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 
 Diese Sicht kann über die Skriptsprachen-ID gefiltert werden.
 
@@ -79,7 +79,7 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
 ---------|---------|---------|---------
 183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 + [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  

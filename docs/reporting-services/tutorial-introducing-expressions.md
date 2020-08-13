@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Einführung in Ausdrücke | Microsoft-Dokumentation'
+description: In diesem Artikel erfahren Sie, wie Sie Ausdrücke mit häufig genutzten Funktionen und Operatoren verwenden, um in den Reporting Services leistungsstarke und flexible paginierte Berichte zu erstellen.
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63295591"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248539"
 ---
-# <a name="tutorial-introducing-expressions"></a>Lernprogramm: Einführung in Ausdrücke
+# <a name="tutorial-introducing-expressions"></a>Tutorial: Einführung in Ausdrücke
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] -Tutorial verwenden Sie Ausdrücke mit allgemeinen Funktionen und Operatoren zum Erstellen von leistungsstarken und flexiblen [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichten. 
 
 Sie werden Ausdrücke schreiben, die Namenswerte verketten, Werte in separaten Datasets suchen, auf Grundlage der Feldwerte verschiedene Farben anzeigen usw.  
@@ -26,7 +27,7 @@ Diese Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den S
   
 ![Berichts-Generator-Ausdruck-Tutorial-in-Browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
-Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 30 Minuten  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -89,7 +90,7 @@ In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ei
     ```  
 
   
-10. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ). Das Resultset umfasst 23 Datenzeilen in den folgenden Spalten: FirstName (Vorname), LastName (Nachname), StateProvince (Bundesstaat/Provinz), CountryRegionID (ID des Landes/der Region), Gender (Geschlecht), YTDPurchase (Käufe seit Jahresbeginn) und LastPurchase (Letzter Kauf).  
+10. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ). Das Resultset zeigt 23 Datenzeilen mit den folgenden Spalten an: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase und LastPurchase.  
 
     ![Berichts-Generator-Ausdruck-Tutorial-Abfrage-als-Text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -147,7 +148,7 @@ In diesem Abschnitt erstellen Sie einen Tabellenbericht, eine Datenquelle und ei
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Anzeigen des Anfangsbuchstabens des Vornamens und des Nachnamens  
-In diesem Abschnitt verwenden Sie die **Left** -Funktion und den Operator zum **Verketten** ( **&** ) in einem Ausdruck, der zu einem Anfangsbuchstaben des Vornamens und dem Nachnamen ausgewertet wird. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.   
+In diesem Abschnitt verwenden Sie die **Left** -Funktion und den Operator zum **Verketten** (**&**) in einem Ausdruck, der zu einem Anfangsbuchstaben des Vornamens und dem Nachnamen ausgewertet wird. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.   
   
 1.  Klicken Sie mit der rechten Maustaste auf die Spalte **StateProvince** , zeigen Sie auf **Spalte einfügen**und klicken Sie auf **Links**.  
   
@@ -357,7 +358,7 @@ In diesem Abschnitt erstellen Sie das CountryRegion-Dataset und verwenden die **
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>So schlagen Sie Werte im CountryRegion-Dataset nach  
   
-1.  Klicken Sie auf den Spaltenheader **Country Region ID** , und löschen Sie den Text **ID**, sodass dort nur noch **Country Region**steht.  
+1.  Klicken Sie auf den Spaltenheader **Country Region ID** und löschen Sie den Text **ID**, sodass nur noch **Country Region** angezeigt wird.  
   
 2.  Klicken Sie mit der rechten Maustaste in die Datenzelle der Spalte **Country Region** und klicken Sie auf **Ausdruck**.  
   

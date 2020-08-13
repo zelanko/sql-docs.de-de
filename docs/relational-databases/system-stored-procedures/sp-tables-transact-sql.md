@@ -18,11 +18,12 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 92ea113cfde897e2735be4ae1a3cc35b6bb788fc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a11d686bef327e4e3daba1ed5365289f78169853
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85984833"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173098"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85984833"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_tables [ [ @table_name = ] 'name' ]   
@@ -63,7 +64,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 `[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob die Zeichen Unterstrich (_), Prozentzeichen (%) und eckige Klammern ([oder]) als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine  
+ Keiner  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -75,7 +76,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_TYPE**|**varchar(32)**|Tabelle, Systemtabelle oder Sicht.|  
 |**HINWEISE**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Für maximale Interoperabilität sollte der Gatewayclient nur den SQL-92-Standard zum SQL-Mustervergleich (die Platzhalterzeichen % und _) voraussetzen.  
   
  Die Privileginformationen zum Lese- und Schreibzugriff des aktuellen Benutzers für eine bestimmte Tabelle werden nicht immer geprüft. Deshalb ist der Zugriff nicht sichergestellt. Dieses Resultset enthält nicht nur Tabellen und Sichten, sondern auch Synonyme und Aliasnamen für Gateways zu DBMS-Produkten, die diese Typen unterstützen. Wenn das Server Attribut **ACCESSIBLE_TABLES** im Resultset für **sp_server_info**Y ist, werden nur Tabellen zurückgegeben, auf die der aktuelle Benutzer zugreifen kann.  
@@ -90,14 +91,14 @@ sp_tables [ [ @table_name = ] 'name' ]
 ### <a name="a-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>A. Zurückgeben einer Liste von Objekten, die in der aktuellen Umgebung abgefragt werden können  
  Im folgenden Beispiel wird eine Liste von Objekten zurückgegeben, bei denen es sich um Abfragen in der aktuellen Umgebung handeln kann.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>B. Zurückgeben von Informationen zu den Tabellen in einem angegebenen Schema  
  Im folgenden Beispiel werden Informationen zu den Tabellen zurückgegeben, die zum `Person`-Schema in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank gehören.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_tables   
@@ -111,14 +112,14 @@ EXEC sp_tables
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>C. Zurückgeben einer Liste von Objekten, die in der aktuellen Umgebung abgefragt werden können  
  Im folgenden Beispiel wird eine Liste von Objekten zurückgegeben, bei denen es sich um Abfragen in der aktuellen Umgebung handeln kann.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D: Zurückgeben von Informationen zu den Tabellen in einem angegebenen Schema  
  Im folgenden Beispiel werden Informationen zu den Dimensions Tabellen in der-Datenbank zurückgegeben `AdventureWorksPDW201` .  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_tables   

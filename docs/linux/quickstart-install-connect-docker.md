@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 864abdb32dceaaa18e221295eebebc4f8382d4bb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: af1f6698cc08064d5ff9a8e8c6da32574b01d732
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901565"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248655"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Schnellstart: Ausführen von SQL Server-Containerimages mit Docker
 
@@ -177,6 +177,8 @@ SELECT @@SERVERNAME,
 
 Wenn Sie für `-h` und `--name` denselben Wert festlegen, kann der Zielcontainer ganz einfach ermittelt werden.
 
+5. Ändern Sie als letzten Schritt das Systemadministratorkennwort, da das `SA_PASSWORD` in der `ps -eax`-Ausgabe sichtbar und in der Umgebungsvariablen mit dem gleichen Namen gespeichert ist. Weitere Informationen finden Sie nachfolgend.
+
 ::: moniker-end
 <!--End of 2017 "Pull and run" section-->
 
@@ -295,8 +297,14 @@ SELECT @@SERVERNAME,
 
 Wenn Sie für `-h` und `--name` denselben Wert festlegen, kann der Zielcontainer ganz einfach ermittelt werden.
 
+
+5. Ändern Sie als letzten Schritt das Systemadministratorkennwort, da das `SA_PASSWORD` in der `ps -eax`-Ausgabe sichtbar und in der Umgebungsvariablen mit dem gleichen Namen gespeichert ist. Weitere Informationen finden Sie nachfolgend.
+
+
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
+
+
 
 ## <a name="change-the-sa-password"></a><a id="sapassword"></a> Ändern des Systemadministratorkennworts
 

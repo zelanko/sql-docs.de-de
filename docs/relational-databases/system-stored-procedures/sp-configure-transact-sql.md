@@ -18,12 +18,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e8d3284d8231b01b58cc807aeb70c55f5fe18c2b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dd39c7f2a803dc778f8d29530b63daa46fc4b7e2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828424"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180250"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "82828424"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server  
   
 sp_configure [ [ @configname = ] 'option_name'   
@@ -60,13 +60,13 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @configname = ] 'option_name'`Der Name einer Konfigurationsoption. *option_name* ist vom Datentyp **varchar(35)**. Der Standardwert ist NULL. Von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wird jede eindeutige Zeichenfolge erkannt, die Teil des Konfigurationsnamens ist. Erfolgt keine Angabe, wird die gesamte Liste der Optionen zurückgegeben.  
+`[ @configname = ] 'option_name'`Der Name einer Konfigurationsoption. *option_name* ist vom Datentyp **varchar(35)** . Der Standardwert ist NULL. Von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wird jede eindeutige Zeichenfolge erkannt, die Teil des Konfigurationsnamens ist. Erfolgt keine Angabe, wird die gesamte Liste der Optionen zurückgegeben.  
   
  Informationen zu den verfügbaren Konfigurationsoptionen und Ihren Einstellungen finden Sie unter [Server Configuration options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 `[ @configvalue = ] 'value'`Ist die neue Konfigurationseinstellung. *value* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Maximalwert kann je nach Option unterschiedlich sein.  
   
- Wenn Sie den maximalen Wert für die einzelnen Optionen anzeigen möchten, sehen Sie sich die Spalte **Maximum** der Katalog Sicht **sys. Konfigurationen** an.  
+ Einen maximalen Wert für die einzelnen Optionen finden Sie in der Spalte **Maximum** der **sys.configurations** -Katalog Sicht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -79,10 +79,10 @@ RECONFIGURE
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
-|**Garantien**|**int**|Der Mindestwert der Konfigurationsoption.|  
-|**maximale**|**int**|Der Höchstwert der Konfigurationsoption.|  
-|**config_value**|**int**|Der Wert, mit dem die Konfigurationsoption mithilfe von **sp_configure** festgelegt wurde (Wert in **sys. Konfigurationen. Value**). Weitere Informationen zu diesen Optionen finden Sie unter [Server Konfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) und [sys. Konfigurationen &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
-|**run_value**|**int**|Aktuell laufender Wert der Konfigurationsoption (Wert in **sys. Konfigurationen. value_in_use**).<br /><br /> Weitere Informationen finden Sie unter [sys. Konfigurationen &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**minimum**|**int**|Der Mindestwert der Konfigurationsoption.|  
+|**maximum**|**int**|Der Höchstwert der Konfigurationsoption.|  
+|**config_value**|**int**|Der Wert, mit dem die Konfigurationsoption mithilfe von **sp_configure** festgelegt wurde (Wert in **sys.configurations. Value**). Weitere Informationen zu diesen Optionen finden Sie unter [Server Konfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) und [sys.configurationen &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**run_value**|**int**|Aktuell laufender Wert der Konfigurationsoption (Wert in **sys.configurationen. value_in_use**).<br /><br /> Weitere Informationen finden Sie unter [sys.configurations &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie **sp_configure** , um Einstellungen auf Serverebene anzuzeigen oder zu ändern. Zum Ändern von Einstellungen auf Datenbankebene können Sie ALTER DATABASE verwenden. Wenn Einstellungen geändert werden sollen, die nur die aktuelle Benutzersitzung betreffen, verwenden Sie die SET-Anweisung.  
@@ -101,7 +101,7 @@ RECONFIGURE
   
  Mit der RECONFIGURE-Anweisung werden einige Optionen dynamisch aktualisiert. Für andere Optionen ist jedoch das Beenden und Neustarten des Servers erforderlich. So werden z. b. die Arbeitsspeicher Optionen **Min. Server Arbeitsspeicher** und **Max. Server Arbeitsspeicher** dynamisch in aktualisiert [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Daher können Sie Sie ändern, ohne den Server neu zu starten. Im Gegensatz dazu erfordert das erneute Konfigurieren des laufenden Werts der Option **Füllfaktor** das Neustarten von [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- Nachdem Sie RECONFIGURE für eine Konfigurationsoption ausgeführt haben, können Sie erkennen, ob die Option dynamisch aktualisiert wurde, indem Sie **sp_configure '***option_name***'** ausführen. Die Werte in den Spalten **run_value** und **config_value** sollten mit einer dynamisch aktualisierten Option verglichen werden. Sie können auch überprüfen, welche Optionen dynamisch sind, indem Sie sich die **is_dynamic** Spalte der Katalog Sicht **sys. Konfigurationen** ansehen.  
+ Nachdem Sie RECONFIGURE für eine Konfigurationsoption ausgeführt haben, können Sie erkennen, ob die Option dynamisch aktualisiert wurde, indem Sie **sp_configure '***option_name***'** ausführen. Die Werte in den Spalten **run_value** und **config_value** sollten mit einer dynamisch aktualisierten Option verglichen werden. Sie können auch überprüfen, welche Optionen dynamisch sind, indem Sie sich die Spalte **is_dynamic** der **sys.configurations** -Katalog Sicht ansehen.  
  
  Die Änderung wird auch in das SQL Server-Fehlerprotokoll geschrieben.
   
@@ -174,8 +174,8 @@ EXEC sp_configure @configname='hadoop connectivity';
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. Konfigurationen &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [Alter Database scoped Configuration &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+ [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
  [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   
   

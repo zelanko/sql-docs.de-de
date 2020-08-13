@@ -18,11 +18,12 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6afbbc9cc5a1300048b043ab92e0152e68ed03a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f00b2446595835cb4ff556c34d58a3dd04b448a8
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007457"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180101"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +37,8 @@ ms.locfileid: "86007457"
   
 ## <a name="syntax"></a>Syntax  
   
-```
+```syntaxsql
 sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
-
 ```    
   
 ## <a name="arguments"></a>Argumente  
@@ -79,7 +79,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 > [!NOTE]  
 >  Da `Contoso\Mary5` als Datenbankbenutzer `Mary5` in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank bekannt ist, muss der Benutzername `Mary5` angegeben werden. Die Anweisung führt zu einem Fehler, es sei denn, es ist ein Anmeldename `Contoso\Mary5` vorhanden. Testen Sie dies, indem Sie einen Anmeldenamen Ihrer Domäne verwenden.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;  
@@ -89,7 +89,7 @@ GO
 ### <a name="b-adding-a-database-user"></a>B. Hinzufügen eines Datenbankbenutzers  
  Im folgenden Beispiel wird der Datenbankbenutzer `Mary5` der `Production`-Datenbankrolle in der aktuellen Datenbank hinzugefügt.  
   
-```  
+```sql  
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
@@ -101,7 +101,7 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 > [!NOTE]  
 >  Da der Anmelde `LoginMary` Name als Datenbankbenutzer `UserMary` in der- [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank bezeichnet wird, muss der Benutzername `UserMary` angegeben werden. Die Anweisung führt zu einem Fehler, es sei denn, es ist ein Anmeldename `Mary5` vorhanden. Anmeldungen und Benutzer haben normalerweise denselben Namen. In diesem Beispiel werden verschiedene Namen verwendet, um die Aktionen zu unterscheiden, die sich auf die Anmeldung oder den Benutzer auswirken  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE USER UserMary FOR LOGIN LoginMary ;  
@@ -112,7 +112,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ### <a name="d-adding-a-database-user"></a>D: Hinzufügen eines Datenbankbenutzers  
  Im folgenden Beispiel wird der Datenbankbenutzer `UserMary` der `Production`-Datenbankrolle in der aktuellen Datenbank hinzugefügt.  
   
-```  
+```sql  
 EXEC sp_addrolemember 'Production', 'UserMary'  
 ```  
   

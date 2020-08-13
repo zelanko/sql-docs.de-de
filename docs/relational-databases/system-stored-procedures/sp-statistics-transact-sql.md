@@ -18,11 +18,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c5e342f64c17919bc370ea1c561ae7ea0f83ff0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 34d4b7763fd35b2012a90240a4d27fa27018f828
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999871"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173100"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85999871"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_statistics [ @table_name = ] 'table_name'    
@@ -73,7 +74,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**NON_UNIQUE**|**smallint**|nicht NULL.<br /><br /> 0 = Eindeutig<br /><br /> 1 = Nicht eindeutig|  
 |**INDEX_QUALIFIER**|**sysname**|Der Name des Index Besitzers. Verschiedene DBMS-Produkte ermöglichen neben dem Tabellenbesitzer auch anderen Benutzern das Erstellen von Indizes. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist diese Spalte immer identisch mit **table_name**.|  
 |**INDEX_NAME**|**sysname**|Der Name des Indexes. Diese Spalte gibt immer einen Wert zurück.|  
-|**TYP**|**smallint**|Diese Spalte gibt immer einen Wert zurück:<br /><br /> 0 = Statistiken für eine Tabelle<br /><br /> 1 = In einem Cluster gruppiert<br /><br /> 2 = Hash<br /><br /> 3 = nicht gruppiert|  
+|**TYPE**|**smallint**|Diese Spalte gibt immer einen Wert zurück:<br /><br /> 0 = Statistiken für eine Tabelle<br /><br /> 1 = In einem Cluster gruppiert<br /><br /> 2 = Hash<br /><br /> 3 = nicht gruppiert|  
 |**SEQ_IN_INDEX**|**smallint**|Position der Spalte im Index|  
 |**COLUMN_NAME**|**sysname**|Der Spaltenname für jede Spalte der zurückgegebenen **table_name** . Diese Spalte gibt immer einen Wert zurück.|  
 |**Sortierung**|**char (1)**|Die in der Sortierung verwendete Reihenfolge. Mögliche Werte sind:<br /><br /> A = Aufsteigend<br /><br /> D = Absteigend<br /><br /> NULL = Nicht zutreffend|  
@@ -99,7 +100,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="example-sssdwfull-and-sspdw"></a>Beispiel: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel werden Informationen über die-Tabelle zurückgegeben `DimEmployee` .  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_statistics DimEmployee;  

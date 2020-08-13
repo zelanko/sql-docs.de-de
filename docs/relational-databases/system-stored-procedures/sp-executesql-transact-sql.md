@@ -19,11 +19,12 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdd669732bb26fcf14bde80efeb51673aeb3ce3e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 61a93d541e34c152d7c0ab5191ffe577c782c6e2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012690"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180234"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86012690"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_executesql [ @stmt = ] statement  
@@ -74,7 +75,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>Resultsets  
  Gibt die Resultsets von allen SQL-Anweisungen der SQL-Zeichenfolge zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_executesql Parameter müssen in der jeweiligen Reihenfolge eingegeben werden, wie im Abschnitt "Syntax" weiter oben in diesem Thema beschrieben. Wenn die Parameter nicht in der vorgegebenen Reihenfolge eingegeben werden, wird eine Fehlermeldung ausgegeben.  
   
  sp_executesql verhält sich hinsichtlich Batches, Namensbereichen und Datenbankkontext wie EXECUTE. Die- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der-Batch im sp_executesql \@ stmt-Parameter wird erst kompiliert, wenn die sp_executesql-Anweisung ausgeführt wird. Der Inhalt von \@ stmt wird dann kompiliert und als Ausführungsplan ausgeführt, der separat vom Ausführungsplan des Batches ist, der sp_executesql aufgerufen hat. Der sp_executesql-Batch kann nicht auf Variablen verweisen, die in dem Batch deklariert werden, der sp_executesql aufruft. Lokale Cursor oder Variablen im sp_executesql-Batch sind für den Batch, der sp_executesql aufruft, nicht sichtbar. Änderungen am Datenbankkontext sind nur bis zum Ende der sp_executesql-Anweisung vorhanden.  
@@ -86,10 +87,10 @@ sp_executesql [ @stmt = ] statement
   
  sp_executesql unterstützt das von der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Zeichenfolge getrennte Festlegen von Parameterwerten, wie dem folgenden Beispiel zu entnehmen ist.  
   
-```  
-DECLARE @IntVariable int;  
-DECLARE @SQLString nvarchar(500);  
-DECLARE @ParmDefinition nvarchar(500);  
+```sql  
+DECLARE @IntVariable INT;  
+DECLARE @SQLString NVARCHAR(500);  
+DECLARE @ParmDefinition NVARCHAR(500);  
   
 /* Build the SQL string one time.*/  
 SET @SQLString =  
@@ -109,17 +110,17 @@ EXECUTE sp_executesql @SQLString, @ParmDefinition,
   
  Die Verwendung von Ausgabeparametern mit sp_executesql ist ebenfalls möglich. Im folgenden Beispiel wird eine Berufsbezeichnung aus der `AdventureWorks2012.HumanResources.Employee`-Tabelle abgerufen und im Ausgabeparameter `@max_title` zurückgegeben.  
   
-```  
-DECLARE @IntVariable int;  
-DECLARE @SQLString nvarchar(500);  
-DECLARE @ParmDefinition nvarchar(500);  
-DECLARE @max_title varchar(30);  
+```sql  
+DECLARE @IntVariable INT;  
+DECLARE @SQLString NVARCHAR(500);  
+DECLARE @ParmDefinition NVARCHAR(500);  
+DECLARE @max_title VARCHAR(30);  
   
 SET @IntVariable = 197;  
 SET @SQLString = N'SELECT @max_titleOUT = max(JobTitle)   
    FROM AdventureWorks2012.HumanResources.Employee  
    WHERE BusinessEntityID = @level';  
-SET @ParmDefinition = N'@level tinyint, @max_titleOUT varchar(30) OUTPUT';  
+SET @ParmDefinition = N'@level TINYINT, @max_titleOUT VARCHAR(30) OUTPUT';  
   
 EXECUTE sp_executesql @SQLString, @ParmDefinition, @level = @IntVariable, @max_titleOUT=@max_title OUTPUT;  
 SELECT @max_title;  
@@ -141,26 +142,26 @@ SELECT @max_title;
 ### <a name="a-executing-a-simple-select-statement"></a>A. Ausführen einer einfachen SELECT-Anweisung  
  In diesem Beispiel wird eine einfache `SELECT`-Anweisung erstellt und ausgeführt, die den eingebetteten Parameter `@level` enthält.  
   
-```  
+```sql  
 EXECUTE sp_executesql   
           N'SELECT * FROM AdventureWorks2012.HumanResources.Employee   
           WHERE BusinessEntityID = @level',  
-          N'@level tinyint',  
+          N'@level TINYINT',  
           @level = 109;  
 ```  
   
 ### <a name="b-executing-a-dynamically-built-string"></a>B. Ausführen einer dynamisch erstellten Zeichenfolge  
  In folgenden Beispiel wird veranschaulicht, wie mithilfe von `sp_executesql` eine dynamisch erstellte Zeichenfolge ausgeführt wird. Mit der gespeicherten Prozedur im Beispiel werden Daten in mehrere Tabellen eingefügt, die zum Partitionieren der Jahresverkaufszahlen verwendet werden. Für jeden Monat des Jahres ist eine Tabelle mit dem folgenden Format vorhanden:  
   
-```  
+```sql  
 CREATE TABLE May1998Sales  
-    (OrderID int PRIMARY KEY,  
-    CustomerID int NOT NULL,  
-    OrderDate  datetime NULL  
+    (OrderID INT PRIMARY KEY,  
+    CustomerID INT NOT NULL,  
+    OrderDate  DATETIME NULL  
         CHECK (DATEPART(yy, OrderDate) = 1998),  
-    OrderMonth int  
+    OrderMonth INT  
         CHECK (OrderMonth = 5),  
-    DeliveryDate datetime  NULL,  
+    DeliveryDate DATETIME NULL,  
         CHECK (DATEPART(mm, OrderDate) = OrderMonth)  
     )  
 ```  
@@ -170,7 +171,7 @@ CREATE TABLE May1998Sales
 > [!NOTE]  
 >  Dies ist ein einfaches Beispiel für sp_executesql. Das Beispiel enthält keine Fehlerprüfung und keine Überprüfung etwaiger Geschäftsregeln, wie z. B. um sicherzustellen, dass Bestellnummern in den Tabellen nicht doppelt vorhanden sind.  
   
-```  
+```sql  
 CREATE PROCEDURE InsertSales @PrmOrderID INT, @PrmCustomerID INT,  
                  @PrmOrderDate DATETIME, @PrmDeliveryDate DATETIME  
 AS  
@@ -206,18 +207,18 @@ GO
 ### <a name="c-using-the-output-parameter"></a>C. Verwenden des OUTPUT-Parameters  
  Im folgenden Beispiel wird ein- `OUTPUT` Parameter verwendet, um das von der- `SELECT` Anweisung im-Parameter generierte Resultset zu speichern `@SQLString` . `SELECT`Anschließend werden zwei-Anweisungen ausgeführt, die den Wert des- `OUTPUT` Parameters verwenden.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SQLString nvarchar(500);  
-DECLARE @ParmDefinition nvarchar(500);  
-DECLARE @SalesOrderNumber nvarchar(25);  
-DECLARE @IntVariable int;  
+DECLARE @SQLString NVARCHAR(500);  
+DECLARE @ParmDefinition NVARCHAR(500);  
+DECLARE @SalesOrderNumber NVARCHAR(25);  
+DECLARE @IntVariable INT;  
 SET @SQLString = N'SELECT @SalesOrderOUT = MAX(SalesOrderNumber)  
     FROM Sales.SalesOrderHeader  
     WHERE CustomerID = @CustomerID';  
-SET @ParmDefinition = N'@CustomerID int,  
-    @SalesOrderOUT nvarchar(25) OUTPUT';  
+SET @ParmDefinition = N'@CustomerID INT,  
+    @SalesOrderOUT NVARCHAR(25) OUTPUT';  
 SET @IntVariable = 22276;  
 EXECUTE sp_executesql  
     @SQLString  
@@ -238,13 +239,13 @@ WHERE SalesOrderNumber = @SalesOrderNumber;
 ### <a name="d-executing-a-simple-select-statement"></a>D: Ausführen einer einfachen SELECT-Anweisung  
  In diesem Beispiel wird eine einfache `SELECT`-Anweisung erstellt und ausgeführt, die den eingebetteten Parameter `@level` enthält.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXECUTE sp_executesql   
           N'SELECT * FROM AdventureWorksPDW2012.dbo.DimEmployee   
           WHERE EmployeeKey = @level',  
-          N'@level tinyint',  
+          N'@level TINYINT',  
           @level = 109;  
 ```  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 557f76e3f54811581e41ad15a5270a0c1e6e4057
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 16c9aa51475b00998b3c7aa9e71529bbbc292464
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859092"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248159"
 ---
 # <a name="ghost-cleanup-process-guide"></a>Leitfaden zum Prozess für das Cleanup inaktiver Datensätze
 
@@ -46,7 +46,7 @@ Mit der nachfolgenden Abfrage kann ermittelt werden, wie viele verwaiste Datens�
 
 ## <a name="disable-the-ghost-cleanup"></a>Deaktivieren des Cleanups inaktiver Datensätze
 
-Auf Systemen mit hoher Belastung, auf denen viele Löschvorgänge durchgeführt werden, kann der Prozess für das Cleanup inaktiver Datensätze zu Leistungsproblemen bei der Beibehaltung von Seiten im Pufferpool und bei der E/A-Generierung führen. Folglich kann dieser Prozess mit dem Ablaufverfolgungsflag 661 deaktiviert werden. Weitere Informationen hierzu finden Sie unter [Optimierungsoptionen für SQL Server beim Ausführen von Workloads mit hoher Leistung](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa). Eine Deaktivierung des Prozesses kann jedoch zu einer Beeinträchtigung der Leistung führen.
+Auf Systemen mit hoher Belastung, auf denen viele Löschvorgänge durchgeführt werden, kann der Prozess für das Cleanup inaktiver Datensätze zu Leistungsproblemen bei der Beibehaltung von Seiten im Pufferpool und bei der E/A-Generierung führen. Folglich kann dieser Prozess mit dem [Ablaufverfolgungsflag 661](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) deaktiviert werden. Eine Deaktivierung des Prozesses kann jedoch zu einer Beeinträchtigung der Leistung führen.
 
 Durch das Deaktivieren des Prozesses für das Cleanup inaktiver Datensätze kann Ihre Datenbank unnötig groß werden. Dies kann zu Leistungsproblemen führen. Da durch das Cleanup als inaktiv gekennzeichnete Datensätze entfernt werden, bleiben diese Datensätze auf der Seite, wenn Sie den Prozess deaktivieren. Dadurch kann SQL Server diesen Speicherplatz nicht wiederverwenden. Folglich muss SQL Server stattdessen Daten zu neuen Seiten hinzufügen. Dies führt zu übermäßig großen Datenbankdateien und kann [Seitenteilungen](indexes/specify-fill-factor-for-an-index.md) verursachen. Seitenteilungen wiederum führen bei der Erstellung von Ausführungsplänen und bei der Durchführung von Prüfvorgängen zu Leistungsproblemen. 
 

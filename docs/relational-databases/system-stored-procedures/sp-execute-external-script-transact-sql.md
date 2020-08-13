@@ -20,16 +20,15 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 074836973123ae4f0f49acf72cf7bf6f56b17cf5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87877963"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180255"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
-
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Die gespeicherte Prozedur **sp_execute_external_script** führt ein als Eingabe Argument bereitgestelltes Skript für die Prozedur aus und wird mit [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) -und [Spracherweiterungen](../../language-extensions/language-extensions-overview.md)verwendet. 
@@ -322,9 +321,9 @@ Um ein ähnliches Modell mithilfe von Python zu generieren, ändern Sie die Spra
 
 Zur Bewertung können Sie auch die native [PREDICT](../../t-sql/queries/predict-transact-sql.md)-Funktion verwenden, die in der Regel schneller ist, weil sie die Python- bzw. R-Laufzeit nicht aufrufen muss.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-+ [SQL Machine Learning](../../machine-learning/index.yml)
++ [Maschinelles Lernen mit SQL](../../machine-learning/index.yml)
 + [SQL Server Spracherweiterungen](../../language-extensions/language-extensions-overview.md). 
 + [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
 + [Externe Bibliothek &#40;Transact-SQL-&#41;erstellen](../../t-sql/statements/create-external-library-transact-sql.md)  

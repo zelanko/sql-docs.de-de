@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c7be9d3eb55800c2fa5c4f155aff6fd81301490c
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4a6f551012a744d8659e0f3a4cee83b1fd39fbdf
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197338"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173221"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "86197338"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpasswordꞌ  
@@ -42,7 +42,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
  *target_server_name* ist als nvarchar (337) definiert.  
   
- "*user_name*"  
+ '*user_name*'  
  Gibt den user_name an, der über Berechtigungen für den Zugriff auf den Zielserver verfügt. Wenn für den Zielserver bereits Anmelde Informationen vorhanden sind, werden Sie auf die neuen Anmelde Informationen aktualisiert.  
   
  *user_name* ist als nvarchar (513) definiert.  
@@ -67,7 +67,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. Hinzufügen von Anmelde Informationen zum Ausführen einer Datenbanksicherung  
  Im folgenden Beispiel werden die Anmelde Informationen für den Benutzernamen und das Kennwort für den Domänen Benutzer "tsattle\david" einem Zielserver mit der IP-Adresse 10.172.63.255 zugeordnet. Der Benutzer "einattle\david" verfügt über Lese-/Schreibberechtigungen für den Zielserver. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]speichert diese Anmelde Informationen und verwendet diese zum Lesen und Schreiben auf den und vom Zielserver, sofern dies für Sicherungs-und Wiederherstellungs Vorgänge erforderlich ist.  
   
-```  
+```sql  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  
 ```  
   

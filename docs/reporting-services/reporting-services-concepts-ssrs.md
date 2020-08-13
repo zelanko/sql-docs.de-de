@@ -1,5 +1,6 @@
 ---
 title: Konzepte von Reporting Services | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die SQL Server Reporting Services-Konzepte (SSRS), einschließlich der Erstellung eines Zeitplans für Berichte, Rollen und Berechtigungen, sowie über Berichtsabonnements und die Übermittlung.
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb4d1592b2541c16a34c96820a27942ef8bc08e3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078182"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248586"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Konzepte von Reporting Services (SSRS)
   In diesem Artikel werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Konzepte zusammengefasst.  

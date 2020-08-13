@@ -19,15 +19,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a825843a69d9ba2f65f272adba86e6d8656aedde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b6a24a142deef2283c58e21941293f31479f997b
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750707"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180079"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Unterstützt die Verwaltung von Paket Bibliotheken im Zusammenhang mit externen Laufzeiten, wie z. b. R, Python und Java.
 
@@ -47,7 +47,7 @@ In der Katalog Sicht sys. external_libraries wird eine Zeile für jede externe B
 |scope |INT |0 für öffentlichen Bereich; 1 für privaten Bereich |  
 |scope_desc |varchar (7) |Gibt an, ob das Paket öffentlich oder privat ist.|
 
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [externe Bibliothek erstellen](../../t-sql/statements/create-external-library-transact-sql.md)  
