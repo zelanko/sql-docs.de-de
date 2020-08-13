@@ -1,5 +1,5 @@
 ---
-title: CURRENT_TIMEZONE (Transact-SQL) | Microsoft-Dokumentation
+title: CURRENT_TIMEZONE_ID (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/18/2020
 ms.prod: sql
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE_ID function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3cadc9cd33fd1cdabb96cf450ad09253fdd435d1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: beaa58fddd6889b4ebbbce620d98277468dd67a2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85684628"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988845"
 ---
 # <a name="current_timezone_id-transact-sql"></a>CURRENT_TIMEZONE_ID (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "85684628"
 Diese Funktion gibt die ID der von einem Server oder einer Instanz verwendeten Zeitzone zurück. Bei einer verwalteten Instanz von Azure SQL Managed Instance basiert der Rückgabewert auf der Zeitzone der Instanz selbst, die während der Erstellung der Instanz zugewiesen wurde, und nicht auf der Zeitzone des zugrunde liegenden Betriebssystems.
   
 > [!NOTE]  
-> Bei einzelnen SQL-Datenbanken und SQL-Pooldatenbanken wird die Zeitzone immer auf UTC festgelegt. Daher gibt `CURRENT_TIMEZONE_ID` die ID der UTC-Zeitzone zurück.
+> Bei SQL-Datenbank wird die Zeitzone immer auf UTC festgelegt. Daher gibt `CURRENT_TIMEZONE_ID` die ID der UTC-Zeitzone zurück.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,6 +71,6 @@ W. Europe Standard Time
   
 ## <a name="see-also"></a>Weitere Informationen
 
-[Zeitzone für die verwaltete SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL Managed Instance: Zeitzone](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
 
 [CURRENT_TIMEZONE()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-transact-sql)
