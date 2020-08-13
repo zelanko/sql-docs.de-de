@@ -1,5 +1,6 @@
 ---
 title: Durchsuchen eines Berichts mit URL-Zugriff | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie mithilfe von URL-Zugriff einen Bericht suchen. Legen Sie beispielsweise den Parameter „rc:FindString“ in der URL auf den Text fest, nach dem Sie suchen möchten.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2568c2930080ddbb060f2c4d014c40476ab38f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c7d5ba7b312bb89942fd899f4c769179a0c97bab
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570890"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238432"
 ---
 # <a name="search-a-report-using-url-access"></a>Suchen eines Berichts mithilfe von URL-Zugriff
   Mit einem URL-Zugriff können Sie einen Bericht nach einem bestimmten Textteil durchsuchen. Legen Sie dazu den Wert des *rc:FindString* -Parameters in der URL auf den Text fest, nach dem Sie suchen möchten. Beschränken Sie außerdem mit dem *rc:StartFind* - und dem *rc:EndFind* -Parameter Ihre Suche auf bestimmte Seiten im Bericht.  

@@ -1,5 +1,6 @@
 ---
 title: Datenwarnungs-Manager für SharePoint-Benutzer | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Reporting Services den Datenwarnungs-Manager für SharePoint Information Worker zum Verwalten der Datenwarnungen bereitstellt.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbb1dda8e708d08fae32e920406ea2b60fa39496
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571486"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243281"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Datenwarnungs-Manager für SharePoint-Benutzer
 

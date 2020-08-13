@@ -1,5 +1,5 @@
 ---
-title: Rowsets | Microsoft-Dokumentation
+title: Rowsets (OLE DB-Treiber)
 description: Rowsets im OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - rowsets [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 23d07cd93ada1d1eeae36b4e4ed104906feef88d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7cb9a52e9b7b1cd5ec243db15f666a5b5ef9c4a9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015369"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244175"
 ---
 # <a name="rowsets"></a>Rowsets
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

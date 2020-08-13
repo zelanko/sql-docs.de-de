@@ -1,5 +1,6 @@
 ---
 title: 'Lektion 1: Erstellen einer Beispiel-Abonnentendatenbank | Microsoft-Dokumentation'
+description: Hier erfahren Sie, wie Sie eine kleine Abonnentendatenbank erstellen, um Abonnementdaten zu speichern, die von einem datengesteuerten Abonnement verwendet werden.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513162"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243271"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lektion 1: Erstellen einer Beispiel-Abonnentendatenbank
 
@@ -55,14 +56,14 @@ Für diese Lektion wird angenommen, dass Sie [!INCLUDE[ssManStudioFull_md](../in
     GO  
     ```  
   
-7.  Klicken Sie auf **! Ausführen** in der Symbolleiste.  
+7.  Klicken Sie auf **! Führen Sie**  in der Symbolleiste aus.  
   
 8.  Verwenden Sie eine SELECT-Anweisung, um sicherzustellen, dass drei Datenzeilen vorhanden sind. Beispiel: `select * from OrderInfo`  
   
 ## <a name="next-steps"></a>Nächste Schritte  
 + Sie haben erfolgreich die Abonnementdaten erstellt, welche die Berichtsverteilung steuern und über die die Berichtsausgabe für jeden Abonnenten angepasst werden kann. 
 + Ändern Sie anschließend die Datenquelleneigenschaften des Berichts, um gespeicherte Anmeldeinformationen zu verwenden. 
-+ Sie ändern auch den Berichtsentwurf, um einen Parameter einzuschließen, den das Abonnement mit den Abonnentendaten verwendet. [Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
++ Sie ändern auch den Berichtsentwurf, um einen Parameter einzuschließen, den das Abonnement mit den Abonnentendaten verwendet. [Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
 
 ## <a name="next-steps"></a>Nächste Schritte
 

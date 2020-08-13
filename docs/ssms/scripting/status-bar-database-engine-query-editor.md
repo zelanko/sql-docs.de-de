@@ -1,5 +1,6 @@
 ---
 title: Statusleiste (Abfrage-Editor der Datenbank-Engine)
+description: Informieren Sie sich, wie Sie die Statusleiste eines Fensters im Datenbank-Engine-Abfrage-Editor einfärben, um anzugeben, mit welcher Instanz der Datenbank-Engine das Fenster verbunden ist.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a579eeeb12795c76bbe585a982a159d6e069813d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95cccb6c8f63e149de806c4c956e1371a83f3619
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243450"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243746"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Statusleiste (Abfrage-Editor der Datenbank-Engine)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Die Statusleiste des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fensters kann farblich codiert sein, um so anzuzeigen, mit welcher Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] jedes Fenster verbunden ist.
 

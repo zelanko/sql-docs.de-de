@@ -1,5 +1,6 @@
 ---
 title: Veraltete Funktionen in SQL Server 2016 Reporting Services | Microsoft-Dokumentation
+description: Hier werden die als veraltet markierten Features von SQL Server 2016 Reporting Services beschrieben. Die Features sind im veralteten Release weiterhin verfügbar.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 38c050f8b41a8ff6e1bb9601abc562002caa4a27
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d99b836fced9ca788564c75011a00b4c66b8e9e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74317949"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243291"
 ---
 # <a name="deprecated-features-in-sql-server-2016-reporting-services"></a>Veraltete Funktionen in SQL Server 2016 Reporting Services
 

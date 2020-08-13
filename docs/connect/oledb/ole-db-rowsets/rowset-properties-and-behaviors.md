@@ -1,5 +1,5 @@
 ---
-title: Eigenschaften und Verhaltensweisen von Rowsets | Microsoft-Dokumentation
+title: Eigenschaften und Verhaltensweisen von Rowsets (OLE DB-Treiber)
 description: Eigenschaften und Verhaltensweisen von Rowsets im OLE DB-Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 1e2fff64739942539fd4fc34c736e32578555f93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e541289c5ae71a7289cd005ba03ca2f886fc0bb7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015350"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244176"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Eigenschaften und Verhaltensweisen von Rowsets
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -80,7 +80,7 @@ ms.locfileid: "68015350"
 |DBPROP_REPORTMULTIPLECHANGES|Diese Rowseteigenschaft wird nicht vom OLE DB-Treiber für SQL Server implementiert. Beim Versuch, den Eigenschaftswert zu lesen oder zu schreiben, wird ein Fehler generiert.|  
 |DBPROP_RETURNPENDINGINSERTS|R/W: Schreibgeschützt<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Wenn eine Methode zum Abrufen von Zeilen aufgerufen wird, gibt der OLE DB-Treiber für SQL Server keine ausstehenden Einfügezeilen zurück.|  
 |DBPROP_ROWRESTRICT|R/W: Schreibgeschützt<br /><br /> Standardwert: VARIANT_TRUE<br /><br /> Beschreibung: OLE DB-Treiber für SQL Server-Rowsets unterstützen keine Zugriffsrechte basierend auf der Zeile. Wenn die **IRowsetChange**-Schnittstelle für ein Rowset verfügbar gemacht wird, kann die **SetData**-Methode vom Consumer aufgerufen werden.|  
-|DBPROP_ROWSET_ASYNCH|R/W: Lesen/Schreiben<br /><br /> Standardwert: 0<br /><br /> Beschreibung: Sorgt für eine asynchrone Rowsetverarbeitung. Diese Eigenschaft befindet sich in der Gruppe der Rowseteigenschaften und im DBPROPSET_ROWSET-Eigenschaftensatz. Der Typ ist VT_14.<br /><br /> Der einzige Wert in der Bitmaske, der vom OLE DB-Treiber für SQL Server unterstützt wird, ist **DBPROPVAL_ASYNCH_INITIALIZE**.|  
+|DBPROP_ROWSET_ASYNCH|R/W: Lesen/Schreiben<br /><br /> Standardwert: 0<br /><br /> Beschreibung: Diese ID sorgt für eine asynchrone Rowsetverarbeitung. Diese Eigenschaft befindet sich in der Gruppe der Rowseteigenschaften und im DBPROPSET_ROWSET-Eigenschaftensatz. Der Typ ist VT_14.<br /><br /> Der einzige Wert in der Bitmaske, der vom OLE DB-Treiber für SQL Server unterstützt wird, ist **DBPROPVAL_ASYNCH_INITIALIZE**.|  
 |DBPROP_ROWTHREADMODEL|R/W: Schreibgeschützt<br /><br /> Standardwert: DBPROPVAL_RT_FREETHREAD<br /><br /> Beschreibung: Der OLE DB-Treiber für SQL Server unterstützt den Zugriff auf seine Objekte von mehreren Ausführungsthreads eines einzelnen Consumers aus.|  
 |DBPROP_SERVERCURSOR|R/W: Lesen/Schreiben<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Sofern festgelegt, wird ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cursor verwendet, um das Rowset zu unterstützen. Weitere Informationen finden Sie unter [Rowsets und SQL Server-Cursor](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_SERVERDATAONINSERT|R/W: Lesen/Schreiben<br /><br /> Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Serverdaten bei Einfügevorgang.<br /><br /> VARIANT_TRUE: Wenn ein Einfügevorgang an den Server übertragen wird, ruft der Anbieter Daten vom Server ab, um den lokalen Zeilencache zu aktualisieren.<br /><br /> VARIANT_FALSE: Der Anbieter ruft keine Serverwerte für neu eingefügte Zeilen ab.|  

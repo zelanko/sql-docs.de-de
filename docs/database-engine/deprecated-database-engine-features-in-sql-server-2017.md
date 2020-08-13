@@ -1,5 +1,5 @@
 ---
-title: Als veraltet markierte Features der Datenbank-Engine | Microsoft-Dokumentation
+title: Als veraltet markierte Features der Datenbank-Engine in SQL Server 2017 | Microsoft-Dokumentation
 titleSuffix: SQL Server 2019
 description: Erfahren Sie mehr über die veralteten Features der Datenbank-Engine, die weiterhin in SQL Server 2017 (14.x) verfügbar sind, aber nicht in neuen Anwendungen verwendet werden sollten.
 ms.custom: seo-lt-2019
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759129"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244078"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2017
 
@@ -38,7 +38,7 @@ Wenn eine Funktion als veraltet markiert ist, bedeutet dies:\
 
 Sie können die Nutzung als veraltet markierter Funktionen mithilfe des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Objektleistungsindikators "Als veraltet markierte Funktion" und Ablaufverfolgungsereignissen überwachen. Weitere Informationen finden Sie unter [Verwenden von SQL Server-Objekten](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
-Die Werte dieser Indikatoren sind auch durch Ausführung folgender Anweisung verfügbar:  
+Die Werte dieser Zähler sind auch durch Ausführung der folgenden Anweisung verfügbar:  
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters
@@ -127,7 +127,7 @@ Die folgenden Features von SQL Server-Datenbank-Engine werden in der nächsten V
 | **timestamp** -Syntax für **rowversion** -Datentyp | **rowversion** -Datentypsyntax | timestamp |
 | Fähigkeit, NULL-Werte in **timestamp** -Spalten einzufügen | Verwenden Sie stattdessen DEFAULT. | INSERT NULL in TIMESTAMP-Spalten |
 | Tabellenoption 'text in row'|Verwenden Sie stattdessen die Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** . Weitere Informationen finden Sie unter [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Tabellenoption 'text in row' |
-| Datentypen:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Verwenden Sie stattdessen die Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** .|Datentypen: **text**, **ntext** oder **image**. |
+| Datentypen:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Verwenden Sie stattdessen die Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** .|Datentypen: **text**, **ntext** oder **image** |
 
 ### <a name="database-management"></a>Datenbankverwaltung
 

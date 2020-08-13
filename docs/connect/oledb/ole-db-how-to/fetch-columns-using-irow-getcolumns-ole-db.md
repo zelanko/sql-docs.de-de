@@ -1,5 +1,5 @@
 ---
-title: Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB) | Microsoft-Dokumentation
+title: Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB-Treiber) | Microsoft-Dokumentation
 description: Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 336b5b12eaf0744afd63510ce287edbb5439c3ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d2ca2ba9284c0e1fca7eef3f6b8911111c4559f6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015581"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244784"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Die **IRow** -Schnittstelle ermöglicht den direkten Zugriff auf Spalten einer einzelnen Zeile im Resultset. Daher ist **IRow** eine effiziente Möglichkeit, Spalten aus einem Resultset mit einer Zeile abzurufen.  
   
- Ein Codebeispiel ist verfügbar, das zeigt, wie eine einzelne Zeile mit **IRow**abgerufen wird. In diesem Beispiel wird jeweils eine Spalte aus der Zeile abgerufen. Das Beispiel zeigt Folgendes:  
+ Ein verfügbares Codebeispiel zeigt, wie eine einzelne Zeile mit **IRow** abgerufen wird. In diesem Beispiel wird jeweils eine Spalte aus der Zeile abgerufen. Das Beispiel zeigt Folgendes:  
   
 -   Wie eine Gruppe von Spalten abgerufen wird (nacheinander).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68015581"
   
  Mit dem ersten Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) wird eine im Beispiel verwendete Tabelle erstellt.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das „msoledbsql.h“ enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung zu einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das „msoledbsql.h“ enthält.  
   
  Das dritte Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) löscht die im Beispiel verwendete Tabelle.  
   

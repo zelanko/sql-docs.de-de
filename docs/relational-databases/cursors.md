@@ -1,5 +1,5 @@
 ---
-title: Cursors | Microsoft-Dokumentation
+title: Cursor (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/11/2020
 ms.prod: sql
@@ -19,14 +19,14 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8a589358edabaf25e3dfcadf9395e7771a965c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d4bec8b13cd060801e99e4c6cb842c2b0f38c25e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733914"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236175"
 ---
-# <a name="cursors"></a>Cursor
+# <a name="sql-server-cursors"></a>SQL Server-Cursor
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   Vorgänge in einer relationalen Datenbank beziehen sich immer auf eine vollständige Gruppe von Zeilen. Beispielsweise besteht der Zeilensatz, der von einer `SELECT`-Anweisung zurückgegeben wird, aus allen Zeilen, die die Bedingungen der `WHERE`-Klausel der Anweisung erfüllen. Diese vollständige Gruppe von Zeilen, die von der Anweisung zurückgegeben wird, wird als Resultset bezeichnet. Anwendungen, vor allem interaktive Onlineanwendungen, sind nicht immer effektiv, wenn das gesamte Resultset als eine Einheit bearbeitet wird. Diese Anwendungen benötigen einen Mechanismus, um jeweils eine Zeile oder einen kleinen Zeilenblock zu bearbeiten. Cursor sind eine Erweiterung zu Resultsets und stellen diesen Mechanismus bereit.  
   

@@ -1,5 +1,5 @@
 ---
-title: Einfügen von Daten in Tabellenwertparameter | Microsoft-Dokumentation
+title: Einfügen von Daten in Tabellenwertparameter (OLE DB-Treiber) | Microsoft-Dokumentation
 description: Verwenden des OLE DB-Treibers für SQL Server zum Einfügen von Daten in Tabellenwertparameter
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 064dcfa74cd6471c8c279ef4b08e874097d98d64
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 31cfbbd1afd2e5b249c3f3106aec471965038c86
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994129"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244161"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Einfügen von Daten in Tabellenwertparameter
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server unterstützt zwei Modelle, mit deren Hilfe der Consumer Daten für Tabellenwertparameter-Zeilen angeben kann: ein Push- und ein Pullmodell. Ein Beispiel zur Veranschaulichung des Pullmodells finden Sie unter [Programmierbeispiele für SQL Server-Daten](https://msftdpprodsamples.codeplex.com/).  
+  Der OLE DB-Treiber für SQL Server unterstützt zwei Modelle, mit deren Hilfe der Consumer Daten für Tabellenwertparameterzeilen angeben kann: ein Push- und ein Pullmodell. Ein Beispiel zur Veranschaulichung des Pullmodells finden Sie unter [Programmierbeispiele für SQL Server-Daten](https://msftdpprodsamples.codeplex.com/).  
   
 > [!NOTE]  
 >  Eine Tabellenwertparameter-Spalte muss entweder nicht standardmäßige oder standardmäßige Werte in allen Zeilen aufweisen. Es ist nicht möglich, dass Standardwerte nur in einigen Zeilen vorhanden sind. Daher sind in Tabellenwertparameter-Bindungen die einzigen für Tabellenwertparameter-Rowsetspaltendaten zugelassenen Statuswerte DBSTATUS_S_ISNULL und DBSTATUS_S_OK. DBSTATUS_S_DEFAULT führt zu einem Fehler, und der gebundene Statuswert wird auf DBSTATUS_E_BADSTATUS festgelegt.  
   
-## <a name="push-model-loads-all-table-valued-paremeter-data-in-memory"></a>Pushmodell (lädt alle Tabellenwertparameter-Daten im Arbeitsspeicher)  
+## <a name="push-model-loads-all-table-valued-parameter-data-in-memory"></a>Pushmodell (lädt alle Tabellenwertparameterdaten im Arbeitsspeicher)  
  Das Pushmodell ähnelt der Verwendung von Parametersätzen (das heißt, dem DBPARAMS-Parameter in ICommand::Execute). Das Pushmodell wird nur dann verwendet, wenn Tabellenwertparameter-Rowsetobjekte ohne benutzerdefinierte Implementierung von IRowset-Schnittstellen verwendet werden. Die Verwendung des Pushmodells ist empfehlenswert, wenn die Anzahl der Zeilen im Tabellenwertparameter-Rowset gering ist und die Arbeitsspeicherauslastung für die Anwendung daher nicht allzu hoch ist. Diese Vorgehensweise ist einfacher als die des Pullmodells, da neben den aktuellen gängigen Funktionen in typischen OLE DC-Anwendungen keine zusätzlichen Funktionen der Consumeranwendung erforderlich sind.  
   
  Es wird vorausgesetzt, dass der Consumer vor der Ausführung eines Befehls alle Tabellenwertparameter-Daten für den Anbieter bereitstellt. Zum Bereitstellen der Daten füllt der Consumer ein Tabellenwertparameter-Rowsetobjekt für den Tabellenwertparameter auf. Das Tabellenwertparameter-Rowsetobjekt macht Vorgänge zum Einfügen, Festlegen und Löschen verfügbar, mit denen der Consumer die Tabellenwertparameter-Daten bearbeiten kann. Der Anbieter ruft die Daten zum Zeitpunkt der Ausführung von diesem Tabellenwertparameter-Rowsetobjekt ab.  

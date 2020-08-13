@@ -1,7 +1,8 @@
 ---
 title: Konfigurieren der Windows-Firewall
+description: Hier erfahren Sie, wie Sie die Windows-Firewall so konfigurieren, dass der Zugriff auf eine SQL Server-Instanz über die Firewall möglich ist.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f2e73d6acd17e3a77802ecde712a2e18c7d66846
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528840"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238438"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Durch Firewallsysteme kann der nicht autorisierte Zugriff auf Computerressourcen verhindert werden. Wenn eine Firewall aktiviert, aber nicht richtig konfiguriert ist, können Versuche der Verbindungsherstellung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blockiert werden.  
   
@@ -182,7 +183,7 @@ Wenn [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] eine Verbindu
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] -Remoteprozeduraufrufe (MS RPC)<br /><br /> Wird von der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Laufzeit verwendet.|TCP-Port 135<br /><br /> Siehe [Spezielle Überlegungen zu Port 135](#BKMK_port_135)|Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwendet DCOM auf Port 135. Der Dienstkontroll-Manager verwendet Port 135, um Tasks wie z. B. das Starten und Beenden des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts und das Übertragen von Kontrollanforderungen an den laufenden Dienst auszuführen. Die Portnummer kann nicht geändert werden.<br /><br /> Dieser Port muss nur dann geöffnet sein, wenn Sie eine Verbindung mit einer Remoteinstanz des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder einer benutzerdefinierten Anwendung aus herstellen.|  
   
-Eine ausführliche Anleitung zum Konfigurieren der Windows-Firewall für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md?view=sql-server-2014).  
+Eine ausführliche Anleitung zum Konfigurieren der Windows-Firewall für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] finden Sie unter [Integration Services-Dienst &#40;SSIS-Dienst&#41;](/previous-versions/sql/sql-server-2012/ms137861(v=sql.110)).  
   
 ###  <a name="additional-ports-and-services"></a><a name="BKMK_additional_ports"></a> Zusätzliche Ports und Dienste  
 Die folgende Tabelle enthält Ports und Dienste, von denen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abhängig sein kann.  

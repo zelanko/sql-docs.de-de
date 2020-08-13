@@ -8,17 +8,18 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/08/2020
-ms.openlocfilehash: 5ca11e672e91b8d2b8801838c40057d6b2c8fbfd
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.date: 07/22/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0d4145832aee94a1786308e21ac425081d4d2a88
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151549"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237893"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>Installieren der SQL Server-Dokumentation für die Offlineanzeige in SSMS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 In diesem Artikel wird beschrieben, wie Sie SQL Server-Offlineinhalte herunterladen und in [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) anzeigen. Mithilfe von Offlineinhalten können Sie ohne bestehende Internetverbindung auf die Dokumentation zugreifen (allerdings ist für den Download anfangs eine Internetverbindung erforderlich).
 
@@ -34,7 +35,7 @@ In den folgenden Schritten wird erläutert, wie Offlineinhalte für SQL Server 
 
 1. Wählen Sie in SSMS im Menü „Hilfe“ **Hilfeinhalt hinzufügen und entfernen** aus.
 
-   ![Hinzufügen und Entfernen von Inhalten in Help Viewer](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
+   ![Screenshot zur Option „Hilfeinhalt hinzufügen und entfernen“](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
 
    Help Viewer öffnet die Registerkarte „Inhalt verwalten“.
 
@@ -50,7 +51,7 @@ In den folgenden Schritten wird erläutert, wie Offlineinhalte für SQL Server 
    ![SQL Server-Onlinebücher hinzufügen und aktualisieren](../sql-server/media/sql-server-offline-documentation/sql-add-update.png)
 
    > [!NOTE]
-   > Wenn Help Viewer beim Hinzufügen von Inhalt nicht mehr reagieren sollte, ändern Sie die Cachezeile „LastRefreshed=\<mm/dd/yyyy> 00:00:00“ in den Dateien „%LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings“ oder „HlpViewer_VisualStudiox_en-US.settings“ in ein Datum, das in der Zukunft liegt. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](/visualstudio/welcome-to-visual-studio).
+   > Wenn Help Viewer beim Hinzufügen von Inhalt nicht mehr reagieren sollte, ändern Sie die Cachezeile „LastRefreshed="\<mm/dd/yyyy> 00:00:00“ in den Dateien „%LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings“ oder „HlpViewer_VisualStudiox_en-US.settings“ in ein Datum, das in der Zukunft liegt. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](/visualstudio/welcome-to-visual-studio).
 
 4. Sie können überprüfen, ob die Inhalte von SQL Server 2016 oder höher geladen wurden, indem Sie im Inhaltsbereich links nach *SQL Server 2016* suchen.
 
@@ -58,11 +59,14 @@ In den folgenden Schritten wird erläutert, wie Offlineinhalte für SQL Server 
 
 ## <a name="sql-server-2014-offline-content"></a>Offlineinhalte für SQL Server 2014
 
+> [!IMPORTANT]
+> SQL 2014 Transact-SQL-Inhalte sind nur offline verfügbar.
+
 In den folgenden Schritten wird erläutert, wie Offlineinhalte für SQL Server 2014 geladen werden.
 
 1. Laden Sie den Inhalt [Produktdokumentation für Microsoft SQL Server 2014 für firewall- und proxygeschützte Umgebungen](https://www.microsoft.com/download/details.aspx?id=42557) aus dem Downloadcenter herunter, und speichern Sie ihn in einem Ordner.
 
-2. Entzippen Sie die Datei, um die MSHA-Datei anzuzeigen.
+2. Entpacken Sie die Datei, um die *.msha*-Datei anzuzeigen.
 
    ![Setupdatei der SQL Server 2014-Hilfedokumentation](../sql-server/media/sql-server-offline-documentation/sql-2014-help-content-setup-msha.png)
 
@@ -91,14 +95,11 @@ In den folgenden Schritten wird erläutert, wie Offlineinhalte für SQL Server 
    ![Hinzufügen und Aktualisieren von SQL Server 2014-Büchern in Help Viewer](../sql-server/media/sql-server-offline-documentation/sql-2014-add-update.png)
 
     > [!NOTE]
-    > Wenn Help Viewer beim Hinzufügen von Inhalt nicht mehr reagieren sollte, ändern Sie die Cachezeile „LastRefreshed=\<mm/dd/yyyy> 00:00:00“ in den Dateien „%LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings“ oder „HlpViewer_VisualStudiox_en-US.settings“ in ein Datum, das in der Zukunft liegt. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](/visualstudio/welcome-to-visual-studio).
+    > Wenn Help Viewer beim Hinzufügen von Inhalt nicht mehr reagieren sollte, ändern Sie die Cachezeile „LastRefreshed="\<mm/dd/yyyy> 00:00:00“ in den Dateien „%LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings“ oder „HlpViewer_VisualStudiox_en-US.settings“ in ein Datum, das in der Zukunft liegt. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](/visualstudio/welcome-to-visual-studio).
 
 7. Sie können überprüfen, ob die SQL Server 2014-Inhalte installiert wurden, indem Sie im Inhaltsbereich links nach *sql server 2014* suchen.
 
    ![Automatische Aktualisierung von SQL Server 2014-Büchern](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
-
-> [!Tip]
-> SQL 2014 Transact-SQL-Inhalte sind nur offline verfügbar.
 
 ## <a name="sql-server-2012-offline-content"></a>Offlineinhalte für SQL Server 2012
 
@@ -106,7 +107,7 @@ In den folgenden Schritten wird erläutert, wie Offlineinhalte für SQL Server 
 
 1. Laden Sie den Inhalt [Produktdokumentation für Microsoft SQL Server 2012 für firewall- und proxygeschützte Umgebungen](https://www.microsoft.com/download/details.aspx?id=35750) aus dem Downloadcenter herunter, und speichern Sie ihn in einem Ordner.
 
-2. Entzippen Sie die Datei, um die MSHA-Datei anzuzeigen.
+2. Entpacken Sie die Datei, um die *.msha*-Datei anzuzeigen.
 
    ![Setupdatei für SQL Server 2012-Hilfeinhalte](../sql-server/media/sql-server-offline-documentation/sql-2012-help-content-setup-msha.png)
 
@@ -135,7 +136,7 @@ In den folgenden Schritten wird erläutert, wie Offlineinhalte für SQL Server 
    ![Hinzufügen und Aktualisieren von SQL Server 2012-Büchern in Help Viewer](../sql-server/media/sql-server-offline-documentation/sql-2012-add-update.png)
 
     > [!NOTE]
-    > Wenn Help Viewer beim Hinzufügen von Inhalt nicht mehr reagieren sollte, ändern Sie die Cachezeile „LastRefreshed=\<mm/dd/yyyy> 00:00:00“ in den Dateien „%LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings“ oder „HlpViewer_VisualStudiox_en-US.settings“ in ein Datum, das in der Zukunft liegt. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](/visualstudio/welcome-to-visual-studio).
+    > Wenn Help Viewer beim Hinzufügen von Inhalt nicht mehr reagieren sollte, ändern Sie die Cachezeile „LastRefreshed="\<mm/dd/yyyy> 00:00:00“ in den Dateien „%LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings“ oder „HlpViewer_VisualStudiox_en-US.settings“ in ein Datum, das in der Zukunft liegt. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](/visualstudio/welcome-to-visual-studio).
 
 7. Sie können überprüfen, ob die SQL Server 2012-Inhalte geladen wurden, indem Sie im Inhaltsbereich links nach *sql server 2012* suchen.
 
@@ -153,7 +154,7 @@ Um die installierte Hilfe in SSMS anzuzeigen, wählen Sie im Menü „Hilfe“ *
 
 Help Viewer öffnet sich auf der Registerkarte „Inhalt verwalten“ mit dem installierten Inhaltsverzeichnis für die Hilfe im linken Bereich. Wählen Sie im Inhaltsverzeichnis Artikel aus, um diese auf der rechten Seite anzuzeigen.
 
-> [!TIP]
+> [!Important]
 > Wenn der Inhaltsbereich nicht angezeigt wird, wählen Sie auf der linken Seite „Inhalt“ aus. Wählen Sie das Reißzweckensymbol aus, damit der Inhaltsbereich geöffnet bleibt.  
 
    ![Help Viewer mit Inhalt](../sql-server/media/sql-server-offline-documentation/view-offline-all.png)
@@ -170,7 +171,7 @@ Lesen Sie den Microsoft-Produktlebenszyklus durch, um Informationen zum Support 
 
 Weitere Informationen zu archivierten Inhalten und zu Help Viewer finden Sie unter den folgenden Links.
 
-- [SQL Server Documentation (SQL Server-Dokumentation)](../sql-server/index.yml?view=sql-server-2016)
-- [Dokumentation zu SQL Server 2014](../2014/database-engine/install-windows/installation-for-sql-server.md)
-- [Dokumentation zu früheren Versionen von SQL Server](https://docs.microsoft.com/previous-versions/sql/)
+- [Onlinedokumentation für SQL Server](../sql-server/index.yml?view=sql-server-2016)
+- [Onlinedokumentation für SQL Server 2014](/sql/2014-toc/)
+- [Frühere Versionen der Onlinedokumentation für SQL Server](previous-versions-sql-server.md)
 - [Versionsverwaltungssystem für die SQL-Dokumentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

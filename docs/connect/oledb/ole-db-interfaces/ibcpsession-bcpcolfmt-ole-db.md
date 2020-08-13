@@ -1,8 +1,8 @@
 ---
-title: IBCPSession::BCPColFmt (OLE DB) | Microsoft-Dokumentation
+title: IBCPSession::BCPColFmt (OLE DB-Treiber) | Microsoft-Dokumentation
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d4d55b6e950ccf7e1e9bfac54bf357d070ab09f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994577"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244658"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -60,10 +60,14 @@ HRESULT BCPColFmt(
   
 -   Die maximale Länge der Daten pro Benutzerdateifeld  
   
--   Die optionale abschließende Bytesequenz für jedes Feld  
+-   Die optionale abschließende Bytesequenz für jedes Feld <a href="#terminator_note"><sup>**1**</sup></a>.  
   
--   Die Länge der optionalen abschließenden Bytesequenz  
+-   Die Länge der optionalen abschließenden Bytesequenz <a href="#terminator_note"><sup>**1**</sup></a>.  
   
+
+> [!IMPORTANT]
+> <b id="terminator_note">[1]:</b> Die Verwendung der Abschlusszeichensequenz in Szenarios, in denen die Codepage für die Datendatei auf „UTF-8“ festgelegt ist, wird nicht unterstützt. In solchen Szenarios muss **pbUserDataTerm** auf `nullptr` und **cbUserDataTerm** auf `0` festgelegt sein.
+
  Jeder Aufruf von **BCPColFmt** gibt das Format für ein Benutzerdateifeld an. Um die Standardeinstellungen für drei Felder in einer aus fünf Feldern bestehenden Benutzerdatendatei zu ändern, rufen Sie zuerst `BCPColumns(5)`auf und anschließend fünf Mal **BCPColFmt** , wobei mit drei dieser Aufrufe Ihr bentuzerdefiniertes Format festgelegt wird. Legen Sie für die restlichen zwei Aufrufe *eUserDataType* auf BCP_TYPE_DEFAULT und *cbIndicator*, *cbUserData*und *cbUserDataTerm* auf 0, BCP_VARIABLE_LENGTH bzw. 0 fest. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
   
 > [!NOTE]  
@@ -105,11 +109,11 @@ HRESULT BCPColFmt(
   
  Wird mehr als eine Methode zur Angabe der Länge der Benutzerdateispalte verwendet (z. B. ein Abschlusszeichen und ein Längenindikator oder ein Abschlusszeichen und eine maximale Spaltenlänge), wird beim Massenkopieren die Methode ausgewählt, die zu der kleineren zu kopierenden Datenmenge führt.  
   
- Die API für das Massenkopieren führt nach Bedarf eine Zeichenkonvertierung von Unicode in MBCS aus. Stellen Sie unbedingt sicher, dass sowohl die Bytezeichenfolge des Abschlusszeichens und die Länge der Bytezeichenfolge richtig festgelegt werden.  
-  
+ Die API für das Massenkopieren führt nach Bedarf eine Zeichenkonvertierung von Unicode in MBCS aus. Stellen Sie unbedingt sicher, dass sowohl die Bytezeichenfolge des Abschlusszeichens und die Länge der Bytezeichenfolge richtig festgelegt werden. Informationen zu den UTF-8-Codierungseinschränkungen finden Sie im Abschnitt [Hinweise](#remarks).
+
  *cbUserDataTerm*[in]  
- Die Länge (in Byte) der Abschlusszeichensequenz, die für die Spalte verwendet werden soll. Wenn kein Abschlusszeichen vorhanden ist oder in den Daten gewünscht wird, legen Sie diesen Wert auf 0 fest.  
-  
+ Die Länge (in Byte) der Abschlusszeichensequenz, die für die Spalte verwendet werden soll. Wenn kein Abschlusszeichen vorhanden ist oder in den Daten gewünscht wird, legen Sie diesen Wert auf 0 fest. Informationen zu den UTF-8-Codierungseinschränkungen finden Sie im Abschnitt [Hinweise](#remarks).
+
  *idxServerCol*[in]  
  Die Ordnungsposition der Spalte innerhalb der Datenbanktabelle. Die erste Spaltennummer ist 1. Die Ordnungsposition einer Spalte wird von **IColumnsInfo::GetColumnInfo** oder ähnlichen Methoden gemeldet. Wenn dieser Wert 0 ist, wird beim Massenkopieren das Feld in der Datendatei ignoriert.  
   

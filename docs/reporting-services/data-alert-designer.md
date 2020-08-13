@@ -1,5 +1,6 @@
 ---
 title: Datenwarnungs-Designer | Microsoft-Dokumentation
+description: In diesem Artikel erhalten Sie Informationen zu Datenwarnungsdefinitionen und dazu, wie Sie Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und bearbeiten.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0d166462c2a542d834e92da03735e6e8294290d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571596"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243299"
 ---
 # <a name="data-alert-designer"></a>Datenwarnungs-Designer
 
@@ -170,7 +171,7 @@ Sie können Datenwarnungsdefinitionen im Datenwarnungs-Designer erstellen und be
 ### <a name="email-settings"></a>E-Mail-Einstellungen  
  Sie geben anhand der Option **Empfänger** die E-Mail-Adressen der Empfänger an, die Datenwarnmeldungen per E-Mail erhalten sollen. Mehrere E-Mail-Adressen werden auf dieselbe Art wie bei Microsoft Office Outlook-E-Mails durch Semikolons getrennt. Sie können auch Verteilergruppen als Empfänger angeben. Dies vereinfacht und optimiert die Verwaltung der Empfängerliste. Wenn SharePoint Ihre E-Mail-Adresse bestimmen kann, wenn Sie eine Warnungsdefinition erstellen, wird Ihre E-Mail-Adresse automatisch der Empfängerliste hinzugefügt. Andernfalls müssen Sie sich ausdrücklich als Empfänger hinzufügen.  
   
- Der Standardbetreff der E-Mail lautet **Datenwarnung für \<Warnungsname>** . Sie können den Betreff Ihren Anforderungen entsprechend ändern.  
+ Der Standardbetreff der E-Mail lautet **Datenwarnung für \<alert name>** . Sie können den Betreff Ihren Anforderungen entsprechend ändern.  
   
  Sie können mithilfe der Option **Beschreibung** auch eine Beschreibung angeben, die in der Datenwarnmeldung enthalten sein soll. Das Einfügen einer Beschreibung, insbesondere im Fall von ähnlichen Datenwarnungen, ermöglicht ein schnelles Unterscheiden und Verstehen der Warnmeldungen. Zusätzlich zur Warnmeldung, die gesendet wird, wenn Berichtsdaten die angegebenen Regeln erfüllen, wird bei Auftreten eines Fehlers allen Empfängern eine Warnmeldung gesendet. Weitere Informationen finden Sie unter [Data Alert Messages](../reporting-services/data-alert-messages.md).  
   

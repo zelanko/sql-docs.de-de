@@ -1,5 +1,5 @@
 ---
-title: Rowsets und SQL Server-Cursor | Microsoft-Dokumentation
+title: Rowsets und SQL Server-Cursor (OLE DB-Treiber)
 description: Rowsets und SQL Server-Cursor
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c87699f389d487354b562fafa8cfab378c2ff0d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994180"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244153"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Rowsets und SQL Server-Cursor
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -145,7 +145,7 @@ ms.locfileid: "67994180"
   
  Für einen spezifischen Satz von Rowseteigenschaften wird das Cursormodell, das ausgewählt wird, wie folgt bestimmt.  
   
- Rufen Sie von der angegebenen Auflistung von Rowseteigenschaften eine Teilmenge von den in den vorherigen Tabellen aufgelisteten Eigenschaften ab. Teilen Sie diese Eigenschaften abhängig vom Flagwert – erforderlich (T, F) oder optional (-) – der jeweiligen Rowseteigenschaften in zwei Untergruppen auf. Beginnen Sie für jedes Cursormodell in der ersten Tabelle, und gehen Sie von links nach rechts vor. Vergleichen Sie die Werte der Eigenschaften in den beiden Untergruppen mit den Werten der entsprechenden Eigenschaften in dieser Spalte. Das Cursormodell, für das keine fehlende Übereinstimmung mit den erforderlichen Eigenschaften und die geringste Zahl fehlender Übereinstimmungen mit den optionalen Eigenschaften gefunden wird, wird ausgewählt. Wenn dies auf mehr als ein Cursormodell zutrifft, wird das am weitesten links stehende Modell ausgewählt.  
+ Rufen Sie von der angegebenen Auflistung von Rowseteigenschaften eine Teilmenge von den in den vorherigen Tabellen aufgelisteten Eigenschaften ab. Teilen Sie diese Eigenschaften abhängig vom Flagwert – erforderlich (T, F) oder optional (-) – der jeweiligen Rowseteigenschaften in zwei Untergruppen auf. Beginnen Sie für die einzelnen Cursormodelle in der ersten Tabelle, und gehen Sie von links nach rechts vor. Vergleichen Sie die Werte der Eigenschaften in den beiden Untergruppen mit den Werten der entsprechenden Eigenschaften in dieser Spalte. Das Cursormodell, für das keine fehlende Übereinstimmung mit den erforderlichen Eigenschaften und die geringste Zahl fehlender Übereinstimmungen mit den optionalen Eigenschaften gefunden wird, wird ausgewählt. Wenn dies auf mehr als ein Cursormodell zutrifft, wird das am weitesten links stehende Modell ausgewählt.  
   
 ## <a name="sql-server-cursor-block-size"></a>Blockgröße des SQL Server-Cursors  
  Wenn ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cursor ein Rowset für den OLE DB-Treiber für SQL Server unterstützt, wird die Blockgröße des Cursors durch die Anzahl der Elemente im Arrayparameter des Zeilenhandles der **IRowset::GetNextRows**- oder der **IRowsetLocate::GetRowsAt**-Methode definiert. Die von den Handles im Array angegebenen Zeilen sind die Elemente des Cursorblocks.  

@@ -1,7 +1,7 @@
 ---
-title: Referenz zu azdata context
+title: azdata-Erweiterungsreferenz
 titleSuffix: SQL Server big data clusters
-description: Referenzartikel zu azdata context-Befehlen
+description: Referenzartikel zu azdata-Erweiterungsbefehlen
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,14 +9,14 @@ ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8e5113020c9baeb22fb512ee3be7ed735d50aa48
+ms.openlocfilehash: 9e2585a77c3117df8514622728d0f09df93d7bc2
 ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243011"
+ms.locfileid: "87242996"
 ---
-# <a name="azdata-context"></a>azdata context
+# <a name="azdata-extension"></a>azdata-Erweiterung
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -25,27 +25,46 @@ Der folgende Artikel enthält Referenzinformationen zu den `sql`-Befehlen im `az
 ## <a name="commands"></a>Befehle
 | Get-Help | BESCHREIBUNG |
 | --- | --- |
-[azdata context list](#azdata-context-list) | Listet die verfügbaren Kontexte im Benutzerprofil auf
-[azdata context delete](#azdata-context-delete) | Löscht den Kontext mit dem angegebenen Namespace aus dem Benutzerprofil
-[azdata context set](#azdata-context-set) | Legt den Kontext mit dem angegebenen Namespace als den aktiven Kontext im Benutzerprofil fest
-## <a name="azdata-context-list"></a>azdata context list
-Sie können beliebige Kontexte mit `azdata context set` oder `azdata context delete` festlegen oder löschen. Verwenden Sie `azdata login`, um sich bei einem neuen Kontext anzumelden.
+[azdata extension add](#azdata-extension-add) | Hinzufügen einer Erweiterung
+[azdata extension remove](#azdata-extension-remove) | Entfernen einer Erweiterung
+[azdata extension list](#azdata-extension-list) | Auflisten aller installierten Erweiterungen
+## <a name="azdata-extension-add"></a>azdata extension add
+Fügen Sie eine Erweiterung hinzu.
 ```bash
-azdata context list [--active -a] 
-                    
+azdata extension add --source -s 
+                     [--index]  
+                     
+[--pip-proxy]  
+                     
+[--pip-extra-index-urls]  
+                     
+[--yes -y]
 ```
 ### <a name="examples"></a>Beispiele
-Listet alle verfügbaren Kontexte im Benutzerprofil auf.
+Fügen Sie eine Erweiterung aus einer URL hinzu.
 ```bash
-azdata context list
+azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl
 ```
-Listet den aktiven Kontext im Benutzerprofil auf.
+Fügen Sie eine Erweiterung von einem lokalen Datenträger hinzu.
 ```bash
-azdata context list --active
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl
 ```
+Fügen Sie eine Erweiterung von einem lokalen Datenträger hinzu, und verwenden Sie pip proxy für Abhängigkeiten.
+```bash
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl --pip-proxy https://user:pass@proxy.server:8080
+```
+### <a name="required-parameters"></a>Erforderliche Parameter
+#### `--source -s`
+Pfad zu einem Erweiterungsrad auf einem Datenträger oder einer URL zu einer Erweiterung
 ### <a name="optional-parameters"></a>Optionale Parameter
-#### `--active -a`
-Listet nur den derzeit aktiven Kontext auf.
+#### `--index`
+Haupt-URL des Python-Paketindexes (Standard: https://pypi.org/simple). Dies sollte auf ein Repository verweisen, das mit PEP 503 konform ist (die einfache Repository-API), oder auf ein lokales Verzeichnis, das im gleichen Format angeordnet ist.
+#### `--pip-proxy`
+Der Proxy für PIP, der für Erweiterungsabhängigkeiten in Form von [user:passwd@]proxy.server:port verwendet werden soll.
+#### `--pip-extra-index-urls`
+Durch Leerzeichen getrennte Liste mit zusätzlichen URLs von von Paketindizes, die verwendet werden sollen. Dies sollte auf ein Repository verweisen, das mit PEP 503 konform ist (die einfache Repository-API), oder auf ein lokales Verzeichnis, das im gleichen Format angeordnet ist.
+#### `--yes -y`
+Nicht zur Bestätigung auffordern
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
 Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
@@ -57,20 +76,23 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
-## <a name="azdata-context-delete"></a>azdata context delete
-Ist der gelöschte Kontext aktiv, muss der Benutzer einen neuen aktiven Kontext festlegen. Mit `azdata context list` können Sie die Kontexte anzeigen, die zum Festlegen oder Löschen verfügbar sind.
+## <a name="azdata-extension-remove"></a>azdata extension remove
+Entfernen Sie eine Erweiterung.
 ```bash
-azdata context delete --namespace -n 
-                      
+azdata extension remove --name -n 
+                        [--yes -y]
 ```
 ### <a name="examples"></a>Beispiele
-Hiermit wird „contextNamespace“ aus dem Benutzerprofil gelöscht.
+Entfernen Sie eine Erweiterung.
 ```bash
-azdata context delete -n contextNamespace
+azdata extension remove --name some-ext
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
-#### `--namespace -n`
-Namespace des Kontexts, den Sie löschen möchten.
+#### `--name -n`
+Der Name der Erweiterung
+### <a name="optional-parameters"></a>Optionale Parameter
+#### `--yes -y`
+Nicht zur Bestätigung auffordern
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
 Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
@@ -82,20 +104,16 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
-## <a name="azdata-context-set"></a>azdata context set
-Mit `azdata context list` können Sie die Kontexte anzeigen, die zum Festlegen verfügbar sind. Werden keine Kontexte angezeigt, müssen Sie sich mit `azdata login` anmelden, um in Ihrem Benutzerprofil einen Kontext zu erstellen. Der Kontext, bei dem Sie sich anmelden, wird zu Ihrem aktiven Kontext. Wenn Sie sich bei mehreren Entitäten anmelden, können Sie mit diesem Befehl zwischen den aktiven Kontexten wechseln. Mit `azdata context list --active` wird der derzeit aktive Kontext angezeigt.
+## <a name="azdata-extension-list"></a>azdata extension list
+Listen Sie alle installierten Erweiterungen auf.
 ```bash
-azdata context set --namespace -n 
-                   
+azdata extension list 
 ```
 ### <a name="examples"></a>Beispiele
-Legt contextNamespace als den aktiven Kontext im Benutzerprofil fest.
+Listen Sie die Erweiterungen auf.
 ```bash
-azdata context set -n contextNamespace
+azdata extension list
 ```
-### <a name="required-parameters"></a>Erforderliche Parameter
-#### `--namespace -n`
-Namespace des Kontexts, den Sie festlegen möchten.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
 Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.

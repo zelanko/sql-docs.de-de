@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator) | Microsoft-Dokumentation'
+description: 'Hier erfahren Sie, wie Sie zwei Arten von paginierten Reporting Services-Berichten erstellen: einen Drillthroughbericht und einen Hauptbericht.'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73637985"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238394"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Lernprogramm: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
 In diesem Tutorial erfahren Sie, wie Sie zwei Arten von paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Berichten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. 
 
 Die folgende Abbildung zeigt die Berichte, die Sie erstellen werden und wie der Feldwert „Games and Toys“ aus dem Hauptbericht im Titel des Drillthroughberichts angezeigt wird. Die Daten im Drillthroughbericht beziehen sich auf die Produktkategorie „Games and Toys!“.  
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    
-Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 30 Minuten  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Das Tutorial erfordert Zugriff auf den Contoso Sales-Cube jeweils für den Drillthrough- und den Hauptbericht. Dieses Dataset umfasst das Data Warehouse „ContosoDW“ und die OLAP -Datenbank (Online Analytical Processing) „Contoso_Retail“. Die Berichte, die Sie in diesem Lernprogramm erstellen, rufen Berichtsdaten aus dem Contoso Sales-Cube ab. Die OLAP-Datenbank Contoso_Retail kann vom [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=18279)heruntergeladen werden. Sie brauchen lediglich die Datei ContosoBIdemoABF.exe herunterzuladen. Diese Datei enthält die OLAP-Datenbank.  
@@ -627,7 +628,7 @@ Hinzufügen eines Titels zum Hauptbericht
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Geben Sie **2009 Product Category Sales: Online and Reseller Category:** ein.  
+2.  Geben Sie **Umsatz in 2009 in Produktkategorie: Online und Wiederverkäufer:** .  
   
 3.  Wählen Sie den eingegebenen Text aus.  
   

@@ -1,5 +1,6 @@
 ---
 title: Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“ | Microsoft-Dokumentation
+description: Geben Sie in der RSReportServer-Konfigurationsdatei Parameter für Renderingerweiterungen an, um das Standardrenderverhalten von Berichten für Reporting Services-Berichte zu überschreiben.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d5266de3f5fe52a75c1027addd02ca32488c38b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae82af83d1933e204e405995864c9f17cfe3521a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571591"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242490"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config
   Sie können in der RSReportServer-Konfigurationsdatei Parameter für Renderingerweiterungen angeben, um das standardmäßige Rendern von Berichten zu überschreiben, die auf einem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver ausgeführt werden. Sie können die Parameter für Renderingerweiterungen ändern, um Folgendes zu bewirken:  

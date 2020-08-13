@@ -1,5 +1,6 @@
 ---
 title: 'Lektion 7: Hinzufügen einer Drillthroughaktion für den übergeordneten Bericht | Microsoft-Dokumentation'
+description: Informieren Sie sich, wie Sie eine Drillthroughaktion für den übergeordneten Bericht hinzufügen, nachdem Sie ein ReportViewer-Steuerelement zur Websiteanwendung hinzugefügt haben.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ade2bf3463ca2efc139cfea661dba0a83394f804
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6a6e588cb79ffbc97450a4ad0a627957dc73b75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651266"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243251"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lektion 7: Hinzufügen einer Drillthroughaktion für den übergeordneten Bericht
 Nachdem Sie der Websiteanwendung ein ReportViewer-Steuerelement hinzugefügt haben, fügen Sie im nächsten Schritt eine Drillthroughaktion für den übergeordneten Bericht hinzu.  
@@ -40,7 +41,7 @@ Nachdem Sie der Websiteanwendung ein ReportViewer-Steuerelement hinzugefügt hab
 8.  Wählen Sie **OK** , um den Vorgang abzuschließen.  
   
 ## <a name="next-task"></a>Nächste Aufgabe  
-Sie haben dem übergeordneten Bericht erfolgreich eine Drillthroughaktion hinzugefügt. Anschließend erstellen Sie einen Datenfilter für die Datentabelle, die für den untergeordneten Bericht definiert wurde. Siehe [Lektion 8: Erstellen eines Datenfilters](../reporting-services/lesson-8-create-a-data-filter.md).  
+Sie haben dem übergeordneten Bericht erfolgreich eine Drillthroughaktion hinzugefügt. Anschließend erstellen Sie einen Datenfilter für die Datentabelle, die für den untergeordneten Bericht definiert wurde. Navigieren Sie zu [Lektion 8: Erstellen eines Datenfilters](../reporting-services/lesson-8-create-a-data-filter.md).  
   
   
   

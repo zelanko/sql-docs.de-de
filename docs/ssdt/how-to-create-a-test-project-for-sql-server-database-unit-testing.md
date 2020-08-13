@@ -1,35 +1,34 @@
 ---
 title: Erstellen eines Testprojekts für SQL Server-Datenbankkomponententests
+description: In diesem Artikel wird erläutert, wie Sie Testprojekte für SQL Server-Datenbankkomponententests erstellen. Informieren Sie sich über die verschiedenen Möglichkeiten zum Hinzufügen von Testprojekten zu Projektmappen, die Datenbankprojekte enthalten.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fe6b8e2e70a20041f394afa5cad1d800535559d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ff3cb815dcd27f72ea96296935484ec0cc15ea0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241519"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243531"
 ---
-# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Vorgehensweise: Erstellen eines Testprojekts für SQL Server-Datenbankkomponententests
+# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Gewusst wie: Erstellen eines Testprojekts für SQL Server-Datenbankkomponententests
 
 Bevor Sie mit dem Schreiben von Komponententests beginnen können, durch die Datenbankobjekte ausgewertet werden, müssen Sie erst ein Testprojekt erstellen. Das Projekt enthält SQL Server-Komponententests, kann jedoch auch andere Testtypen enthalten.  
   
 Sie können alle SQL Server-Komponententests für ein bestimmtes Datenbankprojekt in einem einzelnen Testprojekt platzieren. Möglicherweise möchten Sie jedoch zusätzliche Testprojekte erstellen, je nachdem, wie die Antwort auf die folgenden Fragen ausfällt:  
   
-|||  
-|-|-|  
-|**Frage**|**Entscheidung**|  
+|Frage|Entscheidung|  
+|-|-|   
 |Müssen verschiedene SQL Server-Komponententests zur Testausführung oder Testüberprüfung auf verschiedene Datenbankverbindungen zugreifen?|Falls ja, benötigen Sie mehr als ein Testprojekt. Es kann nur maximal eine Datenbankverbindung für die Testausführung angegeben werden. Sie können jedoch eine andere Datenbankverbindung für die Testüberprüfung angeben.|  
 |Möchten Sie für verschiedene Komponententests unterschiedliche Datenbankprojekte bereitstellen?|Falls ja, benötigen Sie mehr als ein Testprojekt. Von einem Testprojekt kann nur ein einzelnes Datenbankprojekt bereitgestellt werden.|  
   
-Weitere Informationen zu den einzelnen Fragen finden Sie unter [Gewusst wie: Konfigurieren der Ausführung von SQL Server-Komponententests](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Anstatt mehrere Testprojekte zu erstellen, können Sie auch eine eigene [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx)-Implementierung „Microsoft.Data.Schema.UnitTesting.DatabaseTestService“ bereitstellen.  
+Weitere Informationen zu den einzelnen Fragen finden Sie unter [Vorgehensweise: Konfigurieren der Ausführung von SQL Server-Komponententests](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Anstatt mehrere Testprojekte zu erstellen, können Sie auch eine eigene [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx)-Implementierung „Microsoft.Data.Schema.UnitTesting.DatabaseTestService“ bereitstellen.  
   
 Es gibt drei Möglichkeiten, um einer Projektmappe, in der ein Datenbankprojekt enthalten ist, ein Testprojekt hinzuzufügen:  
   

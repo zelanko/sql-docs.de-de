@@ -1,5 +1,6 @@
 ---
 title: Arbeiten mit paginierten Berichten (Webportal) | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie die Eigenschaften eines paginierten Berichts im Webportal anzeigen und verwalten. Außerdem wird erläutert, wie Sie mit dem Berichts-Generator paginierte Berichte erstellen oder bearbeiten.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d5c5a6a7b1bd60f066c13a2b06e65dc6ef5f053
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68222648"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243576"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Arbeiten mit paginierten Berichten (Webportal)
 
@@ -77,7 +78,7 @@ Geben Sie eine Datenverarbeitungserweiterung an, die zum Verarbeiten von Daten a
   
 Geben Sie die Verbindungszeichenfolge an, die vom Berichtsserver zum Herstellen der Verbindung mit der Datenquelle verwendet wird. Der Verbindungstyp bestimmt die Syntax, die Sie verwenden sollten. So ist z.B. eine Verbindungszeichenfolge für die XML-Datenverarbeitungserweiterung eine URL zu einem XML-Dokument. In den meisten Fällen gibt eine typische Verbindungszeichenfolge den Datenbankserver und die Datendatei an. Im folgenden Beispiel wird eine Verbindungszeichenfolge gezeigt, die für die Verbindung mit einer SQL Server-Datenbank mit dem Namen „MyData“ verwendet wird:  
   
-    data source=(a SQL Server instance);initial catalog=MyData  
+`data source=(a SQL Server instance);initial catalog=MyData`
   
 Eine Verbindungszeichenfolge kann als ein Ausdruck konfiguriert werden, sodass Sie die Datenquelle zur Laufzeit angeben können. Datenquellenausdrücke für den Bericht werden im Berichts-Designer definiert. Datenquellenausdrücke können im Webportal nicht definiert, angezeigt oder geändert werden. Sie können einen Datenquellenausdruck jedoch ersetzen, indem Sie auf **Standardwert überschreiben** klicken, um eine statische Verbindungszeichenfolge einzugeben. Wenn Sie zurück zum Ausdruck wechseln möchten, klicken Sie auf **Standardwert wiederherstellen**. Der Berichtsserver speichert die ursprüngliche Verbindungszeichenfolge für den Fall, dass Sie sie wiederherstellen müssen. Um Datenquellenausdrücke verwenden zu können, müssen Sie die ursprünglich im Bericht veröffentlichten Informationen zur Datenquellenverbindung verwenden. Freigegebene Datenquellen unterstützen die Verwendung von Ausdrücken in der Verbindungszeichenfolge nicht.  
   

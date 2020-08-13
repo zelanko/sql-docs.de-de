@@ -1,5 +1,6 @@
 ---
 title: Erforderliche Berechtigungen
+description: Hier erfahren Sie mehr über die Berechtigungen, die Sie für unterschiedliche Aufgaben in SQL Server Data Tools benötigen, zum Beispiel für das Erstellen einer Datenbank, das Ausführen von Komponententests und das Vergleichen von Schemas.
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.prod: sql
@@ -8,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
-ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5637af0406176ba8099038eaa8a2500d2f03629e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256995"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243721"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Erforderliche Berechtigungen für SQL Server Data Tools
 
@@ -38,9 +38,8 @@ Bevor Sie eine Aktion für eine Datenbank in Visual Studio ausführen können, m
 ## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>Berechtigungen zum Erstellen oder Bereitstellen einer Datenbank  
 Zum Erstellen oder Bereitstellen einer Datenbank müssen Sie über folgende Berechtigungen verfügen.  
   
-|||  
-|-|-|  
 |Aktionen|Erforderliche Berechtigungen|  
+|-|-|  
 |Importieren von Datenbankobjekten und -einstellungen|Sie müssen sich mit der Quelldatenbank verbinden können.<br /><br />Wenn die Quelldatenbank auf SQL Server 2005 basiert, müssen Sie außerdem für jedes Objekt über die Berechtigung **VIEW DEFINITION** verfügen.<br /><br />Wenn die Quelldatenbank auf SQL Server 2008 oder höher basiert, müssen Sie außerdem für jedes Objekt über die Berechtigung **VIEW DEFINITION** verfügen. Für Ihre Anmeldung muss die Berechtigung **VIEW SERVER STATE** vorliegen (für Datenbankverschlüsselungsschlüssel).|  
 |Importieren von Serverobjekten und -einstellungen|Sie müssen sich mit der Masterdatenbank auf dem angegebenen Server verbinden können.<br /><br />Wenn auf dem Server SQL Server 2005 ausgeführt wird, müssen Sie für den Server über die Berechtigung **VIEW ANY DEFINITION** verfügen.<br /><br />Wenn die Quelldatenbank auf SQL Server 2008 oder höher basiert, müssen Sie für den Server über die Berechtigung **VIEW ANY DEFINITION** verfügen. Für Ihre Anmeldung muss die Berechtigung **VIEW SERVER STATE** vorliegen (für Datenbankverschlüsselungsschlüssel).|  
 |Erstellen oder Aktualisieren eines Datenbankprojekts|Zum Erstellen oder Ändern eines Datenbankprojekts benötigen Sie keine Datenbankberechtigungen.|  
@@ -57,9 +56,8 @@ Eine *Datenbankumgestaltung* findet nur innerhalb des Datenbankprojekts statt. S
 ## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>Berechtigungen zum Ausführen von Komponententests in einer SQL Server-Datenbank  
 Zum Durchführen von Komponententests für eine Datenbank müssen Sie über folgende Berechtigungen verfügen.  
   
-|||  
-|-|-|  
 |Aktionen|Erforderliche Berechtigungen|  
+|-|-|   
 |Ausführen einer Testaktion|Sie müssen die Datenbankverbindung für den Ausführungskontext verwenden. Weitere Informationen finden Sie unter [Übersicht über Verbindungszeichenfolgen und Berechtigungen](../ssdt/overview-of-connection-strings-and-permissions.md).|  
 |Ausführen einer Vortest- oder Nachtestaktion|Sie müssen die Datenbankverbindung für den privilegierten Kontext verwenden. Diese Datenbankverbindung verfügt über mehr Berechtigungen als die Verbindung für den Ausführungskontext.|  
 |Ausführen der Skripts TestInitialize und TestCleanup|Sie müssen die Datenbankverbindung für den privilegierten Kontext verwenden.|  
@@ -72,9 +70,8 @@ Sie müssen die Berechtigungen **INSERT** und **SELECT** für die Objekte in der
 ## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>Berechtigungen zum Vergleichen von Schemas und Daten  
 Zum Vergleichen von Schemas oder Daten müssen Sie über folgende Berechtigungen verfügen.  
   
-|||  
-|-|-|  
 |Aktionen|Erforderliche Berechtigungen|  
+|-|-|   
 |Vergleichen der Schemas von zwei Datenbanken|Sie müssen die Berechtigungen zum Importieren von Objekten und Einstellungen aus den Datenbanken wie unter [Berechtigungen zum Erstellen oder Bereitstellen einer Datenbank](#DatabaseCreationAndDeploymentPermissions) beschrieben besitzen.|  
 |Vergleichen der Schemas einer Datenbank und eines Datenbankprojekts|Sie müssen die Berechtigungen zum Importieren von Objekten und Einstellungen aus der Datenbank wie unter [Berechtigungen zum Erstellen oder Bereitstellen einer Datenbank](#DatabaseCreationAndDeploymentPermissions) beschrieben besitzen. Außerdem muss das Datenbankprojekt in Visual Studio geöffnet sein.|  
 |Schreiben von Aktualisierungen in eine Zieldatenbank|Sie müssen die Berechtigungen zum Bereitstellen von Aktualisierungen für die Zieldatenbank wie unter [Berechtigungen zum Erstellen oder Bereitstellen einer Datenbank](#DatabaseCreationAndDeploymentPermissions) beschrieben besitzen.|  

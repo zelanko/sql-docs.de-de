@@ -1,5 +1,5 @@
 ---
-title: ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Microsoft-Dokumentation
+title: ISQLServerErrorInfo::GetErrorInfo (OLE DB-Treiber) | Microsoft-Dokumentation
 description: "'ISQLServerErrorInfo::GetErrorInfo' (OLE DB)"
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - GetErrorInfo method
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 89a6bab95fa43deb3536e25a7cb99610413b1848
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015437"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244450"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>'ISQLServerErrorInfo::GetErrorInfo' (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Gibt einen Zeiger auf eine SSERRORINFO-Struktur des OLE DB-Treibers für SQL Server zurück, die die Fehlerdetails für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält.  
+  Hiermit wird ein Zeiger auf eine SSERRORINFO-Struktur des OLE DB-Treibers für SQL Server zurückgegeben, die die Fehlerdetails für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält.  
   
  Der OLE DB-Treiber für SQL Server definiert die Fehlerschnittstelle für **ISQLServerErrorInfo**. Diese Schnittstelle gibt Details zu einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Fehler zurück, einschließlich seines Schweregrads und Status.  
 

@@ -15,12 +15,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12dc8a03cbf65a0c07e9a5985f1ffade813a3e5f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012142"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243694"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
 
@@ -55,7 +55,7 @@ Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie f
 > [!NOTE]
 > Die folgende Tabelle enthält eine Spalte für 32-Bit-Versionen, die nicht mehr verfügbar sind.
 
-| |32-Bit <sup>1</sup> |64 Bit|
+|Arbeitsspeicherrichtlinie|32-Bit <sup>1</sup> |64 Bit|
 |-------|-------|-------| 
 |Konventioneller Arbeitsspeicher |Alle Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Bis zu der für den virtuellen Prozessadressraum geltenden Beschränkung: <br>– 2 GB<br>– 3 GB mit Startparameter „/3gb“ <sup>2</sup> <br>– 4 GB unter WOW64 <sup>3</sup> |Alle Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Bis zu der für den virtuellen Prozessadressraum geltenden Beschränkung: <br>– 7 TB mit IA64-Architektur (IA64 wird in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] und höher nicht unterstützt)<br>– Maximum des Betriebssystems mit X64 Architektur <sup>4</sup>
 |AWE-Mechanismus (Ermöglicht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , auf 32-Bit-Plattformen über die Beschränkung für den virtuellen Prozessadressraum hinauszugehen.) |Standard-, Enterprise- und Developer-Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: Pufferpool kann auf bis zu 64 GB Arbeitsspeicher zugreifen.|Nicht zutreffend <sup>5</sup> |
@@ -94,7 +94,7 @@ In der folgenden Tabelle ist aufgeführt, ob ein bestimmter Typ von Speicherbele
 |Einzelseitenbelegungen|Ja|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
 |Mehrseitenbelegungen|Nein|Ja, in Seitenbelegungen beliebiger Größe konsolidiert|
 |CLR-Belegungen|Nein|Ja|
-|Threadstapel-Arbeitsspeicher|Nein|Nein|
+|Threadstapel-Arbeitsspeicher|Nein|Nein |
 |Direkte Belegungen von Windows|Nein|Nein|
 
 Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wird möglicherweise mehr Arbeitsspeicher als der in der Einstellung „Max. Serverarbeitsspeicher“ angegebene Wert zugewiesen. Dieses Verhalten kann auftreten, wenn der Wert für **_Serverspeicher gesamt (KB)_** bereits die Einstellung **_Zielserverspeicher (KB)_** erreicht hat, die als maximaler Serverarbeitsspeicher angegeben ist. Wenn nicht ausreichend zusammenhängender freier Arbeitsspeicher vorhanden ist, um die Anforderung von Mehrseiten-Speicheranforderungen (mehr als 8 KB) zu bedienen, da der Arbeitsspeicher fragmentiert ist, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Zusage über den Grenzwert hinaus vornehmen, statt die Arbeitsspeicheranforderung zurückzuweisen. 

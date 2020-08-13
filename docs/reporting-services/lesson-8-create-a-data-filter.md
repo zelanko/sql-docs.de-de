@@ -1,5 +1,6 @@
 ---
 title: 'Lektion 8: Erstellen eines Datenfilters | Microsoft-Dokumentation'
+description: In dieser Lektion erstellen Sie einen Datenfilter für die Datentabelle, die Sie für den untergeordneten Bericht definiert haben. Sie erstellen einen tabellenbasierten Filter oder einen Abfragefilter für den Drillthroughbericht.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d64d2557945bc7fdd7b602652e23d52c0a052da7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512392"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243241"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lektion 8: Erstellen eines Datenfilters
 Nachdem Sie im übergeordneten Bericht eine Drillthroughaktion hinzugefügt haben, erstellen Sie im nächsten Schritt einen Datenfilter für die Datentabelle, die Sie für den untergeordneten Bericht definiert haben.  
@@ -41,7 +42,7 @@ Führen Sie folgende Aufgaben aus, um einen tabellenbasierten Filter zu implemen
   
 5.  Klicken Sie in der Dropdownliste **=** Operator **auf den Gleichheitsoperator (** ).  
   
-6.  Wählen Sie neben dem Feld **Wert** die Ausdrucksschaltfläche aus. Wählen Sie im Bereich **Kategorie** **Parameter** aus, und doppelklicken Sie im Bereich **Werte** auf **productid** . Das Feld **Ausdruck festlegen für: Wert** sollte jetzt einen mit **=Parameters!productid.Value**vergleichbaren Ausdruck enthalten.  
+6.  Wählen Sie neben dem Feld **Wert** die Ausdrucksschaltfläche aus. Wählen Sie im Bereich **Kategorie** **Parameter** aus, und doppelklicken Sie im Bereich **Werte** auf **productid** . Das Feld **Ausdruck festlegen für: Wert** sollte jetzt einen ähnlichen Ausdruck wie **=Parameters!productid.Value** enthalten.  
   
 7.  Wählen Sie **OK** aus, und klicken Sie im Dialogfeld **Tablix-Eigenschaften** ein zweites Mal auf **OK** .  
   
@@ -165,7 +166,7 @@ Führen Sie folgende Aufgaben aus, um einen Abfragefilter zu implementieren.
   
     1.  Erstellt eine Instanz des Datasets **DataSet2**, das in Schritt 2 in [Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)erstellt wurde.  
   
-    2.  Herstellen einer Verbindung mit der SQL Server-Datenbank, um die in **Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht**definierte Abfrage auszuführen.  
+    2.  Erstellen Sie eine Verbindung mit der SqlServer-Datenbank, um die in **Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht** definierte Abfrage auszuführen.  
   
     3.  Die Abfrage enthält den **productid**-Parameter, der gewährleistet, dass die zurückgegebenen Daten auf Grundlage der im übergeordneten Bericht ausgewählten **ProductID** gefiltert werden.  
   
@@ -287,7 +288,7 @@ Führen Sie folgende Aufgaben aus, um einen Abfragefilter zu implementieren.
 6.  Speichern Sie die Datei .  
   
 ## <a name="next-task"></a>Nächste Aufgabe  
-Sie haben erfolgreich einen Datenfilter für die Datentabelle erstellt, die Sie für den untergeordneten Bericht definiert haben. Als Nächstes werden Sie die Websiteanwendung erstellen und ausführen. Informationen hierzu finden Sie unter [Lektion 9: Erstellen und Ausführen der Anwendung](../reporting-services/lesson-9-build-and-run-the-application.md).  
+Sie haben erfolgreich einen Datenfilter für die Datentabelle erstellt, die Sie für den untergeordneten Bericht definiert haben. Als Nächstes werden Sie die Websiteanwendung erstellen und ausführen. Die entsprechenden Schritte finden Sie in [Lektion 9: Erstellen und Ausführen der Anwendung](../reporting-services/lesson-9-build-and-run-the-application.md).  
   
   
   

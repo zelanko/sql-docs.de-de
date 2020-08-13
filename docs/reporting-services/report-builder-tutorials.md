@@ -1,5 +1,6 @@
 ---
 title: Tutorials zum Berichts-Generator | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie einfache paginierte SSRS-Berichte (SQL Server Reporting Services) erstellen und welche Möglichkeiten es gibt, eine Verbindung zu Datenquellen herzustellen und Diagramme zu Berichten hinzuzufügen.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 096823a659f8b0e1e75cbde0635a4715068f8392
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "64330634"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242940"
 ---
 # <a name="report-builder-tutorials"></a>Lernprogramme für den Berichts-Generator
 
@@ -38,40 +39,40 @@ Führen Sie die Schritte in diesem Lernprogramm aus, um eine Matrix hinzuzufüge
 [Tutorial: Erstellen eines Freiformberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
 Führen Sie die Schritte in diesem Lernprogramm aus, um zu erfahren, wie ein Freiformbericht von Grund auf erstellt wird. Dieser Bericht ähnelt einem Newsletter.  
   
-[Tutorial: Formatieren von Text (Berichts-Generator)](../reporting-services/tutorial-format-text-report-builder.md)  
+[Tutorial: Formatieren von Text &#40;Berichts-Generator&#41;](../reporting-services/tutorial-format-text-report-builder.md)  
 Führen Sie die Schritte in diesem Lernprogramm aus, um einige der zahlreichen Methoden zur Formatierung von Text in Berichten kennenzulernen.  
   
-[Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)  
+[Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)](../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)  
 Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht ein Säulendiagramm mit einem gleitenden Durchschnitt hinzufügen.  
   
-[Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
+[Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht &#40;Berichts-Generator&#41](../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
 Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht ein Kreisdiagramm hinzufügen.  
   
 [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
 Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht ein Balkendiagramm hinzufügen.  
   
-[Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)](../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)  
+[Tutorial: Hinzufügen einer Sparkline zum Bericht &#40;Berichts-Generator&#41;](../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)  
 Führen Sie die Schritte in diesem Lernprogramm aus, um zu erfahren, wie eine Matrix erstellt und dieser anschließend ein Satz von Sparklinediagrammen hinzugefügt wird.  
   
-[Tutorial: Hinzufügen eines KPI zu einem Bericht &#40;Berichts-Generator&#41;](../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+[Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
 Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht einen KPI (Key Performance Indicator) hinzufügen.  
   
-[Tutorial: Kartenbericht &#40;Berichts-Generator&#41;](../reporting-services/tutorial-map-report-report-builder.md)  
+[Tutorial: Kartenbericht (Berichts-Generator)](../reporting-services/tutorial-map-report-report-builder.md)  
 Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie einem Bericht eine Karte hinzufügen.  
   
-[Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+[Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41; (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
 Führen Sie dieses Lernprogramm aus, um zu erfahren, wie Sie die Darstellung und den Inhalt eines Berichts mit Parametern anpassen.  
   
 [Tutorial: Erstellen von Drillthrough- und Hauptberichten &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
 Führen Sie die Schritte in diesem Lernprogramm aus, um sich mit dem Erstellen von Berichten für ein Drillthroughszenario auf Grundlage eines Analysis Services-Cubes vertraut zu machen. Sie erstellen den Hauptbericht und aktivieren diesen sowie den Bericht, der Ziel der Drillthroughaktion ist, für den Drillthrough.  
   
-[Tutorial: Introducing Expressions (Tutorial: Einführung in Ausdrücke)](../reporting-services/tutorial-introducing-expressions.md)  
+[Tutorial: Einführung in Ausdrücke](../reporting-services/tutorial-introducing-expressions.md)  
 Folgen Sie den Schritten in diesem Lernprogramm, um zu erfahren, wie Sie mit Ausdrücken Feldwerte verketten, berechnen, suchen und in einem Bericht anzeigen. Sie lernen außerdem, wie Sie mithilfe von Ausdrücken je nach Situation verschiedene Bilder und Indikatorzustände anzeigen.  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Report Design View (Berichtsentwurfansicht)](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [Berichts-Generator in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[Tutorial: Create a Quick Chart Report Offline (Tutorial: Erstellen eines Quick-Diagrammberichts offline)](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+[Tutorial: Erstellen eines schnellen Diagrammberichts offline](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)
