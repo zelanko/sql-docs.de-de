@@ -1,5 +1,6 @@
 ---
 title: Angeben von Geräteinformationseinstellungen in einer URL | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Geräteinformationseinstellungen in einer URL angeben, insbesondere mit dem DeviceInfo-XML-Element.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb7f7577-c6a8-4e6f-8e60-5ec0760f29c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 906a21de49d562d788f9a1384b31e080616c67c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2d2ef7937d228cc4feeff2c788c1ae3aa3f0b59
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578433"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246626"
 ---
 # <a name="specify-device-information-settings-in-a-url"></a>Angeben von Geräteinformationseinstellungen in einer URL
   Geräteinformationseinstellungen sind Parameter, die an eine Renderingerweiterung übergeben werden. Wenn Sie einen Bericht mit den Methoden des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Berichtsserver-Webdiensts rendern, wird ein **DeviceInfo** -XML-Element als ein Eingabeparameter übergeben. Untergeordnete Elemente des **DeviceInfo** -Elements sind für die Geräteinformationseinstellungen anderer Renderingerweiterungen spezifisch. Sie können die Geräteinformationseinstellungen in einer URL angeben, indem Sie die *rc:tag=value* -Parameterzeichenfolge verwenden, wobei *tag* der Name des Elements für die Geräteinformationseinstellungen ist. Weitere Informationen zu den Geräteinformationseinstellungen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] finden Sie im Artikel [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  

@@ -1,5 +1,6 @@
 ---
 title: Geräteinformationseinstellungen für Word | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie mehr über die Geräteinformationseinstellungen, die für das Rendering im Microsoft Word-Format verfügbar sind.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776a825c480568be2640d1309c7c3a48970e2c54
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e12669575e06ab2ea3898e7592c2c1d08e90f283
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571139"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247429"
 ---
 # <a name="word-device-information-settings"></a>Geräteinformationseinstellungen für Word
   In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern in das Format [!INCLUDE[ofprword](../includes/ofprword-md.md)] aufgeführt.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 |**AutoFit**|**False**. AutoAnpassen wird in jeder Word-Tabelle auf **false** eingestellt.<br /><br /> **True**. AutoAnpassen wird in jeder Word-Tabelle auf **true** eingestellt.<br /><br /> **Never**. Die Werte für AutoAnpassen sind in keiner Word-Tabelle festgelegt, und der Word-Standardwert wird wiederhergestellt.<br /><br /> **Default**. AutoAnpassen wird in den Tabellen eingestellt, die enger als der physische Zeichenbereich (physische Seitenbreite ohne Ränder) pro logischer Seite sind.|  
 |**ExpandToggles**|Gibt an, ob alle Elemente, die aus- und eingeschaltet werden können, in ihrem voll erweiterten Status gerendert werden sollten. Der Standardwert ist **false**.|  

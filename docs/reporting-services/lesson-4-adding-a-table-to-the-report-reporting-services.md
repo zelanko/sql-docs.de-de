@@ -1,6 +1,6 @@
 ---
 title: 'Lektion 4: Hinzufügen einer Tabelle zum Bericht | Microsoft-Dokumentation'
-description: Nachdem Sie das Dataset definiert haben, können Sie mit dem Entwerfen des paginierten Berichts beginnen. Sie können ein Berichtslayout erstellen, indem Sie Berichtsobjekte aus der Toolbox auf die Entwurfsoberfläche ziehen.
+description: Sie können ein Berichtslayout erstellen, indem Sie Berichtsobjekte wie beispielsweise eine Tabelle aus der Toolbox auf die Entwurfsoberfläche ziehen.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fca89bf8992db9ec3b07cea422ec146993e8aec8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0194591ffec572c7d079c70233de45977a38d130
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244302"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246309"
 ---
 # <a name="lesson-4-add-a-table-to-the-report-reporting-services"></a>Lektion 4: Hinzufügen einer Tabelle zum Bericht (Reporting Services)
 

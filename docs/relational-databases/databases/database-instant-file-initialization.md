@@ -2,7 +2,7 @@
 title: Sofortige Datenbankdateiinitialisierung
 description: Hier erfahren Sie mehr über die schnelle Dateiinitialisierung und deren Aktivierung für die SQL Server-Datenbank.
 ms.custom: contperfq4
-ms.date: 05/30/2020
+ms.date: 07/24/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a10e6f9cff886b18b8bc344270516aaf2b5577db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20b182186244221c0f8cea2dda86d8f6a269cd50
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756250"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246576"
 ---
 # <a name="database-instant-file-initialization"></a>Sofortige Datenbankdateiinitialisierung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,6 +37,7 @@ Daten- und Protokolldateien werden standardmäßig initialisiert, um vorhandene 
 - Wiederherstellen einer Datenbank oder Dateigruppe  
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht die schnelle Dateiinitialisierung (IFI) eine schnellere Ausführung der zuvor erwähnten Dateivorgänge, da sie verwendeten Speicherplatz freigibt, ohne diesen mit Nullen zu füllen. Stattdessen wird Datenträgerinhalt überschrieben, wenn neue Daten an die Dateien geschrieben werden. Protokolldateien können nicht sofort initialisiert werden.
+
 
 ## <a name="enable-instant-file-initialization"></a>Aktivieren der schnellen Dateiinitialisierung
 
@@ -99,5 +100,29 @@ Wenn Sie sich Gedanken über eine potenzielle Offenlegung von Informationen mach
     > [!NOTE]
     > Durch das Deaktivieren verlängert sich die Belegungszeit für Datendateien. Es wirkt sich nur auf Dateien aus, die nach dem Widerrufen des Benutzerrechts erstellt oder vergrößert werden.
   
+### <a name="se_manage_volume_name-user-right"></a>Benutzerrecht SE_MANAGE_VOLUME_NAME
+
+Die Benutzerberechtigung *SE_MANAGE_VOLUME_NAME* kann in **Windows-Verwaltungsprogrammen** im Applet **Lokale Sicherheitsrichtlinie** zugewiesen werden. Klicken Sie unter **Lokale Richtlinien** auf **User Right Assignment** (Zuweisung von Benutzerrechten), und ändern Sie die Eigenschaft **Durchführen von Volumewartungsaufgaben**.
+
+## <a name="performance-considerations"></a>Überlegungen zur Leistung
+
+Beim Initialisierungsprozess der Datenbankdatei werden Nullen in die neuen Bereiche der initialisierten Datei geschrieben. Die Dauer dieses Vorgangs hängt von der Größe des zu initialisierenden Dateiteils und der Antwortzeit und der Kapazität des Speichersystems ab. Wenn die Initialisierung lange dauert, werden möglicherweise die folgenden Meldungen im SQL Server-Fehlerprotokoll und im Anwendungsprotokoll aufgezeichnet.
+
+```
+Msg 5144
+Autogrow of file '%.*ls' in database '%.*ls' was cancelled by user or timed out after %d milliseconds.  Use ALTER DATABASE to set a smaller FILEGROWTH value for this file or to explicitly set a new file size.
+```
+
+```
+Msg 5145
+Autogrow of file '%.*ls' in database '%.*ls' took %d milliseconds.  Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
+```
+
+Eine lange automatische Vergrößerung einer Datenbank und/oder Transaktionsprotokolldatei kann zu Problemen hinsichtlich der Abfrageleistung führen. Dies liegt daran, dass ein Vorgang während der Dauer der Dateivergrößerung, bei dem die automatische Vergrößerung einer Datei erforderlich ist, für Ressourcen wie Sperren oder Latches durchgeführt wird. Möglicherweise werden für Latches für Zuordnungsseiten lange Wartezeiten angezeigt. Der Vorgang, der die lange automatische Vergrößerung erfordert, zeigt den Wartetyp PREEMPTIVE_OS_WRITEFILEGATHER an.
+
+
+
+
+
 ## <a name="see-also"></a>Weitere Informationen  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)

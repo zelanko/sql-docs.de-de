@@ -1,6 +1,6 @@
 ---
 title: 'SQL Server Reporting Services: Von verschiedenen Editionen unterstützte Features | Microsoft-Dokumentation'
-description: In diesem Thema sind die Microsoft SQL Server Reporting Services-Features (SSRS) beschrieben, die von verschiedenen Editionen von SQL Server unterstützt werden. SQL Server Evaluation Edition steht für einen Testzeitraum von 180 Tagen zur Verfügung.
+description: In diesem Artikel werden die SQL Server Reporting Services-Features (SSRS) beschrieben, die von den verschiedenen Editionen von SQL Server unterstützt werden.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
-ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbb3196349c648b955e5d27bf1d5fcfdadb9085f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76516601"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246659"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>Von den SQL Server-Editionen unterstützte SQL Server Reporting Services-Features
 

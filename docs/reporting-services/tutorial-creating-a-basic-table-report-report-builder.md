@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator) | Microsoft-Dokumentation'
+description: Hier erfahren Sie, wie Sie mit einem Assistenten einen einfachen Tabellenbericht erstellen, der auf Beispielumsatzdaten im Berichts-Generator basiert.
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bffaef60422d47484968ad30b5bc8d625549a74e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041201"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247469"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)
 In diesem Lernprogramm erfahren Sie, wie Sie auf Grundlage von Beispielumsatzdaten einen einfachen Tabellenbericht erstellen. Die folgende Abbildung zeigt den Bericht, den Sie erstellen.  
@@ -56,7 +57,7 @@ In diesem Lernprogramm verwenden Sie eine eingebettete Datenquelle. Weitere Info
   
 4.  Vergewissern Sie sich, dass unter **Verbindungstyp auswählen**die Option **Microsoft SQL Server** ausgewählt ist.  
   
-5.  Geben Sie im Feld **Verbindungszeichenfolge** den folgenden Text ein, wobei \<Servername> der Name einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz ist:  
+5.  Geben Sie im Feld **Verbindungszeichenfolge** den folgenden Text ein, wobei \<servername> der Name einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz ist:  
   
     ```  
     Data Source=<servername>  

@@ -1,5 +1,5 @@
 ---
-title: Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit | Microsoft-Dokumentation
+title: Datentypunterstützung für Verbesserungen von Datum und Uhrzeit (OLE DB-Treiber) | Microsoft-Dokumentation
 description: Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4306574aca251ad1f530cfeb3c26ce91e0a48b1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995122"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244872"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

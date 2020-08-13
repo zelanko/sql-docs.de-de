@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Hinzufügen eines Parameters zum Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+description: In diesem Artikel erfahren Sie, wie Sie einen Parameter zu einem paginierten Reporting Services-Bericht hinzufügen, sodass Leser des Berichts Berichtsdaten nach mindestens einem Wert filtern können.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd5fab649fc481bdb91b42c34be33f5976b5af93
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72252138"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245677"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Parameters zum Bericht (Berichts-Generator)
 In diesem Tutorial fügen Sie einen Parameter zu einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht hinzu, sodass Leser des Berichts Berichtsdaten für einen Wert oder mehrere Werte filtern können. 
   
 ![Berichts-Generator-Parameter-Tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -25,7 +26,7 @@ Berichtsparameter werden automatisch für jeden Abfrageparameter erstellt, den S
 > [!NOTE]  
 > In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Ungefähre Dauer dieses Lernprogramms: 25 Minuten.  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 25 Minuten.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -136,7 +137,7 @@ Wenn Sie einer Abfrage einen Abfrageparameter hinzufügen, erstellt der Berichts
   
 2.  Erweitern Sie im Berichtsdatenbereich den Ordner **Datasets** , klicken Sie mit der rechten Maustaste auf **DataSet1**, und klicken Sie anschließend auf **Abfrage**.  
   
-3.  Fügen Sie die folgende [!INCLUDE[tsql](../includes/tsql-md.md)]WHERE **-Klausel für**  als letzte Zeile zur Abfrage hinzu:  
+3.  Fügen Sie die folgende **WHERE**-Klausel für [!INCLUDE[tsql](../includes/tsql-md.md)] als letzte Zeile zur Abfrage hinzu:  
   
     ```  
     WHERE StoreID = (@StoreID)  

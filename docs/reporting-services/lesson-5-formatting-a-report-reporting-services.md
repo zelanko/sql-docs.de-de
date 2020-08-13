@@ -1,5 +1,6 @@
 ---
 title: 'Lektion 5: Formatieren eines Berichts (Reporting Services) | Microsoft-Dokumentation'
+description: Hier erfahren Sie, wie Sie die Felder für das Datum und die Währung sowie die Spaltenüberschriften formatieren, nachdem Sie einen Datenbereich und einige Felder zum Sales Orders-Bericht hinzugefügt haben.
 ms.date: 04/29/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2d3fd220aef7a593a2244cf2d7509c5264fcca
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65105929"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245109"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lektion 5: Formatieren eines Berichts (Reporting Services)
 
@@ -65,7 +66,7 @@ Sie können dem Bericht weitere Formatierungen hinzufügen, indem Sie die Kopfze
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In dieser Lektion haben Sie erfolgreich Spaltenüberschriften und Feldausdrücke formatiert. Als Nächstes erfahren Sie, wie Sie dem Bericht Gruppierungen und Gesamtwerte hinzufügen. Weiter mit [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
+In dieser Lektion haben Sie erfolgreich Spaltenüberschriften und Feldausdrücke formatiert. Als Nächstes erfahren Sie, wie Sie dem Bericht Gruppierungen und Gesamtwerte hinzufügen. Fahren Sie fort mit [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 

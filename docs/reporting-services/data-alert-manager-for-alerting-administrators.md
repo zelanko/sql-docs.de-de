@@ -1,5 +1,6 @@
 ---
 title: Datenwarnungs-Manager für Warnungsadministratoren | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie Warnungen über den Datenwarnungs-Manager für SharePoint in SQL Server Reporting Services verwalten.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a80b90f30ce2b304bd7bbb0229f172407589d3c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5164302efa34bd74b76211c72617826478c4e515
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571543"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246342"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Datenwarnungs-Manager für Warnungsadministratoren
 
@@ -54,7 +55,7 @@ SQL Server Reporting Services stellt den Datenwarnungs-Manager zum Verwalten von
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|Die letzte Warnung war erfolgreich, und die Warnung wurde gesendet.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|Die letzte Warnung wurde erfolgreich ausgeführt, aber die Daten blieben unverändert, und es wurde keine Warnung gesendet.|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<Fehlermeldung>Die Protokolldatei enthält Details zum Fehler. Weitere Informationen erhalten Sie unter dem Protokolleintrag mit dem Bezeichner: \<GUID>.|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<error message>"The log file contains detailed information about the error. Refer to the log entry with the identifier: \<GUID>." (Die Protokolldatei enthält ausführliche Informationen zum Fehler. Weitere Informationen erhalten Sie unter dem Protokolleintrag mit dem Bezeichner: <GUID>.)|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Die Warnung wurde erstellt.|  
   
  Weitere Informationen finden Sie unter [Verwalten aller Datenwarnungen auf einer SharePoint-Website im Datenwarnungs-Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  

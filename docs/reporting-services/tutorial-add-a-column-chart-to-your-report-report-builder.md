@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+description: Hier erfahren Sie mehr über das Erstellen eines paginierten Reporting Services-Berichts mit einem Säulendiagramm, das eine Reihe senkrechter Balken enthält, die nach Kategorie gruppiert sind.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 450e625fba58eaa6ff1d9e9fe13065bf934a633b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041396"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245687"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial erstellen Sie einen paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht mit einem Säulendiagramm, das eine Datenreihe in Form mehrerer nach Kategorie gruppierter Säulen erstellt. 
 
 Säulendiagramme sind für Folgendes nützlich:  
@@ -30,7 +31,7 @@ In der folgenden Abbildung sehen Sie das zu erstellende Säulendiagramm mit eine
 > [!NOTE]  
 > In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -215,7 +216,7 @@ Standardmäßig werden die Werte auf der vertikalen Achse in einem allgemeinen F
 
     ![Berichts-Generator-Säulendiagramm-Format-Y-Achse](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Anzeigen aller Bezeichnungen auf der horizontalen Achse (X-Achse)
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. Anzeigen aller Bezeichnungen auf der horizontalen Achse (x-Achse)
 
 Sie sehen, dass nur einige der Bezeichnungen auf der X-Achse angezeigt werden. In diesem Abschnitt legen Sie eine Eigenschaft im Bereich „Eigenschaften“ fest, damit alle Bezeichnungen angezeigt werden.
 

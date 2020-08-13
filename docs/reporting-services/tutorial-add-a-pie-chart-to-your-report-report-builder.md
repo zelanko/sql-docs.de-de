@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+description: In diesem Artikel erfahren Sie, wie Sie ein Kreisdiagramm in einem paginierten Reporting Services-Bericht erstellen, Prozentsätze hinzufügen und kleinere Slices zu einem einzelnen Slice kombinieren.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041246"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245667"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial erstellen Sie ein Kreisdiagramm in einem paginierten Reporting Services-Bericht. Sie fügen Prozentsätze hinzu und kombinieren kleine Slices zu einem einzelnen Slice.
@@ -29,7 +30,7 @@ Wenn in einem Kreisdiagramm zu viele Datenpunkte vorhanden sind, können die Dat
 > [!NOTE]  
 > In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, Hinzufügen einer Datenquelle und Hinzufügen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Ungefähre Dauer dieses Lernprogramms: 10 Minuten  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 10 Minuten  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -115,7 +116,7 @@ Sie können für jeden Slice des Kreisdiagramms den Prozentsatz des Slices im Ve
   
 4.  Geben Sie **#PERCENT** für die Option **Bezeichnungsdaten**ein.  
     
-5.  (Optional) Wenn Sie die Anzahl von Dezimalstellen in der Bezeichnung angeben möchten, tippen Sie im Feld **Bezeichnungsdaten** nach **#PERCENT** **{Pn}** ein, wobei *n* die Anzahl der anzuzeigenden Dezimalstellen darstellt. Geben Sie z.B. **#PERCENT{P0}** ein, um keine Dezimalstellen anzuzeigen.  
+5.  (Optional) Wenn Sie die Anzahl von Dezimalstellen in der Bezeichnung angeben möchten, tippen Sie im Feld **Bezeichnungsdaten** nach **#PERCENT****{Pn}** ein, wobei *n* die Anzahl der anzuzeigenden Dezimalstellen darstellt. Geben Sie z.B. **#PERCENT{P0}** ein, um keine Dezimalstellen anzuzeigen.  
 
 6.  Die UseValueAsLabel-Eigenschaft muss zum Anzeigen von Werten als Prozentsätze auf "False" festgelegt werden. Klicken Sie auf **Ja** , wenn Sie im Dialogfeld **Aktion bestätigen**zum Festlegen dieses Werts aufgefordert werden.  
   

@@ -1,5 +1,6 @@
 ---
 title: Schrittweises Durchlaufen von Transact-SQL-Code
+description: Hier erfahren Sie, wie Sie den Transact-SQL-Debugger verwenden, um zu steuern, welche Transact-SQL-Anweisungen in einem Abfrage-Editor-Fenster der Datenbank-Engine ausgeführt werden.
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -15,16 +16,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fbd6c6b01d5be8afb3e0e0c70c15363664263eb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d7317f783df8cd8810cb4d2371f8469697bb9a45
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243440"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246183"
 ---
 # <a name="step-through-transact-sql-code"></a>Schrittweises Durchlaufen von Transact-SQL-Code
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ermöglicht es Ihnen, zu bestimmen, welche [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen in einem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster ausgeführt werden. Sie können den Debugger bei einzelnen Anweisungen unterbrechen und dann den Status der Codeelemente an diesem Punkt anzeigen.  
 
@@ -56,7 +57,7 @@ Im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger können Sie die folgend
 
  Die folgende Tabelle enthält die verschiedenen Möglichkeiten, mit denen Sie bestimmen können, wie Anweisungen im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ausgeführt werden.  
   
-|Action|Aktion ausführen:|  
+|Aktion|Aktion ausführen:|  
 |------------|---------------------|  
 |Ausführen aller Anweisungen von der aktuellen Anweisung bis zum nächsten Breakpoint|Klicken Sie im Menü **Debuggen** auf **Weiter** .<br /><br /> Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche **Weiter** .|  
 |Ausführen eines Einzelschritts in die nächste Anweisung oder in das nächste Modul|Klicken Sie im Menü **Debuggen** auf **Einzelschritt** .<br /><br /> Klicken Sie auf der Symbolleiste **Debuggen** auf die Schaltfläche **Einzelschritt** .<br /><br /> Drücken Sie F11.|  

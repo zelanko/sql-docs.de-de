@@ -1,5 +1,6 @@
 ---
 title: Planen von Berichtsentwurf und -bereitstellung | Reporting Services | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie mithilfe von Reporting Services eine Umgebung für die Berichterstellung und einen Berichtsserver planen, die reibungslos zusammenarbeiten.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581246"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247539"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planen von Berichtsentwurf und -bereitstellung | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet eine Reihe von Ansätzen zum Erstellen und Bereitstellen von paginierten Berichten. Erhalten Sie Informationen, wie Sie eine Umgebung für die Berichterstellung und einen Berichtsserver planen, die reibungslos zusammenarbeiten.
@@ -46,11 +47,11 @@ Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinit
 ##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> Unterstützung von Berichtsservern und RDL-Schemas  
  Eine Berichtsdefinitionsdatei kann wie folgt auf einem [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] -Berichtsserver bereitgestellt werden:  
   
--   **Berichts-Designer:** Stellen Sie einen Bericht im Berichts-Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]bereit.  
+-   **Berichts-Designer:** Stellen Sie einen Bericht aus dem Berichts-Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] bereit.  
   
--   **Report-Generator:** Speichern Sie einen Bericht aus dem Berichts-Generator auf dem Berichtsserver.  
+-   **Berichts-Generator:** Speichern Sie einen Bericht aus dem Berichts-Generator auf dem Berichtsserver.  
   
--   **Webportal:** Laden Sie einen Bericht aus dem [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]auf einen Berichtsserver im einheitlichen Modus hoch.  
+-   **Webportal:** Laden Sie einen Bericht aus dem [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] auf einen Berichtsserver im einheitlichen Modus hoch.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   

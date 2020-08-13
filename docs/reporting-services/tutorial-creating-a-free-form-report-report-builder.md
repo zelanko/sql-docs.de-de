@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Erstellen eines Freiformberichts (Berichts-Generator) | Microsoft-Dokumentation'
+description: In diesem Artikel erfahren Sie, wie Sie einen paginierten Bericht erstellen, der als Newsletter fungiert und in dem jede Seite statischen Text, zusammenfassende Visualisierungen und detaillierte Beispielumsatzdaten anzeigt.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b189c494f887faca2b6d3d4bb00253992470132
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499564"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247459"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Erstellen eines Freiformberichts (Berichts-Generator)
 In diesem Tutorial erfahren Sie, wie Sie einen paginierten Bericht erstellen, der wie ein Newslettern funktioniert. Jede Seite zeigt statischen Text, zusammenfassende Visualisierungen und detaillierte Beispielumsatzdaten an.
 
 ![Berichts-Generator-Freiformbericht-vollständig](../reporting-services/media/report-builder-free-form-report-complete.png)
 
 Im Bericht werden Informationen nach Gebiet gruppiert und der Name des Vertriebsmanagers für das Gebiet sowie ausführliche und zusammenfassende Umsatzdaten angezeigt. Der Listendatenbereich wird als Grundlage für den formfreien Bericht verwendet. Anschließend werden folgende Objekte hinzugefügt: ein dekoratives Panel mit einem Bild, statischer Text mit eingefügten Daten, eine Tabelle zum Anzeigen ausführlicher Informationen und optional Kreis- und Säulendiagramme zum Anzeigen zusammenfassender Informationen.  
   
-Ungefähre Dauer dieses Lernprogramms: 20 Minuten.  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 20 Minuten  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -48,13 +49,13 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu** > **Datenquelle**.  
   
-2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataSource**  
+2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataSource**.  
   
 3.  Klicken Sie auf **In Bericht eingebettete Verbindung verwenden**.  
   
-4.  Überprüfen Sie, ob der Verbindungstyp „Microsoft SQL Server“ ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Datenquelle = \<Servername>** .  
+4.  Überprüfen Sie, ob der Verbindungstyp Microsoft SQL Server ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Datenquelle = \<servername>** .  
   
-    Der **\<Servername>** , z.B. Report001, bezeichnet einen Computer, auf dem eine Instanz des SQL Server-Datenbankmoduls installiert ist. Da die Daten für diesen Bericht nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird nur verwendet, um die Abfrage zu analysieren.  
+    **\<servername>** , z. B. Report001, bezeichnet einen Computer, auf dem eine Instanz der SQL Server-Datenbank-Engine installiert ist. Da die Daten für diesen Bericht nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird nur verwendet, um die Abfrage zu analysieren.  
   
 5.  Klicken Sie auf **Anmeldeinformationen**und geben Sie die zur Verbindung mit der Instanz der SQL Server-Datenbank-Engine benötigten Anmeldeinformationen ein.  
   
@@ -64,7 +65,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 1.  Klicken Sie im Bereich „Berichtsdaten“ auf **Neu** > **Dataset**.  
   
-2.  Geben Sie im Feld **Name** **ListDataset**ein.  
+2.  Geben Sie im Feld **Name** Folgendes ein: **ListDataset**.  
   
 3.  Klicken Sie auf **Ein in den eigenen Bericht eingebettetes Dataset verwenden**und überprüfen Sie, ob **ListDataSource**die Datenquelle ist.  
   
@@ -405,7 +406,7 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 9. Ziehen Sie das Diagramm in das Rechteck.  
    
-10. Wählen Sie den Diagrammtitel und Typ **Verkaufte Produktmengen**aus.  
+10. Wählen Sie den Diagrammtitel aus, und geben Sie Folgendes ein: **Verkaufte Produktmengen**.  
   
 12. Legen Sie für den Titel auf der Registerkarte **Start** im Bereich **Font** (Schriftart) Folgendes fest:
     * **Schriftart:** **Segoe UI Semibold**
@@ -444,7 +445,7 @@ Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie 
   
 9. Ziehen Sie das Diagramm in das Rechteck unter dem Kreisdiagramm.  
    
-10. Wählen Sie den Diagrammtitel aus und geben Sie **Produktumsatz**ein.  
+10. Wählen Sie den Diagrammtitel aus, und geben Sie Folgendes ein: **Produktverkaufszahlen**.  
   
 12. Legen Sie für den Titel auf der Registerkarte **Start** im Bereich **Font** (Schriftart) Folgendes fest:
     * **Schriftart:** **Segoe UI Semibold**

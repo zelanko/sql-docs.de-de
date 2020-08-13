@@ -1,5 +1,6 @@
 ---
 title: Erteilen von Berechtigungen für Benutzer und Warnungsadministratoren | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie Benutzern und Warnungsadministratoren in den SQL Server Reporting Services (SSRS) Berechtigungen erteilen.
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dd6a34e6dbf57eb5080525d7dd0f7d7067484ad9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc9294e13539f78ac1d45781e9a51f3a8f944d3e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580488"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247227"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>Gewähren von Berechtigungen an Benutzer und Warnungsadministratoren
 

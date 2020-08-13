@@ -1,5 +1,6 @@
 ---
 title: Verwenden des Eigenschaftenfensters in Management Studio
+description: Hier erfahren Sie, wie Sie das Eigenschaftenfenster verwenden, um Informationen zu einem SQL Server Management Studio-Element (zum Beispiel eine Verbindung) und zu Datenbankobjekten anzuzeigen.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9277e6ee5e1dbd7b5c059c30d7ae49f56963d917
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 256355d1cf0d7b245832c0effe551a0236ed8597
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252952"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245530"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Verwenden des Eigenschaftenfensters in Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Das Eigenschaftenfenster enthält eine Beschreibung des Zustands eines Elements in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], z. B. Verbindungen oder Showplanoperatoren, sowie Informationen zu Datenbankobjekten wie Tabellen, Sichten und Designer.  
   
  Im Eigenschaftenfenster können Sie die Eigenschaften der aktuellen Verbindung anzeigen. Viele Eigenschaften im Eigenschaftenfenster sind schreibgeschützt, können aber an anderer Stelle in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]geändert werden. So ist beispielsweise die Database-Eigenschaft einer Abfrage im Eigenschaftenfenster schreibgeschützt, kann aber auf der Symbolleiste geändert werden.  

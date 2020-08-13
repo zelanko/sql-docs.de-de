@@ -1,5 +1,6 @@
 ---
 title: Erweiterungen
+description: Hier erfahren Sie mehr über die Erweiterungen, die in Reporting Services verfügbar sind, und erhalten Informationen, wie Erweiterungen verwendet werden, um die Eingabe- oder Ausgabetypen zu modularisieren, die Reporting Services akzeptiert.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: f7a64289bd3f1e1bd8fce71d21e5e1604e5bf4b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c532561c8d31cce2b5b044d8158be046bb824e4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262889"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247222"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>Erweiterungen für SQL Server Reporting Services (SSRS)
 
@@ -56,7 +57,7 @@ Einige Erweiterungen können auch die folgenden Tasks ausführen:
   
 ## <a name="rendering-extensions"></a>Renderingerweiterungen
 
- Durch Renderingerweiterungen werden Daten und Layoutinformationen aus dem Berichtsprozessorformat in ein gerätespezifisches Format umgewandelt. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stehen sieben Renderingerweiterungen zur Verfügung: HTML, Excel, CSV, XML, Image, PDF und [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
+ Durch Renderingerweiterungen werden Daten und Layoutinformationen aus dem Berichtsprozessorformat in ein gerätespezifisches Format umgewandelt. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] umfasst sieben Renderingerweiterungen: HTML, Excel, CSV, XML, Image, PDF, und [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
   
 - **HTML-Renderingerweiterung** Wenn Sie einen Bericht von einem Berichtsserver über einen Webbrowser anfordern, verwendet der Berichtsserver die HTML-Renderingerweiterung, um den Bericht zu rendern. Die HTML-Renderingerweiterung generiert HTML stets mit UTF-8-Codierung. Weitere Informationen finden Sie unter [Rendern in das HTML-Format (Berichts-Generator und SSRS)](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) und [Browserunterstützung für Reporting Services und Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   

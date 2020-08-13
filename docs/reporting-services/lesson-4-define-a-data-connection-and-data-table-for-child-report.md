@@ -1,5 +1,6 @@
 ---
 title: 'Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für untergeordnete Berichte | Microsoft-Dokumentation'
+description: Hier erfahren Sie, wie Sie die Reporting Services zum Erstellen einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht verwenden.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d9be825b53cfab3601dc755b9122039669ce758
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80df8e86ed3d23c5ab097cdab3f26d83838c4544
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651360"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245119"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lektion 4: Definieren einer Datenverbindung und einer Datentabelle für den untergeordneten Bericht
 Nachdem Sie den übergeordneten Bericht entworfen haben, erstellen Sie im nächsten Schritt eine Datenverbindung und eine Datentabelle für den untergeordneten Bericht. In diesem Tutorial wird eine Datenverbindung mit der AdventureWorks2014-Datenbank hergestellt.  
@@ -68,6 +69,6 @@ Nachdem Sie den übergeordneten Bericht entworfen haben, erstellen Sie im nächs
 12. Wählen Sie im Menü **Daten** die Option **Datenvorschau** aus, und klicken Sie anschließend auf **Vorschau**.  
   
 ## <a name="next-task"></a>Nächste Aufgabe  
-Sie haben erfolgreich eine Datenverbindung und eine Datentabelle für den untergeordneten Bericht erstellt. Als Nächstes entwerfen Sie den untergeordneten Bericht mithilfe des Berichts-Assistenten. Siehe [Lektion 5: Entwerfen des untergeordneten Berichts mithilfe des Berichts-Assistenten](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
+Sie haben erfolgreich eine Datenverbindung und eine Datentabelle für den untergeordneten Bericht erstellt. Als Nächstes entwerfen Sie den untergeordneten Bericht mithilfe des Berichts-Assistenten. Siehe [Lektion 5: Entwerfen des untergeordneten Berichts mithilfe des Berichts-Assistenten](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)  
   
 

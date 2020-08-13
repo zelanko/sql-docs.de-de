@@ -1,5 +1,6 @@
 ---
 title: Geräteinformationseinstellungen für MHTML | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die Einstellungen der Geräteinformationen zum Rendern von Berichten in das Webarchivformat (MHTML).
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 996a7f53b5969c9c1d8c39edcd23b62d45a7ff15
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a9570e0e7ddb85217e82e1813a67de84eee5a9c1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65502727"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245553"
 ---
 # <a name="mhtml-device-information-settings"></a>Geräteinformationseinstellungen für MHTML
   In der folgenden Tabelle werden die Einstellungen der Geräteinformationen zum Rendern von Berichten in das Webarchivformat (MHTML) aufgeführt.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 |**JavaScript**|Gibt an, ob JavaScript im gerenderten Bericht unterstützt wird.|  
 |**OutlookCompat**|Gibt an, ob beim Rendern zusätzliche Metadaten verwendet werden sollen, um die Darstellung des Berichts in Outlook zu optimieren. Der Standardwert lautet **true**.|  

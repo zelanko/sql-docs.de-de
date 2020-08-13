@@ -1,6 +1,6 @@
 ---
 title: 'Lektion 3: Definieren eines Datasets für den Tabellenbericht | Microsoft-Dokumentation'
-description: Sobald Sie die Datenquelle für den paginierten Bericht definiert haben, müssen Sie ein Dataset definieren. In SQL Server Reporting Services sind Daten, die Sie in Berichten verwenden, in einem Dataset enthalten.
+description: In dieser Lerneinheit erfahren Sie, wie Sie ein Dataset für den Tabellenbericht in SQL Server Reporting Services (SSRS) definieren.
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 272787e124616593c90483735afec702f5d4fb18
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244306"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247549"
 ---
 # <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>Lektion 3: Definieren eines Datasets für den Tabellenbericht: SQL Server Reporting Services
 

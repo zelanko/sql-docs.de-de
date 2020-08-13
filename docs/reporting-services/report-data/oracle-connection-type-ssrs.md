@@ -1,5 +1,6 @@
 ---
-title: Oracle-Verbindungstyp (Berichts-Generator und Power BI-Berichtsserver) | Microsoft-Dokumentation
+title: Oracle-Verbindungstyp (SSRS und Power BI-Berichtsserver)
+description: Mithilfe der Informationen in diesem Artikel zum Oracle-Verbindungstyp erfahren Sie, wie Sie eine Datenquelle erstellen.
 ms.date: 03/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 188e054487099e8db96ded6066b71ad09a49c762
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 32972e17c7dee83c1099cf8826eefe874db9d7dd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342735"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246479"
 ---
-# <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Oracle-Verbindungstyp ((Berichts-Generator und Power BI-Berichtsserver) | Microsoft-Dokumentation)
+# <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Oracle-Verbindungstyp (SSRS und Power BI-Berichtsserver)
 
 Wenn Sie Daten aus einer Oracle-Datenbank im Bericht verwenden möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "Oracle" basiert. Dieser integrierte Datenquellentyp verwendet direkt den Oracle-Datenanbieter und erfordert eine Oracle-Clientsoftwarekomponente. In diesem Artikel wird erläutert, wie Sie Treiber für Reporting Services, den Power BI-Berichtsserver, den Berichts-Generator und Power BI Desktop herunterladen und installieren.
 

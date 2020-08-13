@@ -1,5 +1,6 @@
 ---
 title: Verwenden von sqlcmd mit Skriptvariablen
+description: Hier erfahren Sie, wie Sie Skriptvariablen verwenden, um ein Skript zu erstellen, das in mehreren Szenarios verwendet werden kann.
 ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a084f84473dd6394aa0ad09e1730bcdb13e4a22
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9b3628994d100057de864ac1e1188e865d14dca8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76761614"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246199"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>Verwenden von „sqlcmd“ mit Skriptvariablen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Variablen, die in Skripts verwendet werden, werden als Skriptvariablen bezeichnet. Durch Skriptvariablen wird ein Skript aktiviert, das in verschiedenen Szenarien verwendet wird. Wenn Sie beispielsweise ein einzelnes Skript auf mehreren Servern ausführen möchten, anstatt das Skript für jeden Server zu ändern, können Sie eine Skriptvariable für den Servernamen verwenden. Durch das Ändern des Servernamens für die Skriptvariable kann das gleiche Skript auf verschiedenen Servern ausgeführt werden.  
   
  Skriptvariablen können explizit mithilfe des Befehls **setvar** oder implizit mithilfe der Option **sqlcmd -v** definiert werden.  
@@ -119,7 +120,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDLOGINTIMEOUT      | -l             | R/W | "8" (Sekunden)           |
 | SQLCMDSTATTIMEOUT       | -t             | R/W | "0" = unbegrenzt warten |
 | SQLCMDHEADERS           | -H             | R/W | "0"                     |
-| SQLCMDCOLSEP            | -S             | R/W | „ “                     |
+| SQLCMDCOLSEP            | -S             | R/W | " "                     |
 | SQLCMDCOLWIDTH          | -w             | R/W | "0"                     |
 | SQLCMDPACKETSIZE        | -a             | R   | "4096"                  |
 | SQLCMDERRORLEVEL        | -M             | R/W | "0"                     |

@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Erstellen eines Matrixberichts (Berichts-Generator) | Microsoft-Dokumentation'
+description: Hier erfahren Sie, wie Sie einen paginierten Reporting Services-Bericht mit einer Matrix aus Beispielverkaufsdaten in geschachtelten Zeilen- und Spaltengruppen erstellen.
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63294659"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247449"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Lernprogramm: Erstellen eines Matrixberichts (Berichts-Generator)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Erstellen eines Matrixberichts (Berichts-Generator)
 Dieses Tutorial zeigt Ihnen die Erstellung eines [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginierten Berichts mit einer Matrix von Beispielumsatzdaten in geschachtelten Zeilen- und Spaltengruppen. 
 
 Sie erstellen außerdem eine angrenzende Spaltengruppe, formatieren Spalten und drehen Text. Die folgende Abbildung zeigt einen Bericht, der mit dem Bericht vergleichbar ist, den Sie erstellen werden.  
   
 ![Berichts-Generator-Matrix-Tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
    
-Ungefähre Dauer dieses Lernprogramms: 20 Minuten.  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 20 Minuten  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Voraussetzungen finden Sie unter [Voraussetzungen für Tutorials](../reporting-services/prerequisites-for-tutorials-report-builder.md). 
@@ -49,7 +50,7 @@ In diesem Abschnitt wählen Sie eine freigegebene Datenquelle aus, erstellen ein
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus oder navigieren Sie zum Berichtsserver und wählen Sie eine Datenquelle aus. Falls keine Datenquelle verfügbar ist oder Sie über keinen Zugriff auf einen Berichtsserver verfügen, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen zum Erstellen einer eingebetteten Datenquelle finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus oder navigieren Sie zum Berichtsserver und wählen Sie eine Datenquelle aus. Falls keine Datenquelle verfügbar ist oder Sie über keinen Zugriff auf einen Berichtsserver verfügen, können Sie stattdessen eine eingebettete Datenquelle verwenden. Weitere Informationen zum Erstellen einer eingebetteten Datenquelle und eines Datasets finden Sie unter [ Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Klicken Sie auf **Weiter**.  
   
@@ -133,7 +134,7 @@ Stellen Sie mithilfe des Assistenten einen Startentwurf für die Anzeige von Dat
   
 13. Klicken Sie auf **Fertig stellen**.  
   
-    Die Matrix wird der Entwurfsoberfläche hinzugefügt. Im Bereich Zeilengruppen werden zwei Zeilengruppen angezeigt: Territory und SalesDate. Im Bereich Spaltengruppen werden zwei Spaltengruppen angezeigt: Subcategory und Product. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
+    Die Matrix wird der Entwurfsoberfläche hinzugefügt. Im Zeilengruppenbereich werden zwei Zeilengruppen angezeigt: Territory und SalesDate. Im Bereich Spaltengruppen werden zwei Spaltengruppen angezeigt: SubCategory und Product. Detaildaten sind alle Daten, die von der Datasetabfrage abgerufen werden.  
     
     ![Berichts-Generator-Zeilengruppen-und-Spaltengruppen](../reporting-services/media/report-builder-row-and-column-groups.png)
   

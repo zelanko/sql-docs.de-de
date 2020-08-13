@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+description: Hier erfahren Sie mehr über das Erstellen eines paginierten Reporting Services-Berichts mit einem Säulendiagramm, das eine Reihe senkrechter Balken enthält, die nach Kategorie gruppiert sind.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d650fd4b93df758ccaa39d716cf122c66adf7ab
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041181"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245697"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
 In diesem Tutorial verwenden Sie einen Assistenten in [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], um ein Kreisdiagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Bericht zu erstellen. Anschließend fügen Sie einen Filter hinzu und erweitern das Diagramm. 
@@ -32,7 +33,7 @@ Die folgende Abbildung zeigt das zu erstellende Balkendiagramm mit den Umsätzen
 > [!NOTE]  
 > In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Erstellen eines Datasets und zum Auswählen einer Datenquelle finden Sie im ersten Tutorial dieser Reihe unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -93,7 +94,7 @@ Darin erstellen Sie ein eingebettetes Dataset, wählen eine freigegebene Datenqu
   
 2.  Klicken Sie auf **Balken**und anschließend auf **Weiter**.  
   
-    Auf der Seite **Diagrammfelder anordnen** stehen im Bereich **Verfügbare Felder** vier Felder zur Verfügung: „FirstName“, „LastName“, „SalesYear2015“ und „SalesYear2014“.  
+    Auf der Seite **Diagrammfelder anordnen** stehen im Bereich **Verfügbare Felder** vier Felder zur Verfügung: FirstName, LastName, SalesYear2015 und SalesYear2014.  
   
 3.  Ziehen Sie "LastName" in den Bereich "Kategorien".  
   
@@ -199,7 +200,7 @@ Um die Lesbarkeit der Diagrammwerte zu verbessern, können Sie gegebenenfalls di
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Markieren Sie am oberen Diagrammrand den Text **Diagrammtitel** , und geben Sie anschließend den Text **Umsätze für 2014 und 2015**ein.  
+2.  Markieren Sie am oberen Diagrammrand den Text **Diagrammtitel**, und geben Sie anschließend Folgendes ein: **Umsätze für 2014 und 2015**.  
   
 3.  Legen Sie bei ausgewähltem Titel im Bereich „Eigenschaften“ folgende Werte fest: **Farbe** auf **Schwarz** und **Schriftgrad** auf **12 pt**. 
   
@@ -226,7 +227,7 @@ Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen
   
 7.  Geben Sie im Feld **Achsentitel** den Text **Sales in thousands** ein, und drücken Sie die EINGABETASTE.  
 
-    >**Hinweis:** Während Sie tippen, erscheint es so, als würde sich das Feld „Achsentitel“ auf der vertikalen Achse befinden. Wenn Sie jedoch die EINGABETASTE drücken, wird es zur horizontalen Achse verschoben.
+    >**Hinweis:** Während der Eingabe sieht es so aus, als würde sich das Feld „Achsentitel“ auf der vertikalen Achse befinden. Wenn Sie jedoch die EINGABETASTE drücken, wird es zur horizontalen Achse verschoben.
   
 9. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   

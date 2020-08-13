@@ -1,5 +1,6 @@
 ---
 title: Exportieren eines Berichts über URL-Zugriff | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie, wie Sie einen Bericht mithilfe des URL-Zugriffs exportieren. Dazu geben Sie über den URL-Parameter „rs:Format“ das Format an, in dem der Bericht gerendert werden soll.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24cc4fbe1a1cadeeb9c2e94fe0da85fce24db8a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c7a6907a20ecbfad89820c3afb792b50a7f2a6f8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571510"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247209"
 ---
 # <a name="export-a-report-using-url-access"></a>Exportieren von Berichten über URL-Zugriff
   Sie können mit dem *rs:Format* -URL-Parameter optional das Format angeben, in dem ein Bericht gerendert werden soll.  Die Formate HTML4.0 und HTM5 (Renderingerweiterung) werden im Browser und für andere Formate gerendert, der Browser fordert zum Speichern der Berichtsausgabe in einer lokalen Datei auf.  

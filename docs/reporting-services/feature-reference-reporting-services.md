@@ -1,5 +1,6 @@
 ---
 title: Funktionsreferenz (Reporting Services) | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über Tools und Anwendungen der SQL Server Reporting Services, die Sie zum Erstellen, Verwalten und Anzeigen von Berichten verwenden können.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503088"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247239"
 ---
 # <a name="feature-reference-reporting-services"></a>Funktionsreferenz (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthält zahlreiche Tools und Anwendungen, die Sie zum Erstellen, Verwalten und Anzeigen von Berichten verwenden können. Dieser Abschnitt enthält Themen zu den einzelnen Dialogfeldern, Webseiten und Assistenten dieser Tools und Anwendungen.  
   
- Um während der Ausführung eines Tools oder einer Anwendung auf ein Thema zur Benutzeroberfläche zuzugreifen, drücken Sie F1. Sie können auch auf **Hilfe** klicken, während das Dialogfeld, die Webseite oder der Assistent geöffnet ist. Weitere Informationen zum Starten der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Tools finden Sie unter [Tutorial: So suchen und starten Sie Reporting Services-Tools (SSRS)](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ Um während der Ausführung eines Tools oder einer Anwendung auf ein Thema zur Benutzeroberfläche zuzugreifen, drücken Sie F1. Sie können auch auf **Hilfe** klicken, während das Dialogfeld, die Webseite oder der Assistent geöffnet ist. Weitere Informationen zum Starten des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Tools finden Sie unter [Tutorial: Suchen und Starten von Reporting Services-Tools &#40;SSRS&#41;](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Report Designer F1 Help (Berichts-Designer (F1-Hilfe))](../reporting-services/tools/report-designer-f1-help.md)  

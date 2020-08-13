@@ -1,5 +1,5 @@
 ---
-title: Abrufen großer Datenmengen | Microsoft-Dokumentation
+title: Abrufen von großen Datenmengen (OLE DB-Treiber) | Microsoft-Dokumentation
 description: In diesem Artikel erfahren Sie, wie Sie große Datenmengen mithilfe des OLE DB-Treibers für SQL Server abrufen.
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: fc9b1ccc24a31083e2a6ef111ad2e79781eef6d6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08c1a4d419317f481994980facb0f625730fe484
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67936537"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244976"
 ---
 # <a name="getting-large-data"></a>Abrufen großer Datenmengen
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

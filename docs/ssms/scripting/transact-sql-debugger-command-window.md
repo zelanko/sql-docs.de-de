@@ -1,5 +1,6 @@
 ---
 title: Befehlsfenster
+description: Hier erfahren Sie, wie Sie das Befehlsfenster des Transact-SQL-Debuggers verwenden, um Debugbefehle auszuführen und Befehle im Code zu bearbeiten, den Sie gerade debuggen.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,18 +14,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 226acc4696b5edacde3b6950c10c8b5370e29b42
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e9a1e432de7b9bb0871ffc094f7d37cd1709aff
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243429"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248060"
 ---
 # <a name="transact-sql-debugger---command-window"></a>Transact-SQL-Debugger – Befehlsfenster
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Im **Befehlsfenster** können Sie für den Code im gerade gedebuggten [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Abfrage-Editor-Fenster Befehle ausführen, wie z.B. Debug- und Bearbeitungsbefehle. Um das **Befehlsfenster**zu verwenden, müssen Sie sich im Debugmodus befinden. Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger unterstützt zahlreiche Befehle, die auch im **Befehlsfenster** von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] unterstützt werden. Weitere Informationen finden Sie unter [Visual Studio-Befehlsfenster](https://go.microsoft.com/fwlink/?LinkId=112007).  
+Im **Befehlsfenster** können Sie für den Code im gerade gedebuggten [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Abfrage-Editor-Fenster Befehle ausführen, wie z. B. Debug- und Bearbeitungsbefehle. Um das **Befehlsfenster**zu verwenden, müssen Sie sich im Debugmodus befinden. Der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Debugger unterstützt zahlreiche Befehle, die auch im **Befehlsfenster** von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] unterstützt werden. Weitere Informationen finden Sie unter [Visual Studio-Befehlsfenster](https://go.microsoft.com/fwlink/?LinkId=112007).  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -36,7 +37,7 @@ Im **Befehlsfenster** können Sie für den Code im gerade gedebuggten [!INCLUDE[
 
 **So geben Sie den Wert einer Variablen aus**
 
-- Geben Sie im **Befehlsfenster** **Debug.Print \<Variablenname>** ein, und drücken Sie dann die EINGABETASTE.
+- Geben Sie im **Befehlsfenster**die Zeichenfolge **Debug.Print \<VariableName>** ein, und drücken Sie dann die EINGABETASTE.
 
 **So listen Sie Informationen zum aktuellen Thread auf**
 
@@ -44,7 +45,7 @@ Im **Befehlsfenster** können Sie für den Code im gerade gedebuggten [!INCLUDE[
 
 **So fügen Sie dem Fenster Schnellüberwachung eine Variable hinzu**
 
-- Geben Sie im **Befehlsfenster** **Debug.QuickWatch \<Variablenname>** ein, und drücken Sie dann die EINGABETASTE.
+- Geben Sie im **Befehlsfenster** **Debug.QuickWatch \<VariableName>** ein, und drücken Sie dann die EINGABETASTE.
 
 ## <a name="see-also"></a>Weitere Informationen
 

@@ -1,5 +1,6 @@
 ---
 title: Fehlerliste (Fenster)
+description: Hier erfahren Sie, wie Sie die Fehlerliste zum Anzeigen der Fehler und Warnungen verwenden, die IntelliSense generiert, wenn Sie Transact-SQL-Skripts bearbeiten.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -16,18 +17,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4755c439edafb5f38740e12f6ec57abf468bc01a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243386"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247348"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL-Debugger – Fenster „Fehlerliste“
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-In der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Fehlerliste**in** werden die vom IntelliSense-Code im [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor generierten Syntax- und Semantikfehler angezeigt.  
+In der **Fehlerliste** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] werden die vom IntelliSense-Code im [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Abfrage-Editor generierten Syntax- und Semantikfehler angezeigt.  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -74,7 +75,7 @@ Die **Fehlerliste** bietet die folgende Funktionalität:
 > [!NOTE]  
 >  In der **Fehlerliste** werden nur Fehler aus dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor angezeigt. Fehler aus dem MDX-, DMX- oder XML/A-Editor werden in der Liste nicht angezeigt. Alle MDX-, DMX- und XML/A-Fehler werden in den entsprechenden Editoren auf der Registerkarte **Meldungen** angezeigt.  
   
-## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
+## <a name="ui-element-list"></a>Liste der Benutzeroberflächenelemente  
  Wenn die **Fehlerliste** geöffnet ist, werden die Informationen in den folgenden Spalten angezeigt:  
   
  **Standardreihenfolge**  

@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator) | Microsoft-Dokumentation'
+description: In diesem Artikel erfahren Sie, wie Sie mit dem Berichts-Generator eine einfache Tabelle mit einem Sparklinediagramm in einem paginierten Reporting Services-Bericht erstellen.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63043178"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245657"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
 
 In diesem [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]-Tutorial erstellen Sie eine einfache Tabelle mit einem Sparkline-Diagramm in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht.   
   
@@ -23,7 +24,7 @@ Sparklines und Datenbalken sind einfache, kleine Diagramme, die zahlreiche Infor
   
 ![Berichts-Generator-Sparkline-fertig](../reporting-services/media/report-builder-sparkline-final.png)  
      
-Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 30 Minuten  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  

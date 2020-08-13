@@ -1,5 +1,6 @@
 ---
 title: 'Abwärtskompatibilität: Reporting Services | Microsoft-Dokumentation'
+description: Informieren Sie sich über die Änderungen hinsichtlich des Verhaltens von SQL Server Reporting Services einschließlich der Features, die nicht mehr verfügbar sind oder in zukünftigen Releases entfernt werden.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b16398915b774454895ee39ad80fa008d22a8a75
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b6618f89ab0bdf31ef71e779a3d69fe675d5e2d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571453"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245727"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Abwärtskompatibilität von Reporting Services
 Erfahren Sie mehr zu Verhaltensänderungen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Hier werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt werden.

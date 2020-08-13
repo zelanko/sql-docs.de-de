@@ -1,5 +1,6 @@
 ---
 title: 'Lektion 3: Definieren eines datengesteuerten Abonnements | Microsoft-Dokumentation'
+description: In diesem Artikel erfahren Sie, wie Sie die Seiten für datengesteuerte Abonnements des Webportals in den Reporting Services nutzen, um eine Verbindung zu einer Abonnementdatenquelle herzustellen und eine Abfrage zu erstellen, die Abonnementdaten abruft.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 332a1cbcda7bee87c16167179ef488fe02334474
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826855"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247179"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lektion 3: Definieren eines datengesteuerten Abonnements
 In dieser Lektion des [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]-Tutorials verwenden Sie die datengesteuerten Abonnementseiten des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Webportals, um eine Verbindung mit einer Abonnementdatenquelle herzustellen, um eine Abfrage zu erstellen, die Abonnementdaten abruft, und um das Resultset den Berichts- und Übermittlungsoptionen zuzuordnen.  
   
 > [!NOTE]  
@@ -82,11 +83,11 @@ Geben Sie folgende Werte an:
 Parameter  |Wertquelle  | Wert/Feld  
 ---------|---------|---------
 **Dateiname**     |Wert aus Dataset abrufen | Order     
-**Path**     | Wert eingeben  | Geben Sie als Wert den Namen einer öffentlichen Dateifreigabe ein, für die Sie Schreibberechtigungen besitzen (z.B. `\\mycomputer\public\myreports`). 
+**Pfad**     | Wert eingeben  | Geben Sie als Wert den Namen einer öffentlichen Dateifreigabe ein, für die Sie Schreibberechtigungen besitzen (z.B. `\\mycomputer\public\myreports`). 
 **Renderformat** | Wert aus Dataset abrufen | Format
 **Schreibmodus**| Wert eingeben| Automatisch inkrementieren    
 **Dateierweiterung** |Wert eingeben |True
-**Benutzername** | Wert eingeben | Geben Sie Ihr Domänenbenutzerkonto an. Geben Sie es im folgenden Format ein: \<Domäne>\\\<Konto>. Das Benutzerkonto muss über Berechtigungen für den Pfad verfügen, den Sie konfiguriert haben. 
+**Benutzername** | Wert eingeben | Geben Sie Ihr Domänenbenutzerkonto an. Geben Sie ihn in folgendem Format ein: \<domain>\\\<account>. Das Benutzerkonto muss über Berechtigungen für den Pfad verfügen, den Sie konfiguriert haben. 
 **Kennwort** | Wert eingeben | Geben Sie Ihr Kennwort ein
 **Dateifreigabekonto verwenden** | Wert eingeben | False
 

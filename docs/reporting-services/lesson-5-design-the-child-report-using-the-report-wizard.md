@@ -1,5 +1,6 @@
 ---
 title: 'Lektion 5: Entwerfen des untergeordneten Berichts mithilfe des Berichts-Assistenten | Microsoft-Dokumentation'
+description: Hier erfahren Sie, wie Sie mithilfe des Assistenten für Berichte im Berichts-Designer einen untergeordneten Bericht erstellen, nachdem Sie eine Datenverbindung und eine Datentabelle für Ihren untergeordneten Bericht erstellt haben.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da9f07cf60a2ec42e23416b52cbfebab78802247
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cb9555522638ab6c8132f3422c7f0ca30928f893
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512644"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246255"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Lektion 5: Entwerfen des untergeordneten Berichts mithilfe des Berichts-Assistenten
 Nachdem Sie eine Datenverbindung und eine Datentabelle für den untergeordneten Bericht erstellt haben, entwerfen Sie im nächsten Schritt den untergeordneten Bericht mithilfe des Berichts-Assistenten im Berichts-Designer. Weitere Informationen zum Berichts-Designer finden Sie unter [Entwerfen von Berichten mithilfe des Berichts-Designers (SSRS)](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
@@ -38,7 +39,7 @@ Nachdem Sie eine Datenverbindung und eine Datentabelle für den untergeordneten 
   
     1.  Ziehen Sie **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**und **StockedQty** aus **Verfügbare Felder** in das Feld **Werte** .  
   
-    2.  Klicken Sie auf den Pfeil neben **Sum(ProductID)** , **Sum(PurchaseOrderID)** , **Sum(PurchaseOrderDetailID)** , **Sum(OrderQty)** , **Sum(ReceivedQty)** , **Sum(RejectedQty)** und **Sum(StockedQty)** , und deaktivieren Sie die Auswahl **Sum** .  
+    2.  Klicken Sie auf den Pfeil neben **Sum(ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**, **Sum(ReceivedQty)**, **Sum(RejectedQty)** und **Sum(StockedQty)** , und deaktivieren Sie die Auswahl **Sum** .  
   
 7.  Klicken Sie zweimal auf **Weiter** und anschließend auf **Fertig stellen** , um den **Berichts-Assistenten**zu schließen.  
   
@@ -57,7 +58,7 @@ Nachdem Sie eine Datenverbindung und eine Datentabelle für den untergeordneten 
 9. Speichern Sie die RDLC-Datei.  
   
 ## <a name="next-task"></a>Nächste Aufgabe  
-Sie haben erfolgreich den untergeordneten Bericht mit dem Berichts-Assistenten entworfen. Als Nächstes fügen Sie der Websiteanwendung ein ReportViewer-Steuerelement hinzu. Informationen hierzu finden Sie unter [Lektion 6: Hinzufügen eines ReportViewer-Steuerelements zur Anwendung](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md).  
+Sie haben erfolgreich den untergeordneten Bericht mit dem Berichts-Assistenten entworfen. Als Nächstes fügen Sie der Websiteanwendung ein ReportViewer-Steuerelement hinzu. Siehe [Lektion 6: Hinzufügen eines ReportViewer-Steuerelements zur Anwendung](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md).  
   
   
   

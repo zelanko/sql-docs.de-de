@@ -1,5 +1,6 @@
 ---
 title: Reporting Services-Datenwarnungen | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie über SQL Server Reporting Services-Datenwarnungen über für Sie interessante oder wichtige Berichtsdaten informiert werden.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7a3d3d4cc792afdef44a6c5ff6684e1e6aa4ff14
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487794"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246679"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services-Datenwarnungen
 
@@ -81,7 +82,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
 ### <a name="save-data-alert-definitions-and-alerting-metadata"></a>Speichern von Datenwarnungsdefinitionen und Warnungsmetadaten  
  Wenn Sie [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installieren, wird die SQL Server-Warnungsdatenbank automatisch erstellt.  
   
- Datenwarnungsdefinitionen und Warnungsmetadaten werden in der Warnungsdatenbank gespeichert. Diese Datenbank wird standardmäßig als ReportingServices\<GUID>_Alerting bezeichnet.  
+ Datenwarnungsdefinitionen und Warnungsmetadaten werden in der Warnungsdatenbank gespeichert. Standardmäßig wird diese Datenbank als „ReportingServices\<GUID>_Alerting“ bezeichnet.  
   
  Wenn Sie die Datenwarnungsdefinition speichern, erstellt der Warnungsdienst einen SQL Server-Agent-Auftrag für die Warnungsdefinition. Der Auftrag beinhaltet einen Auftragszeitplan. Der Zeitplan basiert auf dem Serienmuster, das Sie mit der Warnungsdefinition definieren. Durch die Ausführung des Auftrags wird die Verarbeitung der Datenwarnungsdefinition initiiert.  
   

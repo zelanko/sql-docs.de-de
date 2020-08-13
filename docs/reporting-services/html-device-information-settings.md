@@ -1,5 +1,6 @@
 ---
 title: Geräteinformationseinstellungen für HTML | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie mehr über die verschiedenen Geräteinformationseinstellungen, die für das Rendering im HTML-Format verfügbar sind.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c0d477364c4920e8220aef96629b24e34650ebb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6d86394f22eabb73c055329b2ad583f589b45ea8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503104"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247189"
 ---
 # <a name="html-device-information-settings"></a>HTML-Geräteinformationseinstellungen
 In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern in das HTML-Format aufgeführt.  
@@ -24,7 +25,7 @@ In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern
 > [!IMPORTANT]  
 >  Die in der Tabelle unten aufgelisteten Geräteinformationseinstellungen mit einem **(\*)** wurden als veraltet markiert und sollten in neuen Anwendungen nicht verwendet werden. Weitere Informationen finden Sie unter [Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 |**AccessibleTablix**|Gibt an, ob mit zusätzlichen Barrierefreiheitsmetadaten zu Verwendung mit Sprachausgaben gerendert werden soll. Die zusätzlichen Barrierefreiheitsmetadaten bewirken, dass der gerenderte Bericht mit den folgenden technischen Standards in "Web-based Intranet and Internet Information and Applications", Abschnitt (1194.22) der Electronic and Information Technology Accessibility Standards (Abschnitt 508) kompatibel ist:<br /><br /> (g) Zeilen- und Spaltenüberschriften werden für Datentabellen identifiziert.<br /><br /> (h) Markup wird verwendet, um Datenzellen und Headerzellen für Datentabellen zuzuordnen, die zwei oder mehr Logikebenen für Zeilen- oder Spaltenüberschriften haben.|  
 |**ActionScript(\*)**|Gibt den Namen der JavaScript-Funktion an, die verwendet werden soll, wenn ein Aktionsereignis auftritt, z. B. ein Drillthrough oder ein Lesezeichenklick. Wenn dieser Parameter angegeben wird, löst ein Aktionsereignis die genannte JavaScript-Funktion statt eines Postbacks zum Server aus.|  
@@ -44,7 +45,7 @@ In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern
 |**ReplacementRoot(\*)**|Die Zeichenfolge, die allen Drillthrough-, Umschalt- und Lesezeichenlinks im Bericht vorangestellt wird, wenn das Rendern außerhalb des ReportViewer-Steuerelements erfolgt. Diese wird beispielsweise verwendet, um den Klick eines Benutzers auf eine benutzerdefinierte Seite umzuleiten.|  
 |**ResourceStreamRoot(\*)**|Die Zeichenfolge, die der URL für alle Bildressourcen vorangestellt wird, z. B. Bilder für die Umschaltfläche oder Sortierung.|  
 |**Abschnitt**|Die Seitenzahl des zu rendernden Berichts. Der Wert **0** gibt an, dass alle Abschnitte des Berichts gerendert werden. Der Standardwert ist **1**.|  
-|**StreamRoot (\*)**|Der im HTML-Bericht dem Wert des **src** -Attributs des IMG-Elements vorangestellte Pfad, welcher vom Berichtsserver zurückgegeben wird. Standardmäßig stellt der Berichtsserver den Pfad bereit. Sie können diese Einstellung verwenden, um einen Stammpfad für die Bilder in einem Bericht anzugeben (beispielsweise **https://\<Servername>/resources/companyimages**).|  
+|**StreamRoot (\*)**|Der im HTML-Bericht dem Wert des **src** -Attributs des IMG-Elements vorangestellte Pfad, welcher vom Berichtsserver zurückgegeben wird. Standardmäßig stellt der Berichtsserver den Pfad bereit. Sie können diese Einstellung verwenden, um einen Stammpfad für die Bilder in einem Bericht anzugeben (beispielsweise **https://\<servername>/resources/companyimages**).|  
 |**StyleStream**|Gibt an, ob Formate und Skripts als separater Datenstrom statt im Dokument erstellt werden. Der Standardwert ist **false**.|  
 |**Symbolleiste**|Gibt an, ob die Symbolleiste ein- oder ausgeblendet werden soll. Der Standardwert dieses Parameters ist **true**. Wenn der Wert dieses Parameters **FALSE**ist, werden alle verbleibenden Optionen (außer der Dokumentstruktur) ignoriert. Wenn Sie diesen Parameter weglassen, wird die Symbolleiste automatisch für Renderingformate angezeigt, die sie unterstützen.<br /><br /> Die Symbolleiste für den Berichts-Viewer wird gerendert, wenn Sie den URL-Zugriff verwenden, um einen Bericht zu rendern. Die Symbolleiste wird nicht durch die SOAP-API gerendert. Die **Toolbar** -Geräteinformationseinstellung wirkt sich jedoch darauf aus, wie der Bericht bei Verwendung der SOAP- **Render** -Methode angezeigt wird. Ist der Wert dieses Parameters **true** , wenn Sie SOAP zum Rendern in das HTML-Format verwenden, so wird nur der erste Teil des Berichts gerendert. Wenn der Wert **false**ist, wird der ganze HTML-Bericht als einzelne HTML-Seite gerendert.|  
 |**UserAgent**|Die **user-agent** -Zeichenfolge des Browsers, von dem die Anforderung stammt und die sich in der HTTP-Anforderung befindet.|  

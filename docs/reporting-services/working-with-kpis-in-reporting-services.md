@@ -1,5 +1,6 @@
 ---
 title: Arbeiten mit KPIs in Reporting Services | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie den Status und die Leistung mithilfe von KPIs in SQL Server Reporting Services ganz einfach messen können.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b92f19c74e5b5e3215836e174bf895f7cb61c36b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68329360"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247439"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Arbeiten mit KPIs in Reporting Services
 
@@ -35,7 +36,7 @@ Mit KPIs in SQL Server Reporting Services können Sie einfach Antworten für die
 
 Eine KPI wird nur die erste Zeile der Daten aus einem freigegebenen Dataset verwenden. Stellen Sie sicher, dass sich die Daten, die Sie verwenden möchten, in dieser ersten Zeile befinden. Um ein freigegebenes Dataset zu erstellen, können Sie entweder den Berichts-Generator oder SQL Server Data Tools verwenden.  
   
-> **Hinweis**: Das Dataset muss sich nicht im selben Ordner wie die KPI befinden.  
+> **Hinweis**: Das Dataset muss sich nicht im selben Ordner wie der KPI befinden.  
   
 ## <a name="placement-of-kpis"></a>Platzierung von KPIs  
   
@@ -55,7 +56,7 @@ Sie können entweder statische Werte zuweisen oder Daten aus einem freigegebenen
 | Feld | BESCHREIBUNG |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | Wertformat | Wird verwendet, um das Format des angezeigten Werts zu ändern. |
-| value | Der für die KPI anzuzeigender Wert. |
+| Wert | Der für die KPI anzuzeigender Wert. |
 | Zielsetzung | Wird als Vergleich mit einem numerischen Wert verwendet und als prozentuale Differenz angezeigt. |
 | Status | Zum Bestimmen der KPI-Kachelfarbe verwendete und durch Komma getrennte numerische Werte. Gültige Werte sind 1 (Grün), 0 (gelb) und-1 (Rot). |
 | Trendsatz | Für Diagrammvisualisierungen verwendete durch Komma getrennte numerische Werte. Dies kann auch für eine Spalte eines Dataset mit Werten festgelegt werden, die den Trend darstellen. |
@@ -63,7 +64,7 @@ Sie können entweder statische Werte zuweisen oder Daten aus einem freigegebenen
   
 > **Warnung**: Bei der Verwendung des Wordwerts für das **Status** -Feld zur Entwurfszeit, sollten Sie den Zahlenwert verwenden, wenn Sie ein Dataset aktualisieren. Wenn Sie ein Dataset mit dem Wortwert anstelle des Zahlenwerts aktualisieren, könnten die KPIs auf Ihrem Server beschädigt werden.  
 >
-> **Hinweis:** : Die Felder **Wert**, **Ziel** und **Status** können nur einen Wert aus der ersten Zeile des Ergebnisses eines Datasets auswählen. Das Feld **Trendsatz** kann jedoch wählen, welche Spalte den Trend widerspiegelt.  
+> **Hinweis**: Die Felder **Wert**, **Ziel** und **Status** können nur einen Wert aus der ersten Zeile des Ergebnisses eines Datasets auswählen. Das Feld **Trendsatz** kann jedoch wählen, welche Spalte den Trend widerspiegelt.  
   
 Um Daten aus einem freigegebenen Dataset zu verwenden, können Sie die folgenden Schritte durchführen.
   

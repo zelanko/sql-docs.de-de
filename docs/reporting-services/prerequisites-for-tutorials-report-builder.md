@@ -1,5 +1,6 @@
 ---
 title: Voraussetzungen für Tutorials (Berichts-Generator) | Microsoft-Dokumentation
+description: Informieren Sie sich über die Voraussetzungen zum Abschließen der Berichts-Generator-Tutorials.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f00a23d175ce798edc8c73fe0c1ec7e92053392
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 27fbd90962370cf3198c53b0c39c5d7886ed943a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81485182"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247489"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Voraussetzungen für Lernprogramme (Berichts-Generator)
 
 Die Tutorials zum Berichts-Generator setzen voraus, dass Sie paginierte Berichte aus [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] auf einem Berichtsserver oder einer in einen Berichtsserver integrierten SharePoint-Website anzeigen und speichern können. Für Daten werden in allen Tutorials wörtliche Abfragen verwendet, die von einer SQL Server-Instanz verarbeitet werden müssen.  
   
-Wenn Sie keinen Zugriff auf einen Berichtsserver, eine Website oder eine Datenquelle haben, können Sie sich mit Berichts-Generator vertraut machen, indem Sie einen Offlinebericht erstellen. Siehe [Tutorial: Create a Quick Chart Report Offline (Report Builder) (Tutorial: Erstellen eines Quick-Diagrammberichts offline (Berichts-Generator))](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+Wenn Sie keinen Zugriff auf einen Berichtsserver, eine Website oder eine Datenquelle haben, können Sie sich mit Berichts-Generator vertraut machen, indem Sie einen Offlinebericht erstellen. Siehe [Tutorial: Erstellen eines Quick-Diagrammberichts offline &#40;Berichts-Generator&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
 
 ## <a name="requirements"></a>Requirements (Anforderungen)
 
@@ -35,9 +36,9 @@ Für die Ausführung der Lernprogramme zum Berichts-Generator gelten die folgend
   
 -   Den Namen einer SQL Server-Instanz und entsprechende Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. In den Datasetabfragen im Tutorial werden zwar Literaldaten verwendet, die Abfrage muss jedoch von einer SQL Server-Instanz verarbeitet werden, um die für ein Berichtsdataset erforderlichen Metadaten zurückzugeben. Die folgende Verbindungszeichenfolge gibt z. B. nur einen Server an: `data source=<servername>`. Sie müssen Lesezugriff auf die Standarddatenbank besitzen, die Ihnen vom Systemadministrator zugewiesen wird, der Ihnen die Berechtigung für den Zugriff auf den Server gewährt. Sie können auch eine Datenbank entsprechend der folgenden Verbindungszeichenfolge angeben: `data source=<servername>;initial catalog=<database>`.  
   
--   Für das [Tutorial: Kartenbericht (Berichts-Generator)](tutorial-map-report-report-builder.md) muss der Berichtsserver dafür konfiguriert werden, Bing-Karten im Hintergrund zu unterstützen. Weitere Informationen finden Sie unter [Planen der Unterstützung für Kartenberichte](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
+-   Für das [Tutorial: Kartenbericht (Berichts-Generator)](tutorial-map-report-report-builder.md) muss der Berichtsserver für die Unterstützung von Bing-Karten als Hintergrund konfiguriert werden. Weitere Informationen finden Sie unter [Planen der Unterstützung für Kartenberichte](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
 
--   Das [Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)](tutorial-creating-drillthrough-and-main-reports-report-builder.md) erfordert Zugriff auf den Contoso-Umsatz-Cube. Weitere Informationen finden Sie im Tutorial. 
+-   Das [Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)](tutorial-creating-drillthrough-and-main-reports-report-builder.md) erfordert Zugriff auf den Contoso Sales-Cube. Weitere Informationen finden Sie im Tutorial. 
   
 Der Berichtsserveradministrator muss Ihnen die erforderlichen Berechtigungen für den Berichtsserver erteilen und die Orte für die [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Ordner sowie die Standardoptionen für den Berichts-Generator konfigurieren. Weitere Informationen finden Sie unter [Installieren des Berichts-Generators](install-windows/install-report-builder.md).  
 

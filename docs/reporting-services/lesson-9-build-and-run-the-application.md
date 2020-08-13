@@ -1,5 +1,6 @@
 ---
 title: 'Lektion 9: Erstellen und Ausführen der Anwendung | Microsoft-Dokumentation'
+description: Informieren Sie sich, wie Sie die Websiteanwendung ausführen, nachdem Sie einen Datenfilter für die Datentabelle erstellt haben.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 00f139a6b7b334e3a3e8254a742874cfc28145b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b72153a14a20509feeb71bfdec0f2eb08b18c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651256"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245089"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
+# <a name="lesson-9-build-and-run-the-application"></a>Lektion 9: Erstellen und Ausführen der Anwendung
 Nachdem Sie einen Datenfilter für die Datentabelle erstellt haben, erstellen Sie im nächsten Schritt eine Websiteanwendung und führen diese aus.  
   
 ### <a name="to-build-and-run-the-application"></a>So erstellen Sie die Anwendung und führen sie aus  

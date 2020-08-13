@@ -1,5 +1,6 @@
 ---
 title: Bildgerät-Informationseinstellungen | Microsoft-Dokumentation
+description: In diesem Artikel erfahren Sie mehr über die verschiedenen Geräteinformationseinstellungen, die Sie zum Rendern in einem Bildformat in Reporting Services verwenden können.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 295784ba9f2c14ce0f73f9639ec6ed129e447e76
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 57126e2ab47493b2f320308344acf9d15b572318
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503082"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247169"
 ---
 # <a name="image-device-information-settings"></a>Geräteinformationseinstellungen für Bilder
   In der folgenden Tabelle sind die Geräteinformationseinstellungen zum Rendern in das Bildformat aufgeführt.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 |**Spalten**|Die für den Bericht gewünschte Anzahl der Spalten. Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**ColumnSpacing**|Der für den Bericht gewünschte Spaltenabstand. Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
@@ -32,7 +33,7 @@ ms.locfileid: "65503082"
 |**MarginLeft**|Der für den Bericht gewünschte Wert für den linken Rand in Zoll. Sie müssen eine ganze Zahl oder einen Dezimalwert gefolgt von „in“ angeben (z.B. **1in**). Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**MarginRight**|Der für den Bericht gewünschte Wert für den rechten Rand in Zoll. Sie müssen eine ganze Zahl oder einen Dezimalwert gefolgt von „in“ angeben (z.B. **1in**). Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**MarginTop**|Der für den Bericht gewünschte Wert für den oberen Rand in Zoll. Sie müssen eine ganze Zahl oder einen Dezimalwert gefolgt von „in“ angeben (z.B. **1in**). Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
-|**Ausgabeformat**|Eines der [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) unterstützten Ausgabeformate: **BMP**, **EMF**, **GIF**, **JPEG**, **PNG**oder **TIFF**.|  
+|**Ausgabeformat**|Eines der von [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) unterstützten Ausgabeformate: **BMP**, **EMF**, **GIF**, **JPEG**, **PNG** oder **TIFF**.|  
 |**PageHeight**|Die für den Bericht gewünschte Seitenhöhe in Zoll. Sie müssen eine ganze Zahl oder einen Dezimalwert gefolgt von „in“ angeben (z.B. **11in**). Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**PageWidth**|Die für den Bericht gewünschte Seitenbreite in Zoll. Sie müssen eine ganze Zahl oder einen Dezimalwert angeben, gefolgt von „in“ (z.B. **8,5in**). Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**PrintDpiX**|Die horizontale Auflösung des Ausgabebilds. Der Standardwert lautet **300**. Gilt für das**EMF**-Ausgabeformat (Enhanced MetaFile).|  

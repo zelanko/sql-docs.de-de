@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Formatieren von Text (Berichts-Generator) | Microsoft-Dokumentation'
+description: In diesem Artikel erfahren Sie, wie Sie Text auf verschiedene Weise in einem paginierten Bericht in den Reporting Services formatieren. Sie können beispielsweise mit unterschiedlichen Formaten experimentieren.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f71447f2e0f83c87d9b48a464a99dbbb7a1d4c9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63042973"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248119"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Lernprogramm: Formatieren von Text (Berichts-Generator)
+# <a name="tutorial-format-text-report-builder"></a>Tutorial: Formatieren von Text (Berichts-Generator)
 
 In diesem Tutorial formatieren Sie in einem paginierten [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] -Bericht Text auf verschiedene Weise. Sie können mit unterschiedlichen Formaten experimentieren. 
 
@@ -25,7 +26,7 @@ Nach dem Einrichten des leeren Berichts mit der Datenquelle und dem Dataset kön
   
 In einem Schritt machen Sie absichtlich einen Fehler, um dadurch erkennen zu können, warum es sich um einen Fehler handelt. Anschließend beheben Sie den Fehler, um den gewünschten Effekt zu erreichen.  
     
-Ungefähre Dauer dieses Lernprogramms: 20 Minuten.  
+Geschätzte Zeit zum Bearbeiten dieses Tutorials: 20 Minuten  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
 Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -67,7 +68,7 @@ Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen fü
   
 2.  Vergewissern Sie sich, dass die Datenquelle **TextDataSource**ist.  
   
-3.  Geben Sie im Feld **Name** Folgendes ein: **TextDataset**.  
+3.  Geben Sie im Feld **Name** Folgendes ein: **TextDataset.**  
   
 4.  Überprüfen Sie, ob der Abfragetyp **Text** ausgewählt ist, und klicken Sie anschließend auf **Abfrage-Designer**.  
   
@@ -179,7 +180,7 @@ Erstellen Sie diese Tabelle, damit Sie Hyperlinks und den gedrehten Text an eine
   
 1.  Klicken Sie auf der Registerkarte **Einfügen** auf **Tabelle** > **Tabellen-Assistent**.  
   
-2.  Klicken Sie auf der Seite **Dataset auswählen** des Assistenten für neue Tabellen oder Matrizen auf **Vorhandenes Dataset in diesem Bericht oder einem freigegebenen Dataset auswählen** > **TextDataset (in diesem Bericht)**  > **Weiter**.  
+2.  Klicken Sie auf der Seite **Dataset auswählen** des Assistenten für neue Tabellen oder Matrizen auf **Vorhandenes Dataset in diesem Bericht oder einem freigegebenen Dataset auswählen** > **TextDataset (in diesem Bericht)** > **Weiter**.  
   
 3.  Ziehen Sie auf der Seite **Felder anordnen** die Felder **Territory**, **LinkText**und **Product** nach **Zeilengruppen**, ziehen Sie das Feld **Sales** nach **Werte**, und klicken Sie anschließend auf **Weiter**.  
 
@@ -355,7 +356,7 @@ Der Bericht wird auf dem Berichtsserver gespeichert. Der Name des Berichtsserver
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Es gibt in Berichts-Generator viele Möglichkeiten, um Text zu formatieren. Das [Tutorial: Erstellen eines Freiformberichts](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) enthält weitere Beispiele.  
+Es gibt in Berichts-Generator viele Möglichkeiten, um Text zu formatieren. [Tutorial: Erstellen eines Freiformberichts](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) enthält weitere Beispiele.  
 
 [Tutorials für den Bericht-Generator](../reporting-services/report-builder-tutorials.md) 
 [Formatieren von Berichtselementen](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

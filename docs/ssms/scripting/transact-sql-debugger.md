@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL-Debugger
+description: Hier erfahren Sie, wie Sie Code schrittweise durchlaufen und den Ausführungsstatus mit dem Transact-SQL-Debugger anzeigen sowie verschiedene andere Debuggingaufgaben durchführen.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,18 +12,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 12/04/2019
-monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e705be1cda43f0645b53f74f3f658a5bc8c2f2c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 07/22/2020
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7a3f86e5df9c94905089cd5382d3895dd9f01e84
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253003"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246158"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL-Debugger
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger ist bei der Fehlersuche in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code hilfreich, da sich mit ihm das Laufzeitverhalten des Codes untersuchen lässt. Nachdem Sie das [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster in den Debugmodus geschaltet haben, können Sie die Ausführung bei bestimmten Codezeilen anhalten und die Informationen und Daten untersuchen, die von diesen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet oder zurückgegeben werden.
 

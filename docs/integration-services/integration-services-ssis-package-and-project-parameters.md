@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de9ceed1aa019b82bc943a1985f0f251ad82b1fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b32c0b24aea8e1a55060b501fd001c1ad7f90b36
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917529"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248044"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services-Paket- und Projektparameter (SSIS)
 
@@ -76,10 +76,10 @@ ms.locfileid: "86917529"
  Die folgenden Transact-SQL-Sichten und die gespeicherte Prozedur können verwendet werden, um Parameterwerte anzuzeigen und festzulegen.  
   
  [catalog.execution_parameter_values &#40;SSISDB-Datenbank&#41;](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) (Sicht)  
- Zeigt die tatsächlichen Parameterwerte an, die von einer bestimmten Ausführung verwendet werden.  
+ Hiermit werden die tatsächlichen Parameterwerte in einer bestimmten Ausführung angezeigt.
   
  [catalog.get_parameter_values &#40;SSISDB-Datenbank&#41;](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (gespeicherte Prozedur)  
- Löst die tatsächlichen Werte für das angegebene Paket und den Umgebungsverweis auf und zeigt diese an.  
+ Hiermit werden die tatsächlichen Werte für das angegebene Paket und den Umgebungsverweis aufgelöst und angezeigt.
   
  [catalog.object_parameters &#40;SSISDB-Datenbank&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (Sicht)  
  Zeigt die Parameter und Eigenschaften für alle Pakete und Projekte im [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Katalog an, einschließlich der Entwurfsstandard- und Serverstandardwerte.  

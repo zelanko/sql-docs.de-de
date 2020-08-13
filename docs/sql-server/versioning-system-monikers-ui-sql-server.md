@@ -1,20 +1,18 @@
 ---
 title: Versionierungssystem für die SQL-Dokumentation
-ms.date: 10/15/2019
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: ''
-ms.custom: ''
+ms.technology: release-landing
 ms.topic: conceptual
-ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b343f34e0d7fdc30e2549095f5731d93e863414c
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 7ca82e29d32bfe2721baa619ec37d4c7576a0533
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150606"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247366"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Versionierungssystem für die SQL-Dokumentation
 
@@ -136,7 +134,7 @@ Es gibt einen speziellen Moniker für **Alle SQL-Produkte**, und seine einzige V
 
 Einige Artikel enthalten Informationen zu mehreren Versionen von SQL Server. Jeder reguläre Moniker blendet versionierte Abschnitte aus, in denen ggf. Informationen enthalten sind, die für die Monikerversion ungenau, verwirrend oder widersprüchlich sind. Der spezielle Moniker für **Alle SQL-Produkte** zeigt alle Versionsabschnitte an, und es ist möglicherweise nicht ersichtlich, dass ggf. falsche Informationen angezeigt werden.
 
-## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> Meldung: Die angeforderte Seite ist für den \<Moniker\> nicht verfügbar.
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> Meldung: Die angeforderte Seite ist für \<moniker\> nicht verfügbar
 
 Das folgende Szenario führt zur Anzeige einer Informationsmeldung am oberen Rand der :::no-loc text="Docs":::-Webseite:
 
@@ -163,10 +161,11 @@ Das Versionierungssystem ist ab SQL Server-Version 2016 vollständig implementie
     - [Vorherige Versionen von SQL Server, 2012-2005](../toc/previous-versions-sql-server.md)
 
 - _2014:_ &nbsp; Das Versionierungssystem ist für SQL Server 2014 teilweise implementiert. Daher ist es möglich, auch SQL Server 2014 in der Versionierungskontrolle auswählen. Intern beziehen sich die Dateien für 2014 jedoch nur auf 2014, so wie die Dateien für 2008 nur auf 2008.
-    - [Dokumentation zu SQL Server 2014](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
+    - [Offlinedokumentation für SQL Server 2014](/sql/sql-server/sql-server-offline-documentation)
 
 - _2016 und höher:_ &nbsp; Das Versionierungssystem ist für SQL Server 2016 und höhere Versionen vollständig implementiert.
     - [Willkommen bei der Dokumentation für SQL Server 2016 and höhere Versionen](/sql/sql-server/?view=sql-server-2016)
+    - [Offlinedokumentation für SQL Server 2016](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>Weitere Informationen
 

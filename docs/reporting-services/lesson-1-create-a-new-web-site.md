@@ -1,5 +1,6 @@
 ---
 title: 'Lektion 1: Erstellen einer neuen Website | Microsoft-Dokumentation'
+description: Hier erfahren Sie, wie Sie ein neues Websiteprojekt mithilfe der ASP.NET-Websitevorlage für Visual C# erstellen.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ac670743ba36e3e1d880f152317956115ccf8c78
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d44bb92cccea8067abcfd249d592b44661544eb4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651565"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247159"
 ---
-# <a name="lesson-1-create-a-new-web-site"></a>Lektion 1: Erstellen einer neuen Website
+# <a name="lesson-1-create-a-new-website"></a>Lektion 1: Erstellen einer neuen Website
 In dieser Lektion erfahren Sie, wie Sie ein neues Websiteprojekt mithilfe der ASP.NET-Websitevorlage für Visual C# erstellen.  
   
 ## <a name="to-create-a-new-website"></a>So erstellen Sie eine neue Website  
@@ -31,4 +32,4 @@ In dieser Lektion erfahren Sie, wie Sie ein neues Websiteprojekt mithilfe der AS
 Das Websiteprojekt wird geöffnet und startet den **Berichts-Assistenten**. **Schließen** der Datenquelle und des Berichts-Assistenten, da wir im nächsten Schritt ein benutzerdefiniertes Dataset im erstellen werden.  
   
 ## <a name="next-task"></a>Nächste Aufgabe  
-Sie haben erfolgreich ein neues Websiteprojekt erstellt. Als Nächstes erstellen Sie eine Datenverbindung und eine Datentabelle für den übergeordneten Bericht. Weitere Informationen finden Sie unter [Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).
+Sie haben erfolgreich ein neues Websiteprojekt erstellt. Als Nächstes erstellen Sie eine Datenverbindung und eine Datentabelle für den übergeordneten Bericht. Siehe [Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)

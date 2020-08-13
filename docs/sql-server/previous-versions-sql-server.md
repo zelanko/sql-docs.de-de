@@ -1,20 +1,20 @@
 ---
 title: Frühere Versionen der SQL Server-Dokumentation
-description: Zugreifen auf die SQL Server-Online- und -Offlinedokumentation
+description: Hier erfahren Sie, wie Sie die Online- und Offlinedokumentation für frühere Versionen von SQL Server abrufen, einschließlich 2005, 2008, 2012 und 2014.
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.date: 05/08/2020
-monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9b966a068e1ec95168754cf62d7610aee41b47bb
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.date: 07/24/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9d2fd489c31ea140f747f90c50976b28f45f0045
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152110"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248087"
 ---
 # <a name="previous-versions-of-sql-server-documentation"></a>Frühere Versionen der SQL Server-Dokumentation
 
@@ -22,20 +22,18 @@ Die Dokumentation für mehrere ältere Versionen von Microsoft SQL Server wurde 
 
 ## <a name="online-documentation"></a>Onlinedokumentation
 
-Onlinedokumentation ist für mehrere ältere Versionen von SQL Server verfügbar.
+Die Onlinedokumentation für SQL Server 2005 bis SQL Server 2014 finden Sie auf der folgenden Website:
 
-- [2005 bis 2012](https://docs.microsoft.com/previous-versions/sql/)
-- [2014](../2014/2014-toc/index.yml?view=sql-server-2014)
-- [2016 und neuer](../sql-server/index.yml?view=sql-server-2016)
+- [Dokumentation zu früheren Versionen von SQL Server](https://docs.microsoft.com/previous-versions/sql/)
 
 ## <a name="offline-documentation"></a>Offlinedokumentation
 
-Offlinedokumentation ist für mehrere ältere Versionen von SQL Server verfügbar.
+Offlineinhalte für SQL Server 2012 und höhere Versionen finden Sie im folgenden Artikel:
 
-Informationen zum Zugriff auf Offlineinhalte für die SQL Server-Versionen 2012 und höher finden Sie unter [Installieren von SQL Server-Dokumentation für Offlineanzeige in SSMS](sql-server-offline-documentation.md).
+- [Installieren der SQL Server-Dokumentation für die Offlineanzeige in SSMS](sql-server-offline-documentation.md)
 
-> [!Tip]
-> SQL 2014 Transact-SQL-Inhalte sind nur offline verfügbar.
+> [!IMPORTANT]
+> Inhalte zu SQL 2014 Transact-SQL sind nur [offline](../sql-server/sql-server-offline-documentation.md#sql-server-2014-offline-content) verfügbar.
 
 ## <a name="lifecycle-policy"></a>Lebenszyklusrichtlinie
 
@@ -43,9 +41,11 @@ Lesen Sie den Microsoft-Produktlebenszyklus durch, um Informationen zum Support 
 
 - [Microsoft-Lebenszyklusrichtlinie](https://support.microsoft.com/lifecycle/selectindex)
 
+Spezifische Anleitungen zu Ihren Optionen zum Ende des Supports für SQL Server finden Sie im folgenden Artikel:
+
+- [Optionen für SQL Server bei Ende des Supports](../sql-server/end-of-support/sql-server-end-of-life-overview.md)
+
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [SQL Server Documentation (SQL Server-Dokumentation)](../sql-server/index.yml?view=sql-server-2016)
-- [Dokumentation zu SQL Server 2014](../2014/2014-toc/index.yml?view=sql-server-2014).
-- [Dokumentation zu früheren Versionen von SQL Server](https://docs.microsoft.com/previous-versions/sql/)
-- [Versionsverwaltungssystem für die SQL-Dokumentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)
+- [Onlinedokumentation für SQL Server 2016-2019](../sql-server/index.yml)
+- [Navigationsleitfaden zur SQL Server-Dokumentation](../sql-server/sql-docs-navigation-guide.md)

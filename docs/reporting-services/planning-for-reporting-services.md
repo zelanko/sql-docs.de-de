@@ -1,5 +1,6 @@
 ---
 title: Planung für Reporting Services | Microsoft-Dokumentation
+description: Hier erfahren Sie, wie Sie die SQL Server Reporting Services-Umgebung (SSRS) so installieren und konfigurieren, dass Sie Ihren Anforderungen am besten entspricht.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa89fdf4bce0f268d71ea8c93e60ec4fcee6237c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 569daf4b395e40d9bcaf444aace9565cd9fd3822
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68891764"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247519"
 ---
 # <a name="planning-for-reporting-services"></a>Planung für Reporting Services
   Diese Themen sollen Sie dabei unterstützen, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]besser zu verstehen. Erfahren Sie, wie die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Umgebung installiert und konfiguriert wird, damit sie Ihren Anforderungen am besten entspricht.  

@@ -1,5 +1,6 @@
 ---
 title: Geräteinformationseinstellungen für Excel | Microsoft-Dokumentation
+description: Hier erfahren Sie mehr über die verschiedenen Geräteinformationseinstellungen zum Rendern im Microsoft Excel-Format.
 ms.date: 01/23/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a83bcd79a50400888d5a973ad9a743db19b87b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4d84c98923a3cee94f64fed863e621821bd7a39
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76761824"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245129"
 ---
 # <a name="excel-device-information-settings"></a>Geräteinformationseinstellungen für Excel
   In der folgenden Tabelle werden die Geräteinformationseinstellungen zum Rendern in das Format [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] aufgeführt.  
   
-|Einstellung|value|  
+|Einstellung|Wert|  
 |-------------|-----------|  
 |**OmitDocumentMap**|Gibt an, ob die Dokumentstruktur für Berichte weggelassen werden soll, die sie unterstützen. Der Standardwert ist **false**.|  
 |**OmitFormulas**|Gibt an, ob Formeln aus dem gerenderten Bericht weggelassen werden sollen. Der Standardwert ist **false**.|  

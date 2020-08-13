@@ -1,5 +1,6 @@
 ---
 title: Fenster 'Breakpoints'
+description: Informieren Sie sich, wie Sie das Fenster „Haltepunkte“ des Datenbank-Engine-Abfrage-Editors zum Verwalten von Transact-SQL-Debuggerbreakpoints verwenden.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,18 +12,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 12/04/2019
-monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: a80750a9885bd3cd61afd6b6719f5839b5503eac
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 07/22/2020
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 70178cf723b4e599ca6982668ade3faed61ee8c2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243369"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248034"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL-Debugger – Fenster „Breakpoints“
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Im Fenster **Breakpoints** werden alle Breakpoints aufgelistet, die im aktuellen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor festgelegt sind. Um die Breakpoints zu verwalten, verwenden Sie die Symbolleiste im Fenster **Breakpoints** . Breakpoints sind Positionen im Code, an denen die Ausführung im Debugmodus angehalten wird, sodass Sie Debugdaten anzeigen können.
 
