@@ -4,12 +4,12 @@ ms.service: sql-server
 ms.topic: include
 ms.date: 05/30/2019
 ms.author: mathoma
-ms.openlocfilehash: 9e51137a3a6449e4024b967b631976fc579dad4a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08a9352b6323b34b3b75cc32506e33f832889e45
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68768282"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "88010937"
 ---
   > [!NOTE] 
-  > Eine verwaltete Azure SQL-Datenbank-Instanz kann als Verleger, Verteiler und Abonnent für die Momentaufnahme- und Transaktionsreplikation fungieren. Einzelne und in einem Pool zusammengefasste Azure SQL-Datenbanken können nur Pushabonnenten für Momentaufnahme- und Transaktionsreplikation sein. Weitere Informationen finden Sie unter [Transaktionsreplikation mit Azure SQL-Datenbank](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
+  > Azure SQL Managed Instance kann als Herausgeber, Verleger und Abonnent der Momentaufnahmen- und Transaktionsreplikation fungieren. Datenbanken in Azure SQL-Datenbank können nun Pushabonnenten der Momentaufnahmen- und Transaktionsreplikation sein. Weitere Informationen finden Sie unter [Transaktionsreplikation mit Azure SQL-Datenbank](/azure/sql-database/sql-database-managed-instance-transactional-replication). 

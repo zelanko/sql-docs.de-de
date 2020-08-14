@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f8d91ef65f8beb5194bbb8cbe3b1618d7666e106
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7f5fb29c15fbd8532a6852477ed9376df92f72
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781730"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988770"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85781730"
   
     -   Sie können einen DACPAC mithilfe von SQL Server Management Studio aus einer vorhandenen Datenbank extrahieren und auch andere DAC-Vorgänge ausführen.  
   
-    -   Außerdem kann der Datenbankadministrator für eine [!INCLUDE[ssSDS](../../includes/sssds-md.md)] das Verwaltungsportal für SQL Azure für DAC-Vorgänge verwenden.  
+    -   Darüber hinaus kann der Datenbankadministrator für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] das Azure-Portal für DAC-Vorgänge nutzen.  
   
 -   Unabhängige Softwareanbieter:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "85781730"
   
 -   **EXTRACT**: Der Benutzer kann eine Datenbank in eine DACPAC-Datei extrahieren.  
   
--   **DEPLOY**: Der Benutzer kann eine DACPAC-Datei auf einem Hostserver bereitstellen. Wenn die Bereitstellung in einem Verwaltbarkeitstool wie SQL Server Management Studio oder dem Verwaltungsportal für SQL Azure ausgeführt wird, wird die resultierende Datenbank im Hostserver implizit als Datenebenenanwendung registriert.  
+-   **DEPLOY**: Der Benutzer kann eine DACPAC-Datei auf einem Hostserver bereitstellen. Wenn die Bereitstellung über ein Verwaltungstool wie SQL Server Management Studio oder dem Azure-Portal erfolgt, wird die resultierende Datenbank auf dem Hostserver implizit als Datenschichtanwendung registriert.  
   
 -   **REGISTER**: Der Benutzer kann eine Datenbank als Datenebenenanwendung registrieren.  
   

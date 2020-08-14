@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf911fae5cc8df106cc2a4be9556cf873dd49eaa
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: d4b7c4f52c5d0e70ac6c7f59eebf5fd8a5e47e29
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332479"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864877"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
 
@@ -39,8 +39,8 @@ Die Systemdatenbank `tempdb` ist eine globale Ressource, die für alle Benutzer 
   > [!NOTE]
   > Jedes interne Objekt verwendet mindestens neun Seiten: eine IAM-Seite (Index Allocation Map) und eine achtseitige Erweiterung. Weitere Informationen zu Seiten und Blöcken finden Sie unter [Seiten und Blöcke](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
   > [!IMPORTANT]
-  > Azure SQL-Datenbank-Singletons und Pools für elastische Datenbanken unterstützen globale temporäre Tabellen und globale temporär gespeicherte Prozeduren, die in `tempdb` gespeichert werden und für die Datenbankebene gelten. Globale temporäre Tabellen und globale temporär gespeicherte Prozeduren werden für alle Benutzersitzungen innerhalb derselben Azure SQL-Datenbank freigegeben. Benutzersitzungen von anderen Azure SQL-Datenbanken können nicht auf globale temporäre Tabellen zugreifen. Weitere Informationen finden Sie unter [Database scoped global temporary tables (Azure SQL Database) (Globale temporäre Tabellen auf Datenbankebene (Azure SQL-Datenbank))](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Verwaltete Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)) unterstützt die gleichen temporäre Objekte wie SQL Server.
-  > Für Azure SQL-Datenbank-Singletons und Pools für elastische Datenbanken gelten nur die Masterdatenbank und die `tempdb`-Datenbank. Weitere Informationen finden Sie unter [Was ist ein Azure SQL-Datenbank-Server](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Eine Erläuterung von `tempdb` im Kontext von Azure SQL-Datenbank-Singletons und Pools für elastische Datenbanken finden Sie unter [tempdb-Datenbank in Azure SQL-Datenbank-Singletons und Pools für elastische Datenbanken](#tempdb-database-in-sql-database). Für die verwaltete Azure SQL-Datenbank-Instanz gelten alle Systemdatenbanken.
+  > Azure SQL-Datenbank-Singletons und Pools für elastische Datenbanken unterstützen globale temporäre Tabellen und globale temporär gespeicherte Prozeduren, die in `tempdb` gespeichert werden und für die Datenbankebene gelten. Globale temporäre Tabellen und globale temporär gespeicherte Prozeduren werden für alle Benutzersitzungen innerhalb derselben Azure SQL-Datenbank freigegeben. Benutzersitzungen von anderen Azure SQL-Datenbanken können nicht auf globale temporäre Tabellen zugreifen. Weitere Informationen finden Sie unter [Database scoped global temporary tables (Azure SQL Database) (Globale temporäre Tabellen auf Datenbankebene (Azure SQL-Datenbank))](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) unterstützt dieselben temporären Objekte, die SQL Server unterstützt.
+  > Für Azure SQL-Datenbank-Singletons und Pools für elastische Datenbanken gelten nur die Masterdatenbank und die `tempdb`-Datenbank. Weitere Informationen finden Sie unter [Was ist ein Azure SQL-Datenbank-Server](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Eine Erläuterung von `tempdb` im Kontext von Azure SQL-Datenbank-Singletons und Pools für elastische Datenbanken finden Sie unter [tempdb-Datenbank in Azure SQL-Datenbank-Singletons und Pools für elastische Datenbanken](#tempdb-database-in-sql-database). Für Azure SQL Managed Instance gelten alle Systemdatenbanken.
 
 - **Versionsspeicher**, die aus einer Auflistung von Datenseiten bestehen, in denen die Datenzeilen enthalten sind, die zur Unterstützung der Funktionen, die die Zeilenversionsverwaltung verwenden, erforderlich ist. Es gibt zwei Versionsspeicher: ein allgemeiner Versionsspeicher und ein Onlineindexerstellungs-Versionsspeicher. Die Versionsspeicher beinhalten Folgendes:
   - Zeilenversionen, die von Datenänderungstransaktionen in einer Datenbank generiert werden, die READ COMMITTED mit Zeilenversionsverwaltung oder Transaktionen der Momentaufnahmeisolation verwendet.  

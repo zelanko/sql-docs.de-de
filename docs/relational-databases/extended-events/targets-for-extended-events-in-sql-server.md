@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4bf57fb080c7f634256364e9ce1ac0d601ad589
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 706aa149b51b2cc56b524ad39db0e1453324bd00
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756838"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863360"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Ziele für erweiterte Ereignisse in SQL Server
 
@@ -156,7 +156,7 @@ Das Ziel **event_file** schreibt Ereignissitzungsausgaben vom Puffer in eine Dat
 > [!NOTE]
 > Azure SQL-Datenbank unterstützt nur das Speichern von `xel`-Dateien in Azure-Blobspeicher. 
 >
-> Ein Codebeispiel für **event_file** speziell für SQL-Datenbank (und die verwaltete SQL-Datenbank-Instanz) finden Sie unter [Code des Ereignisdateiziels für erweiterte Ereignisse in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
+> Ein Codebeispiel für **event_file** speziell für SQL-Datenbank (und SQL Managed Instance) finden Sie unter [Code des Ereignisdateiziels für erweiterte Ereignisse in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 
 ::: moniker-end
 

@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4690f82c1ae731a25edce6dbe0b36d7b31d448f2
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f87466ebfccaaf69b970386865af68275e83e10
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392828"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046595"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -89,7 +89,7 @@ Erfordert die **ALTER ANY CREDENTIAL**-Berechtigung.
 
 ## <a name="examples"></a>Beispiele
 
-### <a name="a-basic-example"></a>A. Elementares Beispiel
+### <a name="a-creating-a-credential-for-windows-identity"></a>A. Erstellen von Anmeldeinformationen für die Windows-Identität
 
 Im folgenden Beispiel werden die Anmeldeinformationen namens `AlterEgo` erstellt. Die Anmeldeinformationen enthalten den Windows-Benutzer `Mary5` und ein Kennwort.
 
@@ -145,7 +145,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D: Erstellen von Anmeldeinformationen mithilfe eines SAS-Token
 
-**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658) und verwaltete Instanzen in Azure SQL-Datenbank.
+**Gilt für:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658) und für Azure SQL Managed Instance
 
 Das folgende Beispiel erstellt SAS-Anmeldinformationen mit dem SAS-Token. Ein Tutorial zum Erstellen einer gespeicherten Zugriffsrichtlinie und einer SAS für einen Azure-Container und das anschließende Erstellen von Anmeldeinformationen mit dieser SAS finden Sie unter [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).
 
@@ -159,6 +159,15 @@ USE master
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.
     WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.
     , SECRET = 'sharedaccesssignature' -- this is the shared access signature token
+GO
+```
+
+### <a name="e-creating-a-credential-for-managed-identity"></a>E. Erstellen von Anmeldeinformationen für eine verwaltete Identität
+
+Im folgenden Beispiel werden die Anmeldeinformationen erstellt, die die verwaltete Identität von Azure SQL oder Azure Synapse darstellt. In diesem Falls ist kein Kennwort und kein Geheimnis anwendbar.
+
+```sql
+CREATE CREDENTIAL ServiceIdentity WITH IDENTITY = 'Managed Identity';
 GO
 ```
 

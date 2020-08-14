@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: e6b38724e2cb8fde7fe38a544c3f87fba3cebd45
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 8a415678b777ba6142bab01bced7d7da908b2204
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352417"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051109"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>Machine-Learning-Erweiterung (Vorschauversion) für Azure Data Studio
 
@@ -30,6 +30,23 @@ Die folgenden erforderlichen Komponenten müssen auf dem Computer installiert se
 - [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) für Windows, macOS oder Linux
 
 - [R 3.5](https://www.r-project.org/) (optional). Andere Versionen als 3.5 werden zurzeit nicht unterstützt. Nachdem Sie R 3.5 installiert haben, müssen Sie R aktivieren und unter [Erweiterungseinstellungen](#settings) den lokalen Pfad zu einer R-Installation angeben. Dies ist nur erforderlich, wenn Sie in Ihrer Datenbank R-Pakete verwalten möchten.
+
+### <a name="trouble-installing-python-3-from-within-ads"></a>Haben Sie Probleme mit der Installation von Python 3 in ADS?
+Wenn Sie versuchen, Python 3 zu installieren, aber eine Fehlermeldung bezüglich TLS/SSL erhalten, fügen Sie die folgenden zwei optionalen Komponenten hinzu:
+
+_Beispielfehler:_
+```
+$: ~/0.0.1/bin/python3 -m pip install --user "jupyter>=1.0.0" --extra-index-url https://prose-python-packages.azurewebsites.net
+WARNING: pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+Looking in indexes: https://pypi.org/simple, https://prose-python-packages.azurewebsites.net
+Requirement already satisfied: jupyter
+```
+
+_Installieren Sie folgende Komponenten:_
+
+- [Homebrew](https://brew.sh) (optional): Installieren Sie Homebrew, und führen Sie dann `brew update` über die Befehlszeile aus.
+
+- *openssl* (optional): Führen Sie anschließend `brew install openssl` aus.
 
 ## <a name="install-the-extension"></a>Installieren der Erweiterung
 

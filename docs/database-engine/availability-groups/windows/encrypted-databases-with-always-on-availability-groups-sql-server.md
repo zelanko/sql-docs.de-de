@@ -1,6 +1,6 @@
 ---
 title: Hinzufügen einer verschlüsselten Datenbank zu einer Verfügbarkeitsgruppe
-description: In diesem Artikel wird beschrieben, wie Sie eine verschlüsselte (oder vor Kurzem entschlüsselte) Datenbank zu einer Always On-Verfügbarkeitsgruppe hinzufügen.
+description: In diesem Artikel werden die Schritte dafür beschrieben, wie Sie eine verschlüsselte (oder vor Kurzem entschlüsselte) Datenbank zu einer AlwaysOn-Verfügbarkeitsgruppe hinzufügen.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 721ac66e8611615b6e2acc54d8fd3b41ff1eaeb8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aed6a2e94b553bf6a32d46d45ee1fb7af877addf
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894456"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565579"
 ---
 # <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>Hinzufügen einer verschlüsselten Datenbank zu einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

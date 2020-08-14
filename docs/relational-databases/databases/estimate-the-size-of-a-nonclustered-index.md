@@ -21,12 +21,12 @@ ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00132b65b2dc5e21fbc57c376ac005d968871f62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7f5c8f910d4fd9d5af81789a62eea86d609ec7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85743330"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864501"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Schätzen der Größe eines nicht gruppierten Index
 
@@ -176,13 +176,13 @@ ms.locfileid: "85743330"
   
 4.  Berechnen Sie die Größe der Daten variabler Länge:  
   
-     Wenn der Indexschlüssel Spalten variabler Länge enthält (einschließlich erforderlicher Gruppierungsschlüsselspalten wie zuvor in Schritt 2.2 beschrieben), müssen Sie ermitteln, wie viel Speicherplatz zum Speichern der Spalten innerhalb der Indexzeile verwendet wird:  
+     Wenn Spalten mit variabler Länge (Schlüsselspalten oder eingeschlossene Spalten) vorliegen, einschließlich erforderlicher Gruppierungsschlüsselspalten (siehe Schritt 2.2), müssen Sie ermitteln, wie viel Speicherplatz zum Speichern der Spalten in der Indexzeile verwendet wird:  
   
      ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
   
      Die zu ***Max_Var_Key_Size*** hinzugefügten Bytes dienen der Nachverfolgung jeder einzelnen Variablenspalte. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 Prozent gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten variabler Länge verwendet wird, können Sie den ***Max_Var_Leaf_Size*** -Wert mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
   
-     Wenn keine Spalten variabler Länge vorhanden sind, legen Sie ***Variable_Leaf_Size*** auf 0 fest.  
+     Wenn keine Spalten mit variabler Länge (Schlüsselspalten oder eingeschlossene Spalten) vorliegen, legen Sie für ***Variable_Leaf_Size*** den Wert „0“ (null) fest.  
   
 5.  Berechnen Sie die Länge der Indexzeile:  
   

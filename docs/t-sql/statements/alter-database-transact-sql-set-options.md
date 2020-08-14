@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: e06355d91e73430c203711515fb9501caebfd291
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: ea604f3144f371047c00171947c0b7ceaeaa602f
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331991"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988387"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -56,10 +56,10 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL-Datenbank](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -1465,10 +1465,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken \*_** &nbsp;
+        **_\* SQL-Datenbank \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -1477,7 +1477,7 @@ SET QUERY_STORE = ON
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL-Datenbank Singleton/Pool für elastische Datenbanken
+## <a name="sql-database"></a>SQL-Datenbank
 
 Kompatibilitätsgrade sind `SET`-Optionen, die jedoch unter [ALTER DATABASE-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) beschrieben werden.
 
@@ -1831,7 +1831,7 @@ Sie müssen über exklusiven Zugriff auf die Datenbank verfügen, um diesen Stat
 Steuert den Benutzerzugriff auf die Datenbank.
 
 RESTRICTED_USER     
-Ermöglicht nur Mitgliedern der festen Datenbankrolle `db_owner` und der festen Serverrollen `dbcreator` und `sysadmin` eine Verbindung mit der Datenbank, begrenzt jedoch nicht deren Anzahl. Alle Verbindungen zur Datenbank werden in dem durch die Beendigungsklausel der ALTER DATABASE-Anweisung angegebenen Zeitraum getrennt. Sobald die Datenbank in den Status RESTRICTED_USER gewechselt hat, werden Verbindungsversuche von nicht qualifizierten Benutzern abgelehnt. **RESTRICTED_USER** kann nicht mit einer verwalteten SQL-Datenbankinstanz geändert werden.
+Ermöglicht nur Mitgliedern der festen Datenbankrolle `db_owner` und der festen Serverrollen `dbcreator` und `sysadmin` eine Verbindung mit der Datenbank, begrenzt jedoch nicht deren Anzahl. Alle Verbindungen zur Datenbank werden in dem durch die Beendigungsklausel der ALTER DATABASE-Anweisung angegebenen Zeitraum getrennt. Sobald die Datenbank in den Status RESTRICTED_USER gewechselt hat, werden Verbindungsversuche von nicht qualifizierten Benutzern abgelehnt. **RESTRICTED_USER** kann nicht mit SQL Managed Instance geändert werden.
 
 MULTI_USER     
 Alle Benutzer, die über die entsprechenden Berechtigungen für die Verbindung mit der Datenbank verfügen, sind zugelassen.
@@ -2357,10 +2357,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL-Datenbank](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />verwaltete Instanz \*_** &nbsp;
+        **_\*SQL-Datenbank<br />verwaltete Instanz\*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -2369,7 +2369,7 @@ SET QUERY_STORE = ON
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL-Datenbank – Verwaltete Instanz
+## <a name="azure-sql-managed-instance"></a>Verwaltete Azure SQL-Instanz
 
 Kompatibilitätsgrade sind `SET`-Optionen, die jedoch unter [ALTER DATABASE-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) beschrieben werden.
 
@@ -2660,7 +2660,7 @@ Sie müssen über exklusiven Zugriff auf die Datenbank verfügen, um diesen Stat
 Steuert den Benutzerzugriff auf die Datenbank.
 
 RESTRICTED_USER     
-Ermöglicht nur Mitgliedern der festen Datenbankrolle `db_owner` und der festen Serverrollen `dbcreator` und `sysadmin` eine Verbindung mit der Datenbank, begrenzt jedoch nicht deren Anzahl. Alle Verbindungen zur Datenbank werden in dem durch die Beendigungsklausel der ALTER DATABASE-Anweisung angegebenen Zeitraum getrennt. Sobald die Datenbank in den Status RESTRICTED_USER gewechselt hat, werden Verbindungsversuche von nicht qualifizierten Benutzern abgelehnt. **RESTRICTED_USER** kann nicht mit einer verwalteten SQL-Datenbankinstanz geändert werden.
+Ermöglicht nur Mitgliedern der festen Datenbankrolle `db_owner` und der festen Serverrollen `dbcreator` und `sysadmin` eine Verbindung mit der Datenbank, begrenzt jedoch nicht deren Anzahl. Alle Verbindungen zur Datenbank werden in dem durch die Beendigungsklausel der ALTER DATABASE-Anweisung angegebenen Zeitraum getrennt. Sobald die Datenbank in den Status RESTRICTED_USER gewechselt hat, werden Verbindungsversuche von nicht qualifizierten Benutzern abgelehnt. **RESTRICTED_USER** kann nicht mit SQL Managed Instance geändert werden.
 
 MULTI_USER     
 Alle Benutzer, die über die entsprechenden Berechtigungen für die Verbindung mit der Datenbank verfügen, sind zugelassen.
@@ -3151,10 +3151,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL-Datenbank](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

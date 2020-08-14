@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 117620c170b183b12d06eb717cfc1bb4b2dc559c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f72635a68b0b47a29151d45d2bf1e32e85c1f1bc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77173558"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823575"
 ---
 # <a name="install-polybase-on-linux"></a>Installieren von PolyBase unter Linux
 
@@ -157,7 +157,7 @@ sudo systemctl restart mssql-server
 
 PolyBase kann unter Linux auf die folgenden Datenquellen zugreifen. Informationen zum Erstellen einer externen Tabelle aus diesen Quellen, wenn PolyBase aktiviert ist, finden Sie unter den folgenden Links: 
 
-- [SQL Server (& Azure SQL-Datenbank, Azure SQL Data Warehouse)](../../relational-databases/polybase/polybase-configure-sql-server.md)
+- [SQL Server (sowie SQL Database und Azure SQL Data Warehouse)](../../relational-databases/polybase/polybase-configure-sql-server.md)
 - [Oracle](../../relational-databases/polybase/polybase-configure-oracle.md)
 - [Teradata](../../relational-databases/polybase/polybase-configure-teradata.md)
 - [MongoDB (& Cosmos DB)](../../relational-databases/polybase/polybase-configure-mongodb.md)

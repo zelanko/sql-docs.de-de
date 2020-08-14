@@ -41,7 +41,7 @@ IMPORTANCE hat einen lokalen Bezug zum Ressourcenpool; Arbeitsauslastungsgruppen
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
 Gibt die Höchstmenge an Arbeitsspeicher an, die eine einzelne Anforderung vom Pool in Anspruch nehmen kann. *value* entspricht einem Prozentwert, der relativ zur Ressourcenpoolgröße ist, die mit MAX_MEMORY_PERCENT festgelegt wird.
 
-*value* entspricht bis [!INCLUDE[ssSQL17](sssql17-md.md)] einem Integer und ab [!INCLUDE[sql-server-2019](sssqlv15-md.md)] sowie in verwalteten [!INCLUDE[ssSDSfull](sssdsfull-md.md)]-Instanzen einer Gleitkommazahl. Der Standardwert ist 25. Der zulässige Bereich für *value* liegt zwischen 1 und 100.
+*value* ist bis [!INCLUDE[ssSQL17](sssql17-md.md)] ein Integer und ab [!INCLUDE[sql-server-2019](sssqlv15-md.md)] und in Azure SQL Managed Instance eine Gleitkommazahl. Der Standardwert ist 25. Der zulässige Bereich für *value* liegt zwischen 1 und 100.
 
 > [!IMPORTANT]  
 > Die angegebene Menge bezieht sich nur auf den für die Abfrageausführung gewährten Arbeitsspeicher.

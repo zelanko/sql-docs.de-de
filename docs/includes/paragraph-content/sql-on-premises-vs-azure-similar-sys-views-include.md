@@ -8,7 +8,7 @@
 Einige Transact-SQL-Codebeispiele, die für lokale SQL Server-Instanzen geschrieben wurden, müssen leicht abgeändert werden, damit sie in Azure SQL-Datenbank in der Cloud ausgeführt werden können. Eine Kategorie solcher Codebeispiele umfasst Systemsichten, deren Namenspräfixe sich zwischen den beiden Datenbanksystemen leicht unterscheiden:
 
 - **server\_** &nbsp; - &nbsp; _Präfix für lokale Instanzen_
-- **database\_** &nbsp; - &nbsp; _Präfix für den Azure SQL DB-Dienst in der Cloud_
+- **database\_** &nbsp; - &nbsp; _Präfix für Azure SQL-Datenbank_
 
 Zur Veranschaulichung werden in der folgenden Tabelle zwei Teilmengen der Systemsichten aufgelistet und verglichen. Aus Platzgründen sind diese Teilmengen auf Sichtnamen beschränkt, die auch die Zeichenfolge `_event` enthalten. Die Namenspräfixe der Teilmengen unterscheiden sich, da sie aus zwei unterschiedlichen Datenbanksystemen stammen.
 

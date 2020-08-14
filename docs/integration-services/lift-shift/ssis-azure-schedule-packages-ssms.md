@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 194ad3581252d5baaca6d5bfaf4c8c2272efc610
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a69ebabab91a9c257e96afb312e5498217bb967
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915304"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864607"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Planen der Ausführung von in Azure bereitgestellten SSIS-Paketen mit SSMS
 
@@ -23,7 +23,7 @@ ms.locfileid: "86915304"
 
 
 
-Sie können SSMS (SQL Server Management Studio) zum Planen von SSIS-Paketen verwenden, die in Azure SQL-Datenbank bereitgestellt sind. Lokale SQL Server-Instanzen und verwaltete SQL-Datenbank-Instanzen verfügen über den SQL Server-Agent bzw. den Agent für verwaltete Instanzen als erstklassigen SSIS-Auftragsplaner. SQL-Datenbank hat dagegen keinen integrierten erstklassigen SSIS-Auftragsplaner. Das in diesem Artikel beschriebene SSMS-Feature bietet eine vertraute Benutzeroberfläche, die SQL Server-Agent sehr ähnlich ist, zum Planen von Paketen, die in SQL-Datenbank bereitgestellt werden.
+Sie können SSMS (SQL Server Management Studio) zum Planen von SSIS-Paketen verwenden, die in Azure SQL-Datenbank bereitgestellt sind. Lokale SQL Server-Instanzen und SQL Managed Instance verfügen jeweils über einen SQL Server-Agent und einen Managed Instance-Agent, die als erstklassige SSIS-Auftragsplaner fungieren. SQL-Datenbank hat dagegen keinen integrierten erstklassigen SSIS-Auftragsplaner. Das in diesem Artikel beschriebene SSMS-Feature bietet eine vertraute Benutzeroberfläche, die SQL Server-Agent sehr ähnlich ist, zum Planen von Paketen, die in SQL-Datenbank bereitgestellt werden.
 
 Wenn Sie den SSIS-Katalog (`SSISDB`) mit SQL-Datenbank hosten, können Sie dieses SSMS-Feature verwenden, um die Data Factory-Pipelines, -Aktivitäten und -Trigger zu generieren, die zum Planen von SSIS-Paketen erforderlich sind. Später können Sie diese Objekte optional in Data Factory bearbeiten und erweitern.
 

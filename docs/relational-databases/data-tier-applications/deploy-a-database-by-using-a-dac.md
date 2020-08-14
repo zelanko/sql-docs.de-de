@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 11994d1dc3ec931f729c2739a107848464ed7f8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93398b38e2fff73e63013fd0bfc1c4bedc31a43
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781691"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988764"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Bereitstellen einer Datenbank mit DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Verwenden Sie den Assistenten zum **Bereitstellen von Datenbanken auf SQL Azure** , um eine Datenbank zwischen einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz und einem [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] -Server bzw. zwischen zwei [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]-Servern bereitzustellen.  
+  Verwenden Sie den Assistenten zum **Bereitstellen einer Datenbank in Microsoft Azure SQL-Datenbank**, um eine Datenbank zwischen einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] und einem [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]-Server oder zwischen zwei [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]-Servern bereitzustellen.  
   
 ##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> Vorbereitungen  
  Der Assistent verwendet die BACPAC-Archivdatei einer Datenebenenanwendung (DAC), um sowohl die Daten als auch die Definitionen von Datenbankobjekten bereitzustellen. Er führt einen DAC-Export von der Quelldatenbank und einen DAC-Import zum Ziel aus.  
@@ -68,7 +68,7 @@ ms.locfileid: "85781691"
   
 3.  Erweitern Sie den Knoten **Datenbanken** .  
   
-4.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie bereitstellen möchten, klicken Sie auf **Tasks** und dann auf **Datenbank in SQL Azure bereitstellen**.  
+4.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie bereitstellen möchten, klicken Sie auf **Tasks**, und wählen Sie dann **Datenbank für Microsoft Azure SQL-Datenbank bereitstellen** aus.  
   
 5.  Abschließen der Dialogfelder des Assistenten  
   

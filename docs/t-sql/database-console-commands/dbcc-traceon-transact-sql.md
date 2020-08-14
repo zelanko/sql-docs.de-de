@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: c1bf9d7182e7547a69e7b5cd634c07ff2130c9cc
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e3058e60f1ff0ed5ab519cf1ef5873df27faa075
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485555"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877860"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ Mithilfe von Ablaufverfolgungsflags können Sie die Funktionsweise von [!INCLUDE
   
 Führen Sie nach der Aktivierung eines Ablaufverfolgungsflags, das Abfragepläne beeinflusst, `DBCC FREEPROCCACHE;` aus, um zwischengespeicherte Pläne durch das neue den Plan beeinflussende Verhalten erneut zu kompilieren.
 
-Die verwaltete Azure SQL-Datenbank-Instanz unterstützt die folgenden globalen Ablaufverfolgungsflags: 460,2301,2389,2390,2453,2467,7471,8207,9389,10316 und 11024
+Azure SQL Managed Instance unterstützt die folgenden globalen Ablaufverfolgungsflags: 460,2301,2389,2390,2453,2467,7471,8207,9389,10316 und 11024
 
 ## <a name="result-sets"></a>Resultsets  
  DBCC TRACEON gibt das folgende Resultset zurück (Meldung):  

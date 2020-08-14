@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1409125ca324117a3b7bba1792ff0a3f3361fe05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768072"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988745"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85768072"
 - Kunden, die über einen Proxyserver eine Sicherung in Seitenblobs durchführen müssen, müssen „backuptourl.exe“ verwenden. 
 
 
-Die Sicherung einer großen Datenbank im Blobspeicher unterliegt den Einschränkungen, die in [Verwaltete Instanz, T-SQL-Unterschiede, Einschränkungen und bekannte Probleme](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup) aufgeführt sind.
+Die Sicherung einer großen Datenbank im Blobspeicher unterliegt den Einschränkungen, die unter [Unterschiede bei T-SQL zwischen SQL Server und Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup) aufgeführt werden.
 
  Wenn die Datenbank zu groß ist, haben Sie die Möglichkeit:
 - Sicherungskomprimierung zu verwenden  oder

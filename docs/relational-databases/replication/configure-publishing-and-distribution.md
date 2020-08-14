@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773999"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863353"
 ---
 # <a name="configure-publishing-and-distribution"></a>Konfigurieren der Veröffentlichung und der Verteilung
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ Die Replikationsveröffentlichung und -verteilung kann mit gespeicherten Replika
 
 2. Führen Sie auf dem Verteiler, der zugleich der Verleger ist, [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) aus, und geben Sie dabei die UNC-Freigabe, die als Standardmomentaufnahmeordner verwendet werden soll, für `@working_directory` an.
 
-   Verwenden Sie für einen Verteiler auf einer verwalteten SQL-Datenbank-Instanz ein Azure-Speicherkonto für `@working_directory` und den Speicherzugriffsschlüssel für `@storage_connection_string`. 
+   Verwenden Sie ein Azure-Speicherkonto für `@working_directory` und den Speicherzugriffsschlüssel für `@storage_connection_string` als Verteiler in SQL Managed Instance. 
 
 3. Führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) auf dem Verleger aus. Geben Sie die zu veröffentlichende Datenbank für `@dbname`, den Replikationstyp für `@optname` und den Wert `true` für `@value` an.
 
@@ -80,7 +80,7 @@ Die Replikationsveröffentlichung und -verteilung kann mit gespeicherten Replika
 
 2. Führen Sie auf dem Verteiler [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) aus, und geben Sie dabei die UNC-Freigabe, die als Standardmomentaufnahmeordner verwendet werden soll, für `@working_directory` an. Wenn der Verteiler zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet, müssen Sie zudem den Wert `0` für `@security_mode` und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldeinformationen für `@login` und `@password` angeben.
 
-   Verwenden Sie für einen Verteiler auf einer verwalteten SQL-Datenbank-Instanz ein Azure-Speicherkonto für `@working_directory` und den Speicherzugriffsschlüssel für `@storage_connection_string`. 
+   Verwenden Sie ein Azure-Speicherkonto für `@working_directory` und den Speicherzugriffsschlüssel für `@storage_connection_string` als Verteiler in SQL Managed Instance. 
 
 3. Führen Sie auf dem Verleger für die master-Datenbank die Prozedur [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) aus. Geben Sie das starke Kennwort an, das in Schritt 1 für `@password` verwendet wurde. Dieses Kennwort wird vom Verleger verwendet, wenn er eine Verbindung zum Verteiler herstellt.
 

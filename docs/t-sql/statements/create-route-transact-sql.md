@@ -27,12 +27,12 @@ ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f8d83f950ef19df467bc0bf63203c2b610152045
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c57c5a76818eabcc956a197b52b275a289576173
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633953"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823515"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -84,7 +84,7 @@ WHERE database_id = DB_ID()
  Gibt die Zeitspanne in Sekunden an, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Route in der Routingtabelle aufbewahrt. Am Ende ihrer Lebensdauer läuft die Route ab, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Route nicht bei der Auswahl einer Route für eine neue Konversation. Wird diese Klausel ausgelassen, wird für *route_lifetime* der Wert NULL festgelegt, und die Route läuft nie ab.  
   
  ADDRESS **='** _next\_hop\_address_ **'**  
-Für die verwaltete SQL-Datenbank-Instanz muss `ADDRESS` lokal sein. 
+Für SQL Managed Instance muss `ADDRESS` lokal sein. 
 
 Gibt die Netzwerkadresse für diese Route an. *next_hop_address* gibt eine TCP/IP-Adresse mit folgendem Format an:  
   

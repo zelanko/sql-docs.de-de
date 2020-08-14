@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be5b8f28ec06b48f0f35d8d246ad12ccbc3c8292
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7c57cfe67bc8407cd02f970ebcf9ddbc92187071
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86482081"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862968"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -793,7 +793,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **Gilt für:** [!INCLUDE[ssNoV
 
 - Geben Sie `PAUSED` an, um die Datenmigration zu pausieren oder nach hinten zu verschieben. Weitere Informationen finden Sie unter [Anhalten und Fortsetzen der Datenmigration – Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
-MEMORY_OPTIMIZED **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) Die verwaltete [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Instanz unterstützt keine arbeitsspeicheroptimierten Tabellen.
+MEMORY_OPTIMIZED **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) Azure SQL Managed Instance unterstützt speicheroptimierte Tabellen nicht.
 
 Der Wert ON gibt an, dass die Tabelle arbeitsspeicheroptimiert ist. Speicheroptimierte Tabellen sind Teil des Features „In-Memory OLTP“, das verwendet wird, um die Leistung der Transaktionsverarbeitung zu optimieren. Informationen zu den ersten Schritten mit In-Memory-OLTP finden Sie unter [Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Ausführliche Informationen zu speicheroptimierten Tabellen finden Sie unter [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).
 

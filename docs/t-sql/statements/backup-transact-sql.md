@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 568a3824405798cf7fc23f9dc0b28f6b43d0fff9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332509"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864411"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -941,7 +941,7 @@ WHERE r.command LIKE 'BACKUP%'
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />verwaltete Instanz \*_** &nbsp;
+        **_\*SQL-Datenbank<br />verwaltete Instanz\*_** &nbsp;
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -950,9 +950,9 @@ WHERE r.command LIKE 'BACKUP%'
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL-Datenbank – Verwaltete Instanz
+## <a name="azure-sql-managed-instance"></a>Verwaltete Azure SQL-Instanz
 
-Sichert eine SQL-Datenbank, die sich in einer verwalteten Azure SQL-Datenbank-Instanz befindet bzw. gehostet wird. Die [verwaltete Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) wird automatisch gesichert und ermöglicht Benutzern, vollständige `COPY_ONLY`-Datensicherungen zu erstellen. Differenzielle Sicherungen, Protokollsicherungen und Dateimomentaufnahmesicherungen werden nicht unterstützt.
+Dieser Dienst sichert eine SQL-Datenbank, die sich in Azure SQL Managed Instance befindet bzw. gehostet wird. SQL [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) verfügt über automatische Sicherungen und ermöglicht es Benutzern, vollständige `COPY_ONLY`-Sicherungen von Datenbanken zu erstellen. Differenzielle Sicherungen, Protokollsicherungen und Dateimomentaufnahmesicherungen werden nicht unterstützt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -990,12 +990,12 @@ BACKUP DATABASE { database_name | @database_name_var }
 
 ## <a name="arguments"></a>Argumente
 
-DATABASE Gibt eine vollständige Datenbanksicherung an. Während einer Datenbanksicherung werden von der verwalteten Instanz auch die erforderlichen Teile des Transaktionsprotokolls gesichert, um eine konsistente Datenbank zu erzeugen, wenn die Sicherung wiederhergestellt wird.
+DATABASE Gibt eine vollständige Datenbanksicherung an. Während einer Datenbanksicherung sichert Azure SQL Managed Instance einen ausreichenden Anteil des Transaktionsprotokolls, um eine konsistente Datenbank zu erstellen, wenn die Sicherung wiederhergestellt wird.
 
 > [!IMPORTANT]
-> Eine Datenbanksicherung, die auf einer verwalteten Instanz erstellt wird, kann nur auf einer anderen verwalteten Instanz wiederhergestellt werden. Sie kann nicht auf einer lokalen SQL Server-Instanz wiederhergestellt werden (genauso wenig, wie eine Sicherung einer SQL Server 2016-Datenbank auf einer SQL Server 2012-Instanz wiederhergestellt werden kann).
+> Eine Datenbanksicherung, die auf einer verwalteten Instanz erstellt wird, kann nur auf einer anderen Instanz von Azure SQL Managed Instance wiederhergestellt werden. Sie kann nicht auf einer lokalen SQL Server-Instanz wiederhergestellt werden (genauso wenig, wie eine Sicherung einer SQL Server 2016-Datenbank auf einer SQL Server 2012-Instanz wiederhergestellt werden kann).
 
-Wenn Sie eine von BACKUP DATABASE (eine *Datensicherung*) erstellte Sicherung wiederherstellen, wird die komplette Sicherung wiederhergestellt. Informationen zur Wiederherstellung automatischer Sicherungen der verwalteten Azure SQL-Datenbank-Instanz finden Sie unter [Wiederherstellen einer Datenbank in eine verwaltete Instanz](/azure/sql-database/sql-database-managed-instance-get-started-restore).
+Wenn Sie eine von BACKUP DATABASE (eine *Datensicherung*) erstellte Sicherung wiederherstellen, wird die komplette Sicherung wiederhergestellt. Informationen zum Wiederherstellen der automatischen Sicherungen von SQL Managed Instance finden Sie unter [Wiederherstellen einer Datenbank in Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 
 { *database_name* |  **@** _database\_name\_var_ } ist die Datenbank, aus der die vollständige Datenbank gesichert wird. Bei Angabe in Form einer Variablen ( **@** _database\_name\_var_) kann dieser Name entweder als Zeichenfolgenkonstante ( **@** _database\_name\_var_ **=** _database name_) oder als Variable eines Zeichenfolgen-Datentyps (mit Ausnahme der Datentypen **ntext** oder **text**) angegeben werden.
 
@@ -1097,7 +1097,7 @@ STATS [ **=** _percentage_ ] Zeigt nach jedem abgeschlossenen *Prozentsatz* eine
 
 Mit der Option STATS wird der Prozentsatz gemeldet, der beim Erreichen des Schwellenwertes für das nächste Meldungsintervall abgeschlossen ist. Bei dem angegebenen Prozentsatz handelt es sich um einen ungefähren Wert. Wird beispielsweise STATS=10 festgelegt und sind 40 Prozent des Vorgangs abgeschlossen, dann zeigt die Option u. U. 43 Prozent an. Bei größeren Sicherungssätzen stellt dies kein Problem dar, da sich der Wert für den abgeschlossenen Prozentsatz zwischen abgeschlossenen E/A-Aufrufen nur sehr langsam verändert.
 
-## <a name="limitations-for-sql-database-managed-instance"></a>Einschränkungen bei verwalteten SQL-Datenbank-Instanzen
+## <a name="limitations-for-sql-managed-instance"></a>Einschränkungen von SQL Managed Instance
 
 Die max. Streifengröße bei der Speicherung beträgt 195 GB (maximale Blob-Größe). Erhöhen Sie die Streifenanzahl im Backup-Befehl, um die einzelne Streifengröße zu reduzieren und innerhalb dieser Einschränkungen zu bleiben.
 
@@ -1131,7 +1131,7 @@ WITH STATS = 5, COPY_ONLY;
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
@@ -1208,7 +1208,7 @@ Beispiel:
 
 Erfordert die **BACKUP DATABASE**-Berechtigung oder die Mitgliedschaft in der festen Datenbankrolle **db_backupoperator**. Die Masterdatenbank kann nur von einem normalen Benutzer gesichert werden, der der festen Datenbankrolle **Db_backupoperator** hinzugefügt wurde. Die Masterdatenbank kann nur durch **sa**, den Fabricadministrator, oder Mitglieder der festen Serverrolle **Sysadmin** gesichert werden.
 
-Erfordert ein Windows-Konto mit der Berechtigung, auf das Sicherungsverzeichnis zuzugreifen, es zu erstellen und auf es zu schreiben. Sie müssen außerdem den Windows-Kontonamen und das Kennwort in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] speichern. Zum Hinzufügen dieser Netzwerk-Anmeldeinformationen [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verwenden Sie die gespeicherte Prozedur [sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
+Erfordert ein Windows-Konto mit der Berechtigung, auf das Sicherungsverzeichnis zuzugreifen, es zu erstellen und auf es zu schreiben. Sie müssen außerdem den Windows-Kontonamen und das Kennwort in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] speichern. Verwenden Sie die gespeicherte Prozedur [sp_pdw_add_network_credentials – SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md), um diese Netzwerkanmeldeinformationen zu [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] hinzuzufügen.
 
 Weitere Informationen zum Verwalten von Anmeldeinformationen in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] finden Sie im Abschnitt [Sicherheit](#Security).
 
@@ -1359,6 +1359,6 @@ WITH (
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[RESTORE DATABASE - Parallel Data Warehouse](../../t-sql/statements/restore-statements-transact-sql.md)
+[RESTORE DATABASE (Parallel Data Warehouse)](../../t-sql/statements/restore-statements-transact-sql.md)
 
 ::: moniker-end

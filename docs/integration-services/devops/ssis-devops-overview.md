@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472476"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823482"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>DevOps-Tools für SQL Server Integration Services (SSIS)
 
@@ -95,7 +95,7 @@ Typ des Ziels. Zurzeit unterstützt der SSIS-Bereitstellungstask die folgenden b
 
 #### <a name="destination-server"></a>Zielserver
 
-Name des SQL Server-Zielservers. Dabei kann es sich um den Namen einer lokalen SQL Server-Instanz, Azure SQL-Datenbank oder verwalteten Azure SQL-Datenbank-Instanz handeln. Diese Eigenschaft ist nur sichtbar, wenn der Zieltyp „SSISDB“ lautet.
+Name des SQL Server-Zielservers. Dabei kann es sich um den Namen einer lokalen Instanz von SQL Server, Azure SQL-Datenbank oder Azure SQL Managed Instance handeln. Diese Eigenschaft ist nur sichtbar, wenn der Zieltyp „SSISDB“ lautet.
 
 #### <a name="destination-path"></a>Zielpfad
 
@@ -184,7 +184,7 @@ Hiermit legen Sie fest, ob für die von diesem Task vorgenommene Konfiguration b
 
 #### <a name="target-server"></a>Zielserver
 
-Der Name des SQL Server-Zielservers. Dabei kann es sich um den Namen einer lokalen SQL Server-Instanz, Azure SQL-Datenbank oder verwalteten Azure SQL-Datenbank-Instanz handeln.
+Der Name des SQL Server-Zielservers. Dabei kann es sich um den Namen einer lokalen Instanz von SQL Server, Azure SQL-Datenbank oder Azure SQL Managed Instance handeln.
 
 #### <a name="authentication-type"></a>Authentifizierungsart
 

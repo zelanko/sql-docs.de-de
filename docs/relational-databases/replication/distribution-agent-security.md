@@ -15,12 +15,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e664b1d96683d33ea9ffdc7cf38a5de0fe72a84e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3322ef185178ab2254066281d9f6f6a6c85611da
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111055"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862966"
 ---
 # <a name="distribution-agent-security"></a>Sicherheit für den Verteilungs-Agent
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
@@ -161,7 +161,7 @@ Persist Security Info=False;Connection Pooling=True;
  Die meisten Optionen in der Zeichenfolge hängen von dem DB2-Server ab, den Sie konfigurieren. Allerdings sollte die Option **Process Binary as Character** immer auf **False**festgelegt sein. Zur Identifizierung der Abonnementdatenbank ist ein Wert für die Option **Anfangskatalog** erforderlich. Weitere Informationen finden Sie unter [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Transaktionsreplikation mit Azure SQL-Datenbank](/azure/sql-database/sql-database-managed-instance-transactional-replication) [Konfigurieren der Replikation für eine verwaltete Instanz](/azure/sql-database/replication-with-sql-database-managed-instance)
+ [Transaktionsreplikation mit Azure SQL-Datenbank](/azure/sql-database/sql-database-managed-instance-transactional-replication) [Konfigurieren der Replikation für Azure SQL Managed Instance](/azure/sql-database/replication-with-sql-database-managed-instance)
 ::: moniker-end
 
 

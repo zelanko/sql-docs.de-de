@@ -10,19 +10,19 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 1276720eb7dcdb83421732164490eeb58ba89c30
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8b3e01fbded713f59832c30eb8cd9d8149e5b469
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915340"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864597"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migration von SQL Server Integration Services-Workloads in die Cloud per Lift & Shift
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-Sie können Ihre SQL Server Integration Services-Projekte, -Pakete und -Workloads (SSIS) nun in die Azure-Cloud verschieben. SSIS-Projekte und -Pakete in der SSIS-Katalogdatenbank (SSISDB) können Sie in Azure SQL-Datenbank oder einer verwalteten Azure SQL-Datenbank-Instanz mit gängigen Tools wie SQL Server Management Studio (SSMS) bereitstellen, ausführen und verwalten.
+Sie können Ihre SQL Server Integration Services-Projekte, -Pakete und -Workloads (SSIS) nun in die Azure-Cloud verschieben. SSIS-Projekte und -Pakete in der SSIS-Katalogdatenbank (SSISDB) können Sie in Azure SQL-Datenbank oder SQL Managed Instance mit gängigen Tools wie SQL Server Management Studio (SSMS) bereitstellen, ausführen und verwalten.
 
 ## <a name="benefits"></a>Vorteile
 Das Verschieben Ihrer SSIS-Workload in Azure hat folgende potenzielle Vorteile:
@@ -38,7 +38,7 @@ Der wichtigste Unterschied ist die Trennung des Speichers von Runtime. Azure Dat
 | Position | Storage | Typ | Skalierbarkeit |
 |---|---|---|---|
 | Lokal | SQL Server | Von SQL Server gehostete SSIS-Runtime | SSIS Scale Out (in SQL Server 2017 und höher)<br/><br/>Benutzerdefinierte Projektmappen (in früheren Versionen von SQL Server) |
-| In Azure | SQL-Datenbank oder verwaltete SQL-Datenbank-Instanz | Azure SSIS Integration Runtime, eine Komponente von Azure Data Factory | Skalierungsoptionen für die Azure SSIS Integration Runtime |
+| In Azure | SQL-Datenbank oder verwaltete SQL-Instanz | Azure SSIS Integration Runtime, eine Komponente von Azure Data Factory | Skalierungsoptionen für die Azure SSIS Integration Runtime |
 | | | | |
 
 ## <a name="provision-ssis-on-azure"></a>Bereitstellen von SSIS in Azure

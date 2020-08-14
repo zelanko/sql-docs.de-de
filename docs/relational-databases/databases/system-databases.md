@@ -16,12 +16,12 @@ ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 877dc8524c1d87cb83dfa194020454f2d0841d76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 66f58a7526684384e4533290ee42c4cc75dea1a2
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756119"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864887"
 ---
 # <a name="system-databases"></a>Systemdatenbanken
 
@@ -37,7 +37,7 @@ ms.locfileid: "85756119"
 |[tempdb-Datenbank](../../relational-databases/databases/tempdb-database.md)|Ein Arbeitsbereich zum Speichern von temporären Objekten oder Zwischenresultsets.|  
 
 > [!IMPORTANT]
-> Für Azure SQL-Datenbank Singletons und Pools für elastische Datenbanken gelten nur die Masterdatenbank und die tempdb-Datenbank. Weitere Informationen finden Sie unter [Was ist ein Azure SQL-Datenbank-Server](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Eine Erläuterung von tempdb im Kontext von Azure SQL-Datenbank finden Sie unter [tempdb-Datenbank in Azure SQL-Datenbank](tempdb-database.md#tempdb-database-in-sql-database). Für die verwaltete Azure SQL-Datenbank-Instanz gelten alle Systemdatenbanken. Weitere Informationen zu verwalteten Instanzen in Azure SQL-Datenbank finden Sie unter [Was ist eine verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+> Für Azure SQL-Datenbank Singletons und Pools für elastische Datenbanken gelten nur die Masterdatenbank und die tempdb-Datenbank. Weitere Informationen finden Sie unter [Was ist ein Azure SQL-Datenbank-Server](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Eine Erläuterung von tempdb im Kontext von Azure SQL-Datenbank finden Sie unter [tempdb-Datenbank in Azure SQL-Datenbank](tempdb-database.md#tempdb-database-in-sql-database). Für Azure SQL Managed Instance gelten alle Systemdatenbanken. Weitere Informationen zu verwalteten Instanzen in Azure SQL-Datenbank finden Sie unter [Was ist eine verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   
 ## <a name="modifying-system-data"></a>Ändern von Systemdaten  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine direkten Updates der Informationen in Systemobjekten (z. B. Systemtabellen, gespeicherten Systemprozeduren und Katalogsichten) durch Benutzer. Stattdessen stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen vollständigen Satz administrativer Tools zur Verfügung, die Benutzern das umfassende Verwalten des Systems sowie aller Benutzer und Objekte in einer Datenbank ermöglichen. Dabei handelt es sich z. B. um:  

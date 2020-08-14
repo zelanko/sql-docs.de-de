@@ -1,6 +1,6 @@
 ---
 title: Überwachen von Verfügbarkeitsgruppen mit Transact-SQL (T-SQL)
-description: Eine Beschreibung, wie Always On-Verfügbarkeitsgruppen mit Transact-SQL (T-SQL) überwacht werden können.
+description: Verwenden Sie SELECT-Anweisungen von Transact-SQL, um AlwaysOn-Verfügbarkeitsgruppen und ihre Replikate und Datenbanken zu überwachen.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b21deb3019a2d31c16a61f98ad9a1953ad65174
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 13c92b7783605eb501a73522d0820be9856588a6
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897377"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565544"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Überwachen von Verfügbarkeitsgruppen (Transact-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

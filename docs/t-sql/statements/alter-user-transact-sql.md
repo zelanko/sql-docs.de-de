@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6e25763f585f063eeb25fd512b65a3e51c070e5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5626b98f81bcca2a21902cf0d38f44a256fa73e0
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394665"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988452"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -47,10 +47,10 @@ Benennt einen Datenbankbenutzer um oder ändert sein Standardschema.
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL-Datenbank](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -222,10 +222,10 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken\*_**
+        **_\* SQL-Datenbank \*_**
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -237,7 +237,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL-Datenbank Singleton/Pool für elastische Datenbanken
+## <a name="sql-database"></a>SQL-Datenbank
 
 ## <a name="syntax"></a>Syntax
 
@@ -407,10 +407,10 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL-Datenbank](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />verwaltete Instanz \*_**
+        **_\* SQL-Datenbank<br />Verwaltete Instanz \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -422,16 +422,16 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL-Datenbank – Verwaltete Instanz
+## <a name="azure-sql-managed-instance"></a>Verwaltete Azure SQL-Instanz
 
 ## <a name="syntax"></a>Syntax
 
 > [!IMPORTANT]
-> Nur folgende Optionen werden für verwaltete Azure SQL-Datenbank-Instanzen unterstützt, wenn sie auf Benutzer mit Azure AD-Konten angewendet werden: `DEFAULT_SCHEMA = { schemaName | NULL }` und `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
-> </br> </br> Es wurde eine neue Syntaxerweiterung hinzugefügt, um die Neuzuordnung von Benutzern in einer Datenbank, die zu einer verwalteten Instanz migriert wurde, zu unterstützen. Mit der ALTER USER-Syntax können Datenbankbenutzern in einer im Verbund konfigurierten und synchronisierten Azure AD-Domäne Azure AD-Anmeldenamen zugeordnet werden.
+> Nur die folgenden Optionen werden für Azure SQL Managed Instance unterstützt, wenn sie auf Benutzer mit Azure AD-Konten angewendet werden: `DEFAULT_SCHEMA = { schemaName | NULL }` und `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`.
+> </br> </br> Es wurde eine neue Syntaxerweiterung hinzugefügt, um die Neuzuordnung von Benutzern in einer Datenbank, die zu Azure SQL Managed Instance migriert wurde, zu unterstützen. Mit der ALTER USER-Syntax können Datenbankbenutzern in einer im Verbund konfigurierten und synchronisierten Azure AD-Domäne Azure AD-Anmeldenamen zugeordnet werden.
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for SQL Managed Instance
 ALTER USER userName
  { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
 [;]
@@ -521,7 +521,7 @@ ALTER USER userName
  Mit der WITH LOGIN-Klausel kann ein Benutzer einer anderen Anmeldung neu zugeordnet werden. Benutzer ohne Anmeldenamen, einem Zertifikat zugeordnete Benutzer oder einem asymmetrischen Schlüssel zugeordnete Benutzer können mithilfe dieser Klausel nicht neu zugeordnet werden. Nur SQL-Benutzer und Windows-Benutzer (oder -Gruppen) können neu zugeordnet werden. Mit der WITH LOGIN-Klausel kann nicht der Benutzertyp geändert werden, beispielsweise kann ein Windows-Konto nicht in einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen geändert werden. Die einzige Ausnahme ist das Umwandeln eines Windows-Benutzers in einen Azure AD-Benutzer.
 
 > [!NOTE]
-> Die folgenden Regeln gelten nicht für Windows-Benutzer auf einer verwalteten Instanz, da das Erstellen von Windows-Anmeldenamen auf einer verwalteten Instanz nicht unterstützt wird. Die WITH LOGIN-Option kann nur verwendet werden, wenn Azure AD-Anmeldenamen vorhanden sind.
+> Die folgenden Regeln gelten nicht für Windows-Benutzer von Azure SQL Managed Instance, da das Erstellen von Windows-Konten für Azure SQL Managed Instance nicht unterstützt wird. Die WITH LOGIN-Option kann nur verwendet werden, wenn Azure AD-Anmeldenamen vorhanden sind.
 
  Der Name des Benutzers wird automatisch in den Anmeldenamen umbenannt, wenn die folgenden Voraussetzungen erfüllt sind.
 
@@ -540,21 +540,21 @@ Der Name eines Benutzers, der einem [!INCLUDE[ssNoVersion](../../includes/ssnove
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-managed-instance"></a>Hinweise für Windows-Benutzer in einer lokalen SQL-Instanz, die zu einer verwalteten Instanz migriert wurde
+### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-azure-sql-managed-instance"></a>Hinweise für Windows-Benutzer in lokalen SQL-Instanzen nach einer Migration zu Azure SQL Managed Instance
 
 Diese Hinweise gelten für die Authentifizierung als Windows-Benutzer, die mit Azure AD im Verbund konfiguriert und synchronisiert wurden.
 
 > [!NOTE]
-> Der Azure AD-Administrator für verwaltete Instanzfunktionen nach der Erstellung hat sich geändert. Weitere Informationen finden Sie unter [Neue Azure AD-Administratorfunktionen für verwaltete Instanzen](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> Der Azure AD-Administrator für Azure SQL Managed Instance-Funktionen ändert sich nach der Erstellung. Weitere Informationen finden Sie unter [Neue Azure AD-Administratorfunktionen für verwaltete Instanzen](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 - Die Validierung von Windows-Benutzern oder -Gruppen, die Azure AD zugeordnet sind, erfolgt standardmäßig über die Graph-API in allen Versionen der für Migrationszwecke verwendeten ALTER USER-Syntax.
 - Lokale Benutzer mit Aliasnamen, d.h. die einen anderen Namen als das ursprüngliche Windows-Konto verwenden, behalten den Aliasnamen bei.
-- Bei der Azure AD-Authentifizierung gilt der LOGIN-Parameter nur für eine verwaltete Instanz und kann nicht mit SQL DB verwendet werden.
+- Bei der Azure AD-Authentifizierung gilt der LOGIN-Parameter nur für Azure SQL Managed Instance und kann nicht mit SQL-Datenbank verwendet werden.
 - Verwenden Sie zum Anzeigen von Anmeldenamen für Azure AD-Prinzipale den folgenden Befehl: `select * from sys.server_principals`.
 - Überprüfen Sie, ob der angegebene Typ des Anmeldenamens `E` oder `X` ist.
 - Die PASSWORD-Option kann nicht für Azure AD-Benutzer verwendet werden.
 - In allen Migrationsfällen werden die Rollen und Berechtigungen von Windows-Benutzern oder -Gruppen automatisch an die neuen Azure AD-Benutzer oder -Gruppen übertragen.
-- Eine neue Syntaxerweiterung (**FROM EXTERNAL PROVIDER**) steht zur Verfügung, um Windows-Benutzer und -Gruppen aus lokalen SQL-Instanzen in Azure AD-Benutzer und -Gruppen zu ändern. Die Windows-Domäne muss im Verbund mit Azure AD konfiguriert sein, und alle Windows-Domänenmitglieder müssen bei der Verwendung dieser Erweiterung in Azure AD vorhanden sein. Die **FROM EXTERNAL PROVIDER**-Syntax gilt für verwaltete Instanzen und sollte verwendet werden, wenn Windows-Benutzer keine Anmeldenamen für die ursprüngliche SQL-Instanz haben und eigenständigen Azure AD-Datenbankbenutzern zugeordnet werden müssen.
+- Eine neue Syntaxerweiterung (**FROM EXTERNAL PROVIDER**) steht zur Verfügung, um Windows-Benutzer und -Gruppen aus lokalen SQL-Instanzen in Azure AD-Benutzer und -Gruppen zu ändern. Die Windows-Domäne muss im Verbund mit Azure AD konfiguriert sein, und alle Windows-Domänenmitglieder müssen bei der Verwendung dieser Erweiterung in Azure AD vorhanden sein. Die **FROM EXTERNAL PROVIDER**-Syntax gilt für Azure SQL Managed Instance und sollte verwendet werden, wenn Windows-Benutzer keine Konten für die ursprüngliche SQL-Instanz besitzen und eigenständigen Azure AD-Datenbankbenutzern zugeordnet werden müssen.
 - In diesem Fall kann der zulässige Benutzername wie folgt lauten:
 - Ein Widows-Benutzer (_Domäne\Benutzer_).
 - Eine Windows-Gruppe (_MeineWindows-Gruppe_).
@@ -628,13 +628,13 @@ GO
 
 ### <a name="d-map-the-user-in-the-database-to-an-azure-ad-login-after-migration"></a>D: Zuordnen des Benutzers in der Datenbank zu einem Azure AD-Anmeldenamen nach der Migration
 
-Im folgenden Beispiel wird der Benutzer `westus/joe` einem Azure AD-Benutzer `joe@westus.com` neu zugeordnet. Dieses Beispiel gilt für Anmeldenamen, die bereits in der verwalteten Instanz vorhanden sind. Dies muss erfolgen, nachdem Sie eine Datenbankmigration zu einer verwalteten Instanz abgeschlossen haben und den Azure AD-Anmeldenamen für die Authentifizierung verwenden möchten.
+Im folgenden Beispiel wird der Benutzer `westus/joe` einem Azure AD-Benutzer `joe@westus.com` neu zugeordnet. Dieses Beispiel gilt für Anmeldenamen, die bereits in der verwalteten Instanz vorhanden sind. Dies muss durchgeführt werden, nachdem Sie eine Datenbankmigration zu Azure SQL Managed Instance abgeschlossen haben und wenn Sie die Azure AD-Anmeldung für die Authentifizierung verwenden möchten.
 
 ```sql
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
 ```
 
-### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-managed-instance-to-an-azure-ad-user"></a>E. Zuordnen eines alten Windows-Benutzers in der Datenbank ohne Anmeldenamen in einer verwalteten Instanz zu einem Azure AD Benutzer
+### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-azure-sql-managed-instance-to-an-azure-ad-user"></a>E. Zuordnen eines alten Windows-Benutzers in der Datenbank ohne eine Anmeldung zu einem Azure AD-Benutzer in Azure SQL Managed Instance
 
 Im folgenden Beispiel wird der Benutzer `westus/joe` ohne Anmeldename einem Azure AD-Benutzer `joe@westus.com` neu zugeordnet. Der Verbundbenutzer muss in Azure AD vorhanden sein.
 
@@ -650,7 +650,7 @@ Im folgenden Beispiel wird der Benutzername `westus\joe` dem Namen `joe_alias` n
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias
 ```
 
-### <a name="g-map-a-windows-group-that-was-migrated-in-managed-instance-to-an-azure-ad-group"></a>G. Zuordnen einer Windows-Gruppe, die in einer verwalteten Instanz zu einer Azure AD-Gruppe migriert wurde
+### <a name="g-map-a-windows-group-that-was-migrated-in-azure-sql-managed-instance-to-an-azure-ad-group"></a>G. Zuordnen einer Windows-Gruppe zu einer Azure AD-Gruppe nach einer Migration zu Azure SQL Managed Instance
 
 Im folgenden Beispiel wird die alte lokale Gruppe `westus\mygroup` einer Azure AD-Gruppe `mygroup` in der verwalteten Instanz neu zugeordnet. Die Gruppe muss in Azure AD vorhanden sein.
 
@@ -665,7 +665,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [Eigenständige Datenbanken](../../relational-databases/databases/contained-databases.md)
 - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
-- [Tutorial: Migrieren lokaler Windows-Benutzer und -Gruppen in SQL Server zu einer verwalteten Azure SQL-Datenbank-Instanz unter Verwendung der T-SQL-DDL-Syntax](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
+- [Tutorial: Migrieren von lokalen SQL Server-Benutzern und -Gruppen unter Windows zu SQL Managed Instance mithilfe der DDL-Syntax von T-SQL](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -675,10 +675,10 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL-Datenbank](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -800,10 +800,10 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-user-transact-sql.md?view=azuresqldb-current)
+        [SQL-Datenbank](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)

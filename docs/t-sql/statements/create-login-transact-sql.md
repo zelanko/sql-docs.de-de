@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 0ff1117c601cc42d8fa14147df18b90a10fc97bd
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411042"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87987964"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -51,7 +51,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure SQL-Datenbank<br />Einzeldatenbank/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL-Datenbank](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -284,7 +284,7 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\*Azure SQL-Datenbank<br />Einzeldatenbank/Pool für elastische Datenbanken\*_**
+        **_\* Azure SQL-Datenbank \*_**
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -299,7 +299,7 @@ CHECK_EXPIRATION = OFF ;
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL-Datenbank Singleton/Pool für elastische Datenbanken
+## <a name="sql-database"></a>SQL-Datenbank
 
 ## <a name="syntax"></a>Syntax
 
@@ -402,7 +402,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL-Datenbank<br />Einzeldatenbank/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL-Datenbank](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\*Azure SQL<br />Managed Instance\*_**
@@ -417,12 +417,12 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL-Datenbank – Verwaltete Instanz
+## <a name="azure-sql-managed-instance"></a>Verwaltete Azure SQL-Instanz
 
 ## <a name="syntax"></a>Syntax
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for Azure SQL Managed Instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 <option_list> ::=
@@ -469,7 +469,7 @@ Neue Anmeldenamen können nur mit den Anmeldenamen des Serverebenenprinzipals (i
 
 Die folgenden Standardberechtigungen werden neu erstellten Azure AD-Anmeldenamen in der Masterdatenbank gewährt: **CONNECT SQL** und **VIEW ANY DATABASE**.
 
-### <a name="sql-database-managed-instance-logins"></a>Anmeldenamen für die verwaltete SQL-Datenbank-Instanz
+### <a name="sql-managed-instance-logins"></a>SQL Managed Instance-Anmeldungen
 
 - Erfordert eine **ALTER ANY LOGIN**-Berechtigung auf dem Server oder eine Mitgliedschaft bei einer der festen Serverrollen `securityadmin` oder `sysadmin`. Dieser Befehl kann nur mit einem Azure AD-Konto (Azure Active Directory) mit der **ALTER ANY LOGIN**-Berechtigung auf dem Server oder mit einer Mitgliedschaft bei einer dieser Serverrollen ausgeführt werden.
 - Wenn es sich bei der Anmeldung um einen SQL-Prinzipal handelt, können nur Anmeldungen, die der Rolle `sysadmin` angehören, den Befehl „create“ verwenden, um Anmeldungen für ein Azure AD-Konto zu erstellen.
@@ -478,9 +478,9 @@ Die folgenden Standardberechtigungen werden neu erstellten Azure AD-Anmeldenamen
 ## <a name="after-creating-a-login"></a>Nach dem Erstellen eines Anmeldenamens
 
 > [!NOTE]
-> Der Azure AD-Administrator für verwaltete Instanzfunktionen nach der Erstellung hat sich geändert. Weitere Informationen finden Sie unter [Neue Azure AD-Administratorfunktionen für verwaltete Instanzen](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> Der Azure AD-Administrator für Azure SQL Managed Instance-Funktionen ändert sich nach der Erstellung. Weitere Informationen finden Sie unter [Neue Azure AD-Administratorfunktionen für verwaltete Instanzen](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
-Nach dem Erstellen eines Anmeldenamens kann dieser zum Herstellen einer Verbindung mit einer verwaltete SQL-Datenbank-Instanz verwendet werden. Dem Anmeldenamen werden jedoch nur die Berechtigungen der Rolle **public** gewährt. Ziehen Sie die Ausführung einiger der folgenden Aktivitäten in Betracht.
+Nach dem Erstellen einer Anmeldung kann diese zum Herstellen einer Verbindung mit einer verwalteten Instanz verwendet werden. Der Anmeldung werden jedoch nur die Berechtigungen gewährt, die der Rolle **public** zugewiesen sind. Ziehen Sie die Ausführung einiger der folgenden Aktivitäten in Betracht.
 
 - Informationen zum Erstellen eines Azure AD-Benutzers aus Azure AD-Anmeldeinformationen finden Sie unter [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Verwenden Sie für die Erteilung von Berechtigungen für einen Benutzer in einer Datenbank die Anweisung **ALTER SERVER ROLE** ... **ADD MEMBER**-Anweisung zum Hinzufügen des Benutzer zu einer der integrierten Datenbankrollen oder einer benutzerdefinierten Rolle oder zum Erteilen von Berechtigungen für den Benutzer über die direkte Verwendung der Anweisung [GRANT](../../t-sql/statements/grant-transact-sql.md). Weitere Informationen finden Sie unter [Benutzer ohne Administratorrechte](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users) und in den Artikeln zu den Anweisungen [Zusätzliche Administratorrollen auf Serverebene](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)- und [GRANT](grant-transact-sql.md)-Anweisung.
@@ -601,7 +601,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL-Datenbank<br />Einzeldatenbank/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL-Datenbank](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -729,7 +729,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL-Datenbank<br />Einzeldatenbank/Pool für elastische Datenbanken](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL-Datenbank](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)

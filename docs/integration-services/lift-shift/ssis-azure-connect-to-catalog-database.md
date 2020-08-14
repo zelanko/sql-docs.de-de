@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 31857d9646ef7807475130697cb2758b96588a8c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f884cbc8a3d35b5e806090202516fc3f1ff4e01
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916953"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864617"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Herstellen einer Verbindung mit dem SSIS-Katalog (SSISDB) in Azure
 
@@ -32,7 +32,7 @@ Finden Sie Verbindungsinformationen, die benötigt werden, um eine Verbindung mi
 > Zurzeit kann die SSISDB-Katalogdatenbank in Azure SQL-Datenbank nur zusammen mit der Azure SSIS Integration Runtime in Azure Data Factory erstellt werden. Die Azure SSIS IR ist die Laufzeitumgebung, die SSIS-Pakete auf Azure ausführt. Einen exemplarischen Prozess finden Sie unter [Bereitstellen und Ausführen von SSIS-Paketen in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>Voraussetzungen
-Prüfen Sie, ob Sie über die Version 17.2 oder höher von SQL Server Management Studio (SSMS) verfügen, bevor Sie beginnen. Wenn die SSISDB-Katalogdatenbank auf einer verwalteten SQL-Datenbank-Instanz gehostet wird, stellen Sie sicher, dass Sie die Version 17.6 oder höher von SSMS verwenden. Die neueste Version von SSMS können Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) herunterladen.
+Prüfen Sie, ob Sie über die Version 17.2 oder höher von SQL Server Management Studio (SSMS) verfügen, bevor Sie beginnen. Wenn die SSISDB-Katalogdatenbank auf SQL Managed Instance gehostet wird, stellen Sie sicher, dass Sie die Version 17.6 oder höher von SSMS verwenden. Die neueste Version von SSMS können Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) herunterladen.
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Abrufen der Verbindungsinformationen vom Azure-Portal
 1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com/)an.

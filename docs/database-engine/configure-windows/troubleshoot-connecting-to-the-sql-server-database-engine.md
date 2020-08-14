@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afe2679e29f92d4b222067b6ab3b5220078744e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dbd46a6a2de2e46841eb8cc7b40542d8073e82c6
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763954"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988643"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ Dieser Fehler bedeutet in der Regel, dass der Client die SQL Server-Instanz nich
 
 - Dieses Thema enthält keine Informationen zu SSPI-Fehlern. SSPI-Fehler finden Sie unter [Problembehandlung bei der Fehlermeldung "SSPI-Kontext kann nicht generiert werden"](https://support.microsoft.com/kb/811889).
 - Dieses Thema enthält keine Informationen zu Kerberos-Fehlern. Hilfe finden Sie im [Microsoft Kerberos-Konfigurations-Manager für SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).
-- Dieses Thema enthält keine Informationen zur SQL Azure-Verbindung. Hilfe finden Sie unter [Troubleshooting connectivity issues with Microsoft Azure SQL Database (Problembehandlung bei Verbindungsproblemen mit Microsoft Azure SQL-Datenbank)](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database).
+- Dieser Artikel enthält keine Informationen über die Konnektivität von Azure SQL-Datenbank. Hilfe finden Sie unter [Troubleshooting connectivity issues with Microsoft Azure SQL Database (Problembehandlung bei Verbindungsproblemen mit Microsoft Azure SQL-Datenbank)](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database).
 
 ## <a name="get-instance-name-from-configuration-manger"></a>Abrufen des Instanznamens vom Konfigurations-Manager
 

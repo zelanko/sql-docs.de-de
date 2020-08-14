@@ -12,12 +12,12 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 60acfdfb738542c39c5974691811c482e36b9f9e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776080"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863338"
 ---
 # <a name="altering-memory-optimized-tables"></a>Ändern von speicheroptimierten Tabellen
 
@@ -26,7 +26,7 @@ ms.locfileid: "85776080"
 Änderungen des Schemas und des Indizes in speicheroptimierten Tabellen können mithilfe der Anweisung ALTER TABLE durchgeführt werden. In SQL Server 2016 und Azure SQL-Datenbank sind ALTER TABLE-Vorgänge mit speicheroptimierte Tabellen OFFLINE, d.h., dass die Tabelle während des Vorgangs nicht abgefragt werden kann. Die Datenbankanwendung kann weiterhin ausgeführt werden, und jeder Vorgang, der auf die Tabellen zugreift, wird blockiert bis der Änderungsprozess abgeschlossen ist. Es ist mögliche, mehrere ADD-, DROP- und ALTER-Vorgänge in einer einzigen ALTER TABLE-Anweisung zu kombinieren.
 
 > [!IMPORTANT]
-> Die verwaltete Azure SQL-Datenbank-Instanz unterstützt speicheroptimierte Tabellen im Tarif „Allgemein“ nicht.
+> Azure SQL Managed Instance unterstützt keine speicheroptimierten Tabellen in der Dienstebene „Universell“.
   
 ## <a name="alter-table"></a>ALTER TABLE  
 

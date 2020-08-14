@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e4a00b8bff85625cf48f8ba1f5abf3fb14ce94a8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a2874fa0cd20ed8ff80f7815b0725ce14dd800b5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113246"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864431"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE-Optionen für Dateien und Dateigruppen (Transact-SQL)
 
@@ -66,7 +66,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
     :::column-end:::
 :::row-end:::
 
@@ -687,17 +687,17 @@ GO
         [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />verwaltete Instanz \*_**<br />&nbsp;
+        **_\* SQL-Datenbank<br />Verwaltete Instanz \*_**<br />&nbsp;
     :::column-end:::
 :::row-end:::
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL-Datenbank – Verwaltete Instanz
+## <a name="azure-sql-managed-instance"></a>Verwaltete Azure SQL-Instanz
 
-Verwenden Sie diese Anweisung mit einer Datenbank in einer verwalteten Azure SQL-Datenbank-Instanz.
+Verwenden Sie diese Anweisung mit einer Datenbank in Azure SQL Managed Instance.
 
-## <a name="syntax-for-databases-in-a-managed-instance"></a>Syntax für Datenbanken in einer verwalteten Instanz
+## <a name="syntax-for-azure-sql-managed-instance"></a>Syntax für Azure SQL Managed Instance
 
 ```syntaxsql
 ALTER DATABASE database_name

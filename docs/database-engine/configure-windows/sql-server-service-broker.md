@@ -1,6 +1,6 @@
 ---
 title: SQL Server Service Broker | Microsoft-Dokumentation
-description: Informationen zum Service Broker Hier erfahren Sie, wie dieser native Unterstützung für Messaging in der SQL Server-Datenbank-Engine und in Azure SQL Managed Instance bereitstellt.
+description: Informationen zum Service Broker Hier erfahren Sie, wie er native Unterstützung für Messaging in SQL Server-Datenbank-Engine und Azure SQL Managed Instance bereitstellt.
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -24,17 +24,17 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3e915b46eb89c29d260dc66ad7b73bc0cbc73ebc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2841f36d3f9e4498763f6b0862e2fa0cfaa2e4a9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764050"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863402"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] bieten native Unterstützung für Messaging und Warteschlangen in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [verwalteten Azure SQL-Datenbank-Instanzen](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Entwickler können problemlos anspruchsvolle Anwendungen erstellen, die die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Komponenten verwenden, um zwischen verschiedenen Datenbanken zu kommunizieren und verteilte und zuverlässige Anwendungen zu erstellen.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] bietet native Unterstützung für Messaging und Warteschlangen in [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Entwickler können problemlos anspruchsvolle Anwendungen erstellen, die die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Komponenten verwenden, um zwischen verschiedenen Datenbanken zu kommunizieren und verteilte und zuverlässige Anwendungen zu erstellen.  
   
 ## <a name="when-to-use-service-broker"></a>Einsatz von Service Broker
 
@@ -103,7 +103,7 @@ FROM ExpenseQueue;
 ## <a name="whats-new-in-service-broker"></a>Neues in Service Broker  
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wurden keine wesentlichen Änderungen eingeführt.  Für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]wurden die folgenden Änderungen eingeführt.  
 
-### <a name="service-broker-and-azure-sql-database-managed-instance"></a>Service Broker und verwaltete Azure SQL-Datenbank-Instanz
+### <a name="service-broker-and-azure-sql-managed-instance"></a>Service Broker und Azure SQL Managed Instance
 
 - Ein instanzenübergreifender Service Broker wird nicht unterstützt. 
  - `sys.routes` – Voraussetzung: Wählen Sie die Adresse aus sys.routes. Die Adresse muss für jede Route LOCAL sein. Informationen hierzu finden Sie unter [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).

@@ -23,12 +23,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0505a5e6c715558b34d2f1a86e88a0b7b938e7d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52a669c7a624b2bb88b9f392cf4ecc71be7d681a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781706"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823976"
 ---
 # <a name="export-a-data-tier-application"></a>Exportieren einer Datenebenenanwendung
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85781706"
 ###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Exportieren einer DAC sind mindestens die ALTER ANY LOGIN-Berechtigung und die VIEW DEFINITION-Berechtigung im Datenbankbereich sowie SELECT-Berechtigungen für **sys.sql_expression_dependencies**erforderlich. Zum Exportieren einer DAC sind nur Mitglieder der festen Serverrolle "securityadmin" berechtigt, die ebenfalls Mitglieder der festen Datenbankrolle "database_owner" in der Datenbank sind, aus der die DAC exportiert wird. Mitglieder der festen Serverrolle „sysadmin“ oder des integrierten SQL Server-Systemadministratorkontos **sa** sind ebenfalls berechtigt, eine DAC zu exportieren.
  
-In der Azure SQL-Datenbank müssen Sie **jeder Datenbank** die Berechtigungen „VIEW DEFINITION“ und „SELECT“ für alle Tabellen bzw. für bestimmte Tabellen erteilen.
+In Azure SQL-Datenbank müssen Sie **jeder Datenbank** die Berechtigungen VIEW DEFINITION und SELECT für alle Tabellen oder für spezifische Tabellen gewähren.
 
   
 ##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a> Verwenden des Assistenten zum Exportieren von Datenebenenanwendungen  

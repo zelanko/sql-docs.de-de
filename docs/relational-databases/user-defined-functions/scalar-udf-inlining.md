@@ -2,7 +2,7 @@
 title: Inlining benutzerdefinierter Skalarfunktionen in Microsoft SQL Server | Microsoft-Dokumentation
 description: In diesem Artikel wird das Inlining benutzerdefinierter Skalarfunktionen erläutert, um die Leistung von Abfragen zu verbessern, die benutzerdefinierte Skalarfunktionen in SQL Server (2019 und höher) aufrufen.
 ms.custom: ''
-ms.date: 06/23/2020
+ms.date: 08/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 0d9a618e8170d08250c15c75e83d5d2dbc627447
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435586"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790303"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
@@ -164,6 +164,9 @@ Je nach Komplexität der Logik in der benutzerdefinierten Funktion kann der resu
 - Die benutzerdefinierte Funktion enthält keine mehreren RETURN-Anweisungen <sup>6</sup>.
 - Die benutzerdefinierte Funktion wird nicht aus einer RETURN-Anweisung aufgerufen <sup>6</sup>.
 - Die benutzerdefinierte Funktion verweist nicht auf die `STRING_AGG`-Funktion <sup>6</sup>. 
+- Die benutzerdefinierte Funktion verweist nicht auf Remotetabellen <sup>7</sup>.
+- Die Abfrage, die die benutzerdefinierte Funktion aufruft, verwendet `GROUPING SETS`, `CUBE` oder `ROLLUP` nicht <sup>7</sup>.
+- Die Abfrage, die die benutzerdefinierte Funktion aufruft, enthält keine Variable, die als Zuweisungsparameter für die benutzerdefinierte Funktion verwendet wird (z. B. `SELECT @y = 2` und `@x = UDF(@y)`) <sup>7</sup>.
 
 <sup>1</sup> Für `SELECT` mit einer Variablenakkumulation/-aggregation (z. B. `SELECT @val += col1 FROM table1`) wird kein Inlining unterstützt.
 
@@ -176,6 +179,8 @@ Je nach Komplexität der Logik in der benutzerdefinierten Funktion kann der resu
 <sup>5</sup> Einschränkung hinzugefügt in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4
 
 <sup>6</sup> Einschränkung hinzugefügt in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5
+
+<sup>7</sup> Einschränkung hinzugefügt in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6
 
 > [!NOTE]
 > Informationen zu den neuesten T-SQL-Inliningfixes für Skalar-UDFs und Änderungen für Inliningberechtigungsszenarios finden Sie im Knowledge Base-Artikel [FIX: Inliningprobleme bei benutzerdefinierten Skalarfunktionen in SQL Server 2019](https://support.microsoft.com/help/4538581).

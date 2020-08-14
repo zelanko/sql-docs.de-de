@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba782e0a2eee78e6f308ffee0d493fbac2032ce
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 089265151307a72e2f029d016df216e077c2dd88
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113226"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864333"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE-Anweisungen (Transact-SQL)
 
@@ -64,7 +64,7 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
@@ -739,7 +739,7 @@ RESTORE DATABASE Sales
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />verwaltete Instanz \*_**
+        **_\* SQL-Datenbank<br />Verwaltete Instanz \*_**
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
@@ -748,7 +748,7 @@ RESTORE DATABASE Sales
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL-Datenbank – Verwaltete Instanz
+## <a name="azure-sql-managed-instance"></a>Verwaltete Azure SQL-Instanz
 
 Über diesen Befehl können Sie eine komplette Datenbank aus einer vollständigen Datenbanksicherung in einem Azure Blob Storage-Konto wiederherstellen (vollständige Wiederherstellung).
 
@@ -760,7 +760,7 @@ Andere unterstützte RESTORE-Befehle finden Sie hier:
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
 
 > [!IMPORTANT]
-> Informationen zur Wiederherstellung automatischer Sicherungen der verwalteten Azure SQL-Datenbank-Instanz finden Sie unter [SQL Database Restore (SQL-Datenbank-Wiederherstellung)](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
+> Informationen zur Wiederherstellung mit automatischen Sicherungen von SQL Managed Instance finden Sie unter [SQL-Datenbank-Wiederherstellung](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
 
 ## <a name="syntax"></a>Syntax
 
@@ -802,17 +802,17 @@ Die folgenden Datenbankoptionen werden festgelegt oder überschrieben und könne
 - Eine arbeitsspeicheroptimierte Dateigruppe wird hinzugefügt und hat XTP aufgerufen, wenn sie nicht in der BAK-Quelldatei war. Alle vorhandenen arbeitsspeicheroptimierten Dateigruppen werden in XTP umbenannt.
 - Die Optionen SINGLE_USER und RESTRICTED_USER werden in MULTI_USER konvertiert.
 
-## <a name="limitations---sql-database-managed-instance"></a>Einschränkungen bei verwalteten SQL-Datenbankinstanzen
+## <a name="limitations---sql-managed-instance"></a>Einschränkungen von SQL Managed Instance
 
 Diese Einschränkungen gelten:
 
 - BAK-Dateien, die mehrere Sicherungssätze enthalten, können nicht wiederhergestellt werden.
 - BAK-Dateien, die mehrere Protokolldateien enthalten, können nicht wiederhergestellt werden.
 - Die Wiederherstellung schlägt fehl, wenn die BAK-Datei FILESTREAM-Daten enthält.
-- Sicherungen, die Datenbanken enthalten, die über aktive In-Memory-Objekte verfügen, können nicht für eine universelle verwaltete Instanz wiederhergestellt werden.
+- Sicherungen, die Datenbanken enthalten, die über aktive In-Memory-Objekte verfügen, können nicht für die Leistungsstufe „Universell“ wiederhergestellt werden.
 - Sicherungen, die Datenbanken im schreibgeschützten Modus enthalten, können derzeit nicht wiederhergestellt werden. Diese Einschränkung wird bald entfernt.
 
-Weitere Informationen finden Sie unter [verwaltete Instanz](/azure/sql-database/sql-database-managed-instance).
+Weitere Informationen finden Sie unter [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance).
 
 ## <a name="restoring-an-encrypted-database"></a>Wiederherstellen einer verschlüsselten Datenbank
 Um eine verschlüsselte Datenbank wiederherstellen zu können, muss das Zertifikat oder der asymmetrische Schlüssel verfügbar sein, das oder der zum Verschlüsseln der Datenbank verwendet wurde. Ohne das Zertifikat oder den asymmetrischen Schlüssel kann die Datenbank nicht wiederhergestellt werden. Darum muss das Zertifikat, das zur Verschlüsselung des Verschlüsselungsschlüssels für die Datenbank verwendet wurde, so lange beibehalten werden, wie die Sicherung benötigt wird. Weitere Informationen finden Sie unter [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
@@ -886,7 +886,7 @@ WHERE r.command = 'RESTORE DATABASE'
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_**

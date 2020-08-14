@@ -21,18 +21,18 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59657ae7be557bfd2c9036f2cba84f3019d4cf0a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 41d77ae1b9c0763fedf2e53610bb3a0be5cd185c
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882075"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823935"
 ---
 # <a name="replication-agent-security-model"></a>Sicherheitsmodell des Replikations-Agents
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Das Sicherheitsmodell des Replikations-Agents ermöglicht die präzise Steuerung der Konten, unter denen Replikations-Agents ausgeführt werden und Verbindungen herstellen: Für jeden Agent kann ein anderes Konto angegeben werden. Weitere Informationen zum Angeben von Konten finden Sie unter [Identität und Zugriffssteuerung (Replikation)](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
 
-Das Sicherheitsmodell des Replikations-Agents ist für verwaltete Azure SQL-Datenbank-Instanzen etwas anders, da keine Windows-Konten vorhanden sind, unter denen die Agents ausgeführt werden. Stattdessen muss alles über SQL Server-Authentifizierung erfolgen. 
+Das Sicherheitsmodell des Replikations-Agents unterscheidet sich ein wenig für Azure SQL Managed Instance, da es keine Windows-Konten gibt, unter denen die Agents ausgeführt werden können. Stattdessen muss alles über SQL Server-Authentifizierung erfolgen. 
   
 > [!IMPORTANT]  
 >  Wenn ein Mitglied der festen Serverrolle **sysadmin** die Replikation konfiguriert, kann es die Replikations-Agents so konfigurieren, dass sie die Identität des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agentkontos annehmen. Dies geschieht, indem für den Replikations-Agent kein Anmeldename oder Kennwort angegeben wird. Dieser Ansatz ist jedoch nicht empfehlenswert. Sie sollten besser als bewährte Methode in Bezug auf die Sicherheit für jeden Agent ein Konto mit den im Abschnitt zu den für Agents erforderlichen Berechtigungen beschriebenen minimalen Privilegien angeben.  

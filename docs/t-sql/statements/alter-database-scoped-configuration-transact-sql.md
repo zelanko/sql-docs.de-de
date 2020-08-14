@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 3812f2f7e2f41259416147e969ceb90e395b5bbb
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 698048be11f3514762f27c23ec16bf4ef18041a5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279496"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864481"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -350,7 +350,7 @@ GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 Gestattet das Festlegen der Funktion für automatisches Löschen von [globalen temporären Tabellen](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). Der Standardwert ist ON, was bedeutet, dass die globalen temporären Tabellen automatisch gelöscht werden, wenn sie von keiner Sitzung verwendet werden. Wenn sie auf OFF festgelegt ist, müssen globale temporäre Tabellen explizit mithilfe einer DROP TABLE-Anweisung gelöscht werden, oder sie werden beim Serverneustart automatisch gelöscht.
 
 - Für [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Singletons und Pools für elastische Datenbanken kann diese Option in den einzelnen Benutzerdatenbanken des SQL-Datenbankservers festgelegt werden.
-- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der verwalteten [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Instanz wird diese Option in der `TempDB` festgelegt, und die Einstellungen der einzelnen Benutzerdatenbanken haben keine Auswirkungen.
+- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Azure SQL Managed Instance wird diese Option in `TempDB` festgelegt, und die Einstellungen der individuellen Benutzerdatenbanken haben keine Auswirkungen.
 
 <a name="lqp"></a>
 

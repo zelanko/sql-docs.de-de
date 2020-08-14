@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren verteilter Verfügbarkeitsgruppen
-description: 'In diesem Thema wird beschrieben, wie Sie eine verteilte Always On-Verfügbarkeitsgruppe erstellen und konfigurieren. '
+description: Hier erfahren Sie anhand eines Transact-SQL-Beispiels, wie Sie eine verteilte Verfügbarkeitsgruppe konfigurieren. Außerdem erfahren Sie, wo Sie Informationen über verteilte Verfügbarkeitsgruppen finden.
 ms.custom: seodec18
 ms.date: 01/28/2020
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bd6d960b30d6c6b261de96ba93ae558e71e866
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 629aceee12a89498d763fde2d3510f69e0cde452
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896136"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565273"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Konfigurieren verteilter Always On-Verfügbarkeitsgruppen  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

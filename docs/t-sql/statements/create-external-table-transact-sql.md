@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4660b5f0bd16d4373498e472452b61aa4be3f24
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 29c625eb5b169e1811f880416a027eb3ac32c027
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111169"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864381"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -899,7 +899,7 @@ Nicht unterstützte Konstruktionen und Operationen:
 
 Abfrageeinschränkungen:
 
-PolyBase kann bei 32 gleichzeitigen PolyBase-Abfragen maximal 33.000 Dateien pro Ordner verarbeiten. Diese maximale Anzahl schließt sowohl Dateien als auch Unterordner im jeweiligen HDFS-Ordner ein. Werden weniger als 32 Abfragen gleichzeitig ausgeführt, können auch PolyBase-Abfragen für Ordner in HDFS ausgeführt werden, die mehr als 33.000 Dateien enthalten. Es wird empfohlen, dass Sie externe Dateipfade kurz halten und nicht mehr als 30.000 Dateien pro HDFS-Ordner verwenden. Wenn auf zu viele Dateien verwiesen wird, kann eine Out-of-Memory-Ausnahme von Java Virtual Machine (JVM) auftreten.
+Es wird davon abgeraten, mehr als 30.000 Dateien pro Ordner zu überschreiten. Wenn auf zu viele Dateien verwiesen wird, kann eine Ausnahme aufgrund ungenügenden Arbeitsspeichers von Java Virtual Machine (JVM) auftreten oder die Leistung kann beeinträchtigt werden.
 
 Einschränkungen der Tabellenbreite:
 

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81fb9b9cb792cf350137a375e7a2e25643656b6e
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 7bf5aa9ee503dff3a00053365485c3ef70cc9247
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002851"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823264"
 ---
 # <a name="migrate-on-premises-ssis-workloads-to-ssis-in-adf"></a>Migrieren von lokalen SSIS-Workloads zu SSIS in ADF
 
@@ -36,5 +36,5 @@ In Abhängigkeit von den Speichertypen der SSIS-Quellpakete und dem Migrationszi
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Migrieren von SSIS-Paketen zu einer verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Migrieren von SSIS-Paketen zu Azure SQL Managed Instance](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [Migrieren von SSIS-Aufträgen zu Azure Data Factory (ADF) mit SQL Server Management Studio (SSMS)](https://docs.microsoft.com/azure/data-factory/how-to-migrate-ssis-job-ssms)

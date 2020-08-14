@@ -24,21 +24,21 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 760da1491a7fbf4633cb02fe1fea8568e7ab9fa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb06761f06f315191234e5166f098182c515cd97
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85684495"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988821"
 ---
 # <a name="current_timezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Diese Funktion gibt den Namen der von einem Server oder einer Instanz verwendeten Zeitzone zurück. Bei einer verwalteten Azure SQL-Datenbank-Instanz basiert der Rückgabewert auf der Zeitzone der Instanz selbst, die während der Erstellung der Instanz zugewiesen wurde, und nicht auf der Zeitzone des zugrunde liegenden Betriebssystems.
+Diese Funktion gibt den Namen der von einem Server oder einer Instanz verwendeten Zeitzone zurück. Bei SQL Managed Instance basiert der Rückgabewert auf der Zeitzone der Instanz selbst, die während der Erstellung der Instanz zugewiesen wurde, und nicht auf der Zeitzone des zugrunde liegenden Betriebssystems.
   
 > [!NOTE]  
-> Bei einzelnen SQL-Datenbanken und SQL-Pooldatenbanken wird die Zeitzone immer auf UTC festgelegt. Daher gibt `CURRENT_TIMEZONE` den Namen der UTC-Zeitzone zurück.
+> Bei SQL-Datenbank wird die Zeitzone immer auf UTC festgelegt, und `CURRENT_TIMEZONE` gibt den Namen der UTC-Zeitzone zurück.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,6 +71,6 @@ SELECT CURRENT_TIMEZONE();
   
 ## <a name="see-also"></a>Weitere Informationen
 
-[Zeitzone für die verwaltete SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL Managed Instance: Zeitzone](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
 
 [CURRENT_TIMEZONE_ID()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-id-transact-sql)

@@ -1,6 +1,6 @@
 ---
-title: Erweiterung für die verwaltete Azure SQL-Datenbank-Instanz
-description: Verwenden von Azure Data Studio mit einer verwalteten Azure SQL-Instanz
+title: Die Erweiterung „Verwaltete Azure SQL-Instanz“
+description: Verwenden von Azure Data Studio mit Azure SQL Managed Instance
 ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 6a406efdd7c07d2740ebf33b6e84cd7d7175fde2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774701"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988604"
 ---
-# <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Dashboard für verwaltete Azure SQL-Datenbank-Instanzen für Azure Data Studio (Vorschauversion)
+# <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Azure SQL Managed Instance-Dashboard für Azure Data Studio (Vorschau)
 
-Die Erweiterung für die verwaltete Azure SQL-Datenbank-Instanz bietet ein Dashboard für die Arbeit mit einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Diese Erweiterung stellt die folgenden Funktionen bereit:
+Die Azure SQL Managed Instance-Erweiterung stellt ein Dashboard für die Arbeit mit [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio) bereit. Diese Erweiterung stellt die folgenden Funktionen bereit:
 
-- Anzeige von Eigenschaften der verwalteten Instanz, einschließlich V-Kernen und genutztem Speicher
+- Anzeige der SQL Managed Instance-Eigenschaften, einschließlich virtueller Kerne und genutztem Speicher
 - Überwachung der CPU- und Speichernutzung für die letzten zwei Stunden
 - Anzeige von Konfigurationswarnungen und Optimierungsempfehlungen
 - Anzeige des Zustands von Datenbankreplikaten
@@ -30,7 +30,7 @@ Die Erweiterung für die verwaltete Azure SQL-Datenbank-Instanz bietet ein Dashb
 ## <a name="install"></a>Installieren
 
 Sie können das offizielle Release dieser Erweiterung installieren. Führen Sie die Schritte in der [Azure Data Studio-Dokumentation](https://docs.microsoft.com/sql/azure-data-studio/extensions) aus.
-Suchen Sie im Bereich **Erweiterungen** nach „Verwaltete Instanz“, und installieren Sie sie dort. Nach der Installation werden Sie automatisch über alle zukünftigen Updates der Erweiterung benachrichtigt.
+Suchen Sie im Bereich **Erweiterungen** nach „Managed Instance“, und installieren Sie die Installation aus. Nach der Installation werden Sie automatisch über alle zukünftigen Updates der Erweiterung benachrichtigt.
 
 Wenn die Erweiterung installiert ist, wird die Registerkarte **Verwaltete Instanz** in Azure Data Studio angezeigt. Dort finden Sie spezifische Informationen zu Ihrer verwalteten Instanz.
 
@@ -38,7 +38,7 @@ Wenn die Erweiterung installiert ist, wird die Registerkarte **Verwaltete Instan
 
 Die Erweiterung zeigt technische Merkmale und Informationen zur Ressourcennutzung der verwalteten Instanz an.
 
-[ ![Eigenschaften der verwalteten Instanz](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
+[ ![Managed Instance-Eigenschaften](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
 
 Im oberen Bereich werden die folgenden Details angezeigt:
 
@@ -51,7 +51,7 @@ Im oberen Bereich werden die folgenden Details angezeigt:
 
 Wenn Sie den zweiten Bereich auf der Registerkarte **Verwaltete Instanz** auswählen, erhalten Sie Empfehlungen und Warnungen, die Ihnen helfen, die verwaltete Instanz zu optimieren.
 
-[ ![Empfehlungen für verwaltete Instanzen](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
+[ ![Managed Instance-Empfehlungen](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
 Möglicherweise werden einige der folgenden Empfehlungen angezeigt:
 
@@ -62,13 +62,13 @@ Möglicherweise werden einige der folgenden Empfehlungen angezeigt:
 - **Grenzwerte für Datendateien**. Wenn Ihre Datendateien in der [Dienstebene „Universell“ die Datei-E/A-Grenzwerte](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier) erreichen, müssen Sie möglicherweise die Dateigröße erhöhen, um eine bessere Leistung zu erzielen. Dieses Problem kann zu Arbeitsspeicherauslastung führen und Sicherungen verlangsamen.
 - **Verfügbarkeitsprobleme**. Eine große Anzahl virtueller Protokolldateien kann sich auf die Leistung auswirken. Wenn ein Prozess fehlschlägt, kann dies zu einer längeren Datenbankwiederherstellung auf der universellen Dienstebene führen.
 
-Überprüfen Sie regelmäßig diese Empfehlungen, untersuchen Sie die Ursachen und ergreifen Sie Maßnahmen zur Problembehebung. Die Erweiterung für die verwaltete Azure SQL-Datenbank-Instanz stellt Skripts zur Verfügung, die Sie ausführen können, um einige der gemeldeten Probleme zu beheben.
+Überprüfen Sie regelmäßig diese Empfehlungen, untersuchen Sie die Ursachen und ergreifen Sie Maßnahmen zur Problembehebung. Die SQL Managed Instance-Erweiterung stellt Skripts bereit, die Sie ausführen können, um einige der gemeldeten Probleme zu beheben.
 
 ## <a name="replicas"></a>Replikate
 
 Der dritte Bereich auf der Registerkarte **Verwaltete Instanz** zeigt Ihnen den Status von Datenbankreplikaten in Ihrer verwalteten Instanz an.
 
-[ ![Replikate verwalteter Instanzen](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
+[ ![Managed Instance-Replikate](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
 
 Auf der universellen Dienstebene verfügt jede Datenbank über ein einziges (primäres) Replikat. Auf der unternehmenskritischen Ebene der Instanz verfügt jede Datenbank über ein primäres und drei sekundäre Replikate, wobei eines für schreibgeschützte Workloads verwendet wird. Im Bereich **Replikate** können Sie den Synchronisierungsprozess überwachen und sicherstellen, dass alle sekundären Replikate synchron mit dem primären Replikat sind.
 
@@ -76,15 +76,15 @@ Auf der universellen Dienstebene verfügt jede Datenbank über ein einziges (pri
 
 Im vierten Bereich unter **Verwaltete Instanz** werden die aktuellsten und relevantesten SQL-Fehlerprotokolleinträge angezeigt.
 
-[ ![Protokolleinträge für verwaltete Instanzen](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
+[ ![Managed Instance-Protokolleinträge](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
 
 Obwohl Ihre verwaltete Instanz eine große Anzahl von Protokolleinträgen generiert, sind die meisten davon interne und Systeminformationen. Zudem enthalten einige Protokolleinträge physische Datenbanknamen (`GUID`-Werte) anstelle tatsächlicher logischer Datenbanknamen.
 
-Die Erweiterung für die verwaltete Azure SQL-Datenbank-Instanz filtert unnötige Protokolleinträge anhand der [Dimitri-Furman-Methode](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506) heraus. Außerdem zeigt die Erweiterung tatsächliche logische Dateinamen anstelle von physischen Namen an.
+Die SQL Managed Instance-Erweiterung filtert überflüssige Protokolleinträge anhand der [Dimitri-Furman-Methode](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506) heraus. Außerdem zeigt die Erweiterung tatsächliche logische Dateinamen anstelle von physischen Namen an.
 
 ## <a name="reporting-problems"></a>Melden von Problemen
 
-Wenn Sie Probleme mit der Erweiterung für die verwaltete Azure SQL-Datenbank-Instanz haben, melden Sie das Problem im [GitHub-Projekt zur Erweiterung](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues).
+Wenn Sie Probleme mit der Erweiterung für SQL Managed Instance haben, melden Sie das Problem im [GitHub-Projekt zur Erweiterung](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues).
 
 ## <a name="code-of-conduct"></a>Verhaltensregeln
 

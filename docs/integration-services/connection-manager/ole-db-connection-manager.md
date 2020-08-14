@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9068f7e2807c4883dc94094cd67d23ec04cf6a0a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7936a8f83bf110592e142f0ff7d033233592c64
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915084"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863385"
 ---
 # <a name="ole-db-connection-manager"></a>Teilcache
 
@@ -87,10 +87,10 @@ Sie haben folgende Möglichkeiten, um den OLE DB-Verbindungs-Manager zu konfigur
  Wählen Sie eine Datenverbindung aus, und löschen Sie sie mithilfe von **Löschen**.  
   
 #### <a name="managed-identities-for-azure-resources-authentication"></a>Verwaltete Identitäten für die Authentifizierung von Azure-Ressourcen
-Beim Ausführen von SSIS-Paketen in [Azure-SSIS Integration Runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime) können Sie die [verwaltete Identität](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity), die Ihrer Data Factory zugeordnet ist, zur Authentifizierung der Azure SQL-Datenbank (oder verwalteten Instanz) verwenden. Die angegebene Factory kann mithilfe dieser Identität auf Daten zugreifen und Daten aus der oder in die Datenbank kopieren.
+Beim Ausführen von SSIS-Paketen auf der [Azure-SSIS Integration Runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime) verwenden Sie die [verwaltete Identität](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity), die der Data Factory für die Authentifizierung mit Azure SQL-Datenbank oder Managed Instance zugeordnet ist. Die angegebene Factory kann mithilfe dieser Identität auf Daten zugreifen und Daten aus der oder in die Datenbank kopieren.
 
 > [!NOTE]
->  Wenn Sie Azure Active Directory (Azure AD)-Authentifizierung (einschließlich der Authentifizierung der verwalteten Identität) zum Herstellen einer Verbindung mit der Azure SQL-Datenbankinstanz (oder verwalteten Instanz) verwenden, kann es zu einem Problem bei der Paketausführung oder zu unerwarteten Verhaltensänderungen kommen. Weitere Informationen finden Sie unter [Features und Einschränkungen von Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+>  Wenn Sie die Azure Active Directory-Authentifizierung (einschließlich der Authentifizierung der verwalteten Identität) zum Herstellen einer Verbindung mit der Azure SQL-Datenbank-Instanz (oder Managed Instance) verwenden, kann es zu einem Problem bei der Paketausführung oder zu unerwarteten Behavior Changes kommen. Weitere Informationen finden Sie unter [Features und Einschränkungen von Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
 Damit Sie die Authentifizierung der verwalteten Identität für die Azure SQL-Datenbank verwenden können, führen Sie die folgenden Schritte zum Konfigurieren der Datenbank aus:
 
@@ -108,7 +108,7 @@ Damit Sie die Authentifizierung der verwalteten Identität für die Azure SQL-Da
     EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
-Damit Sie die Authentifizierung der verwalteten Identität für die verwaltete Azure SQL-Datenbankinstanz verwenden können, führen Sie die folgenden Schritte zum Konfigurieren der Datenbank aus:
+Führen Sie die folgenden Schritte zum Konfigurieren Ihrer Datenbank aus, um die Authentifizierung der verwalteten Identität für Azure SQL Managed Instance zu verwenden:
     
 1. [Stellen Sie einen Azure Active Directory-Administrator](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) für Ihre verwaltete Instanz im Azure-Portal bereit, wenn dies noch nicht geschehen ist. Der Azure AD-Administrator kann ein Azure AD-Benutzer oder eine Azure AD-Gruppe sein. Wenn Sie der Gruppe mit der verwalteten Identität eine Administratorrolle zuweisen, überspringen Sie die Schritte 2 bis 4. Der Administrator hat vollen Zugriff auf die Datenbank.
 

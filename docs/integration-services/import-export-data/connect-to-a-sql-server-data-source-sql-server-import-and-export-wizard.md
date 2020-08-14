@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 31a3cba341ee6d7ec8aada3bf620ab23ab55bf9f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f50c53d596c73565b3b5e56c27fa59fca0afe708
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920973"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790353"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer SQL Server-Datenquelle (SQL Server-Import/Export-Assistent)
 
@@ -67,7 +67,7 @@ Nachdem Sie **.NET Framework-Datenanbieter für SQL Server** auf der Seite **Dat
 ODBC-Treiber werden in der Dropdownliste der Datenquellen nicht aufgeführt. Wählen Sie zunächst **.NET Framework-Datenanbieter für ODBC** als Datenquelle aus, um eine Verbindung mit einem ODBC-Treiber herzustellen. Dieser Anbieter dient als Wrapper für den ODBC-Treiber.
 
 > [!TIP]
-> **Laden Sie den neuesten Treiber herunter**. Laden Sie [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339) herunter.
+> **Laden Sie den neuesten Treiber herunter**. Laden Sie [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql) herunter.
 
 In der folgenden Abbildung wird die generische Anzeige dargestellt, die Ihnen unmittelbar angezeigt wird, nachdem Sie „.NET Framework-Datenanbieter für ODBC“ ausgewählt haben.
 

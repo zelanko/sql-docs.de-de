@@ -21,12 +21,12 @@ ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 272bfdacbf11207539f75c2c51045eff4e8c5c90
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3a92f830f4880278afacf10f59072b29dede6026
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112189"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863409"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version: Transact SQL-Konfigurationsfunktionen
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "87112189"
 > [!NOTE]  
 > Derzeit ist ein Problem bekannt, durch das @@VERSION die falsche Produktversion für Azure SQL-Datenbank meldet. Die von Azure SQL-Datenbank ausgeführte Version der SQL Server-Datenbank-Engine ist im Gegensatz zur lokalen Version von SQL Server immer aktuell und enthält die neuesten Sicherheitspatches. Die Patchstufe entspricht also der lokalen Version von SQL Server oder ist aktueller als diese. Außerdem sind die neuesten SQL Server-Features in Azure SQL-Datenbank verfügbar.
 >
-> Um die Edition der Engine programmgesteuert zu ermitteln, können Sie die Anweisung SELECT SERVERPROPERTY('EngineEdition') verwenden. Diese Abfrage gibt für Singletons/Pools für elastische Datenbanken „5“ und für verwaltete Instanzen in Azure SQL-Datenbank „8“ zurück. 
+> Um die Edition der Engine programmgesteuert zu ermitteln, können Sie die Anweisung SELECT SERVERPROPERTY('EngineEdition') verwenden. Diese Abfrage gibt „5“ für Azure SQL-Datenbank und „8“ für Azure SQL Managed Instance zurück.
 >
 > Sobald dieses Problem behoben ist, wird die Dokumentation aktualisiert.
 

@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad86aa823fc10827e8f0d11aaf36ae10fc0622bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: aee1c65fb03dcbf192c3f33fc4750bf496b05c77
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112549"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988211"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,10 +61,10 @@ Weitere Informationen zu Syntaxkonventionen finden Sie unter [Transact-SQL-Synta
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL-Datenbank](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -867,10 +867,10 @@ GO
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken\*_**
+        **_\* SQL-Datenbank \*_**
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -882,11 +882,11 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL-Datenbank Singleton/Pool für elastische Datenbanken
+## <a name="sql-database"></a>SQL-Datenbank
 
 ## <a name="overview"></a>Übersicht
 
-Im [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Datenbank Singleton/Pool für elastische Datenbanken kann diese Anweisung zusammen mit einer Azure SQL Server-Instanz verwendet werden, um eine einzelne Datenbank oder eine Datenbank in einem Pool für elastische Datenbanken zu erstellen. Mit dieser Anweisung geben Sie für die neue Datenbank den Datenbanknamen, die Sortierung, die maximale Größe, die Edition, das Dienstziel und ggf. den Pool für elastische Datenbanken an. Mit ihr lässt sich auch die Datenbank in einem Pool für elastische Datenbanken erstellen. Außerdem kann sie verwendet werden, um eine Kopie der Datenbank auf einem anderen SQL-Datenbankserver zu erstellen.
+Diese Anweisung kann in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mit einem Azure SQL-Server verwendet werden, um ein Singleton oder einen Pool für elastische Datenbanken zu erstellen. Mit dieser Anweisung geben Sie für die neue Datenbank den Datenbanknamen, die Sortierung, die maximale Größe, die Edition, das Dienstziel und ggf. den Pool für elastische Datenbanken an. Mit ihr lässt sich auch die Datenbank in einem Pool für elastische Datenbanken erstellen. Außerdem kann sie verwendet werden, um eine Kopie der Datenbank auf einem anderen SQL-Datenbankserver zu erstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -973,7 +973,7 @@ CATALOG_COLLATION gibt die Standardsortierung für den Metadatenkatalog an. *DAT
 
 EDITION gibt die Dienstebene der Datenbank an.
 
-Einzelne und in einem Pool zusammengefasste Datenbanken auf einem Singleton/Pool für elastische Datenbanken. Die verfügbaren Werte sind: „Basic“, „Standard“, „Premium“, „GeneralPurpose“, „BusinessCritical“ und „Hyperscale“.
+Einzel- und Pooldatenbanken Die verfügbaren Werte sind: „Basic“, „Standard“, „Premium“, „GeneralPurpose“, „BusinessCritical“ und „Hyperscale“.
 
 MAXSIZE gibt die maximale Größe der Datenbank an. MAXSIZE muss für die angegebene EDITION (Dienstebene) gültig sein. Im Folgenden sind die unterstützten MAXSIZE-Werte und die Standardwerte (S) für die Dienstebenen aufgeführt.
 
@@ -1273,10 +1273,10 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL-Datenbank](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL-Datenbank<br />verwaltete Instanz \*_**
+        **_\* SQL-Datenbank<br />Verwaltete Instanz \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1288,11 +1288,11 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Verwaltete Azure SQL-Datenbank-Instanz.
+## <a name="azure-sql-managed-instance"></a>Verwaltete Azure SQL-Instanz
 
 ## <a name="overview"></a>Übersicht
 
-In einer verwalteten Azure SQL-Datenbank-Instanz wird diese Anweisung zum Erstellen einer Datenbank verwendet. Wenn Sie eine Datenbank in einer verwalteten Instanz erstellen, geben Sie den Datenbanknamen und die Sortierung ein.
+Diese Anweisung wird in Azure SQL Managed Instance verwendet, um eine Datenbank zu erstellen. Wenn Sie eine Datenbank in einer verwalteten Instanz erstellen, geben Sie den Datenbanknamen und die Sortierung ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -1357,10 +1357,10 @@ Siehe [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL-Datenbank](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -1482,10 +1482,10 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](create-database-transact-sql.md?view=azuresqldb-current)
+        [SQL-Datenbank](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL-Datenbank<br />verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL-Datenbank<br />Verwaltete Instanz](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
