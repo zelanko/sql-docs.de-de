@@ -1,4 +1,5 @@
 ---
+description: Sicherheit von Datenbankobjekten (Master Data Services)
 title: Sicherheit von Datenbankobjekten
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 656b36f796d05d6ea7533c8c35e4b6ffe9572f99
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f9b2089b72f11872df0dc0c0b2758fb8272a4c06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344906"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicherheit von Datenbankobjekten (Master Data Services)
 
@@ -42,7 +43,7 @@ ms.locfileid: "85811581"
   
 -   [Konfigurieren von Systemeinstellungen](#SysSettings)  
   
-##  <a name="staging-data"></a><a name="Staging"></a>Staging von Daten  
+##  <a name="staging-data"></a><a name="Staging"></a> Staging von Daten  
  In der folgenden Tabelle weist jedes sicherungsfähige Element „Name“ als Teil des Namens auf. Dies gibt den Namen der Stagingtabelle an, die angegeben wird, wenn eine Entität erstellt wird. Weitere Informationen finden Sie unter [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 |Aktion|Sicherungsfähige Elemente|Berechtigungen|  
@@ -57,7 +58,7 @@ ms.locfileid: "85811581"
   
  Weitere Informationen finden Sie unter [Übersicht: Importieren von Daten aus Tabellen &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="validating-data-against-business-rules"></a><a name="rules"></a>Validieren von Daten anhand von Geschäftsregeln  
+##  <a name="validating-data-against-business-rules"></a><a name="rules"></a> Validieren von Daten anhand von Geschäftsregeln  
   
 |Aktion|Sicherungsfähiges Element|Berechtigungen|  
 |------------|---------------|-----------------|  
@@ -65,7 +66,7 @@ ms.locfileid: "85811581"
   
  Weitere Informationen finden Sie unter [Gespeicherte Überprüfungsprozedur &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
-##  <a name="deleting-versions"></a><a name="Versions"></a>Löschen von Versionen  
+##  <a name="deleting-versions"></a><a name="Versions"></a> Löschen von Versionen  
   
 |Aktion|Sicherungsfähige Elemente|Berechtigungen|  
 |------------|----------------|-----------------|  
@@ -74,7 +75,7 @@ ms.locfileid: "85811581"
   
  Weitere Informationen finden Sie unter [Löschen einer Version &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md).  
   
-##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>Sofortiges Anwenden von Hierarchie Element Berechtigungen  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a> Sofortiges Anwenden von Hierarchie Element Berechtigungen  
   
 |Aktion|Sicherungsfähige Elemente|Berechtigungen|  
 |------------|----------------|-----------------|  
@@ -82,7 +83,7 @@ ms.locfileid: "85811581"
   
  Weitere Informationen finden Sie unter [Sofortiges Anwenden von Elementberechtigungen &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="configuring-system-settings"></a><a name="SysSettings"></a>Konfigurieren von System Einstellungen  
+##  <a name="configuring-system-settings"></a><a name="SysSettings"></a> Konfigurieren von System Einstellungen  
  Sie können bestimmte Systemeinstellungen konfigurieren, um das Verhalten in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]zu steuern. Sie können diese Einstellungen in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] oder, wenn Sie über die Zugriffsberechtigung UPDATE verfügen, direkt in die Datenbanktabelle mdm.tblSystemSetting anpassen. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

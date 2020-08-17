@@ -1,4 +1,5 @@
 ---
+description: Microsoft Access-Datentypen
 title: Microsoft Access-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 024fb65b6fdc81ae0a8e007d1cee150c6a35b91c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24428c436e9e60c8ca5e42288b217f2c576cbd0d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340766"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access-Datentypen
 In der folgenden Tabelle werden die Microsoft Access-Datentypen, Datentypen zum Erstellen von Tabellen und ODBC-SQL-Datentypen angezeigt.  
@@ -33,7 +34,7 @@ In der folgenden Tabelle werden die Microsoft Access-Datentypen, Datentypen zum 
 |BINARY|BINARY|SQL_BINARY|  
 |BIT|BIT|SQL_BIT|  
 |Indikator|Indikator|SQL_INTEGER|  
-|CURRENCY|CURRENCY|SQL_NUMERIC|  
+|WÄHRUNG|WÄHRUNG|SQL_NUMERIC|  
 |Datum/Uhrzeit|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
 |lange Binärdatei|LONGBINARY|SQL_LONGVARBINARY|  

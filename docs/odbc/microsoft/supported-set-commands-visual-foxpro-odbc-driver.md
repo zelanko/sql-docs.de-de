@@ -1,4 +1,5 @@
 ---
+description: Unterstützte SET-Befehle (Visual FoxPro-ODBC-Treiber)
 title: Unterstützte Set-Befehle (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4139751de61738903e4e152535fb75bf30a97a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7e12155377159acbc1816db503d846272afb58b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339506"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>Unterstützte SET-Befehle (Visual FoxPro-ODBC-Treiber)
 Die Anwendung kann die folgenden Visual FoxPro- **Set** -Befehle an eine Datenquelle senden:  

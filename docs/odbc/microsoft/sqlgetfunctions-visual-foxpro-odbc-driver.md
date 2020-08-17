@@ -1,4 +1,5 @@
 ---
+description: SQLGetFunctions (Visual FoxPro-ODBC-Treiber)
 title: SQLGetFunctions (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: af7ad2368847ff271dcf81759d6fa06b8a79fb0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df1413b657ec4631390525a702a625ba480e9f7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340116"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
@@ -31,7 +32,7 @@ ms.locfileid: "81298610"
   
  Der Visual FoxPro-ODBC-Treiber unterstützt alle ODBC-API-Kernfunktionen und Funktionen der Ebene 1. In der folgenden Tabelle wird angegeben, ob der Treiber eine bestimmte Ebene 2-Funktion unterstützt.  
   
-|*Funktion*|Unterstützt|  
+|*Function*|Unterstützt|  
 |----------------|---------------|  
 |SQL_API_SQLBROWSECONNECT|Nein|  
 |SQL_API_SQLCOLUMNPRIVELEGES|Nein|  

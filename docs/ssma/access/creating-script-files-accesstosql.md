@@ -1,4 +1,5 @@
 ---
+description: Erstellen von Skriptdateien (accesstosql)
 title: Erstellen von Skriptdateien (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b81892edd4605960a50c63aa61ed65d1522d42ec
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 52fb350d3dcf06cb215a723cb9c98402d44f0d21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320896"
 ---
 # <a name="creating-script-files-accesstosql"></a>Erstellen von Skriptdateien (accesstosql)
 Der erste Schritt vor dem Starten der SSMA-Konsolenanwendung besteht darin, die Skriptdatei zu erstellen und bei Bedarf die Variablen Wert Datei und die Server Verbindungs Datei zu erstellen.  

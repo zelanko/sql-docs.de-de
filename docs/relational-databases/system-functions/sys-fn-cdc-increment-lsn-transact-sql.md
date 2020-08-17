@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_increment_lsn (Transact-SQL)
 title: sys. fn_cdc_increment_lsn (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6907b5df12a655d6444981afa4a84a2753d22f53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4ad4595995bc6768c4b0b5e297155530316a9d04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321566"
 ---
 # <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
 ## <a name="return-type"></a>Rückgabetyp  
  **binary(10)**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der von der Funktion zurückgegebene LSN-Wert ist immer größer als der angegebene Wert. Zwischen den beiden Werten befinden sich keine LSN-Werte.  
   
  Wenn Sie einen Änderungsdatenstrom systematisch im Verlauf der Zeit abfragen möchten, können Sie den Abfragefunktionsaufruf immer dann periodisch wiederholen, wenn ein neues Abfrageintervall zum Begrenzen der Änderungen in der Abfrage zurückgegeben wird. Um sicherzustellen, dass keine Daten verloren gehen, wird häufig die obere Grenze der vorherigen Abfrage verwendet, um die untere Grenze der nachfolgenden Abfrage zu generieren. Da es sich beim Abfrageintervall um ein geschlossenes Intervall handelt, muss die neue untere Grenze höher als die vorherige obere Grenze liegen, während sie zugleich niedrig genug liegen muss, um sicherzustellen, dass keine Änderungen mit LSN-Werten zwischen diesem Wert und der alten oberen Grenze vorhanden sind. Es wird die Funktion sys.fn_cdc_increment_lsn verwendet, um diesen Wert zu erhalten.  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_database_sessions (Azure SQL-Datenbank)
 title: sys. dm_xe_database_sessions (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -9,12 +10,12 @@ ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ccb292c21cda8a335f1630b08d462f183a1f25e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d49c252a60cdf08c7ac55c287333de9805d5ff26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85675762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322716"
 ---
 # <a name="sysdm_xe_database_sessions-azure-sql-database"></a>sys.dm_xe_database_sessions (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85675762"
 ### <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
 Ab 2015-07-13 ist ' sys. dm_xe_objects ' eine dieser xevents-DMVs, die im Namen ' _database ' nicht enthalten. Kein Tippfehler oder Fehler in der rechten Spalte der folgenden Tabelle. Der Name ist in Microsoft SQL Server und in der Azure SQL-Datenbank identisch.  
   
-|From|To|Beziehung|  
+|Von|An|Beziehung|  
 |--------|------|----------------|  
 |sys. dm_xe_database_session_events. event_session_address|sys. dm_xe_database_sessions. Address|n:1|  
 |sys. dm_xe_database_session_events. event_package_guid, sys. dm_xe_database_session_events. event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|n:1|  

@@ -1,4 +1,5 @@
 ---
+description: Endgültiges Löschen von Versionselementen (Master Data Services)
 title: Endgültiges Löschen von Versionselementen
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0dc8e60b6cfe7d729aca36cc5e4a2203cf281129
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 490841c151fc4636e2a5ed8a252de0fb3385c042
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342796"
 ---
 # <a name="purge-version-members-master-data-services"></a>Endgültiges Löschen von Versionselementen (Master Data Services)
 

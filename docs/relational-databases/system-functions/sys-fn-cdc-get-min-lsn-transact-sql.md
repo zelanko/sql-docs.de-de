@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_get_min_lsn (Transact-SQL)
 title: sys. fn_cdc_get_min_lsn (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6a777b64fbebc9a97762949ccbd895d052c6260
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 642a4e846e6da836ff296f8d271d21603ff84865
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321686"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ## <a name="return-types"></a>Rückgabetypen  
  **binary(10)**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Gibt 0x00000000000000000000 zurück, wenn die Aufzeichnungsinstanz nicht vorhanden oder der Aufrufer nicht berechtigt ist, auf die Änderungsdaten zuzugreifen, die der Aufzeichnungsinstanz zugeordnet sind.  
   
  Diese Funktion dient gewöhnlich zum Identifizieren des unteren Endpunkts der Change Data Capture-Zeitachse, die einer Aufzeichnungsinstanz zugeordnet ist. Außerdem können Sie mit dieser Funktion vor der Anforderung von Änderungsdaten überprüfen, ob die Endpunkte eines Abfragebereichs innerhalb der Zeitachse der Aufzeichnungsinstanz liegen. Es ist wichtig, solche Überprüfungen durchzuführen, da sich der niedrige Endpunkt einer Aufzeichnungs Instanz ändert, wenn ein Bereinigung für die Änderungs Tabellen ausgeführt wird. Falls ein längerer Zeitraum zwischen den Anforderungen von Änderungsdaten vergeht, könnte sogar ein niedriger Endpunkt, der auf den oberen Endpunkt der vorherigen Anforderung von Änderungsdaten festgelegt wurde, außerhalb der aktuellen Zeitachse liegen.  

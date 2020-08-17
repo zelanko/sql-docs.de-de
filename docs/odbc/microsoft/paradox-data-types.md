@@ -1,4 +1,5 @@
 ---
+description: Paradox-Datentypen
 title: Paradox-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a85cf643a6d22b9b2fce15984539d74dc43c62ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44494e9945a84f978449b6bab02bd967e40d9a20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340456"
 ---
 # <a name="paradox-data-types"></a>Paradox-Datentypen
 Der ODBC-Paradox-Treiber ordnet den ODBC-SQL-Datentypen die Paradox-Datentypen zu. In der folgenden Tabelle werden alle Paradox-Datentypen aufgelistet und die ODBC-SQL-Datentypen angezeigt, denen Sie zugeordnet sind.  

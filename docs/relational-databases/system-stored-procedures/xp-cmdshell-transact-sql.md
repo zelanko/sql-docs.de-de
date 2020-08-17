@@ -1,4 +1,5 @@
 ---
+description: xp_cmdshell (Transact-SQL)
 title: xp_cmdshell (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/01/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9faada50dc5e48f0b3835f65c69a2a1d130e7594
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ae4a2ca88d6c0ffd76e489e7cda186bbedf2471a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374136"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der von **xp_cmdshell** erzeugte Windows-Prozess hat die gleichen Sicherheitsrechte wie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto.  
   
  **xp_cmdshell** erfolgt synchron. Die Steuerung wird erst dann an den Aufrufer zurückgegeben, wenn der Befehl der Befehlsshell abgeschlossen wurde.  

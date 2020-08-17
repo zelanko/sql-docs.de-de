@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (Typzuordnung) (OracleToSQL)
 title: Projekteinstellungen (Typzuordnung) (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ab1b453fb85d7b9c6ee0cf9a271c1af55a337b4a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0facd2ecca0ff6cc0a4bc28fe709a7adfc0c5acf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320446"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Projekteinstellungen (Typzuordnung) (OracleToSQL)
 Die Seite Typzuordnung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, die anpassen, wie SSMA Oracle-Datentypen in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen konvertiert.  
@@ -28,7 +29,7 @@ Die Seite Typzuordnung ist in den Dialogfeldern **Projekteinstellungen** und **S
   
 Verwenden Sie die Registerkarte **Typzuordnung** im primären SSMA-Fenster, um Einstellungen für das aktuelle Objekt oder die Klasse von Objekten anzugeben.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 In der folgenden Tabelle werden die Registerkarten Optionen für die **Typzuordnung** angezeigt:  
   
 **Quelltyp**  
@@ -106,9 +107,9 @@ Die folgende Tabelle enthält die standardmäßige Datentyp Zuordnung für Argum
 |VARCHAR2|varchar(max)|  
 |XmlType|Xml|  
   
-<sup>*</sup>Gilt nur für die Rückgabe Werttyp Zuordnung.  
+<sup>*</sup> Gilt nur für die Rückgabe Werttyp Zuordnung.  
   
-<sup>**</sup>Gilt nur für die Argument Typzuordnung.  
+<sup>**</sup> Gilt nur für die Argument Typzuordnung.  
   
 ### <a name="default-column-type-mapping"></a>Standardmäßige Spaltentyp Zuordnung  
 Die folgende Tabelle enthält die Standardtyp Zuordnung für-Spalten.  
@@ -234,7 +235,7 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung für lokale Variablen.
 |NCHAR variiert [*. 4000]|nvarchar [*]|  
 |NCHAR-Variation [4001.. *]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Number|float [53]|  
+|Zahl|float [53]|  
 |Zahl [*.. \* ]|numerisch [*]|  
 |Zahl [*.. \* ] [\*..\*]|numerisch [*] [ \* ]|  
 |Numerisch|numerisch [38] [0]|  

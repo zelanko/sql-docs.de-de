@@ -1,4 +1,5 @@
 ---
+description: Aktualisieren der Datenbank (OracleToSQL)
 title: Aktualisieren aus der Datenbank (oracletosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 694953d914b9811208f2ea143f93e2c91878f07b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 66bb67e64f3b95b78cdcf78d84145df25a02d4b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320176"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Aktualisieren der Datenbank (OracleToSQL)
 Im Dialogfeld **aus Datenbank aktualisieren** können Sie auswählen, welche Objekte aus der Oracle-Datenbank aktualisiert werden sollen. Zeilen im Dialogfeld sind basierend auf dem Status der Metadaten farblich codiert:  
@@ -32,7 +33,7 @@ Sie können im Dialogfeld **Projekteinstellungen** die Standardeinstellungen fü
   
 Um auf das Dialogfeld **aus Datenbank aktualisieren** zuzugreifen, klicken Sie mit der rechten Maustaste auf ein Objekt im Oracle Metadata Explorer, und klicken Sie dann auf **aus Datenbank aktualisieren**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Reduzieren (-)**  
 Reduzieren Sie alle Objektgruppen, um einzelne Objekte auszublenden.  
   

@@ -1,4 +1,5 @@
 ---
+description: Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien (Master Data Services)
 title: Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c8f0a7536605af05457de13ebcd2011083386010
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9a6c606cf05189d7845db6615add2365efb90c5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342426"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien (Master Data Services)
 
@@ -72,7 +73,7 @@ ms.locfileid: "85811394"
   
  m:n-Ebenen können genau wie andere abgeleitete Hierarchieebenen ausgeblendet werden.  
    
-### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a>M2M-Beziehung im Beispielmodell  
+### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a> M2M-Beziehung im Beispielmodell  
 Eine Vorführung einer m:n-Beziehung finden Sie in der abgeleiteten Hierarchie „Region Climate“ (regionales Klima) im Beispielmodell „Customer“, das in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]enthalten ist.   
   
 Wie in der folgenden Abbildung gezeigt, lautet der Ebenenname, der diese Beziehung modelliert, ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapped via RegionClimate.Region)**(Klima (über RegionClimate.Region zugeordnet)). ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** (Vorschau) zeigt die Regionen gruppiert nach den Klimatypen, denen sie zugeordnet sind. Hierbei handelt es sich um eine m:n-Beziehung, weil einige Regionen (untergeordnete Elemente) mehreren Klimata (übergeordneten Elementen) zugeordnet sind. So ist ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** (Asien/Pazifik) z.B. ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** (Tropisch) und ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**(Trocken) zugeordnet.  
@@ -90,7 +91,7 @@ Eine Anleitung zum Bereitstellen des Customer-Beispielmodells und weitere in [!I
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="member-security"></a><a name="bkmk_member_security"></a>Element Sicherheit  
+##  <a name="member-security"></a><a name="bkmk_member_security"></a> Element Sicherheit  
  Eine Hierarchie, die das Kopieren von Elementen ermöglicht (dadurch kann ein Element mehrere übergeordnete Elemente aufweisen), kann nicht dazu verwendet werden, um Elementsicherheitsberechtigungen zuzuweisen. Beispiel:  
   
 -   Eine rekursive abgeleitete Hierarchie, die keine Null-Rekursionen verankert (jedes Element der rekursiven Ebene wird sowohl unter ROOT als auch unter seinem rekursiven übergeordneten Element angezeigt).  

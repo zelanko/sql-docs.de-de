@@ -1,4 +1,5 @@
 ---
+description: Löschen einer expliziten Hierarchie (Master Data Services)
 title: Löschen einer expliziten Hierarchie
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d49665fff9fe5821bf5cb38e908202483f2250b5
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e2ce835a8ac38b13557cc412a83d7f18f2d05e4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345206"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>Löschen einer expliziten Hierarchie (Master Data Services)
 

@@ -1,4 +1,5 @@
 ---
+description: Anzeigen von Testfallberichten (OracleToSQL)
 title: Anzeigen von Test Fall berichten (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 38097cda1a014c173f96657f5758a95b9d266f6a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 62dfe8db323cfbf640ca1dc0f7df5e0c78aec3a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320036"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>Anzeigen von Testfallberichten (OracleToSQL)
 Der Bericht "Test Fall" zeigt die Test Überprüfungs Ergebnisse und allgemeine Test Informationen an. Bei einem Test Fehler werden auch Informationen zu nicht übereinstimmenden Daten in verifizierten Objekten angezeigt.  

@@ -1,4 +1,5 @@
 ---
+description: Union-MDX-Operator Referenz
 title: + Union (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cd352b95853cc5fe52857a080b6ca2e515f5c013
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 84e6bc2b6b8460b90013ade5f0981af7f0ed8432
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341189"
 ---
 # <a name="union---mdx-operator-reference"></a>Union-MDX-Operator Referenz
 
@@ -35,7 +36,7 @@ Set_Expression + Set_Expression
  Eine Menge, die die Elemente der beiden angegebenen Mengen enthält.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Der **+ (Union)** -Operator ist funktionell gleichwertig mit der&#41;-Funktion der [Union-&#40;MDX](../mdx/union-mdx.md) .  
+ Der **+ (Union)** -Operator ist funktionell gleichwertig mit der&#41;-Funktion der [Union-&#40;MDX ](../mdx/union-mdx.md) .  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel zeigt die Verwendung dieses Operators.  

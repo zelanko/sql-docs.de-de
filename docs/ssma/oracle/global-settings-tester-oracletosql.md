@@ -1,4 +1,5 @@
 ---
+description: Globale Einstellungen (Tester) (OracleToSQL)
 title: Globale Einstellungen (Tester) (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,19 +11,19 @@ ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 12ca00b130367495ba725627b7fbd5c523505387
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 789d2cbb22e03053ab8f03e0bdd50b6383ea788e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320396"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Globale Einstellungen (Tester) (OracleToSQL)
 Verwenden Sie die Seite Tester des Dialog Felds **globale Einstellungen** , um Einstellungen für SSMA-Tester anzugeben.  
   
 Um **auf die Tester** -Einstellungen zuzugreifen, wählen Sie im Menü Extras die Option **globale Einstellungen**aus, und klicken Sie unten im linken Bereich auf **Tester** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Test fähige Objektanalyse**  
 Diese Einstellung gibt an, ob die Analyse der Test fähigen Objekte durchgeführt werden soll. Wählen Sie **Ja** aus, wenn der SSMA-Tester die abhängigen Objekte analysieren und automatisch überprüfen soll. Der Standard Options Satz ist " **Ja**".  
   

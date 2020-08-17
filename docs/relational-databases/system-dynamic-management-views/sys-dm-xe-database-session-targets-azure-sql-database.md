@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_database_session_targets (Azure SQL-Datenbank)
 title: sys.dm_xe_database_session_targets
 titleSuffix: Azure SQL Database
 ms.date: 06/10/2016
@@ -11,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7cc1e66845d07dca1dcb5efeb597751fc3ae55e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aca1f507ef04815030c358b0f25d373856ca798f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85675971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322846"
 ---
 # <a name="sysdm_xe_database_session_targets-azure-sql-database"></a>sys.dm_xe_database_session_targets (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85675971"
   
 ### <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|From|To|Beziehung|  
+|Von|An|Beziehung|  
 |----------|--------|------------------|  
 |sys. dm_xe_database_session_targets. event_session_address|sys. dm_xe_database_sessions. Address|n:1|  
   

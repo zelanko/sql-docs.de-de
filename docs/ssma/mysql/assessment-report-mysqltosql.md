@@ -1,4 +1,5 @@
 ---
+description: Bewertungsbericht (MySqlToSql)
 title: Bewertungsbericht (mysqldesql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 362a1a5a79fa61b90ea02382018979a003f54424
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6db16aab94dccd4d347325af36c9957f19168059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320616"
 ---
 # <a name="assessment-report-mysqltosql"></a>Bewertungsbericht (MySqlToSql)
 Im Fenster Bewertungsbericht werden die Ergebnisse der Konvertierung von Datenbankobjekten in die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax angezeigt. Außerdem können Sie die Komplexität und die Kosten ihrer Migrationsprojekte schätzen.  
   
 Um auf den Bewertungsbericht zuzugreifen, wählen Sie im quellmetadatenexplorer zu konvertierende Objekte aus, klicken Sie mit der rechten Maustaste auf **Schemas**, und wählen Sie dann **Bericht erstellen**  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 |||  
 |-|-|  
