@@ -1,4 +1,5 @@
 ---
+description: ADO-Programmieraufgaben Tabelle
 title: ADO-Task-Tabelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cfae068fdac58f7e6e6d1320b301aa9c52701dd4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2793674d8952af09856d37400a2d0c34c97aa720
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355386"
 ---
 # <a name="ado-programming-task-table"></a>ADO-Programmieraufgaben Tabelle
 In der folgenden Tabelle werden die im *ADO-Programmier Handbuch* enthaltenen Programmieraufgaben aufgelistet, und es werden Verweise auf die einzelnen Aufgaben bereitgestellt. Diese Verweise können Textbeschreibungen oder Codebeispiele sein, in denen Sie Informationen über die ADO-Funktion finden können, die die Aufgabe ausführt.
 
-|ADO-Aufgabe|Referenzen|
+|ADO-Aufgabe|References|
 |--------------|----------------|
 |Herstellen einer Verbindung mit einem Datenanbieter|[Herstellen einer Verbindung mit Datenquellen](../../ado/guide/data/connecting-to-data-sources.md)|
 |Ausführen von Befehlen oder Aufrufen gespeicherter Prozeduren|[Vorbereiten und Ausführen von Befehlen](../../ado/guide/data/preparing-and-executing-commands.md)|

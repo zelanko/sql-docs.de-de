@@ -1,4 +1,5 @@
 ---
+description: MDX-Datendefinition – REFRESH CUBE
 title: REFRESH CUBE-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 957609573c206b7c3492789c369d0fb2be2398a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05ae95c97ae21d3b8ff7b4e457cf3ddf8cc38989
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387054"
 ---
 # <a name="mdx-data-definition---refresh-cube"></a>MDX-Datendefinition – REFRESH CUBE
 
@@ -32,7 +33,7 @@ REFRESH CUBECube_Name
  Ein gültiger Zeichenfolgenausdruck, der einen Cubenamen bereitstellt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Bei Client Anwendungen, die mit einer Instanz [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]von verbunden sind, bewirkt diese Anweisung, dass der in der Client Anwendung zwischengespeicherte Arbeitsspeicher mit dem Server synchronisiert wird. Erkennung und Update erfolgen zwar normalerweise automatisch, die zeitlichen Abstände hängen aber von den Einstellungen der Clientverbindungszeichenfolge ab. Die REFRESH CUBE-Anweisung aktualisiert die Daten sofort.  
+ Bei Client Anwendungen, die mit einer Instanz von verbunden [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sind, bewirkt diese Anweisung, dass der in der Client Anwendung zwischengespeicherte Arbeitsspeicher mit dem Server synchronisiert wird. Erkennung und Update erfolgen zwar normalerweise automatisch, die zeitlichen Abstände hängen aber von den Einstellungen der Clientverbindungszeichenfolge ab. Die REFRESH CUBE-Anweisung aktualisiert die Daten sofort.  
   
  Bei Clientanwendungen, die eine Verbindung zu einem lokalen Cube besitzen, veranlasst die REFRESH CUBE-Anweisung die Neuerstellung der lokalen Cubedatei.  
   

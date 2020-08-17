@@ -1,4 +1,5 @@
 ---
+description: Bewertungsbericht (SybaseToSQL)
 title: Bewertungsbericht (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 11b47065fe180956d58361ec80eda1dac25fa4b1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5bf7a2ac886165fa4228f78394065124a05bb67a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372386"
 ---
 # <a name="assessment-report-sybasetosql"></a>Bewertungsbericht (SybaseToSQL)
 Im Fenster Bewertungsbericht werden die Ergebnisse der Konvertierung von Datenbankobjekten in die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax angezeigt. Außerdem können Sie die Komplexität und die Kosten ihrer Migrationsprojekte schätzen.  
   
 Um auf den Bewertungsbericht zuzugreifen, wählen Sie im quellmetadatenexplorer zu konvertierende Objekte aus, klicken Sie mit der rechten Maustaste auf **Datenbanken**, und wählen Sie dann **Bericht**  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Konvertierungs Statistik**  
 Zeigt die Konvertierungs Statistik nach Anweisungs Typ an. Dieser Bereich ist nur sichtbar, wenn im linken Bereich ein Gruppen Objekt, z. b. ein Schema, oder ein Objekt ohne Code ausgewählt ist.  
   

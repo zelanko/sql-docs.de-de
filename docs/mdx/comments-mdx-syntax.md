@@ -1,4 +1,5 @@
 ---
+description: Kommentare (MDX-Syntax)
 title: Kommentare (MDX-Syntax) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1ffcb57a48c7d6e265daa786912cfd37f0b43754
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8fa1312e361bf0ef673254c0eb804ed7b8b7ca7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387675"
 ---
 # <a name="comments-mdx-syntax"></a>Kommentare (MDX-Syntax)
 
@@ -34,8 +35,8 @@ ms.locfileid: "68001530"
  -- (doppelte Bindestriche)  
  Diese Kommentarzeichen können in derselben Zeile wie der auszuführende Code oder in einer gesonderten Zeile verwendet werden. Der gesamte Text zwischen den doppelten Bindestrichen und dem Ende der Zeile ist Teil des Kommentars. Bei einem Kommentar, der sich über mehrere Zeilen erstreckt, muss jede der Kommentarzeilen mit doppelten Bindestrichen beginnen. Weitere Informationen finden Sie unter [--&#40;comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md).  
   
- /* ... \*/(Schrägstrich/Sternchen-Zeichenpaare)  
- Diese Kommentarzeichen können in derselben Zeile wie Code, der ausgeführt werden soll, in Zeilen selbst oder sogar innerhalb von ausführbarem Code verwendet werden. Alles vom geöffneten Kommentar Paar (/\*) bis zum schließenden Kommentar Paar (\*/) wird als Teil des Kommentars behandelt. Bei einem mehrzeiligen Kommentar muss das öffnende Kommentarzeichen Paar (/\*) den Kommentar starten, und das schließende Kommentarzeichen Paar (\*/) muss den Kommentar beenden. Die Zeilen des Kommentars dürfen keine anderen Kommentarzeichen enthalten. Weitere Informationen finden Sie unter [/*... / \*(Kommentar)](../mdx/comment-mdx.md).  
+ /* ... \* /(Schrägstrich/Sternchen-Zeichenpaare)  
+ Diese Kommentarzeichen können in derselben Zeile wie Code, der ausgeführt werden soll, in Zeilen selbst oder sogar innerhalb von ausführbarem Code verwendet werden. Alles vom geöffneten Kommentar Paar (/) bis zum schließenden \* Kommentar Paar ( \* /) wird als Teil des Kommentars behandelt. Bei einem mehrzeiligen Kommentar muss das öffnende Kommentarzeichen Paar (/ \* ) den Kommentar starten, und das schließende Kommentarzeichen Paar ( \* /) muss den Kommentar beenden. Die Zeilen des Kommentars dürfen keine anderen Kommentarzeichen enthalten. Weitere Informationen finden Sie unter [/*... \* /(Kommentar)](../mdx/comment-mdx.md).  
   
 ## <a name="example"></a>Beispiel  
  Die folgende Abfrage zeigt Beispiele für alle drei Kommentartypen:  

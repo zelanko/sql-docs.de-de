@@ -1,5 +1,6 @@
 ---
-title: '&gt;(Größer als) (DMX) | Microsoft-Dokumentation'
+description: '&gt; (Größer als) DMX'
+title: '&gt; (Größer als) (DMX) | Microsoft-Dokumentation'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 67ba5385ab11091ca45b50556fe63983fee01aac
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6f9c1ff74627f4fac5d9fb158b387b29e2ca1915
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352896"
 ---
-# <a name="gt-greater-than-dmx"></a>&gt;(Größer als) DMX
+# <a name="gt-greater-than-dmx"></a>&gt; (Größer als) DMX
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Führt eine Vergleichsoperation aus, bei der ermittelt wird, ob der Wert eines DMX-Ausdrucks (Data Mining Extensions) größer als der Wert eines anderen DMX-Ausdrucks ist.  

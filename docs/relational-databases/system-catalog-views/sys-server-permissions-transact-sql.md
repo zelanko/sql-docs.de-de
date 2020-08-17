@@ -1,4 +1,5 @@
 ---
+description: sys.server_permissions (Transact-SQL)
 title: sys. server_permissions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/20/2019
@@ -20,11 +21,12 @@ ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd686ca45bb5830d9abbd7b0e9119007ed4be060
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: a8f0541d743ea7feaa8991c2b085173b4c6e8f40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376936"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -41,7 +43,7 @@ ms.locfileid: "86091734"
 |**grantor_principal_id**|**int**|Serverprinzipal-ID des Berechtigenden dieser Berechtigungen.|  
 |**type**|**char (4)**|Typ der Serverberechtigung. Eine Liste der Berechtigungstypen finden Sie in der folgenden Tabelle.|  
 |**permission_name**|**nvarchar(128)**|Berechtigungsname.|  
-|**state**|**char (1)**|Der Berechtigungsstatus:<br /><br /> D = Verweigern<br /><br /> R = Aufheben<br /><br /> G = Erteilen<br /><br /> W = Mit Grant-Option erteilen|  
+|**Status**|**char (1)**|Der Berechtigungsstatus:<br /><br /> D = Verweigern<br /><br /> R = Aufheben<br /><br /> G = Erteilen<br /><br /> W = Mit Grant-Option erteilen|  
 |**state_desc**|**nvarchar(60)**|Beschreibung des Berechtigungsstatus:<br /><br /> VERWEIGERN<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |Berechtigungstyp|Berechtigungsname|Betroffenes sicherungsfähiges Element|  
@@ -107,8 +109,8 @@ JOIN sys.server_permissions AS pe
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Sicherheits Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Sicherungs fähige Elemente](../../relational-databases/security/securables.md)   
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Securables](../../relational-databases/security/securables.md)   
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Berechtigungshierarchie &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  

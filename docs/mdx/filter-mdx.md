@@ -1,4 +1,5 @@
 ---
+description: Filter (MDX)
 title: Filter (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a70bceed4cdccf6a22f0cfea4e5093634f88f1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 026e4720803d828ae9ba96a4d3df7f5a72d59e8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387506"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
 
@@ -37,7 +38,7 @@ Filter(Set_Expression, Logical_Expression )
 ## <a name="remarks"></a>Bemerkungen  
  Die **Filter** -Funktion wertet den angegebenen logischen Ausdruck für jedes Tupel in der angegebenen Menge aus. Die-Funktion gibt eine Menge zurück, die aus jedem Tupel in der angegebenen Menge besteht, in der der logische Ausdruck **true**ergibt. Wenn keine Tupel als **true**ausgewertet werden, wird eine leere Menge zurückgegeben.  
   
- Die **Filter** -Funktion funktioniert ähnlich wie die [IIf](../mdx/iif-mdx.md) -Funktion. Die **IIf** -Funktion gibt nur eine von zwei Optionen basierend auf der Auswertung eines logischen MDX-Ausdrucks zurück, während die **Filter** Funktion eine Menge von Tupeln zurückgibt, die die angegebene Such Bedingung erfüllen. In der Tat wird die **Filter** - `IIf(Logical_Expression, Set_Expression.Current, NULL)` Funktion für jedes Tupel in der Menge ausgeführt und gibt die resultierende Menge zurück.  
+ Die **Filter** -Funktion funktioniert ähnlich wie die [IIf](../mdx/iif-mdx.md) -Funktion. Die **IIf** -Funktion gibt nur eine von zwei Optionen basierend auf der Auswertung eines logischen MDX-Ausdrucks zurück, während die **Filter** Funktion eine Menge von Tupeln zurückgibt, die die angegebene Such Bedingung erfüllen. In der Tat wird die **Filter** -Funktion `IIf(Logical_Expression, Set_Expression.Current, NULL)` für jedes Tupel in der Menge ausgeführt und gibt die resultierende Menge zurück.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Filter-Funktion auf der ROWS-Achse einer Abfrage verwendet, um nur Datumsangaben zurückzugeben, bei denen Internet Sales Amount größer als 10.000 US-Dollar ist:  
@@ -56,7 +57,7 @@ Filter(Set_Expression, Logical_Expression )
   
  `[Adventure Works]`  
   
- Die Filter-Funktion kann auch in berechneten Elementdefinitionen verwendet werden. Im folgenden Beispiel wird die Summe des `Measures.[Order Quantity]` -Elements, aggregiert über die ersten neun Monate 2003 in der `Date` -Dimension, aus dem **Adventure Works** -Cube zurückgegeben. Die **PeriodsToDate** -Funktion definiert die Tupel in der Menge, über die die **Aggregat** Funktion ausgeführt wird. Die **Filter** -Funktion schränkt diese Tupel ein, die für das Reseller Sales Amount-Measure für den vorherigen Zeitraum zurückgegeben werden.  
+ Die Filter-Funktion kann auch in berechneten Elementdefinitionen verwendet werden. Im folgenden Beispiel wird die Summe des-Elements `Measures.[Order Quantity]` , aggregiert über die ersten neun Monate 2003 in der- `Date` Dimension, aus dem **Adventure Works** -Cube zurückgegeben. Die **PeriodsToDate** -Funktion definiert die Tupel in der Menge, über die die **Aggregat** Funktion ausgeführt wird. Die **Filter** -Funktion schränkt diese Tupel ein, die für das Reseller Sales Amount-Measure für den vorherigen Zeitraum zurückgegeben werden.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  

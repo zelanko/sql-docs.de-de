@@ -1,4 +1,5 @@
 ---
+description: MDX-Datenbearbeitung – DRILLTHROUGH
 title: Drillthrough-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee68e6cbb22bc817d478490315ab88ccb87e4ad4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387038"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX-Datenbearbeitung – DRILLTHROUGH
 
@@ -42,14 +43,14 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  Eine Liste mit durch Trennzeichen getrennten Dimensionsattributen und Measures  
   
 ## <a name="remarks"></a>Bemerkungen  
- Drillthrough ist ein Vorgang, bei dem ein Endbenutzer eine einzelne Zelle in einem Cube auswählt und ein Resultset aus den Quelldaten dieser Zelle abruft, um detailliertere Informationen zu erhalten. Standardmäßig wird ein Drillthrough-Resultset aus den Tabellenzellen abgeleitet, die zur Berechnung des Werts der ausgewählten Cubezelle ausgewertet wurden. Endbenutzer können einen Drillthrough nur dann durchführen, wenn die Clientanwendung diese Funktion unterstützt. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]werden die Ergebnisse direkt aus dem MOLAP-Speicher abgerufen, es sei denn, ROLAP-Partitionen oder-Dimensionen werden abgefragt.  
+ Drillthrough ist ein Vorgang, bei dem ein Endbenutzer eine einzelne Zelle in einem Cube auswählt und ein Resultset aus den Quelldaten dieser Zelle abruft, um detailliertere Informationen zu erhalten. Standardmäßig wird ein Drillthrough-Resultset aus den Tabellenzellen abgeleitet, die zur Berechnung des Werts der ausgewählten Cubezelle ausgewertet wurden. Endbenutzer können einen Drillthrough nur dann durchführen, wenn die Clientanwendung diese Funktion unterstützt. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden die Ergebnisse direkt aus dem MOLAP-Speicher abgerufen, es sei denn, ROLAP-Partitionen oder-Dimensionen werden abgefragt.  
   
 > [!IMPORTANT]  
 >  Die Drillthrough-Sicherheit basiert auf den für den Cube definierten allgemeinen Sicherheitsoptionen. Erhält ein Benutzer auf bestimmte Daten keinen Zugriff über MDX, ist sein Zugriff über Drillthrough auf genau die gleiche Weise eingeschränkt.  
   
  Eine MDX-Anweisung gibt die betreffende Zelle an. Der durch das **MaxRows** -Argument angegebene Wert gibt die maximale Anzahl von Zeilen an, die vom resultierenden Rowset zurückgegeben werden sollen.  
   
- Standardmäßig werden maximal 10.000 Zeilen zurückgegeben. Dies bedeutet, dass Sie, wenn Sie **MaxRows** nicht angeben, mindestens 10.000 Zeilen erhalten. Wenn dieser Wert für Ihr Szenario zu niedrig ist, können Sie **MaxRows** auf eine höhere Zahl festlegen, z `MAXROWS 20000`. b.. Wenn die Gesamtzahl zu niedrig ist, können Sie die Standardeinstellung erhöhen, indem Sie die Server Eigenschaft **olap\query\defaultdrillthrough MaxRows** ändern. Weitere Informationen zum Ändern dieser Eigenschaft finden Sie unter [Server Eigenschaften in Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
+ Standardmäßig werden maximal 10.000 Zeilen zurückgegeben. Dies bedeutet, dass Sie, wenn Sie **MaxRows** nicht angeben, mindestens 10.000 Zeilen erhalten. Wenn dieser Wert für Ihr Szenario zu niedrig ist, können Sie **MaxRows** auf eine höhere Zahl festlegen, z `MAXROWS 20000` . b.. Wenn die Gesamtzahl zu niedrig ist, können Sie die Standardeinstellung erhöhen, indem Sie die Server Eigenschaft **olap\query\defaultdrillthrough MaxRows** ändern. Weitere Informationen zum Ändern dieser Eigenschaft finden Sie unter [Server Eigenschaften in Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
   
  Sofern nicht anders angegeben, enthalten die zurückgegebenen Spalten alle Granularitätsattribute aller Dimensionen, die mit der Measuregruppe des angegebenen Measures verbunden sind und keine m:n-Dimensionen sind. Cubedimensionen ist zur Unterscheidung von Dimensionen und Measuregruppen ein $-Zeichen vorangestellt. Die **Return** -Klausel wird verwendet, um die Spalten anzugeben, die von der Drillthrough-Abfrage zurückgegeben werden. Die folgenden Funktionen können von der **Return** -Klausel auf ein einzelnes Attribut oder Measure angewendet werden.  
   

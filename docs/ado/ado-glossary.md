@@ -1,4 +1,5 @@
 ---
+description: ADO-Glossar Begriffe
 title: Begriffe zu ADO-Glossar | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4b92f9c8b65db459d46aff51b7aed58c3ff6e307
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b67f8f38a57d7918f2b6f79ed9a2a82dc00d4dee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76940437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355456"
 ---
 # <a name="ado-glossary-terms"></a>ADO-Glossar Begriffe
 In diesem Thema werden die für ADO relevanten Begriffe definiert.
@@ -40,7 +41,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
 ## <a name="b"></a>B
  Bindungs Eintrag eine Zuordnung zwischen einem Feld in einer Tabelle und einer Variablen. In den ADO-Visual C++ Erweiterungen werden **Recordsetfelder** C/C++-Variablen zugeordnet.
 
- Bitmaske ein numerischer Wert, der für einen bitweisen Wert Vergleich mit anderen numerischen Werten gedacht ist, in der Regel Optionen in Parameter-oder Rückgabe Werten. In der Regel erfolgt dieser Vergleich mit bitweisen logischen Operatoren, wie z. b. **and** und **&** **or** in Visual Basic und **&#124;** in C++.
+ Bitmaske ein numerischer Wert, der für einen bitweisen Wert Vergleich mit anderen numerischen Werten gedacht ist, in der Regel Optionen in Parameter-oder Rückgabe Werten. In der Regel erfolgt dieser Vergleich mit bitweisen logischen Operatoren, wie z. b. **and** und **or** in Visual Basic **&** und **&#124;** in C++.
 
  Beispielsweise können die ADO **FieldAttributeEnum** -Werte als Bitmasken verwendet werden, um die Attribute eines Felds zu bestimmen. Angenommen, Sie möchten ermitteln, ob ein Feld aktualisierbar ist. Dies können Sie mit dem folgenden Ausdruck in Visual Basic testen:`Field.Attributes AND adFldUpdatable`
 
@@ -77,7 +78,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
 
  Vergleichs Operator ein Operator, der zwei Ausdrücke vergleicht und einen booleschen Wert zurückgibt.
 
- Ein Kriterienparameter, der als ">" (größer als), "\<" (kleiner als), "=" (gleich), ">=" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) ausgedrückt werden kann.
+ Ein Kriterienparameter, der als ">" (größer als), " \<" (less than), "=" (equal), "> =" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) ausgedrückt werden kann.
 
  Komponente ein Objekt, das Daten und Code kapselt und einen gut angegebenen Satz öffentlich verfügbarer Dienste bereitstellt.
 

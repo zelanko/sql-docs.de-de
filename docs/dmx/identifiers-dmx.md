@@ -1,4 +1,5 @@
 ---
+description: Bezeichner (DMX)
 title: Bezeichner (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 980a13c88abc8d6cbe0fcb71f22f4c0a9f564094
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a779e16b06b00cb925f28e8da34ce3959d7dc7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352886"
 ---
 # <a name="identifiers-dmx"></a>Bezeichner (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86969806"
   
  Ein Objektbezeichner wird erstellt, wenn Sie das Objekt definieren. Sie verwenden den Bezeichner dann dazu, auf das Objekt zu verweisen. Ein Bezeichner kann bis zu 100 Zeichen lang sein.  
   
-##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>Reguläre Bezeichner  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a> Reguläre Bezeichner  
  Reguläre Bezeichner in DMX entsprechen den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Regeln für das Format von Bezeichnern. Für einen regulären Bezeichner sind in DMX keine Begrenzungszeichen erforderlich. Im folgenden finden Sie ein Beispiel für eine DMX-Anweisung, die einen regulären, nicht Begrenzungs Bezeichner verwendet:  
   
 ```  
@@ -58,7 +59,7 @@ SELECT * FROM Clustering.CONTENT;
   
  Wenn Sie in DMX-Anweisungen Bezeichner verwenden, die nicht diesen Regeln entsprechen, müssen Sie diese Bezeichner in eckige Klammern setzen.  
   
-##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>Begrenzungs Bezeichner  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a> Begrenzungs Bezeichner  
  Begrenzungsbezeichner sind in eckige Klammern ([ ]) eingeschlossen.  Das folgende Beispiel besteht aus einer DMX-Anweisung mit einem Begrenzungsbezeichner, der diesen Regeln entspricht.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: Website erstellen (Dialogfeld im Konfigurations-Manager für Master Data Services)
 title: Website erstellen (Dialogfeld)
 ms.custom: seo-lt-2019
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c3d4063404a121c889dbbfd930429a586bf8969a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 16c3903d401409794ad65e1ccab6dfc006af19a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389936"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>Website erstellen (Dialogfeld im Konfigurations-Manager für Master Data Services)
 
@@ -27,7 +28,7 @@ ms.locfileid: "85812005"
   
 ## <a name="web-site"></a>Website  
   
-|Name des Steuerelements|BESCHREIBUNG|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
 |**Name der Website**|Geben Sie einen Namen für die Website ein, oder verwenden Sie den Standardnamen. Dieser Name ist ein Anzeigename, der nur zur Identifizierung der Website in IIS verwendet wird. Er wird nicht verwendet, um von einem Webbrowser aus auf die Website zuzugreifen.<br /><br /> Der Name muss für alle Websites in IIS auf dem lokalen Computer eindeutig sein.|  
 |**Protokoll**|Zeigt **http**an. Verwenden Sie das Hypertext Transfer-Protokoll (HTTP), wenn für die Kommunikation zwischen Client und Server kein verschlüsselter Kanal erforderlich ist.<br /><br /> **Hinweis**: Sie können keine HTTPS-Site in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]erstellen. HTTPS ist das HTTP-Protokoll, das Transport Layer Security (TLS) verwendet, das zuvor als Secure Sockets Layer (SSL) bezeichnet wurde. es ist nützlich, wenn vertrauliche oder persönliche Daten ausgetauscht werden sollen oder wenn Benutzer die Identität des Servers bestätigen sollen, bevor persönliche Daten übertragen werden. Wenn Ihre Informationen zwischen dem Server und einem Client über einen verschlüsselten Channel übertragen werden sollen, müssen Sie mit einem IIS-Tool wie IIS-Manager die Website mit einer HTTPS-Bindung konfigurieren und die Websitebindung einem Serverzertifikat zuzuordnen. Erst dann können Sie die Website erfolgreich in einem Webbrowser öffnen. Weitere Informationen zu Serverzertifikaten finden Sie unter [Konfigurieren von Serverzertifikaten in IIS 7](https://go.microsoft.com/fwlink/?LinkId=163220) auf [!INCLUDE[msCoName](../includes/msconame-md.md)] TechNet.|  
@@ -37,7 +38,7 @@ ms.locfileid: "85812005"
   
 ## <a name="application-pool"></a>Anwendungspool  
   
-|Name des Steuerelements|BESCHREIBUNG|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
 |**Name**|Geben Sie einen eindeutigen Anzeigenamen für einen neuen Anwendungspool ein, oder verwenden Sie den bereitgestellten Standardnamen. Die Stammwebanwendung für diese Website wird in diesem Anwendungspool ausgeführt.<br /><br /> Anwendungspools verfügen über immanente Grenzen, durch die Anwendungen in einem Anwendungspool daran gehindert werden, Einfluss auf Anwendungen in einem anderen Anwendungspool zu nehmen.|  
 |**Benutzername**|Geben Sie einen Domänen- und Benutzernamen aus Active Directory ein. Dieses Konto entspricht der Identität des Anwendungspools, in dem die Webanwendung ausgeführt wird.<br /><br /> Das Konto wird für den Datenbankzugriff der mds_exec-Datenbankrolle in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank hinzugefügt. Weitere Informationen finden Sie unter [Datenbankanmeldenamen, -benutzer und -rollen &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md). Es wird darüber hinaus einer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Windows-Gruppe wie **MDS_ServiceAccounts**hinzugefügt. Ihr wurden Berechtigungen auf das temporäre Kompilierungsverzeichnis, **MDSTempDir**im Dateisystem erteilt. Weitere Informationen finden Sie unter [Ordner- und Dateiberechtigungen &#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md).|  

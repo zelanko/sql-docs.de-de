@@ -1,4 +1,5 @@
 ---
+description: Herstellen einer Verbindung mit SQL Server (SybaseToSQL)
 title: Herstellen einer Verbindung mit SQL Server (sybaseto SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 78007a3d788c7387cd59c2fa1b9f3cf52466c525
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 115b5ca1eadac2e8042abcc6fae7add920889155
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372486"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>Herstellen einer Verbindung mit SQL Server (SybaseToSQL)
 Verwenden Sie das Dialogfeld **mit SQL Server verbinden** , um eine Verbindung mit der Instanz von herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , zu der Sie migrieren möchten. Um auf das Dialogfeld **Verbindung mit SQL Server herstellen** zuzugreifen, klicken Sie im Menü **Datei** auf **Verbinden mit SQL Server**.  

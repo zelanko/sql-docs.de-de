@@ -1,4 +1,5 @@
 ---
+description: Erstellen von Variablen Wert Dateien (accesstosql)
 title: Erstellen von Variablen Wert Dateien (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6d208be8fb7ebf8d1c33b0df5d7c49dd28a412a7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8815b6d3f6d4f825082b0c2eac4d8bfa45cb98de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320876"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Erstellen von Variablen Wert Dateien (accesstosql)
 Eine Variablen Wert Datei ist eine XML-Datei, die die Parameterwerte von Befehlen (z. b. der Quell-oder Zielserver Name) umfasst, die sich häufig über Server Migrationen hinweg ändern. Wenn eine große Anzahl von Datenbankmigrationen auftritt, werden mehrere Variablen Dateien zum Speichern des Werts jedes Quell Servers erstellt und in einer Master Skriptdatei mit dem Schalter **-v** in der Befehlszeile referenziert. Dieses Verhalten trägt dazu bei, statische Werte in einigen Skriptdateien mit den Variablen Werten in mehreren Variablen Dateien beizubehalten.  

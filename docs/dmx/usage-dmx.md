@@ -1,4 +1,5 @@
 ---
+description: Verwendung (DMX)
 title: Verwendung (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cdbefcfeb6d638998ec2e0a01b8da5ca40f2aeaf
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3886cd500282d34ef07145913e036a6ab4ad4852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394856"
 ---
 # <a name="usage-dmx"></a>Verwendung (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Wenn Sie Data Mining-Erweiterungen (DMX) verwenden, um ein neues Data Mining Modell in zu definieren [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , müssen Sie angeben, wie der Data Mining Algorithmus, der das Modell erstellt, jede Spalte verwenden soll. Sie können für eine Spalte angeben, dass sie einen der folgenden Typen hat:  
   
--   **Key**  
+-   **Schlüssel**  
   
 -   **Key Sequence**  
   

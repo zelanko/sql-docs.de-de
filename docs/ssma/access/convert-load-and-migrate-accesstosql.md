@@ -1,4 +1,5 @@
 ---
+description: Konvertieren, laden und migrieren (accesstosql)
 title: Konvertieren, laden und migrieren (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b4c161ef3abdb67351a16840336ef290ff57effd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e541bf7cecf1614fc7fcdb1bf44cb8d71910bc13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372916"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Konvertieren, laden und migrieren (accesstosql)
 
@@ -28,7 +29,7 @@ Nach Abschluss der Migration können Sie Informations-, Warn-und Fehlermeldungen
   
 Der Abschnitt **Migrieren von Daten für ausgewählte Objekte** der Seite enthält auch eine **Berichts** Schaltfläche. Sie können diese Schaltfläche auswählen, um einen Daten Migrationsbericht anzuzeigen.  
   
-## <a name="options"></a>Optionen
+## <a name="options"></a>Tastatur
 
 **Report**  
 Zeigt den zugeordneten Konvertierungs-oder Migrationsbericht an.  

@@ -1,4 +1,5 @@
 ---
+description: Tabelle "Produkte und Technologien"
 title: ADO-Technologie Tabelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e0fb8e559dcf98f39b5f3783e3e43d5d10671cb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a524139113cffeaf437b91a41b4f10b4468d5fe4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761658"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355246"
 ---
 # <a name="products-and-technologies-table"></a>Tabelle "Produkte und Technologien"
 In der folgenden Tabelle sind die Microsoft-Produkte,-Tools und-Technologien aufgelistet, die im ADO-Programmier Handbuch erläutert werden. Es bietet Links, sofern möglich, zu relevanten Themen im Handbuch.
 
-|Microsoft-Produkt oder-Technologie|Referenzen|
+|Microsoft-Produkt oder-Technologie|References|
 |-------------------------------------|----------------|
 |Access/Jet|[Arbeiten mit Recordsets](../../ado/guide/data/working-with-recordsets.md)<br /><br /> [ADOX-Grundlagen](../../ado/guide/extensions/adox-fundamentals.md)<br /><br /> [Microsoft OLE DB-Anbieter für Microsoft Jet](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Active Directory Service Interfaces (ADSI)|[Microsoft OLE DB-Anbieter für Microsoft Active Directory Service](../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|

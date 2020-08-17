@@ -1,4 +1,5 @@
 ---
+description: Länge der Übertragungsoktette
 title: Länge des Oktetts übertragen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/28/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4204b47816747506a5672241eeeef736eca54856
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c89a9cb1423693e7d92114233f967d6fb5dcee1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386346"
 ---
 # <a name="transfer-octet-length"></a>Länge der Übertragungsoktette
 Die Länge eines Spalten Übertragungs-Oktetts ist die maximale Anzahl von Bytes, die an die Anwendung zurückgegeben werden, wenn Daten in den Standard-C-Datentyp übertragen werden. Bei Zeichendaten enthält die Länge des okteckzeichens für die Übertragung keinen Platz für das NULL-Terminierungs Zeichen. Die Länge der Übertragungs Oktett einer Spalte kann sich von der Anzahl der Bytes unterscheiden, die zum Speichern der Daten in der Datenquelle erforderlich sind.  

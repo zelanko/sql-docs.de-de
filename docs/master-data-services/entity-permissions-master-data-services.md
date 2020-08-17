@@ -1,4 +1,5 @@
 ---
+description: Entitätsberechtigungen (Master Data Services)
 title: Entitätsberechtigungen
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3a0ca2773d513137adeb9e803b66930536e3a28a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b71ffdf22c3a6758ee81d92f5f25300784d73fff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389186"
 ---
 # <a name="entity-permissions-master-data-services"></a>Entitätsberechtigungen (Master Data Services)
 
@@ -41,7 +42,7 @@ ms.locfileid: "85811948"
 |----------------|-----------------|  
 |**Lesen**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten anzeigen.|  
 |**Erstellen**|Der Benutzer kann Elemente erstellen und während der Erstellung Attributwerte zuweisen.|  
-|**Update**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten aktualisieren.|  
+|**Aktualisieren**|Der Benutzer kann Elemente, Attribute, Hierarchiemitgliedschaften oder Sammlungszugehörigkeiten aktualisieren.|  
 |**Löschen**|Der Benutzer kann Elemente löschen.|  
 |**Deny**|Der Zugriff auf die Entität wird vollständig verweigert.|  
   

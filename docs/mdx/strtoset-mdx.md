@@ -1,4 +1,5 @@
 ---
+description: StrToSet (MDX)
 title: "\"Strauchant\" (MDX) | Microsoft-Dokumentation"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 729dae70fce03b3dec1394900126b216d09dc497
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 882ab646af51d4b1edbe0a1240eaaed7cbfa5422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386776"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 
@@ -34,7 +35,7 @@ StrToSet(Set_Specification [,CONSTRAINED] )
 ## <a name="remarks"></a>Bemerkungen  
  Die " **strauchanset** "-Funktion gibt den im Zeichen folgen Ausdruck angegebenen Satz zurück. Die " **strauchanset** "-Funktion wird in der Regel mit benutzerdefinierten Funktionen verwendet, um eine Mengen Spezifikation aus einer externen Funktion an eine MDX-Anweisung zurückzugeben, oder wenn eine MDX-Abfrage parametrisiert wird.  
   
--   Wenn das eingeschränkte Flag verwendet wird, muss die Mengen Spezifikation qualifizierte oder nicht qualifizierte Elementnamen oder einen Satz von Tupeln enthalten, die qualifizierte oder nicht qualifizierte Element {}Namen enthalten, die in geschweiften Klammern eingeschlossen sind. Dieses Flag wird verwendet, um das Risiko von Injection-Angriffen über die angegebene Zeichenfolge zu verringern. Wenn eine Zeichenfolge bereitgestellt wird, die nicht direkt zu qualifizierten oder nicht qualifizierten Elementnamen aufgelöst werden kann, wird eine Fehlermeldung angezeigt, die besagt, dass die durch das CONSTRAINED-Flag in der STRTOSET-Funktion vorgegebenen Einschränkungen verletzt wurden.  
+-   Wenn das eingeschränkte Flag verwendet wird, muss die Mengen Spezifikation qualifizierte oder nicht qualifizierte Elementnamen oder einen Satz von Tupeln enthalten, die qualifizierte oder nicht qualifizierte Elementnamen enthalten, die in geschweiften Klammern eingeschlossen sind {} . Dieses Flag wird verwendet, um das Risiko von Injection-Angriffen über die angegebene Zeichenfolge zu verringern. Wenn eine Zeichenfolge bereitgestellt wird, die nicht direkt zu qualifizierten oder nicht qualifizierten Elementnamen aufgelöst werden kann, wird eine Fehlermeldung angezeigt, die besagt, dass die durch das CONSTRAINED-Flag in der STRTOSET-Funktion vorgegebenen Einschränkungen verletzt wurden.  
   
 -   Wenn das CONSTRAINED-Flag nicht verwendet wird, kann der angegebene Mengenausdruck zu einem gültigen MDX-Ausdruck (Multidimensional Expressions) aufgelöst werden, der eine Menge zurückgibt.  
   

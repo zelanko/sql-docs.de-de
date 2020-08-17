@@ -1,4 +1,5 @@
 ---
+description: MDX-Datendefinition – CREATE MEASURE
 title: Create Measure-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3bac5d7d067186e2b84277a5c0dc02cd31cba011
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: cdbee6f6ede5e46926f1a8189792d86cf9e99f5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387266"
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX-Datendefinition – CREATE MEASURE
 
@@ -40,7 +41,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
  Ein gültiger DAX-Ausdruck, der einen einzelnen skalaren Wert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Der *MEASURE_NAME* muss in eckige Klammern eingeschlossen werden.  
+ Der *MEASURE_NAME*  muss in eckige Klammern eingeschlossen werden.  
   
  Die CREATE Measure-Anweisung kann nur in einer MDX-Skript Definition verwendet werden. Weitere Informationen finden Sie unter [MdxScript-Element &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions).  
   

@@ -1,4 +1,5 @@
 ---
+description: Menübefehle und andere Tastenkombinationen (DB2ToSQL)
 title: Menübefehle und andere Tastenkombinationen (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3622c9928946e8708097f535b311a70b2a996bf3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b24fb152402386ba3b22cad8be196cd2c042699e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320786"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Menübefehle und andere Tastenkombinationen (DB2ToSQL)
 In den folgenden Abschnitten werden die Tastenkombinationen für den Zugriff auf Menübefehle und andere Tastenkombinationen beschrieben, die in den verschiedenen Dialogfeldern von SSMA für DB2-Anwendungen verwendet werden.  

@@ -1,4 +1,5 @@
 ---
+description: MDX-Datendefinition – UPDATE MEMBER
 title: Update Member-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 73a2bf2973d8c4f8f9bf9ac886728fb45250343f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b1333a8784ea5427dec3ed7223a3c7c1a09120d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387064"
 ---
 # <a name="mdx-data-definition---update-member"></a>MDX-Datendefinition – UPDATE MEMBER
 
@@ -64,7 +65,7 @@ UPDATE MEMBER Cube_Name.Member_Name
 |VISIBLE|Ein Wert, der bestimmt, ob das berechnete Element in einem Schemarowset sichtbar ist. Sichtbare berechnete Elemente können einer Menge mit der [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) -Funktion hinzugefügt werden. Ein Wert ungleich 0 zeigt an, dass das berechnete Element sichtbar ist. Der Standardwert für diese Eigenschaft ist *sichtbar*.<br /><br /> Berechnete Elemente, die nicht sichtbar sind, werden üblicherweise als Zwischenschritte in komplexeren berechneten Elementen verwendet. Auf diese berechneten Elemente können auch andere Arten von Elementen (z. B. Measures) verweisen.|  
 |NON_EMPTY_BEHAVIOR|Das Measure oder die Menge, mit dem oder der MDX beim Auflösen leerer Zellen das Verhalten berechneter Elemente bestimmt.|  
 |CAPTION|Ein Zeichenfolgenwert, der die Beschriftung angibt, die von der Clientanwendung zum Anzeigen des Elements verwendet wird.|  
-|DISPLAY_FOLDER|Ein Zeichenfolgenwert, der den Pfad des Anzeigeordners angibt, in dem das Element von der Clientanwendung angezeigt wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Für die von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]bereitgestellten Tools und Clients wird der umgekehrte schräg\\Strich () als Ebenentrennzeichen verwendet. Um mehrere Anzeigeordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) als Trennzeichen für die Ordner.|  
+|DISPLAY_FOLDER|Ein Zeichenfolgenwert, der den Pfad des Anzeigeordners angibt, in dem das Element von der Clientanwendung angezeigt wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Für die von bereitgestellten Tools und Clients [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wird der umgekehrte Schrägstrich ( \\ ) als Ebenentrennzeichen verwendet. Um mehrere Anzeigeordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) als Trennzeichen für die Ordner.|  
 |ASSOCIATED_MEASURE_GROUP|Der Name der Measuregruppe, der dieses Element zugeordnet wird.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

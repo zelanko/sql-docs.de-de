@@ -1,4 +1,5 @@
 ---
+description: Vergleichsoperatoren
 title: Vergleichs Operatoren | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4e3aa00334d98af02521005679174feb3b28c55f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f1dcb77c15e540a740ac9956dc4c547c5ca61c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387667"
 ---
 # <a name="comparison-operators"></a>Vergleichsoperatoren
 
@@ -26,7 +27,7 @@ ms.locfileid: "68001516"
   
  MDX unterstützt die Vergleichsoperatoren, die in der folgenden Tabelle aufgelistet sind.  
   
-|Operator|BESCHREIBUNG|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |[= (Equal To) (= (Gleich))](../mdx/equal-to-mdx.md)|Gibt für Argumente, die nicht NULL enthalten, TRUE zurück, wenn das linke Argument gleich dem rechten Argument ist. Gibt andernfalls FALSE zurück.<br /><br /> Wenn mindestens eines der Argumente zu einem NULL-Wert ausgewertet wird, gibt der Operator einen NULL-Wert zurück, es sei denn, der Vergleich `0=null` wird ausgeführt; in diesem Fall enthält der boolesche Wert TRUE.|  
 |[<>  (ungleich)](../mdx/not-equal-to-mdx.md)|Gibt für Argumente, die nicht NULL enthalten, TRUE zurück, wenn das linke Argument ungleich dem rechten Argument ist. Gibt andernfalls FALSE zurück.<br /><br /> Wenn mindestens eines der Argumente zu einem NULL-Wert ausgewertet wird, gibt der Operator einen NULL-Wert zurück.|  

@@ -1,4 +1,5 @@
 ---
+description: Metadaten-Parameter und Rowset in SQL Server Native Client
 title: Parameter-und Rowset-Metadaten (Native Client OLE DB-Anbieter)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fb12ebfb1e158ae71c2e8bbc72a7159a10a91e5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f45147881ec8cc2c62f8d023a1fe443164682678
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381746"
 ---
 # <a name="metadata---parameter-and-rowset-in-sql-server-native-client"></a>Metadaten-Parameter und Rowset in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87245809"
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  Die folgenden Informationen werden in der DBPARAMINFO-Struktur durch *prgParamInfo* zurückgegeben:  
   
-|Parametertyp|*wType*|*ulParamSize*|*bPrecision*|*bscale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|Parametertyp|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Löschen|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
@@ -54,14 +55,14 @@ ms.locfileid: "87245809"
 ## <a name="icommandwithparameterssetparameterinfo-and-implied-parameter-types"></a>ICommandWithParameters::SetParameterInfo und implizite Parametertypen  
  Die in der DBPARAMBINDINFO-Struktur bereitgestellten Informationen müssen Folgendem entsprechen:  
   
-|*pwszDataSourceType*<br /><br /> (anbieterspezifisch)|*pwszDataSourceType*<br /><br /> (OLE DB-generisch)|*ulParamSize*|*bscale*|  
+|*pwszDataSourceType*<br /><br /> (anbieterspezifisch)|*pwszDataSourceType*<br /><br /> (OLE DB-generisch)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
-||DBTYPE_DATE|6|Ignoriert|  
-|date|DBTYPE_DBDATE|6|Ignoriert|  
-||DBTYPE_DBTIME|10|Ignoriert|  
+||DBTYPE_DATE|6|Wird ignoriert.|  
+|date|DBTYPE_DBDATE|6|Wird ignoriert.|  
+||DBTYPE_DBTIME|10|Wird ignoriert.|  
 |time|DBTYPE_DBTIME2|10|0..7|  
-|smalldatetime||16|Ignoriert|  
-|datetime||16|Ignoriert|  
+|smalldatetime||16|Wird ignoriert.|  
+|datetime||16|Wird ignoriert.|  
 |datetime2 oder DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
@@ -117,7 +118,7 @@ ms.locfileid: "87245809"
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  Die DBCOLUMNINFO-Struktur gibt die folgenden Informationen zurück:  
   
-|Parametertyp|*wType*|*ulColumnSize*|*bPrecision*|*bscale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|Parametertyp|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
 |date|DBTYPE_DBDATE|6|10|0|Löschen|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  

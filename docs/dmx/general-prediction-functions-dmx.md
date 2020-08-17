@@ -1,4 +1,5 @@
 ---
+description: Allgemeine Vorhersagefunktionen (DMX)
 title: Allgemeine Vorhersagefunktionen (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6db4adccfa0786e2acb1ce45725758d6b302b51f
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8023287277edafb2d054cafe7ae5ab09512f93ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352996"
 ---
 # <a name="general-prediction-functions-dmx"></a>Allgemeine Vorhersagefunktionen (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Sie können die **Select** -Anweisung in Data Mining-Erweiterungen (DMX) verwenden, um unterschiedliche Abfrage Typen zu erstellen. Eine Abfrage kann verwendet werden, um Informationen zum Miningmodell selbst zurückzugeben, neue Vorhersagen zu treffen oder das Modell durch Trainieren mit neuen Daten zu ändern. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]stellt eine Reihe von spezialisierten Funktionen bereit, die den Typ der Informationen steuern, die in einer Abfrage zurückgegeben werden. Durch Hinzufügen dieser Funktionen zu einer DMX-Abfrage können Sie zusätzliche statistische Daten oder Datenspalten abrufen. Jeder Abfragetyp und jeder Modelltyp unterstützt jedoch nur bestimmte Funktionen.  
+  Sie können die **Select** -Anweisung in Data Mining-Erweiterungen (DMX) verwenden, um unterschiedliche Abfrage Typen zu erstellen. Eine Abfrage kann verwendet werden, um Informationen zum Miningmodell selbst zurückzugeben, neue Vorhersagen zu treffen oder das Modell durch Trainieren mit neuen Daten zu ändern. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt eine Reihe von spezialisierten Funktionen bereit, die den Typ der Informationen steuern, die in einer Abfrage zurückgegeben werden. Durch Hinzufügen dieser Funktionen zu einer DMX-Abfrage können Sie zusätzliche statistische Daten oder Datenspalten abrufen. Jeder Abfragetyp und jeder Modelltyp unterstützt jedoch nur bestimmte Funktionen.  
   
 ## <a name="common-functions"></a>Allgemeine Funktionen  
  Mit Funktionen können Sie die Ergebnisse erweitern, die von einem Miningmodell zurückgegeben werden. Die folgenden Funktionen können für jede **Select** -Anweisung verwendet werden, die einen Tabellen Ausdruck zurückgibt:  
@@ -26,7 +27,7 @@ ms.locfileid: "87363020"
 :::row:::
     :::column:::
         [BottomCount &#40;DMX-&#41;](../dmx/bottomcount-dmx.md)  
-        [&#40;DMX-&#41;im unteren Prozentsatz](../dmx/bottompercent-dmx.md)  
+        [&#40;DMX-&#41;im unteren Prozentsatz ](../dmx/bottompercent-dmx.md)  
         [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
         [Rangemax &#40;DMX-&#41;](../dmx/rangemax-dmx.md)  
         [RangeMid &#40;DMX-&#41;](../dmx/rangemid-dmx.md)  
@@ -72,9 +73,9 @@ ms.locfileid: "87363020"
 |[SELECT FROM \<model>.CONTENT](../dmx/select-from-model-content-dmx.md)<br /><br /> oder<br /><br /> [SELECT FROM \<model>.DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Mit dieser Funktion werden untergeordnete Knoten für den angegebenen Knoten im Modell abgerufen. Die Funktion kann beispielsweise zum Durchlaufen der Knoten im Miningmodellinhalt verwendet werden. Die Anordnung der Knoten im Miningmodellinhalt hängt vom Modeltyp ab. Weitere Informationen zur Struktur für jeden Mining Modelltyp finden Sie unter [Mining Model Content &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Wenn Sie den Mining Modell Inhalt als Dimension gespeichert haben, können Sie auch andere MDX-Funktionen (Multidimensional Expressions) verwenden, die zum Abfragen einer Attribut Hierarchie verfügbar sind.|  
 |[SELECT FROM \<model>.CASES](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [ClientSettingsGeneralFlag-Klasse](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40;DMX-&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40;DMX-&#41;](../dmx/istestcase-dmx.md)|Die lag-Funktion wird nur für Zeitreihen Modelle unterstützt.<br /><br /> Die IsTestCase-Funktion wird in Modellen unterstützt, die auf einer Struktur basieren, die mithilfe der Option "zurück gehaltene Daten" erstellt wurde, um ein Test Dataset zu erstellen. Wenn das Modell nicht auf einer Struktur mit einem Zurückhaltungstestdataset basiert, werden alle Fälle als Trainingsfälle interpretiert.|  
 |[SELECT FROM \<model>.SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|In diesem Kontext gibt die IsInNode-Funktion einen Fall zurück, der zu einem Satz idealisierter Beispiel Fälle gehört.|  
-|Wählen Sie aus \<model> . PMML|Nicht zutreffend Verwenden Sie stattdessen XML-Abfragefunktionen.|PMML-Darstellungen werden nur für die folgenden Modelltypen unterstützt:<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  
+|Wählen Sie aus \<model> . PMML|Nicht zutreffend. Verwenden Sie stattdessen XML-Abfragefunktionen.|PMML-Darstellungen werden nur für die folgenden Modelltypen unterstützt:<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  
 |[SELECT FROM \<model> PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|Vorhersagefunktionen, die speziell für den Algorithmus verwendet werden, mit dem Sie das Modell erstellen.|Eine Liste der Vorhersagefunktionen für die einzelnen Modelltypen finden Sie unter [Data Mining-Abfragen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
-|[Select from\<model>](../dmx/select-from-model-dmx.md)|Vorhersagefunktionen, die speziell für den Algorithmus verwendet werden, mit dem Sie das Modell erstellen.|Eine Liste der Vorhersagefunktionen für die einzelnen Modelltypen finden Sie unter [Data Mining-Abfragen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
+|[Select from \<model>](../dmx/select-from-model-dmx.md)|Vorhersagefunktionen, die speziell für den Algorithmus verwendet werden, mit dem Sie das Modell erstellen.|Eine Liste der Vorhersagefunktionen für die einzelnen Modelltypen finden Sie unter [Data Mining-Abfragen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](../dmx/data-mining-extensions-dmx-reference.md)   

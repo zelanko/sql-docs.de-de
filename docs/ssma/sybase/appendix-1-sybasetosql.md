@@ -1,4 +1,5 @@
 ---
+description: Anhang 1 (SybaseToSQL)
 title: Anhang-1 (sybaseto SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ccd075529e5ecb3277ab698632cca9c948802690
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8feb8a1a7de67ecac01946f025545eb3536d977c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372526"
 ---
 # <a name="appendix---1-sybasetosql"></a>Anhang 1 (SybaseToSQL)
 Schnellansicht der Befehlszeilenoptionen der SSMA-Konsole:  
   
-|SL. Nein|Schalter|Erforderlich?|Switch-Argument|Zulässige Werte|  
+|SL. Nein.|Schalter|Erforderlich?|Switch-Argument|Zulässige Werte|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/Skript|Ja|scriptfile|Gültiger XML-Dateiname.<br /><br />Konsolen Skript-Definitionsdatei.|  
 |2|-v/Variable|Nein|variablevaluefile|Gültiger XML-Dateiname.<br /><br />Wenn Variablen in der Skriptdatei verwendet werden, muss diese Datei angegeben werden.|  

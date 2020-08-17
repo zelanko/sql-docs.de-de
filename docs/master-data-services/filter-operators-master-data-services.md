@@ -1,4 +1,5 @@
 ---
+description: Filteroperatoren (Master Data Services)
 title: Filteroperatoren
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dd6e35ba450bd96111b112232878b608787440b0
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9a24e793783fb69b83a9f2ff774871664f24b011
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388806"
 ---
 # <a name="filter-operators-master-data-services"></a>Filteroperatoren (Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "85811791"
   
 ## <a name="filter-operators"></a>Filteroperatoren  
   
-|Name des Steuerelements|BESCHREIBUNG|  
+|Name des Steuerelements|Beschreibung|  
 |------------------|-----------------|  
 |**Ist gleich**|Gibt Attributwerte zurück, die den angegebenen Kriterien genau entsprechen. Um nach **Mountain-100**zu filtern, müssen Sie z.B. **Mountain-100**eingeben.|  
 |**Ist nicht gleich**|Gibt Attributwerte zurück, die keine genaue Übereinstimmung mit den angegebenen Kriterien aufweisen. Die Filterkriterien müssen dem Attributwert, den Sie aus den Ergebnissen ausschließen möchten, genau entsprechen. Um Ergebnisse auszuschließen, die mit **Mountain-100**übereinstimmen, müssen Sie z.B. **Mountain-100**eingeben.<br /><br /> <br /><br /> Hinweis: Wenn eine Filteranwendung mit einer „Ist ungleich“-Klausel auf ein Attribut angewendet wird, wird ein Element, dessen Attribut nicht NULL ist, die Filterbedingung übergeben und zurückgegeben werden, wenn in Ihren Datenbankeinstellungen SET ANSI_NULLS auf ON festgelegt ist. Um dieses Verhalten zu beenden, legen Sie SET ANSI_NULLS in den Datenbankeinstellungen auf OFF fest. Wenn SET ANSI_NULLS auf OFF festgelegt ist, werden alle Datenvergleiche mit einem NULL-Wert als TRUE ausgewertet, falls der Datenwert NULL ist. Dies hat zur Folge, dass das Element die „Ist ungleich“-Klausel nicht besteht. Weitere Informationen finden Sie unter [SET ANSI_NULLS &#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md).|  
@@ -38,7 +39,7 @@ ms.locfileid: "85811791"
 |**Ist kleiner als**|Gibt Attributwerte zurück, die kleiner als die angegebenen Kriterien sind. Um Attributwerte zurückzugeben, die mit einem Buchstaben kleiner als **F**beginnen, geben Sie z. B. **F**ein.|  
 |**Ist größer als oder gleich**|Gibt Attributwerte zurück, die größer oder gleich den angegebenen Kriterien sind. Um Attributwerte zurückzugeben, die mit der Zahl **3** oder einer höheren Zahl beginnen, geben Sie z. B. **3**ein.|  
 |**Ist kleiner als oder gleich**|Gibt Attributwerte zurück, die kleiner oder gleich den angegebenen Kriterien sind. Um Attributwerte zurückzugeben, die mit der Zahl **3** oder einer kleineren Zahl beginnen, geben Sie z. B. **3**ein.|  
-|**Treffer**|Verwendet einen Fuzzysuchindex zum Filtern von Ergebnissen.<br /><br /> Geben Sie im Feld **Ähnlichkeitsgrad** an, wie genau die Abweichung der Attributwerte von den angegebenen Filterkriterien (mit einem Standardwert von „30 %“) sein muss.<br /><br /> Wählen Sie eine der folgenden Möglichkeiten im Listenfeld **Algorithmus** aus.<br /><br /> **Levenshtein**: Eine Distanz auf Grundlage der Anzahl von Bearbeitungen (beispielsweise Hinzufügungen oder Löschungen), die benötigt wird, um von einer Zeichenfolge zur nächsten zu gelangen. Dies ist die Standardeinstellung. Erfordert keine zusätzlichen Parameter.<br /><br /> **Jaccard**: Ein Index, der sich am besten eignet, wenn versucht wird, mehrere Zeichenfolgen abzugleichen. Diese Suche unterstützt einen zusätzlichen Parameter der Kapselungsvorspannung (siehe unten).<br /><br /> **Jaro-Winkler**: Eine Distanz, die sich am besten für die Suche von doppelten Personennamen eignet. Diese Methode gibt mehr Ergebnisse zurück als jede andere Methode. Unterstützt keine Kapselungsvorspannung.<br /><br /> **Längste allgemeine**unter Sequenz: funktioniert auf Grundlage einer unter Sequenz, in der die Buchstaben in einem Muster in der Reihenfolge angezeigt werden, obwohl Sie getrennt werden können (z. b. ist "MSR" eine unter Sequenz von "MaSteR"). Diese Suche unterstützt einen zusätzlichen Parameter der Kapselungsvorspannung (siehe unten).<br /><br /> <br /><br /> Hinweis: Fügen Sie für den **Jaccard** - oder den **Längste gemeinsame Teilsequenz** -Algorithmus einen **Verzerrungswert für den Einschluss**hinzu. Dies ist ein Längenschwellenwert, der in einem dezimalen Prozentsatz zwischen "0" und "1" bereitgestellt wird, mit dem Standard "0,62". Ein niedrigerer Schwellenwert vergrößert die Anzahl der möglichen zurückgegebenen Übereinstimmungen.|  
+|**Treffer**|Verwendet einen Fuzzysuchindex zum Filtern von Ergebnissen.<br /><br /> Geben Sie im Feld **Ähnlichkeitsgrad** an, wie genau die Abweichung der Attributwerte von den angegebenen Filterkriterien (mit einem Standardwert von „30 %“) sein muss.<br /><br /> Wählen Sie eine der folgenden Möglichkeiten im Listenfeld **Algorithmus** aus.<br /><br /> **Levenshtein**: Eine Distanz auf Grundlage der Anzahl von Bearbeitungen (beispielsweise Hinzufügungen oder Löschungen), die benötigt wird, um von einer Zeichenfolge zur nächsten zu gelangen. Dies ist die Standardoption. Erfordert keine zusätzlichen Parameter.<br /><br /> **Jaccard**: Ein Index, der sich am besten eignet, wenn versucht wird, mehrere Zeichenfolgen abzugleichen. Diese Suche unterstützt einen zusätzlichen Parameter der Kapselungsvorspannung (siehe unten).<br /><br /> **Jaro-Winkler**: Eine Distanz, die sich am besten für die Suche von doppelten Personennamen eignet. Diese Methode gibt mehr Ergebnisse zurück als jede andere Methode. Unterstützt keine Kapselungsvorspannung.<br /><br /> **Längste allgemeine**unter Sequenz: funktioniert auf Grundlage einer unter Sequenz, in der die Buchstaben in einem Muster in der Reihenfolge angezeigt werden, obwohl Sie getrennt werden können (z. b. ist "MSR" eine unter Sequenz von "MaSteR"). Diese Suche unterstützt einen zusätzlichen Parameter der Kapselungsvorspannung (siehe unten).<br /><br /> <br /><br /> Hinweis: Fügen Sie für den **Jaccard** - oder den **Längste gemeinsame Teilsequenz** -Algorithmus einen **Verzerrungswert für den Einschluss**hinzu. Dies ist ein Längenschwellenwert, der in einem dezimalen Prozentsatz zwischen "0" und "1" bereitgestellt wird, mit dem Standard "0,62". Ein niedrigerer Schwellenwert vergrößert die Anzahl der möglichen zurückgegebenen Übereinstimmungen.|  
 |**Stimmt nicht überein mit**|Verwendet einen Fuzzysuchindex zum Filtern von Ergebnissen. Geben Sie im Feld **Ähnlichkeitsgrad** an, wie genau die Abweichung der Attributwerte von den angegebenen Filterkriterien sein muss.|  
 |**Enthält Muster**|Verwendet reguläre Ausdrücke von .NET Framework, um Ergebnisse nach einem angegebenen Muster zu filtern. Weitere Informationen zu regulären Ausdrücken finden Sie unter [Sprachelemente für reguläre Ausdrücke](https://go.microsoft.com/fwlink/?LinkId=164401) in der MSDN Library.|  
 |**Enthält kein Muster**|Verwendet reguläre Ausdrücke von .NET Framework zum Filtern von Ergebnissen, die einem angegebenen Muster nicht entsprechen. Weitere Informationen zu regulären Ausdrücken finden Sie unter [Sprachelemente für reguläre Ausdrücke](https://go.microsoft.com/fwlink/?LinkId=164401) in der MSDN Library.|  

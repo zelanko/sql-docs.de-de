@@ -1,4 +1,5 @@
 ---
+description: IsInNode (DMX)
 title: IsInNode (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 063c436f2e0d76ca891f332f25be385c2f16fdfa
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 68f88915209a3a15cb7e8f1fd64e9d877655f3ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352346"
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

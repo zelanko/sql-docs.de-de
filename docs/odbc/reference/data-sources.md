@@ -1,4 +1,5 @@
 ---
+description: Projektmappen-Explorer
 title: Datenquellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b7e464963471b0cad41c5b93d50507d0fa9bf96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b9f980ad9ccd1fa38b6fce863703ec706e21a76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386056"
 ---
 # <a name="data-sources"></a>Projektmappen-Explorer
 Eine *Datenquelle* ist einfach die Quelle der Daten. Dabei kann es sich um eine Datei, eine bestimmte Datenbank in einem DBMS oder sogar um einen livedatenfeed handeln. Die Daten befinden sich möglicherweise auf demselben Computer wie das Programm oder auf einem anderen Computer in einem Netzwerk. Beispielsweise kann eine Datenquelle ein Oracle-DBMS sein, das unter einem Betriebssystem mit Betriebssystem/2® ausgeführt wird, auf das Novell® NetWare zugreift. ein IBM DB2-DBMS, auf das über ein Gateway zugegriffen wird; eine Auflistung von xbase-Dateien in einem Serververzeichnis. oder eine lokale Microsoft® Access-Datenbankdatei.  

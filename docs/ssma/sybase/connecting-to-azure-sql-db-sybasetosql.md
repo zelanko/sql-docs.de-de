@@ -1,4 +1,5 @@
 ---
+description: Herstellen einer Verbindung mit Azure SQL-Datenbank (sybaseto SQL)
 title: Herstellen einer Verbindung mit Azure SQL-Datenbank (sybaseto SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12e090ef0b2c97fe57d27a61842dd7fe2cb99866
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: eacdca6cf260557171f5adf63f8590842de77fcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372346"
 ---
 # <a name="connecting-to-azure-sql-database-sybasetosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (sybaseto SQL)
 Um Sybase-Datenbanken zu Azure SQL-Datenbank zu migrieren, müssen Sie eine Verbindung mit der Ziel Instanz von Azure SQL-Datenbank herstellen. Wenn Sie eine Verbindung herstellen, ruft SSMA Metadaten zu allen Datenbanken in der Instanz von Azure SQL-Datenbank ab und zeigt Daten Bank Metadaten im metadatenexplorer von Azure SQL-Datenbank an. SSMA speichert Informationen über die Instanz von Azure SQL-Datenbank, mit der Sie verbunden sind, speichert aber keine Kenn Wörter.  
@@ -28,7 +29,7 @@ Das Konto, das zum Herstellen einer Verbindung mit Azure SQL-Datenbank verwendet
   
 1.  [!INCLUDE[tsql](../../includes/tsql-md.md)]Das Konto muss über die Berechtigung verfügen, sich bei der Instanz von Azure SQL-Datenbank anzumelden, um Sybase-Objekte in die Syntax zu konvertieren, um Metadaten aus Azure SQL-Datenbank zu aktualisieren oder um konvertierte Syntax in Skripts zu speichern.  
   
-2.  Zum Laden von Datenbankobjekten in Azure SQL-Datenbank ist die Mindestanforderung für Berechtigungen die Mitgliedschaft in der Daten Bank Rolle **db_owner** in der Zieldatenbank.  
+2.  Zum Laden von Datenbankobjekten in Azure SQL-Datenbank ist die Mindestanforderung für Berechtigungen die Mitgliedschaft in der Daten Bank Rolle  **db_owner** in der Zieldatenbank.  
   
 ## <a name="establishing-an-azure-sql-database-connection"></a>Einrichten einer Azure SQL-Datenbankverbindung  
 Vor dem Konvertieren von Sybase-Datenbankobjekten in die Azure SQL-Daten Bank Syntax müssen Sie eine Verbindung mit der Instanz von Azure SQL-Datenbank herstellen, in der Sie die Sybase-Datenbank oder die Datenbanken migrieren möchten.  

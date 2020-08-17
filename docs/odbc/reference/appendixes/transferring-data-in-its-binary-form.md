@@ -1,4 +1,5 @@
 ---
+description: Übertragen von Daten in ihrer binären Form
 title: Übertragen von Daten in der Binär Form | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b12a9de-51d0-416a-87f4-9bf84959cad9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 53531ff4a3b2e1441fabf22ec7a3ce12b15540eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec858729e76c1e360ec0933eca3a29ab17542f4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386326"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>Übertragen von Daten in ihrer binären Form
 Eine Anwendung kann Daten (in der internen Form, die von einem angegebenen DBMS verwendet wird) sicher zwischen zwei Datenquellen übertragen, die das gleiche DBMS und die gleiche Hardwareplattform verwenden. Für ein bestimmtes Datenelement müssen die SQL-Datentypen in den Quell-und Ziel Datenquellen identisch sein. Der C-Datentyp ist SQL_C_BINARY.  

@@ -1,4 +1,5 @@
 ---
+description: Bewerten von MySQL-Datenbanken für die Konvertierung (MySqlToSql)
 title: Bewerten der MySQL-Datenbanken für die Konvertierung (mysqltoisql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ebfe3523c155d0e1b58281e987341b6f83fcf9ae
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5512d7230b1b59add11e0d72efba232bb3770099
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320796"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Bewerten von MySQL-Datenbanken für die Konvertierung (MySqlToSql)
 Bevor Sie Objekte laden und Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure migrieren, sollten Sie bestimmen, wie komplex die Migration ist und wie viel Zeit die Migration dauern wird. SSMA kann einen Bewertungsbericht erstellen, in dem der Prozentsatz der Objekte angezeigt wird, die erfolgreich konvertiert werden. Mit SSMA können Sie auch die spezifischen Probleme anzeigen, die Konvertierungs Fehler verursachen.  
@@ -79,7 +80,7 @@ Im Bereich Konvertierungs Statistik werden die Konvertierungsstatistiken angezei
 -   Sie können das Objekt von der Migration ausschließen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Deaktivieren Sie in oder SQL Azure Metadaten-Explorer und MySQL-metadatenexplorer das Kontrollkästchen neben dem Element, bevor Sie die Objekte in Laden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure und Daten aus MySQL migrieren.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[MySQL-Datenbanken &#40;mysqlto SQL-&#41;werden umgerechnet](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+[MySQL-Datenbanken &#40;mysqlto SQL-&#41;werden umgerechnet ](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Migrieren von MySQL-Datenbanken zu SQL Server Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

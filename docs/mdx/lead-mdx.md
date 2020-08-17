@@ -1,4 +1,5 @@
 ---
+description: Lead (MDX)
 title: Lead (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cc4d362fbc7656e9427548a352b32d5d8297071e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca78bdeca6103758d5d102ed8b85eb00b3138e18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387326"
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
 
@@ -34,14 +35,14 @@ Member_Expression.Lead( Index )
  *Index*  
  Ein gültiger numerischer Ausdruck, der eine Anzahl der Elementpositionen angibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Elementpositionen auf einer Ebene werden über die natürliche Reihenfolge der Attributhierarchie bestimmt. Die Nummerierung der Positionen basiert auf Null.  
   
  Wenn der angegebene Lead NULL (0) ist, gibt die **Lead** -Funktion den angegebenen Member zurück.  
   
  Wenn der angegebene Lead negativ ist, gibt die **Lead** -Funktion einen früheren Member zurück.  
   
- `Lead(1)`entspricht der [NextMember](../mdx/nextmember-mdx.md) -Funktion. `Lead(-1)`entspricht der [PrevMember](../mdx/prevmember-mdx.md) -Funktion.  
+ `Lead(1)` entspricht der [NextMember](../mdx/nextmember-mdx.md) -Funktion. `Lead(-1)` entspricht der [PrevMember](../mdx/prevmember-mdx.md) -Funktion.  
   
  Die **Lead** -Funktion ähnelt der [lag](../mdx/lag-mdx.md) -Funktion, mit der Ausnahme, dass die **lag** -Funktion in umgekehrter Richtung zur **Lead** -Funktion sucht. Somit ist `Lead(n)` äquivalent zu `Lag(-n)`.  
   

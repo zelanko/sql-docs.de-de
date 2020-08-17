@@ -1,4 +1,5 @@
 ---
+description: EXPORT (DMX)
 title: Export (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 620bb13d50461e850cc08de1e1b1b71709d78c7c
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 689ab632604d26a349dbb3f2a40d5f1b7cf8d702
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353226"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +33,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  Optional. der Typ des zu exportierenden Objekts (entweder Mining Modell oder Mining Struktur).  
   
  *Objektname*  
- Dies ist optional. Der Name des zu exportierenden Objekts.  
+ Optional. Der Name des zu exportierenden Objekts.  
   
  *filename*  
  Die Zeichenfolge, die den Namen und den Speicherort der Datei angibt, in die exportiert werden soll.  

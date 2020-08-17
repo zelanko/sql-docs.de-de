@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (Typzuordnung) (SybaseToSQL)
 title: Projekteinstellungen (Typzuordnung) (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12002496f30d836f01d0b11f4007f63f018266e9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 99ab880b69d2c06d462ed42ca0a2529ba6bf7bc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372116"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Projekteinstellungen (Typzuordnung) (SybaseToSQL)
 Die Seite Typzuordnung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, die anpassen, wie SSMA die Datentypen von Sybase Adaptive Server Enterprise (ASE) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen konvertiert.  
@@ -25,7 +26,7 @@ Die Seite Typzuordnung ist in den Dialogfeldern **Projekteinstellungen** und **S
   
 -   Um Einstellungen für das aktuelle Projekt anzugeben, wählen Sie **im Menü Extras** die Option **Projekteinstellungen**aus, und klicken Sie dann unten im linken Bereich auf **Typzuordnung** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Quelltyp**  
 Der zugeordnete ASE-Datentyp.  
   

@@ -1,4 +1,5 @@
 ---
+description: Herstellen einer Verbindung mit MySQL (MySqlToSql)
 title: Herstellen einer Verbindung mit MySQL (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 66ec484ca6bd442f936eb852db48f34c89099d11
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 399946496bbb649f84c9d539a9fe80f3f7919b31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372696"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Herstellen einer Verbindung mit MySQL (MySqlToSql)
 Verwenden Sie das Dialogfeld **mit MySQL verbinden** , um eine Verbindung mit der MySQL-Datenbank herzustellen, die Sie migrieren möchten.  
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit MySQL verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, wird **mit dem Befehl erneut eine Verbindung mit MySQL hergestellt**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Anbieter**  
   
 Verfügbarer MySQL-Anbieter ist der MySQL-ODBC 5,1-Treiber (vertrauenswürdig).  

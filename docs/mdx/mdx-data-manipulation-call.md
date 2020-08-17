@@ -1,4 +1,5 @@
 ---
+description: MDX-Datenbearbeitung – CALL
 title: Callcenter-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: de74590ac4c43a9141c0ab2092babf41ffd23ba5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a8f3b550e3fed3fe28e74896c3c4ff764db8810
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387039"
 ---
 # <a name="mdx-data-manipulation---call"></a>MDX-Datenbearbeitung – CALL
 
@@ -47,7 +48,7 @@ CALL SP_Name
  Wenn kein Cube angegeben wird, führt die Anweisung die gespeicherte Prozedur mit dem aktuellen Cube als Argument aus.  
   
 > [!NOTE]  
->  Wenn die gespeicherte Prozedur nicht auf dem Client registriert ist, versucht die **-Anweisung, die gespeicherte** Prozedur von einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]aufzurufen.  
+>  Wenn die gespeicherte Prozedur nicht auf dem Client registriert ist, versucht die **-Anweisung, die gespeicherte** Prozedur von einer Instanz von aufzurufen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Daten Bearbeitungsanweisungen &#40;MDX-&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   

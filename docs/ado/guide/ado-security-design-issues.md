@@ -1,4 +1,5 @@
 ---
+description: ADO-Sicherheits Entwurfs Features
 title: ADO-Sicherheits Entwurfs Probleme | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/08/2018
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dde159e0b04b319b978e9a3743d866d05c64253
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fc525a10d6211ee5f15517618f2cc5b99c8abee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355396"
 ---
 # <a name="ado-security-design-features"></a>ADO-Sicherheits Entwurfs Features
 In den folgenden Abschnitten werden die Sicherheits Entwurfs Features in ActiveX Data Objects (ADO) 2,8 und höher beschrieben. Diese Änderungen wurden in ADO 2,8 vorgenommen, um die Sicherheit zu verbessern. ADO 6,0, das in Windows DAC 6,0 in Windows Vista enthalten ist, ist funktional äquivalent zu ADO 2,8, das in MDAC 2,8 in Windows XP und Windows Server 2003 enthalten war. Dieses Thema enthält Informationen zur optimalen Absicherung Ihrer Anwendungen in ADO 2,8 oder höher.
@@ -107,7 +108,7 @@ This Website is using your identity to access a data source. If you trust this W
  Wenn Sie Drittanbieter (d. h. nicht-Microsoft) OLE DB Anbietern mit Ihrem ADO-Anwendungscode verwenden, können Sie überprüfen, wie die **DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO** -Eigenschaft implementiert wird, um zu bestimmen, ob die Einbindung von Kenn Wort Informationen mit ADO-Verbindungs Zeichenfolgen zulässig ist.
 
 ## <a name="checking-for-non-file-devices-when-loading-and-saving-recordsets-or-streams"></a>Überprüfen auf nicht-Datei Geräte beim Laden und Speichern von Recordsets oder Streams
- Bei ADO 2,7 und früheren Versionen können Dateieingabe-/Ausgabevorgänge wie z. b. " [Öffnen](../../ado/reference/ado-api/open-method-ado-recordset.md) " und " [Speichern](../../ado/reference/ado-api/save-method.md) ", die zum Lesen und Schreiben von dateibasierten Daten verwendet wurden, in einigen Fällen die Verwendung einer URL oder eines Datei namens ermöglichen, der einen nicht auf einem Datenträger basierenden Dateityp Beispiel: LPT1, COM2, PRN. TXT, aux könnte als Alias für die Eingabe/Ausgabe zwischen Druckern und zusätzlichen Geräten im System verwendet werden. dabei wird eine bestimmte
+ Bei ADO 2,7 und früheren Versionen können Dateieingabe-/Ausgabevorgänge wie z. b. " [Öffnen](../../ado/reference/ado-api/open-method-ado-recordset.md) " und " [Speichern](../../ado/reference/ado-api/save-method.md) ", die zum Lesen und Schreiben von dateibasierten Daten verwendet wurden, in einigen Fällen die Verwendung einer URL oder eines Datei namens ermöglichen, der einen nicht auf einem Datenträger basierenden Dateityp Beispielsweise können LPT1, COM2, PRN.TXT, AUX als Alias für die Eingabe/Ausgabe zwischen Druckern und zusätzlichen Geräten im System verwendet werden, wobei bestimmte
 
  Bei ADO 2,8 und höher wurde diese Funktion aktualisiert. Zum Öffnen und Speichern von **Recordset** -und **Stream** -Objekten führt ADO nun eine Dateityp Überprüfung durch, um sicherzustellen, dass das in einer URL oder einem Dateinamen angegebene Eingabe-oder Ausgabegerät eine tatsächliche Datei ist.
 

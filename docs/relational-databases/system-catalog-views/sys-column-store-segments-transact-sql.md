@@ -1,4 +1,5 @@
 ---
+description: sys.column_store_segments (Transact-SQL)
 title: sys. column_store_segments (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/15/2018
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9b177fe44c3f94e77e2dc1f770d3c617b80c6dd
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: ebc2fe3ce3ddbdd02184e56d3629e8e6ccb0ce03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88379226"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ Gibt eine Zeile für jedes Spalten Segment in einem columnstore--Index zurück. 
 |**null_value**|**bigint**|Ein Wert, der zum Darstellen von NULL-Werten verwendet wird.|  
 |**on_disk_size**|**bigint**|Die Größe des Segments in Byte.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die folgende Abfrage gibt Informationen zu Segmenten eines columnstore-Indexes zurück.  
   
 ```sql  
