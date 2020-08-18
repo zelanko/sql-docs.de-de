@@ -1,4 +1,5 @@
 ---
+description: PATINDEX (Transact-SQL)
 title: PATINDEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,12 +23,12 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12f1f710a78c6dcd059fbae5078b0b643296700e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c4d2ee21a4b2c2975fcead1e883cb28459c608dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363376"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="return-types"></a>Rückgabetypen  
 **bigint**, wenn *expression* vom Datentyp **varchar(max)** oder **nvarchar(max)** ist; andernfalls **int**.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Wenn *pattern* oder *expression* NULL ist, gibt PATINDEX NULL zurück.  
  
 Die Startposition für PATINDEX ist 1.
@@ -67,7 +68,7 @@ PATINDEX führt Vergleiche auf Basis der Sortierung der Eingabe aus. Zum Ausfüh
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)  
 Bei SC-Sortierungen werden UTF-16-Ersatzpaare im *expression*-Parameter vom Rückgabewert als einzelnes Zeichen gezählt. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-0x0000 (**char(0)** ) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in PATINDEX enthalten sein.  
+0x0000 (**char(0)**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in PATINDEX enthalten sein.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -126,7 +127,7 @@ position
  Im Gegensatz zu `LIKE` gibt `PATINDEX` ähnlich wie `CHARINDEX` eine Position zurück.  
 
 ### <a name="d-using-complex-wildcard-expressions-with-patindex"></a>D: Verwenden komplexer Platzhalterausdrücke mit PATINDEX 
-Im folgenden Beispiel wird der [Zeichenfolgenoperator](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md) `[^]` verwendet, um die Position eines Zeichens zu finden, das keine Zahl, kein Buchstabe oder kein Leerzeichen ist.
+Im folgenden Beispiel wird der  [Zeichenfolgenoperator](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)`[^]` verwendet, um die Position eines Zeichens zu finden, das keine Zahl, kein Buchstabe oder kein Leerzeichen ist.
 
 ```sql
 SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 
@@ -174,7 +175,7 @@ position
 22
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: Erweiterte statische geography-Methoden
 title: Erweiterte statische geography-Methoden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: de86e2b2b2bb958fcd57999bf8f7984078c3a48a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 227af5db894525c1fe99b2020efa27ed6c2f8ec9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360116"
 ---
 # <a name="extended-static-geography-methods"></a>Erweiterte statische geography-Methoden
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,11 +41,11 @@ ms.locfileid: "85731177"
   
 -   [NULL](../../t-sql/spatial-geography/null-geography-data-type.md)  
   
--   [Analysieren](../../t-sql/spatial-geography/parse-geography-data-type.md)  
+-   [Parse](../../t-sql/spatial-geography/parse-geography-data-type.md)  
   
 -   [Point](../../t-sql/spatial-geography/point-geography-data-type.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Statische aggregierte geography-Methoden](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   

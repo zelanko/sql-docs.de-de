@@ -1,4 +1,5 @@
 ---
+description: Festlegen der Eigenschaften einer Datenflusskomponente
 title: Festlegen der Eigenschaften einer Datenflusskomponente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae953f5267c9facc141c823941fae645a5d05e0e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7799b5d2f5f541b6713821dccbec820697371ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348946"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Festlegen der Eigenschaften einer Datenflusskomponente
 
@@ -74,21 +75,21 @@ ms.locfileid: "86917806"
 4.  Klicken Sie im Datenfluss-Designer mit der rechten Maustaste auf die Datenflusskomponente, und klicken Sie anschließend auf **Erweiterten Editor anzeigen**.  
   
     > [!NOTE]  
-    >  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann **Erweiterter Editor**nicht für Datenflusskomponenten verwendet werden, die mehrere Eingaben unterstützen.  
+    >   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann **Erweiterter Editor**nicht für Datenflusskomponenten verwendet werden, die mehrere Eingaben unterstützen.  
   
 5.  Führen Sie im Dialogfeld **Erweiterter Editor** einen beliebigen der folgenden Schritte aus:  
   
     -   Klicken Sie auf die Registerkarte **Verbindungs-Manager** , um die von der Komponente verwendete Verbindung anzuzeigen und anzugeben.  
   
         > [!NOTE]  
-        >  Die Registerkarte **Verbindungs-Manager** ist nur für Datenflusskomponenten verfügbar, die Verbindungs-Manager zum Herstellen einer Verbindung mit Datenquellen wie z.B. Dateien und Datenbanken verwenden.  
+        >   Die Registerkarte **Verbindungs-Manager** ist nur für Datenflusskomponenten verfügbar, die Verbindungs-Manager zum Herstellen einer Verbindung mit Datenquellen wie z. B. Dateien und Datenbanken verwenden.  
   
     -   Klicken Sie auf die Registerkarte **Komponenteneigenschaften** , um die Eigenschaften auf Komponentenebene anzuzeigen und zu ändern.  
   
     -   Klicken Sie auf die Registerkarte **Spaltenzuordnungen** , um Zuordnungen zwischen externen Spalten und der verfügbaren Ausgabe anzuzeigen und zu ändern.  
   
         > [!NOTE]  
-        >  Die Registerkarte **Spaltenzuordnungen** ist nur verfügbar, wenn Sie Quellen oder Ziele anzeigen oder bearbeiten.  
+        >   Die Registerkarte **Spaltenzuordnungen** ist nur verfügbar, wenn Sie Quellen oder Ziele anzeigen oder bearbeiten.  
   
     -   Klicken Sie auf die Registerkarte **Eingabespalten** , um eine Liste der verfügbaren Eingabespalten anzuzeigen und die Namen von Ausgabespalten zu aktualisieren.  
   
@@ -158,7 +159,7 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 |IsSorted|Boolean|Gibt an, ob die Daten in der Eingabe sortiert werden.|  
 |Name|String|Der Name der Eingabe.|  
 |SourceLocale|Integer|Die Gebietsschema-ID (Locale ID, LCID) der Eingabedaten.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. erforderlich. Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Ein Wert, der bestimmt, wie die Komponente das Abschneiden von Daten behandelt, das bei der Verarbeitung von Zeilen auftritt. . Mögliche Werte sind **Fail component**, **Ignore failure**und **Redirect row**.|  
   
  Ziele und einige Transformationen unterstützen keine Fehlerausgaben, und die Eigenschaften ErrorRowDisposition und TruncationRowDisposition dieser Komponenten sind schreibgeschützt.  
   
@@ -254,7 +255,7 @@ Die Datenflussobjekte im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!I
 |CodePage|Integer|Gibt die Codepage für Zeichenfolgendaten an, bei denen es sich nicht um Unicode handelt.|  
 |DataType|Ganze Zahl (Enumeration)|Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp der Spalte. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).|  
 |Länge|Integer|Die Länge der Zeichen in einer Spalte.|  
-|Precision|Integer|Die Genauigkeit einer numerischen Spalte.|  
+|Genauigkeit|Integer|Die Genauigkeit einer numerischen Spalte.|  
 |Skalieren|Integer|Die Dezimalstellen einer numerischen Spalte.|  
 
 ## <a name="custom-properties-of-data-flow-components"></a>Benutzerdefinierte Eigenschaften von Datenflusskomponenten
@@ -278,7 +279,7 @@ Informationen zu benutzerdefinierten Eigenschaften finden Sie unter den folgende
   
 -   [Benutzerdefinierte Eigenschaften von ODBC-Zielen](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
--   [Benutzerdefinierte Eigenschaften der ODBC-Quelle](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
 -   [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)Benutzerdefinierte Eigenschaften für OLE DB  
   
@@ -324,9 +325,9 @@ In diesem Verfahren wird beschrieben, wie ein Ausdruck der Transformation für b
     -   Ziehen Sie im Dialogfeld **Transformations-Editor für abgeleitete Spalten** die Variablen, Spalten, Funktionen, Operatoren und Umwandlungen in die Spalte **Ausdruck** . Sie können den Ausdruck aber auch direkt in die Spalte **Ausdruck** eingeben.  
   
         > [!NOTE]  
-        >  Wenn Sie den Fokus von der Spalte **Bedingung** oder **Ausdruck** entfernen, kann der Ausdruckstext hervorgehoben dargestellt werden, was auf eine falsche Ausdruckssyntax hinweist.  
+        >   Wenn Sie den Fokus von der Spalte **Bedingung** oder **Ausdruck** entfernen, kann der Ausdruckstext hervorgehoben dargestellt werden, was auf eine falsche Ausdruckssyntax hinweist.  
   
-10. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
+10. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
     > [!NOTE]  
     >  Wenn der Ausdruck ungültig ist, wird eine Warnung angezeigt, die die Syntaxfehler im Ausdruck beschreibt.  

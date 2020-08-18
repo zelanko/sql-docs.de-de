@@ -1,4 +1,5 @@
 ---
+description: SAP BW-Quelle
 title: SAP BW-Quelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 894d94e277f1304a5d9d1e1986e5f769fbc5f4e9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0506eb531462702870ef726b585dd5f07c1d4db4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349026"
 ---
 # <a name="sap-bw-source"></a>SAP BW-Quelle
 
@@ -52,7 +53,7 @@ ms.locfileid: "86917818"
   
     2.  Wählen Sie für **Activation Type**(Aktivierungstyp) die Option **Registered Server Program**(Registriertes Serverprogramm) aus.  
   
-    3.  Wählen Sie für **Communication Type with Target System**(Kommunikationstyp mit Zielsystem) die Option **Non-Unicode (Inactive MDMP Settings)** (Nicht-Unicode (inaktive MDMP-Einstellungen)) aus.  
+    3.  Wählen Sie für **Communication Type with Target System**(Kommunikationstyp mit Zielsystem) die Option **Non-Unicode (Inactive MDMP Settings)**(Nicht-Unicode (inaktive MDMP-Einstellungen)) aus.  
   
     4.  Weisen Sie eine entsprechende Programm-ID zu.  
   
@@ -123,7 +124,7 @@ ms.locfileid: "86917818"
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Konfigurieren der Quelle mit dem SSIS-Designer  
  Um weitere Informationen zu den Eigenschaften der SAP BW-Quelle zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können, klicken Sie auf eines der folgenden Themen:  
   
--   [Quellen-Editor für SAP BW &#40;Seite Verbindungs-Manager&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
 -   [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
@@ -141,7 +142,7 @@ ms.locfileid: "86917818"
   
 -   [Vorschau](../../integration-services/data-flow/preview.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Komponenten von Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

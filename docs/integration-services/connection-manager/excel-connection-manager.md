@@ -1,4 +1,5 @@
 ---
+description: Excel-Verbindungs-Manager
 title: Excel-Verbindungs-Manager | Microsoft-Dokumentation
 ms.date: 04/02/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fdac3f09fa3b92d7babd9c43f5a71adc4191ac7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 53d3ab2b085058cb81ce679e5da5a44ea1deb293
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351156"
 ---
 # <a name="excel-connection-manager"></a>Excel-Verbindungs-Manager
 
@@ -56,7 +57,7 @@ ms.locfileid: "86923717"
 ## <a name="excel-connection-manager-editor"></a>Verbindungs-Manager-Editor für Excel
   Mithilfe des Dialogfelds **Verbindungs-Manager-Editor für Excel** können Sie einer vorhandenen oder neuen [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Arbeitsmappendatei eine Verbindung hinzufügen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Excel-Dateipfad**  
  Geben Sie den Pfad und den Dateinamen einer vorhandenen oder neuen Excel-Arbeitsmappendatei ein.  
    
@@ -98,6 +99,6 @@ Um dieses Problem zu beheben, können Sie eine der folgenden Lösungen ausprobie
 * Speichern Sie die Datei im CSV-Format, und ändern Sie das SSIS-Paket so, dass ein CSV-Import unterstützt wird.
 
 ## <a name="related-tasks"></a>Related Tasks  
-[Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md)  
+[Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
 [Excel-Quelle](../data-flow/excel-source.md)  
 [Excel-Ziel](../data-flow/excel-destination.md)

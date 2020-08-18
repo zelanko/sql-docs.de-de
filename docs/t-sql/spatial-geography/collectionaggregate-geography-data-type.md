@@ -1,4 +1,5 @@
 ---
+description: CollectionAggregate (geography-Datentyp)
 title: CollectionAggregate (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/30/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: cdb2269e38b482d51a8320c6dd91403bdf7cc289
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b49f1ab03be85c2c83caf50b548528ff36fd97b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360386"
 ---
 # <a name="collectionaggregate-geography-data-type"></a>CollectionAggregate (geography-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ConvexHullAggregate ( geography_operand )
 ## <a name="exception"></a>Ausnahme  
  Löst eine `FormatException` aus, wenn ungültige Eingabewerte vorhanden sind. Weitere Informationen finden Sie unter [STIsValid &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Methode gibt **null** zurück, wenn die Eingabe leer ist oder andere SRIDs aufweist. Weitere Informationen finden Sie unter [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
  Diese Methode ignoriert **null** -Eingaben.  

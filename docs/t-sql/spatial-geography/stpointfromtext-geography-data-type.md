@@ -1,4 +1,5 @@
 ---
+description: STPointFromText (geography-Datentyp)
 title: STPointFromText (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e5fe54dc-0007-4631-8dde-7ae4d4c41f6e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5eb48601ba6b584f0846e873c3aff4f326f72493
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 3c91f1eb4c0f94ed171d21433013e5ecb9ed0c0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556021"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359676"
 ---
 # <a name="stpointfromtext-geography-data-type"></a>STPointFromText (geography-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPointFromText ( 'point_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumente
  *point_tagged_text*  
- Die WKT-Darstellung der Instanz von **geographyPoint**, die zurückgegeben werden soll. *point_tagged_text* ist ein **nvarchar(max)** -Ausdruck.  
+ Die WKT-Darstellung der Instanz von **geographyPoint**, die zurückgegeben werden soll. *point_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
   
  *SRID*  
  Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geographyPoint**-Instanz darstellt, die zurückgegeben werden soll.  
@@ -52,7 +53,7 @@ STPointFromText ( 'point_tagged_text' , SRID )
   
  OGC-Typ: **Point**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
 ## <a name="examples"></a>Beispiele  

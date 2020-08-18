@@ -1,4 +1,5 @@
 ---
+description: RECEIVE (Transact-SQL)
 title: RECEIVE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/26/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 45ad55bdf67be6dae67a69994320f9cf282a7beb
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ab5a7dc7dd87c518a070b123145acad020efeb89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357346"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -107,7 +108,7 @@ ms.locfileid: "86485418"
  TIMEOUT *timeout*  
  Gibt in Millisekunden an, wie lange die Anweisung auf eine Nachricht warten soll. Diese Klausel kann nur zusammen mit der WAITFOR-Klausel verwendet werden. Wenn die Klausel nicht angegeben wird oder das Timeout den Wert –**1** hat, dann ist die Wartezeit unbegrenzt. Läuft das Timeout ab, gibt RECEIVE ein leeres Resultset zurück.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 > [!IMPORTANT]  
 >  Wenn es sich bei der RECEIVE-Anweisung nicht um die erste Anweisung in einem Batch oder in einer gespeicherten Prozedur handelt, muss die vorhergehende Anweisung mit einem Semikolon (;) abgeschlossen werden.  
@@ -329,7 +330,7 @@ WAITFOR(
 ), TIMEOUT 60000 ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   

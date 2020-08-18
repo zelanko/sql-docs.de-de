@@ -1,4 +1,5 @@
 ---
+description: Benutzerdefinierte Eigenschaften des Ziels für Dimensionsverarbeitung
 title: Benutzerdefinierte Eigenschaften des Ziels für Dimensionsverarbeitung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 09b9d0512fb92bcc5564dd107d5c6d7a91b2dc4f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6cc1b502a64a30b5035b95b7d36207bc1cc281d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348996"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>Benutzerdefinierte Eigenschaften des Ziels für Dimensionsverarbeitung
 
@@ -44,7 +45,7 @@ ms.locfileid: "86916708"
   
  Weitere Informationen finden Sie unter [Dimension Processing Destination](../../integration-services/data-flow/dimension-processing-destination.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

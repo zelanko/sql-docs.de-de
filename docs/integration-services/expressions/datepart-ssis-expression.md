@@ -1,4 +1,5 @@
 ---
+description: DATEPART (SSIS-Ausdruck)
 title: DATEPART (SSIS-Ausdruck) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8a87b6ca0118d181c21e46620a3cfd5e4c050d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3d4509e356193391b903b764771dca170c06026d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348246"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS-Ausdruck)
 
@@ -44,7 +45,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  DATEPART gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  Ein Datumsliteral muss explizit in einen der date-Datentypen umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -57,12 +58,12 @@ DATEPART(datepart, date)
 |Quarter|qq, q|  
 |Month (Monat)|mm, m|  
 |Dayofyear|dy, y|  
-|Day (Tag)|dd, d|  
-|Week|wk, ww|  
+|Tag|dd, d|  
+|Woche|wk, ww|  
 |Wochentag|dw|  
-|Hour|Hh|  
+|Stunde|Hh|  
 |Minute|mi, n|  
-|Sekunde|ss, s|  
+|Second|ss, s|  
 |Millisekunde|Ms|  
   
 ## <a name="ssis-expression-examples"></a>Beispiele für SSIS-Ausdrücke  
@@ -84,7 +85,7 @@ DATEPART("dd", ModifiedDate)
 DATEPART("yy",GETDATE())  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [DATEADD &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEDIFF &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DAY &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/day-ssis-expression.md)   

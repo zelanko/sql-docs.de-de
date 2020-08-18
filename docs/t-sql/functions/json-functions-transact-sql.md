@@ -1,4 +1,5 @@
 ---
+description: JSON-Funktionen (Transact-SQL)
 title: JSON-Funktionen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/03/2020
@@ -12,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: c857d57f26c22e0f4eb9346e2925d493ec5e4541
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 06bf0965714c893d5b7684335edbb191e86ee77a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364326"
 ---
 # <a name="json-functions-transact-sql"></a>JSON-Funktionen (Transact-SQL)
 
@@ -34,8 +35,8 @@ Verwenden Sie die Funktionen, die auf den Seiten in diesem Abschnitt beschrieben
 
  Weitere Informationen zur integrierten Unterstützung für JSON in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md).  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
- - [Validate, Query, and Change JSON Data with Built-in Functions &#40;SQL Server&#41; (Überprüfen, Abfragen und Ändern von JSON-Daten mit integrierten Funktionen [SQL Server])](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)
+ - [Überprüfen, Abfragen und Ändern von JSON-Daten mit integrierten Funktionen &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)
  - [JSON Path Expressions &#40;SQL Server&#41; (JSON-Pfadausdrücke [SQL Server])](../../relational-databases/json/json-path-expressions-sql-server.md)
  - [JSON-Daten &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

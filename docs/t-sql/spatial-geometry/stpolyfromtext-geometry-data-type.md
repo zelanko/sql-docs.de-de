@@ -1,4 +1,5 @@
 ---
+description: STPolyFromText (geometry-Datentyp)
 title: STPolyFromText (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a7c1c9f0-1dd5-493b-b206-83bbfa33452b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 199236c4dc25764b5eab8b5f2754981cf0c70aef
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0e2ce076523c0707c8764d9a21f38abdbf41e0a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359716"
 ---
 # <a name="stpolyfromtext-geometry-data-type"></a>STPolyFromText (geometry-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumente
  *polygon_tagged_text*  
- Die WKT-Darstellung der Instanz von **geometryPolygon**, die zurückgegeben werden soll. *polygon_tagged_text* ist ein **nvarchar(max)** -Ausdruck.  
+ Die WKT-Darstellung der Instanz von **geometryPolygon**, die zurückgegeben werden soll. *polygon_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
   
  *SRID*  
  Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geometryPolygon**-Instanz darstellt, die zurückgegeben werden soll.  
@@ -52,7 +53,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
  OGC-Typ: **Polygon**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
 ## <a name="examples"></a>Beispiele  

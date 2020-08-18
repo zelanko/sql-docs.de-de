@@ -1,4 +1,5 @@
 ---
+description: DROP STATISTICS (Transact-SQL)
 title: DROP STATISTICS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/22/2016
@@ -24,12 +25,12 @@ ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d10b55c020bcd037f82eb841fba549c17a707992
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0da570526f14e6055883ce93838c2f2acfa68eac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358856"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +63,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
  *statistics_name*  
  Der Name der zu löschenden Statistikgruppe. Namen von Statistiken müssen den Regeln für Bezeichner entsprechen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Gehen Sie vorsichtig vor, wenn Sie Statistiken löschen. Dieser Vorgang kann sich auf den vom Abfrageoptimierer ausgewählten Ausführungsplan auswirken.  
   
  Statistiken für Indizes können mit DROP STATISTICS nicht gelöscht werden. Die Statistiken bleiben so lange vorhanden wie der Index.  
@@ -77,7 +78,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ### <a name="a-dropping-statistics-from-a-table"></a>A. Entfernen von Statistiken aus einer Tabelle  
  Im folgenden Beispiel werden die Statistikgruppen (Auflistungen) aus zwei Tabellen gelöscht. Die Statistikgruppe (Auflistung) `VendorCredit` der Tabelle `Vendor` und die Statistik (Auflistung) `CustomerTotal` der Tabelle `SalesOrderHeader` werden gelöscht.  
   
-```  
+```sql  
 -- Create the statistics groups.  
 USE AdventureWorks2012;  
 GO  
@@ -89,7 +90,6 @@ CREATE STATISTICS CustomerTotal
     WITH FULLSCAN;  
 GO  
 DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerTotal;  
-  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -97,10 +97,9 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
 ### <a name="b-dropping-statistics-from-a-table"></a>B. Entfernen von Statistiken aus einer Tabelle  
  In den folgenden Beispielen werden die `CustomerStats1`-Statistiken aus der Tabelle `Customer` entfernt.  
   
-```  
+```sql  
 DROP STATISTICS Customer.CustomerStats1;  
 DROP STATISTICS dbo.Customer.CustomerStats1;  
-  
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  

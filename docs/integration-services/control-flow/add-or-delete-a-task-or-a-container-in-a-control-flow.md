@@ -1,4 +1,5 @@
 ---
+description: Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung
 title: Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a269b4c221696f1b152e50d8fe749fc55eead05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bc573bfaf7f68102631e4e65c607e76062c147ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350066"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung
 
@@ -83,7 +84,7 @@ Sie können die meisten Eigenschaften von Tasks und Containern im Fenster **Eige
 5.  Aktualisieren Sie im Fenster **Eigenschaften** den Eigenschaftswert.  
   
     > [!NOTE]  
-    >  Die meisten Eigenschaften können durch direktes Eingeben der gewünschten Werte in die jeweiligen Textfelder bzw. Auswählen der Werte aus einer Liste festgelegt werden. Einige Eigenschaften sind jedoch komplexer und verfügen über einen Editor für benutzerdefinierte Eigenschaften. Klicken Sie zum Festlegen der Eigenschaft in das Textfeld und anschließend auf die Schaltfläche zum Erstellen **(...)** . Der benutzerdefinierte Editor wird geöffnet.  
+    >  Die meisten Eigenschaften können durch direktes Eingeben der gewünschten Werte in die jeweiligen Textfelder bzw. Auswählen der Werte aus einer Liste festgelegt werden. Einige Eigenschaften sind jedoch komplexer und verfügen über einen Editor für benutzerdefinierte Eigenschaften. Klicken Sie zum Festlegen der Eigenschaft in das Textfeld und anschließend auf die Schaltfläche zum Erstellen **(...)**. Der benutzerdefinierte Editor wird geöffnet.  
   
 6.  Erstellen Sie optional Eigenschaftsausdrücke, um die Eigenschaften des Tasks oder Containers dynamisch zu aktualisieren. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   

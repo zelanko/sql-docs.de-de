@@ -1,4 +1,5 @@
 ---
+description: BufferWithCurves (geography-Datentyp)
 title: BufferWithCurves (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/11/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 614e099ef075ac4bb4ce5ad4755eded9860c6b7b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4f4c5943dd69d651a9038e5e8e27798115911a9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360466"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "86555503"
   
 -   **NULL** wird an die Methode übergeben, beispielsweise `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle zeigt die Ergebnisse an, die für verschiedene Entfernungswerte zurückgegeben wurden.  
   
 |distance-Wert|Type-Dimensionen|Räumlicher Rückgabetyp|  
@@ -141,7 +142,7 @@ ms.locfileid: "86555503"
   
  Beachten Sie, dass in den beiden vorangehenden Beispielen ein Zeichenfolgenliteral an die `BufferWithCurves()`-Methode übergeben wurde. Das erste Beispiel kann ordnungsgemäß ausgeführt werden, da das Zeichenfolgenliteral in einen numerischen Wert konvertiert werden kann. Im zweiten Beispiel wird allerdings eine `ArgumentException`ausgelöst.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Erweiterte Methoden für geography-Instanzen](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [BufferWithCurves &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   

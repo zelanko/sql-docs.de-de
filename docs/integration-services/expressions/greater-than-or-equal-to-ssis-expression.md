@@ -1,4 +1,5 @@
 ---
+description: '&gt;= (Größer als oder gleich) (SSIS-Ausdruck)'
 title: '&gt;= (Größer als oder gleich) (SSIS-Ausdruck) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 165c016e7352b1ca90b3962763074b2df81a83ee
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b3cb7014c1f919503995921a6c90c5d4f5e52c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347826"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (Größer als oder gleich) (SSIS-Ausdruck)
 
@@ -50,7 +51,7 @@ expression1 >= expression2
 ## <a name="result-types"></a>Ergebnistypen  
  DT_BOOL  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn einer der Ausdrücke im Vergleich NULL ist, ist das Ergebnis des Vergleichs NULL. Wenn beide Ausdrücke NULL sind, ist das Ergebnis NULL.  
   
  Für die Ausdrucksgruppe ( *expression1* und *expression2*) muss eine der folgenden Regeln eingehalten werden:  
@@ -106,7 +107,7 @@ ListPrice >= 500
 @LPrice >= 500  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [&#62; &#40;Größer als&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
  [&#60; &#40;Kleiner als&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
  [&#60;= &#40;Kleiner als oder gleich&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   

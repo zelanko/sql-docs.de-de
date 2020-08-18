@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;IDENTITY (Transact-SQL)'
 title: '@@IDENTITY (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 08/29/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d5a41eec147978e3e794c77e4c79336daa780e29
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d4c3f909144846292acf1247411582e7d9d638bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365386"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "87113437"
 ## <a name="return-types"></a>Rückgabetypen
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Nachdem eine INSERT- oder eine SELECT INTO-Anweisung bzw. eine Massenkopieranweisung abgeschlossen ist, enthält @@IDENTITY den letzten von der Anweisung generierten Identitätswert. Wenn sich die Anweisung nicht auf Tabellen mit Identitätsspalten ausgewirkt hat, gibt @@IDENTITY den Wert NULL zurück. Wenn mehrere Zeilen eingefügt und dabei mehrere Identitätswerte generiert werden, gibt @@IDENTITY den zuletzt generierten Identitätswert zurück. Wenn die Anweisung mindestens einen Trigger auslöst, der Einfügevorgänge zum Generieren von Identitätswerten durchführt, wird durch das Aufrufen von @@IDENTITY sofort nach der Anweisung der letzte von den Triggern generierte Identitätswert zurückgegeben. Wenn nach einer Einfügeaktion bei einer Tabelle mit einer Identitätsspalte ein Trigger ausgelöst wird und der Trigger das Einfügen in einer anderen Tabelle bewirkt, in der keine Identitätsspalte vorhanden ist, dann gibt @@IDENTITY den Identitätswert der Einfügung zurück. Der @@IDENTITY-Wert kehrt nicht zu einer vorherigen Einstellung zurück, wenn die INSERT- oder SELECT INTO-Anweisung oder der Massenkopiervorgang fehlschlägt bzw. für die Transaktion ein Rollback ausgeführt wird.  
   
  Fehlgeschlagene Anweisungen oder Transaktionen können die aktuelle Identität für eine Tabelle ändern und zu Lücken in den Identitätsspaltenwerten führen. Für den Identitätswert erfolgt kein Rollback, auch wenn für die Transaktion, die versuchte, den Wert in die Tabelle einzufügen, kein Commit ausgeführt wird. Wenn beispielsweise eine INSERT-Anweisung aufgrund einer IGNORE_DUP_KEY-Verletzung fehlschlägt, wird der aktuelle Identitätswert für die Tabelle trotzdem inkrementiert.  

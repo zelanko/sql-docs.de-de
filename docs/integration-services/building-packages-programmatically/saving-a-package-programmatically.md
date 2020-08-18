@@ -1,4 +1,5 @@
 ---
+description: Programmgesteuertes Speichern von Paketen
 title: Programmgesteuertes Speichern von Paketen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3630bbebf5c86b0e839fe51735cba4fb71763b8a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ce0606f8d63015be37b5230a47cb66c82cf1a20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352106"
 ---
 # <a name="saving-a-package-programmatically"></a>Programmgesteuertes Speichern von Paketen
 
@@ -41,7 +42,7 @@ ms.locfileid: "86922704"
 > [!IMPORTANT]  
 >  Die Methoden der <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse zum Arbeiten mit dem SSIS-Paketspeicher unterstützen nur "." oder den Namen des lokalen Servers. "(local)" oder "localhost" können nicht verwendet werden.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Speichern von Paketen](../../integration-services/save-packages.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: OPENXML (Transact-SQL)
 title: OPENXML (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2018
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ca8ececca1e40762aa386ba05a53bdf8a1932090
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f081b224d80537943946b5d4e31eff43bbf88de1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363636"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +62,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Kann mit XML_ATTRIBUTES oder XML_ELEMENTS kombiniert werden (logisches OR). Im Abrufkontext zeigt dieses Flag an, dass die verwendeten Daten nicht in die Überlaufeigenschaft **\@mp:xmltext** kopiert werden sollen.|  
   
  _SchemaDeclaration_  
- Die Schemadefinition im folgenden Format: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...].  
+ Die Schemadefinition im folgenden Format: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...].  
   
  _ColName_  
  Der Name einer Spalte des Rowsets.  
@@ -82,7 +83,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *TableName*  
  Der Tabellenname, der (anstelle von *SchemaDeclaration*) angegeben werden kann, wenn bereits eine Tabelle mit dem gewünschten Schema vorhanden ist und keine Spaltenmuster erforderlich sind.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die WITH-Klausel stellt ein Rowsetformat bereit (und bei Bedarf auch zusätzliche Zuordnungsinformationen) und verwendet dazu *SchemaDeclaration* oder die Angabe eines vorhandenen Tabellennamens (*TableName*). Wenn die optionale WITH-Klausel nicht angegeben ist, werden die Ergebnisse in einem Rahmentabellenformat (**edge**) zurückgegeben. Rahmentabellen geben die differenzierte XML-Dokumentstruktur (z. B. Element-/Attributnamen, die Dokumenthierarchie, Namespaces, Verarbeitungsanweisungen usw.) in einer einzelnen Tabelle wieder.  
   
  In der folgenden Tabelle wird die Struktur der Rahmentabelle (**edge**) beschrieben.  
@@ -145,7 +146,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- Wenn dieselbe `SELECT`-Anweisung mit dem Wert *für*flags`2` ausgeführt wird, wodurch die **elementzentrierte** Zuordnung angezeigt wird, werden die Werte von `CustomerID` und `ContactName` für beide Kunden im XML-Dokument als NULL zurückgegeben, da das XML-Dokument keine Elemente mit dem Namen `CustomerID` oder `ContactName` enthält.  
+ Wenn dieselbe `SELECT`-Anweisung mit dem Wert `2` für *flags* ausgeführt wird, wodurch die **elementzentrierte** Zuordnung angezeigt wird, werden die Werte von `CustomerID` und `ContactName` für beide Kunden im XML-Dokument als NULL zurückgegeben, da das XML-Dokument keine Elemente mit dem Namen `CustomerID` oder `ContactName` enthält.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -165,7 +166,7 @@ NULL       NULL
   
 -   Die `ProdID`-Spalte des Rowsets wird dem `ProductID`-Attribut und die `Qty`-Spalte des Rowsets wird dem `Quantity`-Attribut der Knoten zugeordnet, die in *rowpattern* identifiziert sind.  
   
- Zwar ist durch den **flags**-Parameter die *elementzentrierte* Zuordnung angegeben, die im *ColPattern*-Parameter angegebene Zuordnung überschreibt jedoch diese Zuordnung.  
+ Zwar ist durch den *flags*-Parameter die **elementzentrierte** Zuordnung angegeben, die im *ColPattern*-Parameter angegebene Zuordnung überschreibt jedoch diese Zuordnung.  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   
@@ -246,6 +247,6 @@ EXEC sp_xml_removedocument @idoc;
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Beispiele: Verwenden von OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   

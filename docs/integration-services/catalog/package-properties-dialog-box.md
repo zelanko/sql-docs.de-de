@@ -1,4 +1,5 @@
 ---
+description: Paketeigenschaften (Dialogfeld)
 title: Paketeigenschaften (Dialogfeld) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/26/2016
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c30ffbbeab823935db503d4e420df6b3c95f312
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2294c3b934aaef7691849b34f53cc6f4dc76d28d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351526"
 ---
 # <a name="package-properties-dialog-box"></a>Paketeigenschaften (Dialogfeld)
 
@@ -61,7 +62,7 @@ ms.locfileid: "86922623"
  Listet die ID des Pakets auf.  
   
  **Einstiegspunkt**  
- Der Wert **TRUE** gibt an, dass das Paket direkt gestartet wird. Der Wert **False** gibt an, dass das Paket von einem anderen Paket mit dem Task "Paket ausführen" gestartet wird. Der Standardwert lautet **True**.  
+ Der Wert **TRUE** gibt an, dass das Paket direkt gestartet wird. Der Wert **False** gibt an, dass das Paket von einem anderen Paket mit dem Task "Paket ausführen" gestartet wird. Der Standardwert ist **True**.  
   
  Sie können diese Eigenschaft in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] für das übergeordnete Paket und die untergeordneten Pakete festlegen, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket und anschließend auf **Einstiegspunktpaket**klicken.  
   

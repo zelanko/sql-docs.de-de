@@ -1,4 +1,5 @@
 ---
+description: EXECUTE AS-Klausel (Transact-SQL)
 title: EXECUTE AS-Klausel (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5ad156a9164d2b59833b3103a8f08b9cbe1ab284
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 999773d8e8406dac20f86e9f19a2b886a4988619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358406"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS-Klausel (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -103,11 +104,11 @@ DDL Triggers with Database Scope
  Die Benutzer-ID des Ausführungskontexts wird in Metadaten gespeichert und kann in der **execute_as_principal_id**-Spalte der **sys.sql_modules**- oder **sys.assembly_modules**-Katalogsicht angezeigt werden.  
   
  **'** *login_name* **'**  
- Gibt an, dass die Anweisungen innerhalb des Moduls im Kontext des in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_name*angegebenen*-Anmeldenamens ausgeführt werden. Berechtigungen für alle Objekte innerhalb des Moduls werden gegen *login_name* geprüft. *login_name* kann nur für DDL-Trigger im Serverbereich oder für LOGON-Trigger angegeben werden.  
+ Gibt an, dass die Anweisungen innerhalb des Moduls im Kontext des in *login_name* angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamens ausgeführt werden. Berechtigungen für alle Objekte innerhalb des Moduls werden gegen *login_name* geprüft. *login_name* kann nur für DDL-Trigger im Serverbereich oder für LOGON-Trigger angegeben werden.  
   
  *login_name* kann kein(e) Gruppe, Rolle, Zertifikat, Schlüssel oder integriertes Konto sein, wie z.B. NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService oder NT AUTHORITY\LocalSystem.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wie [!INCLUDE[ssDE](../../includes/ssde-md.md)] Berechtigungen für Objekte auswertet, auf die im Modul verwiesen wird, hängt von der Besitzkette ab, die zwischen den aufrufenden Objekten und den Objekten vorhanden ist, auf die verwiesen wird. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] war die Besitzverkettung die einzig verfügbare Methode, um zu vermeiden, dass dem aufrufenden Benutzer der Zugriff für alle Objekte, auf die verwiesen wird, erteilt werden muss.  
   
  Für die Besitzverkettung gelten die folgenden Einschränkungen:  
@@ -223,7 +224,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   
