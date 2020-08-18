@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_availability_replica_states (Transact-SQL)
 title: sys. dm_hadr_availability_replica_states (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/16/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b01d8ebe8f9a880e7f4a1dc06e324770dddaf1d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e8242f81b78c943590785aea03cbc798a7d632f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398696"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,12 +54,12 @@ ms.locfileid: "85676313"
 |**last_connect_error_description**|**nvarchar(1024)**|Der Text der **last_connect_error_number** Meldung.|  
 |**last_connect_error_timestamp**|**datetime**|Datums-und Uhrzeit Zeitstempel, der angibt, wann der **last_connect_error_number** Fehler aufgetreten ist.|  
   
-##  <a name="roles-and-operational-states"></a><a name="RolesAndOperationalStates"></a>Rollen und Betriebszustände  
+##  <a name="roles-and-operational-states"></a><a name="RolesAndOperationalStates"></a> Rollen und Betriebszustände  
  Die Rolle ( **Rolle**) gibt den Status eines gegebenen Verfügbarkeits Replikats und den Betriebsstatus ( **operational_state**) an, ob das Replikat für die Verarbeitung von Client Anforderungen für die gesamte Datenbank des Verfügbarkeits Replikats bereit ist. Im folgenden finden Sie eine Zusammenfassung der Betriebszustände, die für jede Rolle möglich sind: auflösen, Primär und sekundär.  
   
  **Auflösen:** Wenn sich ein Verfügbarkeits Replikat in der Rolle "auflösen" befindet, sind die möglichen Betriebszustände wie in der folgenden Tabelle dargestellt.  
   
-|Betriebsstatus|BESCHREIBUNG|  
+|Betriebsstatus|Beschreibung|  
 |-----------------------|-----------------|  
 |PENDING_FAILOVER|Derzeit wird ein Failoverbefehl für die Verfügbarkeitsgruppe verarbeitet.|  
 |OFFLINE|Alle Konfigurationsdaten für das Verfügbarkeitsreplikat wurden im WSFC-Cluster und auch in den lokalen Metadaten aktualisiert, aber in der Verfügbarkeitsgruppe fehlt derzeit ein primäres Replikat.|  
@@ -67,7 +68,7 @@ ms.locfileid: "85676313"
   
  **Primär:** Wenn ein Verfügbarkeits Replikat die primäre Rolle ausführt, ist es derzeit das primäre Replikat. Die möglichen Betriebszustände sind wie in der folgenden Tabelle dargestellt.  
   
-|Betriebsstatus|BESCHREIBUNG|  
+|Betriebsstatus|Beschreibung|  
 |-----------------------|-----------------|  
 |PENDING (AUSSTEHEND)|Dies ist ein vorübergehender Status, aber ein primäres Replikat kann in diesem Status hangen bleiben, wenn keine Arbeitsthreads zum Verarbeiten der Anforderungen verfügbar sind.|  
 |ONLINE|Die Verfügbarkeitsgruppenressource ist online, und alle Datenbankarbeitsthreads wurden abgerufen.|  
@@ -75,7 +76,7 @@ ms.locfileid: "85676313"
   
  **Sekundär:** Wenn ein Verfügbarkeits Replikat die sekundäre Rolle ausführt, ist es derzeit ein sekundäres Replikat. Die möglichen Betriebszustände sind wie in der folgenden Tabelle dargestellt.  
   
-|Betriebsstatus|BESCHREIBUNG|  
+|Betriebsstatus|Beschreibung|  
 |-----------------------|-----------------|  
 |ONLINE|Das lokale sekundäre Replikat ist mit dem primären Replikat verbunden.|  
 |FAILED|Das lokale sekundäre Replikat kann nicht aus dem WSFC-Cluster lesen oder in den WSFC-Cluster schreiben.|  

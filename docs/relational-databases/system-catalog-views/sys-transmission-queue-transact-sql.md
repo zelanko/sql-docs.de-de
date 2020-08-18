@@ -1,4 +1,5 @@
 ---
+description: sys.transmission_queue (Transact-SQL)
 title: sys. transmission_queue (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 775dde0940802962cfdae09c55749fec751d5b6c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e3fbd63f399b54af919fd791f33e5d6f7b75a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400296"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85897715"
 |**is_end_of_dialog**|**bit**|Gibt an, ob diese Nachricht das Ende der Konversationsnachricht ist. Lässt keine NULL-Werte zu.<br /><br /> 0 = Kein Ende der Konversationsnachricht.<br /><br /> 1 = Ende der Konversationsnachricht.<br /><br /> Lässt keine NULL-Werte zu.|  
 |**message_body**|**varbinary(max)**|Der Nachrichtentext. Lässt NULL-Werte zu.|  
 |**transmission_status**|**nvarchar(4000)**|Der Grund, weshalb sich diese Nachricht in der Warteschlange befindet. Dies ist im Allgemeinen eine Fehlermeldung, mit der erläutert wird, weshalb beim Senden der Nachricht ein Fehler aufgetreten ist. Wenn dieses Feld leer ist, wurde die Nachricht noch nicht gesendet. Lässt NULL-Werte zu.|  
-|**haben**|**tinyint**|Die Prioritätsebene, die der Nachricht zugewiesen wird. Lässt keine NULL-Werte zu.|  
+|**priority**|**tinyint**|Die Prioritätsebene, die der Nachricht zugewiesen wird. Lässt keine NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
