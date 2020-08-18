@@ -1,4 +1,5 @@
 ---
+description: UPDATE (DMX)
 title: Update (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f77d71eab284b695171e923cfe53b53575d45d94
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: d74a59aaea079a5d3c1945b92813f6d276591b78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394876"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,7 +38,7 @@ SET NODE_CAPTION='new caption'
  Eine Zeichenfolge, die den neuen Namen für die **NODE_CAPTION** Spalte enthält.  
   
  *Bedingungs Ausdruck*  
- Dies ist optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
+ Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel ändert die **Update** -Anweisung den Standardnamen `Cluster 1` für Cluster `001` in den aussagekräftigeren Namen `Likely Customers` .  
