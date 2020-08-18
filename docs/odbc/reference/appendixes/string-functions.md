@@ -1,4 +1,5 @@
 ---
+description: Zeichenfolgenfunktionen
 title: Zeichen folgen Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d9323809028ad170a4811b1af8b6e276cdbb4293
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42a5301f49a033dbc6e84a5fe43d68c794a76e84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386476"
 ---
 # <a name="string-functions"></a>Zeichenfolgenfunktionen
 In der folgenden Tabelle sind die Funktionen der Zeichen folgen Bearbeitung aufgeführt Eine Anwendung kann ermitteln, welche Zeichen folgen Funktionen von einem Treiber unterstützt werden, indem **SQLGetInfo** mit dem *Informationstyp* SQL_STRING_FUNCTIONS aufgerufen wird.  
@@ -34,16 +35,16 @@ In der folgenden Tabelle sind die Funktionen der Zeichen folgen Bearbeitung aufg
   
  Die Skalarfunktionen BIT_LENGTH, CHAR_LENGTH, CHARACTER_LENGTH, OCTET_LENGTH und Positions Zeichenfolgen wurden in ODBC 3,0 hinzugefügt, um Sie an SQL-92 auszurichten.  
   
-|Funktion|BESCHREIBUNG|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
-|**ASCII (** _string_exp_ **)** (ODBC 1,0)|Gibt den ASCII-Codewert des äußersten linken Zeichens *string_exp* als ganze Zahl zurück.|  
-|**BIT_LENGTH (** _string_exp_ **)** (ODBC 3,0)|Gibt die Länge des Zeichenfolgenausdrucks in Bits zurück.<br /><br /> Funktioniert nicht nur für Zeichen folgen-Datentypen und konvertiert daher *string_exp* nicht implizit in eine Zeichenfolge, sondern gibt stattdessen die (interne) Größe eines beliebigen Datentyps zurück.|  
-|**Char (** _Code_ **)** (ODBC 1,0)|Gibt das Zeichen zurück, das über den durch *Code*angegebenen ASCII-Codewert verfügt. Der Wert von *Code* muss zwischen 0 und 255 liegen. Andernfalls ist der Rückgabewert Datenquellen abhängig.|  
-|**CHAR_LENGTH (** _string_exp_ **)** (ODBC 3,0)|Gibt die Länge des Zeichen folgen Ausdrucks in Zeichen zurück, wenn der Zeichen folgen Ausdruck vom Datentyp Zeichen ist. Andernfalls wird die Länge des Zeichen folgen Ausdrucks in Bytes zurückgegeben (die kleinste Ganzzahl ist nicht kleiner als die Anzahl der Bits dividiert durch 8). (Diese Funktion ist mit der CHARACTER_LENGTH-Funktion identisch.)|  
-|**CHARACTER_LENGTH (** _string_exp_ **)** (ODBC 3,0)|Gibt die Länge des Zeichen folgen Ausdrucks in Zeichen zurück, wenn der Zeichen folgen Ausdruck vom Datentyp Zeichen ist. Andernfalls wird die Länge des Zeichen folgen Ausdrucks in Bytes zurückgegeben (die kleinste Ganzzahl ist nicht kleiner als die Anzahl der Bits dividiert durch 8). (Diese Funktion ist mit der CHAR_LENGTH-Funktion identisch.)|  
-|**Concat (** _string_exp1_,_string_exp2_**)** (ODBC 1,0)|Gibt eine Zeichenfolge zurück, die das Ergebnis der Verkettung *string_exp2* mit *string_exp1*ist. Die Ergebniszeichenfolge hängt vom DBMS ab. Wenn z. b. die durch *string_exp1* dargestellte Spalte einen NULL-Wert enthielt, würde DB2 NULL zurückgeben, SQL Server jedoch die Zeichenfolge ungleich NULL zurückgeben würde.|  
+|**ASCII (** _string_exp_ **)**  (ODBC 1,0)|Gibt den ASCII-Codewert des äußersten linken Zeichens *string_exp* als ganze Zahl zurück.|  
+|**BIT_LENGTH (** _string_exp_ **)**  (ODBC 3,0)|Gibt die Länge des Zeichenfolgenausdrucks in Bits zurück.<br /><br /> Funktioniert nicht nur für Zeichen folgen-Datentypen und konvertiert daher *string_exp* nicht implizit in eine Zeichenfolge, sondern gibt stattdessen die (interne) Größe eines beliebigen Datentyps zurück.|  
+|**Char (** _Code_ **)**  (ODBC 1,0)|Gibt das Zeichen zurück, das über den durch *Code*angegebenen ASCII-Codewert verfügt. Der Wert von *Code* muss zwischen 0 und 255 liegen. Andernfalls ist der Rückgabewert Datenquellen abhängig.|  
+|**CHAR_LENGTH (** _string_exp_ **)**  (ODBC 3,0)|Gibt die Länge des Zeichen folgen Ausdrucks in Zeichen zurück, wenn der Zeichen folgen Ausdruck vom Datentyp Zeichen ist. Andernfalls wird die Länge des Zeichen folgen Ausdrucks in Bytes zurückgegeben (die kleinste Ganzzahl ist nicht kleiner als die Anzahl der Bits dividiert durch 8). (Diese Funktion ist mit der CHARACTER_LENGTH-Funktion identisch.)|  
+|**CHARACTER_LENGTH (** _string_exp_ **)**  (ODBC 3,0)|Gibt die Länge des Zeichen folgen Ausdrucks in Zeichen zurück, wenn der Zeichen folgen Ausdruck vom Datentyp Zeichen ist. Andernfalls wird die Länge des Zeichen folgen Ausdrucks in Bytes zurückgegeben (die kleinste Ganzzahl ist nicht kleiner als die Anzahl der Bits dividiert durch 8). (Diese Funktion ist mit der CHAR_LENGTH-Funktion identisch.)|  
+|**Concat (** _string_exp1_,_string_exp2_**)**  (ODBC 1,0)|Gibt eine Zeichenfolge zurück, die das Ergebnis der Verkettung *string_exp2* mit *string_exp1*ist. Die Ergebniszeichenfolge hängt vom DBMS ab. Wenn z. b. die durch *string_exp1* dargestellte Spalte einen NULL-Wert enthielt, würde DB2 NULL zurückgeben, SQL Server jedoch die Zeichenfolge ungleich NULL zurückgeben würde.|  
 |**Differenz (** _string_exp1__string_exp2_**)** (ODBC 2,0)|Gibt einen ganzzahligen Wert zurück, der die Differenz zwischen den Werten angibt, die von der SOUNDEX-Funktion für *string_exp1* und *string_exp2*zurückgegeben werden.|  
-|**Insert (** _string_exp1_, *Start*, *length*, _string_exp2_**)** (ODBC 1,0)|Gibt eine Zeichenfolge zurück, in der *Längen* Zeichen aus *string_exp1*gelöscht wurden, beginnend beim *Start*und wo *string_exp2* in string_exp eingefügt wurde *,* beginnend beim *Start*.|  
+|**Insert (** _string_exp1_, *Start*, *length*, _string_exp2_**)**  (ODBC 1,0)|Gibt eine Zeichenfolge zurück, in der *Längen* Zeichen aus *string_exp1*gelöscht wurden, beginnend beim *Start*und wo *string_exp2* in string_exp eingefügt wurde *,* beginnend beim *Start*.|  
 |**LCASE (** _string_exp_ **)** (ODBC 1,0)|Gibt eine Zeichenfolge zurück, die in *string_exp*gleich ist, wobei alle Großbuchstaben in Kleinbuchstaben konvertiert wurden.|  
 |**Left (** _string_exp_, _count_**)** (ODBC 1,0)|Gibt die *Anzahl* der am weitesten links stehenden Zeichen *string_exp*zurück.|  
 |**Länge (** _string_exp_ **)** (ODBC 1,0)|Gibt die Anzahl der Zeichen in *string_exp zurück,* wobei nachfolgende Leerzeichen ausgenommen sind.<br /><br /> **Length** akzeptiert nur Zeichen folgen. Konvertiert *string_exp* daher implizit in eine Zeichenfolge und gibt die Länge dieser Zeichenfolge zurück (nicht die interne Größe des DataType).|  

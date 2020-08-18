@@ -1,4 +1,5 @@
 ---
+description: Anweisungsübergänge
 title: Anweisungs Übergänge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55f82e275bfd5bff12544b35a1370cdb31495320
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3515b1d6aea4cab66bc01ee3d071727e6cb8f447
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386516"
 ---
 # <a name="statement-transitions"></a>Anweisungsübergänge
 ODBC-Anweisungen weisen die folgenden Zustände auf.  
   
-|State|BESCHREIBUNG|  
+|Staat|Beschreibung|  
 |-----------|-----------------|  
 |S0|Nicht zugewiesene Anweisung. (Der Verbindungsstatus muss C4, C5 oder C6 lauten. Weitere Informationen finden Sie unter [Verbindungs Übergänge](../../../odbc/reference/appendixes/connection-transitions.md).)|  
 |S1|Zugewiesene Anweisung.|  
@@ -61,7 +62,7 @@ ODBC-Anweisungen weisen die folgenden Zustände auf.
   
  [4] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_DESC wurde.  
   
- [5] das Aufrufen von **sqlbinchandle** mit *outputhandleptr* , das auf ein gültiges Handle verweist, überschreibt dieses Handle ohne Berücksichtigung der vorherigen Inhalte dieses Handles und kann zu Problemen mit ODBC-Treibern führen. Es ist eine falsche ODBC-Anwendungsprogrammierung zum doppelten Aufrufen von **sqlzuordchandle** mit der gleichen Anwendungsvariablen, die für * \*outputhandleptr* definiert ist, ohne **SQLFreeHandle** aufzurufen, um das Handle vor der erneuten Zuordnung freizugeben. Das Überschreiben von ODBC-Handles auf diese Weise kann zu inkonsistenten Verhalten oder Fehlern im Rahmen der ODBC-Treiber führen.  
+ [5] das Aufrufen von **sqlbinchandle** mit *outputhandleptr* , das auf ein gültiges Handle verweist, überschreibt dieses Handle ohne Berücksichtigung der vorherigen Inhalte dieses Handles und kann zu Problemen mit ODBC-Treibern führen. Es ist eine falsche ODBC-Anwendungsprogrammierung zum doppelten Aufrufen von **sqlzuordchandle** mit der gleichen Anwendungsvariablen, die für * \* outputhandleptr* definiert ist, ohne **SQLFreeHandle** aufzurufen, um das Handle vor der erneuten Zuordnung freizugeben. Das Überschreiben von ODBC-Handles auf diese Weise kann zu inkonsistenten Verhalten oder Fehlern im Rahmen der ODBC-Treiber führen.  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
@@ -99,19 +100,19 @@ ODBC-Anweisungen weisen die folgenden Zustände auf.
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|S1 [1] S2 [Nr] und [2] S3 [r] und [2] S5 [3] und [5] S6 ([3] oder [4]) und [6] S7 [4] und [7]|Nächste Tabelle anzeigen|  
   
- [1] **SQLExecDirect** hat SQL_NEED_DATA zurückgegeben.  
+ [1]   **SQLExecDirect** hat SQL_NEED_DATA zurückgegeben.  
   
- [2] **SQLExecute** hat SQL_NEED_DATA zurückgegeben.  
+ [2]   **SQLExecute** hat SQL_NEED_DATA zurückgegeben.  
   
- [3] **SQLBulkOperations** hat SQL_NEED_DATA zurückgegeben.  
+ [3]   **SQLBulkOperations** hat SQL_NEED_DATA zurückgegeben.  
   
- [4] **SQLSetPos** haben SQL_NEED_DATA zurückgegeben.  
+ [4]   **SQLSetPos** haben SQL_NEED_DATA zurückgegeben.  
   
- [5] ' **SQLFetch**', ' **SQLFetchScroll**' oder ' **sqlextendebug** ' wurde nicht aufgerufen.  
+ [5] '   **SQLFetch**', ' **SQLFetchScroll**' oder ' **sqlextendebug** ' wurde nicht aufgerufen.  
   
- [6] **SQLFetch** oder **SQLFetchScroll** wurde aufgerufen.  
+ [6]   **SQLFetch** oder **SQLFetchScroll** wurde aufgerufen.  
   
- [7] **sqlextendebug** wurde aufgerufen.  
+ [7]   **sqlextendebug** wurde aufgerufen.  
   
 ## <a name="sqlcancel-asynchronous-states"></a>SQLCancel (asynchrone Zustände)  
   
@@ -141,9 +142,9 @@ ODBC-Anweisungen weisen die folgenden Zustände auf.
 |-----------------------|--------------------|  
 |--[1] 07005 [2]|--[s] S11 x|  
   
- [1] *fieldidentifier* wurde SQL_DESC_COUNT.  
+ [1]   *fieldidentifier* wurde SQL_DESC_COUNT.  
   
- [2] *fieldidentifier* wurde nicht SQL_DESC_COUNT.  
+ [2]   *fieldidentifier* wurde nicht SQL_DESC_COUNT.  
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, sqlauslännkeys, SQLGetTypeInfo, SQLPrimaryKeys, sqlprocedurecolrens, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges und SQLTables  
   
@@ -388,7 +389,7 @@ ODBC-Anweisungen weisen die folgenden Zustände auf.
   
  [2] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_STMT wurde.  
   
- [3] **SQLGetDiagField** gibt immer einen Fehler in diesem Zustand zurück, wenn *DiagIdentifier* SQL_DIAG_ROW_COUNT ist.  
+ [3]   **SQLGetDiagField** gibt immer einen Fehler in diesem Zustand zurück, wenn *DiagIdentifier* SQL_DIAG_ROW_COUNT ist.  
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
@@ -472,15 +473,15 @@ ODBC-Anweisungen weisen die folgenden Zustände auf.
 |----------------------|---------------------|---------------------|  
 |S1 [e] und [1] S2 [e], [Nr] und [2] S3 [e], [r] und [2] S5 [e] und [4] S6 [e] und [5] S7 [e] und [3] S9 [d] S11 [x]|HY010|S1 [e] und [1] S2 [e], [Nr] und [2] S3 [e], [r] und [2] S4 [s], [Nr], and ([1] or [2]) S5 [s], [r], and ([1] oder [2]) S5 ([s] oder [e]) und [4] S6 ([s] oder [e]) und [5] S7 ([s] oder [e]) und [3] S9 [d] S11 [x]|  
   
- [1] **SQLExecDirect** hat SQL_NEED_DATA zurückgegeben.  
+ [1]   **SQLExecDirect** hat SQL_NEED_DATA zurückgegeben.  
   
- [2] **SQLExecute** hat SQL_NEED_DATA zurückgegeben.  
+ [2]   **SQLExecute** hat SQL_NEED_DATA zurückgegeben.  
   
- [3] **SQLSetPos** wurde von State S7 aufgerufen und SQL_NEED_DATA zurückgegeben.  
+ [3]   **SQLSetPos** wurde von State S7 aufgerufen und SQL_NEED_DATA zurückgegeben.  
   
- [4] **SQLBulkOperations** wurde aus dem Status "S5" aufgerufen und SQL_NEED_DATA zurückgegeben.  
+ [4]   **SQLBulkOperations** wurde aus dem Status "S5" aufgerufen und SQL_NEED_DATA zurückgegeben.  
   
- [5] **SQLSetPos** oder **SQLBulkOperations** wurde von Status S6 aufgerufen und SQL_NEED_DATA zurückgegeben.  
+ [5]   **SQLSetPos** oder **SQLBulkOperations** wurde von Status S6 aufgerufen und SQL_NEED_DATA zurückgegeben.  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
@@ -514,15 +515,15 @@ ODBC-Anweisungen weisen die folgenden Zustände auf.
 |----------------------|---------------------|---------------------|  
 |HY010|S1 [e] und [1] S2 [e], [Nr] und [2] S3 [e], [r] und [2] S5 [e] und [4] S6 [e] und [5] S7 [e] und [3] S10 [s] S11 [x]|--[s] S1 [e] und [1] S2 [e], [Nr], [2] S3 [e], [r] und [2] S5 [e] und [4] S6 [e] und [5] S7 [e] und [3] S11 [x] HY011 [6]|  
   
- [1] **SQLExecDirect** hat SQL_NEED_DATA zurückgegeben.  
+ [1]   **SQLExecDirect** hat SQL_NEED_DATA zurückgegeben.  
   
- [2] **SQLExecute** hat SQL_NEED_DATA zurückgegeben.  
+ [2]   **SQLExecute** hat SQL_NEED_DATA zurückgegeben.  
   
- [3] **SQLSetPos** wurde von State S7 aufgerufen und SQL_NEED_DATA zurückgegeben.  
+ [3]   **SQLSetPos** wurde von State S7 aufgerufen und SQL_NEED_DATA zurückgegeben.  
   
- [4] **SQLBulkOperations** wurde aus dem Status "S5" aufgerufen und SQL_NEED_DATA zurückgegeben.  
+ [4]   **SQLBulkOperations** wurde aus dem Status "S5" aufgerufen und SQL_NEED_DATA zurückgegeben.  
   
- [5] **SQLSetPos** oder **SQLBulkOperations** wurde von Status S6 aufgerufen und SQL_NEED_DATA zurückgegeben.  
+ [5]   **SQLSetPos** oder **SQLBulkOperations** wurde von Status S6 aufgerufen und SQL_NEED_DATA zurückgegeben.  
   
  [6] mindestens ein Aufruf von **SQLPutData** für einen einzelnen Parameter, der SQL_SUCCESS zurückgegeben wurde, und anschließend wurde ein Aufruf von **SQLPutData** für denselben Parameter durchgeführt, wobei *StrLen_Or_Ind* auf SQL_NULL_DATA festgelegt wurde.  
   

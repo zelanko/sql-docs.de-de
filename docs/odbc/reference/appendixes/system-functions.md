@@ -1,4 +1,5 @@
 ---
+description: Systemfunktionen
 title: System Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca71687887444cafc502c15683f3972cf6308e6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1be058f5021c3f03242a09500150acd98cac8e70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386406"
 ---
 # <a name="system-functions"></a>Systemfunktionen
 In der folgenden Tabelle werden die Systemfunktionen aufgelistet, die in der ODBC-skalarfunktionsmenge enthalten sind. Durch den Aufruf von **SQLGetInfo** mit dem *Informationstyp* SQL_SYSTEM_FUNCTIONS kann eine Anwendung bestimmen, welche System Funktionen von einem Treiber unterstützt werden.  
@@ -29,8 +30,8 @@ In der folgenden Tabelle werden die Systemfunktionen aufgelistet, die in der ODB
   
  Zurückgegebene Werte werden als ODBC-Datentypen dargestellt.  
   
-|Funktion|BESCHREIBUNG|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
-|**Database ()** (ODBC 1,0)|Gibt den Namen der Datenbank zurück, die dem Verbindungs Handle entspricht. (Der Name der Datenbank ist auch durch Aufrufen von **SQLGetConnectOption** mit der Option SQL_CURRENT_QUALIFIER Connection verfügbar.)|  
-|**IFNULL (** _Exp_,_Wert_**)** (ODBC 1,0)|Wenn *Exp* NULL ist, wird der *Wert* zurückgegeben. Wenn *Exp* nicht NULL ist, wird *Exp* zurückgegeben. Der mögliche Datentyp oder die Art von *Wert* muss mit dem Datentyp von *Exp*kompatibel sein.|  
-|**Benutzer ()** (ODBC 1,0)|Gibt den Benutzernamen im DBMS zurück. (Der Benutzername ist auch über **SQLGetInfo** verfügbar, indem der Informationstyp angegeben wird: SQL_USER_NAME.) Dies kann sich von dem Anmelde Namen unterscheiden.|
+|**Database ()**  (ODBC 1,0)|Gibt den Namen der Datenbank zurück, die dem Verbindungs Handle entspricht. (Der Name der Datenbank ist auch durch Aufrufen von **SQLGetConnectOption** mit der Option SQL_CURRENT_QUALIFIER Connection verfügbar.)|  
+|**IFNULL (** _Exp_,_Wert_**)**  (ODBC 1,0)|Wenn *Exp* NULL ist, wird der *Wert* zurückgegeben. Wenn *Exp* nicht NULL ist, wird *Exp* zurückgegeben. Der mögliche Datentyp oder die Art von *Wert* muss mit dem Datentyp von *Exp*kompatibel sein.|  
+|**Benutzer ()**  (ODBC 1,0)|Gibt den Benutzernamen im DBMS zurück. (Der Benutzername ist auch über **SQLGetInfo** verfügbar, indem der Informationstyp angegeben wird: SQL_USER_NAME.) Dies kann sich von dem Anmelde Namen unterscheiden.|
