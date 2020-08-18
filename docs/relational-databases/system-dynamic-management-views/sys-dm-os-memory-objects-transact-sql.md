@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_memory_objects (Transact-SQL)
 title: sys. dm_os_memory_objects (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31af260a5290b899bb64fa3942d1e2aa0a076d31
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3378ee753ebc9205ac4607930801fdf3cc434b3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398066"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,16 +55,16 @@ ms.locfileid: "85999039"
 |**contention_factor**|**real**|**Gilt für**:  [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] und höher.<br /><br /> Ein-Wert, der Konflikte für dieses Speicher Objekt angibt, wobei 0 kein Konflikt ist. Der-Wert wird immer dann aktualisiert, wenn eine angegebene Anzahl von Speicher Belegungen während dieses Zeitraums zu Konflikten geführt hat. Gilt nur für Thread sichere Speicher Objekte.|  
 |**waiting_tasks_count**|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] und höher.<br /><br /> Anzahl der Warte Vorgänge für dieses Speicher Objekt. Dieser Wert wird jedes Mal inkrementiert, wenn Speicher von diesem Speicher Objekt belegt wird. Das Inkrement ist die Anzahl der Tasks, die zurzeit auf den Zugriff auf dieses Speicher Objekt warten. Gilt nur für Thread sichere Speicher Objekte. Dies ist ein bestmögliche Wert ohne Richtigkeit der Garantie.|  
 |**exclusive_access_count**|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] und höher.<br /><br /> Gibt an, wie oft ausschließlich auf dieses Speicher Objekt zugegriffen wurde. Gilt nur für Thread sichere Speicher Objekte.  Dies ist ein bestmögliche Wert ohne Richtigkeit der Garantie.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
  **partition_type**, **contention_factor**, **waiting_tasks_count**und **exclusive_access_count** sind in noch nicht implementiert [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .  
   
 ## <a name="permissions"></a>Berechtigungen
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Speicherobjekte sind Heaps. Sie stellen im Vergleich zu den Arbeitsspeicherclerks Zuordnungen mit feinerer Granularität bereit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten verwenden Arbeitsspeicherobjekte anstelle der Arbeitsspeicherclerks. Speicherobjekte verwenden die Seitenzuordnungsschnittstelle des Arbeitsspeicherclerks für die Zuordnung von Seiten. Speicherobjekte verwenden keine Schnittstellen, die auf virtuellem Speicher oder Shared Memory basieren. Abhängig von den Zuordnungsmustern können Komponenten verschiedene Typen von Speicherobjekten erstellen, um Bereiche zufälliger Größe zuzuordnen.  
   
  Die Standardseitengröße eines Speicherobjekts beträgt 8 kB. Inkrementelle Speicherobjekte können jedoch Seitengrößen zwischen 512 Bytes und 8 kB aufweisen.  
