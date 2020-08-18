@@ -1,4 +1,5 @@
 ---
+description: Verhaltensänderungen und ODBC 3.x-Treiber
 title: Verhaltensänderungen und ODBC 3. x-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8343573261d74a6a0c652cf425b12da91f7cb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43f64aa4b627130308ea920918c2de6d98116020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411336"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Verhaltensänderungen und ODBC 3.x-Treiber
 Das Umgebungs Attribut SQL_ATTR_ODBC_VERSION gibt dem Treiber an, ob es das ODBC *2. x* -oder ODBC *3. x* -Verhalten aufweisen muss. Wie das SQL_ATTR_ODBC_VERSION-Umgebungs Attribut festgelegt wird, hängt von der Anwendung ab. ODBC *3. x* -Anwendungen müssen **SQLSetEnvAttr** aufzurufen, um dieses Attribut festzulegen, nachdem Sie **SQLAllocHandle** aufgerufen haben, um ein Umgebungs Handle zuzuordnen, und bevor Sie **SQLAllocHandle** zum Zuordnen eines Verbindungs Handles aufruft. Wenn dies nicht der Fall ist, gibt der Treiber-Manager SQLSTATE HY010 (Funktions Sequenz Fehler) bei letzterem **sqlzuzuweisung**-aufrufsbefehl zurück.  

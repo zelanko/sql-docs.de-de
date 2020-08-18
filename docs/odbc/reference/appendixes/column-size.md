@@ -1,4 +1,5 @@
 ---
+description: Spaltengröße
 title: Spaltengröße | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07b6151c723cb5e05189791100338e9e343c28aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53d7934f3ac4669545e3cc24752e4a9e0f4fb589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411116"
 ---
 # <a name="column-size"></a>Spaltengröße
 Die Größe der Spalte (oder des Parameters) numerischer Datentypen wird als maximale Anzahl von Ziffern definiert, die vom Datentyp der Spalte oder des Parameters oder der Genauigkeit der Daten verwendet werden. Bei Zeichen Typen ist dies die Länge der Daten in Zeichen. für binäre Datentypen wird die Spaltengröße als die Länge der Daten in Byte definiert. Bei den Datentypen Time, timestamp und all Interval ist dies die Anzahl der Zeichen in der Zeichen Darstellung dieser Daten. Die Spaltengröße, die für jeden präzisen SQL-Datentyp definiert ist, ist in der folgenden Tabelle dargestellt.  
@@ -41,17 +42,17 @@ Die Größe der Spalte (oder des Parameters) numerischer Datentypen wird als max
 |SQL_TYPE_DATE [c]|10 (die Anzahl der Zeichen im Format *yyyy-mm-dd* ).|  
 |SQL_TYPE_TIME [c]|8 (die Anzahl der Zeichen im Format *hh-mm-SS* ) oder 9 + *s* (die Anzahl der Zeichen im Format *hh: mm: SS*[. fff...], wobei *s* die Genauigkeit von Sekunden ist).|  
 |SQL_TYPE_TIMESTAMP|16 (die Anzahl der Zeichen im Format *yyyy-mm-dd hh: mm* )<br /><br /> 19 (die Anzahl der Zeichen im Format *yyyy-mm-dd* *hh: mm: SS* )<br /><br /> oder<br /><br /> 20 + *s* (die Anzahl der Zeichen im Format *yyyy-mm-dd hh: mm: SS*[. fff...], wobei *s* die Genauigkeit von Sekunden ist).|  
-|SQL_INTERVAL_SECOND|Dabei *steht p* für die angegebene Intervall Genauigkeit und *s* für die Sekunden Genauigkeit, *p* (wenn *s*= 0) oder *p*+*s*+ 1 (wenn *s*>0). d|  
-|SQL_INTERVAL_DAY_TO_SECOND|Dabei steht *p* für das Intervall mit der führenden Genauigkeit und *s* für die Sekunden Genauigkeit, 9 +*p* (wenn *s*= 0) oder 10 +*p*+*s* (wenn *s*>0). d|  
-|SQL_INTERVAL_HOUR_TO_SECOND|Dabei ist *p* das Intervall, das die Genauigkeit angibt, und *s* ist die Sekunden Genauigkeit, 6 +*p* (wenn *s*= 0) oder 7 +*p*+*s* (wenn *s*>0). d|  
-|SQL_INTERVAL_MINUTE_TO_SECOND|Dabei steht *p* für das Intervall mit der führenden Genauigkeit und *s* für die Sekunden Genauigkeit, 3 +*p* (wenn *s*= 0) oder 4 +*p*+*s* (wenn *s*>0). d|  
+|SQL_INTERVAL_SECOND|Dabei ist *p* das Intervall führende Genauigkeit und *s* ist die Sekunden Genauigkeit, *p* (wenn *s*= 0) oder *p* + *s*+ 1 (wenn *s*>0). [ d|  
+|SQL_INTERVAL_DAY_TO_SECOND|Dabei steht *p* für das Intervall mit der führenden Genauigkeit und *s* für die Sekunden Genauigkeit, 9 +*p* (wenn *s*= 0) oder 10 +*p* + *s* (wenn *s*>0). [ d|  
+|SQL_INTERVAL_HOUR_TO_SECOND|Dabei steht *p* für das Intervall mit der führenden Genauigkeit und *s* für die Sekunden Genauigkeit, 6 +*p* (wenn *s*= 0) oder 7 +*p* + *s* (wenn *s*>0). [ d|  
+|SQL_INTERVAL_MINUTE_TO_SECOND|Dabei steht *p* für das Intervall mit der führenden Genauigkeit und *s* für die Sekunden Genauigkeit, 3 +*p* (wenn *s*= 0) oder 4 +*p* + *s* (wenn *s*>0). [ d|  
 |SQL_INTERVAL_YEAR SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*, wobei *p* die für das Intervall führende Genauigkeit ist. d|  
 |SQL_INTERVAL_YEAR_TO_MONTH SQL_INTERVAL_DAY_TO_HOUR|3 +*p*, wobei *p* die für das Intervall führende Genauigkeit ist. d|  
 |SQL_INTERVAL_DAY_TO_MINUTE|6 +*p*, wobei *p* die für das Intervall führende Genauigkeit ist. d|  
 |SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*, wobei *p* die für das Intervall führende Genauigkeit ist. d|  
 |SQL_GUID|36 (die Anzahl der Zeichen im *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* -Format)|  
   
- [a] für eine ODBC 1,0-Anwendung, die **SQLSetParam** in einem ODBC 2,0-Treiber aufruft, und für eine ODBC 2,0-Anwendung, die **SQLBindParameter** in einem \*ODBC-1,0-Treiber aufruft, wenn *StrLen_or_IndPtr* für einen SQL_LONGVARCHAR oder SQL_LONGVARBINARY Typ SQL_DATA_AT_EXEC wird, muss *ColumnSize* auf die Gesamtlänge der zu sendenden Daten festgelegt werden, nicht auf  
+ [a] für eine ODBC 1,0-Anwendung, die **SQLSetParam** in einem ODBC 2,0-Treiber aufruft, und für eine ODBC 2,0-Anwendung, die **SQLBindParameter** in einem ODBC-1,0-Treiber aufruft, wenn \* *StrLen_or_IndPtr* für einen SQL_LONGVARCHAR oder SQL_LONGVARBINARY Typ SQL_DATA_AT_EXEC wird, muss *ColumnSize* auf die Gesamtlänge der zu sendenden Daten festgelegt werden, nicht auf  
   
  [b] Wenn der Treiber die Spalten-oder Parameter Länge für einen Variablentyp nicht bestimmen kann, wird SQL_NO_TOTAL zurückgegeben.  
   

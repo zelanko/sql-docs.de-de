@@ -1,4 +1,5 @@
 ---
+description: LocalDBGetVersionInfo-Funktion
 title: Localdbgetversioninfo-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 23b5c34bf378254e097a3f9c80417d8f96eac0c8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c4e39c8bf22b4baeccfdd782d48fde7be342f68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408746"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo-Funktion
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +69,7 @@ HRESULT LocalDBGetVersionInfo(
  *dwversioninfosize*  
  Der Enthält die Größe des *VERSIONINFO* -Puffers.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  S_OK  
  Die Funktion wurde erfolgreich ausgeführt.  
   
@@ -97,7 +98,7 @@ LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));
   
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein Codebeispiel, in dem die LocalDB-API verwendet wird, finden Sie unter [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

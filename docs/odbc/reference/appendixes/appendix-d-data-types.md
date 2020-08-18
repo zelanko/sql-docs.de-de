@@ -1,4 +1,5 @@
 ---
+description: Anhang D:-Datentypen
 title: 'Anhang D: Datentypen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c1abadb962e3a1ee9327bbb8d84e52d180b4a7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 77ca1ac4b4628880e6f0a87237b347aadb66584d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411486"
 ---
 # <a name="appendix-d-data-types"></a>Anhang D:-Datentypen
 ODBC definiert zwei Sätze von Datentypen: SQL-Datentypen und C-Datentypen. SQL-Datentypen geben den Datentyp der Daten an, die in der Datenquelle gespeichert sind. C-Datentypen geben den Datentyp der in Anwendungs Puffern gespeicherten Daten an.  
