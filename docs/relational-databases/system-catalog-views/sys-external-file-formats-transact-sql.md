@@ -1,4 +1,5 @@
 ---
+description: sys. external_file_formats (Transact-SQL)
 title: sys. external_file_formats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e3f884e09d41c2ae7aa5c7610b0c7ac24691a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cfdbcd0d436176d11ba5702403a2fc032df28f25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401507"
 ---
 # <a name="sysexternal_file_formats-transact-sql"></a>sys. external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "82828514"
   
  Enthält eine Zeile für jedes externe Dateiformat auf dem Server für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|Die Objekt-ID für das externe Dateiformat.||  
 |name|**sysname**|Der Name des Datei Formats. in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ist dies für die-Datenbank eindeutig. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ist dies für den Server eindeutig.||  
@@ -42,7 +43,7 @@ ms.locfileid: "82828514"
 |data_compression|**nvarchar(255)**|Die Datenkomprimierungsmethode für die externen Daten.|Für format_type = delimitedtext:<br /><br /> -' org. Apache. Hadoop. IO. compress. defaultcodec '<br />-' org. Apache. Hadoop. IO. compress. gzipcodec '<br /><br /> Für format_type = rcfile:<br /><br /> -' org. Apache. Hadoop. IO. compress. defaultcodec '<br /><br /> Für format_type = Orc:<br /><br /> -' org. Apache. Hadoop. IO. compress. defaultcodec '<br />-' org. Apache. Hadoop. IO. compress. snappycodec '<br /><br /> Für format_type = Parkett:<br /><br /> -' org. Apache. Hadoop. IO. compress. gzipcodec '<br />-' org. Apache. Hadoop. IO. compress. snappycodec '|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde.  Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. external_data_sources &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
