@@ -1,4 +1,5 @@
 ---
+description: Überprüfungsstatus (Master Data Services)
 title: Überprüfungsstatus
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1ceaf7e42b8d25873cc595e3e64b6949e25d52e3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7d0dd3f4589f18cd7eb94fab61937a7452a94f35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491512"
 ---
 # <a name="validation-statuses-master-data-services"></a>Überprüfungsstatus (Master Data Services)
 
@@ -23,7 +24,7 @@ ms.locfileid: "85812323"
 
   Auf der Seite **Version überprüfen** im Bereich **Versionsverwaltung** sind die folgenden Status möglich.  
   
-|Status|BESCHREIBUNG|  
+|Status|Beschreibung|  
 |------------|-----------------|  
 |Überprüfung wird erwartet|Alle neu erstellten Elemente, die überprüft werden sollen|  
 |Erneute Überprüfung wird erwartet|Vorhandene Elemente, die überprüft werden sollen|  

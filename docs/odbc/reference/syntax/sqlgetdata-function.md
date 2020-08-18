@@ -1,4 +1,5 @@
 ---
+description: SQLGetData-Funktion
 title: SQLGetData-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac11505b8e47dae8df53af27c64a7ee6372b3f28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a659e1bb5ad7765dbfcbcb01dbc16744de7cfc20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461078"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData-Funktion
 **Konformitäts**  
@@ -67,7 +68,7 @@ SQLRETURN SQLGetData(
   
  *Targetvalueptr* darf nicht NULL sein.  
   
- *Pufferlänge*  
+ *BufferLength*  
  Der Länge des **targetvalueptr* -Puffers in Bytes.  
   
  Der Treiber verwendet *BufferLength* , um das Schreiben über das Ende des \* *targetvalueptr* -Puffers zu vermeiden, wenn Daten variabler Länge zurückgegeben werden, z. b. Zeichen-oder Binärdaten. Beachten Sie, dass der Treiber beim Zurückgeben von Zeichendaten an \* *targetvalueptr*das NULL-Terminierungs Zeichen zählt. **Targetvalueptr* muss daher Leerzeichen für das NULL-Terminierungs Zeichen enthalten, oder der Treiber schneidet die Daten ab.  
@@ -95,10 +96,10 @@ SQLRETURN SQLGetData(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLGetData** entweder SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die häufig von **SQLGetData** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01004|Zeichen folgen Daten, rechts abgeschnitten|Nicht alle Daten für die angegebene Spalte ( *Col_or_Param_Num*) können in einem einzelnen aufrufsbefehl abgerufen werden. SQL_NO_TOTAL oder die Länge der Daten, die in der angegebenen Spalte vor dem aktuellen **SQLGetData** -Befehl verbleiben, wird \*in *StrLen_or_IndPtr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> Weitere Informationen zur Verwendung mehrerer Aufrufe von **SQLGetData** für eine einzelne Spalte finden Sie unter "comments".|  
+|01004|Zeichen folgen Daten, rechts abgeschnitten|Nicht alle Daten für die angegebene Spalte ( *Col_or_Param_Num*) können in einem einzelnen aufrufsbefehl abgerufen werden. SQL_NO_TOTAL oder die Länge der Daten, die in der angegebenen Spalte vor dem aktuellen **SQLGetData** -Befehl verbleiben, wird in \* *StrLen_or_IndPtr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> Weitere Informationen zur Verwendung mehrerer Aufrufe von **SQLGetData** für eine einzelne Spalte finden Sie unter "comments".|  
 |01S07|Abschneiden von Sekundenbruchteilen|Die für eine oder mehrere Spalten zurückgegebenen Daten wurden abgeschnitten. Bei numerischen Datentypen wurde der Bruchteile der Zahl abgeschnitten. Bei Zeit-, Zeitstempel-und Intervall Datentypen, die eine Zeitkomponente enthalten, wurde der Bruchteil der Zeit abgeschnitten.<br /><br /> (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Verletzung des Attributs für eingeschränkte Datentypen|Der Datenwert einer Spalte im Resultset kann nicht in den C-Datentyp konvertiert werden, der durch das *TargetType*-Argument angegeben wird.|  
 |07009|Ungültiger deskriptorindex.|Der für das Argument angegebene Wert *Col_or_Param_Num* 0 und das Attribut der SQL_ATTR_USE_BOOKMARKS Anweisung auf SQL_UB_OFF festgelegt.<br /><br /> Der für das Argument angegebene Wert *Col_or_Param_Num* war größer als die Anzahl der Spalten im Resultset.<br /><br /> Der *Col_or_Param_Num* Wert war nicht gleich der Ordinalzahl des verfügbaren Parameters.<br /><br /> (DM) die angegebene Spalte wurde gebunden. Diese Beschreibung gilt nicht für Treiber, die die SQL_GD_BOUND Bitmaske für die SQL_GETDATA_EXTENSIONS-Option in **SQLGetInfo**zurückgeben.<br /><br /> (DM) die Nummer der angegebenen Spalte ist kleiner oder gleich der Nummer der höchsten gebundenen Spalte. Diese Beschreibung gilt nicht für Treiber, die die SQL_GD_ANY_COLUMN Bitmaske für die SQL_GETDATA_EXTENSIONS-Option in **SQLGetInfo**zurückgeben.<br /><br /> (DM) die Anwendung hat bereits **SQLGetData** für die aktuelle Zeile aufgerufen. die im aktuellen-Aufrufwert angegebene Nummer der Spalte war kleiner als die Nummer der Spalte, die im vorhergehenden-Befehl angegeben wurde. der Treiber gibt die SQL_GD_ANY_ORDER Bitmaske für die SQL_GETDATA_EXTENSIONS-Option in **SQLGetInfo**nicht zurück.<br /><br /> (DM) das *TargetType* -Argument wurde SQL_ARD_TYPE, und der *Col_or_Param_Num* Deskriptordatensatz in der ARD hat die Konsistenzprüfung nicht bestanden.<br /><br /> (DM) das *TargetType* -Argument wurde SQL_ARD_TYPE, und der Wert im Feld SQL_DESC_COUNT der ARD war kleiner als das Argument *Col_or_Param_Num* .|  
@@ -153,7 +154,7 @@ SQLRETURN SQLGetData(
  Wenn das *TargetType* -Argument ein Interval-Datentyp ist, werden die standardmäßige Intervall Genauigkeit (2) und die Standardgenauigkeit für Sekundenbruchteilen (6), wie in den Feldern SQL_DESC_DATETIME_INTERVAL_PRECISION und SQL_DESC_PRECISION der ARD festgelegt, für die Daten verwendet. Wenn das *TargetType* -Argument ein SQL_C_NUMERIC-Datentyp ist, werden die Standardgenauigkeit (Treiber definiert) und die Standardskala (0), die in den Feldern SQL_DESC_PRECISION und SQL_DESC_SCALE der ARD festgelegt sind, für die Daten verwendet. Wenn eine Standardgenauigkeit oder Dezimalstellen Angabe nicht angemessen ist, muss die Anwendung das entsprechende Deskriptorfeld explizit durch einen **SQLSetDescField** -oder **SQLSetDescRec**-Befehl festlegen. Sie kann das SQL_DESC_CONCISE_TYPE-Feld auf SQL_C_NUMERIC festlegen und **SQLGetData** mit einem *TargetType* -Argument von SQL_ARD_TYPE aufrufen, was dazu führt, dass die Genauigkeits-und Skalierungs Werte in den Deskriptorfeldern verwendet werden.  
   
 > [!NOTE]
->  In ODBC 2 *. x*legen Anwendungen *TargetType* auf "SQL_C_DATE", "SQL_C_TIME" oder "SQL_C_TIMESTAMP \*" fest, um anzugeben, dass *targetvalueptr* eine Datums-, Uhrzeit-oder Zeitstempel Struktur ist. In ODBC 3 *. x*legen Anwendungen *TargetType* auf SQL_C_TYPE_DATE, SQL_C_TYPE_TIME oder SQL_C_TYPE_TIMESTAMP fest. Der Treiber-Manager nimmt ggf. geeignete Zuordnungen basierend auf der Anwendungs-und Treiber Version vor.  
+>  In ODBC 2 *. x*legen Anwendungen *TargetType* auf "SQL_C_DATE", "SQL_C_TIME" oder "SQL_C_TIMESTAMP" fest, um anzugeben, dass \* *targetvalueptr* eine Datums-, Uhrzeit-oder Zeitstempel Struktur ist. In ODBC 3 *. x*legen Anwendungen *TargetType* auf SQL_C_TYPE_DATE, SQL_C_TYPE_TIME oder SQL_C_TYPE_TIMESTAMP fest. Der Treiber-Manager nimmt ggf. geeignete Zuordnungen basierend auf der Anwendungs-und Treiber Version vor.  
   
 ## <a name="retrieving-variable-length-data-in-parts"></a>Abrufen von Daten variabler Länge in Teilen  
  **SQLGetData** kann zum Abrufen von Daten aus einer Spalte verwendet werden, die Daten variabler Länge enthält, d. h. wenn der Bezeichner des SQL-Datentyps der Spalte SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_WCHAR, SQL_WVARCHAR, SQL_WLONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY oder ein Treiber spezifischer Bezeichner für einen Typ variabler Länge ist.  
@@ -189,7 +190,7 @@ SQLRETURN SQLGetData(
   
      **SQLGetData** verkürzt niemals Daten, die in Datentypen mit fester Länge konvertiert wurden. Es wird immer davon ausgegangen, dass die Länge von **targetvalueptr* die Größe des Datentyps ist.  
   
-6.  Platziert die konvertierten (und möglicherweise abgeschnittene) \*Daten in " *targetvalueptr*". Beachten Sie, dass **SQLGetData** keine Daten außerhalb der Zeile zurückgeben kann.  
+6.  Platziert die konvertierten (und möglicherweise abgeschnittene) Daten in " \* *targetvalueptr*". Beachten Sie, dass **SQLGetData** keine Daten außerhalb der Zeile zurückgeben kann.  
   
 7.  Legt die Länge der Daten in \* *StrLen_or_IndPtr*ab. Wenn *StrLen_or_IndPtr* ein NULL-Zeiger war, gibt **SQLGetData** die Länge nicht zurück.  
   
@@ -258,7 +259,7 @@ if (retcode == SQL_SUCCESS) {
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Zuweisen von Speicher für eine Spalte in einem Resultset|[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |Ausführen von Massen Vorgängen, die sich nicht auf die Position des Block Cursors beziehen|[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
@@ -270,7 +271,7 @@ if (retcode == SQL_SUCCESS) {
 |Senden von Parameterdaten zur Ausführungszeit|[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
 |Positionieren des Cursors, Aktualisieren von Daten im Rowset oder aktualisieren oder Löschen von Daten im Rowset|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Header Dateien](../../../odbc/reference/install/odbc-header-files.md)   
  [Abrufen von Ausgabeparametern mithilfe von SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

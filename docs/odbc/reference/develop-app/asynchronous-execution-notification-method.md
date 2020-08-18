@@ -1,4 +1,5 @@
 ---
+description: Asynchrone Ausführung (Benachrichtigungsmethode)
 title: Asynchrone Ausführung (Benachrichtigungs Methode) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 250e71dcb47d44a6e437d12c269ea23fa6fb3c2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19c201d71d42c40277ad67cef25922e55e97de12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483123"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Asynchrone Ausführung (Benachrichtigungsmethode)
 ODBC ermöglicht die asynchrone Ausführung von Verbindungs-und Anweisungs Vorgängen. Ein Anwendungs Thread kann eine ODBC-Funktion im asynchronen Modus aufzurufen, und die Funktion kann zurückgeben, bevor der Vorgang beendet ist, sodass der Anwendungs Thread andere Aufgaben ausführen kann. Im Windows 7 SDK hat eine Anwendung für asynchrone Anweisungs-oder Verbindungs Vorgänge festgestellt, dass der asynchrone Vorgang mit der Abruf Methode durchgeführt wurde. Weitere Informationen finden Sie unter [asynchrone Ausführung (Abruf Methode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Ab dem Windows 8 SDK können Sie mithilfe der Benachrichtigungs Methode ermitteln, ob ein asynchroner Vorgang fertiggestellt ist.  
@@ -328,8 +329,8 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
 |SQL_ATTR_ASYNC_ENABLE oder SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT oder SQL_ATTR_ASYNC_DBC_EVENT|Mode|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
-|Aktivieren Sie|ungleich NULL|Asynchrone Benachrichtigung|  
-|Aktivieren Sie|NULL|Asynchroner Abruf|  
+|Aktivieren|ungleich NULL|Asynchrone Benachrichtigung|  
+|Aktivieren|NULL|Asynchroner Abruf|  
 |Deaktivieren|any|Synchron|  
   
  Eine Anwendung kann den asynchronen Betriebsmodus tempordisch deaktivieren. ODBC ignoriert Werte von SQL_ATTR_ASYNC_DBC_EVENT, wenn der asynchrone Vorgang auf Verbindungs Ebene deaktiviert ist. ODBC ignoriert Werte von SQL_ATTR_ASYNC_STMT_EVENT, wenn der asynchrone Vorgang auf Anweisungs Ebene deaktiviert ist.  

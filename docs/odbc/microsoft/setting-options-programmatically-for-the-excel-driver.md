@@ -1,4 +1,5 @@
 ---
+description: Programmgesteuertes Festlegen von Optionen für die Excel-Treiber
 title: Programm gesteuertes Festlegen von Optionen für den Excel-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1fcd5542e4beee1f7c7a30d5e0ee9f2815a3f0b6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97a17a0967581f4097b5030adb803a69c6a82f80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449252"
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>Programmgesteuertes Festlegen von Optionen für die Excel-Treiber
 
-|Option|BESCHREIBUNG|Methode|  
+|Option|Beschreibung|Methode|  
 |------------|-----------------|------------|  
 |Datenquellenname|Ein Name, der die Datenquelle identifiziert, z. b. Gehaltsabrechnung oder Personal.|Um diese Option dynamisch festzulegen, verwenden Sie das **DSN** -Schlüsselwort in einem-Befehl von [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Datenbank|Eine Microsoft Access-Datenquelle kann eingerichtet werden, ohne dass eine Datenbank ausgewählt oder erstellt wird. Wenn beim Setup keine Datenbank bereitgestellt wird, wird der Benutzer beim Herstellen einer Verbindung mit der Datenquelle aufgefordert, eine Datenbankdatei auszuwählen.|Um diese Option dynamisch festzulegen, verwenden Sie das Schlüsselwort **DBQ** in einem [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)-aufrufsbefehl.|  
-|BESCHREIBUNG|Eine optionale Beschreibung der Daten in der Datenquelle. Beispiel: "Einstellen von Datum, Gehalts Verlauf und aktueller Review aller Mitarbeiter".|Um diese Option dynamisch festzulegen, verwenden Sie das **Description** -Schlüsselwort in einem-Befehl von [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
+|Beschreibung|Eine optionale Beschreibung der Daten in der Datenquelle. Beispiel: "Einstellen von Datum, Gehalts Verlauf und aktueller Review aller Mitarbeiter".|Um diese Option dynamisch festzulegen, verwenden Sie das **Description** -Schlüsselwort in einem-Befehl von [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Verzeichnis|Zeigt das aktuell ausgewählte Verzeichnis an.<br /><br /> Bei Microsoft Excel 3.0/4.0-Dateien lautet die Pfad Anzeige "Directory", während für Microsoft Excel 5,0-, 7,0-oder 97-Dateien die Pfad Anzeige mit der Bezeichnung "Arbeitsmappe" gekennzeichnet ist.|Um diese Option dynamisch festzulegen, verwenden Sie das **DefaultDir** -Schlüsselwort in einem-Befehl von [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Nur Leseberechtigung|Legt fest, dass die Datenbank schreibgeschützt ist.|Um diese Option dynamisch festzulegen, verwenden Sie **das Schlüsselwort** "schreibgeschützt" in einem-Befehl von [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Zu überprüfenden Zeilen|Die Anzahl der zu überprüfenden Zeilen, um den Datentyp jeder Spalte zu bestimmen. Der-Datentyp wird anhand der maximalen Anzahl von gefundenen Daten bestimmt. Wenn Daten gefunden werden, die nicht mit dem für die Spalte erraten Datentyp identisch sind, wird der Datentyp als NULL-Wert zurückgegeben.<br /><br /> Für den Microsoft Excel-Treiber können Sie eine Zahl zwischen 1 und 16 für die zu überprüfenden Zeilen eingeben. Der Standardwert ist 8; Wenn der Wert auf 0 festgelegt ist, werden alle Zeilen gescannt. (Eine Zahl außerhalb des Limits gibt einen Fehler zurück.)|Um diese Option dynamisch festzulegen, verwenden Sie das Schlüsselwort **MaxScanRows** in einem [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)-aufrufsbefehl.|  

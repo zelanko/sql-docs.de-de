@@ -1,4 +1,5 @@
 ---
+description: Anweisungsoptionen
 title: Anweisungs Optionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca40765dff98e9102fbe36e88c7e79535f311d97
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 024fc10441f3b24da33d5742fdd15454561187c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449142"
 ---
 # <a name="statement-options"></a>Anweisungsoptionen
 > [!IMPORTANT]  
@@ -27,7 +28,7 @@ ms.locfileid: "81299210"
   
  Diese Optionen ermöglichen die Anpassung einer bestimmten Ausführungs Anweisung in einer Anwendung.  
   
-|Anweisungs Option|Hinweise|  
+|Anweisungs Option|Notizen|  
 |----------------------|-----------|  
 |SQL_BIND_TYPE|Darf nicht mehr als 2.147.483.647 Bytes oder den verfügbaren Arbeitsspeicher|  
 |SQL_CONCURRENCY|Zulässige Werte finden Sie unter [Cursor Type und](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)Parallelitäts Kombinationen.|  

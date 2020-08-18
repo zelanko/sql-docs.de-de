@@ -1,4 +1,5 @@
 ---
+description: Aus &lt; Modell auswählen &gt; (DMX)
 title: SELECT FROM &lt; Model &gt; (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 43a7157c5ec7889b2f8cb7018423d909f3db3cb7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6244581b4d9a383c2d09af351c5fbe3149207ebd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471982"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>Aus &lt; Modell auswählen &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -34,16 +35,16 @@ SELECT <expression list> [TOP <n>] FROM <model>
  Eine durch Trennzeichen getrennte Liste mit Ausdrücken oder mit PREDICT- bzw. PREDICT ONLY-Spalten.  
   
  *n*  
- Dies ist optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *model*  
  Ein Modellbezeichner.  
   
  *Bedingungs Liste*  
- Dies ist optional. Bedingungen, die die Werte einschränken, die für die Spaltenliste zurückgegeben werden.  
+ Optional. Bedingungen, die die Werte einschränken, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- Dies ist optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Spalten in der *Ausdrucks Liste* müssen als Vorhersagen oder Vorhersagen definiert oder mit einer vorhersagbaren Spalte verknüpft werden.  

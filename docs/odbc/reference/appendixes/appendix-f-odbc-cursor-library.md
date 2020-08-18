@@ -1,4 +1,5 @@
 ---
+description: 'Anhang F: ODBC-Cursorbibliothek'
 title: 'Anhang F: ODBC-Cursor Bibliothek | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec7982150bfa805c7093ab445400ef5ad1ee070c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 325c7cdc5d2fb185ef3dbd2500a20230d90193bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411426"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Anhang F: ODBC-Cursorbibliothek
 > [!IMPORTANT]  
 >  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- Die ODBC-Cursor Bibliothek (odbccr32. dll) unterstützt die Verwendung von scrollfähigen Cursorn für alle Treiber, die dem API-Konformitäts Grad der Ebene 1 entsprechen und von Entwicklern mit Ihren Anwendungen oder Treibern neu verteilt werden können. Die Cursor Bibliothek unterstützt auch positionierte UPDATE-und DELETE-Anweisungen für von **Select** -Anweisungen generierte Resultsets. Obwohl es nur statische und Vorwärts Cursor unterstützt, erfüllt die Cursor Bibliothek die Anforderungen vieler Anwendungen. Außerdem bietet Sie eine gute Leistung, insbesondere für Resultsets kleiner und mittlerer Größe, sowie für Anwendungen, die keine gute Cursor Unterstützung haben.  
+ Die ODBC-Cursor Bibliothek (Odbccr32.dll) unterstützt die Verwendung von scrollfähigen Cursorn für alle Treiber, die dem API-Konformitäts Grad der Ebene 1 entsprechen und von Entwicklern mit Ihren Anwendungen oder Treibern neu verteilt werden können. Die Cursor Bibliothek unterstützt auch positionierte UPDATE-und DELETE-Anweisungen für von **Select** -Anweisungen generierte Resultsets. Obwohl es nur statische und Vorwärts Cursor unterstützt, erfüllt die Cursor Bibliothek die Anforderungen vieler Anwendungen. Außerdem bietet Sie eine gute Leistung, insbesondere für Resultsets kleiner und mittlerer Größe, sowie für Anwendungen, die keine gute Cursor Unterstützung haben.  
   
  Die Cursor Bibliothek ist eine Dynamic Link Library (dll), die sich zwischen dem Treiber-Manager und dem Treiber befindet. Wenn eine Anwendung eine Funktion aufruft, ruft der Treiber-Manager die Funktion in der Cursor Bibliothek auf, die entweder die Funktion ausführt oder Sie im angegebenen Treiber aufruft. Für eine bestimmte Verbindung gibt eine Anwendung an, ob die Cursor Bibliothek immer verwendet wird. Sie wird verwendet, wenn der Treiber keine scrollbaren Cursor unterstützt oder nie verwendet wird.  
   
@@ -44,6 +45,6 @@ ms.locfileid: "81292430"
   
 -   [Cursor-Bibliothek-Codebeispiel](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
   
--   [Implementierungs Hinweise](../../../odbc/reference/appendixes/implementation-notes.md)  
+-   [Hinweise zur Implementierung](../../../odbc/reference/appendixes/implementation-notes.md)  
   
 -   [ODBC Cursor Library Error Codes (ODBC-Cursorbibliothek – Fehlercodes)](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)

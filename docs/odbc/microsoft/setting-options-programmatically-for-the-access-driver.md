@@ -1,4 +1,5 @@
 ---
+description: Programmgesteuertes Festlegen von Optionen für die Access-Treiber
 title: Programm gesteuertes Festlegen von Optionen für den Zugriffs Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a90f0a20569a2a0a5bb93dec7aa4b95b50093dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ae798b3c3d91917e461bb6b5a58cb06734870d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412416"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Programmgesteuertes Festlegen von Optionen für die Access-Treiber
 
-|Option|BESCHREIBUNG|Methode|  
+|Option|Beschreibung|Methode|  
 |------------|-----------------|------------|  
 |Puffergröße|Die Größe des internen Puffers in Kilobyte, der von Microsoft Access zum Übertragen von Daten auf den und vom Datenträger verwendet wird. Die Standardpuffergröße beträgt 2048 KB (wird als 2048 angezeigt). Jeder von 256 teilbar ganzzahlige Wert kann eingegeben werden.|Um diese Option dynamisch festzulegen, verwenden Sie das Schlüsselwort "MaxBufferSize" in einem [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)-aufrufsbefehl.|  
 |Datenquellenname|Ein Name, der die Datenquelle identifiziert, z. b. Gehaltsabrechnung oder Personal.|Um diese Option dynamisch festzulegen, verwenden Sie das **DSN** -Schlüsselwort in einem-Befehl von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Datenbank|Eine Microsoft Access-Datenquelle kann eingerichtet werden, ohne dass eine Datenbank ausgewählt oder erstellt wird. Wenn beim Setup keine Datenbank bereitgestellt wird, wird der Benutzer beim Herstellen einer Verbindung mit der Datenquelle aufgefordert, eine Datenbankdatei auszuwählen.|Um diese Option dynamisch festzulegen, verwenden Sie das Schlüsselwort **DBQ** in einem [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)-aufrufsbefehl.|  
-|BESCHREIBUNG|Eine optionale Beschreibung der Daten in der Datenquelle. Beispiel: "Einstellen von Datum, Gehalts Verlauf und aktueller Review aller Mitarbeiter".|Um diese Option dynamisch festzulegen, verwenden Sie das **Description** -Schlüsselwort in einem-Befehl von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
+|Beschreibung|Eine optionale Beschreibung der Daten in der Datenquelle. Beispiel: "Einstellen von Datum, Gehalts Verlauf und aktueller Review aller Mitarbeiter".|Um diese Option dynamisch festzulegen, verwenden Sie das **Description** -Schlüsselwort in einem-Befehl von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Exklusiv|Wenn das Feld **exklusiv** ausgewählt ist, wird die Datenbank im exklusiven Modus geöffnet, und es kann jeweils nur von einem Benutzer darauf zugegriffen werden. Die Leistung wird verbessert, wenn Sie im exklusiven Modus ausgeführt wird.|Um diese Option dynamisch festzulegen, verwenden Sie das **exklusive** Schlüsselwort in einem-Befehl von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Implizicommitsync|Bestimmt, wie Änderungen, die außerhalb einer Transaktion vorgenommen werden, in die Datenbank geschrieben werden. Dieser Wert ist anfänglich auf "yes" festgelegt, was bedeutet, dass der Microsoft Access-Treiber auf das Abschließen von Commits in einer internen/impliziten Transaktion wartet.|Diese Option ist im Dialogfeld **Erweiterte Optionen festlegen** für den Microsoft Access-Treiber enthalten.|  
 |Seiten Timeout|Gibt den Zeitraum in Millisekunden an, den eine Seite (falls nicht verwendet) im Puffer verbleibt, bevor Sie entfernt wird. Für den Microsoft Access-Treiber beträgt der Standardwert 500 Millisekunden (0,5 Sekunden). Diese Option gilt für alle Datenquellen, die den ODBC-Treiber verwenden.<br /><br /> Das Seiten Timeout kann aufgrund einer inhärenten Verzögerung nicht 0 sein. Das Seiten Timeout darf nicht kleiner sein als die inhärente Verzögerung, auch wenn die Option Seiten Timeout unter diesem Wert festgelegt ist.|Um diese Option dynamisch festzulegen, verwenden Sie das **PageTimeout** -Schlüsselwort in einem-Befehl von [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  

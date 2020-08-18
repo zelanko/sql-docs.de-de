@@ -1,4 +1,5 @@
 ---
+description: sys.sysindexes (Transact-SQL)
 title: sys.sysIndizes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ae519a06d98c3c70cdd01064c220e5f2e4ed424
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b78a272e9fa2ec3a0cc3d4418986078ff02f457
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399406"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85786326"
 |**root**|**Binary (6)**|Bei **indid** >= 1 ist **root** der Zeiger auf die Stamm Seite.<br /><br /> Nicht verwendet, wenn **indid** = 0.<br /><br /> NULL = Index ist partitioniert, wenn **indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
 |**minlen**|**smallint**|Mindestgröße einer Zeile.|  
 |**keycnt**|**smallint**|Anzahl der Schlüssel.|  
-|**groupID**|**smallint**|ID der Dateigruppe, für die das Objekt erstellt wurde.<br /><br /> NULL = Index ist partitioniert, wenn **indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
+|**groupid**|**smallint**|ID der Dateigruppe, für die das Objekt erstellt wurde.<br /><br /> NULL = Index ist partitioniert, wenn **indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
 |**dpages**|**int**|Für **indid** = 0 oder **indid** = 1 ist **dpages** die Anzahl der verwendeten Datenseiten.<br /><br /> Bei **indid** > 1 gibt **dpages** die Anzahl der verwendeten Indexseiten an.<br /><br /> 0 = Index ist partitioniert, wenn **indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
 |**bleiben**|**int**|Für **indid** = 0 oder **indid** = 1 ist **reserved** die Anzahl der allen Indizes und Tabellendaten zugeordneten Seiten.<br /><br /> Bei **indid** > 1 ist **reserved** die Anzahl der Seiten, die dem Index zugeordnet sind.<br /><br /> 0 = Index ist partitioniert, wenn **indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
 |**daran**|**int**|Für **indid** = 0 oder **indid** = 1 ist **used** die Gesamtanzahl der für alle Indizes und Tabellendaten verwendeten Seiten.<br /><br /> Bei **indid** > 1 ist " **used** " die Anzahl von Seiten, die für den Index verwendet werden.<br /><br /> 0 = Index ist partitioniert, wenn **indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
@@ -63,11 +64,11 @@ ms.locfileid: "85786326"
 |**pgmodctr**|**int**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**or**|**varbinary(816)**|Liste der Spalten-IDs der Spalten, aus denen der Indexschlüssel besteht.<br /><br /> Gibt NULL zurück.<br /><br /> Verwenden Sie zum Anzeigen der Indexschlüsselspalten [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
 |**name**|**sysname**|Name des Indexes oder der Statistik. Gibt NULL zurück, wenn **indid** = 0. Ändern Sie die Anwendung so, dass nach einem Heapnamen mit dem Wert NULL gesucht wird.|  
-|**statblob**|**Bild**|Statistik-BLOB (Binary Large Object).<br /><br /> Gibt NULL zurück.|  
+|**statblob**|**image**|Statistik-BLOB (Binary Large Object).<br /><br /> Gibt NULL zurück.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Streitigkeiten**|**int**|Zeilen Anzahl auf Datenebene, basierend auf **indid** = 0 und **indid** = 1, und der Wert wird für **indid** >1 wiederholt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Als reserviert definierte Spalten sollten nicht verwendet werden.  
   
  Die Spalten **dpages**, **reserved**und **used** geben keine genauen Ergebnisse zurück, wenn die Tabelle bzw. der Index Daten in der ROW_OVERFLOW-Zuordnungseinheit enthält. Zudem werden die Seitenanzahlen aller Indizes separat nachverfolgt und nicht für die Basistabelle aggregiert. Verwenden Sie zum Anzeigen der Seitenanzahlen die Katalogsichten [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) oder [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) oder die dynamische Verwaltungssicht [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) .  
@@ -85,7 +86,7 @@ ms.locfileid: "85786326"
 -   Verwenden Sie Informationen auf Anwendungsebene, um den Zeitpunkt für das Statistikupdate zu bestimmen. Beispielsweise jedes Mal, wenn sich der Maximalwert einer **identity** -Spalte um mehr als 10.000 ändert oder wenn ein Masseneinfügungsvorgang ausgeführt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Zuordnung von Systemtabellen zu System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   

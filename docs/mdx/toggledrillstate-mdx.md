@@ -1,4 +1,5 @@
 ---
+description: ToggleDrillState (MDX)
 title: "\"Tggledrillstate\" (MDX) | Microsoft-Dokumentation"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ffe8cb97ffa8dd01b058d5cf71fc2f0922e11501
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e10c62742e28b69545efac51f70bf9628b43e08d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412906"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 

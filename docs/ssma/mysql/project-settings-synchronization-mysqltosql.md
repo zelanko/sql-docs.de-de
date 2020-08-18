@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (Synchronisierung) (MySqlToSql)
 title: Projekteinstellungen (Synchronisierung) (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cbf4252f9d9fb71fe98755dfbba748ca15ca5657
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3ea89bcdf9b10fb50e74228a26bfcd5cead83aca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492383"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Projekteinstellungen (Synchronisierung) (MySqlToSql)
 Mithilfe der Synchronisierungs **Projekteinstellungen** können Sie konfigurieren, wie MySQL-Datenbankobjekte mit SQL Server-Datenbankobjekten synchronisiert werden.  
@@ -27,7 +28,7 @@ Sie können auf zwei verschiedene Synchronisierungs Seiten zugreifen, die die gl
   
 -   Um Einstellungen für das aktuelle Projekt anzugeben, klicken Sie **im Menü Extras** auf **Projekteinstellungen**, und klicken Sie dann unten im linken Bereich auf **Synchronisierung** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ##### <a name="misc"></a>Sonstiges  
   

@@ -1,4 +1,5 @@
 ---
+description: CubeDef-Objekt – Eigenschaften, Methoden und Ereignisse
 title: CubeDef-Objekteigenschaften,-Methoden und-Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5dac737a-b77e-47d3-9228-cd52b7a97b0a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d800f5344939a7168656570bc96b1453e656975
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8f819834240a5dcabb245d44b110109df520f413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764361"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441102"
 ---
 # <a name="cubedef-object-properties-methods-and-events"></a>CubeDef-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
@@ -32,7 +33,7 @@ ms.locfileid: "82764361"
 ## <a name="methods"></a>Methoden  
  [Getschemaobject-Methode](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  

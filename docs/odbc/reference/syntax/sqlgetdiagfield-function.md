@@ -1,4 +1,5 @@
 ---
+description: SQLGetDiagField-Funktion
 title: SQLGetDiagField-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a26319868a4b94b895da73d39b284f612fe35889
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92043f5deb505d60ebe168a9c219c4d37a304ed5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461025"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField-Funktion
 
@@ -78,8 +79,8 @@ SQLRETURN SQLGetDiagField(
   
  Wenn *diaginfoptr* gleich NULL ist, gibt *stringlengthptr* weiterhin die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten) zurück, die im Puffer zurückgegeben werden können, auf den *diaginfoptr*zeigt.  
   
- *Pufferlänge*  
- Der Wenn *DiagIdentifier* eine ODBC-definierte Diagnose ist und *diaginfoptr* auf eine Zeichenfolge oder einen binären Puffer zeigt, sollte dieses Argument die Länge von \* *diaginfoptr*sein. Wenn *DiagIdentifier* ein ODBC-definiertes Feld und \* *diaginfoptr* eine ganze Zahl ist, wird *BufferLength* ignoriert. Wenn der Wert in * \*diaginfoptr* eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlgetdiagfieldw**), muss das *BufferLength* -Argument eine gerade Zahl sein.  
+ *BufferLength*  
+ Der Wenn *DiagIdentifier* eine ODBC-definierte Diagnose ist und *diaginfoptr* auf eine Zeichenfolge oder einen binären Puffer zeigt, sollte dieses Argument die Länge von \* *diaginfoptr*sein. Wenn *DiagIdentifier* ein ODBC-definiertes Feld und \* *diaginfoptr* eine ganze Zahl ist, wird *BufferLength* ignoriert. Wenn der Wert in * \* diaginfoptr* eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlgetdiagfieldw**), muss das *BufferLength* -Argument eine gerade Zahl sein.  
   
  Wenn *DiagIdentifier* ein Treiber definiertes Feld ist, gibt die Anwendung die Art des Felds für den Treiber-Manager an, indem das *BufferLength* -Argument festgelegt wird. *BufferLength* kann die folgenden Werte aufweisen:  
   
@@ -89,10 +90,10 @@ SQLRETURN SQLGetDiagField(
   
 -   Wenn *diaginfoptr* ein Zeiger auf einen anderen Wert als eine Zeichenfolge oder Binär Zeichenfolge ist, sollte *BufferLength* den Wert SQL_IS_POINTER.  
   
--   Wenn * \*diaginfoptr* einen Datentyp mit fester Länge enthält, wird *BufferLength* nach Bedarf SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT oder SQL_IS_USMALLINT.  
+-   Wenn * \* diaginfoptr* einen Datentyp mit fester Länge enthält, wird *BufferLength* nach Bedarf SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT oder SQL_IS_USMALLINT.  
   
  *Stringlengthptr*  
- Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes (ausgenommen der Anzahl der Bytes, die für das NULL-Terminierungs Zeichen erforderlich sind \*) zurückgegeben werden soll, die in *diaginfoptr*für Zeichendaten zurückgegeben werden können. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *BufferLength*ist, wird \*der Text in *diaginfoptr* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes (ausgenommen der Anzahl der Bytes, die für das NULL-Terminierungs Zeichen erforderlich sind) zurückgegeben werden soll, die in \* *diaginfoptr*für Zeichendaten zurückgegeben werden können. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *BufferLength*ist, wird der Text in \* *diaginfoptr* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
 ## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_NO_DATA.  
@@ -218,7 +219,7 @@ SQLRETURN SQLGetDiagField(
 |*Übersetzungs Definition*|"Create Translation"|SQL_DIAG_CREATE_TRANSLATION|  
 |*Update-Anweisungs positioniert*|"Cursor für dynamisches Update"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*Update-Anweisung wurde durchsucht*|"Update where"|SQL_DIAG_UPDATE_WHERE|  
-|Unbekannt|*leere Zeichenfolge*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Unknown|*leere Zeichenfolge*|SQL_DIAG_UNKNOWN_STATEMENT|  
 
 <!--
 These two malformed table rows were fixed by educated GUESS only.
@@ -276,10 +277,10 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Abrufen mehrerer Felder einer Diagnosedaten Struktur|[SQLGetDiagRec-Funktion](sqlgetdiagrec-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

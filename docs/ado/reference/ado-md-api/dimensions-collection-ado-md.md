@@ -1,4 +1,5 @@
 ---
+description: Dimension-Collection (ADO MD)
 title: Dimensions Auflistung (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91d535097ce43b910aac24afc841d2a061d29956
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c76d8b6e18c3ae8e348d0ee443b9602945585e30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441062"
 ---
 # <a name="dimensions-collection-ado-md"></a>Dimension-Collection (ADO MD)
 Enthält die [Dimensions](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) Objekte, die einen Cube bilden.  

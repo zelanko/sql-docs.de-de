@@ -1,4 +1,5 @@
 ---
+description: Bearbeiten der Typzuordnung (OracleToSQL)
 title: Typzuordnung bearbeiten (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1df40b843064513f6b2c135355b26f745c336011
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7b90da225116a2221d5a2492e1b7e5bfdc33ab91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492392"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>Bearbeiten der Typzuordnung (OracleToSQL)
 Im Dialogfeld **Typzuordnung bearbeiten** können Sie angeben, wie Typen zwischen den Quell-und Ziel Datenbankobjekten zugeordnet werden sollen.  
@@ -28,7 +29,7 @@ Sie können auf dieses Dialogfeld an mehreren Stellen zugreifen:
   
 Tabellen spezifische Typzuordnungen überschreiben Datenbank-und Projekttyp Zuordnungen. Datenbankspezifische Zuordnungen überschreiben Projekt Zuordnungen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Quellentyp**  
 Wählen Sie den Quell Datentyp aus, der einem Datentyp zugeordnet werden soll [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -45,6 +46,6 @@ Wählen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datent
   
 Wenn der Datentyp eine Variable Länge hat, wird das folgende Feld unter **Zieltyp**angezeigt:  
   
-**Ersetzen durch**  
+**Replace with**  
 Geben Sie die Ziellänge für diese Zuordnung an. Beispielsweise können Sie für den Datentyp **nvarchar** den Wert 20 eingeben, um anzugeben, dass der angegebene Quell Datentyp **nvarchar (20)** zugeordnet werden soll.  
   

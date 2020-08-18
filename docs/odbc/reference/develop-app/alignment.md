@@ -1,4 +1,5 @@
 ---
+description: Ausrichtung
 title: Ausrichtung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 205cc3ff95dd60db215150f46ae894fbb99bd9ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1402eee289111ca100e80730d8df4a6d0e3299cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483143"
 ---
 # <a name="alignment"></a>Ausrichtung
 Die Ausrichtungs Probleme in einer ODBC-Anwendung unterscheiden sich in der Regel nicht von anderen Anwendungen. Das heißt, die meisten ODBC-Anwendungen haben nur wenige oder keine Probleme mit der Ausrichtung. Die Gebühren für das nicht Ausrichten von Adressen variieren mit der Hardware und dem Betriebssystem und können so gering wie eine geringfügige Leistungs Einbuße oder ein schwerwiegender Fehler beim Ausführen eines schwerwiegenden Lauf zeitfehlers sein. Daher sollten ODBC-Anwendungen und insbesondere Portier Bare ODBC-Anwendungen darauf achten, Daten ordnungsgemäß auszurichten.  

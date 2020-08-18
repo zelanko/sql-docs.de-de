@@ -1,4 +1,5 @@
 ---
+description: Ascendants (MDX)
 title: Vorgänger (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 16c6f812d1d7cae5a81a8e64fb425f4d33f4cb5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb485e2785facba4a47647f8a51548e0140b3efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491466"
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
 
@@ -35,7 +36,7 @@ Ascendants(Member_Expression)
  Die **Vorgänger** Funktion gibt alle Vorgänger eines Members vom Element selbst bis zum Anfang der Hierarchie des Members zurück. genauer gesagt führt er eine nach der Bestellung ausgeführten Überquerung der Hierarchie für das angegebene Element aus und gibt dann alle aufsteigenden Member zurück, die mit dem Element verknüpft sind, einschließlich selbst in einer Menge. Dies steht im Gegensatz zur [Vorgänger](../mdx/ancestor-mdx.md) Funktion, die einen bestimmten aufsteigenden Member oder Vorgänger auf einer bestimmten Ebene zurückgibt.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die Anzahl der Bestellungen des wieder `[Sales Territory].[Northwest]` Verkäufers für das-Element und alle Vorgänger dieses Members aus dem **Adventure Works** -Cube zurückgegeben. Die **Vorgänger Funktion erstellt die Menge** , die den `[Sales Territory].[Northwest]` Member und seine Vorgänger für die ROWS-Achse einschließt.  
+ Im folgenden Beispiel wird die Anzahl der Bestellungen des Wiederverkäufers für das `[Sales Territory].[Northwest]` -Element und alle Vorgänger dieses Members aus dem **Adventure Works** -Cube zurückgegeben. Die **Vorgänger Funktion erstellt die Menge** , die den `[Sales Territory].[Northwest]` Member und seine Vorgänger für die ROWS-Achse einschließt.  
   
 ```  
 SELECT  

@@ -1,4 +1,5 @@
 ---
+description: Globale Einstellungen (Tester) (SybaseToSQL)
 title: Globale Einstellungen (Tester) (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f1ebf6d1122db6b28b13c33320dabef520a40f5a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c03a52c837d2f07e5a6027b181a2047a5f53add6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492176"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Globale Einstellungen (Tester) (SybaseToSQL)
 Verwenden Sie die Seite Tester des Dialog Felds **globale Einstellungen** , um Einstellungen für SSMA-Tester anzugeben.  
   
 Um **auf die Tester** -Einstellungen zuzugreifen, wählen Sie im Menü Extras die Option **globale Einstellungen**aus, und klicken Sie unten im linken Bereich auf **Tester** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Test fähige Objektanalyse**  
 Diese Einstellung gibt an, ob die Analyse der Test fähigen Objekte durchgeführt werden soll. Wählen Sie **Ja** aus, wenn der SSMA-Tester die abhängigen Objekte analysieren und automatisch überprüfen soll. Der Standard Options Satz ist " **Ja**".  
   

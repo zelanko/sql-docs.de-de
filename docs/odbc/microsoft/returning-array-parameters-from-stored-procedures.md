@@ -1,4 +1,5 @@
 ---
+description: Zurückgeben von Arrayparametern aus gespeicherten Prozeduren
 title: Zurückgeben von Array Parametern aus gespeicherten Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc998dadc0e0c4a4bfe054bfd1d40296bc176393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6b18921e027e16f322c47da9757ef9c8ee7f1aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449282"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>Zurückgeben von Arrayparametern aus gespeicherten Prozeduren
 > [!IMPORTANT]  
@@ -35,7 +36,7 @@ ms.locfileid: "81292860"
 ```  
   
 > [!NOTE]  
->  Der \<> Parameter ' Max-Records ' angeforderte Wert muss größer oder gleich der Anzahl der im Resultset vorhandenen Zeilen sein. Andernfalls gibt Oracle einen Fehler zurück, der vom Treiber an den Benutzer übermittelt wird.  
+>  Der- \<max-records-requested> Parameter muss größer oder gleich der Anzahl von Zeilen sein, die im Resultset vorhanden sind. Andernfalls gibt Oracle einen Fehler zurück, der vom Treiber an den Benutzer übermittelt wird.  
 >   
 >  PL/SQL-Datensätze können nicht als Array Parameter verwendet werden. Jeder Array Parameter kann nur eine Spalte einer Datenbanktabelle darstellen.  
   

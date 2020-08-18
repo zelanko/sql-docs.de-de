@@ -1,4 +1,5 @@
 ---
+description: Doppelte Funktionen
 title: Doppelte Features | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 00f5529cfbfacebcad78a0a4433e84f34034694a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0aa03482efbadc8dac2fa887deb0f01d9b167214
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483023"
 ---
 # <a name="duplicated-features"></a>Doppelte Funktionen
 Die folgenden ODBC *2. x* -Funktionen wurden von ODBC *3. x* -Funktionen dupliziert. Folglich sind die ODBC *2. x* -Funktionen in ODBC *3. x*veraltet. Die ODBC *3. x* -Funktionen werden als Ersatz Funktionen bezeichnet.  

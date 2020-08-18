@@ -1,4 +1,5 @@
 ---
+description: SQLConfigDataSource (Textdateitreiber)
 title: SQLConfigDataSource (Text Datei Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d2809f9b15dd6843e4404c7cf1887c3caa015a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 400b83d382140d4661b103e24449f14ecdfda43d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411866"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (Textdateitreiber)
 > [!NOTE]  
@@ -26,7 +27,7 @@ ms.locfileid: "81283920"
   
  Die **SQLConfigDataSource** -Funktion, die verwendet wird, um eine Datenquelle hinzuzufügen, zu ändern oder zu löschen, verwendet dynamisch die folgenden Schlüsselwörter.  
   
-|Stichwort|BESCHREIBUNG|  
+|Schlüsselwort|Beschreibung|  
 |-------------|-----------------|  
 |CHARACTERSET|Für den Text Treiber, OEM oder ANSI.|  
 |COLNAMEHEADER|Gibt für den Text Treiber an, ob der erste Datensatz der Daten die Spaltennamen angibt. Entweder true oder false.|  
