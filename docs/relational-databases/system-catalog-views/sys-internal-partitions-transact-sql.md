@@ -1,4 +1,5 @@
 ---
+description: sys. internal_partitions (Transact-SQL)
 title: sys. internal_partitions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/26/2019
@@ -13,16 +14,17 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9da410954f4fedce101ca95a9a3571898b4cd349
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: abfff1a5f8a9ed447566e5f6a91fe23c51654890
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401456"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  Gibt eine Zeile für jedes Rowset zurück, das interne Daten für columnstore--Indizes für Datenträger basierte Tabellen nachverfolgt. Diese Rowsets sind für columnstore--Indizes intern und Nachverfolgen gelöschter Zeilen, Zeilen Gruppen Zuordnungen und Delta Speicher-Zeilen Gruppen. Sie verfolgen Daten für jede Tabellen Partition nach. jede Tabelle verfügt über mindestens eine Partition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt jedes Mal, wenn der columnstore--Index neu erstellt wird, die Rowsets neu.   
+  Gibt eine Zeile für jedes Rowset zurück, das interne Daten für columnstore--Indizes für Datenträger basierte Tabellen nachverfolgt. Diese Rowsets sind für columnstore--Indizes intern und Nachverfolgen gelöschter Zeilen, Zeilen Gruppen Zuordnungen und Delta Speicher-Zeilen Gruppen. Sie verfolgen Daten für jede Tabellen Partition nach. jede Tabelle verfügt über mindestens eine Partition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt jedes Mal, wenn der columnstore--Index neu erstellt wird, die Rowsets neu.   
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +45,7 @@ ms.locfileid: "86002726"
  Erfordert die Mitgliedschaft in der Rolle `public`. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt bei jedem Erstellen oder Neuerstellen eines columnstore--Indexes neue interne columnstore--Indizes neu.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt bei jedem Erstellen oder Neuerstellen eines columnstore--Indexes neue interne columnstore--Indizes neu.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -59,8 +61,8 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Objektkatalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [FAQ: Abfragen des SQL Server-Systemkatalogs](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   
