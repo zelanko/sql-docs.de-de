@@ -1,4 +1,5 @@
 ---
+description: C-Intervallstruktur
 title: C-Intervall Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 02c86ebe24a0e12531e355f95185b01f3089a31b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 89962558fdbd6f0de5b5e030fe504669d51c40be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411206"
 ---
 # <a name="c-interval-structure"></a>C-Intervallstruktur
 Jeder der im Abschnitt [c-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) aufgelisteten Datentypen im c-Intervall verwendet die gleiche Struktur, um die Intervall Daten zu enthalten. Wenn **SQLFetch**, **SQLFetchScroll**oder **SQLGetData** aufgerufen wird, der Treiber gibt Daten in die SQL_INTERVAL_STRUCT Struktur zurück, verwendet den Wert, der von der Anwendung für die C-Datentypen (im Befehl **SQLBindCol**, **SQLGetData**oder **SQLBindParameter**) festgelegt wurde, um den Inhalt SQL_INTERVAL_STRUCT zu interpretieren, und füllt das *interval_type* Feld der Struktur mit dem Enumerationswert *, der dem* C-Typ entspricht. Beachten Sie, dass Treiber das *interval_type* Feld nicht lesen, um den Typ des Intervalls zu bestimmen. Sie rufen den Wert des SQL_DESC_CONCISE_TYPE deskriptorfelds ab. Wenn die Struktur für Parameterdaten verwendet wird, verwendet der Treiber den Wert, der von der Anwendung im SQL_DESC_CONCISE_TYPE-Feld des APD angegeben wird, um den Inhalt von SQL_INTERVAL_STRUCT zu interpretieren, auch wenn die Anwendung den Wert des *interval_type* Felds auf einen anderen Wert festlegt.  

@@ -1,4 +1,5 @@
 ---
+description: SQLDriverConnect (Access-Treiber)
 title: SQLDriverConnect (Access-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7a679cbb16ece3f239b1d17daabc8a294b808287
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 52bbcbfa379be53ea24c150d2522242e85e61fea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449212"
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect (Access-Treiber)
 > [!NOTE]  
@@ -36,4 +37,4 @@ ms.locfileid: "81302911"
   
 |Treiber|Schlüsselwörter erforderlich|Beispiele|  
 |------------|-----------------------|--------------|  
-|Microsoft Access|Treiber, DBQ|Driver = {Microsoft Access Driver (*. mdb)}; Dbq = c:\\\temp\\\sample.mdb|
+|Microsoft Access|Treiber, DBQ|Driver = {Microsoft Access Driver (*. mdb)}; Dbq = c: \\ \temp \\ \sample.mdb|

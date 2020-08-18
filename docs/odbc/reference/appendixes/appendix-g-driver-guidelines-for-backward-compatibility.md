@@ -1,4 +1,5 @@
 ---
+description: 'Anhang G: Treiberrichtlinien für Abwärtskompatibilität'
 title: 'Anhang G: Treiber Richtlinien für Abwärtskompatibilität | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 911cd335-f2c0-4d03-9739-1078308a678a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1055f94cb54bba9262f210e5df5f028029aebf5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2c09485879c2f0d16518dcfc0a17f4bf3a13943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411406"
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>Anhang G: Treiberrichtlinien für Abwärtskompatibilität
 Dieser Anhang enthält Informationen für Treiber Schreiber, die auf ODBC 3 arbeiten. *x* -Treiber, die ODBC 2 unterstützen müssen. *x* -Anwendungen. Weitere Informationen zur Abwärtskompatibilität finden Sie unter abwärts [Kompatibilität und Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  

@@ -1,4 +1,5 @@
 ---
+description: Textformat (Textdateitreiber)
 title: Text Datei Format (Text Datei Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5801433e0180bb07cb2d09a59db2bb74be012cdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb402f0f186529da33974b77ffeecdd7ed788d53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449092"
 ---
 # <a name="text-file-format-text-file-driver"></a>Textformat (Textdateitreiber)
 Der ODBC-Text Treiber unterstützt sowohl Textdateien mit Trennzeichen als auch Textdateien mit fester Breite. Eine Textdatei besteht aus einer optionalen Kopfzeile und 0 (null) oder mehr Textzeilen.  
@@ -42,7 +43,7 @@ Der ODBC-Text Treiber unterstützt sowohl Textdateien mit Trennzeichen als auch 
 |Nicht kursiv|Zeichen, die wie gezeigt eingegeben werden müssen|  
 |*Kursiv*|Argumente, die an anderer Stelle in der Grammatik definiert sind|  
 |eckige Klammern ([])|Optionale Elemente|  
-|geschweifte{}Klammern ()|Eine Liste der sich gegenseitig ausschließenden Optionen|  
+|geschweifte Klammern ( {} )|Eine Liste der sich gegenseitig ausschließenden Optionen|  
 |vertikale Balken (&#124;)|Trennen von gegenseitig ausschließenden Optionen|  
 |Auslassungszeichen (...)|Elemente, die einmal oder mehrmals wiederholt werden können|  
   
@@ -67,7 +68,7 @@ fixed-width-data ::= fixed-width-string | number | date | fixed-width-null
 ```  
   
 > [!NOTE]  
->  Die Breite jeder Spalte in einer Textdatei mit fester Breite wird in der Datei "Schema. ini" angegeben.  
+>  Die Breite jeder Spalte in einer Textdatei mit fester Breite wird in der Schema.ini-Datei angegeben.  
   
 ```  
   
@@ -87,7 +88,7 @@ custom-delimitercustom-delimiter ::= any character except:
 ```  
   
 > [!NOTE]  
->  Das Trennzeichen in einer benutzerdefinierten, durch Trennzeichen getrennten Textdatei wird in der Datei "Schema. ini" angegeben.  
+>  Das Trennzeichen in einer benutzerdefinierten, durch Trennzeichen getrennten Textdatei wird in der Schema.ini-Datei angegeben.  
   
 ```  
 quote-character ::= "  

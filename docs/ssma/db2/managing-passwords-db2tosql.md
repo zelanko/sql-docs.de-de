@@ -1,4 +1,5 @@
 ---
+description: Verwalten von Kenn Wörtern (DB2ToSQL)
 title: Verwalten von Kenn Wörtern (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: af41c1a9eed355d75d5bd3e48886845b9a3069d1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 25a6063863355fe40f36ab00bf7473d5d3d690d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472479"
 ---
 # <a name="managing-passwords-db2tosql"></a>Verwalten von Kenn Wörtern (DB2ToSQL)
 In diesem Abschnitt geht es um das Sichern von Daten Bank Kennwörtern und das Verfahren zum Importieren oder Exportieren von Datenbankservern:  

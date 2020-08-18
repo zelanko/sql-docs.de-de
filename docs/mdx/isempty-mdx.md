@@ -1,4 +1,5 @@
 ---
+description: IsEmpty (MDX)
 title: IsEmpty (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8b31b884e0f86bf2aebe4859cd1c7a441669e813
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 504df180a15673ecb0982d5a70c2eea1e9f71d11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471862"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
 
@@ -31,13 +32,13 @@ IsEmpty(Value_Expression)
  *Value_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der in der Regel die Zellenkoordinaten eines Elements oder Tupels zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die **IsEmpty** -Funktion gibt **true** zurück, wenn der ausgewertete Ausdruck ein leerer Zellwert ist. Andernfalls gibt diese Funktion **false**zurück.  
   
 > [!NOTE]  
 >  Die Standardeigenschaft eines Elements ist sein Wert.  
   
- Die **IsEmpty** -Funktion ist die einzige Möglichkeit, zuverlässig auf eine leere Zelle zu testen, da der leere Zellwert in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]eine besondere Bedeutung hat.  
+ Die **IsEmpty** -Funktion ist die einzige Möglichkeit, zuverlässig auf eine leere Zelle zu testen, da der leere Zellwert in eine besondere Bedeutung hat [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Wenn bei der Auswertung des Value-Ausdrucks ein Fehler zurückgegeben wird, gibt die Funktion **false**zurück. Ein Wertausdruck kann z. B. einen Fehler zurückgeben, wenn ein Eigenschaftsverweis auf eine ungültige oder nicht vorhandene Eigenschaft verweist.  

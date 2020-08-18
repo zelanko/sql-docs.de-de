@@ -1,4 +1,5 @@
 ---
+description: Datentypen (DMX)
 title: Datentypen (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4da4243aaf7592e7c5a8a9df63ed1aea352448f4
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 9658b148d2ce76d5e73f5deaf3abfa9542e79771
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491543"
 ---
 # <a name="data-types-dmx"></a>Datentypen (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "86969881"
   
 -   Long  
   
--   Boolescher Wert  
+-   Boolean  
   
 -   Double  
   
