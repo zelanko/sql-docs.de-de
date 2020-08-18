@@ -1,4 +1,5 @@
 ---
+description: SQLConfigDataSource (Paradox-Treiber)
 title: SQLConfigDataSource (Paradox-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68e60d7ca9c37865c1b265297d24591638a44965
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ced7a482f79426961e8532cd343691b3f023703c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411936"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (Paradox-Treiber)
 > [!NOTE]  
@@ -26,7 +27,7 @@ ms.locfileid: "81283930"
   
  Die **SQLConfigDataSource** -Funktion, die verwendet wird, um eine Datenquelle hinzuzufügen, zu ändern oder zu löschen, verwendet dynamisch die folgenden Schlüsselwörter.  
   
-|Stichwort|BESCHREIBUNG|  
+|Schlüsselwort|Beschreibung|  
 |-------------|-----------------|  
 |CollatingSequence|Die Reihenfolge, in der die Felder sortiert werden.<br /><br /> Wenn der Paradox-Treiber verwendet wird, kann die Sequenz "ASCII (Standard)", "International", "Swedish-Finnish" oder "Norwegian-Danish" sein.<br /><br /> Dadurch wird die gleiche Option wie die **Sortierreihenfolge** im Setup Dialogfeld festgelegt.|  
 |DBQ|Der Name der Datenbankdatei.<br /><br /> Dadurch wird die gleiche Option wie die **Datenbank** im Setup Dialogfeld festgelegt.|  

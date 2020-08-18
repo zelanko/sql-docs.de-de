@@ -1,4 +1,5 @@
 ---
+description: 'Anhang B: ODBC-Statusübergangstabellen'
 title: 'Anhang B: ODBC-Status Übergangs Tabellen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db20c492ababbe6bf8f065fce88067c643f2694d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b81b43d40d3552959ade377cb7b967eb7331b7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411616"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Anhang B: ODBC-Statusübergangstabellen
 Die Tabellen in diesem Anhang veranschaulichen, wie ODBC-Funktionen Übergänge der Umgebungs-, Verbindungs-, Anweisungs-und deskriptorzustände verursachen. Der Zustand der Umgebung, der Verbindung, der Anweisung oder des Deskriptors gibt in der Regel an, wann Funktionen aufgerufen werden können, die den entsprechenden Typ des Handles (Umgebung, Verbindung, Anweisung oder Deskriptor) verwenden. Die Umgebungs-, Verbindungs-, Anweisungs-und deskriptorzustände überlappen sich ungefähr wie in den folgenden Abbildungen dargestellt. Beispiel: die genaue Überschneidung der Verbindungszustände C5 und C6 und der Anweisungs Status S1 bis S12 ist Datenquellen abhängig, da Transaktionen zu unterschiedlichen Zeiten in verschiedenen Datenquellen beginnen und der deskriptorstatus D1i (implizit zugeordneter Deskriptor) vom Zustand der Anweisung abhängt, der der Deskriptor zugeordnet ist, während State D1e (explizit zugeordneter Deskriptor) unabhängig vom Status einer beliebigen Anweisung ist Eine Beschreibung jedes Zustands finden Sie unter [Umgebungs Übergänge](../../../odbc/reference/appendixes/environment-transitions.md), [Verbindungs Übergänge](../../../odbc/reference/appendixes/connection-transitions.md), [Anweisungs Übergänge](../../../odbc/reference/appendixes/statement-transitions.md)und [deskriptorübergänge](../../../odbc/reference/appendixes/descriptor-transitions.md)weiter unten in diesem Anhang.  
@@ -42,9 +43,9 @@ Die Tabellen in diesem Anhang veranschaulichen, wie ODBC-Funktionen Übergänge 
   
  Jeder Eintrag in einer Übergangs Tabelle kann einen der folgenden Werte aufweisen:  
   
--   **--**-Der Status ist nach dem Ausführen der Funktion unverändert.  
+-   **--** -Der Status ist nach dem Ausführen der Funktion unverändert.  
   
--   **Fresser**  
+-   **E**  
 
      **_n_** , **C_n_**, **S_n_** oder **D_n_** -die Umgebung, die Verbindung, die Anweisung oder der deskriptorzustand werden in den angegebenen Zustand verschoben.  
  
@@ -52,7 +53,7 @@ Die Tabellen in diesem Anhang veranschaulichen, wie ODBC-Funktionen Übergänge 
   
 -   **NS** -nächster Zustand. Der Anweisungs Übergang ist identisch mit dem, wenn die Anweisung die asynchronen Zustände nicht durchlaufen hat. Nehmen wir beispielsweise an, dass eine Anweisung, die ein Resultset erstellt, den Status "S11" aus dem Status "S1" erhält, weil **sqlexSQL_STILL_EXECUTING EC** Die NS-Notation im Zustand "S11" bedeutet, dass die Übergänge für die-Anweisung mit denen für eine Anweisung im Status S1 identisch sind, die ein Resultset erstellt. Wenn **SQLExecDirect** einen Fehler zurückgibt, verbleibt die Anweisung im Status S1. Wenn dies erfolgreich ist, wird die Anweisung in den Status "S5" verschoben. Wenn Daten benötigt werden, wird die Anweisung in den Status S8 verschoben; Wenn Sie noch ausgeführt wird, bleibt Sie im Zustand "S11".  
 
--   **_XXXXX_** oder **(*XXXXX*)** : ein SQLSTATE, der mit der Übergangs Tabelle verknüpft ist. Sqlstates, die vom Treiber-Manager erkannt werden, werden in Klammern eingeschlossen. Die Funktion hat SQL_ERROR und den angegebenen SQLSTATE zurückgegeben, aber der Zustand ändert sich nicht. Wenn z. b. **SQLExecute** vor **SQLPrepare**aufgerufen wird, wird SQLSTATE HY010 (Funktions Sequenz Fehler) zurückgegeben.  
+-   **_XXXXX_**  oder **(*XXXXX*)** : ein SQLSTATE, der mit der Übergangs Tabelle verknüpft ist. Sqlstates, die vom Treiber-Manager erkannt werden, werden in Klammern eingeschlossen. Die Funktion hat SQL_ERROR und den angegebenen SQLSTATE zurückgegeben, aber der Zustand ändert sich nicht. Wenn z. b. **SQLExecute** vor **SQLPrepare**aufgerufen wird, wird SQLSTATE HY010 (Funktions Sequenz Fehler) zurückgegeben.  
 
 > [!NOTE]  
 >  In den Tabellen werden keine Fehler angezeigt, die sich nicht auf die Übergangs Tabellen, die den Status nicht ändern, nicht ändern. Wenn **SQLAllocHandle** beispielsweise im Umgebungszustand E1 aufgerufen wird und SQLSTATE HY001 (Speicher Belegungs Fehler) zurückgibt, verbleibt die Umgebung im Zustand E1. Dies wird in der Umgebungs Übergangs Tabelle für **sqlzuweisung**nicht angezeigt.  
@@ -74,7 +75,7 @@ Die Tabellen in diesem Anhang veranschaulichen, wie ODBC-Funktionen Übergänge 
 |r|Ergebnisse. Mit der-Anweisung wird ein (möglicherweise leeres) Resultset erstellt.|  
 |s|Erfolg. Die Funktion, die SQL_SUCCESS_WITH_INFO oder SQL_SUCCESS zurückgegeben wurde.|  
 |v|Gültige Zeile. Der Cursor wurde in einer Zeile im Resultset positioniert, und die Zeile wurde erfolgreich eingefügt, erfolgreich aktualisiert, oder ein anderer Vorgang in der Zeile wurde erfolgreich abgeschlossen. Wenn das Zeilen Status Array vorhanden war, lautete der Wert im Zeilen Status Array für die Zeile SQL_ROW_ADDED, SQL_ROW_SUCCESS oder SQL_ROW_UPDATED. (Auf das Zeilen Status Array wird durch das SQL_ATTR_ROW_STATUS_PTR Statement-Attribut verwiesen.)|  
-|x|Ausführ. Die Funktion, die SQL_STILL_EXECUTING zurückgegeben.|  
+|w|Ausführ. Die Funktion, die SQL_STILL_EXECUTING zurückgegeben.|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
  In diesem Beispiel ist die Zeile in der Umgebungs Status Übergangs Tabelle für **SQLFreeHandle** , wenn der- *Typ* SQL_HANDLE_ENV lautet, wie folgt.  
