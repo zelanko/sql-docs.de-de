@@ -1,4 +1,5 @@
 ---
+description: dBASE-Datentypen
 title: dBASE-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17b96ad0b6674a2d120ef46d9bfa221e8df6d140
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9eca7d603a136bd1921ee93656d38f59efcda5f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412766"
 ---
 # <a name="dbase-data-types"></a>dBASE-Datentypen
 In der folgenden Tabelle wird gezeigt, wie dBase-Datentypen ODBC-SQL-Datentypen zugeordnet werden. Beachten Sie, dass nicht alle ODBC-SQL-Datentypen unterstützt werden.  

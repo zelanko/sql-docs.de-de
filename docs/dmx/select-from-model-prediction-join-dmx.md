@@ -1,4 +1,5 @@
 ---
+description: SELECT FROM &lt; Model &gt; Vorhersage Join (DMX)
 title: SELECT FROM &lt; Model &gt; Vorhersage Join (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e3e4e9a4d929d9533b10d87654f685e45dafd238
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 033b610da29267cd07076c01157744441c4450d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413296"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt; Model &gt; Vorhersage Join (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +34,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- Dies ist optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *Ausdrucks Liste auswählen*  
  Eine durch Trennzeichen getrennte Liste mit Spaltenbezeichnern und Ausdrücken, die aus dem Miningmodell abgeleitet sind.  
@@ -48,13 +49,13 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Die Quellabfrage.  
   
  *joinmapping-Liste*  
- Dies ist optional. Ein logischer Ausdruck, in dem Spalten aus dem Modell mit Spalten aus der Quellabfrage verglichen werden.  
+ Optional. Ein logischer Ausdruck, in dem Spalten aus dem Modell mit Spalten aus der Quellabfrage verglichen werden.  
   
  *Bedingungs Ausdruck*  
- Dies ist optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
+ Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- Dies ist optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die ON-Klausel definiert die Zuordnung zwischen den Spalten aus der Quellabfrage und den Spalten aus dem Miningmodell. Diese Zuordnung wird zum Weiterleiten von Spalten aus der Quell Abfrage an Spalten im Mining Modell verwendet, sodass die Spalten als Eingaben verwendet werden können, um die Vorhersagen zu erstellen. Spalten in \<*join mapping list*> werden mit einem Gleichheitszeichen (=) verknüpft, wie im folgenden Beispiel gezeigt:  

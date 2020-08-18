@@ -1,4 +1,5 @@
 ---
+description: Data Mining-Erweiterungen (DMX) - Referenz
 title: Referenz zu Data Mining-Erweiterungen (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02c7185ebbf264ebf8ed8adda4915170f888e74b
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6197fc8508e1334e5f8afdcb14aeaf7488890159
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414086"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Data Mining-Erweiterungen (DMX) - Referenz
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86971780"
   
  **Weitere Informationen finden Sie unter:** [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
-##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a>DMX-Anweisungen  
+##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a> DMX-Anweisungen  
  Mit den DMX-Anweisungen können Sie Data Mining-Modelle erstellen, verarbeiten, kopieren, durchsuchen und für Vorhersagen verwenden. Es gibt zwei Arten von Anweisungen in DMX: Datendefinitionsanweisungen und Datenbearbeitungsanweisungen. Sie können jede Art von Anweisung zum Ausführen unterschiedlicher Arten von Aufgaben verwenden.  
   
  In den folgenden Abschnitten finden Sie weitere Informationen zum Verwenden von DMX-Anweisungen:  
@@ -44,7 +45,7 @@ ms.locfileid: "86971780"
   
 -   [Grundlagen der Abfrage](#BKMK_Queries)  
   
-###  <a name="data-definition-statements"></a><a name="BKMK_DDL"></a>Daten Definitions Anweisungen  
+###  <a name="data-definition-statements"></a><a name="BKMK_DDL"></a> Daten Definitions Anweisungen  
  Datendefinitionsanweisungen verwenden Sie in DMX dazu, neue Miningstrukturen und -modelle zu erstellen und zu definieren, Miningmodelle und Miningstrukturen zu importieren und zu exportieren sowie vorhandene Modelle aus einer Datenbank zu löschen. Datendefinitionsanweisungen in DMX sind Teil der Datendefinitionssprache (Data Definition Language, DDL).  
   
  Mit den Datendefinitionsanweisungen in DMX können Sie folgende Aufgaben ausführen:  
@@ -63,7 +64,7 @@ ms.locfileid: "86971780"
   
  [Zurück zu den DMX-Anweisungen](#BKMK_DMXStatements)  
   
-###  <a name="data-manipulation-statements"></a><a name="BKMK_DML"></a>Daten Bearbeitungsanweisungen  
+###  <a name="data-manipulation-statements"></a><a name="BKMK_DML"></a> Daten Bearbeitungsanweisungen  
  Mit den Datenbearbeitungsanweisungen in DMX können Sie vorhandene Miningmodelle verwenden, die Modelle durchsuchen sowie Vorhersagen aus ihnen erstellen. Datenbearbeitungsanweisungen in DMX sind Teil der Datenbearbeitungssprache (Data Manipulation Language, DML).  
   
  Mit den Datenbearbeitungsanweisungen in DMX können Sie folgende Aufgaben ausführen:  
@@ -90,7 +91,7 @@ ms.locfileid: "86971780"
   
  [Zurück zu den DMX-Anweisungen](#BKMK_DMXStatements)  
   
-###  <a name="dmx-query-fundamentals"></a><a name="BKMK_Queries"></a>Grundlagen der DMX-Abfrage  
+###  <a name="dmx-query-fundamentals"></a><a name="BKMK_Queries"></a> Grundlagen der DMX-Abfrage  
  Die SELECT-Anweisung ist die Grundlage für die meisten DMX-Abfragen. Abhängig von den Klauseln, die Sie in der jeweiligen Anweisung verwenden, können Sie Miningmodelle durchsuchen, kopieren oder für Vorhersagen verwenden. Die Vorhersage Abfrage verwendet das Formular SELECT, um Vorhersagen auf Grundlage vorhandener Mining Modelle zu erstellen. Funktionen erweitern Ihre Möglichkeiten zum Durchsuchen und Abfragen von Miningmodellen über die systeminternen Möglichkeiten des Data Mining-Modells hinaus.  
   
  Mit DMX-Funktionen können Sie Informationen abrufen, die während des Trainings eines Modells ermittelt wurden, sowie neue Informationen berechnen. Sie können diese Funktionen für viele Zwecke verwenden, so z. B. zum Zurückgeben von Statistiken, die die zugrunde liegenden Daten oder die Genauigkeit einer Vorhersage beschreiben, oder zum Zurückgeben einer erweiterten Erläuterung einer Vorhersage.  

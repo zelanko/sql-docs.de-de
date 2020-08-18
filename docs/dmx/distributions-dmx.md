@@ -1,4 +1,5 @@
 ---
+description: Verteilungen (DMX)
 title: Verteilungen (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3c3544e73726dafa713b45cf08aba0e20631a869
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: f0aef6ed4b98241b07e84aa11ed6408c600d6ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414196"
 ---
 # <a name="distributions-dmx"></a>Verteilungen (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

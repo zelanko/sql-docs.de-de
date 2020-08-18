@@ -1,4 +1,5 @@
 ---
+description: CREATE MINING STRUCTURE (DMX)
 title: Mining Struktur erstellen (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414026"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -106,7 +107,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Sie können mehrere Modellierungsflagwerte für eine Spalte definieren. Für eine Spalte können jedoch nur jeweils ein Inhaltstyp und ein Datentyp gelten.  
   
 ### <a name="column-relationships"></a>Spaltenbeziehungen  
- Sie können jeder Spaltendefinitionsanweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt die Verwendung der folgenden- \<column relationship> Klausel.  
+ Sie können jeder Spaltendefinitionsanweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die Verwendung der folgenden- \<column relationship> Klausel.  
   
  **verknüpft mit**  
  Gibt eine Wertehierarchie an. Das Ziel einer RELATED TO-Spalte kann eine Schlüsselspalte einer geschachtelten Tabelle, eine Spalte mit diskreten Werten in der Fallzeile oder eine andere Spalte mit einer RELATED TO-Klausel sein, wodurch eine tiefere Hierarchie gekennzeichnet ist.  

@@ -1,4 +1,5 @@
 ---
+description: TopPercent (MDX)
 title: Topprozent (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412860"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -44,7 +45,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  Die **topprozent** -Funktion berechnet die Summe des angegebenen numerischen Ausdrucks, der für die angegebene Menge ausgewertet wurde, und sortiert die Menge in absteigender Reihenfolge. Anschließend gibt die Funktion die Elemente mit den höchsten Werten zurück, deren kumulativer Prozentsatz vom Gesamtwert mindestens dem angegebenen Prozentsatz entspricht. Diese Funktion gibt die kleinste Teilmenge einer Menge zurück, deren kumulativer Gesamtwert mindestens dem angegebenen Prozentsatz entspricht. Die zurückgegebenen Elemente werden der Größe nach absteigend sortiert.  
   
 > [!WARNING]  
->  Wenn *numeric_expression* einen negativen Wert zurückgibt, gibt **topprozent** nur eine Zeile (1) zurück.  
+>  Wenn *numeric_expression*  einen negativen Wert zurückgibt, gibt **topprozent** nur eine Zeile (1) zurück.  
 >   
 >  Im zweiten Beispiel wird dieses Verhalten ausführlicher veranschaulicht.  
   

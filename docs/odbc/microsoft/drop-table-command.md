@@ -1,4 +1,5 @@
 ---
+description: DROP TABLE-Befehl
 title: DROP TABLE-Befehl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 779c519f720027aea3a6f6cf2587d3c6e0b59b52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f383740584ca524c732172ee363f7ffb393c30c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412566"
 ---
 # <a name="drop-table-command"></a>DROP TABLE-Befehl
 Entfernt eine Tabelle aus der Datenbank, die mit der Datenquelle angegeben wurde, und löscht sie von der Festplatte.  
@@ -31,7 +32,7 @@ Entfernt eine Tabelle aus der Datenbank, die mit der Datenquelle angegeben wurde
 DROP TABLE TableName | FileName | ?  
 ```  
   
-## <a name="settings"></a>Einstellung  
+## <a name="settings"></a>Einstellungen  
  *TableName*  
  Gibt die Tabelle an, die aus der mit der Datenquelle angegebenen Datenbank entfernt und von der Festplatte gelöscht werden soll.  
   
@@ -47,7 +48,7 @@ DROP TABLE TableName | FileName | ?
 ## <a name="driver-remarks"></a>Hinweise zu Treibern  
  Wenn die Anwendung die DROP TABLE-Anweisung der ODBC-SQL-Anweisung an die Datenquelle sendet, konvertiert der Visual FoxPro-ODBC-Treiber den Befehl mithilfe der in der folgenden Tabelle gezeigten Syntax in den Visual foxprodrop TABLE-Befehl.  
   
-|ODBC-Syntax|Datenquelle|Syntax von Visual FoxPro|  
+|ODBC-Syntax|Datenquellen-|Syntax von Visual FoxPro|  
 |-----------------|-----------------|--------------------------|  
 |Drop Table *Basis-Tabellenname*|Datenbank (DBC-Datei)|Tabelle mit *TableName* löschen entfernen|  
 ||Verzeichnis mit freien Tabellen (DBF-Dateien)|Löschen von *DBF-Name*<br /><br /> *Cdxname* löschen<br /><br /> *Fptname* löschen|

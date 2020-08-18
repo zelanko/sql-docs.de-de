@@ -1,4 +1,5 @@
 ---
+description: Einschränkungen für Datumstypen
 title: Einschränkungen des Datentyps | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4beaf91a4ead743e3e8a2e32578796baba3c17be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4853846f21aa0ad763295bbdc4233c472ac53864
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412786"
 ---
 # <a name="data-type-limitations"></a>Einschränkungen für Datumstypen
 Die Microsoft ODBC Desktop-Datenbanktreiber erzwingen die folgenden Einschränkungen für-Datentypen:  
@@ -29,7 +30,7 @@ Die Microsoft ODBC Desktop-Datenbanktreiber erzwingen die folgenden Einschränku
 |Alle Datentypen|Typkonvertierungs Fehler können dazu führen, dass die betroffene Spalte auf NULL festgelegt wird.|  
 |BINARY|Beim Erstellen einer binären Spalte der Länge 0 (null) wird tatsächlich eine 255-Byte-Binär Spalte zurückgegeben.|  
 |DATE|Der Date-Datentyp kann von der Convert-Funktion nicht in einen anderen Datentyp (oder selbst) konvertiert werden.|  
-|Decimal (genau numerisch)|Nicht unterstützt.|  
+|Decimal (genau numerisch)|Wird nicht unterstützt.|  
 |Gleit Komma Datentypen|Die Anzahl der Dezimalstellen in einer Gleit Komma Zahl kann durch das Zahlenformat eingeschränkt werden, das im internationalen Abschnitt der Windows-Systemsteuerung festgelegt ist.|  
 |NUMERIC|Unterstützt maximale Genauigkeit und eine Skala von 28.|  
 |timestamp|Der timestamp-Datentyp kann von der Convert-Funktion nicht in sich selbst konvertiert werden.|  

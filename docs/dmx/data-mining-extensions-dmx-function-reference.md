@@ -1,4 +1,5 @@
 ---
+description: Data Mining-Erweiterungen (DMX) - Funktionsreferenz
 title: Funktionsreferenz für Data Mining-Erweiterungen (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7b25146ce36a0b58bb46bcacb4348f8e34221068
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3066c971a434f1fab0dd2963003d53e37585983a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414146"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Data Mining-Erweiterungen (DMX) - Funktionsreferenz
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86971807"
 |Funktion|Beschreibung|  
 |--------------|-----------------|  
 |[BottomCount &#40;DMX-&#41;](../dmx/bottomcount-dmx.md)|Gibt eine Tabelle zurück, die in aufsteigender Reihenfolge auf der Grundlage eines Rangausdrucks die letzten &lt;n&gt; Elementzeilen des Tabellenausdrucks enthält.|  
-|[&#40;DMX-&#41;im unteren Prozentsatz](../dmx/bottompercent-dmx.md)|Gibt eine Tabelle zurück, die die kleinste Anzahl von untersten Zeilen, die einem angegebenen Prozentausdruck entsprechen, in aufsteigender Rangreihenfolge auf der Grundlage eines Rangausdrucks enthält.|  
+|[&#40;DMX-&#41;im unteren Prozentsatz ](../dmx/bottompercent-dmx.md)|Gibt eine Tabelle zurück, die die kleinste Anzahl von untersten Zeilen, die einem angegebenen Prozentausdruck entsprechen, in aufsteigender Rangreihenfolge auf der Grundlage eines Rangausdrucks enthält.|  
 |[BottomSum-&#40;DMX-&#41;](../dmx/bottomsum-dmx.md)|Gibt eine Tabelle zurück, die die kleinste Anzahl von untersten Zeilen, die einem angegebenen Summenausdruck entsprechen, in aufsteigender Rangreihenfolge auf der Grundlage eines Rangausdrucks enthält.|  
 |[Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)|Gibt den Cluster zurück, der mit der höchsten Wahrscheinlichkeit den Eingabefall enthält.|  
 |[ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)|Gibt die Wahrscheinlichkeit zurück, mit der der Eingabefall zum Cluster gehört.|  

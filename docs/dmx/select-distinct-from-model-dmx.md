@@ -1,4 +1,5 @@
 ---
+description: SELECT-FROM- &lt; Modell &gt; (DMX)
 title: SELECT verschieden vom &lt; Modell &gt; (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413266"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT-FROM- &lt; Modell &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -30,7 +31,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- Dies ist optional. Eine ganze Zahl, die die Anzahl der zurück zugebende Zeilen angibt.  
+ Optional. Eine ganze Zahl, die die Anzahl der zurück zugebende Zeilen angibt.  
   
  *Ausdrucks Liste*  
  Eine durch Trennzeichen getrennte Liste mit Bezeichnern verbundener Spalten (abgeleitet aus dem Modell) oder mit Ausdrücken.  
@@ -42,7 +43,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- Dies ist optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die SELECT-Anweisung unter **schiedlicher from** -Anweisung kann nur mit einer einzelnen Spalte oder mit einem Satz verwandter Spalten verwendet werden. Für eine Gruppe nicht verbundener Spalten kann diese Klausel nicht verwendet werden.  

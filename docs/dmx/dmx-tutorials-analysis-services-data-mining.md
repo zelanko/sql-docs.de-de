@@ -1,4 +1,5 @@
 ---
+description: DMX-Lernprogramme (Analysis Services – Data Mining)
 title: DMX-Tutorials (Analysis Services-Data Mining) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4fcf803bb76bfb894faa75e6e51180cc25434abe
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8974b18cf666382d5be395f5b52b87fccae29aff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413397"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX-Lernprogramme (Analysis Services – Data Mining)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

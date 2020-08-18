@@ -1,4 +1,5 @@
 ---
+description: SQLColAttributes (Excel-Treiber)
 title: SQLColAttribute (Excel-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 7c4833e3-ff0c-4313-9ab8-21379ceab656
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 218c442af6292b665764ed60dc5586710d820de6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9993fd239235a19fd02ffaa7fc43be0e66f2890f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412226"
 ---
 # <a name="sqlcolattributes-excel-driver"></a>SQLColAttributes (Excel-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält Informationen zu Excel-Treibern. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|Attribut|Kommentare|  
+|attribute|Kommentare|  
 |---------------|--------------|  
 |SQL_COLUMN_DISPLAY_SIZE|Bei LONGVARBINARY-Daten ist SQL_COLUMN_DISPLAY_SIZE die maximale Länge der Spalte, nicht die maximale Länge der Spalten Zeit (2).|  
 |SQL_OWNER_NAME|In dieser Spalte wird eine leere Zeichenfolge ("") zurückgegeben, da der Besitzer Name nicht unterstützt wird.|  

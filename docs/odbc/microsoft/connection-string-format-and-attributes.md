@@ -1,4 +1,5 @@
 ---
+description: Format und Attribute von Verbindungszeichenfolgen
 title: Format und Attribute der Verbindungs Zeichenfolge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d95866976d2e83c058f83b3a0ae5e9a4e8888ed1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53efb4dd010913029185f0cbf27f0991f34815fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412932"
 ---
 # <a name="connection-string-format-and-attributes"></a>Format und Attribute von Verbindungszeichenfolgen
 > [!IMPORTANT]  
@@ -31,15 +32,15 @@ ms.locfileid: "81281150"
 ```  
   
 > [!NOTE]  
->  Der Microsoft ODBC Driver for Oracle unterstützt das Format der Verbindungs Zeichenfolge der ersten Version des Treibers `CONNECTSTRING`, bei der `SERVER=`= anstelle von verwendet wird.  
+>  Der Microsoft ODBC Driver for Oracle unterstützt das Format der Verbindungs Zeichenfolge der ersten Version des Treibers, bei der `CONNECTSTRING` = anstelle von verwendet wird `SERVER=` .  
   
- Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unter `Trusted_Connection=yes` stützt, sollten Sie anstelle von Benutzer-ID-und Kenn Wort Informationen in der Verbindungs Zeichenfolge angeben.  
+ Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unterstützt, sollten Sie `Trusted_Connection=yes` anstelle von Benutzer-ID-und Kenn Wort Informationen in der Verbindungs Zeichenfolge angeben.  
   
  Sie müssen den Namen der Datenquelle angeben, wenn Sie die Attribute "UID", "pwd", "Server" (oder "connectstring") und "Driver" nicht angeben. Alle anderen Attribute sind jedoch optional. Wenn Sie kein Attribut angeben, wird dieses Attribut standardmäßig auf den Wert festgelegt, der im Dialogfeld **ODBC-Datenquellen-Administrator** auf der Registerkarte relevante DSN angegeben ist. Beim Attribut Wert kann die Groß-/Kleinschreibung beachtet werden.  
   
  Die Attribute für die Verbindungs Zeichenfolge lauten wie folgt:  
   
-|Attribut|BESCHREIBUNG|Standardwert|  
+|attribute|Beschreibung|Standardwert|  
 |---------------|-----------------|-------------------|  
 |DSN|Der Datenquellen Name, der im Dialogfeld **ODBC-Datenquellen-Administrator** auf der Registerkarte Treiber aufgelistet ist.|""|  
 |PWD|Das Kennwort für den Oracle-Server, auf den Sie zugreifen möchten. Dieser Treiber unterstützt Beschränkungen, die Oracle auf Kenn Wörtern platziert.|""|  

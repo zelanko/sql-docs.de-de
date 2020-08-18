@@ -1,4 +1,5 @@
 ---
+description: Daten Definitions Anweisungen (DMX)
 title: Daten Definitions Anweisungen (DMX) | Microsoft-Dokumentation
 ms.date: 10/23/2019
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c9646fa7e2ba438bb2f2b57ac37b2ceca5a957c
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 020dd7baa05a6b02c7acea681343361c559c7c22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413886"
 ---
 # <a name="dmx-statements---data-definition"></a>DMX-Anweisungen – Datendefinition 
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "86969841"
 |---------------|-----------------|  
 |[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)|Erstellt eine neue Miningstruktur in der Datenbank.|  
 |[Alter Mining Structure &#40;DMX-&#41;](../dmx/alter-mining-structure-dmx.md)|Fügt einer vorhandenen Miningstruktur ein Miningmodell hinzu.|  
-|[Mining Modell &#40;DMX-&#41;erstellen](../dmx/create-mining-model-dmx.md)|Erstellt eine neue Miningstruktur und ein neues Miningmodell in der Datenbank.|  
+|[Mining Modell &#40;DMX-&#41;erstellen ](../dmx/create-mining-model-dmx.md)|Erstellt eine neue Miningstruktur und ein neues Miningmodell in der Datenbank.|  
 |[DROP MINING MODEL &#40;DMX&#41;](../dmx/drop-mining-model-dmx.md)|Löscht ein Miningmodell aus der Datenbank.|  
 |[Löschen der Mining Struktur &#40;DMX-&#41;](../dmx/drop-mining-structure-dmx.md)|Löscht eine Miningstruktur aus der Datenbank.|  
 |[EXPORT &#40;DMX&#41;](../dmx/export-dmx.md)|Exportiert ein Miningmodell oder eine Miningstruktur und zugeordnete Objekte in eine ABF-Datei.|  
