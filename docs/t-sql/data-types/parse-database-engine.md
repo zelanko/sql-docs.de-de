@@ -1,4 +1,5 @@
 ---
+description: Parse (Datenbank-Engine)
 title: Parse (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e024024726ab6366b6dbb3580f1c27367195c130
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 78ff3df45fd3d835d273d2f00f4d7ddf65170a62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86548605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311506"
 ---
 # <a name="parse-database-engine"></a>Parse (Datenbank-Engine)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ CLR: Der Zeichenfolgenwert, der ausgewertet wird.
   
 **CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Wenn Parse einen Wert erhält, der keine gültige Zeichenfolgendarstellung einer **hierarchyid** ist, wird eine Ausnahme ausgelöst. Wenn beispielsweise **char**-Datentypen nachfolgende Leerzeichen enthalten, wird eine Ausnahme ausgelöst.
   
 ## <a name="examples"></a>Beispiele  

@@ -1,4 +1,5 @@
 ---
+description: PRINT (Transact-SQL)
 title: PRINT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 058c87be49d3089d699b0abbafb0d500f3cb9580
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: be33ffe8e52349e2eb7daad69b0648ae9ea53494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307309"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,8 +56,8 @@ PRINT msg_str | @local_variable | string_expr
  *string_expr*  
  Ein Ausdruck, der eine Zeichenfolge zurückgibt. Er kann verkettete Literalwerte, Funktionen und Variablen enthalten. Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-## <a name="remarks"></a>Bemerkungen  
- Eine Meldungszeichenfolge kann bis zu 8.000 Zeichen lang sein, wenn es sich um eine Nicht-Unicode-Zeichenfolge handelt, und 4.000 Zeichen, wenn es sich um eine Unicode-Zeichenfolge handelt. Längere Zeichenfolgen werden abgeschnitten. Die Datentypen**varchar(max)** und **nvarchar(max)** werden abgeschnitten und ergeben Datentypen, die nicht größer sind als **varchar(8000)** und **nvarchar(4000)** .  
+## <a name="remarks"></a>Hinweise  
+ Eine Meldungszeichenfolge kann bis zu 8.000 Zeichen lang sein, wenn es sich um eine Nicht-Unicode-Zeichenfolge handelt, und 4.000 Zeichen, wenn es sich um eine Unicode-Zeichenfolge handelt. Längere Zeichenfolgen werden abgeschnitten. Die Datentypen**varchar(max)** und **nvarchar(max)** werden abgeschnitten und ergeben Datentypen, die nicht größer sind als **varchar(8000)** und **nvarchar(4000)**.  
   
  RAISERROR kann auch zum Zurückgeben von Meldungen verwendet werden. RAISERROR hat im Vergleich zu PRINT die folgenden Vorteile:  
   

@@ -1,4 +1,5 @@
 ---
+description: WHILE (Transact-SQL)
 title: WHILE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f11e2a6261976b3e96533647d37fcad3a1eaa792
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 78b7ac5ab0a9b65e50059f45e5bdca5e4219bf11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307330"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +71,7 @@ WHILE Boolean_expression
  CONTINUE  
  Bewirkt, dass die WHILE-Schleife neu gestartet wird und alle Anweisungen nach dem CONTINUE-Schlüsselwort ignoriert werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn zwei oder mehr WHILE-Schleifen geschachtelt sind, wird mit der inneren BREAK-Anweisung zur nächsten äußersten Schleife gesprungen. Alle Anweisungen nach dem Ende der inneren Schleife werden zuerst ausgeführt, und dann wird die nächste äußerste Schleife neu gestartet.  
   
 ## <a name="examples"></a>Beispiele  
@@ -136,7 +137,7 @@ END
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung (Transact-SQL))](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

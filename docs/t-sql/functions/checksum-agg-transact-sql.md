@@ -1,4 +1,5 @@
 ---
+description: CHECKSUM_AGG (Transact-SQL)
 title: CHECKSUM_AGG (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7b01f8dd8ed2b460a347ef2f80fb1f2f6eef9ffe
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 6190b42e9e52f9f20e9ad645c0169f08dc7694a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311126"
 ---
 # <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ Ein [Integerausdruck](../../t-sql/language-elements/expressions-transact-sql.md)
 ## <a name="return-types"></a>Rückgabetypen
 Gibt die Prüfsumme aller *Ausdruckswerte* als **int** zurück.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 `CHECKSUM_AGG` kann Änderungen in einer Tabelle erkennen.
   
 Das `CHECKSUM_AGG`-Ergebnis hängt nicht von der Reihenfolge der Zeilen in der Tabelle ab. Zudem lassen `CHECKSUM_AGG`-Funktionen das Verwenden des Schlüsselworts `DISTINCT` und der Klausel `GROUP BY` zu.
@@ -99,7 +100,7 @@ FROM Production.ProductInventory;
 287  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
 [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
 [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)

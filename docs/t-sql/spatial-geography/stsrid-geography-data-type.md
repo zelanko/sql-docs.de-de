@@ -1,4 +1,5 @@
 ---
+description: STSrid (geography-Datentyp)
 title: STSrid (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 57c580706f5a8a7c9fec02ca7675b6733cd9dddf
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: bc6f88b25a67e3d8904ea7823324111e60576ab7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306002"
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid (geography-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555351"
   
  CLR-Typ: **SqlInt32**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Eigenschaft kann geändert werden.  
   
 ## <a name="examples"></a>Beispiele  
@@ -62,7 +63,7 @@ SET @g.STSrid = 4267;
 SELECT @g.STSrid;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   

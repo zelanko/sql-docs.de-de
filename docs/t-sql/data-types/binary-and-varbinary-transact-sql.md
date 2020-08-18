@@ -1,4 +1,5 @@
 ---
+description: binary und varbinary (Transact-SQL)
 title: binary und varbinary (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/16/2017
@@ -21,12 +22,12 @@ ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f267da97eeb409be81bfcca71af602ebce1ffe1c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 842cde194f39b32b2140c09afed458f903dc772d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86548740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312486"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary und varbinary (Transact-SQL)
 
@@ -40,7 +41,7 @@ Binäre Datentypen mit fester Länge bzw. mit variabler Länge.
   
 **varbinary** [ ( _n_ | **max**) ] Binärdaten variabler Länge. _n_ kann einen Wert von 1 bis 8000 aufweisen. **max** gibt an, dass die maximale Speichergröße 2^31-1 Byte beträgt. Die Speicherplatzgröße ist die tatsächliche Länge der eingegebenen Daten + 2 Byte. Die eingegebenen Daten können 0 Byte lang sein. Das ANSI SQL-Synonym für **varbinary** ist **binary varying**.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Die Standardlänge beträgt 1, wenn _n_ in einer Datendefinitions- oder Variablendeklarationsanweisung nicht angegeben ist. Wenn _n_ in der CAST-Funktion nicht angegeben ist, beträgt die Standardlänge 30.
 
 | Datentyp | Verwenden Sie |

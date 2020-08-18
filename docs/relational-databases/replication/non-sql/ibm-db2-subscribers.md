@@ -1,4 +1,5 @@
 ---
+description: IBM DB2 Subscribers
 title: IMB DB2-Abonnenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/02/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4cc6f19d4b732344f42d27513e7f1a7730566780
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e044fa0e368893f0aaa1fe8175b306c2fc04c24b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88327066"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -150,11 +151,11 @@ ms.locfileid: "85893315"
 ### <a name="data-type-mapping-considerations"></a>Überlegungen zur Datentypzuordnung  
  Berücksichtigen Sie die folgenden Überlegungen zur Datentypzuordnung beim Replizieren auf DB2-Abonnenten:  
   
--   Wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen **char**, **varchar**, **binary** und **varbinary** jeweils den DB2-Datentypen CHAR, VARCHAR, CHAR FOR BIT DATA und VARCHAR FOR BIT DATA zugeordnet werden, wird der DB2-Datentyp bei der Replikation auf dieselbe Länge wie der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Typ festgelegt.  
+-   Wenn die -Datentypen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**, **varchar**, **binary** und **varbinary** jeweils den DB2-Datentypen CHAR, VARCHAR, CHAR FOR BIT DATA und VARCHAR FOR BIT DATA zugeordnet werden, wird der DB2-Datentyp bei der Replikation auf dieselbe Länge wie der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Typ festgelegt.  
   
      Dadurch kann die Tabelle erfolgreich auf dem Abonnenten erstellt werden, sofern die Einschränkung der DB2-Seitengröße die maximale Größe der Zeile zulässt. Stellen Sie sicher, dass die für den Zugriff auf die DB2 verwendete Anmeldung über die Berechtigungen verfügt, um auf Tabellenbereiche von ausreichender Größe für die auf DB2 zu replizierenden Tabellen zugreifen zu können.  
   
--   DB2 unterstützt VARCHAR-Spalten bis zu 32 KB. Deshalb können einige LOB-Spalten (Large Object) von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ordnungsgemäß VARCHAR-Spalten von DB2 zugeordnet werden. Der von der Replikation für DB2 verwendete OLE DB-Anbieter unterstützt jedoch keine Zuordnung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -LOB zu DB2-LOB. Deshalb werden die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Spalten **text**, **varchar(max)** , **ntext** und **nvarchar(max)** in den generierten Erstellungsskripts VARCHAR(0) zugeordnet. Der Längenwert 0 muss in einen ordnungsgemäßen Wert geändert werden, bevor das Skript auf den Abonnenten angewendet wird. Wird die Länge des Datentyps nicht geändert, löst DB2 Fehler 604 bei dem Versuch der Tabellenerstellung auf dem DB2-Abonnenten aus (Fehler 604 bedeutet, dass das Genauigkeits- oder Längenattribut des Datentyps ungültig ist).  
+-   DB2 unterstützt VARCHAR-Spalten bis zu 32 KB. Deshalb können einige LOB-Spalten (Large Object) von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ordnungsgemäß VARCHAR-Spalten von DB2 zugeordnet werden. Der von der Replikation für DB2 verwendete OLE DB-Anbieter unterstützt jedoch keine Zuordnung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -LOB zu DB2-LOB. Deshalb werden die -Spalten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **varchar(max)**, **ntext** und **nvarchar(max)** in den generierten Erstellungsskripts VARCHAR(0) zugeordnet. Der Längenwert 0 muss in einen ordnungsgemäßen Wert geändert werden, bevor das Skript auf den Abonnenten angewendet wird. Wird die Länge des Datentyps nicht geändert, löst DB2 Fehler 604 bei dem Versuch der Tabellenerstellung auf dem DB2-Abonnenten aus (Fehler 604 bedeutet, dass das Genauigkeits- oder Längenattribut des Datentyps ungültig ist).  
   
      Bestimmen Sie basierend auf Ihrer Kenntnis der von Ihnen replizierten Quelltabelle, ob es angemessen ist, einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -LOB einem DB2-Objekt variabler Länge zuzuordnen, und geben Sie eine angemessene maximale Länge in einem benutzerdefinierten Erstellungsskript an. Informationen zum Angeben eines benutzerdefinierten Erstellungsskripts finden Sie in Schritt 5 im Abschnitt zum Konfigurieren eines IBM DB2-Abonnenten in diesem Thema.  
   
@@ -163,11 +164,11 @@ ms.locfileid: "85893315"
   
      Wenn keine geeignete Zuordnung für eine LOB-Spalte vorhanden ist, verwenden Sie die Spaltenfilterung für die Artikel, sodass die Spalte nicht repliziert wird. Weitere Informationen finden Sie unter [Filtern von veröffentlichten Daten](../../../relational-databases/replication/publish/filter-published-data.md).  
   
--   Beim Replizieren der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen **nchar** und **nvarchar** auf die DB2-Datentypen CHAR und VARCHAR werden für den DB2- und den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Typ dieselben Längenspezifizierer verwendet. Die Datentyplänge ist jedoch möglicherweise zu gering für die generierte DB2-Tabelle  
+-   Beim Replizieren der -Datentypen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nchar** und **nvarchar** auf die DB2-Datentypen CHAR und VARCHAR werden für den DB2- und den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Typ dieselben Längenspezifizierer verwendet. Die Datentyplänge ist jedoch möglicherweise zu gering für die generierte DB2-Tabelle  
   
-     In einigen DB2-Umgebungen ist ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]char **-Datenelement aus**  nicht auf Einzelbyte-Zeichen beschränkt. Bei der Länge eines CHAR- oder VARCHAR-Elements muss dies berücksichtigt werden. Sie müssen auch *Rückschaltungs* - und *Dauerumschaltungs* zeichen berücksichtigen, wenn diese benötigt werden. Wenn Sie Tabellen mit **nchar** - und **nvarchar** -Spalten replizieren, müssen Sie gegebenenfalls eine größere maximale Länge für die Datentypen in einem benutzerdefinierten Erstellungsskript angeben. Informationen zum Angeben eines benutzerdefinierten Erstellungsskripts finden Sie in Schritt 5 im Abschnitt zum Konfigurieren eines IBM DB2-Abonnenten in diesem Thema.  
+     In einigen DB2-Umgebungen ist ein  **char**-Datenelement aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht auf Einzelbyte-Zeichen beschränkt. Bei der Länge eines CHAR- oder VARCHAR-Elements muss dies berücksichtigt werden. Sie müssen auch *Rückschaltungs* - und *Dauerumschaltungs* zeichen berücksichtigen, wenn diese benötigt werden. Wenn Sie Tabellen mit **nchar** - und **nvarchar** -Spalten replizieren, müssen Sie gegebenenfalls eine größere maximale Länge für die Datentypen in einem benutzerdefinierten Erstellungsskript angeben. Informationen zum Angeben eines benutzerdefinierten Erstellungsskripts finden Sie in Schritt 5 im Abschnitt zum Konfigurieren eines IBM DB2-Abonnenten in diesem Thema.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md)  
   

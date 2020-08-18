@@ -1,4 +1,5 @@
 ---
+description: TRIGGER_NESTLEVEL (Transact-SQL)
 title: TRIGGER_NESTLEVEL (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 105e3ebe3b5d19461732dfcaaac415f707ea4e44
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 183d2e295fcdaf7de1bf20351272662979c888b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112340"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307563"
 ---
 # <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
  **'** *trigger_event_category* **'**  
  Gibt an, ob TRIGGER_NESTLEVEL auf DML- oder DDL-Trigger angewendet werden soll. Geben Sie **DML** für DML-Trigger an. Geben Sie **DDL** für DDL-Trigger an. Wenn *trigger_event_category* angegeben ist, muss auch *trigger_type* angegeben sein. Beachten Sie, dass nur **AFTER** für **DDL** angegeben werden kann, weil DDL-Trigger nur AFTER-Trigger sein können.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn keine Parameter angegeben werden, gibt TRIGGER_NESTLEVEL die Gesamtanzahl von Triggern in der Aufrufliste zurück. Der Parameter selbst ist ebenfalls darin eingeschlossen. Es kann vorkommen, dass Parameter nicht angegeben werden, wenn ein Trigger Befehle ausführt, die das Auslösen eines anderen Triggers bewirken, oder wenn er eine Folge von ausgelösten Triggern erzeugt.  
   
  Geben Sie *object_id* = 0 an, um die Gesamtanzahl von Triggern in der Aufrufliste für einen bestimmten Triggertyp und eine bestimmte Ereigniskategorie zurückzugeben.  
@@ -86,7 +87,7 @@ IF ( (SELECT trigger_nestlevel() ) > 5 )
       ('This statement nested over 5 levels of triggers.',16,-1)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

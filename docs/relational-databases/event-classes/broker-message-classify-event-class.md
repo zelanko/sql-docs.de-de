@@ -1,4 +1,5 @@
 ---
+description: Broker:Message Classify-Ereignisklasse
 title: Broker:Message Classify-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,18 +13,18 @@ ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62227ad9938f94a1381431b57ebed7c3f63c0169
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e5e8e0bc84e26798716ba1635580b81dbfc08c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88331076"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify-Ereignisklasse
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Broker:Message Classify** -Ereignis, wenn Service Broker das Routing für eine Nachricht bestimmt.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Broker:Message Classify**-Ereignis, wenn Service Broker das Routing für eine Nachricht bestimmt.  
   
 ## <a name="brokermessage-classify-event-class-data-columns"></a>Datenspalten der Broker:Message Classify-Ereignisklasse  
   
@@ -50,7 +51,7 @@ ms.locfileid: "85763004"
 |**TargetUserName**|**nvarchar**|Die Netzwerkadresse des nächsten Hopbrokers.|39|Nein|  
 |**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Nein|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

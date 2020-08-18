@@ -1,4 +1,5 @@
 ---
+description: Datenvorschau (Dialogfeld) (SQL Server-Import/Export-Assistent)
 title: Datenvorschau (Dialogfeld) (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e59c3aa71cbbff6f955c67d033713f7a27dfbb28
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4608eed330a6ac8a64150197a591f68fcc832c65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920178"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347216"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Datenvorschau (Dialogfeld) (SQL Server-Import/Export-Assistent)
 
@@ -36,14 +37,14 @@ Zeigt die Abfrage an, die der Assistent zum Laden der Daten aus der Datenquelle 
 
 Wenn Sie eine Tabelle zum Kopieren ausgewählt haben, wird im Feld **Quelle** eine `SELECT * FROM <table>`-Abfrage statt des Tabellennamens angezeigt. 
   
- **Sample data grid**  
+ **Beispieldatenraster**  
  Zeigt bis zu 200 Zeilen von Beispieldaten an, die von der Abfrage aus der Datenquelle zurückgegeben wurden  
 
 
 ## <a name="thats-not-right-i-want-to-change-something"></a>Das ist nicht richtig, ich möchte etwas ändern.
 Nachdem Sie die Daten in der Vorschau anzeigen, sollten Sie die Optionen ändern, die Sie auf den vorherigen Seiten des Assistenten ausgewählt haben. Um diese Änderungen vorzunehmen, klicken Sie auf **OK**, um zurück auf die Seite **Quelltabellen und -sichten auswählen** zu wechseln, und klicken Sie dann auf **Zurück**, um zu vorherigen Seiten zurückzukehren, auf denen Sie Ihre jeweilige Auswahl ändern können.
 
-## <a name="whats-next"></a>Wie geht es weiter?  
+## <a name="whats-next"></a>Nächste Schritte  
  Nachdem Sie eine Vorschau der Daten, die Sie kopieren möchten, erstellt haben und auf **OK**klicken, leitet Sie das Dialogfeld **Vorschaudaten** zurück zu den Seiten **Quelltabellen und Sichten auswählen** oder **Flatfileziel konfigurieren** . Weitere Informationen finden Sie unter [Quelltabellen und -sichten auswählen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) oder [Flatfileziel konfigurieren](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
  
  ## <a name="see-also"></a>Weitere Informationen

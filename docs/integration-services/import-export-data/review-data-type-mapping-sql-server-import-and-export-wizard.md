@@ -1,4 +1,5 @@
 ---
+description: Datentypzuordnung überprüfen (SQL Server-Import/Export-Assistent)
 title: Datentypzuordnung überprüfen (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fa50c1de5a5cf1cd1963e60774617bd92713872
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2376f29d6e488af4481e245440e995fd584dfea1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347046"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Datentypzuordnung überprüfen (SQL Server-Import/Export-Assistent)
 
@@ -94,9 +95,9 @@ Dieses Beispiel zeigt die Standardwerte für die zwei Optionen zur globalen Fehl
  -   Import- oder Exportprozess beim Auftreten eines Fehlers beenden. Dies ist der Standardwert.
  -   Kürzung ignorieren und den Import- oder Exportprozess fortsetzen.  
    
-## <a name="whats-next"></a>Wie geht es weiter?  
+## <a name="whats-next"></a>Nächste Schritte  
  Nachdem Sie die Warnungen überprüft und Konvertierungs- und Fehlerbehandlungsoptionen angegeben haben, leitet Sie die Seite **Datentypzuordnung überprüfen** zurück zum Dialogfeld **Spaltenzuordnungen** . Weitere Informationen finden Sie unter [Spaltenzuordnungen](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
  
- ## <a name="see-also"></a>Weitere Informationen
+ ## <a name="see-also"></a>Siehe auch
 [Zuordnung von Datentypen mit dem SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
 

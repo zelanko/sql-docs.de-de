@@ -1,4 +1,5 @@
 ---
+description: Speichern und Ausführen von Paketen (SQL Server-Import/Export-Assistent)
 title: Speichern und Ausführen von Paketen (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33e4ec58943372643ca25518634fdeea47047b27
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8739c955343207a9a91660a9f8643ea807741e0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346886"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Speichern und Ausführen von Paketen (SQL Server-Import/Export-Assistent)
 
@@ -89,14 +90,14 @@ Wenn Sie den Assistenten in einem Integration Services-Projekt in Visual Studio 
   
  Diese Optionen sind nur verfügbar, wenn Sie auf dieser Seite die Option **SSIS-Paket speichern** auswählen.  
   
-## <a name="whats-next"></a>Wie geht es weiter?  
+## <a name="whats-next"></a>Nächste Schritte  
  Nach der Angabe, ob der Kopiervorgang sofort ausgeführt und das Paket gespeichert werden soll, hängt die nächste Seite von den Optionen ab, die Sie auswählen.  
   
 -   Wenn Sie die Option zum sofortigen Ausführen des Pakets, ohne es zu speichern, ausgewählt haben, heißt die nächste Seite **Assistenten abschließen**. Auf dieser Seite überprüfen Sie die im Assistenten ausgewählten Optionen und starten dann den Kopiervorgang. Weitere Informationen finden Sie unter [Assistenten abschließen](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
   
 -   Wenn Sie die Option zum Speichern des Pakets ausgewählt haben, ist die nächste Seite **SSIS-Paket speichern**. Auf dieser Seite geben Sie zusätzliche Optionen für das Speichern des Pakets an. (Dann, nachdem Sie das Paket gespeichert haben, heißt die folgende Seite **Assistenten abschließen**.) Weitere Informationen finden Sie unter [SSIS-Paket speichern](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Speichern von Paketen](../../integration-services/save-packages.md)  
 [Ausführen von Integration Services-Paketen (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

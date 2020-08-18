@@ -1,4 +1,5 @@
 ---
+description: UPDATETEXT (Transact-SQL)
 title: UPDATETEXT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/23/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5da5354681ff38fbcf818294f85b9381db21659a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c78bf19d7264d0f1c7d073cbe0ce76e2e5b6f4e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306563"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -85,7 +86,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  Der Wert *scr_text_ptr* darf nicht mit dem Wert *dest_text_ptr* übereinstimmen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Bei neu eingefügten Daten kann es sich um eine einzelne *inserted_data*-Konstante, einen Tabellennamen, einen Spaltennamen oder einen Textzeiger handeln.  
   
 |Updateaktion|UPDATETEXT-Parameter|  
@@ -125,7 +126,7 @@ ALTER DATABASE pubs SET RECOVERY FULL;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
  [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: Filtern einer Ablaufverfolgung
 title: Filtern einer Ablaufverfolgung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d5677de166b1bfff58c64665901ce814a7448fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6ba791898d86f9e51baa9bd516e8a6752a94254
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325092"
 ---
 # <a name="filter-a-trace"></a>Filtern einer Ablaufverfolgung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -134,7 +135,7 @@ ms.locfileid: "85751007"
 |**TargetUserName**|LIKE, NOT LIKE|  
 |**TextData** *|LIKE, NOT LIKE|  
 |**TransactionID**|=, <>, >=, <=|  
-|**Typ**|=, <>, >=, <=|  
+|**Type**|=, <>, >=, <=|  
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   

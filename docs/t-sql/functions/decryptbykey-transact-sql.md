@@ -1,4 +1,5 @@
 ---
+description: DECRYPTBYKEY (Transact-SQL)
 title: DECRYPTBYKEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 45808c6b9036c41c46cafedc286ec306b9a07e91
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 846a3d772c35d8d47aa0013b6d27b8c94f5cf6f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310176"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ Eine Variable, die Daten für die Generierung durch den Authentifikator enthält
 ## <a name="return-types"></a>Rückgabetypen  
 **varbinary** mit einer maximalen Größe von 8.000 Byte. `DECRYPTBYKEY` gibt NULL zurück, wenn der für die Datenverschlüsselung verwendete symmetrische Schlüssel nicht geöffnet ist oder wenn *ciphertext* den Wert NULL aufweist.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 `DECRYPTBYKEY` verwendet einen symmetrischen Schlüssel. Dieser symmetrische Schlüssel muss in der Datenbank bereits geöffnet sein. `DECRYPTBYKEY` lässt zu, dass mehrere Schlüssel gleichzeitig geöffnet sind. Der Schlüssel muss nicht unmittelbar vor dem Entschlüsseln von verschlüsseltem Text geöffnet werden.  
   
 Die symmetrische Ver- und Entschlüsselung erfolgt in der Regel relativ schnell und eignet sich gut für Vorgänge, die große Datenmengen umfassen.  
@@ -171,7 +172,7 @@ GO
 ```
 
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   

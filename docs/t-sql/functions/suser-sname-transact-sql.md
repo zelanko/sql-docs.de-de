@@ -1,4 +1,5 @@
 ---
+description: SUSER_SNAME (Transact-SQL)
 title: SUSER_SNAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/29/2017
@@ -26,12 +27,12 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8dc14225d150bb3a8783ffa01e53f95a45f3673
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 570372e0ca0f40284f89e862eee75e5a3d419440
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88308416"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,17 +53,17 @@ SUSER_SNAME ( [ server_user_sid ] )
  *server_user_sid*  
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
- Entspricht der optionalen Anmeldesicherheits-ID. *server_user_sid* ist **varbinary(85)** . *server_user_sid* kann der Sicherheits-ID einer beliebigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder eines [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Windows-Benutzers bzw. einer -Gruppe entsprechen. Wenn *server_user_sid* nicht angegeben ist, werden Informationen zum aktuellen Benutzer zurückgegeben. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben.  
+ Entspricht der optionalen Anmeldesicherheits-ID. *server_user_sid* ist **varbinary(85)**. *server_user_sid* kann der Sicherheits-ID einer beliebigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder eines [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Windows-Benutzers bzw. einer -Gruppe entsprechen. Wenn *server_user_sid* nicht angegeben ist, werden Informationen zum aktuellen Benutzer zurückgegeben. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  SUSER_SNAME kann als DEFAULT-Einschränkung in ALTER TABLE oder CREATE TABLE verwendet werden. SUSER_SNAME kann in einer Auswahlliste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist. SUSER_SNAME muss immer von Klammern gefolgt sein, selbst wenn kein Parameter angegeben wird.  
   
  Wenn SUSER_SNAME ohne Argument aufgerufen wird, wird der Name des aktuellen Sicherheitskontexts zurückgegeben. Wenn SUSER_SNAME ohne Argument innerhalb eines Batches aufgerufen wird, der den Kontext mithilfe von EXECUTE AS gewechselt hat, wird der Name des Kontexts zurückgegeben, dessen Identität angenommen wurde. Wenn ORIGINAL_LOGIN aus einem Kontext aufgerufen wird, dessen Identität angenommen wurde, wird der Name des ursprünglichen Kontexts zurückgegeben.  
   
-## <a name="sssdsfull-remarks"></a>Hinweise zu [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Hinweise  
  SUSER_NAME gibt stets den Anmeldenamen für den aktuellen Sicherheitskontext zurück.  
   
  Die SUSER_SNAME-Anweisung unterstützt nicht die Ausführung mit einem Sicherheitskontext, dessen Identität angenommen wird, durch EXECUTE AS.  
@@ -147,7 +148,7 @@ SELECT SUSER_SNAME() AS CurrentLogin;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

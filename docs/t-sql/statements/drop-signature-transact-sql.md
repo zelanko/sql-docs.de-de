@@ -1,4 +1,5 @@
 ---
+description: DROP SIGNATURE (Transact-SQL)
 title: DROP SIGNATURE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1fe1402f5d0f71a36ac6e2c7ae83e5d645d804d9
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 64a4c28705c80d68bd6f7499f059b1d0ca7f6846
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304686"
 ---
 # <a name="drop-signature-transact-sql"></a>DROP SIGNATURE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +61,7 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
  ASYMMETRIC KEY *Asym_key_name*  
  Der Name eines asymmetrischen Schlüssels, mit dem die gespeicherte Prozedur, die Funktion, die Assembly oder der Trigger signiert wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Informationen zu Signaturen werden in der sys.crypt_properties-Katalogsicht angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -76,7 +77,7 @@ DROP SIGNATURE FROM HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
  [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/add-signature-transact-sql.md)  
   

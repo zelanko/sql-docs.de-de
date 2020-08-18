@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 2: Konfigurieren von Berechtigungen für Datenbankobjekte'
 title: 'Tutorial: Konfigurieren von Berechtigungen für Datenbankobjekte'
 ms.custom: seo-lt-2019
 ms.date: 07/31/2018
@@ -12,12 +13,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 991bdef702b1ed298bb492172ef65c6d25d5d0ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 195390d76716bcad18df884491fa07335c70665b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306641"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Lektion 2: Konfigurieren von Berechtigungen für Datenbankobjekte
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -32,7 +33,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio u
 - Installieren Sie [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Wenn Sie über keinen Zugriff auf eine SQL Server-Instanz verfügen, wählen Sie Ihre Plattform aus den folgenden Links aus. Wenn Sie die SQL-Authentifizierung wählen, verwenden Sie Ihre SQL Server-Anmeldeinformationen.
-- **Windows**: [Herunterladen von Microsoft SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
+- **Windows**: [Herunterladen der SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - **macOS**: [Herunterladen von SQL Server 2017 für Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
@@ -46,7 +47,7 @@ Standardmäßig haben Administratoren auf Ihrem Computer vollständigen Zugriff 
   
 1.  Klicken Sie auf **Start**und auf **Ausführen**, geben Sie **%SystemRoot%\system32\compmgmt.msc /s** in das Feld **Öffnen**ein, und klicken Sie anschließend auf **OK** , um das Programm Computerverwaltung zu öffnen. 
 2.  Erweitern Sie unter **Systemprogramme**den Eintrag **Lokale Benutzer und Gruppen**, klicken Sie mit der rechten Maustaste auf **Benutzer**und anschließend auf **Neuer Benutzer**.    
-3.  Geben Sie in das Feld **Benutzername** **Mary**ein.    
+3.  Geben Sie in das Feld **Benutzername****Mary**ein.    
 4.  Geben Sie in das Feld **Kennwort** und **Kennwort bestätigen** ein sicheres Kennwort ein. Klicken Sie anschließend auf **Erstellen** , um einen neuen lokalen Windows-Benutzer zu erstellen.  
   
 ### <a name="create-a-sql-login"></a>Erstellen einer SQL-Anmeldung  
@@ -86,7 +87,7 @@ Geben Sie die folgenden Anweisungen ein (wobei Sie `computer_name` durch den Nam
 
 
 ## <a name="create-views-and-stored-procedures"></a>Erstellen von Ansichten und gespeicherten Prozeduren
-Als Administrator können Sie die SELECT-Anweisung in der **Products** -Tabelle und in der **vw_Names** -Sicht ausführen, und Sie können auch die **pr_Names** -Prozedur ausführen. Mary hingegen ist dazu nicht berechtigt. Verwenden Sie die GRANT-Anweisung, um Mary die erforderlichen Berechtigungen zu erteilen.  
+ Als Administrator können Sie die SELECT-Anweisung für die **Products**-Tabelle und die **vw_Names**-Sicht ausführen. Außerdem können Sie die **pr_Names**-Prozedur ausführen. Mary hingegen ist dazu nicht berechtigt. Verwenden Sie die GRANT-Anweisung, um Mary die erforderlichen Berechtigungen zu erteilen.  
 
 ### <a name="grant-permission-to-stored-procedure"></a>Erteilen von Berechtigungen für gespeicherte Prozeduren  
 Führen Sie die folgende Anweisung aus, um `Mary` die `EXECUTE` -Berechtigung für die gespeicherte Prozedur `pr_Names` zu erteilen.

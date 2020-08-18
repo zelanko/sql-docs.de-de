@@ -1,4 +1,5 @@
 ---
+description: Willkommen beim SQL Server-Import/Export-Assistenten
 title: Willkommen beim SQL Server-Import/Export-Assistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/15/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a18a16353ff2d015bdd5f19c59c6cf9d7fd279b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d872657de8cb28a64d709eb458cffa7b6569a53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346206"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>Willkommen beim SQL Server-Import/Export-Assistenten
 
@@ -41,7 +42,7 @@ Die folgende Abbildung zeigt die Seite **Willkommen beim SQL Server-Import/Expor
 **Diese Anfangsseite nicht mehr anzeigen.**  
  Die Willkommensseite beim nächsten Ausführen des Assistenten überspringen.  
   
-## <a name="whats-next"></a>Wie geht es weiter?  
+## <a name="whats-next"></a>Nächste Schritte  
  Nach der Begrüßungsseite wird als nächste Seite **Datenquelle auswählen**angezeigt. Auf dieser Seite geben Sie Informationen zur Quelle für Ihre Daten an und darüber, wie Sie eine Verbindung mit dieser herstellen. Weitere Informationen finden Sie unter [Datenquelle auswählen](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
 ## <a name="related-tasks-and-content"></a><a name="related"></a> Verwandte Tasks und Inhalte  
@@ -54,7 +55,7 @@ Die folgende Abbildung zeigt die Seite **Willkommen beim SQL Server-Import/Expor
 
 -   **Weitere Informationen zur Funktionsweise des Assistenten:**
 
-    -   **Weitere Informationen zum Assistenten:** Wenn Sie eine Übersicht über den Assistenten suchen, lesen Sie [Importieren und Exportieren von für SQL Server unterstützten Datenquellen](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+    -   **Weitere Informationen zum Assistenten.** Wenn Sie eine Übersicht über den Assistenten suchen, lesen Sie [Importieren und Exportieren von für SQL Server unterstützten Datenquellen](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
     -   **Weitere Informationen zu den Schritten des Assistenten:** Weitere Informationen zu den einzelnen Schritten des Assistenten finden Sie auf der Seite [Steps in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md) (Schritte im SQL Server-Import/Export-Assistenten). Es ist außerdem eine eigene Dokumentationsseite für jede Seite des Assistenten verfügbar.
 
@@ -62,4 +63,4 @@ Die folgende Abbildung zeigt die Seite **Willkommen beim SQL Server-Import/Expor
 
 -   **Starten Sie den Assistenten.** Wenn Sie bereit sind, den Assistenten auszuführen, und nur wissen möchten, wie Sie ihn starten, lesen Sie [Starten des SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
--  **So erhalten Sie den Wizard.**  Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den Import- und Export-Assistenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
+-  **Installieren des Assistenten**  Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber nicht auf Ihrem Computer installiert ist, können Sie den Import- und Export-Assistenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit SQL Server Data Tools (SSDT) installieren. Weitere Informationen finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).

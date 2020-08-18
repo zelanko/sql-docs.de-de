@@ -1,4 +1,5 @@
 ---
+description: STContains (geometry-Datentyp)
 title: STContains (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0244ff677c11d40153afb302243bd714e3438480
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 69290b85b4788f0e35c4fb48cc05222211cd0413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305681"
 ---
 # <a name="stcontains-geometry-data-type"></a>STContains (geometry-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Gibt 1 zurück, wenn eine **geometry** -Instanz eine andere **geometry** -Instan
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  `STContains()` gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geometry**-Instanzen nicht übereinstimmen.  
   
 ## <a name="examples"></a>Beispiele  
@@ -61,7 +62,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STContains(@h);  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

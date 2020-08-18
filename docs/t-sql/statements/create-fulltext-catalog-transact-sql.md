@@ -1,4 +1,5 @@
 ---
+description: CREATE FULLTEXT CATALOG (Transact-SQL)
 title: CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/12/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d335faa965f3cd03cffcdece6f5e782ada8a59c5
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 655f6e2ac9a3e564ac141f78d986e247856263bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305624"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -99,7 +100,7 @@ CREATE FULLTEXT CATALOG catalog_name
   
  *owner_name* muss zudem über die TAKE OWNERSHIP-Berechtigung im angegebenen Volltextkatalog verfügen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Volltextkatalog-IDs beginnen bei 00005 und werden mit jedem neu erstellten Katalog um eins erhöht.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -117,7 +118,7 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate(Resume) KEY INDEX PK_JobCan
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   

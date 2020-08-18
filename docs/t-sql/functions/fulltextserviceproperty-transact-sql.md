@@ -1,4 +1,5 @@
 ---
+description: FULLTEXTSERVICEPROPERTY (Transact-SQL)
 title: FULLTEXTSERVICEPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c660b9d2e88a6ef48a75f17dfe759df94fb53266
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 095ba81db2c432b33ceb1795582cff3b9ef559c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309946"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,10 +51,10 @@ FULLTEXTSERVICEPROPERTY ('property')
 > [!NOTE]
 >  Die folgenden Eigenschaften werden in einem künftigen Release von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr unterstützt: **ConnectTimeout**, **DataTimeout** und **ResourceUsage**. Vermeiden Sie die Verwendung dieser Eigenschaften in Neuentwicklungen, und planen Sie die Änderung von Anwendungen, die diese Eigenschaften derzeit verwenden.  
   
-|Eigenschaft|value|  
+|Eigenschaft|Wert|  
 |--------------|-----------|  
 |**ResourceUsage**|Gibt 0 zurück. Wird nur aus Gründen der Abwärtskompatibilität unterstützt.|  
-|**connecttimeout**|Gibt 0 zurück. Wird nur aus Gründen der Abwärtskompatibilität unterstützt.|  
+|**ConnectTimeout**|Gibt 0 zurück. Wird nur aus Gründen der Abwärtskompatibilität unterstützt.|  
 |**IsFullTextInstalled**|Gibt an, ob die Volltextkomponente mit der aktuellen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist.<br /><br /> 0 = Volltext ist nicht installiert.<br /><br /> 1 = Volltext ist installiert.<br /><br /> NULL = Ungültige Eingabe oder Fehler.|  
 |**DataTimeout**|Gibt 0 zurück. Wird nur aus Gründen der Abwärtskompatibilität unterstützt.|  
 |**LoadOSResources**|Gibt an, ob Wörtertrennungen und Filter des Betriebssystems mit dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert und verwendet werden. Diese Eigenschaft ist standardmäßig deaktiviert, damit das Verhalten nicht versehentlich durch Betriebssystemupdates geändert wird. Wenn die Verwendung von Betriebssystemressourcen aktiviert wird, kann auf Ressourcen für Sprachen und Dokumenttypen zugegriffen werden, die beim [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Indexdienst registriert sind, für die jedoch keine instanzspezifische Ressource installiert wurde. Wenn Sie das Laden von Betriebssystemressourcen aktivieren, stellen Sie sicher, dass es sich bei den Betriebssystemressourcen um vertrauenswürdige signierte Binärdateien handelt. Andernfalls können sie nicht geladen werden, wenn **VerifySignature** auf 1 festgelegt ist.<br /><br /> 0 = Nur spezifische Filter und Wörtertrennungen für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden.<br /><br /> 1 = Betriebssystemfilter und Wörtertrennungen laden.|  
@@ -83,7 +84,7 @@ EXEC sp_fulltext_service @action='verify_signature', @value=1;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  

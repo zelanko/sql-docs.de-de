@@ -1,4 +1,5 @@
 ---
+description: Integration Services-Entwicklerdokumentation
 title: Integration Services-Entwicklerdokumentation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cb77e73651347d0a06be5aba0675372984948a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5202d583a6b4b5ba0b27d25aa7c0a3ed87c9e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346096"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services-Entwicklerdokumentation
 
@@ -88,7 +89,7 @@ ms.locfileid: "86919956"
   
 -   CodePlex-Beispiele, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), auf www.codeplex.com/MSFTISProdSamples  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Starten des SQL Server-Import/Export-Assistenten
 title: Starten des SQL Server-Import/Export-Assistenten
 titleSuffix: Integration Services (SSIS)
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.author: chugu
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/18/2019
-ms.openlocfilehash: a80b12db0f303ee82f91be9e3eb60c975396063e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: adbb8eee477e9f021c011b91e586492e64747851
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346576"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Starten des SQL Server-Import/Export-Assistenten
 
@@ -123,7 +124,7 @@ Wenn Sie den Assistenten ausführen möchten, [!INCLUDE[msCoName](../../includes
 > [!TIP]
 > Drücken Sie auf einer beliebigen Seite oder in einem beliebigen Dialogfeld des Assistenten F1, um die Dokumentation für die aktuelle Seite anzuzeigen.   
 
-## <a name="whats-next"></a>Wie geht es weiter?
+## <a name="whats-next"></a>Nächste Schritte
 
 Beim Starten des Assistenten ist die erste Seite **Willkommen beim SQL Server-Import/Export-Assistenten**. Sie müssen auf dieser Seite keine Aktionen durchführen. Weitere Informationen finden Sie unter [Willkommen beim SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
@@ -139,7 +140,7 @@ Im Folgenden werden einige weitere grundlegenden Tasks aufgelistet.
 
   - **Weitere Informationen zur Funktionsweise des Assistenten:**
 
-  - **Weitere Informationen zum Assistenten:** Wenn Sie eine Übersicht über den Assistenten suchen, lesen Sie [Importieren und Exportieren von für SQL Server unterstützten Datenquellen](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+  - **Weitere Informationen zum Assistenten.** Wenn Sie eine Übersicht über den Assistenten suchen, lesen Sie [Importieren und Exportieren von für SQL Server unterstützten Datenquellen](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
   - **Weitere Informationen zu den Schritten des Assistenten:** Weitere Informationen zu den einzelnen Schritten des Assistenten finden Sie auf der Seite [Steps in the SQL Server Import and Export Wizard](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md) (Schritte im SQL Server-Import/Export-Assistenten). Es ist außerdem eine eigene Dokumentationsseite für jede Seite des Assistenten verfügbar.
 

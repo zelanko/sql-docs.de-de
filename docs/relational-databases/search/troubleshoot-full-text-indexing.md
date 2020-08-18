@@ -1,4 +1,5 @@
 ---
+description: Behandeln von Problemen mit der Volltextindizierung
 title: Behandeln von Problemen mit der Volltextindizierung | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36a8f05f6f135b5f8790f95e409f5db59dcf145a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c11c753528ed4fdc723ee45884093d9c5ec95dc8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325908"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Behandeln von Problemen mit der Volltextindizierung
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "85628971"
  Beim Wiederherstellen des Transaktionsprotokolls einer Datenbank wird möglicherweise eine Warnung angezeigt, die besagt, dass sich der Volltextindex nicht in einem konsistenten Status befindet. Der Grund ist, dass der Volltextindex für eine Tabelle nach der Sicherung der Datenbank geändert wurde. Sie müssen eine vollständige Auffüllung (Durchforstung) für die Tabelle ausführen, um den Volltextindex in einen konsistenten Status zu versetzen. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).  
   
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md)  
   

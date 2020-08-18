@@ -1,4 +1,5 @@
 ---
+description: Quellabfrage angeben (SQL Server-Import/Export-Assistent)
 title: Angeben einer Quellabfrage (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 267db7655133669266b9fc0c9f6b54819333a6fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: edd3812cce0a5d0b956691f3a6bfb4f708495819
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347166"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Quellabfrage angeben (SQL Server-Import/Export-Assistent)
 
@@ -50,7 +51,7 @@ Weitere Beispiele für SELECT-Abfragen finden Sie unter [SELECT-Beispiele &#40;T
 
 Wenn Ihre Datenquelle Excel ist, gehen Sie zu [Bereitstellen einer Datenabfrage für Excel](#excelQueries) weiter unten in diesem Thema, um zu erfahren, wie Excel-Arbeitsblätter und Excel-Bereiche in einer Abfrage angegeben werden.
   
- **Analysieren**  
+ **Parse**  
  Überprüft die Syntax der SQL-Anweisung, die Sie in das Textfeld **SQL-Anweisung** eingegeben haben.  
   
 > [!NOTE]
@@ -65,7 +66,7 @@ Wenn Ihre Datenquelle Excel ist, gehen Sie zu [Bereitstellen einer Datenabfrage 
 > Ausführliche Informationen über das Herstellen einer Verbindung mit Excel-Dateien sowie Einschränkungen und bekannte Probleme beim Laden von Daten aus oder in Excel-Dateien finden Sie unter [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md).
 
 Es gibt drei Arten von Excel-Objekten, die Sie abfragen können.
--   **Arbeitsblatt:** Fügen Sie das $-Zeichen an das Ende des Blattnamens an, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B. **[Sheet1$]** , um ein Arbeitsblatt abzufragen.
+-   **Arbeitsblatt:** Fügen Sie das $-Zeichen an das Ende des Blattnamens an, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B. **[Sheet1$]**, um ein Arbeitsblatt abzufragen.
 
     ```sql
     SELECT * FROM [Sheet1$]
@@ -83,7 +84,7 @@ Es gibt drei Arten von Excel-Objekten, die Sie abfragen können.
     SELECT * FROM [Sheet1$A1:B4]
     ```
 
-## <a name="whats-next"></a>Wie geht es weiter?  
+## <a name="whats-next"></a>Nächste Schritte  
  Nachdem Sie die SQL-Abfrage geschrieben und getestet haben, die die zu kopierenden Daten auswählt, hängt die nächste Seite vom Ziel Ihrer Daten ab.  
   
 -   Für die meisten Ziele lautet die nächste Seite **Quelltabellen und -sichten auswählen**. Auf dieser Seite überprüfen Sie die Abfrage, die Sie angegeben haben, und wählen optional die zu kopierenden Spalten und Vorschaubeispieldaten. Weitere Informationen finden Sie unter [Quelltabellen und -sichten auswählen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).  

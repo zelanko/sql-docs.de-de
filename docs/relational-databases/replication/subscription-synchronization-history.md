@@ -1,4 +1,5 @@
 ---
+description: Abonnement, Synchronisierungsverlauf
 title: Abonnement, Synchronisierungsverlauf | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,18 +15,18 @@ ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b82300ff328470f0b195796385f29e651a1998b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db40c8e3848ee5dac3d770e77629555ea87814b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88326018"
 ---
 # <a name="subscription-synchronization-history"></a>Abonnement, Synchronisierungsverlauf
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Die Registerkarte **Synchronisierungsverlauf** zeigt detaillierte Informationen zum Merge-Agent an, u. a. Status, Verlauf, Informationsmeldungen und alle Fehlermeldungen.  
+   Die Registerkarte **Synchronisierungsverlauf** zeigt detaillierte Informationen zum Merge-Agent an, u. a. Status, Verlauf, Informationsmeldungen und alle Fehlermeldungen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Wählen Sie im Menü **Sicht** aus, welche Sitzungen des Merge-Agents angezeigt werden, und wählen Sie dann eine bestimmte Sitzung aus dem Raster mit der Bezeichnung **Sitzungen des Merge-Agents**aus. Detaillierte Informationen zu dieser Sitzung werden im Raster mit der Bezeichnung **In der ausgewählten Sitzung verarbeitete Artikel**angezeigt.  
   
  **Ansicht**  
@@ -45,7 +46,7 @@ ms.locfileid: "85729334"
  **Startzeit**  
  Startzeit der Sitzung.  
   
- **Beendigungszeit**  
+ **Endzeit**  
  Beendigungszeit der Sitzung. Wenn der Agent noch nicht beendet wurde, ist dieses Feld leer.  
   
  **Duration**  
@@ -97,7 +98,7 @@ ms.locfileid: "85729334"
  **Letzte Meldung der ausgewählten Sitzung**  
  In diesem Textbereich wird die letzte Meldung in der ausgewählten Sitzung angezeigt. Wenn ein Fehler aufgetreten ist, werden detaillierte Informationen zu dem Fehler und der Befehl angezeigt, der zum Fehlerzeitpunkt auszuführen versucht wurde. Er enthält außerdem Links zu weiteren Informationen, die sich auf den Fehler beziehen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication.md)   

@@ -1,4 +1,5 @@
 ---
+description: Vergleichsoperatoren (Transact-SQL)
 title: Vergleichsoperatoren (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fbe10ec2f0d36a94b2c00ad07d71a510c2975c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 940b0ab0250a626673c883542fc2e1f1700f0c52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307399"
 ---
 # <a name="comparison-operators-transact-sql"></a>Vergleichsoperatoren (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85706606"
 |[\!< (Nicht kleiner als)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Nicht kleiner als (kein ISO-Standard)|  
 |[\!> (Nicht größer als)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Nicht größer als (kein ISO-Standard)|  
   
-## <a name="boolean-data-type"></a>Boolesche Datentypen  
+## <a name="boolean-data-type"></a>Boolean-Datentyp  
  Das Ergebnis eines Vergleichsoperators weist den Datentyp **Boolean** auf. Es kann drei Werte annehmen: TRUE, FALSE und UNKNOWN. Ausdrücke, die einen Wert vom Datentyp **Boolean** zurückgeben, werden auch als boolesche Ausdrücke bezeichnet.  
   
  Ein **Boolean**-Datentyp kann nicht wie die anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen als Datentyp für eine Tabellenspalte oder eine Variable angegeben werden. Boolesche Werte können auch nicht in einem Resultset zurückgegeben werden.  
@@ -64,7 +65,7 @@ IF (@MyProduct <> 0)
    WHERE ProductID = @MyProduct;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
  [Operatoren &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   

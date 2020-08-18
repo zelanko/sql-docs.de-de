@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 5.2: Aktivieren und Konfigurieren von Paketkonfigurationen'
 title: 'Schritt 2: Aktivieren und Konfigurieren von Paketkonfigurationen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84f37f49d1b2a688463fcb974f6777bda601def4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7237d7356ffb97861779c4d5427fd4fb05083695
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345326"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Lektion 5.2: Aktivieren und Konfigurieren von Paketkonfigurationen
 
@@ -44,11 +45,11 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 7.  Kehren Sie zur Registerkarte **Ablaufsteuerung** zurück, und doppelklicken Sie auf den **Foreach File in Folder** -Container.  
   
-8.  Klicken Sie auf der Seite **Sammlung** des **Foreach-Schleifen-Editors** auf **Ausdrücke** und anschließend auf die Schaltfläche mit den Auslassungspunkten **(...)** .  
+8.  Klicken Sie auf der Seite **Sammlung** des **Foreach-Schleifen-Editors** auf **Ausdrücke** und anschließend auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
   
 9. Wählen Sie im **Eigenschaftsausdrucks-Editor** in die Liste **Eigenschaft** die Option **Verzeichnis** aus.  
   
-10. Klicken Sie im Feld **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(...)** .  
+10. Klicken Sie im Feld **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
   
 11. Erweitern Sie im **Ausdrucks-Generator** den Ordner **Variablen und Parameter**, und ziehen Sie die Variable **User::varFolderName** in das Feld **Ausdruck**.  
   
@@ -78,7 +79,7 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 9. Das Dialogfeld **Speicherort der Konfigurationsdatei auswählen** mit dem Projektordner wird geöffnet.  
   
-10. Geben Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** als **Dateinamen** **SSISTutorial**ein, und klicken Sie auf **Speichern**.  
+10. Geben Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** als **Dateinamen****SSISTutorial**ein, und klicken Sie auf **Speichern**.  
   
 11. Klicken Sie auf der Seite **Konfigurationstyp auswählen** auf **Weiter**.
   
@@ -108,7 +109,7 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Erstellen und Füllen eines neuen Beispieldatenordners  
   
-1.  Erstellen Sie im Windows-Explorer im Stammverzeichnis Ihres Laufwerks (beispielsweise **C:\\** ) einen Ordner mit dem Namen **Neue Beispieldaten**.  
+1.  Erstellen Sie im Windows-Explorer im Stammverzeichnis Ihres Laufwerks (beispielsweise **C:\\**) einen Ordner mit dem Namen **Neue Beispieldaten**.  
   
 2.  Suchen Sie die Beispieldateien auf dem Computer, und kopieren Sie drei der Dateien aus dem Ordner.  
   
