@@ -1,4 +1,5 @@
 ---
+description: Item (Element) (MDX)
 title: Item (Member) (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d7afa88f9d6239c8da7cb9c406ef11f0764f8dcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a374d1fcc7f972828832c2f82375acf640d45fb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483963"
 ---
 # <a name="item-member-mdx"></a>Item (Element) (MDX)
 
@@ -34,7 +35,7 @@ Tuple_Expression.Item( Index )
  *Index*  
  Ein gültiger numerischer Ausdruck, der ein bestimmtes Element über die Position im zurückzugebenden Tupel angibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die **Item** -Funktion gibt ein Element aus dem angegebenen Tupel zurück. Die-Funktion gibt das Element zurück, das an der durch *Index*angegebenen Null basierten Position gefunden wurde.  
   
 ## <a name="example"></a>Beispiel  

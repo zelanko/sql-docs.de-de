@@ -1,4 +1,5 @@
 ---
+description: XML-Beibehaltungsformat
 title: XML-Persistenzformat | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb3abca1aabccd45bc76c4ec0ee5742531c47e28
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452512"
 ---
 # <a name="xml-persistence-format"></a>XML-Beibehaltungsformat
 ADO verwendet UTF-8-Codierung für den persistent verwendeten XML-Stream.  
@@ -68,7 +69,7 @@ xmlns:z="#RowsetSchema">
   
  Schema Definitionen entsprechen der [W3C-XML-Daten Spezifikation](http://www.w3.org/TR/1998/NOTE-XML-data/) und können vollständig überprüft werden (obwohl die Validierung in Internet Explorer 5 nicht erfolgt). XML-Data ist derzeit das einzige unterstützte Schema Format für die recordsetpersistenz.  
   
- Der Daten Abschnitt enthält drei Zeilen, die Informationen über die Verlader enthalten. Für ein leeres Rowset ist der Daten Abschnitt möglicherweise leer, aber die \< RS: Data>-Tags müssen vorhanden sein. Wenn keine Daten angezeigt werden, können Sie die tagkurzform einfach \< RS: Data/> schreiben. Jedes Tag mit dem Präfix "RS" weist darauf hin, dass es sich im Namespace befindet, der durch "urn: Schemas-Microsoft-com: Rowset" definiert ist.  
+ Der Daten Abschnitt enthält drei Zeilen, die Informationen über die Verlader enthalten. Für ein leeres Rowset ist der Daten Abschnitt möglicherweise leer, aber die \<rs:data> Tags müssen vorhanden sein. Wenn keine Daten angezeigt werden, können Sie die tagkurzform einfach schreiben \<rs:data/> . Jedes Tag mit dem Präfix "RS" weist darauf hin, dass es sich im Namespace befindet, der durch "urn: Schemas-Microsoft-com: Rowset" definiert ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)

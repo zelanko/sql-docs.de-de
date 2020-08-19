@@ -1,4 +1,5 @@
 ---
+description: SQLBindCol-Funktion
 title: SQLBindCol-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90bb1c1aa4dbfa2614f689faa47eb0c41a6cecd6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 84793bdd1261c4a2f65b1bdb60eec4a516a1a1d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476168"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol-Funktion
 **Konformitäts**  
@@ -66,7 +67,7 @@ SQLRETURN SQLBindCol(
   
  Wenn *targetvalueptr* ein NULL-Zeiger ist, hebt der Treiber die Bindung des Daten Puffers für die Spalte auf. Eine Anwendung kann die Bindung aller Spalten aufheben, indem **SQLFreeStmt** mit der Option SQL_UNBIND aufgerufen wird. Eine Anwendung kann die Bindung des Daten Puffers für eine Spalte aufheben, aber trotzdem einen Längen-/indikatorenpuffer für die Spalte angeben, wenn das *targetvalueptr* -Argument im **SQLBindCol** -Befehl ein NULL-Zeiger ist, das *StrLen_or_IndPtr* -Argument jedoch ein gültiger Wert ist.  
   
- *Pufferlänge*  
+ *BufferLength*  
  Der Länge des \* *targetvalueptr* -Puffers in Bytes.  
   
  Der Treiber verwendet *BufferLength* , um das Schreiben über das Ende des \* *targetvalueptr* -Puffers zu vermeiden, wenn er Daten variabler Länge zurückgibt, wie z. b. Zeichen-oder Binärdaten. Beachten Sie, dass der Treiber beim zurückkehren von Zeichendaten an \* *targetvalueptr*das NULL-Terminierungs Zeichen zählt. \**Targetvalueptr* muss daher Leerzeichen für das NULL-Terminierungs Zeichen enthalten, oder der Treiber schneidet die Daten ab.  
@@ -114,12 +115,12 @@ SQLRETURN SQLBindCol(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLBindCol** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLBindCol** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Verletzung des Attributs für eingeschränkte Datentypen|(DM) das *ColumnNumber* -Argument war 0, und das *TargetType* -Argument war nicht SQL_C_BOOKMARK oder SQL_C_VARBOOKMARK.|  
 |07009|Ungültiger deskriptorindex.|Der für das Argument *ColumnNumber* angegebene Wert hat die maximale Anzahl von Spalten im Resultset überschritten.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY003|Ungültiger Anwendungs Puffertyp.|Das Argument *TargetType* war weder ein gültiger Datentyp noch SQL_C_DEFAULT.|  
 |HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als **SQLBindCol** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde für das *StatementHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
@@ -232,15 +233,15 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>Puffer Adressen  
  Die *Puffer Adresse* ist die tatsächliche Adresse des Daten-oder Längen-/Indikatorpuffers. Der Treiber berechnet die Puffer Adresse unmittelbar vor dem Schreiben in die Puffer (z. b. während der Abruf Zeit). Der Wert wird anhand der folgenden Formel berechnet, in der die in den *targetvalueptr* -und *StrLen_or_IndPtr* -Argumenten angegebenen Adressen, der Bindungs Offset und die Zeilennummer verwendet werden:  
   
- *Bound Address* + *Bindungs Offset* für gebundene Adresse + ((*Zeilennummer* -1) x- *Element Größe*)  
+ *Gebundene Adresse*  +  *Bindungs Offset* + ((*Zeilennummer* -1) x- *Element Größe*)  
   
  Dabei werden die Variablen der Formel wie in der folgenden Tabelle beschrieben definiert.  
   
-|Variable|BESCHREIBUNG|  
+|Variable|Beschreibung|  
 |--------------|-----------------|  
 |*Gebundene Adresse*|Für Datenpuffer die mit dem *targetvalueptr* -Argument in **SQLBindCol**angegebene Adresse.<br /><br /> Für Längen-/Indikatorpuffer die mit dem *StrLen_or_IndPtr* -Argument in **SQLBindCol**angegebene Adresse. Weitere Informationen finden Sie unter "Weitere Kommentare" im Abschnitt "Deskriptors und SQLBindCol".<br /><br /> Wenn die gebundene Adresse 0 ist, wird kein Datenwert zurückgegeben, auch wenn die Adresse, wie von der vorherigen Formel berechnet, ungleich 0 (null) ist.|  
 |*Bindungs Offset*|Wenn die zeilenweise Bindung verwendet wird, wird der Wert an der Adresse gespeichert, die mit dem SQL_ATTR_ROW_BIND_OFFSET_PTR Statement-Attribut angegeben wird.<br /><br /> Wenn die spaltenweise Bindung verwendet wird oder wenn der Wert des SQL_ATTR_ROW_BIND_OFFSET_PTR-Anweisungs Attributs ein NULL-Zeiger ist, ist der *Bindungs Offset* 0.|  
-|*Row Number*|Die 1-basierte Nummer der Zeile im Rowset. Bei einzeiligen Abruf Vorgängen, bei denen es sich um die Standardeinstellung handelt, ist dies 1.|  
+|*Zeilennummer*|Die 1-basierte Nummer der Zeile im Rowset. Bei einzeiligen Abruf Vorgängen, bei denen es sich um die Standardeinstellung handelt, ist dies 1.|  
 |*Element Größe*|Die Größe eines Elements im gebundenen Array.<br /><br /> Wenn die spaltenweise Bindung verwendet wird, ist dies **sizeof (SQLINTEGER)** für Längen-/Indikatorpuffer. Für Datenpuffer ist dies der Wert des *BufferLength* -Arguments in **SQLBindCol** , wenn der Datentyp eine Variable Länge ist, und die Größe des Datentyps, wenn der Datentyp eine festgelegte Länge hat.<br /><br /> Wenn die zeilenweise Bindung verwendet wird, ist dies der Wert des SQL_ATTR_ROW_BIND_TYPE-Anweisungs Attributs für Daten-und Längen-/Indikatorpuffer.|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>Deskriptoren und SQLBindCol  
@@ -379,7 +380,7 @@ int main() {
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Zurückgeben von Informationen zu einer Spalte in einem Resultset|[SQLDescribeCol-Funktion](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
 |Abrufen eines Datenblocks oder Scrollen durch ein Resultset|[SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
@@ -388,6 +389,6 @@ int main() {
 |Abrufen eines Teils oder aller Datenspalten|[SQLGetData-Funktion](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
 |Zurückgeben der Anzahl von Resultsetspalten|[SQLNumResultCols-Funktion](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

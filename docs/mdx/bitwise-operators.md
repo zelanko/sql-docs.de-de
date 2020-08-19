@@ -1,4 +1,5 @@
 ---
+description: Bitweise Operatoren
 title: Bitweise Operatoren | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c6e5138cb3f33054c9118e3a3b264639f043005
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed7036599f6415162514c2b9d9a243430ff30d9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484053"
 ---
 # <a name="bitwise-operators"></a>Bitweise Operatoren
 
@@ -25,7 +26,7 @@ ms.locfileid: "68016975"
 |Operator|Beschreibung|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|Führt eine logische Konjunktion zweier numerischer Ausdrücke aus.|  
-|[Richtet](../mdx/is-mdx.md)|Führt einen logischen Vergleich zweier Objektausdrücke aus.|  
+|[IS](../mdx/is-mdx.md)|Führt einen logischen Vergleich zweier Objektausdrücke aus.|  
 |[NOT](../mdx/not-mdx.md)|Führt eine logische Negation für einen numerischen Ausdruck aus.|  
 |[OR](../mdx/or-mdx.md)|Führt eine logische Disjunktion mit zwei numerischen Ausdrücken aus.|  
 |[XOR](../mdx/xor-mdx.md)|Führt eine logische Exklusion zweier numerischer Ausdrücke aus.|  

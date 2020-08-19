@@ -1,4 +1,5 @@
 ---
+description: Audit Broker Conversation-Ereignisklasse
 title: Audit Broker Conversation-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22dba70f903d19a0be15bfe7acb440dd1b1f4b1a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 910d0aba243c7d42cd0866d516ae392320913cd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476000"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation-Ereignisklasse
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "85693778"
 |3|Ungültige Signatur|Broker konnte die vom Sender bereitgestellte Nachrichtensignatur mithilfe des öffentlichen Schlüssels im Zertifikat des Senders nicht überprüfen. Dies kann darauf hinweisen, dass die Nachricht beschädigt ist, manipuliert wurde, der Remotedienst und der lokale Dienst nicht mit dem gleichen Zertifikat konfiguriert sind oder das Zertifikat veraltet ist.|  
 |4|Ausführung als Zielfehler|Der Zielbenutzer besitzt keine Empfangsberechtigungen für die Zielwarteschlange. Damit verhindert wird, dass nicht autorisierte Benutzer Nachrichten empfangen, speichert Service Broker unabhängig davon, ob der initiierende Benutzer Berechtigungen zum Einreihen von Nachrichten in Warteschlangen besitzt, keine Nachrichten in Warteschlangen, die einen Zielbenutzer aufweisen, der keine Nachrichten aus der Warteschlange empfangen kann.|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

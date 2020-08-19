@@ -1,4 +1,5 @@
 ---
+description: SQLConfigDriver-Funktion
 title: Sqlconfigdriver-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0da15cef06e5d8392408108ce88b53f7885eb65e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04ee54bba13730504ed08cfc1307858edea56282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476156"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver-Funktion
 **Konformitäts**  
@@ -33,7 +34,7 @@ ms.locfileid: "81301245"
  **Zusammenfassung**  
  **Sqlconfigdriver** lädt die entsprechende Treiber-Setup-DLL und ruft die **ConfigDriver** -Funktion auf.  
   
- Auf die Funktionalität von **sqlconfigdriver** kann auch mit [odbcconf zugegriffen werden. EXE](../../../odbc/odbcconf-exe.md).  
+ Der Zugriff auf die Funktionalität von **sqlconfigdriver** kann auch mit [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md)erfolgen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -83,9 +84,9 @@ BOOL SQLConfigDriver(
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlconfigdriver** "false" zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlconfigdriver** "false" zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pferrorcode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Das *lpszmsg* -Argument war ungültig.|  
@@ -113,7 +114,7 @@ BOOL SQLConfigDriver(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Hinzufügen, ändern oder Entfernen eines Treibers|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)(in der Setup-DLL)|  
 |Entfernen der Standarddaten Quelle|[Sqlremovedefaultdatasource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|

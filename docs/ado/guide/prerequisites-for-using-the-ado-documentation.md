@@ -1,4 +1,5 @@
 ---
+description: Voraussetzungen für die Verwendung der ADO-Dokumentation
 title: Voraussetzungen für die Verwendung der ADO-Dokumentation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 192c249bfa73c17d32faef7ec925d2704aff3144
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7c1f7bdfcc0ba6f69f9dab58029f454b05feb84e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452382"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>Voraussetzungen für die Verwendung der ADO-Dokumentation
 Um diese Dokumentation verwenden zu können, sollten Sie zumindest einige Kenntnisse in der Entwicklung von Anwendungen mit Microsoft Visual Basic haben, da die meisten Beispiele im Handbuch in dieser Sprache geschrieben sind. Es gibt auch einige Beispiele, die in Microsoft Visual C++, Java, Visual Basic Scripting Edition (VBScript) und Microsoft JScript geschrieben sind.  

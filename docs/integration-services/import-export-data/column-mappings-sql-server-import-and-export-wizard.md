@@ -1,4 +1,5 @@
 ---
+description: Spaltenzuordnungen (SQL Server-Import/Export-Assistent)
 title: Spaltenzuordnungen (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 144476d52d8577d59691a42b12a276f5cfc080b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9b74aaec705f3de493f105218adedffb173090ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484130"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Spaltenzuordnungen (SQL Server-Import/Export-Assistent)
 
@@ -25,7 +26,7 @@ ms.locfileid: "86913366"
 
   Nachdem Sie die zu kopierenden vorhandenen Tabellen und Ansichten ausgewählt oder die von Ihnen angegebene Abfrage überprüft und danach auf **Zuordnungen bearbeiten**geklickt haben, wird im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent das Dialogfeld **Spaltenzuordnungen** angezeigt. Auf dieser Seite können Sie die Zielspalten für die aus den Quellspalten zu kopierenden Daten angeben und konfigurieren. Häufig müssen Sie auf dieser Seite nichts ändern.
   
-Wenn Sie nicht alle Spalten der ausgewählten Tabelle kopieren möchten, können Sie auf dieser Seite die Spalten ausschließen, die Sie nicht benötigen. Wählen Sie in der Spalte **Ziel** der Liste **Zuordnungen** **Ignorieren** für die Spalten aus, die Sie nicht kopieren möchten.
+Wenn Sie nicht alle Spalten der ausgewählten Tabelle kopieren möchten, können Sie auf dieser Seite die Spalten ausschließen, die Sie nicht benötigen. Wählen Sie in der Spalte **Ziel** der Liste **Zuordnungen****Ignorieren** für die Spalten aus, die Sie nicht kopieren möchten.
  
 ## <a name="screen-shot-of-the-column-mappings-page"></a>Screenshot der Seite „Spaltenzuordnungen“ 
  Der folgende Screenshot zeigt ein Beispiel für das Dialogfeld **Spaltenzuordnungen** des Assistenten. 
@@ -46,7 +47,7 @@ Wenn Sie nicht alle Spalten der ausgewählten Tabelle kopieren möchten, können
 ## <a name="optionally-create-a-new-destination-table"></a>Optionales Erstellen einer neuen Zieltabelle
 ![Seite „Spaltenzuordnungen“, Abschnitt „Neue Tabelle“](../../integration-services/import-export-data/media/column-mappings-page-new-table-section.png)
 
- **Create destination table/file**  
+ **Zieltabelle erstellen**  
  Erstellen Sie die Zieltabelle, falls diese noch nicht vorhanden ist.    
   
  **SQL bearbeiten**  
@@ -62,7 +63,7 @@ Die Option **Create destination table/file** (Zieltabelle/-datei erstellen) und 
 ## <a name="what-about-existing-data-in-the-destination"></a>Im Ziel vorhandene Daten
 ![Seite „Spaltenzuordnungen“, Abschnitt „Optionen“](../../integration-services/import-export-data/media/column-mappings-page-options-section.png)
 
- **Delete rows in destination table/file**  
+ **Zeilen in Zieltabelle löschen**  
  Geben Sie an, ob die Daten aus einer vorhandenen Tabelle gelöscht werden sollen, bevor neue Daten geladen werden.  
   
  **Append rows to destination table/file**  
@@ -96,7 +97,7 @@ Die Liste **Zuordnungen** enthält die folgenden Spalten.
     
     Sie müssen nicht alle Spalten aus der Quelltabelle kopieren. Wählen Sie **Ziel** für Spalten auswählen, die ausgelassen werden sollen. Bevor Sie Spalten zuordnen, müssen Sie alle Spalten ignorieren, die nicht zugeordnet werden.  
   
--   **Typ**  
+-   **Type**  
     Zeigen Sie den Datentyp für die Zielspalte an, oder wählen Sie einen anderen Datentyp aus.
   
 -   **NULL zulassen**  
@@ -108,15 +109,15 @@ Die Liste **Zuordnungen** enthält die folgenden Spalten.
 -    **Genauigkeit**  
     Geben Sie ggf. die Genauigkeit der numerischen Daten (d.h. die Anzahl von Ziffern) in der Zielspalte an.  
   
- -   **Skalieren**  
+ -   **Skalierung**  
     Geben Sie ggf. den Bereich (d.h. die Anzahl von Dezimalstellen) der numerischen Daten in der Zielspalte an.  
   
-## <a name="whats-next"></a>Wie geht es weiter?  
+## <a name="whats-next"></a>Nächste Schritte  
  Nachdem Sie die Zielspalten überprüft und konfiguriert haben, um die aus den Quellspalten kopierten Daten zu erhalten, und auf **OK** geklickt haben, leitet das Dialogfeld **Spaltenzuordnungen** Sie zurück zur Seite **Quelltabellen und -sichten auswählen** oder **Flatfileziel konfigurieren**. Weitere Informationen finden Sie unter [Quelltabellen und -sichten auswählen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) oder [Flatfileziel konfigurieren](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
   
  Wenn Sie eine Zuordnung festgelegt haben, die nicht erfolgreich in die Liste **Zuordnungen** übernommen werden kann, leitet Sie das Dialogfeld **Spaltenzuordnungen** zur Seite **Datentypzuordnung überprüfen** um. Auf dieser Seite können Sie die Warnungen überprüfen, Konvertierungsoptionen angeben und außerdem festlegen, wie Fehler behandelt werden sollen. Weitere Informationen finden Sie unter [Datentypzuordnung überprüfen](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
  
- ## <a name="see-also"></a>Weitere Informationen
+ ## <a name="see-also"></a>Siehe auch
 [Zuordnung von Datentypen mit dem SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)  
 [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 

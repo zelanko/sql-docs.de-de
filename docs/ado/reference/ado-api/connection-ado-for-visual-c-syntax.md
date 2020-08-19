@@ -1,4 +1,5 @@
 ---
+description: Connection (ADO für Visual C++-Syntax)
 title: Verbindung (ADO für Visual C++-Syntax) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ba62fde43bad840f2559758fe45db34d1e8a507
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c34985cfbec4a146f0d171d361b9ffc54a28113d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444532"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>Connection (ADO für Visual C++-Syntax)
 ## <a name="methods"></a>Methoden  
@@ -62,7 +63,7 @@ get_Version(BSTR *pbstr)
 get_Errors(ADOErrors **ppvObject)  
 ```  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
   
 ```  
 BeginTransComplete(LONG TransactionLevel, ADOError *pError, EventStatusEnum *adStatus, _ADOConnection *pConnection)  

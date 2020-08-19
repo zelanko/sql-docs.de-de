@@ -1,4 +1,5 @@
 ---
+description: ADOX-Grundlagen
 title: ADOX-Grundlagen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 131df9d5712bf89c28e1b8e7eae30217b6c16947
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 74b7f3a17bddb068d82f4e05b13a28abff219c2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452462"
 ---
 # <a name="adox-fundamentals"></a>ADOX-Grundlagen
 Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and Security (ADOX) ist eine Erweiterung der ADO-Objekte und des Programmiermodells. ADOX umfasst Objekte für das Erstellen und Ändern von Schemas sowie für die Sicherheit. Da es sich um einen objektbasierten Ansatz für die Schema Bearbeitung handelt, können Sie Code schreiben, der unabhängig von den Unterschieden in der nativen Syntax für verschiedene Datenquellen verwendet werden kann.  
   
  ADOX ist eine begleitende Bibliothek zu den Kern-ADO-Objekten. Es macht zusätzliche Objekte zum Erstellen, ändern und Löschen von Schema Objekten verfügbar, z. b. Tabellen und Prozeduren. Außerdem enthält es Sicherheits Objekte zum Verwalten von Benutzern und Gruppen sowie zum erteilen und widerrufen von Berechtigungen für Objekte.  
   
- Um ADOX mit dem Entwicklungs Tool zu verwenden, sollten Sie einen Verweis auf die ADOX-Typbibliothek einrichten. Die Beschreibung der ADOX-Bibliothek lautet "Microsoft ADO Ext. for DDL and Security". Der Name der ADOX-Bibliotheksdatei lautet Msadox. dll, und die Programm-ID (ProgID) ist "ADOX". Weitere Informationen zum Einrichten von Verweisen auf Bibliotheken finden Sie in der Dokumentation zu Ihrem Entwicklungs Tool.  
+ Um ADOX mit dem Entwicklungs Tool zu verwenden, sollten Sie einen Verweis auf die ADOX-Typbibliothek einrichten. Die Beschreibung der ADOX-Bibliothek lautet "Microsoft ADO Ext. for DDL and Security". Der Dateiname der ADOX-Bibliothek ist Msadox.dll, und die Programm-ID (ProgID) ist "ADOX". Weitere Informationen zum Einrichten von Verweisen auf Bibliotheken finden Sie in der Dokumentation zu Ihrem Entwicklungs Tool.  
   
  Der Microsoft OLE DB-Anbieter für Microsoft Jet Datenbank-Engine unterstützt ADOX vollständig. Bestimmte Funktionen von ADOX werden je nach Datenanbieter möglicherweise nicht unterstützt.  
   

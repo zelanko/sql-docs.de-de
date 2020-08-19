@@ -1,4 +1,5 @@
 ---
+description: CursorUnprepare (Ereignisklasse)
 title: CursorUnprepare-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4748a1232f22f41f3ed079d90c980d7476f595e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 268fcd20ccb815636d51db038374228f5672dc14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475997"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare (Ereignisklasse)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Die **CursorUnprepare** -Ereignisklasse stellt Informationen zu Ereignissen bereit, mit denen die Vorbereitung eines Cursors aufgehoben wird und die in Cursorn von Anwendungsprogrammierschnittstellen (Application Programming Interface; API) auftreten. Ereignisse zur Aufhebung der Vorbereitung eines Cursors treten ein, wenn ein Ausführungsplan durch [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] verworfen wird.  
+   Die **CursorUnprepare**-Ereignisklasse stellt Informationen zu Ereignissen bereit, mit denen die Vorbereitung eines Cursors aufgehoben wird, und die in Cursorn von Anwendungsprogrammierschnittstellen (Application Programming Interface; API) auftreten. Ereignisse zur Aufhebung der Vorbereitung eines Cursors treten ein, wenn ein Ausführungsplan durch [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] verworfen wird.  
   
  Nehmen Sie die **CursorUnprepare** -Ereignisklasse in Ablaufverfolgungen auf, mit denen die Leistung von Cursorn verfolgt wird. Ist die **CursorUnprepare** -Ereignisklasse ein Bestandteil einer Ablaufverfolgung, ergibt sich der anfallende Aufwand daraus, wie häufig Cursor für die Datenbank während der Ablaufverfolgung verwendet werden. Falls Cursor intensiv verwendet werden, kann die Leistung durch die Ablaufverfolgung erheblich beeinträchtigt werden.  
   

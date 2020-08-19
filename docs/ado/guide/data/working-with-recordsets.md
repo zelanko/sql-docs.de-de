@@ -1,4 +1,5 @@
 ---
+description: Arbeiten mit Recordsets
 title: Arbeiten mit Recordsets | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07f970dd557d381280f5a9dbdd52eb015de0df75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 84f60e269bcd01bdacc7647f1498c588620f049e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452522"
 ---
 # <a name="working-with-recordsets"></a>Arbeiten mit Recordsets
 Das **Recordset** -Objekt verfügt über integrierte Funktionen, mit denen Sie die Reihenfolge der Daten im Resultset neu anordnen können, um anhand der von Ihnen bereitgestellten Kriterien nach einem bestimmten Datensatz zu suchen und um diese Suchvorgänge mithilfe von Indizes zu optimieren. Ob diese Features zur Verwendung verfügbar sind, hängt vom Anbieter und in einigen Fällen (z. b. von der [Index](../../../ado/reference/ado-api/index-property.md) Eigenschaft-der Struktur der Datenquelle) ab.  
@@ -53,7 +54,7 @@ Das **Recordset** -Objekt verfügt über integrierte Funktionen, mit denen Sie d
   
  Für das Kriterium kann nur ein einspaltige Name angegeben werden. Mit anderen Worten: Diese Methode unterstützt keine Suchvorgänge mit mehreren Spalten.  
   
- Der Vergleichs Operator für das Kriterium kann " **>** " (größer als), " **\<** " (kleiner als), "=" (gleich), ">=" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) sein.  
+ Der Vergleichs Operator für das Kriterium kann " **>** " (größer als), "* * \<**" (less than), "=" (equal), "> =" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) sein.  
   
  Der Kriterienwert kann eine Zeichenfolge, eine Gleit Komma Zahl oder ein Datum sein. Zeichen folgen Werte werden durch einfache Anführungszeichen oder #-Zeichen (Nummern Zeichen) getrennt (z. b. "State = ' WA '" oder "State = #WA #"). Datumswerte werden durch die Zeichen "#" (Nummern Zeichen) getrennt (z. b. "start_date > #7/22/97 #").  
   
@@ -87,7 +88,7 @@ Das **Recordset** -Objekt verfügt über integrierte Funktionen, mit denen Sie d
   
 -   Der *Feldname* muss ein gültiger Feldname aus dem **Recordset**sein. Wenn der Feldname Leerzeichen enthält, müssen Sie den Namen in eckigen Klammern einschließen.  
   
--   Der *Operator* muss eine der folgenden sein: **\<** , **>** , **\<=** , **>=** , **<>** , **=** oder **like**.  
+-   Der *Operator* muss eine der folgenden sein: **\<**, **>** , **\<=**, **>=** , **<>** , **=** oder **like**.  
   
 -   *Value* ist der Wert, mit dem die Feldwerte verglichen werden (z. b `'Smith'` `#8/24/95#` .,, `12.345` oder `$50.00` ). Verwenden Sie einfache Anführungszeichen (') mit Zeichen folgen und Nummern Zeichen ( `#` ) mit Datumsangaben. Für Zahlen können Sie Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise verwenden. Wenn *Operator* der Operator **like**ist, kann *value* Platzhalter Zeichen verwenden. Nur das Sternchen ( \* ) und das Prozentzeichen (%) Platzhalter Zeichen sind zulässig, und Sie müssen das letzte Zeichen in der Zeichenfolge sein. Der *Wert* darf nicht NULL sein.  
   
@@ -111,7 +112,7 @@ Das **Recordset** -Objekt verfügt über integrierte Funktionen, mit denen Sie d
 ### <a name="filtering-with-a-constant"></a>Filtern mit einer Konstanten  
  Die folgenden Konstanten sind zum Filtern von **Recordsets**verfügbar.  
   
-|Konstante|BESCHREIBUNG|  
+|Konstante|Beschreibung|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|Filter zum Anzeigen nur der Datensätze, die vom letzten **Delete**-, **Resync**-, **Update Batch**-oder **CancelBatch** -Befehl betroffen sind.|  
 |**adFilterConflictingRecords**|Filter zum Anzeigen der Datensätze, bei denen das letzte Batch Update nicht erfolgreich war.|  

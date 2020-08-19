@@ -1,4 +1,5 @@
 ---
+description: Data File Auto Grow-Ereignisklasse
 title: Data File Auto Grow-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 63701c20-7886-454a-936f-7aea9d042cf7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80cbbaab89417573c8da438176d23955c9fe2279
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 44d5684243d7a0ebd3a3c1356b642497ec229297
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475961"
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow-Ereignisklasse
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Die **Data File Auto Grow** -Ereignisklasse zeigt an, dass die Datendatei automatisch vergrößert wurde. Dieses Ereignis wird nicht ausgelöst, wenn die Datendatei explizit mit der ALTER DATABASE-Anweisung vergrößert wird.  
+   Die **Data File Auto Grow**-Ereignisklasse zeigt an, dass die Datendatei automatisch vergrößert wurde. Dieses Ereignis wird nicht ausgelöst, wenn die Datendatei explizit mit der ALTER DATABASE-Anweisung vergrößert wird.  
   
  Schließen Sie die **Data File Auto Grow** -Ereignisklasse in Ablaufverfolgungen ein, die das Vergrößern der Datendatei überwachen.  
   
