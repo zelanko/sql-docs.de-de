@@ -1,4 +1,5 @@
 ---
+description: IDENT_CURRENT (Transact-SQL)
 title: IDENT_CURRENT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a9eddcb219b8b9e8b8b83f0f9e951da1e9531303
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7fffc7d4a09e29066942c321fc65b48202d247ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365476"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigu
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. IDENT_INCR, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 IDENT_CURRENT ähnelt den [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Identitätsfunktionen SCOPE_IDENTITY und @@IDENTITY. Alle drei Funktionen geben die zuletzt generierten Identitätswerte zurück. Der Gültigkeitsbereich und die Sitzung, für die *last* definiert ist, unterscheiden sich jedoch bei jeder dieser drei Funktionen:  
 
 -   IDENT_CURRENT gibt den letzten für eine bestimmte Tabelle in einer Sitzung oder einem Gültigkeitsbereich generierten Identitätswert zurück.  

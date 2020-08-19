@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYPASSPHRASE (Transact-SQL)
 title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5fc109c89fb32e42c97b5454bd67d41238d63835
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c73f2fac57dbb73ce95a734a8382b8a8f7568edd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366036"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +74,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Eine Passphrase ist ein Kennwort, das Leerzeichen enthält. Die Verwendung eines Passphrases bietet den Vorteil, dass ein aussagekräftiger Ausdruck oder Satz leichter zu merken ist als eine vergleichsweise lange Zeichenfolge.  
   
  Die Kennwortkomplexität wird mit dieser Funktion nicht überprüft.  
@@ -102,7 +103,7 @@ WHERE CreditCardID = '3681';
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
