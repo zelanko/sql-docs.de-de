@@ -1,4 +1,5 @@
 ---
+description: sys.resource_governor_workload_groups (Transact-SQL)
 title: sys. resource_governor_workload_groups (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d08497d856a7b6600e5d3b3a8b0407aa969aa239
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd6371b31316d874d43a33f797fa826e1d6bbc40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490167"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85901212"
 |pool_id|**int**|ID des Ressourcenpools, den diese Arbeitsauslastungsgruppe verwendet.|  
 |external_pool_id|**int**|**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.<br /><br /> ID des externen Ressourcenpools, der von dieser Arbeits Auslastungs Gruppe verwendet wird.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Katalogsicht zeigt die gespeicherten Metadaten an. Um die Konfiguration im Arbeitsspeicher anzuzeigen, verwenden Sie die entsprechende dynamische Verwaltungs Sicht [sys. dm_resource_governor_workload_groups &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  
   
  Die gespeicherte Konfiguration und die Konfiguration im Arbeitsspeicher können sich unterscheiden, wenn die Konfiguration der Ressourcenkontrolle geändert wurde, die ALTER RESOURCE GOVERNOR RECONFIGURE-Anweisung jedoch nicht angewendet wurde.  
@@ -54,7 +55,7 @@ ms.locfileid: "85901212"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. dm_resource_governor_workload_groups &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Resource Governor Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)  
   
   

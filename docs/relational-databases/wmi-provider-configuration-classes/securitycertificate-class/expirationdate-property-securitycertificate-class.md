@@ -1,4 +1,5 @@
 ---
+description: ExpirationDate-Eigenschaft (SecurityCertificate-Klasse)
 title: ExpirationDate-Eigenschaft (SecurityCertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc036845ba0aad6c9c3f12cdcf0a4b19df221922
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 879b10b0c0e1027640630ffcb0d3a6b092a22da1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460139"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>ExpirationDate-Eigenschaft (SecurityCertificate-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ object.ExpirationDate [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der das Ablaufdatum für das Sicherheitszertifikat angibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

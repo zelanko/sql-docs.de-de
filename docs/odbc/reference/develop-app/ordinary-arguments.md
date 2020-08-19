@@ -1,4 +1,5 @@
 ---
+description: Normale Argumente
 title: Gewöhnliche Argumente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a18cdae1-6b85-41cb-875c-b5a01ec90aeb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97362f93e91ccd8b592b4c05a0714b7602c1ba94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6e4e7a30efe5735aa87665d7d0247bef06390ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429172"
 ---
 # <a name="ordinary-arguments"></a>Normale Argumente
 Wenn ein Katalog Funktions-Zeichen folgen Argument ein normales Argument ist, wird es als Literalzeichenfolge behandelt. Ein normales Argument akzeptiert weder ein Zeichen folgen-Suchmuster noch eine Liste von Werten. Die Groß-/Kleinschreibung eines normalen Arguments ist signifikant, und Anführungszeichen in der Zeichenfolge werden buchstäblich verwendet. Diese Argumente werden als normale Argumente behandelt, wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_FALSE festgelegt ist. Sie werden stattdessen als bezeichnerargumente behandelt, wenn dieses Attribut auf SQL_TRUE festgelegt ist.  

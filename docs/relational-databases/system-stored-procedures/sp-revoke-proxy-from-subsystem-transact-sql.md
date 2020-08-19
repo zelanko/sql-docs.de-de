@@ -1,4 +1,5 @@
 ---
+description: sp_revoke_proxy_from_subsystem (Transact-SQL)
 title: sp_revoke_proxy_from_subsystem (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5c8dc5e9a20c9a00b840ec51d3339299cc3756a3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d58ec6db017fee031a2de2e242a18281eb3b7a68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469228"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @proxy_id = ] id`Die Proxy-ID des Proxys, von dem der Zugriff widerrufen werden soll. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *proxy_id* oder *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
+`[ @proxy_id = ] id` Die Proxy-ID des Proxys, von dem der Zugriff widerrufen werden soll. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *proxy_id* oder *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @proxy_name = ] 'proxy_name'`Der Name des Proxys, dessen Zugriff aufgehoben werden soll. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *proxy_id* oder *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, dessen Zugriff aufgehoben werden soll. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *proxy_id* oder *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @subsystem_id = ] id`Die ID des Subsystems, auf das der Zugriff widerrufen werden soll. Der *subsystem_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *subsystem_id* oder *subsystem_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
+`[ @subsystem_id = ] id` Die ID des Subsystems, auf das der Zugriff widerrufen werden soll. Der *subsystem_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *subsystem_id* oder *subsystem_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**2**|ActiveX-Skript<br /><br /> Wichtig das ActiveX Scripting-Subsystem wird in einer zukünftigen Version von aus dem-Agent entfernt ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |**3**|Betriebssystem (CmdExec)|  
@@ -63,15 +64,15 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketausführung|  
 |**12**|PowerShell-Skript|  
   
-`[ @subsystem_name = ] 'subsystem_name'`Der Name des Subsystems, für das der Zugriff aufgehoben werden soll. Der *subsystem_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *subsystem_id* oder *subsystem_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
+`[ @subsystem_name = ] 'subsystem_name'` Der Name des Subsystems, für das der Zugriff aufgehoben werden soll. Der *subsystem_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *subsystem_id* oder *subsystem_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-Skript|  
 |CmdExec|Betriebssystem (CmdExec)|  
-|Snapshot|Replikationsmomentaufnahme-Agent|  
+|Momentaufnahme|Replikationsmomentaufnahme-Agent|  
 |LogReader|Replikationsprotokolllese-Agent|  
-|Verteilung|Replikationsverteilungs-Agent|  
+|Distribution|Replikationsverteilungs-Agent|  
 |Merge|Replikationsmerge-Agent|  
 |QueueReader|Warteschlangenlese-Agent der Microsoft SQL Server-Replikation|  
 |ANALYSISQUERY|Analysis Services-Befehl|  
@@ -79,7 +80,7 @@ sp_revoke_proxy_from_subsystem
 |Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketausführung|  
 |PowerShell|PowerShell-Skript|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Mit dem Aufheben des Zugriffs auf ein Subsystem werden nicht die Berechtigungen für den im Proxy angegebenen Prinzipal geändert.  
   
 > [!NOTE]  

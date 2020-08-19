@@ -1,4 +1,5 @@
 ---
+description: sp_indexoption (Transact-SQL)
 title: sp_indexoption (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc11f219d98e4b8018bc7d763345feb279790e13
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 509d58a28f768fe774c813a8235ae4c0d9cd718a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469241"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85893247"
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wählt automatisch zwischen Sperren auf Seitenebene, Zeilenebene und Tabellenebene aus. Sie müssen diese Optionen nicht manuell festlegen. **sp_indexoption** wird für erfahrene Benutzer bereitgestellt, die mit Sicherheit sicher sind, dass eine bestimmte Art von Sperre immer geeignet ist.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Verwenden Sie stattdessen [Alter Index &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Verwenden Sie stattdessen [Alter Index &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,9 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @IndexNamePattern = ] 'table_or_index_name'`Der qualifizierte oder nicht qualifizierte Name einer benutzerdefinierten Tabelle oder eines benutzerdefinierten Indexes. *table_or_index_name* ist vom Datentyp **nvarchar (1035)** und hat keinen Standardwert. Anführungszeichen sind nur erforderlich, wenn ein qualifizierter Index- oder Tabellenname angegeben wird. Bei Angabe eines voll gekennzeichneten Tabellennamens (einschließlich eines Datenbanknamens) muss der Datenbankname der Name der aktuellen Datenbank sein. Wenn ein Tabellenname ohne Index angegeben wird, wird der angegebene Optionswert für alle Indizes dieser Tabelle und für die Tabelle selbst, falls kein gruppierter Index vorhanden ist, festgelegt.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` Der qualifizierte oder nicht qualifizierte Name einer benutzerdefinierten Tabelle oder eines benutzerdefinierten Indexes. *table_or_index_name* ist vom Datentyp **nvarchar (1035)** und hat keinen Standardwert. Anführungszeichen sind nur erforderlich, wenn ein qualifizierter Index- oder Tabellenname angegeben wird. Bei Angabe eines voll gekennzeichneten Tabellennamens (einschließlich eines Datenbanknamens) muss der Datenbankname der Name der aktuellen Datenbank sein. Wenn ein Tabellenname ohne Index angegeben wird, wird der angegebene Optionswert für alle Indizes dieser Tabelle und für die Tabelle selbst, falls kein gruppierter Index vorhanden ist, festgelegt.  
   
-`[ @OptionName = ] 'option_name'`Ist ein Index Options Name. *option_name* ist vom Datentyp **varchar (35)** und hat keinen Standardwert. *option_name* kann einen der folgenden Werte aufweisen.  
+`[ @OptionName = ] 'option_name'` Ist ein Index Options Name. *option_name* ist vom Datentyp **varchar (35)** und hat keinen Standardwert. *option_name* kann einen der folgenden Werte aufweisen.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -57,12 +58,12 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|Mit TRUE werden keine Zeilensperren verwendet. Mit FALSE sind Zeilensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Zeilensperren verwendet werden.|  
 |**DisAllowPageLocks**|Mit TRUE werden keine Seitensperren verwendet. Mit FALSE sind Seitensperren beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Seitensperren verwendet werden.|  
   
-`[ @OptionValue = ] 'value'`Gibt an, ob die *option_name* Einstellung aktiviert ist (true, on, yes oder 1) oder deaktiviert (false, Off, No oder 0). der Wert ist vom Datentyp **varchar (12)** und hat keinen Standard *Wert* .  
+`[ @OptionValue = ] 'value'` Gibt an, ob die *option_name* Einstellung aktiviert ist (true, on, yes oder 1) oder deaktiviert (false, Off, No oder 0). der Wert ist vom Datentyp **varchar (12)** und hat keinen Standard *Wert* .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder größer als 0 (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  XML-Indizes werden nicht unterstützt. Wenn Sie einen XML-Index angeben oder einen Tabellennamen ohne Indexnamen angeben und die Tabelle einen XML-Index enthält, wird für die Anweisung ein Fehler gemeldet. Verwenden Sie stattdessen [Alter Index](../../t-sql/statements/alter-index-transact-sql.md) , um diese Optionen festzulegen.  
   
  Verwenden Sie [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) oder die [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) -Katalog Sicht, um die aktuellen Zeilen-und Seiten Sperr Eigenschaften anzuzeigen.  
@@ -139,7 +140,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [INDEXPROPERTY &#40;Transact-SQL-&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   

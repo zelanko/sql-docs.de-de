@@ -1,4 +1,5 @@
 ---
+description: sp_helpuser (Transact-SQL)
 title: sp_helpuser (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 049b1183ad21e481ca47368b3dfe916d0ee41185
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da6af8493f8646f19436501ab750455ebbe98558
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469236"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name_in_db = ] 'security_account'`Der Name des Daten Bank Benutzers oder der Daten Bank Rolle in der aktuellen Datenbank. *security_account* muss in der aktuellen Datenbank vorhanden sein. *security_account* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *security_account* nicht angegeben ist, gibt **sp_helpuser** Informationen zu allen Daten Bank Prinzipale zurück.  
+`[ @name_in_db = ] 'security_account'` Der Name des Daten Bank Benutzers oder der Daten Bank Rolle in der aktuellen Datenbank. *security_account* muss in der aktuellen Datenbank vorhanden sein. *security_account* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *security_account* nicht angegeben ist, gibt **sp_helpuser** Informationen zu allen Daten Bank Prinzipale zurück.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -52,7 +53,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**User**|**sysname**|Benutzer in der aktuellen Datenbank.|  
+|**UserName**|**sysname**|Benutzer in der aktuellen Datenbank.|  
 |**RoleName**|**sysname**|Rollen, zu denen der **Benutzername** gehört.|  
 |**LoginName**|**sysname**|Anmelde **Name des Benutzernamens**.|  
 |**DefDBName**|**sysname**|Standarddatenbank des **Benutzernamens**.|  
@@ -76,7 +77,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Users_in_role**|**sysname**|Mitglied der Rolle in der aktuellen Datenbank.|  
 |**UserID**|**smallint**|Benutzer-ID für das Rollenmitglied.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie [sys. database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md), um Informationen zur Mitgliedschaft in Daten bankrollen anzuzeigen. Um Informationen zu Server Rollen Mitgliedern anzuzeigen, verwenden Sie [sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md), und um Informationen über Prinzipale auf Serverebene anzuzeigen, verwenden Sie [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -111,9 +112,9 @@ EXEC sp_helpuser 'db_securityadmin';
  [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys. database_principals &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [sys. database_role_members &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
- [sys. server_principals &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
+ [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
   
   

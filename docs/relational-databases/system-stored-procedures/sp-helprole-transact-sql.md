@@ -1,4 +1,5 @@
 ---
+description: sp_helprole (Transact-SQL)
 title: sp_helprole (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc4cb9acc25255988d46e4e4bb5a922eb23a98fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36414885089de27fc06dc4029ee57ef341707912
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469268"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rolename = ] 'role'`Der Name einer Rolle in der aktuellen Datenbank. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. *role* muss in der aktuellen Datenbank vorhanden sein. Falls *role* nicht angegeben wird, werden Informationen zu allen Rollen in der aktuellen Datenbank zurückgegeben.  
+`[ @rolename = ] 'role'` Der Name einer Rolle in der aktuellen Datenbank. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. *role* muss in der aktuellen Datenbank vorhanden sein. Falls *role* nicht angegeben wird, werden Informationen zu allen Rollen in der aktuellen Datenbank zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -53,7 +54,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |**RoleId**|**smallint**|ID von **RoleName**.|  
 |**Isapprole**|**int**|0 = **RoleName** ist keine Anwendungsrolle.<br /><br /> 1 = **RoleName** ist eine Anwendungsrolle.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Mithilfe von **sp_helprotect**zeigen Sie die Berechtigungen an, die einer Rolle zugeordnet sind. Mithilfe von **sp_helprolemember**zeigen Sie die Mitglieder einer Datenbankrolle an.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -68,7 +69,7 @@ EXEC sp_helprole
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Rollen auf Server Ebene](../../relational-databases/security/authentication-access/server-level-roles.md)   
+ [Rollen auf Serverebene](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md)   
  [sp_addapprole &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [sp_addrole &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   

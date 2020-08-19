@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_nodes_indexes (Transact-SQL)
 title: sys. pdw_nodes_indexes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,24 +13,24 @@ ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f3d749eb32c8e7369c10e904f9e13991aa85be20
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: f6c518d53122015af3e86350b0037e1b88604543
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490248"
 ---
 # <a name="syspdw_nodes_indexes-transact-sql"></a>sys. pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Gibt Indizes für zurück [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|ID des Objekts, zu dem dieser Index gehört.||  
 |name|**sysname**|Name des Indexes. Der Name ist nur innerhalb des Objekts eindeutig. NULL = Heap||  
 |index_id|**int**|ID des Indexes. index_id ist nur innerhalb des-Objekts eindeutig.<br /><br /> 0 = Heap<br /><br /> 1 = Gruppierter Index<br /><br /> > 1 = Nicht gruppierter Index||  
-|Typ|**tinyint**|Typ des Index:<br /><br /> 0 = Heap<br /><br /> 1 = In einem Cluster gruppiert<br /><br /> 2 = Nicht gruppiert<br /><br /> 5 = gruppierter Speicher optimierter xvelocity-columnstore--Index|  
+|type|**tinyint**|Typ des Index:<br /><br /> 0 = Heap<br /><br /> 1 = In einem Cluster gruppiert<br /><br /> 2 = Nicht gruppiert<br /><br /> 5 = gruppierter Speicher optimierter xvelocity-columnstore--Index|  
 |type_desc|**nvarchar(60)**|Beschreibung des Typs des Index:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> gruppierter columnstore||  
 |is_unique|**bit**|0 = Der Index ist nicht eindeutig.|Immer 0.|  
 |data_space_id|**int**|ID des Datenraums für diesen Index. Der Datenspeicherplatz ist entweder eine Dateigruppe oder ein Partitionsschema.<br /><br /> 0 = object_id ist eine Tabellenwertfunktion.||  
