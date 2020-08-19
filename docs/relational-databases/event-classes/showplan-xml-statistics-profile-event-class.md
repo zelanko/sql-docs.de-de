@@ -1,4 +1,5 @@
 ---
+description: Showplan XML Statistics Profile-Ereignisklasse
 title: Showplan XML Statistics Profile-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d54c21b5eba94bab12292ca856a5b00fc60c8d74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d575705919219b038c3fd98126c0b751bf496a57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88383967"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile-Ereignisklasse
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85717770"
   
  Die Showplan XML Statistics Profile-Ereignisklasse zeigt vollständige Kompilierzeitdaten an, sodass Ablaufverfolgungen, in denen diese Ereignisklasse enthalten ist, zu einer deutlich geringeren Systemleistung führen können. Beschränken Sie die Verwendung dieser Ereignisklasse auf Ablaufverfolgungen, die für kurze Zeit spezielle Probleme überwachen, um die Leistungsbeeinträchtigung möglichst gering zu halten.  
   
- Mit Showplan XML-Dokumenten ist ein Schema verknüpft. Sie finden dieses Schema auf der [Website von Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740). Außerdem ist es Teil der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation.  
+ Mit Showplan XML-Dokumenten ist ein Schema verknüpft. Dieses Schema finden Sie auf der [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkId=41740). Außerdem ist es Teil der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation.  
   
 ## <a name="showplan-xml-statistics-profile-event-class-data-columns"></a>Datenspalten der Showplan XML Statistics Profile-Ereignisklasse  
   

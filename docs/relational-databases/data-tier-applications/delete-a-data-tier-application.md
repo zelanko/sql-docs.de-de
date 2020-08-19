@@ -1,4 +1,5 @@
 ---
+description: Löschen einer Datenebenenanwendung
 title: Löschen einer Datenebenenanwendung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 555867ca058b1249c30dc330512a8e6bc0fe3d76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bde888ff6091ae8d05445acce1afb1469843c18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386636"
 ---
 # <a name="delete-a-data-tier-application"></a>Löschen einer Datenebenenanwendung
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +71,7 @@ ms.locfileid: "85781726"
   
 5.  Bearbeiten Sie die Dialogfenster des Assistenten:  
   
-    1.  [Einführung](#Introduction)  
+    1.  [Introduction (Einführung)](#Introduction)  
   
     2.  [Methode auswählen](#Choose_method)  
   
@@ -104,7 +105,7 @@ ms.locfileid: "85781726"
   
  **< Zurück**: Kehrt zur Seite **Einführung** zurück.  
   
- **Weiter >** : Geht zur Seite **Zusammenfassung** über.  
+ **Weiter >**: Geht zur Seite **Zusammenfassung** über.  
   
  **Abbrechen** – Beendet den Assistenten, ohne die DAC oder Datenbank zu löschen.  
   

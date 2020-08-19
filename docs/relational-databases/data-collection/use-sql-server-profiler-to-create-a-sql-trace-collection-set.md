@@ -1,4 +1,5 @@
 ---
+description: Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes für die SQL-Ablaufverfolgung
 title: Erstellen eines Sammlungssatzes für die SQL-Ablaufverfolgung mit Profiler
 ms.date: 06/03/2020
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fdd751f282f1ba62150d5257dde04798962ecb84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 25e6685166177b6adc436a1fc024d899be5f0233
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386426"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes für die SQL-Ablaufverfolgung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85715535"
   
      Das Dialogfeld **Ablaufverfolgungseigenschaften** wird angezeigt.  
   
-6.  Gehen Sie auf der Registerkarte **Allgemein** wie folgt vor:  
+6.  Führen Sie auf der Registerkarte **Allgemein** Folgendes aus:  
   
     1.  Geben Sie im Feld **Ablaufverfolgungsname** den gewünschten Namen für die Ablaufverfolgung ein. In diesem Beispiel ist der Ablaufverfolgungsname **SPgt80**.  
   

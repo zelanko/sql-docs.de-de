@@ -1,4 +1,5 @@
 ---
+description: Showplan XML For Query Compile (Ereignisklasse)
 title: Showplan XML For Query Compile (Ereignisklasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add53789c727e2c86fabd54d98cbe9c00efee254
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f8e9756022e5536f941ac73734df41b74bf13aa2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88384096"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile (Ereignisklasse)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85717778"
   
  Die Showplan XML For Query Compile-Ereignisklasse zeigt vollständige Kompilierzeitdaten an, sodass Ablaufverfolgungen, in denen diese Ereignisklasse enthalten ist, zu einer deutlich geringeren Systemleistung führen können. Um diesen zu minimieren, sollten Sie die Verwendung dieser Ereignisklasse auf Ablaufverfolgungen beschränken, die bestimmte Probleme für kurze Zeiträume überwachen.  
   
- Mit Showplan XML-Dokumenten ist ein Schema verknüpft. Sie finden dieses Schema auf der [Website von Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740). Außerdem ist es Teil der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation.  
+ Mit Showplan XML-Dokumenten ist ein Schema verknüpft. Dieses Schema finden Sie auf der [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkId=41740). Außerdem ist es Teil der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation.  
   
 ## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Datenspalten der Showplan XML For Query Compile-Ereignisklasse  
   

@@ -1,4 +1,5 @@
 ---
+description: Erstellen eines Kontos für Datenbank-E-Mail
 title: Erstellen eines Kontos für die Datenbank-E-Mail | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6a35d325e976d0fc7ec75f348efb53c39b7bc51c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e80df479a6fbd13e51e69ebddff5634ce7a0c3b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385736"
 ---
 # <a name="create-a-database-mail-account"></a>Erstellen eines Kontos für Datenbank-E-Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Verwenden Sie entweder den **Assistenten zum Konfigurieren von Datenbank-E-Mail** oder [!INCLUDE[tsql](../../includes/tsql-md.md)] , um ein Datenbank-E-Mail-Konto zu erstellen.  
+   Verwenden Sie entweder den **Assistenten zum Konfigurieren von Datenbank-E-Mail** oder [!INCLUDE[tsql](../../includes/tsql-md.md)], um ein Datenbank-E-Mail-Konto zu erstellen.  
   
 -   **Vorbereitungen:**  [Voraussetzungen](#Prerequisites)  
   
--   **Folgendes können Sie zum Erstellen eines Datenbank-E-Mail-Kontos verwenden:**  [Assistent zum Konfigurieren von Datenbank-E-Mails](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Erstellen eines Datenbank-E-Mail-Kontos mit:**  [Assistenten zum Konfigurieren von Datenbank-E-Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 -   **Nachverfolgung:**  [Nächste Schritte zum Konfigurieren von Datenbank-E-Mail](#FollowUp)  
   

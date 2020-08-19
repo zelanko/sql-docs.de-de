@@ -1,4 +1,5 @@
 ---
+description: Upgrade a Data-tier Application
 title: Upgrade einer Datenebenenanwendung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,20 +23,20 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ed1b1698fb945d92fce7cb2a0d1a9d0e2713afb5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cba55e7c9f979098b9f761fbc43cad7a8edc2b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386446"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Verwenden Sie entweder den Assistenten zum Aktualisieren von Datenebenenanwendungen oder ein Windows PowerShell-Skript, um das Schema und die Eigenschaften einer derzeit bereitgestellten Datenebenenanwendung (DAC) so zu ändern, dass sie mit dem Schema und den Eigenschaften übereinstimmt, die in einer neuen Version der DAC definiert sind.  
   
--   **Vorbereitungen:**  [Auswählen von DAC-Upgradeoptionen](#ChoseDACUpgOptions), [Einschränkungen](#LimitationsRestrictions), [Voraussetzungen](#Prerequisites), [Sicherheit](#Security), [Berechtigungen](#Permissions)  
+-   **Vorbereitungen:**  [Auswählen von DAC-Aktualisierungsoptionen](#ChoseDACUpgOptions), [Einschränkungen](#LimitationsRestrictions), [Voraussetzungen](#Prerequisites), [Sicherheit](#Security), [Berechtigungen](#Permissions)  
   
--   **So aktualisieren Sie eine DAC:**  [dem Assistenten zum Aktualisieren von Datenebenenanwendungen](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Aktualisieren einer DAC mit:**  [Assistent zum Aktualisieren von Datenebenenanwendungen](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Eine DAC-Aktualisierung ist ein direkter Prozess, mit dem das Schema der vorhandenen Datenbank so geändert wird, dass es dem in einer neuen Version der DAC definierten Schema entspricht. Die neue Version der DAC wird in einer DAC-Paketdatei bereitgestellt. Weitere Informationen zum Erstellen eines DAC-Pakets finden Sie unter [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md).  
@@ -45,11 +46,11 @@ ms.locfileid: "85781627"
   
 -   **Datenverlust ignorieren**: Wenn **TRUE**, wird das Upgrade auch dann fortgesetzt, wenn einige der Vorgänge zu Datenverlust führen. Wenn auf **False**festgelegt, wird bei solchen Vorgängen die Aktualisierung beendet. Wenn beispielsweise eine Tabelle in der aktuellen Datenbank im Schema der neuen DAC nicht vorhanden ist, wird die Tabelle gelöscht, wenn **True** festgelegt ist. Die Standardeinstellung ist **True**.  
   
--   **Bei Änderungen blockieren**: Wenn **TRUE**, wird die Aktualisierung beendet, wenn sich das Datenbankschema von dem in der vorherigen DAC definierten Schema unterscheidet. Wenn auf **False**festgelegt, wird die Aktualisierung auch dann fortgesetzt, wenn Änderungen erkannt werden. Die Standardeinstellung ist **False**.  
+-   **Bei Änderungen blockieren**: Wenn **TRUE**, wird die Aktualisierung beendet, wenn sich das Datenbankschema von dem in der vorherigen DAC definierten Schema unterscheidet. Wenn auf **False**festgelegt, wird die Aktualisierung auch dann fortgesetzt, wenn Änderungen erkannt werden. Die Standardeinstellung lautet **Falsch**.  
   
--   **Rollback bei Fehler**: Wenn **TRUE**, wird die Aktualisierung in eine Transaktion eingeschlossen, und wenn Fehler auftreten, wird ein Rollback versucht. Wenn auf **False**festgelegt, wird für alle Änderungen bei ihrer Erstellung ein Commit ausgeführt, und wenn Fehler auftreten, muss möglicherweise eine vorherige Sicherung der Datenbank wiederhergestellt werden. Die Standardeinstellung ist **False**.  
+-   **Rollback bei Fehler**: Wenn **TRUE**, wird die Aktualisierung in eine Transaktion eingeschlossen, und wenn Fehler auftreten, wird ein Rollback versucht. Wenn auf **False**festgelegt, wird für alle Änderungen bei ihrer Erstellung ein Commit ausgeführt, und wenn Fehler auftreten, muss möglicherweise eine vorherige Sicherung der Datenbank wiederhergestellt werden. Die Standardeinstellung lautet **Falsch**.  
   
--   **Richtlinienüberprüfung überspringen**: Wenn **TRUE**, wird die DAC-Richtlinie zur Serverauswahl nicht überprüft. Wenn auf **False**festgelegt, wird die Richtlinie ausgewertet, und im Fall eines Fehlers wird die Aktualisierung beendet. Die Standardeinstellung ist **False**.  
+-   **Richtlinienüberprüfung überspringen**: Wenn **TRUE**, wird die DAC-Richtlinie zur Serverauswahl nicht überprüft. Wenn auf **False**festgelegt, wird die Richtlinie ausgewertet, und im Fall eines Fehlers wird die Aktualisierung beendet. Die Standardeinstellung lautet **Falsch**.  
   
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Einschränkungen  
  DAC-Aktualisierungen können nur in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ab Service Pack 4 (SP4) durchgeführt werden.  
@@ -105,7 +106,7 @@ ms.locfileid: "85781627"
   
  **Diese Seite nicht mehr anzeigen.** – Aktivieren Sie dieses Kontrollkästchen, damit die Seite in Zukunft nicht mehr angezeigt wird.  
   
- **Weiter >** : Geht zur Seite **Paket auswählen** über.  
+ **Weiter >**: Geht zur Seite **Paket auswählen** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC zu aktualisieren.  
   
@@ -125,7 +126,7 @@ ms.locfileid: "85781627"
   
  **< Zurück**: Kehrt zur Seite **Einführung** zurück.  
   
- **Weiter >** : Zeigt eine Statusanzeige an, da der Assistent bestätigt, dass es sich bei der ausgewählten Datei um ein gültiges DAC-Paket handelt.  
+ **Weiter >**: Zeigt eine Statusanzeige an, da der Assistent bestätigt, dass es sich bei der ausgewählten Datei um ein gültiges DAC-Paket handelt.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC zu aktualisieren.  
   
@@ -136,7 +137,7 @@ ms.locfileid: "85781627"
   
  **< Zurück**: Kehrt zum Ausgangszustand der Seite **Paket auswählen** zurück.  
   
- **Weiter >** : Geht zur abschließenden Version der Seite **Paket auswählen** über.  
+ **Weiter >**: Geht zur abschließenden Version der Seite **Paket auswählen** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
@@ -149,7 +150,7 @@ ms.locfileid: "85781627"
   
  **< Zurück**: Kehrt zur Seite **Paket auswählen** zurück.  
   
- **Weiter >** : Geht zur Seite **Änderung erkennen** über.  
+ **Weiter >**: Geht zur Seite **Änderung erkennen** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC zu aktualisieren.  
   
@@ -170,7 +171,7 @@ ms.locfileid: "85781627"
   
  **< Zurück**: Kehrt zur Seite **DAC-Paket auswählen** zurück.  
   
- **Weiter >** : Geht zur Seite **Optionen** über.  
+ **Weiter >**: Geht zur Seite **Optionen** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
@@ -183,7 +184,7 @@ ms.locfileid: "85781627"
   
  **< Zurück**: Geht zur Seite **Änderung erkennen** zurück.  
   
- **Weiter >** : Geht zur Seite **Upgradeplan überprüfen** über.  
+ **Weiter >**: Geht zur Seite **Upgradeplan überprüfen** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
@@ -204,7 +205,7 @@ ms.locfileid: "85781627"
   
  **< Zurück**: Geht zur Seite **Änderung erkennen** zurück.  
   
- **Weiter >** : Geht zur Seite **Zusammenfassung** über.  
+ **Weiter >**: Geht zur Seite **Zusammenfassung** über.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
@@ -215,7 +216,7 @@ ms.locfileid: "85781627"
   
  **< Zurück**: Geht zur Seite **Upgradeplan überprüfen** zurück.  
   
- **Weiter >** : Stellt die DAC bereit und zeigt die Ergebnisse auf der Seite **DAC aktualisieren** an.  
+ **Weiter >**: Stellt die DAC bereit und zeigt die Ergebnisse auf der Seite **DAC aktualisieren** an.  
   
  **Abbrechen** : Beendet den Assistenten, ohne die DAC bereitzustellen.  
   
