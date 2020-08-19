@@ -1,4 +1,5 @@
 ---
+description: ADO-Glossar
 title: ADO-Glossar | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aa3afd41a64b35cca0e3ffc4e676939dd2920ee9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441432"
 ---
 # <a name="ado-glossary"></a>ADO-Glossar
 In diesem Thema werden die für ADO relevanten Begriffe definiert.  
@@ -100,7 +101,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
  Vergleichsoperator  
  Ein Operator, der zwei Ausdrücke vergleicht und einen booleschen Wert zurückgibt.  
   
- Ein Kriterienparameter, der als ">" (größer als), " \< " (kleiner als), "=" (gleich), ">=" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) ausgedrückt werden kann.  
+ Ein Kriterienparameter, der als ">" (größer als), " \<" (less than), "=" (equal), "> =" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) ausgedrückt werden kann.  
   
  Komponente  
  Ein-Objekt, das sowohl Daten als auch Code kapselt und einen ordnungsgemäß angegebenen Satz öffentlich verfügbarer Dienste bereitstellt.  

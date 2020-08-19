@@ -1,4 +1,5 @@
 ---
+description: Beispiel für das Speichern und Öffnen von Methoden (VC + +)
 title: Beispiel für das Speichern und Öffnen von Methoden (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90360589fb15e9b71bdd8776a709d1464db428ff
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e7de7de37cf298005e7a8bdf58d1712d8cb46919
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442202"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Beispiel für das Speichern und Öffnen von Methoden (VC + +)
 Diese drei Beispiele veranschaulichen, wie die [Save](../../../ado/reference/ado-api/save-method.md) -Methode und die **Open** -Methode gleichzeitig verwendet werden können.  

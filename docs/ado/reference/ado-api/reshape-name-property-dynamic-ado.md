@@ -1,4 +1,5 @@
 ---
+description: Reshape Name – dynamische Eigenschaft (ADO)
 title: Reshape Name Property-Dynamic (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 490a69a022c2098de1dc4ade67af484b6e50131a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f9584977d36f1e88cc65ea625732a84112092c82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442312"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name – dynamische Eigenschaft (ADO)
 Gibt einen Namen für das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt an.  

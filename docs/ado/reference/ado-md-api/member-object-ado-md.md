@@ -1,4 +1,5 @@
 ---
+description: Member-Objekt (ADO MD)
 title: Member-Objekt (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4d512d651c8162124c935ffdb260c4abe4ecb14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6e0797a4d273c51b950e3973d1864480755a20d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440922"
 ---
 # <a name="member-object-ado-md"></a>Member-Objekt (ADO MD)
 Stellt einen Member einer Ebene in einem Cube, die untergeordneten Elemente eines Members einer Ebene oder einen Member einer Position entlang einer Achse eines Cellsets dar.  
@@ -68,19 +69,19 @@ Stellt einen Member einer Ebene in einem Cube, die untergeordneten Elemente eine
   
  Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
-|Name|BESCHREIBUNG|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |Kinderkardinalität|Die Anzahl der untergeordneten Elemente des Elements.|  
 |CubeName|Der Name des Cubes.|  
-|BESCHREIBUNG|Eine aussagekräftige Beschreibung des Members.|  
+|Beschreibung|Eine aussagekräftige Beschreibung des Members.|  
 |Dimensionuniquename|Der eindeutige Name der [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |Hierarchyuniquename|Der eindeutige Name der Hierarchie.|  
 |LevelNumber|Der Abstand zwischen der Ebene und dem Stamm der Hierarchie.|  
 |LevelUniqueName|Der eindeutige Name der Ebene.|  
 |MemberCaption|Eine Bezeichnung oder Beschriftung, die dem Element zugeordnet ist.|  
 |Mitglieds-ID|Die GUID des Elements.|  
-|MemberName|Der Name des Elements.|  
+|MemberName|Der Name des Members.|  
 |Mitgliedordinalzahl|Die Ordinalzahl des Elements.|  
 |MemberType|Der Typ des Elements.|  
 |Mitgliedenname|Der eindeutige Name des Members.|  

@@ -1,4 +1,5 @@
 ---
+description: Level-Objekt (ADO MD)
 title: Level-Objekt (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1ee7ad05f05d2eb77d7d705200c52ddf3f01146
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cdfcf6cb1411ae4f9ece9b917b5ecb1b76718766
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440952"
 ---
 # <a name="level-object-ado-md"></a>Level-Objekt (ADO MD)
 Enthält einen Satz von Membern, von denen jeder denselben Rang innerhalb einer Hierarchie aufweist.  
@@ -42,11 +43,11 @@ Enthält einen Satz von Membern, von denen jeder denselben Rang innerhalb einer 
   
  Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
-|Name|BESCHREIBUNG|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CubeName|Der Name des Cubes.|  
-|BESCHREIBUNG|Eine aussagekräftige Beschreibung der Ebene.|  
+|Beschreibung|Eine aussagekräftige Beschreibung der Ebene.|  
 |Dimensionuniquename|Der eindeutige Name der [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |Hierarchyuniquename|Der eindeutige Name der Hierarchie.|  
 |LevelCaption|Eine Bezeichnung oder Beschriftung, die der Ebene zugeordnet ist.|  

@@ -1,4 +1,5 @@
 ---
+description: Clustered-Eigenschaft – Beispiel (VC++)
 title: Beispiel für eine gruppierte Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8039f07bfdb750a5ed3632d2f7c28b51a02b8ec9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 765137d5b04c2077e113cb5eb1f515b569311161
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440322"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered-Eigenschaft – Beispiel (VC++)
 In diesem Beispiel wird die [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) -Eigenschaft eines [Indexes](../../../ado/reference/adox-api/index-object-adox.md)veranschaulicht. Beachten Sie, dass Microsoft Jet-Datenbanken keine gruppierten Indizes unterstützen, sodass in diesem Beispiel für die **gruppierte** Eigenschaft aller Indizes in der *Northwind* -Datenbank **false** zurückgegeben wird.  

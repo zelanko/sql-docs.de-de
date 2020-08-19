@@ -1,4 +1,5 @@
 ---
+description: ADOX-Objekte
 title: ADOX-Objekte | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2969927d6221f45bff027b97f6e6468ab63baa86
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0d67a9d7fa099b0b716d0c2769a1af0cbf64abdb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440562"
 ---
 # <a name="adox-objects"></a>ADOX-Objekte
 ## <a name="adox-object-summary"></a>ADOX-Objekt Zusammenfassung  
   
-|Object|BESCHREIBUNG|  
+|Object|Beschreibung|  
 |------------|-----------------|  
 |[Katalog](../../../ado/reference/adox-api/catalog-object-adox.md)|Enthält Auflistungen, die den Schema Katalog einer Datenquelle beschreiben.|  
 |[Spalte](../../../ado/reference/adox-api/column-object-adox.md)|Stellt eine Spalte aus einer Tabelle, einem Index oder einem Schlüssel dar.|  
-|[Group](../../../ado/reference/adox-api/group-object-adox.md)|Stellt ein Gruppenkonto dar, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.|  
-|[Sin](../../../ado/reference/adox-api/index-object-adox.md)|Stellt einen Index aus einer Datenbanktabelle dar.|  
+|[Gruppieren](../../../ado/reference/adox-api/group-object-adox.md)|Stellt ein Gruppenkonto dar, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.|  
+|[Index](../../../ado/reference/adox-api/index-object-adox.md)|Stellt einen Index aus einer Datenbanktabelle dar.|  
 |[Schlüssel](../../../ado/reference/adox-api/key-object-adox.md)|Stellt ein primäres, fremdes oder eindeutiges Schlüsselfeld aus einer Datenbanktabelle dar.|  
-|[Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md)|Stellt eine gespeicherte Prozedur dar.|  
-|[Tabelle](../../../ado/reference/adox-api/table-object-adox.md)|Stellt eine Datenbanktabelle dar, einschließlich Spalten, Indizes und Schlüsseln.|  
+|[Verfahren](../../../ado/reference/adox-api/procedure-object-adox.md)|Stellt eine gespeicherte Prozedur dar.|  
+|[Table](../../../ado/reference/adox-api/table-object-adox.md)|Stellt eine Datenbanktabelle dar, einschließlich Spalten, Indizes und Schlüsseln.|  
 |[Benutzer](../../../ado/reference/adox-api/user-object-adox.md)|Stellt ein Benutzerkonto dar, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.|  
 |[Ansicht](../../../ado/reference/adox-api/view-object-adox.md)|Stellt einen gefilterten Satz von Datensätzen oder eine virtuelle Tabelle dar.|  
   

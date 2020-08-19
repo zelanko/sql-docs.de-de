@@ -1,4 +1,5 @@
 ---
+description: SearchDirectionEnum
 title: SearchDirectionEnum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e2928f1817b994c3101182677b5b2fcad9a4b1d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 918261998fec061f8f977a8a2dfc614166f564f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442162"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 Gibt die Richtung einer Daten Satz Suche innerhalb eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)an.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adsearchrückwärts**|-1|Sucht rückwärts und beendet am Anfang des **Recordsets**. Wenn keine Entsprechung gefunden wird, wird der Daten Satz Zeiger bei [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)positioniert.|  
 |**adsearchforward**|1|Sucht vorwärts und beendet am Ende des **Recordsets**. Wenn keine Entsprechung gefunden wird, wird der Daten Satz Zeiger auf [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)positioniert.|  
@@ -33,7 +34,7 @@ Gibt die Richtung einer Daten Satz Suche innerhalb eines [Recordsets](../../../a
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |Adoumums. SearchDirection. rückwärts|  
 |Adoumums. SearchDirection. Forward|  

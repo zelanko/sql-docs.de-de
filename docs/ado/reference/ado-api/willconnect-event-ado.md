@@ -1,4 +1,5 @@
 ---
+description: WillConnect-Ereignis (ADO)
 title: WillConnect-Ereignis (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73798796af7629e70dda86bd0e264ec325be8a0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7c9bc68b33e9a8ed8878e153b5fb2eb11d27ba2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441482"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect-Ereignis (ADO)
 Das Ereignis " **WillConnect** " wird aufgerufen, bevor eine Verbindung gestartet wird.  

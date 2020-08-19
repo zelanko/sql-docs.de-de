@@ -1,4 +1,5 @@
 ---
+description: Type-Eigenschaft – Beispiel (Field) (VB)
 title: Beispiel für eine Typeigenschaft (Feld) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d3f13b0f76884f4b5e0077bdebef0c009d7b546
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94eeb6eb22e72b6db45d178c9d19ced33009be8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441722"
 ---
 # <a name="type-property-example-field-vb"></a>Type-Eigenschaft – Beispiel (Field) (VB)
 In diesem Beispiel wird die [Type](../../../ado/reference/ado-api/type-property-ado.md) -Eigenschaft veranschaulicht, indem der Name der Konstante angezeigt wird, die dem Wert der [Type](../../../ado/reference/ado-api/type-property-ado.md) -Eigenschaft aller [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der ***Employees*** -Tabelle entspricht. Die FieldType-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  

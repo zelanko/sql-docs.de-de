@@ -1,4 +1,5 @@
 ---
+description: Update- und CancelUpdate-Methode – Beispiel (VC++)
 title: Update-und CancelUpdate-Methoden Beispiel (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a3e1b9eed98ba310498706c9708cb47ee8d6680
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 25347b53dbb1b489ce66deb045fec780172ad360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441652"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update- und CancelUpdate-Methode – Beispiel (VC++)
 In diesem Beispiel wird die [Update](../../../ado/reference/ado-api/update-method.md) -Methode in Verbindung mit der [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) -Methode veranschaulicht.  

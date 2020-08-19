@@ -1,4 +1,5 @@
 ---
+description: Columns-Collection – Eigenschaften, Methoden und Ereignisse
 title: Spalten Auflistungs Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d9ec89a-cc85-4091-b6f0-2bb6a6826d5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db712b4f5779f421188863c51f5b4c014a768dd1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 52845dfe57cf84b2cffa25940186a8197f548ac4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440272"
 ---
 # <a name="columns-collection-properties-methods-and-events"></a>Columns-Collection – Eigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -32,7 +33,7 @@ ms.locfileid: "82759326"
   
  [Refresh-Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  

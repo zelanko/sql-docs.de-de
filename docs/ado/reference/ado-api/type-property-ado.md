@@ -1,4 +1,5 @@
 ---
+description: Type-Eigenschaft (ADO)
 title: Type-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bfa47120814058adbc5c2e5f3650a79b2202afb
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: de97e62a8152e7d14d1442cc1da9b5138ddc39fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441742"
 ---
 # <a name="type-property-ado"></a>Type-Eigenschaft (ADO)
 Gibt den Betriebs Typ oder den Datentyp eines [Parameters](../../../ado/reference/ado-api/parameter-object.md), [Felds](../../../ado/reference/ado-api/field-object.md)oder [Eigenschafts](../../../ado/reference/ado-api/property-object-ado.md) Objekts an.  

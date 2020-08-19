@@ -1,4 +1,5 @@
 ---
+description: Save-Methode
 title: Save-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db4b5d86c59e35ac3a7aa66684115668d19ead42
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 09b8ce2c2b8f6388e300a0034c0ea72b795bded1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442212"
 ---
 # <a name="save-method"></a>Save-Methode
 Speichert das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in einer Datei oder einem [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -35,10 +36,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parameter  
  *Ziel*  
- Dies ist optional. Eine **Variante** , die den kompletten Pfadnamen der Datei darstellt, in der das **Recordset** gespeichert werden soll, oder einen Verweis auf ein **Stream** -Objekt.  
+ Optional. Eine **Variante** , die den kompletten Pfadnamen der Datei darstellt, in der das **Recordset** gespeichert werden soll, oder einen Verweis auf ein **Stream** -Objekt.  
   
  *PersistFormat*  
- Dies ist optional. Ein [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) -Wert, der das Format angibt, in dem das **Recordset** gespeichert werden soll (XML oder ADTG). Der Standardwert ist **adPersistADTG**.  
+ Optional. Ein [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) -Wert, der das Format angibt, in dem das **Recordset** gespeichert werden soll (XML oder ADTG). Der Standardwert ist **adPersistADTG**.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Methode zum [Speichern der Methode](../../../ado/reference/ado-api/save-method.md) kann nur für ein offenes **Recordset**aufgerufen werden. Verwenden Sie die [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode, um das **Recordset** später aus dem *Ziel*wiederherzustellen.  

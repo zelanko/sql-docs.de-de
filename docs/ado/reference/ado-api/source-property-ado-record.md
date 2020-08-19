@@ -1,4 +1,5 @@
 ---
+description: Source-Eigenschaft (ADO-Datensatz)
 title: Source-Eigenschaft (ADO-Datensatz) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32b329d8365370560f51503129ac2c8d85517527
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1f8fb7ece2d2046706df91814b2d098e0a900d18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442042"
 ---
 # <a name="source-property-ado-record"></a>Source-Eigenschaft (ADO-Datensatz)
 Gibt die Datenquelle oder das Objekt an, das durch den [Datensatz](../../../ado/reference/ado-api/record-object-ado.md)dargestellt wird.  

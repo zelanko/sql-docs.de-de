@@ -1,4 +1,5 @@
 ---
+description: Axis-Objekt (ADO MD)
 title: Axis-Objekt (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c251355637c5d57729a7d4aa737f2face1c9ace2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 733a2962e381a7b8918fccfd076f44dbbc23da1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441282"
 ---
 # <a name="axis-object-ado-md"></a>Axis-Objekt (ADO MD)
 Stellt eine Positions-oder Filter Achse eines Cellsets dar, die ausgewählte Elemente aus einer oder mehreren Dimensionen enthält.  

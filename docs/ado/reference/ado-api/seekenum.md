@@ -1,4 +1,5 @@
 ---
+description: SeekEnum
 title: Seekenum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dca33c975b3d25347b0cb9bb804b852ec5f93d7d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1bea36687e0fbe8aea4768386f4435ceece621bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442112"
 ---
 # <a name="seekenum"></a>SeekEnum
 Gibt den Typ des auszuführenden [Suchtyps](../../../ado/reference/ado-api/seek-method.md) an.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adseekfirsteq**|1|Sucht den ersten Schlüssel, der mit *KeyValues*übereinstimmt.|  
 |**adseeklasteq**|2|Sucht den letzten Schlüssel, der mit *KeyValues*übereinstimmt.|  
@@ -37,7 +38,7 @@ Gibt den Typ des auszuführenden [Suchtyps](../../../ado/reference/ado-api/seek-
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |Adoerums. Seek. firsteq|  
 |Adoerums. Seek. lasteq|  

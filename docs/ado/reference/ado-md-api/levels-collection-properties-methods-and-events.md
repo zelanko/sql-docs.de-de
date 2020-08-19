@@ -1,4 +1,5 @@
 ---
+description: Levels-Collection – Eigenschaften, Methoden und Ereignisse
 title: Ebenen-Auflistungs Eigenschaften,-Methoden und-Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ab039aaaf03d3121a46eaa9789b72a89693cc59
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7fb8f1d2bfe324b4d4a10c120f39dbbeb474f563
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753269"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440882"
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>Levels-Collection – Eigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -28,7 +29,7 @@ ms.locfileid: "82753269"
 ## <a name="methods"></a>Methoden  
  [Refresh-Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  

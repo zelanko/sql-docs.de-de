@@ -1,4 +1,5 @@
 ---
+description: Column-Objekt – Eigenschaften, Methoden und Ereignisse
 title: Spalten Objekteigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5905bbee711d63d86ddc2988799ee8ab5e5c9e79
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 025f5c3caafd950df9510c41129cea8f5da17c5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440332"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Column-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
@@ -42,9 +43,9 @@ ms.locfileid: "82759376"
  [Type-Eigenschaft (Spalte)](../../../ado/reference/adox-api/type-property-column-adox.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  

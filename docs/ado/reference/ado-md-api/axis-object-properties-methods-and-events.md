@@ -1,4 +1,5 @@
 ---
+description: Axis-Objekt – Eigenschaften, Methoden und Ereignisse
 title: Achsen Objekteigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dfd4bc3cca4b8ff71d58ab60fbbed45f9df2302
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1a8eedddcbd7a899c7b2abd1f2ab95197567854c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441302"
 ---
 # <a name="axis-object-properties-methods-and-events"></a>Axis-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
@@ -31,9 +32,9 @@ ms.locfileid: "82765171"
  ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -1,4 +1,5 @@
 ---
+description: SchemaObjectTypeEnum
 title: Schemaobjecttypeer-ID | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d7f908c6d74d71c5d4aece216e825ac23487f26
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bdb460dc2aa2e6fe9c24c79fa994b3d76de0c8c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440752"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
 Gibt den Typ des Objekts an, das von der [getschemaobject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) -Methode abgerufen werden soll.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adobjecttypeer-Dimension**|1|Ein [Dimensions](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) Objekt.|  
 |**adobjecttypeer Hierarchy**|2|Ein [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) -Objekt.|  

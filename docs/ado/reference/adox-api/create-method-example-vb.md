@@ -1,4 +1,5 @@
 ---
+description: Create-Methode – Beispiel (VB)
 title: Create Method-Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fc6ab5b6b5edf0e3e168a1a1fa47f27a99927a6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 40a50d983365285ccf0001f46450613bdf78bd87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440202"
 ---
 # <a name="create-method-example-vb"></a>Create-Methode – Beispiel (VB)
 Der folgende Code zeigt, wie eine neue Microsoft Jet-Datenbank mit der [Create](../../../ado/reference/adox-api/create-method-adox.md) -Methode erstellt wird.  

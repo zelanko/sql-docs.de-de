@@ -1,4 +1,5 @@
 ---
+description: UpdateBatch-Methode
 title: UpdateBatch-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9572bf6b50f359a5193dbe1b23034f1503afb1fc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3f0a730a64a34e13f5a7554ecb700ab1e555a77d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441602"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch-Methode
 Schreibt alle ausstehenden Batch Aktualisierungen auf den Datenträger.  
@@ -35,10 +36,10 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
 #### <a name="parameters"></a>Parameter  
  *AffectRecords*  
- Dies ist optional. Ein [affectenum](../../../ado/reference/ado-api/affectenum.md) -Wert, der angibt, wie viele Datensätze von der **UpdateBatch** -Methode betroffen sind.  
+ Optional. Ein [affectenum](../../../ado/reference/ado-api/affectenum.md) -Wert, der angibt, wie viele Datensätze von der **UpdateBatch** -Methode betroffen sind.  
   
  *PreserveStatus*  
- Dies ist optional. Ein **boolescher** Wert, der angibt, ob für lokale Änderungen, wie von der [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) -Eigenschaft angegeben, ein Commit ausgeführt werden soll. Wenn dieser Wert auf **true**festgelegt ist, bleibt die **Status** -Eigenschaft jedes Datensatzes unverändert, nachdem das Update abgeschlossen wurde.  
+ Optional. Ein **boolescher** Wert, der angibt, ob für lokale Änderungen, wie von der [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) -Eigenschaft angegeben, ein Commit ausgeführt werden soll. Wenn dieser Wert auf **true**festgelegt ist, bleibt die **Status** -Eigenschaft jedes Datensatzes unverändert, nachdem das Update abgeschlossen wurde.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **UpdateBatch** -Methode, wenn Sie ein **Recordset** -Objekt im Batch Update Modus ändern, um alle in einem **Recordset** -Objekt vorgenommenen Änderungen an die zugrunde liegende Datenbank zu übertragen  

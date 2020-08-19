@@ -1,4 +1,5 @@
 ---
+description: WillExecute-Ereignis (ADO)
 title: WillExecute-Ereignis (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef47b4bac626d82754ce01685504b4a48303a4b4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd217597018b4cb5aa4764955fdd1795371a040c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441472"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute-Ereignis (ADO)
 Das **WillExecute** -Ereignis wird aufgerufen, kurz bevor ein ausstehender Befehl für eine Verbindung ausgeführt wird.  
@@ -59,7 +60,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  Das [ADO-Objekt (Connection Object)](../../../ado/reference/ado-api/connection-object-ado.md) , für das diese Ereignis Benachrichtigung gilt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Ein **WillExecute** -Ereignis kann aufgrund einer Verbindung auftreten.  [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)oder [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode der *pconnection* -Parameter sollte immer einen gültigen Verweis auf ein **Verbindungs** Objekt enthalten. Wenn das Ereignis auf **Connection. Execute**zurückzuführen ist, werden die Parameter *precordset* und *pcommand* auf **Nothing**festgelegt. Wenn das Ereignis auf **Recordset. Open**zurückzuführen ist, verweist der *precordset* -Parameter auf das **Recordset** -Objekt, und der *pcommand* -Parameter wird auf " **Nothing**" festgelegt. Wenn das Ereignis auf " **Command. Execute**" zurückzuführen ist, verweist der *pcommand* -Parameter auf das **Command** -Objekt, und der *precordset* -Parameter wird auf " **Nothing**" festgelegt.  
+ Ein **WillExecute** -Ereignis kann aufgrund einer Verbindung auftreten.  [Execute-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [Execute-Methode (ADO-Befehl)](../../../ado/reference/ado-api/execute-method-ado-command.md)oder [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode der *pconnection* -Parameter sollte immer einen gültigen Verweis auf ein **Verbindungs** Objekt enthalten. Wenn das Ereignis auf **Connection.Exeniedlich**zurückzuführen ist, werden die Parameter " *precordset* " und " *pcommand* " auf " **Nothing**" festgelegt. Wenn das Ereignis auf **Recordset. Open**zurückzuführen ist, verweist der *precordset* -Parameter auf das **Recordset** -Objekt, und der *pcommand* -Parameter wird auf " **Nothing**" festgelegt. Wenn das Ereignis auf **Command.Exeniedlich**zurückzuführen ist, verweist der *pcommand* -Parameter auf das **Command** -Objekt, und der *precordset* -Parameter wird auf " **Nothing**" festgelegt.  
   
  Mit **WillExecute** können Sie die ausstehenden Ausführungs Parameter überprüfen und ändern. Dieses Ereignis gibt möglicherweise eine Anforderung zurück, dass der ausstehende Befehl abgebrochen wurde.  
   

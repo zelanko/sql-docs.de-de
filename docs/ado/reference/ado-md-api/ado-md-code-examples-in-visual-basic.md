@@ -1,4 +1,5 @@
 ---
+description: ADO MD-Codebeispiele in Visual Basic
 title: ADO MD Code Beispiele in Visual Basic | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfb52e8c-cb06-47a0-931c-03b8bdb1a05a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 043cd71d9b488508a725ad115d646ea9ed4e51c2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5d1b759d3cd6591eef906b7354a5b8b3d22caf02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441412"
 ---
 # <a name="ado-md-code-examples-in-visual-basic"></a>ADO MD-Codebeispiele in Visual Basic
 Die folgenden Beispiele erfordern Microsoft Visual Basic Version 5,0 mit Service Pack 3 oder Visual Basic Version 6,0.  

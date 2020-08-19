@@ -1,4 +1,5 @@
 ---
+description: ADOX-Codebeispiele in Microsoft Visual C++
 title: ADOX-Code Beispiele in Microsoft Visual C++ | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab7c47857ac8a25b50567660ca8fbcc0ed51994c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e316cb14da5b10e7eb0525c621c5ffaa67ec53e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440622"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>ADOX-Codebeispiele in Microsoft Visual C++
 Diese Themen enthalten Beispielcode, der Ihnen das Verständnis der Verwendung von ADOX erleichtert. Alle Codebeispiele werden mithilfe von Microsoft Visual C++ geschrieben.  

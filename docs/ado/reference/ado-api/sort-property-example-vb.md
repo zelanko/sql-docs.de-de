@@ -1,4 +1,5 @@
 ---
+description: Sort-Eigenschaft – Beispiel (VB)
 title: Beispiel für eine Sortier Eigenschaft (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a2ae26c61534996fcfb5094432ff2e0e81c90c9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b7821e971d32f855fc219a2883f4190b9434d998
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442082"
 ---
 # <a name="sort-property-example-vb"></a>Sort-Eigenschaft – Beispiel (VB)
 In diesem Beispiel wird die [Sort](../../../ado/reference/ado-api/sort-property.md) -Eigenschaft des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts verwendet, um die Zeilen eines **Recordsets** neu anzuordnen, die von der Tabelle " ***Authors*** " der ***Pubs*** -Datenbank abgeleitet werden. Eine sekundäre hilfsprogrammroutine druckt jede Zeile.  

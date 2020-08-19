@@ -1,4 +1,5 @@
 ---
+description: RecordCreateOptionsEnum
 title: Recordkreateoptionsenum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f76d7773df443a76597184ecdabd5f27aea0bb7e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ef305aefbd3c606f433bfd85b1b10ac2dd94db1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442472"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Gibt an, ob ein vorhandener **Datensatz** geöffnet oder ein neuer **Datensatz** für die [Open](../../../ado/reference/ado-api/open-method-ado-record.md) -Methode des [Aufzeichnungs](../../../ado/reference/ado-api/record-object-ado.md) Objekts erstellt werden soll. Die Werte können mit einem and-Operator kombiniert werden.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adkreatecollection**|0x2000|Erstellt einen neuen **Datensatz** an dem durch den *Quell* Parameter angegebenen Knoten, anstatt einen vorhandenen **Datensatz**zu öffnen. Wenn die Quelle auf einen vorhandenen Knoten zeigt, tritt ein Laufzeitfehler auf, es sei denn, **adkreatecollection** wird mit **adopenifist** oder **adkreateüberschreibung**kombiniert.|  
 |**adkreatenoncollection**|0|Erstellt einen neuen **Datensatz** vom Typ [adsimplerecord](../../../ado/reference/ado-api/recordtypeenum.md).|  

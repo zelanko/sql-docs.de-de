@@ -1,4 +1,5 @@
 ---
+description: Append-Methode (ADOX-Spalten)
 title: Append-Methode (ADOX-Spalten) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e69f2510e825a935cf7eb34951051c1e3848bb9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bd33dc71c9adcbe8e6ed25f965b227fbc76d96fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440522"
 ---
 # <a name="append-method-adox-columns"></a>Append-Methode (ADOX-Spalten)
 Fügt der [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) -Auflistung ein neues [Spalten](../../../ado/reference/adox-api/column-object-adox.md) Objekt hinzu.  
@@ -38,10 +39,10 @@ Columns.Append Column [,Type] [,DefinedSize]
  Das anzufügende **Spalten** Objekt oder der Name der Spalte, die erstellt und angefügt werden soll.  
   
  *Typ*  
- Dies ist optional. Ein **Long** -Wert, der den Datentyp der Spalte angibt. Der *Typparameter* entspricht der [Type](../../../ado/reference/adox-api/type-property-column-adox.md) -Eigenschaft eines **Column** -Objekts.  
+ Optional. Ein **Long** -Wert, der den Datentyp der Spalte angibt. Der *Typparameter* entspricht der [Type](../../../ado/reference/adox-api/type-property-column-adox.md) -Eigenschaft eines **Column** -Objekts.  
   
  *DefinedSize*  
- Dies ist optional. Ein **Long** -Wert, der die Größe der Spalte angibt. Der *DefinedSize* -Parameter entspricht der [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) -Eigenschaft eines **Column** -Objekts.  
+ Optional. Ein **Long** -Wert, der die Größe der Spalte angibt. Der *DefinedSize* -Parameter entspricht der [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) -Eigenschaft eines **Column** -Objekts.  
   
 > [!NOTE]
 >  Wenn eine **Spalte** an die **Columns** -Auflistung eines [Indexes](../../../ado/reference/adox-api/index-object-adox.md) angefügt wird, tritt ein Fehler auf, wenn die **Spalte** nicht in einer [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) vorhanden ist, die bereits an die [Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md) Auflistung angehängt ist.  

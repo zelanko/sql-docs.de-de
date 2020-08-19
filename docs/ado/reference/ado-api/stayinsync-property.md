@@ -1,4 +1,5 @@
 ---
+description: StayInSync-Eigenschaft
 title: StayInSync-Eigenschaft | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f36eace18280cd810341c5eeeec1fb294999e6ec
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7bd35cbd24dadef9d6a9468f65bc85f95169d0cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441882"
 ---
 # <a name="stayinsync-property"></a>StayInSync-Eigenschaft
 Gibt in einem hierarchischen [Recordsetobjekt](../../../ado/reference/ado-api/recordset-object-ado.md) an, ob sich der Verweis auf die zugrunde liegenden untergeordneten Datensätze (d. h. das *Kapitel*) ändert, wenn sich die Position der übergeordneten Zeile ändert.  

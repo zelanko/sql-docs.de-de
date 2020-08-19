@@ -1,4 +1,5 @@
 ---
+description: ADOX-Methoden
 title: ADOX-Methoden | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b2af54e33aeaa42cab3de76f1ffc6bf5fd758dd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9d8a2c7e02b4b7efeb17166e1fcab8ee2c457b6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440582"
 ---
 # <a name="adox-methods"></a>ADOX-Methoden
 
-|Methode|BESCHREIBUNG|  
+|Methode|Beschreibung|  
 |-|-|  
 |[Anfügen (Spalten)](../../../ado/reference/adox-api/append-method-adox-columns.md)|Fügt der **Columns** -Auflistung ein neues **Spalten** Objekt hinzu.|  
 |[Anfügen (Gruppen)](../../../ado/reference/adox-api/append-method-adox-groups.md)|Fügt der **Gruppen** Auflistung ein neues **Gruppen** Objekt hinzu.|  

@@ -1,4 +1,5 @@
 ---
+description: ADO MD-Objekte
 title: ADO MD Objekte | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e655647e7f485a27764280faba1adac091f0b7b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 54e7eae0aaab754dbc57f1001263ea20c0bd8999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441352"
 ---
 # <a name="ado-md-objects"></a>ADO MD-Objekte
 
-|Object|BESCHREIBUNG|  
+|Object|Beschreibung|  
 |-|-|  
 |[Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Stellt eine Positions-oder Filter Achse eines Cellsets dar, die ausgewählte Elemente aus einer oder mehreren Dimensionen enthält.|  
 |[Katalog](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Enthält mehrdimensionale Schema Informationen (d. h. Cubes und zugrunde liegende Dimensionen, Hierarchien, Ebenen und Elemente), die für einen mehrdimensionalen Datenanbieter (MDP) spezifisch sind.|  
-|[Kern](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Stellt die Daten an der Schnittmenge der Achsen Koordinaten dar, die in einem CellSet enthalten sind.|  
+|[Cell (Zelle)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Stellt die Daten an der Schnittmenge der Achsen Koordinaten dar, die in einem CellSet enthalten sind.|  
 |[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Stellt die Ergebnisse einer mehrdimensionalen Abfrage dar. Es handelt sich um eine Sammlung von Zellen, die aus Cubes oder anderen Cellsets ausgewählt wurden.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Stellt einen Cube aus einem mehrdimensionalen Schema dar, der einen Satz verwandter Dimensionen enthält.|  
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Stellt eine der Dimensionen eines mehrdimensionalen Cubes dar, der mindestens eine Hierarchien von Membern enthält.|  
@@ -37,7 +38,7 @@ ms.locfileid: "87242550"
   
  Außerdem ist das **catalog** -Objekt mit einem ADO- **Verbindungs** Objekt verbunden, das in der Standard-ADO-Bibliothek enthalten ist:  
   
-|Object|BESCHREIBUNG|  
+|Object|Beschreibung|  
 |------------|-----------------|  
 |[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|Stellt eine offene Verbindung mit einer Datenquelle dar.|  
   

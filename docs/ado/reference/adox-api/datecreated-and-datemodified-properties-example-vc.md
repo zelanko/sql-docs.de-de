@@ -1,4 +1,5 @@
 ---
+description: DateCreated- und DateModified-Eigenschaften – Beispiel (VC++)
 title: DateCreated und DateModified-Eigenschaften (z. b. VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 63ff7406b192bc8ecb759a5fe234efd1397cf11b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 19f8f15f35cae97d4c6882df90889513ce0eb430
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440192"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated- und DateModified-Eigenschaften – Beispiel (VC++)
 In diesem Beispiel werden die [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) -Eigenschaft und die [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) -Eigenschaft durch Hinzufügen einer neuen [Spalte](../../../ado/reference/adox-api/column-object-adox.md) zu einer vorhandenen [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) und durch Erstellen einer neuen **Tabelle**veranschaulicht. Die dateoutput-Prozedur ist erforderlich, damit das Beispiel ausgeführt werden kann.  

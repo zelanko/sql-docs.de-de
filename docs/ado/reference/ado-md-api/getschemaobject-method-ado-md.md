@@ -1,4 +1,5 @@
 ---
+description: GetSchemaObject-Modell (ADO MD)
 title: Getschemaobject-Methode (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8853e967a75a67aadccc7e48d684ab92819a71d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 19af2bf0e7058a8f483da25c0db926ebc19807c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441012"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject-Modell (ADO MD)
 Ruft ein ADO MD Schema Objekt ([Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [Hierarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) [oder Element](../../../ado/reference/ado-md-api/member-object-ado-md.md)) nach dem [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)ab.  

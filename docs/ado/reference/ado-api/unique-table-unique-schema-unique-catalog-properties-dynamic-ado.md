@@ -1,4 +1,5 @@
 ---
+description: Unique Table, Unique Schema, Unique Catalog Properties-Dynamic (ADO)
 title: Steuern von Änderungen an der Recordset-Basistabelle (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac7fa0cf50a92b2738d3e83d5e7b9d5fac46fd9b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5c3f5bdb8a52f686ae336aa51986591788669979
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441672"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Unique Table, Unique Schema, Unique Catalog Properties-Dynamic (ADO)
 Ermöglicht es Ihnen, Änderungen an einer bestimmten Basistabelle in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , das durch eine Joinoperation in mehreren Basistabellen gebildet wurde, genau zu steuern.  

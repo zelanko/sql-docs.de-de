@@ -1,4 +1,5 @@
 ---
+description: Dimension-Objekt (ADO MD)
 title: Dimensions Objekt (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d5b475600ef211d8203a64a1a2c6d917bb99914
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fc3661ef36c0b763ca6b0f04f52e4713d59b9a19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441112"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension-Objekt (ADO MD)
 Stellt eine der Dimensionen eines mehrdimensionalen Cubes dar, der mindestens eine Hierarchien von Membern enthält.  
@@ -38,12 +39,12 @@ Stellt eine der Dimensionen eines mehrdimensionalen Cubes dar, der mindestens ei
   
  Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
-|Name|BESCHREIBUNG|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CubeName|Der Name des Cubes.|  
 |DefaultHierarchy|Der eindeutige Name der Standard Hierarchie.|  
-|BESCHREIBUNG|Eine aussagekräftige Beschreibung des Cubes.|  
+|Beschreibung|Eine aussagekräftige Beschreibung des Cubes.|  
 |DimensionCaption|Eine Bezeichnung oder Beschriftung, die der Dimension zugeordnet ist.|  
 |DimensionCardinality|Die Anzahl der Elemente in der Dimension.|  
 |DimensionGUID|Die GUID der Dimension.|  

@@ -1,4 +1,5 @@
 ---
+description: Save- und Open-Methode – Beispiel (VB)
 title: Beispiel für das Speichern und Öffnen von Methoden (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37237094c3778fad9c45a2ccad3eebdce02a62bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 048fbb83c8a6b9de150642f6094a1f07e0c1e11e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442222"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save- und Open-Methode – Beispiel (VB)
 Diese drei Beispiele veranschaulichen, wie die [Save](../../../ado/reference/ado-api/save-method.md) -Methode und die [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode gleichzeitig verwendet werden können.  
@@ -84,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- An diesem Punkt haben Sie Ihr Ziel erreicht. Sie greifen auf die ***Autoren*** Tabelle als lokales, nicht verbundenes **Recordset**zu. Sie müssen über den **MSPersist** -Anbieter auf dem Computer verfügen, den Sie für den Zugriff auf die gespeicherte Datei verwenden, a:\pubs.Xml.  
+ An diesem Punkt haben Sie Ihr Ziel erreicht. Sie greifen auf die ***Autoren*** Tabelle als lokales, nicht verbundenes **Recordset**zu. Sie müssen über den **MSPersist** -Anbieter auf dem Computer verfügen, den Sie für den Zugriff auf die gespeicherte Datei verwenden, a:\Pubs.xml.  
   
 ```  
 Attribute VB_Name = "Save"  

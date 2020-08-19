@@ -1,4 +1,5 @@
 ---
+description: GetObjectOwner- und SetObjectOwner-Methoden – Beispiel (VB)
 title: Beispiel für die GetObjectOwner-und die-Methode von "seetobjectowner" (VB) Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2cc708ed86c9fd06997ce21c2be8f6ab836c1725
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 502bad9d142df67096f23bf89f60184a958de55a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440082"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner- und SetObjectOwner-Methoden – Beispiel (VB)
 In diesem Beispiel werden die [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) [-Methode](../../../ado/reference/adox-api/setobjectowner-method.md) und die-Methode für die Methode "". In diesem Code wird davon ausgegangen, dass die Gruppen Buchhaltungs Gruppe vorhanden ist. (Weitere Informationen zum Hinzufügen dieser Gruppe zum System finden Sie im [Beispiel Gruppen und Benutzer anfügen, ChangePassword-Methoden Beispiel (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) . Der Besitzer der Categories-Tabelle ist auf Accounting festgelegt.  

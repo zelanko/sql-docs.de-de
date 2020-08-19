@@ -1,4 +1,5 @@
 ---
+description: DrilledDown-Eigenschaft (ADO MD)
 title: DrilledDown-Eigenschaft (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5819609f06b37ffad08918968530b66df169c64
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 132b1a7210a9fd37866f1a150430f0d1a6d29606
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441042"
 ---
 # <a name="drilleddown-property-ado-md"></a>DrilledDown-Eigenschaft (ADO MD)
 Gibt an, ob untergeordnete Elemente unmittelbar auf den [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) auf der Achse folgen.  

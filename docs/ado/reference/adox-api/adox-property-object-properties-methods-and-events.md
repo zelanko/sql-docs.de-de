@@ -1,4 +1,5 @@
 ---
+description: ADOX-Property-Objekt – Eigenschaften, Methoden und Ereignisse
 title: Eigenschaften, Methoden und Ereignisse des ADOX-Eigenschaften Objekts | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d17bb9ac5e443606b54f2f9c606083397e4f0583
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6a97292cc702dc675aaf14ae34c4b792b541f758
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440512"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>ADOX-Property-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="properties"></a>Eigenschaften  
@@ -30,9 +31,9 @@ ms.locfileid: "82764091"
  [Value-Eigenschaft (ADO)](../../../ado/reference/ado-api/value-property-ado.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  

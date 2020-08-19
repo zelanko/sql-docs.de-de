@@ -1,4 +1,5 @@
 ---
+description: Record-Objekt (ADO)
 title: Record-Objekt (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6a7c3b44498dee88be8dc3f37cd713038375753
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 384b7285832cd03b1220e7b261f027c220d7f80c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442512"
 ---
 # <a name="record-object-ado"></a>Record-Objekt (ADO)
 Stellt eine Zeile aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder dem Datenanbieter oder ein Objekt dar, das von einem semistrukturierten Datenanbieter zurückgegeben wird, z. b. eine Datei oder ein Verzeichnis.  

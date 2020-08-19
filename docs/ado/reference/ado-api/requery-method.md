@@ -1,4 +1,5 @@
 ---
+description: Requery-Methode
 title: Requery-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29b2d0cba996e3f41a12df93babe8d9b86a8fbeb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b13d618bf5b9b2c17a4fd93b08f3a861cb958178
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442322"
 ---
 # <a name="requery-method"></a>Requery-Methode
 Aktualisiert die Daten in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, indem die Abfrage erneut ausgeführt wird, auf der das Objekt basiert.  
@@ -35,7 +36,7 @@ recordset.Requery Options
   
 #### <a name="parameters"></a>Parameter  
  *Optionen*  
- Dies ist optional. Eine Bitmaske, die die Werte [executeoptionenumum](../../../ado/reference/ado-api/executeoptionenum.md) und [commandtypeenumeration](../../../ado/reference/ado-api/commandtypeenum.md) enthält, die diesen Vorgang beeinflussen.  
+ Optional. Eine Bitmaske, die die Werte [executeoptionenumum](../../../ado/reference/ado-api/executeoptionenum.md) und [commandtypeenumeration](../../../ado/reference/ado-api/commandtypeenum.md) enthält, die diesen Vorgang beeinflussen.  
   
 > [!NOTE]
 >  Wenn *Optionen* auf **adAsyncExecute**festgelegt ist, wird dieser Vorgang asynchron ausgeführt, und ein [RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) -Ereignis wird ausgegeben, wenn es beendet wird. Die **executeopenenumum** -Werte **von adExecuteNoRecords** oder **adExecuteStream** sollten nicht mit der **Anforderung**verwendet werden.  

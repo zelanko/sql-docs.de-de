@@ -1,4 +1,5 @@
 ---
+description: CubeDef-Objekt (ADO MD)
 title: CubeDef-Objekt (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25dd4d6a9c8a5518c8c2b637af63b39e7b992557
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cf8de68674ee1cc33f0ba16c9a0b3604418d0332
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441152"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef-Objekt (ADO MD)
 Stellt einen Cube aus einem mehrdimensionalen Schema dar, der einen Satz verwandter Dimensionen enthält.  
@@ -38,7 +39,7 @@ Stellt einen Cube aus einem mehrdimensionalen Schema dar, der einen Satz verwand
   
  Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
-|Name|BESCHREIBUNG|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CreatedOn|Das Datum und die Uhrzeit der Erstellung des Cubes.|  
@@ -46,7 +47,7 @@ Stellt einen Cube aus einem mehrdimensionalen Schema dar, der einen Satz verwand
 |CubeName|Der Name des Cubes.|  
 |Cubetype|Der Typ des Cubes.|  
 |Dataupdatedby|Die Benutzer-ID der Person, die das letzte Datenupdate durchgeführt hat.|  
-|BESCHREIBUNG|Eine aussagekräftige Beschreibung des Cubes.|  
+|Beschreibung|Eine aussagekräftige Beschreibung des Cubes.|  
 |LastSchemaUpdate|Datum und Uhrzeit des letzten Schema Updates.|  
 |SchemaName|Der Name des Schemas, zu dem dieser Cube gehört.|  
 |Schemaupdatedby|Die Benutzer-ID der Person, die die letzte Schema Aktualisierung durchgeführt hat.|  

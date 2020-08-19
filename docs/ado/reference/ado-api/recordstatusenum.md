@@ -1,4 +1,5 @@
 ---
+description: RecordStatusEnum
 title: RecordStatus usenum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f84f43a90479064c2a95d407b7f816fd48c1c679
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0d48e9538fb8ec4f0dac8c3a17457b04b0ace963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442387"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Gibt den [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) eines Datensatzes in Bezug auf Batch Updates und andere Massen Vorgänge an.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Gibt an, dass der Datensatz nicht gespeichert wurde, weil der Vorgang abgebrochen wurde.|  
 |**adRecCantRelease**|0x400|Gibt an, dass der neue Datensatz nicht gespeichert wurde, weil der vorhandene Datensatz gesperrt war.|  
@@ -51,7 +52,7 @@ Gibt den [Status](../../../ado/reference/ado-api/status-property-ado-recordset.m
   
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |AdoEnums.RecordStatus.CANCELED|  
 |AdoEnums.RecordStatus.CANTRELEASE|  

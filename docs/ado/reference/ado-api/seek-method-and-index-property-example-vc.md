@@ -1,4 +1,5 @@
 ---
+description: Seek-Methode und Index-Eigenschaft – Beispiel (VC++)
 title: Beispiel für die Seek-Methode und Index-Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6176f607ea338f4686e0a5c23a824d916f501b14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 93e4a003e2234c0ee8eb537bc8ee09cdef1869d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442262"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek-Methode und Index-Eigenschaft – Beispiel (VC++)
 In diesem Beispiel wird die [Seek](../../../ado/reference/ado-api/seek-method.md) -Methode und [Index](../../../ado/reference/ado-api/index-property.md) -Eigenschaft des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts zusammen mit einer bestimmten ***Mitarbeiter-ID***verwendet, um den Namen des Mitarbeiters in der ***Employees*** -Tabelle der Nwind. mdb-Datenbank zu suchen.  

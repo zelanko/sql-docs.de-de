@@ -1,4 +1,5 @@
 ---
+description: StreamTypeEnum
 title: Streamtypeaufumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65100830f013e09eaf873674591f247e3cd9bdf6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 47ebcacf2403717c12c19c33a26001e031557b7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441802"
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
 Gibt den Typ der in einem [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) gespeicherten Daten an.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adTypeBinary**|1|Gibt Binärdaten an.|  
 |**adtypetext**|2|Standard. Gibt Textdaten an, die sich in dem durch [CharSet](../../../ado/reference/ado-api/charset-property-ado.md)angegebenen Zeichensatz befinden.|  

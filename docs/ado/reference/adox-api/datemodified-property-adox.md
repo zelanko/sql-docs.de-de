@@ -1,4 +1,5 @@
 ---
+description: DateModified-Eigenschaft (ADOX)
 title: DateModified-Eigenschaft (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c3a2a8ba0890dd50621fac143aa102091abcc19
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 7ee921e1865530356e1fd88c97489b63a81a02ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440152"
 ---
 # <a name="datemodified-property-adox"></a>DateModified-Eigenschaft (ADOX)
 Gibt das Datum an, an dem das Objekt zuletzt geändert wurde.  

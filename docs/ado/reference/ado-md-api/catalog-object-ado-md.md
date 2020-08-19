@@ -1,4 +1,5 @@
 ---
+description: Catalog-Objekt (ADO MD)
 title: Catalog-Objekt (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ef77f61703178bfe30fc4ce823d7c56be48836f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7fe8cb849b5b770f23fab92da84bc3bc58fdf55d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441272"
 ---
 # <a name="catalog-object-ado-md"></a>Catalog-Objekt (ADO MD)
 Enthält mehrdimensionale Schema Informationen (d. h. Cubes und zugrunde liegende Dimensionen, Hierarchien, Ebenen und Elemente), die für einen mehrdimensionalen Datenanbieter (MDP) spezifisch sind.  

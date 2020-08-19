@@ -1,4 +1,5 @@
 ---
+description: Status-Eigenschaft – Beispiel (Field) (VB)
 title: Status Eigenschafts Beispiel (Feld) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2263f72311111ef7f63d006e085165ec2ab492c3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 66fab5cee49adf89bffee79f5b51b13780d5d982
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441942"
 ---
 # <a name="status-property-example-field-vb"></a>Status-Eigenschaft – Beispiel (Field) (VB)
 Im folgenden Beispiel wird ein Dokument aus einem Ordner mit Lese-/Schreibzugriff mit dem [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)geöffnet. Die [Status](../../../ado/reference/ado-api/status-property-ado-field.md) -Eigenschaft eines [Feld](../../../ado/reference/ado-api/field-object.md) Objekts des [Datensatzes](../../../ado/reference/ado-api/record-object-ado.md) wird zuerst auf **adfieldpdinginsert**festgelegt und dann auf **adFieldOK**aktualisiert.  

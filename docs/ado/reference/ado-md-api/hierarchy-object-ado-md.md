@@ -1,4 +1,5 @@
 ---
+description: Hierarchy-Objekt (ADO MD)
 title: Hierarchy-Objekt (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1232d228d597188364cb20a7f60dfaa11c8af21a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 757de54d56b5220b2759e670584e432c595fc45f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440982"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy-Objekt (ADO MD)
 Stellt eine Methode dar, mit der die [Elemente einer Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) aggregiert oder "ein Rollup ausgeführt werden können". Eine Dimension kann entlang einer oder mehrerer Hierarchien aggregiert werden.  
@@ -38,13 +39,13 @@ Stellt eine Methode dar, mit der die [Elemente einer Dimension](../../../ado/ref
   
  Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
-|Name|BESCHREIBUNG|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |AllMember|Der Member auf der höchsten Rollup-Ebene in der Hierarchie.|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CubeName|Der Name des Cubes.|  
 |DefaultMember|Der eindeutige Name des Standard Members für diese Hierarchie.|  
-|BESCHREIBUNG|Eine aussagekräftige Beschreibung der Hierarchie.|  
+|Beschreibung|Eine aussagekräftige Beschreibung der Hierarchie.|  
 |DimensionType|Der Typ der Dimension, zu der diese Hierarchie gehört.|  
 |Dimensionuniquename|Der eindeutige Name der Dimension.|  
 |Hierarchycaption|Eine Bezeichnung oder Beschriftung, die der Hierarchie zugeordnet ist.|  
