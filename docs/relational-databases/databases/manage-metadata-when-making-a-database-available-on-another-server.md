@@ -1,4 +1,5 @@
 ---
+description: Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einem anderen Server
 title: Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einem anderen Server
 ms.date: 06/03/2020
 ms.prod: sql
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.openlocfilehash: 0d0a777b42bc601d2f656cfbf3c31d488a3732e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412846"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einem anderen Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +107,7 @@ ms.locfileid: "85726451"
   
  Weitere Informationen zu diesem Feature finden Sie unter [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
-> **HINWEIS:** Für Proxykonten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents werden Anmeldeinformationen verwendet. Die ID der von einem Proxykonto verwendeten Anmeldeinformationen kann anhand der [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) -Systemtabelle festgestellt werden.  
+> **HINWEIS:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden Anmeldeinformationen. Die ID der von einem Proxykonto verwendeten Anmeldeinformationen kann anhand der [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) -Systemtabelle festgestellt werden.  
   
   
 ##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a> Cross-Database Queries  
@@ -129,7 +130,7 @@ ms.locfileid: "85726451"
   
  Um die automatische Entschlüsselung des Datenbank-Hauptschlüssels auf einer Serverinstanz zu ermöglichen, wird eine Kopie dieses Schlüssels mit dem Diensthauptschlüssel verschlüsselt. Diese verschlüsselte Kopie wird sowohl in der Datenbank als auch in der **master**-Datenbank gespeichert. In der Regel wird die in **master** gespeicherte Kopie im Hintergrund aktualisiert, sobald der Hauptschlüssel geändert wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, den Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel der Instanz zu entschlüsseln. Wenn beim Entschlüsseln ein Fehler auftritt, wird der Anmeldeinformationsspeicher von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Anmeldeinformationen des Hauptschlüssels durchsucht, die dieselbe Familien-GUID wie die Datenbank aufweisen, für die der Hauptschlüssel benötigt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den Datenbank-Hauptschlüssel mit allen übereinstimmenden Anmeldeinformationen zu entschlüsseln, bis die Entschlüsselung erfolgreich ausgeführt wurde oder keine Anmeldeinformationen mehr vorhanden sind. Ein Hauptschlüssel, der nicht mit dem Diensthauptschlüssel verschlüsselt ist, muss mithilfe der OPEN MASTER KEY-Anweisung und eines Kennworts geöffnet werden.  
   
- Wird eine verschlüsselte Datenbank auf eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kopiert, auf dieser wiederhergestellt oder an diese angefügt, wird keine Kopie des vom Diensthauptschlüssels verschlüsselten Datenbank-Hauptschlüssels in der **master** -Datenbank der Zielserverinstanz gespeichert. Auf der Zielserverinstanz müssen Sie den Hauptschlüssel der Datenbank öffnen. Um den Hauptschlüssel zu öffnen, führen Sie die folgende Anweisung aus: OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _Kennwort_ **'** . Es empfiehlt sich, anschließend die automatische Entschlüsselung des Datenbank-Hauptschlüssels zu aktivieren, indem folgende Anweisung ausgeführt wird: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Durch diese ALTER MASTER KEY-Anweisung wird für die Serverinstanz eine Kopie des mit dem Diensthauptschlüssel verschlüsselten Datenbank-Hauptschlüssels bereitgestellt. Weitere Informationen finden Sie unter [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ Wird eine verschlüsselte Datenbank auf eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kopiert, auf dieser wiederhergestellt oder an diese angefügt, wird keine Kopie des vom Diensthauptschlüssels verschlüsselten Datenbank-Hauptschlüssels in der **master** -Datenbank der Zielserverinstanz gespeichert. Auf der Zielserverinstanz müssen Sie den Hauptschlüssel der Datenbank öffnen. Um den Hauptschlüssel zu öffnen, führen Sie die folgende Anweisung aus: OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _Kennwort_ **'** . Es empfiehlt sich, die automatische Entschlüsselung des Datenbank-Hauptschlüssels mit folgender Anweisung zu aktivieren: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Durch diese ALTER MASTER KEY-Anweisung wird für die Serverinstanz eine Kopie des mit dem Diensthauptschlüssel verschlüsselten Datenbank-Hauptschlüssels bereitgestellt. Weitere Informationen finden Sie unter [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Informationen zum Aktivieren der automatischen Entschlüsselung des Datenbank-Hauptschlüssels einer Spiegeldatenbank finden Sie unter [Einrichten einer verschlüsselten Spiegeldatenbank](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -199,7 +200,7 @@ ms.locfileid: "85726451"
   
 -   [Sichern und Wiederherstellen von Volltextkatalogen und Indizes](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
--   [Datenbankspiegelung und Volltextkataloge &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
+-   [Datenbankspiegelung und Volltextkataloge (SQL Server)](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
 
   
 ##  <a name="jobs"></a><a name="jobs"></a> Aufträge  
@@ -242,7 +243,7 @@ ms.locfileid: "85726451"
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [Anzeigen von Auftragsschrittinformationen](../../ssms/agent/view-job-step-information.md)  
+-   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   

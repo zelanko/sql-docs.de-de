@@ -1,4 +1,5 @@
 ---
+description: Ausführen von Testfällen (OracleToSQL)
 title: Ausführen von Test Fällen (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 429ad47c63393696492d8eb22919749ed03cd71b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9d44b04aba4d1ea1fa437bbd3b957178b361a4db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933051"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418436"
 ---
 # <a name="running-test-cases-oracletosql"></a>Ausführen von Testfällen (OracleToSQL)
 Wenn der SSMA-Tester einen Testfall ausführt, führt er die für das Testen ausgewählten Objekte aus und erstellt einen Bericht über Überprüfungs Ergebnisse. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Oracle und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird anhand der Schema-Mapping-Einstellungen für das aktuelle SSMA-Projekt festgelegt.  
@@ -41,7 +42,7 @@ In diesem Schritt erstellt SSMA Tester Hilfsobjekte (Tabellen, Trigger und Sicht
   
 Angenommen, die überprüfte Tabelle hat den Namen USER_TABLE. Für eine solche Tabelle werden die folgenden Hilfsobjekte in Oracle erstellt.  
   
-|Name|Typ|BESCHREIBUNG|  
+|Name|type|Beschreibung|  
 |-|-|-|  
 |USER_TABLE $ trg|Trigger (trigger)|Löst die Überprüfung der Änderungen in der verifizierten Tabelle aus.|  
 |USER_TABLE $ AUD|table|Tabelle, in der gelöschte und über schriebene Zeilen gespeichert werden.|  
@@ -53,13 +54,13 @@ Angenommen, die überprüfte Tabelle hat den Namen USER_TABLE. Für eine solche 
   
 Das folgende Objekt wird im Schema der verifizierten Tabelle unter erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Name|Typ|BESCHREIBUNG|  
+|Name|type|Beschreibung|  
 |-|-|-|  
 |USER_TABLE $ trg|Trigger (trigger)|Löst die Überprüfung der Änderungen in der verifizierten Tabelle aus.|  
   
 Und die folgenden Objekte werden unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der ssmatesterdb-Datenbank erstellt.  
   
-|Name|Typ|BESCHREIBUNG|  
+|Name|type|Beschreibung|  
 |-|-|-|  
 |USER_TABLE $ AUD|table|Tabelle, in der gelöschte und über schriebene Zeilen gespeichert werden.|  
 |USER_TABLE $ audid|table|Tabelle, in der neue und geänderte Zeilen gespeichert werden.|  

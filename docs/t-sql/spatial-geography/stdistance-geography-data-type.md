@@ -1,4 +1,5 @@
 ---
+description: STDistance (geography-Datentyp)
 title: STDistance (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/19/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 795fa917f598ed1dd477916f42808d4abb0c8a69
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a20279a70d2e68e1cb4b34eb36ffe7de633518a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416996"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (geography-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: Auswählen und Konfigurieren von zu testenden Objekten (OracleToSQL)
 title: Auswählen und Konfigurieren von zu testenden Objekten (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: fd5a65e50889d461b0922fa255680a76863ca0a4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: deb482c041dd290db3d2a7c911fb7d3663aa819a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418336"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Auswählen und Konfigurieren von zu testenden Objekten (OracleToSQL)
 In diesem Schritt wählen Sie die zu testenden Objekte aus und konfigurieren die Einstellungen für den Vergleich der Ausgabeparameter der Prozeduren und Funktionen sowie die Rückgabewerte von Funktionen.  

@@ -1,4 +1,5 @@
 ---
+description: STEndPoint (geography-Datentyp)
 title: STEndPoint (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 475b5e99cd7628992e90a2921c0bd726f8f69560
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9e7b33ea60599dc5920d15df18177a34bcdde07c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416976"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndPoint (geography-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: APPLOCK_TEST (Transact-SQL)
 title: APPLOCK_TEST (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05a4130eada097acc754f4392927db76b8bfc079
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: fa4c73e5a6830b3274e3e388679dd4e5f935f17c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417536"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ Der Name einer Sperrressource, der von der Clientanwendung angegeben wird. Die A
 Der abzurufende Sperrmodus für eine spezifische Ressource. *lock_mode* ist vom Datentyp **nvarchar(32)** und verfügt nicht über einen Standardwert. *lock_mode* kann folgende Werte aufweisen: **Shared**, **Update**, **IntentShared**, **IntentExclusive** und **Exclusive**.
   
 **'** *lock_owner* **'**  
-Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)** . Der Wert kann **Transaktion** (Standard) oder **Sitzung** entsprechen. Wird der Standard oder **Transaction** explizit angegeben, muss APPLOCK_TEST aus einer Transaktion heraus ausgeführt werden.
+Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)**. Der Wert kann **Transaktion** (Standard) oder **Sitzung** entsprechen. Wird der Standard oder **Transaction** explizit angegeben, muss APPLOCK_TEST aus einer Transaktion heraus ausgeführt werden.
   
 ## <a name="return-types"></a>Rückgabetypen
 **smallint**
@@ -63,7 +64,7 @@ Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim
 0 (null), wenn die Sperre dem angegebenen Besitzer nicht erteilt werden kann. Wenn die Sperre erteilt werden kann, wird 1 zurückgegeben.
   
 ## <a name="function-properties"></a>Funktionseigenschaften
-**Nondeterministic**
+**Nicht deterministisch**
   
 **Nonindexable**
   

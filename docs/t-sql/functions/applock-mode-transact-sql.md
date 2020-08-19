@@ -1,4 +1,5 @@
 ---
+description: APPLOCK_MODE (Transact-SQL)
 title: APPLOCK_MODE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d3d171d77cf3462eb68893f4ac5f6230d73b8b11
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9f7433be40f2a0a08ae075edfc3eaa9bd3252dca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417506"
 ---
 # <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ Der Benutzer, die Rolle oder die Anwendungsrolle, dem bzw. der Berechtigungen f�
 Der Name einer Sperrressource, der von der Clientanwendung angegeben wird. Die Anwendung muss sicherstellen, dass der Ressourcenname eindeutig ist. Der angegebene Name wird intern als Hashwert codiert, der intern im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperren-Manager gespeichert werden kann. *resource_name* ist vom Datentyp **nvarchar(255)** und besitzt keinen Standardwert. *resource_name* unterliegt dem Binärvergleich. Daher muss die Groß-/Kleinschreibung unabhängig von den Sortierungseinstellungen der aktuellen Datenbank berücksichtigt werden.
   
 '*lock_owner*'  
-Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)** . Der Wert kann **Transaktion** (Standard) oder **Sitzung** entsprechen.
+Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)**. Der Wert kann **Transaktion** (Standard) oder **Sitzung** entsprechen.
   
 ## <a name="return-types"></a>Rückgabetypen
 **nvarchar(32)**
@@ -62,12 +63,12 @@ Gibt den Sperrmodus zurück, der vom Besitzer der Sperre für eine bestimmte Anw
 |-|-|-|  
 |**NoLock**|**Aktualisieren**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**Shared**|**Exclusive**||  
+|**Freigegeben**|**Exklusiv**||  
   
 *Dieser Sperrmodus ist eine Kombination aus anderen Sperrmodi und kann nicht mithilfe von „sp_getapplock“ explizit aktiviert werden.
   
 ## <a name="function-properties"></a>Funktionseigenschaften
-**Nondeterministic**
+**Nicht deterministisch**
   
 **Nonindexable**
   

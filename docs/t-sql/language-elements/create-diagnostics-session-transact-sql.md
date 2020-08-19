@@ -1,4 +1,5 @@
 ---
+description: CREATE DIAGNOSTICS SESSION (Transact-SQL)
 title: CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12a6e49e477ce3e61560438a6db141bfb5aab721
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 99f0c8b66e45fafa806848efa2f979fbbb0da054
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417096"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -68,7 +69,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  Definiert die tatsächlichen Ereignisse, die in der Diagnosesitzung gesammelt werden sollen.  *event_name* ist eines der Ereignisse, die in [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md) aufgelistet sind, wobei Folgendes gilt: `sys.pdw_diag_events.is_enabled='True'`.  
   
  *filter_property_name*  
- Der Name der Eigenschaft, auf die Ergebnisse beschränkt werden sollen. Wenn Sie beispielsweise eine Einschränkung basierend auf der Sitzungs-ID vornehmen möchten, muss für *filter_property_name* *SessionId* angegeben werden. Eine Liste mit möglichen Werten für *filter_property_name* finden Sie unter *property_name* weiter unten.  
+ Der Name der Eigenschaft, auf die Ergebnisse beschränkt werden sollen. Wenn Sie beispielsweise eine Einschränkung basierend auf der Sitzungs-ID vornehmen möchten, muss für *filter_property_name**SessionId* angegeben werden. Eine Liste mit möglichen Werten für *filter_property_name* finden Sie unter *property_name* weiter unten.  
   
  *value*  
  Ein Wert, der für *filter_property_name* ausgewertet werden soll. Der Werttyp muss mit dem Eigenschaftentyp übereinstimmen. Wenn beispielsweise der Eigenschaftentyp „decimal“ ist, muss der Typ von *value* „decimal“ sein.  
@@ -106,7 +107,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 ### <a name="a-creating-a-diagnostics-session"></a>A. Erstellen einer Diagnosesitzung  
  In diesem Beispiel wird eine Diagnosesitzung erstellt, um Statistiken zur Leistung der Datenbank-Engine aufzuzeichnen. Im Beispiel wird eine Diagnosesitzung erstellt, die auf Ausführungs- und Endereignisse von Engine-Abfragen sowie ein blockierendes DMS-Ereignis achtet. Zurückgegeben werden der Befehlstext, der Computername, die Anforderungs-ID (Abfrage-ID) und die Sitzung, in der das Ereignis erstellt wurde.  
   
-```  
+```sql  
 CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'  
 <Session>  
    <MaxItemCount>100</MaxItemCount>  
@@ -130,13 +131,13 @@ CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'
   
  Führen Sie nach dem Erstellen der Diagnosesitzung eine Abfrage aus.  
   
-```  
+```sql  
 SELECT COUNT(EmployeeKey) FROM AdventureWorksPDW2012..FactSalesQuota;  
 ```  
   
  Zeigen Sie dann die Ergebnisse der Diagnosesitzung an, indem Sie diese über das sysdiag-Schema auswählen.  
   
-```  
+```sql  
 SELECT * FROM master.sysdiag.MYDIAGSESSION;  
 ```  
   
@@ -146,14 +147,14 @@ SELECT * FROM master.sysdiag.MYDIAGSESSION;
   
  Wenn Sie mit der Diagnosesitzung fertig sind, löschen Sie diese mithilfe des Befehls **DROP DIAGNOSTICS**.  
   
-```  
+```sql  
 DROP DIAGNOSTICS SESSION MYDIAGSESSION;  
 ```  
   
 ### <a name="b-alternative-diagnostic-session"></a>B. Alternative Diagnosesitzung  
  Ein zweites Beispiel mit etwas anderen Eigenschaften.  
   
-```  
+```sql  
 -- Determine the session_id of your current session  
 SELECT TOP 1 session_id();  
 -- Replace \<*session_number*> in the code below with the numbers in your session_id  
@@ -184,7 +185,7 @@ CREATE DIAGNOSTICS SESSION PdwOptimizationDiagnostics AS N'
   
  Führen Sie eine Abfrage wie z.B folgende aus:  
   
-```  
+```sql  
 USE ssawPDW;  
 GO  
 SELECT * FROM dbo.FactFinance;  
@@ -192,7 +193,7 @@ SELECT * FROM dbo.FactFinance;
   
  Die folgende Abfrage gibt die Autorisierungszeitsteuerung zurück:  
   
-```  
+```sql  
 SELECT *   
 FROM master.sysdiag.PdwOptimizationDiagnostics   
 ORDER BY DateTimePublished;  
@@ -200,7 +201,7 @@ ORDER BY DateTimePublished;
   
  Wenn Sie mit der Diagnosesitzung fertig sind, löschen Sie diese mithilfe des Befehls **DROP DIAGNOSTICS**.  
   
-```  
+```sql  
 DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;  
 ```  
   

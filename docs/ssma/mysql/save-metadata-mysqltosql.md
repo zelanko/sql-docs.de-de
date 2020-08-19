@@ -1,4 +1,5 @@
 ---
+description: Speichern von Metadaten (MySqlToSql)
 title: Metadaten speichern (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9bc6273f-e8b1-430b-81a5-14330a783562
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c032cfd8707524e64b68f6fcb7cd0223342602bb
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b19ba78707fb596fde5ab73f04003a9d2d3feb9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418456"
 ---
 # <a name="save-metadata--mysqltosql"></a>Speichern von Metadaten (MySqlToSql)
 Im Dialogfeld **Metadaten speichern** werden Sie aufgefordert, Metadaten vor dem Speichern in das SSMA-Projekt zu laden. Auf diese Weise können Sie eine komplette Projektdatei verwenden, die Sie offline verwenden und an andere Personen wie z. b. technische Supportmitarbeiter senden können.  
@@ -33,7 +34,7 @@ SSMA lädt bei Bedarf Metadaten in das Projekt. Metadaten werden automatisch gel
 **Alles markieren**  
 Wählt alle aufgelisteten Datenbanken aus.  
   
-**Clear** (Deaktiviert)  
+**Clear**  
 Löscht das Kontrollkästchen für alle Datenbanken mit fehlenden Metadaten. Sie können das Kontrollkästchen nicht deaktivieren, wenn eine Metadaten geladen wurde.  
   
 **Speichern**  

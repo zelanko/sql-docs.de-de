@@ -1,4 +1,5 @@
 ---
+description: Ersten Schritte mit SSMA für die Sybase-Konsole (sybasedesql)
 title: Ersten Schritte mit SSMA für die Sybase-Konsole (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/30/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a577a2b187112dd0b80cedf50d42d13112208970
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e59cb5565ca518dc927f29e684401bf8fc6d5822
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418316"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Ersten Schritte mit SSMA für die Sybase-Konsole (sybasedesql)
 In diesem Abschnitt wird das Verfahren zum Starten von und ersten Schritten mit SSMA für die Sybase-Konsolenanwendung beschrieben. Auch hier sind die Konventionen aufgeführt, die in einem typischen Ausgabefenster der SSMA-Konsole verwendet werden.  

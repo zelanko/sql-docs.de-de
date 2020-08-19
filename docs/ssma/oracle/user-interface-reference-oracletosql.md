@@ -1,4 +1,5 @@
 ---
+description: Referenz zur Benutzeroberfläche (OracleToSQL)
 title: Referenz zur Benutzeroberfläche (oracletosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 160d4784-d108-4705-932d-763558912804
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: f0fa992181878a185fc6ba12719f3b2edc5fa9ae
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2d234e907cc8839219b942cc841aed02f45e3fbe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418416"
 ---
 # <a name="user-interface-reference-oracletosql"></a>Referenz zur Benutzeroberfläche (OracleToSQL)
 Dieser Abschnitt enthält Hilfe Themen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für Oracle.  
@@ -23,7 +24,7 @@ Dieser Abschnitt enthält Hilfe Themen für [!INCLUDE[ssNoVersion](../../include
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 In der folgenden Tabelle sind die SSMA-Dialogfelder aufgeführt:  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-|-|  
 |[Erweiterte Objektauswahl &#40;oracleto SQL-&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|Verwenden Sie das Dialogfeld **Erweiterte Objektauswahl** , um mithilfe von Filterkriterien Datenbankobjekte zu suchen, und wählen Sie diese Objekte aus, oder löschen Sie Sie.|  
 |[Bewertungsbericht &#40;oracleto SQL-&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|Verwenden Sie den Bewertungsbericht, um die Ergebnisse der Konvertierung von Oracle-Objekten in die [!INCLUDE[tsql](../../includes/tsql-md.md)] Syntax anzuzeigen und um die Zeit und die Komplexität einer Migration zu einzuschätzen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -31,7 +32,7 @@ In der folgenden Tabelle sind die SSMA-Dialogfelder aufgeführt:
 |[Herstellen einer Verbindung mit SQL Server &#40;oracleto SQL-&#41;](../../ssma/oracle/connect-to-sql-server-oracletosql.md)|Verwenden Sie das Dialogfeld **mit SQL Server verbinden** , um eine Verbindung mit der Instanz von herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , zu der Sie migrieren möchten.|  
 |[Daten Migrationsbericht &#40;oracleto SQL-&#41;](../../ssma/oracle/data-migration-report-oracletosql.md)|Zeigt die Ergebnisse der Migration von Daten aus Oracle in an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Einstellungen für die Datenmigration](data-migration-settings-oracletosql.md)|Verwenden Sie die Registerkarte **Einstellungen für Erweiterte Datenmigration** , um benutzerdefinierte Abfragen für die Datenmigration zu schreiben.|  
-|[Typzuordnung &#40;oracledesql-&#41;bearbeiten](../../ssma/oracle/edit-type-mapping-oracletosql.md)|Verwenden Sie die Dialogfelder **neue Typzuordnung** oder **Typzuordnung bearbeiten** , um die Zuordnung von Datentypen zwischen den Quell-und Ziel Datenbanken und Datenbankobjekten zu erstellen oder zu ändern.|  
+|[Typzuordnung &#40;oracledesql-&#41;bearbeiten ](../../ssma/oracle/edit-type-mapping-oracletosql.md)|Verwenden Sie die Dialogfelder **neue Typzuordnung** oder **Typzuordnung bearbeiten** , um die Zuordnung von Datentypen zwischen den Quell-und Ziel Datenbanken und Datenbankobjekten zu erstellen oder zu ändern.|  
 |[Globale Einstellungen &#40;Editor&#41; &#40;oracledesql-&#41;](../../ssma/oracle/global-settings-editor-oracletosql.md)|Mithilfe der Seite Editor des Dialog Felds **globale Einstellungen** können Sie Optionen für den Code-Editor konfigurieren.|  
 |[Dialogfelder für globale Einstellungen &#40;&#41;  &#40;oracletosql-&#41;](../../ssma/oracle/global-settings-dialogs-oracletosql.md)|Im Dialogfeld **globale Einstellungen** können Sie auf der Seite Dialogfelder die Standardeinstellungen für Dialogfeld und Warnungen konfigurieren.|  
 |[Globale Einstellungen &#40;Protokollierung&#41; &#40;oracleto SQL-&#41;](../../ssma/oracle/global-settings-logging-oracletosql.md)|Verwenden Sie die Seite Protokollierung des Dialog Felds **globale Einstellungen** , um die Protokollierung zu konfigurieren.|  

@@ -1,4 +1,5 @@
 ---
+description: INDEXPROPERTY (Transact-SQL)
 title: INDEXPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/26/2019
@@ -20,12 +21,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: deeed76ed033531695b321c3e185e03dd988739c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 065b792b1e9edec5bc8e1b12859e9152797ebfb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417366"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,15 +48,15 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Ein Ausdruck, der die Objekt-ID der Tabelle oder indizierten Sicht enthält, für die Indexeigenschafteninformationen bereitgestellt werden sollen. *object_id* ist vom Datentyp **int**.  
   
  *index_or_statistics_name*  
- Ein Ausdruck, der den Namen des Index oder der Statistik enthält, für den bzw. die Eigenschafteninformationen zurückgegeben werden sollen. *index_or_statistics_name* entspricht **nvarchar(128)** .  
+ Ein Ausdruck, der den Namen des Index oder der Statistik enthält, für den bzw. die Eigenschafteninformationen zurückgegeben werden sollen. *index_or_statistics_name* entspricht **nvarchar(128)**.  
   
  *property*  
- Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft enthält. *property* ist vom Datentyp **varchar(128)** . Die folgenden Werte sind möglich:  
+ Ein Ausdruck, der den Namen der zurückzugebenden Datenbankeigenschaft enthält. *property* ist vom Datentyp **varchar(128)**. Die folgenden Werte sind möglich:  
   
 > [!NOTE]  
 >  Wenn nicht anders angegeben, wird NULL zurückgegeben, wenn *property* kein gültiger Eigenschaftsname ist, *object_ID* keine gültige Objekt-ID ist, *object_ID* ein nicht unterstützter Objekttyp für die angegebene Eigenschaft ist oder der Aufrufer nicht über die Berechtigung zum Anzeigen der Metadaten des Objekts verfügt.  
   
-|Eigenschaft|BESCHREIBUNG|value|  
+|Eigenschaft|BESCHREIBUNG|Wert|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|Schachtelungstiefe des Indexes.|Anzahl von Indexebenen.<br /><br /> NULL = Ungültiger XML-Index oder ungültige Eingabe.|  
 |**IndexFillFactor**|Der beim Erstellen oder letzten Neuerstellen des Indexes verwendete Füllfaktor.|Füllfaktor|  
@@ -63,15 +64,15 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsAutoStatistics**|Statistiken wurden durch die Option AUTO_CREATE_STATISTICS von ALTER DATABASE erzeugt.|1 = True<br /><br /> 0 = False oder XML-Index.|  
 |**IsClustered**|Der Index ist gruppiert.|1 = True<br /><br /> 0 = False oder XML-Index.|  
 |**IsDisabled**|Der Index ist deaktiviert.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsFulltextKey**|Index ist der Schlüssel für die Volltext- und semantische Indizierung für eine Tabelle.|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> 1 = True<br /><br /> 0 = False oder XML-Index.<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsFulltextKey**|Index ist der Schlüssel für die Volltext- und semantische Indizierung für eine Tabelle.|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> 1 = True<br /><br /> 0 = False oder XML-Index.<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**IsHypothetical**|Der Index ist hypothetisch und kann nicht direkt als Datenzugriffspfad verwendet werden. Hypothetische Indizes enthalten Statistiken auf Spaltenebene und werden vom Datenbankoptimierungsratgeber verwaltet und verwendet.|1 = True<br /><br /> 0 = False oder XML-Index<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsPadIndex**|Der Index gibt den Speicherplatz an, der auf jedem inneren Knoten freigelassen werden soll.|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> 1 = True<br /><br /> 0 = False oder XML-Index.|  
-|**IsPageLockDisallowed**|Der Wert für Seitensperren wird von der Option ALLOW_PAGE_LOCKS von ALTER INDEX festgelegt.|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> 1 = Seitensperren sind nicht zulässig.<br /><br /> 0 = Seitensperren sind zulässig.<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**IsRowLockDisallowed**|Der Wert für Zeilensperren wird von der Option ALLOW_ROW_LOCKS von ALTER INDEX festgelegt.|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> 1 = Zeilensperren sind nicht zulässig.<br /><br /> 0 = Zeilensperren sind zulässig.<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsPadIndex**|Der Index gibt den Speicherplatz an, der auf jedem inneren Knoten freigelassen werden soll.|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> 1 = True<br /><br /> 0 = False oder XML-Index.|  
+|**IsPageLockDisallowed**|Der Wert für Seitensperren wird von der Option ALLOW_PAGE_LOCKS von ALTER INDEX festgelegt.|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> 1 = Seitensperren sind nicht zulässig.<br /><br /> 0 = Seitensperren sind zulässig.<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**IsRowLockDisallowed**|Der Wert für Zeilensperren wird von der Option ALLOW_ROW_LOCKS von ALTER INDEX festgelegt.|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> 1 = Zeilensperren sind nicht zulässig.<br /><br /> 0 = Zeilensperren sind zulässig.<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**IsStatistics**|*index_or_statistics_name* stellt Statistiken dar, die durch die CREATE STATISTICS-Anweisung oder die AUTO_CREATE_STATISTICS-Option von ALTER DATABASE erstellt werden.|1 = True<br /><br /> 0 = False oder XML-Index.|  
 |**IsUnique**|Der Index ist eindeutig.|1 = True<br /><br /> 0 = False oder XML-Index.|  
-|**IsColumnstore**|Index ist ein speicheroptimierter xVelocity-columnstore-Index.|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> 1 = True<br /><br /> 0 = False| 
-|**IsOptimizedForSequentialKey**|Für den Index wurde die Optimierung der Einfügevorgängen für die letzte Seite aktiviert.|**Gilt für**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher. <br><br>1 = True<br><br>0 = False| 
+|**IsColumnstore**|Index ist ein speicheroptimierter xVelocity-columnstore-Index.|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsOptimizedForSequentialKey**|Für den Index wurde die Optimierung der Einfügevorgängen für die letzte Seite aktiviert.|**Gilt für**:  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher. <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  

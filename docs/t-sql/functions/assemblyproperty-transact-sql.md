@@ -1,4 +1,5 @@
 ---
+description: ASSEMBLYPROPERTY (Transact-SQL)
 title: ASSEMBLYPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/24/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 50fd500a3ce7248b60e423df662b5d9eeda2cef5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9e466b8d66760704ce7ee90028210dfa5dfabc22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417476"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ Der Name der Assembly.
 *property_name*  
 Der Name einer Eigenschaft, zu der Informationen abgerufen werden sollen. *property_name* kann einen der folgenden Werte enthalten:
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |---|---|
 |**CultureInfo**|Gebietsschema der Assembly.|  
 |**PublicKey**|Öffentlicher Schlüssel oder öffentlicher Schlüsseltoken der Assembly.|  

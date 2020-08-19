@@ -1,4 +1,5 @@
 ---
+description: STBuffer (geography-Datentyp)
 title: STBuffer (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 55160039220f949f68837e71d75b11e916839378
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9e869aa4f5f5056ef29968b6ad0d7446b0849a25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417046"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (geography-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt ein geography-Objekt zurück, dass die Vereinigung aller Punkte darstellt, deren Abstand zu einer Instanz von **geography** kleiner oder gleich einem angegebenen Wert ist.  
   
- Diese geography-Datentypmethode unterstützt Instanzen von **FullGlobe** oder räumliche Instanzen, die größer als eine Hemisphäre sind.  
+ Diese geography -Datentypmethode unterstützt Instanzen von **FullGlobe** oder räumliche Instanzen, die größer als eine Hemisphäre sind.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (Typzuordnung) (MySqlToSql)
 title: Projekteinstellungen (Typzuordnung) (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 79c86ee63638dcc520aa9bb590b8a616172cb1e4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a6f4bc99caceeb7011c932c86e636304941c459c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418486"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Projekteinstellungen (Typzuordnung) (MySqlToSql)
 Mit den Projekteinstellungen für die Typzuordnung können Sie Standardtypmappings für das SSMA-Projekt festlegen.  
@@ -25,7 +26,7 @@ Die Typzuordnung ist in den Dialogfeldern Projekteinstellungen und Standard Proj
   
 -   Verwenden Sie das Dialogfeld Standard Projekteinstellungen, um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die typzuordnungseinstellungen zuzugreifen, wählen Sie im Menü Extras die Option Standard Projekteinstellungen aus, wählen Sie den Migrations Projekttyp, für den die Einstellungen angezeigt werden müssen/Changed in der Dropdown Liste **Migrations Ziel Version** aus, und klicken Sie im linken Bereich auf Typzuordnung.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ##### <a name="source-type"></a>Quellentyp  
 Dabei handelt es sich um den MySQL-Datentyp, der dem Datentyp der Zieldatenbank zugeordnet werden muss.  
@@ -39,7 +40,7 @@ Klicken Sie hier, um der Zuordnungsliste einen Datentyp hinzuzufügen.
 ##### <a name="edit"></a>Bearbeiten  
 Klicken Sie hierauf, um den ausgewählten Datentyp in der Liste Zuordnung zu bearbeiten.  
   
-##### <a name="remove"></a>Entfernen  
+##### <a name="remove"></a>Remove (Entfernen)  
 Klicken Sie hierauf, um die ausgewählte Datentyp Zuordnung aus der Liste Zuordnung zu entfernen.  
   
 ##### <a name="reset-to-default"></a>Standard wiederherstellen  
@@ -199,7 +200,7 @@ Klicken Sie hier, um der Zuordnungsliste einen Datentyp hinzuzufügen.
 ##### <a name="edit"></a>Bearbeiten  
 Klicken Sie hierauf, um einen Datentyp in der Liste Zuordnung zu bearbeiten.  
   
-##### <a name="remove"></a>Entfernen  
+##### <a name="remove"></a>Remove (Entfernen)  
 Klicken Sie hierauf, um die ausgewählte Datentyp Zuordnung aus der Liste Zuordnung zu entfernen.  
   
 ##### <a name="reset-to-default"></a>Standard wiederherstellen  

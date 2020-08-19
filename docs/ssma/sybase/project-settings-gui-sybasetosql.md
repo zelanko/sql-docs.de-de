@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (GUI) (SybaseToSQL)
 title: Projekteinstellungen (GUI) (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c709be1a8f455e4d2e50f60c3b31ba182192803c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2361f480d5f148140caa8e4fcbcb4d22374d9e04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418256"
 ---
 # <a name="project-settings-gui-sybasetosql"></a>Projekteinstellungen (GUI) (SybaseToSQL)
 Mit den Einstellungen des GUI-Projekts können Sie konfigurieren, wie Daten auf der Registerkarte " **Daten** " angezeigt werden und ob der Bewertungsbericht nach der Konvertierung angezeigt werden soll.  
@@ -25,7 +26,7 @@ Der Bereich GUI ist in den Dialogfeldern **Projekteinstellungen** und **Standard
   
 -   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Optionen für die Benutzeroberfläche für alle Projekte festzulegen. Um auf die GUI-Einstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus, wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt oder geändert werden müssen, und klicken Sie dann unten im linken Bereich auf **GUI** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Maximale Zeilennummer für Quelle**  
 Konfiguriert die Anzahl der Daten Zeilen, die auf der Registerkarte **Daten** für die ausgewählte Quell Tabelle angezeigt werden.  
   

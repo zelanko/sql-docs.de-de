@@ -1,4 +1,5 @@
 ---
+description: SWITCHOFFSET (Transact-SQL)
 title: SWITCHOFFSET (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/02/2015
@@ -24,12 +25,12 @@ ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d6b5595e0a6489919768ab5a4ba9e21d04f7837
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f8cffc510ca7d089be5326abf3d3823807b416e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417196"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
 
 ## <a name="arguments"></a>Argumente
  *DATETIMEOFFSET*  
- Ein Ausdruck, der in einen **datetimeoffset(n)** -Wert aufgelöst werden kann.  
+ Ein Ausdruck, der in einen **datetimeoffset(n)**-Wert aufgelöst werden kann.  
   
  *time_zone*  
  Eine Zeichenfolge im Format [+|-]TZH:TZM oder eine ganze Zahl mit Vorzeichen (Minuten), die den Zeitzonenoffset darstellt und von der vorausgesetzt wird, dass sie die Sommerzeit berücksichtigt und entsprechend angepasst ist.  
@@ -58,7 +59,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
 ## <a name="return-type"></a>Rückgabetyp  
  **datetimeoffset** mit der Genauigkeit von Bruchteilen des *DATETIMEOFFSET*-Arguments.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie SWITCHOFFSET, um einen **datetimeoffset**-Wert in einem Zeitzonenoffset auszuwählen, der sich vom ursprünglich gespeicherten Zeitzonenoffset unterscheidet. Der gespeicherte *time_zone*-Wert wird nicht von SWITCHOFFSET aktualisiert.  
   
  SWITCHOFFSET kann verwendet werden, um eine **datetimeoffset**-Spalte zu aktualisieren.  

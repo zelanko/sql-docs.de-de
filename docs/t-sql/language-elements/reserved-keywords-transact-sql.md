@@ -1,4 +1,5 @@
 ---
+description: Reservierte Schlüsselwörter (Transact-SQL)
 title: Reservierte Schlüsselwörter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f963294781eea57c7957000d0daa1d149be3cd89
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 70b2e52af1ae87f4cacdb2189609c3ead2e3bc4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417106"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Reservierte Schlüsselwörter (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +68,7 @@ ms.locfileid: "87396351"
 :::row-end:::  
 :::row:::
     :::column:::
-        AND
+        UND
     :::column-end:::
     :::column:::
         FILLFACTOR
@@ -221,7 +222,7 @@ ms.locfileid: "87396351"
 :::row-end:::  
 :::row:::
     :::column:::
-        CHECK
+        KONTROLLKÄSTCHEN
     :::column-end:::
     :::column:::
         IDENTITY_INSERT
@@ -601,7 +602,7 @@ ms.locfileid: "87396351"
         oder
     :::column-end:::
     :::column:::
-        VALUES
+        WERTE
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -628,7 +629,7 @@ ms.locfileid: "87396351"
 :::row-end:::  
 :::row:::
     :::column:::
-        END
+        ENDE
     :::column-end:::
     :::column:::
         OVER
@@ -770,7 +771,7 @@ Die folgende Tabelle enthält die für **Azure SQL Data Warehouse** exklusiv res
 :::row-end:::  
 :::row:::
     :::column:::
-        **ADD**
+        **HINZUFÜGEN**
     :::column-end:::
     :::column:::
         **EXTERNAL**
@@ -1944,7 +1945,7 @@ Die folgende Tabelle enthält die für **Azure SQL Data Warehouse** exklusiv res
         MATCH
     :::column-end:::
     :::column:::
-        STATE
+        STATUS
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2175,7 +2176,7 @@ Die folgende Tabelle enthält die für **Azure SQL Data Warehouse** exklusiv res
         OCCURRENCES_REGEX
     :::column-end:::
     :::column:::
-        TRUE
+        true
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2455,7 +2456,7 @@ Die folgende Tabelle enthält die für **Azure SQL Data Warehouse** exklusiv res
 :::row-end:::  
 :::row:::
     :::column:::
-        FALSE
+        false
     :::column-end:::
     :::column:::
         READS

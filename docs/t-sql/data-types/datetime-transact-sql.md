@@ -1,4 +1,5 @@
 ---
+description: datetime (Transact-SQL)
 title: datetime (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/23/2017
@@ -22,12 +23,12 @@ ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fdd491296c9ba93e12421f46964016c0689a65c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 689a494e12f9b31f88d3ea060fe2c1b4a5fb2a3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417716"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ Definiert ein Datum, das mit einer Uhrzeit mit Sekundenbruchteilen kombiniert is
   
 ## <a name="datetime-description"></a>Beschreibung von datetime  
   
-|Eigenschaft|value|  
+|Eigenschaft|Wert|  
 |---|---|
 |Syntax|**datetime**|  
 |Verwendung|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
@@ -49,7 +50,7 @@ Definiert ein Datum, das mit einer Uhrzeit mit Sekundenbruchteilen kombiniert is
 |Zeitzonenoffsetbereich|Keine|  
 |Elementbereiche|Bei YYYY handelt es sich um vier Ziffern von 1753 bis 9999, die ein Jahr darstellen.<br /><br /> Bei MM handelt es sich um zwei Ziffern im Bereich von 01 bis 12, die im angegebenen Jahr einen Monat darstellen.<br /><br /> Bei DD handelt es sich um zwei Ziffern im Bereich von 01 bis 31, die im angegebenen Monat einen Tag darstellen.<br /><br /> Bei hh handelt es sich um zwei Ziffern im Bereich von 00 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Sekunde darstellen.<br /><br /> Bei n* handelt es sich um drei Ziffern im Bereich von 0 bis 999, die die Sekundenbruchteile darstellen.|  
 |Zeichenlänge|Mindestens 19 Positionen bis maximal 23 Positionen|  
-|Speichergröße|8 Byte|  
+|Speichergröße|8 Bytes|  
 |Genauigkeit|Gerundet in Inkrementen von 0,000, 0,003 oder 0,007 Sekunden|  
 |Standardwert|1900-01-01 00:00:00|  
 |Kalender|Gregorianisch (schließt nicht den vollständigen Bereich von Jahren ein)|  
@@ -113,7 +114,7 @@ SELECT @datetime AS '@datetime', @date AS '@date';
 --2016-12-21 00:00:00.000 2016-12-21  
 ```  
   
-Beim Konvertieren von **time(n)** wird die Zeitkomponente kopiert, und die Datumskomponente wird auf „1900-01-01“ festgelegt. Wenn die Genauigkeit des **time(n)** -Werts größer ist als drei Sekundenbruchteile, wird der Wert gekürzt, damit er passt. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime`-Wert.  
+Beim Konvertieren von **time(n)** wird die Zeitkomponente kopiert, und die Datumskomponente wird auf „1900-01-01“ festgelegt. Wenn die Genauigkeit des **time(n)**-Werts größer ist als drei Sekundenbruchteile, wird der Wert gekürzt, damit er passt. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime`-Wert.  
   
 ```sql
 DECLARE @time time(4) = '12:10:05.1237';  
@@ -141,7 +142,7 @@ SELECT @datetime AS '@datetime', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.000 2016-12-01 12:32:00  
 ```  
   
-Wenn die Konvertierung von **datetimeoffset(n)** erfolgt, werden die Datums- und Uhrzeitkomponenten kopiert. Die Zeitzone wird abgeschnitten. Wenn die Sekundenbruchteil-Genauigkeit des **datetimeoffset(n)** -Werts um mehr als drei Stellen abweicht, wird der Wert gekürzt. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `datetimeoffset(4)`-Werts in einen `datetime`-Wert.  
+Wenn die Konvertierung von **datetimeoffset(n)** erfolgt, werden die Datums- und Uhrzeitkomponenten kopiert. Die Zeitzone wird abgeschnitten. Wenn die Sekundenbruchteil-Genauigkeit des **datetimeoffset(n)**-Werts um mehr als drei Stellen abweicht, wird der Wert gekürzt. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `datetimeoffset(4)`-Werts in einen `datetime`-Wert.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1968-10-23 12:45:37.1234 +10:0';  
@@ -155,7 +156,7 @@ SELECT @datetime AS '@datetime', @datetimeoffset AS '@datetimeoffset';
 --1968-10-23 12:45:37.123 1968-10-23 12:45:37.1237 +01:0   
 ```  
   
-Wenn die Konvertierung von **datetime2(n)** erfolgt, werden Datum und Uhrzeit kopiert. Wenn die Sekundenbruchteil-Genauigkeit des **datetime2(n)** -Werts um mehr als drei Stellen abweicht, wird der Wert gekürzt. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `datetime2(4)`-Werts in einen `datetime`-Wert.  
+Wenn die Konvertierung von **datetime2(n)** erfolgt, werden Datum und Uhrzeit kopiert. Wenn die Sekundenbruchteil-Genauigkeit des **datetime2(n)**-Werts um mehr als drei Stellen abweicht, wird der Wert gekürzt. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `datetime2(4)`-Werts in einen `datetime`-Wert.  
   
 ```sql
 DECLARE @datetime2 datetime2(4) = '1968-10-23 12:45:37.1237';  

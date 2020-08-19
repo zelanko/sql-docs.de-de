@@ -1,4 +1,5 @@
 ---
+description: DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 title: DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2575bedc4c967bb4fc3227981cd52aca115a8d75
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5bfe3fd136b5bed09b0de6dfcd35ff07425dbb46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110656"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416596"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -45,7 +46,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
  *key_name*  
  Der Name des CEK, der aus der Datenbank entfernt werden soll.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Bemerkungen
  CEKs können nicht entfernt werden, wenn sie verwendet werden, um eine Spalte in der Datenbank zu verschlüsseln. Alle Spalten, die den CEK verwenden, müssen zunächst entfernt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

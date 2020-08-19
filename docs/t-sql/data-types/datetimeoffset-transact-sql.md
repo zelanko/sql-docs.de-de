@@ -1,4 +1,5 @@
 ---
+description: datetimeoffset (Transact-SQL)
 title: datetimeoffset (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/23/2017
@@ -23,12 +24,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 274af7a5c9a1e8f12f661305e1e2d1206bf64664
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d58c0b86f5a3d46764d3be1e70444139b599172d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417666"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 
@@ -38,12 +39,12 @@ Definiert ein auf dem 24-Stunden-Format basierendes Datum, das mit einer Uhrzeit
 
 ## <a name="datetimeoffset-description"></a>Beschreibung von datetimeoffset
   
-|Eigenschaft|value|  
+|Eigenschaft|Wert|  
 |---|---|
 |Syntax|**datetimeoffset** [ (*Sekundenbruchteil-Genauigkeit*) ]|  
 |Verwendung|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |Standardmäßige Formate der Zeichenfolgenliterale (wird für Downlevelclients verwendet)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt „Abwärtskompatibilität für Downlevelclients“.|  
-|Datumsbereich|0001-01-01 bis 9999-12-31<br /><br /> 1\. Januar 1 n. Chr. bis 31. Dezember 9999|  
+|Datumsbereich|0001-01-01 bis 9999-12-31<br /><br /> 1. Januar 1 n. Chr. bis 31. Dezember 9999|  
 |Uhrzeitbereich|00:00:00 bis 23:59:590,9999999|  
 |Zeitzonenoffsetbereich|-14:00 bis +14:00|  
 |Elementbereiche|Bei YYYY handelt es sich um vier Ziffern im Bereich von 0001 bis 9999, die ein Jahr darstellen.<br /><br /> Bei MM handelt es sich um zwei Ziffern im Bereich von 01 bis 12, die im angegebenen Jahr einen Monat darstellen.<br /><br /> Bei DD handelt es sich um zwei Ziffern im Bereich von 01 bis 31, die im angegebenen Monat einen Tag darstellen.<br /><br /> Bei hh handelt es sich um zwei Ziffern im Bereich von 00 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Sekunde darstellen.<br /><br /> Bei n* handelt es sich um bis zu sieben Ziffern im Bereich von 0 bis 9999999, die die Sekundenbruchteile darstellen.<br /><br /> Bei hh handelt es sich um zwei Ziffern im Bereich von -14 bis +14. <br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 00 bis 59.|  
@@ -131,7 +132,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-Wenn ein Wert in **time(n)** konvertiert wird, werden die Stunde, Minute, Sekunde und die Sekundenbruchteile kopiert. Der Zeitzonenwert wird abgeschnitten. Wenn die Genauigkeit des **datetimeoffset(n)** -Werts höher als die Genauigkeit des **time(n)** -Werts ist, wird der Wert aufgerundet. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `datetimeoffset(4)`-Werts in einen `time(3)`-Wert.
+Wenn ein Wert in **time(n)** konvertiert wird, werden die Stunde, Minute, Sekunde und die Sekundenbruchteile kopiert. Der Zeitzonenwert wird abgeschnitten. Wenn die Genauigkeit des **datetimeoffset(n)**-Werts höher als die Genauigkeit des **time(n)**-Werts ist, wird der Wert aufgerundet. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `datetimeoffset(4)`-Werts in einen `time(3)`-Wert.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -149,7 +150,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @time AS 'time';
   
 ```  
   
-Wenn ein Wert in **datetime** konvertiert wird, werden die Datums- und Zeitwerte kopiert, und die Zeitzone wird abgeschnitten. Wenn die Sekundenbruchteil-Genauigkeit des **datetimeoffset(n)** -Werts um mehr als drei Stellen abweicht, wird der Wert gekürzt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `datetimeoffset(4)`-Werts in einen `datetime`-Wert.
+Wenn ein Wert in **datetime** konvertiert wird, werden die Datums- und Zeitwerte kopiert, und die Zeitzone wird abgeschnitten. Wenn die Sekundenbruchteil-Genauigkeit des **datetimeoffset(n)**-Werts um mehr als drei Stellen abweicht, wird der Wert gekürzt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `datetimeoffset(4)`-Werts in einen `datetime`-Wert.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -181,7 +182,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-Bei Konvertierungen in **datetime2(n)** werden das Datum und die Zeit in einen **datetime2**-Wert konvertiert, und die Zeitzone wird abgeschnitten. Wenn die Sekundenbruchteil-Genauigkeit des **datetime2(n)** -Werts höher ist als die Genauigkeit des **datetimeoffset(n)** -Werts, wird der Wert gekürzt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `datetimeoffset(4)`-Werts in einen `datetime2(3)`-Wert.
+Bei Konvertierungen in **datetime2(n)** werden das Datum und die Zeit in einen **datetime2**-Wert konvertiert, und die Zeitzone wird abgeschnitten. Wenn die Sekundenbruchteil-Genauigkeit des **datetime2(n)**-Werts höher ist als die Genauigkeit des **datetimeoffset(n)**-Werts, wird der Wert gekürzt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `datetimeoffset(4)`-Werts in einen `datetime2(3)`-Wert.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1912-10-25 12:24:32.1277 +10:0';  
@@ -236,7 +237,7 @@ SELECT
 |Datentyp|Output|  
 |---|---|
 |**Time**|12:35:29. 1234567|  
-|**Date**|2007-05-08|  
+|**Datum**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
 |**Datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  

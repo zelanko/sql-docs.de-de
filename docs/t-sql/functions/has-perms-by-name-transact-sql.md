@@ -1,4 +1,5 @@
 ---
+description: HAS_PERMS_BY_NAME (Transact-SQL)
 title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/29/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7ca0bb9b4fb03cc3f567c6c642a3593d23963993
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2fa743ae09dc8a09a8edbc8e4a6e3b5cf8415db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417346"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Der Name des sicherungsfähigen Elements. Wenn das sicherungsfähige Element der Server selbst ist, sollte dieser Wert auf NULL festgelegt werden. *securable* ist ein Skalarausdruck vom Typ **sysname**. Es gibt keinen Standardwert.  
   
  *securable_class*  
- Der Name der Klasse des sicherungsfähigen Elements, für das die Berechtigung getestet wird. *securable_class* ist ein Skalarausdruck vom Typ **nvarchar(60)** .  
+ Der Name der Klasse des sicherungsfähigen Elements, für das die Berechtigung getestet wird. *securable_class* ist ein Skalarausdruck vom Typ **nvarchar(60)**.  
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] muss das securable_class-Argument auf einen der folgenden Werte festgelegt werden: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** oder **USER**.  
   
@@ -62,10 +63,10 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Ein optionaler Skalarausdruck vom Typ **sysname**, der den Namen der sicherungsfähigen untergeordneten Entität darstellt, mit der die Berechtigung getestet wird. Die Standardeinstellung ist NULL.  
   
 > [!NOTE]  
->  In den Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und höher dürfen in untergeordneten sicherungsfähigen Elementen keine eckigen Klammern in der Form **'[** _sub name_ **]'** verwendet werden. Verwenden Sie stattdessen **'** _Name des untergeordneten sicherungsfähigen Elements_ **'** .  
+>  In den Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und höher dürfen in untergeordneten sicherungsfähigen Elementen keine eckigen Klammern in der Form **'[**_sub name_**]'** verwendet werden. Verwenden Sie stattdessen **'** _Name des untergeordneten sicherungsfähigen Elements_ **'** .  
   
  *sub-securable_class*  
- Ein optionaler Skalarausdruck vom Datentyp **nvarchar(60)** , der die Klasse der sicherungsfähigen untergeordneten Entität darstellt, für die die Berechtigung getestet wird. Die Standardeinstellung ist NULL.  
+ Ein optionaler Skalarausdruck vom Datentyp **nvarchar(60)**, der die Klasse der sicherungsfähigen untergeordneten Entität darstellt, für die die Berechtigung getestet wird. Die Standardeinstellung ist NULL.  
   
  Das sub-securable_class-Argument ist in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] nur gültig, wenn das securable_class-Argument auf **OBJECT** festgelegt ist. Wenn das securable_class-Argument auf **OBJECT** festgelegt ist, muss das sub-securable_class-Argument auf **COLUMN** festgelegt werden.  
   
