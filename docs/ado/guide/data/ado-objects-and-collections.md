@@ -1,4 +1,5 @@
 ---
+description: ADO-Objekte und -Collections
 title: ADO-Objekte und-Sammlungen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1d4901384a8e4b1b297bc8459e52a2f345f7ead
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cbebf1e910fd749ff4f582c57da6c8c2656e9f61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453762"
 ---
 # <a name="ado-objects-and-collections"></a>ADO-Objekte und -Collections
 ADO besteht aus den folgenden neun Objekten und vier Auflistungen.  
@@ -38,5 +39,5 @@ ADO besteht aus den folgenden neun Objekten und vier Auflistungen.
 |**Parameter** Sammlung|Enthält alle **Parameter** Objekte eines **Befehls** Objekts.|  
 |**Fehler** Sammlung|Enthält alle Fehler Objekte, die als Reaktion auf einen einzelnen Anbieter **Fehler** erstellt wurden.|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)

@@ -1,4 +1,5 @@
 ---
+description: KEYSET-Cursor
 title: Keysetcursor | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3df797be676961227687117e1fd7bdb748370efd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea25d5c85969b71836fec30085dd9a626a18d40a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453172"
 ---
 # <a name="keyset-cursors"></a>KEYSET-Cursor
 Der Keysetcursor bietet Funktionen zwischen einem statischen und einem dynamischen Cursor, um Änderungen zu erkennen. Wie ein statischer Cursor ermittelt er nicht immer Änderungen an der Mitgliedschaft und Reihenfolge des Resultsets. Wie ein dynamischer Cursor ermittelt er Änderungen an den Werten der Zeilen im Resultset.  

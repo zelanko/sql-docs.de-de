@@ -1,4 +1,5 @@
 ---
+description: Datenabschnitt
 title: Daten Abschnitt | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d6b03137e920be036d1dd47cb4612076247fa3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453572"
 ---
 # <a name="data-section"></a>Datenabschnitt
 Der Daten Abschnitt definiert die Daten des Rowsets sowie alle ausstehenden Updates, Einfügungen oder Löschungen. Der Daten Abschnitt kann NULL oder mehr Zeilen enthalten. Es können nur Daten aus einem Rowset enthalten sein, in dem die Zeile durch das Schema definiert ist. Auch, wie bereits erwähnt, können Spalten ohne Daten ausgelassen werden. Wenn ein Attribut oder ein Unterelement im Daten Abschnitt verwendet wird und dieses Konstrukt nicht im Schema Abschnitt definiert wurde, wird es automatisch ignoriert.  
   
-## <a name="string"></a>String  
+## <a name="string"></a>Zeichenfolge  
  Reservierte XML-Zeichen in Textdaten müssen durch entsprechende Zeichen Entitäten ersetzt werden. Beispielsweise muss das einfache Anführungszeichen im Firmennamen "Joe es Garage" durch eine Entität ersetzt werden. Die tatsächliche Zeile ähnelt der folgenden:  
   
 ```  
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- Die folgenden Zeichen sind in XML reserviert und müssen durch Zeichen Entitäten ersetzt werden: {",", &, \< , >}.  
+ Die folgenden Zeichen sind in XML reserviert und müssen durch Zeichen Entitäten ersetzt werden: {",", &, \<,> }.  
   
 ## <a name="binary"></a>Binary  
  Binäre Daten sind bin. Hex-codiert (d. h. ein Byte ist zwei Zeichen zugeordnet, ein Zeichen pro Nibble).  

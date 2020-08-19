@@ -1,4 +1,5 @@
 ---
+description: Fehlerbehandlung in ADO
 title: Fehlerbehandlung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c42645873b78a3ac398af7f3a2f41ff086dd9b3d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d26cbadd4f9c6a33c6dc43a6dcc88e0a92f23d65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453442"
 ---
 # <a name="error-handling-in-ado"></a>Fehlerbehandlung in ADO
 ADO verwendet mehrere verschiedene Methoden, um eine Anwendung über Fehler zu benachrichtigen, die auftreten. In diesem Abschnitt werden die Fehlertypen erläutert, die auftreten können, wenn Sie ADO verwenden und wie Ihre Anwendung benachrichtigt wird. Abschließend werden Vorschläge zur Behandlung dieser Fehler angezeigt.  

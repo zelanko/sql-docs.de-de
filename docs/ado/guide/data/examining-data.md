@@ -1,4 +1,5 @@
 ---
+description: Untersuchen von Daten
 title: Untersuchen von Daten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80f41778d1afa806b739e43edda6fb5b79e8f432
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fef2189af66c6777e2c337026db76e85b2cb42d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453412"
 ---
 # <a name="examining-data"></a>Untersuchen von Daten
 Der Abschnitt " [Daten](../../../ado/guide/data/getting-data.md) abrufen" erläutert, wie Daten aus einer Datenquelle als ein oder mehrere **Recordset** -Objekte abgerufen werden. In diesem Abschnitt wird **Recordset** ausführlicher erläutert, einschließlich der Navigation durch das **Recordset** und Anzeigen der zugehörigen Daten.  

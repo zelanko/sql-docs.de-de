@@ -1,4 +1,5 @@
 ---
+description: Formale Grammatik für Strukturen
 title: Formale Form Grammatik | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce65f6961502a5bfe43278e4a29a11c4210d4af8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6a8d92abc3a1b0d7e6d39ac4149c186c5a2fc2eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453372"
 ---
 # <a name="formal-shape-grammar"></a>Formale Grammatik für Strukturen
 Dies ist die formale Grammatik zum Erstellen beliebiger Form Befehle:  
@@ -41,31 +42,31 @@ Dies ist die formale Grammatik zum Erstellen beliebiger Form Befehle:
   
 |Begriff|Definition|  
 |----------|----------------|  
-|\<Shape-Befehls>|Form [ \< Table-Exp> [[as] \< Alias>]] [ \< Shape-Action>]|  
-|\<Table-Exp->|{ \< Provider-Command-Text>} &#124;<br /><br /> ( \< Shape-Command>) &#124;<br /><br /> Tabelle in Anführungszeichen \< -Name> &#124;<br /><br /> \<> in Anführungszeichen|  
-|\<Shape-Aktions>|Anfügen von \< Aliasing-field-list-> &#124;<br /><br /> Compute \< -Aliasing-Feld-List-> [nach \< Feldliste>]|  
-|\<Aliasing-field-list->|\<Aliasing-Feld> [, \< Alias-Field... >]|  
-|\<Aliasing-Feld>|\<Field-Exp> [[as] \< Alias>]|  
-|\<Field-Exp->|( \< Relation-Exp>) &#124;<br /><br /> \<> &#124; "berechnet-Exp"<br /><br /> \<Aggregat-Exp-> &#124;<br /><br /> \<New-Exp->|  
-|<relation_exp>|\<Table-Exp> [[as] \< Alias>]<br /><br /> \<Beziehung verknüpfen-> der Liste|  
-|\<Relation-Liste der>|\<Relation-der-> [, \< Relation->...]|  
-|\<Relation-->|\<Feldname> zu untergeordnetem Verweis \<>|  
-|\<untergeordnete Ref>|\<Feldname> &#124;<br /><br /> Parameter \< param-Ref>|  
-|\<param-Ref->|\<Anzahl>|  
-|\<> der Feldliste|\<Feldname> [, \< Feldname>]|  
-|\<Aggregat-Exp->|Sum ( \< qualified-Field-Name>) &#124;<br /><br /> AVG ( \< qualified-Field-Name>) &#124;<br /><br /> MIN ( \< qualified-Field-Name>) &#124;<br /><br /> Max ( \< qualified-Field-Name>) &#124;<br /><br /> COUNT ( \< qualified-Alias> &#124; \< Qualified-Name>) &#124;<br /><br /> StDev ( \< qualified-Field-Name>) &#124;<br /><br /> Any ( \< qualified-Field-Name>)|  
-|\<> "berechnet-Exp"|Calc ( \< Ausdrucks>)|  
-|\<Qualified-Field-Name>|\<Alias>. [ \< Alias>...] \< Feldname>|  
-|\<Alias>|\<> in Anführungszeichen|  
-|\<Feldname>|\<Anführungszeichen-Name> [[as] \< Alias>]|  
-|\<> in Anführungszeichen|" \< String>" &#124;<br /><br /> " \< String>" &#124;<br /><br /> [ \< String>] &#124;<br /><br /> \<Name>|  
-|\<qualifizierter Name>|Alias [. Alias...]|  
-|\<Name>|Alpha [alpha &#124; Ziffer &#124; _ &#124; # &#124;: &#124;...]|  
-|\<Anzahl>|Ziffern [Ziffer...]|  
-|\<New-Exp->|Neuer \< Feldtyp> [( \< Number> [, \< Number>])]|  
-|\<Feldtyp>|Ein OLE DB-oder ADO-Datentyp.|  
-|\<Zeichen folgen>|Unicode-Char [Unicode-Char...]|  
-|\<Ausdruck>|Ein Visual Basic for Applications Ausdruck, dessen Operanden andere nicht-Calc-Spalten in derselben Zeile sind.|  
+|\<shape-command>|Form [[ \<table-exp> [as] \<alias> ]] [ \<shape-action> ]|  
+|\<table-exp>|{ \<provider-command-text> } &#124;<br /><br /> ( \<shape-command> ) &#124;<br /><br /> Tabellen \<quoted-name> &#124;<br /><br /> \<quoted-name>|  
+|\<shape-action>|&#124; anfügen \<aliased-field-list><br /><br /> Compute \<aliased-field-list> [by \<field-list> ]|  
+|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
+|\<aliased-field>|\<field-exp> [[As] \<alias> ]|  
+|\<field-exp>|( \<relation-exp> ) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
+|<relation_exp>|\<table-exp> [[As] \<alias> ]<br /><br /> Beziehung \<relation-cond-list>|  
+|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
+|\<relation-cond>|\<field-name> An \<child-ref>|  
+|\<child-ref>|\<field-name> &#124;<br /><br /> Parame \<param-ref>|  
+|\<param-ref>|\<number>|  
+|\<field-list>|\<field-name> [, \<field-name>]|  
+|\<aggregate-exp>|Sum ( \<qualified-field-name> )-&#124;<br /><br /> AVG ( \<qualified-field-name> )-&#124;<br /><br /> MIN ( \<qualified-field-name> )-&#124;<br /><br /> Max ( \<qualified-field-name> )-&#124;<br /><br /> Anzahl ( \<qualified-alias> &#124; \<qualified-name> ) &#124;<br /><br /> StDev ( \<qualified-field-name> )-&#124;<br /><br /> Any ( \<qualified-field-name> )|  
+|\<calculated-exp>|Calc ( \<expression> )|  
+|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
+|\<alias>|\<quoted-name>|  
+|\<field-name>|\<quoted-name> [[As] \<alias> ]|  
+|\<quoted-name>|" \<string> " &#124;<br /><br /> " \<string> " &#124;<br /><br /> [ \<string> ] &#124;<br /><br /> \<name>|  
+|\<qualified-name>|Alias [. Alias...]|  
+|\<name>|Alpha [alpha &#124; Ziffer &#124; _ &#124; # &#124;: &#124;...]|  
+|\<number>|Ziffern [Ziffer...]|  
+|\<new-exp>|Neu \<field-type> [( \<number> [, \<number> ])]|  
+|\<field-type>|Ein OLE DB-oder ADO-Datentyp.|  
+|\<string>|Unicode-Char [Unicode-Char...]|  
+|\<expression>|Ein Visual Basic for Applications Ausdruck, dessen Operanden andere nicht-Calc-Spalten in derselben Zeile sind.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

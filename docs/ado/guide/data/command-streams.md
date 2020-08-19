@@ -1,4 +1,5 @@
 ---
+description: Command-Datenströme
 title: Befehlsdaten Ströme | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bf95d202d842a656ec4b42bc2277b8eb9a76689
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2db139f3f5ae4ff701e36179a9df7ce30eecd94e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453662"
 ---
 # <a name="command-streams"></a>Command-Datenströme
 ADO hat die Befehls Eingabe im von der **CommandText** -Eigenschaft angegebenen Zeichen folgen Format immer unterstützt. Als Alternative können Sie mit ADO 2,7 oder höher auch einen Informationsstrom für Befehlseingaben verwenden, indem Sie den Stream der **CommandStream** -Eigenschaft zuweisen. Sie können ein ADO- **Stream** -Objekt oder ein beliebiges Objekt zuweisen, das die com **IStream** -Schnittstelle unterstützt.  
@@ -40,7 +41,7 @@ adoStreamQuery.Open
   
  Der Inhalt des Abfrage Datenstroms wird als XML-Vorlagen Abfrage verwendet.  
   
- Die Vorlagen Abfrage erfordert einen Verweis auf den XML-Namespace, der durch das Präfix "SQL: Query>" identifiziert wird \< . Eine SQL-SELECT-Anweisung wird als Inhalt der XML-Vorlage eingeschlossen und einer Zeichen folgen Variablen wie folgt zugewiesen:  
+ Die Vorlagen Abfrage erfordert einen Verweis auf den XML-Namespace, der durch das SQL:-Präfix des Tags identifiziert wird \<sql:query> . Eine SQL-SELECT-Anweisung wird als Inhalt der XML-Vorlage eingeschlossen und einer Zeichen folgen Variablen wie folgt zugewiesen:  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  

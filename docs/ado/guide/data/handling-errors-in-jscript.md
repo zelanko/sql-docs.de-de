@@ -1,4 +1,5 @@
 ---
+description: Behandeln von Fehlern in JScript
 title: Behandeln von Fehlern in JScript | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81ed99344a610e367b185f1acb1ae8cbae3da284
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a23d22225de26562feababc263c6bf2b41b4ff60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453326"
 ---
 # <a name="handling-errors-in-jscript"></a>Behandeln von Fehlern in JScript
 Der Code des Microsoft® JScript-® muss die **count** -Eigenschaft der **Fehler** Auflistung des **Verbindungs** Objekts überprüfen. Wenn der Wert größer als 0 ist, durchlaufen Sie die Auflistung, und Drucken Sie die Werte wie in jeder anderen Sprache.  

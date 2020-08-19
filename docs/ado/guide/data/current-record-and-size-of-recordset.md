@@ -1,4 +1,5 @@
 ---
+description: Aktueller Datensatz und Größe des Recordsets
 title: Aktueller Datensatz und Größe des Recordsets | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 30b669a566270a0eff5d6cf93abb5b0acb7ff3c2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 12d4b9803682e94326636dd27bbc3f134eea23d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453602"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Aktueller Datensatz und Größe des Recordsets
 In diesem Abschnitt wird beschrieben, wie Sie die aktuelle Position des Cursors im Beispiel **Recordset** in [JScript-Code Beispiel zum Zurückgeben eines Recordsets](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)suchen.  
   
 ## <a name="current-record"></a>Aktueller Datensatz  
- Der aktuelle Datensatz im Dataset entspricht dem, der von der Position des Cursors des **Recordset** -Objekts hervorgehoben wird. Wenn ein **Recordset** -Objekt von der Datenquelle als Ergebnis des Aufrufs von **Recordset. Open**, **Command. Execute**oder **Connection. Execute** (einschließlich **Connection. namedcommand** und **Connection. StoredProcedure**) zurückgegeben wird, wird der Cursor so festgelegt, dass er auf den ersten Datensatz verweist. Im Beispiel DataSet ist der anfängliche aktuelle Datensatz der "Onkel Bob es Organic getrocknete Birnen"-Element.  
+ Der aktuelle Datensatz im Dataset entspricht dem, der von der Position des Cursors des **Recordset** -Objekts hervorgehoben wird. Wenn ein **Recordset** -Objekt von der Datenquelle zurückgegeben wird, als das Ergebnis des Aufrufs von **Recordset. Open**, **Command.Exeniedlich**oder **Connection.Exeniedlich** (einschließlich **Connection. namedcommand** und **Connection. StoredProcedure**), wird der Cursor so festgelegt, dass er auf den ersten Datensatz verweist. Im Beispiel DataSet ist der anfängliche aktuelle Datensatz der "Onkel Bob es Organic getrocknete Birnen"-Element.  
   
 ## <a name="size-of-recordset"></a>Größe des Recordsets  
  Um die Größe eines **Recordset** -Objekts zu ermitteln, können Sie den Wert der **Recordset. RecordCount** -Eigenschaft abrufen. Dieser Wert ist eine lange ganze Zahl, die die Anzahl der Datensätze im **Recordset**angibt. Wenn das Dataset für Microsoft SQL Server vom OLE DB-Anbieter zurückgegeben wird, gibt dieser Wert die Anzahl der zurückgegebenen Zeilen zurück. Das Lesen der **RecordCount** -Eigenschaft für ein geschlossenes **Recordset** verursacht einen Fehler.  

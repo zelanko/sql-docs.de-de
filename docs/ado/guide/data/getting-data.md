@@ -1,4 +1,5 @@
 ---
+description: Abrufen von Daten
 title: Daten werden erhalten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56bcbc1bc1ba5f46fb02ca7520f98320586d70e2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c96e12f45a385f34ffe91c1486fd0d63e1be65ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453352"
 ---
 # <a name="getting-data"></a>Abrufen von Daten
 In den ADO.net- [Grundlagen](../../../ado/guide/data/ado-fundamentals.md)und im [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) -Beispiel wurden die vier Haupt Vorgänge zum Erstellen einer ADO-Anwendung eingeführt: das Erstellen von Daten, das Untersuchen von Daten, das Bearbeiten von Daten und das Aktualisieren von Daten. In diesem Abschnitt wird erläutert, wie Sie Daten ausführlicher erhalten.  

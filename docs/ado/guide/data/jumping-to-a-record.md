@@ -1,4 +1,5 @@
 ---
+description: Springen zu einem Datensatz
 title: Springen zu einem Datensatz | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eca1d1646721ea34d4ce075a882bde95b3c407a3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4196c0be69292e7e915c5fe24ca995645133fabc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453192"
 ---
 # <a name="jumping-to-a-record"></a>Springen zu einem Datensatz
 Die [Move](../../../ado/reference/ado-api/move-method-ado.md) -Methode ermöglicht es Ihnen, im **Recordset** eine angegebene Anzahl von Datensätzen vorwärts oder rückwärts zu verschieben, indem Sie die folgende Syntax verwenden:  

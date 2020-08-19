@@ -1,4 +1,5 @@
 ---
+description: Zusammenwirken der Ereignishandler
 title: Zusammenarbeiten von Ereignis Handlern | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98144b1dacb406de4f57f9d051547640edd09397
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0a571c36a67a4d2c1c3b98c64c826af949b0e773
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453252"
 ---
 # <a name="how-event-handlers-work-together"></a>Zusammenwirken der Ereignishandler
 Sofern Sie nicht in Visual Basic programmieren, müssen alle Ereignishandler für **Verbindungs** -und **recordsetereignisse** implementiert werden, unabhängig davon, ob Sie tatsächlich alle Ereignisse verarbeiten. Die Menge der Implementierungs Arbeit, die Sie erledigen müssen, hängt von ihrer Programmiersprache ab. Weitere Informationen finden Sie unter [ADO Event Instantiierung by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md).  

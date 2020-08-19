@@ -1,4 +1,5 @@
 ---
+description: Aggregatfunktionen, die CALC-Funktion und das NEW-Schlüsselwort
 title: Aggregatfunktionen, die Calc-Funktion und das New-Schlüsselwort | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bda85bae42b294fa63c67adfe51d8c60c5b56af
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453752"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Aggregatfunktionen, die CALC-Funktion und das NEW-Schlüsselwort
 Die Daten Strukturierung unterstützt die folgenden Funktionen. Der Name, der dem Kapitel mit der zu verwendenden Spalte zugewiesen ist, ist das *Kapitel-Alias*.  
@@ -72,7 +73,7 @@ Die Daten Strukturierung unterstützt die folgenden Funktionen. Der Name, der de
   
  Wenn das neue Feld den Typ Decimal hat (in OLE DB, DBTYPE_DECIMAL oder in ADO, addecimal), müssen Sie die Werte für Genauigkeit und Dezimalstelle angeben.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Beispiel für Daten Strukturierung](../../../ado/guide/data/data-shaping-example.md)   
  [Formale Form Grammatik](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)
