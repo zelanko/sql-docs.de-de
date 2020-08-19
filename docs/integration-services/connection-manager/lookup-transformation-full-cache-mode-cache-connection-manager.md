@@ -1,4 +1,5 @@
 ---
+description: Suchtransformation im Vollcachemodus – Cacheverbindungs-Manager
 title: Suchtransformation im Vollcachemodus – Cacheverbindungs-Manager | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4e37921c8844b94c3974682ab8b088b0015c5ac6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8c4bd90a73c0723baf716b5c503f18d1f690d77e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394216"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Suchtransformation im Vollcachemodus – Cacheverbindungs-Manager
 
@@ -53,7 +54,7 @@ ms.locfileid: "86923137"
   
 -   Konfigurieren Sie die Cacheverbindungs-Manager in verschiedenen Paketen, um die gleiche Cachedatei zu verwenden.  
   
- Weitere Informationen finden Sie in den folgenden Themen:  
+ Weitere Informationen finden Sie unter den folgenden Themen:  
   
 -   [Cachetransformation](../../integration-services/data-flow/transformations/cache-transform.md)  
   
@@ -110,7 +111,7 @@ ms.locfileid: "86923137"
   
     3.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie dann im **Transformations-Editor für Suche**auf der Seite **Allgemein** die Option **Vollcache**aus.  
   
-    4.  Wählen Sie im Bereich **Verbindungstyp** **Cacheverbindungs-Manager**aus.  
+    4.  Wählen Sie im Bereich **Verbindungstyp****Cacheverbindungs-Manager**aus.  
   
     5.  Wählen Sie für die Liste **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen** eine Fehlerbehandlungsoption aus.  
   
@@ -196,7 +197,7 @@ ms.locfileid: "86923137"
   
     3.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie dann **Vollcache** auf der Seite **Allgemein** im **Transformations-Editor für Suche**aus.  
   
-    4.  Wählen Sie im Bereich **Verbindungstyp** **Cacheverbindungs-Manager** aus.  
+    4.  Wählen Sie im Bereich **Verbindungstyp****Cacheverbindungs-Manager** aus.  
   
     5.  Wählen Sie für die Liste **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen** eine Fehlerbehandlungsoption für Zeilen ohne übereinstimmende Einträge aus.  
   
@@ -228,7 +229,7 @@ ms.locfileid: "86923137"
   
      Der Bereich **Verbindungs-Manager** wird unten auf den Registerkarten **Ablaufsteuerung**, **Datenfluss**und **Ereignishandler** des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Designers angezeigt.  
   
-3.  Wählen Sie im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** **CACHE**aus, und klicken Sie dann auf **Hinzufügen** , um einen Cacheverbindungs-Manager hinzuzufügen.  
+3.  Wählen Sie im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen****CACHE**aus, und klicken Sie dann auf **Hinzufügen** , um einen Cacheverbindungs-Manager hinzuzufügen.  
   
 4.  Doppelklicken Sie auf den Cacheverbindungs-Manager, um den **Editor für den Cacheverbindungs-Manager**zu öffnen.  
   
@@ -261,7 +262,7 @@ ms.locfileid: "86923137"
   
     3.  Doppelklicken Sie auf die Transformation für Suche, und wählen Sie dann im **Transformations-Editor für Suche**auf der Seite **Allgemein** die Option **Vollcache**aus.  
   
-    4.  Wählen Sie im Bereich **Verbindungstyp** **Cacheverbindungs-Manager** aus.  
+    4.  Wählen Sie im Bereich **Verbindungstyp****Cacheverbindungs-Manager** aus.  
   
     5.  Wählen Sie für die Liste **Angeben, wie Zeilen ohne übereinstimmende Einträge behandelt werden sollen** eine Fehlerbehandlungsoption für Zeilen ohne übereinstimmende Einträge aus.  
   
@@ -283,7 +284,7 @@ ms.locfileid: "86923137"
   
 9. Führen Sie das Paket aus.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Implementieren einer Suchtransformation im Vollcachemodus mit dem OLE DB-Verbindungs-Manager](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementieren einer Suche im Modus „Kein Cache“ oder „Teilcache“](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [SQL Server Integration Services-Transformationen](../../integration-services/data-flow/transformations/integration-services-transformations.md)  

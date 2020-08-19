@@ -1,4 +1,5 @@
 ---
+description: Hadoop-Dateisystemtask
 title: Hadoop-Dateisystemtask | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 006c9d5ae0ade37cc3ecbe4d7912c49eafbf4069
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 60e2f94ab41aafe0b23af470555870ba4a93b918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393136"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop-Dateisystemtask
 
@@ -30,7 +31,7 @@ ms.locfileid: "86918204"
   
  ![Editor für Hadoop-Dateisystemaufgaben](../../integration-services/control-flow/media/hadoop-filesystem-task.png "Editor für den Task „Dateisystem“")  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Konfigurieren Sie die folgenden Optionen im Hadoop-Dialogfeld **Editor für den Task „Dateisystem“** .  
   
 |Feld|BESCHREIBUNG|  
@@ -43,7 +44,7 @@ ms.locfileid: "86918204"
 |**Lokale Dateiverbindung**|Geben Sie einen vorhandenen Dateiverbindungs-Manager an, oder erstellen Sie einen neuen. Dieser Verbindungs-Manager gibt an, wo die Quelldateien gehostet werden.|  
 |**Ist rekursiv**|Geben Sie an, ob alle Unterordner rekursiv kopiert werden sollen.|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Hadoop-Verbindungs-Manager](../../integration-services/connection-manager/hadoop-connection-manager.md)   
  [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   

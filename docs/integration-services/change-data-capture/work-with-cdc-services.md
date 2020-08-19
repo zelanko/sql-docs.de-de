@@ -1,4 +1,5 @@
 ---
+description: Verwenden von CDC Services
 title: Verwenden von CDC Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6885167d84654866dcb9c1f433f5f11aaee77031
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e591992c3e03162ecdbb928b7ce41ced3037f5ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394496"
 ---
 # <a name="work-with-cdc-services"></a>Verwenden von CDC Services
 
@@ -26,7 +27,7 @@ ms.locfileid: "86921446"
 
   Sie können die CDC Service Configuration Console verwenden, um einen neuen CDC-Dienst zu erstellen und eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank für CDC vorzubereiten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Prepare SQL Server**  
  Aktivieren Sie diese Option im **Aktionsbereich** rechts in der CDC Service Configuration Console.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "86921446"
   
  Das Dialogfeld New Oracle CDC Service wird geöffnet.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Verwenden von CDC Services](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [Erstellen und Bearbeiten eines Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   

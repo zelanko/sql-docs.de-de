@@ -1,4 +1,5 @@
 ---
+description: Fehlermeldungen übertragen (Task)
 title: Task „Fehlermeldungen übertragen“ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e922e51949d8dd7e0e6e8220e2c74a72f0d7ab77
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9eb09d094ff5ce907479dacd848ca2a6010cee92
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392916"
 ---
 # <a name="transfer-error-messages-task"></a>Fehlermeldungen übertragen (Task)
 
@@ -113,7 +114,7 @@ ms.locfileid: "86913943"
   
  Für diese Eigenschaft sind die in der folgenden Tabelle aufgeführten Optionen verfügbar:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**True**|Alle benutzerdefinierten Meldungen kopieren.|  
 |**False**|Nur die angegebenen benutzerdefinierten Meldungen kopieren.|  

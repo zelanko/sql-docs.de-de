@@ -1,4 +1,5 @@
 ---
+description: Transformation für das Importieren von Spalten
 title: Transformation für das Importieren von Spalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1db13057275f9a255ad247bd5f86ca35d7bd29d3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bce31855c0ddd8825401eefd2253172538159cdc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391916"
 ---
 # <a name="import-column-transformation"></a>Transformation für das Importieren von Spalten
 
@@ -56,7 +57,7 @@ ms.locfileid: "86919264"
 ## <a name="related-tasks"></a>Related Tasks  
  Informationen zum Festlegen der Eigenschaften dieser Komponente finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Transformation für das Exportieren von Spalten](../../../integration-services/data-flow/transformations/export-column-transformation.md)   
  [Datenfluss](../../../integration-services/data-flow/data-flow.md)   
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

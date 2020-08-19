@@ -1,4 +1,5 @@
 ---
+description: Bekannte Fehler und Lösungen bei Change Data Capture für Oracle von Attunity
 title: Bekannte Fehler und Lösungen bei Change Data Capture für Oracle von Attunity | Microsoft-Dokumentation
 ms.date: 07/23/2019
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6841092edcb5eac4005d0a068f31c768aedf5bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71713425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394386"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Bekannte Fehler und Lösungen bei Change Data Capture für Oracle von Attunity
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +78,7 @@ Bevor Sie allzu viel Zeit für Problembehandlung aufwenden, achten Sie darauf, d
 - Änderungen gehen verloren
     - Die Ereigniserfassung kann in einer Endlosschleife münden und die Erfassung neuer Datenänderungen beenden (zusammenhängend mit Oracle-Fehler 5623813). Wenn die CDC-Instanz in einer Oracle RAC-Umgebung beendet oder fortgesetzt wird, können Änderungen übersprungen/verloren werden. Dies bedeutet, dass in der SQL Server Change Data Capture wichtige Zeilen fehlen, sodass es zu Datenverlust im Data Warehouse oder dem abonnierenden System kommt. Korrigiert in der _Service Pack 1-Version für SQL Server 2012_. Weitere Informationen finden Sie auf der [Downloadseite für das SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)
 - Doppelte Breite für Spalten in SQL
-    - Beim Erstellen einer CDC für Oracle-Instanz in den Skripts, die für SQL Server ausgeführt werden, wird die Länge einer Spalte mit einem Datentyp variabler Breite in SQL Server-Tabellen, die im Skript erstellt werden, verdoppelt. Wenn Sie beispielsweise versuchen, Änderungen in einer VARCHAR2(10)-Spalte in einer Oracle-Tabelle nachzuverfolgen, ist die entsprechende SQL Server-Tabelle im Bereitstellungsskript NVARCHAR(20). Behoben in _Kumulatives Update 2 für SQL Server 2012 SP1_ und _Kumulatives Update 5 für SQL Server 2012_ , wie in KB [2769673](https://support.microsoft.com/kb/2769673) beschrieben. 
+    - Beim Erstellen einer CDC für Oracle-Instanz in den Skripts, die für SQL Server ausgeführt werden, wird die Länge einer Spalte mit einem Datentyp variabler Breite in SQL Server-Tabellen, die im Skript erstellt werden, verdoppelt. Wenn Sie beispielsweise versuchen, Änderungen in einer VARCHAR2(10)-Spalte in einer Oracle-Tabelle nachzuverfolgen, ist die entsprechende SQL Server-Tabelle im Bereitstellungsskript NVARCHAR(20). Behoben in _Kumulatives Update 2 für SQL Server 2012 SP1_ und _Kumulatives Update 5 für SQL Server 2012 _, wie in KB [2769673](https://support.microsoft.com/kb/2769673) beschrieben. 
 - DDL-Daten werden abgeschnitten
     - Wenn Sie eine DDL-Anweisung (Data Definition Language) mit einer Größe von mehr als 4.000 Byte für eine Oracle-Datenbank ausführen, die nicht dem lateinischen Alphabet entstammende Zeichen enthält, tritt ein Fehler bei CDC für Oracle von Attunity auf. Außerdem wird die Fehlermeldung `ORA-01406: fetched column value was truncated.` angezeigt. Behoben in _Kumulatives Update 4 für SQL Server 2012 SP1_, wie in KB [2839806](https://support.microsoft.com/kb/2839806) beschrieben. 
 - Die Änderungen in den letzten zwei Spalten gehen verloren
@@ -156,7 +157,7 @@ Sie können das Benutzerkonto festlegen, indem Sie die CDCInstance im linken Ber
 
 
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Arbeiten mit Änderungsdaten &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

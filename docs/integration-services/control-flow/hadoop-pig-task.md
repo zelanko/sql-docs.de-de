@@ -1,4 +1,5 @@
 ---
+description: Hadoop Pig-Task
 title: Hadoop Pig-Task | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 375ae2fd7b0e2ba0d125fab597132f3978430346
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8bb1c648647ea2341e899989f6199cbacd583b1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393356"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig-Task
 
@@ -30,18 +31,18 @@ ms.locfileid: "86918186"
   
  ![Editor für Hadoop-Pig-Aufgaben](../../integration-services/control-flow/media/hadoop-pig-task.png "Editor für Hadoop-Pig-Aufgaben")  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Konfigurieren Sie die folgenden Optionen im Hadoop-Dialogfeld **Editor für den Pig-Task** .  
   
 |Feld|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Hadoop-Verbindung**|Geben Sie einen vorhandenen Hadoop-Verbindungs-Manager an, oder erstellen Sie einen neuen. Dieser Verbindungs-Manager gibt an, wo der Dienst WebHCat gehostet wird.|  
 |**SourceType**|Geben Sie den Quelltyp der Abfrage an. Mögliche Werte sind **ScriptFile** und **DirectInput**.|  
-|**InlineScript**|Wenn der Wert von **SourceType** **DirectInput**ist, geben Sie das Pig-Skript an.|  
-|**HadoopScriptFilePath**|Wenn der Wert von **SourceType** **ScriptFile**ist, geben Sie den Pfad der Skriptdatei auf Hadoop an.|  
+|**InlineScript**|Wenn der Wert von **SourceType****DirectInput**ist, geben Sie das Pig-Skript an.|  
+|**HadoopScriptFilePath**|Wenn der Wert von **SourceType****ScriptFile**ist, geben Sie den Pfad der Skriptdatei auf Hadoop an.|  
 |**TimeoutInMinutes**|Geben Sie einen Timeoutwert in Minuten an. Wenn der Hadoop-Job vor Ablauf des Timeouts nicht abgeschlossen wurde, wird er abgebrochen. Geben Sie 0 ein, wenn der Hadoop-Job asynchron ausgeführt werden soll.|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Hadoop-Verbindungs-Manager](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   

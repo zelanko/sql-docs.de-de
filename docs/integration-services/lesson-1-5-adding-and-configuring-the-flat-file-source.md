@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 1.5: Hinzufügen und Konfigurieren der Flatfilequelle'
 title: 'Schritt 5: Hinzufügen und Konfigurieren der Flatfilequelle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44750102897653d8ec1329e66ecf3fc78165db79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cfc6ffa21bf3f6c1205b1c9c667cc6e75868cece
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390866"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lektion 1.5: Hinzufügen und Konfigurieren der Flatfilequelle
 
@@ -49,7 +50,7 @@ Für diese Aufgabe konfigurieren Sie die Flatfilequelle zum Verwenden von der Ve
 ## <a name="go-to-next-task"></a>Weiter zur nächsten Aufgabe
 [Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Flatfilequelle](../integration-services/data-flow/flat-file-source.md)  
 [Verbindungs-Manager für Flatfiles](../integration-services/connection-manager/flat-file-connection-manager.md)  
   
