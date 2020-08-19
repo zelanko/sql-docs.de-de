@@ -1,4 +1,5 @@
 ---
+description: StartMode-Eigenschaft (SqlService-Klasse)
 title: StartMode-Eigenschaft (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c6aab858d98baa0404e4ef5f33adc16ece687d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 608214cf9d4eca2601c0f8bee7b82570ec936ea6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418756"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode-Eigenschaft (SqlService-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,16 +51,16 @@ object.StartMode [= value]
  System  
  Wert = 1. Der Dienst wurde von der **IoInitSystem** -Methode gestartet. Diese Option ist nur für Treiberdienste gültig.  
   
- Automatisch  
+ Automatische  
  Wert = 2. Der Dienst soll während des Systemstarts automatisch vom Dienstkontroll-Manager gestartet werden.  
   
  Manuell  
  Wert = 3. Der Dienst, der vom Computer-Manager gestartet werden soll, wenn ein Prozess die **StartService** -Methode aufruft.  
   
- Deaktiviert  
+ Disabled  
  Wert = 4. Der Dienst kann nicht gestartet werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

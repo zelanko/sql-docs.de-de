@@ -1,4 +1,5 @@
 ---
+description: Installieren von SMO
 title: Installieren von SMO | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
@@ -15,11 +16,12 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a0c23d91785a453bcbf7857211e524b15a4ec3f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b98ce67e61c1fe6f9370508d34cecc8d9289a44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420264"
 ---
 # <a name="installing-smo"></a>Installieren von SMO
 
@@ -42,5 +44,5 @@ Anweisungen und Beispiele für die Installation und Verwendung eines nuget-Paket
   
 ## <a name="system-requirements"></a>Systemanforderungen
   
- SMO erfordert die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Ausführung von 4,0 oder .net Core 2,0, sodass alle Anwendungen, die es verwenden, sicherstellen müssen, dass auf den Client Computern diese Version oder höher installiert ist. Für einige Native Binärdateien, die mit den netfx SMO-Bibliotheken installiert werden, muss auch die VC 2013-Laufzeit installiert werden. Diese Laufzeit ist nicht im Paket enthalten. Sie können den redist, der für Ihre Zielarchitektur geeignet ist, vonhttps://www.microsoft.com/download/details.aspx?id=40784
+ SMO erfordert die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Ausführung von 4,0 oder .net Core 2,0, sodass alle Anwendungen, die es verwenden, sicherstellen müssen, dass auf den Client Computern diese Version oder höher installiert ist. Für einige Native Binärdateien, die mit den netfx SMO-Bibliotheken installiert werden, muss auch die VC 2013-Laufzeit installiert werden. Diese Laufzeit ist nicht im Paket enthalten. Sie können den redist, der für Ihre Zielarchitektur geeignet ist, von https://www.microsoft.com/download/details.aspx?id=40784
   

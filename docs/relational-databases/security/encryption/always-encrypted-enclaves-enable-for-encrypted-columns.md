@@ -1,4 +1,5 @@
 ---
+description: Aktivieren von Always Encrypted mit Secure Enclaves für vorhandene verschlüsselte Spalten
 title: Aktivieren von Always Encrypted mit Secure Enclaves für vorhandene verschlüsselte Spalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d7028cc1d1789d65da424e985e191f9217b9328
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 4ef6fe83bd2d9671ccf43b4957497a8c1fc7a4cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420334"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>Aktivieren von Always Encrypted mit Secure Enclaves für vorhandene verschlüsselte Spalten 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -27,7 +28,7 @@ Wenn Sie über Spalten verfügen, die mit nicht Enclave-fähigen Schlüsseln ver
 Sie können Enclave-Berechnungen für vorhandene verschlüsselte Spalten abhängig von den folgenden Optionen auf verschiedene Weisen aktivieren:
 
 - **Bereich/Granularität:** Möchten Sie die Enclave-Funktionalität für eine Teilmenge von Spalten oder für alle mit einem bestimmten Spaltenhauptschlüssel geschützten Spalten aktivieren?
-- **Datengröße:** Wie groß sind die Tabellen mit den Spalten, die enclavefähig sein sollen?
+- **Datengröße:** Wie groß sind die Tabellen mit den Spalten, die Sie für die Enclave aktivieren möchten?
 - Möchten Sie auch den Verschlüsselungstyp für Ihre Spalte(n) ändern? Denken Sie daran, dass nur die Verschlüsselung nach dem Zufallsprinzip umfangreiche Berechnungen (Musterabgleich, Vergleichsoperatoren) unterstützt. Wenn Ihre Spalte mit deterministischer Verschlüsselung verschlüsselt ist, müssen Sie sie auch mit der Verschlüsselung nach dem Zufallsprinzip neu verschlüsseln, um umfassende Berechnungen zu ermöglichen.
 
 In den folgenden Abschnitten werden die drei Ansätze zum Aktivieren von Enclaves für vorhandene Spalten beschrieben.

@@ -1,4 +1,5 @@
 ---
+description: Dateien und Versionsnummern
 title: Dateien und Versionsnummern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
@@ -17,11 +18,12 @@ ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d682ca3d6768da16d43c3c09471a6c722561dd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 850268d303106e8c07a19915f9284b6c4dc3f7d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008622"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420274"
 ---
 # <a name="files-and-version-numbers"></a>Dateien und Versionsnummern
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -33,7 +35,7 @@ ms.locfileid: "86008622"
 > > 
 > > Aus diesem Grund sollten Sie diese Versionen der Assemblys **nicht** im globalen Assemblycache (GAC) installieren. Dies könnte dazu führen, dass andere Anwendungen, wie z [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . b. Management Studio, unterbrechen. 
   
-|Datei|BESCHREIBUNG|  
+|Datei|Beschreibung|  
 |-----------|-----------------|  
 |Microsoft.SqlServer.ConnectionInfo.dll|Unterstützt das Herstellen von Verbindungen mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Microsoft.SqlServer.ServiceBrokerEnum.dll|Unterstützt die Programmierung des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker. Dies ist nur in Programmen erforderlich, die auf Service Broker zugreifen.|  
