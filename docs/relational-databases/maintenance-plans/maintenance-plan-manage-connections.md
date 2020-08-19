@@ -1,4 +1,5 @@
 ---
+description: Wartungsplan (Verbindungen verwalten)
 title: Wartungsplan (Verbindungen verwalten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 95ad9375-6584-423e-b9de-0e86782f8017
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 495ec4a69d960cfec8534b37490b10fe66c5934d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce9ac0469125a6077799e5bab0a69cdc1d06d82b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420834"
 ---
 # <a name="maintenance-plan-manage-connections"></a>Wartungsplan (Verbindungen verwalten)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

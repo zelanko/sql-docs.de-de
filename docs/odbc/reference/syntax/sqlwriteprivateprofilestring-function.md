@@ -1,4 +1,5 @@
 ---
+description: SQLWritePrivateProfileString-Funktion
 title: Sqlwrite teprivateprofilestring-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b0de5ad074fb2b760420686feddff58b26887112
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1110b60d6dc0ba079804ba8a9f21c06f0c1f78d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420954"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString-Funktion
 **Konformitäts**  
  Eingeführte Version: ODBC 2,0  
   
  **Zusammenfassung**  
- **Sqlwrite teprivateprofilestring** schreibt einen Wertnamen und Daten in den Unterschlüssel ODBC. ini der Systeminformationen.  
+ **Sqlwrite teprivateprofilestring** schreibt einen Wertnamen und Daten in den Odbc.ini Unterschlüssel der Systeminformationen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,21 +62,21 @@ BOOL SQLWritePrivateProfileString(
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlwrite teprivateprofilestring** false zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlwrite teprivateprofilestring** false zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pferrorcode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_REQUEST_FAILED|Fehler bei der Anforderung|Die angeforderten Systeminformationen konnten nicht geschrieben werden.|  
 |ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund eines fehlenden Speichers nicht ausführen.|  
   
 ## <a name="comments"></a>Kommentare  
- **Sqlwrite teprivateprofilestring** ist eine einfache Möglichkeit zum Portieren von Treibern und Treiber Setup-DLLs von Microsoft® Windows® an Microsoft Windows NT®/Windows 2000. Aufrufe von " **Write-PrivateProfileString** ", die eine Profil Zeichenfolge in die Datei "ODBC. ini" schreiben, sollten durch Aufrufe von **sqlschreiteprivateprofilestring**ersetzt werden. **Sqlwrite teprivateprofilestring** Ruft Funktionen in der Win32-®-API auf, um den angegebenen Wertnamen und die Daten dem Unterschlüssel "ODBC. ini" der Systeminformationen hinzuzufügen.  
+ **Sqlwrite teprivateprofilestring** ist eine einfache Möglichkeit zum Portieren von Treibern und Treiber Setup-DLLs von Microsoft® Windows® an Microsoft Windows NT®/Windows 2000. Aufrufe von "Write- **PrivateProfileString** ", die eine Profil Zeichenfolge in die Odbc.ini Datei schreiben, sollten durch Aufrufe von " **sqlschreiteprivateprofilestring**" ersetzt werden. **Sqlwrite teprivateprofilestring** Ruft Funktionen in der Win32-®-API auf, um den angegebenen Wertnamen und die Daten dem Odbc.ini Unterschlüssel der Systeminformationen hinzuzufügen.  
   
- Ein Konfigurations Modus gibt an, wo sich der Eintrag "ODBC. ini" mit den DSN-Werten in den Systeminformationen befindet. Wenn es sich bei dem DSN um einen Benutzer-DSN handelt (die Zustands Variable ist USERDSN_ONLY), schreibt die Funktion in HKEY_CURRENT_USER in den Eintrag "ODBC. ini". Wenn es sich bei dem DSN um einen System-DSN (SYSTEMDSN_ONLY) handelt, schreibt die Funktion in HKEY_LOCAL_MACHINE in den Eintrag "ODBC. ini". Wenn die Zustands Variable bothdsn ist, wird HKEY_CURRENT_USER versucht, und wenn Sie fehlschlägt, wird HKEY_LOCAL_MACHINE verwendet.  
+ Ein Konfigurations Modus gibt an, wo die Odbc.ini Eintrag DSN-Werte in den Systeminformationen enthalten ist. Wenn es sich bei dem DSN um einen Benutzer-DSN handelt (die Zustands Variable ist USERDSN_ONLY), schreibt die Funktion in HKEY_CURRENT_USER in den Odbc.ini Eintrag. Wenn es sich bei dem DSN um einen System-DSN (SYSTEMDSN_ONLY) handelt, schreibt die Funktion in HKEY_LOCAL_MACHINE in den Odbc.ini Eintrag. Wenn die Zustands Variable bothdsn ist, wird HKEY_CURRENT_USER versucht, und wenn Sie fehlschlägt, wird HKEY_LOCAL_MACHINE verwendet.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Erhalten eines Werts aus den Systeminformationen|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|

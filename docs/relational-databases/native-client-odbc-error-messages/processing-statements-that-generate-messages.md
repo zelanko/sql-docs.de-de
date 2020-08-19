@@ -1,4 +1,5 @@
 ---
+description: Verarbeiten von Anweisungen, die Meldungen generieren
 title: Verarbeiten von Anweisungen, die Meldungen generieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,11 +26,12 @@ ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebd3a371915f17f0a04165dd66ac0ca4394456e7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ca60a4bbe9652d20cb4db0f9f4522d2fa1ff1afc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420514"
 ---
 # <a name="processing-statements-that-generate-messages"></a>Verarbeiten von Anweisungen, die Meldungen generieren
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -98,7 +100,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>Verwenden der Anweisungen PRINT und RAISERROR  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]Print-und RAISERROR-Anweisungen geben auch Daten durch Aufrufen von **SQLGetDiagRec**zurück. Print-Anweisungen bewirken, dass die Ausführung der SQL-Anweisung SQL_SUCCESS_WITH_INFO zurückgibt, und ein nachfolgende-Befehl von **SQLGetDiagRec** gibt den *SQLSTATE* -Wert 01000 zurück. Ein RAISERROR mit einem Schweregrad bis einschließlich 10 zeigt dasselbe Verhalten wie PRINT. Ein RAISERROR mit einem Schweregrad von 11 oder höher bewirkt, dass die Execute-SQL_ERROR zurückgibt, und ein nachfolgende-Befehl von **SQLGetDiagRec** gibt *SQLSTATE* 42000 zurück. Beispielsweise gibt die folgende Anweisung SQL_SUCCESS_WITH_INFO zurück:  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Print-und RAISERROR-Anweisungen geben auch Daten durch Aufrufen von **SQLGetDiagRec**zurück. Print-Anweisungen bewirken, dass die Ausführung der SQL-Anweisung SQL_SUCCESS_WITH_INFO zurückgibt, und ein nachfolgende-Befehl von **SQLGetDiagRec** gibt den *SQLSTATE* -Wert 01000 zurück. Ein RAISERROR mit einem Schweregrad bis einschließlich 10 zeigt dasselbe Verhalten wie PRINT. Ein RAISERROR mit einem Schweregrad von 11 oder höher bewirkt, dass die Execute-SQL_ERROR zurückgibt, und ein nachfolgende-Befehl von **SQLGetDiagRec** gibt *SQLSTATE* 42000 zurück. Beispielsweise gibt die folgende Anweisung SQL_SUCCESS_WITH_INFO zurück:  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  

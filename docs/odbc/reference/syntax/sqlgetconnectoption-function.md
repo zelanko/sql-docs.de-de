@@ -1,4 +1,5 @@
 ---
+description: SQLGetConnectOption-Funktion
 title: SQLGetConnectOption-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 59cde899-7957-4b5e-8677-f34d3b859bfd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94a29637365862990ea067f663023fae04a7af3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df3fd7dc9a024348c4371fabdbcabfab63a6f071
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421284"
 ---
 # <a name="sqlgetconnectoption-function"></a>SQLGetConnectOption-Funktion
 **Konformitäts**  
@@ -39,6 +40,6 @@ ms.locfileid: "81285570"
 > [!NOTE]
 >  Das in ODBC 3,8 eingeführte Attribut SQL_ASYNC_DBC_FUNCTION_ENABLE wird von **SQLGetConnectOption**nicht unterstützt. Anwendungen, die den asynchronen Vorgang für ein Verbindungs Handle verwenden, müssen **SQLGetConnectAttr**verwenden.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

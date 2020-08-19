@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo-Funktion
 title: SQLGetInfo-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/28/2020
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a88eb1a4aff7d166a81bbf6ec64ae2b878fd5fa
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: b60dcdd90c71e1790464f24cd34dedfaa22e7c61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421274"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo-Funktion
 
@@ -61,7 +62,7 @@ SQLRETURN SQLGetInfo(
   
  Wenn *infovalueptr* gleich NULL ist, gibt *stringlengthptr* weiterhin die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten) zurück, die im Puffer zurückgegeben werden können, auf den *infovalueptr*zeigt.  
   
- *Pufferlänge*  
+ *BufferLength*  
  Der Länge des \* *infovalueptr* -Puffers. Wenn der Wert in * \* infovalueptr* keine Zeichenfolge ist oder wenn *infovalueptr* ein NULL-Zeiger ist, wird das *BufferLength* -Argument ignoriert. Der Treiber geht davon aus, dass die Größe von * \* infovalueptr* basierend auf dem *InfoType*auf sqlusmallint oder SQLUINTEGER festgelegt ist. Wenn * \* infovalueptr* eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlgetinfow**), muss das *BufferLength* -Argument eine gerade Zahl sein. andernfalls wird SQLSTATE HY090 (ungültige Zeichen folgen-oder Pufferlänge) zurückgegeben.  
   
  *Stringlengthptr*  
@@ -79,7 +80,7 @@ SQLRETURN SQLGetInfo(
 
  Wenn **SQLGetInfo** entweder SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_DBC und einem *handle* von *connectionHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLGetInfo** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichen folgen Daten, rechts abgeschnitten|Der \* *infovalueptr* -Puffer war nicht groß genug, um alle angeforderten Informationen zurückzugeben. Aus diesem Grund wurden die Informationen abgeschnitten. Die Länge der angeforderten Informationen in der nicht abgeschnittene Form wird in **stringlengthptr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -482,7 +483,7 @@ SQLRETURN SQLGetInfo(
 
 In der folgenden Tabelle sind die einzelnen Informationstypen, die Version von ODBC, in der Sie eingeführt wurde, und ihre Beschreibung alphabetisch aufgeführt.  
   
-|Informationstyp|ODBC-Version|BESCHREIBUNG|
+|Informationstyp|ODBC-Version|Beschreibung|
 |-|-|-|
 |SQL_ACCESSIBLE_PROCEDURES|1.0|Eine Zeichenfolge: "Y", wenn der Benutzer alle Prozeduren ausführen kann, die von **SQLProcedures**zurückgegeben werden. "N", wenn möglicherweise Prozeduren zurückgegeben werden, die der Benutzer nicht ausführen kann.|
 |SQL_ACCESSIBLE_TABLES|1.0|Eine Zeichenfolge: "Y", wenn dem **Benutzer garantiert wird** , dass er Berechtigungen für alle von **SQLTables**zurückgegebenen Tabellen hat. "N", wenn möglicherweise Tabellen zurückgegeben werden, auf die der Benutzer nicht zugreifen kann.|
@@ -676,7 +677,7 @@ else
  Zurückgeben von Informationen zu den Datentypen einer Datenquelle  
  [SQLGetTypeInfo-Funktion](sqlgettypeinfo-function.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 
  [ODBC-API-Referenz](odbc-api-reference.md)  
  [ODBC-Headerdateien](../install/odbc-header-files.md)

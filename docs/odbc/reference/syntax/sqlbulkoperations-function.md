@@ -1,4 +1,5 @@
 ---
+description: SQLBulkOperations-Funktion
 title: SQLBulkOperations-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61f4f294a6d84856bc3065b599a370bb5658e3ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e065bc06150c3b12e469489c4d115d02c2142f14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421294"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations-Funktion
 **Konformitäts**  
@@ -62,7 +63,7 @@ SQLRETURN SQLBulkOperations(
   
  Für alle Sqlstates, die SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurückgeben können (außer 01xxx Sqlstates), wird SQL_SUCCESS_WITH_INFO zurückgegeben, wenn ein Fehler in einer oder mehreren, aber nicht in allen Zeilen eines mehr Zeilen Vorgangs auftritt. SQL_ERROR wird zurückgegeben, wenn ein Fehler bei einem einzeiligen Vorgang auftritt.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Abkürzen von Zeichen folgen Daten|Das *Vorgangs* Argument wurde SQL_FETCH_BY_BOOKMARK, und Zeichen folgen-oder Binärdaten, die für eine Spalte oder Spalten mit dem Datentyp SQL_C_CHAR oder SQL_C_BINARY zurückgegeben wurden, führten zum Abschneiden von nicht leeren Zeichen oder Binärdaten, die nicht NULL sind.|  
@@ -83,7 +84,7 @@ SQLRETURN SQLBulkOperations(
 |40003|Anweisungs Vervollständigung unbekannt|Bei der zugeordneten Verbindung ist während der Ausführung dieser Funktion ein Fehler aufgetreten, und der Status der Transaktion kann nicht bestimmt werden.|  
 |42000|Syntax Fehler oder Zugriffsverletzung|Der Treiber konnte die Zeile nicht nach Bedarf sperren, um den im *Vorgangs* Argument angeforderten Vorgang auszuführen.|  
 |44000|WITH CHECK OPTION-Verstoß|Das *Vorgangs* Argument war SQL_ADD oder SQL_UPDATE_BY_BOOKMARK, und der INSERT-oder Update-Vorgang wurde für eine angezeigte Tabelle (oder eine Tabelle, die von der angezeigten Tabelle abgeleitet wurde) ausgeführt, die durch Angabe von **with Check Option**erstellt wurde, so dass mindestens eine Zeile, auf die sich die INSERT-oder Update-Methode auswirkt, in der angezeigten Tabelle nicht mehr vorhanden ist.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen. Anschließend wurde die Funktion erneut für " *StatementHandle*" aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
 |HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die **SQLBulkOperations** -Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) das angegebene *StatementHandle* war nicht in einem ausgeführten Zustand. Die Funktion wurde aufgerufen, ohne zuerst **SQLExecDirect**, **SQLExecute**oder eine Katalog Funktion aufzurufen.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *StatementHandle* aufgerufen und wird noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLSetPos** wurde für *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) der Treiber war ODBC 2. der *x* -Treiber und **SQLBulkOperations** wurden vor dem Aufruf von **SQLFetchScroll** oder **SQLFetch** für ein *StatementHandle* aufgerufen.<br /><br /> (DM) **SQLBulkOperations** wurde aufgerufen, nachdem **SQLExtendedFetch** für " *StatementHandle*" aufgerufen wurde.|  
@@ -230,20 +231,20 @@ SQLRETURN SQLBulkOperations(
 ## <a name="providing-long-data-for-bulk-inserts-and-updates"></a>Bereitstellen von langen Daten für Massen Einfügungen und Updates  
  Lange Daten können für Massen Einfügungen und Aktualisierungen bereitgestellt werden, die von Aufrufen von **SQLBulkOperations**ausgeführt werden. Um lange Daten einzufügen oder zu aktualisieren, führt eine Anwendung zusätzlich zu den im Abschnitt "Ausführen von Massen Einfügungen" und "Ausführen von Massen Updates mithilfe von Lesezeichen" weiter oben in diesem Thema beschriebenen Schritten die folgenden Schritte aus.  
   
-1.  Wenn die Daten mithilfe von **SQLBindCol**gebunden werden, platziert die Anwendung einen Anwendungs definierten Wert, wie z. b. die Spaltennummer, für Data-at-Execution-Spalten in den * \*targetvalueptr* -Puffer. Der Wert kann später verwendet werden, um die Spalte zu identifizieren.  
+1.  Wenn die Daten mithilfe von **SQLBindCol**gebunden werden, platziert die Anwendung einen Anwendungs definierten Wert, wie z. b. die Spaltennummer, für Data-at-Execution-Spalten in den * \* targetvalueptr* -Puffer. Der Wert kann später verwendet werden, um die Spalte zu identifizieren.  
   
-     Die Anwendung platziert das Ergebnis des SQL_LEN_DATA_AT_EXEC (*length*)-Makros im * \*StrLen_or_IndPtr* Puffer. Wenn der SQL-Datentyp der Spalte SQL_LONGVARBINARY, SQL_LONGVARCHAR oder ein langer Datenquellen spezifischer Datentyp ist und der Treiber "Y" für den SQL_NEED_LONG_DATA_LEN Informationstyp in **SQLGetInfo**zurückgibt, ist *length* die Anzahl der Daten bytes, die für den Parameter gesendet werden sollen. Andernfalls muss es sich um einen nicht negativen Wert handeln und wird ignoriert.  
+     Die Anwendung platziert das Ergebnis des SQL_LEN_DATA_AT_EXEC (*length*)-Makros im * \* StrLen_or_IndPtr* Puffer. Wenn der SQL-Datentyp der Spalte SQL_LONGVARBINARY, SQL_LONGVARCHAR oder ein langer Datenquellen spezifischer Datentyp ist und der Treiber "Y" für den SQL_NEED_LONG_DATA_LEN Informationstyp in **SQLGetInfo**zurückgibt, ist *length* die Anzahl der Daten bytes, die für den Parameter gesendet werden sollen. Andernfalls muss es sich um einen nicht negativen Wert handeln und wird ignoriert.  
   
 2.  Wenn **SQLBulkOperations** aufgerufen wird und Data-at-Execution-Spalten vorhanden sind, gibt die Funktion SQL_NEED_DATA zurück und geht mit Schritt 3 fort, das folgt. (Wenn keine Data-at-Execution-Spalten vorhanden sind, ist der Prozess vollständig.)  
   
-3.  Die Anwendung ruft **SQLParamData** auf, um die Adresse des * \*targetvalueptr* -Puffers für die erste zu verarbeitende Data-at-Execution-Spalte abzurufen. **SQLParamData** gibt SQL_NEED_DATA zurück. Die Anwendung ruft den von der Anwendung definierten Wert aus dem * \*targetvalueptr* -Puffer ab.  
+3.  Die Anwendung ruft **SQLParamData** auf, um die Adresse des * \* targetvalueptr* -Puffers für die erste zu verarbeitende Data-at-Execution-Spalte abzurufen. **SQLParamData** gibt SQL_NEED_DATA zurück. Die Anwendung ruft den von der Anwendung definierten Wert aus dem * \* targetvalueptr* -Puffer ab.  
   
     > [!NOTE]  
     >  Obwohl Data-at-Execution-Parameter mit Data-at-Execution-Spalten vergleichbar sind, ist der von **SQLParamData** zurückgegebene Wert für jeden Wert anders.  
   
      Data-at-Execution-Spalten sind Spalten in einem Rowset, für die Daten mit **SQLPutData** gesendet werden, wenn eine Zeile aktualisiert oder mit **SQLBulkOperations**eingefügt wird. Sie sind mit **SQLBindCol**gebunden. Der von **SQLParamData** zurückgegebene Wert ist die Adresse der Zeile im **targetvalueptr* -Puffer, der verarbeitet wird.  
   
-4.  Die Anwendung ruft **SQLPutData** mindestens einmal auf, um Daten für die Spalte zu senden. Mehrere Aufrufe sind erforderlich, wenn der gesamte Datenwert nicht im in **SQLPutData**angegebenen * \*targetvalueptr* -Puffer zurückgegeben werden kann. mehrere Aufrufe von **SQLPutData** für die gleiche Spalte sind nur zulässig, wenn Zeichen-c-Daten an eine Spalte mit einem Zeichen-, Binär-oder Datenquellen spezifischen Datentyp gesendet werden oder wenn binäre C-Daten an eine Spalte mit einem Zeichen-, Binär-oder Datenquellen spezifischen Datentyp gesendet werden.  
+4.  Die Anwendung ruft **SQLPutData** mindestens einmal auf, um Daten für die Spalte zu senden. Mehrere Aufrufe sind erforderlich, wenn der gesamte Datenwert nicht im in **SQLPutData**angegebenen * \* targetvalueptr* -Puffer zurückgegeben werden kann. mehrere Aufrufe von **SQLPutData** für die gleiche Spalte sind nur zulässig, wenn Zeichen-c-Daten an eine Spalte mit einem Zeichen-, Binär-oder Datenquellen spezifischen Datentyp gesendet werden oder wenn binäre C-Daten an eine Spalte mit einem Zeichen-, Binär-oder Datenquellen spezifischen Datentyp gesendet werden.  
   
 5.  Die Anwendung ruft **SQLParamData** erneut auf, um zu signalisieren, dass alle Daten für die Spalte gesendet wurden.  
   
@@ -449,7 +450,7 @@ int main() {
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Binden eines Puffers an eine Spalte in einem Resultset|[SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |Abbrechen der Anweisungs Verarbeitung|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
@@ -461,6 +462,6 @@ int main() {
 |Positionieren des Cursors, Aktualisieren von Daten im Rowset oder aktualisieren oder Löschen von Daten im Rowset|[SQLSetPos-Funktion](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |Festlegen eines Anweisungs Attributs|[SQLSetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

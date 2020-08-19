@@ -1,4 +1,5 @@
 ---
+description: SQLInstallTranslatorEx-Funktion
 title: Sqlinstalltranslatorex-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,21 +20,21 @@ helpviewer_keywords:
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5cf52c26bf9e4a26f13a27a0e763fbaa30bd18ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7957a04e0dafaeb2177401f775c5cdbb75135569
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421144"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx-Funktion
 **Konformitäts**  
  Eingeführte Version: ODBC 3,0  
   
  **Zusammenfassung**  
- **Sqlinstalltranslatorex** fügt dem Abschnitt "Odbcinst. ini" in den Systeminformationen (HKEY_LOCAL_MACHINE \software\odbc\odbcinst. INI\ODBC-Konvertierungs Registrierungsschlüssel).  
+ **Sqlinstalltranslatorex** fügt dem Odbcinst.ini Abschnitt der Systeminformationen (HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI \ODBC-Konvertierungs Registrierungsschlüssel) Informationen zu einem Konvertierer hinzu.  
   
- Auf die Funktionalität von **sqlinstalltranslatorex** kann auch mit [odbcconf zugegriffen werden. EXE](../../../odbc/odbcconf-exe.md).  
+ Der Zugriff auf die Funktionalität von **sqlinstalltranslatorex** kann auch mit [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md)erfolgen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -85,9 +86,9 @@ BOOL SQLInstallTranslatorEx(
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlinstalltranslatorex** "false" zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlinstalltranslatorex** "false" zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pferrorcode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Das *lpszpathout* -Argument war nicht groß genug, um den Ausgabepfad zu enthalten. Der Puffer enthält den abgeschnittene Pfad.<br /><br /> Das *cbpthoutmax* -Argument war 0, und das *fRequest* -Argument wurde ODBC_INSTALL_COMPLETE.|  
@@ -114,7 +115,7 @@ BOOL SQLInstallTranslatorEx(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Zurückgeben einer Standard Übersetzungs Option|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |Auswählen von Übersetzer|[Sqlgettranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  

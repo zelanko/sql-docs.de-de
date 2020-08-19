@@ -1,4 +1,5 @@
 ---
+description: Schreiben von ODBC-3.x-Anwendungen
 title: Schreiben von ODBC 3. x-Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ba48d76babcaa5fcc49a541088f7c4cc349b569
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7df97b99df10e613ee45aaa3c01174b46160e740
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421354"
 ---
 # <a name="writing-odbc-3x-applications"></a>Schreiben von ODBC-3.x-Anwendungen
 Wenn eine ODBC *2. x* -Anwendung auf ODBC *3. x*aktualisiert wird, sollte Sie so geschrieben werden, dass Sie sowohl mit ODBC *2. x* -als auch mit *3. x* -Treibern funktioniert. Die Anwendung sollte bedingten Code einschließen, um die ODBC *3. x* -Features in vollem Umfang nutzen zu können.  

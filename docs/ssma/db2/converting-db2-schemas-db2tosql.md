@@ -1,4 +1,5 @@
 ---
+description: Umstellen von DB2-Schemas (DB2ToSQL)
 title: Umstellen von DB2-Schemas (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 13afcabf85515b211d8493990a59950dc97d72f5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9dbf89c8027737a02d4eded9dc2e743e683b65e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418556"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Umstellen von DB2-Schemas (DB2ToSQL)
 Nachdem Sie eine Verbindung mit DB2 hergestellt, eine Verbindung mit hergestellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Projekt-und Daten Zuordnungsoptionen festgelegt haben, können Sie DB2-Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbankobjekte konvertieren.  
@@ -38,7 +39,7 @@ Die folgende Tabelle zeigt, welche DB2-Objekte konvertiert werden, und die resul
 |CREATE TABLE|**SSMA ordnet CREATE TABLE mit den folgenden Ausnahmen zu:**<br /><br />Multidimensionale Clustering-Tabellen (MDC)<br /><br />Range-Clustered Tables (RCT)<br /><br />Partitionierte Tabellen<br /><br />Getrennte Tabelle<br /><br />Data Capture-Klausel<br /><br />Implizit verborgene Option<br /><br />VOLATILE-Option|  
 |CREATE VIEW|SSMA Maps Create View mit der Option with local Check Option, andere Optionen werden jedoch nicht der SQL Server-Semantik zugeordnet.|  
 |CREATE INDEX|**SSMA Maps Create Index mit den folgenden Ausnahmen:**<br /><br />XML-Index<br /><br />BUSINESS_TIME ohne Überschneidungen (Option)<br /><br />Partitionierte Klausel<br /><br />Option nur für Spezifikation<br /><br />Option "erweitern mit"<br /><br />Minpctused (Option)<br /><br />Seiten Teilung (Option)|  
-|Trigger|**SSMA ordnet die folgende auslösersemantik zu:**<br /><br />After/for each-Zeilen Trigger<br /><br />After/for each-Anweisung auslösen<br /><br />Vor/für jede Zeile und anstelle von/für jeden Zeilen Trigger|  
+|Auslöser|**SSMA ordnet die folgende auslösersemantik zu:**<br /><br />After/for each-Zeilen Trigger<br /><br />After/for each-Anweisung auslösen<br /><br />Vor/für jede Zeile und anstelle von/für jeden Zeilen Trigger|  
 |Sequenzen|Sind zugeordnet.|  
 |SELECT-Anweisung|**SSMA Maps wählen Sie mit den folgenden Ausnahmen aus:**<br /><br />Data-Change-Table-Reference-Klausel: teilweise zugeordnet, aber endgültige Tabellen werden nicht unterstützt.<br /><br />Tabellen Verweis Klausel: teilweise zugeordnet, aber nur-Table-Reference, Outer-Table-Reference, analyze_table-Expression, Collection-abgeleitete Tabelle, XMLTable-Expression ist nicht der SQL Server-Semantik zugeordnet.<br /><br />Die Period-Specification-Klausel ist nicht zugeordnet.<br /><br />Die Continue-Handler-Klausel ist nicht zugeordnet.<br /><br />Die typisierte Korrelations Klausel ist nicht zugeordnet.<br /><br />Die Klausel für die gleichzeitige Zugriffs Auflösung ist nicht zugeordnet.|  
 |Values-Anweisung|Wird zugeordnet.|  
@@ -66,7 +67,7 @@ Die folgende Tabelle zeigt, welche DB2-Objekte konvertiert werden, und die resul
 |While-Anweisung|Wird zugeordnet.|  
 |Get Diagnostics-Anweisung|**SSMA ordnet die Diagnose mit den folgenden Ausnahmen zu:**<br /><br />Row_count-ist zugeordnet.<br /><br />DB2_RETURN_STATUS-ist zugeordnet.<br /><br />MESSAGE_TEXT-ist zugeordnet.<br /><br />DB2_SQL_NESTING_LEVEL-keine Zuordnung zu SQL Server Semantik<br /><br />DB2_TOKEN_STRING-keine Zuordnung zu SQL Server Semantik|  
 |Cursor|**SSMA ordnet Cursor mit den folgenden Ausnahmen zu:**<br /><br />Anweisung zum Zuordnen von Cursorn-entspricht nicht SQL Server Semantik<br /><br />Zuordnung der Locators-Anweisung-entspricht nicht SQL Server Semantik<br /><br />DECLARE CURSOR-Anweisung: die returnability-Klausel ist nicht der SQL Server-Semantik zugeordnet.<br /><br />FETCH-Anweisung-partielle Zuordnung. Variablen als Ziel werden nur unterstützt. Der SQLDA-Deskriptor ist nicht der SQL Server-Semantik zugeordnet.|  
-|Variablen|Sind zugeordnet.|  
+|Variables|Sind zugeordnet.|  
 |Ausnahmen, Handler und Bedingungen|**SSMA ordnet die "Ausnahmebehandlung" mit den folgenden Ausnahmen zu:**<br /><br />Exit-Handler-werden zugeordnet.<br /><br />Rückgängig-Handler-werden zugeordnet.<br /><br />Continue-Handler-werden nicht zugeordnet.<br /><br />Bedingungen: Es wird nicht der SQL Server-Semantik zugeordnet.|  
 |Dynamische SQL-Anweisungen|Nicht zugeordnet.|  
 |Aliase|Sind zugeordnet.|  

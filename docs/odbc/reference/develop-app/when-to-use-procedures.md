@@ -1,4 +1,5 @@
 ---
+description: Verwendung von Prozeduren
 title: Verwendungsweise von Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31aeea226bc8c8aa41f748d1d9a97d55147c4d67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7268e8650b0de17edab8776eaaf644ece60100bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81289097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421374"
 ---
 # <a name="when-to-use-procedures"></a>Verwendung von Prozeduren
 Die Verwendung von-Prozeduren bietet eine Reihe von Vorteilen, die auf der Tatsache basieren, dass using-Prozeduren SQL-Anweisungen von der Anwendung in die Datenquelle verschieben. Das verbleibende in der Anwendung ist ein interoperable Prozedur Aufruf. Zu diesen Vorteilen gehören:  

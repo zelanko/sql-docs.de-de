@@ -1,4 +1,5 @@
 ---
+description: Wurde ein Resultset erstellt?
 title: Wurde ein Resultset erstellt? | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c171a154dd16a291c5dbe1dcade8c01ea95fb084
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57b65c254f48d9c3f5078c3b2c1f576ae54d4740
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421384"
 ---
 # <a name="was-a-result-set-created"></a>Wurde ein Resultset erstellt?
 In den meisten Fällen wissen die Anwendungsprogrammierer, ob die von Ihrer Anwendung ausgeführten Anweisungen ein Resultset erstellen werden. Dies ist der Fall, wenn die Anwendung hart codierte SQL-Anweisungen verwendet, die vom Programmierer geschrieben wurden. Dies ist normalerweise der Fall, wenn die Anwendung SQL-Anweisungen zur Laufzeit erstellt: der Programmierer kann problemlos Code einschließen, der Flags, ob eine **Select** -Anweisung oder eine **Insert** -Anweisung erstellt wird. In einigen Situationen kann der Programmierer möglicherweise nicht wissen, ob eine-Anweisung ein Resultset erstellt. Dies trifft zu, wenn die Anwendung eine Möglichkeit für den Benutzer bietet, eine SQL-Anweisung einzugeben und auszuführen. Dies trifft auch zu, wenn die Anwendung zur Laufzeit eine-Anweisung erstellt, um eine Prozedur auszuführen.  

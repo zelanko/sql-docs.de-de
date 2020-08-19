@@ -1,4 +1,5 @@
 ---
+description: Wartungsplan (Registerkarte Entwurf)
 title: Wartungsplan (Registerkarte „Entwurf“) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1bffeed97e9c56420750ce022c4fa5ec0a56f574
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e56d4d52cee3ac75354acd17d7496d062bc3ed73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420874"
 ---
 # <a name="maintenance-plan-design-tab"></a>Wartungsplan (Registerkarte Entwurf)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Verwenden Sie **Wartungsplan (Registerkarte „Entwurf“)** , um die Eigenschaften eines Wartungsplans und seiner Unterpläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden.  
+   Verwenden Sie **Wartungsplan (Registerkarte „Entwurf“)**, um die Eigenschaften eines Wartungsplans und seiner Unterpläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden.  
   
 ## <a name="options"></a>Tastatur  
  **Unterplan hinzufügen**  
@@ -69,7 +70,7 @@ ms.locfileid: "85666972"
   
  Nachdem ein Wartungstask auf der Entwurfsoberfläche platziert ist, können seine Eigenschaften je nach Bedarf bearbeitet werden. So wird beispielsweise die für einen Task Datenbank sichern relevante Datenbank erst angegeben, nachdem der Task dem Plan hinzugefügt wurde. Die Tasks auf der Entwurfsoberfläche, die nicht ordnungsgemäß konfiguriert sind, enthalten ein rotes Symbol mit einem weißen x.  
   
- Wenn Sie einem Plan einen Wartungstask hinzufügen möchten, ziehen Sie das Symbol des Tasks aus der Toolbox **Wartungsplantasks** in die Planentwurfsoberfläche, oder doppelklicken Sie in der Toolbox auf den Task, wodurch dieser Task der derzeit aktiven Designeroberfläche hinzugefügt wird. Klicken Sie im **-Menü** Ansicht**auf**Toolbox[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], wenn die Toolbox **Wartungsplantasks** nicht sichtbar ist. Erweitern Sie den Knoten **Wartungsplantasks** im Bereich **Toolbox** .  
+ Wenn Sie einem Plan einen Wartungstask hinzufügen möchten, ziehen Sie das Symbol des Tasks aus der Toolbox **Wartungsplantasks** in die Planentwurfsoberfläche, oder doppelklicken Sie in der Toolbox auf den Task, wodurch dieser Task der derzeit aktiven Designeroberfläche hinzugefügt wird. Klicken Sie im -Menü [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Ansicht** auf **Toolbox**, wenn die Toolbox **Wartungsplantasks** nicht sichtbar ist. Erweitern Sie den Knoten **Wartungsplantasks** im Bereich **Toolbox** .  
   
  Wenn Sie einen Task aus einem Plan entfernen möchten, wählen Sie den Task in der Designeroberfläche aus, und drücken Sie die **ENTF** -TASTE, oder klicken Sie mit der rechten Maustaste auf den Task, und klicken Sie auf **Löschen**.  
   
@@ -96,7 +97,7 @@ ms.locfileid: "85666972"
  **Aktivieren**  
  Stellt einen zuvor deaktivierten Task wieder her.  
   
- **Gruppe**  
+ **Gruppieren**  
  Erstellt eine Gruppe, die einen oder mehrere Tasks enthält.  
   
  **Gruppierung aufheben**  
@@ -108,7 +109,7 @@ ms.locfileid: "85666972"
  **Reduzieren**  
  Blendet Tasks innerhalb einer Gruppe aus.  
   
- **Erweitern**  
+ **Expand**  
  Zeigt die Tasks in einer Gruppe an, die zuvor mithilfe der Option **Reduzieren**ausgeblendet wurden.  
   
  **Zoom**  

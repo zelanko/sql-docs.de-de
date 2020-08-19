@@ -1,4 +1,5 @@
 ---
+description: Zuordnen von Handles und Herstellen einer Verbindung mit SQL Server (ODBC)
 title: Zuordnen von Handles und Herstellen einer Verbindung mit SQL Server (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,11 +16,12 @@ ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99f6e265696fd257dde93e86c835eaa514570e65
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2bb6b097a811bc134a94ede766cc5774df5dfc3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420554"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Zuordnen von Handles und Herstellen einer Verbindung mit SQL Server (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +58,7 @@ ms.locfileid: "86010000"
   
      Wenn die Verbindungs Zeichenfolge nicht fertig ist, kann **SQLDriverConnect** zur Eingabe der erforderlichen Informationen aufgefordert werden. Dies wird durch den für den *DriverCompletion* -Parameter angegebenen Wert gesteuert.  
   
-     \- oder -  
+     \- oder –  
   
      Sie können [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) mehrmals auf iterative Weise aufzurufen, um die Verbindungs Zeichenfolge zu erstellen und eine Verbindung mit herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -71,7 +73,7 @@ ms.locfileid: "86010000"
 13. Nennen Sie **SQLFreeHandle** mit dem **Handlertyp** SQL_HANDLE_ENV, um das Umgebungs Handle freizugeben.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt einen **SQLDriverConnect** -Befehl, um eine Verbindung mit einer Instanz von herzustellen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ohne dass eine vorhandene ODBC-Datenquelle erforderlich ist. Durch die Übergabe einer unvollständigen Verbindungs Zeichenfolge an **SQLDriverConnect**bewirkt dies, dass der ODBC-Treiber den Benutzer zur Eingabe der fehlenden Informationen auffordert.  

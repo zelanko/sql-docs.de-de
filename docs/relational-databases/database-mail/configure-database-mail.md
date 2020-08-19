@@ -1,4 +1,5 @@
 ---
+description: Konfigurieren des Datenbank-E-Mail-Features
 title: Konfigurieren des Datenbank-E-Mail-Features | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -39,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3c52311482f8ad7107e384e3ed8e20100c094243
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421084"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85737630"
   
 -   **Vorbereitungen:**  [Beschränkungen](#Restrictions), [Sicherheit](#Security)  
   
--   **So konfigurieren Sie Datenbank-E-Mails mithilfe von:**  [dem Assistenten zum Konfigurieren von Datenbank-E-Mail](#DBWizard), [Vorlagen](#Template)  
+-   **So konfigurieren Sie Datenbank-E-Mails mit folgenden Komponenten:**  [Assistent zum Konfigurieren von Datenbank-E-Mail](#DBWizard), [Vorlagen](#Template)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Verwenden Sie die Option **DatabaseMail XPs** , um Datenbank-E-Mail auf diesem Server zu aktivieren. Weitere Informationen finden Sie im Referenzthema [Database Mail XPs (Serverkonfigurationsoption)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
@@ -320,7 +321,7 @@ ms.locfileid: "85737630"
 ###  <a name="manage-accounts-and-profiles-page"></a><a name="AccountsProfiles"></a> Seite zum Verwalten von Konten und Profilen  
  Verwenden Sie diese Seite, um eine Aufgabe zum Verwalten eines Profils oder Kontos auszuwählen.  
   
- **Neues Konto erstellen**  
+ **Erstellen eines neuen Kontos**  
  Erstellt ein neues Konto.  
   
  **Vorhandenes Konto anzeigen, ändern oder löschen**  
@@ -344,7 +345,7 @@ ms.locfileid: "85737630"
  **Öffentlich**  
  Wählen Sie diese Option aus, um das angegebene Profil als öffentliches Profil festzulegen.  
   
- **Profile Name**  
+ **Profilname**  
  Zeigt den Namen des Profils an.  
   
  **Standardprofil**  
@@ -392,7 +393,7 @@ ms.locfileid: "85737630"
  Die maximale Größe einer Anlage in Bytes.  
   
  **Unzulässige Erweiterungen für Anlagendateien**  
- Eine durch Trennzeichen getrennte Liste mit Erweiterungen, die nicht als Anlagen einer E-Mail-Nachricht gesendet werden können. Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um zusätzliche Erweiterungen hinzuzufügen.  
+ Eine durch Trennzeichen getrennte Liste mit Erweiterungen, die nicht als Anlagen einer E-Mail-Nachricht gesendet werden können. Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um zusätzliche Erweiterungen hinzuzufügen.  
   
  **Minimale Lebensdauer der ausführbaren Datei von der Datenbank-E-Mail (Sekunden)**  
  Gibt an, wie lange (in Sekunden) der externe E-Mail-Prozess mindestens aktiv bleibt. Der Prozess bleibt aktiv, solange sich E-Mails in der Datenbank-E-Mail-Warteschlange befinden. Dieser Parameter gibt die Zeitdauer an, für die der Prozess aktiv bleibt, wenn keine Nachrichten zum Verarbeiten vorhanden sind.  

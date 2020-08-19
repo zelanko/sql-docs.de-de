@@ -1,4 +1,5 @@
 ---
+description: SQLInstallDriverEx-Funktion
 title: Sqlinstalldriverex-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,23 +20,23 @@ helpviewer_keywords:
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 054e8b6b9eae26bd5f973f3d46d7ef37363a8e79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c200615c9d3bc71ccb146d3b898517611b53eed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421184"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx-Funktion
 **Konformitäts**  
  Eingeführte Version: ODBC 3,0  
   
  **Zusammenfassung**  
- **Sqlinstalldriverex** fügt Informationen zum Treiber zum Eintrag "Odbcinst. ini" in den Systeminformationen hinzu und erhöht die *usagecount* des Treibers um 1. Wenn jedoch eine Version des Treibers bereits vorhanden ist, der *usagecount* -Wert für den Treiber jedoch nicht vorhanden ist, wird der neue *usagecount* -Wert auf 2 festgelegt.  
+ **Sqlinstalldriverex** fügt dem Odbcinst.ini Eintrag in den Systeminformationen Informationen zum Treiber hinzu und erhöht die *usagecount* des Treibers um 1. Wenn jedoch eine Version des Treibers bereits vorhanden ist, der *usagecount* -Wert für den Treiber jedoch nicht vorhanden ist, wird der neue *usagecount* -Wert auf 2 festgelegt.  
   
  Mit dieser Funktion werden keine Dateien kopiert. Es liegt in der Verantwortung des aufrufenden Programms, die Treiberdateien ordnungsgemäß in das Zielverzeichnis zu kopieren.  
   
- Auf die Funktionalität von **sqlinstalldriverex** kann auch mit [odbcconf zugegriffen werden. EXE](../../../odbc/odbcconf-exe.md).  
+ Der Zugriff auf die Funktionalität von **sqlinstalldriverex** kann auch mit [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md)erfolgen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -83,9 +84,9 @@ BOOL SQLInstallDriverEx(
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlinstalldriverex** "false" zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlinstalldriverex** "false" zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pferrorcode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Das *lpszpathout* -Argument war nicht groß genug, um den Ausgabepfad zu enthalten. Der Puffer enthält den abgeschnittene Pfad.<br /><br /> Das *cbpthoutmax* -Argument war 0, und *fRequest* war ODBC_INSTALL_COMPLETE.|  
@@ -99,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Kommentare  
  Das *lpszDriver* -Argument ist eine Liste von Attributen in Form von Schlüsselwort-Wert-Paaren. Jedes Paar wird mit einem NULL-Byte beendet, und die gesamte Liste wird mit einem NULL-Byte beendet. (Das heißt, zwei NULL-Bytes markieren das Ende der Liste.) Das Format dieser Liste lautet wie folgt:  
   
- _Treiber-_ **\\**Debug 0driver**=**_-Treiber-DLL-Dateiname_**\\**0**=**[Setup_Setup-DLL-filename_<b>\\</b>0]  
+ _Treiber-Entsc_ **\\** 0driver **=** _-Treiber-DLL-Dateiname_ **\\** 0 [Setup **=** _Setup-DLL-filename_ <b>\\</b> 0]  
   
- [_Driver-attr-Schlüsselwort1_**=**_value1_<b>\\</b>0] [_Driver-attr-Schlüsselwort2_**=**_value2_<b>\\</b>0]... <b>\\</b>0  
+ [_Driver-attr-Schlüsselwort1_ **=** _value1_ <b>\\</b> 0] [_Driver-attr-Schlüsselwort2_ **=** _value2_ <b>\\</b> 0]... <b>\\</b> 1,0  
   
  Dabei ist "\ 0" ein NULL-Byte, und *Driver-attr-keywordn* ist ein beliebiges Treiber Attribut Schlüsselwort. Die Schlüsselwörter müssen in der angegebenen Reihenfolge angezeigt werden. Nehmen Sie beispielsweise an, dass ein Treiber für formatierte Textdateien separate Treiber-und Setup-DLLs aufweist und Dateien mit den Erweiterungen ". txt" und ". csv" verwenden kann. Das *lpszDriver* -Argument für diesen Treiber könnte wie folgt lauten:  
   
@@ -116,7 +117,7 @@ FileExtns=*.txt,*.csv\0\0
 SQL Server\0Driver=SQLSRVR.DLL\0\0  
 ```  
   
- Nachdem **sqlinstalldriverex** Informationen über den Treiber aus dem *lpszDriver* -Argument abgerufen hat, wird die Treiber Beschreibung dem Abschnitt [ODBC Drivers] des Eintrags "Odbcinst. ini" in den Systeminformationen hinzugefügt. Anschließend wird ein Abschnitt mit dem Titel mit der Beschreibung des Treibers erstellt, und es werden die vollständigen Pfade der Treiber-DLL und der Setup-DLL hinzugefügt. Schließlich wird der Pfad des Zielverzeichnisses der Installation zurückgegeben. die Treiberdateien werden jedoch nicht darauf kopiert. Das aufrufende Programm muss die Treiberdateien tatsächlich in das Zielverzeichnis kopieren.  
+ Nachdem **sqlinstalldriverex** Informationen über den Treiber aus dem *lpszDriver* -Argument abgerufen hat, wird die Treiber Beschreibung dem Abschnitt [ODBC Drivers] des Odbcinst.ini Eintrags in den Systeminformationen hinzugefügt. Anschließend wird ein Abschnitt mit dem Titel mit der Beschreibung des Treibers erstellt, und es werden die vollständigen Pfade der Treiber-DLL und der Setup-DLL hinzugefügt. Schließlich wird der Pfad des Zielverzeichnisses der Installation zurückgegeben. die Treiberdateien werden jedoch nicht darauf kopiert. Das aufrufende Programm muss die Treiberdateien tatsächlich in das Zielverzeichnis kopieren.  
   
  **Sqlinstalldriverex** erhöht die Anzahl der Komponenten Verwendungs Einheiten für den installierten Treiber um 1. Wenn eine Version des Treibers bereits vorhanden ist, aber die Anzahl der Komponenten Verwendungs Werte für den Treiber nicht vorhanden ist, wird der Wert der neuen Komponenten Verwendungs Anzahl auf 2 festgelegt.  
   
@@ -140,6 +141,6 @@ SQL Server\0Driver=SQLSRVR.DLL\0\0
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Installieren des Treiber-Managers|[Sqlinstalldrivermanager](../../../odbc/reference/syntax/sqlinstalldrivermanager-function.md)|

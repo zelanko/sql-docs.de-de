@@ -1,4 +1,5 @@
 ---
+description: SQLTransact-Funktion
 title: SQLtransact-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7a4f1da36a7c233e9a1b5832ee83e86a5c1f77d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 35eb9ff0a59d1b11838c1b74f8b229ce324f9e94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421034"
 ---
 # <a name="sqltransact-function"></a>SQLTransact-Funktion
 **Konformitäts**  
@@ -36,6 +37,6 @@ ms.locfileid: "81287080"
 > [!NOTE]  
 >  Das Attribut SQL_ASYNC_DBC_FUNCTION_ENABLE, das in ODBC 3,8 eingeführt wurde, wird von **SQLTransact**nicht unterstützt. Anwendungen, die einen asynchronen Vorgang für ein Verbindungs Handle verwenden, müssen **SQLEndTran**verwenden.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

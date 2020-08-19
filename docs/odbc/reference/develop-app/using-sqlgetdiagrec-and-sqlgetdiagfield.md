@@ -1,4 +1,5 @@
 ---
+description: Verwenden von SQLGetDiagRec und SQLGetDiagField
 title: Verwenden von SQLGetDiagRec und SQLGetDiagField | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69a17086253b40469b0ed98cb6f870f319f03f52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 402cb326ac91e13db0d3ab5421bd5ddb097fb3db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421434"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Verwenden von SQLGetDiagRec und SQLGetDiagField
 Anwendungen rufen **SQLGetDiagRec** oder **SQLGetDiagField** auf, um Diagnoseinformationen abzurufen. Diese Funktionen akzeptieren eine Umgebung, eine Verbindung, eine Anweisung oder ein Deskriptorhandle und geben Diagnoseinformationen von der Funktion zurück, die das Handle zuletzt verwendet hat. Die an einem bestimmten handle protokollierte Diagnose wird verworfen, wenn eine neue Funktion mit diesem Handle aufgerufen wird. Wenn die Funktion mehrere Diagnosedaten Sätze zurückgibt, werden diese Funktionen von der Anwendung mehrmals aufgerufen. die Gesamtanzahl der Statusdaten Sätze wird durch Aufrufen von **SQLGetDiagField** für den Header Daten Satz (Datensatz 0) mit der Option SQL_DIAG_NUMBER abgerufen.  

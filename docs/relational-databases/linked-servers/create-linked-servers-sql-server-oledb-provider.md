@@ -1,4 +1,5 @@
 ---
+description: 'Verteilte Microsoft SQL Server-Abfragen: OLE DB-Konnektivität'
 title: Erstellen eines Verbindungsserveranbieters
 ms.date: 07/01/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 528d1f6e1c7eea06b69fc60e2208eeb37ce3e36f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420844"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Verteilte Microsoft SQL Server-Abfragen: OLE DB-Konnektivität
 
@@ -190,7 +191,7 @@ Die folgenden allgemeinen Schritte werden beim Herstellen einer Verbindung mit e
 
    SQL Server erfasst mehrere Anbietereigenschaften, die für Auswertung verteilter Abfragen verwendet werden sollen. Diese Eigenschaften werden durch Aufruf von `IDBProperties::GetProperties` abgerufen. Alle dieser Eigenschaften sind optional. Wenn jedoch alle relevanten Eigenschaften unterstützt werden, kann SQL Server die Funktionen des Anbieters in vollem Umfang ausschöpfen. `DBPROP_SQLSUPPORT` ist beispielsweise erforderlich, um zu ermitteln, ob SQL Server Abfragen an den Anbieter senden kann. Wenn diese Eigenschaft nicht unterstützt wird, verwendet SQL Server den Remoteanbieter nicht als SQL-Befehlsanbieter, auch wenn es sich dabei um einen solchen handelt. In der folgenden Tabelle gibt die Spalte „Standardwert“ an, welchen Wert SQL Server erwartet, wenn der Anbieter die Eigenschaft nicht unterstützt.
 
-Eigenschaft| Standardwert| Zweck |
+Eigenschaft| Standardwert| Verwendung |
 |:----|:----|:----|
 |`DBPROP_DBMSNAME`|Keine|Wird für Fehlermeldungen verwendet.|
 |`DBPROP_DBMSVER` |Keine|Wird für Fehlermeldungen verwendet.|
@@ -648,7 +649,7 @@ Im Fall der optionalen Schnittstellen gibt die Spalte „Szenarien“ ein oder m
 | |`ICommandPrepare`|Nein|Wird zum Vorbereiten eines Befehls verwendet, um Metadaten zu erhalten (wird in Pass-Through-Abfragen verwendet, falls diese verfügbar sind).|Remoteabfrage, Leistung.|
 |Error-Objekt|`IErrorRecords`|Ja|Wird zum Abrufen eines Zeigers auf eine `IErrorInfo`-Schnittstelle verwendet, die einem einzelnen Fehlerdatensatz entspricht.| |
 | |`IErrorInfo`|Ja|Wird zum Abrufen eines Zeigers auf eine `IErrorInfo`-Schnittstelle verwendet, die einem einzelnen Fehlerdatensatz entspricht.| |
-|Beliebiges Objekt|`ISupportErrorInfo`|Nein|Wird zum Überprüfen verwendet, ob eine bestimmte Schnittstelle Error-Objekte unterstützt.| |
+|Ein beliebiges Objekt|`ISupportErrorInfo`|Nein|Wird zum Überprüfen verwendet, ob eine bestimmte Schnittstelle Error-Objekte unterstützt.| |
 |  |  |  |  |  |
 
 >[!NOTE]

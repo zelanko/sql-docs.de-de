@@ -1,4 +1,5 @@
 ---
+description: SQLValidDSN-Funktion
 title: Sqlvaliddsn-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6dfafca22d0b04f2147b1af24b53e787493efe67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4919887a6e0bad4526959d0cd31205019a597a0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421024"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN-Funktion
 **Konformitäts**  
@@ -49,9 +50,9 @@ BOOL SQLValidDSN(
  Die Funktion gibt true zurück, wenn der Datenquellen Name gültig ist. Er gibt false zurück, wenn der Datenquellen Name ungültig ist oder der Funktions Aufrufvorgang fehlgeschlagen ist.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlvaliddsn** false zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. Ein * \*"pferrorcode* " wird nur zurückgegeben, wenn der Funktionsaufrufe fehlgeschlagen ist, nicht, wenn "false" zurückgegeben wurde, weil der Datenquellen Name ungültig In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlvaliddsn** false zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. Ein " * \* pferrorcode* " wird nur zurückgegeben, wenn der Funktionsaufrufe fehlgeschlagen ist, nicht, wenn "false" zurückgegeben wurde, weil der Datenquellen Name ungültig In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pferrorcode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund eines fehlenden Speichers nicht ausführen.|  
@@ -63,7 +64,7 @@ BOOL SQLValidDSN(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Hinzufügen, ändern oder Entfernen einer Datenquelle|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) (in der Setup-DLL)|  
 |Hinzufügen, ändern oder Entfernen einer Datenquelle|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  

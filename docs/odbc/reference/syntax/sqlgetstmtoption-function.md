@@ -1,4 +1,5 @@
 ---
+description: SQLGetStmtOption-Funktion
 title: SQLGetStmtOption-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3e7bd7a48dbf2116702b52f4963bb545e809352
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc870dabcc6516f16d740e165964b650574b7484
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421204"
 ---
 # <a name="sqlgetstmtoption-function"></a>SQLGetStmtOption-Funktion
 **Konformitäts**  
@@ -36,6 +37,6 @@ ms.locfileid: "81303282"
 > [!NOTE]  
 >  Weitere Informationen dazu, wie der Treiber-Manager diese Funktion bei ODBC 2 zuordnet. die *x* -Anwendung arbeitet mit ODBC 3. zum *x* -Treiber finden Sie unter [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Driver Guidelines for abwärts Compatibility.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

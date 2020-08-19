@@ -1,4 +1,5 @@
 ---
+description: Schreiben von ODBC-3.x-Treibern
 title: Schreiben von ODBC 3. x-Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62f2a701fd5ac94c92d41494a4fd1ab023edaf25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5fec9b94dbcf60868c44e49d92bddb4bb73e9cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421344"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Schreiben von ODBC-3.x-Treibern
 In der folgenden Tabelle wird die Funktions Unterstützung in ODBC 3 veranschaulicht. *x* -Treiber und eine ODBC-Anwendung sowie die Zuordnung, die vom Treiber-Manager ausgeführt wird, wenn die Funktionen für einen ODBC 3 aufgerufen werden. *x* -Treiber  
@@ -49,7 +50,7 @@ In der folgenden Tabelle wird die Funktions Unterstützung in ODBC 3 veranschaul
 |**SQLDescribeParam**|Ja|Ja|Nein|  
 |**SQLDisconnect**|Ja|Ja|Nein|  
 |**SQLDriverConnect**|Ja|Ja|Nein|  
-|**SQLDrivers**|Nein |Ja|Ja|  
+|**SQLDrivers**|Nein|Ja|Ja|  
 |**SQLEndTran**|Ja|Ja|Nein|  
 |**SQLError**|Nein|Nein [1]|Ja|  
 |**SQLExecDirect**|Ja|Ja|Nein|  
@@ -81,7 +82,7 @@ In der folgenden Tabelle wird die Funktions Unterstützung in ODBC 3 veranschaul
 |**SQLNumParams**|Ja|Ja|Nein|  
 |**SQLNumResultCols**|Ja|Ja|Nein|  
 |**SQLParamData**|Ja|Ja|Nein|  
-|**SQLParamOptions**|Nein|Nein |Ja|  
+|**SQLParamOptions**|Nein|Nein|Ja|  
 |**SQLPrepare**|Ja|Ja|Nein|  
 |**SQLPrimaryKeys**|Ja|Ja|Nein|  
 |**SQLProcedureColumns**|Ja|Ja|Nein|  
@@ -95,7 +96,7 @@ In der folgenden Tabelle wird die Funktions Unterstützung in ODBC 3 veranschaul
 |**SQLSetDescRec**|Ja|Ja|Nein|  
 |**SQLSetEnvAttr**|Ja|Ja|Nein|  
 |**SQLSetPos**|Ja|Ja|Nein|  
-|**SQLSetParam**|Nein|Nein |Ja|  
+|**SQLSetParam**|Nein|Nein|Ja|  
 |**Sqlsetscrolloption**|Ja|Ja|Nein|  
 |**SQLSetStmtAttr**|Ja|Ja|Nein|  
 |**SQLSetStmtOption**|Nein [5]|Nein [1]|Ja|  
@@ -111,7 +112,7 @@ In der folgenden Tabelle wird die Funktions Unterstützung in ODBC 3 veranschaul
   
  [3] Treiber Schreiber sollten beachten, dass ODBC 2. *x* -Spalten Attribute SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE und SQL_COLUMN_LENGTH müssen mit **SQLColAttribute**unterstützt werden.  
   
- [4] **sqlcopyde** wird vom Treiber-Manager teilweise implementiert, wenn ein Deskriptor über Verbindungen kopiert wird, die zu unterschiedlichen Treibern gehören. Treiber sind erforderlich, um **SQLCopyDesc** über zwei ihrer eigenen Verbindungen zu unterstützen. Funktionen wie **SQLDrivers**, die ausschließlich vom Treiber-Manager implementiert werden, werden in dieser Liste nicht angezeigt.  
+ [4]   **sqlcopyde** wird vom Treiber-Manager teilweise implementiert, wenn ein Deskriptor über Verbindungen kopiert wird, die zu unterschiedlichen Treibern gehören. Treiber sind erforderlich, um **SQLCopyDesc** über zwei ihrer eigenen Verbindungen zu unterstützen. Funktionen wie **SQLDrivers**, die ausschließlich vom Treiber-Manager implementiert werden, werden in dieser Liste nicht angezeigt.  
   
  [5] unter bestimmten Umständen müssen Treiber möglicherweise diese Funktion unterstützen. Weitere Informationen finden Sie auf der Referenzseite der Funktion.  
   

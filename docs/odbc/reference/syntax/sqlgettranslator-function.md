@@ -1,4 +1,5 @@
 ---
+description: SQLGetTranslator-Funktion
 title: Sqlgettranslator-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bcd5aeebab8539b8b94db56ff30892f4a7dbbac1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d30268c846af4e95298d00edcd13def97c20c77d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421224"
 ---
 # <a name="sqlgettranslator-function"></a>SQLGetTranslator-Funktion
 **Konformitäts**  
@@ -77,9 +78,9 @@ BOOL SQLGetTranslator(
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, false, wenn Sie fehlschlägt oder wenn der Benutzer das Dialogfeld abbricht.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlgettranslator** "false" zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlgettranslator** "false" zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pferrorcode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Das *cbnamemax* -oder *cbpathmax* -Argument war kleiner oder gleich 0 (null).|  
@@ -94,15 +95,15 @@ BOOL SQLGetTranslator(
   
  ![Dialogfeld "Konvertierungsprogramm auswählen"](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
   
- Wenn " *lpszname* " einen gültigen Übersetzungs Namen enthält, wird dieser ausgewählt. Andernfalls wird \<kein Konvertierungs> ausgewählt.  
+ Wenn " *lpszname* " einen gültigen Übersetzungs Namen enthält, wird dieser ausgewählt. Andernfalls \<No Translator> ist ausgewählt.  
   
- Wenn der Benutzer keine \<Konvertierungs> auswählt, wird der Inhalt von *lpszname*, *lpszpath*und *pvoption* nicht berührt. **Sqlgettranslator** legt *pcbnameout* und *pcbpathout* auf 0 fest und gibt true zurück.  
+ Wenn der Benutzer auswählt \<No Translator> , werden die Inhalte von *lpszname*, *lpszpath*und *pvoption* nicht berührt. **Sqlgettranslator** legt *pcbnameout* und *pcbpathout* auf 0 fest und gibt true zurück.  
   
  Wenn der Benutzer einen Übersetzer auswählt, ruft **sqlgettranslator** **ConfigTranslator** in der Setup-DLL des Konvertierungs Programms auf. Wenn **ConfigTranslator** false zurückgibt, kehrt **sqlgettranslator** in das zugehörige Dialogfeld zurück. Wenn **ConfigTranslator** true zurückgibt, gibt **sqlgettranslator** den Wert true zusammen mit dem ausgewählten Übersetzungs Namen, dem Pfad und der Übersetzungs Option zurück.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Konfigurieren eines Konvertierers|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |Erhalten eines Translation-Attributs|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  

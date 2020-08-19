@@ -1,4 +1,5 @@
 ---
+description: 'Verwalten von Text- und Image-Spalten: Verwenden von Data-at-Execution-Spalten'
 title: Verwenden von Data-at-Execution-Spalten (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e89af069c7255396d797047c805fe5ae80a9882
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 02b21f406a010d55724f73562361d1bc92486d8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420544"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Verwalten von Text- und Image-Spalten: Verwenden von Data-at-Execution-Spalten
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

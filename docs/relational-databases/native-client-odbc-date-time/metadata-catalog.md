@@ -1,4 +1,5 @@
 ---
+description: 'Metadaten: Katalog'
 title: Katalog Metadaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -14,18 +15,19 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 853f8bae81b4d3039d4e06e4f0ec67ee22f3c5c3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1d48f89b3de07a8350217aa6dee79cfab3e32fa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420604"
 ---
 # <a name="metadata---catalog"></a>Metadaten: Katalog
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In diesem Thema werden die von **SQLColumns** und **sqlprocedurecolumschlag**zurückgegebenen Spalten Metadaten sowie die von **SQLGetTypeInfo**zurückgegebenen Metadaten des Datentyps beschrieben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die folgenden Spaltenwerte werden für Datums-/Uhrzeittypen von **SQLColumns** und **sqlprocedurecolumschlag**zurückgegeben.  
   
 |Parametertyp|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
@@ -52,7 +54,7 @@ ms.locfileid: "86004333"
 |CREATE_PARAMS|NULL|Skalierung|NULL|NULL|Skalierung|Skalierung|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
-|SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
+|DURCHSUCHBAR|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|SQL_PRED_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  

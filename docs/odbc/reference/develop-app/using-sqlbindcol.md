@@ -1,4 +1,5 @@
 ---
+description: Verwenden von SQLBindCol
 title: Verwenden von SQLBindCol | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da49ad4db80b93d02534a0c4ecacdc2621c9cf8d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f68aa647f600709dd1a4b989cdab8153775f0aaa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421444"
 ---
 # <a name="using-sqlbindcol"></a>Verwenden von SQLBindCol
 Die Anwendung bindet Spalten durch Aufrufen von **SQLBindCol**. Diese Funktion bindet jeweils eine Spalte. Dabei gibt die Anwendung Folgendes an:  
