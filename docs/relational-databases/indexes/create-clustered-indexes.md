@@ -1,4 +1,5 @@
 ---
+description: Erstellen gruppierter Indizes
 title: Erstellen gruppierter Indizes | Microsoft Dokumentation
 ms.custom: ''
 ms.date: 02/17/2017
@@ -17,12 +18,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd2576b845d1cb04d69f2eef2ab32b6289a14480
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a343bbd9686856d6b8bdb27808673178336ee84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408496"
 ---
 # <a name="create-clustered-indexes"></a>Erstellen gruppierter Indizes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85760836"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Erstellen eines gruppierten Indexes für eine Tabelle mit:**  
   
@@ -99,7 +100,7 @@ ms.locfileid: "85760836"
   
 1.  Erweitern Sie im Objekt-Explorer die Datenbank, für die Sie eine Tabelle mit einem gruppierten Index erstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Tabellen**, und klicken Sie auf **Neue Tabelle...** .  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Tabellen**, und klicken Sie auf **Neue Tabelle...**.  
   
 3.  Erstellen Sie eine neue Tabelle. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbank-Engine&#41;](../../relational-databases/tables/create-tables-database-engine.md).  
   
@@ -115,7 +116,7 @@ ms.locfileid: "85760836"
   
 9. Klicken Sie auf **Schließen**.  
   
-10. Klicken Sie im Menü **Datei** auf **Tabellenname**_speichern\__ .  
+10. Klicken Sie im Menü **Datei** auf **Tabellenname**_speichern\__.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
@@ -145,7 +146,7 @@ ms.locfileid: "85760836"
   
  Weitere Informationen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Erstellen von Primärschlüsseln](../../relational-databases/tables/create-primary-keys.md)   
  [Erstellen von Unique-Einschränkungen](../../relational-databases/tables/create-unique-constraints.md)  
   

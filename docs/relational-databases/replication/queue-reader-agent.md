@@ -1,4 +1,5 @@
 ---
+description: Warteschlangenlese-Agent
 title: Warteschlangenlese-Agent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f39bd1423977048c36e00dfae049293c1bcab689
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b3c11190db072518a506950bc5bf3409d1be770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405646"
 ---
 # <a name="queue-reader-agent"></a>Warteschlangenlese-Agent
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Im Dialogfeld **Warteschlangenlese-Agent** werden detaillierte Informationen zum Warteschlangenlese-Agent, wie Status, Verlauf, Informationsmeldungen und alle Fehlermeldungen, angezeigt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Wählen Sie im Menü **Ansicht** aus, welche Sitzungen des Warteschlangenlese-Agents angezeigt werden, und wählen Sie dann eine bestimmte Sitzung aus dem Raster mit der Bezeichnung **Sitzungen des Warteschlangenlese-Agents**aus. Detaillierte Informationen zu dieser Sitzung werden im Raster mit der Bezeichnung **Aktionen in der ausgewählten Sitzung**angezeigt. Wenn die ausgewählte Sitzung mit einem Fehler beendet wurde, wird auch der Textbereich mit der Bezeichnung **Fehlerdetails oder Meldung der ausgewählten Sitzung** angezeigt.  
   
  **Ansicht**  
@@ -45,7 +46,7 @@ ms.locfileid: "85737071"
  **Startzeit**  
  Startzeit der Sitzung.  
   
- **Beendigungszeit**  
+ **Endzeit**  
  Beendigungszeit der Sitzung. Wenn der Agent noch nicht beendet wurde, ist dieses Feld leer.  
   
  **Duration**  
@@ -63,7 +64,7 @@ ms.locfileid: "85737071"
  **Fehlerdetails oder Meldung der ausgewählten Sitzung**  
  Wird nur angezeigt, wenn in der ausgewählten Sitzung in der **Status** -Spalte der Wert **Fehler** angezeigt wird. Dieser Textbereich zeigt detaillierte Fehlerinformationen sowie den Befehl an, der zum Zeitpunkt des Fehlers auszuführen versucht wurde. Er enthält außerdem Links zu weiteren Informationen, die sich auf den Fehler beziehen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication.md)   

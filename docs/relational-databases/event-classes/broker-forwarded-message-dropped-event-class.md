@@ -1,4 +1,5 @@
 ---
+description: Broker:Forwarded Message Dropped-Ereignisklasse
 title: Broker:Forwarded Message Dropped-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11ac4c7c86b2add288271d56b91f7d9ab0848476
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fe9b893b04f48a582e0ff0125c1fc33b77a16f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409866"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped-Ereignisklasse
 
@@ -63,7 +64,7 @@ ms.locfileid: "85715409"
   
  Die TextData-Spalte dieses Ereignisses enthält eine Beschreibung des Grundes, aus dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Nachricht gelöscht hat.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

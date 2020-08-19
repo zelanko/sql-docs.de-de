@@ -1,4 +1,5 @@
 ---
+description: Indizes in berechneten Spalten
 title: Indizes in berechneten Spalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/19/2018
@@ -17,12 +18,12 @@ ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de2efcf3b99e21284cf964b1cd43bc85027ecaac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea5366a8080ccbfb4d48c8bcfda8928ed54932d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408116"
 ---
 # <a name="indexes-on-computed-columns"></a>Indizes in berechneten Spalten
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -95,7 +96,7 @@ Die **IsPrecise** -Eigenschaft der COLUMNPROPERTY-Funktion teilt mit, ob der Aus
 ## <a name="data-type-requirements"></a>Anforderungen hinsichtlich des Datentyps
   
 -   Der *computed_column_expression* , der für die berechnete Spalte definiert ist, kann nicht zu einem der Datentypen **text**, **ntext**oder **image** ausgewertet werden.  
--   Berechnete Spalten, die aus den Datentypen **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und **xml** abgeleitet wurden, können indiziert werden, solange der Datentyp der berechneten Spalte als Indexschlüsselspalte zulässig ist.  
+-   Berechnete Spalten, die aus den Datentypen **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** und **xml** abgeleitet wurden, können indiziert werden, solange der Datentyp der berechneten Spalte als Indexschlüsselspalte zulässig ist.  
 -   Berechnete Spalten, die aus den Datentypen **image**, **ntext**und **text** abgeleitet wurden, können Nichtschlüsselspalten (eingeschlossene Spalten) in einem nicht gruppierten Index sein, so lange der Datentyp der berechneten Spalte für Nichtschlüssel-Indexspalten zulässig ist.  
 
 

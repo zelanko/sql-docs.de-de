@@ -1,4 +1,5 @@
 ---
+description: Definieren und Ändern eines Spaltenfilters
 title: Definieren und Ändern eines Spaltenfilters | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bc264582b46f512f7b1888114d890b95a7244f63
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d04539d146cdf931105d68b08a617b14106b4a0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405766"
 ---
 # <a name="define-and-modify-a-column-filter"></a>Definieren und Ändern eines Spaltenfilters
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

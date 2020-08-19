@@ -1,4 +1,5 @@
 ---
+description: Schützen des Verteilers
 title: Schützen des Verteilers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d8d0563741e4b1c00e7caf00639e80a1a0d98118
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e0a8a7e42259553e2748d2e323b0322a877f01c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405026"
 ---
 # <a name="secure-the-distributor"></a>Schützen des Verteilers
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86915139"
 ## <a name="snapshot-folder-security"></a>Sicherheit des Momentaufnahmeordners  
  Stellen Sie sicher, dass der Momentaufnahmefreigabe Lesezugriff auf das Konto gewährt wurde, unter dem der Merge-Agent (bei der Mergereplikation) oder der Verteilungs-Agent (bei der Momentaufnahme- oder Transaktionsreplikation) ausgeführt wird. Stellen Sie außerdem sicher, dass dem Konto, unter dem der Momentaufnahme-Agent ausgeführt wird, Schreibzugriff gewährt wurde. Weitere Informationen zum Momentaufnahmeordner finden Sie unter [Sichern des Momentaufnahmeordners](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   

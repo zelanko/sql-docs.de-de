@@ -1,4 +1,5 @@
 ---
+description: Erneutes Initialisieren von Abonnements
 title: Erneutes Initialisieren von Abonnements | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f52645bd3890f070c712165aa55aef595604ebba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f1992be76777862078f029df44a73f7b3579dc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405416"
 ---
 # <a name="reinitialize-subscriptions"></a>Erneutes Initialisieren von Abonnements
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85767677"
   
  Wenn alle Artikel in einem Abonnement erneut initialisiert werden sollen, verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], gespeicherte Prozeduren oder Replikationsverwaltungsobjekte (RMO, Replication Management Objects). Wenn nur bestimmte Artikel in einer Momentaufnahme- oder Transaktionsveröffentlichung erneut initialisiert werden sollen, müssen Sie dazu gespeicherte Prozeduren verwenden. Weitere Informationen finden Sie unter [Reinitialize a Subscription](../../relational-databases/replication/reinitialize-a-subscription.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)   
  [Abonnementablauf und -deaktivierung](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   

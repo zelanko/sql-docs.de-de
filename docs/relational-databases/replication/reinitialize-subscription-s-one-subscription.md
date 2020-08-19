@@ -1,4 +1,5 @@
 ---
+description: Abonnements erneut initialisieren - Ein Abonnement
 title: Abonnements erneut initialisieren – Ein Abonnement | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,18 +16,18 @@ ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c7992f3b9b27c219c2a28d226136442bddb2646f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84aeb92a82869376385f716c224b0cd0d02cf6b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405546"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>Abonnements erneut initialisieren - Ein Abonnement
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Im Dialogfeld **Abonnements erneut initialisieren** können Sie Abonnements für eine Neuinitialisierung kennzeichnen. Im Zuge der Neuinitialisierung wird eine Momentaufnahme auf den Abonnenten angewendet. Die Momentaufnahmeanwendung wird für Abonnements von Transaktionsveröffentlichungen durch den Verteilungs-Agent und für Abonnements von Mergeveröffentlichungen durch den Merge-Agent vorgenommen.  
+   Im Dialogfeld **Abonnements erneut initialisieren** können Sie Abonnements für eine Neuinitialisierung kennzeichnen. Im Zuge der Neuinitialisierung wird eine Momentaufnahme auf den Abonnenten angewendet. Die Momentaufnahmeanwendung wird für Abonnements von Transaktionsveröffentlichungen durch den Verteilungs-Agent und für Abonnements von Mergeveröffentlichungen durch den Merge-Agent vorgenommen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Aktuelle Momentaufnahme verwenden**  
  Wählen Sie diese Option aus, wenn die aktuelle Momentaufnahme beim nächsten Ausführen des Verteilungs- oder Merge-Agents auf den Abonnenten angewendet werden soll. Wenn keine gültige Momentaufnahme verfügbar ist, kann diese Option nicht ausgewählt werden.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "85767706"
  **Für erneute Initialisierung kennzeichnen**  
  Klicken Sie auf diese Option, um das Abonnement für die Neuinitialisierung zu kennzeichnen. Sofern eine gültige Momentaufnahme verfügbar ist, wird er beim nächsten Start des Verteilungs- oder Merge-Agents für das Abonnement auf den Abonnenten angewendet.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

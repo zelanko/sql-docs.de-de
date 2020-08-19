@@ -1,4 +1,5 @@
 ---
+description: Verteilereinstellungen
 title: Verteilereinstellungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,18 +16,18 @@ ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5fd12812dc7bafd03c542c8561182ff5ce82ac2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620cbc1dce63d4c2e14949866329d34207f7fc9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406406"
 ---
 # <a name="distributor-settings"></a>Verteilereinstellungen
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Im Dialogfeld **Verteilereinstellungen** können Sie die Einstellungen für Verteiler ändern, die dem linken Bereich des Replikationsmonitors hinzugefügt wurden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Beim Starten des Replikationsmonitors automatisch Verbindung herstellen**  
  Wählen Sie diese Option aus, damit der Replikationsmonitor eine Verbindung mit dem Verteiler herstellen und Statusinformationen abrufen kann.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "85653315"
  **Neue Gruppe**  
  Klicken Sie auf diese Option, um eine neue Verlegergruppe zu erstellen. Eine Verlegergruppe stellt eine einfache Möglichkeit dar, um die Verleger innerhalb des Replikationsmonitors zu organisieren. Gruppen haben keinen Einfluss auf die Replikation der Daten oder die Beziehungen zwischen den Servern in der Replikationstopologie.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Starten des Replikationsmonitors](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Überwachen der Replikation](../../relational-databases/replication/monitor/monitoring-replication.md)  
   

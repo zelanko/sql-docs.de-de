@@ -1,4 +1,5 @@
 ---
+description: Broker:Conversation-Ereignisklasse
 title: Broker:Conversation-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0be5e9b2a86f49fdb80b36ac33cb51a6df4ddae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5167a04707739bd83b966aba28d7a2cab0003f2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410226"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation-Ereignisklasse
 
@@ -57,7 +58,7 @@ ms.locfileid: "85679505"
 |||**DO (DURCHFÜHREN)** . Disconnected Outbound (Ausgehend getrennt). Die lokale Seite der Konversation hat eine END CONVERSATION-Anweisung ausgegeben. Die Konversation bleibt so lange in diesem Status, bis die Remoteseite der Konversation END CONVERSATION anerkennt. Eine Anwendung kann keine Nachrichten für die Konversation senden oder empfangen. Wenn die Remoteseite der Konversation die END CONVERSATION-Anweisung bestätigt, geht die Konversation in den CD-Status (Geschlossen) über.|||  
 |||**ER**. Fehler. An diesem Endpunkt ist ein Fehler aufgetreten. Die Error-, Severity- und State-Spalten enthalten Informationen zu dem aufgetretenen Fehler.|||  
 |||**CD**. Closed (Geschlossen). Der Konversationsendpunkt wird nicht mehr verwendet.|||  
-|**Transaction ID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Nein|  
+|**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Nein|  
   
  In der folgenden Tabelle sind die Unterklassenwerte für diese Ereignisklasse aufgeführt.  
   
@@ -77,7 +78,7 @@ ms.locfileid: "85679505"
 |12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein **Dialogfeld Created** -Ereignis, wenn [!INCLUDE[ssSB](../../includes/sssb-md.md)] einen Endpunkt für einen Dialog erstellt. [!INCLUDE[ssSB](../../includes/sssb-md.md)] erstellt jedes Mal einen Endpunkt, wenn ein neuer Dialog eingerichtet wird, unabhängig davon, ob die aktuelle Datenbank der Initiator oder das Ziel des Dialogs ist.|  
 |13|END CONVERSATION WITH CLEANUP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert ein END CONVERSATION WITH CLEANUP-Ereignis, wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine END CONVERSATION-Anweisung ausführt, die eine WITH CLEANUP-Klausel enthält.|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

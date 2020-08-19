@@ -1,4 +1,5 @@
 ---
+description: Administratorkennwort
 title: Administratorkennwort | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,18 +14,18 @@ ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a16cbfbbae359a563b60d11a79451ad72bd45383
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: feef4402a50bedb326b67c2de5633c90bf9e994e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85740438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406386"
 ---
 # <a name="administrative-password"></a>Administratorkennwort
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Wenn Sie auf der Seite **Verteiler** dieses Assistenten einen Remoteverteiler für diesen Verleger ausgewählt haben, müssen Sie ein Kennwort für die Verbindung eingeben, die die Replikation mithilfe des Anmeldenamens **distributor_admin** zwischen dem Verleger und dem Verteiler herstellt. Das Kennwort muss dem Kennwort entsprechen, das auf der Seite **Verteilerkennwort** des Verteilungskonfigurations-Assistenten oder auf der Seite **Verleger** des Dialogfelds **Verteilereigenschaften** angegeben wurde.  
+   Wenn Sie auf der Seite **Verteiler** dieses Assistenten einen Remoteverteiler für diesen Verleger ausgewählt haben, müssen Sie ein Kennwort für die Verbindung eingeben, die die Replikation mithilfe des Anmeldenamens **distributor_admin** zwischen dem Verleger und dem Verteiler herstellt. Das Kennwort muss dem Kennwort entsprechen, das auf der Seite **Verteilerkennwort** des Verteilungskonfigurations-Assistenten oder auf der Seite **Verleger** des Dialogfelds **Verteilereigenschaften** angegeben wurde.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Kennwort**  
  Geben Sie das Kennwort für die Verbindung zwischen dem Verleger und dem Remoteverteiler ein.  
   
