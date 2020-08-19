@@ -1,4 +1,5 @@
 ---
+description: catalog.object_parameters (SSISDB-Datenbank)
 title: catalog.object_parameters (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ca6cf256e00c992e492c6d1a6d1a698a739c871
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 856676c6ad5330e6039711d7a391bdd264a2b062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422044"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (SSISDB-Datenbank)
 
@@ -34,7 +35,7 @@ ms.locfileid: "86912506"
 |object_name|**sysname**|Der Name des entsprechenden Projekts oder Pakets.|  
 |parameter_name|**sysname(nvarchar(128))**|Der Name des Parameters.|  
 |data_type|**nvarchar(128)**|Der Datentyp des Parameters.|  
-|required|**bit**|Wenn der Wert `1`lautet, ist der Parameterwert erforderlich, um die Ausführung zu starten. Wenn der Wert `0`lautet, ist der Parameterwert nicht erforderlich, um die Ausführung zu starten.|  
+|Erforderlich|**bit**|Wenn der Wert `1`lautet, ist der Parameterwert erforderlich, um die Ausführung zu starten. Wenn der Wert `0`lautet, ist der Parameterwert nicht erforderlich, um die Ausführung zu starten.|  
 |sensitive|**bit**|Wenn der Wert `1`lautet, ist der Parameterwert vertraulich. Wenn der Wert `0`lautet, ist der Parameterwert nicht vertraulich.|  
 |description|**nvarchar(1024)**|Eine optionale Beschreibung des Pakets.|  
 |design_default_value|**sql_variant**|Der Standardwert für den Parameter, der während des Entwurfs des Projekts oder Pakets zugewiesen wurde.|  

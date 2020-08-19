@@ -1,4 +1,5 @@
 ---
+description: New Project (SSMA) (accesstosql)
 title: New Project (SSMA) (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 61c14895f2e464713661f74890b2eb1d5ccc79f5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 042634d7b08d4aa37c8efccbec2055e984b057a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423014"
 ---
 # <a name="new-project-ssma-accesstosql"></a>New Project (SSMA) (accesstosql)
 Verwenden Sie das Dialogfeld **Neues Projekt** , um ein neues SSMA-Projekt zu erstellen. Um auf das Dialogfeld **Neues Projekt** zuzugreifen, klicken Sie im Menü **Datei** auf **Neues Projekt**.  
@@ -40,7 +41,7 @@ Wählen Sie eine der Ziel Datenbankversion aus der Liste unten aus.
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

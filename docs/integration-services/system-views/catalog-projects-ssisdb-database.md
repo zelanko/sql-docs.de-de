@@ -1,4 +1,5 @@
 ---
+description: catalog.projects (SSISDB-Datenbank)
 title: catalog.projects (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a0975d296454c7528860ca65ae3cecfb47e276f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 874d4a89af11ab022ce2714334b9aefb506de1a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421994"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (SSISDB-Datenbank)
 
@@ -41,7 +42,7 @@ ms.locfileid: "86912436"
 |validation_status|**char(1)**|Der Überprüfungsstatus.|  
 |last_validation_time|**datetimeoffset(7)**|Der Zeitpunkt der letzten Überprüfung.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In dieser Sicht wird eine Zeile für jedes Projekt im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

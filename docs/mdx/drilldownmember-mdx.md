@@ -1,4 +1,5 @@
 ---
+description: DrilldownMember (MDX)
 title: DrilldownMember (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1f387d0524ea22aca3c2bb7eb073af07bbdf0612
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 284456995d163c04bc315424ea04b76f17dc228e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970051"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421924"
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember (MDX)
 

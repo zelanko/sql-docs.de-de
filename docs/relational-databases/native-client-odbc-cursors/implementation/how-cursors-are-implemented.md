@@ -1,4 +1,5 @@
 ---
+description: Implementieren von Cursorn
 title: Implementierung von Cursorn | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,11 +17,12 @@ ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8caf9e490ad457d4ae719464f99e5c74a04a72a2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 44a6a9228c2b6d9914b1a6126b797736ffc4d72e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423942"
 ---
 # <a name="how-cursors-are-implemented"></a>Implementieren von Cursorn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

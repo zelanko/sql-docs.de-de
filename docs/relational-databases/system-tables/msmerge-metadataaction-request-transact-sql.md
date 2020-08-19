@@ -1,4 +1,5 @@
 ---
+description: MSmerge_metadataaction_request (Transact-SQL)
 title: MSmerge_metadataaction_request (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aee900d9f34fb1e8f64db3687d6121a72a9e3b96
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1266bd0c4a8af020a3e29900c2d82d881010a4e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423294"
 ---
 # <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85889729"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|Der Spitzname der veröffentlichten Tabelle.|  
-|**rowguid**|**uniqueidentifier**|Der Zeilenbezeichner für die angegebene Zeile.|  
+|**ROWGUID**|**uniqueidentifier**|Der Zeilenbezeichner für die angegebene Zeile.|  
 |**action**|**tinyint**|Bezeichnet die erforderliche kompensierende Aktion.|  
 |**Stro**|**bigint**|Der Wert der Generierung, für die die kompensierende Aktion benötigt wird.|  
 |**tes**|**int**|Nur intern verwendet.|  

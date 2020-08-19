@@ -1,4 +1,5 @@
 ---
+description: Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche
 title: Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für die Volltextsuche
 ms.date: 02/02/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3f3274fa08c121fc9dfd3ee4c5268c975eca2661
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423384"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -122,7 +123,7 @@ Verwenden Sie die [Füllwörtertransformation (Serverkonfigurationsoption)](../.
 ## <a name="more-info-about-stopword-position"></a>Weitere Informationen zur Stoppwortposition
  Obwohl der Volltextindex die Inklusion von Stoppwörtern ignoriert, berücksichtigt er ihre Position. Als Beispiel sei der Ausdruck "Instructions are applicable to these Adventure Works Cycles models" angeführt. In der folgenden Tabelle sind die Positionen der Wörter im Ausdruck angegeben:  
   
-|Wort|Position|  
+|Word|Position|  
 |----------|--------------|  
 |Instructions|1|  
 |are|2|  

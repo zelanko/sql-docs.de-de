@@ -1,4 +1,5 @@
 ---
+description: Von SQLGetInfo zurückgegebenen Werte für dBASE
 title: Von SQLGetInfo zurückgegebene Werte für dBASE | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea3a937fe7e877eaf70c405678d82111a691dd3b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e19e4f46771166dbb08df4fa210f4cc161413aed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421724"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>Von SQLGetInfo zurückgegebenen Werte für dBASE
 In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argument und die von **SQLGetInfo**zurückgegebenen Werte aufgelistet. Diese Informationen können abgerufen werden, indem die im *finfotype* -Argument aufgeführte C-Sprache #defines an **SQLGetInfo** übergeben wird. Weitere Informationen zu den von **SQLGetInfo**zurückgegebenen Werten finden Sie in der *ODBC Programmer es Reference*.  
@@ -81,7 +82,7 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Der DSN aus ODBC. ini oder "", wenn das Treiber Schlüsselwort in "ODBC. ini" verwendet wird.|  
+|SQL_DATA_SOURCE_NAME|Der DSN aus Odbc.ini oder "", wenn das Treiber Schlüsselwort in verwendet wird Odbc.ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"N" (hängt von der Datenquelle ab)|  
 |SQL_DATABASE_NAME|Aktuelles Datenbankverzeichnis|  
 |SQL_DATETIME_LITERALS|0|  
@@ -94,7 +95,7 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_DRIVER_HENV|Wird vom Treiber-Manager verarbeitet.|  
 |SQL_DRIVER_HLIB|Wird vom Treiber-Manager verarbeitet.|  
 |SQL_DRIVER_HSTMT|Wird vom Treiber-Manager verarbeitet.|  
-|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* gibt das Builddatum an)|  
 |SQL_DROP_ASSERTION|0|  
@@ -111,7 +112,7 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_GETDATA_EXTENSIONS|Mehrere Werte|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_UPPER (der Qualifizierer wird in einem gemischten Fall zurückgegeben, damit Windows NT das Verzeichnis finden kann.)|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (zurück Anführungszeichen)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|" \` " (zurück Anführungszeichen)|  
 |SQL_KEYWORDS|Mehrere Werte|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -156,7 +157,7 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_SCROLL_OPTIONS|Mehrere Werte|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|DBASE|  
-|SQL_SPECIAL_CHARACTERS|\`\@#$%^&"~\*\? / } {\> " ';:<,.! "\_-+=\\ \[] &#124; "|  
+|SQL_SPECIAL_CHARACTERS|"~ \` \@ #$%^& \* \_ -+= \\ } {" ';: \? / \><,.! ' \[ ] &#124; "|  
 |SQL_STRING_FUNCTIONS|Mehrere Werte|  
 |SQL_SUBQUERIES|Mehrere Werte|  
 |SQL_SYSTEM_FUNCTIONS|0|  

@@ -1,4 +1,5 @@
 ---
+description: Filtern von veröffentlichten Daten
 title: Filtern von veröffentlichten Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cefde8d6bf6e947815894605cd385164aa673d9c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c52250061e78f663e4046d53b5c101f13367407d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423434"
 ---
 # <a name="filter-published-data"></a>Filtern von veröffentlichten Daten
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -117,7 +118,7 @@ ms.locfileid: "86915386"
   
 -   Auf Spalten der folgenden Datentypen kann in Zeilenfiltern oder Joinfiltern nicht verwiesen werden:  
   
-    -   **varchar(max) und nvarchar (max)**  
+    -   **varchar(max) und nvarchar(max)**  
   
     -   **varbinary(max)**  
   

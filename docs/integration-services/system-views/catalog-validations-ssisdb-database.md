@@ -1,4 +1,5 @@
 ---
+description: catalog.validations (SSISDB-Datenbank)
 title: catalog.validations (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6847053a171fbfac422457de2411e8329e339ec8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4bfa8f9b0ba11574059e3dc05ef7b731d259999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421974"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (SSISDB-Datenbank)
 
@@ -38,7 +39,7 @@ ms.locfileid: "86912456"
 |reference_id|**bigint**|Eindeutige ID des Projektumgebungsverweises, mit dem das Projekt auf eine Umgebung verweist.|  
 |operation_type|**smallint**|Der Typ des Vorgangs. Die in dieser Sicht angezeigten Vorgänge umfassen Projektüberprüfung und (`300`) Paketüberprüfung (`301`).|  
 |object_name|**nvarhcar(260)**|Der Name des Objekts.|  
-|object_type|**smallint**|Der Typ des Objekts. Das Objekt kann ein Projekt (`20`) oder ein Paket (`30`) sein.|  
+|object_type|**smallint**|Der Objekttyp. Das Objekt kann ein Projekt (`20`) oder ein Paket (`30`) sein.|  
 |object_id|**bigint**|Die ID des von dem Vorgang betroffenen Objekts.|  
 |start_time|**datetimeoffset(7)**|Der Zeitpunkt, zu dem der Vorgang begonnen wurde.|  
 |end_time|**datetimeoffsset(7)**|Der Zeitpunkt, zu dem der Vorgang beendet wurde.|  

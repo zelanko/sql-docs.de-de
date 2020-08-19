@@ -1,4 +1,5 @@
 ---
+description: Data Mining-Erweiterungen (DMX) - Syntaxelemente
 title: Syntax Elemente für Data Mining-Erweiterungen (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 16d77e459cc472430081e52b485763b4e0c62f50
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c0e61dfab45640f9f06362405c4c37dbb9b95181
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422274"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Data Mining-Erweiterungen (DMX) - Syntaxelemente
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86971734"
  Ein Ausdruck, der Null oder einen oder mehrere Eingabewerte annimmt und einen skalaren Wert oder eine Tabelle zurückgibt.  
   
  [Kommentare &#40;DMX-&#41;](../dmx/comments-dmx.md)  
- Textelemente, die Sie in DMX-Anweisungen einfügen können, oder Skripts zur Erläuterung des Zwecks einer Anweisung. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]führt keine Kommentare aus.  
+ Textelemente, die Sie in DMX-Anweisungen einfügen können, oder Skripts zur Erläuterung des Zwecks einer Anweisung. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] führt keine Kommentare aus.  
   
  [Reservierte Schlüsselwörter &#40;DMX-&#41;](../dmx/reserved-keywords-dmx.md)  
  Wörter, die für die Verwendung durch DMX reserviert sind und daher in einer Datenbank nicht als Objektnamen verwendet werden dürfen.  

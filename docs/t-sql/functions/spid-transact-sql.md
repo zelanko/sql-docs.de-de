@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;SPID (Transact-SQL)'
 title: '@@SPID (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -24,12 +25,12 @@ ms.assetid: df955d32-8194-438e-abee-387eebebcbb7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb9512ad59b9cd3011e302c412f0c84aed043352
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 465398c82d3720b3af19750aaa8c4cefeaa09665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422674"
 ---
 # <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87110814"
 ## <a name="return-types"></a>Rückgabetypen
  **smallint**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  @@SPID kann zur Identifikation des aktuellen Benutzerprozesses in der Ausgabe von **sp_who** verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
@@ -74,7 +75,7 @@ ID     Login Name                     User Name
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Konfigurationsfunktionen](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  

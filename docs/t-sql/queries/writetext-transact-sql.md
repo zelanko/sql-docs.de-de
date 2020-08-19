@@ -1,4 +1,5 @@
 ---
+description: WRITETEXT (Transact-SQL)
 title: WRITETEXT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/23/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b264935bd4cbbeaffe9ad3228734cd7acc542476
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e55a8822677162472d9f005eec213e184003cf00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422394"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +71,7 @@ WRITETEXT [BULK]
  *data*  
  Die tatsächlichen Daten vom Typ **text**, **ntext** oder **image**, die gespeichert werden sollen. *data* kann ein Literal oder ein Parameter sein. Die maximale Textlänge, die interaktiv mit WRITETEXT eingefügt werden kann, entspricht für Daten vom Typ **text**, **ntext** und **image** ungefähr 120 KB.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie WRITETEXT zum Ändern von Daten vom Typ **text**, **ntext** und **image** und UPDATETEXT zum Ändern von Daten vom Typ **text**, **ntext** und **image**. UPDATETEXT ist flexibler, weil damit nicht die gesamte Spalte, sondern nur ein Teil einer **text**-, **ntext**- oder **image**-Spalte geändert wird.  
   
  Für eine optimale Leistung empfiehlt es sich, Daten vom Typ **text**, **ntext** und **image** in Segmenten mit der Größe eines Vielfachen von 8040 Bytes einzufügen oder zu aktualisieren.  

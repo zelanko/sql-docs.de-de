@@ -1,4 +1,5 @@
 ---
+description: Wtd (MDX)
 title: WTD (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eee40829c72394bf95a1bc06540a434a1c74e166
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b45e583da6f7fc18712e432a0c504c3bc813141e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421884"
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
 

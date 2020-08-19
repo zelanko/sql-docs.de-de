@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_variable_protection (SSISDB-Datenbank)
 title: catalog.set_environment_variable_protection (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f83c5569ef43ee78b2e1054faf26bf0b9867f3a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5e5e93263d37acf72782f2b9a2fe3ef3f7c5d29d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422154"
 ---
 # <a name="catalogset_environment_variable_protection-ssisdb-database"></a>catalog.set_environment_variable_protection (SSISDB-Datenbank)
 
@@ -43,7 +44,7 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
  Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)** .  
   
  [ @variable_name = ] *variable_name*  
- Der Name der Umgebungsvariablen. Der *variable_name* ist **nvarchar(128)** .  
+ Der Name der Umgebungsvariablen. Der *variable_name* ist **nvarchar(128)**.  
   
  [ @sensitive = ] *sensitive*  
  Gibt an, ob die Variable einen vertraulichen Wert enthält. Verwenden Sie den Wert `1` , um anzugeben, dass der Wert der Umgebungsvariablen vertraulich ist, oder den Wert `0` , um anzugeben, dass er nicht vertraulich ist. Ein vertraulicher Wert wird verschlüsselt, wenn er gespeichert wird. Ein Wert, der nicht vertraulich ist, wird als Nur-Text gespeichert. Der *sensitive* -Parameter ist **bit**.  

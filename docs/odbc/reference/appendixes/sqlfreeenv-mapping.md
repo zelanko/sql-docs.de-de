@@ -1,4 +1,5 @@
 ---
+description: SQLFreeEnv-Zuordnung
 title: Sqlfreenv-Zuordnung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0f76455-d072-4bae-bee7-452277dfa479
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1f56bfeaee32e83ded6d8269873c9c4c33ed434e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c3ccbf3175c7f17d06b55799463fb7115997e01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302031"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421494"
 ---
 # <a name="sqlfreeenv-mapping"></a>SQLFreeEnv-Zuordnung
 Wenn eine Anwendung **sqlfreenv** über einen ODBC *3. x* -Treiber aufruft, wird der Aufruf von  

@@ -1,4 +1,5 @@
 ---
+description: DrilldownMemberTop (MDX)
 title: Drilldownmembership Top (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5bed7dfcf82b7f768ba1dc1e98128424665af6bd
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fe58cf1c2793206c3217f4a0f7ea132d13a242ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421914"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
 

@@ -1,4 +1,5 @@
 ---
+description: Stagingtabelle für Beziehungen (Master Data Services)
 title: Stagingtabelle für Beziehungen
 ms.custom: ''
 ms.date: 04/01/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bc1264be90f65ce6e7e523670893177ef78eb646
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ba606cd7c5eeef578b4a2a224a8322e4cbe8bb55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421984"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Stagingtabelle für Beziehungen (Master Data Services)
 
@@ -26,10 +27,10 @@ ms.locfileid: "85811695"
 
   Ändern Sie den Speicherort von Elementen in einer expliziten Hierarchie anhand der Beziehung der Elemente untereinander, indem Sie die Stagingtabelle für Beziehungen (stg.name_Relationship) in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank verwenden.  
   
-##  <a name="table-columns"></a><a name="TableColumns"></a>Tabellen Spalten  
+##  <a name="table-columns"></a><a name="TableColumns"></a> Tabellen Spalten  
  Die folgende Tabelle erklärt, wofür jedes der Felder in der Stagingtabelle für Beziehungen verwendet wird.  
   
-|Spaltenname|BESCHREIBUNG|Wert|  
+|Spaltenname|Beschreibung|Wert|  
 |-----------------|-----------------|-----------|  
 |**ID**|Ein automatisch zugewiesener Bezeichner.|Geben Sie in diesem Feld keinen Wert ein. Wenn der Batch nicht verarbeitet wurde, ist dieses Feld leer.|  
 |**RelationshipType**|Erforderlich<br /><br /> Der festgelegte Beziehungstyp.|Mögliche Werte:<br /><br /> **1**: übergeordnet<br /><br /> **2**: gleichgeordnet (auf gleicher Ebene)|  

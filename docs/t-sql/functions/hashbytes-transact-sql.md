@@ -1,4 +1,5 @@
 ---
+description: HASHBYTES (Transact-SQL)
 title: HASHBYTES (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/29/2016
@@ -19,12 +20,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c30f72c8b6fff2d22c3ff7b493d8ba126db91c6c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5c622d1c39668ee1e58c3eb1e60512d6f8d6f729
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422734"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
@@ -64,14 +65,14 @@ Gibt einen Ausdruck an, der zu einer Zeichenfolge oder Binärzeichenfolge ausgew
 ## <a name="return-value"></a>Rückgabewert  
  **varbinary** (maximal 8.000 Byte)  
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Erwägen Sie die Verwendung von `CHECKSUM` oder `BINARY_CHECKSUM` als Alternativen zur Berechnung eines Hashwerts.
 
 Die Algorithmen MD2, MD4, MD5, SHA und SHA1 sind ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] veraltet. Verwenden Sie stattdessen SHA2_256 oder SHA2_512. Ältere Algorithmen funktionieren weiterhin, lösen jedoch ein Ereignis aus, das auf die Veraltung hinweist.
 
 ## <a name="examples"></a>Beispiele  
 ### <a name="return-the-hash-of-a-variable"></a>Zurückgeben des Hashcodes einer Variablen  
- Im folgenden Beispiel wird der `SHA2_256`-Hash der in der **-Variablen gespeicherten** nvarchar`@HashThis`-Daten zurückgegeben.  
+ Im folgenden Beispiel wird der `SHA2_256`-Hash der in der `@HashThis`-Variablen gespeicherten **nvarchar**-Daten zurückgegeben.  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  

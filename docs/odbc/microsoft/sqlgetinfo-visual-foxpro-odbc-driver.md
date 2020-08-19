@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo (Visual FoxPro-ODBC-Treiber)
 title: SQLGetInfo (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d4b976083b46bf632c4890c7fce3b0f13a9a761
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 370661a9a0ade5c5159f93a9af37c17b675032c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421674"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
@@ -117,7 +118,7 @@ ms.locfileid: "81295190"
   
  SQL_DRIVER_HSTMT wird vom Treiber-Manager implementiert.  
   
- SQL_DRIVER_NAME gibt "vfpodbc. dll" zurück.  
+ SQL_DRIVER_NAME gibt "vfpodbc.dll" zurück.  
   
  SQL_DRIVER_ODBC_VER gibt "02,50" (SQL_SPEC_MAJOR, SQL_SPEC_MINOR) zurück.  
   
@@ -298,7 +299,7 @@ ms.locfileid: "81295190"
 ## <a name="q"></a>Q  
  SQL_QUALIFIER_LOCATION gibt SQL_QL_START zurück.  
   
- SQL_QUALIFIER_NAME_SEPARATOR gibt "!" oder "\\" zurück. Das Trennzeichen zwischen Datenbank und Tabelle ist '! ' für Datenquellen, die mit [Datenbanken](../../odbc/microsoft/visual-foxpro-terminology.md)verbunden sind, und '\\' für Datenquellen, die Verzeichnisse von [freien Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)sind.  
+ SQL_QUALIFIER_NAME_SEPARATOR gibt "!" oder " \\ " zurück. Das Trennzeichen zwischen Datenbank und Tabelle ist '! ' für Datenquellen, die mit [Datenbanken](../../odbc/microsoft/visual-foxpro-terminology.md)verbunden sind, und ' \\ ' für Datenquellen, die Verzeichnisse von [freien Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)sind.  
   
  SQL_QUALIFIER_TERM gibt "Database" oder "Directory" zurück. Der Qualifizierer ist "Database" für Datenquellen, die mit [Datenbanken](../../odbc/microsoft/visual-foxpro-terminology.md)verbunden sind, und "Directory" für Datenquellen, die Verzeichnisse von [freien Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)sind.  
   
@@ -314,7 +315,7 @@ ms.locfileid: "81295190"
   
  SQL_SCROLL_OPTIONS gibt entweder SQL_SO_STATIC oder SQL_SO_READONLY zurück.  
   
- SQL_SEARCH_PATTERN_ESCAPE gibt "\\" zurück.  
+ SQL_SEARCH_PATTERN_ESCAPE gibt " \\ " zurück.  
   
  SQL_SERVER_NAME gibt "" zurück.  
   
@@ -451,7 +452,7 @@ ms.locfileid: "81295190"
   
  SQL_TXN_ISOLATION_OPTION gibt SQL_TXN_READ_COMMITTED zurück.  
   
-## <a name="u-z"></a>U - Z  
+## <a name="u-z"></a>U-Z  
  SQL_UNION gibt entweder SQL_U_UNION oder SQL_U_UNION_ALL zurück.  
   
- SQL_USER_NAME gibt \<leere> zurück.
+ SQL_USER_NAME gibt zurück \<blank> .

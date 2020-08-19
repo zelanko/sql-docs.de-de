@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKTABLE (Transact-SQL)
 title: DBCC CHECKTABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.date: 11/14/2017
 ms.prod: sql
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: db4bc3e53cd5016cbf6f89c5f0a1d6951ce12c50
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1c4563a10433d4cbead089da026d086f9c021ccb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422864"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -132,7 +133,7 @@ MAXDOP
  > [!NOTE]  
  > Wenn MAXDOP auf 0 (Null) festgelegt wird, wählt der Server den maximalen Grad an Parallelität aus.  
     
-## <a name="remarks"></a>Bemerkungen    
+## <a name="remarks"></a>Hinweise    
     
 > [!NOTE]    
 > Verwenden Sie [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), um DBCC CHECKTABLE für jede Tabelle der Datenbank auszuführen.    
@@ -145,7 +146,7 @@ DBCC CHECKTABLE überprüft für die angegebene Tabelle Folgendes:
 -   Überprüft, ob die Seitenoffsets sinnvoll sind.    
 -   Überprüft, ob es für jede Zeile in der Basistabelle eine entsprechende Zeile in jedem nicht gruppierten Index gibt und umgekehrt.    
 -   Überprüft, ob sich jede Zeile in einer partitionierten Tabelle oder einem partitionierten Index in der richtigen Partition befindet.    
--   Überprüft die Konsistenz auf Linkebene zwischen dem Dateisystem und der Tabelle, wenn die **varbinary(max)** -Daten mit FILESTREAM im Dateisystem gespeichert werden.    
+-   Überprüft die Konsistenz auf Linkebene zwischen dem Dateisystem und der Tabelle, wenn die **varbinary(max)**-Daten mit FILESTREAM im Dateisystem gespeichert werden.    
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>Ausführen logischer Konsistenzprüfungen an Indizes    
 Die logische Konsistenzprüfung an Indizes variiert wie folgt je nach dem Kompatibilitätsgrad der Datenbank:
@@ -170,7 +171,7 @@ Wenn eine Momentaufnahme nicht erstellt werden kann oder TABLOCK angegeben ist, 
     
 ## <a name="checking-and-repairing-filestream-data"></a>Überprüfen und Reparieren von FILESTREAM-Daten    
 Wenn FILESTREAM für eine Datenbank und eine Tabelle aktiviert ist, können Sie **varbinary(max)** -BLOBs (Binary Large Objects) optional im Dateisystem speichern. Wenn Sie DBCC CHECKTABLE für eine Tabelle verwenden, die BLOBs im Dateisystem speichert, überprüft DBCC die Konsistenz auf Linkebene zwischen dem Dateisystem und der Datenbank.
-Wenn eine Tabelle beispielsweise eine **varbinary(max)** -Spalte mit dem FILESTREAM-Attribut enthält, überprüft DBCC CHECKTABLE, ob zwischen den Dateisystemverzeichnissen und -dateien und den Tabellenzeilen, Spalten und Spaltenwerten eine 1:1-Zuordnung besteht. DBCC CHECKTABLE kann Beschädigungen reparieren, wenn Sie die REPAIR_ALLOW_DATA_LOSS-Option angeben. Zum Reparieren einer FILESTREAM-Beschädigung löscht DBCC alle Tabellenzeilen, für die Dateisystemdaten fehlen, sowie alle Verzeichnisse und Dateien, die keiner Tabellenzeile, keiner Spalte oder keinem Spaltenwert zugeordnet sind.
+Wenn eine Tabelle beispielsweise eine **varbinary(max)**-Spalte mit dem FILESTREAM-Attribut enthält, überprüft DBCC CHECKTABLE, ob zwischen den Dateisystemverzeichnissen und -dateien und den Tabellenzeilen, Spalten und Spaltenwerten eine 1:1-Zuordnung besteht. DBCC CHECKTABLE kann Beschädigungen reparieren, wenn Sie die REPAIR_ALLOW_DATA_LOSS-Option angeben. Zum Reparieren einer FILESTREAM-Beschädigung löscht DBCC alle Tabellenzeilen, für die Dateisystemdaten fehlen, sowie alle Verzeichnisse und Dateien, die keiner Tabellenzeile, keiner Spalte oder keinem Spaltenwert zugeordnet sind.
     
 ## <a name="checking-objects-in-parallel"></a>Paralleles Überprüfen von Objekten    
 Standardmäßig führt DBCC CHECKTABLE eine parallele Überprüfung von Objekten durch. Der Grad der Parallelität wird automatisch durch den Abfrageprozessor bestimmt. Der maximale Grad der Parallelität wird auf dieselbe Weise konfiguriert wie der maximale Grad bei parallelen Abfragen. Verwenden Sie [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), um die maximale Anzahl von Prozessoren zu beschränken, die für DBCC-Überprüfungen verfügbar sind. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).

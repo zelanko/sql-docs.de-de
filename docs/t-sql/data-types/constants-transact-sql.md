@@ -1,4 +1,5 @@
 ---
+description: Konstanten (Transact-SQL)
 title: Konstanten (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/22/2017
@@ -32,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a63cfeca3d5843d29c68eece832fec4f8e330bf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cd464b8b08948d913dc003df0b488fd85f5bdda7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422934"
 ---
 # <a name="constants-transact-sql"></a>Konstanten (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +75,7 @@ Unicode-Zeichenfolgen besitzen ein ähnliches Format wie Zeichenfolgen, werden a
 Unicode-Zeichenfolgenkonstanten unterstützen erweiterte Sortierungen.
   
 > [!NOTE]  
->  Unicode-Konstanten, die größer sind als 8000 Bytes, werden als **nvarchar(max)** -Daten typisiert.  
+>  Unicode-Konstanten, die größer sind als 8000 Bytes, werden als **nvarchar(max)**-Daten typisiert.  
   
 ## <a name="binary-constants"></a>Binäre Konstanten
 Binäre Konstanten besitzen das Präfix `0x` und bestehen aus einer Zeichenfolge von hexadezimalen Zahlen. Sie werden nicht in Anführungszeichen eingeschlossen.
@@ -89,7 +90,7 @@ Nachfolgend finden Sie Beispiele für Binärzeichenfolgen:
 ```  
   
 > [!NOTE]  
->  Binärkonstanten, die größer sind als 8000 Bytes, werden als **varbinary(max)** -Daten typisiert.  
+>  Binärkonstanten, die größer sind als 8000 Bytes, werden als **varbinary(max)**-Daten typisiert.  
   
 ## <a name="bit-constants"></a>bit-Konstanten
 **bit**-Konstanten werden durch die Zahlen 0 oder 1 dargestellt und nicht in Anführungszeichen eingeschlossen. Wird eine größere Zahl als eins verwendet, wird diese in eins umgewandelt.

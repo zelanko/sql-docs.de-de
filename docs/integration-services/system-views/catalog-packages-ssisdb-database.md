@@ -1,4 +1,5 @@
 ---
+description: catalog.packages (SSISDB-Datenbank)
 title: catalog.packages (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ce44ec234d17c64e357f3bd1a26de1a0c2bb6361
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 25e397e3c3b85f401857b58bd51df456b08fdb37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422004"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (SSISDB-Datenbank)
 
@@ -42,7 +43,7 @@ ms.locfileid: "86912453"
 |version_comments|**nvarchar(1024)**|Optionale Kommentare zur Paketversion.|  
 |version_guid|**uniqueidentifier**|Die GUID, die die Paketversion eindeutig identifiziert.|  
 |project_id|**bigint**|Die eindeutige ID des Projekts.|  
-|entry_point|**bit**|Der Wert `1` gibt an, dass das Paket direkt gestartet werden soll. Der Wert `0` gibt an, dass das Paket von einem anderen Paket mit dem Task Paket ausführen gestartet werden soll. Standardwert: `1`.|  
+|entry_point|**bit**|Der Wert `1` gibt an, dass das Paket direkt gestartet werden soll. Der Wert `0` gibt an, dass das Paket von einem anderen Paket mit dem Task Paket ausführen gestartet werden soll. Der Standardwert ist `1`.|  
 |validation_status|**char(1)**|Der Status der Überprüfung.|  
 |last_validation_time|**datetimeoffset(7)**|Der Zeitpunkt der letzten Überprüfung.|  
   

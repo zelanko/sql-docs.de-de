@@ -1,4 +1,5 @@
 ---
+description: Arbeiten mit leeren Werten
 title: Arbeiten mit leeren Werten | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f497ba1ccf84ac642144340af4d5597d773dcadb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421894"
 ---
 # <a name="working-with-empty-values"></a>Arbeiten mit leeren Werten
 
@@ -54,7 +55,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 -   Ist der leere Zellwert ein Operand für den Operator für Zeichenfolgenverkettungen (+), wird der leere Zellwert als leere Zeichenfolge behandelt, wenn der andere Operand ein nicht leerer Wert ist. Sind beide Operanden leer, gibt der Operator für Zeichenfolgenverkettungen den leeren Zellwert zurück.  
   
--   Wenn der leere Zellwert ein Operand für einen der Vergleichsoperatoren (=. <>, >=, \<=, >, <), wird der leere Zellwert als 0 (null) oder eine leere Zeichenfolge behandelt, je nachdem, ob der Datentyp des anderen Operanden numerisch bzw. Zeichenfolge ist. Sind beide Operanden leer, werden beide als 0 behandelt.  
+-   Wenn der leere Zellwert ein Operand für einen der Vergleichsoperatoren (=. <>, >=, \<=, > , <), wird der leere Zellwert als 0 (null) oder als leere Zeichenfolge behandelt, je nachdem, ob der Datentyp des anderen Operanden numerisch bzw. Zeichenfolge ist. Sind beide Operanden leer, werden beide als 0 behandelt.  
   
 -   Beim Sortieren numerischer Werte nimmt der leere Zellwert dieselbe Stelle ein wie die Zahl Null. Bei der Sortierung zwischen dem leeren Zellwert und null wird der leere Zellwert vor null eingeordnet.  
   
@@ -120,27 +121,27 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  Die folgende Tabelle zeigt die Ergebnisse des Anwendens eines AND-Operators auf zwei boolesche Operanden.  
   
-|AND|TRUE|EMPTY|FALSE|  
+|UND|true|EMPTY|false|  
 |---------|----------|-----------|-----------|  
-|**TRUE**|TRUE|FALSE|FALSE|  
-|**Leer**|FALSE|EMPTY|FALSE|  
-|**FALSE**|FALSE|FALSE|FALSE|  
+|**TRUE**|true|false|false|  
+|**Leer**|false|EMPTY|false|  
+|**FALSE**|false|false|false|  
   
  Diese Tabelle zeigt die Ergebnisse der Anwendung eines OR-Operators auf zwei boolesche Operanden.  
   
-|oder|TRUE|FALSE|  
+|oder|true|false|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
 |**Leer**|TRUE|TRUE|  
-|**FALSE**|TRUE|FALSE|  
+|**FALSE**|true|false|  
   
  Diese Tabelle zeigt, wie der Not-Operator das Ergebnis eines booleschen Operators negiert oder umgekehrt.  
   
 |Boolescher Ausdruck, auf den der NOT-Operator angewendet wird|Auswertungsergebnis|  
 |-------------------------------------------------------------|------------------|  
-|TRUE|FALSE|  
+|true|false|  
 |EMPTY|EMPTY|  
-|FALSE|TRUE|  
+|false|true|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)   

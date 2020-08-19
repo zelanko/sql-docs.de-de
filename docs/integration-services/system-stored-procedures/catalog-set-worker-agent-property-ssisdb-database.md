@@ -1,4 +1,5 @@
 ---
+description: catalog.set_worker_agent_property (SSISDB-Datenbank)
 title: catalog.set_worker_agent_property (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/02/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 121c39ddc217cbdc178ca8ea8221081ce33eee4b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b5981431210ba98c950b56b7621f3f9cc50586c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422114"
 ---
 # <a name="catalogset_worker_agent_property-ssisdb-database"></a>catalog.set_worker_agent_property (SSISDB-Datenbank)
 
@@ -39,10 +40,10 @@ catalog.set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId
 Die Worker-Agent-ID für den Scale Out-Worker. Das Argument *WorkerAgentId* ist vom Typ **uniqueidentifier**.
 
 [@PropertyName =] *PropertyName*  
-Der Name der Eigenschaft. Das Argument *PropertyName* ist vom Typ **nvarchar(256)** .
+Der Name der Eigenschaft. Das Argument *PropertyName* ist vom Typ **nvarchar(256)**.
 
 [@PropertyValue =] *PropertyValue*  
-Der Wert der Eigenschaft. Das Argument *PropertyValue* ist vom Typ **nvarchar(max)** .
+Der Wert der Eigenschaft. Das Argument *PropertyValue* ist vom Typ **nvarchar(max)**.
 
 ## <a name="remarks"></a>Bemerkungen
 Die gültigen Eigenschaftennamen sind **DisplayName**, **Description**, **Tags**.
