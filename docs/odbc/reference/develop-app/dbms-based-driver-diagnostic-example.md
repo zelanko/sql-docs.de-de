@@ -1,4 +1,5 @@
 ---
+description: Beispiel für die Diagnose des DBMS-basierten Treibers
 title: Beispiel für die Diagnose von DBMS-basierten Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 117f43548d2b57233dea6f7423e6bad67b6233b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5425afb18a5582a840966798ea7a7209dba7e1e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424742"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>Beispiel für die Diagnose des DBMS-basierten Treibers
 Ein DBMS-basierter Treiber sendet Anforderungen an ein DBMS und gibt über den Treiber-Manager Informationen an die Anwendung zurück. Da der Treiber die Komponente ist, die mit dem Treiber-Manager eine Schnittstelle besteht, werden Argumente für **SQLGetDiagRec**formatiert und zurückgegeben.  

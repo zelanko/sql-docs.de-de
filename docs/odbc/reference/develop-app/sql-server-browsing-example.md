@@ -1,4 +1,5 @@
 ---
+description: SQL Server-Suchbeispiel
 title: Beispiel für SQL Server durchsuchen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b15aa8e3d573660a312fceb5b9100a41f0384d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14016832989c6fcba1dc39bc64434e72b049c18a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424562"
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server-Suchbeispiel
 Im folgenden Beispiel wird gezeigt, wie **sqlbrowseconnetct** verwendet werden kann, um die Verbindungen zu durchsuchen, die mit einem Treiber für SQL Server verfügbar sind. Zunächst fordert die Anwendung ein Verbindungs Handle an:  
@@ -38,7 +39,7 @@ SQLBrowseConnect(hdbc, "DRIVER={SQL Server};", SQL_NTS, BrowseResult,
  Da dies der erste Aufruf von **sqlbrowseconnetct**ist, lädt der Treiber-Manager den SQL Server Treiber und ruft die **sqlbrowseconnetct** -Funktion des Treibers mit denselben Argumenten auf, die er von der Anwendung erhalten hat.  
   
 > [!NOTE]  
->  Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unter `Trusted_Connection=yes` stützt, sollten Sie anstelle von Benutzer-ID-und Kenn Wort Informationen in der Verbindungs Zeichenfolge angeben.  
+>  Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unterstützt, sollten Sie `Trusted_Connection=yes` anstelle von Benutzer-ID-und Kenn Wort Informationen in der Verbindungs Zeichenfolge angeben.  
   
  Der Treiber ermittelt, dass dies der erste Befehl von **sqlbrowseconnetct** ist, und gibt die zweite Ebene der Verbindungs Attribute zurück: Server, Benutzername, Kennwort, Anwendungsname und Arbeitsstations-ID. Für das Server-Attribut wird eine Liste gültiger Servernamen zurückgegeben. Der Rückgabecode von **sqlbrowseconnetct** ist SQL_NEED_DATA. Hier ist die Ergebnis Zeichenfolge zum Durchsuchen:  
   

@@ -1,0 +1,140 @@
+- name: Dokumentation für Azure Data Studio
+  href: ../azure-data-studio/index.yml
+- name: Herunterladen von Azure Data Studio
+  href: download-azure-data-studio.md
+- name: Versionshinweise
+  href: release-notes-azure-data-studio.md
+- name: Übersicht
+  items:
+    - name: Azure Data Studio
+      href: what-is.md
+- name: Schnellstarts
+  items:
+    - name: Herstellen einer Verbindung mit und Abfragen von SQL Server
+      href: quickstart-sql-server.md
+    - name: Herstellen einer Verbindung mit und Abfragen von Azure SQL-Datenbank
+      href: quickstart-sql-database.md
+    - name: Herstellen einer Verbindung mit und Abfragen von Azure SQL Data Warehouse
+      href: quickstart-sql-dw.md
+    - name: Herstellen einer Verbindung mit PostgreSQL und Abfragen von Daten mit PostgreSQL
+      href: quickstart-postgres.md
+- name: Tutorials
+  items:
+    - name: T-SQL-Editor
+      href: tutorial-sql-editor.md
+    - name: 'Einblickbeispiel: langsame Abfragen'
+      href: tutorial-qds-sql-server.md
+    - name: 'Einblickbeispiel: Tablespacenutzung'
+      href: tutorial-table-space-sql-server.md
+    - name: Erstellen eines benutzerdefinierten Einblicks
+      href: tutorial-build-custom-insight-sql-server.md
+    - name: Sichern und Wiederherstellen
+      href: tutorial-backup-restore-sql-server.md
+- name: Konzepte
+  items:
+    - name: Erweiterungen
+      items:
+        - name: Erweiterungen
+          href: extensions.md
+        - name: Machine-Learning-Erweiterung
+          items:
+            - name: Übersicht über die Machine-Learning-Erweiterung
+              href: machine-learning-extension.md
+            - name: Verwalten von Paketen in der Datenbank
+              href: machine-learning-extension-manage-packages.md
+            - name: Erstellen von Vorhersagen
+              href: machine-learning-extension-predictions.md
+            - name: Importieren und Anzeigen von Modellen
+              href: machine-learning-extension-import-view-models.md
+        - name: PostgreSQL-Erweiterung
+          href: postgres-extension.md
+        - name: Datenvirtualisierungserweiterung
+          href: data-virtualization-extension.md
+        - name: SQL Database Projects-Erweiterung
+          items:
+            - name: Übersicht über die Erweiterung „SQL Database Projects“
+              href: sql-database-project-extension.md
+            - name: Erste Schritte mit der Erweiterung „SQL Database Projects“
+              href: sql-database-project-extension-getting-started.md
+            - name: Erstellen und Veröffentlichen eines Projekts
+              href: sql-database-project-extension-build.md
+            - name: Erstellen eines Projekts über die Befehlszeile
+              href: sql-database-project-extension-build-from-command-line.md
+        - name: SQL Server-Agent
+          href: sql-server-agent-extension.md
+        - name: SQL Server-Erweiterung „Zentrale Verwaltungsserver“
+          href: sql-server-cms-extension.md
+        - name: Die DACPAC-Erweiterung für SQL Server
+          href: sql-server-dacpac-extension.md
+        - name: SQL Server-Import
+          href: sql-server-import-extension.md
+        - name: SQL Server Profiler
+          href: sql-server-profiler-extension.md
+        - name: Schemavergleich-Erweiterung
+          href: schema-compare-extension.md
+        - name: PowerShell-Erweiterung
+          href: powershell-extension.md
+        - name: Erweiterung für die verwaltete Instanz
+          href: azure-sql-managed-instance-extension.md
+        - name: SandDance-Erweiterung
+          href: sanddance-extension.md
+    - name: Erweiterungserstellung
+      items:
+        - name: Übersicht über die Erweiterbarkeit
+          href: extensibility.md
+        - name: Erweiterungserstellung
+          href: extension-authoring.md
+        - name: Erstellen einer Erweiterung
+          href: tutorial-create-extension.md
+        - name: Erweiterbarkeits-APIs
+          href: extensibility-apis.md
+    - name: 'Integriertes Terminal (PowerShell, Bash)'
+      href: integrated-terminal.md
+    - name: Tastenkombinationen
+      href: keyboard-shortcuts.md
+    - name: Servergruppen
+      href: server-groups.md
+    - name: Quellcodeverwaltung
+      href: source-control.md
+- name: Anleitungen
+  items:
+    - name: Notebooks
+      items:
+        - name: 'Notebooks: Übersicht'
+          href: notebooks-guidance.md
+        - name: Verwenden von SQL-Kernel
+          href: notebooks-tutorial-sql-kernel.md
+        - name: Verwenden von Python-Kernel
+          href: notebooks-tutorial-python-kernel.md
+        - name: Erweiterung „Kqlmagic“
+          href: notebooks-kqlmagic.md
+    - name: Dashboards und Einblickwidgets
+      href: insight-widgets.md
+    - name: Codeausschnitte
+      href: code-snippets.md
+    - name: Erkunden von Azure SQL-Ressourcen
+      href: azure-resource-explorer.md
+    - name: Sammlung von Verwendungsdaten
+      href: usage-data-collection.md
+    - name: Arbeitsbereich- und Benutzereinstellungen
+      href: settings.md
+    - name: Windows-Authentifizierung (Kerberos)
+      href: enable-kerberos.md
+    - name: Sammlung von Verwendungsdaten
+      href: usage-data-collection.md
+- name: References
+  items:
+    - name: SQL-Tools
+      href: ../tools/overview-sql-tools.md
+    - name: Azure-Entwicklertools
+      href: 'https://docs.microsoft.com/azure/?product=developer-tools'
+- name: Ressourcen
+  items:
+    - name: Häufig gestellte Fragen
+      href: faq.md
+    - name: GitHub-Repository für Azure Data Studio >
+      href: 'https://www.github.com/Microsoft/azuredatastudio'
+    - name: Melden von Problemen und Einreichen von Vorschlägen >
+      href: 'https://github.com/microsoft/azuredatastudio/issues'
+    - name: SQL Server-Dokumentation >
+      href: ../sql-server/index.yml

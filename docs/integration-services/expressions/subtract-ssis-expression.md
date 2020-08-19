@@ -1,4 +1,5 @@
 ---
+description: '- (Subtrahieren) (SSIS-Ausdruck)'
 title: '- (Subtrahieren) (SSIS-Ausdruck) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0cfc28d52908a0578eeebe88ee7f9db749809ecd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f0615678e5c6613b5b709f711dc3f2cf9e7dfa8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425362"
 ---
 # <a name="--subtract-ssis-expression"></a>- (Subtrahieren) (SSIS-Ausdruck)
 
@@ -42,10 +43,10 @@ numeric_expression1 - numeric_expression2
 ## <a name="result-types"></a>Ergebnistypen  
  Die Ergebnistypen werden von den Datentypen der beiden Argumente bestimmt. Weitere Informationen finden Sie unter [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Schließen Sie den unären Minusausdruck in Klammern ein, um sicherzustellen, dass der Ausdruck in der richtigen Reihenfolge ausgewertet wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn einer der Operanden NULL ist, ist das Ergebnis NULL.  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  
@@ -67,7 +68,7 @@ ListPrice - StandardCost
 ListPrice - (ListPrice * @[Discount%])  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Audit Object Derived Permission-Ereignisklasse
 title: Audit Object Derived Permission-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bec9b17bd81481c68d5fdebac8f850ac8aedcf0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dfa1428c57e22068df27756b01cd73cd3e1c7ceb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424272"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission-Ereignisklasse
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Die **Audit Object Derived Permission** -Ereignisklasse zeichnet das Ausstellen von CREATE-, ALTER- oder DROP-Befehlen für ein angegebenes Objekt auf. Dieses Ereignis tritt nur auf, wenn dem Objekt keine Berechtigungen oder Besitzer direkt zugeordnet sind.  
+   Die **Audit Object Derived Permission**-Ereignisklasse zeichnet das Ausstellen von CREATE-, ALTER- oder DROP-Befehlen für ein angegebenes Objekt auf. Dieses Ereignis tritt nur auf, wenn dem Objekt keine Berechtigungen oder Besitzer direkt zugeordnet sind.  
   
  Es kann sein, dass diese Ereignisklasse in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt wird. Es wird empfohlen, stattdessen die **Audit Schema Object Management** -Ereignisklasse zu verwenden.  
   

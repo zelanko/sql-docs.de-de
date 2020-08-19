@@ -1,4 +1,5 @@
 ---
+description: Rückgabe von SQL_NO_DATA
 title: Zurückgeben SQL_NO_DATA | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: deed0163-9d1a-4e9b-9342-3f82e64477d2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3e2c806edd5d5647e09c00975ad7207ee5c2c876
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24efdd88d16ba31a2b70dfb75ad21adee08c6f1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424972"
 ---
 # <a name="returning-sql_no_data"></a>Rückgabe von SQL_NO_DATA
 Wenn eine ODBC *2. x* -Anwendung, die einen ODBC *3. x* -Treiber aufführt, **SQLExecDirect**, **SQLExecute**oder **SQLParamData**aufruft und eine gesuchte Update-oder DELETE-Anweisung ausgeführt wurde, sich jedoch nicht auf Zeilen in der Datenquelle ausgewirkt hat, sollte der ODBC *3. x* -Treiber SQL_SUCCESS zurückgeben. Wenn eine ODBC *3. x* -Anwendung, die mit einem ODBC *3. x* -Treiber arbeitet, **SQLExecDirect**, **SQLExecute**oder **SQLParamData** mit dem gleichen Ergebnis aufruft, sollte der ODBC *3. x* -Treiber SQL_NO_DATA zurückgeben.  

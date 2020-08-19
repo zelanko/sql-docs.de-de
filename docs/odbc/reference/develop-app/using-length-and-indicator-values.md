@@ -1,4 +1,5 @@
 ---
+description: Verwenden von Längen- und Indikatorwerten
 title: Verwenden von Längen-und Indikator Werten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0c878c9038b26aa996ed206c6b8adfe8d6c21e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7e9c7feb463b2a92d716be24c76d00b64c69a860
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424402"
 ---
 # <a name="using-length-and-indicator-values"></a>Verwenden von Längen- und Indikatorwerten
 Der Längen-/Indikatorpuffer wird verwendet, um die Byte Länge der Daten im Datenpuffer oder einen speziellen Indikator wie SQL_NULL_DATA zu übergeben, der angibt, dass die Daten NULL sind. Abhängig von der Funktion, in der Sie verwendet wird, wird ein Längen-/Indikatorpuffer als SQLINTEGER oder SQLSMALLINT definiert. Daher ist ein einzelnes Argument erforderlich, um es zu beschreiben. Wenn der Datenpuffer ein nicht verzögerter Eingabepuffer ist, enthält dieses Argument die Byte Länge der Daten selbst oder einen Indikator Wert. Sie wird häufig *StrLen_Or_Ind* oder ein ähnlicher Name genannt. Der folgende Code ruft z. b. **SQLPutData** auf, um einen Puffer mit vollen Daten zu übergeben. die Byte Länge (*valuelen*) wird direkt übermittelt, da der Datenpuffer (*ValuePtr*) ein Eingabepuffer ist.  

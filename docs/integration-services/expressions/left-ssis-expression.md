@@ -1,4 +1,5 @@
 ---
+description: LEFT (SSIS-Ausdruck)
 title: LEFT (SSIS-Ausdruck) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 67e83bd59e69d9113a3c95116cd2ecc590b31c4c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 619fea9cdf5f9445d9da3146f98453e0d5d60550
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425462"
 ---
 # <a name="left-ssis-expression"></a>LEFT (SSIS-Ausdruck)
 
@@ -61,7 +62,7 @@ LEFT(character_expression,number)
 LEFT("Mountain Bike", 8)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [RIGHT &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/right-ssis-expression.md)   
  [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

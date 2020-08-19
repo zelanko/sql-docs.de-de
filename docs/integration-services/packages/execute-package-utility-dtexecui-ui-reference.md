@@ -1,4 +1,5 @@
 ---
+description: Paketausführungsprogramm (dtexecui)
 title: Paketausführungsprogramm (dtexecui) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26e976ee2a62d29f8f14584159888de428431101
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 630fea974e83507984cae8a4ec2b7938fc551d25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425282"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Paketausführungsprogramm (dtexecui)
 
@@ -68,7 +69,7 @@ ms.locfileid: "87472500"
  **Paketquelle**  
  Geben Sie mithilfe der folgenden Optionen den Speicherort des Pakets an:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-|-|  
 |**SQL Server**|Wählen Sie diese Option, wenn das Paket auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert ist. Geben Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einen Benutzernamen und das Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung an. Für jeden Benutzernamen und jedes Kennwort werden an der Eingabeaufforderungen die Optionen **/USER** _Benutzername_ und **/PASSWORD** _Kennwort_ hinzugefügt.|  
 |**Dateisystem**|Wählen Sie diese Option, wenn das Paket im Dateisystem gespeichert ist.|  
@@ -79,7 +80,7 @@ ms.locfileid: "87472500"
  **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Close**  
+ **Schließen**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ### <a name="dynamic-options"></a>Dynamische Optionen  
@@ -100,12 +101,12 @@ ms.locfileid: "87472500"
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
- **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
+ **Pakete**  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
   
 #### <a name="package-source--file-system"></a>Package Source = File System  
- **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds „Öffnen“ zu suchen. In dem Dialogfeld werden standardmäßig nur Dateien mit der Erweiterung .dtsx aufgelistet.  
+ **Pakete**  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds „Öffnen“ zu suchen. In dem Dialogfeld werden standardmäßig nur Dateien mit der Erweiterung .dtsx aufgelistet.  
   
 #### <a name="package-source--ssis-package-store"></a>Package Source = SSIS Package Store  
  **Server**  
@@ -120,8 +121,8 @@ ms.locfileid: "87472500"
  **SQL Server-Authentifizierung verwenden**  
  Diese Option ist nicht verfügbar, wenn Sie ein in **SSIS-Paketspeicher**gespeichertes Paket ausführen.  
   
- **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
+ **Pakete**  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
   
 ## <a name="configurations-page"></a>Konfigurationsseite  
  Auf der Seite **Konfigurationen** des Dialogfelds **Paketausführungsprogramm** wählen Sie die Konfigurationsdateien aus, die zur Laufzeit geladen werden sollen, und geben Sie die Reihenfolge an, in der sie geladen werden sollen.  
@@ -145,7 +146,7 @@ ms.locfileid: "87472500"
  **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Close**  
+ **Schließen**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="command-files-page"></a>Seite "Befehlsdateien"  
@@ -167,7 +168,7 @@ ms.locfileid: "87472500"
  **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Close**  
+ **Schließen**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="connection-managers-page"></a>Seite "Verbindungs-Manager"  
@@ -186,7 +187,7 @@ ms.locfileid: "87472500"
  **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Close**  
+ **Schließen**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="execution-options-page"></a>Seite "Ausführungsoptionen"  
@@ -209,7 +210,7 @@ ms.locfileid: "87472500"
  Führt die vom Paket verwendete Prüfpunktdatei auf, wenn die Paketprüfpunkte aktiviert sind.  
   
  **Durchsuchen**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um die Prüfpunktdatei mithilfe des Dialogfelds **Öffnen** zu suchen, wenn Paketprüfpunkte aktiviert sind. Wenn bereits eine Prüfpunktdatei angegeben ist, wird diese durch die ausgewählte Datei ersetzt.  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um die Prüfpunktdatei mithilfe des Dialogfelds **Öffnen** zu suchen, wenn Paketprüfpunkte aktiviert sind. Wenn bereits eine Prüfpunktdatei angegeben ist, wird diese durch die ausgewählte Datei ersetzt.  
   
  **Neustartoptionen überschreiben**  
  Gibt an, ob die Neustartoptionen überschrieben werden, wenn Sie die Paketprüfpunkte aktivieren.  
@@ -220,7 +221,7 @@ ms.locfileid: "87472500"
  **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Close**  
+ **Schließen**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="reporting-page"></a>Berichtsseite  
@@ -245,7 +246,7 @@ ms.locfileid: "87472500"
  **Pipelineereignisse**  
  Wählen Sie diese Option aus, um Meldungen zu Datenflussereignissen zu melden.  
   
- **Informationen**  
+ **Information**  
  Wählen Sie diese Option aus, um Informationsmeldungen zu melden.  
   
  **Ausführlich**  
@@ -281,7 +282,7 @@ ms.locfileid: "87472500"
  **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Close**  
+ **Schließen**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="logging-page"></a>Protokollierungsseite  
@@ -300,7 +301,7 @@ ms.locfileid: "87472500"
  **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Close**  
+ **Schließen**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="set-values-page"></a>Seite "Werte festlegen"  
@@ -319,7 +320,7 @@ ms.locfileid: "87472500"
  **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Close**  
+ **Schließen**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="verification-page"></a>Überprüfungsseite  
@@ -332,7 +333,7 @@ ms.locfileid: "87472500"
  **Paketbuild überprüfen**  
  Wählen Sie diese Option aus, um das Paketbuild zu überprüfen.  
   
- Entwickeln  
+ Build  
  Geben Sie die dem Build zugeordnete fortlaufende Buildnummer an.  
   
  **Paket-ID überprüfen**  
@@ -350,7 +351,7 @@ ms.locfileid: "87472500"
  **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Close**  
+ **Schließen**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="command-line-page"></a>Befehlszeilenseite  
@@ -369,10 +370,10 @@ ms.locfileid: "87472500"
  **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Close**  
+ **Schließen**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [dtexec (Hilfsprogramm)](../../integration-services/packages/dtexec-utility.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Verbindungszeichenfolgen
 title: Verbindungs Zeichenfolgen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbbb5b4672a8ea393380063887cfd77b3e910238
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fbb2d4b0c80a93b225bac754d2905b27e8844cbb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424772"
 ---
 # <a name="connection-strings"></a>Verbindungszeichenfolgen
 Eine Verbindungs Zeichenfolge enthält Informationen, die zum Herstellen einer Verbindung verwendet werden. Eine vollständige Verbindungs Zeichenfolge enthält alle Informationen, die zum Herstellen einer Verbindung erforderlich sind. Die Verbindungs Zeichenfolge ist eine Reihe von Schlüsselwort-Wert-Paaren, die durch Semikolons getrennt sind. (Die gesamte Syntax einer Verbindungs Zeichenfolge finden Sie in der Beschreibung der [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) -Funktion.) Die Verbindungs Zeichenfolge wird verwendet von:  

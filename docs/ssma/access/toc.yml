@@ -18,7 +18,7 @@
   href: save-metadata-accesstosql.md
 - name: Herstellen einer Verbindung mit SQL Server
   href: connecting-to-sql-server-accesstosql.md
-- name: Migrieren von Access-Daten zu Azure SQL-DB
+- name: Migrieren von Access-Daten zu Azure SQL-Datenbank
   href: migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
 - name: Erstellen und Verwalten eines Projekts
   href: creating-and-managing-projects-accesstosql.md
@@ -38,7 +38,7 @@
   href: new-project-ssma-accesstosql.md
 - name: Befehlszeilenoptionen in der SSMA-Konsole
   href: command-line-options-in-ssma-console-accesstosql.md
-- name: Herstellen einer Verbindung mit Azure SQL-DB
+- name: Herstellen einer Verbindung mit Azure SQL-Datenbank
   href: connect-to-azure-sql-db-accesstosql.md
 - name: Bewertungsbericht
   href: assessment-report-accesstosql.md
@@ -60,7 +60,7 @@
   href: assessing-access-database-objects-for-conversion-accesstosql.md
 - name: Erstellen der Serververbindungsdateien
   href: creating-the-server-connection-files-accesstosql.md
-- name: Verknüpfen von Access-Anwendungen mit Azure SQL-DB
+- name: Verknüpfen von Access-Anwendungen mit Azure SQL-Datenbank
   href: linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
 - name: Erstellen von Variablenwertdateien
   href: creating-variable-value-files-accesstosql.md
@@ -68,7 +68,7 @@
   href: edit-type-mapping-accesstosql.md
 - name: Exportieren eines Access-Inventars
   href: exporting-an-access-inventory-accesstosql.md
-- name: Migrieren von Access-Datenbanken zu Azure SQL-DB
+- name: Migrieren von Access-Datenbanken zu Azure SQL-Datenbank
   href: migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
 - name: Zuordnen von Quell- und Zieldatenbanken
   href: mapping-source-and-target-databases-accesstosql.md
@@ -92,7 +92,7 @@
   href: find-databases-wizard-select-files-accesstosql.md
 - name: Tastenkombinationen
   href: shortcut-keys-accesstosql.md
-- name: Herstellen einer Verbindung mit Azure SQL-DB
+- name: Herstellen einer Verbindung mit Azure SQL-Datenbank
   href: connecting-to-azure-sql-db-accesstosql.md
 - name: Festlegen von Optionen für Konvertierung und Migration
   href: setting-conversion-and-migration-options-accesstosql.md
@@ -112,7 +112,7 @@
       href: project-settings-gui-accesstosql.md
     - name: Konvertierung
       href: project-settings-conversion-accesstosql.md
-    - name: Azure SQL-Datenbank
+    - name: "Azure\_SQL-Datenbank"
       href: project-settings-azure-sql-db-accesstosql.md
     - name: Typzuordnung
       href: project-settings-type-mapping-accesstosql.md

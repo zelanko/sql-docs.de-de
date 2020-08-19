@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_property (SSISDB-Datenbank)
 title: catalog.set_environment_property (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71d673ddb0ebb66b22cee7651bc74bd44cf7e089
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba69c12d93b683afa8d11669523153dc6d79d0c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425142"
 ---
 # <a name="catalogset_environment_property-ssisdb-database"></a>catalog.set_environment_property (SSISDB-Datenbank)
 
@@ -43,10 +44,10 @@ catalog.set_environment_property [ @folder_name = ] folder_name
  Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
- Der Name einer Umgebungseigenschaft. Der *property_name* ist **nvarchar(128)** .  
+ Der Name einer Umgebungseigenschaft. Der *property_name* ist **nvarchar(128)**.  
   
  [ @property_value = ] *property_value*  
- Der Wert der Umgebungseigenschaft. Der *property_value* ist **nvarchar(1024)** .  
+ Der Wert der Umgebungseigenschaft. Der *property_value* ist **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  
@@ -72,7 +73,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 -   Der Umgebungsname ist ungültig.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In dieser Version kann nur die `Description` -Eigenschaft festgelegt werden. Der Wert für die `Description` -Eigenschaft darf 4000 Zeichen nicht überschreiten.  
   
   

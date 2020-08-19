@@ -1,4 +1,5 @@
 ---
+description: DATEADD (SSIS-Ausdruck)
 title: DATEADD (SSIS-Ausdruck) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2285a23325b91a78759d1dac26725e0e570b23fb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6dd42e81d3b1d2db558962cbb9843488dd1ad16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425552"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS-Ausdruck)
 
@@ -48,7 +49,7 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle sind die datepart-Werte und Abkürzungen aufgeführt, die von der Ausdrucksauswertung erkannt werden. Bei datepart-Namen wird die Groß-/Kleinschreibung nicht berücksichtigt.  
   
 |datepart|Abkürzungen|  
@@ -57,12 +58,12 @@ DATEADD(datepart, number, date)
 |Quarter|qq, q|  
 |Month (Monat)|mm, m|  
 |Dayofyear|dy, y|  
-|Day (Tag)|dd, d|  
-|Week|wk, ww|  
+|Tag|dd, d|  
+|Woche|wk, ww|  
 |Wochentag|dw, w|  
-|Hour|Hh|  
+|Stunde|Hh|  
 |Minute|mi, n|  
-|Sekunde|ss, s|  
+|Second|ss, s|  
 |Millisekunde|Ms|  
   
  Das *number* -Argument muss beim Analysieren des Ausdrucks verfügbar sein. Bei diesem Argument kann es sich um eine Konstante oder eine Variable handeln. Spaltenwerte können nicht verwendet werden, weil diese Werte beim Analysieren des Ausdrucks nicht bekannt sind.  
@@ -94,7 +95,7 @@ DATEADD("day", 21, ModifiedDate)
 DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [DATEDIFF &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DATEPART &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
  [DAY &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/day-ssis-expression.md)   

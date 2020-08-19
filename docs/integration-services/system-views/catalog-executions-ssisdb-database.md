@@ -1,4 +1,5 @@
 ---
+description: catalog.executions (SSISDB-Datenbank)
 title: catalog.executions (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33a7603502d1b43ea7cfdd1fa5f9c84720705ade
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 438d551f45447b0b03b075576af9cffb2bde8a36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425102"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB-Datenbank)
 
@@ -43,7 +44,7 @@ ms.locfileid: "86912553"
 |executed_as_sid|**varbinary(85)**|Die SID des Benutzers, der die Instanz der Ausführung gestartet hat.|  
 |executed_as_name|**nvarchar(128)**|Der Name des Datenbankprinzipals, mit dem die Instanz der Ausführung gestartet wurde.|  
 |use32bitruntime|**bit**|Gibt an, ob die 32-Bit-Laufzeit verwendet wird, um das Paket unter einem 64-Bit-Betriebssystem auszuführen. Wenn der Wert `1` ist, erfolgt die Ausführung mit der 32-Bit-Runtime. Wenn der Wert `0` ist, erfolgt die Ausführung mit der 64-Bit-Laufzeit.|  
-|object_type|**smallint**|Der Typ des Objekts. Das Objekt kann ein Projekt (`20`) oder ein Paket (`30`) sein.|  
+|object_type|**smallint**|Der Objekttyp. Das Objekt kann ein Projekt (`20`) oder ein Paket (`30`) sein.|  
 |object_id|**bigint**|Die ID des von dem Vorgang betroffenen Objekts.|  
 |status|**int**|Der Status des Vorgangs. Die möglichen Werte lauten "erstellt" (`1`), "wird ausgeführt" (`2`), "abgebrochen" (`3`), "fehlerhaft" (`4`), "ausstehend" (`5`), "unerwartet beendet" (`6`), "erfolgreich" (`7`), "wird beendet" (`8`) und "abgeschlossen" (`9`).|  
 |start_time|**datetimeoffset**|Der Zeitpunkt, zu dem die Instanz der Ausführung gestartet wurde.|  
@@ -62,7 +63,7 @@ ms.locfileid: "86912553"
 |machine_name|**nvarchar(128)**|Der Name des Computers, auf dem die Serverinstanz ausgeführt wird.|  
 |dump_id|**uniqueidentifier**|Die ID eines Ausführungsdumps.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In dieser Sicht wird eine Zeile für jede Instanz der Ausführung im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

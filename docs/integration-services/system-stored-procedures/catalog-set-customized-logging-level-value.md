@@ -1,4 +1,5 @@
 ---
+description: catalog.set_customized_logging_level_value
 title: catalog.set_customized_logging_level_value | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e0eb4147d63c18b910405d3f9b7db3939d44c28f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3f5e101e0413381a2b633e758e0d67a0c4c8167b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912891"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425152"
 ---
 # <a name="catalogset_customized_logging_level_value"></a>catalog.set_customized_logging_level_value 
 
@@ -35,12 +36,12 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  Der Name für einen vorhandenen benutzerdefinierten Protokolliergrad.  
   
- Das Argument *level_name* ist vom Typ **nvarchar(128)** .  
+ Das Argument *level_name* ist vom Typ **nvarchar(128)**.  
   
  [ @property_name = ] *property_name*  
  Der Name der zu ändernden Eigenschaft. Gültige Werte sind **PROFILE** und **EVENTS**.  
   
- Der *property_name* ist **nvarchar(128)** .  
+ Der *property_name* ist **nvarchar(128)**.  
   
  [ @property_value = ] *property_value*  
  Der neue Wert für die angegebene Eigenschaft des angegebenen benutzerdefinierten Protokolliergrads.  
@@ -49,7 +50,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
   
  Das Argument *property_value* ist vom Typ **bigint**.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="return-codes"></a>Rückgabecodes  
  0 (Erfolg)  

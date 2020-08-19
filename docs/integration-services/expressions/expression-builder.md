@@ -1,4 +1,5 @@
 ---
+description: Ausdrucks-Generator
 title: Ausdrucks-Generator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0ebadab32a4f668cbcc523038634f171782602ec
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6f8eb6c6771e2684d03380a721c7ef96dcb08488
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425522"
 ---
 # <a name="expression-builder"></a>Ausdrucks-Generator
 
@@ -40,7 +41,7 @@ ms.locfileid: "86917042"
   
  Weitere Informationen zu Eigenschaftenausdrücken und zum Schreiben von Ausdrücken finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](../../integration-services/expressions/use-property-expressions-in-packages.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  

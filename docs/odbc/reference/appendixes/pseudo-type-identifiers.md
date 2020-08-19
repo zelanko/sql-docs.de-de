@@ -1,4 +1,5 @@
 ---
+description: Pseudotypbezeichner
 title: Pseudo-Typbezeichner | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3fb8b89b3a4acf979a1cb67621b2223d22d303c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c493366bebc1a9f0aff6a51089ae2eef80d4d86
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424992"
 ---
 # <a name="pseudo-type-identifiers"></a>Pseudotypbezeichner
 Zur einfacheren Anwendungsprogrammierung definiert ODBC eine Reihe von Pseudo-typbezeichlern. Diese Bezeichner entsprechen nicht tatsächlich den tatsächlichen Datentypen, sondern können in Abhängigkeit von der Situation in vorhandene Datentypen aufgelöst werden.  

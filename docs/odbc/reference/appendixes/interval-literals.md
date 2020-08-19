@@ -1,4 +1,5 @@
 ---
+description: Intervallliterale
 title: Intervall Literale | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1761ac0acb57b3f375a7d19e9371384c000eca5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd065091127645a45b836781fc6edf6c701e6685
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425032"
 ---
 # <a name="interval-literals"></a>Intervallliterale
 Für ODBC müssen alle Treiber die Konvertierung der SQL_CHAR oder SQL_VARCHAR Datentyps in alle C-Intervall Datentypen unterstützen. Wenn die zugrunde liegende Datenquelle jedoch keine Intervall Datentypen unterstützt, muss der Treiber das richtige Format des Werts im Feld SQL_CHAR kennen, um diese Konvertierungen zu unterstützen. Ebenso erfordert ODBC, dass alle ODBC C-Typen in SQL_CHAR oder SQL_VARCHAR konvertiert werden können. Daher muss ein Treiber wissen, welches Format ein im Zeichenfeld gespeicherter Zeitraum aufweisen sollte. In diesem Abschnitt wird die Syntax von Intervall literalen beschrieben, die der treiberwriter zum Validieren der SQL_CHAR Felder während der Konvertierung in oder aus C-Intervall Datentypen verwenden muss.  
@@ -37,7 +38,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
  Where "Interval" gibt an, dass das Zeichen Literale ein Intervall ist. Das Vorzeichen kann entweder Plus oder minus sein. Sie liegt außerhalb der Intervall Zeichenfolge und ist optional.  
   
- Der Intervall Qualifizierer kann entweder ein einzelnes DateTime-Feld sein oder aus zwei DateTime-Feldern bestehen, in \<folgendem Format: *führendes Feld*> an \< *nachfolgende Feld*>.  
+ Der Intervall Qualifizierer kann entweder ein einzelnes DateTime-Feld sein oder aus zwei DateTime-Feldern bestehen, in der Form: \<*leading field*> to \<*trailing field*> .  
   
 -   Wenn das Intervall aus einem einzelnen Feld besteht, kann das einzelne Feld ein nicht zweites Feld sein, das möglicherweise von einer optionalen vorangehende Genauigkeit in Klammern begleitet wird. Das einzelne DateTime-Feld kann auch ein zweites Feld sein, das möglicherweise von der optionalen vorangebenden Genauigkeit, der optionalen Genauigkeit in Sekundenbruchteilen in Klammern oder beides begleitet wird. Wenn sowohl eine führende Genauigkeit als auch eine Genauigkeit von Sekundenbruchteilen für ein Sekunden Feld vorhanden sind, werden diese durch Kommas getrennt. Wenn das Sekunden Feld eine Genauigkeit von Sekundenbruchteilen aufweist, muss es auch eine führende Genauigkeit aufweisen.  
   
@@ -45,7 +46,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
  Die Intervall Zeichenfolge in *value* wird in einfache Anführungszeichen eingeschlossen. Dabei kann es sich entweder um ein Jahr oder einen tagesliteral handeln. Das Format der Zeichenfolge in *value* wird durch die folgenden Regeln bestimmt:  
   
--   Die Zeichenfolge enthält einen Dezimalwert für jedes Feld, das vom \< *Intervall* *Qualifizierer*> impliziert wird.  
+-   Die Zeichenfolge enthält einen Dezimalwert für jedes Feld, das durch impliziert wird \<*interval* *qualifier*> .  
   
 -   Wenn die Intervall Genauigkeit die Felder Jahr und Monat umfasst, werden die Werte dieser Felder durch ein Minuszeichen voneinander getrennt.  
   

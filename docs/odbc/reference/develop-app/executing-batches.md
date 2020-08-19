@@ -1,4 +1,5 @@
 ---
+description: Ausführen von Batches
 title: Ausführen von Batches | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ce0c043fcfad41a624ad129a757a047d2c87fb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3bb923f95dfcfb731d472aad8ead7ff35053171
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424642"
 ---
 # <a name="executing-batches"></a>Ausführen von Batches
 Bevor eine Anwendung einen Batch von-Anweisungen ausführt, sollte Sie zuerst überprüfen, ob Sie unterstützt werden. Hierzu ruft die Anwendung **SQLGetInfo** mit den Optionen SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS und SQL_PARAM_ARRAY_SELECTS auf. Die erste Option gibt an, ob die Zeilen Anzahl-Generierungs-und Resultset-Generierungs Anweisungen in expliziten Batches und Prozeduren unterstützt werden, während die beiden beiden Optionen Informationen zur Verfügbarkeit von Zeilen-und Resultsets in parametrisierter Ausführung zurückgeben.  

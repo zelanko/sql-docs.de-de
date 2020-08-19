@@ -1,4 +1,5 @@
 ---
+description: '&amp;&amp; (Logisches AND) (SSIS-Ausdruck)'
 title: '&amp;&amp; (Logisches AND) (SSIS-Ausdruck) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01e82c8971ae89580fa9613e3e9f94de11b6b4ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: abb14eae98abaad9ebaaf70331abd42300ee4eee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425402"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (Logisches AND) (SSIS-Ausdruck)
 
@@ -42,17 +43,17 @@ boolean_expression1 && boolean_expression2
 ## <a name="result-types"></a>Ergebnistypen  
  DT_BOOL  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle wird das Ergebnis des &&-Operators dargestellt.  
   
 |Ergebnis|Ausdruck|Ausdruck|  
 |------------|----------------|----------------|  
 |TRUE|TRUE|TRUE|  
-|FALSE|TRUE|FALSE|  
+|false|true|FALSE|  
 |FALSE|FALSE|FALSE|  
 |NULL|NULL|NULL|  
-|NULL|NULL|TRUE|  
-|FALSE|NULL|FALSE|  
+|NULL|NULL|true|  
+|FALSE|NULL|false|  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  
  In diesem Beispiel werden die Spalten **StandardCost** und **ListPrice** verwendet. In diesem Beispiel wird zu TRUE ausgewertet, falls der Wert der **StandardCost** -Spalte kleiner als 300 und falls die **ListPrice** -Spalte größer als 500 ist.  
@@ -67,7 +68,7 @@ StandardCost < 300 && ListPrice > 500
 StandardCost < @SPrice && ListPrice > @LPrice  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [& &#40;Bitweises AND&#41; &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
  [Operatorenrangfolge und -assoziativität](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operatoren &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/operators-ssis-expression.md)  

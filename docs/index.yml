@@ -1,17 +1,17 @@
 ### YamlMime:Hub
 title: Microsoft SQL-Dokumentation
-summary: Informationen zur Verwendung von Azure SQL Services und SQL Server für die Verwaltung Ihrer Datenbankanforderungen, sowohl auf lokaler Ebene als auch in der Cloud
+summary: 'In diesem Artikel erfahren Sie, wie Sie Ihre Datenbankanforderungen mit SQL Server und Azure SQL lokal und in der Cloud verwalten. (Direktlink: https://aka.ms/sqldocs))'
 brand: sql
 metadata:
   title: Microsoft SQL-Dokumentation | Microsoft-Dokumentation
-  description: Informationen zur Verwendung von Azure SQL Services und SQL Server für die Verwaltung Ihrer Datenbankanforderungen, sowohl auf lokaler Ebene als auch in der Cloud
+  description: 'In diesem Artikel erfahren Sie, wie Sie Ihre Datenbankanforderungen mit SQL Server und Azure SQL lokal und in der Cloud verwalten. (Direktlink: https://aka.ms/sqldocs))'
   ms.topic: hub-page
-  ms.openlocfilehash: c593194a2c254baaec71cf7874e6ffd2d1883740
-  ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+  ms.openlocfilehash: 5d7a6ef891d85b55c75af35e26712765f662e9c2
+  ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 04/04/2020
-  ms.locfileid: "80664353"
+  ms.lasthandoff: 08/06/2020
+  ms.locfileid: "87864541"
 highlightedContent:
   items:
   - title: Testen Sie SQL Server 2019
@@ -28,28 +28,32 @@ highlightedContent:
     url: sql-server/educational-sql-resources.yml
 productDirectory:
   items:
-  - title: SQL in Azure
-    imageSrc: media/index/azure.svg
-    links:
-    - url: https://docs.microsoft.com/azure/sql-database/
-      text: Azure SQL-Datenbank
-    - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-      text: Azure Synapse Analytics (SQL Data Warehouse)
   - title: SQL Server unter Windows
     imageSrc: media/index/windows.svg
     links:
     - url: sql-server/index.yml
       text: Lokal
-    - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
+    - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/
       text: Auf einer Azure-VM
     - url: https://docs.microsoft.com/previous-versions/sql/
       text: Vorgängerversionen(SQL 2005–2012)
+  - title: SQL in Azure
+    imageSrc: media/index/azure.svg
+    links:
+    - url: https://docs.microsoft.com/azure/azure-sql/database/
+      text: Azure SQL-Datenbank
+    - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
+      text: Verwaltete Azure SQL-Instanz
+    - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
+      text: Azure SQL Edge (Vorschauversion)
+    - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      text: Azure Synapse Analytics (SQL Data Warehouse)
   - title: SQL Server unter Linux
     imageSrc: media/index/linux.svg
     links:
     - url: linux/sql-server-linux-overview.md
       text: Lokal
-    - url: linux/quickstart-install-connect-clouds.md
+    - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/linux/
       text: Auf einer Azure-VM
 conceptualContent:
   items:
@@ -141,9 +145,9 @@ additionalContent:
         url: connect/homepage-sql-connection-programming.md
       - text: DevOps mit SQL Server-
         url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
-      - text: Azure SQL DB-Anwendungen
+      - text: Anwendungen für Azure SQL-Datenbank
         url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
-      - text: Azure SQL DB-Konnektivitätsbibliotheken
+      - text: Verbindungsbibliotheken für Azure SQL-Datenbank
         url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
       - text: Transact-SQL (T-SQL)
         url: t-sql/language-reference.md
@@ -175,5 +179,3 @@ additionalContent:
         url: analytics-platform-system/index.md
       - text: SQL Server Machine Learning Services (R und Python)
         url: machine-learning/index.yml
-      - text: Azure Machine Learning
-        url: https://docs.microsoft.com/azure/machine-learning/

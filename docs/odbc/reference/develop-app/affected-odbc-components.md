@@ -1,4 +1,5 @@
 ---
+description: Betroffene ODBC-Komponenten
 title: Betroffene ODBC-Komponenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d9155fa1c9df5846f069e93a3db1b969e9219ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4874a22d441ec856c25e08dc20cf04e0f0be89cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424862"
 ---
 # <a name="affected-odbc-components"></a>Betroffene ODBC-Komponenten
 Abwärtskompatibilität beschreibt, wie Anwendungen, Treiber-Manager und Treiber durch die Einführung einer neuen Version des Treiber-Managers beeinflusst werden. Dies wirkt sich auf Anwendungen und Treiber aus, wenn eine oder beide in der alten Version verbleiben. Daher sind drei Arten von Abwärtskompatibilität zu beachten, wie in der folgenden Tabelle dargestellt.  
   
-|Typ|DM-Version|Version der Anwendung|Treiber Version|  
+|type|DM-Version|Version der Anwendung|Treiber Version|  
 |----------|-------------------|----------------------------|-----------------------|  
 |Abwärtskompatibilität des Treiber-Managers|*3.x*|*2.x*|*2.x*|  
 |Abwärtskompatibilität des Treibers [1]|*3.x*|*2.x*|*3.x*|  

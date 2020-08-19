@@ -481,7 +481,7 @@
           href: ../reporting-services/report-design/tables-report-builder-and-ssrs.md
         - name: Erstellen einer Matrix
           href: ../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md
-        - name: 'Erstellen von Rechnungen und Formulare mit Listen &#40;Berichts-Generator und SSRS&#41;'
+        - name: Erstellen von Rechnungen und Formulare mit Listen &#40;Berichts-Generator und SSRS&#41;
           href: ../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md
         - name: Tablix-Datenbereich
           href: ../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md
@@ -1053,7 +1053,7 @@
           href: ../reporting-services/report-data/power-pivot-connection-type-ssrs.md
         - name: SharePoint-Listenverbindungstyp
           href: ../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md
-        - name: SQL Azure-Verbindungstyp
+        - name: Azure SQL-Verbindungstyp
           href: ../reporting-services/report-data/sql-azure-connection-type-ssrs.md
         - name: OLE-Datenbank-Verbindungstyp
           href: ../reporting-services/report-data/ole-db-connection-type-ssrs.md

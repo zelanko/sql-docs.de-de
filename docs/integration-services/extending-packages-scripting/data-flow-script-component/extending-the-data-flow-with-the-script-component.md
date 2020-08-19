@@ -1,4 +1,5 @@
 ---
+description: Erweitern des Datenflusses mit der Skriptkomponente
 title: Erweitern des Datenflusses mit der Skriptkomponente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f8818197bffefd42004dbd4d0cc4d1732d79029
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 82f34ab83935bee2972a4dbb2b007eb2632b9fba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425392"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Erweitern des Datenflusses mit der Skriptkomponente
 

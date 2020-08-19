@@ -82,7 +82,7 @@
   href: assessing-oracle-schemas-for-conversion-oracletosql.md
 - name: Initialisieren von Testfällen
   href: initializing-test-cases-oracletosql.md
-- name: Installieren von SSMA-Komponenten für SQL Server
+- name: Installieren von SSMA-Komponenten in SQL Server
   href: installing-ssma-components-on-sql-server-oracletosql.md
 - name: Beenden der Vorbereitung für Testfälle
   href: finishing-test-case-preparation-oracletosql.md

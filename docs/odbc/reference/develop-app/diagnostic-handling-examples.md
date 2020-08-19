@@ -1,4 +1,5 @@
 ---
+description: Beispiele für die Diagnosebehandlung
 title: Beispiele für die Diagnose Behandlung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ddb833e133ddc6f1e0b959b3da5b8ec464826ed2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c41dc9c939a309f42f6efeafcfeb21d8fe13176
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424672"
 ---
 # <a name="diagnostic-handling-examples"></a>Beispiele für die Diagnosebehandlung
 In den folgenden Beispielen wird veranschaulicht, wie verschiedene Komponenten in einer ODBC-Verbindung Diagnosemeldungen generieren und wie verschiedene Treiber mit **SQLGetDiagRec**Diagnoseinformationen an die Anwendung zurückgeben können.  

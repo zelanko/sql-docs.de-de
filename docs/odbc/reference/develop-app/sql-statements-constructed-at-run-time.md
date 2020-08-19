@@ -1,4 +1,5 @@
 ---
+description: SQL-Anweisungen, die zur Laufzeit erstellt werden
 title: Zur Laufzeit erstellte SQL-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 795335be2a2a3aab1be6dac26bf6d213161fe42e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fff9f7a4e579ce4e1d1177b8f5fa67f7d13a4fdc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424552"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>SQL-Anweisungen, die zur Laufzeit erstellt werden
 Anwendungen, die Ad-hoc-Analysen ausführen, erstellen häufig SQL-Anweisungen zur Laufzeit. Beispielsweise kann ein Benutzer mithilfe einer Kalkulations Tabelle Spalten auswählen, aus denen Daten abgerufen werden sollen:  

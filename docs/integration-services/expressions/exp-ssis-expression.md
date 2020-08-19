@@ -1,4 +1,5 @@
 ---
+description: EXP (SSIS-Ausdruck)
 title: EXP (SSIS-Ausdruck) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79770c7de19581540fc92a9a7214b312b03d85be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 09848aaee36990b8fd56e1f73cb4ba0f5c934095
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425482"
 ---
 # <a name="exp-ssis-expression"></a>EXP (SSIS-Ausdruck)
 
@@ -41,7 +42,7 @@ EXP(numeric_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_R8  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der numerische Ausdruck wird in den DT_R8-Datentyp umgewandelt, bevor der Exponent berechnet wird. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Als Ergebnis wird immer eine positive Zahl zurückgegeben.  
@@ -67,7 +68,7 @@ EXP(0)
   
  Gibt 1 zurück.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [LOG &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/log-ssis-expression.md)   
  [Funktionen &#40;SSIS-Ausdruck&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

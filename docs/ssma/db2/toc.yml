@@ -4,7 +4,7 @@
   href: installing-ssma-for-db2-db2tosql.md
 - name: Erste Schritte
   href: getting-started-with-ssma-for-db2-console-db2tosql.md
-- name: Neuerungen
+- name: Neues
   href: what-s-new-in-ssma-for-db2-db2tosql.md
 - name: Neue GUI-Features
   href: new-gui-features-in-ssma-for-db2-db2tosql.md
@@ -26,7 +26,7 @@
   href: mapping-db2-and-sql-server-data-types-db2tosql.md
 - name: Rechtliche Hinweise
   href: legal-notice-db2tosql.md
-- name: Installieren von SSMA-Komponenten für SQL Server
+- name: Installieren von SSMA-Komponenten in SQL Server
   href: installing-ssma-components-on-sql-server-db2tosql.md
 - name: Ausführen der SSMA-Konsole
   href: executing-the-ssma-console-db2tosql.md

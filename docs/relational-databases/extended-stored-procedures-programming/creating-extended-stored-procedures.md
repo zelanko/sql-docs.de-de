@@ -1,4 +1,5 @@
 ---
+description: Erstellen erweiterter gespeicherter Prozeduren
 title: Erstellen von erweiterten gespeicherten Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a649325e99d00aff6115ec5c0039dbbb1c7edb2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59a83b935549d1fdf856b61a41b6bc7727b177b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424182"
 ---
 # <a name="creating-extended-stored-procedures"></a>Erstellen erweiterter gespeicherter Prozeduren
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85723432"
   
  Diese Dateien sind zum Erstellen einer DLL einer erweiterten gespeicherten Prozedur erforderlich.  
   
-|Datei|BESCHREIBUNG|  
+|Datei|Beschreibung|  
 |----------|-----------------|  
 |Srv.h|API-Headerdatei für erweiterte gespeicherte Prozeduren|  
 |Opends60.lib|Importbibliothek für Opends60.dll|  

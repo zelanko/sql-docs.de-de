@@ -1,4 +1,5 @@
 ---
+description: Überschreiben der Standardwerte für die Genauigkeit des führenden Intervallfelds und die Sekundengenauigkeit für Intervalldatentypen
 title: Überschreiben der führenden und Sekunden Genauigkeit für Intervall Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e60d5d8fc696ad8e2bd4cfb0c082ff214e066d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97375bf23a8530d78dea65dc75ce487cc4f807dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425002"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Überschreiben der Standardwerte für die Genauigkeit des führenden Intervallfelds und die Sekundengenauigkeit für Intervalldatentypen
 Wenn das SQL_DESC_TYPE-Feld eines ARDS auf einen DateTime-oder Interval-C-Typ festgelegt wird, indem entweder **SQLBindCol** oder **SQLSetDescField**aufgerufen wird, wird das SQL_DESC_PRECISION Feld (das die Genauigkeit der Intervall Sekunden enthält) auf die folgenden Standardwerte festgelegt:  

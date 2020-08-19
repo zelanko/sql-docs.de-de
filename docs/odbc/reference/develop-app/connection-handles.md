@@ -1,4 +1,5 @@
 ---
+description: Verbindungshandles
 title: Verbindungs Handles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5b03e0733e35984350d2a218b885dc148ca8f8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4457fa72c40892e208057ac013d3da1e557a6d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424792"
 ---
 # <a name="connection-handles"></a>Verbindungshandles
 Eine *Verbindung* besteht aus einem Treiber und einer Datenquelle. Mit einem Verbindungs Handle wird jede Verbindung identifiziert. Das Verbindungs Handle definiert nicht nur den zu verwendenden Treiber, sondern die Datenquelle, die mit diesem Treiber verwendet werden soll. Innerhalb eines Code Segments, das ODBC (Treiber-Manager oder Treiber) implementiert, identifiziert das Verbindungs Handle eine Struktur, die Verbindungsinformationen enthält, wie z. b. Folgendes:  

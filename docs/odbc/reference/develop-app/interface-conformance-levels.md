@@ -1,4 +1,5 @@
 ---
+description: Ebenen der Schnittstellenübereinstimmung
 title: Schnittstellen Übereinstimmungs Ebenen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fff555324746fcb92641126ddf11ea91ce5e3f89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb77ab0e77fc8a811acd956673a4ad4fe8664828
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424622"
 ---
 # <a name="interface-conformance-levels"></a>Ebenen der Schnittstellenübereinstimmung
 Der Zweck der Durchsetzung besteht darin, die Anwendung darüber zu informieren, welche Features Ihnen vom Treiber zur Verfügung stehen. Ein auf Funktionen basierendes Ausgleichs Schema erreicht dieses Ziel nicht ausreichend. In ODBC 3. *x*, die Treiber werden basierend auf den Features klassifiziert, die Sie besitzen. Die Unterstützung der Funktion kann das unterstützen der Funktion einschließen. Sie kann auch das unterstützen eines deskriptorfelds, eines Anweisungs Attributs, eines "Y"-Werts für einen von **SQLGetInfo**zurückgegebenen Informationstyp usw. einschließen.  

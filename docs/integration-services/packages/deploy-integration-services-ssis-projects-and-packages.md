@@ -1,4 +1,5 @@
 ---
+description: Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)
 title: Bereitstellen von SQL Server Integration Services-Projekten und -Paketen (SSIS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/26/2019
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 962b1db12c1208ea70c7cb906eb904bf17538a64
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f31196ca74fa8aac69958ec47e084a3b63220ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425222"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)
 
@@ -86,7 +87,7 @@ Dieser Fehler ist in der Regel das Ergebnis fehlender DCOM-Berechtigungen. Gehen
 1.  Öffnen Sie die Konsole **Komponentendienste**, oder führen Sie „Dcomcnfg.exe“ aus.
 2.  Erweitern Sie **Komponentendienste** > **Computer** > **Arbeitsplatz** > **DCOM-Konfiguration** in der Konsole **Komponentendienste**.
 3.  Suchen Sie in der Liste nach **Microsoft SQL Server Integration Services xx.0** für die Version von SQL Server, die Sie verwenden. SQL Server 2016 ist beispielsweise Version 13.
-4.  Führen Sie einen Rechtsklick aus, und wählen Sie **Eigenschaften** aus.
+4.  Klicken Sie mit der rechten Maustaste, und wählen Sie **Eigenschaften** aus.
 5.  Klicken Sie im Dialogfeld **Microsoft SQL Server Integration Services 13.0 Properties** (Microsoft SQL Server Integration Services 13.0 – Eigenschaften) auf die Registerkarte **Sicherheit**.
 6.  Klicken Sie für jeden der drei Berechtigungssätze (Start und Aktivierung, Zugriff, Konfiguration) auf **Anpassen** und dann auf **Bearbeiten**, um das Dialogfeld **Berechtigung** zu öffnen.
 7.  Fügen Sie im Dialogfeld **Berechtigung** das vom Standard abweichende Dienstkonto hinzu, und erteilen Sie bei Bedarf die Berechtigungen **Zulassen**. In der Regel verfügt ein Konto über die Berechtigungen **Lokaler Start** und **Lokale Aktivierung**.
@@ -94,7 +95,7 @@ Dieser Fehler ist in der Regel das Ergebnis fehlender DCOM-Berechtigungen. Gehen
 
 Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und zu den Berechtigungen, die für das SSIS-Dienstkonto erforderlich sind, finden Sie im folgenden Blogbeitrag:
  
-- [System.ComponentModel.Win32Exception: A required privilege is not held by the client while Deploying SSIS Project (System.ComponentModel.Win32Exception: Dem Client fehlt beim Bereitstellen des SSIS-Projekts ein erforderliches Recht)](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+- [Fehler beim Bereitstellen des SSIS-Projekts: „System.ComponentModel.Win32Exception: Dem Client fehlt ein erforderliches Recht.“](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   In der aktuellen Version von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen. Der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server ermöglicht es Ihnen, Pakete zu verwalten und auszuführen sowie mit Umgebungen Laufzeitwerte für Pakete zu konfigurieren.  
@@ -135,7 +136,7 @@ Weitere Informationen zu dem in diesem Abschnitt beschriebenen Fehler und zu den
   
 1.  Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], und klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt. Klicken Sie anschließend auf **In Projektbereitstellungsmodell konvertieren**.  
   
-     Oder  
+     - oder -  
   
      Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf den Knoten **Projekte** , und wählen Sie anschließend die Option **Pakete importieren**aus.  
   
@@ -298,7 +299,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
 
  oder
 
- - Suchen Sie nach der ausführbaren Datei **ISDeploymentWizard.exe** im SQL Server-Installationsordner, zum Beispiel: „C:\Programme (x86)\Microsoft SQL Server\130\DTS\Binn“. 
+ - Suchen nach der ausführbaren Datei **ISDeploymentWizard.exe** im SQL Server-Installationsordner; Beispiel: „C:\Programme (x86) \Microsoft SQL Server\130\DTS\Binn“. 
  
  > **HINWEIS:** Falls Sie die Seite **Einführung** sehen, klicken Sie auf **Weiter** , um auf die Seite **Quellen auswählen** zu wechseln. 
  
@@ -328,7 +329,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
 
  Die Seite **Quelle auswählen** im **Bereitstellungs-Assistenten für Integration Services** zeigt die Einstellungen speziell für das Paketbereitstellungsmodell an, wenn Sie die Option **Paketbereitstellung** als **Bereitstellungsmodell**gewählt haben.  
   
- Klicken Sie zum Auswählen der Quellpakete auf die Schaltfläche **Durchsuchen...** , um den **Ordner** auszuwählen, der die Pakete enthält, oder geben Sie den Ordnerpfad in das Textfeld **Paketordnerpfad** ein, und klicken Sie auf die Schaltfläche **Aktualisieren** am unteren Seitenrand. Jetzt sollten Sie alle Pakete im angegebenen Ordner im Listenfeld sehen. Standardmäßig sind alle Pakete ausgewählt. Klicken Sie das **Kontrollkästchen** in der ersten Spalte, um auszuwählen, welche Pakete an den Server bereitgestellt werden sollen.  
+ Klicken Sie zum Auswählen der Quellpakete auf die Schaltfläche **Durchsuchen...**, um den **Ordner** auszuwählen, der die Pakete enthält, oder geben Sie den Ordnerpfad in das Textfeld **Paketordnerpfad** ein, und klicken Sie auf die Schaltfläche **Aktualisieren** am unteren Seitenrand. Jetzt sollten Sie alle Pakete im angegebenen Ordner im Listenfeld sehen. Standardmäßig sind alle Pakete ausgewählt. Klicken Sie das **Kontrollkästchen** in der ersten Spalte, um auszuwählen, welche Pakete an den Server bereitgestellt werden sollen.  
   
  Beziehen Sie sich auf die Spalten **Status** und **Meldung** , um den Status des Pakets zu überprüfen. Falls der Status auf **Bereit** oder **Warnung**steht, würde der Bereitstellungs-Assistent den Bereitstellungsvorgang nicht blockieren. Wenn der Status auf **Fehler** festgelegt ist, setzt der Assistent die Bereitstellung der ausgewählten Pakete nicht fort. Klicken Sie zum Anzeigen der detaillierten Warn- oder Fehlermeldungen auf den Link in der Spalte **Meldung**.  
   
@@ -338,7 +339,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
   
 #### <a name="select-destination"></a>Ziel auswählen
 
- Nachdem Sie die Paketquellen ausgewählt haben, klicken Sie auf die Schaltfläche **Weiter**, um zur Seite **Ziel auswählen** zu wechseln. Pakete müssen an ein Projekt im SSIS-Katalog (SSISDB) bereitgestellt werden. Stellen Sie vor dem Bereitstellen von Paketen sicher, dass das Zielprojekt bereits im SSIS-Katalog vorhanden ist. Erstellen Sie ein leeres Projekt, falls ein Projekt nicht vorhanden ist. Geben Sie auf der Seite **Ziel auswählen** den Servernamen in das Textfeld **Servername** ein, oder klicken Sie auf die Schaltfläche **Durchsuchen...** , um eine Serverinstanz auszuwählen. Klicken Sie dann auf die Schaltfläche **Durchsuchen...** neben dem Textfeld **Pfad**, um das Zielprojekt anzugeben. Wenn das Projekt nicht vorhanden ist, klicken Sie auf die Schaltfläche **Neues Projekt...** , um ein leeres Projekt als Zielprojekt zu erstellen. Das Projekt muss unter einem Ordner erstellt werden.  
+ Nachdem Sie die Paketquellen ausgewählt haben, klicken Sie auf die Schaltfläche **Weiter**, um zur Seite **Ziel auswählen** zu wechseln. Pakete müssen an ein Projekt im SSIS-Katalog (SSISDB) bereitgestellt werden. Stellen Sie vor dem Bereitstellen von Paketen sicher, dass das Zielprojekt bereits im SSIS-Katalog vorhanden ist. Erstellen Sie ein leeres Projekt, falls ein Projekt nicht vorhanden ist. Geben Sie auf der Seite **Ziel auswählen** den Servernamen in das Textfeld **Servername** ein, oder klicken Sie auf die Schaltfläche **Durchsuchen...**, um eine Serverinstanz auszuwählen. Klicken Sie dann auf die Schaltfläche **Durchsuchen...** neben dem Textfeld **Pfad**, um das Zielprojekt anzugeben. Wenn das Projekt nicht vorhanden ist, klicken Sie auf die Schaltfläche **Neues Projekt...**, um ein leeres Projekt als Zielprojekt zu erstellen. Das Projekt muss unter einem Ordner erstellt werden.  
   
 #### <a name="review-and-deploy"></a>Überprüfen und bereitstellen
 
@@ -567,7 +568,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="set-options-on-the-locate-packages-page"></a><a name="locate"></a> Festlegen von Optionen auf der Seite "Pakete suchen"  
   
 > [!NOTE]  
->  Die Seite **Pakete suchen** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ausführen.  
+>   Die Seite **Pakete suchen** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ausführen.  
   
  Die folgende Option wird auf der Seite angezeigt, wenn Sie **Dateisystem** in der Dropdownliste **Quelle** auswählen. Wählen Sie diese Option, wenn das Paket im Dateisystem gespeichert ist.  
   
@@ -625,7 +626,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  Geben Sie auf dieser Seite den Namen und den Pfad für eine neue Projektbereitstellungsdatei (.ispac) an, oder wählen Sie eine vorhandene Datei aus.  
   
 > [!NOTE]  
->  Die Seite **Ziel auswählen** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ausführen.  
+>   Die Seite **Ziel auswählen** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ausführen.  
   
  **Ausgabepfad**  
  Geben Sie den Pfad für die Bereitstellungsdatei ein, oder navigieren Sie zur Datei, indem Sie auf **Durchsuchen**klicken.  
@@ -642,7 +643,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="set-options-on-the-specify-project-properties-page"></a><a name="projectProperties"></a> Festlegen von Optionen auf der Seite "Projekteigenschaften angeben"  
   
 > [!NOTE]  
->  Die Seite **Projekteigenschaften angeben** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ausführen.  
+>   Die Seite **Projekteigenschaften angeben** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ausführen.  
   
  **Projektname**  
  Listet den Projektnamen auf.  
@@ -659,7 +660,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Übergeordnetes Paket**  
  Listet den Namen eines Pakets auf, das ein untergeordnetes Paket mithilfe des Tasks "Paket ausführen" ausführt.  
   
- **Taskname**  
+ **Aufgabenname**  
  Listet den Namen des Tasks "Paket ausführen" auf.  
   
  **Ursprünglicher Verweis**  
@@ -671,10 +672,10 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="set-options-on-the-select-configurations-page"></a><a name="configurations"></a> Festlegen von Optionen auf der Seite "Konfigurationen auswählen"  
  Wählen Sie die Paketkonfigurationen aus, die Sie durch Parameter ersetzen möchten.  
   
- **Paket**  
+ **Pakete**  
  Listet die Paketdatei auf.  
   
- **Typ**  
+ **Type**  
  Listet den Typ der Konfiguration auf, z. B. eine XML-Konfigurationsdatei.  
   
  **Konfigurationszeichenfolge**  
@@ -697,7 +698,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="set-options-on-the-create-parameters-page"></a><a name="createParameters"></a> Festlegen von Optionen auf der Seite "Parameter erstellen"  
  Wählen Sie den Parameternamen und den Bereich für jede Konfigurationseigenschaft aus.  
   
- **Paket**  
+ **Pakete**  
  Listet die Paketdatei auf.  
   
  **Parametername**  

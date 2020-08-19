@@ -1,4 +1,5 @@
 ---
+description: Initialisierung der Deskriptorfelder
 title: Initialisierung von Deskriptorfeldern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4ed6479a60f1d0695107c216b2f0c94a55f68ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2537e5e74c600c72368e46bda7640b881d9a34df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424652"
 ---
 # <a name="initialization-of-descriptor-fields"></a>Initialisierung der Deskriptorfelder
 Wenn ein Anwendungs Zeilen Deskriptor zugeordnet wird, empfangen seine Felder Anfangswerte, wie in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)angegeben. Der Anfangswert des SQL_DESC_TYPE Felds ist SQL_DEFAULT. Dies ermöglicht eine Standardbehandlung von Datenbankdaten zur Darstellung der Anwendung. Die Anwendung kann eine andere Behandlung der Daten angeben, indem Felder des deskriptordaten Satzes festgelegt werden.  

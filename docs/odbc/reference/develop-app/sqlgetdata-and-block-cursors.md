@@ -1,4 +1,5 @@
 ---
+description: SQLGetData und Blockcursor
 title: SQLGetData und Blockcursorn | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12599cdc-7725-4faf-bcae-e163ea0f5851
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b60d7093552b8f1dbed87d9ad8840ddb5a9e0799
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f53358b2d4d8dfef1a5a820ed3943f07a584a595
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424492"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData und Blockcursor
 **SQLGetData** funktioniert für eine einzelne Spalte einer einzelnen Zeile und kann kein Array mit Daten aus mehreren Zeilen abrufen. Dies liegt daran, dass die primäre Verwendung von **SQLGetData** das Abrufen von Long-Daten in Teilen ist, und es gibt nur wenig oder keinen Grund, dies für mehr als eine Zeile gleichzeitig zu erledigen.  

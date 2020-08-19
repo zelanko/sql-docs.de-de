@@ -1,4 +1,5 @@
 ---
+description: Asynchrone Ausführung (Abrufmethode)
 title: Asynchrone Ausführung (Abruf Methode) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a188c607c499e16652e314c67c37914f6cc9b85f
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 17199fb610f707c77a6610d34c8b1a5f0166de13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424852"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Asynchrone Ausführung (Abrufmethode)
 Vor ODBC 3,8 und dem Windows 7 SDK waren asynchrone Vorgänge nur für Anweisungs Funktionen zulässig. Weitere Informationen finden Sie unter **asynchrone Vorgänge der Ausführung**von Anweisungen weiter unten in diesem Thema.  
@@ -245,7 +246,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Im folgenden Beispiel wird gezeigt, wie Sie **SQLSetConnectAttr** verwenden, um die asynchrone Ausführung für verbindungsbezogene Funktionen zu aktivieren.  
   
 ### <a name="code"></a>Code  
@@ -299,7 +300,7 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt asynchrone Commit-Vorgänge. Rollback-Vorgänge können auch auf diese Weise ausgeführt werden.  
   
 ### <a name="code"></a>Code  

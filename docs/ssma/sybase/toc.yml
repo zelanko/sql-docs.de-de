@@ -56,7 +56,7 @@
   href: connecting-to-sybase-ase-sybasetosql.md
 - name: Auswählen und Konfigurieren von betroffenen Objekten
   href: selecting-and-configuring-affected-objects-sybasetosql.md
-- name: Herstellen einer Verbindung mit Azure SQL-DB
+- name: Herstellen einer Verbindung mit Azure SQL-Datenbank
   href: connecting-to-azure-sql-db-sybasetosql.md
 - name: Verwalten von Kennwörtern
   href: managing-passwords-sybasetosql.md
@@ -74,7 +74,7 @@
   href: troubleshooting-sybasetosql.md
 - name: Zuordnen von Sybase ASE-Datentypen und SQL Server-Datentypen
   href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
-- name: Installieren von SSMA-Komponenten für SQL Server
+- name: Installieren von SSMA-Komponenten in SQL Server
   href: installing-ssma-components-on-sql-server-sybasetosql.md
 - name: Migrieren von Sybase ASE-Daten zu Azure SQL-Datenbank
   href: migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
@@ -124,7 +124,7 @@
       href: project-settings-type-mapping-sybasetosql.md
     - name: Synchronization
       href: project-settings-synchronization-sybasetosql.md
-    - name: Azure SQL-Datenbank
+    - name: "Azure\_SQL-Datenbank"
       href: project-settings-azure-sql-db-sybasetosql.md
     - name: Migration
       href: project-settings-migration-sybasetosql.md

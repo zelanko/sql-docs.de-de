@@ -1,4 +1,5 @@
 ---
+description: Lock:Cancel-Ereignisklasse
 title: Lock:Cancel-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7818b47bcac286d409750d87eac0f728ca69fd8d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64a8f8d2ed20144b5f3de5b1d24fee3adf428a06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424232"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel-Ereignisklasse
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Die **Lock:Cancel** -Ereignisklasse zeigt an, dass der Erhalt einer Sperre für eine Ressource abgebrochen wurde (z. B. aufgrund einer abgebrochenen Abfrage).  
+   Die **Lock:Cancel**-Ereignisklasse zeigt an, dass der Erhalt einer Sperre für eine Ressource abgebrochen wurde (z.B. aufgrund einer abgebrochenen Abfrage).  
   
 ## <a name="lockcancel-event-class-data-columns"></a>Datenspalten der Lock:Cancel-Ereignisklasse  
   
@@ -55,7 +56,7 @@ ms.locfileid: "85717814"
 |**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat (falls verfügbar).|14|Ja|  
 |**TextData**|**ntext**|Ein Textwert, der vom eingerichteten Sperrentyp abhängt. Dieser Wert ist mit dem Wert der **resource_description** -Spalte in **sys.dm_tran_locks**identisch.|1|Ja|  
 |**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
-|**Typ**|**int**|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Ja|  
+|**Type**|**int**|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Ja|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

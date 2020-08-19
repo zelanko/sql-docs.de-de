@@ -1,4 +1,5 @@
 ---
+description: Reservierte Schlüsselwörter
 title: Reservierte Schlüsselwörter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c83df20d95b9fe968b7c1c01cd8a9031043c8ad
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a469e48f9de46453f60cfcbb468110dfb1f5d9dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424982"
 ---
 # <a name="reserved-keywords"></a>Reservierte Schlüsselwörter
 Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reserviert. Diese Wörter schränken die minimale SQL-Grammatik nicht ein. Um jedoch die Kompatibilität mit Treibern sicherzustellen, die die Kern-SQL-Grammatik unterstützen, sollten Anwendungen die Verwendung dieser Schlüsselwörter vermeiden. Der Wert "#**define** " SQL_ODBC_KEYWORDS enthält eine durch Trennzeichen getrennte Liste dieser Schlüsselwörter.  
@@ -56,7 +57,7 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
         CHAR_LENGTH  
         CHARACTER  
         CHARACTER_LENGTH  
-        CHECK  
+        KONTROLLKÄSTCHEN  
         CLOSE  
         COALESCE  
         COLLATE  
@@ -90,7 +91,7 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
         DEFAULT  
         DEFERRABLE  
         DEFERRED  
-        Delete  
+        DELETE  
         DESC  
         DESCRIBE  
         DESCRIPTOR  
@@ -111,7 +112,7 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
         EXISTS  
         EXTERNAL  
         EXTRACT  
-        FALSE  
+        false  
         FETCH  
         FIRST  
         GLEITKOMMAZAHL  
@@ -202,7 +203,7 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
         PROCEDURE  
         PUBLIC  
         READ  
-        REAL  
+        real  
         REFERENCES  
         RELATIVE  
         RESTRICT  
@@ -246,7 +247,7 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
         TRANSLATE  
         TRANSLATION  
         TRIM  
-        TRUE  
+        true  
         UNION  
         UNIQUE  
         UNKNOWN  
