@@ -1,4 +1,5 @@
 ---
+description: Verteilerinformationen, Veröffentlichungen
 title: Verteilerinformationen, Veröffentlichungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/20/2018
@@ -17,12 +18,12 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e2cdb7832e97c575af79c322e1cd21d1d8f09f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498763"
 ---
 # <a name="distributor-information-publications"></a>Verteilerinformationen, Veröffentlichungen
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,13 +43,13 @@ Die Informationen, die bezüglich der vom Verteiler unterstützten Veröffentlic
   Informationen zu Abonnements von Momentaufnahmeveröffentlichungen enthalten den Namen des Verlegers. Davon abgesehen entsprechen die bereitgestellten Funktionen und Informationen in diesem Dialogfeld denen in der Verlegeransicht. Weitere Informationen zur Verwendung dieses Dialogfelds finden Sie unter [Verlegerinformationen, Überwachungsliste für Abonnements &#40;Momentaufnahmeveröffentlichung, SQL Server 2005 und später&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md).  
 
 ## <a name="agents"></a>Agents
-Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungsaufträgen angezeigt, die dem Verleger und dem Abonnenten zugeordnet sind:  
+ Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungsaufträgen angezeigt, die dem Verleger und dem Abonnenten zugeordnet sind.  
   
  Die Agents, die auf der Registerkarte **Agents** in der Verteileransicht für einen Verteiler verfügbar sind, umfassen alle Agents, die auf der Registerkarte **Agents** für einen Verleger verfügbar sind. Die Registerkarte **Agents** für einen Verteiler in der Verteileransicht enthält jedoch auch einen Verteiler-Agent und einen Merge-Agent.  
   
  Weitere Informationen zu Momentaufnahme-, Protokollleser- und Warteschlangenlese-Agents sowie Wartungsaufträgen finden Sie unter [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md). Beachten Sie, dass beim Anzeigen von Agent-Informationen für einen Verteiler auf der Registerkarte **Agents** Verlegerinformationen für den Momentaufnahme- und den Protokollleser-Agent vorhanden sind. Auf der Registerkarte **Agents** für einen Verteiler in der Verteileransicht können Sie auch jedoch **Verteiler-Agent** und **Merge-Agent**auswählen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  In den folgenden Abschnitten werden die Daten beschrieben, die auf dieser Registerkarte für den Verteiler-Agent und den Merge-Agent angezeigt werden.  
   
 ### <a name="distributor-agent"></a>Verteiler-Agent  
@@ -61,7 +62,7 @@ Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungs
 -   Wird nicht ausgeführt   
 -   Nie gestartet  
   
- **Herausgeber**  
+ **Publisher**  
  Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz des Verlegers.  
   
  **Veröffentlichung**  
@@ -70,7 +71,7 @@ Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungs
  **Abonnement**  
  Der Name des Abonnements im Format [*SubscriberName*].[*Database*].  
   
- **Typ**  
+ **Type**  
  Der Typ der Replikation: push, pull oder anonymous.  
   
  **Letzte Startzeit**  
@@ -111,7 +112,7 @@ Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungs
   
 -   Nie gestartet  
   
- **Herausgeber**  
+ **Publisher**  
  Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz des Verlegers.  
   
  **Veröffentlichung**  
@@ -120,7 +121,7 @@ Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungs
  **Abonnement**  
  Der Name des Abonnements im Format [*SubscriberName*].[*Database*].  
   
- **Typ**  
+ **Type**  
  Der Typ der Replikation: push, pull oder anonymous.  
   
  **Letzte Startzeit**  

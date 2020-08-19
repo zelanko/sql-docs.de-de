@@ -1,4 +1,5 @@
 ---
+description: Arbeiten mit Excel-Dateien mit dem Skripttask
 title: Arbeiten mit Excel-Dateien mit dem Skripttask | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/15/2018
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f851b7a3cbbf665838a8b8c6d6af19cc0797040e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1016c9746ba1cfe266ef944eeb66f7c0327d69dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430352"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Arbeiten mit Excel-Dateien mit dem Skripttask
 
@@ -80,7 +81,7 @@ ms.locfileid: "86921081"
   
     -   Geben Sie **ExcelFile** ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) neben dem Eigenschaftsfeld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable **ExcelFile** aus.  
   
@@ -88,7 +89,7 @@ ms.locfileid: "86921081"
   
     -   Geben Sie **ExcelFileExists** ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) neben dem Eigenschaftsfeld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable **ExcelFileExists** aus.  
   
@@ -150,7 +151,7 @@ public class ScriptMain
   
     -   Geben Sie durch Trennzeichen getrennt **ExcelTable** und **ExcelFile** ein **.**  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) neben dem Eigenschaftsfeld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variablen **ExcelTable** und **ExcelFile** aus.  
   
@@ -158,7 +159,7 @@ public class ScriptMain
   
     -   Geben Sie **ExcelTableExists** ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) neben dem Eigenschaftsfeld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable **ExcelTableExists** aus.  
   
@@ -257,7 +258,7 @@ public class ScriptMain
   
     -   Geben Sie **ExcelFolder** ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) neben dem Eigenschaftsfeld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable „ExcelFolder“ aus.  
   
@@ -265,7 +266,7 @@ public class ScriptMain
   
     -   Geben Sie **ExcelFiles** ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) neben dem Eigenschaftsfeld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable „ExcelFiles“ aus.  
   
@@ -332,7 +333,7 @@ public class ScriptMain
   
     -   Geben Sie **ExcelFile** ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) neben dem Eigenschaftsfeld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable „ExcelFiles“ aus.  
   
@@ -340,7 +341,7 @@ public class ScriptMain
   
     -   Geben Sie **ExcelTables** ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) neben dem Eigenschaftsfeld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variable „ExcelTables“ aus.  
   
@@ -445,7 +446,7 @@ public class ScriptMain
   
     -   Geben Sie den Namen jeder Variable durch Trennzeichen getrennt ein.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) neben dem Eigenschaftsfeld, und wählen Sie im Dialogfeld **Variablen auswählen** die Variablen aus.  
   
@@ -536,8 +537,8 @@ public class ScriptMain
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

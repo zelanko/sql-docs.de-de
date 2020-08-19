@@ -1,4 +1,5 @@
 ---
+description: Dateibasierte Treiber
 title: Dateibasierte Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 223bd838754f1d656ac71ae37926389097af3ea1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 770e8560c540e8423aebf0a79c0e8ee5c124c8e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429082"
 ---
 # <a name="file-based-drivers"></a>Dateibasierte Treiber
 Dateibasierte Treiber werden mit Datenquellen wie dBase verwendet, die keine eigenständige Datenbank-Engine für den zu verwendenden Treiber bereitstellen. Diese Treiber greifen direkt auf die physischen Daten zu und müssen eine Datenbank-Engine implementieren, um SQL-Anweisungen verarbeiten zu können. Als Standardverfahren implementieren die Datenbank-Engines in dateibasierten Treibern die Teilmenge von ODBC SQL, die durch den minimalen SQL-Konformitäts Grad definiert ist. eine Liste der SQL-Anweisungen in dieser Konformitäts Ebene finden Sie in [Anhang C: SQL-Grammatik](../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  

@@ -1,4 +1,5 @@
 ---
+description: ~ (Bitweises NOT) (Transact-SQL)
 title: ~ (Bitwise NOT) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/10/2017
@@ -23,12 +24,12 @@ ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb8dc14764feeeb8ebc83f424d1b1e979e160e2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 498c2a81c0d7b94cd6288c24165f051bfc073fbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459468"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (Bitweises NOT) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +66,7 @@ ms.locfileid: "86915816"
  Mit dem bitweisen **~** -Operator wird ein bitweises logisches NOT für *expression* durchgeführt, indem jedes Bit abgearbeitet wird. Wenn *expression* den Wert 0 (null) besitzt, wird für die Bits im Resultset 1 festgelegt. Andernfalls wird das Bit im Ergebnis gelöscht auf 0 (null) festgelegt. Mit anderen Worten, Einsen werden zu Nullen und Nullen werden zu Einsen geändert.  
   
 > [!IMPORTANT]  
->  Beim Durchführen aller bitweisen Operationen ist es wichtig, auf die Speicherlänge des Ausdrucks zu achten, der bei der bitweisen Operation verwendet wird. Beim Speichern von Werten wird empfohlen, dieselbe Anzahl von Bytes zu verwenden. Beispielsweise wird beim Speichern des dezimalen Werts 5 als **tinyint**, **smallint** oder **int** dieser Wert mit unterschiedlicher Byteanzahl abgespeichert: Bei **tinyint** wird 1 Byte verwendet, bei **smallint** 2 Bytes, und bei **int** werden 4 Bytes belegt. Daher kann eine bitweise Operation mit einem dezimalen **int**-Wert andere Ergebnisse erzeugen als eine direkte binäre oder hexadezimale Umwandlung, besonders bei Verwendung des **~** -Operators (bitweises NOT). Eine bitweise NOT-Operation kann auf eine Variable kürzerer Länge angewendet werden. In diesem Fall kann es vorkommen, dass bei der Konvertierung in einen längeren Datentyp die höherwertigen acht Bits nicht auf den erwarteten Wert festgelegt werden. Es wird empfohlen, die Variable mit dem kleineren Datentyp in den größeren Datentyp zu konvertieren und anschließend die NOT-Operation mit dem Ergebnis durchzuführen.  
+>  Beim Durchführen aller bitweisen Operationen ist es wichtig, auf die Speicherlänge des Ausdrucks zu achten, der bei der bitweisen Operation verwendet wird. Beim Speichern von Werten wird empfohlen, dieselbe Anzahl von Bytes zu verwenden. Beispielsweise wird beim Speichern des dezimalen Werts 5 als **tinyint**, **smallint** oder **int** dieser Wert mit unterschiedlicher Byteanzahl abgespeichert: Bei **tinyint** wird 1 Byte verwendet, bei **smallint** 2 Bytes, und bei **int** werden 4 Bytes belegt. Daher kann eine bitweise Operation mit einem dezimalen **int**-Wert andere Ergebnisse erzeugen als eine direkte binäre oder hexadezimale Umwandlung, besonders bei Verwendung des **~**-Operators (bitweises NOT). Eine bitweise NOT-Operation kann auf eine Variable kürzerer Länge angewendet werden. In diesem Fall kann es vorkommen, dass bei der Konvertierung in einen längeren Datentyp die höherwertigen acht Bits nicht auf den erwarteten Wert festgelegt werden. Es wird empfohlen, die Variable mit dem kleineren Datentyp in den größeren Datentyp zu konvertieren und anschließend die NOT-Operation mit dem Ergebnis durchzuführen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Tabelle mithilfe des **int**-Datentyps erstellt, um die Werte zu speichern, und die beiden Werte in eine Zeile eingefügt.  

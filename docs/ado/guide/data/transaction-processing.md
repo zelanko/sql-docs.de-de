@@ -1,4 +1,5 @@
 ---
+description: Verarbeiten von Transaktionen
 title: Transaktionsverarbeitung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33e78f7a278623c5990a22a638c5a8e693b9a3e1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5b4d8e959cab799c5436b1c1357ae1e734d3d5a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759076"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452702"
 ---
 # <a name="transaction-processing"></a>Verarbeiten von Transaktionen
 Eine *Transaktion* begrenzt den Anfang und das Ende einer Reihe von Datenzugriffs Vorgängen, die über eine Verbindung ausgeführt werden. Gemäß den Transaktionsfunktionen der Datenquelle ermöglicht das **Verbindungs** Objekt auch das Erstellen und Verwalten von Transaktionen. Wenn Sie z. b. den Microsoft OLE DB-Anbieter für SQL Server verwenden, um auf Microsoft SQL Server auf eine Datenbank zuzugreifen, können Sie für die Befehle, die Sie ausführen.  

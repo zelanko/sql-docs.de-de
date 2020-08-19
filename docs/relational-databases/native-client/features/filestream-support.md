@@ -1,4 +1,5 @@
 ---
+description: FILESTREAM-Unterstützung
 title: FILESTREAM-Unterstützung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26e1d47dea484e818870eb829f6de6318bac1c86
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b1229da063f1752ba68a0fc172f892bf23236194
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498886"
 ---
 # <a name="filestream-support"></a>FILESTREAM-Unterstützung
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Die FILESTREAM-Funktion bietet eine Möglichkeit, große binäre Werte zu speichern und entweder über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder durch direkten Zugriff auf das Windows-Dateisystem darauf zuzugreifen. Ein großer Binärwert ist ein Wert, der größer als 2 Gigabyte (GB) ist. Weitere Informationen zur verbesserten FILESTREAM-Unterstützung finden Sie unter [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
- Wenn eine Datenbankverbindung geöffnet wird, wird ** \@ \@ TEXTSIZE** standardmäßig auf-1 ("unbegrenzt") festgelegt.  
+ Wenn eine Datenbankverbindung geöffnet wird, wird **\@\@TEXTSIZE** standardmäßig auf –1 („unbegrenzt“) festgelegt.  
   
  Es ist auch möglich, mit Windows-Dateisystem-APIs auf FILESTREAM-Spalten zuzugreifen und diese zu aktualisieren.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85885659"
   
  Mithilfe der **is_filestream**-Spalte der [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)-Katalogsicht können Sie FILESTREAM-Spalten erstellen oder ermitteln, welche der vorhandenen Spalten FILESTREAM-Spalten sind.  
   
- Hier ein Beispiel:  
+ Es folgt ein Beispiel:  
   
 ```  
 -- Create a table with a FILESTREAM column.  

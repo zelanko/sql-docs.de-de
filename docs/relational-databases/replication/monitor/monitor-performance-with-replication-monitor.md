@@ -1,4 +1,5 @@
 ---
+description: Überwachen der Leistung mit dem Replikationsmonitor
 title: Überwachen der Leistung mit dem Replikationsmonitor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d98498fa2f63ef4e4c3cd977c7612fd3277fbf91
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a881bfd928d8a8d1c84d85ea8d226bc2751126a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498738"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Überwachen der Leistung mit dem Replikationsmonitor
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,11 +62,11 @@ ms.locfileid: "86918716"
 ## <a name="view-performance-measurements"></a>Anzeigen von Leistungsindikatoren  
  Der Replikationsmonitor zeigt bei Transaktions- und Mergereplikationen in den Spalten **Aktuelle Durchschnittsleistung** und **Die derzeit schlechteste Leistung** (für Veröffentlichungen) und in der **Leistung** -Spalte (für Abonnements) Leistungswerte an. Die Werte sind:  
   
--   Hervorragend  
+-   Ausgezeichnet  
   
 -   Gut  
   
--   Durchschnittlich  
+-   Mittelmäßig  
   
 -   Schlecht  
   
@@ -75,7 +76,7 @@ ms.locfileid: "86918716"
   
 -   Bei der Transaktionsreplikation richtet sich die Angabe zur Leistungsqualität nach dem Schwellenwert für die Latenzzeit. Wenn dieser Schwellenwert nicht festgelegt ist, wird auch kein Leistungswert angezeigt. Aus der folgenden Tabelle geht der Zusammenhang zwischen dem Schwellenwert und dem Wert für die Leistungsqualität hervor. Wenn für den Schwellenwert z. B. 60 Sekunden festgelegt ist und die tatsächliche Latenzzeit 30 Sekunden beträgt, entspricht diese Latenzzeit 50 % des Schwellenwerts, woraus sich der Wert "Gut" ergibt.  
   
-    |Hervorragend|Gut|Durchschnittlich|Schlecht|Kritisch|  
+    |Ausgezeichnet|Gut|Mittelmäßig|Schlecht|Kritisch|  
     |---------------|----------|----------|----------|--------------|  
     |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
@@ -83,7 +84,7 @@ ms.locfileid: "86918716"
   
      Aus der folgenden Tabelle geht der Zusammenhang zwischen der durchschnittlichen Leistung und dem Wert für die Leistungsqualität hervor. Wenn z. B. zehn Abonnenten über eine LAN-Verbindung mit einer Durchschnittsrate von 100 Zeilen pro Sekunde synchronisiert werden und eines der Abonnements dann mit einer Rate von 125 Zeilen pro Sekunde synchronisiert wird, beläuft sich die Leistung für diese Abonnentensynchronisierung auf 125 % des Durchschnitts, was einer guten Leistung entspricht.  
   
-    |Hervorragend|Gut|Durchschnittlich|Schlecht|  
+    |Ausgezeichnet|Gut|Mittelmäßig|Schlecht|  
     |---------------|----------|----------|----------|  
     |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
@@ -100,6 +101,6 @@ ms.locfileid: "86918716"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Replikation](../../../relational-databases/replication/monitor/monitoring-replication.md)   
- [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Festlegen von Schwellenwerten und Warnungen im Replikationsmonitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: CreateParameter-Methode (ADO)
 title: Kreateparameter-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd78e3cbe992a3f2df5046a26eca990479cb3fd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6bf45e2d458784972d7057e95878c9db3526ffac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444322"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter-Methode (ADO)
 Erstellt ein neues [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekt mit den angegebenen Eigenschaften.  
@@ -38,19 +39,19 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>Parameter  
  *Name*  
- Dies ist optional. Ein **Zeichen** folgen Wert, der den Namen des **Parameter** Objekts enthält.  
+ Optional. Ein **Zeichen** folgen Wert, der den Namen des **Parameter** Objekts enthält.  
   
  *Typ*  
- Dies ist optional. Ein [datatyetenum](../../../ado/reference/ado-api/datatypeenum.md) -Wert, der den Datentyp des **Parameter** Objekts angibt.  
+ Optional. Ein [datatyetenum](../../../ado/reference/ado-api/datatypeenum.md) -Wert, der den Datentyp des **Parameter** Objekts angibt.  
   
  *Richtung*  
- Dies ist optional. Ein [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) -Wert, der den Typ des **Parameter** Objekts angibt.  
+ Optional. Ein [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) -Wert, der den Typ des **Parameter** Objekts angibt.  
   
  *Größe*  
- Dies ist optional. Ein **Long** -Wert, der die maximale Länge für den Parameterwert in Zeichen oder Bytes angibt.  
+ Optional. Ein **Long** -Wert, der die maximale Länge für den Parameterwert in Zeichen oder Bytes angibt.  
   
  *Wert*  
- Dies ist optional. Eine **Variante** , die den Wert für das **Parameter** Objekt angibt.  
+ Optional. Eine **Variante** , die den Wert für das **Parameter** Objekt angibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die Methode " **kreateparameter** ", um ein neues **Parameter** Objekt mit einem angegebenen Namen, Typ, Richtung, Größe und Wert zu erstellen. Alle Werte, die Sie an die Argumente übergeben, werden in die entsprechenden **Parameter** Eigenschaften geschrieben.  

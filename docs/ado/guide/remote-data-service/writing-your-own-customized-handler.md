@@ -1,4 +1,5 @@
 ---
+description: Schreiben Ihres eigenen benutzerdefinierten Handlers
 title: Schreiben eines eigenen benutzerdefinierten Handlers | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd7aec0e98afd09b30c4e4d67102d1333efdcdd6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 73e71438b7f49472dff8c3f4732c541222598b08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451842"
 ---
 # <a name="writing-your-own-customized-handler"></a>Schreiben Ihres eigenen benutzerdefinierten Handlers
 Möglicherweise möchten Sie einen eigenen Handler schreiben, wenn Sie ein IIS-Server Administrator sind, der die standardmäßige RDS-Unterstützung wünscht, aber mehr Kontrolle über Benutzer Anforderungen und Zugriffsrechte hat.  

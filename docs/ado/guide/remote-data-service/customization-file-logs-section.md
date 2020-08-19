@@ -1,4 +1,5 @@
 ---
+description: Logs-Abschnitt der Anpassungsdatei
 title: Abschnitt "Anpassungs Datei Protokolle" | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3be02570fbff1efd9adb091c121d4eb1a8782817
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 365b57f174f289317a7e8b3e09fe0c29b051ef64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452252"
 ---
 # <a name="customization-file-logs-section"></a>Logs-Abschnitt der Anpassungsdatei
 Der Abschnitt " **Logs** " enthält einen Eintrag für die Protokolldatei, der den Namen einer Datei angibt, die Fehler während des Vorgangs des **DataFactory**aufzeichnet.  
@@ -38,7 +39,7 @@ FileName
   
 ## <a name="remarks"></a>Bemerkungen  
   
-|Teil|BESCHREIBUNG|  
+|Teil|Beschreibung|  
 |----------|-----------------|  
 |**irre**|Eine Literalzeichenfolge, die angibt, dass dies ein Protokolldatei Eintrag ist.|  
 |*FileName*|Ein kompletter Pfad und Dateiname. Der typische Dateiname lautet **c:\msdfmap.log**.|  

@@ -1,4 +1,5 @@
 ---
+description: Verwenden von ADO für die Veröffentlichung im Internet
 title: Verwenden von ADO für die Internet Veröffentlichung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b95700d30337363091815763a5e9fbf1547902e6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5f08edfbd56b900759c004cbf0fca8a634ab1010
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452602"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Verwenden von ADO für die Veröffentlichung im Internet
 [Der OLE DB Anbieter für die Internet Veröffentlichung](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) zeigt ein bestimmtes Beispiel für den Zugriff auf heterogene Daten mit ADO. Obwohl die Beispiele in diesem Abschnitt speziell für die Verwendung des Internet Publishing Anbieters gelten, sollten die gezeigten Prinzipien ähnlich sein, wenn Sie ADO mit anderen Anbietern für heterogene Daten verwenden, z. b. ein Anbieter in einem e-Mail-Speicher.  

@@ -1,4 +1,5 @@
 ---
+description: API-Funktionen der zweiten Ebene (ODBC-Treiber für Oracle)
 title: API-Funktionen der Ebene 2 (ODBC-Treiber für Oracle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b1e181c5863d6b906eaf9a3ba499728c595f0449
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd7e8955ecc0b6e4a82b4468509518ccee9732ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483533"
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>API-Funktionen der zweiten Ebene (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
@@ -30,7 +31,7 @@ ms.locfileid: "81284180"
   
  Funktionen auf dieser Ebene bieten eine Schnittstellen Konformität der Ebene 1 sowie zusätzliche Funktionen, wie z. b. die Unterstützung von Lesezeichen, dynamischen Parametern und die asynchrone Ausführung von ODBC-Funktionen.  
   
-|API-Funktion|Hinweise|  
+|API-Funktion|Notizen|  
 |------------------|-----------|  
 |**SQLBindParameter**|Ordnet einen Puffer mit einer Parameter Markierung in einer SQL-Anweisung zu.|  
 |**SQLBrowseConnect**|Gibt aufeinander folgende Ebenen von Attributen und Attributwerten zurück.|  

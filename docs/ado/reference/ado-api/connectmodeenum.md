@@ -1,4 +1,5 @@
 ---
+description: ConnectModeEnum
 title: Connectmodeerum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9a25677f79ede93f8ea24e979d80dd13adff4fe
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce1d75faaf4bbaeb941a0da87b68c09744c2a422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444432"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Gibt die verfügbaren Berechtigungen zum Ändern von Daten in einer [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), zum Öffnen eines Daten [Satzes](../../../ado/reference/ado-api/record-object-ado.md)oder zum Angeben von Werten für die [Mode](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft des **Datensatz** -und des [Stream](../../../ado/reference/ado-api/stream-object-ado.md) -Objekts an.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**admoderead**|1|Gibt schreibgeschützte Berechtigungen an.|  
 |**admodereadwrite**|3|Gibt Lese-/Schreibberechtigungen an.|  
@@ -40,7 +41,7 @@ Gibt die verfügbaren Berechtigungen zum Ändern von Daten in einer [Verbindung]
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |AdoEnums. ConnectMode. Read|  
 |AdoEnums. ConnectMode. ReadWrite|  

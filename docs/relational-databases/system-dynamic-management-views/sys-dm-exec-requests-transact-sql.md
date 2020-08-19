@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_requests (Transact-SQL)
 title: sys. dm_exec_requests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/01/2019
@@ -20,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44c20aeed09468b9f2e0cc7047364f563e463daf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 375dc6e15f8bf592ff3d5d9e8f9388f188008d3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489961"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -39,7 +40,7 @@ Gibt Informationen zu jeder Anforderung zurück, die in ausgeführt wird [!INCLU
 |request_id|**int**|ID der Anforderung. Ist im Kontext der Sitzung eindeutig. Lässt keine NULL-Werte zu.|  
 |start_time|**datetime**|Der Zeitstempel, der angibt, wann die Anforderung eingetroffen ist. Lässt keine NULL-Werte zu.|  
 |status|**nvarchar(30)**|Status der Anforderung. Folgende Möglichkeiten stehen zur Auswahl:<br /><br /> Hintergrund<br />Wird ausgeführt<br />Ausführbar<br />Ruhezustand<br />Ausgesetzt<br /><br /> Lässt keine NULL-Werte zu.|  
-|-Befehl.|**nvarchar(32)**|Identifiziert den aktuellen Typ des Befehls, der gerade verarbeitet wird. Als allgemeine Befehlstypen sind die folgenden möglich:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Der Text der Anforderung kann mithilfe von sys.dm_exec_sql_text und dem entsprechenden sql_handle-Wert für die Anforderung abgerufen werden. Interne Systemprozesse legen den Befehl je nach Typ des ausgeführten Tasks fest. Mögliche Tasks sind z. B. die folgenden:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Lässt keine NULL-Werte zu.|  
+|command|**nvarchar(32)**|Identifiziert den aktuellen Typ des Befehls, der gerade verarbeitet wird. Als allgemeine Befehlstypen sind die folgenden möglich:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Der Text der Anforderung kann mithilfe von sys.dm_exec_sql_text und dem entsprechenden sql_handle-Wert für die Anforderung abgerufen werden. Interne Systemprozesse legen den Befehl je nach Typ des ausgeführten Tasks fest. Mögliche Tasks sind z. B. die folgenden:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Lässt keine NULL-Werte zu.|  
 |sql_handle|**varbinary(64)**|Ein Token, das den Batch oder die gespeicherte Prozedur eindeutig identifiziert, zu der die Abfrage gehört. Lässt NULL-Werte zu.| 
 |statement_start_offset|**int**|Gibt die Anfangsposition der aktuell ausgeführten Anweisung für den aktuell ausgeführten Batch oder das beibehaltene Objekt in Bytes an, beginnend mit 0 (null). Kann in Verbindung mit dem `sql_handle` , der `statement_end_offset` und der `sys.dm_exec_sql_text` dynamischen Verwaltungsfunktion verwendet werden, um die derzeit ausgeführte Anweisung für die Anforderung abzurufen. Lässt NULL-Werte zu.|  
 |statement_end_offset|**int**|Gibt die Endposition der aktuell ausgeführten Anweisung für den aktuell ausgeführten Batch oder das beibehaltene Objekt in Bytes an, beginnend mit 0 (null). Kann in Verbindung mit dem `sql_handle` , der `statement_start_offset` und der `sys.dm_exec_sql_text` dynamischen Verwaltungsfunktion verwendet werden, um die derzeit ausgeführte Anweisung für die Anforderung abzurufen. Lässt NULL-Werte zu.|  
@@ -98,13 +99,13 @@ Gibt Informationen zu jeder Anforderung zurück, die in ausgeführt wird [!INCLU
 |page_server_reads|**bigint**|**Gilt für**: hyperskalierung von Azure SQL-Datenbank<br /><br /> Anzahl von Seiten Server Lesevorgängen, die von dieser Anforderung ausgeführt werden. Lässt keine NULL-Werte zu.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Hinweise 
+## <a name="remarks"></a>Bemerkungen 
 Für die Ausführung von Code außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. erweiterte gespeicherte Prozeduren und verteilte Abfragen) muss ein Thread außerhalb der Steuerung des nicht präemptiven Zeitplanungsmoduls ausgeführt werden. Dazu wechselt ein Arbeitsthread in den präemptiven Modus. Zeitwerte, die von dieser dynamischen Verwaltungssicht zurückgegeben werden, schließen nicht die im präemptiven Modus verbrachte Zeit ein.
 
 Beim Ausführen paralleler Anforderungen im [Zeilen Modus](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weist einen Arbeits Thread zu, um die Arbeitsthreads zu koordinieren, die für das Abschließen der zugewiesenen Aufgaben zuständig sind. In dieser DMV ist nur der koordinatorthread für die Anforderung sichtbar. Die Spalten **Lese**-, **Schreib**-, **logical_reads**-und **row_count** werden für den koordinatorthread **nicht aktualisiert** . Die Spalten **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**und **granted_query_memory** werden nur für den koordinatorthread **aktualisiert** . Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Berechtigungen
-Wenn der Benutzer über die- `VIEW SERVER STATE` Berechtigung auf dem Server verfügt, werden dem Benutzer alle ausgeführten Sitzungen in der Instanz von angezeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt. `VIEW SERVER STATE`kann in Azure SQL-Datenbank nicht erteilt werden `sys.dm_exec_requests` , sodass immer auf die aktuelle Verbindung beschränkt ist.
+Wenn der Benutzer über die- `VIEW SERVER STATE` Berechtigung auf dem Server verfügt, werden dem Benutzer alle ausgeführten Sitzungen in der Instanz von angezeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt. `VIEW SERVER STATE` kann in Azure SQL-Datenbank nicht erteilt werden `sys.dm_exec_requests` , sodass immer auf die aktuelle Verbindung beschränkt ist.
 
 Wenn bei Always on-Szenarien das sekundäre Replikat nur auf **Read-Intent**festgelegt ist, muss die Verbindung mit dem sekundären Replikat seine Anwendungs Absicht in Verbindungs Zeichenfolgen-Parametern `applicationintent=readonly` durch Hinzufügen von angeben Andernfalls wird die Zugriffs Überprüfung für `sys.dm_exec_requests` nicht für Datenbanken in der Verfügbarkeits Gruppe durchlaufen, auch wenn die `VIEW SERVER STATE` Berechtigung vorhanden ist.
 
@@ -186,7 +187,7 @@ FROM sys.dm_exec_requests AS req
 GO
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Dynamische Verwaltungs Sichten und-Funktionen](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)      
 [sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     

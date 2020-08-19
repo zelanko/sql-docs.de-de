@@ -1,4 +1,5 @@
 ---
+description: Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten
 title: Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/15/2017
@@ -9,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58225c6728915c5b9dcd73937b2bd645bd08950f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0f2d241fa54c59eed331c1377f828aec980691e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430202"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten
 
@@ -90,7 +91,7 @@ Weitere Informationen zu dieser Seite des Assistenten finden Sie unter [Specify 
 ## <a name="step-6---pick-the-table-to-copy"></a>Schritt 6: Auswählen der Tabelle, die kopiert werden soll
 Wählen Sie auf der nächsten Seite (**Quelltabellen und -sichten auswählen**) die Tabelle(n) aus, die Sie aus der Datenquelle kopieren möchten. Anschließend ordnen Sie jede ausgewählte Quelltabellen einer neuen oder vorhandenen Zieltabelle zu.
 
-In diesem Beispiel ist das **WizardWalkthrough$** -Arbeitsblatt in der **Quellspalte** standardmäßig einer neuen Tabelle mit demselben Namen im SQL Server-Ziel zugeordnet. (Die Excel-Arbeitsmappe enthält nur ein einziges Arbeitsblatt.)
+In diesem Beispiel ist das **WizardWalkthrough$**-Arbeitsblatt in der **Quellspalte** standardmäßig einer neuen Tabelle mit demselben Namen im SQL Server-Ziel zugeordnet. (Die Excel-Arbeitsmappe enthält nur ein einziges Arbeitsblatt.)
 -   Das Dollarzeichen ($) im Namen der Quelltabelle deutet auf ein Excel-Arbeitsblatt hin. (In Excel wird ein benannter Bereich nur mit seinem Namen dargestellt.)
 -   Der Stern auf dem Symbol der Zieltabelle deutet darauf hin, dass der Assistent eine neue Zieltabelle erstellen wird.
 
@@ -155,7 +156,7 @@ An dieser Stelle (wieder in SQL Server Management Studio) werden die Daten angez
 
 ## <a name="learn-more"></a>Weitere Informationen  
 Weitere Informationen zu den Funktionen des Assistenten.
--   **Weitere Informationen zum Assistenten:** Wenn Sie eine Übersicht über den Assistenten suchen, lesen Sie [Importieren und Exportieren von für SQL Server unterstützten Datenquellen](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+-   **Weitere Informationen zum Assistenten.** Wenn Sie eine Übersicht über den Assistenten suchen, lesen Sie [Importieren und Exportieren von für SQL Server unterstützten Datenquellen](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 -   **Weitere Informationen zu den Schritten des Assistenten:** Wählen Sie für weitere Informationen zu den einzelnen Schritten des Assistenten die Seite aus der Liste aus, die Sie besonders interessiert: [Steps in the SQL Server Import and Export Wizard (Schritte des SQL Server Import/Export-Assistenten)](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md). Es ist außerdem eine eigene Dokumentationsseite für jede Seite des Assistenten verfügbar.
 

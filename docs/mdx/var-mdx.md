@@ -1,4 +1,5 @@
 ---
+description: Var (MDX)
 title: Var (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 96bb307607792a3846ee6566027457a05ce3b905
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46aad9a9b7c328d23680df3c74bcf09a465b868d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483713"
 ---
 # <a name="var-mdx"></a>Var (MDX)
 
@@ -39,7 +40,7 @@ Var(Set_Expression [ ,Numeric_Expression ] )
   
  Die **var** -Funktion verwendet die Formel für die unausgewogene Auffüllung. die [VarP](../mdx/varp-mdx.md) -Funktion verwendet die Formel für die unausgewogene Auffüllung.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

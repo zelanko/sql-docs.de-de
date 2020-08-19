@@ -1,4 +1,5 @@
 ---
+description: CURSOR_STATUS (Transact-SQL)
 title: CURSOR_STATUS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63c1513e044b825ed3ffa036b1e7014e0e4d4a6f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ab7cbb48d371236d23d90de2347349318369f274
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459827"
 ---
 # <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +74,7 @@ Der Name der Cursorvariablen. Eine Cursorvariable muss mithilfe des **cursor**-D
 |-2|Nicht zutreffend|Eine der folgenden Möglichkeiten trifft zu:<br /><br /> Die zuvor aufgerufene Prozedur hat dieser OUTPUT-Variablen keinen Cursor zugewiesen.<br /><br /> Die zuvor zugewiesene Prozedur hat dieser OUTPUT-Variablen einen Cursor zugewiesen, aber der Cursor war bei Abschluss der Prozedur geschlossen. Deshalb wird die Zuordnung des Cursors aufgehoben, und der Cursor wird nicht an die aufrufende Prozedur zurückgegeben.<br /><br /> Der deklarierten Cursorvariablen wird kein Cursor zugewiesen.|  
 |-3|Ein Cursor mit dem angegebenen Namen ist nicht vorhanden.|Eine Cursorvariable mit dem angegebenen Namen ist nicht vorhanden, oder ihr wurde, wenn sie vorhanden ist, noch kein Cursor zugeordnet.|  
   
-\* Dynamische Cursor geben dieses Ergebnis nie zurück.
+* Dynamische Cursor geben dieses Ergebnis nie zurück.
   
 ## <a name="examples"></a>Beispiele  
 In diesem Beispiel wird die `CURSOR_STATUS`-Funktion verwendet, um den Status eines Cursors mitzuteilen: nach seiner Deklaration, nachdem er geöffnet und nachdem er geschlossen wurde.
@@ -129,7 +130,7 @@ After Close
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen
-[Cursor Functions &#40;Transact-SQL&#41; (Cursorfunktionen (Transact-SQL))](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[Cursorfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   

@@ -1,4 +1,5 @@
 ---
+description: Konfigurieren von RDS unter Windows 2000
 title: Konfigurieren von RDS unter Windows 2000 | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5bd4829382a3724b4999e3f87de29a561bd6a29
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db965e76f8d62bc90f0f6a5640e8ca4e7752bfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452292"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Konfigurieren von RDS unter Windows 2000
 Wenn Sie Schwierigkeiten haben, RDS nach dem Upgrade auf Windows 2000 ordnungsgemäß zu verwenden, führen Sie die folgenden Schritte aus, um das Problem zu beheben:  
   
 1.  Stellen Sie zunächst sicher, dass der World Wide Web Publishing Dienst ausgeführt wird, indem Sie mit Internet Explorer zu https://Server navigieren. Wenn Sie auf diese Weise keinen Zugriff auf den Webserver haben, öffnen Sie eine Eingabeaufforderung, und geben Sie den folgenden Befehl ein: "net start W3SVC".  
   
-2.  Wählen Sie im Menü Start die Option Ausführen aus. Geben Sie msdfmap. ini ein, und klicken Sie dann auf OK, um die Datei msdfmap. ini im Editor zu öffnen. Überprüfen Sie den Abschnitt [Connect default], und wenn der Access-Parameter auf "NoAccess" festgelegt ist, ändern Sie ihn in "schreibgeschützt".  
+2.  Wählen Sie im Menü Start die Option Ausführen aus. Geben Sie msdfmap.ini ein, und klicken Sie dann auf OK, um die msdfmap.ini Datei in Editor zu öffnen. Überprüfen Sie den Abschnitt [Connect default], und wenn der Access-Parameter auf "NoAccess" festgelegt ist, ändern Sie ihn in "schreibgeschützt".  
   
 3.  Navigieren Sie mithilfe des Hilfsprogramms regedit zu "HKEY_LOCAL_MACHINE \software\microsoft\datafactor \handlerinfo", und stellen Sie sicher, dass " **HandlerRequired** " auf "0" und " **DefaultHandler** " auf "" (NULL-Zeichenfolge) festgelegt ist.  
   

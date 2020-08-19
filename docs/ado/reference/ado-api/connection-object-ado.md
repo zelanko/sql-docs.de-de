@@ -1,4 +1,5 @@
 ---
+description: Connection-Objekt (ADO)
 title: Connection-Objekt (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49a270f143e57c1e093ac94732b67b6424c88607
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 68b6a8dd0b0cd75f511c042981672444d9b3bcb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444512"
 ---
 # <a name="connection-object-ado"></a>Connection-Objekt (ADO)
 Stellt eine offene Verbindung mit einer Datenquelle dar.  

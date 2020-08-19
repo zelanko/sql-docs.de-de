@@ -1,4 +1,5 @@
 ---
+description: XSLT-Transformationen
 title: XSLT-Transformationen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8556576656d4b6eb6ba5e38216a78074cd1f9fc4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 13326277c0be8abbf7c2d7d623233b34ad2ed348
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452482"
 ---
 # <a name="xslt-transformations"></a>XSLT-Transformationen
 XSLT kann auf den generierten XML-Code angewendet werden, um ihn in ein anderes Format umzuwandeln. Wenn Sie das XML-Format in ADO verstehen, können Sie XSLT-Vorlagen entwickeln, die Sie in ein benutzerfreundliches Formular umwandeln können.  

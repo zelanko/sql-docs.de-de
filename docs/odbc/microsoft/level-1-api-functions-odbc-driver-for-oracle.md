@@ -1,4 +1,5 @@
 ---
+description: API-Funktionen der ersten Ebene (ODBC-Treiber für Oracle)
 title: API-Funktionen der Ebene 1 (ODBC-Treiber für Oracle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37305ee75ebeb0686bafe039f1102cb3c6e18674
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c82ab0f481fbc60d0308895640371e84886e77e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483543"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>API-Funktionen der ersten Ebene (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
@@ -29,14 +30,14 @@ ms.locfileid: "81299950"
   
  Die Funktionen auf dieser Ebene bieten eine Kern Schnittstellen Konformität sowie zusätzliche Funktionen wie z. b. Transaktionsunterstützung.  
   
-|API-Funktion|Hinweise|  
+|API-Funktion|Notizen|  
 |------------------|-----------|  
 |**SQLColumns**|Erstellt ein Resultset für eine Tabelle, bei der es sich um die Spaltenliste für die angegebene Tabelle oder Tabellen handelt. Wenn Sie Spalten für ein öffentliches Synonym anfordern, müssen Sie das synonymcolumns-Verbindungs Attribut festgelegt und eine leere Zeichenfolge als *sztableowner* -Argument angegeben haben. Beim Zurückgeben von Spalten für öffentliche Synonyme legt der Treiber die Tabellennamen Spalte auf eine leere Zeichenfolge fest. Das Resultset enthält eine zusätzliche Spalte, Ordinalposition, am Ende jeder Zeile. Dieser Wert ist die Ordinalposition der Spalte in der Tabelle.|  
 |**SQLDriverConnect**|Stellt eine Verbindung mit einer vorhandenen Datenquelle her. Weitere Informationen finden Sie unter [Format und Attribute der Verbindungs Zeichenfolge](../../odbc/microsoft/connection-string-format-and-attributes.md).|  
 |**SQLGetConnectOption**|Gibt die aktuelle Einstellung einer Verbindungs Option zurück. Diese Funktion wird teilweise unterstützt. Der Treiber unterstützt alle Werte für das *fOption* -Argument, unterstützt jedoch einige *vParam* -Werte für das *fOption* -Argument [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)nicht. Weitere Informationen finden Sie unter [Connect Options](../../odbc/microsoft/connect-options.md).|  
 |**SQLGetData**|Ruft den Wert eines einzelnen Felds im aktuellen Datensatz des angegebenen Resultsets ab.|  
 |**SQLGetFunctions**|Gibt true für alle unterstützten Funktionen zurück. Wird vom Treiber-Manager implementiert.|  
-|**SQLGetInfo**|Gibt Informationen über den ODBC-Treiber für Oracle und die Datenquelle, die einem Verbindungs Handle ( \* *hdbc*) zugeordnet ist, mit SQLHDBC, sqlusmallint, SQLPOINTER, SQLSMALLINT und SQLSMALLINT zurück.|  
+|**SQLGetInfo**|Gibt Informationen \* über den ODBC-Treiber für Oracle und die Datenquelle, die einem Verbindungs Handle ( *hdbc*) zugeordnet ist, mit SQLHDBC, sqlusmallint, SQLPOINTER, SQLSMALLINT und SQLSMALLINT zurück.|  
 |**SQLGetStmtOption**|Gibt die aktuelle Einstellung einer Anweisungs Option zurück. Weitere Informationen finden Sie unter [Anweisungs Optionen](../../odbc/microsoft/statement-options.md).|  
 |**SQLGetTypeInfo**|Gibt Informationen zu den Datentypen zurück, die von einer Datenquelle unterstützt werden. Der Treiber gibt die Informationen in einem SQL-Resultset zurück.|  
 |**SQLParamData**|Wird in Verbindung mit **SQLPutData** verwendet, um Parameterdaten zur Anweisungs Ausführungszeit anzugeben.|  

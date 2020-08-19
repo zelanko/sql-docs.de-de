@@ -1,4 +1,5 @@
 ---
+description: Filter definieren
 title: Definieren von Filtern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7ef180ac401b540d1abe50688b98e691c819f55f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4834e78ec82a681faba9f6c0fa780d78f890def
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498784"
 ---
 # <a name="define-filters"></a>Filter definieren
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Im Dialogfeld **Filter definieren** können Sie Filter definieren, die Sie anschließend bei Datenkonflikten anwenden, um eine Untermenge der Konflikte im Raster anzuzeigen. Um einen Filter zu definieren, wählen Sie im Dropdownlistenfeld **Operator** einen Operator aus, und geben Sie dann einen Wert ein. Um beispielsweise nur die Konflikte anzuzeigen, in welchen Server **ReplTest1**der Konfliktverlierer ist, wählen Sie im Dropdown-Listenfeld **Operator** die Option **Gleich** aus, und geben Sie in die erste **Value** -Spalte den Wert **ReplTest1** ein.  
+   Im Dialogfeld **Filter definieren** können Sie Filter definieren, die Sie anschließend bei Datenkonflikten anwenden, um eine Untermenge der Konflikte im Raster anzuzeigen. Um einen Filter zu definieren, wählen Sie im Dropdownlistenfeld **Operator** einen Operator aus, und geben Sie dann einen Wert ein. Um beispielsweise nur die Konflikte anzuzeigen, in welchen Server **ReplTest1**der Konfliktverlierer ist, wählen Sie im Dropdown-Listenfeld **Operator** die Option **Gleich** aus, und geben Sie in die erste **Value** -Spalte den Wert **ReplTest1** ein.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Operator**  
  Wählen Sie für den Filter einen Operator wie **Kleiner als oder gleich**aus.
   

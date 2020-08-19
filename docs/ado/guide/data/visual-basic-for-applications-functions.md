@@ -1,4 +1,5 @@
 ---
+description: Visual Basic for Applications-Funktionen
 title: Visual Basic for Applications Funktionen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d7493fbba302ce23279374177819bfa7ff9b2e5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d680d8a0f0f7d34e9074b5e2e9e63aedd82a1217
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452552"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications-Funktionen
 Die folgenden Visual Basic for Applications Funktionen können in Daten Strukturierungs Ausdrücken verwendet werden:  
@@ -50,7 +51,7 @@ Die folgenden Visual Basic for Applications Funktionen können in Daten Struktur
     :::column:::
         ZVarDat  
         CVErr  
-        Date  
+        Datum  
         Datum$  
         DateAdd  
         DateDiff  
@@ -119,7 +120,7 @@ Die folgenden Visual Basic for Applications Funktionen können in Daten Struktur
         ZZG  
         RGlätten  
         RTRIM $  
-        Sekunde  
+        Second  
         Vorzchn  
         Sin  
         LIA  
@@ -132,13 +133,13 @@ Die folgenden Visual Basic for Applications Funktionen können in Daten Struktur
         StrKonv  
     :::column-end:::
     :::column:::
-        String  
+        Zeichenfolge  
         String$  
         DIA  
         Tan  
         Time  
         Time$  
-        Zeitgeber  
+        Timer  
         ZeitSeriell  
         ZeitSeriellStr  
         Glätten  

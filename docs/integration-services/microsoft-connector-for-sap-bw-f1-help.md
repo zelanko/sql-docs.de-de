@@ -1,4 +1,5 @@
 ---
+description: F1-Hilfe zum Microsoft Connector for SAP BW
 title: F1-Hilfe zum Microsoft Connector für SAP BW | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aee724d88bfc203472c09d80e3e3ceec9bafa7f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f52bd1f1c56a8f9dc84b1474bf4447c6311cb508
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924012"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430162"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>F1-Hilfe zum Microsoft Connector for SAP BW
 
@@ -36,11 +37,11 @@ ms.locfileid: "86924012"
   
 ### <a name="sap-bw-connection-manager-f1-help"></a>F1-Hilfe zum SAP BW-Verbindungs-Manager  
   
--   [Verbindungs-Manager-Editor für SAP BW](../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
+-   [SAP BW-Verbindungs-Manager-Editor](../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
   
 ### <a name="sap-bw-source-f1-help"></a>F1-Hilfe zur SAP BW-Quelle  
   
--   [Quellen-Editor für SAP BW &#40;Seite Verbindungs-Manager&#41;](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
 -   [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
@@ -82,7 +83,7 @@ ms.locfileid: "86924012"
   
 -   [InfoPackage erstellen](../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Komponenten von Microsoft Connector for SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft Connector for SAP BW Components](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

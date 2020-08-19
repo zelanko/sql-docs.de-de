@@ -1,4 +1,5 @@
 ---
+description: RDS-Szenario
 title: RDS-Szenario | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d73bb03ceb08e61257c0e4fc6d3f6a627ddb746d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452092"
 ---
 # <a name="rds-scenario"></a>RDS-Szenario
 > [!IMPORTANT]

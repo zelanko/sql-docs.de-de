@@ -1,4 +1,5 @@
 ---
+description: SQL-Datentypen
 title: SQL-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3cc91213533aa39f30be1bc838cc014c20e70884
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8209463c3c316a5bd2e45a2d7b08eb65b3cb113d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483153"
 ---
 # <a name="sql-data-types"></a>SQL-Datentypen
 Jedes DBMS definiert seine eigenen SQL-Typen. Jeder ODBC-Treiber macht nur die SQL-Datentypen verfügbar, die das zugehörige DBMS definiert. Informationen dazu, wie ein Treiber DBMS-SQL-Typen den ODBC-definierten SQL-typbezeichgern zuordnet und wie ein Treiber DBMS-SQL-Typen eigenen treiberspezifischen SQL-typbezeichatoren zuordnet, wird durch einen **SQLGetTypeInfo-Befehl**zurückgegeben. Ein Treiber gibt auch die SQL-Datentypen zurück, wenn die Datentypen von Spalten und Parametern durch Aufrufe von **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **sqlprocedurecolrens**und **SQLSpecialColumns**beschrieben werden.  
@@ -42,8 +43,8 @@ Jedes DBMS definiert seine eigenen SQL-Typen. Jeder ODBC-Treiber macht nur die S
 |SQL_WCHAR|WCHAR (*n*)|Unicode-Zeichenfolge mit fester Zeichen folgen Länge *n*|  
 |SQL_WVARCHAR|VarWChar (*n*)|Unicode-Zeichenfolge variabler Länge mit einer maximalen Zeichen folgen Länge *n*|  
 |SQL_WLONGVARCHAR|Longwvarchar|Daten mit Unicode-Zeichen von variabler Länge. Die maximale Länge ist Datenquellen abhängig.|  
-|SQL_DECIMAL|Dezimalzahl (*p*,*s*)|Signierter, genauer numerischer Wert mit einer Genauigkeit von mindestens *p* und Skalierung *s.* (Die maximale Genauigkeit ist Treiber definiert.) (1 <= *p* <= 15; *s* <= *p*). 0:|  
-|SQL_NUMERIC|Numerisch (*p*,*s*)|Signierter, genauer numerischer Wert mit einer Genauigkeit von *p* und Skalierung *s* (1 <= *p* <= 15; *s* <= *p*). 0:|  
+|SQL_DECIMAL|Dezimalzahl (*p*,*s*)|Signierter, genauer numerischer Wert mit einer Genauigkeit von mindestens *p* und Skalierung *s.* (Die maximale Genauigkeit ist Treiber definiert.) (1 <= *p* <= 15; *s*  <=  *p*). 0:|  
+|SQL_NUMERIC|Numerisch (*p*,*s*)|Signierter, genauer numerischer Wert mit einer Genauigkeit von *p* und Skalierung *s* (1 <= *p* <= 15; *s*  <=  *p*). 0:|  
 |SQL_SMALLINT|SMALLINT|Genauer numerischer Wert mit einer Genauigkeit von 5 und Dezimalstelle 0 (signiert:-32.768 <= *n* <= 32.767, unsigned: 0 <= *n* <= 65535) [3].|  
 |SQL_INTEGER|INTEGER|Genauer numerischer Wert mit einer Genauigkeit von 10 und Dezimalstelle 0 (signiert:-2 [31] <= *n* <= 2 [31]-1, ohne Vorzeichen: 0 <= *n* <= 2 [32]-1) [3].|  
 |SQL_REAL|real|Ein numerischer Wert mit Vorzeichen und einer binären Genauigkeit von 24 (0 oder absoluter Wert 10 [-38] bis 10 [38]).|  

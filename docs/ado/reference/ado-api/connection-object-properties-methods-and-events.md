@@ -1,4 +1,5 @@
 ---
+description: Verbindungs Objekteigenschaften,-Methoden und-Ereignisse
 title: Verbindungs Objekteigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eebe25e0950bcec0699160754c7be0b84e6b55e1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cedd465dd752f1f1757b0467abc755fb96c93020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444502"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>Verbindungs Objekteigenschaften,-Methoden und-Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
@@ -60,7 +61,7 @@ ms.locfileid: "82760286"
   
  [OpenSchema-Methode](../../../ado/reference/ado-api/openschema-method.md)  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  [Ereignisse "BeginTransComplete", "CommitTransComplete" und "RollbackTransComplete"](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
  [ConnectComplete-und Disconnect-Ereignisse](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  

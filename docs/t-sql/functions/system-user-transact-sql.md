@@ -1,4 +1,5 @@
 ---
+description: SYSTEM_USER (Transact-SQL)
 title: SYSTEM_USER (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -26,12 +27,12 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93b31a9f6b86ed256f84fb1dba731e1d248c3c5d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 02877aa808d53a586ae9191154dc0bfe3f9a785e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459544"
 ---
 # <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -51,12 +52,12 @@ SYSTEM_USER
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Sie können die SYSTEM_USER-Funktion mit DEFAULT-Einschränkungen in den Anweisungen CREATE TABLE und ALTER TABLE verwenden. Sie können sie auch wie jede beliebige Standardfunktion verwenden.  
   
  Unterscheiden sich Benutzer- und Anmeldename, gibt SYSTEM_USER den Anmeldenamen zurück.  
   
- Wenn der aktuelle Benutzer über die Windows-Authentifizierung an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angemeldet ist, gibt SYSTEM_USER den Windows-Anmeldenamen im Format *DOMAIN*\\*user_login_name* zurück. Wenn der aktuelle Benutzer jedoch über die SQL Server-Authentifizierung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angemeldet ist, gibt SYSTEM_USER den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen zurück, z. B. `WillisJo` für einen als `WillisJo` angemeldeten Benutzer.  
+ Wenn der aktuelle Benutzer über die Windows-Authentifizierung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angemeldet ist, gibt SYSTEM_USER den Windows-Anmeldenamen im folgenden Format zurück: *DOMAIN*\\*user_login_name*. Wenn der aktuelle Benutzer jedoch über die SQL Server-Authentifizierung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angemeldet ist, gibt SYSTEM_USER den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen zurück, z. B. `WillisJo` für einen als `WillisJo` angemeldeten Benutzer.  
   
  SYSTEM_USER gibt den Namen des zurzeit ausgeführten Kontexts zurück. Wenn der Kontext mithilfe der EXECUTE AS-Anweisung gewechselt wurde, gibt SYSTEM_USER den Namen des Kontexts zurück, dessen Identität angenommen wurde.  
 

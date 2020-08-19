@@ -1,4 +1,5 @@
 ---
+description: Markieren von Geschäftsobjekten als sicher für das Skripting
 title: Markieren von Geschäftsobjekten als sicher für die Skripterstellung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6655b1bba274a9dc5079c7c996b58da6ba8ae0f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 404efeb169291e8c29da95f5c4d7690ef8dfd6ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452152"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Markieren von Geschäftsobjekten als sicher für das Skripting
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Um eine sichere Internet Umgebung zu gewährleisten, müssen Sie alle Geschäftsobjekte markieren, die mit dem RDS-Objekt instanziiert werden [. ](../../../ado/reference/rds-api/dataspace-object-rds.md)Die Methode " [kreateobject](../../../ado/reference/rds-api/createobject-method-rds.md) " des DataSpace-Objekts als "sicher für Skripting". Sie müssen sicherstellen, dass Sie im Lizenzbereich der Systemregistrierung als solche gekennzeichnet sind, bevor Sie in DCOM verwendet werden können.  
+ Um eine sichere Internet Umgebung zu gewährleisten, müssen Sie alle Geschäftsobjekte markieren, die mit dem RDS-Objekt instanziiert werden [. ](../../../ado/reference/rds-api/dataspace-object-rds.md) Die Methode " [kreateobject](../../../ado/reference/rds-api/createobject-method-rds.md) " des DataSpace-Objekts als "sicher für Skripting". Sie müssen sicherstellen, dass Sie im Lizenzbereich der Systemregistrierung als solche gekennzeichnet sind, bevor Sie in DCOM verwendet werden können.  
   
 > [!NOTE]
 >  Geschäftsobjekte, die als "sicher für Skripting" oder sicher für die Initialisierung gekennzeichnet sind, können von allen Benutzern über das Netzwerk instanziiert und initialisiert werden. Wenn Sie ein Geschäftsobjekt "sicher für Skripting" markieren, ist es nicht sicher. Es ist von entscheidender Bedeutung, sicherzustellen, dass Geschäftsobjekte mit der höchsten Sicherheit codiert werden, um sicherzustellen, dass solche Objekte keinen ungeschützten Zugriffspunkt für sensible Daten darstellen.  
   
- Um das Geschäftsobjekt manuell als sicher für die Skripterstellung zu markieren, erstellen Sie eine Textdatei mit der Erweiterung. reg, die den folgenden Text enthält. In diesem Beispiel ist \< *myactivexguid*> die hexadezimale GUID-Nummer Ihres Geschäftsobjekts. Die folgenden beiden Zahlen aktivieren das Feature für die sichere Skripterstellung:  
+ Um das Geschäftsobjekt manuell als sicher für die Skripterstellung zu markieren, erstellen Sie eine Textdatei mit der Erweiterung. reg, die den folgenden Text enthält. In diesem Beispiel \<*MyActiveXGUID*> ist die hexadezimale GUID-Nummer Ihres Geschäftsobjekts. Die folgenden beiden Zahlen aktivieren das Feature für die sichere Skripterstellung:  
   
 ```console
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   
@@ -43,6 +44,6 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  Im letzten Schritt erstellt der Anwendungssetup-Assistent eine htm-und eine CAB-Datei. Anschließend können Sie diese beiden Dateien auf den Zielcomputer kopieren und auf die HTM-Datei doppelklicken, um die Seite zu laden und den Server ordnungsgemäß zu registrieren.  
   
- Da das Geschäftsobjekt standardmäßig im Verzeichnis Windows\System32\Occache installiert wird, verschieben Sie es in das Verzeichnis Windows\System32, und ändern Sie den Registrierungsschlüssel **HKEY_CLASSES_ROOT \\ \CLSID** \< *myactivexguid*InprocServer32 so, dass er > \\ **InprocServer32** dem richtigen Pfad entspricht.
+ Da das Geschäftsobjekt standardmäßig im Verzeichnis Windows\System32\Occache installiert wird, verschieben Sie es in das Verzeichnis Windows\System32, und ändern Sie den Registrierungsschlüssel **HKEY_CLASSES_ROOT \\ \CLSID**InprocServer32 so, dass er mit \<*MyActiveXGUID*> \\ **InprocServer32** dem richtigen Pfad identisch ist.
 
 

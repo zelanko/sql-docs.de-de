@@ -1,4 +1,5 @@
 ---
+description: ADO-Collections
 title: ADO-Sammlungen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c19252e14ba5a04329c9cdc1c38b5ee6398b7874
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7fb960d7539dd2d47be6eb2aad424808d44db10d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451472"
 ---
 # <a name="ado-collections"></a>ADO-Collections
 Die Beziehungen zwischen diesen Auflistungen und den ADO-Objekten werden im [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)dargestellt.  
   
  Jede Auflistung kann das zugehörige-Objekt enthalten. Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt kann z. b. in einer [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung enthalten sein. Weitere Informationen zu-Objekten finden Sie unter [ADO-Objekte](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) oder ein bestimmtes Objekt Thema.  
   
-|Collection|BESCHREIBUNG|  
+|Sammlung|Beschreibung|  
 |-|-|  
 |[Fehler](../../../ado/reference/ado-api/errors-collection-ado.md)|Enthält alle Fehler Objekte, die als Reaktion auf einen einzelnen Anbieter **Fehler** erstellt wurden.|  
-|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Enthält alle **Feld** Objekte eines **Recordset** -Objekts.|  
+|[Felder](../../../ado/reference/ado-api/fields-collection-ado.md)|Enthält alle **Feld** Objekte eines **Recordset** -Objekts.|  
 |[Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md)|Enthält alle **Parameter** Objekte eines **Befehls** Objekts.|  
 |[Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md)|Enthält alle **Eigenschafts** Objekte für eine bestimmte Instanz eines-Objekts.|  
   

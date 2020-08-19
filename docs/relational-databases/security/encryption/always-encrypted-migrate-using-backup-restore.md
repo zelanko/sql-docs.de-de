@@ -1,4 +1,5 @@
 ---
+description: Sichern und Wiederherstellen von Datenbanken mit Always Encrypted
 title: Sichern und Wiederherstellen von Datenbanken mit Always Encrypted | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb529b9cc518cd7802dfdbbddba8b88e399dbcba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff78b0f657e70a16051531f1a0bea3fdc5cfe7d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475519"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>Sichern und Wiederherstellen von Datenbanken mit Always Encrypted 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ Wenn Sie eine Datenbank wiederherstellen, werden alle verschlüsselten Daten und
 Wenn Sie die Datenbank auf einem anderen Server oder unter einem anderen Namen wiederhergestellt haben, können Sie die Anwendung ganz einfach für Abfragen der verschlüsselten Daten in der Zieldatenbank aktivieren, da die Schlüssel in beiden Datenbanken identisch sind.
 
 Weitere Informationen zum Sichern und Wiederherstellen einer Datenbank finden Sie hier:
-- [Übersicht zur Sicherung (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
+- [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
 - [Wiederherstellen einer Datenbank in eine verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
 ## <a name="next-steps"></a>Nächste Schritte

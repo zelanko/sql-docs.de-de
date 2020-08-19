@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_sessions (Transact-SQL)
 title: sys. dm_exec_sessions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/03/2019
@@ -20,12 +21,12 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eff5e947caed2471d63c980418688f6945c78b21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 364b8c255054d10d8ae7ee10d1231ade99615bde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490016"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -88,16 +89,16 @@ ms.locfileid: "85734682"
 |database_id|**smallint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Die ID der aktuellen Datenbank für jede Sitzung.|  
 |authenticating_database_id|**int**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> ID der Datenbank, die den Prinzipal authentifiziert. Bei Anmeldungen beträgt der Wert 0. Für Benutzer von eigenständigen Datenbanken ist der Wert die Datenbank-ID der eigenständigen Datenbank.|  
 |open_transaction_count|**int**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Die Anzahl der offenen Transaktionen pro Sitzung.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
 |page_server_reads|**bigint**|**Gilt für**: hyperskalierung von Azure SQL-Datenbank<br /><br /> Anzahl von Seiten Server Lesevorgängen, die während dieser Sitzung von Anforderungen in dieser Sitzung ausgeführt werden. Lässt keine NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 Jeder Benutzer kann seine eigenen Sitzungsinformationen sehen.  
 ** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** Erfordert `VIEW SERVER STATE` die-Berechtigung für [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , um alle Sitzungen auf dem Server anzuzeigen.  
-** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Erfordert `VIEW DATABASE STATE` , dass alle Verbindungen mit der aktuellen Datenbank angezeigt werden. `VIEW DATABASE STATE`kann nicht in der Datenbank erteilt werden `master` . 
+** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Erfordert `VIEW DATABASE STATE` , dass alle Verbindungen mit der aktuellen Datenbank angezeigt werden. `VIEW DATABASE STATE` kann nicht in der Datenbank erteilt werden `master` . 
   
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die Server Konfigurationsoption **Common Criteria-Konformität aktiviert** aktiviert ist, werden die Anmelde Statistiken in den folgenden Spalten angezeigt.  
   
 -   last_successful_logon  
@@ -114,7 +115,7 @@ Jeder Benutzer kann seine eigenen Sitzungsinformationen sehen.
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|From|To|Für/Anwendung|Beziehung|  
+|Von|An|Für/Anwendung|Beziehung|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|1:0 oder 1:viele|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|1:0 oder 1:viele|  
@@ -183,8 +184,8 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

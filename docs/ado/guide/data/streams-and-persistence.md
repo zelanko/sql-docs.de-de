@@ -1,4 +1,5 @@
 ---
+description: Datenströme und Persistenz
 title: Streams und Persistenz | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e7c47c668bc2b64a511e316396da913d5dcb930
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 869c5ef7380c315b60d2cbf6ad11f0cf638a0d7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452772"
 ---
 # <a name="streams-and-persistence"></a>Datenströme und Persistenz
 Das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) - [Objekt speichert](../../../ado/reference/ado-api/save-method.md) Method speichert oder speichert ein **Recordset** in einer *Datei, und*die [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode stellt das **Recordset** aus dieser Datei wieder her.  
@@ -104,7 +105,7 @@ Set rs = nothing
   
  Eine neue Eigenschaft in der RDS- [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md), verweist auf die ASP-Seite, die das **Recordset**generiert. Dies bedeutet, dass ein **Recordset** -Objekt ohne RDS abgerufen werden kann, indem das serverseitige [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt verwendet wird, oder der Benutzer, der ein Geschäftsobjekt schreibt. Dadurch wird das RDS-Programmiermodell erheblich vereinfacht.  
   
- Server seitiger Code, benannthttps://server/directory/recordset.asp:  
+ Server seitiger Code, benannt https://server/directory/recordset.asp:  
   
 ```  
 <%  

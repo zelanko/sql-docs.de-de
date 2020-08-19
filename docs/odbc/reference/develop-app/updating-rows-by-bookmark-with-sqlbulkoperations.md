@@ -1,4 +1,5 @@
 ---
+description: Aktualisieren von Zeilen durch Textmarken mit SQLBulkOperations
 title: Aktualisieren von Zeilen durch Lesezeichen mit SQLBulkOperations | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9c755297e8beadad92b5be81d78ca534bb96ecae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9981136d546d53b131cff0d71edcdeab5b2e650c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482873"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Aktualisieren von Zeilen durch Textmarken mit SQLBulkOperations
 Beim Aktualisieren einer Zeile anhand eines Lesezeichens führt **SQLBulkOperations** zum Aktualisieren der Datenquelle eine oder mehrere Zeilen der Tabelle. Die Zeilen werden durch das Lesezeichen in einer gebundenen Lesezeichen Spalte identifiziert. Die Zeile wird mit Daten in den Anwendungs Puffern für jede gebundene Spalte aktualisiert (es sei denn, der Wert im Längen-/Indikatorpuffer für eine Spalte ist SQL_COLUMN_IGNORE). Ungebundene Spalten werden nicht aktualisiert.  

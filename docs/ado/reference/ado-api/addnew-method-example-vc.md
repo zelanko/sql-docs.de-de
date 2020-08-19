@@ -1,4 +1,5 @@
 ---
+description: AddNew-Methode – Beispiel (VC++)
 title: AddNew-Methode (Beispiel) (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d47003a392ade09b1ba4d83c5dccfb1538364f1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02a439fbe6c5ce483c3a3391421fdfcf7766a579
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451542"
 ---
 # <a name="addnew-method-example-vc"></a>AddNew-Methode – Beispiel (VC++)
 In diesem Beispiel wird die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) -Methode verwendet, um einen neuen Datensatz mit dem angegebenen Namen zu erstellen.  

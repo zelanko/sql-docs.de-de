@@ -1,4 +1,5 @@
 ---
+description: Verweis auf die ADO-Bibliotheken in Visual Basic 6 -Anwendungen
 title: Verweisen auf die ADO-Bibliotheken in einer Visual Basic 6-Anwendung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 766707f8903f72da8b1735def4ed4433c4468d90
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5e3ed89e523a164f96c4f71595609658816f5864
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452372"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Verweis auf die ADO-Bibliotheken in Visual Basic 6 -Anwendungen
 Wenn Sie die ADO-Bibliotheken in eine Microsoft Visual Basic 6-Anwendung importieren möchten, müssen Sie im Visual Basic-Projekt einen Verweis festlegen.  
@@ -32,11 +33,11 @@ Wenn Sie die ADO-Bibliotheken in eine Microsoft Visual Basic 6-Anwendung importi
   
 2.  Klicken Sie auf das Menü Element **Projekt** , und wählen Sie dann im Dropdown Menübereich die Option **Verweise** aus.  
   
-3.  Aktivieren Sie das Kontrollkästchen für die **Bibliothek "Microsoft ActiveX Data Objects *n. n* ** **", wobei**" ***n. n*** " die aktuelle Versionsnummer darstellt. Das Feld "Location" ( **Speicherort** ) sollte als *$installDir \msado15.dll*identifiziert werden, wobei *$installDir* den Pfad des Verzeichnisses darstellt, in dem die ADO-Bibliothek installiert wurde.  
+3.  Aktivieren Sie das Kontrollkästchen für die **Bibliothek "Microsoft ActiveX Data Objects *n. n* ** **", wobei**" ***n. n*** " die aktuelle Versionsnummer darstellt. Das Feld "Location" ( **Speicherort** ) sollte als *$installDir\msado15.dll*ausgewählt werden, wobei *$installDir* den Pfad des Verzeichnisses darstellt, in dem die ADO-Bibliothek installiert wurde.  
   
-4.  Wenn Sie ADO MD verwenden möchten, wiederholen Sie Schritt 3, um die **Bibliothek "Microsoft ActiveX Data Objects (mehrdimensional) *n. n* **" auszuwählen. Im Feld **Speicherort** sollte diese Auswahl als *$installDir \msadomd.dll*identifiziert werden.  
+4.  Wenn Sie ADO MD verwenden möchten, wiederholen Sie Schritt 3, um die **Bibliothek "Microsoft ActiveX Data Objects (mehrdimensional) *n. n* **" auszuwählen. Im Feld **Speicherort** sollte diese Auswahl als *$installDir\msadomd.dll*identifiziert werden.  
   
-5.  Wenn Sie ADOX verwenden möchten, wiederholen Sie Schritt 3, um **Microsoft ADO Ext. *n. n* für DDL und Sicherheit**auszuwählen. Im Feld **Speicherort** sollte diese Auswahl als *$installDir \msadox.dll*identifiziert werden.  
+5.  Wenn Sie ADOX verwenden möchten, wiederholen Sie Schritt 3, um **Microsoft ADO Ext. *n. n* für DDL und Sicherheit**auszuwählen. Im Feld **Speicherort** sollte diese Auswahl als *$installDir\msadox.dll*identifiziert werden.  
   
 6.  Klicken Sie auf **OK** , um das Festlegen der Verweise abzuschließen.  
   
@@ -53,4 +54,4 @@ Wenn Sie die ADO-Bibliotheken in eine Microsoft Visual Basic 6-Anwendung importi
   
 -   *msado20. tlb*, ADO 2,0-Typbibliothek  
   
- Wenn Ihre Anwendung diese ADO-Bibliotheken aus Gründen der Abwärtskompatibilität verwenden muss, müssen Sie die entsprechende Version der Typbibliothek importieren. Befolgen Sie hierzu die Schritte im vorherigen Abschnitt, indem Sie *"MSADO15. dll* durch *msadoxx. tlb*ersetzen, wobei *xx* die Versionsnummer darstellt, die Sie importieren müssen.
+ Wenn Ihre Anwendung diese ADO-Bibliotheken aus Gründen der Abwärtskompatibilität verwenden muss, müssen Sie die entsprechende Version der Typbibliothek importieren. Befolgen Sie hierzu die Schritte im vorherigen Abschnitt, indem Sie *msado15.dll* durch *msadoxx. tlb*ersetzen, wobei *xx* die Versionsnummer darstellt, die Sie importieren müssen.
