@@ -1,4 +1,5 @@
 ---
+description: Verwenden von Tabellenwertparameter (Datenbank-Engine)
 title: Verwenden von Tabellenwertparameter (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -16,12 +17,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6f2827a6defa8cc98f73660bc46eb0da23a42a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72796640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427412"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Verwenden von Tabellenwertparameter (Datenbank-Engine)
 
@@ -69,7 +70,7 @@ Für Tabellenwertparameter gelten die folgenden Einschränkungen:
 - Tabellenwertparameter müssen als READONLY-Eingabeparameter an [!INCLUDE[tsql](../../includes/tsql-md.md)] -Routinen übergeben werden. Für Tabellenwertparameter im Hauptteil einer Routine können keine DML-Vorgänge wie UPDATE, DELETE oder INSERT durchgeführt werden.
 - Tabellenwertparameter können nicht als Ziel einer SELECT INTO-Anweisung oder einer INSERT EXEC-Anweisung verwendet werden. Tabellenwertparameter können in der FROM-Klausel von SELECT INTO oder in der Zeichenfolge oder gespeicherten Prozedur von INSERT EXEC enthalten sein.
 
-## <a name="table-valued-parameters-vs-bulk-insert-operations"></a><a name="BulkInsert"></a> Tabellenwertparameter und BULK INSERT-Vorgänge
+## <a name="table-valued-parameters-vs-bulk-insert-operations"></a><a name="BulkInsert"></a> Tabellenwertparameter vs. BULK INSERT-Vorgänge
 
 Die Verwendung von Tabellenwertparametern ist mit anderen Methoden zur Verwendung setbasierter Variablen vergleichbar. Sehr große Datasets können mit Tabellenwertparametern jedoch häufig schneller verarbeitet werden. Im Vergleich zu Massenvorgängen, bei denen die Startkosten höher sind, eignen sich Tabellenwertparameter optimal zum Einfügen von weniger als 1000 Zeilen.
 
@@ -114,7 +115,7 @@ INSERT INTO @LocationTVP (LocationName, CostRate)
 EXEC usp_InsertProductionLocation @LocationTVP;
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)

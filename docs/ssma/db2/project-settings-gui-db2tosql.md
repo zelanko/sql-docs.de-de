@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (GUI) (DB2ToSQL)
 title: Projekteinstellungen (GUI) (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b2cdb71a-f301-45b3-878c-382356c93b4b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c3a4f83fea29cd9e5928f4d5505ff62899c8d653
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b380158d79f78601f5f63396e270e9f8be56a96c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426942"
 ---
 # <a name="project-settings-gui-db2tosql"></a>Projekteinstellungen (GUI) (DB2ToSQL)
 Mit den Einstellungen des GUI-Projekts können Sie konfigurieren, wie Daten auf der Registerkarte " **Daten** " angezeigt werden und ob der Bewertungsbericht nach der Konvertierung angezeigt werden soll.  
@@ -25,7 +26,7 @@ Der Bereich GUI ist in den Dialogfeldern **Projekteinstellungen** und **Standard
   
 -   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Optionen für die Benutzeroberfläche für alle Projekte festzulegen. Um auf die GUI-Einstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus, wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt oder geändert werden müssen, und klicken Sie dann unten im linken Bereich auf **GUI** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Maximale Zeilennummer für Quelle**  
 Konfiguriert die Anzahl der Daten Zeilen, die auf der Registerkarte **Daten** für die ausgewählte Quell Tabelle angezeigt werden.  
   

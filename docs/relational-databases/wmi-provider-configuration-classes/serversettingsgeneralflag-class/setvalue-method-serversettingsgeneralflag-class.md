@@ -1,4 +1,5 @@
 ---
+description: SetValue-Methode (ServerSettingsGeneralFlag-Klasse)
 title: SetValue-Methode (ServerSettingsGeneralFlag)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b95664e8bb14ef5e66d76e7bb06140a0736a070b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e400d07a8e14bed9337cd0e889cb6ca13b44f674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427272"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>SetValue-Methode (ServerSettingsGeneralFlag-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ object.SetValue(Value)
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

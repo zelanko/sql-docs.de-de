@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobservers (Transact-SQL)
 title: dbo.sysjobservers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/26/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b02aa88951f7dd4e82ab26fcd54d715027b1ab7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b4df04c6a9564c2912f39173f71735162e7dc1cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427662"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ Speichert die Zuordnung oder Beziehung eines bestimmten Auftrags zu einem oder m
 |last_run_duration|**int**|Dauer der Ausführung des Auftrags in Stunden, Minuten und Sekunden. Berechnet mithilfe der Formel: (*Stunden* \* 10000) + (*Minuten* \* 100) + *Sekunden*.|  
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Ein Wert oberhalb von *4* bedeutet, dass der SQL-Agent den Status dieses Auftrags nicht kennt. Der *last_run_outcome* wird bei der Erstellung eines Auftrags anfänglich auf *5* festgelegt.
 

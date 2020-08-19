@@ -1,4 +1,5 @@
 ---
+description: sysdatatypemappings (Transact-SQL)
 title: sysdatatypeer Mappings (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae1637f0019979d4f915ddb084c6e90fa4e8274e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad4a6df1ae2dbdd418e133053330095a389bdf24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427532"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +56,7 @@ ms.locfileid: "85889131"
 |**is_default**|**bit**|Gibt an, ob standardmäßig die Datentypzuordnung verwendet wird.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Heterogene Replikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Heterogene Datenbankreplikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helpdatatypemap &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: Unzulässige Typen und Elemente in "System.Data.dll"
 title: Unzulässige Typen und Member in System.Data.dll | Microsoft-Dokumentation
 descriptions: SQL Server CLR programming disallows a type or member with some values for the HostProtectionResource enum. This article lists System.Data.dll disallowed values.
 ms.custom: ''
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: ee5f55e9-fbef-401a-be18-a2e5873c8720
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b44f72ba097b45de94c7623e4b2e7b21ebe05e04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02c659d599491a61a42784a09d0e68a25b44c73a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429022"
 ---
 # <a name="disallowed-types-and-members-in-systemdatadll"></a>Unzulässige Typen und Elemente in "System.Data.dll"
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die CLR-Programmierung (Common Language Integration) lässt die Verwendung eines Typs oder Members nicht zu, der über ein **Host Schutz Attribut** verfügt, das ein **System angibt. Security. Berechtigungs-und hostschutzressourcenenumeration** mit einem Wert von **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronisierung**oder **UI**. In der folgenden Tabelle sind die Elemente und Typen der System.Data.dll-Assembly aufgeführt, deren Hostschutzattributwerte nicht zulässig sind.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die CLR-Programmierung (Common Language Integration) lässt die Verwendung eines Typs oder Members nicht zu, der über ein **Host Schutz Attribut** verfügt, das ein **System angibt. Security. Berechtigungs-und hostschutzressourcenenumeration** mit einem Wert von **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronisierung**oder **UI**. In der folgenden Tabelle sind die Elemente und Typen der System.Data.dll-Assembly aufgeführt, deren Hostschutzattributwerte nicht zulässig sind.  
   
 > [!NOTE]  
 >  Diese Liste wurde von den unterstützten Assemblys generiert. Weitere Informationen finden Sie [unter Supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
@@ -36,7 +37,7 @@ ms.locfileid: "85727696"
 |System.Data.SqlClient.SqlDependency.Start()|ExternalThreading|  
 |System.Data.SqlClient.SqlDependency.Stop()|ExternalThreading|  
 |System.Data.TypedDataSetGenerator|SharedState, Synchronization|  
-|System.Xml.XmlDataDocument|Synchronisierung|  
+|System.Xml.XmlDataDocument|Synchronization|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Host Schutz Attribute und Programmierung der CLR-Integration](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   

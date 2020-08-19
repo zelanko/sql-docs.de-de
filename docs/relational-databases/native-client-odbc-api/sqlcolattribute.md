@@ -1,4 +1,5 @@
 ---
+description: SQLColAttribute
 title: SQLColAttribute | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1815a76dcfde42e45cb3b2ca1ffe4186ff52a238
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 86590239e22f19ba0858af583193675bc711a0ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428342"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +30,7 @@ ms.locfileid: "86012437"
 > [!NOTE]  
 >  ODBC-Spaltenbezeichnerattribute sind nicht für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Resultsets verfügbar.  
   
-|Feldbezeichner|BESCHREIBUNG|  
+|Feldbezeichner|Beschreibung|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|Verfügbar für Resultsets, die aus Anweisungen abgerufen wurden, die Servercursor erzeugen, oder für ausgeführte SELECT-Anweisungen, die eine FOR BROWSE-Klausel enthalten.|  
 |SQL_DESC_BASE_COLUMN_NAME|Verfügbar für Resultsets, die aus Anweisungen abgerufen wurden, die Servercursor erzeugen, oder für ausgeführte SELECT-Anweisungen, die eine FOR BROWSE-Klausel enthalten.|  
@@ -40,7 +42,7 @@ ms.locfileid: "86012437"
 |SQL_DESC_TABLE_NAME|Verfügbar für Resultsets, die aus Anweisungen abgerufen wurden, die Servercursor erzeugen, oder für ausgeführte SELECT-Anweisungen, die eine FOR BROWSE-Klausel enthalten.|  
 |SQL_DESC_UNNAMED|SQL_NAMED für alle Spalten in einem Resultset, es sei denn, die Spalte ist das Ergebnis eines Ausdrucks, der keine zugeordnete Bezeichnung als Teil des Ausdrucks hat. Wenn SQL_DESC_UNNAMED SQL_UNNAMED zurückgibt, enthalten alle ODBC-Spaltenbezeichnerattribute leere Zeichenfolgen für die Spalte.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der Native Client-ODBC-Treiber verwendet die SET FMTONLY-Anweisung, um den Server Aufwand zu verringern, wenn **SQLColAttribute** für vorbereitete, aber nicht ausgeführte Anweisungen aufgerufen wird.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Der Native Client-ODBC-Treiber verwendet die SET FMTONLY-Anweisung, um den Server Aufwand zu verringern, wenn **SQLColAttribute** für vorbereitete, aber nicht ausgeführte Anweisungen aufgerufen wird.  
   
  Für große Werttypen gibt **SQLColAttribute** die folgenden Werte zurück:  
   
@@ -73,11 +75,11 @@ ms.locfileid: "86012437"
 |SQL_CA_SS_NUM_COMPUTES|Anzahl von COMPUTE-Klauseln, die in der aktuellen Transact-SQL SELECT-Anweisung angegeben ist.|  
 |SQL_CA_SS_NUM_ORDERS|Anzahl von Spalten, die in der ORDER BY-Klausel einer ODBC- oder Transact-SQL SELECT-Anweisung angegeben ist.|  
   
- \*Verfügbar, wenn das Anweisungs Attribut SQL_SOPT_SS_HIDDEN_COLUMNS auf SQL_HC_ON festgelegt ist.  
+ \*   Verfügbar, wenn das Anweisungs Attribut SQL_SOPT_SS_HIDDEN_COLUMNS auf SQL_HC_ON festgelegt ist.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]in wurden Treiber spezifische Deskriptorfelder eingeführt, um zusätzliche Informationen bereitzustellen, mit denen der Name der XML-Schema Auflistung, der Schema Name und der Katalog Name bezeichnet werden. Diese Eigenschaften erfordern keine Anführungszeichen oder ein Escapezeichen, wenn sie nicht-alphanumerische Zeichen enthalten. In der folgenden Tabelle sind diese neuen Deskriptorfelder aufgelistet:  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in wurden Treiber spezifische Deskriptorfelder eingeführt, um zusätzliche Informationen bereitzustellen, mit denen der Name der XML-Schema Auflistung, der Schema Name und der Katalog Name bezeichnet werden. Diese Eigenschaften erfordern keine Anführungszeichen oder ein Escapezeichen, wenn sie nicht-alphanumerische Zeichen enthalten. In der folgenden Tabelle sind diese neuen Deskriptorfelder aufgelistet:  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Der Name des Katalogs, in dem ein XML-Schemasammlungsname definiert ist. Wenn der Katalogname nicht gefunden werden kann, enthält diese Variable eine leere Zeichenfolge.<br /><br /> Diese Informationen werden vom SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME-Datensatzfeld vom IRD zurückgegeben, das ein Lese-/Schreibfeld ist.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|Der Name des Schemas, in dem eine XML-Schemaauflistung definiert ist. Wenn der Schemaname nicht gefunden werden kann, enthält diese Variable eine leere Zeichenfolge.<br /><br /> Diese Informationen werden vom SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME-Datensatzfeld vom IRD zurückgegeben, das ein Lese-/Schreibfeld ist.|  
@@ -85,7 +87,7 @@ ms.locfileid: "86012437"
   
  Außerdem wurden in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] neue treiberspezifische Deskriptorfelder eingeführt, um zusätzliche Informationen für entweder einen benutzerdefinierten Spaltentyp (UDT) eines Resultsets oder für einen UDT-Parameter einer gespeicherten Prozedur oder einer parametrisierten Abfrage bereitzustellen. Diese Eigenschaften erfordern keine Anführungszeichen oder ein Escapezeichen, wenn sie nicht-alphanumerische Zeichen enthalten. In der folgenden Tabelle sind diese neuen Deskriptorfelder aufgelistet:  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Der Name des Katalogs, der den UDT enthält.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Der Name des Schemas, das den UDT enthält.|  

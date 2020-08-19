@@ -1,4 +1,5 @@
 ---
+description: sys.fn_my_permissions (Transact-SQL)
 title: sys. fn_my_permissions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9bb57e2d01c4942955e838cf358444636bf7aedb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75ff0dfb3355158a3dedbc9d5e066dbce0ac441f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427752"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,13 +52,13 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>Zurückgegebene Spalten  
  In der folgenden Tabelle werden die Spalten aufgelistet, die **fn_my_permissions** zurückgibt. Jede zurückgegebene Zeile beschreibt eine Berechtigung, über die der aktuelle Sicherheitskontext für das sicherungsfähige Element verfügt. Gibt NULL zurück, wenn die Abfrage einen Fehler erzeugt.  
   
-|Spaltenname|Typ|Beschreibung|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |Entitätsname|**sysname**|Der Name des sicherungsfähigen Elements, für das die aufgelisteten Berechtigungen effektiv gewährt wurden.|  
 |subentity_name|**sysname**|Der Spaltenname, sofern das sicherungsfähige Element über Spalten verfügt; andernfalls NULL.|  
 |permission_name|**nvarchar**|Der Name der Berechtigung.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Tabellenwertfunktion gibt eine Liste der gültigen Berechtigungen zurück, über die der aufrufende Prinzipal für ein bestimmtes sicherungsfähiges Element verfügt. Eine gültige Berechtigung ist eine der folgenden:  
   
 -   Eine Berechtigung, die dem Prinzipal direkt gewährt und nicht verweigert wurde.  
@@ -160,12 +161,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Sicherheitsfunktionen &#40;Transact-SQL-&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
+ [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Sicherungs fähige Elemente](../../relational-databases/security/securables.md)   
- [Datenbank-Engine der Berechtigungs Hierarchie &#40;&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys. fn_builtin_permissions &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Sicherheits Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Securables](../../relational-databases/security/securables.md)   
+ [Berechtigungshierarchie &#40;Datenbank-Engine &#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

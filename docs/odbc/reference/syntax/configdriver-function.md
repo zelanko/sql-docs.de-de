@@ -1,4 +1,5 @@
 ---
+description: ConfigDriver-Funktion
 title: ConfigDriver-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6a2da5fd5ce01bd97f13d7c8d805c615c1ac436a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d59765d1b6a6a662c02b459e07bac10895838a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428952"
 ---
 # <a name="configdriver-function"></a>ConfigDriver-Funktion
 **Konformitäts**  
@@ -61,7 +62,7 @@ BOOL ConfigDriver(
  Diese Option kann auch Treiber spezifisch sein. in diesem Fall muss das *fRequest* -Argument für die erste Option von ODBC_CONFIG_DRIVER_MAX + 1 beginnen. Das *fRequest* -Argument für eine beliebige zusätzliche Option muss auch mit einem Wert beginnen, der größer als ODBC_CONFIG_DRIVER_MAX + 1 ist.  
   
  *lpszDriver*  
- Der Der Name des Treibers, der im Schlüssel "Odbcinst. ini" der Systeminformationen registriert ist.  
+ Der Der Name des Treibers, der im Odbcinst.ini Schlüssel der Systeminformationen registriert ist.  
   
  *lpszargs*  
  Der Eine NULL-terminierte Zeichenfolge, die Argumente für eine Treiber spezifische *fRequest*enthält.  
@@ -81,9 +82,9 @@ BOOL ConfigDriver(
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **ConfigDriver** false zurückgibt, wird ein zugeordneter Wert von " * \*Pferd rorcode* " durch einen Aufruf von " **sqlpostinstallererror** " an den Installer-Fehler Puffer gesendet und kann durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **ConfigDriver** false zurückgibt, wird ein zugeordneter Wert von " * \* Pferd rorcode* " durch einen Aufruf von " **sqlpostinstallererror** " an den Installer-Fehler Puffer gesendet und kann durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pferrorcode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|Ungültiges Fenster handle.|Das *hwndParent* -Argument war ungültig.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|Ungültiger Typ der Anforderung.|Das *fRequest* -Argument war keiner der folgenden:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> Die Treiber spezifische Option war kleiner als oder gleich ODBC_CONFIG_DRIVER_MAX.|  

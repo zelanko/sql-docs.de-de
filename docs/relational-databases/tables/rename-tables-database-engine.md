@@ -1,4 +1,5 @@
 ---
+description: Umbenennen von Tabellen (Datenbank-Engine)
 title: Umbenennen von Tabellen (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/23/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df3898847b0470b93e89ffdad46682bc9475f5b1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 86a6b67d0393c9bac6e5ad3b9713c89796df3db4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427452"
 ---
 # <a name="rename-tables-database-engine"></a>Umbenennen von Tabellen (Datenbank-Engine)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -38,7 +39,7 @@ Verwenden Sie die T-SQL-Anweisung [RENAME OBJECT](../../t-sql/statements/rename-
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So benennen Sie eine Tabelle um mit:**  
   

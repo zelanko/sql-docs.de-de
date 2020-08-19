@@ -1,4 +1,5 @@
 ---
+description: Erstellen von Sichten
 title: Erstellen von Sichten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5251863e3b02f62cb1af6cec6da4166081239d1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1a4233f1b78960224ad8a36ec2e542d8713060a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427382"
 ---
 # <a name="create-views"></a>Erstellen von Sichten
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87395725"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie eine Sicht mit:**  
   
@@ -62,7 +63,7 @@ ms.locfileid: "87395725"
   
 1.  Erweitern Sie im **Objekt-Explorer**die Datenbank, in der Sie die neue Sicht erstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sichten**, und klicken Sie anschließend auf **Neue Sicht…** .  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sichten**, und klicken Sie anschließend auf **Neue Sicht…**.  
   
 3.  Wählen Sie im Dialogfeld **Tabelle hinzufügen** das Element oder die Elemente, die Sie in die neue Sicht einschließen möchten, auf einer der folgenden Registerkarten aus: Tabellen, Sichten, Funktionen und Synonyme.  
   

@@ -1,4 +1,5 @@
 ---
+description: sys. fn_net_changes_ &lt; capture_instance &gt; (Transact-SQL)
 title: sys. fn_net_changes_ &lt; capture_instance &gt; (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59d8214083046510d9c4d71724d1aab1c96b1e1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427762"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_net_changes_ &lt; capture_instance &gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -99,7 +100,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 |__CDC_OPERATION|**nvarchar (2)**|Ein Vorgangscode, der angibt, welcher Vorgang auf die Zeile der Zielumgebung angewendet werden muss. Der Vorgang variiert basierend auf dem Wert des Argument *row_filter_option* , das im folgenden-Befehl bereitgestellt wird:<br /><br /> *row_filter_option* = ' all ', ' all with mask '<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Aktualisierungsvorgang<br /><br /> *row_filter_option* = ' all with merge '<br /><br /> 'D' - Löschvorgang<br /><br /> 'M' - Einfüge- oder Aktualisierungsvorgang|  
 |\<columns from @update_flag_list>|**bit**|Ein Bitflag, das durch Anhängen von _uflag an den Spaltennamen benannt wird. Das Flag nimmt nur dann einen Wert ungleich NULL an, wenn *row_filter_option* **= ' all with mask '** und \_ _CDC_OPERATION **= ' un '**. Es wird auf 1 eingestellt, wenn die entsprechende Spalte innerhalb des Abfragefensters geändert wurde. Andernfalls ist es 0.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die fn_net_changes_<capture_instance> Funktion dient als Wrapper für die Abfragefunktion CDC. fn_cdc_get_net_changes_<capture_instance>. Die gespeicherte Prozedur sys. sp_cdc_generate_wrapper wird zum Erstellen des Skripts für den Wrapper verwendet.  
   
  Wrapperfunktionen werden nicht automatisch erstellt. Es gibt zwei Dinge, die Sie tun müssen, um Wrapper Funktionen zu erstellen:  

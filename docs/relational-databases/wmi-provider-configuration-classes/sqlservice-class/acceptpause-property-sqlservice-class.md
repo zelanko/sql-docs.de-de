@@ -1,4 +1,5 @@
 ---
+description: AcceptPause-Eigenschaft (SqlService-Klasse)
 title: Akzeptpause-Eigenschaft (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80e68dada9ec917ed6c47d0ab1e38e6e608ce209
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bed06aa139a6bee919f41bd8d9f9f01817ebde3f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427262"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>AcceptPause-Eigenschaft (SqlService-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ object.AcceptPause [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein boolescher Wert, der angibt, ob der Dienst angehalten werden kann. **true** , wenn der Dienst angehalten werden kann, **false** , wenn der Dienst nicht angehalten werden kann.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

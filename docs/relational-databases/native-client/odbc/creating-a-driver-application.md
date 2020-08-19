@@ -1,4 +1,5 @@
 ---
+description: Erstellen einer Treiberanwendung
 title: Erstellen einer Anwendung
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,11 +25,12 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bc45e8c1de97b5da2d393ceb3ef3794baf56595
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6bcb65baaf591267d1c40b254bb23fe19e383192
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428192"
 ---
 # <a name="creating-a-driver-application"></a>Erstellen einer Treiberanwendung
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +42,7 @@ ms.locfileid: "86009777"
 |Application|Ruft ODBC-Funktionen auf, um mit einer ODBC-Datenquelle zu kommunizieren, sendet SQL-Anweisungen und verarbeitet Resultsets.|  
 |Treiber-Manager|Verwaltet die Kommunikation zwischen einer Anwendung und allen von der Anwendung verwendeten ODBC-Treibern.|  
 |Treiber|Verarbeitet alle ODBC-Funktionsaufrufe von der Anwendung, stellt eine Verbindung zu einer Datenquelle her, übergibt SQL-Anweisungen von der Anwendung an die Datenquelle und gibt Ergebnisse an die Anwendung zurück. Bei Bedarf übersetzt der Treiber ODBC SQL-Code von der Anwendung in den von der Datenquelle verwendeten systemeigenen SQL-Code.|  
-|Datenquelle|Enthält alle Informationen, die ein Treiber für den Zugriff auf eine bestimmte Instanz der Daten in einem DBMS benötigt.|  
+|Datenquellen-|Enthält alle Informationen, die ein Treiber für den Zugriff auf eine bestimmte Instanz der Daten in einem DBMS benötigt.|  
   
  Eine Anwendung, die den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber für die Kommunikation mit einer Instanz von verwendet, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] führt die folgenden Aufgaben aus:  
   
@@ -78,19 +80,19 @@ ms.locfileid: "86009777"
   
  Viele ODBC-Treiber, einschließlich des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treibers, bieten Treiber spezifische ODBC-Erweiterungen. Um die Vorteile von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-treiberspezifischen Erweiterungen zu nutzen, sollte eine Anwendung die Header Datei sqlncli. h enthalten. Diese Headerdatei enthält Folgendes:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client-ODBC-Treiber spezifische Verbindungs Attribute.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber spezifische Verbindungs Attribute.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client-ODBC-Treiber spezifische Anweisungs Attribute.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber spezifische Anweisungs Attribute.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client-ODBC-Treiber spezifische Spalten Attribute.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber spezifische Spalten Attribute.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische Datentypen  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische, benutzerdefinierte Datentypen  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client-ODBC-Treiber spezifische [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) -Typen.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber spezifische [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) -Typen.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Diagnose Felder für Native Client-ODBC-Treiber.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Diagnose Felder für Native Client-ODBC-Treiber.  
   
 -   Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spezifische, dynamische Diagnosefunktionscodes  
   

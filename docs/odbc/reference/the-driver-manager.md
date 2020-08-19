@@ -1,4 +1,5 @@
 ---
+description: Der Treiber-Manager
 title: Treiber-Manager | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 686a2b9673fb392f969a42f4cc86dd95a95668a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70508eba3f5fce81c6f6185f0ec6befbe0d33b26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428872"
 ---
 # <a name="the-driver-manager"></a>Der Treiber-Manager
 Der *Treiber-Manager* ist eine Bibliothek, die die Kommunikation zwischen Anwendungen und Treibern verwaltet. Beispielsweise ist der Treiber-Manager auf Microsoft® Windows®-Plattformen eine Dynamic Link Library (dll), die von Microsoft geschrieben wird und von Benutzern des verteilbaren MDAC 2,8 SP1 SDK neu verteilt werden kann.  
@@ -33,6 +34,6 @@ Der *Treiber-Manager* ist eine Bibliothek, die die Kommunikation zwischen Anwend
   
  Zum größten Teil übergibt der Treiber-Manager einfach Funktionsaufrufe von der Anwendung an den richtigen Treiber. Es implementiert jedoch auch einige Funktionen (**SQLDataSources**, **SQLDrivers**und **SQLGetFunctions**) und führt eine grundlegende Fehlerüberprüfung aus. Beispielsweise prüft der Treiber-Manager, ob Handles keine NULL-Zeiger sind, ob Funktionen in der richtigen Reihenfolge aufgerufen werden und ob bestimmte Funktionsargumente gültig sind. Eine umfassende Beschreibung der vom Treiber-Manager geprüften Fehler finden Sie im Abschnitt "Reference" für jede Funktion und [Anhang B: ODBC-Status Übergangs Tabellen](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- Die letzte Hauptrolle des Treiber-Managers ist das Laden und Entladen von Treibern. Die Anwendung lädt und entlädt nur den Treiber-Manager. Wenn ein bestimmter Treiber verwendet werden soll, wird eine Verbindungsfunktion (**SQLCONNECT**, **SQLDriverConnect**oder **sqlbrowseconnetct**) im Treiber-Manager aufgerufen und der Name einer bestimmten Datenquelle oder eines Treibers (z. b. "Accounting" oder "SQL Server") angegeben. Wenn Sie diesen Namen verwenden, durchsucht der Treiber-Manager die Datenquellen Informationen nach dem Dateinamen des Treibers, z. b. sqlsrvr. dll. Anschließend wird der Treiber geladen (vorausgesetzt, er ist nicht bereits geladen), die Adresse der einzelnen Funktionen im Treiber speichert und die Verbindungsfunktion im Treiber aufruft, die dann selbst initialisiert und eine Verbindung mit der Datenquelle herstellt.  
+ Die letzte Hauptrolle des Treiber-Managers ist das Laden und Entladen von Treibern. Die Anwendung lädt und entlädt nur den Treiber-Manager. Wenn ein bestimmter Treiber verwendet werden soll, wird eine Verbindungsfunktion (**SQLCONNECT**, **SQLDriverConnect**oder **sqlbrowseconnetct**) im Treiber-Manager aufgerufen und der Name einer bestimmten Datenquelle oder eines Treibers (z. b. "Accounting" oder "SQL Server") angegeben. Wenn Sie diesen Namen verwenden, durchsucht der Treiber-Manager die Datenquellen Informationen nach dem Dateinamen des Treibers, z. b. Sqlsrvr.dll. Anschließend wird der Treiber geladen (vorausgesetzt, er ist nicht bereits geladen), die Adresse der einzelnen Funktionen im Treiber speichert und die Verbindungsfunktion im Treiber aufruft, die dann selbst initialisiert und eine Verbindung mit der Datenquelle herstellt.  
   
  Wenn die Anwendung mit dem Treiber ausgeführt wird, wird **SQLDisconnect** im Treiber-Manager aufgerufen. Der Treiber-Manager ruft diese Funktion im Treiber auf, der die Verbindung mit der Datenquelle trennt. Der Treiber-Manager behält den Treiber jedoch im Arbeitsspeicher bei, wenn die Anwendung erneut eine Verbindung mit der Anwendung herstellt. Der Treiber wird nur entladen, wenn die vom Treiber verwendete Verbindung von der Anwendung freigegeben wird oder die Verbindung für einen anderen Treiber verwendet wird und keine anderen Verbindungen den Treiber verwenden. Eine umfassende Beschreibung der Rolle des Treiber-Managers beim Laden und Entladen von Treibern finden Sie unter [Treiber-Manager-Rolle im Verbindungsprozess](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).

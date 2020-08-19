@@ -1,4 +1,5 @@
 ---
+description: Ersten Schritte mit SSMA für die Zugriffs Konsole (Access Token)
 title: Getting Started with SSMA for Access Console (Access Token) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e9ca0ef87aac60849d114d0e43dd349e063e8c83
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1923323699282e40fcca8afa1a8079edd8163c09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426982"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Ersten Schritte mit SSMA für die Zugriffs Konsole (Access Token)
 In diesem Abschnitt wird die Vorgehensweise zum Starten und Starten der Zugriffs Konsolenanwendung beschrieben. Hier sind auch die Konventionen aufgeführt, die in einem typischen Ausgabefenster der SSMA-Konsole verwendet werden.  
@@ -61,6 +62,6 @@ Farb Interpretation der Konsolenausgabe in der folgenden Tabelle:
 |Grün|Eingabeaufforderung für Benutzereingabe|  
 |Cyan|Starten, beenden und Ergebnis eines Vorgangs|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Installieren von SQL Server Migration Assistant für den Zugriff](installing-sql-server-migration-assistant-for-access-accesstosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: ErrorControl-Eigenschaft (SqlService-Klasse)
 title: ErrorControl-Eigenschaft (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85d6031a98359cf83d0c161efd22f31a2bbe6dc7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 47b62734773d7b3e4f027d0e31671f65a66ae9a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427202"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl-Eigenschaft (SqlService-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -54,10 +55,10 @@ object.ErrorControl [= value]
  Kritisch  
  Das System versucht, mit einer fehlerfreien Konfiguration zu neu starten.  
   
- Unbekannt  
+ Unknown  
  Der Schweregrad ist unbekannt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der Wert gibt die vom Startprogramm ausgeführte Aktion an, wenn ein Fehler auftritt. Alle Fehler werden vom Computersystem protokolliert.  
   
 ## <a name="see-also"></a>Weitere Informationen  

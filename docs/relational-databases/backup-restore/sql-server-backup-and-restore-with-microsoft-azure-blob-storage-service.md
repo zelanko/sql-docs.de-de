@@ -1,4 +1,5 @@
 ---
+description: SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service
 title: Sichern und Wiederherstellen mit Azure Blob Storage
 storage: Learn about SQL Server backup to and restore from Azure Blob storage, including the benefits of using Azure Blob storage to store SQL Server backups.
 ms.custom: seo-lt-2019
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e24d91db6845d862b88457d72f2f4bc04c9062d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41c11b596017f9dfeab7d62cfbe517e764f733ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428922"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,14 +63,14 @@ ms.locfileid: "85786466"
   
  **Datenübertragungen:** In Microsoft Azure eingehende Datenübertragungen sind kostenlos. Ausgehende Übertragungen werden nach Bandbreitennutzung und einer regionsspezifischen Staffelung berechnet. Weitere Informationen finden Sie im Abschnitt [Datenübertragungen](https://go.microsoft.com/fwlink/?LinkId=277061) des Artikels zu Preisdetails.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 
 [SQL Server-Sicherung über URLs – bewährte Methoden und Problembehandlung](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 
 [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 
-[Tutorial: Verwenden von SQL Server 2016-Datenbanken mit Microsoft Azure Blob Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+[Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
 
-[SQL Server-Sicherung über URLs](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
+[SQL Server-Sicherung über URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   

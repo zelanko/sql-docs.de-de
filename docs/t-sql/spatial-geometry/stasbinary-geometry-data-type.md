@@ -1,4 +1,5 @@
 ---
+description: STAsBinary (geometry-Datentyp)
 title: STAsBinary (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 39899d68eab1909e161475f951f37846cf56436f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 59416177b8b50855a0b6a0aa694f938f90479b6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426902"
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary (geometry-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);
 SELECT @g.STAsBinary();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

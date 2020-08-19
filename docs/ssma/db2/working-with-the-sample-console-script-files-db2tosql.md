@@ -1,4 +1,5 @@
 ---
+description: Arbeiten mit den Beispiel Konsolen Skriptdateien (DB2ToSQL)
 title: Arbeiten mit den Beispiel Konsolen Skriptdateien (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1fde86a316b5656149e5973349ec2d3a45564215
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d609900151e7ced05be4cc92e65c06270b6ef8a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426922"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Arbeiten mit den Beispiel Konsolen Skriptdateien (DB2ToSQL)
 Einige Beispieldateien wurden zusammen mit dem Produkt für die Benutzer Referenz und-Verwendung bereitgestellt. In diesem Abschnitt wird beschrieben, wie Sie diese Skripts problemlos an die Anforderungen der Endbenutzer anpassen können.  
@@ -71,10 +72,10 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     |Befehlsname|BESCHREIBUNG|attribute|  
     |----------------|---------------|-------------|  
-    |`map-schema`|Schema Zuordnung der Quelldatenbank zum Ziel Schema.|`source-schema:`Gibt die Quelldatenbank an, die für die Konvertierung erforderlich ist.<br /><br />`sql-server-schema`: Gibt die Zieldatenbank an, zu der migriert werden soll.|  
-    |`convert-schema`|Führt eine Schema Konvertierung von der Quelle in das Ziel Schema durch.<br /><br />Wenn der Benutzer mehrere Objekte/Datenbanken bewerten muss, kann er mehrere `metabase-object` Knoten angeben, wie im `convert-schema` Beispiel 4 der Beispiel-Konsolen Skriptdatei im Beispiel 4 veranschaulicht.|`object-name`: Geben Sie die Quelldatenbank/den Objektnamen an, der für die Konvertierung erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`|  
-    |`synchronize-target`|Synchronisiert die Zielobjekte mit der Zieldatenbank.<br /><br />Wenn der Benutzer mehrere Objekte/Datenbanken bewerten muss, kann er mehrere `metabase-object` Knoten angeben, wie im `synchronize-target` Beispiel 3 der Beispiel Konsolen Skriptdatei des Befehls dargestellt.|`object-name:`Geben Sie den SQL Server-Datenbank-/Objektnamen an, der erstellt werden soll. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`|  
-    |`migrate-data`|Migriert die Quelldaten zum Ziel.<br /><br />Wenn der Benutzer mehrere Objekte/Datenbanken bewerten muss, kann er mehrere `metabase-object` Knoten angeben, wie in `migrate-data` Beispiel 2 der Beispiel-Konsolen Skriptdatei des Befehls veranschaulicht.|`object-name:`Gibt den Namen der Quelldatenbank/-Tabelle an, die für die Migration erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`|  
+    |`map-schema`|Schema Zuordnung der Quelldatenbank zum Ziel Schema.|`source-schema:` Gibt die Quelldatenbank an, die für die Konvertierung erforderlich ist.<br /><br />`sql-server-schema`: Gibt die Zieldatenbank an, zu der migriert werden soll.|  
+    |`convert-schema`|Führt eine Schema Konvertierung von der Quelle in das Ziel Schema durch.<br /><br />Wenn der Benutzer mehrere Objekte/Datenbanken bewerten muss, kann er mehrere `metabase-object` Knoten angeben, wie im `convert-schema` Beispiel 4 der Beispiel-Konsolen Skriptdatei im Beispiel 4 veranschaulicht.|`object-name`: Geben Sie die Quelldatenbank/den Objektnamen an, der für die Konvertierung erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im `object-name`|  
+    |`synchronize-target`|Synchronisiert die Zielobjekte mit der Zieldatenbank.<br /><br />Wenn der Benutzer mehrere Objekte/Datenbanken bewerten muss, kann er mehrere `metabase-object` Knoten angeben, wie im `synchronize-target` Beispiel 3 der Beispiel Konsolen Skriptdatei des Befehls dargestellt.|`object-name:` Geben Sie den SQL Server-Datenbank-/Objektnamen an, der erstellt werden soll. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im `object-name`|  
+    |`migrate-data`|Migriert die Quelldaten zum Ziel.<br /><br />Wenn der Benutzer mehrere Objekte/Datenbanken bewerten muss, kann er mehrere `metabase-object` Knoten angeben, wie in `migrate-data` Beispiel 2 der Beispiel-Konsolen Skriptdatei des Befehls veranschaulicht.|`object-name:` Gibt den Namen der Quelldatenbank/-Tabelle an, die für die Migration erforderlich ist. Stellen Sie sicher, dass das entsprechende- `object-type` Objekt basierend auf dem Objekttyp geändert wird, der im `object-name`|  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Erstellen von Variablen Wert Dateien &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  

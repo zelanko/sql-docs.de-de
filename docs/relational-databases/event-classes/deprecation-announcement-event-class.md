@@ -1,4 +1,5 @@
 ---
+description: Deprecation Announcement (Ereignisklasse)
 title: Deprecation Announcement (Ereignisklasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,16 +14,16 @@ ms.assetid: 46fc578f-3c97-477f-879c-8a1b2cfd9d58
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0255b907d408b871c5a6cc973f708d2e63b621d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f048fa421c9166982d653e9215cb89f80b19c52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756051"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428522"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement (Ereignisklasse)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Die **Deprecation Announcement** -Ereignisklasse tritt auf, wenn Sie eine Funktion verwenden, die in künftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht mehr enthalten ist, jedoch nicht aus der nächsten Hauptversion entfernt wird. Damit Ihre Anwendungen möglichst langlebig sind, sollten Sie keine Funktionen verwenden, die die **Deprecation Announcement** -Ereignisklasse oder die **Deprecation Final Support** -Ereignisklasse auslösen.  
+   Die **Deprecation Announcement**-Ereignisklasse tritt auf, wenn Sie eine Funktion verwenden, die in künftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr enthalten ist, jedoch nicht aus der nächsten Hauptversion entfernt wird. Damit Ihre Anwendungen möglichst langlebig sind, sollten Sie keine Funktionen verwenden, die die **Deprecation Announcement** -Ereignisklasse oder die **Deprecation Final Support** -Ereignisklasse auslösen.  
   
 ## <a name="deprecation-announcement-event-class-data-columns"></a>Datenspalten in der Deprecation Announcement-Ereignisklasse  
   

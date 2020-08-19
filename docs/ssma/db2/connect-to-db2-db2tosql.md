@@ -1,4 +1,5 @@
 ---
+description: Herstellen einer Verbindung mit DB2 (DB2ToSQL)
 title: Herstellen einer Verbindung mit DB2 (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7180e78e7ec34e9c75d25dac51101e28291b1f4c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cef31b2968ea0241b3c999e0dbd781d70974b360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426972"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Herstellen einer Verbindung mit DB2 (DB2ToSQL)
 Verwenden Sie das Dialogfeld **mit DB2 verbinden** , um eine Verbindung mit der DB2-Datenbank herzustellen, die Sie migrieren möchten.  
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit DB2 verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl die **Verbindung mit DB2 wieder**her.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Anbieter**  
 Wählen Sie den Datenzugriffs Anbieter für die Verbindung mit der DB2-Datenbank aus. Verfügbare Anbieter sind der DB2-Client Anbieter und der OLE DB-Anbieter. Der Standardwert ist der DB2-Client Anbieter.  
   

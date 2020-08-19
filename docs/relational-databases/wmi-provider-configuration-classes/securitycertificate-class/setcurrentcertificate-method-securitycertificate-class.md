@@ -1,4 +1,5 @@
 ---
+description: SetCurrentCertificate-Methode (SecurityCertificate-Klasse)
 title: SetCurrentCertificate-Methode (SecurityCertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7997103a062ac796ead5694befd1d9cebb600c95
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 001d9ccdff7db054760f1c7ae10bbce19269f694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427282"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate-Methode (SecurityCertificate-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ object.SetCurrentCertificate(SHA , SQLInstance)
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein uint32-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

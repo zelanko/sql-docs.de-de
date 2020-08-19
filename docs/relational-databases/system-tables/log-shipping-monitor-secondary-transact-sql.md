@@ -1,4 +1,5 @@
 ---
+description: log_shipping_monitor_secondary (Transact-SQL)
 title: log_shipping_monitor_secondary (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 31ea0a1a0bd9c7895f1c705cfebd69cfa8ff4193
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eca1e3bb2e447b77b41beaf7dd1a3ace182ed185
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427672"
 ---
 # <a name="log_shipping_monitor_secondary-transact-sql"></a>log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "85890173"
 |**last_restored_latency**|**int**|Der Zeitraum in Minuten zwischen dem Erstellen der Protokollsicherung auf dem primären Server und dem Wiederherstellen auf dem sekundären Server.<br /><br /> Der Anfangswert ist NULL.|  
 |**history_retention_period**|**int**|Die Zeitdauer in Minuten, die Verlaufsdatensätze des Protokollversands für eine bestimmte sekundäre Datenbank vor dem Löschen aufbewahrt werden.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die mit einem sekundären Server verbundenen Informationen werden sowohl auf dem Remoteüberwachungsserver als auch auf dem sekundären Server in der **log_shipping_monitor_secondary** -Tabelle gespeichert.  
   
 ## <a name="see-also"></a>Weitere Informationen  

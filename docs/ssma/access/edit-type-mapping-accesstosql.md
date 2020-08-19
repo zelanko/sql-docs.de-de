@@ -1,4 +1,5 @@
 ---
+description: Typzuordnung bearbeiten (accesstosql)
 title: Typzuordnung bearbeiten (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8a5406bd58e62e34bfaaa6046bd2feb9f58f73a7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 246c8187a35b5990497712ab5b83ea4cb3acf59f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934057"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427062"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>Typzuordnung bearbeiten (accesstosql)
 Im Dialogfeld **Typzuordnung bearbeiten** können Sie angeben, wie Typen zwischen den Quell-und Ziel Datenbankobjekten zugeordnet werden sollen.  
@@ -27,7 +28,7 @@ Sie können auf dieses Dialogfeld an mehreren Stellen zugreifen:
   
 Tabellen spezifische Typzuordnungen überschreiben Datenbank-und Projekttyp Zuordnungen. Datenbankspezifische Zuordnungen überschreiben Projekt Zuordnungen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Quellentyp**  
 Wählen Sie den Quell Datentyp aus, der einem Datentyp zugeordnet werden soll [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -44,6 +45,6 @@ Wählen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datent
   
 Wenn der Datentyp eine Variable Länge hat, wird das folgende Feld unter **Zieltyp**angezeigt:  
   
-**Ersetzen durch**  
+**Replace with**  
 Geben Sie die Ziellänge für diese Zuordnung an. Beispielsweise können Sie für den Datentyp **nvarchar** den Wert 20 eingeben, um anzugeben, dass der angegebene Quell Datentyp **nvarchar (20)** zugeordnet werden soll.  
   

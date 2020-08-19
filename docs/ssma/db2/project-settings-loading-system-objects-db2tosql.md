@@ -1,4 +1,5 @@
 ---
+description: Projekteinstellungen (Laden von System Objekten) (DB2ToSQL)
 title: Projekteinstellungen (Laden von System Objekten) (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 188634d6e4efcfb72aaa6fd890bc180a499bf5b9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cb0f25ce5063a22fb89d0afa8619b90d34a96f16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426962"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Projekteinstellungen (Laden von System Objekten) (DB2ToSQL)
 Auf der Seite System Objekte Laden des Dialog Felds **Projekteinstellungen** können Sie angeben, welche DB2-System Objekte von SSMA konvertiert und in geladen werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

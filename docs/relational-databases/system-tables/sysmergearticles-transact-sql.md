@@ -1,4 +1,5 @@
 ---
+description: sysmergearticles (Transact-SQL)
 title: sysmergearticles (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b1678b9430127452fafa9e63cc2719efed088b8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 677fc8a30daa3b9a921bb194c6f4d06635b43284
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427592"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85881372"
 |**sync_objid**|**int**|Die Objekt-ID der Sicht, die das synchronisierte Dataset darstellt.|  
 |**view_type**|**tinyint**|Der Typ der Sicht:<br /><br /> **0** = keine Ansicht; Verwenden Sie das gesamte Basisobjekt.<br /><br /> **1** = permanente Ansicht.<br /><br /> **2** = temporäre Ansicht.|  
 |**artid**|**uniqueidentifier**|Die eindeutige ID des angegebenen Artikels.|  
-|**description**|**nvarchar(255)**|Eine kurze Beschreibung des Artikels.|  
+|**Beschreibung**|**nvarchar(255)**|Eine kurze Beschreibung des Artikels.|  
 |**pre_creation_command**|**tinyint**|Die Standardaktion, die durchgeführt wird, wenn der Artikel in der Abonnementdatenbank erstellt wird:<br /><br /> **0 =** Keine: Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.<br /><br /> **1** = Drop-löscht die Tabelle, bevor Sie neu erstellt wird.<br /><br /> **2** = DELETE: gibt einen Löschvorgang basierend auf der WHERE-Klausel im Teilmengen Filter aus.<br /><br /> **3** = Abschneiden-identisch mit **2**, löscht jedoch Seiten anstelle von Zeilen. Eine WHERE-Klausel wird jedoch nicht verwendet.|  
 |**pubid**|**uniqueidentifier**|Die ID der Veröffentlichung, zu der der aktuelle Artikel gehört.|  
 |**Namen**|**int**|Die Spitznamenzuordnung zur Identifikation des Artikels.|  

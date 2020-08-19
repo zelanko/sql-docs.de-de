@@ -1,4 +1,5 @@
 ---
+description: ODBC-Programmierer&#39;s-Referenz
 title: ODBC-Programmierer&#39;s-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6a9ca32627b9703465dcfca554fdc32ae01442e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 09d79d9a71b1eaeadf6fd649e7433cf5133de403
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428992"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC-Programmierer&#39;s-Referenz
 Die *ODBC-Programmier Referenz* enthält die folgenden Abschnitte.  
@@ -47,7 +48,7 @@ Die *ODBC-Programmier Referenz* enthält die folgenden Abschnitte.
   
  Die folgenden typografischen Konventionen werden verwendet.  
   
-|Format|Verwendet für|  
+|Format|Syntaxelemente|  
 |------------|--------------|  
 |Select * from|Großbuchstaben geben SQL-Anweisungen, Makronamen und Begriffe an, die auf der Betriebssystem-Befehls Ebene verwendet werden.|  
 |`RETCODE SQLFetch(hdbc)`|Die Schriftart fest breiten wird für Beispiel Befehlszeilen und Programmcode verwendet.|  

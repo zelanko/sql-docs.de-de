@@ -1,4 +1,5 @@
 ---
+description: HOST_NAME-Werte
 title: HOST_NAME-Werte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 21548f08-2910-4a55-baac-b911ba9afaf1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c29f51c8fd65eda73d2e54e321e3e476461d0c20
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32926ab1c2e5dcd2c97d296d07c5fab725793f47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427952"
 ---
 # <a name="host_name-values"></a>HOST_NAME-Werte
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,8 +30,8 @@ Standardmäßig wird durch die HOST_NAME()-Funktion der Name des Computers zurü
 > [!NOTE]  
 >  Wenn Sie HOST_NAME() überschreiben, wird für sämtliche Aufrufe der HOST_NAME()-Funktion der von Ihnen angegebene Wert zurückgegeben. Stellen Sie sicher, dass keine andere Anwendung darauf angewiesen ist, dass HOST_NAME() den Computernamen zurückgibt.  
   
-## <a name="options"></a>Tastatur  
- **Abonnementeigenschaften**  
+## <a name="options"></a>Optionen  
+ **Eigenschaften Abonnement**  
  Geben Sie in der **HOST_NAME Value** -Spalte für jeden Abonnenten einen Wert ein, oder übernehmen Sie den als Standardwert angegebenen Namen des Abonnentencomputers.  
   
 ## <a name="see-also"></a>Weitere Informationen  

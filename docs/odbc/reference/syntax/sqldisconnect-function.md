@@ -1,4 +1,5 @@
 ---
+description: SQLDisconnect-Funktion
 title: SQLDisconnect-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5ea73919fbe90719d881fb43108ab1934933708
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 604f5af6f425506996e7e15b7db73878f3d8b2c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428942"
 ---
 # <a name="sqldisconnect-function"></a>SQLDisconnect-Funktion
 **Konformitäts**  
@@ -52,13 +53,13 @@ SQLRETURN SQLDisconnect(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLDisconnect** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_DBC und einem *handle* von *connectionHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLDisconnect** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01002|Fehler beim Trennen|Fehler beim trennen. Die Verbindung wurde jedoch erfolgreich getrennt. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08003|Verbindung nicht geöffnet|(DM) die im Argument *connectionHandle* angegebene Verbindung war nicht geöffnet.|  
 |25000|Ungültiger Transaktionsstatus|Die vom Argument " *connectionHandle*" angegebene Verbindung enthält eine Transaktion. Die Transaktion bleibt aktiv.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für *connectionHandle*aktiviert. Die Funktion wurde aufgerufen, und bevor die Ausführung der [sqlcancelhandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md) abgeschlossen wurde, wurde Sie für *connectionHandle*aufgerufen. Anschließend wurde die Funktion für *connectionHandle*erneut aufgerufen.<br /><br /> Die-Funktion wurde aufgerufen, und vor der Ausführung von **sqlcancelhandle** wurde für *connectionHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
 |HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für ein *StatementHandle* aufgerufen, das dem *connectionHandle* zugeordnet ist, und wird noch ausgeführt, als " **SQLDisconnect** " aufgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für *connectionHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für ein *StatementHandle* aufgerufen, das dem *connectionHandle* zugeordnet ist, und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
@@ -86,11 +87,11 @@ SQLRETURN SQLDisconnect(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Zuordnen eines Handles|[SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Herstellen einer Verbindung mit einer Datenquelle|[SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md)|  
-|Herstellen einer Verbindung mit einer Datenquelle über eine Verbindungs Zeichenfolge oder ein Dialogfeld|[SQLDriveConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Herstellen einer Verbindung mit einer Datenquelle über eine Verbindungs Zeichenfolge oder ein Dialogfeld|[SQLDriverConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Ausführen eines Commit-oder Rollback-Vorgangs|[SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md)|  
 |Freigeben eines Verbindungs Handles|[SQLFreeConnect-Funktion](../../../odbc/reference/syntax/sqlfreeconnect-function.md)|  
   

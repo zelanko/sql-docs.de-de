@@ -1,4 +1,5 @@
 ---
+description: Große benutzerdefinierte CLR-Typen (ODBC)
 title: Große benutzerdefinierte CLR-Typen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec445a457f948c2fb75d26a6ad632633230f6fec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3f1beb11da79f41349ef0f01bb203d969654db07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428162"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Große benutzerdefinierte CLR-Typen (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,7 +137,7 @@ ms.locfileid: "86009754"
 |SQL_C_BINARY|Unterstützt|  
 |SQL_C_CHAR|Unterstützt|  
   
- \*Binärdaten werden in eine hexadezimale Zeichenfolge konvertiert.  
+ \* Binärdaten werden in eine hexadezimale Zeichenfolge konvertiert.  
   
  Die unterstützten Konvertierungen von C- zu SQL-Datentypen sind wie folgt:  
   
@@ -145,7 +147,7 @@ ms.locfileid: "86009754"
 |SQL_C_BINARY|Unterstützt|  
 |SQL_C_CHAR|Unterstützt|  
   
- \*Die Konvertierung der hexadezimalen Zeichenfolge in Binärdaten  
+ \* Die Konvertierung der hexadezimalen Zeichenfolge in Binärdaten  
   
 ## <a name="sql_variant-support-for-udts"></a>SQL_VARIANT-Unterstützung für UDTs  
  UDTs werden in SQL_VARIANT-Spalten nicht unterstützt.  
@@ -158,7 +160,7 @@ ms.locfileid: "86009754"
   
 |Serverversion|SQL_SS_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|SQL_SS_UDT<br /><br /> (Länge größer als 8.000 Bytes)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
-|SQL Server 2005|**UDT**|**varbinary(max)**|  
+|SQL Server 2005|**UDT**|**varbinary(max)**|  
 |SQL Server 2008 und höher|**UDT**|**UDT**|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>ODBC-Funktionen, die große CLR-UDTs unterstützen  
@@ -212,7 +214,7 @@ ms.locfileid: "86009754"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Für UDTs werden folgende Werte zurückgegeben:  
   
-|SQL-Datentyp|type|SubType|Länge|Precision|Skalieren|  
+|SQL-Datentyp|type|SubType|Länge|Genauigkeit|Skalieren|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (Länge größer als 8.000 Bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -232,7 +234,7 @@ ms.locfileid: "86009754"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Die zulässigen Werte für UDTs lauten wie folgt:  
   
-|SQL-Datentyp|type|SubType|Länge|Precision|Skalieren|  
+|SQL-Datentyp|type|SubType|Länge|Genauigkeit|Skalieren|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (Länge größer als 8.000 Bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

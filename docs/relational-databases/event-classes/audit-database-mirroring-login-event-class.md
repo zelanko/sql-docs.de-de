@@ -1,4 +1,5 @@
 ---
+description: Audit Database Mirroring Login (Ereignisklasse)
 title: Audit Database Mirroring Login (Ereignisklasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 577f5522e2f393c5fe91aca45ab08452853057aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b800c1fee12b34c17aeb28b252301bd13feef0f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428552"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login (Ereignisklasse)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt ein **Audit Database Mirroring Login** -Ereignis, um Überwachungsmeldungen im Zusammenhang mit der Datenbankspiegelungs-Transportsicherheit zu melden.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt ein **Audit Database Mirroring Login**-Ereignis, um Überwachungsmeldungen im Zusammenhang mit der Datenbankspiegelungs-Transportsicherheit zu melden.  
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Datenspalten der Audit Database Mirroring Login-Ereignisklasse  
   

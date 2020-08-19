@@ -1,4 +1,5 @@
 ---
+description: Leistungsprofilerstellung des ODBC-Treibers
 title: Profilerstellung der ODBC-Treiber Leistung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
@@ -20,11 +21,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35d920f13329b336969dbfd91da2265917f2fbe4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 172557586f7198bcc6151fd58f12faa0683f4fc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428122"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Leistungsprofilerstellung des ODBC-Treibers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +78,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>Anwendungsprofilstatistiken  
   
-|SQLPERF-Feld|BESCHREIBUNG|  
+|SQLPERF-Feld|Beschreibung|  
 |-------------------|-----------------|  
 |TimerResolution|Minimale Auflösung der Uhrzeit des Servers in Millisekunden. Dies wird gewöhnlich als 0 (null) angegeben und sollte nur verwendet werden, wenn die angegebene Zahl sehr groß ist. Wenn die minimale Auflösung der Serveruhrzeit größer als das wahrscheinliche Intervall einiger der zeitgeberbasierten Statistikwerte ist, könnte die Statistikdatenmenge unnötig größer werden.|  
 |SQLidu|Anzahl der INSERT-Anweisungen, DELETE-Anweisungen oder UPDATE-Anweisungen nach SQL_PERF_START|  
@@ -114,7 +116,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Zeitstatistiken  
   
-|SQLPERF-Feld|BESCHREIBUNG|  
+|SQLPERF-Feld|Beschreibung|  
 |-------------------|-----------------|  
 |msExecutionTime|Die kumulierte Verarbeitungszeit des Treibers nach SQL_PERF_START, einschließlich der Wartezeit des Treibers auf Antworten vom Server|  
 |msNetworkServerTime|Die kumulierte Wartezeit des Treibers auf Antworten vom Server|  

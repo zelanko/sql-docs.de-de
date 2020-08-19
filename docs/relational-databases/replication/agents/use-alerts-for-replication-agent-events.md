@@ -1,4 +1,5 @@
 ---
+description: Verwenden von Warnungen für Replikations-Agentereignisse
 title: Verwenden von Warnungen für Replikations-Agentereignisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8a52154d55f1703cc2f7d1a9221021ab11d94177
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d0fbec0a8ff1bcd6416ab0c24166a5bf5559cb8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428042"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Verwenden von Warnungen für Replikations-Agentereignisse
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

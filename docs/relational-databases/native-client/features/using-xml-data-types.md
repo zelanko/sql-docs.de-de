@@ -1,4 +1,5 @@
 ---
+description: Verwenden von XML-Datentypen in SQL Server Native Clients
 title: Verwenden von XML-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -30,12 +31,12 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6606da2bec127b6eb70eea0f5e676dd23a974e0d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b095eace82538b8d10efd0c628b467560ef36edf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428212"
 ---
 # <a name="using-xml-data-types-in-sql-server-native-clients"></a>Verwenden von XML-Datentypen in SQL Server Native Clients
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,20 +80,20 @@ ms.locfileid: "87248798"
  Wenn die XML-Eingabe als DBTYPE_WSTR gebunden ist, muss die Anwendung sicherstellen, dass sie bereits in Unicode codiert wurde, um mögliche Beschädigungen durch Datenkonvertierung zu verhindern.  
   
 ### <a name="data-bindings-and-coercions"></a>Datenbindungen und -umwandlungen  
- Die folgende Tabelle veranschaulicht die Bindung und erzwungene Umwandlung bei Verwendung der aufgeführten Datentypen mit dem -Datentyp [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **xml**.  
+ Die folgende Tabelle veranschaulicht die Bindung und erzwungene Umwandlung bei Verwendung der aufgeführten Datentypen mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp **xml**.  
   
 |Datentyp|Zu Server<br /><br /> **XML**|Zu Server<br /><br /> **Nicht-XML**|Von Server<br /><br /> **XML**|Von Server<br /><br /> **Nicht-XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|Pass-Through<sup>6,7</sup>|Fehler<sup>1</sup>|OK<sup>11, 6</sup>|Error<sup>8</sup>|  
-|DBTYPE_BYTES|Pass-Through<sup>6,7</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>11, 6</sup>|N/v <sup>2</sup>|  
-|DBTYPE_WSTR|Pass-Through<sup>6,10</sup>|N/v <sup>2</sup>|OK<sup>4, 6, 12</sup>|N/v <sup>2</sup>|  
-|DBTYPE_BSTR|Pass-Through<sup>6,10</sup>|N/v <sup>2</sup>|OK<sup>3</sup>|N/v <sup>2</sup>|  
-|DBTYPE_STR|OK<sup>6, 9, 10</sup>|N/v <sup>2</sup>|OK<sup>5, 6, 12</sup>|N/v <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Bytedatenstrom über **ISequentialStream**<sup>7</sup>|N/v <sup>2</sup>|Bytedatenstrom über **ISequentialStream**<sup>11</sup>|N/v <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pass-Through<sup>6,7</sup>|N/v <sup>2</sup>|–|N/v <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Pass-Through<sup>6,10</sup>|N/v <sup>2</sup>|OK<sup>3</sup>|N/v <sup>2</sup>|  
+|DBTYPE_BYTES|Pass-Through<sup>6,7</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>11, 6</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_WSTR|Pass-Through<sup>6,10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>4, 6, 12</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_BSTR|Pass-Through<sup>6,10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>3</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_STR|OK<sup>6, 9, 10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>5, 6, 12</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Bytedatenstrom über **ISequentialStream**<sup>7</sup>|Nicht zutreffend<sup>2</sup>|Bytedatenstrom über **ISequentialStream**<sup>11</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pass-Through<sup>6,7</sup>|Nicht zutreffend<sup>2</sup>|–|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Pass-Through<sup>6,10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>3</sup>|Nicht zutreffend<sup>2</sup>|  
   
- <sup>1</sup> Wenn ein anderer Servertyp als DBTYPE_XML mit **ICommandWithParameters:: SetParameterInfo** angegeben wird und der Accessortyp DBTYPE_XML ist, tritt ein Fehler auf, wenn die Anweisung ausgeführt wird (DB_E_ERRORSOCCURRED der Parameter Status DBSTATUS_E_BADACCESSOR); Andernfalls werden die Daten an den Server gesendet, der Server gibt jedoch eine Fehlermeldung zurück, die darauf hinweist, dass keine implizite Konvertierung von XML in den Datentyp des Parameters vorliegt.  
+ <sup>1</sup>Wenn ein anderer Servertyp als DBTYPE_XML mit **ICommandWithParameters::SetParameterInfo** angegeben wird und der Accessortyp DBTYPE_XML ist, tritt beim Ausführen der Anweisung ein Fehler auf (DB_E_ERRORSOCCURRED, der Parameterstatus ist DBSTATUS_E_BADACCESSOR). Andernfalls werden die Daten an den Server gesendet, der Server gibt jedoch einen Fehler zurück und zeigt an, dass keine implizite Konvertierung von XML in den Parameterdatentyp erfolgt.  
   
  <sup>2</sup> Über den Rahmen dieses Themas hinaus.  
   
@@ -132,12 +133,12 @@ ms.locfileid: "87248798"
  DBTYPE_IUNKNOWN ist eine unterstützte Bindung (wie in der Tabelle oben gezeigt), aber es gibt keine Konvertierungen zwischen DBTYPE_XML und DBTYPE_IUNKNOWN. DBTYPE_IUNKNOWN kann nicht mit DBTYPE_BYREF verwendet werden.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Hinzufügungen und Änderungen am OLE DB-Rowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt neue Werte oder Änderungen an vielen der Kern OLE DB Schemarowsets hinzu.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt neue Werte oder Änderungen an vielen der Kern OLE DB Schemarowsets hinzu.  
   
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Die COLUMNS- und PROCEDURE_PARAMETERS-Schemarowsets  
  Den COLUMNS- und PROCEDURE_PARAMETERS-Schemarowsets wurden unter anderem die folgenden Spalten hinzugefügt.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Name des Katalogs, in dem eine XML-Schemaauflistung definiert ist. NULL für eine Nicht-XML-Spalte oder nicht typisierte XML-Spalte.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Der Name eines Schemas, in dem eine XML-Schemaauflistung definiert ist. NULL für eine Nicht-XML-Spalte oder nicht typisierte XML-Spalte.|  
@@ -149,7 +150,7 @@ ms.locfileid: "87248798"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>Das SS_XMLSCHEMA-Schemarowset  
  Ein neues Schemarowset SS_XMLSCHEMA wird eingeführt, mit dem Clients XML-Schema-Informationen abrufen können. Das SS_XMLSCHEMA-Rowset enthält folgende Spalten.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Katalog, zu dem eine XML-Auflistung gehört.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Das Schema, zu dem eine XML-Auflistung gehört.|  
@@ -164,12 +165,12 @@ ms.locfileid: "87248798"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Hinzufügungen und Änderungen an der OLE DB-Eigenschaftengruppe  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt neue Werte oder Änderungen zu vielen der Kern OLE DB-Eigenschafts Sätzen hinzu.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt neue Werte oder Änderungen zu vielen der Kern OLE DB-Eigenschafts Sätzen hinzu.  
   
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Die DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe  
  Um den **XML** -Datentyp durch OLE DB zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert Native Client den neuen DBPROPSET_SQLSERVERPARAMETER-Eigenschaften Satz, der die folgenden Werte enthält.  
   
-|Name|type|BESCHREIBUNG|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Name des Katalogs (Datenbank), in dem eine XML-Schemaauflistung definiert ist. Teil des dreiteiligen SQL-Namensbezeichners.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Der Name eines XML-Schemas in der Schemaauflistung. Teil des dreiteiligen SQL-Namensbezeichners.|  
@@ -178,7 +179,7 @@ ms.locfileid: "87248798"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Die DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe  
  Um die Erstellung von Tabellen in der **ITableDefinition** -Schnittstelle zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt Native Client dem DBPROPSET_SQLSERVERCOLUMN-Eigenschaften Satz drei neue Spalten hinzu.  
   
-|Name|type|BESCHREIBUNG|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Bei typisierten XML-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem das XML-Schema gespeichert ist. Für andere Spaltentypen gibt diese Eigenschaft eine leere Zeichenfolge zurück.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Bei typisierten XML-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des XML-Schemas angibt, das diese Spalte definiert.|  
@@ -187,7 +188,7 @@ ms.locfileid: "87248798"
  Wie die SSPROP_PARAM-Werte sind all diese Eigenschaften optional und standardmäßig leer. SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME und SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME können nur angegeben werden, wenn SSPROP_COL_XML_SCHEMACOLLECTIONNAME angegeben ist. Bei der Übergabe von XML an den Server werden diese Werte (falls vorhanden) auf ihr Vorhandensein in der aktuellen Datenbank überprüft, und die Instanzdaten werden mit dem Schema verglichen. In jedem Fall müssen sie entweder alle leer oder alle ausgefüllt sein, um gültig zu sein.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Hinzufügungen und Änderungen an der OLE DB-Schnittstelle  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt neue Werte oder Änderungen an vielen der Kern OLE DB-Schnittstellen hinzu.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt neue Werte oder Änderungen an vielen der Kern OLE DB-Schnittstellen hinzu.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Die ISSCommandWithParameters-Schnittstelle  
  Um den **XML** -Datentyp durch OLE DB zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert Native Client eine Reihe von Änderungen, einschließlich der Hinzufügung der [ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) -Schnittstelle. Diese neue Schnittstelle erbt von der OLE DB-Kernschnittstelle **ICommandWithParameters**. Zusätzlich zu den drei von **ICommandWithParameters**geerbten Methoden **GetParameterInfo**, **MapParameterNames**und **SetParameterInfo**; **ISSCommandWithParameters** stellt die [GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) -Methode und die [SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) -Methode bereit, die zur Behandlung von serverspezifischen Datentypen verwendet werden.  
@@ -196,9 +197,9 @@ ms.locfileid: "87248798"
 >  Die **ISSCommandWithParameters**-Schnittstelle nutzt auch die neue SSPARAMPROPS-Struktur.  
   
 #### <a name="the-icolumnsrowset-interface"></a>Die IDBColumnsRowset-Schnittstelle  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Rowset, das von der **IColumnRowset:: GetColumnsRowset** -Methode zurückgegeben wird, die folgenden-spezifischen Spalten hinzu. Diese Spalten enthalten den dreiteiligen Namen einer XML-Schemaauflistung. Für Nicht-XML-Spalten oder nicht typisierte XML-Spalten nehmen alle drei Spalten den Standardwert von NULL an.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Rowset, das von der **IColumnRowset:: GetColumnsRowset** -Methode zurückgegeben wird, die folgenden-spezifischen Spalten hinzu. Diese Spalten enthalten den dreiteiligen Namen einer XML-Schemaauflistung. Für Nicht-XML-Spalten oder nicht typisierte XML-Spalten nehmen alle drei Spalten den Standardwert von NULL an.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Katalog, zu dem eine XML-Schemaauflistung gehört.<br /><br /> Andernfalls NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Das Schema, zu dem eine XML-Schemaauflistung gehört. Andernfalls NULL.|  

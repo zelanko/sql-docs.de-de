@@ -1,4 +1,5 @@
 ---
+description: BufferWithCurves (geometry-Datentyp)
 title: BufferWithCurves (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c49d71c0e7e149ed66d699e04126cdd1f6f9b726
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9a3a8ff7006a2ac48f8b357cd820d0c47e162885
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427072"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry-Datentyp)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -29,16 +30,17 @@ ms.locfileid: "87442341"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```syntaxsql
 .BufferWithCurves ( distance )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumente  
  *distance*  
  Ein **float**-Wert, der den maximalen Abstand der Punkte von der **geometry**-Instanz angibt, die den Puffer bilden.  
   
-## <a name="return-types"></a>Rückgabetypen  
+## <a name="return-types"></a>Rückgabetypen
 SQL Server-Rückgabetyp: **geometry**  
   
  CLR-Rückgabetyp: **SqlGeometry**  
@@ -62,7 +64,7 @@ SQL Server-Rückgabetyp: **geometry**
 |distance-Wert|Type-Dimensionen|Räumlicher Rückgabetyp|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|Null oder eins|Leere Instanz von **GeometryCollection**|  
-|distance < 0|Zwei oder mehr|Eine Instanz von **CurvePolygon** oder **GeometryCollection** mit einem negativen Puffer. **Hinweis:** Ein negativer Puffer erstellt auch möglicherweise eine leere Instanz von **GeometryCollection**.|  
+|distance < 0|Zwei oder mehr|Eine Instanz von **CurvePolygon** oder **GeometryCollection** mit einem negativen Puffer. **Hinweis:** Ein negativer Puffer erstellt möglicherweise eine leere Instanz von **GeometryCollection**.|  
 |distance = 0|Alle Dimensionen|Kopie der aufrufenden Instanz von **geometry**|  
 |distance > 0|Alle Dimensionen|Instanz von **CurvePolygon** oder **GeometryCollection**|  
   
@@ -156,6 +158,6 @@ SQL Server-Rückgabetyp: **geometry**
   
  Von den ersten beiden **SELECT**-Anweisungen wird eine Instanz von `GeometryCollection` zurückgegeben, da der *distance*-Parameter kleiner oder gleich 1/2 des Abstands zwischen den beiden Punkten (1 1) und (1 4) ist. Von der dritten **SELECT**-Anweisung gibt `CurvePolygon` zurückgegeben, da sich die zwischengespeicherten Instanzen der beiden Punkte (1 1) und (1 4) überschneiden.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Erweiterte Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  

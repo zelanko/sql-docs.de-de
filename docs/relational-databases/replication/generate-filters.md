@@ -1,4 +1,5 @@
 ---
+description: Filter generieren
 title: Filter generieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,18 +13,18 @@ f1_keywords:
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 885772f790a6c53e2a9e3019923f801841d719ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c124642da9b895522e35c80e5edf68f50335dc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653026"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428032"
 ---
 # <a name="generate-filters"></a>Filter generieren
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Mithilfe des Dialogfelds **Filter generieren** können Sie einen Zeilenfilter für eine Tabelle in einer Mergeveröffentlichung definieren. Die Replikation erweitert dann den Filter automatisch auf andere Tabellen, die durch Fremdschlüsselbeziehungen verbunden sind. Wenn Sie z. B. einen Filter für eine Kundentabelle so definieren, dass diese nur Daten zu französischen Kunden enthält, dann erweitert die Replikation den Filter derart, dass verknüpfte Tabellen mit Bestellungen und Bestellungsdetails nur Informationen enthalten, die sich auf französische Kunden beziehen.  
+   Mithilfe des Dialogfelds **Filter generieren** können Sie einen Zeilenfilter für eine Tabelle in einer Mergeveröffentlichung definieren. Die Replikation erweitert dann den Filter automatisch auf andere Tabellen, die durch Fremdschlüsselbeziehungen verbunden sind. Wenn Sie z. B. einen Filter für eine Kundentabelle so definieren, dass diese nur Daten zu französischen Kunden enthält, dann erweitert die Replikation den Filter derart, dass verknüpfte Tabellen mit Bestellungen und Bestellungsdetails nur Informationen enthalten, die sich auf französische Kunden beziehen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Dieses Dialogfeld enthält einen dreistufigen Vorgang zum Erstellen eines Zeilenfilters für eine Tabelle. Der Filter wird dann auf die Tabellen erweitert, die mit der gefilterten Tabelle über Primärschlüssel- und Fremdschlüsselbeziehungen verknüpft sind. Wenn z. B. drei Tabellen gegeben sind, **Customer**, **SalesOrderHeader**und **SalesOrderDetail**, mit einer Beziehung zwischen **Customer** und **SalesOrderHeader**sowie einer Beziehung zwischen **SalesOrderHeader** und **SalesOrderDetail**, dann können Sie einen Zeilenfilter auf **Customer**anwenden, und die Replikation erweitert diesen Filter auf **SalesOrderHeader** und **SalesOrderDetail**.  
   
 1.  **Wählen Sie die zu filternde Tabelle aus.**  

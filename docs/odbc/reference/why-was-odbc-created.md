@@ -1,4 +1,5 @@
 ---
+description: Warum wurde ODBC erstellt?
 title: Warum wurde ODBC erstellt? | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 22173b0ad3dd8abf2d168b41a16a03bc414022ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6ce24a4856c3bae6d271712a948e1ae5e2ceecbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428792"
 ---
 # <a name="why-was-odbc-created"></a>Warum wurde ODBC erstellt?
 In der Vergangenheit haben Unternehmen ein einzelnes DBMS verwendet. Der gesamte Datenbankzugriff erfolgte entweder über das Front-End des Systems oder über Anwendungen, die für das ausschließliche arbeiten mit diesem System geschrieben wurden. Da jedoch die Verwendung von Computern und mehr Computer Hardware und Software zur Verfügung gestellt wurde, begannen Unternehmen, andere DBMSs zu erwerben. Die Gründe hierfür sind: Personen haben gekauft, was am billigsten war, was am schnellsten war, was Sie bereits wussten, was das neueste auf dem Markt war, was am besten für eine einzelne Anwendung funktionierte. Andere Gründe hierfür sind Neuorganisationen und Fusionen, bei denen Abteilungen, die zuvor ein einzelnes DBMS besaßen, jetzt mehrere haben.  

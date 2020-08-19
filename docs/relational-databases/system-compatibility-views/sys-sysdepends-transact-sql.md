@@ -1,4 +1,5 @@
 ---
+description: sys.sysdepends (Transact-SQL)
 title: sys.sysabhängig (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f9c182cb-386f-4e72-859f-9f1115b389f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37992fea6207c8a125756f313c0460b2cf1b22b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 31842603ba31d2ff6b7e631f0652b1f86da469c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427912"
 ---
 # <a name="syssysdepends-transact-sql"></a>sys.sysdepends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

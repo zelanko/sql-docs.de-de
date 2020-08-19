@@ -1,4 +1,5 @@
 ---
+description: Dynamische Verwaltungssichten für Filestream und FileTable (Transact-SQL)
 title: Dynamische Verwaltungs Sichten für FILESTREAM und FILETABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 782885ddccf486cb74b0b79b60422f1564d4ddbc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ca18eb28d70fb2b9d479a629545f46bae8ef3d9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427852"
 ---
 # <a name="filestream-and-filetable-dynamic-management-views-transact-sql"></a>Dynamische Verwaltungssichten für Filestream und FileTable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,6 +40,6 @@ ms.locfileid: "85894678"
 ## <a name="see-also"></a>Weitere Informationen
 [Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
-<br>[Filestream- und FileTable-Katalogsichten (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
-<br>[Gespeicherte System Prozeduren für FILESTREAM und FILETABLE (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
+<br>[Katalogsichten für Filestream und FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[Gespeicherte Systemprozeduren für Filestream und FileTable (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
   

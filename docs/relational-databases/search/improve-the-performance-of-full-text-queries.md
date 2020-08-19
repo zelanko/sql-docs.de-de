@@ -1,4 +1,5 @@
 ---
+description: Verbessern der Leistung von Volltextabfragen
 title: Verbessern der Leistung von Volltextabfragen | Microsoft-Dokumentation
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fe209581f1ce57d40c7757333a6da8ea84898e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 18cd0b40213fc14542c5ef58ee12f0ee011dd08a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427942"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Verbessern der Leistung von Volltextabfragen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "85629468"
 ## <a name="related-resources"></a>Zugehörige Ressourcen  
  [SQL Server 2008-Volltextsuche: Internes und Erweiterungen](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)  
   

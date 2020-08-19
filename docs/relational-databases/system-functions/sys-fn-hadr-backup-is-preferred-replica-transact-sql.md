@@ -1,4 +1,5 @@
 ---
+description: sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
 title: sys. fn_hadr_backup_is_preferred_replica (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be33120bd19561055095fb81f4a4595edbcf394f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce16f8300546c77114a27706a7b7ed32806f98ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427812"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,10 +47,10 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
  "*dbname*"  
  Der Name der zu sichernden Datenbank. *dbname* ist vom Typ sysname.  
   
-## <a name="returns"></a>Gibt zurück  
+## <a name="returns"></a>Rückgabe  
  Gibt den Datentyp **bool**: 1 zurück, wenn sich die Datenbank auf der aktuellen Instanz auf dem bevorzugten Replikat befindet, andernfalls 0.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie diese Funktion in einem Sicherungsskript, um zu ermitteln, ob sich die aktuelle Datenbank auf dem für Sicherungen bevorzugten Replikat befindet. Sie können ein Skript über jedes Verfügbarkeitsreplikat ausführen. Jeder dieser Aufträge untersucht die gleichen Daten, um zu bestimmen, welcher Auftrag ausgeführt werden soll, sodass nur einer der geplanten Aufträge tatsächlich in die Sicherungs Phase übergeht. Beispielcode kann sich wie folgt zusammensetzen.  
   
 ```  
@@ -77,7 +78,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Always on-Verfügbarkeits Gruppenfunktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [Always on Verfügbarkeits Gruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always on Verfügbarkeits Gruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) [Katalog Sichten für Always on Verfügbarkeits Gruppen &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)      

@@ -1,4 +1,5 @@
 ---
+description: STLineFromText (geometry-Datentyp)
 title: STLineFromText (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/11/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d050440ae605b5bb43cb3ac5c423929088a48626
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 77d76ddaeab5952db35f6395d0d2b14a5b904290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427042"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (geometry-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumente
  *linestring_tagged_text*  
- Die WKT-Darstellung der **geometryLineString**-Instanz, die Sie zurückgegeben möchten. *linestring_tagged_text* ist ein **nvarchar(max)** -Ausdruck.  
+ Die WKT-Darstellung der **geometryLineString**-Instanz, die Sie zurückgegeben möchten. *linestring_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
   
  *SRID*  
  Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geometryLineString**-Instanz darstellt, die Sie zurückgeben möchten.  
