@@ -1,4 +1,5 @@
 ---
+description: DBCC FREEPROCCACHE (Transact-SQL)
 title: DBCC FREEPROCCACHE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/13/2017
@@ -25,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84f0dd9a38f118d71ca7417e2a241a03426e6753
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d8b3b9733500dc56f4994dd13fd42939b0885a02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367786"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,7 +91,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 > [!NOTE]
 > Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ist `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` verfügbar, um den Prozedur-/Plancache für die Datenbank im Bereich zu löschen.
 
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 Verwenden Sie DBCC FREEPROCCACHE, um den Plancache sorgfältig zu leeren. Durch das Löschen des Prozedur-/Plancaches werden alle Pläne entfernt, und eingehende Abfrageausführungen werden mit einem neuen Plan kompiliert, statt dass alle zuvor zwischengespeicherten Pläne wieder verwendet werden. 
 
 Bei steigender Anzahl von Kompilierungen kann es zu einer plötzlichen, vorübergehenden Abnahme der Abfrageleistung kommen. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende Meldung zur Information: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den "%2!s!"-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von "DBCC FREEPROCCACHE"- oder "DBCC FREESYSTEMCACHE"-Vorgängen ausgelöst wurden.“ Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.

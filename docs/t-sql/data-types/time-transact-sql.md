@@ -1,4 +1,5 @@
 ---
+description: time (Transact-SQL)
 title: time (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/07/2017
@@ -22,12 +23,12 @@ ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce15115e059018e7065f2a3fefc6943a110cf97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fe87d9a583c60ba6d627168ade3eef07a47467b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368256"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 
@@ -46,7 +47,7 @@ ms.locfileid: "86007979"
 |Verwendung|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*fractional seconds scale*|Definiert die Anzahl der Stellen für den Bruchteil der Sekunden.<br /><br /> Dies kann eine ganze Zahl zwischen 0 und 7 sein. Im Zusammenhang mit Informatica kann dies eine ganze Zahl zwischen 0 und 3 sein.<br /><br /> Der Standardwert für den Bruchteil beträgt 7 (100 ns).|  
 |Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird zum Zweck der Clientkompatibilität verwendet)|hh:mm:ss[.nnnnnnn] für Informatica)<br /><br /> Weitere Informationen finden Sie im Abschnitt [Abwärtskompatibilität für Downlevelclient](#BackwardCompatibilityforDownlevelClients).|  
-|Range|00:00:00.0000000 bis 23:59:59.9999999 (00:00:00.000 bis 23:59:59.999 für Informatica)|  
+|Bereich|00:00:00.0000000 bis 23:59:59.9999999 (00:00:00.000 bis 23:59:59.999 für Informatica)|  
 |Elementbereiche|Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Sekunde darstellen.<br /><br /> Bei n\* handelt es sich um bis zu sieben Ziffern im Bereich von 0 bis 9999999, die die Sekundenbruchteile darstellen. Für Informatica umfasst n\* bis zu drei Ziffern im Bereich von 0 bis 999.|  
 |Zeichenlänge|Mindestens 8 Positionen (hh:mm:ss) bis maximal 16 Positionen (hh:mm:ss.nnnnnnn). Für Informatica sind es höchstens 12 Positionen (hh:mm:ss.nnn).|  
 |Genauigkeit, Dezimalstellen<br /><br /> (Benutzer gibt nur Dezimalstellen an)|Siehe Tabelle unten.|  
@@ -57,7 +58,7 @@ ms.locfileid: "86007979"
 |Beachtung und Beibehaltung des Zeitzonenoffsets|Nein|  
 |Beachtung der Sommerzeit|Nein|  
   
-|Angegebene Dezimalstelle|Ergebnis (Genauigkeit, Dezimalstellen)|Spaltenlänge (in Bytes)|Bruchteil<br /><br /> Sekunden<br /><br /> precision|  
+|Angegebene Dezimalstelle|Ergebnis (Genauigkeit, Dezimalstellen)|Spaltenlänge (in Bytes)|Bruchteil<br /><br /> Sekunden<br /><br /> precision (Genauigkeit)|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
 |**time**|(16,7) [(12,3) in Informatica]|5 (4 in Informatica)|7 (3 in Informatica)|  
 |**time(0)**|(8,0)|3|0–2|  
@@ -123,7 +124,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
   
  Beim Konvertieren in **date** schlägt die Konvertierung fehl, und die Fehlermeldung 206 wird ausgegeben: „Operandentypkollision: date ist inkompatibel mit time.“  
   
- Wenn eine Konvertierung in **datetime** vorgenommen wird, werden die Werte für Stunden, Minuten und Sekunden kopiert, und die Datumskomponente wird auf 1900-01-01 festgelegt. Wenn die Genauigkeit des **time(n)** -Werts größer ist als drei Sekundenbruchteile, wird das **datetime**-Ergebnis gekürzt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime`-Wert.  
+ Wenn eine Konvertierung in **datetime** vorgenommen wird, werden die Werte für Stunden, Minuten und Sekunden kopiert, und die Datumskomponente wird auf 1900-01-01 festgelegt. Wenn die Genauigkeit des **time(n)**-Werts größer ist als drei Sekundenbruchteile, wird das **datetime**-Ergebnis gekürzt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime`-Wert.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -166,7 +167,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
 ```  
   
- Wenn eine Konvertierung in **datetimeoffset(n)** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt und die Uhrzeit kopiert. Der Zeitzonenoffset wird auf +00:00 festgelegt. Wenn die Genauigkeit in Sekundenbruchteilen des **time(n)** -Werts größer ist als die Genauigkeit des **datetimeoffset(n)** -Werts, wird der Wert entsprechend aufgerundet. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetimeoffset(3)`-Typ.  
+ Wenn eine Konvertierung in **datetimeoffset(n)** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt und die Uhrzeit kopiert. Der Zeitzonenoffset wird auf +00:00 festgelegt. Wenn die Genauigkeit in Sekundenbruchteilen des **time(n)**-Werts größer ist als die Genauigkeit des **datetimeoffset(n)**-Werts, wird der Wert entsprechend aufgerundet. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetimeoffset(3)`-Typ.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -183,7 +184,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
 ```  
   
- Wenn eine Konvertierung in **datetime2(n)** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt, die Zeitkomponente wird kopiert, und der Zeitzonenoffset wird auf 00:00 festgelegt. Wenn die Genauigkeit in Sekundenbruchteilen des **datetime2(n)** -Werts größer ist als die Genauigkeit des **time(n)** -Werts, wird der Wert entsprechend aufgerundet.  Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime2(2)`-Wert.  
+ Wenn eine Konvertierung in **datetime2(n)** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt, die Zeitkomponente wird kopiert, und der Zeitzonenoffset wird auf 00:00 festgelegt. Wenn die Genauigkeit in Sekundenbruchteilen des **datetime2(n)**-Werts größer ist als die Genauigkeit des **time(n)**-Werts, wird der Wert entsprechend aufgerundet.  Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime2(2)`-Wert.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
