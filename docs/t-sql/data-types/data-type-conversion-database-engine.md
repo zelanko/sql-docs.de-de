@@ -1,4 +1,5 @@
 ---
+description: Datentypkonvertierung (Datenbank-Engine)
 title: Datentypkonvertierung (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/23/2017
@@ -21,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 656f76bfb0b015742824b02e8d7f2f09c8bfe098
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368556"
 ---
 # <a name="data-type-conversion-database-engine"></a>Datentypkonvertierung (Datenbank-Engine)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -120,37 +121,37 @@ Da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../.
   
 In der folgenden Tabelle werden die Konvertierungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentypen dargestellt.
   
-|SQL Server-Datentyp|Visual Basic-Datentyp|  
+|SQL Server-Datentyp|Datentyp in Visual Basic|  
 |--------------------------|----------------------------|  
 |**char**, **varchar**, **text**, **nvarchar**, **ntext**|**String**|  
 |**decimal**, **numeric**|**String**|  
 |**bit**|**Boolescher Wert**|  
-|**binary**, **varbinary**, **image**|Eindimensionales **Byte()** -Array|  
+|**binary**, **varbinary**, **image**|Eindimensionales **Byte()**-Array|  
 |**int**|**Long**|  
 |**smallint**|**Integer**|  
 |**tinyint**|**Byte**|  
 |**float**|**Double**|  
 |**real**|**Single**|  
 |**money**, **smallmoney**|**Währung**|  
-|**datetime**, **smalldatetime**|**Date**|  
+|**datetime**, **smalldatetime**|**Datum**|  
 |Beliebige auf NULL festgelegte Typen|**Variant** wurde auf NULL festgelegt.|  
   
-Alle einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werte mit Ausnahme der **binary**-, **varbinary**- und **image**-Werte werden in einen einzelnen [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Wert konvertiert. Diese Werte werden in ein eindimensionales **Byte()** -Array in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] konvertiert. Dieses Array weist einen Bereich von **Byte (** 0 bis _length_ 1 **)** auf, wobei *length* der Anzahl von Bytes in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werten **binary**, **varbinary** oder **image** entspricht.
+Alle einzelnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Werte mit Ausnahme der **binary**-, **varbinary**- und **image**-Werte werden in einen einzelnen [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Wert konvertiert. Diese Werte werden in ein eindimensionales **Byte()**-Array in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] konvertiert. Dieses Array weist einen Bereich von **Byte (** 0 bis _length_ 1 **)** auf, wobei *length* der Anzahl von Bytes in den -Werten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** oder **image** entspricht.
   
 Im Folgenden sehen Sie die Konvertierungen von [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen.
   
-|Visual Basic-Datentyp|SQL Server-Datentyp|  
+|Datentyp in Visual Basic|SQL Server-Datentyp|  
 |----------------------------|--------------------------|  
 |**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**int**|  
 |**Double**, **Single**|**float**|  
 |**Währung**|**money**|  
-|**Date**|**datetime**|  
+|**Datum**|**datetime**|  
 |**String** mit maximal 4000 Zeichen|**varchar**/**nvarchar**|  
 |**String** mit mehr als 4000 Zeichen|**text**/**ntext**|  
-|Eindimensionales **Byte()** -Array mit maximal 8000 Byte|**varbinary**|  
-|Eindimensionales **Byte()** -Array mit mehr als 8000 Byte|**image**|  
+|Eindimensionales **Byte()**-Array mit maximal 8000 Byte|**varbinary**|  
+|Eindimensionales **Byte()**-Array mit mehr als 8000 Byte|**image**|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Gespeicherte OLE-Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
