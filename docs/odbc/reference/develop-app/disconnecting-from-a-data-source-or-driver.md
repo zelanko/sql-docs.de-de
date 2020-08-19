@@ -1,4 +1,5 @@
 ---
+description: Trennen der Verbindung mit einer Datenquelle oder einem Treiber
 title: Trennen der Verbindung mit einer Datenquelle oder einem Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 154a571bce3a337d539216ce89c32420ab981bd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc14ca0ebf29a2ab203a4408db4b5681ad667497
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476692"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>Trennen der Verbindung mit einer Datenquelle oder einem Treiber
 Wenn eine Anwendung mit der Verwendung einer Datenquelle fertig ist, wird **SQLDisconnect**aufgerufen. **SQLDisconnect** gibt alle-Anweisungen frei, die der Verbindung zugeordnet sind, und trennt den Treiber von der Datenquelle. Wenn eine Transaktion gerade verarbeitet wird, wird ein Fehler zurückgegeben.  

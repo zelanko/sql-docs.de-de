@@ -1,4 +1,5 @@
 ---
+description: Fertigstellen des Assistenten für langsam veränderliche Dimensionen
 title: Fertigstellen des Assistenten für langsam veränderliche Dimensionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb0d230f07ff082a16c55699f6c49eade131359e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e41f9348d083210a267f2a71a7da3f87c1b37591
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495673"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>Fertigstellen des Assistenten für langsam veränderliche Dimensionen
 
@@ -32,7 +33,7 @@ ms.locfileid: "86919336"
  **Die folgenden Ausgaben werden konfiguriert**  
  Bestätigen Sie, dass die Liste der Ausgaben für Ihre Zwecke angemessen ist.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche Dimensionen](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

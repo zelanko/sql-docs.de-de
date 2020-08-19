@@ -1,4 +1,5 @@
 ---
+description: ADO-Eigenschaften
 title: ADO-Eigenschaften | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 72a14ac3114a3b27a7570bc5961b9bd6ffff51cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451362"
 ---
 # <a name="ado-properties"></a>ADO-Eigenschaften
 
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Gibt an, auf welcher Seite sich der aktuelle Datensatz befindet.|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Gibt die Ordnungsposition des aktuellen Datensatzes eines **Recordset** -Objekts an.|  
@@ -85,7 +86,7 @@ ms.locfileid: "87242840"
 |[Quelle (ADO-Datensatz)](../../../ado/reference/ado-api/source-property-ado-record.md)|Gibt die durch das **Daten Satz** Objekt dargestellte Entität an.|  
 |[Quelle (ADO-Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Gibt die Quelle für die Daten in einem **Recordset** -Objekt an.|  
 |[SQLSTATE](../../../ado/reference/ado-api/sqlstate-property.md)|Gibt den SQL-Status für ein bestimmtes **Fehler** Objekt an.|  
-|[Zustand](../../../ado/reference/ado-api/state-property-ado.md)|Gibt für alle anwendbaren Objekte an, ob der Status des Objekts geöffnet oder geschlossen ist. Gibt für alle anwendbaren Objekte an, die eine asynchrone Methode ausführen, und zwar unabhängig davon, ob der aktuelle Zustand des Objekts eine Verbindung herstellt, ausführt oder abgerufen wird.|  
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|Gibt für alle anwendbaren Objekte an, ob der Status des Objekts geöffnet oder geschlossen ist. Gibt für alle anwendbaren Objekte an, die eine asynchrone Methode ausführen, und zwar unabhängig davon, ob der aktuelle Zustand des Objekts eine Verbindung herstellt, ausführt oder abgerufen wird.|  
 |[Status (ADO-Feld)](../../../ado/reference/ado-api/status-property-ado-field.md)|Gibt den Status eines **Feld** Objekts an.|  
 |[Status (ADO-Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Gibt den Status des aktuellen Datensatzes zu Batch Aktualisierungen oder anderen Massen Vorgängen an.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Gibt in einem hierarchischen **Recordsetobjekt** an, ob sich der Verweis auf die zugrunde liegenden untergeordneten Datensätze (d. h. das *Kapitel*) ändert, wenn sich die Position der übergeordneten Zeile ändert.|  
@@ -96,7 +97,7 @@ ms.locfileid: "87242840"
 |[Wert](../../../ado/reference/ado-api/value-property-ado.md)|Gibt den Wert an, der einem **Feld**, einem **Parameter**oder einem **Eigenschafts** Objekt zugewiesen ist.|  
 |[Version](../../../ado/reference/ado-api/version-property-ado.md)|Gibt die ADO-Versionsnummer an.|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO-Sammlungen](../../../ado/reference/ado-api/ado-collections.md)   
  [Dynamische ADO-Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

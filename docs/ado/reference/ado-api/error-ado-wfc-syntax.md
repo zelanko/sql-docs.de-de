@@ -1,4 +1,5 @@
 ---
+description: Error (ADO/WFC-Syntax)
 title: Fehler (ADO-WFC-Syntax) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a22c6688-5321-4e6a-ba2a-87985a0e854a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56cfb9cb22b1495569293f756c15545e4687575b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4d5d6cf32f4ee011112b5716fdc1475e79060107
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443992"
 ---
 # <a name="error-ado---wfc-syntax"></a>Error (ADO/WFC-Syntax)
 ## <a name="package-commswfcdata"></a>Paket "com. ms. wfc. Data"  

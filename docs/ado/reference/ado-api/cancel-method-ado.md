@@ -1,4 +1,5 @@
 ---
+description: Cancel-Methode (ADO)
 title: Cancel-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25b6de609d286847fe7458353203dd7f4b9c7b4b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 24d4beba2c703d2c8e21f51dd5bac9d06444a651
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451062"
 ---
 # <a name="cancel-method-ado"></a>Cancel-Methode (ADO)
 Bricht die Ausführung eines ausstehenden asynchronen Methoden Aufrufes ab.  

@@ -1,4 +1,5 @@
 ---
+description: catalog.environment_variables (SSISDB-Datenbank)
 title: catalog.environment_variables (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de22e52f25658f467ed21952b1eb32356e4ff5af
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b76045d5f901fa1444fd016d1c7673f46170332d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495330"
 ---
 # <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (SSISDB-Datenbank)
 
@@ -36,7 +37,7 @@ ms.locfileid: "86912668"
 |sensitive|**bit**|Wenn der Wert `1`lautet, ist die Variable vertraulich und wird beim Speichern verschlüsselt. Lautet der Wert `0`, ist die Variable nicht vertraulich, und der Wert wird als Nur-Text gespeichert.|  
 |value|**sql_variant**|Der Wert der Umgebungsvariablen. Wenn `0` vertraulich ist, wird der Nur-Text-Wert angezeigt. Wenn `1` vertraulich ist, wird der Wert **NULL** angezeigt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In dieser Sicht wird eine Zeile für jede Umgebungsvariable im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

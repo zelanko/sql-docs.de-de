@@ -1,4 +1,5 @@
 ---
+description: Variablen (Fenster)
 title: Fenster „Variablen“ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 061adfeced9ab5caa6da3e303593310761fa9e96
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ad545578e9d3baf019be37b1bc9c7969df5ee1ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495101"
 ---
 # <a name="variables-window"></a>Variablen (Fenster)
 
@@ -36,8 +37,8 @@ ms.locfileid: "86913696"
 > [!NOTE]
 >  Die Werte der Eigenschaften **Name** und **Namespace** müssen mit einem Buchstaben beginnen, wie in Unicode-Standard 2.0 definiert ist, oder mit einem Unterstrich (_). Bei den nachfolgenden Zeichen kann es sich um Buchstaben oder Zahlen gemäß Unicode-Standard 2.0 oder um einem Unterstrich (\_) handeln.  
   
-## <a name="options"></a>Tastatur  
- **Hinzufügen von Variablen**  
+## <a name="options"></a>Optionen  
+ **Variable hinzufügen**  
  Fügt eine benutzerdefinierte Variable hinzu.  
   
  **Variable verschieben**  

@@ -1,4 +1,5 @@
 ---
+description: ADO – Index für dynamische Eigenschaften
 title: Dynamischer ADO-Eigenschafts Index | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: connectivity
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7d2c5bcc1b07107164b8df73c8239ebd66b9fa4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fbd7933ac206f81460a7d0d50d0a7ac332cf154a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451462"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO – Index für dynamische Eigenschaften
 Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften** Auflistungen der nicht geöffneten [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) -und [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekte dynamische Eigenschaften hinzufügen. Ein bestimmter Anbieter kann auch zusätzliche Eigenschaften einfügen, wenn diese Objekte geöffnet werden. Einige dieser Eigenschaften werden im Abschnitt " [Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md) von ADO.net" aufgeführt. Weitere Informationen finden Sie unter den jeweiligen Anbietern im Abschnitt [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md) .  

@@ -1,4 +1,5 @@
 ---
+description: 'T-SQL-Tutorial: Erstellen und Abfragen von Datenbankobjekten'
 title: 'T-SQL-Tutorial: Erstellen und Abfragen von Datenbankobjekten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 07/30/2018
@@ -10,12 +11,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a8691ed6a84fce3eb12c8e13b2235356486c42f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3a489da04d7a65bf854cebf06e8103e22c1abc12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459174"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lektion 1: Erstellen und Abfragen von Datenbankobjekten
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +100,7 @@ Geben Sie in einem Abfrage-Editorfenster den folgenden Code ein, und führen Sie
  ```  
 
 ## <a name="insert-and-update-data-in-a-table"></a>Einfügen und Aktualisieren von Daten in einer Tabelle
-Nachdem Sie nun die **Products** -Tabelle erstellt haben, können Sie Daten mithilfe der INSERT-Anweisung in die Tabelle einfügen. Nach dem Einfügen der Daten ändern Sie den Inhalt einer Zeile mithilfe einer UPDATE-Anweisung. Mithilfe der WHERE-Klausel der UPDATE-Anweisung schränken Sie das Update auf eine einzelne Zeile ein. Durch die vier Anweisungen werden die folgenden Daten eingegeben.  
+Nachdem Sie nun die **Products**-Tabelle erstellt haben, können Sie Daten mithilfe der INSERT-Anweisung in die Tabelle einfügen. Nach dem Einfügen der Daten ändern Sie den Inhalt einer Zeile mithilfe einer UPDATE-Anweisung. Mithilfe der WHERE-Klausel der UPDATE-Anweisung schränken Sie das Update auf eine einzelne Zeile ein. Durch die vier Anweisungen werden die folgenden Daten eingegeben.  
   
 |ProductID|ProductName|Preis|ProductDescription|  
 |-------------|---------------|---------|----------------------|  

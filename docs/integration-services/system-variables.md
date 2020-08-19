@@ -1,4 +1,5 @@
 ---
+description: Systemvariablen
 title: Systemvariablen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: db0b1644491562c1d564a3df08da1b52eb69e947
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 913345034da936d6ed7a0c9ea3678c427b4f34ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495313"
 ---
 # <a name="system-variables"></a>Systemvariablen
 
@@ -72,7 +73,7 @@ ms.locfileid: "86912706"
   
 |Systemvariable|Datentyp|BESCHREIBUNG|  
 |---------------------|---------------|-----------------|  
-|**CreationName**|String|Der Name des Tasks.|  
+|**CreationName**|String|Der Name der Aufgabe.|  
 |**LocaleId**|Int32|Das Gebietsschema, das vom Task verwendet wird.|  
 |**TaskID**|String|Der eindeutige Bezeichner einer Taskinstanz.|  
 |**TaskName**|String|Der Name der Taskinstanz.|  
@@ -108,6 +109,6 @@ ms.locfileid: "86912706"
  Diese Regel gilt auch für benutzerdefinierte Variablen. Während die Datentypen der Systemvariablen nicht geändert werden können, und Sie diese Variablen den Datentypen entsprechend anpassen müssen, sind benutzerdefinierte Variablen jedoch im Vergleich hierzu flexibler. Die in Parameterbindungen verwendeten benutzerdefinierten Variablen sind in der Regel mit den Datentypen definiert, die mit den zugeordneten Datentypen der Parameter kompatibel sind.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Zuordnen von Abfrageparametern zu Variablen in einem „SQL ausführen“-Task ](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
+ [Zuordnen von Abfrageparametern zu Variablen in einem Task SQL ausführen](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

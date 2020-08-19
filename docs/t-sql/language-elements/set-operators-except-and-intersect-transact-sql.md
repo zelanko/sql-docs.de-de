@@ -1,4 +1,5 @@
 ---
+description: Mengenoperatoren – EXCEPT und INTERSECT (Transact-SQL)
 title: EXCEPT und INTERSECT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf59a6245de8c1520dcd8196cc207fe2761d84c6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 06029c531fbdebfd74d3a2314221725a41647853
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459296"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Mengenoperatoren – EXCEPT und INTERSECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

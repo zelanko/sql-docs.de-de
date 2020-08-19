@@ -1,4 +1,5 @@
 ---
+description: DataTypeEnum
 title: Datatypum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 456b11972fcb9b7bb20ee07b58e36d2daa5cc0da
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ec805f403e3f76cacde3374cda091bf9b587b74c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444202"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Gibt den Datentyp eines [Felds](../../../ado/reference/ado-api/field-object.md), eines [Parameters](../../../ado/reference/ado-api/parameter-object.md)oder einer [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md)an. Der entsprechende OLE DB Typindikator wird in Klammern in der Beschreibungs Spalte der folgenden Tabelle angezeigt.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**Adarray**|0x2000|Ein Flagwert, der immer mit einer anderen Datentyp Konstante kombiniert wird und ein Array des anderen Datentyps angibt. Gilt nicht für ADOX.|  
 |**adBigInt**|20|Gibt eine 8-Byte-Ganzzahl mit Vorzeichen (DBTYPE_I8) an.|  
@@ -71,7 +72,7 @@ Gibt den Datentyp eines [Felds](../../../ado/reference/ado-api/field-object.md),
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |Adoumums. DataType. Array|  
 |Adoumums. DataType. bigint|  

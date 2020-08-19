@@ -1,4 +1,5 @@
 ---
+description: Bereitstellen eines SSIS-Pakets aus Visual Studio Code mit Transact-SQL
 title: Bereitstellen eines SSIS-Pakets mit Transact-SQL (VS Code) | Microsoft-Dokumentation
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af19358906b70cad15103913eebf45507f449410
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dec289a898c25900afb7f5dd30ec2aa2fe9e34f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495417"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Bereitstellen eines SSIS-Pakets aus Visual Studio Code mit Transact-SQL
 
@@ -42,7 +43,7 @@ Dieser Schnellstart enthält keine Anleitung zum Bereitstellen von SSIS-Paketen 
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>Festlegen des Sprachmodus auf SQL in VS Code
 
-Legen Sie den Sprachmodus auf `mssql`SQL**in Visual Studio Code fest, um**-Befehle und T-SQL IntelliSense zu aktivieren.
+Legen Sie den Sprachmodus auf `mssql`SQL** in Visual Studio Code fest, um **-Befehle und T-SQL IntelliSense zu aktivieren.
 
 1. Öffnen Sie zuerst Visual Studio Code und dann ein neues Fenster. 
 
@@ -52,7 +53,7 @@ Legen Sie den Sprachmodus auf `mssql`SQL**in Visual Studio Code fest, um**-Befeh
 
 ## <a name="supported-authentication-method"></a>Unterstützte Authentifizierungsmethode
 
-Weitere Informationen hierzu finden Sie unter [Authentifizierungsmethoden im Bereitstellungs-Assistenten](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+Weitere Informationen finden Sie unter [Authentifizierungsmethoden für die Bereitstellung](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="connect-to-the-ssis-catalog-database"></a>Herstellen einer Verbindung mit der SSIS-Katalogdatenbank
 

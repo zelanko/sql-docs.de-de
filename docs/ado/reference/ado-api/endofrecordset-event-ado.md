@@ -1,4 +1,5 @@
 ---
+description: EndOfRecordset-Ereignis (ADO)
 title: EndOf Recordset-Ereignis (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd7710ebc7a5af323c247860baedd4b30d91fe21
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d96d11333c47aeb190cd2842a5a65a832642eb8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444032"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset-Ereignis (ADO)
 Das **EndOfRecordset** -Ereignis wird aufgerufen, wenn versucht wird, zu einer Zeile nach dem Ende des [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)zu wechseln.  

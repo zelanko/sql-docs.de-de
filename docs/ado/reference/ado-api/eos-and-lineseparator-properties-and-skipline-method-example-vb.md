@@ -1,4 +1,5 @@
 ---
+description: Eigenschaften von EOS und lineseparser und SkipLine-Methode (VB)
 title: Eigenschaften von EOS und lineseparser und SkipLine-Methode (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4998ffe368a9f7773474514a7d53922d1b6cb36
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3265cf082790da2b9be844bd58b7af466cb45a18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444022"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Eigenschaften von EOS und lineseparser und SkipLine-Methode (VB)
 In diesem Beispiel wird veranschaulicht, wie Text Ströme zeilenweise bearbeitet werden. Die Auswirkung der Änderung des Zeilen Trennzeichens aus dem Standard-Wagen Rücklauf/Zeilenvorschub (**adCRLF**) in einfach Zeilenvorschub (**adlf**) oder Wagen Rücklauf (**adcr**) wird angezeigt.  

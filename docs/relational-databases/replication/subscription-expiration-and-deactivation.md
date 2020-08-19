@@ -1,4 +1,5 @@
 ---
+description: Abonnementablauf und -deaktivierung
 title: Abonnementablauf und -deaktivierung | Microsoft Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
@@ -21,12 +22,12 @@ ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 507c80dc80ca144028ad7ef928173a826b5d042a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64fb9d21457558d2d0f3373b926f426808b9105d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423404"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Abonnementablauf und -deaktivierung
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85729368"
  Weitere Informationen zum Festlegen von Beibehaltungsdauern finden Sie unter [Festlegen des Ablaufdatums für Abonnements](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Festlegen der Beibehaltungsdauer für die Verteilung bei Transaktionsveröffentlichungen &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md), und [Verleger- und Verteilereigenschaften](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
 ## <a name="transactional-replication"></a>Transaktionsreplikation  
- Die Transaktionsreplikation verwendet die maximale Beibehaltungsdauer für die Verteilung (`@max_distretention`-Parameter von [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) und die Beibehaltungsdauer für die Veröffentlichung (`@retention`-Parameter von [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
+ Die Transaktionsreplikation verwendet die maximale Beibehaltungsdauer für die Verteilung (die `@max_distretention`-Parameter von [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) und die Beibehaltungsdauer für die Veröffentlichung (die `@retention`-Parameter von [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
   
 -   Falls ein Abonnement nicht innerhalb der maximalen Beibehaltungsdauer für die Verteilung (standardmäßig 72 Stunden) synchronisiert wird und Änderungen in der Verteilungsdatenbank vorliegen, die noch nicht an den Abonnenten übermittelt wurden, wird das Abonnement vom Auftrag **Verteilungscleanup** , der auf dem Verteiler ausgeführt wird, als deaktiviert gekennzeichnet. Das Abonnement muss erneut initialisiert werden.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85729368"
      Wenn ein Pushabonnement abläuft, wird es vollständig entfernt. Bei Pullabonnements ist dies nicht der Fall. Sie müssen einen Cleanup der Pullabonnements auf dem Abonnenten ausführen. Weitere Informationen finden Sie unter [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Mergereplikation  
- Bei der Mergereplikation wird die Beibehaltungsdauer der Veröffentlichung (`@retention`- und `@retention_period_unit`-Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)) verwendet. Wenn ein Abonnement abläuft, muss es erneut initialisiert werden, da Metadaten für das Abonnement entfernt werden. Abonnements, die nicht erneut initialisiert werden, werden vom Auftrag **Cleanup abgelaufener Abonnements** gelöscht, der auf dem Verleger ausgeführt wird. Dieser Auftrag wird standardmäßig einmal pro Tag ausgeführt, und es werden dabei alle Pushabonnements gelöscht, die seit einem Zeitraum, der der doppelten Beibehaltungsdauer der Veröffentlichung entspricht, nicht synchronisiert wurden. Beispiel:  
+ Bei der Mergereplikation wird die Beibehaltungsdauer der Veröffentlichung (die `@retention` und `@retention_period_unit`-Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)) verwendet. Wenn ein Abonnement abläuft, muss es erneut initialisiert werden, da Metadaten für das Abonnement entfernt werden. Abonnements, die nicht erneut initialisiert werden, werden vom Auftrag **Cleanup abgelaufener Abonnements** gelöscht, der auf dem Verleger ausgeführt wird. Dieser Auftrag wird standardmäßig einmal pro Tag ausgeführt, und es werden dabei alle Pushabonnements gelöscht, die seit einem Zeitraum, der der doppelten Beibehaltungsdauer der Veröffentlichung entspricht, nicht synchronisiert wurden. Beispiel:  
   
 -   Wenn eine Veröffentlichung eine Beibehaltungsdauer von 14 Tagen aufweist, kann ein Abonnement ablaufen, wenn es nicht innerhalb von 14 Tagen synchronisiert wurde.  
   

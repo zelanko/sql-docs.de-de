@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_secondary_database (Transact-SQL)
 title: sp_help_log_shipping_secondary_database (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 215ad3a4a38abd962f43756ecb4c724c625f251d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac291d5c829c1ddc4022a7d0d59f65348daa859a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485993"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @secondary_database = ] 'secondary_database'`Der Name der sekundären Datenbank. *secondary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @secondary_database = ] 'secondary_database'` Der Name der sekundären Datenbank. *secondary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
-`[ @secondary_id = ] 'secondary_id'`Die ID für den sekundären Server in der Protokoll Versand Konfiguration. *secondary_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
+`[ @secondary_id = ] 'secondary_id'` Die ID für den sekundären Server in der Protokoll Versand Konfiguration. *secondary_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -84,7 +85,7 @@ sp_help_log_shipping_secondary_database
 |**history_retention_period**|Die Zeitdauer in Minuten, die Verlaufsdatensätze des Protokollversands für eine bestimmte sekundäre Datenbank vor dem Löschen aufbewahrt werden.|  
 |**last_restored_latency**|Der Zeitraum in Minuten zwischen dem Erstellen der Protokollsicherung auf dem primären Server und dem Wiederherstellen auf dem sekundären Server.<br /><br /> Der Anfangswert ist NULL.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie den *secondary_database* -Parameter einschließen, enthält das Resultset Informationen zu dieser sekundären Datenbank. Wenn Sie den *secondary_id* -Parameter einschließen, enthält das Resultset Informationen zu allen sekundären Datenbanken, die mit dieser sekundären ID verknüpft sind.  
   
  **sp_help_log_shipping_secondary_database** muss von der **Master** -Datenbank auf dem sekundären Server ausgeführt werden.  

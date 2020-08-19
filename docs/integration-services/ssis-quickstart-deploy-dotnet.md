@@ -1,4 +1,5 @@
 ---
+description: Bereitstellen eines SSIS-Projekts mit C#-Code in einer .NET-App
 title: Bereitstellen eines SSIS-Projekts mit .NET-Code (C#) | Microsoft-Dokumentation
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4928f4394169987d4e3d06b6ddc9f4a4a33837c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 70bca79279d8db0bad18e1ee7ce9e4648dfb3c36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495470"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Bereitstellen eines SSIS-Projekts mit C#-Code in einer .NET-App
 
@@ -53,7 +54,7 @@ Um das Paket in Azure SQL-Datenbank bereitzustellen, rufen Sie die Verbindungsin
 
 ## <a name="supported-authentication-method"></a>Unterstützte Authentifizierungsmethode
 
-Weitere Informationen hierzu finden Sie unter [Authentifizierungsmethoden im Bereitstellungs-Assistenten](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+Weitere Informationen finden Sie unter [Authentifizierungsmethoden für die Bereitstellung](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="create-a-new-visual-studio-project"></a>Erstellen eines neuen Visual Studio-Projekts
 

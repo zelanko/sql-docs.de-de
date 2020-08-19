@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_service (Transact-SQL)
 title: sp_fulltext_service (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 435d2e2a5b290e8307b322831a96a1e55847339b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 33610db3883facdc6dfb198cfe8947ef965baa82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486033"
 ---
 # <a name="sp_fulltext_service-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @action = ] 'action'`Die Eigenschaft, die geändert oder zurückgesetzt werden soll. *Action* ist vom Datentyp **nvarchar (100) und hat** keinen Standardwert. Eine Liste mit den Eigenschaften von*c*tion, deren Beschreibungen und den Werten, die festgelegt werden können, finden Sie in der Tabelle unter dem *value* -Argument. Dieses Argument gibt die folgenden Eigenschaften zurück: Datentyp, aktuell zur Ausführung verwendeter Wert, Minimal- oder Maximalwert und ggf. Status zur Aktualität.  
+`[ @action = ] 'action'` Die Eigenschaft, die geändert oder zurückgesetzt werden soll. *Action* ist vom Datentyp **nvarchar (100) und hat** keinen Standardwert. Eine Liste mit den Eigenschaften von*c*tion, deren Beschreibungen und den Werten, die festgelegt werden können, finden Sie in der Tabelle unter dem *value* -Argument. Dieses Argument gibt die folgenden Eigenschaften zurück: Datentyp, aktuell zur Ausführung verwendeter Wert, Minimal- oder Maximalwert und ggf. Status zur Aktualität.  
   
-`[ @value = ] value`Der Wert der angegebenen Eigenschaft. der *Wert* ist **sql_variant**. der Standardwert ist NULL. Wenn @value NULL ist, gibt **sp_fulltext_service** die aktuelle Einstellung zurück. In dieser Tabelle werden Aktionseigenschaften, zugehörige Beschreibungen und die festzulegenden Werte aufgelistet.  
+`[ @value = ] value` Der Wert der angegebenen Eigenschaft. der *Wert* ist **sql_variant**. der Standardwert ist NULL. Wenn @value NULL ist, gibt **sp_fulltext_service** die aktuelle Einstellung zurück. In dieser Tabelle werden Aktionseigenschaften, zugehörige Beschreibungen und die festzulegenden Werte aufgelistet.  
   
 > [!NOTE]  
 >  Die folgenden Aktionen werden in einer zukünftigen Version von entfernt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **clean_up**, **connect_timeout**, **data_timeout**und **resource_usage**. Vermeiden Sie die Verwendung dieser Aktionen bei neuen Entwicklungsarbeiten, und planen Sie die Änderung von Anwendungen, die diese Aktionen zurzeit verwenden.  

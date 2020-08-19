@@ -1,4 +1,5 @@
 ---
+description: Herstellen einer Verbindung mit einer PostgreSQL-Datenquelle (SQL Server-Import/Export-Assistent)
 title: Herstellen einer Verbindung mit einer PostgreSQL-Datenquelle (SQL Server-Import/Export-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fdb7545f2dc8bf5d27b26e54bf76b0307aad235
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 023c791e27fba3c26ac3ccd9778f0beee44536b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495593"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Herstellen einer Verbindung mit einer PostgreSQL-Datenquelle (SQL Server-Import/Export-Assistent)
 
@@ -54,7 +55,7 @@ Assemblieren Sie eine Verbindungszeichenfolge, die folgende Einstellungen und de
 > Erhalten Sie Hilfe beim Assemblieren einer passenden Verbindungszeichenfolge. Stellen Sie alternativ einen vorhandenen DSN (Datenquellennamen, Data Source Name) bereit, oder erstellen Sie einen neuen, statt eine Verbindungszeichenfolge anzugeben. Weitere Informationen zu diesen Optionen finden Sie unter [Herstellen einer Verbindung mit einer ODBC-Datenquelle](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 **Treiber**  
-Der Name des ODBC-Treibers: **PostgreSQL ODBC Driver (UNICODE)** oder **PostgreSQL ODBC Driver (ANSI)** .
+Der Name des ODBC-Treibers: **PostgreSQL ODBC Driver (UNICODE)** oder **PostgreSQL ODBC Driver (ANSI)**.
 
 **Server**  
 Der Name des PostgreSQL-Servers. 

@@ -1,4 +1,5 @@
 ---
+description: Laden der Ausgabe eines lokalen Pakets
 title: Laden der Ausgabe eines lokalen Pakets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 98699c4297907a5a05710af231d065f5a42fd94d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f53a5bc1707e8f806d766a611b7792ab056d6f54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495553"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Laden der Ausgabe eines lokalen Pakets
 
@@ -43,7 +44,7 @@ ms.locfileid: "86913334"
   
 1.  Konfigurieren Sie in dem Paket ein DataReader-Ziel so, dass die Ausgabe empfangen wird, die in die Clientanwendung gelesen werden soll. Geben Sie dem DataReader-Ziel einen aussagekräftigen Namen, da Sie diesen Namen später in der Clientanwendung verwenden werden. Notieren Sie sich den Namen des DataReader-Ziels.  
   
-2.  Legen Sie in dem Entwicklungsprojekt einen Verweis auf den **Microsoft.SqlServer.Dts.DtsClient**-Namespace fest, indem Sie die Assembly **Microsoft.SqlServer.Dts.DtsClient.dll** suchen. Diese Assembly wird standardmäßig im Verzeichnis **C:\Programme\Microsoft SQL Server\100\DTS\Binn** installiert. Importieren Sie den Namespace mithilfe der C#-Anweisung **Using** oder der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Anweisung **Imports** in Ihren Code.  
+2.  Legen Sie in dem Entwicklungsprojekt einen Verweis auf den **Microsoft.SqlServer.Dts.DtsClient**-Namespace fest, indem Sie die Assembly **Microsoft.SqlServer.Dts.DtsClient.dll** suchen. Diese Assembly wird standardmäßig im Verzeichnis **C:\Programme\Microsoft SQL Server\100\DTS\Binn** installiert. Importieren Sie den Namespace mithilfe der C#-Anweisung **Using** oder der -Anweisung [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **Imports** in Ihren Code.  
   
 3.  Erstellen Sie in Ihrem Code ein Objekt vom Typ **DtsClient.DtsConnection** mit einer Verbindungszeichenfolge, die die Befehlszeilenparameter enthält, die **dtexec.exe** zum Ausführen des Pakets benötigt. Weitere Informationen finden Sie [hier](../../integration-services/packages/dtexec-utility.md). Öffnen Sie dann die Verbindung mit dieser Verbindungszeichenfolge. Sie können auch das **dtexecui**-Hilfsprogramm verwenden, um die erforderliche Verbindungszeichenfolge visuell zu erstellen.  
   
@@ -61,7 +62,7 @@ ms.locfileid: "86913334"
 6.  Rufen Sie die **Read**-Methode des DataReader so oft wie nötig auf, um die Zeilen der Ausgabedaten zu durchlaufen. Verwenden Sie die Daten, oder speichern Sie die Daten zur späteren Verwendung in der Clientanwendung.  
   
     > [!IMPORTANT]  
-    >  Die **Read** -Methode dieser Implementierung des DataReader gibt, nachdem die letzte Zeile der Daten gelesen wurde, noch ein weiteres Mal **TRUE** zurück. Daher ist es schwierig, den normalen Code zu verwenden, der den DataReader durchläuft, während von **Read** **TRUE** zurückgegeben wird. Wenn der Code versucht, den DataReader oder die Verbindung nach dem Lesen der erwarteten Anzahl von Reihen zu schließen, ohne einen weiteren finalen Aufruf der **Read**-Methode durchzuführen, gibt der Code einen Ausnahmefehler aus. Wenn der Code jedoch versucht, die Daten bei dieser letzten Iteration durch eine Schleife zu lesen und von **Read** immer noch **TRUE** zurückgegeben wird, die letzte Zeile jedoch übergeben wurde, gibt der Code eine nicht behandelte **ApplicationException** mit der folgenden Meldung aus: „The SSIS IDataReader is past the end of the resultset.“ („Das SSIS-IDataReader-Objekt liegt hinter dem Ende des Resultsets.“) Dieses Verhalten unterscheidet sich von dem anderer DataReader-Implementierungen. Wenn Sie daher eine Schleife verwenden, um die Zeilen in dem DataReader zu lesen, und von **Read** **TRUE** zurückgegeben wird, müssen Sie den Code so schreiben, dass diese erwartete **ApplicationException** beim letzten erfolgreichen Aufruf der **Read**-Methode abgefangen, getestet und verworfen wird. Wenn Sie die Anzahl von erwarteten Zeilen im Voraus kennen, können Sie auch die Zeilen verarbeiten und dann die **Read**-Methode ein letztes Mal aufrufen, bevor Sie den DataReader und die Verbindung schließen.  
+    >  Die **Read** -Methode dieser Implementierung des DataReader gibt, nachdem die letzte Zeile der Daten gelesen wurde, noch ein weiteres Mal **TRUE** zurück. Daher ist es schwierig, den normalen Code zu verwenden, der den DataReader durchläuft, während von **Read****TRUE** zurückgegeben wird. Wenn der Code versucht, den DataReader oder die Verbindung nach dem Lesen der erwarteten Anzahl von Reihen zu schließen, ohne einen weiteren finalen Aufruf der **Read**-Methode durchzuführen, gibt der Code einen Ausnahmefehler aus. Wenn der Code jedoch versucht, die Daten bei dieser letzten Iteration durch eine Schleife zu lesen und von **Read** immer noch **TRUE** zurückgegeben wird, die letzte Zeile jedoch übergeben wurde, gibt der Code eine nicht behandelte **ApplicationException** mit der folgenden Meldung aus: „The SSIS IDataReader is past the end of the resultset.“ („Das SSIS-IDataReader-Objekt liegt hinter dem Ende des Resultsets.“) Dieses Verhalten unterscheidet sich von dem anderer DataReader-Implementierungen. Wenn Sie daher eine Schleife verwenden, um die Zeilen in dem DataReader zu lesen, und von **Read****TRUE** zurückgegeben wird, müssen Sie den Code so schreiben, dass diese erwartete **ApplicationException** beim letzten erfolgreichen Aufruf der **Read**-Methode abgefangen, getestet und verworfen wird. Wenn Sie die Anzahl von erwarteten Zeilen im Voraus kennen, können Sie auch die Zeilen verarbeiten und dann die **Read**-Methode ein letztes Mal aufrufen, bevor Sie den DataReader und die Verbindung schließen.  
   
 7.  Rufen Sie die **Dispose**-Methode des **DtsCommand**-Objekts auf. Dies ist besonders wichtig, wenn Sie **DtsDataParameter**-Objekte verwendet haben.  
   
@@ -300,7 +301,7 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Grundlegendes zu den Unterschieden zwischen der lokalen und der Remoteausführung](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Programmgesteuertes Laden und Ausführen eines lokalen Pakets](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Programmgesteuertes Laden und Ausführen eines Remotepakets](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  

@@ -1,4 +1,5 @@
 ---
+description: Ausführen von Testfällen (SybaseToSQL)
 title: Ausführen von Test Fällen (sybaseto SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d828142d83f21cf38663241d593fe197b9715592
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ea2b250f59a29a16bc77ad23e28b0823461a8ace
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468753"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ausführen von Testfällen (SybaseToSQL)
 Wenn der SSMA-Tester einen Testfall ausführt, führt er die für das Testen ausgewählten Objekte aus und erstellt einen Bericht über Überprüfungs Ergebnisse. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Sybase und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird anhand der Schema-Mapping-Einstellungen für das aktuelle SSMA-Projekt festgelegt.  
@@ -44,7 +45,7 @@ Angenommen, die überprüfte Tabelle hat den Namen USER_TABLE. Für eine solche 
   
 Die folgenden Objekte werden bei Sybase in der SSMATESTER2005db-oder SSMATESTER2008db-Datenbank und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der ssmatesterdb_syb-Datenbank erstellt.  
   
-|Name|Typ|BESCHREIBUNG|  
+|Name|type|Beschreibung|  
 |--------|--------|---------------|  
 |USER_TABLE $ trg|Trigger|Löst die Überprüfung der Änderungen in der verifizierten Tabelle aus.|  
 |USER_TABLE $ AUD|Tabelle|Tabelle, in der gelöschte und über schriebene Zeilen gespeichert werden.|  
@@ -56,7 +57,7 @@ Die folgenden Objekte werden bei Sybase in der SSMATESTER2005db-oder SSMATESTER2
   
 Das folgende Objekt wird in der Datenbank der verifizierten Tabelle unter Sybase und erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Name|Typ|BESCHREIBUNG|  
+|Name|type|Beschreibung|  
 |--------|--------|---------------|  
 |USER_TABLE $ trg|Trigger|Löst die Überprüfung der Änderungen in der verifizierten Tabelle aus.|  
   

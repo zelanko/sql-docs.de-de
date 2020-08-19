@@ -1,4 +1,5 @@
 ---
+description: Clone-Methode (ADO)
 title: Clone-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c936eb8016be0851fa6d3ecff1f624eab6c895f3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 449d453ba8e1d27489fecaa8da56e76e1c85f313
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450982"
 ---
 # <a name="clone-method-ado"></a>Clone-Methode (ADO)
 Erstellt ein doppeltes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt aus einem vorhandenen **Recordset** -Objekt. Gibt optional an, dass der Klon schreibgeschützt ist.  
@@ -44,7 +45,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Eine Objekt Variable, die das **Recordset** -Objekt identifiziert, das dupliziert werden soll.  
   
  *LockType*  
- Dies ist optional. Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) -Wert, der entweder den Sperrtyp des ursprünglichen **Recordsets**oder ein Schreib geschütztes **Recordset**angibt. Gültige Werte sind " **adlockunspezifiziert** " oder " **adlockread only**".  
+ Optional. Ein [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) -Wert, der entweder den Sperrtyp des ursprünglichen **Recordsets**oder ein Schreib geschütztes **Recordset**angibt. Gültige Werte sind " **adlockunspezifiziert** " oder " **adlockread only**".  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **Clone** -Methode, um mehrere doppelte **Recordset** -Objekte zu erstellen, insbesondere, wenn Sie mehr als einen aktuellen Datensatz in einer bestimmten Gruppe von Datensätzen verwalten möchten. Die Verwendung der **Klon** Methode ist effizienter als das Erstellen und Öffnen eines neuen **Recordset** -Objekts, das die gleiche Definition wie das Original verwendet.  

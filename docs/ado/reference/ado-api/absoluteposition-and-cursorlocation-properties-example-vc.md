@@ -1,4 +1,5 @@
 ---
+description: Eigenschaften von "AbsolutePosition" und "Cursor Location" (VC + +)
 title: Eigenschaften von "AbsolutePosition" und "Cursor Location" (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58455116560db74d1e1966752e16595be3b74be8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a6f35365fc81696faddd90e71c657c7138adb5c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451762"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>Eigenschaften von "AbsolutePosition" und "Cursor Location" (VC + +)
 In diesem Beispiel wird veranschaulicht, wie die [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) -Eigenschaft den Fortschritt einer Schleife verfolgen kann, in der alle Datensätze eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)aufgelistet werden. Er verwendet die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft, um die **AbsolutePosition** -Eigenschaft zu aktivieren, indem der Cursor auf einen Client Cursor festgelegt wird.  

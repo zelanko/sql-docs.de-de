@@ -1,4 +1,5 @@
 ---
+description: AddNew-Methode (ADO)
 title: AddNew-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6359d1b9f69963120e9446c47aa5473beedd127
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b3c6d6b33177f3c3db7c2d414759a5067a91b80d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451582"
 ---
 # <a name="addnew-method-ado"></a>AddNew-Methode (ADO)
 Erstellt einen neuen Datensatz für ein Aktualisier bares [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt.  
@@ -37,11 +38,11 @@ recordset.AddNew FieldList, Values
  *Recordset*  
  Ein **Recordset** -Objekt.  
   
- *Feldliste*  
- Dies ist optional. Ein einzelner Name oder ein Array von Namen oder Ordinalpositionen der Felder im neuen Datensatz.  
+ *FieldList*  
+ Optional. Ein einzelner Name oder ein Array von Namen oder Ordinalpositionen der Felder im neuen Datensatz.  
   
  *Werte*  
- Dies ist optional. Ein einzelner Wert oder ein Array von Werten für die Felder im neuen Datensatz. Wenn *FieldList* ein Array ist, müssen die *Werte* auch ein Array mit derselben Anzahl von Membern sein. Andernfalls tritt ein Fehler auf. Die Reihenfolge der Feldnamen muss der Reihenfolge der Feldwerte in jedem Array entsprechen.  
+ Optional. Ein einzelner Wert oder ein Array von Werten für die Felder im neuen Datensatz. Wenn *FieldList* ein Array ist, müssen die *Werte* auch ein Array mit derselben Anzahl von Membern sein. Andernfalls tritt ein Fehler auf. Die Reihenfolge der Feldnamen muss der Reihenfolge der Feldwerte in jedem Array entsprechen.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **AddNew** -Methode, um einen neuen Datensatz zu erstellen und zu initialisieren. Verwenden Sie die Methode [unterstützt](../../../ado/reference/ado-api/supports-method.md) mit **adAddNew** (ein [Cursor](../../../ado/reference/ado-api/cursoroptionenum.md) Wert), um zu überprüfen, ob dem aktuellen **Recordset** -Objektdaten Sätze hinzugefügt werden können.  

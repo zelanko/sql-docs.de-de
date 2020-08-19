@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)'
 title: '@@TOTAL_ERRORS (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9fd94216bcb95eaa4a21a3d96a949d3a6ea67318
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 946ae7898322ec80c237fdf52ac86489bad93eff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422574"
 ---
 # <a name="x40x40total_errors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,8 +49,8 @@ ms.locfileid: "87110722"
 ## <a name="return-types"></a>Rückgabetypen
  **integer**  
   
-## <a name="remarks"></a>Bemerkungen  
- Nicht alle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetretenen Schreibfehler werden von dieser Funktion berücksichtigt. Gelegentlich werden nicht als schwerwiegend geltende Schreibfehler vom Server selbst bearbeitet und nicht als Fehler eingestuft. Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_monitor**aus, um einen Bericht anzuzeigen, der mehrere**-Statistiken enthält (einschließlich der Gesamtanzahl von Fehlern).  
+## <a name="remarks"></a>Hinweise  
+ Nicht alle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetretenen Schreibfehler werden von dieser Funktion berücksichtigt. Gelegentlich werden nicht als schwerwiegend geltende Schreibfehler vom Server selbst bearbeitet und nicht als Fehler eingestuft. Führen Sie **sp_monitor** aus, um einen Bericht anzuzeigen, der mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Statistiken enthält (einschließlich der Gesamtanzahl von Fehlern).  
   
 ## <a name="examples"></a>Beispiele  
  Dieses Beispiel zeigt die Anzahl der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgetretenen Fehler bis zum aktuellen Datum und der aktuellen Uhrzeit an.  
@@ -66,7 +67,7 @@ Errors      As of
 0           3/28/2003 12:32:11 PM   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [System Statistical Functions &#40;Transact-SQL&#41; (Statistische Systemfunktionen (Transact-SQL))](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   

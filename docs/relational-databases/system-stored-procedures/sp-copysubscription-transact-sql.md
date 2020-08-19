@@ -1,4 +1,5 @@
 ---
+description: sp_copysubscription (Transact-SQL)
 title: sp_copysubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80927c19376e97b25c21af1f93faedd5637eb8bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d157cd75c3443c9a74a3bab6affe8fca75fb4db8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486187"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,16 +44,16 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @filename = ] 'file_name'`Die Zeichenfolge, die den kompletten Pfad, einschließlich des Datei namens, angibt, in dem eine Kopie der Datendatei (. mdf) gespeichert wird. der *Dateiname ist vom Datentyp* **nvarchar (260)** und hat keinen Standardwert.  
+`[ @filename = ] 'file_name'` Die Zeichenfolge, die den kompletten Pfad, einschließlich des Datei namens, angibt, in dem eine Kopie der Datendatei (. mdf) gespeichert wird. der *Dateiname ist vom Datentyp* **nvarchar (260)** und hat keinen Standardwert.  
   
-`[ @temp_dir = ] 'temp_dir'`Der Name des Verzeichnisses, das die temporären Dateien enthält. *temp_dir* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. Wenn der Wert NULL ist, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird das Standarddaten Verzeichnis verwendet. Das Verzeichnis sollte über ausreichenden Speicherplatz verfügen, um eine Datei aufzunehmen, die der Größe aller Datenbankdateien auf dem Abonnenten zusammen entspricht.  
+`[ @temp_dir = ] 'temp_dir'` Der Name des Verzeichnisses, das die temporären Dateien enthält. *temp_dir* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. Wenn der Wert NULL ist, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird das Standarddaten Verzeichnis verwendet. Das Verzeichnis sollte über ausreichenden Speicherplatz verfügen, um eine Datei aufzunehmen, die der Größe aller Datenbankdateien auf dem Abonnenten zusammen entspricht.  
   
 `[ @overwrite_existing_file = ] 'overwrite_existing_file'`Ist ein optionales boolesches Flag, das angibt, ob eine vorhandene Datei mit demselben Namen überschrieben werden soll, die in ** \@ filename**angegeben ist. *overwrite_existing_file*ist vom Typ **Bit**. der Standardwert ist **0**. Wenn der Wert **1**ist, wird die durch ** \@ filename**angegebene Datei überschrieben, sofern vorhanden. Wenn der Wert **0**ist, schlägt die gespeicherte Prozedur fehl, wenn die Datei vorhanden ist, und die Datei wird nicht überschrieben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_copysubscription** wird bei allen Replikations Typen verwendet, um eine Abonnement Datenbank als Alternative zum Anwenden einer Momentaufnahme auf dem Abonnenten in eine Datei zu kopieren. Die Datenbank muss so konfiguriert sein, dass ausschließlich Pullabonnements unterstützt werden. Benutzer mit entsprechenden Berechtigungen können Kopien der Abonnementdatenbank erstellen und die Abonnementdatei (MSF) dann per E-Mail, durch Kopieren oder Übertragen an einen anderen Abonnenten senden. Dort kann die Datei dann als Abonnement angefügt werden.  
   
  Die Größe der kopierten Abonnementdatenbank muss weniger als 2 Gigabyte (GB) betragen.  

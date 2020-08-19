@@ -1,4 +1,5 @@
 ---
+description: catalog.get_parameter_values (SSISDB-Datenbank)
 title: catalog.get_parameter_values (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 947b8607c54e3cb2022b32be0f68bab0dc53ffee
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 349a68fa94cfb479c6c3823b2b295a3a65498692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913012"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495411"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (SSISDB-Datenbank)
 
@@ -44,7 +45,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  Der Name des Projekts, in dem sich die Parameter befinden. Der *project_name* ist **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Der Name des Pakets. Geben Sie den Paketnamen an, um alle Projektparameter und die Parameter aus einem bestimmten Paket abzurufen. Der *package_name* ist **nvarchar(260)** .  
+ Der Name des Pakets. Geben Sie den Paketnamen an, um alle Projektparameter und die Parameter aus einem bestimmten Paket abzurufen. Der *package_name* ist **nvarchar(260)**.  
   
  [ @reference_id = ] *reference_id*  
  Der eindeutige Bezeichner eines Umgebungsverweises. Dieser Parameter ist optional. Der *reference_id* ist **bigint**.  
@@ -62,7 +63,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |parameter_name|**sysname**|Der Name des Parameters.|  
 |parameter_value|**sql_variant**|Der Wert des Parameters.|  
 |sensitive|**bit**|Wenn der Wert `1`lautet, ist der Parameterwert vertraulich. Wenn der Wert `0`lautet, ist der Parameterwert nicht vertraulich.|  
-|required|**bit**|Wenn der Wert `1`lautet, ist der Parameterwert erforderlich, um die Ausführung zu starten. Wenn der Wert `0`lautet, ist der Parameterwert nicht erforderlich, um die Ausführung zu starten.|  
+|Erforderlich|**bit**|Wenn der Wert `1`lautet, ist der Parameterwert erforderlich, um die Ausführung zu starten. Wenn der Wert `0`lautet, ist der Parameterwert nicht erforderlich, um die Ausführung zu starten.|  
 |value_set|**bit**|Wenn der Wert `1`ist, wurde der Parameterwert zugewiesen. Wenn der Wert `0`ist, wurde der Parameterwert nicht zugewiesen.|  
   
 > [!NOTE]  

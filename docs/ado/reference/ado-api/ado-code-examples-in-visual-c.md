@@ -1,4 +1,5 @@
 ---
+description: ADO-Codebeispiele in Visual C++
 title: ADO-Code Beispiele in Visual C++ | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac6e639001c84142604ca54664784922da05d682
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94821a930458d9b3a9c9deed6e9dd076243bae1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451492"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>ADO-Codebeispiele in Visual C++
 Verwenden Sie die folgenden Codebeispiele, um zu erfahren, wie Sie die ADO-Methoden,-Eigenschaften und-Ereignisse beim Schreiben in Microsoft Visual C++ verwenden.  

@@ -1,4 +1,5 @@
 ---
+description: 'Schritt 1: Serverprogramm angeben (RDS-Tutorial)'
 title: 'Schritt 1: Angeben eines Server Programms (RDS-Tutorial) | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7856a6a77720b4988c4a15afd86f24ff0070b28
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b5c76aebd80ff4a5706c9226abc051c03940707
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451952"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>Schritt 1: Serverprogramm angeben (RDS-Tutorial)
 Im Allgemeinen sollten Sie [RDS verwenden. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) - [Objektmethode zum](../../../ado/reference/rds-api/createobject-method-rds.md) angeben des Standard Server Programms, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)oder Ihres eigenen benutzerdefinierten Server Programms (Geschäftsobjekt). Ein Serverprogramm wird auf dem Server instanziiert, und es wird ein Verweis auf das Serverprogramm oder den *Proxy*zurückgegeben.  

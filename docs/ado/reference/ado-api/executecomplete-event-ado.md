@@ -1,4 +1,5 @@
 ---
+description: ExecuteComplete-Ereignis (ADO)
 title: ExecuteComplete-Ereignis (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae8b426a0e4b95498cb0d4f9a4590c3aaf30196d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4e7b800f7dba925230ade048f3792020ad8a44ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443842"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete-Ereignis (ADO)
 Das **ExecuteComplete** -Ereignis wird aufgerufen, nachdem die Ausführung eines Befehls abgeschlossen wurde.  
@@ -46,7 +47,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  Bevor dieses Ereignis zurückkehrt, legen Sie diesen Parameter auf **adStatus-unwantedevent** fest, um nachfolgende Benachrichtigungen zu verhindern.  
   
  *pCommand*  
- Das [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt, das ausgeführt wurde. Enthält ein **Befehls** Objekt, auch wenn **Connection. Execute** oder **Recordset. Open** aufgerufen wird, ohne explizit einen **Befehl**zu erstellen. in diesem Fall wird das **Command** -Objekt intern von ADO erstellt.  
+ Das [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt, das ausgeführt wurde. Enthält ein **Befehls** Objekt, auch wenn **Connection.Exe"niedlich** " oder " **Recordset. Open** " aufgerufen wird, ohne explizit einen **Befehl**zu erstellen. in diesem Fall wird das **Befehls** Objekt intern von ADO erstellt.  
   
  *pRecordset*  
  Ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, das das Ergebnis des ausgeführten Befehls ist. Das **Recordset** ist möglicherweise leer. Dieses Recordset-Objekt sollte in diesem Ereignishandler niemals zerstört werden. Dies führt zu einer Zugriffsverletzung, wenn ADO versucht, auf ein Objekt zuzugreifen, das nicht mehr vorhanden ist.  

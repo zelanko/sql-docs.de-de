@@ -1,4 +1,5 @@
 ---
+description: Grundlegendes zur Anpassungsdatei
 title: Grundlegendes zur Anpassungs Datei | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2edcfaaae08da97eccfe7b9a570716a2dfedfc2c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451872"
 ---
 # <a name="understanding-the-customization-file"></a>Grundlegendes zur Anpassungsdatei
 Jeder Abschnitts Header in der Anpassungs Datei besteht aus eckigen Klammern (**[]**), die einen Typ und einen Parameter enthalten. Die vier Abschnitts Typen werden durch die Literalzeichenfolgen **Connect**, **SQL**, **userlist**oder **Logs**angegeben. Der-Parameter ist die Literalzeichenfolge, der Standardwert, ein vom Benutzer angegebener Bezeichner oder Nothing.  
@@ -41,7 +42,7 @@ identifier
   
  Die Abschnitts Header haben die folgenden Teile.  
   
-|Teil|BESCHREIBUNG|  
+|Teil|Beschreibung|  
 |----------|-----------------|  
 |**connect**|Eine Literalzeichenfolge, die eine Verbindungs Zeichenfolge ändert.|  
 |**SQL**|Eine Literalzeichenfolge, die eine Befehls Zeichenfolge ändert.|  

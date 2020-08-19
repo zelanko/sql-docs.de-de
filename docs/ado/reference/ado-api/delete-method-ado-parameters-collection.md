@@ -1,4 +1,5 @@
 ---
+description: Delete-Methode (ADO-Parameters-Collection)
 title: Delete-Methode (ADO Parameters-Sammlung) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19fb69e51e04a2e15c60767981bc32e4dfe77141
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a76353f62fc2b30ea8e7eae16c97469027a98110
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444162"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete-Methode (ADO-Parameters-Collection)
 Löscht ein-Objekt aus der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung.  
@@ -34,7 +35,7 @@ Parameters.Delete Index
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Sin*  
+ *Index*  
  Ein **Zeichen** folgen Wert, der den Namen des zu löschenden Objekts oder die Ordinalposition (Index) des Objekts in der Auflistung enthält.  
   
 ## <a name="remarks"></a>Bemerkungen  
