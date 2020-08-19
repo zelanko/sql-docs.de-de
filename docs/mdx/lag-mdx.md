@@ -1,4 +1,5 @@
 ---
+description: Lag (MDX)
 title: Verzögerung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c7e95af96249b64f86bb1466283e8a1a38a32d90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc9beb8215d8d690f2d4ccdf43c3aaf03096b9d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477042"
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 
@@ -34,14 +35,14 @@ Member_Expression.Lag(Index)
  *Index*  
  Ein gültiger numerischer Ausdruck, der die Anzahl der Elementpositionen angibt, die vor dem Element liegen sollen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Elementpositionen auf einer Ebene werden über die natürliche Reihenfolge der Attributhierarchie bestimmt. Die Nummerierung der Positionen basiert auf Null.  
   
  Wenn die angegebene Verzögerung 0 (null) ist, gibt die **lag** -Funktion den angegebenen Member selbst zurück.  
   
  Wenn die angegebene Verzögerung negativ ist, gibt die **lag** -Funktion einen nachfolgenden Member zurück.  
   
- `Lag(1)`entspricht der [PrevMember](../mdx/prevmember-mdx.md) -Funktion. `Lag(-1)`entspricht der [NextMember](../mdx/nextmember-mdx.md) -Funktion.  
+ `Lag(1)` entspricht der [PrevMember](../mdx/prevmember-mdx.md) -Funktion. `Lag(-1)` entspricht der [NextMember](../mdx/nextmember-mdx.md) -Funktion.  
   
  Die **lag** -Funktion ähnelt der [Lead](../mdx/lead-mdx.md) -Funktion, mit der Ausnahme, dass die **Lead** -Funktion in umgekehrter Richtung zur **lag** -Funktion sucht. Somit ist `Lag(n)` äquivalent zu `Lead(-n)`.  
   

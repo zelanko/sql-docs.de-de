@@ -1,4 +1,5 @@
 ---
+description: ADO/WFC-Syntaxindex
 title: ADO-WFC-Syntax Index | Microsoft-Dokumentation
 ms.technology: connectivity
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ae2ddf07e2e687aec0b507b9ff9f2640087ef74
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b6e5c4fd54b5784e76067231096752a68dd52a6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451342"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO/WFC-Syntaxindex
 Die ADO-Sprachreferenz verwendet die Programmiersprache Microsoft Visual Basic, um die ADO-Methoden-und Eigenschafts Syntax zu veranschaulichen. Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz Themen, basierend auf ADO für Windows Foundation Classes (ADO/WFC). Wenn Unterschiede in der Syntax auftreten, verwenden Sie die Funktions Signaturen in diesem Index im Gegensatz zu den Syntax Auflistungen im Sprachreferenz Thema.  

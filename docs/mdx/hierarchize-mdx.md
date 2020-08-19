@@ -1,4 +1,5 @@
 ---
+description: Hierarchize (MDX)
 title: Hierarchize (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c1683819420d150e2f9b330ba94bc9e228d167f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429912"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
 
@@ -58,7 +59,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- Im folgenden Beispiel wird die Summe des `Measures.[Order Quantity]` -Elements, aggregiert über die ersten neun Monate 2003 in der `Date` -Dimension, aus dem **Adventure Works** -Cube zurückgegeben. Die **PeriodsToDate** -Funktion definiert die Tupel in der Menge, über die die Aggregatfunktion ausgeführt wird. Die **Hierarchize** -Funktion organisiert die Member der angegebenen Menge von Elementen aus der Product-Dimension in hierarchischer Reihenfolge.  
+ Im folgenden Beispiel wird die Summe des-Elements `Measures.[Order Quantity]` , aggregiert über die ersten neun Monate 2003 in der- `Date` Dimension, aus dem **Adventure Works** -Cube zurückgegeben. Die **PeriodsToDate** -Funktion definiert die Tupel in der Menge, über die die Aggregatfunktion ausgeführt wird. Die **Hierarchize** -Funktion organisiert die Member der angegebenen Menge von Elementen aus der Product-Dimension in hierarchischer Reihenfolge.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  

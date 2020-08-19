@@ -1,4 +1,5 @@
 ---
+description: Festlegen von Ablaufverfolgungsoptionen
 title: Festlegen von Ablauf Verfolgungs Optionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 21bee5d903459423a134389e62db844f5f63c9c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72e3805eded00b1bfa0c984d5ff0ace1ae1494fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476952"
 ---
 # <a name="setting-tracing-options"></a>Festlegen von Ablaufverfolgungsoptionen
 Mithilfe der Registerkarte Ablauf **Verfolgung** des Dialog Felds **ODBC-Datenquellen-Administrator** können Sie konfigurieren, wie ODBC-Funktionsaufrufe verfolgt werden.  
@@ -42,7 +43,7 @@ Mithilfe der Registerkarte Ablauf **Verfolgung** des Dialog Felds **ODBC-Datenqu
   
 2.  Öffnen Sie unter "Verwaltung" den ODBC-Datenquellen-Administrator.  
   
-3.  Klicken auf die Registerkarte Ablauf **Verfolgung** .  
+3.  Klicken Sie auf die Registerkarte **Ablaufverfolgung**.  
   
 4.  Konfigurieren Sie den Ablauf Verfolgungs Modus mithilfe des Kontrollkästchens **Computer weite Ablauf Verfolgung für alle Benutzer Identitäten** :  
   

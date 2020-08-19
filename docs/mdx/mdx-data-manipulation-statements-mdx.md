@@ -1,4 +1,5 @@
 ---
+description: MDX-Datenbearbeitungsanweisungen (MDX)
 title: MDX-Daten Bearbeitungsanweisungen (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f0aa7017cd82dce5da8d3424ed67565e9fda101c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b22bf9a923fad3e27330a86421258de29ea29a1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68003521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477002"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX-Datenbearbeitungsanweisungen (MDX)
 
@@ -22,9 +23,9 @@ ms.locfileid: "68003521"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
-|[&#40;MDX-&#41;der Anweisung aufruft](../mdx/mdx-data-manipulation-call.md)|Führt eine gespeicherte Prozedur, die "void" zurückgibt, im aktuellen Bereich oder optional für einen angegebenen Cube aus.|  
+|[&#40;MDX-&#41;der Anweisung aufruft ](../mdx/mdx-data-manipulation-call.md)|Führt eine gespeicherte Prozedur, die "void" zurückgibt, im aktuellen Bereich oder optional für einen angegebenen Cube aus.|  
 |[Löschen der Berechnungs Anweisung &#40;MDX-&#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|Entfernt alle Berechnungen aus dem Cube und setzt den Cube auf den Berechnungsdurchlauf 0 zurück.|  
 |[Drillthrough-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-manipulation-drillthrough.md)|Ruft die Rowsets ab, die zum Erstellen einer bestimmten Zelle in einem Cube verwendet wurden.|  
 |[SELECT-Anweisung &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)|Ruft Daten aus einem angegebenen Cube ab.|  

@@ -1,4 +1,5 @@
 ---
+description: SQLSetScrollOptions-Zuordnung
 title: SQLSetScrollOptions-Zuordnung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 77050df283b10abd17ba62a48bd366d6c1b3f601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 111fb84cd584e23b18d889634893556de86311a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476922"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions-Zuordnung
 Wenn eine Anwendung **SQLSetScrollOptions** über einen ODBC *3. x* -Treiber aufruft und der Treiber **SQLSetScrollOptions**nicht unterstützt, wird der Aufruf von  
@@ -64,7 +65,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     Wenn * \*ValuePtr* auf einen der Werte in der folgenden Tabelle festgelegt ist, gemäß dem Wert des *keysetsize* -Arguments in **SQLSetScrollOptions**.  
+     Wenn * \* ValuePtr* auf einen der Werte in der folgenden Tabelle festgelegt ist, gemäß dem Wert des *keysetsize* -Arguments in **SQLSetScrollOptions**.  
   
     |*Keysetsize* -Argument|*\*ValuePtr*|  
     |---------------------------|------------------|  
@@ -80,7 +81,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     Wenn * \*ValuePtr* *auf das* Parallelitäts Argument in **SQLSetScrollOptions**festgelegt ist.  
+     Wenn * \* ValuePtr* *auf das* Parallelitäts Argument in **SQLSetScrollOptions**festgelegt ist.  
   
 -   Wenn das *keysetsize* -Argument im Aufrufen von **SQLSetScrollOptions** positiv ist, wird ein-Aufrufen von  
   
@@ -88,7 +89,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     Wenn * \*ValuePtr* auf das *keysetsize* -Argument in **SQLSetScrollOptions**festgelegt ist.  
+     Wenn * \* ValuePtr* auf das *keysetsize* -Argument in **SQLSetScrollOptions**festgelegt ist.  
   
 -   Ein-Rückruf  
   
@@ -96,7 +97,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     Wenn * \*ValuePtr* auf das *rowsetsize* -Argument in **SQLSetScrollOptions**festgelegt ist.  
+     Wenn * \* ValuePtr* auf das *rowsetsize* -Argument in **SQLSetScrollOptions**festgelegt ist.  
   
     > [!NOTE]  
     >  Wenn der Treiber-Manager **SQLSetScrollOptions** für eine Anwendung zuordnet, die mit einem ODBC *3. x* -Treiber arbeitet, der **SQLSetScrollOptions**nicht unterstützt, legt der Treiber-Manager die SQL_ROWSET_SIZE Anweisungs Option, nicht das SQL_ATTR_ROW_ARRAY_SIZE Statement-Attribut, auf das *rowsetsize* -Argument in **sqlsetscrolloption**fest. Daher kann **SQLSetScrollOptions** nicht von einer Anwendung verwendet werden, wenn mehrere Zeilen durch einen-Befehl von **SQLFetch** oder **SQLFetchScroll**abgerufen werden. Diese Option kann nur verwendet werden, wenn mehrere Zeilen durch einen **sqlextendebug**-Befehl abgerufen werden.

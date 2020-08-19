@@ -1,4 +1,5 @@
 ---
+description: Auswählen und Konfigurieren von betroffenen Objekten (SybaseToSQL)
 title: Auswählen und konfigurieren betroffener Objekte (sybaseto SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 793430d548053b8d4c1cbf8dd07dd4e7d691c6d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468742"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Auswählen und Konfigurieren von betroffenen Objekten (SybaseToSQL)
 Auf dieser Seite können Sie Tabellen und Fremdschlüssel auswählen, Änderungen, die verglichen werden sollen, wenn SSMA die Ausführungs Ergebnisse für die im vorherigen Schritt ausgewählten Objekte überprüft. Außerdem können Sie die Überprüfungs Parameter anpassen.  
@@ -39,7 +40,7 @@ Die Registerkarte Tabelle enthält die Rasteransicht der ausgewählten Tabelle. 
   
 -   Regel  
   
--   Standardwert  
+-   Standard  
   
 -   Identity  
   

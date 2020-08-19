@@ -1,4 +1,5 @@
 ---
+description: Binden von Parametern anhand des Namens (benannte Parameter)
 title: Binden von Parametern anhand des Namens (benannte Parameter) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1e214f50488c4600ed39f76e91618cc5ce53de4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75227b26b5f9f060089e6568e233d327e3f7faa7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476842"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Binden von Parametern anhand des Namens (benannte Parameter)
 Bestimmte DBMSs ermöglichen es einer Anwendung, die Parameter für eine gespeicherte Prozedur anstelle der Position im Prozedur aufzurufen, sondern anhand ihres Namens anzugeben. Solche Parameter werden als *benannte Parameter*bezeichnet. ODBC unterstützt die Verwendung benannter Parameter. In ODBC werden benannte Parameter nur in Aufrufen von gespeicherten Prozeduren verwendet und können nicht in anderen SQL-Anweisungen verwendet werden.  
@@ -38,7 +39,7 @@ Bestimmte DBMSs ermöglichen es einer Anwendung, die Parameter für eine gespeic
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- In diesem Verfahren hat der erste Parameter @title_idden Standardwert 1. Eine Anwendung kann den folgenden Code verwenden, um diese Prozedur so aufzurufen, dass nur ein dynamischer Parameter angegeben wird. Dieser Parameter ist ein benannter Parameter mit dem\@Namen "Quote".  
+ In diesem Verfahren hat der erste Parameter den @title_id Standardwert 1. Eine Anwendung kann den folgenden Code verwenden, um diese Prozedur so aufzurufen, dass nur ein dynamischer Parameter angegeben wird. Dieser Parameter ist ein benannter Parameter mit dem Namen " \@ Quote".  
   
 ```  
 // Prepare the procedure invocation statement.  

@@ -1,4 +1,5 @@
 ---
+description: Textmarkentypen
 title: Lesezeichen Typen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 26d0297cd9dc57e9f30945a9248b235ae469da3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e85d50a5fe3c21707a78ac2572d8a96166745319
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476812"
 ---
 # <a name="bookmark-types"></a>Textmarkentypen
 Alle Lesezeichen in ODBC *3. x* sind Lesezeichen mit variabler Länge. Dadurch kann ein Primärschlüssel oder ein eindeutiger Index, der einer Tabelle zugeordnet ist, als Lesezeichen verwendet werden. Bei dem Lesezeichen kann es sich auch um einen 32-Bit-Wert handeln, der in ODBC *2. x*verwendet wurde. Um anzugeben, dass ein Lesezeichen mit einem Cursor verwendet wird, legt eine ODBC *3. x* -Anwendung das SQL_ATTR_USE_BOOKMARK Statement-Attribut auf SQL_UB_VARIABLE fest. Ein Lesezeichen variabler Länge wird automatisch verwendet.  

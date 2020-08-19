@@ -1,4 +1,5 @@
 ---
+description: MDX-Datenbearbeitung – SELECT
 title: SELECT-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f56d5cbbc8e6653b4844e1b5e48b08911307395a
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 623d798a3794da7577cf036cb8a32b2cf9cd7b84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477012"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX-Datenbearbeitung – SELECT
 
@@ -161,7 +162,7 @@ FROM
   
 |Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
 |**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04%**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
@@ -212,7 +213,7 @@ FROM
   
 |Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
 |**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04%**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
@@ -245,7 +246,7 @@ FROM
   
 |Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
 |**Mountain-300**|**1.907.249,38 €**|**876,95 €**|**0,05%**|  
@@ -302,7 +303,7 @@ FROM
   
 |Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
   
@@ -330,7 +331,7 @@ FROM
   
 |Modell Name + Measures|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13%**|  
+|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
 |**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63%**|  
 |**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01%**|  
   
@@ -393,7 +394,7 @@ WHERE
   
  Hierdurch werden folgende Ergebnisse erzielt:  
   
-|Geschäftstyp + Kategorie|All Products|Accessories|Kleidung|  
+|Geschäftstyp + Kategorie|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
@@ -419,7 +420,7 @@ WHERE
   
  Die oben dargestellte Abfrage führt zu den folgenden Ergebnissen:  
   
-|Geschäftstyp + Kategorie|All Products|Accessories|Kleidung|  
+|Geschäftstyp + Kategorie|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  

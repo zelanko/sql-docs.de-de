@@ -1,4 +1,5 @@
 ---
+description: sp_changesubscription (Transact-SQL)
 title: sp_changesubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/28/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b33103bc84e6354e99ac04e73fa20a0f99725a6a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57844d95977ed2a56324698037fb576678b0f8fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486243"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,19 +49,19 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der zu ändernden Veröffentlichung. *Publication*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert  
+`[ @publication = ] 'publication'` Der Name der zu ändernden Veröffentlichung. *Publication*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert  
   
-`[ @article = ] 'article'`Der Name des Artikels, der geändert werden soll. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @article = ] 'article'` Der Name des Artikels, der geändert werden soll. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @subscriber = ] 'subscriber'` Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @destination_db = ] 'destination_db'`Der Name der Abonnement Datenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @destination_db = ] 'destination_db'` Der Name der Abonnement Datenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @property = ] 'property'`Die Eigenschaft, die für das angegebene Abonnement geändert werden soll. die *Eigenschaft* ist vom Datentyp **nvarchar (30)**, und es kann sich um einen der Werte in der Tabelle handeln.  
+`[ @property = ] 'property'` Die Eigenschaft, die für das angegebene Abonnement geändert werden soll. die *Eigenschaft* ist vom Datentyp **nvarchar (30)**, und es kann sich um einen der Werte in der Tabelle handeln.  
   
-`[ @value = ] 'value'`Der neue Wert für die angegebene *Eigenschaft*. der Wert ist vom Datentyp **nvarchar (4000)**. der *Wert* kann einer der Werte in der Tabelle sein.  
+`[ @value = ] 'value'` Der neue Wert für die angegebene *Eigenschaft*. der Wert ist vom Datentyp **nvarchar (4000)**. der *Wert* kann einer der Werte in der Tabelle sein.  
   
-|Eigenschaft|Wert|BESCHREIBUNG|  
+|Eigenschaft|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Anmeldename für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird.|  
 |**distrib_job_password**||Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird.|  
@@ -78,7 +79,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|OLE DB-Anbieter|  
 |**memory_optimized**|**bit**|Gibt an, dass das Abonnement Speicher optimierte Tabellen unterstützt. *memory_optimized* ist " **Bit**", wobei "1" true ist (das Abonnement unterstützt Speicher optimierte Tabellen).|  
   
-`[ @publisher = ] 'publisher'`Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* darf nicht für einen Verleger angegeben werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -86,7 +87,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changesubscription** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  **sp_changesubscription** können nur zum Ändern der Eigenschaften von Pushabonnements oder Pullabonnements verwendet werden, die an einer verzögertem Update-Transaktions Replikation beteiligt sind. Verwenden Sie [sp_change_subscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), um die Eigenschaften aller anderen Typen von Pullabonnements zu ändern.  
@@ -96,7 +97,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changesubscription**ausführen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sp_addsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   

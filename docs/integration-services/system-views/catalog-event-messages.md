@@ -1,4 +1,5 @@
 ---
+description: catalog.event_messages
 title: catalog.event_messages | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e19ca7fac23979ecd691ed6cab45fa2cfec9564
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 29fcb7e924f444b44435b6c46dcdf76a88ebeec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495263"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
 
@@ -48,7 +49,7 @@ ms.locfileid: "86912629"
 ## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht werden die folgenden Meldungsquelltypen angezeigt:  
   
-|**message_source_type**|BESCHREIBUNG|  
+|**message_source_type**|Beschreibung|  
 |-------------------------------|-----------------|  
 |10|Eintrag-APIs, z. B. T-SQL und gespeicherte CLR-Prozeduren|  
 |20|Externer Prozess, der verwendet wurde, um das Paket (ISServerExec.exe) auszuführen|  

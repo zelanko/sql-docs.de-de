@@ -1,4 +1,5 @@
 ---
+description: CancelBatch-Methode (ADO)
 title: CancelBatch-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2e9f3b57137b4c113b9e177e9fecefec4070ac0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f8fa4d02dd10325726c83a6b645ebdd5b94397f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763171"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451032"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch-Methode (ADO)
 Bricht ein ausstehendes Batch Update ab.  
@@ -35,7 +36,7 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Parameter  
  *AffectRecords*  
- Dies ist optional. Ein [affectenum](../../../ado/reference/ado-api/affectenum.md) -Wert, der angibt, wie viele Datensätze von der **CancelBatch** -Methode betroffen sind.  
+ Optional. Ein [affectenum](../../../ado/reference/ado-api/affectenum.md) -Wert, der angibt, wie viele Datensätze von der **CancelBatch** -Methode betroffen sind.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **CancelBatch** -Methode, um ausstehende Updates in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) im Batch Aktualisierungs Modus abzubrechen. Wenn sich das **Recordset** im sofortigen Update Modus befindet, wird beim Aufrufen von **CancelBatch** ohne **adaffectcurrent** ein Fehler generiert.  

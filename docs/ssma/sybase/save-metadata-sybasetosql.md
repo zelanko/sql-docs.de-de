@@ -1,4 +1,5 @@
 ---
+description: Speichern von Metadaten (SybaseToSQL)
 title: Speichern von Metadaten (sybaseto SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8321c6e8a63eb4baabde580a911dccec6ab9ff3e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8b43cbdcac7a983047d8c454e5bfc9e3a31ce102
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468721"
 ---
 # <a name="save-metadata--sybasetosql"></a>Speichern von Metadaten (SybaseToSQL)
 Im Dialogfeld **Metadaten speichern** werden Sie aufgefordert, Metadaten vor dem Speichern in das SSMA-Projekt zu laden. Auf diese Weise können Sie eine komplette Projektdatei verwenden, die Sie offline verwenden und an andere Personen wie z. b. technische Supportmitarbeiter senden können.  
@@ -33,7 +34,7 @@ SSMA lädt bei Bedarf Metadaten in das Projekt. Metadaten werden automatisch gel
 **Alles markieren**  
 Wählt alle aufgelisteten Datenbanken aus.  
   
-**Clear** (Deaktiviert)  
+**Clear**  
 Löscht das Kontrollkästchen für alle Datenbanken mit fehlenden Metadaten. Sie können das Kontrollkästchen nicht deaktivieren, wenn eine Metadaten geladen wurde.  
   
 **Speichern**  

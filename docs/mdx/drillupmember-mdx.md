@@ -1,4 +1,5 @@
 ---
+description: DrillupMember (MDX)
 title: DrillupMember (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5dfdec16d20173639cc92a80b1ca546f44b70334
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9db34a9117bf7405511b86e8e989d2e002cb12d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494943"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
 
@@ -40,7 +41,7 @@ DrillupMember(Set_Expression1, Set_Expression2)
  Die erste Menge kann auch Tupel anstelle von Elementen enthalten. Der Drilldown für Tupel ist eine Erweiterung von OLE DB und gibt eine Menge von Tupeln anstelle von Elementen zurück.  
   
 > [!IMPORTANT]  
->  Ein Drillup wird nur für ein Element durchgeführt, auf das direkt ein untergeordnetes Element oder ein Nachfolger folgt. Die Reihenfolge der Elemente in der Gruppe ist für die Drilldown\* -und Drillup\* -Funktions Familien von Bedeutung. Verwenden Sie ggf. die **Hierarchize** -Funktion, um die Elemente der ersten Menge entsprechend zu ordnen.  
+>  Ein Drillup wird nur für ein Element durchgeführt, auf das direkt ein untergeordnetes Element oder ein Nachfolger folgt. Die Reihenfolge der Elemente in der Gruppe ist für die Drilldown \* -und Drillup- \* Funktions Familien von Bedeutung. Verwenden Sie ggf. die **Hierarchize** -Funktion, um die Elemente der ersten Menge entsprechend zu ordnen.  
   
 ## <a name="example"></a>Beispiel  
  Die folgenden drei Beispiele sind mit Ausnahme der zweiten Menge identisch. Im ersten Beispiel lautet der zweite Satz "Vereinigte Staaten". Demzufolge wird Colorado aus dem Resultset ausgeschlossen. Es ist ein untergeordnetes Element der Vereinigten Staaten.  

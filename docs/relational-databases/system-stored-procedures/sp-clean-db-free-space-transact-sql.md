@@ -1,4 +1,5 @@
 ---
+description: sp_clean_db_free_space (Transact-SQL)
 title: sp_clean_db_free_space (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1c434dda6a19a6090c9ba3c670ce33e673d7abf7
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 763697cbdf0ea842fb469ee781511e90266bf8b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486157"
 ---
 # <a name="sp_clean_db_free_space-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,10 +42,10 @@ sp_clean_db_free_space
 ```  
   
 ## <a name="arguments"></a>Argumente  
- @dbname= '*database_name*'  
+ @dbname = '*database_name*'  
  Der Name der zu bereinigenden Datenbank. *dbname* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein.  
   
- @cleaning_delay= '*delay_in_seconds*'  
+ @cleaning_delay = '*delay_in_seconds*'  
  Gibt das Intervall zwischen dem Bereinigen von Seiten an. Hierdurch werden die Auswirkungen auf das E/A-System verringert. *delay_in_seconds* ist vom Datentyp **int** und hat den Standardwert 0.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

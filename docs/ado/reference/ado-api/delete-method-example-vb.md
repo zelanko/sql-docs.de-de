@@ -1,4 +1,5 @@
 ---
+description: Delete-Methode – Beispiel (VB)
 title: Delete-Methode (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c80e71b-9e3f-4d05-ab2a-9e78798dad88
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83caae41ad4e8e5dc06863c1a714f59fc97379c1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c2c4d08c785811468990e25b018bddce78e85768
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444142"
 ---
 # <a name="delete-method-example-vb"></a>Delete-Methode – Beispiel (VB)
 In diesem Beispiel wird die [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) -Methode verwendet, um einen angegebenen Datensatz aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)zu entfernen.  

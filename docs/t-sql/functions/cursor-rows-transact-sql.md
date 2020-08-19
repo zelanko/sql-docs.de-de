@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;CURSOR_ROWS (Transact-SQL)'
 title: '@@CURSOR_ROWS (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 08/18/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a35f2e2e75b29a28ed56fc7c5cdaa3e9c2244d6d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ea10c7ada51794a26fd08cf265bfa78953856abc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422804"
 ---
 # <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ Diese Funktion gibt die Anzahl der kennzeichnenden Zeilen zurück, die sich aktu
 |0|Es wurden keine Cursor geöffnet, keine Zeilen kennzeichnen den zuletzt geöffneten Cursor, oder der zuletzt geöffnete Cursor wurde geschlossen oder seine Zuordnung aufgehoben.|  
 |*n*|Der Cursor ist vollständig aufgefüllt. Der zurückgegebene Wert (*n*) entspricht der Gesamtanzahl der Zeilen im Cursor.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 `@@CURSOR_ROWS` gibt eine negative Zahl zurück, wenn der letzte Cursor asynchron geöffnet wurde. Keysetgesteuerte oder statische Cursor werden asynchron geöffnet, wenn der Wert für den Cursorschwellenwert „sp_configure“ größer als 0 (null) und die Anzahl der Zeilen im Cursorresultset größer als der Cursorschwellenwert ist.
   
 ## <a name="examples"></a>Beispiele  
@@ -93,7 +94,7 @@ Sanchez
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen
-[Cursor Functions &#40;Transact-SQL&#41; (Cursorfunktionen (Transact-SQL))](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[Cursorfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)
   
   

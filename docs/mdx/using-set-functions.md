@@ -1,4 +1,5 @@
 ---
+description: Verwenden von Mengenfunktionen
 title: Verwenden von Set-Funktionen | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 52e0c140acb944a774f5ab167bb81c662e3e32d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1325055017eeee392cd098d9168dd247a2664aa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038051"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476982"
 ---
 # <a name="using-set-functions"></a>Verwenden von Mengenfunktionen
 
@@ -150,7 +151,7 @@ ms.locfileid: "68038051"
   
  `FROM [Adventure Works]`  
   
- Es gibt weitere verfeinerte Funktionen, mit denen Sie eine Menge auf andere Weise filtern können. Die folgende Abfrage zeigt z. b. die [TopCount-&#40;MDX](../mdx/topcount-mdx.md) -Funktion&#41;die die obersten n Elemente in einer Menge zurückgibt:  
+ Es gibt weitere verfeinerte Funktionen, mit denen Sie eine Menge auf andere Weise filtern können. Die folgende Abfrage zeigt z. b. die [TopCount-&#40;MDX ](../mdx/topcount-mdx.md) -Funktion&#41;die die obersten n Elemente in einer Menge zurückgibt:  
   
  `SELECT`  
   

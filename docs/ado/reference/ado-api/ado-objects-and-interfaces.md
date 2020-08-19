@@ -1,4 +1,5 @@
 ---
+description: ADO-Objekte und -Schnittstellen
 title: ADO-Objekte und-Schnittstellen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6deb8166c775fcdcfe8fb0975662dda0be3b3581
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 80a47336bb6453033a28b2d62eeda3700431594a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451372"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO-Objekte und -Schnittstellen
 Die Beziehungen zwischen diesen Objekten werden im ADO- [Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)dargestellt.  
   
  Jedes-Objekt kann in der entsprechenden-Auflistung enthalten sein. Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt kann z. b. in einer [Fehler](../../../ado/reference/ado-api/errors-collection-ado.md) Auflistung enthalten sein. Weitere Informationen finden Sie unter [ADO Collections](../../../ado/reference/ado-api/ado-collections.md) or a specific Collection Topic.  
   
-|Objekt oder Schnittstelle|BESCHREIBUNG|  
+|Objekt oder Schnittstelle|Beschreibung|  
 |-|-|  
 |[Iadocommandconstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|Wird verwendet, um den zugrunde liegenden OLEDB-Befehl aus einem ADOCommand-Objekt abzurufen.|  
 |[Adorecordconstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|Erstellt ein ADO- **Daten Satz** Objekt aus einem OLE DB **Row** -Objekt in einer C/C++-Anwendung.|  
@@ -42,7 +43,7 @@ Die Beziehungen zwischen diesen Objekten werden im ADO- [Objektmodell](../../../
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Stellt den Satz von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Das **Recordset** -Objekt bezieht sich jederzeit auf einen einzelnen Datensatz innerhalb des Satzes als aktuellen Datensatz.<br /><br /> Das **Recordset** -Objekt ist für die Skripterstellung sicher.|  
 |[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Stellt einen binären Datenstrom dar.<br /><br /> Das **Stream** -Objekt ist für die Skripterstellung sicher.|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ADO-API-Referenz](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO-Sammlungen](../../../ado/reference/ado-api/ado-collections.md)   
  [Dynamische ADO-Eigenschaften](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

@@ -1,4 +1,5 @@
 ---
+description: DataMember-Eigenschaft
 title: DataMember-Eigenschaft | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87d525907edde2e3dc99b78eb827c571c604d8b7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f698c4a20fb76839460ca0930d45b8d18b2738be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444232"
 ---
 # <a name="datamember-property"></a>DataMember-Eigenschaft
 Gibt den Namen des Datenmembers an, der aus dem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) abgerufen wird, auf das von der [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) -Eigenschaft verwiesen wird.  

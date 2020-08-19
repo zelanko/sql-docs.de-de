@@ -1,4 +1,5 @@
 ---
+description: Automatische Auffüllung des IPD
 title: Automatische Auffüllung der IPD | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1998ea1992ee7f14d87d01e348d955b017166088
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73c0456f1c78ccc19f1ff55a1ab288baedae2e14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476882"
 ---
 # <a name="automatic-population-of-the-ipd"></a>Automatische Auffüllung des IPD
 Einige Treiber können die Felder der IPD festlegen, nachdem eine parametrisierte Abfrage vorbereitet wurde. Die Deskriptorfelder werden automatisch mit Informationen über den-Parameter aufgefüllt, einschließlich des Datentyps, der Genauigkeit, der Skala und anderer Merkmale. Dies entspricht der Unterstützung von **SQLDescribeParam**. Diese Informationen können für eine Anwendung besonders wertvoll sein, wenn Sie keine andere Möglichkeit hat, Sie zu ermitteln, z. b. Wenn eine Ad-hoc-Abfrage mit Parametern ausgeführt wird, von denen die Anwendung nicht weiß.  

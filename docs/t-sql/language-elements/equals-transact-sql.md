@@ -1,4 +1,5 @@
 ---
+description: = (Gleich) (Transact-SQL)
 title: = (Gleich) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/06/2016
@@ -21,12 +22,12 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 140545235928e356d143aa2a5164c0b054adf0f9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6acac2a2a67974945c6e934994c7823fc3d75bde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422514"
 ---
 # <a name="-equals-transact-sql"></a>= (Gleich) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ expression = expression
 ## <a name="result-types"></a>Ergebnistypen  
  Boolean  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Beim Vergleich mit NULL-Ausdrücken hängt das Ergebnis von der `ANSI_NULLS`-Einstellung ab:  
   
 -   Wenn `ANSI_NULLS` auf ON festgelegt ist, ist UNKNOWN das Ergebnis von Vergleichen mit NULL. Dies folgt der ANSI-Konvention, dass NULL ein unbekannter Wert ist und nicht mit anderen Werten verglichen werden kann, auch nicht mit anderen NULL-Werten.  

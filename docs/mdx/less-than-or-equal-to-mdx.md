@@ -1,4 +1,5 @@
 ---
+description: '&lt;= (Kleiner als oder gleich) (MDX)'
 title: '&lt;= (Kleiner als oder gleich) (MDX) | Microsoft-Dokumentation'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 00021ea9c23de80f6b025963543af2cf4be2f572
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c800f39898127d7e7b7fe9b0bef8df46040d834
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429892"
 ---
 # <a name="lt-less-than-or-equal-to-mdx"></a>&lt;= (Kleiner als oder gleich) (MDX)
 

@@ -1,4 +1,5 @@
 ---
+description: DataSource-Eigenschaft (ADO)
 title: DataSource-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cbaff4a2bf03e524018c0c8d1b163925aa40b3ea
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b85f163ddb3f1fc31116966127bc01efa17a262
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444222"
 ---
 # <a name="datasource-property-ado"></a>DataSource-Eigenschaft (ADO)
 Gibt ein Objekt an, das Daten enthält, die als [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt dargestellt werden.  

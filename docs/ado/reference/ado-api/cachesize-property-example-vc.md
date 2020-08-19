@@ -1,4 +1,5 @@
 ---
+description: CacheSize-Eigenschaft – Beispiel (VC++)
 title: Beispiel für CacheSize-Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68cea9dc78bbb2fa895dc8fb697404e462c1bc07
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 79cc1b0b69914e8f2a00c3e8cf4557ac89c54c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451072"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize-Eigenschaft – Beispiel (VC++)
 In diesem Beispiel wird die [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) -Eigenschaft verwendet, um den Unterschied in der Leistung für einen Vorgang anzuzeigen, der mit und ohne 30-Datensatz-Cache ausgeführt wird.  

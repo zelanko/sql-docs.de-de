@@ -1,4 +1,5 @@
 ---
+description: Erstellen der Serververbindungsdateien (OracleToSQL)
 title: Erstellen der Server Verbindungs Dateien (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: 002f129e-0868-48ad-a4b4-c68b5007e12e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 499543ea1790e5f9c1f1e1f2ddf6111e9d846dc9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 51a1d9d5f23f93233a20f46f081e6172a7bc5135
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468819"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>Erstellen der Serververbindungsdateien (OracleToSQL)
 Server Informationen können entweder im Abschnitt Server der Skriptdatei oder in einer separaten Server Verbindungs Datei angegeben werden. Der Befehlszeilenparameter für die Server Verbindungs Datei ist, `-c <serverconnectionfile>` . Wenn dieselbe Server-ID sowohl in der Skriptdatei als auch in der Server Verbindungs Datei vorhanden ist, wird die Server Definition in der Skriptdatei berücksichtigt.  
@@ -105,6 +106,6 @@ Server Informationen können entweder im Abschnitt Server der Skriptdatei oder i
 ## <a name="next-step"></a>Nächster Schritt  
 Der nächste Schritt beim Betrieb der Konsole ist [die Ausführung der SSMA-Konsole &#40;oracleto SQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Ausführen der SSMA-Konsole](executing-the-ssma-console-oracletosql.md)  
   

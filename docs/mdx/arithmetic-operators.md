@@ -1,4 +1,5 @@
 ---
+description: Arithmetische Operatoren
 title: Arithmetische Operatoren | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 995e7ce1cb6a3c5d06db1042c00f945ec01e1be6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494993"
 ---
 # <a name="arithmetic-operators"></a>Arithmetische Operatoren
 
@@ -22,7 +23,7 @@ ms.locfileid: "68017081"
   
  MDX unterstützt die arithmetischen Operatoren, die in der folgenden Tabelle aufgelistet sind.  
   
-|Operator|BESCHREIBUNG|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |[+ (Addition)](../mdx/add-mdx.md)|Addition zweier Zahlen.|  
 |[/ (Dividieren)](../mdx/divide-mdx-operator-reference.md)|Dividiert eine Zahl durch eine andere Zahl.|  

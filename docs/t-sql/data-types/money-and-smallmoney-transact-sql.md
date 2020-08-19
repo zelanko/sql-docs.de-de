@@ -1,4 +1,5 @@
 ---
+description: money und smallmoney (Transact-SQL)
 title: money and smallmoney (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/22/2017
@@ -24,12 +25,12 @@ ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8c8cc9b8d7b923dd4ef60f5c90b734fc9deb41b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c8e5f56358030a75e7be4943f8790766e036e6a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468291"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money und smallmoney (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,8 +41,8 @@ Datentypen zur Darstellung von Währungswerten.
   
 |Datentyp|Range|Storage|  
 |---|---|---|
-|**money**|-922.337.203.685.477,5808 bis 922.337.203.685.477,5807 (-922.337.203.685.477,58<br />bis 922.337.203.685.477,58 für Informatica.  Informatica unterstützt nur zwei Dezimalstellen, nicht vier.)|8 Byte|  
-|**smallmoney**|-214.748,3648 bis 214.748,3647|4 Byte|  
+|**money**|-922.337.203.685.477,5808 bis 922.337.203.685.477,5807 (-922.337.203.685.477,58<br />bis 922.337.203.685.477,58 für Informatica.  Informatica unterstützt nur zwei Dezimalstellen, nicht vier.)|8 Bytes|  
+|**smallmoney**|-214.748,3648 bis 214.748,3647|4 Bytes|  
   
 Die Datentypen **money** und **smallmoney** weisen die Genauigkeit eines Zehntausendstels der dargestellten Währungseinheiten auf. Für Informatica weisen die Datentypen **money** und **smallmoney** die Genauigkeit eines Hundertstels der dargestellten Währungseinheiten auf.
   

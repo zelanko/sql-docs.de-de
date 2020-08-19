@@ -1,4 +1,5 @@
 ---
+description: catalog.catalog_properties (SSISDB-Datenbank)
 title: catalog.catalog_properties (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/11/2018
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f0932ef80cd6bfba4b752c130e4f69155dc316c9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7aa744bd7dd3d0330dc3e996b2af90d500be9d55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495308"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties (SSISDB-Datenbank)
 
@@ -41,7 +42,7 @@ ms.locfileid: "86912691"
 |**IS_SCALEOUT_ENABLED**|Wenn der Wert `True` lautet, wird das SSIS Scale Out-Feature aktiviert. Wenn Sie Scale Out nicht aktiviert haben, kann diese Eigenschaft nicht in der Sicht angezeigt werden.|
 |**MAX_PROJECT_VERSIONS**|Die Anzahl von neuen Projektversionen, die für ein einzelnes Projekt beibehalten werden. Wenn Versionscleanup aktiviert ist, werden frühere Versionen, die diese Anzahl überschreiten, gelöscht.|  
 |**OPERATION_CLEANUP_ENABLED**|Wenn der Wert `TRUE`ist, werden Vorgangsdetails und Vorgangsmeldungen, die älter als **RETENTION_WINDOW** (Tage) sind, aus dem Katalog gelöscht. Wenn der Wert `FALSE`ist, werden alle Vorgangsdetails und Vorgangsmeldungen im Katalog gespeichert. Hinweis: Das Vorgangscleanup erfolgt durch einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Auftrag.|  
-|**RETENTION_WINDOW**|Die Anzahl der Tage, für die Vorgangsdetails und Vorgangsmeldungen im Katalog gespeichert werden. Wenn der Wert `-1`lautet, ist die Beibehaltungsdauer unendlich. Hinweis: Wenn kein Cleanup erfolgen soll, legen Sie **OPERATION_CLEANUP_ENABLED** auf **FALSE**fest.|
+|**RETENTION_WINDOW**|Die Anzahl der Tage, für die Vorgangsdetails und Vorgangsmeldungen im Katalog gespeichert werden. Wenn der Wert `-1`lautet, ist die Beibehaltungsdauer unendlich. Hinweis: Wenn kein Cleanup erfolgen soll, legen Sie **OPERATION_CLEANUP_ENABLED** auf **FALSE** fest.|
 |**SCHEMA_BUILD**|Die Buildnummer des SSISDB-Katalogdatenbankschemas. Diese Nummer ändert sich, wenn Sie der SSISDB-Katalog erstellt oder aktualisiert wird.|
 |**SCHEMA_VERSION**|Die Hauptversionsnummer des SSISDB-Katalogdatenbankschemas. Diese Nummer ändert sich, wenn Sie der SSISDB-Katalog erstellt oder ein Upgrade durchgeführt wird.|
 |**VALIDATION_TIMEOUT**|Überprüfungen werden beendet, wenn sie nicht innerhalb der von dieser Eigenschaft angegebenen Anzahl von Sekunden abgeschlossen werden.|  

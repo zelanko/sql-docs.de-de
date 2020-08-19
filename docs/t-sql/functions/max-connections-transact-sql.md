@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)'
 title: '@@MAX_CONNECTIONS (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5aef95dbc330d59992513823abcb572ff3c98d8f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 061f293673e76fcf9d979d5bb63b21c7806dc632
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422684"
 ---
 # <a name="x40x40max_connections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,10 +47,10 @@ ms.locfileid: "87110386"
 ## <a name="return-types"></a>Rückgabetypen
  **integer**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die tatsächliche Anzahl der zulässigen Benutzerverbindungen hängt außerdem von der installierten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie den Beschränkungen durch Ihre Anwendungen und Hardware ab.  
   
- Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_configure **, um**  für eine kleinere Anzahl von Verbindungen neu zu konfigurieren.  
+ Verwenden Sie **sp_configure**, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für eine kleinere Anzahl von Verbindungen neu zu konfigurieren.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die maximale Anzahl von Benutzerverbindungen für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben. Im Beispiel wird vorausgesetzt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht für eine geringere Anzahl von Benutzerverbindungen neu konfiguriert wurde.  

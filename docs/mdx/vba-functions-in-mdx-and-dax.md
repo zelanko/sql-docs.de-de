@@ -1,4 +1,5 @@
 ---
+description: VBA-Funktionen in MDX und DAX
 title: VBA-Funktionen in MDX und DAX | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10658daae1321ac7e22af337ef946f5cfb6004cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135021"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429702"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>VBA-Funktionen in MDX und DAX
 
@@ -22,7 +23,7 @@ ms.locfileid: "68135021"
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Referenz zu VBA (Visual Basic für Applikationen)-Funktionen  
   
-|Funktionsname|Unterstützt|Hinweise|  
+|Funktionsname|Unterstützt|Notizen|  
 |-------------------|---------------|-----------|  
 |Abs|DAX, MDX||  
 |Array|Nicht unterstützt||  
@@ -36,7 +37,7 @@ ms.locfileid: "68135021"
 |ZDate|Nur MDX||  
 |CDbl|Nur MDX||  
 |ZDec|Nur MDX||  
-|Wählen Sie|Nur MDX||  
+|Choose|Nur MDX||  
 |Zchn|Nur MDX||  
 |ZInteger|Nur MDX||  
 |ZLong|Nur MDX||  
@@ -51,12 +52,12 @@ ms.locfileid: "68135021"
 |ZVariant|Nur MDX||  
 |CVErr|Nicht unterstützt||  
 |Datum|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit demselben Namen. die Funktion Date (Year, month, Day), mit der ein Date-Type-Wert aus den angegebenen Argumenten generiert wird.|  
-|DateAdd|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit demselben Namen. die DATEADD (\<dates>, <number_of_intervals>,\<Interval>)-Funktion, die verwendet wird, um die angegebenen Datumsangaben um eine bestimmte Anzahl von Intervallen zu verschieben.|  
+|DateAdd|Nur MDX|**Warnung** DAX implementiert eine andere Funktion mit demselben Namen. die DATEADD ( \<dates> , <number_of_intervals> \<interval> )-Funktion, die verwendet wird, um die angegebenen Datumsangaben um eine bestimmte Anzahl von Intervallen zu verschieben.|  
 |DateDiff|Nur MDX||  
 |DatTeil|Nur MDX||  
 |DatSeriell|Nur MDX||  
 |DatWert|DAX, MDX||  
-|Day (Tag)|DAX, MDX||  
+|Tag|DAX, MDX||  
 |GDA|Nur MDX||  
 |Dir|Nicht unterstützt||  
 |DoEvents|Nicht unterstützt||  
@@ -67,7 +68,7 @@ ms.locfileid: "68135021"
 |FileAttr|Nicht unterstützt||  
 |FileDateTime|Nicht unterstützt||  
 |FileLen|Nicht unterstützt||  
-|Filtern|Nicht unterstützt|**Warnung** MDX implementiert eine andere Funktion mit demselben Namen. die Filter (set_expression Logical_Expression)-Funktion gibt die Menge zurück, die sich aus dem Filtern einer angegebenen Menge basierend auf einer Such Bedingung aus den angegebenen Argumenten ergibt.<br /><br /> **Warnung** DAX implementiert eine andere Funktion mit demselben Namen. die Filter (\<Table>,\<Filter>)-Funktion gibt eine Tabelle zurück, die eine Teilmenge einer anderen Tabelle oder eines Ausdrucks aus den angegebenen Argumenten darstellt.|  
+|Filtern|Nicht unterstützt|**Warnung** MDX implementiert eine andere Funktion mit demselben Namen. die Filter (set_expression Logical_Expression)-Funktion gibt die Menge zurück, die sich aus dem Filtern einer angegebenen Menge basierend auf einer Such Bedingung aus den angegebenen Argumenten ergibt.<br /><br /> **Warnung** DAX implementiert eine andere Funktion mit demselben Namen. die Filter ( \<table> , \<filter> )-Funktion gibt eine Tabelle zurück, die eine Teilmenge einer anderen Tabelle oder eines Ausdrucks aus den angegebenen Argumenten darstellt.|  
 |Fix|Nur MDX||  
 |Format (Visual Basic für Applikationen)|DAX, MDX||  
 |FormatWährung|Nicht unterstützt||  
@@ -80,8 +81,8 @@ ms.locfileid: "68135021"
 |GetAttr|Nicht unterstützt||  
 |GetObject|Nicht unterstützt||  
 |GetSetting|Nicht unterstützt||  
-|Hexadezimal|Nur MDX||  
-|Hour|DAX, MDX||  
+|Hex|Nur MDX||  
+|Stunde|DAX, MDX||  
 |Iif|Nur MDX|**Warnung** DAX implementiert eine ähnliche Funktion mit dem Namen: if (logical_test, value_if_true value_if_false)-Funktion.|  
 |IMEStatus|Nicht unterstützt||  
 |Eingabe|Nicht unterstützt||  
@@ -106,14 +107,14 @@ ms.locfileid: "68135021"
 |Len|DAX, MDX||  
 |Loc|Nicht unterstützt||  
 |LOF|Nicht unterstützt||  
-|Protokoll|Nur MDX|**Wichtig** DAX implementiert eine andere Funktion mit demselben Namen. die Log (Number, Base)-Funktion. Gibt den Logarithmus einer Zahl zu der Basis zurück, die anhand bestimmter Argumente angegeben wird.|  
+|Log|Nur MDX|**Wichtig** DAX implementiert eine andere Funktion mit demselben Namen. die Log (Number, Base)-Funktion. Gibt den Logarithmus einer Zahl zu der Basis zurück, die anhand bestimmter Argumente angegeben wird.|  
 |LGlätten|Nur MDX||  
 |MacID|Nicht unterstützt||  
 |MacScript|Nicht unterstützt||  
 |Mid|DAX, MDX||  
 |Minute|DAX, MDX||  
 |QIKV|Nur MDX||  
-|Monat|DAX, MDX||  
+|Month (Monat)|DAX, MDX||  
 |MonthName|Nicht unterstützt||  
 |Meldung|Nicht unterstützt||  
 |jetzt|DAX, MDX||  
@@ -132,7 +133,7 @@ ms.locfileid: "68135021"
 |ZZG|Nur MDX||  
 |Round|DAX, MDX||  
 |RGlätten|Nur MDX||  
-|Sekunde|DAX, MDX||  
+|Second|DAX, MDX||  
 |Seek|Nicht unterstützt||  
 |Vorzchn|DAX, MDX||  
 |Shell|Nicht unterstützt||  
@@ -145,21 +146,21 @@ ms.locfileid: "68135021"
 |Str|Nur MDX||  
 |StrVgl|Nur MDX||  
 |StrKonv|Nur MDX||  
-|String|Nur MDX||  
+|Zeichenfolge|Nur MDX||  
 |StrReverse|Nicht unterstützt||  
 |Schalter|Nur MDX||  
 |DIA|Nur MDX||  
 |Registerkarte|Nicht unterstützt||  
 |Tan|Nur MDX||  
-|Zeit|Nicht unterstützt||  
-|Zeitgeber|Nur MDX||  
+|Time|Nicht unterstützt||  
+|Timer|Nur MDX||  
 |ZeitSeriell|Nur MDX||  
 |ZeitSeriellStr|DAX, MDX||  
 |Glätten|DAX, MDX||  
 |TypName|Nur MDX||  
 |UBound|Nicht unterstützt||  
 |Großbst|Nur MDX||  
-|Ster|Nur MDX||  
+|Val|Nur MDX||  
 |VarType|Nicht unterstützt||  
 |Wochentag|DAX, MDX||  
 |WeekdayName|Nicht unterstützt||  

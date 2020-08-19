@@ -1,4 +1,5 @@
 ---
+description: sp_check_subset_filter (Transact-SQL)
 title: sp_check_subset_filter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f006cba8bfe0abecce995753863944f7d5bf0b71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55b5160842e5be4bda385fd23afd22d304dc2dae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486178"
 ---
 # <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,11 +45,11 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @filtered_table = ] 'filtered_table'`Der Name einer gefilterten Tabelle. *filtered_table* ist vom Datentyp **nvarchar (400)** und hat keinen Standardwert.  
+`[ @filtered_table = ] 'filtered_table'` Der Name einer gefilterten Tabelle. *filtered_table* ist vom Datentyp **nvarchar (400)** und hat keinen Standardwert.  
   
-`[ @subset_filterclause = ] 'subset_filterclause'`Die Filter Klausel, die getestet wird. *subset_filterclause* ist vom Datentyp **nvarchar (1000)** und hat keinen Standardwert.  
+`[ @subset_filterclause = ] 'subset_filterclause'` Die Filter Klausel, die getestet wird. *subset_filterclause* ist vom Datentyp **nvarchar (1000)** und hat keinen Standardwert.  
   
-`[ @has_dynamic_filters = ] has_dynamic_filters`Gibt an, ob die Filter Klausel ein parametrisierter Zeilen Filter ist. *has_dynamic_filters* ist vom Typ **Bit**. der Standardwert ist NULL, und es handelt sich um einen Output-Parameter. Gibt den Wert **1** zurück, wenn die Filter Klausel ein parametrisierter Zeilen Filter ist.  
+`[ @has_dynamic_filters = ] has_dynamic_filters` Gibt an, ob die Filter Klausel ein parametrisierter Zeilen Filter ist. *has_dynamic_filters* ist vom Typ **Bit**. der Standardwert ist NULL, und es handelt sich um einen Output-Parameter. Gibt den Wert **1** zurück, wenn die Filter Klausel ein parametrisierter Zeilen Filter ist.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -63,7 +64,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_check_subset_filter** wird bei der Mergereplikation verwendet.  
   
  **sp_check_subset_filter** können auch dann für beliebige Tabellen ausgeführt werden, wenn die Tabelle nicht veröffentlicht wird. Mit dieser gespeicherten Prozedur kann eine Filterklausel vor dem Definieren eines gefilterten Artikels überprüft werden.  

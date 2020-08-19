@@ -1,4 +1,5 @@
 ---
+description: sp_change_log_shipping_secondary_database (Transact-SQL)
 title: sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 086e914f9d05ada8985cdd8f017ef4a47003d1ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5fc10c705564c88fe157860d00a61fa5ea682cc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486281"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,11 +52,11 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @restore_delay = ] 'restore_delay'`Die Zeitspanne in Minuten, die der sekundäre Server wartet, bevor er eine bestimmte Sicherungsdatei wiederherstellt. *restore_delay* ist vom Datentyp **int** und kann nicht NULL sein. Der Standardwert ist 0.  
+`[ @restore_delay = ] 'restore_delay'` Die Zeitspanne in Minuten, die der sekundäre Server wartet, bevor er eine bestimmte Sicherungsdatei wiederherstellt. *restore_delay* ist vom Datentyp **int** und kann nicht NULL sein. Der Standardwert ist 0.  
   
-`[ @restore_all = ] 'restore_all'`Wenn der Wert auf 1 festgelegt ist, stellt der sekundäre Server bei Ausführung des Wiederherstellungs Auftrags alle verfügbaren Transaktionsprotokoll Sicherungen wieder her. Andernfalls wird Sie beendet, nachdem eine Datei wieder hergestellt wurde. *restore_all* ist vom **Bit** und kann nicht NULL sein.  
+`[ @restore_all = ] 'restore_all'` Wenn der Wert auf 1 festgelegt ist, stellt der sekundäre Server bei Ausführung des Wiederherstellungs Auftrags alle verfügbaren Transaktionsprotokoll Sicherungen wieder her. Andernfalls wird Sie beendet, nachdem eine Datei wieder hergestellt wurde. *restore_all* ist vom **Bit** und kann nicht NULL sein.  
   
-`[ @restore_mode = ] 'restore_mode'`Der Wiederherstellungs Modus für die sekundäre Datenbank.  
+`[ @restore_mode = ] 'restore_mode'` Der Wiederherstellungs Modus für die sekundäre Datenbank.  
   
  0 = Wiederherstellungsprotokoll mit NORECOVERY.  
   
@@ -63,21 +64,21 @@ sp_change_log_shipping_secondary_database
   
  *Restore* ist ein **Bit** und kann nicht NULL sein.  
   
-`[ @disconnect_users = ] 'disconnect_users'`Wenn der Wert auf 1 festgelegt ist, werden die Benutzer von der sekundären Datenbank getrennt, wenn ein Wiederherstellungs Vorgang ausgeführt wird. Standardwert = 0. *disconnect_users* ist vom **Bit** und kann nicht NULL sein.  
+`[ @disconnect_users = ] 'disconnect_users'` Wenn der Wert auf 1 festgelegt ist, werden die Benutzer von der sekundären Datenbank getrennt, wenn ein Wiederherstellungs Vorgang ausgeführt wird. Standardwert = 0. *disconnect_users* ist vom **Bit** und kann nicht NULL sein.  
   
-`[ @block_size = ] 'block_size'`Die Größe in Bytes, die als Blockgröße für das Sicherungsmedium verwendet wird. *block_size* ist vom Datentyp **int** und hat den Standardwert-1.  
+`[ @block_size = ] 'block_size'` Die Größe in Bytes, die als Blockgröße für das Sicherungsmedium verwendet wird. *block_size* ist vom Datentyp **int** und hat den Standardwert-1.  
   
-`[ @buffer_count = ] 'buffer_count'`Die Gesamtanzahl der Puffer, die vom Sicherungs-oder Wiederherstellungs Vorgang verwendet werden. *buffer_count* ist vom Datentyp **int** und hat den Standardwert-1.  
+`[ @buffer_count = ] 'buffer_count'` Die Gesamtanzahl der Puffer, die vom Sicherungs-oder Wiederherstellungs Vorgang verwendet werden. *buffer_count* ist vom Datentyp **int** und hat den Standardwert-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`Die Größe der maximalen Eingabe-oder Ausgabeanforderung in Bytes, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an das Sicherungsmedium ausgegeben wird. *max_transfersize* ist vom Datentyp **int** und kann NULL sein.  
+`[ @max_transfer_size = ] 'max_transfer_size'` Die Größe der maximalen Eingabe-oder Ausgabeanforderung in Bytes, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an das Sicherungsmedium ausgegeben wird. *max_transfersize* ist vom Datentyp **int** und kann NULL sein.  
   
-`[ @restore_threshold = ] 'restore_threshold'`Die zulässige Anzahl von Minuten zwischen Wiederherstellungs Vorgängen, bevor eine Warnung generiert wird. *restore_threshold* ist vom Datentyp **int** und kann nicht NULL sein.  
+`[ @restore_threshold = ] 'restore_threshold'` Die zulässige Anzahl von Minuten zwischen Wiederherstellungs Vorgängen, bevor eine Warnung generiert wird. *restore_threshold* ist vom Datentyp **int** und kann nicht NULL sein.  
   
-`[ @threshold_alert = ] 'threshold_alert'`Die Warnung, die ausgelöst werden soll, wenn der Wiederherstellungs Schwellenwert überschritten wird. *threshold_alert* ist vom Datentyp **int**und hat den Standardwert 14420.  
+`[ @threshold_alert = ] 'threshold_alert'` Die Warnung, die ausgelöst werden soll, wenn der Wiederherstellungs Schwellenwert überschritten wird. *threshold_alert* ist vom Datentyp **int**und hat den Standardwert 14420.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Gibt an, ob eine Warnung ausgelöst wird, wenn *restore_threshold*überschritten wird. 1 = aktiviert; 0 = deaktiviert. *threshold_alert_enabled* ist vom **Bit** und kann nicht NULL sein.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Gibt an, ob eine Warnung ausgelöst wird, wenn *restore_threshold*überschritten wird. 1 = aktiviert; 0 = deaktiviert. *threshold_alert_enabled* ist vom **Bit** und kann nicht NULL sein.  
   
-`[ @history_retention_period = ] 'history_retention_period'`Der Zeitraum in Minuten, in dem der Verlauf beibehalten wird. *history_retention_period* ist vom Datentyp **int**. Der Wert 1440 wird verwendet, wenn kein Wert angegeben wird.  
+`[ @history_retention_period = ] 'history_retention_period'` Der Zeitraum in Minuten, in dem der Verlauf beibehalten wird. *history_retention_period* ist vom Datentyp **int**. Der Wert 1440 wird verwendet, wenn kein Wert angegeben wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

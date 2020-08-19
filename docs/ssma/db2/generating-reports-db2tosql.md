@@ -1,4 +1,5 @@
 ---
+description: Erstellen von Berichten (DB2ToSQL)
 title: Erstellen von Berichten (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1ae04ceabe7a2063f8b9806894ff8e4d55c577fd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 75ed10de8af160939689fdaa883c6d7d9dc7915d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468863"
 ---
 # <a name="generating-reports-db2tosql"></a>Erstellen von Berichten (DB2ToSQL)
 Die Berichte bestimmter Aktivitäten, die mithilfe von Befehlen ausgeführt werden, werden in der SSMA-Konsole auf Objektstruktur Ebene generiert.  
@@ -25,7 +26,7 @@ Verwenden Sie das folgende Verfahren, um Berichte zu generieren:
   
     Die Berichte vis-a-vis-Befehle lauten:  
   
-    |SL. Nein|Befehl|Berichtstitel|  
+    |SL. Nein.|Get-Help|Berichtstitel|  
     |-|-|-|  
     |1|generieren-Assessment-Bericht|Gutamentreport &lt; n &gt; . Basi|  
     |2|Convert-Schema|Schemaconversionreport &lt; n &gt; . Basi|  
@@ -37,11 +38,11 @@ Verwenden Sie das folgende Verfahren, um Berichte zu generieren:
     > [!IMPORTANT]  
     > Ein Ausgabebericht unterscheidet sich vom Bewertungsbericht. Bei der ersten handelt es sich um einen Bericht zur Leistung eines ausgeführten Befehls, bei dem es sich um einen XML-Bericht für die programmgesteuerte Nutzung handelt.  
   
-    Für die Befehlsoptionen für Ausgabe Berichte (von SL. Nein 2-4 oben) finden Sie im Abschnitt [Ausführen der SSMA-Konsole &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md) .  
+    Für die Befehlsoptionen für Ausgabe Berichte (von SL. Nein. 2-4 oben) finden Sie im Abschnitt [Ausführen der SSMA-Konsole &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md) .  
   
 2.  Geben Sie den Umfang der im Ausgabebericht gewünschten Details mithilfe der berichtsausführlichkeits-Einstellungen an:  
   
-    |SL. Nein|Befehl und Parameter|Ausgabe Beschreibung|  
+    |SL. Nein.|Befehl und Parameter|Ausgabe Beschreibung|  
     |-|-|-|  
     |1|Verbose = "false"|Generiert einen zusammengefassten Bericht der Aktivität.|  
     |2|Verbose = "true"|Generiert einen zusammengefassten und detaillierten Statusbericht für jede Aktivität.|  
@@ -51,7 +52,7 @@ Verwenden Sie das folgende Verfahren, um Berichte zu generieren:
   
 3.  Geben Sie den Umfang der von Ihnen gewünschten Details in den Fehlerberichten mithilfe der Einstellungen für die Fehlerberichterstattung an:  
   
-    |SL. Nein|Befehl und Parameter|Ausgabe Beschreibung|  
+    |SL. Nein.|Befehl und Parameter|Ausgabe Beschreibung|  
     |-|-|-|  
     |1|Report-Errors = "false"|Keine Details zu Fehler-/Warnungs-/Information-Meldungen.|  
     |2|Report-Errors = "true"|Ausführliche Fehler-/Warnungs-/Information-Meldungen.|  

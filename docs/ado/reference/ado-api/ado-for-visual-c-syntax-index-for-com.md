@@ -1,4 +1,5 @@
 ---
+description: ADO für Visual C++ – Syntaxindex für COM
 title: ADO für Visual C++ Syntax Index für com | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 044dcc2fb10463e592a953725afc2413c3a5880f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1c5febeb8727348525a9fe4a4dd5f8e22a17678b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451412"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO für Visual C++ – Syntaxindex für COM
 Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz, die auf Microsoft Visual C++ basiert.  
@@ -50,6 +51,6 @@ Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz, die auf Microsoft V
   
 -   [Stream-Objekt](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ADO für Visual C++ Syntax Index mit #Import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ActiveX-Datenobjekte (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

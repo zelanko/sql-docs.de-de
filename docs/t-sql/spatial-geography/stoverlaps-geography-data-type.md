@@ -1,4 +1,5 @@
 ---
+description: STOverlaps (geography-Datentyp)
 title: STOverlaps (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 94dfdbf56290a38b99fd031771777970597536de
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 0a4df3ac3d6ac6b3c4d8cf212d83cc0f71582b86
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459022"
 ---
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (geography-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "86556050"
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Methode gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geography** -Instanzen nicht übereinstimmen.  
   
 ## <a name="examples"></a>Beispiele  
