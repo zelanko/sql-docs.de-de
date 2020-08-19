@@ -1,4 +1,5 @@
 ---
+description: Views-Collection (ADOX)
 title: Views-Auflistung (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 355a18d172939113eb71e58655811a44e89aa7c2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aaf12e802e41b2dab638858eb2a08aacc3140ab6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439312"
 ---
 # <a name="views-collection-adox"></a>Views-Collection (ADOX)
 Enthält alle [Ansichts](../../../ado/reference/adox-api/view-object-adox.md) Objekte eines Katalogs.  

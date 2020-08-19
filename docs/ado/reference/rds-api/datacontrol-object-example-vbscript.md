@@ -1,4 +1,5 @@
 ---
+description: DataControl-Objekt – Beispiel (VBScript)
 title: Beispiel für das DataControl-Objekt (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb581ab66f4422b392c0031c1e69faa00e21069f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c237a4259838beca54f0016b8a34f191e169d0ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439162"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>DataControl-Objekt – Beispiel (VBScript)
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Der folgende Code zeigt, wie das RDS-festgelegt wird [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Parameter zur Entwurfszeit, die an ein Daten abhängiger Steuerelement gebunden werden. Schneiden Sie diesen Code zwischen den \< Text>-und \< /Body-> Tags in einem normalen HTML-Dokument aus, und fügen Sie ihn ein. nennen Sie ihn **datacontroldesignvsb. ASP**. Das ASP-Skript identifiziert Ihren Server.  
+ Der folgende Code zeigt, wie das RDS-festgelegt wird [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Parameter zur Entwurfszeit, die an ein Daten abhängiger Steuerelement gebunden werden. Schneiden Sie diesen Code zwischen den \<Body> Tags und \</Body> in ein normales HTML-Dokument aus, und nennen Sie ihn " **datacontroldesignvsb. ASP**". Das ASP-Skript identifiziert Ihren Server.  
   
 ```  
 <!-- BeginDataControlDesignVBS -->  
@@ -92,7 +93,7 @@ BODY {
 <!-- EndDataControlDesignVBS -->  
 ```  
   
- Im folgenden Beispiel wird gezeigt, wie die erforderlichen Parameter von RDS festgelegt werden **. DataControl** zur Laufzeit. Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \< Text>-und \< /Body-> Tags in einem normalen HTML-Dokument aus, und fügen Sie ihn ein. nennen Sie ihn **datacontrolruntimevb. ASP**. Das ASP-Skript identifiziert Ihren Server.  
+ Im folgenden Beispiel wird gezeigt, wie die erforderlichen Parameter von RDS festgelegt werden **. DataControl** zur Laufzeit. Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \<Body> \</Body> Tags und in ein normales HTML-Dokument aus, und nennen Sie ihn " **datacontrolruntimevsb. ASP**". Das ASP-Skript identifiziert Ihren Server.  
   
 ```  
 <!-- BeginDataControlRuntimeVBS -->  

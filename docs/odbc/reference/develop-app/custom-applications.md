@@ -1,4 +1,5 @@
 ---
+description: Benutzerdefinierte Anwendungen
 title: Benutzerdefinierte Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df00a748ee4d5e3a63b32c95449417a1057b58e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56829c72264ba128554af0534e8a6bfa16254142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429392"
 ---
 # <a name="custom-applications"></a>Benutzerdefinierte Anwendungen
 Benutzerdefinierte Anwendungen führen in der Regel eine bestimmte Aufgabe für einige DBMSs aus. Beispielsweise kann eine Anwendung Daten aus einem einzelnen DBMS abrufen und einen Bericht generieren, oder Sie kann Daten zwischen mehreren DBMSs übertragen. Diese Anwendungen sind häufig vorhanden, da diese DBMSs bekannt sind, bevor die Anwendung geschrieben wird, und sich im Laufe der Lebensdauer der Anwendung wahrscheinlich nicht mehr ändern.  

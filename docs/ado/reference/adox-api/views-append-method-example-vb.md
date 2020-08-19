@@ -1,4 +1,5 @@
 ---
+description: Append-Methode für Sichten – Beispiel (VB)
 title: Ansichten Append-Methode (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9fe8ce0f7db1057bf31506478ee423907ac12bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a481db1f6b185c082dc26cc8ede030938bbfce9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439322"
 ---
 # <a name="views-append-method-example-vb"></a>Append-Methode für Sichten – Beispiel (VB)
 Der folgende Code veranschaulicht, wie Sie ein [Command](../../../ado/reference/ado-api/command-object-ado.md) -Objekt und [die](../../../ado/reference/adox-api/views-collection-adox.md) Ansichts Auflistungs-Auflistungs [Methode verwenden](../../../ado/reference/adox-api/append-method-adox-views.md) , um eine neue Sicht in der zugrunde liegenden Datenquelle zu erstellen.  

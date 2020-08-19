@@ -1,4 +1,5 @@
 ---
+description: Cancel-Methode (RDS)
 title: Cancel-Methode (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9d8c0a478fd21c924752e6ebccc72767f8050f8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 68a7e5139be0cc317341bda05a171e0969411540
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439252"
 ---
 # <a name="cancel-method-rds"></a>Cancel-Methode (RDS)
 Bricht die Ausführung eines ausstehenden asynchronen Methoden Aufrufes ab.  

@@ -1,4 +1,5 @@
 ---
+description: CreateObject-Methode (RDS)
 title: Methode "kreateobject" (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439202"
 ---
 # <a name="createobject-method-rds"></a>CreateObject-Methode (RDS)
 Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf zurück. Der Proxy verpackt und Marshalls Daten zum serverseitigen Stub für die Kommunikation mit dem Geschäftsobjekt, um Anforderungen und Daten über das Internet zu senden. Für in-Process-Komponenten Objekte werden keine Proxys verwendet. es wird lediglich ein Zeiger auf das-Objekt bereitgestellt.  
@@ -37,7 +38,7 @@ Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf z
 |In-Process|Set Object = DataSpace. kreateobject ("ProgID", "")|  
   
 ## <a name="parameters"></a>Parameter  
- *Objekt*  
+ *Object*  
  Eine Objekt Variable, die ein Objekt ergibt, bei dem es sich um den in *ProgID*angegebenen Typ handelt.  
   
  *DataSpace*  

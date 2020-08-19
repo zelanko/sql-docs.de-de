@@ -1,4 +1,5 @@
 ---
+description: ConvertToString-Methode (RDS)
 title: ConvertTo String-Methode (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6eff6ae54dc5cc0b901cfb1da61244e30d963615
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 58bfb25264c15f051bfd7144bdcaf01bbd1eda05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439192"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString-Methode (RDS)
 Konvertiert ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in eine MIME-Zeichenfolge, die die Recordsetdaten darstellt.  

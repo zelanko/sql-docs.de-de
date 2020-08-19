@@ -1,4 +1,5 @@
 ---
+description: Intervalldatentypen
 title: Intervall Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee4a6e845e0bc0830f514b2e768075dd75bcf6e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b54996c2f2897e47e05088b1985d190acafaad3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429672"
 ---
 # <a name="interval-data-types"></a>Intervalldatentypen
 Ein Intervall wird als Differenz zwischen zwei Datums-und Uhrzeiten definiert. Intervalle werden auf eine von zwei Arten ausgedrückt. Eine ist ein *Jahr-Monat-* Intervall, das Intervalle in Bezug auf Jahre und eine ganzzahlige Anzahl von Monaten ausdrückt. Bei der anderen handelt es sich um ein *Zeit* Intervall, das Intervalle in Form von Tagen, Minuten und Sekunden ausdrückt. Diese beiden Arten von Intervallen sind unterschiedlich und können nicht gemischt werden, da Monate eine unterschiedliche Anzahl von Tagen aufweisen können.  
@@ -41,7 +42,7 @@ Ein Intervall wird als Differenz zwischen zwei Datums-und Uhrzeiten definiert. I
   
  Es gibt 13-Intervall-SQL-Datentypen und 13 Interval C-Datentypen. Jeder Datentyp der Interval-C-Datentypen verwendet die gleiche Struktur, SQL_INTERVAL_STRUCT, um die Intervall Daten zu enthalten. (Weitere Informationen finden Sie im nächsten Abschnitt, [C Interval Structure](../../../odbc/reference/appendixes/c-interval-structure.md).) Weitere Informationen zu den SQL-Datentypen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md). Weitere Informationen zu den c-Datentypen finden Sie unter [c-Datentypen](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Typbezeichner|Klasse|BESCHREIBUNG|  
+|Typbezeichner|Class|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |MONTH|Jahr-Monat|Anzahl von Monaten zwischen zwei Datumsangaben.|  
 |YEAR|Jahr-Monat|Anzahl von Jahren zwischen zwei Datumsangaben.|  

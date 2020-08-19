@@ -1,4 +1,5 @@
 ---
+description: FilterCriterion-Eigenschaft (RDS)
 title: Filterkriterium-Eigenschaft (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88e1bbdb45b48e42d69bd921384056089b3a2241
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b1e2c46549f680e248d5734efa58d949d83f3800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438992"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion-Eigenschaft (RDS)
 Gibt den Auswertungs Operator an, der im Filter Wert verwendet werden soll.  
@@ -38,7 +39,7 @@ DataControl.FilterCriterion = String
  Eine Objekt Variable, die einen [RDS darstellt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt.  
   
  *String*  
- Ein **Zeichen** folgen Wert, der den Auswertungs Operator des [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) zu den Datensätzen angibt. Kann eine der folgenden sein: <, \< =, >, >=, = oder <>.  
+ Ein **Zeichen** folgen Wert, der den Auswertungs Operator des [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) zu den Datensätzen angibt. Kann eine der folgenden sein: <, \<=, > , >=, = oder <>.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Eigenschaften [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), **Filterkriterium**und [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) stellen Sortier-und Filterfunktionen für den Client seitigen Cache bereit. Die Sortierfunktion ordnet Datensätze nach Werten aus einer Spalte an. Die Filterfunktion zeigt eine Teilmenge der Datensätze basierend auf den Suchkriterien an, während das vollständige [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) im Cache beibehalten wird. Die [Reset](../../../ado/reference/rds-api/reset-method-rds.md) -Methode führt die Kriterien aus und ersetzt das aktuelle **Recordset** durch ein Aktualisier bares **Recordset**.  

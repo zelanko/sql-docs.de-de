@@ -1,4 +1,5 @@
 ---
+description: Dynamische ODBC-Cursor
 title: Dynamische ODBC-Cursor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f94b83ef1458cd9f8368d1bea3a39682bd80b1a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19ae15a211329e07fdab13a5b6ff40e210e97cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429192"
 ---
 # <a name="odbc-dynamic-cursors"></a>Dynamische ODBC-Cursor
 Ein dynamischer Cursor ist genau das: Dynamic. Sie kann alle Änderungen erkennen, die an der Mitgliedschaft, der Reihenfolge und den Werten des Resultsets vorgenommen wurden, nachdem der Cursor geöffnet wurde. Angenommen ein dynamischer Cursor ruft zwei Zeilen ab, und eine andere Anwendung aktualisiert daraufhin eine dieser Zeilen und löscht die andere. Wenn der dynamische Cursor dann versucht, diese Zeilen erneut abzurufen, wird die gelöschte Zeile nicht gefunden, die neuen Werte für die aktualisierte Zeile werden jedoch zurückgegeben.  

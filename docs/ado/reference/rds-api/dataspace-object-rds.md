@@ -1,4 +1,5 @@
 ---
+description: DataSpace-Objekt (RDS)
 title: DataSpace-Objekt (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e0340eb56ec2b72c0f917f33a639ed5227d2c0b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb24cdf6acbe58891177dfc84d6c1e341699b129
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752571"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439062"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace-Objekt (RDS)
 > [!IMPORTANT]
@@ -28,7 +29,7 @@ ms.locfileid: "82752571"
   
  Der Remote Datendienst benötigt Geschäftsobjekt Proxys, damit Client seitige Komponenten mit Geschäftsobjekten kommunizieren können, die sich auf der mittleren Ebene befinden. Proxys vereinfachen das Verpacken, das Entpacken und transportieren (Mars Hallen) der [Recordsetdaten](../../../ado/reference/ado-api/recordset-object-ado.md) der Anwendung über Prozess-oder Computer Grenzen hinweg.  
   
- Der Remote Datendienst verwendet **RDS. **Die Methode " [kreateobject](../../../ado/reference/rds-api/createobject-method-rds.md) " des DataSpace-Objekts zum Erstellen von Geschäftsobjekt Proxys. Der Geschäftsobjekt Proxy wird dynamisch erstellt, wenn eine Instanz des Objekts der mittleren Ebene des Geschäftsobjekts erstellt wird. Der Remote Datendienst unterstützt die folgenden Protokolle: http, HTTPS (http Secure Sockets), DCOM und in-Process (Client Komponenten und das Geschäftsobjekt befinden sich auf demselben Computer).  
+ Der Remote Datendienst verwendet **RDS. ** Die Methode " [kreateobject](../../../ado/reference/rds-api/createobject-method-rds.md) " des DataSpace-Objekts zum Erstellen von Geschäftsobjekt Proxys. Der Geschäftsobjekt Proxy wird dynamisch erstellt, wenn eine Instanz des Objekts der mittleren Ebene des Geschäftsobjekts erstellt wird. Der Remote Datendienst unterstützt die folgenden Protokolle: http, HTTPS (http Secure Sockets), DCOM und in-Process (Client Komponenten und das Geschäftsobjekt befinden sich auf demselben Computer).  
   
 > [!NOTE]
 >  RDS verhält sich bei **RDS. Das DataSpace** -Objekt verwendet die http-oder HTTPS-Protokolle. Das heißt, dass alle internen Informationen über eine Client Anforderung verworfen werden, nachdem der Server eine Antwort zurückgegeben hat.  

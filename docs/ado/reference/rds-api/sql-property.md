@@ -1,4 +1,5 @@
 ---
+description: SQL-Eigenschaft
 title: SQL-Eigenschaft | Microsoft-Dokumentation
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c21e12d3601f40b1749067f04ce3d655ea0c1109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438602"
 ---
 # <a name="sql-property"></a>SQL-Eigenschaft
 Gibt die Abfrage [Zeichenfolge](../../../ado/reference/ado-api/recordset-object-ado.md)an, mit der das Recordset abgerufen wird.  

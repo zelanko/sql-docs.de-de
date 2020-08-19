@@ -1,4 +1,5 @@
 ---
+description: Editor für den Datenprofilerstellungs-Task (Seite 'Profilanforderungen')
 title: Editor für den Datenprofilerstellungs-Task (Seite „Profilanforderungen“) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6716457b994721da54c1f42fe8057fda67f7e4be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3365f6540a95639f2f6d4c607bfdee094c550c1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431002"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor für den Datenprofilerstellungs-Task (Seite 'Profilanforderungen')
 
@@ -52,7 +53,7 @@ ms.locfileid: "86921717"
 ### <a name="requests-pane-columns"></a>Spalten im Anforderungsbereich  
  Welche Spalten im Anforderungsbereich angezeigt werden, hängt von der **Sicht** ab, die Sie ausgewählt haben:  
   
--   Wenn Sie **Alle Anforderungen** auswählen, enthält der Anforderungsbereich zwei Spalten: **Profiltyp** und **Anforderungs-ID**.  
+-   Wenn Sie **Alle Anforderungen**auswählen, enthält der Anforderungsbereich zwei Spalten: **Profiltyp** und **Anforderungs-ID**.  
   
 -   Wenn Sie die Sicht eines der fünf Spaltenprofile wählen, enthält der Anforderungsbereich vier Spalten: **Profiltyp**, **Tabelle oder Sicht**, **Spalte**und **Anforderungs-ID**.  
   
@@ -130,7 +131,7 @@ ms.locfileid: "86921717"
  Der Bereich **Anforderungseigenschaften** wird unter dem Anforderungsbereich angezeigt. Dieser Bereich zeigt die Optionen für das Profil an, das Sie im Anforderungsbereich ausgewählt haben.  
   
 > [!NOTE]  
->  Wenn Sie einen **Profiltyp**ausgewählt haben, müssen Sie das Feld **Anforderungs-ID** auswählen, um die Eigenschaften für die Profilanforderung im Bereich **Anforderungseigenschaften** anzuzeigen.  
+>   Wenn Sie einen **Profiltyp**ausgewählt haben, müssen Sie das Feld **Anforderungs-ID** auswählen, um die Eigenschaften für die Profilanforderung im Bereich **Anforderungseigenschaften** anzuzeigen.  
   
  Diese Optionen hängen vom ausgewählten Profil ab. Informationen zu den Optionen für einzelne Profiltypen finden Sie in den folgenden Themen:  
   
@@ -150,7 +151,7 @@ ms.locfileid: "86921717"
   
 -   [Optionen für Anforderung für Wertinklusionsprofil &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

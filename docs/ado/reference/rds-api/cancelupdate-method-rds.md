@@ -1,4 +1,5 @@
 ---
+description: CancelUpdate-Methode (RDS)
 title: CancelUpdate-Methode (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05426b2d4fba81e70a8bae35db215bcd750d3169
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7e3f7180b812aab47f9388e25a64d9445e9b5c9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439232"
 ---
 # <a name="cancelupdate-method-rds"></a>CancelUpdate-Methode (RDS)
 Bricht alle Änderungen ab, die an der aktuellen oder neuen Zeile eines [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts vorgenommen wurden.  

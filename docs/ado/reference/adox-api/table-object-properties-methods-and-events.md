@@ -1,4 +1,5 @@
 ---
+description: Table-Objekt – Eigenschaften, Methoden und Ereignisse
 title: Tabellenobjekt Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc0ccdc8747b69cff4e9b57ae27c030dbdb9be16
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b614fc32325ef8a7b64b555f91c32966fdbb438c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439462"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Table-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
@@ -40,9 +41,9 @@ ms.locfileid: "82763291"
  [Type-Eigenschaft (Tabelle) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  

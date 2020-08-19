@@ -1,4 +1,5 @@
 ---
+description: ConvertToString-Methode – Beispiel (VBScript)
 title: Converttoistring-Methode (Beispiel) (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abfaba4a4ef4a67bb4b5970bf347674814caab13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5d30d0268d974f8ab4cac2238ec8672c9948dcaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439181"
 ---
 # <a name="converttostring-method-example-vbscript"></a>ConvertToString-Methode – Beispiel (VBScript)
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Im folgenden Beispiel wird gezeigt, wie ein **Recordset** mithilfe der Methode **RDSServer. DataFactory convertdestring** in eine MIME-codierte Zeichenfolge konvertiert wird. Anschließend wird gezeigt, wie die Zeichenfolge zurück in ein **Recordset**konvertiert werden kann. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **convertdestring. htm**.  
+ Im folgenden Beispiel wird gezeigt, wie ein **Recordset** mithilfe der Methode **RDSServer. DataFactory convertdestring** in eine MIME-codierte Zeichenfolge konvertiert wird. Anschließend wird gezeigt, wie die Zeichenfolge zurück in ein **Recordset**konvertiert werden kann. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Texteditor ein, und speichern Sie ihn als **ConvertToString.htm**.  
   
 ```  
 <!-- BeginConvertToStringVBS -->  

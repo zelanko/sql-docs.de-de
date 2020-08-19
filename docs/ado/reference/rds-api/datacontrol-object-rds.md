@@ -1,4 +1,5 @@
 ---
+description: DataControl-Objekt (RDS)
 title: DataControl-Objekt (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bc9482c6626de36d9e45b2a2968b504b0793746
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6643fe176ef6281afa39845310812f5f6981d16b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439142"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl-Objekt (RDS)
 Bindet ein Datenabfrage- [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) an ein oder mehrere Steuerelemente (z. b. ein Textfeld, ein Raster Steuerelement oder ein Kombinations Feld), um die **Recordsetdaten** auf einer Webseite anzuzeigen.  
@@ -51,7 +52,7 @@ Bindet ein Datenabfrage- [Recordset](../../../ado/reference/ado-api/recordset-ob
  Alle Eigenschaften im **RDS. DataControl** ist optional, da benutzerdefinierte Geschäftsobjekte ihre Funktionalität ersetzen können.  
   
 > [!NOTE]
->  Wenn Sie mehrere Ergebnisse Abfragen, wird nur das erste [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zurückgegeben. Wenn mehrere Resultsets benötigt werden, weisen Sie jede der eigenen **DataControl**zu. Ein Beispiel für eine Abfrage für mehrere Ergebnisse könnte wie folgt lauten:`"Select * from Authors, Select * from Topics"`  
+>  Wenn Sie mehrere Ergebnisse Abfragen, wird nur das erste [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zurückgegeben. Wenn mehrere Resultsets benötigt werden, weisen Sie jede der eigenen **DataControl**zu. Ein Beispiel für eine Abfrage für mehrere Ergebnisse könnte wie folgt lauten: `"Select * from Authors, Select * from Topics"`  
   
  Hinzufügen von "DFMode = 20;" zu ihrer Verbindungs Zeichenfolge, wenn Sie das **RDS verwenden. Das DataControl** -Objekt kann die Leistung des Servers beim Aktualisieren von Daten verbessern. Mit dieser Einstellung verwendet das **RDSServer. DataFactory** -Objekt auf dem Server einen weniger ressourcenintensiven Modus. Die folgenden Funktionen sind in dieser Konfiguration jedoch nicht verfügbar:  
   

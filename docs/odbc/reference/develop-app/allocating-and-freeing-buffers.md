@@ -1,4 +1,5 @@
 ---
+description: Zuweisen und Freigeben von Puffern
 title: Zuordnen und Freigeben von Puffern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6aab888d24fcbc987b3db921436f14812618519
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 629c613e8c0aba4675b2b95c9c9ccd82fb7cdfb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429472"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Zuweisen und Freigeben von Puffern
 Alle Puffer werden von der Anwendung zugeordnet und freigegeben. Wenn ein Puffer nicht verzögert wird, muss er nur für die Dauer des Aufrufes einer Funktion vorhanden sein. Beispielsweise gibt **SQLGetInfo** den Wert zurück, der einer bestimmten Option im Puffer zugeordnet ist, auf den das *infovalueptr* -Argument zeigt. Dieser Puffer kann direkt nach dem Aufrufen von **SQLGetInfo**freigegeben werden, wie im folgenden Codebeispiel gezeigt:  

@@ -1,4 +1,5 @@
 ---
+description: Reset-Methode (RDS)
 title: Reset-Methode (RDS) | Microsoft-Dokumentation
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c2f40460a4690e32cb3f94963c8cbc1f7f06c15
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4d0174e4d40aba55e012b333045bcedfb4fea460
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438702"
 ---
 # <a name="reset-method-rds"></a>Reset-Methode (RDS)
 Führt die Sortierung oder den Filter für ein Client seitiges **Recordset** basierend auf den angegebenen Sortier-und Filtereigenschaften aus.  
@@ -38,7 +39,7 @@ DataControl.Reset(value)
  Eine Objekt Variable, die einen [RDS darstellt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt.  
   
  *value*  
- Dies ist optional. Ein **boolescher** Wert, der **true** (Standard) ist, wenn Sie nach dem aktuellen "gefilterten" Rowset filtern möchten. **False** gibt an, dass Sie nach dem ursprünglichen Rowset filtern, indem Sie alle vorherigen Filteroptionen entfernen.  
+ Optional. Ein **boolescher** Wert, der **true** (Standard) ist, wenn Sie nach dem aktuellen "gefilterten" Rowset filtern möchten. **False** gibt an, dass Sie nach dem ursprünglichen Rowset filtern, indem Sie alle vorherigen Filteroptionen entfernen.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Eigenschaften [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [Filterkriterium](../../../ado/reference/rds-api/filtercriterion-property-rds.md)und [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) stellen Sortier-und Filterfunktionen für den Client seitigen Cache bereit. Die Sortierfunktion ordnet Datensätze nach Werten aus einer Spalte an. Die Filterfunktion zeigt eine Teilmenge der Datensätze basierend auf einem Suchkriterium an, während das vollständige [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) im Cache beibehalten wird. Die **Reset** -Methode führt die Kriterien aus und ersetzt das aktuelle **Recordset** durch ein Aktualisier bares **Recordset**.  

@@ -1,4 +1,5 @@
 ---
+description: Zuordnen des Umgebungshandles
 title: Zuordnen des Umgebungs Handles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e33b850b2786960a368720deaf89a2203c7dd159
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 390d7f4248d43e6fc6cb7910be5f42cb286f37e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429452"
 ---
 # <a name="allocating-the-environment-handle"></a>Zuordnen des Umgebungshandles
 Die erste Aufgabe für jede ODBC-Anwendung besteht darin, den Treiber-Manager zu laden. wie dies geschieht, hängt vom Betriebssystem ab. Beispielsweise wird auf einem Computer, auf dem Microsoft® Windows NT® Server/Windows 2000 Server, Windows NT Workstation/Windows 2000 Professional oder Microsoft Windows® 95/98 ausgeführt wird, die Anwendung entweder mit der Treiber-Manager-Bibliothek verknüpft, oder es wird **LoadLibrary** aufgerufen, um die Treiber-Manager-DLL zu laden.  

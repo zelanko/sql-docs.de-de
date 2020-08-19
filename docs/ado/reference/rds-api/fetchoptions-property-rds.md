@@ -1,4 +1,5 @@
 ---
+description: FetchOptions-Eigenschaft (RDS)
 title: FetchOptions-Eigenschaft (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 448dbb4d6c669f136c1d26b3730d16af2f0e8e17
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2d00dd737f6b775d9d46bfb6af96a5ce76aa3a8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439022"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions-Eigenschaft (RDS)
 Gibt den Typ des asynchronen fetchen an.  
@@ -29,7 +30,7 @@ Gibt den Typ des asynchronen fetchen an.
 ## <a name="setting-and-return-values"></a>Festlegen und Zurückgeben von Werten  
  Legt einen der folgenden Werte fest oder gibt ihn zurück.  
   
-|Konstante|BESCHREIBUNG|  
+|Konstante|Beschreibung|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|Alle Datensätze des [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) werden abgerufen, bevor die Steuerung an die Anwendung zurückgegeben wird. Das gesamte **Recordset** wird abgerufen, bevor die Anwendung mit der Anwendung arbeiten darf.|  
 |**adcFetchBackground**|Das Steuerelement kann zur Anwendung zurückkehren, sobald der erste Batch von Datensätzen abgerufen wurde. Ein späterer Lesevorgang des **Recordsets** , das versucht, auf einen Datensatz zuzugreifen, der nicht im ersten Batch abgerufen wurde, wird verzögert, bis der gesuchte Datensatz tatsächlich abgerufen wird. zu diesem Zeitpunkt wird die Steuerung an die Anwendung zurückgegeben.|  

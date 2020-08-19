@@ -1,4 +1,5 @@
 ---
+description: Adresse des Datenpuffers
 title: Datenpuffer Adresse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2426d68-71bc-4ef7-a5cb-ee9d6c1c9671
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 578e4e37a78818cb640d9f32e2480cec5951df63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 301202933ae9cb0206100b6bbf10dda305495be1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429382"
 ---
 # <a name="data-buffer-address"></a>Adresse des Datenpuffers
 Die Anwendung übergibt die Adresse des Daten Puffers an den Treiber in einem Argument, das häufig als *ValuePtr* oder ein ähnlicher Name bezeichnet wird. Im folgenden Befehl von **SQLBindCol**gibt die Anwendung z. b. die Adresse der *Date* -Variablen an:  

@@ -1,4 +1,5 @@
 ---
+description: CreateRecordset-Methode (RDS)
 title: Methode "samaterecordset" (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53a391ccb25a32d628703543d95dc8e24668fcd5
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f9e993d547e6f28c9fc17e074d005af67f6d7a4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439152"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset-Methode (RDS)
 Erstellt ein leeres, nicht verbundenes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -49,7 +50,7 @@ object.CreateRecordset(ColumnInfos)
 |attribute|Beschreibung|  
 |---------------|-----------------|  
 |Name|Der Name des Spalten Headers.|  
-|Typ|Ganzzahliger Wert des Datentyps.|  
+|type|Ganzzahliger Wert des Datentyps.|  
 |Size|Ganzzahlige Breite in Zeichen, unabhängig vom Datentyp.|  
 |NULL-Zulässigkeit|Boolescher Wert.|  
 |Skalieren (optional)|Dieses optionale Attribut definiert die Skala für numerische Felder. Wenn dieser Wert nicht angegeben wird, werden numerische Werte auf drei Dezimalstellen abgeschnitten. Die Genauigkeit ist nicht betroffen, aber die Anzahl der Ziffern nach dem Dezimaltrennzeichen wird auf drei gekürzt.|  
@@ -65,28 +66,28 @@ object.CreateRecordset(ColumnInfos)
   
  Für einige der Variablen Datentypen kann der Typ in den Typ umgewandelt werden, der in der Ersetzungs Spalte angegeben ist. Die Ersetzungen werden erst angezeigt, nachdem das **Recordset** erstellt und gefüllt wurde. Anschließend können Sie ggf. den tatsächlichen Datentyp überprüfen.  
   
-|Länge|Konstante|Number|Substitution|  
+|Länge|Konstant|Zahl|Substitution|  
 |------------|--------------|------------|------------------|  
-|Korrigiert|**adTinyInt**|16||  
-|Korrigiert|**adSmallInt**|2||  
-|Korrigiert|**adInteger**|3||  
-|Korrigiert|**adBigInt**|20||  
-|Korrigiert|**adUnsignedTinyInt**|17||  
-|Korrigiert|**adUnsignedSmallInt**|18||  
-|Korrigiert|**adUnsignedInt**|19||  
-|Korrigiert|**adUnsignedBigInt**|21||  
-|Korrigiert|**adSingle**|4||  
-|Korrigiert|**adDouble**|5||  
-|Korrigiert|**adCurrency**|6||  
-|Korrigiert|**adDecimal**|14||  
-|Korrigiert|**adNumeric**|131||  
-|Korrigiert|**adBoolean**|11||  
-|Korrigiert|**adError**|10||  
-|Korrigiert|**adGuid**|72||  
-|Korrigiert|**adDate**|7||  
-|Korrigiert|**adDBDate**|133||  
-|Korrigiert|**adDBTime**|134||  
-|Korrigiert|**adDBTimestamp**|135|7|  
+|Fest|**adTinyInt**|16||  
+|Fest|**adSmallInt**|2||  
+|Fest|**adInteger**|3||  
+|Fest|**adBigInt**|20||  
+|Fest|**adUnsignedTinyInt**|17||  
+|Fest|**adUnsignedSmallInt**|18||  
+|Fest|**adUnsignedInt**|19||  
+|Fest|**adUnsignedBigInt**|21||  
+|Fest|**adSingle**|4||  
+|Fest|**adDouble**|5||  
+|Fest|**adCurrency**|6||  
+|Fest|**adDecimal**|14||  
+|Fest|**adNumeric**|131||  
+|Fest|**adBoolean**|11||  
+|Fest|**adError**|10||  
+|Fest|**adGuid**|72||  
+|Fest|**adDate**|7||  
+|Fest|**adDBDate**|133||  
+|Fest|**adDBTime**|134||  
+|Fest|**adDBTimestamp**|135|7|  
 |Variable|**adBSTR**|8|130|  
 |Variable|**adChar**|129|200|  
 |Variable|**adVarChar**|200||  

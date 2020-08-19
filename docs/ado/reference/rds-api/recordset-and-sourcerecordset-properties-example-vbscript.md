@@ -1,4 +1,5 @@
 ---
+description: Recordset- und SourceRecordse-Eigenschaften – Beispiel (VBScript)
 title: Recordset und SourceRecordset-Eigenschaften (Beispiel) (VBScript) | Microsoft-Dokumentation
 ms.technology: connectivity
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 64f83c8e7d8a281ff8bd9124d693d365cafd9181
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d2c047ed21662335368f85273ad8c52bf4f5e70f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438742"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset- und SourceRecordse-Eigenschaften – Beispiel (VBScript)
 > [!IMPORTANT]
@@ -28,7 +29,7 @@ ms.locfileid: "82751107"
   
  Im folgenden Beispiel wird gezeigt, wie die erforderlichen Parameter des Standard Geschäftsobjekts [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) zur Laufzeit festgelegt werden.  
   
- Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \< Text>-und \< /Body-> Tags in einem normalen HTML-Dokument aus, und fügen Sie ihn ein, und nennen Sie ihn **recordsetvb. ASP** Das ASP-Skript identifiziert Ihren Server.  
+ Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \<Body> \</Body> Tags und in ein normales HTML-Dokument aus, und nennen Sie ihn " **recordsetvb. ASP**". Das ASP-Skript identifiziert Ihren Server.  
   
 ```  
 <!-- BeginRecordSetVBS -->  

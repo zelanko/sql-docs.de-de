@@ -1,4 +1,5 @@
 ---
+description: 'SQL zu C: Zeitstempel'
 title: 'SQL zu C: Timestamp | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 552bab585e4480fd922c9b9a6b112830f5c11ad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a2904f01b5ecadbfc224d052366197e41163cd9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429542"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL zu C: Zeitstempel
 
@@ -31,12 +32,12 @@ In der folgenden Tabelle werden die ODBC-C-Datentypen aufgeführt, in die SQL-Da
 
 |C-Typbezeichner|Test|**Targetvalueptr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|Länge des *pufflength* -> Zeichens<br /><br /> 20 <= *BufferLength* <= Zeichen Byte Länge<br /><br /> *BufferLength* < 20|Daten<br /><br /> Abgeschnittene Daten [b]<br /><br /> Nicht definiert|Länge der Daten in Bytes<br /><br /> Länge der Daten in Bytes<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|Länge der *BufferLength* -> Zeichen<br /><br /> 20 <= *BufferLength* <= Zeichen Länge<br /><br /> *BufferLength* < 20|Daten<br /><br /> Abgeschnittene Daten [b]<br /><br /> Nicht definiert|Länge der Daten in Zeichen<br /><br /> Länge der Daten in Zeichen<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Byte Länge der Daten <= *BufferLength*<br /><br /> Byte Länge der Daten > *BufferLength*|Daten<br /><br /> Nicht definiert|Länge der Daten in Bytes<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|Der Uhrzeit Teil des Zeitstempels ist 0 (null) [a]<br /><br /> Der Uhrzeit Teil des Zeitstempels ist ungleich 0 (null) [a]|Daten<br /><br /> Abgeschnittene Daten [c]|6 [f]<br /><br /> 6 [f]|Nicht zutreffend<br /><br /> 01S07|  
-|SQL_C_TYPE_TIME|Der Teil des Zeitstempels der Sekundenbruchteile ist 0 (null) [a]<br /><br /> Der Teil des Zeitstempels in Sekundenbruchteilen ist ungleich 0 (null) [a]|Daten [d]<br /><br /> Abgeschnittene Daten [d], [e]|6 [f]<br /><br /> 6 [f]|Nicht zutreffend<br /><br /> 01S07|  
-|SQL_C_TYPE_TIMESTAMP|Der Teil des Zeitstempels der Sekundenbruchteile wird nicht abgeschnitten [a]<br /><br /> Teil des Zeitstempels mit Sekundenbruchteilen wird abgeschnitten [a]|Daten [e]<br /><br /> Abgeschnittene Daten [e]|16 [f]<br /><br /> 16 [f]|Nicht zutreffend<br /><br /> 01S07|  
+|SQL_C_CHAR|Länge des *pufflength* -> Zeichens<br /><br /> 20 <= *BufferLength* <= Zeichen Byte Länge<br /><br /> *BufferLength* < 20|Daten<br /><br /> Abgeschnittene Daten [b]<br /><br /> Nicht definiert|Länge der Daten in Bytes<br /><br /> Länge der Daten in Bytes<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|Länge der *BufferLength* -> Zeichen<br /><br /> 20 <= *BufferLength* <= Zeichen Länge<br /><br /> *BufferLength* < 20|Daten<br /><br /> Abgeschnittene Daten [b]<br /><br /> Nicht definiert|Länge der Daten in Zeichen<br /><br /> Länge der Daten in Zeichen<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Byte Länge der Daten <= *BufferLength*<br /><br /> Byte Länge der Daten > *BufferLength*|Daten<br /><br /> Nicht definiert|Länge der Daten in Bytes<br /><br /> Nicht definiert|–<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|Der Uhrzeit Teil des Zeitstempels ist 0 (null) [a]<br /><br /> Der Uhrzeit Teil des Zeitstempels ist ungleich 0 (null) [a]|Daten<br /><br /> Abgeschnittene Daten [c]|6 [f]<br /><br /> 6 [f]|–<br /><br /> 01S07|  
+|SQL_C_TYPE_TIME|Der Teil des Zeitstempels der Sekundenbruchteile ist 0 (null) [a]<br /><br /> Der Teil des Zeitstempels in Sekundenbruchteilen ist ungleich 0 (null) [a]|Daten [d]<br /><br /> Abgeschnittene Daten [d], [e]|6 [f]<br /><br /> 6 [f]|–<br /><br /> 01S07|  
+|SQL_C_TYPE_TIMESTAMP|Der Teil des Zeitstempels der Sekundenbruchteile wird nicht abgeschnitten [a]<br /><br /> Teil des Zeitstempels mit Sekundenbruchteilen wird abgeschnitten [a]|Daten [e]<br /><br /> Abgeschnittene Daten [e]|16 [f]<br /><br /> 16 [f]|–<br /><br /> 01S07|  
 
  [a] der Wert von *BufferLength* wird für diese Konvertierung ignoriert. Der Treiber geht davon aus, dass die Größe von **targetvalueptr* die Größe des C-Datentyps ist.  
   
@@ -50,4 +51,4 @@ In der folgenden Tabelle werden die ODBC-C-Datentypen aufgeführt, in die SQL-Da
   
  [f] Dies ist die Größe des entsprechenden C-Datentyps.  
 
-Wenn SQL-Zeitstempel Daten in Zeichen-C-Daten konvertiert werden, befindet sich die resultierende Zeichenfolge im Format "*JJJJ*-*mm*-*DD* *HH*:*mm*:*SS*[.* f...*] " das Format, in dem bis zu neun Ziffern für Sekundenbruchteile verwendet werden können. Dieses Format wird von der Einstellung für das Windows-® Land nicht beeinträchtigt. (Mit Ausnahme des Dezimal Trennzeichens und der Sekundenbruchteile muss das gesamte Format verwendet werden, unabhängig von der Genauigkeit des SQL-Datentyps Zeitstempel.)
+Wenn SQL-Zeitstempel Daten in Zeichen-C-Daten konvertiert werden, befindet sich die resultierende Zeichenfolge im Format "*JJJJ* - *mm* - *DD* *HH*:*mm*:*SS*[.* f...*] " das Format, in dem bis zu neun Ziffern für Sekundenbruchteile verwendet werden können. Dieses Format wird von der Einstellung für das Windows-® Land nicht beeinträchtigt. (Mit Ausnahme des Dezimal Trennzeichens und der Sekundenbruchteile muss das gesamte Format verwendet werden, unabhängig von der Genauigkeit des SQL-Datentyps Zeitstempel.)

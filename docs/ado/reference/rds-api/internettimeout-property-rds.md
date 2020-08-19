@@ -1,4 +1,5 @@
 ---
+description: InternetTimeout-Eigenschaft (RDS)
 title: InternetTimeout-Eigenschaft (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 30de657985eafdc5a601d61fedbd666455f3dbc9
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 9dbc94caa6266ff2f44a07c8792ff8b6287fd61c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86941062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438922"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout-Eigenschaft (RDS)
 Gibt die Anzahl der Millisekunden an, die gewartet wird, bevor ein Timeout für eine Anforderung eintritt.  

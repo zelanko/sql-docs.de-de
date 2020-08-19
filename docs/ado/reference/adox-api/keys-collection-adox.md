@@ -1,4 +1,5 @@
 ---
+description: Keys-Collection (ADOX)
 title: Keys-Auflistung (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a7bebc1c05ab195d3b23c5c0894d4fcce967625
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 05e36f05cd59cc099abf0b1fa1f96418ccea8bf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439812"
 ---
 # <a name="keys-collection-adox"></a>Keys-Collection (ADOX)
 Enthält alle [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) Objekte einer [Tabelle](../../../ado/reference/adox-api/table-object-adox.md).  

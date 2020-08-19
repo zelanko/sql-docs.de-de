@@ -1,4 +1,5 @@
 ---
+description: Execute-Methode (RDS)
 title: Execute-Methode (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4c44e48c46abab1cc15e3fbf90592414fad7c9c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c04f910aa169d346868b3fec2f1eccb2e381176e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439082"
 ---
 # <a name="execute-method-rds"></a>Execute-Methode (RDS)
 Führt die Anforderung aus und erstellt ein ADO-Recordset für die Verwendung in ADO 2,5 und höher.  
@@ -43,7 +44,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *QueryString*  
  Ein Befehl in der Befehlssprache, der von dem in der Verbindungs Zeichenfolge identifizierten OLE DB Anbieter unterstützt wird. Bei SQL-basierten Anbietern kann *QueryString* eine Transact-SQL-Befehls Anweisung enthalten, aber bei nicht-SQL-Anbietern (z. b. MSDataShape) kann dies keine [!INCLUDE[tsql](../../../includes/tsql-md.md)] Abfrage Anweisung sein.  
   
- Wenn ein Handler verwendet wird, kann der Handler den hier angegebenen Wert ändern oder ersetzen. Der-Handler ersetzt z. b. in der Regel *QueryString* durch eine Abfrage Zeichenfolge aus der INI-Datei. Standardmäßig wird die Datei "msdfmap. ini" verwendet.  
+ Wenn ein Handler verwendet wird, kann der Handler den hier angegebenen Wert ändern oder ersetzen. Der-Handler ersetzt z. b. in der Regel *QueryString* durch eine Abfrage Zeichenfolge aus der INI-Datei. Standardmäßig wird die Msdfmap.ini Datei verwendet.  
   
  *lFetchOptions*  
  Gibt den Typ des asynchronen fetchen an.  
@@ -78,7 +79,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  Ein Zeiger auf Informationen, die von Execute zurückgegeben werden. Wenn der Wert NULL ist, werden keine Fehlerinformationen zurückgegeben.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Der *handlerstring* -Parameter kann NULL sein. Was in diesem Fall geschieht, hängt von der Konfiguration des RDS-Servers ab. Die handlerzeichenfolge "msdfmap. Handler" gibt an, dass der von Microsoft bereitgestellte Handler ("msdfmap. dll") verwendet werden soll. Eine handlerzeichenfolge von "masdfmap. Handler, Sample. ini" gibt an, dass der msdfmap. dll-Handler verwendet werden sollte und dass das Argument "Sample. ini" an den Handler übermittelt werden soll. Msdfmap. dll interpretiert das Argument als Richtung, um die Verbindungs-und Abfrage Zeichenfolgen mit der Datei "Sample. ini" zu überprüfen.  
+ Der *handlerstring* -Parameter kann NULL sein. Was in diesem Fall geschieht, hängt von der Konfiguration des RDS-Servers ab. Die handlerzeichenfolge "msdfmap. Handler" gibt an, dass der von Microsoft bereitgestellte Handler (Msdfmap.dll) verwendet werden soll. Eine handlerzeichenfolge von "masdfmap. Handler, sample.ini" gibt an, dass der Msdfmap.dll Handler verwendet werden sollte und dass das Argument "sample.ini" an den Handler übermittelt werden soll. MSDFMAP.dll interpretiert das Argument als Richtung für die Verwendung des sample.ini, um die Verbindungs-und Abfrage Zeichenfolgen zu überprüfen.  
   
 ## <a name="applies-to"></a>Gilt für  
  [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

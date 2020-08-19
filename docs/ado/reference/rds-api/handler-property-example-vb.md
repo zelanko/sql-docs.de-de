@@ -1,4 +1,5 @@
 ---
+description: Handler-Eigenschaft – Beispiel (VB)
 title: Beispiel für Handlereigenschaft (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 829059639c182fa607ccb9ffe62658705500692d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d00626b04c4107ffdbf15cd24b104b17602fc6e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438972"
 ---
 # <a name="handler-property-example-vb"></a>Handler-Eigenschaft – Beispiel (VB)
 > [!IMPORTANT]
@@ -27,7 +28,7 @@ ms.locfileid: "82751983"
   
  In diesem Beispiel wird die Eigenschaft " [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Object [Handler](../../../ado/reference/rds-api/handler-property-rds.md) " veranschaulicht. (Weitere Informationen finden Sie unter [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md) .)  
   
- Angenommen, die folgenden Abschnitte in der Parameterdatei "msdfmap. ini" befinden sich auf dem Server:  
+ Angenommen, die folgenden Abschnitte in der Parameterdatei Msdfmap.ini befinden sich auf dem Server:  
   
 ```  
 [connect AuthorDataBase]  

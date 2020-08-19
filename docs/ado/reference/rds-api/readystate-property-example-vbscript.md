@@ -1,4 +1,5 @@
 ---
+description: ReadyState-Eigenschaft – Beispiel (VBScript)
 title: "\"Read ystate\"-Eigenschaft (Beispiel) (VBScript) | Microsoft-Dokumentation"
 ms.technology: connectivity
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a3d39355a95b46170ab3f7a5b24cd43582ecac3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 46ebc9a3d7419912f4e0c7e43beb08d2db57c0af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438762"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState-Eigenschaft – Beispiel (VBScript)
 > [!IMPORTANT]
@@ -27,7 +28,7 @@ ms.locfileid: "82755516"
   
  Im folgenden Beispiel wird gezeigt, wie die Eigenschaft "read- [State](../../../ado/reference/rds-api/readystate-property-rds.md) " der RDS-Datei gelesen wird [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt zur Laufzeit im VBScript-Code. "Read- **State** " ist eine schreibgeschützte Eigenschaft.  
   
- Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \< Text>-und \< /Body-> Tags in einem normalen HTML-Dokument aus, und fügen Sie ihn ein, und nennen Sie ihn **rdsinfoyst. ASP** Verwenden Sie **Suchen** , um die Datei adovsb. Inc zu suchen, und platzieren Sie Sie in dem Verzeichnis, das Sie verwenden möchten. Das ASP-Skript identifiziert Ihren Server.  
+ Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \<Body> \</Body> Tags und in ein normales HTML-Dokument aus, und nennen Sie ihn **rdsinfoyst. ASP**. Verwenden Sie **Suchen** , um die Datei adovsb. Inc zu suchen, und platzieren Sie Sie in dem Verzeichnis, das Sie verwenden möchten. Das ASP-Skript identifiziert Ihren Server.  
   
 ```  
 <!-- BeginReadyStateVBS -->  

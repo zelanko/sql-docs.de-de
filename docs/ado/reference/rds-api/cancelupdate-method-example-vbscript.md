@@ -1,4 +1,5 @@
 ---
+description: CancelUpdate-Methode – Beispiel (VBScript)
 title: CancelUpdate-Methode (Beispiel) (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d560233efc7623a390fbd2fc63e8add5f26cd157
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 21d940642388c516ddf9c0048e255e441b9076b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439242"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>CancelUpdate-Methode – Beispiel (VBScript)
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \< Text>-und \< /Body-> Tags in einem normalen HTML-Dokument aus, und fügen Sie ihn ein, und nennen Sie ihn **cancelupdatevb. ASP** Das ASP-Skript identifiziert den Internetserver. Sie müssen den Namen des Servers so bearbeiten, dass er ihr eigenes Setup widerspiegelt. Ändern Sie einfach den Wert in der Verbindungs Zeichenfolge von MyServer in den Namen der SQL Server Installation.  
+ Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \<Body> \</Body> Tags und in ein normales HTML-Dokument aus, und fügen Sie ihm den Namen **cancelupdatevb. ASP**. Das ASP-Skript identifiziert den Internetserver. Sie müssen den Namen des Servers so bearbeiten, dass er ihr eigenes Setup widerspiegelt. Ändern Sie einfach den Wert in der Verbindungs Zeichenfolge von MyServer in den Namen der SQL Server Installation.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  

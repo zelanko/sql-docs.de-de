@@ -1,4 +1,5 @@
 ---
+description: 'SQL zu C: numerisch'
 title: 'SQL zu C: numerisch | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36b24da4023a96b686742416b83bb5790e129278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d48706eddabc71f28c84fae5623a8c9e440d8506
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429562"
 ---
 # <a name="sql-to-c-numeric"></a>SQL zu C: numerisch
 
@@ -38,13 +39,13 @@ In der folgenden Tabelle werden die ODBC-C-Datentypen angezeigt, in die numerisc
 
 |C-Typbezeichner|Test|**Targetvalueptr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|Zeichen Byte Länge < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern >= *BufferLength*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten in Bytes<br /><br /> Länge der Daten in Bytes<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|Zeichen Länge < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern >= *BufferLength*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten in Zeichen<br /><br /> Länge der Daten in Zeichen<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|Konvertierte Daten ohne Abschneiden [a]<br /><br /> Mit Abschneiden von Bruch Ziffern konvertierte Daten [a]<br /><br /> Die Konvertierung von Daten würde zu einem Verlust ganzer (im Gegensatz zu Bruch Ziffern) Ziffern führen. [a]|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Größe des C-Datentyps<br /><br /> Größe des C-Datentyps<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|Die Daten befinden sich innerhalb des Bereichs des Datentyps, in den die Zahl konvertiert wird [a]<br /><br /> Die Daten liegen außerhalb des Bereichs des Datentyps, in den die Zahl konvertiert wird [a]|Daten<br /><br /> Nicht definiert|Größe des C-Datentyps<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 22003|  
-|SQL_C_BIT|Daten sind 0 oder 1 [a]<br /><br /> Daten sind größer als 0 (null), kleiner als 2, nicht gleich 1 [a]<br /><br /> Daten sind kleiner als 0 (null) oder größer oder gleich 2 [a]|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|1 [b]<br /><br /> 1 [b]<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 01S07<br /><br /> 22003|  
-|SQL_C_BINARY|Byte Länge der Daten <= *BufferLength*<br /><br /> Byte Länge der Daten > *BufferLength*|Daten<br /><br /> Nicht definiert|Länge der Daten<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 22003|  
-|SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|Nicht gekürzte Daten<br /><br /> Teil Bruchteile abgeschnitten<br /><br /> Ganzer Teil der Zahl abgeschnitten|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten in Bytes<br /><br /> Länge der Daten in Bytes<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_CHAR|Zeichen Byte Länge < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern >= *BufferLength*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten in Bytes<br /><br /> Länge der Daten in Bytes<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|Zeichen Länge < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern >= *BufferLength*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten in Zeichen<br /><br /> Länge der Daten in Zeichen<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_NUMERIC|Konvertierte Daten ohne Abschneiden [a]<br /><br /> Mit Abschneiden von Bruch Ziffern konvertierte Daten [a]<br /><br /> Die Konvertierung von Daten würde zu einem Verlust ganzer (im Gegensatz zu Bruch Ziffern) Ziffern führen. [a]|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Größe des C-Datentyps<br /><br /> Größe des C-Datentyps<br /><br /> Nicht definiert|–<br /><br /> 01S07<br /><br /> 22003|  
+|SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|Die Daten befinden sich innerhalb des Bereichs des Datentyps, in den die Zahl konvertiert wird [a]<br /><br /> Die Daten liegen außerhalb des Bereichs des Datentyps, in den die Zahl konvertiert wird [a]|Daten<br /><br /> Nicht definiert|Größe des C-Datentyps<br /><br /> Nicht definiert|–<br /><br /> 22003|  
+|SQL_C_BIT|Daten sind 0 oder 1 [a]<br /><br /> Daten sind größer als 0 (null), kleiner als 2, nicht gleich 1 [a]<br /><br /> Daten sind kleiner als 0 (null) oder größer oder gleich 2 [a]|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|1 [b]<br /><br /> 1 [b]<br /><br /> Nicht definiert|–<br /><br /> 01S07<br /><br /> 22003|  
+|SQL_C_BINARY|Byte Länge der Daten <= *BufferLength*<br /><br /> Byte Länge der Daten > *BufferLength*|Daten<br /><br /> Nicht definiert|Länge der Daten<br /><br /> Nicht definiert|–<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|Nicht gekürzte Daten<br /><br /> Teil Bruchteile abgeschnitten<br /><br /> Ganzer Teil der Zahl abgeschnitten|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten in Bytes<br /><br /> Länge der Daten in Bytes<br /><br /> Nicht definiert|–<br /><br /> 01S07<br /><br /> 22015|  
 |SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|Ganzer Teil der Zahl abgeschnitten|Nicht definiert|Nicht definiert|22015|  
   
  [a] der Wert von *BufferLength* wird für diese Konvertierung ignoriert. Der Treiber geht davon aus, dass die Größe von **targetvalueptr* die Größe des C-Datentyps ist.  

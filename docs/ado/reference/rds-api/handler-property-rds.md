@@ -1,4 +1,5 @@
 ---
+description: Handler-Eigenschaft (RDS)
 title: Handler-Eigenschaft (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22e054a6f1723f32d81a4f00ec941a10f8212506
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e80c140e5abab80e7c33199cb9401fe9d2774161
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438952"
 ---
 # <a name="handler-property-rds"></a>Handler-Eigenschaft (RDS)
 Gibt den Namen eines serverseitigen Anpassungsprogramms (Handler) an, das die Funktionalität von [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)erweitert, sowie alle Parameter, die vom *Handler*verwendet werden.  
@@ -47,7 +48,7 @@ DataControl.Handler = String
   
  Der Name des Handlers und der zugehörigen Parameter werden ggf. durch Kommas (",") getrennt. Ein unvorhersehbares Verhalten ergibt sich, wenn ein Semikolon (";") an einer beliebigen Stelle innerhalb der *Zeichen*Folge Sie können einen eigenen Handler schreiben, sofern er die **idatafactoriyhandler** -Schnittstelle unterstützt.  
   
- Der Name des Standard Handlers ist **msdfmap. Der Handler**, und sein Standardparameter ist eine Anpassungs Datei namens **msdfmap. INI**. Verwenden Sie diese Eigenschaft, um alternative Anpassungs Dateien aufzurufen, die vom Server Administrator erstellt wurden.  
+ Der Name des Standard Handlers ist **msdfmap. Der Handler**, und sein Standardparameter ist eine Anpassungs Datei mit dem Namen **MSDFMAP.INI**. Verwenden Sie diese Eigenschaft, um alternative Anpassungs Dateien aufzurufen, die vom Server Administrator erstellt wurden.  
   
  Die Alternative zum Festlegen der **Handlereigenschaft** ist das Angeben eines Handlers und von Parametern in der [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft. Das heißt, "**Handler =**_HandlerName, Parameter1, Parameter2,...;_".  
   

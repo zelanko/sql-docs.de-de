@@ -1,4 +1,5 @@
 ---
+description: SetObjectOwner-Methode
 title: Methode "-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 615e62ad8a22c50851ea50a2a8511e0859b54652
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 216a01a6a182e7d2fad97a8ed88e6ca09719a33e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439532"
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner-Methode
 Gibt den Besitzer eines Objekts in einem [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md)an.  
@@ -44,7 +45,7 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  Ein **Zeichen** folgen Wert, der den [Namen](../../../ado/reference/adox-api/name-property-adox.md) des [Benutzers](../../../ado/reference/adox-api/user-object-adox.md) oder der [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) angibt, der Besitzer des Objekts ist.  
   
  *ObjectTypeId*  
- Dies ist optional. Ein **Variant** -Wert, der die GUID für einen Anbieter Objekttyp angibt, der nicht von der OLE DB Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* auf **adpermubjproviderspecific**festgelegt ist. Andernfalls wird Sie nicht verwendet.  
+ Optional. Ein **Variant** -Wert, der die GUID für einen Anbieter Objekttyp angibt, der nicht von der OLE DB Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* auf **adpermubjproviderspecific**festgelegt ist. Andernfalls wird Sie nicht verwendet.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn der Anbieter die Angabe von Objekt Besitzern nicht unterstützt, tritt ein Fehler auf.  

@@ -1,4 +1,5 @@
 ---
+description: Ermitteln der Ziel-DBMS und Zieltreiber
 title: Ermitteln der Ziel-DBMSs und-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8811e4d289a8fc89c2c3773aab973df523025f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8dfbc11e96577e9027d1cc6e17701a82b89061be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429322"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Ermitteln der Ziel-DBMS und Zieltreiber
 Die nächste Frage, die Sie beachten sollten, ist die Ziel-DBMSs für die Anwendung und welche Treiber verfügbar sind, die diese DBMSs unterstützen? Da generische Anwendungen tendenziell hochgradig interoperabel sind, ist die Frage der Ziel-DBMSs am meisten auf benutzerdefinierte und vertikale Anwendungen anwendbar. Die Frage der Ziel Treiber gilt jedoch für alle Anwendungen, da die Treiber stark von der Geschwindigkeit, Qualität, Featureunterstützung und Verfügbarkeit abweichen. Außerdem müssen die Kosten und die Verfügbarkeit von Lizenzierungs Plänen berücksichtigt werden, wenn die Treiber erneut mit der Anwendung verteilt werden müssen.  

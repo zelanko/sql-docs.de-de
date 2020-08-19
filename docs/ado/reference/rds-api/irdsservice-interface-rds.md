@@ -1,4 +1,5 @@
 ---
+description: IRDSService-Schnittstelle (RDS)
 title: Undsservice-Schnittstelle (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1759596c515b3bb41d1f52a5e8b0577314495bb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f6d3c38bd6b694f0bd5a8540bcc51f56ace86de5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438902"
 ---
 # <a name="irdsservice-interface-rds"></a>IRDSService-Schnittstelle (RDS)
 Macht die [invokeservice (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) -Methode verfügbar, die verwendet wird, um einen Zeiger auf die angeforderte Schnittstelle auf einer leistungsfähigeren Version des-Objekts zurückzugeben.  

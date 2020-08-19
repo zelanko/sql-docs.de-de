@@ -1,4 +1,5 @@
 ---
+description: Datentypkonvertierungen
 title: Datentyp Konvertierungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cd888fe32692494e2b0ceadc1ed872dd96e244a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92c31cb12c7bb02cf8e108251ae5ebd6f12aed5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429342"
 ---
 # <a name="data-type-conversions"></a>Datentypkonvertierungen
 Daten können jeweils von einem Typ in einen anderen konvertiert werden: Wenn Daten von einer Anwendungsvariablen in eine andere übertragen werden (c zu c), wenn Daten in einer Anwendungsvariablen an einen Anweisungs Parameter (c an SQL) gesendet werden, wenn Daten in einer Resultsetspalte in einer Anwendungsvariablen (SQL an c) zurückgegeben werden und Daten aus einer Datenquellen Spalte in eine andere übertragen werden (SQL an SQL).  

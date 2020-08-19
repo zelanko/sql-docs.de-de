@@ -1,4 +1,5 @@
 ---
+description: Abrufen von Long-Daten
 title: Erhalten von langen Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da901c22eb26af063397b4af184179ebe5c75924
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c3a40bc3f4f65f747776d747d79868340de06f53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429282"
 ---
 # <a name="getting-long-data"></a>Abrufen von Long-Daten
 DBMSs definiert *lange Daten* als beliebige Zeichen oder Binärdaten über eine bestimmte Größe, z. b. 255 Zeichen. Diese Daten können klein genug sein, um in einem einzelnen Puffer gespeichert zu werden, z. b. eine Teilebeschreibung von mehreren tausend Zeichen. Allerdings kann es zu lange dauern, bis Sie im Arbeitsspeicher gespeichert werden, z. b. lange Textdokumente oder Bitmaps. Da solche Daten nicht in einem einzelnen Puffer gespeichert werden können, werden Sie in Teilen mit **SQLGetData** aus dem Treiber abgerufen, nachdem die anderen Daten in der Zeile abgerufen wurden.  

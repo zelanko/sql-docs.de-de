@@ -1,4 +1,5 @@
 ---
+description: 'SQL zu C: Tag-Uhrzeit-Intervalle'
 title: 'SQL zu C: Tages Intervalle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1318da5285ba2384dd23e4c235e698aa72c7658e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c878434a6fc3b2dcbb8b09a4acfb41ecf44a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429572"
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL zu C: Tag-Uhrzeit-Intervalle
 
@@ -41,11 +42,11 @@ In der folgenden Tabelle werden die ODBC-C-Datentypen angezeigt, in die die SQL-
 
 |C-Typbezeichner|Test|**Targetvalueptr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|Alle Tag-Zeit-C-Intervall Typen|Teil der nachfolgenden Felder nicht abgeschnitten<br /><br /> Teil der nachfolgenden Felder abgeschnitten<br /><br /> Die führende Genauigkeit des Ziels ist nicht groß genug zum Speichern von Daten aus der Quelle.|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten<br /><br /> Länge der Daten<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT [b] SQL_C_UTINYINT [b] SQL_C_USHORT [b] SQL_C_SHORT [b] SQL_C_SLONG [b] SQL_C_ULONG [b] SQL_C_NUMERIC [b] SQL_C_BIGINT [b]|Die Intervall Genauigkeit war ein einzelnes Feld, und die Daten wurden ohne Abschneiden konvertiert.<br /><br /> Intervall Genauigkeit war ein einzelnes Feld und abgeschnittene Bruchteile<br /><br /> Intervall Genauigkeit war ein einzelnes Feld und ein abgeschnittenes ganzes<br /><br /> Intervall Genauigkeit war kein einzelnes Feld|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Größe des C-Datentyps<br /><br /> Länge der Daten<br /><br /> Länge der Daten<br /><br /> Größe des C-Datentyps|Nicht zutreffend<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
-|SQL_C_BINARY|Byte Länge der Daten <= *BufferLength*<br /><br /> Byte Länge der Daten > *BufferLength*|Daten<br /><br /> Nicht definiert|Länge der Daten<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 22003|  
-|SQL_C_CHAR|Zeichen Byte Länge < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern >= *BufferLength*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Größe des C-Datentyps<br /><br /> Größe des C-Datentyps<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|Zeichen Länge < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern >= *BufferLength*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Größe des C-Datentyps<br /><br /> Größe des C-Datentyps<br /><br /> Nicht definiert|Nicht zutreffend<br /><br /> 01004<br /><br /> 22003|  
+|Alle Tag-Zeit-C-Intervall Typen|Teil der nachfolgenden Felder nicht abgeschnitten<br /><br /> Teil der nachfolgenden Felder abgeschnitten<br /><br /> Die führende Genauigkeit des Ziels ist nicht groß genug zum Speichern von Daten aus der Quelle.|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten<br /><br /> Länge der Daten<br /><br /> Nicht definiert|–<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT [b] SQL_C_UTINYINT [b] SQL_C_USHORT [b] SQL_C_SHORT [b] SQL_C_SLONG [b] SQL_C_ULONG [b] SQL_C_NUMERIC [b] SQL_C_BIGINT [b]|Die Intervall Genauigkeit war ein einzelnes Feld, und die Daten wurden ohne Abschneiden konvertiert.<br /><br /> Intervall Genauigkeit war ein einzelnes Feld und abgeschnittene Bruchteile<br /><br /> Intervall Genauigkeit war ein einzelnes Feld und ein abgeschnittenes ganzes<br /><br /> Intervall Genauigkeit war kein einzelnes Feld|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Größe des C-Datentyps<br /><br /> Länge der Daten<br /><br /> Länge der Daten<br /><br /> Größe des C-Datentyps|–<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
+|SQL_C_BINARY|Byte Länge der Daten <= *BufferLength*<br /><br /> Byte Länge der Daten > *BufferLength*|Daten<br /><br /> Nicht definiert|Länge der Daten<br /><br /> Nicht definiert|–<br /><br /> 22003|  
+|SQL_C_CHAR|Zeichen Byte Länge < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern >= *BufferLength*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Größe des C-Datentyps<br /><br /> Größe des C-Datentyps<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|Zeichen Länge < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern < *BufferLength*<br /><br /> Anzahl ganzer (im Gegensatz zu Bruch Ziffern) Ziffern >= *BufferLength*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Größe des C-Datentyps<br /><br /> Größe des C-Datentyps<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
   
  [a] ein Zeitintervall-SQL-Typ kann in einen beliebigen Tag-Zeit-Intervall-C-Typ konvertiert werden.  
   

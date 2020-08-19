@@ -1,4 +1,5 @@
 ---
+description: Append-Methode für Schlüssel, Key Type-, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften – Beispiel (VB)
 title: Erstellen einer neuen Fremdschlüssel Beziehung zwischen Tabellen Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87cae622b8c25a37bb5d2de833ca98e044f36351
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ab6a3130f0c1d2d87fa5f56f7096db4aaf943037
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439832"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Append-Methode für Schlüssel, Key Type-, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften – Beispiel (VB)
 Der folgende Code veranschaulicht das Erstellen einer neuen Fremdschlüssel Beziehung zwischen zwei vorhandenen Tabellennamens **Customers** und **Orders**.  

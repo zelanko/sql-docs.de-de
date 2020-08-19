@@ -1,4 +1,5 @@
 ---
+description: Handler-Eigenschaft – Beispiel (VC++)
 title: Beispiel für Handlereigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16e94fad7c5dfc85fcde7d835363e800ab5d3f46
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a570727ef9bdee2ac1411a1594dae518dd4fe36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438962"
 ---
 # <a name="handler-property-example-vc"></a>Handler-Eigenschaft – Beispiel (VC++)
 > [!IMPORTANT]
@@ -27,7 +28,7 @@ ms.locfileid: "82751977"
   
  In diesem Beispiel wird die Eigenschaft " [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Object [Handler](../../../ado/reference/rds-api/handler-property-rds.md) " veranschaulicht. (Weitere Informationen finden Sie unter [DataFactory-Anpassung](../../../ado/guide/remote-data-service/datafactory-customization.md) .)  
   
- Nehmen Sie die folgenden Abschnitte in der Parameterdatei "msdfmap. ini" auf dem Server:  
+ Nehmen Sie die folgenden Abschnitte in der Parameterdatei Msdfmap.ini auf, die sich auf dem Server befindet:  
   
 ```  
 [connect AuthorDataBase]  
@@ -37,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Der Code sieht wie folgt aus. Der Befehl, der der [SQL](../../../ado/reference/rds-api/sql-property.md) -Eigenschaft zugewiesen ist, entspricht dem ***AuthorById*** -Bezeichner und ruft eine Zeile für den Autor Michael \ Leary ab. Obwohl die [Connect](../../../ado/reference/rds-api/connect-property-rds.md) -Eigenschaft im Code die Northwind-Datenquelle angibt, wird diese Datenquelle vom msdfmap. ini *Connect* -Abschnitt überschrieben. Die **DataControl** -Objekt [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) -Eigenschaft wird einem getrennten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt ausschließlich als Codierungs Zweck zugewiesen.  
+ Der Code sieht wie folgt aus. Der Befehl, der der [SQL](../../../ado/reference/rds-api/sql-property.md) -Eigenschaft zugewiesen ist, entspricht dem ***AuthorById*** -Bezeichner und ruft eine Zeile für den Autor Michael \ Leary ab. Obwohl die [Connect](../../../ado/reference/rds-api/connect-property-rds.md) -Eigenschaft im Code die Northwind-Datenquelle angibt, wird diese Datenquelle vom Msdfmap.ini *Connect* -Abschnitt überschrieben. Die **DataControl** -Objekt [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) -Eigenschaft wird einem getrennten [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt ausschließlich als Codierungs Zweck zugewiesen.  
   
 ```  
 // BeginHandlerCpp.cpp  

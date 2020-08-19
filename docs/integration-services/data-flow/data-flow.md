@@ -1,4 +1,5 @@
 ---
+description: Datenfluss
 title: Datenfluss | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 757015f38213730973ec67c014f5b17d00fbce0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430962"
 ---
 # <a name="data-flow"></a>Datenfluss
 
@@ -195,7 +196,7 @@ ms.locfileid: "86916836"
 ### <a name="columns"></a>Spalten  
  Eingaben, Ausgaben und Fehlerausgaben sind Auflistungen von Spalten. Alle Spalten sind konfigurierbar, und je nach Spaltentyp (Eingabe, Ausgabe oder extern) stellt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterschiedliche Eigenschaften für die jeweilige Spalte bereit. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt drei verschiedene Möglichkeiten zum Festlegen von Spalteneigenschaften bereit: programmgesteuert, durch die Verwendung komponentenspezifischer Dialogfelder oder durch die Verwendung des Dialogfelds **Erweiterter Editor**.  
   
-## <a name="paths"></a>Paths  
+## <a name="paths"></a>Pfade  
  Mit Pfaden werden Datenflusskomponenten verbunden. Im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer können Sie die Pfadeigenschaften anzeigen und ändern, die Ausgabemetadaten für den Ausgangspunkt des Pfads anzeigen sowie einem Pfad Daten-Viewer anfügen.  
   
  Weitere Informationen finden Sie unter [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md) und [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md).  

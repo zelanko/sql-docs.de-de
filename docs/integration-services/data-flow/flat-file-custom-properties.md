@@ -1,4 +1,5 @@
 ---
+description: Benutzerdefinierte Eigenschaften der Flatfile
 title: Benutzerdefinierte Eigenschaften der Flatfile | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eef1dd7c7cf1a977f8443f22e7bf3af9158b8ae7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9c20e9a830439e8065a1bbccfe7d25540c9ae639
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430852"
 ---
 # <a name="flat-file-custom-properties"></a>Benutzerdefinierte Eigenschaften der Flatfile
 
@@ -58,7 +59,7 @@ ms.locfileid: "86919772"
   
  Weitere Informationen finden Sie unter [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

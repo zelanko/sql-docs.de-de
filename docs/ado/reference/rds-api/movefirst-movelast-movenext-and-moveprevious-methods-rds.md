@@ -1,4 +1,5 @@
 ---
+description: MoveFirst-, MoveLast-, MoveNext- und MovePrevious-Methode (RDS)
 title: "\"Muvefirst\", \"muvelast\", \"muvenext\" und \"muveprevious\" (RDS) | Microsoft-Dokumentation"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 096ad338f1ec9f039a6c63366984aee4d891c202
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6221a608bd247852ed16e1d82c1b8b5994b50fe8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438882"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst-, MoveLast-, MoveNext- und MovePrevious-Methode (RDS)
 Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt.  

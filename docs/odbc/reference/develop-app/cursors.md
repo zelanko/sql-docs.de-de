@@ -1,4 +1,5 @@
 ---
+description: Cursor (ODBC)
 title: Cursor (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2457667e374587e5e91a4c758dfbe641a0b02f78
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 10dbd2517c29bcd02d1d39abe0b2caec1bf03312
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429402"
 ---
 # <a name="odbc-cursors"></a>ODBC-Cursor
 Eine Anwendung ruft Daten mit einem *Cursor*ab. Ein Cursor unterscheidet sich von einem Resultset: ein Resultset ist der Satz von Zeilen, der bestimmte Suchkriterien erfüllt, wohingegen es sich bei einem Cursor um die Software handelt, die diese Zeilen an die Anwendung zurückgibt. Der namens *Cursor,* wie er auf Datenbanken angewendet wird, stammt wahrscheinlich vom blinkende Cursor auf einem Computerterminal. Ebenso wie dieser Cursor die aktuelle Position auf dem Bildschirm anzeigt und wo die typisierten Wörter als nächstes angezeigt werden, gibt ein Cursor in einem Resultset die aktuelle Position im Resultset an und welche Zeile als nächstes zurückgegeben wird.  

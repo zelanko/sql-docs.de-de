@@ -1,4 +1,5 @@
 ---
+description: DataControl-Objekt (RDS) – Eigenschaften, Methoden und Ereignisse
 title: Eigenschaften, Methoden und Ereignisse für das DataControl-Objekt (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6dc53cd0449576fceb81556e3ae16edc0a85ff7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b811240a5e3261636650d1a3c847dc7813ac7674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439132"
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>DataControl-Objekt (RDS) – Eigenschaften, Methoden und Ereignisse
 > [!IMPORTANT]
@@ -69,7 +70,7 @@ ms.locfileid: "82746123"
   
  [SubmitChanges-Methode (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  [onError-Ereignis (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)  
   
  [onReadyStateChange-Ereignis (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)  

@@ -1,4 +1,5 @@
 ---
+description: SetPermissions-Methode (ADOX)
 title: Setberechtigungs-Methode (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4287e836dd46c579ee81a4baf0e175e8b49acf67
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 3d5af996442e0451a80265b7fbd9fb31450f9475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942638"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439522"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions-Methode (ADOX)
 Gibt die Berechtigungen für eine [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) oder einen [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) für ein Objekt an.  
@@ -49,10 +50,10 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  Ein **Long** -Wert, der eine Bitmaske einer oder mehrerer [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) -Konstanten sein kann, die die festzulegenden Rechte angibt.  
   
  *Ver*  
- Dies ist optional. Ein **Long** -Wert, bei dem es sich [um eine der Vererbungs](../../../ado/reference/adox-api/inherittypeenum.md) Konstanten handelt, die angibt, wie Objekte diese Berechtigungen erben. Der Standardwert ist " **adgeerbt None**".  
+ Optional. Ein **Long** -Wert, bei dem es sich [um eine der Vererbungs](../../../ado/reference/adox-api/inherittypeenum.md) Konstanten handelt, die angibt, wie Objekte diese Berechtigungen erben. Der Standardwert ist " **adgeerbt None**".  
   
  *ObjectTypeId*  
- Dies ist optional. Ein **Variant** -Wert, der die GUID für einen Anbieter Objekttyp angibt, der nicht von der OLE DB Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* auf **adpermubjproviderspecific**festgelegt ist. Andernfalls wird Sie nicht verwendet.  
+ Optional. Ein **Variant** -Wert, der die GUID für einen Anbieter Objekttyp angibt, der nicht von der OLE DB Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* auf **adpermubjproviderspecific**festgelegt ist. Andernfalls wird Sie nicht verwendet.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn der Anbieter das Festlegen von Zugriffsrechten für Gruppen oder Benutzer nicht unterstützt, tritt ein Fehler auf.  

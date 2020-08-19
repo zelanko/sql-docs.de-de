@@ -1,4 +1,5 @@
 ---
+description: ODBC Source Custom Properties
 title: Benutzerdefinierte Eigenschaften der ODBC-Quelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fa4300180e7d3c6c5f637b4e81d92d70cfd20dc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c0c01d66062747788bd9bf05ca8cf06e8e5088a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430762"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
 
@@ -40,7 +41,7 @@ ms.locfileid: "86914746"
 |LobChunckSize|Integer|Die Segmentgrößenzuordnung für LOB-Spalten.|  
 ||||  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC Source](../../integration-services/data-flow/odbc-source.md)   
  [Quellen-Editor für ODBC &#40;Seite „Verbindungs-Manager“&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   

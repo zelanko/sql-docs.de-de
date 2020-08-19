@@ -1,4 +1,5 @@
 ---
+description: Table-Objekt (ADOX)
 title: Table-Objekt (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcebe14b7b989e584539dd3f92fd8ea676ebd48a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c9bbf6a33eeb76f406a6fd6dc87ef591a3d4f12a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439482"
 ---
 # <a name="table-object-adox"></a>Table-Objekt (ADOX)
 Stellt eine Datenbanktabelle mit Spalten, Indizes und Schlüsseln dar.  

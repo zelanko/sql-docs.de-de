@@ -1,4 +1,5 @@
 ---
+description: Cursoreigenschaften und Cursortyp
 title: Cursor Merkmale und Cursortyp | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8354fdabf6830780ec2d128492c86cc1edd582ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10ec9c7fc42ad20ce0a5a6d70ef4a2a692afbec3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429422"
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Cursoreigenschaften und Cursortyp
 Eine Anwendung kann die Merkmale eines Cursors angeben, anstatt den Cursortyp anzugeben (vorwärts, statisch, keysetgesteuert oder dynamisch). Hierzu wählt die Anwendung die Scrollbarkeit des Cursors (durch Festlegen des Attributs der SQL_ATTR_CURSOR_SCROLLABLE Anweisung) und die Empfindlichkeit (durch Festlegen des Attributs der SQL_ATTR_CURSOR_SENSITIVITY Anweisung) vor dem Öffnen des Cursors auf dem Anweisungs Handle aus. Der Treiber wählt dann den Cursortyp aus, der die von der Anwendung angeforderten Merkmale am effizientesten bereitstellt.  

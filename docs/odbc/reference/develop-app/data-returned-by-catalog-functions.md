@@ -1,4 +1,5 @@
 ---
+description: Von Katalogfunktionen zurückgegebene Daten
 title: Von Katalog Funktionen zurückgegebene Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0d9b63de04f79fd95c1b06d8e84d85c6f4fea02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c42319520696060cd52c14c46f968badee27e20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429362"
 ---
 # <a name="data-returned-by-catalog-functions"></a>Von Katalogfunktionen zurückgegebene Daten
 Jede Katalog Funktion gibt Daten als Resultset zurück. Dieses Resultset unterscheidet sich nicht von anderen Resultsets. Sie wird normalerweise durch eine vordefinierte, parametrisierte **Select** -Anweisung generiert, die im Treiber hart codiert ist oder in einer Prozedur in der Datenquelle gespeichert ist. Informationen zum Abrufen von Daten aus einem Resultset finden Sie unter [Was ist ein Resultset erstellt?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

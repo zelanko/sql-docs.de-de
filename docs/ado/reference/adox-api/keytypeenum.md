@@ -1,4 +1,5 @@
 ---
+description: KeyTypeEnum
 title: Keytypeumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0160cde7efc41e0d946959e37ca34fdeabb17723
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9f8e1f16d9505de18751e80cc982f472d7ae0422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439792"
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
 Gibt den Typ des [Schlüssels](../../../ado/reference/adox-api/key-object-adox.md)an: primär, fremd oder eindeutig.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adkeyprimary**|1|Standard. Der Schlüssel ist ein Primärschlüssel.|  
 |**adkeyforeign**|2|Der Schlüssel ist ein Fremdschlüssel.|  

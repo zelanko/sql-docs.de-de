@@ -1,4 +1,5 @@
 ---
+description: Escapesequenzen in ODBC
 title: Escapesequenzen in ODBC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d41b0c03ecbe6de63cba1a28a1f39f12a42dc86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62745b749870fa33151fc1a5f6bd3a1bfc344ad7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429312"
 ---
 # <a name="escape-sequences-in-odbc"></a>Escapesequenzen in ODBC
 Eine Reihe von sprach Features, wie z. b. äußere Joins und skalarfunktionsaufrufe, werden häufig von DBMSs implementiert. Die Syntaxen für diese Features sind jedoch tendenziell DBMS-spezifisch, auch wenn standardmäßige Syntaxen durch die verschiedenen Standardtexte definiert werden. Aus diesem Grund definiert ODBC Escapesequenzen, die Standard Syntaxen für die folgenden sprach Features enthalten:  
@@ -46,9 +47,9 @@ Eine Reihe von sprach Features, wie z. b. äußere Joins und skalarfunktionsaufr
  Die Escapesequenz wird von Treibern erkannt und analysiert, die die Escapesequenzen durch DBMS-spezifische Grammatik ersetzen. Weitere Informationen zur Escapesequenzsyntax finden Sie unter [ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) -Escapesequenzen in Anhang C: SQL-Grammatik.  
   
 > [!NOTE]  
->  In ODBC 2. *x*, dies war die Standard Syntax der Escapesequenz: **--\*(Hersteller**_Name_**), Produkt**_Erweiterung_ _product-name_**)** ** \*** (Produktname))--  
+>  In ODBC 2. *x*, dies war die Standard Syntax der Escapesequenz **:--( \* Hersteller**_Name_**), Produkterweiterung (**_Produktname_**)**_extension_ ** \* )--**  
 >   
->  Zusätzlich zu dieser Syntax wurde eine Kurzform-Syntax im folgenden Format definiert: **{**_Extension_**}**  
+>  Zusätzlich zu dieser Syntax wurde eine Kurzform-Syntax im folgenden Format definiert:            **{**_Extension_**}**  
 >   
 >  In ODBC 3. *x*, die lange Form der Escapesequenz ist veraltet, und die Kurzform wird exklusiv verwendet.  
   

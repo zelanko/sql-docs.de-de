@@ -1,4 +1,5 @@
 ---
+description: SQLAllocConnect-Zuordnung
 title: Sqlordcconnect-Zuordnung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25e72cd3830cea8504983f4348f6c200261490f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f89ae59ca171fbcfbb9f6b75fdad639e31ea8fe0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429522"
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect-Zuordnung
 Wenn eine Anwendung **sqlzucconnect** über einen ODBC 3 aufruft. *x* -Treiber: der Befehl **sqlzuordcconnect**(*HENV*, *phdbc*) wird **sqlzuzuordchandle** wie folgt zugeordnet:  
