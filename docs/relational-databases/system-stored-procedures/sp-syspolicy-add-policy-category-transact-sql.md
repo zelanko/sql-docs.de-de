@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_add_policy_category (Transact-SQL)
 title: sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca8eca5643fb0021111c00abdce45e6de2c09878
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2722671523f14177a92084a4d896eec3ccdd6e2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469159"
 ---
 # <a name="sp_syspolicy_add_policy_category-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +42,16 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'`Der Name der Richtlinien Kategorie. *Name ist vom Datentyp* **vom Datentyp sysname**und ist erforderlich. der *Name* darf nicht NULL oder eine leere Zeichenfolge sein.  
+`[ @name = ] 'name'` Der Name der Richtlinien Kategorie. *Name ist vom Datentyp* **vom Datentyp sysname**und ist erforderlich. der *Name* darf nicht NULL oder eine leere Zeichenfolge sein.  
   
-`[ @mandate_database_subscriptions = ] mandate_database_subscriptions`Bestimmt, ob das Daten Bank Abonnement für die Richtlinien Kategorie vorgeschrieben ist. *mandate_database_subscriptions* ist ein **Bit** -Wert, der Standardwert ist 1 (aktiviert).  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Bestimmt, ob das Daten Bank Abonnement für die Richtlinien Kategorie vorgeschrieben ist. *mandate_database_subscriptions* ist ein **Bit** -Wert, der Standardwert ist 1 (aktiviert).  
   
-`[ @policy_category_id = ] policy_category_id`Der Bezeichner für die Richtlinien Kategorie. *policy_category_id* ist vom Datentyp **int**und wird als Output zurückgegeben.  
+`[ @policy_category_id = ] policy_category_id` Der Bezeichner für die Richtlinien Kategorie. *policy_category_id* ist vom Datentyp **int**und wird als Output zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen sp_syspolicy_add_policy_category im Kontext der Systemdatenbank msdb ausführen.  
   
 ## <a name="permissions"></a>Berechtigungen  

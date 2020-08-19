@@ -1,4 +1,5 @@
 ---
+description: Erstellen eines Skript Tasks, der einen parallelen Data Warehouse Ziel Adapter für SSIS verwendet
 title: Skript Task mit SSIS-PDW-Ziel Adapter erstellen
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
@@ -9,12 +10,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 857dbc39906f57da39de623daecf18e5be0d28f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438522"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Erstellen eines Skript Tasks, der einen parallelen Data Warehouse Ziel Adapter für SSIS verwendet
 Dieser SSIS-Paket Skriptcode ist ein Codebeispiel für die Verwendung des SSIS-PDW-Ziel Adapters.  Mit dem Integration Services Skript Task können Sie praktisch jeden Vorgang ausführen, der in einer .NET-Anwendung innerhalb des Kontexts einer SSIS-Ablauf Steuerung ausgeführt werden kann. 
@@ -27,7 +28,7 @@ Dieser SSIS-Paket Skriptcode ist ein Codebeispiel für die Verwendung des SSIS-P
   
 3.  Bearbeiten Sie das Skript, um den unten angegebenen Code zu verwenden. Ändern Sie das Skript an Ihre Umgebung, indem Sie die folgenden Änderungen vornehmen:  
   
-    -   Sie müssen den Namespace des Skripts beibehalten, das vom Skript Task erstellt wurde. Notieren Sie sich den Namen des Namespace `namespace ST_<GUID>` , und bearbeiten Sie das unten stehende Skript, indem Sie *ST_<GUID> * in die ursprüngliche *GUID* des Skript Tasks ändern.  
+    -   Sie müssen den Namespace des Skripts beibehalten, das vom Skript Task erstellt wurde. Notieren Sie sich den Namen des Namespace `namespace ST_<GUID>` , und bearbeiten Sie das unten stehende Skript, indem Sie * <GUID> ST_* in die ursprüngliche *GUID* des Skript Tasks ändern.  
   
     -   Ersetzen Sie vier Vorkommen des Platzhalter Werts *xxxxxxxx* durch die Werte, die für Ihre Umgebung und die gewünschte Aktion geeignet sind.  
   

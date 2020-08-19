@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_job_object (Azure SQL-Datenbank)
 title: sys. dm_os_job_object (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/03/2020
@@ -19,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e421efbd15f15d56b6446fc39f73bcba04478800
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 3ed298216393b59d723eb58cac783f9836ce93d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489849"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -33,7 +34,7 @@ Gibt eine einzelne Zeile zurück, die die Konfiguration des Auftrags Objekts bes
 
 Ein Auftrags Objekt ist ein Windows-Konstrukt, das CPU-, Arbeitsspeicher-und e/A-Ressourcenkontrolle auf Betriebssystemebene implementiert. Weitere Informationen zu Auftrags Objekten finden Sie unter [Auftrags Objekte](/windows/desktop/ProcThread/job-objects).
   
-|Spalten|Datentyp|BESCHREIBUNG|  
+|Spalten|Datentyp|Beschreibung|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|Gibt den Teil der Prozessor Zyklen an, den SQL Server Threads während jedes Zeit Planungs Intervalls verwenden können. Der Wert wird als Prozentsatz der verfügbaren Zyklen innerhalb eines 10000-Zyklus-Planungs Intervalls, multipliziert mit der Anzahl logischer CPUs, angezeigt. Beispielsweise bedeutet der Wert 800 für eine SQL Server Instanz mit 8 logischen CPUs, dass die Verwendung von CPUs die volle Kapazität von Threads verwenden kann.|
 |cpu_affinity_mask|**bigint**|Eine Bitmaske, die beschreibt, welche logischen Prozessoren der SQL Server Prozess innerhalb der Prozessor Gruppe verwenden kann. Beispielsweise bedeutet cpu_affinity_mask 255 (1111 1111 in Binary), dass die ersten acht logischen Prozessoren verwendet werden können. <br /><br />Diese Spalte wird aus Gründen der Abwärtskompatibilität bereitgestellt. Die Prozessor Gruppe wird nicht gemeldet, und der gemeldete Wert ist möglicherweise falsch, wenn eine Prozessor Gruppe mehr als 64 logische Prozessoren enthält. Verwenden Sie die- `process_physical_affinity` Spalte, um stattdessen die Prozessor Affinität zu bestimmen.|
@@ -54,7 +55,7 @@ Ein Auftrags Objekt ist ein Windows-Konstrukt, das CPU-, Arbeitsspeicher-und e/A
 ## <a name="permissions"></a>Berechtigungen  
 In SQL verwaltete Instanz ist die- `VIEW SERVER STATE` Berechtigung erforderlich. In der SQL-Datenbank ist die `VIEW DATABASE STATE`-Berechtigung für die Datenbank erforderlich.  
  
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 
 Informationen zu verwalteten Instanzen finden Sie unter [SQL verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   

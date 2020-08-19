@@ -1,4 +1,5 @@
 ---
+description: Datenflusstask
 title: Datenflusstask | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4bc62cfc37e6a69f34faabf8a9622f5c0d79d5f8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 21ef6f741ebfdd035630a40aba431c08a1ff9341
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431032"
 ---
 # <a name="data-flow-task"></a>Datenflusstask
 
@@ -92,7 +93,7 @@ ms.locfileid: "86919862"
   
  Die folgende Tabelle enthält z. B. die als Spalten analysierte Meldung "Die Zeilen wurden als Eingabe für eine Datenflusskomponente bereitgestellt. :  : 1185 : Ausgabe der OLE DB-Quelle : 1180 : Sort : 1181 : Sortiereingabe : 76". Die Meldung wurde vom **OnPipelineRowsSent** -Ereignis geschrieben, als Zeilen von der OLE DB-Quelle an die Transformation zum Sortieren gesendet wurden.  
   
-|Column|BESCHREIBUNG|value|  
+|Column|BESCHREIBUNG|Wert|  
 |------------|-----------------|-----------|  
 |**PathID**|Der Wert der **ID** -Eigenschaft des Pfads zwischen der OLE DB-Quelle und der Transformation zum Sortieren.|1185|  
 |**PathName**|Der Wert der **Name** -Eigenschaft des Pfads.|Ausgabe der OLE DB-Quelle|  

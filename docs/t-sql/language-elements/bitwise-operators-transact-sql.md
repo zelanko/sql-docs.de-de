@@ -1,4 +1,5 @@
 ---
+description: Bitweise Operatoren (Transact-SQL)
 title: Bitweise Operatoren (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/04/2019
@@ -17,12 +18,12 @@ ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d96dbfc519a831508b7e56fad1b6909a37f672d3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15649f0ff6a9695b17af629f28156ea4860e4aa6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459435"
 ---
 # <a name="bitwise-operators-transact-sql"></a>Bitweise Operatoren (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ Der Integer 75 wird in die Binärzahl 0100 1011 konvertiert.
 
 |Operator|Bitweise Mathematik|
 |---- |---- |
-|AND <br> Wenn zwei Bits an einem beliebigen Speicherort 1 ergeben, wird auch 1 als Ergebnis ausgegeben. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 0000 1010 = 10 |
+|UND <br> Wenn zwei Bits an einem beliebigen Speicherort 1 ergeben, wird auch 1 als Ergebnis ausgegeben. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 0000 1010 = 10 |
 |oder <br> Wenn irgendein Bit an einem beliebigen Speicherort 1 ergibt, wird auch 1 als Ergebnis zurückgegeben. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
 |NICHT  <br> Kehrt den Bitwert an jedem Bitspeicherort um. |1010 1010 = 170 <br>----------------- <br>  0101 0101 = 85 |
   

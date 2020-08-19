@@ -1,4 +1,5 @@
 ---
+description: ALTER TABLE (SQL-Befehl)
 title: ALTER TABLE-SQL-Befehl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 587d721522503f9b392bb8be7433850fd7449efb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c72d03abff792ff103bf009cd12b718c74bd497d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483703"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE (SQL-Befehl)
 Ändert die Struktur einer Tabelle Programm gesteuert.  
@@ -191,6 +192,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Wenn sich die Tabelle, die Sie ändern, in einer Datenbank befindet, ist für ALTER TABLE-SQL eine exklusive Verwendung der Datenbank erforderlich. Wenn Sie eine Datenbank für die exklusive Verwendung öffnen möchten, schließen Sie exklusive in Open Database ein.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [CREATE TABLE-SQL-Befehl](../../odbc/microsoft/create-table-sql-command.md)   
  [Befehl INDEX](../../odbc/microsoft/index-command.md)

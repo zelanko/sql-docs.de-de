@@ -1,4 +1,5 @@
 ---
+description: Registrieren von Geschäftsobjekten auf dem Client für die Verwendung mit DCOM
 title: Registrieren von Geschäftsobjekten auf dem Client für die Verwendung mit DCOM | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 79f88f36b7eae83163ef2754f9b2c2265550c684
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fa974d7c0f495639f576604933fc0ce10fd4451f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452042"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>Registrieren von Geschäftsobjekten auf dem Client für die Verwendung mit DCOM
 Benutzerdefinierte Geschäftsobjekte müssen sicherstellen, dass die Clientseite ihren Programmnamen (ProgID) einem Bezeichner (CLSID) zuordnen kann, der über DCOM verwendet werden kann. Aus diesem Grund muss sich die ProgID des DCOM-Objekts in der Client seitigen Registrierung befinden und der Klassen-ID des serverseitigen Geschäftsobjekts zugeordnet werden. Für die anderen unterstützten Protokolle (http, HTTPS und in-Process) ist dies nicht erforderlich.  

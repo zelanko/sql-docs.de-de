@@ -1,4 +1,5 @@
 ---
+description: Schützen von RDS-Anwendungen
 title: Sichern von RDS-Anwendungen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f785eed6124970d8c270492b98dc8e5ea815f18a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0e40d5739de285c0655e9ab45f14ba3f342a420f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451972"
 ---
 # <a name="securing-rds-applications"></a>Schützen von RDS-Anwendungen
 Dieses Thema enthält Sicherheitsinformationen für RDS.  
@@ -29,7 +30,7 @@ Dieses Thema enthält Sicherheitsinformationen für RDS.
  Mit neuen Sicherheitsverbesserungen, die zu Microsoft Internet Explorer hinzugefügt wurden, sind einige ADO-und RDS-Objekte auf die Ausführung in einer "sicheren" Umgebung beschränkt. Dies erfordert, dass Sie diese Probleme kennen, einschließlich unterschiedlicher Zonen, Sicherheitsstufen, restriktivem Verhalten, unsicherer Vorgänge und angepassten Sicherheitseinstellungen.  
   
 ## <a name="security-and-your-web-server"></a>Sicherheit und Webserver  
- Wenn Sie das [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt auf dem Internet-Webserver verwenden, sollten Sie daran denken, dass dadurch ein potenzielles Sicherheitsrisiko entsteht. Externe Benutzer, die gültige Datenquellen Namen (Data Source Name, DSN), Benutzer-ID und Kenn Wort Informationen erhalten, können Seiten schreiben, um eine beliebige Abfrage an diese Datenquelle zu senden. Wenn Sie einen eingeschränkteren Zugriff auf eine Datenquelle benötigen, können Sie die Registrierung und das Löschen des **RDSServer. DataFactory** -Objekts (msadcf. dll) aufheben und stattdessen benutzerdefinierte Geschäftsobjekte mit hart codierten Abfragen verwenden.  
+ Wenn Sie das [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt auf dem Internet-Webserver verwenden, sollten Sie daran denken, dass dadurch ein potenzielles Sicherheitsrisiko entsteht. Externe Benutzer, die gültige Datenquellen Namen (Data Source Name, DSN), Benutzer-ID und Kenn Wort Informationen erhalten, können Seiten schreiben, um eine beliebige Abfrage an diese Datenquelle zu senden. Wenn Sie einen eingeschränkteren Zugriff auf eine Datenquelle benötigen, können Sie die Registrierung und das Löschen des **RDSServer. DataFactory** -Objekts (msadcf.dll) aufheben und stattdessen benutzerdefinierte Geschäftsobjekte mit hart codierten Abfragen verwenden.  
   
  Weitere Informationen zu den Sicherheitsauswirkungen der Verwendung des RDSServer. DataFactory-Objekts finden Sie im Microsoft-Sicherheits Bulletin MS99-025 auf der Microsoft Security-Website.  
   

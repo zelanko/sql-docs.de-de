@@ -1,4 +1,5 @@
 ---
+description: Oracle-Ziel
 title: Oracle-Ziel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f09d0cc0ad4a8d6ee1230bd846375b5b340cd4fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e029637f90afbb27e4b27c79c8a515a2e3aad823
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430782"
 ---
 # <a name="oracle-destination"></a>Oracle-Ziel
 
@@ -54,7 +55,7 @@ Das Oracle-Ziel verfügt über eine Fehlerausgabe. Die Komponentenfehlerausgabe 
 
 Typen von Ausgabefehlern beim unterstützten Ladevorgang sind: Datenkonvertierung, Abschneiden oder Einschränkungsverletzung usw. Siehe [Editor für Oracle-Ziel (Seite „Fehlerausgabe“)](#oracle-destination-editor-error-output-page).
 
-Die**Maximale Anzahl von Fehlern (MaxErrors)** -Eigenschaft legt die maximale Anzahl von Fehlern fest, die auftreten können. Die Ausführung wird beendet und es werden Fehler zurückgegeben, wenn die maximale Anzahl erreicht ist. Nur vor Erreichen der maximalen Fehlerzahl ausgeführte Datensätze werden in die Zieltabelle einbezogen. Informationen zur detaillierten Konfiguration finden Sie unter [Editor für Oracle-Ziel (Seite „Verbindungs-Manager“)](#oracle-destination-editor-connection-manager-page).
+Die**Maximale Anzahl von Fehlern (MaxErrors)**-Eigenschaft legt die maximale Anzahl von Fehlern fest, die auftreten können. Die Ausführung wird beendet und es werden Fehler zurückgegeben, wenn die maximale Anzahl erreicht ist. Nur vor Erreichen der maximalen Fehlerzahl ausgeführte Datensätze werden in die Zieltabelle einbezogen. Informationen zur detaillierten Konfiguration finden Sie unter [Editor für Oracle-Ziel (Seite „Verbindungs-Manager“)](#oracle-destination-editor-connection-manager-page).
 
 ## <a name="parallelism"></a>Parallelität
 
@@ -141,8 +142,8 @@ Wählen Sie die Methode für die Auswahl von Daten aus der Quelle aus. Die Optio
 
 |Option|BESCHREIBUNG|
 |:-|:-|
-|Tabellenname|Konfigurieren Sie das Oracle-Ziel, um im Batchmodus zu arbeiten. Optionen:<br><br> **Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine in der Datenbank verfügbare Tabelle oder Sicht aus.<br><br> **Transaktionsgröße**: Anzahl von Einfügungen, die in einer einzelnen Transaktion möglich sind. Der Standardwert ist **BatchSize**.<br><br> **Batchgröße**: Geben Sie die Größe des Batches (Anzahl der geladenen Zeilen) für das Massenladen ein.
-|Tabellenname – schnelles Laden|Konfigurieren Sie das Oracle-Ziel für den Schnelllademodus (direkter Pfad). <br><br>Diese Optionen stehen zur Verfügung:<br><br> **Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine in der Datenbank verfügbare Tabelle oder Sicht aus.<br><br> **Paralleles Laden**: Gibt an, ob paralleles Laden aktiviert ist. Weitere Informationen finden Sie unter [Parallelität](#parallelism).<br><br> **Keine Protokollierung**: Dieses Kontrollkästchen dient zum Deaktivieren der Datenbankprotokollierung. Diese Protokollierung ist eine Oracle-Datenbank, die für Wiederherstellungszwecke verwendet wird und nicht mit der Ablaufverfolgung in Zusammenhang steht.<br><br> **Maximale Anzahl von Fehlern**: Die maximale Anzahl der Fehler, die auftreten können, bevor der Datenfluss abgebrochen wird. Der Standardwert ist 0 (null). Dies bedeutet, dass die Fehlerzahl nicht begrenzt ist.<br><br> Alle Fehler, die auftreten können, werden in der Fehlerausgabe zurückgegeben.<br><br> **Übertragungspuffergröße (KB)** : Geben Sie die Größe des Übertragungspuffers ein. Die Standardgröße ist 64 KB.|
+|Tabellenname|Konfigurieren Sie das Oracle-Ziel, um im Batchmodus zu arbeiten. Optionen:<br><br> **Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine verfügbare Tabelle oder Sicht in der Datenbank aus.<br><br> **Transaktionsgröße**: Anzahl von Einfügungen, die in einer einzelnen Transaktion möglich sind. Der Standardwert ist **BatchSize**.<br><br> **Batchgröße**: Geben Sie die Größe des Batches (Anzahl der geladenen Zeilen) für das Massenladen ein.
+|Tabellenname – schnelles Laden|Konfigurieren Sie das Oracle-Ziel für den Schnelllademodus (direkter Pfad). <br><br>Diese Optionen stehen zur Verfügung:<br><br> **Name der Tabelle oder Sicht**: Wählen Sie in der Liste eine verfügbare Tabelle oder Sicht in der Datenbank aus.<br><br> **Paralleles Laden**: Gibt an, ob paralleles Laden aktiviert ist. Weitere Informationen finden Sie unter [Parallelität](#parallelism).<br><br> **Keine Protokollierung**: Dieses Kontrollkästchen dient zum Deaktivieren der Datenbankprotokollierung. Diese Protokollierung ist eine Oracle-Datenbank, die für Wiederherstellungszwecke verwendet wird und nicht mit der Ablaufverfolgung in Zusammenhang steht.<br><br> **Maximale Anzahl von Fehlern**: Die maximale Anzahl der Fehler, die auftreten können, bevor der Datenfluss abgebrochen wird. Der Standardwert ist 0 (null). Dies bedeutet, dass die Fehlerzahl nicht begrenzt ist.<br><br> Alle Fehler, die auftreten können, werden in der Fehlerausgabe zurückgegeben.<br><br> **Übertragungspuffergröße (KB)** : Geben Sie die Größe des Übertragungspuffers ein. Die Standardgröße ist 64 KB.|
 
 **Vorhandene Daten anzeigen**
 

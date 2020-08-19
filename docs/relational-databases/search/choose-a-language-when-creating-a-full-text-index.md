@@ -1,4 +1,5 @@
 ---
+description: Auswählen einer Sprache beim Erstellen eines Volltextindex
 title: Auswählen einer Sprache beim Erstellen eines Volltextindexes | Microsoft Dokumentation
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 882a7e1acfa8baf49b90e0ebda8d3cef212d511a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9f8c0860bb5ef874a6095b993478fa9cbc117fc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726021"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475536"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Auswählen einer Sprache beim Erstellen eines Volltextindex
 

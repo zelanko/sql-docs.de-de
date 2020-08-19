@@ -1,4 +1,5 @@
 ---
+description: Servereigenschaft (RDS)
 title: Server Eigenschaft (RDS) | Microsoft-Dokumentation
 ms.technology: connectivity
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5cd4f578a8146a8fa7d45dcfd8e2b58f795def13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eb7ebc994d252fc8806c133c61239cce67b693bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438652"
 ---
 # <a name="server-property-rds"></a>Servereigenschaft (RDS)
 Gibt den Namen des Internetinformationsdienste (IIS) und das Kommunikationsprotokoll an.  
@@ -111,13 +112,13 @@ DataControl.Server=""
  Ein **Zeichen** folgen Wert, der einen Internet-oder intranetpfad bzw. einen Computernamen enthält, wenn sich der Server auf einem Remote Computer befindet. oder eine leere Zeichenfolge, wenn sich der Server auf dem lokalen Computer befindet.  
   
  *port*  
- Dies ist optional. Port, der zum Herstellen einer Verbindung mit einem Server verwendet wird, auf dem IIS ausgeführt wird. Die Portnummer wird in Internet Explorer festgelegt (Klicken Sie im Menü **Ansicht** auf **Optionen**, und wählen Sie dann die Registerkarte **Verbindung** ) oder in IIS aus.  
+ Optional. Port, der zum Herstellen einer Verbindung mit einem Server verwendet wird, auf dem IIS ausgeführt wird. Die Portnummer wird in Internet Explorer festgelegt (Klicken Sie im Menü **Ansicht** auf **Optionen**, und wählen Sie dann die Registerkarte **Verbindung** ) oder in IIS aus.  
   
  *DataControl*  
  Eine Objekt Variable, die einen **RDS darstellt. DataControl** -Objekt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Der Server ist der Ort, an dem das RDS-Verzeichnis ist **. Die DataControl** -Anforderung (d. h. eine Abfrage oder ein Update) wird verarbeitet. Standardmäßig werden alle Anforderungen vom [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt, [msdfmap, verarbeitet. Handlerkomponente](../../../ado/guide/remote-data-service/datafactory-customization.md) und [msdfmap. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) -Datei auf dem angegebenen Server. Beachten Sie, dass beim Ändern von Servern, um die Einstellungen in der alten und neuen **msdfmap abzustimmen. INI** -Dateien. Inkompatibilitäten können dazu führen, dass auf einem Server erfolgreiche Anforderungen auf einem anderen Server fehlschlagen. Wenn die Server-Eigenschaft auf die leere Zeichenfolge "" festgelegt ist, werden diese Objekte auf dem lokalen Computer verwendet.  
+ Der Server ist der Ort, an dem das RDS-Verzeichnis ist **. Die DataControl** -Anforderung (d. h. eine Abfrage oder ein Update) wird verarbeitet. Standardmäßig werden alle Anforderungen vom [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt, [msdfmap, verarbeitet. Handlerkomponente](../../../ado/guide/remote-data-service/datafactory-customization.md) und [MSDFMAP.INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) Datei auf dem angegebenen Server. Beachten Sie, dass beim Ändern von Servern, um die Einstellungen in den alten und neuen **MSDFMAP.INI** Dateien abzustimmen. Inkompatibilitäten können dazu führen, dass auf einem Server erfolgreiche Anforderungen auf einem anderen Server fehlschlagen. Wenn die Server-Eigenschaft auf die leere Zeichenfolge "" festgelegt ist, werden diese Objekte auf dem lokalen Computer verwendet.  
   
 ## <a name="applies-to"></a>Gilt für  
  [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

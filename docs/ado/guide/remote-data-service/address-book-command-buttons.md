@@ -1,4 +1,5 @@
 ---
+description: Adress Book-Befehlsschaltflächen
 title: Adressbuch-Befehls Schaltflächen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04f896b4a799e527e2442ef17e69a33f576950dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2c2c3b0880a940b0f3388aced46c0cd9c888b786
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452332"
 ---
 # <a name="address-book-command-buttons"></a>Adress Book-Befehlsschaltflächen
 Die Adressbuch Anwendung enthält die folgenden Befehls Schaltflächen:  
@@ -71,7 +72,7 @@ Sub Update_OnClick
 End Sub  
 ```  
   
- Wenn `DC1.SubmitChanges` ausgeführt wird, verpackt der Remote Datendienst alle Update Informationen und sendet Sie über HTTP an den Server. Das Update ist alles-oder-nichts. Wenn ein Teil des Updates nicht erfolgreich ist, wird keine der Änderungen vorgenommen, und eine Statusmeldung wird zurückgegeben. `DC1.Refresh`ist nach **SubmitChanges** mit dem Remote Datendienst nicht erforderlich, stellt jedoch neue Daten sicher.  
+ Wenn `DC1.SubmitChanges` ausgeführt wird, verpackt der Remote Datendienst alle Update Informationen und sendet Sie über HTTP an den Server. Das Update ist alles-oder-nichts. Wenn ein Teil des Updates nicht erfolgreich ist, wird keine der Änderungen vorgenommen, und eine Statusmeldung wird zurückgegeben. `DC1.Refresh` ist nach **SubmitChanges** mit dem Remote Datendienst nicht erforderlich, stellt jedoch neue Daten sicher.  
   
 ## <a name="cancel-changes-button"></a>Schaltfläche "Änderungen abbrechen  
  Wenn Sie auf **Änderungen abbrechen** klicken, wird die VBScript-Cancel_OnClick unter Prozedur aktiviert, die das [RDS ausführt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt ( `DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) -Methode.  

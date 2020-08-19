@@ -1,4 +1,5 @@
 ---
+description: Adress Book-Navigationsschaltflächen
 title: Adressbuch-Navigations Schaltflächen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcb9ef043f27cd36c57b35605c8bf8257613af5d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f1c5aee050caf603c3e1512d9098b7684a5ff917
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452322"
 ---
 # <a name="address-book-navigation-buttons"></a>Adress Book-Navigationsschaltflächen
 Die Adressbuch Anwendung zeigt die Navigations Schaltflächen unten auf der Webseite an. Sie können die Navigations Schaltflächen verwenden, um durch die Daten in der HTML-Raster Anzeige zu navigieren, indem Sie entweder die erste oder letzte Daten Zeile oder Zeilen neben der aktuellen Auswahl auswählen.  

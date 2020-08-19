@@ -1,4 +1,5 @@
 ---
+description: Fehlermeldungen (Visual FoxPro-ODBC-Treiber)
 title: Fehlermeldungen (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31f894e58da93fe6091dba306f8b765d14bac2cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b76ec8703ebee8aa597849b23a5a22323caa350
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483603"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Fehlermeldungen (Visual FoxPro-ODBC-Treiber)
 Wenn ein Fehler auftritt, gibt der Visual FoxPro-Treiber die folgenden Informationen zurück:  
@@ -46,7 +47,7 @@ Wenn ein Fehler auftritt, gibt der Visual FoxPro-Treiber die folgenden Informati
   
  Die Präfixe in eckigen Klammern ([]) identifizieren die Fehlerquelle, wie in der folgenden Tabelle definiert.  
   
-|Datenquelle|Präfix|Wert|  
+|Datenquellen-|Präfix|Wert|  
 |-----------------|------------|-----------|  
 |Treiber-Manager|Verkäufern<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[ODBC-Treiber-Manager]<br />–|  
 |Visual FoxPro-Treiber|Verkäufern<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Visual FoxPro-Treiber für ODBC]<br />–|  

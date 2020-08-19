@@ -1,4 +1,5 @@
 ---
+description: '* Lik MDX'
 title: '* Lik (MDX) | Microsoft-Dokumentation'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 396dded86adfe8faa6b6ad58b5eb8174d4323726
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ef1262509976b839f170bbc0b59b367889e4e8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483773"
 ---
 # <a name="-multiply-mdx"></a>* (Multiplikation) (MDX)
 
