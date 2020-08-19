@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYKEY (Transact-SQL)
 title: ENCRYPTBYKEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: da36a011f2999527218e668755a8c1d10c9ce692
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c90d864c80c3e54b8ea0cf1e1efcc51881e9eb80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366466"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +75,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  
  Gibt NULL zurück, wenn der Wert *cleartext* NULL entspricht.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  EncryptByKey verwendet einen symmetrischen Schlüssel. Dieser Schlüssel muss geöffnet sein. Wenn der symmetrische Schlüssel in der aktuellen Sitzung bereits geöffnet ist, ist es nicht notwendig, ihn im Kontext der Abfrage erneut zu öffnen.  
   
  Mit dem Authentifikator kann verhindert werden, dass ganze Werte in verschlüsselten Feldern ersetzt werden. Betrachten Sie dazu beispielsweise die folgende Tabelle mit Daten zu Gehältern.  
@@ -146,7 +147,7 @@ SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11'),
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   

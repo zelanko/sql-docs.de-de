@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;ERROR (Transact-SQL)'
 title: '@@ERROR (Transact-SQL) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 08/29/2017
@@ -20,12 +21,12 @@ ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cbc22ecc5bb912ad7f303c2551c076f6ce8393a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 93fe08c7dcba1b9c45f9dfabd0c360b3db2c152f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366256"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "87111585"
 ## <a name="return-types"></a>Rückgabetypen
  integer  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Gibt 0 zurück, wenn bei der vorherigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung keine Fehler auftraten.  
   
  Gibt eine Fehlernummer zurück, wenn bei der vorherigen Anweisung ein Fehler auftrat. Wenn es sich bei dem Fehler um einen der Fehler in der sys.messages-Katalogsicht handelt, enthält @@ERROR den Wert der sys.messages.message_id-Spalte dieses Fehlers. Sie können den zu einer @@ERROR-Fehlernummer gehörenden Text in sys.messages anzeigen.  
@@ -170,7 +171,7 @@ GO
 ```  
 
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
