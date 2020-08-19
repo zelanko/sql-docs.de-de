@@ -1,4 +1,5 @@
 ---
+description: Datenebenenanwendungssichten-dbo.sysdac_instances
 title: dbo.sysdac_instances (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 18031fac584eea39e5901276b597fc556263b18e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 77aafe21c2aa67b55d7c2d9319ab2699585c697c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475512"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>Datenebenenanwendungssichten-dbo.sysdac_instances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85752968"
 |created_by|**sysname**|Anmelde Name, der die DAC-Instanz erstellt hat.|  
 |database_name|**sysname**|Der Name der Datenbank, die für die DAC-Instanz erstellt wurde.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Eine DAC umfasst einen DAC-Typ, der eine Definition der von einer Anwendung verwendeten logischen Datenebenenobjekte, z. B. Tabellen und Sichten, ist. Ein DAC-Paket ist eine Datei, die zur Bereitstellung einer DAC verwendet wird. Das DAC-Paket enthält eine Darstellung aller logischen Objekte, die im DAC-Typ enthalten sind. Das DAC-Paket kann dazu verwendet werden, eine oder mehrere Kopien bzw. Instanzen der DAC auf einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz bereitzustellen. Jede DAC-Instanz, die vom selben DAC-Paket bereitgestellt wird, verwendet den gleichen Typ; ihr wird jedoch ein eindeutiger Instanzname und Bezeichner zugewiesen.  
   
 ## <a name="permissions"></a>Berechtigungen  

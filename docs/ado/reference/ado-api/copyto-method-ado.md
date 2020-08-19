@@ -1,4 +1,5 @@
 ---
+description: CopyTo-Methode (ADO)
 title: CopyTo-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8b34e47948cbc0742b0b7b0a4f413d56e4086cf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fbb9fc1c9d6f2a86a6f047b20962e5513798a26e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444362"
 ---
 # <a name="copyto-method-ado"></a>CopyTo-Methode (ADO)
 Kopiert die angegebene Anzahl von Zeichen oder bytes (abhängig vom [Typ](../../../ado/reference/ado-api/type-property-ado-stream.md)) im [Stream](../../../ado/reference/ado-api/stream-object-ado.md) in ein anderes **Streamobjekt** .  
@@ -41,7 +42,7 @@ Stream.CopyTo DestStream, NumChars
 >  Der *DestStream* -Parameter ist möglicherweise kein Proxy des Daten **Strom** Objekts, da hierfür der Zugriff auf eine private Schnittstelle für das Daten **Strom** Objekt erforderlich ist, das nicht Remote an den Client übergeben werden kann.  
   
  *NumChars*  
- Dies ist optional. Ein **ganzzahliger** Wert, der die Anzahl der Bytes oder Zeichen angibt, die von der aktuellen Position im Quelldaten **Strom** in den **Zielstream**kopiert werden sollen. Der Standardwert ist-1 und gibt an, dass alle Zeichen oder Bytes von der aktuellen Position in [EOS](../../../ado/reference/ado-api/eos-property.md)kopiert werden.  
+ Optional. Ein **ganzzahliger** Wert, der die Anzahl der Bytes oder Zeichen angibt, die von der aktuellen Position im Quelldaten **Strom** in den **Zielstream**kopiert werden sollen. Der Standardwert ist-1 und gibt an, dass alle Zeichen oder Bytes von der aktuellen Position in [EOS](../../../ado/reference/ado-api/eos-property.md)kopiert werden.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Diese Methode kopiert die angegebene Anzahl von Zeichen oder bytes, beginnend bei der aktuellen Position, die durch die [Positions](../../../ado/reference/ado-api/position-property-ado.md) Eigenschaft angegeben wird. Wenn die angegebene Anzahl größer als die verfügbare Anzahl von Bytes bis **EOS**ist, werden nur die Zeichen oder Bytes von der aktuellen Position zu **EOS** kopiert. Wenn der Wert von " *NumChars* "-1 ist oder weggelassen wird, werden alle Zeichen oder bytes, die von der aktuellen Position beginnen, kopiert.  

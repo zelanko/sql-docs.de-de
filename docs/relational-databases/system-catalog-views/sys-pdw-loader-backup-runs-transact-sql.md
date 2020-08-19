@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_loader_backup_runs (Transact-SQL)
 title: sys. pdw_loader_backup_runs (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,19 +13,19 @@ ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ca5fc44e34153411e32a890b509d86caacbd9db
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: fc85ec89f07359714c4661b3b7c4c8d8d5138b1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490258"
 ---
 # <a name="syspdw_loader_backup_runs-transact-sql"></a>sys. pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Enthält Informationen zu laufenden und abgeschlossenen Sicherungs-und Wiederherstellungs Vorgängen in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sowie zu laufenden und abgeschlossenen Sicherungs-, Wiederherstellungs-und Ladevorgängen in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] . Die Informationen persistieren über Systemneustarts.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|Eindeutiger Bezeichner für eine bestimmte Sicherung, Wiederherstellung oder Auslastungs Testlauf.<br /><br /> Der Schlüssel für diese Ansicht.||  
 |name|**nvarchar(255)**|Null zum Laden. Der optionale Name für die Sicherung oder Wiederherstellung.||  
@@ -33,7 +34,7 @@ ms.locfileid: "86196986"
 |end_time|**datetime**|Uhrzeit, zu der der Vorgang abgeschlossen wurde, fehlgeschlagen ist oder abgebrochen wurde||  
 |total_elapsed_time|**int**|Die gesamte verstrichene Zeit zwischen start_time und der aktuellen Zeit oder zwischen start_time und end_time für abgeschlossene, abgebrochene oder fehlgeschlagene Ausführungen.|Wenn total_elapsed_time den maximalen Wert für eine ganze Zahl (24,8 Tage in Millisekunden) überschreitet, führt dies zu einem Materialisierungs Fehler aufgrund eines Überlaufs.<br /><br /> Der maximale Wert in Millisekunden entspricht 24,8 Tagen.|  
 |operation_type|**nvarchar (16)**|Der Auslastungstyp.|"Backup", "Load", "Restore"|  
-|Modus|**nvarchar (16)**|Der Modus innerhalb des Testlaufs.|Für operation_type = **Sicherung**<br />**Differenzielle**<br />**FULL**<br /><br /> Für operation_type = **Laden**<br />**Anfügen**<br />**Brauchte**<br />**UPSERT**<br /><br /> Für operation_type = **Restore**<br />**Verbindung**<br />**HEADER_ONLY**|  
+|Modus|**nvarchar (16)**|Der Modus innerhalb des Testlaufs.|Für operation_type = **Sicherung**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> Für operation_type = **Laden**<br />**Anfügen**<br />**Brauchte**<br />**UPSERT**<br /><br /> Für operation_type = **Restore**<br />**Verbindung**<br />**HEADER_ONLY**|  
 |database_name|**nvarchar(255)**|Der Name der Datenbank, die den Kontext dieses Vorgangs ist.||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|ID des Benutzers, der den Vorgang anfordert.||  
@@ -41,7 +42,7 @@ ms.locfileid: "86196986"
 |request_id|**nvarchar(32)**|Die ID der Anforderung, die den Vorgang ausführt. Bei Lasten ist dies die aktuelle oder letzte Anforderung, die dieser Last zugeordnet ist.|Weitere Informationen finden Sie unter request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |status|**nvarchar (16)**|Der Status des Testlaufs.|"abgebrochen", "abgeschlossen", "fehlerhaft", "in Warteschlange", "wird ausgeführt"|  
 |Fortschritt|**int**|Prozentsatz abgeschlossen.|0 bis 100|  
-|-Befehl.|**nvarchar(4000)**|Der vollständige Text des Befehls, der vom Benutzer gesendet wurde.|Wird abgeschnitten, wenn mehr als 4000 Zeichen (zählungs Zeichen) enthalten sind.|  
+|command|**nvarchar(4000)**|Der vollständige Text des Befehls, der vom Benutzer gesendet wurde.|Wird abgeschnitten, wenn mehr als 4000 Zeichen (zählungs Zeichen) enthalten sind.|  
 |rows_processed|**bigint**|Anzahl der Zeilen, die im Rahmen dieses Vorgangs verarbeitet werden.||  
 |rows_rejected|**bigint**|Anzahl der Zeilen, die im Rahmen dieses Vorgangs abgelehnt wurden.||  
 |rows_inserted|**bigint**|Anzahl der Zeilen, die im Rahmen dieses Vorgangs in die Datenbanktabelle (n) eingefügt werden.||  

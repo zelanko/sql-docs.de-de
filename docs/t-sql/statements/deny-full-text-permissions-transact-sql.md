@@ -1,4 +1,5 @@
 ---
+description: DENY-Berechtigungen für Volltext (Transact-SQL)
 title: DENY (Berechtigungen für Volltext) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/15/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 296f30c5e8a6f8b296f09c5e9360ad4e81b7d2bf
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 226ee1104f6be9bb50bfbcc87c774f05170abbd5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444702"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY-Berechtigungen für Volltext (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -126,7 +127,7 @@ DENY permission [ ,...n ] ON
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für den Volltextkatalog. Wenn Sie die Option AS verwenden, muss der angegebene Prinzipal Besitzer des Volltextkatalogs sein.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   

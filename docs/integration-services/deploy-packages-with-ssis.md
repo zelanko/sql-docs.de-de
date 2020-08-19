@@ -1,4 +1,5 @@
 ---
+description: Bereitstellen von Paketen mit SSIS
 title: Bereitstellen von Paketen mit SSIS | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/20/2018
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d6636cbd74f31448381b1f6cb2c3dd3826324a5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430652"
 ---
 # <a name="deploy-packages-with-ssis"></a>Bereitstellen von Paketen mit SSIS
 
@@ -92,7 +93,7 @@ Wenn Sie die Pakete auf demselben Computer bereitstellen möchten wie dem, auf d
 [Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 In dieser Lektion beginnen Sie mit der Bereitstellung einer ETL-Lösung, indem Sie ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt erstellen und diesem die Pakete und weitere erforderliche Dateien hinzufügen.    
     
-[Lektion 2: Erstellen des Bereitstellungspakets in SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
+[Lektion 2: Erstellen des Bereitstellungspakets in SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
 In dieser Lektion erstellen Sie ein Bereitstellungshilfsprogramm und überprüfen, ob das Bereitstellungspaket die notwendigen Dateien enthält.    
     
 [Lektion 3: Installieren von SSIS-Paketen](../integration-services/lesson-3-install-ssis-packages.md)    

@@ -1,4 +1,5 @@
 ---
+description: Sicherstellen, dass ausreichend TempDB-Speicherplatz vorhanden ist
 title: Sicherstellen des ausreichenden tempdb-Speicherplatzes | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a783c6b6cecbd1fb4139d0ffd3af1a960347f968
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a84bec7cbd7a79fadf4ea5b11d486e7daf6aa9ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452192"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Sicherstellen, dass ausreichend TempDB-Speicherplatz vorhanden ist
 Wenn bei der Verarbeitung von [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekten, für die ein Speicherplatz auf Microsoft SQL Server 6,5 erforderlich ist, Fehler auftreten, müssen Sie möglicherweise die Größe von tempdb erhöhen. (Für einige Abfragen ist ein temporärer Verarbeitungsbereich erforderlich, z. b. eine Abfrage mit einer ORDER BY-Klausel **, die einen**temporären Speicherplatz erfordert.)  

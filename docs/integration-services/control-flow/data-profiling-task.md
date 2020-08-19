@@ -1,4 +1,5 @@
 ---
+description: Datenprofilerstellungs-Task
 title: Datenprofilerstellungs-Task | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8076ccc258b7de7075bafc9f0a0f5c9bed6d6a0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 60e136951deb8701893ea3d611597e8388909816
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430992"
 ---
 # <a name="data-profiling-task"></a>Datenprofilerstellungs-Task
 
@@ -90,13 +91,13 @@ ms.locfileid: "86914826"
   
  Ganzzahltypen umfassen den **bit**-Typ, den **tinyint**-Typ, den **smallint**-Typ, den **int**-Typ und den **bigint**-Typ.  
   
- Typen mit Zeichen umfassen **char**, **nchar**, **varchar**und **nvarchar,** jedoch nicht **varchar(max)** und **nvarchar(max)** .  
+ Typen mit Zeichen umfassen **char**, **nchar**, **varchar**und **nvarchar,** jedoch nicht **varchar(max)** und **nvarchar(max)**.  
   
  Datums- und Zeittypen schließen den **datetime**-Typ, den **smalldatetime**-Typ und den **timestamp**-Typ ein.  
   
  Numerische Typen umfassen **integer** -Typen (außer **bit**), **money**, **smallmoney**, **decimal**, **float**, **real**, und **numeric**.  
   
- \*\* Die Typen **image**, **text**, **XML**, **udt**, und **variant** werden nur für das Profil für das NULL-Verhältnis der Spalte unterstützt.  
+ \* Die Typen \* **image**, **text**, **XML**, **udt**, und **variant** werden nur für das Profil für das NULL-Verhältnis der Spalte unterstützt.  
   
 ### <a name="valid-tables-and-columns"></a>Gültige Tabellen und Spalten  
  Wenn die Tabelle oder die Spalte leer ist, führt die Datenprofilerstellung die folgenden Aktionen aus:  

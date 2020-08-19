@@ -1,4 +1,5 @@
 ---
+description: Relatives und absolutes Scrollen
 title: Relativer und absoluter Bildlauf | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae0ed5af8d116a3038b55b1e3d68231154c2a35c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c7471e7ee245d9cf70adc8c3453705453bc1aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482942"
 ---
 # <a name="relative-and-absolute-scrolling"></a>Relatives und absolutes Scrollen
 Die meisten Scrolloptionen in **SQLFetchScroll** positionieren den Cursor relativ zur aktuellen Position oder zu einer absoluten Position. **SQLFetchScroll** unterstützt das Abrufen der nächsten, vorherigen, ersten und letzten Rowsets sowie das relative abrufen (Abrufen der Rowsets *n* Zeilen vom Anfang des aktuellen Rowsets) und das absolute abrufen (Abrufen des Rowsets ab Zeile *n*). Wenn *n* bei einem absoluten Abruf negativ ist, werden Zeilen vom Ende des Resultsets gezählt. Folglich bedeutet das absolute Abrufen von Zeile-1, dass das Rowset, das mit der letzten Zeile im Resultset beginnt, abgerufen wird.  

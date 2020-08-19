@@ -1,4 +1,5 @@
 ---
+description: Konfigurieren des Datenstreamingziels
 title: Datenstreamingziel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3dd1ae26ab126e87a8f239597a573d24dbc8b3e1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 34f4ba8e001f43d4c29379dac0de36b595163679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430902"
 ---
 # <a name="data-streaming-destination"></a>Konfigurieren des Datenstreamingziels
 
@@ -34,7 +35,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ```  
   
 ## <a name="data-feed-publishing-components"></a>Datenfeedveröffentlichungs-Komponenten  
- Zu den Datenfeedveröffentlichungs-Komponenten gehören die folgenden: OLE DB-Anbieter für SSIS, Datenstreamingziel und SSIS-Assistent für das Veröffentlichen von Paketen (SSIS Package Publish Wizard). Der Assistent ermöglicht es Ihnen, ein SSIS-Paket als SQL-Ansicht in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankinstanz zu veröffentlichen. Der Assistent unterstützt Sie bei der Erstellung eines Verbindungsservers, der den OLE DB-Anbieter für SSIS verwendet, und einer SQL-Ansicht, die eine Abfrage auf dem Verbindungsserver darstellt. Führen Sie die Ansicht aus, um Ergebnisse auf dem SSIS-Paket als tabellarisches Dataset abzufragen.  
+ Die Datenfeedveröffentlichungs-Komponenten beinhalten Folgendes: den OLE DB-Anbieter für SSIS, das Datenstreamingziel und den SSIS-Assistenten für das Veröffentlichen von Paketen (SSIS Package Publish Wizard). Der Assistent ermöglicht es Ihnen, ein SSIS-Paket als SQL-Ansicht in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankinstanz zu veröffentlichen. Der Assistent unterstützt Sie bei der Erstellung eines Verbindungsservers, der den OLE DB-Anbieter für SSIS verwendet, und einer SQL-Ansicht, die eine Abfrage auf dem Verbindungsserver darstellt. Führen Sie die Ansicht aus, um Ergebnisse auf dem SSIS-Paket als tabellarisches Dataset abzufragen.  
   
  Erweitern Sie in SQL Server Management Studio die **Serverobjekte**, die **Verbindungsserver**und die **Anbieter**, und vergewissern Sie sich, dass die **SSISOLEDB** -Anbieter angezeigt werden. So stellen Sie sicher, dass der SSISOLEDB-Anbieter installiert ist. Führen Sie einen Doppelklick auf **SSISOLEDB**aus, aktivieren Sie **InProcess zulassen** , falls es nicht aktiviert ist, und klicken Sie auf **OK**.  
   
@@ -50,7 +51,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 3.  Führen Sie die SQL-Ansicht in SQL Server Management Studio aus, und überprüfen Sie die Ergebnisse aus dem SSIS-Paket. Diese Ansicht sendet eine Abfrage an den OLE DB-Anbieter für SSIS, über den Verbindungsserver, den Sie erstellt haben. Der OLE DB-Anbieter für SSIS führt das Paket aus, das Sie in der Abfrage angegeben haben und gibt das tabellarische Resultset zurück.  
   
 > [!IMPORTANT]  
->  Eine ausführliche Beschreibung der Schritte finden Sie unter [Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md).  
+>  Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md).  
 
 ## <a name="configure-data-streaming-destination"></a>Konfigurieren des Datenstreamingziels
   Konfigurieren Sie das Datenstreamingziel mithilfe des Dialogfelds **Erweiterter Editor für das Datenstreamingziel** . Öffnen Sie das Dialogfeld, indem Sie auf die Komponente doppelklicken oder indem Sie im Datenfluss-Designer mit der rechten Maustaste auf die Komponente und anschließend auf **Bearbeiten**klicken.  

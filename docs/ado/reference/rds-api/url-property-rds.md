@@ -1,4 +1,5 @@
 ---
+description: URL-Eigenschaft (RDS)
 title: URL-Eigenschaft (RDS) | Microsoft-Dokumentation
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09785fde3531d50f33064415ddc769eb07f0fec2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5c7201f300dce88cb512ff9168504b0e720881e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438532"
 ---
 # <a name="url-property-rds"></a>URL-Eigenschaft (RDS)
 Gibt eine Zeichenfolge an, die eine relative oder absolute URL enthält.  

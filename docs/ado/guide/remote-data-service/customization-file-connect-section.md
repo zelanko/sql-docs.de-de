@@ -1,4 +1,5 @@
 ---
+description: Connect-Abschnitt der Anpassungsdatei
 title: Connect-Abschnitt der Anpassungs Datei | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dab615fd861252832abe83d4b0ae736e2189180
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02377ff40a56c8169576a5653ac21953946aaa1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452262"
 ---
 # <a name="customization-file-connect-section"></a>Connect-Abschnitt der Anpassungsdatei
 Das Standardverhalten des Handlers besteht darin, alle Verbindungen abzulehnen. Der Abschnitt " **Connect** " gibt Ausnahmen für dieses Verhalten an. Wenn z. b. alle **Connect** -Abschnitte nicht vorhanden oder leer waren, können standardmäßig keine Verbindungen hergestellt werden.  
@@ -53,10 +54,10 @@ connectionString
   
 ## <a name="remarks"></a>Bemerkungen  
   
-|Teil|BESCHREIBUNG|  
+|Teil|Beschreibung|  
 |----------|-----------------|  
 |**Herstellen einer Verbindung**|Eine Literalzeichenfolge, die angibt, dass dies ein Verbindungs Zeichen folgen Eintrag ist|  
-|**_ConnectionString_**|Eine Zeichenfolge, die die gesamte Client Verbindungs Zeichenfolge ersetzt.|  
+|**_connectionString_**|Eine Zeichenfolge, die die gesamte Client Verbindungs Zeichenfolge ersetzt.|  
 |**zugreifen**|Eine Literalzeichenfolge, die angibt, dass dies ein Zugriffs Eintrag ist|  
 |**_accessright_**|Eine der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** : der Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   Schreib **geschützt: der** Benutzer kann die Datenquelle lesen.<br />-   " **Lesewrite** ": der Benutzer kann die Datenquelle lesen oder in diese schreiben.|  
   

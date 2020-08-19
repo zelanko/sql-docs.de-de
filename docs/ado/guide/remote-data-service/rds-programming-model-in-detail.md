@@ -1,4 +1,5 @@
 ---
+description: RDS-Programmiermodell im Detail
 title: RDS-Programmiermodell im Detail | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bf59580985a4c46fa163a00423bb7dd90ad9463
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad3cd950c958fce95c0264533040fbe9e1df634b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452122"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS-Programmiermodell im Detail
 Im folgenden sind die wichtigsten Elemente des RDS-Programmiermodells aufgeführt:  
@@ -64,7 +65,7 @@ Im folgenden sind die wichtigsten Elemente des RDS-Programmiermodells aufgeführ
   
  Das **RDS. Das DataControl** -Objekt verfügt auch über eigene Methoden zum Navigieren, Sortieren und Filtern der Zeilen des zugeordneten **Recordset** -Objekts. Diese Methoden sind ähnlich, aber nicht identisch mit den Methoden für das ADO- **Recordset** -Objekt.  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  RDS unterstützt zwei der eigenen Ereignisse, die vom ADO-Ereignis Modell unabhängig sind. Das [onleserystatechange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) -Ereignis wird immer dann aufgerufen, wenn **RDS. Die DataControl** -Eigenschaft " [leserystate](../../../ado/reference/rds-api/readystate-property-rds.md) " ändert sich, sodass Sie benachrichtigt werden, wenn ein asynchroner Vorgang erfolgreich abgeschlossen wurde, beendet wurde oder einen Fehler festgestellt hat. Das [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) -Ereignis wird immer dann aufgerufen, wenn ein Fehler auftritt, auch wenn der Fehler während eines asynchronen Vorgangs auftritt.  
   
 > [!NOTE]

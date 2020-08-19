@@ -1,4 +1,5 @@
 ---
+description: RDS-Programmiermodell mit Objekten
 title: RDS-Programmiermodell mit Objekten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f41fd577b470493aa6a53c8ea9ad760287a3507
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2230a4082f79ea386dd02c7530e3af29c57f1b69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452112"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS-Programmiermodell mit Objekten
 Das Ziel von RDS besteht darin, über einen Vermittler wie IIS auf Datenquellen zuzugreifen und diese zu aktualisieren. Das-Programmiermodell gibt die Abfolge der Aktivitäten an, die zum Erreichen dieses Ziels erforderlich sind. Das Objektmodell gibt die Objekte an, deren Methoden und Eigenschaften sich auf das Programmiermodell auswirken.  

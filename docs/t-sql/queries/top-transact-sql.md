@@ -1,4 +1,5 @@
 ---
+description: TOP (Transact-SQL)
 title: TOP (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -21,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce9c31baedb0b423e93e96080ea6697c553e549e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 7dbaf282383bfeb83efc1b7ccf6f74ad90ed1764
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445303"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +70,7 @@ Gibt mindestens zwei Zeilen zurück, die zeitgleich den letzten Platz im beschr�
   
 Sie können die TOP-Klausel mit dem WITH TIES-Argument nur in SELECT-Anweisungen und nur dann angeben, wenn Sie auch die ORDER BY-Klausel angegeben haben. Die zurückgegebene Reihenfolge beim Binden von Datensätzen ist willkürlich. ORDER BY wirkt sich nicht auf diese Regel aus.  
   
-## <a name="best-practices"></a>Bewährte Methoden  
+## <a name="best-practices"></a>Empfehlungen  
 Verwenden Sie in einer SELECT-Anweisung immer eine ORDER BY-Klausel mit einer TOP-Klausel. Denn dies ist die einzige Möglichkeit, zuverlässig anzugeben, welche Zeilen von TOP betroffen sind.  
   
 Verwenden Sie OFFSET und FETCH in der ORDER BY-Klausel anstelle der TOP-Klausel, um eine Abfrageauslagerung zu implementieren. Eine Abfrageauslagerung (d. h. das Senden von Abschnitten oder "Seiten" von Daten an den Client) kann leichter mit OFFSET- und FETCH-Klauseln implementiert werden. Weitere Informationen finden Sie unter [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md).  

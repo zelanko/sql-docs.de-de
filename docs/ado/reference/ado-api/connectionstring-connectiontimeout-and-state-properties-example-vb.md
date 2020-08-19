@@ -1,4 +1,5 @@
 ---
+description: Beispiel für ConnectionString, ConnectionTimeout und State Properties (VB)
 title: Verbindungs Eigenschaften (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 861db15ef9e47bc814aff445b8b8887df5df7a7c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9d1da11bab0ba3858eac13f8a1e32259d376f672
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444482"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>Beispiel für ConnectionString, ConnectionTimeout und State Properties (VB)
 In diesem Beispiel werden verschiedene Möglichkeiten veranschaulicht, wie die [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft verwendet wird, um ein [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt zu öffnen. Außerdem wird die [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) -Eigenschaft verwendet, um einen Verbindungs Timeout Zeitraum festzulegen, und die [State](../../../ado/reference/ado-api/state-property-ado.md) -Eigenschaft, um den Status der Verbindungen zu überprüfen. Die GetState-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  

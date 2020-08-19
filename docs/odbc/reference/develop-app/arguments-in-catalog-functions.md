@@ -1,4 +1,5 @@
 ---
+description: Argumente in Katalogfunktionen
 title: Argumente in Katalog Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 819c10d0b137d5e0999c1e10bf22810392509f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef53514f41d28e93648970b03fa53927529d8344
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288166"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483133"
 ---
 # <a name="arguments-in-catalog-functions"></a>Argumente in Katalogfunktionen
 Alle Katalog Funktionen akzeptieren Argumente, mit denen eine Anwendung den Gültigkeitsbereich der zurückgegebenen Daten einschränken kann. Der erste und zweite Aufruf von **SQLTables** im folgenden Code gibt beispielsweise ein Resultset mit Informationen zu allen Tabellen zurück, während der dritte Aufruf Informationen zur Tabelle Orders zurückgibt:  

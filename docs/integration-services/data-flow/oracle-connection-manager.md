@@ -1,4 +1,5 @@
 ---
+description: Oracle-Verbindungs-Manager
 title: Oracle-Verbindungs-Manager | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0df21d12c9a7d29957d004517a3a6de3e93a8221
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 428ca450371e452081d548a64e26dba2bd29b3b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915655"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430742"
 ---
 # <a name="oracle-connection-manager"></a>Oracle-Verbindungs-Manager
 
@@ -30,7 +31,7 @@ Die **ConnectionManagerType**-Eigenschaft des Oracle-Verbindungs-Managers ist au
 
 ![Verbindungs-Manager](media/oracle-connection-manager.png)
 
-### <a name="options"></a>Tastatur
+### <a name="options"></a>Optionen
 
 #### <a name="connection-manager-information"></a>Informationen zum Verbindungs-Manager
 

@@ -1,4 +1,5 @@
 ---
+description: CopyRecord-, CopyTo-und savedefile-Methoden Beispiel (VB)
 title: CopyRecord-, CopyTo-und savedefile-Methoden Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ca0f7f5a7f9057001e6c2b33563d11c2c6188dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d19c7a994cd4db7d65a285e523726c0bdd88f582
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444392"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord-, CopyTo-und savedefile-Methoden Beispiel (VB)
 In diesem Beispiel wird veranschaulicht, wie Kopien einer Datei mithilfe von [Stream](../../../ado/reference/ado-api/stream-object-ado.md) -oder [Daten Satz](../../../ado/reference/ado-api/record-object-ado.md) Objekten erstellt werden. Eine Kopie wird in einem Webordner für die Internet Veröffentlichung erstellt. Zu den angezeigten Eigenschaften und Methoden gehören der [Streamtyp](../../../ado/reference/ado-api/type-property-ado-stream.md), " **Open**", " [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)" und " [Record Open](../../../ado/reference/ado-api/open-method-ado-record.md)".  

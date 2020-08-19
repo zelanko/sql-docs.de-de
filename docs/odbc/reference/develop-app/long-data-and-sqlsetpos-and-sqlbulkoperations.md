@@ -1,4 +1,5 @@
 ---
+description: Long-Daten, SQLSetPos und SQLBulkOperations
 title: Long Data und SQLSetPos und SQLBulkOperations | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4bc6c5d2da2f796a7c312971635fc36bc2fae8af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12bc0299df58bf85272445773a8f33a872c39ef2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429272"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long-Daten, SQLSetPos und SQLBulkOperations
 Wie bei Parametern in SQL-Anweisungen können lange Daten beim Aktualisieren von Zeilen mit **SQLBulkOperations** oder **SQLSetPos** oder beim Einfügen von Zeilen mit **SQLBulkOperations**gesendet werden. Die Daten werden in Teilen mit mehreren Aufrufen von **SQLPutData**gesendet. Spalten, für die Daten zur Ausführungszeit gesendet werden, werden als *Data-at-Execution-Spalten*bezeichnet.  

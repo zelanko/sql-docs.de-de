@@ -1,4 +1,5 @@
 ---
+description: Zugriffssteuerung für vertrauliche Daten in Paketen
 title: Zugriffssteuerung für sensible Daten in Paketen | Microsoft-Dokumentation
 ms.custom: security
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b5347b8b3d241bc7d65fb4d344b74822150185e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 01e2b133fcd1e4fbf008ae591c92cb549b22479a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430132"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Zugriffssteuerung für vertrauliche Daten in Paketen
 
@@ -141,7 +142,7 @@ ms.locfileid: "86922061"
   
  Zum Verständnis der Anforderungen und Optionen für die Paketsicherheit finden Sie weitere Informationen unter [Sicherheitsübersicht &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Paketschutzebene**  
  Wählen Sie eine Schutzebene aus der Liste aus.  
   
@@ -154,11 +155,11 @@ ms.locfileid: "86922061"
 ## <a name="package-password-dialog-box"></a><a name="password_dialog"></a> Dialogfeld „Paketkennwort“
   Verwenden Sie das Dialogfeld **Paketkennwort** , um ein Kennwort für ein verschlüsseltes Paket bereitzustellen. Sie müssen ein Kennwort bereitstellen, wenn das Paket die Schutzebene **Sensible Daten mit einem Kennwort verschlüsseln**oder **Alle Daten mit einem Kennwort verschlüsseln** verwendet.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Kennwort**  
  Geben Sie das Kennwort ein.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Sicherheitsübersicht &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
  [dtutil (Hilfsprogramm)](../../integration-services/dtutil-utility.md)  

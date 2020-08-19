@@ -1,4 +1,5 @@
 ---
+description: Erforderliche Clienteinstellungen
 title: Erforderliche Client Einstellungen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ec52c594cb058ef8359c39d696d47d4cd3dd127
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452022"
 ---
 # <a name="required-client-settings"></a>Erforderliche Clienteinstellungen
 > [!IMPORTANT]
@@ -31,11 +32,11 @@ ms.locfileid: "82749385"
   
 -   Geben Sie den Namen des Handlers an, der in der **Handler** -Eigenschaft des [DataControl-Objekts (Objekt des DataControl-Objekts)](../../../ado/reference/rds-api/datacontrol-object-rds.md) oder der Verbindungs Zeichenfolge für das [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt verwendet werden soll.**Handler** (Der Handler kann nicht in der Verbindungs Zeichenfolge für **Verbindungs** Objekte festgelegt werden.)  
   
- RDS stellt einen Standard Handler auf dem Server namens **msdfmap bereit. Handler**. (Die Standard Anpassungs Datei heißt msdfmap. INI.)  
+ RDS stellt einen Standard Handler auf dem Server namens **msdfmap bereit. Handler**. (Die Standard Anpassungs Datei hat den Namen MSDFMAP.INI.)  
   
  **Beispiel**  
   
- Nehmen Sie an, dass die folgenden Abschnitte in **msdfmap angezeigt werden. INI** und der Datenquellen Name AdvWorks wurden zuvor definiert:  
+ Angenommen, die folgenden Abschnitte in **MSDFMAP.INI** und der Datenquellen Name AdvWorks wurden zuvor definiert:  
   
 ```console
 [connect CustomerDataBase]  

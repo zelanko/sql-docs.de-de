@@ -1,4 +1,5 @@
 ---
+description: sys. index_resumable_operations (Transact-SQL)
 title: sys. index_resumable_operations (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/12/2019
@@ -19,12 +20,12 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c57cc780bc3e05347daf8dd7778e7e5de274d303
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa2ae5221dbd360c5bad7279d27dbaedc7ae7f16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490308"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-SQL)
 
@@ -40,7 +41,7 @@ ms.locfileid: "85790490"
 |**sql_text**|**nvarchar(max)**|DDL-T-SQL-Anweisungs Text|
 |**last_max_dop**|**smallint**|Letztes MAX_DOP verwendet (Standardwert = 0)|
 |**partition_number**|**int**|Die Partitionsnummer im besitzenden Index oder Heap. Für nicht partitionierte Tabellen und Indizes oder für den Fall, dass alle Partitionen neu erstellt werden, ist der Wert dieser Spalte NULL.|
-|**state**|**tinyint**|Betriebsstatus für fort Setz baren Index:<br /><br />0 = wird ausgeführt<br /><br />1 = anhalten|
+|**Status**|**tinyint**|Betriebsstatus für fort Setz baren Index:<br /><br />0 = wird ausgeführt<br /><br />1 = anhalten|
 |**state_desc**|**nvarchar(60)**|Beschreibung des Betriebsstatus für einen fort Setz baren Index (wird ausgeführt oder angehalten)|  
 |**start_time**|**datetime**|Startzeit des Index Vorgangs (lässt keine NULL-Werte zu)|
 |**last_pause_time**|**DataTime**| Zeit für Index Vorgang: letzte Pause (Nullable). NULL, wenn der Vorgang ausgeführt wird und nie angehalten wird.|
@@ -64,7 +65,7 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
-- [Katalog Sichten](catalog-views-transact-sql.md)
+- [Katalogansichten](catalog-views-transact-sql.md)
 - [Objektkatalog Sichten](object-catalog-views-transact-sql.md)
 - [sys.indexes](sys-xml-indexes-transact-sql.md)
 - [sys.index_columns](sys-index-columns-transact-sql.md)

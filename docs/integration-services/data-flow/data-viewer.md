@@ -1,4 +1,5 @@
 ---
+description: Daten-Viewer
 title: Daten-Viewer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52565494c572fdb6a0eb24ccc0c591bf00005a79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8e3f659ec65cece6dd36f4fc0bc09ecae70a46c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430942"
 ---
 # <a name="data-viewer"></a>Daten-Viewer
 
@@ -28,7 +29,7 @@ ms.locfileid: "86916760"
 
   Wenn ein Pfad zu einem Daten-Viewer konfiguriert ist, zeigt dieser Daten-Viewer die Daten pufferweise an, während sie zwischen zwei Datenflusskomponenten fließen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Grüner Pfeil**  
  Klicken Sie auf den Pfeil, um die Daten des nächsten Puffers anzuzeigen. Wenn die Daten in einem einzigen Puffer verschoben werden können, ist diese Option nicht verfügbar.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "86916760"
  **Daten kopieren**  
  Kopiert die Daten des aktuellen Puffers in die Zwischenablage.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Debuggen des Datenflusses](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   

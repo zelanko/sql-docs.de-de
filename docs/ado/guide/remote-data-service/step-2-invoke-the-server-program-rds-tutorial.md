@@ -1,4 +1,5 @@
 ---
+description: 'Schritt 2: Serverprogramm aufrufen (RDS-Tutorial)'
 title: 'Schritt 2: Aufrufen des Server Programms (RDS-Tutorial) | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0e85b276ed8cc38419035d48357180c7952ff98
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b864578b67eda29c703bcf4952a9a2878aafe9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451942"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Schritt 2: Serverprogramm aufrufen (RDS-Tutorial)
 Wenn Sie eine Methode auf dem Client *Proxy*aufrufen, führt das eigentliche Programm auf dem Server die-Methode aus. In diesem Schritt führen Sie eine Abfrage auf dem Server aus.  
