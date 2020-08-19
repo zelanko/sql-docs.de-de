@@ -1,4 +1,5 @@
 ---
+description: CONCAT (Transact-SQL)
 title: CONCAT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/24/2017
@@ -18,12 +19,12 @@ ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fe0c77173c617bc4f1003c31724af5dca32af28
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d0cf8a5da8735015aaabc9760abc08edcf5c3e15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468221"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 
 ## <a name="arguments"></a>Argumente
 *string_value*  
-Ein Zeichenfolgenwert, der mit den anderen Werten verkettet werden soll. Die `CONCAT`-Funktion erfordert mindestens zwei und nicht mehr als 254 *string_value*-Argumente.
+Ein Zeichenfolgenwert, der mit den anderen Werten verkettet werden soll. Die `CONCAT`-Funktion erfordert mindestens zwei und nicht mehr als 254 ** string_value**-Argumente.
   
 ## <a name="return-types"></a>Rückgabetypen  
 *string_value*  

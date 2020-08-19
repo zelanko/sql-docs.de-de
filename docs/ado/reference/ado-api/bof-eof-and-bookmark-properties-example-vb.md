@@ -1,4 +1,5 @@
 ---
+description: BOF-, EOF- und Bookmark-Eigenschaft – Beispiel (VB)
 title: BOF-, EOF-und Bookmark Properties-Beispiel (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b0fafe895daecc4cfd7345299904c46ff7a1d5c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1d38d132e4e61f7b26d97450d41cc4f291789257
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451152"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF-, EOF- und Bookmark-Eigenschaft – Beispiel (VB)
 In diesem Beispiel werden die Eigenschaften [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) verwendet, um eine Meldung anzuzeigen, wenn ein Benutzer versucht, nach dem ersten oder letzten Datensatz eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)zu wechseln. Er verwendet die [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) -Eigenschaft, damit der Benutzer einen Datensatz in einem **Recordset** markieren und später zurückkehren kann.  

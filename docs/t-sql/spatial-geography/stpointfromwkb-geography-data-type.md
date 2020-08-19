@@ -1,4 +1,5 @@
 ---
+description: STPointFromWKB (geography-Datentyp)
 title: STPointFromWKB (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 11c7ec547778eb07d1713081b55f4d8c192bb9ed
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 70eabd3b36ad564b02d16e3ce906405d83a55730
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459017"
 ---
 # <a name="stpointfromwkb-geography-data-type"></a>STPointFromWKB (geography-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
 
 ## <a name="arguments"></a>Argumente
  *WKB_point*  
- Die WKB-Darstellung der Instanz von **geographyPoint**, die zurückgegeben werden soll. *WKB_point* ist ein **varbinary(max)** -Ausdruck.  
+ Die WKB-Darstellung der Instanz von **geographyPoint**, die zurückgegeben werden soll. *WKB_point* ist ein **varbinary(max)**-Ausdruck.  
   
  *SRID*  
  Ein **int**-Ausdruck, der die SRID (Spatial Reference ID) der **geographyPoint**-Instanz darstellt, die zurückgegeben werden soll.  

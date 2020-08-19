@@ -1,4 +1,5 @@
 ---
+description: LinkMember (MDX)
 title: LinkMember (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8a00388e067878d9c2165cbae6844f8020b7c63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d8d87caa0c844bd2754ba2d044936d43f8d48a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429862"
 ---
 # <a name="linkmember-mdx"></a>LinkMember (MDX)
 
@@ -34,7 +35,7 @@ LinkMember(Member_Expression, Hierarchy_Expression)
  *Hierarchy_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Hierarchie zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die **LinkMember** -Funktion gibt das Element aus der angegebenen Hierarchie zurück, das den Schlüsselwerten auf jeder Ebene des angegebenen Elements in einer zugehörigen Hierarchie entspricht. Die Attribute auf jeder Ebene müssen die gleiche Schlüsselkardinalität und den gleichen Datentyp aufweisen. Wenn es bei unnatürlichen Hierarchien mehr als eine Entsprechung für den Schlüsselwert eines Attributs gibt, ist das Resultat ein Fehler oder unbestimmt.  
   
 ## <a name="examples"></a>Beispiele  

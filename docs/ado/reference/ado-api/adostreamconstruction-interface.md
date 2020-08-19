@@ -1,4 +1,5 @@
 ---
+description: ADOStreamConstruction-Schnittstelle
 title: Adostreamconstruction-Schnittstelle | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75af8d899c4fb0b97f4ee09795888ef773999b60
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f911be2784e849c8feb271127e2a83ed1ce90c4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451312"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction-Schnittstelle
 Die **adostreamconstruction** -Schnittstelle wird verwendet, um **ein ADO-Streamobjekt** aus einem OLE DB **IStream** -Objekt in einer C/C++-Anwendung zu erstellen.  
   
 ## <a name="properties"></a>Eigenschaften  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |-|-|  
 |[Stream](../../../ado/reference/ado-api/stream-property.md)|Lesen/Schreiben Ruft ein OLE DB **Stream** -Objekt ab oder legt es fest.|  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
 ## <a name="events"></a>Events  
  Keine.  

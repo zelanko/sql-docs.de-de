@@ -1,4 +1,5 @@
 ---
+description: Konsolidierte Elementstagingtabelle (Master Data Services)
 title: Konsolidierte Elementstagingtabelle
 ms.custom: ''
 ms.date: 04/01/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ccf1ce5b444c86c8fe979f2865314d947d37ff8a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b0104722d3fcea882b08aab3f44becc334b2d52c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429982"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>Konsolidierte Elementstagingtabelle (Master Data Services)
 
@@ -26,10 +27,10 @@ ms.locfileid: "85813120"
 
   Verwenden Sie die konsolidierte Elementstagingtabelle (stg.name_Consolidated) in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank, um konsolidierte Elemente zu erstellen, zu aktualisieren, zu deaktivieren und zu löschen. Sie können sie auch zum Aktualisieren von Attributwerten für konsolidierte Elemente verwenden.  
   
-##  <a name="table-columns"></a><a name="TableColumns"></a>Tabellen Spalten  
+##  <a name="table-columns"></a><a name="TableColumns"></a> Tabellen Spalten  
  In der folgenden Tabelle wird erläutert, wofür jedes der Felder in der Stagingtabelle "Konsolidiert" verwendet wird.  
   
-|Spaltenname|BESCHREIBUNG|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |**ID**|Ein automatisch zugewiesener Bezeichner. Geben Sie in diesem Feld keinen Wert ein. Wenn der Batch nicht verarbeitet wurde, ist dieses Feld leer.|  
 |**ImportType**<br /><br /> Erforderlich|Bestimmt, wie verfahren wird, wenn bereitgestellte Daten Daten entsprechen, die bereits in der Datenbank [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vorhanden sind.<br /><br /> **0**: Erstellen neuer Elemente. Ersetzen Sie MDS-Daten durch bereitgestellte Daten, aber nur, wenn die bereitgestellten Daten ungleich NULL sind. NULL-Werte werden ignoriert. Um einen Attributwert in NULL zu ändern, verwenden Sie **~NULL~**.<br /><br /> **1**: Ausschließliches Erstellen neuer Elemente. Fehler bei Updates vorhandener MDS-Daten.<br /><br /> **2**: Erstellen neuer Elemente. Ersetzen von MDS-Daten durch bereitgestellte Daten. Wenn Sie NULL-Werte importieren, überschreiben diese vorhandene MDS-Werte.<br /><br /> **3**: Deaktivieren des Elements basierend auf dem Codewert. Alle Attribute, Hierarchie- und Auflistungsmitgliedschaften sowie Transaktionen werden beibehalten, sind aber nicht mehr auf der Benutzeroberfläche verfügbar. Wenn das Element als domänenbasierter Attributwert eines anderen Elements verwendet wird, tritt ein Fehler beim Deaktivieren auf.<br /><br /> **4**: Dauerhaftes Löschen des Elements basierend auf dem Codewert. Alle Attribute, Hierarchie- und Auflistungsmitgliedschaften sowie Transaktionen werden dauerhaft gelöscht. Wenn das Element als domänenbasierter Attributwert eines anderen Elements verwendet wird, tritt ein Fehler beim Löschen auf.|  

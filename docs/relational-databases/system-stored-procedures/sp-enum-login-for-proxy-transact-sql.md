@@ -1,4 +1,5 @@
 ---
+description: sp_enum_login_for_proxy (Transact-SQL)
 title: sp_enum_login_for_proxy (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: cd65937894956ff008a08ea6f15222d6d020ba2e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7707843979bd0c741ade8e4ae6759d265eb13d06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486057"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -42,11 +43,11 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'`Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prinzipal-, Anmelde-, Server Rolle oder **msdb** -Daten Bank Rolle, für die Proxys aufgelistet werden sollen. Der Name ist vom Datentyp **nvarchar (256)** und hat den Standardwert NULL.  
+`[ @name = ] 'name'` Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prinzipal-, Anmelde-, Server Rolle oder **msdb** -Daten Bank Rolle, für die Proxys aufgelistet werden sollen. Der Name ist vom Datentyp **nvarchar (256)** und hat den Standardwert NULL.  
   
-`[ @proxy_id = ] id`Die Proxy-ID des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
+`[ @proxy_id = ] id` Die Proxy-ID des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
   
-`[ @proxy_name = ] 'proxy_name'`Der Name des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -61,7 +62,7 @@ sp_enum_login_for_proxy
 |**flags**|**int**|Typ des Sicherheitsprinzipals.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name<br /><br /> **1** = Systemrolle wird korrigiert<br /><br /> **2** = Daten Bank Rolle in **msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn keine Parameter angegeben werden, werden in **sp_enum_login_for_proxy** Informationen zu allen Anmeldungen in der-Instanz für jeden Proxy aufgelistet.  
   
  Wenn eine Proxy-ID oder ein Proxy Name bereitgestellt wird, werden in **sp_enum_login_for_proxy** Anmeldungen mit Zugriff auf den Proxy aufgeführt. Wenn ein Anmelde Name angegeben wird, werden in **sp_enum_login_for_proxy** die Proxys aufgelistet, auf die der Anmelde Name Zugriff hat.  

@@ -1,4 +1,5 @@
 ---
+description: Konvertieren von Daten von SQL- zu C-Datentypen
 title: Datentypen werden von SQL in C-Datentypen umgerechnet | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1a10730cb3910c55679c264583801cd57c83bfc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c1306564a9e4a5c1cbd9cac74508529a1e6df9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429692"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Konvertieren von Daten von SQL- zu C-Datentypen
 Wenn eine Anwendung **SQLFetch**, **SQLFetchScroll**oder **SQLGetData**aufruft, ruft der Treiber die Daten aus der Datenquelle ab. Bei Bedarf werden die Daten aus dem Datentyp, in dem der Treiber Sie abgerufen hat, in den Datentyp konvertiert, der durch das *TargetType* -Argument in **SQLBindCol** oder **SQLGetData** angegeben wird. Schließlich werden die Daten an dem Speicherort gespeichert, auf den durch das *targetvalueptr* -Argument in **SQLBindCol** oder **SQLGetData** (und das SQL_DESC_DATA_PTR-Feld der ARD) verwiesen wird.  
@@ -40,7 +41,7 @@ Wenn eine Anwendung **SQLFetch**, **SQLFetchScroll**oder **SQLGetData**aufruft, 
   
  Wenn das *TargetType* -Argument in **SQLBindCol** oder **SQLGetData** einen Bezeichner für einen ODBC C-Datentyp enthält, der in der Tabelle für einen bestimmten ODBC-SQL-Datentyp nicht angezeigt wird, gibt **SQLFetch**, **SQLFetchScroll**oder **SQLGetData** SQLSTATE 07006 (eingeschränkte Datentyp Attribut Verletzung) zurück. Wenn das *TargetType* -Argument einen Bezeichner enthält, der eine Konvertierung von einem treiberspezifischen SQL-Datentyp in einen ODBC-C-Datentyp angibt, und diese Konvertierung nicht vom Treiber, **SQLFetch**, **SQLFetchScroll**oder **SQLGetData** unterstützt wird, gibt SQLSTATE HYC00 (optionales Feature nicht implementiert) zurück.  
   
- Obwohl Sie in den Tabellen nicht angezeigt wird, gibt der Treiber SQL_NULL_DATA in dem Puffer zurück, der durch das *StrLen_or_IndPtr* -Argument angegeben wird, wenn der SQL-Datenwert NULL ist. Eine Erläuterung der Verwendung von *StrLen_or_IndPtr* , wenn mehrere Aufrufe zum Abrufen von Daten durchgeführt werden, finden Sie in der Beschreibung der [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)-Funktion. Wenn SQL-Daten in Zeichen-C-Daten konvertiert werden, enthält die \*in *StrLen_or_IndPtr* zurückgegebene Zeichen Anzahl nicht das NULL-Terminierungs Byte. Wenn *targetvalueptr* ein NULL-Zeiger ist, gibt **SQLGetData** SQLSTATE HY009 (Ungültige Verwendung des NULL-Zeigers) zurück. in **SQLBindCol**wird dadurch die Bindung der Spalte entbindet.  
+ Obwohl Sie in den Tabellen nicht angezeigt wird, gibt der Treiber SQL_NULL_DATA in dem Puffer zurück, der durch das *StrLen_or_IndPtr* -Argument angegeben wird, wenn der SQL-Datenwert NULL ist. Eine Erläuterung der Verwendung von *StrLen_or_IndPtr* , wenn mehrere Aufrufe zum Abrufen von Daten durchgeführt werden, finden Sie in der Beschreibung der [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)-Funktion. Wenn SQL-Daten in Zeichen-C-Daten konvertiert werden, enthält die in StrLen_or_IndPtr zurückgegebene Zeichen Anzahl \* *StrLen_or_IndPtr* nicht das NULL-Terminierungs Byte. Wenn *targetvalueptr* ein NULL-Zeiger ist, gibt **SQLGetData** SQLSTATE HY009 (Ungültige Verwendung des NULL-Zeigers) zurück. in **SQLBindCol**wird dadurch die Bindung der Spalte entbindet.  
   
  Die folgenden Begriffe und Konventionen werden in den Tabellen verwendet:  
   

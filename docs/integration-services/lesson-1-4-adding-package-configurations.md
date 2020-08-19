@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 1-4: Hinzufügen von Paketkonfigurationen'
 title: 'Schritt 4: Hinzufügen von Paketkonfigurationen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e92ad2f9b330ef088423a10199cd22f64ff77920
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 052bb905c78839c644a5436da568667b6665b432
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477204"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lektion 1-4: Hinzufügen von Paketkonfigurationen
 
@@ -55,7 +56,7 @@ Sie erstellen die beiden Konfigurationsdateien DataTransferConfig.dtsConfig und 
   
 7.  Klicken Sie auf **Weiter**.  
   
-8.  Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname** **DataTransfer EV Configuration** ein, prüfen Sie den Inhalt der Konfiguration im Bereich **Vorschau** , und klicken Sie anschließend auf **Fertig stellen**.  
+8.  Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname****DataTransfer EV Configuration** ein, prüfen Sie den Inhalt der Konfiguration im Bereich **Vorschau** , und klicken Sie anschließend auf **Fertig stellen**.  
   
 9. Schließen Sie das Dialogfeld **Paketkonfigurationsplaner**.  
   
@@ -73,7 +74,7 @@ Sie erstellen die beiden Konfigurationsdateien DataTransferConfig.dtsConfig und 
   
 6.  Wählen Sie auf der Seite Konfigurationstyp auswählen die Option **XML-Konfigurationsdatei** in der Liste **Konfigurationstyp** aus, und klicken Sie anschließend auf **Durchsuchen**.  
   
-7.  Navigieren Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** zu „C:\DeploymentTutorial“, geben Sie im Feld **Dateiname** **DataTransferConfig** ein, und klicken Sie anschließend auf **Speichern**.  
+7.  Navigieren Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** zu „C:\DeploymentTutorial“, geben Sie im Feld **Dateiname****DataTransferConfig** ein, und klicken Sie anschließend auf **Speichern**.  
   
 8.  Klicken Sie auf der Seite „Konfigurationstyp auswählen“ auf **Weiter**.  
   
@@ -83,7 +84,7 @@ Sie erstellen die beiden Konfigurationsdateien DataTransferConfig.dtsConfig und 
   
 11. Klicken Sie auf **Weiter**.  
   
-12. Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname** **DataTransfer Configuration** ein, überprüfen Sie den Inhalt der Konfiguration, und klicken Sie anschließend auf **Fertig stellen**.  
+12. Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname****DataTransfer Configuration** ein, überprüfen Sie den Inhalt der Konfiguration, und klicken Sie anschließend auf **Fertig stellen**.  
   
 13. Überprüfen Sie im Dialogfeld **Paketkonfigurationsplaner** , ob DataTransfer EV Configuration als Erstes und DataTransfer Configuration als Zweites aufgeführt wird, und klicken Sie anschließend auf **Schließen**.  
   
@@ -106,7 +107,7 @@ Sie erstellen die beiden Konfigurationsdateien DataTransferConfig.dtsConfig und 
   
 7.  Klicken Sie auf **Weiter**.  
   
-8.  Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname** **LoadXMLData EV Configuration** ein, überprüfen Sie den Inhalt der Konfiguration, und klicken Sie anschließend auf **Fertig stellen**.  
+8.  Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname****LoadXMLData EV Configuration** ein, überprüfen Sie den Inhalt der Konfiguration, und klicken Sie anschließend auf **Fertig stellen**.  
   
 ### <a name="to-create-the-xml-configuration-for-the-loadxmldata-package"></a>So erstellen Sie die XML-Konfiguration für das LoadXMLData-Paket  
   
@@ -122,7 +123,7 @@ Sie erstellen die beiden Konfigurationsdateien DataTransferConfig.dtsConfig und 
   
 6.  Wählen Sie auf der Seite Konfigurationstyp auswählen die Option **XML-Konfigurationsdatei** in der Liste **Konfigurationstyp** aus, und klicken Sie auf **Durchsuchen**.  
   
-7.  Navigieren Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** zu „C:\DeploymentTutorial“, geben Sie im Feld **Dateiname** **LoadXMLDataConfig** ein, und klicken Sie anschließend auf **Speichern**.  
+7.  Navigieren Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** zu „C:\DeploymentTutorial“, geben Sie im Feld **Dateiname****LoadXMLDataConfig** ein, und klicken Sie anschließend auf **Speichern**.  
   
 8.  Klicken Sie auf der Seite „Konfigurationstyp auswählen“ auf **Weiter**.  
   
@@ -130,7 +131,7 @@ Sie erstellen die beiden Konfigurationsdateien DataTransferConfig.dtsConfig und 
   
 10. Klicken Sie auf **Weiter**.  
   
-11. Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname** **LoadXMLData Configuration** ein, überprüfen Sie den Inhalt der Konfiguration, und klicken Sie anschließend auf **Fertig stellen**.  
+11. Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname****LoadXMLData Configuration** ein, überprüfen Sie den Inhalt der Konfiguration, und klicken Sie anschließend auf **Fertig stellen**.  
   
 12. Überprüfen Sie im Dialogfeld **Paketkonfigurationsplaner** , ob „LoadXMLData EV Configuration“ als Erstes und „LoadXMLData Configuration“ als Zweites aufgeführt wird, und klicken Sie anschließend auf **Schließen**.  
   

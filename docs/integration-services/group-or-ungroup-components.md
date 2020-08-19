@@ -1,4 +1,5 @@
 ---
+description: Gruppieren von Komponenten oder Aufheben der Gruppierung
 title: Gruppieren von Komponenten oder Aufheben der Gruppierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 244b724376c18b34ab27ae0aa9eedd24a45f9362
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a83bebf92ddbf4e14d08518283547cb35594c290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430182"
 ---
 # <a name="group-or-ungroup-components"></a>Gruppieren von Komponenten oder Aufheben der Gruppierung
 
@@ -65,6 +66,6 @@ ms.locfileid: "86914697"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Verbinden von Tasks und Containern mithilfe einer Standardrangfolgen-Einschränkung](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
+ [Verbinden von Tasks und Containern mithilfe einer Standardrangfolgeneinschränkung](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: FREEZE-Anweisung (MDX)
 title: Freeze-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4738dab411fe55808034a6d9d81a16994089ea74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41c71987fec932b2693740792a8d86e200fcf526
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429742"
 ---
 # <a name="mdx-scripting---freeze"></a>MDX-Skripts – FREEZE
 

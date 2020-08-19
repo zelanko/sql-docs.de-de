@@ -1,4 +1,5 @@
 ---
+description: sp_help_job (Transact-SQL)
 title: sp_help_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fe10c33c617833754ac23592528519aeabec1d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5dcf8a6fa773497e119b73a9b623d414a1ad4d2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486008"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,14 +53,14 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id`Die Auftrags-ID. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die Auftrags-ID. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'`Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Zum Anzeigen eines bestimmten Auftrags muss entweder *job_id* oder *job_name* angegeben werden.  Lassen Sie sowohl *job_id* als auch *job_name* aus, um Informationen zu allen Aufträgen zurückzugeben.
   
-`[ @job_aspect = ] 'job_aspect'`Das anzuzeigende Auftrags Attribut. *job_aspect* ist vom Datentyp **varchar (9)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
+`[ @job_aspect = ] 'job_aspect'` Das anzuzeigende Auftrags Attribut. *job_aspect* ist vom Datentyp **varchar (9)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -69,19 +70,19 @@ sp_help_job { [ @job_id = ] job_id
 |**Nehmen**|Auftragsschrittinformationen|  
 |**Lern**|Zielinformationen|  
   
-`[ @job_type = ] 'job_type'`Der Typ der Aufträge, die in den Bericht eingeschlossen werden sollen. *job_type* ist vom Datentyp **varchar (12)** und hat den Standardwert NULL. *job_type* kann " **local** " oder " **MultiServer**" sein.  
+`[ @job_type = ] 'job_type'` Der Typ der Aufträge, die in den Bericht eingeschlossen werden sollen. *job_type* ist vom Datentyp **varchar (12)** und hat den Standardwert NULL. *job_type* kann " **local** " oder " **MultiServer**" sein.  
   
-`[ @owner_login_name = ] 'login_name'`Der Anmelde Name des Besitzers des Auftrags. *login_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @owner_login_name = ] 'login_name'` Der Anmelde Name des Besitzers des Auftrags. *login_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @subsystem = ] 'subsystem'`Der Name des Subsystems. *Subsystem* ist vom Datentyp **nvarchar (40)** und hat den Standardwert NULL.  
+`[ @subsystem = ] 'subsystem'` Der Name des Subsystems. *Subsystem* ist vom Datentyp **nvarchar (40)** und hat den Standardwert NULL.  
   
-`[ @category_name = ] 'category'`Der Name der Kategorie. *Category* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @category_name = ] 'category'` Der Name der Kategorie. *Category* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @enabled = ] enabled`Eine Zahl, die angibt, ob Informationen für aktivierte oder deaktivierte Aufträge angezeigt werden. *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist NULL. **1** gibt aktivierte Aufträge an, und **0** gibt deaktivierte Aufträge an.  
+`[ @enabled = ] enabled` Eine Zahl, die angibt, ob Informationen für aktivierte oder deaktivierte Aufträge angezeigt werden. *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist NULL. **1** gibt aktivierte Aufträge an, und **0** gibt deaktivierte Aufträge an.  
   
-`[ @execution_status = ] status`Der Ausführungs Status für die Aufträge. der *Status* ist vom Datentyp **int**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
+`[ @execution_status = ] status` Der Ausführungs Status für die Aufträge. der *Status* ist vom Datentyp **int**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Nur die Aufträge werden zurückgegeben, die sich nicht im Leerlauf befinden oder unterbrochen sind.|  
 |**1**|Ausführ.|  
@@ -91,13 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Unterbrochen|  
 |**7**|Abschlussaktionen werden ausgeführt|  
   
-`[ @date_comparator = ] 'date_comparison'`Der Vergleichs Operator, der in Vergleichen von *Date_Created* und *date_modified*verwendet werden soll. *date_comparison* ist vom Typ **char (1)** und kann =, sein \<, or > .  
+`[ @date_comparator = ] 'date_comparison'` Der Vergleichs Operator, der in Vergleichen von *Date_Created* und *date_modified*verwendet werden soll. *date_comparison* ist vom Typ **char (1)** und kann =, sein \<, or > .  
   
-`[ @date_created = ] date_created`Das Datum, an dem der Auftrag erstellt wurde. *Date_Created*ist vom **Datentyp DateTime**und hat den Standardwert NULL.  
+`[ @date_created = ] date_created` Das Datum, an dem der Auftrag erstellt wurde. *Date_Created*ist vom **Datentyp DateTime**und hat den Standardwert NULL.  
   
-`[ @date_last_modified = ] date_modified`Das Datum, an dem der Auftrag zuletzt geändert wurde. *date_modified* ist vom **Datentyp DateTime**und hat den Standardwert NULL.  
+`[ @date_last_modified = ] date_modified` Das Datum, an dem der Auftrag zuletzt geändert wurde. *date_modified* ist vom **Datentyp DateTime**und hat den Standardwert NULL.  
   
-`[ @description = ] 'description_pattern'`Die Beschreibung des Auftrags. *description_pattern* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL. *description_pattern* können die SQL Server Platzhalter Zeichen für den Musterabgleich einschließen.  
+`[ @description = ] 'description_pattern'` Die Beschreibung des Auftrags. *description_pattern* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL. *description_pattern* können die SQL Server Platzhalter Zeichen für den Musterabgleich einschließen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -110,8 +111,8 @@ sp_help_job { [ @job_id = ] job_id
 |**job_id**|**uniqueidentifier**|Eindeutige ID des Auftrags.|  
 |**originating_server**|**nvarchar(30)**|Name des Servers, von dem der Auftrag stammt|  
 |**name**|**sysname**|Der Name des Auftrags.|  
-|**wodurch**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
-|**description**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
+|**enabled**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
+|**Beschreibung**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
 |**category**|**sysname**|Auftragskategorie|  
 |**Eigentor**|**sysname**|Auftragsbesitzer|  
@@ -176,7 +177,7 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Bezeichner des Zeitplans (eindeutig für alle Aufträge)|  
 |**schedule_name**|**sysname**|Name des Zeitplans (eindeutig nur für diesen Auftrag)|  
-|**wodurch**|**int**|Gibt an, ob der Zeitplan aktiv (**1**) oder nicht (**0**) ist.|  
+|**enabled**|**int**|Gibt an, ob der Zeitplan aktiv (**1**) oder nicht (**0**) ist.|  
 |**freq_type**|**int**|Zeigt an, wann der Auftrag ausgeführt werden soll:<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zum **freq_interval**<br /><br /> **64** = ausführen, wenn der **SQLServerAgent** -Dienst gestartet wird.|  
 |**freq_interval**|**int**|Tage, an denen der Auftrag ausgeführt wird. Der Wert hängt vom Wert **freq_type**ab. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**Int**|Einheiten für **freq_subday_interval**. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
@@ -263,7 +264,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_add_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+ [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_update_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

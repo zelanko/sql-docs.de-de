@@ -1,4 +1,5 @@
 ---
+description: CacheSize-Eigenschaft (ADO)
 title: CacheSize-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 502459b890c533ace8a96847bcf79eb09929e53f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3cafee5dbcc5d6469df2d733f1898806069dd112
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451102"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize-Eigenschaft (ADO)
 Gibt die Anzahl von Datensätzen aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt an, die lokal im Arbeitsspeicher zwischengespeichert werden.  

@@ -1,4 +1,5 @@
 ---
+description: Entfernen von SSMA-Komponenten für Sybase (SybaseToSQL)
 title: Entfernen von SSMA für Sybase-Komponenten (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4ffa47be1f35e86d09c136e5aeca6c0811630ca5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4c4e0f94f5672c96972a3cf3f3d35255dce91208
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468828"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>Entfernen von SSMA-Komponenten für Sybase (SybaseToSQL)
 Wenn Sie die Migration von Datenbanken von Sybase Adaptive Server Enterprise (ASE) zu abgeschlossen haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie SSMA-Komponenten deinstallieren. Sie können die Client Komponenten jederzeit deinstallieren. Sie sollten das Erweiterungspaket jedoch nicht von deinstallieren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es sei denn, Sie sind sicher, dass die migrierten Datenbanken nicht mehr Funktionen im **ssma_syb** Schema der **sysdb** -Datenbank verwenden.  
@@ -53,7 +54,7 @@ So deinstallieren Sie das Erweiterungspaket
   
 Nachdem Sie deinstalliert haben, können Sie überprüfen, ob das **sysdb. ssma_syb** -Schema und möglicherweise die gesamte **sysdb** -Datenbank mithilfe von entfernt wurde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Wenn Sie jedoch andere SSMA-Produkte verwenden, verwenden Sie auch die **sysdb** -Datenbank. Wenn die Datenbank vorhanden ist und Sie sicher sind, dass keine anderen Datenbanken auf Objekte in dieser Datenbank verweisen, können Sie die Datenbank trennen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Installieren von SSMA für den Sybase-Client &#40;sybasedesql&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
 [Installieren von SSMA-Komponenten auf SQL Server &#40;sybasedesql-&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
   

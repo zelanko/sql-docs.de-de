@@ -1,4 +1,5 @@
 ---
+description: sp_help_publication_access (Transact-SQL)
 title: sp_help_publication_access (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11571a7a3fb97a164291a3f3949d30205305daf7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a40f12ade4dcbb08609da6184fa0a96ca9926cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485983"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, auf die zugegriffen werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, auf die zugegriffen werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @return_granted = ] 'return_granted'`Die Anmelde-ID. *return_granted* ist vom Typ **Bit**und hat den Standardwert 1. Wenn **0** angegeben und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die-Authentifizierung verwendet wird, werden die verfügbaren Anmeldungen, die auf dem Verleger, aber nicht auf dem Verteiler angezeigt werden, zurückgegeben. Wenn **0** angegeben ist und die Windows-Authentifizierung verwendet wird, werden die Anmeldungen zurückgegeben, denen der Zugriff auf dem Verleger oder dem Verteiler nicht ausdrücklich verweigert wird.  
+`[ @return_granted = ] 'return_granted'` Die Anmelde-ID. *return_granted* ist vom Typ **Bit**und hat den Standardwert 1. Wenn **0** angegeben und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die-Authentifizierung verwendet wird, werden die verfügbaren Anmeldungen, die auf dem Verleger, aber nicht auf dem Verteiler angezeigt werden, zurückgegeben. Wenn **0** angegeben ist und die Windows-Authentifizierung verwendet wird, werden die Anmeldungen zurückgegeben, denen der Zugriff auf dem Verleger oder dem Verteiler nicht ausdrücklich verweigert wird.  
   
-`[ @login = ] 'login'`Die Standard-Sicherheits Anmelde-ID. *Login* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** .  
+`[ @login = ] 'login'` Die Standard-Sicherheits Anmelde-ID. *Login* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** .  
   
-`[ @initial_list = ] initial_list`Gibt an, ob alle Member mit Veröffentlichungs Zugriff oder nur diejenigen zurückgegeben werden sollen, die vor dem Hinzufügen neuer Mitglieder zur Liste Zugriff hatten. *initial_list* ist vom Typ Bit. der Standardwert ist **0**.  
+`[ @initial_list = ] initial_list` Gibt an, ob alle Member mit Veröffentlichungs Zugriff oder nur diejenigen zurückgegeben werden sollen, die vor dem Hinzufügen neuer Mitglieder zur Liste Zugriff hatten. *initial_list* ist vom Typ Bit. der Standardwert ist **0**.  
   
  **1** gibt Informationen für alle Mitglieder der festen Server Rolle **sysadmin** mit gültigen Anmeldungen auf dem Verteiler zurück, die beim Erstellen der Veröffentlichung vorhanden waren, sowie den aktuellen Anmelde Namen.  
   
@@ -63,7 +64,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_help_publication_access** wird bei allen Replikations Typen verwendet.  
   
  Wenn sowohl **Isntname** als auch **Isntgroup** im Resultset den Wert **0**haben, wird davon ausgegangen, dass die Anmeldung eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung ist.  

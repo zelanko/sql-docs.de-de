@@ -1,4 +1,5 @@
 ---
+description: LinRegPoint (MDX)
 title: LinRegPoint (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3719071beca4dbd8cc991befbb7b2b74f8982c89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f298d58b14f3005b86f8fa7773a4faef1c94c79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429842"
 ---
 # <a name="linregpoint-mdx"></a>LinRegPoint (MDX)
 
@@ -40,7 +41,7 @@ LinRegPoint(Slice_Expression_x, Set_Expression, Numeric_Expression_y [ ,Numeric_
  *Numeric_Expression_x*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt. Die vom Ausdruck zurückgegebene Zahl stellt den Wert für die X-Achse dar.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die lineare Regression berechnet mit der Methode der kleinsten Quadrate die Gleichung einer Regressionsgeraden (d. h. der Ausgleichsgeraden für eine Reihe von Punkten). Die Regressionslinie weist die folgende Gleichung auf, wobei a für die Steigung und b das Abfangen ist:  
   
  y = ax+b  

@@ -1,4 +1,5 @@
 ---
+description: Globale Einstellungen (Ausgabefenster) (accesstosql)
 title: Globale Einstellungen (Ausgabefenster) (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bf18bdcee058ac913a303a04e2ff4510696724a6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 03ed181f7cb35619b0ab114116847a32efb8c636
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422994"
 ---
 # <a name="global-settings-output-window-accesstosql"></a>Globale Einstellungen (Ausgabefenster) (accesstosql)
 Verwenden Sie das Dialogfeld **globale Einstellungen** , um Einstellungen für SSMA anzugeben.  
   
 Wenn Sie auf die Ausgabefenster Einstellungen zugreifen möchten, wählen Sie **im Menü Extras die Option** **globale Einstellungen**aus, klicken Sie unten im linken Bereich auf **GUI** , und wählen Sie dann **Ausgabefenster**aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Fehlerliste Bereich anzeigen**  
 Wählen Sie **wahr** aus, wenn SSMA den Fehlerliste Bereich anzeigen soll, wenn Nachrichten vorhanden sind.  
   

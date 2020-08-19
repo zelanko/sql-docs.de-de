@@ -1,4 +1,5 @@
 ---
+description: Avg (MDX)
 title: AVG (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5cac19b597139274502d455fb5f8f4e5087c8a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477062"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 
@@ -80,7 +81,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE ([Geography].[Geography].[NW Region Avg])`  
   
- Im folgenden Beispiel wird der tägliche Durchschnitt des `Measures.[Gross Profit Margin]` Measures zurückgegeben, der über die Tage jedes Monats im 2003-Geschäftsjahr aus dem **Adventure Works** -Cube berechnet wird. Die **AVG** -Funktion berechnet den Durchschnitt aus der Anzahl von Tagen, die in den einzelnen Monaten `[Ship Date].[Fiscal Time]` der Hierarchie enthalten sind. Die erste Berechnungsversion zeigt das Standardverhalten für den Durchschnitt durch Ausschließen von Tagen, an denen keine Verkäufe vom Durchschnitt erfasst wurden. Die zweite Version zeigt, wie Tage ohne Verkäufe in den Durchschnitt eingeschlossen werden.  
+ Im folgenden Beispiel wird der tägliche Durchschnitt des Measures zurückgegeben `Measures.[Gross Profit Margin]` , der über die Tage jedes Monats im 2003-Geschäftsjahr aus dem **Adventure Works** -Cube berechnet wird. Die **AVG** -Funktion berechnet den Durchschnitt aus der Anzahl von Tagen, die in den einzelnen Monaten der `[Ship Date].[Fiscal Time]` Hierarchie enthalten sind. Die erste Berechnungsversion zeigt das Standardverhalten für den Durchschnitt durch Ausschließen von Tagen, an denen keine Verkäufe vom Durchschnitt erfasst wurden. Die zweite Version zeigt, wie Tage ohne Verkäufe in den Durchschnitt eingeschlossen werden.  
   
  `WITH MEMBER Measures.[Avg Gross Profit Margin] AS`  
   
@@ -126,7 +127,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE([Product].[Product Categories].[Product].&[344])`  
   
- Im folgenden Beispiel wird der tägliche Durchschnitt des `Measures.[Gross Profit Margin]` Measures, berechnet über die Tage jedes Semesters im Geschäftsjahr 2003, aus dem **Adventure Works** -Cube zurückgegeben.  
+ Im folgenden Beispiel wird der tägliche Durchschnitt des Measures `Measures.[Gross Profit Margin]` , berechnet über die Tage jedes Semesters im Geschäftsjahr 2003, aus dem **Adventure Works** -Cube zurückgegeben.  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS  

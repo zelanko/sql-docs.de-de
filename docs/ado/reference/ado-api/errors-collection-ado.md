@@ -1,4 +1,5 @@
 ---
+description: Errors-Collection (ADO)
 title: Fehlersammlung (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c8f60951646e635d6124c9fe0fd4290c261c959
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6f4719c9dcf182b6840ad950373b35c7ea8f0361
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443952"
 ---
 # <a name="errors-collection-ado"></a>Errors-Collection (ADO)
 Enthält alle Fehler Objekte, die als Reaktion auf einen einzelnen Anbieter [Fehler](../../../ado/reference/ado-api/error-object.md) erstellt wurden.  

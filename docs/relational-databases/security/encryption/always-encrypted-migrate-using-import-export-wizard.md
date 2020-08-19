@@ -1,4 +1,5 @@
 ---
+description: Migrieren von Daten zu oder aus Spalten mithilfe von Always Encrypted mit dem SQL Server-Import/Export-Assistenten
 title: Migrieren von Daten zu oder aus Spalten mithilfe von Always Encrypted mit dem SQL Server-Import/Export-Assistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/31/2019
@@ -16,12 +17,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42898b255427c5f3d870a21e17e2cdeb17039919
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 89592db85cd95996274484d17fd968d70a552373
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423374"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>Migrieren von Daten zu oder aus Spalten mithilfe von Always Encrypted mit dem SQL Server-Import/Export-Assistenten 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -75,8 +76,8 @@ Außerdem benötigen Sie Zugriff auf die Spaltenhauptschlüssel, die für die Sp
 
 - **Zertifikatspeicher – Lokaler Computer**: Sie benötigen Lesezugriff auf das Zertifikat, das als Spaltenhauptschlüssel verwendet wird, oder Administratorrechte auf dem Computer.
 - **Azure Key Vault**: Sie benötigen die Berechtigungen _get_, _unwrapKey_ und _verify_ für den Tresor, der den Spaltenhauptschlüssel enthält.
-- **Schlüsselspeicheranbieter (CNG)** : Die erforderlichen Berechtigungen und Anmeldeinformationen, die Sie möglicherweise eingeben müssen, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, je nach Speicher und KSP-Konfiguration.
-- **Kryptografiedienstanbieter (CAPI)** : Die erforderlichen Berechtigungen und Anmeldeinformationen, die Sie möglicherweise eingeben müssen, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, je nach Speicher und CSP-Konfiguration.
+- **Schlüsselspeicheranbieter (CNG)**: Die erforderlichen Berechtigungen und Anmeldeinformationen, die Sie möglicherweise eingeben müssen, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, je nach Speicher und KSP-Konfiguration.
+- **Kryptografiedienstanbieter (CAPI)**: Die erforderlichen Berechtigungen und Anmeldeinformationen, die Sie möglicherweise eingeben müssen, wenn Sie einen Schlüsselspeicher oder einen Schlüssel verwenden, je nach Speicher und CSP-Konfiguration.
 Weitere Informationen finden Sie unter [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)).
 
 ## <a name="next-steps"></a>Nächste Schritte

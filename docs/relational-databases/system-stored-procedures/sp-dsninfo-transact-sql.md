@@ -1,4 +1,5 @@
 ---
+description: sp_dsninfo (Transact-SQL)
 title: sp_dsninfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59d0b995103ab01d3bf3b7ec5336ad16b97b1e6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 378b50379ab03124db37c296be273f0a68db59d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486073"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dsn = ] 'dsn'`Der Name des ODBC-DSN oder OLE DB Verbindungs Servers. *DSN* ist vom Datentyp **varchar (128)** und hat keinen Standardwert.  
+`[ @dsn = ] 'dsn'` Der Name des ODBC-DSN oder OLE DB Verbindungs Servers. *DSN* ist vom Datentyp **varchar (128)** und hat keinen Standardwert.  
   
-`[ @infotype = ] 'info_type'`Der Typ der Informationen, die zurückgegeben werden sollen. Wenn *info_type* nicht angegeben ist oder NULL angegeben ist, werden alle Informationstypen zurückgegeben. *info_type* ist vom Datentyp **varchar (128)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
+`[ @infotype = ] 'info_type'` Der Typ der Informationen, die zurückgegeben werden sollen. Wenn *info_type* nicht angegeben ist oder NULL angegeben ist, werden alle Informationstypen zurückgegeben. *info_type* ist vom Datentyp **varchar (128)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -52,11 +53,11 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|Gibt den Datenbanknamen an.|  
 |**SQL_SUBSCRIBER**|Gibt an, dass die Datenquelle ein Abonnent sein kann.|  
   
-`[ @login = ] 'login'`Der Anmelde Name für die Datenquelle. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Login*ist vom Datentyp **varchar (128)** und hat den Standardwert NULL.  
+`[ @login = ] 'login'` Der Anmelde Name für die Datenquelle. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Login*ist vom Datentyp **varchar (128)** und hat den Standardwert NULL.  
   
-`[ @password = ] 'password'`Das Kennwort für die Anmeldung. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Password*ist vom Datentyp **varchar (128)** und hat den Standardwert NULL.  
+`[ @password = ] 'password'` Das Kennwort für die Anmeldung. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Password*ist vom Datentyp **varchar (128)** und hat den Standardwert NULL.  
   
-`[ @dso_type = ] dso_type`Der Daten Quellentyp. *dso_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
+`[ @dso_type = ] dso_type` Der Daten Quellentyp. *dso_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
@@ -73,7 +74,7 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**Informationstyp**|**nvarchar (64)**|Informationstypen, wie z. B. DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
 |**Wert**|**nvarchar(512)**|Der Wert der verknüpften Informationstypen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_dsninfo** wird bei allen Replikations Typen verwendet.  
   
  **sp_dsninfo** ruft ODBC-oder OLE DB Datenquellen Informationen ab, die anzeigen, ob die Datenbank für die Replikation oder Abfrage verwendet werden kann.  

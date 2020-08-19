@@ -1,4 +1,5 @@
 ---
+description: Konvertieren von Daten von C- zu SQL-Datentypen
 title: Datentypen werden von C in SQL-Datentypen umgerechnet | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8fb707e77df7d793277d4a23146adc980eede6fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56af1e376edffa0268a2e27c840f035e5cda9763
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429712"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Konvertieren von Daten von C- zu SQL-Datentypen
 Wenn eine Anwendung **SQLExecute** oder **SQLExecDirect**aufruft, ruft der Treiber die Daten für alle Parameter ab, die mit **SQLBindParameter** an den Speicherorten in der Anwendung gebunden sind. Wenn eine Anwendung **SQLSetPos**aufruft, ruft der Treiber die Daten für einen Update-oder Add-Vorgang aus Spalten ab, die mit **SQLBindCol**gebunden sind. Bei Data-at-Execution-Parametern sendet die Anwendung die Parameterdaten mit **SQLPutData**. Falls erforderlich, konvertiert der Treiber die Daten aus dem Datentyp, der vom *ValueType* -Argument in **SQLBindParameter** angegeben wird, in den Datentyp, der durch das *Parameter Type* -Argument in **SQLBindParameter**angegeben wird, und sendet die Daten dann an die Datenquelle.  
@@ -40,7 +41,7 @@ Wenn eine Anwendung **SQLExecute** oder **SQLExecDirect**aufruft, ruft der Treib
   
  Wenn das *ParameterType* -Argument in **SQLBindParameter** den Bezeichner eines ODBC SQL-Datentyps enthält, der in der Tabelle für einen bestimmten C-Datentyp nicht angezeigt wird, gibt **SQLBindParameter** SQLSTATE 07006 (eingeschränkte Datentyp-Attribut Verletzung) zurück. Wenn das *Parameter Type* -Argument einen treiberspezifischen Bezeichner enthält und der Treiber die Konvertierung des bestimmten ODBC C-Datentyps in diesen treiberspezifischen SQL-Datentyp nicht unterstützt, gibt **SQLBindParameter** SQLSTATE HYC00 (optionales Feature nicht implementiert) zurück.  
   
- Wenn die in **SQLBindParameter** angegebenen Argumente *ParameterValuePtr* und *StrLen_or_IndPtr* beide NULL-Zeiger sind, gibt diese Funktion SQLSTATE HY009 (Ungültige Verwendung des NULL-Zeigers) zurück. Obwohl Sie in den Tabellen nicht angezeigt wird, legt eine Anwendung den Wert des Längen-/Indikatorpuffers fest, auf den das *StrLen_or_IndPtr* -Argument von **SQLBindParameter** oder den Wert des *StrLen_or_IndPtr* -Arguments von **SQLPutData** SQL_NULL_DATA, um einen Null-SQL-Datenwert anzugeben. (Das *StrLen_or_IndPtr* -Argument entspricht dem SQL_DESC_OCTET_LENGTH_PTR-Feld der APD.) Diese Werte werden von der Anwendung auf SQL_NTS festgelegt, um anzugeben \*, dass der Wert in *ParameterValuePtr* in **SQLBindParameter** oder \* *DataPtr* in **SQLPutData** (auf das das SQL_DESC_DATA_PTR-Feld der APD zeigt) eine NULL-terminierte Zeichenfolge ist.  
+ Wenn die in **SQLBindParameter** angegebenen Argumente *ParameterValuePtr* und *StrLen_or_IndPtr* beide NULL-Zeiger sind, gibt diese Funktion SQLSTATE HY009 (Ungültige Verwendung des NULL-Zeigers) zurück. Obwohl Sie in den Tabellen nicht angezeigt wird, legt eine Anwendung den Wert des Längen-/Indikatorpuffers fest, auf den das *StrLen_or_IndPtr* -Argument von **SQLBindParameter** oder den Wert des *StrLen_or_IndPtr* -Arguments von **SQLPutData** SQL_NULL_DATA, um einen Null-SQL-Datenwert anzugeben. (Das *StrLen_or_IndPtr* -Argument entspricht dem SQL_DESC_OCTET_LENGTH_PTR-Feld der APD.) Diese Werte werden von der Anwendung auf SQL_NTS festgelegt, um anzugeben, dass der Wert in \* *ParameterValuePtr* in **SQLBindParameter** oder \* *DataPtr* in **SQLPutData** (auf das das SQL_DESC_DATA_PTR-Feld der APD zeigt) eine NULL-terminierte Zeichenfolge ist.  
   
  Die folgenden Begriffe werden in den Tabellen verwendet:  
   
@@ -53,7 +54,7 @@ Wenn eine Anwendung **SQLExecute** oder **SQLExecDirect**aufruft, ruft der Treib
 -   **Anzahl der Ziffern** -Anzahl der Zeichen, die zur Darstellung einer Zahl verwendet werden, einschließlich Minuszeichen, Dezimaltrennzeichen und Exponent (falls erforderlich).  
   
 -   **Wörter in**   
-     ***kursiv*** -Elemente der SQL-Grammatik. Die Syntax von Grammatik Elementen finden Sie in [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     ***kursiv***  -Elemente der SQL-Grammatik. Die Syntax von Grammatik Elementen finden Sie in [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

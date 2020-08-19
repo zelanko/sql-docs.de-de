@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitorchangealert (Transact-SQL)
 title: sp_dbmmonitorchangealert (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5c520ff4b3e54f027f6afa5ca203c412f3f6291
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4cfeffd28455b08b6ad3959f538f2eff95c6eb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85866623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486151"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +68,7 @@ sp_dbmmonitorchangealert database_name
 > [!NOTE]  
 >  Führen Sie die gespeicherte Prozedur [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) aus, um die aktuellen Werte anzuzeigen.  
   
- *wodurch*  
+ *enabled*  
  Ist die Warnung aktiviert?  
   
  0 = Die Warnung ist deaktiviert.  
@@ -84,7 +85,7 @@ sp_dbmmonitorchangealert database_name
  Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Schwellenwerte für jede Leistungsmetrik sowie die Beibehaltungsdauer für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank festgelegt. In den folgende Tabelle werden die im Beispiel verwendeten Werte gezeigt.  
@@ -106,7 +107,7 @@ EXEC sp_dbmmonitorchangealert AdventureWorks2012, 5, 8, 1 ;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Überwachen der Daten Bank Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorhelpalert &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
  [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)  
   

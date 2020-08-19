@@ -1,4 +1,5 @@
 ---
+description: Festlegen von Projektoptionen (SybaseToSQL)
 title: Festlegen von Projektoptionen (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 04efa94a93cc313e520eaebb8448c48e1b106ec6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: df912a5a58bdcfb2777177bddef80899f31f38c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468714"
 ---
 # <a name="setting-project-options-sybasetosql"></a>Festlegen von Projektoptionen (SybaseToSQL)
 Für jedes SSMA-Projekt können Sie Optionen auf Projektebene festlegen. Diese Optionen geben die Objekt Konvertierung, das Laden von Objekten, SQL Azure, die Benutzeroberfläche und Daten Migrations Einstellungen an. Vergewissern Sie sich, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dass die Konfigurationsoptionen für das Projekt geeignet sind, bevor Sie Objekte in oder SQL Azure oder Daten in oder SQL Azure migrieren.  
@@ -38,7 +39,7 @@ SSMA verfügt über fünf Sätze von Projekteinstellungen:
   
 Außerdem stehen vier Modi zum Konfigurieren dieser Einstellungen zur Anwendung:  
   
-1.  Standardwert  
+1.  Standard  
   
 2.  Optimistisch  
   

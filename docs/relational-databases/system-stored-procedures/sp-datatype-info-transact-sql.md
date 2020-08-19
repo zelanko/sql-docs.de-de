@@ -1,4 +1,5 @@
 ---
+description: sp_datatype_info (Transact-SQL)
 title: sp_datatype_info (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/25/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e88bc45995574dcde29427773e3e8d9bec62ed96
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f35043a8886165431e42b4b8641a1abbcf0fb1cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486099"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -40,9 +41,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @data_type = ] data_type`Die Codenummer für den angegebenen Datentyp. Um eine Liste aller Datentypen abzurufen, lassen Sie diesen Parameter weg. *data_type* ist vom Datentyp **int**und hat den Standardwert 0.  
+`[ @data_type = ] data_type` Die Codenummer für den angegebenen Datentyp. Um eine Liste aller Datentypen abzurufen, lassen Sie diesen Parameter weg. *data_type* ist vom Datentyp **int**und hat den Standardwert 0.  
   
-`[ @ODBCVer = ] odbc_version`Die verwendete ODBC-Version. *odbc_version* ist vom Datentyp **tinyint**. der Standardwert ist 2.  
+`[ @ODBCVer = ] odbc_version` Die verwendete ODBC-Version. *odbc_version* ist vom Datentyp **tinyint**. der Standardwert ist 2.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  
@@ -59,7 +60,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |CREATE_PARAMS|**varchar (** 32 **)**|Die Beschreibung der Erstellungsparameter für diesen Datentyp. Beispielsweise ist " **Decimal** ", "Scale", " **float** is NULL" und " **varchar** " "max_length".|  
 |NULLABLE|**smallint**|Gibt die NULL-Zulässigkeit an.<br /><br /> 1 = Lässt NULL-Werte zu.<br /><br /> 0 = NULL ist nicht zulässig.|  
 |CASE_SENSITIVE|**smallint**|Gibt die Unterscheidung nach Groß-/Kleinschreibung an.<br /><br /> 1 = Bei allen Spalten dieses Typs wird nach Groß-/Kleinschreibung unterschieden (für Sortierungen).<br /><br /> 0 = Bei allen Spalten dieses Typs wird nicht nach Groß-/Kleinschreibung unterschieden.|  
-|SEARCHABLE|**smallint**|Gibt die Suchfunktion des Spaltentyps an:<br /><br /> 1 = Kann nicht durchsucht werden.<br /><br /> 2 = Durchsuchbar mit LIKE<br /><br /> 3 = Durchsuchbar mit WHERE<br /><br /> 4 = Durchsuchbar mit WHERE oder LIKE|  
+|DURCHSUCHBAR|**smallint**|Gibt die Suchfunktion des Spaltentyps an:<br /><br /> 1 = Kann nicht durchsucht werden.<br /><br /> 2 = Durchsuchbar mit LIKE<br /><br /> 3 = Durchsuchbar mit WHERE<br /><br /> 4 = Durchsuchbar mit WHERE oder LIKE|  
 |UNSIGNED_ATTRIBUTE|**smallint**|Gibt das Vorzeichen des Datentyps an.<br /><br /> 1 = Datentyp ohne Vorzeichen<br /><br /> 0 = Datentyp mit Vorzeichen|  
 |MONEY|**smallint**|Gibt den **Money** -Datentyp an.<br /><br /> 1 = **Money** -Datentyp.<br /><br /> 0 = kein **Money** -Datentyp.|  
 |AUTO_INCREMENT|**smallint**|Gibt die automatische Inkrementierung an.<br /><br /> 1 = Automatische Inkrementierung<br /><br /> 0 = Keine automatische Inkrementierung<br /><br /> NULL = Attribut nicht zutreffend.<br /><br /> Eine Anwendung kann zwar Werte in eine Spalte einfügen, die dieses Attribut aufweist, kann jedoch die Werte in der Spalte nicht aktualisieren. Mit Ausnahme des **Bit** -Datentyps ist AUTO_INCREMENT nur für Datentypen gültig, die zu den genauen numerischen und ungefähren numerischen Datentyp Kategorien gehören.|  

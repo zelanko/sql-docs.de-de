@@ -1,4 +1,5 @@
 ---
+description: catalog.move_environment (SSISDB-Datenbank)
 title: catalog.move_environment (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 128970f410897b9c9797b27a6d1e3af28407f1f5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c8fd91f3b37aa410ca3aa86d2825c27a78e1217
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430092"
 ---
 # <a name="catalogmove_environment-ssisdb-database"></a>catalog.move_environment (SSISDB-Datenbank)
 
@@ -36,13 +37,13 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Argumente  
  [ @source_folder = ] *source_folder*  
- Der Name des Quellordners, in dem sich die Umgebung vor dem Verschieben befindet. Der *source_folder* ist **nvarchar(128)** .  
+ Der Name des Quellordners, in dem sich die Umgebung vor dem Verschieben befindet. Der *source_folder* ist **nvarchar(128)**.  
   
  [ @environment_name = ] *environment_name*  
  Der Name der Umgebung, die verschoben werden soll. Der *environment_name* ist **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- Der Name des Zielordners, in dem sich die Umgebung nach dem Verschieben befindet. Der *destination_folder* ist **nvarchar(128)** .  
+ Der Name des Zielordners, in dem sich die Umgebung nach dem Verschieben befindet. Der *destination_folder* ist **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  

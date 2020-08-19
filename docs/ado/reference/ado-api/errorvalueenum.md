@@ -1,4 +1,5 @@
 ---
+description: ErrorValueEnum
 title: Errorvalueerum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0280faf3399c24015fd07ec2e62c688a3d8e799
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f3dfcb5e806ad67a17a5899a4b930eedab0928f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443932"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Gibt den Typ des ADO-Lauf Zeit Fehlers an.  
@@ -36,7 +37,7 @@ Gibt den Typ des ADO-Lauf Zeit Fehlers an.
 > [!NOTE]
 >  OLE DB Fehler können an Ihre ADO-Anwendung übermittelt werden. Diese können in der Regel durch einen Windows-Einrichtungs Code von *4*identifiziert werden. Beispiel: 0x800***4***.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**aderrboundto-Befehl**|3707-2146824581 0x800a0e7b|Die **ActiveConnection** -Eigenschaft eines **Recordset** -Objekts, das über ein **Command** -Objekt als Quelle verfügt, kann nicht geändert werden.|  
 |**aderrcannotcomplete**|3732-2146824556 0x800a0e94|Der Server kann den Vorgang nicht beenden.|  
@@ -90,15 +91,15 @@ Gibt den Typ des ADO-Lauf Zeit Fehlers an.
 |**aderrurlnamedrowdoesnotexist**|3737-2146824551 0x800a0e99|Der von dieser URL benannte Datensatz ist nicht vorhanden.|  
 |**aderrvolumumotfound**|3733-2146824555 0x800a0e95|Der Anbieter kann das durch die URL gekennzeichnete Speichergerät nicht finden. Stellen Sie sicher, dass die URL ordnungsgemäß eingegeben wurde.|  
 |**aderrschreitedatei**|3004-2146825284 0x800a0bbc|Fehler beim Schreiben in die Datei.|  
-|**adwrnsecuritydialog**|3717-2146824571 0x800a0e85|Nur zur internen Verwendung. Darf nicht verwendet werden.|  
-|**adwrnsecuritydialogheader**|3718-2146824570 0x800a0e86|Nur zur internen Verwendung. Darf nicht verwendet werden.|  
+|**adwrnsecuritydialog**|3717-2146824571 0x800a0e85|Nur für interne Verwendung. Nicht verwenden.|  
+|**adwrnsecuritydialogheader**|3718-2146824570 0x800a0e86|Nur für interne Verwendung. Nicht verwenden.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
  Es werden nur die folgenden Teilmengen von ADO/WFC-äquivalenten definiert.  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |Adoenumerations. ERRORVALUE. boundto-Befehl|  
 |Adoerums. ERRORVALUE. dataconversion|  

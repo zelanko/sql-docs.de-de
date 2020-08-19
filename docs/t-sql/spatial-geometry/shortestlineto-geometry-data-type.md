@@ -1,4 +1,5 @@
 ---
+description: ShortestLineTo (geometry-Datentyp)
 title: ShortestLineTo (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 37008718b66d96ba604a72b49a5f082cc29766bc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: bd22be1b41ec9213d8e42c66f4de187581d7381d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422294"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (geometry-Datentyp)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ Gibt eine **LineString** -Instanz mit zwei Punkten zurück, die den kürzesten A
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Methode gibt eine **LineString** -Instanz mit Endpunkten zurück, die auf den Rändern der beiden Instanzen von **geometry** liegen, die verglichen werden und sich nicht überschneiden. Die Länge der **LineString** -Instanz, die zurückgegeben wurde, entspricht dem geringsten Abstand zwischen den beiden **geometry** -Instanzen. Wenn sich die beiden Instanzen von **LineString** überschneiden, wird eine leere Instanz von **geometry** zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
@@ -67,7 +68,7 @@ Gibt eine **LineString** -Instanz mit zwei Punkten zurück, die den kürzesten A
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ShortestLineTo &#40;geography-Datentyp&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   

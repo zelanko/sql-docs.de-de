@@ -1,4 +1,5 @@
 ---
+description: DATALENGTH (Transact-SQL)
 title: DATALENGTH (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/20/2019
@@ -22,12 +23,12 @@ ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac8f7372833d70a46e5ea3cb343641b02aa05120
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 2bb43434dd528a7937f854ce287953f748d50076
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422814"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,9 +53,9 @@ DATALENGTH ( expression )
 Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) mit beliebigem Datentyp.
   
 ## <a name="return-types"></a>Rückgabetypen
-**bigint**, wenn *expression* den Datentyp **nvarchar(max)** , **varbinary(max)** oder **varchar(max)** hat; andernfalls **int**.
+**bigint**, wenn *expression* den Datentyp **nvarchar(max)**, **varbinary(max)** oder **varchar(max)** hat; andernfalls **int**.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 `DATALENGTH` ist besonders beim Einsatz mit Datentypen nützlich, die Daten variabler Länge speichern können, z. B.:
 - **image**
 - **ntext**

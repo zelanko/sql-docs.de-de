@@ -1,4 +1,5 @@
 ---
+description: catalog.clear_object_parameter_value (SSISDB-Datenbank)
 title: catalog.clear_object_parameter_value (SSISDB-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f9da77639358fbf154057789f8840cdefc1350d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 16435fdd9ccb57b648f8073290ead5eca6ae393b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477172"
 ---
 # <a name="catalogclear_object_parameter_value-ssisdb-database"></a>catalog.clear_object_parameter_value (SSISDB-Datenbank)
 
@@ -44,13 +45,13 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
  Der Name des Projekts. Der *project_name* ist **nvarchar(128)** .  
   
  [ \@object_type = ] *object_type*  
- Der Typ des Objekts. Gültige Werte sind `20` für ein Projekt und `30` für ein Paket. Der *object_type* ist **smallInt**.  
+ Der Objekttyp. Gültige Werte sind `20` für ein Projekt und `30` für ein Paket. Der *object_type* ist **smallInt**.  
   
  [ \@ object _name = ] *object _name*  
- Der Name des Pakets. Der *object _name* ist **nvarchar(260)** .  
+ Der Name des Pakets. Der *object _name* ist **nvarchar(260)**.  
   
  [ \@parameter_ name = ] *parameter_name*  
- Der Name des Parameters. Der *parameter_ name* ist **nvarchar(128)** .  
+ Der Name des Parameters. Der *parameter_ name* ist **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  

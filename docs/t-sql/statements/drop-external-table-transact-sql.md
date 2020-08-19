@@ -1,4 +1,5 @@
 ---
+description: DROP EXTERNAL TABLE (Transact-SQL)
 title: DROP EXTERNAL TABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ ms.assetid: 02a6a236-0756-4570-abfa-6f677a7df042
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75358e74102b958a8512ea20a1f75a36d735cb9a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 75ad3c1c1de4d12a1efa2267c63a2f22e5f2cb2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415626"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -50,7 +51,7 @@ DROP EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 ### <a name="a-using-basic-syntax"></a>A. Verwenden einer grundlegenden Syntax  
   
-```  
+```sql  
 DROP EXTERNAL TABLE SalesPerson;  
 DROP EXTERNAL TABLE dbo.SalesPerson;  
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
@@ -59,14 +60,14 @@ DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;
 ### <a name="b-dropping-an-external-table-from-the-current-database"></a>B. Löschen einer externen Tabelle aus der aktuellen Datenbank  
  Im folgenden Beispiel werden die `ProductVendor1`-Tabelle, ihre Daten, ihre Indizes und alle davon abhängigen Sichten aus der aktuellen Datenbank entfernt.  
   
-```  
+```sql  
 DROP EXTERNAL TABLE ProductVendor1;  
 ```  
   
 ### <a name="c-dropping-a-table-from-another-database"></a>C. Löschen einer Tabelle aus einer anderen Datenbank  
  Im folgenden Beispiel wird die `SalesPerson`-Tabelle in der `EasternDivision`-Datenbank gelöscht.  
   
-```  
+```sql  
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   

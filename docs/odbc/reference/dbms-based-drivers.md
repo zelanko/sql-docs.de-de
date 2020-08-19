@@ -1,4 +1,5 @@
 ---
+description: DBMS-basierte Treiber
 title: DBMS-basierte Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4e7b7b153d0b0cb0a3e6a3d738908b0039b95679
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 844c25ca32bdf302312df6d23ca8e1d85fe198c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476912"
 ---
 # <a name="dbms-based-drivers"></a>DBMS-basierte Treiber
 DBMS-basierte Treiber werden mit Datenquellen wie Oracle oder SQL Server verwendet, die eine eigenständige Datenbank-Engine bereitstellen, die vom Treiber verwendet werden soll. Diese Treiber greifen über die eigenständige Engine auf die physischen Daten zu. Das heißt, dass Sie SQL-Anweisungen an senden und Ergebnisse aus der Engine abrufen.  

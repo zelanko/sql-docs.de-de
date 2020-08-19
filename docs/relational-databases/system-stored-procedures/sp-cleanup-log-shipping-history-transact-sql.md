@@ -1,4 +1,5 @@
 ---
+description: sp_cleanup_log_shipping_history (Transact-SQL)
 title: sp_cleanup_log_shipping_history (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7b69c82e4e2043c8647ba19a8b40306d6836307
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 42edf059f077f0896cd3c62b1420658c982b3d5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486147"
 ---
 # <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @agent_id = ] 'agent_id',`Die primäre ID für die Sicherung oder die sekundäre ID für kopieren oder wiederherstellen. *agent_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
+`[ @agent_id = ] 'agent_id',` Die primäre ID für die Sicherung oder die sekundäre ID für kopieren oder wiederherstellen. *agent_id* ist vom Datentyp **uniqueidentifier** und darf nicht NULL sein.  
   
-`[ @agent_type = ] 'agent_type'`Der Typ des Protokoll Versand Auftrags. 0 = Sichern, 1 = Kopieren, 2 = Wiederherstellen. *agent_type* ist vom Datentyp **tinyint** und kann nicht NULL sein.  
+`[ @agent_type = ] 'agent_type'` Der Typ des Protokoll Versand Auftrags. 0 = Sichern, 1 = Kopieren, 2 = Wiederherstellen. *agent_type* ist vom Datentyp **tinyint** und kann nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -51,7 +52,7 @@ sp_cleanup_log_shipping_history
 ## <a name="result-sets"></a>Resultsets  
  Keine.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_cleanup_log_shipping_history** muss in der **master** -Datenbank auf einem Protokollversandserver ausgeführt werden. Diese gespeicherte Prozedur führt ein Cleanup lokaler und remote gespeicherter Kopien von **log_shipping_monitor_history_detail** und **log_shipping_monitor_error_detail** basierend auf der Aufbewahrungsdauer für den Verlauf aus.  
   
 ## <a name="permissions"></a>Berechtigungen  

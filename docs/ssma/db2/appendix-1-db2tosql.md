@@ -1,4 +1,5 @@
 ---
+description: Anhang-1 (DB2ToSQL)
 title: Anhang-1 (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a6683a435262012f67d7690766f32a802a138226
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6bd27b4c437d2dded9941feec3cedaa3ccd4ccb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468882"
 ---
 # <a name="appendix---1-db2tosql"></a>Anhang-1 (DB2ToSQL)
 Schnellansicht der Befehlszeilenoptionen der SSMA-Konsole:  
   
-|SL. Nein|Schalter|Erforderlich?|Switch-Argument|Zulässige Werte|  
+|SL. Nein.|Schalter|Erforderlich?|Switch-Argument|Zulässige Werte|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/Skript|Ja|scriptfile|Gültiger XML-Dateiname.<br /><br />Konsolen Skript-Definitionsdatei.|  
 |2|-v/Variable|Nein|variablevaluefile|Gültiger XML-Dateiname.<br /><br />Wenn Variablen in der Skriptdatei verwendet werden, muss diese Datei angegeben werden.|  

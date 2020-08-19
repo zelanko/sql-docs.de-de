@@ -1,4 +1,5 @@
 ---
+description: AffectEnum
 title: Affectenum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c75c83fea1e6c8f4916180889635ddebd9cd915
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 551c2ec7b8351ed17841ed1a4073c1a411dc77d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451292"
 ---
 # <a name="affectenum"></a>AffectEnum
 Gibt an, welche Datensätze von einem Vorgang betroffen sind.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adaffechoch**|3|Wenn kein [Filter](../../../ado/reference/ado-api/filter-property.md) auf das **Recordset**angewendet wird, wirkt sich dies auf alle Datensätze aus.<br /><br /> Wenn die **Filter** -Eigenschaft auf ein Zeichen folgen Kriterium (z. b. "Author = ' Smith '") festgelegt ist, wirkt sich der Vorgang auf sichtbare Datensätze im aktuellen Kapitel aus.<br /><br /> Wenn die **Filter** -Eigenschaft auf einen Member von [filtergroupum](../../../ado/reference/ado-api/filtergroupenum.md) oder ein Array von Lesezeichen festgelegt ist, wirkt sich der Vorgang auf alle Zeilen des **Recordsets**aus. **Hinweis: adaffectall** ist in der Visual Basic Objektkatalog ausgeblendet.|  
 |**adaffectallchapter**|4|Wirkt sich auf alle Datensätze in allen gleich geordneten Kapiteln des **Recordsets**aus, einschließlich derjenigen, die nicht über einen aktuell angewendeten **Filter** sichtbar sind.|  
@@ -35,7 +36,7 @@ Gibt an, welche Datensätze von einem Vorgang betroffen sind.
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |Adoumums. Auswirkung. all|  
 |Adoumums. Auswirkung. allchapters|  

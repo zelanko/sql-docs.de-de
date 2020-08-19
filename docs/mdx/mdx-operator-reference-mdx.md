@@ -1,4 +1,5 @@
 ---
+description: MDX-Operatorreferenz (MDX)
 title: MDX-Operator Referenz (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c026da3551448faf7cf204dbdde1e794d5b12967
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6fe11ee3022c07560435b13a72273962ba6a4b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68033908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429772"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX-Operatorreferenz (MDX)
 

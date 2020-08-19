@@ -1,4 +1,5 @@
 ---
+description: EventReasonEnum
 title: Eventreasonaufumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94b36cbab5ffe7c22f4d1941e61af8fabc8b9973
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0dc0c811f989b0fd91c47827718d1d8480ddb769
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443922"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 Gibt den Grund an, warum ein Ereignis aufgetreten ist.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adrsnaddnew**|1|Ein Vorgang hat einen neuen Datensatz hinzugefügt.|  
 |**adrsnclose**|9|Ein Vorgang hat das **Recordset**geschlossen.|  
@@ -46,7 +47,7 @@ Gibt den Grund an, warum ein Ereignis aufgetreten ist.
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |Adoumums. eventreason. AddNew|  
 |Adoumums. eventreason. Close|  

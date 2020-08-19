@@ -1,4 +1,5 @@
 ---
+description: 'ADO für Visual C++ Syntax Index mit #Import'
 title: 'ADO für Visual C++ Syntax Index mit #Import | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88be8dbcee4633fc8c0014088c7996f95f3e2f73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f93ee0d10c3de2bbfe36673c6b521c0f38111ff2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451402"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO für Visual C++ Syntax Index mit #Import
 Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz, die auf Microsoft Visual C++ und der **#Import** -Direktive basiert.  
@@ -57,5 +58,5 @@ Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz, die auf Microsoft V
   
 -   [Recordsetereignisse](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ADO für Visual C++ – Syntaxindex für COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

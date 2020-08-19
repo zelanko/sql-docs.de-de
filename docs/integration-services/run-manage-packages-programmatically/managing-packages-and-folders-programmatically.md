@@ -1,4 +1,5 @@
 ---
+description: Programmgesteuerte Verwaltung von Paketen und Ordnern
 title: Programmgesteuerte Verwaltung von Paketen und Ordnern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c45f6a5b59a65046a0e48fd930fd27d689c0a0a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 56ebd88cab35af8dce81ba1fdabb26dc19845dae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430142"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Programmgesteuerte Verwaltung von Paketen und Ordnern
 
@@ -43,7 +44,7 @@ ms.locfileid: "86913308"
 |SSIS-Paketspeicher|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [Nach oben](#top)    
+ [Zurück nach oben](#top)    
     
 ##  <a name="managing-packages-and-folders"></a><a name="managing"></a> Verwalten von Paketen und Ordnern    
  Die <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse des <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace stellt zusätzliche Methoden zum Verwalten von Paketen und den Ordnern, in denen diese gespeichert sind, bereit.    
@@ -56,7 +57,7 @@ ms.locfileid: "86913308"
 |SSIS-Paketspeicher|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromSqlServer%2A>|    
     
- [Nach oben](#top)    
+ [Zurück nach oben](#top)    
     
 ###  <a name="creating-a-folder"></a><a name="managing_create"></a> Erstellen eines Ordners    
  Rufen Sie zum programmgesteuerten Erstellen eines Speicherordners eine der folgenden Methoden auf:    
@@ -66,7 +67,7 @@ ms.locfileid: "86913308"
 |SSIS-Paketspeicher|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnSqlServer%2A>|    
     
- [Nach oben](#top)    
+ [Zurück nach oben](#top)    
     
 ###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a> Entfernen eines Ordners    
  Rufen Sie zum programmgesteuerten Entfernen eines Speicherordners eine der folgenden Methoden auf:    
@@ -76,7 +77,7 @@ ms.locfileid: "86913308"
 |SSIS-Paketspeicher|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromSqlServer%2A>|    
     
- [Nach oben](#top)    
+ [Zurück nach oben](#top)    
     
 ###  <a name="renaming-a-folder"></a><a name="managing_rename"></a> Umbenennen eines Ordners    
  Rufen Sie zum programmgesteuerten Umbenennen eines Speicherordners eine der folgenden Methoden auf:    
@@ -86,10 +87,10 @@ ms.locfileid: "86913308"
 |SSIS-Paketspeicher|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnSqlServer%2A>|    
     
- [Nach oben](#top)    
+ [Zurück nach oben](#top)    
     
-## <a name="see-also"></a>Weitere Informationen    
+## <a name="see-also"></a>Siehe auch    
  [Paketverwaltung &#40;SSIS-Dienst&#41;](../../integration-services/service/package-management-ssis-service.md)     
- [Programmgesteuertes Auflisten verfügbarer Pakete](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)    
+ [Enumerating Available Packages Programmatically](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)    
     
   

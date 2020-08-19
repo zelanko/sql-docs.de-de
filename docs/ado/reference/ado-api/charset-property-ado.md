@@ -1,4 +1,5 @@
 ---
+description: Charset-Eigenschaft (ADO)
 title: CharSet-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5750364a745cda43459ecba69ba42cbf6f3da40
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9682664c87db42920c2ae78f338103c1d8c13d64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451002"
 ---
 # <a name="charset-property-ado"></a>Charset-Eigenschaft (ADO)
 Gibt den Zeichensatz an, in den der Inhalt eines [Textstreams](../../../ado/reference/ado-api/stream-object-ado.md) für den Speicher im internen Puffer des **Streamobjekts** übersetzt werden soll.  

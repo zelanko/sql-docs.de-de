@@ -1,4 +1,5 @@
 ---
+description: ExecuteOptionEnum
 title: Executeoptionumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7465ee994a0e09cf62b80d3317948479354780b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4ab70f52adb11d1b242dd0f1bbce11bea221ed55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443832"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Gibt an, wie ein Anbieter einen Befehl ausführen soll.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|Gibt an, dass der Befehl asynchron ausgeführt werden soll.<br /><br /> Dieser Wert kann nicht mit dem commandtypeenumerationswert **adCmdTableDirect**kombiniert werden. [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)|  
 |**adasyncfetch**|0x20|Gibt an, dass die verbleibenden Zeilen nach der anfänglichen Menge, die in der [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) -Eigenschaft angegeben wurde, asynchron abgerufen werden sollen.|  
@@ -38,7 +39,7 @@ Gibt an, wie ein Anbieter einen Befehl ausführen soll.
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |AdoEnums.Executeoption. asyncexecute|  
 |AdoEnums.Executeoption. asyncfetch|  
