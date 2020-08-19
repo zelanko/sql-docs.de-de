@@ -1,4 +1,5 @@
 ---
+description: sp_dropextendedproc (Transact-SQL)
 title: sp_dropextendedproc (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 032bca0112d1fb109ad96305426a55202d5349b9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0bf9c7d760b059c5608d4af1c13a7758aaa428c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447226"
 ---
 # <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85859970"
   Löscht eine erweiterte gespeicherte Prozedur.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen die [CLR-Integration](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen die [CLR-Integration](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,7 +43,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @functname = ] 'procedure'`Der Name der zu löschenden erweiterten gespeicherten Prozedur. die *Prozedur* ist vom Datentyp **nvarchar (517)** und hat keinen Standardwert.  
+`[ @functname = ] 'procedure'` Der Name der zu löschenden erweiterten gespeicherten Prozedur. die *Prozedur* ist vom Datentyp **nvarchar (517)** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

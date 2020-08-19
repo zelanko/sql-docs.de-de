@@ -1,4 +1,5 @@
 ---
+description: sys. dm_os_spinlock_stats (Transact-SQL)
 title: sys. dm_os_spinlock_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/03/2019
@@ -22,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df183fe9b6ee5365f623e59dd1c94738afe5df8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447589"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
 
@@ -48,9 +49,9 @@ Gibt Informationen zu allen Spinlock-warte Vorgängen nach Typ organisiert zurü
 
 ## <a name="permissions"></a>Berechtigungen  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.    
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.    
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  
  sys. dm_os_spinlock_stats kann zum Identifizieren der Quelle von Spinlock-Konflikten verwendet werden. In einigen Situationen können Sie möglicherweise Spinlock-Konflikte auflösen oder verringern. Es kann jedoch Situationen geben, in denen Sie sich mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support Services in Verbindung setzen müssen.  
   
@@ -71,7 +72,7 @@ GO
    
  Die folgende Tabelle enthält kurze Beschreibungen einiger der gängigsten Spinlock-Typen.  
   
-|SpinLock-Typ|BESCHREIBUNG|  
+|SpinLock-Typ|Beschreibung|  
 |-----------------|-----------------|  
 |ABR|Nur interne Verwendung.|
 |ADB_CACHE|Nur interne Verwendung.|
@@ -404,7 +405,7 @@ GO
  
 
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  
  [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  

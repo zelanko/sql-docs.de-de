@@ -1,4 +1,5 @@
 ---
+description: sp_datatype_info_90 (SQL Data Warehouse)
 title: sp_datatype_info_90 (SQL Data Warehouse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
@@ -11,12 +12,12 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aef742c3dd6993830e1402a041979ca73a2a4ea0
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d86602d1bbbc308abe13cf2daac8429207d28d4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447323"
 ---
 # <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -35,12 +36,12 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @data_type = ] data_type`Die Codenummer für den angegebenen Datentyp. Um eine Liste aller Datentypen abzurufen, lassen Sie diesen Parameter weg. *data_type* ist vom Datentyp **int**und hat den Standardwert 0.  
+`[ @data_type = ] data_type` Die Codenummer für den angegebenen Datentyp. Um eine Liste aller Datentypen abzurufen, lassen Sie diesen Parameter weg. *data_type* ist vom Datentyp **int**und hat den Standardwert 0.  
   
-`[ @ODBCVer = ] odbc_version`Die verwendete ODBC-Version. *odbc_version* ist vom Datentyp **tinyint**. der Standardwert ist 2.  
+`[ @ODBCVer = ] odbc_version` Die verwendete ODBC-Version. *odbc_version* ist vom Datentyp **tinyint**. der Standardwert ist 2.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keiner  
+ Keine  
   
 ## <a name="result-sets"></a>Resultsets  
   

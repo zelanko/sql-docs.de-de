@@ -1,4 +1,5 @@
 ---
+description: sys.database_files (Transact-SQL)
 title: sys. database_files (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/19/2016
@@ -20,11 +21,12 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c12fdc6ebdd5932715de28083ff5bbb9169d930
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c57ffe323ce471c8c5e524ff5b7ba7ee3a85adf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447987"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,16 +37,16 @@ ms.locfileid: "86003034"
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|ID der Datei in der Datenbank|  
 |**file_guid**|**uniqueidentifier**|GUID der Datei.<br /><br /> NULL = die Datenbank wurde von einer früheren Version von aktualisiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (gültig für SQL Server 2005 und früher).|  
-|**type**|**tinyint**|Dateityp:<br/><br /> 0 = Zeilen<br /><br/> 1 = Protokoll<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Volltext|  
+|**type**|**tinyint**|Dateityp:<br/><br /> 0 = Zeilen<br /><br/> 1 = Protokoll<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Volltext|  
 |**type_desc**|**nvarchar(60)**|Beschreibung des Dateityps:<br /><br /> ROWS <br /><br /> PROTOKOLL<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|Der Wert kann 0 oder größer sein. Der Wert 0 stellt die Datenbankprotokolldatei dar, und ein Wert größer als 0 stellt die ID der Dateigruppe dar, in der diese Datendatei gespeichert ist.|  
 |**name**|**sysname**|Logischer Name der Datei in der Datenbank|  
 |**physical_name**|**nvarchar(260)**|Betriebssystem-Dateiname Wenn die Datenbank durch ein [lesbares sekundäres](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn-Replikat gehostet wird, gibt **physical_name** den Datei Speicherort der primären Replikat Datenbank an. Um den korrekten Datei Speicherort einer lesbaren sekundären Datenbank zu erhalten, Fragen Sie [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)ab.|  
-|**state**|**tinyint**|Dateistatus:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
+|**Status**|**tinyint**|Dateistatus:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|Beschreibung des Dateistatus:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Weitere Informationen finden Sie im Abschnitt [Dateistatus](../../relational-databases/databases/file-states.md).|  
 |**size**|**int**|Aktuelle Größe der Datei in Seiten mit einer Größe von 8 KB.<br /><br /> 0 = Nicht zutreffend<br /><br /> Für eine Datenbankmomentaufnahme gibt size den Speicherplatz an, den die Momentaufnahme maximal für die Datei verwenden kann.<br /><br /> Bei FILESTREAM-Dateigruppen Containern entspricht Größe der aktuellen verwendeten Größe des Containers.|  
 |**max_size**|**int**|Maximale Dateigröße in Seiten mit einer Größe von 8 KB:<br /><br /> 0 = Keine Vergrößerung zulässig.<br /><br /> -1 = Datei wird vergrößert, bis der Datenträger voll ist.<br /><br /> 268435456 = Protokolldatei wird bis zu einer maximalen Größe von 2 TB vergrößert.<br /><br /> Bei FILESTREAM-Dateigruppen Containern max_size die maximale Größe des Containers wider.<br /><br /> Beachten Sie, dass für Datenbanken, die mit einer unbegrenzten Protokolldatei Größe aktualisiert werden, der Wert-1 für die maximale Größe der Protokolldatei gemeldet wird.|  
-|**growth**|**int**|0 = Die Datei hat eine feste Größe und wird nicht vergrößert.<br /><br /> >0 = die Datei wird automatisch vergrößert.<br /><br /> Ist is_percent_growth = 0, wird die Schrittweite für die Vergrößerung in Einheiten von Seiten mit einer Größe von 8 KB ausgedrückt, auf den nächsten durch 64 KB teilbaren Wert gerundet.<br /><br /> Falls is_percent_growth = 1, erfolgt die Vergrößerung als ganzzahliger Prozentwert.|  
+|**wachsen**|**int**|0 = Die Datei hat eine feste Größe und wird nicht vergrößert.<br /><br /> >0 = die Datei wird automatisch vergrößert.<br /><br /> Ist is_percent_growth = 0, wird die Schrittweite für die Vergrößerung in Einheiten von Seiten mit einer Größe von 8 KB ausgedrückt, auf den nächsten durch 64 KB teilbaren Wert gerundet.<br /><br /> Falls is_percent_growth = 1, erfolgt die Vergrößerung als ganzzahliger Prozentwert.|  
 |**is_media_read_only**|**bit**|1 = Die Datei befindet sich auf einem schreibgeschützten Medium.<br /><br /> 0 = Die Datei befindet sich auf einem Lese/Schreib-Medium.|  
 |**is_read_only**|**bit**|1 = Die Datei ist als schreibgeschützt gekennzeichnet.<br /><br /> 0 = Die Datei ist als Lese/Schreib-Datei gekennzeichnet.|  
 |**is_sparse**|**bit**|1 = Die Datei ist eine Sparsedatei.<br /><br /> 0 = Die Datei ist keine Sparsedatei.<br /><br /> Weitere Informationen finden Sie unter [Anzeigen der Größe der Datei mit geringer Dichte einer Datenbank-Momentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  
@@ -81,11 +83,11 @@ FROM sys.database_files;
 Weitere Informationen zum Verwenden von [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] finden Sie unter [bestimmen der Datenbankgröße in Azure SQL-Datenbank V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) im Blog des SQL Customer Advisory Teams.
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Katalog Sichten für Datenbanken und Dateien &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+ [Datenbanken und Dateikatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Dateistatus](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. master_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [Datenbankdateien und Dateigruppen](../../relational-databases/databases/database-files-and-filegroups.md)   
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

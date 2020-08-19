@@ -1,4 +1,5 @@
 ---
+description: Daten Bank Spiegelung-sys. dm_db_mirroring_auto_page_repair
 title: sys. dm_db_mirroring_auto_page_repair (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6f86d9c0c334ed5ce86b0227e4fd4f0ce408087
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 83fa8a16f7e541c2db9b48a132108825471fd662
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447710"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>Daten Bank Spiegelung-sys. dm_db_mirroring_auto_page_repair
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,8 +48,8 @@ ms.locfileid: "85894723"
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Automatische Seiten Reparatur &#40;Verfügbarkeits Gruppen: Daten Bank Spiegelung&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Automatische Seitenreparatur &#40;Verfügbarkeitsgruppen: Datenbankspiegelung&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [suspect_pages &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Verwalten der suspect_pages-Tabelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   

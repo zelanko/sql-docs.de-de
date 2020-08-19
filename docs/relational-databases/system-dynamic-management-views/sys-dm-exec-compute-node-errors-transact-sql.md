@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_compute_node_errors (Transact-SQL)
 title: sys. dm_exec_compute_node_errors (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2019
@@ -22,23 +23,23 @@ ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5de36530fcf50a403558cb97fa72ad6a2d126e32
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5a08f64df5f50fda1f23f4e3b30add9e96e0670e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447652"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Gibt Fehler zurück, die auf polybase-Computeknoten auftreten.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|Eindeutige numerische ID, die dem Fehler zugeordnet ist.|Eindeutig in allen Abfrage Fehlern im System|  
-|Quelle|`nvarchar(255)`|Quellthread oder PROZESSBESCHREIBUNG||  
-|Typ|`nvarchar(255)`|Fehlertyp.||  
+|source|`nvarchar(255)`|Quellthread oder PROZESSBESCHREIBUNG||  
+|type|`nvarchar(255)`|Fehlertyp.||  
 |create_time|`datetime`|Der Zeitpunkt des Auftretens des Fehlers.||  
 |compute_node_id|`int`|Bezeichner des spezifischen computeknotens|Weitere Informationen finden Sie unter compute_node_id von [sys. dm_exec_compute_nodes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|`nvarchar(36)`|Der Bezeichner der polybase-Abfrage, falls vorhanden.||  
@@ -50,7 +51,7 @@ ms.locfileid: "82830689"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Problembehandlung bei polybase mit dynamischen Verwaltungs Sichten](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Datenbank &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

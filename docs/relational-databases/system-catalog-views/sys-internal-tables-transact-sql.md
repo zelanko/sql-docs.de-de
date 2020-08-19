@@ -1,4 +1,5 @@
 ---
+description: sys.internal_tables (Transact-SQL)
 title: sys. internal_tables (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58e6166060c5e2099051403361b2eb2c51ad4c18
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 73be0af1fd81cfc415417ff2ff233bbfa5e6ca41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447934"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,12 +44,12 @@ ms.locfileid: "85898917"
 |**parent_id**|**int**|ID des übergeordneten Elements, unabhängig davon, ob es über einen Schemabereich verfügt oder nicht. Andernfalls 0, wenn es kein übergeordnetes Element gibt.<br /><br /> **queue_messages**  =  Warteschlangen **object_id**<br /><br /> **xml_index_nodes**  =  **object_id** des XML-Indexes<br /><br /> **fulltext_catalog_freelist**  =  **fulltext_catalog_id** des voll Text Katalogs<br /><br /> **fulltext_index_map**  =  **object_id** des voll Text Indexes<br /><br /> **query_notification**oder **service_broker_map** = 0<br /><br /> **extended_indexes**  =  **object_id** eines erweiterten Indexes, z. b. ein räumlicher Index<br /><br /> **object_id** der Tabelle, für die die Tabellen Verfolgung aktiviert ist = **CHANGE_TRACKING**|  
 |**parent_minor_id**|**int**|Die Neben-ID des übergeordneten Elements.<br /><br /> **xml_index_nodes**  =  **index_id** des XML-Indexes<br /><br /> **extended_indexes**  =  **index_id** eines erweiterten Indexes, z. b. ein räumlicher Index<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**oder **CHANGE_TRACKING**|  
 |**lob_data_space_id**|**int**|Ein Wert ungleich Null ist die ID des Datenbereichs (Dateigruppe oder Partitionsschema), der die LOB-Daten (Large Object) für diese Tabelle enthält.|  
-|**filestream_data_space_id**|**int**|Für die zukünftige Verwendung reserviert.|  
+|**filestream_data_space_id**|**int**|Für zukünftige Verwendung reserviert.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Interne Tabellen werden in dieselbe Dateigruppe wie die übergeordnete Entität platziert. Sie können die in Beispiel F unten dargestellte Katalogabfrage zur Rückgabe der Anzahl von Seiten verwenden, die interne Tabellen für Daten innerhalb und außerhalb von Zeilen sowie LOB-Daten (Large Object) benötigen.  
   
  Sie können die [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) System Prozedur verwenden, um Speicherplatz Verwendungs Daten für interne Tabellen zurückzugeben. **sp_spaceused** meldet internen Tabellenbereich auf folgende Weise:  
@@ -174,7 +175,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

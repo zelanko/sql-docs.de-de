@@ -1,4 +1,5 @@
 ---
+description: sp_help_spatial_geometry_index_xml (Transact-SQL)
 title: sp_help_spatial_geometry_index_xml (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1f29fd66b10c9e1f18203693a2b1474781e8065a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5f266f35096a57ef60f2c9b356639ad66cc36fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447012"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss ein Mitglied der Datenbankrolle **public** sein. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Eigenschaften, die NULL-Werte enthalten sind, sind nicht in der zurückgegebenen XML-Menge enthalten.  
   
 ## <a name="example"></a>Beispiel  
@@ -71,7 +72,7 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
   
  Ähnlich wie [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)ermöglicht diese gespeicherte Prozedur einen vereinfachten programmgesteuerten Zugriff auf die Eigenschaften eines Räumlichkeitsindex und dokumentiert das Resultset in XML.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Argumente und Eigenschaften von gespeicherten Prozeduren für räumliche Indizes](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   

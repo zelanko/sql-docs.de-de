@@ -1,4 +1,5 @@
 ---
+description: sp_change_agent_profile (Transact-SQL)
 title: sp_change_agent_profile (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0084338c2629b8ffeb208edc5ac7532105e1271
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 752cbdcb0e1908ace200ae769e7c42d85ad6d044
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447364"
 ---
 # <a name="sp_change_agent_profile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,22 +40,22 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id`Die ID des Profils. *profile_id* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @profile_id = ] profile_id` Die ID des Profils. *profile_id* ist vom Datentyp **int**und hat keinen Standardwert.  
   
-`[ @property = ] 'property'`Der Name der Eigenschaft. *Property* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @property = ] 'property'` Der Name der Eigenschaft. *Property* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @value = ] 'value'`Der neue Wert der-Eigenschaft. der Wert ist vom Datentyp **nvarchar (3000)** und hat keinen Standard *Wert* .  
+`[ @value = ] 'value'` Der neue Wert der-Eigenschaft. der Wert ist vom Datentyp **nvarchar (3000)** und hat keinen Standard *Wert* .  
   
  In dieser Tabelle werden die Profileigenschaften beschrieben, die geändert werden können.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|**description**|Beschreibung für das Profil.|  
+|**Beschreibung**|Beschreibung für das Profil.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_change_agent_profile** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

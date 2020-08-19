@@ -1,4 +1,5 @@
 ---
+description: sp_add_operator (Transact-SQL)
 title: sp_add_operator (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 466cff492c5547357409cee1b11c7a6542971ae5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a22465af8c3d4e7e3bb0cabd76752d642c2f2423
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878693"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447466"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,11 +53,11 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'`Der Name eines Operators (Benachrichtigungs Empfänger). Dieser Name muss eindeutig sein und darf nicht das Prozent **%** Zeichen () enthalten. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @name = ] 'name'` Der Name eines Operators (Benachrichtigungs Empfänger). Dieser Name muss eindeutig sein und darf nicht das Prozent **%** Zeichen () enthalten. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @enabled = ] enabled`Gibt den aktuellen Status des Operators an. *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist **1** (aktiviert). Wenn der Wert **0**ist, ist der Operator nicht aktiviert, und es werden keine Benachrichtigungen empfangen.  
+`[ @enabled = ] enabled` Gibt den aktuellen Status des Operators an. *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist **1** (aktiviert). Wenn der Wert **0**ist, ist der Operator nicht aktiviert, und es werden keine Benachrichtigungen empfangen.  
   
-`[ @email_address = ] 'email_address'`Die e-Mail-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *email_address* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
+`[ @email_address = ] 'email_address'` Die e-Mail-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *email_address* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
  Sie können entweder eine physische e-Mail-Adresse oder einen Alias für *email_address*angeben. Beispiel:  
   
@@ -65,21 +66,21 @@ sp_add_operator [ @name = ] 'name'
 > [!NOTE]  
 >  Für Datenbank-E-Mail muss die E-Mail-Adresse verwendet werden.  
   
-`[ @pager_address = ] 'pager_address'`Die Pager-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *pager_address* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
+`[ @pager_address = ] 'pager_address'` Die Pager-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *pager_address* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
-`[ @weekday_pager_start_time = ] weekday_pager_start_time`Der Zeitraum, nach dem der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent die Pager-Benachrichtigung von Montag bis Freitag an den angegebenen Operator an den Wochentagen sendet. *weekday_pager_start_time*ist vom Datentyp **int**. der Standardwert ist **090000**. der Wert ist 9:00 Uhr. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time` Der Zeitraum, nach dem der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent die Pager-Benachrichtigung von Montag bis Freitag an den angegebenen Operator an den Wochentagen sendet. *weekday_pager_start_time*ist vom Datentyp **int**. der Standardwert ist **090000**. der Wert ist 9:00 Uhr. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
-`[ @weekday_pager_end_time = ] weekday_pager_end_time`Die Zeit, nach der der **SQLServerAgent** -Dienst keine Pager-Benachrichtigung mehr an die Wochentage sendet, von Montag bis Freitag. *weekday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert 180000, der 6:00 Uhr angibt. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @weekday_pager_end_time = ] weekday_pager_end_time` Die Zeit, nach der der **SQLServerAgent** -Dienst keine Pager-Benachrichtigung mehr an die Wochentage sendet, von Montag bis Freitag. *weekday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert 180000, der 6:00 Uhr angibt. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
-`[ @saturday_pager_start_time = ] saturday_pager_start_time`Der Zeitraum, nach dem der **SQLServerAgent** -Dienst Pager-Benachrichtigungen an den angegebenen Operator an einem Samstag sendet. *saturday_pager_start_time* ist vom Datentyp **int**. der Standardwert ist 090000. der Wert ist 9:00 Uhr. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @saturday_pager_start_time = ] saturday_pager_start_time` Der Zeitraum, nach dem der **SQLServerAgent** -Dienst Pager-Benachrichtigungen an den angegebenen Operator an einem Samstag sendet. *saturday_pager_start_time* ist vom Datentyp **int**. der Standardwert ist 090000. der Wert ist 9:00 Uhr. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
-`[ @saturday_pager_end_time = ] saturday_pager_end_time`Der Zeitraum, nach dem der **SQLServerAgent** -Dienst die Pager-Benachrichtigung nicht mehr an den angegebenen Operator an einem Samstag sendet. *saturday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert **180000**, der 6:00 Uhr angibt. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @saturday_pager_end_time = ] saturday_pager_end_time` Der Zeitraum, nach dem der **SQLServerAgent** -Dienst die Pager-Benachrichtigung nicht mehr an den angegebenen Operator an einem Samstag sendet. *saturday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert **180000**, der 6:00 Uhr angibt. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
-`[ @sunday_pager_start_time = ] sunday_pager_start_time`Der Zeitraum, nach dem der **SQLServerAgent** -Dienst eine Pager-Benachrichtigung an den angegebenen Operator an Sonntags sendet. *sunday_pager_start_time*ist vom Datentyp **int**. der Standardwert ist **090000**. der Wert ist 9:00 Uhr. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @sunday_pager_start_time = ] sunday_pager_start_time` Der Zeitraum, nach dem der **SQLServerAgent** -Dienst eine Pager-Benachrichtigung an den angegebenen Operator an Sonntags sendet. *sunday_pager_start_time*ist vom Datentyp **int**. der Standardwert ist **090000**. der Wert ist 9:00 Uhr. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
-`[ @sunday_pager_end_time = ] sunday_pager_end_time`Der Zeitraum, nach dem der **SQLServerAgent** -Dienst die Pager-Benachrichtigung nicht mehr an den Sonntag an den angegebenen Operator sendet. *sunday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert **180000**, der 6:00 Uhr angibt. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @sunday_pager_end_time = ] sunday_pager_end_time` Der Zeitraum, nach dem der **SQLServerAgent** -Dienst die Pager-Benachrichtigung nicht mehr an den Sonntag an den angegebenen Operator sendet. *sunday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert **180000**, der 6:00 Uhr angibt. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
-`[ @pager_days = ] pager_days`Ist eine Zahl, die die Tage angibt, an denen der Operator für Seiten verfügbar ist (abhängig von den angegebenen Start-und Endzeiten). *pager_days*ist vom Datentyp **tinyint**. der Standardwert ist **0** , was bedeutet, dass der Operator nie zum Empfangen einer Seite verfügbar ist. Gültige Werte sind **0** bis **127**. *pager_days*wird berechnet, indem die einzelnen Werte für die erforderlichen Tage addiert werden. Beispielsweise ist von Montag bis Freitag **2** + **4** + **8** + **16** + **32**  =  **62**. In der folgenden Tabelle werden die Werte für die einzelnen Wochentage aufgelistet.  
+`[ @pager_days = ] pager_days` Ist eine Zahl, die die Tage angibt, an denen der Operator für Seiten verfügbar ist (abhängig von den angegebenen Start-und Endzeiten). *pager_days*ist vom Datentyp **tinyint**. der Standardwert ist **0** , was bedeutet, dass der Operator nie zum Empfangen einer Seite verfügbar ist. Gültige Werte sind **0** bis **127**. *pager_days*wird berechnet, indem die einzelnen Werte für die erforderlichen Tage addiert werden. Beispielsweise ist von Montag bis Freitag **2** + **4** + **8** + **16** + **32**  =  **62**. In der folgenden Tabelle werden die Werte für die einzelnen Wochentage aufgelistet.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -91,9 +92,9 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Freitag|  
 |**64**|Samstag|  
   
-`[ @netsend_address = ] 'netsend_address'`Die Netzwerkadresse des Operators, an den die Netzwerk Nachricht gesendet wird. *netsend_address*ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
+`[ @netsend_address = ] 'netsend_address'` Die Netzwerkadresse des Operators, an den die Netzwerk Nachricht gesendet wird. *netsend_address*ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
-`[ @category_name = ] 'category'`Der Name der Kategorie für diesen Operator. *Category* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @category_name = ] 'category'` Der Name der Kategorie für diesen Operator. *Category* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -129,7 +130,7 @@ EXEC dbo.sp_add_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sp_delete_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_exec_requests (Transact-SQL)
 title: sys. dm_pdw_exec_requests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/05/2019
@@ -12,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a377c33424ae589fa796b6f382e936426ead006d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 2892e881434cad1fca2686b6522938584b221045
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197068"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447467"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -25,7 +26,7 @@ ms.locfileid: "86197068"
 
   Enthält Informationen zu allen Anforderungen, die derzeit oder vor kurzem in aktiv sind [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Es wird eine Zeile pro Anforderung/Abfrage aufgelistet.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Der Schlüssel für diese Ansicht. Eindeutige numerische ID, die der Anforderung zugeordnet ist.|Eindeutig für alle Anforderungen im System.|  
 |session_id|**nvarchar(32)**|Eindeutige numerische ID, die der Sitzung zugeordnet ist, in der die Abfrage ausgeführt wurde. Weitere Informationen finden Sie unter [sys. dm_pdw_exec_sessions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
@@ -38,7 +39,7 @@ ms.locfileid: "86197068"
 |label|**nvarchar(255)**|Optionale Zeichnungs Zeichenfolge, die einigen SELECT-Abfrage Anweisungen zugeordnet ist.|Eine beliebige Zeichenfolge, die "a-z", "a-z", "0-9", "_" enthält.|  
 |error_id|**nvarchar (36)**|Eindeutige ID des Fehlers, der der Anforderung zugeordnet ist, sofern vorhanden.|Weitere Informationen finden Sie unter [sys. dm_pdw_errors &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); auf NULL festgelegt, wenn kein Fehler aufgetreten ist.|  
 |database_id|**int**|Der Bezeichner der vom expliziten Kontext verwendeten Datenbank (z. b. DB_X verwenden).|Weitere Informationen finden Sie unter ID in [sys. Datenbanken &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|-Befehl.|**nvarchar(4000)**|Enthält den vollständigen Text der Anforderung, wie er vom Benutzer gesendet wurde.|Jeder gültige Abfrage-oder Anforderungs Text. Abfragen, die länger als 4000 Bytes sind, werden abgeschnitten.|  
+|command|**nvarchar(4000)**|Enthält den vollständigen Text der Anforderung, wie er vom Benutzer gesendet wurde.|Jeder gültige Abfrage-oder Anforderungs Text. Abfragen, die länger als 4000 Bytes sind, werden abgeschnitten.|  
 |resource_class|**nvarchar (20)**|Die für diese Anforderung verwendete Arbeits Auslastungs Gruppe. |Statische Ressourcenklassen</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Dynamische Ressourcenklassen</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |importance|**nvarchar(128)**|Die Wichtigkeits Einstellung, die die Anforderung an ausgeführt hat.  Dies ist die relative Wichtigkeit einer Anforderung in dieser Arbeits Auslastungs Gruppe und zwischen Arbeits Auslastungs Gruppen für freigegebene Ressourcen.  Die in der Klassifizierung angegebene Wichtigkeit überschreibt die Wichtigkeits Einstellung der Arbeits Auslastungs Gruppe.</br>Gilt für: Azure SQL Data Warehouse|NULL</br>niedrig</br>below_normal</br>Normal (Standard)</br>above_normal</br>high|
 |group_name|**sysname** |Bei Anforderungen, die Ressourcen verwenden, ist group_name der Name der Arbeits Auslastungs Gruppe, unter der die Anforderung ausgeführt wird.  Wenn die Anforderung keine Ressourcen verwendet, ist group_name NULL.</br>Gilt für: Azure SQL Data Warehouse|
@@ -76,6 +77,6 @@ ms.locfileid: "86197068"
 >[!WARNING]  
 >Ein Angreifer kann sys. dm_pdw_exec_requests zum Abrufen von Informationen über bestimmte Datenbankobjekte verwenden, indem er einfach die View Server State-Berechtigung und keine datenbankspezifische Berechtigung besitzt.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
  [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

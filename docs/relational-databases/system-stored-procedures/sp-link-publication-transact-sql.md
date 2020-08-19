@@ -1,4 +1,5 @@
 ---
+description: sp_link_publication (Transact-SQL)
 title: sp_link_publication (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9c3c414507b0dfe58cc4b13bc18c992e3a46bea9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c1df8b2f62ce305b89b061526415c73e07a18511
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446952"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,13 +50,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name des Verlegers, mit dem eine Verknüpfung hergestellt werden soll. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers, mit dem eine Verknüpfung hergestellt werden soll. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank, mit der eine Verknüpfung hergestellt werden soll. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank, mit der eine Verknüpfung hergestellt werden soll. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, mit der eine Verknüpfung hergestellt werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, mit der eine Verknüpfung hergestellt werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @security_mode = ] security_mode`Der Sicherheitsmodus, der vom Abonnenten verwendet wird, um eine Verbindung mit einem Remote Verleger für das sofortige Aktualisieren herzustellen. *security_mode* ist vom Datentyp **int**. die folgenden Werte sind möglich: [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` Der Sicherheitsmodus, der vom Abonnenten verwendet wird, um eine Verbindung mit einem Remote Verleger für das sofortige Aktualisieren herzustellen. *security_mode* ist vom Datentyp **int**. die folgenden Werte sind möglich: [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -63,16 +64,16 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Verwendet den Sicherheitskontext ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung oder Windows-Authentifizierung) des Benutzers, der die Änderung auf dem Abonnenten ausführt.<br /><br /> Hinweis: dieses Konto muss auch auf dem Verleger mit ausreichenden Berechtigungen vorhanden sein. Bei Verwendung der Windows-Authentifizierung muss die Delegierung von Sicherheitskonten unterstützt werden.|  
 |**2**|Verwendet einen vorhandenen benutzerdefinierten Anmelde Namen für den verknüpften Server, der mit **sp_link_publication**erstellt wurde.|  
   
-`[ @login = ] 'login'`Der Anmelde Name. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter muss angegeben werden, *security_mode* wenn security_mode **0**ist.  
+`[ @login = ] 'login'` Der Anmelde Name. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter muss angegeben werden, *security_mode* wenn security_mode **0**ist.  
   
-`[ @password = ] 'password'`Das Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter muss angegeben werden, *security_mode* wenn security_mode **0**ist.  
+`[ @password = ] 'password'` Das Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter muss angegeben werden, *security_mode* wenn security_mode **0**ist.  
   
-`[ @distributor = ] 'distributor'`Der Name des Verteilers. *Distributor* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @distributor = ] 'distributor'` Der Name des Verteilers. *Distributor* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_link_publication** wird von Abonnements mit sofortigem Update bei der Transaktions Replikation verwendet.  
   
  **sp_link_publication** können für Pushabonnements und Pullabonnements verwendet werden. Der Aufruf ist vor oder nach dem Erstellen des Abonnements möglich. Ein Eintrag wird in der [MSsubscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) Systemtabelle eingefügt oder aktualisiert.  

@@ -1,4 +1,5 @@
 ---
+description: sys. dm_db_column_store_row_group_physical_stats (Transact-SQL)
 title: sys. dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/05/2017
@@ -20,11 +21,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db8bfa11e87e4a8f595c559444907aef3c3e3e81
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cabadc5cd42afa7a001d27f55e22c138bb6f9002
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447692"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>sys. dm_db_column_store_row_group_physical_stats (Transact-SQL)
 
@@ -41,7 +43,7 @@ Dadurch wird die Katalog Sicht [sys. column_store_row_groups &#40;Transact-SQL-&
 |**partition_number**|**int**|ID der Tabellen Partition, die *row_group_id*enthält. Sie können partition_number verwenden, um diese DMV mit sys.partitions zu verknüpfen.|  
 |**row_group_id**|**int**|ID dieser Zeilen Gruppe. Bei partitionierten Tabellen ist value innerhalb der Partition eindeutig.<br /><br /> -1 für einen in-Memory-Tail.|  
 |**delta_store_hobt_id**|**bigint**|Der hobt_id für eine Zeilen Gruppe im Delta Speicher.<br /><br /> NULL, wenn die Zeilen Gruppe nicht im Delta Speicher gespeichert ist.<br /><br /> NULL für das Ende einer in-Memory-Tabelle.|  
-|**state**|**tinyint**|Die *state_description*zugeordnete ID-Nummer.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = Tombstone<br /><br /> Die Komprimierung ist der einzige Status, der für Tabellen im Arbeitsspeicher gilt.|  
+|**Status**|**tinyint**|Die *state_description*zugeordnete ID-Nummer.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = Tombstone<br /><br /> Die Komprimierung ist der einzige Status, der für Tabellen im Arbeitsspeicher gilt.|  
 |**state_desc**|**nvarchar(60)**|Beschreibung des Zeilen Gruppenstatus:<br /><br /> 0-unsichtbar: eine Zeilen Gruppe, die erstellt wird. Beispiel: <br />Eine Zeilen Gruppe im columnstore-ist unsichtbar, während die Daten komprimiert werden. Wenn die Komprimierung abgeschlossen ist, ändert ein metadatenschalter den Status der columnstore--Zeilen Gruppe von unsichtbar in komprimiert und den Status der Delta Store-Zeilen Gruppe von Closed in Tombstone.<br /><br /> 1-öffnen-eine Delta Store-Zeilen Gruppe, die neue Zeilen akzeptiert. Eine offene Zeilengruppe befindet sich weiterhin im rowstore-Format und wurde nicht in das columnstore-Format komprimiert.<br /><br /> 2-geschlossen-eine Zeilen Gruppe im Delta Speicher, die die maximale Anzahl von Zeilen enthält, und wartet darauf, dass der tupelverschiebungsprozess Sie in den columnstore komprimiert.<br /><br /> 3-komprimiert: eine Zeilen Gruppe, die mit der columnstore--Komprimierung komprimiert und im columnstore-gespeichert wird.<br /><br /> 4-Tombstone: eine Zeilen Gruppe, die sich zuvor im Delta Store befand und nicht mehr verwendet wird.|  
 |**total_rows**|**bigint**|Anzahl von Zeilen, die physisch in der Zeilen Gruppe gespeichert sind. Für komprimierte Zeilen Gruppen. Schließt die Zeilen ein, die als gelöscht markiert sind.|  
 |**deleted_rows**|**bigint**|Die Anzahl von Zeilen, die in einer komprimierten Zeilengruppe physisch gespeichert und zum Löschen markiert sind.<br /><br /> Für Zeilengruppen im Deltastore lautet der Wert 0.|  
@@ -85,11 +87,11 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Objektkatalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
+ [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
  [Columnstore Index Architecture (Columnstore-Indizes: Architektur)](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         
  [Abfragen der SQL Server System Katalog-FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys. Columns &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys. ALL_COLUMNS &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys. computed_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
  [sys. column_store_dictionaries &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   

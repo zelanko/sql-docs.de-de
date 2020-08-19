@@ -1,4 +1,5 @@
 ---
+description: Verwenden benutzerdefinierter Typen in SQL Server Native Client
 title: Verwenden von benutzerdefinierten Typen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,17 +22,17 @@ ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff6c333b587433eafabc73cb3b63559e26c7f4f7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b56a4e3446c827ecd8372876aa54cb023827a861
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448226"
 ---
 # <a name="using-user-defined-types-in-sql-server-native-client"></a>Verwenden benutzerdefinierter Typen in SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
-  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurden benutzerdefinierte Typen (User-Defined Types, UDTs) eingeführt. UDTs erweitern das SQL-Typsystem, indem sie es ermöglichen, Objekte und benutzerdefinierte Datenstrukturen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank zu speichern. UDTs können mehrere Datentypen enthalten und Verhalten zeigen, das sie von den herkömmlichen Aliasdatentypen aus einem einzelnen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Systemdatentyp unterscheidet. UDTs werden in einer beliebigen, von .NET CLR (Common Language Runtime) unterstützten Sprache definiert, die überprüfbaren Code generiert. Dies schließt Microsoft Visual c#<sup>®</sup> und Visual Basic<sup>®</sup> .net ein. Die Daten werden in Feldern und Eigenschaften einer .NET-Klasse oder -Struktur verfügbar gemacht. Das Verhalten wird durch die Methoden der Klasse oder Struktur definiert.  
+  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurden benutzerdefinierte Typen (User-Defined Types, UDTs) eingeführt. UDTs erweitern das SQL-Typsystem, indem sie es ermöglichen, Objekte und benutzerdefinierte Datenstrukturen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank zu speichern. UDTs können mehrere Datentypen enthalten und Verhalten zeigen, das sie von den herkömmlichen Aliasdatentypen aus einem einzelnen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Systemdatentyp unterscheidet. UDTs werden in einer beliebigen, von .NET CLR (Common Language Runtime) unterstützten Sprache definiert, die überprüfbaren Code generiert. Dies schließt Microsoft Visual C#<sup>®</sup> und Visual Basic<sup>®</sup> .NET ein. Die Daten werden in Feldern und Eigenschaften einer .NET-Klasse oder -Struktur verfügbar gemacht. Das Verhalten wird durch die Methoden der Klasse oder Struktur definiert.  
   
  Ein UDT kann als Spaltendefinition einer Tabelle, als Variable in einem [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Batch oder als Argument einer [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Funktion oder gespeicherten Prozedur verwendet werden.  
   
@@ -79,7 +80,7 @@ ms.locfileid: "87243838"
  Datenkonvertierungen durch OLE DB-Basisdienste (**IDataConvert**) sind nicht auf DBTYPE_UDT anwendbar. Es werden keine weiteren Bindungen unterstützt.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Hinzufügungen und Änderungen am OLE DB-Rowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt neue Werte oder Änderungen an vielen der Kern OLE DB Schemarowsets hinzu.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt neue Werte oder Änderungen an vielen der Kern OLE DB Schemarowsets hinzu.  
   
 #### <a name="the-procedure_parameters-schema-rowset"></a>Das PROCEDURE_PARAMETERS-Schemarowset  
  Die folgenden Hinzufügungen wurden am PROCEDURE_PARAMETERS-Schemarowset vorgenommen.  
@@ -104,7 +105,7 @@ ms.locfileid: "87243838"
 |ASSEMBLY_BINARY|DBTYPE_BYTES|Die Binärdarstellung der Assembly.|  
   
 #### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>Das SQL_ASSEMBLIES_ DEPENDENCIES-Schemarowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Der Native Client OLE DB-Anbieter macht ein neues Anbieter spezifisches Schemarowset verfügbar, das die Assemblyabhängigkeiten für einen angegebenen Server beschreibt. ASSEMBLY_SERVER wird möglicherweise vom Aufrufer als DBTYPE_WSTR angegeben, ist aber nicht im Rowset vorhanden. Ohne Angabe wird das Rowset standardmäßig für den aktuellen Server festgelegt. Das SQL_ASSEMBLY_DEPENDENCIES-Schemarowset wird in der folgenden Tabelle definiert.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Der Native Client OLE DB-Anbieter macht ein neues Anbieter spezifisches Schemarowset verfügbar, das die Assemblyabhängigkeiten für einen angegebenen Server beschreibt. ASSEMBLY_SERVER wird möglicherweise vom Aufrufer als DBTYPE_WSTR angegeben, ist aber nicht im Rowset vorhanden. Ohne Angabe wird das Rowset standardmäßig für den aktuellen Server festgelegt. Das SQL_ASSEMBLY_DEPENDENCIES-Schemarowset wird in der folgenden Tabelle definiert.  
   
 |Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
@@ -114,7 +115,7 @@ ms.locfileid: "87243838"
 |REFERENCED_ASSEMBLY_ID|DBTYPE_UI4|Die Objekt-ID der referenzierten Assembly.|  
   
 #### <a name="the-sql_user_types-schema-rowset"></a>Das SQL_USER_TYPES-Schemarowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Der Native Client OLE DB-Anbieter macht ein neues Schemarowset, SQL_USER_TYPES, verfügbar, das beschreibt, wann die registrierten UDTs für einen bestimmten Server hinzugefügt werden. UDT_SERVER muss vom Aufrufer als DBTYPE_WSTR angegeben werden, ist aber nicht im Rowset vorhanden. Das SQL_USER_TYPES-Schemarowset wird in der folgenden Tabelle definiert.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Der Native Client OLE DB-Anbieter macht ein neues Schemarowset, SQL_USER_TYPES, verfügbar, das beschreibt, wann die registrierten UDTs für einen bestimmten Server hinzugefügt werden. UDT_SERVER muss vom Aufrufer als DBTYPE_WSTR angegeben werden, ist aber nicht im Rowset vorhanden. Das SQL_USER_TYPES-Schemarowset wird in der folgenden Tabelle definiert.  
   
 |Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
@@ -134,7 +135,7 @@ ms.locfileid: "87243838"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|Vollständiger Typname (AQN) einschließlich Typname mit Namespace als Präfix (falls zutreffend).|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Hinzufügungen und Änderungen an der OLE DB-Eigenschaftengruppe  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt neue Werte oder Änderungen zu vielen der Kern OLE DB-Eigenschafts Sätzen hinzu.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt neue Werte oder Änderungen zu vielen der Kern OLE DB-Eigenschafts Sätzen hinzu.  
   
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Die DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe  
  Um UDTs über OLE DB zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert Native Client den neuen DBPROPSET_SQLSERVERPARAMETER-Eigenschaften Satz, der die folgenden Werte enthält.  
@@ -161,7 +162,7 @@ ms.locfileid: "87243838"
   
  ADO verweist mit dem entsprechenden Eintrag aus der Beschreibungsspalte auf diese Eigenschaften.  
   
- SSPROP_COL_UDTNAME ist erforderlich. SSPROP_COL_UDT_CATALOGNAME und SSPROP_COL_UDT_SCHEMANAME sind optional. Wenn eine der Eigenschaften falsch angegeben wird, wird **DB_E_ERRORSINCOMMAND** zurückgegeben.  
+ SSPROP_COL_UDTNAME ist erforderlich. SSPROP_COL_UDT_CATALOGNAME und SSPROP_COL_UDT_SCHEMANAME sind optional. Wenn Eigenschaften falsch angegeben werden, wird **DB_E_ERRORSINCOMMAND** zurückgegeben.  
   
  Werden weder SSPROP_COL_UDT_CATALOGNAME noch SSPROP_COL_UDT_SCHEMANAME angegeben, muss der UDT in derselben Datenbank und im selben Schema definiert werden wie die Tabelle.  
   
@@ -170,7 +171,7 @@ ms.locfileid: "87243838"
  Befindet sich die UDT-Definition in einer anderen Datenbank, müssen SSPROP_COL_UDT_CATALOGNAME und SSPROP_COL_UDT_SCHEMANAME angegeben werden.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Hinzufügungen und Änderungen an der OLE DB-Schnittstelle  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt neue Werte oder Änderungen an vielen der Kern OLE DB-Schnittstellen hinzu.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fügt neue Werte oder Änderungen an vielen der Kern OLE DB-Schnittstellen hinzu.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Die ISSCommandWithParameters-Schnittstelle  
  Um UDTs durch OLE DB zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert Native Client eine Reihe von Änderungen, einschließlich des Hinzufügens der **ISSCommandWithParameters** -Schnittstelle. Diese neue Schnittstelle erbt von der OLE DB-Kernschnittstelle **ICommandWithParameters**. Zusätzlich zu den drei von **ICommandWithParameters**geerbten Methoden **GetParameterInfo**, **MapParameterNames**und **SetParameterInfo**; **ISSCommandWithParameters** stellt die **GetParameterProperties** -Methode und die **SetParameterProperties** -Methode bereit, die zur Behandlung von serverspezifischen Datentypen verwendet werden.  

@@ -1,4 +1,5 @@
 ---
+description: sys.sql_modules (Transact-SQL)
 title: sys. sql_modules (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/06/2018
@@ -20,11 +21,12 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35364b70b54c0837f5cdbcc3b747a6c066c7beb9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1d465b315fedb484143153e7be97dd2e895faf12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447793"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +51,7 @@ ms.locfileid: "86008353"
 |**inline_type**|**bit**|**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] und höher.<br /><br />Gibt an, ob Inlining für das Modul aktuell aktiviert ist. <br /><br />0 = Inlining ist ausgeschaltet<br /><br /> 1 = Inlining ist eingeschaltet.<br /><br /> Bei skalaren UDFs ist der Wert 1, wenn Inlining aktiviert ist (explizit oder implizit). Der Wert ist für Inline-TVFs immer 1 und 0 für andere Modultypen.<br />|  
 
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der SQL-Ausdruck für eine DEFAULT-Einschränkung, Objekt vom Typ D, befindet sich in der [sys. default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) -Katalog Sicht. Der SQL-Ausdruck für eine Check-Einschränkung, Objekt vom Typ C, finden Sie in der [sys. check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) -Katalog Sicht.  
   
  Diese Informationen werden auch in [sys. dm_db_uncontained_entities &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)beschrieben.  
@@ -69,8 +71,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Objektkatalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Abfragen der SQL Server System Katalog-FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_helpstats (Transact-SQL)
 title: sp_helpstats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc07dec5878e0d31a325aa75af483ab4b1b04e58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f88558a41c4a169ca61ec7cc615cd0ba5b991589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447039"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85736975"
   Gibt statistische Informationen zu Spalten und Indizes der angegebenen Tabelle zurück.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Fragen Sie die Katalog Sichten [sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) und [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) ab, um Informationen zu Statistiken zu erhalten.  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Fragen Sie die Katalog Sichten [sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) und [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) ab, um Informationen zu Statistiken zu erhalten.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +45,9 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @objname = ] 'object_name'`Gibt die Tabelle an, für die Statistik Informationen bereitgestellt werden sollen. *object_name* ist vom Datentyp **nvarchar (520)** und darf nicht NULL sein. Es kann ein ein- oder zweiteiliger Name angegeben werden.  
+`[ @objname = ] 'object_name'` Gibt die Tabelle an, für die Statistik Informationen bereitgestellt werden sollen. *object_name* ist vom Datentyp **nvarchar (520)** und darf nicht NULL sein. Es kann ein ein- oder zweiteiliger Name angegeben werden.  
   
-`[ @results = ] 'value'`Gibt den Umfang der bereitgestellten Informationen an. Gültige Einträge sind **alle** und **Statistiken**. **Alle** listet Statistiken für alle Indizes und auch Spalten auf, für die Statistiken erstellt wurden. **Statistiken listet nur Statistiken** auf, die keinem Index zugeordnet sind. der Wert ist vom Datentyp **nvarchar (5)** und hat den Standard *Wert* stats.  
+`[ @results = ] 'value'` Gibt den Umfang der bereitgestellten Informationen an. Gültige Einträge sind **alle** und **Statistiken**. **Alle** listet Statistiken für alle Indizes und auch Spalten auf, für die Statistiken erstellt wurden. **Statistiken listet nur Statistiken** auf, die keinem Index zugeordnet sind. der Wert ist vom Datentyp **nvarchar (5)** und hat den Standard *Wert* stats.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -54,12 +55,12 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="result-sets"></a>Resultsets  
  In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:  
   
-|Spaltenname|BESCHREIBUNG|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |**statistics_name**|Der Name der Statistik. Gibt " **vom Datentyp sysname** " zurück und kann nicht NULL sein.|  
 |**statistics_keys**|Die Schlüssel, auf denen die Statistik basiert. Gibt **nvarchar (2078)** zurück und darf nicht NULL sein.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie DBCC SHOW_STATISTICS, um detaillierte statistische Informationen zu einem bestimmten Index oder einer bestimmten Statistik anzuzeigen. Weitere Informationen finden Sie unter [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) und [sp_helpindex &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  

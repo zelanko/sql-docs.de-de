@@ -1,4 +1,5 @@
 ---
+description: sp_databases (Transact-SQL)
 title: sp_databases (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 862101470f004c1e3681bd91745e9e2d10aab6bc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 427014e08e10a018fd8b04841a1082f2cdce292a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447384"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ sp_databases
 |**DATABASE_SIZE**|**int**|Die Größe der Datenbank in Kilobyte.|  
 |**HINWEISE**|**varchar (254)**|Im [!INCLUDE[ssDE](../../includes/ssde-md.md)]gibt dieses Feld immer NULL zurück.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die zurückgegebenen Datenbanknamen können als Parameter für die USE-Anweisung verwendet werden, um den aktuellen Datenbankkontext zu ändern.  
   
  Für**sp_databases** gibt es in Open Database Connectivity (ODBC) keine Entsprechung.  

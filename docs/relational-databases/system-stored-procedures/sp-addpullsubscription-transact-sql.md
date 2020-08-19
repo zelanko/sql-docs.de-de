@@ -1,4 +1,5 @@
 ---
+description: sp_addpullsubscription (Transact-SQL)
 title: sp_addpullsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/09/2020
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98c966ecb91bebb4f11db49028ecf53a885cc888
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 93efe6b64ade77e8a9761bf5efbbcb8454d75df4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447424"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,24 +45,24 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
 
 > [!NOTE]
 > Der Server Name kann als angegeben werden `<Hostname>,<PortNumber>` . Möglicherweise müssen Sie die Portnummer für die Verbindung angeben, wenn SQL Server unter Linux oder Windows mit einem benutzerdefinierten Port bereitgestellt wird und der-Browser Dienst deaktiviert ist.
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. *publisher_db* wird von Oracle-Verlegern ignoriert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. *publisher_db* wird von Oracle-Verlegern ignoriert.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @independent_agent = ] 'independent_agent'`Gibt an, ob eine eigenständige Verteilungs-Agent für diese Veröffentlichung vorhanden ist. *independent_agent* ist vom Datentyp **nvarchar (5)** und hat den Standardwert true. **True**gibt an, dass eine eigenständige Verteilungs-Agent für diese Veröffentlichung vorhanden ist. Wenn der Wert **false**ist, gibt es für jedes Paar aus Verleger Datenbank und Abonnenten Datenbank eine Verteilungs-Agent. *independent_agent* ist eine Eigenschaft der Veröffentlichung und muss hier denselben Wert wie auf dem Verleger haben.  
+`[ @independent_agent = ] 'independent_agent'` Gibt an, ob eine eigenständige Verteilungs-Agent für diese Veröffentlichung vorhanden ist. *independent_agent* ist vom Datentyp **nvarchar (5)** und hat den Standardwert true. **True**gibt an, dass eine eigenständige Verteilungs-Agent für diese Veröffentlichung vorhanden ist. Wenn der Wert **false**ist, gibt es für jedes Paar aus Verleger Datenbank und Abonnenten Datenbank eine Verteilungs-Agent. *independent_agent* ist eine Eigenschaft der Veröffentlichung und muss hier denselben Wert wie auf dem Verleger haben.  
   
-`[ @subscription_type = ] 'subscription_type'`Der Abonnementtyp. *subscription_type* ist vom Datentyp **nvarchar (9)** und hat den Standardwert **Anonymous**. Sie müssen den Wert **Pull** für *subscription_type*angeben, es sei denn, Sie möchten ein Abonnement erstellen, ohne das Abonnement auf dem Verleger zu registrieren. In diesem Fall müssen Sie den Wert **Anonym**angeben. Dies ist notwendig für Fälle, in denen Sie während der Abonnementkonfiguration keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindung mit dem Verleger herstellen können.  
+`[ @subscription_type = ] 'subscription_type'` Der Abonnementtyp. *subscription_type* ist vom Datentyp **nvarchar (9)** und hat den Standardwert **Anonymous**. Sie müssen den Wert **Pull** für *subscription_type*angeben, es sei denn, Sie möchten ein Abonnement erstellen, ohne das Abonnement auf dem Verleger zu registrieren. In diesem Fall müssen Sie den Wert **Anonym**angeben. Dies ist notwendig für Fälle, in denen Sie während der Abonnementkonfiguration keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindung mit dem Verleger herstellen können.  
   
-`[ @description = ] 'description'`Die Beschreibung der Veröffentlichung. die *Beschreibung* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
+`[ @description = ] 'description'` Die Beschreibung der Veröffentlichung. die *Beschreibung* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
-`[ @update_mode = ] 'update_mode'`Der Typ des Updates. *update_mode* ist vom Datentyp **nvarchar (30)**. die folgenden Werte sind möglich:  
+`[ @update_mode = ] 'update_mode'` Der Typ des Updates. *update_mode* ist vom Datentyp **nvarchar (30)**. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Schreib **geschützt (Standard** )|Das Abonnement ist schreibgeschützt. Änderungen am Abonnenten werden nicht an den Verleger zurückgesendet. Sollte verwendet werden, wenn Updates nicht auf dem Abonnenten vorgenommen werden.|  
 |**synctran**|Aktiviert die Unterstützung für das sofortige Aktualisieren von Abonnements.|  
@@ -69,12 +70,12 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 |**Failover**|Aktiviert das sofortige Aktualisieren für das Abonnement, wobei als Failover das verzögerte Aktualisieren über eine Warteschlange verwendet wird. Daten können auf dem Abonnenten geändert werden; die Änderungen werden sofort an den Verleger weitergegeben. Wenn der Verleger und der Abonnent nicht verbunden sind, können Datenänderungen auf dem Abonnenten in einer Warteschlange gespeichert werden, bis Abonnent und Verleger erneut verbunden sind.|  
 |**queued failover**|Ermöglicht das Abonnement als Update über eine Warteschlange, mit der Möglichkeit des Wechsels zum sofortigen Updatemodus. Daten können auf dem Abonnenten geändert und in einer Warteschlange gespeichert werden, bis eine Verbindung zwischen dem Abonnenten und dem Verleger hergestellt wird. Wenn eine kontinuierliche Verbindung hergestellt wird, kann der Updatemodus in den sofortigen Updatemodus geändert werden. *Wird für Oracle-Verleger nicht unterstützt*.|  
   
-`[ @immediate_sync = ] immediate_sync`Gibt an, ob die Synchronisierungs Dateien bei jeder Ausführung des Momentaufnahmen-Agent erstellt oder neu erstellt werden. *immediate_sync* ist vom Typ **Bit** mit dem Standardwert 1 und muss auf denselben Wert festgelegt werden wie *immediate_sync* in **sp_addpublication**. *immediate_sync* ist eine Eigenschaft der Veröffentlichung und muss hier denselben Wert wie auf dem Verleger haben.  
+`[ @immediate_sync = ] immediate_sync` Gibt an, ob die Synchronisierungs Dateien bei jeder Ausführung des Momentaufnahmen-Agent erstellt oder neu erstellt werden. *immediate_sync* ist vom Typ **Bit** mit dem Standardwert 1 und muss auf denselben Wert festgelegt werden wie *immediate_sync* in **sp_addpublication**. *immediate_sync* ist eine Eigenschaft der Veröffentlichung und muss hier denselben Wert wie auf dem Verleger haben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addpullsubscription** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
 > [!IMPORTANT]  

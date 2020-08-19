@@ -1,4 +1,5 @@
 ---
+description: sp_cursorfetch (Transact-SQL)
 title: sp_cursorfetch (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7d68223e7ed12477b446934f01b600b840b6651a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447354"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -96,7 +97,7 @@ sp_cursorfetch cursor
 |Für KEYSET- und STATIC-Cursor|Normalerweise die aktuelle Keysetgröße.<br /><br /> **-m** , wenn sich der Cursor in einer asynchronen Erstellung befindet, wobei *m* Zeilen zu diesem Zeitpunkt gefunden werden.|  
 |Für DYNAMIC-Cursor|-1|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="cursor-parameter"></a>cursor-Parameter  
  Bevor Abrufvorgänge stattgefunden haben, befindet sich die Standardposition eines Cursors vor der ersten Zeile des Resultsets.  

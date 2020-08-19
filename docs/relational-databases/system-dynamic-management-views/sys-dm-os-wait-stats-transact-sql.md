@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_wait_stats (Transact-SQL)
 title: sys. dm_os_wait_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/19/2019
@@ -20,11 +21,12 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: a10193722529fabd7cce09569107520fe1b6410d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447575"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,14 +43,14 @@ Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die ausgefü
 |wait_time_ms|**bigint**|Gesamtwartezeit für diesen Wartetyp (in Millisekunden). Diese Zeit beinhaltet signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Maximale Wartezeit für diesen Wartetyp.|  
 |signal_wait_time_ms|**bigint**|Differenz zwischen dem Zeitpunkt der Signalisierung des wartenden Threads und dem Beginn der Ausführung.|  
-|pdw_node_id|**int**|Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet. <br/> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet. <br/> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Berechtigungen
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
-##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Warte Typen  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a> Warte Typen  
  **Ressourcen warte** Vorgänge Ressourcen warte Vorgänge treten auf, wenn ein Arbeits Thread den Zugriff auf eine Ressource anfordert, die nicht verfügbar ist, weil die Ressource von einem anderen Arbeits Thread verwendet wird oder noch nicht verfügbar ist. Beispiele für Ressourcenwartevorgänge sind Sperren, Latches, Netzwerk- und Datenträger-E/A-Wartevorgänge. Sperren und Latchwartevorgänge sind Vorgänge, die auf Synchronisierungsobjekte warten.  
   
 **Warteschlangen-Wartevorgänge**  
@@ -87,7 +89,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
   
  In der folgenden Tabelle werden die Wartetypen für Tasks in einer Liste aufgeführt.  
 
-|Typ |BESCHREIBUNG| 
+|type |Beschreibung| 
 |-------------------------- |--------------------------| 
 |ABR |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.| | 
 |AM_INDBUILD_ALLOCATION |Nur interne Verwendung. <br />**Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
@@ -166,8 +168,8 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |CONNECTION_ENDPOINT_LOCK |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] und höher.| 
 |Countrytrecoverymgr |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |CREATE_DATINISERVICE |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
-|CXCONSUMER<a name="cxconsumer"></a>|Tritt bei parallelen Abfrage Plänen auf, wenn ein Consumerthread (übergeordnetes Element) darauf wartet, dass ein Producer-Thread Zeilen sendet. Cxconsumer-warte Vorgänge werden von einem Exchange-Iterator verursacht, der außerhalb der Zeilen aus dem zugehörigen Producer-Thread läuft. Dies ist ein normaler Bestandteil der parallelen Abfrage Ausführung. <br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET<a name="cxpacket"></a>|Tritt bei parallelen Abfrage Plänen beim Synchronisieren des Austausch Iterators des Abfrage Prozessors und beim Erstellen und Verarbeiten von Zeilen auf. Wenn der Warte Vorgang übermäßig groß ist und nicht durch Optimieren der Abfrage (z. b. Hinzufügen von Indizes) reduziert werden kann, sollten Sie den Kosten Schwellenwert für Parallelität oder den maximalen Grad an Parallelität (MAXDOP) verringern.<br /> **Hinweis:** Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] cxpacket bezieht sich nur auf das Synchronisieren des Austausch Iterators des Abfrage Prozessors und das Erstellen von Zeilen. Wenn die Consumerthreads zu langsam sind, kann der Exchange-iteratorpuffer voll werden und cxpacket-warte Vorgänge verursachen. Consumerthreads werden separat im cxconsumer-Wartetyp nachverfolgt.| 
+|CXCONSUMER <a name="cxconsumer"></a>|Tritt bei parallelen Abfrage Plänen auf, wenn ein Consumerthread (übergeordnetes Element) darauf wartet, dass ein Producer-Thread Zeilen sendet. Cxconsumer-warte Vorgänge werden von einem Exchange-Iterator verursacht, der außerhalb der Zeilen aus dem zugehörigen Producer-Thread läuft. Dies ist ein normaler Bestandteil der parallelen Abfrage Ausführung. <br /> **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET <a name="cxpacket"></a>|Tritt bei parallelen Abfrage Plänen beim Synchronisieren des Austausch Iterators des Abfrage Prozessors und beim Erstellen und Verarbeiten von Zeilen auf. Wenn der Warte Vorgang übermäßig groß ist und nicht durch Optimieren der Abfrage (z. b. Hinzufügen von Indizes) reduziert werden kann, sollten Sie den Kosten Schwellenwert für Parallelität oder den maximalen Grad an Parallelität (MAXDOP) verringern.<br /> **Hinweis:** Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] cxpacket bezieht sich nur auf das Synchronisieren des Austausch Iterators des Abfrage Prozessors und das Erstellen von Zeilen. Wenn die Consumerthreads zu langsam sind, kann der Exchange-iteratorpuffer voll werden und cxpacket-warte Vorgänge verursachen. Consumerthreads werden separat im cxconsumer-Wartetyp nachverfolgt.| 
 |CXROWSET_SYNC |Tritt während eines parallelen Bereichsscans auf.| 
 |DAC_INIT |Tritt während des Initialisierungsvorgangs der dedizierten Administratorverbindung auf.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
@@ -943,7 +945,7 @@ Dieser Befehl setzt alle Leistungsindikatoren auf 0 zurück.
 |WAIT_XTP_CKPT_CLOSE |Tritt auf, wenn auf den Abschluss eines Prüf Punkts gewartet wird. <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
 |WAIT_XTP_CKPT_ENABLED |Tritt auf, wenn die Prüf Punkt Ausführung deaktiviert ist und darauf gewartet wird, dass die Prüf Punkt Aktivierung aktiviert ist. <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
 |WAIT_XTP_CKPT_STATE_LOCK |Tritt auf, wenn die Überprüfung des Prüf Punkt Zustands synchronisiert wird., <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
-|WAIT_XTP_COMPILE_WAIT |Nur interne Verwendung. <br /> **Gilt für**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und höher.| 
+|WAIT_XTP_COMPILE_WAIT |Nur interne Verwendung. <br /> **GILT FÜR:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und höher.| 
 |WAIT_XTP_GUEST |Tritt auf, wenn die Daten Bank Speicherzuweisung den Empfang von Benachrichtigungen mit geringem Arbeitsspeicher beenden muss. <br /> **Gilt für**:  [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] und höher.| 
 |WAIT_XTP_HOST_WAIT |Tritt auf, wenn warte Vorgänge durch die Datenbank-Engine ausgelöst und vom Host implementiert werden. <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |Nur interne Verwendung. <br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.| 

@@ -1,4 +1,5 @@
 ---
+description: Rotieren von Always Encrypted-Schlüsseln mithilfe von PowerShell
 title: Rotation von Always Encrypted-Schlüsseln mithilfe von PowerShell | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/26/2019
@@ -11,12 +12,12 @@ ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5e9cbaffe30849f5e2bb2385f49fabd603bc1f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f2010ad30f38d2e7bf89a18b833d93e00aec1f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448112"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Rotieren von Always Encrypted-Schlüsseln mithilfe von PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -102,8 +103,8 @@ Ein DBA ruft Metadaten über den Spaltenhauptschlüssel ab, der rotiert werden s
 | Aufgabe | Artikel | Greift auf Klartextschlüssel/Schlüsselspeicher zu| Greift auf Datenbank zu
 |:---|:---|:---|:---
 |Schritt 1: Starten Sie eine PowerShell-Umgebung, und importieren Sie das SqlServer-Modul. | [Importieren des SqlServer-Moduls](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Nein | Keine
-|Schritt 2: Stellen Sie eine Verbindung mit Ihrem Server und Ihrer Datenbank her. | [Herstellen einer Verbindung mit einer Datenbank](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Nein | Ja
-|Schritt 3: Rufen Sie die Metadaten über den alten Spaltenhauptschlüssel ab.| [Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey) | Nein | Ja
+|Schritt 2: Stellen Sie eine Verbindung mit Ihrem Server und Ihrer Datenbank her. | [Herstellen einer Verbindung mit einer Datenbank](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Nein | Ja
+|Schritt 3: Rufen Sie die Metadaten über den alten Spaltenhauptschlüssel ab.| [Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey) | Nein | Ja
 |Schritt 4. Rufen Sie die Metadaten über Spaltenhauptschlüssel ab, die vom alten Spaltenhauptschlüssel verschlüsselt sind, einschließlich ihrer verschlüsselter Werte. | [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey) | Nein | Ja
 |Schritt 5: Geben Sie den Speicherort des Spaltenhauptschlüssels (den Anbieternamen und einen Schlüsselpfad des Spaltenhauptschlüssels) sowie die verschlüsselten Werte der Spaltenverschlüsselungsschlüssel frei, die mit dem alten Spaltenhauptschlüssel geschützt sind.| Weitere Informationen finden Sie in den folgenden Beispielen. | Nein | Nein
 
@@ -294,7 +295,7 @@ Sie können einen Spaltenverschlüsselungsschlüssel offline oder online rotiere
 |:---|:---|:---|:---
 |Schritt 1: Starten Sie eine PowerShell-Umgebung, und importieren Sie das SqlServer-Modul. | [Importieren des SqlServer-Moduls](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Nein | Nein
 |Schritt 2: Stellen Sie eine Verbindung mit Ihrem Server und Ihrer Datenbank her. | [Herstellen einer Verbindung mit einer Datenbank](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Nein | Ja
-|Schritt 3: Authentifizieren Sie sich bei Azure, wenn Ihr Spaltenhauptschlüssel (der den Spaltenverschlüsselungsschlüssel schützt, der rotiert werden soll) in Azure Key Vault gespeichert ist. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Ja | Nein
+|Schritt 3: Authentifizieren Sie sich bei Azure, wenn Ihr Spaltenhauptschlüssel (der den Spaltenverschlüsselungsschlüssel schützt, der rotiert werden soll) in Azure Key Vault gespeichert ist. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Ja | Nein
 |Schritt 4. Generieren Sie einen neuen Spaltenverschlüsselungsschlüssel, verschlüsseln Sie ihn mit dem Spaltenhauptschlüssel, und erstellen Sie Spaltenverschlüsselungsschlüssel-Metadaten in der Datenbank.  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Hinweis:** Verwenden Sie eine Variation des Cmdlets, in der intern ein Spaltenverschlüsselungsschlüssel generiert und verschlüsselt wird.<br>Im Hintergrund gibt das Cmdlet die Anweisung [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) heraus, um die Schlüsselmetadaten zu erstellen. | Ja | Ja
 |Schritt 5: Suchen Sie alle Spalten, die mit dem alten Spaltenverschlüsselungsschlüssel verschlüsselt sind. | [Programmierungshandbuch für SQL Server Management Objects (SMO)](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | Nein | Ja
 |Schritt 6: Erstellen Sie ein *SqlColumnEncryptionSettings* -Objekt für jede betroffene Spalte.  SqlColumnMasterKeySettings ist ein Objekt, das im Arbeitsspeicher (in PowerShell) vorhanden ist. Es gibt das Zielverschlüsselungsschema für eine Spalte an. In diesem Fall sollte das Objekt angeben, dass die betroffene Spalte mit dem neuen Spaltenverschlüsselungsschlüssel verschlüsselt werden soll. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | Nein | Nein

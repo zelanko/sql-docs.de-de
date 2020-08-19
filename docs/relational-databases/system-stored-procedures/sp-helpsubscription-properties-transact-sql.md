@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscription_properties (Transact-SQL)
 title: sp_helpsubscription_properties (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebef567c36028f63317be3e00ea4c8078a765b6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa2eb1c4389c6dd5f3f30b42967aa7cec82808d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446985"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem Informationen zu allen Verlegern zurückgegeben werden.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem Informationen zu allen Verlegern zurückgegeben werden.  
   
-`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat **%** den Standardwert, mit dem Informationen zu allen Verleger Datenbanken zurückgegeben werden.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat **%** den Standardwert, mit dem Informationen zu allen Verleger Datenbanken zurückgegeben werden.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem Informationen zu allen Veröffentlichungen zurückgegeben werden.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem Informationen zu allen Veröffentlichungen zurückgegeben werden.  
   
-`[ @publication_type = ] publication_type`Der Typ der Veröffentlichung. *publication_type* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn angegeben, muss *publication_type* einen der folgenden Werte aufweisen:  
+`[ @publication_type = ] publication_type` Der Typ der Veröffentlichung. *publication_type* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn angegeben, muss *publication_type* einen der folgenden Werte aufweisen:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -93,7 +94,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpsubscription_properties** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

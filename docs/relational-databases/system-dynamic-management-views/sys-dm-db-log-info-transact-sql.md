@@ -1,4 +1,5 @@
 ---
+description: sys. dm_db_log_info (Transact-SQL)
 title: sys. dm_db_log_info (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aba965d4a0289db9ef7def58b90f15a1479cb485
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447662"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -63,10 +64,10 @@ sys.dm_db_log_info ( database_id )
 |vlf_encryptor_thumbprint|**varbinary(20)**| **Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Zeigt den Fingerabdruck der Verschlüsselung der VLF an, wenn die VLF mit [transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)verschlüsselt ist, andernfalls NULL. |
 
 ## <a name="remarks"></a>Bemerkungen
-Die `sys.dm_db_log_info` dynamische Verwaltungsfunktion ersetzt die `DBCC LOGINFO` -Anweisung.    
+Die `sys.dm_db_log_info` dynamische Verwaltungsfunktion ersetzt die- `DBCC LOGINFO` Anweisung.    
  
 ## <a name="permissions"></a>Berechtigungen  
-Erfordert die `VIEW DATABASE STATE` -Berechtigung in der Datenbank.  
+Erfordert die- `VIEW DATABASE STATE` Berechtigung in der Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -110,8 +111,8 @@ GO
 ```
 
 ## <a name="see-also"></a>Weitere Informationen  
-[Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Dynamische Verwaltungs Sichten im Zusammenhang mit der Datenbank &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys. dm_db_log_space_usage &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

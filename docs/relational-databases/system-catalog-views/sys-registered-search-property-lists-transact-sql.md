@@ -1,4 +1,5 @@
 ---
+description: sys.registered_search_property_lists (Transact-SQL)
 title: sys. registered_search_property_lists (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 0ed0c0a3e0a7a8e25279090fb0a84ccbad9d9a2b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9137345d642f1bc599ace1645cd5e441b927c4fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447847"
 ---
 # <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85897748"
 |**modify_date**|**datetime**|Datum, an dem die Eigenschaftenliste zuletzt mithilfe einer beliebigen ALTER-Anweisung geändert wurde.|  
 |**principal_id**|**int**|Der Besitzer der Eigenschaftenliste.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -61,7 +62,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ALTER FULLTEXT Index &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
+ [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)  
   
   

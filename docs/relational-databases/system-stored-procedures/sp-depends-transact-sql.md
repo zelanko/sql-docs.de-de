@@ -1,4 +1,5 @@
 ---
+description: sp_depends (Transact-SQL)
 title: sp_depends (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5133cd72de0f5b812b8425b6fb1b7f8ae82d8241
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ba819cdb8b3e9108fbae3e6405a87b78964931a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447260"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85861399"
   Zeigt Informationen zu den Abhängigkeiten von Datenbankobjekten an, z. B. die Sichten und Prozeduren, die von einer Tabelle oder Sicht abhängen, und die Tabellen und Sichten, die von der Sicht oder Prozedur abhängen. Verweise auf Objekte außerhalb der aktuellen Datenbank werden nicht angezeigt.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [sys. dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) und [sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [sys. dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) und [sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) .  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,7 +70,7 @@ sp_depends [ @objname = ] '<object>'
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Der Name des Elements, für das eine Abhängigkeit vorhanden ist.|  
 |**type**|**nvarchar (16)**|Der Elementtyp.|  
-|**aktualisiert**|**nvarchar (7)**|Gibt an, ob das Element aktualisiert ist.|  
+|**Aktualisiert**|**nvarchar (7)**|Gibt an, ob das Element aktualisiert ist.|  
 |**gewählte**|**nvarchar (8)**|Gibt an, ob das Element in einer SELECT-Anweisung verwendet wird.|  
 |**column**|**sysname**|Spalte oder Parameter, für die bzw. den die Abhängigkeit vorhanden ist.|  
   

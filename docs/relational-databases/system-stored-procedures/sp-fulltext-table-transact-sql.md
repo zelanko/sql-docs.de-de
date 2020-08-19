@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_table (Transact-SQL)
 title: sp_fulltext_table (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a906f17e655775308d72d04ed8917ca67b205b6a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 283fdb387e60eeed95cc33dc89711631f2465380
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447132"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -49,11 +50,11 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @tabname = ] 'qualified_table_name'`Ein ein-oder zweiteilige Tabellenname. Die Tabelle muss in der aktuellen Datenbank vorhanden sein. *qualified_table_name* weist den Datentyp **nvarchar(517)** auf und hat keinen Standardwert.  
+`[ @tabname = ] 'qualified_table_name'` Ein ein-oder zweiteilige Tabellenname. Die Tabelle muss in der aktuellen Datenbank vorhanden sein. *qualified_table_name* weist den Datentyp **nvarchar(517)** auf und hat keinen Standardwert.  
   
-`[ @action = ] 'action'`Die auszuführende Aktion. *action* ist vom Datentyp **nvarchar(50)** und hat keinen Standardwert. Die folgenden Werte sind möglich:  
+`[ @action = ] 'action'` Die auszuführende Aktion. *action* ist vom Datentyp **nvarchar(50)** und hat keinen Standardwert. Die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Erstellen**|Erstellt die Metadaten für einen Volltextindex für die Tabelle, auf die durch *qualified_table_name* verwiesen wird. Darüber hinaus wird angegeben, dass der Volltextindex für diese Tabelle in *fulltext_catalog_name*gespeichert werden soll. Diese Aktion legt außerdem die Verwendung von *unique_index_name* als Volltextschlüsselspalte fest. Dieser eindeutige Index muss bereits vorhanden sein und muss für eine Spalte der Tabelle definiert sein.<br /><br /> Eine Volltextsuche für diese Tabelle kann erst durchgeführt werden, wenn der Volltextkatalog aufgefüllt ist.|  
 |**Dropdown**|Löscht die Metadaten für den Volltextindex für *qualified_table_name*. Ist der Volltextindex aktiviert, wird er vor dem Löschen automatisch deaktiviert. Es ist nicht erforderlich, Spalten zu entfernen, bevor der Volltextindex gelöscht wird.|  
@@ -68,9 +69,9 @@ sp_fulltext_table
 |**start_incremental**|Startet eine inkrementelle Auffüllung des Volltextindexes für die Tabelle.|  
 |**Beenden**|Beendet das vollständige oder inkrementelle Auffüllen.|  
   
-`[ @ftcat = ] 'fulltext_catalog_name'`Ist ein gültiger, vorhandener voll Text Katalog Name für eine **Create** -Aktion. Bei allen anderen Aktionen muss dieser Parameter NULL sein. *fulltext_catalog_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL.  
+`[ @ftcat = ] 'fulltext_catalog_name'` Ist ein gültiger, vorhandener voll Text Katalog Name für eine **Create** -Aktion. Bei allen anderen Aktionen muss dieser Parameter NULL sein. *fulltext_catalog_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL.  
   
-`[ @keyname = ] 'unique_index_name'`Ist ein gültiger, eindeutigen Index, der keine NULL-Werte zulässt, für *qualified_table_name* für eine **Create** -Aktion. Bei allen anderen Aktionen muss dieser Parameter NULL sein. *unique_index_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL.  
+`[ @keyname = ] 'unique_index_name'` Ist ein gültiger, eindeutigen Index, der keine NULL-Werte zulässt, für *qualified_table_name* für eine **Create** -Aktion. Bei allen anderen Aktionen muss dieser Parameter NULL sein. *unique_index_name* ist vom Datentyp **sysname**. Der Standardwert ist NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -93,7 +94,7 @@ sp_fulltext_table
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-enabling-a-table-for-full-text-indexing"></a>A. Aktivieren der Volltextindizierung für eine Tabelle  
- Im folgenden Beispiel werden Volltextindexmetadaten für die `Document` -Tabelle der `AdventureWorks` -Datenbank erstellt. `Cat_Desc`ist ein voll Text Katalog. `PK_Document_DocumentID` ist ein eindeutiger, einspaltiger Index für `Document`.  
+ Im folgenden Beispiel werden Volltextindexmetadaten für die `Document` -Tabelle der `AdventureWorks` -Datenbank erstellt. `Cat_Desc` ist ein voll Text Katalog. `PK_Document_DocumentID` ist ein eindeutiger, einspaltiger Index für `Document`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -128,8 +129,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [INDEXPROPERTY &#40;Transact-SQL-&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [OBJECTPROPERTY &#40;Transact-SQL-&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [sp_helpindex &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   

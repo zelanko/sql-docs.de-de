@@ -1,4 +1,5 @@
 ---
+description: sp_add_proxy (Transact-SQL)
 title: sp_add_proxy (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61b77197c46025974391b39dcf8114ec5a51eaef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67b7ec7a5ccb1e4a1ba022995f4912b77afc93ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447482"
 ---
 # <a name="sp_add_proxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,17 +47,17 @@ sp_add_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @proxy_name = ] 'proxy_name'`Der Name des zu erstellenden Proxys. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn die *proxy_name* NULL oder eine leere Zeichenfolge ist, wird der Name des Proxys standardmäßig auf den angegebenen *user_name* eingestellt.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des zu erstellenden Proxys. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn die *proxy_name* NULL oder eine leere Zeichenfolge ist, wird der Name des Proxys standardmäßig auf den angegebenen *user_name* eingestellt.  
   
-`[ @enabled = ] is_enabled`Gibt an, ob der Proxy aktiviert ist. Das *is_enabled* -Flag ist vom Datentyp **tinyint**. der Standardwert ist 1. Wenn *is_enabled* **0**ist, ist der Proxy nicht aktiviert und kann nicht von einem Auftrags Schritt verwendet werden.  
+`[ @enabled = ] is_enabled` Gibt an, ob der Proxy aktiviert ist. Das *is_enabled* -Flag ist vom Datentyp **tinyint**. der Standardwert ist 1. Wenn *is_enabled* **0**ist, ist der Proxy nicht aktiviert und kann nicht von einem Auftrags Schritt verwendet werden.  
   
-`[ @description = ] 'description'`Eine Beschreibung des Proxys. Die Beschreibung ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL. Mit der Beschreibung können Sie den Proxy dokumentieren. Sie erfüllt keine weiteren Aufgaben für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent. Daher ist dieses Argument optional.  
+`[ @description = ] 'description'` Eine Beschreibung des Proxys. Die Beschreibung ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL. Mit der Beschreibung können Sie den Proxy dokumentieren. Sie erfüllt keine weiteren Aufgaben für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent. Daher ist dieses Argument optional.  
   
-`[ @credential_name = ] 'credential_name'`Der Name der Anmelde Informationen für den Proxy. Der *credential_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *credential_name* oder *credential_id* angegeben werden.  
+`[ @credential_name = ] 'credential_name'` Der Name der Anmelde Informationen für den Proxy. Der *credential_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *credential_name* oder *credential_id* angegeben werden.  
   
-`[ @credential_id = ] credential_id`Die Identifikationsnummer der Anmelde Informationen für den Proxy. Der *credential_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *credential_name* oder *credential_id* angegeben werden.  
+`[ @credential_id = ] credential_id` Die Identifikationsnummer der Anmelde Informationen für den Proxy. Der *credential_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *credential_name* oder *credential_id* angegeben werden.  
   
-`[ @proxy_id = ] id OUTPUT`Die Proxy-ID, die dem Proxy zugewiesen wird, wenn er erfolgreich erstellt wurde.  
+`[ @proxy_id = ] id OUTPUT` Die Proxy-ID, die dem Proxy zugewiesen wird, wenn er erfolgreich erstellt wurde.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -90,7 +91,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Create Credential &#40;Transact-SQL-&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_revoke_login_from_proxy &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   

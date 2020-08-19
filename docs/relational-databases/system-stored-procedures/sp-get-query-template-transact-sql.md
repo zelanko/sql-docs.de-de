@@ -1,4 +1,5 @@
 ---
+description: sp_get_query_template (Transact-SQL)
 title: sp_get_query_template (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b277a07075f8584cdb6a52dd6c221931b1685b6a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b6bef227f94188afe6f1eade92c54ff119982902
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447092"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ sp_get_query_template
  @parameters  
  Ist ein Ausgabeparameter vom Typ **nvarchar (max)**, der wie angegeben bereitgestellt wird, um ein Zeichenfolgenliteral der Parameternamen und Datentypen zu empfangen, die in parametrisiert wurden @templatetext .  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der Parameter sp_get_query_template gibt in folgenden Situationen einen Fehler zurück:  
   
 -   In *query_text*werden keine konstanten Literalwerte parametrisiert.  

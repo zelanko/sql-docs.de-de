@@ -1,4 +1,5 @@
 ---
+description: Andere Nicht-SQL Server-Abonnenten
 title: Andere Nicht-SQL Server-Abonnenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d7f6a8e580d89b9364d6c141dbacac8a405a0667
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e593b228d39cc84c35647e72135805e2994b305a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448134"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Andere Nicht-SQL Server-Abonnenten
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -114,7 +115,7 @@ ms.locfileid: "85892222"
   
  Weitere Informationen zum OLE DB-Anbieter finden Sie in der Dokumentation zum jeweiligen OLE DB-Anbieter.  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Nicht-SQL Server-Abonnenten](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
   
   

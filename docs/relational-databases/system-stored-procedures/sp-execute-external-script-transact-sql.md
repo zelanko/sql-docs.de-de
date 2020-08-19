@@ -1,4 +1,5 @@
 ---
+description: sp_execute_external_script (Transact-SQL)
 title: sp_execute_external_script (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2020
@@ -20,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 074836973123ae4f0f49acf72cf7bf6f56b17cf5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447192"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -114,27 +115,27 @@ sp_execute_external_script
 
  ** \@ Skript** =*N Skript Skript*für externe Sprache als Literale oder Variablen Eingabe angegeben. *Skript* ist vom Datentyp **nvarchar (max)**.  
 
-`[ @input_data_1 =  N'input_data_1' ]`Gibt die Eingabedaten an, die vom externen Skript in Form einer Abfrage verwendet werden [!INCLUDE[tsql](../../includes/tsql-md.md)] . Der Datentyp von *input_data_1* ist vom Datentyp **nvarchar (max)**.
+`[ @input_data_1 =  N'input_data_1' ]` Gibt die Eingabedaten an, die vom externen Skript in Form einer Abfrage verwendet werden [!INCLUDE[tsql](../../includes/tsql-md.md)] . Der Datentyp von *input_data_1* ist vom Datentyp **nvarchar (max)**.
 
-`[ @input_data_1_name = N'input_data_1_name' ]`Gibt den Namen der Variablen an, die für die Darstellung der durch definierten Abfrage verwendet wird @input_data_1 . Der Datentyp der Variablen im externen Skript hängt von der Sprache ab. Im Fall von R ist die Eingabe Variable ein Datenrahmen. Im Fall von python müssen Eingaben tabellarisch sein. *input_data_1_name* ist vom **Datentyp vom Datentyp sysname**.  Der Standardwert ist *Input DataSet*.  
+`[ @input_data_1_name = N'input_data_1_name' ]` Gibt den Namen der Variablen an, die für die Darstellung der durch definierten Abfrage verwendet wird @input_data_1 . Der Datentyp der Variablen im externen Skript hängt von der Sprache ab. Im Fall von R ist die Eingabe Variable ein Datenrahmen. Im Fall von python müssen Eingaben tabellarisch sein. *input_data_1_name* ist vom **Datentyp vom Datentyp sysname**.  Der Standardwert ist *Input DataSet*.  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]`Wird verwendet, um Modelle pro Partition zu erstellen. Gibt den Namen der Spalte an, die zum Sortieren des Resultsets verwendet wird, z. b. nach Produktname. Der Datentyp der Variablen im externen Skript hängt von der Sprache ab. Im Fall von R ist die Eingabe Variable ein Datenrahmen. Im Fall von python müssen Eingaben tabellarisch sein.
+`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]` Wird verwendet, um Modelle pro Partition zu erstellen. Gibt den Namen der Spalte an, die zum Sortieren des Resultsets verwendet wird, z. b. nach Produktname. Der Datentyp der Variablen im externen Skript hängt von der Sprache ab. Im Fall von R ist die Eingabe Variable ein Datenrahmen. Im Fall von python müssen Eingaben tabellarisch sein.
 
-`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]`Wird verwendet, um Modelle pro Partition zu erstellen. Gibt den Namen der Spalte an, die zum Segmentieren von Daten verwendet wird, z. b. geografische Region oder Datum Der Datentyp der Variablen im externen Skript hängt von der Sprache ab. Im Fall von R ist die Eingabe Variable ein Datenrahmen. Im Fall von python müssen Eingaben tabellarisch sein. 
+`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]` Wird verwendet, um Modelle pro Partition zu erstellen. Gibt den Namen der Spalte an, die zum Segmentieren von Daten verwendet wird, z. b. geografische Region oder Datum Der Datentyp der Variablen im externen Skript hängt von der Sprache ab. Im Fall von R ist die Eingabe Variable ein Datenrahmen. Im Fall von python müssen Eingaben tabellarisch sein. 
 ::: moniker-end
 
-`[ @output_data_1_name =  N'output_data_1_name' ]`Gibt den Namen der Variablen im externen Skript an, die die Daten enthält, die nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Abschluss des Aufrufens einer gespeicherten Prozedur zurückgegeben werden sollen. Der Datentyp der Variablen im externen Skript hängt von der Sprache ab. Bei R muss die Ausgabe ein Datenrahmen sein. Bei python muss die Ausgabe ein Pandas-dataframe sein. *output_data_1_name* ist vom **Datentyp vom Datentyp sysname**.  Der Standardwert ist *outputdataset*.  
+`[ @output_data_1_name =  N'output_data_1_name' ]` Gibt den Namen der Variablen im externen Skript an, die die Daten enthält, die nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Abschluss des Aufrufens einer gespeicherten Prozedur zurückgegeben werden sollen. Der Datentyp der Variablen im externen Skript hängt von der Sprache ab. Bei R muss die Ausgabe ein Datenrahmen sein. Bei python muss die Ausgabe ein Pandas-dataframe sein. *output_data_1_name* ist vom **Datentyp vom Datentyp sysname**.  Der Standardwert ist *outputdataset*.  
 
-`[ @parallel = 0 | 1 ]`Aktivieren Sie die parallele Ausführung von R-Skripts `@parallel` , indem Sie den Parameter auf 1 festlegen. Der Standardwert für diesen Parameter ist 0 (keine Parallelität). Wenn `@parallel = 1` und die Ausgabe direkt an den Client Computer gestreamt werden, ist die- `WITH RESULT SETS` Klausel erforderlich, und es muss ein Ausgabe Schema angegeben werden.  
+`[ @parallel = 0 | 1 ]` Aktivieren Sie die parallele Ausführung von R-Skripts `@parallel` , indem Sie den Parameter auf 1 festlegen. Der Standardwert für diesen Parameter ist 0 (keine Parallelität). Wenn `@parallel = 1` und die Ausgabe direkt an den Client Computer gestreamt werden, ist die- `WITH RESULT SETS` Klausel erforderlich, und es muss ein Ausgabe Schema angegeben werden.  
 
- + Bei R-Skripts, in denen keine revoscaler-Funktionen verwendet werden, kann die Verwendung des- `@parallel` Parameters für die Verarbeitung großer Datasets vorteilhaft sein, vorausgesetzt, das Skript kann triviell parallelisiert werden. Wenn Sie z. b. die R- `predict` Funktion mit einem Modell verwenden, um neue Vorhersagen zu generieren, legen Sie `@parallel = 1` als Hinweis auf die Abfrage-Engine fest. Wenn die Abfrage parallelisiert werden kann, werden die Zeilen entsprechend der **MAXDOP** -Einstellung verteilt.  
+ + Bei R-Skripts, in denen keine revoscaler-Funktionen verwendet werden, kann die Verwendung des-  `@parallel` Parameters für die Verarbeitung großer Datasets vorteilhaft sein, vorausgesetzt, das Skript kann triviell parallelisiert werden. Wenn Sie z. b. die R- `predict` Funktion mit einem Modell verwenden, um neue Vorhersagen zu generieren, legen Sie `@parallel = 1` als Hinweis auf die Abfrage-Engine fest. Wenn die Abfrage parallelisiert werden kann, werden die Zeilen entsprechend der **MAXDOP** -Einstellung verteilt.  
   
  + Bei R-Skripts, die revoscaler-Funktionen verwenden, wird die parallele Verarbeitung automatisch verarbeitet, und Sie sollten nicht `@parallel = 1` für den **sp_execute_external_script** -Befehl angeben.  
   
-`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]`Eine Liste der Eingabeparameter Deklarationen, die im externen Skript verwendet werden.  
+`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]` Eine Liste der Eingabeparameter Deklarationen, die im externen Skript verwendet werden.  
   
-`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`Eine Liste von Werten für die Eingabeparameter, die vom externen Skript verwendet werden.  
+`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` Eine Liste von Werten für die Eingabeparameter, die vom externen Skript verwendet werden.  
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -321,12 +322,12 @@ Um ein ähnliches Modell mithilfe von Python zu generieren, ändern Sie die Spra
 
 Zur Bewertung können Sie auch die native [PREDICT](../../t-sql/queries/predict-transact-sql.md)-Funktion verwenden, die in der Regel schneller ist, weil sie die Python- bzw. R-Laufzeit nicht aufrufen muss.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 + [Maschinelles Lernen mit SQL](../../machine-learning/index.yml)
 + [SQL Server Spracherweiterungen](../../language-extensions/language-extensions-overview.md). 
 + [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
-+ [Externe Bibliothek &#40;Transact-SQL-&#41;erstellen](../../t-sql/statements/create-external-library-transact-sql.md)  
++ [Externe Bibliothek &#40;Transact-SQL-&#41;erstellen ](../../t-sql/statements/create-external-library-transact-sql.md)  
 + [sp_prepare &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
 + [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
 + [Externe Skripts aktiviert (Serverkonfigurationsoption)](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   

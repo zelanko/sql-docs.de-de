@@ -1,4 +1,5 @@
 ---
+description: Behandeln von SMO-Ausnahmen
 title: Behandeln von SMO-Ausnahmen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2cab3702ef41e5ea4ed01ab60c3a3b949832f84
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 92167925e38e2029ac94d83b7ca4c9566e41527f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448076"
 ---
 # <a name="handling-smo-exceptions"></a>Behandeln von SMO-Ausnahmen
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -82,7 +84,7 @@ End Try
 ``` 
   
 ## <a name="catching-an-exception-in-visual-c"></a>Abfangen einer Ausnahme in Visual C#  
- In diesem Codebeispiel wird die Verwendung des **try... Catch... **Die Visual c#-Anweisung zum Schluss fängt eine SMO-Ausnahme ab. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie in der Dokumentation zu Visual C#.  
+ In diesem Codebeispiel wird die Verwendung des **try... Catch... ** Die Visual c#-Anweisung zum Schluss fängt eine SMO-Ausnahme ab. Alle SMO-Ausnahmen haben den Typ SmoException und werden im SMO-Verweis aufgelistet. Die Sequenz von internen Ausnahmen wird angezeigt, um den Ursprung des Fehlers anzugeben. Weitere Informationen finden Sie in der Dokumentation zu Visual C#.  
   
 ```csharp  
 {   

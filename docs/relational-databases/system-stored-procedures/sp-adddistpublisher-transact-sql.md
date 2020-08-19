@@ -1,4 +1,5 @@
 ---
+description: sp_adddistpublisher (Transact-SQL)
 title: sp_adddistpublisher (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/09/2020
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ba76aefe1b3b4f18a596c25d136c4ec6914ce5a6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5af634687088e305a15e41fd54110832195d0cab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447429"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,49 +48,49 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
 
 > [!NOTE]
 > Der Server Name kann als angegeben werden `<Hostname>,<PortNumber>` . Möglicherweise müssen Sie die Portnummer für die Verbindung angeben, wenn SQL Server unter Linux oder Windows mit einem benutzerdefinierten Port bereitgestellt wird und der-Browser Dienst deaktiviert ist.
   
-`[ @distribution_db = ] 'distribution_db'`Der Name der Verteilungs Datenbank. *distributor_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Dieser Parameter wird von Replikations-Agents zum Herstellen einer Verbindung zum Verleger verwendet.  
+`[ @distribution_db = ] 'distribution_db'` Der Name der Verteilungs Datenbank. *distributor_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Dieser Parameter wird von Replikations-Agents zum Herstellen einer Verbindung zum Verleger verwendet.  
   
-`[ @security_mode = ] security_mode`Der implementierte Sicherheitsmodus. Dieser Parameter wird nur von Replikations-Agents verwendet, um eine Verbindung mit dem Verleger für Abonnements mit verzögertem Update oder mit einem nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger herzustellen. *security_mode* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
+`[ @security_mode = ] security_mode` Der implementierte Sicherheitsmodus. Dieser Parameter wird nur von Replikations-Agents verwendet, um eine Verbindung mit dem Verleger für Abonnements mit verzögertem Update oder mit einem nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger herzustellen. *security_mode* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Replikations-Agents auf dem Verteiler verwenden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung zum Herstellen einer Verbindung mit dem Verleger.|  
 |**1** (Standard)|Replikations-Agents auf dem Verteiler verwenden die Windows-Authentifizierung beim Herstellen einer Verbindung zum Verleger.|  
   
-`[ @login = ] 'login'`Der Anmelde Name. Dieser Parameter ist erforderlich, *security_mode* wenn security_mode **0**ist. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter wird von Replikations-Agents zum Herstellen einer Verbindung zum Verleger verwendet.  
+`[ @login = ] 'login'` Der Anmelde Name. Dieser Parameter ist erforderlich, *security_mode* wenn security_mode **0**ist. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter wird von Replikations-Agents zum Herstellen einer Verbindung zum Verleger verwendet.  
   
-`[ @password = ] 'password']`Das Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird von Replikations-Agents zum Herstellen einer Verbindung zum Verleger verwendet.  
+`[ @password = ] 'password']` Das Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird von Replikations-Agents zum Herstellen einer Verbindung zum Verleger verwendet.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort.  
   
-`[ @working_directory = ] 'working_directory'`Der Name des Arbeitsverzeichnisses, das zum Speichern von Daten-und Schema Dateien für die Veröffentlichung verwendet wird. *working_directory* ist vom Datentyp **nvarchar (255)**. der Standardwert ist beispielsweise der Ordner repldata für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` . Dieser Name sollte im UNC-Format angegeben werden.  
+`[ @working_directory = ] 'working_directory'` Der Name des Arbeitsverzeichnisses, das zum Speichern von Daten-und Schema Dateien für die Veröffentlichung verwendet wird. *working_directory* ist vom Datentyp **nvarchar (255)**. der Standardwert ist beispielsweise der Ordner repldata für diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` . Dieser Name sollte im UNC-Format angegeben werden.  
 
  Verwenden Sie für Azure SQL-Datenbank `\\<storage_account>.file.core.windows.net\<share>` .
 
-`[ @storage_connection_string = ] 'storage_connection_string'`Ist für die SQL-Datenbank erforderlich. Verwenden Sie den Zugriffsschlüssel aus dem Azure-Portal unter Speicher > Einstellungen.
+`[ @storage_connection_string = ] 'storage_connection_string'` Ist für die SQL-Datenbank erforderlich. Verwenden Sie den Zugriffsschlüssel aus dem Azure-Portal unter Speicher > Einstellungen.
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
-`[ @trusted = ] 'trusted'`Dieser Parameter wurde als veraltet markiert und wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. *Trusted* ist vom Datentyp **nvarchar (5)**, und das Festlegen auf alles, aber **false** führt zu einem Fehler.  
+`[ @trusted = ] 'trusted'` Dieser Parameter wurde als veraltet markiert und wird nur aus Gründen der Abwärtskompatibilität bereitgestellt. *Trusted* ist vom Datentyp **nvarchar (5)**, und das Festlegen auf alles, aber **false** führt zu einem Fehler.  
   
-`[ @encrypted_password = ] encrypted_password`Das Festlegen von *encrypted_password* wird nicht mehr unterstützt. Der Versuch, diesen **Bit** -Parameter auf **1** festzulegen, führt zu einem Fehler.  
+`[ @encrypted_password = ] encrypted_password` Das Festlegen von *encrypted_password* wird nicht mehr unterstützt. Der Versuch, diesen **Bit** -Parameter auf **1** festzulegen, führt zu einem Fehler.  
   
-`[ @thirdparty_flag = ] thirdparty_flag`Ist, wenn der Verleger ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *thirdparty_flag* ist vom **Bit**und kann einen der folgenden Werte aufweisen.  
+`[ @thirdparty_flag = ] thirdparty_flag` Ist, wenn der Verleger ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *thirdparty_flag* ist vom **Bit**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0** (Standardwert)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**1**|Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
   
-`[ @publisher_type = ] 'publisher_type'`Gibt den Verlegertyp an, wenn der Verleger nicht ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* ist vom Datentyp sysname. die folgenden Werte sind möglich:  
+`[ @publisher_type = ] 'publisher_type'` Gibt den Verlegertyp an, wenn der Verleger nicht ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* ist vom Datentyp sysname. die folgenden Werte sind möglich:  
   
-|Wert|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (Standard)|Gibt einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger an.|  
 |**Orakel**|Gibt einen standardmäßigen Oracle-Verleger an.|  
@@ -113,7 +114,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
- [sp_helpdistpublisher &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Verteilung konfigurieren](../../relational-databases/replication/configure-distribution.md)  
   

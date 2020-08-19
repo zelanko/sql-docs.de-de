@@ -1,4 +1,5 @@
 ---
+description: sp_enum_sqlagent_subsystems (Transact-SQL)
 title: sp_enum_sqlagent_subsystems (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 869071ff8e66b5e9d20269c91823f3019e2b03b6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: af59c399d1d87c75bd78dd16cc57e98f835982f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447197"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ sp_enum_sqlagent_subsystems
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**System**|**nvarchar(40)**|Der Name des Subsystems.|  
-|**description**|**nvarchar(512)**|Beschreibung des Subsystems.|  
+|**Beschreibung**|**nvarchar(512)**|Beschreibung des Subsystems.|  
 |**subsystem_dll**|**nvarchar (510)**|DLL-Modul, das das Subsystem enthält.|  
 |**agent_exe**|**nvarchar (510)**|Ausführbares Modul, das vom Subsystem verwendet wird.|  
 |**start_entry_point**|**nvarchar(30)**|Prozedur, die der SQL Server-Agent während der Ausführung der Auftragsschritte aufruft.|  
@@ -58,7 +59,7 @@ sp_enum_sqlagent_subsystems
 |**max_worker_threads**|**int**|Maximale Anzahl von Threads, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent für dieses Subsystem startet.|  
 |**subsystem_id**|**int**|Bezeichner für das Subsystem.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Prozedur listet die in der Instanz verfügbaren Subsysteme auf.  
   
 ## <a name="permissions"></a>Berechtigungen  

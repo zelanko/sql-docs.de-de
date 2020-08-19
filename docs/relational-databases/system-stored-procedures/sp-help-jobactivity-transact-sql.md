@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobactivity (Transact-SQL)
 title: sp_help_jobactivity (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84dee2f945feaa59d96adb03fc6d531d7f2fd925
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7dc9650d715468bb66b5594100b0ce605083328e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447082"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id`Die Auftrags-ID. *job_id*ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die Auftrags-ID. *job_id*ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'`Der Name des Auftrags. *job_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *job_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @session_id = ] session_id`Die Sitzungs-ID, zu der Informationen gemeldet werden sollen. *session_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @session_id = ] session_id` Die Sitzungs-ID, zu der Informationen gemeldet werden sollen. *session_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -75,7 +76,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**operator_id_netsent**|**int**|ID-Nummer des Operators, der bei Abschluss des Auftrags über **net send** benachrichtigt wurde.|  
 |**operator_id_paged**|**int**|ID des Operators, der durch einen Pager bei Beendigung des Auftrags benachrichtigt wurde.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Prozedur stellt eine Momentaufnahme des aktuellen Status des Auftrags bereit. Die zurückgegebenen Ergebnisse stellen Informationen zu dem Zeitpunkt der Anforderungsverarbeitung dar.  
   
  Vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent wird bei jedem Start des Agent-Diensts eine Sitzungs-ID erstellt. Die Sitzungs-ID wird in der Tabelle **msdb.dbo.sysSitzungen**gespeichert.  

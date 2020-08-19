@@ -1,4 +1,5 @@
 ---
+description: Systemanforderungen für SQL Server Native Client
 title: Systemanforderungen
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,11 +15,12 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b001f5eb85da99e289e897df9a3022703e006811
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c3a96191f072a0b5b5a5e0c216f5a21cae023aca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448242"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Systemanforderungen für SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,14 +66,14 @@ ms.locfileid: "86012085"
   
  IDBInfo::GetKeywords wird immer eine Liste mit Schlüsselwörtern zurückgeben, die der Serverversion auf der Verbindung entspricht und nicht von **DataTypeCompatibility** beeinträchtigt wird.  
   
-|Datentyp|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC und<br /><br /> SQL Server Native Client OLE DB-Anwendungen mit DataTypeCompatibility=80|  
+|Datentyp|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC und<br /><br /> SQL Server Native Client OLE DB-Anwendungen mit DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 KB)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|Bild|  
+|varbinary(max)|varbinary|varbinary|Image|  
 |varchar(max)|varchar|varchar|Text|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |Xml|Xml|Xml|Ntext|  
-|CLR-UDT (> 8KB)|udt|varbinary|Bild|  
+|CLR-UDT (> 8KB)|udt|varbinary|Image|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  

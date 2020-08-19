@@ -1,4 +1,5 @@
 ---
+description: sp_help_notification (Transact-SQL)
 title: sp_help_notification (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9fad9d93a1c0d4781f792fedfe3fe7649e17c98
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e680c10037119020a1f667e40a7f77817a08cdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447052"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,28 +45,28 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @object_type = ] 'object_type'`Der Typ der Informationen, die zurückgegeben werden sollen. *object_type*ist vom Typ **char (9)** und hat keinen Standardwert. *object_type* kann eine Warnung sein, in der die Warnungen aufgelistet werden, die dem angegebenen Operator Namen oder den Operatoren zugewiesen*sind, die* die für den angegebenen Warnungs Namen verantwortlichen Operatoren auflistet *.*  
+`[ @object_type = ] 'object_type'` Der Typ der Informationen, die zurückgegeben werden sollen. *object_type*ist vom Typ **char (9)** und hat keinen Standardwert. *object_type* kann eine Warnung sein, in der die Warnungen aufgelistet werden, die dem angegebenen Operator Namen oder den Operatoren zugewiesen*sind, die* die für den angegebenen Warnungs Namen verantwortlichen Operatoren auflistet *.*  
   
-`[ @name = ] 'name'`Ein Operator Name (wenn *object_type* ist Operatoren) oder ein Warnungs Name (wenn *object_type* Warnungen ist). *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @name = ] 'name'` Ein Operator Name (wenn *object_type* ist Operatoren) oder ein Warnungs Name (wenn *object_type* Warnungen ist). *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @enum_type = ] 'enum_type'`Die *object_type*Informationen, die zurückgegeben werden. *enum_type* ist in den meisten Fällen tatsächlich. *enum_type*ist vom Typ **char (10)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
+`[ @enum_type = ] 'enum_type'` Die *object_type*Informationen, die zurückgegeben werden. *enum_type* ist in den meisten Fällen tatsächlich. *enum_type*ist vom Typ **char (10)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |ACTUAL|Listet nur die *object_types* auf, die dem *Namen*zugeordnet sind.|  
-|ALLE|Listet alle*object_types* auf, einschließlich derjenigen, die nicht mit dem *Namen*verknüpft sind.|  
+|ALL|Listet alle*object_types* auf, einschließlich derjenigen, die nicht mit dem *Namen*verknüpft sind.|  
 |TARGET|Listet nur die *object_types* auf, die mit dem angegebenen *target_name*übereinstimmen, unabhängig von der Zuordnung mit dem*Namen*.|  
   
-`[ @notification_method = ] notification_method`Ein numerischer Wert, der die zurück zugebende Benachrichtigungs Methoden Spalten bestimmt. *notification_method* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
+`[ @notification_method = ] notification_method` Ein numerischer Wert, der die zurück zugebende Benachrichtigungs Methoden Spalten bestimmt. *notification_method* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|E-Mail: gibt nur die **use_email** Spalte zurück.|  
 |**2**|Pager: gibt nur die **use_pager** Spalte zurück.|  
 |**4**|Nettsend: gibt nur die **use_netsend** Spalte zurück.|  
 |**7**|Alle: Alle Spalten werden zurückgegeben.|  
   
-`[ @target_name = ] 'target_name'`Ein Warnungs Name, nach dem gesucht werden soll (wenn *object_type* Warnungen ist), oder ein Operator Name, nach dem gesucht werden soll (wenn *object_type* Operator ist). *target_name* ist nur erforderlich, wenn *enum_type* Ziel ist. *target_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @target_name = ] 'target_name'` Ein Warnungs Name, nach dem gesucht werden soll (wenn *object_type* Warnungen ist), oder ein Operator Name, nach dem gesucht werden soll (wenn *object_type* Operator ist). *target_name* ist nur erforderlich, wenn *enum_type* Ziel ist. *target_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-valves"></a>Rückgabe Code Ventile  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -77,9 +78,9 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Benachrichtigungs-ID-Nummer.|  
 |**alert_name**|**sysname**|Name der Warnung.|  
-|**use_email**|**int**|E-Mail wird zur Benachrichtigung des Operators verwendet:<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
-|**use_pager**|**int**|Pager wird zur Benachrichtigung des Operators verwendet:<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
-|**use_netsend**|**int**|Eine Netzwerk-Popupnachricht wird zur Benachrichtigung des Operators verwendet:<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
+|**use_email**|**int**|E-Mail wird zur Benachrichtigung des Operators verwendet:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
+|**use_pager**|**int**|Pager wird zur Benachrichtigung des Operators verwendet:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
+|**use_netsend**|**int**|Eine Netzwerk-Popupnachricht wird zur Benachrichtigung des Operators verwendet:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
 |**has_email**|**int**|Anzahl von E-Mail-Benachrichtigungen, die für diese Warnung gesendet wurden.|  
 |**has_pager**|**int**|Anzahl von Pagerbenachrichtigungen, die für diese Warnung gesendet wurden.|  
 |**has_netsend**|**int**|Anzahl der für diese Warnung gesendeten **net send** -Benachrichtigungen.|  
@@ -90,14 +91,14 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|ID des Operators.|  
 |**operator_name**|**sysname**|Name des Operators|  
-|**use_email**|**int**|E-Mail wird zum Senden der Benachrichtigung des Operators verwendet:<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
-|**use_pager**|**int**|Pager wird zum Senden der Benachrichtigung des Operators verwendet:<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
-|**use_netsend**|**int**|Ist ein Netzwerk-Popup, das verwendet wird, um den Operator zu benachrichtigen:<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
-|**has_email**|**int**|Operator besitzt eine E-Mail-Adresse:<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
-|**has_pager**|**int**|Operator besitzt eine Pageradresse:<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
-|**has_netsend**|**int**|Für den Operator wurde eine net send-Benachrichtigung konfiguriert.<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
+|**use_email**|**int**|E-Mail wird zum Senden der Benachrichtigung des Operators verwendet:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
+|**use_pager**|**int**|Pager wird zum Senden der Benachrichtigung des Operators verwendet:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
+|**use_netsend**|**int**|Ist ein Netzwerk-Popup, das verwendet wird, um den Operator zu benachrichtigen:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
+|**has_email**|**int**|Operator besitzt eine E-Mail-Adresse:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
+|**has_pager**|**int**|Operator besitzt eine Pageradresse:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
+|**has_netsend**|**int**|Für den Operator wurde eine net send-Benachrichtigung konfiguriert.<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese gespeicherte Prozedur muss von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

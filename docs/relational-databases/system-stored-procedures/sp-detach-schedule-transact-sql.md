@@ -1,4 +1,5 @@
 ---
+description: sp_detach_schedule (Transact-SQL)
 title: sp_detach_schedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19988c59d020d0f77d1f23bf0a210f2ae1488933
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3f81a771e8dc40d6eb27cb68ea3a62e37c3b6b99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447259"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,21 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id`Die ID des Auftrags, aus dem der Zeitplan entfernt werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, aus dem der Zeitplan entfernt werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'`Der Name des Auftrags, aus dem der Zeitplan entfernt werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, aus dem der Zeitplan entfernt werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @schedule_id = ] schedule_id`Die Zeitplan-ID des Zeitplans, der aus dem Auftrag entfernt werden soll. *schedule_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @schedule_id = ] schedule_id` Die Zeitplan-ID des Zeitplans, der aus dem Auftrag entfernt werden soll. *schedule_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @schedule_name = ] 'schedule_name'`Der Name des Zeitplans, der aus dem Auftrag entfernt werden soll. *schedule_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans, der aus dem Auftrag entfernt werden soll. *schedule_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *schedule_id* oder *schedule_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule`Gibt an, ob nicht verwendete Auftrags Zeitpläne gelöscht werden sollen. *delete_unused_schedule* ist vom Typ **Bit**. der Standardwert ist **0**. Dies bedeutet, dass alle Zeitpläne beibehalten werden, auch wenn keine Aufträge auf Sie verweisen. Wenn der Wert auf **1**festgelegt ist, werden nicht verwendete Auftrags Zeitpläne gelöscht, wenn keine Aufträge darauf verweisen.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Gibt an, ob nicht verwendete Auftrags Zeitpläne gelöscht werden sollen. *delete_unused_schedule* ist vom Typ **Bit**. der Standardwert ist **0**. Dies bedeutet, dass alle Zeitpläne beibehalten werden, auch wenn keine Aufträge auf Sie verweisen. Wenn der Wert auf **1**festgelegt ist, werden nicht verwendete Auftrags Zeitpläne gelöscht, wenn keine Aufträge darauf verweisen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

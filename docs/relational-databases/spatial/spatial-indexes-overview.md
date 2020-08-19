@@ -1,4 +1,5 @@
 ---
+description: Übersicht über räumliche Indizes
 title: Übersicht über räumliche Indizes | Microsoft-Dokumentation
 ms.date: 09/12/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ad5b6e9441eb9364ddeac03e13e5fe60542746f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4abd4b9c915a47318ccc8f13d67507af67f0e1d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448000"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -129,7 +130,7 @@ ms.locfileid: "85666986"
 >  Dieses Mosaikschema kann mit der Klausel USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) der [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung explizit angegeben werden.  
   
 ##### <a name="the-bounding-box"></a>Das umgebende Feld  
- Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier Koordinaten definiert, **(** _x-min_ **,** _y-min_ **)** und **(** _x-max_ **,** _y-max_ **)** , die als Eigenschaften des räumlichen Index gespeichert werden. Diese Koordinaten stellen Folgendes dar:  
+ Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier Koordinaten definiert, **(**_x-min_**,**_y-min_**)** und **(**_x-max_**,**_y-max_**)**, die als Eigenschaften des räumlichen Index gespeichert werden. Diese Koordinaten stellen Folgendes dar:  
   
 -   *x-min* ist die X-Koordinate der linken unteren Ecke des umgebenden Felds.  
   
@@ -142,11 +143,11 @@ ms.locfileid: "85666986"
 > [!NOTE]  
 >  Diese Koordinaten werden in der BOUNDING_BOX-Klausel der [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung angegeben.  
   
- Die Koordinaten **(** _x-min_ **,** _y-min_ **)** und **(** _x-max_ **,** _y-max_ **)** bestimmen die Position und die Größe des umgebenden Felds. Der Raum außerhalb des umgebenden Felds wird als einzelne Zelle behandelt, die die Nummer&nbsp;0 erhält.  
+ Die Koordinaten **(**_x-min_**,**_y-min_**)** und **(**_x-max_**,**_y-max_**)** bestimmen die Position und die Größe des umgebenden Felds. Der Raum außerhalb des umgebenden Felds wird als einzelne Zelle behandelt, die die Nummer&nbsp;0 erhält.  
   
  Der räumliche Index zerlegt den Raum im umgebenden Feld. Das Raster der Ebene&nbsp;1 der Rasterhierarchie füllt das umgebende Feld aus. Zur Platzierung eines geometrischen Objekts in der Rasterhierarchie vergleicht der räumliche Index die Koordinaten des Objekts mit den Koordinaten des umgebenden Felds.  
   
- Die folgende Abbildung zeigt die Punkte, die durch die Koordinaten **(** _x-min_ **,** _y-min_ **)** und **(** _x-max_ **,** _y-max_ **)** des umgebenden Felds definiert werden. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.  
+ Die folgende Abbildung zeigt die Punkte, die durch die Koordinaten **(**_x-min_**,**_y-min_**)** und **(**_x-max_**,**_y-max_**)** des umgebenden Felds definiert werden. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.  
   
  ![Umgebendes Feld mit Koordinaten und Zelle 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Umgebendes Feld mit Koordinaten und Zelle 0.")  
   
@@ -242,7 +243,7 @@ WHERE <SpatialColumn>.STDistance(@reference_object) IS NOT NULL
 ORDER BY <SpatialColumn>.STDistance(@reference_object) [;]  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
