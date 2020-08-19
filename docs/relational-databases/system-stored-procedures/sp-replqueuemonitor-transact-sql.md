@@ -1,4 +1,5 @@
 ---
+description: sp_replqueuemonitor (Transact-SQL)
 title: sp_replqueuemonitor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73b999f1f6ee2ba49209f5763be6bb42e777ef78
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b8b0f11e5b0f62c1e874dbeba947ea136f7ee274
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446832"
 ---
 # <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,15 +42,15 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Der Server muss für das Veröffentlichen konfiguriert sein. NULL gibt alle Verleger an.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Der Server muss für das Veröffentlichen konfiguriert sein. NULL gibt alle Verleger an.  
   
-`[ @publisherdb = ] 'publisher_db' ]`Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. NULL gibt alle Veröffentlichungsdatenbanken an.  
+`[ @publisherdb = ] 'publisher_db' ]` Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. NULL gibt alle Veröffentlichungsdatenbanken an.  
   
-`[ @publication = ] 'publication' ]`Der Name der Veröffentlichung. *Publication*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. NULL gibt alle Veröffentlichungen an.  
+`[ @publication = ] 'publication' ]` Der Name der Veröffentlichung. *Publication*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. NULL gibt alle Veröffentlichungen an.  
   
-`[ @tranid = ] 'tranid' ]`Die Transaktions-ID. *tranid*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. NULL gibt alle Transaktionen an.  
+`[ @tranid = ] 'tranid' ]` Die Transaktions-ID. *tranid*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. NULL gibt alle Transaktionen an.  
   
-`[ @queuetype = ] 'queuetype' ]`Der Typ der Warteschlange, in der Transaktionen gespeichert werden. Queue *Type* ist vom Datentyp **tinyint** . der Standardwert ist **0**. die folgenden Werte sind möglich.  
+`[ @queuetype = ] 'queuetype' ]` Der Typ der Warteschlange, in der Transaktionen gespeichert werden. Queue *Type* ist vom Datentyp **tinyint** . der Standardwert ist **0**. die folgenden Werte sind möglich.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -60,14 +61,14 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_replqueuemonitor** wird bei der Momentaufnahme-oder Transaktions Replikation mit Abonnements mit verzögertem Update über eine Warteschlange verwendet. Die Warteschlangennachrichten, die keine SQL-Befehle enthalten oder Teil eines umfassenden SQL-Befehls sind, werden nicht angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_replqueuemonitor**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Aktualisierbare Abonnements für die Transaktions Replikation](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Verwalten und Überwachen von Change Data Capture (SQL Server)
 title: Verwalten und Überwachen von Change Data Capture
 ms.date: 01/02/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 327adcd406e4fa79591529265acc2d6b23b3a044
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dfc040c4157cfd44a27a0b05a3bef42a1591aa2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446387"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
 
@@ -181,7 +182,7 @@ Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datensam
 Wenn Sie kumulative Updates oder Service Packs auf eine Instanz anwenden, kann die Instanz beim erneuten Starten im Skriptupgrademodus gestartet werden. In diesem Modus führt SQL Server einen Schritt zum Analysieren und Aktualisieren von internen CDC-Tabellen aus, wodurch Objekte wie Indizes in Capture-Tabellen gegebenenfalls neu erstellt werden. Abhängig von der Menge der enthaltenen Daten kann dieser Schritt einige Zeit in Anspruch nehmen oder hohen Transaktionsprotokollverbrauch für aktivierte CDC-Datenbanken verursachen.
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)
 - [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)

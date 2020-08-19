@@ -1,4 +1,5 @@
 ---
+description: sp_replshowcmds (Transact-SQL)
 title: sp_replshowcmds (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67cf4522b88e9922027a671feeda02b3305dbfc3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: beb5ba1371c3a3e8748e5a4963106d659e7dd31f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446822"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @maxtrans = ] maxtrans`Die Anzahl der Transaktionen, für die Informationen zurückgegeben werden sollen. *maxtrans* ist vom Datentyp **int**und hat den Standardwert **1**, womit die maximale Anzahl von Transaktionen mit ausstehender Replikation angegeben wird, für die **sp_replshowcmds** Informationen zurückgibt.  
+`[ @maxtrans = ] maxtrans` Die Anzahl der Transaktionen, für die Informationen zurückgegeben werden sollen. *maxtrans* ist vom Datentyp **int**und hat den Standardwert **1**, womit die maximale Anzahl von Transaktionen mit ausstehender Replikation angegeben wird, für die **sp_replshowcmds** Informationen zurückgibt.  
   
 ## <a name="result-sets"></a>Resultsets  
  **sp_replshowcmds** ist eine Diagnose Prozedur, die Informationen über die Veröffentlichungs Datenbank zurückgibt, von der Sie ausgeführt wird.  
@@ -51,7 +52,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**type**|**int**|Der Typ des Befehls.|  
 |**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] verwenden, um die Migrationsdaten zu bereinigen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_replshowcmds** wird bei der Transaktions Replikation verwendet.  
   
  Mithilfe **sp_replshowcmds**können Sie Transaktionen anzeigen, die derzeit nicht verteilt sind (die im Transaktionsprotokoll verbleibenden Transaktionen, die nicht an den Verteiler gesendet wurden).  
@@ -68,7 +69,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Fehlermeldungen](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [sp_replcmds &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [sp_repltrans &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   

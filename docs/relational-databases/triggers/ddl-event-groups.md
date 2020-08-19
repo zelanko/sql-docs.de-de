@@ -1,4 +1,5 @@
 ---
+description: DDL-Ereignisgruppen
 title: DDL-Ereignisgruppen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/28/2018
@@ -14,12 +15,12 @@ ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e4371ed373d7937f177dab5979c3e50fe1096c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1fdd05d9f22ccf806ff5da973be19c9644143134
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757655"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446332"
 ---
 # <a name="ddl-event-groups"></a>DDL-Ereignisgruppen
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85757655"
 > [!NOTE]  
 >  Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können ebenfalls DDL-Trigger oder Ereignisbenachrichtigungen auslösen. Testen Sie die DDL-Trigger oder Ereignisbenachrichtigungen, um ihre Reaktion auf gespeicherte Systemprozeduren, die ausgeführt werden, zu bestimmen. Die CREATE TYPE-Anweisung und die gespeicherte Prozedur **sp_addtype** lösen z.B. beide einen DDL-Trigger oder eine Ereignisbenachrichtigung aus, die für ein CREATE_TYPE-Ereignis erstellt wird.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Ereignisse  
  Die unter DDL_DATABASE_LEVEL_EVENTS aufgeführten Ereignisse werden auf der Server- (Instanz) oder Datenbankebene ausgeführt. Die unter DDL_SERVER_LEVEL_EVENTS aufgeführten Ereignisse werden nur auf der Serverebene ausgeführt.  
   
 |parent_type|type|name|  
@@ -315,7 +316,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Ereignisbenachrichtigungen](../../relational-databases/service-broker/event-notifications.md)   
  [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md)   
  [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md)  

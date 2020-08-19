@@ -1,4 +1,5 @@
 ---
+description: Gespeicherte Prozeduren von SQL Server Profiler (Transact-SQL)
 title: SQL Server Profiler gespeicherter Prozeduren (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c99c3db-0b04-46c3-aa59-d6f680522fdd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df298c59e95a799a42bbad856612c6502912ffe6
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 67176aa5448e68ede24896fe06f448f1523fce34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446708"
 ---
 # <a name="sql-server-profiler-stored-procedures-transact-sql"></a>Gespeicherte Prozeduren von SQL Server Profiler (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87122511"
 
  Ein Beispiel zum Verwenden gespeicherter Prozeduren der Ablaufverfolgung finden Sie unter [Erstellen einer Ablaufverfolgung &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Ereignisklassen in SQL Server: Referenz](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL-Ablauf Verfolgung](../../relational-databases/sql-trace/sql-trace.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

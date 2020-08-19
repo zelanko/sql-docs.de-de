@@ -1,4 +1,5 @@
 ---
+description: sp_reinitmergesubscription (Transact-SQL)
 title: sp_reinitmergesubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fbdcd6435b9fab8e65c39b97a6aaa1ac69a1e9dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8712640a1f5f1b2dd53e49d09610dd30b192b4cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446848"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,18 +41,18 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **all**.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **all**.  
   
-`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **all**.  
+`[ @subscriber = ] 'subscriber'` Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **all**.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Der Name der Abonnenten Datenbank. *subscriber_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **all**.  
+`[ @subscriber_db = ] 'subscriber_db'` Der Name der Abonnenten Datenbank. *subscriber_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **all**.  
   
-`[ @upload_first = ] 'upload_first'`Gibt an, ob Änderungen auf dem Abonnenten hochgeladen werden, bevor das Abonnement erneut initialisiert wird. *upload_first* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **True**gibt an, dass Änderungen hochgeladen werden, bevor das Abonnement erneut initialisiert wird. **False**gibt an, dass Änderungen nicht hochgeladen werden.  
+`[ @upload_first = ] 'upload_first'` Gibt an, ob Änderungen auf dem Abonnenten hochgeladen werden, bevor das Abonnement erneut initialisiert wird. *upload_first* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. **True**gibt an, dass Änderungen hochgeladen werden, bevor das Abonnement erneut initialisiert wird. **False**gibt an, dass Änderungen nicht hochgeladen werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_reinitmergesubscription** wird bei der Mergereplikation verwendet.  
   
  **sp_reinitmergesubscription** können vom Verleger aufgerufen werden, um Mergeabonnements erneut zu initialisieren. Wir empfehlen auch die erneute Ausführung des Momentaufnahme-Agents.  
@@ -68,7 +69,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_reinitmergesubscription**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Abonnements erneut initialisieren](../../relational-databases/replication/reinitialize-subscriptions.md)   
+ [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

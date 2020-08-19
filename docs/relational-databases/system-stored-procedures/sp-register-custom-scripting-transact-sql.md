@@ -1,4 +1,5 @@
 ---
+description: sp_register_custom_scripting (Transact-SQL)
 title: sp_register_custom_scripting (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80736db0e2356d3592744393ff8964ac6f6073c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 35e70da9de3239fa7f147acf8ffe5a6ecc724606
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446863"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,30 +41,30 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @type = ] 'type'`Der Typ der benutzerdefinierten gespeicherten Prozedur oder des Skripts, das registriert wird. *Type ist vom Datentyp* **varchar (16)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
+`[ @type = ] 'type'` Der Typ der benutzerdefinierten gespeicherten Prozedur oder des Skripts, das registriert wird. *Type ist vom Datentyp* **varchar (16)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|**setze**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine INSERT-Anweisung repliziert wird.|  
+|**insert**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine INSERT-Anweisung repliziert wird.|  
 |**update**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine UPDATE-Anweisung repliziert wird.|  
 |**delete**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine DELETE-Anweisung repliziert wird.|  
 |**custom_script**|Das Skript wird am Ende des DDL-Triggers (Data Definition Language) ausgeführt.|  
   
-`[ @value = ] 'value'`Der Name einer gespeicherten Prozedur oder eines Namens und der voll qualifizierte Pfad der [!INCLUDE[tsql](../../includes/tsql-md.md)] Skriptdatei, die registriert wird. der Wert ist vom Datentyp **nvarchar (1024)** und hat keinen Standard *Wert* .  
+`[ @value = ] 'value'` Der Name einer gespeicherten Prozedur oder eines Namens und der voll qualifizierte Pfad der [!INCLUDE[tsql](../../includes/tsql-md.md)] Skriptdatei, die registriert wird. der Wert ist vom Datentyp **nvarchar (1024)** und hat keinen Standard *Wert* .  
   
 > [!NOTE]  
 >  Wenn Sie NULL für *value*-Parameter angeben, wird die Registrierung eines zuvor registrierten Skripts aufgehoben. Dies entspricht dem Ausführen von [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
  Wenn der Wert des *Typs* **custom_script**ist, werden der Name und der vollständige Pfad einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Skriptdatei erwartet. Andernfalls muss *value* der Name einer registrierten gespeicherten Prozedur sein.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung, für die die benutzerdefinierte gespeicherte Prozedur oder das Skript registriert wird. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **null**.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die die benutzerdefinierte gespeicherte Prozedur oder das Skript registriert wird. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **null**.  
   
-`[ @article = ] 'article'`Der Name des Artikels, für den die benutzerdefinierte gespeicherte Prozedur oder das Skript registriert wird. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **null**.  
+`[ @article = ] 'article'` Der Name des Artikels, für den die benutzerdefinierte gespeicherte Prozedur oder das Skript registriert wird. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **null**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_register_custom_scripting** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  Diese gespeicherte Prozedur sollte ausgeführt werden, bevor Schemaänderungen an einer replizierten Tabelle vorgenommen werden. Weitere Informationen zur Verwendung dieser gespeicherten Prozedur finden Sie unter [Neugenerieren von benutzerdefinierten Transaktions Prozeduren, um Schema Änderungen widerzuspiegeln](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  

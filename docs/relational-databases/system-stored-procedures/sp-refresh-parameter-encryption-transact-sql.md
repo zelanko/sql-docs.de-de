@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_parameter_encryption (Transact-SQL)
 title: sp_refresh_parameter_encryption (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/11/2017
@@ -19,11 +20,12 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1af6c8584c9190bd4611eed4875ec146b6f3656b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446906"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -45,16 +47,16 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Argumente
 
-`[ @name = ] 'module_name'`Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *module_name* kann keine gespeicherte Prozedur Common Language Runtime (CLR) oder eine CLR-Funktion sein. *module_name* kann nicht Schema gebunden werden. *module_name* ist vom Typ `nvarchar` und hat keinen Standardwert. *module_name* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Objekte in der aktuellen Datenbank verweisen.
+`[ @name = ] 'module_name'` Der Name der gespeicherten Prozedur, der benutzerdefinierten Funktion, der Sicht, des DML-Triggers, des DDL-Triggers auf Datenbankebene oder des DDL-Triggers auf Serverebene. *module_name* kann keine gespeicherte Prozedur Common Language Runtime (CLR) oder eine CLR-Funktion sein. *module_name* kann nicht Schema gebunden werden. *module_name* ist vom Typ `nvarchar` und hat keinen Standardwert. *module_name* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Objekte in der aktuellen Datenbank verweisen.
 
-`[ @namespace = ] ' < class > '`Die Klasse des angegebenen Moduls. Wenn *module_name* ein DDL-auslöst ist, `<class>` ist erforderlich. `<class>` ist `nvarchar(20)` Gültige Eingaben sind `DATABASE_DDL_TRIGGER` und `SERVER_DDL_TRIGGER` .    
+`[ @namespace = ] ' < class > '` Die Klasse des angegebenen Moduls. Wenn *module_name* ein DDL-auslöst ist, `<class>` ist erforderlich. `<class>` ist `nvarchar(20)`. Gültige Eingaben sind `DATABASE_DDL_TRIGGER` und `SERVER_DDL_TRIGGER` .    
 
 ## <a name="return-code-values"></a>Rückgabecodewerte  
 
 0 (Erfolg) oder eine Zahl ungleich Null (Fehler)
 
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Die Verschlüsselungs Metadaten für die Parameter eines Moduls können veraltet sein, wenn:   
 * Die Verschlüsselungs Eigenschaften einer Spalte in einer Tabelle, auf die das Modul verweist, wurden aktualisiert. Beispielsweise wurde eine Spalte gelöscht, und es wurde eine neue Spalte mit demselben Namen, aber ein anderer Verschlüsselungstyp, ein verschlüsselter Verschlüsselungsschlüssel oder ein Verschlüsselungsalgorithmus hinzugefügt.  
@@ -62,7 +64,7 @@ Die Verschlüsselungs Metadaten für die Parameter eines Moduls können veraltet
 
 Wenn die Verschlüsselungs Eigenschaften einer Tabelle geändert werden, `sp_refresh_parameter_encryption` sollte für alle Module, die direkt oder indirekt auf die Tabelle verweisen, ausgeführt werden. Diese gespeicherte Prozedur kann für diese Module in beliebiger Reihenfolge aufgerufen werden, ohne dass der Benutzer zuerst das innere Modul aktualisieren muss, bevor es zu den Aufrufern wechselt.
 
-`sp_refresh_parameter_encryption`wirkt sich nicht auf Berechtigungen, erweiterte Eigenschaften oder Optionen aus, die `SET` dem-Objekt zugeordnet sind. 
+`sp_refresh_parameter_encryption` wirkt sich nicht auf Berechtigungen, erweiterte Eigenschaften oder Optionen aus, die `SET` dem-Objekt zugeordnet sind. 
 
 Um einen DDL-Trigger auf Serverebene zu aktualisieren, führen Sie diese gespeicherte Prozedur aus dem Kontext einer beliebigen Datenbank aus.
 

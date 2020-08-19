@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_rename_policy_category (Transact-SQL)
 title: sp_syspolicy_rename_policy_category (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d1098b01a4be513d2f81d15a1cb11c370cfa7f00
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b350a19bb19defbd1510f7ce13a82729c2cbe779
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446743"
 ---
 # <a name="sp_syspolicy_rename_policy_category-transact-sql"></a>sp_syspolicy_rename_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,16 +41,16 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'`Der Name der Richtlinien Kategorie, die Sie umbenennen möchten. *Name ist vom Datentyp* **vom Datentyp sysname**und muss angegeben werden, wenn *policy_category_id* NULL ist.  
+`[ @name = ] 'name'` Der Name der Richtlinien Kategorie, die Sie umbenennen möchten. *Name ist vom Datentyp* **vom Datentyp sysname**und muss angegeben werden, wenn *policy_category_id* NULL ist.  
   
-`[ @policy_category_id = ] policy_category_id`Der Bezeichner für die Richtlinien Kategorie, die Sie umbenennen möchten. *policy_category_id* ist vom *Datentyp* **int**und muss angegeben werden, wenn Name NULL ist.  
+`[ @policy_category_id = ] policy_category_id` Der Bezeichner für die Richtlinien Kategorie, die Sie umbenennen möchten. *policy_category_id* ist vom *Datentyp* **int**und muss angegeben werden, wenn Name NULL ist.  
   
-`[ @new_name = ] 'new_name'`Der neue Name für die Richtlinien Kategorie. *new_name* ist vom **Datentyp vom Datentyp sysname**und ist erforderlich. Darf nicht NULL und keine leere Zeichenfolge sein.  
+`[ @new_name = ] 'new_name'` Der neue Name für die Richtlinien Kategorie. *new_name* ist vom **Datentyp vom Datentyp sysname**und ist erforderlich. Darf nicht NULL und keine leere Zeichenfolge sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen sp_syspolicy_rename_policy_category im Kontext der Systemdatenbank msdb ausführen.  
   
  Sie müssen einen Wert für " *Name* " oder " *policy_category_id*" angeben. Keiner der Werte darf NULL sein. Um diese Werte abzurufen, fragen Sie die Systemsicht msdb.dbo.syspolicy_policy_categories ab.  
@@ -70,7 +71,7 @@ EXEC msdb.dbo.sp_syspolicy_rename_policy_category @name = N'Test Category 1'
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren der Richtlinien basierten Verwaltung &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_add_policy_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
  [sp_syspolicy_delete_policy_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)   

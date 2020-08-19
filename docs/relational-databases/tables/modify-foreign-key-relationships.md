@@ -1,4 +1,5 @@
 ---
+description: Ändern von Fremdschlüsselbeziehungen
 title: Ändern von Fremdschlüsselbeziehungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/25/2017
@@ -17,12 +18,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0c35f9ed49e8b11faf515ab7d270d2737a22d97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cfad7e7107c5391280331846e9275ef10112adb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446402"
 ---
 # <a name="modify-foreign-key-relationships"></a>Ändern von Fremdschlüsselbeziehungen
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "86007089"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So ändern Sie einen Fremdschlüssel mit:**  
   
@@ -81,7 +82,7 @@ ms.locfileid: "86007089"
      **Kategorie Allgemein**  
      Wenn die Kategorie erweitert ist, werden **Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen** und **Tabellen- und Spaltenspezifikation**angezeigt.  
   
-     **Check Existing Data on Creation or Re-Enabling**  
+     **Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen**  
      Überprüft alle Daten, die vor der Erstellung oder Reaktivierung der Einschränkung in der Tabelle vorhandenen sind, auf die Einschränkung hin.  
   
      **Kategorie Tabellen- und Spaltenspezifikation**  

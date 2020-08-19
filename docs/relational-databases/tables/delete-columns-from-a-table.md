@@ -1,4 +1,5 @@
 ---
+description: Spalten aus einer Tabelle löschen
 title: Spalten aus einer Tabelle löschen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/11/2017
@@ -16,12 +17,12 @@ ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdfb2aa26ccc46d7aca0b7b0a599552401f79741
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2ad600234ac931f408cdf60ba5b2a855823f8151
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446447"
 ---
 # <a name="delete-columns-from-a-table"></a>Spalten aus einer Tabelle löschen
 
@@ -38,7 +39,7 @@ In diesem Thema wird beschrieben, wie Tabellenspalten in [!INCLUDE[ssCurrent](..
 
    [Einschränkungen](#Restrictions)
 
-   [Sicherheit](#Security)
+   [Security](#Security)
 
 - **So entfernen Sie eine Spalte aus der Tabelle mithilfe von:**
 
@@ -75,7 +76,7 @@ Wenn die Spalte Einschränkungen oder andere Abhängigkeiten enthält, wird eine
 
 1. Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle, aus der Sie Spalten löschen möchten, und wählen Sie **Entwurf**aus.
 2. Klicken Sie mit der rechten Maustaste auf die zu löschende Spalte, und wählen Sie im Kontextmenü die Option **Spalte löschen** aus.
-3. Wenn die betreffende Spalte in eine Beziehung eingebunden ist (FOREIGN KEY oder PRIMARY KEY), werden Sie in einer Meldung aufgefordert, das Löschen der ausgewählten Spalten und der zugehörigen Beziehungen zu bestätigen. Wählen Sie die Option **Ja** aus.
+3. Wenn die betreffende Spalte in eine Beziehung eingebunden ist (FOREIGN KEY oder PRIMARY KEY), werden Sie in einer Meldung aufgefordert, das Löschen der ausgewählten Spalten und der zugehörigen Beziehungen zu bestätigen. Klicken Sie auf **Ja**.
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL
 

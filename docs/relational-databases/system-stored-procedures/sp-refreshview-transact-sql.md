@@ -1,4 +1,5 @@
 ---
+description: sp_refreshview (Transact-SQL)
 title: sp_refreshview (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbc12b5e9013e8cbb5fb223f473e68c2e1cab445
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11b605bd505a88215258afc39c24735d95e56ab6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446907"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @viewname = ] 'viewname'`Der Name der Ansicht. *viewName ist vom Datentyp* **nvarchar**und hat keinen Standardwert. *viewName* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Sichten in der aktuellen Datenbank verweisen.  
+`[ @viewname = ] 'viewname'` Der Name der Ansicht. *viewName ist vom Datentyp* **nvarchar**und hat keinen Standardwert. *viewName* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Sichten in der aktuellen Datenbank verweisen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn eine Sicht nicht mit SCHEMABINDING erstellt wird, sollten **sp_refreshview** ausgeführt werden, wenn Änderungen an den Objekten vorgenommen werden, die der Sicht zugrunde liegen, die sich auf die Definition der Sicht auswirken. Andernfalls liefert die Abfrage der Sicht möglicherweise unerwartete Ergebnisse.  
   
 ## <a name="permissions"></a>Berechtigungen  

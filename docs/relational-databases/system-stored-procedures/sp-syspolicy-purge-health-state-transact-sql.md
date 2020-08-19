@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_purge_health_state (Transact-SQL)
 title: sp_syspolicy_purge_health_state (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6c07d71e2ab4c9fe39882476eef25674718a17c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a01ee9be75223a081d19a9b71eb4d69ec150235c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639568"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446750"
 ---
 # <a name="sp_syspolicy_purge_health_state-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,14 +40,14 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'`Stellt den Knoten in Objekt-Explorer dar, auf dem Sie den Integritäts Status löschen möchten. *target_tree_root_with_id* ist vom Datentyp **nvarchar (400)** und hat den Standardwert NULL.  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` Stellt den Knoten in Objekt-Explorer dar, auf dem Sie den Integritäts Status löschen möchten. *target_tree_root_with_id* ist vom Datentyp **nvarchar (400)** und hat den Standardwert NULL.  
   
  Sie können in der Spalte target_query_expression_with_id der Systemsicht msdb.dbo.syspolicy_system_health_state Werte angeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen sp_syspolicy_purge_health_state im Kontext der Systemdatenbank msdb ausführen.  
   
  Wenn Sie diese gespeicherte Prozedur ganz ohne Parameter ausführen, wird der Systemzustandsstatus für alle Knoten im Objekt-Explorer gelöscht.  
@@ -66,7 +67,7 @@ EXEC msdb.dbo.sp_syspolicy_purge_health_state @target_tree_root_with_id = 'Serve
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Prozeduren der Richtlinien basierten Verwaltung &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

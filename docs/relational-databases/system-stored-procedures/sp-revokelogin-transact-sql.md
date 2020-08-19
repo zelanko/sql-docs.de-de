@@ -1,4 +1,5 @@
 ---
+description: sp_revokelogin (Transact-SQL)
 title: sp_revokelogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 95727b3cb27e5ac72af38374da01b203f1a076cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f2ccd140079e9a585ee67ce1b7c2208b9926f963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446766"
 ---
 # <a name="sp_revokelogin-transact-sql"></a>sp_revokelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85901335"
   Entfernt die Anmelde Einträge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für einen Windows-Benutzer oder eine Windows-Gruppe, die mit Create Login, **sp_grantlogin**oder **sp_denylogin**erstellt wurde.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Drop Login](../../t-sql/statements/drop-login-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [Drop Login](../../t-sql/statements/drop-login-transact-sql.md) .  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'`Der Name des Windows-Benutzers oder der Windows-Gruppe. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. " *Login* " kann ein beliebiger Windows-Benutzername oder eine Gruppe im Format " *Computer Name* \\ *Benutzer" oder "Domäne* \\ *Benutzer*" sein.  
+`[ @loginame = ] 'login'` Der Name des Windows-Benutzers oder der Windows-Gruppe. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. " *Login* " kann ein beliebiger Windows-Benutzername oder eine Gruppe im Format " *Computer Name* \\ *Benutzer" oder "Domäne* \\ *Benutzer*" sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -72,7 +73,7 @@ sp_revokelogin [ADVWORKS\john]
 EXEC sp_revokelogin 'Corporate\MollyA';  
 ```  
   
- Oder  
+ oder  
   
 ```  
 EXEC sp_revokelogin [Corporate\MollyA];  
