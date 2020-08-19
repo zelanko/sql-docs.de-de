@@ -1,4 +1,5 @@
 ---
+description: Implementieren einer Suche im Modus "Kein Cache" oder "Teilcache"
 title: Implementieren einer Suche im Modus „Kein Cache“ oder „Teilcache“ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a91460e1e357bb1fa0893de5f43ceab1e342ab39
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 75974b57a139413f43b44deebeb0e1488cfd5155
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919269"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430672"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementieren einer Suche im Modus "Kein Cache" oder "Teilcache"
 
@@ -64,11 +65,11 @@ ms.locfileid: "86919269"
   
     -   Klicken Sie auf **Ergebnisse einer SQL-Abfrage verwenden**, und erstellen Sie dann eine Abfrage im Fenster **SQL-Befehl** .  
   
-         Oder  
+         - oder -  
   
          Klicken Sie auf **Abfrage erstellen** , um mit den vom **Abfrage-Generator** bereitgestellten grafischen Tools eine Abfrage zu erstellen.  
   
-         Oder  
+         - oder -  
   
          Klicken Sie auf **Durchsuchen** , um eine SQL-Anweisung aus einer Datei zu importieren.  
   
@@ -111,7 +112,7 @@ ms.locfileid: "86919269"
   
 14. Klicken Sie auf **OK** , um die Änderungen an der Suchtransformation zu speichern, und führen Sie dann das Paket aus.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server Integration Services-Transformationen](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

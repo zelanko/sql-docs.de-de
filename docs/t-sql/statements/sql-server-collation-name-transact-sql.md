@@ -1,4 +1,5 @@
 ---
+description: SQL Server-Sortierungsname (Transact-SQL)
 title: Name der SQL Server-Sortierung (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/21/2019
@@ -17,12 +18,12 @@ ms.assetid: 56483d24-add7-483d-9b96-c6fda460ddbc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b3c1c19be32a8d023a3f151cb29f7acf210d36b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 11608103a07937dd1c2785369d799e1171769fe4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444662"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>SQL Server-Sortierungsname (Transact-SQL)
 
@@ -74,7 +75,7 @@ WHERE name LIKE 'SQL%';
 > [!NOTE]
 > Verwenden Sie für die Sortierreihenfolgen-ID 80 eine der Windows-Sortierungen mit der Codepage 1250 und der Binärreihenfolge. Beispiel: Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [Konstanten](../../t-sql/data-types/constants-transact-sql.md)

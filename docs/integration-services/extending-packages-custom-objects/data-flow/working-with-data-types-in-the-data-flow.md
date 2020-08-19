@@ -1,4 +1,5 @@
 ---
+description: Verwenden von Datentypen im Datenfluss
 title: Arbeiten mit Datentypen im Datenfluss | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5563b1f77167a68a0c24deb74f63a699c0a75eb5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d3ca770924ba29785c3bf662bfa5df8ef87f341
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86903277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430592"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Verwenden von Datentypen im Datenfluss
 
@@ -123,7 +124,7 @@ ms.locfileid: "86903277"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_GUID>|System.Guid|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I1>|System.SByte|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I2>|System.Int16|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I4>|System. Int32|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I4>|System.Int32|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I8>|System.Int64|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_BOOL>|System.Boolean|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_R4>|System.Single|  
@@ -159,7 +160,7 @@ ms.locfileid: "86903277"
 > [!NOTE]  
 >  Die <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>-Methode gibt keinen Wert für den DT_DBTIMESTAMPOFFSET-Datentyp zurück, und es tritt ein <xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException> auf. Sie müssen den DT_DBTIMESTAMPOFFSET-Datentyp in einen der Datums-/Zeitdatentypen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] konvertieren, die einem verwalteten Datentyp zugeordnet werden können. Eine Liste der Datums-/Zeitdatentypen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], die einem verwalteten Datentyp zugeordnet werden können, finden Sie in der Tabelle im vorhergehenden Abschnitt "Zuordnungen zwischen Integration Services und verwalteten Datentypen". Informationen zur Konvertierung dieser Datentypen finden Sie unter [Integration Services-Datentypen](../../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>   
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>   
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>   

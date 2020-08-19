@@ -1,4 +1,5 @@
 ---
+description: Transformation für Zeilenstichproben
 title: Transformation für Zeilenstichproben | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a21325c9f6b2058efa83c60baadfb0cebcb5ded
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1520897196180ca3d181e76120fe35c6b81e45db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430642"
 ---
 # <a name="row-sampling-transformation"></a>Transformation für Zeilenstichproben
 
@@ -64,7 +65,7 @@ ms.locfileid: "86919511"
 ## <a name="row-sampling-transformation-editor-sampling-page"></a>Transformations-Editor für Zeilenstichprobe (Seite Stichprobenentnahme)
   Im Dialogfeld **Transformations-Editor für Zeilenstichprobe** können Sie einen Teil der Eingabe mithilfe der angegebenen Anzahl von Zeilen als Stichprobe entnehmen. Durch diese Transformation wird die Eingabe in zwei getrennte Ausgaben geteilt.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Anzahl von Zeilen**  
  Geben Sie die Anzahl der Zeilen in der Eingabe an, die als Stichprobe verwendet werden sollen.  
   

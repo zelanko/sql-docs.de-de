@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKALLOC (Transact-SQL)
 title: DBCC CHECKALLOC (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/14/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 3b85dbd8d97583b6895dfb61bf7d0f50197f0635
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b4631e88e76aeb9657327d9dbe4d6300b36b70df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459957"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 
@@ -153,7 +154,7 @@ DBCC CHECKALLOC meldet außerdem eine Zuordnungszusammenfassung für jeden Index
 |Partitions-ID|Nur interne Verwendung.|  
 |Zuordnungseinheits-ID|Nur interne Verwendung.|  
 |Daten in Zeilen|Seiten enthalten Index- oder Heapdaten.|  
-|LOB-Daten|Seiten enthalten **varchar(max)** -, **nvarchar(max)** -, **varbinary(max)** -, **text**-, **ntext**-, **xml**- und **image**-Daten.|  
+|LOB-Daten|Seiten enthalten **varchar(max)**-, **nvarchar(max)**-, **varbinary(max)**-, **text**-, **ntext**-, **xml**- und **image**-Daten.|  
 |Zeilenüberlaufdaten|Seiten enthalten Daten einer Spalte mit variabler Länge, die durch Ausführen eines Pushs außerhalb von Zeilen verschoben wurden.|  
   
 DBCC CHECKALLOC gibt das folgende Resultset zurück (die tatsächlichen Werte können davon abweichen), außer wenn ESTIMATEONLY oder NO_INFOMSGS angegeben wird.
