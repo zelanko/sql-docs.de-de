@@ -1,4 +1,5 @@
 ---
+description: Lock:Timeout (timeout &gt; 0)-Ereignisklasse
 title: Lock:Timeout (timeout &gt; 0)-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,18 +13,18 @@ ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19dd9d5c8f4a5c9c4d37a6f7ce54f061d8bc0e47
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1219ff15ea4aa2f5836c6adb792884c557d9e698
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448642"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0)-Ereignisklasse
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Die **Lock:Timeout (timeout > 0)** -Ereignisklasse gibt an, dass für die Anforderung einer Sperre für eine Ressource, z.B. eine Seite, ein Timeout aufgetreten ist, da eine andere Transaktion eine blockierende Sperre für die angeforderte Ressource aufrechterhält. Diese Ereignisklasse unterscheidet sich von der **Lock:Timeout** -Ereignisklasse nur dadurch, dass sie keine Ereignisse einschließt, in denen der Timeoutwert gleich 0 (null) ist.  
+  Die **Lock:Timeout (timeout > 0)**-Ereignisklasse gibt an, dass für die Anforderung einer Sperre für eine Ressource, z.B. eine Seite, ein Timeout aufgetreten ist, da eine andere Transaktion eine blockierende Sperre für die angeforderte Ressource aufrechterhält. Diese Ereignisklasse unterscheidet sich von der **Lock:Timeout** -Ereignisklasse nur dadurch, dass sie keine Ereignisse einschließt, in denen der Timeoutwert gleich 0 (null) ist.  
   
- Schließen Sie die **Lock:Timeout (timeout > 0)** -Ereignisklasse in Ablaufverfolgungen ein, bei denen Sie Sperren oder sonstige Prozesse mit einem Timeoutwert von 0 verwenden. Dies ermöglicht Ihnen, festzustellen, wo tatsächlich Timeouts auftreten, ohne dass Timeouts mit dem Wert 0 angezeigt werden.  
+ Schließen Sie die **Lock:Timeout (timeout > 0)**-Ereignisklasse in Ablaufverfolgungen ein, bei denen Sie Sperren oder sonstige Prozesse mit einem Timeoutwert von 0 verwenden. Dies ermöglicht Ihnen, festzustellen, wo tatsächlich Timeouts auftreten, ohne dass Timeouts mit dem Wert 0 angezeigt werden.  
   
 ## <a name="locktimeout-timeout--0-event-class-data-columns"></a>Datenspalten für die Lock:Timeout (timeout > 0)-Ereignisklasse  
   

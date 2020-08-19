@@ -1,4 +1,5 @@
 ---
+description: Command (ADO/WFC-Syntax)
 title: Command (ADO-WFC-Syntax) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61b5a54778bb680b68e923d198831d770973d1a7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fcbe8174b2866f3edfd9676d7873216fd16f5751
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450892"
 ---
 # <a name="command-ado---wfc-syntax"></a>Command (ADO/WFC-Syntax)
 ## <a name="package-commswfcdata"></a>Paket "com. ms. wfc. Data"  
@@ -44,7 +45,7 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- Die **ExecuteUpdate** -Methode ist eine spezielle Case-Methode, die die zugrunde liegende ADO **Execute** -Methode mit bestimmten Parametern aufruft. Die **ExecuteUpdate** -Methode unterstützt die Rückgabe eines **Recordset** -Objekts nicht, sodass der *options* -Parameter der **Execute** -Methode mit **AdoEnums. ExecuteOptions. norecords**geändert wird. Nachdem die **Execute** -Methode abgeschlossen wurde, wird der aktualisierte *recordsafffiziert* -Parameter an die **ExecuteUpdate** -Methode zurückgegeben, die schließlich als **int**zurückgegeben wird.  
+ Die **ExecuteUpdate** -Methode ist eine spezielle Case-Methode, die die zugrunde liegende ADO **Execute** -Methode mit bestimmten Parametern aufruft. Die **ExecuteUpdate** -Methode unterstützt die Rückgabe eines **Recordset** -Objekts nicht, sodass der *options* -Parameter der **Execute** -Methode mit **AdoEnums.Executeoptions. norecords**geändert wird. Nachdem die **Execute** -Methode abgeschlossen wurde, wird der aktualisierte *recordsafffiziert* -Parameter an die **ExecuteUpdate** -Methode zurückgegeben, die schließlich als **int**zurückgegeben wird.  
   
 ### <a name="properties"></a>Eigenschaften  
   

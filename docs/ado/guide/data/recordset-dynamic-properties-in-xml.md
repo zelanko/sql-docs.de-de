@@ -1,4 +1,5 @@
 ---
+description: Dynamische Recordseteigenschaften in XML
 title: Dynamische Recordset-Eigenschaften in XML | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9d19ded093cd10a7670b31cd2d5c78a475950d2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad241bc794a3f7e462031691baf068928fb300c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452972"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>Dynamische Recordseteigenschaften in XML
 Die folgenden recordsetanbieter-spezifischen Eigenschaften (von der Client Cursor-Engine) werden derzeit im XML-Format beibehalten:  

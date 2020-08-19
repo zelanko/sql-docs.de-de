@@ -1,4 +1,5 @@
 ---
+description: Integration Services-Transaktionen
 title: Integration Services-Transformationen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46c42deda5b2b66d2979136ad6a82e0ad80042be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: eee7131c831215278a8754efa913add075cfb57d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449777"
 ---
 # <a name="integration-services-transactions"></a>Integration Services-Transaktionen
 
@@ -161,7 +162,7 @@ Es ist möglich, dass ein Paket nicht miteinander verbundene Transaktionen in ei
   
 -   Blog-Artikel [How to Use Transactions in SQL Server Integration Services (SSIS)](https://go.microsoft.com/fwlink/?LinkId=157783)(Verwenden von Transaktionen in SQL Server Integration Services (SSIS)) unter www.mssqltips.com  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Vererbte Transaktionen](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   
  [Mehrere Transaktionen](https://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   

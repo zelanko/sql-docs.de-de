@@ -1,4 +1,5 @@
 ---
+description: Abrufen von Resultsets in Datenströme
 title: Abrufen von Resultsets in Streams | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b20363f3ffae96750046ab98bd623ea44d68a8e2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 53dcb66eb2abb311b1114928a8696c6502454770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452922"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Abrufen von Resultsets in Datenströme
 Anstatt Ergebnisse im herkömmlichen **Recordset** -Objekt zu empfangen, kann ADO Abfrageergebnisse stattdessen in einen Stream abrufen. Das ADO- **Streamobjekt** (oder andere Objekte, die die com **IStream** -Schnittstelle unterstützen, z. b. asp- **Anforderungs** -und- **Antwort** Objekte), kann verwendet werden, um diese Ergebnisse zu enthalten Eine Verwendung für diese Funktion ist das Abrufen von Ergebnissen im XML-Format. Mit SQL Server beispielsweise können XML-Ergebnisse auf verschiedene Weise zurückgegeben werden, z. b. die Verwendung der for XML-Klausel mit einer SQL SELECT-Abfrage oder eine XPath-Abfrage.  

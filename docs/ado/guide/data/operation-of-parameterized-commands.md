@@ -1,4 +1,5 @@
 ---
+description: Verarbeitung parametrisierter Befehle
 title: Parametrisierte Befehle | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17d2d282eddcd358d8b3efe90ffda2d40e9e1574
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 36934de15041ddec97b0cc266a980f4908518a24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453102"
 ---
 # <a name="operation-of-parameterized-commands"></a>Verarbeitung parametrisierter Befehle
 Wenn Sie mit einem großen untergeordneten **Recordset**arbeiten, besonders im Vergleich zur Größe des übergeordneten **Recordsets**, aber nur auf ein paar untergeordneter Kapitel zugreifen müssen, ist es möglicherweise effizienter, einen parametrisierten Befehl zu verwenden.  

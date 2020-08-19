@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 1-1: Erstellen von Arbeitsordnern und Umgebungsvariablen'
 title: 'Schritt 1: Erstellen von Arbeitsordnern und Umgebungsvariablen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 32e0f638af3978a0bf9b938b7131b7e86431f6a6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c91be2fffde29a362dd73da41159b4a4658bce3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449744"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lektion 1-1: Erstellen von Arbeitsordnern und Umgebungsvariablen
 
@@ -36,9 +37,9 @@ Wenn Sie planen, die Pakete auf einem anderen Computer bereitzustellen, müssen 
   
 1.  Klicken Sie mit der rechten Maustaste auf das Menü Start, und klicken Sie dann auf Suchen.  
   
-2.  Klicken Sie auf **Lokaler Datenträger (C:)** .  
+2.  Klicken Sie auf **Lokaler Datenträger (C:)**.  
   
-3.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie anschließend auf **Ordner**.  
+3.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie auf **Ordner**.  
   
 4.  Benennen Sie den neuen Ordner in **DeploymentTutorial**um.  
   

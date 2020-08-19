@@ -1,4 +1,5 @@
 ---
+description: Shape-Befehle im Allgemeinen
 title: Shape-Befehle im allgemeinen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0554da0486b58aff8da6fcf012732b6012f70ae6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7a0364d3b123f5d042a6e008a4312217e746b5b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452852"
 ---
 # <a name="shape-commands-in-general"></a>Shape-Befehle im Allgemeinen
 Die Daten Strukturierung definiert die Spalten eines geformten **Recordsets**, die Beziehungen zwischen den Entitäten, die durch die Spalten dargestellt werden, und die Art und Weise, in der das **Recordset** mit Daten aufgefüllt wird.  

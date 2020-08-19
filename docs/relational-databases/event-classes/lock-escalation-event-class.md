@@ -1,4 +1,5 @@
 ---
+description: Lock:Escalation-Ereignisklasse
 title: Lock:Escalation-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,16 +14,16 @@ ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec405817bc9ce89dd150adfcc2887ba2c703d556
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1a4185e9234d9ee0a19acc0dfba0879c31ccfc3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448664"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation-Ereignisklasse
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Die **Lock:Escalation** -Ereignisklasse zeigt an, dass eine differenziertere Sperre in eine gröbere Sperre konvertiert wurde (z.B. eine Zeilensperre, die in Objektsperre konvertiert wurde). Die Ausweitungsereignisklasse hat die Ereignis-ID 60.  
+   Die **Lock:Escalation**-Ereignisklasse zeigt an, dass eine differenziertere Sperre in eine gröbere Sperre konvertiert wurde (z.B. eine Zeilensperre, die in eine Objektsperre konvertiert wurde). Die Ausweitungsereignisklasse hat die Ereignis-ID 60.  
   
 ## <a name="lockescalation-event-class-data-columns"></a>Datenspalten der Lock:Escalation-Ereignisklasse  
   
@@ -57,7 +58,7 @@ ms.locfileid: "85737206"
 |**StartTime**|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  
 |**TextData**|**ntext**|Der Text der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, die die Sperrenausweitung ausgelöst hat.|1|Ja|  
 |**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
-|**Typ**|**int**|Granularität der Sperrenausweitung:<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT (Tabellenebene)<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13 = ALLOCATION_UNIT|57|Ja|  
+|**Type**|**int**|Granularität der Sperrenausweitung:<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT (Tabellenebene)<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13 = ALLOCATION_UNIT|57|Ja|  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird mit der `sp_trace_create` -Prozedur eine Ablaufverfolgung erstellt, mit `sp_trace_setevent` werden der Ablaufverfolgung Spalten für die Sperrenausweitung hinzugefügt, und mit `sp_trace_setstatus` wird die Ablaufverfolgung gestartet. In Anweisungen wie `EXEC sp_trace_setevent @TraceID, 60, 22, 1`zeigt die Zahl `60` die Ausweitungsereignisklasse und die Zahl `22` die **ObjectID** -Spalte an. Durch `1` wird das Ablaufverfolgungsereignis auf ON festgelegt.  

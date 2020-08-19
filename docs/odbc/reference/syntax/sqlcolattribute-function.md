@@ -1,4 +1,5 @@
 ---
+description: SQLColAttribute-Funktion
 title: SQLColAttribute-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c94de3dfc7036277f8be56c401326cdab07a9606
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5cc7020300fd9099b70ed6f33716f343d47d571
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448815"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute-Funktion
 **Konformitäts**  
@@ -67,8 +68,8 @@ SQLRETURN SQLColAttribute (
   
  Wenn " *charakteriattributeptr* " gleich NULL ist, gibt *stringlengthptr* weiterhin die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten) zurück, die im Puffer zurückgegeben werden können, auf den von " *charakteriattributeptr*" gezeigt wird.  
   
- *Pufferlänge*  
- Der Wenn *fieldidentifier* ein ODBC-definiertes Feld ist und " *attributeptr* " auf eine Zeichenfolge oder einen Binär Puffer zeigt, sollte dieses Argument die \*Länge von " *charakteriattributeptr*" sein. Wenn *fieldidentifier* ein ODBC-definiertes Feld und \*das *Attribut Attribut*PTR eine ganze Zahl ist, wird dieses Feld ignoriert. Wenn das * \*Attribut attributeptr* eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlcolattributew**), muss das *BufferLength* -Argument eine gerade Zahl sein. Wenn *fieldidentifier* ein Treiber definiertes Feld ist, gibt die Anwendung die Art des Felds für den Treiber-Manager an, indem das *BufferLength* -Argument festgelegt wird. *BufferLength* kann die folgenden Werte aufweisen:  
+ *BufferLength*  
+ Der Wenn *fieldidentifier* ein ODBC-definiertes Feld ist und " *attributeptr* " auf eine Zeichenfolge oder einen Binär Puffer zeigt, sollte dieses Argument die Länge von " \* *charakteriattributeptr*" sein. Wenn *fieldidentifier* ein ODBC-definiertes Feld und \* das *Attribut Attribut*PTR eine ganze Zahl ist, wird dieses Feld ignoriert. Wenn das * \* Attribut attributeptr* eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlcolattributew**), muss das *BufferLength* -Argument eine gerade Zahl sein. Wenn *fieldidentifier* ein Treiber definiertes Feld ist, gibt die Anwendung die Art des Felds für den Treiber-Manager an, indem das *BufferLength* -Argument festgelegt wird. *BufferLength* kann die folgenden Werte aufweisen:  
   
 -   Wenn ' *charakteriattributeptr* ' ein Zeiger auf einen Zeiger ist, muss *BufferLength* den Wert SQL_IS_POINTER.  
   
@@ -81,7 +82,7 @@ SQLRETURN SQLColAttribute (
  *Stringlengthptr*  
  Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes (mit Ausnahme des NULL-Beendigungs Bytes für Zeichendaten) zurückgegeben werden soll, die in *-Wert*attributeptr*zurückgegeben werden können.  
   
- Wenn die Anzahl von Bytes, die für die Rückgabe verfügbar sind, größer oder gleich *BufferLength*ist, werden die Deskriptorinformationen in \* *der* Zeichenfolge für Zeichendaten auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt und vom Treiber auf Null enden.  
+ Wenn die Anzahl von Bytes, die für die Rückgabe verfügbar sind, größer oder gleich *BufferLength*ist, werden die Deskriptorinformationen in der Zeichenfolge für Zeichendaten \* *CharacterAttributePtr* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt und vom Treiber auf Null enden.  
   
  Für alle anderen Datentypen wird der Wert von *BufferLength* ignoriert, und der Treiber geht davon aus, dass die Größe von **charakteriattributeptr* 32 Bits entspricht.  
   
@@ -94,10 +95,10 @@ SQLRETURN SQLColAttribute (
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLColAttribute** entweder SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die häufig von **SQLColAttribute** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01004|Zeichen folgen Daten, rechts abgeschnitten|Der Puffer \*Wert *attributeptr* war nicht groß genug, um den gesamten Zeichen folgen Wert zurückzugeben, sodass der Zeichen folgen Wert abgeschnitten wurde. Die Länge des nicht abgeschnittene Zeichen folgen Werts wird in **stringlengthptr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01004|Zeichen folgen Daten, rechts abgeschnitten|Der Puffer \* Wert *attributeptr* war nicht groß genug, um den gesamten Zeichen folgen Wert zurückzugeben, sodass der Zeichen folgen Wert abgeschnitten wurde. Die Länge des nicht abgeschnittene Zeichen folgen Werts wird in **stringlengthptr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07005|Die vorbereitete Anweisung ist keine *Cursor Spezifikation* .|Die mit dem *StatementHandle* verknüpfte Anweisung hat kein Resultset zurückgegeben, und *fieldidentifier* wurde nicht SQL_DESC_COUNT. Es waren keine zu beschreiften Spalten vorhanden.|  
 |07009|Ungültiger deskriptorindex.|(DM) der für *ColumnNumber* angegebene Wert war gleich 0, und das SQL_ATTR_USE_BOOKMARKS Statement-Attribut wurde SQL_UB_OFF.<br /><br /> Der für das Argument *ColumnNumber* angegebene Wert war größer als die Anzahl der Spalten im Resultset.|  
 |HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die Fehlermeldung, die von **SQLGetDiagField** aus der Diagnosedaten Struktur zurückgegeben wird, beschreibt den Fehler und die Ursache.|  
@@ -105,7 +106,7 @@ SQLRETURN SQLColAttribute (
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen. Anschließend wurde die Funktion erneut für " *StatementHandle*" aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
 |HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese aynchronous-Funktion wurde noch ausgeführt, als "SQLColAttribute" aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) die Funktion wurde vor dem Aufrufen von **SQLPrepare**, **SQLExecDirect**oder einer Katalog Funktion für das *StatementHandle*aufgerufen.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *StatementHandle* aufgerufen und wird noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
 |HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
-|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) " * \*Merkmal attributeptr* " ist eine Zeichenfolge, und *BufferLength* war kleiner als 0 (null), aber nicht gleich SQL_NTS.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) " * \* Merkmal attributeptr* " ist eine Zeichenfolge, und *BufferLength* war kleiner als 0 (null), aber nicht gleich SQL_NTS.|  
 |HY091|Ungültiger Deskriptorfeldbezeichner.|Der für das Argument *fieldidentifier* angegebene Wert war keiner der definierten Werte und war kein von der Implementierung definierter Wert.|  
 |HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Treiber nicht fähig|Der für das Argument " *fieldidentifier* " angegebene Wert wurde vom Treiber nicht unterstützt.|  
@@ -121,13 +122,13 @@ SQLRETURN SQLColAttribute (
 ## <a name="comments"></a>Kommentare  
  Informationen dazu, wie Anwendungen die von **SQLColAttribute**zurückgegebenen Informationen verwenden, finden Sie unter [Resultsetmetadaten](../../../odbc/reference/develop-app/result-set-metadata.md).  
   
- **SQLColAttribute** gibt Informationen entweder in \* *numerisintributeptr* oder in \*" *charakteriattributeptr*" zurück. Ganzzahlige Informationen werden \*in *numerisintributeptr* als SQLLEN-Wert zurückgegeben. alle anderen Informationsformate werden in der \*Datei " *charakteriattributeptr*" zurückgegeben. Wenn Informationen in \* *numerisintributeptr*zurückgegeben werden, ignoriert der Treiber die *Attribute attributeptr*, *BufferLength*und *stringlengthptr*. Wenn Informationen in \*" *attributeptr*" zurückgegeben werden, ignoriert der Treiber " *numerisintributeptr*".  
+ **SQLColAttribute** gibt Informationen entweder in \* *numerisintributeptr* oder in " \* *charakteriattributeptr*" zurück. Ganzzahlige Informationen werden in " \* *numeriingtributeptr* " als SQLLEN-Wert zurückgegeben. alle anderen Informationsformate werden in " \* *charakteriattributeptr*" zurückgegeben. Wenn Informationen in \* *numerisintributeptr*zurückgegeben werden, ignoriert der Treiber die *Attribute attributeptr*, *BufferLength*und *stringlengthptr*. Wenn Informationen in " \* *attributeptr*" zurückgegeben werden, ignoriert der Treiber " *numerisintributeptr*".  
   
  **SQLColAttribute** gibt Werte aus den Deskriptorfeldern der IRD zurück. Die-Funktion wird mit einem Anweisungs Handle anstelle eines Deskriptorhandles aufgerufen. Die von SQLColAttribute für die weiter unten in diesem Abschnitt *aufgeführten Werte,* die von **SQLColAttribute** zurückgegeben werden, können auch durch Aufrufen von **SQLGetDescField** mit dem entsprechenden IRD-Handle abgerufen werden.  
   
  Die aktuell definierten Deskriptorfelder, die Version von ODBC, in der Sie eingeführt wurden, und die Argumente, in denen Informationen für Sie zurückgegeben werden, werden weiter unten in diesem Abschnitt angezeigt. Weitere deskriptortypen können von Treibern definiert werden, um unterschiedliche Datenquellen zu nutzen.  
   
- Ein ODBC 3. der *x* -Treiber muss einen Wert für jedes der Deskriptorfelder zurückgeben. Wenn ein Deskriptorfeld nicht für einen Treiber oder eine Datenquelle gilt und sofern nicht anders angegeben, gibt der Treiber 0 \*in *stringlengthptr* oder eine leere Zeichenfolge in **charakteriattributeptr*zurück.  
+ Ein ODBC 3. der *x* -Treiber muss einen Wert für jedes der Deskriptorfelder zurückgeben. Wenn ein Deskriptorfeld nicht für einen Treiber oder eine Datenquelle gilt und sofern nicht anders angegeben, gibt der Treiber 0 in \* *stringlengthptr* oder eine leere Zeichenfolge in **charakteriattributeptr*zurück.  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
  ODBC 3. die *x* -Funktion **SQLColAttribute** ersetzt den veralteten ODBC 2. *x* -Funktion **SQLColAttribute**. Beim Zuordnen von **SQLColAttribute** zu **SQLColAttribute** (bei ODBC 2.* die x* -Anwendung arbeitet mit ODBC 3. *x* -Treiber) oder **SQLColAttribute** **SQLColAttribute** zuordnen (bei ODBC 3.* die x* -Anwendung arbeitet mit ODBC 2. *x* -Treiber), der Treiber-Manager übergibt entweder den Wert von *fieldidentifier* über, ordnet ihn einem neuen Wert zu oder gibt wie folgt einen Fehler zurück:  
@@ -145,7 +146,7 @@ SQLRETURN SQLColAttribute (
   
  In der folgenden Tabelle sind die von **SQLColAttribute**zurückgegebenen deskriptortypen aufgeführt. Der Typ für " *Numeri-tributeptr* "-Werte ist " **sqllen \* **".  
   
-|*FieldIdentifier*|Informationen<br /><br /> zurückgegeben in|BESCHREIBUNG|  
+|*FieldIdentifier*|Information<br /><br /> zurückgegeben in|Beschreibung|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1,0)|*Numeri| tributeptr*|SQL_TRUE, wenn die Spalte eine autoincrementierung-Spalte ist.<br /><br /> SQL_FALSE, wenn die Spalte keine autoincrementierung-Spalte ist oder nicht numerisch ist.<br /><br /> Dieses Feld ist nur für numerische Datentyp Spalten gültig. Eine Anwendung kann Werte in eine Zeile einfügen, die eine AUTOINCREMENT-Spalte enthält, aber in der Regel keine Werte in der Spalte aktualisieren können.<br /><br /> Wenn eine Einfügung in eine AUTOINCREMENT-Spalte eingefügt wird, wird während der Einfügezeit ein eindeutiger Wert in die Spalte eingefügt. Das Inkrement ist nicht definiert, sondern ist Datenquellen spezifisch. Eine Anwendung sollte nicht davon ausgehen, dass eine AUTOINCREMENT-Spalte an einem bestimmten Punkt beginnt oder um einen bestimmten Wert erhöht.|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3,0)|*CharacterAttributePtr*|Der Name der Basis Spalte für die Resultsetspalte. Wenn kein Basis Spaltenname vorhanden ist (wie bei Spalten, bei denen es sich um Ausdrücke handelt), enthält diese Variable eine leere Zeichenfolge.<br /><br /> Diese Informationen werden aus dem Feld SQL_DESC_BASE_COLUMN_NAME Datensatz von IRD zurückgegeben, das ein Schreib geschütztes Feld ist.|  
@@ -180,7 +181,7 @@ SQLRETURN SQLColAttribute (
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Binden eines Puffers an eine Spalte in einem Resultset|[SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |Abbrechen der Anweisungs Verarbeitung|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
@@ -305,7 +306,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Header Dateien](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC-Beispielprogramm](../../../odbc/reference/sample-odbc-program.md)

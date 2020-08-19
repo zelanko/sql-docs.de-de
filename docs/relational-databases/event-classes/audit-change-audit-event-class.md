@@ -1,4 +1,5 @@
 ---
+description: Audit Change Audit-Ereignisklasse
 title: Audit Change Audit-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28009f6a84ef11668b84ae5fd8ff5c6f08a6a9aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7255e91ed01ed5800053a274831e43aebaf8e1e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448677"
 ---
 # <a name="audit-change-audit-event-class"></a>Audit Change Audit-Ereignisklasse
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85693322"
 |**NTUserName**|**nvarchar**|Windows-Benutzername.|6|Ja|  
 |**OwnerName**|**nvarchar**|Datenbank-Benutzername des Objektbesitzers.|37|Ja|  
 |**RequestID**|**int**|Die ID der Anforderung, die die Anweisung enthält.|49|Ja|  
-|**ServerName**|**nvarchar**|Dies ist der Name der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
+|**ServerName**|**nvarchar**|Name der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
 |**SessionLoginName**|**nvarchar**|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. B. mit Login1 eine Verbindung zu [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und mit Login2 eine Anweisung ausführen, zeigt **SessionLoginName** Login1 an, und **LoginName** zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |**SPID**|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Ja|  
 |**StartTime**|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  

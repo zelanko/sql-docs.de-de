@@ -1,4 +1,5 @@
 ---
+description: Leistungsprobleme bei Desktop-Datenbanktreibern
 title: Leistungsprobleme bei Desktop-Daten Bank Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a819d99a995fd7b287beb66b94f1df526e05f201
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20c21c493d81df6afb4a338675f86ad96ccfab68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449552"
 ---
 # <a name="desktop-database-driver-performance-issues"></a>Leistungsprobleme bei Desktop-Datenbanktreibern
 Um die Kompatibilität mit vorhandenen ANSI-Anwendungen sicherzustellen, werden die Datentypen SQL_WCHAR, SQL_WVARCHAR und SQL_WLONGVARCHAR als SQL_CHAR, SQL_VARCHAR und SQL_LONGVARCHAR für Datenquellen von Microsoft Access 4,0 oder höher verfügbar gemacht. Die Datenquellen geben keine wide char-Datentypen zurück, aber die Daten müssen immer noch an Jet in wide char-Form gesendet werden. Es ist wichtig zu verstehen, dass die Konvertierung stattfindet, wenn ein SQL_C_CHAR Parameter oder eine Ergebnisspalte an einen SQL_CHAR-Datentyp in einer ANSI-Anwendung gebunden ist.  

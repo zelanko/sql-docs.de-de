@@ -1,4 +1,5 @@
 ---
+description: Empfangen von Ergebnissen
 title: Empfangene Ergebnisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e05bd86b908c8c6d7ac08525e425333d3e2f1ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3317441322d0f1be94ee1c897946d83f6291143c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452992"
 ---
 # <a name="receiving-results"></a>Empfangen von Ergebnissen
 In ADO werden die meisten Befehle zum Aufrufer zurückgegeben. Für Befehle, die das Rowset zurückgeben, werden die Ergebnisse in einem **Recordset** -Objekt empfangen, das wahrscheinlich die am häufigsten verwendeten ADO-Objekte ist.  
   
  Es gibt mehrere Möglichkeiten, Daten in einem **Recordset** -Objekt aus einer Datenquelle zu empfangen, einschließlich des folgenden:  
   
--   [Connection. Execute-Methode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Connection.Exeniedliche Methode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
--   [Command. Execute-Methode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Command.Exeniedliche Methode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
 -   [Recordset. Open-Methode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   

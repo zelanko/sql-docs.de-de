@@ -1,4 +1,5 @@
 ---
+description: 'C zu SQL: Jahr-Monat-Intervalle'
 title: 'C zu SQL: Jahr-Monat-Intervalle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0eb7b55-9db0-4375-9210-bddec4593880
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ec7bfda0015883c8470dd453c7ae5de9bfd6cec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ffd9a3f7f14ff6af93f15521738bebdbc63a8f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449022"
 ---
 # <a name="c-to-sql-year-month-intervals"></a>C zu SQL: Jahr-Monat-Intervalle
 Die Bezeichner für die ODBC-C-Datentypen Year-Month Interval lauten:  
@@ -31,10 +32,10 @@ Die Bezeichner für die ODBC-C-Datentypen Year-Month Interval lauten:
   
 |SQL-Typbezeichner|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR [a]<br /><br /> SQL_VARCHAR [a]<br /><br /> SQL_LONGVARCHAR [a]|Spalten Byte Länge >= Zeichen Byte Länge<br /><br /> Spalten Byte Länge < Zeichen Byte Länge [a]<br /><br /> Der Datenwert ist kein gültiges intervallliterale.|Nicht zutreffend<br /><br /> 22001<br /><br /> 22015|  
-|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Spalten Zeichen Länge >= Zeichen Länge von Daten<br /><br /> Spalten Zeichenlänge < Zeichen Länge von Daten [a]<br /><br /> Der Datenwert ist kein gültiges intervallliterale.|Nicht zutreffend<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Die Konvertierung eines einzelnen Feld Intervalls führte nicht zum Abschneiden ganzer Ziffern.<br /><br /> Die Konvertierung führte zum Abschneiden ganzer Ziffern.|Nicht zutreffend<br /><br /> 22003|  
-|SQL_INTERVAL_MONTH<br /><br /> SQL_INTERVAL_YEAR<br /><br /> SQL_INTERVAL_YEAR_TO_MONTH|Der Datenwert wurde ohne Abschneiden beliebiger Felder konvertiert.<br /><br /> Mindestens ein Feld mit einem Datenwert wurde während der Konvertierung abgeschnitten.|Nicht zutreffend<br /><br /> 22015|  
+|SQL_CHAR [a]<br /><br /> SQL_VARCHAR [a]<br /><br /> SQL_LONGVARCHAR [a]|Spalten Byte Länge >= Zeichen Byte Länge<br /><br /> Spalten Byte Länge < Zeichen Byte Länge [a]<br /><br /> Der Datenwert ist kein gültiges intervallliterale.|–<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Spalten Zeichen Länge >= Zeichen Länge von Daten<br /><br /> Spalten Zeichenlänge < Zeichen Länge von Daten [a]<br /><br /> Der Datenwert ist kein gültiges intervallliterale.|–<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Die Konvertierung eines einzelnen Feld Intervalls führte nicht zum Abschneiden ganzer Ziffern.<br /><br /> Die Konvertierung führte zum Abschneiden ganzer Ziffern.|–<br /><br /> 22003|  
+|SQL_INTERVAL_MONTH<br /><br /> SQL_INTERVAL_YEAR<br /><br /> SQL_INTERVAL_YEAR_TO_MONTH|Der Datenwert wurde ohne Abschneiden beliebiger Felder konvertiert.<br /><br /> Mindestens ein Feld mit einem Datenwert wurde während der Konvertierung abgeschnitten.|–<br /><br /> 22015|  
   
  [a] alle C-Intervall Datentypen können in einen Zeichen Datentyp konvertiert werden.  
   

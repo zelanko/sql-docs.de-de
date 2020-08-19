@@ -1,4 +1,5 @@
 ---
+description: 'Senden der Updates: UpdateBatch-Methode'
 title: 'Senden der Updates: UpdateBatch-Methode | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abb0051ef336a145b2da75906831d7adc168e6e3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b5378cad96bc2827badc2e15a23d7f48f683381
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452882"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Senden der Updates: UpdateBatch-Methode
 Mit dem folgenden Code wird ein Recordset im Batch Modus geöffnet, indem die LockType-Eigenschaft auf adlockbatchoptimiund der Cursor Location auf adUseClient festgelegt wird. Es werden zwei neue Datensätze hinzugefügt und der Wert eines Felds in einem vorhandenen Datensatz geändert. die ursprünglichen Werte werden gespeichert. Anschließend wird UpdateBatch aufgerufen, um die Änderungen an die Datenquelle zurückzusenden.  
@@ -54,5 +55,5 @@ Mit dem folgenden Code wird ein Recordset im Batch Modus geöffnet, indem die Lo
   
  Wenn Sie den aktuellen Datensatz bearbeiten oder einen neuen Datensatz hinzufügen, wenn Sie die UpdateBatch-Methode aufrufen, ruft ADO automatisch die Update-Methode auf, um ausstehende Änderungen am aktuellen Datensatz zu speichern, bevor die Batch Änderungen an den Anbieter übertragen werden.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Batchmodus](../../../ado/guide/data/batch-mode.md)

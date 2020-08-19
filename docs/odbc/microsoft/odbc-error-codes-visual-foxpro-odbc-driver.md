@@ -1,4 +1,5 @@
 ---
+description: ODBC-Fehlercodes (Visual FoxPro-ODBC-Treiber)
 title: ODBC-Fehler Codes (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a2f6da9d4e4799bb9c40ec1c2716b71f70c53695
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6f49c31325c2ca8a33296898579ffe6f9f1e2af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449312"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC-Fehlercodes (Visual FoxPro-ODBC-Treiber)
 In der folgenden Tabelle sind die Visual FoxPro-Fehlercodes aufgeführt, die dem ODBC-Fehler Code SQLSTATE-Werte zugeordnet sind Die zugeordneten SQLSTATE-Werte stammen aus [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) und [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). Es sind keine anderen SQLSTATE-Werte aus einer anderen ODBC-API zugeordnet, da **SQLExecDirect** und **SQLPrepare** die einzigen Funktionen sind, die auf die Visual FoxPro-Engine zugreifen.  

@@ -1,4 +1,5 @@
 ---
+description: ODBC-Treiber für Oracle-Programmierer&#39;s-Referenz
 title: ODBC-Treiber für Oracle-Programmierer&#39;s-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 763c9892836b262f308b82ef96794a03dc33fd12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b409446da085e0d35b9f3580ba7da8df22ef6f03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449342"
 ---
 # <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC-Treiber für Oracle-Programmierer&#39;s-Referenz
 > [!IMPORTANT]  
 >  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Dieser Abschnitt umfasst die folgenden Themen:  
+ Dieser Abschnitt schließt folgende Themen ein:  
   
 -   [Format und Attribute von Verbindungszeichenfolgen](../../odbc/microsoft/connection-string-format-and-attributes.md)  
   

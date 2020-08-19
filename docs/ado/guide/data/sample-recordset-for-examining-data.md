@@ -1,4 +1,5 @@
 ---
+description: Beispiel-Recordset zum Untersuchen von Daten
 title: Beispiel-Recordset zum Untersuchen von Daten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f0f712c6c1604f96d5d66d5ded712ae6efe54edb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f4c989667d5b4a5ceb3fb0c4f4d929e49be92e00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452912"
 ---
 # <a name="sample-recordset-for-examining-data"></a>Beispiel-Recordset zum Untersuchen von Daten
 Betrachten wir zuerst das **Recordset** -Objekt, das mit der folgenden SQL-Abfrage zurückgegeben wird, die für die Northwind-Beispiel Datenbasis in Microsoft SQL Server ausgeführt wird.  

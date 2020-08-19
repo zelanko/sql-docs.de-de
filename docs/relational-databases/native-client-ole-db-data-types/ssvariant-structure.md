@@ -1,4 +1,5 @@
 ---
+description: SSVARIANT-Struktur in SQL Server Native Client
 title: SSVARIANT-Struktur (Native Client OLE DB-Anbieter)
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ddd98b45cf44f840dfc236f8a0a1b5d809db7288
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 79ad13e5b3a724763b8cc7664eb7d5e301f108e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448491"
 ---
 # <a name="ssvariant-structure-in-sql-server-native-client"></a>SSVARIANT-Struktur in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,24 +56,24 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  In der folgenden Tabelle werden die Elemente der **SSVARIANT**-Struktur beschrieben:  
   
-|Mitglied|OLE DB-Typindikator|OLE DB-C-Datentyp|vt-Wert|Kommentare|  
+|Member|OLE DB-Typindikator|OLE DB-C-Datentyp|vt-Wert|Kommentare|  
 |------------|---------------------------|------------------------|--------------|--------------|  
 |vt|SSVARTYPE|||Gibt den Typ des Werts in der **SSVARIANT**-Struktur an.|  
-|bTinyIntVal|DBTYPE_UI1|**Hobby**|**VT_SS_UI1**|Unterstützt den **tinyint** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp.|  
-|sShortIntVal|DBTYPE_I2|**Kurzem**|**VT_SS_I2**|Unterstützt den **smallint** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp.|  
-|lIntVal|DBTYPE_I4|**Lange**|**VT_SS_I4**|Unterstützt den **int** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp.|  
-|llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|Unterstützt den **bigint** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp.|  
-|fltRealVal|DBTYPE_R4|**float**|**VT_SS_R4**|Unterstützt den **Real** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp.|  
-|dblFloatVal|DBTYPE_R8|**double**|**VT_SS_R8**|Unterstützt den **float** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp.|  
+|bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|Unterstützt den **tinyint**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp.|  
+|sShortIntVal|DBTYPE_I2|**SHORT**|**VT_SS_I2**|Unterstützt den **smallint**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp.|  
+|lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|Unterstützt den **int**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp.|  
+|llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|Unterstützt den **bigint**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp.|  
+|fltRealVal|DBTYPE_R4|**float**|**VT_SS_R4**|Unterstützt den **real**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp.|  
+|dblFloatVal|DBTYPE_R8|**double**|**VT_SS_R8**|Unterstützt den **float**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp.|  
 |cyMoneyVal|DBTYPE_CY|**LARGE_INTEGER**|**VT_SS_MONEY VT_SS_SMALLMONEY**|Unterstützt die Datentypen **money** und **smallmoney**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|fBitVal|DBTYPE_BOOL|**VARIANT_BOOL**|**VT_SS_BIT**|Unterstützt den **Bit** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp.|  
-|rgbGuidVal|DBTYPE_GUID|**GUID**|**VT_SS_GUID**|Unterstützt den **uniqueidentifier** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp.|  
-|numNumericVal|DBTYPE_NUMERIC|**DB_NUMERIC**|**VT_SS_NUMERIC**|Unterstützt den **numerischen** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp.|  
-|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Unterstützt den **Date** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp.|  
+|fBitVal|DBTYPE_BOOL|**VARIANT_BOOL**|**VT_SS_BIT**|Unterstützt den **bit**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp.|  
+|rgbGuidVal|DBTYPE_GUID|**GUID**|**VT_SS_GUID**|Unterstützt den **uniqueidentifier**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp.|  
+|numNumericVal|DBTYPE_NUMERIC|**DB_NUMERIC**|**VT_SS_NUMERIC**|Unterstützt den **numeric**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp.|  
+|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Unterstützt den **date**-Datentyp von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2**|Unterstützt die Datentypen **smalldatetime**, **datetime** und **datetime2**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|Unterstützt den **time** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**BYTE**) Gibt die Skalierung für den *tTime2Val*-Wert an.|  
-|tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Unterstützt den **datetime2** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**BYTE**) Gibt die Skalierung für den *tsDataTimeVal*-Wert an.|  
-|DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|Unterstützt den **DateTimeOffset** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**BYTE**) Gibt die Skalierung für den *tsoDateTimeOffsetVal*-Wert an.|  
+|Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|Unterstützt den **time**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**BYTE**) Gibt die Skalierung für den *tTime2Val*-Wert an.|  
+|tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Unterstützt den **datetime2**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**BYTE**) Gibt die Skalierung für den *tsDataTimeVal*-Wert an.|  
+|DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|Unterstützt den **datetimeoffset**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp.<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**BYTE**) Gibt die Skalierung für den *tsoDateTimeOffsetVal*-Wert an.|  
 |NCharVal|Kein entsprechender OLE DB-Typindikator.|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Unterstützt die Datentypen **nchar** und **nvarchar**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *sActualLength* (**SHORT**) Gibt die tatsächliche Länge der Zeichenfolge an, auf die *pwchNCharVal* verweist. Beinhaltet nicht den abschließenden Nullwert.<br /><br /> *sMaxLength* (**SHORT**) Gibt die maximale Länge der Zeichenfolge an, auf die *pwchNCharVal* verweist.<br /><br /> *pwchNCharVal* (**WCHAR** \*) Zeiger auf die Zeichenfolge.<br /><br /> Nicht verwendete Member: *rgbReserved*, *dwReserved* und *pwchReserved*.|  
 |CharVal|Kein entsprechender OLE DB-Typindikator.|**struct_CharVal**|**VT_SS_WVARSTRING**<br /><br /> **VT_SS_WVARSTRING**|Unterstützt die Datentypen **char** und **varchar**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *sActualLength* (**SHORT**) Gibt die tatsächliche Länge der Zeichenfolge an, auf die *pchCharVal* verweist. Beinhaltet nicht den abschließenden Nullwert.<br /><br /> *sMaxLength* (**SHORT**) Gibt die maximale Länge der Zeichenfolge an, auf die *pchCharVal* verweist.<br /><br /> *pwchCharVal* (**CHAR** \*) Zeiger auf die Zeichenfolge.<br /><br /> Nicht verwendete Member:<br /><br /> *rgbReserved*, *dwReserved* und *pwchReserved*.|  
 |BinaryVal|Kein entsprechender OLE DB-Typindikator.|**struct_BinaryVal**|**VT_SS_VARBINARY**<br /><br /> **VT_SS_BINARY**|Unterstützt die Datentypen **binary** und **varbinary**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Beinhaltet die folgenden Member:<br /><br /> *sActualLength* (**SHORT**) Gibt die tatsächliche Länge der Daten an, auf die *prgbBinaryVal* verweist.<br /><br /> *sMaxLength* (**SHORT**) Gibt die maximale Länge der Daten an, auf die *prgbBinaryVal* verweist.<br /><br /> *prgbBinaryVal* (**BYTE** \*) Zeiger auf die Binärdaten.<br /><br /> Nicht verwendeter Member: *dwReserved*.|  

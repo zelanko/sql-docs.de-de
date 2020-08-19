@@ -1,4 +1,5 @@
 ---
+description: SQL Server Integration Services-Projekte und Projektmappen (SSIS)
 title: Integration Services-Projekte und -Projektmappen (SSIS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/20/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e10adad56ee8a27555d6ac4d5bd3cdfbf31e9abf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 623c423b50d589ce9e7964b436cba604dcb3203d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449825"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>SQL Server Integration Services-Projekte und Projektmappen (SSIS)
 
@@ -73,7 +74,7 @@ ms.locfileid: "86917509"
 |Verbindungs-Manager|Enthält Projektverbindungs-Manager. Weitere Informationen finden Sie unter [Integration Services-Verbindungen (SSIS)](../integration-services/connection-manager/integration-services-ssis-connections.md).|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Pakete|Enthält Pakete. Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../integration-services/integration-services-ssis-packages.md).|  
 |Paketteile|Enthält Paketteile, die wieder verwendet oder importiert werden können. Weitere Informationen finden Sie unter [Wiederverwenden der Ablaufsteuerung für Pakete mithilfe von Ablaufsteuerungs-Paketteilen](reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).
-|Sonstiges|Enthält Dateien, die sich von Paketdateien unterscheiden.|  
+|Verschiedenes|Enthält Dateien, die sich von Paketdateien unterscheiden.|  
   
 ## <a name="files-in-integration-services-projects"></a>Dateien in SQL Server Integration Services-Projekten  
  Wenn Sie einer Projektmappe ein neues oder vorhandenes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt hinzufügen, erstellt [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Projektdateien mit den Erweiterungen DTPROJ, DTPROJ.USER, DATABASE und PROJECT.PARAMS. 
@@ -123,7 +124,7 @@ ms.locfileid: "86917509"
   
 1.  Klicken Sie in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]im Menü **Datei** > **auf** Neu **Projekt** .  
   
-2.  Erweitern Sie im Bereich **Installierte Vorlagen** des Fensters **Neues Projekt** **Business Intelligence**, und klicken Sie auf **Integration Services**.  
+2.  Erweitern Sie im Bereich **Installierte Vorlagen** des Fensters **Neues Projekt****Business Intelligence**, und klicken Sie auf **Integration Services**.  
   
 3.  Wählen Sie **Integration Services-Assistent zum Importieren von Projekten** aus der Liste der Projekttypen aus.  
   
@@ -187,7 +188,7 @@ ms.locfileid: "86917509"
   
 2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und klicken Sie dann auf **Projekt entladen**.  
   
-3.  Klicken Sie auf **OK** , um das Entfernen zu bestätigen.  
+3.  Klicken Sie auf **OK**, um das Entfernen zu bestätigen.  
 
 ## <a name="add-an-item-to-a-project"></a>Hinzufügen eines Elements zu einem Projekt  
   

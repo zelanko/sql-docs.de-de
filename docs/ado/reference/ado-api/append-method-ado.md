@@ -1,4 +1,5 @@
 ---
+description: Append-Methode (ADO)
 title: Append-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d0d94cf40a397ca030a9ea975a02962d6ab9489
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd3ee907aa2a7081ca7204dcc1b0b3b069581832
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451262"
 ---
 # <a name="append-method-ado"></a>Append-Methode (ADO)
 Fügt ein Objekt an eine Auflistung an. Wenn es sich bei der Auflistung um [Felder](../../../ado/reference/ado-api/fields-collection-ado.md)handelt, kann ein neues [Feld](../../../ado/reference/ado-api/field-object.md) Objekt erstellt werden, bevor es an die Auflistung angefügt wird.  
@@ -50,13 +51,13 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  Ein [datatyetenum](../../../ado/reference/ado-api/datatypeenum.md) -Wert, dessen Standardwert " **adempty**" ist, der den Datentyp des neuen Felds angibt. Die folgenden Datentypen werden nicht von ADO unterstützt und sollten nicht verwendet werden, wenn neue Felder an ein [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)angehängt werden: **adidispatch**, **adiunknown**, **advariant**.  
   
  *DefinedSize*  
- Dies ist optional. Ein **Long** -Wert, der die definierte Größe (in Zeichen oder Bytes) des neuen Felds darstellt. Der Standardwert für diesen Parameter wird vom- *Typ*abgeleitet. Felder, die eine *DefinedSize* aufweisen, die größer als 255 Bytes ist, werden als Spalten variabler Länge behandelt. Der Standardwert für *DefinedSize* ist nicht angegeben.  
+ Optional. Ein **Long** -Wert, der die definierte Größe (in Zeichen oder Bytes) des neuen Felds darstellt. Der Standardwert für diesen Parameter wird vom- *Typ*abgeleitet. Felder, die eine *DefinedSize* aufweisen, die größer als 255 Bytes ist, werden als Spalten variabler Länge behandelt. Der Standardwert für *DefinedSize* ist nicht angegeben.  
   
  *Attrib*  
- Dies ist optional. Ein [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) -Wert, dessen Standardwert **adFldDefault**ist und Attribute für das neue Feld angibt. Wenn dieser Wert nicht angegeben wird, enthält das Feld Attribute, die vom *Typ*abgeleitet werden.  
+ Optional. Ein [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) -Wert, dessen Standardwert **adFldDefault**ist und Attribute für das neue Feld angibt. Wenn dieser Wert nicht angegeben wird, enthält das Feld Attribute, die vom *Typ*abgeleitet werden.  
   
  *Feldwert*  
- Dies ist optional. Eine **Variante** , die den Wert für das neue Feld darstellt. Wenn kein Wert angegeben wird, wird dem Feld ein NULL-Wert angefügt.  
+ Optional. Eine **Variante** , die den Wert für das neue Feld darstellt. Wenn kein Wert angegeben wird, wird dem Feld ein NULL-Wert angefügt.  
   
 ## <a name="remarks"></a>Bemerkungen  
   

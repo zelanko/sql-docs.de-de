@@ -1,4 +1,5 @@
 ---
+description: Schemaabschnitt
 title: Schema Abschnitt | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2b7d3a82231e31771a6f01dc558feebdc98dcbe1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452892"
 ---
 # <a name="schema-section"></a>Schemaabschnitt
 Der Abschnitt "Schema" ist erforderlich. Wie das vorherige Beispiel zeigt, schreibt ADO ausführliche Metadaten zu jeder Spalte, um die Semantik der Datenwerte so weit wie möglich für die Aktualisierung beizubehalten. Zum Laden des XML-Codes erfordert ADO jedoch nur die Namen der Spalten und des Rowsets, zu dem Sie gehören. Im folgenden finden Sie ein Beispiel für ein minimales Schema:  
@@ -174,5 +175,5 @@ Der Abschnitt "Schema" ist erforderlich. Wie das vorherige Beispiel zeigt, schre
   
  Weitere Informationen zu den OLE DB-Konstrukten, die zur Verwendung innerhalb des Schemas eines XML-Dokuments für OLE DB verfügbar sind, finden Sie in der Definition von "urn: Schemas-Microsoft-com: Rowset" und im OLE DB Programmierer-Handbuch.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Beibehalten von Datensätzen im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md)

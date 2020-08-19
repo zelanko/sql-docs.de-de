@@ -1,4 +1,5 @@
 ---
+description: Angeben von Verbindungseigenschaften
 title: Angeben von Verbindungs Eigenschaften | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6fee9745bca206f00603b32a6c4cd29faab34eca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2e1f7a26e66eae550bc740f2f9be5a3606650dcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452832"
 ---
 # <a name="specifying-connection-properties"></a>Angeben von Verbindungseigenschaften
 Sie können einen Großteil der durch eine [Verbindungs Zeichenfolge](../../../ado/guide/data/creating-a-connection-string.md) angegebenen Informationen bereitstellen, indem Sie die Eigenschaften des **Verbindungs** Objekts vor dem Öffnen der Verbindung festlegen. Beispielsweise können Sie denselben Effekt wie die Verbindungs Zeichenfolge erzielen, die unter [Erstellen einer Verbindungs Zeichenfolge](../../../ado/guide/data/creating-a-connection-string.md) mit dem folgenden Code erläutert wird.  

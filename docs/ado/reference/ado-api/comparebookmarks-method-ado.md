@@ -1,4 +1,5 @@
 ---
+description: CompareBookmarks-Methode (ADO)
 title: CompareBookmarks-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa4be74086e4d35af70ac52aa9db0066f4279e3e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4729574b92b841da48f7cf6de6f1dcabc369b4a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450802"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks-Methode (ADO)
 Vergleicht zwei Lesezeichen und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.  

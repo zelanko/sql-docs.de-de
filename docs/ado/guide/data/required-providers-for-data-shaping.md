@@ -1,4 +1,5 @@
 ---
+description: Erforderliche Anbieter für die Datenstrukturierung
 title: Erforderliche Anbieter für die Daten Strukturierung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abda9d7a275ce100636efa58430009dd430fac0b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e17ebe5f5e8deab776b88ce66df8636a28212394
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452942"
 ---
 # <a name="required-providers-for-data-shaping"></a>Erforderliche Anbieter für die Datenstrukturierung
 Die Daten Strukturierung erfordert in der Regel zwei Anbieter. Der Dienstanbieter, der Daten Strukturierungs [Dienst für OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), stellt die Daten Strukturierungs Funktionalität bereit, und ein Datenanbieter, wie z. b. der OLE DB Anbieter für SQL Server, stellt Daten Zeilen bereit, um das geformte [Recordset aufzufüllen](../../../ado/reference/ado-api/recordset-object-ado.md).  

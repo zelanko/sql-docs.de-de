@@ -1,4 +1,5 @@
 ---
+description: Datensätze und Datenströme
 title: Datensätze und Streams | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec87974499edabb2c5a5ae503d90f9f739694c41
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8afaae4221c57a7f7d832c34f0a374981e081cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452982"
 ---
 # <a name="records-and-streams"></a>Datensätze und Datenströme
 ADO stellt derzeit das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt als primäres Mittel für den Zugriff auf Informationen in Datenquellen, z. b. relationale Datenbanken, bereit. Einige Anbieter unterstützen jedoch die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -und [Streamobjekte](../../../ado/reference/ado-api/stream-object-ado.md) als Alternative oder ergänzende Objekte, mit denen Daten von Anbietern bearbeitet werden können. Einzelheiten zum **Daten Satz** Verhalten finden Sie in der Dokumentation Ihres Anbieters.  
@@ -35,7 +36,7 @@ ADO stellt derzeit das [Recordset](../../../ado/reference/ado-api/recordset-obje
   
  Weitere Informationen zur Verwendung des **Datensatz** -Objekts für die Verarbeitung dieser heterogenen Daten von Anbietern, wie z. b. dem Internet Publishing Provider, finden Sie unter [Verwenden von ADO für die Internetveröffentlichung](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
   
-## <a name="streams"></a>Streams  
+## <a name="streams"></a>Datenströme  
  Das **Stream** -Objekt bietet die Möglichkeit, einen Bytestream zu lesen, zu schreiben und zu verwalten. Dieser Bytestream kann Text oder binär sein und ist nur durch Systemressourcen beschränkt. In der Regel werden ADO- **Streamobjekte** für folgende Zwecke verwendet:  
   
 -   , Wenn die Daten eines im XML-Format gespeicherten **Recordsets** enthalten sein sollen. Diese XML-Streams aus gespeicherten **Recordsets**können als Quelle beim Öffnen eines neuen **Recordsets**verwendet werden. Weitere Informationen finden Sie unter [Streams und Persistenz](../../../ado/guide/data/streams-and-persistence.md).  

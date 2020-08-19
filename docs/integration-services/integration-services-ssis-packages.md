@@ -1,4 +1,5 @@
 ---
+description: Integration Services-Pakete (SSIS)
 title: Integration Services-Pakete (SSIS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/31/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34da25ac87cbcfbeb815b4053d60c390a9140f5d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449813"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services-Pakete (SSIS)
 
@@ -57,7 +58,7 @@ ms.locfileid: "86917512"
 ### <a name="event-handlers"></a>Ereignishandler  
  Ein Ereignishandler ist ein Workflow, der als Reaktion auf die Ereignisse ausgeführt wird, die von einem Paket, einem Task oder Container ausgelöst werden. Beispielsweise können Sie mit einem Ereignishandler den Speicherplatz überprüfen, wenn ein Ereignis vor der Ausführung oder ein Fehler auftritt, und eine E-Mail-Nachricht senden, um dem Administrator den verfügbaren Speicherplatz oder Fehlerinformationen zu melden. Ein Ereignishandler ist wie ein Paket aufgebaut, mit einer Ablaufsteuerung und optionalen Datenflüssen. Ereignishandler können einzelnen Tasks oder Containern im Paket hinzugefügt werden. Weitere Informationen finden Sie unter [Integration Services-Ereignishandler &#40;SSIS&#41;](../integration-services/integration-services-ssis-event-handlers.md).  
   
-### <a name="configurations"></a>Configurations  
+### <a name="configurations"></a>Konfigurationen  
  Eine Konfiguration enthält Paare aus einer Eigenschaft und einem Wert, die die Eigenschaften des Pakets und der zugehörigen Tasks, Containers, Variablen, Verbindungen und Ereignishandler beschreiben, wenn das Paket ausgeführt wird. Mithilfe von Konfigurationen können Eigenschaften aktualisiert werden, ohne das Paket zu ändern. Wenn das Paket ausgeführt wird, werden die Konfigurationsinformationen geladen und die Eigenschaftswerte aktualisiert. Beispielsweise kann mit einer Konfiguration die Verbindungszeichenfolge der Verbindung aktualisiert werden.  
   
  Die Konfiguration wird gespeichert und mit dem Paket bereitgestellt, wenn das Paket auf einem anderen Computer installiert wird. Die Konfigurationswerte können aktualisiert werden, wenn das Paket installiert wird, damit das Paket in einer anderen Umgebung unterstützt wird. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../integration-services/packages/create-package-configurations.md).  
@@ -65,7 +66,7 @@ ms.locfileid: "86917512"
 ### <a name="logging-and-log-providers"></a>Protokollierung und Protokollanbieter  
  Bei einem Protokoll handelt es sich um eine Auflistung von Informationen zu dem Paket, die beim Ausführen des Pakets gesammelt werden. Beispielsweise kann ein Protokoll die Start- und Beendigungszeit für die Ausführung eines Pakets bereitstellen. Ein Protokollanbieter definiert den Zieltyp und das Format, der bzw. das vom Paket und dessen Containern und Tasks zum Protokollieren von Laufzeitinformationen verwendet werden kann. Die Protokolle sind einem Paket zugeordnet, aber die Tasks und Container im Paket können Informationen in einem beliebigen Paketprotokoll protokollieren. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält eine Reihe von integrierten Protokollanbietern für die Protokollierung. Beispielsweise enthält [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Protokollanbieter für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Textdateien. Darüber hinaus können Sie benutzerdefinierte Protokollanbieter erstellen und zur Protokollierung verwenden. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
   
-### <a name="variables"></a>Variables  
+### <a name="variables"></a>Variablen  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt Systemvariablen und benutzerdefinierte Variablen. Die Systemvariablen stellen nützliche Informationen zu Paketobjekten zur Laufzeit bereit, und mit benutzerdefinierten Variablen werden benutzerdefinierte Szenarios in Paketen unterstützt. Beiden Arten von Variablen können in Ausdrücken, Skripts und Konfigurationen verwendet werden.  
   
  Die Variablen auf Paketebene schließen die vordefinierten Systemvariablen ein, die für ein Paket verfügbar sind, und die benutzerdefinierten Variablen für den Paketbereich. Weitere Informationen finden Sie unter [Integration Services-Variablen (SSIS)](../integration-services/integration-services-ssis-variables.md).  

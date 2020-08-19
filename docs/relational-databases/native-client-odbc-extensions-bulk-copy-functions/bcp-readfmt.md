@@ -1,4 +1,5 @@
 ---
+description: bcp_readfmt
 title: bcp_readfmt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,11 +19,12 @@ ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a19387a7339112b582627e9d43f6bcf7c1723d5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ae4c4e9d063d087c4018874a82631e2163c44ffd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448543"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +50,7 @@ RETCODE bcp_readfmt (
 ## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Nachdem **bcp_readfmt** die Format Werte gelesen hat, werden die entsprechenden Aufrufe an [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) und [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)durchführt. Sie brauchen keine Formatdatei zu analysieren, um diese Aufrufe zu tätigen.  
   
  Um eine Format Datei beizubehalten, wenden Sie [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)an. Aufrufe von **bcp_readfmt** können auf gespeicherte Formate verweisen. Weitere Informationen finden Sie unter [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  

@@ -1,4 +1,5 @@
 ---
+description: Massen Daten kopieren mithilfe von IRowsetFastLoad (OLE DB) in SQL Server Native Client
 title: Massen Kopieren von Daten mithilfe von IRowsetFastLoad (Native Client OLE DB-Anbieter) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a898f45d80a266b0d385b73832312e9046b157b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1a2586a6f3a741f81cb30756006c5a2b4ae84b02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448485"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db-in--sql-server-native-client"></a>Massen Daten kopieren mithilfe von IRowsetFastLoad (OLE DB) in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,12 +31,12 @@ ms.locfileid: "87247903"
   
  Der Consumer informiert SQLOLEDB über die Anforderung zum Massenkopieren, indem er die SQLOLEDB-anbieterspezifische Datenquelleneigenschaft SSPROP_ENABLEFASTLOAD auf VARIANT_TRUE festlegt. Der Consumer erstellt eine SQLOLEDB-Sitzung, wobei der Eigenschaftensatz auf die Datenquelle festgelegt wird. Diese neue Sitzung ermöglicht dem Benutzer Zugriff auf **IRowsetFastLoad**.  
   
- Es ist ein vollständiges Beispiel verfügbar, das die Verwendung von **IRowsetFastLoad** zum Massenkopieren der Datensätze in eine Tabelle veranschaulicht. In diesem Beispiel werden der Tabelle **IRFLTable** 10 Datensätze hinzugefügt. Sie müssen die Tabelle " **unfltable** " in der Datenbank erstellen.  
+ Es ist ein vollständiges Beispiel verfügbar, das die Verwendung von **IRowsetFastLoad** zum Massenkopieren der Datensätze in eine Tabelle veranschaulicht. In diesem Beispiel werden der Tabelle **IRFLTable** 10 Datensätze hinzugefügt. Sie müssen die Tabelle **IRFLTable** in der Datenbank erstellen.  
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>So massenkopieren Sie Daten in eine SQL Server-Tabelle  
   

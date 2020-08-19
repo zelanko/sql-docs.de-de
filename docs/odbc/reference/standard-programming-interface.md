@@ -1,4 +1,5 @@
 ---
+description: Standardprogrammierschnittstelle
 title: Standard Programmierschnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7767f113d0f70569ce253f0200cd35cb83915a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8fd0e9e3901ea6b3dcf9a09366b13fe532f1198
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81279996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448883"
 ---
 # <a name="standard-programming-interface"></a>Standardprogrammierschnittstelle
 Die Programmierschnittstelle ist vielleicht der offensichtlichste Kandidat für die Standardisierung. Tatsächlich wurden bei der Entwicklung von ODBC bereits-ANSI-und ISO-Standards für eingebettete SQL-und SQL-Module bereitgestellt. Obwohl für eine Datenbank-CLI keine Standards vorhanden waren, hat die SQL-Zugriffs Gruppe (ein Branchen Konsortium von Datenbankanbietern) in Erwägung gezogen, ob ein solches erstellt werden sollte. Teile von ODBC wurden später zur Grundlage ihrer Arbeit.  

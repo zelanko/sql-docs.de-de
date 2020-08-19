@@ -1,4 +1,5 @@
 ---
+description: SQLConfigDataSource-Funktion
 title: SQLConfigDataSource-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90a51193a8f4edbb013527c4dde0625b75131583
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8849ce5528380e4164a420227395bce5aa436eaa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448743"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource-Funktion
 **Konformitäts**  
@@ -33,7 +34,7 @@ ms.locfileid: "81299630"
  **Zusammenfassung**  
  **SQLConfigDataSource** fügt Datenquellen hinzu, ändert Sie oder löscht sie.  
   
- Auf die Funktionalität von **SQLConfigDataSource** kann auch mit [odbcconf zugegriffen werden. EXE](../../../odbc/odbcconf-exe.md).  
+ Der Zugriff auf die Funktionalität von **SQLConfigDataSource** kann auch mit [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md)erfolgen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,7 +66,7 @@ BOOL SQLConfigDataSource(
   
  ODBC_REMOVE_SYS_DSN: Entfernen Sie eine vorhandene Systemdaten Quelle.  
   
- ODBC_REMOVE_DEFAULT_DSN: Entfernen Sie den Abschnitt "Standarddaten Quellen Spezifikation" aus den Systeminformationen. (Außerdem wird der Abschnitt "Standardtreiber Spezifikation" aus dem Eintrag "Odbcinst. ini" in den Systeminformationen entfernt. Dieses *fRequest* führt dieselbe Funktion aus wie die veraltete **sqlremovedefaultdatasource** -Funktion.) Wenn diese Option angegeben ist, sollten alle anderen Parameter im-Befehl von **SQLConfigDataSource** NULL sein. Wenn Sie nicht NULL sind, werden Sie ignoriert.  
+ ODBC_REMOVE_DEFAULT_DSN: Entfernen Sie den Abschnitt "Standarddaten Quellen Spezifikation" aus den Systeminformationen. (Außerdem wird der Abschnitt "Standardtreiber Spezifikation" aus dem Odbcinst.ini Eintrag in den Systeminformationen entfernt. Dieses *fRequest* führt dieselbe Funktion aus wie die veraltete **sqlremovedefaultdatasource** -Funktion.) Wenn diese Option angegeben ist, sollten alle anderen Parameter im-Befehl von **SQLConfigDataSource** NULL sein. Wenn Sie nicht NULL sind, werden Sie ignoriert.  
   
  *lpszDriver*  
  Der Treiber Beschreibung (in der Regel der Name des zugeordneten DBMS), der Benutzern anstelle des Namens des physischen Treibers angezeigt wird.  
@@ -77,9 +78,9 @@ BOOL SQLConfigDataSource(
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false. Wenn in den Systeminformationen kein Eintrag vorhanden ist, wenn diese Funktion aufgerufen wird, gibt die Funktion false zurück.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLConfigDataSource** "false" zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **SQLConfigDataSource** "false" zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
+|*\*pferrorcode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_HWND|Ungültiges Fenster handle.|Das *hwndParent* -Argument war ungültig oder NULL.|  
@@ -108,7 +109,7 @@ BOOL SQLConfigDataSource(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Hinzufügen, ändern oder Entfernen einer Datenquelle|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) (in der Setup-DLL)|  
 |Entfernen eines Datenquellen namens aus den Systeminformationen|[Sqlremovedsnfromini](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  

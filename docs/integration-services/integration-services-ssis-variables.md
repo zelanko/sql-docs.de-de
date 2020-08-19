@@ -1,4 +1,5 @@
 ---
+description: Integration Services-Variablen (SSIS)
 title: Integration Services-Variablen (SSIS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4ee6dda0fbd91649a085cfda429ea3e554a83d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449769"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services-Variablen (SSIS)
 
@@ -195,7 +196,7 @@ Eine Variable enthält Optionen zum Festlegen des Variablenwerts und des Datenty
 ### <a name="add-variable-dialog-box"></a>Variable hinzufügen (Dialogfeld)
 Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften einer neuen Variablen angeben.  
   
-#### <a name="options"></a>Tastatur  
+#### <a name="options"></a>Optionen  
  **Container**  
  Wählen Sie in der Liste einen Container aus. Der Container definiert den Gültigkeitsbereich der Variablen. Der Container kann entweder das Paket oder eine im Paket enthaltene ausführbare Datei sein.  
   
@@ -264,7 +265,7 @@ Mithilfe des Dialogfelds **Variable hinzufügen** können Sie die Eigenschaften 
   
 -   Die ValueType-Eigenschaft enthält den Datentyp des Werts in der Value-Eigenschaft. Wenn Value durch einen Ausdruck festgelegt wird, dann wird ValueType automatisch auf einen Datentyp aktualisiert, der mit dem Auswertungsergebnis des Ausdrucks kompatibel ist. Angenommen, Value enthält 0 und die ValueType-Eigenschaft enthält **Int32** . Nun legen Sie Expression auf GETDATE() fest. Daraufhin enthält Value das aktuelle Datum und die Uhrzeit, und ValueType wird auf **DateTime**festgelegt.  
   
--   Das  **Eigenschaftenfenster** für die Variable stellt den Zugriff auf das Dialogfeld **Ausdrucks-Generator** bereit. Sie können dieses Tool zum Erstellen, Überprüfen und Auswerten von Ausdrücken verwenden. Weitere Informationen finden Sie unter [Ausdrucks-Generator](../integration-services/expressions/expression-builder.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
+-   Das ** Eigenschaftenfenster** für die Variable stellt den Zugriff auf das Dialogfeld **Ausdrucks-Generator** bereit. Sie können dieses Tool zum Erstellen, Überprüfen und Auswerten von Ausdrücken verwenden. Weitere Informationen finden Sie unter [Ausdrucks-Generator](../integration-services/expressions/expression-builder.md) und [Integration Services-Ausdrücke &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md).  
   
  Wenn Sie das Fenster **Variablen** verwenden, um Ausdrücke für eine benutzerdefinierte Variable festzulegen:  
   

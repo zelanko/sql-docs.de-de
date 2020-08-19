@@ -1,4 +1,5 @@
 ---
+description: Beibehalten von Datensätzen im XML-Format
 title: Beibehalten von Datensätzen im XML-Format | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b88bef75b0cbe13402d90264b766adf5a3005efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453042"
 ---
 # <a name="persisting-records-in-xml-format"></a>Beibehalten von Datensätzen im XML-Format
-Ebenso wie das ADTG-Format wird die **recordsetpersistenz** im XML-Format mit dem Microsoft OLE DB Dauerhaftigkeits Anbieter implementiert. Dieser Anbieter generiert ein Schreib geschütztes vorwärts-Rowset aus einer gespeicherten XML-Datei oder einem Datenstrom, der die von ADO generierten Schema Informationen enthält. Ebenso kann Sie ein ADO- **Recordset**verwenden, XML generieren und in einer Datei oder einem beliebigen Objekt speichern, das die com- **IStream** -Schnittstelle implementiert. (Tatsächlich ist eine Datei nur ein weiteres Beispiel für ein Objekt, das **IStream**unterstützt.) Bei Version 2,5 und höher stützt ADO den Microsoft XML-Parser (MSXML), um den XML-Code in das **Recordset**zu laden. Daher ist MSXML. dll erforderlich.  
+Ebenso wie das ADTG-Format wird die **recordsetpersistenz** im XML-Format mit dem Microsoft OLE DB Dauerhaftigkeits Anbieter implementiert. Dieser Anbieter generiert ein Schreib geschütztes vorwärts-Rowset aus einer gespeicherten XML-Datei oder einem Datenstrom, der die von ADO generierten Schema Informationen enthält. Ebenso kann Sie ein ADO- **Recordset**verwenden, XML generieren und in einer Datei oder einem beliebigen Objekt speichern, das die com- **IStream** -Schnittstelle implementiert. (Tatsächlich ist eine Datei nur ein weiteres Beispiel für ein Objekt, das **IStream**unterstützt.) Bei Version 2,5 und höher stützt ADO den Microsoft XML-Parser (MSXML), um den XML-Code in das **Recordset**zu laden. Daher ist msxml.dll erforderlich.  
   
 > [!NOTE]
 >  Wenn hierarchische **Recordsets** (Daten Formen) im XML-Format gespeichert werden, gelten einige Einschränkungen. In XML kann nicht gespeichert werden, wenn das hierarchische **Recordset** ausstehende Updates enthält, und Sie können kein parametrisiertes hierarchisches **Recordset**speichern. Weitere Informationen finden Sie unter [persistente gefilterte und hierarchische Recordsets](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  

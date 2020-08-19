@@ -1,4 +1,5 @@
 ---
+description: SQLCancel-Funktion
 title: SQLCancel-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fcc2afce495a1481692ba1f20162a2df5d9a9458
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 040cd9034a8f754a26f577b7efd6e1307e4c90c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448872"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel-Funktion
 **Konformitäts**  
@@ -53,10 +54,10 @@ SQLRETURN SQLCancel(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLCancel** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLCancel** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|BESCHREIBUNG|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) im Argument * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und seine Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) im Argument * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und seine Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die **SQLCancel** -Funktion aufgerufen wurde.<br /><br /> (DM)-Abbruch Vorgang fehlgeschlagen, da ein asynchroner Vorgang für ein Verbindungs Handle, das *StatementHandle*zugeordnet ist, ausgeführt wird.|  
 |HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
@@ -102,7 +103,7 @@ SQLRETURN SQLCancel(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Binden eines Puffers an einen Parameter|[SQLBindParameter-Funktion](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
 |Ausführen von BULK INSERT-oder Update-Vorgängen|[SQLBulkOperations-Funktion](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  

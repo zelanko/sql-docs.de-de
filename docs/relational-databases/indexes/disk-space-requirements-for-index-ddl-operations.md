@@ -1,4 +1,5 @@
 ---
+description: Speicherplatzanforderungen für Index-DDL-Vorgänge
 title: Speicherplatzanforderungen für Index-DDL-Vorgänge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 71f51e9076b4f5c4be8a0875df323deeaaf80068
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ff199a57c492c9a34bf05c49d954905f84f59a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448549"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Speicherplatzanforderungen für Index-DDL-Vorgänge
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

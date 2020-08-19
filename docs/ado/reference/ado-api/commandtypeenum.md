@@ -1,4 +1,5 @@
 ---
+description: CommandTypeEnum
 title: Commandtypeaufumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc5d48ab323dd3e75ba40f406ec88505957153c7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 861abb0066f4b9f32ff8f9071c1520a1dec73016
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450822"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Gibt an, wie ein Befehls Argument interpretiert werden soll.  
   
  Es ist wichtig, vom Benutzer bereitgestellte *CommandString* -Werte zu validieren, um zu vermeiden, dass Anwendungs Benutzern potenziell gefährliche Befehle zur Ausführung von ADO hinzufügen können.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adcmdunspezifiziert**|-1|Gibt das Befehlstyp Argument nicht an.|  
 |**adCmdText**|1|Wertet [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) als Text Definition eines Befehls oder eines gespeicherten Prozedur Aufrufes aus.|  
@@ -40,7 +41,7 @@ Gibt an, wie ein Befehls Argument interpretiert werden soll.
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |Adoerums. CommandType. nicht angegeben|  
 |Adoerums. CommandType. Text|  

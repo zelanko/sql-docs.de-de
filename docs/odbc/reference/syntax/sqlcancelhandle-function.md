@@ -1,4 +1,5 @@
 ---
+description: SQLCancelHandle-Funktion
 title: Sqlcancelhandle-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3f9dcb6ccdef290b937b1317271758dddc0e848
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 3f466f63d6da9aa9a96b9e929ea2b59a3e43491d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448850"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle-Funktion
 **Konformitäts**  
@@ -100,7 +101,7 @@ SQLRETURN SQLCancelHandle(
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen über|Siehe|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Abbrechen einer Funktion, die asynchron für ein Anweisungs Handle ausgeführt wird, Abbrechen einer Funktion für eine Anweisung, die Daten benötigt, oder Abbrechen einer Funktion, die in einer Anweisung in einem anderen Thread ausgeführt wird.|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
   

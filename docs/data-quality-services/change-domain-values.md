@@ -1,4 +1,5 @@
 ---
+description: Ändern von Domänenwerten
 title: Ändern von Domänenwerten
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b07dd7b8d121d1be70a6522e716fc304bbf3d9f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450020"
 ---
 # <a name="change-domain-values"></a>Ändern von Domänenwerten
 
@@ -44,7 +45,7 @@ ms.locfileid: "85901115"
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die Rolle „dqs_kb_editor“ oder „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um Domänenwerte zu ändern.  
   
-##  <a name="change-domain-values"></a><a name="Change"></a>Ändern von Domänen Werten  
+##  <a name="change-domain-values"></a><a name="Change"></a> Ändern von Domänen Werten  
  In der Tabelle **Wert** wird der Wissensdatenbank für eine einzelne Domäne hinzugefügtes Wissen angezeigt. Sie können jederzeit in der Domänenliste eine andere Domäne auswählen, um die Werte für diese Domäne anzuzeigen. Das Feld enthält die folgenden Spalten:  
   
 -   In der Spalte **Wert** werden alle Werte angezeigt, die während des Ermittlungsprozesses der ausgewählten Domäne aus einem Feld im Datenbeispiel hinzugefügt wurden. Alle Werte, die als Fehler projiziert werden, werden als Synonym zu einem Wert angezeigt, der als richtig projiziert wird.  

@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 4.2: Erstellen einer beschädigten Datei'
 title: 'Schritt 2: Erstellen einer beschädigten Datei | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ae6a1109ce6c2631f4adabd6d828794a1a21869
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 81bee95c84aabe02f2964f41849051a7c8c7052a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449634"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>Lektion 4.2: Erstellen einer beschädigten Datei
 
@@ -42,7 +43,7 @@ In dieser Aufgabe erstellen Sie eine Kopie einer vorhandenen Beispielflatfile. A
   
 ## <a name="verify-that-an-error-occurs-during-run-time"></a>Überprüfen, ob während der Laufzeit ein Fehler auftritt  
   
-1.  Klicken Sie im Menü **Debuggen** auf **Start Debugging** (Debuggen starten).  
+1.  Wählen Sie im Menü **Debuggen** die Option **Debuggen starten** aus.  
   
     In der dritten Iteration des Datenflusses versucht die „Lookup Currency Key“-Transformation, die Datei **Currency_BAD.txt** zu verarbeiten, und die Transformation löst einen Fehler aus. Der Fehler der Transformation löst wiederum einen Fehler des gesamten Pakets aus.  
   

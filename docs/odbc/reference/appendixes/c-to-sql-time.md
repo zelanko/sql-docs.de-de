@@ -1,4 +1,5 @@
 ---
+description: 'C zu SQL: Uhrzeit'
 title: 'C zu SQL: Zeit | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 264ce7751072b79163923f0c141542680f7b02bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1711d6a5acffa73a640a0e25f647c53b3daa868
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449042"
 ---
 # <a name="c-to-sql-time"></a>C zu SQL: Uhrzeit
 Der Bezeichner für den Zeit-ODBC-C-Datentyp:  
@@ -30,10 +31,10 @@ Der Bezeichner für den Zeit-ODBC-C-Datentyp:
   
 |SQL-Typbezeichner|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Spalten Byte Länge >= 8<br /><br /> Spalten Byte Länge < 8<br /><br /> Der Datenwert ist keine gültige Zeit.|Nicht zutreffend<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Spalten Zeichenlänge >= 8<br /><br /> Spalten Zeichenlänge < 8<br /><br /> Der Datenwert ist keine gültige Zeit.|Nicht zutreffend<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_TIME|Der Datenwert ist eine gültige Zeit.<br /><br /> Der Datenwert ist keine gültige Zeit.|Nicht zutreffend<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Der Datenwert ist ein gültiger Zeitpunkt [a]<br /><br /> Der Datenwert ist keine gültige Zeit.|Nicht zutreffend<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Spalten Byte Länge >= 8<br /><br /> Spalten Byte Länge < 8<br /><br /> Der Datenwert ist keine gültige Zeit.|–<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Spalten Zeichenlänge >= 8<br /><br /> Spalten Zeichenlänge < 8<br /><br /> Der Datenwert ist keine gültige Zeit.|–<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_TIME|Der Datenwert ist eine gültige Zeit.<br /><br /> Der Datenwert ist keine gültige Zeit.|–<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Der Datenwert ist ein gültiger Zeitpunkt [a]<br /><br /> Der Datenwert ist keine gültige Zeit.|–<br /><br /> 22007|  
   
  [a] der Datums Teil des Zeitstempels wird auf das aktuelle Datum festgelegt, und der Teil der Sekundenbruchteile des Zeitstempels wird auf 0 (null) festgelegt.  
   

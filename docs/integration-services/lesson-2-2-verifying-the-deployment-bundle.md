@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 2-2: Überprüfen des Bereitstellungspakets'
 title: 'Schritt 2: Überprüfen des Bereitstellungspakets | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fec0b4e8180141fdea37e2ac484f5a2b0195b44a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4704aea54f73a0fa25db60ab9145a0ad3bc9359d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449675"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>Lektion 2-2: Überprüfen des Bereitstellungspakets
 
@@ -54,7 +55,7 @@ In dieser Aufgabe überprüfen Sie den Inhalt des Bereitstellungspakets. Das Ber
   
     `<?xml version="1.0"?><DTSDeploymentManifest GeneratedBy="Domain\UserName" GeneratedFromProjectName="Deployment Tutorial" GeneratedDate="2006-02-24T13:29:02.6537669-08:00" AllowConfigurationChanges="true"><Package>DataTransfer.dtsx</Package><Package>LoadXMLData.dtsx</Package><ConfigurationFile>datatransferconfig.dtsconfig</ConfigurationFile><ConfigurationFile>loadxmldataconfig.dtsconfig</ConfigurationFile><MiscellaneousFile>Readme.txt</MiscellaneousFile><MiscellaneousFile>orders.xml</MiscellaneousFile><MiscellaneousFile>NewCustomers.txt</MiscellaneousFile><MiscellaneousFile>orders.xsd</MiscellaneousFile></DTSDeploymentManifest>`  
   
-4.  Überprüfen Sie, ob der Wert des Attributs **AllowConfigurationChanges** **TRUE** lautet und ob der XML-Code je ein **Paket** -Element für die beiden Pakete, je ein **MiscellaneousFile** -Element für die vier Nichtpaketdateien und je ein **ConfigurationFile** -Element für die beiden XML-Konfigurationsdateien enthält.  
+4.  Überprüfen Sie, ob der Wert des Attributs **AllowConfigurationChanges****TRUE** lautet und ob der XML-Code je ein **Paket** -Element für die beiden Pakete, je ein **MiscellaneousFile** -Element für die vier Nichtpaketdateien und je ein **ConfigurationFile** -Element für die beiden XML-Konfigurationsdateien enthält.  
   
 5.  Beenden Sie Internet Explorer oder den Texteditor.  
   

@@ -1,4 +1,5 @@
 ---
+description: Call-Level-Interface
 title: Schnittstellen auf der callsebene | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4288a278f745d533c92d3d45892753ef1a74c2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad1e89f945dbb739c4c20103fc2330cbf4e562b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448958"
 ---
 # <a name="call-level-interfaces"></a>Call-Level-Interface
 Das abschließende Verfahren zum Senden von SQL-Anweisungen an das DBMS erfolgt über eine Schnittstelle auf Callcenter (Callcenter). Eine Schnittstelle auf Aufruf Ebene stellt eine Bibliothek von DBMS-Funktionen bereit, die vom Anwendungsprogramm aufgerufen werden können. Anstatt SQL mit einer anderen Programmiersprache zu vermischen, ähnelt eine Schnittstelle auf Aufruf Ebene den Routine Bibliotheken, die die meisten Programmierer verwenden, wie z. b. Zeichen folgen-, e/a-oder mathematische Bibliotheken in C. Beachten Sie, dass DBMSs, der eingebettete SQL-Unterstützung unterstützt, bereits über eine Schnittstelle auf Aufruf Ebene verfügt. Diese Aufrufe sind jedoch nicht dokumentiert und können ohne vorherige Ankündigung geändert werden.  

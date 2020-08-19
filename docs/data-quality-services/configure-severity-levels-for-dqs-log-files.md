@@ -1,4 +1,5 @@
 ---
+description: Konfigurieren von Schweregraden für DQS-Protokolldateien
 title: Konfigurieren von Schweregraden für DQS-Protokolldateien
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 068ae31abe61fac86d740fe3e03787fd32dde465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6a23806f7b7def561d7cecc8e1592772c5675f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449912"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Konfigurieren von Schweregraden für DQS-Protokolldateien
 
@@ -49,8 +50,8 @@ ms.locfileid: "85894221"
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um die Einstellungen für Protokollschweregrade zu konfigurieren.  
   
-##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>Konfigurieren von Schweregraden auf Aktivitäts Ebene  
- Sie können die Einstellungen für Protokollschweregrade für die folgenden Aktivitäten in DQS konfigurieren: Domänenverwaltung, Wissensermittlung, Abgleichsrichtlinien, Datenbereinigung, Datenabgleich und Verweisdatendienste. Gehen Sie hierzu wie folgt vor:  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a> Konfigurieren von Schweregraden auf Aktivitäts Ebene  
+ Sie können die Einstellungen für Protokollschweregrade für die folgenden Aktivitäten in DQS konfigurieren: Domänenverwaltung, Wissensermittlung, Abgleichsrichtlinien, Datenbereinigung, Datenabgleich und Verweisdatendienste. Gehen Sie hierzu folgendermaßen vor:  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85894221"
   
 5.  Klicken Sie auf **Schließen**.  
   
-##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>Konfigurieren von Schweregraden auf Modulebene (erweitert)  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a> Konfigurieren von Schweregraden auf Modulebene (erweitert)  
  Im Abschnitt **Erweitert** auf der Registerkarte **Protokolleinstellungen** können Sie die Einstellungen für Protokollschweregrade auf Modulebene konfigurieren. Module sind DQS-Systemassemblys, die verschiedene Funktionen innerhalb einer Funktion in DQS implementieren. Die Domänenverwaltungsaktivität enthält z. B. verschiedene Funktionen, wie z. B. das Definieren von Domänenregeln, Regelbedingungen, domänenübergreifenden Regeln für Verbunddomänen usw.  
   
  In einigen Fällen ist die Granularitätsebene auf Aktivitätsebene nicht ausreichend. Angenommen, Sie möchten ein Problem untersuchen, das in einem bestimmten Modul innerhalb einer Aktivität auftritt. In dem Fall ist eine Option hilfreich, mit der Protokollschweregrade auf Modulebene konfiguriert werden können, um das Problem zu isolieren und genauer nachzuverfolgen.  

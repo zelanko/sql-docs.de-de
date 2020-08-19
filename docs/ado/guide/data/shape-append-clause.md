@@ -1,4 +1,5 @@
 ---
+description: SHAPE APPEND-Klausel
 title: Shape-APPEND-Klausel | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452862"
 ---
 # <a name="shape-append-clause"></a>SHAPE APPEND-Klausel
 Die Form Befehl-Append-Klausel fügt eine Spalte oder Spalten an ein **Recordset**an. Häufig handelt es sich bei diesen Spalten um Kapitel Spalten, die auf ein untergeordnetes **Recordset**verweisen.  

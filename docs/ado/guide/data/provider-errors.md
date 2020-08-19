@@ -1,4 +1,5 @@
 ---
+description: Anbieterfehler
 title: Anbieter Fehler | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9588ddddf094f391f442dd7ad9c4172cce70970e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453022"
 ---
 # <a name="provider-errors"></a>Anbieterfehler
 Wenn ein Anbieter Fehler auftritt, wird ein Laufzeitfehler von-2147467259 zurückgegeben. Wenn Sie diesen Fehler erhalten, überprüfen Sie die **Fehler** Sammlung des aktiven **Verbindungs** Objekts, das mindestens einen Fehler enthält, der beschreibt, was aufgetreten ist.  

@@ -1,4 +1,5 @@
 ---
+description: SHAPE COMPUTE-Klausel
 title: Shape-COMPUTE-Klausel | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9513666eca4d9e191b74b8a1a25dd8a9da051ee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452842"
 ---
 # <a name="shape-compute-clause"></a>SHAPE COMPUTE-Klausel
 Eine Shape-COMPUTE-Klausel generiert ein übergeordnetes **Recordset**, dessen Spalten aus einem Verweis auf das untergeordnete **Recordset**bestehen. optionale Spalten, deren Inhalt Kapitel, neue oder berechnete Spalten ist, oder das Ergebnis der Ausführung von Aggregatfunktionen für das untergeordnete **Recordset** oder ein zuvor geformtes **Recordset**. und alle Spalten aus dem untergeordneten **Recordset** , die in der optionalen BY-Klausel aufgeführt sind.  
@@ -132,7 +133,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |oder|Portland|400.000|  
 |oder|Corvallis|300.000|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Übersicht über die Daten Strukturierung](../../../ado/guide/data/data-shaping-overview.md)   
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   

@@ -1,4 +1,5 @@
 ---
+description: bcp_gettypename
 title: bcp_gettypename | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,11 +19,12 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b443a3ecd3e96740939a1cbef3f2a732a129d9a8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d8956677e62c3f4a824e704c0905c7970cf9e913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448572"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +50,7 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>Rückgabe  
  Eine Zeichenfolge, die den SQL-Typnamen enthält, der dem BCP-Typ entspricht. Wenn ein ungültiger BCP-Typ angegeben wird, wird eine leere Zeichenfolge zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die BCP-Typtoken werden in der sqlncli.h-Headerdatei und der sqlncli11.lib-Bibliothek definiert.  
   
  In der unten stehenden Tabelle werden die möglichen BCP-Typen aufgeführt, mit der Angabe, ob es sich um max-Typen handelt, sowie deren erwartete Ausgabe.  
@@ -79,10 +81,10 @@ RETCODE bcp_gettypename (
 |**SQLDATETIMN**|Sowohl als auch|**datetime-null**|  
 |**SQLMONEYN**|Sowohl als auch|**money-null**|  
 |**SQLFLTN**|Sowohl als auch|**float-null**|  
-|**Sqlaopsum**|Sowohl als auch|**Pauschalen**|  
-|**Sqlaopavg**|Sowohl als auch|**AVG**|  
+|**Sqlaopsum**|Sowohl als auch|**Sum**|  
+|**Sqlaopavg**|Sowohl als auch|**Avg**|  
 |**Sqlaopcnt**|Sowohl als auch|**Count**|  
-|**Sqlaopmin**|Sowohl als auch|**Man**|  
+|**Sqlaopmin**|Sowohl als auch|**Min**|  
 |**Sqlaopmax**|Sowohl als auch|**Max**|  
 |**SQLDATETIM4**|Sowohl als auch|**smalldatetime**|  
 |**SQLMONEY4**|Sowohl als auch|**Smallmoney**|  
@@ -103,7 +105,7 @@ RETCODE bcp_gettypename (
 |**SQLVARBINARY**|Ja|**varbinary(max)**|  
 |**SQLNCHAR**|Ja|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Ja|**nvarchar(max)**|  
-|**SQLXML**|Ja|**Basi**|  
+|**SQLXML**|Ja|**Xml**|  
 |**SQLUDT**|Sowohl als auch|**UDT**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
@@ -111,7 +113,7 @@ RETCODE bcp_gettypename (
   
  Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Konfigurieren der erweiterten Einstellungen für DQS-Protokolldateien
 title: Konfigurieren der erweiterten Einstellungen für DQS-Protokolldateien
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 95ddeb5c193e8b45cda0670419c890e503bbe05b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 48e953ae4cd86ba19edbcbadce68d12d1268d15a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449922"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Konfigurieren der erweiterten Einstellungen für DQS-Protokolldateien
 
@@ -114,7 +115,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 > [!NOTE]  
 >  Die Konfiguration der [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] -Protokolleinstellungen wird dynamisch generiert und in der Datei „DQS_MAIN.Log“ gespeichert, die sich in der Regel unter „C:\Programme\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log“ befindet, wenn Sie die Standardinstanz von SQL Server installiert haben. In dieser Datei direkt ausgeführte Änderungen sind jedoch nicht dauerhaft und werden von den Konfigurationseinstellungen in der A_CONFIGURATION-Tabelle in der DQS_MAIN-Datenbank überschrieben.  
   
-##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>Konfigurieren Data Quality-Client Protokoll Einstellungen  
+##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a> Konfigurieren Data Quality-Client Protokoll Einstellungen  
  Die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] Konfigurationsdatei für die Protokoll Einstellungen (DQLog.Client.xml) ist in der Regel unter c:\Programme\Microsoft SQL server\130\tools\binn\dq\config. Der Inhalt der XML-Datei ähnelt der XML-Datei, die Sie zuvor für die [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Protokoll Konfigurationseinstellungen geändert haben. So konfigurieren Sie die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Protokolleinstellungen:  
   
 1.  Führen Sie ein beliebiges XML-Bearbeitungstool oder den Editor als Administrator aus.  

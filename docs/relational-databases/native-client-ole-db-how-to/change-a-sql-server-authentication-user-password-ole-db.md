@@ -1,4 +1,5 @@
 ---
+description: Ändern eines SQL Server Native Client Authentifizierungs Benutzer Kennworts (OLE DB)
 title: SQL-Authentifizierungs Benutzer Kennwort (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41d15be4184152741c8e2a6c98efacb1cffcac33
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b12d8dd78c32ba0ea7c98e555f35d8831de9320b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448472"
 ---
 # <a name="change-a-sql-server-native-client-authentication-user-password-ole-db"></a>Ändern eines SQL Server Native Client Authentifizierungs Benutzer Kennworts (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "87247885"
   Dieses Beispiel veranschaulicht die Verwendung von OLE DB zum Ändern des Kennworts eines Benutzerkontos mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Beispiel  
  Aktualisieren Sie vor dem Erstellen den C++-Code, um die Benutzer-ID, das alte Kennwort und das neue Kennwort anzugeben.  

@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 1-4: Hinzufügen eines Datenflusstasks zum Paket'
 title: 'Schritt 4: Hinzufügen eines Datenflusstasks zum Paket | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ba3ef8fe03b0f3057dbb443dfbf5ab257a70983
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d920b5f78d2d3e6dd3e557cbac4e50ad7952884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449671"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>Lektion 1-4: Hinzufügen eines Datenflusstasks zum Paket
 

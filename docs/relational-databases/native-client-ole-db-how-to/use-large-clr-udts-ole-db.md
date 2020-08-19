@@ -1,4 +1,5 @@
 ---
+description: Verwenden von großen CLR-UDTs in SQL Server Native Client (OLE DB)
 title: Verwenden von großen CLR-UDTs (Native Client OLE DB-Anbieter)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,17 +12,17 @@ ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60f8978fa0dedfe40a3d48b7796bc4d0fb1359c7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6cec1e6076820e8d41feb077db417b168e80b05c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448459"
 ---
 # <a name="use-large-clr-udts--in-sql-server-native-client-ole-db"></a>Verwenden von großen CLR-UDTs in SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  In diesem Beispiel wird gezeigt, wie Zeilen mit umfangreichen benutzerdefinierten Typen aus einem Resultset abgerufen werden. Weitere Informationen finden Sie unter [Große benutzerdefinierte CLR-Typen &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher ausgeführt.  
+  In diesem Beispiel wird gezeigt, wie Zeilen mit umfangreichen benutzerdefinierten Typen aus einem Resultset abgerufen werden. Weitere Informationen finden Sie unter [Große CLR-benutzerdefinierte Typen &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Dieses Beispiel wird mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher ausgeführt.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel umfasst zwei Projekte. Ein Projekt erstellt eine Assembly (DLL) aus C#-Quellcode. Diese Assembly enthält den CLR-Typ. Der Datenbank wird eine Tabelle hinzugefügt. Eine Spalte in der Tabelle weist einen Typ auf, der in der Assembly definiert ist. Standardmäßig wird in diesem Beispiel die Master-Datenbank verwendet. Das zweite Projekt ist eine systemeigene C-Anwendung, die Daten aus der Tabelle liest.  
@@ -30,7 +31,7 @@ ms.locfileid: "87396887"
   
  Führen Sie das zweite Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um der master-Datenbank die Assembly hinzuzufügen.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das dritte Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungs Zeichenfolge von L "(local)" in l "(local) \\ \Name", wobei Name die benannte Instanz ist. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das dritte Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung zu einer benannten Instanz die Verbindungszeichenfolge von L„(local)“ in L„(local)\\\name“, wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Führen Sie das vierte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) aus, um die Assembly aus der master-Datenbank zu löschen.  
   

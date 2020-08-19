@@ -1,4 +1,5 @@
 ---
+description: Dienstanbieter und -komponenten
 title: Dienstanbieter und Komponenten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6d0a4b9160ca0c2ff3ee64e5814e24df52141cf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d8405ad88ca2fc087eb6f71f665a508690bf1142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452872"
 ---
 # <a name="service-providers-and-components"></a>Dienstanbieter und -komponenten
 Dienstanbieter sind Komponenten, die die Funktionalität von Datenanbietern durch die Implementierung erweiterter Schnittstellen erweitern, die vom Datenspeicher nicht nativ unterstützt werden.  

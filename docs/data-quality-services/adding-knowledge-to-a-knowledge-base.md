@@ -1,4 +1,5 @@
 ---
+description: Hinzufügen von Wissen zur Wissensdatenbank
 title: Hinzufügen von Wissen zur Wissensdatenbank
 ms.date: 06/04/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 69785485b74333e5ebe3aa37ce6a23abf89cf612
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 393d9d10fd882f1dedfbaac012b2dbd0ec200a3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450011"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Hinzufügen von Wissen zur Wissensdatenbank
 
@@ -38,7 +39,7 @@ ms.locfileid: "85896220"
   
 -   [Verwenden der Standard-DQS-Wissensdatenbank](#Default)  
   
-##  <a name="perform-knowledge-discovery"></a><a name="Discovery"></a>Durchführen der Wissens Ermittlung  
+##  <a name="perform-knowledge-discovery"></a><a name="Discovery"></a> Durchführen der Wissens Ermittlung  
  Die Wissensermittlung analysiert Beispieldaten im Hinblick auf Data Quality-Kriterien und fügt dann der Wissensdatenbank das erlangte Wissen hinzu. Dies ist ein computerunterstützter Prozess, der Dateninkonsistenzen und Syntaxfehler identifiziert und Änderungen an den Daten vorschlägt. Die Wissensermittlungsaktivität ist ein Assistent, der eine Seite einschließt, auf der Sie Domänenwerte interaktiv verwalten können.  
   
 -   Weitere Informationen finden Sie in der Dokumentation unter [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md).  
@@ -57,7 +58,7 @@ ms.locfileid: "85896220"
   
 -   Weitere Informationen finden Sie in der Dokumentation unter [Importieren einer Domäne aus einer DQS-Datei](../data-quality-services/import-a-domain-from-a-dqs-file.md) oder [Importieren einer Wissensdatenbank aus einer DQS-Datei](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md).  
   
-##  <a name="import-knowledge-from-an-excel-file"></a><a name="Excel"></a>Importieren von Wissen aus einer Excel-Datei  
+##  <a name="import-knowledge-from-an-excel-file"></a><a name="Excel"></a> Importieren von Wissen aus einer Excel-Datei  
  Sie können Domänenwerte aus einer Excel-Arbeitsblattdatei in eine vorhandene Domäne oder Wissensdatenbank importieren. Hierzu müssen Sie zuerst ein Excel-Arbeitsblatt mit den Domänenwerten erstellen, die Sie importieren möchten, und sicherstellen, dass Excel auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Computer installiert ist, damit Sie in der Lage sind, Werte mithilfe von [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]zu importieren. Sie können keine Domänenwerte aus einer Domäne oder Wissensdatenbank in eine Excel-Datei importieren.  
   
 -   Weitere Informationen finden Sie in der Dokumentation unter [Importieren von Werten aus einer Excel-Datei in eine Domäne](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) oder [Importieren von Domänen aus einer Excel-Datei in eine Wissensermittlung](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md).  

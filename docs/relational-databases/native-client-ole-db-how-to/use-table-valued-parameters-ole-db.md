@@ -1,4 +1,5 @@
 ---
+description: Verwenden von Tabellenwert Parametern in SQL Server Native Client (OLE DB)
 title: Verwenden von Tabellenwert Parametern (Native Client OLE DB-Anbieter)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02f9960443d9ff9c5b3eb82577cf12180376b9e7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4d8e35803c71047f73faac83cb79f309cf803a27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448433"
 ---
 # <a name="use-table-valued-parameters-in-sql-server-native-client-ole-db"></a>Verwenden von Tabellenwert Parametern in SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "87394086"
   
  Fügen Sie das dritte Codelisting in eine Datei mit dem Namen OLEDBUtils.hpp ein.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das vierte Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Um eine Verbindung mit einer benannten Instanz herzustellen, ändern Sie die Verbindungs Zeichenfolge von L "(local)" in l "(local) \\ \Name", wobei Name die benannte Instanz ist. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das vierte Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung zu einer benannten Instanz die Verbindungszeichenfolge von L„(local)“ in L„(local)\\\name“, wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Das fünfte Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt die im Beispiel verwendete Datenbank.  
   

@@ -1,4 +1,5 @@
 ---
+description: Positionieren von Recordsets
 title: Positionierung von Recordsets | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e48c80c59a51b007832b8c68c8e27c66333f57dc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9d5cdea25dbf14ef5f26d02612f357768acdad61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452962"
 ---
 # <a name="recordset-positioning"></a>Positionieren von Recordsets
 Verwenden Sie die **AbsolutePosition** -Eigenschaft, um zu einem Datensatz zu wechseln, der auf seiner Ordinalposition im **Recordset** -Objekt basiert, oder, um die Ordinalposition des aktuellen Datensatzes zu bestimmen. Der Anbieter muss die entsprechende Funktionalität unterstützen, damit diese Eigenschaft verfügbar ist.  

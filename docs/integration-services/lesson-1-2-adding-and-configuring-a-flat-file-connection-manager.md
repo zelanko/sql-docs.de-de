@@ -1,4 +1,5 @@
 ---
+description: 'Lektion 1.2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles'
 title: 'Schritt 2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d03808293d5edbc9ae0be48b28f86df725304059
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d83b2c6a19b7a73be4293dcb66edc6cbc22909d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449732"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Lektion 1.2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles
 

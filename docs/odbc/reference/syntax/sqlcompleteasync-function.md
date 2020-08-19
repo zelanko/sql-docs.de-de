@@ -1,4 +1,5 @@
 ---
+description: SQLCompleteAsync-Funktion
 title: Sqlcompleteasync-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: bb5ec8ff7c0aa96e37ce66cabb1e18c9993e95f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448761"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync-Funktion
 **Konformitäts**  
@@ -73,5 +74,5 @@ SQLRETURN SQLCompleteAsync(
 ## <a name="comments"></a>Kommentare  
  Im Abruf basierten asynchronen Verarbeitungsmodus kann *asynkretcodeptr* SQL_STILL_EXECUTING werden, wenn **sqlcompleteasync** SQL_SUCCESS zurückgibt. Die Anwendung sollte den Abruf fortsetzen, bis *asynkretcodeptr* nicht SQL_STILL_EXECUTING ist. Im Benachrichtigungs basierten asynchronen Verarbeitungsmodus wird *asynkretcodeptr* nie SQL_STILL_EXECUTING.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Asynchrone Ausführung (Abruf Methode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

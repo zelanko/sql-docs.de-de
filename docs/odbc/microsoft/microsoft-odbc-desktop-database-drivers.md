@@ -1,4 +1,5 @@
 ---
+description: Microsoft ODBC Desktop-Datenbanktreiber
 title: Microsoft ODBC Desktop-Datenbanktreiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 99da8943f738d879a0a1bb66f6cfdbd6156c17ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e60052bda67b792cbba81447d6ae20ebdeb565bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449432"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC Desktop-Datenbanktreiber
 ODBC ist eine API, die strukturierte Abfragesprache (SQL) als Datenbankzugriffs Sprache verwendet. Sie können auf eine Vielzahl von Datenbank-Managementsystemen (DBMSs) mit demselben ODBC-Quellcode zugreifen, der direkt in den Quellcode einer Anwendung integriert ist. Mit den Microsoft ODBC Desktop-Daten Bank Treibern kann ein Benutzer einer ODBC-fähigen Anwendung eine Desktop Datenbank über die ODBC-Schnittstelle öffnen, Abfragen und aktualisieren.  

@@ -1,4 +1,5 @@
 ---
+description: Bereinigen von Daten in einer Verbunddomäne
 title: Bereinigen von Daten in einer Verbunddomäne
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: cb8b752d47113c546358ba0e22c77df08cad24c6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f35430d590be36bb7ae487d32a9a0fc97c0275ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449946"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Bereinigen von Daten in einer Verbunddomäne
 
@@ -35,7 +36,7 @@ ms.locfileid: "85901129"
   
  Ein Beispiel zum Zuordnen von Verbunddomänen zu Quelldaten finden Sie unter [Anfügen einer Domäne oder Verbunddomäne an Verweisdaten](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
-##  <a name="data-correction-using-definitive-cross-domain-rules"></a><a name="CDCorrection"></a>Daten Korrektur mit definitiven Domänen übergreifenden Regeln  
+##  <a name="data-correction-using-definitive-cross-domain-rules"></a><a name="CDCorrection"></a> Daten Korrektur mit definitiven Domänen übergreifenden Regeln  
  Domänenübergreifende Regeln in Verbunddomänen ermöglichen es Ihnen, Regeln zu erstellen, die die Beziehung zwischen einzelnen Domänen in einer Verbunddomäne angeben. Domänenübergreifende Regeln werden berücksichtigt, wenn Sie die Bereinigungsaktivität für die Quelldaten von Verbunddomänen ausführen. Abgesehen davon, dass Sie erfahren, ob eine domänenübergreifenden Regel gültig ist, korrigiert die definitive domänenübergreifende *Then* -Regel **Wert ist gleich**auch die Daten während der Datenbereinigungsaktivität.  
   
  Beachten Sie das folgende Beispiel: Es gibt eine Verbunddomäne namens „Product“ mit drei einzelnen Domänen: ProductName, CompanyName und ProductVersion. Erstellen Sie die folgende definitive domänenübergreifende Regel:  
@@ -61,7 +62,7 @@ ms.locfileid: "85901129"
 > [!NOTE]  
 >  Die definitive domänenübergreifende Regel funktioniert nicht für Verbunddomänen, die an einen Verweisdatendienst angefügt wurden.  
   
-##  <a name="data-profiling-for-composite-domains"></a><a name="DataProfiling"></a>Datenprofil Erstellung für Verbund Domänen  
+##  <a name="data-profiling-for-composite-domains"></a><a name="DataProfiling"></a> Datenprofil Erstellung für Verbund Domänen  
  Die Profilerstellung in DQS bietet während der Bereinigungsaktivität zwei Data Quality-Dimensionen: *Vollständigkeit* (das Ausmaß des Vorhandenseins von Daten) und *Genauigkeit* (das Ausmaß, in dem Daten für den beabsichtigten Zweck verwendet werden können). Die Profilerstellung kann keine zuverlässigen Vollständigkeitsstatistiken für Verbunddomänen bereitstellen. Wenn Sie Vollständigkeitsstatistiken benötigen, verwenden Sie Einzeldomänen anstatt Verbunddomänen. Wenn Sie Verbunddomänen verwenden möchten, sollten Sie eine Wissensdatenbank mit Einzeldomänen für die Profilerstellung erstellen, um die Vollständigkeit zu bestimmen, und eine weitere Domäne mit einer Verbunddomäne für die Bereinigungsaktivität erstellen. Die Profilerstellung kann z. B. 95 % Vollständigkeit für Adressendatensätze anzeigen, die eine Verbunddomäne verwenden, aber es kann einen viel höheren Grad der Unvollständigkeit für eine der Spalten geben, z. B. für eine Postleitzahlspalte. In diesem Beispiel möchten Sie die Vollständigkeit der Postleitzahlspalte mit einer Einzeldomäne messen.  
   
  Die Profilerstellung stellt wahrscheinlich zuverlässige Genauigkeitsstatistiken für Verbunddomänen bereit, da Sie die Genauigkeit für mehrere Spalten gemeinsam messen können. Der Wert dieser Daten liegt in der zusammengesetzten Aggregation, daher sollten Sie die Genauigkeit mit einer Verbunddomäne messen.  

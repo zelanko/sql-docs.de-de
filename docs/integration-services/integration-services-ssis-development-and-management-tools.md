@@ -1,4 +1,5 @@
 ---
+description: SQL Server Integration Services (SSIS) – Entwicklungs- und Verwaltungstools
 title: Entwicklungs- und Verwaltungstools | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4b64d20ecb26a143c373a1073b379f0ae9debfb1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a84ff3b6f655ee0c0e797f7cfcda541ee6e964c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449852"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>SQL Server Integration Services (SSIS) – Entwicklungs- und Verwaltungstools
 
@@ -36,7 +37,7 @@ ms.locfileid: "86917546"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] zum Verwalten von Paketen in einer Produktionsumgebung.  
   
-## <a name="sql-server-data-tools"></a>SQL Server Data Tools  
+## <a name="sql-server-data-tools"></a>SQL Server-Datentools  
  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]können Sie die folgenden Aufgaben ausführen:  
   
 -   Ausführen des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Import/Export-Assistenten, um Basispakete zu erstellen, mit denen Daten von einer Quelle in ein Ziel kopiert werden.  

@@ -1,4 +1,5 @@
 ---
+description: Verarbeitung nicht-parametrisierter Befehle
 title: Vorgang von nicht parametrisierten Befehlen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d69ff29f0baabc770da8a62b56962bdc44619b1e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ec2dbf3dfb24fc484368f3fa2e2c2e950dbd20ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453112"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Verarbeitung nicht-parametrisierter Befehle
 Bei nicht parametrisierten Befehlen werden alle Anbieter Befehle ausgeführt, und die **Recordsets** werden während der Ausführung des Befehls erstellt. Wenn der Befehl synchron ausgeführt wird, werden alle **Recordsets** vollständig aufgefüllt. Wenn ein asynchroner auffüllungs Modus ausgewählt wurde, hängt der auffüllungs Status der **Recordsets** vom auffüllungs Modus und der Größe der **Recordsets**ab.  
