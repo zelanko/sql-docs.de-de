@@ -1,4 +1,5 @@
 ---
+description: xp_logininfo (Transact-SQL)
 title: xp_logininfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b5a1a7067e1ebda150d0236020288514eb90a8fc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 44b76081c7ec5fdd3496b670b1884347d1a84d1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419214"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @acctname = ] 'account_name'`Der Name eines Windows-Benutzers oder einer Windows-Gruppe, dem der Zugriff gewährt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *account_name* nicht angegeben wird, werden alle Windows-Gruppen und Windows-Benutzer ausgegeben, denen explizit Anmeldeberechtigungen gewährt wurden. *account_name* muss vollqualifiziert sein. Beispiel: 'ADVWKS4\macraes' oder 'VORDEFINIERT\Administratoren'.  
+`[ @acctname = ] 'account_name'` Der Name eines Windows-Benutzers oder einer Windows-Gruppe, dem der Zugriff gewährt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *account_name* nicht angegeben wird, werden alle Windows-Gruppen und Windows-Benutzer ausgegeben, denen explizit Anmeldeberechtigungen gewährt wurden. *account_name* muss vollqualifiziert sein. Beispiel: 'ADVWKS4\macraes' oder 'VORDEFINIERT\Administratoren'.  
   
  **"alle"**  |  **' Members '**  
  Gibt an, ob für das Konto die Informationen zu allen Berechtigungspfaden oder nur die Informationen zu den Mitgliedern der Windows-Gruppe ausgegeben werden sollen. die ** \@ Option** ist vom Datentyp **varchar (10)** und hat den Standardwert NULL. Sofern nicht **all** angegeben wurde, wird nur der erste Berechtigungspfad angezeigt.  
   
-`[ @privilege = ] variable_name`Ist ein Ausgabeparameter, der die Berechtigungsstufe des angegebenen Windows-Kontos zurückgibt. *variable_name* ist vom Datentyp **varchar(10)**. Der Standardwert ist "Not wanted". Die zurückgegebene Privilegstufe ist **user**, **admin**oder **null**.  
+`[ @privilege = ] variable_name` Ist ein Ausgabeparameter, der die Berechtigungsstufe des angegebenen Windows-Kontos zurückgibt. *variable_name* ist vom Datentyp **varchar(10)**. Der Standardwert ist "Not wanted". Die zurückgegebene Privilegstufe ist **user**, **admin**oder **null**.  
   
  OUTPUT  
  Wenn dieser Parameter angegeben wird, wird *variable_name* in den Ausgabeparameter platziert.  
@@ -64,7 +65,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |**mapped login name**|**sysname**|Für Benutzerkonten mit Benutzerprivileg wird mit **mapped login name** der zugeordnete Anmeldename angezeigt, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei der Anmeldung mit diesem Konto zu verwenden versucht. Dabei werden die Zuordnungsregeln mit Voranstellung des Domänennamens verwendet.|  
 |**permission path**|**sysname**|Die Gruppenmitgliedschaft, die dem Konto den Zugriff ermöglicht hat.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wird *account_name* angegeben, meldet **xp_logininfo** die höchste Privilegstufe des angegebenen Windows-Benutzers bzw. der angegebenen Windows-Gruppe. Wenn ein Windows-Benutzer Zugriff als Systemadministrator und als Domänenbenutzer hat, wird er nur als Systemadministrator gemeldet. Gehört der Benutzer mehreren Windows-Gruppen derselben Privilegstufe an, wird nur die Gruppe gemeldet, der zuerst Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt wurde.  
   
  Wenn *account_name* ein gültiger Windows-Benutzer oder eine gültige Windows-Gruppe ist, dem bzw. der kein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename zugeordnet ist, wird ein leeres Resultset zurückgegeben. Wenn *account_name* nicht als gültiger Windows-Benutzer oder als gültige Windows-Gruppe identifiziert werden kann, wird ein Fehler gemeldet.  

@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_get_parameter (Transact-SQL)
 title: managed_backup. fn_get_parameter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/03/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 63894f891d633e5b8c2f32f32b1be6573bb97baa
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: da8c646cca92a5ef25fd12322fd8a6bd222a1c9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419514"
 ---
 # <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup. fn_get_parameter (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,13 +45,13 @@ ms.locfileid: "86053426"
 managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argumentation  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumente  
  parameter_name  
  Der Name des Parameters. parameter_name ist vom Datentyp **nvarchar (128)**. Wenn NULL oder eine leere Zeichenfolge als Argument für die Funktion angegeben wird, werden Name/Wert-Paare für alle konfigurierten Smart Admin-Parameter zurückgegeben.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |parameter_name|NVARCHAR(128)|Der Name des Parameters. Im Folgenden finden Sie eine aktuelle Liste der zurückgegebenen Parameter:<br/><br/>**Fileretentiondebug-Ereignis**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**SSMBackup2WANotificationEmailIds**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**Storageoperationdebug-Ereignis**|  
 |parameter_value|NVARCHAR(128)|Derzeit festgelegter Wert des Parameters.|  

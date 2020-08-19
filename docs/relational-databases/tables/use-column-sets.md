@@ -1,4 +1,5 @@
 ---
+description: Verwenden von Spaltensätzen
 title: Verwenden von Spaltensätzen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/30/2015
@@ -14,12 +15,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6082c8ffbdf2a2eaba1d24f64a85cfcbed393984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418974"
 ---
 # <a name="use-column-sets"></a>Verwenden von Spaltensätzen
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -112,9 +113,9 @@ GO
 ## <a name="using-the-sql_variant-data-type"></a>Verwenden des sql_variant-Datentyps  
  Der **sql_variant** -Datentyp kann mehrere unterschiedliche Datentypen speichern, z.B. **int**, **char**und **date**. Spaltensätze geben Datentypinformationen zu Dezimalstellen, Genauigkeit und Gebietsschema, die mit einem **sql_variant** -Wert verknüpft sind, in der generierten XML-Spalte als Attribute aus. Wenn Sie versuchen, diese Attribute in einer benutzerdefinierten XML-Anweisung als Eingabe für einen INSERT- oder UPDATE-Vorgang für einen Spaltensatz bereitzustellen, sind einige dieser Attribute obligatorisch, und anderen wird ein Standardwert zugewiesen. In der folgenden Tabelle sind die Datentypen und die Standardwerte aufgeführt, die vom Server generiert werden, wenn der Wert nicht angegeben wird.  
   
-|Datentyp|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Maximale Länge|Precision|Skalieren|  
+|Datentyp|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Maximale Länge|Genauigkeit|Skalieren|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
-|**char**, **varchar**, **binary**|-1|'Standardwert'|0|0|8\.000|Nicht zutreffend**|Nicht verfügbar|  
+|**char**, **varchar**, **binary**|-1|'Standardwert'|0|0|8.000|Nicht zutreffend**|Nicht verfügbar|  
 |**nvarchar**|-1|'Standardwert'|0|0|4000|Nicht verfügbar|Nicht verfügbar|  
 |**decimal**, **float**, **real**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|18|0|  
 |**integer**, **bigint**, **tinyint**, **smallint**|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|  

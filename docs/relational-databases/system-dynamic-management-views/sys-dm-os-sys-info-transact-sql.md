@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_sys_info (Transact-SQL)
 title: sys. dm_os_sys_info (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/24/2018
@@ -22,12 +23,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ce8584d48a20f35b090b957b1455c444e5b4b83
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9350ed24d2f82930ff6852b950ee15ff0421ae6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419644"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +76,7 @@ ms.locfileid: "87928695"
 |**process_physical_affinity**|**nvarchar (3072)** |**Gilt für:** Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] .<br /><br />Weitere Informationen. |
 |**sql_memory_model**|**int**|**Gilt für:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 und höher.<br /><br />Gibt das Speichermodell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, das von zum Zuweisen von Speicher verwendet wird. Lässt keine NULL-Werte zu.<br /><br />1 = herkömmliches Speichermodell<br />2 = Sperren von Seiten im Speicher<br /> 3 = große Seiten im Speicher|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Gilt für:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 und höher.<br /><br />Gibt das Speichermodell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, das von zum Zuweisen von Speicher verwendet wird. Lässt keine NULL-Werte zu.<br /><br />**CONVENTIONAL**  =  Konventionelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet herkömmliches Speichermodell, um Arbeitsspeicher zuzuweisen. Dabei handelt es sich um ein Standardmäßiges SQL-Speichermodell, wenn das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto während des Starts keine Sperren von Seiten im Speicher hat.<br />**LOCK_PAGES**  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet Sperr Seiten im Speicher, um Arbeitsspeicher zuzuweisen. Dies ist der standardmäßige SQL-Speicher-Manager, wenn SQL Server-Dienst Konto während SQL Server Starts Berechtigungen zum Sperren von Seiten im Arbeitsspeicher besitzt.<br /> **LARGE_PAGES**  =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet große Seiten im Speicher, um Arbeitsspeicher zuzuweisen. SQL Server verwendet die Zuordnung von großen Seiten, um Speicher nur mit der Enterprise Edition zuzuweisen, wenn SQL Server Dienst Konto beim Start des Servers Sperren von Seiten im Arbeitsspeicher besitzt und wenn das Ablaufverfolgungsflag 834 aktiviert ist.|
-|**pdw_node_id**|**int**|**Gilt für:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|**pdw_node_id**|**int**|**Gilt für:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
 |**socket_count** |**int** | **Anwendungsbereich:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und höher.<br /><br />Gibt die Anzahl der auf dem System verfügbaren Prozessorsockets an. |  
 |**cores_per_socket** |**int** | **Anwendungsbereich:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und höher.<br /><br />Gibt die Anzahl der Prozessoren pro Socket an, die auf dem System verfügbar sind. |  
 |**numa_node_count** |**int** | **Anwendungsbereich:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und höher.<br /><br />Gibt die Anzahl der auf dem System verfügbaren NUMA-Knoten an. Diese Spalte enthält sowohl physische NUMA-Knoten als auch weiche NUMA-Knoten. |  
@@ -83,7 +84,7 @@ ms.locfileid: "87928695"
 ## <a name="permissions"></a>Berechtigungen
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die- `VIEW DATABASE STATE` Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der  **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

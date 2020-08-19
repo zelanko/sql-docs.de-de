@@ -1,4 +1,5 @@
 ---
+description: xp_revokelogin (Transact-SQL)
 title: xp_revokelogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b09c799e553990715a8dd4f30bcd4adc9ce9dda1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 040560b9d69ecec0388109eaf4c032ac24a60688
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419204"
 ---
 # <a name="xp_revokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85890719"
   Hebt den Zugriff einer Windows-Gruppe oder eines Windows-Benutzers auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]auf.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Drop Login](../../t-sql/statements/drop-login-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [Drop Login](../../t-sql/statements/drop-login-transact-sql.md) .  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'`Der Name des Windows-Benutzers oder der Windows-Gruppe, aus dem der Zugriff widerrufen werden soll. *login* muss den Domänennamen beinhalten, z. B. **[ADVWKS\sylvester1]**. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @loginame = ] 'login'` Der Name des Windows-Benutzers oder der Windows-Gruppe, aus dem der Zugriff widerrufen werden soll. *login* muss den Domänennamen beinhalten, z. B. **[ADVWKS\sylvester1]**. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

@@ -1,4 +1,5 @@
 ---
+description: sysssispackages (Transact-SQL)
 title: sysssispackages (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1fa0f587fc5939135b3d88b15066de29be6d8a7c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1a1bda3bfea233f7a586a8147f268fbdb1e6ade
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419034"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,11 +35,11 @@ ms.locfileid: "85889247"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der eindeutige Bezeichner des Pakets.|  
 |**id**|**uniqueidentifier**|GUID des Pakets|  
-|**description**|**nvarchar**|Eine optionale Beschreibung des Pakets.|  
+|**Beschreibung**|**nvarchar**|Eine optionale Beschreibung des Pakets.|  
 |**mit "up"**|**datetime**|Erstellungsdatum des Pakets|  
 |**folderid**|**uniqueidentifier**|Die GUID des logischen Ordners, in dem das Paket von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aufgelistet ist.|  
 |**ownersid**|**varbinary**|Die eindeutige Sicherheits-ID des Benutzers, der das Paket erstellt hat|  
-|**packagedata**|**Bild**|Das Paket.|  
+|**packagedata**|**image**|Das Paket.|  
 |**packageformat**|**int**|Das Format, in dem das Paket gespeichert wird:<br /><br /> Der Wert 2 gibt an, dass das Paket im-Format gespeichert wird [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .<br /><br /> Der Wert 3 gibt an, dass das Paket im Format [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oder später gespeichert wird.|  
 |**PackageType**|**int**|Der Client, der das Paket erstellt hat. Die folgenden Werte sind möglich:<br /><br /> 0 (Standardwert)<br /><br /> 1 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import/Export-Assistent)<br /><br /> 3 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replikation)<br /><br /> 5 ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer)<br /><br /> 6 (Wartungsplan-Designer oder -Assistent).<br /><br /> <br /><br /> Beachten Sie, dass die Werte in dieser Spalte der- <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> Enumeration entsprechen.|  
 |**vermajor**|**int**|Die aktuelle Hauptversion des Pakets.|  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_io_cluster_valid_path_names (Transact-SQL)
 title: sys. dm_io_cluster_valid_path_names (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a47313e1fb9a97207f02abcc89bdb66bb791f9ea
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 0f81bd26a6ec2a43e9f063466bfa77c793ac4d8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419654"
 ---
 # <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87442535"
 |**cluster_owner_node**|**Nvarchar (64)**|Der aktuelle Besitzer des Laufwerks. Bei freigegebenen Clustervolumes (CSV) entspricht der Besitzer dem Knoten, der den MetaData-Server hostet. Lässt keine NULL-Werte zu.|  
 |**is_cluster_shared_volume**|**Trate**|Gibt 1 zurück, wenn das Laufwerk, auf dem sich der Pfad befindet, ein freigegebenes Clustervolume ist; andernfalls wird 0 zurückgegeben.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Eine SQL Server-Failoverclusterinstanz (FCI) muss auf allen FCI-Knoten freigegebenen Speicher zur Speicherung von Daten- und Protokolldateien verwenden. Die in dieser Sicht aufgeführten Datenträger sind die Datenträger der Clusterressourcengruppe, die der Instanz zugeordnet ist. Es sind die einzigen Datenträger, die zur Speicherung von Daten- oder Protokolldateien verwendet werden können.  
   
 > [!NOTE]  

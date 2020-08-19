@@ -1,4 +1,5 @@
 ---
+description: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 title: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ffc1ca0ec2e44377012f4149255bca80bce6af7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 809670e98a7d67a5a078939fdddc600ca0116ad1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419494"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -56,7 +58,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>Zurückgegebene Spalten  
  In der folgenden Tabelle sind die Spalten aufgelistet, die von sys. fn_stmt_sql_handle_from_sql_stmt zurückgegeben werden.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|Das SQL-handle.|  
 |**query_sql_text**|**nvarchar(max)**|Der Text der [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung.|  
@@ -78,7 +80,7 @@ SELECT * FROM sys.databases;
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- Verwenden Sie die-Funktion, um Abfragespeicher Daten mit anderen dynamischen Verwaltungs Sichten zu korrelieren. Im Beispiel unten geschieht Folgendes:  
+ Verwenden Sie die-Funktion, um Abfragespeicher Daten mit anderen dynamischen Verwaltungs Sichten zu korrelieren. Im folgenden Beispiel:  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  

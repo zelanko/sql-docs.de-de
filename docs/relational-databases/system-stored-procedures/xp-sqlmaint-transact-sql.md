@@ -1,4 +1,5 @@
 ---
+description: xp_sqlmaint (Transact-SQL)
 title: xp_sqlmaint (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08db9ea2487f51267e7c1f1e4bac4fd807b59fcd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cfe66be84a9f631422c624eaf65152569d0405bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419184"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +49,13 @@ xp_sqlmaint 'switch_string'
  Der **-?** der Schalter ist für **xp_sqlmaint**ungültig.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine. Gibt einen Fehler zurück, wenn das Hilfsprogramm **sqlmaint** fehlschlägt.  
+ Keine Gibt einen Fehler zurück, wenn das Hilfsprogramm **sqlmaint** fehlschlägt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn diese Prozedur von einem Benutzer aufgerufen wird, der mit SQL Server-Authentifizierung angemeldet ist, werden die Schalter **-U "***login_id***"** und **"-P" für "***Password***"** vor der Ausführung *switch_string* vorangestellt. Wenn der Benutzer mit der Windows-Authentifizierung angemeldet ist, wird *switch_string* ohne Änderung an **sqlmaint**weitergegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel ruft `xp_sqlmaint` das Hilfsprogramm `sqlmaint` auf, um Integritätsprüfungen auszuführen, eine Berichtsdatei zu erstellen und `msdb.dbo.sysdbmaintplan_history` zu aktualisieren.  

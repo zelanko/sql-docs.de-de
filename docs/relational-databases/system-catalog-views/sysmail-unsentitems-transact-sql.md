@@ -1,4 +1,5 @@
 ---
+description: sysmail_unsentitems (Transact-SQL)
 title: sysmail_unsentitems (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f1fd96f8a9809f102bfb8fe8650513fd8eb01e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0f17a4cc00724bab836c74ed1622d383d3969b16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419864"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,14 +49,14 @@ ms.locfileid: "85900982"
 |**Empfängers**|**varchar(max)**|Die E-Mail-Adressen der Nachrichtenempfänger.|  
 |**copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten.|  
 |**blind_copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten, deren Namen jedoch nicht im Nachrichtenkopf angezeigt werden.|  
-|**Betreff**|**nvarchar (510)**|Die Betreffzeile der Nachricht.|  
+|**subject**|**nvarchar (510)**|Die Betreffzeile der Nachricht.|  
 |**body**|**varchar(max)**|Der Textkörper der Nachricht.|  
 |**body_format**|**varchar (20)**|Das Textkörperformat der Nachricht. Mögliche Werte sind **Text** und **HTML**.|  
 |**importance**|**varchar (6)**|Der **Wichtigkeits** Parameter der Nachricht.|  
 |**/Kleinschreibung**|**varchar (12)**|Der **Sensitivitäts** Parameter der Nachricht.|  
 |**file_attachments**|**varchar(max)**|Eine durch Semikolons getrennte Liste der Dateinamen, die an die E-Mail-Nachricht angehängt wurden.|  
 |**attachment_encoding**|**varchar (20)**|Der Typ der E-Mail-Anlage.|  
-|**Frage**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
+|**query**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
 |**execute_query_database**|**sysname**|Der Datenbankkontext, in dem das E-Mail-Programm die Abfrage ausgeführt hat.|  
 |**attach_query_result_as_file**|**bit**|Bei einem Wert von 0 wurden die Abfrageergebnisse hinter dem Inhalt des Textkörpers in den Textkörper der E-Mail-Nachricht eingeschlossen. Bei einem Wert von 1 wurden die Ergebnisse als Anlage zurückgegeben.|  
 |**query_result_header**|**bit**|Bei einem Wert von 1 enthielten die Abfrageergebnisse Spaltenheader. Bei einem Wert von 0 enthielten die Abfrageergebnisse keine Spaltenheader.|  
@@ -71,7 +72,7 @@ ms.locfileid: "85900982"
 |**last_mod_date**|**datetime**|Das Datum und die Uhrzeit der letzten Änderung der Zeile.|  
 |**last_mod_user**|**sysname**|Der Benutzer, der die Zeile zuletzt geändert hat.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie Probleme mit der Datenbank-E-Mail behandeln, kann diese Sicht Ihnen helfen, die Ursache des Problems zu identifizieren, da sie anzeigt, wie viele Nachrichten darauf warten, gesendet zu werden, und seit wann diese Nachrichten warten. Werden keine Nachrichten gesendet, wird das externe Datenbank-E-Mail-Programm möglicherweise nicht ausgeführt, oder die Datenbank-E-Mail kann aufgrund eines Netzwerkproblems die SMTP-Server nicht erreichen. Wenn viele der nicht gesendeten Nachrichten denselben **profile_id**haben, liegt möglicherweise ein Problem mit dem SMTP-Server vor. Sie sollten eventuell dem Profil zusätzliche Konten hinzufügen. Wenn Nachrichten zwar gesendet werden, sich jedoch zu lange in der Warteschlange befinden, benötigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise zusätzliche Ressourcen, um das Nachrichtenvolumen zu bewältigen.  
   
 ## <a name="permissions"></a>Berechtigungen  

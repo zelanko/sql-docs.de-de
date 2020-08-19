@@ -1,4 +1,5 @@
 ---
+description: sys.dm_io_backup_tapes (Transact-SQL)
 title: sys. dm_io_backup_tapes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f20a55b0203486abd8fd67657ce91ccfc16ce74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 13c44e5a65f351661d2d3b642beb7e08fe0604c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419704"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85898810"
 |**mount_request_time**|**datetime**|Uhrzeit, zu der die Einbindung angefordert wurde. NULL, wenn keine Einfügevorgang aussteht (**Status! = 2**). Lässt NULL-Werte zu.|  
 |**mount_expiration_time**|**datetime**|Uhrzeit, zu der die Einbindungssanforderung abläuft (Timeout). NULL, wenn keine Einfügevorgang aussteht (**Status! = 2**). Lässt NULL-Werte zu.|  
 |**database_name**|**nvarchar(256)**|Die Datenbank, die auf dem Medium gesichert werden soll. Lässt NULL-Werte zu.|  
-|**SPID**|**int**|Sitzungs-ID. Diese identifiziert den Benutzer des Bandes. Lässt NULL-Werte zu.|  
+|**spid**|**int**|Sitzungs-ID. Diese identifiziert den Benutzer des Bandes. Lässt NULL-Werte zu.|  
 |**command**|**int**|Der Befehl, durch den die Sicherung ausgeführt wird. Lässt NULL-Werte zu.|  
 |**command_desc**|**nvarchar(120)**|Beschreibung des Befehls. Lässt NULL-Werte zu.|  
 |**media_family_id**|**int**|Index der Medien Familie (1...* n*) ist *n* die Anzahl der Medien Familien im Medien Satz. Lässt NULL-Werte zu.|  
@@ -55,7 +56,7 @@ ms.locfileid: "85898810"
  Der Benutzer benötigt die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Mit e/a verbundene dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

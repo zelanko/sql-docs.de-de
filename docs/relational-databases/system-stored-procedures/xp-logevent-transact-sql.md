@@ -1,4 +1,5 @@
 ---
+description: xp_logevent (Transact-SQL)
 title: xp_logevent (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08fbf39390a7a81fc3ce3e8563c3699ba77b833c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7001b9d29a96dd192e044ddfe779b8f39a581a94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419274"
 ---
 # <a name="xp_logevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
   
  `The command(s) completed successfully.`  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie Nachrichten aus [!INCLUDE[tsql](../../includes/tsql-md.md)] Prozeduren, Triggern, Batches usw. senden, verwenden Sie die RAISERROR-Anweisung anstelle von xp_logevent. xp_logevent ruft keinen Nachrichten Handler eines Clients auf oder legt @ fest @ERROR . Führen Sie die RAISERROR-Anweisung aus, um Nachrichten in die Windows-Ereignisanzeige und in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokolldatei in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu schreiben.  
   
 ## <a name="permissions"></a>Berechtigungen  

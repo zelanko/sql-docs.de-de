@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_get_health_status (Transact-SQL)
 title: managed_backup. fn_get_health_status (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 4aa10efc95af42c7793fb37b49a72061353b0ee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419554"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,16 +44,16 @@ ms.locfileid: "86053436"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argumentation  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumente  
  [@begin_time]  
  Der Beginn des Zeitraums, von dem an die aggregierte Anzahl von Fehlern berechnet wird.  Der @begin_time Parameter ist "DateTime". Der Standardwert ist NULL. Wenn der Wert NULL ist, verarbeitet die Funktion die Ereignisse, die bereits 30 Minuten vor der aktuellen Zeit gemeldet wurden.  
   
  [ @end_time]  
- Das Ende des Zeitraums, von dem an die aggregierte Anzahl von Fehlern berechnet wird. Der- @end_time Parameter ist vom Datentyp DateTime und hat den Standardwert NULL. Wenn der Wert NULL ist, verarbeitet die Funktion erweiterte Ereignisse bis zur aktuellen Zeit.  
+ Das Ende des Zeitraums, von dem an die aggregierte Anzahl von Fehlern berechnet wird. Der- @end_time  Parameter ist vom Datentyp DateTime und hat den Standardwert NULL. Wenn der Wert NULL ist, verarbeitet die Funktion erweiterte Ereignisse bis zur aktuellen Zeit.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |number_of_storage_connectivity_errors|INT|Anzahl der Verbindungsfehler, wenn das Programm eine Verbindung mit dem Azure Storage-Konto herstellt.|  
 |number_of_sql_errors|INT|Die Anzahl der Fehler, die zurückgegeben werden, wenn das Programm eine Verbindung mit der SQL Server Engine herstellt.|  
@@ -61,7 +63,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_backup_loops|INT|Die Anzahl der Scans, die der Sicherungs-Agent für alle mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfigurierten Datenbanken ausführt sind.|  
 |number_of_retention_loops|INT|Die Anzahl der Datenbankscans, die zur Ermittlung der festgelegten Beibehaltungsdauer ausgeführt werden.|  
   
-## <a name="best-practices"></a>Bewährte Methoden  
+## <a name="best-practices"></a>Empfehlungen  
  Anhand dieser aggregierten Anzahl kann die Systemintegrität überwacht werden. Wenn die Spalte number_ of_retention_loops nach 30 Minuten beispielsweise 0 ist, dauert die Überwachung der Beibehaltungsdauer entweder sehr lange oder funktioniert nicht ordnungsgemäß. Spalten mit Werten ungleich 0 können auf Probleme hindeuten. Sie sollten die Protokolle der erweiterten Ereignisse prüfen, um das Problem einzugrenzen. Verwenden Sie alternativ die gespeicherte Prozedur **managed_backup. sp_get_backup_diagnostics** , um eine Liste der erweiterten Ereignisse zum Ermitteln der Details des Fehlers zu erhalten.  
   
 ## <a name="security"></a>Sicherheit  

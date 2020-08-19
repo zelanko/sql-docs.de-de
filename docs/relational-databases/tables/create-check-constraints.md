@@ -1,4 +1,5 @@
 ---
+description: Erstellen von CHECK-Einschränkungen
 title: Erstellen von CHECK-Einschränkungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/28/2017
@@ -17,12 +18,12 @@ ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3c631e4c733c87662ab1a582f1388913f0c2b3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 177caf959cd9f957525dd50a0b63a0dc2b304115
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419044"
 ---
 # <a name="create-check-constraints"></a>Erstellen von CHECK-Einschränkungen
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85753836"
   
 -   **Vorbereitungen:**  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie eine neue CHECK-Einschränkung mit:**  
   
@@ -54,7 +55,7 @@ ms.locfileid: "85753836"
   
 1.  Erweitern Sie im **Objekt-Explorer**die Tabelle, der Sie eine CHECK-Einschränkung hinzufügen möchten, klicken Sie mit der rechten Maustaste auf **Einschränkungen**, und klicken Sie auf **Neue Einschränkung**.  
   
-2.  Klicken Sie im Dialogfeld **Einschränkungen überprüfen** auf das Feld **Ausdruck** und dann auf die Auslassungspunkte **(…)** .  
+2.  Klicken Sie im Dialogfeld **Einschränkungen überprüfen** auf das Feld **Ausdruck** und dann auf die Auslassungspunkte **(…)**.  
   
 3.  Geben Sie im Dialogfeld **CHECK-Einschränkungen** die SQL-Ausdrücke für die CHECK-Einschränkungen ein. Um die Einträge in der Spalte `SellEndDate` der Tabelle `Product` auf einen Wert zu beschränken, der entweder größer oder gleich dem Datum in der Spalte `SellStartDate` ist oder ein NULL-Wert ist, geben Sie z. B. Folgendes ein:  
   
@@ -77,7 +78,7 @@ ms.locfileid: "85753836"
   
 6.  In der **Tabellen-Designer**-Kategorie können Sie festlegen, unter welchen Bedingungen die Einschränkung erzwungen werden soll.  
   
-    |**An:**|**Wählen Sie in den folgenden Feldern Ja aus:**|  
+    |**In:**|**Wählen Sie in den folgenden Feldern Ja aus:**|  
     |-------------|---------------------------------------------|  
     |Einschränkung für Daten überprüfen, die vorhanden waren, bevor Sie die Einschränkung erstellt haben|**Vorhandene Daten bei Erstellung oder Reaktivierung überprüfen**|  
     |Die Einschränkung jedes Mal erzwingen, wenn ein Replikationsvorgang mit dieser Tabelle auftritt|**Für Replikation erzwingen**|  

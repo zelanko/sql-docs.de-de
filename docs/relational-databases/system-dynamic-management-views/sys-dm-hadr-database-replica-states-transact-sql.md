@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_database_replica_states (Transact-SQL)
 title: sys. dm_hadr_database_replica_states (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/26/2018
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbfd5f0fc29efd4d2f6a02d680c9a6df34c5392b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b78a47051a175c53ea4d0c34e80baeda0c72708
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419744"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +74,7 @@ ms.locfileid: "85663022"
 |**low_water_mark_for_ghosts**|**bigint**|Eine monoton steigende Zahl für die Datenbank, die eine Untergrenze angibt, die für das Cleanup inaktiver Datensätze verwendet wurde. Wenn diese Zahl im Zeitverlauf nicht zunimmt, weist dies darauf hin, dass das Cleanup für inaktive Datensätze möglicherweise nicht erfolgt ist. Um zu entscheiden, welche Zeilen mit inaktiven Datensätzen bereinigt werden sollen, verwendet das primäre Replikat den Mindestwert dieser Spalte für alle Verfügbarkeitsreplikate (einschließlich des primären Replikats) für diese Datenbank.|  
 |**secondary_lag_seconds**|**bigint**|Die Anzahl der Sekunden, die das sekundäre Replikat während der Synchronisierung hinter dem primären Replikat liegt.<br /><br />**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.|  
   
-##  <a name="understanding-the-lsn-column-values"></a><a name="LSNcolumns"></a>Grundlegendes zu den LSN-Spaltenwerten  
+##  <a name="understanding-the-lsn-column-values"></a><a name="LSNcolumns"></a> Grundlegendes zu den LSN-Spaltenwerten  
  Die Werte der Spalten **end_of_log_lsn**, **last_hardened_lsn**, **last_received_lsn**, **last_sent_lsn**, **recovery_lsn**und **truncation_lsn** sind keine tatsächlichen Protokoll Folge Nummern (LSNs). Diese Werte stellen eine mit Nullen aufgefüllte Protokollblock-ID dar.  
   
  **end_of_log_lsn**, **last_hardened_lsn**und **recovery_lsn** sind Leerungs-LSNs. Beispielsweise gibt **last_hardened_lsn** den Anfang des nächsten Blocks hinter den Blöcken an, die bereits auf dem Datenträger vorhanden sind.  Alle LSN < den Wert **last_hardened_lsn** auf dem Datenträger.  Die LSN, die für diesen Wert >= ist, werden nicht geleert.  
@@ -86,7 +87,7 @@ ms.locfileid: "85663022"
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Always on Verfügbarkeits Gruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

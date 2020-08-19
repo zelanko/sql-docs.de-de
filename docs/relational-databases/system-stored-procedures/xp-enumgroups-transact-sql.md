@@ -1,4 +1,5 @@
 ---
+description: xp_enumgroups (Transact-SQL)
 title: xp_enumgroups (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c83ca09ff6e519420a8a4f8d077d9b855d9459f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ae1a698c5b33780417e74d27f20462b6e1e6e4f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419284"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ xp_enumgroups [ 'domain_name' ]
 |**group**|**sysname**|Name der Windows-Gruppe|  
 |**comment**|**sysname**|Eine von Windows bereitgestellte Beschreibung der Windows-Gruppe|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn *domain_name* der Name des Windows-basierten Computers ist, auf dem eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, oder kein Domänen Name angegeben ist, listet **xp_enumgroups** die lokalen Gruppen auf dem Computer auf, auf dem ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **xp_enumgroups** kann nicht verwendet werden, wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Windows 98 ausgeführt wird.  

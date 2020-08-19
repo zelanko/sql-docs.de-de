@@ -1,4 +1,5 @@
 ---
+description: sys.dm_repl_traninfo (Transact-SQL)
 title: sys. dm_repl_traninfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9602f889c7074bcb8b0f6493168226bc6786c5d6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 13688621c4547f5bc49be2d2385d20973b85f7e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419594"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85898668"
 |**fsinfo_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten FILESTREAM-Informationsstruktur.|  
 |**begin_lsn**|**nvarchar (64)**|Protokollsequenznummer (Log Sequence Number, LSN) des Protokolleintrags für den Beginn der Transaktion.|  
 |**commit_lsn**|**nvarchar (64)**|LSN des Protokolldatensatz für den Commit der Transaktion.|  
-|**DBID**|**smallint**|Datenbank-ID|  
+|**dbid**|**smallint**|Datenbank-ID|  
 |**Streitigkeiten**|**int**|ID des replizierten Befehls in der Transaktion.|  
 |**xdesid für**|**nvarchar (64)**|Transaktions-ID|  
 |**artcache_table_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Artikeltabellenstruktur, die zuletzt für diese Transaktion verwendet wurde.|  
@@ -70,11 +71,11 @@ ms.locfileid: "85898668"
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung in der Veröffentlichungsdatenbank oder in der für Change Data Capture aktivierten Datenbank.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Informationen werden nur für replizierte Datenbankobjekte oder für für Change Data Capture aktivierte Tabellen zurückgegeben, die zurzeit in den Artikelcache geladen sind.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Replikation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [Dynamische Verwaltungssichten in Bezug auf Change Data Capture &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   

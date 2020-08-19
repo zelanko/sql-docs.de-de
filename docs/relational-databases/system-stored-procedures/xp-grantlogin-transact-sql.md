@@ -1,4 +1,5 @@
 ---
+description: xp_grantlogin (Transact-SQL)
 title: xp_grantlogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6a97af7eea83e8022b30e70b5b6ccbe887469e08
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 185532cdcade18b6902fe1c3e8d1c8ab3eb568b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419264"
 ---
 # <a name="xp_grantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85890789"
   Erteilt einer Windows-Gruppe oder einem Windows-Benutzer Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Verwenden Sie stattdessen [Create Login](../../t-sql/statements/create-login-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [Create Login](../../t-sql/statements/create-login-transact-sql.md) .  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +43,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'`Der Name des hinzu zufügenden Windows-Benutzers oder der Windows-Gruppe. Der Windows-Benutzer oder die Windows-Gruppe muss mit einem Windows-Domänen Namen in der Form " *Domäne* \\ *Benutzer*" qualifiziert werden. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @loginame = ] 'login'` Der Name des hinzu zufügenden Windows-Benutzers oder der Windows-Gruppe. Der Windows-Benutzer oder die Windows-Gruppe muss mit einem Windows-Domänen Namen in der Form " *Domäne* \\ *Benutzer*" qualifiziert werden. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
-`[ @logintype = ] 'logintype'`Die Sicherheitsstufe der Anmeldung, für die der Zugriff gewährt wird. *LoginType ist vom Datentyp* **varchar (5)** und hat den Standardwert NULL. Es kann nur **Admin** angegeben werden. Wenn **Admin** angegeben ist, erhält der *Anmelde* Name Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und wird als Mitglied der festen Server Rolle **sysadmin** hinzugefügt.  
+`[ @logintype = ] 'logintype'` Die Sicherheitsstufe der Anmeldung, für die der Zugriff gewährt wird. *LoginType ist vom Datentyp* **varchar (5)** und hat den Standardwert NULL. Es kann nur **Admin** angegeben werden. Wenn **Admin** angegeben ist, erhält der *Anmelde* Name Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und wird als Mitglied der festen Server Rolle **sysadmin** hinzugefügt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

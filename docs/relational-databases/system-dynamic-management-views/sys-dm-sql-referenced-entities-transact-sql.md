@@ -1,4 +1,5 @@
 ---
+description: sys.dm_sql_referenced_entities (Transact-SQL)
 title: sys. dm_sql_referenced_entities (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/01/2019
@@ -20,12 +21,12 @@ ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5acf2b0afd2285025112d6e3f224a5f44241a0b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f219091eb016dddbf0f38932146a57cbd0a0a7b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419604"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
@@ -114,7 +115,7 @@ sys.dm_sql_referenced_entities (
   
  Gibt Fehler 2020 zurück, wenn Spaltenabhängigkeiten nicht aufgelöst werden können. Dieser Fehler verhindert nicht, dass die Abfrage Abhängigkeiten auf Objektebene zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Funktion kann im Kontext jeder beliebigen Datenbank ausgeführt werden, um die Entitäten zurückzugeben, die auf einen DDL-Trigger auf Serverebene verweisen.  
   
  In der folgenden Tabelle werden die Typen von Entitäten aufgelistet, für die Abhängigkeitsinformationen erstellt und verwaltet werden. Für Regeln, Standardwerte, temporäre Tabellen, temporär gespeicherte Prozeduren oder Systemobjekte werden keine Abhängigkeitsinformationen erstellt oder verwaltet.  
@@ -124,22 +125,22 @@ sys.dm_sql_referenced_entities (
 |Tabelle|Ja*|Ja|  
 |Ansicht|Ja|Ja|  
 |In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|Ja|Ja|  
-|Gespeicherte CLR-Prozedur|Nein |Ja|  
+|Gespeicherte CLR-Prozedur|Nein|Ja|  
 |Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Ja|  
-|CLR-benutzerdefinierte Funktion|Nein |Ja|  
+|CLR-benutzerdefinierte Funktion|Nein|Ja|  
 |CLR-Trigger (DML und DDL)|Nein|Nein|  
 |DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
 |DDL-Trigger auf Datenbankebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
 |DDL-Trigger auf Serverebene in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
-|Erweiterte gespeicherte Prozeduren|Nein |Ja|  
-|Warteschlange|Nein |Ja|  
-|Synonym|Nein |Ja|  
-|Typ (Alias und CLR-benutzerdefinierter Typ)|Nein |Ja|  
-|XML-Schemaauflistung|Nein |Ja|  
-|Partitionsfunktion|Nein |Ja|  
+|Erweiterte gespeicherte Prozeduren|Nein|Ja|  
+|Warteschlange|Nein|Ja|  
+|Synonym|Nein|Ja|  
+|Typ (Alias und CLR-benutzerdefinierter Typ)|Nein|Ja|  
+|XML-Schemaauflistung|Nein|Ja|  
+|Partitionsfunktion|Nein|Ja|  
 | &nbsp; | &nbsp; | &nbsp; |
 
- \*Eine Tabelle wird nur als verweisende Entität nachverfolgt, wenn Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] auf ein Modul, einen benutzerdefinierten Typ oder eine XML-Schema Auflistung in der Definition einer berechneten Spalte, einer Check-Einschränkung oder einer DEFAULT-Einschränkung verweist.  
+ \* Eine Tabelle wird nur als verweisende Entität nachverfolgt, wenn Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] auf ein Modul, einen benutzerdefinierten Typ oder eine XML-Schema Auflistung in der Definition einer berechneten Spalte, einer Check-Einschränkung oder einer DEFAULT-Einschränkung verweist.  
   
  ** Nummerierte gespeicherte Prozeduren mit einem ganzzahligen Wert größer als 1 werden weder als verweisende Entität noch als Entität, auf die verwiesen wird, aufgezeichnet.  
   

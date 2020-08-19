@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_languages (Transact-SQL)
 title: sys. fulltext_languages (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab4f793c243671edeaf2684d40b87c40cddaf8cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420164"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -90,14 +91,14 @@ ms.locfileid: "85764704"
 |Schwedisch|1053|  
 |Tamilisch|1097|  
 |Telugu|1.098|  
-|Thai|1054|  
+|Thailändisch|1054|  
 |Chinesisch (traditionell)|1028|  
 |**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Türkisch|1.055|  
 |Ukrainisch|1058|  
 |Urdu|1056|  
 |Vietnamesisch|1066|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Um die Liste der bei der Volltextsuche registrierten Sprachen zu aktualisieren, verwenden Sie [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**".  
   
 ## <a name="permissions"></a>Berechtigungen  

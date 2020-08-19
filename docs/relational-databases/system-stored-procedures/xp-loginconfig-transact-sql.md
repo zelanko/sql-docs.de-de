@@ -1,4 +1,5 @@
 ---
+description: xp_loginconfig (Transact-SQL)
 title: xp_loginconfig (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: afef091db5038a6ca302c07a6171557577d46797
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e86352f992698387334531398bafc5bdfdc2d61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419254"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +67,7 @@ xp_loginconfig ['config_name']
 |**name**|**sysname**|Der Konfigurationswert|  
 |**config value**|**sysname**|Die Einstellung für den Konfigurationswert|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **xp_loginconfig** können nicht verwendet werden, um Konfigurationswerte festzulegen.  
   
  Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um den Anmeldemodus und die Überwachungsebene festzulegen.  

@@ -1,4 +1,5 @@
 ---
+description: MSpublications (Transact-SQL)
 title: MSpublications (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b26ba7da6099f402aa8902a6ce2dafda8a4d2d71
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99cf9a95cb61cc0efcd40c29019c038248b6102d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419134"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ ms.locfileid: "85889587"
 |**allow_push**|**bit**|Zeigt an, ob für die angegebene Veröffentlichung Pushabonnements erstellt werden können.|  
 |**allow_pull**|**bit**|Zeigt an, ob für die angegebene Veröffentlichung Pullabonnements erstellt werden können.|  
 |**allow_anonymous**|**bit**|Zeigt an, ob für die angegebene Veröffentlichung anonyme Abonnements erstellt werden können.|  
-|**description**|**nvarchar(255)**|Die Beschreibung der Veröffentlichung.|  
+|**Beschreibung**|**nvarchar(255)**|Die Beschreibung der Veröffentlichung.|  
 |**vendor_name**|**nvarchar (100)**|Der Name des Herstellers, wenn der Verleger keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank ist.|  
-|**zurück**|**int**|Die Beibehaltungsdauer der Veröffentlichung (in Stunden).|  
+|**Beibehaltung**|**int**|Die Beibehaltungsdauer der Veröffentlichung (in Stunden).|  
 |**sync_method**|**int**|Die Synchronisierungsmethode:<br /><br /> **0** = System eigen (erzeugt eine Massen Kopier Ausgabe aller Tabellen im einheitlichen Modus).<br /><br /> **1** = Zeichen (erzeugt eine Massen Kopier Ausgabe aller Tabellen im Zeichenmodus).<br /><br /> **3** = gleichzeitig (erzeugt eine Massen Kopier Ausgabe aller Tabellen im einheitlichen Modus, sperrt jedoch die Tabelle während der Momentaufnahme nicht).<br /><br /> **4** = Concurrent_c (erzeugt eine Massen Kopier Ausgabe aller Tabellen im Zeichenmodus, sperrt jedoch die Tabelle während der Momentaufnahme nicht)<br /><br /> Die Werte **3** und **4** stehen für die Transaktions Replikation und Mergereplikation zur Verfügung, jedoch nicht für die Momentaufnahme Replikation.|  
 |**allow_subscription_copy**|**bit**|Aktiviert oder deaktiviert die Option zum Kopieren der Abonnementdatenbanken, die diese Veröffentlichung abonniert haben. **0** bedeutet, dass das Kopieren deaktiviert ist, und **1** bedeutet, dass es aktiviert ist.|  
 |**thirdparty_options**|**int**|Gibt an, ob die Anzeige einer Veröffentlichung im Ordner Replikation unter [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] drückt wird:<br /><br /> **0** = eine heterogene Veröffentlichung im Ordner Replikation in anzeigen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .<br /><br /> **1** = unterdrücken Sie die Anzeige einer heterogenen Veröffentlichung im Ordner Replikation in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .|  

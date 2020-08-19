@@ -1,4 +1,5 @@
 ---
+description: sys.user_token (Transact-SQL)
 title: sys. user_token (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/27/2019
@@ -24,12 +25,12 @@ ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions|| = azure-sqldw-latest
-ms.openlocfilehash: 9b3e389b97cee8a8a6d548eb93ad70b94d09ba40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8228ea67864645737524f9d449abb18fd1c1c6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70160740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419944"
 ---
 # <a name="sysuser_token-transact-sql"></a>sys.user_token (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -46,8 +47,8 @@ ms.locfileid: "70160740"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. login_token &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-login-token-transact-sql.md)   
- [sys. server_principals &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sys. database_principals &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

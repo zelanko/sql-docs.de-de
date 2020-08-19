@@ -1,4 +1,5 @@
 ---
+description: sys.resource_governor_configuration (Transact-SQL)
 title: sys. resource_governor_configuration (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c0fa22e199415b19049e3db2beb0637218af3692
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9cb9b9654f0b9b3e6093746b52f0008f74e85a3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419984"
 ---
 # <a name="sysresource_governor_configuration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85897515"
 |is_enabled|**bit**|Gibt den aktuellen Status der Ressourcenkontrolle an:<br /><br /> 0 = Resource Governor ist nicht aktiviert.<br /><br /> 1 = Resource Governor aktiviert ist.<br /><br /> Lässt keine NULL-Werte zu.|  
 |max_outstanding_io_per_volume|**int**|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Die maximale Anzahl der ausstehenden E/A-Vorgänge pro Volume.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Katalogsicht zeigt die Konfiguration der Ressourcenkontrolle an, wie sie in den Metadaten gespeichert ist. Um die Konfiguration im Arbeitsspeicher anzuzeigen, verwenden Sie die entsprechende dynamische Verwaltungssicht.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -67,7 +68,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Resource Governor Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
- [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. dm_resource_governor_configuration &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
  [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)  
   

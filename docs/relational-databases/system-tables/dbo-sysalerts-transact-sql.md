@@ -1,4 +1,5 @@
 ---
+description: dbo.sysalerts (Transact-SQL)
 title: dbo.sysWarnungen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/24/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6113a7d05c7128df4b7691bd7f72d09ba8f0548b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 509e401f70aadc8f4dc2eb625fb5b9cf1dcda5d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419244"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +37,11 @@ ms.locfileid: "85890534"
 |**id**|**int**|Warnungs-ID.|  
 |**name**|**sysname**|Name der Warnung.|  
 |**event_source**|**nvarchar (100)**|Die Quelle des Ereignisses: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**event_category_id**|**int**|Für die zukünftige Verwendung reserviert.|  
-|**event_id**|**int**|Für die zukünftige Verwendung reserviert.|  
+|**event_category_id**|**int**|Für zukünftige Verwendung reserviert.|  
+|**event_id**|**int**|Für zukünftige Verwendung reserviert.|  
 |**message_id**|**int**|Benutzerdefinierte Nachrichten-ID oder Verweis auf die **sysmessages** -Nachricht, die diese Warnung auslöst.|  
 |**severity**|**int**|Schweregrad, der diese Warnung auslöst.|  
-|**wodurch**|**tinyint**|Status der Warnung:<br /><br /> **0** = deaktiviert.<br /><br /> **1** = aktiviert.|  
+|**enabled**|**tinyint**|Status der Warnung:<br /><br /> **0** = deaktiviert.<br /><br /> **1** = aktiviert.|  
 |**delay_between_responses**|**int**|Wartezeit in Sekunden zwischen den Benachrichtigungen für diese Warnung.|  
 |**last_occurrence_date**|**int**|Letztes Auftreten (Datum) der Warnung.|  
 |**last_occurrence_time**|**int**|Letztes Auftreten (Tageszeit) der Warnung.|  
@@ -59,7 +60,7 @@ ms.locfileid: "85890534"
 |**performance_condition**|**nvarchar(512)**|Reserviert.|  
 |**category_id**|**int**|Reserviert.|  
   
- ## <a name="remarks"></a>Hinweise
+ ## <a name="remarks"></a>Bemerkungen
 
 In der folgenden Tabelle werden die Werte für die include_event_description Bitmaske angezeigt. Der Dezimalwert wird von dbo.sysWarnungen zurückgegeben. 
 

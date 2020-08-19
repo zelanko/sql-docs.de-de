@@ -1,4 +1,5 @@
 ---
+description: syspolicy_policy_categories (Transact-SQL)
 title: syspolicy_policy_categories (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 766aa7e2d60a19c5f6b6093dc72685175d8fbc3b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7d5a115beb4f3f4ec543a8ae4861462cf750648
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419854"
 ---
 # <a name="syspolicy_policy_categories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85900592"
 |name|**sysname**|Name der Richtlinienkategorie.|  
 |mandate_database_subscriptions|**bit**|Gibt an, ob die Richtlinienkategorie für alle Datenbanken in einer Instanz ohne ein explizites Abonnement gilt (1), oder ob die Richtlinienkategorie auf eine Datenbank unter Verwendung eines expliziten Abonnements angewendet werden muss (0).|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Zeigt eine Liste der Richtliniengruppen der richtlinienbasierten Verwaltung an.  
   
 ## <a name="permissions"></a>Berechtigungen  
