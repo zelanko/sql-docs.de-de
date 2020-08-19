@@ -1,4 +1,5 @@
 ---
+description: NEWID (Transact-SQL)
 title: NEWID (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/29/2017
@@ -19,28 +20,30 @@ ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fff840992f0b24af961acb069268cb41c550da2a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b478b8ea685a5e8cf5399c5ca429936be9a18784
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445704"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  Erstellt einen eindeutigen Wert vom Typ **uniqueidentifier**.  
+Erstellt einen eindeutigen Wert vom Typ **uniqueidentifier**.  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
-  
+```syntaxsql 
 NEWID ( )  
 ```  
   
-## <a name="return-types"></a>Rückgabetypen  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Rückgabetypen
  **uniqueidentifier**  
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -51,7 +54,7 @@ NEWID ( )
 ### <a name="a-using-the-newid-function-with-a-variable"></a>A. Verwenden der NEWID-Funktion mit einer Variablen  
  Das folgende Beispiel verwendet `NEWID()` zum Zuweisen eines Wertes an eine Variable, die mit dem **uniqueidentifier** -Datentyp deklariert wurde. Der Wert der Variablen vom Datentyp **uniqueidentifier** wird gedruckt, bevor er getestet wird.  
   
-```  
+```sql
 -- Creating a local variable with DECLARE/SET syntax.  
 DECLARE @myid uniqueidentifier  
 SET @myid = NEWID()  
@@ -73,7 +76,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
  Das folgende Beispiel erstellt die `cust` -Tabelle mit einem **uniqueidentifier** data type, and uses NEWID to fill the -Tabelle mit einem default value. Durch das Zuweisen des Standardwertes `NEWID()`enthält jede neue und vorhandene Zeile einen eindeutigen Wert für die `CustomerID` -Spalte.  
   
-```  
+```sql
 -- Creating a table using NEWID for uniqueidentifier data type.  
 CREATE TABLE cust  
 (  
@@ -92,20 +95,20 @@ CREATE TABLE cust
 GO  
 -- Inserting 5 rows into cust table.  
 INSERT cust  
-(CustomerID, Company, ContactName, Address, City, StateProvince,   
+(Company, ContactName, Address, City, StateProvince,   
  PostalCode, CountryRegion, Telephone, Fax)  
 VALUES  
- (NEWID(), 'Wartian Herkku', 'Pirkko Koskitalo', 'Torikatu 38', 'Oulu', NULL,  
+ ('Wartian Herkku', 'Pirkko Koskitalo', 'Torikatu 38', 'Oulu', NULL,  
  '90110', 'Finland', '981-443655', '981-443655')  
-,(NEWID(), 'Wellington Importadora', 'Paula Parente', 'Rua do Mercado, 12', 'Resende', 'SP',  
+,('Wellington Importadora', 'Paula Parente', 'Rua do Mercado, 12', 'Resende', 'SP',  
  '08737-363', 'Brasil', '(14) 555-8122', '')  
-,(NEWID(), 'Cactus Comidas para Ilevar', 'Patricio Simpson', 'Cerrito 333', 'Buenos Aires', NULL,   
+,('Cactus Comidas para Ilevar', 'Patricio Simpson', 'Cerrito 333', 'Buenos Aires', NULL,   
  '1010', 'Argentina', '(1) 135-5555', '(1) 135-4892')  
-,(NEWID(), 'Ernst Handel', 'Roland Mendel', 'Kirchgasse 6', 'Graz', NULL,  
+,('Ernst Handel', 'Roland Mendel', 'Kirchgasse 6', 'Graz', NULL,  
  '8010', 'Austria', '7675-3425', '7675-3426')  
-,(NEWID(), 'Maison Dewey', 'Catherine Dewey', 'Rue Joseph-Bens 532', 'Bruxelles', NULL,  
+,('Maison Dewey', 'Catherine Dewey', 'Rue Joseph-Bens 532', 'Bruxelles', NULL,  
  'B-1180', 'Belgium', '(02) 201 24 67', '(02) 201 24 68');  
-GO  
+GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>C. Verwenden von uniqueidentifier und Variablenzuweisung  
@@ -118,7 +121,7 @@ SELECT @myid;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: IsolationLevelEnum
 title: Isolationlevelumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 864938729153a1cd3f8f31f2e4ba04b075d2f713
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0c08da68e136d3e2cffbb492f021225a3b895a9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758646"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443412"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 Gibt die Ebene der Transaktions Isolation für ein [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt an.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adxactunfest gelegt**|-1|Gibt an, dass der Anbieter eine andere Isolationsstufe als angegeben verwendet, jedoch nicht bestimmt werden kann.|  
 |**adxactchaos**|16|Gibt an, dass ausstehende Änderungen von höher isolierten Transaktionen nicht überschrieben werden können.|  
@@ -40,7 +41,7 @@ Gibt die Ebene der Transaktions Isolation für ein [Verbindungs](../../../ado/re
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |Adoumums. IsolationLevel. nicht angegeben|  
 |Adoumums. IsolationLevel. Chaos|  

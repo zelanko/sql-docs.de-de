@@ -1,4 +1,5 @@
 ---
+description: MaxRecords-Eigenschaft (ADO)
 title: MaxRecords-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9e4beaaa4b38a26089d1136d1b32090ea12231f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 905897cfa08591aaefce3aceb46e1892d41d3d7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443272"
 ---
 # <a name="maxrecords-property-ado"></a>MaxRecords-Eigenschaft (ADO)
 Gibt die maximale Anzahl von Datensätzen an, die aus einer Abfrage zu einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zurückgegeben werden sollen.  

@@ -1,4 +1,5 @@
 ---
+description: STIsClosed (geography-Datentyp)
 title: STIsClosed (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 06190fa6cc6a0377e49f423c50369a7ceb4b51d7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8c6643b37d421a5283cd8d44e3fadaf73ae69eab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445213"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (geography-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "86555771"
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Methode gibt 0 zurück, wenn eine beliebige Abbildung einer **geography** -Instanz ein Punkt ist oder wenn die Instanz leer ist.  
   
  Diese Methode gibt true zurück, wenn eine **FullGlobe** -Instanz ein **Polygon** oder anderer Typ der Instanz ist.  
@@ -61,7 +62,7 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.STIsClosed();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [OGC-Methoden für geography-Instanzen](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

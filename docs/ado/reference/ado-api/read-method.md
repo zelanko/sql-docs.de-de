@@ -1,4 +1,5 @@
 ---
+description: Read-Methode
 title: Read-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.technology: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75b39b758d48a173bcfbe84e3fecbd20cce5ee12
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6600c02af5c24fc1ce27a04422678f8a3f40a179
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442552"
 ---
 # <a name="read-method"></a>Read-Methode
 Liest eine angegebene Anzahl von Bytes aus einem binären [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -34,7 +35,7 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>Parameter  
  *NumBytes*  
- Dies ist optional. Ein **Long** -Wert, der die Anzahl der Bytes angibt, die aus der Datei gelesen werden sollen, oder der streamleenumererwert **adleall**, der Standardwert ist. [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)  
+ Optional. Ein **Long** -Wert, der die Anzahl der Bytes angibt, die aus der Datei gelesen werden sollen, oder der streamleenumererwert **adleall**, der Standardwert ist. [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md)  
   
 ## <a name="return-value"></a>Rückgabewert  
  Die **Read** -Methode liest eine angegebene Anzahl von Bytes oder den gesamten Stream aus einem **Streamobjekt** und gibt die resultierenden Daten als **Variante**zurück.  

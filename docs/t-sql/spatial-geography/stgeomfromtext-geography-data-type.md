@@ -1,4 +1,5 @@
 ---
+description: STGeomFromText (geography-Datentyp)
 title: STGeomFromText (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/30/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 958ac16bf0e42da25cb14a4b69019a88c12d6758
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 584b34c02bde76293654b0a0bef8c006ad3c38b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445292"
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (geography-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumente
  *geography_tagged_text*  
- Die WKT-Darstellung der Instanz von **geography** , die zurückgegeben werden soll. *geography_tagged_text* ist ein **nvarchar(max)** -Ausdruck.  
+ Die WKT-Darstellung der Instanz von **geography** , die zurückgegeben werden soll. *geography_tagged_text* ist ein **nvarchar(max)**-Ausdruck.  
   
  *SRID*  
  Ein **int** -Ausdruck, der die SRID (Spatial Reference ID) der Instanz von **geography** darstellt, die zurückgegeben wird.  

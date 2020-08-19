@@ -1,4 +1,5 @@
 ---
+description: GetString-Methode (ADO)
 title: GetString-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 166bfad93d994a4b85bdb944a5d5505987182044
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ef3d32e1caae337ecb2a03bba6af8c7b4cd858de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443512"
 ---
 # <a name="getstring-method-ado"></a>GetString-Methode (ADO)
 Gibt das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) als Zeichenfolge zurück.  
@@ -41,16 +42,16 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  Ein [stringformatenum](../../../ado/reference/ado-api/stringformatenum.md) -Wert, der angibt, wie das **Recordset** in eine Zeichenfolge konvertiert werden soll. Die Parameter " *RowDelimiter*", " *ColumnDelimiter*" und " *nullexpr* " werden nur mit einem *StringFormat* von " **adclipstring**" verwendet.  
   
  *NumRows*  
- Dies ist optional. Die Anzahl der Zeilen, die in das **Recordset**konvertiert werden sollen. Wenn *numRows* nicht angegeben wird, oder wenn es größer als die Gesamtzahl der Zeilen im **Recordset**ist, werden alle Zeilen im **Recordset** konvertiert.  
+ Optional. Die Anzahl der Zeilen, die in das **Recordset**konvertiert werden sollen. Wenn *numRows* nicht angegeben wird, oder wenn es größer als die Gesamtzahl der Zeilen im **Recordset**ist, werden alle Zeilen im **Recordset** konvertiert.  
   
  *ColumnDelimiter*  
- Dies ist optional. Ein Trennzeichen, das zwischen Spalten verwendet wird, sofern angegeben, andernfalls das Tabulator Zeichen.  
+ Optional. Ein Trennzeichen, das zwischen Spalten verwendet wird, sofern angegeben, andernfalls das Tabulator Zeichen.  
   
  *RowDelimiter*  
- Dies ist optional. Ein Trennzeichen, das zwischen Zeilen verwendet wird, sofern angegeben, andernfalls das Wagen Rücklauf Zeichen.  
+ Optional. Ein Trennzeichen, das zwischen Zeilen verwendet wird, sofern angegeben, andernfalls das Wagen Rücklauf Zeichen.  
   
  *Nullexpr*  
- Dies ist optional. Ein Ausdruck, der anstelle eines NULL-Werts verwendet wird, sofern angegeben, andernfalls die leere Zeichenfolge.  
+ Optional. Ein Ausdruck, der anstelle eines NULL-Werts verwendet wird, sofern angegeben, andernfalls die leere Zeichenfolge.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Zeilendaten, aber keine Schema Daten, werden in der Zeichenfolge gespeichert. Daher kann ein **Recordset** nicht mit dieser Zeichenfolge erneut geöffnet werden.  

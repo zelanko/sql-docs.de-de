@@ -1,4 +1,5 @@
 ---
+description: Muvefirst-, muvelast-, muvenext-und muveprevious-Methoden Beispiel (VBScript)
 title: Verschieben des Daten Satz Zeigers eines recordsetbeispiels (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a1abb3ffd43a18df869385ddbbd374992a3f715
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ba0b69a87f11104888edcfb588d2633414b5a5ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443172"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>Muvefirst-, muvelast-, muvenext-und muveprevious-Methoden Beispiel (VBScript)
 In diesem Beispiel werden die Methoden [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)und [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) verwendet, um den Daten Satz Zeiger eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf dem angegebenen Befehl zu verschieben.  

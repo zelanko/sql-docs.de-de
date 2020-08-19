@@ -1,4 +1,5 @@
 ---
+description: STIsClosed (geometry-Datentyp)
 title: STIsClosed (geometry-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 61c72f4953bfad6d54c46b3b710d2f9c0b9f98d7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c92d311ba67c71f77fef8052bcfe8e5938d1f1b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445037"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (geometry-Datentyp)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ Gibt 1 zurück, wenn die Ausgangs- und Endpunkte der angegebenen **geometry**-In
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Methode gibt 0 zurück, wenn eine beliebige Abbildung einer **geometry**-Instanz ein Punkt ist oder wenn die Instanz leer ist.  
   
  Alle **Polygon** -Instanzen werden als geschlossen betrachtet.  
@@ -57,7 +58,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STIsClosed();  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [OGC-Methoden für geometry-Instanzen](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

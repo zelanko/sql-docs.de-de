@@ -1,4 +1,5 @@
 ---
+description: Open-Methode (ADO-Verbindung)
 title: Open-Methode (ADO-Verbindung) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31ce05ce069e0eb3e7d6431b296f40824a8acd3a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1cfba7ddf3192d8bbc81d051e1c29ac27303ef68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442982"
 ---
 # <a name="open-method-ado-connection"></a>Open-Methode (ADO-Verbindung)
 Öffnet eine Verbindung mit einer Datenquelle.  
@@ -36,16 +37,16 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>Parameter  
  *ConnectionString*  
- Dies ist optional. Ein **Zeichen** folgen Wert, der Verbindungsinformationen enthält. Ausführliche Informationen zu gültigen Einstellungen finden Sie in der [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft.  
+ Optional. Ein **Zeichen** folgen Wert, der Verbindungsinformationen enthält. Ausführliche Informationen zu gültigen Einstellungen finden Sie in der [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) -Eigenschaft.  
   
  *UserID*  
- Dies ist optional. Ein **Zeichen** folgen Wert, der einen Benutzernamen enthält, der beim Herstellen der Verbindung verwendet werden soll.  
+ Optional. Ein **Zeichen** folgen Wert, der einen Benutzernamen enthält, der beim Herstellen der Verbindung verwendet werden soll.  
   
  *Kennwort*  
- Dies ist optional. Ein **Zeichen** folgen Wert, der ein Kennwort enthält, das beim Herstellen der Verbindung verwendet werden soll.  
+ Optional. Ein **Zeichen** folgen Wert, der ein Kennwort enthält, das beim Herstellen der Verbindung verwendet werden soll.  
   
  *Optionen*  
- Dies ist optional. Ein [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) -Wert, der bestimmt, ob diese Methode zurückgeben soll (synchron) oder bevor (asynchron) die Verbindung hergestellt wird.  
+ Optional. Ein [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) -Wert, der bestimmt, ob diese Methode zurückgeben soll (synchron) oder bevor (asynchron) die Verbindung hergestellt wird.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Verwendung der **Open** -Methode für ein [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt stellt die physische Verbindung zu einer Datenquelle her. Nachdem diese Methode erfolgreich abgeschlossen wurde, wird die Verbindung Live hergestellt, und Sie können Befehle für diese Methode ausgeben und die Ergebnisse verarbeiten.  

@@ -1,4 +1,5 @@
 ---
+description: NCHAR (Transact-SQL)
 title: NCHAR (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/13/2017
@@ -19,12 +20,12 @@ ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcd53208afaa16fdab638b854773163a6353bc05
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c6964acd1127db3bcdb25d551116865073e43974
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445720"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,9 +49,9 @@ NCHAR ( integer_expression )
  Wenn die Sortierung der Datenbank das Flag für zusätzliche Zeichen unterstützt, entspricht dies einer positiven ganzen Zahl zwischen 0 und 1.114.111 (0 bis 0x10xFFFF). Wenn ein Wert außerhalb dieses Bereichs angegeben wurde, wird NULL zurückgegeben.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **nchar(1)** , wenn die Standarddatenbanksortierung keine ergänzenden Zeichen unterstützt.  
+ **nchar(1)**, wenn die Standarddatenbanksortierung keine ergänzenden Zeichen unterstützt.  
   
- **nvarchar(2)** , wenn die Standarddatenbanksortierung ergänzende Zeichen unterstützt.  
+ **nvarchar(2)**, wenn die Standarddatenbanksortierung ergänzende Zeichen unterstützt.  
   
  Wenn der Parameter *integer_expression* im Bereich 0 bis 0xFFFF liegt, wird nur ein Zeichen zurückgegeben. Bei höheren Werten gibt NCHAR das entsprechende Ersatzzeichenpaar zurück. Erstellen Sie kein Ersatzzeichenpaar mit `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Verwenden Sie stattdessen eine Datenbanksortierung, die ergänzende Zeichen unterstützt, und geben Sie dann den Unicode-Codepunkt für das Ersatzzeichenpaar an. Im folgenden Beispiel werden sowohl die alte Methode zur Erstellung eines Ersatzzeichenpaares sowie die bevorzugte Methode zur Angabe des Unicode-Codepunkts erläutert.  
   
@@ -214,7 +215,7 @@ Character # Unicode Character UNICODE Value
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  

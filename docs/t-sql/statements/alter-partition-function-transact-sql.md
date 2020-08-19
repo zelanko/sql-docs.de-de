@@ -1,4 +1,5 @@
 ---
+description: ALTER PARTITION FUNCTION (Transact-SQL)
 title: ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8751da646792fc170b017039d6e5d1465e8b5ed
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: efac16278bec7099024cb5f9e7cc2480013728cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444892"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +71,7 @@ Die ALTER PARTITION SCHEME-Anweisung kann entweder eine Dateigruppe hinzufügen,
 Wenn Sie alle Partitionen in derselben Dateigruppe erstellen, wird diese Dateigruppe anfänglich automatisch der NEXT USED-Dateigrupp zugewiesen. Nach der Ausführung eines Teilungsvorgangs gibt es jedoch keine ausgewählte NEXT USED-Dateigruppe mehr. Weisen Sie die Dateigruppe explizit mithilfe von ALTER PARTITION SCHEME als NEXT USED-Dateigruppe zu. Andernfalls schlägt ein bevorstehender Teilungsvorgang fehl.  
   
 > [!NOTE]  
->  Einschränkungen für einen columnstore-Index: Wenn ein columnstore-Index für die Tabelle vorhanden ist, können nur leere Partitionen aufgeteilt werden. Vor dem Ausführen dieses Vorgangs müssen Sie den Columnstore-Index löschen oder deaktivieren.  
+>  Einschränkungen im Zusammenhang mit dem Columnstore-Index: Wenn ein Columnstore-Index für die Tabelle vorhanden ist, können nur leere Partitionen aufgeteilt werden. Vor dem Ausführen dieses Vorgangs müssen Sie den Columnstore-Index löschen oder deaktivieren.  
   
 MERGE [ RANGE ( *boundary_value*) ]  
 Löscht eine Partition und führt alle in der Partition vorhandenen Werte in der verbleibenden Partition zusammen. RANGE (*boundary_value*) muss ein vorhandener Begrenzungswert sein, mit dem die Werte aus der gelöschten Partition zusammengeführt werden. Dieses Argument entfernt die Dateigruppe, in der *boundary_value* ursprünglich vorhanden war, aus dem Partitionsschema, wenn sie nicht von einer verbleibenden Partition verwendet wird, oder wird mit der NEXT USED-Eigenschaft markiert. Die zusammengeführte Partition ist in der Dateigruppe vorhanden, die anfänglich *boundary_value* nicht enthielt. *boundary_value* ist ein konstanter Ausdruck, der auf Variablen (einschließlich Variablen eines benutzerdefinierten Typs) oder Funktionen (einschließlich benutzerdefinierter Funktionen) verweisen kann. Er kann nicht auf einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Ausdruck verweisen. *boundary_value* muss entweder mit dem Datentyp der zugehörigen Partitionierungsspalte übereinstimmen oder implizit in diesen konvertierbar sein. Sie können *boundary_value* auch während der impliziten Konvertierung nicht so abschneiden, dass dessen Größe und Dezimalstellen mit denen des entsprechenden *input_parameter_type*-Werts nicht übereinstimmen.  
@@ -78,7 +79,7 @@ Löscht eine Partition und führt alle in der Partition vorhandenen Werte in der
 > [!NOTE]  
 >  Einschränkungen für einen columnstore-Index: Zwei nicht leere Partitionen, die einen columnstore-Index enthalten, können nicht zusammengeführt werden. Vor dem Ausführen dieses Vorgangs müssen Sie den Columnstore-Index löschen oder deaktivieren.  
   
-## <a name="best-practices"></a>Bewährte Methoden  
+## <a name="best-practices"></a>Empfehlungen  
 Bewahren Sie immer leere Partitionen an beiden Enden des Partitionsbereichs auf. Erhalten Sie die Partitionen an beiden Enden, um sicherzustellen, dass die Partitionsteilung und die Partitionszusammenführung keine Datenverschiebungen verursachen. Die Partitionsteilung erfolgt am Anfang und die Partitionszusammenführung am Ende. Vermeiden Sie das Aufteilen oder Zusammenführen gefüllter Partitionen. Das Teilen oder Zusammenführen aufgefüllter Partitionen kann ineffizient sein. Diese Vorgänge können ineffizient sein, da durch das Teilen oder Zusammenführen möglicherweise ein viermal größeres Protokoll generiert wird und es zudem zu ernsthaften Sperren kommen kann.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
@@ -150,7 +151,7 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 MERGE RANGE (100);  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [Partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
 [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
 [DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
@@ -161,7 +162,7 @@ MERGE RANGE (100);
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
 [sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
-[sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)[sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
+[sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md) [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
 [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
 [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
 [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   

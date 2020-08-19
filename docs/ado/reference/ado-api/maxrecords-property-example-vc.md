@@ -1,4 +1,5 @@
 ---
+description: MaxRecords-Eigenschaft – Beispiel (VC++)
 title: MaxRecords-Eigenschafts Beispiel (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16c837d37dc51c5f5203c1404b9c9a6bf9d8e95d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5888cf1ce3bb058c7c71e4bcec5b448d4f0ab9bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443262"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords-Eigenschaft – Beispiel (VC++)
 In diesem Beispiel wird die [maxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) -Eigenschaft verwendet, um ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zu öffnen, das die zehn teuersten Titel in der ***Titel*** Tabelle enthält.  

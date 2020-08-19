@@ -1,4 +1,5 @@
 ---
+description: FetchProgress-Ereignis (ADO)
 title: FetchProgress-Ereignis (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5e75dd96a77261bfee44da0db9025fb02af6871
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 53f22936f17e70c02a7640355250cdb5f2bcea95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443812"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress-Ereignis (ADO)
 Das **FetchProgress**-Ereignis wird in regelmäßigen Abständen aufgerufen, um zu melden, wie viele weitere Zeilen momentan in das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)abgerufen wurden.  

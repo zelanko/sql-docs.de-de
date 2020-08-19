@@ -1,4 +1,5 @@
 ---
+description: ProtocolOrder-Eigenschaft (ClientNetworkProtocol-Klasse)
 title: ProtocolOrder-Eigenschaft (ClientNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a19f48be252be1ff08d7ac92c265c5f16bb4c3b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2eef28c6250524757b4a3f23c625bb0c8fe02d71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446313"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>ProtocolOrder-Eigenschaft (ClientNetworkProtocol-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.ProtocolOrder [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der die fortlaufende Nummer des derzeitig referenzierten Clientnetzwerkprotokolls angibt, das durch die **OrderValue** -Methode festgelegt ist. Wenn das Clientnetzwerkprotokoll deaktiviert ist, ist dieser Wert Null.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Client Protokollen](https://technet.microsoft.com/library/ms181035.aspx)   
  [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](https://technet.microsoft.com/library/ms181035.aspx)  
   

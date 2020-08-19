@@ -1,4 +1,5 @@
 ---
+description: datetime2 (Transact-SQL)
 title: datetime2 (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/23/2017
@@ -22,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d9be8cfb561ec2e5857c2bd5699b46a5418c9df
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445985"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 
@@ -37,12 +38,12 @@ Definiert ein Datum, das mit einer Uhrzeit kombiniert ist und auf dem 24-Stunden
   
 ## <a name="datetime2-description"></a>datetime2-Beschreibung
   
-|Eigenschaft|value|  
+|Eigenschaft|Wert|  
 |--------------|-----------|  
 |Syntax|**datetime2** [ (*Genauigkeit in Sekundenbruchteilen*) ]|  
 |Verwendung|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird zum Zweck der Clientkompatibilität verwendet)|YYYY-MM-DD hh:mm:ss [.Sekundenbruchteile]<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt „Abwärtskompatibilität für Downlevelclients“.|  
-|Datumsbereich|0001-01-01 bis 9999-12-31<br /><br /> 1\. Januar 1 n. Chr. bis 31. Dezember 9999 n. Chr.|  
+|Datumsbereich|0001-01-01 bis 9999-12-31<br /><br /> 1. Januar 1 n. Chr. bis 31. Dezember 9999 n. Chr.|  
 |Uhrzeitbereich|00:00:00 bis 23:59:590,9999999|  
 |Zeitzonenoffsetbereich|Keine|  
 |Elementbereiche|Bei YYYY handelt es sich um eine vierstellige Zahl im Bereich von 0001 bis 9999, die ein Jahr darstellt.<br /><br /> Bei MM handelt es sich um eine zweistellige Zahl im Bereich von 01 bis 12, die im angegebenen Jahr einen Monat darstellt.<br /><br /> Bei DD handelt es sich um eine zweistellige Zahl im Bereich von 01 bis 31, die im angegebenen Monat einen Tag darstellt.<br /><br /> Bei hh handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 23, die die Stunde darstellt.<br /><br /> Bei mm handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 59, die die Minute darstellt.<br /><br /> Bei ss handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 59, die die Sekunde darstellt.<br /><br /> Bei n* handelt es sich um eine null- bis siebenstellige Zahl von 0 bis 9999999, die die Sekundenbruchteile darstellt. In Informatica werden die Sekundenbruchteile abgeschnitten, wenn n > 3.|  

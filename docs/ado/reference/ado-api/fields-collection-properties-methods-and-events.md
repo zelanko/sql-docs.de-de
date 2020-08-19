@@ -1,4 +1,5 @@
 ---
+description: Eigenschaften, Methoden und Ereignisse der Fields-Auflistung
 title: Eigenschaften, Methoden und Ereignisse der Fields-Auflistung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c3b2c2ab04bc5b552c9854c4aa2bed1ac57896a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6c0e77444c95e90344ba1fc3786b8b5307c86b22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443722"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>Eigenschaften, Methoden und Ereignisse der Fields-Auflistung
 ## <a name="properties"></a>Eigenschaften  
@@ -38,7 +39,7 @@ ms.locfileid: "82762551"
   
  [Update-Methode](../../../ado/reference/ado-api/update-method.md)  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  

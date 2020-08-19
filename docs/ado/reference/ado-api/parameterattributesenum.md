@@ -1,4 +1,5 @@
 ---
+description: ParameterAttributesEnum
 title: Parameterattributesumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 174cbfc9ded88e4c5465ef640a23d17c9edb5ac6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e97ec8a7b969311cec0a535a69a259c495d93f0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442772"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 Gibt die Attribute eines [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekts an.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adparamsigned**|16|Gibt an, dass der Parameter signierte Werte akzeptiert.|  
 |**adparamnullable**|64|Gibt an, dass der Parameter NULL-Werte akzeptiert.|  
@@ -34,7 +35,7 @@ Gibt die Attribute eines [Parameter](../../../ado/reference/ado-api/parameter-ob
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |Adoumums. Parameterattribute. Signed|  
 |Adoumums. Parameterattribute. Nullable|  

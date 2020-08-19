@@ -1,4 +1,5 @@
 ---
+description: Filter- und RecordCount-Eigenschaft – Beispiel (VB)
 title: Filter-und RecordCount-Eigenschaften (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8eeb68293e7c800fda4c4dd395f840cfeeb2d572
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0f948d2f0ba3a70c1f9a7b3279b0eb9bf68b5b3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443692"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter- und RecordCount-Eigenschaft – Beispiel (VB)
 In diesem Beispiel wird ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) für die Verleger Tabelle in der ***Pubs*** -Datenbank geöffnet. Anschließend wird die [Filter](../../../ado/reference/ado-api/filter-property.md) -Eigenschaft verwendet, um die Anzahl der sichtbaren Datensätze auf die Verleger in einem bestimmten Land/einer bestimmten Region zu begrenzen. Die **RecordCount** -Eigenschaft wird verwendet, um den Unterschied zwischen den gefilterten und ungefilterten Recordsets anzuzeigen.  

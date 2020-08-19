@@ -1,4 +1,5 @@
 ---
+description: DATETIMEOFFSETFROMPARTS (Transact-SQL)
 title: DATETIMEOFFSETFROMPARTS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/29/2017
@@ -18,12 +19,12 @@ ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0a383d6a9405d0aa80b8f0c1e4f3c2bc98c9667
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bcb6fea31efdc42e95f28fba01b416b00cee7038
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445810"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,7 +80,7 @@ Ein ganzzahliger literaler Wert, der die Genauigkeit des **datetimeoffset**-Wert
 
 `DATETIMEOFFSETFROMPARTS` gibt einen vollständig initialisierten **datetimeoffset**-Datentyp zurück. Die Offsetargumente stellen den Zeitzonenoffset dar. Bei ausgelassenen Offsetargumenten geht `DATETIMEOFFSETFROMPARTS` von einem Zeitzonenoffset von `00:00` (also kein Zeitzonenoffset) aus. Bei angegebenen Offsetargumenten erwartet `DATETIMEOFFSETFROMPARTS` Werte für beide Argumente, und beide Werte müssen entweder positiv oder negativ sein. Wenn *minute_offset* einen Wert und *hour_offset* keinen Wert aufweist, löst `DATETIMEOFFSETFROMPARTS` einen Fehler aus. `DATETIMEOFFSETFROMPARTS` löst einen Fehler aus, wenn andere Argumente über ungültige Werte verfügen. Wenn mindestens ein erforderliches Argument über einen `NULL`-Wert verfügt, dann gibt `DATETIMEOFFSETFROMPARTS``NULL` zurück. Wenn das *precision*-Argument jedoch einen `NULL`-Wert enthält, löst `DATETIMEOFFSETFROMPARTS` einen Fehler aus.  
   
-Das *fractions*-Argument ist vom „precision“-Argument abhängig. Wenn „precision“ beispielsweise den Wert 7 aufweist, stellt jeder Bruchteil 100 Nanosekunden dar. Wenn „precision“ jedoch den Wert 3 aufweist, stellt jeder Bruchteil eine Millisekunde dar. Wenn der Wert von „precision“ 0 (null) ist, muss auch der Wert von „fractions“ 0 (null) sein; andernfalls löst `DATETIMEOFFSETFROMPARTS` einen Fehler aus.  
+Das *fractions*-Argument ist vom precision-Argument abhängig. Wenn „precision“ beispielsweise den Wert 7 aufweist, stellt jeder Bruchteil 100 Nanosekunden dar. Wenn „precision“ jedoch den Wert 3 aufweist, stellt jeder Bruchteil eine Millisekunde dar. Wenn der Wert von „precision“ 0 (null) ist, muss auch der Wert von „fractions“ 0 (null) sein; andernfalls löst `DATETIMEOFFSETFROMPARTS` einen Fehler aus.  
   
 Diese Funktion unterstützt das Remoting zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern und höher. Sie unterstützt nicht das Remoting zu Servern mit einer Version unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   

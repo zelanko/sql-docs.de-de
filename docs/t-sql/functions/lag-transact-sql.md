@@ -1,4 +1,5 @@
 ---
+description: LAG (Transact-SQL)
 title: LAG (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/09/2017
@@ -19,12 +20,12 @@ ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0a331ba23c92f84615284dab9440d85a1c1f577
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7edaea7f6e1f2e491674454aeac9b90d5e00d29e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445761"
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ LAG (scalar_expression [,offset] [,default])
  *offset*  
  Die Anzahl der Zeilen vor der aktuellen Zeile, aus der ein Wert abgerufen werden soll. Wenn nichts angegeben ist, wird der Standardwert 1 verwendet. *offset* kann eine Spalte, eine Unterabfrage oder ein anderer Ausdruck sein, der eine positive ganze Zahl ergibt, kann aber auch implizit in einen Wert vom Typ **bigint** konvertiert werden. *offset* darf kein negativer Wert bzw. keine analytische Funktion sein.  
   
- *Standardwert*  
+ *default*  
  Der Wert, der zurückgegeben wird, wenn sich *offset* außerhalb des Partitionsbereichs befindet. Wenn kein Standardwert angegeben ist, wird NULL zurückgegeben. *default* kann eine Spalte, eine Unterabfrage oder ein anderer Ausdruck sein, jedoch keine analytische Funktion. *default* muss mit *scalar_expression* typkompatibel sein.  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
@@ -170,8 +171,8 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 2002 4       154000.0000   7000.0000   84000.0000
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
- [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
+## <a name="see-also"></a>Siehe auch  
+ [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
 

@@ -1,4 +1,5 @@
 ---
+description: Muvefirst-, muvelast-, muvenext-und muveprevious-Methode (ADO)
 title: Muvefirst-, muvelast-, muvenext-und muveprevious-Methoden (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4acdf777429e879ed22b99ea5a0f07775bc3798c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 440b2dec1ce045604456c38672c8c53e5c514df2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443202"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>Muvefirst-, muvelast-, muvenext-und muveprevious-Methode (ADO)
 Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt und legt diesen Datensatz auf den aktuellen Datensatz fest.  

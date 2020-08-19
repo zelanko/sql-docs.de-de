@@ -1,4 +1,5 @@
 ---
+description: MoveRecord-Methode (ADO)
 title: "\"Muecord\"-Methode (ADO) | Microsoft-Dokumentation"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e5c63bbd29bef1d7b0b7d7650c32fcfe2245f7a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 270d93169c5c1d91c35a58a36be9a4577e25e7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443152"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord-Methode (ADO)
 Verschiebt die durch einen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) dargestellte Entität an einen anderen Speicherort.  
@@ -35,22 +36,22 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Dies ist optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die den zu verschoden **Datensatz** identifiziert. Wenn die *Quelle* weggelassen wird oder eine leere Zeichenfolge angibt, wird das durch diesen **Datensatz** dargestellte Objekt verschoben. Wenn der **Datensatz** z. b. eine Datei darstellt, wird der Inhalt der Datei an den Speicherort verschoben, der vom *Ziel*angegeben wird.  
+ Optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die den zu verschoden **Datensatz** identifiziert. Wenn die *Quelle* weggelassen wird oder eine leere Zeichenfolge angibt, wird das durch diesen **Datensatz** dargestellte Objekt verschoben. Wenn der **Datensatz** z. b. eine Datei darstellt, wird der Inhalt der Datei an den Speicherort verschoben, der vom *Ziel*angegeben wird.  
   
  *Ziel*  
- Dies ist optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die den Speicherort angibt, an den die *Quelle* verschoben wird.  
+ Optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die den Speicherort angibt, an den die *Quelle* verschoben wird.  
   
- *User*  
- Dies ist optional. Ein **Zeichen** folgen Wert, der die Benutzer-ID enthält, die bei Bedarf den Zugriff auf das *Ziel*autorisiert.  
+ *UserName*  
+ Optional. Ein **Zeichen** folgen Wert, der die Benutzer-ID enthält, die bei Bedarf den Zugriff auf das *Ziel*autorisiert.  
   
  *Kennwort*  
- Dies ist optional. Eine **Zeichenfolge** , die das Kennwort enthält, das bei Bedarf den *Benutzernamen*überprüft.  
+ Optional. Eine **Zeichenfolge** , die das Kennwort enthält, das bei Bedarf den *Benutzernamen*überprüft.  
   
  *Optionen*  
- Dies ist optional. Ein Wert vom Typ "", dessen [Standardwert "](../../../ado/reference/ado-api/moverecordoptionsenum.md) **admuveunspezifiziert**" ist. Gibt das Verhalten dieser Methode an.  
+ Optional. Ein Wert vom Typ "", dessen [Standardwert "](../../../ado/reference/ado-api/moverecordoptionsenum.md) **admuveunspezifiziert**" ist. Gibt das Verhalten dieser Methode an.  
   
- *Async*  
- Dies ist optional. Ein **boolescher** Wert, der angibt, dass dieser Vorgang bei " **true**" asynchron erfolgen soll.  
+ *Asynchron*  
+ Optional. Ein **boolescher** Wert, der angibt, dass dieser Vorgang bei " **true**" asynchron erfolgen soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein **Zeichen** folgen Wert. In der Regel wird der Wert des *Ziels* zurückgegeben. Der genaue zurückgegebene Wert ist jedoch vom Anbieter abhängig.  

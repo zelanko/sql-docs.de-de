@@ -1,4 +1,5 @@
 ---
+description: nchar und nvarchar (Transact-SQL)
 title: nchar und nvarchar (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/19/2019
@@ -16,12 +17,12 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63673258e2fa368544c6cc43158025770861a8f9
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 30a696079d07f0b4dc6c76ee78a712a553b10ef6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445942"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar und nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ Wenn *n* in einer Datendefinitions- oder Variablendeklarationsanweisung nicht an
 Wenn Sie **nchar** oder **nvarchar** verwenden, wird Folgendes empfohlen:
 - Verwenden Sie **nchar**, wenn die Dateneinträge einer Spalte jeweils gleich lang sind.  
 - Verwenden Sie **nvarchar**, wenn sich die Dateneinträge einer Spalte in ihrer Größe erheblich unterscheiden.  
-- Verwenden Sie **nvarchar(max)** , wenn die Dateneinträge einer Spalte unterschiedlich lang sind, und die Zeichenfolgenlänge 4.000 Bytepaare überschreitet.  
+- Verwenden Sie **nvarchar(max)**, wenn die Dateneinträge einer Spalte unterschiedlich lang sind, und die Zeichenfolgenlänge 4.000 Bytepaare überschreitet.  
   
 **sysname** ist ein vom System bereitgestellter benutzerdefinierter Datentyp, der funktional **nvarchar(128)** entspricht, außer dass er keine NULL-Werte zulässt. **sysname** wird zum Verweisen auf Datenbankobjektnamen verwendet.
   
@@ -58,7 +59,7 @@ Stellen Sie einer Unicode-Zeichenfolgenkonstanten den Buchstaben „N“ voran, 
 > Geht einer Zeichenfolgenkonstante der Buchstabe „N“ voraus, gibt die implizite Konvertierung eine UCS-2- oder UTF-16-Zeichenfolge zurück, wenn die Konstante, die konvertiert werden soll, die maximale Länge für den Datentyp für „nvarchar“-Zeichenfolgen (4.000) nicht überschreitet. Andernfalls hat die implizite Konvertierung einen hohen „nvarchar(max)“-Wert zur Folge.
   
 > [!WARNING]  
-> Jede **varchar(max)** - oder **nvarchar(max)** -Spalte, die ungleich NULL ist, erfordert 24 Byte an zusätzlicher fester Zuteilung, die während eines Sortiervorgangs hinsichtlich des Zeilenlimits von 8.060 Byte gelten. Diese zusätzlichen Byte können zur Erstellung einer impliziten Beschränkung der Anzahl der **varchar(max)** - oder **nvarchar(max)** -Spalten führen, die ungleich NULL sind. Beim Erstellen der Tabelle (außerhalb der üblichen Warnung darüber, dass die maximale Zeilengröße das zulässige Maximum von 8.060 Byte überschreitet) oder beim Einfügen der Daten wird kein spezieller Fehler ausgegeben. Diese umfangreiche Zeilengröße kann Fehler verursachen (z.B. Fehler 512), die Benutzer während einiger normaler Vorgänge möglicherweise nicht vorhersehen können.  Die Aktualisierung eines gruppierten Indexschlüssels und Teile des vollständigen Spaltensatzes stellen zwei Beispiele für Vorgänge dieser Art dar.
+> Jede **varchar(max)**- oder **nvarchar(max)**-Spalte, die ungleich NULL ist, erfordert 24 Byte an zusätzlicher fester Zuteilung, die während eines Sortiervorgangs hinsichtlich des Zeilenlimits von 8.060 Byte gelten. Diese zusätzlichen Byte können zur Erstellung einer impliziten Beschränkung der Anzahl der **varchar(max)**- oder **nvarchar(max)**-Spalten führen, die ungleich NULL sind. Beim Erstellen der Tabelle (außerhalb der üblichen Warnung darüber, dass die maximale Zeilengröße das zulässige Maximum von 8.060 Byte überschreitet) oder beim Einfügen der Daten wird kein spezieller Fehler ausgegeben. Diese umfangreiche Zeilengröße kann Fehler verursachen (z.B. Fehler 512), die Benutzer während einiger normaler Vorgänge möglicherweise nicht vorhersehen können.  Die Aktualisierung eines gruppierten Indexschlüssels und Teile des vollständigen Spaltensatzes stellen zwei Beispiele für Vorgänge dieser Art dar.
   
 ## <a name="converting-character-data"></a>Konvertieren von Zeichendaten  
 Informationen zum Konvertieren von Zeichendaten finden Sie unter [char und varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md).

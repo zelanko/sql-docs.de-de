@@ -1,4 +1,5 @@
 ---
+description: Muvefirst-, muvelast-, muvenext-und muveprevious-Methoden Beispiel (VC + +)
 title: Datensatz-Zeiger von recordsetbeispiel verschieben (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 625bf0eddf76fb0acf7afdf790d8f88d41409b5f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0c528cf280e5bb011f558f72a74290ff7f690170
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443162"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>Muvefirst-, muvelast-, muvenext-und muveprevious-Methoden Beispiel (VC + +)
 In diesem Beispiel werden die Methoden [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)und [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) verwendet, um den Daten Satz Zeiger eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf dem angegebenen Befehl zu verschieben. Die Funktion "muveany" ist erforderlich, damit dieses Beispiel ausgeführt wird.  

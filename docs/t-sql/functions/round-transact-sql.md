@@ -1,4 +1,5 @@
 ---
+description: ROUND (Transact-SQL)
 title: ROUND (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdad5fc75a968a918b603ff118d7f2344379008d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 36917cc26189938e06f36d41559b2339344217c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445610"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +66,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**money**- und **smallmoney**-Kategorie|**money**|  
 |**float**- und **real**-Kategorie|**float**|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  ROUND gibt immer einen Wert zurück. Ist *length* negativ und der Wert größer als die Anzahl der Stellen vor dem Dezimaltrennzeichen, gibt ROUND den Wert 0 zurück.  
   
 |Beispiel|Ergebnis|  
@@ -79,7 +80,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |ROUND(748,58, –1)|750,00|  
 |ROUND(748,58, –2)|700,00|  
 |ROUND(748.58, -3)|Verursacht einen arithmetischen Überlauffehler, da 748.58 standardmäßig zu decimal(5,2) wird und eine Rückgabe von 1000.00 nicht möglich ist.|  
-|Um bis auf 4 Stellen aufzurunden, ändern Sie den Datentyp für die Eingabe. Beispiel:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1\.000,00|  
+|Um bis auf 4 Stellen aufzurunden, ändern Sie den Datentyp für die Eingabe. Beispiel:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1.000,00|  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -136,7 +137,7 @@ GO
 (1 row(s) affected)  
 ```
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: OBJECTPROPERTYEX (Transact-SQL)
 title: OBJECTPROPERTYEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5083f6e8bf8fd47dfca6f5191a8ed9702714461c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 197b3c2f473a9711f2bf79e94d400f85224d8235
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445678"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,14 +58,14 @@ OBJECTPROPERTYEX ( id , property )
 |Eigenschaftenname|Objekttyp|Beschreibung und Rückgabewerte|  
 |-------------------|-----------------|-------------------------------------|  
 |BaseType|Ein beliebiges schemabezogenes Objekt|Identifiziert den Basistyp des Objekts. Wenn das angegebene Objekt vom Typ SYNONYM ist, wird der Basistyp des zugrunde liegenden Objekts zurückgegeben.<br /><br /> Ungleich NULL = Objekttyp<br /><br /> Basisdatentyp: **char(2)**|  
-|CnstIsClustKey|Einschränkung|PRIMARY KEY-Einschränkung mit einem gruppierten Index.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
-|CnstIsColumn|Einschränkung|Einschränkung CHECK, DEFAULT oder FOREIGN KEY für eine einzelne Spalte.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
-|CnstIsDeleteCascade|Einschränkung|FOREIGN KEY-Einschränkung mit der ON DELETE CASCADE-Option.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
-|CnstIsDisabled|Einschränkung|Deaktivierte Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
-|CnstIsNonclustKey|Einschränkung|PRIMARY KEY-Einschränkung mit einem nicht gruppierten Index.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
-|CnstIsNotRepl|Einschränkung|Die Einschränkung wird mithilfe der Schlüsselwörter NOT FOR REPLICATION definiert.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
-|CnstIsNotTrusted|Einschränkung|Die Einschränkung wurde ohne Überprüfung der vorhandenen Zeilen aktiviert. Daher gilt die Einschränkung möglicherweise nicht für alle Zeilen.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
-|CnstIsUpdateCascade|Einschränkung|FOREIGN KEY-Einschränkung mit der ON UPDATE CASCADE-Option.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
+|CnstIsClustKey|Constraint|PRIMARY KEY-Einschränkung mit einem gruppierten Index.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
+|CnstIsColumn|Constraint|Einschränkung CHECK, DEFAULT oder FOREIGN KEY für eine einzelne Spalte.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
+|CnstIsDeleteCascade|Constraint|FOREIGN KEY-Einschränkung mit der ON DELETE CASCADE-Option.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
+|CnstIsDisabled|Constraint|Deaktivierte Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
+|CnstIsNonclustKey|Constraint|PRIMARY KEY-Einschränkung mit einem nicht gruppierten Index.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
+|CnstIsNotRepl|Constraint|Die Einschränkung wird mithilfe der Schlüsselwörter NOT FOR REPLICATION definiert.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
+|CnstIsNotTrusted|Constraint|Die Einschränkung wurde ohne Überprüfung der vorhandenen Zeilen aktiviert. Daher gilt die Einschränkung möglicherweise nicht für alle Zeilen.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
+|CnstIsUpdateCascade|Constraint|FOREIGN KEY-Einschränkung mit der ON UPDATE CASCADE-Option.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
 |ExecIsAfterTrigger|Trigger|AFTER-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
 |ExecIsAnsiNullsOn|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Trigger, Sicht|Die Einstellung von ANSI_NULLS zum Zeitpunkt der Erstellung.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
 |ExecIsDeleteTrigger|Trigger|DELETE-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
@@ -117,7 +118,7 @@ OBJECTPROPERTYEX ( id , property )
 |IsTrigger|Ein beliebiges schemabezogenes Objekt|Trigger.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
 |IsUniqueCnst|Ein beliebiges schemabezogenes Objekt|UNIQUE-Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
 |IsUserTable|Tabelle|Benutzerdefinierte Tabelle.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
-|IsView|Sicht|Sicht.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
+|IsView|Ansicht|Sicht.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
 |OwnerId|Ein beliebiges schemabezogenes Objekt|Besitzer des Objekts.<br /><br /> **Hinweis:** Der Schemabesitzer ist nicht notwendigerweise der Objektbesitzer. Beispielsweise geben untergeordnete Objekte (Objekte, bei denen der Wert von *parent_object_id* ungleich NULL ist) immer die gleiche Besitzer-ID zurück wie das übergeordnete Objekt.<br /><br /> Ungleich NULL = Datenbankbenutzer-ID des Objektbesitzers.<br /><br /> NULL = Nicht unterstützter Objekttyp oder ungültige Objekt-ID.<br /><br /> Basisdatentyp: **int**|  
 |SchemaId|Ein beliebiges schemabezogenes Objekt|Die ID des dem Objekt zugeordneten Schemas.<br /><br /> Ungleich NULL = Schema-ID des Objekts.<br /><br /> Basisdatentyp: **int**|  
 |SystemDataAccess|Funktion, Sicht|Das Objekt greift auf Systemdaten, Systemkataloge oder virtuelle Systemtabellen in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu.<br /><br /> 0 = Keine<br /><br /> 1 = Lesen<br /><br /> Basisdatentyp: **int**|  
@@ -127,7 +128,7 @@ OBJECTPROPERTYEX ( id , property )
 |TableFullTextBackgroundUpdateIndexOn|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Das Update von Volltextindizes im Hintergrund (automatische Änderungsnachverfolgung) ist für die Tabelle aktiviert.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> Basisdatentyp: **int**|  
 |TableFulltextCatalogId|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> ID des Volltextkatalogs, in dem die Daten des Volltextindexes für die Tabelle gespeichert sind.<br /><br /> Ungleich 0 = ID des Volltextkatalogs, die dem eindeutigen Index zugeordnet ist, der die Zeilen in einer volltextindizierten Tabelle identifiziert.<br /><br /> 0 = Die Tabelle besitzt keinen Volltextindex.<br /><br /> Basisdatentyp: **int**|  
 |TableFullTextChangeTrackingOn|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Volltext-Änderungsnachverfolgung ist für die Tabelle aktiviert.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> Basisdatentyp: **int**|  
-|TableFulltextDocsProcessed|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl der seit dem Start der Volltextindizierung verarbeiteten Zeilen. In einer Tabelle, die für die Volltextsuche indiziert wird, werden alle Spalten einer Zeile als Teil eines zu indizierenden Dokuments betrachtet.<br /><br /> 0 = Keine aktive Durchforstungs- oder Volltextindizierung wurde abgeschlossen.<br /><br /> > 0 = Eine der folgenden Möglichkeiten (A oder B): A) Die Anzahl der seit dem Start der vollständigen, inkrementellen oder manuellen Änderungsnachverfolgung mithilfe von Einfüge- und Updatevorgängen verarbeiteten Dokumente; B) Die Anzahl der Zeilen, die mithilfe von Einfüge- und Updatevorgängen verarbeitet wurden, seit die Änderungsnachverfolgung mit Auffüllung mithilfe von Indexupdates im Hintergrund aktiviert wurde, das Schema für den Volltextindex geändert wurde, der Volltextkatalog erneut erstellt wurde oder die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde usw.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.<br /><br /> Basisdatentyp: **int**<br /><br /> **Hinweis:** Diese Eigenschaft überwacht oder zählt gelöschte Eigenschaften nicht.|  
+|TableFulltextDocsProcessed|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl der seit dem Start der Volltextindizierung verarbeiteten Zeilen. In einer Tabelle, die für die Volltextsuche indiziert wird, werden alle Spalten einer Zeile als Teil eines zu indizierenden Dokuments betrachtet.<br /><br /> 0 = Keine aktive Durchforstungs- oder Volltextindizierung wurde abgeschlossen.<br /><br /> >0 = Eine der folgenden Möglichkeiten (A oder B): A) Die Anzahl der seit dem Start der vollständigen, inkrementellen oder manuellen Änderungsnachverfolgung mithilfe von Einfüge- und Updatevorgängen verarbeiteten Dokumente; B) Die Anzahl der Zeilen, die mithilfe von Einfüge- und Updatevorgängen verarbeitet wurden, seit die Änderungsnachverfolgung mit Auffüllung mithilfe von Indexupdates im Hintergrund aktiviert wurde, das Schema für den Volltextindex geändert wurde, der Volltextkatalog erneut erstellt wurde oder die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde usw.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.<br /><br /> Basisdatentyp: **int**<br /><br /> **Hinweis:** Diese Eigenschaft überwacht oder zählt gelöschte Eigenschaften nicht.|  
 |TableFulltextFailCount|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl der Zeilen, die von der Volltextsuche nicht indiziert wurden.<br /><br /> 0 = Die Auffüllung ist abgeschlossen.<br /><br /> >0 = Eine der folgenden Möglichkeiten (A oder B): A) Die Anzahl der Dokumente, die seit dem Start der Auffüllung mithilfe der vollständigen, inkrementellen und manuellen Änderungsnachverfolgung nicht indiziert wurden; B) Bei der Änderungsnachverfolgung mit Indexupdate im Hintergrund die Anzahl der Zeilen, die seit dem Start der Auffüllung oder dem Neustart der Auffüllung nicht indiziert wurden. Dies könnte durch eine Schemaänderung, eine erneute Erstellung des Katalogs, einen Neustart des Servers usw. verursacht werden.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.<br /><br /> Basisdatentyp: **int**|  
 |TableFulltextItemCount|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Ungleich NULL = Anzahl der Zeilen, die erfolgreich volltextindiziert wurden.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.<br /><br /> Basisdatentyp: **int**|  
 |TableFulltextKeyColumn|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> ID der Spalte, die dem eindeutigen einspaltigen Index zugeordnet ist, der Teil der Definition des Volltextindex und des semantischen Index ist.<br /><br /> 0 = Die Tabelle besitzt keinen Volltextindex.<br /><br /> Basisdatentyp: **int**|  
@@ -163,7 +164,7 @@ OBJECTPROPERTYEX ( id , property )
 |TableUpdateTriggerCount|Tabelle|Die Tabelle besitzt die angegebene Anzahl von UPDATE-Triggern.<br /><br /> > 0 = Die Anzahl von UPDATE-Triggern.<br /><br /> Basisdatentyp: **int**|  
 |UserDataAccess|Funktion, Sicht|Zeigt an, dass das Objekt auf Benutzerdaten und Benutzertabellen in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreift.<br /><br /> 1 = Lesen<br /><br /> 0 = Keine<br /><br /> Basisdatentyp: **int**|  
 |TableHasColumnSet|Tabelle|Die Tabelle besitzt einen Spaltensatz.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).|  
-|Cardinality|Tabelle (System oder benutzerdefiniert), Sicht oder Index|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Die Anzahl von Zeilen im angegebenen Objekt.|  
+|Kardinalität|Tabelle (System oder benutzerdefiniert), Sicht oder Index|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Die Anzahl von Zeilen im angegebenen Objekt.|  
 |TableTemporalType|Tabelle|**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.<br /><br /> Gibt den Typ der Tabelle an.<br /><br /> 0 = Nicht temporale Tabelle<br /><br /> 1 = Verlaufstabelle für die Tabelle mit Systemversionsverwaltung<br /><br /> 2 = Temporale Tabelle mit Systemversionsverwaltung|  
   
 ## <a name="return-types"></a>Rückgabetypen  
@@ -256,7 +257,7 @@ BaseType
 U   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
  [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   

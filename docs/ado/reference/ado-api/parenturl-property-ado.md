@@ -1,4 +1,5 @@
 ---
+description: ParentURL-Eigenschaft (ADO)
 title: Eigenschaft "para URL" (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb0669abc03da183fc70c289631fed67bb41829d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8e8e171362e66c9809e646eb33cecfbad91f30df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442752"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL-Eigenschaft (ADO)
 Gibt eine absolute URL Zeichenfolge an, die auf den übergeordneten [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) des aktuellen **Daten Satz** Objekts zeigt.  

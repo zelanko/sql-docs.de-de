@@ -1,4 +1,5 @@
 ---
+description: -- (Kommentar) (Transact-SQL)
 title: -- (Kommentar) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/25/2019
@@ -22,12 +23,12 @@ ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2c799aeb38088baacc6110459d42db6138f3575
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f7d802b17e338c3cf9c739e493970564fcdb3d51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445550"
 ---
 # <a name="---comment-transact-sql"></a>-- (Kommentar) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "86922978"
 ## <a name="remarks"></a>Bemerkungen  
 Verwenden Sie zwei Bindestriche ( **--** ) für einzeilige oder geschachtelte Kommentare. Kommentare, die mit **--** eingefügt werden, werden von einer neuen Zeile beendet, die durch ein Wagenrücklaufzeichen (U+000A), ein Zeilenvorschubzeichen (U+000D) oder eine Kombination der beiden Zeichen angegeben ist. Es gibt keine Maximallänge für Kommentare. In der folgenden Tabelle sind die Tastenkombinationen aufgeführt, die Sie verwenden können, um Text als Kommentar zu kennzeichnen oder auszukommentieren.
   
-|Action|Standard|  
+|Aktion|Standard|  
 |------------|--------------|  
 |Umwandeln des markierten Texts in einen Kommentar|STRG+K, STRG+C|  
 |Kommentierung des ausgewählten Texts entfernen|STRG+K, STRG+U|  
@@ -76,7 +77,7 @@ ORDER BY PostalCode ASC; -- We do not have to specify ASC because
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung (Transact-SQL))](~/t-sql/language-elements/control-of-flow.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: ALTER RESOURCE POOL (Transact-SQL)
 title: ALTER RESOURCE POOL (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/01/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a51d04f848e86c5b8dc242cd959aef6da393aa38
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 17b7e78f6d5a57b15aa2bde0eaba68b86ae53fc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444883"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ändert eine vorhandene Ressourcenpoolkonfiguration der Ressourcenkontrolle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -77,7 +78,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
  Gibt die maximale durchschnittliche CPU-Bandbreite an, die allen Anforderungen im Ressourcenpool zugewiesen wird, wenn CPU-Konflikte bestehen. *value* ist eine ganze Zahl mit dem Standardwert 100. Der zulässige Bereich für *value* liegt zwischen 1 und 100.  
   
  CAP_CPU_PERCENT =*value*  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Gibt die maximale CPU-Kapazität des Ziels für Anforderungen im Ressourcenpool an. *value* ist eine ganze Zahl mit dem Standardwert 100. Der zulässige Bereich für *value* liegt zwischen 1 und 100.  
   
@@ -85,7 +86,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
 >  Aufgrund der statistischen Art der CPU-Governance könnte es vorkommen, dass der bei CAP_CPU_PERCENT angegebene Wert von gelegentlichen Spitzen überschritten wird.  
   
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
- **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
  Fügt den Ressourcenpool an bestimmte Zeitplanungsmodule an. Der Standardwert ist AUTO.  
   
@@ -108,12 +109,12 @@ INNER JOIN sys.dm_os_schedulers AS sc
  Gibt den gesamten Serverspeicher an, der für Anforderungen in diesem Ressourcenpool verwendet werden kann. *value* ist eine ganze Zahl mit dem Standardwert 100. Der zulässige Bereich für *value* liegt zwischen 1 und 100.  
   
  MIN_IOPS_PER_VOLUME =*value*  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
   
  Gibt die minimalen E/A-Vorgänge pro Sekunde (IOPS) pro Datenträgervolume an, die für den Ressourcenpool reserviert werden sollen. Der zulässige Bereich für *value* liegt zwischen 0 und 2^31-1 (2.147.483.647). 0 gibt an, dass kein minimaler Schwellenwert für den Pool gilt.  
   
  MAX_IOPS_PER_VOLUME =*value*  
- **Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.  
   
  Gibt die maximalen E/A-Vorgänge pro Sekunde (IOPS) pro Datenträgervolume an, die für den Ressourcenpool zulässig sein sollen. Der zulässige Bereich für *value* liegt zwischen 0 und 2^31-1 (2.147.483.647). 0 gibt einen unbegrenzten Schwellenwert für den Pool an. Die Standardeinstellung ist 0.  
   
@@ -154,7 +155,7 @@ GO
   
  Im folgenden Beispiel legt `CAP_CPU_PERCENT` die feste Obergrenze auf 80 % fest, und `AFFINITY SCHEDULER` wird auf den individuellen Wert 8 sowie einen Bereich von 12 bis 16 festgelegt.  
   
-**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
+**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.  
   
 ```  
 ALTER RESOURCE POOL Pool25  

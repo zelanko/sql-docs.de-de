@@ -1,4 +1,5 @@
 ---
+description: Open-Methode (ADO Record)
 title: Open-Methode (ADO-Datensatz) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 723d42cda8ac741f697dec7be4a2c4f5ad662508
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7661c142263a785565a7dabc92d9b7f31c93739
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442972"
 ---
 # <a name="open-method-ado-record"></a>Open-Methode (ADO Record)
 Öffnet ein vorhandenes [Daten Satz](../../../ado/reference/ado-api/record-object-ado.md) Objekt oder erstellt ein neues Element, das durch den **Datensatz**dargestellt wird, z. b. eine Datei oder ein Verzeichnis.  
@@ -35,25 +36,25 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Dies ist optional. Eine **Variante** , die die URL der Entität darstellt, die durch dieses **Daten Satz** Objekt dargestellt werden soll, einen **Befehl**, ein offenes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder ein anderes **Datensatz** -Objekt, eine Zeichenfolge, die eine SQL-SELECT-Anweisung oder einen Tabellennamen enthält.  
+ Optional. Eine **Variante** , die die URL der Entität darstellt, die durch dieses **Daten Satz** Objekt dargestellt werden soll, einen **Befehl**, ein offenes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder ein anderes **Datensatz** -Objekt, eine Zeichenfolge, die eine SQL-SELECT-Anweisung oder einen Tabellennamen enthält.  
   
  *ActiveConnection*  
- Dies ist optional. Eine **Variante** , die die Verbindungs Zeichenfolge oder das geöffnete [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt darstellt.  
+ Optional. Eine **Variante** , die die Verbindungs Zeichenfolge oder das geöffnete [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt darstellt.  
   
  *Mode*  
- Dies ist optional. Ein [connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md) -Wert, der den Zugriffsmodus für das resultierende **Datensatz** -Objekt angibt. Der Standardwert ist **adModeUnknown**.  
+ Optional. Ein [connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md) -Wert, der den Zugriffsmodus für das resultierende **Datensatz** -Objekt angibt. Der Standardwert ist **adModeUnknown**.  
   
  *"Kreateoptions"*  
- Dies ist optional. Ein [recordkreateoptionsenum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) -Wert, der angibt, ob eine vorhandene Datei oder ein vorhandenes Verzeichnis geöffnet werden soll, oder ob eine neue Datei oder ein neues Verzeichnis erstellt werden soll. Der Standardwert ist " **adfailif NotExists**". Wenn der Standardwert festgelegt ist, wird der Zugriffsmodus aus der [Mode](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft abgerufen. Dieser Parameter wird ignoriert, wenn der *Quell* Parameter keine URL enthält.  
+ Optional. Ein [recordkreateoptionsenum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) -Wert, der angibt, ob eine vorhandene Datei oder ein vorhandenes Verzeichnis geöffnet werden soll, oder ob eine neue Datei oder ein neues Verzeichnis erstellt werden soll. Der Standardwert ist " **adfailif NotExists**". Wenn der Standardwert festgelegt ist, wird der Zugriffsmodus aus der [Mode](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft abgerufen. Dieser Parameter wird ignoriert, wenn der *Quell* Parameter keine URL enthält.  
   
  *Optionen*  
- Dies ist optional. Ein [recordopenoptionsenum](../../../ado/reference/ado-api/recordopenoptionsenum.md) -Wert, der Optionen zum Öffnen des **Datensatzes**angibt. Der Standardwert ist " **adopendrecordunspezifiziert**". Diese Werte können kombiniert werden.  
+ Optional. Ein [recordopenoptionsenum](../../../ado/reference/ado-api/recordopenoptionsenum.md) -Wert, der Optionen zum Öffnen des **Datensatzes**angibt. Der Standardwert ist " **adopendrecordunspezifiziert**". Diese Werte können kombiniert werden.  
   
- *User*  
- Dies ist optional. Ein **Zeichen** folgen Wert, der die Benutzer-ID enthält, die, falls erforderlich, den Zugriff auf die *Quelle*autorisiert.  
+ *UserName*  
+ Optional. Ein **Zeichen** folgen Wert, der die Benutzer-ID enthält, die, falls erforderlich, den Zugriff auf die *Quelle*autorisiert.  
   
  *Kennwort*  
- Dies ist optional. Ein **Zeichen** folgen Wert, der das Kennwort enthält, das bei Bedarf den *Benutzernamen*überprüft.  
+ Optional. Ein **Zeichen** folgen Wert, der das Kennwort enthält, das bei Bedarf den *Benutzernamen*überprüft.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die *Quelle* kann Folgendes sein:  

@@ -1,4 +1,5 @@
 ---
+description: PositionEnum
 title: Positionumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a61dae9888628302da3326a1465f4182c49e39c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 326fc4f1b9b77c8a4470fedc7d55f2d379aff6f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442712"
 ---
 # <a name="positionenum"></a>PositionEnum
 Gibt die aktuelle Position des Daten Satz Zeigers innerhalb eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)an.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adposbof**|-2|Gibt an, dass sich der aktuelle Daten Satz Zeiger bei BOF befindet (d. h., die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) -Eigenschaft ist **true**).|  
 |**adtargeof**|-3|Gibt an, dass der aktuelle Daten Satz Zeiger bei EOF ist (d. h., die [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) -Eigenschaft ist **true**).|  
@@ -34,7 +35,7 @@ Gibt die aktuelle Position des Daten Satz Zeigers innerhalb eines [Recordsets](.
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |Adoumums. Position. BOF|  
 |Adoumums. Position. EOF|  

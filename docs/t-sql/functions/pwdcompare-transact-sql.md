@@ -1,4 +1,5 @@
 ---
+description: PWDCOMPARE (Transact-SQL)
 title: PWDCOMPARE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ad59b8d81641999da674ca73db696c2f0c3ce1ef
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c03a83ed2dbe499e9b65a07446c04f0f6466ce93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445618"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,10 +47,10 @@ PWDCOMPARE ( 'clear_text_password'
 
 ## <a name="arguments"></a>Argumente
  **'** *clear_text_password* **'**  
- Das unverschlüsselte Kennwort. *clear_text_password* ist vom Datentyp **sysname** (**nvarchar(128)** ).  
+ Das unverschlüsselte Kennwort. *clear_text_password* ist vom Datentyp **sysname** (**nvarchar(128)**).  
   
  *password_hash*  
- Der Verschlüsselungshash eines Kennworts. *password_hash* ist vom Datentyp **varbinary(128)** .  
+ Der Verschlüsselungshash eines Kennworts. *password_hash* ist vom Datentyp **varbinary(128)**.  
   
  *version*  
  Veralteter Parameter, der auf 1 festgelegt werden kann, wenn *password_hash* einen Wert einer Anmeldung von einer Version vor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] darstellt, der in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher migriert, aber nie in das [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-System konvertiert wurde. *version* ist vom Datentyp **int**  
@@ -90,7 +91,7 @@ SELECT name FROM sys.sql_logins
 WHERE PWDCOMPARE('password', password_hash) = 1 ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [PWDENCRYPT &#40;Transact-SQL&#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

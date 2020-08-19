@@ -1,4 +1,5 @@
 ---
+description: Prepared-Eigenschaft – Beispiel (VC++)
 title: Beispiel für eine vorbereitete Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2820f149c079a20e79297d98c1f265031a77ca7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d05e220717ad88ad52340d368a3b54a85365621d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442672"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared-Eigenschaft – Beispiel (VC++)
 Dieses Beispiel veranschaulicht die [vorbereitete](../../../ado/reference/ado-api/prepared-property-ado.md) Eigenschaft, indem zwei [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekte geöffnet werden: eine vorbereitete und eine nicht vorbereitete.  

@@ -1,4 +1,5 @@
 ---
+description: FilterGroupEnum
 title: Filtergroupum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7b6a8d449d27539100f467da1eea19ec42e0a72
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f8d3c510cfd9fa6c4a28f78005021465b9b0917b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443662"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 Gibt die Gruppe von Datensätzen an, die von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)gefiltert werden sollen.  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adFilterAffectedRecords**|2|Filter zum Anzeigen nur der Datensätze, die vom letzten [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)-, [Resync](../../../ado/reference/ado-api/resync-method.md)-, [Update Batch](../../../ado/reference/ado-api/updatebatch-method.md)-oder [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) -Befehl betroffen sind.|  
 |**adFilterConflictingRecords**|5|Filter zum Anzeigen der Datensätze, bei denen das letzte Batch Update nicht erfolgreich war.|  
@@ -36,7 +37,7 @@ Gibt die Gruppe von Datensätzen an, die von einem [Recordset](../../../ado/refe
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |AdoEnums. filtergroup. affectedrecords|  
 |AdoEnums. filtergroup. conflictingrecords|  

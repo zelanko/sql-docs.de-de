@@ -1,4 +1,5 @@
 ---
+description: DATENAME (Transact-SQL)
 title: DATENAME (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/29/2017
@@ -25,12 +26,12 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6cc4e3155662e7674ce058bf975ef93c8033420
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5b0644cca11dd0d0e02b69219c1ebb78d0d8bddb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445840"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -147,7 +148,7 @@ Im folgenden Beispiel werden die Datumsteile für das angegebene Datum zurückge
 |---|---|
 |**year, yyyy, yy**|2007|  
 |**quarter, qq, q**|4|  
-|**month, mm, m**|October|  
+|**month, mm, m**|Oktober|  
 |**dayofyear, dy, y**|303|  
 |**day, dd, d**|30|  
 |**week, wk, ww**|44|  
@@ -175,7 +176,7 @@ SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');
 |---|---|
 |**year, yyyy, yy**|2007|  
 |**quarter, qq, q**|4|  
-|**month, mm, m**|October|  
+|**month, mm, m**|Oktober|  
 |**dayofyear, dy, y**|303|  
 |**day, dd, d**|30|  
 |**week, wk, ww**|44|  

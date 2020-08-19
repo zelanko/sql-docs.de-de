@@ -1,4 +1,5 @@
 ---
+description: OPENJSON (Transact-SQL)
 title: OPENJSON (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 27f83649fc0549854fa131bf1a859f0c20ebf65c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2f91b160ed5fc6dbab1c9d7ec225b479dc6b82d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445664"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -64,8 +65,6 @@ Die Tabellenwertfunktion **OPENJSON** gibt standardmäßig drei Spalten zurück,
 ![Syntax für die WITH-Klausel in OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH-Syntax")
 
 *with_clause* enthält eine Liste von Spalten mit Typen, die **OPENJSON** zurückgibt. Standardmäßig ordnet **OPENJSON** Schlüssel im *jsonExpression* den Spaltennamen in *with_clause* zu (in diesem Fall setzen Zuordnungen von Schlüsseln voraus, dass die Groß-/Kleinschreibung beachtet wird). Wenn ein Spaltenname und ein Schlüsselname nicht übereinstimmen, können Sie einen optionalen *column_path* bereitstellen. Dabei handelt es sich um einen [JSON-Pfadausdruck](../../relational-databases/json/json-path-expressions-sql-server.md), der auf einen Schlüssel innerhalb von *jsonExpression* verweist. 
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumente
 

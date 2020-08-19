@@ -1,4 +1,5 @@
 ---
+description: Item-Eigenschaft – Beispiel (VC++)
 title: Beispiel für eine Element Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ef98ecdaf1346aa06a46de88f20ab27e376ab7d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 231c5d4858436dc1c026f53ce002561529841c35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443382"
 ---
 # <a name="item-property-example-vc"></a>Item-Eigenschaft – Beispiel (VC++)
 In diesem Beispiel wird veranschaulicht, wie die [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf Member einer Auflistung zugreift. Im Beispiel wird die Tabelle " ***Authors*** " der ***Pubs*** -Datenbank mit einem parametrisierten Befehl geöffnet.  

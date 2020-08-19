@@ -1,4 +1,5 @@
 ---
+description: Find-Methode – Beispiel (JScript)
 title: Find Method example (JScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6194866ef1b4649e6d54af8b8777cca8bce9bf52
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3c328a3efe858c7abd9872eef0fcd28dfa1ccb36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443632"
 ---
 # <a name="find-method-example-jscript"></a>Find-Methode – Beispiel (JScript)
 In diesem Beispiel wird die [Find](../../../ado/reference/ado-api/find-method-ado.md) -Methode des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts verwendet, um die Unternehmen in der ***Northwind*** -Datenbank zu suchen und anzuzeigen, deren Name mit dem Buchstaben "G." beginnt, und fügen Sie den folgenden Code in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als " **FindJS**  

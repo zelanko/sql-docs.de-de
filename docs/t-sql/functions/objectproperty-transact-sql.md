@@ -1,4 +1,5 @@
 ---
+description: OBJECTPROPERTY (Transact-SQL)
 title: OBJECTPROPERTY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 762cfe49193118072bbd165556b6b35163dee15c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: cae6d8b524e12a959ec373549a7be0af75aa16b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445742"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,14 +57,14 @@ OBJECTPROPERTY ( id , property )
   
 |Eigenschaftenname|Objekttyp|Beschreibung und Rückgabewerte|  
 |-------------------|-----------------|-------------------------------------|  
-|CnstIsClustKey|Einschränkung|PRIMARY KEY-Einschränkung mit einem gruppierten Index.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|CnstIsColumn|Einschränkung|Einschränkung CHECK, DEFAULT oder FOREIGN KEY für eine einzelne Spalte.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|CnstIsDeleteCascade|Einschränkung|FOREIGN KEY-Einschränkung mit der ON DELETE CASCADE-Option.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|CnstIsDisabled|Einschränkung|Deaktivierte Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|CnstIsNonclustKey|Einschränkung|PRIMARY KEY- oder UNIQUE-Einschränkung mit einem nicht gruppierten Index.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|CnstIsNotRepl|Einschränkung|Die Einschränkung wird mithilfe der Schlüsselwörter NOT FOR REPLICATION definiert.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|CnstIsNotTrusted|Einschränkung|Die Einschränkung wurde ohne Überprüfung der vorhandenen Zeilen aktiviert und gilt daher möglicherweise nicht für alle Zeilen.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|CnstIsUpdateCascade|Einschränkung|FOREIGN KEY-Einschränkung mit der ON UPDATE CASCADE-Option.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|CnstIsClustKey|Constraint|PRIMARY KEY-Einschränkung mit einem gruppierten Index.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|CnstIsColumn|Constraint|Einschränkung CHECK, DEFAULT oder FOREIGN KEY für eine einzelne Spalte.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|CnstIsDeleteCascade|Constraint|FOREIGN KEY-Einschränkung mit der ON DELETE CASCADE-Option.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|CnstIsDisabled|Constraint|Deaktivierte Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|CnstIsNonclustKey|Constraint|PRIMARY KEY- oder UNIQUE-Einschränkung mit einem nicht gruppierten Index.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|CnstIsNotRepl|Constraint|Die Einschränkung wird mithilfe der Schlüsselwörter NOT FOR REPLICATION definiert.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|CnstIsNotTrusted|Constraint|Die Einschränkung wurde ohne Überprüfung der vorhandenen Zeilen aktiviert und gilt daher möglicherweise nicht für alle Zeilen.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|CnstIsUpdateCascade|Constraint|FOREIGN KEY-Einschränkung mit der ON UPDATE CASCADE-Option.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsAfterTrigger|Trigger|AFTER-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsAnsiNullsOn|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Trigger, Sicht|Einstellung von ANSI_NULLS zum Zeitpunkt der Erstellung.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsDeleteTrigger|Trigger|DELETE-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -80,7 +81,7 @@ OBJECTPROPERTY ( id , property )
 |ExecIsTriggerDisabled|Trigger|Deaktivierter Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsTriggerNotForRepl|Trigger|Als NOT FOR REPLICATION definierter Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |ExecIsUpdateTrigger|Trigger|UPDATE-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Die Prozedur wird systemintern kompiliert.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
+|ExecIsWithNativeCompilation|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Die Prozedur wird systemintern kompiliert.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**|  
 |HasAfterTrigger|Tabelle, Sicht|Die Tabelle oder Sicht besitzt einen AFTER-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasDeleteTrigger|Tabelle, Sicht|Die Tabelle oder Sicht besitzt einen DELETE-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |HasInsertTrigger|Tabelle, Sicht|Die Tabelle oder Sicht besitzt einen INSERT-Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -89,7 +90,7 @@ OBJECTPROPERTY ( id , property )
 |IsAnsiNullsOn|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur, Tabelle, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Trigger, Sicht|Gibt an, dass die Option ANSI NULLS für die Tabelle auf ON gesetzt wurde. Das bedeutet, dass alle Vergleiche mit einem Nullwert UNKNOWN ergeben. Diese Einstellung gilt für alle Ausdrücke in der Tabellendefinition, einschließlich berechneter Spalten und Einschränkungen, solange die Tabelle vorhanden ist.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsCheckCnst|Ein beliebiges schemabezogenes Objekt|CHECK-Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsConstraint|Ein beliebiges schemabezogenes Objekt|Eine einspaltige CHECK-, DEFAULT- oder FOREIGN KEY-Einschränkung für eine Spalte oder Tabelle.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsDefault|Ein beliebiges schemabezogenes Objekt|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Gebundener Standard.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsDefault|Ein beliebiges schemabezogenes Objekt|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Gebundener Standard.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDefaultCnst|Ein beliebiges schemabezogenes Objekt|DEFAULT-Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsDeterministic|Funktion, Sicht|Die Determinismuseigenschaft der Funktion oder Sicht.<br /><br /> 1 = Deterministisch<br /><br /> 0 = Nicht deterministisch|  
 |IsEncrypted|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur, Tabelle, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Trigger, Sicht|Gibt an, dass der Originaltext der Modulanweisung in ein verborgenes Format umgewandelt wurde. Die Ausgabe der Verbergung ist nicht direkt in den Katalogsichten in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sichtbar. Benutzer, die keinen Zugriff auf Systemtabellen oder Datenbankdateien haben, können den verborgenen Text nicht abrufen. Der Text ist jedoch für Benutzer verfügbar, die entweder auf die Systemtabellen über den [DAC-Port](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) oder direkt auf die Datenbankdateien zugreifen können. Des Weiteren können Benutzer, die einen Debugger an den Serverprozess anfügen können, die ursprüngliche Prozedur zur Laufzeit aus dem Arbeitsspeicher abrufen.<br /><br /> 1 = Verschlüsselt.<br /><br /> 0 = Nicht verschlüsselt<br /><br /> Basisdatentyp: **int**|  
@@ -115,22 +116,22 @@ OBJECTPROPERTY ( id , property )
 |IsTrigger|Ein beliebiges schemabezogenes Objekt|Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|Ein beliebiges schemabezogenes Objekt|UNIQUE-Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Tabelle|Benutzerdefinierte Tabelle.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsView|Sicht|Sicht.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsView|Ansicht|Sicht.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |OwnerId|Ein beliebiges schemabezogenes Objekt|Besitzer des Objekts.<br /><br /> **Hinweis:** Der Schemabesitzer ist nicht notwendigerweise der Objektbesitzer. Beispielsweise geben untergeordnete Objekte (Objekte, bei denen der Wert von *parent_object_id* ungleich NULL ist) immer die gleiche Besitzer-ID zurück wie das übergeordnete Objekt.<br /><br /> Nicht NULL = Die Datenbankbenutzer-ID des Objektbesitzers.|  
 |SchemaId|Ein beliebiges schemabezogenes Objekt| Die Schema-ID des Schemas, zu dem das Objekt gehört.| 
 |TableDeleteTrigger|Tabelle|Die Tabelle besitzt einen DELETE-Trigger.<br /><br /> >1 = ID des ersten Triggers vom angegebenen Typ.|  
 |TableDeleteTriggerCount|Tabelle|Die Tabelle besitzt die angegebene Anzahl DELETE-Trigger.<br /><br /> >0 = Die Anzahl von DELETE-Triggern.|  
-|TableFullTextMergeStatus|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Gibt an, ob eine Tabelle über einen Volltextindex verfügt, der gerade zusammengeführt wird.<br /><br /> 0 = Tabelle hat keinen Volltextindex, oder der Volltextindex wird derzeit nicht zusammengeführt.<br /><br /> 1 = Der Volltextindex wird derzeit zusammengeführt.|  
-|TableFullTextBackgroundUpdateIndexOn|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Updates im Hintergrund für den Volltextindex der Tabelle sind aktiviert (automatisches Nachverfolgen von Änderungen).<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextCatalogId|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> ID des Volltextkatalogs, in dem die Daten des Volltextindexes für die Tabelle gespeichert sind.<br /><br /> Ungleich 0 = ID des Volltextkatalogs, die dem eindeutigen Index zugeordnet ist, der die Zeilen in einer volltextindizierten Tabelle identifiziert.<br /><br /> 0 = Die Tabelle besitzt keinen Volltextindex.|  
-|TableFulltextChangeTrackingOn|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Volltext-Änderungsnachverfolgung ist für die Tabelle aktiviert.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl der seit dem Start der Volltextindizierung verarbeiteten Zeilen. In einer Tabelle, die für die Volltextsuche indiziert wird, werden alle Spalten einer Zeile als Teil eines zu indizierenden Dokuments betrachtet.<br /><br /> 0 = Keine aktive Durchforstungs- oder Volltextindizierung wurde abgeschlossen.<br /><br /> >0 = Eine der folgenden Möglichkeiten (A oder B): A) Die Anzahl der seit dem Start der vollständigen, inkrementellen oder manuellen Änderungsnachverfolgung mithilfe von Einfüge- und Updatevorgängen verarbeiteten Dokumente. B) Die Anzahl der Zeilen, die mithilfe von Einfüge- und Updatevorgängen verarbeitet wurden, seit die Änderungsnachverfolgung mit Auffüllung mithilfe von Indexupdates im Hintergrund aktiviert wurde, das Schema für den Volltextindex geändert wurde, der Volltextkatalog erneut erstellt wurde oder die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde usw.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.<br /><br /> Diese Eigenschaft überwacht die Anzahl gelöschter Zeilen nicht und zählt sie auch nicht.|  
-|TableFulltextFailCount|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl von Zeilen, für die die Volltextsuche keinen Index erstellt hat.<br /><br /> 0 = Die Auffüllung ist abgeschlossen.<br /><br /> >0 = Eine der folgenden Möglichkeiten (A oder B): A) Die Anzahl der Dokumente, die seit dem Start der Auffüllung mithilfe der vollständigen, inkrementellen und manuellen Änderungsnachverfolgung für Updates nicht indiziert wurden. B) Bei der Änderungsnachverfolgung mit Indexupdate im Hintergrund die Anzahl der Zeilen, die seit dem Start der Auffüllung oder dem Neustart der Auffüllung nicht indiziert wurden. Ursache dafür kann eine Schemaänderung, eine Neuerstellung des Katalogs, ein Neustart des Servers usw. sein.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.|  
-|TableFulltextItemCount|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl von Zeilen, für die ein Volltextindex erfolgreich erstellt wurde.|  
-|TableFulltextKeyColumn|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> ID der Spalte, die dem eindeutigen einspaltigen Index zugeordnet ist, der Teil der Definition des Volltextindexes ist.<br /><br /> 0 = Die Tabelle besitzt keinen Volltextindex.|  
-|TableFulltextPendingChanges|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Anzahl der zu verarbeitenden ausstehenden Änderungsnachverfolgungseinträge.<br /><br /> 0 = Änderungsnachverfolgung ist nicht aktiviert.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.|  
-|TableFulltextPopulateStatus|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> 0 = Im Leerlauf.<br /><br /> 1 = Vollständige Auffüllung wird ausgeführt.<br /><br /> 2 = Inkrementelle Auffüllung wird ausgeführt.<br /><br /> 3 = Propagierung der Überarbeitungen wird ausgeführt.<br /><br /> 4 = Indexupdate im Hintergrund wird ausgeführt, z. B. automatische Änderungsnachverfolgung.<br /><br /> 5 = Volltextindizierung wurde gedrosselt oder angehalten.|  
-|TableHasActiveFulltextIndex|Tabelle|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Tabelle besitzt einen aktiven Volltextindex.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableFullTextMergeStatus|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Gibt an, ob eine Tabelle über einen Volltextindex verfügt, der gerade zusammengeführt wird.<br /><br /> 0 = Tabelle hat keinen Volltextindex, oder der Volltextindex wird derzeit nicht zusammengeführt.<br /><br /> 1 = Der Volltextindex wird derzeit zusammengeführt.|  
+|TableFullTextBackgroundUpdateIndexOn|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Updates im Hintergrund für den Volltextindex der Tabelle sind aktiviert (automatisches Nachverfolgen von Änderungen).<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
+|TableFulltextCatalogId|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> ID des Volltextkatalogs, in dem die Daten des Volltextindexes für die Tabelle gespeichert sind.<br /><br /> Ungleich 0 = ID des Volltextkatalogs, die dem eindeutigen Index zugeordnet ist, der die Zeilen in einer volltextindizierten Tabelle identifiziert.<br /><br /> 0 = Die Tabelle besitzt keinen Volltextindex.|  
+|TableFulltextChangeTrackingOn|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Volltext-Änderungsnachverfolgung ist für die Tabelle aktiviert.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
+|TableFulltextDocsProcessed|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl der seit dem Start der Volltextindizierung verarbeiteten Zeilen. In einer Tabelle, die für die Volltextsuche indiziert wird, werden alle Spalten einer Zeile als Teil eines zu indizierenden Dokuments betrachtet.<br /><br /> 0 = Keine aktive Durchforstungs- oder Volltextindizierung wurde abgeschlossen.<br /><br /> >0 = Eine der folgenden Möglichkeiten (A oder B): A) Die Anzahl der seit dem Start der vollständigen, inkrementellen oder manuellen Änderungsnachverfolgung mithilfe von Einfüge- und Updatevorgängen verarbeiteten Dokumente. B) Die Anzahl der Zeilen, die mithilfe von Einfüge- und Updatevorgängen verarbeitet wurden, seit die Änderungsnachverfolgung mit Auffüllung mithilfe von Indexupdates im Hintergrund aktiviert wurde, das Schema für den Volltextindex geändert wurde, der Volltextkatalog erneut erstellt wurde oder die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wurde usw.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.<br /><br /> Diese Eigenschaft überwacht die Anzahl gelöschter Zeilen nicht und zählt sie auch nicht.|  
+|TableFulltextFailCount|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl von Zeilen, für die die Volltextsuche keinen Index erstellt hat.<br /><br /> 0 = Die Auffüllung ist abgeschlossen.<br /><br /> >0 = Eine der folgenden Möglichkeiten (A oder B): A) Die Anzahl der Dokumente, die seit dem Start der Auffüllung mithilfe der vollständigen, inkrementellen und manuellen Änderungsnachverfolgung für Updates nicht indiziert wurden. B) Bei der Änderungsnachverfolgung mit Indexupdate im Hintergrund die Anzahl der Zeilen, die seit dem Start der Auffüllung oder dem Neustart der Auffüllung nicht indiziert wurden. Ursache dafür kann eine Schemaänderung, eine Neuerstellung des Katalogs, ein Neustart des Servers usw. sein.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.|  
+|TableFulltextItemCount|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Anzahl von Zeilen, für die ein Volltextindex erfolgreich erstellt wurde.|  
+|TableFulltextKeyColumn|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> ID der Spalte, die dem eindeutigen einspaltigen Index zugeordnet ist, der Teil der Definition des Volltextindexes ist.<br /><br /> 0 = Die Tabelle besitzt keinen Volltextindex.|  
+|TableFulltextPendingChanges|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Anzahl der zu verarbeitenden ausstehenden Änderungsnachverfolgungseinträge.<br /><br /> 0 = Änderungsnachverfolgung ist nicht aktiviert.<br /><br /> NULL = Die Tabelle besitzt keinen Volltextindex.|  
+|TableFulltextPopulateStatus|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> 0 = Im Leerlauf.<br /><br /> 1 = Vollständige Auffüllung wird ausgeführt.<br /><br /> 2 = Inkrementelle Auffüllung wird ausgeführt.<br /><br /> 3 = Propagierung der Überarbeitungen wird ausgeführt.<br /><br /> 4 = Indexupdate im Hintergrund wird ausgeführt, z. B. automatische Änderungsnachverfolgung.<br /><br /> 5 = Volltextindizierung wurde gedrosselt oder angehalten.|  
+|TableHasActiveFulltextIndex|Tabelle|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Die Tabelle besitzt einen aktiven Volltextindex.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasCheckCnst|Tabelle|Die Tabelle besitzt eine CHECK-Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasClustIndex|Tabelle|Die Tabelle besitzt einen gruppierten Index.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasDefaultCnst|Tabelle|Die Tabelle besitzt eine DEFAULT-Einschränkung.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -152,13 +153,13 @@ OBJECTPROPERTY ( id , property )
 |TableInsertTriggerCount|Tabelle|Die Tabelle besitzt die angegebene Anzahl INSERT-Trigger.<br /><br /> >0 = Die Anzahl von INSERT-Triggern.|  
 |TableIsFake|Tabelle|Die Tabelle ist in Wirklichkeit nicht vorhanden. Sie wird bei Bedarf durch [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] intern materialisiert.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableIsLockedOnBulkLoad|Tabelle|Die Tabelle ist aufgrund eines **bcp**- oder BULK INSERT-Auftrags gesperrt.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableIsMemoryOptimized|Tabelle|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Tabelle ist speicheroptimiert<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**<br /><br /> Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
+|TableIsMemoryOptimized|Tabelle|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Tabelle ist speicheroptimiert<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Basisdatentyp: **int**<br /><br /> Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
 |TableIsPinned|Tabelle|Die Tabelle ist fixiert, damit sie im Datencache gespeichert wird.<br /><br /> 0 = False<br /><br /> Diese Funktion wird in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen nicht unterstützt.|  
 |TableTextInRowLimit|Tabelle|Die maximal zulässige Anzahl Byte für text in row.<br /><br /> Hat den Wert 0, wenn die Option text in row nicht festgelegt wurde.|  
 |TableUpdateTrigger|Tabelle|Die Tabelle besitzt einen UPDATE-Trigger.<br /><br /> > 1 = ID des ersten Triggers vom angegebenen Typ.|  
 |TableUpdateTriggerCount|Tabelle|Die Tabelle besitzt die angegebene Anzahl UPDATE-Trigger.<br /><br /> > 0 = Die Anzahl von UPDATE-Triggern.|  
 |TableHasColumnSet|Tabelle|Die Tabelle besitzt einen Spaltensatz.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).|  
-|TableTemporalType|Tabelle|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.<br /><br /> Gibt den Typ der Tabelle an.<br /><br /> 0 = Nicht temporale Tabelle<br /><br /> 1 = Verlaufstabelle für die Tabelle mit Systemversionsverwaltung<br /><br /> 2 = Temporale Tabelle mit Systemversionsverwaltung|  
+|TableTemporalType|Tabelle|**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.<br /><br /> Gibt den Typ der Tabelle an.<br /><br /> 0 = Nicht temporale Tabelle<br /><br /> 1 = Verlaufstabelle für die Tabelle mit Systemversionsverwaltung<br /><br /> 2 = Temporale Tabelle mit Systemversionsverwaltung|  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
@@ -247,7 +248,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)   
  [Metadata Functions &#40;Transact-SQL&#41; (Metadatenfunktionen &#40;Transact-SQL&#41;)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   

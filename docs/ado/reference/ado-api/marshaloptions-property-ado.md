@@ -1,4 +1,5 @@
 ---
+description: MarshalOptions-Eigenschaft (ADO)
 title: MarshalOptions-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 182946d30141ecbbcc2cba706338609b431abb97
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59f44093725321ef5f5b445d0edad6caec8c2113
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443322"
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions-Eigenschaft (ADO)
 Gibt an, welche Datensätze des [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) zurück an den Server gemarshallt werden sollen.  

@@ -1,4 +1,5 @@
 ---
+description: OpenSchema-Methode
 title: OpenSchema-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 716eec332690d1a6e9df1f16d67d82afc1a30985
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1b0a92e7079338e290f228603767d6d15a3a351e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442922"
 ---
 # <a name="openschema-method"></a>OpenSchema-Methode
 Ruft Datenbankschema Informationen vom Anbieter ab.  
@@ -41,7 +42,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Ein beliebiger [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) -Wert, der den Typ der zu testenden Schema Abfrage darstellt.  
   
  *Kriterien*  
- Dies ist optional. Ein Array von Abfrage Einschränkungen für jede *QueryType* -Option, wie in [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)aufgeführt.  
+ Optional. Ein Array von Abfrage Einschränkungen für jede *QueryType* -Option, wie in [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)aufgeführt.  
   
  *SchemaID*  
  Die GUID für eine Anbieter Schema Abfrage, die nicht durch die OLE DB Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *QueryType* auf **adSchemaProviderSpecific**festgelegt ist. Andernfalls wird Sie nicht verwendet.  

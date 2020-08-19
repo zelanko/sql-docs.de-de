@@ -1,4 +1,5 @@
 ---
+description: NextRecordset-Methode – Beispiel (VB)
 title: NextRecordset-Methode (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 78480bd71a1d96f5c5447022e3c7748814003bea
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8a181482d7f0b2a1d6589209bc4b4e58ff11f9a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443102"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset-Methode – Beispiel (VB)
 In diesem Beispiel wird die [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) -Methode verwendet, um die Daten in einem Recordset anzuzeigen, das eine Verbund Befehls Anweisung verwendet, die aus drei separaten **Select** -Anweisungen besteht.  

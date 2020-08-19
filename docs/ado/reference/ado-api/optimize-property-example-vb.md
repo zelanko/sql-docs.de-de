@@ -1,4 +1,5 @@
 ---
+description: Optimize-Eigenschaft – Beispiel (VB)
 title: Beispiel für eine Optimierungs Eigenschaft (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70bb3e20b36faff0358fe91ea51f85ba125207d1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e6dbeea5a053a1395e051939e313b9f672c73d2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442902"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize-Eigenschaft – Beispiel (VB)
 Dieses Beispiel veranschaulicht die dynamische **Optimierungs** Eigenschaft des [Field](../../../ado/reference/ado-api/field-object.md) -Objekts. Das ***ZIP*** -Feld der Tabelle " ***Authors*** " in der ***Pubs*** -Datenbank ist nicht indiziert. Wenn die Eigenschaft [optimieren](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) für das ***ZIP*** -Feld auf **true** festgelegt wird, wird ADO zum Erstellen eines Indexes autorisiert, der die Leistung der [Find](../../../ado/reference/ado-api/find-method-ado.md) -Methode verbessert.  

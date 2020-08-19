@@ -1,4 +1,5 @@
 ---
+description: ProtocolDLL-Eigenschaft (ClientNetworkProtocol-Klasse)
 title: ProtocolDLL-Eigenschaft (ClientNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e93c5ed625cd5c81f9b3f7bea73c203ae590c7a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 17bde6ee4793e80a7dc3c3b536ba3337ac5de97c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446314"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL-Eigenschaft (ClientNetworkProtocol-Klasse)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.ProtocolDLL [= value]
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgewert, der den Namen der -dll-Datei angibt, die vom Clientnetzwerkprotokoll benötigt wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Konfigurieren von Clientnetzwerkprotokollen und Netzwerkbibliotheken](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

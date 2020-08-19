@@ -1,4 +1,5 @@
 ---
+description: GetRows-Methode – Beispiel (JScript)
 title: Beispiel für eine GetRows-Methode (JScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ba091ff7db668cc049c50eeb26492a2c9ee3422
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 80f2727ae8254665bc39a42d635860f390224f25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760026"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443552"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows-Methode – Beispiel (JScript)
 In diesem Beispiel wird die [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) -Methode verwendet, um alle Zeilen der *custiomertabelle* aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) abzurufen und ein Array mit den resultierenden Daten auszufüllen. Die **GetRows** -Methode gibt weniger als die gewünschte Anzahl von Zeilen in zwei Fällen zurück: entweder wenn [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) erreicht wurde oder **GetRows** versucht hat, einen Datensatz abzurufen, der von einem anderen Benutzer gelöscht wurde. Die Funktion gibt nur dann **false** zurück, wenn der zweite Fall auftritt. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **getrowsjs. ASP**.  

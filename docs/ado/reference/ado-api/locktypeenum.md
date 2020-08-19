@@ -1,4 +1,5 @@
 ---
+description: LockTypeEnum
 title: Locktypeaufumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e609a51d6b9f42cb6101ff485633302193757fbd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 52a6e4af75ac8887c23dd245a58981b1bbfb7eb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443332"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Gibt den Typ der Sperre an, die w채hrend der Bearbeitung in Datens채tzen eingef체gt wird  
   
-|Konstante|Wert|BESCHREIBUNG|  
+|Konstant|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adlockbatchoptimistische**|4|Gibt Updates f체r optimistische Batches an. Erforderlich f체r den Batch Aktualisierungs Modus.|  
 |**adlockoptimistisch**|3|Zeigt die optimistische Sperre, Datensatz nach Datensatz. Der Anbieter verwendet die optimistische Sperre und sperrt nur Datens채tze, wenn Sie die [Update](../../../ado/reference/ado-api/update-method.md) -Methode aufruft.|  
@@ -36,7 +37,7 @@ Gibt den Typ der Sperre an, die w채hrend der Bearbeitung in Datens채tzen eingef�
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Konstant|  
 |--------------|  
 |AdoEnums.LockType.BATchoptimistische|  
 |Adoerums. LockType. optimistisch|  

@@ -1,4 +1,5 @@
 ---
+description: IsolationLevel-und Mode-Eigenschaften (Beispiel) (VB)
 title: IsolationLevel-und Mode-Eigenschaften (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 893e60a87a59c882a361317af6bced3aabd7c3c7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: acbf64eca7aa7b0ccbd943d261968f8a70c8f9e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443442"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel-und Mode-Eigenschaften (Beispiel) (VB)
 In diesem Beispiel wird die [Mode](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft verwendet, um eine exklusive Verbindung zu öffnen, und die [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) -Eigenschaft, um eine Transaktion zu öffnen, die isoliert von anderen Transaktionen durchgeführt wird.  

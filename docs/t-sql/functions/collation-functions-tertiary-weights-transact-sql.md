@@ -1,4 +1,5 @@
 ---
+description: 'Sortierungsfunktionen: TERTIARY_WEIGHTS (Transact-SQL)'
 title: TERTIARY_WEIGHTS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f202d45b9c815154f252c0c016fe4931dbef069e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1a6cf4546193b02050c0559765fe3fa4ad368e02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445893"
 ---
 # <a name="collation-functions---tertiary_weights-transact-sql"></a>Sortierungsfunktionen: TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 
 ## <a name="arguments"></a>Argumente
 *non_Unicode_character_string_expression*  
-Ein [Zeichenfolgenausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Datentyp **char**, **varchar** oder **varchar(max)** , der für eine tertiäre SQL-Sortierung definiert ist. Eine Liste dieser Sortierungen finden Sie unter Hinweise.
+Ein [Zeichenfolgenausdruck](../../t-sql/language-elements/expressions-transact-sql.md) vom Datentyp **char**, **varchar** oder **varchar(max)**, der für eine tertiäre SQL-Sortierung definiert ist. Eine Liste dieser Sortierungen finden Sie unter Hinweise.
   
 ## <a name="return-types"></a>Rückgabetypen
 `TERTIARY_WEIGHTS` gibt **varbinary** zurück, wenn *non_Unicode_character_string_expression* vom Datentyp **char** oder **varchar** ist, und gibt **varbinary(max)** zurück, wenn *non_Unicode_character_string_expression* vom Datentyp **varchar(max)** ist.
