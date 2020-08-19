@@ -1,4 +1,5 @@
 ---
+description: Auto Stats-Ereignisklasse
 title: Auto Stats-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ba537e2dd0d188eb95e9194bb33c654c66dfcb9b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9e20179799dbc61dae0a1e02247fe5eb0df2628
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763075"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410546"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats-Ereignisklasse
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Die **Auto Stats** -Ereignisklasse zeigt an, dass ein automatisches Update der Index- und Spaltenstatistiken ausgeführt wurde.  **Auto Stats** wird außerdem ausgelöst, wenn Statistiken geladen werden, damit der Optimierer sie verwenden kann.
+   Die **Auto Stats**-Ereignisklasse zeigt an, dass ein automatisches Update der Index- und Spaltenstatistiken ausgeführt wurde.  **Auto Stats** wird außerdem ausgelöst, wenn Statistiken geladen werden, damit der Optimierer sie verwenden kann.
   
 ## <a name="auto-stats-event-class-data-columns"></a>Datenspalten der Auto Stats-Ereignisklasse  
   
@@ -55,7 +56,7 @@ ms.locfileid: "85763075"
 |**Erfolgreich**|**int**|0 = Fehler<br /><br /> 1 = Erfolg<br /><br /> 2 = Aufgrund von Servereinschränkung ausgelassen (MSDE)|23|Ja|  
 |**TextData**|**ntext**|Der Inhalt dieser Spalte hängt davon ab, ob die Statistiken synchron (**EventSubClass** 1) oder asynchron (**EventSubClass** 2, 3 oder 4) aktualisiert wurden:<br /><br /> 1: Listet auf, welche Statistiken aktualisiert/erstellt wurden<br /><br /> 2, 3 oder 4: NULL; **IndexID** -Spalte wird mit der Index-/Statistik-ID für aktualisierte Statistiken gefüllt.|1|Ja|  
 |**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
-|**Typ**|**int**|Typ des Auftrags.|57|Ja|  
+|**Type**|**int**|Typ des Auftrags.|57|Ja|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)   

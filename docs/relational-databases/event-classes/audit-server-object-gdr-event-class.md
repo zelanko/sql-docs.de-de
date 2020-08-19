@@ -1,4 +1,5 @@
 ---
+description: Audit Server Object GDR-Ereignisklasse
 title: Audit Server Object GDR-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 117fedca-c1c4-469a-929a-9ea332c83d25
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bde177d88d2d1050e288bb991a5b670160f8cd5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 47833cef67581909b0604633f6420a39686e307c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410627"
 ---
 # <a name="audit-server-object-gdr-event-class"></a>Audit Server Object GDR-Ereignisklasse
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Die **Audit Schema Object GDR** -Ereignisklasse tritt auf, wenn von einem Benutzer in Microsoft SQL Server die Anweisung GRANT, REVOKE oder DENY für eine Serverobjektberechtigung ausgegeben wird.  
+   Die **Audit Server Object GDR**-Ereignisklasse tritt auf, wenn von einem Benutzer in Microsoft SQL Server die Anweisung GRANT, REVOKE oder DENY für eine Serverobjektberechtigung ausgegeben wird.  
   
 ## <a name="audit-server-object-gdr-event-class-data-columns"></a>Audit Server Object GDR-Ereignisklasse (Datenspalten)  
   

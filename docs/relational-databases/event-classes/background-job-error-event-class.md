@@ -1,4 +1,5 @@
 ---
+description: Background Job Error-Ereignisklasse
 title: Background Job Error-Ereignisklasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5524bd8ed316780a9b0b8babd66e2c2582fb0585
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 532a24d0cb2b3e30a5e513b4feab522ef45e34d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410426"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error-Ereignisklasse
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Die **Background Job Error** -Ereignisklasse tritt auf, wenn ein Hintergrundauftrag fehlerbedingt beendet wurde. Dieser Zustand erfordert möglicherweise ein Eingreifen des Systemadministrators.  
+   Die **Background Job Error**-Ereignisklasse tritt auf, wenn ein Hintergrundauftrag fehlerbedingt beendet wurde. Dieser Zustand erfordert möglicherweise ein Eingreifen des Systemadministrators.  
   
 ## <a name="background-job-error-event-class-data-columns"></a>Datenspalten der Background Job Error-Ereignisklasse  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85763091"
 |**StartTime**|**datetime**|Der Zeitpunkt, zu dem der Auftrag erstellt wurde.|14|Ja|  
 |**State**|**int**|Der Status des Fehlers beim letzten Versuch (nur bei**EventSubClass** 1).|30|Ja|  
 |**TextData**|**ntext**|Die Textbeschreibung des Wertes der Ereignisunterklasse.|1|Ja|  
-|**Typ**|**int**|Typ des Auftrags.|57|Ja|  
+|**Type**|**int**|Typ des Auftrags.|57|Ja|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)   
