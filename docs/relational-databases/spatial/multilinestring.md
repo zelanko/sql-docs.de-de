@@ -1,4 +1,5 @@
 ---
+description: MultiLineString
 title: MultiLineString | Microsoft-Dokumentation
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d357ccd46daa402d43d66df76d4955f9dc6349d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c7193675df9f142977325a1c198343497b9b7501
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403268"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Ein **MultiLineString** -Objekt ist eine Sammlung von null oder mehr **geometry** - oder **geographyLineString** -Instanzen.  
+   Ein **MultiLineString**-Objekt ist eine Sammlung von null (0) oder mehr **geometry**- oder **geographyLineString**-Instanzen.  
   
 ## <a name="multilinestring-instances"></a>MultiLineString-Instanzen  
  Die nachfolgende Abbildung enthält Beispiele für **MultiLineString** -Instanzen.  
@@ -94,7 +95,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');
 SET @g.STSrid = 13;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [STLength &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STIsClosed &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [LineString](../../relational-databases/spatial/linestring.md)   
