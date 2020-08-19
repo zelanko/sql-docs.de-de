@@ -1,4 +1,5 @@
 ---
+description: CREATE DEFAULT (Transact-SQL)
 title: CREATE DEFAULT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/25/2015
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 361963d6836cb4c4b89c62f8ca1481b292bc803e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 8d1001196c5b4e88c105f0fa7e0355e97e3ee884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426782"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ AS constant_expression [ ; ]
  Der Name des Standardwerts. Namen für Standardwerte müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Das Angeben des Standardbesitzernamens ist optional.  
   
 *constant_expression*  
-Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der nur konstante Werte enthält (nicht zulässig sind Namen von Spalten oder anderen Datenbankobjekten). Sie können jede Konstante, jede integrierte Funktion oder jeden mathematischen Ausdruck verwenden, außer solchen, die Aliasdatentypen enthalten. Benutzerdefinierte Funktionen können nicht verwendet werden. Setzen Sie Zeichen- und Datumskonstanten in einfache Anführungszeichen ( **'** ). Bei Integer-, Währungs- und Gleitkommakonstanten sind keine Anführungszeichen erforderlich. Binären Daten muss 0x vorangestellt werden, und Währungsdaten muss das Dollarzeichen ($) vorangestellt werden. Der Standardwert muss mit dem Datentyp der Spalte kompatibel sein.  
+Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der nur konstante Werte enthält (nicht zulässig sind Namen von Spalten oder anderen Datenbankobjekten). Sie können jede Konstante, jede integrierte Funktion oder jeden mathematischen Ausdruck verwenden, außer solchen, die Aliasdatentypen enthalten. Benutzerdefinierte Funktionen können nicht verwendet werden. Setzen Sie Zeichen- und Datumskonstanten in einfache Anführungszeichen (**'**). Bei Integer-, Währungs- und Gleitkommakonstanten sind keine Anführungszeichen erforderlich. Binären Daten muss 0x vorangestellt werden, und Währungsdaten muss das Dollarzeichen ($) vorangestellt werden. Der Standardwert muss mit dem Datentyp der Spalte kompatibel sein.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Sie können den Namen eines Standardwerts nur in der aktuellen Datenbank erstellen. Innerhalb einer Datenbank müssen die Namen für Standardwerte für jedes Schema eindeutig sein. Wenn Sie einen Standardwert erstellen, binden Sie ihn mit **sp_bindefault** an eine Spalte oder einen Aliasdatentyp.  

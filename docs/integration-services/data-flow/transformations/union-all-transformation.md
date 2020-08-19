@@ -1,4 +1,5 @@
 ---
+description: Transformation für UNION ALL
 title: Transformation für UNION ALL | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 45b21ea454e7c40f7af28863802d1678b3095d50
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cb32c68f05e4be6b25d0fc20ae088aa6760bfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425622"
 ---
 # <a name="union-all-transformation"></a>Transformation für UNION ALL
 
@@ -55,7 +56,7 @@ ms.locfileid: "86920337"
 ## <a name="union-all-transformation-editor"></a>Transformations-Editor für UNION ALL
   Mithilfe des Dialogfelds **Transformations-Editor für UNION ALL** können Sie mehrere Eingaberowsets zu einem einzigen Ausgaberowset zusammenführen. Durch das Einschließen der Transformation für UNION ALL in einen Datenfluss können Sie Daten aus mehreren Datenflüssen zusammenführen, komplexe Datasets durch Verschachteln der Transformationen für UNION ALL erstellen und Zeilen erneut zusammenführen, nachdem Sie Fehler in den Daten korrigiert haben.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Name der Ausgabespalte**  
  Geben Sie einen Alias für jede Spalte ein. Standardmäßig wird der Name der Eingabespalte von der ersten (Referenz-)Eingabe verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist.  
   

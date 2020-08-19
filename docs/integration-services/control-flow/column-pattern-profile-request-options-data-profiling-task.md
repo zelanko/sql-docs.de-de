@@ -1,4 +1,5 @@
 ---
+description: Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
 title: Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0119d52241741d318f4fd6aba17467144d3e9fb0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 85beabd085481a48d6681bbaf2d2d381a1d0df93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425972"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
 
@@ -49,10 +50,10 @@ ms.locfileid: "86915791"
   
 |Tag|Begriff|  
 |---------|----------|  
-|Direction|Ost|  
-|Direction|West|  
-|Direction|Nord|  
-|Direction|Süd|  
+|Richtung|Ost|  
+|Richtung|West|  
+|Richtung|Nord|  
+|Richtung|Süd|  
   
  Sie können ein andere Tag verwenden, um die verschiedenen Wörter zu gruppieren, die die Bezeichnung einer "Straße" in Straßennamen ausdrücken.  
   
@@ -116,7 +117,7 @@ ms.locfileid: "86915791"
  **RequestID**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **MaxNumberOfPatterns**  
  Geben Sie die maximale Anzahl von Mustern an, die das Profil berechnen soll. Der Standardwert dieser Option ist 10. Der Maximalwert ist 100.  
   
@@ -126,7 +127,7 @@ ms.locfileid: "86915791"
  **CaseSensitive**  
  Geben Sie an, ob bei den Mustern die Groß-/Kleinschreibung beachtet werden soll. Der Standardwert für diese Option ist **False**.  
   
- **Delimiters**  
+ **Trennzeichen**  
  Führen Sie die Zeichen auf, die als Entsprechung der Leerzeichen zwischen Wörtern behandelt werden sollen, wenn Text mit Token versehen wird. Standardmäßig enthält die Liste der **Trennzeichen** die folgenden Zeichen: Leerzeichen, horizontaler Tabstopp (\t), Neue-Zeile-Zeichen (\n) und Wagenrücklauf (\r). Sie können zusätzliche Trennzeichen angeben, Sie können die Standardtrennzeichen jedoch nicht entfernen.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
@@ -146,7 +147,7 @@ ms.locfileid: "86915791"
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung der Tagtabelle" in diesem Thema.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

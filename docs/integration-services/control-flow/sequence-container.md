@@ -1,4 +1,5 @@
 ---
+description: Sequenzcontainer
 title: Sequenzcontainer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 805332397fb843ea1496f1471a0b054fa53f8957
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 82e34adab1dc0f732f96d5e248b98ff8fc7186c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425892"
 ---
 # <a name="sequence-container"></a>Sequenzcontainer
 
@@ -59,7 +60,7 @@ ms.locfileid: "86920411"
 ## <a name="related-tasks"></a>Related Tasks  
  Weitere Informationen zum Festlegen der Eigenschaften der Komponente in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]finden Sie unter [Festlegen der Eigenschaften eines Tasks oder Containers](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Verbinden von Tasks und Containern mithilfe einer Standardrangfolgen-Einschränkung](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
  [SQL Server Integration Services-Container](../../integration-services/control-flow/integration-services-containers.md)  

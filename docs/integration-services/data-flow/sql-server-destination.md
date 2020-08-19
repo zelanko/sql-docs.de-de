@@ -1,4 +1,5 @@
 ---
+description: SQL Server-Ziel
 title: SQL Server-Ziel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 278cfb16ddc6c00fba9570d7912a6d5fa3a31727
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbd48bf2dee8268fa87209ab3d4283938961c918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425802"
 ---
 # <a name="sql-server-destination"></a>SQL Server-Ziel
 
@@ -163,7 +164,7 @@ ms.locfileid: "86917766"
 ## <a name="sql-destination-editor-advanced-page"></a>Ziel-Editor für SQL (Seite Erweitert)
   Auf der Seite **Erweitert** des Dialogfelds **Ziel-Editor für SQL** können Sie Optionen für die erweiterte Masseneinfügung angeben.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Identität beibehalten**  
  Gibt an, ob der Task Werte in Identitätsspalten einfügen soll. Der Standardwert dieser Eigenschaft ist **False**.  
   
@@ -203,7 +204,7 @@ ms.locfileid: "86917766"
  **Spalten sortieren**  
  Geben Sie die Namen der zu sortierenden Spalten an. Jede Spalte kann in auf- oder absteigender Reihenfolge sortiert werden. Wenn Sie mehrere Spalten verwenden, nach denen sortiert werden soll, trennen Sie die Namen in der Liste mit Kommas.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Datenfluss](../../integration-services/data-flow/data-flow.md)  
   
   

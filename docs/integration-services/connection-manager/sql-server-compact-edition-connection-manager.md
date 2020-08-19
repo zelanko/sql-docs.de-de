@@ -1,4 +1,5 @@
 ---
+description: SQL Server Compact Edition-Verbindungs-Manager
 title: SQL Server Compact Edition-Verbindungs-Manager | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 777c360fd17082c06ff9aa4b0356ff3a95cbd332
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae61fcfcec740ee26a7fc2a57c0e03b0141e6e10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425942"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition-Verbindungs-Manager
 
@@ -58,7 +59,7 @@ ms.locfileid: "86917206"
   
  Weitere Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition-Verbindungs-Manager finden Sie unter [Verbindungs-Manager-Editor für SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Name und Pfad der Datenbankdatei**  
  Geben Sie den Pfad und Dateinamen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Datenbank ein.  
   
@@ -73,7 +74,7 @@ ms.locfileid: "86917206"
   
  Weitere Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition-Verbindungs-Manager finden Sie unter [Verbindungs-Manager-Editor für SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **AutoShrink Threshold**  
  Gibt den freien Speicherplatz in Prozent an, der in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact-Datenbank zulässig ist, bevor der Prozess des automatischen Verkleinerns ausgeführt wird.  
   
@@ -100,11 +101,11 @@ ms.locfileid: "86917206"
   
  Die Option Mode kann vier Werte annehmen. Siehe dazu die folgende Tabelle.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Schreibgeschützt**|Gibt an, dass der Zugriff auf die Datenbank schreibgeschützt erfolgen kann.|  
 |**Read Write**|Gibt Lese-/Schreibberechtigungen für die Datenbank an.|  
-|**Exclusive**|Gibt exklusiven Zugriff auf die Datenbank an.|  
+|**Exklusiv**|Gibt exklusiven Zugriff auf die Datenbank an.|  
 |**Shared Read**|Gibt an, dass andere Benutzer zu selben Zeit Daten aus der Datenbank lesen können.|  
   
  **Persist Security Info**  

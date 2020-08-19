@@ -1,4 +1,5 @@
 ---
+description: DROP TABLE (Transact-SQL)
 title: DROP TABLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/12/2017
@@ -37,12 +38,12 @@ ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e0c7cc3432a18ad0203816523dc02cba6b56788
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c8153dcaf2935163bd8991a9a2086f6d3e39a0c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426582"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -110,22 +111,22 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
 ### <a name="a-dropping-a-table-in-the-current-database"></a>A. Ablegen einer Tabelle in der aktuellen Datenbank  
  Im folgenden Beispiel werden die `ProductVendor1`-Tabelle, ihre Daten und ihre Indizes aus der aktuellen Datenbank entfernt.  
   
-```  
+```sql  
 DROP TABLE ProductVendor1 ;  
 ```  
   
 ### <a name="b-dropping-a-table-in-another-database"></a>B. Ablegen einer Tabelle in einer anderen Datenbank  
  Im folgenden Beispiel wird die `SalesPerson2`-Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank gelöscht. Das Beispiel kann aus jeder Datenbank auf der Serverinstanz heraus ausgeführt werden.  
   
-```  
+```sql  
 DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. Ablegen einer temporären Tabelle  
  Im folgenden Beispiel wird eine temporäre Tabelle erstellt, überprüft, ob sie vorhanden ist, die Tabelle gelöscht und erneut überprüft, ob sie vorhanden ist. In diesem Beispiel wird die **IF EXISTS**-Syntax, die verfügbar ist, wenn mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] begonnen wird, nicht verwendet.  
   
-```  
-CREATE TABLE #temptable (col1 int);  
+```sql  
+CREATE TABLE #temptable (col1 INT);  
 GO  
 INSERT INTO #temptable  
 VALUES (10);  
@@ -137,7 +138,6 @@ DROP TABLE #temptable;
 GO  
 --Test the drop.  
 SELECT * FROM #temptable;  
-  
 ```  
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D: Löschen einer Tabelle mit IF EXISTS  
@@ -146,8 +146,8 @@ SELECT * FROM #temptable;
   
  Im folgenden Beispiel wird eine Tabelle mit dem Namen „T1“ erstellt. Die zweite Anweisung legt dann die Tabelle ab. Die dritte Anweisung führt keine Aktion aus, da die Tabelle bereits gelöscht wurde, führt allerdings auch nicht zu einer Fehlermeldung.  
   
-```  
-CREATE TABLE T1 (Col1 int);  
+```sql  
+CREATE TABLE T1 (Col1 INT);  
 GO  
 DROP TABLE IF EXISTS T1;  
 GO  

@@ -1,4 +1,5 @@
 ---
+description: DENY (Berechtigungen von Service Broker) (Transact-SQL)
 title: DENY (Berechtigungen von Service Broker) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/09/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 360c83ddf14139665c6ab1132c84b4e3b608e735
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8043eb95855e463c63bf4667209d47b293a492e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426602"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (Berechtigungen von Service Broker) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,16 +60,16 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Gibt eine Berechtigung an, die für ein sicherbares Element von [!INCLUDE[ssSB](../../includes/sssb-md.md)] verweigert werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  Gibt den Vertrag an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  Gibt den Nachrichtentyp an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Gibt die Remotedienstbindung an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  Gibt die Route an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  SERVICE **::** _message_type_name_  

@@ -1,4 +1,5 @@
 ---
+description: Spalten von langsam veränderlichen Dimensionen (Assistent für langsam veränderliche Dimensionen)
 title: Spalten von langsam veränderlichen Dimensionen (Assistent für langsam veränderliche Dimensionen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92ae77d412ad318a01b437382b6d4557811c2b33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8b27c9c0e575775449d2f3a25c5a20bd6667b5cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425722"
 ---
 # <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>Spalten von langsam veränderlichen Dimensionen (Assistent für langsam veränderliche Dimensionen)
 
@@ -28,7 +29,7 @@ ms.locfileid: "86919480"
   
  Weitere Informationen zu diesem Assistenten finden Sie unter [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Dimensionsspalten**  
  Wählen Sie eine Dimensionsspalte aus der Liste aus.  
   
@@ -38,7 +39,7 @@ ms.locfileid: "86919480"
  **Remove**  
  Wählen Sie eine Dimensionsspalte aus, und entfernen Sie sie aus der Liste der zugeordneten Spalten, indem Sie auf **Entfernen**klicken.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche Dimensionen](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

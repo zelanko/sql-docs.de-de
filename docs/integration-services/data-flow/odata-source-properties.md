@@ -1,4 +1,5 @@
 ---
+description: OData-Quelleneigenschaften
 title: OData-Quelleneigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fe4a3c3d1375095a4766186e1b854ea038b54ac9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e6af5b248d0d6822b81c070bffc09e1f270abb54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425842"
 ---
 # <a name="odata-source-properties"></a>OData-Quelleneigenschaften
 
@@ -34,5 +35,5 @@ Wenn Sie im Datenfluss mit der rechten Maustaste auf **OData-Quelle** und anschl
 |ResourcePath|Verwenden Sie diese Eigenschaft, wenn Sie einen vollständigen Ressourcenpfad angeben müssen, anstatt nur einen Auflistungsnamen auszuwählen. Diese Eigenschaft wird verwendet, wenn **UseResourcePath** TRUE ist.|  
 |UseResourcePath|Beim Wert TRUE wird der **ResourcePath** -Wert an die Basis-URL angefügt, um den Speicherort des OData-Feeds zu bestimmen. Bei FALSE wird der **CollectionName** -Wert verwendet.<br /><br /> **Standardwert:** False|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [OData-Quelle](odata-source.md)

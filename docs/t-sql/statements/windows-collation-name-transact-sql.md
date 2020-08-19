@@ -1,4 +1,5 @@
 ---
+description: Name der Windows-Sortierung (Transact-SQL)
 title: Name der Windows-Sortierung (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2019
@@ -18,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe6578107f87eddb62f5f31efd93778f8c2af96
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2a95152ded1edc82ea153c40b6f9df68c1d3dea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426522"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Name der Windows-Sortierung (Transact-SQL)
 
@@ -74,12 +75,12 @@ Bei Weglassen dieser Option erfolgt keine Unterscheidung nach Kanatyp. Bei **KS*
 Bei Weglassen dieser Option erfolgt keine Unterscheidung nach Breite. Bei **WS** erfolgt eine Unterscheidung.
 
 *VariationSelectorSensitivity*  
-- **Gilt für:** ab [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Gilt für**: Seit [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - Bei Weglassen dieser Option erfolgt keine Unterscheidung nach Variantenselektor. Bei **VSS** erfolgt eine Unterscheidung.
 
 **UTF8**  
-- **Gilt für:** ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Gilt für**: Seit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - Gibt an, dass für geeignete Datentypen UTF-8-Codierung verwendet werden soll. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
@@ -140,7 +141,7 @@ In der folgenden Tabelle werden alle Windows-Sortierungen aufgelistet, die in [!
 |Elsässisch (Frankreich)|Latin1_General_100_|Nicht verfügbar|
 |Amharisch (Äthiopien)|Latin1_General_100_|Nicht verfügbar|
 |Armenisch (Armenien)|Cyrillic_General_100_|Nicht verfügbar|
-|Assamisch (Indien)|Assamese_100_<sup>1</sup>|Nicht verfügbar|
+|Assamesisch (Indien)|Assamese_100_<sup>1</sup>|Nicht verfügbar|
 |Bangla (Bangladesch)|Bengali_100_<sup>1</sup>|Nicht verfügbar|
 |Baschkirisch (Russische Föderation)|Bashkir_100_|Nicht verfügbar|
 |Baskisch (Baskisch)|Latin1_General_100_|Nicht verfügbar|
@@ -213,7 +214,7 @@ In der folgenden Tabelle werden alle Windows-Sortierungen aufgelistet, die in [!
 |Serbisch (Serbien, lateinisch)|Serbian_Latin_100_|Nicht verfügbar|
 |Sesotho sa Leboa/Nord-Sotho (Südafrika)|Latin1_General_100_|Nicht verfügbar|
 |Setswana/Tswana (Südafrika)|Latin1_General_100_|Nicht verfügbar|
-|Sinhala (Sri Lanka)|Indic_General_100_<sup>1</sup>|Nicht verfügbar|
+|Singhalesisch (Sri Lanka)|Indic_General_100_<sup>1</sup>|Nicht verfügbar|
 |Suaheli (Kenia)|Latin1_General_100_|Nicht verfügbar|
 |Syrisch (Syrien)|Syriac_100_<sup>1</sup>|Syriac_90_|
 |Tadschikisch (Tadschikistan)|Cyrillic_General_100_|Nicht verfügbar|
@@ -242,7 +243,7 @@ In der folgenden Tabelle werden alle Windows-Sortierungen aufgelistet, die in [!
 
 <sup>2</sup> Wie bei der chinesischen Sortierung (Taiwan) werden bei Chinesisch (Macau) die Regeln für Chinesisch (vereinfacht) verwendet. Im Unterschied zu Chinesisch (Taiwan) wird jedoch Codepage 950 verwendet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)

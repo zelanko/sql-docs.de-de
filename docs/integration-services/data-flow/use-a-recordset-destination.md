@@ -1,4 +1,5 @@
 ---
+description: Verwenden eines Recordsetziels
 title: Verwenden eines Recordsetziels | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 605cdbdc7b813fbbecb819bd31bde42f8f5afdc7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d823048d128d8837c80c724064ea0d8afe1a5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425602"
 ---
 # <a name="use-a-recordset-destination"></a>Verwenden eines Recordsetziels
 
@@ -137,11 +138,11 @@ ms.locfileid: "86916650"
   
     1.  Wählen Sie auf der Seite **Sammlung** unter **Enumerator**die Option **Foreach-ADO-Enumerator**und unter **ADO-Objektquellvariable**die Option **User::BonusRecordset**aus.  
   
-    2.  Ordnen Sie auf der Seite **Variablenzuordnungen** **User::EmailAddress** Index 0, **User::FirstName** Index 1 und **User::Bonus** Index 2 zu.  
+    2.  Ordnen Sie auf der Seite **Variablenzuordnungen****User::EmailAddress** Index 0, **User::FirstName** Index 1 und **User::Bonus** Index 2 zu.  
   
 3.  Fügen Sie auf der Registerkarte **Ablaufsteuerung** im Foreach-Schleifencontainer einen Task „Mail senden“ hinzu.  
   
-4.  Öffnen Sie den **Editor für den Task „Mail senden“** , und konfigurieren Sie auf der Seite **E-Mail** den Task mit den folgenden Einstellungen:  
+4.  Öffnen Sie den **Editor für den Task „Mail senden“**, und konfigurieren Sie auf der Seite **E-Mail** den Task mit den folgenden Einstellungen:  
   
     1.  Wählen Sie für **SmtpConnection**den SMTP-Verbindungs-Manager aus, der zuvor konfiguriert wurde.  
   
@@ -157,7 +158,7 @@ ms.locfileid: "86916650"
   
     5.  Wählen Sie für **MessageSourceType**die Option **Direkteingabe**aus.  
   
-5.  Klicken Sie auf der Seite **Ausdrücke** des **Editors für den Task „Mail senden“** auf die Schaltfläche mit den drei Punkten ( **...** ), um den **Eigenschaftsausdrucks-Editor**zu öffnen.  
+5.  Klicken Sie auf der Seite **Ausdrücke** des **Editors für den Task „Mail senden“** auf die Schaltfläche mit den drei Punkten (**...**), um den **Eigenschaftsausdrucks-Editor**zu öffnen.  
   
 6.  Geben Sie im **Eigenschaftsausdrucks-Editor**die folgenden Informationen ein:  
   

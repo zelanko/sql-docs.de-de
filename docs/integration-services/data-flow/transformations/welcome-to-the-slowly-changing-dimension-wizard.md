@@ -1,4 +1,5 @@
 ---
+description: Willkommen beim Assistenten für langsam veränderliche Dimensionen
 title: Willkommen beim Assistenten für langsam veränderliche Dimensionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08748714d12da9866821bf39f1a10c3614f24daa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 83ae4b3a7f8e820aabff9548352b134676b39105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425662"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>Willkommen beim Assistenten für langsam veränderliche Dimensionen
 
@@ -32,7 +33,7 @@ ms.locfileid: "86916671"
  **Diese Seite nicht wieder anzeigen**  
  Die Willkommensseite beim nächsten Öffnen des Assistenten auslassen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche Dimensionen](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

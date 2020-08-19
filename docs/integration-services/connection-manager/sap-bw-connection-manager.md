@@ -1,4 +1,5 @@
 ---
+description: SAP BW-Verbindungs-Manager
 title: SAP BW-Verbindungs-Manager | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c619db7e6386bb31b39b7a347f319ae45ddfacbc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6a67889df1635e2654adc80151e33a1c137985d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426002"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW-Verbindungs-Manager
 
@@ -54,7 +55,7 @@ ms.locfileid: "86921436"
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Konfigurieren der Quelle mit dem SSIS-Designer  
  Klicken Sie auf das folgende Thema, um weitere Informationen zu den Eigenschaften des SAP BW-Verbindungs-Managers zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Verbindungs-Manager-Editor für SAP BW](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
+-   [SAP BW-Verbindungs-Manager-Editor](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
   
 ## <a name="sap-bw-connection-manager-editor"></a>SAP BW-Verbindungs-Manager-Editor
   Verwenden Sie den **SAP BW-Verbindungs-Manager-Editor** , um die Eigenschaften festzulegen, mit denen eine Verbindung mit einem SAP NetWeaver BW-System, Version 7, hergestellt werden soll.  
@@ -72,11 +73,11 @@ ms.locfileid: "86921436"
   
     -   Doppelklicken Sie auf den SAP BW-Verbindungs-Manager.  
   
-         Oder  
+         - oder -  
   
     -   Klicken Sie mit der rechten Maustaste auf den SAP BW-Verbindungs-Manager, und wählen Sie dann **Bearbeiten**aus.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration des Verbindungs-Managers erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
@@ -119,19 +120,19 @@ ms.locfileid: "86921436"
  Beim Herstellen einer Verbindung mit einer Gruppe von Servern mit Lastenausgleich, geben Sie den Namen des Nachrichtenservers an.  
   
 > [!NOTE]  
->  Diese Option ist nur verfügbar, wenn Sie die Option **Lastenausgleich verwenden** ausgewählt haben.  
+>   Diese Option ist nur verfügbar, wenn Sie die Option **Lastenausgleich verwenden** ausgewählt haben.  
   
- **Gruppe**  
+ **Gruppieren**  
  Beim Herstellen einer Verbindung mit einer Gruppe von Servern mit Lastenausgleich geben Sie den Namen der Servergruppe an.  
   
 > [!NOTE]  
->  Diese Option ist nur verfügbar, wenn Sie die Option **Lastenausgleich verwenden** ausgewählt haben.  
+>   Diese Option ist nur verfügbar, wenn Sie die Option **Lastenausgleich verwenden** ausgewählt haben.  
   
  **SID**  
  Beim Herstellen einer Verbindung mit einer Gruppe von Servern mit Lastenausgleich geben Sie die System-ID für die Verbindung an.  
   
 > [!NOTE]  
->  Diese Option ist nur verfügbar, wenn Sie die Option **Lastenausgleich verwenden** ausgewählt haben.  
+>   Diese Option ist nur verfügbar, wenn Sie die Option **Lastenausgleich verwenden** ausgewählt haben.  
   
  **Protokollverzeichnis**  
  Aktivieren Sie die Protokollierung für die Komponenten von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
@@ -151,7 +152,7 @@ ms.locfileid: "86921436"
  **Verbindung testen**  
  Testen Sie die Verbindung mithilfe der Werte, die Sie eingegeben haben. Nachdem Sie auf **Verbindung testen**geklickt haben, wird in einem Meldungsfeld angezeigt, ob die Verbindung erfolgreich war oder nicht.  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Komponenten von Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Microsoft Connector for SAP BW Components](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Ergänzendes Oracle-Protokollierungsskript
 title: Ergänzendes Oracle-Protokollierungsskript | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2c2a71afd526aa177490c817631dd9cd1f5fdc2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ec1835467ed0fb3ac23d570d26d8416cd83521b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425992"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Ergänzendes Oracle-Protokollierungsskript
 
@@ -28,7 +29,7 @@ ms.locfileid: "86901202"
   
  Je nach den Oracle DBA-Richtlinien in Ihrer Organisation kann es erforderlich sein, dass beim Ausführen des ergänzenden Protokollierungsskripts eine Überprüfung und Genehmigung durch einen Oracle-Datenbankadministrator erfolgt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Sie können die folgenden Optionen verwenden, um festzulegen, wie das Skript ausgeführt wird.  
   
  **Skript ausführen**  
@@ -37,10 +38,10 @@ ms.locfileid: "86901202"
  **Speichern unter**  
  Speichert das Skript als Textdatei. Diese Option wird verwendet, wenn ein Oracle-Datenbankadministrator das ergänzende Protokollierungsskript untersuchen und ausführen muss und wenn das Programm das Speichern des Skripts in einer Textdatei zulässt, die Sie später per E-Mail an den Oracle-Datenbankadministrator senden oder auf andere Art für die spätere Ausführung bereitstellen können (mithilfe des SQL*Plus Oracle-Hilfsprogramms oder eines anderen Tools zum Ausführen von Skripts für eine Oracle-Datenbank).  
   
- **Copy**  
+ **Kopieren**  
  Kopiert das Skript in die Zwischenablage. Nach Abschluss des Vorgangs können Sie das Skript an jedem erforderlichen Speicherort einfügen, falls ein Oracle-Datenbankadministrator das ergänzende Protokollierungsskript untersuchen und ausführen muss.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Verwalten einer CDC-Instanz](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   

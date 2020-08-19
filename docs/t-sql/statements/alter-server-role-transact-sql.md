@@ -1,7 +1,8 @@
 ---
+description: ALTER SERVER ROLE (Transact-SQL)
 title: ALTER SERVER ROLE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 09/06/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: pdw, sql-database
 ms.reviewer: ''
@@ -19,12 +20,12 @@ ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c79b8ad73bc939354d3b9078c9486531ec8b01ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68070273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426812"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68070273"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 ALTER SERVER ROLE server_role_name   
@@ -46,7 +47,7 @@ ALTER SERVER ROLE server_role_name
 } [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER SERVER ROLE  server_role_name  ADD MEMBER login;  
@@ -98,7 +99,7 @@ Wenn Sie einer benutzerdefinierten Serverrolle ein Mitglied hinzufügen möchten
 ### <a name="a-changing-the-name-of-a-server-role"></a>A. Ändern des Namens einer Serverrolle  
 Im folgenden Beispiel wird die Serverrolle `Product` erstellt, und anschließend wird der Name der Serverrolle in `Production` geändert.  
   
-```  
+```sql
 CREATE SERVER ROLE Product ;  
 ALTER SERVER ROLE Product WITH NAME = Production ;  
 GO  
@@ -107,14 +108,14 @@ GO
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. Hinzufügen eines Domänenkontos zu einer Serverrolle  
 Im folgenden Beispiel wird der benutzerdefinierten Serverrolle `Production` das Domänenkonto `adventure-works\roberto0` hinzugefügt.  
   
-```  
+```sql
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. Hinzufügen einer SQL Server-Anmeldung zu einer Serverrolle  
 Im folgenden Beispiel wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung `Ted` der festen Serverrolle `diskadmin` hinzugefügt.  
   
-```  
+```sql
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
 GO  
 ```  
@@ -122,14 +123,14 @@ GO
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D: Entfernen eines Domänenkontos aus einer Serverrolle  
 Im folgenden Beispiel wird das Domänenkonto `adventure-works\roberto0` aus der benutzerdefinierten Serverrolle `Production` entfernt.  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. Entfernen einer SQL Server-Anmeldung aus einer Serverrolle  
 Im folgenden Beispiel wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung `Ted` aus der festen Serverrolle `diskadmin` entfernt.  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
 GO  
 ```  
@@ -137,7 +138,7 @@ GO
 ### <a name="f-granting-a-login-the-permission-to-add-logins-to-a-user-defined-server-role"></a>F. Gewähren der Berechtigung zum Hinzufügen von Anmeldungen zu einer benutzerdefinierten Serverrolle für eine Anmeldung  
 Im folgenden Beispiel wird `Ted` die Berechtigung erteilt, der benutzerdefinierten Serverrolle `Production` weitere Anmeldungen hinzuzufügen.  
   
-```  
+```sql
 GRANT ALTER ON SERVER ROLE::Production TO Ted ;  
 GO  
 ```  
@@ -145,7 +146,7 @@ GO
 ### <a name="g-to-view-role-membership"></a>G. Anzeigen der Rollenmitgliedschaft  
 Um die Rollenmitgliedschaft anzuzeigen, verwenden Sie die Seite **Serverrolle (Mitglieder)** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], oder führen Sie die folgende Abfrage aus:  
   
-```  
+```sql
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
 SRM.member_principal_id, SP2.name  AS Member_Name  
 FROM sys.server_role_members AS SRM  
@@ -158,21 +159,21 @@ ORDER BY  SP.name,  SP2.name
   
 ## <a name="examples-sspdw"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="h-basic-syntax"></a>H. Grundlegende Syntax  
+### <a name="h-basic-syntax"></a>H. Allgemeine Syntax  
 Im folgenden Beispiel wird die Anmeldung `Anna` der Serverrolle `LargeRC` hinzugefügt.  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  
 ```  
   
 ### <a name="i-remove-a-login-from-a-resource-class"></a>I. Entfernen einer Anmeldung aus einer Ressourcenklasse  
 Im folgenden Beispiel wird Annas Mitgliedschaft aus der Serverrolle `LargeRC` gelöscht.  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
 [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
 [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: CREATE EVENT NOTIFICATION (Transact-SQL)
 title: CREATE EVENT NOTIFICATION (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e5b1db8f48e6d4f336d47e8ce6dc09a1659be7f
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 3c13c9635537ead88d8cb0f140a65cdf2dd82c35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426762"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +98,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  Die Konversationen bleiben geöffnet, bis die Ereignisbenachrichtigung gelöscht wird. Bestimmte Fehler können dazu führen, dass Konversationen früher geschlossen werden. Das explizite Beenden einiger oder aller Konversationen kann verhindern, dass der Zieldienst weitere Nachrichten empfängt.  
   
  { **'** _broker\_instance\_specifier_ **'**  |  **'current database'** }  
- Gibt die Service Broker-Instanz an, für die *broker_service* aufgelöst wird. Der Wert für einen bestimmten Service Broker kann durch Abfragen der **service_broker_guid**-Spalte der **sys.databases**-Katalogsicht ermittelt werden. Verwenden Sie **'current database'** , um die Service Broker-Instanz in der aktuellen Datenbank anzugeben. **'current database'** ist ein Zeichenfolgenliteral, das nicht nach Groß-/Kleinschreibung unterscheidet.  
+ Gibt die Service Broker-Instanz an, für die *broker_service* aufgelöst wird. Der Wert für einen bestimmten Service Broker kann durch Abfragen der **service_broker_guid**-Spalte der **sys.databases**-Katalogsicht ermittelt werden. Verwenden Sie **'current database'**, um die Service Broker-Instanz in der aktuellen Datenbank anzugeben. **'current database'** ist ein Zeichenfolgenliteral, das nicht nach Groß-/Kleinschreibung unterscheidet.  
   
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
@@ -188,7 +189,7 @@ SELECT * FROM sys.event_notifications
 WHERE name = 'Notify_ALTER_T1';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Ereignisbenachrichtigungen](../../relational-databases/service-broker/event-notifications.md)   
  [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

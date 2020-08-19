@@ -1,4 +1,5 @@
 ---
+description: Importieren von Bereinigungsprojektwerten in eine Domäne
 title: Importieren von Bereinigungsprojektwerten in eine Domäne
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8688d5d20f1b5ac600e75327725ab18e9f8dba1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 06600482f843ecf014b5ec8648bc8079c871be6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426352"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importieren von Bereinigungsprojektwerten in eine Domäne
 
@@ -37,7 +38,7 @@ ms.locfileid: "85892389"
 ####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die Rolle „dqs_kb_editor“ oder „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um während des Bereinigungsprozesses gesammeltes Data Quality-Wissen in eine Domäne zu importieren.  
   
-##  <a name="import-cleansing-project-values"></a><a name="Import"></a>Importieren von Bereinigungs Projekt Werten  
+##  <a name="import-cleansing-project-values"></a><a name="Import"></a> Importieren von Bereinigungs Projekt Werten  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   

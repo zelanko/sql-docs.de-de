@@ -1,4 +1,5 @@
 ---
+description: OData-Quelle
 title: OData-Quelle | Microsoft-Dokumentation
 ms.date: 09/17/2018
 ms.prod: sql
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e06cb4ec3bbc74779ad2fcb4f36d6e75a4e7cb55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8f74fa8478953c4c1353d35f49250896ab2a7ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425822"
 ---
 # <a name="odata-source"></a>OData-Quelle
 
@@ -87,7 +88,7 @@ Beim Datentyp **Decimal** werden Genauigkeit und Skalierung durch die Quellmetad
   
 |Option|BESCHREIBUNG|  
 |------------|-----------------|  
-|Collection|Rufen Sie mithilfe eines Auflistungsnamens Daten aus der OData-Quelle ab.|  
+|Sammlung|Rufen Sie mithilfe eines Auflistungsnamens Daten aus der OData-Quelle ab.|  
 |Ressourcenpfad|Rufen Sie mithilfe eines Ressourcenpfads Daten aus der OData-Quelle ab.|  
   
  **Abfrageoptionen**  
@@ -107,7 +108,7 @@ Beim Datentyp **Decimal** werden Genauigkeit und Skalierung durch die Quellmetad
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Auflistung oder Ressourcenpfad verwenden = Ressourcenpfad  
  **Resource path**  
- Geben Sie einen Ressourcenpfad ein. Beispiel: Employees  
+ Geben Sie einen Ressourcenpfad ein. Beispiel: Mitarbeiter  
   
 ## <a name="odata-source-editor-columns-page"></a>Quellen-Editor für OData (Seite 'Spalten')
   Verwenden Sie die Seite **Spalten** im Dialogfeld **Quellen-Editor für OData** , um externe (Quell-)Spalten auszuwählen, die in der Ausgabe enthalten sein sollen, und um die Spalten und Ausgabespalten einander zuzuordnen.  

@@ -1,4 +1,5 @@
 ---
+description: Rangfolgeneinschränkungen
 title: Rangfolgeneinschränkungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba2b9f0e9dbf23eea54da531305553db712ad677
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ee2c1ffab719566875a7c9f7f6090a12aef5675f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425912"
 ---
 # <a name="precedence-constraints"></a>Rangfolgeneinschränkungen
 
@@ -112,7 +113,7 @@ ms.locfileid: "86921191"
 ## <a name="precedence-constraint-editor"></a>Rangfolgeneinschränkungs-Editor
 Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolgeneinschränkungen zu konfigurieren.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Auswertungsvorgang**  
  Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Folgende Vorgänge sind möglich: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**und **Ausdruck oder Einschränkung**.  
   
@@ -120,7 +121,7 @@ Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolge
  Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler**oder **Beendigung**.  
   
 > [!NOTE]  
->  Die Rangfolgeneinschränkungslinie wird bei **Erfolg**grün, bei einem **Fehler**hervorgehoben und bei **Beendigung**blau dargestellt.  
+>   Die Rangfolgeneinschränkungslinie wird für **Erfolg**grün, für **Fehler**hervorgehoben und für **Beendigung**blau dargestellt.  
   
  **Ausdruck**  
  Wenn Sie den Vorgang **Ausdruck**, **Ausdruck und Einschränkung**oder **Ausdruck oder Einschränkung**verwenden, geben Sie einen Ausdruck ein, oder starten Sie den Ausdrucks-Generator, um einen Ausdruck zu erstellen. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden.  
@@ -216,8 +217,8 @@ Verwenden Sie das Dialogfeld **Rangfolgeneinschränkungs-Editor** , um Rangfolge
   
 |Auswertungsvorgang|Einschränkung wird ausgewertet zu|Ausdruck wird ausgewertet zu|Eingeschränkte ausführbare Datei wird ausgeführt|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|Einschränkung|True|–|True|  
-|Einschränkung|False|–|False|  
+|Constraint|True|–|True|  
+|Constraint|False|–|False|  
 |Ausdruck|–|True|True|  
 |Ausdruck|–|False|False|  
 |Einschränkung und Ausdruck|True|True|True|  

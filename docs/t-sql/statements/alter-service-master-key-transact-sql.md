@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVICE MASTER KEY (Transact-SQL)
 title: ALTER SERVICE MASTER KEY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9cc3706e371f1c9c4fcc031fd4665459e65937ca
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 53526aa2ba6a59b623382aa1c47b11443759756b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426822"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,25 +69,25 @@ ALTER SERVICE MASTER KEY
  Gibt den Namen des alten Windows-Dienstkontos an.  
   
 > [!WARNING]  
->  Diese Option ist veraltet. Darf nicht verwendet werden. Verwenden Sie stattdessen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager.  
+>  Diese Option ist veraltet. Nicht verwenden. Verwenden Sie stattdessen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager.  
   
  OLD_PASSWORD **='***password***'**  
  Gibt das Kennwort des alten Windows-Dienstkontos an.  
   
 > [!WARNING]  
->  Diese Option ist veraltet. Darf nicht verwendet werden. Verwenden Sie stattdessen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager.  
+>  Diese Option ist veraltet. Nicht verwenden. Verwenden Sie stattdessen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager.  
   
  NEW_ACCOUNT **='***account_name***'**  
  Gibt den Namen des neuen Windows-Dienstkontos an.  
   
 > [!WARNING]  
->  Diese Option ist veraltet. Darf nicht verwendet werden. Verwenden Sie stattdessen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager.  
+>  Diese Option ist veraltet. Nicht verwenden. Verwenden Sie stattdessen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager.  
   
  NEW_PASSWORD **='***password***'**  
  Gibt das Kennwort des neuen Windows-Dienstkontos an.  
   
 > [!WARNING]  
->  Diese Option ist veraltet. Darf nicht verwendet werden. Verwenden Sie stattdessen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager.  
+>  Diese Option ist veraltet. Nicht verwenden. Verwenden Sie stattdessen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Der Diensthauptschlüssel wird automatisch generiert, wenn er zum ersten Mal benötigt wird, um ein Kennwort für einen Verbindungsserver, Anmeldeinformationen oder den Datenbank-Hauptschlüssel zu verschlüsseln. Der Diensthauptschlüssel wird mithilfe des auf dem lokalen Computer verwendeten Computerschlüssels oder der Windows-Datenschutz-API (DPAPI) verschlüsselt. Diese API verwendet einen Schlüssel, der von den Windows-Anmeldeinformationen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienstkontos abgeleitet wird.  
@@ -116,7 +117,7 @@ ALTER SERVICE MASTER KEY REGENERATE;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)   
  [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  

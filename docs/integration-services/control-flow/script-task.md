@@ -1,4 +1,5 @@
 ---
+description: Skripttask
 title: Skripttask | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18ff96f3fd227507d57051cec69f5704b7b64749
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425882"
 ---
 # <a name="script-task"></a>Skripttask
 
@@ -80,7 +81,7 @@ ms.locfileid: "86921156"
   
 -   [Skripttask-Editor &#40;Seite „Allgemein“&#41;](../../integration-services/control-flow/script-task-editor-general-page.md)  
   
--   [Skripttask-Editor &#40;Seite „Skript“&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
+-   [Skripttask-Editor &#40;Seite Skript&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
 -   [Seite Ausdrücke](../../integration-services/expressions/expressions-page.md)  
   
@@ -116,7 +117,7 @@ ms.locfileid: "86921156"
   
  Weitere Informationen zum Skripttask finden Sie unter [Script Task](../../integration-services/control-flow/script-task.md) und [Konfigurieren des Skripttasks im Skripttask-Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Informationen zum Programmieren des Skripttasks finden Sie unter [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **ScriptLanguage**  
  Wählen Sie die Skriptsprache für den Task aus, entweder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
@@ -130,13 +131,13 @@ ms.locfileid: "86921156"
  Wenn Sie den Namen der Methode im VSTA-Projekt geändert haben, müssen Sie den Wert der **EntryPoint** -Eigenschaft ändern.  
   
  **ReadOnlyVariables**  
- Geben Sie eine durch Trennzeichen getrennte Liste von schreibgeschützten Variablen ein, die für das Skript verfügbar sind, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **...** ), und wählen Sie die Variablen im Dialogfeld **Variablen auswählen** aus.  
+ Geben Sie eine durch Trennzeichen getrennte Liste von schreibgeschützten Variablen ein, die für das Skript verfügbar sind, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**...**), und wählen Sie die Variablen im Dialogfeld **Variablen auswählen** aus.  
   
 > [!NOTE]  
 >  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
   
  **ReadWriteVariables**  
- Geben Sie eine durch Trennzeichen getrennte Liste von Lese-/Schreibvariablen ein, die für das Skript verfügbar sind, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **...** ), und wählen Sie die Variablen im Dialogfeld **Variablen auswählen** aus.  
+ Geben Sie eine durch Trennzeichen getrennte Liste von Lese-/Schreibvariablen ein, die für das Skript verfügbar sind, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**...**), und wählen Sie die Variablen im Dialogfeld **Variablen auswählen** aus.  
   
 > [!NOTE]  
 >  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  

@@ -1,4 +1,5 @@
 ---
+description: Referenz zur Benutzeroberfläche des Dialogfelds Dateiverbindungs-Manager hinzufügen
 title: Referenz zur Benutzeroberfläche des Dialogfelds „Dateiverbindungs-Manager hinzufügen“ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 226dd6c94787af8c32d17cd7bf923a860645c5ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8096ccaf1fc92710e46970744a7a4f7cbe000700
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426032"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Dateiverbindungs-Manager hinzufügen
 
@@ -33,13 +34,13 @@ ms.locfileid: "86921710"
 > [!NOTE]  
 >  Die integrierten Tasks und Datenflusskomponenten in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwenden keinen Verbindungs-Manager für mehrere Dateien. Sie können den Verbindungs-Manager jedoch im Skripttask oder in der Skriptkomponente verwenden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verwendungstyp**  
  Geben Sie den Dateityp an, der vom Verbindungs-Manager für mehrere Dateien verwendet werden soll.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Dateien erstellen**|Der Verbindungs-Manager erstellt die Dateien.|  
+|**Erstellen von Dateien**|Der Verbindungs-Manager erstellt die Dateien.|  
 |**Vorhandene Dateien**|Der Verbindungs-Manager verwendet vorhandene Dateien.|  
 |**Ordner erstellen**|Der Verbindungs-Manager erstellt die Ordner.|  
 |**Vorhandene Ordner**|Der Verbindungs-Manager verwendet vorhandene Ordner.|  
@@ -59,7 +60,7 @@ ms.locfileid: "86921710"
  **Pfeilschaltflächen**  
  Wählen Sie eine Datei oder einen Ordner aus, und verschieben Sie das Objekt dann mit den Pfeilschaltflächen nach oben oder unten, um die Reihenfolge des Zugriffs festzulegen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Fehler- und Meldungsreferenz von Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
   
   
